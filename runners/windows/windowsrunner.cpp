@@ -40,7 +40,7 @@ WindowsRunner::WindowsRunner(QObject* parent, const QVariantList& args)
       m_ready(false)
 {
     Q_UNUSED(args)
-    setObjectName( QLatin1String("Windows" ));
+    setObjectName( QLatin1String("Windows") );
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds windows whose name, window class or window role match :q:. "
                                    "It is possible to interact with the windows by using one of the following keywords: "
@@ -183,13 +183,13 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
             if (keyword.endsWith(QLatin1Char('='))) {
                 continue;
             }
-            if (keyword.startsWith(i18nc("Note this is a KRunner keyword", "name") + "=" , Qt::CaseInsensitive)) {
+            if (keyword.startsWith(i18nc("Note this is a KRunner keyword", "name") + QStringLiteral("=") , Qt::CaseInsensitive)) {
                 windowName = keyword.split(QStringLiteral("="))[1];
-            } else if (keyword.startsWith(i18nc("Note this is a KRunner keyword", "class") + "=" , Qt::CaseInsensitive)) {
+            } else if (keyword.startsWith(i18nc("Note this is a KRunner keyword", "class") + QStringLiteral("=") , Qt::CaseInsensitive)) {
                 windowClass = keyword.split(QStringLiteral("="))[1];
-            } else if (keyword.startsWith(i18nc("Note this is a KRunner keyword", "role") + "=" , Qt::CaseInsensitive)) {
+            } else if (keyword.startsWith(i18nc("Note this is a KRunner keyword", "role") + QStringLiteral("=") , Qt::CaseInsensitive)) {
                 windowRole = keyword.split(QStringLiteral("="))[1];
-            } else if (keyword.startsWith(i18nc("Note this is a KRunner keyword", "desktop") + "=" , Qt::CaseInsensitive)) {
+            } else if (keyword.startsWith(i18nc("Note this is a KRunner keyword", "desktop") + QStringLiteral("=") , Qt::CaseInsensitive)) {
                 bool ok;
                 desktop = keyword.split(QStringLiteral("="))[1].toInt(&ok);
                 if (!ok || desktop > KWindowSystem::numberOfDesktops()) {
@@ -197,7 +197,7 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
                 }
             } else {
                 // not a keyword - use as name if name is unused, but another option is set
-                if (windowName.isEmpty() && !keyword.contains('=') &&
+                if (windowName.isEmpty() && !keyword.contains(QLatin1Char('=')) &&
                     (!windowRole.isEmpty() || !windowClass.isEmpty() || desktop != -1)) {
                     windowName = keyword;
                 }
@@ -208,7 +208,7 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
             it.next();
             WId w = it.key();
             KWindowInfo info = it.value();
-            QString windowClassCompare = QString::fromUtf8(info.windowClassName()) + " " +
+            QString windowClassCompare = QString::fromUtf8(info.windowClassName()) + QLatin1Char(' ') +
                                          QString::fromUtf8(info.windowClassClass());
             // exclude not matching windows
             if (!KWindowSystem::hasWId(w)) {
@@ -398,7 +398,7 @@ Plasma::QueryMatch WindowsRunner::desktopMatch(int desktop, qreal relevance)
     Plasma::QueryMatch match(this);
     match.setType(Plasma::QueryMatch::ExactMatch);
     match.setData(desktop);
-    match.setId("desktop-" + QString::number(desktop));
+    match.setId(QStringLiteral("desktop-") + QString::number(desktop));
     match.setIconName(QStringLiteral("user-desktop"));
     QString desktopName;
     if (desktop <= m_desktopNames.size()) {
@@ -416,7 +416,7 @@ Plasma::QueryMatch WindowsRunner::windowMatch(const KWindowInfo& info, WindowAct
 {
     Plasma::QueryMatch match(this);
     match.setType(type);
-    match.setData(QString(QString::number((int)action) + "_" + QString::number(info.win())));
+    match.setData(QString(QString::number((int)action) + QLatin1Char('_') + QString::number(info.win())));
     match.setIcon(m_icons[info.win()]);
     match.setText(info.name());
     QString desktopName;

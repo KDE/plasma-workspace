@@ -69,8 +69,8 @@ SearchRunner::SearchRunner(QObject* parent)
     qDBusRegisterMetaType<RemoteMatches>();
     qDBusRegisterMetaType<RemoteAction>();
     qDBusRegisterMetaType<RemoteActions>();
-    QDBusConnection::sessionBus().registerObject("/runner", this);
-    QDBusConnection::sessionBus().registerService("org.kde.runners.baloo");
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/runner"), this);
+    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.runners.baloo"));
 }
 
 SearchRunner::~SearchRunner()
@@ -164,9 +164,9 @@ RemoteMatches SearchRunner::matchInternal(const QString& searchTerm, const QStri
             folderPath.replace(0, QDir::homePath().length(), QStringLiteral("~"));
         }
 
-        properties["urls"] = QStringList({url.toEncoded()});
-        properties["subtext"] = folderPath;
-        properties["category"] = category;
+        properties[QStringLiteral("urls")] = QStringList({QString::fromLocal8Bit(url.toEncoded())});
+        properties[QStringLiteral("subtext")] = folderPath;
+        properties[QStringLiteral("category")] = category;
 
         match.properties = properties;
         relevance -= 0.05;

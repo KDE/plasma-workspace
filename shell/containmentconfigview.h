@@ -48,7 +48,7 @@ class ContainmentConfigView : public PlasmaQuick::ConfigView
     Q_PROPERTY(QString containmentPlugin READ containmentPlugin WRITE setContainmentPlugin NOTIFY containmentPluginChanged)
 
 public:
-    ContainmentConfigView(Plasma::Containment *interface, QWindow *parent = 0);
+    ContainmentConfigView(Plasma::Containment *interface, QWindow *parent = nullptr);
     ~ContainmentConfigView() override;
 
     void init() override;
@@ -74,14 +74,14 @@ protected:
     void syncWallpaperObjects();
 
 private:
-    Plasma::Containment *m_containment;
-    PlasmaQuick::ConfigModel *m_wallpaperConfigModel;
-    PlasmaQuick::ConfigModel *m_containmentActionConfigModel;
-    PlasmaQuick::ConfigModel *m_containmentPluginsConfigModel;
-    CurrentContainmentActionsModel *m_currentContainmentActionsModel;
+    Plasma::Containment *m_containment = nullptr;
+    PlasmaQuick::ConfigModel *m_wallpaperConfigModel = nullptr;
+    PlasmaQuick::ConfigModel *m_containmentActionConfigModel = nullptr;
+    PlasmaQuick::ConfigModel *m_containmentPluginsConfigModel = nullptr;
+    CurrentContainmentActionsModel *m_currentContainmentActionsModel = nullptr;
     QString m_currentWallpaper;
-    KDeclarative::ConfigPropertyMap *m_currentWallpaperConfig;
-    KDeclarative::ConfigPropertyMap *m_ownWallpaperConfig;
+    KDeclarative::ConfigPropertyMap *m_currentWallpaperConfig = nullptr;
+    KDeclarative::ConfigPropertyMap *m_ownWallpaperConfig = nullptr;
 };
 
 #endif // multiple inclusion guard

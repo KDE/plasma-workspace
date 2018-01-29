@@ -72,7 +72,7 @@ FaviconFromBlob *FaviconFromBlob::chrome(const QString &profileDirectory, QObjec
     QString profileName = QFileInfo(profileDirectory).fileName();
     QString faviconCache = QStringLiteral("%1/KRunner-Chrome-Favicons-%2.sqlite")
             .arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation), profileName);
-    FetchSqlite *fetchSqlite = new FetchSqlite(profileDirectory + "/Favicons", faviconCache, parent);
+    FetchSqlite *fetchSqlite = new FetchSqlite(profileDirectory + QStringLiteral("/Favicons"), faviconCache, parent);
     return new FaviconFromBlob(profileName, new ChromeQuery(), QStringLiteral("image_data"), fetchSqlite, parent);
 }
 
@@ -125,7 +125,7 @@ QIcon FaviconFromBlob::iconFor(const QString &url)
 {
     //qDebug() << "got url: " << url;
     QString fileChecksum = QString::number(qChecksum(url.toLatin1(), url.toLatin1().size()));
-    QFile iconFile( m_profileCacheDirectory + QDir::separator() + fileChecksum + "_favicon" );
+    QFile iconFile( m_profileCacheDirectory + QDir::separator() + fileChecksum + QStringLiteral("_favicon") );
     if(iconFile.size() == 0)
         iconFile.remove();
     if(!iconFile.exists()) {

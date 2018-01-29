@@ -55,7 +55,7 @@ void ServiceRunnerTest::initTestCase()
         auto source = fileInfo.absoluteFilePath();
         auto target = appsPath + QDir::separator() + fileInfo.fileName();
         QVERIFY2(QFile::copy(fileInfo.absoluteFilePath(), target),
-                 qPrintable(QString("can't copy %1 => %2").arg(source, target)));
+                 qPrintable(QStringLiteral("can't copy %1 => %2").arg(source, target)));
     }
 
     setlocale(LC_ALL, "C.utf8");
@@ -76,7 +76,7 @@ void ServiceRunnerTest::testChromeAppsRelevance()
 {
     ServiceRunner runner(this, QVariantList());
     Plasma::RunnerContext context;
-    context.setQuery("chrome");
+    context.setQuery(QStringLiteral("chrome"));
 
     runner.match(context);
 
@@ -84,14 +84,14 @@ void ServiceRunnerTest::testChromeAppsRelevance()
     bool signalFound = false;
     for (auto match : context.matches()) {
         qDebug() << "matched" << match.text();
-        if (!match.text().contains("ServiceRunnerTest")) {
+        if (!match.text().contains(QStringLiteral("ServiceRunnerTest"))) {
             continue;
         }
 
-        if (match.text() == "Google Chrome ServiceRunnerTest") {
+        if (match.text() == QStringLiteral("Google Chrome ServiceRunnerTest")) {
             QCOMPARE(match.relevance(), 0.8);
             chromeFound = true;
-        } else if (match.text() == "Signal ServiceRunnerTest") {
+        } else if (match.text() == QStringLiteral("Signal ServiceRunnerTest")) {
             // Rates lower because it doesn't have it in the name.
             QCOMPARE(match.relevance(), 0.7);
             signalFound = true;
@@ -106,7 +106,7 @@ void ServiceRunnerTest::testKonsoleVsYakuakeComment()
     // Yakuake has konsole mentioned in comment, should be rated lower.
     ServiceRunner runner(this, QVariantList());
     Plasma::RunnerContext context;
-    context.setQuery("kons");
+    context.setQuery(QStringLiteral("kons"));
 
     runner.match(context);
 
@@ -114,14 +114,14 @@ void ServiceRunnerTest::testKonsoleVsYakuakeComment()
     bool yakuakeFound = false;
     for (auto match : context.matches()) {
         qDebug() << "matched" << match.text();
-        if (!match.text().contains("ServiceRunnerTest")) {
+        if (!match.text().contains(QStringLiteral("ServiceRunnerTest"))) {
             continue;
         }
 
-        if (match.text() == "Konsole ServiceRunnerTest") {
+        if (match.text() == QStringLiteral("Konsole ServiceRunnerTest")) {
             QCOMPARE(match.relevance(), 0.99);
             konsoleFound = true;
-        } else if (match.text() == "Yakuake ServiceRunnerTest") {
+        } else if (match.text() == QStringLiteral("Yakuake ServiceRunnerTest")) {
             // Rates lower because it doesn't have it in the name.
             QCOMPARE(match.relevance(), 0.59);
             yakuakeFound = true;
@@ -140,7 +140,7 @@ void ServiceRunnerTest::testSystemSettings()
     // seen it. This test makes sure we find the right version.
     ServiceRunner runner(this, QVariantList());
     Plasma::RunnerContext context;
-    context.setQuery("settings");
+    context.setQuery(QStringLiteral("settings"));
 
     runner.match(context);
 
@@ -148,10 +148,10 @@ void ServiceRunnerTest::testSystemSettings()
     bool foreignSystemSettingsFound = false;
     for (auto match : context.matches()) {
         qDebug() << "matched" << match.text();
-        if (match.text() == "System Settings ServiceRunnerTest") {
+        if (match.text() == QStringLiteral("System Settings ServiceRunnerTest")) {
             systemSettingsFound = true;
         }
-        if (match.text() == "KDE System Settings ServiceRunnerTest") {
+        if (match.text() == QStringLiteral("KDE System Settings ServiceRunnerTest")) {
             foreignSystemSettingsFound = true;
         }
     }

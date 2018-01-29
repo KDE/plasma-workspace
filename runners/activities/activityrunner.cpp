@@ -112,7 +112,7 @@ void ActivityRunner::match(Plasma::RunnerContext &context)
 
     QList<Plasma::QueryMatch> matches;
     QStringList activities = m_consumer->activities();
-    qSort(activities);
+    std::sort(activities.begin(), activities.end());
 
     const QString current = m_activities->currentActivity();
 

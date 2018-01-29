@@ -130,7 +130,7 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
     m_lastProvider = filterData.searchProvider();
 
     m_match.setData(filterData.uri());
-    m_match.setId("WebShortcut:" + key);
+    m_match.setId(QStringLiteral("WebShortcut:") + key);
 
     m_match.setIconName(filterData.iconName());
     m_match.setText(i18n("Search %1 for %2", m_lastProvider, filterData.searchTerm()));

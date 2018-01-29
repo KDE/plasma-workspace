@@ -36,7 +36,7 @@
 #include <KWayland/Client/surface.h>
 
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
-    : PlasmaQuick::ContainmentView(corona, 0),
+    : PlasmaQuick::ContainmentView(corona, nullptr),
       m_windowType(Desktop),
       m_shellSurface(nullptr)
 {
@@ -294,7 +294,7 @@ void DesktopView::screenGeometryChanged()
 
 void DesktopView::coronaPackageChanged(const KPackage::Package &package)
 {
-    setContainment(0);
+    setContainment(nullptr);
     setSource(package.fileUrl("views", QStringLiteral("Desktop.qml")));
 }
 

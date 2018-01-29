@@ -82,9 +82,9 @@ void CalculatorRunner::powSubstitutions(QString& cmd)
 
     // the below code is scary mainly because we have to honor priority
     // honor decimal numbers and parenthesis.
-    while (cmd.contains('^')) {
-        int where = cmd.indexOf('^');
-        cmd = cmd.replace(where, 1, ',');
+    while (cmd.contains(QLatin1Char('^'))) {
+        int where = cmd.indexOf(QLatin1Char('^'));
+        cmd = cmd.replace(where, 1, QLatin1Char(','));
         int preIndex = where - 1;
         int postIndex = where + 1;
         int count = 0;
@@ -99,19 +99,19 @@ void CalculatorRunner::powSubstitutions(QString& cmd)
             QChar current = cmd.at(preIndex);
             QChar next = cmd.at(preIndex-1);
             //qDebug() << "index " << preIndex << " char " << current;
-            if (current == ')') {
+            if (current == QLatin1Char(')')) {
                 count++;
-            } else if (current == '(') {
+            } else if (current == QLatin1Char('(')) {
                 count--;
             } else {
-                if (((next <= '9' ) && (next >= '0')) || next == decimalSymbol) {
+                if (((next <= QLatin1Char('9') ) && (next >= QLatin1Char('0'))) || next == decimalSymbol) {
                     preIndex--;
                     continue;
                 }
             }
             if (count == 0) {
                 //check for functions
-                if (!((next <= 'z' ) && (next >= 'a'))) {
+                if (!((next <= QLatin1Char('z') ) && (next >= QLatin1Char('a')))) {
                     break;
                 }
             }
@@ -125,17 +125,17 @@ void CalculatorRunner::powSubstitutions(QString& cmd)
             QChar next=cmd.at(postIndex + 1);
 
             //check for functions
-            if ((count == 0) && (current <= 'z') && (current >= 'a')) {
+            if ((count == 0) && (current <= QLatin1Char('z')) && (current >= QLatin1Char('a'))) {
                 postIndex++;
                 continue;
             }
 
-            if (current == '(') {
+            if (current == QLatin1Char('(')) {
                 count++;
-            } else if (current == ')') {
+            } else if (current == QLatin1Char(')')) {
                 count--;
             } else {
-                if (((next <= '9' ) && (next >= '0')) || next == decimalSymbol) {
+                if (((next <= QLatin1Char('9') ) && (next >= QLatin1Char('0'))) || next == decimalSymbol) {
                     postIndex++;
                     continue;
                  }
@@ -151,7 +151,7 @@ void CalculatorRunner::powSubstitutions(QString& cmd)
 
         cmd.insert(preIndex,QLatin1String("pow("));
         // +1 +4 == next position to the last number after we add 4 new characters pow(
-        cmd.insert(postIndex + 1 + 4, ')');
+        cmd.insert(postIndex + 1 + 4, QLatin1Char(')'));
         //qDebug() << "from" << preIndex << " to " << postIndex << " got: " << cmd;
     }
 }
@@ -160,7 +160,7 @@ void CalculatorRunner::hexSubstitutions(QString& cmd)
 {
     if (cmd.contains(QStringLiteral("0x"))) {
         //Append +0 so that the calculator can serve also as a hex converter
-        cmd.append("+0");
+        cmd.append(QStringLiteral("+0"));
         bool ok;
         int pos = 0;
         QString hex;
@@ -171,7 +171,9 @@ void CalculatorRunner::hexSubstitutions(QString& cmd)
 
             for (int q = 0; q < cmd.size(); q++) {//find end of hex number
                 QChar current = cmd[pos+q+2];
-                if (((current <= '9' ) && (current >= '0')) || ((current <= 'F' ) && (current >= 'A')) || ((current <= 'f' ) && (current >= 'a'))) { //Check if valid hex sign
+                if (((current <= QLatin1Char('9') ) && (current >= QLatin1Char('0')))
+                        || ((current <= QLatin1Char('F') ) && (current >= QLatin1Char('A')))
+                        || ((current <= QLatin1Char('f') ) && (current >= QLatin1Char('a')))) { //Check if valid hex sign
                     hex[q] = current;
                 } else {
                     break;
@@ -185,7 +187,7 @@ void CalculatorRunner::hexSubstitutions(QString& cmd)
 void CalculatorRunner::userFriendlySubstitutions(QString& cmd)
 {
     if (cmd.contains(QLocale().decimalPoint(), Qt::CaseInsensitive)) {
-         cmd=cmd.replace(QLocale().decimalPoint(), QChar('.'), Qt::CaseInsensitive);
+         cmd=cmd.replace(QLocale().decimalPoint(), QLatin1Char('.'), Qt::CaseInsensitive);
     }
 
     // the following substitutions are not needed with libqalculate
@@ -212,7 +214,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     QString cmd = term;
 
     //no meanless space between friendly guys: helps simplify code
-    cmd = cmd.trimmed().remove(' ');
+    cmd = cmd.trimmed().remove(QLatin1Char(' '));
 
     if (cmd.length() < 3) {
         return;
@@ -223,18 +225,18 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
         match.setType(Plasma::QueryMatch::InformationalMatch);
         match.setIconName(QStringLiteral("accessories-calculator"));
         match.setText(QStringLiteral("42"));
-        match.setData("42");
+        match.setData(QStringLiteral("42"));
         match.setId(term);
         context.addMatch(match);
         return;
     }
 
     bool toHex = cmd.startsWith(QLatin1String("hex="));
-    bool startsWithEquals = !toHex && cmd[0] == '=';
+    bool startsWithEquals = !toHex && cmd[0] == QLatin1Char('=');
 
     if (toHex || startsWithEquals) {
-        cmd.remove(0, cmd.indexOf('=') + 1);
-    } else if (cmd.endsWith('=')) {
+        cmd.remove(0, cmd.indexOf(QLatin1Char('=')) + 1);
+    } else if (cmd.endsWith(QLatin1Char('='))) {
         cmd.chop(1);
     } else {
         bool foundDigit = false;
@@ -266,7 +268,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     QString result = calculate(cmd, &isApproximate);
     if (!result.isEmpty() && result != cmd) {
         if (toHex) {
-            result = "0x" + QString::number(result.toInt(), 16).toUpper();
+            result = QStringLiteral("0x") + QString::number(result.toInt(), 16).toUpper();
         }
 
         Plasma::QueryMatch match(this);
@@ -293,7 +295,7 @@ QString CalculatorRunner::calculate(const QString& term, bool *isApproximate)
         qDebug() << "qalculate error: " << e.what();
     }
 
-    return result.replace('.', QLocale().decimalPoint(), Qt::CaseInsensitive);
+    return result.replace(QLatin1Char('.'), QLocale().decimalPoint(), Qt::CaseInsensitive);
     #else
     Q_UNUSED(isApproximate);
     //qDebug() << "calculating" << term;
@@ -309,7 +311,7 @@ QString CalculatorRunner::calculate(const QString& term, bool *isApproximate)
         return QString();
     }
 
-    if (!resultString.contains('.')) {
+    if (!resultString.contains(QLatin1Char('.'))) {
         return resultString;
     }
 
@@ -319,7 +321,7 @@ QString CalculatorRunner::calculate(const QString& term, bool *isApproximate)
                                                 var order=Math.pow(10,exponent);\
                                                 (order > 0? Math.round(result*order)/order : 0)")).toString();
 
-    roundedResultString.replace('.', QLocale().decimalPoint(), Qt::CaseInsensitive);
+    roundedResultString.replace(QLatin1Char('.'), QLocale().decimalPoint(), Qt::CaseInsensitive);
 
     return roundedResultString;
     #endif

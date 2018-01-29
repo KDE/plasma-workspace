@@ -111,19 +111,19 @@ private:
 
         for(int i=1; i<strList.size(); i++)
         {
-            if (category == "Name") {
+            if (category == QLatin1String("Name")) {
                 if (service->name().contains(strList[i], Qt::CaseInsensitive)) {
                     relevanceIncrement += 0.01;
                 }
-            } else if (category == "GenericName") {
+            } else if (category == QLatin1String("GenericName")) {
                 if (service->genericName().contains(strList[i], Qt::CaseInsensitive)) {
                     relevanceIncrement += 0.01;
                 }
-            } else if (category == "Exec") {
+            } else if (category == QLatin1String("Exec")) {
                 if (service->exec().contains(strList[i], Qt::CaseInsensitive)) {
                     relevanceIncrement += 0.01;
                 }
-            } else if (category == "Comment") {
+            } else if (category == QLatin1String("Comment")) {
                 if (service->comment().contains(strList[i], Qt::CaseInsensitive)) {
                     relevanceIncrement += 0.01;
                 }
@@ -135,10 +135,10 @@ private:
 
     QString generateQuery(QVector<QStringRef> &strList)
     {
-        QString keywordTemplate = "exist Keywords";
-        QString genericNameTemplate = "exist GenericName";
-        QString nameTemplate = "exist Name";
-        QString commentTemplate = "exist Comment";
+        QString keywordTemplate = QStringLiteral("exist Keywords");
+        QString genericNameTemplate = QStringLiteral("exist GenericName");
+        QString nameTemplate = QStringLiteral("exist Name");
+        QString commentTemplate = QStringLiteral("exist Comment");
 
         // Search for applications which are executable and the term case-insensitive matches any of
         // * a substring of one of the keywords
@@ -148,10 +148,10 @@ private:
         // they exist to prevent a tree evaluation error if they are not defined.
         foreach (QStringRef str, strList)
         {
-            keywordTemplate += QString(" and '%1' ~subin Keywords").arg(str.toString());
-            genericNameTemplate += QString(" and '%1' ~~ GenericName").arg(str.toString());
-            nameTemplate += QString(" and '%1' ~~ Name").arg(str.toString());
-            commentTemplate += QString(" and '%1' ~~ Comment").arg(str.toString());
+            keywordTemplate += QStringLiteral(" and '%1' ~subin Keywords").arg(str.toString());
+            genericNameTemplate += QStringLiteral(" and '%1' ~~ GenericName").arg(str.toString());
+            nameTemplate += QStringLiteral(" and '%1' ~~ Name").arg(str.toString());
+            commentTemplate += QStringLiteral(" and '%1' ~~ Comment").arg(str.toString());
         }
 
         QString finalQuery = QStringLiteral("exist Exec and ( (%1) or (%2) or (%3) or ('%4' ~~ Exec) or (%5) )")
@@ -249,28 +249,28 @@ private:
                 }
             } else if (service->name().contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.8;
-                relevance += increaseMatchRelavance(service, queryList, "Name");
+                relevance += increaseMatchRelavance(service, queryList, QStringLiteral("Name"));
 
                 if (service->name().startsWith(queryList[0], Qt::CaseInsensitive)) {
                     relevance += 0.1;
                 }
             } else if (service->genericName().contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.65;
-                relevance += increaseMatchRelavance(service, queryList, "GenericName");
+                relevance += increaseMatchRelavance(service, queryList, QStringLiteral("GenericName"));
 
                 if (service->genericName().startsWith(queryList[0], Qt::CaseInsensitive)) {
                     relevance += 0.05;
                 }
             } else if (service->exec().contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.7;
-                relevance += increaseMatchRelavance(service, queryList, "Exec");
+                relevance += increaseMatchRelavance(service, queryList, QStringLiteral("Exec"));
 
                 if (service->exec().startsWith(queryList[0], Qt::CaseInsensitive)) {
                     relevance += 0.05;
                 }
             } else if (service->comment().contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.5;
-                relevance += increaseMatchRelavance(service, queryList, "Comment");
+                relevance += increaseMatchRelavance(service, queryList, QStringLiteral("Comment"));
 
                 if (service->comment().startsWith(queryList[0], Qt::CaseInsensitive)) {
                     relevance += 0.05;
@@ -290,7 +290,7 @@ private:
                     QString subtext(QStringLiteral("KDE3"));
 
                     if (!match.subtext().isEmpty()) {
-                        subtext.append(", " + match.subtext());
+                        subtext.append(QStringLiteral(", ") + match.subtext());
                     }
 
                     match.setSubtext(subtext);

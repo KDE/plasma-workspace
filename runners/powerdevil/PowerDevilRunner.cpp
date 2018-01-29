@@ -145,9 +145,9 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
     QString parameter;
 
     if (parseQuery(term,
-                          QList<QRegExp>() << QRegExp(i18nc("Note this is a KRunner keyword; %1 is a parameter", "screen brightness %1", "(.*)"), Qt::CaseInsensitive)
+                          QList<QRegExp>() << QRegExp(i18nc("Note this is a KRunner keyword; %1 is a parameter", "screen brightness %1", QStringLiteral("(.*)")), Qt::CaseInsensitive)
                                            << QRegExp(i18nc("Note this is a KRunner keyword", "screen brightness"), Qt::CaseInsensitive)
-                                           << QRegExp(i18nc("Note this is a KRunner keyword; %1 is a parameter", "dim screen %1", "(.*)"), Qt::CaseInsensitive)
+                                           << QRegExp(i18nc("Note this is a KRunner keyword; %1 is a parameter", "dim screen %1", QStringLiteral("(.*)")), Qt::CaseInsensitive)
                                            << QRegExp(i18nc("Note this is a KRunner keyword", "dim screen"), Qt::CaseInsensitive),
                           parameter)) {
         if (!parameter.isEmpty()) {

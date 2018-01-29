@@ -60,12 +60,12 @@ void KillRunner::reloadConfiguration()
     KConfigGroup grp = config();
     m_triggerWord.clear();
     if (grp.readEntry(CONFIG_USE_TRIGGERWORD, true)) {
-        m_triggerWord = grp.readEntry(CONFIG_TRIGGERWORD, i18n("kill")) + ' ';
+        m_triggerWord = grp.readEntry(CONFIG_TRIGGERWORD, i18n("kill")) + QLatin1Char(' ');
     }
 
     m_sorting = (KillRunnerConfig::Sort) grp.readEntry(CONFIG_SORTING, 0);
     QList<Plasma::RunnerSyntax> syntaxes;
-    syntaxes << Plasma::RunnerSyntax(m_triggerWord + ":q:",
+    syntaxes << Plasma::RunnerSyntax(m_triggerWord + QStringLiteral(":q:"),
                                      i18n("Terminate running applications whose names match the query."));
     setSyntaxes(syntaxes);
 }
