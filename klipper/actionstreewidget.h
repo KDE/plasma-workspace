@@ -55,7 +55,7 @@ class ActionsTreeWidget : public QTreeWidget
     Q_PROPERTY( int actionsChanged READ actionsChanged WRITE setActionsChanged USER true )
 
 public:
-    ActionsTreeWidget(QWidget* parent = 0);
+    explicit ActionsTreeWidget(QWidget* parent = nullptr);
 
     void setActionsChanged(int);
     int actionsChanged() const;

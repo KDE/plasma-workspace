@@ -38,7 +38,7 @@ class GeneralWidget : public QWidget
 {
     Q_OBJECT
 public:
-    GeneralWidget(QWidget* parent);
+    explicit GeneralWidget(QWidget* parent);
     void updateWidgets();
 
 private:
@@ -49,7 +49,7 @@ class ActionsWidget : public QWidget
 {
     Q_OBJECT
 public:
-    ActionsWidget(QWidget* parent);
+    explicit ActionsWidget(QWidget* parent);
 
     void setActionList(const ActionList&);
     void setExcludedWMClasses(const QStringList&);
@@ -87,7 +87,7 @@ class AdvancedWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit AdvancedWidget( QWidget* parent = 0L );
+    explicit AdvancedWidget( QWidget* parent = nullptr );
     ~AdvancedWidget() override;
 
     void setWMClasses( const QStringList& items );

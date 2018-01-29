@@ -43,7 +43,7 @@ class URLGrabber : public QObject
   Q_OBJECT
 
 public:
-  URLGrabber(History* history);
+  explicit URLGrabber(History* history);
   ~URLGrabber() override;
 
   /**

@@ -35,7 +35,7 @@ class EditActionDialog : public QDialog
 {
     Q_OBJECT
 public:
-    EditActionDialog(QWidget* parent);
+    explicit EditActionDialog(QWidget* parent);
     ~EditActionDialog() override;
 
     /**

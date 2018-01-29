@@ -515,7 +515,7 @@ void Klipper::slotConfigure()
         return;
     }
 
-    ConfigDialog *dlg = new ConfigDialog( 0, KlipperSettings::self(), this, m_collection );
+    ConfigDialog *dlg = new ConfigDialog( nullptr, KlipperSettings::self(), this, m_collection );
     connect(dlg, &KConfigDialog::settingsChanged, this, &Klipper::loadSettings);
 
     dlg->show();

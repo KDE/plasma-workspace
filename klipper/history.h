@@ -32,7 +32,7 @@ class History : public QObject
 {
     Q_OBJECT
 public:
-    History( QObject* parent );
+    explicit History( QObject* parent );
     ~History() override;
 
     /**
