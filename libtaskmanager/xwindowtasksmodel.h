@@ -55,8 +55,8 @@ public:
     explicit XWindowTasksModel(QObject *parent = nullptr);
     virtual ~XWindowTasksModel();
 
-    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     /**
      * Request activation of the window at the given index.

@@ -336,7 +336,7 @@ public:
      * @param index An index in this tasks model.
      * @param activities The new list of activities.
      **/
-    virtual void requestActivities(const QModelIndex &index, const QStringList &activities) override;
+    void requestActivities(const QModelIndex &index, const QStringList &activities) override;
 
     /**
      * Request informing the window manager of new geometry for a visual

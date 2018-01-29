@@ -57,10 +57,10 @@ public:
     explicit WaylandTasksModel(QObject *parent = nullptr);
     virtual ~WaylandTasksModel();
 
-    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    virtual QModelIndex	index(int row, int column = 0, const QModelIndex &parent = QModelIndex()) const override;
+    QModelIndex	index(int row, int column = 0, const QModelIndex &parent = QModelIndex()) const override;
 
     /**
      * Request activation of the window at the given index.

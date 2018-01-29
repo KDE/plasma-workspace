@@ -68,7 +68,7 @@ public:
      * @param index An index in this tasks model.
      * @param urls The URLs to be passed to the application.
      **/
-    virtual void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls) override;
+    void requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls) override;
 
     /**
      * Request the task at the given index be closed.

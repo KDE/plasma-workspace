@@ -49,8 +49,8 @@ public:
     explicit StartupTasksModel(QObject *parent = nullptr);
     virtual ~StartupTasksModel();
 
-    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     /**
      * Request an additional instance of the application backing the
