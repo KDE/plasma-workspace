@@ -132,7 +132,7 @@ void TimeZoneModel::update()
     m_data.clear();
 
     QTimeZone localZone = QTimeZone(QTimeZone::systemTimeZoneId());
-    QStringList data = QString::fromUtf8(localZone.id()).split(QLatin1Char('/'));
+    const QStringList data = QString::fromUtf8(localZone.id()).split(QLatin1Char('/'));
 
     TimeZoneData local;
     local.id = QStringLiteral("Local");
@@ -146,7 +146,7 @@ void TimeZoneModel::update()
     QStringList cities;
     QHash<QString, QTimeZone> zonesByCity;
 
-    QList<QByteArray> systemTimeZones = QTimeZone::availableTimeZoneIds();
+    const QList<QByteArray> systemTimeZones = QTimeZone::availableTimeZoneIds();
 
     for (auto it = systemTimeZones.constBegin(); it != systemTimeZones.constEnd(); ++it) {
         const QTimeZone zone(*it);
@@ -170,7 +170,7 @@ void TimeZoneModel::update()
             comment = i18n(comment.toUtf8());
         }
 
-        QStringList cityCountryContinent = key.split(QLatin1Char('|'));
+        const QStringList cityCountryContinent = key.split(QLatin1Char('|'));
 
         TimeZoneData newData;
         newData.id = timeZone.id();

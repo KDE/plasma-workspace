@@ -24,7 +24,6 @@
 #include <Plasma/Applet>
 #include <QPointer>
 
-class KDBusMenuImporter;
 class QQuickItem;
 class QMenu;
 class AppMenuModel;

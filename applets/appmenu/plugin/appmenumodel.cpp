@@ -221,8 +221,8 @@ void AppMenuModel::onActiveWindowChanged(WId id)
 QHash<int, QByteArray> AppMenuModel::roleNames() const
 {
     QHash<int, QByteArray> roleNames;
-    roleNames[MenuRole] = "activeMenu";
-    roleNames[ActionRole] = "activeActions";
+    roleNames[MenuRole] = QByteArrayLiteral("activeMenu");
+    roleNames[ActionRole] = QByteArrayLiteral("activeActions");
     return roleNames;
 }
 

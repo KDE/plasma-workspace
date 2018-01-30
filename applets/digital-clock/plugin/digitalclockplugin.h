@@ -22,7 +22,6 @@
 
 #include <QQmlExtensionPlugin>
 
-class QQmlEngine;
 class DigitalClockPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT

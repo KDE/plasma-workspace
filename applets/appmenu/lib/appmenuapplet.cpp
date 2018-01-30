@@ -36,8 +36,9 @@
 #include <QTimer>
 
 int AppMenuApplet::s_refs = 0;
-
-static const QString s_viewService(QStringLiteral("org.kde.kappmenuview"));
+namespace {
+QString viewService() { return QStringLiteral("org.kde.kappmenuview"); }
+}
 
 AppMenuApplet::AppMenuApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
@@ -45,7 +46,7 @@ AppMenuApplet::AppMenuApplet(QObject *parent, const QVariantList &data)
     ++s_refs;
     //if we're the first, regster the service
     if (s_refs == 1) {
-        QDBusConnection::sessionBus().interface()->registerService(s_viewService,
+        QDBusConnection::sessionBus().interface()->registerService(viewService(),
                 QDBusConnectionInterface::QueueService,
                 QDBusConnectionInterface::DontAllowReplacement);
     }
@@ -60,12 +61,12 @@ AppMenuApplet::AppMenuApplet(QObject *parent, const QVariantList &data)
         if (destroyed) {
             //if we were the last, unregister
             if (--s_refs == 0) {
-                QDBusConnection::sessionBus().interface()->unregisterService(s_viewService);
+                QDBusConnection::sessionBus().interface()->unregisterService(viewService());
             }
         } else {
             //if we're the first, regster the service
             if (++s_refs == 1) {
-                QDBusConnection::sessionBus().interface()->registerService(s_viewService,
+                QDBusConnection::sessionBus().interface()->registerService(viewService(),
                     QDBusConnectionInterface::QueueService,
                     QDBusConnectionInterface::DontAllowReplacement);
             }
