@@ -48,7 +48,7 @@ public:
     };
     Q_ENUM(PositionOnScreen)
 
-    NotificationsHelper(QObject *parent = nullptr);
+    explicit NotificationsHelper(QObject *parent = nullptr);
     ~NotificationsHelper() override;
     Q_INVOKABLE void addNotificationPopup(QObject *win);
     Q_INVOKABLE void closePopup(const QString &sourceName);

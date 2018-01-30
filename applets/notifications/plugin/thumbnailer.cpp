@@ -133,7 +133,7 @@ void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem 
     });
 
     if (KProtocolManager::supportsListing(url)) {
-        QAction *openContainingFolderAction = menu->addAction(QIcon::fromTheme("folder-open"), i18n("Open Containing Folder"));
+        QAction *openContainingFolderAction = menu->addAction(QIcon::fromTheme(QStringLiteral("folder-open")), i18n("Open Containing Folder"));
         connect(openContainingFolderAction, &QAction::triggered, [url] {
             KIO::highlightInFileManager({url});
         });
@@ -158,7 +158,7 @@ void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem 
     actions->addServiceActionsTo(menu);
     actions->addPluginActionsTo(menu);
 
-    QAction *propertiesAction = menu->addAction(QIcon::fromTheme("document-properties"), i18n("Properties"));
+    QAction *propertiesAction = menu->addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("Properties"));
     connect(propertiesAction, &QAction::triggered, [fileItem] {
         KPropertiesDialog *dialog = new KPropertiesDialog(fileItem.url());
         dialog->setAttribute(Qt::WA_DeleteOnClose);

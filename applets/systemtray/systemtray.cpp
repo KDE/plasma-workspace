@@ -346,7 +346,7 @@ bool SystemTray::isSystemTrayApplet(const QString &appletId)
 void SystemTray::restoreContents(KConfigGroup &group)
 {
     Q_UNUSED(group);
-    //NOTE: RestoreContents shouldnn't do anything here because is too soon, so have an empty reimplementation
+    //NOTE: RestoreContents shouldn't do anything here because is too soon, so have an empty reimplementation
 }
 
 void SystemTray::restorePlasmoids()
