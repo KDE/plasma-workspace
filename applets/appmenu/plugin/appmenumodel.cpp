@@ -31,12 +31,11 @@
 #endif
 
 #include <QAction>
-#include <QGuiApplication>
 #include <QMenu>
-#include <QDebug>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>
+#include <QGuiApplication>
 
 #include <dbusmenuimporter.h>
 

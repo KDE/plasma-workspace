@@ -22,12 +22,10 @@
 #include "notificationsapplet.h"
 
 #include <KConfigGroup>
-#include <KWindowSystem>
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 
-#include <QDebug>
 
 NotificationsApplet::NotificationsApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data),

@@ -21,10 +21,10 @@
 #include "thumbnailer.h"
 #include "draghelper.h"
 
-#include <QtQml>
-#include <QProcess>
 #include <QQmlNetworkAccessManagerFactory>
 #include <QUrl>
+#include <QQmlEngine>
+#include <QNetworkAccessManager>
 
 class NoAccessNetworkAccessManagerFactory : public QQmlNetworkAccessManagerFactory
 {

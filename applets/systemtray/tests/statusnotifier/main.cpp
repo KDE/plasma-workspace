@@ -21,7 +21,6 @@
 #include <qcommandlineoption.h>
 
 #include <QApplication>
-#include <QDebug>
 
 #include "statusnotifiertest.h"
 

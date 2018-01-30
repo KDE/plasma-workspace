@@ -20,7 +20,6 @@
 #include "systemtraycontainer.h"
 #include "debug.h"
 
-#include <QDebug>
 #include <QQuickItem>
 
 #include <Plasma/Corona>

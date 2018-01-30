@@ -21,7 +21,6 @@
 #define STATUSNOTIFIERTEST_H
 
 #include <QDialog>
-#include <QObject>
 #include <QWidget>
 
 #include <KJob>

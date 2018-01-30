@@ -27,13 +27,11 @@
 #include <QMenu>
 #include <QMouseEvent>
 #include <QQuickItem>
-#include <QQuickWindow>
-#include <QScreen>
 #include <QDBusConnection>
-#include <QDBusMessage>
-#include <QDBusPendingCall>
 #include <QDBusConnectionInterface>
 #include <QTimer>
+#include <QQuickWindow>
+#include <QScreen>
 
 int AppMenuApplet::s_refs = 0;
 namespace {

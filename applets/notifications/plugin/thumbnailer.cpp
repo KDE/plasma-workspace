@@ -22,13 +22,12 @@
 
 #include <QApplication>
 #include <QClipboard>
-#include <QDebug>
 #include <QIcon>
 #include <QMimeData>
 #include <QMenu>
 #include <QQuickItem>
-#include <QQuickWindow>
 #include <QTimer>
+#include <QQuickWindow>
 
 #include <KFileItemActions>
 #include <KFileItemListProperties>

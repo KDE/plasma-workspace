@@ -21,9 +21,8 @@
 
 #include "appmenuplugin.h"
 #include "appmenumodel.h"
-
-#include <QtQml>
 #include <QQmlEngine>
+
 
 void AppmenuPlugin::registerTypes(const char *uri)
 {

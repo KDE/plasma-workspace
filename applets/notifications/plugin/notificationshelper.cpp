@@ -22,7 +22,6 @@
 #include <qfontmetrics.h>
 #include <QTimer>
 #include <QQuickWindow>
-#include <QQuickItem>
 #include <QQmlEngine>
 #include <QReadWriteLock>
 #include <QDebug>

@@ -21,7 +21,6 @@
 #include "debug.h"
 
 #include <QDebug>
-#include <QProcess>
 #include <QTimer>
 
 #include <QDBusConnection>
@@ -29,16 +28,16 @@
 #include <QDBusPendingCallWatcher>
 #include <QMenu>
 #include <QQuickItem>
-#include <QQuickWindow>
 #include <QRegExp>
 #include <QScreen>
 #include <QStandardItemModel>
+#include <QQuickWindow>
 
 #include <Plasma/PluginLoader>
 #include <Plasma/ServiceJob>
 
-#include <KAcceleratorManager>
 #include <KActionCollection>
+#include <KAcceleratorManager>
 #include <KLocalizedString>
 
 #include <plasma_version.h>

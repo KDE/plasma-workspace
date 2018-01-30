@@ -24,7 +24,6 @@
 #include <QTimeZone>
 #include <QStringMatcher>
 #include <KLocalizedString>
-#include <QDebug>
 
 TimeZoneFilterProxy::TimeZoneFilterProxy(QObject *parent)
     : QSortFilterProxyModel(parent)
