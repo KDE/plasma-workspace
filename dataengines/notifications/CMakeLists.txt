@@ -1,3 +1,5 @@
+include(ECMMarkAsTest)
+
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_notifications\")
 
 set(notifications_engine_SRCS
