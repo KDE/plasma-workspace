@@ -13,7 +13,7 @@ set( testChromeBookmarks_SRCS testchromebookmarks.cpp
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/.. ${CMAKE_CURRENT_BINARY_DIR}/.. )
 add_executable( testChromeBookmarks ${testChromeBookmarks_SRCS} )
 #add_executable( testChromeBookmarksNAME plasma-runner-bookmarks-TestChromeBookmarks ${testChromeBookmarks_SRCS} )
-add_test(testChromeBookmarks testChromeBookmarks)
+add_test(NAME testChromeBookmarks COMMAND testChromeBookmarks)
 ecm_mark_as_test(testChromeBookmarks)
 #add_test( testChromeBookmarks TESTNAME plasma-runner-bookmarks-TestChromeBookmarks ${testChromeBookmarks_SRCS} )
 target_link_libraries( testChromeBookmarks
@@ -24,7 +24,7 @@ target_link_libraries( testChromeBookmarks
     KF5::KIOCore
 )
 
-add_test(plasma-runner-bookmarks-TestChromeBookmarks testChromeBookmarks)
+add_test(NAME plasma-runner-bookmarks-TestChromeBookmarks COMMAND testChromeBookmarks)
 ecm_mark_as_test(testChromeBookmarks)
 
 file(COPY chrome-config-home DESTINATION ${CMAKE_CURRENT_BINARY_DIR})

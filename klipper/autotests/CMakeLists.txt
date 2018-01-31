@@ -22,7 +22,7 @@ target_link_libraries(testHistory
     Qt5::Widgets # QAction
     KF5::CoreAddons # KUrlMimeData
 )
-add_test(klipper-testHistory testHistory)
+add_test(NAME klipper-testHistory COMMAND testHistory)
 ecm_mark_as_test(testHistory)
 
 ########################################################
@@ -44,5 +44,5 @@ target_link_libraries(testHistoryModel
     Qt5::Widgets # QAction
     KF5::CoreAddons # KUrlMimeData
 )
-add_test(klipper-testHistoryModel testHistoryModel)
+add_test(NAME klipper-testHistoryModel COMMAND testHistoryModel)
 ecm_mark_as_test(testHistoryModel)
