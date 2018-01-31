@@ -1,5 +1,6 @@
 @PACKAGE_INIT@
 
+include(CMakeFindDependencyMacro)
 find_dependency(Qt5Core "@QT_MIN_VERSION@")
 find_dependency(Qt5Quick "@QT_MIN_VERSION@")
 find_dependency(KF5Plasma "@KF5_MIN_VERSION@")

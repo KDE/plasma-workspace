@@ -98,7 +98,7 @@ write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfig
 
 set(CMAKECONFIG_INSTALL_DIR ${KDE_INSTALL_LIBDIR}/cmake/LibTaskManager)
 
-ecm_configure_package_config_file(LibTaskManagerConfig.cmake.in
+configure_package_config_file(LibTaskManagerConfig.cmake.in
     "${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfig.cmake"
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 

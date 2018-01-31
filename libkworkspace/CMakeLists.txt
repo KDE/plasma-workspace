@@ -60,7 +60,7 @@ install( FILES kdisplaymanager.h
          DESTINATION ${KDE_INSTALL_INCLUDEDIR}/kworkspace5 COMPONENT Devel )
 
 set(CMAKECONFIG_INSTALL_DIR ${KDE_INSTALL_LIBDIR}/cmake/LibKWorkspace)
-ecm_configure_package_config_file(LibKWorkspaceConfig.cmake.in
+configure_package_config_file(LibKWorkspaceConfig.cmake.in
     "${CMAKE_CURRENT_BINARY_DIR}/LibKWorkspaceConfig.cmake"
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 

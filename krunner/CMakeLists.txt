@@ -31,7 +31,7 @@ install(FILES ${krunner_dbusAppXML} DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} 
 install(FILES krunner.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KRunnerAppDBusInterface")
-ecm_configure_package_config_file(KRunnerAppDBusInterfaceConfig.cmake.in
+configure_package_config_file(KRunnerAppDBusInterfaceConfig.cmake.in
     "${CMAKE_CURRENT_BINARY_DIR}/KRunnerAppDBusInterfaceConfig.cmake"
     PATH_VARS KDE_INSTALL_DBUSINTERFACEDIR
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})

@@ -47,7 +47,7 @@ write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibColorCorrectConfi
 
 set(CMAKECONFIG_INSTALL_DIR ${KDE_INSTALL_LIBDIR}/cmake/LibColorCorrect)
 
-ecm_configure_package_config_file(LibColorCorrectConfig.cmake.in
+configure_package_config_file(LibColorCorrectConfig.cmake.in
     "${CMAKE_CURRENT_BINARY_DIR}/LibColorCorrectConfig.cmake"
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 
