@@ -20,6 +20,7 @@
 #include "notificationsengine.h"
 #include "notificationservice.h"
 #include "notificationsadaptor.h"
+#include "notificationsanitizer.h"
 
 #include <QDebug>
 #include <KConfigGroup>
@@ -261,23 +262,7 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     const QString source = QStringLiteral("notification %1").arg(id);
 
     QString bodyFinal = (partOf == 0 ? body : _body);
-    // First trim whitespace from beginning and end
-    bodyFinal = bodyFinal.trimmed();
-    // Now replace all \ns with <br/>
-    bodyFinal = bodyFinal.replace(QLatin1String("\n"), QLatin1String("<br/>"));
-    // Now remove all inner whitespace (\ns are already <br/>s
-    bodyFinal = bodyFinal.simplified();
-    // Finally, check if we don't have multiple <br/>s following,
-    // can happen for example when "\n       \n" is sent, this replaces
-    // all <br/>s in succsession with just one
-    bodyFinal.replace(QRegularExpression(QStringLiteral("<br/>\\s*<br/>(\\s|<br/>)*")), QLatin1String("<br/>"));
-    // This fancy RegExp escapes every occurence of & since QtQuick Text will blatantly cut off
-    // text where it finds a stray ampersand.
-    // Only &{apos, quot, gt, lt, amp}; as well as &#123 character references will be allowed
-    bodyFinal.replace(QRegularExpression(QStringLiteral("&(?!(?:apos|quot|[gl]t|amp);|#)")), QLatin1String("&amp;"));
-    // The Text.StyledText format handles only html3.2 stuff and &apos; is html4 stuff
-    // so we need to replace it here otherwise it will not render at all.
-    bodyFinal.replace(QLatin1String("&apos;"), QChar('\''));
+    bodyFinal = NotificationSanitizer::parse(bodyFinal);
 
     Plasma::DataEngine::Data notificationData;
     notificationData.insert(QStringLiteral("id"), QString::number(id));
