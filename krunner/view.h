@@ -91,16 +91,12 @@ protected Q_SLOTS:
 
 private:
     void writeHistory();
-    void initWayland();
-
     QPoint m_customPos;
     KDeclarative::QmlObject *m_qmlObj;
     KConfigGroup m_config;
     qreal m_offset;
     bool m_floating : 1;
     QStringList m_history;
-    KWayland::Client::PlasmaShell *m_plasmaShell;
-    QPointer <KWayland::Client::PlasmaShellSurface> m_plasmaShellSurface;
 };
 
 

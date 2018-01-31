@@ -52,10 +52,8 @@
 View::View(QWindow *)
     : PlasmaQuick::Dialog(),
       m_offset(.5),
-      m_floating(false),
-      m_plasmaShell(nullptr)
+      m_floating(false)
 {
-    initWayland();
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
@@ -143,31 +141,6 @@ View::~View()
 {
 }
 
-void View::initWayland()
-{
-    if (!KWindowSystem::isPlatformWayland()) {
-        return;
-    }
-    using namespace KWayland::Client;
-    auto connection = ConnectionThread::fromApplication(this);
-    if (!connection) {
-        return;
-    }
-    Registry *registry = new Registry(this);
-    registry->create(connection);
-    QObject::connect(registry, &Registry::interfacesAnnounced, this,
-        [registry, this] {
-            const auto interface = registry->interface(Registry::Interface::PlasmaShell);
-            if (interface.name != 0) {
-                m_plasmaShell = registry->createPlasmaShell(interface.name, interface.version, this);
-            }
-        }
-    );
-
-    registry->setup();
-    connection->roundtrip();
-}
-
 void View::objectIncubated()
 {
     connect(m_qmlObj->rootObject(), SIGNAL(widthChanged()), this, SLOT(resetScreenPos()));
@@ -227,38 +200,6 @@ bool View::event(QEvent *event)
     if (setState) {
         KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
     }
-
-    if (m_plasmaShell && event->type() == QEvent::Expose) {
-        using namespace KWayland::Client;
-        auto ee = static_cast<QExposeEvent*>(event);
-
-        if (ee->region().isNull()) {
-            return retval;
-        }
-
-        if (!m_plasmaShellSurface && isVisible()) {
-            Surface *s = Surface::fromWindow(this);
-            if (!s) {
-                return retval;
-            }
-            m_plasmaShellSurface = m_plasmaShell->createSurface(s, this);
-            m_plasmaShellSurface->setPanelBehavior(PlasmaShellSurface::PanelBehavior::WindowsGoBelow);
-            m_plasmaShellSurface->setPanelTakesFocus(true);
-            m_plasmaShellSurface->setRole(PlasmaShellSurface::Role::Panel);
-            //this should be on showEvent, but it was too soon so none of those had any effect
-            KWindowSystem::setOnAllDesktops(winId(), true);
-            positionOnScreen();
-            requestActivate();
-            //positionOnScreen tried to position it in the position it already had, so no moveevent happens and we need to manually posiyion the surface
-            m_plasmaShellSurface->setPosition(position());
-        }
-    } else if (event->type() == QEvent::Hide) {
-        delete m_plasmaShellSurface;
-    } else if (m_plasmaShellSurface && event->type() == QEvent::Move) {
-        QMoveEvent *me = static_cast<QMoveEvent *>(event);
-        m_plasmaShellSurface->setPosition(me->pos());
-    }
-
     return retval;
 }
 
