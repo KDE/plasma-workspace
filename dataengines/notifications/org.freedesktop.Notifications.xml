@@ -10,7 +10,7 @@
       <arg name="action_key" type="s" direction="out"/>
     </signal>
     <method name="Notify">
-      <annotation name="com.trolltech.QtDBus.QtTypeName.In6" value="QVariantMap"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In6" value="QVariantMap"/>
       <arg type="u" direction="out"/>
       <arg name="app_name" type="s" direction="in"/>
       <arg name="replaces_id" type="u" direction="in"/>
