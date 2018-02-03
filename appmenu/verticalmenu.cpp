@@ -75,5 +75,3 @@ void VerticalMenu::_EVENT_##Event(Q##_TYPE_##Event *e) \
 
 FORWARD(keyPress, Key)
 FORWARD(keyRelease, Key)
-
-#include "verticalmenu.moc"

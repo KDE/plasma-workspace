@@ -187,5 +187,3 @@ void SearchRunner::Run(const QString& id, const QString& actionId)
 
     new KRun(url, 0);
 }
-
-#include "baloosearchrunner.moc"

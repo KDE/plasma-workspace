@@ -60,5 +60,3 @@ void StatusNotifierItemJob::contextMenuReady(QMenu *menu)
         setResult(qVariantFromValue((QObject*)menu));
     }
 }
-
-#include "statusnotifieritemjob.moc"

@@ -37,5 +37,3 @@ Plasma::ServiceJob* StatusNotifierItemService::createJob(const QString &operatio
 {
     return new StatusNotifierItemJob(m_source, operation, parameters, this);
 }
-
-#include "statusnotifieritemservice.moc"
