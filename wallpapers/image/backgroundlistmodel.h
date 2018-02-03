@@ -88,7 +88,7 @@ public:
     Q_INVOKABLE int indexOf(const QString &path) const;
     virtual bool contains(const QString &bg) const;
 
-    int count() const {return m_packages.size();};
+    int count() const {return m_packages.size();}
 
     Q_INVOKABLE void openContainingFolder(int rowIndex);
     Q_INVOKABLE void setPendingDeletion(int rowIndex, bool pendingDeletion);
