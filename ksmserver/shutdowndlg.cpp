@@ -145,7 +145,6 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     // engine stuff
     KDeclarative::KDeclarative kdeclarative;
     kdeclarative.setDeclarativeEngine(engine());
-    kdeclarative.initialize();
     kdeclarative.setupBindings();
 //    windowContainer->installEventFilter(this);
 }
