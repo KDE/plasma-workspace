@@ -17,7 +17,7 @@
       <signal name="rankingChanged">
           <arg name="topActivities" type="as" direction="out" />
           <arg name="activities" type="a(sd)" direction="out" />
-          <annotation name="org.qtproject.QtDBus.QtTypeName.In1" value="ActivityDataList" />
+          <annotation name="org.qtproject.QtDBus.QtTypeName.Out1" value="ActivityDataList" />
       </signal>
 
   </interface>

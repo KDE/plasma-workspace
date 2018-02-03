@@ -21,7 +21,7 @@
 
     <signal name="jobUrlsChanged">
         <arg type="as" direction="out"/>
-        <annotation name="com.trolltech.QtDBus.QtTypeName.In0" value="QList&lt;QString&gt;"/>
+        <annotation name="com.qtproject.QtDBus.QtTypeName.Out0" value="QList&lt;QString&gt;"/>
     </signal>
 
     </interface>

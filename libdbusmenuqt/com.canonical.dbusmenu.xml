@@ -2,8 +2,8 @@
     <property name="Version" type="u" access="read"/>
     <property name="Status" type="s" access="read"/>
     <signal name="ItemsPropertiesUpdated">
-    <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="DBusMenuItemList"/>
-    <annotation name="org.qtproject.QtDBus.QtTypeName.In1" value="DBusMenuItemKeysList"/>
+    <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="DBusMenuItemList"/>
+    <annotation name="org.qtproject.QtDBus.QtTypeName.Out1" value="DBusMenuItemKeysList"/>
     <arg type="a(ia{sv})" direction="out"/>
     <arg type="a(ias)" direction="out"/>
     </signal>
