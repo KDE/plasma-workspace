@@ -41,7 +41,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 namespace TaskManager
 {
 
-class TasksModel::Private
+class Q_DECL_HIDDEN TasksModel::Private
 {
 public:
     Private(TasksModel *q);

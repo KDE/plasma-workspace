@@ -23,7 +23,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 namespace TaskManager
 {
 
-class FlattenTaskGroupsProxyModel::Private
+class Q_DECL_HIDDEN FlattenTaskGroupsProxyModel::Private
 {
 public:
     Private(FlattenTaskGroupsProxyModel *q);

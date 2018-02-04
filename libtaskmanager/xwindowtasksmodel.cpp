@@ -50,7 +50,7 @@ static const NET::Properties windowInfoFlags = NET::WMState | NET::XAWMState | N
 static const NET::Properties2 windowInfoFlags2 = NET::WM2DesktopFileName | NET::WM2Activities |
     NET::WM2WindowClass | NET::WM2AllowedActions;
 
-class XWindowTasksModel::Private
+class Q_DECL_HIDDEN XWindowTasksModel::Private
 {
 public:
     Private(XWindowTasksModel *q);

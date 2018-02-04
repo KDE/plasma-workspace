@@ -26,7 +26,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 namespace TaskManager
 {
 
-class TaskFilterProxyModel::Private
+class Q_DECL_HIDDEN TaskFilterProxyModel::Private
 {
 public:
     Private(TaskFilterProxyModel *q);

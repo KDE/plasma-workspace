@@ -55,7 +55,7 @@ inline bool isOnAllActivities(const ActivitiesCollection &activities)
 }
 
 
-class LauncherTasksModel::Private
+class Q_DECL_HIDDEN LauncherTasksModel::Private
 {
 public:
     Private(LauncherTasksModel *q);

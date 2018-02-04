@@ -34,7 +34,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 namespace TaskManager
 {
 
-class StartupTasksModel::Private
+class Q_DECL_HIDDEN StartupTasksModel::Private
 {
 public:
     Private(StartupTasksModel *q);

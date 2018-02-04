@@ -27,7 +27,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 namespace TaskManager
 {
 
-class TaskGroupingProxyModel::Private
+class Q_DECL_HIDDEN TaskGroupingProxyModel::Private
 {
 public:
     Private(TaskGroupingProxyModel *q);

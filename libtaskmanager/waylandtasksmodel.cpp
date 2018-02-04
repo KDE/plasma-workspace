@@ -42,7 +42,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 namespace TaskManager
 {
 
-class WaylandTasksModel::Private
+class Q_DECL_HIDDEN WaylandTasksModel::Private
 {
 public:
     Private(WaylandTasksModel *q);

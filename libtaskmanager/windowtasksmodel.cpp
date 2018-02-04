@@ -32,7 +32,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 namespace TaskManager
 {
 
-class WindowTasksModel::Private
+class Q_DECL_HIDDEN WindowTasksModel::Private
 {
 public:
     Private(WindowTasksModel *q);
