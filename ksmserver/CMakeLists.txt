@@ -15,7 +15,6 @@ endif()
 ########### next target ###############
 
 set(ksmserver_KDEINIT_SRCS
-    ksmserver_debug.cpp
     main.cpp
     server.cpp
     legacy.cpp
@@ -24,6 +23,7 @@ set(ksmserver_KDEINIT_SRCS
     shutdown.cpp
     client.cpp
 )
+ecm_qt_declare_logging_category(ksmserver_KDEINIT_SRCS HEADER ksmserver_debug.h IDENTIFIER KSMSERVER CATEGORY_NAME org.kde.kf5.ksmserver)
 
 set(kcminit_adaptor ${plasma-workspace_SOURCE_DIR}/startkde/kcminit/main.h)
 set(kcminit_xml ${CMAKE_CURRENT_BINARY_DIR}/org.kde.KCMinit.xml)
