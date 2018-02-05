@@ -217,7 +217,7 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     qDebug() << "Currrent active notifications:" << m_activeNotifications;
     qDebug() << "Guessing partOf as:" << partOf;
     qDebug() << " New Notification: " << summary << body << timeout << "& Part of:" << partOf;
-    QString bodyFinal = body;
+    QString bodyFinal = NotificationSanitizer::parse(body);
     QString summaryFinal = summary;
 
     if (partOf > 0) {
@@ -225,13 +225,13 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
         Plasma::DataContainer *container = containerForSource(source);
         if (container) {
             // append the body text
-            QString _body = container->data()[QStringLiteral("body")].toString();
-            if (_body != body) {
-                _body.append("\n").append(body);
-            } else {
-                _body = body;
+            const QString previousBody = container->data()[QStringLiteral("body")].toString();
+            if (previousBody != bodyFinal) {
+                // FIXME: This will just append the entire old XML document to another one, leading to:
+                // <?xml><html>old</html><br><?xml><html>new</html>
+                // It works but is not very clean.
+                bodyFinal = previousBody + QStringLiteral("<br/>") + bodyFinal;
             }
-            bodyFinal = _body;
 
             replaces_id = partOf;
 
@@ -267,7 +267,7 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
 
     const int AVERAGE_WORD_LENGTH = 6;
     const int WORD_PER_MINUTE = 250;
-    int count = summary.length() + body.length();
+    int count = summary.length() + body.length() - strlen("<?xml version=\"1.0\"><html></html>");
 
     // -1 is "server default", 0 is persistent with "server default" display time,
     // anything more should honor the setting
@@ -281,8 +281,6 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     }
 
     const QString source = QStringLiteral("notification %1").arg(id);
-
-    bodyFinal = NotificationSanitizer::parse(bodyFinal);
 
     Plasma::DataEngine::Data notificationData;
     notificationData.insert(QStringLiteral("id"), QString::number(id));
