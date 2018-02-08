@@ -31,7 +31,6 @@
 #include <KRun>
 #include <KService>
 #include <KServiceTypeTrader>
-#include <kcoreaddons_version.h>
 #include <KStringHandler>
 
 #include "debug.h"
