@@ -81,11 +81,6 @@ MouseEventListener {
         }
     }
 
-    PlasmaCore.Svg {
-        id: configIconsSvg
-        imagePath: "widgets/configuration-icons"
-    }
-
     PlasmaExtras.Heading {
         width: parent.width
         level: 3
