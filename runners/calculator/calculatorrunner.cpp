@@ -160,7 +160,7 @@ void CalculatorRunner::hexSubstitutions(QString& cmd)
 {
     if (cmd.contains(QStringLiteral("0x"))) {
         //Append +0 so that the calculator can serve also as a hex converter
-        cmd.append(QStringLiteral("+0"));
+        cmd.append(QLatin1String("+0"));
         bool ok;
         int pos = 0;
         QString hex;
