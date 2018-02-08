@@ -174,7 +174,8 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
         if (launcherUrlsMatch(url, launcher, IgnoreQueryItems)) {
             ActivitiesSet newActivities;
 
-            if (!activitiesForLauncher.contains(url)) {
+            // Use the key we established equivalence to ('launcher').
+            if (!activitiesForLauncher.contains(launcher)) {
                 // If we don't have the activities assigned to this url
                 // for some reason
                 newActivities = activities;
@@ -185,7 +186,7 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
                     // launcher should be on all activities
                     newActivities = ActivitiesSet { NULL_UUID };
 
-                } else if (isOnAllActivities(activitiesForLauncher[url])) {
+                } else if (isOnAllActivities(activitiesForLauncher[launcher])) {
                     // If we have been on all activities before, and we have
                     // been asked to be on a specific one, lets make an
                     // exception - we will set the activities to exactly
@@ -195,13 +196,13 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
 
                 } else {
                     newActivities += activities;
-                    newActivities += activitiesForLauncher[url];
+                    newActivities += activitiesForLauncher[launcher];
 
                 }
             }
 
-            if (newActivities != activitiesForLauncher[url]) {
-                setActivitiesForLauncher(url, newActivities);
+            if (newActivities != activitiesForLauncher[launcher]) {
+                setActivitiesForLauncher(launcher, newActivities);
 
                 emit q->dataChanged(
                         q->index(row, 0),
