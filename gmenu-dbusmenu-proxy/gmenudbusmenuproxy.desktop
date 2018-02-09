@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=gmenudbusmenuproxy
+Name=GMenuDBusMenuProxy
+Type=Application
+X-KDE-StartupNotify=false
+OnlyShowIn=KDE;
+X-KDE-autostart-phase=0

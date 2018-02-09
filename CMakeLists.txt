@@ -166,6 +166,8 @@ add_subdirectory(solidautoeject)
 
 ecm_optional_add_subdirectory(xembed-sni-proxy)
 
+ecm_optional_add_subdirectory(gmenu-dbusmenu-proxy)
+
 add_subdirectory(soliduiserver)
 
 if(KF5Holidays_FOUND)
