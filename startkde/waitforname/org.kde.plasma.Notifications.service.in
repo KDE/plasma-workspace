@@ -1,3 +1,3 @@
 [D-BUS Service]
 Name=org.freedesktop.Notifications
-Exec=@CMAKE_INSTALL_PREFIX@/bin/plasma_waitforname org.freedesktop.Notifications
+Exec=@KDE_INSTALL_FULL_BINDIR@/plasma_waitforname org.freedesktop.Notifications
