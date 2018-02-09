@@ -56,9 +56,8 @@ int main(int argc, char *argv[])
 
     QQuickWindow::setDefaultAlphaBuffer(true);
 
-    KLocalizedString::setApplicationDomain("plasmashell");
-
     QApplication app(argc, argv);
+    KLocalizedString::setApplicationDomain("plasmashell");
 
     // The executable's path is added to the library/plugin paths.
     // This does not make much sense for plasmashell.

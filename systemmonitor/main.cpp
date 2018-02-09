@@ -25,9 +25,8 @@
 
 int main(int argc, char** argv)
 {
-    KLocalizedString::setApplicationDomain("systemmonitor");
-
     QApplication app(argc, argv);
+    KLocalizedString::setApplicationDomain("systemmonitor");
 
     app.setOrganizationDomain(QStringLiteral("kde.org"));
     app.setDesktopFileName(QStringLiteral("org.kde.systemmonitor"));
