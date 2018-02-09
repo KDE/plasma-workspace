@@ -41,6 +41,10 @@ Menu::Menu(WId winId, const QString &serviceName, const QString &objectPath)
 {
     qDebug() << "Created menu on" << m_serviceName << "at" << m_objectPath;
 
+
+    GDBusMenuTypes_register();
+    DBusMenuTypes_register();
+
     // FIXME doesn't work work
     if (!QDBusConnection::sessionBus().connect(m_serviceName,
                                                m_objectPath,
@@ -81,8 +85,6 @@ QString Menu::proxyObjectPath() const
 
 void Menu::start(const QList<uint> &ids)
 {
-    GDBusMenuTypes_register();
-
     // TODO watch service disappearing?
 
     // dbus-send --print-reply --session --dest=:1.103 /org/libreoffice/window/104857641/menus/menubar org.gtk.Menus.Start array:uint32:0
