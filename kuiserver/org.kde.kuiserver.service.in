@@ -1,3 +1,3 @@
 [D-BUS Service]
 Name=org.kde.kuiserver
-Exec=@CMAKE_INSTALL_PREFIX@/bin/kuiserver5
+Exec=@KDE_INSTALL_FULL_BINDIR@/kuiserver5
