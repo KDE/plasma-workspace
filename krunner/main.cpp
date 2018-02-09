@@ -43,10 +43,9 @@ int main(int argc, char **argv)
     qunsetenv("QT_DEVICE_PIXEL_RATIO");
     QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
 
-    KLocalizedString::setApplicationDomain("krunner");
-
     QQuickWindow::setDefaultAlphaBuffer(true);
     QApplication app(argc, argv);
+    KLocalizedString::setApplicationDomain("krunner");
 
     KQuickAddons::QtQuickSettings::init();
 
