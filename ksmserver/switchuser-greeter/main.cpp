@@ -135,6 +135,9 @@ bool Greeter::eventFilter(QObject *watched, QEvent *event)
 
 int main(int argc, char *argv[])
 {
+    // Qt does not currently (5.9.4) support fullscreen on xdg_shell v6.
+    qputenv("QT_WAYLAND_SHELL_INTEGRATION", "wl-shell");
+
     QQuickWindow::setDefaultAlphaBuffer(true);
     QGuiApplication app(argc, argv);
 
