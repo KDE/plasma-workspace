@@ -32,7 +32,7 @@ class PumpJob : public KIO::Job
 
     public:
         PumpJob(int interval = 0);
-        virtual ~PumpJob();
+        ~PumpJob() override;
 
         void start() override;
         bool doKill() override;

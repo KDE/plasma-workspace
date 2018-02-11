@@ -95,7 +95,7 @@ public:
     Q_ENUM(AdditionalRoles)
 
     explicit AbstractTasksModel(QObject *parent = nullptr);
-    virtual ~AbstractTasksModel();
+    ~AbstractTasksModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 

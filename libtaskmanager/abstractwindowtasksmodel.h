@@ -45,7 +45,7 @@ class TASKMANAGER_EXPORT AbstractWindowTasksModel : public AbstractTasksModel
 
 public:
     explicit AbstractWindowTasksModel(QObject *parent = nullptr);
-    virtual ~AbstractWindowTasksModel();
+    ~AbstractWindowTasksModel() override;
 };
 
 }

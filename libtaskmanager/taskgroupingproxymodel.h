@@ -55,7 +55,7 @@ class TASKMANAGER_EXPORT TaskGroupingProxyModel : public QAbstractProxyModel, pu
 
 public:
     explicit TaskGroupingProxyModel(QObject *parent = nullptr);
-    virtual ~TaskGroupingProxyModel();
+    ~TaskGroupingProxyModel() override;
 
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
     QModelIndex parent(const QModelIndex &child) const override;

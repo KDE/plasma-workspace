@@ -56,7 +56,7 @@ class TASKMANAGER_EXPORT VirtualDesktopInfo : public QObject
 
 public:
     explicit VirtualDesktopInfo(QObject *parent = nullptr);
-    virtual ~VirtualDesktopInfo();
+    ~VirtualDesktopInfo() override;
 
     /**
      * The currently active virtual desktop.
