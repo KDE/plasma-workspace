@@ -47,7 +47,7 @@ class TASKMANAGER_EXPORT FlattenTaskGroupsProxyModel : public KDescendantsProxyM
 
 public:
     explicit FlattenTaskGroupsProxyModel(QObject *parent = nullptr);
-    virtual ~FlattenTaskGroupsProxyModel();
+    ~FlattenTaskGroupsProxyModel() override;
 
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 

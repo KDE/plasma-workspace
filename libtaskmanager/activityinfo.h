@@ -51,7 +51,7 @@ class TASKMANAGER_EXPORT ActivityInfo : public QObject
 
 public:
     explicit ActivityInfo(QObject *parent = nullptr);
-    virtual ~ActivityInfo();
+    ~ActivityInfo() override;
 
     /**
      * The currently active virtual desktop.

@@ -46,7 +46,7 @@ class RssEngine : public Plasma::DataEngine
 
     public:
         RssEngine(QObject* parent, const QVariantList& args);
-        virtual ~RssEngine();
+        ~RssEngine() override;
 
     protected:
         bool sourceRequestEvent(const QString &name);

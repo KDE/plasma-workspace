@@ -46,7 +46,7 @@ class TASKMANAGER_EXPORT WindowTasksModel : public QIdentityProxyModel, public A
 
 public:
     explicit WindowTasksModel(QObject *parent = nullptr);
-    virtual ~WindowTasksModel();
+    ~WindowTasksModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 
