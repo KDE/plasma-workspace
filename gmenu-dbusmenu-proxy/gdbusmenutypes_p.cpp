@@ -26,7 +26,7 @@
 QDBusArgument &operator<<(QDBusArgument &argument, const GMenuItem &item)
 {
     argument.beginStructure();
-    argument << item.id << item.count << item.items;
+    argument << item.id << item.section << item.items;
     argument.endStructure();
     return argument;
 }
@@ -34,7 +34,24 @@ QDBusArgument &operator<<(QDBusArgument &argument, const GMenuItem &item)
 const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuItem &item)
 {
     argument.beginStructure();
-    argument >> item.id >> item.count >> item.items;
+    argument >> item.id >> item.section >> item.items;
+    argument.endStructure();
+    return argument;
+}
+
+// GMenuSection
+QDBusArgument &operator<<(QDBusArgument &argument, const GMenuSection &item)
+{
+    argument.beginStructure();
+    argument << item.subscription << item.menu;
+    argument.endStructure();
+    return argument;
+}
+
+const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuSection &item)
+{
+    argument.beginStructure();
+    argument >> item.subscription >> item.menu;
     argument.endStructure();
     return argument;
 }
@@ -56,6 +73,41 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuChange &item
     return argument;
 }
 
+// GMenuActionProperty
+QDBusArgument &operator<<(QDBusArgument &argument, const GMenuAction &item)
+{
+    argument.beginStructure();
+    argument << item.enabled << item.signature << item.arguments;
+    argument.endStructure();
+    return argument;
+}
+
+const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuAction &item)
+{
+    argument.beginStructure();
+    argument >> item.enabled >> item.signature >> item.arguments;
+    argument.endStructure();
+    return argument;
+}
+
+// GMenuActionsChange
+QDBusArgument &operator<<(QDBusArgument &argument, const GMenuActionsChange &item)
+{
+    argument.beginStructure();
+    argument << item.removed << item.enabledChanged << item.stateChanged << item.added;
+    argument.endStructure();
+    return argument;
+}
+
+const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuActionsChange &item)
+{
+    argument.beginStructure();
+    argument >> item.removed >> item.enabledChanged >> item.stateChanged >> item.added;
+    argument.endStructure();
+    return argument;
+}
+
+
 void GDBusMenuTypes_register()
 {
     static bool registered = false;
@@ -66,8 +118,15 @@ void GDBusMenuTypes_register()
     qDBusRegisterMetaType<GMenuItem>();
     qDBusRegisterMetaType<GMenuItemList>();
 
+    qDBusRegisterMetaType<GMenuSection>();
+
     qDBusRegisterMetaType<GMenuChange>();
     qDBusRegisterMetaType<GMenuChangeList>();
+
+    qDBusRegisterMetaType<GMenuAction>();
+    qDBusRegisterMetaType<GMenuActionMap>();
+
+    qDBusRegisterMetaType<GMenuActionsChange>();
 
     registered = true;
 }

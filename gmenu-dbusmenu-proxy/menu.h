@@ -20,16 +20,19 @@
 #pragma once
 
 #include <QObject>
+#include <QDBusContext>
 #include <QString>
 #include <QVector>
 #include <QWindow> // for WId
+
+#include <functional>
 
 #include "gdbusmenutypes_p.h"
 #include "../libdbusmenuqt/dbusmenutypes_p.h"
 
 class QDBusVariant;
 
-class Menu : public QObject
+class Menu : public QObject, protected QDBusContext
 {
     Q_OBJECT
 
@@ -38,19 +41,27 @@ class Menu : public QObject
     Q_PROPERTY(uint Version READ version)
 
 public:
-    Menu(WId winId, const QString &serviceName, const QString &objectPath);
+    Menu(WId winId,
+         const QString &serviceName,
+         const QString &applicationObjectPath,
+         const QString &windowObjectPath,
+         const QString &menuObjectPath);
     ~Menu();
 
     WId winId() const;
     QString serviceName() const;
-    QString objectPath() const;
+
+    QString applicationObjectPath() const;
+    QString windowObjectPath() const;
+    QString menuObjectPath() const;
+
     QString proxyObjectPath() const;
 
     // DBus
     bool AboutToShow(int id);
     void Event(int id, const QString &eventId, const QDBusVariant &data, uint timestamp);
     DBusMenuItemList GetGroupProperties(const QList<int> &ids, const QStringList &propertyNames);
-    uint GetLayout(int parentId, int recursionDepth, const QStringList &propertyNames, DBusMenuLayoutItem &item);
+    uint GetLayout(int parentId, int recursionDepth, const QStringList &propertyNames, DBusMenuLayoutItem &dbusItem);
     QDBusVariant GetProperty(int id, const QString &property);
 
     QString status() const;
@@ -68,21 +79,45 @@ signals:
 
 private slots:
     void onMenuChanged(const GMenuChangeList &changes);
+    void onWindowActionsChanged(const GMenuActionsChange &changes);
 
 private:
-    void start(const QList<uint> &ids);
-    void stop(const QList<uint> &ids);
+    void start();
+    void start(uint id);
+    void stop(const QList<uint> &id);
 
     bool registerDBusObject();
 
+    void getActions(const QString &path, const std::function<void(GMenuActionMap,bool)> &cb);
+    bool getAction(const QString &name, GMenuAction &action) const;
+    void triggerAction(const QString &name);
+
+    static int treeStructureToInt(int subscription, int section, int index);
+    static void intToTreeStructure(int source, int &subscription, int &section, int &index);
+
+    static GMenuItem findSection(const QList<GMenuItem> &list, int section);
+
+    QVariantMap gMenuToDBusMenuProperties(const QVariantMap &source) const;
+
     WId m_winId;
     QString m_serviceName; // original GMenu service (the gtk app)
-    QString m_objectPath; // original GMenu object path (the gtk app)
+
+    QString m_applicationObjectPath;
+    QString m_windowObjectPath;
+    QString m_menuObjectPath;
 
     QString m_proxyObjectPath; // our object path on this proxy app
 
+    // QSet?
     QList<uint> m_subscriptions; // keeps track of which menu trees we're subscribed to
 
-    QHash<uint, VariantHashList> m_menus; // the menu data we gathered in Start + subsequent updates
+    QHash<uint, GMenuItemList> m_menus;
+
+    QHash<int, QDBusMessage> m_pendingGetLayouts;
+
+    bool m_queriedApplicationActions = false;
+    GMenuActionMap m_applicationActions;
+    bool m_queriedWindowActions = false;
+    GMenuActionMap m_windowActions;
 
 };

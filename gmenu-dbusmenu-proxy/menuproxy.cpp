@@ -42,6 +42,7 @@ static const QString s_ourServiceName = QStringLiteral("org.kde.plasma.gmenu_dbu
 static const QByteArray s_gtkUniqueBusName = QByteArrayLiteral("_GTK_UNIQUE_BUS_NAME");
 
 static const QByteArray s_gtkApplicationObjectPath = QByteArrayLiteral("_GTK_APPLICATION_OBJECT_PATH");
+static const QByteArray s_gtkWindowObjectPath = QByteArrayLiteral("_GTK_WINDOW_OBJECT_PATH");
 static const QByteArray s_gtkMenuBarObjectPath = QByteArrayLiteral("_GTK_MENUBAR_OBJECT_PATH");
 // that's the generic app menu with Help and Options and will be used if window doesn't have a fully-blown menu bar
 static const QByteArray s_gtkAppMenuObjectPath = QByteArrayLiteral("_GTK_APP_MENU_OBJECT_PATH");
@@ -84,7 +85,10 @@ void MenuProxy::onWindowAdded(WId id)
         // TODO split that stuff out so we can do early returns and not a kilometer of indentation
 
         const QString serviceName = QString::fromUtf8(getWindowPropertyString(id, s_gtkUniqueBusName));
-        if (serviceName.isEmpty()) {
+        const QString applicationObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkApplicationObjectPath));
+        const QString windowObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkWindowObjectPath));
+
+        if (serviceName.isEmpty() || applicationObjectPath.isEmpty() || windowObjectPath.isEmpty()) {
             return;
         }
 
@@ -98,7 +102,7 @@ void MenuProxy::onWindowAdded(WId id)
             return;
         }
 
-        Menu *menu = new Menu(id, serviceName, menuObjectPath);
+        Menu *menu = new Menu(id, serviceName, applicationObjectPath, windowObjectPath, menuObjectPath);
         m_menus.insert(id, menu);
 
         connect(menu, &Menu::requestWriteWindowProperties, this, [this, menu] {
@@ -106,6 +110,10 @@ void MenuProxy::onWindowAdded(WId id)
 
            writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuServiceName, s_ourServiceName.toUtf8());
            writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuObjectPath, menu->proxyObjectPath().toUtf8());
+        });
+        connect(menu, &Menu::requestRemoveWindowProperties, this, [this, menu] {
+            writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuServiceName, QByteArray());
+            writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuObjectPath, QByteArray());
         });
     }
 //#endif // HAVE_X11
@@ -128,16 +136,16 @@ QByteArray MenuProxy::getWindowPropertyString(WId id, const QByteArray &name)
     }
 
     static const long MAX_PROP_SIZE = 10000;
-    // FIXME figure out what "392" is, xprop says UTF8_STRING but it's NOT XCB_ATOM_STRING :/
-    auto propertyCookie = xcb_get_property(c, false, id, atom, 392, 0, MAX_PROP_SIZE);
+    // FIXME figure out what "UT8String" is as atom type, it's 392 or 378 but I don't find that enum
+    auto propertyCookie = xcb_get_property(c, false, id, atom, XCB_ATOM_ANY, 0, MAX_PROP_SIZE);
     QScopedPointer<xcb_get_property_reply_t, QScopedPointerPodDeleter> propertyReply(xcb_get_property_reply(c, propertyCookie, NULL));
     if (propertyReply.isNull()) {
         qDebug() << "property reply was null";
         return value;
     }
 
-    // FIXME 392
-    if (propertyReply->type == 392 && propertyReply->format == 8 && propertyReply->value_len > 0) {
+    // FIXME Check type
+    if (/*propertyReply->type == 392 && */propertyReply->format == 8 && propertyReply->value_len > 0) {
         const char *data = (const char *) xcb_get_property_value(propertyReply.data());
         int len = propertyReply->value_len;
         if (data) {
@@ -150,7 +158,6 @@ QByteArray MenuProxy::getWindowPropertyString(WId id, const QByteArray &name)
 
 void MenuProxy::writeWindowProperty(WId id, const QByteArray &name, const QByteArray &value)
 {
-    qDebug() << "Write window property string" << name << "with" << value << "on" << id;
     auto *c = QX11Info::connection(); // FIXME cache
 
     auto atom = getAtom(name);
