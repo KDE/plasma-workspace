@@ -75,7 +75,7 @@ struct GMenuAction
 {
     bool enabled;
     QDBusSignature signature;
-    QVariantList arguments;
+    QVariantList state;
 };
 Q_DECLARE_METATYPE(GMenuAction);
 

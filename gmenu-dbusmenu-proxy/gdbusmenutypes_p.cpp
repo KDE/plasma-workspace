@@ -77,7 +77,7 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuChange &item
 QDBusArgument &operator<<(QDBusArgument &argument, const GMenuAction &item)
 {
     argument.beginStructure();
-    argument << item.enabled << item.signature << item.arguments;
+    argument << item.enabled << item.signature << item.state;
     argument.endStructure();
     return argument;
 }
@@ -85,7 +85,7 @@ QDBusArgument &operator<<(QDBusArgument &argument, const GMenuAction &item)
 const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuAction &item)
 {
     argument.beginStructure();
-    argument >> item.enabled >> item.signature >> item.arguments;
+    argument >> item.enabled >> item.signature >> item.state;
     argument.endStructure();
     return argument;
 }

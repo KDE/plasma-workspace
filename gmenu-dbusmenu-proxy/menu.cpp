@@ -350,17 +350,8 @@ void Menu::triggerAction(const QString &name)
                                                       s_orgGtkActions,
                                                       QStringLiteral("Activate"));
     msg << lookupName;
-
-    // It seems to be our responsibility to invoke the correct argument.
-    // If the action has a "true" argument it means it's checked and we need to toggle it ourselves.
-    // FIXME doesn't work, though
-    // Docs also mention a "target" property on the menu item that contains stuff we should send along
-    // when invoking the action but that stuff works even without o.O
-    if (action.arguments.count() == 1 && action.arguments.constFirst().canConvert<bool>()) {
-        msg << QVariantList{!action.arguments.constFirst().toBool()};
-    } else {
-        msg << QVariant::fromValue(action.arguments);
-    }
+    // TODO use the arguments provided by "target" in the menu item
+    msg << QVariant::fromValue(QVariantList());
 
     QVariantMap platformData;
     msg << platformData;
@@ -706,15 +697,13 @@ QVariantMap Menu::gMenuToDBusMenuProperties(const QVariantMap &source) const
         result.insert(QStringLiteral("icon-name"), icon);
     }
 
-    bool isCheckBox = false;
     if (actionOk) {
-        const auto args = action.arguments;
+        const auto args = action.state;
         if (args.count() == 1) {
             const auto &firstArg = args.first();
             // assume this is a checkbox
             if (firstArg.canConvert<bool>() && !isMenu) {
                 result.insert(QStringLiteral("toggle-type"), QStringLiteral("checkbox"));
-                isCheckBox = true;
                 if (firstArg.toBool()) {
                     result.insert(QStringLiteral("toggle-state"), 1);
                 }
