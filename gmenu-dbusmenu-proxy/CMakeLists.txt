@@ -16,9 +16,7 @@ set(GMENU_DBUSMENU_PROXY_SRCS
     ../libdbusmenuqt/dbusmenutypes_p.cpp
  )
 
-# FIXME use the one in libdbusmenuqt rather than a copy but for testing and meddling with it use a copy for now
-#qt5_add_dbus_adaptor(GMENU_DBUSMENU_PROXY_SRCS ../libdbusmenuqt/com.canonical.dbusmenu.xml menu.h Menu)
-qt5_add_dbus_adaptor(GMENU_DBUSMENU_PROXY_SRCS com.canonical.dbusmenu.xml menu.h Menu)
+qt5_add_dbus_adaptor(GMENU_DBUSMENU_PROXY_SRCS ../libdbusmenuqt/com.canonical.dbusmenu.xml menu.h Menu)
 
 ecm_qt_declare_logging_category(GMENU_DBUSMENU_PROXY_SRCS HEADER debug.h
                                                IDENTIFIER DBUSMENUPROXY
