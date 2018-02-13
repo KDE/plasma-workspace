@@ -30,16 +30,13 @@ class QDBusServiceWatcher;
 
 class Menu;
 
-class MenuProxy : public QObject//, public QAbstractNativeEventFilter
+class MenuProxy : public QObject
 {
     Q_OBJECT
 
 public:
     MenuProxy();
     ~MenuProxy() override;
-
-protected:
-    //bool nativeEventFilter(const QByteArray & eventType, void * message, long * result) override;
 
 private Q_SLOTS:
     void onWindowAdded(WId id);
@@ -48,6 +45,10 @@ private Q_SLOTS:
 private:
     bool init();
     void teardown();
+
+    void setGtkShellShowsMenuBar(bool show);
+
+    xcb_connection_t *m_xConnection;
 
     // FIXME the get one reads "UTF8String" (reads gnome) the write thing writes "String" (writes kde)
     QByteArray getWindowPropertyString(WId id, const QByteArray &name);

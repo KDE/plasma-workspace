@@ -30,6 +30,9 @@ class QDBusArgument;
 using VariantMapList = QList<QVariantMap>;
 Q_DECLARE_METATYPE(VariantMapList);
 
+using StringBoolMap = QMap<QString, bool>;
+Q_DECLARE_METATYPE(StringBoolMap);
+
 // Menu item itself (Start method)
 struct GMenuItem
 {

@@ -24,13 +24,17 @@
 #include "debug.h"
 
 #include <QByteArray>
+#include <QCoreApplication>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>
-#include <QCoreApplication>
+#include <QDir>
+#include <QFileInfo>
 #include <QHash>
-#include <QTimer>
+#include <QStandardPaths>
 
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <KWindowSystem>
 
 #include <QX11Info>
@@ -56,6 +60,7 @@ static const QByteArray s_kdeNetWmAppMenuObjectPath = QByteArrayLiteral("_KDE_NE
 
 MenuProxy::MenuProxy()
     : QObject()
+    , m_xConnection(QX11Info::connection())
     , m_serviceWatcher(new QDBusServiceWatcher(this))
 {
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
@@ -65,30 +70,40 @@ MenuProxy::MenuProxy()
 
     connect(m_serviceWatcher, &QDBusServiceWatcher::serviceRegistered, this, [this](const QString &service) {
         Q_UNUSED(service);
-        qDebug() << "Global menu service became available, starting";
+        qCDebug(DBUSMENUPROXY) << "Global menu service became available, starting";
         init();
     });
     connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &service) {
         Q_UNUSED(service);
-        qDebug() << "Global menu service disappeared, cleaning up";
+        qCDebug(DBUSMENUPROXY) << "Global menu service disappeared, cleaning up";
         teardown();
     });
 
     // It's fine to do a blocking call here as we're a separate binary with no UI
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(s_dbusMenuRegistrar)) {
-        qDebug() << "Global menu service is there, starting up right away";
+        qCDebug(DBUSMENUPROXY) << "Global menu service is running, starting right away";
         init();
     } else {
-        qDebug() << "No global menu service available, waiting for it before we do anything";
+        qCDebug(DBUSMENUPROXY) << "No global menu service available, waiting for it to start before doing anything";
+
+        // be sure when started to restore gtk menus when there's no dbus menu around in case we crashed
+        setGtkShellShowsMenuBar(false);
     }
+}
+
+MenuProxy::~MenuProxy()
+{
+    teardown();
 }
 
 bool MenuProxy::init()
 {
     if (!QDBusConnection::sessionBus().registerService(s_ourServiceName)) {
-        qWarning() << "Failed to register DBus service" << s_ourServiceName;
+        qCWarning(DBUSMENUPROXY) << "Failed to register DBus service" << s_ourServiceName;
         return false;
     }
+
+    setGtkShellShowsMenuBar(true);
 
     connect(KWindowSystem::self(), &KWindowSystem::windowAdded, this, &MenuProxy::onWindowAdded);
     connect(KWindowSystem::self(), &KWindowSystem::windowRemoved, this, &MenuProxy::onWindowRemoved);
@@ -99,7 +114,7 @@ bool MenuProxy::init()
     }
 
     if (m_menus.isEmpty()) {
-        qDebug() << "Up and running but no menus in sight";
+        qCDebug(DBUSMENUPROXY) << "Up and running but no menus in sight";
     }
 
     return true;
@@ -107,6 +122,8 @@ bool MenuProxy::init()
 
 void MenuProxy::teardown()
 {
+    setGtkShellShowsMenuBar(false);
+
     QDBusConnection::sessionBus().unregisterService(s_ourServiceName);
 
     disconnect(KWindowSystem::self(), &KWindowSystem::windowAdded, this, &MenuProxy::onWindowAdded);
@@ -116,50 +133,69 @@ void MenuProxy::teardown()
     m_menus.clear();
 }
 
+void MenuProxy::setGtkShellShowsMenuBar(bool show)
+{
+    qCDebug(DBUSMENUPROXY) << "Setting gtk-shell-shows-menu-bar to" << show << "which will" << (show ? "hide" : "show") << "menu bars in applications";
+
+    // mostly taken from kde-gtk-config
+    QString root = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
+    if (root.isEmpty()) {
+        root = QFileInfo(QDir::home(), QStringLiteral(".config")).absoluteFilePath();
+    }
+
+    const QString settingsFilePath = root + QStringLiteral("/gtk-3.0/settings.ini");
+
+    auto cfg = KSharedConfig::openConfig(settingsFilePath, KConfig::NoGlobals);
+    KConfigGroup group(cfg, "Settings");
+
+    if (show) {
+        group.writeEntry("gtk-shell-shows-menubar", true);
+    } else {
+        group.deleteEntry("gtk-shell-shows-menubar");
+    }
+
+    group.sync();
+
+    // TODO use gconf/dconf directly or at least signal a change somehow?
+}
+
 void MenuProxy::onWindowAdded(WId id)
 {
     if (m_menus.contains(id)) {
-        qDebug() << "Already know window" << id;
         return;
     }
 
-//#if HAVE_X11
-    if (KWindowSystem::isPlatformX11()) {
-        // TODO split that stuff out so we can do early returns and not a kilometer of indentation
+    const QString serviceName = QString::fromUtf8(getWindowPropertyString(id, s_gtkUniqueBusName));
+    const QString applicationObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkApplicationObjectPath));
+    const QString windowObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkWindowObjectPath));
 
-        const QString serviceName = QString::fromUtf8(getWindowPropertyString(id, s_gtkUniqueBusName));
-        const QString applicationObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkApplicationObjectPath));
-        const QString windowObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkWindowObjectPath));
-
-        if (serviceName.isEmpty() || applicationObjectPath.isEmpty() || windowObjectPath.isEmpty()) {
-            return;
-        }
-
-        QString menuObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkMenuBarObjectPath));
-        if (menuObjectPath.isEmpty()) {
-            // try generic app menu
-            menuObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkAppMenuObjectPath));
-        }
-
-        if (menuObjectPath.isEmpty()) {
-            return;
-        }
-
-        Menu *menu = new Menu(id, serviceName, applicationObjectPath, windowObjectPath, menuObjectPath);
-        m_menus.insert(id, menu);
-
-        connect(menu, &Menu::requestWriteWindowProperties, this, [this, menu] {
-           Q_ASSERT(!menu->proxyObjectPath().isEmpty());
-
-           writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuServiceName, s_ourServiceName.toUtf8());
-           writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuObjectPath, menu->proxyObjectPath().toUtf8());
-        });
-        connect(menu, &Menu::requestRemoveWindowProperties, this, [this, menu] {
-            writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuServiceName, QByteArray());
-            writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuObjectPath, QByteArray());
-        });
+    if (serviceName.isEmpty() || applicationObjectPath.isEmpty() || windowObjectPath.isEmpty()) {
+        return;
     }
-//#endif // HAVE_X11
+
+    QString menuObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkMenuBarObjectPath));
+    if (menuObjectPath.isEmpty()) {
+        // try generic app menu
+        menuObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkAppMenuObjectPath));
+    }
+
+    if (menuObjectPath.isEmpty()) {
+        return;
+    }
+
+    Menu *menu = new Menu(id, serviceName, applicationObjectPath, windowObjectPath, menuObjectPath);
+    m_menus.insert(id, menu);
+
+    connect(menu, &Menu::requestWriteWindowProperties, this, [this, menu] {
+       Q_ASSERT(!menu->proxyObjectPath().isEmpty());
+
+       writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuServiceName, s_ourServiceName.toUtf8());
+       writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuObjectPath, menu->proxyObjectPath().toUtf8());
+    });
+    connect(menu, &Menu::requestRemoveWindowProperties, this, [this, menu] {
+        writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuServiceName, QByteArray());
+        writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuObjectPath, QByteArray());
+    });
 }
 
 void MenuProxy::onWindowRemoved(WId id)
@@ -184,7 +220,7 @@ QByteArray MenuProxy::getWindowPropertyString(WId id, const QByteArray &name)
     auto propertyCookie = xcb_get_property(c, false, id, atom, XCB_ATOM_ANY, 0, MAX_PROP_SIZE);
     QScopedPointer<xcb_get_property_reply_t, QScopedPointerPodDeleter> propertyReply(xcb_get_property_reply(c, propertyCookie, NULL));
     if (propertyReply.isNull()) {
-        qDebug() << "property reply was null";
+        qCWarning(DBUSMENUPROXY) << "XCB property reply for atom" << name << "on" << id << "was null";
         return value;
     }
 
@@ -202,31 +238,27 @@ QByteArray MenuProxy::getWindowPropertyString(WId id, const QByteArray &name)
 
 void MenuProxy::writeWindowProperty(WId id, const QByteArray &name, const QByteArray &value)
 {
-    auto *c = QX11Info::connection(); // FIXME cache
-
     auto atom = getAtom(name);
     if (atom == XCB_ATOM_NONE) {
         return;
     }
 
     if (value.isEmpty()) {
-        xcb_delete_property(c,id, atom);
+        xcb_delete_property(m_xConnection, id, atom);
     } else {
-        xcb_change_property(c, XCB_PROP_MODE_REPLACE, id, atom, XCB_ATOM_STRING,
+        xcb_change_property(m_xConnection, XCB_PROP_MODE_REPLACE, id, atom, XCB_ATOM_STRING,
                             8, value.length(), value.constData());
     }
 }
 
 xcb_atom_t MenuProxy::getAtom(const QByteArray &name)
 {
-    auto *c = QX11Info::connection(); // FIXME cache
-
     static QHash<QByteArray, xcb_atom_t> s_atoms;
 
     auto atom = s_atoms.value(name, XCB_ATOM_NONE);
     if (atom == XCB_ATOM_NONE) {
-        const xcb_intern_atom_cookie_t atomCookie = xcb_intern_atom(c, false, name.length(), name.constData());
-        QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> atomReply(xcb_intern_atom_reply(c, atomCookie, Q_NULLPTR));
+        const xcb_intern_atom_cookie_t atomCookie = xcb_intern_atom(m_xConnection, false, name.length(), name.constData());
+        QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> atomReply(xcb_intern_atom_reply(m_xConnection, atomCookie, Q_NULLPTR));
         if (!atomReply.isNull()) {
             atom = atomReply->atom;
             if (atom != XCB_ATOM_NONE) {
@@ -237,5 +269,3 @@ xcb_atom_t MenuProxy::getAtom(const QByteArray &name)
 
     return atom;
 }
-
-MenuProxy::~MenuProxy() = default;

@@ -26,14 +26,14 @@
 
 int main(int argc, char ** argv)
 {
-    //qputenv("QT_QPA_PLATFORM", "xcb");
+    qputenv("QT_QPA_PLATFORM", "xcb");
 
     QGuiApplication::setDesktopSettingsAware(false);
 
     QGuiApplication app(argc, argv);
 
     if (!KWindowSystem::isPlatformX11()) {
-        //qFatal("qdbusmenuproxy is only useful XCB. Aborting");
+        qFatal("qdbusmenuproxy is only useful XCB. Aborting");
     }
 
     auto disableSessionManagement = [](QSessionManager &sm) {

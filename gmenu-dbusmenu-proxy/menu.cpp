@@ -19,16 +19,16 @@
 
 #include "menu.h"
 
-#include <QDebug>
+#include "debug.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
+#include <QDebug>
 #include <QList>
 #include <QMutableListIterator>
 #include <QVariantList>
-#include <QWindow>
 
 #include <algorithm>
 
@@ -51,19 +51,18 @@ Menu::Menu(WId winId,
     , m_windowObjectPath(windowObjectPath)
     , m_menuObjectPath(menuObjectPath)
 {
-    qDebug() << "Created menu on" << m_serviceName << "at" << m_applicationObjectPath << m_windowObjectPath << m_menuObjectPath;
+    qCDebug(DBUSMENUPROXY) << "Created menu for" << m_winId << "on" << m_serviceName << "at app" << m_applicationObjectPath << "win" << m_windowObjectPath << "menu" << m_menuObjectPath;
 
     GDBusMenuTypes_register();
     DBusMenuTypes_register();
 
-    // FIXME doesn't work work
     if (!QDBusConnection::sessionBus().connect(m_serviceName,
                                                m_menuObjectPath,
                                                s_orgGtkMenus,
                                                QStringLiteral("Changed"),
                                                this,
                                                SLOT(onMenuChanged(GMenuChangeList)))) {
-        qWarning() << "Failed to subscribe to menu changes in" << m_serviceName << "at" << m_menuObjectPath;
+        qCWarning(DBUSMENUPROXY) << "Failed to subscribe to menu changes on" << m_serviceName << "at" << m_menuObjectPath;
     }
 
     if (!QDBusConnection::sessionBus().connect(m_serviceName,
@@ -71,8 +70,8 @@ Menu::Menu(WId winId,
                                                s_orgGtkActions,
                                                QStringLiteral("Changed"),
                                                this,
-                                               SLOT(onApplicationActionsChanged(GMenuActionsChange)))) {
-        qWarning() << "Failed to subscribe to application action changes in" << m_serviceName << "at" << m_applicationObjectPath;
+                                               SLOT(onApplicationActionsChanged(QStringList,StringBoolMap,QVariantMap,GMenuActionMap)))) {
+        qCWarning(DBUSMENUPROXY) << "Failed to subscribe to application action changes on" << m_serviceName << "at" << m_applicationObjectPath;
     }
 
     if (!QDBusConnection::sessionBus().connect(m_serviceName,
@@ -80,8 +79,8 @@ Menu::Menu(WId winId,
                                                s_orgGtkActions,
                                                QStringLiteral("Changed"),
                                                this,
-                                               SLOT(onWindowActionsChanged(GMenuActionsChange))) ){
-        qWarning() << "Failed to subscribe to window action changes in" << m_serviceName << "at" << m_windowObjectPath;
+                                               SLOT(onWindowActionsChanged(QStringList,StringBoolMap,QVariantMap,GMenuActionMap)))) {
+        qCWarning(DBUSMENUPROXY) << "Failed to subscribe to window action changes on" << m_serviceName << "at" << m_windowObjectPath;
     }
 
     // TODO share application actions between menus of the same app?
@@ -156,10 +155,7 @@ void Menu::init()
 
 void Menu::start(uint id)
 {
-    qDebug() << "start" << id;
-
     if (m_subscriptions.contains(id)) {
-        qDebug() << "Already subscribed to" << id;
         return;
     }
     // TODO watch service disappearing?
@@ -179,17 +175,17 @@ void Menu::start(uint id)
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, id](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<GMenuItemList> reply = *watcher;
         if (reply.isError()) {
-            qWarning() << "Failed to start subscription to" << id << "from" << m_serviceName << "at" << m_menuObjectPath << reply.error();
+            qCWarning(DBUSMENUPROXY) << "Failed to start subscription to" << id << "on" << m_serviceName << "at" << m_menuObjectPath << reply.error();
         } else {
             const auto menus = reply.value();
             for (auto menu : menus) {
                 m_menus[menu.id].append(menus);
+            }
 
-                // TODO?
-                emit LayoutUpdated(1 /*revision*/, treeStructureToInt(menu.id, 0, 0));
-
-                // TODO are we subscribed to all it returns or just to the ones we requested?
-                m_subscriptions.append(menu.id);
+            // LibreOffice on startup fails to give us some menus right away, we'll also subscribe in onMenuChanged() if neccessary
+            if (menus.isEmpty()) {
+                qCWarning(DBUSMENUPROXY) << "Got an empty menu for" << id << "on" << m_serviceName << "at" << m_menuObjectPath;
+                return;
             }
 
             // Now resolve any aliases we might have
@@ -207,11 +203,8 @@ void Menu::start(uint id)
 
                             // TODO figure out what to do when menu changed since we'd end up shifting the indices around here
                             if (item.value(QStringLiteral("section-expanded")).toBool()) {
-                                //qDebug() << "Already know section here, skip";
                                 continue;
                             }
-
-                            //qDebug() << "pls add" << gmenuSection.subscription << "at" << gmenuSection.menu << "for" << item;
 
                             // TODO start subscription if we don't have it
                             auto items = findSection(m_menus.value(gmenuSection.subscription), gmenuSection.menu).items;
@@ -227,7 +220,6 @@ void Menu::start(uint id)
                                 auto findIt = aliasedItem.constFind(QStringLiteral(":section"));
                                 if (findIt != aliasedItem.constEnd()) {
                                     GMenuSection gmenuSection2 = qdbus_cast<GMenuSection>(findIt->value<QDBusArgument>());
-                                    qDebug() << "Resolved alias from" << gmenuSection.subscription << gmenuSection.menu << "to" << gmenuSection2.subscription << gmenuSection2.menu;
                                     items = findSection(m_menus.value(gmenuSection2.subscription), gmenuSection2.menu).items;
                                 }
                             }
@@ -239,13 +231,14 @@ void Menu::start(uint id)
                     }
                 }
             }
+
+            // TODO are we subscribed to all it returns or just to the ones we requested?
+            m_subscriptions.append(id);
         }
 
         // When it was a delayed GetLayout request, send the reply now
         auto pendingReply = m_pendingGetLayouts.value(id);
         if (pendingReply.type() != QDBusMessage::InvalidMessage) {
-            qDebug() << "replying that we now have" << id;
-
             auto reply = pendingReply.createReply();
 
             DBusMenuLayoutItem item;
@@ -254,6 +247,8 @@ void Menu::start(uint id)
             reply << revision << QVariant::fromValue(item);
 
             QDBusConnection::sessionBus().send(reply);
+        } else {
+            emit LayoutUpdated(2 /*revision*/, id);
         }
 
         watcher->deleteLater();
@@ -262,8 +257,6 @@ void Menu::start(uint id)
 
 void Menu::stop(const QList<uint> &ids)
 {
-    qDebug() << "STOP" << ids;
-
     QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName,
                                                       m_menuObjectPath,
                                                       s_orgGtkMenus,
@@ -277,7 +270,7 @@ void Menu::stop(const QList<uint> &ids)
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, ids](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<void> reply = *watcher;
         if (reply.isError()) {
-            qWarning() << "Failed to stop subscription to" << ids << "from" << m_serviceName << "at" << m_menuObjectPath << reply.error();
+            qCWarning(DBUSMENUPROXY) << "Failed to stop subscription to" << ids << "on" << m_serviceName << "at" << m_menuObjectPath << reply.error();
         } else {
             // remove all subscriptions that we unsubscribed from
             // TODO is there a nicer algorithm for that?
@@ -290,22 +283,57 @@ void Menu::stop(const QList<uint> &ids)
 
 void Menu::onMenuChanged(const GMenuChangeList &changes)
 {
-    qDebug() << "menu changed";
+    QSet<uint> dirtyMenus;
+
     for (const auto &change : changes) {
-        qDebug() << change.subscription << change.menu << change.changePosition << change.itemsToRemoveCount << change.itemsToInsert;
+        // shouldn't happen, it says only Start() subscribes to changes
+        if (!m_subscriptions.contains(change.subscription)) {
+            qCDebug(DBUSMENUPROXY) << "Got menu change for menu" << change.subscription << "that we are not subscribed to, subscribing now";
+            // LibreOffice doesn't give us a menu right away but takes a while and then signals us a change
+            start(change.subscription);
+            continue;
+        }
+
+        auto &menu = m_menus[change.subscription];
+
+        // TODO findSectionRef
+        for (GMenuItem &section : menu) {
+            if (section.section != change.menu) {
+                continue;
+            }
+
+            for (int i = 0; i < change.itemsToRemoveCount; ++i) {
+                section.items.removeAt(change.changePosition); // TODO bounds check
+            }
+
+            for (int i = 0; i < change.itemsToInsert.count(); ++i) {
+                section.items.insert(change.changePosition + i, change.itemsToInsert.at(i));
+            }
+
+            dirtyMenus.insert(treeStructureToInt(change.subscription, change.menu, 0));
+            break;
+        }
+    }
+
+    for (uint menu : dirtyMenus) {
+        emit LayoutUpdated(2 /*revision*/, menu);
     }
 }
 
-void Menu::onApplicationActionsChanged(const GMenuActionsChange &changes)
+void Menu::onApplicationActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added)
 {
-    qDebug() << "app actions changed";
-    qDebug() << changes.removed << changes.enabledChanged << changes.stateChanged << changes.added.count();
+    if (!m_queriedApplicationActions) {
+        return;
+    }
+    actionsChanged(removed, enabledChanges, stateChanges, added, m_applicationActions, QStringLiteral("app."));
 }
 
-void Menu::onWindowActionsChanged(const GMenuActionsChange &changes)
+void Menu::onWindowActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added)
 {
-    qDebug() << "window actions changed";
-    qDebug() << changes.removed << changes.enabledChanged << changes.stateChanged << changes.added.count();
+    if (!m_queriedWindowActions) {
+        return;
+    }
+    actionsChanged(removed, enabledChanges, stateChanges, added, m_windowActions, QStringLiteral("win."));
 }
 
 void Menu::getActions(const QString &path, const std::function<void(GMenuActionMap,bool)> &cb)
@@ -320,7 +348,7 @@ void Menu::getActions(const QString &path, const std::function<void(GMenuActionM
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, path, cb](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<GMenuActionMap> reply = *watcher;
         if (reply.isError()) {
-            qWarning() << "Failed to get actions from" << m_serviceName << "at" << path << reply.error();
+            qCWarning(DBUSMENUPROXY) << "Failed to get actions from" << m_serviceName << "at" << path << reply.error();
             cb({}, false);
         } else {
             cb(reply.value(), true);
@@ -402,9 +430,130 @@ void Menu::triggerAction(const QString &name, uint timestamp)
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, path, name](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<void> reply = *watcher;
         if (reply.isError()) {
-            qWarning() << "Failed to invoke action" << name << "on" << m_serviceName << "at" << path << reply.error();
+            qCWarning(DBUSMENUPROXY) << "Failed to invoke action" << name << "on" << m_serviceName << "at" << path << reply.error();
         }
     });
+}
+
+void Menu::actionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added, GMenuActionMap &actions, const QString &prefix)
+{
+    // Collect the actions that we removed, altered, or added, so we can eventually signal changes for all menus that contain one of those actions
+    QSet<QString> dirtyActions;
+
+    // TODO I bet for most of the loops below we could use a nice short std algorithm
+
+    for (const QString &removedAction : removed) {
+        if (actions.remove(removedAction)) {
+            dirtyActions.insert(removedAction);
+        }
+    }
+
+    for (auto it = enabledChanges.constBegin(), end = enabledChanges.constEnd(); it != end; ++it) {
+        const QString &actionName = it.key();
+        const bool enabled = it.value();
+
+        auto actionIt = actions.find(actionName);
+        if (actionIt == actions.end()) {
+            qCInfo(DBUSMENUPROXY) << "Got enabled changed for action" << actionName << "which we don't know";
+            continue;
+        }
+
+        GMenuAction &action = *actionIt;
+        if (action.enabled != enabled) {
+            action.enabled = enabled;
+            dirtyActions.insert(actionName);
+        } else {
+            qCInfo(DBUSMENUPROXY) << "Got enabled change for action" << actionName << "which didn't change it";
+        }
+    }
+
+    for (auto it = stateChanges.constBegin(), end = stateChanges.constEnd(); it != end; ++it) {
+        const QString &actionName = it.key();
+        const QVariant &state = it.value();
+
+        auto actionIt = actions.find(actionName);
+        if (actionIt == actions.end()) {
+            qCInfo(DBUSMENUPROXY) << "Got state changed for action" << actionName << "which we don't know";
+            continue;
+        }
+
+        GMenuAction &action = *actionIt;
+
+        if (action.state.isEmpty()) {
+            qCDebug(DBUSMENUPROXY) << "Got new state for action" << actionName << "that didn't have any state before";
+            action.state.append(state);
+            dirtyActions.insert(actionName);
+        } else {
+            // Action state is a list but the state change only sends us a single variant, so just overwrite the first one
+            QVariant &firstState = action.state.first();
+            if (firstState != state) {
+                firstState = state;
+                dirtyActions.insert(actionName);
+            } else {
+                qCInfo(DBUSMENUPROXY) << "Got state change for action" << actionName << "which didn't change it";
+            }
+        }
+    }
+
+    // unite() will result in keys being present multiple times, do it manually and overwrite existing ones
+    for (auto it = added.constBegin(), end = added.constEnd(); it != end; ++it) {
+        const QString &actionName = it.key();
+
+        if (actions.contains(actionName)) { // TODO check isInfoEnabled
+            qCInfo(DBUSMENUPROXY) << "Got new action" << actionName << "that we already have, overwriting existing one";
+        }
+
+        actions.insert(actionName, it.value());
+
+        dirtyActions.insert(actionName);
+    }
+
+    auto forEachMenuItem = [this](const std::function<bool(int subscription, int section, int index, const QVariantMap &item)> &cb) {
+        for (auto it = m_menus.constBegin(), end = m_menus.constEnd(); it != end; ++it) {
+            const int subscription = it.key();
+
+            for (const auto &menu : it.value()) {
+                const int section = menu.section;
+
+                int count = 0;
+
+                const auto items = menu.items;
+                for (const auto &item : items) {
+                    ++count; // 0 is a menu, entries start at 1
+
+                    if (!cb(subscription, section, count, item)) {
+                        goto loopExit; // hell yeah
+                        break;
+                    }
+                }
+            }
+        }
+
+        loopExit: // loop exit
+        return;
+    };
+
+    // now find in which menus these actions are and emit a change accordingly
+    QSet<uint> dirtyMenus;
+    for (const QString &action : dirtyActions) {
+        const QString prefixedAction = prefix + action;
+
+        forEachMenuItem([&prefixedAction, &dirtyMenus](int subscription, int section, int index, const QVariantMap &item) {
+            Q_UNUSED(index); // we only signal menu changes
+
+            const QString actionName = actionNameOfItem(item);
+            if (actionName == prefixedAction) {
+                dirtyMenus.insert(treeStructureToInt(subscription, section, 0));
+                return false; // break
+            }
+
+            return true; // continue
+        });
+    }
+
+    for (uint menu : dirtyMenus) {
+        emit LayoutUpdated(2 /*revision*/, menu);
+    }
 }
 
 bool Menu::registerDBusObject()
@@ -416,10 +565,10 @@ bool Menu::registerDBusObject()
     ++menus;
 
     const QString objectPath = QStringLiteral("/MenuBar/%1").arg(QString::number(menus));
-    qDebug() << "register as object path" << objectPath;
+    qCDebug(DBUSMENUPROXY) << "Registering DBus object path" << objectPath;
 
     if (!QDBusConnection::sessionBus().registerObject(objectPath, this)) {
-        qWarning() << "Failed to register object" << this << "at" << objectPath;
+        qCWarning(DBUSMENUPROXY) << "Failed to register object";
         return false;
     }
 
@@ -433,32 +582,19 @@ bool Menu::registerDBusObject()
 // DBus
 bool Menu::AboutToShow(int id)
 {
-    //qDebug() << "about to show" << id << calledFromDBus();
-
-    int subscription;
-    int sectionId;
-    int index;
-    intToTreeStructure(id, subscription, sectionId, index);
-
-    // This doesn't seem to happen, apps seem to just blatantly run GetLayout for unknown stuff
-    if (!m_subscriptions.contains(subscription)) {
-        qDebug() << "NEED TO QUERY FIRST subscription" << subscription;
-        start(subscription);
-        return false;
-    }
-
-    return true;
+    // We always request the first time GetLayout is called and keep up-to-date internally
+    // No need to have us prepare anything here
+    Q_UNUSED(id);
+    return false;
 }
 
 void Menu::Event(int id, const QString &eventId, const QDBusVariant &data, uint timestamp)
 {
     Q_UNUSED(data);
 
-    if (eventId == QLatin1String("opened")) {
+    // GMenu dbus doesn't have any "opened" or "closed" signals, we'll only handle "clicked"
 
-    } else if (eventId == QLatin1String("closed")) {
-
-    } else if (eventId == QLatin1String("clicked")) {
+    if (eventId == QLatin1String("clicked")) {
         int subscription;
         int sectionId;
         int index;
@@ -498,11 +634,7 @@ uint Menu::GetLayout(int parentId, int recursionDepth, const QStringList &proper
 
     intToTreeStructure(parentId, subscription, sectionId, index);
 
-    //qDebug() << "GIMME" << parentId << "which is" << subscription << sectionId << index;
-
     if (!m_subscriptions.contains(subscription)) {
-        qDebug() << "not subscribed to" << subscription << ", requesting it now";
-
         auto oldPending = m_pendingGetLayouts.value(subscription);
         if (oldPending.type() != QDBusMessage::InvalidMessage) {
             QDBusConnection::sessionBus().send(
@@ -522,8 +654,7 @@ uint Menu::GetLayout(int parentId, int recursionDepth, const QStringList &proper
 
     const auto sections = m_menus.value(subscription);
     if (sections.isEmpty()) {
-        // TODO start?
-        qWarning() << "dont have sections for" << subscription;
+        qCDebug(DBUSMENUPROXY) << "There are no sections for requested subscription" << subscription << "with" << parentId;
         return 1;
     }
 
@@ -542,7 +673,6 @@ uint Menu::GetLayout(int parentId, int recursionDepth, const QStringList &proper
             const GMenuSection gmenuSection = qdbus_cast<GMenuSection>(it->value<QDBusArgument>());
             return GetLayout(treeStructureToInt(gmenuSection.subscription, gmenuSection.menu, 0), recursionDepth, propertyNames, dbusItem);
         } else {
-            qDebug() << "Requested a particular item" << parentId << requestedItem;
             // TODO
             return 0;
         }
@@ -567,12 +697,14 @@ uint Menu::GetLayout(int parentId, int recursionDepth, const QStringList &proper
         dbusItem.children.append(child);
     }
 
-    return 1; // revision
+    // revision, unused in libdbusmenuqt
+    return 1;
 }
 
 QDBusVariant Menu::GetProperty(int id, const QString &property)
 {
-    qDebug() << "get property" << id << property;
+    Q_UNUSED(id);
+    Q_UNUSED(property);
     QDBusVariant value;
     return value;
 }
@@ -609,6 +741,15 @@ GMenuItem Menu::findSection(const QList<GMenuItem> &list, int section)
         }
     }
     return GMenuItem();
+}
+
+QString Menu::actionNameOfItem(const QVariantMap &item)
+{
+    QString actionName = item.value(QStringLiteral("action")).toString();
+    if (actionName.isEmpty()) {
+        actionName = item.value(QStringLiteral("submenu-action")).toString();
+    }
+    return actionName;
 }
 
 QVariantMap Menu::gMenuToDBusMenuProperties(const QVariantMap &source) const
@@ -665,10 +806,7 @@ QVariantMap Menu::gMenuToDBusMenuProperties(const QVariantMap &source) const
     }
 
     bool enabled = true;
-    QString actionName = source.value(QStringLiteral("action")).toString();
-    if (actionName.isEmpty()) {
-        actionName = source.value(QStringLiteral("submenu-action")).toString();
-    }
+    const QString actionName = actionNameOfItem(source);
 
     GMenuAction action;
     bool actionOk = getAction(actionName, action);
@@ -751,13 +889,6 @@ QVariantMap Menu::gMenuToDBusMenuProperties(const QVariantMap &source) const
             }
         }
     }
-
-    /*const QString targetString = source.value(QStringLiteral("target")).toString();
-    if (isCheckBox && !targetString.isEmpty()) {
-        result.insert(QStringLiteral("toggle-type"), QStringLiteral("radio"));
-    }*/
-
-    //qDebug() << result;
 
     return result;
 }

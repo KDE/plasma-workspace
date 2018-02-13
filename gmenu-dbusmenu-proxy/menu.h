@@ -81,8 +81,8 @@ signals:
 
 private slots:
     void onMenuChanged(const GMenuChangeList &changes);
-    void onApplicationActionsChanged(const GMenuActionsChange &changes);
-    void onWindowActionsChanged(const GMenuActionsChange &changes);
+    void onApplicationActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
+    void onWindowActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
 
 private:
     void init();
@@ -95,8 +95,13 @@ private:
     bool getAction(const QString &name, GMenuAction &action) const;
     void triggerAction(const QString &name, uint timestamp = 0);
 
+    void actionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added,
+                        GMenuActionMap &actions, const QString &prefix);
+
     static int treeStructureToInt(int subscription, int section, int index);
     static void intToTreeStructure(int source, int &subscription, int &section, int &index);
+
+    static QString actionNameOfItem(const QVariantMap &item);
 
     static GMenuItem findSection(const QList<GMenuItem> &list, int section);
 

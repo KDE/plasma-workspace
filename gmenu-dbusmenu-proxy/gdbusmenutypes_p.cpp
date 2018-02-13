@@ -107,7 +107,6 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuActionsChang
     return argument;
 }
 
-
 void GDBusMenuTypes_register()
 {
     static bool registered = false;
@@ -127,6 +126,7 @@ void GDBusMenuTypes_register()
     qDBusRegisterMetaType<GMenuActionMap>();
 
     qDBusRegisterMetaType<GMenuActionsChange>();
+    qDBusRegisterMetaType<StringBoolMap>();
 
     registered = true;
 }
