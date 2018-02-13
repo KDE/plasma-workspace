@@ -181,8 +181,6 @@ void Menu::start(uint id)
         if (reply.isError()) {
             qWarning() << "Failed to start subscription to" << id << "from" << m_serviceName << "at" << m_menuObjectPath << reply.error();
         } else {
-            const bool wasSubscribed = !m_subscriptions.isEmpty();
-
             const auto menus = reply.value();
             for (auto menu : menus) {
                 m_menus[menu.id].append(menus);
@@ -435,7 +433,7 @@ bool Menu::registerDBusObject()
 // DBus
 bool Menu::AboutToShow(int id)
 {
-    qDebug() << "about to show" << id << calledFromDBus();
+    //qDebug() << "about to show" << id << calledFromDBus();
 
     int subscription;
     int sectionId;
@@ -454,7 +452,7 @@ bool Menu::AboutToShow(int id)
 
 void Menu::Event(int id, const QString &eventId, const QDBusVariant &data, uint timestamp)
 {
-    qDebug() << "event" << id << eventId << data.variant() << timestamp;
+    Q_UNUSED(data);
 
     if (eventId == QLatin1String("opened")) {
 
