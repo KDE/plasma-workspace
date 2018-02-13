@@ -28,6 +28,7 @@ class QDBusArgument;
 
 // Various
 using VariantMapList = QList<QVariantMap>;
+Q_DECLARE_METATYPE(VariantMapList);
 
 // Menu item itself (Start method)
 struct GMenuItem
@@ -42,6 +43,7 @@ QDBusArgument &operator<<(QDBusArgument &argument, const GMenuItem &item);
 const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuItem &item);
 
 using GMenuItemList = QList<GMenuItem>;
+Q_DECLARE_METATYPE(GMenuItemList);
 
 // Information about what section or submenu to use for a particular entry
 struct GMenuSection
@@ -69,6 +71,7 @@ QDBusArgument &operator<<(QDBusArgument &argument, const GMenuChange &item);
 const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuChange &item);
 
 using GMenuChangeList = QList<GMenuChange>;
+Q_DECLARE_METATYPE(GMenuChangeList);
 
 // An application action
 struct GMenuAction
@@ -83,6 +86,7 @@ QDBusArgument &operator<<(QDBusArgument &argument, const GMenuAction &item);
 const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuAction &item);
 
 using GMenuActionMap = QMap<QString, GMenuAction>;
+Q_DECLARE_METATYPE(GMenuActionMap);
 
 struct GMenuActionsChange
 {
