@@ -322,7 +322,7 @@ bool Menu::getAction(const QString &name, GMenuAction &action) const
     return true;
 }
 
-void Menu::triggerAction(const QString &name)
+void Menu::triggerAction(const QString &name, uint timestamp)
 {
     QString lookupName;
     QString path;
@@ -354,6 +354,15 @@ void Menu::triggerAction(const QString &name)
     msg << QVariant::fromValue(QVariantList());
 
     QVariantMap platformData;
+
+    if (timestamp) {
+        // From documentation:
+        // If the startup notification id is not available, this can be just "_TIMEtime", where
+        // time is the time stamp from the event triggering the call.
+        // see also gtkwindow.c extract_time_from_startup_id and startup_id_is_fake
+        platformData.insert(QStringLiteral("desktop-startup-id"), QStringLiteral("_TIME") + QString::number(timestamp));
+    }
+
     msg << platformData;
 
     QDBusPendingReply<void> reply = QDBusConnection::sessionBus().asyncCall(msg);
@@ -433,7 +442,7 @@ void Menu::Event(int id, const QString &eventId, const QDBusVariant &data, uint 
 
         const QString action = item.value(QStringLiteral("action")).toString();
         if (!action.isEmpty()) {
-            triggerAction(action);
+            triggerAction(action, timestamp);
         }
     }
 

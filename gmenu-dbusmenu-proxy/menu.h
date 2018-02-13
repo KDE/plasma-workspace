@@ -90,7 +90,7 @@ private:
 
     void getActions(const QString &path, const std::function<void(GMenuActionMap,bool)> &cb);
     bool getAction(const QString &name, GMenuAction &action) const;
-    void triggerAction(const QString &name);
+    void triggerAction(const QString &name, uint timestamp = 0);
 
     static int treeStructureToInt(int subscription, int section, int index);
     static void intToTreeStructure(int source, int &subscription, int &section, int &index);
