@@ -48,6 +48,8 @@ public:
          const QString &menuObjectPath);
     ~Menu();
 
+    void cleanup();
+
     WId winId() const;
     QString serviceName() const;
 
@@ -83,7 +85,7 @@ private slots:
     void onWindowActionsChanged(const GMenuActionsChange &changes);
 
 private:
-    void start();
+    void init();
     void start(uint id);
     void stop(const QList<uint> &id);
 

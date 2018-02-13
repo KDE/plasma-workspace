@@ -164,7 +164,8 @@ void MenuProxy::onWindowAdded(WId id)
 
 void MenuProxy::onWindowRemoved(WId id)
 {
-    delete m_menus.take(id); // destructor of Menu cleans up everything
+    // no need to cleanup() (which removes window properties) when the window is gone, delete right away
+    delete m_menus.take(id);
 }
 
 QByteArray MenuProxy::getWindowPropertyString(WId id, const QByteArray &name)

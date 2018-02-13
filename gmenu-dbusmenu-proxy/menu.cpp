@@ -30,6 +30,8 @@
 #include <QVariantList>
 #include <QWindow>
 
+#include <algorithm>
+
 #include "dbusmenuadaptor.h"
 
 #include "../libdbusmenuqt/dbusmenushortcut_p.h"
@@ -87,7 +89,7 @@ Menu::Menu(WId winId,
         if (ok) {
             m_applicationActions = actions;
             m_queriedApplicationActions = true;
-            start();
+            init();
         }
     });
 
@@ -95,12 +97,14 @@ Menu::Menu(WId winId,
         if (ok) {
             m_windowActions = actions;
             m_queriedWindowActions = true;
-            start();
+            init();
         }
     });
 }
 
-Menu::~Menu()
+Menu::~Menu() = default;
+
+void Menu::cleanup()
 {
     stop(m_subscriptions);
 
@@ -137,16 +141,18 @@ QString Menu::proxyObjectPath() const
     return m_proxyObjectPath;
 }
 
-void Menu::start()
+void Menu::init()
 {
     if (!m_queriedApplicationActions || m_queriedWindowActions) {
         return;
     }
 
-    qDebug() << "START!";
-    start(0);
-}
+    if (!registerDBusObject()) {
+        return;
+    }
 
+    emit requestWriteWindowProperties();
+}
 
 void Menu::start(uint id)
 {
@@ -235,14 +241,6 @@ void Menu::start(uint id)
                     }
                 }
             }
-
-
-            // first time we successfully requested a menu, announce that this window supports DBusMenu
-            if (!m_subscriptions.isEmpty() && !wasSubscribed) {
-                if (registerDBusObject()) {
-                    emit requestWriteWindowProperties();
-                }
-            }
         }
 
         // When it was a delayed GetLayout request, send the reply now
@@ -266,8 +264,30 @@ void Menu::start(uint id)
 
 void Menu::stop(const QList<uint> &ids)
 {
-    // TODO
-    Q_UNUSED(ids);
+    qDebug() << "STOP" << ids;
+
+    QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName,
+                                                      m_menuObjectPath,
+                                                      s_orgGtkMenus,
+                                                      QStringLiteral("End"));
+    msg.setArguments({
+        QVariant::fromValue(ids) // don't let it unwrap it, hence in a variant
+    });
+
+    QDBusPendingReply<void> reply = QDBusConnection::sessionBus().asyncCall(msg);
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, ids](QDBusPendingCallWatcher *watcher) {
+        QDBusPendingReply<void> reply = *watcher;
+        if (reply.isError()) {
+            qWarning() << "Failed to stop subscription to" << ids << "from" << m_serviceName << "at" << m_menuObjectPath << reply.error();
+        } else {
+            // remove all subscriptions that we unsubscribed from
+            // TODO is there a nicer algorithm for that?
+            m_subscriptions.erase(std::remove_if(m_subscriptions.begin(), m_subscriptions.end(),
+                                      std::bind(&QList<uint>::contains, m_subscriptions, std::placeholders::_1)),
+                                  m_subscriptions.end());
+        }
+    });
 }
 
 void Menu::onMenuChanged(const GMenuChangeList &changes)
