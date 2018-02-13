@@ -59,8 +59,9 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuSection &ite
 // Changes of a menu item (Changed signal)
 struct GMenuChange
 {
-    uint id;
-    uint count;
+    uint subscription;
+    uint menu;
+
     uint changePosition;
     uint itemsToRemoveCount;
     VariantMapList itemsToInsert;
@@ -92,8 +93,8 @@ struct GMenuActionsChange
 {
     QStringList removed;
     QMap<QString, bool> enabledChanged;
-    QMap<QString, QVariant> stateChanged;
-    QList<GMenuAction> added;
+    QVariantMap stateChanged;
+    GMenuActionMap added;
 };
 Q_DECLARE_METATYPE(GMenuActionsChange);
 

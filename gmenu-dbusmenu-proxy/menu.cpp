@@ -51,7 +51,6 @@ Menu::Menu(WId winId,
 {
     qDebug() << "Created menu on" << m_serviceName << "at" << m_applicationObjectPath << m_windowObjectPath << m_menuObjectPath;
 
-
     GDBusMenuTypes_register();
     DBusMenuTypes_register();
 
@@ -66,15 +65,22 @@ Menu::Menu(WId winId,
     }
 
     if (!QDBusConnection::sessionBus().connect(m_serviceName,
+                                               m_applicationObjectPath,
+                                               s_orgGtkActions,
+                                               QStringLiteral("Changed"),
+                                               this,
+                                               SLOT(onApplicationActionsChanged(GMenuActionsChange)))) {
+        qWarning() << "Failed to subscribe to application action changes in" << m_serviceName << "at" << m_applicationObjectPath;
+    }
+
+    if (!QDBusConnection::sessionBus().connect(m_serviceName,
                                                m_windowObjectPath,
                                                s_orgGtkActions,
                                                QStringLiteral("Changed"),
                                                this,
-                                               SLOT(onWindowActionsChanged(GMenuActionsChange)))) {
-        qWarning() << "Failed to subsribe to window action changes in" << m_serviceName << "at" << m_windowObjectPath;
+                                               SLOT(onWindowActionsChanged(GMenuActionsChange))) ){
+        qWarning() << "Failed to subscribe to window action changes in" << m_serviceName << "at" << m_windowObjectPath;
     }
-
-    // TODO connect to application action changes
 
     // TODO share application actions between menus of the same app?
     getActions(m_applicationObjectPath, [this](const GMenuActionMap &actions, bool ok) {
@@ -266,8 +272,16 @@ void Menu::stop(const QList<uint> &ids)
 
 void Menu::onMenuChanged(const GMenuChangeList &changes)
 {
-    // TODO
-    Q_UNUSED(changes);
+    qDebug() << "menu changed";
+    for (const auto &change : changes) {
+        qDebug() << change.subscription << change.menu << change.changePosition << change.itemsToRemoveCount << change.itemsToInsert;
+    }
+}
+
+void Menu::onApplicationActionsChanged(const GMenuActionsChange &changes)
+{
+    qDebug() << "app actions changed";
+    qDebug() << changes.removed << changes.enabledChanged << changes.stateChanged << changes.added.count();
 }
 
 void Menu::onWindowActionsChanged(const GMenuActionsChange &changes)

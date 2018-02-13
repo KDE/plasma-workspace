@@ -79,6 +79,7 @@ signals:
 
 private slots:
     void onMenuChanged(const GMenuChangeList &changes);
+    void onApplicationActionsChanged(const GMenuActionsChange &changes);
     void onWindowActionsChanged(const GMenuActionsChange &changes);
 
 private:
