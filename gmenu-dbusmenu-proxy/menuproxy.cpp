@@ -25,6 +25,8 @@
 
 #include <QByteArray>
 #include <QDBusConnection>
+#include <QDBusConnectionInterface>
+#include <QDBusServiceWatcher>
 #include <QCoreApplication>
 #include <QHash>
 #include <QTimer>
@@ -39,6 +41,8 @@
 
 static const QString s_ourServiceName = QStringLiteral("org.kde.plasma.gmenu_dbusmenu_proxy");
 
+static const QString s_dbusMenuRegistrar = QStringLiteral("com.canonical.AppMenu.Registrar");
+
 static const QByteArray s_gtkUniqueBusName = QByteArrayLiteral("_GTK_UNIQUE_BUS_NAME");
 
 static const QByteArray s_gtkApplicationObjectPath = QByteArrayLiteral("_GTK_APPLICATION_OBJECT_PATH");
@@ -50,27 +54,66 @@ static const QByteArray s_gtkAppMenuObjectPath = QByteArrayLiteral("_GTK_APP_MEN
 static const QByteArray s_kdeNetWmAppMenuServiceName = QByteArrayLiteral("_KDE_NET_WM_APPMENU_SERVICE_NAME");
 static const QByteArray s_kdeNetWmAppMenuObjectPath = QByteArrayLiteral("_KDE_NET_WM_APPMENU_OBJECT_PATH");
 
-MenuProxy::MenuProxy() : QObject()
+MenuProxy::MenuProxy()
+    : QObject()
+    , m_serviceWatcher(new QDBusServiceWatcher(this))
 {
-    // TODO do nothing if no dbusmenu service is unavailable and wait for it to come
+    m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
+    m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration |
+                                     QDBusServiceWatcher::WatchForRegistration);
+    m_serviceWatcher->addWatchedService(s_dbusMenuRegistrar);
 
+    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceRegistered, this, [this](const QString &service) {
+        Q_UNUSED(service);
+        qDebug() << "Global menu service became available, starting";
+        init();
+    });
+    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &service) {
+        Q_UNUSED(service);
+        qDebug() << "Global menu service disappeared, cleaning up";
+        teardown();
+    });
+
+    // It's fine to do a blocking call here as we're a separate binary with no UI
+    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(s_dbusMenuRegistrar)) {
+        qDebug() << "Global menu service is there, starting up right away";
+        init();
+    } else {
+        qDebug() << "No global menu service available, waiting for it before we do anything";
+    }
+}
+
+bool MenuProxy::init()
+{
     if (!QDBusConnection::sessionBus().registerService(s_ourServiceName)) {
         qWarning() << "Failed to register DBus service" << s_ourServiceName;
-        //qApp->exit(1); // doensn't work?
-        ::exit(1);
-        return;
+        return false;
     }
 
     connect(KWindowSystem::self(), &KWindowSystem::windowAdded, this, &MenuProxy::onWindowAdded);
     connect(KWindowSystem::self(), &KWindowSystem::windowRemoved, this, &MenuProxy::onWindowRemoved);
 
-    for (WId id : KWindowSystem::windows()) { // detaches?
+    const auto windows = KWindowSystem::windows();
+    for (WId id : windows) {
         onWindowAdded(id);
     }
 
     if (m_menus.isEmpty()) {
         qDebug() << "Up and running but no menus in sight";
     }
+
+    return true;
+}
+
+void MenuProxy::teardown()
+{
+    QDBusConnection::sessionBus().unregisterService(s_ourServiceName);
+
+    disconnect(KWindowSystem::self(), &KWindowSystem::windowAdded, this, &MenuProxy::onWindowAdded);
+    disconnect(KWindowSystem::self(), &KWindowSystem::windowRemoved, this, &MenuProxy::onWindowRemoved);
+
+    qDeleteAll(m_menus);
+    m_menus.clear();
 }
 
 void MenuProxy::onWindowAdded(WId id)

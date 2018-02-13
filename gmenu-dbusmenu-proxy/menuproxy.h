@@ -26,6 +26,8 @@
 
 #include <xcb/xcb_atom.h>
 
+class QDBusServiceWatcher;
+
 class Menu;
 
 class MenuProxy : public QObject//, public QAbstractNativeEventFilter
@@ -44,11 +46,16 @@ private Q_SLOTS:
     void onWindowRemoved(WId id);
 
 private:
+    bool init();
+    void teardown();
+
     // FIXME the get one reads "UTF8String" (reads gnome) the write thing writes "String" (writes kde)
     QByteArray getWindowPropertyString(WId id, const QByteArray &name);
     void writeWindowProperty(WId id, const QByteArray &name, const QByteArray &value);
     xcb_atom_t getAtom(const QByteArray &name);
 
     QHash<WId, Menu *> m_menus;
+
+    QDBusServiceWatcher *m_serviceWatcher;
 
 };
