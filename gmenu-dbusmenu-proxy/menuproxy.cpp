@@ -171,7 +171,7 @@ void MenuProxy::onWindowAdded(WId id)
     const QString unityObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_unityObjectPath));
     const QString windowObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkWindowObjectPath));
 
-    if (serviceName.isEmpty() || applicationObjectPath.isEmpty() || windowObjectPath.isEmpty()) {
+    if (serviceName.isEmpty()) {
         return;
     }
 
