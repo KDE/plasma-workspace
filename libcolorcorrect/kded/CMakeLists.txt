@@ -8,4 +8,4 @@ target_link_libraries(colorcorrectlocationupdater
                         KF5::CoreAddons
                         colorcorrect)
 
-install(TARGETS colorcorrectlocationupdater DESTINATION ${PLUGIN_INSTALL_DIR}/kf5/kded)
+install(TARGETS colorcorrectlocationupdater DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded)

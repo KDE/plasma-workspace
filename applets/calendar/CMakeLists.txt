@@ -9,6 +9,6 @@ kcoreaddons_desktop_to_json(plasma_applet_calendar package/metadata.desktop)
 target_link_libraries(plasma_applet_calendar
                       KF5::Plasma)
 
-install(TARGETS plasma_applet_calendar DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/applets)
+install(TARGETS plasma_applet_calendar DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
 
 plasma_install_package(package org.kde.plasma.calendar)

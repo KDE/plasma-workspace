@@ -11,4 +11,4 @@ target_link_libraries(plasma_applet_notifications
                       KF5::Plasma
                       KF5::ConfigCore)
 
-install(TARGETS plasma_applet_notifications DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/applets)
+install(TARGETS plasma_applet_notifications DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)

@@ -15,6 +15,6 @@ target_link_libraries(plasma_applet_icon
                       KF5::KIOWidgets # for KRun
                       KF5::Plasma)
 
-install(TARGETS plasma_applet_icon DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/applets)
+install(TARGETS plasma_applet_icon DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
 
 plasma_install_package(package org.kde.plasma.icon)

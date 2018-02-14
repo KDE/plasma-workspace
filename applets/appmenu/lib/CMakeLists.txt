@@ -13,4 +13,4 @@ target_link_libraries(plasma_applet_appmenu
                       KF5::Plasma
                       KF5::WindowSystem)
 
-install(TARGETS plasma_applet_appmenu DESTINATION ${PLUGIN_INSTALL_DIR}/plasma/applets)
+install(TARGETS plasma_applet_appmenu DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
