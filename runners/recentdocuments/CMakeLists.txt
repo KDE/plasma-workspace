@@ -15,4 +15,4 @@ target_link_libraries(krunner_recentdocuments
 
 install(TARGETS krunner_recentdocuments DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
-install(FILES recentdocuments.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES plasma-runner-recentdocuments.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
