@@ -23,7 +23,7 @@
 #include "shellprivateplugin.h"
 #include "config-shellprivate.h"
 
-#include <QtQml>
+#include <QQmlEngine>
 
 #include "widgetexplorer/widgetexplorer.h"
 #include <plasma/containment.h>

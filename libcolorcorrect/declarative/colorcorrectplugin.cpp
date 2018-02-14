@@ -20,7 +20,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "geolocator.h"
 #include "suncalc.h"
 
-#include <QtQml>
 #include <QQmlEngine>
 
 namespace ColorCorrect

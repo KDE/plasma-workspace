@@ -23,7 +23,7 @@
 #include "keyboardlayoutplugin.h"
 #include "keyboardlayout.h"
 
-#include <QtQml>
+#include <QQmlEngine>
 
 void KeyboardLayoutPlugin::registerTypes(const char *uri)
 {
