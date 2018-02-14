@@ -44,6 +44,7 @@ public:
     Menu(WId winId,
          const QString &serviceName,
          const QString &applicationObjectPath,
+         const QString &unityObjectPath,
          const QString &windowObjectPath,
          const QString &menuObjectPath);
     ~Menu();
@@ -54,6 +55,7 @@ public:
     QString serviceName() const;
 
     QString applicationObjectPath() const;
+    QString unityObjectPath() const;
     QString windowObjectPath() const;
     QString menuObjectPath() const;
 
@@ -82,6 +84,7 @@ signals:
 private slots:
     void onMenuChanged(const GMenuChangeList &changes);
     void onApplicationActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
+    void onUnityActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
     void onWindowActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
 
 private:
@@ -111,6 +114,7 @@ private:
     QString m_serviceName; // original GMenu service (the gtk app)
 
     QString m_applicationObjectPath;
+    QString m_unityObjectPath;
     QString m_windowObjectPath;
     QString m_menuObjectPath;
 
@@ -123,9 +127,10 @@ private:
 
     QHash<int, QDBusMessage> m_pendingGetLayouts;
 
-    bool m_queriedApplicationActions = false;
     GMenuActionMap m_applicationActions;
-    bool m_queriedWindowActions = false;
     GMenuActionMap m_windowActions;
+    GMenuActionMap m_unityActions;
+
+    bool m_inited = false;
 
 };

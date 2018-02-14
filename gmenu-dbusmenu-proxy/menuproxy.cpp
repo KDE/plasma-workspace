@@ -50,6 +50,7 @@ static const QString s_dbusMenuRegistrar = QStringLiteral("com.canonical.AppMenu
 static const QByteArray s_gtkUniqueBusName = QByteArrayLiteral("_GTK_UNIQUE_BUS_NAME");
 
 static const QByteArray s_gtkApplicationObjectPath = QByteArrayLiteral("_GTK_APPLICATION_OBJECT_PATH");
+static const QByteArray s_unityObjectPath = QByteArrayLiteral("_UNITY_OBJECT_PATH");
 static const QByteArray s_gtkWindowObjectPath = QByteArrayLiteral("_GTK_WINDOW_OBJECT_PATH");
 static const QByteArray s_gtkMenuBarObjectPath = QByteArrayLiteral("_GTK_MENUBAR_OBJECT_PATH");
 // that's the generic app menu with Help and Options and will be used if window doesn't have a fully-blown menu bar
@@ -167,6 +168,7 @@ void MenuProxy::onWindowAdded(WId id)
 
     const QString serviceName = QString::fromUtf8(getWindowPropertyString(id, s_gtkUniqueBusName));
     const QString applicationObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkApplicationObjectPath));
+    const QString unityObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_unityObjectPath));
     const QString windowObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkWindowObjectPath));
 
     if (serviceName.isEmpty() || applicationObjectPath.isEmpty() || windowObjectPath.isEmpty()) {
@@ -183,7 +185,7 @@ void MenuProxy::onWindowAdded(WId id)
         return;
     }
 
-    Menu *menu = new Menu(id, serviceName, applicationObjectPath, windowObjectPath, menuObjectPath);
+    Menu *menu = new Menu(id, serviceName, applicationObjectPath, unityObjectPath, windowObjectPath, menuObjectPath);
     m_menus.insert(id, menu);
 
     connect(menu, &Menu::requestWriteWindowProperties, this, [this, menu] {
