@@ -22,7 +22,7 @@
 
 #include <QObject>
 #include <QString>
-#include <QtDBus/QDBusArgument>
+#include <QDBusArgument>
 #include <QDebug>
 
 class ActivityData {

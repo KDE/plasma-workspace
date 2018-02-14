@@ -60,7 +60,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QApplication>
 #include <QPushButton>
 #include <QTimer>
-#include <QtDBus/QtDBus>
+#include <QFile>
+#include <QProcess>
+#include <QFutureWatcher>
 #include <QtConcurrentRun>
 
 #include <KConfig>

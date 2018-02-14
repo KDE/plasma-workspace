@@ -24,9 +24,9 @@
 #include "kworkspace.h"
 #include "config-libkworkspace.h"
 #include "kworkspace_export.h"
-#include <QtCore/QString>
-#include <QtCore/QList>
-#include <QtCore/QByteArray>
+#include <QString>
+#include <QList>
+#include <QByteArray>
 
 struct KWORKSPACE_EXPORT SessEnt {
     QString display, from, user, session;

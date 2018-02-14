@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 #include "image.h"
-#include <QtTest/QtTest>
+#include <QtTest>
 #include <QDebug>
 
 extern QSize resSize(const QString &str);

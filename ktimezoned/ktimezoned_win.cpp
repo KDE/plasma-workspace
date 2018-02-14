@@ -26,7 +26,8 @@
 
 #include <QStringList>
 #include <QTextStream>
-#include <QtDBus/QtDBus>
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <QThread>
 #include <QDebug>
 

@@ -20,11 +20,11 @@
 #ifndef _FREESPACENOTIFIER_H_
 #define _FREESPACENOTIFIER_H_
 
-#include <QtCore/QTimer>
-#include <QtDBus/QDBusInterface>
+#include <QTimer>
 
 class KNotification;
 class KStatusNotifierItem;
+class QDBusInterface;
 
 class FreeSpaceNotifier : public QObject
 {

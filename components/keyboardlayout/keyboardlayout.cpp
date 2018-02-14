@@ -19,8 +19,8 @@
 
 #include "keyboardlayout.h"
 
-#include <QtDBus/QDBusInterface>
-#include <QtDBus/QDBusReply>
+#include <QDBusInterface>
+#include <QDBusReply>
 
 #include <QDebug>
 #include "debug.h"

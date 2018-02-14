@@ -26,8 +26,8 @@
 
 #include <KLocalizedString>
 #include <KFormat>
-#include <QtDBus/QDBusPendingReply>
-#include <qdbusabstractinterface.h>
+#include <QDBusPendingReply>
+#include <QDBusAbstractInterface>
 
 JobView::JobView(uint jobId, QObject *parent)
     : QObject(parent),

@@ -21,9 +21,8 @@
 
 #include <QDir>
 #include <QMenu>
+#include <QDBusInterface>
 #include <QDebug>
-
-#include <QtDBus/QtDBus>
 
 #include <KLocalizedString>
 #include <KRun>

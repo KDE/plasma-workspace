@@ -79,7 +79,7 @@
 
 #if HAVE_X11
 #include <NETWM>
-#include <QtX11Extras/QX11Info>
+#include <QX11Info>
 #include <xcb/xcb.h>
 #endif
 

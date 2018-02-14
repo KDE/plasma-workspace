@@ -19,7 +19,7 @@
 #ifndef PANELVIEW_H
 #define PANELVIEW_H
 
-#include <QtCore/qpointer.h>
+#include <QPointer>
 #include <Plasma/Theme>
 #include <QTimer>
 

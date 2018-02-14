@@ -66,7 +66,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QFile>
 #include <QPushButton>
 #include <QRegExp>
-#include <QtDBus/QtDBus>
+#include <QDBusConnection>
 #include <QSocketNotifier>
 #include <QStandardPaths>
 #include <QDebug>

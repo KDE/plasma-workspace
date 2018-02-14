@@ -21,7 +21,7 @@
 
 #include "calendarengine.h"
 
-#include <QtCore/QDate>
+#include <QDate>
 
 #include <KCalendarSystem>
 #include <KDateTime>

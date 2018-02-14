@@ -22,7 +22,6 @@
 
 #include <KDEDModule>
 #include <QObject>
-#include <QtDBus/QtDBus>
 
 #include "freespacenotifier.h"
 

@@ -25,7 +25,13 @@
 
 #include <KLocalizedString>
 
-#include <QtDBus/QtDBus>
+#include <QDBusObjectPath>
+#include <QDBusArgument>
+#include <QDBusInterface>
+#include <QDBusReply>
+#include <QDBusMetaType>
+#include <QDBusConnectionInterface>
+#include <QCoreApplication>
 #include <QRegExp>
 #include <QX11Info>
 

@@ -31,7 +31,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <string.h>
 
 #include <KMessageBox>
-#include <QtDBus/QtDBus>
 
 #include <kconfiggroup.h>
 #include <kdbusservice.h>
@@ -45,6 +44,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QX11Info>
 
 #include <QApplication>
+#include <QCommandLineParser>
 #include <QQuickWindow>
 #include <X11/extensions/Xrender.h>
 

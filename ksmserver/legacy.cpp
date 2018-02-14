@@ -29,7 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ******************************************************************/
 
-#include <QtX11Extras/QX11Info>
+#include <QX11Info>
 #include <QDebug>
 
 #include <config-workspace.h>

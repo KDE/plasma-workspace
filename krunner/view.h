@@ -20,7 +20,7 @@
 #define VIEW_H
 
 #include <QPointer>
-#include <QtQuick/QQuickView>
+#include <QQuickView>
 #include <KConfigGroup>
 #include <KSharedConfig>
 

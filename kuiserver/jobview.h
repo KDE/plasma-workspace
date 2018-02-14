@@ -22,7 +22,7 @@
 #ifndef JOBVIEW_H
 #define JOBVIEW_H
 
-#include <QtDBus/QDBusObjectPath>
+#include <QDBusObjectPath>
 
 #include <kio/global.h>
 

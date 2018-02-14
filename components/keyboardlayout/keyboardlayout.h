@@ -20,8 +20,8 @@
 #ifndef KEYBOARDLAYOUT_H
 #define KEYBOARDLAYOUT_H
 
-#include <QtCore/QObject>
-#include <QtCore/QStringList>
+#include <QObject>
+#include <QStringList>
 
 class QDBusInterface;
 class QDBusPendingCallWatcher;

@@ -27,7 +27,7 @@
 #include "jobviewserver_interface.h"
 #include "requestviewcallwatcher.h"
 #include "uiserver.h"
-#include <QtDBus/qdbusabstractinterface.h>
+#include <QDBusAbstractInterface>
 
 ProgressListModel::ProgressListModel(QObject *parent)
         : QAbstractItemModel(parent), QDBusContext(), m_jobId(1),

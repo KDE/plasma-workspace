@@ -18,9 +18,9 @@
 #ifndef GEOLOCATIONPROVIDER_H
 #define GEOLOCATIONPROVIDER_H
 
-#include <QtCore/QHash>
-#include <QtCore/QObject>
-#include <QtCore/QTimer>
+#include <QHash>
+#include <QObject>
+#include <QTimer>
 
 #include <Plasma/DataEngine>
 

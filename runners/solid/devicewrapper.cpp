@@ -22,8 +22,8 @@
 //Qt
 #include <QAction>
 #include <QTimer>
-#include <QtDBus/QDBusInterface>
-#include <QtDBus/QDBusReply>
+#include <QDBusInterface>
+#include <QDBusReply>
 
 //Solid
 #include <Solid/Device>
