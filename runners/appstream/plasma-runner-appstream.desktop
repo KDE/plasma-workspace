@@ -77,7 +77,7 @@ Icon=applications-other
 Type=Service
 X-KDE-ServiceTypes=Plasma/Runner
 
-X-KDE-Library=appstreamrunner
+X-KDE-Library=krunner_appstream
 X-KDE-PluginInfo-Author=Aleix Pol Gonzalez
 X-KDE-PluginInfo-Email=aleixpol@blue-systems.com
 X-KDE-PluginInfo-Version=0.1
