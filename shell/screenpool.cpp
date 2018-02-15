@@ -22,6 +22,7 @@
 
 #include <QGuiApplication>
 #include <QScreen>
+#include <KWindowSystem>
 
 #if HAVE_X11
 #include <QX11Info>
@@ -34,12 +35,19 @@ ScreenPool::ScreenPool(KSharedConfig::Ptr config, QObject *parent)
     : QObject(parent),
       m_configGroup(KConfigGroup(config, QStringLiteral("ScreenConnectors")))
 {
-    qApp->installNativeEventFilter(this);
 
     m_configSaveTimer.setSingleShot(true);
     connect(&m_configSaveTimer, &QTimer::timeout, this, [this](){
         m_configGroup.sync();
     });
+
+#if HAVE_X11
+    if (KWindowSystem::isPlatformX11()) {
+        qApp->installNativeEventFilter(this);
+        const xcb_query_extension_reply_t* reply = xcb_get_extension_data(QX11Info::connection(), &xcb_randr_id);
+        m_xrandrExtensionOffset = reply->first_event;
+    }
+#endif
 }
 
 void ScreenPool::load()
@@ -185,9 +193,8 @@ bool ScreenPool::nativeEventFilter(const QByteArray& eventType, void* message, l
 
     const auto responseType = XCB_EVENT_RESPONSE_TYPE(ev);
 
-    const xcb_query_extension_reply_t* reply = xcb_get_extension_data(QX11Info::connection(), &xcb_randr_id);
 
-    if (responseType == reply->first_event + XCB_RANDR_SCREEN_CHANGE_NOTIFY) {
+    if (responseType == m_xrandrExtensionOffset + XCB_RANDR_SCREEN_CHANGE_NOTIFY) {
         if (qGuiApp->primaryScreen()->name() != primaryConnector()) {
             //new screen?
             if (id(qGuiApp->primaryScreen()->name()) < 0) {

@@ -9,6 +9,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             Qt5::Test
                             Qt5::Gui
                             KF5::Service
+                            KF5::WindowSystem
                                      )
                if(HAVE_X11)
                   target_link_libraries(${_testname} ${X11_LIBRARIES} ${XCB_LIBRARIES} )

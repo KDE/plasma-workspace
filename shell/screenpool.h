@@ -65,6 +65,7 @@ private:
     QHash<QString, int> m_idForConnector;
 
     QTimer m_configSaveTimer;
+    int m_xrandrExtensionOffset;
 };
 
 #endif // SCREENPOOL_H

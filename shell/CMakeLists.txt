@@ -73,6 +73,7 @@ target_link_libraries(plasmashell
  KF5::XmlGui
  KF5::Package
  KF5::WaylandClient
+ KF5::WindowSystem
 )
 target_include_directories(plasmashell PRIVATE "${CMAKE_BINARY_DIR}")
 target_compile_definitions(plasmashell PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
