@@ -106,6 +106,10 @@ void ClipboardJob::start()
             code = Prison::createBarcode(Prison::Code93);
             break;
         }
+        case 4: {
+            code = Prison::createBarcode(Prison::Aztec);
+            break;
+        }
         case 0:
         default: {
             code = Prison::createBarcode(Prison::QRCode);

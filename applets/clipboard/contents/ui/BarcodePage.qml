@@ -82,6 +82,12 @@ ColumnLayout {
                 onClicked: menu.change(1)
             }
             PlasmaComponents.MenuItem {
+                text: i18nc("Aztec barcode", "Aztec")
+                checkable: true
+                checked: barcodeView.barcodeType == 4
+                onClicked: menu.change(4)
+            }
+            PlasmaComponents.MenuItem {
                 text: i18n("Code 39")
                 checkable: true
                 checked: barcodeView.barcodeType == 2
