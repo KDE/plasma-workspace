@@ -123,6 +123,9 @@ void SearchRunner::performMatch()
     matches << matchInternal(m_searchTerm, QStringLiteral("Document"), i18n("Document"));
     matches << matchInternal(m_searchTerm, QStringLiteral("Video"), i18n("Video"));
     matches << matchInternal(m_searchTerm, QStringLiteral("Folder"), i18n("Folder"));
+    matches << matchInternal(m_searchTerm, QStringLiteral("Archive"), i18n("Archive"));
+    matches << matchInternal(m_searchTerm, QStringLiteral("Spreadsheet"), i18n("Spreadsheet"));
+    matches << matchInternal(m_searchTerm, QStringLiteral("Presentation"), i18n("Presentation"));
 
     QDBusConnection::sessionBus().send(m_lastRequest.createReply(QVariant::fromValue(matches)));
     m_lastRequest = QDBusMessage();
