@@ -185,7 +185,7 @@ bool ScreenPool::nativeEventFilter(const QByteArray& eventType, void* message, l
     // we don't have any signal about it, the primary screen changes but we have the same old QScreen* getting recycled
     // see https://bugs.kde.org/show_bug.cgi?id=373880
     // if this slot will be invoked many times, their//second time on will do nothing as name and primaryconnector will be the same by then
-    if (eventType != "xcb_generic_event_t") {
+    if (eventType[0] != 'x') {
         return false;
     }
     
