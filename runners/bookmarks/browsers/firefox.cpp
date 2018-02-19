@@ -55,7 +55,7 @@ Firefox::~Firefox()
 void Firefox::prepare()
 {
     if (m_dbCacheFile.isEmpty()) {
-        m_dbCacheFile = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("bookmarkrunnerfirefoxdbfile.sqlite");
+        m_dbCacheFile = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/bookmarkrunnerfirefoxdbfile.sqlite");
     }
     if (!m_dbFile.isEmpty()) {
         m_fetchsqlite = new FetchSqlite(m_dbFile, m_dbCacheFile);
