@@ -185,7 +185,12 @@ void MenuProxy::onWindowAdded(WId id)
         return;
     }
 
-    Menu *menu = new Menu(id, serviceName, applicationObjectPath, unityObjectPath, windowObjectPath, menuObjectPath);
+    Menu *menu = new Menu(serviceName);
+    menu->setWinId(id);
+    menu->setApplicationObjectPath(applicationObjectPath);
+    menu->setUnityObjectPath(unityObjectPath);
+    menu->setWindowObjectPath(windowObjectPath);
+    menu->setMenuObjectPath(menuObjectPath);
     m_menus.insert(id, menu);
 
     connect(menu, &Menu::requestWriteWindowProperties, this, [this, menu] {
@@ -198,6 +203,8 @@ void MenuProxy::onWindowAdded(WId id)
         writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuServiceName, QByteArray());
         writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuObjectPath, QByteArray());
     });
+
+    menu->init();
 }
 
 void MenuProxy::onWindowRemoved(WId id)

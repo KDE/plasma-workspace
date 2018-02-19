@@ -41,23 +41,28 @@ class Menu : public QObject, protected QDBusContext
     Q_PROPERTY(uint Version READ version)
 
 public:
-    Menu(WId winId,
-         const QString &serviceName,
-         const QString &applicationObjectPath,
-         const QString &unityObjectPath,
-         const QString &windowObjectPath,
-         const QString &menuObjectPath);
+    Menu(const QString &serviceName);
     ~Menu();
 
+    void init();
     void cleanup();
 
     WId winId() const;
+    void setWinId(WId winId);
+
     QString serviceName() const;
 
     QString applicationObjectPath() const;
+    void setApplicationObjectPath(const QString &applicationObjectPath);
+
     QString unityObjectPath() const;
+    void setUnityObjectPath(const QString &unityObjectPath);
+
     QString windowObjectPath() const;
+    void setWindowObjectPath(const QString &windowObjectPath);
+
     QString menuObjectPath() const;
+    void setMenuObjectPath(const QString &menuObjectPath);
 
     QString proxyObjectPath() const;
 
@@ -88,7 +93,7 @@ private slots:
     void onWindowActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
 
 private:
-    void init();
+    void initMenu();
     void start(uint id);
     void stop(const QList<uint> &id);
 
@@ -110,7 +115,7 @@ private:
 
     QVariantMap gMenuToDBusMenuProperties(const QVariantMap &source) const;
 
-    WId m_winId;
+    WId m_winId = 0;
     QString m_serviceName; // original GMenu service (the gtk app)
 
     QString m_applicationObjectPath;
@@ -131,6 +136,6 @@ private:
     GMenuActionMap m_windowActions;
     GMenuActionMap m_unityActions;
 
-    bool m_inited = false;
+    bool m_menuInited = false;
 
 };

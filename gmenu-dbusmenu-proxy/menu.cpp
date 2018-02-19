@@ -39,24 +39,23 @@
 static const QString s_orgGtkActions = QStringLiteral("org.gtk.Actions");
 static const QString s_orgGtkMenus = QStringLiteral("org.gtk.Menus");
 
-Menu::Menu(WId winId,
-           const QString &serviceName,
-           const QString &applicationObjectPath,
-           const QString &unityObjectPath,
-           const QString &windowObjectPath,
-           const QString &menuObjectPath)
+Menu::Menu(const QString &serviceName)
     : QObject()
-    , m_winId(winId)
     , m_serviceName(serviceName)
-    , m_applicationObjectPath(applicationObjectPath)
-    , m_unityObjectPath(unityObjectPath)
-    , m_windowObjectPath(windowObjectPath)
-    , m_menuObjectPath(menuObjectPath)
 {
-    qCDebug(DBUSMENUPROXY) << "Created menu for" << m_winId << "on" << m_serviceName << "at app" << m_applicationObjectPath << "win" << m_windowObjectPath << "unity" << m_unityObjectPath << "menu" << m_menuObjectPath;
+    qCDebug(DBUSMENUPROXY) << "Created menu on" << serviceName;
+
+    Q_ASSERT(!serviceName.isEmpty());
 
     GDBusMenuTypes_register();
     DBusMenuTypes_register();
+}
+
+Menu::~Menu() = default;
+
+void Menu::init()
+{
+     qCDebug(DBUSMENUPROXY) << "Inited menu for" << m_winId << "on" << m_serviceName << "at app" << m_applicationObjectPath << "win" << m_windowObjectPath << "unity" << m_unityObjectPath << "menu" << m_menuObjectPath;
 
     if (!QDBusConnection::sessionBus().connect(m_serviceName,
                                                m_menuObjectPath,
@@ -99,11 +98,11 @@ Menu::Menu(WId winId,
         getActions(m_applicationObjectPath, [this](const GMenuActionMap &actions, bool ok) {
             if (ok) {
                 // TODO just do all of this in getActions instead of copying it thrice
-                if (m_inited) {
+                if (m_menuInited) {
                     onApplicationActionsChanged({}, {}, {}, actions);
                 } else {
                     m_applicationActions = actions;
-                    init();
+                    initMenu();
                 }
             }
         });
@@ -112,11 +111,11 @@ Menu::Menu(WId winId,
     if (!m_unityObjectPath.isEmpty()) {
         getActions(m_unityObjectPath, [this](const GMenuActionMap &actions, bool ok) {
             if (ok) {
-                if (m_inited) {
+                if (m_menuInited) {
                     onUnityActionsChanged({}, {}, {}, actions);
                 } else {
                     m_unityActions = actions;
-                    init();
+                    initMenu();
                 }
             }
         });
@@ -125,18 +124,16 @@ Menu::Menu(WId winId,
     if (!m_windowObjectPath.isEmpty()) {
         getActions(m_windowObjectPath, [this](const GMenuActionMap &actions, bool ok) {
             if (ok) {
-                if (m_inited) {
+                if (m_menuInited) {
                     onWindowActionsChanged({}, {}, {}, actions);
                 } else {
                     m_windowActions = actions;
-                    init();
+                    initMenu();
                 }
             }
         });
     }
 }
-
-Menu::~Menu() = default;
 
 void Menu::cleanup()
 {
@@ -150,6 +147,11 @@ WId Menu::winId() const
     return m_winId;
 }
 
+void Menu::setWinId(WId winId)
+{
+    m_winId = winId;
+}
+
 QString Menu::serviceName() const
 {
     return m_serviceName;
@@ -160,9 +162,29 @@ QString Menu::applicationObjectPath() const
     return m_applicationObjectPath;
 }
 
+void Menu::setApplicationObjectPath(const QString &applicationObjectPath)
+{
+    m_applicationObjectPath = applicationObjectPath;
+}
+
+QString Menu::unityObjectPath() const
+{
+    return m_unityObjectPath;
+}
+
+void Menu::setUnityObjectPath(const QString &unityObjectPath)
+{
+    m_unityObjectPath = unityObjectPath;
+}
+
 QString Menu::windowObjectPath() const
 {
     return m_windowObjectPath;
+}
+
+void Menu::setWindowObjectPath(const QString &windowObjectPath)
+{
+    m_windowObjectPath = windowObjectPath;
 }
 
 QString Menu::menuObjectPath() const
@@ -170,14 +192,19 @@ QString Menu::menuObjectPath() const
     return m_menuObjectPath;
 }
 
+void Menu::setMenuObjectPath(const QString &menuObjectPath)
+{
+    m_menuObjectPath = menuObjectPath;
+}
+
 QString Menu::proxyObjectPath() const
 {
     return m_proxyObjectPath;
 }
 
-void Menu::init()
+void Menu::initMenu()
 {
-    if (m_inited) {
+    if (m_menuInited) {
         return;
     }
 
@@ -186,7 +213,7 @@ void Menu::init()
     }
 
     emit requestWriteWindowProperties();
-    m_inited = true;
+    m_menuInited = true;
 }
 
 void Menu::start(uint id)
@@ -392,7 +419,7 @@ void Menu::onMenuChanged(const GMenuChangeList &changes)
 
 void Menu::onApplicationActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added)
 {
-    if (!m_inited) {
+    if (!m_menuInited) {
         return;
     }
     actionsChanged(removed, enabledChanges, stateChanges, added, m_applicationActions, QStringLiteral("app."));
@@ -400,7 +427,7 @@ void Menu::onApplicationActionsChanged(const QStringList &removed, const StringB
 
 void Menu::onUnityActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added)
 {
-    if (!m_inited) {
+    if (!m_menuInited) {
         return;
     }
     actionsChanged(removed, enabledChanges, stateChanges, added, m_unityActions, QStringLiteral("unity."));
@@ -408,7 +435,7 @@ void Menu::onUnityActionsChanged(const QStringList &removed, const StringBoolMap
 
 void Menu::onWindowActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added)
 {
-    if (!m_inited) {
+    if (!m_menuInited) {
         return;
     }
     actionsChanged(removed, enabledChanges, stateChanges, added, m_windowActions, QStringLiteral("win."));
