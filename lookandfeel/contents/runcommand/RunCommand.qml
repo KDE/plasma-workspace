@@ -118,6 +118,35 @@ ColumnLayout {
             Keys.onEscapePressed: {
                 runnerWindow.visible = false
             }
+
+            PlasmaCore.SvgItem {
+                anchors {
+                    right: parent.right
+                    rightMargin: 6 // from PlasmaStyle TextFieldStyle
+                    verticalCenter: parent.verticalCenter
+                }
+                // match clear button
+                width: Math.max(parent.height * 0.8, units.iconSizes.small)
+                height: width
+                svg: PlasmaCore.Svg {
+                    imagePath: "widgets/arrows"
+                    colorGroup: PlasmaCore.Theme.ButtonColorGroup
+                }
+                elementId: "down-arrow"
+                visible: queryField.length === 0
+
+                MouseArea {
+                    anchors.fill: parent
+                    onPressed: {
+                        root.showHistory = !root.showHistory
+                        if (root.showHistory) {
+                            listView.forceActiveFocus(); // is the history list
+                        } else {
+                            queryField.forceActiveFocus();
+                        }
+                    }
+                }
+            }
         }
         PlasmaComponents.ToolButton {
             iconSource: "window-close"
