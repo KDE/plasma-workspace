@@ -223,6 +223,8 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
             QMenu *oldMenu = m_currentMenu;
             m_currentMenu = actionMenu;
             if (oldMenu && oldMenu != actionMenu) {
+                //dont initialize the currentIndex when another menu is already shown
+                disconnect(oldMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide);
                 oldMenu->hide();
             }
         }
