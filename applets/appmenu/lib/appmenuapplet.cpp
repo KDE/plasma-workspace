@@ -207,15 +207,10 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
             actionMenu->installEventFilter(this);
         }
 
-        setStatus(Plasma::Types::AcceptingInputStatus);
         actionMenu->winId();//create window handle
         actionMenu->windowHandle()->setTransientParent(ctx->window());
 
         actionMenu->popup(pos);
-
-        //we can return to passive immediately, an autohide panel will stay open whilst
-        //any transient window is showing
-        setStatus(Plasma::Types::PassiveStatus);
 
         if (view() == FullView) {
             // hide the old menu only after showing the new one to avoid brief flickering

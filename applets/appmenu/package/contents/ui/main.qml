@@ -56,9 +56,18 @@ Item {
 
     Plasmoid.fullRepresentation: GridLayout {
         id: buttonGrid
-        //when we're not enabled set to active to show the configure button
-        Plasmoid.status: buttonRepeater.count > 0 ?
-                         PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
+
+        Plasmoid.status: {
+            if (menuAvailable && plasmoid.nativeInterface.currentIndex > -1 && buttonRepeater.count > 0) {
+                return PlasmaCore.Types.NeedsAttentionStatus;
+            } else if (menuAvailable){
+                //when we're not enabled set to active to show the configure button
+                return buttonRepeater.count > 0 ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus;
+            } else {
+                return PlasmaCore.Types.PassiveStatus;
+            }
+        }
+
         Layout.minimumWidth: implicitWidth
         Layout.minimumHeight: implicitHeight
 
