@@ -105,6 +105,7 @@ MouseArea {
         if (!plasmoidItemComponent) {
             plasmoidItemComponent = Qt.createComponent("items/PlasmoidItem.qml");
         }
+        //Allow the plasmoid expander to know in what window it will be
         var plasmoidContainer = plasmoidItemComponent.createObject(invisibleEntriesContainer, {"x": x, "y": y, "applet": applet});
 
         applet.parent = plasmoidContainer
@@ -114,6 +115,25 @@ MouseArea {
         applet.width = plasmoidContainer.height
         applet.visible = true
         plasmoidContainer.visible = true
+        
+        //This is to make preloading effective, minimizes the scene changes
+        if (applet.fullRepresentationItem) {
+            applet.fullRepresentationItem.width = expandedRepresentation.width
+            applet.fullRepresentationItem.width = expandedRepresentation.height
+            applet.fullRepresentationItem.parent = preloadedStorage;
+        } else {
+            applet.fullRepresentationItemChanged.connect(function() {
+                applet.fullRepresentationItem.width = expandedRepresentation.width
+                applet.fullRepresentationItem.width = expandedRepresentation.height
+                applet.fullRepresentationItem.parent = preloadedStorage;
+            });
+        }
+    }
+
+    //being there forces the items to fully load, and they will be reparented in the popup one by one, this item is *never* visible
+    Item {
+        id: preloadedStorage
+        visible: false
     }
 
     Containment.onAppletRemoved: {
