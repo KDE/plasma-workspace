@@ -166,5 +166,7 @@ void KSMSwitchUserDialog::setupWaylandIntegration()
 
 void KSMSwitchUserDialog::ungrab()
 {
+    // Allow the screenlocker to grab them immediately
     setKeyboardGrabEnabled(false);
+    setMouseGrabEnabled(false);
 }
