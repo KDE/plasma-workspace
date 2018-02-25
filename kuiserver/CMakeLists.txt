@@ -60,6 +60,7 @@ endif ()
 
 
 target_link_libraries(kdeinit_kuiserver5
+    PW::KWorkspace
     Qt5::DBus
     KF5::ConfigWidgets
     KF5::DBusAddons

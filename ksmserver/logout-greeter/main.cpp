@@ -166,6 +166,7 @@ int main(int argc, char *argv[])
     // Qt does not currently (5.9.4) support fullscreen on xdg_shell v6.
     qputenv("QT_WAYLAND_SHELL_INTEGRATION", "wl-shell");
 
+    KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);
     QApplication app(argc, argv);
 

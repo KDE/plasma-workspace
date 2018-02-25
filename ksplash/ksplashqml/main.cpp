@@ -23,6 +23,8 @@
 
 #include <QTextStream>
 
+#include <kworkspace.h>
+
 #include <iostream>
 #include <unistd.h>
 
@@ -88,6 +90,7 @@ int main(int argc, char **argv)
     //enable to send log output to /tmp/ksplash
     //which is useful for debugging
 //     qInstallMsgHandler(myMessageHandler);
+    KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);
     SplashApp app(argc, argv);
 

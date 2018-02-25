@@ -150,6 +150,21 @@ namespace KWorkSpace
    */
    KWORKSPACE_EXPORT void propagateSessionManager();
 
+   /**
+    * Performs platform detection and adjusts QT_QPA_PLATFORM environment
+    * variable to either xcb or wayland depending on the detected platform.
+    *
+    * The detection is based on the XDG_SESSION_TYPE environment variable.
+    * The detection is skipped in case QT_QPA_PLATFORM is already set or
+    * if one of the command line arguments contains the "-platform" variable.
+    *
+    * In order to make use of this function, it has to be invoked before the
+    * QGuiApplication instance is constructed. Invoking after constructing the
+    * QGuiApplication has no effect.
+    * @since 5.13
+    **/
+   KWORKSPACE_EXPORT void detectPlatform(int argc, char **argv);
+
 }
 
 #endif

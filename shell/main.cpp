@@ -31,6 +31,7 @@
 #include <kdbusservice.h>
 #include <klocalizedstring.h>
 #include <kcrash.h>
+#include <kworkspace.h>
 
 #include "shellcorona.h"
 #include "standaloneappcorona.h"
@@ -58,6 +59,7 @@ int main(int argc, char *argv[])
 
     QQuickWindow::setDefaultAlphaBuffer(true);
 
+    KWorkSpace::detectPlatform(argc, argv);
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain("plasmashell");
 

@@ -14,7 +14,7 @@ qt5_add_dbus_interface(kcminit_KDEINIT_SRCS ${klauncher_xml} klauncher_iface)
 
 kf5_add_kdeinit_executable( kcminit ${kcminit_KDEINIT_SRCS})
 
-target_link_libraries(kdeinit_kcminit Qt5::Core Qt5::Gui Qt5::DBus KF5::CoreAddons KF5::Service KF5::I18n)
+target_link_libraries(kdeinit_kcminit Qt5::Core Qt5::Gui Qt5::DBus KF5::CoreAddons KF5::Service KF5::I18n PW::KWorkspace)
 if (XCB_XCB_FOUND)
     target_link_libraries(kdeinit_kcminit XCB::XCB)
 endif()
@@ -32,7 +32,7 @@ set(kcminit_startup_KDEINIT_SRCS main.cpp)
 qt5_add_dbus_interface(kcminit_startup_KDEINIT_SRCS ${klauncher_xml} klauncher_iface)
 kf5_add_kdeinit_executable( kcminit_startup ${kcminit_startup_KDEINIT_SRCS})
 
-target_link_libraries(kdeinit_kcminit_startup Qt5::Core Qt5::Gui Qt5::DBus KF5::CoreAddons KF5::Service KF5::I18n)
+target_link_libraries(kdeinit_kcminit_startup Qt5::Core Qt5::Gui Qt5::DBus KF5::CoreAddons KF5::Service KF5::I18n PW::KWorkspace)
 if (XCB_XCB_FOUND)
     target_link_libraries(kdeinit_kcminit_startup XCB::XCB)
 endif()

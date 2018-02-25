@@ -33,6 +33,7 @@
 #include <kdeclarative/qmlobject.h>
 #include <KQuickAddons/QtQuickSettings>
 
+#include <kworkspace.h>
 
 #include "view.h"
 
@@ -43,6 +44,7 @@ int main(int argc, char **argv)
     qunsetenv("QT_DEVICE_PIXEL_RATIO");
     QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
 
+    KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain("krunner");

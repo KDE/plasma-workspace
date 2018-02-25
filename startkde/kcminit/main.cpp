@@ -42,6 +42,7 @@
 #include <kconfiggroup.h>
 #include <klocalizedstring.h>
 #include <kservicetypetrader.h>
+#include <kworkspace.h>
 
 static int ready[ 2 ];
 static bool startup = false;
@@ -221,6 +222,7 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])
 
   startup = ( strcmp( argv[ 0 ], "kcminit_startup" ) == 0 ); // started from startkde?
 
+  KWorkSpace::detectPlatform(argc, argv);
   QGuiApplication::setDesktopSettingsAware(false);
   QGuiApplication app(argc, argv); //gui is needed for several modules
   KLocalizedString::setApplicationDomain("kcminit");

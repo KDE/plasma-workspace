@@ -73,3 +73,7 @@ install(EXPORT libkworkspaceLibraryTargets
         NAMESPACE PW::
         DESTINATION ${CMAKECONFIG_INSTALL_DIR}
         FILE LibKWorkspaceLibraryTargets.cmake )
+
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()

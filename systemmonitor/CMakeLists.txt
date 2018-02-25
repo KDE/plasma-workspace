@@ -31,6 +31,7 @@ target_link_libraries(systemmonitor
     KF5::XmlGui
     KF5::GlobalAccel
     KF5::WindowSystem
+    PW::KWorkspace
 )
 
 install(TARGETS systemmonitor DESTINATION ${KDE_INSTALL_BINDIR})

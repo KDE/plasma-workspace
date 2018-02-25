@@ -27,12 +27,15 @@
 
 #include <kdbusservice.h>
 
+#include <kworkspace.h>
+
 #include <QCommandLineParser>
 
 Q_LOGGING_CATEGORY(KUISERVER, "kuiserver", QtInfoMsg)
 
 extern "C" Q_DECL_EXPORT int kdemain(int argc, char **argv)
 {
+    KWorkSpace::detectPlatform(argc, argv);
     QApplication app(argc, argv);
     app.setApplicationName(QStringLiteral("kuiserver"));
     app.setApplicationVersion(QStringLiteral("2.0"));
