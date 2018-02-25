@@ -40,9 +40,12 @@ public Q_SLOTS:
 private:
     virtual void reloadConfiguration();
     QString m_dbFile;
+    QString m_dbFile_fav;
     QString m_dbCacheFile;
+    QString m_dbCacheFile_fav;
     Favicon * m_favicon;
     FetchSqlite *m_fetchsqlite;
+    FetchSqlite *m_fetchsqlite_fav;
 };
 
 #endif // FIREFOX_H
