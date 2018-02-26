@@ -26,7 +26,7 @@
 #include <QUrl>
 
 #include <Plasma/Package>
-#include <KDeclarative/QmlObject>
+#include <KDeclarative/QmlObjectSharedEngine>
 #include <klocalizedstring.h>
 
 Osd::Osd(KSharedConfig::Ptr config, ShellCorona *corona)
@@ -167,7 +167,7 @@ bool Osd::init()
     }
 
     if (!m_osdObject) {
-        m_osdObject = new KDeclarative::QmlObject(this);
+        m_osdObject = new KDeclarative::QmlObjectSharedEngine(this);
     }
 
     m_osdObject->setSource(m_osdUrl);

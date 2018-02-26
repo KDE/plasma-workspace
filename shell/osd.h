@@ -26,7 +26,7 @@
 #include <KSharedConfig>
 
 namespace KDeclarative {
-    class QmlObject;
+    class QmlObjectSharedEngine;
 }
 namespace Plasma {
 }
@@ -70,7 +70,7 @@ private:
     void showOsd();
 
     QUrl m_osdUrl;
-    KDeclarative::QmlObject *m_osdObject = nullptr;
+    KDeclarative::QmlObjectSharedEngine *m_osdObject = nullptr;
     QTimer *m_osdTimer = nullptr;
     int m_timeout = 0;
 
