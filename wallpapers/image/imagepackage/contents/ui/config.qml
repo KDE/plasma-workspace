@@ -82,7 +82,7 @@ ColumnLayout {
             anchors {
                 verticalCenter: resizeComboBox.verticalCenter
             }
-            text: i18nd("plasma_applet_org.kde.image", "Positioning:")
+            text: i18nd("plasma_wallpaper_org.kde.image", "Positioning:")
             horizontalAlignment: Text.AlignRight
         }
         QtControls.ComboBox {
@@ -91,23 +91,23 @@ ColumnLayout {
             width: theme.mSize(theme.defaultFont).width * textLength
             model: [
                         {
-                            'label': i18nd("plasma_applet_org.kde.image", "Scaled and Cropped"),
+                            'label': i18nd("plasma_wallpaper_org.kde.image", "Scaled and Cropped"),
                             'fillMode': Image.PreserveAspectCrop
                         },
                         {
-                            'label': i18nd("plasma_applet_org.kde.image","Scaled"),
+                            'label': i18nd("plasma_wallpaper_org.kde.image","Scaled"),
                             'fillMode': Image.Stretch
                         },
                         {
-                            'label': i18nd("plasma_applet_org.kde.image","Scaled, Keep Proportions"),
+                            'label': i18nd("plasma_wallpaper_org.kde.image","Scaled, Keep Proportions"),
                             'fillMode': Image.PreserveAspectFit
                         },
                         {
-                            'label': i18nd("plasma_applet_org.kde.image", "Centered"),
+                            'label': i18nd("plasma_wallpaper_org.kde.image", "Centered"),
                             'fillMode': Image.Pad
                         },
                         {
-                            'label': i18nd("plasma_applet_org.kde.image","Tiled"),
+                            'label': i18nd("plasma_wallpaper_org.kde.image","Tiled"),
                             'fillMode': Image.Tile
                         }
                     ]
@@ -139,11 +139,11 @@ ColumnLayout {
             width: formAlignment - units.largeSpacing
             anchors.verticalCenter: blurRadioButton.verticalCenter
             horizontalAlignment: Text.AlignRight
-            text: i18nd("plasma_applet_org.kde.image", "Background:")
+            text: i18nd("plasma_wallpaper_org.kde.image", "Background:")
         }
         QtControls.RadioButton {
             id: blurRadioButton
-            text: i18nd("plasma_applet_org.kde.image", "Blur")
+            text: i18nd("plasma_wallpaper_org.kde.image", "Blur")
             exclusiveGroup: backgroundGroup
         }
     }
@@ -152,7 +152,7 @@ ColumnLayout {
         id: colorDialog
         modality: Qt.WindowModal
         showAlphaChannel: false
-        title: i18nd("plasma_applet_org.kde.image", "Select Background Color")
+        title: i18nd("plasma_wallpaper_org.kde.image", "Select Background Color")
     }
 
     Row {
@@ -164,7 +164,7 @@ ColumnLayout {
         }
         QtControls.RadioButton {
             id: colorRadioButton
-            text: i18nd("plasma_applet_org.kde.image", "Solid color")
+            text: i18nd("plasma_wallpaper_org.kde.image", "Solid color")
             exclusiveGroup: backgroundGroup
             checked: !cfg_Blur
         }
@@ -202,7 +202,7 @@ ColumnLayout {
                     Layout.minimumWidth: formAlignment - units.largeSpacing
                     anchors.verticalCenter: parent.verticalCenter
                     horizontalAlignment: Text.AlignRight
-                    text: i18nd("plasma_applet_org.kde.image","Change every:")
+                    text: i18nd("plasma_wallpaper_org.kde.image","Change every:")
                 }
                 QtControls.SpinBox {
                     id: hoursInterval
@@ -217,7 +217,7 @@ ColumnLayout {
                 }
                 QtControls.Label {
                     anchors.verticalCenter: parent.verticalCenter
-                    text: i18nd("plasma_applet_org.kde.image","Hours")
+                    text: i18nd("plasma_wallpaper_org.kde.image","Hours")
                 }
                 Item {
                     Layout.preferredWidth: units.gridUnit
@@ -235,7 +235,7 @@ ColumnLayout {
                 }
                 QtControls.Label {
                     anchors.verticalCenter: parent.verticalCenter
-                    text: i18nd("plasma_applet_org.kde.image","Minutes")
+                    text: i18nd("plasma_wallpaper_org.kde.image","Minutes")
                 }
                 Item {
                     Layout.preferredWidth: units.gridUnit
@@ -253,7 +253,7 @@ ColumnLayout {
                 }
                 QtControls.Label {
                     anchors.verticalCenter: parent.verticalCenter
-                    text: i18nd("plasma_applet_org.kde.image","Seconds")
+                    text: i18nd("plasma_wallpaper_org.kde.image","Seconds")
                 }
             }
             QtControls.ScrollView {
@@ -389,18 +389,18 @@ ColumnLayout {
         QtControls.Button {
             visible: (configDialog.currentWallpaper == "org.kde.slideshow")
             iconName: "list-add"
-            text: i18nd("plasma_applet_org.kde.image","Add Folder...")
+            text: i18nd("plasma_wallpaper_org.kde.image","Add Folder...")
             onClicked: imageWallpaper.showAddSlidePathsDialog()
         }
         QtControls.Button {
             visible: (configDialog.currentWallpaper == "org.kde.image")
             iconName: "list-add"
-            text: i18nd("plasma_applet_org.kde.image","Add Image...")
+            text: i18nd("plasma_wallpaper_org.kde.image","Add Image...")
             onClicked: imageWallpaper.showFileDialog();
         }
         QtControls.Button {
             iconName: "get-hot-new-stuff"
-            text: i18nd("plasma_applet_org.kde.image","Get New Wallpapers...")
+            text: i18nd("plasma_wallpaper_org.kde.image","Get New Wallpapers...")
             visible: KAuthorized.authorize("ghns")
             onClicked: imageWallpaper.getNewWallpaper(this);
         }

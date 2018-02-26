@@ -77,7 +77,7 @@ Item {
             horizontalCenter: parent.horizontalCenter
         }
         iconName: "list-add"
-        text: i18nd("plasma_applet_org.kde.image","Add Custom Wallpaper")
+        text: i18nd("plasma_wallpaper_org.kde.image","Add Custom Wallpaper")
         onClicked: customWallpaperLoader.source = Qt.resolvedUrl("customwallpaper.qml")
     }
 

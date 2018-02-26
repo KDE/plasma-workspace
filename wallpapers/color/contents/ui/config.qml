@@ -31,7 +31,7 @@ Column {
         id: colorDialog
         modality: Qt.WindowModal
         showAlphaChannel: false
-        title: i18nd("plasma_applet_org.kde.color", "Select Background Color")
+        title: i18nd("plasma_wallpaper_org.kde.color", "Select Background Color")
     }
 
     Row {
@@ -41,7 +41,7 @@ Column {
             width: formAlignment - units.largeSpacing
             anchors.verticalCenter: colorButton.verticalCenter
             horizontalAlignment: Text.AlignRight
-            text: i18nd("plasma_applet_org.kde.color", "Color:")
+            text: i18nd("plasma_wallpaper_org.kde.color", "Color:")
         }
         QtControls.Button {
             id: colorButton

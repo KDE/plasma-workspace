@@ -86,7 +86,7 @@ MouseArea {
                     margins: units.smallSpacing
                 }
                 iconSource: "list-remove"
-                tooltip: i18nd("plasma_applet_org.kde.image", "Remove wallpaper")
+                tooltip: i18nd("plasma_wallpaper_org.kde.image", "Remove wallpaper")
                 flat: false
                 visible: model.removable
                 onClicked: imageWallpaper.removeWallpaper(model.packageName)
@@ -116,7 +116,7 @@ MouseArea {
 
         onTriggered: {
             Tooltip.showText(wallpaperDelegate, Qt.point(wallpaperDelegate.mouseX, wallpaperDelegate.mouseY),
-                i18nd("plasma_applet_org.kde.image", "%1 by %2", model.display, model.author));
+                i18nd("plasma_wallpaper_org.kde.image", "%1 by %2", model.display, model.author));
         }
     }
 

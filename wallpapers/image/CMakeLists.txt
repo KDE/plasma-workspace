@@ -1,4 +1,4 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.image\")
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_wallpaper_org.kde.image\")
 
 set(image_SRCS
     image.cpp

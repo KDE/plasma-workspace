@@ -112,7 +112,7 @@ MouseArea {
                     margins: units.smallSpacing
                 }
                 iconSource: "list-remove"
-                tooltip: i18nd("plasma_applet_org.kde.image", "Remove wallpaper")
+                tooltip: i18nd("plasma_wallpaper_org.kde.image", "Remove wallpaper")
                 flat: false
                 visible: model.removable && !model.pendingDeletion
                 onClicked: {
@@ -137,7 +137,7 @@ MouseArea {
                     margins: units.smallSpacing
                 }
                 iconSource: "document-open-folder"
-                tooltip: i18nd("plasma_applet_org.kde.image", "Open Containing Folder")
+                tooltip: i18nd("plasma_wallpaper_org.kde.image", "Open Containing Folder")
                 flat: false
                 onClicked: imageWallpaper.wallpaperModel.openContainingFolder(index)
                 opacity: wallpaperDelegate.containsMouse ? 1 : 0
@@ -156,7 +156,7 @@ MouseArea {
                     margins: units.smallSpacing
                 }
                 iconSource: "edit-undo"
-                tooltip: i18nd("plasma_applet_org.kde.image", "Restore wallpaper")
+                tooltip: i18nd("plasma_wallpaper_org.kde.image", "Restore wallpaper")
                 flat: false
                 visible: model.pendingDeletion
                 onClicked: imageWallpaper.wallpaperModel.setPendingDeletion(index, !model.pendingDeletion)
@@ -194,7 +194,7 @@ MouseArea {
         onTriggered: {
             if (model.author) {
                 Tooltip.showText(wallpaperDelegate, Qt.point(wallpaperDelegate.mouseX, wallpaperDelegate.mouseY),
-                                 i18nd("plasma_applet_org.kde.image", "%1 by %2", model.display, model.author));
+                                 i18nd("plasma_wallpaper_org.kde.image", "%1 by %2", model.display, model.author));
             } else {
                 Tooltip.showText(wallpaperDelegate, Qt.point(wallpaperDelegate.mouseX, wallpaperDelegate.mouseY),
                                  model.display);
