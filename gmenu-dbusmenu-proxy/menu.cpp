@@ -974,6 +974,8 @@ QVariantMap Menu::gMenuToDBusMenuProperties(const QVariantMap &source) const
             {QStringLiteral("fullscreen"), QStringLiteral("view-fullscreen")},
 
             {QStringLiteral("find"), QStringLiteral("edit-find")},
+            {QStringLiteral("replace"), QStringLiteral("edit-find-replace")},
+            {QStringLiteral("select-all"), QStringLiteral("edit-select-all")},
 
             {QStringLiteral("previous-document"), QStringLiteral("go-previous")},
             {QStringLiteral("next-document"), QStringLiteral("go-next")},
