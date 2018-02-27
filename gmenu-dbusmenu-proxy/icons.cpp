@@ -33,14 +33,20 @@ QString Icons::actionIcon(const QString &actionName)
 
     static QHash<QString, QString> s_icons {
         {QStringLiteral("new-window"), QStringLiteral("window-new")},
+        {QStringLiteral("newwindow"), QStringLiteral("window-new")},
         {QStringLiteral("new-tab"), QStringLiteral("tab-new")},
         {QStringLiteral("open"), QStringLiteral("document-open")},
         {QStringLiteral("save"), QStringLiteral("document-save")},
         {QStringLiteral("save-as"), QStringLiteral("document-save-as")},
+        {QStringLiteral("saveas"), QStringLiteral("document-save-as")},
         {QStringLiteral("save-all"), QStringLiteral("document-save-all")},
+        {QStringLiteral("saveall"), QStringLiteral("document-save-all")},
         {QStringLiteral("export"), QStringLiteral("document-export")},
+        {QStringLiteral("exportto"), QStringLiteral("document-export")}, // LibreOffice
+        {QStringLiteral("printpreview"), QStringLiteral("document-print-preview")},
         {QStringLiteral("print"), QStringLiteral("document-print")},
         {QStringLiteral("close"), QStringLiteral("document-close")},
+        {QStringLiteral("closedoc"), QStringLiteral("document-close")},
         {QStringLiteral("close-all"), QStringLiteral("document-close")},
         {QStringLiteral("quit"), QStringLiteral("application-exit")},
 
@@ -58,6 +64,7 @@ QString Icons::actionIcon(const QString &actionName)
 
         {QStringLiteral("find"), QStringLiteral("edit-find")},
         {QStringLiteral("replace"), QStringLiteral("edit-find-replace")},
+        {QStringLiteral("searchdialog"), QStringLiteral("edit-find-replace")}, // LibreOffice
         {QStringLiteral("select-all"), QStringLiteral("edit-select-all")},
         {QStringLiteral("selectall"), QStringLiteral("edit-select-all")},
 
@@ -86,8 +93,10 @@ QString Icons::actionIcon(const QString &actionName)
         {QStringLiteral("flag"), QStringLiteral("flag-red")}, // is there a "mark" or "important" icon that isn't email?
 
         {QStringLiteral("help"), QStringLiteral("help-contents")},
+        {QStringLiteral("helpindex"), QStringLiteral("help-contents")},
         {QStringLiteral("helpcontents"), QStringLiteral("help-contents")},
         {QStringLiteral("helpreportproblem"), QStringLiteral("tools-report-bug")},
+        {QStringLiteral("sendfeedback"), QStringLiteral("tools-report-bug")}, // LibreOffice
         {QStringLiteral("about"), QStringLiteral("help-about")},
 
         {QStringLiteral("emptytrash"), QStringLiteral("trash-empty")},
