@@ -733,7 +733,12 @@ uint Menu::GetLayout(int parentId, int recursionDepth, const QStringList &proper
     // so resolve that and return the correct menu
     if (index > 0) {
         // non-zero index indicates item within a menu but the index in the list still starts at zero
-        const auto &requestedItem = section.items.at(index - 1); // TODO bounds check
+        if (section.items.count() < index) {
+            qCDebug(DBUSMENUPROXY) << "Requested index" << index << "on" << subscription << "at" << sectionId << "with" << parentId << "is out of bounds";
+            return 0;
+        }
+
+        const auto &requestedItem = section.items.at(index - 1);
 
         auto it = requestedItem.constFind(QStringLiteral(":submenu"));
         if (it != requestedItem.constEnd()) {
