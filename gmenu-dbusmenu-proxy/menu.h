@@ -61,8 +61,13 @@ public:
     QString windowObjectPath() const;
     void setWindowObjectPath(const QString &windowObjectPath);
 
-    QString menuObjectPath() const;
-    void setMenuObjectPath(const QString &menuObjectPath);
+    QString applicationMenuObjectPath() const;
+    void setApplicationMenuObjectPath(const QString &applicationMenuObjectPath);
+
+    QString menuBarObjectPath() const;
+    void setMenuBarObjectPath(const QString &menuBarObjectPath);
+
+    QString currentMenuObjectPath() const;
 
     QString proxyObjectPath() const;
 
@@ -87,7 +92,8 @@ signals:
     void LayoutUpdated(uint revision, int parent);
 
 private slots:
-    void onMenuChanged(const GMenuChangeList &changes);
+    void onApplicationMenuChanged(const GMenuChangeList &changes);
+    void onMenuBarChanged(const GMenuChangeList &changes);
     void onApplicationActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
     void onUnityActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
     void onWindowActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
@@ -103,6 +109,7 @@ private:
     bool getAction(const QString &name, GMenuAction &action) const;
     void triggerAction(const QString &name, uint timestamp = 0);
 
+    void menuChanged(const GMenuChangeList &changes);
     void actionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added,
                         GMenuActionMap &actions, const QString &prefix);
 
@@ -121,7 +128,10 @@ private:
     QString m_applicationObjectPath;
     QString m_unityObjectPath;
     QString m_windowObjectPath;
-    QString m_menuObjectPath;
+    QString m_applicationMenuObjectPath;
+    QString m_menuBarObjectPath;
+
+    QString m_currentMenuObjectPath;
 
     QString m_proxyObjectPath; // our object path on this proxy app
 

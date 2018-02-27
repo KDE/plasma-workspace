@@ -56,15 +56,24 @@ Menu::~Menu() = default;
 
 void Menu::init()
 {
-     qCDebug(DBUSMENUPROXY) << "Inited menu for" << m_winId << "on" << m_serviceName << "at app" << m_applicationObjectPath << "win" << m_windowObjectPath << "unity" << m_unityObjectPath << "menu" << m_menuObjectPath;
+     qCDebug(DBUSMENUPROXY) << "Inited menu for" << m_winId << "on" << m_serviceName << "at app" << m_applicationObjectPath << "win" << m_windowObjectPath << "unity" << m_unityObjectPath;
+
+     if (!QDBusConnection::sessionBus().connect(m_serviceName,
+                                                m_applicationMenuObjectPath,
+                                                s_orgGtkMenus,
+                                                QStringLiteral("Changed"),
+                                                this,
+                                                SLOT(onApplicationMenuChanged(GMenuChangeList)))) {
+         qCWarning(DBUSMENUPROXY) << "Failed to subscribe to application menu changes on" << m_serviceName << "at" << m_applicationMenuObjectPath;
+     }
 
     if (!QDBusConnection::sessionBus().connect(m_serviceName,
-                                               m_menuObjectPath,
+                                               m_menuBarObjectPath,
                                                s_orgGtkMenus,
                                                QStringLiteral("Changed"),
                                                this,
-                                               SLOT(onMenuChanged(GMenuChangeList)))) {
-        qCWarning(DBUSMENUPROXY) << "Failed to subscribe to menu changes on" << m_serviceName << "at" << m_menuObjectPath;
+                                               SLOT(onMenuBarChanged(GMenuChangeList)))) {
+        qCWarning(DBUSMENUPROXY) << "Failed to subscribe to menu bar changes on" << m_serviceName << "at" << m_menuBarObjectPath;
     }
 
     if (!m_applicationObjectPath.isEmpty() && !QDBusConnection::sessionBus().connect(m_serviceName,
@@ -178,6 +187,26 @@ void Menu::setUnityObjectPath(const QString &unityObjectPath)
     m_unityObjectPath = unityObjectPath;
 }
 
+QString Menu::applicationMenuObjectPath() const
+{
+    return m_applicationMenuObjectPath;
+}
+
+void Menu::setApplicationMenuObjectPath(const QString &applicationMenuObjectPath)
+{
+    m_applicationMenuObjectPath = applicationMenuObjectPath;
+}
+
+QString Menu::menuBarObjectPath() const
+{
+    return m_menuBarObjectPath;
+}
+
+void Menu::setMenuBarObjectPath(const QString &menuBarObjectPath)
+{
+    m_menuBarObjectPath = menuBarObjectPath;
+}
+
 QString Menu::windowObjectPath() const
 {
     return m_windowObjectPath;
@@ -188,14 +217,9 @@ void Menu::setWindowObjectPath(const QString &windowObjectPath)
     m_windowObjectPath = windowObjectPath;
 }
 
-QString Menu::menuObjectPath() const
+QString Menu::currentMenuObjectPath() const
 {
-    return m_menuObjectPath;
-}
-
-void Menu::setMenuObjectPath(const QString &menuObjectPath)
-{
-    m_menuObjectPath = menuObjectPath;
+    return m_currentMenuObjectPath;
 }
 
 QString Menu::proxyObjectPath() const
@@ -226,8 +250,18 @@ void Menu::start(uint id)
 
     // dbus-send --print-reply --session --dest=:1.103 /org/libreoffice/window/104857641/menus/menubar org.gtk.Menus.Start array:uint32:0
 
+    if (m_currentMenuObjectPath.isEmpty()) {
+        m_currentMenuObjectPath = m_menuBarObjectPath;
+    }
+
+    if (m_currentMenuObjectPath.isEmpty()) {
+        m_currentMenuObjectPath = m_applicationMenuObjectPath;
+    }
+
+    Q_ASSERT(!m_currentMenuObjectPath.isEmpty()); // we shouldn't have been created without one
+
     QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName,
-                                                      m_menuObjectPath,
+                                                      m_currentMenuObjectPath,
                                                       s_orgGtkMenus,
                                                       QStringLiteral("Start"));
     msg.setArguments({
@@ -239,7 +273,7 @@ void Menu::start(uint id)
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, id](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<GMenuItemList> reply = *watcher;
         if (reply.isError()) {
-            qCWarning(DBUSMENUPROXY) << "Failed to start subscription to" << id << "on" << m_serviceName << "at" << m_menuObjectPath << reply.error();
+            qCWarning(DBUSMENUPROXY) << "Failed to start subscription to" << id << "on" << m_serviceName << "at" << m_currentMenuObjectPath << reply.error();
         } else {
             const auto menus = reply.value();
             for (auto menu : menus) {
@@ -248,7 +282,17 @@ void Menu::start(uint id)
 
             // LibreOffice on startup fails to give us some menus right away, we'll also subscribe in onMenuChanged() if neccessary
             if (menus.isEmpty()) {
-                qCWarning(DBUSMENUPROXY) << "Got an empty menu for" << id << "on" << m_serviceName << "at" << m_menuObjectPath;
+                qCWarning(DBUSMENUPROXY) << "Got an empty menu for" << id << "on" << m_serviceName << "at" << m_currentMenuObjectPath;
+
+                // appmenu-gtk-module always claims to have a menu bar even if it is empty
+                // so when we root menu is requested but it is empty AND we have an app menu (because otherwise LibreOffice breaks)
+                // then we will switch to using app menu instead
+                if (id == 0 && m_currentMenuObjectPath == m_menuBarObjectPath && !m_applicationMenuObjectPath.isEmpty()) {
+                    qCDebug(DBUSMENUPROXY) << "Using application menu instead";
+                    m_currentMenuObjectPath = m_applicationMenuObjectPath;
+                    start(id);
+                }
+
                 return;
             }
 
@@ -283,8 +327,11 @@ void Menu::start(uint id)
 
 void Menu::stop(const QList<uint> &ids)
 {
+    if (m_currentMenuObjectPath.isEmpty()) {
+        qCWarning(DBUSMENUPROXY) << "Cannot stop subscriptions for" << ids << "without menu object path";
+    }
     QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName,
-                                                      m_menuObjectPath,
+                                                      m_currentMenuObjectPath,
                                                       s_orgGtkMenus,
                                                       QStringLiteral("End"));
     msg.setArguments({
@@ -296,7 +343,7 @@ void Menu::stop(const QList<uint> &ids)
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, ids](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<void> reply = *watcher;
         if (reply.isError()) {
-            qCWarning(DBUSMENUPROXY) << "Failed to stop subscription to" << ids << "on" << m_serviceName << "at" << m_menuObjectPath << reply.error();
+            qCWarning(DBUSMENUPROXY) << "Failed to stop subscription to" << ids << "on" << m_serviceName << "at" << m_currentMenuObjectPath << reply.error();
         } else {
             // remove all subscriptions that we unsubscribed from
             // TODO is there a nicer algorithm for that?
@@ -307,7 +354,25 @@ void Menu::stop(const QList<uint> &ids)
     });
 }
 
-void Menu::onMenuChanged(const GMenuChangeList &changes)
+void Menu::onApplicationMenuChanged(const GMenuChangeList &changes)
+{
+    if (m_currentMenuObjectPath != m_applicationMenuObjectPath) {
+        qCInfo(DBUSMENUPROXY) << "Application menu changed for" << m_serviceName << "on" << m_applicationMenuObjectPath << "although we're actually using" << m_currentMenuObjectPath;
+        return;
+    }
+    menuChanged(changes);
+}
+
+void Menu::onMenuBarChanged(const GMenuChangeList &changes)
+{
+    if (m_currentMenuObjectPath != m_menuBarObjectPath) {
+        qCInfo(DBUSMENUPROXY) << "Menu bar changed for" << m_serviceName << "on" << m_menuBarObjectPath << "although we're actually using" << m_currentMenuObjectPath;
+        return;
+    }
+    menuChanged(changes);
+}
+
+void Menu::menuChanged(const GMenuChangeList &changes)
 {
     QSet<uint> dirtyMenus;
     DBusMenuItemList dirtyItems;

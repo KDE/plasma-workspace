@@ -167,21 +167,19 @@ void MenuProxy::onWindowAdded(WId id)
     }
 
     const QString serviceName = QString::fromUtf8(getWindowPropertyString(id, s_gtkUniqueBusName));
-    const QString applicationObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkApplicationObjectPath));
-    const QString unityObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_unityObjectPath));
-    const QString windowObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkWindowObjectPath));
 
     if (serviceName.isEmpty()) {
         return;
     }
 
-    QString menuObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkMenuBarObjectPath));
-    if (menuObjectPath.isEmpty()) {
-        // try generic app menu
-        menuObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkAppMenuObjectPath));
-    }
+    const QString applicationObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkApplicationObjectPath));
+    const QString unityObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_unityObjectPath));
+    const QString windowObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkWindowObjectPath));
 
-    if (menuObjectPath.isEmpty()) {
+    const QString applicationMenuObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkAppMenuObjectPath));
+    const QString menuBarObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_gtkMenuBarObjectPath));
+
+    if (applicationMenuObjectPath.isEmpty() && menuBarObjectPath.isEmpty()) {
         return;
     }
 
@@ -190,7 +188,8 @@ void MenuProxy::onWindowAdded(WId id)
     menu->setApplicationObjectPath(applicationObjectPath);
     menu->setUnityObjectPath(unityObjectPath);
     menu->setWindowObjectPath(windowObjectPath);
-    menu->setMenuObjectPath(menuObjectPath);
+    menu->setApplicationMenuObjectPath(applicationMenuObjectPath);
+    menu->setMenuBarObjectPath(menuBarObjectPath);
     m_menus.insert(id, menu);
 
     connect(menu, &Menu::requestWriteWindowProperties, this, [this, menu] {
