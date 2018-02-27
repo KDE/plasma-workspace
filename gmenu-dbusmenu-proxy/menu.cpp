@@ -928,9 +928,9 @@ QVariantMap Menu::gMenuToDBusMenuProperties(const QVariantMap &source) const
         enabled = actionOk && action.enabled;
     }
 
-    if (!enabled) {
-        result.insert(QStringLiteral("enabled"), false);
-    }
+    // we used to only send this if not enabled but then dbusmenuimporter does not
+    // update the enabled state when it changes from disabled to enabled
+    result.insert(QStringLiteral("enabled"), enabled);
 
     bool visible = true;
     const QString hiddenWhen = source.value(QStringLiteral("hidden-when")).toString();
@@ -943,9 +943,7 @@ QVariantMap Menu::gMenuToDBusMenuProperties(const QVariantMap &source) const
         visible = true;
     }
 
-    if (!visible) {
-        result.insert(QStringLiteral("visible"), false);
-    }
+    result.insert(QStringLiteral("visible"), visible);
 
     QString icon = source.value(QStringLiteral("icon")).toString();
     if (icon.isEmpty()) {
