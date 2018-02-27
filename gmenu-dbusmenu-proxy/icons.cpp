@@ -115,6 +115,15 @@ QString Icons::actionIcon(const QString &actionName)
     }
 
     if (icon.isEmpty()) {
+        static const auto s_unoPrefix = QStringLiteral(".uno:"); // LibreOffice with appmenu-gtk
+        if (action.startsWith(s_unoPrefix)) {
+            action = action.mid(s_unoPrefix.length());
+        }
+
+        icon = s_icons.value(action);
+    }
+
+    if (icon.isEmpty()) {
         action = action.toLower();
         icon = s_icons.value(action);
     }
