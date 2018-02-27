@@ -13,6 +13,7 @@ set(GMENU_DBUSMENU_PROXY_SRCS
     menuproxy.cpp
     menu.cpp
     gdbusmenutypes_p.cpp
+    icons.cpp
     ../libdbusmenuqt/dbusmenutypes_p.cpp
  )
 

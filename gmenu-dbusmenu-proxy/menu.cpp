@@ -33,6 +33,7 @@
 #include <algorithm>
 
 #include "dbusmenuadaptor.h"
+#include "icons.h"
 
 #include "../libdbusmenuqt/dbusmenushortcut_p.h"
 
@@ -950,43 +951,8 @@ QVariantMap Menu::gMenuToDBusMenuProperties(const QVariantMap &source) const
     if (icon.isEmpty()) {
         icon = source.value(QStringLiteral("verb-icon")).toString();
     }
-    if (icon.isEmpty()) {
-        QString lookupName = actionName.mid(4); // FIXME also FIXME unity.
-        // FIXME do properly
-        static QHash<QString, QString> s_icons {
-            {QStringLiteral("new-window"), QStringLiteral("window-new")},
-            {QStringLiteral("new-tab"), QStringLiteral("tab-new")},
-            {QStringLiteral("open"), QStringLiteral("document-open")},
-            {QStringLiteral("save"), QStringLiteral("document-save")},
-            {QStringLiteral("save-as"), QStringLiteral("document-save-as")},
-            {QStringLiteral("save-all"), QStringLiteral("document-save-all")},
-            {QStringLiteral("print"), QStringLiteral("document-print")},
-            {QStringLiteral("close"), QStringLiteral("document-close")},
-            {QStringLiteral("close-all"), QStringLiteral("document-close")},
-            {QStringLiteral("quit"), QStringLiteral("application-exit")},
 
-            {QStringLiteral("undo"), QStringLiteral("edit-undo")},
-            {QStringLiteral("redo"), QStringLiteral("edit-redo")},
-            {QStringLiteral("cut"), QStringLiteral("edit-cut")},
-            {QStringLiteral("copy"), QStringLiteral("edit-copy")},
-            {QStringLiteral("paste"), QStringLiteral("edit-paste")},
-            {QStringLiteral("preferences"), QStringLiteral("settings-configure")},
-
-            {QStringLiteral("fullscreen"), QStringLiteral("view-fullscreen")},
-
-            {QStringLiteral("find"), QStringLiteral("edit-find")},
-            {QStringLiteral("replace"), QStringLiteral("edit-find-replace")},
-            {QStringLiteral("select-all"), QStringLiteral("edit-select-all")},
-
-            {QStringLiteral("previous-document"), QStringLiteral("go-previous")},
-            {QStringLiteral("next-document"), QStringLiteral("go-next")},
-
-            {QStringLiteral("help"), QStringLiteral("help-contents")},
-            {QStringLiteral("about"), QStringLiteral("help-about")},
-            // TODO some more
-        };
-        icon = s_icons.value(lookupName);
-    }
+    icon = Icons::actionIcon(actionName);
     if (!icon.isEmpty()) {
         result.insert(QStringLiteral("icon-name"), icon);
     }
