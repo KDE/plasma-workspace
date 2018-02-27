@@ -251,50 +251,6 @@ void Menu::start(uint id)
                 return;
             }
 
-            // Now resolve any aliases we might have
-            // TODO Don't do this every time? ugly..
-            for (auto &menu : m_menus) {
-                for (auto &section : menu) {
-                    QMutableListIterator<QVariantMap> it(section.items);
-                    while (it.hasNext()) {
-                        auto &item = it.next();
-
-                        auto findIt = item.constFind(QStringLiteral(":section"));
-                        if (findIt != item.constEnd()) {
-                            // references another place, add it instead
-                            GMenuSection gmenuSection = qdbus_cast<GMenuSection>(findIt->value<QDBusArgument>());
-
-                            // TODO figure out what to do when menu changed since we'd end up shifting the indices around here
-                            if (item.value(QStringLiteral("section-expanded")).toBool()) {
-                                continue;
-                            }
-
-                            // TODO start subscription if we don't have it
-                            auto items = findSection(m_menus.value(gmenuSection.subscription), gmenuSection.menu).items;
-
-                            // remember that this section was already expanded, we'll keep the reference around
-                            // so we can show a separator line in the menu
-                            item.insert(QStringLiteral("section-expanded"), true);
-
-                            // Check whether it's an alias to an alias
-                            // FIXME make generic/recursive
-                            if (items.count() == 1) {
-                                const auto &aliasedItem = items.constFirst();
-                                auto findIt = aliasedItem.constFind(QStringLiteral(":section"));
-                                if (findIt != aliasedItem.constEnd()) {
-                                    GMenuSection gmenuSection2 = qdbus_cast<GMenuSection>(findIt->value<QDBusArgument>());
-                                    items = findSection(m_menus.value(gmenuSection2.subscription), gmenuSection2.menu).items;
-                                }
-                            }
-
-                            for (const auto &aliasedItem : qAsConst(items)) {
-                                it.insert(aliasedItem);
-                            }
-                        }
-                    }
-                }
-            }
-
             // TODO are we subscribed to all it returns or just to the ones we requested?
             m_subscriptions.append(id);
         }
@@ -795,17 +751,57 @@ uint Menu::GetLayout(int parentId, int recursionDepth, const QStringList &proper
         {QStringLiteral("children-display"), QStringLiteral("submenu")}
     };
 
-    auto itemsToBeAdded = section.items;
-
     int count = 0;
 
+    const auto itemsToBeAdded = section.items;
     for (const auto &item : itemsToBeAdded) {
+
         DBusMenuLayoutItem child{
             treeStructureToInt(section.id, sectionId, ++count),
-            gMenuToDBusMenuProperties(item)
+            gMenuToDBusMenuProperties(item),
+            {} // children
         };
-
         dbusItem.children.append(child);
+
+        // Now resolve section aliases
+        auto it = item.constFind(QStringLiteral(":section"));
+        if (it != item.constEnd()) {
+
+            // references another place, add it instead
+            GMenuSection gmenuSection = qdbus_cast<GMenuSection>(it->value<QDBusArgument>());
+
+            // remember where the item came from and give it an appropriate ID
+            // so updates signalled by the app will map to the right place
+            int originalSubscription = gmenuSection.subscription;
+            int originalMenu = gmenuSection.menu;
+
+            // TODO start subscription if we don't have it
+            auto items = findSection(m_menus.value(gmenuSection.subscription), gmenuSection.menu).items;
+
+            // Check whether it's an alias to an alias
+            // FIXME make generic/recursive
+            if (items.count() == 1) {
+                const auto &aliasedItem = items.constFirst();
+                auto findIt = aliasedItem.constFind(QStringLiteral(":section"));
+                if (findIt != aliasedItem.constEnd()) {
+                    GMenuSection gmenuSection2 = qdbus_cast<GMenuSection>(findIt->value<QDBusArgument>());
+                    items = findSection(m_menus.value(gmenuSection2.subscription), gmenuSection2.menu).items;
+
+                    originalSubscription = gmenuSection2.subscription;
+                    originalMenu = gmenuSection2.menu;
+                }
+            }
+
+            int aliasedCount = 0;
+            for (const auto &aliasedItem : qAsConst(items)) {
+                DBusMenuLayoutItem aliasedChild{
+                    treeStructureToInt(originalSubscription, originalMenu, ++aliasedCount),
+                    gMenuToDBusMenuProperties(aliasedItem),
+                    {} // children
+                };
+                dbusItem.children.append(aliasedChild);
+            }
+        }
     }
 
     // revision, unused in libdbusmenuqt
