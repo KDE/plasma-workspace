@@ -325,7 +325,6 @@ void Menu::start(uint id)
 
                     reply << revision << QVariant::fromValue(item);
 
-                    qDebug() << "Send get layout reply for" << id;
                     QDBusConnection::sessionBus().send(reply);
                 }
             }
@@ -697,7 +696,7 @@ void Menu::actionsChanged(const QStringList &removed, const StringBoolMap &enabl
         return;
     };
 
-    qDebug() << "The following actions changed" << dirtyActions;
+    //qDebug() << "The following actions changed" << dirtyActions;
 
     // now find in which menus these actions are and emit a change accordingly
     DBusMenuItemList dirtyItems;
