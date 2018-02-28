@@ -33,11 +33,13 @@ QString Icons::actionIcon(const QString &actionName)
 
     static const QHash<QString, QString> s_icons {
         {QStringLiteral("image-new"), QStringLiteral("document-new")}, // Gimp "New" item
+        {QStringLiteral("adddirect"), QStringLiteral("document-new")}, // LibreOffice "New" item
         {QStringLiteral("new-window"), QStringLiteral("window-new")},
         {QStringLiteral("newwindow"), QStringLiteral("window-new")},
         {QStringLiteral("new-tab"), QStringLiteral("tab-new")},
         {QStringLiteral("open"), QStringLiteral("document-open")},
         {QStringLiteral("open-location"), QStringLiteral("document-open-remote")},
+        {QStringLiteral("openremote"), QStringLiteral("document-open-remote")},
         {QStringLiteral("save"), QStringLiteral("document-save")},
         {QStringLiteral("save-as"), QStringLiteral("document-save-as")},
         {QStringLiteral("saveas"), QStringLiteral("document-save-as")},
@@ -45,13 +47,18 @@ QString Icons::actionIcon(const QString &actionName)
         {QStringLiteral("saveall"), QStringLiteral("document-save-all")},
         {QStringLiteral("export"), QStringLiteral("document-export")},
         {QStringLiteral("exportto"), QStringLiteral("document-export")}, // LibreOffice
+        {QStringLiteral("exporttopdf"), QStringLiteral("viewpdf")}, // LibreOffice, the icon it uses but the name is quite random
+        {QStringLiteral("webhtml"), QStringLiteral("text-html")}, // LibreOffice
         {QStringLiteral("printpreview"), QStringLiteral("document-print-preview")},
         {QStringLiteral("print"), QStringLiteral("document-print")},
         {QStringLiteral("print-gtk"), QStringLiteral("document-print")}, // Gimp
         {QStringLiteral("mail-image"), QStringLiteral("mail-message-new")}, // Gimp
+        {QStringLiteral("sendmail"), QStringLiteral("mail-message-new")}, // LibreOffice
+        {QStringLiteral("sendviabluetooth"), QStringLiteral("preferences-system-bluetooth")}, // LibreOffice
         {QStringLiteral("close"), QStringLiteral("document-close")},
         {QStringLiteral("closedoc"), QStringLiteral("document-close")},
         {QStringLiteral("close-all"), QStringLiteral("document-close")},
+        {QStringLiteral("closewin"), QStringLiteral("window-close")}, // LibreOffice
         {QStringLiteral("quit"), QStringLiteral("application-exit")},
 
         {QStringLiteral("undo"), QStringLiteral("edit-undo")},
@@ -63,6 +70,7 @@ QString Icons::actionIcon(const QString &actionName)
         {QStringLiteral("duplicate"), QStringLiteral("edit-duplicate")},
 
         {QStringLiteral("preferences"), QStringLiteral("settings-configure")},
+        {QStringLiteral("optionstreedialog"), QStringLiteral("settings-configure")}, // LibreOffice
         {QStringLiteral("keyboard-shortcuts"), QStringLiteral("configure-shortcuts")},
 
         {QStringLiteral("fullscreen"), QStringLiteral("view-fullscreen")},
@@ -91,6 +99,30 @@ QString Icons::actionIcon(const QString &actionName)
         {QStringLiteral("flipvertically"), QStringLiteral("object-flip-vertical")},
         {QStringLiteral("image-flip-vertical"), QStringLiteral("object-flip-vertical")},
         {QStringLiteral("image-scale"), QStringLiteral("transform-scale")},
+
+        {QStringLiteral("bold"), QStringLiteral("format-text-bold")},
+        {QStringLiteral("italic"), QStringLiteral("format-text-italic")},
+        {QStringLiteral("underline"), QStringLiteral("format-text-underline")},
+        {QStringLiteral("strikeout"), QStringLiteral("format-text-strikethrough")},
+        {QStringLiteral("superscript"), QStringLiteral("format-text-superscript")},
+        {QStringLiteral("subscript"), QStringLiteral("format-text-subscript")},
+        // "grow" is a bit unspecific to always set it to "grow font", so use the exact ID here
+        {QStringLiteral(".uno:Grow"), QStringLiteral("format-font-size-more")}, // LibreOffice
+        {QStringLiteral(".uno:Shrink"), QStringLiteral("format-font-size-less")}, // LibreOffice
+        // also a bit unspecific?
+        {QStringLiteral("alignleft"), QStringLiteral("format-justify-left")},
+        {QStringLiteral("alignhorizontalcenter"), QStringLiteral("format-justify-center")},
+        {QStringLiteral("alignright"), QStringLiteral("format-justify-right")},
+        {QStringLiteral("alignjustified"), QStringLiteral("format-justify-fill")},
+        {QStringLiteral("incrementindent"), QStringLiteral("format-indent-more")},
+        {QStringLiteral("decrementindent"), QStringLiteral("format-indent-less")},
+        {QStringLiteral("defaultbullet"), QStringLiteral("format-list-unordered")}, // LibreOffice
+        {QStringLiteral("defaultnumbering"), QStringLiteral("format-list-ordered")}, // LibreOffice
+
+        {QStringLiteral("sortascending"), QStringLiteral("view-sort-ascending")},
+        {QStringLiteral("sortdescending"), QStringLiteral("view-sort-descending")},
+
+        {QStringLiteral("autopilotmenu"), QStringLiteral("tools-wizard")}, // LibreOffice
 
         {QStringLiteral("layers-new"), QStringLiteral("layer-new")},
         {QStringLiteral("layers-duplicate"), QStringLiteral("layer-duplicate")},
@@ -128,13 +160,28 @@ QString Icons::actionIcon(const QString &actionName)
         {QStringLiteral("helpindex"), QStringLiteral("help-contents")},
         {QStringLiteral("helpcontents"), QStringLiteral("help-contents")},
         {QStringLiteral("context-help"), QStringLiteral("help-whatsthis")},
+        {QStringLiteral("extendedhelp"), QStringLiteral("help-whatsthis")}, // LibreOffice
         {QStringLiteral("helpreportproblem"), QStringLiteral("tools-report-bug")},
         {QStringLiteral("sendfeedback"), QStringLiteral("tools-report-bug")}, // LibreOffice
         {QStringLiteral("about"), QStringLiteral("help-about")},
 
         {QStringLiteral("emptytrash"), QStringLiteral("trash-empty")},
-        {QStringLiteral("movetotrash"), QStringLiteral("user-trash-symbolic")}
+        {QStringLiteral("movetotrash"), QStringLiteral("user-trash-symbolic")},
+
+        // LibreOffice documents in its New menu
+        {QStringLiteral("private:factory/swriter"), QStringLiteral("application-vnd.oasis.opendocument.text")},
+        {QStringLiteral("private:factory/scalc"), QStringLiteral("application-vnd.oasis.opendocument.spreadsheet")},
+        {QStringLiteral("private:factory/simpress"), QStringLiteral("application-vnd.oasis.opendocument.presentation")},
+        {QStringLiteral("private:factory/sdraw"), QStringLiteral("application-vnd.oasis.opendocument.graphics")},
+        {QStringLiteral("private:factory/swriter/web"), QStringLiteral("text-html")},
+        {QStringLiteral("private:factory/smath"), QStringLiteral("application-vnd.oasis.opendocument.formula")},
     };
+
+    // Sometimes we get additional arguments (?slot=123) we don't care about
+    const int questionMarkIndex = action.indexOf(QLatin1Char('?'));
+    if (questionMarkIndex > -1) {
+        action.truncate(questionMarkIndex);
+    }
 
     icon = s_icons.value(action);
 
@@ -148,18 +195,28 @@ QString Icons::actionIcon(const QString &actionName)
     }
 
     if (icon.isEmpty()) {
-        static const auto s_commonPrefix = QStringLiteral("Common");
-        if (action.startsWith(s_commonPrefix)) {
-            action = action.mid(s_commonPrefix.length());
+        static const auto s_dup1Prefix = QStringLiteral("dup:1:"); // can it be dup2 also?
+        if (action.startsWith(s_dup1Prefix)) {
+            action = action.mid(s_dup1Prefix.length());
+        }
+
+        static const auto s_unoPrefix = QStringLiteral(".uno:"); // LibreOffice with appmenu-gtk
+        if (action.startsWith(s_unoPrefix)) {
+            action = action.mid(s_unoPrefix.length());
+        }
+
+        // LibreOffice's "Open" entry is always "OpenFromAppname" so we just chop that off
+        if (action.startsWith(QLatin1String("OpenFrom"))) {
+            action = action.left(4); // basically "Open"
         }
 
         icon = s_icons.value(action);
     }
 
     if (icon.isEmpty()) {
-        static const auto s_unoPrefix = QStringLiteral(".uno:"); // LibreOffice with appmenu-gtk
-        if (action.startsWith(s_unoPrefix)) {
-            action = action.mid(s_unoPrefix.length());
+        static const auto s_commonPrefix = QStringLiteral("Common");
+        if (action.startsWith(s_commonPrefix)) {
+            action = action.mid(s_commonPrefix.length());
         }
 
         icon = s_icons.value(action);
