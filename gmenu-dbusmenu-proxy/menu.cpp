@@ -391,29 +391,11 @@ void Menu::menuChanged(const GMenuChangeList &changes)
     DBusMenuItemList dirtyItems;
 
     for (const auto &change : changes) {
-        // shouldn't happen, it says only Start() subscribes to changes
-        if (!m_subscriptions.contains(change.subscription)) {
-            qCDebug(DBUSMENUPROXY) << "Got menu change for menu" << change.subscription << "that we are not subscribed to, subscribing now";
-            // LibreOffice doesn't give us a menu right away but takes a while and then signals us a change
-            start(change.subscription);
-            continue;
-        }
-
-        auto &menu = m_menus[change.subscription];
-
-        // TODO findSectionRef
-        for (GMenuItem &section : menu) {
-            if (section.section != change.menu) {
-                continue;
-            }
-
-            qDebug() << "change at" << change.changePosition << "remove" << change.itemsToRemoveCount << "INSERT" << change.itemsToInsert.count();
-
+        auto updateSection = [&](GMenuItem &section) {
             // Check if the amount of inserted items is identical to the items to be removed,
             // just update the existing items and signal a change for that.
             // LibreOffice tends to do that e.g. to update its Undo menu entry
             if (change.itemsToRemoveCount == change.itemsToInsert.count()) {
-                qDebug() << "is the same, let's just update";
                 for (int i = 0; i < change.itemsToInsert.count(); ++i) {
                     const auto &newItem = change.itemsToInsert.at(i);
 
@@ -437,13 +419,49 @@ void Menu::menuChanged(const GMenuChangeList &changes)
 
                 dirtyMenus.insert(treeStructureToInt(change.subscription, change.menu, 0));
             }
+        };
 
+        // shouldn't happen, it says only Start() subscribes to changes
+        if (!m_subscriptions.contains(change.subscription)) {
+            qCDebug(DBUSMENUPROXY) << "Got menu change for menu" << change.subscription << "that we are not subscribed to, subscribing now";
+            // LibreOffice doesn't give us a menu right away but takes a while and then signals us a change
+            start(change.subscription);
+            continue;
+        }
+
+        auto &menu = m_menus[change.subscription];
+
+        bool sectionFound = false;
+        // TODO findSectionRef
+        for (GMenuItem &section : menu) {
+            if (section.section != change.menu) {
+                continue;
+            }
+
+            qCInfo(DBUSMENUPROXY) << "Updating existing section" << change.menu << "in subscription" << change.subscription;
+
+            sectionFound = true;
+            updateSection(section);
             break;
+        }
+
+        // Insert new section
+        if (!sectionFound) {
+            qCInfo(DBUSMENUPROXY) << "Creating new section" << change.menu << "in subscription" << change.subscription;
+
+            if (change.itemsToRemoveCount > 0) {
+                qCWarning(DBUSMENUPROXY) << "Menu change requested to remove items from a new (and as such empty) section";
+            }
+
+            GMenuItem newSection;
+            newSection.id = change.subscription;
+            newSection.section = change.menu;
+            updateSection(newSection);
+            menu.append(newSection);
         }
     }
 
     if (!dirtyItems.isEmpty()) {
-        qDebug() << "Emit item properties changed for" << dirtyItems.count() << "after menu changed";
         emit ItemsPropertiesUpdated(dirtyItems, {});
     }
 
