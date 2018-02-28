@@ -22,9 +22,8 @@
 
 #include "progresslistmodel.h"
 
-#include <QtCore/QList>
-#include <QtCore/QObject>
-
+#include <QList>
+#include <QObject>
 #include <QListView>
 #include <QPushButton>
 #include <QProgressBar>

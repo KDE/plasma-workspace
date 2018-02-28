@@ -20,7 +20,7 @@
 #ifndef ACTIVITY_ENGINE_H
 #define ACTIVITY_ENGINE_H
 
-#include <QtCore/QHash>
+#include <QHash>
 
 #include <Plasma/Service>
 #include <Plasma/DataEngine>

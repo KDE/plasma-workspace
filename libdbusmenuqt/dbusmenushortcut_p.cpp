@@ -21,7 +21,7 @@
 #include "dbusmenushortcut_p.h"
 
 // Qt
-#include <QtGui/QKeySequence>
+#include <QKeySequence>
 
 static const int QT_COLUMN = 0;
 static const int DM_COLUMN = 1;

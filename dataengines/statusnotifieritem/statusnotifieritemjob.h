@@ -21,7 +21,7 @@
 #define STATUSNOTIFIERITEMJOB_H
 
 // Qt
-#include <QtWidgets/QMenu>
+#include <QMenu>
 
 // own
 #include "statusnotifieritemsource.h"

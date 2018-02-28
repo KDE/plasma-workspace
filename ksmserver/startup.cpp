@@ -60,7 +60,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #endif
 
 #include <QTimer>
-#include <QtDBus/QtDBus>
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusPendingCall>
 #include <phonon/audiooutput.h>
 #include <phonon/mediaobject.h>
 #include <phonon/mediasource.h>

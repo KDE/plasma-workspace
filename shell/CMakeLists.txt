@@ -1,23 +1,3 @@
-# Tell CMake to run moc when necessary:
-set(CMAKE_AUTOMOC ON)
-# As moc files are generated in the binary dir, tell CMake
-# to always look for includes there:
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
-
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
-
-find_package(Qt5Qml REQUIRED)
-find_package(Qt5Quick REQUIRED)
-find_package(Qt5DBus REQUIRED)
-find_package(Qt5Script REQUIRED)
-find_package(KF5CoreAddons REQUIRED)
-find_package(KF5Crash REQUIRED)
-find_package(KF5Solid REQUIRED)
-find_package(KF5Activities REQUIRED)
-find_package(KF5DBusAddons ${KF5_MIN_VERSION} REQUIRED)
-find_package(KF5Declarative ${KF5_MIN_VERSION} REQUIRED)
-find_package(KF5Package REQUIRED)
-
 configure_file(config-ktexteditor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktexteditor.h )
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-plasma.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-plasma.h)
@@ -93,6 +73,7 @@ target_link_libraries(plasmashell
  KF5::XmlGui
  KF5::Package
  KF5::WaylandClient
+ KF5::WindowSystem
 )
 target_include_directories(plasmashell PRIVATE "${CMAKE_BINARY_DIR}")
 target_compile_definitions(plasmashell PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")

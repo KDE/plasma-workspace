@@ -25,7 +25,7 @@
 
 #include <solid/battery.h>
 
-#include <QtDBus/QDBusConnection>
+#include <QDBusConnection>
 #include <QHash>
 #include <QPair>
 

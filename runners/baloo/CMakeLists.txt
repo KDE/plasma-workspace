@@ -21,7 +21,7 @@ configure_file(org.kde.baloorunner.service.in
 
 install(
   TARGETS baloorunner
-  DESTINATION ${LIBEXEC_INSTALL_DIR}
+  DESTINATION ${KDE_INSTALL_LIBEXECDIR}
 )
 
 install(

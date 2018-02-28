@@ -50,12 +50,10 @@ void ClipboardJob::start()
     if (operation == QLatin1String("clearHistory")) {
         m_klipper->slotAskClearHistory();
         setResult(true);
-        emitResult();
         return;
     } else if (operation == QLatin1String("configureKlipper")) {
         m_klipper->slotConfigure();
         setResult(true);
-        emitResult();
         return;
     }
 
@@ -63,7 +61,6 @@ void ClipboardJob::start()
     HistoryItemConstPtr item = m_klipper->history()->find(QByteArray::fromBase64(destination().toUtf8()));
     if (item.isNull()) {
         setResult(false);
-        emitResult();
         return;
     }
     if (operation == QLatin1String("select")) {
@@ -80,7 +77,6 @@ void ClipboardJob::start()
                     return;
                 }
                 setResult(result);
-                emitResult();
             }
         );
         m_klipper->editData(item);
@@ -106,6 +102,10 @@ void ClipboardJob::start()
             code = Prison::createBarcode(Prison::Code93);
             break;
         }
+        case 4: {
+            code = Prison::createBarcode(Prison::Aztec);
+            break;
+        }
         case 0:
         default: {
             code = Prison::createBarcode(Prison::QRCode);
@@ -123,7 +123,6 @@ void ClipboardJob::start()
                     setResult(watcher->result());
                     watcher->deleteLater();
                     delete code;
-                    emitResult();
                 }
             );
             auto future = QtConcurrent::run(code, &Prison::AbstractBarcode::toImage, QSizeF(pixelWidth, pixelHeight));
@@ -172,7 +171,6 @@ void ClipboardJob::start()
                 res.insert(s_previewWidthKey, preview.size().width());
                 res.insert(s_previewHeightKey, preview.size().height());
                 setResult(res);
-                emitResult();
             }
         );
         connect(job, &KIO::PreviewJob::failed, this,
@@ -201,5 +199,4 @@ void ClipboardJob::iconResult(const KFileItem& item)
     res.insert(s_previewWidthKey, pix.size().width());
     res.insert(s_previewHeightKey, pix.size().height());
     setResult(res);
-    emitResult();
 }

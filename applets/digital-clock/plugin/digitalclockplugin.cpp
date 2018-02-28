@@ -20,7 +20,7 @@
 #include "timezonemodel.h"
 #include "timezonesi18n.h"
 
-#include <QtQml>
+#include <QQmlEngine>
 
 static QObject *timezonesi18n_singletontype_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
 {

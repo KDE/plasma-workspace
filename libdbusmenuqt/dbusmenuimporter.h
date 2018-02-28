@@ -22,7 +22,7 @@
 #define DBUSMENUIMPORTER_H
 
 // Qt
-#include <QtCore/QObject>
+#include <QObject>
 
 class QAction;
 class QDBusPendingCallWatcher;

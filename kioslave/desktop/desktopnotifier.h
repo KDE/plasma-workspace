@@ -20,7 +20,8 @@
 #define DESKTOPNOTIFIER_H
 
 #include <kdedmodule.h>
-#include <QtDBus/QtDBus>
+#include <QDBusAbstractAdaptor>
+#include <QUrl>
 
 class KDirWatch;
 

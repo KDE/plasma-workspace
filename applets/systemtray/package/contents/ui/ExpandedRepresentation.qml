@@ -26,6 +26,9 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 Item {
     id: expandedRepresentation
 
+    //set width/height to avoid an useless Dialog resize
+    width: Layout.minimumWidth
+    height: Layout.minimumHeight
     Layout.minimumWidth: units.gridUnit * 24
     Layout.minimumHeight: units.gridUnit * 21
     Layout.preferredWidth: Layout.minimumWidth

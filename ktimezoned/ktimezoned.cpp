@@ -22,7 +22,9 @@
 
 #include "ktimezoned.h"
 
-#include <QtDBus>
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDir>
 #include <QTimeZone>
 #include <QFileInfo>
 #include <QDebug>

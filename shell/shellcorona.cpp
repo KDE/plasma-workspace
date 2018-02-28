@@ -47,7 +47,7 @@
 #include <KAuthorized>
 #include <KWindowSystem>
 #include <kdeclarative/kdeclarative.h>
-#include <kdeclarative/qmlobject.h>
+#include <kdeclarative/qmlobjectsharedengine.h>
 #include <KMessageBox>
 #include <kdirwatch.h>
 
@@ -79,7 +79,7 @@
 
 #if HAVE_X11
 #include <NETWM>
-#include <QtX11Extras/QX11Info>
+#include <QX11Info>
 #include <xcb/xcb.h>
 #endif
 
@@ -815,7 +815,7 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
         return;
     }
 
-    KDeclarative::QmlObject *qmlObj = new KDeclarative::QmlObject(this);
+    auto *qmlObj = new KDeclarative::QmlObjectSharedEngine(this);
     qmlObj->setInitializationDelayed(true);
     qmlObj->setSource(alternativesQML);
 
@@ -1414,7 +1414,7 @@ void ShellCorona::loadInteractiveConsole()
             return;
         }
 
-        m_interactiveConsole = new KDeclarative::QmlObject(this);
+        m_interactiveConsole = new KDeclarative::QmlObjectSharedEngine(this);
         m_interactiveConsole->setInitializationDelayed(true);
         m_interactiveConsole->setSource(consoleQML);
 

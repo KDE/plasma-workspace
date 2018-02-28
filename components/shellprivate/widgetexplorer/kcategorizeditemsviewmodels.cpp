@@ -19,6 +19,7 @@
 
 #include "kcategorizeditemsviewmodels_p.h"
 #include <klocalizedstring.h>
+#include <QDebug>
 
 #define COLUMN_COUNT 4
 

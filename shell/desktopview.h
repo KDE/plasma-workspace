@@ -22,7 +22,7 @@
 
 #include <PlasmaQuick/ContainmentView>
 #include <PlasmaQuick/ConfigView>
-#include <QtCore/qpointer.h>
+#include <QPointer>
 
 namespace KWayland
 {

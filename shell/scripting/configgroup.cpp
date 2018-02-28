@@ -19,7 +19,7 @@
  */
 
 #include "configgroup.h"
-#include <QtCore/QTimer>
+#include <QTimer>
 #include <kconfig.h>
 #include <kconfiggroup.h>
 #include <ksharedconfig.h>

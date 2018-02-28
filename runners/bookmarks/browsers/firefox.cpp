@@ -34,7 +34,8 @@
 Firefox::Firefox(QObject *parent) :
     QObject(parent),
     m_favicon(new FallbackFavicon(this)),
-    m_fetchsqlite(nullptr)
+    m_fetchsqlite(nullptr),
+    m_fetchsqlite_fav(nullptr)
 {
   reloadConfiguration();
   //qDebug() << "Loading Firefox Bookmarks Browser";
@@ -55,16 +56,23 @@ Firefox::~Firefox()
 void Firefox::prepare()
 {
     if (m_dbCacheFile.isEmpty()) {
-        m_dbCacheFile = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("bookmarkrunnerfirefoxdbfile.sqlite");
+        m_dbCacheFile = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/bookmarkrunnerfirefoxdbfile.sqlite");
+    }
+    if (m_dbCacheFile_fav.isEmpty()) {
+        m_dbCacheFile_fav = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/bookmarkrunnerfirefoxfavdbfile.sqlite");
     }
     if (!m_dbFile.isEmpty()) {
         m_fetchsqlite = new FetchSqlite(m_dbFile, m_dbCacheFile);
         m_fetchsqlite->prepare();
+    }
+    if (!m_dbFile_fav.isEmpty()) {
+        m_fetchsqlite_fav = new FetchSqlite(m_dbFile_fav, m_dbCacheFile_fav);
+        m_fetchsqlite_fav->prepare();
 
         delete m_favicon;
         m_favicon = nullptr;
 
-        m_favicon = FaviconFromBlob::firefox(m_fetchsqlite, this);
+        m_favicon = FaviconFromBlob::firefox(m_fetchsqlite_fav, this);
     }
 }
 
@@ -112,6 +120,9 @@ void Firefox::teardown()
 {
     if(m_fetchsqlite) {
         m_fetchsqlite->teardown();
+    }
+    if(m_fetchsqlite_fav) {
+        m_fetchsqlite_fav->teardown();
         delete m_favicon;
         m_favicon = nullptr;
     }
@@ -158,6 +169,7 @@ void Firefox::reloadConfiguration()
             profilePath.prepend(QStringLiteral("%1/.mozilla/firefox/").arg(QDir::homePath()));
             m_dbFile = profilePath + "/places.sqlite";
             grp.writeEntry("dbfile", m_dbFile);
+            m_dbFile_fav = profilePath + "/favicons.sqlite";
         }
     } else {
         //qDebug() << "SQLITE driver isn't available";

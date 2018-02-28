@@ -79,9 +79,10 @@ FaviconFromBlob *FaviconFromBlob::chrome(const QString &profileDirectory, QObjec
 FaviconFromBlob *FaviconFromBlob::firefox(FetchSqlite *fetchSqlite, QObject *parent)
 {
 
-    QString faviconQuery = QStringLiteral("SELECT moz_favicons.data FROM moz_favicons" \
-                                   " inner join moz_places ON moz_places.favicon_id = moz_favicons.id" \
-                                   " WHERE moz_places.url = :url LIMIT 1;");
+    QString faviconQuery = QStringLiteral("SELECT moz_icons.data FROM moz_icons" \
+                                   " INNER JOIN moz_icons_to_pages ON moz_icons.id = moz_icons_to_pages.icon_id" \
+                                   " INNER JOIN moz_pages_w_icons ON moz_icons_to_pages.page_id = moz_pages_w_icons.id" \
+                                   " WHERE moz_pages_w_icons.page_url = :url LIMIT 1;");
     return new FaviconFromBlob(QStringLiteral("firefox-default"), new StaticQuery(faviconQuery), QStringLiteral("data"), fetchSqlite, parent);
 }
 
@@ -130,13 +131,13 @@ QIcon FaviconFromBlob::iconFor(const QString &url)
         iconFile.remove();
     if(!iconFile.exists()) {
         QMap<QString,QVariant> bindVariables;
-        bindVariables.insert(QStringLiteral("url"), url);
+        bindVariables.insert(QStringLiteral(":url"), url);
         QList<QVariantMap> faviconFound = m_fetchsqlite->query(m_buildQuery, bindVariables);
         if(faviconFound.isEmpty()) return defaultIcon();
 
         QByteArray iconData = faviconFound.first().value(m_blobcolumn).toByteArray();
         //qDebug() << "Favicon found: " << iconData.size() << " bytes";
-	if(iconData.size() <=0)
+        if(iconData.size() <=0)
             return defaultIcon();
 
         iconFile.open(QFile::WriteOnly);

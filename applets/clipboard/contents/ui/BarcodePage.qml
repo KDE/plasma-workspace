@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 
@@ -56,10 +57,18 @@ ColumnLayout {
         PlasmaComponents.ContextMenu {
             id: menu
             visualParent: configureButton
+            placement: PlasmaCore.Types.BottomPosedLeftAlignedPopup
+            onStatusChanged: {
+                if (status == PlasmaComponents.DialogStatus.Closed) {
+                    configureButton.checked = false;
+                }
+            }
+
             function change(type) {
                 barcodeView.barcodeType = type;
                 barcodeView.show(barcodeView.uuid);
             }
+
             PlasmaComponents.MenuItem {
                 text: i18n("QR Code")
                 checkable: true
@@ -71,6 +80,12 @@ ColumnLayout {
                 checkable: true
                 checked: barcodeView.barcodeType == 1
                 onClicked: menu.change(1)
+            }
+            PlasmaComponents.MenuItem {
+                text: i18nc("Aztec barcode", "Aztec")
+                checkable: true
+                checked: barcodeView.barcodeType == 4
+                onClicked: menu.change(4)
             }
             PlasmaComponents.MenuItem {
                 text: i18n("Code 39")
@@ -87,9 +102,10 @@ ColumnLayout {
         }
         PlasmaComponents.ToolButton {
             id: configureButton
+            checkable: true
             iconSource: "configure"
             tooltip: i18n("Change the barcode type")
-            onClicked: menu.open(0, configureButton.height)
+            onClicked: menu.openRelative()
         }
     }
     QImageItem {

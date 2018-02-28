@@ -25,7 +25,7 @@
 #include <QFileInfo>
 #include <QTextStream>
 #include <QDateTime>
-#include <QtDBus/QtDBus>
+#include <QDBusConnection>
 #include <stdlib.h> // getenv()
 #include <ksmserver_interface.h>
 #include <QSocketNotifier>

@@ -10,11 +10,11 @@ target_link_libraries(holidaysevents Qt5::Core
 )
 
 install (TARGETS holidaysevents
-         DESTINATION ${PLUGIN_INSTALL_DIR}/plasmacalendarplugins
+         DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasmacalendarplugins
 )
 
 install (FILES HolidaysConfig.qml
-         DESTINATION ${PLUGIN_INSTALL_DIR}/plasmacalendarplugins/holidays
+         DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasmacalendarplugins/holidays
 )
 
 add_subdirectory(qmlhelper)

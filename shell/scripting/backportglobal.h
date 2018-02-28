@@ -38,7 +38,7 @@
 #ifndef QTSCRIPTEXTENSIONS_GLOBAL_H
 #define QTSCRIPTEXTENSIONS_GLOBAL_H
 
-#include <QtCore/QSharedData>
+#include <QSharedData>
 
 
 #define DECLARE_SELF(Class, __fn__) \

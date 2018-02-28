@@ -22,7 +22,7 @@
 
 #include "sessionsprivateplugin.h"
 
-#include <QtQml>
+#include <QQmlEngine>
 
 #include "sessionsmodel.h"
 

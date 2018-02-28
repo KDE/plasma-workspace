@@ -35,7 +35,7 @@
 #include <KGlobalAccel>
 #include <KLocalizedString>
 #include <KDirWatch>
-#include <KCrash/KCrash>
+#include <KCrash>
 
 #include <kdeclarative/qmlobject.h>
 

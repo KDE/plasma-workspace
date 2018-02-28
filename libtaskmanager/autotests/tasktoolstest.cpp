@@ -127,7 +127,7 @@ void TaskToolsTest::shouldCompareLauncherUrls()
 
     QVERIFY(launcherUrlsMatch(QUrl(a), QUrl(a)));
     QVERIFY(launcherUrlsMatch(QUrl(a), QUrl(a), Strict));
-    QVERIFY(launcherUrlsMatch(QUrl(a), QUrl(a), IgnoreQueryItems));;
+    QVERIFY(launcherUrlsMatch(QUrl(a), QUrl(a), IgnoreQueryItems));
 
     QVERIFY(!launcherUrlsMatch(QUrl(a), QUrl(b)));
     QVERIFY(!launcherUrlsMatch(QUrl(a), QUrl(b), Strict));

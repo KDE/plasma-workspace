@@ -19,10 +19,10 @@
 
 #include "kdeplatformplugin.h"
 
-#include <QtCore/QDir>
-#include <QtCore/QFile>
-#include <QtCore/QtPlugin>
-#include <QtCore/QCoreApplication>
+#include <QDir>
+#include <QFile>
+#include <QtPlugin>
+#include <QCoreApplication>
 
 #include <KAboutData>
 #include <KConfigGroup>

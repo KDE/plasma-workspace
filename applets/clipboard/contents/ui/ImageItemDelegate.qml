@@ -1,5 +1,8 @@
 /********************************************************************
-Copyright 2017 Roman Gilg <subdiff@gmail.com>
+This file is part of the KDE project.
+
+Copyright (C) 2014 Martin Gräßlin <mgraesslin@kde.org>
+Copyright     2014 Sebastian Kügler <sebas@kde.org>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,22 +18,13 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
-#include "colorcorrectplugin.h"
-#include "compositorcoloradaptor.h"
-#include "geolocator.h"
-#include "suncalc.h"
+import QtQuick 2.0
 
-#include <QQmlEngine>
+import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
-namespace ColorCorrect
-{
-
-void ColorCorrectPlugin::registerTypes(const char *uri)
-{
-    Q_ASSERT(uri == QLatin1String("org.kde.colorcorrect"));
-    qmlRegisterType<CompositorAdaptor>(uri, 0, 1, "CompositorAdaptor");
-    qmlRegisterType<Geolocator>(uri, 0, 1, "Geolocator");
-    qmlRegisterType<SunCalc>(uri, 0, 1, "SunCalc");
-}
-
+KQuickControlsAddons.QPixmapItem {
+    id: previewPixmap
+    height: Math.round(width * (nativeHeight/nativeWidth) + units.smallSpacing * 2)
+    pixmap: DecorationRole
+    fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
 }

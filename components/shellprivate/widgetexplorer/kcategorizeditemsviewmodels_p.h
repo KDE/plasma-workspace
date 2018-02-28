@@ -20,9 +20,10 @@
 #ifndef PLASMA_KCATEGORIZEDITEMSVIEWMODELS_P_H
 #define PLASMA_KCATEGORIZEDITEMSVIEWMODELS_P_H
 
-#include <QtGui/QtGui>
-#include <QtCore/QtCore>
 #include <QIcon>
+#include <QPair>
+#include <QStandardItem>
+#include <QSortFilterProxyModel>
 
 namespace KCategorizedItemsViewModels {
 

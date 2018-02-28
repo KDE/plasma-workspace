@@ -21,6 +21,7 @@
 
 #include <QStandardPaths>
 #include <QFileInfo>
+#include <QMimeData>
 
 #include <klocalizedstring.h>
 #include <kservicetypetrader.h>

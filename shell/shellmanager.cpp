@@ -24,6 +24,7 @@
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDir>
+#include <QFileInfo>
 #include <QList>
 #include <QTimer>
 
@@ -37,6 +38,8 @@
 
 #include <KMessageBox>
 #include <KLocalizedString>
+
+#include <KDeclarative/QmlObjectSharedEngine>
 
 static const QStringList s_shellsDirs(QStandardPaths::locateAll(QStandardPaths::QStandardPaths::GenericDataLocation,
                                                   PLASMA_RELATIVE_DATA_INSTALL_DIR "/shells/",
@@ -92,28 +95,21 @@ void ShellManager::loadHandlers()
         d->corona, &ShellCorona::setShell
     );
 
-    // TODO: Use corona's qml engine when it switches from QScriptEngine
-    static QQmlEngine * engine = new QQmlEngine(this);
-
-    for (const QString &shellsDir: s_shellsDirs) {
-        for (const auto & dir: QDir(shellsDir).entryList(QDir::Dirs | QDir::NoDotAndDotDot)) {
+    for (const QString &shellsDir : qAsConst(s_shellsDirs)) {
+        const auto dirs = QDir(shellsDir).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+        for (const auto &dir : dirs) {
             const QString qmlFile = shellsDir + dir + s_shellLoaderPath;
             // qDebug() << "Making a new instance of " << qmlFile;
 
             //this shell is not valid, ignore it
-            if (!QFile::exists(qmlFile)) {
+            if (!QFileInfo::exists(qmlFile)) {
                 continue;
             }
 
-            QQmlComponent handlerComponent(engine,
-                    QUrl::fromLocalFile(qmlFile)
-                );
-            auto handler = handlerComponent.create();
+            auto *handlerContainer = new KDeclarative::QmlObjectSharedEngine(this);
+            handlerContainer->setSource(QUrl::fromLocalFile(qmlFile));
 
-            // Writing out the errors
-            for (const auto & error: handlerComponent.errors()) {
-                qWarning() << "Error: " << error;
-            }
+            QObject *handler = handlerContainer->rootObject();
 
             if (handler) {
                 handler->setProperty("pluginName", dir);

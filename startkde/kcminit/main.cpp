@@ -32,7 +32,7 @@
 #include <QFile>
 #include <QTimer>
 #include <QLibrary>
-#include <QtDBus/QtDBus>
+#include <QDBusConnection>
 #include <QGuiApplication>
 #include <QDebug>
 

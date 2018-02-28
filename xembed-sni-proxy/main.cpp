@@ -27,7 +27,7 @@
 #include "xcbutils.h"
 #include "snidbus.h"
 
-#include <QtDBus/QtDBus>
+#include <QDBusMetaType>
 
 #include <KWindowSystem>
 

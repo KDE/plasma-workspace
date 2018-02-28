@@ -28,7 +28,7 @@
 
 #include <KDesktopFile>
 
-#include <QtDBus>
+#include <QDBusConnection>
 #include <QDateTime>
 
 #include "debug.h"

@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "../colorcorrectconstants.h"
 #include "../compositorcoloradaptor.h"
 
-#include <QtTest/QtTest>
+#include <QtTest>
 
 using namespace ColorCorrect;
 

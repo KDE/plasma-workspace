@@ -18,7 +18,7 @@
 
 #include "placesengine.h"
 
-#include <QtCore/QString>
+#include <QString>
 #include <QIcon>
 #include <QDebug>
 

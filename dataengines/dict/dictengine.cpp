@@ -143,7 +143,7 @@ void DictEngine::getDicts()
     m_tcpSocket->readAll();
     QByteArray ret;
 
-    m_tcpSocket->write(QByteArray("SHOW DB\n"));;
+    m_tcpSocket->write(QByteArray("SHOW DB\n"));
     m_tcpSocket->flush();
 
     m_tcpSocket->waitForReadyRead();

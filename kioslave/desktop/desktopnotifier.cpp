@@ -25,7 +25,8 @@
 #include <kdirnotify.h>
 
 #include <QStandardPaths>
-#include <QUrl>
+#include <QFile>
+#include <QDir>
 
 K_PLUGIN_FACTORY_WITH_JSON(DesktopNotifierFactory,
                            "desktopnotifier.json",

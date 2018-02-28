@@ -27,9 +27,9 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 PlasmaComponents.ListItem {
     id: menuItem
 
-    property alias supportsBarcodes: barcodeToolButton.visible
+    property bool supportsBarcodes
     property int maximumNumberOfPreviews: Math.floor(width / (units.gridUnit * 4 + units.smallSpacing))
-    readonly property real gradientThreshold: (label.width - toolButtonsLayout.width) / label.width
+    readonly property real gradientThreshold: (label.width - toolButtonsLoader.width) / label.width
 
     signal itemSelected(string uuid)
     signal remove(string uuid)
@@ -37,7 +37,8 @@ PlasmaComponents.ListItem {
     signal barcode(string uuid)
     signal action(string uuid)
 
-    height: Math.max(label.height, toolButtonsLayout.implicitHeight) + 2 * units.smallSpacing
+    // the 1.6 comes from ToolButton's default height
+    height: Math.max(label.height, Math.round(units.gridUnit * 1.6)) + 2 * units.smallSpacing
 
     enabled: true
 
@@ -98,182 +99,26 @@ PlasmaComponents.ListItem {
             right: parent.right
             verticalCenter: parent.verticalCenter
         }
-        PlasmaComponents.Label {
+
+        Loader {
             width: parent.width
-            height: undefined // unset PlasmaComponents.Label default height
-            maximumLineCount: 3
-            verticalAlignment: Text.AlignVCenter
-
-            text: {
-                var highlightFontTag = "<font color='" + theme.highlightColor + "'>%1</font>"
-
-                var text = DisplayRole
-
-                // first escape any HTML characters to prevent privacy issues
-                text = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-
-                // color code leading or trailing whitespace
-                // the first regex is basically "trim"
-                text = text.replace(/^\s+|\s+$/gm, function(match) {
-                    // then inside the trimmed characters ("match") we replace each one individually
-                    match = match.replace(/ /g, "␣") // space
-                                 .replace(/\t/g, "↹") // tab
-                                 .replace(/\n/g, "↵") // return
-                    return highlightFontTag.arg(match)
-                })
-
-                // finally turn line breaks into HTML br tags
-                text = text.replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, "<br>")
-
-                return text
-            }
-            visible: TypeRole == 0 // TypeRole: 0: Text, 1: Image, 2: Url
-            elide: Text.ElideRight
-            wrapMode: Text.WrapAtWordBoundaryOrAnywhere
-            textFormat: Text.StyledText
-        }
-        KQuickControlsAddons.QPixmapItem {
-            id: previewPixmap
-            width: parent.width
-            height: Math.round(width * (nativeHeight/nativeWidth) + units.smallSpacing * 2)
-            pixmap: DecorationRole
-            visible: TypeRole == 1
-            fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
-        }
-        Item {
-            id: previewItem
-            visible: TypeRole == 2
-            // visible updates recursively, our label becomes invisible when hovering, hence no visible check here
-            height: TypeRole == 2 ? (units.gridUnit * 4 + units.smallSpacing * 2) : 0
-            width: parent.width
-
-            ListView {
-                id: previewList
-                model: TypeRole == 2 ? DisplayRole.split(" ", maximumNumberOfPreviews) : 0
-                property int itemWidth: units.gridUnit * 4
-                property int itemHeight: units.gridUnit * 4
-                interactive: false
-
-                spacing: units.smallSpacing
-                orientation: Qt.Horizontal
-                width: (itemWidth + spacing) * model.length
-                anchors {
-                    top: parent.top
-                    left: parent.left
-                    bottom: parent.bottom
-                }
-
-                delegate: Item {
-                    width: previewList.itemWidth
-                    height:  previewList.itemHeight
-                    y: Math.round((parent.height - previewList.itemHeight) / 2)
-                    clip: true
-
-                    KQuickControlsAddons.QPixmapItem {
-                        id: previewPixmap
-
-                        anchors.centerIn: parent
-
-                        Component.onCompleted: {
-                            function result(job) {
-                                if (!job.error) {
-                                    pixmap = job.result.preview;
-                                    previewPixmap.width = job.result.previewWidth
-                                    previewPixmap.height = job.result.previewHeight
-                                }
-                            }
-                            var service = clipboardSource.serviceForSource(UuidRole)
-                            var operation = service.operationDescription("preview");
-                            operation.url = modelData;
-                            // We request a bigger size and then clip out a square in the middle
-                            // so we get uniform delegate sizes without distortion
-                            operation.previewWidth = previewList.itemWidth * 2;
-                            operation.previewHeight = previewList.itemHeight * 2;
-                            var serviceJob = service.startOperationCall(operation);
-                            serviceJob.finished.connect(result);
-                        }
-                    }
-                    Rectangle {
-                        id: overlay
-                        color: theme.textColor
-                        opacity: 0.6
-                        height: units.gridUnit
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                            bottom: parent.bottom
-                        }
-                    }
-                    PlasmaComponents.Label {
-                        font.pointSize: theme.smallestFont.pointSize
-                        color: theme.backgroundColor
-                        maximumLineCount: 1
-                        anchors {
-                            verticalCenter: overlay.verticalCenter
-                            left: overlay.left
-                            right: overlay.right
-                            leftMargin: units.smallSpacing
-                            rightMargin: units.smallSpacing
-                        }
-                        elide: Text.ElideRight
-                        horizontalAlignment: Text.AlignHCenter
-                        text: {
-                            var u = modelData.split("/");
-                            return decodeURIComponent(u[u.length - 1]);
-                        }
-                    }
-                }
-            }
-            PlasmaComponents.Label {
-                property int additionalItems: DisplayRole.split(" ").length - maximumNumberOfPreviews
-                visible: additionalItems > 0
-                opacity: 0.6
-                text: i18nc("Indicator that there are more urls in the clipboard than previews shown", "+%1", additionalItems)
-                anchors {
-                    left: previewList.right
-                    right: parent.right
-                    bottom: parent.bottom
-                    margins: units.smallSpacing
-
-                }
-                verticalAlignment: Text.AlignBottom
-                horizontalAlignment: Text.AlignCenter
-                font.pointSize: theme.smallestFont.pointSize
-            }
+            source: ["Text", "Image", "Url"][TypeRole] + "ItemDelegate.qml"
         }
     }
 
-    Row {
-        id: toolButtonsLayout
+    Loader {
+        id: toolButtonsLoader
         anchors {
             right: label.right
             verticalCenter: parent.verticalCenter
         }
-        visible: menuItem.ListView.isCurrentItem
-
-        PlasmaComponents.ToolButton {
-            // TODO: only show for items supporting actions?
-            iconSource: "system-run"
-            tooltip: i18n("Invoke action")
-            onClicked: menuItem.action(UuidRole)
-        }
-        PlasmaComponents.ToolButton {
-            id: barcodeToolButton
-            iconSource: "view-barcode"
-            tooltip: i18n("Show barcode")
-            onClicked: menuItem.barcode(UuidRole)
-        }
-        PlasmaComponents.ToolButton {
-            iconSource: "document-edit"
-            enabled: !clipboardSource.editing
-            visible: TypeRole === 0
-            tooltip: i18n("Edit contents")
-            onClicked: menuItem.edit(UuidRole)
-        }
-        PlasmaComponents.ToolButton {
-            iconSource: "edit-delete"
-            tooltip: i18n("Remove from history")
-            onClicked: menuItem.remove(UuidRole)
+        source: "DelegateToolButtons.qml"
+        active: menuItem.ListView.isCurrentItem
+        onActiveChanged: {
+            if (active) {
+                // break binding, once it was loaded, never unload
+                active = true;
+            }
         }
     }
 }

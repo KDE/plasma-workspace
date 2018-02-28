@@ -45,7 +45,7 @@ namespace KActivities
 
 namespace KDeclarative
 {
-    class QmlObject;
+    class QmlObjectSharedEngine;
 } // namespace KDeclarative
 
 namespace KScreen {
@@ -241,7 +241,7 @@ private:
     QMenu *m_addPanelsMenu;
     KPackage::Package m_lookAndFeelPackage;
     QSet<QScreen*> m_redundantOutputs;
-    KDeclarative::QmlObject *m_interactiveConsole;
+    KDeclarative::QmlObjectSharedEngine *m_interactiveConsole;
 
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;
