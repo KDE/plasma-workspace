@@ -237,7 +237,11 @@ void Menu::initMenu()
         return;
     }
 
-    emit requestWriteWindowProperties();
+    // appmenu-gtk-module always announces a menu bar on every GTK window even if there is none
+    // so we subscribe to the menu bar as soon as it shows up so we can figure out
+    // if we have a menu bar, an app menu, or just nothing
+    start(0);
+
     m_menuInited = true;
 }
 
@@ -275,6 +279,8 @@ void Menu::start(uint id)
         if (reply.isError()) {
             qCWarning(DBUSMENUPROXY) << "Failed to start subscription to" << id << "on" << m_serviceName << "at" << m_currentMenuObjectPath << reply.error();
         } else {
+            const bool hadMenu = !m_menus.isEmpty();
+
             const auto menus = reply.value();
             for (auto menu : menus) {
                 m_menus[menu.id].append(menus);
@@ -298,6 +304,11 @@ void Menu::start(uint id)
 
             // TODO are we subscribed to all it returns or just to the ones we requested?
             m_subscriptions.append(id);
+
+            // do we have a menu now? let's tell everyone
+            if (!hadMenu && !m_menus.isEmpty()) {
+                emit requestWriteWindowProperties();
+            }
         }
 
         // When it was a delayed GetLayout request, send the reply now
