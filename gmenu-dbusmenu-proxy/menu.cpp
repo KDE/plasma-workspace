@@ -1057,12 +1057,18 @@ QVariantMap Menu::gMenuToDBusMenuProperties(const QVariantMap &source) const
         if (args.count() == 1) {
             const auto &firstArg = args.first();
             // assume this is a checkbox
-            if (firstArg.canConvert<bool>() && !isMenu) {
-                result.insert(QStringLiteral("toggle-type"), QStringLiteral("checkbox"));
-                if (firstArg.toBool()) {
-                    result.insert(QStringLiteral("toggle-state"), 1);
-                } else {
-                    result.insert(QStringLiteral("toggle-state"), 0);
+            if (!isMenu) {
+                if (firstArg.type() == QVariant::Bool) {
+                    result.insert(QStringLiteral("toggle-type"), QStringLiteral("checkbox"));
+                    result.insert(QStringLiteral("toggle-state"), firstArg.toBool() ? 1 : 0);
+                } else if (firstArg.type() == QVariant::String) {
+                    result.insert(QStringLiteral("toggle-type"), QStringLiteral("radio"));
+                    const QString checkedAction = firstArg.toString();
+                    if (!checkedAction.isEmpty() && actionName.endsWith(checkedAction)) {
+                        result.insert(QStringLiteral("toggle-state"), 1);
+                    } else {
+                        result.insert(QStringLiteral("toggle-state"), 0);
+                    }
                 }
             }
         }
