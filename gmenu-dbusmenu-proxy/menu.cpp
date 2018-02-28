@@ -30,6 +30,8 @@
 #include <QMutableListIterator>
 #include <QVariantList>
 
+#include <KLocalizedString>
+
 #include <algorithm>
 
 #include "dbusmenuadaptor.h"
@@ -828,8 +830,8 @@ uint Menu::GetLayout(int parentId, int recursionDepth, const QStringList &proper
     }
 
     dbusItem.id = parentId; // TODO
-    // TODO use gMenuToDBusMenuProperties?
     dbusItem.properties = {
+        {QStringLiteral("label"), i18n("Menu")}, // TODO use application name?
         {QStringLiteral("children-display"), QStringLiteral("submenu")}
     };
 
