@@ -1061,6 +1061,8 @@ QVariantMap Menu::gMenuToDBusMenuProperties(const QVariantMap &source) const
                 result.insert(QStringLiteral("toggle-type"), QStringLiteral("checkbox"));
                 if (firstArg.toBool()) {
                     result.insert(QStringLiteral("toggle-state"), 1);
+                } else {
+                    result.insert(QStringLiteral("toggle-state"), 0);
                 }
             }
         }
