@@ -14,6 +14,7 @@ set(GMENU_DBUSMENU_PROXY_SRCS
     main.cpp
     menuproxy.cpp
     menu.cpp
+    actions.cpp
     gdbusmenutypes_p.cpp
     icons.cpp
     ../libdbusmenuqt/dbusmenutypes_p.cpp

@@ -34,6 +34,7 @@
 
 #include <algorithm>
 
+#include "actions.h"
 #include "dbusmenuadaptor.h"
 #include "icons.h"
 
@@ -41,6 +42,10 @@
 
 static const QString s_orgGtkActions = QStringLiteral("org.gtk.Actions");
 static const QString s_orgGtkMenus = QStringLiteral("org.gtk.Menus");
+
+static const QString s_applicationActionsPrefix = QStringLiteral("app.");
+static const QString s_unityActionsPrefix = QStringLiteral("unity.");
+static const QString s_windowActionsPrefix = QStringLiteral("win.");
 
 Menu::Menu(const QString &serviceName)
     : QObject()
@@ -78,72 +83,49 @@ void Menu::init()
         qCWarning(DBUSMENUPROXY) << "Failed to subscribe to menu bar changes on" << m_serviceName << "at" << m_menuBarObjectPath;
     }
 
-    if (!m_applicationObjectPath.isEmpty() && !QDBusConnection::sessionBus().connect(m_serviceName,
-                                               m_applicationObjectPath,
-                                               s_orgGtkActions,
-                                               QStringLiteral("Changed"),
-                                               this,
-                                               SLOT(onApplicationActionsChanged(QStringList,StringBoolMap,QVariantMap,GMenuActionMap)))) {
-        qCWarning(DBUSMENUPROXY) << "Failed to subscribe to application action changes on" << m_serviceName << "at" << m_applicationObjectPath;
-    }
-
-    if (!m_unityObjectPath.isEmpty() && !QDBusConnection::sessionBus().connect(m_serviceName,
-                                               m_unityObjectPath,
-                                               s_orgGtkActions,
-                                               QStringLiteral("Changed"),
-                                               this,
-                                               SLOT(onUnityActionsChanged(QStringList,StringBoolMap,QVariantMap,GMenuActionMap)))) {
-        qCWarning(DBUSMENUPROXY) << "Failed to subscribe to Unity action changes on" << m_serviceName << "at" << m_applicationObjectPath;
-    }
-
-    if (!m_windowObjectPath.isEmpty() && !QDBusConnection::sessionBus().connect(m_serviceName,
-                                               m_windowObjectPath,
-                                               s_orgGtkActions,
-                                               QStringLiteral("Changed"),
-                                               this,
-                                               SLOT(onWindowActionsChanged(QStringList,StringBoolMap,QVariantMap,GMenuActionMap)))) {
-        qCWarning(DBUSMENUPROXY) << "Failed to subscribe to window action changes on" << m_serviceName << "at" << m_windowObjectPath;
-    }
-
-    // TODO share application actions between menus of the same app?
     if (!m_applicationObjectPath.isEmpty()) {
-        getActions(m_applicationObjectPath, [this](const GMenuActionMap &actions, bool ok) {
-            if (ok) {
-                // TODO just do all of this in getActions instead of copying it thrice
-                if (m_menuInited) {
-                    onApplicationActionsChanged({}, {}, {}, actions);
-                } else {
-                    m_applicationActions = actions;
-                    initMenu();
-                }
+        m_applicationActions = new Actions(m_serviceName, m_applicationObjectPath);
+        connect(m_applicationActions, &Actions::actionsChanged, this, [this](const QStringList &dirtyActions) {
+            actionsChanged(dirtyActions, s_applicationActionsPrefix);
+        });
+        connect(m_applicationActions, &Actions::loaded, this, [this] {
+            if (m_menuInited) {
+                actionsChanged(m_applicationActions->getAll().keys(), s_applicationActionsPrefix);
+            } else {
+                initMenu();
             }
         });
+        m_applicationActions->load();
     }
 
     if (!m_unityObjectPath.isEmpty()) {
-        getActions(m_unityObjectPath, [this](const GMenuActionMap &actions, bool ok) {
-            if (ok) {
-                if (m_menuInited) {
-                    onUnityActionsChanged({}, {}, {}, actions);
-                } else {
-                    m_unityActions = actions;
-                    initMenu();
-                }
+        m_unityActions = new Actions(m_serviceName, m_unityObjectPath);
+        connect(m_unityActions, &Actions::actionsChanged, this, [this](const QStringList &dirtyActions) {
+            actionsChanged(dirtyActions, s_unityActionsPrefix);
+        });
+        connect(m_unityActions, &Actions::loaded, this, [this] {
+            if (m_menuInited) {
+                actionsChanged(m_unityActions->getAll().keys(), s_unityActionsPrefix);
+            } else {
+                initMenu();
             }
         });
+        m_unityActions->load();
     }
 
     if (!m_windowObjectPath.isEmpty()) {
-        getActions(m_windowObjectPath, [this](const GMenuActionMap &actions, bool ok) {
-            if (ok) {
-                if (m_menuInited) {
-                    onWindowActionsChanged({}, {}, {}, actions);
-                } else {
-                    m_windowActions = actions;
-                    initMenu();
-                }
+        m_windowActions = new Actions(m_serviceName, m_windowObjectPath);
+        connect(m_windowActions, &Actions::actionsChanged, this, [this](const QStringList &dirtyActions) {
+            actionsChanged(dirtyActions, s_windowActionsPrefix);
+        });
+        connect(m_windowActions, &Actions::loaded, this, [this] {
+            if (m_menuInited) {
+                actionsChanged(m_windowActions->getAll().keys(), s_windowActionsPrefix);
+            } else {
+                initMenu();
             }
         });
+        m_windowActions->load();
     }
 }
 
@@ -469,208 +451,48 @@ void Menu::menuChanged(const GMenuChangeList &changes)
     }
 }
 
-void Menu::onApplicationActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added)
-{
-    if (!m_menuInited) {
-        return;
-    }
-    actionsChanged(removed, enabledChanges, stateChanges, added, m_applicationActions, QStringLiteral("app."));
-}
-
-void Menu::onUnityActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added)
-{
-    if (!m_menuInited) {
-        return;
-    }
-    actionsChanged(removed, enabledChanges, stateChanges, added, m_unityActions, QStringLiteral("unity."));
-}
-
-void Menu::onWindowActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added)
-{
-    if (!m_menuInited) {
-        return;
-    }
-    actionsChanged(removed, enabledChanges, stateChanges, added, m_windowActions, QStringLiteral("win."));
-}
-
-void Menu::getActions(const QString &path, const std::function<void(GMenuActionMap,bool)> &cb)
-{
-    QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName,
-                                                      path,
-                                                      s_orgGtkActions,
-                                                      QStringLiteral("DescribeAll"));
-
-    QDBusPendingReply<GMenuActionMap> reply = QDBusConnection::sessionBus().asyncCall(msg);
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, path, cb](QDBusPendingCallWatcher *watcher) {
-        QDBusPendingReply<GMenuActionMap> reply = *watcher;
-        if (reply.isError()) {
-            qCWarning(DBUSMENUPROXY) << "Failed to get actions from" << m_serviceName << "at" << path << reply.error();
-            cb({}, false);
-        } else {
-            cb(reply.value(), true);
-        }
-    });
-}
-
 bool Menu::getAction(const QString &name, GMenuAction &action) const
 {
     QString lookupName;
-    const GMenuActionMap *actionMap = nullptr;
+    Actions *actions = getActionsForAction(name, lookupName);
 
-    if (name.startsWith(QLatin1String("app."))) {
-        lookupName = name.mid(4);
-        actionMap = &m_applicationActions;
-    } else if (name.startsWith(QLatin1String("unity."))) {
-        lookupName = name.mid(6);
-        actionMap = &m_unityActions;
-    } else if (name.startsWith(QLatin1String("win."))) {
-        lookupName = name.mid(4);
-        actionMap = &m_windowActions;
-    }
-
-    if (!actionMap) {
+    if (!actions) {
         return false;
     }
 
-    auto it = actionMap->constFind(lookupName);
-    if (it == actionMap->constEnd()) {
-        return false;
-    }
-
-    action = *it;
-    return true;
+    return actions->get(lookupName, action);
 }
 
 void Menu::triggerAction(const QString &name, uint timestamp)
 {
     QString lookupName;
-    QString path;
+    Actions *actions = getActionsForAction(name, lookupName);
 
-    // TODO avoid code duplication with getAction
-    if (name.startsWith(QLatin1String("app."))) {
-        lookupName = name.mid(4);
-        path = m_applicationObjectPath;
-    } else if (name.startsWith(QLatin1String("unity."))) {
-        lookupName = name.mid(6);
-        path = m_unityObjectPath;
-    } else if (name.startsWith(QLatin1String("win."))) {
-        lookupName = name.mid(4);
-        path = m_windowObjectPath;
-    }
-
-    if (path.isEmpty()) {
+    if (!actions) {
         return;
     }
 
-    GMenuAction action;
-    if (!getAction(name, action)) {
-        return;
-    }
-
-    QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName,
-                                                      path,
-                                                      s_orgGtkActions,
-                                                      QStringLiteral("Activate"));
-    msg << lookupName;
-    // TODO use the arguments provided by "target" in the menu item
-    msg << QVariant::fromValue(QVariantList());
-
-    QVariantMap platformData;
-
-    if (timestamp) {
-        // From documentation:
-        // If the startup notification id is not available, this can be just "_TIMEtime", where
-        // time is the time stamp from the event triggering the call.
-        // see also gtkwindow.c extract_time_from_startup_id and startup_id_is_fake
-        platformData.insert(QStringLiteral("desktop-startup-id"), QStringLiteral("_TIME") + QString::number(timestamp));
-    }
-
-    msg << platformData;
-
-    QDBusPendingReply<void> reply = QDBusConnection::sessionBus().asyncCall(msg);
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, path, name](QDBusPendingCallWatcher *watcher) {
-        QDBusPendingReply<void> reply = *watcher;
-        if (reply.isError()) {
-            qCWarning(DBUSMENUPROXY) << "Failed to invoke action" << name << "on" << m_serviceName << "at" << path << reply.error();
-        }
-    });
+    actions->trigger(lookupName, timestamp);
 }
 
-void Menu::actionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added, GMenuActionMap &actions, const QString &prefix)
+Actions *Menu::getActionsForAction(const QString &name, QString &lookupName) const
 {
-    // Collect the actions that we removed, altered, or added, so we can eventually signal changes for all menus that contain one of those actions
-    QSet<QString> dirtyActions;
-
-    // TODO I bet for most of the loops below we could use a nice short std algorithm
-
-    for (const QString &removedAction : removed) {
-        if (actions.remove(removedAction)) {
-            dirtyActions.insert(removedAction);
-        }
+    if (name.startsWith(QLatin1String("app."))) {
+        lookupName = name.mid(4);
+        return m_applicationActions;
+    } else if (name.startsWith(QLatin1String("unity."))) {
+        lookupName = name.mid(6);
+        return m_unityActions;
+    } else if (name.startsWith(QLatin1String("win."))) {
+        lookupName = name.mid(4);
+        return m_windowActions;
     }
 
-    for (auto it = enabledChanges.constBegin(), end = enabledChanges.constEnd(); it != end; ++it) {
-        const QString &actionName = it.key();
-        const bool enabled = it.value();
+    return nullptr;
+}
 
-        auto actionIt = actions.find(actionName);
-        if (actionIt == actions.end()) {
-            qCInfo(DBUSMENUPROXY) << "Got enabled changed for action" << actionName << "which we don't know";
-            continue;
-        }
-
-        GMenuAction &action = *actionIt;
-        if (action.enabled != enabled) {
-            action.enabled = enabled;
-            dirtyActions.insert(actionName);
-        } else {
-            qCInfo(DBUSMENUPROXY) << "Got enabled change for action" << actionName << "which didn't change it";
-        }
-    }
-
-    for (auto it = stateChanges.constBegin(), end = stateChanges.constEnd(); it != end; ++it) {
-        const QString &actionName = it.key();
-        const QVariant &state = it.value();
-
-        auto actionIt = actions.find(actionName);
-        if (actionIt == actions.end()) {
-            qCInfo(DBUSMENUPROXY) << "Got state changed for action" << actionName << "which we don't know";
-            continue;
-        }
-
-        GMenuAction &action = *actionIt;
-
-        if (action.state.isEmpty()) {
-            qCDebug(DBUSMENUPROXY) << "Got new state for action" << actionName << "that didn't have any state before";
-            action.state.append(state);
-            dirtyActions.insert(actionName);
-        } else {
-            // Action state is a list but the state change only sends us a single variant, so just overwrite the first one
-            QVariant &firstState = action.state.first();
-            if (firstState != state) {
-                firstState = state;
-                dirtyActions.insert(actionName);
-            } else {
-                qCInfo(DBUSMENUPROXY) << "Got state change for action" << actionName << "which didn't change it";
-            }
-        }
-    }
-
-    // unite() will result in keys being present multiple times, do it manually and overwrite existing ones
-    for (auto it = added.constBegin(), end = added.constEnd(); it != end; ++it) {
-        const QString &actionName = it.key();
-
-        if (actions.contains(actionName)) { // TODO check isInfoEnabled
-            qCInfo(DBUSMENUPROXY) << "Got new action" << actionName << "that we already have, overwriting existing one";
-        }
-
-        actions.insert(actionName, it.value());
-
-        dirtyActions.insert(actionName);
-    }
-
+void Menu::actionsChanged(const QStringList &dirtyActions, const QString &prefix)
+{
     auto forEachMenuItem = [this](const std::function<bool(int subscription, int section, int index, const QVariantMap &item)> &cb) {
         for (auto it = m_menus.constBegin(), end = m_menus.constEnd(); it != end; ++it) {
             const int subscription = it.key();
@@ -695,8 +517,6 @@ void Menu::actionsChanged(const QStringList &removed, const StringBoolMap &enabl
         loopExit: // loop exit
         return;
     };
-
-    //qDebug() << "The following actions changed" << dirtyActions;
 
     // now find in which menus these actions are and emit a change accordingly
     DBusMenuItemList dirtyItems;

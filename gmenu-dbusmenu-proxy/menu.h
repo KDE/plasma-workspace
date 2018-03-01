@@ -32,6 +32,8 @@
 
 class QDBusVariant;
 
+class Actions;
+
 class Menu : public QObject, protected QDBusContext
 {
     Q_OBJECT
@@ -94,9 +96,6 @@ signals:
 private slots:
     void onApplicationMenuChanged(const GMenuChangeList &changes);
     void onMenuBarChanged(const GMenuChangeList &changes);
-    void onApplicationActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
-    void onUnityActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
-    void onWindowActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
 
 private:
     void initMenu();
@@ -105,13 +104,12 @@ private:
 
     bool registerDBusObject();
 
-    void getActions(const QString &path, const std::function<void(GMenuActionMap,bool)> &cb);
     bool getAction(const QString &name, GMenuAction &action) const;
     void triggerAction(const QString &name, uint timestamp = 0);
+    Actions *getActionsForAction(const QString &name, QString &lookupName) const;
 
     void menuChanged(const GMenuChangeList &changes);
-    void actionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added,
-                        GMenuActionMap &actions, const QString &prefix);
+    void actionsChanged(const QStringList &dirty, const QString &prefix);
 
     static int treeStructureToInt(int subscription, int section, int index);
     static void intToTreeStructure(int source, int &subscription, int &section, int &index);
@@ -142,9 +140,9 @@ private:
 
     QHash<int, QDBusMessage> m_pendingGetLayouts;
 
-    GMenuActionMap m_applicationActions;
-    GMenuActionMap m_windowActions;
-    GMenuActionMap m_unityActions;
+    Actions *m_applicationActions = nullptr;
+    Actions *m_unityActions = nullptr;
+    Actions *m_windowActions = nullptr;
 
     bool m_menuInited = false;
 
