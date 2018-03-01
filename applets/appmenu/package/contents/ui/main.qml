@@ -121,6 +121,7 @@ Item {
                 // fake highlighted
                 checkable: plasmoid.nativeInterface.currentIndex === index
                 checked: checkable
+                visible: text !== ""
                 onClicked: {
                     plasmoid.nativeInterface.trigger(this, index)
                 }
