@@ -41,7 +41,7 @@
 #include <xcb/xcb.h>
 #include <xcb/xcb_atom.h>
 
-#include "menu.h"
+#include "window.h"
 
 static const QString s_ourServiceName = QStringLiteral("org.kde.plasma.gmenu_dbusmenu_proxy");
 
@@ -114,8 +114,8 @@ bool MenuProxy::init()
         onWindowAdded(id);
     }
 
-    if (m_menus.isEmpty()) {
-        qCDebug(DBUSMENUPROXY) << "Up and running but no menus in sight";
+    if (m_windows.isEmpty()) {
+        qCDebug(DBUSMENUPROXY) << "Up and running but no windows with menus in sight";
     }
 
     return true;
@@ -130,8 +130,8 @@ void MenuProxy::teardown()
     disconnect(KWindowSystem::self(), &KWindowSystem::windowAdded, this, &MenuProxy::onWindowAdded);
     disconnect(KWindowSystem::self(), &KWindowSystem::windowRemoved, this, &MenuProxy::onWindowRemoved);
 
-    qDeleteAll(m_menus);
-    m_menus.clear();
+    qDeleteAll(m_windows);
+    m_windows.clear();
 }
 
 void MenuProxy::setGtkShellShowsMenuBar(bool show)
@@ -162,7 +162,20 @@ void MenuProxy::setGtkShellShowsMenuBar(bool show)
 
 void MenuProxy::onWindowAdded(WId id)
 {
-    if (m_menus.contains(id)) {
+    if (m_windows.contains(id)) {
+        return;
+    }
+
+    KWindowInfo info(id, NET::WMWindowType);
+
+    NET::WindowType wType = info.windowType(NET::NormalMask | NET::DesktopMask | NET::DockMask |
+                                            NET::ToolbarMask | NET::MenuMask | NET::DialogMask |
+                                            NET::OverrideMask | NET::TopMenuMask |
+                                            NET::UtilityMask | NET::SplashMask);
+
+    // Only top level windows typically have a menu bar, dialogs, such as settings don't
+    if (wType != NET::Normal) {
+        qCInfo(DBUSMENUPROXY) << "Ignoring window" << id << "of type" << wType;
         return;
     }
 
@@ -183,33 +196,33 @@ void MenuProxy::onWindowAdded(WId id)
         return;
     }
 
-    Menu *menu = new Menu(serviceName);
-    menu->setWinId(id);
-    menu->setApplicationObjectPath(applicationObjectPath);
-    menu->setUnityObjectPath(unityObjectPath);
-    menu->setWindowObjectPath(windowObjectPath);
-    menu->setApplicationMenuObjectPath(applicationMenuObjectPath);
-    menu->setMenuBarObjectPath(menuBarObjectPath);
-    m_menus.insert(id, menu);
+    Window *window = new Window(serviceName);
+    window->setWinId(id);
+    window->setApplicationObjectPath(applicationObjectPath);
+    window->setUnityObjectPath(unityObjectPath);
+    window->setWindowObjectPath(windowObjectPath);
+    window->setApplicationMenuObjectPath(applicationMenuObjectPath);
+    window->setMenuBarObjectPath(menuBarObjectPath);
+    m_windows.insert(id, window);
 
-    connect(menu, &Menu::requestWriteWindowProperties, this, [this, menu] {
-       Q_ASSERT(!menu->proxyObjectPath().isEmpty());
+    connect(window, &Window::requestWriteWindowProperties, this, [this, window] {
+       Q_ASSERT(!window->proxyObjectPath().isEmpty());
 
-       writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuServiceName, s_ourServiceName.toUtf8());
-       writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuObjectPath, menu->proxyObjectPath().toUtf8());
+       writeWindowProperty(window->winId(), s_kdeNetWmAppMenuServiceName, s_ourServiceName.toUtf8());
+       writeWindowProperty(window->winId(), s_kdeNetWmAppMenuObjectPath, window->proxyObjectPath().toUtf8());
     });
-    connect(menu, &Menu::requestRemoveWindowProperties, this, [this, menu] {
-        writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuServiceName, QByteArray());
-        writeWindowProperty(menu->winId(), s_kdeNetWmAppMenuObjectPath, QByteArray());
+    connect(window, &Window::requestRemoveWindowProperties, this, [this, window] {
+        writeWindowProperty(window->winId(), s_kdeNetWmAppMenuServiceName, QByteArray());
+        writeWindowProperty(window->winId(), s_kdeNetWmAppMenuObjectPath, QByteArray());
     });
 
-    menu->init();
+    window->init();
 }
 
 void MenuProxy::onWindowRemoved(WId id)
 {
     // no need to cleanup() (which removes window properties) when the window is gone, delete right away
-    delete m_menus.take(id);
+    delete m_windows.take(id);
 }
 
 QByteArray MenuProxy::getWindowPropertyString(WId id, const QByteArray &name)

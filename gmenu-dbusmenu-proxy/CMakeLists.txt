@@ -13,14 +13,16 @@ find_package(XCB
 set(GMENU_DBUSMENU_PROXY_SRCS
     main.cpp
     menuproxy.cpp
+    window.cpp
     menu.cpp
     actions.cpp
     gdbusmenutypes_p.cpp
     icons.cpp
+    utils.cpp
     ../libdbusmenuqt/dbusmenutypes_p.cpp
  )
 
-qt5_add_dbus_adaptor(GMENU_DBUSMENU_PROXY_SRCS ../libdbusmenuqt/com.canonical.dbusmenu.xml menu.h Menu)
+qt5_add_dbus_adaptor(GMENU_DBUSMENU_PROXY_SRCS ../libdbusmenuqt/com.canonical.dbusmenu.xml window.h Window)
 
 ecm_qt_declare_logging_category(GMENU_DBUSMENU_PROXY_SRCS HEADER debug.h
                                                IDENTIFIER DBUSMENUPROXY
