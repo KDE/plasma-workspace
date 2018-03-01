@@ -34,6 +34,7 @@ QString Icons::actionIcon(const QString &actionName)
     static const QHash<QString, QString> s_icons {
         {QStringLiteral("image-new"), QStringLiteral("document-new")}, // Gimp "New" item
         {QStringLiteral("adddirect"), QStringLiteral("document-new")}, // LibreOffice "New" item
+        {QStringLiteral("filenew"), QStringLiteral("document-new")}, // Pluma "New" item
         {QStringLiteral("new-window"), QStringLiteral("window-new")},
         {QStringLiteral("newwindow"), QStringLiteral("window-new")},
         {QStringLiteral("new-tab"), QStringLiteral("tab-new")},
@@ -58,6 +59,7 @@ QString Icons::actionIcon(const QString &actionName)
         {QStringLiteral("close"), QStringLiteral("document-close")},
         {QStringLiteral("closedoc"), QStringLiteral("document-close")},
         {QStringLiteral("close-all"), QStringLiteral("document-close")},
+        {QStringLiteral("closeall"), QStringLiteral("document-close")},
         {QStringLiteral("closewin"), QStringLiteral("window-close")}, // LibreOffice
         {QStringLiteral("quit"), QStringLiteral("application-exit")},
 
@@ -76,7 +78,9 @@ QString Icons::actionIcon(const QString &actionName)
         {QStringLiteral("fullscreen"), QStringLiteral("view-fullscreen")},
 
         {QStringLiteral("find"), QStringLiteral("edit-find")},
+        {QStringLiteral("searchfind"), QStringLiteral("edit-find")},
         {QStringLiteral("replace"), QStringLiteral("edit-find-replace")},
+        {QStringLiteral("searchreplace"), QStringLiteral("edit-find-replace")}, // LibreOffice
         {QStringLiteral("searchdialog"), QStringLiteral("edit-find-replace")}, // LibreOffice
         {QStringLiteral("select-all"), QStringLiteral("edit-select-all")},
         {QStringLiteral("selectall"), QStringLiteral("edit-select-all")},
@@ -249,6 +253,25 @@ QString Icons::actionIcon(const QString &actionName)
 
     if (icon.isEmpty()) {
         action = action.toLower();
+        icon = s_icons.value(action);
+    }
+
+    if (icon.isEmpty()) {
+        static const auto s_prefixes = QStringList{ // Pluma with appmenu-gtk
+            QStringLiteral("file"),
+            QStringLiteral("edit"),
+            QStringLiteral("view"),
+            QStringLiteral("help"),
+        };
+
+
+        for (const QString &prefix : s_prefixes) {
+            if (action.startsWith(prefix)) {
+                action = action.mid(prefix.length());
+                break;
+            }
+        }
+
         icon = s_icons.value(action);
     }
 

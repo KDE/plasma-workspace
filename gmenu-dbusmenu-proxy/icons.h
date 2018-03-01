@@ -26,4 +26,4 @@ namespace Icons
 
 QString actionIcon(const QString &actionName);
 
-};
+}
