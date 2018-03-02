@@ -66,7 +66,7 @@ Item {
     Plasmoid.toolTipMainText: i18n("No media playing")
     Plasmoid.toolTipSubText: ""
     Plasmoid.toolTipTextFormat: Text.PlainText
-    Plasmoid.status: PlasmaCore.Types.ActiveStatus
+    Plasmoid.status: PlasmaCore.Types.PassiveStatus
 
     Plasmoid.onContextualActionsAboutToShow: {
         plasmoid.clearActions()
@@ -87,15 +87,16 @@ Item {
                 return root.canGoPrevious
             })
 
-            if (root.state == "playing") {
-                plasmoid.setAction("playPause", i18nc("Pause playback", "Pause"), "media-playback-pause")
-                plasmoid.action("playPause").enabled = Qt.binding(function() {
-                    return root.canPause;
+            // if CanPause, toggle the menu entry between Play & Pause, otherwise always use Play
+            if (root.state == "playing" && root.canPause) {
+                plasmoid.setAction("pause", i18nc("Pause playback", "Pause"), "media-playback-pause")
+                plasmoid.action("pause").enabled = Qt.binding(function() {
+                    return root.state === "playing" && root.canPause;
                 });
             } else {
-                plasmoid.setAction("playPause", i18nc("Start playback", "Play"), "media-playback-start")
-                plasmoid.action("playPause").enabled = Qt.binding(function() {
-                    return root.canPlay;
+                plasmoid.setAction("play", i18nc("Start playback", "Play"), "media-playback-start")
+                plasmoid.action("play").enabled = Qt.binding(function() {
+                    return root.state !== "playing" && root.canPlay;
                 });
             }
 
@@ -106,6 +107,9 @@ Item {
             })
 
             plasmoid.setAction("stop", i18nc("Stop playback", "Stop"), "media-playback-stop")
+            plasmoid.action("stop").enabled = Qt.binding(function() {
+                return root.state === "playing" || root.state === "paused";
+            })
         }
 
         if (mpris2Source.currentData.CanQuit) {
@@ -139,7 +143,9 @@ Item {
     Plasmoid.fullRepresentation: ExpandedRepresentation {}
 
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
-        source: root.state === "playing" ? "media-playback-start" : "media-playback-pause"
+        source: root.state === "playing" ? "media-playback-start" :
+                root.state === "paused" ?  "media-playback-pause" :
+                                           "media-playback-stop"
         active: compactMouse.containsMouse
 
         MouseArea {
@@ -150,7 +156,7 @@ Item {
             onClicked: {
                 switch (mouse.button) {
                 case Qt.MiddleButton:
-                    root.action_playPause()
+                    root.togglePlaying()
                     break
                 case Qt.BackButton:
                     root.action_previous()
@@ -186,6 +192,18 @@ Item {
 
     Component.onCompleted: {
         mpris2Source.serviceForSource("@multiplex").enableGlobalShortcuts();
+    }
+
+    function togglePlaying() {
+        if (root.state === "playing") {
+            if (root.canPause) {
+                root.action_pause();
+            }
+        } else {
+            if (root.canPlay) {
+                root.action_play();
+            }
+        }
     }
 
     function action_open() {
