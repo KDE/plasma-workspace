@@ -89,7 +89,18 @@ void MultiplexedService::enableGlobalShortcuts()
     connect(playPauseAction, &QAction::triggered, this,
         [this] {
             if (m_control) {
-                m_control->playerInterface()->PlayPause();
+                auto playerInterface = m_control->playerInterface();
+                if (playerInterface->canControl()) {
+                    if (playerInterface->playbackStatus() == QLatin1String("Playing")) {
+                        if (playerInterface->canPause()) {
+                            playerInterface->Pause();
+                        }
+                    } else {
+                        if (playerInterface->canPlay()) {
+                            playerInterface->Play();
+                        }
+                    }
+                }
             }
         }
     );
@@ -100,7 +111,10 @@ void MultiplexedService::enableGlobalShortcuts()
     connect(nextAction, &QAction::triggered, this,
         [this] {
             if (m_control) {
-                m_control->playerInterface()->Next();
+                auto playerInterface = m_control->playerInterface();
+                if (playerInterface->canControl() && playerInterface->canGoNext()) {
+                    playerInterface->Next();
+                }
             }
         }
     );
@@ -111,7 +125,10 @@ void MultiplexedService::enableGlobalShortcuts()
     connect(previousAction, &QAction::triggered, this,
         [this] {
             if (m_control) {
-                m_control->playerInterface()->Previous();
+                auto playerInterface = m_control->playerInterface();
+                if (playerInterface->canControl() && playerInterface->canGoPrevious()) {
+                    playerInterface->Previous();
+                }
             }
         }
     );
@@ -122,7 +139,10 @@ void MultiplexedService::enableGlobalShortcuts()
     connect(stopAction, &QAction::triggered, this,
         [this] {
             if (m_control) {
-                m_control->playerInterface()->Stop();
+                auto playerInterface = m_control->playerInterface();
+                if (playerInterface->canControl()) {
+                    playerInterface->Stop();
+                }
             }
         }
     );
