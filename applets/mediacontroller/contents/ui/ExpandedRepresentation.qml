@@ -237,7 +237,7 @@ Item {
                             return ""
                         }
 
-                        var xesamUrl = metadata["xesam:url"].toString()
+                        var xesamUrl = (metadata["xesam:url"] || "").toString()
                         if (xesamUrl.indexOf("file:///") !== 0) { // "!startsWith()"
                             return ""
                         }
