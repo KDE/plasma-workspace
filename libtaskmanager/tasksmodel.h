@@ -811,6 +811,17 @@ public:
      */
     Q_INVOKABLE QModelIndex makeModelIndex(int row, int childRow = -1) const;
 
+    /**
+     * Given a row in the model, returns a QPersistentModelIndex for it. To get an index
+     * for a child in a task group, an optional child row may be passed as well.
+     *
+     * @param row A row index in the model.
+     * @param childRow A row index for a child of the task group at the given row.
+     * @returns a model index for the task at the given row, or for one of its
+     * child tasks.
+     */
+    Q_INVOKABLE QPersistentModelIndex makePersistentModelIndex(int row, int childRow = -1) const;
+
     void classBegin() override;
     void componentComplete() override;
 
