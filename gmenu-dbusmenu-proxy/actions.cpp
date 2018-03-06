@@ -69,6 +69,7 @@ void Actions::load()
             m_actions = reply.value();
             emit loaded();
         }
+        watcher->deleteLater();
     });
 }
 
@@ -122,6 +123,7 @@ void Actions::trigger(const QString &name, uint timestamp)
         if (reply.isError()) {
             qCWarning(DBUSMENUPROXY) << "Failed to invoke action" << name << "on" << m_serviceName << "at" << m_objectPath << reply.error();
         }
+        watcher->deleteLater();
     });
 }
 

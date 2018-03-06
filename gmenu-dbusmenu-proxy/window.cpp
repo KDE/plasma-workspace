@@ -89,7 +89,7 @@ void Window::init()
      }
 
     if (!m_applicationObjectPath.isEmpty()) {
-        m_applicationActions = new Actions(m_serviceName, m_applicationObjectPath);
+        m_applicationActions = new Actions(m_serviceName, m_applicationObjectPath, this);
         connect(m_applicationActions, &Actions::actionsChanged, this, [this](const QStringList &dirtyActions) {
             onActionsChanged(dirtyActions, s_applicationActionsPrefix);
         });
@@ -104,7 +104,7 @@ void Window::init()
     }
 
     if (!m_unityObjectPath.isEmpty()) {
-        m_unityActions = new Actions(m_serviceName, m_unityObjectPath);
+        m_unityActions = new Actions(m_serviceName, m_unityObjectPath, this);
         connect(m_unityActions, &Actions::actionsChanged, this, [this](const QStringList &dirtyActions) {
             onActionsChanged(dirtyActions, s_unityActionsPrefix);
         });
@@ -119,7 +119,7 @@ void Window::init()
     }
 
     if (!m_windowObjectPath.isEmpty()) {
-        m_windowActions = new Actions(m_serviceName, m_windowObjectPath);
+        m_windowActions = new Actions(m_serviceName, m_windowObjectPath, this);
         connect(m_windowActions, &Actions::actionsChanged, this, [this](const QStringList &dirtyActions) {
             onActionsChanged(dirtyActions, s_windowActionsPrefix);
         });
@@ -346,6 +346,8 @@ bool Window::registerDBusObject()
     static int menus = 0;
     ++menus;
 
+    new DbusmenuAdaptor(this);
+
     const QString objectPath = QStringLiteral("/MenuBar/%1").arg(QString::number(menus));
     qCDebug(DBUSMENUPROXY) << "Registering DBus object path" << objectPath;
 
@@ -353,8 +355,6 @@ bool Window::registerDBusObject()
         qCWarning(DBUSMENUPROXY) << "Failed to register object";
         return false;
     }
-
-    new DbusmenuAdaptor(this); // do this before registering the object?
 
     m_proxyObjectPath = objectPath;
 

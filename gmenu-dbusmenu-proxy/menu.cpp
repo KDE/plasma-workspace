@@ -80,7 +80,9 @@ void Menu::start(uint id)
     QDBusPendingReply<GMenuItemList> reply = QDBusConnection::sessionBus().asyncCall(msg);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, id](QDBusPendingCallWatcher *watcher) {
-        QDBusPendingReply<GMenuItemList> reply = *watcher;
+        QScopedPointer<QDBusPendingCallWatcher, QScopedPointerDeleteLater> watcherPtr(watcher);
+
+        QDBusPendingReply<GMenuItemList> reply = *watcherPtr;
         if (reply.isError()) {
             qCWarning(DBUSMENUPROXY) << "Failed to start subscription to" << id << "on" << m_serviceName << "at" << m_objectPath << reply.error();
             emit failedToSubscribe(id);
@@ -108,8 +110,6 @@ void Menu::start(uint id)
 
             emit subscribed(id);
         }
-
-        watcher->deleteLater();
     });
 }
 
@@ -141,6 +141,7 @@ void Menu::stop(const QList<uint> &ids)
                 emit menuDisappeared();
             }
         }
+        watcher->deleteLater();
     });
 }
 
