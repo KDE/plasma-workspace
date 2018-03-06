@@ -92,7 +92,7 @@ Item {
 
             if (event.key === Qt.Key_Space || event.key === Qt.Key_K) {
                 // K is YouTube's key for "play/pause" :)
-                root.action_playPause()
+                root.togglePlaying()
             } else if (event.key === Qt.Key_P) {
                 root.action_previous()
             } else if (event.key === Qt.Key_N) {
@@ -237,7 +237,7 @@ Item {
                             return ""
                         }
 
-                        var xesamUrl = metadata["xesam:url"].toString()
+                        var xesamUrl = (metadata["xesam:url"] || "").toString()
                         if (xesamUrl.indexOf("file:///") !== 0) { // "!startsWith()"
                             return ""
                         }
@@ -378,7 +378,7 @@ Item {
                 height: width
                 enabled: root.state == "playing" ? root.canPause : root.canPlay
                 iconSource: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
-                onClicked: root.action_playPause()
+                onClicked: root.togglePlaying();
             }
 
             PlasmaComponents.ToolButton {
