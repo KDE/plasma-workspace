@@ -236,17 +236,19 @@ QByteArray MenuProxy::getWindowPropertyString(WId id, const QByteArray &name)
         return value;
     }
 
+    // GTK properties aren't XCB_ATOM_STRING but a custom one
+    auto utf8StringAtom = getAtom(QByteArrayLiteral("UTF8_STRING"));
+
     static const long MAX_PROP_SIZE = 10000;
     // FIXME figure out what "UT8String" is as atom type, it's 392 or 378 but I don't find that enum
-    auto propertyCookie = xcb_get_property(c, false, id, atom, XCB_ATOM_ANY, 0, MAX_PROP_SIZE);
+    auto propertyCookie = xcb_get_property(c, false, id, atom, utf8StringAtom, 0, MAX_PROP_SIZE);
     QScopedPointer<xcb_get_property_reply_t, QScopedPointerPodDeleter> propertyReply(xcb_get_property_reply(c, propertyCookie, NULL));
     if (propertyReply.isNull()) {
         qCWarning(DBUSMENUPROXY) << "XCB property reply for atom" << name << "on" << id << "was null";
         return value;
     }
 
-    // FIXME Check type
-    if (/*propertyReply->type == 392 && */propertyReply->format == 8 && propertyReply->value_len > 0) {
+    if (propertyReply->type == utf8StringAtom && propertyReply->format == 8 && propertyReply->value_len > 0) {
         const char *data = (const char *) xcb_get_property_value(propertyReply.data());
         int len = propertyReply->value_len;
         if (data) {
