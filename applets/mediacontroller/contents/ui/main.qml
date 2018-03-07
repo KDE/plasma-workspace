@@ -62,7 +62,7 @@ Item {
 
     Plasmoid.switchWidth: units.gridUnit * 14
     Plasmoid.switchHeight: units.gridUnit * 10
-    Plasmoid.icon: albumArt ? albumArt : "media-playback-start"
+    Plasmoid.icon: albumArt ? albumArt : "media-playback-playing"
     Plasmoid.toolTipMainText: i18n("No media playing")
     Plasmoid.toolTipSubText: ""
     Plasmoid.toolTipTextFormat: Text.PlainText
@@ -143,9 +143,9 @@ Item {
     Plasmoid.fullRepresentation: ExpandedRepresentation {}
 
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
-        source: root.state === "playing" ? "media-playback-start" :
-                root.state === "paused" ?  "media-playback-pause" :
-                                           "media-playback-stop"
+        source: root.state === "playing" ? "media-playback-playing" :
+                root.state === "paused" ?  "media-playback-paused" :
+                                           "media-playback-stopped"
         active: compactMouse.containsMouse
 
         MouseArea {
@@ -250,7 +250,7 @@ Item {
 
             PropertyChanges {
                 target: plasmoid
-                icon: albumArt ? albumArt : "media-playback-start"
+                icon: albumArt ? albumArt : "media-playback-playing"
                 toolTipMainText: track
                 toolTipSubText: artist ? i18nc("Artist of the song", "by %1", artist) : ""
             }
@@ -261,7 +261,7 @@ Item {
 
             PropertyChanges {
                 target: plasmoid
-                icon: albumArt ? albumArt : "media-playback-pause"
+                icon: albumArt ? albumArt : "media-playback-paused"
                 toolTipMainText: track
                 toolTipSubText: artist ? i18nc("Artist of the song", "by %1 (paused)", artist) : i18n("Paused")
             }
