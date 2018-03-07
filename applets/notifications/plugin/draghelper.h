@@ -34,7 +34,7 @@ Q_PROPERTY(bool dragActive READ dragActive NOTIFY dragActiveChanged)
 
 public:
     explicit DragHelper(QObject *parent = nullptr);
-    ~DragHelper();
+    ~DragHelper() override;
 
     bool dragActive() const;
 

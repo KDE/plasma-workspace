@@ -34,7 +34,7 @@ class HolidaysEventsPlugin : public CalendarEvents::CalendarEventsPlugin
 
 public:
     explicit HolidaysEventsPlugin(QObject *parent = nullptr);
-    ~HolidaysEventsPlugin();
+    ~HolidaysEventsPlugin() override;
 
     void loadEventsForDateRange(const QDate &startDate, const QDate &endDate) override;
 

@@ -32,7 +32,7 @@ class Menu : public QObject
 
 public:
     Menu(const QString &serviceName, const QString &objectPath, QObject *parent = nullptr);
-    ~Menu();
+    ~Menu() override;
 
     void init();
     void cleanup();

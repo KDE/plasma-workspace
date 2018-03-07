@@ -39,7 +39,7 @@ class AppMenuModel : public QAbstractListModel, public QAbstractNativeEventFilte
 
 public:
     explicit AppMenuModel(QObject *parent = nullptr);
-    ~AppMenuModel();
+    ~AppMenuModel() override;
 
     enum AppMenuRole {
         MenuRole = Qt::UserRole+1,

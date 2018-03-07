@@ -278,7 +278,7 @@ public:
      * regard to extracting information from this, and should take care to
      * reject invalid objects.
      **/
-    virtual void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
+    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
         QObject *delegate = nullptr) override;
 };
 

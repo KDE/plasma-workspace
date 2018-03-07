@@ -42,7 +42,7 @@ class Greeter : public QObject
     Q_OBJECT
 public:
     Greeter(int fd, bool shutdownAllowed, bool choose, KWorkSpace::ShutdownType type);
-    virtual ~Greeter();
+    ~Greeter() override;
 
     void init();
 

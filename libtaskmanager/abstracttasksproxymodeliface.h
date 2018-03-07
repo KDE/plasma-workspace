@@ -42,7 +42,7 @@ namespace TaskManager
 class TASKMANAGER_EXPORT AbstractTasksProxyModelIface : public AbstractTasksModelIface
 {
 public:
-    ~AbstractTasksProxyModelIface() {}
+    ~AbstractTasksProxyModelIface() override {}
 
     /**
      * Request activation of the task at the given index. Implementing classes

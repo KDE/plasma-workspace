@@ -104,7 +104,7 @@ public:
     Q_ENUMS(Mode)
 
     explicit CompositorAdaptor(QObject *parent = nullptr);
-    virtual ~CompositorAdaptor() = default;
+    ~CompositorAdaptor() override = default;
 
     int error() const {
         return (int)m_error;

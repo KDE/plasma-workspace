@@ -39,7 +39,7 @@ class COLORCORRECT_EXPORT Geolocator : public QObject, public Plasma::DataEngine
 
 public:
     explicit Geolocator(QObject *parent = nullptr);
-    virtual ~Geolocator() = default;
+    ~Geolocator() override = default;
 
     double latitude() const {
         return m_latitude;

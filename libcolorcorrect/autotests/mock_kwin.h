@@ -32,7 +32,7 @@ class kwin_dbus : public QObject
 
 public:
     kwin_dbus();
-    ~kwin_dbus();
+    ~kwin_dbus() override;
 
     bool registerDBus();
     bool unregisterDBus();

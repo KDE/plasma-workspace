@@ -38,7 +38,7 @@ Q_SIGNALS:
     void dataReady(const Plasma::DataEngine::Data& data);
 
 protected:
-    virtual void run();
+    void run() override;
 
 private:
     gps_data_t* m_gpsdata;
@@ -52,9 +52,9 @@ class Gps : public GeolocationProvider
     Q_OBJECT
 public:
     explicit Gps(QObject *parent = 0, const QVariantList &args = QVariantList());
-    ~Gps();
+    ~Gps() override;
 
-    void update();
+    void update() override;
 
 private:
     Gpsd* m_gpsd;

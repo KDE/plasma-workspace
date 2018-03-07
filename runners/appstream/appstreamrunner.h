@@ -31,7 +31,7 @@ Q_OBJECT
 
 public:
     InstallerRunner(QObject *parent, const QVariantList &args);
-    ~InstallerRunner();
+    ~InstallerRunner() override;
 
     void match(Plasma::RunnerContext &context) override;
     void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
