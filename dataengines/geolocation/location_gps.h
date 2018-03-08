@@ -51,7 +51,7 @@ class Gps : public GeolocationProvider
 {
     Q_OBJECT
 public:
-    explicit Gps(QObject *parent = 0, const QVariantList &args = QVariantList());
+    explicit Gps(QObject *parent = nullptr, const QVariantList &args = QVariantList());
     ~Gps() override;
 
     void update() override;

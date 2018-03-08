@@ -135,7 +135,7 @@ void PlacesRunner::run(const Plasma::RunnerContext &context, const Plasma::Query
     Q_UNUSED(context);
     //I don't just pass the model index because the list could change before the user clicks on it, which would make everything go wrong. Ideally we don't want things to go wrong.
     if (action.data().type() == QVariant::Url) {
-        new KRun(action.data().toUrl(), 0);
+        new KRun(action.data().toUrl(), nullptr);
     } else if (action.data().canConvert<QString>()) {
         //search our list for the device with the same udi, then set it up (mount it).
         QString deviceUdi = action.data().toString();

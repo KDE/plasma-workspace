@@ -60,7 +60,7 @@ void TestChromeBookmarks::itShouldFindNothingWhenPrepareIsNotCalled()
 
 void TestChromeBookmarks::itShouldGracefullyExitWhenFileIsNotFound()
 {
-    FakeFindProfile finder(QList<Profile>() << Profile("FileNotExisting.json", NULL));
+    FakeFindProfile finder(QList<Profile>() << Profile("FileNotExisting.json", nullptr));
     Chrome *chrome = new Chrome(&finder, this);
     chrome->prepare();
     QCOMPARE(chrome->match("any", true).size(), 0);
@@ -68,7 +68,7 @@ void TestChromeBookmarks::itShouldGracefullyExitWhenFileIsNotFound()
 
 
 void verifyMatch(BookmarkMatch &match, const QString &title, const QString &url, qreal relevance, QueryMatch::Type type) {
-    QueryMatch queryMatch = match.asQueryMatch(NULL);
+    QueryMatch queryMatch = match.asQueryMatch(nullptr);
     QCOMPARE(queryMatch.text(), title);
     QCOMPARE(queryMatch.data().toString(), url);
     QCOMPARE(queryMatch.relevance(), relevance);

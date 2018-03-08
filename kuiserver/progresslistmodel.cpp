@@ -31,7 +31,7 @@
 
 ProgressListModel::ProgressListModel(QObject *parent)
         : QAbstractItemModel(parent), QDBusContext(), m_jobId(1),
-          m_uiServer(0)
+          m_uiServer(nullptr)
 {
     m_serviceWatcher = new QDBusServiceWatcher(this);
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
@@ -273,7 +273,7 @@ void ProgressListModel::registerService(const QString &serviceName, const QStrin
             if (client->isValid()) {
 
                 delete m_uiServer;
-                m_uiServer = 0;
+                m_uiServer = nullptr;
 
                 m_serviceWatcher->addWatchedService(serviceName);
                 m_registeredServices.insert(serviceName, client);

@@ -39,8 +39,8 @@ namespace Plasma
 
 OpenWidgetAssistant::OpenWidgetAssistant(QWidget *parent)
     : KAssistantDialog(parent),
-      m_fileWidget(0),
-      m_filePageWidget(0)
+      m_fileWidget(nullptr),
+      m_filePageWidget(nullptr)
 {
     m_filePageWidget = new QWidget(this);
 

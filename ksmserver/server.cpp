@@ -93,7 +93,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "switchuserdialog.h"
 
-KSMServer* the_server = 0;
+KSMServer* the_server = nullptr;
 
 KSMServer* KSMServer::self()
 {
@@ -108,10 +108,10 @@ KProcess* KSMServer::startApplication( const QStringList& cmd, const QString& cl
 {
     QStringList command = cmd;
     if ( command.isEmpty() )
-        return NULL;
+        return nullptr;
     if ( !userId.isEmpty()) {
         struct passwd* pw = getpwuid( getuid());
-        if( pw != NULL && userId != QString::fromLocal8Bit( pw->pw_name )) {
+        if( pw != nullptr && userId != QString::fromLocal8Bit( pw->pw_name )) {
             command.prepend( QStringLiteral("--") );
             command.prepend( userId );
             command.prepend( QStringLiteral("-u") );
@@ -144,7 +144,7 @@ KProcess* KSMServer::startApplication( const QStringList& cmd, const QString& cl
         for ( int i=1; i < n; i++)
            argList.append( command[i]);
         klauncher.exec_blind(app, argList );
-        return NULL;
+        return nullptr;
     }
 }
 
@@ -159,11 +159,11 @@ void KSMServer::executeCommand( const QStringList& command )
     KProcess::execute( command );
 }
 
-IceAuthDataEntry *authDataEntries = 0;
+IceAuthDataEntry *authDataEntries = nullptr;
 
-static QTemporaryFile *remTempFile = 0;
+static QTemporaryFile *remTempFile = nullptr;
 
-static IceListenObj *listenObjs = 0;
+static IceListenObj *listenObjs = nullptr;
 int numTransports = 0;
 static bool only_local = 0;
 
@@ -389,7 +389,7 @@ Status SetAuthentication_local (int count, IceListenObj *listenObjs)
         char *prot = IceGetListenConnectionString(listenObjs[i]);
         if (!prot) continue;
         char *host = strchr(prot, '/');
-        char *sock = 0;
+        char *sock = nullptr;
         if (host) {
             *host=0;
             host++;
@@ -419,7 +419,7 @@ Status SetAuthentication (int count, IceListenObj *listenObjs,
         return 0;
 
     if ((*authDataEntries = (IceAuthDataEntry *) malloc (
-                         count * 2 * sizeof (IceAuthDataEntry))) == NULL)
+                         count * 2 * sizeof (IceAuthDataEntry))) == nullptr)
         return 0;
 
     FILE *addAuthFile = fopen(QFile::encodeName(addTempFile.fileName()).constData(), "r+");
@@ -499,7 +499,7 @@ void FreeAuthenticationData(int count, IceAuthDataEntry *authDataEntries)
     }
 
     delete remTempFile;
-    remTempFile = 0;
+    remTempFile = nullptr;
 }
 
 static int Xio_ErrorHandler( Display * )
@@ -510,7 +510,7 @@ static int Xio_ErrorHandler( Display * )
     if (the_server)
     {
        KSMServer *server = the_server;
-       the_server = 0;
+       the_server = nullptr;
        server->cleanUp();
        // Don't delete server!!
     }
@@ -534,7 +534,7 @@ static void sighandler(int sig)
     if (the_server)
     {
        KSMServer *server = the_server;
-       the_server = 0;
+       the_server = nullptr;
        server->cleanUp();
        delete server;
     }
@@ -560,7 +560,7 @@ void KSMWatchProc ( IceConn iceConn, IcePointer client_data, Bool opening, IcePo
 static Status KSMNewClientProc ( SmsConn conn, SmPointer manager_data,
                                  unsigned long* mask_ret, SmsCallbacks* cb, char** failure_reason_ret)
 {
-    *failure_reason_ret = 0;
+    *failure_reason_ret = nullptr;
 
     void* client =  ((KSMServer*) manager_data )->newClient( conn );
 
@@ -604,9 +604,9 @@ extern "C" int _IceTransNoListen(const char * protocol);
 #endif
 
 KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
-  : wmProcess( NULL )
+  : wmProcess( nullptr )
   , sessionGroup( QStringLiteral( "" ) )
-  , logoutEffectWidget( NULL )
+  , logoutEffectWidget( nullptr )
 {
     if (!flags.testFlag(InitFlag::NoLockScreen)) {
         ScreenLocker::KSldApp::self()->initialize();
@@ -617,7 +617,7 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
 
     new KSMServerInterfaceAdaptor( this );
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/KSMServer"), this);
-    kcminitSignals = NULL;
+    kcminitSignals = nullptr;
     the_server = this;
     clean = false;
 
@@ -628,7 +628,7 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
     saveSession = false;
     wmPhase1WaitingCount = 0;
     KConfigGroup config(KSharedConfig::openConfig(), "General");
-    clientInteracting = 0;
+    clientInteracting = nullptr;
     xonCommand = config.readEntry( "xonCommand", "xon" );
 
     selectWm( windowManager );
@@ -728,7 +728,7 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
 KSMServer::~KSMServer()
 {
     qDeleteAll( listener );
-    the_server = 0;
+    the_server = nullptr;
     cleanUp();
 }
 
@@ -785,7 +785,7 @@ void KSMServer::ioError( IceConn /*iceConn*/  )
 void KSMServer::processData( int /*socket*/ )
 {
     IceConn iceConn = ((KSMConnection*)sender())->iceConn;
-    IceProcessMessagesStatus status = IceProcessMessages( iceConn, 0, 0 );
+    IceProcessMessagesStatus status = IceProcessMessages( iceConn, nullptr, nullptr );
     if ( status == IceProcessMessagesIOError ) {
         IceSetShutdownNegotiation( iceConn, False );
         QList<KSMClient*>::iterator it = clients.begin();
@@ -816,7 +816,7 @@ void KSMServer::deleteClient( KSMClient* client )
     clientsToKill.removeAll( client );
     clientsToSave.removeAll( client );
     if ( client == clientInteracting ) {
-        clientInteracting = 0;
+        clientInteracting = nullptr;
         handlePendingInteractions();
     }
     delete client;
@@ -834,12 +834,12 @@ void KSMServer::newConnection( int /*socket*/ )
 {
     IceAcceptStatus status;
     IceConn iceConn = IceAcceptConnection( ((KSMListener*)sender())->listenObj, &status);
-    if( iceConn == NULL )
+    if( iceConn == nullptr )
         return;
     IceSetShutdownNegotiation( iceConn, False );
     IceConnectStatus cstatus;
     while ((cstatus = IceConnectionStatus (iceConn))==IceConnectPending) {
-        (void) IceProcessMessages( iceConn, 0, 0 );
+        (void) IceProcessMessages( iceConn, nullptr, nullptr );
     }
 
     if (cstatus != IceConnectAccepted) {

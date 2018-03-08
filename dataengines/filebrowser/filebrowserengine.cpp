@@ -31,7 +31,7 @@
   if (dir == QDir(it.key()))
 
 FileBrowserEngine::FileBrowserEngine(QObject* parent, const QVariantList& args) :
-    Plasma::DataEngine(parent, args), m_dirWatch(NULL)
+    Plasma::DataEngine(parent, args), m_dirWatch(nullptr)
 {
     Q_UNUSED(args)
 

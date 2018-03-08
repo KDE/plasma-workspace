@@ -38,7 +38,7 @@ protected:
           reading(false),
           open(false),
           seekPosition(0),
-          kiojob(0)
+          kiojob(nullptr)
     {
     }
 
@@ -46,7 +46,7 @@ protected:
     {
         if (kiojob) {
             kiojob->kill();
-            kiojob = 0;
+            kiojob = nullptr;
         }
     }
 

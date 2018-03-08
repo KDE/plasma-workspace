@@ -28,7 +28,7 @@
 MouseEngine::MouseEngine(QObject* parent, const QVariantList& args)
     : Plasma::DataEngine(parent, args), timerId(0)
 #ifdef HAVE_XFIXES
-, handler(0)
+, handler(nullptr)
 #endif
 {
     Q_UNUSED(args)

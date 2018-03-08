@@ -94,7 +94,7 @@ bool FdoSelectionManager::addDamageWatch(xcb_window_t client)
     m_damageWatches[client] = damageId;
     xcb_damage_create(c, damageId, client, XCB_DAMAGE_REPORT_LEVEL_NON_EMPTY);
 
-    xcb_generic_error_t *error = Q_NULLPTR;
+    xcb_generic_error_t *error = nullptr;
     QScopedPointer<xcb_get_window_attributes_reply_t, QScopedPointerPodDeleter> attr(xcb_get_window_attributes_reply(c, attribsCookie, &error));
     QScopedPointer<xcb_generic_error_t, QScopedPointerPodDeleter> getAttrError(error);
     uint32_t events = XCB_EVENT_MASK_STRUCTURE_NOTIFY;

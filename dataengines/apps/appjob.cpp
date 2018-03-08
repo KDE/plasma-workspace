@@ -35,7 +35,7 @@ void AppJob::start()
     const QString operation = operationName();
     if (operation == QLatin1String("launch")) {
         QString path = m_source->getApp()->entryPath();
-        new KRun(QUrl(path), 0);
+        new KRun(QUrl(path), nullptr);
         setResult(true);
         return;
     }

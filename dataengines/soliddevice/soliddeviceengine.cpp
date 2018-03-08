@@ -42,14 +42,14 @@ namespace
                 return parent.as<DevIface>();
             }
         }
-        return Q_NULLPTR;
+        return nullptr;
     }
 }
 
 SolidDeviceEngine::SolidDeviceEngine(QObject* parent, const QVariantList& args)
         : Plasma::DataEngine(parent, args),
-          m_temperature(Q_NULLPTR),
-          m_notifier(Q_NULLPTR)
+          m_temperature(nullptr),
+          m_notifier(nullptr)
 {
     Q_UNUSED(args)
     m_signalmanager = new DeviceSignalMapManager(this);
@@ -657,13 +657,13 @@ void SolidDeviceEngine::deviceRemoved(const QString& udi)
     if (device.is<Solid::StorageVolume>()) {
         Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
         if (access) {
-            disconnect(access, 0, this, 0);
+            disconnect(access, nullptr, this, nullptr);
         }
     }
     else if (device.is<Solid::OpticalDisc>()) {
         Solid::OpticalDrive *drive = getAncestorAs<Solid::OpticalDrive>(device);
         if (drive) {
-            disconnect(drive, 0, this, 0);
+            disconnect(drive, nullptr, this, nullptr);
         }
     }
 

@@ -149,7 +149,7 @@ static QImage decodeNotificationSpecImageHint(const QDBusArgument& arg)
     #undef SANITY_CHECK
 
     QImage::Format format = QImage::Format_Invalid;
-    void (*fcn)(QRgb*, const char*, int) = 0;
+    void (*fcn)(QRgb*, const char*, int) = nullptr;
     if (bitsPerSample == 8) {
         if (channels == 4) {
             format = QImage::Format_ARGB32;

@@ -48,9 +48,9 @@ QMenu *VerticalMenu::leafMenu()
             leaf = act->menu();
             continue;
         }
-        return leaf == this ? 0 : leaf;
+        return leaf == this ? nullptr : leaf;
     }
-    return 0; // make gcc happy
+    return nullptr; // make gcc happy
 }
 
 void VerticalMenu::paintEvent(QPaintEvent *pe)

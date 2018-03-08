@@ -203,14 +203,14 @@ void KioMediaStreamPrivate::_k_bytestreamResult(KJob *job)
         q->error(NormalError, kioErrorString);
     } else if (seeking) {
         open = false;
-        kiojob = 0;
+        kiojob = nullptr;
         endOfDataSent = false;
         reading = false;
         q->reset();
         return;
     }
     open = false;
-    kiojob = 0;
+    kiojob = nullptr;
     qCDebug(PLATFORM) << "KIO Job is done (will delete itself) and d->kiojob reset to 0";
     endOfDataSent = true;
     q->endOfData();

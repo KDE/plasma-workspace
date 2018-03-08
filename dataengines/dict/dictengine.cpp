@@ -29,7 +29,7 @@
 
 DictEngine::DictEngine(QObject* parent, const QVariantList& args)
     : Plasma::DataEngine(parent, args)
-    , m_tcpSocket(0)
+    , m_tcpSocket(nullptr)
 {
     Q_UNUSED(args)
     m_serverName = QLatin1String("dict.org"); //In case we need to switch it later
@@ -190,7 +190,7 @@ void DictEngine::socketClosed()
     if (m_tcpSocket) {
         m_tcpSocket->deleteLater();
     }
-    m_tcpSocket = 0;
+    m_tcpSocket = nullptr;
 }
 
 bool DictEngine::sourceRequestEvent(const QString &query)
@@ -200,7 +200,7 @@ bool DictEngine::sourceRequestEvent(const QString &query)
     if (m_tcpSocket) {
         m_tcpSocket->abort(); //stop if lookup is in progress and new query is requested
         m_tcpSocket->deleteLater();
-        m_tcpSocket = 0;
+        m_tcpSocket = nullptr;
     }
 
     QStringList queryParts = query.split(':', QString::SkipEmptyParts);

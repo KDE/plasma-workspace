@@ -43,7 +43,7 @@
 #include <QDebug>
 
 KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
-    : QDialog(parent), m_processList(0)
+    : QDialog(parent), m_processList(nullptr)
 {
     setWindowTitle(i18n("System Activity"));
     setWindowIcon(QIcon::fromTheme(QStringLiteral( "utilities-system-monitor" )));

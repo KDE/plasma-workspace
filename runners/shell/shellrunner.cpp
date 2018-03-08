@@ -81,7 +81,7 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
         if (match.selectedAction() && match.selectedAction() == action(s_runInTerminalId)) {
             KToolInvocation::invokeTerminal(context.query());
         } else {
-            KRun::runCommand(context.query(), NULL);
+            KRun::runCommand(context.query(), nullptr);
         }
     }
 }

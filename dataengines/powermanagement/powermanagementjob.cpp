@@ -58,15 +58,15 @@ void PowerManagementJob::start()
         setResult(false);
         return;
     } else if (operation == QLatin1String("suspend") || operation == QLatin1String("suspendToRam")) {
-        Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, 0, 0);
+        Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, nullptr, nullptr);
         setResult(Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::SuspendState));
         return;
     } else if (operation == QLatin1String("suspendToDisk")) {
-        Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, 0, 0);
+        Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, nullptr, nullptr);
         setResult(Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::HibernateState));
         return;
     } else if (operation == QLatin1String("suspendHybrid")) {
-        Solid::PowerManagement::requestSleep(Solid::PowerManagement::HybridSuspendState, 0, 0);
+        Solid::PowerManagement::requestSleep(Solid::PowerManagement::HybridSuspendState, nullptr, nullptr);
         setResult(Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::HybridSuspendState));
         return;
     } else if (operation == QLatin1String("requestShutDown")) {

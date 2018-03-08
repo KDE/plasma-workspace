@@ -29,7 +29,7 @@ class Ip : public GeolocationProvider
 {
     Q_OBJECT
 public:
-    explicit Ip(QObject *parent = 0, const QVariantList &args = QVariantList());
+    explicit Ip(QObject *parent = nullptr, const QVariantList &args = QVariantList());
     ~Ip() override;
 
     void update() override;

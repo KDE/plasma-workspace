@@ -41,11 +41,11 @@ static void processKeyTokens(QStringList* tokens, int srcCol, int dstCol)
       // cf https://bugs.launchpad.net/libdbusmenu-qt/+bug/712565
       {"+", "plus"},
       {"-", "minus"},
-      {0, 0}
+      {nullptr, nullptr}
     };
 
     const Row* ptr = table;
-    for (; ptr->zero != 0; ++ptr) {
+    for (; ptr->zero != nullptr; ++ptr) {
         const char* from = (*ptr)[srcCol];
         const char* to = (*ptr)[dstCol];
         tokens->replaceInStrings(from, to);

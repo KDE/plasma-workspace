@@ -108,7 +108,7 @@ Solid::Device DeviceWrapper::device() const {
 }
 
 KIcon DeviceWrapper::icon() const {
-    return KIcon(m_iconName, NULL, m_emblems);
+    return KIcon(m_iconName, nullptr, m_emblems);
 }
 
 bool DeviceWrapper::isStorageAccess() const {

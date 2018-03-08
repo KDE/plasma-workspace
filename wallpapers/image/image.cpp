@@ -63,8 +63,8 @@ Image::Image(QObject *parent)
       m_dirWatch(new KDirWatch(this)),
       m_mode(SingleImage),
       m_currentSlide(-1),
-      m_model(0),
-      m_dialog(0)
+      m_model(nullptr),
+      m_dialog(nullptr)
 {
     m_wallpaperPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
@@ -656,7 +656,7 @@ void Image::showFileDialog()
             imageGlobPatterns << mime.globPatterns();
         }
 
-        m_dialog = new QFileDialog(0, i18n("Open Image"),
+        m_dialog = new QFileDialog(nullptr, i18n("Open Image"),
                                       path,
                                       i18n("Image Files") + " ("+imageGlobPatterns.join(' ') + ')');
         //i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
@@ -672,7 +672,7 @@ void Image::showFileDialog()
 
 void Image::fileDialogFinished()
 {
-    m_dialog = 0;
+    m_dialog = nullptr;
 }
 
 void Image::wallpaperBrowseCompleted()
@@ -770,7 +770,7 @@ void Image::openSlide()
     // open in image viewer
     QUrl filepath(m_wallpaperPackage.filePath("preferred"));
     qCDebug(IMAGEWALLPAPER) << "opening file " << filepath.path();
-    new KRun(filepath, NULL);
+    new KRun(filepath, nullptr);
 }
 
 void Image::pathCreated(const QString &path)

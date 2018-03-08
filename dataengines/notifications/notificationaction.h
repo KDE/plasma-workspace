@@ -32,7 +32,7 @@ class NotificationAction : public Plasma::ServiceJob
                            const QString& destination,
                            const QString& operation,
                            QMap<QString,QVariant>& parameters,
-                           QObject* parent = 0)
+                           QObject* parent = nullptr)
         : ServiceJob(destination, operation, parameters, parent),
           m_engine(engine)
         {

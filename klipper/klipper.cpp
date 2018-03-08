@@ -502,7 +502,7 @@ void Klipper::saveSession()
 
 void Klipper::disableURLGrabber()
 {
-    KMessageBox::information( 0L,
+    KMessageBox::information( nullptr,
                               i18n( "You can enable URL actions later by left-clicking on the "
                                     "Klipper icon and selecting 'Enable Clipboard Actions'" ) );
 

@@ -68,7 +68,7 @@ class WidgetExplorerPrivate
 public:
     WidgetExplorerPrivate(WidgetExplorer *w)
         : q(w),
-          containment(0),
+          containment(nullptr),
           itemModel(w),
           filterModel(w),
           activitiesConsumer(new KActivities::Consumer())
@@ -293,7 +293,7 @@ void WidgetExplorerPrivate::addContainment(Containment *containment)
 
 void WidgetExplorerPrivate::containmentDestroyed()
 {
-    containment = 0;
+    containment = nullptr;
 }
 
 void WidgetExplorerPrivate::appletAdded(Plasma::Applet *applet)
@@ -410,7 +410,7 @@ Plasma::Corona *WidgetExplorer::corona() const
         return d->containment->corona();
     }
 
-    return 0;
+    return nullptr;
 }
 
 void WidgetExplorer::addApplet(const QString &pluginName)
@@ -457,7 +457,7 @@ void WidgetExplorer::openWidgetFile()
 
     Plasma::OpenWidgetAssistant *assistant = d->openAssistant.data();
     if (!assistant) {
-        assistant = new Plasma::OpenWidgetAssistant(0);
+        assistant = new Plasma::OpenWidgetAssistant(nullptr);
         d->openAssistant = assistant;
     }
 

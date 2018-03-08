@@ -39,7 +39,7 @@ Plasma::ServiceJob* PlaceService::createJob(const QString& operation,
     QModelIndex index = m_model->index(parameters.value(QStringLiteral("placeIndex")).toInt(), 0);
 
     if (!index.isValid()) {
-        return 0;
+        return nullptr;
     }
 
     qDebug() << "Job" << operation << "with arguments" << parameters << "requested";
@@ -59,7 +59,7 @@ Plasma::ServiceJob* PlaceService::createJob(const QString& operation,
         return new TeardownDeviceJob(m_model, index, this);
     } else {
         // FIXME: BAD!  No!
-        return 0;
+        return nullptr;
     }
 }
 

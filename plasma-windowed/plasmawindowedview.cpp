@@ -39,8 +39,8 @@
 
 PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
     : QQuickView(parent),
-      m_applet(0),
-      m_statusNotifier(0),
+      m_applet(nullptr),
+      m_statusNotifier(nullptr),
       m_withStatusNotifier(false)
 {
     engine()->rootContext()->setContextProperty(QStringLiteral("root"), contentItem());

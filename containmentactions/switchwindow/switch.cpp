@@ -35,7 +35,7 @@ SwitchWindow::SwitchWindow(QObject *parent, const QVariantList &args)
       m_activityInfo(new TaskManager::ActivityInfo(this)),
       m_tasksModel(new TaskManager::TasksModel(this)),
       m_mode(AllFlat),
-      m_clearOrderTimer(0)
+      m_clearOrderTimer(nullptr)
 {
     m_tasksModel->setGroupMode(TaskManager::TasksModel::GroupDisabled);
 

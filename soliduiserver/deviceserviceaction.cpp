@@ -160,7 +160,7 @@ void DelayedExecutor::delayedExecute(const QString &udi)
     MacroExpander mx(device);
     mx.expandMacrosShellQuote(exec);
 
-    KRun::runCommand(exec, QString(), m_service.icon(), 0);
+    KRun::runCommand(exec, QString(), m_service.icon(), nullptr);
     deleteLater();
 }
 

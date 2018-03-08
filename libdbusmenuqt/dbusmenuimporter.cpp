@@ -61,7 +61,7 @@ static const char *DBUSMENU_PROPERTY_ICON_DATA_HASH = "_dbusmenu_icon_data_hash"
 
 static QAction *createKdeTitle(QAction *action, QWidget *parent)
 {
-    QToolButton *titleWidget = new QToolButton(0);
+    QToolButton *titleWidget = new QToolButton(nullptr);
     QFont font = titleWidget->font();
     font.setBold(true);
     titleWidget->setFont(font);
@@ -258,7 +258,7 @@ public:
         }
         QAction *action = m_actionForId.value(id);
         if (!action) {
-            return 0;
+            return nullptr;
         }
         return action->menu();
     }
@@ -279,7 +279,7 @@ DBusMenuImporter::DBusMenuImporter(const QString &service, const QString &path, 
 
     d->q = this;
     d->m_interface = new DBusMenuInterface(service, path, QDBusConnection::sessionBus(), this);
-    d->m_menu = 0;
+    d->m_menu = nullptr;
 
     d->m_pendingLayoutUpdateTimer = new QTimer(this);
     d->m_pendingLayoutUpdateTimer->setSingleShot(true);
@@ -327,7 +327,7 @@ void DBusMenuImporter::processPendingLayoutUpdates()
 QMenu *DBusMenuImporter::menu() const
 {
     if (!d->m_menu) {
-        d->m_menu = d->createMenu(0);
+        d->m_menu = d->createMenu(nullptr);
     }
     return d->m_menu;
 }

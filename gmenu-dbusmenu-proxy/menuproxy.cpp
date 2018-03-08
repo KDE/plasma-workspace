@@ -239,7 +239,7 @@ QByteArray MenuProxy::getWindowPropertyString(WId id, const QByteArray &name)
 
     static const long MAX_PROP_SIZE = 10000;
     auto propertyCookie = xcb_get_property(m_xConnection, false, id, atom, utf8StringAtom, 0, MAX_PROP_SIZE);
-    QScopedPointer<xcb_get_property_reply_t, QScopedPointerPodDeleter> propertyReply(xcb_get_property_reply(m_xConnection, propertyCookie, NULL));
+    QScopedPointer<xcb_get_property_reply_t, QScopedPointerPodDeleter> propertyReply(xcb_get_property_reply(m_xConnection, propertyCookie, nullptr));
     if (propertyReply.isNull()) {
         qCWarning(DBUSMENUPROXY) << "XCB property reply for atom" << name << "on" << id << "was null";
         return value;
@@ -278,7 +278,7 @@ xcb_atom_t MenuProxy::getAtom(const QByteArray &name)
     auto atom = s_atoms.value(name, XCB_ATOM_NONE);
     if (atom == XCB_ATOM_NONE) {
         const xcb_intern_atom_cookie_t atomCookie = xcb_intern_atom(m_xConnection, false, name.length(), name.constData());
-        QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> atomReply(xcb_intern_atom_reply(m_xConnection, atomCookie, Q_NULLPTR));
+        QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> atomReply(xcb_intern_atom_reply(m_xConnection, atomCookie, nullptr));
         if (!atomReply.isNull()) {
             atom = atomReply->atom;
             if (atom != XCB_ATOM_NONE) {

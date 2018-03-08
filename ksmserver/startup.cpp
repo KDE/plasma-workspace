@@ -220,7 +220,7 @@ void KSMServer::wmProcessChange()
 {
     if( state != LaunchingWM )
     { // don't care about the process when not in the wm-launching state anymore
-        wmProcess = NULL;
+        wmProcess = nullptr;
         return;
     }
     if( wmProcess->state() == QProcess::NotRunning )
@@ -270,7 +270,7 @@ void KSMServer::autoStart0Done()
     if( !kcminitSignals->isValid()) {
         qCWarning(KSMSERVER) << "kcminit not running? If we are running with mobile profile or in another platform other than X11 this is normal.";
         delete kcminitSignals;
-        kcminitSignals = 0;
+        kcminitSignals = nullptr;
         QTimer::singleShot(0, this, &KSMServer::kcmPhase1Done);
         return;
     }
@@ -536,7 +536,7 @@ void KSMServer::kcmPhase2Done()
     if (kcminitSignals) {
         disconnect( kcminitSignals, SIGNAL(phase2Done()), this, SLOT(kcmPhase2Done()));
         delete kcminitSignals;
-        kcminitSignals = 0;
+        kcminitSignals = nullptr;
     }
     waitKcmInit2 = false;
     finishStartup();

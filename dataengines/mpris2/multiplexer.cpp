@@ -86,7 +86,7 @@ void Multiplexer::removePlayer(const QString &name)
 PlayerContainer *Multiplexer::activePlayer() const
 {
     if (m_activeName.isEmpty()) {
-        return 0;
+        return nullptr;
     }
 
     PlayerContainer *container = m_playing.value(m_activeName);
@@ -182,7 +182,7 @@ void Multiplexer::setBestActive()
             } else {
                 m_activeName = QString();
                 removeAllData();
-                emit activePlayerChanged(0);
+                emit activePlayerChanged(nullptr);
             }
         }
     }

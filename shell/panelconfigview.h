@@ -53,7 +53,7 @@ class PanelConfigView : public PlasmaQuick::ConfigView
     Q_PROPERTY(Plasma::FrameSvg::EnabledBorders enabledBorders READ enabledBorders NOTIFY enabledBordersChanged)
 
 public:
-    PanelConfigView(Plasma::Containment *interface, PanelView *panelView, QWindow *parent = 0);
+    PanelConfigView(Plasma::Containment *interface, PanelView *panelView, QWindow *parent = nullptr);
     ~PanelConfigView() override;
 
     void init() override;

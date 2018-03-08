@@ -27,7 +27,7 @@ class SetupDeviceJob : public ModelJob
 
 public:
     SetupDeviceJob(KFilePlacesModel* model, QModelIndex index,
-                   QObject* parent = 0)
+                   QObject* parent = nullptr)
         : ModelJob(parent, model, index, QStringLiteral("Setup Device"))
     {
         connect(model, &KFilePlacesModel::setupDone,

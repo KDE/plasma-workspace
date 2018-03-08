@@ -62,8 +62,8 @@ private:
 
 StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId, QObject *parent)
     : Plasma::DataContainer(parent),
-      m_customIconLoader(0),
-      m_menuImporter(0),
+      m_customIconLoader(nullptr),
+      m_menuImporter(nullptr),
       m_refreshing(false),
       m_needsReRefreshing(false),
       m_titleUpdate(true),
@@ -112,7 +112,7 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
     if (slash == -1) {
         qWarning() << "Invalid notifierItemId:" << notifierItemId;
         m_valid = false;
-        m_statusNotifierItemInterface = 0;
+        m_statusNotifierItemInterface = nullptr;
         return;
     }
     QString service = notifierItemId.left(slash);

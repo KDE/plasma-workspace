@@ -188,5 +188,5 @@ void SearchRunner::Run(const QString& id, const QString& actionId)
         return;
     }
 
-    new KRun(url, 0);
+    new KRun(url, nullptr);
 }

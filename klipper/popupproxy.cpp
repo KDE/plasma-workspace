@@ -142,7 +142,7 @@ int PopupProxy::insertFromSpill( int index ) {
     const History* history = parent()->history();
     // This menu is going to be filled, so we don't need the aboutToShow()
     // signal anymore
-    disconnect( m_proxy_for_menu, 0, this, 0 );
+    disconnect( m_proxy_for_menu, nullptr, this, nullptr );
 
     // Insert history items into the current m_proxy_for_menu,
     // discarding any that doesn't match the current filter.

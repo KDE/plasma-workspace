@@ -55,7 +55,7 @@ public:
     };
     Q_ENUM(SessionType)
 
-    explicit DesktopView(Plasma::Corona *corona, QScreen *targetScreen = 0);
+    explicit DesktopView(Plasma::Corona *corona, QScreen *targetScreen = nullptr);
     ~DesktopView() override;
 
     /*This is different from screen() as is always there, even if the window is

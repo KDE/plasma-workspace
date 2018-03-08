@@ -32,7 +32,7 @@ class ProgressListDelegate
     Q_OBJECT
 
 public:
-    explicit ProgressListDelegate(QObject *parent = 0, QListView *listView = 0);
+    explicit ProgressListDelegate(QObject *parent = nullptr, QListView *listView = nullptr);
     ~ProgressListDelegate() override;
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;

@@ -174,7 +174,7 @@ void KillRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMa
 //     QString user = data[1].toString();
 
     int signal;
-    if (match.selectedAction() != NULL) {
+    if (match.selectedAction() != nullptr) {
         signal = match.selectedAction()->data().toInt();
     } else {
         signal = 9; //default: SIGKILL

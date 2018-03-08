@@ -60,7 +60,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
 #ifndef NO_LEGACY_SESSION_MANAGEMENT
-static WindowMap* windowMapPtr = 0;
+static WindowMap* windowMapPtr = nullptr;
 
 static Atom wm_save_yourself = XNone;
 static Atom wm_protocols = XNone;
@@ -113,7 +113,7 @@ void KSMServer::performLegacySessionSave()
         if (!legacyWindows.contains(leader) && windowSessionId( *it, leader ).isEmpty()) {
             SMType wtype = SM_WMCOMMAND;
             int nprotocols = 0;
-            Atom *protocols = 0;
+            Atom *protocols = nullptr;
             if( XGetWMProtocols(QX11Info::display(), leader, &protocols, &nprotocols)) {
                 for (int i=0; i<nprotocols; i++)
                     if (protocols[i] == wm_save_yourself) {
@@ -138,7 +138,7 @@ void KSMServer::performLegacySessionSave()
     XSync(QX11Info::display(), False);
     Display *newdisplay = XOpenDisplay(DisplayString(QX11Info::display()));
     if (!newdisplay) {
-        windowMapPtr = NULL;
+        windowMapPtr = nullptr;
         XSetErrorHandler(oldHandler);
         return;
     }
@@ -197,7 +197,7 @@ void KSMServer::performLegacySessionSave()
             struct timeval tmwait;
             tmwait.tv_sec = (wmSaveYourselfTimeout - msecs) / 1000;
             tmwait.tv_usec = ((wmSaveYourselfTimeout - msecs) % 1000) * 1000;
-            ::select(fd+1, &fds, NULL, &fds, &tmwait);
+            ::select(fd+1, &fds, nullptr, &fds, &tmwait);
         }
     }
     // Terminate work in new display
@@ -303,7 +303,7 @@ static QByteArray getQCStringProperty(WId w, Atom prop)
     int format, status;
     unsigned long nitems = 0;
     unsigned long extra = 0;
-    unsigned char *data = 0;
+    unsigned char *data = nullptr;
     QByteArray result = "";
     status = XGetWindowProperty( QX11Info::display(), w, prop, 0, 10000,
                                 false, XA_STRING, &type, &format,
@@ -322,7 +322,7 @@ static QStringList getQStringListProperty(WId w, Atom prop)
     int format, status;
     unsigned long nitems = 0;
     unsigned long extra = 0;
-    unsigned char *data = 0;
+    unsigned char *data = nullptr;
     QStringList result;
 
     status = XGetWindowProperty( QX11Info::display(), w, prop, 0, 10000,
@@ -391,7 +391,7 @@ WId KSMServer::windowWmClientLeader(WId w)
     int format, status;
     unsigned long nitems = 0;
     unsigned long extra = 0;
-    unsigned char *data = 0;
+    unsigned char *data = nullptr;
     Window result = w;
     status = XGetWindowProperty( QX11Info::display(), w, wm_client_leader, 0, 10000,
                                 false, XA_WINDOW, &type, &format,

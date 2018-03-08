@@ -38,7 +38,7 @@ Plasma::ServiceJob* KeyService::createJob(const QString& operation, QMap<QString
         return new LatchKeyJob(this, parameters);
     }
 
-    return 0;
+    return nullptr;
 }
 
 void KeyService::lock(bool lock)

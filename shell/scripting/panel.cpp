@@ -114,7 +114,7 @@ PanelView *Panel::panel() const
 {
     Plasma::Containment *c = containment();
     if (!c || !m_corona) {
-        return 0;
+        return nullptr;
     }
 
     return m_corona->panelView(c);

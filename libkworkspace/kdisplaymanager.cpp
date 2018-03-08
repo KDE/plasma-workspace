@@ -504,7 +504,7 @@ KDisplayManager::canShutdown()
     }
 
     if (DMType == OldKDM)
-        return strstr(ctl, ",maysd") != 0;
+        return strstr(ctl, ",maysd") != nullptr;
 
     QByteArray re;
 
@@ -611,7 +611,7 @@ KDisplayManager::isSwitchable()
 {
     if (DMType == NewGDM || DMType == LightDM) {
         QDBusObjectPath currentSeat;
-        if (getCurrentSeat(0, &currentSeat)) {
+        if (getCurrentSeat(nullptr, &currentSeat)) {
             SystemdSeat SDseat(currentSeat);
             if (SDseat.isValid()) {
                 QVariant prop = SDseat.property("CanMultiSession");
@@ -811,7 +811,7 @@ KDisplayManager::switchVT(int vt)
 {
     if (DMType == NewGDM || DMType == LightDM) {
         QDBusObjectPath currentSeat;
-        if (getCurrentSeat(0, &currentSeat)) {
+        if (getCurrentSeat(nullptr, &currentSeat)) {
             // systemd part // preferred
             if (QDBusConnection::systemBus().interface()->isServiceRegistered(SYSTEMD_SERVICE)) {
                 foreach (const QDBusObjectPath &sp, getSessionsForSeat(currentSeat)) {

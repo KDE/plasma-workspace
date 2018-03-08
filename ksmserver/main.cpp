@@ -51,9 +51,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 static const char version[] = "0.4";
 static const char description[] = I18N_NOOP( "The reliable KDE session manager that talks the standard X11R6 \nsession management protocol (XSMP)." );
 
-Display* dpy = 0;
+Display* dpy = nullptr;
 Colormap colormap = 0;
-Visual *visual = 0;
+Visual *visual = nullptr;
 
 extern KSMServer* the_server;
 
@@ -87,7 +87,7 @@ void checkComposite()
         return;
     // thanks to zack rusin and frederik for pointing me in the right direction
     // for the following bits of X11 code
-    dpy = XOpenDisplay(0); // open default display
+    dpy = XOpenDisplay(nullptr); // open default display
     if (!dpy)
     {
         qCCritical(KSMSERVER) << "Cannot connect to the X server";
@@ -127,7 +127,7 @@ void checkComposite()
 
     }
     XCloseDisplay( dpy );
-    dpy = NULL;
+    dpy = nullptr;
 }
 
 void sanity_check( int argc, char* argv[] )
@@ -222,7 +222,7 @@ void sanity_check( int argc, char* argv[] )
 
         QApplication a(argc, argv);
         const QString qmsg = msg_pre + msg + msg_post;
-        KMessageBox::error(0, qmsg, i18n("Plasma Workspace installation problem!"));
+        KMessageBox::error(nullptr, qmsg, i18n("Plasma Workspace installation problem!"));
         exit(255);
     }
 }

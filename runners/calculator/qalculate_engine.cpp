@@ -56,7 +56,7 @@ QalculateEngine::~QalculateEngine()
 {
     if (s_counter.deref()) {
         delete CALCULATOR;
-        CALCULATOR = NULL;
+        CALCULATOR = nullptr;
     }
 }
 

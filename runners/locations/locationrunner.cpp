@@ -189,7 +189,7 @@ void LocationsRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
 
     QUrl urlToRun(KUriFilter::self()->filteredUri(location, {QStringLiteral("kshorturifilter")}));
 
-    new KRun(urlToRun, 0);
+    new KRun(urlToRun, nullptr);
 }
 
 QMimeData * LocationsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
@@ -201,7 +201,7 @@ QMimeData * LocationsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
         return result;
     }
 
-    return 0;
+    return nullptr;
 }
 
 

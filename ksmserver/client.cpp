@@ -48,7 +48,7 @@ extern KSMServer* the_server;
 KSMClient::KSMClient( SmsConn conn)
 {
     smsConn = conn;
-    id = 0;
+    id = nullptr;
     resetState();
 }
 
@@ -65,7 +65,7 @@ SmProp* KSMClient::property( const char* name ) const
         if ( !qstrcmp( prop->name, name ) )
             return prop;
     }
-    return 0;
+    return nullptr;
 }
 
 void KSMClient::resetState()
@@ -86,7 +86,7 @@ char * safeSmsGenerateClientID( SmsConn /*c*/ )
 {
 //  Causes delays with misconfigured network :-/.
 //    char *ret = SmsGenerateClientID(c);
-    char* ret = NULL;
+    char* ret = nullptr;
     if (!ret) {
        if (my_addr->isEmpty()) {
 //           qCWarning(KSMSERVER, "Can't get own host name. Your system is severely misconfigured\n");
@@ -115,10 +115,10 @@ char * safeSmsGenerateClientID( SmsConn /*c*/ )
        ret = (char *)malloc(1+my_addr->length()+13+10+4+1 + /*safeness*/ 10);
        static int sequence = 0;
 
-       if (ret == NULL)
-           return NULL;
+       if (ret == nullptr)
+           return nullptr;
 
-       sprintf(ret, "1%s%.13ld%.10d%.4d", my_addr->toLatin1().constData(), (long)time(NULL),
+       sprintf(ret, "1%s%.13ld%.10d%.4d", my_addr->toLatin1().constData(), (long)time(nullptr),
            getpid(), sequence);
        sequence = (sequence + 1) % 10000;
     }

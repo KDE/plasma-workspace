@@ -31,7 +31,7 @@ class FreeSpaceNotifier : public QObject
     Q_OBJECT
 
 public:
-    explicit FreeSpaceNotifier(QObject *parent = NULL);
+    explicit FreeSpaceNotifier(QObject *parent = nullptr);
     ~FreeSpaceNotifier() override;
 
 private Q_SLOTS:

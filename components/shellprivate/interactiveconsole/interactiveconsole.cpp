@@ -62,9 +62,9 @@ static const QString s_kwinService = QStringLiteral("org.kde.KWin");
 InteractiveConsole::InteractiveConsole(QWidget *parent)
     : QDialog(parent),
       m_splitter(new QSplitter(Qt::Vertical, this)),
-      m_editorPart(0),
-      m_editor(0),
-      m_output(0),
+      m_editorPart(nullptr),
+      m_editor(nullptr),
+      m_output(nullptr),
       m_loadAction(KStandardAction::open(this, SLOT(openScriptFile()), this)),
       m_saveAction(KStandardAction::saveAs(this, SLOT(saveScript()), this)),
       m_clearAction(KStandardAction::clear(this, SLOT(clearEditor()), this)),
@@ -72,7 +72,7 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
       m_plasmaAction(new QAction(QIcon::fromTheme(QStringLiteral("plasma")), i18nc("Toolbar Button to switch to Plasma Scripting Mode", "Plasma"), this)),
       m_kwinAction(new QAction(QIcon::fromTheme(QStringLiteral("kwin")), i18nc("Toolbar Button to switch to KWin Scripting Mode", "KWin"), this)),
       m_snippetsMenu(new QMenu(i18n("Templates"), this)),
-      m_fileDialog(0),
+      m_fileDialog(nullptr),
       m_closeWhenCompleted(false),
       m_mode(PlasmaConsole)
 {
@@ -237,7 +237,7 @@ void InteractiveConsole::setScriptInterface(QObject *obj)
 {
     if (m_scriptEngine != obj) {
         if (m_scriptEngine) {
-            disconnect(m_scriptEngine, 0, this, 0);
+            disconnect(m_scriptEngine, nullptr, this, nullptr);
         }
 
         m_scriptEngine = obj;
@@ -476,7 +476,7 @@ void InteractiveConsole::saveScriptUrlSelected(int result)
     }
 
     m_fileDialog->deleteLater();
-    m_fileDialog = 0;
+    m_fileDialog = nullptr;
 }
 
 void InteractiveConsole::saveScript(const QUrl &url)

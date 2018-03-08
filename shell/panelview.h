@@ -110,7 +110,7 @@ public:
     };
     Q_ENUM(VisibilityMode)
 
-    explicit PanelView(ShellCorona *corona, QScreen *targetScreen = 0, QWindow *parent = 0);
+    explicit PanelView(ShellCorona *corona, QScreen *targetScreen = nullptr, QWindow *parent = nullptr);
     ~PanelView() override;
 
     KConfigGroup config() const override;

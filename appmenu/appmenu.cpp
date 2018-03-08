@@ -116,7 +116,7 @@ void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, con
         auto setWindowProperty = [c](WId id, xcb_atom_t &atom, const QByteArray &name, const QByteArray &value) {
             if (atom == XCB_ATOM_NONE) {
                 const xcb_intern_atom_cookie_t cookie = xcb_intern_atom(c, false, name.length(), name.constData());
-                QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> reply(xcb_intern_atom_reply(c, cookie, Q_NULLPTR));
+                QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> reply(xcb_intern_atom_reply(c, cookie, nullptr));
                 if (reply.isNull()) {
                     return;
                 }
@@ -159,7 +159,7 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
 
     auto *importer = new KDBusMenuImporter(serviceName, menuObjectPath.path(), this);
     QMetaObject::invokeMethod(importer, "updateMenu", Qt::QueuedConnection);
-    disconnect(importer, 0, this, 0); // ensure we don't popup multiple times in case the menu updates again later
+    disconnect(importer, nullptr, this, nullptr); // ensure we don't popup multiple times in case the menu updates again later
 
     connect(importer, &KDBusMenuImporter::menuUpdated, this, [=](QMenu *m) {
         QMenu *menu = importer->menu();

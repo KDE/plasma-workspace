@@ -91,12 +91,12 @@ QString KdePlatformPlugin::applicationName() const
 
 QObject *KdePlatformPlugin::createBackend()
 {
-    return 0;
+    return nullptr;
 }
 
 QObject *KdePlatformPlugin::createBackend(const QString &/*library*/, const QString &/*version*/)
 {
-    return 0;
+    return nullptr;
 }
 
 bool KdePlatformPlugin::isMimeTypeAvailable(const QString &/*mimeType*/) const

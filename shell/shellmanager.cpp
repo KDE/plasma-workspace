@@ -58,7 +58,7 @@ class ShellManager::Private {
 public:
     Private()
         : currentHandler(nullptr),
-          corona(0)
+          corona(nullptr)
     {
         shellUpdateDelay.setInterval(100);
         shellUpdateDelay.setSingleShot(true);
@@ -170,14 +170,14 @@ void ShellManager::updateShell()
     d->shellUpdateDelay.stop();
 
     if (d->handlers.isEmpty()) {
-        KMessageBox::error(0, //wID, but we don't have a window yet
+        KMessageBox::error(nullptr, //wID, but we don't have a window yet
                            i18nc("Fatal error message body","All shell packages missing.\nThis is an installation issue, please contact your distribution"),
                            i18nc("Fatal error message title", "Plasma Cannot Start"));
         qCritical("We have no shell handlers installed");
         QCoreApplication::exit(-1);
     }
 
-    QObject *handler = 0;
+    QObject *handler = nullptr;
 
     if (!s_fixedShell.isEmpty()) {
         QList<QObject *>::const_iterator it = std::find_if (d->handlers.cbegin(), d->handlers.cend(), [=] (QObject *handler) {
@@ -186,7 +186,7 @@ void ShellManager::updateShell()
         if (it != d->handlers.cend()) {
             handler = *it;
         } else {
-            KMessageBox::error(0,
+            KMessageBox::error(nullptr,
                                i18nc("Fatal error message body", "Shell package %1 cannot be found", s_fixedShell),
                                i18nc("Fatal error message title", "Plasma Cannot Start"));
             qCritical("Unable to find the shell plugin '%s'", qPrintable(s_fixedShell));

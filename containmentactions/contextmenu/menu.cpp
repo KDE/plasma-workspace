@@ -46,13 +46,13 @@
 
 ContextMenu::ContextMenu(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args),
-      m_runCommandAction(0),
-      m_lockScreenAction(0),
-      m_logoutAction(0),
-      m_separator1(0),
-      m_separator2(0),
-      m_separator3(0),
-      m_buttons(0)
+      m_runCommandAction(nullptr),
+      m_lockScreenAction(nullptr),
+      m_logoutAction(nullptr),
+      m_separator1(nullptr),
+      m_separator2(nullptr),
+      m_separator3(nullptr),
+      m_buttons(nullptr)
 {
 }
 
@@ -189,7 +189,7 @@ QAction *ContextMenu::action(const QString &name)
         //FIXME: remove action: make removal of current activity possible
         return c->actions()->action(name);
     }
-    return 0;
+    return nullptr;
 }
 
 void ContextMenu::runCommand()
@@ -256,7 +256,7 @@ QWidget* ContextMenu::createConfigurationInterface(QWidget* parent)
     m_buttons->setExclusive(false);
 
     foreach (const QString &name, m_actionOrder) {
-        QCheckBox *item = 0;
+        QCheckBox *item = nullptr;
 
         if (name == QLatin1String("_context")) {
             item = new QCheckBox(widget);

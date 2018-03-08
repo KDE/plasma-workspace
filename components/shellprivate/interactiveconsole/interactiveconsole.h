@@ -53,7 +53,7 @@ class InteractiveConsole : public QDialog
     Q_OBJECT
 
 public:
-    InteractiveConsole(QWidget *parent = 0);
+    InteractiveConsole(QWidget *parent = nullptr);
     ~InteractiveConsole() override;
 
     enum ConsoleMode {
@@ -132,8 +132,8 @@ class InteractiveConsoleItem : public QObject
 
 public:
     InteractiveConsoleItem()
-        : QObject(0),
-          m_dialog(new InteractiveConsole(0))
+        : QObject(nullptr),
+          m_dialog(new InteractiveConsole(nullptr))
     {
         connect(m_dialog, &InteractiveConsole::scriptEngineChanged,
                 this, &InteractiveConsoleItem::scriptEngineChanged);

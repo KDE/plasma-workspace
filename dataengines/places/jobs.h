@@ -29,7 +29,7 @@ public:
     AddEditPlaceJob(KFilePlacesModel* model,
                     QModelIndex index,
                     const QVariantMap& parameters,
-                    QObject* parent = 0)
+                    QObject* parent = nullptr)
         : ModelJob(parent, model, index, (index.isValid() ? "Edit" : "Add"), parameters)
         , m_text(parameters[QStringLiteral("Name")].toString())
         , m_url(parameters[QStringLiteral("Url")].toUrl())
@@ -69,7 +69,7 @@ class ShowPlaceJob : public ModelJob
 {
 public:
     ShowPlaceJob(KFilePlacesModel* model, const QModelIndex& index,
-                 bool show = true, QObject* parent = 0)
+                 bool show = true, QObject* parent = nullptr)
         : ModelJob(parent, model, index, (show ? "Show" : "Hide"))
         , m_show(show)
     {}
@@ -87,7 +87,7 @@ class TeardownDeviceJob : public ModelJob
 {
 public:
     TeardownDeviceJob(KFilePlacesModel* model, const QModelIndex& index,
-                      QObject* parent = 0)
+                      QObject* parent = nullptr)
         : ModelJob(parent, model, index, QStringLiteral("Teardown Device"))
     {}
 

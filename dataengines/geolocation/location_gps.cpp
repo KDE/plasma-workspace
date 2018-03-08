@@ -43,7 +43,7 @@ void Gpsd::update()
 void Gpsd::run()
 {
 #if defined( GPSD_API_MAJOR_VERSION ) && ( GPSD_API_MAJOR_VERSION >= 3 ) && defined( WATCH_ENABLE )
-    gps_stream(m_gpsdata, WATCH_ENABLE, NULL);
+    gps_stream(m_gpsdata, WATCH_ENABLE, nullptr);
 #else
     gps_query(m_gpsdata, "w+x\n");
 #endif
@@ -76,9 +76,9 @@ void Gpsd::run()
 
 Gps::Gps(QObject* parent, const QVariantList& args)
     : GeolocationProvider(parent, args),
-      m_gpsd(0)
+      m_gpsd(nullptr)
 #if GPSD_API_MAJOR_VERSION >= 5
-    , m_gpsdata(0)
+    , m_gpsdata(nullptr)
 #endif
 {
 #if GPSD_API_MAJOR_VERSION >= 5

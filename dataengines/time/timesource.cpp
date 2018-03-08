@@ -42,8 +42,8 @@ TimeSource::TimeSource(const QString &name, QObject *parent)
       m_offset(0),
       m_latitude(0),
       m_longitude(0),
-      m_sun(0),
-      m_moon(0),
+      m_sun(nullptr),
+      m_moon(nullptr),
       m_moonPosition(false),
       m_solarPosition(false),
       m_local(false)

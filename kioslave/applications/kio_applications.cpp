@@ -66,7 +66,7 @@ static void createFileEntry(KIO::UDSEntry& entry, const KService::Ptr& service, 
     entry.insert(KIO::UDSEntry::UDS_SIZE, 0);
     const QString localPath = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, QStringLiteral("%1.desktop").arg(service->desktopEntryName()));
     entry.insert(KIO::UDSEntry::UDS_LOCAL_PATH, localPath);
-    entry.insert(KIO::UDSEntry::UDS_MODIFICATION_TIME, time(0));
+    entry.insert(KIO::UDSEntry::UDS_MODIFICATION_TIME, time(nullptr));
     entry.insert(KIO::UDSEntry::UDS_ICON_NAME, service->icon());
 }
 

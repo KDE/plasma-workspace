@@ -40,7 +40,7 @@ StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *p
     : Plasma::Corona(parent),
       m_coronaPlugin(coronaPlugin),
       m_activityConsumer(new KActivities::Consumer(this)),
-      m_view(0)
+      m_view(nullptr)
 {
     qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", QStringLiteral("It is not possible to create objects of type Desktop"));
     qmlRegisterUncreatableType<PanelView>("org.kde.plasma.shell", 2, 0, "Panel", QStringLiteral("It is not possible to create objects of type Panel"));
@@ -226,7 +226,7 @@ Plasma::Containment *StandaloneAppCorona::addPanel(const QString &plugin)
     //a corona useful also when launched in fullshell
     Plasma::Containment *panel = createContainment(plugin);
     if (!panel) {
-        return 0;
+        return nullptr;
     }
 
     return panel;

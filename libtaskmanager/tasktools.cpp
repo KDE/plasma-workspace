@@ -725,13 +725,13 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
         }
 
         if (service && service->isApplication()) {
-            KRun::runApplication(*service, urls, nullptr, 0, {},
+            KRun::runApplication(*service, urls, nullptr, KRun::RunFlags(), QString(),
                 KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 
             KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
                 QStringLiteral("org.kde.libtaskmanager"));
         } else {
-            new KRun(appData.url, 0, false, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+            new KRun(appData.url, nullptr, false, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
 
             if (!appData.id.isEmpty()) {
                 KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + appData.id),

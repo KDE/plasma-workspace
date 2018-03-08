@@ -265,7 +265,7 @@ bool Applet::locked() const
 
 Plasma::Applet *Applet::applet() const
 {
-    return 0;
+    return nullptr;
 }
 
 }

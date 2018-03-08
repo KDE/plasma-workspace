@@ -94,11 +94,11 @@ int main()
         goto doit;
     config_time = st.st_mtime;
     config = fopen(filename.c_str(), "r");
-    if( config == NULL )
+    if( config == nullptr )
         goto doit;
     filename = kdehome + "/startupconfigkeys";
     keys = fopen(filename.c_str(), "r");
-    if( keys == NULL )
+    if( keys == nullptr )
     {
         fclose(config);
         return 2;
@@ -109,11 +109,11 @@ int main()
         char keyline[ 1024 ];
         char line[ 1024 ];
 
-        if( fgets( keyline, 1023, keys ) == NULL )
+        if( fgets( keyline, 1023, keys ) == nullptr )
             return 0;
         if( (nl = strchr( keyline, '\n' )) )
             *nl = '\0';
-        if( fgets( line, 1023, config ) == NULL )
+        if( fgets( line, 1023, config ) == nullptr )
             break;
         if( (nl = strchr( line, '\n' )) )
             *nl = '\0';
@@ -121,7 +121,7 @@ int main()
             break;
         for(;;)
             {
-            if( fgets( line, 1023, config ) == NULL )
+            if( fgets( line, 1023, config ) == nullptr )
                 goto doit2;
             if( (nl = strchr( line, '\n' )) )
                 *nl = '\0';

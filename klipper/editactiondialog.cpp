@@ -83,7 +83,7 @@ class ActionOutputDelegate : public QItemDelegate {
 
 class ActionDetailModel : public QAbstractTableModel {
     public:
-        ActionDetailModel(ClipAction* action, QObject* parent = 0);
+        ActionDetailModel(ClipAction* action, QObject* parent = nullptr);
         QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
         bool setData(const QModelIndex& index, const QVariant& value, int role = Qt::EditRole) override;
         Qt::ItemFlags flags(const QModelIndex& index) const override;
@@ -132,7 +132,7 @@ void ActionDetailModel::setIconForCommand(ClipCommand& cmd)
     QPixmap iconPix = KIconLoader::global()->loadIcon(
                                         command, KIconLoader::Small, 0,
                                         KIconLoader::DefaultState,
-                                        QStringList(), 0, true /* canReturnNull */ );
+                                        QStringList(), nullptr, true /* canReturnNull */ );
 
     if ( !iconPix.isNull() ) {
         cmd.icon = command;

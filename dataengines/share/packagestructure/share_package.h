@@ -25,7 +25,7 @@
 class SharePackage : public KPackage::PackageStructure
 {
 public:
-    SharePackage(QObject *parent = 0, QVariantList args = QVariantList());
+    SharePackage(QObject *parent = nullptr, QVariantList args = QVariantList());
     void initPackage(KPackage::Package *package) override;
 };
 

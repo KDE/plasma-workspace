@@ -20,7 +20,7 @@
 #include <QDebug>
 #include <KProcess>
 ExecutableContainer::ExecutableContainer(const QString& command, QObject* parent)
-    : Plasma::DataContainer(parent), m_process(0)
+    : Plasma::DataContainer(parent), m_process(nullptr)
 {
     setObjectName(command);
     connect(this, &Plasma::DataContainer::updateRequested, this, &ExecutableContainer::exec);
@@ -30,7 +30,7 @@ ExecutableContainer::ExecutableContainer(const QString& command, QObject* parent
 ExecutableContainer::~ExecutableContainer()
 {
     if (m_process) {
-        disconnect(m_process, 0, this, 0);
+        disconnect(m_process, nullptr, this, nullptr);
     }
     delete m_process;
 }

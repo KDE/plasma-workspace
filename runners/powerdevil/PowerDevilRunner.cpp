@@ -251,10 +251,10 @@ void PowerDevilRunner::run(const Plasma::RunnerContext &context, const Plasma::Q
         switch ((Solid::PowerManagement::SleepState)match.data().toInt()) {
             case Solid::PowerManagement::SuspendState:
             case Solid::PowerManagement::StandbyState:
-                Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, 0, 0);
+                Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, nullptr, nullptr);
                 break;
             case Solid::PowerManagement::HibernateState:
-                Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, 0, 0);
+                Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, nullptr, nullptr);
                 break;
         }
     }

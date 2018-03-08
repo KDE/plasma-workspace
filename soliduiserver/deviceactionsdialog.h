@@ -32,7 +32,7 @@ class DeviceActionsDialog : public KDialog
     Q_OBJECT
 
 public:
-    DeviceActionsDialog(QWidget *parent=0);
+    DeviceActionsDialog(QWidget *parent=nullptr);
     ~DeviceActionsDialog() override;
 
     void setDevice(const Solid::Device &device);

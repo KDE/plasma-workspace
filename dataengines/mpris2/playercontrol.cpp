@@ -86,14 +86,14 @@ QDBusObjectPath PlayerControl::trackId() const
 
 void PlayerControl::containerDestroyed()
 {
-    m_container = 0;
+    m_container = nullptr;
 }
 
 Plasma::ServiceJob* PlayerControl::createJob(const QString& operation,
                                              QMap<QString,QVariant>& parameters)
 {
     if (!m_container)
-        return 0;
+        return nullptr;
     return new PlayerActionJob(operation, parameters, this);
 }
 

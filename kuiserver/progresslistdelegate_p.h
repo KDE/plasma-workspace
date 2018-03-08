@@ -43,7 +43,7 @@ public:
         editorHeight(0),
         iconWidth(0),
         listView(listView),
-        progressBar(new QProgressBar(0))
+        progressBar(new QProgressBar(nullptr))
     {
     }
 

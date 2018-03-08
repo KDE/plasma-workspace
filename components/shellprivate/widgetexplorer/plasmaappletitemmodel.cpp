@@ -355,13 +355,13 @@ QMimeData *PlasmaAppletItemModel::mimeData(const QModelIndexList &indexes) const
 {
     //qDebug() << "GETTING MIME DATA\n";
     if (indexes.count() <= 0) {
-        return 0;
+        return nullptr;
     }
 
     QStringList types = mimeTypes();
 
     if (types.isEmpty()) {
-        return 0;
+        return nullptr;
     }
 
     QMimeData *data = new QMimeData();

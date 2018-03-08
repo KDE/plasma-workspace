@@ -70,7 +70,7 @@ void TimeEngine::init()
     itimerspec timespec;
     memset(&timespec, 0, sizeof(timespec)); //set all timers to 0 seconds, which creates a timer that won't do anything
 
-    int err = timerfd_settime(timeChangedFd, 3, &timespec, 0); //monitor for the time changing
+    int err = timerfd_settime(timeChangedFd, 3, &timespec, nullptr); //monitor for the time changing
     //(flags == TFD_TIMER_ABSTIME | TFD_TIMER_CANCEL_ON_SET). However these are not exposed in glibc so value is hardcoded
     if (err) {
         qWarning() << "Could not create timer with TFD_TIMER_CANCEL_ON_SET. Clock skews will not be detected. Error:" << qPrintable(strerror(err));

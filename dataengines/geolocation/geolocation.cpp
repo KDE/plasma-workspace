@@ -54,7 +54,7 @@ void Geolocation::init()
 
     Q_FOREACH (const KService::Ptr &service, offers) {
         QString error;
-        GeolocationProvider *plugin = service->createInstance<GeolocationProvider>(0, args, &error);
+        GeolocationProvider *plugin = service->createInstance<GeolocationProvider>(nullptr, args, &error);
         if (plugin) {
             m_plugins << plugin;
             plugin->init(&m_data, &m_accuracy);

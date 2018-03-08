@@ -33,7 +33,7 @@ class PlayerContainer : public Plasma::DataContainer
     Q_OBJECT
 
 public:
-    explicit PlayerContainer(const QString& busAddress, QObject* parent = 0);
+    explicit PlayerContainer(const QString& busAddress, QObject* parent = nullptr);
 
     QString dbusAddress() const { return m_dbusAddress; }
     OrgFreedesktopDBusPropertiesInterface* propertiesInterface() const { return m_propsIface; }

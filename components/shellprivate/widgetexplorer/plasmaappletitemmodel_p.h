@@ -83,7 +83,7 @@ public:
         ScreenshotRole = Qt::UserRole+12
     };
 
-    explicit PlasmaAppletItemModel(QObject * parent = 0);
+    explicit PlasmaAppletItemModel(QObject * parent = nullptr);
 
     QStringList mimeTypes() const override;
     QSet<QString> categories() const;

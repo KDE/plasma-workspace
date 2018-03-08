@@ -143,7 +143,7 @@ void AppMenuModel::onActiveWindowChanged(WId id)
             QByteArray value;
             if (!s_atoms.contains(name)) {
                 const xcb_intern_atom_cookie_t atomCookie = xcb_intern_atom(c, false, name.length(), name.constData());
-                QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> atomReply(xcb_intern_atom_reply(c, atomCookie, Q_NULLPTR));
+                QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> atomReply(xcb_intern_atom_reply(c, atomCookie, nullptr));
                 if (atomReply.isNull()) {
                     return value;
                 }
@@ -156,7 +156,7 @@ void AppMenuModel::onActiveWindowChanged(WId id)
 
             static const long MAX_PROP_SIZE = 10000;
             auto propertyCookie = xcb_get_property(c, false, id, s_atoms[name], XCB_ATOM_STRING, 0, MAX_PROP_SIZE);
-            QScopedPointer<xcb_get_property_reply_t, QScopedPointerPodDeleter> propertyReply(xcb_get_property_reply(c, propertyCookie, NULL));
+            QScopedPointer<xcb_get_property_reply_t, QScopedPointerPodDeleter> propertyReply(xcb_get_property_reply(c, propertyCookie, nullptr));
             if (propertyReply.isNull()) {
                 return value;
             }
@@ -196,7 +196,7 @@ void AppMenuModel::onActiveWindowChanged(WId id)
             if (updateMenuFromWindowIfHasMenu(transientId)) {
                 return;
             }
-            transientId = KWindowInfo(transientId, 0, NET::WM2TransientFor).transientFor();
+            transientId = KWindowInfo(transientId, nullptr, NET::WM2TransientFor).transientFor();
         }
 
         if (updateMenuFromWindowIfHasMenu(id)) {

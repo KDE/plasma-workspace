@@ -75,14 +75,14 @@ KRequestShutdownHelper::KRequestShutdownHelper()
     calls.die.callback = dummy_callback;
     calls.save_complete.callback = dummy_callback;
     calls.shutdown_cancelled.callback = dummy_callback;
-    char* id = NULL;
+    char* id = nullptr;
     char err[ 11 ];
-    conn = SmcOpenConnection( NULL, NULL, 1, 0,
+    conn = SmcOpenConnection( nullptr, nullptr, 1, 0,
         SmcSaveYourselfProcMask | SmcDieProcMask | SmcSaveCompleteProcMask
-        | SmcShutdownCancelledProcMask, &calls, NULL, &id, 10, err );
-    if( id != NULL )
+        | SmcShutdownCancelledProcMask, &calls, nullptr, &id, 10, err );
+    if( id != nullptr )
         free( id );
-    if( conn == NULL )
+    if( conn == nullptr )
         return; // no SM
     // set the required properties, mostly dummy values
     SmPropValue propvalue[ 5 ];
@@ -95,8 +95,8 @@ KRequestShutdownHelper::KRequestShutdownHelper()
     props[ 0 ].num_vals = 1;
     props[ 0 ].vals = &propvalue[ 0 ];
     struct passwd* entry = getpwuid( geteuid() );
-    propvalue[ 1 ].length = entry != NULL ? strlen( entry->pw_name ) : 0;
-    propvalue[ 1 ].value = (SmPointer)( entry != NULL ? entry->pw_name : "" );
+    propvalue[ 1 ].length = entry != nullptr ? strlen( entry->pw_name ) : 0;
+    propvalue[ 1 ].value = (SmPointer)( entry != nullptr ? entry->pw_name : "" );
     props[ 1 ].name = const_cast< char* >( SmUserID );
     props[ 1 ].type = const_cast< char* >( SmARRAY8 );
     props[ 1 ].num_vals = 1;
@@ -130,10 +130,10 @@ KRequestShutdownHelper::KRequestShutdownHelper()
 KRequestShutdownHelper::~KRequestShutdownHelper()
     {
 #if HAVE_X11
-    if( conn != NULL )
+    if( conn != nullptr )
         {
         delete notifier;
-        SmcCloseConnection( conn, 0, NULL );
+        SmcCloseConnection( conn, 0, nullptr );
         }
 #endif
     }
@@ -141,15 +141,15 @@ KRequestShutdownHelper::~KRequestShutdownHelper()
 void KRequestShutdownHelper::processData()
     {
 #if HAVE_X11
-    if( conn != NULL )
-        IceProcessMessages( SmcGetIceConnection( conn ), 0, 0 );
+    if( conn != nullptr )
+        IceProcessMessages( SmcGetIceConnection( conn ), nullptr, nullptr );
 #endif    
     }
 
 bool KRequestShutdownHelper::requestShutdown( ShutdownConfirm confirm )
     {
 #if HAVE_X11
-    if( conn == NULL )
+    if( conn == nullptr )
         return false;
     SmcRequestSaveYourself( conn, SmSaveBoth, True, SmInteractStyleAny,
         confirm == ShutdownConfirmNo, True );
@@ -159,7 +159,7 @@ bool KRequestShutdownHelper::requestShutdown( ShutdownConfirm confirm )
     return true;
     }
 #if HAVE_X11
-static KRequestShutdownHelper* helper = NULL;
+static KRequestShutdownHelper* helper = nullptr;
 
 static void cleanup_sm()
 {
@@ -180,7 +180,7 @@ void requestShutDown(ShutdownConfirm confirm, ShutdownType sdtype, ShutdownMode 
         return;
     }
 
-    if( helper == NULL )
+    if( helper == nullptr )
     {
         helper = new KRequestShutdownHelper();
         qAddPostRoutine(cleanup_sm);

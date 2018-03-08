@@ -300,7 +300,7 @@ void URLGrabber::execute( const ClipAction* action, int cmdIdx ) const
             ClipCommandProcess* proc = new ClipCommandProcess(*action, command, text, m_history, m_myClipItem);
             if (proc->program().isEmpty()) {
                 delete proc;
-                proc = 0L;
+                proc = nullptr;
             } else {
                 proc->start();
             }
@@ -396,7 +396,7 @@ ClipCommand::ClipCommand(const QString&_command, const QString& _description,
             QPixmap iconPix = KIconLoader::global()->loadIcon(
                                          appName, KIconLoader::Small, 0,
                                          KIconLoader::DefaultState,
-                                         QStringList(), 0, true /* canReturnNull */ );
+                                         QStringList(), nullptr, true /* canReturnNull */ );
             if ( !iconPix.isNull() )
                 icon = appName;
             else

@@ -51,7 +51,7 @@ void GeneralWidget::updateWidgets()
 }
 
 ActionsWidget::ActionsWidget(QWidget* parent)
-    : QWidget(parent), m_editActDlg(0)
+    : QWidget(parent), m_editActDlg(nullptr)
 {
     m_ui.setupUi(this);
 

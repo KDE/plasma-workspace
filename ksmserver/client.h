@@ -39,7 +39,7 @@ public:
     explicit KSMClient( SmsConn );
     ~KSMClient();
 
-    void registerClient( const char* previousId  = 0 );
+    void registerClient( const char* previousId = nullptr );
     SmsConn connection() const { return smsConn; }
 
     void resetState();

@@ -55,7 +55,7 @@ StatusNotifierTest::StatusNotifierTest(QWidget* parent) :
     QDialog(parent)
 {
     d = new StatusNotifierTestPrivate;
-    d->job = 0;
+    d->job = nullptr;
 
     init();
 
@@ -137,7 +137,7 @@ void StatusNotifierTest::updateNotifier()
     //log("update");
     if (!enabledCheck->isChecked()) {
         delete d->systemNotifier;
-        d->systemNotifier = 0;
+        d->systemNotifier = nullptr;
         return;
     } else {
         if (!d->systemNotifier) {

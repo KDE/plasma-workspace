@@ -360,7 +360,7 @@ Containment *ScriptEngine::createContainment(const QString &type, const QString 
         return nullptr;
     }
 
-    Plasma::Containment *c = 0;
+    Plasma::Containment *c = nullptr;
     if (type == QLatin1String("Panel")) {
         ShellCorona *sc = qobject_cast<ShellCorona *>(m_corona);
         StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(m_corona);

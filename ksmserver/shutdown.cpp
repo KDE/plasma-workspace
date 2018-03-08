@@ -422,7 +422,7 @@ void KSMServer::interactDone( KSMClient* client, bool cancelShutdown_ )
 {
     if ( client != clientInteracting )
         return; // should not happen
-    clientInteracting = 0;
+    clientInteracting = nullptr;
     if ( cancelShutdown_ )
         cancelShutdown( client );
     else
@@ -471,7 +471,7 @@ void KSMServer::handlePendingInteractions()
 
 void KSMServer::cancelShutdown( KSMClient* c )
 {
-    clientInteracting = 0;
+    clientInteracting = nullptr;
     qCDebug(KSMSERVER) << state;
     if ( state == ClosingSubSession ) {
         clientsToKill.clear();
@@ -482,7 +482,7 @@ void KSMServer::cancelShutdown( KSMClient* c )
         qCDebug(KSMSERVER) << "Client " << c->program() << " (" << c->clientId() << ") canceled shutdown.";
         KNotification::event( QStringLiteral( "cancellogout" ),
                               i18n( "Logout canceled by '%1'", c->program()),
-                              QPixmap() , 0l , KNotification::DefaultEvent );
+                              QPixmap() , nullptr , KNotification::DefaultEvent );
         foreach( KSMClient* c, clients ) {
             SmsShutdownCancelled( c->connection() );
             if( c->saveYourselfDone ) {
@@ -568,7 +568,7 @@ void KSMServer::completeShutdownOrCheckpoint()
 
 	qCDebug(KSMSERVER) << "state is " << state;
     if ( state == Shutdown ) {
-        KNotification *n = KNotification::event(QStringLiteral("exitkde"), QString(), QPixmap(), 0l,  KNotification::DefaultEvent); // Plasma says good bye
+        KNotification *n = KNotification::event(QStringLiteral("exitkde"), QString(), QPixmap(), nullptr,  KNotification::DefaultEvent); // Plasma says good bye
         connect(n, &KNotification::closed, this, &KSMServer::startKilling);
         state = WaitingForKNotify;
         // https://bugs.kde.org/show_bug.cgi?id=228005
@@ -695,7 +695,7 @@ void KSMServer::createLogoutEffectWidget()
 // Ok, this is rather a hack. In order to fade the whole desktop when playing the logout
 // sound, killing applications and leaving KDE, create a dummy window that triggers
 // the logout fade effect again.
-    logoutEffectWidget = new QWidget( NULL, Qt::X11BypassWindowManagerHint );
+    logoutEffectWidget = new QWidget( nullptr, Qt::X11BypassWindowManagerHint );
     logoutEffectWidget->winId(); // workaround for Qt4.3 setWindowRole() assert
     logoutEffectWidget->setWindowRole( QStringLiteral( "logouteffect" ) );
 

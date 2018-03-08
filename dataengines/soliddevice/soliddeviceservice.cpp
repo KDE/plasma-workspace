@@ -33,7 +33,7 @@ Plasma::ServiceJob* SolidDeviceService::createJob (const QString& operation,
 {
     if (operation == QLatin1String("updateFreespace")) {
         m_engine->updateStorageSpace(destination());
-        return 0;
+        return nullptr;
     }
 
     return new SolidDeviceJob (m_engine, destination(), operation, parameters);

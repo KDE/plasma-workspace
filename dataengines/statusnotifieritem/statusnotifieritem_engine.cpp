@@ -32,7 +32,7 @@ static const QString s_watcherServiceName(QStringLiteral("org.kde.StatusNotifier
 
 StatusNotifierItemEngine::StatusNotifierItemEngine(QObject *parent, const QVariantList& args)
     : Plasma::DataEngine(parent, args),
-      m_statusNotifierWatcher(0)
+      m_statusNotifierWatcher(nullptr)
 {
     Q_UNUSED(args);
     init();
@@ -114,7 +114,7 @@ void StatusNotifierItemEngine::registerWatcher(const QString& service)
 
         } else {
             delete m_statusNotifierWatcher;
-            m_statusNotifierWatcher = 0;
+            m_statusNotifierWatcher = nullptr;
             qDebug()<<"System tray daemon not reachable";
         }
     }
@@ -131,7 +131,7 @@ void StatusNotifierItemEngine::unregisterWatcher(const QString& service)
         removeAllSources();
 
         delete m_statusNotifierWatcher;
-        m_statusNotifierWatcher = 0;
+        m_statusNotifierWatcher = nullptr;
     }
 }
 

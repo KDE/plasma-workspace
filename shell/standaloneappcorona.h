@@ -34,7 +34,7 @@ class StandaloneAppCorona : public Plasma::Corona
     Q_OBJECT
 
 public:
-    explicit StandaloneAppCorona(const QString &coronaPlugin, QObject * parent = 0);
+    explicit StandaloneAppCorona(const QString &coronaPlugin, QObject * parent = nullptr);
     ~StandaloneAppCorona() override;
 
     QRect screenGeometry(int id) const override;

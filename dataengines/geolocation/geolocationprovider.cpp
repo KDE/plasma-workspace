@@ -19,8 +19,8 @@
 
 GeolocationProvider::GeolocationProvider(QObject *parent, const QVariantList &args)
     : QObject(parent),
-      m_sharedData(0),
-      m_sharedAccuracies(0),
+      m_sharedData(nullptr),
+      m_sharedAccuracies(nullptr),
       m_accuracy(1000),
       m_updateTriggers(SourceEvent),
       m_available(true),

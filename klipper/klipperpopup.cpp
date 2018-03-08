@@ -71,12 +71,12 @@ KlipperPopup::KlipperPopup( History* history )
       m_textForNoMatch( i18n( "<no matches>" ) ),
       m_history( history ),
       m_helpMenu( new KHelpMenu( this, i18n("KDE cut & paste history utility"), false ) ),
-      m_popupProxy( 0 ),
-      m_filterWidget( 0 ),
-      m_filterWidgetAction( 0 ),
+      m_popupProxy( nullptr ),
+      m_filterWidget( nullptr ),
+      m_filterWidgetAction( nullptr ),
       m_nHistoryItems( 0 ),
       m_showHelp(true),
-      m_lastEvent(NULL)
+      m_lastEvent(nullptr)
 {
     ensurePolished();
     KWindowInfo windowInfo( winId(), NET::WMGeometry );
@@ -194,7 +194,7 @@ void KlipperPopup::keyPressEvent( QKeyEvent* e ) {
     // come back to this method. Remembering the last event stops
     // the infinite event loop
     if (m_lastEvent == e) {
-        m_lastEvent= NULL;
+        m_lastEvent= nullptr;
         return;
     }
     m_lastEvent= e;
@@ -267,7 +267,7 @@ void KlipperPopup::keyPressEvent( QKeyEvent* e ) {
         break;
     } //default:
     } //case
-    m_lastEvent= NULL;
+    m_lastEvent= nullptr;
 }
 
 

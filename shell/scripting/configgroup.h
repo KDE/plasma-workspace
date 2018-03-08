@@ -37,7 +37,7 @@ class ConfigGroup : public QObject
     Q_PROPERTY(QStringList groupList READ groupList NOTIFY groupListChanged)
 
 public:
-    ConfigGroup(QObject* parent=0);
+    ConfigGroup(QObject* parent=nullptr);
     ~ConfigGroup() override;
 
     KConfigGroup* configGroup();

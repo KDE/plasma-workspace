@@ -94,7 +94,7 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
 
     auto cookie = xcb_get_geometry(c, m_windowId);
     QScopedPointer<xcb_get_geometry_reply_t, QScopedPointerPodDeleter>
-        clientGeom(xcb_get_geometry_reply(c, cookie, Q_NULLPTR));
+        clientGeom(xcb_get_geometry_reply(c, cookie, nullptr));
 
     //create a container window
     auto screen = xcb_setup_roots_iterator (xcb_get_setup (c)).data;
@@ -129,7 +129,7 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     const uint32_t stackBelowData[] = {XCB_STACK_MODE_BELOW};
     xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackBelowData);
 
-    NETWinInfo wm(c, m_containerWid, screen->root, 0, 0);
+    NETWinInfo wm(c, m_containerWid, screen->root, NET::Properties(), NET::Properties2());
     wm.setOpacity(0);
 #endif
 
@@ -279,7 +279,7 @@ QImage SNIProxy::getImageNonComposite() const
     auto c = QX11Info::connection();
     auto cookie = xcb_get_geometry(c, m_windowId);
     QScopedPointer<xcb_get_geometry_reply_t, QScopedPointerPodDeleter>
-        geom(xcb_get_geometry_reply(c, cookie, Q_NULLPTR));
+        geom(xcb_get_geometry_reply(c, cookie, nullptr));
 
     if (!geom) {
         return QImage();
@@ -458,7 +458,7 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
 
     auto cookieSize = xcb_get_geometry(c, m_windowId);
     QScopedPointer<xcb_get_geometry_reply_t, QScopedPointerPodDeleter>
-        clientGeom(xcb_get_geometry_reply(c, cookieSize, Q_NULLPTR));
+        clientGeom(xcb_get_geometry_reply(c, cookieSize, nullptr));
 
     if (!clientGeom) {
         return;
@@ -466,7 +466,7 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
 
     auto cookie = xcb_query_pointer(c, m_windowId);
     QScopedPointer<xcb_query_pointer_reply_t, QScopedPointerPodDeleter>
-        pointer(xcb_query_pointer_reply(c, cookie, Q_NULLPTR));
+        pointer(xcb_query_pointer_reply(c, cookie, nullptr));
     /*qCDebug(SNIPROXY) << "samescreen" << pointer->same_screen << endl
 	<< "root x*y" << pointer->root_x << pointer->root_y << endl
 	<< "win x*y" << pointer->win_x << pointer->win_y;*/

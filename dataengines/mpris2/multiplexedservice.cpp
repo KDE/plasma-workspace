@@ -46,7 +46,7 @@ Plasma::ServiceJob* MultiplexedService::createJob(const QString& operation,
     if (m_control) {
         return m_control.data()->createJob(operation, parameters);
     }
-    return 0;
+    return nullptr;
 }
 
 void MultiplexedService::updateEnabledOperations()

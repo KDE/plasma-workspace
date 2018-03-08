@@ -855,7 +855,7 @@ QScriptValue ScriptEngine::V1::knownWallpaperPlugins(QScriptContext *context,
 QScriptValue ScriptEngine::V1::configFile(QScriptContext *context,
                                           QScriptEngine *engine)
 {
-    ConfigGroup *file = 0;
+    ConfigGroup *file = nullptr;
 
     if (context->argumentCount() > 0) {
         if (context->argument(0).isString()) {

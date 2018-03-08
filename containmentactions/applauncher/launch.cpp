@@ -42,7 +42,7 @@ QList<QAction*> AppLauncher::contextualActions()
 {
     qDeleteAll(m_actions);
     m_actions.clear();
-    makeMenu(0, m_group);
+    makeMenu(nullptr, m_group);
 
     return m_actions;
 }
@@ -61,7 +61,7 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr group)
             QAction *action = new QAction(QIcon::fromTheme(service->icon()), text, this);
             connect(action, &QAction::triggered, [action](){
                 KService::Ptr service = KService::serviceByStorageId(action->data().toString());
-                new KRun(QUrl("file://"+service->entryPath()), 0);
+                new KRun(QUrl("file://"+service->entryPath()), nullptr);
             });
             action->setData(service->storageId());
             if (menu) {

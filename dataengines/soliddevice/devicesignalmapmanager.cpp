@@ -29,7 +29,7 @@ DeviceSignalMapManager::~DeviceSignalMapManager()
 
 void DeviceSignalMapManager::mapDevice(Solid::Battery *battery, const QString &udi)
 {
-    BatterySignalMapper *map=0;
+    BatterySignalMapper *map = nullptr;
     if (!signalmap.contains(Solid::DeviceInterface::Battery)) {
         map = new BatterySignalMapper(this);
         signalmap[Solid::DeviceInterface::Battery] = map;
@@ -46,7 +46,7 @@ void DeviceSignalMapManager::mapDevice(Solid::Battery *battery, const QString &u
 
 void DeviceSignalMapManager::mapDevice(Solid::StorageAccess *storageaccess, const QString &udi)
 {
-    StorageAccessSignalMapper *map=0;
+    StorageAccessSignalMapper *map = nullptr;
     if (!signalmap.contains(Solid::DeviceInterface::StorageAccess)) {
         map = new StorageAccessSignalMapper(this);
         signalmap[Solid::DeviceInterface::StorageAccess] = map;

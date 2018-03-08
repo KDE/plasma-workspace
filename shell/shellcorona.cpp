@@ -1404,7 +1404,7 @@ void ShellCorona::loadInteractiveConsole()
 {
     if (KSharedConfig::openConfig()->isImmutable() || !KAuthorized::authorize(QStringLiteral("plasma-desktop/scripting_console"))) {
         delete m_interactiveConsole;
-        m_interactiveConsole = 0;
+        m_interactiveConsole = nullptr;
         return;
     }
 
@@ -1600,14 +1600,14 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
 
     //no valid containment in given screen, giving up
     if (!oldContainment) {
-        return 0;
+        return nullptr;
     }
 
     if (plugin.isEmpty()) {
         return oldContainment;
     }
 
-    DesktopView *view = 0;
+    DesktopView *view = nullptr;
     foreach (DesktopView *v, m_desktopViewforId) {
         if (v->containment() == oldContainment) {
             view = v;
@@ -1699,10 +1699,10 @@ void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
     }
 
     delete m_addPanelAction;
-    m_addPanelAction = 0;
+    m_addPanelAction = nullptr;
 
     delete m_addPanelsMenu;
-    m_addPanelsMenu = 0;
+    m_addPanelsMenu = nullptr;
 
     KPluginInfo::List panelContainmentPlugins = Plasma::PluginLoader::listContainmentsOfType(QStringLiteral("Panel"));
 
@@ -1814,7 +1814,7 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
 {
     Plasma::Containment *panel = createContainment(plugin);
     if (!panel) {
-        return 0;
+        return nullptr;
     }
 
     QList<Plasma::Types::Location> availableLocations;

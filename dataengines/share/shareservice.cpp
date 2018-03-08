@@ -46,7 +46,7 @@ Plasma::ServiceJob *ShareService::createJob(const QString &operation,
 ShareJob::ShareJob(const QString &destination, const QString &operation,
                    QMap<QString, QVariant> &parameters, QObject *parent)
     : Plasma::ServiceJob(destination, operation, parameters, parent),
-      m_engine(new KJSEmbed::Engine()), m_provider(0)
+      m_engine(new KJSEmbed::Engine()), m_provider(nullptr)
 {
 }
 

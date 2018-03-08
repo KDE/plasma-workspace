@@ -130,7 +130,7 @@ void SolidUiServer::showPassphraseDialog(const QString &udi,
 
     Solid::Device device(udi);
 
-    KPasswordDialog *dialog = new KPasswordDialog(0, KPasswordDialog::ShowKeepPassword);
+    KPasswordDialog *dialog = new KPasswordDialog(nullptr, KPasswordDialog::ShowKeepPassword);
 
     QString label = device.vendor();
     if (!label.isEmpty()) label+=' ';

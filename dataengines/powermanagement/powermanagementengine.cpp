@@ -379,7 +379,7 @@ Plasma::Service* PowermanagementEngine::serviceForSource(const QString &source)
         return new PowerManagementService(this);
     }
 
-    return 0;
+    return nullptr;
 }
 
 QString PowermanagementEngine::batteryStateToString(int newState) const

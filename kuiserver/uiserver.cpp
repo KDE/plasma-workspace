@@ -120,7 +120,7 @@ void UiServer::showConfigurationDialog()
     KConfigDialog *dialog = new KConfigDialog(this, QStringLiteral("configuration"),
             Configuration::self());
 
-    UIConfigurationDialog *configurationUI = new UIConfigurationDialog(0);
+    UIConfigurationDialog *configurationUI = new UIConfigurationDialog(nullptr);
 
     dialog->addPage(configurationUI, i18n("Behavior"), QStringLiteral("configure"));
 
