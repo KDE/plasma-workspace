@@ -389,6 +389,7 @@ QStringList NotificationsEngine::GetCapabilities()
         << QStringLiteral("body")
         << QStringLiteral("body-hyperlinks")
         << QStringLiteral("body-markup")
+        << QStringLiteral("body-images")
         << QStringLiteral("icon-static")
         << QStringLiteral("actions")
         ;
