@@ -1,5 +1,3 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"gmenu_dbusmenu_proxy\")
-
 add_definitions(-DQT_NO_CAST_TO_ASCII
 -DQT_NO_CAST_FROM_ASCII
 -DQT_NO_URL_CAST_FROM_STRING
@@ -39,7 +37,6 @@ target_link_libraries(gmenudbusmenuproxy
     Qt5::DBus
     KF5::ConfigCore
     KF5::WindowSystem
-    KF5::I18n
     XCB::XCB
 )
 

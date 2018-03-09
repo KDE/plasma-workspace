@@ -30,8 +30,6 @@
 #include <QMutableListIterator>
 #include <QVariantList>
 
-#include <KLocalizedString>
-
 #include <algorithm>
 
 #include "actions.h"
@@ -482,7 +480,6 @@ uint Window::GetLayout(int parentId, int recursionDepth, const QStringList &prop
 
     dbusItem.id = parentId; // TODO
     dbusItem.properties = {
-        {QStringLiteral("label"), i18n("Menu")}, // TODO use application name?
         {QStringLiteral("children-display"), QStringLiteral("submenu")}
     };
 
