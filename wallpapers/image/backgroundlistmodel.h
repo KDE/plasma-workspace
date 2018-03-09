@@ -44,7 +44,7 @@ class ImageSizeFinder : public QObject, public QRunnable
 {
     Q_OBJECT
     public:
-        ImageSizeFinder(const QString &path, QObject *parent = nullptr);
+        explicit ImageSizeFinder(const QString &path, QObject *parent = nullptr);
         void run() override;
 
     Q_SIGNALS:

@@ -40,7 +40,7 @@ class Applet : public QObject
     Q_PROPERTY(QStringList currentConfigGroup WRITE setCurrentConfigGroup READ currentConfigGroup)
 
 public:
-    Applet(QObject *parent = nullptr);
+    explicit Applet(QObject *parent = nullptr);
     ~Applet() override;
 
     QStringList configKeys() const;

@@ -48,7 +48,7 @@ class ContainmentConfigView : public PlasmaQuick::ConfigView
     Q_PROPERTY(QString containmentPlugin READ containmentPlugin WRITE setContainmentPlugin NOTIFY containmentPluginChanged)
 
 public:
-    ContainmentConfigView(Plasma::Containment *interface, QWindow *parent = nullptr);
+    explicit ContainmentConfigView(Plasma::Containment *interface, QWindow *parent = nullptr);
     ~ContainmentConfigView() override;
 
     void init() override;

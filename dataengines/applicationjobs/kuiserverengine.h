@@ -69,7 +69,7 @@ public:
                  Stopped = 2
                };
 
-    JobView(QObject *parent = nullptr);
+    explicit JobView(QObject *parent = nullptr);
     ~JobView() override;
 
     uint jobId() const;

@@ -71,7 +71,7 @@ class Image : public QObject, public QQmlParserStatus
         };
         Q_ENUM(RenderingMode)
 
-        Image(QObject* parent = nullptr);
+        explicit Image(QObject* parent = nullptr);
         ~Image() override;
 
         QUrl wallpaperPath() const;

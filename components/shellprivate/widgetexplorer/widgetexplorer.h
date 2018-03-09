@@ -44,7 +44,7 @@ class WidgetAction : public QAction
     Q_PROPERTY(bool separator READ isSeparator WRITE setSeparator NOTIFY separatorChanged)
 
 public:
-    WidgetAction(QObject *parent = nullptr);
+    explicit WidgetAction(QObject *parent = nullptr);
     WidgetAction(const QIcon &icon, const QString &text, QObject *parent);
 
 Q_SIGNALS:

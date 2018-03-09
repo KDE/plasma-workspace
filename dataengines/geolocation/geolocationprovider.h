@@ -36,7 +36,7 @@ public:
     enum UpdateTrigger { ForcedUpdate = 0, SourceEvent = 1, NetworkConnected = 2 };
     Q_DECLARE_FLAGS(UpdateTriggers, UpdateTrigger)
 
-    GeolocationProvider(QObject *parent = nullptr, const QVariantList &args = QVariantList());
+    explicit GeolocationProvider(QObject *parent = nullptr, const QVariantList &args = QVariantList());
     void init(Plasma::DataEngine::Data *data, EntryAccuracy *accuracies);
 
     UpdateTriggers updateTriggers() const;

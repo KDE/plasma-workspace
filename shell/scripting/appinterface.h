@@ -58,7 +58,7 @@ class AppInterface : public QObject
     Q_PROPERTY(QString languageId READ languageId)
 
 public:
-    AppInterface(ScriptEngine *env);
+    explicit AppInterface(ScriptEngine *env);
 
     bool hasBattery() const;
     int screenCount() const;

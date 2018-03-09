@@ -33,7 +33,7 @@ class MultiplexedService : public Plasma::Service
     Q_OBJECT
 
 public:
-    MultiplexedService(Multiplexer *multiplexer, QObject *parent = nullptr);
+    explicit MultiplexedService(Multiplexer *multiplexer, QObject *parent = nullptr);
 
 protected:
     Plasma::ServiceJob *createJob(const QString &operation,

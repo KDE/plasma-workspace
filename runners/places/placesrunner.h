@@ -31,7 +31,7 @@ class PlacesRunnerHelper : public QObject
     Q_OBJECT
 
 public:
-    PlacesRunnerHelper(PlacesRunner *runner);
+    explicit PlacesRunnerHelper(PlacesRunner *runner);
 
 public Q_SLOTS:
     void match(Plasma::RunnerContext *context);

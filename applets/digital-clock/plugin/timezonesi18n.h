@@ -31,7 +31,7 @@ class TimezonesI18n : public QObject
     Q_OBJECT
 
 public:
-    TimezonesI18n(QObject *parent = nullptr);
+    explicit TimezonesI18n(QObject *parent = nullptr);
     Q_INVOKABLE QString i18nCity(const QString &city);
     Q_INVOKABLE QString i18nContinents(const QString &continent);
     Q_INVOKABLE QString i18nCountry(QLocale::Country country);

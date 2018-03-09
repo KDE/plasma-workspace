@@ -33,7 +33,7 @@ class VerticalMenu : public QMenu
 {
 Q_OBJECT
 public:
-    VerticalMenu(QWidget * parent = nullptr);
+    explicit VerticalMenu(QWidget * parent = nullptr);
     ~VerticalMenu() override;
 
     QString serviceName() const { return m_serviceName; }

@@ -45,7 +45,7 @@ public:
         HasConfigurationInterfaceRole
     };
 
-    CurrentContainmentActionsModel(Plasma::Containment *cotainment, QObject *parent = nullptr);
+    explicit CurrentContainmentActionsModel(Plasma::Containment *cotainment, QObject *parent = nullptr);
     ~CurrentContainmentActionsModel() override;
 
     QHash<int, QByteArray> roleNames() const override;

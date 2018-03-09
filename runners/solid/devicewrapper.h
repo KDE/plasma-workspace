@@ -35,7 +35,7 @@ class DeviceWrapper : public QObject
     Q_OBJECT
 
     public:
-    DeviceWrapper(const QString& udi);
+    explicit DeviceWrapper(const QString& udi);
     ~DeviceWrapper();
 
     QString id() const;

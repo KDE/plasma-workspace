@@ -35,7 +35,7 @@ class ShareProvider : public QObject
     Q_OBJECT
 
 public:
-    ShareProvider(KJSEmbed::Engine* engine, QObject *parent = nullptr);
+    explicit ShareProvider(KJSEmbed::Engine* engine, QObject *parent = nullptr);
 
     QString method() const;
     void setMethod(const QString &method);

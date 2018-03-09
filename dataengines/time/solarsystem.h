@@ -110,7 +110,7 @@ class Sun : public SolarSystemObject
 class Moon : public SolarSystemObject
 {
     public:
-        Moon(Sun *sun);
+        explicit Moon(Sun *sun);
         ~Moon() override {}; // to not delete the Sun
 
         void calcForDateTime(const QDateTime& local, int offset) override;

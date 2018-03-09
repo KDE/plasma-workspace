@@ -54,7 +54,7 @@ class Containment : public Applet
     Q_PROPERTY(int id READ id)
 
 public:
-    Containment(Plasma::Containment *containment, QObject *parent = nullptr);
+    explicit Containment(Plasma::Containment *containment, QObject *parent = nullptr);
     ~Containment() override;
 
     uint id() const;

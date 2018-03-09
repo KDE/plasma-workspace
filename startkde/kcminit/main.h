@@ -38,7 +38,7 @@ class KCMInit : public QObject
 	Q_SCRIPTABLE void phase1Done();
 	Q_SCRIPTABLE void phase2Done();
     public:
-        KCMInit( const QCommandLineParser& args );
+        explicit KCMInit( const QCommandLineParser& args );
         ~KCMInit() override;
     private:
         bool runModule(const QString &libName, KService::Ptr service);

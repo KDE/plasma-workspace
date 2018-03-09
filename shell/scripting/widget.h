@@ -49,7 +49,7 @@ class Widget : public Applet
     Q_PROPERTY(bool locked READ locked WRITE setLocked)
 
 public:
-    Widget(Plasma::Applet *applet, QObject *parent = nullptr);
+    explicit Widget(Plasma::Applet *applet, QObject *parent = nullptr);
     ~Widget() override;
 
     uint id() const;

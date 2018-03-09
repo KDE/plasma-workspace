@@ -35,7 +35,7 @@ class OpenWidgetAssistant : public KAssistantDialog
     Q_OBJECT
 
 public:
-    OpenWidgetAssistant(QWidget *parent);
+    explicit OpenWidgetAssistant(QWidget *parent);
 
 protected Q_SLOTS:
     void finished();

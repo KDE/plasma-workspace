@@ -35,7 +35,7 @@ typedef QSharedPointer<const HistoryItem> HistoryItemConstPtr;
 class HistoryItem
 {
 public:
-    HistoryItem(const QByteArray& uuid);
+    explicit HistoryItem(const QByteArray& uuid);
     virtual ~HistoryItem();
 
     /**

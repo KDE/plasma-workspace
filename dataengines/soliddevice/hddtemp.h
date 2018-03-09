@@ -35,7 +35,7 @@ class HddTemp : public QObject
     public:
         enum DataType {Temperature=0, Unit};
         
-        HddTemp(QObject *parent = nullptr);
+        explicit HddTemp(QObject *parent = nullptr);
         ~HddTemp() override;
         QStringList sources();
         QVariant data(const QString source, const DataType type) const;

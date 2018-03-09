@@ -34,7 +34,7 @@ class KSystemActivityDialog : public QDialog
 {
         Q_OBJECT
     public:
-        KSystemActivityDialog(QWidget *parent = nullptr);
+        explicit KSystemActivityDialog(QWidget *parent = nullptr);
 
         /** Show the dialog and set the focus
          *

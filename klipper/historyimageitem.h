@@ -28,7 +28,7 @@
 class HistoryImageItem : public HistoryItem
 {
 public:
-    HistoryImageItem( const QPixmap& data );
+    explicit HistoryImageItem( const QPixmap& data );
     ~HistoryImageItem() override {}
     QString text() const override;
     bool operator==( const HistoryItem& rhs) const override {

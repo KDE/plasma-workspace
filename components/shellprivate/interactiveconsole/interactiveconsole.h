@@ -53,7 +53,7 @@ class InteractiveConsole : public QDialog
     Q_OBJECT
 
 public:
-    InteractiveConsole(QWidget *parent = nullptr);
+    explicit InteractiveConsole(QWidget *parent = nullptr);
     ~InteractiveConsole() override;
 
     enum ConsoleMode {

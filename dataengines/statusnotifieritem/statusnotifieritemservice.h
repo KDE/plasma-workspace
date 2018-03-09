@@ -36,7 +36,7 @@ class StatusNotifierItemService : public Plasma::Service
     Q_OBJECT
 
     public:
-        StatusNotifierItemService(StatusNotifierItemSource *source);
+        explicit StatusNotifierItemService(StatusNotifierItemSource *source);
         ~StatusNotifierItemService() override;
 
     protected:

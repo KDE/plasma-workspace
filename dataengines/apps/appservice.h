@@ -35,7 +35,7 @@ class AppService : public Plasma::Service
     Q_OBJECT
 
     public:
-        AppService(AppSource *source);
+        explicit AppService(AppSource *source);
         ~AppService() override;
 
     protected:

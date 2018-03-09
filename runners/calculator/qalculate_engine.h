@@ -29,7 +29,7 @@ class QalculateEngine : public QObject
 {
 	Q_OBJECT
 public:
-	QalculateEngine(QObject* parent = nullptr);
+	explicit QalculateEngine(QObject* parent = nullptr);
 	~QalculateEngine() override;
 
 	QString lastResult() const { return m_lastResult; }

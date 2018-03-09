@@ -61,7 +61,7 @@ class Panel : public Containment
     Q_PROPERTY(QString hiding READ hiding WRITE setHiding)
 
 public:
-    Panel(Plasma::Containment *containment, QObject *parent = nullptr);
+    explicit Panel(Plasma::Containment *containment, QObject *parent = nullptr);
     ~Panel() override;
 
     QString location() const;

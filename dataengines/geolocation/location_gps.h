@@ -29,7 +29,7 @@ class Gpsd : public QThread
 {
     Q_OBJECT
 public:
-    Gpsd(gps_data_t* gpsdata);
+    explicit Gpsd(gps_data_t* gpsdata);
     ~Gpsd() override;
 
     void update();

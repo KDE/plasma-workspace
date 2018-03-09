@@ -41,7 +41,7 @@ class ShareService : public Plasma::Service
     Q_OBJECT
 
 public:
-    ShareService(ShareEngine *engine);
+    explicit ShareService(ShareEngine *engine);
     Plasma::ServiceJob *createJob(const QString &operation,
                                   QMap<QString, QVariant> &parameters) override;
 };

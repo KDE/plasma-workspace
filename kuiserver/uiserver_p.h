@@ -31,7 +31,7 @@ class UIConfigurationDialog
     Q_OBJECT
 
 public:
-    UIConfigurationDialog(QWidget *parent);
+    explicit UIConfigurationDialog(QWidget *parent);
     ~UIConfigurationDialog() override;
 };
 

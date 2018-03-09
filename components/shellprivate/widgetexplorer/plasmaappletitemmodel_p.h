@@ -32,7 +32,7 @@ class PlasmaAppletItemModel;
 class PlasmaAppletItem : public KCategorizedItemsViewModels::AbstractItem
 {
 public:
-    PlasmaAppletItem(const KPluginInfo& info);
+    explicit PlasmaAppletItem(const KPluginInfo& info);
 
     QString pluginName() const;
     QString name() const override;

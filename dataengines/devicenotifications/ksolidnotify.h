@@ -43,7 +43,7 @@ class KSolidNotify : public QObject
     Q_OBJECT
 
 public:
-    KSolidNotify(QObject *parent);
+    explicit KSolidNotify(QObject *parent);
 
 signals:
     void notify(Solid::ErrorType solidError, const QString& error, const QString& errorDetails, const QString &udi);

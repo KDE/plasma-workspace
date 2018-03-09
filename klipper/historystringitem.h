@@ -29,7 +29,7 @@
 class HistoryStringItem : public HistoryItem
 {
 public:
-    HistoryStringItem( const QString& data );
+    explicit HistoryStringItem( const QString& data );
     ~HistoryStringItem() override {}
     QString text() const override;
     bool operator==( const HistoryItem& rhs) const override {
