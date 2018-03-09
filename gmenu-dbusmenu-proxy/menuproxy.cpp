@@ -227,8 +227,6 @@ void MenuProxy::onWindowRemoved(WId id)
 
 QByteArray MenuProxy::getWindowPropertyString(WId id, const QByteArray &name)
 {
-    auto *c = QX11Info::connection(); // FIXME cache
-
     QByteArray value;
 
     auto atom = getAtom(name);
@@ -240,8 +238,8 @@ QByteArray MenuProxy::getWindowPropertyString(WId id, const QByteArray &name)
     auto utf8StringAtom = getAtom(QByteArrayLiteral("UTF8_STRING"));
 
     static const long MAX_PROP_SIZE = 10000;
-    auto propertyCookie = xcb_get_property(c, false, id, atom, utf8StringAtom, 0, MAX_PROP_SIZE);
-    QScopedPointer<xcb_get_property_reply_t, QScopedPointerPodDeleter> propertyReply(xcb_get_property_reply(c, propertyCookie, NULL));
+    auto propertyCookie = xcb_get_property(m_xConnection, false, id, atom, utf8StringAtom, 0, MAX_PROP_SIZE);
+    QScopedPointer<xcb_get_property_reply_t, QScopedPointerPodDeleter> propertyReply(xcb_get_property_reply(m_xConnection, propertyCookie, NULL));
     if (propertyReply.isNull()) {
         qCWarning(DBUSMENUPROXY) << "XCB property reply for atom" << name << "on" << id << "was null";
         return value;
