@@ -37,6 +37,7 @@ QString Icons::actionIcon(const QString &actionName)
         {QStringLiteral("filenew"), QStringLiteral("document-new")}, // Pluma "New" item
         {QStringLiteral("new-window"), QStringLiteral("window-new")},
         {QStringLiteral("newwindow"), QStringLiteral("window-new")},
+        {QStringLiteral("yelp-window-new"), QStringLiteral("window-new")}, // Gnome help
         {QStringLiteral("new-tab"), QStringLiteral("tab-new")},
         {QStringLiteral("open"), QStringLiteral("document-open")},
         {QStringLiteral("open-location"), QStringLiteral("document-open-remote")},
@@ -171,6 +172,10 @@ QString Icons::actionIcon(const QString &actionName)
 
         {QStringLiteral("emptytrash"), QStringLiteral("trash-empty")},
         {QStringLiteral("movetotrash"), QStringLiteral("user-trash-symbolic")},
+
+        // Gnome help
+        {QStringLiteral("yelp-application-larger-text"), QStringLiteral("format-font-size-more")},
+        {QStringLiteral("yelp-application-smaller-text"), QStringLiteral("format-font-size-less")}, // LibreOffice
 
         // LibreOffice documents in its New menu
         {QStringLiteral("private:factory/swriter"), QStringLiteral("application-vnd.oasis.opendocument.text")},
