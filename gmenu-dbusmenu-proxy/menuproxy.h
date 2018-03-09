@@ -50,7 +50,6 @@ private:
 
     xcb_connection_t *m_xConnection;
 
-    // FIXME the get one reads "UTF8String" (reads gnome) the write thing writes "String" (writes kde)
     QByteArray getWindowPropertyString(WId id, const QByteArray &name);
     void writeWindowProperty(WId id, const QByteArray &name, const QByteArray &value);
     xcb_atom_t getAtom(const QByteArray &name);

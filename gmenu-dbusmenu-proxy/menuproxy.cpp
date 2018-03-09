@@ -240,7 +240,6 @@ QByteArray MenuProxy::getWindowPropertyString(WId id, const QByteArray &name)
     auto utf8StringAtom = getAtom(QByteArrayLiteral("UTF8_STRING"));
 
     static const long MAX_PROP_SIZE = 10000;
-    // FIXME figure out what "UT8String" is as atom type, it's 392 or 378 but I don't find that enum
     auto propertyCookie = xcb_get_property(c, false, id, atom, utf8StringAtom, 0, MAX_PROP_SIZE);
     QScopedPointer<xcb_get_property_reply_t, QScopedPointerPodDeleter> propertyReply(xcb_get_property_reply(c, propertyCookie, NULL));
     if (propertyReply.isNull()) {
