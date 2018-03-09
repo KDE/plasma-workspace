@@ -124,6 +124,10 @@ Item {
                 visible: text !== ""
                 onClicked: {
                     plasmoid.nativeInterface.trigger(this, index)
+
+                    checked = Qt.binding(function() {
+                        return plasmoid.nativeInterface.currentIndex === index;
+                    });
                 }
             }
         }

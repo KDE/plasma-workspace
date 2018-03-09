@@ -1712,6 +1712,11 @@ QModelIndex TasksModel::makeModelIndex(int row, int childRow) const
     return QModelIndex();
 }
 
+QPersistentModelIndex TasksModel::makePersistentModelIndex(int row, int childCount) const
+{
+    return QPersistentModelIndex(makeModelIndex(row, childCount));
+}
+
 void TasksModel::classBegin()
 {
     d->usedByQml = true;

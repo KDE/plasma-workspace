@@ -324,11 +324,16 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
     bool wipeAppDataCache = false;
     QVector<int> changedRoles;
 
-    if (properties & (NET::WMName | NET::WMVisibleName | NET::WMPid)
+    if (properties & (NET::WMPid)
         || properties2 & (NET::WM2DesktopFileName | NET::WM2WindowClass)) {
         wipeInfoCache = true;
         wipeAppDataCache = true;
-        changedRoles << Qt::DisplayRole << Qt::DecorationRole << AppId << AppName << GenericName << LauncherUrl << AppPid;
+        changedRoles << Qt::DecorationRole << AppId << AppName << GenericName << LauncherUrl << AppPid;
+    }
+
+    if (properties & (NET::WMName | NET::WMVisibleName)) {
+        changedRoles << Qt::DisplayRole;
+        wipeInfoCache = true;
     }
 
     if ((properties & NET::WMIcon) && usingFallbackIcon.contains(window)) {

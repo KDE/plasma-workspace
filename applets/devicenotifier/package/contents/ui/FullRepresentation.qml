@@ -22,13 +22,18 @@
  */
 
 import QtQuick 2.2
+import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-Item {
+MouseArea {
+    id: fullRep
+    property bool spontaneousOpen: false
+
+    hoverEnabled: true
     Layout.minimumWidth: units.gridUnit * 12
     Layout.minimumHeight: units.gridUnit * 12
 
@@ -39,6 +44,28 @@ Item {
         text: i18n("No Devices Available")
         visible: notifierDialog.count === 0 && !devicenotifier.pendingDelegateRemoval
     }
+
+    PlasmaCore.DataSource {
+        id: userActivitySource
+        engine: "powermanagement"
+        connectedSources: "UserActivity"
+        property int polls: 0
+        //poll only on plasmoid expanded
+        interval: !fullRep.containsMouse && !fullRep.Window.active && spontaneousOpen && plasmoid.expanded ? 3000 : 0
+        onIntervalChanged: polls = 0;
+        onDataChanged: {
+            //only do when polling
+            if (interval == 0 || polls++ < 1) {
+                return;
+            }
+
+            if (userActivitySource.data["UserActivity"]["IdleTime"] < interval) {
+                plasmoid.expanded = false;
+                spontaneousOpen = false;
+            }
+        }
+    }
+
 
     // this item is reparented to a delegate that is showing a message to draw focus to it
     PlasmaComponents.Highlight {

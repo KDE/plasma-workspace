@@ -228,7 +228,13 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
 
         // FIXME TODO connect only once
         connect(actionMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide, Qt::UniqueConnection);
-        return;
+    } else { // is it just an action without a menu?
+        const QVariant data = m_model->index(idx, 0).data(AppMenuModel::ActionRole);
+        QAction *action = static_cast<QAction *>(data.value<void *>());
+        if (action) {
+            Q_ASSERT(!action->menu());
+            action->trigger();
+        }
     }
 }
 

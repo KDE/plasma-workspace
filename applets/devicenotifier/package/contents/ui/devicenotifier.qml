@@ -266,6 +266,7 @@ Item {
         onTriggered: {
             if (plasmoid.configuration.popupOnNewDevice) { // Bug 351592
                 plasmoid.expanded = true;
+                plasmoid.fullRepresentationItem.spontaneousOpen = true;
             }
         }
     }
