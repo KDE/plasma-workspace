@@ -244,7 +244,7 @@ void Window::menuItemsChanged(const QVector<uint> &itemIds)
 
         DBusMenuItem dBusItem{
             // 0 is menu, items start at 1
-            id,
+            static_cast<int>(id),
             gMenuToDBusMenuProperties(newItem)
         };
         items.append(dBusItem);
