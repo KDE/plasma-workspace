@@ -172,6 +172,7 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
         QFile file(pkg.filePath("config", QStringLiteral("main.xml")));
         KConfigGroup cfg = m_containment->config();
         cfg = KConfigGroup(&cfg, "Wallpaper");
+        cfg = KConfigGroup(&cfg, wallpaper);
         m_currentWallpaperConfig = m_ownWallpaperConfig = new KDeclarative::ConfigPropertyMap(new KConfigLoader(cfg, &file), this);
     }
 
