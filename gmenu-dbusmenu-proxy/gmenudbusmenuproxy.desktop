@@ -1,6 +1,11 @@
 [Desktop Entry]
 Exec=gmenudbusmenuproxy
 Name=GMenuDBusMenuProxy
+Name[ca]=GMenuDBusMenuProxy
+Name[en_GB]=GMenuDBusMenuProxy
+Name[nl]=GMenuDBusMenuProxy
+Name[uk]=Проксі-меню GMenu D-Bus
+Name[x-test]=xxGMenuDBusMenuProxyxx
 Type=Application
 X-KDE-StartupNotify=false
 OnlyShowIn=KDE;
