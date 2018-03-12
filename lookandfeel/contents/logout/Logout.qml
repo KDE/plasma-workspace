@@ -83,42 +83,15 @@ PlasmaCore.ColorScope {
         onTriggered: remainingTime--
     }
 
-    function rgbToHsv(color) {
-        var max = Math.max(color.r, color.g, color.b);
-        var min = Math.min(color.r, color.g, color.b);
-        var d = max - min;
-        var h;
-        var s = (max === 0 ? 0 : d / max);
-        var v = max / 255;
-
-        switch (max) {
-        case min:
-            h = 0;
-            break;
-        case color.r:
-            h = (color.g - color.b) + d * (color.g < color.b ? 6: 0);
-            h /= 6 * d;
-            break;
-        case color.g:
-            h = (color.b - color.r) + d * 2; h /= 6 * d;
-            break;
-        case color.b:
-            h = (color.r - color.g) + d * 4; h /= 6 * d;
-            break;
-        }
-
-        return {
-            h: h,
-            s: s,
-            v: v
-        };
+    function isLightColor(color) {
+        return Math.max(color.r, color.g, color.b) > 0.5
     }
 
     Rectangle {
         id: backgroundRect
         anchors.fill: parent
         //use "black" because this is intended to look like a general darkening of the scene. a dark gray as normal background would just look too "washed out"
-        color: root.rgbToHsv(PlasmaCore.ColorScope.backgroundColor).v > 128 ? PlasmaCore.ColorScope.backgroundColor : "black"
+        color: root.isLightColor(PlasmaCore.ColorScope.backgroundColor) ? PlasmaCore.ColorScope.backgroundColor : "black"
         opacity: 0.5
     }
     MouseArea {
