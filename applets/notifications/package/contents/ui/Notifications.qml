@@ -18,6 +18,7 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -265,12 +266,34 @@ Column {
         delegate: NotificationDelegate { listModel: notificationsModel }
     }
     
-    PlasmaExtras.Heading {
-        width: parent.width
-        level: 3
-        opacity: 0.6
+    RowLayout {
+        Layout.fillWidth: true
+        spacing: units.smallSpacing
         visible: historyCount > 0
-        text: i18n("History")
+        width: parent.width
+
+        PlasmaExtras.Heading {
+            Layout.fillWidth: true
+            level: 3
+            opacity: 0.6
+            text: i18n("History")
+        }
+
+   	PlasmaComponents.ToolButton {
+            Layout.rightMargin: spacerSvgFrame.margins.right
+            iconSource: "edit-delete"
+            tooltip: i18n("Clear History")
+            onClicked: clearHistory()
+        }
+    }
+
+    // This hack is unfortunately needed to have the buttons align, 
+    // the ones in the list contain have a margin due to a frame for being a list item.
+    PlasmaCore.FrameSvgItem {
+        id : spacerSvgFrame
+        imagePath: "widgets/listitem"
+        prefix: "normal"
+        visible: false
     }
 
     // History stuff
