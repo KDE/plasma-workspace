@@ -4,6 +4,7 @@ Name=GMenuDBusMenuProxy
 Name[ca]=GMenuDBusMenuProxy
 Name[en_GB]=GMenuDBusMenuProxy
 Name[nl]=GMenuDBusMenuProxy
+Name[nn]=GMenuDBusMenuProxy
 Name[uk]=Проксі-меню GMenu D-Bus
 Name[x-test]=xxGMenuDBusMenuProxyxx
 Type=Application
