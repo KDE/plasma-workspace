@@ -22,7 +22,6 @@
 
 #include <QQmlExtensionPlugin>
 
-class QQmlEngine;
 class NotificationsHelperPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
@@ -30,7 +29,6 @@ class NotificationsHelperPlugin : public QQmlExtensionPlugin
 
 public:
     void registerTypes(const char *uri) override;
-    void initializeEngine(QQmlEngine *engine, const char *uri) override;
 
 };
 
