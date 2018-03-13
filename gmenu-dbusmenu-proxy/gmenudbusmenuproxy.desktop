@@ -2,9 +2,11 @@
 Exec=gmenudbusmenuproxy
 Name=GMenuDBusMenuProxy
 Name[ca]=GMenuDBusMenuProxy
+Name[ca@valencia]=GMenuDBusMenuProxy
 Name[en_GB]=GMenuDBusMenuProxy
 Name[nl]=GMenuDBusMenuProxy
 Name[nn]=GMenuDBusMenuProxy
+Name[pt]=GMenuDBusMenuProxy
 Name[uk]=Проксі-меню GMenu D-Bus
 Name[x-test]=xxGMenuDBusMenuProxyxx
 Type=Application
