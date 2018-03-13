@@ -21,20 +21,8 @@
 #include "thumbnailer.h"
 #include "draghelper.h"
 
-#include <QQmlNetworkAccessManagerFactory>
 #include <QUrl>
 #include <QQmlEngine>
-#include <QNetworkAccessManager>
-
-class NoAccessNetworkAccessManagerFactory : public QQmlNetworkAccessManagerFactory
-{
-public:
-    QNetworkAccessManager *create(QObject *parent) override {
-        QNetworkAccessManager *manager = new QNetworkAccessManager(parent);
-        manager->setNetworkAccessible(QNetworkAccessManager::NotAccessible);
-        return manager;
-    }
-};
 
 class UrlHelper : public QObject {
     Q_OBJECT
@@ -69,16 +57,6 @@ void NotificationsHelperPlugin::registerTypes(const char *uri)
 
     qmlRegisterSingletonType<UrlHelper>(uri, 1, 0, "UrlHelper", urlcheck_singletontype_provider);
     qmlRegisterSingletonType<DragHelper>(uri, 1, 0, "DragHelper", draghelper_singletontype_provider);
-}
-
-void NotificationsHelperPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
-{
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.notifications"));
-
-    auto oldFactory = engine->networkAccessManagerFactory();
-    engine->setNetworkAccessManagerFactory(nullptr);
-    delete oldFactory;
-    engine->setNetworkAccessManagerFactory(new NoAccessNetworkAccessManagerFactory);
 }
 
 #include "notificationshelperplugin.moc"

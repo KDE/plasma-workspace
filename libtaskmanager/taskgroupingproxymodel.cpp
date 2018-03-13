@@ -722,12 +722,23 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
         } else if (role == AbstractTasksModel::IsVirtualDesktopChangeable) {
             return d->all(proxyIndex, AbstractTasksModel::IsVirtualDesktopChangeable);
         } else if (role == AbstractTasksModel::VirtualDesktop) {
-            // TODO: Nothing needs this for now and it would add complexity to
-            // make it a list; skip it until needed.
-            return QVariant();
+            // Returns the lowest virtual desktop id among all children of the
+            // group.
+            int virtualDesktop = INT_MAX;
+
+            for (int i = 0; i < rowCount(proxyIndex); ++i) {
+                const int childVirtualDesktop = proxyIndex.child(i, 0).data(AbstractTasksModel::VirtualDesktop).toInt();
+
+                if (childVirtualDesktop < virtualDesktop) {
+                    virtualDesktop = childVirtualDesktop;
+                }
+            }
+
+            return virtualDesktop;
         } else if (role == AbstractTasksModel::ScreenGeometry) {
             // TODO: Nothing needs this for now and it would add complexity to
-            // make it a list; skip it until needed.
+            // make it a list; skip it until needed. Once it is, do it similarly
+            // to the AbstractTasksModel::VirtualDesktop case.
             return QVariant();
         } else if (role == AbstractTasksModel::Activities) {
             QStringList activities;
