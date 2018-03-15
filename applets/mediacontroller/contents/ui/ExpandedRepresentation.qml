@@ -38,6 +38,7 @@ Item {
     property int position: mpris2Source.currentData.Position || 0
     readonly property real rate: mpris2Source.currentData.Rate || 1
     readonly property double length: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
+    readonly property bool canSeek: mpris2Source.currentData.CanSeek || false
 
     // only show hours (the default for KFormat) when track is actually longer than an hour
     readonly property int durationFormattingOptions: length >= 60*60*1000*1000 ? 0 : KCoreAddons.FormatTypes.FoldHours
@@ -219,7 +220,7 @@ Item {
             spacing: units.smallSpacing
 
             // if there's no "mpris:length" in the metadata, we cannot seek, so hide it in that case
-            enabled: !root.noPlayer && root.track && seekSlider.maximumValue > 0 && mpris2Source.currentData.CanSeek ? true : false
+            enabled: !root.noPlayer && root.track && expandedRepresentation.length > 0 ? true : false
             opacity: enabled ? 1 : 0
             Behavior on opacity {
                 NumberAnimation { duration: units.longDuration }
@@ -247,6 +248,7 @@ Item {
                 Layout.fillWidth: true
                 z: 999
                 value: 0
+                visible: canSeek
 
                 onValueChanged: {
                     if (!disablePositionUpdate) {
@@ -274,6 +276,14 @@ Item {
                         }
                     }
                 }
+            }
+
+            PlasmaComponents.ProgressBar {
+                Layout.fillWidth: true
+                value: seekSlider.value
+                minimumValue: seekSlider.minimumValue
+                maximumValue: seekSlider.maximumValue
+                visible: !canSeek
             }
 
             PlasmaComponents.Label {
