@@ -48,7 +48,7 @@ PlasmaCore.ToolTipArea {
     property bool categoryShown: shownCategories.indexOf(category) != -1;
 
     readonly property int effectiveStatus: {
-        if (!categoryShown) {
+        if (!categoryShown || status === PlasmaCore.Types.HiddenStatus) {
             return PlasmaCore.Types.HiddenStatus
         } else if (forcedShown || (!forcedHidden && status !== PlasmaCore.Types.PassiveStatus)) {
             return PlasmaCore.Types.ActiveStatus
