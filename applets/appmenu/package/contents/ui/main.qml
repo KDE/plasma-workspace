@@ -86,6 +86,13 @@ Item {
                     button.clicked()
                 }
             });
+
+            plasmoid.activated.connect(function () {
+                var button = buttonRepeater.itemAt(0);
+                if (button) {
+                    button.clicked();
+                }
+            });
         }
 
         // So we can show mnemonic underlines only while Alt is pressed
