@@ -44,9 +44,14 @@ int main(int argc, char **argv)
     qunsetenv("QT_DEVICE_PIXEL_RATIO");
     QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
 
+    const bool qpaVariable = qEnvironmentVariableIsSet("QT_QPA_PLATFORM");
     KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);
     QApplication app(argc, argv);
+    if (!qpaVariable) {
+        // don't leak the env variable to processes we start
+        qunsetenv("QT_QPA_PLATFORM");
+    }
     KLocalizedString::setApplicationDomain("krunner");
 
     KQuickAddons::QtQuickSettings::init();

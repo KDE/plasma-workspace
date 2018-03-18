@@ -218,10 +218,6 @@ export KDE_SESSION_UID
 XDG_CURRENT_DESKTOP=KDE
 export XDG_CURRENT_DESKTOP
 
-#enforce wayland QPA
-QT_QPA_PLATFORM=wayland
-export QT_QPA_PLATFORM
-
 # kwin_wayland can possibly also start dbus-activated services which need env variables.
 # In that case, the update in startplasma might be too late.
 if which dbus-update-activation-environment >/dev/null 2>/dev/null ; then

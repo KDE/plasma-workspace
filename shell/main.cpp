@@ -59,8 +59,13 @@ int main(int argc, char *argv[])
 
     QQuickWindow::setDefaultAlphaBuffer(true);
 
+    const bool qpaVariable = qEnvironmentVariableIsSet("QT_QPA_PLATFORM");
     KWorkSpace::detectPlatform(argc, argv);
     QApplication app(argc, argv);
+    if (!qpaVariable) {
+        // don't leak the env variable to processes we start
+        qunsetenv("QT_QPA_PLATFORM");
+    }
     KLocalizedString::setApplicationDomain("plasmashell");
 
     // The executable's path is added to the library/plugin paths.
