@@ -18,6 +18,7 @@
 
 #include "desktopnotifier.h"
 
+#include <KDesktopFile>
 #include <KDirWatch>
 #include <KPluginFactory>
 #include <KPluginLoader>
@@ -63,9 +64,20 @@ void DesktopNotifier::dirty(const QString &path)
     Q_UNUSED(path)
 
     if (path.startsWith(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + '/' + "Trash/files")) {
-        // Trigger an update of the trash icon
-        if (QFile::exists(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation) + "/trash.desktop"))
-            org::kde::KDirNotify::emitFilesChanged(QList<QUrl>() << QUrl(QStringLiteral("desktop:/trash.desktop")));
+        QList<QUrl> trashUrls;
+
+        // Check for any .desktop file linking to trash:/ to update its icon
+        const auto desktopFiles = QDir(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation)).entryInfoList({QStringLiteral("*.desktop")});
+        for (const auto &fi : desktopFiles) {
+            KDesktopFile df(fi.absoluteFilePath());
+            if (df.hasLinkType() && df.readUrl() == QLatin1String("trash:/")) {
+                trashUrls << QUrl(QStringLiteral("desktop:/") + fi.fileName());
+            }
+        }
+
+        if (!trashUrls.isEmpty()) {
+            org::kde::KDirNotify::emitFilesChanged(trashUrls);
+        }
     } else if (path == QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs")){
         checkDesktopLocation();
     } else {
