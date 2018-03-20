@@ -1465,7 +1465,7 @@ void ShellCorona::loadKWinScriptInInteractiveConsole(const QString &script)
 }
 
 void ShellCorona::evaluateScript(const QString &script) {
-    if (immutability() != Plasma::Types::Mutable) {
+    if (immutability() != Plasma::Types::SystemImmutable) {
         if (calledFromDBus()) {
             sendErrorReply(QDBusError::Failed, QStringLiteral("Widgets are locked"));
         }
