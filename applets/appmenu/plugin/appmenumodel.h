@@ -42,7 +42,7 @@ public:
     ~AppMenuModel() override;
 
     enum AppMenuRole {
-        MenuRole = Qt::UserRole+1,
+        MenuRole = Qt::UserRole+1, // TODO this should be Qt::DisplayRole
         ActionRole
     };
 
@@ -71,12 +71,11 @@ signals:
 
 private:
     bool m_menuAvailable;
+    bool m_updatePending = false;
 
     WId m_currentWindowId = 0;
 
     QPointer<QMenu> m_menu;
-    QStringList m_activeMenu;
-    QList<QAction *> m_activeActions;
 
     QDBusServiceWatcher *m_serviceWatcher;
     QString m_serviceName;
