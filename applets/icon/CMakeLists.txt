@@ -17,4 +17,4 @@ target_link_libraries(plasma_applet_icon
 
 install(TARGETS plasma_applet_icon DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
 
-plasma_install_package(package org.kde.plasma.icon)
+plasma_install_bundled_package(package org.kde.plasma.icon)
