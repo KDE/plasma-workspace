@@ -152,7 +152,7 @@ void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, con
 
     switch (error) {
     case Solid::ErrorType::NoError:
-        if (isSafelyRemovable(udi)) {
+        if (type != SolidReplyType::Setup && isSafelyRemovable(udi)) {
             errorMsg = i18n("This device can now be safely removed.");
         }
         break;
