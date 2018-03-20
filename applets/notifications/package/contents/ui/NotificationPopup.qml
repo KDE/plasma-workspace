@@ -57,8 +57,11 @@ PlasmaCore.Dialog {
         //temporarly disable height binding, avoids an useless window resize when removing the old actions
         heightBinding.when = false;
         // notification.actions is a JS array, but we can easily append that to our model
-        notificationItem.actions.clear()
-        notificationItem.actions.append(notificationProperties.actions)
+        notificationItem.actions.clear();
+        // Workaround a crash in Qt when appending an empty list (https://codereview.qt-project.org/#/c/223985/)
+        if (notificationProperties.actions.length > 0) {
+            notificationItem.actions.append(notificationProperties.actions);
+        }
         //enable height binding again, finally do the resize
         heightBinding.when = true;
     }
