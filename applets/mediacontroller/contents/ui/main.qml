@@ -52,6 +52,8 @@ Item {
     property string artist: currentMetadata ? currentMetadata["xesam:artist"] || "" : ""
     property string albumArt: currentMetadata ? currentMetadata["mpris:artUrl"] || "" : ""
 
+    readonly property string identity: !root.noPlayer ? mpris2Source.currentData.Identity || mpris2Source.current : ""
+
     property bool noPlayer: mpris2Source.sources.length <= 1
 
     readonly property bool canControl: !root.noPlayer && mpris2Source.currentData.CanControl
@@ -64,7 +66,7 @@ Item {
     Plasmoid.switchHeight: units.gridUnit * 10
     Plasmoid.icon: albumArt ? albumArt : "media-playback-playing"
     Plasmoid.toolTipMainText: i18n("No media playing")
-    Plasmoid.toolTipSubText: ""
+    Plasmoid.toolTipSubText: identity
     Plasmoid.toolTipTextFormat: Text.PlainText
     Plasmoid.status: PlasmaCore.Types.PassiveStatus
 
@@ -252,7 +254,7 @@ Item {
                 target: plasmoid
                 icon: albumArt ? albumArt : "media-playback-playing"
                 toolTipMainText: track
-                toolTipSubText: artist ? i18nc("Artist of the song", "by %1", artist) : ""
+                toolTipSubText: artist ? i18nc("by Artist (player name)", "by %1 (%2)", artist, identity) : identity
             }
         },
         State {
@@ -263,7 +265,7 @@ Item {
                 target: plasmoid
                 icon: albumArt ? albumArt : "media-playback-paused"
                 toolTipMainText: track
-                toolTipSubText: artist ? i18nc("Artist of the song", "by %1 (paused)", artist) : i18n("Paused")
+                toolTipSubText: artist ? i18nc("by Artist (paused, player name)", "by %1 (paused, %2)", artist, identity) : i18nc("Paused (player name)", "Paused (%1)", identity)
             }
         }
     ]
