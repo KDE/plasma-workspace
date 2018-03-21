@@ -91,7 +91,6 @@ Comment[uk]=Керування мультимедійним програваче
 Comment[x-test]=xxMedia Player Controlsxx
 Comment[zh_CN]=控制媒体播放器
 Comment[zh_TW]=媒體播放器控制
-Encoding=UTF-8
 Icon=applications-multimedia
 ServiceTypes=Plasma/Applet
 Type=Service
