@@ -293,8 +293,9 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
             }
         }
 
-
         KAcceleratorManager::manage(menu);
+        menu->winId();
+        menu->windowHandle()->setTransientParent(statusNotifierIcon->window());
         menu->popup(QPoint(x, y));
     }
 }
