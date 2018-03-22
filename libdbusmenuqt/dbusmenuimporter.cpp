@@ -409,6 +409,7 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
     for (QAction *action: menu->actions()) {
         int id = action->property(DBUSMENU_PROPERTY_ID).toInt();
         if (! newDBusMenuItemIds.contains(id)) {
+            menu->removeAction(action);
             action->deleteLater();
             d->m_actionForId.remove(id);
         }
