@@ -60,7 +60,7 @@ AbstractItem {
     }
 
     onClicked: {
-        var pos = plasmoid.nativeInterface.popupPosition(taskIcon, 0, 0);
+        var pos = plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y);
 
         switch (mouse.button) {
         case Qt.LeftButton: {
