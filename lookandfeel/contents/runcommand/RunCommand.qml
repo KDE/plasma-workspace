@@ -114,8 +114,8 @@ ColumnLayout {
                     results.incrementCurrentIndex();
                 }
             }
-            Keys.onEnterPressed: results.runCurrentIndex()
-            Keys.onReturnPressed: results.runCurrentIndex()
+            Keys.onEnterPressed: results.runCurrentIndex(event)
+            Keys.onReturnPressed: results.runCurrentIndex(event)
 
             Keys.onEscapePressed: {
                 runnerWindow.visible = false
