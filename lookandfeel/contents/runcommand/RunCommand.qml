@@ -100,16 +100,18 @@ ColumnLayout {
                 if (length === 0) {
                     root.showHistory = true;
                     listView.forceActiveFocus();
-                } else {
+                } else if (results.count > 0) {
                     results.forceActiveFocus();
+                    results.decrementCurrentIndex();
                 }
             }
             Keys.onDownPressed: {
                 if (length === 0) {
                     root.showHistory = true;
                     listView.forceActiveFocus();
-                } else {
+                } else if (results.count > 0) {
                     results.forceActiveFocus();
+                    results.incrementCurrentIndex();
                 }
             }
             Keys.onEnterPressed: results.runCurrentIndex()
