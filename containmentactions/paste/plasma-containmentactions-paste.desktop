@@ -133,9 +133,9 @@ Comment[x-test]=xxCreates a widget from the contents of the clipboardxx
 Comment[zh_CN]=从剪贴板内容中创建部件
 Comment[zh_TW]=從剪貼簿內容建立一元件
 
-ServiceTypes=Plasma/ContainmentActions
-
+X-KDE-ServiceTypes=Plasma/ContainmentActions
 X-KDE-Library=plasma_containmentactions_paste
+
 X-KDE-PluginInfo-Author=Chani
 X-KDE-PluginInfo-Email=chani@kde.org
 X-KDE-PluginInfo-Name=org.kde.paste

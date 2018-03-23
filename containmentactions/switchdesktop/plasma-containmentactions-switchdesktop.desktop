@@ -134,9 +134,9 @@ Comment[x-test]=xxSwitch to another virtual desktopxx
 Comment[zh_CN]=切换到另一个虚拟桌面
 Comment[zh_TW]=切換到其它虛擬桌面
 
-ServiceTypes=Plasma/ContainmentActions
-
+X-KDE-ServiceTypes=Plasma/ContainmentActions
 X-KDE-Library=plasma_containmentactions_switchdesktop
+
 X-KDE-PluginInfo-Author=Chani
 X-KDE-PluginInfo-Email=chani@kde.org
 X-KDE-PluginInfo-Name=org.kde.switchdesktop

@@ -165,9 +165,10 @@ Comment[xh]=Ulwazi lojongano lomsebenzi womnatha
 Comment[x-test]=xxNetwork interface informationxx
 Comment[zh_CN]=网络接口信息
 Comment[zh_TW]=網路界面資訊
-ServiceTypes=Plasma/DataEngine
-Type=Service
 Icon=network-workgroup
+
+Type=Service
+X-KDE-ServiceTypes=Plasma/DataEngine
 X-KDE-Library=plasma_engine_network
 
 X-KDE-PluginInfo-Author=

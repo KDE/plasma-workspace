@@ -153,9 +153,9 @@ Comment[x-test]=xxSimple application launcherxx
 Comment[zh_CN]=简易程序启动器
 Comment[zh_TW]=簡單的應用程式啟動器
 
-ServiceTypes=Plasma/ContainmentActions
-
+X-KDE-ServiceTypes=Plasma/ContainmentActions
 X-KDE-Library=plasma_containmentactions_applauncher
+
 X-KDE-PluginInfo-Author=Chani
 X-KDE-PluginInfo-Email=chani@kde.org
 X-KDE-PluginInfo-Name=org.kde.applauncher

@@ -132,9 +132,10 @@ Comment[zh_CN]=通常在点击右键时显示的菜单
 Comment[zh_TW]=此選單通常由滑鼠右鍵叫出
 Type=Service
 Icon=help-contextual
-ServiceTypes=Plasma/ContainmentActions
 
+X-KDE-ServiceTypes=Plasma/ContainmentActions
 X-KDE-Library=plasma_containmentactions_contextmenu
+
 X-KDE-PluginInfo-Author=Chani
 X-KDE-PluginInfo-Email=chani@kde.org
 X-KDE-PluginInfo-Name=org.kde.contextmenu

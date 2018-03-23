@@ -129,9 +129,9 @@ Comment[x-test]=xxShow a list of windows to switch toxx
 Comment[zh_CN]=显示可供切换的窗口列表
 Comment[zh_TW]=列出視窗並切換
 
-ServiceTypes=Plasma/ContainmentActions
-
+X-KDE-ServiceTypes=Plasma/ContainmentActions
 X-KDE-Library=plasma_containmentactions_switchwindow
+
 X-KDE-PluginInfo-Author=Chani
 X-KDE-PluginInfo-Email=chani@kde.org
 X-KDE-PluginInfo-Name=switchwindow
