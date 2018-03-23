@@ -40,7 +40,7 @@ Name[uk]=Спостереження за каталогами
 Name[x-test]=xxDirectory Watcherxx
 Name[zh_CN]=目录监视器
 Name[zh_TW]=目錄監控器
-ServiceTypes=KDEDModule
+
 X-KDE-ServiceTypes=KDEDModule
 X-KDE-Library=desktopnotifier
 X-KDE-FactoryName=desktopnotifier

@@ -24,7 +24,7 @@ Name[sv]=Färgriktig uppdatering av geografisk plats
 Name[uk]=Засіб оновлення географічного розташування для ColorCorrect
 Name[x-test]=xxColorCorrect Geolocation Updaterxx
 Name[zh_CN]=ColorCorrect 地理位置更新器
-ServiceTypes=KDEDModule
+
 X-KDE-ServiceTypes=KDEDModule
 X-KDE-Library=colorcorrectlocationupdater
 X-KDE-FactoryName=colorcorrectlocationupdater
