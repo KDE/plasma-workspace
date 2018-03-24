@@ -33,6 +33,8 @@
 #include <QImageReader>
 #include <QMimeDatabase>
 #include <QMimeType>
+#include <QMutex>
+#include <QMutexLocker>
 
 #include <QDebug>
 #include <KIO/PreviewJob>
@@ -48,7 +50,8 @@
 
 #include "image.h"
 
-QStringList BackgroundFinder::m_suffixes;
+QStringList BackgroundFinder::s_suffixes;
+QMutex BackgroundFinder::s_suffixMutex;
 
 ImageSizeFinder::ImageSizeFinder(const QString &path, QObject *parent)
     : QObject(parent),
@@ -512,9 +515,10 @@ QString BackgroundFinder::token() const
     return m_token;
 }
 
-const QStringList &BackgroundFinder::suffixes()
+QStringList BackgroundFinder::suffixes()
 {
-    if (m_suffixes.isEmpty()) {
+    QMutexLocker lock(&s_suffixMutex);
+    if (s_suffixes.isEmpty()) {
         QSet<QString> suffixes;
 
         QMimeDatabase db;
@@ -525,10 +529,10 @@ const QStringList &BackgroundFinder::suffixes()
             }
         }
 
-        m_suffixes = suffixes.toList();
+        s_suffixes = suffixes.toList();
     }
 
-    return m_suffixes;
+    return s_suffixes;
 }
 
 bool BackgroundFinder::isAcceptableSuffix(const QString &suffix)

@@ -26,6 +26,7 @@
 #include <QPixmap>
 #include <QRunnable>
 #include <QThread>
+#include <QMutex>
 #include <QSet>
 
 #include <KDirWatch>
@@ -131,7 +132,7 @@ public:
 
     QString token() const;
 
-    static const QStringList &suffixes();
+    static QStringList suffixes();
     static bool isAcceptableSuffix(const QString &suffix);
 
 Q_SIGNALS:
@@ -144,7 +145,8 @@ private:
     QStringList m_paths;
     QString m_token;
 
-    static QStringList m_suffixes;
+    static QMutex s_suffixMutex;
+    static QStringList s_suffixes;
 };
 
 #endif // BACKGROUNDLISTMODEL_H
