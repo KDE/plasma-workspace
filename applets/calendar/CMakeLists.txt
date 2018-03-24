@@ -11,4 +11,4 @@ target_link_libraries(plasma_applet_calendar
 
 install(TARGETS plasma_applet_calendar DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
 
-plasma_install_bundled_package(package org.kde.plasma.calendar)
+plasma_install_package(package org.kde.plasma.calendar)
