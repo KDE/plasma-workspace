@@ -200,13 +200,11 @@ ColumnLayout {
                 spacing: units.largeSpacing / 2
                 QtControls.Label {
                     Layout.minimumWidth: formAlignment - units.largeSpacing
-                    anchors.verticalCenter: parent.verticalCenter
                     horizontalAlignment: Text.AlignRight
                     text: i18nd("plasma_wallpaper_org.kde.image","Change every:")
                 }
                 QtControls.SpinBox {
                     id: hoursInterval
-                    anchors.verticalCenter: parent.verticalCenter
                     Layout.minimumWidth: textMetrics.width + units.gridUnit
                     width: units.gridUnit * 3
                     decimals: 0
@@ -216,7 +214,6 @@ ColumnLayout {
                     onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
                 }
                 QtControls.Label {
-                    anchors.verticalCenter: parent.verticalCenter
                     text: i18nd("plasma_wallpaper_org.kde.image","Hours")
                 }
                 Item {
@@ -224,7 +221,6 @@ ColumnLayout {
                 }
                 QtControls.SpinBox {
                     id: minutesInterval
-                    anchors.verticalCenter: parent.verticalCenter
                     Layout.minimumWidth: textMetrics.width + units.gridUnit
                     width: units.gridUnit * 3
                     decimals: 0
@@ -234,7 +230,6 @@ ColumnLayout {
                     onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
                 }
                 QtControls.Label {
-                    anchors.verticalCenter: parent.verticalCenter
                     text: i18nd("plasma_wallpaper_org.kde.image","Minutes")
                 }
                 Item {
@@ -242,7 +237,6 @@ ColumnLayout {
                 }
                 QtControls.SpinBox {
                     id: secondsInterval
-                    anchors.verticalCenter: parent.verticalCenter
                     Layout.minimumWidth: textMetrics.width + units.gridUnit
                     width: units.gridUnit * 3
                     decimals: 0
@@ -252,7 +246,6 @@ ColumnLayout {
                     onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
                 }
                 QtControls.Label {
-                    anchors.verticalCenter: parent.verticalCenter
                     text: i18nd("plasma_wallpaper_org.kde.image","Seconds")
                 }
             }
@@ -383,9 +376,7 @@ ColumnLayout {
 
     RowLayout {
         id: buttonsRow
-        anchors {
-            right: parent.right
-        }
+        Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
         QtControls.Button {
             visible: (configDialog.currentWallpaper == "org.kde.slideshow")
             iconName: "list-add"
