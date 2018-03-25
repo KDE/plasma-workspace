@@ -146,9 +146,10 @@ Comment[wa]=Moteur di dnêyes des noveles RSS
 Comment[x-test]=xxRSS News Data Enginexx
 Comment[zh_CN]=RSS 新闻数据引擎
 Comment[zh_TW]=RSS 新聞資料引擎
-ServiceTypes=Plasma/DataEngine
-Type=Service
 Icon=application-rss+xml
+
+Type=Service
+X-KDE-ServiceTypes=Plasma/DataEngine
 X-KDE-Library=plasma_engine_rss
 
 X-KDE-PluginInfo-Author=

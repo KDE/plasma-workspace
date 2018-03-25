@@ -92,8 +92,9 @@ Comment[x-test]=xxMedia Player Controlsxx
 Comment[zh_CN]=控制媒体播放器
 Comment[zh_TW]=媒體播放器控制
 Icon=applications-multimedia
-ServiceTypes=Plasma/Applet
+
 Type=Service
+X-KDE-ServiceTypes=Plasma/Applet
 X-KDE-PluginInfo-Author=Sebastian Kügler
 X-KDE-PluginInfo-Category=Multimedia
 X-KDE-PluginInfo-Depends=

@@ -95,10 +95,10 @@ Comment[uk]=Рушій даних PackageKit
 Comment[x-test]=xxPackageKit Data Enginexx
 Comment[zh_CN]=PackageKit 数据引擎
 Comment[zh_TW]=PackageKit 資料引擎
-
-ServiceTypes=Plasma/DataEngine
-Type=Service
 Icon=package-x-generic
+
+Type=Service
+X-KDE-ServiceTypes=Plasma/DataEngine
 X-KDE-Library=plasma_engine_packagekit
 
 X-KDE-PluginInfo-Author=Gregor Taetzner
