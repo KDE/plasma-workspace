@@ -110,6 +110,7 @@ Comment[tr]=Resimler için duvar kağıdı görünümü
 Comment[uk]=Тло із зображень
 Comment[x-test]=xxWallpaper view for imagesxx
 Comment[zh_CN]=图像壁纸视图
+Comment[zh_TW]=以桌布視角觀看圖片
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/Wallpaper

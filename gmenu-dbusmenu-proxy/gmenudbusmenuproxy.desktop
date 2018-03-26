@@ -13,6 +13,7 @@ Name[sv]=GMenuDBusMenuProxy
 Name[uk]=Проксі-меню GMenu D-Bus
 Name[x-test]=xxGMenuDBusMenuProxyxx
 Name[zh_CN]=GMenuDBusMenuProxy
+Name[zh_TW]=GMenuDBusMenuProxy
 Type=Application
 X-KDE-StartupNotify=false
 OnlyShowIn=KDE;

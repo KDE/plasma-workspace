@@ -82,6 +82,7 @@ Comment[tr]=Düz renk duvar kağıdı
 Comment[uk]=Звичайне одноколірне тло
 Comment[x-test]=xxPlain color wallpaperxx
 Comment[zh_CN]=纯色壁纸
+Comment[zh_TW]=普通顏色桌布
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/Wallpaper
