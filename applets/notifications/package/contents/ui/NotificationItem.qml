@@ -298,14 +298,7 @@ MouseArea {
 
                         anchors.fill: parent
                         acceptedButtons: Qt.RightButton | Qt.LeftButton
-                        hoverEnabled: true // allow us to update cursorShape on the fly
-                        cursorShape: {
-                            if (bodyText.linkAt(mouseX, mouseY)) {
-                                return Qt.PointingHandCursor;
-                            } else {
-                                return Qt.IBeamCursor;
-                            }
-                        }
+                        cursorShape: bodyText.hoveredLink ? Qt.PointingHandCursor : Qt.IBeamCursor
                         preventStealing: true // don't let us accidentally drag the Flickable
 
                         onPressed: {
