@@ -127,6 +127,8 @@ Item {
                 return "phone-battery";
             case "Ups":
                 return "battery-ups";
+            case "GamingInput":
+                return "input-gaming-battery";
             default:
                 return "";
         }

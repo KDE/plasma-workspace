@@ -357,6 +357,9 @@ QString PowermanagementEngine::batteryType(const Solid::Battery* battery) const
       case Solid::Battery::PhoneBattery:
           return QStringLiteral("Phone");
           break;
+      case Solid::Battery::GamingInputBattery:
+          return QStringLiteral("GamingInput");
+          break;
       default:
           return QStringLiteral("Unknown");
   }
