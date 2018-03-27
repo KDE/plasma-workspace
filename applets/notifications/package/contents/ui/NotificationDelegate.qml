@@ -48,7 +48,7 @@ PlasmaComponents.ListItem {
     MouseArea {
         width: parent.width
         height: childrenRect.height
-        acceptedButtons: Qt.NoButtons
+        acceptedButtons: Qt.NoButton
 
         drag {
             target: notificationItem

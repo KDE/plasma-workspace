@@ -219,6 +219,7 @@ Column {
             var _data = data; // Temp copy to avoid lots of context switching
             var actions = []
             _data["hasDefaultAction"] = false
+            _data["hasConfigureAction"] = false;
             if (data["actions"] && data["actions"].length % 2 == 0) {
                 for (var i = 0; i < data["actions"].length; i += 2) {
                     var action = data["actions"][i]
