@@ -24,7 +24,9 @@ namespace NotificationSanitizer
     /*
      * This turns generic random text of either plain text of any degree of faux-HTML into HTML allowed
      * in the notification spec namely:
-     * a, img, b, i, u  and br
+     * a, img, b, i, u, and br
+     * In addition to the notification spec the following tags are allowed:
+     * table, tr, and td
      * All other tags and attributes are stripped
      * Whitespace is stripped and converted to <br/>
      * Double newlines are compressed
