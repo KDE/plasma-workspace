@@ -21,6 +21,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "xwindowtasksmodel.h"
 #include "tasktools.h"
+#include "xwindowsystemeventbatcher.h"
 
 #include <KActivities/ResourceInstance>
 #include <KDesktopFile>
@@ -149,21 +150,21 @@ void XWindowTasksModel::Private::init()
     QObject::connect(configWatcher, &KDirWatch::created, rulesConfigChange);
     QObject::connect(configWatcher, &KDirWatch::deleted, rulesConfigChange);
 
-    QObject::connect(KWindowSystem::self(), &KWindowSystem::windowAdded, q,
+    auto windowSystem = new XWindowSystemEventBatcher(q);
+
+    QObject::connect(windowSystem, &XWindowSystemEventBatcher::windowAdded, q,
         [this](WId window) {
             addWindow(window);
         }
     );
 
-    QObject::connect(KWindowSystem::self(), &KWindowSystem::windowRemoved, q,
+    QObject::connect(windowSystem, &XWindowSystemEventBatcher::windowRemoved, q,
         [this](WId window) {
             removeWindow(window);
         }
     );
 
-    void (KWindowSystem::*myWindowChangeSignal)(WId window,
-        NET::Properties properties, NET::Properties2 properties2) = &KWindowSystem::windowChanged;
-    QObject::connect(KWindowSystem::self(), myWindowChangeSignal, q,
+    QObject::connect(windowSystem, &XWindowSystemEventBatcher::windowChanged, q,
         [this](WId window, NET::Properties properties, NET::Properties2 properties2) {
             windowChanged(window, properties, properties2);
         }

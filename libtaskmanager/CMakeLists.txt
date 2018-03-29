@@ -24,6 +24,7 @@ set(taskmanager_LIB_SRCS
 if (X11_FOUND)
     set(taskmanager_LIB_SRCS
         ${taskmanager_LIB_SRCS}
+        xwindowsystemeventbatcher.cpp
         xwindowtasksmodel.cpp
     )
 endif()
