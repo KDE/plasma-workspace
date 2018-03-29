@@ -22,8 +22,9 @@
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
 #include <QRegularExpression>
-#include <QDebug>
 #include <QUrl>
+
+#include "debug.h"
 
 QString NotificationSanitizer::parse(const QString &text)
 {
@@ -92,7 +93,7 @@ QString NotificationSanitizer::parse(const QString &text)
     out.writeEndDocument();
 
     if (r.hasError()) {
-        qWarning() << "Notification to send to backend contains invalid XML: "
+        qCWarning(NOTIFICATIONS) << "Notification to send to backend contains invalid XML: "
                       << r.errorString() << "line" << r.lineNumber()
                       << "col" << r.columnNumber();
     }

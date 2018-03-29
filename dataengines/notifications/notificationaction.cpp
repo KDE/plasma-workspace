@@ -21,13 +21,13 @@
 
 #include <klocalizedstring.h>
 
-#include <QDebug>
+#include "debug.h"
 
 void NotificationAction::start()
 {
-    //qDebug() << "Trying to perform the action " << operationName() << " on " << destination();
-    //qDebug() << "actionId: " << parameters()["actionId"].toString();
-    //qDebug() << "params: " << parameters();
+    qCDebug(NOTIFICATIONS) << "Trying to perform the action " << operationName() << " on " << destination();
+    qCDebug(NOTIFICATIONS) << "actionId: " << parameters()["actionId"].toString();
+    qCDebug(NOTIFICATIONS) << "params: " << parameters();
 
     if (!m_engine) {
         setErrorText(i18n("The notification dataEngine is not set."));
@@ -49,7 +49,7 @@ void NotificationAction::start()
     }
 
     if (operationName() == QLatin1String("invokeAction")) {
-        //qDebug() << "invoking action on " << id;
+        qCDebug(NOTIFICATIONS) << "invoking action on " << id;
         emit m_engine->ActionInvoked(id, parameters()[QStringLiteral("actionId")].toString());
     } else if (operationName() == QLatin1String("userClosed")) {
         //userClosedNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called

@@ -9,6 +9,11 @@ set(notifications_engine_SRCS
     notificationsanitizer.cpp
 )
 
+ecm_qt_declare_logging_category(notifications_engine_SRCS HEADER debug.h
+                                               IDENTIFIER NOTIFICATIONS
+                                               CATEGORY_NAME kde.dataengine.notifications`
+                                               DEFAULT_SEVERITY Info)
+
 qt5_add_dbus_adaptor( notifications_engine_SRCS org.freedesktop.Notifications.xml notificationsengine.h  NotificationsEngine )
 
 add_library(plasma_engine_notifications MODULE ${notifications_engine_SRCS})
@@ -32,7 +37,16 @@ install(FILES notifications.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/se
 
 
 #unit test
+set(notifications_test_SRCS
+    notificationsanitizer.cpp
+    notifications_test.cpp
+)
 
-add_executable(notification_test  notificationsanitizer.cpp notifications_test.cpp)
+ecm_qt_declare_logging_category(notifications_test_SRCS HEADER debug.h
+                                               IDENTIFIER NOTIFICATIONS
+                                               CATEGORY_NAME kde.dataengine.notifications`
+                                               DEFAULT_SEVERITY Info)
+
+add_executable(notification_test  ${notifications_test_SRCS})
 target_link_libraries(notification_test Qt5::Test Qt5::Core)
 ecm_mark_as_test(notification_test)

@@ -22,7 +22,6 @@
 #include "notificationsadaptor.h"
 #include "notificationsanitizer.h"
 
-#include <QDebug>
 #include <KConfigGroup>
 #include <klocalizedstring.h>
 #include <KSharedConfig>
@@ -43,6 +42,8 @@
 // for ::kill
 #include <signal.h>
 
+#include "debug.h"
+
 NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& args )
     : Plasma::DataEngine( parent, args ), m_nextId( 1 ), m_alwaysReplaceAppsList({QStringLiteral("Clementine"), QStringLiteral("Spotify"), QStringLiteral("Amarok")})
 {
@@ -59,7 +60,7 @@ NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& a
             // It's not the same but check if it isn't plasma,
             // we don't want to kill Plasma
             if (pid != plasmaPidReply.value()) {
-                qDebug() << "Terminating current Notification service with pid" << pid;
+                qCDebug(NOTIFICATIONS) << "Terminating current Notification service with pid" << pid;
                 // Now finally terminate the service and register our own
                 ::kill(pid, SIGTERM);
                 // Wait 3 seconds and then try registering it again
@@ -72,7 +73,7 @@ NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& a
     const bool broadcastsEnabled = config.readEntry("ListenForBroadcasts", false);
 
     if (broadcastsEnabled) {
-        qDebug() << "Notifications engine is configured to listen for broadcasts";
+        qCDebug(NOTIFICATIONS) << "Notifications engine is configured to listen for broadcasts";
         QDBusConnection::systemBus().connect({}, {}, QStringLiteral("org.kde.BroadcastNotifications"),
                                              QStringLiteral("Notify"), this, SLOT(onBroadcastNotification(QMap<QString,QVariant>)));
     }
@@ -102,7 +103,7 @@ bool NotificationsEngine::registerDBusService()
         return true;
     }
 
-    qDebug() << "Failed to register Notifications service";
+    qCInfo(NOTIFICATIONS) << "Failed to register Notifications service";
     return false;
 }
 
@@ -132,7 +133,6 @@ static QImage decodeNotificationSpecImageHint(const QDBusArgument& arg)
     arg.beginStructure();
     arg >> width >> height >> rowStride >> hasAlpha >> bitsPerSample >> channels >> pixels;
     arg.endStructure();
-    //qDebug() << width << height << rowStride << hasAlpha << bitsPerSample << channels;
 
     #define SANITY_CHECK(condition) \
     if (!(condition)) { \
@@ -195,7 +195,7 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
 {
     foreach(NotificationInhibiton *ni, m_inhibitions) {
         if (hints[ni->hint] == ni->value) {
-            qDebug() << "notification inhibited. Skipping";
+            qCDebug(NOTIFICATIONS) << "notification inhibited. Skipping";
             return -1;
         }
     }
@@ -214,9 +214,9 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
         partOf = m_activeNotifications.key(app_name + summary).midRef(13).toUInt();
     }
 
-    qDebug() << "Currrent active notifications:" << m_activeNotifications;
-    qDebug() << "Guessing partOf as:" << partOf;
-    qDebug() << " New Notification: " << summary << body << timeout << "& Part of:" << partOf;
+    qCDebug(NOTIFICATIONS) << "Currrent active notifications:" << m_activeNotifications;
+    qCDebug(NOTIFICATIONS) << "Guessing partOf as:" << partOf;
+    qCDebug(NOTIFICATIONS) << " New Notification: " << summary << body << timeout << "& Part of:" << partOf;
     QString bodyFinal = NotificationSanitizer::parse(body);
     QString summaryFinal = summary;
 
@@ -434,7 +434,7 @@ QSharedPointer<NotificationInhibiton> NotificationsEngine::createInhibition(cons
 
 void NotificationsEngine::onBroadcastNotification(const QMap<QString, QVariant> &properties)
 {
-    qDebug() << "Received broadcast notification";
+    qCDebug(NOTIFICATIONS) << "Received broadcast notification";
 
     const auto currentUserId = KUserId::currentEffectiveUserId().nativeId();
 
@@ -448,7 +448,7 @@ void NotificationsEngine::onBroadcastNotification(const QMap<QString, QVariant> 
         });
 
         if (it == userIds.constEnd()) {
-            qDebug() << "It is not meant for us, ignoring";
+            qCDebug(NOTIFICATIONS) << "It is not meant for us, ignoring";
             return;
         }
     }
