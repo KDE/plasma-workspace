@@ -19,22 +19,21 @@
  */
 
 import QtQuick 2.5
+import QtQuick.Controls 2.1 as QQC2
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-Item {
+QQC2.StackView {
     id: root
 
-    readonly property string configuredImage: wallpaper.configuration.Image
     readonly property string modelImage: imageWallpaper.wallpaperPath
-    property Item currentImage: imageB
-    property Item currentBlurBackground: blurBackgroundB
-    property Item otherImage: imageA
-    property Item otherBlurBackground: blurBackgroundA
+    readonly property string configuredImage: wallpaper.configuration.Image
     readonly property int fillMode: wallpaper.configuration.FillMode
-    property size sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
+    readonly property string configColor: wallpaper.configuration.Color
+    readonly property bool blur: wallpaper.configuration.Blur
+    readonly property size sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
 
     //public API, the C++ part will look for those
     function setUrl(url) {
@@ -51,128 +50,10 @@ Item {
     }
 
     //private
-    function setupImage() {
-        currentImage.sourceSize = root.sourceSize;
-        currentImage.fillMode = root.fillMode;
-        currentImage.source = modelImage;
+
+    onConfiguredImageChanged: {
+        imageWallpaper.addUrl(configuredImage)
     }
-
-    function fadeWallpaper() {
-        if (startupTimer.running) {
-            setupImage();
-            return;
-        }
-
-        fadeAnim.running = false
-        swapImages()
-        currentImage.source = modelImage
-        currentImage.sourceSize = root.sourceSize
-        // Prevent source size change when image has just been setup anyway
-        sourceSizeTimer.stop()
-        currentImage.opacity = 0
-        currentBlurBackground.opacity = 0
-        otherImage.z = 0
-        currentImage.z = 1
-
-        // only cross-fade if the new image could be smaller than the old one
-        fadeOtherAnimator.enabled = Qt.binding(function() {
-            return currentImage.paintedWidth < otherImage.paintedWidth || currentImage.paintedHeight < otherImage.paintedHeight
-        })
-
-        // Alleviate stuttering by waiting with the fade animation until the image is loaded (or failed to)
-        fadeAnim.running = Qt.binding(function() {
-            return currentImage.status !== Image.Loading && otherImage.status !== Image.Loading
-        })
-    }
-
-    function fadeFillMode() {
-        if (startupTimer.running) {
-            setupImage();
-            return;
-        }
-
-        fadeAnim.running = false
-        swapImages()
-        currentImage.sourceSize = root.sourceSize
-        sourceSizeTimer.stop()
-        currentImage.source = modelImage
-        currentImage.opacity = 0
-        currentBlurBackground.opacity = 0
-        otherImage.z = 0
-        currentImage.fillMode = fillMode
-        currentImage.z = 1
-
-        // only cross-fade if the new image could be smaller than the old one
-        fadeOtherAnimator.enabled = Qt.binding(function() {
-            return currentImage.paintedWidth < otherImage.paintedWidth || currentImage.paintedHeight < otherImage.paintedHeight
-        })
-
-        fadeAnim.running = Qt.binding(function() {
-            return currentImage.status !== Image.Loading && otherImage.status !== Image.Loading
-        })
-    }
-
-    function fadeSourceSize() {
-        if (currentImage.sourceSize === root.sourceSize) {
-            return
-        }
-
-        if (startupTimer.running) {
-            setupImage();
-            return;
-        }
-
-        fadeAnim.running = false
-        swapImages()
-        currentImage.sourceSize = root.sourceSize
-        currentImage.opacity = 0
-        currentBlurBackground.opacity = 0
-        currentImage.source = otherImage.source
-        otherImage.z = 0
-        currentImage.z = 1
-
-        fadeOtherAnimator.enabled = false // the image size didn't change, avoid cross-dissolve
-        fadeAnim.running = Qt.binding(function() {
-            return currentImage.status !== Image.Loading && otherImage.status !== Image.Loading
-        })
-    }
-
-    function startFadeSourceTimer() {
-        if (width > 0 && height > 0 && (imageA.status !== Image.Null || imageB.status !== Image.Null)) {
-            sourceSizeTimer.restart()
-        }
-    }
-
-    function swapImages() {
-        if (currentImage == imageA) {
-            currentImage = imageB
-            currentBlurBackground = blurBackgroundB
-            otherImage = imageA
-            otherBlurBackground = blurBackgroundA
-        } else {
-            currentImage = imageA
-            currentBlurBackground = blurBackgroundA
-            otherImage = imageB
-            otherBlurBackground = blurBackgroundB
-        }
-    }
-
-    onWidthChanged: startFadeSourceTimer()
-    onHeightChanged: startFadeSourceTimer()
-
-    // HACK prevent fades and transitions during startup
-    Timer {
-        id: startupTimer
-        interval: 100
-        running: true
-    }
-
-    Timer {
-        id: sourceSizeTimer
-        interval: 1000 // always delay reloading the image even when animations are turned off
-        onTriggered: fadeSourceSize()
-    }
-
     Component.onCompleted: {
         if (wallpaper.pluginName == "org.kde.slideshow") {
             wallpaper.setAction("open", i18n("Open Wallpaper Image"), "document-open");
@@ -189,130 +70,79 @@ Item {
         slideTimer: wallpaper.configuration.SlideInterval
     }
 
-    onFillModeChanged: {
-        fadeFillMode();
-    }
-    onConfiguredImageChanged: {
-        imageWallpaper.addUrl(configuredImage)
-    }
-    onModelImageChanged: {
-        fadeWallpaper();
-    }
+    onFillModeChanged: Qt.callLater(loadImage);
+    onModelImageChanged: Qt.callLater(loadImage);
+    onConfigColorChanged: Qt.callLater(loadImage);
+    onBlurChanged: Qt.callLater(loadImage);
+    onWidthChanged: Qt.callLater(loadImage);
+    onHeightChanged: Qt.callLater(loadImage);
 
-    SequentialAnimation {
-        id: fadeAnim
-        running: false
+    function loadImage() {
+        var isFirst = (root.currentItem == undefined);
+        var pendingImage = baseImage.createObject(root, { "source": root.modelImage,
+                        "fillMode": root.fillMode,
+                        "sourceSize": root.sourceSize,
+                        "color": root.configColor,
+                        "blur": root.blur,
+                        "opacity": isFirst ? 1: 0});
 
-        ParallelAnimation {
-            OpacityAnimator {
-                target: currentBlurBackground
-                from: 0
-                to: 1
-                duration: fadeOtherAnimator.duration
-            }
-            OpacityAnimator {
-                target: otherBlurBackground
-                from: 1
-                // cannot disable an animation individually, so we just fade from 1 to 1
-                to: enabled ? 0 : 1
-
-                //use configured duration if animations are enabled
-                duration: units.longDuration && wallpaper.configuration.TransitionAnimationDuration
-            }
-            OpacityAnimator {
-                target: currentImage
-                from: 0
-                to: 1
-                duration: fadeOtherAnimator.duration
-            }
-            OpacityAnimator {
-                id: fadeOtherAnimator
-                property bool enabled: true
-                target: otherImage
-                from: 1
-                // cannot disable an animation individually, so we just fade from 1 to 1
-                to: enabled ? 0 : 1
-
-                //use configured duration if animations are enabled
-                duration: units.longDuration && wallpaper.configuration.TransitionAnimationDuration
+        function replaceWhenLoaded() {
+            if (pendingImage.status != Image.Loading) {
+                root.replace(pendingImage, {},
+                    isFirst ? QQC2.StackView.Immediate : QQC2.StackView.Transition);//dont' animate first show
+                pendingImage.statusChanged.disconnect(replaceWhenLoaded);
             }
         }
-        ScriptAction {
-            script: {
-                otherImage.source = "";
-                otherImage.fillMode = fillMode;
-            }
-        }
+        pendingImage.statusChanged.connect(replaceWhenLoaded);
+        replaceWhenLoaded();
     }
 
-    Rectangle {
-        id: backgroundColor
-        anchors.fill: parent
-        visible: currentImage.status === Image.Ready || otherImage.status === Image.Ready
-        color: wallpaper.configuration.Color
-        Behavior on color {
-            ColorAnimation { duration: units.longDuration }
-            enabled: !startupTimer.running
+    Component {
+        id: baseImage
+
+        Image {
+            id: mainImage
+
+            property alias color: backgroundColor.color
+            property alias blur: blurEffect.visible
+
+            asynchronous: true
+            cache: false
+            autoTransform: true
+            z: -1
+
+            QQC2.StackView.onRemoved: destroy()
+
+            Rectangle {
+                id: backgroundColor
+                anchors.fill: parent
+                visible: mainImage.status === Image.Ready
+                z: -2
+            }
+
+            GaussianBlur {
+                id: blurEffect
+                anchors.fill: parent
+                source: mainImage
+                radius: 32
+                samples: 65
+                z: mainImage.z
+            }
         }
     }
 
-    Image {
-        id: blurBackgroundSourceA
-        visible: wallpaper.configuration.Blur
-        anchors.fill: parent
-        asynchronous: true
-        cache: false
-        fillMode: Image.PreserveAspectCrop
-        source: imageA.source
-        z: -1
+    replaceEnter: Transition {
+        OpacityAnimator {
+            from: 0
+            to: 1
+            duration: wallpaper.configuration.TransitionAnimationDuration
+        }
     }
-
-    GaussianBlur {
-        id: blurBackgroundA
-        visible: wallpaper.configuration.Blur
-        anchors.fill: parent
-        source: blurBackgroundSourceA
-        radius: 32
-        samples: 65
-        z: imageA.z
-    }
-
-    Image {
-        id: blurBackgroundSourceB
-        visible: wallpaper.configuration.Blur
-        anchors.fill: parent
-        asynchronous: true
-        cache: false
-        fillMode: Image.PreserveAspectCrop
-        source: imageB.source
-        z: -1
-    }
-
-    GaussianBlur {
-        id: blurBackgroundB
-        visible: wallpaper.configuration.Blur
-        anchors.fill: parent
-        source: blurBackgroundSourceB
-        radius: 32
-        samples: 65
-        z: imageB.z
-    }
-
-    Image {
-        id: imageA
-        anchors.fill: parent
-        asynchronous: true
-        cache: false
-        fillMode: wallpaper.configuration.FillMode
-        autoTransform: true //new API in Qt 5.5, do not backport into Plasma 5.4.
-    }
-
-    Image {
-        id: imageB
-        anchors.fill: parent
-        asynchronous: true
-        cache: false
-        fillMode: wallpaper.configuration.FillMode
-        autoTransform: true //new API in Qt 5.5, do not backport into Plasma 5.4.
+    // Keep the old image around till the new one is fully faded in
+    // If we fade both at the same time you can see the background behind glimpse through
+    replaceExit: Transition{
+        PauseAnimation {
+            duration: wallpaper.configuration.TransitionAnimationDuration
+        }
     }
 }
