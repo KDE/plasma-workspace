@@ -108,7 +108,7 @@ Comment[uk]=Структура спільних пакунків
 Comment[wa]=Tcherpinte do pacaedje di pårtaedje
 Comment[x-test]=xxShare Package Structurexx
 Comment[zh_CN]=共享包结构
-Comment[zh_TW]=分享套件結構
+Comment[zh_TW]=分享軟體包結構
 Type=Service
 X-KDE-ServiceTypes=Plasma/PackageStructure
 
