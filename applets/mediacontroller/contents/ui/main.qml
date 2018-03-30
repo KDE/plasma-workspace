@@ -155,6 +155,15 @@ Item {
             anchors.fill: parent
             hoverEnabled: true
             acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
+
+            onWheel: {
+                var service = mpris2Source.serviceForSource(mpris2Source.current)
+                var operation = service.operationDescription("ChangeVolume")
+                operation.delta = (wheel.angleDelta.y / 120) * 0.03
+                operation.showOSD = true
+                service.startOperationCall(operation)
+            }
+
             onClicked: {
                 switch (mouse.button) {
                 case Qt.MiddleButton:

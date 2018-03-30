@@ -131,6 +131,26 @@ void PlayerActionJob::start()
             setError(MissingArgument);
             emitResult();
         }
+    } else if (operation == QLatin1String("ChangeVolume")) {
+        if (parameters().value(QStringLiteral("delta")).type() != QVariant::Double) {
+            setErrorText(QStringLiteral("delta"));
+            setError(MissingArgument);
+            emitResult();
+            return;
+        }
+        if (parameters().value(QStringLiteral("showOSD")).type() != QVariant::Bool) {
+            setErrorText(QStringLiteral("showOSD"));
+            setError(MissingArgument);
+            emitResult();
+            return;
+        }
+
+        m_controller->changeVolume(
+            parameters()[QStringLiteral("delta")].toDouble(),
+            parameters()[QStringLiteral("showOSD")].toBool()
+        );
+        setError(NoError);
+        emitResult();
     } else if (operation == QLatin1String("GetPosition")) {
         m_controller->updatePosition();
     } else {

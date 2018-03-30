@@ -47,4 +47,12 @@
       <label>The required volume level, as a double between 0 and 1.</label>
     </entry>
   </group>
+  <group name="ChangeVolume">
+    <entry name="delta" type="Double">
+      <label>The required volume level change, as a double between -1 and 1.</label>
+    </entry>
+    <entry name="showOSD" type="Bool">
+      <label>True is OSD should be shown.</label>
+    </entry>
+  </group>
 </kcfg>

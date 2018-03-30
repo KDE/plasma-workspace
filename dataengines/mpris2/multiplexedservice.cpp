@@ -146,5 +146,27 @@ void MultiplexedService::enableGlobalShortcuts()
             }
         }
     );
+
+    QAction *volumeupAction = m_actionCollection->addAction(QStringLiteral("mediavolumeup"));
+    volumeupAction->setText(i18n("Media volume up"));
+    KGlobalAccel::setGlobalShortcut(volumeupAction, QKeySequence());
+    connect(volumeupAction, &QAction::triggered, this,
+        [this] {
+            if (m_control && m_control->playerInterface()->canControl()) {
+                m_control->changeVolume(0.05, true);
+            }
+        }
+    );
+
+    QAction *volumedownAction = m_actionCollection->addAction(QStringLiteral("mediavolumedown"));
+    volumedownAction->setText(i18n("Media volume down"));
+    KGlobalAccel::setGlobalShortcut(volumedownAction, QKeySequence());
+    connect(volumedownAction, &QAction::triggered, this,
+        [this] {
+            if (m_control && m_control->playerInterface()->canControl()) {
+                m_control->changeVolume(-0.05, true);
+            }
+        }
+    );
 }
 

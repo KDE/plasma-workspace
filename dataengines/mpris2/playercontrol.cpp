@@ -63,6 +63,7 @@ void PlayerControl::updateEnabledOperations()
     setOperationEnabled(QStringLiteral("SetPosition"), caps & PlayerContainer::CanSeek);
     setOperationEnabled(QStringLiteral("OpenUri"), caps & PlayerContainer::CanControl);
     setOperationEnabled(QStringLiteral("SetVolume"), caps & PlayerContainer::CanControl);
+    setOperationEnabled(QStringLiteral("ChangeVolume"), caps & PlayerContainer::CanControl);
     setOperationEnabled(QStringLiteral("SetLoopStatus"), caps & PlayerContainer::CanControl);
     setOperationEnabled(QStringLiteral("SetRate"), caps & PlayerContainer::CanControl);
     setOperationEnabled(QStringLiteral("SetShuffle"), caps & PlayerContainer::CanControl);
@@ -87,6 +88,31 @@ QDBusObjectPath PlayerControl::trackId() const
 void PlayerControl::containerDestroyed()
 {
     m_container = nullptr;
+}
+
+void PlayerControl::changeVolume(double delta, bool showOSD) {
+    const double volume = playerInterface()->volume();
+    const double newVolume = qBound(0.0, volume + delta, qMax(volume, 1.0));
+    playerInterface()->setVolume(newVolume);
+
+    if (showOSD) {
+        const auto& data = m_container->data();
+
+        QDBusMessage msg = QDBusMessage::createMethodCall(
+            QStringLiteral("org.kde.plasmashell"),
+            QStringLiteral("/org/kde/osdService"),
+            QStringLiteral("org.kde.osdService"),
+            QStringLiteral("mediaPlayerVolumeChanged")
+        );
+
+        msg.setArguments({
+            (int)(100 * newVolume),
+            data.value("Identity", ""),
+            data.value("Desktop Icon Name", "")
+        });
+
+        QDBusConnection::sessionBus().asyncCall(msg);
+    }
 }
 
 Plasma::ServiceJob* PlayerControl::createJob(const QString& operation,

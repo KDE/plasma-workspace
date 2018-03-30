@@ -49,6 +49,8 @@ public:
     Plasma::ServiceJob* createJob(const QString& operation,
                                   QMap<QString,QVariant>& parameters) override;
 
+    void changeVolume(double delta, bool showOSD);
+
 Q_SIGNALS:
     void enabledOperationsChanged();
 
