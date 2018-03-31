@@ -155,10 +155,10 @@ private:
 
 private:
     struct XMLMapInfo {
+        QString stationId;
         QString place;
-        QString XMLurl;
         QString forecastHTMLUrl;
-        QString XMLforecastURL;
+        QString sourceExtraArg;
     };
 
     // Key dicts
