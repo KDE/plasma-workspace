@@ -16,6 +16,7 @@ weather condition|hail showers
 weather condition|hazy
 weather condition|heavy rain
 weather condition|heavy rain shower
+weather condition|heavy rain showers
 weather condition|heavy shower
 weather condition|heavy showers
 weather condition|heavy snow
@@ -24,6 +25,7 @@ weather condition|heavy snow showers
 weather condition|light cloud
 weather condition|light rain
 weather condition|light rain shower
+weather condition|light rain showers
 weather condition|light shower
 weather condition|light showers
 weather condition|light snow
@@ -63,6 +65,7 @@ weather forecast|hail showers
 weather forecast|hazy
 weather forecast|heavy rain
 weather forecast|heavy rain shower
+weather forecast|heavy rain showers
 weather forecast|heavy shower
 weather forecast|heavy showers
 weather forecast|heavy snow
@@ -71,6 +74,7 @@ weather forecast|heavy snow showers
 weather forecast|light cloud
 weather forecast|light rain
 weather forecast|light rain shower
+weather forecast|light rain showers
 weather forecast|light shower
 weather forecast|light showers
 weather forecast|light snow
