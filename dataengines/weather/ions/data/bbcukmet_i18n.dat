@@ -45,6 +45,7 @@ weather condition|sunny intervals
 weather condition|thick cloud
 weather condition|thunderstorm
 weather condition|thundery shower
+weather condition|thundery showers
 weather condition|tropical storm
 weather condition|white cloud
 weather forecast|clear
@@ -93,6 +94,7 @@ weather forecast|sunny intervals
 weather forecast|thick cloud
 weather forecast|thunderstorm
 weather forecast|thundery shower
+weather forecast|thundery showers
 weather forecast|tropical storm
 weather forecast|white cloud
 visibility|Excellent
