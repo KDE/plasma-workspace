@@ -8,6 +8,7 @@ target_link_libraries(ksmserver-switchuser-greeter
     KF5::IconThemes
     KF5::I18n
     KF5::Package
+    KF5::QuickAddons
     KF5::WaylandClient
     KF5::WindowSystem
     ${X11_LIBRARIES}

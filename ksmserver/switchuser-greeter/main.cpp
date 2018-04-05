@@ -28,6 +28,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "../switchuserdialog.h"
 
+#include <KQuickAddons/QtQuickSettings>
+
 #include <kdisplaymanager.h>
 #include <KWindowSystem>
 
@@ -141,6 +143,8 @@ int main(int argc, char *argv[])
     KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);
     QGuiApplication app(argc, argv);
+
+    KQuickAddons::QtQuickSettings::init();
 
     Greeter greeter;
     greeter.init();
