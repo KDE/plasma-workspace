@@ -25,9 +25,6 @@
 #include <QStringList>
 #include <QTime>
 #include <QSocketNotifier>
-#include <QTimeZone>
-
-#include <Solid/PowerManagement>
 
 #ifdef Q_OS_LINUX
 #include <sys/timerfd.h>
@@ -88,7 +85,12 @@ void TimeEngine::init()
     });
 #else
     dbus.connect(QString(), "/org/kde/kcmshell_clock", "org.kde.kcmshell_clock", "clockUpdated", this, SLOT(clockSkewed()));
-    connect( Solid::PowerManagement::notifier(), SIGNAL(resumingFromSuspend()), this , SLOT(clockSkewed()) );
+    dbus.connect(QStringLiteral("org.kde.Solid.PowerManagement"),
+                 QStringLiteral("/org/kde/Solid/PowerManagement/Actions/SuspendSession"),
+                 QStringLiteral("org.kde.Solid.PowerManagement.Actions.SuspendSession"),
+                 QStringLiteral("resumingFromSuspend"),
+                 this,
+                 SLOT(clockSkewed()));
 #endif
 }
 
