@@ -83,16 +83,15 @@ void SplashWindow::setStage(int stage)
 bool SplashWindow::event(QEvent *e)
 {
     if (e->type() == QEvent::PlatformSurface) {
-        if (auto pe = dynamic_cast<QPlatformSurfaceEvent*>(e)) {
-            switch (pe->surfaceEventType()) {
-            case QPlatformSurfaceEvent::SurfaceCreated:
-                setupWaylandIntegration();
-                break;
-            case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
-                delete m_shellSurface;
-                m_shellSurface = nullptr;
-                break;
-            }
+        auto pe = static_cast<QPlatformSurfaceEvent*>(e);
+        switch (pe->surfaceEventType()) {
+        case QPlatformSurfaceEvent::SurfaceCreated:
+            setupWaylandIntegration();
+            break;
+        case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
+            delete m_shellSurface;
+            m_shellSurface = nullptr;
+            break;
         }
     }
     return KQuickAddons::QuickViewSharedEngine::event(e);
