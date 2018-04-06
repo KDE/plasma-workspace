@@ -354,11 +354,20 @@ QStringList View::history() const
 
 void View::addToHistory(const QString &item)
 {
+    if (item.isEmpty()) {
+        return;
+    }
+
     if (item == QLatin1String("SESSIONS")) {
         return;
     }
 
     if (!KAuthorized::authorize(QStringLiteral("lineedit_text_completion"))) {
+        return;
+    }
+
+    // Mimic shell behavior of not storing lines starting with a space
+    if (item.at(0).isSpace()) {
         return;
     }
 
