@@ -135,7 +135,7 @@ PlasmaCore.ColorScope {
                     visible: !inputPanel.keyboardActive
                 },
                 ActionButton {
-                    iconSource: "system-search"
+                    iconSource: "system-switch-user"
                     text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Different User")
                     onClicked: mainStack.push(userPromptComponent)
                     enabled: true
