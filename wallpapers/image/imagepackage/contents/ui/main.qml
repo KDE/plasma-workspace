@@ -104,7 +104,7 @@ QQC2.StackView {
             id: mainImage
 
             property alias color: backgroundColor.color
-            property alias blur: blurEffect.visible
+            property bool blur: false
 
             asynchronous: true
             cache: false
@@ -116,17 +116,37 @@ QQC2.StackView {
             Rectangle {
                 id: backgroundColor
                 anchors.fill: parent
-                visible: mainImage.status === Image.Ready
+                visible: mainImage.status === Image.Ready && !blurLoader.active
                 z: -2
             }
 
-            GaussianBlur {
-                id: blurEffect
+            Loader {
+                id: blurLoader
                 anchors.fill: parent
-                source: mainImage
-                radius: 32
-                samples: 65
-                z: mainImage.z
+                z: -3
+                active: mainImage.blur && (mainImage.fillMode === Image.PreserveAspectFit || mainImage.fillMode === Image.Pad)
+                sourceComponent: Item {
+                    Image {
+                        id: blurSource
+                        anchors.fill: parent
+                        asynchronous: true
+                        cache: false
+                        autoTransform: true
+                        fillMode: Image.PreserveAspectCrop
+                        source: mainImage.source
+                        sourceSize: mainImage.sourceSize
+                        visible: false // will be rendered by the blur
+                    }
+
+                    GaussianBlur {
+                        id: blurEffect
+                        anchors.fill: parent
+                        source: blurSource
+                        radius: 32
+                        samples: 65
+                        visible: blurSource.status === Image.Ready
+                    }
+                }
             }
         }
     }
