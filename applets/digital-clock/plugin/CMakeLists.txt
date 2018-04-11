@@ -11,11 +11,13 @@ set(digitalclockplugin_SRCS
     timezonemodel.cpp
     timezonesi18n.cpp
     digitalclockplugin.cpp
+    clipboardmenu.cpp
     )
 
 add_library(digitalclockplugin SHARED ${digitalclockplugin_SRCS})
 target_link_libraries(digitalclockplugin Qt5::Core
                                           Qt5::Qml
+                                          Qt5::Widgets # for QAction...
                                           KF5::CoreAddons
                                           KF5::I18n)
 

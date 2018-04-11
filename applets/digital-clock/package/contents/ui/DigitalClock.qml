@@ -72,6 +72,14 @@ Item {
     onUse24hFormatChanged:         { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
 
     Connections {
+        target: plasmoid
+        onContextualActionsAboutToShow: {
+            ClipboardMenu.secondsIncluded = main.showSeconds;
+            ClipboardMenu.currentDate = main.currentTime;
+        }
+    }
+
+    Connections {
         target: plasmoid.configuration
         onSelectedTimeZonesChanged: {
             // If the currently selected timezone was removed,

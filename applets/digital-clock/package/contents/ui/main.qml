@@ -99,6 +99,9 @@ Item {
     }
 
     Component.onCompleted: {
+        plasmoid.setAction("clipboard", i18n("Copy to Clipboard"), "edit-copy");
+        ClipboardMenu.setupMenu(plasmoid.action("clipboard"));
+
         root.initTimezones();
         if (KCMShell.authorize("clock.desktop").length > 0) {
             plasmoid.setAction("clockkcm", i18n("Adjust Date and Time..."), "preferences-system-time");
