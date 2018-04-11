@@ -24,6 +24,8 @@
 #include <QSessionManager>
 #include <QDebug>
 #include <QMessageBox>
+#include <QDBusConnection>
+#include <QDBusMessage>
 
 #include <KAboutData>
 #include <KQuickAddons/QtQuickSettings>
@@ -102,6 +104,8 @@ int main(int argc, char *argv[])
     QCommandLineOption standaloneOption(QStringList() << QStringLiteral("a") << QStringLiteral("standalone"),
                                         i18n("Load plasmashell as a standalone application, needs the shell-plugin option to be specified"));
 
+    QCommandLineOption replaceOption({QStringLiteral("replace")},
+                                 i18n("Replace an existing instance"));
 
     QCommandLineOption testOption(QStringList() << QStringLiteral("test"),
                                         i18n("Enables test mode and specifies the layout javascript file to set up the testing environment"), i18n("file"), QStringLiteral("layout.js"));
@@ -111,6 +115,7 @@ int main(int argc, char *argv[])
     cliOptions.addOption(shellPluginOption);
     cliOptions.addOption(standaloneOption);
     cliOptions.addOption(testOption);
+    cliOptions.addOption(replaceOption);
 
     aboutData.setupCommandLine(&cliOptions);
     cliOptions.process(app);
@@ -164,6 +169,14 @@ int main(int argc, char *argv[])
         } else {
             cliOptions.showHelp(1);
         }
+    }
+
+    if (cliOptions.isSet(replaceOption)) {
+        auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                      QStringLiteral("/MainApplication"),
+                                                      QStringLiteral("org.qtproject.Qt.QCoreApplication"),
+                                                      QStringLiteral("quit"));
+        QDBusConnection::sessionBus().call(message); //deliberately block until it's done, so we register the name after the app quits
     }
     }
 
