@@ -82,5 +82,6 @@ Item {
         elide: Text.ElideLeft
         minimumPointSize: theme.defaultFont.pointSize
         fontSizeMode: Text.HorizontalFit
+        textFormat: Text.PlainText
     }
 }
