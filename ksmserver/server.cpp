@@ -524,6 +524,7 @@ void KSMServer::setupXIOErrorHandler()
     XSetIOErrorHandler(Xio_ErrorHandler);
 }
 
+static int wake_up_socket = -1;
 static void sighandler(int sig)
 {
     if (sig == SIGHUP) {
@@ -531,17 +532,8 @@ static void sighandler(int sig)
         return;
     }
 
-    if (the_server)
-    {
-       KSMServer *server = the_server;
-       the_server = nullptr;
-       server->cleanUp();
-       delete server;
-    }
-
-    if (qApp)
-        qApp->quit();
-    //::exit(0);
+    char ch = 0;
+    (void)::write(wake_up_socket, &ch, 1);
 }
 
 
@@ -607,6 +599,7 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
   : wmProcess( nullptr )
   , sessionGroup( QStringLiteral( "" ) )
   , logoutEffectWidget( nullptr )
+  , sockets{ -1, -1 }
 {
     if (!flags.testFlag(InitFlag::NoLockScreen)) {
         ScreenLocker::KSldApp::self()->initialize();
@@ -614,6 +607,12 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
             ScreenLocker::KSldApp::self()->lock(ScreenLocker::EstablishLock::Immediate);
         }
     }
+
+    if(::socketpair(AF_UNIX, SOCK_STREAM | SOCK_CLOEXEC, 0, sockets) != 0)
+        qFatal("Could not create socket pair, error %d (%s)", errno, strerror(errno));
+    wake_up_socket = sockets[0];
+    QSocketNotifier* n = new QSocketNotifier(sockets[1], QSocketNotifier::Read, this);
+    qApp->connect(n, &QSocketNotifier::activated, &QApplication::quit);
 
     new KSMServerInterfaceAdaptor( this );
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/KSMServer"), this);
@@ -737,6 +736,12 @@ void KSMServer::cleanUp()
     if (clean) return;
     clean = true;
     IceFreeListenObjs (numTransports, listenObjs);
+
+    wake_up_socket = -1;
+    ::close(sockets[1]);
+    ::close(sockets[0]);
+    sockets[0] = -1;
+    sockets[1] = -1;
 
     QByteArray fName = QFile::encodeName(QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation) + QLatin1Char('/') + QStringLiteral("KSMserver"));
     QString display  = QString::fromLocal8Bit(::getenv("DISPLAY"));

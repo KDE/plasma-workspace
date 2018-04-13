@@ -296,6 +296,7 @@ private:
     QList<KSMClient*> clientsToKill;
     QList<KSMClient*> clientsToSave;
 
+    int sockets[2];
     friend bool readFromPipe(int pipe);
 };
 
