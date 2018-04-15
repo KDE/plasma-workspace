@@ -690,6 +690,9 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
                 }
 
                 data.visibilityStr = observeData[6].trimmed();
+                if (data.visibilityStr == QLatin1String("--")) {
+                    data.visibilityStr.clear();
+                }
 
             } else if (elementName == QLatin1String("lat")) {
                 const QString ordinate = xml.readElementText();
