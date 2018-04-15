@@ -652,7 +652,8 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
                     if (conditionData.contains(QLatin1Char(','))) {
                         data.condition = conditionData.section(QLatin1Char(','), 0, 0).trimmed();
 
-                        if (data.condition == QLatin1String("null")) {
+                        if (data.condition == QLatin1String("null") ||
+                            data.condition == QLatin1String("Not Available")) {
                             data.condition.clear();
                         }
                     }
