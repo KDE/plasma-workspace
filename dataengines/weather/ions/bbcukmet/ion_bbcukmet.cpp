@@ -652,7 +652,8 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
                     if (conditionData.contains(QLatin1Char(','))) {
                         data.condition = conditionData.section(QLatin1Char(','), 0, 0).trimmed();
 
-                        if (data.condition == QLatin1String("null")) {
+                        if (data.condition == QLatin1String("null") ||
+                            data.condition == QLatin1String("Not Available")) {
                             data.condition.clear();
                         }
                     }
@@ -690,6 +691,9 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
                 }
 
                 data.visibilityStr = observeData[6].trimmed();
+                if (data.visibilityStr == QLatin1String("--")) {
+                    data.visibilityStr.clear();
+                }
 
             } else if (elementName == QLatin1String("lat")) {
                 const QString ordinate = xml.readElementText();
