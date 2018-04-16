@@ -57,7 +57,7 @@ public:
     static QScriptValue userDataPath(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue knownWallpaperPlugins(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue configFile(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue gridUnit();
+    static QScriptValue gridUnit(QScriptContext *context, QScriptEngine *engine);
     static QScriptValue createContainment(const QString &type, const QString &defautPlugin,
                                           QScriptContext *context, QScriptEngine *engine);
     static QScriptValue setImmutability(QScriptContext *context, QScriptEngine *engine);

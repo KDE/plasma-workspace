@@ -917,8 +917,10 @@ QScriptValue ScriptEngine::V1::desktops(QScriptContext *context,
     return containments;
 }
 
-QScriptValue ScriptEngine::V1::gridUnit()
+QScriptValue ScriptEngine::V1::gridUnit(QScriptContext *context, QScriptEngine *engine)
 {
+    Q_UNUSED(context);
+    Q_UNUSED(engine);
     return ScriptEngine::gridUnit();
 }
 
