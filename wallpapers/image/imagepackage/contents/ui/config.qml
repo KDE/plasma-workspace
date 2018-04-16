@@ -19,6 +19,7 @@
 
 import QtQuick 2.5
 import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 2.3 as QtControls2
 import QtQuick.Dialogs 1.1 as QtDialogs
 import QtQuick.Layouts 1.0
 import QtQuick.Window 2.0 // for Screen
@@ -28,6 +29,7 @@ import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.draganddrop 2.0 as DragDrop
+import org.kde.kcm 1.1 as KCM
 
 ColumnLayout {
     id: root
@@ -249,10 +251,11 @@ ColumnLayout {
                     text: i18nd("plasma_wallpaper_org.kde.image","Seconds")
                 }
             }
-            QtControls.ScrollView {
+            QtControls2.ScrollView {
+                id: foldersScroll
                 Layout.fillHeight: true;
                 Layout.fillWidth: true
-                frameVisible: true
+                Component.onCompleted: foldersScroll.background.visible = true;
                 ListView {
                     id: slidePathsView
                     anchors.margins: 4
@@ -278,70 +281,17 @@ ColumnLayout {
 
     Component {
         id: thumbnailsComponent
-        QtControls.ScrollView {
+        KCM.GridView {
+            id: wallpapersGrid
             anchors.fill: parent
 
-            frameVisible: true
-            highlightOnFocus: true;
-
-            Component.onCompleted: {
-                //replace the current binding on the scrollbar that makes it visible when content doesn't fit
-
-                //otherwise we adjust gridSize when we hide the vertical scrollbar and
-                //due to layouting that can make everything adjust which changes the contentWidth/height which
-                //changes our scrollbars and we continue being stuck in a loop
-
-                //looks better to not have everything resize anyway.
-                //BUG: 336301
-                __verticalScrollBar.visible = true
-            }
-
-            GridView {
-                id: wallpapersGrid
-                model: imageWallpaper.wallpaperModel
-                currentIndex: -1
-                focus: true
-
-                cellWidth: Math.floor(wallpapersGrid.width / Math.max(Math.floor(wallpapersGrid.width / (units.gridUnit*12)), 3))
-                cellHeight: Math.round(cellWidth / (imageWallpaper.targetSize.width / imageWallpaper.targetSize.height))
-
-                anchors.margins: 4
-                boundsBehavior: Flickable.StopAtBounds
-
-                delegate: WallpaperDelegate {
-                    color: cfg_Color
-                }
-
-                onContentHeightChanged: {
-                    wallpapersGrid.currentIndex = imageWallpaper.wallpaperModel.indexOf(cfg_Image);
-                    wallpapersGrid.positionViewAtIndex(wallpapersGrid.currentIndex, GridView.Visible)
-                }
-
-                Keys.onPressed: {
-                    if (count < 1) {
-                        return;
-                    }
-
-                    if (event.key == Qt.Key_Home) {
-                        currentIndex = 0;
-                    } else if (event.key == Qt.Key_End) {
-                        currentIndex = count - 1;
-                    }
-                }
-
-                Keys.onLeftPressed: moveCurrentIndexLeft()
-                Keys.onRightPressed: moveCurrentIndexRight()
-                Keys.onUpPressed: moveCurrentIndexUp()
-                Keys.onDownPressed: moveCurrentIndexDown()
-
-                Connections {
-                    target: imageWallpaper
-                    onCustomWallpaperPicked: {
-                        wallpapersGrid.currentIndex = 0;
-                        cfg_Image = path;
-                    }
-                }
-
+            //that min is needed as the module will be populated in an async way
+            //and only on demand so we can't ensure it already exists
+            view.currentIndex: Math.min(imageWallpaper.wallpaperModel.indexOf(cfg_Image), imageWallpaper.wallpaperModel.count-1)
+            //kill the space for label under thumbnails
+            view.model: imageWallpaper.wallpaperModel
+            view.delegate: WallpaperDelegate {
+                color: cfg_Color
             }
         }
     }

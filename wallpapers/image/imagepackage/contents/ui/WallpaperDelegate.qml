@@ -22,190 +22,102 @@ import QtQuick.Controls.Private 1.0
 import QtGraphicalEffects 1.0
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kcm 1.1 as KCM
 
-MouseArea {
+KCM.GridDelegate {
     id: wallpaperDelegate
 
-    width: wallpapersGrid.cellWidth
-    height: wallpapersGrid.cellHeight
-
+  
     property alias color: backgroundRect.color
     property bool selected: (wallpapersGrid.currentIndex == index)
     opacity: model.pendingDeletion ? 0.5 : 1
+    
+    toolTip: model.author.length > 0 ? i18nd("plasma_applet_org.kde.image", "%1 by %2", model.display, model.author) : model.display
 
     hoverEnabled: true
 
-    GridView.onIsCurrentItemChanged: {
-        if (GridView.isCurrentItem) {
-            cfg_Image = model.path
+    actions: [
+        Kirigami.Action {
+            icon.name: "document-open-folder"
+            tooltip: i18nd("plasma_applet_org.kde.image", "Open Containing Folder")
+            onTriggered: imageWallpaper.wallpaperModel.openContainingFolder(index)
+        },
+        Kirigami.Action {
+            icon.name: "edit-undo"
+            visible: model.pendingDeletion
+            tooltip: i18nd("plasma_applet_org.kde.image", "Restore wallpaper")
+            onTriggered: imageWallpaper.wallpaperModel.setPendingDeletion(index, !model.pendingDeletion)
+        },
+        Kirigami.Action {
+            icon.name: "edit-delete"
+            tooltip: i18nd("plasma_applet_org.kde.image", "Remove Wallpaper")
+            visible: model.removable && !model.pendingDeletion
+            onTriggered: {
+                imageWallpaper.wallpaperModel.setPendingDeletion(index, true);
+                if (wallpapersGrid.currentIndex === index) {
+                    wallpapersGrid.currentIndex = (index + 1) % wallpapersGrid.count;
+                }
+            }
         }
-    }
+    ]
 
-    //note: this *doesn't* use system colors since it represent a
-    //skeymorphic photograph rather than a widget
-    Rectangle {
-        id: background
-        color: "white"
-        anchors {
-            fill: parent
-            margins: units.smallSpacing
+    thumbnail: Rectangle {
+        id: backgroundRect
+        color: cfg_Color
+        anchors.fill: parent
+
+        QIconItem {
+            anchors.centerIn: parent
+            width: units.iconSizes.large
+            height: width
+            icon: "view-preview"
+            visible: !walliePreview.visible
         }
-        opacity: 0.8
-        Rectangle {
-            id: backgroundRect
-            color: cfg_Color
-            anchors {
-                fill: parent
-                margins: units.smallSpacing * 2
-            }
-            QIconItem {
-                anchors.centerIn: parent
-                width: units.iconSizes.large
-                height: width
-                icon: "view-preview"
-                visible: !walliePreview.visible
-            }
 
-            QPixmapItem {
-                id: blurBackgroundSource
-                visible: cfg_Blur
-                anchors.fill: parent
-                smooth: true
-                pixmap: model.screenshot
-                fillMode: QPixmapItem.PreserveAspectCrop
-            }
+        QPixmapItem {
+            id: blurBackgroundSource
+            visible: cfg_Blur
+            anchors.fill: parent
+            smooth: true
+            pixmap: model.screenshot
+            fillMode: QPixmapItem.PreserveAspectCrop
+        }
 
-            FastBlur {
-                visible: cfg_Blur
-                anchors.fill: parent
-                source: blurBackgroundSource
-                radius: 4
-            }
+        FastBlur {
+            visible: cfg_Blur
+            anchors.fill: parent
+            source: blurBackgroundSource
+            radius: 4
+        }
 
-            QPixmapItem {
-                id: walliePreview
-                anchors.fill: parent
-                visible: model.screenshot != null
-                smooth: true
-                pixmap: model.screenshot
-                fillMode: {
-                    if (cfg_FillMode == Image.Stretch) {
-                        return QPixmapItem.Stretch;
-                    } else if (cfg_FillMode == Image.PreserveAspectFit) {
-                        return QPixmapItem.PreserveAspectFit;
-                    } else if (cfg_FillMode == Image.PreserveAspectCrop) {
-                        return QPixmapItem.PreserveAspectCrop;
-                    } else if (cfg_FillMode == Image.Tile) {
-                        return QPixmapItem.Tile;
-                    } else if (cfg_FillMode == Image.TileVertically) {
-                        return QPixmapItem.TileVertically;
-                    } else if (cfg_FillMode == Image.TileHorizontally) {
-                        return QPixmapItem.TileHorizontally;
-                    }
+        QPixmapItem {
+            id: walliePreview
+            anchors.fill: parent
+            visible: model.screenshot != null
+            smooth: true
+            pixmap: model.screenshot
+            fillMode: {
+                if (cfg_FillMode == Image.Stretch) {
+                    return QPixmapItem.Stretch;
+                } else if (cfg_FillMode == Image.PreserveAspectFit) {
                     return QPixmapItem.PreserveAspectFit;
+                } else if (cfg_FillMode == Image.PreserveAspectCrop) {
+                    return QPixmapItem.PreserveAspectCrop;
+                } else if (cfg_FillMode == Image.Tile) {
+                    return QPixmapItem.Tile;
+                } else if (cfg_FillMode == Image.TileVertically) {
+                    return QPixmapItem.TileVertically;
+                } else if (cfg_FillMode == Image.TileHorizontally) {
+                    return QPixmapItem.TileHorizontally;
                 }
-            }
-            PlasmaComponents.ToolButton {
-                anchors {
-                    top: parent.top
-                    right: parent.right
-                    margins: units.smallSpacing
-                }
-                iconSource: "list-remove"
-                tooltip: i18nd("plasma_wallpaper_org.kde.image", "Remove wallpaper")
-                flat: false
-                visible: model.removable && !model.pendingDeletion
-                onClicked: {
-                    imageWallpaper.wallpaperModel.setPendingDeletion(index, true);
-                    if (wallpapersGrid.currentIndex === index) {
-                        wallpapersGrid.currentIndex = (index + 1) % wallpapersGrid.count;
-                    }
-                }
-                opacity: wallpaperDelegate.containsMouse ? 1 : 0
-                Behavior on opacity {
-                    PropertyAnimation {
-                        duration: units.longDuration
-                        easing.type: Easing.OutQuad
-                    }
-                }
-            }
-
-            PlasmaComponents.ToolButton {
-                anchors {
-                    top: parent.top
-                    left: parent.left
-                    margins: units.smallSpacing
-                }
-                iconSource: "document-open-folder"
-                tooltip: i18nd("plasma_wallpaper_org.kde.image", "Open Containing Folder")
-                flat: false
-                onClicked: imageWallpaper.wallpaperModel.openContainingFolder(index)
-                opacity: wallpaperDelegate.containsMouse ? 1 : 0
-                Behavior on opacity {
-                    PropertyAnimation {
-                        duration: units.longDuration
-                        easing.type: Easing.OutQuad
-                    }
-                }
-            }
-
-            PlasmaComponents.ToolButton {
-                anchors {
-                    top: parent.top
-                    right: parent.right
-                    margins: units.smallSpacing
-                }
-                iconSource: "edit-undo"
-                tooltip: i18nd("plasma_wallpaper_org.kde.image", "Restore wallpaper")
-                flat: false
-                visible: model.pendingDeletion
-                onClicked: imageWallpaper.wallpaperModel.setPendingDeletion(index, !model.pendingDeletion)
-                opacity: wallpaperDelegate.containsMouse ? 1 : 0
-                Behavior on opacity {
-                    PropertyAnimation {
-                        duration: units.longDuration
-                        easing.type: Easing.OutQuad
-                    }
-                }
-            }
-        }
-    }
-
-    Rectangle {
-        opacity: selected ? 1.0 : 0
-        anchors.fill: background
-        border.width: units.smallSpacing * 2
-        border.color: syspal.highlight
-        color: "transparent"
-        Behavior on opacity {
-            PropertyAnimation {
-                duration: units.longDuration
-                easing.type: Easing.OutQuad
-            }
-        }
-    }
-
-
-    Timer {
-        interval: 1000 // FIXME TODO: Use platform value for tooltip activation delay.
-
-        running: wallpaperDelegate.containsMouse && !pressed && model.display
-
-        onTriggered: {
-            if (model.author) {
-                Tooltip.showText(wallpaperDelegate, Qt.point(wallpaperDelegate.mouseX, wallpaperDelegate.mouseY),
-                                 i18nd("plasma_wallpaper_org.kde.image", "%1 by %2", model.display, model.author));
-            } else {
-                Tooltip.showText(wallpaperDelegate, Qt.point(wallpaperDelegate.mouseX, wallpaperDelegate.mouseY),
-                                 model.display);
+                return QPixmapItem.PreserveAspectFit;
             }
         }
     }
 
     onClicked: {
-        wallpapersGrid.currentIndex = index
+        cfg_Image = model.path;
         wallpapersGrid.forceActiveFocus();
     }
-
-    onExited: Tooltip.hideText()
 }
