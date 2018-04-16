@@ -1952,9 +1952,11 @@ void ShellCorona::insertContainment(const QString &activity, int screenNum, Plas
         }
     }
 
-    Q_ASSERT(candidates.contains(containment));
     Q_ASSERT(containment != cont);
 
+    //if there was a duplicate containment destroy the old one
+    //the new one replaces it
+    //FIXME: this whole function is probably redundant now
     if (cont) {
         cont->destroy();
     }
