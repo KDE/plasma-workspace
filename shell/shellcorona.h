@@ -200,6 +200,7 @@ private Q_SLOTS:
     void primaryOutputChanged();
 
     void panelContainmentDestroyed(QObject* cont);
+    void desktopContainmentDestroyed(QObject*);
     void showOpenGLNotCompatibleWarning();
     void interactiveConsoleVisibilityChanged(bool visible);
     void handleScreenRemoved(QScreen* screen);
@@ -235,6 +236,7 @@ private:
     KConfigGroup m_lnfDefaultsConfig;
     QList<Plasma::Containment *> m_waitingPanels;
     QHash<QString, QString> m_activityContainmentPlugins;
+    QHash<QString, QSet<Plasma::Containment *> > m_desktopContainments;
     QAction *m_addPanelAction;
     QMenu *m_addPanelsMenu;
     KPackage::Package m_lookAndFeelPackage;

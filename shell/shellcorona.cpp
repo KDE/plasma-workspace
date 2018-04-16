@@ -853,6 +853,7 @@ void ShellCorona::unload()
     m_desktopViewforId.clear();
     qDeleteAll(m_panelViews);
     m_panelViews.clear();
+    m_desktopContainments.clear();
     m_waitingPanels.clear();
     m_activityContainmentPlugins.clear();
 
@@ -1232,14 +1233,16 @@ void ShellCorona::addOutput(QScreen* screen)
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& activity, int screenNum)
 {
-    for (Plasma::Containment *cont : containmentsForActivity(activity)) {
-        //in the case of a corrupt config file
-        //with multiple containments with same lastScreen
-        //it can happen two insertContainment happen for
-        //the same screen, leading to the old containment
-        //to be destroyed
-        if (!cont->destroyed() && cont->screen() == screenNum) {
-            return cont;
+    if (m_desktopContainments.contains(activity)) {
+        for (Plasma::Containment *cont : m_desktopContainments.value(activity)) {
+            //in the case of a corrupt config file
+            //with multiple containments with same lastScreen
+            //it can happen two insertContainment happen for
+            //the same screen, leading to the old containment
+            //to be destroyed
+            if (!cont->destroyed() && cont->screen() == screenNum && cont->activity() == activity) {
+                return cont;
+            }
         }
     }
 
@@ -1249,10 +1252,11 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& ac
         plugin = defaultContainmentPlugin();
     }
 
-    Plasma::Containment *containment = containmentForScreen(screenNum, activity, plugin, QVariantList());
+    Plasma::Containment *containment = containmentForScreen(screenNum, plugin, QVariantList());
     Q_ASSERT(containment);
 
     if (containment) {
+        containment->setActivity(activity);
         insertContainment(activity, screenNum, containment);
     }
 
@@ -1552,8 +1556,10 @@ void ShellCorona::activityAdded(const QString &id)
 void ShellCorona::activityRemoved(const QString &id)
 {
     m_activityContainmentPlugins.remove(id);
-    for (auto cont : containmentsForActivity(id)) {
-        cont->destroy();
+    if (m_desktopContainments.contains(id)) {
+        for (auto cont : m_desktopContainments.value(id)) {
+            cont->destroy();
+        }
     }
 }
 
@@ -1590,8 +1596,7 @@ void ShellCorona::insertActivity(const QString &id, const QString &plugin)
 
 Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const QString &plugin)
 {
-    //search but not create
-    Plasma::Containment *oldContainment = containmentForScreen(screen, m_activityController->currentActivity(), QString());
+    Plasma::Containment *oldContainment = containmentForScreen(screen);
 
     //no valid containment in given screen, giving up
     if (!oldContainment) {
@@ -1670,6 +1675,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     }
     view->setContainment(newContainment);
     newContainment->setActivity(oldContainment->activity());
+    m_desktopContainments.remove(oldContainment->activity());
     insertContainment(oldContainment->activity(), screen, newContainment);
 
     //removing the focus from the item that is going to be destroyed
@@ -1940,8 +1946,7 @@ void ShellCorona::stopCurrentActivity()
 void ShellCorona::insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment)
 {
     Plasma::Containment *cont = nullptr;
-    auto candidates = containmentsForActivity(activity);
-    for (Plasma::Containment *c : candidates) {
+    for (Plasma::Containment *c : m_desktopContainments.value(activity)) {
         //using lastScreen() instead of screen() catches also containments of activities that aren't the current one, so not assigned to a screen right now
         if (c->lastScreen() == screenNum) {
             cont = c;
@@ -1952,11 +1957,33 @@ void ShellCorona::insertContainment(const QString &activity, int screenNum, Plas
         }
     }
 
-    Q_ASSERT(candidates.contains(containment));
-    Q_ASSERT(containment != cont);
+    Q_ASSERT(!m_desktopContainments.value(activity).values().contains(containment));
 
     if (cont) {
         cont->destroy();
+    }
+    m_desktopContainments[activity].insert(containment);
+
+    //when a containment gets deleted update our map of containments
+    connect(containment, SIGNAL(destroyed(QObject*)), this, SLOT(desktopContainmentDestroyed(QObject*)));
+}
+
+void ShellCorona::desktopContainmentDestroyed(QObject *obj)
+{
+    // when QObject::destroyed arrives, ~Plasma::Containment has run,
+    // members of Containment are not accessible anymore,
+    // so keep ugly bookeeping by hand
+    auto containment = static_cast<Plasma::Containment*>(obj);
+    //explicitly specify the range by reference, as we need to remove stuff from the sets
+    for (QSet<Plasma::Containment *> &a : m_desktopContainments) {
+        QMutableSetIterator<Plasma::Containment *> it(a);
+        while (it.hasNext()) {
+            it.next();
+            if (it.value() == containment) {
+                it.remove();
+                return;
+            }
+        }
     }
 }
 
