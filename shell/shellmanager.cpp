@@ -75,6 +75,8 @@ ShellManager::ShellManager()
 {
     //we have to ensure this is executed after QCoreApplication::exec()
     QMetaObject::invokeMethod(this, "loadHandlers", Qt::QueuedConnection);
+    connect(&d->shellUpdateDelay, &QTimer::timeout,
+            this, &ShellManager::updateShell);
 }
 
 ShellManager::~ShellManager()
