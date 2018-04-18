@@ -19,42 +19,25 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 1.0 as QtControls
-import QtQuick.Dialogs 1.1 as QtDialogs
+import org.kde.kquickcontrols 2.0 as KQuickControls
 //We need units from it
 import org.kde.plasma.core 2.0 as Plasmacore
 
 Column {
     id: root
-    property alias cfg_Color: colorDialog.color
-
-    QtDialogs.ColorDialog {
-        id: colorDialog
-        modality: Qt.WindowModal
-        showAlphaChannel: false
-        title: i18nd("plasma_wallpaper_org.kde.color", "Select Background Color")
-    }
+    property alias cfg_Color: colorButton.color
 
     Row {
         spacing: units.largeSpacing / 2
 
         QtControls.Label {
             width: formAlignment - units.largeSpacing
-            anchors.verticalCenter: colorButton.verticalCenter
             horizontalAlignment: Text.AlignRight
             text: i18nd("plasma_wallpaper_org.kde.color", "Color:")
         }
-        QtControls.Button {
+        KQuickControls.ColorButton {
             id: colorButton
-            width: units.gridUnit * 3
-            onClicked: colorDialog.open()
-
-            Rectangle {
-                id: colorRect
-                anchors.centerIn: parent
-                width: parent.width - 2 * units.smallSpacing
-                height: theme.mSize(theme.defaultFont).height
-                color: colorDialog.color
-            }
+            dialogTitle: i18nd("plasma_wallpaper_org.kde.color", "Select Background Color")
         }
     }
 }

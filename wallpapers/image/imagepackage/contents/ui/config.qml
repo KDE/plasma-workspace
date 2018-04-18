@@ -20,12 +20,12 @@
 import QtQuick 2.5
 import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Controls 2.3 as QtControls2
-import QtQuick.Dialogs 1.1 as QtDialogs
 import QtQuick.Layouts 1.0
 import QtQuick.Window 2.0 // for Screen
 //We need units from it
 import org.kde.plasma.core 2.0 as Plasmacore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
+import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.draganddrop 2.0 as DragDrop
@@ -33,7 +33,7 @@ import org.kde.kcm 1.1 as KCM
 
 ColumnLayout {
     id: root
-    property alias cfg_Color: colorDialog.color
+    property alias cfg_Color: colorButton.color
     property string cfg_Image
     property int cfg_FillMode
     property alias cfg_Blur: blurRadioButton.checked
@@ -150,13 +150,6 @@ ColumnLayout {
         }
     }
 
-    QtDialogs.ColorDialog {
-        id: colorDialog
-        modality: Qt.WindowModal
-        showAlphaChannel: false
-        title: i18nd("plasma_wallpaper_org.kde.image", "Select Background Color")
-    }
-
     Row {
         id: colorRow
         visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
@@ -170,19 +163,9 @@ ColumnLayout {
             exclusiveGroup: backgroundGroup
             checked: !cfg_Blur
         }
-        QtControls.Button {
+        KQuickControls.ColorButton {
             id: colorButton
-            width: units.gridUnit * 3
-            text: " " // needed to it gets a proper height...
-            onClicked: colorDialog.open()
-
-            Rectangle {
-                id: colorRect
-                anchors.centerIn: parent
-                width: parent.width - 2 * units.smallSpacing
-                height: theme.mSize(theme.defaultFont).height
-                color: colorDialog.color
-            }
+            dialogTitle: i18nd("plasma_wallpaper_org.kde.image", "Select Background Color")
         }
     }
 
