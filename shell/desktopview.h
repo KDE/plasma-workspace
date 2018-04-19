@@ -40,6 +40,9 @@ class DesktopView : public PlasmaQuick::ContainmentView
 
     //What kind of plasma session we're in: are we in a full workspace, an application?...
     Q_PROPERTY(SessionType sessionType READ sessionType CONSTANT)
+
+    Q_PROPERTY(QVariantMap candidateContainments READ candidateContainmentsGraphicItems NOTIFY candidateContainmentsChanged)
+
 public:
     enum WindowType {
         Window, /** The window is a normal resizable window with titlebar and appears in the taskbar */
@@ -72,6 +75,8 @@ public:
 
     SessionType sessionType() const;
 
+    QVariantMap candidateContainmentsGraphicItems() const;
+
 protected:
     bool event(QEvent *e) override;
     void keyPressEvent(QKeyEvent *e) override;
@@ -88,6 +93,7 @@ private Q_SLOTS:
 Q_SIGNALS:
     void stayBehindChanged();
     void windowTypeChanged();
+    void candidateContainmentsChanged();
 
 private:
     void coronaPackageChanged(const KPackage::Package &package);

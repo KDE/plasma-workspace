@@ -24,11 +24,13 @@
 #include <QQmlEngine>
 #include <QQmlContext>
 #include <QScreen>
+#include <QQuickItem>
 #include <qopenglshaderprogram.h>
 
 #include <kwindowsystem.h>
 #include <klocalizedstring.h>
 #include <KAuthorized>
+#include <kactivities/controller.h>
 
 #include <KPackage/Package>
 
@@ -56,6 +58,13 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 
     QObject::connect(corona, &Plasma::Corona::kPackageChanged,
                      this, &DesktopView::coronaPackageChanged);
+
+    KActivities::Controller *m_activityController = new KActivities::Controller(this);
+    
+    QObject::connect(m_activityController, &KActivities::Controller::activityAdded,
+                     this, &DesktopView::candidateContainmentsChanged);
+    QObject::connect(m_activityController, &KActivities::Controller::activityRemoved,
+                     this, &DesktopView::candidateContainmentsChanged);
 
     if (QQuickWindow::sceneGraphBackend() != QLatin1String("software")) {
         connect(this, &DesktopView::sceneGraphInitialized, this,
@@ -195,6 +204,19 @@ DesktopView::SessionType DesktopView::sessionType() const
     } else {
         return ApplicationSession;
     }
+}
+
+QVariantMap DesktopView::candidateContainmentsGraphicItems() const
+{
+    QVariantMap map;
+    if (!containment()) {
+        return map;
+    }
+
+    for (auto cont : corona()->containmentsForScreen(containment()->screen())) {
+        map[cont->activity()] = cont->property("_plasma_graphicObject");
+    }
+    return map;
 }
 
 bool DesktopView::event(QEvent *e)
