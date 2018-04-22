@@ -63,7 +63,6 @@ Item {
 
     default property alias _children: innerLayout.children
 
-
     UserList {
         id: userListView
         visible: showUserList && y > 0

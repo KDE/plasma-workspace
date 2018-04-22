@@ -8,6 +8,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 SessionManagementScreen {
 
+    property Item mainPasswordBox: passwordBox
+
     property bool showUsernamePrompt: !showUserList
 
     property string lastUserName

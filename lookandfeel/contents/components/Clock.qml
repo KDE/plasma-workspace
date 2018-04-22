@@ -26,13 +26,15 @@ import org.kde.plasma.components 2.0
 ColumnLayout {
     Label {
         text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
-        font.pointSize: 32 //Mockup says this, I'm not sure what to do?
+        font.pointSize: 48 //Mockup says this, I'm not sure what to do?
+        font.weight: Font.Light
         Layout.alignment: Qt.AlignHCenter
         renderType: Text.QtRendering
     }
     Label {
         text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
-        font.pointSize: 18
+        font.pointSize: 24
+        font.weight: Font.Light
         Layout.alignment: Qt.AlignHCenter
     }
     DataSource {
