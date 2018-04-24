@@ -107,6 +107,10 @@ PlasmaCore.ColorScope {
                 mainBlock.mainPasswordBox.text = "";
             }
         }
+        Keys.onPressed: {
+            uiVisible = true;
+            event.accepted = false;
+        }
         Timer {
             id: fadeoutTimer
             interval: 10000
