@@ -9,6 +9,10 @@
     <entry name="sources" type="StringList">
         <label>Which "systemmonitor" dataengine sources this applet will take data from.</label>
     </entry>
+    <entry name="updateInterval" type="Int">
+        <label>The interval in milliseconds to update the data shown.</label>
+        <default>2000</default>
+    </entry>
   </group>
 
 </kcfg>

@@ -81,7 +81,7 @@ Item {
         id: smSource
 
         engine: "systemmonitor"
-        interval: 2000
+        interval: plasmoid.configuration.updateInterval
         onSourceAdded: {
             if (plasmoid.configuration.sources.length > 0 &&
                 plasmoid.configuration.sources.indexOf(encodeURIComponent(source)) === -1) {

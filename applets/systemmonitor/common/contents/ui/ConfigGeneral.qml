@@ -48,6 +48,7 @@ Item {
             }
         }
     }
+    property int cfg_updateInterval
 
     signal sourceAdded(string source)
 
@@ -101,6 +102,22 @@ Item {
     Layouts.ColumnLayout {
         id: mainColumn
         anchors.left: parent.left
+
+        Layouts.RowLayout {
+            Controls.Label {
+                text: i18n("Update Interval:")
+            }
+
+            Controls.SpinBox {
+                id: updateIntervalSpinBox
+                decimals: 2
+                suffix: i18nc("Suffix for spinbox (seconds)", " sec")
+                maximumValue: 1000
+                stepSize: 0.5
+                onValueChanged: cfg_updateInterval = value * 1000
+                Component.onCompleted: value = cfg_updateInterval / 1000
+            }
+        }
 
         Repeater {
             id: repeater
