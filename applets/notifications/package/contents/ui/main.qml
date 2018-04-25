@@ -73,6 +73,16 @@ MouseEventListener {
 
     Plasmoid.compactRepresentation: NotificationIcon { }
 
+    // Always scroll to the top when opening as that's where the important stuff goes on
+    Plasmoid.onExpandedChanged: {
+        if (Plasmoid.expanded) {
+            // contentY doesn't really work with ListView (creates and destroys delegates on demand and positions them randomly)
+            // so first use its "move to the top" method and then move it further up to reveal all of its "header" contents
+            historyList.positionViewAtBeginning();
+            historyList.contentY = historyList.originY;
+        }
+    }
+
     hoverEnabled: !UiProperties.touchInput
 
     onActiveItemsCountChanged: {
