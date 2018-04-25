@@ -67,6 +67,7 @@ Comment[sv]=Global menyrad överst på skärmen
 Comment[uk]=Загальна панель меню у верхній частині екрана
 Comment[x-test]=xxGlobal menubar on top of the screenxx
 Comment[zh_CN]=屏幕顶部的全局菜单栏
+Comment[zh_TW]=在螢幕上方顯示全域選單列
 Icon=show-menu
 Type=Service
 X-KDE-PluginInfo-Author=Kai Uwe Broulik
