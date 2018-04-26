@@ -264,6 +264,7 @@ Item {
         cache: false
         fillMode: Image.PreserveAspectCrop
         source: imageA.source
+        autoTransform: true
         z: -1
     }
 
@@ -285,6 +286,7 @@ Item {
         cache: false
         fillMode: Image.PreserveAspectCrop
         source: imageB.source
+        autoTransform: true
         z: -1
     }
 
