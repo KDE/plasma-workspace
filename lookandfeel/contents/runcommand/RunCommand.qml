@@ -28,6 +28,7 @@ ColumnLayout {
     property string query
     property string runner
     property bool showHistory: false
+    property bool closable: true
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -155,6 +156,7 @@ ColumnLayout {
             onClicked: runnerWindow.visible = false
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close")
             Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close Search")
+            visible: root.closable
         }
     }
 
