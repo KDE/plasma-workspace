@@ -424,6 +424,7 @@ PlasmaCore.ColorScope {
             anchors {
                 horizontalCenter: parent.horizontalCenter
                 bottom: parent.bottom
+                bottomMargin: units.largeSpacing
             }
         }
 
