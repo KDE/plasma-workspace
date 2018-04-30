@@ -117,14 +117,22 @@ class NotificationThread : public QThread
             return;
         }
 
-        QUrl soundURL = QUrl(soundFilename); // this CTOR accepts both absolute paths (/usr/share/sounds/blabla.ogg and blabla.ogg) w/o screwing the scheme
-        if (soundURL.isRelative() && !soundURL.toString().startsWith('/')) { // QUrl considers url.scheme.isEmpty() == url.isRelative()
-            soundURL = QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("sounds/") + soundFilename));
-
-            if (soundURL.isEmpty()) {
-                qCWarning(KSMSERVER) << "Audio notification requested, but sound file from notifyrc file was not found, aborting audio notification";
-                return;
+        QUrl soundURL;
+        const auto dataLocations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+        for (const QString &dataLocation: dataLocations) {
+            soundURL = QUrl::fromUserInput(soundFilename,
+                                           dataLocation + QStringLiteral("/sounds"),
+                                           QUrl::AssumeLocalFile);
+            if (soundURL.isLocalFile() && QFile::exists(soundURL.toLocalFile())) {
+                break;
+            } else if (!soundURL.isLocalFile() && soundURL.isValid()) {
+                break;
             }
+            soundURL.clear();
+        }
+        if (soundURL.isEmpty()) {
+            qCWarning(KSMSERVER) << "Audio notification requested, but sound file from notifyrc file was not found, aborting audio notification";
+            return;
         }
 
         Phonon::MediaObject *m = new Phonon::MediaObject(&parent);
