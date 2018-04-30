@@ -33,25 +33,25 @@ KCM.GridDelegate {
     property bool selected: (wallpapersGrid.currentIndex == index)
     opacity: model.pendingDeletion ? 0.5 : 1
     
-    toolTip: model.author.length > 0 ? i18nd("plasma_applet_org.kde.image", "%1 by %2", model.display, model.author) : model.display
+    toolTip: model.author.length > 0 ? i18nd("plasma_wallpaper_org.kde.image", "%1 by %2", model.display, model.author) : model.display
 
     hoverEnabled: true
 
     actions: [
         Kirigami.Action {
             icon.name: "document-open-folder"
-            tooltip: i18nd("plasma_applet_org.kde.image", "Open Containing Folder")
+            tooltip: i18nd("plasma_wallpaper_org.kde.image", "Open Containing Folder")
             onTriggered: imageWallpaper.wallpaperModel.openContainingFolder(index)
         },
         Kirigami.Action {
             icon.name: "edit-undo"
             visible: model.pendingDeletion
-            tooltip: i18nd("plasma_applet_org.kde.image", "Restore wallpaper")
+            tooltip: i18nd("plasma_wallpaper_org.kde.image", "Restore wallpaper")
             onTriggered: imageWallpaper.wallpaperModel.setPendingDeletion(index, !model.pendingDeletion)
         },
         Kirigami.Action {
             icon.name: "edit-delete"
-            tooltip: i18nd("plasma_applet_org.kde.image", "Remove Wallpaper")
+            tooltip: i18nd("plasma_wallpaper_org.kde.image", "Remove Wallpaper")
             visible: model.removable && !model.pendingDeletion
             onTriggered: {
                 imageWallpaper.wallpaperModel.setPendingDeletion(index, true);
