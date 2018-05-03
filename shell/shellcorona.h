@@ -113,6 +113,9 @@ public:
 
     QString defaultContainmentPlugin() const;
 
+Q_SIGNALS:
+    void glInitialisationFailed();
+
 public Q_SLOTS:
     /**
      * Request saving applicationConfig on disk, it's event compressed, not immediate
@@ -200,7 +203,6 @@ private Q_SLOTS:
     void primaryOutputChanged();
 
     void panelContainmentDestroyed(QObject* cont);
-    void showOpenGLNotCompatibleWarning();
     void interactiveConsoleVisibilityChanged(bool visible);
     void handleScreenRemoved(QScreen* screen);
 

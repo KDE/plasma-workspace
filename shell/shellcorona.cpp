@@ -1191,7 +1191,10 @@ void ShellCorona::addOutput(QScreen* screen)
     }
 
     DesktopView *view = new DesktopView(this, screen);
-    connect(view, &QQuickWindow::sceneGraphError, this, &ShellCorona::showOpenGLNotCompatibleWarning);
+
+    if (view->rendererInterface()->graphicsApi() != QSGRendererInterface::Software) {
+        connect(view, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitialisationFailed);
+    }
     connect(screen, &QScreen::geometryChanged, this, [=]() {
         const int id = m_screenPool->id(screen->name());
         if (id >= 0) {
@@ -1279,7 +1282,9 @@ void ShellCorona::createWaitingPanels()
         //Q_ASSERT(qBound(0, requestedScreen, m_screenPool->count() - 1) == requestedScreen);
         QScreen *screen = m_desktopViewforId.value(requestedScreen)->screenToFollow();
         PanelView* panel = new PanelView(this, screen);
-        connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::showOpenGLNotCompatibleWarning);
+        if (panel->rendererInterface()->graphicsApi() != QSGRendererInterface::Software) {
+            connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitialisationFailed);
+        }
         connect(panel, &QWindow::visibleChanged, this, &Plasma::Corona::availableScreenRectChanged);
         connect(panel, &PanelView::locationChanged, this, &Plasma::Corona::availableScreenRectChanged);
         connect(panel, &PanelView::visibilityModeChanged, this, &Plasma::Corona::availableScreenRectChanged);
@@ -1960,23 +1965,6 @@ void ShellCorona::insertContainment(const QString &activity, int screenNum, Plas
     if (cont) {
         cont->destroy();
     }
-}
-
-void ShellCorona::showOpenGLNotCompatibleWarning()
-{
-    static bool s_multipleInvokations = false;
-    if (s_multipleInvokations) {
-        return;
-    }
-    s_multipleInvokations = true;
-
-    QCoreApplication::setAttribute(Qt::AA_ForceRasterWidgets);
-    QMessageBox::critical(nullptr, i18n("Plasma Failed To Start"),
-                          i18n("Plasma is unable to start as it could not correctly use OpenGL 2.\n Please check that your graphic drivers are set up correctly."));
-    qCritical("Open GL context could not be created");
-
-    // this doesn't work and I have no idea why.
-    QCoreApplication::exit(1);
 }
 
 void ShellCorona::setupWaylandIntegration()

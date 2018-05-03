@@ -58,6 +58,7 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void shellChanged(const QString & shell);
+    void glInitialisationFailed();
 
 private Q_SLOTS:
     void loadHandlers();

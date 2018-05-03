@@ -23,6 +23,7 @@
 #include <QQuickWindow>
 #include <QSessionManager>
 #include <QDebug>
+#include <QProcess>
 #include <QMessageBox>
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -182,6 +183,29 @@ int main(int argc, char *argv[])
 
     KDBusService service(KDBusService::Unique);
 
+
+    QObject::connect(ShellManager::instance(), &ShellManager::glInitialisationFailed, &app, [&app]() {
+        //scene graphs errors come from a thread
+        //even though we process them in the main thread, app.exit could still process these events
+        static bool s_multipleInvokations = false;
+        if (s_multipleInvokations) {
+            return;
+        }
+        s_multipleInvokations = true;
+
+        qCritical("Open GL context could not be created");
+        auto configGroup = KSharedConfig::openConfig()->group("QtQuickRendererSettings");
+        if (configGroup.readEntry("SceneGraphBackend") != QLatin1String("software")) {
+            configGroup.writeEntry("SceneGraphBackend", "software", KConfigBase::Global | KConfigBase::Persistent);
+            configGroup.sync();
+            QProcess::startDetached("plasmashell", app.arguments());
+        } else {
+            QCoreApplication::setAttribute(Qt::AA_ForceRasterWidgets);
+            QMessageBox::critical(nullptr, i18n("Plasma Failed To Start"),
+                          i18n("Plasma is unable to start as it could not correctly use OpenGL 2 or software fallback\nPlease check that your graphic drivers are set up correctly."));
+        }
+        app.exit(-1);
+    });
     QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, ShellManager::instance(), &QObject::deleteLater);
 
     return app.exec();
