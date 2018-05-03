@@ -40,6 +40,7 @@
 #include "standaloneappcorona.h"
 #include "shellmanager.h"
 #include "coronatesthelper.h"
+#include "softwarerendernotifier.h"
 
 #include <QDir>
 
@@ -183,7 +184,6 @@ int main(int argc, char *argv[])
 
     KDBusService service(KDBusService::Unique);
 
-
     QObject::connect(ShellManager::instance(), &ShellManager::glInitialisationFailed, &app, [&app]() {
         //scene graphs errors come from a thread
         //even though we process them in the main thread, app.exit could still process these events
@@ -206,6 +206,7 @@ int main(int argc, char *argv[])
         }
         app.exit(-1);
     });
+    SoftwareRendererNotifier::notifyIfRelevant();
     QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, ShellManager::instance(), &QObject::deleteLater);
 
     return app.exec();

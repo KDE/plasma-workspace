@@ -41,6 +41,7 @@ set (plasma_shell_SRCS
     coronatesthelper.cpp
     debug.cpp
     screenpool.cpp
+    softwarerendernotifier.cpp
     ${scripting_SRC}
 )
 
@@ -74,6 +75,7 @@ target_link_libraries(plasmashell
  KF5::Package
  KF5::WaylandClient
  KF5::WindowSystem
+ KF5::Notifications
  PW::KWorkspace
 )
 target_include_directories(plasmashell PRIVATE "${CMAKE_BINARY_DIR}")
