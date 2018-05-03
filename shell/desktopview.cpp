@@ -73,7 +73,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
                 // Note: hasOpenGLShaderPrograms is broken, see QTBUG--39730
                 if (!QOpenGLShaderProgram::hasOpenGLShaderPrograms(openglContext())) {
                     qWarning() << "GLSL not available, Plasma won't be functional";
-                    QMetaObject::invokeMethod(corona, "glIinitializationFailed", Qt::QueuedConnection);
+                    QMetaObject::invokeMethod(corona, "glInitializationFailed", Qt::QueuedConnection);
                 }
             }, Qt::DirectConnection);
     }

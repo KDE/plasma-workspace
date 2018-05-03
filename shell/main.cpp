@@ -184,7 +184,7 @@ int main(int argc, char *argv[])
 
     KDBusService service(KDBusService::Unique);
 
-    QObject::connect(ShellManager::instance(), &ShellManager::glIinitializationFailed, &app, [&app]() {
+    QObject::connect(ShellManager::instance(), &ShellManager::glInitializationFailed, &app, [&app]() {
         //scene graphs errors come from a thread
         //even though we process them in the main thread, app.exit could still process these events
         static bool s_multipleInvokations = false;
