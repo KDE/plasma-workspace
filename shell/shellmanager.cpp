@@ -91,8 +91,8 @@ void ShellManager::loadHandlers()
     Q_ASSERT(!d->corona);
 
     d->corona = new ShellCorona(this);
-    connect(d->corona, &ShellCorona::glInitialisationFailed,
-            this, &ShellManager::glInitialisationFailed);
+    connect(d->corona, &ShellCorona::glIinitializationFailed,
+            this, &ShellManager::glIinitializationFailed);
 
     connect(
         this,      &ShellManager::shellChanged,

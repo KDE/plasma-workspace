@@ -114,7 +114,7 @@ public:
     QString defaultContainmentPlugin() const;
 
 Q_SIGNALS:
-    void glInitialisationFailed();
+    void glIinitializationFailed();
 
 public Q_SLOTS:
     /**
