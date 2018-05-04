@@ -28,6 +28,7 @@
 #include <QString>
 
 #include <QObject>
+#include <QMutex>
 
 
 class BuildQuery {
@@ -50,6 +51,7 @@ public:
 
 private:
     QString const m_databaseFile;
+    QMutex m_mutex;
     QSqlDatabase m_db;
 };
 

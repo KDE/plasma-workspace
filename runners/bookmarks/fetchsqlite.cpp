@@ -25,6 +25,7 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlRecord>
+#include <QMutexLocker>
 
 FetchSqlite::FetchSqlite(const QString &originalFilePath, const QString &copyTo, QObject *parent) :
     QObject(parent), m_databaseFile(copyTo)
@@ -49,6 +50,7 @@ FetchSqlite::~FetchSqlite()
 
 void FetchSqlite::prepare()
 {
+    QMutexLocker lock(&m_mutex);
     m_db.setDatabaseName(m_databaseFile);
     bool ok = m_db.open();
     //qDebug() << "Sqlite Database " << m_databaseFile << " was opened: " << ok;
@@ -59,6 +61,7 @@ void FetchSqlite::prepare()
 
 void FetchSqlite::teardown()
 {
+    QMutexLocker lock(&m_mutex);
     m_db.close();
 }
 
@@ -69,6 +72,8 @@ QList<QVariantMap> FetchSqlite::query(BuildQuery *buildQuery, QMap<QString, QVar
 
 QList<QVariantMap> FetchSqlite::query(const QString &sql, QMap<QString, QVariant> bindObjects)
 {
+    QMutexLocker lock(&m_mutex);
+
     //qDebug() << "query: " << sql;
     QSqlQuery query(m_db);
     query.prepare(sql);
