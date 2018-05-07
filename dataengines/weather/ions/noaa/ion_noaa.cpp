@@ -179,7 +179,7 @@ bool NOAAIon::updateIonSource(const QString& source)
 // Parses city list and gets the correct city based on ID number
 void NOAAIon::getXMLSetup() const
 {
-    const QUrl url(QStringLiteral("http://www.weather.gov/data/current_obs/index.xml"));
+    const QUrl url(QStringLiteral("https://www.weather.gov/data/current_obs/index.xml"));
 
     KIO::TransferJob* getJob = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
 

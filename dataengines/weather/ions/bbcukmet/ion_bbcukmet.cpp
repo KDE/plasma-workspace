@@ -323,7 +323,7 @@ void UKMETIon::getXMLData(const QString& source)
 void UKMETIon::findPlace(const QString& place, const QString& source)
 {
     /* There's a page= parameter, results are limited to 10 by page */
-    const QUrl url(QLatin1String("http://www.bbc.com/locator/default/en-GB/search.json?search=")+place+
+    const QUrl url(QLatin1String("https://www.bbc.com/locator/default/en-GB/search.json?search=")+place+
                    QLatin1String("&filter=international&postcode_unit=false&postcode_district=true"));
 
     KIO::TransferJob* getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
