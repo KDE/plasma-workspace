@@ -584,6 +584,8 @@ void UKMETIon::parseWeatherForecast(const QString& source, QXmlStreamReader& xml
 
 void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data, QXmlStreamReader& xml)
 {
+    Q_UNUSED(source);
+
     Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("item"));
 
     while (!xml.atEnd()) {
