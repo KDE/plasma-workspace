@@ -32,6 +32,7 @@ Column {
 
         QtControls.Label {
             width: formAlignment - units.largeSpacing
+            anchors.verticalCenter: colorButton.verticalCenter
             horizontalAlignment: Text.AlignRight
             text: i18nd("plasma_wallpaper_org.kde.color", "Color:")
         }
