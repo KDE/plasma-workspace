@@ -42,6 +42,8 @@ Item {
     property alias cfg_showSeconds: showSeconds.checked
 
     property alias cfg_showDate: showDate.checked
+    property alias cfg_showDateAndTimeSameLine: showDateAndTimeSameLine.checked
+
     property string cfg_dateFormat: "shortDate"
     property alias cfg_use24hFormat: use24hFormat.checkedState
 
@@ -84,6 +86,12 @@ Item {
                 QtControls.CheckBox {
                     id: showDate
                     text: i18n("Show date")
+                }
+
+                QtControls.CheckBox {
+                    id: showDateAndTimeSameLine
+                    enabled: showDate.checked
+                    text: i18n("Show date and time in  the same line")
                 }
 
                 QtControls.CheckBox {

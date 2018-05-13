@@ -33,6 +33,7 @@ Item {
     property bool showSeconds: plasmoid.configuration.showSeconds
     property bool showLocalTimezone: plasmoid.configuration.showLocalTimezone
     property bool showDate: plasmoid.configuration.showDate
+    property bool showDateAndTimeSameLine: plasmoid.configuration.showDateAndTimeSameLine
     property int dateFormat: {
         if (plasmoid.configuration.dateFormat === "longDate") {
             return  Qt.SystemLocaleLongDate;
@@ -97,7 +98,7 @@ Item {
     states: [
         State {
             name: "horizontalPanel"
-            when: plasmoid.formFactor == PlasmaCore.Types.Horizontal && !main.oneLineMode
+            when: plasmoid.formFactor == PlasmaCore.Types.Horizontal && !main.oneLineMode && !main.showDateAndTimeSameLine
 
             PropertyChanges {
                 target: main
@@ -179,7 +180,9 @@ Item {
 
         State {
             name: "horizontalPanelSmall"
-            when: plasmoid.formFactor == PlasmaCore.Types.Horizontal && main.oneLineMode
+            when: plasmoid.formFactor == PlasmaCore.Types.Horizontal && main.oneLineMode || 
+                    plasmoid.formFactor != PlasmaCore.Types.Vertical && plasmoid.formFactor != PlasmaCore.Types.Horizontal && main.showDateAndTimeSameLine ||
+                    plasmoid.formFactor == PlasmaCore.Types.Horizontal && main.showDateAndTimeSameLine
 
             PropertyChanges {
                 target: main
@@ -327,7 +330,7 @@ Item {
 
         State {
             name: "other"
-            when: plasmoid.formFactor != PlasmaCore.Types.Vertical && plasmoid.formFactor != PlasmaCore.Types.Horizontal
+            when: plasmoid.formFactor != PlasmaCore.Types.Vertical && plasmoid.formFactor != PlasmaCore.Types.Horizontal && !main.showDateAndTimeSameLine
 
             PropertyChanges {
                 target: main
