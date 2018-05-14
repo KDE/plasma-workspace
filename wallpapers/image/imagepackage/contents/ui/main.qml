@@ -46,7 +46,7 @@ QQC2.StackView {
     }
 
     function action_open() {
-        Qt.openUrlExternally(currentImage.source)
+        Qt.openUrlExternally(modelImage)
     }
 
     //private
