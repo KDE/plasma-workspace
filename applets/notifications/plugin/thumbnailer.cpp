@@ -139,7 +139,11 @@ void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem 
         });
     }
 
-    menu->addSeparator();
+    KFileItemActions *actions = new KFileItemActions(menu);
+    KFileItemListProperties itemProperties(KFileItemList({fileItem}));
+    actions->setItemListProperties(itemProperties);
+
+    actions->addOpenWithActionsTo(menu);
 
     // KStandardAction? But then the Ctrl+C shortcut makes no sense in this context
     QAction *copyAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("&Copy"));
@@ -150,11 +154,6 @@ void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem 
         QApplication::clipboard()->setMimeData(data);
     });
 
-    KFileItemActions *actions = new KFileItemActions(menu);
-    KFileItemListProperties itemProperties(KFileItemList({fileItem}));
-    actions->setItemListProperties(itemProperties);
-
-    actions->addOpenWithActionsTo(menu);
     actions->addServiceActionsTo(menu);
     actions->addPluginActionsTo(menu);
 
