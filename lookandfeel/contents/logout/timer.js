@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2016 Marco Martin <mart@kde.org>                        *
+ *   Copyright (C) 2018 David Edmundson <davidedmundson@kde.org>                        *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -17,26 +17,23 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.2
-import QtQuick.Layouts 1.2
+.pragma library
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+//written as a library to share knowledge of when a key was pressed
+//between the multiple views, so pressing a key on one cancels all timers
 
-import "../components"
-import "timer.js" as AutoTriggerTimer
+var callbacks = [];
 
-ActionButton {
-    property var action
-    onClicked: action()
-    Layout.alignment: Qt.AlignTop
-    iconSize: units.iconSizes.huge
-    opacity: activeFocus || containsMouse ? 1 : 0.5
-    font.underline: false
-    Behavior on opacity {
-        OpacityAnimator {
-            duration: units.longDuration
-            easing.type: Easing.InOutQuad
-        }
-    }
-    Keys.onPressed: AutoTriggerTimer.cancelAutoTrigger();
+function addCancelAutoTriggerCallback(callback) {
+    callbacks.push(callback);
 }
+
+function cancelAutoTrigger() {
+    callbacks.forEach(function(c) {
+        if (!c) {
+            return;
+        }
+        c();
+    });
+}
+

@@ -26,6 +26,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 
 import "../components"
+import "timer.js" as AutoTriggerTimer
 
 PlasmaCore.ColorScope {
     id: root
@@ -81,6 +82,11 @@ PlasmaCore.ColorScope {
         repeat: true
         interval: 1000
         onTriggered: remainingTime--
+        Component.onCompleted: {
+            AutoTriggerTimer.addCancelAutoTriggerCallback(function() {
+                countDownTimer.running = false;
+            });
+        }
     }
 
     function isLightColor(color) {
