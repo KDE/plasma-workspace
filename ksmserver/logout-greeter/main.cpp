@@ -25,7 +25,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QCommandLineParser>
 #include <QDebug>
 #include <QScreen>
-#include "../shutdowndlg.h"
+#include "shutdowndlg.h"
 
 #include <KQuickAddons/QtQuickSettings>
 

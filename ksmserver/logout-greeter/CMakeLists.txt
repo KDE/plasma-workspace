@@ -1,4 +1,4 @@
-set(KSMSERVER_LOGOUT_GREETER_SRCS main.cpp ../shutdowndlg.cpp ../ksmserver_debug.cpp)
+set(KSMSERVER_LOGOUT_GREETER_SRCS main.cpp shutdowndlg.cpp ../ksmserver_debug.cpp)
 add_executable(ksmserver-logout-greeter ${KSMSERVER_LOGOUT_GREETER_SRCS})
 target_link_libraries(ksmserver-logout-greeter
     PW::KWorkspace

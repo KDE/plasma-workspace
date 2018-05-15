@@ -56,7 +56,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KDeclarative/KDeclarative>
 #include <KSharedConfig>
 #include <KConfigGroup>
-#include <KJob>
 
 #include <stdio.h>
 #include <netwm.h>
@@ -77,7 +76,7 @@ Q_DECLARE_METATYPE(Solid::PowerManagement::SleepState)
 KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
                                 bool maysd, bool choose, KWorkSpace::ShutdownType sdtype,
                                 KWayland::Client::PlasmaShell *plasmaShell)
-  : QQuickView(parent),
+  : QuickViewSharedEngine(parent),
     m_result(false),
     m_waylandPlasmaShell(plasmaShell)
     // this is a WType_Popup on purpose. Do not change that! Not
@@ -87,7 +86,7 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
 
-    setResizeMode(QQuickView::SizeRootObjectToView);
+    setResizeMode(KQuickAddons::QuickViewSharedEngine::SizeRootObjectToView);
 
     // Qt doesn't set this on unmanaged windows
     //FIXME: or does it?
@@ -196,7 +195,7 @@ void KSMShutdownDlg::init()
         0.4,
         (backgroundColor.value() > 128 ? 1.6 : 0.3),
         1.7);
-    QQuickView::showFullScreen();
+    KQuickAddons::QuickViewSharedEngine::showFullScreen();
     requestActivate();
 
     KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
@@ -206,7 +205,7 @@ void KSMShutdownDlg::init()
 
 void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
 {
-    QQuickView::resizeEvent( e );
+    KQuickAddons::QuickViewSharedEngine::resizeEvent( e );
 
     if( KWindowSystem::compositingActive()) {
         //TODO: reenable window mask when we are without composite?
@@ -230,7 +229,7 @@ bool KSMShutdownDlg::event(QEvent *e)
             break;
         }
     }
-    return QQuickView::event(e);
+    return KQuickAddons::QuickViewSharedEngine::event(e);
 }
 
 void KSMShutdownDlg::setupWaylandIntegration()

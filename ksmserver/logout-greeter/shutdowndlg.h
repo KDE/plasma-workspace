@@ -25,21 +25,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef SHUTDOWNDLG_H
 #define SHUTDOWNDLG_H
 
-#include <QQuickView>
-#include <QPushButton>
+#include <kquickaddons/quickviewsharedengine.h>
 #include <kworkspace.h>
-
-class QMenu;
-class QTimer;
-class QTimeLine;
-class QLabel;
-class LogoutEffect;
-
-namespace Plasma
-{
-    class Svg;
-    class FrameSvg;
-}
 
 namespace KWayland
 {
@@ -50,10 +37,8 @@ class PlasmaShellSurface;
 }
 }
 
-class QQuickView;
-
 // The confirmation dialog
-class KSMShutdownDlg : public QQuickView
+class KSMShutdownDlg : public KQuickAddons::QuickViewSharedEngine
 {
     Q_OBJECT
 
