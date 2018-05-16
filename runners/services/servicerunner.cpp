@@ -248,7 +248,7 @@ private:
             // If the term was < 3 chars and NOT at the beginning of the App's name or Exec, then
             // chances are the user doesn't want that app.
             if (weightedTermLength < 3) {
-                if (name.startsWith(term) || exec.startsWith(term)) {
+                if (name.startsWith(term, Qt::CaseInsensitive) || exec.startsWith(term, Qt::CaseInsensitive)) {
                     relevance = 0.9;
                 } else {
                     continue;
