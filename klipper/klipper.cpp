@@ -604,7 +604,9 @@ HistoryItemPtr Klipper::applyClipChanges( const QMimeData* clipData )
     }
     Ignore lock( m_locklevel );
     HistoryItemPtr item = HistoryItem::create( clipData );
-    history()->insert( item );
+    if (clipData->data("x-kde-passwordManagerHint") != QByteArrayLiteral("secret")) {
+        history()->insert( item );
+    }
     return item;
 
 }
