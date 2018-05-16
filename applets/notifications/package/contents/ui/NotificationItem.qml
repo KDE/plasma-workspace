@@ -396,6 +396,7 @@ MouseArea {
                         Layout.preferredWidth: minimumWidth
                         Layout.maximumWidth: actionsColumn.Layout.maximumWidth
                         text: model.text
+                        tooltip: width < minimumWidth ? text : ""
                         onClicked: notificationItem.action(model.id)
                     }
                 }
