@@ -29,7 +29,7 @@
 #include <KDeclarative/QmlObjectSharedEngine>
 #include <klocalizedstring.h>
 
-Osd::Osd(KSharedConfig::Ptr config, ShellCorona *corona)
+Osd::Osd(const KSharedConfig::Ptr &config, ShellCorona *corona)
     : QObject(corona)
     , m_osdUrl(corona->lookAndFeelPackage().fileUrl("osdmainscript"))
     , m_config(config)

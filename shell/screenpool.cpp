@@ -31,7 +31,7 @@
 #include <xcb/xcb_event.h>
 #endif
 
-ScreenPool::ScreenPool(KSharedConfig::Ptr config, QObject *parent)
+ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     : QObject(parent),
       m_configGroup(KConfigGroup(config, QStringLiteral("ScreenConnectors")))
 {

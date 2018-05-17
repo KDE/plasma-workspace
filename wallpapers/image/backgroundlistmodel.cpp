@@ -341,7 +341,6 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
 
         return title;
     }
-    break;
 
     case ScreenshotRole: {
         QPixmap preview = QPixmap(QSize(m_screenshotSize*1.6,
@@ -370,7 +369,6 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
 
         return QVariant();
     }
-    break;
 
     case AuthorRole:
         if (b.metadata().isValid() && !b.metadata().authors().isEmpty()) {
@@ -378,7 +376,6 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
         } else {
             return QString();
         }
-    break;
 
     case ResolutionRole:{
         QSize size = bestSize(b);
@@ -389,32 +386,26 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
 
         return QString();
     }
-    break;
 
     case PathRole:
         return QUrl::fromLocalFile(b.filePath("preferred"));
-    break;
 
     case PackageNameRole:
         return !b.metadata().isValid() || b.metadata().pluginId().isEmpty() ? b.filePath("preferred") : b.metadata().pluginId();
-    break;
 
     case RemovableRole: {
         QString localWallpapers = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/wallpapers/";
         QString path = b.filePath("preferred");
         return path.startsWith(localWallpapers) || m_removableWallpapers.contains(path);
     }
-    break;
 
     case PendingDeletionRole: {
         QUrl wallpaperUrl = QUrl::fromLocalFile(b.filePath("preferred"));
         return m_pendingDeletion.contains(wallpaperUrl.toLocalFile()) ? m_pendingDeletion[wallpaperUrl.toLocalFile()] : false;
     }
-    break;
 
     default:
         return QVariant();
-    break;
     }
 
     Q_UNREACHABLE();

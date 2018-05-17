@@ -38,7 +38,7 @@ class Osd : public QObject {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.osdService")
 public:
-    Osd(KSharedConfig::Ptr config, ShellCorona *corona);
+    Osd(const KSharedConfig::Ptr &config, ShellCorona *corona);
     ~Osd() override;
 
 public Q_SLOTS:

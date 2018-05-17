@@ -34,7 +34,7 @@ class ScreenPool : public QObject, public QAbstractNativeEventFilter
     Q_OBJECT
 
 public:
-    explicit ScreenPool(KSharedConfig::Ptr config, QObject *parent = nullptr);
+    explicit ScreenPool(const KSharedConfig::Ptr &config, QObject *parent = nullptr);
     void load();
     ~ScreenPool() override;
 
