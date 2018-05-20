@@ -90,8 +90,6 @@ Item {
         readonly property int _minimumWidth: calendar.showWeekNumbers ? Math.round(_minimumHeight * 1.75) : Math.round(_minimumHeight * 1.5)
         readonly property int _minimumHeight: units.gridUnit * 14
 
-        Layout.minimumWidth: _minimumWidth
-        Layout.minimumHeight: _minimumHeight
         Layout.preferredWidth: _minimumWidth
         Layout.preferredHeight: Math.round(_minimumHeight * 1.5)
 
