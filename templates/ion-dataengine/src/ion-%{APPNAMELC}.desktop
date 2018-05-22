@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=%{APPNAME} Weather Data Provider
 Name[ca]=Proveïdor de dades meteorològiques de %{APPNAME}
+Name[ca@valencia]=Proveïdor de dades meteorològiques de %{APPNAME}
 Name[da]=%{APPNAME} vejrdata-udbyder
 Name[de]=%{APPNAME}-Wetterdatenanbieter
 Name[el]=%{APPNAME} Πάροχος δεδομένων καιρού
@@ -32,6 +33,7 @@ Name[x-test]=xx%{APPNAME} Weather Data Providerxx
 Name[zh_TW]=%{APPNAME} 天氣資料提供者
 Comment=Access to the weather data provider %{APPNAME}
 Comment[ca]=Accés al proveïdor de dades meteorològiques de %{APPNAME}
+Comment[ca@valencia]=Accés al proveïdor de dades meteorològiques de %{APPNAME}
 Comment[da]=Adgang til vejrdata-udbyderen %{APPNAME}
 Comment[de]=Zugriff auf den Wetterdatenanbieter %{APPNAME}
 Comment[el]=Πρόσβαση στον πάροχο δεδομένων καιρού %{APPNAME}
