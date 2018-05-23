@@ -350,7 +350,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid,
 
             // Try matching mapped name against DesktopEntryName.
             if (!mapped.isEmpty() && services.empty()) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(mapped));
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName) and (not exist NoDisplay or not NoDisplay)").arg(mapped));
             }
 
             // Try matching mapped name against 'Name'.
@@ -360,7 +360,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid,
 
             // Try matching appId against DesktopEntryName.
             if (services.empty()) {
-                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(appId));
+                services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName) and (not exist NoDisplay or not NoDisplay)").arg(appId));
             }
 
             // Try matching appId against 'Name'.

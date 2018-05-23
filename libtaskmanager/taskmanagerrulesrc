@@ -7,6 +7,5 @@ oracle-ide-boot-Launcher=Oracle SQL Developer
 Dragon=dragonplayer
 
 [Settings]
-ManualOnly=Wine
 MatchCommandLineFirst=perl
 TryIgnoreRuntimes=perl
