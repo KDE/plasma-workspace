@@ -45,6 +45,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <QGuiApplication>
 #include <QRegularExpression>
 #include <QScreen>
+#include <QUrlQuery>
 #if HAVE_X11
 #include <QX11Info>
 #endif

@@ -41,6 +41,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <QFile>
 #include <QSet>
 #include <QTimer>
+#include <QUrlQuery>
 #include <QX11Info>
 
 namespace TaskManager
