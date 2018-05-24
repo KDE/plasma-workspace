@@ -41,7 +41,6 @@ kf5_add_kdeinit_executable(klipper ${klipper_KDEINIT_SRCS})
 
 target_link_libraries(kdeinit_klipper
     Qt5::Concurrent
-    KF5::Completion # klineedit - port away?
     KF5::ConfigGui
     KF5::CoreAddons
     KF5::DBusAddons
@@ -78,7 +77,6 @@ target_link_libraries(plasma_engine_clipboard
     Qt5::DBus
     Qt5::Widgets       # QAction
     KF5::ConfigGui
-    KF5::Completion    # klineedit - port away?
     KF5::CoreAddons    # KUrlMimeData
     KF5::GlobalAccel
     KF5::IconThemes
