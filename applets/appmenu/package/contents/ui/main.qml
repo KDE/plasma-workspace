@@ -136,6 +136,12 @@ Item {
                         return plasmoid.nativeInterface.currentIndex === index;
                     });
                 }
+
+                // QMenu opens on press, so we'll replicate that here
+                MouseArea {
+                    anchors.fill: parent
+                    onPressed: parent.clicked()
+                }
             }
         }
     }
