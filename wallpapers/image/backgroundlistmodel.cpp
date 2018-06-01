@@ -547,7 +547,7 @@ void BackgroundFinder::run()
     QStringList papersFound;
 
     QDir dir;
-    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::Hidden | QDir::Readable);
+    dir.setFilter(QDir::AllDirs | QDir::Files | QDir::Readable);
     dir.setNameFilters(suffixes());
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
