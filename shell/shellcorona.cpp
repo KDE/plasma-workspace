@@ -710,7 +710,7 @@ void ShellCorona::load()
         setImmutability(Plasma::Types::SystemImmutable);
     } else {
         KConfigGroup coronaConfig(config(), "General");
-        setImmutability((Plasma::Types::ImmutabilityType)coronaConfig.readEntry("immutability", (int)Plasma::Types::Mutable));
+        setImmutability((Plasma::Types::ImmutabilityType)coronaConfig.readEntry("immutability", static_cast<int>(Plasma::Types::Mutable)));
     }
 }
 

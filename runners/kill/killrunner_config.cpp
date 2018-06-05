@@ -60,7 +60,7 @@ void KillRunnerConfig::load()
 
     m_ui->useTriggerWord->setChecked(grp.readEntry(CONFIG_USE_TRIGGERWORD,true));
     m_ui->triggerWord->setText(grp.readEntry(CONFIG_TRIGGERWORD,i18n("kill")));
-    m_ui->sorting->setCurrentIndex(m_ui->sorting->findData(grp.readEntry<int>(CONFIG_SORTING, (int) NONE)));
+    m_ui->sorting->setCurrentIndex(m_ui->sorting->findData(grp.readEntry<int>(CONFIG_SORTING, static_cast<int>(NONE))));
 
     emit changed(false);
 }

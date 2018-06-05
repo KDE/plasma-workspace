@@ -54,25 +54,18 @@ QString Panel::location() const
     switch (c->location()) {
         case Plasma::Types::Floating:
             return "floating";
-            break;
         case Plasma::Types::Desktop:
             return "desktop";
-            break;
         case Plasma::Types::FullScreen:
             return "fullscreen";
-            break;
         case Plasma::Types::TopEdge:
             return "top";
-            break;
         case Plasma::Types::BottomEdge:
             return "bottom";
-            break;
         case Plasma::Types::LeftEdge:
             return "left";
-            break;
         case Plasma::Types::RightEdge:
             return "right";
-            break;
     }
 
     return "floating";
@@ -137,13 +130,10 @@ QString Panel::alignment() const
     switch (panelConfig().readEntry("alignment", 0)) {
         case Qt::AlignRight:
             return "right";
-            break;
         case Qt::AlignCenter:
             return "center";
-            break;
         default:
             return "left";
-            break;
     }
 
     return "left";
@@ -234,16 +224,12 @@ QString Panel::hiding() const
     switch (panelConfig().readEntry("panelVisibility", 0)) {
         case PanelView::NormalPanel:
             return "none";
-            break;
         case PanelView::AutoHide:
             return "autohide";
-            break;
         case PanelView::LetWindowsCover:
             return "windowscover";
-            break;
         case PanelView::WindowsGoBelow:
             return "windowsbelow";
-            break;
     }
     return "none";
 }

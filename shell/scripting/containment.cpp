@@ -112,19 +112,14 @@ QString Containment::formFactor() const
     switch (d->containment.data()->formFactor()) {
         case Plasma::Types::Planar:
             return QStringLiteral("planar");
-            break;
         case Plasma::Types::MediaCenter:
             return QStringLiteral("mediacenter");
-            break;
         case Plasma::Types::Horizontal:
             return QStringLiteral("horizontal");
-            break;
         case Plasma::Types::Vertical:
             return QStringLiteral("vertical");
-            break;
         case Plasma::Types::Application:
             return QStringLiteral("application");
-            break;
     }
 
     return QStringLiteral("Planar");
