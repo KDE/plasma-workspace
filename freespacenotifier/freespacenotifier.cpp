@@ -27,9 +27,10 @@
 #include <KLocalizedString>
 #include <KRun>
 #include <KConfigDialog>
-#include <KDiskFreeSpaceInfo>
 #include <KStatusNotifierItem>
 #include <KNotification>
+
+#include <KIO/FileSystemFreeSpaceJob>
 
 #include "settings.h"
 #include "ui_freespacenotifier_prefs_base.h"
@@ -71,10 +72,14 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
         return;
     }
 
-    KDiskFreeSpaceInfo fsInfo = KDiskFreeSpaceInfo::freeSpaceInfo(QDir::homePath());
-    if (fsInfo.isValid()) {
+    auto *job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(QDir::homePath()));
+    connect(job, &KIO::FileSystemFreeSpaceJob::result, this, [this](KIO::Job* job, KIO::filesize_t size, KIO::filesize_t available) {
+        if (job->error()) {
+            return;
+        }
+
         int limit = FreeSpaceNotifierSettings::minimumSpace(); // MiB
-        qint64 avail = fsInfo.available() / (1024 * 1024); // to MiB
+        qint64 avail = available / (1024 * 1024); // to MiB
         bool warn = false;
 
         if (avail < limit) {
@@ -93,7 +98,7 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
             // do not change lastAvail otherwise, to handle free space slowly going down
 
             if (warn) {
-                int availpct = int(100 * fsInfo.available() / fsInfo.size());
+                int availpct = int(100 * available / size);
                 if (!m_sni) {
                     m_sni = new KStatusNotifierItem(QStringLiteral("freespacenotifier"));
                     m_sni->setIconByName(QStringLiteral("drive-harddisk"));
@@ -138,7 +143,7 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
                 m_sni = nullptr;
             }
         }
-    }
+    });
 }
 
 void FreeSpaceNotifier::hideSni()
