@@ -25,7 +25,7 @@
 
 #include "dbusproperties.h"
 
-#include <QDebug>
+#include "debug.h"
 #include <iostream>
 
 static const QString s_watcherServiceName(QStringLiteral("org.kde.StatusNotifierWatcher"));
@@ -73,7 +73,7 @@ void StatusNotifierItemEngine::init()
 
 void StatusNotifierItemEngine::serviceChange(const QString& name, const QString& oldOwner, const QString& newOwner)
 {
-    qDebug()<< "Service" << name << "status change, old owner:" << oldOwner << "new:" << newOwner;
+    qCDebug(DATAENGINE_SNI)<< "Service" << name << "status change, old owner:" << oldOwner << "new:" << newOwner;
 
     if (newOwner.isEmpty()) {
         //unregistered
@@ -86,7 +86,7 @@ void StatusNotifierItemEngine::serviceChange(const QString& name, const QString&
 
 void StatusNotifierItemEngine::registerWatcher(const QString& service)
 {
-    //qDebug()<<"service appeared"<<service;
+    //qCDebug(DATAENGINE_SNI)<<"service appeared"<<service;
     if (service == s_watcherServiceName) {
         delete m_statusNotifierWatcher;
 
@@ -115,7 +115,7 @@ void StatusNotifierItemEngine::registerWatcher(const QString& service)
         } else {
             delete m_statusNotifierWatcher;
             m_statusNotifierWatcher = nullptr;
-            qDebug()<<"System tray daemon not reachable";
+            qCDebug(DATAENGINE_SNI)<<"System tray daemon not reachable";
         }
     }
 }
@@ -123,7 +123,7 @@ void StatusNotifierItemEngine::registerWatcher(const QString& service)
 void StatusNotifierItemEngine::unregisterWatcher(const QString& service)
 {
     if (service == s_watcherServiceName) {
-        qDebug()<< s_watcherServiceName << "disappeared";
+        qCDebug(DATAENGINE_SNI)<< s_watcherServiceName << "disappeared";
 
         disconnect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemRegistered, this, &StatusNotifierItemEngine::serviceRegistered);
         disconnect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemUnregistered, this, &StatusNotifierItemEngine::serviceUnregistered);
@@ -137,7 +137,7 @@ void StatusNotifierItemEngine::unregisterWatcher(const QString& service)
 
 void StatusNotifierItemEngine::serviceRegistered(const QString &service)
 {
-    qDebug() << "Registering"<<service;
+    qCDebug(DATAENGINE_SNI) << "Registering"<<service;
     newItem(service);
 }
 

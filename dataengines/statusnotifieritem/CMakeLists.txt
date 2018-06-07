@@ -31,6 +31,12 @@ target_link_libraries(plasma_engine_statusnotifieritem
     dbusmenuqt
 )
 
+ecm_qt_declare_logging_category(statusnotifieritem_engine_SRCS HEADER debug.h
+                                               IDENTIFIER DATAENGINE_SNI
+                                               CATEGORY_NAME kde.dataengine.sni
+                                               DEFAULT_SEVERITY Info)
+
+
 kcoreaddons_desktop_to_json(plasma_engine_statusnotifieritem plasma-dataengine-statusnotifieritem.desktop)
 
 install(TARGETS plasma_engine_statusnotifieritem DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)

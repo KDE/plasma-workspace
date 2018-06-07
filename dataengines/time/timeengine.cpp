@@ -33,6 +33,7 @@
 #endif
 
 #include "timesource.h"
+#include "debug.h"
 
 //timezone is defined in msvc
 #ifdef timezone
@@ -70,7 +71,7 @@ void TimeEngine::init()
     int err = timerfd_settime(timeChangedFd, 3, &timespec, nullptr); //monitor for the time changing
     //(flags == TFD_TIMER_ABSTIME | TFD_TIMER_CANCEL_ON_SET). However these are not exposed in glibc so value is hardcoded
     if (err) {
-        qWarning() << "Could not create timer with TFD_TIMER_CANCEL_ON_SET. Clock skews will not be detected. Error:" << qPrintable(strerror(err));
+        qCWarning(DATAENGINE_TIME) << "Could not create timer with TFD_TIMER_CANCEL_ON_SET. Clock skews will not be detected. Error:" << qPrintable(strerror(err));
     }
 
     connect(this, &QObject::destroyed, [timeChangedFd]() {
@@ -96,14 +97,14 @@ void TimeEngine::init()
 
 void TimeEngine::clockSkewed()
 {
-    qDebug() << "Time engine Clock skew signaled";
+    qCDebug(DATAENGINE_TIME) << "Time engine Clock skew signaled";
     updateAllSources();
     forceImmediateUpdateOfAllVisualizations();
 }
 
 void TimeEngine::tzConfigChanged()
 {
-    qDebug() << "Local timezone changed signaled";
+    qCDebug(DATAENGINE_TIME) << "Local timezone changed signaled";
     TimeSource *s = qobject_cast<TimeSource *>(containerForSource(QStringLiteral("Local")));
 
     if (s) {

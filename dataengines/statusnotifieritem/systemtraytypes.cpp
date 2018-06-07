@@ -42,13 +42,13 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, KDbusImageStruct 
 
     if (argument.currentType() == QDBusArgument::StructureType) {
         argument.beginStructure();
-        //qDebug() << "begun structure";
+        //qCDebug(DATAENGINE_SNI)() << "begun structure";
         argument >> width;
-        //qDebug() << width;
+        //qCDebug(DATAENGINE_SNI)() << width;
         argument >> height;
-        //qDebug() << height;
+        //qCDebug(DATAENGINE_SNI)() << height;
         argument >> data;
-        //qDebug() << data.size();
+        //qCDebug(DATAENGINE_SNI)() << data.size();
         argument.endStructure();
     }
 

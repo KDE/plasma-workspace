@@ -6,6 +6,11 @@ set(time_engine_SRCS
     solarsystem.cpp
 )
 
+ecm_qt_declare_logging_category(time_engine_SRCS HEADER debug.h
+                                               IDENTIFIER DATAENGINE_TIME
+                                               CATEGORY_NAME kde.dataengine.time
+                                               DEFAULT_SEVERITY Info)
+
 add_library(plasma_engine_time MODULE ${time_engine_SRCS})
 
 target_link_libraries(plasma_engine_time
