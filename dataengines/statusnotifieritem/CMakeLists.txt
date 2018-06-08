@@ -22,6 +22,11 @@ set_source_files_properties(${statusnotifieritem_xml} PROPERTIES
 )
 qt5_add_dbus_interface(statusnotifieritem_engine_SRCS ${statusnotifieritem_xml} statusnotifieritem_interface)
 
+ecm_qt_declare_logging_category(statusnotifieritem_engine_SRCS HEADER debug.h
+                                               IDENTIFIER DATAENGINE_SNI
+                                               CATEGORY_NAME kde.dataengine.sni
+                                               DEFAULT_SEVERITY Info)
+
 add_library(plasma_engine_statusnotifieritem MODULE ${statusnotifieritem_engine_SRCS})
 target_link_libraries(plasma_engine_statusnotifieritem
     Qt5::DBus
@@ -30,12 +35,6 @@ target_link_libraries(plasma_engine_statusnotifieritem
     KF5::IconThemes
     dbusmenuqt
 )
-
-ecm_qt_declare_logging_category(statusnotifieritem_engine_SRCS HEADER debug.h
-                                               IDENTIFIER DATAENGINE_SNI
-                                               CATEGORY_NAME kde.dataengine.sni
-                                               DEFAULT_SEVERITY Info)
-
 
 kcoreaddons_desktop_to_json(plasma_engine_statusnotifieritem plasma-dataengine-statusnotifieritem.desktop)
 
