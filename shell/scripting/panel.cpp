@@ -34,10 +34,9 @@
 namespace WorkspaceScripting
 {
 
-Panel::Panel(Plasma::Containment *containment, QObject *parent)
-    : Containment(containment, parent)
+Panel::Panel(Plasma::Containment *containment, ScriptEngine *engine)
+    : Containment(containment, engine)
 {
-    m_corona = qobject_cast<ShellCorona *>(containment->corona());
 }
 
 Panel::~Panel()
@@ -106,11 +105,11 @@ void Panel::setLocation(const QString &locationString)
 PanelView *Panel::panel() const
 {
     Plasma::Containment *c = containment();
-    if (!c || !m_corona) {
+    if (!c || !corona()) {
         return nullptr;
     }
 
-    return m_corona->panelView(c);
+    return corona()->panelView(c);
 }
 
 
@@ -122,7 +121,7 @@ KConfigGroup Panel::panelConfig() const
         return KConfigGroup();
     }
     QScreen *s = QGuiApplication::screens().at(screenNum);
-    return PanelView::panelConfig(m_corona, containment(), s);
+    return PanelView::panelConfig(corona(), containment(), s);
 }
 
 QString Panel::alignment() const

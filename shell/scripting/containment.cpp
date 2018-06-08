@@ -30,6 +30,7 @@
 #include <Plasma/Containment>
 #include <Plasma/PluginLoader>
 
+#include "shellcorona.h"
 #include "scriptengine.h"
 #include "widget.h"
 
@@ -39,18 +40,26 @@ namespace WorkspaceScripting
 class Containment::Private
 {
 public:
+    QPointer<ScriptEngine> engine;
     QPointer<Plasma::Containment> containment;
+    ShellCorona *corona;
     QString oldWallpaperPlugin;
     QString wallpaperPlugin;
     QString oldWallpaperMode;
     QString wallpaperMode;
+
+    QString type;
+    QString plugin;
 };
 
-Containment::Containment(Plasma::Containment *containment, QObject *parent)
-    : Applet(parent),
+Containment::Containment(Plasma::Containment *containment, ScriptEngine *engine)
+    : Applet(engine),
       d(new Containment::Private)
 {
+    d->engine = engine;
     d->containment = containment;
+    d->corona = qobject_cast<ShellCorona *>(containment->corona());
+
     setCurrentConfigGroup(QStringList());
     setCurrentGlobalConfigGroup(QStringList());
     if (containment) {
@@ -71,6 +80,11 @@ Containment::~Containment()
     reloadConfigIfNeeded();
 
     delete d;
+}
+
+ShellCorona *Containment::corona() const
+{
+    return d->corona;
 }
 
 int Containment::screen() const
@@ -140,60 +154,36 @@ QList<int> Containment::widgetIds() const
     return w;
 }
 
-QScriptValue Containment::widgetById(QScriptContext *context, QScriptEngine *engine)
+QJSValue Containment::widgetById(const QJSValue &paramId) const
 {
-    if (context->argumentCount() == 0) {
-        return context->throwError(i18n("widgetById requires an id"));
+    if (!paramId.isNumber()) {
+        return d->engine->newError(i18n("widgetById requires an id"));
     }
 
-    const uint id = context->argument(0).toInt32();
-    Containment *c = qobject_cast<Containment*>(context->thisObject().toQObject());
+    const uint id = paramId.toInt();
 
-    if (!c) {
-        return engine->undefinedValue();
-    }
-
-    if (c->d->containment) {
-        foreach (Plasma::Applet *w, c->d->containment.data()->applets()) {
+    if (d->containment) {
+        foreach (Plasma::Applet *w, d->containment.data()->applets()) {
             if (w->id() == id) {
-                ScriptEngine *env = ScriptEngine::envFor(engine);
-                return env->wrap(w);
+                return d->engine->wrap(w);
             }
         }
     }
 
-    return engine->undefinedValue();
+    return QJSValue();
 }
 
-QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engine)
+QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qreal h)
 {
-    if (context->argumentCount() == 0) {
-        return context->throwError(i18n("addWidget requires a name of a widget or a widget object"));
+    if (!v.isString() && !v.isQObject()) {
+        return d->engine->newError(i18n("addWidget requires a name of a widget or a widget object"));
     }
 
-    Containment *c = qobject_cast<Containment*>(context->thisObject().toQObject());
-
-    if (!c || !c->d->containment) {
-        return engine->undefinedValue();
+    if (!d->containment) {
+        return QJSValue();
     }
 
-    QScriptValue v = context->argument(0);
-    QRectF geometry(-1, -1, -1, -1);
-    if (context->argumentCount() > 4) {
-        //The user provided a geometry as parameter
-        if (context->argument(1).isNumber() &&
-            context->argument(2).isNumber() &&
-            context->argument(3).isNumber() &&
-            context->argument(4).isNumber()) {
-            //Try to reconstruct a rectangle from the object hat has been passed
-            //It's expected a js object such as
-            //addWidget("org.kde.plasma.analogclock", 0, 100, 300, 400);
-            geometry = QRectF(context->argument(1).toNumber(),
-                              context->argument(2).toNumber(),
-                              context->argument(3).toNumber(),
-                              context->argument(4).toNumber());
-        }
-    }
+    QRectF geometry(x, y, w, h);
 
     Plasma::Applet *applet = nullptr;
     if (v.isString()) {
@@ -201,54 +191,48 @@ QScriptValue Containment::addWidget(QScriptContext *context, QScriptEngine *engi
         QQuickItem *containmentItem = nullptr;
 
         if (geometry.x() >= 0 && geometry.y() >= 0) {
-            containmentItem = c->d->containment.data()->property("_plasma_graphicObject").value<QQuickItem *>();
+            containmentItem = d->containment.data()->property("_plasma_graphicObject").value<QQuickItem *>();
 
             if (containmentItem) {
                 QMetaObject::invokeMethod(containmentItem , "createApplet", Qt::DirectConnection, Q_RETURN_ARG(Plasma::Applet *, applet), Q_ARG(QString, v.toString()), Q_ARG(QVariantList, QVariantList()), Q_ARG(QRectF, geometry));
             }
             if (applet) {
-                ScriptEngine *env = ScriptEngine::envFor(engine);
-                return env->wrap(applet);
+                return d->engine->wrap(applet);
             }
-            return context->throwError(i18n("Could not create the %1 widget!", v.toString()));
+            return d->engine->newError(i18n("Could not create the %1 widget!", v.toString()));
         }
 
         //Case in which either:
         // * a geometry wasn't provided
         // * containmentItem wasn't found
-        applet = c->d->containment.data()->createApplet(v.toString());
+        applet = d->containment.data()->createApplet(v.toString());
 
         if (applet) {
-            ScriptEngine *env = ScriptEngine::envFor(engine);
-            return env->wrap(applet);
+            return d->engine->wrap(applet);
         }
 
-        return context->throwError(i18n("Could not create the %1 widget!", v.toString()));
+        return d->engine->newError(i18n("Could not create the %1 widget!", v.toString()));
     } else if (Widget *widget = qobject_cast<Widget*>(v.toQObject())) {
         applet = widget->applet();
-        c->d->containment.data()->addApplet(applet);
+        d->containment.data()->addApplet(applet);
         return v;
     }
 
-    return engine->undefinedValue();
+    return QJSValue();
 }
 
-QScriptValue Containment::widgets(QScriptContext *context, QScriptEngine *engine)
+QJSValue Containment::widgets(const QString &widgetType) const
 {
-    Containment *c = qobject_cast<Containment*>(context->thisObject().toQObject());
-
-    if (!c || !c->d->containment) {
-        return engine->undefinedValue();
+    if (!d->containment) {
+        return QJSValue();
     }
 
-    const QString widgetType = context->argumentCount() > 0 ? context->argument(0).toString() : QString();
-    QScriptValue widgets = engine->newArray();
-    ScriptEngine *env = ScriptEngine::envFor(engine);
+    QJSValue widgets = d->engine->newArray();
     int count = 0;
 
-    foreach (Plasma::Applet *widget, c->d->containment.data()->applets()) {
+    foreach (Plasma::Applet *widget, d->containment.data()->applets()) {
         if (widgetType.isEmpty() || widget->pluginMetaData().pluginId() == widgetType) {
-            widgets.setProperty(count, env->wrap(widget));
+            widgets.setProperty(count, d->engine->wrap(widget));
             ++count;
         }
     }

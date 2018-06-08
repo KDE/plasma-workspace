@@ -59,9 +59,11 @@ int AppInterface::screenCount() const
     return m_env->corona()->numScreens();
 }
 
-QRectF AppInterface::screenGeometry(int screen) const
+QJSValue AppInterface::screenGeometry(int screen) const
 {
-    return m_env->corona()->screenGeometry(screen);
+    QRectF rect = m_env->corona()->screenGeometry(screen);
+    QJSValueList args({QJSValue(rect.x()), QJSValue(rect.y()), QJSValue(rect.width()), QJSValue(rect.height())});
+    return m_env->globalObject().property("QRectF").callAsConstructor(args);
 }
 
 QList<int> AppInterface::activityIds() const

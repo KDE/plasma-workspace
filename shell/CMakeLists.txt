@@ -9,9 +9,7 @@ set(scripting_SRC
     scripting/applet.cpp
     scripting/containment.cpp
     scripting/configgroup.cpp
-    scripting/i18n.cpp
     scripting/panel.cpp
-    scripting/rect.cpp
     scripting/scriptengine.cpp
     scripting/scriptengine_v1.cpp
     scripting/widget.cpp
@@ -60,7 +58,6 @@ target_link_libraries(plasmashell
  KF5::Crash
  KF5::Plasma
  KF5::PlasmaQuick
- Qt5::Script
  KF5::Solid
  KF5::Declarative
  KF5::I18n

@@ -20,8 +20,7 @@
 #ifndef CONTAINMENT
 #define CONTAINMENT
 
-#include <QScriptContext>
-#include <QScriptValue>
+#include <QJSValue>
 #include <QWeakPointer>
 
 #include "applet.h"
@@ -31,8 +30,12 @@ namespace Plasma
     class Containment;
 } // namespace Plasma
 
+class ShellCorona;
+
 namespace WorkspaceScripting
 {
+
+class ScriptEngine;
 
 class Containment : public Applet
 {
@@ -54,7 +57,7 @@ class Containment : public Applet
     Q_PROPERTY(int id READ id)
 
 public:
-    explicit Containment(Plasma::Containment *containment, QObject *parent = nullptr);
+    explicit Containment(Plasma::Containment *containment, ScriptEngine *parent);
     ~Containment() override;
 
     uint id() const;
@@ -72,22 +75,16 @@ public:
     QString wallpaperMode() const;
     void setWallpaperMode(const QString &wallpaperMode);
 
-    static QScriptValue widgetById(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue addWidget(QScriptContext *context, QScriptEngine *engine);
-    static QScriptValue widgets(QScriptContext *context, QScriptEngine *engine);
+    Q_INVOKABLE QJSValue widgetById(const QJSValue &paramId = QJSValue()) const;
+    Q_INVOKABLE QJSValue addWidget(const QJSValue &v = QJSValue(), qreal x = -1, qreal y = -1, qreal w = -1, qreal h = -1);
+    Q_INVOKABLE QJSValue widgets(const QString &widgetType = QString()) const;
 
 public Q_SLOTS:
     void remove();
     void showConfigurationInterface();
 
-    // from the applet interface
-    QVariant readConfig(const QString &key, const QVariant &def = QString()) const override { return Applet::readConfig(key, def); }
-    void writeConfig(const QString &key, const QVariant &value) override { Applet::writeConfig(key, value); }
-
-    QVariant readGlobalConfig(const QString &key, const QVariant &def = QString()) const override { return Applet::readGlobalConfig(key, def); }
-    void writeGlobalConfig(const QString &key, const QVariant &value) override { Applet::writeGlobalConfig(key, value); }
-
-    void reloadConfig() override { Applet::reloadConfig(); }
+protected:
+    ShellCorona *corona() const;
 
 private:
     class Private;

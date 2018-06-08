@@ -20,8 +20,7 @@
 #ifndef PANEL
 #define PANEL
 
-#include <QScriptContext>
-#include <QScriptValue>
+#include <QJSValue>
 #include <QWeakPointer>
 
 #include "containment.h"
@@ -61,7 +60,7 @@ class Panel : public Containment
     Q_PROPERTY(QString hiding READ hiding WRITE setHiding)
 
 public:
-    explicit Panel(Plasma::Containment *containment, QObject *parent = nullptr);
+    explicit Panel(Plasma::Containment *containment, ScriptEngine *parent);
     ~Panel() override;
 
     QString location() const;
@@ -91,11 +90,6 @@ public:
 public Q_SLOTS:
     void remove() { Containment::remove(); }
     void showConfigurationInterface() { Containment::showConfigurationInterface(); }
-
-    // from the applet interface
-    QVariant readConfig(const QString &key, const QVariant &def = QString()) const override { return Applet::readConfig(key, def); }
-    void writeConfig(const QString &key, const QVariant &value) override { Applet::writeConfig(key, value); }
-    void reloadConfig() override { Applet::reloadConfig(); }
 
 private:
     PanelView *panel() const;

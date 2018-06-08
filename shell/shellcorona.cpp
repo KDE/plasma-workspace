@@ -1485,8 +1485,8 @@ void ShellCorona::evaluateScript(const QString &script) {
             });
 
     scriptEngine.evaluateScript(script);
-    if (scriptEngine.hasUncaughtException() && calledFromDBus()) {
-        sendErrorReply(QDBusError::Failed, scriptEngine.uncaughtException().toString());
+    if (!scriptEngine.errorString().isEmpty() && calledFromDBus()) {
+        sendErrorReply(QDBusError::Failed, scriptEngine.errorString());
     }
 }
 

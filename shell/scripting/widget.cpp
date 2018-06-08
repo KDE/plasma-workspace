@@ -148,16 +148,16 @@ void Widget::setIndex(int index)
     layout->insertItem(index, applet);*/
 }
 
-QRectF Widget::geometry() const
+QJSValue Widget::geometry() const
 {
     /*if (d->applet) {
         return d->applet.data()->geometry();
     }
 */
-    return QRectF();
+    return QJSValue();
 }
 
-void Widget::setGeometry(const QRectF &geometry)
+void Widget::setGeometry(const QJSValue &geometry)
 {
     Q_UNUSED(geometry)
     /*if (d->applet) {

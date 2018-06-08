@@ -23,6 +23,7 @@
 #include <QObject>
 #include <QRectF>
 #include <QStringList>
+#include <QJSValue>
 
 namespace Plasma
 {
@@ -87,7 +88,7 @@ public:
     bool coronaLocked() const;
 
 public Q_SLOTS:
-    QRectF screenGeometry(int screen) const;
+    QJSValue screenGeometry(int screen) const;
     void lockCorona(bool locked);
     void sleep(int ms);
 

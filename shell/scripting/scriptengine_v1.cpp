@@ -23,7 +23,7 @@
 #include <QDirIterator>
 #include <QFile>
 #include <QFileInfo>
-#include <QScriptValueIterator>
+#include <QJSValueIterator>
 #include <QStandardPaths>
 #include <QFutureWatcher>
 
@@ -46,7 +46,6 @@
 #include "appinterface.h"
 #include "containment.h"
 #include "configgroup.h"
-#include "i18n.h"
 #include "panel.h"
 #include "widget.h"
 #include "../shellcorona.h"
@@ -64,7 +63,7 @@ namespace {
 
     class ScriptArray_forEach_Helper {
     public:
-        ScriptArray_forEach_Helper(const QScriptValue &array)
+        ScriptArray_forEach_Helper(const QJSValue &array)
             : array(array)
         {
         }
@@ -76,22 +75,22 @@ namespace {
         {
             if (!array.isArray()) return;
 
-            int length = array.property("length").toInteger();
+            int length = array.property("length").toInt();
             for (int i = 0; i < length; ++i) {
                 function(array.property(i));
             }
         }
 
     private:
-        const QScriptValue &array;
+        const QJSValue &array;
     };
 
     #define SCRIPT_ARRAY_FOREACH(Variable, Array) \
-        ScriptArray_forEach_Helper(Array) + [&] (const QScriptValue &Variable)
+        ScriptArray_forEach_Helper(Array) + [&] (const QJSValue &Variable)
 
     class ScriptObject_forEach_Helper {
     public:
-        ScriptObject_forEach_Helper(const QScriptValue &object)
+        ScriptObject_forEach_Helper(const QJSValue &object)
             : object(object)
         {
         }
@@ -101,7 +100,7 @@ namespace {
         template <typename Function>
         void operator+ (Function function) const
         {
-            QScriptValueIterator it(object);
+            QJSValueIterator it(object);
             while (it.hasNext()) {
                 it.next();
                 function(it.name(), it.value());
@@ -109,11 +108,11 @@ namespace {
         }
 
     private:
-        const QScriptValue &object;
+        const QJSValue &object;
     };
 
     #define SCRIPT_OBJECT_FOREACH(Key, Value, Array) \
-        ScriptObject_forEach_Helper(Array) + [&] (const QString &Key, const QScriptValue &Value)
+        ScriptObject_forEach_Helper(Array) + [&] (const QString &Key, const QJSValue &Value)
 
     // Case insensitive comparison of two strings
     template <typename StringType>
@@ -126,40 +125,65 @@ namespace {
 namespace WorkspaceScripting
 {
 
-QScriptValue ScriptEngine::V1::desktopById(QScriptContext *context, QScriptEngine *engine)
+ScriptEngine::V1::V1(ScriptEngine *parent)
+     : QObject(parent),
+       m_engine(parent)
+{}
+
+ScriptEngine::V1::~V1()
+{}
+
+QJSValue ScriptEngine::V1::getApiVersion(const QJSValue &param)
 {
-    if (context->argumentCount() == 0) {
-        return context->throwError(i18n("desktopById requires an id"));
+    if (param.toInt() != 1) {
+        return m_engine->newError(i18n("maximum api version supported is 1"));
+    }
+    return m_engine->newQObject(this);
+}
+
+int ScriptEngine::V1::gridUnit() const
+{
+    int gridUnit = QFontMetrics(QGuiApplication::font()).boundingRect(QStringLiteral("M")).height();
+    if (gridUnit % 2 != 0) {
+        gridUnit++;
     }
 
-    const uint id = context->argument(0).toInt32();
-    ScriptEngine *env = envFor(engine);
-    foreach (Plasma::Containment *c, env->m_corona->containments()) {
+    return gridUnit;
+}
+
+QJSValue ScriptEngine::V1::desktopById(const QJSValue &param) const
+{
+    //this needs to work also for string of numberls, like "20"
+    if (param.isUndefined()) {
+        return m_engine->newError(i18n("desktopById required an id"));
+    }
+
+    const quint32 id = param.toInt();
+
+    foreach (Plasma::Containment *c, m_engine->m_corona->containments()) {
         if (c->id() == id && !isPanel(c)) {
-            return env->wrap(c);
+            return m_engine->wrap(c);
         }
     }
 
-    return engine->undefinedValue();
+    return QJSValue();
 }
 
-QScriptValue ScriptEngine::V1::desktopsForActivity(QScriptContext *context, QScriptEngine *engine)
+QJSValue ScriptEngine::V1::desktopsForActivity(const QJSValue &actId) const
 {
-    if (context->argumentCount() == 0) {
-        return context->throwError(i18n("desktopsForActivity requires an id"));
+    if (!actId.isString()) {
+        return m_engine->newError(i18n("desktopsForActivity requires an id"));
     }
 
-    QScriptValue containments = engine->newArray();
+    QJSValue containments = m_engine->newArray();
     int count = 0;
 
-    const QString id = context->argument(0).toString();
+    const QString id = actId.toString();
 
-    ScriptEngine *env = envFor(engine);
-
-    const auto result = env->desktopsForActivity(id);
+    const auto result = m_engine->desktopsForActivity(id);
 
     for (Containment* c: result) {
-        containments.setProperty(count, env->wrap(c));
+        containments.setProperty(count, m_engine->newQObject(c));
         ++count;
     }
 
@@ -167,27 +191,25 @@ QScriptValue ScriptEngine::V1::desktopsForActivity(QScriptContext *context, QScr
     return containments;
 }
 
-QScriptValue ScriptEngine::V1::desktopForScreen(QScriptContext *context, QScriptEngine *engine)
+QJSValue ScriptEngine::V1::desktopForScreen(const QJSValue &param) const
 {
-    if (context->argumentCount() == 0) {
-        return context->throwError(i18n("activityForScreen requires a screen id"));
+    //this needs to work also for string of numberls, like "20"
+    if (param.isUndefined()) {
+        return m_engine->newError(i18n("activityForScreen requires a screen id"));
     }
 
-    const uint screen = context->argument(0).toInt32();
-    ScriptEngine *env = envFor(engine);
-    return env->wrap(env->m_corona->containmentForScreen(screen));
+    const uint screen = param.toInt();
+    return m_engine->wrap(m_engine->m_corona->containmentForScreen(screen));
 }
 
-QScriptValue ScriptEngine::V1::createActivity(QScriptContext *context, QScriptEngine *engine)
+QJSValue ScriptEngine::V1::createActivity(const QJSValue &nameParam, const QString &pluginParam)
 {
-    if (context->argumentCount() < 0) {
-        return context->throwError(i18n("createActivity required the activity name"));
+    if (!nameParam.isString()) {
+        return m_engine->newError(i18n("createActivity required the activity name"));
     }
 
-    const QString name = context->argument(0).toString();
-    QString plugin = context->argument(1).toString();
-
-    ScriptEngine *env = envFor(engine);
+    QString plugin = pluginParam;
+    const QString name = nameParam.toString();
 
     KActivities::Controller controller;
 
@@ -200,8 +222,8 @@ QScriptValue ScriptEngine::V1::createActivity(QScriptContext *context, QScriptEn
 
     qDebug() << "Setting default Containment plugin:" << plugin;
 
-    ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
-    StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(env->m_corona);
+    ShellCorona *sc = qobject_cast<ShellCorona *>(m_engine->m_corona);
+    StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(m_engine->m_corona);
     if (sc) {
         if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
             plugin = sc->defaultContainmentPlugin();
@@ -209,86 +231,86 @@ QScriptValue ScriptEngine::V1::createActivity(QScriptContext *context, QScriptEn
         sc->insertActivity(id, plugin);
     } else if (ac) {
         if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
-            KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(env->m_corona->package().filePath("defaults")), "Desktop");
+            KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(m_engine->m_corona->package().filePath("defaults")), "Desktop");
             plugin = shellCfg.readEntry("Containment", "org.kde.desktopcontainment");
         }
         ac->insertActivity(id, plugin);
     }
 
-    return QScriptValue(id);
+    return m_engine->toScriptValue<QString>(id);
 }
 
-QScriptValue ScriptEngine::V1::setCurrentActivity(QScriptContext *context, QScriptEngine *engine)
+QJSValue ScriptEngine::V1::setCurrentActivity(const QJSValue &param)
 {
-    Q_UNUSED(engine)
-
-    if (context->argumentCount() < 0) {
-        return context->throwError(i18n("setCurrentActivity required the activity id"));
+    if (!param.isString()) {
+        return m_engine->newError(i18n("setCurrentActivity required the activity id"));
     }
 
-    const QString id = context->argument(0).toString();
+    const QString id = param.toString();
 
     KActivities::Controller controller;
 
     QFuture<bool> task = controller.setCurrentActivity(id);
     awaitFuture(task);
 
-    return QScriptValue(task.result());
+    return task.result();
 }
 
-QScriptValue ScriptEngine::V1::setActivityName(QScriptContext *context, QScriptEngine *engine)
+QJSValue ScriptEngine::V1::setActivityName(const QJSValue &idParam, const QJSValue &nameParam)
 {
-    Q_UNUSED(engine)
-
-    if (context->argumentCount() < 2) {
-        return context->throwError(i18n("setActivityName required the activity id and name"));
+    if (!idParam.isString() || !nameParam.isString()) {
+        return m_engine->newError(i18n("setActivityName required the activity id and name"));
     }
 
-    const QString id = context->argument(0).toString();
-    const QString name = context->argument(1).toString();
+
+    const QString id = idParam.toString();
+    const QString name = nameParam.toString();
 
     KActivities::Controller controller;
 
     QFuture<void> task = controller.setActivityName(id, name);
     awaitFuture(task);
-
-    return QScriptValue();
+    return QJSValue();
 }
 
-QScriptValue ScriptEngine::V1::activityName(QScriptContext *context, QScriptEngine *engine)
+QJSValue ScriptEngine::V1::activityName(const QJSValue &idParam) const
 {
-    Q_UNUSED(engine)
-
-    if (context->argumentCount() < 1) {
-        return context->throwError(i18n("setActivityName required the activity id and name"));
+    if (!idParam.isString()) {
+        return m_engine->newError(i18n("activityName required the activity id"));
     }
 
-    const QString id = context->argument(0).toString();
+    const QString id = idParam.toString();
 
     KActivities::Info info(id);
 
-    return QScriptValue(info.name());
+    return QJSValue(info.name());
 }
 
-QScriptValue ScriptEngine::V1::currentActivity(QScriptContext *context, QScriptEngine *engine)
+QString ScriptEngine::V1::currentActivity() const
 {
-    Q_UNUSED(engine)
-    Q_UNUSED(context)
-
     KActivities::Consumer consumer;
     return consumer.currentActivity();
 }
 
-QScriptValue ScriptEngine::V1::activities(QScriptContext *context, QScriptEngine *engine)
+QJSValue ScriptEngine::V1::activities() const
 {
-    Q_UNUSED(context)
+    QJSValue acts = m_engine->newArray();
+    int count = 0;
 
-    return qScriptValueFromSequence(engine, envFor(engine)->availableActivities());
+    const auto result = m_engine->availableActivities();
+
+    for (const auto a : result) {
+        acts.setProperty(count, a);
+        ++count;
+    }
+    acts.setProperty(QStringLiteral("length"), count);
+
+    return acts;
 }
 
 // Utility function to process configs and config groups
 template <typename Object>
-void loadSerializedConfigs(Object *object, const QScriptValue &configs)
+void loadSerializedConfigs(Object *object, const QJSValue &configs)
 {
     SCRIPT_OBJECT_FOREACH(escapedGroup, config, configs) {
         // If the config group is set, pass it on to the containment
@@ -306,23 +328,17 @@ void loadSerializedConfigs(Object *object, const QScriptValue &configs)
     };
 }
 
-QScriptValue ScriptEngine::V1::loadSerializedLayout(QScriptContext *context, QScriptEngine *engine)
+QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
 {
-    Q_UNUSED(engine)
-
-    if (context->argumentCount() < 1) {
-        return context->throwError(i18n("loadSerializedLayout requires the JSON object to deserialize from"));
+    if (!data.isObject()) {
+        return m_engine->newError(i18n("loadSerializedLayout requires the JSON object to deserialize from"));
     }
 
-    ScriptEngine *env = envFor(engine);
-
-    const auto data = context->argument(0);
-
-    if (data.property("serializationFormatVersion").toInteger() != 1) {
-        return context->throwError(i18n("loadSerializedLayout: invalid version of the serialized object"));
+    if (data.property("serializationFormatVersion").toInt() != 1) {
+        return m_engine->newError(i18n("loadSerializedLayout: invalid version of the serialized object"));
     }
 
-    const auto desktops = env->desktopsForActivity(KActivities::Consumer().currentActivity());
+    const auto desktops = m_engine->desktopsForActivity(KActivities::Consumer().currentActivity());
     Q_ASSERT_X(desktops.size() != 0, "V1::loadSerializedLayout", "We need desktops");
 
     // qDebug() << "DESKTOP DESERIALIZATION: Loading desktops...";
@@ -346,18 +362,11 @@ QScriptValue ScriptEngine::V1::loadSerializedLayout(QScriptContext *context, QSc
         SCRIPT_ARRAY_FOREACH(appletData, desktopData.property("applets")) {
             // qDebug() << "DESKTOP DESERIALIZATION: Applet: " << appletData.toString();
 
-            // TODO: It would be nicer to be able to call addWidget directly
-            auto desktopObject = env->wrap(desktop);
-            auto addAppletFunction = desktopObject.property("addWidget");
-            QScriptValueList args {
-                appletData.property("plugin"),
-                appletData.property("geometry.x").toInteger()      * ScriptEngine::gridUnit(),
-                appletData.property("geometry.y").toInteger()      * ScriptEngine::gridUnit(),
-                appletData.property("geometry.width").toInteger()  * ScriptEngine::gridUnit(),
-                appletData.property("geometry.height").toInteger() * ScriptEngine::gridUnit()
-            };
-
-            auto appletObject = addAppletFunction.call(desktopObject, args);
+            auto appletObject = desktop->addWidget( appletData.property("plugin"),
+                appletData.property("geometry.x").toInt()      * gridUnit(),
+                appletData.property("geometry.y").toInt()      * gridUnit(),
+                appletData.property("geometry.width").toInt()  * gridUnit(),
+                appletData.property("geometry.height").toInt() * gridUnit());
 
             if (auto applet = qobject_cast<Widget*>(appletObject.toQObject())) {
                 // Now, lets go through the configs for the applet
@@ -371,17 +380,17 @@ QScriptValue ScriptEngine::V1::loadSerializedLayout(QScriptContext *context, QSc
     // qDebug() << "PANEL DESERIALIZATION: Loading panels...";
 
     SCRIPT_ARRAY_FOREACH(panelData, data.property("panels")) {
-        const auto panel = qobject_cast<Panel *>(env->createContainment(
+        const auto panel = qobject_cast<Panel *>(m_engine->createContainmentWrapper(
             QStringLiteral("Panel"), QStringLiteral("org.kde.panel")));
 
         Q_ASSERT(panel);
 
         // Basic panel setup
         panel->setLocation(panelData.property("location").toString());
-        panel->setHeight(panelData.property("height").toNumber() * ScriptEngine::gridUnit());
-        panel->setMaximumLength(panelData.property("maximumLength").toNumber() * ScriptEngine::gridUnit());
-        panel->setMinimumLength(panelData.property("minimumLength").toNumber() * ScriptEngine::gridUnit());
-        panel->setOffset(panelData.property("offset").toNumber() * ScriptEngine::gridUnit());
+        panel->setHeight(panelData.property("height").toNumber() * gridUnit());
+        panel->setMaximumLength(panelData.property("maximumLength").toNumber() * gridUnit());
+        panel->setMinimumLength(panelData.property("minimumLength").toNumber() * gridUnit());
+        panel->setOffset(panelData.property("offset").toNumber() * gridUnit());
         panel->setAlignment(panelData.property("alignment").toString());
         panel->setHiding(panelData.property("hiding").toString());
 
@@ -392,12 +401,7 @@ QScriptValue ScriptEngine::V1::loadSerializedLayout(QScriptContext *context, QSc
         SCRIPT_ARRAY_FOREACH(appletData, panelData.property("applets")) {
             // qDebug() << "PANEL DESERIALIZATION: Applet: " << appletData.toString();
 
-            // TODO: It would be nicer to be able to call addWidget directly
-            auto panelObject = env->wrap(panel);
-            auto addAppletFunction = panelObject.property("addWidget");
-            QScriptValueList args { appletData.property("plugin") };
-
-            auto appletObject = addAppletFunction.call(panelObject, args);
+            auto appletObject = panel->addWidget(appletData.property("plugin"));
             // qDebug() << "PANEL DESERIALIZATION: addWidget"
             //      << appletData.property("plugin").toString()
             //      ;
@@ -409,64 +413,70 @@ QScriptValue ScriptEngine::V1::loadSerializedLayout(QScriptContext *context, QSc
         };
     };
 
-    return QScriptValue();
+    return QJSValue();
 }
 
-QScriptValue ScriptEngine::V1::newPanel(QScriptContext *context, QScriptEngine *engine)
+QJSValue ScriptEngine::V1::newPanel(const QString &plugin)
 {
-    QString plugin(QStringLiteral("org.kde.panel"));
-
-    if (context->argumentCount() > 0) {
-        plugin = context->argument(0).toString();
-    }
-
-    return createContainment(QStringLiteral("Panel"), plugin, context, engine);
+    return createContainment(QStringLiteral("Panel"), QStringLiteral("org.kde.panel"), plugin);
 }
 
-QScriptValue ScriptEngine::V1::panelById(QScriptContext *context, QScriptEngine *engine)
+QJSValue ScriptEngine::V1::panelById(const QJSValue &idParam) const
 {
-    if (context->argumentCount() == 0) {
-        return context->throwError(i18n("panelById requires an id"));
+    //this needs to work also for string of numberls, like "20"
+    if (idParam.isUndefined()) {
+        return m_engine->newError(i18n("panelById requires an id"));
     }
 
-    const uint id = context->argument(0).toInt32();
-    ScriptEngine *env = envFor(engine);
-    foreach (Plasma::Containment *c, env->m_corona->containments()) {
+    const quint32 id = idParam.toInt();
+
+    foreach (Plasma::Containment *c, m_engine->m_corona->containments()) {
         if (c->id() == id && isPanel(c)) {
-            return env->wrap(c);
+            return m_engine->wrap(c);
         }
     }
 
-    return engine->undefinedValue();
+    return QJSValue();
 }
 
-QScriptValue ScriptEngine::V1::panels(QScriptContext *context, QScriptEngine *engine)
+QJSValue ScriptEngine::V1::desktops() const
 {
-    Q_UNUSED(context)
-
-    QScriptValue panels = engine->newArray();
-    ScriptEngine *env = envFor(engine);
+    QJSValue containments = m_engine->newArray();
     int count = 0;
 
-    foreach (Plasma::Containment *c, env->m_corona->containments()) {
-        if (isPanel(c)) {
-            panels.setProperty(count, env->wrap(c));
+    const auto result = m_engine->m_corona->containments();
+
+    for (const auto c : result) {
+        // make really sure we get actual desktops, so check for a non empty
+        // activty id
+        if (!isPanel(c) && !c->activity().isEmpty()) {
+            containments.setProperty(count, m_engine->wrap(c));
             ++count;
         }
     }
 
+    containments.setProperty(QStringLiteral("length"), count);
+    return containments;
+}
+
+QJSValue ScriptEngine::V1::panels() const
+{
+    QJSValue panels = m_engine->newArray();
+    int count = 0;
+
+    const auto result = m_engine->m_corona->containments();
+
+    for (const auto c : result) {
+        panels.setProperty(count, m_engine->wrap(c));
+        ++count;
+    }
     panels.setProperty(QStringLiteral("length"), count);
+
     return panels;
 }
 
-QScriptValue ScriptEngine::V1::fileExists(QScriptContext *context, QScriptEngine *engine)
+bool ScriptEngine::V1::fileExists(const QString &path) const
 {
-    Q_UNUSED(engine)
-    if (context->argumentCount() == 0) {
-        return false;
-    }
-
-    const QString path = context->argument(0).toString();
     if (path.isEmpty()) {
         return false;
     }
@@ -475,16 +485,8 @@ QScriptValue ScriptEngine::V1::fileExists(QScriptContext *context, QScriptEngine
     return f.exists();
 }
 
-QScriptValue ScriptEngine::V1::loadTemplate(QScriptContext *context, QScriptEngine *engine)
+bool ScriptEngine::V1::loadTemplate(const QString &layout)
 {
-    Q_UNUSED(engine)
-
-    if (context->argumentCount() == 0) {
-        // qDebug() << "no arguments";
-        return false;
-    }
-
-    const QString layout = context->argument(0).toString();
     if (layout.isEmpty() || layout.contains(QStringLiteral("'"))) {
         // qDebug() << "layout is empty";
         return false;
@@ -506,8 +508,7 @@ QScriptValue ScriptEngine::V1::loadTemplate(QScriptContext *context, QScriptEngi
 
     QString path;
     {
-        ScriptEngine *env = envFor(engine);
-        ShellCorona *sc = qobject_cast<ShellCorona *>(env->m_corona);
+        ShellCorona *sc = qobject_cast<ShellCorona *>(m_engine->m_corona);
         if (sc) {
             const QString overridePackagePath = sc->lookAndFeelPackage().path() + QStringLiteral("contents/layouts/") + pluginData.pluginId();
 
@@ -554,28 +555,18 @@ QScriptValue ScriptEngine::V1::loadTemplate(QScriptContext *context, QScriptEngi
         return false;
     }
 
-    ScriptEngine *env = envFor(engine);
-    env->globalObject().setProperty(QStringLiteral("templateName"), env->newVariant(pluginData.name()), QScriptValue::ReadOnly | QScriptValue::Undeletable);
-    env->globalObject().setProperty(QStringLiteral("templateComment"), env->newVariant(pluginData.description()), QScriptValue::ReadOnly | QScriptValue::Undeletable);
+    ScriptEngine *engine = new ScriptEngine(m_engine->corona(), this);
+    engine->globalObject().setProperty(QStringLiteral("templateName"), pluginData.name());
+    engine->globalObject().setProperty(QStringLiteral("templateComment"), pluginData.description());
 
-    QScriptValue rv = env->newObject();
-    QScriptContext *ctx = env->pushContext();
-    ctx->setThisObject(rv);
+    engine->evaluateScript(script, path);
 
-    env->evaluateScript(script, path);
-
-    env->popContext();
-    return rv;
+    engine->deleteLater();
+    return true;
 }
 
-QScriptValue ScriptEngine::V1::applicationExists(QScriptContext *context, QScriptEngine *engine)
+bool ScriptEngine::V1::applicationExists(const QString &application) const
 {
-    Q_UNUSED(engine)
-    if (context->argumentCount() == 0) {
-        return false;
-    }
-
-    const QString application = context->argument(0).toString();
     if (application.isEmpty()) {
         return false;
     }
@@ -607,21 +598,11 @@ QScriptValue ScriptEngine::V1::applicationExists(QScriptContext *context, QScrip
     return false;
 }
 
-QScriptValue ScriptEngine::V1::defaultApplication(QScriptContext *context, QScriptEngine *engine)
+QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool storageId) const
 {
-    Q_UNUSED(engine)
-
-    if (context->argumentCount() == 0) {
-        return false;
-    }
-
-    const QString application = context->argument(0).toString();
     if (application.isEmpty()) {
         return false;
     }
-
-    const bool storageId
-        = context->argumentCount() < 2 ? false : context->argument(1).toBool();
 
     // FIXME: there are some pretty horrible hacks below, in the sense that they
     // assume a very
@@ -727,15 +708,8 @@ QScriptValue ScriptEngine::V1::defaultApplication(QScriptContext *context, QScri
     return false;
 }
 
-QScriptValue ScriptEngine::V1::applicationPath(QScriptContext *context,
-                                               QScriptEngine *engine)
+QJSValue ScriptEngine::V1::applicationPath(const QString &application) const
 {
-    Q_UNUSED(engine)
-    if (context->argumentCount() == 0) {
-        return false;
-    }
-
-    const QString application = context->argument(0).toString();
     if (application.isEmpty()) {
         return false;
     }
@@ -776,15 +750,8 @@ QScriptValue ScriptEngine::V1::applicationPath(QScriptContext *context,
     return QString();
 }
 
-QScriptValue ScriptEngine::V1::userDataPath(QScriptContext *context,
-                                            QScriptEngine *engine)
+QJSValue ScriptEngine::V1::userDataPath(const QString &type, const QString &path) const
 {
-    Q_UNUSED(engine)
-    if (context->argumentCount() == 0) {
-        return QDir::homePath();
-    }
-
-    const QString type = context->argument(0).toString();
     if (type.isEmpty()) {
         return QDir::homePath();
     }
@@ -813,10 +780,10 @@ QScriptValue ScriptEngine::V1::userDataPath(QScriptContext *context,
         location = QStandardPaths::GenericConfigLocation;
     }
 
-    if (context->argumentCount() > 1) {
+    if (!path.isEmpty()) {
         QString loc = QStandardPaths::writableLocation(location);
         loc.append(QDir::separator());
-        loc.append(context->argument(1).toString());
+        loc.append(path);
         return loc;
     }
 
@@ -824,16 +791,8 @@ QScriptValue ScriptEngine::V1::userDataPath(QScriptContext *context,
     return locations.count() ? locations.first() : QString();
 }
 
-QScriptValue ScriptEngine::V1::knownWallpaperPlugins(QScriptContext *context,
-                                                     QScriptEngine *engine)
+QJSValue ScriptEngine::V1::knownWallpaperPlugins(const QString &formFactor) const
 {
-    Q_UNUSED(engine)
-
-    QString formFactor;
-    if (context->argumentCount() > 0) {
-        formFactor = context->argument(0).toString();
-    }
-
     QString constraint;
     if (!formFactor.isEmpty()) {
         constraint.append("[X-Plasma-FormFactors] ~~ '")
@@ -844,26 +803,24 @@ QScriptValue ScriptEngine::V1::knownWallpaperPlugins(QScriptContext *context,
     const QList<KPluginMetaData> wallpapers
         = KPackage::PackageLoader::self()->listPackages(
             QStringLiteral("Plasma/Wallpaper"), QString());
-    QScriptValue rv = engine->newArray(wallpapers.size());
+    QJSValue rv = m_engine->newArray(wallpapers.size());
     for (auto wp : wallpapers) {
-        rv.setProperty(wp.name(), engine->newArray(0));
+        rv.setProperty(wp.name(), m_engine->newArray(0));
     }
 
     return rv;
 }
 
-QScriptValue ScriptEngine::V1::configFile(QScriptContext *context,
-                                          QScriptEngine *engine)
+QJSValue ScriptEngine::V1::configFile(const QJSValue &config, const QString &group)
 {
     ConfigGroup *file = nullptr;
 
-    if (context->argumentCount() > 0) {
-        if (context->argument(0).isString()) {
+    if (!config.isUndefined()) {
+        if (config.isString()) {
             file = new ConfigGroup;
 
-            const QString &fileName = context->argument(0).toString();
-            const ScriptEngine *env = envFor(engine);
-            const Plasma::Corona *corona = env->corona();
+            const Plasma::Corona *corona = m_engine->corona();
+            const QString &fileName = config.toString();
 
             if (fileName == corona->config()->name()) {
                 file->setConfig(corona->config());
@@ -871,16 +828,16 @@ QScriptValue ScriptEngine::V1::configFile(QScriptContext *context,
                 file->setFile(fileName);
             }
 
-            if (context->argumentCount() > 1) {
-                file->setGroup(context->argument(1).toString());
+            if (!group.isEmpty()) {
+                file->setGroup(group);
             }
 
         } else if (ConfigGroup *parent = qobject_cast<ConfigGroup *>(
-                     context->argument(0).toQObject())) {
+                     config.toQObject())) {
             file = new ConfigGroup(parent);
 
-            if (context->argumentCount() > 1) {
-                file->setGroup(context->argument(1).toString());
+            if (!group.isEmpty()) {
+                file->setGroup(group);
             }
         }
 
@@ -888,67 +845,30 @@ QScriptValue ScriptEngine::V1::configFile(QScriptContext *context,
         file = new ConfigGroup;
     }
 
-    QScriptValue v
-        = engine->newQObject(file, QScriptEngine::ScriptOwnership,
-                             QScriptEngine::ExcludeSuperClassProperties
-                                 | QScriptEngine::ExcludeSuperClassMethods);
+    QJSValue v = m_engine->newQObject(file);
     return v;
 }
 
-QScriptValue ScriptEngine::V1::desktops(QScriptContext *context,
-                                        QScriptEngine *engine)
+void ScriptEngine::V1::setImmutability(const QString &immutability)
 {
-    Q_UNUSED(context)
-
-    QScriptValue containments = engine->newArray();
-    ScriptEngine *env = envFor(engine);
-    int count = 0;
-
-    foreach (Plasma::Containment *c, env->corona()->containments()) {
-        // make really sure we get actual desktops, so check for a non empty
-        // activty id
-        if (!isPanel(c) && !c->activity().isEmpty()) {
-            containments.setProperty(count, env->wrap(c));
-            ++count;
-        }
+    if (immutability.isEmpty()) {
+        return;
     }
-
-    containments.setProperty(QStringLiteral("length"), count);
-    return containments;
-}
-
-QScriptValue ScriptEngine::V1::gridUnit(QScriptContext *context, QScriptEngine *engine)
-{
-    Q_UNUSED(context);
-    Q_UNUSED(engine);
-    return ScriptEngine::gridUnit();
-}
-
-QScriptValue ScriptEngine::V1::setImmutability(QScriptContext *context,
-                                       QScriptEngine *engine)
-{
-    if (context->argumentCount() == 0) {
-        return QScriptValue();
-    }
-    ScriptEngine *env = envFor(engine);
-    const QString immutability = context->argument(0).toString();
 
     if (immutability == QLatin1String("systemImmutable")) {
-        env->corona()->setImmutability(Plasma::Types::SystemImmutable);
+        m_engine->corona()->setImmutability(Plasma::Types::SystemImmutable);
     } else if (immutability == QLatin1String("userImmutable")) {
-        env->corona()->setImmutability(Plasma::Types::UserImmutable);
+        m_engine->corona()->setImmutability(Plasma::Types::UserImmutable);
     } else {
-        env->corona()->setImmutability(Plasma::Types::Mutable);
+        m_engine->corona()->setImmutability(Plasma::Types::Mutable);
     }
 
-    return QScriptValue();
+    return;
 }
 
-QScriptValue ScriptEngine::V1::immutability(QScriptContext *context,
-                                            QScriptEngine *engine)
+QString ScriptEngine::V1::immutability() const
 {
-    ScriptEngine *env = envFor(engine);
-    switch (env->corona()->immutability()) {
+    switch (m_engine->corona()->immutability()) {
     case Plasma::Types::SystemImmutable:
         return QLatin1String("systemImmutable");
     case Plasma::Types::UserImmutable:
@@ -958,21 +878,19 @@ QScriptValue ScriptEngine::V1::immutability(QScriptContext *context,
     }
 }
 
-QScriptValue ScriptEngine::V1::createContainment(const QString &type, const QString &defaultPlugin,
-                                                 QScriptContext *context, QScriptEngine *engine)
+QJSValue ScriptEngine::V1::createContainment(const QString &type, const QString &defaultPlugin, const QString &plugin)
 {
-    const QString plugin = context->argumentCount() > 0
-                               ? context->argument(0).toString()
-                               : defaultPlugin;
+    const QString actualPlugin = plugin.isEmpty()
+                               ? defaultPlugin
+                               : plugin;
 
-    ScriptEngine *env = envFor(engine);
-    auto result = env->createContainment(type, plugin);
+    auto result = m_engine->createContainmentWrapper(type, actualPlugin);
 
     if (!result) {
-        return context->throwError(i18n("Could not find a plugin for %1 named %2.", type, plugin));
+        return m_engine->newError(i18n("Could not find a plugin for %1 named %2.", type, actualPlugin));
     }
 
-    return env->wrap(result);
+    return m_engine->newQObject(result);
 }
 
 } // namespace WorkspaceScripting
