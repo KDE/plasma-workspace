@@ -32,11 +32,6 @@ KQuickAddons.Plotter {
     Layout.fillHeight: true
     horizontalGridLineCount: 0
 
-    function formatLabel(data1, data2) {
-        return i18nc("%1 and %3 are data values, %2 and %4 are unit datatypes", "%1 %2 | %3 %4", data1.value, data1.units,
-                            data2.value, data2.units);
-    }
-
     function cycle(color, degrees) {
         var min = Math.min(color.r, Math.min(color.g, color.b));
         var max = Math.max(color.r, Math.max(color.g, color.b));
@@ -69,16 +64,17 @@ KQuickAddons.Plotter {
     ]
 
     PlasmaComponents.Label {
+        id: nameLabel
         anchors {
             left: parent.left
             top: parent.top
         }
-        text: plotter.sensorName
     }
 
     PlasmaComponents.Label {
         id: speedLabel
         wrapMode: Text.WordWrap
+        visible: plasmoid.formFactor != PlasmaCore.Types.Vertical
         anchors {
             right: parent.right
         }
@@ -101,7 +97,13 @@ KQuickAddons.Plotter {
 
             plotter.addSample([data1.value, data2.value]);
 
-            speedLabel.text = formatLabel(data1, data2);
+            if (plasmoid.formFactor != PlasmaCore.Types.Vertical) {
+                nameLabel.text = plotter.sensorName
+                speedLabel.text = formatData(data1) + " | " + formatData(data2)
+            } else {
+                nameLabel.text = plotter.sensorName+ "\n" + formatData(data1) + "\n" + formatData(data2)
+                speedLabel.text = ""
+            }
         }
     }
 }

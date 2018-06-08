@@ -35,10 +35,6 @@ KQuickAddons.Plotter {
     Layout.preferredHeight: parent.height
     horizontalGridLineCount: 0
 
-    function formatLabel(data) {
-        return i18nc("%1 is data value, %2 is unit datatype", "%1 %2", data.value, data.units);
-    }
-
     dataSets: [
         KQuickAddons.PlotData {
             color: theme.highlightColor
@@ -46,16 +42,17 @@ KQuickAddons.Plotter {
     ]
 
     PlasmaComponents.Label {
+        id: nameLabel
         anchors {
             left: parent.left
             top: parent.top
         }
-        text: plotter.sensorName
     }
 
     PlasmaComponents.Label {
         id: speedLabel
         wrapMode: Text.WordWrap
+        visible: plasmoid.formFactor != PlasmaCore.Types.Vertical
         anchors {
             right: parent.right
         }
@@ -76,7 +73,13 @@ KQuickAddons.Plotter {
 
             plotter.addSample([data1.value]);
 
-            speedLabel.text = formatLabel(data1);
+            if (plasmoid.formFactor != PlasmaCore.Types.Vertical) {
+                nameLabel.text = plotter.sensorName
+                speedLabel.text = formatData(data1)
+            } else {
+                nameLabel.text = plotter.sensorName+ "\n" + formatData(data1)
+                speedLabel.text = ""
+            }
         }
     }
 }

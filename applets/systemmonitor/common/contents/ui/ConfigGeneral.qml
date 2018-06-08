@@ -32,6 +32,7 @@ Item {
 
     property var cfg_sources: []
     onCfg_sourcesChanged: {
+        if (! cfg_sources) { cfg_sources = [] }
         if (cfg_sources.length == 0) {
             for (var i in mainColumn.children) {
                 var child = mainColumn.children[i];

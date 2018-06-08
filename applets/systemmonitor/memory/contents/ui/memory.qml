@@ -40,7 +40,7 @@ Applet {
         autoRange: false
         rangeMin: 0
         rangeMax: 0
-        function formatLabel(data) {
+        function formatData(data) {
             rangeMax = data.max;
             return KCoreAddons.Format.formatByteSize(data.value * 1024)
         }

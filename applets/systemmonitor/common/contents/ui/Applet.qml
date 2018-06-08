@@ -24,7 +24,6 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 
 Item {
     id: rootItem
@@ -83,7 +82,7 @@ Item {
         engine: "systemmonitor"
         interval: plasmoid.configuration.updateInterval
         onSourceAdded: {
-            if (plasmoid.configuration.sources.length > 0 &&
+            if (plasmoid.configuration.sources && plasmoid.configuration.sources.length > 0 &&
                 plasmoid.configuration.sources.indexOf(encodeURIComponent(source)) === -1) {
                 return;
             }

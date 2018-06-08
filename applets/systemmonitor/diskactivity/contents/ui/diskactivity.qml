@@ -37,9 +37,8 @@ Applet {
     }
 
     delegate: DoublePlotter {
-        function formatLabel(data1, data2) {
-            return i18nc("%1 and %2 are values of the same datatype", "%1/s | %2/s", KCoreAddons.Format.formatByteSize(data1.value * 1024),
-                        KCoreAddons.Format.formatByteSize(data2.value * 1024));
+        function formatData(data) {
+            return i18nc("%1 is value of data per seconds", "%1/s", KCoreAddons.Format.formatByteSize(data.value * 1024))
         }
     }
 }
