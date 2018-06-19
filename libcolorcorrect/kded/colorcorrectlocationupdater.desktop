@@ -31,7 +31,6 @@ Name[zh_TW]=ColorCorrect 位置更新器
 X-KDE-ServiceTypes=KDEDModule
 X-KDE-Library=colorcorrectlocationupdater
 X-KDE-FactoryName=colorcorrectlocationupdater
-X-KDE-DBus-ModuleName=colorcorrectlocationupdater
 X-KDE-Kded-autoload=true
 Comment=Sends updated location data to the compositor
 Comment[ca]=Envia les dades actualitzades de la ubicació al compositor

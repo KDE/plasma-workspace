@@ -45,7 +45,6 @@ Name[zh_TW]=目錄監控器
 X-KDE-ServiceTypes=KDEDModule
 X-KDE-Library=desktopnotifier
 X-KDE-FactoryName=desktopnotifier
-X-KDE-DBus-ModuleName=desktopnotifier
 X-KDE-Kded-load-on-demand=true
 X-KDE-Kded-autoload=false
 Comment=Monitors directories for changes

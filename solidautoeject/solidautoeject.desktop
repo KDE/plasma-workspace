@@ -2,7 +2,6 @@
 Type=Service
 X-KDE-ServiceTypes=KDEDModule
 X-KDE-Library=solidautoeject
-X-KDE-DBus-ModuleName=solidautoeject
 X-KDE-Kded-autoload=true
 Name=Drive Ejector
 Name[ar]=مُخرِج الأجهزة

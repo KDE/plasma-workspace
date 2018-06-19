@@ -2,7 +2,6 @@
 Type=Service
 X-KDE-ServiceTypes=KDEDModule
 X-KDE-Library=freespacenotifier
-X-KDE-DBus-ModuleName=freespacenotifier
 X-KDE-Kded-autoload=true
 
 Name=Free Space Notifier
