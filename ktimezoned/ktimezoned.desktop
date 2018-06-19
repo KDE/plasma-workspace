@@ -3,7 +3,6 @@ Type=Service
 
 X-KDE-ServiceTypes=KDEDModule
 X-KDE-Library=ktimezoned
-X-KDE-DBus-ModuleName=ktimezoned
 X-KDE-Kded-autoload=true
 X-KDE-Kded-load-on-demand=true
 
