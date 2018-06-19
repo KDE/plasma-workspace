@@ -69,8 +69,6 @@ int main(int argc, char **argv)
     app.setQuitOnLastWindowClosed(false);
 
     aboutData.setupCommandLine(&parser);
-    parser.addHelpOption();
-    parser.addVersionOption();
 
     parser.process(app);
     aboutData.processCommandLine(&parser);

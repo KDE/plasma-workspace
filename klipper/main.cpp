@@ -83,8 +83,6 @@ extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[])
   app.setQuitOnLastWindowClosed( false );
 
   QCommandLineParser parser;
-  parser.addHelpOption();
-  parser.addVersionOption();
   aboutData.setupCommandLine(&parser);
   parser.process(app);
   aboutData.processCommandLine(&parser);
