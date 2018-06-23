@@ -76,6 +76,26 @@ ColumnLayout {
                                                 : i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
                                                          "Textfield placeholder text", "Search...")
 
+            function move_up() {
+                if (length === 0) {
+                    root.showHistory = true;
+                    listView.forceActiveFocus();
+                } else if (results.count > 0) {
+                    results.forceActiveFocus();
+                    results.decrementCurrentIndex();
+                }
+            }
+
+            function move_down() {
+                if (length === 0) {
+                    root.showHistory = true;
+                    listView.forceActiveFocus();
+                } else if (results.count > 0) {
+                    results.forceActiveFocus();
+                    results.incrementCurrentIndex();
+                }
+            }
+
             onTextChanged: {
                 root.query = queryField.text
                 if (allowCompletion && length > 0) {
@@ -95,25 +115,21 @@ ColumnLayout {
                     }
                 }
             }
-            Keys.onPressed: allowCompletion = (event.key !== Qt.Key_Backspace && event.key !== Qt.Key_Delete)
-            Keys.onUpPressed: {
-                if (length === 0) {
-                    root.showHistory = true;
-                    listView.forceActiveFocus();
-                } else if (results.count > 0) {
-                    results.forceActiveFocus();
-                    results.decrementCurrentIndex();
+            Keys.onPressed: {
+                allowCompletion = (event.key !== Qt.Key_Backspace && event.key !== Qt.Key_Delete)
+
+                if (event.modifiers & Qt.ControlModifier) {
+                    if (event.key == Qt.Key_J) {
+                        move_down()
+                        event.accepted = true;
+                    } else if (event.key == Qt.Key_K) {
+                        move_up()
+                        event.accepted = true;
+                    }
                 }
             }
-            Keys.onDownPressed: {
-                if (length === 0) {
-                    root.showHistory = true;
-                    listView.forceActiveFocus();
-                } else if (results.count > 0) {
-                    results.forceActiveFocus();
-                    results.incrementCurrentIndex();
-                }
-            }
+            Keys.onUpPressed: move_up()
+            Keys.onDownPressed: move_down()
             Keys.onEnterPressed: results.runCurrentIndex(event)
             Keys.onReturnPressed: results.runCurrentIndex(event)
 
@@ -171,7 +187,12 @@ ColumnLayout {
             runner: root.runner
 
             Keys.onPressed: {
-                if (event.text != "") {
+                var ctrl = event.modifiers & Qt.ControlModifier;
+                if (ctrl && event.key == Qt.Key_J) {
+                    incrementCurrentIndex()
+                } else if (ctrl && event.key == Qt.Key_K) {
+                    decrementCurrentIndex()
+                } else if (event.text != "") {
                     queryField.text += event.text;
                     queryField.focus = true;
                 }
@@ -239,7 +260,12 @@ ColumnLayout {
                 }
             }
             Keys.onPressed: {
-                if (event.text != "") {
+                var ctrl = event.modifiers & Qt.ControlModifier;
+                if (ctrl && event.key == Qt.Key_J) {
+                    incrementCurrentIndex()
+                } else if (ctrl && event.key == Qt.Key_K) {
+                    decrementCurrentIndex()
+                } else if (event.text != "") {
                     queryField.text += event.text;
                     queryField.focus = true;
                 }
