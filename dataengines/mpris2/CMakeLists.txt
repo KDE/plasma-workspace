@@ -1,5 +1,5 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_mpris2\")
-add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
+add_definitions(-DQT_USE_FAST_OPERATOR_PLUS)
 
 set(mpris2_engine_SRCS
     mpris2engine.cpp
