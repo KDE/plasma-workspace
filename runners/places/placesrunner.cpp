@@ -125,7 +125,7 @@ void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
                 match.setId(udi);
                 match.setData(udi);
             } else {
-                const QUrl url = m_places.url(current_index);
+                const QUrl url = KFilePlacesModel::convertedUrl(m_places.url(current_index));
                 match.setData(url);
                 match.setId(url.toDisplayString());
             }
