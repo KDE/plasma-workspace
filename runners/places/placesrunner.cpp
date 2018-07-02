@@ -119,6 +119,13 @@ void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
             match.setIcon(m_places.icon(current_index));
             match.setText(text);
 
+            // Add category as subtext so one can tell "Pictures" folder from "Search for Pictures"
+            // Don't add it if it would match the category ("Places") of the runner to avoid "Places: Pictures (Places)"
+            const QString groupName = m_places.data(current_index, KFilePlacesModel::GroupRole).toString();
+            if (!groupName.isEmpty() && !static_cast<PlacesRunner *>(parent())->categories().contains(groupName)) {
+                match.setSubtext(groupName);
+            }
+
             //if we have to mount it set the device udi instead of the URL, as we can't open it directly
             if (m_places.isDevice(current_index) && m_places.setupNeeded(current_index)) {
                 const QString udi = m_places.deviceForIndex(current_index).udi();
