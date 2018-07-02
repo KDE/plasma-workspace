@@ -306,8 +306,6 @@ void DesktopView::screenGeometryChanged()
     const QRect geo = m_screenToFollow->geometry();
 //     qDebug() << "newGeometry" << this << geo << geometry();
     setGeometry(geo);
-    setMinimumSize(geo.size());
-    setMaximumSize(geo.size());
     if (m_shellSurface) {
         m_shellSurface->setPosition(geo.topLeft());
     }
