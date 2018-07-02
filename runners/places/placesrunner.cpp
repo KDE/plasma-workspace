@@ -74,6 +74,13 @@ PlacesRunnerHelper::PlacesRunnerHelper(PlacesRunner *runner)
     connect(runner, &PlacesRunner::doMatch,
             this, &PlacesRunnerHelper::match,
             Qt::BlockingQueuedConnection);
+
+    connect(&m_places, &KFilePlacesModel::setupDone, this, [this](const QModelIndex &index, bool success) {
+        if (success && m_pendingUdi == m_places.deviceForIndex(index).udi()) {
+            new KRun(m_places.url(index), nullptr);
+        }
+        m_pendingUdi.clear();
+    });
 }
 
 void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
@@ -113,15 +120,16 @@ void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
             match.setText(text);
 
             //if we have to mount it set the device udi instead of the URL, as we can't open it directly
-            QUrl url;
             if (m_places.isDevice(current_index) && m_places.setupNeeded(current_index)) {
-                url = QUrl(m_places.deviceForIndex(current_index).udi());
+                const QString udi = m_places.deviceForIndex(current_index).udi();
+                match.setId(udi);
+                match.setData(udi);
             } else {
-                url = m_places.url(current_index);
+                const QUrl url = m_places.url(current_index);
+                match.setData(url);
+                match.setId(url.toDisplayString());
             }
 
-            match.setData(url);
-            match.setId(url.toDisplayString());
             matches << match;
         }
     }
@@ -129,6 +137,19 @@ void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
     context.addMatches(matches);
 }
 
+void PlacesRunnerHelper::openDevice(const QString &udi)
+{
+    m_pendingUdi.clear();
+
+    for (int i = 0; i < m_places.rowCount(); ++i) {
+        const QModelIndex idx = m_places.index(i, 0);
+        if (m_places.isDevice(idx) && m_places.deviceForIndex(idx).udi() == udi) {
+            m_pendingUdi = udi;
+            m_places.requestSetup(idx);
+            break;
+        }
+    }
+}
 
 void PlacesRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action)
 {
@@ -137,26 +158,7 @@ void PlacesRunner::run(const Plasma::RunnerContext &context, const Plasma::Query
     if (action.data().type() == QVariant::Url) {
         new KRun(action.data().toUrl(), 0);
     } else if (action.data().canConvert<QString>()) {
-        //search our list for the device with the same udi, then set it up (mount it).
-        QString deviceUdi = action.data().toString();
-
-        // gets deleted in setupComplete
-        KFilePlacesModel *places = new KFilePlacesModel(this);
-        connect(places, SIGNAL(setupDone(QModelIndex,bool)), SLOT(setupComplete(QModelIndex,bool)));
-        bool found = false;
-
-        for (int i = 0; i <= places->rowCount();i++) {
-            QModelIndex current_index = places->index(i, 0);
-            if (places->isDevice(current_index) && places->deviceForIndex(current_index).udi() == deviceUdi) {
-                places->requestSetup(current_index);
-                found = true;
-                break;
-            }
-        }
-
-        if (!found) {
-            delete places;
-        }
+        m_helper->openDevice(action.data().toString());
     }
 }
 
@@ -169,17 +171,6 @@ QMimeData *PlacesRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
     }
 
     return nullptr;
-}
-
-//if a device needed mounting, this slot gets called when it's finished.
-void PlacesRunner::setupComplete(QModelIndex index, bool success)
-{
-    KFilePlacesModel *places = qobject_cast<KFilePlacesModel*>(sender());
-    //qDebug() << "setup complete" << places << sender();
-    if (success && places) {
-        new KRun(places->url(index), 0);
-        places->deleteLater();
-    }
 }
 
 #include "placesrunner.moc"
