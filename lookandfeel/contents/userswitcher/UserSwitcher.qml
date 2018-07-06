@@ -81,10 +81,6 @@ PlasmaCore.ColorScope {
 
         RowLayout {
             PlasmaComponents.Button {
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Cancel")
-                onClicked: root.dismissed()
-            }
-            PlasmaComponents.Button {
                 id: commitButton
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Switch")
                 visible: sessionsModel.count > 0
@@ -100,6 +96,10 @@ PlasmaCore.ColorScope {
                     onTriggered: commitButton.clicked()
                     shortcut: "Enter" // on numpad
                 }
+            }
+            PlasmaComponents.Button {
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Cancel")
+                onClicked: root.dismissed()
             }
         }
     }
