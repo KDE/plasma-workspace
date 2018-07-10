@@ -64,8 +64,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <X11/Xatom.h>
 #include <fixx11h.h>
 
-#include <kdisplaymanager.h>
-
 #include <config-workspace.h>
 
 #include <KWayland/Client/surface.h>
@@ -124,18 +122,12 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     context->setContextProperty(QStringLiteral("spdMethods"), mapSpdMethods);
     context->setContextProperty(QStringLiteral("canLogout"), KAuthorized::authorize(QStringLiteral("logout")));
 
-    QString bootManager = KConfig(QStringLiteral(KDE_CONFDIR "/kdm/kdmrc"), KConfig::SimpleConfig)
-                          .group("Shutdown")
-                          .readEntry("BootManager", "None");
-    context->setContextProperty(QStringLiteral("bootManager"), bootManager);
+    // TODO KF6 remove, used to read "BootManager" from kdmrc
+    context->setContextProperty(QStringLiteral("bootManager"), QStringLiteral("None"));
 
-    QStringList options;
-    int def, cur;
-    if ( KDisplayManager().bootOptions( rebootOptions, def, cur ) ) {
-        if ( cur > -1 ) {
-            def = cur;
-        }
-    }
+    // TODO KF6 remove, used to call KDisplayManager::bootOptions
+    QStringList rebootOptions;
+    int def = 0;
     QQmlPropertyMap *rebootOptionsMap = new QQmlPropertyMap(this);
     rebootOptionsMap->insert(QStringLiteral("options"), QVariant::fromValue(rebootOptions));
     rebootOptionsMap->insert(QStringLiteral("default"), QVariant::fromValue(def));
