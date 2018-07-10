@@ -166,7 +166,13 @@ add_subdirectory(ktimezoned)
 add_subdirectory(kuiserver)
 add_subdirectory(menu)
 add_subdirectory(phonon)
+
+# This ensures pressing the eject button on a CD drive ejects the disc
+# It listens to the Solid::OpticalDrive::ejectPressed signal that is only
+# supported by Solid in the HAL backend and does nothing with UDev
+if(CMAKE_SYSTEM_NAME MATCHES FreeBSD)
 add_subdirectory(solidautoeject)
+endif()
 
 ecm_optional_add_subdirectory(xembed-sni-proxy)
 
