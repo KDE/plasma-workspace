@@ -244,16 +244,16 @@ void CurrentContainmentActionsModel::showAbout(int row, QQuickItem *ctx)
 
     KPluginInfo info = m_plugins[action]->pluginInfo();
 
-    KAboutData aboutData(info.name().toUtf8(),
+    KAboutData aboutData(info.name(),
             ki18n(info.name().toUtf8()).toString(),
-            info.version().toUtf8(),
+            info.version(),
             ki18n(info.comment().toUtf8()).toString(),
             KAboutLicense::byKeyword(info.license()).key(),
-            QByteArray(),
-            QByteArray(), info.website().toLatin1(),
-            info.email().toLatin1());
+            QString(),
+            QString(), info.website(),
+            info.email());
 
-    aboutData.addAuthor(ki18n(info.author().toUtf8()).toString(), QByteArray(), info.email().toLatin1());
+    aboutData.addAuthor(ki18n(info.author().toUtf8()).toString(), QString(), info.email());
 
     KAboutApplicationDialog *aboutDialog = new KAboutApplicationDialog(aboutData, qobject_cast<QWidget*>(parent()));
     aboutDialog->setWindowIcon(QIcon::fromTheme(info.icon()));

@@ -33,7 +33,7 @@ class QmlConfigHelper : public QObject
 public:
     explicit QmlConfigHelper(QObject *parent = nullptr) : QObject(parent)
     {
-        KSharedConfig::Ptr config = KSharedConfig::openConfig("plasma_calendar_holiday_regions");
+        KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("plasma_calendar_holiday_regions"));
         m_configGroup = config->group("General");
         m_regions = m_configGroup.readEntry("selectedRegions", QStringList());
     }

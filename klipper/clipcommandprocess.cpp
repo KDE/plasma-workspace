@@ -32,13 +32,13 @@ ClipCommandProcess::ClipCommandProcess(const ClipAction& action, const ClipComma
     m_newhistoryItem()
 {
     QHash<QChar,QString> map;
-    map.insert( 's', clip );
+    map.insert( QLatin1Char('s'), clip );
 
     // support %u, %U (indicates url param(s)) and %f, %F (file param(s))
-    map.insert( 'u', clip );
-    map.insert( 'U', clip );
-    map.insert( 'f', clip );
-    map.insert( 'F', clip );
+    map.insert( QLatin1Char('u'), clip );
+    map.insert( QLatin1Char('U'), clip );
+    map.insert( QLatin1Char('f'), clip );
+    map.insert( QLatin1Char('F'), clip );
 
     const QStringList matches = action.regExpMatches();
     // support only %0 and the first 9 matches...

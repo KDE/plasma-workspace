@@ -124,10 +124,10 @@ KConfigGroup PanelView::panelConfig(ShellCorona *corona, Plasma::Containment *co
     views = KConfigGroup(&views, QStringLiteral("Panel %1").arg(containment->id()));
 
     if (containment->formFactor() == Plasma::Types::Vertical) {
-        return KConfigGroup(&views, "Vertical" + QString::number(screen->size().height()));
+        return KConfigGroup(&views, QStringLiteral("Vertical") + QString::number(screen->size().height()));
     //treat everything else as horizontal
     } else {
-        return KConfigGroup(&views, "Horizontal" + QString::number(screen->size().width()));
+        return KConfigGroup(&views, QStringLiteral("Horizontal") + QString::number(screen->size().width()));
     }
 }
 
@@ -1141,7 +1141,7 @@ void PanelView::containmentChanged()
         if (containment()->destroyed()) {
             KConfigGroup views(m_corona->applicationConfig(), "PlasmaViews");
             for (auto grp : views.groupList()) {
-                if (grp.contains(QRegExp("Panel " + QString::number(containment()->id()) + "$"))) {
+                if (grp.contains(QRegExp(QStringLiteral("Panel ") + QString::number(containment()->id()) + QStringLiteral("$")))) {
                     qDebug() << "Panel" << containment()->id() << "removed by user";
                     views.deleteGroup(grp);
                 }

@@ -90,8 +90,8 @@ void KSMSwitchUserDialog::init()
 {
     rootContext()->setContextProperty(QStringLiteral("screenGeometry"), screen()->geometry());
 
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
-    KConfigGroup cg(KSharedConfig::openConfig("kdeglobals"), "KDE");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("KDE"));
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     if (!packageName.isEmpty()) {
         package.setPath(packageName);

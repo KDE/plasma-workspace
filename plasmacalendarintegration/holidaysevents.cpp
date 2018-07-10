@@ -25,7 +25,7 @@
 HolidaysEventsPlugin::HolidaysEventsPlugin(QObject *parent)
     : CalendarEvents::CalendarEventsPlugin(parent)
 {
-    KSharedConfig::Ptr m_config = KSharedConfig::openConfig("plasma_calendar_holiday_regions");
+    KSharedConfig::Ptr m_config = KSharedConfig::openConfig(QStringLiteral("plasma_calendar_holiday_regions"));
     const KConfigGroup regionsConfig = m_config->group("General");
     QStringList regionCodes = regionsConfig.readEntry("selectedRegions", QStringList());
     regionCodes.removeDuplicates();

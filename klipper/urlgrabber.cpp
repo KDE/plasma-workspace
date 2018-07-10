@@ -350,7 +350,7 @@ bool URLGrabber::isAvoidedWindow() const
         return false;
     }
     KWindowInfo info(active, NET::Properties(), NET::WM2WindowClass);
-    return m_myAvoidWindows.contains(info.windowClassName());
+    return m_myAvoidWindows.contains(QString::fromLatin1(info.windowClassName()));
 }
 
 
@@ -422,7 +422,7 @@ ClipAction::ClipAction( KSharedConfigPtr kc, const QString& group )
 
     // read the commands
     for ( int i = 0; i < num; i++ ) {
-        QString _group = group + "/Command_%1";
+        QString _group = group + QStringLiteral("/Command_%1");
         KConfigGroup _cg(kc, _group.arg(i));
 
         addCommand( ClipCommand(_cg.readPathEntry( "Commandline", QString() ),
@@ -471,7 +471,7 @@ void ClipAction::save( KSharedConfigPtr kc, const QString& group ) const
     int i=0;
     // now iterate over all commands of this action
     foreach (const ClipCommand& cmd, m_myCommands) {
-        QString _group = group + "/Command_%1";
+        QString _group = group + QStringLiteral("/Command_%1");
         KConfigGroup cg(kc, _group.arg(i));
 
         cg.writePathEntry( "Commandline", cmd.command );

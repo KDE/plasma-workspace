@@ -105,7 +105,7 @@ class NotificationThread : public QThread
         QObject parent;
         KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QList< QPair<QString,QString> >(), QStringLiteral("startkde"));
         const QString action = notifyConfig.readEntry(QStringLiteral("Action"));
-        if (action.isEmpty() || !action.split('|').contains(QStringLiteral("Sound"))) {
+        if (action.isEmpty() || !action.split(QLatin1Char('|')).contains(QStringLiteral("Sound"))) {
             // no startup sound configured
             return;
         }

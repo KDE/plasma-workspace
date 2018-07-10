@@ -36,7 +36,7 @@ int main(int argc, char **argv)
     QQuickWindow::setDefaultAlphaBuffer(true);
 
     QApplication app(argc, argv);
-    app.setApplicationVersion(version);
+    app.setApplicationVersion(QLatin1String(version));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
 
     KDBusService service(KDBusService::Unique);

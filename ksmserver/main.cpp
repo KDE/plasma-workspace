@@ -214,7 +214,7 @@ void sanity_check( int argc, char* argv[] )
         const QString msg_pre =
                 i18n("The following installation problem was detected\n"
                      "while trying to start KDE:") +
-                "\n\n    ";
+                QStringLiteral("\n\n    ");
         const QString msg_post = i18n("\n\nKDE is unable to start.\n");
         fputs(msg_pre.toUtf8().constData(), stderr);
         fprintf(stderr, "%s", msg.toUtf8().constData());

@@ -161,7 +161,7 @@ int main(int argc, char *argv[])
     if (cliOptions.isSet(standaloneOption)) {
         if (cliOptions.isSet(shellPluginOption)) {
             ShellManager::s_standaloneOption = true;
-            app.setApplicationName("plasmashell_"+cliOptions.value(shellPluginOption));
+            app.setApplicationName(QStringLiteral("plasmashell_") + cliOptions.value(shellPluginOption));
             app.setQuitOnLastWindowClosed(true);
 
             KDBusService service(KDBusService::Unique);
@@ -198,7 +198,7 @@ int main(int argc, char *argv[])
         if (configGroup.readEntry("SceneGraphBackend") != QLatin1String("software")) {
             configGroup.writeEntry("SceneGraphBackend", "software", KConfigBase::Global | KConfigBase::Persistent);
             configGroup.sync();
-            QProcess::startDetached("plasmashell", app.arguments());
+            QProcess::startDetached(QStringLiteral("plasmashell"), app.arguments());
         } else {
             QCoreApplication::setAttribute(Qt::AA_ForceRasterWidgets);
             QMessageBox::critical(nullptr, i18n("Plasma Failed To Start"),

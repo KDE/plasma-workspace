@@ -5,6 +5,10 @@ include_directories(${PHONON_INCLUDE_DIR})
 check_library_exists(ICE _IceTransNoListen "" HAVE__ICETRANSNOLISTEN)
 configure_file(config-ksmserver.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ksmserver.h)
 
+add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
+add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
+add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
+
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 add_subdirectory(logout-greeter)
 add_subdirectory(switchuser-greeter)

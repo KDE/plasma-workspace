@@ -93,7 +93,7 @@ void PopupProxy::tryInsertItem( HistoryItem const * const item,
     if ( image.isNull() ) {
         // Squeeze text strings so that do not take up the entire screen (or more)
         QString text = m_proxy_for_menu->fontMetrics().elidedText( item->text().simplified(), Qt::ElideMiddle, m_menu_width );
-        text.replace( '&', QLatin1String("&&") );
+        text.replace( QLatin1Char('&'), QLatin1String("&&") );
         action->setText(text);
     } else {
 #if 0 // not used because QAction#setIcon does not respect this size; it does scale anyway. TODO: find a way to set a bigger image
@@ -108,7 +108,7 @@ void PopupProxy::tryInsertItem( HistoryItem const * const item,
     action->setData(item->uuid());
 
     // if the m_proxy_for_menu is a submenu (aka a "More" menu) then it may the case, that there is no other action in that menu yet.
-    QAction *before = index < m_proxy_for_menu->actions().count() ? m_proxy_for_menu->actions().at(index) : 0;
+    QAction *before = index < m_proxy_for_menu->actions().count() ? m_proxy_for_menu->actions().at(index) : nullptr;
     // insert the new action to the m_proxy_for_menu
     m_proxy_for_menu->insertAction(before, action);
 
@@ -167,7 +167,7 @@ int PopupProxy::insertFromSpill( int index ) {
     if (history->first() && m_spill_uuid != history->first()->uuid()) {
         QMenu* moreMenu = new QMenu(i18n("&More"), m_proxy_for_menu);
         connect(moreMenu, &QMenu::aboutToShow, this, &PopupProxy::slotAboutToShow);
-        QAction *before = index < m_proxy_for_menu->actions().count() ? m_proxy_for_menu->actions().at(index) : 0;
+        QAction *before = index < m_proxy_for_menu->actions().count() ? m_proxy_for_menu->actions().at(index) : nullptr;
         m_proxy_for_menu->insertMenu(before, moreMenu);
         m_proxy_for_menu = moreMenu;
     }
