@@ -3,6 +3,7 @@ Exec=gmenudbusmenuproxy
 Name=GMenuDBusMenuProxy
 Name[ca]=GMenuDBusMenuProxy
 Name[ca@valencia]=GMenuDBusMenuProxy
+Name[da]=GMenuDBusMenuProxy
 Name[en_GB]=GMenuDBusMenuProxy
 Name[es]=GMenuDBusMenuProxy
 Name[eu]=GMenuDBusMenuProxy
