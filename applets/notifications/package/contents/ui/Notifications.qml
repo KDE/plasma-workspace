@@ -282,7 +282,7 @@ Column {
 
    	PlasmaComponents.ToolButton {
             Layout.rightMargin: spacerSvgFrame.margins.right
-            iconSource: "edit-delete"
+            iconSource: "edit-clear-history"
             tooltip: i18n("Clear History")
             onClicked: clearHistory()
         }

@@ -147,7 +147,7 @@ MouseEventListener {
     }
 
     Component.onCompleted: {
-        plasmoid.setAction("clearNotifications", i18n("Clear Notifications"), "edit-clear")
+        plasmoid.setAction("clearNotifications", i18n("Clear Notifications"), "edit-clear-history")
         var clearAction = plasmoid.action("clearNotifications");
         clearAction.visible = Qt.binding(function() {
             return notificationsApplet.notifications && (notificationsApplet.notifications.count > 0 || notificationsApplet.notifications.historyCount > 0);

@@ -96,7 +96,7 @@ ColumnLayout {
             Layout.fillWidth: true
         }
         PlasmaComponents.ToolButton {
-            iconSource: "edit-delete"
+            iconSource: "edit-clear-history"
             tooltip: i18n("Clear history")
             onClicked: clipboardSource.service("", "clearHistory")
         }
