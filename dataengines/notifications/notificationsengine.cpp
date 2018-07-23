@@ -209,7 +209,7 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
 
     // group notifications that have the same title coming from the same app
     // or if they are on the "blacklist", honor the skipGrouping hint sent
-    if (!replaces_id && m_activeNotifications.values().contains(app_name + summary) && !skipGrouping && !m_alwaysReplaceAppsList.contains(app_name)) {
+    if (!replaces_id && m_activeNotifications.values().contains(app_name + summary) && !skipGrouping && urls.isEmpty() && !m_alwaysReplaceAppsList.contains(app_name)) {
         // cut off the "notification " from the source name
         partOf = m_activeNotifications.key(app_name + summary).midRef(13).toUInt();
     }
