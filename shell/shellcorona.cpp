@@ -1466,11 +1466,14 @@ void ShellCorona::loadKWinScriptInInteractiveConsole(const QString &script)
 }
 
 void ShellCorona::evaluateScript(const QString &script) {
-    if (immutability() == Plasma::Types::SystemImmutable) {
-        if (calledFromDBus()) {
+    if (calledFromDBus()) {
+        if (immutability() == Plasma::Types::SystemImmutable) {
             sendErrorReply(QDBusError::Failed, QStringLiteral("Widgets are locked"));
+            return;
+        } else if (!KAuthorized::authorize(QStringLiteral("plasma-desktop/scripting_console"))) {
+            sendErrorReply(QDBusError::Failed, QStringLiteral("Administrative policies prevent script execution"));
+            return;
         }
-        return;
     }
 
     WorkspaceScripting::ScriptEngine scriptEngine(this);
