@@ -96,6 +96,8 @@ void NotificationsEngine::init()
 
 bool NotificationsEngine::registerDBusService()
 {
+    return true; // FIXME FIXME FIXME for libnotificationmanager testing
+
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerObject(QStringLiteral("/org/freedesktop/Notifications"), this);
     bool so = dbus.registerService(QStringLiteral("org.freedesktop.Notifications"));
