@@ -150,7 +150,7 @@ void MenuProxy::setGtkShellShowsMenuBar(bool show)
     KConfigGroup group(cfg, "Settings");
 
     if (show) {
-        group.writeEntry("gtk-shell-shows-menubar", true);
+        group.writeEntry("gtk-shell-shows-menubar", 1);
     } else {
         group.deleteEntry("gtk-shell-shows-menubar");
     }
