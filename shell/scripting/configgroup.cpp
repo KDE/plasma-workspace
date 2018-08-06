@@ -64,7 +64,7 @@ ConfigGroup::~ConfigGroup()
     if (d->synchTimer->isActive()) {
         //qDebug() << "SYNC......";
         d->synchTimer->stop();
-        d->configGroup->sync();
+        sync();
     }
 
     delete d;
@@ -139,6 +139,9 @@ QStringList ConfigGroup::keyList() const
 
 QStringList ConfigGroup::groupList() const
 {
+    if (!d->configGroup) {
+        return QStringList();
+    }
     return d->configGroup->groupList();
 }
 
@@ -201,7 +204,9 @@ QVariant ConfigGroup::readEntry(const QString& key)
 
 void ConfigGroup::deleteEntry(const QString& key)
 {
-    d->configGroup->deleteEntry(key);
+    if (d->configGroup) {
+        d->configGroup->deleteEntry(key);
+    }
 }
 
 void ConfigGroup::sync()
