@@ -423,8 +423,11 @@ QSharedPointer<NotificationInhibiton> NotificationsEngine::createInhibition(cons
     ni->hint = hint;
     ni->value = value;
 
-    QSharedPointer<NotificationInhibiton> rc(ni, [this](NotificationInhibiton *ni) {
-        m_inhibitions.removeOne(ni);
+    QPointer<NotificationsEngine> guard(this);
+    QSharedPointer<NotificationInhibiton> rc(ni, [this, guard](NotificationInhibiton *ni) {
+        if (guard) {
+            m_inhibitions.removeOne(ni);
+        }
         delete ni;
     });
     m_inhibitions.append(ni);
