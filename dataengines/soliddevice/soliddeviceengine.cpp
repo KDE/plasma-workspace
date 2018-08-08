@@ -543,7 +543,7 @@ bool SolidDeviceEngine::updateStorageSpace(const QString &udi)
     Solid::Device device = m_devicemap.value(udi);
 
     Solid::StorageAccess *storageaccess = device.as<Solid::StorageAccess>();
-    if (!storageaccess) {
+    if (!storageaccess || !storageaccess->isAccessible()) {
         return false;
     }
 
