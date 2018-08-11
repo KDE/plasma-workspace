@@ -948,6 +948,11 @@ void ShellCorona::loadDefaultLayout()
 
 void ShellCorona::processUpdateScripts()
 {
+    const QStringList scripts = WorkspaceScripting::ScriptEngine::pendingUpdateScripts(this);
+    if (scripts.isEmpty()) {
+        return;
+    }
+
     WorkspaceScripting::ScriptEngine scriptEngine(this);
 
     connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
@@ -958,7 +963,8 @@ void ShellCorona::processUpdateScripts()
             [](const QString &msg) {
                 qDebug() << msg;
             });
-    foreach (const QString &script, WorkspaceScripting::ScriptEngine::pendingUpdateScripts(this)) {
+
+    for (const QString &script : scripts) {
         QFile file(script);
         if (file.open(QIODevice::ReadOnly | QIODevice::Text) ) {
             QString code = file.readAll();
