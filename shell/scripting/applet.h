@@ -21,6 +21,7 @@
 #define APPLET
 
 #include <QObject>
+#include <QJSValue>
 #include <QWeakPointer>
 
 #include <kconfiggroup.h>
@@ -66,10 +67,10 @@ protected:
     void reloadConfigIfNeeded();
 
 public Q_SLOTS:
-    virtual QVariant readConfig(const QString &key, const QVariant &def = QString()) const;
-    virtual void writeConfig(const QString &key, const QVariant &value);
-    virtual QVariant readGlobalConfig(const QString &key, const QVariant &def = QString()) const;
-    virtual void writeGlobalConfig(const QString &key, const QVariant &value);
+    virtual QVariant readConfig(const QString &key, const QJSValue &def = QString()) const;
+    virtual void writeConfig(const QString &key, const QJSValue &value);
+    virtual QVariant readGlobalConfig(const QString &key, const QJSValue &def = QString()) const;
+    virtual void writeGlobalConfig(const QString &key, const QJSValue &value);
     virtual void reloadConfig();
 
 private:

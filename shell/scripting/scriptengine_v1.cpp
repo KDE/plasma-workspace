@@ -323,7 +323,7 @@ void loadSerializedConfigs(Object *object, const QJSValue &configs)
 
         // Read other properties and set the configuration
         SCRIPT_OBJECT_FOREACH(key, value, config) {
-            object->writeConfig(key, value.toVariant());
+            object->writeConfig(key, value);
         };
     };
 }

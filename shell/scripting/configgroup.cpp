@@ -181,13 +181,13 @@ bool ConfigGroup::readConfigFile()
 
 // Bound methods and slots
 
-bool ConfigGroup::writeEntry(const QString& key, const QVariant& value)
+bool ConfigGroup::writeEntry(const QString& key, const QJSValue& value)
 {
     if (!d->configGroup) {
         return false;
     }
 
-    d->configGroup->writeEntry(key, value);
+    d->configGroup->writeEntry(key, value.toVariant());
     d->synchTimer->start();
     return true;
 }
