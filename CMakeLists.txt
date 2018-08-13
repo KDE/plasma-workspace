@@ -91,7 +91,7 @@ if(X11_FOUND AND XCB_XCB_FOUND)
   set(HAVE_X11 1)
 endif()
 
-find_package(AppStreamQt 0.10.4)
+find_package(AppStreamQt 0.10.6)
 set_package_properties(AppStreamQt PROPERTIES DESCRIPTION "Access metadata for listing available software"
                        URL "https://www.freedesktop.org/wiki/Distributions/AppStream/"
 		       TYPE OPTIONAL

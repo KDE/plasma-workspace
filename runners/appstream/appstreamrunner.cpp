@@ -113,9 +113,10 @@ void InstallerRunner::run(const Plasma::RunnerContext &/*context*/, const Plasma
 QList<AppStream::Component> InstallerRunner::findComponentsByString(const QString &query)
 {
     QMutexLocker locker(&m_appstreamMutex);
-    static bool opened = m_db.load();
+    QString error;
+    static bool opened = m_db.load(&error);
     if(!opened) {
-        qWarning() << "no appstream for you";
+        qWarning() << "Had errors when loading AppStream metadata pool" << error;
     }
 
     return m_db.search(query);
