@@ -28,6 +28,8 @@ import org.kde.kcoreaddons 1.0 as KCoreAddons
 import "../components"
 import "timer.js" as AutoTriggerTimer
 
+import org.kde.plasma.private.sessions 2.0
+
 PlasmaCore.ColorScope {
     id: root
     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
@@ -63,6 +65,12 @@ PlasmaCore.ColorScope {
 
     KCoreAddons.KUser {
         id: kuser
+    }
+
+    // For showing a "other users are logged in" hint
+    SessionsModel {
+        id: sessionsModel
+        includeUnusedSessions: false
     }
 
     Controls.Action {
@@ -127,6 +135,20 @@ PlasmaCore.ColorScope {
 
         height: Math.max(implicitHeight, units.gridUnit * 10)
         width: Math.max(implicitWidth, units.gridUnit * 16)
+
+        PlasmaComponents.Label {
+            Layout.maximumWidth: units.gridUnit * 16
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.WordWrap
+            font.italic: true
+            text: i18ndp("plasma_lookandfeel_org.kde.lookandfeel",
+                         "One other user is currently logged in. If the computer is shut down or rebooted, that user may lose work.",
+                         "%1 other users are currently logged in. If the computer is shut down or rebooted, those users may lose work.",
+                         sessionsModel.count)
+            visible: sessionsModel.count > 0
+        }
 
         RowLayout {
             spacing: units.largeSpacing * 2
