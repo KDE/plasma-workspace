@@ -116,7 +116,6 @@ QList<AppStream::Component> InstallerRunner::findComponentsByString(const QStrin
     static bool opened = m_db.load();
     if(!opened) {
         qWarning() << "no appstream for you";
-        return QList<AppStream::Component>();
     }
 
     return m_db.search(query);
