@@ -147,7 +147,7 @@ PlasmaCore.ColorScope {
                          "One other user is currently logged in. If the computer is shut down or rebooted, that user may lose work.",
                          "%1 other users are currently logged in. If the computer is shut down or rebooted, those users may lose work.",
                          sessionsModel.count)
-            visible: sessionsModel.count > 0
+            visible: sessionsModel.count > 1
         }
 
         RowLayout {
