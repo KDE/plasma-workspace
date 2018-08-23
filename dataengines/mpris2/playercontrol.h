@@ -44,6 +44,11 @@ public:
         { return m_container->propertiesInterface(); }
     void updatePosition() const
         { m_container->updatePosition(); }
+    PlayerContainer::Caps capabilities() const
+        { return m_container->capabilities(); }
+    const QMap<QString, QVariant> /*DataEngine::Data*/ rawData() const
+        { return m_container->data(); }
+
     QDBusObjectPath trackId() const;
 
     Plasma::ServiceJob* createJob(const QString& operation,

@@ -88,17 +88,15 @@ void MultiplexedService::enableGlobalShortcuts()
     KGlobalAccel::setGlobalShortcut(playPauseAction, Qt::Key_MediaPlay);
     connect(playPauseAction, &QAction::triggered, this,
         [this] {
-            if (m_control) {
-                auto playerInterface = m_control->playerInterface();
-                if (playerInterface->canControl()) {
-                    if (playerInterface->playbackStatus() == QLatin1String("Playing")) {
-                        if (playerInterface->canPause()) {
-                            playerInterface->Pause();
-                        }
-                    } else {
-                        if (playerInterface->canPlay()) {
-                            playerInterface->Play();
-                        }
+            if (m_control && m_control->capabilities() & PlayerContainer::CanControl) {
+                const QString playbackStatus = m_control->rawData().value(QStringLiteral("PlaybackStatus")).toString();
+                if (playbackStatus == QLatin1String("Playing")) {
+                    if (m_control->capabilities() & PlayerContainer::CanPause) {
+                        m_control->playerInterface()->Pause();
+                    }
+                } else {
+                    if (m_control->capabilities() & PlayerContainer::CanPlay) {
+                        m_control->playerInterface()->Play();
                     }
                 }
             }
@@ -110,11 +108,8 @@ void MultiplexedService::enableGlobalShortcuts()
     KGlobalAccel::setGlobalShortcut(nextAction, Qt::Key_MediaNext);
     connect(nextAction, &QAction::triggered, this,
         [this] {
-            if (m_control) {
-                auto playerInterface = m_control->playerInterface();
-                if (playerInterface->canControl() && playerInterface->canGoNext()) {
-                    playerInterface->Next();
-                }
+            if (m_control && m_control->capabilities() & (PlayerContainer::CanControl | PlayerContainer::CanGoNext)) {
+                m_control->playerInterface()->Next();
             }
         }
     );
@@ -124,11 +119,8 @@ void MultiplexedService::enableGlobalShortcuts()
     KGlobalAccel::setGlobalShortcut(previousAction, Qt::Key_MediaPrevious);
     connect(previousAction, &QAction::triggered, this,
         [this] {
-            if (m_control) {
-                auto playerInterface = m_control->playerInterface();
-                if (playerInterface->canControl() && playerInterface->canGoPrevious()) {
-                    playerInterface->Previous();
-                }
+            if (m_control && m_control->capabilities() & (PlayerContainer::CanControl | PlayerContainer::CanGoPrevious)) {
+                m_control->playerInterface()->Previous();
             }
         }
     );
@@ -138,11 +130,8 @@ void MultiplexedService::enableGlobalShortcuts()
     KGlobalAccel::setGlobalShortcut(stopAction, Qt::Key_MediaStop);
     connect(stopAction, &QAction::triggered, this,
         [this] {
-            if (m_control) {
-                auto playerInterface = m_control->playerInterface();
-                if (playerInterface->canControl()) {
-                    playerInterface->Stop();
-                }
+            if (m_control && m_control->capabilities() & PlayerContainer::CanControl) {
+                m_control->playerInterface()->Stop();
             }
         }
     );
@@ -152,7 +141,7 @@ void MultiplexedService::enableGlobalShortcuts()
     KGlobalAccel::setGlobalShortcut(volumeupAction, QKeySequence());
     connect(volumeupAction, &QAction::triggered, this,
         [this] {
-            if (m_control && m_control->playerInterface()->canControl()) {
+            if (m_control && m_control->capabilities() & PlayerContainer::CanControl) {
                 m_control->changeVolume(0.05, true);
             }
         }
