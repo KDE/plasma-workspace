@@ -18,8 +18,8 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>. *
  ***************************************************************************/
 
-#ifndef INSTALLERRUNNER_H
-#define INSTALLERRUNNER_H
+#ifndef APPSTREAMRUNNER_H
+#define APPSTREAMRUNNER_H
 
 #include <KRunner/AbstractRunner>
 #include <AppStreamQt/pool.h>

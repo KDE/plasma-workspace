@@ -105,7 +105,7 @@ bool KdePlatformPlugin::isMimeTypeAvailable(const QString &/*mimeType*/) const
     // everything is supported.
     // In particular there's two problems
     // 1. mimetypes do not map well to actual formats because the majority of
-    //    files these days are containers that can contain arbitary content
+    //    files these days are containers that can contain arbitrary content
     //    streams, so mimetypes are too generic to properly define supportedness.
     // 2. just about every multimedia library in the world draws format support
     //    from a plugin based architecture which means that technically everything

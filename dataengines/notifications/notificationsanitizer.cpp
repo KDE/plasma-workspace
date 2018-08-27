@@ -38,7 +38,7 @@ QString NotificationSanitizer::parse(const QString &text)
     // can happen for example when "\n       \n" is sent, this replaces
     // all <br/>s in succsession with just one
     t.replace(QRegularExpression(QStringLiteral("<br/>\\s*<br/>(\\s|<br/>)*")), QLatin1String("<br/>"));
-    // This fancy RegExp escapes every occurence of & since QtQuick Text will blatantly cut off
+    // This fancy RegExp escapes every occurrence of & since QtQuick Text will blatantly cut off
     // text where it finds a stray ampersand.
     // Only &{apos, quot, gt, lt, amp}; as well as &#123 character references will be allowed
     t.replace(QRegularExpression(QStringLiteral("&(?!(?:apos|quot|[gl]t|amp);|#)")), QLatin1String("&amp;"));

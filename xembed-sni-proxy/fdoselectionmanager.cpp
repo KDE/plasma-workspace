@@ -109,7 +109,7 @@ bool FdoSelectionManager::addDamageWatch(xcb_window_t client)
     // if we would remove the event mask again, other areas will break.
     const auto changeAttrCookie = xcb_change_window_attributes_checked(c, client, XCB_CW_EVENT_MASK, &events);
     QScopedPointer<xcb_generic_error_t, QScopedPointerPodDeleter> changeAttrError(xcb_request_check(c, changeAttrCookie));
-    // if window is gone by this point, it will be catched by eventFilter, so no need to check later errors.
+    // if window is gone by this point, it will be caught by eventFilter, so no need to check later errors.
     if (changeAttrError && changeAttrError->error_code == XCB_WINDOW) {
         return false;
     }

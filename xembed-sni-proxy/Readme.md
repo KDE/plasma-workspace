@@ -11,7 +11,7 @@ This project should be portable onto all other DEs that speak SNI.
 ##How it works (in theory)
 
 * We register a window as a system tray container
-* We render embeded windows composited offscreen
+* We render embedded windows composited offscreen
 * We render contents into an image and send this over DBus via the SNI protocol
 * XDamage events trigger a repaint
 * Activate and context menu events are replyed via X send event into the embedded container as left and right clicks

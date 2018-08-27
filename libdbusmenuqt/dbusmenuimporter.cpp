@@ -46,7 +46,6 @@
 
 //#define BENCHMARK
 #ifdef BENCHMARK
-#include <QTime>
 static QTime sChrono;
 #endif
 

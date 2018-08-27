@@ -163,7 +163,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     connect(this, &QObject::destroyed, desktopMenu, &QMenu::close);
     desktopMenu->setAttribute(Qt::WA_DeleteOnClose);
 
-    //this is a workaround where Qt will fail to realise a mouse has been released
+    //this is a workaround where Qt will fail to realize a mouse has been released
 
     // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
     // whilst the mouse is depressed
@@ -413,7 +413,7 @@ void SystemTray::restorePlasmoids()
                 }
             }
 
-            // insertMulti becase it is possible (though poor form) to have multiple applets
+            // insertMulti because it is possible (though poor form) to have multiple applets
             // with the same visible name but different plugins
             sortedApplets.insertMulti(info.name(), info);
         }

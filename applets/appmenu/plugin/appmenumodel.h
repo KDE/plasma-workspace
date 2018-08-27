@@ -19,6 +19,9 @@
  *
  ******************************************************************/
 
+#ifndef APPMENUMODEL_H
+#define APPMENUMODEL_H
+
 #include <QAbstractListModel>
 #include <QAbstractNativeEventFilter>
 #include <QStringList>
@@ -84,3 +87,4 @@ private:
     QPointer<KDBusMenuImporter> m_importer;
 };
 
+#endif

@@ -72,7 +72,7 @@ TASKMANAGER_EXPORT AppData appDataFromUrl(const QUrl &url, const QIcon &fallback
  * the .desktop file for the application owning this window, or,
  * failing that, the path to its executable.
  *
- * The source for the metadata is generally the the window's appId on
+ * The source for the metadata is generally the window's appId on
  * Wayland, or the window class part of the WM_CLASS window property
  * on X Windows.
  *

@@ -28,7 +28,6 @@
 #include <QFileInfo>
 #include <QDebug>
 #include "bookmarksrunner_defs.h"
-#include <QFileInfo>
 #include <QDir>
 
 class ProfileBookmarks {

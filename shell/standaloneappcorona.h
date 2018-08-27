@@ -19,8 +19,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-#ifndef SIMPLESHELLCORONA_H
-#define SIMPLESHELLCORONA_H
+#ifndef STANDALONEAPPCORONA_H
+#define STANDALONEAPPCORONA_H
 
 #include <plasma/corona.h>
 #include "desktopview.h"

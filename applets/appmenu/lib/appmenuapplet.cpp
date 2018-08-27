@@ -174,7 +174,7 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
     QMenu *actionMenu = createMenu(idx);
     if (actionMenu) {
 
-        //this is a workaround where Qt will fail to realise a mouse has been released
+        //this is a workaround where Qt will fail to realize a mouse has been released
         // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
         // whilst the mouse is depressed
         // https://bugreports.qt.io/browse/QTBUG-59044
@@ -218,7 +218,7 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
             QMenu *oldMenu = m_currentMenu;
             m_currentMenu = actionMenu;
             if (oldMenu && oldMenu != actionMenu) {
-                //dont initialize the currentIndex when another menu is already shown
+                //don't initialize the currentIndex when another menu is already shown
                 disconnect(oldMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide);
                 oldMenu->hide();
             }

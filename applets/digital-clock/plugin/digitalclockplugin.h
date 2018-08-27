@@ -17,8 +17,8 @@
 */
 
 
-#ifndef NOTIFICATIONSHELPERPLUGIN_H
-#define NOTIFICATIONSHELPERPLUGIN_H
+#ifndef DIGITALCLOCKPLUGIN_H
+#define DIGITALCLOCKPLUGIN_H
 
 #include <QQmlExtensionPlugin>
 
@@ -31,4 +31,4 @@ public:
     void registerTypes(const char *uri) override;
 };
 
-#endif // NOTIFICATIONSHELPERPLUGIN_H
+#endif // DIGITALCLOCKPLUGIN_H

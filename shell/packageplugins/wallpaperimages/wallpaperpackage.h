@@ -17,8 +17,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef WALLPAPERSTRUCTURE_H
-#define WALLPAPERSTRUCTURE_H
+#ifndef WALLPAPERPACKAGE_H
+#define WALLPAPERPACKAGE_H
 
 #include <KPackage/PackageStructure>
 

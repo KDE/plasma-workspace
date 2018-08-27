@@ -134,7 +134,7 @@ void ServiceRunnerTest::testKonsoleVsYakuakeComment()
 void ServiceRunnerTest::testSystemSettings()
 {
     // In 5.9.0 'System Settings' suddenly didn't come back as a match for 'settings' anymore.
-    // Sytem Settings has a noKDE version and a KDE version, if the noKDE version is encountered
+    // System Settings has a noKDE version and a KDE version, if the noKDE version is encountered
     // first it will be added to the seen cache, however disqualification of already seen items
     // may then also disqualify the KDE version of system settings on account of having already
     // seen it. This test makes sure we find the right version.

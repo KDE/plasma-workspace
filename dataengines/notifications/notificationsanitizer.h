@@ -17,6 +17,9 @@
  * Boston, MA 02110-1301, USA.
 */
 
+#ifndef NOTIFICATIONSANITIZER_H
+#define NOTIFICATIONSANITIZER_H
+
 #include <QString>
 
 namespace NotificationSanitizer
@@ -35,3 +38,5 @@ namespace NotificationSanitizer
      */
     QString parse(const QString &in);
 }
+
+#endif

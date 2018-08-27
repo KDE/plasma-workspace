@@ -31,7 +31,6 @@
 #include <KAuthorized>
 #include <KWindowSystem>
 #include <KWindowEffects>
-#include <KAuthorized>
 #include <KGlobalAccel>
 #include <KLocalizedString>
 #include <KDirWatch>

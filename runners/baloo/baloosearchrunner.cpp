@@ -32,7 +32,6 @@
 #include <QMimeData>
 #include <QApplication>
 #include <QDBusConnection>
-#include <QTimer>
 
 #include <Baloo/Query>
 #include <Baloo/IndexerConfig>

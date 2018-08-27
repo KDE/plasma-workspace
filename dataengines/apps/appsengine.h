@@ -16,8 +16,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef TASKSENGINE_H
-#define TASKSENGINE_H
+#ifndef APPSENGINE_H
+#define APPSENGINE_H
 
 // plasma
 #include <Plasma/DataEngine>

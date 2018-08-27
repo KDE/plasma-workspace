@@ -20,8 +20,8 @@
     THE SOFTWARE.
 */
 
-#ifndef WIDGETEXPLORERPLUGIN_H
-#define WIDGETEXPLORERPLUGIN_H
+#ifndef SHELLPRIVATEPLUGIN_H
+#define SHELLPRIVATEPLUGIN_H
 
 #include <QQmlExtensionPlugin>
 

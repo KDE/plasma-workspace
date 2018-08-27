@@ -21,9 +21,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "tasktools.h"
 #include "abstracttasksmodel.h"
 
-#include "tasktools.h"
-#include "abstracttasksmodel.h"
-
 #include <KActivities/ResourceInstance>
 #include <KConfigGroup>
 #include <KDesktopFile>

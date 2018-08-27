@@ -91,7 +91,7 @@ class PanelView : public PlasmaQuick::ContainmentView
     Q_PROPERTY(Plasma::FrameSvg::EnabledBorders enabledBorders READ enabledBorders NOTIFY enabledBordersChanged)
 
     /**
-     * informations about the screen in which the panel is in
+     * information about the screen in which the panel is in
      */
     Q_PROPERTY(QScreen *screenToFollow READ screenToFollow WRITE setScreenToFollow NOTIFY screenToFollowChanged)
 

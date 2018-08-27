@@ -151,7 +151,7 @@ ListView {
             }
         }
 
-        // first item determins the ListView height
+        // first item determines the ListView height
         Binding {
             target: previewList
             property: "implicitHeight"

@@ -41,7 +41,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QStandardPaths>
 #include <QX11Info>
 #include <QScreen>
-#include <QStandardPaths>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
@@ -179,7 +178,7 @@ void KSMShutdownDlg::init()
         setGeometry(screen()->geometry());
     });
 
-    //decide in backgroundcontrast wether doing things darker or lighter
+    //decide in backgroundcontrast whether doing things darker or lighter
     //set backgroundcontrast here, because in QEvent::PlatformSurface
     //is too early and we don't have the root object yet
     const QColor backgroundColor = rootObject() ? rootObject()->property("backgroundColor").value<QColor>() : QColor();

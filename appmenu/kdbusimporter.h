@@ -23,8 +23,8 @@
   DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef KDBUSMENUIMPORTER_H
-#define KDBUSMENUIMPORTER_H
+#ifndef KDBUSIMPORTER_H
+#define KDBUSIMPORTER_H
 
 #include <dbusmenuimporter.h>
 
@@ -51,4 +51,4 @@ protected:
     }
 };
 
-#endif //KDBUSMENUIMPORTER_H
+#endif //KDBUSIMPORTER_H
