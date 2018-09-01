@@ -67,6 +67,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QPushButton>
 #include <QRegExp>
 #include <QDBusConnection>
+#include <QDBusMessage>
 #include <QSocketNotifier>
 #include <QStandardPaths>
 #include <QDebug>
@@ -91,7 +92,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <klauncher_interface.h>
 #include <qstandardpaths.h>
 
-#include "switchuserdialog.h"
+#include "kscreenlocker_interface.h"
 
 KSMServer* the_server = nullptr;
 
@@ -623,7 +624,6 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
     shutdownType = KWorkSpace::ShutdownTypeNone;
 
     state = Idle;
-    dialogActive = false;
     saveSession = false;
     wmPhase1WaitingCount = 0;
     KConfigGroup config(KSharedConfig::openConfig(), "General");
@@ -1091,20 +1091,9 @@ void KSMServer::rebootWithoutConfirmation()
 
 void KSMServer::openSwitchUserDialog()
 {
-    if (dialogActive) {
-        return;
-    }
-
-    QProcess *p = new QProcess(this);
-    p->setProgram(QStringLiteral(SWITCHUSER_GREETER_BIN));
-
-    connect(p, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this, [this, p] {
-        p->deleteLater();
-        dialogActive = false;
-    });
-
-    dialogActive = true;
-    p->start();
+    //this method exists only for compatibility. Users should ideally call this directly
+    OrgKdeScreensaverInterface iface(QStringLiteral("org.freedesktop.ScreenSaver"), QStringLiteral("/ScreenSaver"), QDBusConnection::sessionBus());
+    iface.SwitchUser();
 }
 
 void KSMServer::runShutdownScripts()
