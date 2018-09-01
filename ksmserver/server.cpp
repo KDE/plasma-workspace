@@ -624,6 +624,7 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
     shutdownType = KWorkSpace::ShutdownTypeNone;
 
     state = Idle;
+    dialogActive = false;
     saveSession = false;
     wmPhase1WaitingCount = 0;
     KConfigGroup config(KSharedConfig::openConfig(), "General");
