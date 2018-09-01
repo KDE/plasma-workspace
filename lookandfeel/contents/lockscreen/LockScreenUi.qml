@@ -256,6 +256,14 @@ PlasmaCore.ColorScope {
                     source: "MediaControls.qml"
                 }
             }
+
+            Component.onCompleted: {
+                if (defaultToSwitchUser) { //context property
+                    mainStack.push({
+                        item: switchSessionPage,
+                        immediate: true});
+                }
+            }
         }
 
         Loader {
