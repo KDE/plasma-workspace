@@ -138,7 +138,7 @@ void Firefox::reloadConfiguration()
         KConfigGroup grp = config;
         /* This allows the user to specify a profile database */
         m_dbFile = grp.readEntry<QString>("dbfile", QLatin1String(""));
-        if (m_dbFile.isEmpty() || QFile::exists(m_dbFile)) {
+        if (m_dbFile.isEmpty() || !QFile::exists(m_dbFile)) {
             //Try to get the right database file, the default profile is used
             KConfig firefoxProfile(QDir::homePath() + "/.mozilla/firefox/profiles.ini",
                                    KConfig::SimpleConfig);
@@ -171,6 +171,12 @@ void Firefox::reloadConfiguration()
             m_dbFile = profilePath + "/places.sqlite";
             grp.writeEntry("dbfile", m_dbFile);
             m_dbFile_fav = profilePath + "/favicons.sqlite";
+        } else {
+            auto dir = QDir(m_dbFile);
+            if (dir.cdUp()) {
+                QString profilePath = dir.absolutePath();
+                m_dbFile_fav = profilePath + "/favicons.sqlite";
+            }
         }
     } else {
         //qDebug() << "SQLITE driver isn't available";
