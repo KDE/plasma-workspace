@@ -116,9 +116,15 @@ QList<AppStream::Component> InstallerRunner::findComponentsByString(const QStrin
 {
     QMutexLocker locker(&m_appstreamMutex);
     QString error;
+    static bool warnedOnce = false;
     static bool opened = m_db.load(&error);
     if(!opened) {
-        qCWarning(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << error;
+        if (warnedOnce) {
+            qCDebug(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << error;
+        } else {
+            qCWarning(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << error;
+            warnedOnce = true;
+        }
     }
 
     return m_db.search(query);
