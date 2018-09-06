@@ -35,7 +35,7 @@ Item {
 
     readonly property int controlSize: units.iconSizes.large
 
-    property int position: mpris2Source.currentData.Position || 0
+    property double position: mpris2Source.currentData.Position || 0
     readonly property real rate: mpris2Source.currentData.Rate || 1
     readonly property double length: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
     readonly property bool canSeek: mpris2Source.currentData.CanSeek || false
