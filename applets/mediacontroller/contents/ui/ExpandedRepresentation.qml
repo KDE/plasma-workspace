@@ -21,7 +21,7 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 
@@ -78,7 +78,7 @@ Item {
         // To keep us from seeking to the end of the track when moving
         // to a new track, we'll reset the value to zero and ask for the position again
         seekSlider.value = 0
-        seekSlider.maximumValue = length
+        seekSlider.to = length
         retrievePosition()
         disablePositionUpdate = false
     }
@@ -105,25 +105,26 @@ Item {
                 seekSlider.value = Math.max(0, seekSlider.value - 5000000) // microseconds
             } else if (event.key === Qt.Key_Right || event.key === Qt.Key_L) {
                 // seek forward 5s
-                seekSlider.value = Math.min(seekSlider.maximumValue, seekSlider.value + 5000000)
+                seekSlider.value = Math.min(seekSlider.to, seekSlider.value + 5000000)
             } else if (event.key === Qt.Key_Home) {
                 seekSlider.value = 0
             } else if (event.key === Qt.Key_End) {
-                seekSlider.value = seekSlider.maximumValue
+                seekSlider.value = seekSlider.to
             } else if (event.key >= Qt.Key_0 && event.key <= Qt.Key_9) {
                 // jump to percentage, ie. 0 = beginnign, 1 = 10% of total length etc
-                seekSlider.value = seekSlider.maximumValue * (event.key - Qt.Key_0) / 10
+                seekSlider.value = seekSlider.to * (event.key - Qt.Key_0) / 10
             } else {
                 event.accepted = false
             }
         }
     }
 
-    PlasmaComponents.ComboBox {
+    PlasmaComponents3.ComboBox {
         id: playerCombo
         width: Math.round(0.6 * parent.width)
         height: visible ? undefined : 0
         anchors.horizontalCenter: parent.horizontalCenter
+        textRole: "text"
         visible: model.length > 2 // more than one player, @multiplex is always there
         model: {
             var model = [{
@@ -230,11 +231,11 @@ Item {
             TextMetrics {
                 id: timeMetrics
                 text: i18nc("Remaining time for song e.g -5:42", "-%1",
-                            KCoreAddons.Format.formatDuration(seekSlider.maximumValue / 1000, expandedRepresentation.durationFormattingOptions))
+                            KCoreAddons.Format.formatDuration(seekSlider.to / 1000, expandedRepresentation.durationFormattingOptions))
                 font: theme.smallestFont
             }
 
-            PlasmaComponents.Label {
+            PlasmaComponents3.Label {
                 Layout.preferredWidth: timeMetrics.width
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignRight
@@ -243,14 +244,14 @@ Item {
                 font: theme.smallestFont
             }
 
-            PlasmaComponents.Slider {
+            PlasmaComponents3.Slider {
                 id: seekSlider
                 Layout.fillWidth: true
                 z: 999
                 value: 0
                 visible: canSeek
 
-                onValueChanged: {
+                onMoved: {
                     if (!disablePositionUpdate) {
                         // delay setting the position to avoid race conditions
                         queuedPositionUpdate.restart()
@@ -261,13 +262,13 @@ Item {
                     id: seekTimer
                     interval: 1000 / expandedRepresentation.rate
                     repeat: true
-                    running: root.state == "playing" && plasmoid.expanded && !keyPressed && interval > 0 && seekSlider.maximumValue >= 1000000
+                    running: root.state == "playing" && plasmoid.expanded && !keyPressed && interval > 0 && seekSlider.to >= 1000000
                     onTriggered: {
                         // some players don't continuously update the seek slider position via mpris
                         // add one second; value in microseconds
                         if (!seekSlider.pressed) {
                             disablePositionUpdate = true
-                            if (seekSlider.value == seekSlider.maximumValue) {
+                            if (seekSlider.value == seekSlider.to) {
                                 retrievePosition();
                             } else {
                                 seekSlider.value += 1000000
@@ -278,20 +279,20 @@ Item {
                 }
             }
 
-            PlasmaComponents.ProgressBar {
+            PlasmaComponents3.ProgressBar {
                 Layout.fillWidth: true
                 value: seekSlider.value
-                minimumValue: seekSlider.minimumValue
-                maximumValue: seekSlider.maximumValue
+                from: seekSlider.from
+                to: seekSlider.to
                 visible: !canSeek
             }
 
-            PlasmaComponents.Label {
+            PlasmaComponents3.Label {
                 Layout.preferredWidth: timeMetrics.width
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignLeft
                 text: i18nc("Remaining time for song e.g -5:42", "-%1",
-                            KCoreAddons.Format.formatDuration((seekSlider.maximumValue - seekSlider.value) / 1000, expandedRepresentation.durationFormattingOptions))
+                            KCoreAddons.Format.formatDuration((seekSlider.to - seekSlider.value) / 1000, expandedRepresentation.durationFormattingOptions))
                 opacity: 0.9
                 font: theme.smallestFont
             }
@@ -375,32 +376,32 @@ Item {
                 anchors.horizontalCenter: parent.horizontalCenter
                 spacing: units.largeSpacing
 
-                PlasmaComponents.ToolButton {
+                PlasmaComponents3.ToolButton {
                     anchors.verticalCenter: parent.verticalCenter
                     width: expandedRepresentation.controlSize
                     height: width
                     enabled: playerControls.enabled && root.canGoPrevious
-                    iconSource: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
+                    icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
                     onClicked: {
                         seekSlider.value = 0    // Let the media start from beginning. Bug 362473
                         root.action_previous()
                     }
                 }
 
-                PlasmaComponents.ToolButton {
+                PlasmaComponents3.ToolButton {
                     width: Math.round(expandedRepresentation.controlSize * 1.5)
                     height: width
                     enabled: root.state == "playing" ? root.canPause : root.canPlay
-                    iconSource: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
+                    icon.name: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
                     onClicked: root.togglePlaying()
                 }
 
-                PlasmaComponents.ToolButton {
+                PlasmaComponents3.ToolButton {
                     anchors.verticalCenter: parent.verticalCenter
                     width: expandedRepresentation.controlSize
                     height: width
                     enabled: playerControls.enabled && root.canGoNext
-                    iconSource: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
+                    icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
                     onClicked: {
                         seekSlider.value = 0    // Let the media start from beginning. Bug 362473
                         root.action_next()
