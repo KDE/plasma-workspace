@@ -149,9 +149,13 @@ void Firefox::teardown()
 {
     if(m_fetchsqlite) {
         m_fetchsqlite->teardown();
+        delete m_fetchsqlite;
+        m_fetchsqlite = nullptr;
     }
     if(m_fetchsqlite_fav) {
         m_fetchsqlite_fav->teardown();
+        delete m_fetchsqlite_fav;
+        m_fetchsqlite_fav = nullptr;
         delete m_favicon;
         m_favicon = nullptr;
     }
