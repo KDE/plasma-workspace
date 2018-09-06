@@ -87,13 +87,13 @@ QList< BookmarkMatch > Firefox::match(const QString& term, bool addEverything)
     QString tmpTerm = term;
     QString query;
     if (addEverything) {
-        query = QStringLiteral("SELECT moz_bookmarks.fk, moz_bookmarks.title, moz_places.url," \
-                    "moz_places.favicon_id FROM moz_bookmarks, moz_places WHERE " \
+        query = QStringLiteral("SELECT moz_bookmarks.fk, moz_bookmarks.title, moz_places.url " \
+                    "FROM moz_bookmarks, moz_places WHERE " \
                     "moz_bookmarks.type = 1 AND moz_bookmarks.fk = moz_places.id");
     } else {
         const QString escapedTerm = tmpTerm.replace('\'', QLatin1String("\\'"));
-        query = QString("SELECT moz_bookmarks.fk, moz_bookmarks.title, moz_places.url," \
-                        "moz_places.favicon_id FROM moz_bookmarks, moz_places WHERE " \
+        query = QString("SELECT moz_bookmarks.fk, moz_bookmarks.title, moz_places.url " \
+                        "FROM moz_bookmarks, moz_places WHERE " \
                         "moz_bookmarks.type = 1 AND moz_bookmarks.fk = moz_places.id AND " \
                         "(moz_bookmarks.title LIKE  '%" + escapedTerm + "%' or moz_places.url LIKE '%"
                         + escapedTerm + "%')");
