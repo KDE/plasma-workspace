@@ -1,3 +1,6 @@
+find_package(AppMenuGtkModule)
+set_package_properties(AppMenuGtkModule PROPERTIES TYPE RUNTIME)
+
 add_definitions(-DQT_NO_CAST_TO_ASCII
 -DQT_NO_CAST_FROM_ASCII
 -DQT_NO_URL_CAST_FROM_STRING
