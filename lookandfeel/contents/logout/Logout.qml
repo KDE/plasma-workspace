@@ -49,6 +49,10 @@ PlasmaCore.ColorScope {
     function sleepRequested() {
         root.suspendRequested(2);
     }
+
+    function hibernateRequested() {
+        root.suspendRequested(4);
+    }
  
     property real timeout: 30
     property real remainingTime: root.timeout
@@ -159,15 +163,24 @@ PlasmaCore.ColorScope {
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Suspend")
                 action: root.sleepRequested
                 KeyNavigation.left: logoutButton
-                KeyNavigation.right: rebootButton
+                KeyNavigation.right: hibernateButton
                 visible: spdMethods.SuspendState
+            }
+            LogoutButton {
+                id: hibernateButton
+                iconSource: "system-suspend-hibernate"
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Hibernate")
+                action: root.hibernateRequested
+                KeyNavigation.left: suspendButton
+                KeyNavigation.right: rebootButton
+                visible: spdMethods.HibernateState
             }
             LogoutButton {
                 id: rebootButton
                 iconSource: "system-reboot"
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Reboot")
                 action: root.rebootRequested
-                KeyNavigation.left: suspendButton
+                KeyNavigation.left: hibernateButton
                 KeyNavigation.right: shutdownButton
                 focus: sdtype == ShutdownType.ShutdownTypeReboot
                 visible: maysd
