@@ -99,6 +99,7 @@ QList< BookmarkMatch > Firefox::match(const QString& term, bool addEverything)
                         + escapedTerm + "%')");
     }
     QList<QVariantMap> results = m_fetchsqlite->query(query, QMap<QString, QVariant>());
+    QMultiMap<QString, QString> uniqueResults;
     foreach(QVariantMap result, results) {
         const QString title = result.value(QStringLiteral("title")).toString();
         const QUrl url = result.value(QStringLiteral("url")).toUrl();
@@ -109,7 +110,34 @@ QList< BookmarkMatch > Firefox::match(const QString& term, bool addEverything)
             continue;
         }
 
-        BookmarkMatch bookmarkMatch( m_favicon, term, title, url.toString());
+        auto urlString = url.toString();
+        // After joining we may have multiple results for each URL:
+        // 1) one for each bookmark folder (same or different titles)
+        // 2) one for each tag (no title for all but the first entry)
+        auto keyRange = uniqueResults.equal_range(urlString);
+        auto it = keyRange.first;
+        if (!title.isEmpty()) {
+            while (it != keyRange.second) {
+                if (*it == title) {
+                    // same URL and title in multiple bookmark folders
+                    break;
+                }
+                if (it->isEmpty()) {
+                    // add a title if there was none for the URL
+                    *it = title;
+                    break;
+                }
+                ++it;
+            }
+        }
+        if (it == keyRange.second) {
+            // first or unique entry
+            uniqueResults.insert(urlString, title);
+        }
+    }
+
+    for (auto result = uniqueResults.constKeyValueBegin(); result != uniqueResults.constKeyValueEnd(); ++result) {
+        BookmarkMatch bookmarkMatch(m_favicon, term, (*result).second, (*result).first);
         bookmarkMatch.addTo(matches, addEverything);
     }
 
