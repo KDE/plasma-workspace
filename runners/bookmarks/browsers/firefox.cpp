@@ -102,8 +102,9 @@ QList< BookmarkMatch > Firefox::match(const QString& term, bool addEverything)
     foreach(QVariantMap result, results) {
         const QString title = result.value(QStringLiteral("title")).toString();
         const QUrl url = result.value(QStringLiteral("url")).toUrl();
-        if (url.scheme().contains(QStringLiteral("place"))) {
-            //Don't use bookmarks with empty title, url or Firefox intern url
+        if (url.isEmpty() || url.scheme() == QLatin1String("place")) {
+            // Don't use bookmarks with empty url or Firefox's "place:" scheme,
+            // e.g. used for "Most Visited" or "Recent Tags"
             //qDebug() << "element " << url << " was not added";
             continue;
         }
