@@ -67,7 +67,7 @@ void FetchSqlite::teardown()
 
 QList<QVariantMap> FetchSqlite::query(BuildQuery *buildQuery, QMap<QString, QVariant> bindObjects)
 {
-    return query(buildQuery->query(&m_db), bindObjects);
+    return query(buildQuery->query(), bindObjects);
 }
 
 QList<QVariantMap> FetchSqlite::query(const QString &sql, QMap<QString, QVariant> bindObjects)

@@ -33,7 +33,7 @@
 
 class BuildQuery {
 public:
-    virtual QString query(QSqlDatabase *database) const = 0;
+    virtual QString query() const = 0;
     virtual ~BuildQuery() {}
 };
 

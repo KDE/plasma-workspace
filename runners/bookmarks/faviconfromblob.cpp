@@ -39,8 +39,7 @@
 class StaticQuery : public BuildQuery {
 public:
     StaticQuery(const QString &query) : m_query(query) {}
-    QString query(QSqlDatabase *database) const override {
-      Q_UNUSED(database);
+    QString query() const override {
       return m_query;
     }
 private:
