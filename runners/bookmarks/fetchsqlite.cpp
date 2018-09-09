@@ -65,11 +65,6 @@ void FetchSqlite::teardown()
     m_db.close();
 }
 
-QList<QVariantMap> FetchSqlite::query(BuildQuery *buildQuery, QMap<QString, QVariant> bindObjects)
-{
-    return query(buildQuery->query(), bindObjects);
-}
-
 QList<QVariantMap> FetchSqlite::query(const QString &sql, QMap<QString, QVariant> bindObjects)
 {
     QMutexLocker lock(&m_mutex);

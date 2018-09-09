@@ -39,9 +39,9 @@ public Q_SLOTS:
     void teardown() override;
 
 private:
-    FaviconFromBlob(const QString &profileName, BuildQuery *buildQuery, const QString &blobColumn, FetchSqlite *fetchSqlite, QObject *parent = nullptr);
+    FaviconFromBlob(const QString &profileName, const QString &query, const QString &blobColumn, FetchSqlite *fetchSqlite, QObject *parent = nullptr);
     QString m_profileCacheDirectory;
-    BuildQuery *m_buildQuery;
+    QString m_query;
     QString const m_blobcolumn;
     FetchSqlite *m_fetchsqlite;
     void cleanCacheDirectory();
