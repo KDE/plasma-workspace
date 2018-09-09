@@ -213,12 +213,12 @@ void PowerDevilRunner::addSuspendMatch(int value, QList<Plasma::QueryMatch> &mat
         case Solid::PowerManagement::SuspendState:
         case Solid::PowerManagement::StandbyState:
             match.setIconName(QStringLiteral("system-suspend"));
-            match.setText(i18n("Suspend to RAM"));
+            match.setText(i18n("Suspend"));
             match.setRelevance(1);
             break;
         case Solid::PowerManagement::HibernateState:
             match.setIconName(QStringLiteral("system-suspend-hibernate"));
-            match.setText(i18n("Suspend to Disk"));
+            match.setText(i18n("Hibernate"));
             match.setRelevance(0.99);
             break;
     }
