@@ -35,8 +35,6 @@
 #include <QSqlError>
 #include <QSqlRecord>
 
-#define dbFileName m_profileCacheDirectory + QDir::separator() + "Favicons.sqlite"
-
 
 class StaticQuery : public BuildQuery {
 public:
