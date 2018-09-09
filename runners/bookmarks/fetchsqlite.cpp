@@ -100,3 +100,10 @@ QList<QVariantMap> FetchSqlite::query(const QString &sql, QMap<QString, QVariant
     }
     return result;
 }
+
+QStringList FetchSqlite::tables(QSql::TableType type)
+{
+    QMutexLocker lock(&m_mutex);
+
+    return m_db.tables(type);
+}

@@ -48,6 +48,7 @@ public:
     QList<QVariantMap> query(const QString &sql, QMap<QString,QVariant> bindObjects);
     QList<QVariantMap> query(BuildQuery *buildQuery, QMap<QString,QVariant> bindObjects);
     QList<QVariantMap> query(const QString &sql);
+    QStringList tables(QSql::TableType type = QSql::Tables);
 
 private:
     QString const m_databaseFile;
