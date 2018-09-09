@@ -113,11 +113,7 @@ void FaviconFromBlob::teardown()
 
 void FaviconFromBlob::cleanCacheDirectory()
 {
-    foreach(const QFileInfo &file, QDir(m_profileCacheDirectory).entryInfoList(QDir::NoDotAndDotDot)) {
-        //qDebug() << "Removing file " << file.absoluteFilePath() << ": " <<
-        QFile(file.absoluteFilePath()).remove();
-    }
-    QDir().rmdir(m_profileCacheDirectory);
+    QDir(m_profileCacheDirectory).removeRecursively();
 }
 
 QIcon FaviconFromBlob::iconFor(const QString &url)
