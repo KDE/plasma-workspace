@@ -47,31 +47,26 @@ private:
     const QString m_query;
 };
 
-class ChromeQuery : public BuildQuery {
-public:
-    ChromeQuery() {}
-    QString query(QSqlDatabase *database) const override {
-      //qDebug() << "tables: " << database->tables();
-        if(database->tables().contains(QStringLiteral("favicon_bitmaps"))) {
-            return QStringLiteral("SELECT * FROM favicons " \
-                                  "inner join icon_mapping on icon_mapping.icon_id = favicons.id " \
-                                  "inner join favicon_bitmaps on icon_mapping.icon_id = favicon_bitmaps.icon_id " \
-                                  "WHERE page_url = :url ORDER BY height desc LIMIT 1;");
-        }
-
-        return QStringLiteral("SELECT * FROM favicons inner join icon_mapping " \
-                              "on icon_mapping.icon_id = favicons.id " \
-                              "WHERE page_url = :url LIMIT 1;");
-    }
-};
-
 FaviconFromBlob *FaviconFromBlob::chrome(const QString &profileDirectory, QObject *parent)
 {
     QString profileName = QFileInfo(profileDirectory).fileName();
     QString faviconCache = QStringLiteral("%1/KRunner-Chrome-Favicons-%2.sqlite")
             .arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation), profileName);
     FetchSqlite *fetchSqlite = new FetchSqlite(profileDirectory + QStringLiteral("/Favicons"), faviconCache, parent);
-    return new FaviconFromBlob(profileName, new ChromeQuery(), QStringLiteral("image_data"), fetchSqlite, parent);
+
+    QString faviconQuery;
+    if(fetchSqlite->tables().contains(QStringLiteral("favicon_bitmaps"))) {
+        faviconQuery = QLatin1String("SELECT * FROM favicons " \
+                                     "inner join icon_mapping on icon_mapping.icon_id = favicons.id " \
+                                     "inner join favicon_bitmaps on icon_mapping.icon_id = favicon_bitmaps.icon_id " \
+                                     "WHERE page_url = :url ORDER BY height desc LIMIT 1;");
+    } else {
+        faviconQuery = QLatin1String("SELECT * FROM favicons " \
+                                     "inner join icon_mapping on icon_mapping.icon_id = favicons.id " \
+                                     "WHERE page_url = :url LIMIT 1;");
+    }
+
+    return new FaviconFromBlob(profileName, new StaticQuery(faviconQuery), QStringLiteral("image_data"), fetchSqlite, parent);
 }
 
 FaviconFromBlob *FaviconFromBlob::firefox(FetchSqlite *fetchSqlite, QObject *parent)
