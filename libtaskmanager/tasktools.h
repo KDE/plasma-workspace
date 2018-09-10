@@ -40,6 +40,7 @@ struct AppData
     QString genericName; // Generic application name.
     QIcon icon;
     QUrl url;
+    bool skipTaskbar = false;
 };
 
 enum UrlComparisonMode {

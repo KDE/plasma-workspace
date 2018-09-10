@@ -86,7 +86,8 @@ void WaylandTasksModel::Private::init()
             QVector<int>{Qt::DecorationRole, AbstractTasksModel::AppId,
             AbstractTasksModel::AppName, AbstractTasksModel::GenericName,
             AbstractTasksModel::LauncherUrl,
-            AbstractTasksModel::LauncherUrlWithoutIcon});
+            AbstractTasksModel::LauncherUrlWithoutIcon,
+            AbstractTasksModel::SkipTaskbar});
     };
 
     rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
@@ -203,7 +204,7 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
 
             // Refresh roles satisfied from the app data cache.
             this->dataChanged(window, QVector<int>{AppId, AppName, GenericName,
-                LauncherUrl, LauncherUrlWithoutIcon});
+                LauncherUrl, LauncherUrlWithoutIcon, SkipTaskbar});
         }
     );
 
@@ -405,7 +406,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsDemandingAttention) {
         return window->isDemandingAttention();
     } else if (role == SkipTaskbar) {
-        return window->skipTaskbar();
+        return window->skipTaskbar() || d->appData(window).skipTaskbar;
     } else if (role == SkipPager) {
         // FIXME Implement.
     } else if (role == AppPid) {

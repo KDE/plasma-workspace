@@ -116,7 +116,8 @@ void XWindowTasksModel::Private::init()
             QVector<int>{Qt::DecorationRole, AbstractTasksModel::AppId,
             AbstractTasksModel::AppName, AbstractTasksModel::GenericName,
             AbstractTasksModel::LauncherUrl,
-            AbstractTasksModel::LauncherUrlWithoutIcon});
+            AbstractTasksModel::LauncherUrlWithoutIcon,
+            AbstractTasksModel::SkipTaskbar});
     };
 
     sycocaChangeTimer.setSingleShot(true);
@@ -330,7 +331,7 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
         || properties2 & (NET::WM2DesktopFileName | NET::WM2WindowClass)) {
         wipeInfoCache = true;
         wipeAppDataCache = true;
-        changedRoles << Qt::DecorationRole << AppId << AppName << GenericName << LauncherUrl << AppPid;
+        changedRoles << Qt::DecorationRole << AppId << AppName << GenericName << LauncherUrl << AppPid << SkipTaskbar;
     }
 
     if (properties & (NET::WMName | NET::WMVisibleName)) {
@@ -645,7 +646,9 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         const KWindowInfo *info = d->windowInfo(window);
         // _NET_WM_WINDOW_TYPE_UTILITY type windows should not be on task bars,
         // but they should be shown on pagers.
-        return (info->hasState(NET::SkipTaskbar) || info->windowType(NET::UtilityMask) == NET::Utility);
+        return (info->hasState(NET::SkipTaskbar)
+            || info->windowType(NET::UtilityMask) == NET::Utility
+            || d->appData(window).skipTaskbar);
     } else if (role == SkipPager) {
         return d->windowInfo(window)->hasState(NET::SkipPager);
     } else if (role == AppPid) {
