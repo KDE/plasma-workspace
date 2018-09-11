@@ -20,6 +20,7 @@
 #include "icons.h"
 
 #include <QHash>
+#include <QRegularExpression>
 
 QString Icons::actionIcon(const QString &actionName)
 {
@@ -32,6 +33,7 @@ QString Icons::actionIcon(const QString &actionName)
     }
 
     static const QHash<QString, QString> s_icons {
+        {QStringLiteral("new"), QStringLiteral("document-new")}, // appmenu-gtk-module "New"
         {QStringLiteral("image-new"), QStringLiteral("document-new")}, // Gimp "New" item
         {QStringLiteral("adddirect"), QStringLiteral("document-new")}, // LibreOffice "New" item
         {QStringLiteral("filenew"), QStringLiteral("document-new")}, // Pluma "New" item
@@ -47,17 +49,21 @@ QString Icons::actionIcon(const QString &actionName)
         {QStringLiteral("saveas"), QStringLiteral("document-save-as")},
         {QStringLiteral("save-all"), QStringLiteral("document-save-all")},
         {QStringLiteral("saveall"), QStringLiteral("document-save-all")},
+        {QStringLiteral("import"), QStringLiteral("document-import")},
         {QStringLiteral("export"), QStringLiteral("document-export")},
         {QStringLiteral("exportto"), QStringLiteral("document-export")}, // LibreOffice
         {QStringLiteral("exporttopdf"), QStringLiteral("viewpdf")}, // LibreOffice, the icon it uses but the name is quite random
         {QStringLiteral("webhtml"), QStringLiteral("text-html")}, // LibreOffice
         {QStringLiteral("printpreview"), QStringLiteral("document-print-preview")},
+        {QStringLiteral("print-preview"), QStringLiteral("document-print-preview")},
         {QStringLiteral("print"), QStringLiteral("document-print")},
         {QStringLiteral("print-gtk"), QStringLiteral("document-print")}, // Gimp
         {QStringLiteral("mail-image"), QStringLiteral("mail-message-new")}, // Gimp
         {QStringLiteral("sendmail"), QStringLiteral("mail-message-new")}, // LibreOffice
         {QStringLiteral("sendviabluetooth"), QStringLiteral("preferences-system-bluetooth")}, // LibreOffice
-        {QStringLiteral("close"), QStringLiteral("document-close")},
+        {QStringLiteral("sendviabluetooth"), QStringLiteral("preferences-system-bluetooth")}, // LibreOffice
+        {QStringLiteral("document-properties"), QStringLiteral("document-properties")},
+        {QStringLiteral("close"), QStringLiteral("document-close")}, // appmenu-gtk-module "Close"
         {QStringLiteral("closedoc"), QStringLiteral("document-close")},
         {QStringLiteral("close-all"), QStringLiteral("document-close")},
         {QStringLiteral("closeall"), QStringLiteral("document-close")},
@@ -83,10 +89,14 @@ QString Icons::actionIcon(const QString &actionName)
         {QStringLiteral("replace"), QStringLiteral("edit-find-replace")},
         {QStringLiteral("searchreplace"), QStringLiteral("edit-find-replace")}, // LibreOffice
         {QStringLiteral("searchdialog"), QStringLiteral("edit-find-replace")}, // LibreOffice
+        {QStringLiteral("find-replace"), QStringLiteral("edit-find-replace")}, // Inkscape
         {QStringLiteral("select-all"), QStringLiteral("edit-select-all")},
         {QStringLiteral("selectall"), QStringLiteral("edit-select-all")},
         {QStringLiteral("select-none"), QStringLiteral("edit-select-invert")},
         {QStringLiteral("select-invert"), QStringLiteral("edit-select-invert")},
+        {QStringLiteral("invert-selection"), QStringLiteral("edit-select-invert")}, // Inkscape
+        {QStringLiteral("check-spelling"), QStringLiteral("tools-check-spelling")},
+        {QStringLiteral("set-language"), QStringLiteral("set-language")},
 
         {QStringLiteral("increasesize"), QStringLiteral("zoom-in")},
         {QStringLiteral("decreasesize"), QStringLiteral("zoom-out")},
@@ -163,6 +173,7 @@ QString Icons::actionIcon(const QString &actionName)
 
         {QStringLiteral("help"), QStringLiteral("help-contents")},
         {QStringLiteral("helpindex"), QStringLiteral("help-contents")},
+        {QStringLiteral("contents"), QStringLiteral("help-contents")},
         {QStringLiteral("helpcontents"), QStringLiteral("help-contents")},
         {QStringLiteral("context-help"), QStringLiteral("help-whatsthis")},
         {QStringLiteral("extendedhelp"), QStringLiteral("help-whatsthis")}, // LibreOffice
@@ -196,8 +207,33 @@ QString Icons::actionIcon(const QString &actionName)
 
     if (icon.isEmpty()) {
         const int dotIndex = action.indexOf(QLatin1Char('.')); // app., win., or unity. prefix
+
+        QString prefix;
         if (dotIndex > -1) {
+            prefix = action.left(dotIndex);
+
             action = action.mid(dotIndex + 1);
+        }
+
+        // appmenu-gtk-module
+        if (prefix == QLatin1String("unity")) {
+            // Remove superfluous hyphens added by appmenu-gtk-module
+            // First remove multiple subsequent ones
+            static QRegularExpression subsequentHyphenRegExp(QStringLiteral("-{2,}"));
+            action.replace(subsequentHyphenRegExp, QStringLiteral("-"));
+
+            // now we can be sure we only have a single hyphen at the start or end, remove it if needed
+            if (action.startsWith(QLatin1Char('-'))) {
+                action = action.mid(1);
+            }
+            if (action.endsWith(QLatin1Char('-'))) {
+                action.chop(1);
+            }
+
+            // It also turns accelerators (&) into hyphens, so remove any hyphen that comes before
+            // a lower-case letter ("mid sentence"), e.g. "P-references"
+            static QRegularExpression strayHyphenRegExp(QStringLiteral("-(?=[a-z]+)"));
+            action.remove(strayHyphenRegExp);
         }
 
         icon = s_icons.value(action);
