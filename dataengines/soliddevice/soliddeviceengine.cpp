@@ -25,8 +25,10 @@
 #include <klocalizedstring.h>
 
 #include <QDebug>
-#include <KDiskFreeSpaceInfo>
+#include <QUrl>
+
 #include <KFormat>
+#include <KIO/FileSystemFreeSpaceJob>
 
 #include <Plasma/DataContainer>
 
@@ -547,12 +549,25 @@ bool SolidDeviceEngine::updateStorageSpace(const QString &udi)
         return false;
     }
 
-    KDiskFreeSpaceInfo info = KDiskFreeSpaceInfo::freeSpaceInfo(storageaccess->filePath());
-    if (info.isValid()) {
-        setData(udi, I18N_NOOP("Free Space"), QVariant(info.available()));
-        setData(udi, I18N_NOOP("Free Space Text"), KFormat().formatByteSize(info.available()));
-        setData(udi, I18N_NOOP("Size"), QVariant(info.size()));
-        return true;
+    QString path = storageaccess->filePath();
+    if (!m_paths.contains(path)) {
+        m_paths.insert(path);
+
+        // create job
+        KIO::FileSystemFreeSpaceJob *job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(path));
+
+        // collect and process info
+        connect(job, &KIO::FileSystemFreeSpaceJob::result, this,
+                [this, path, udi](KIO::Job *job, KIO::filesize_t size, KIO::filesize_t available) {
+
+            if (!job->error()) {
+                setData(udi, I18N_NOOP("Free Space"), QVariant(available));
+                setData(udi, I18N_NOOP("Free Space Text"), KFormat().formatByteSize(available));
+                setData(udi, I18N_NOOP("Size"), QVariant(size));
+            }
+
+            m_paths.remove(path);
+        });
     }
 
     return false;
