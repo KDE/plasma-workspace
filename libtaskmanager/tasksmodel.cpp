@@ -457,6 +457,28 @@ void TasksModel::Private::initModels()
             if (roles.isEmpty() || roles.contains(AbstractTasksModel::IsDemandingAttention)) {
                 updateAnyTaskDemandsAttention();
             }
+
+            if (roles.isEmpty() || roles.contains(AbstractTasksModel::AppId)) {
+                for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
+                    const QModelIndex &sourceIndex = groupingProxyModel->index(i, 0);
+
+                    // When a window task changes identity to one we have a launcher for, cause
+                    // the launcher to be re-filtered.
+                    if (sourceIndex.data(AbstractTasksModel::IsWindow).toBool()) {
+                        for (int i = 0; i < filterProxyModel->rowCount(); ++i) {
+                            const QModelIndex &filterIndex = filterProxyModel->index(i, 0);
+
+                            if (!filterIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
+                                continue;
+                            }
+
+                            if (appsMatch(sourceIndex, filterIndex)) {
+                                filterProxyModel->dataChanged(filterIndex, filterIndex);
+                            }
+                        }
+                    }
+                }
+            }
         }
     );
 
