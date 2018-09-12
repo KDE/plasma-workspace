@@ -592,86 +592,89 @@ void TasksModel::Private::updateManualSortMap()
             const int row = i.value();
             const QModelIndex &idx = concatProxyModel->index(sortedPreFilterRows.at(row), 0);
 
-                // If a window task is currently hidden, we may want to keep it in the queue
-                // to sort it in later once it gets revealed.
-                // This is important in concert with taskmanagerrulesrc's SkipTaskbar key, which
-                // is used to hide window tasks which update from bogus to useful window metadata
-                // early in startup. Once the task no longer uses bogus metadata listed in the
-                // config key, its SkipTaskbar role changes to false, and then is it possible to
-                // sort the task adjacent to its launcher in the code below.
-                if (idx.data(AbstractTasksModel::IsWindow).toBool() && idx.data(AbstractTasksModel::SkipTaskbar).toBool()) {
-                    // Since we're going to keep a row in the queue for now, make sure to
-                    // mark the queue as stale so it's cleared on appends or row removals
-                    // when they follow this sorting attempt. This frees us from having to
-                    // update the indices in the queue to keep them valid.
-                    // This means windowing system changes such as the opening or closing
-                    // of a window task which happen during the time period that a window
-                    // task has known bogus metadata, can upset what we're trying to
-                    // achieve with this exception. However, due to the briefness of the
-                    // time period and usage patterns, this is improbable, making this
-                    // likely good enough. If it turns out not to be, this decision may be
-                    // revisited later.
-                    sortRowInsertQueueStale = true;
+            // If a window task is currently hidden, we may want to keep it in the queue
+            // to sort it in later once it gets revealed.
+            // This is important in concert with taskmanagerrulesrc's SkipTaskbar key, which
+            // is used to hide window tasks which update from bogus to useful window metadata
+            // early in startup. Once the task no longer uses bogus metadata listed in the
+            // config key, its SkipTaskbar role changes to false, and then is it possible to
+            // sort the task adjacent to its launcher in the code below.
+            if (idx.data(AbstractTasksModel::IsWindow).toBool() && idx.data(AbstractTasksModel::SkipTaskbar).toBool()) {
+                // Since we're going to keep a row in the queue for now, make sure to
+                // mark the queue as stale so it's cleared on appends or row removals
+                // when they follow this sorting attempt. This frees us from having to
+                // update the indices in the queue to keep them valid.
+                // This means windowing system changes such as the opening or closing
+                // of a window task which happen during the time period that a window
+                // task has known bogus metadata, can upset what we're trying to
+                // achieve with this exception. However, due to the briefness of the
+                // time period and usage patterns, this is improbable, making this
+                // likely good enough. If it turns out not to be, this decision may be
+                // revisited later.
+                sortRowInsertQueueStale = true;
 
-                    break;
-                } else {
-                    i.remove();
-                }
+                break;
+            } else {
+                i.remove();
+            }
 
-                bool moved = false;
+            bool moved = false;
 
-                // Try to move the task up to its right-most app sibling, unless this
-                // is us sorting in a launcher list for the first time.
-                if (launchersEverSet && !idx.data(AbstractTasksModel::IsLauncher).toBool()) {
-                    for (int i = (row - 1); i >= 0; --i) {
-                        const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(i), 0);
+            // Try to move the task up to its right-most app sibling, unless this
+            // is us sorting in a launcher list for the first time.
+            if (launchersEverSet && !idx.data(AbstractTasksModel::IsLauncher).toBool()) {
+                for (int i = (row - 1); i >= 0; --i) {
+                    const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(i), 0);
 
-                        if (appsMatch(concatProxyIndex, idx) && filterProxyModel->acceptsRow(concatProxyIndex.row())) {
-                            sortedPreFilterRows.move(row, i + 1);
-                            moved = true;
+                    // Once we got a match, check if the filter model accepts the potential
+                    // sibling. We don't want to sort new tasks in next to tasks it will
+                    // filter out once it sees it anyway.
+                    if (appsMatch(concatProxyIndex, idx) && filterProxyModel->acceptsRow(concatProxyIndex.row())) {
+                        sortedPreFilterRows.move(row, i + 1);
+                        moved = true;
 
-                            break;
-                        }
-                    }
-                }
-
-                int insertPos = 0;
-
-                // If unsuccessful or skipped, and the new task is a launcher, put after
-                // the rightmost launcher or launcher-backed task in the map, or failing
-                // that at the start of the map.
-                if (!moved && idx.data(AbstractTasksModel::IsLauncher).toBool()) {
-                    for (int i = 0; i < row; ++i) {
-                        const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(i), 0);
-
-                        if (concatProxyIndex.data(AbstractTasksModel::IsLauncher).toBool()
-                        || launcherTasksModel->launcherPosition(concatProxyIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl()) != -1) {
-                        insertPos = i + 1;
-                        } else {
                         break;
-                        }
-                    }
-
-                    sortedPreFilterRows.move(row, insertPos);
-                    moved = true;
-                }
-
-                // If we sorted in a launcher and it's the first time we're sorting in a
-                // launcher list, move existing windows to the launcher position now.
-                if (moved && !launchersEverSet) {
-                    for (int i = (sortedPreFilterRows.count() - 1); i >= 0; --i) {
-                        const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(i), 0);
-
-                        if (!concatProxyIndex.data(AbstractTasksModel::IsLauncher).toBool()
-                            && idx.data(AbstractTasksModel::LauncherUrlWithoutIcon) == concatProxyIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon)) {
-                            sortedPreFilterRows.move(i, insertPos);
-
-                            if (insertPos > i) {
-                                --insertPos;
-                            }
-                        }
                     }
                 }
+            }
+
+            int insertPos = 0;
+
+            // If unsuccessful or skipped, and the new task is a launcher, put after
+            // the rightmost launcher or launcher-backed task in the map, or failing
+            // that at the start of the map.
+            if (!moved && idx.data(AbstractTasksModel::IsLauncher).toBool()) {
+                for (int i = 0; i < row; ++i) {
+                    const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(i), 0);
+
+                    if (concatProxyIndex.data(AbstractTasksModel::IsLauncher).toBool()
+                    || launcherTasksModel->launcherPosition(concatProxyIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl()) != -1) {
+                        insertPos = i + 1;
+                    } else {
+                        break;
+                    }
+                }
+
+                sortedPreFilterRows.move(row, insertPos);
+                moved = true;
+            }
+
+            // If we sorted in a launcher and it's the first time we're sorting in a
+            // launcher list, move existing windows to the launcher position now.
+            if (moved && !launchersEverSet) {
+                for (int i = (sortedPreFilterRows.count() - 1); i >= 0; --i) {
+                    const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(i), 0);
+
+                    if (!concatProxyIndex.data(AbstractTasksModel::IsLauncher).toBool()
+                        && idx.data(AbstractTasksModel::LauncherUrlWithoutIcon) == concatProxyIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon)) {
+                        sortedPreFilterRows.move(i, insertPos);
+
+                        if (insertPos > i) {
+                            --insertPos;
+                        }
+                    }
+                }
+            }
          }
      }
  }
