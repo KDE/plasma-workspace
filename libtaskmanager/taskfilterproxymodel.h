@@ -271,6 +271,13 @@ public:
      **/
     void setDemandingAttentionSkipsFilters(bool skip);
 
+    /**
+     * Returns whether the filter model accepts this source row.
+     *
+     * @param int A row in the source model.
+     */
+    bool acceptsRow(int sourceRow) const;
+
 Q_SIGNALS:
     void virtualDesktopChanged() const;
     void screenGeometryChanged() const;

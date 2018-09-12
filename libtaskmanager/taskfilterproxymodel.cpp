@@ -239,11 +239,13 @@ QModelIndex TaskFilterProxyModel::mapIfaceToSource(const QModelIndex &index) con
     return mapToSource(index);
 }
 
-bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
+bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
 {
-    Q_UNUSED(sourceParent)
-
     const QModelIndex &sourceIdx = sourceModel()->index(sourceRow, 0);
+
+    if (!sourceIdx.isValid()) {
+        return false;
+    }
 
     // Filter tasks that are not to be shown on the task bar.
     if (d->filterSkipTaskbar && sourceIdx.data(AbstractTasksModel::SkipTaskbar).toBool()) {
@@ -306,6 +308,13 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
     }
 
     return true;
+}
+
+bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
+{
+    Q_UNUSED(sourceParent)
+
+    return acceptsRow(sourceRow);
 }
 
 }

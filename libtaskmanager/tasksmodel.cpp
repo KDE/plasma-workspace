@@ -626,16 +626,9 @@ void TasksModel::Private::updateManualSortMap()
                     for (int i = (row - 1); i >= 0; --i) {
                         const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(i), 0);
 
-                        if (appsMatch(concatProxyIndex, idx)) {
-                            // Our sort map contains row indices prior to any filtering, but we don't
-                            // want to sort new tasks in next to siblings we're filtering out higher up
-                            // in the proxy chain, so check in with the filter model.
-                            const QModelIndex &filterProxyIndex = filterProxyModel->mapFromSource(concatProxyIndex);
-
-                            if (filterProxyIndex.isValid()) {
+                        if (appsMatch(concatProxyIndex, idx) && filterProxyModel->acceptsRow(concatProxyIndex.row())) {
                             sortedPreFilterRows.move(row, i + 1);
                             moved = true;
-                            }
 
                             break;
                         }
