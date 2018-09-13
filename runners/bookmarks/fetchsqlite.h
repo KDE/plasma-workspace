@@ -46,7 +46,6 @@ public:
 private:
     QString const m_databaseFile;
     QMutex m_mutex;
-    QSqlDatabase m_db;
 };
 
 #endif // FETCHSQLITE_H

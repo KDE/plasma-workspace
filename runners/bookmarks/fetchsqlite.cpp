@@ -21,18 +21,18 @@
 #include "fetchsqlite.h"
 #include <QFile>
 #include <QDebug>
+#include "bookmarks_debug.h"
 #include "bookmarksrunner_defs.h"
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlRecord>
 #include <QMutexLocker>
+#include <thread>
+#include <sstream>
 
 FetchSqlite::FetchSqlite(const QString &originalFilePath, const QString &copyTo, QObject *parent) :
     QObject(parent), m_databaseFile(copyTo)
 {
-    m_db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), originalFilePath);
-    m_db.setHostName(QStringLiteral("localhost"));
-
     QFile originalFile(originalFilePath);
     QFile(copyTo).remove();
     bool couldCopy = originalFile.copy(copyTo);
@@ -44,33 +44,58 @@ FetchSqlite::FetchSqlite(const QString &originalFilePath, const QString &copyTo,
 
 FetchSqlite::~FetchSqlite()
 {
-    if(m_db.isOpen()) m_db.close();
     QFile(m_databaseFile).remove();
 }
 
 void FetchSqlite::prepare()
 {
-    QMutexLocker lock(&m_mutex);
-    m_db.setDatabaseName(m_databaseFile);
-    bool ok = m_db.open();
-    //qDebug() << "Sqlite Database " << m_databaseFile << " was opened: " << ok;
-    if(!ok) {
-        //qDebug() << "Error: " << m_db.lastError().text();
-    }
 }
 
 void FetchSqlite::teardown()
 {
-    QMutexLocker lock(&m_mutex);
-    m_db.close();
+    QString connectionPrefix = m_databaseFile + "-";
+
+    const auto connections = QSqlDatabase::connectionNames();
+    for (auto c : connections) {
+        if (c.startsWith(connectionPrefix)) {
+            qCDebug(RUNNER_BOOKMARKS) << "Closing connection" << c;
+            QSqlDatabase::removeDatabase(c);
+        }
+    }
+}
+
+static QSqlDatabase openDbConnection(const QString& databaseFile) {
+    // create a thread unique connection name based on the DB filename and thread id
+    auto connection = databaseFile + "-";
+    std::stringstream s;
+    s << std::this_thread::get_id();
+    connection += QString::fromStdString(s.str());
+
+    // Try to reuse the previous connection
+    auto db = QSqlDatabase::database(connection);
+    if (db.isValid()) {
+        qCDebug(RUNNER_BOOKMARKS) << "Reusing connection" << connection;
+        return db;
+    }
+
+    // Otherwise, create, configure and open a new one
+    db = QSqlDatabase::addDatabase(QStringLiteral("QSQLITE"), connection);
+    db.setHostName(QStringLiteral("localhost"));
+    db.setDatabaseName(databaseFile);
+    db.open();
+    qCDebug(RUNNER_BOOKMARKS) << "Opened connection" << connection;
+
+    return db;
 }
 
 QList<QVariantMap> FetchSqlite::query(const QString &sql, QMap<QString, QVariant> bindObjects)
 {
     QMutexLocker lock(&m_mutex);
 
+    auto db = openDbConnection(m_databaseFile);
+
     //qDebug() << "query: " << sql;
-    QSqlQuery query(m_db);
+    QSqlQuery query(db);
     query.prepare(sql);
     foreach(const QString &variableName, bindObjects.keys()) {
         query.bindValue(variableName, bindObjects.value(variableName));
@@ -78,7 +103,7 @@ QList<QVariantMap> FetchSqlite::query(const QString &sql, QMap<QString, QVariant
     }
 
     if(!query.exec()) {
-        QSqlError error = m_db.lastError();
+        QSqlError error = db.lastError();
         //qDebug() << "query failed: " << error.text() << " (" << error.type() << ", " << error.number() << ")";
         //qDebug() << query.lastQuery();
     }
@@ -93,6 +118,7 @@ QList<QVariantMap> FetchSqlite::query(const QString &sql, QMap<QString, QVariant
         }
         result << recordValues;
     }
+
     return result;
 }
 
@@ -100,5 +126,6 @@ QStringList FetchSqlite::tables(QSql::TableType type)
 {
     QMutexLocker lock(&m_mutex);
 
-    return m_db.tables(type);
+    auto db = openDbConnection(m_databaseFile);
+    return db.tables(type);
 }
