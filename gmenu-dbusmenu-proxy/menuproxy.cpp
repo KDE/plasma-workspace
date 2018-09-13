@@ -32,10 +32,8 @@
 #include <QFileInfo>
 #include <QHash>
 #include <QStandardPaths>
-#include <QTimer>
 
 #include <KConfigGroup>
-#include <KDirWatch>
 #include <KSharedConfig>
 #include <KWindowSystem>
 
@@ -61,15 +59,10 @@ static const QByteArray s_gtkAppMenuObjectPath = QByteArrayLiteral("_GTK_APP_MEN
 static const QByteArray s_kdeNetWmAppMenuServiceName = QByteArrayLiteral("_KDE_NET_WM_APPMENU_SERVICE_NAME");
 static const QByteArray s_kdeNetWmAppMenuObjectPath = QByteArrayLiteral("_KDE_NET_WM_APPMENU_OBJECT_PATH");
 
-static const QString s_gtkModules = QStringLiteral("gtk-modules");
-static const QString s_appMenuGtkModule = QStringLiteral("appmenu-gtk-module");
-
 MenuProxy::MenuProxy()
     : QObject()
     , m_xConnection(QX11Info::connection())
     , m_serviceWatcher(new QDBusServiceWatcher(this))
-    , m_gtk2RcWatch(new KDirWatch(this))
-    , m_writeGtk2SettingsTimer(new QTimer(this))
 {
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
     m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration |
@@ -95,23 +88,8 @@ MenuProxy::MenuProxy()
         qCDebug(DBUSMENUPROXY) << "No global menu service available, waiting for it to start before doing anything";
 
         // be sure when started to restore gtk menus when there's no dbus menu around in case we crashed
-        enableGtkSettings(false);
+        setGtkShellShowsMenuBar(false);
     }
-
-    // kde-gtk-config just deletes and re-creates the gtkrc-2.0, watch this and add out config to it again
-    m_writeGtk2SettingsTimer->setSingleShot(true);
-    m_writeGtk2SettingsTimer->setInterval(1000);
-    connect(m_writeGtk2SettingsTimer, &QTimer::timeout, this, &MenuProxy::writeGtk2Settings);
-
-    auto startGtk2SettingsTimer = [this] {
-        if (!m_writeGtk2SettingsTimer->isActive()) {
-            m_writeGtk2SettingsTimer->start();
-        }
-    };
-
-    connect(m_gtk2RcWatch, &KDirWatch::created, this, startGtk2SettingsTimer);
-    connect(m_gtk2RcWatch, &KDirWatch::dirty, this, startGtk2SettingsTimer);
-    m_gtk2RcWatch->addFile(gtkRc2Path());
 }
 
 MenuProxy::~MenuProxy()
@@ -126,7 +104,7 @@ bool MenuProxy::init()
         return false;
     }
 
-    enableGtkSettings(true);
+    setGtkShellShowsMenuBar(true);
 
     connect(KWindowSystem::self(), &KWindowSystem::windowAdded, this, &MenuProxy::onWindowAdded);
     connect(KWindowSystem::self(), &KWindowSystem::windowRemoved, this, &MenuProxy::onWindowRemoved);
@@ -145,7 +123,7 @@ bool MenuProxy::init()
 
 void MenuProxy::teardown()
 {
-    enableGtkSettings(false);
+    setGtkShellShowsMenuBar(false);
 
     QDBusConnection::sessionBus().unregisterService(s_ourServiceName);
 
@@ -156,115 +134,30 @@ void MenuProxy::teardown()
     m_windows.clear();
 }
 
-void MenuProxy::enableGtkSettings(bool enable)
+void MenuProxy::setGtkShellShowsMenuBar(bool show)
 {
-    m_enabled = enable;
-
-    writeGtk2Settings();
-    writeGtk3Settings();
-
-    // TODO use gconf/dconf directly or at least signal a change somehow?
-}
-
-QString MenuProxy::gtkRc2Path()
-{
-    return QDir::homePath() + QLatin1String("/.gtkrc-2.0");
-}
-
-QString MenuProxy::gtk3SettingsIniPath()
-{
-    return QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/gtk-3.0/settings.ini");
-}
-
-void MenuProxy::writeGtk2Settings()
-{
-    qCDebug(DBUSMENUPROXY) << "Writing gtkrc-2.0 to" << (m_enabled ? "enable" : "disable") << "global menu support";
-
-    QFile rcFile(gtkRc2Path());
-    if (!rcFile.open(QIODevice::ReadWrite | QIODevice::Text)) {
-        return;
-    }
-
-    QByteArray content;
-
-    QStringList gtkModules;
-
-    while (!rcFile.atEnd()) {
-        const QByteArray rawLine = rcFile.readLine();
-
-        const QString line = QString::fromUtf8(rawLine.trimmed());
-
-        if (!line.startsWith(s_gtkModules)) {
-            // keep line as-is
-            content += rawLine;
-            continue;
-        }
-
-        const int equalSignIdx = line.indexOf(QLatin1Char('='));
-        if (equalSignIdx < 1) {
-            continue;
-        }
-
-        gtkModules = line.mid(equalSignIdx + 1).split(QLatin1Char(':'), QString::SkipEmptyParts);
-
-        break;
-    }
-
-    addOrRemoveAppMenuGtkModule(gtkModules);
-
-    if (!gtkModules.isEmpty()) {
-        content += QStringLiteral("%1=%2").arg(s_gtkModules, gtkModules.join(QLatin1Char(':'))).toUtf8();
-    }
-
-    qCDebug(DBUSMENUPROXY) << "  gtk-modules:" << gtkModules;
-
-    m_gtk2RcWatch->stopScan();
-
-    // now write the new contents of the file
-    rcFile.resize(0);
-    rcFile.write(content);
-    rcFile.close();
-
-    m_gtk2RcWatch->startScan();
-}
-
-void MenuProxy::writeGtk3Settings()
-{
-    qCDebug(DBUSMENUPROXY) << "Writing gtk-3.0/settings.ini" << (m_enabled ? "enable" : "disable") << "global menu support";
+    qCDebug(DBUSMENUPROXY) << "Setting gtk-shell-shows-menu-bar to" << show << "which will" << (show ? "hide" : "show") << "menu bars in applications";
 
     // mostly taken from kde-gtk-config
-    auto cfg = KSharedConfig::openConfig(gtk3SettingsIniPath(), KConfig::NoGlobals);
-    KConfigGroup group(cfg, "Settings");
-
-    QStringList gtkModules = group.readEntry("gtk-modules", QString()).split(QLatin1Char(':'), QString::SkipEmptyParts);
-    addOrRemoveAppMenuGtkModule(gtkModules);
-
-    if (!gtkModules.isEmpty()) {
-        group.writeEntry("gtk-modules", gtkModules.join(QLatin1Char(':')));
-    } else {
-        group.deleteEntry("gtk-modules");
+    QString root = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
+    if (root.isEmpty()) {
+        root = QFileInfo(QDir::home(), QStringLiteral(".config")).absoluteFilePath();
     }
 
-    qCDebug(DBUSMENUPROXY) << "  gtk-modules:" << gtkModules;
+    const QString settingsFilePath = root + QStringLiteral("/gtk-3.0/settings.ini");
 
-    if (m_enabled) {
+    auto cfg = KSharedConfig::openConfig(settingsFilePath, KConfig::NoGlobals);
+    KConfigGroup group(cfg, "Settings");
+
+    if (show) {
         group.writeEntry("gtk-shell-shows-menubar", 1);
     } else {
         group.deleteEntry("gtk-shell-shows-menubar");
     }
 
-    qCDebug(DBUSMENUPROXY) << "  gtk-shell-shows-menubar:" << (m_enabled ? 1 : 0);
-
     group.sync();
-}
 
-void MenuProxy::addOrRemoveAppMenuGtkModule(QStringList &list)
-{
-    if (m_enabled && !list.contains(s_appMenuGtkModule)) {
-        list.append(s_appMenuGtkModule);
-    } else if (!m_enabled) {
-        list.removeAll(s_appMenuGtkModule);
-    }
+    // TODO use gconf/dconf directly or at least signal a change somehow?
 }
 
 void MenuProxy::onWindowAdded(WId id)

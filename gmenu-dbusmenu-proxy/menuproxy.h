@@ -27,9 +27,6 @@
 #include <xcb/xcb_atom.h>
 
 class QDBusServiceWatcher;
-class QTimer;
-
-class KDirWatch;
 
 class Window;
 
@@ -49,15 +46,7 @@ private:
     bool init();
     void teardown();
 
-    static QString gtkRc2Path();
-    static QString gtk3SettingsIniPath();
-
-    void enableGtkSettings(bool enabled);
-
-    void writeGtk2Settings();
-    void writeGtk3Settings();
-
-    void addOrRemoveAppMenuGtkModule(QStringList &list);
+    void setGtkShellShowsMenuBar(bool show);
 
     xcb_connection_t *m_xConnection;
 
@@ -68,10 +57,5 @@ private:
     QHash<WId, Window *> m_windows;
 
     QDBusServiceWatcher *m_serviceWatcher;
-
-    KDirWatch *m_gtk2RcWatch;
-    QTimer *m_writeGtk2SettingsTimer;
-
-    bool m_enabled = false;
 
 };

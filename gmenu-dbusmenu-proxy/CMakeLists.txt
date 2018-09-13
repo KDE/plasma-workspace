@@ -38,7 +38,6 @@ target_link_libraries(gmenudbusmenuproxy
     Qt5::Core
     Qt5::X11Extras
     Qt5::DBus
-    KF5::CoreAddons
     KF5::ConfigCore
     KF5::WindowSystem
     XCB::XCB
