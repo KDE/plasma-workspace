@@ -33,6 +33,7 @@
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QQmlComponent>
+#include <QDBusConnection>
 
 #include <klocalizedstring.h>
 
@@ -43,6 +44,16 @@
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
+
+class WallpaperConfigModel: public PlasmaQuick::ConfigModel
+{
+    Q_OBJECT
+public:
+    WallpaperConfigModel(QObject *parent);
+public Q_SLOTS:
+    void repopulate();
+};
+
 
 //////////////////////////////ContainmentConfigView
 ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow *parent)
@@ -114,15 +125,12 @@ void ContainmentConfigView::setContainmentPlugin(const QString &plugin)
 PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
 {
     if (!m_wallpaperConfigModel) {
-        m_wallpaperConfigModel = new PlasmaQuick::ConfigModel(this);
+        m_wallpaperConfigModel = new WallpaperConfigModel(this);
+        QDBusConnection::sessionBus().connect(QString(), QStringLiteral("/KPackage/Plasma/Wallpaper"), QStringLiteral("org.kde.plasma.kpackage"), QStringLiteral("packageInstalled"),
+            m_wallpaperConfigModel, SLOT(repopulate())) ;
+        QDBusConnection::sessionBus().connect(QString(), QStringLiteral("/KPackage/Plasma/Wallpaper"), QStringLiteral("org.kde.plasma.kpackage"), QStringLiteral("packageUninstalled"),
+            m_wallpaperConfigModel, SLOT(repopulate()));
 
-        for (const KPluginMetaData &m : KPackage::PackageLoader::self()->listPackages(QStringLiteral("Plasma/Wallpaper"))) {
-            KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Wallpaper"), m.pluginId());
-            if (!pkg.isValid()) {
-                continue;
-            }
-            m_wallpaperConfigModel->appendCategory(pkg.metadata().iconName(), pkg.metadata().name(), pkg.fileUrl("ui", QStringLiteral("config.qml")).toString(), m.pluginId());
-        }
     }
     return m_wallpaperConfigModel;
 }
@@ -214,4 +222,22 @@ void ContainmentConfigView::syncWallpaperObjects()
     m_currentWallpaperConfig = static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
 }
 
-#include "moc_containmentconfigview.cpp"
+WallpaperConfigModel::WallpaperConfigModel(QObject *parent)
+    :PlasmaQuick::ConfigModel(parent)
+{
+    repopulate();
+}
+
+void WallpaperConfigModel::repopulate()
+{
+    clear();
+    for (const KPluginMetaData &m : KPackage::PackageLoader::self()->listPackages(QStringLiteral("Plasma/Wallpaper"))) {
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Wallpaper"), m.pluginId());
+        if (!pkg.isValid()) {
+            continue;
+        }
+        appendCategory(pkg.metadata().iconName(), pkg.metadata().name(), pkg.fileUrl("ui", QStringLiteral("config.qml")).toString(), m.pluginId());
+    }
+}
+
+#include "containmentconfigview.moc"
