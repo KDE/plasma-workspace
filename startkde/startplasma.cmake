@@ -163,6 +163,9 @@ if test $? -eq 255; then
   xmessage -geometry 500x100 "Could not start ksmserver. Check your installation."
 fi
 
+#Anything after here is logout
+#It is not called after shutdown/restart
+
 wait_drkonqi=`kreadconfig5 --file startkderc --group WaitForDrKonqi --key Enabled --default true`
 
 if test x"$wait_drkonqi"x = x"true"x ; then
