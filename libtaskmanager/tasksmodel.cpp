@@ -1631,10 +1631,10 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
         beginMoveRows(parent, row, row, parent, (newPos > row) ? newPos + 1 : newPos);
 
         // Translate to sort map indices.
-        const QModelIndex &groupingRowIndex = mapToSource(index(row, 0));
+        const QModelIndex &groupingRowIndex = mapToSource(index(row, 0, parent));
         const QModelIndex &preFilterRowIndex = d->preFilterIndex(groupingRowIndex);
         row = d->sortedPreFilterRows.indexOf(preFilterRowIndex.row());
-        newPos = d->sortedPreFilterRows.indexOf(d->preFilterIndex(mapToSource(index(newPos, 0))).row());
+        newPos = d->sortedPreFilterRows.indexOf(d->preFilterIndex(mapToSource(index(newPos, 0, parent))).row());
 
         // Update sort mapping.
         d->sortedPreFilterRows.move(row, newPos);
