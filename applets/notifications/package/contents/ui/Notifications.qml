@@ -88,6 +88,12 @@ Column {
         else if (showHistory) {
             
             notificationsHistoryModel.inserting = true;
+
+            //Disable actions in this copy as they will stop working once the original notification is closed.
+            //Only the jobUrl (which is a URL to open) can continue working as we'll handle this internally.
+            var actions = notification.actions.filter(function (item) {
+                return item.id.indexOf("jobUrl#") === 0;
+            });
             
             //create a copy of the notification. 
             //Disable actions in this copy as they will stop working once the original notification is closed.
@@ -101,7 +107,7 @@ Column {
                 "created" : new Date(),
                 "urls" : notification.urls,
                 "maximumTextHeight" : notification.maximumTextHeight,
-                "actions" : null,
+                "actions" : actions,
                 "hasDefaultAction" : false,
                 "hasConfigureAction" : false,
             });
