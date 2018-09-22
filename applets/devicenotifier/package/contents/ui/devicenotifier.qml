@@ -140,6 +140,10 @@ Item {
             }
 
             var device = data[udi];
+            if (!device) {
+                return false;
+            }
+
             return (devicesType === "removable" && device.Removable)
                 || (devicesType === "nonRemovable" && !device.Removable);
         }
@@ -246,6 +250,10 @@ Item {
     }
 
     function isMounted(udi) {
+        if (!sdSource.data[udi]) {
+            return false;
+        }
+
         var types = sdSource.data[udi]["Device Types"];
         if (types.indexOf("Storage Access") >= 0) {
             return sdSource.data[udi]["Accessible"];
