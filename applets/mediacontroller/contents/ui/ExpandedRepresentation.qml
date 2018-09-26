@@ -103,16 +103,21 @@ Item {
             } else if (event.key === Qt.Key_Left || event.key === Qt.Key_J) { // TODO ltr languages
                 // seek back 5s
                 seekSlider.value = Math.max(0, seekSlider.value - 5000000) // microseconds
+                seekSlider.moved();
             } else if (event.key === Qt.Key_Right || event.key === Qt.Key_L) {
                 // seek forward 5s
                 seekSlider.value = Math.min(seekSlider.to, seekSlider.value + 5000000)
+                seekSlider.moved();
             } else if (event.key === Qt.Key_Home) {
                 seekSlider.value = 0
+                seekSlider.moved();
             } else if (event.key === Qt.Key_End) {
                 seekSlider.value = seekSlider.to
+                seekSlider.moved();
             } else if (event.key >= Qt.Key_0 && event.key <= Qt.Key_9) {
                 // jump to percentage, ie. 0 = beginnign, 1 = 10% of total length etc
                 seekSlider.value = seekSlider.to * (event.key - Qt.Key_0) / 10
+                seekSlider.moved();
             } else {
                 event.accepted = false
             }
