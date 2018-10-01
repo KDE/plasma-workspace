@@ -217,9 +217,36 @@ void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
 
         const int resultPipe = pipeFds[0];
         connect(p, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error), this,
-            [this, resultPipe] {
+            [this, resultPipe, sdmode, sdtype] {
                 close(resultPipe);
                 dialogActive = false;
+                auto fallbackPrompt = new QMessageBox;
+                fallbackPrompt->setAttribute(Qt::WA_DeleteOnClose, true);
+                fallbackPrompt->setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
+                switch (sdtype) {
+                case KWorkSpace::ShutdownTypeHalt:
+                    //i18nd is used as this patch was backported to an LTS with stable translations
+                    fallbackPrompt->setText(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shutdown"));
+                    break;
+                case KWorkSpace::ShutdownTypeReboot:
+                    fallbackPrompt->setText(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Reboot"));
+                    break;
+                case KWorkSpace::ShutdownTypeNone:
+                    Q_FALLTHROUGH();
+                default:
+                    fallbackPrompt->setText(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Logout"));
+                    break;
+                }
+                connect(fallbackPrompt, &QMessageBox::buttonClicked, this, [=](QAbstractButton *button) {
+                    if (button != fallbackPrompt->button(QMessageBox::Ok)) {
+                        return;
+                    }
+                    shutdownType = sdtype;
+                    shutdownMode = sdmode;
+                    bootOption = QString();
+                    performLogout();
+                });
+                fallbackPrompt->show();
             }
         );
 
