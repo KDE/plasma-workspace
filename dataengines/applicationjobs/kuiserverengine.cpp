@@ -18,6 +18,7 @@
 
 #include "jobviewadaptor.h"
 #include "jobviewserveradaptor.h"
+#include "kuiserverinterface.h"
 #include "kuiserverengine.h"
 #include "jobcontrol.h"
 
@@ -388,10 +389,9 @@ Plasma::Service* KuiserverEngine::serviceForSource(const QString& source)
 
 void KuiserverEngine::init()
 {
-    // register with the Job UI Serer to receive notifications of jobs becoming available
-    QDBusInterface interface(QStringLiteral("org.kde.kuiserver"), QStringLiteral("/JobViewServer")/* object to connect to */,
-                              QLatin1String("")/* use the default interface */, QDBusConnection::sessionBus(), this);
-    interface.asyncCall(QLatin1String("registerService"), QDBusConnection::sessionBus().baseService(), "/DataEngine/applicationjobs/JobWatcher");
+    // register with the Job UI Server to receive notifications of jobs becoming available
+    OrgKdeKuiserverInterface ksmserver(QStringLiteral("org.kde.kuiserver"), QStringLiteral("/JobViewServer"), QDBusConnection::sessionBus());
+    ksmserver.registerService(QDBusConnection::sessionBus().baseService(), QStringLiteral("/DataEngine/applicationjobs/JobWatcher"));
 }
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(kuiserver, KuiserverEngine, "plasma-dataengine-applicationjobs.json")
