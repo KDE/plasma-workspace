@@ -202,7 +202,7 @@ PlasmaCore.ColorScope {
                     },
                     ActionButton {
                         iconSource: "system-shutdown"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutdown")
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shut Down")
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
                         visible: !inputPanel.keyboardActive

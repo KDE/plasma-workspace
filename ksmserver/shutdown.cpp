@@ -226,7 +226,7 @@ void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
                 switch (sdtype) {
                 case KWorkSpace::ShutdownTypeHalt:
                     //i18nd is used as this patch was backported to an LTS with stable translations
-                    fallbackPrompt->setText(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shutdown"));
+                    fallbackPrompt->setText(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down"));
                     break;
                 case KWorkSpace::ShutdownTypeReboot:
                     fallbackPrompt->setText(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Reboot"));
