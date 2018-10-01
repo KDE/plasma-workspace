@@ -22,8 +22,10 @@
 
 #include <QMimeData>
 
-#include <QIcon>
 #include <QDebug>
+#include <QDir>
+#include <QIcon>
+#include <QStandardPaths>
 #include <QUrl>
 
 #include <KActivities/ResourceInstance>
@@ -248,7 +250,7 @@ private:
             // If the term was < 3 chars and NOT at the beginning of the App's name or Exec, then
             // chances are the user doesn't want that app.
             if (weightedTermLength < 3) {
-                if (name.startsWith(term) || exec.startsWith(term)) {
+                if (name.startsWith(term, Qt::CaseInsensitive) || exec.startsWith(term, Qt::CaseInsensitive)) {
                     relevance = 0.9;
                 } else {
                     continue;
@@ -467,16 +469,22 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
 QMimeData * ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     KService::Ptr service = KService::serviceByStorageId(match.data().toString());
-    if (service) {
-        QMimeData * result = new QMimeData();
-        QList<QUrl> urls;
-        urls << QUrl::fromLocalFile(service->entryPath());
-        qCDebug(RUNNER_SERVICES) << urls;
-        result->setUrls(urls);
-        return result;
+    if (!service) {
+        return nullptr;
     }
 
-    return 0;
+    QString path = service->entryPath();
+    if (!QDir::isAbsolutePath(path)) {
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kservices5/") + path);
+    }
+
+    if (path.isEmpty()) {
+        return nullptr;
+    }
+
+    QMimeData *data = new QMimeData();
+    data->setUrls(QList<QUrl>{QUrl::fromLocalFile(path)});
+    return data;
 }
 
 K_EXPORT_PLASMA_RUNNER(services, ServiceRunner)

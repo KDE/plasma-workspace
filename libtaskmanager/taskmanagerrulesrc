@@ -5,8 +5,9 @@ Google-chrome-stable=Google Chrome
 Systemsettings=System Settings
 oracle-ide-boot-Launcher=Oracle SQL Developer
 Dragon=dragonplayer
+VirtualBox Manager=virtualbox
+VirtualBox Machine=virtualbox
 
 [Settings]
-ManualOnly=Wine
 MatchCommandLineFirst=perl
 TryIgnoreRuntimes=perl

@@ -35,9 +35,11 @@ public:
 
 public Q_SLOTS:
     void match(Plasma::RunnerContext *context);
+    void openDevice(const QString &udi);
 
 private:
     KFilePlacesModel m_places;
+    QString m_pendingUdi;
 };
 
 class PlacesRunner : public Plasma::AbstractRunner
@@ -54,9 +56,6 @@ public:
 
 Q_SIGNALS:
     void doMatch(Plasma::RunnerContext *context);
-
-private Q_SLOTS:
-    void setupComplete(QModelIndex, bool);
 
 private:
     PlacesRunnerHelper *m_helper;
