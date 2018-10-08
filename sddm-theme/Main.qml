@@ -348,7 +348,7 @@ PlasmaCore.ColorScope {
                 notificationMessage: root.notificationMessage
 
                 userListModel: QtObject {
-                    property string name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login as different user")
+                    property string name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log in as a different user")
                     property string iconSource: ""
                 }
 

@@ -93,7 +93,7 @@ SessionManagementScreen {
         id: loginButton
         Layout.fillWidth: true
 
-        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login")
+        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log In")
         onClicked: startLogin();
     }
 
