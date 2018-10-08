@@ -56,8 +56,8 @@ QQC2.StackView {
     }
     Component.onCompleted: {
         if (wallpaper.pluginName == "org.kde.slideshow") {
-            wallpaper.setAction("open", i18n("Open Wallpaper Image"), "document-open");
-            wallpaper.setAction("next", i18n("Next Wallpaper Image"), "user-desktop");
+            wallpaper.setAction("open", i18nd("plasma_wallpaper_org.kde.image", "Open Wallpaper Image"), "document-open");
+            wallpaper.setAction("next", i18nd("plasma_wallpaper_org.kde.image", "Next Wallpaper Image"), "user-desktop");
         }
     }
 
