@@ -196,6 +196,7 @@ Item {
 
                 if (sdSource.isViableDevice(lastUdi)) {
                     plasmoid.expanded = true
+                    plasmoid.fullRepresentationItem.spontaneousOpen = true;
                 }
             }
         }
