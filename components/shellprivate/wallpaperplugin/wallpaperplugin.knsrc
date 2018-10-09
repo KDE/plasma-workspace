@@ -1,0 +1,8 @@
+[KNewStuff3]
+Name=Wallpaper Plugins
+
+ProvidersUrl=https://download.kde.org/ocs/providers.xml
+Categories=Plasma Wallpaper Plugin
+StandardResource=tmp
+InstallationCommand=kpackagetool5 --type Plasma/Wallpaper --install %f
+UninstallCommand=kpackagetool5 --type Plasma/Wallpaper --remove %f
