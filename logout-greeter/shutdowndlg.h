@@ -43,7 +43,7 @@ class KSMShutdownDlg : public KQuickAddons::QuickViewSharedEngine
     Q_OBJECT
 
 public:
-    KSMShutdownDlg( QWindow* parent, bool maysd, bool choose, KWorkSpace::ShutdownType sdtype, KWayland::Client::PlasmaShell *plasmaShell = nullptr );
+    KSMShutdownDlg( QWindow* parent, bool maysd, KWorkSpace::ShutdownType sdtype, KWayland::Client::PlasmaShell *plasmaShell = nullptr );
 
     void init();
     bool result() const;

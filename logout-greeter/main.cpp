@@ -28,7 +28,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <KQuickAddons/QtQuickSettings>
 
-#include <unistd.h>
+#include "ksmserveriface.h"
 
 #include "greeter.h"
 
@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
         // Before Qt 5.12, the xdg-shell v6 integration does not support fullscreen.
         qputenv("QT_WAYLAND_SHELL_INTEGRATION", "wl-shell");
     }
+    qunsetenv("SESSION_MANAGER");
 
     KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);
@@ -45,57 +46,27 @@ int main(int argc, char *argv[])
 
     KQuickAddons::QtQuickSettings::init();
 
-    QCommandLineParser parser;
-    parser.addHelpOption();
+    OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
+    QDBusPendingReply<bool> isShuttingDownPending = ksmserver.isShuttingDown();
+    QDBusPendingReply<bool> canShutdownPending = ksmserver.canShutdown();
 
-    // TODO: should these things be translated? It's internal after all...
-    QCommandLineOption shutdownAllowedOption(QStringLiteral("shutdown-allowed"),
-                                             QStringLiteral("Whether the user is allowed to shut down the system."));
-    parser.addOption(shutdownAllowedOption);
+    isShuttingDownPending.waitForFinished();
+    canShutdownPending.waitForFinished();
 
-    QCommandLineOption chooseOption(QStringLiteral("choose"),
-                                    QStringLiteral("Whether the user is offered the choices between logout, shutdown, etc."));
-    parser.addOption(chooseOption);
-
-    QCommandLineOption modeOption(QStringLiteral("mode"),
-                                  QStringLiteral("The initial exit mode to offer to the user."),
-                                  QStringLiteral("logout|shutdown|reboot"),
-                                  QStringLiteral("logout"));
-    parser.addOption(modeOption);
-
-    QCommandLineOption fdOption(QStringLiteral("mode-fd"),
-                                QStringLiteral("An optional file descriptor the selected mode is written to on accepted"),
-                                QStringLiteral("fd"), QString::number(-1));
-    parser.addOption(fdOption);
-
-    parser.process(app);
-
-    KWorkSpace::ShutdownType type = KWorkSpace::ShutdownTypeDefault;
-    if (parser.isSet(modeOption)) {
-        const QString modeValue = parser.value(modeOption);
-        if (QString::compare(QLatin1String("logout"), modeValue, Qt::CaseInsensitive) == 0) {
-            type = KWorkSpace::ShutdownTypeNone;
-        } else if (QString::compare(QLatin1String("shutdown"), modeValue, Qt::CaseInsensitive) == 0) {
-            type = KWorkSpace::ShutdownTypeHalt;
-        } else if (QString::compare(QLatin1String("reboot"), modeValue, Qt::CaseInsensitive) == 0) {
-            type = KWorkSpace::ShutdownTypeReboot;
-        } else {
-            return 1;
-        }
+    //if ksmserver is shutting us down already, we don't want another prompt
+    if (isShuttingDownPending.value()) {
+        return 0;
     }
 
-    int fd = -1;
-    if (parser.isSet(fdOption)) {
-        bool ok = false;
-        const int passedFd = parser.value(fdOption).toInt(&ok);
-        if (ok) {
-            fd = dup(passedFd);
-        }
+    bool shutdownAllowed = canShutdownPending.value();
+
+    Greeter greeter(shutdownAllowed);
+
+    if (argc > 1) {
+        //special case, invoked from ksmserver from a former release which had a tonne of args
+        //shouldn't happen often
+        greeter.promptLogout();
     }
-    Greeter greeter(fd, parser.isSet(shutdownAllowedOption), parser.isSet(chooseOption), type);
-    greeter.init();
 
     return app.exec();
 }
-
-#include "main.moc"

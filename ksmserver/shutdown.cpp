@@ -77,6 +77,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "client.h"
 
 #include <solid/powermanagement.h>
+#include "logoutprompt_interface.h"
 
 #include <QDesktopWidget>
 #include <QX11Info>
@@ -108,34 +109,12 @@ bool KSMServer::isShuttingDown() const
     return state >= Shutdown;
 }
 
-bool readFromPipe(int pipe)
-{
-    QFile readPipe;
-    if (!readPipe.open(pipe, QIODevice::ReadOnly)) {
-        return false;
-    }
-    QByteArray result = readPipe.readLine();
-    if (result.isEmpty()) {
-        return false;
-    }
-    bool ok = false;
-    const int number = result.toInt(&ok);
-    if (!ok) {
-        return false;
-    }
-    KSMServer::self()->shutdownType = KWorkSpace::ShutdownType(number);
-
-    return true;
-}
-
 void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
     KWorkSpace::ShutdownType sdtype, KWorkSpace::ShutdownMode sdmode )
 {
 	qCDebug(KSMSERVER) << "Shutdown called with confirm " << confirm
 			 << " type " << sdtype << " and mode " << sdmode;
     pendingShutdown.stop();
-    if( dialogActive )
-        return;
     if( state >= Shutdown ) // already performing shutdown
         return;
     if( state != Idle ) // performing startup
@@ -160,129 +139,27 @@ void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
         (confirm == KWorkSpace::ShutdownConfirmYes) ? false :
     (confirm == KWorkSpace::ShutdownConfirmNo) ? true :
                 !cg.readEntry( "confirmLogout", true );
-    bool choose = false;
-    bool maysd = false;
-    if (cg.readEntry( "offerShutdown", true ) && KDisplayManager().canShutdown())
-        maysd = true;
-    if (!maysd) {
-        if (sdtype != KWorkSpace::ShutdownTypeNone &&
-            sdtype != KWorkSpace::ShutdownTypeDefault &&
-            logoutConfirmed)
-            return; /* unsupported fast shutdown */
-        sdtype = KWorkSpace::ShutdownTypeNone;
-    } else if (sdtype == KWorkSpace::ShutdownTypeDefault) {
-        sdtype = (KWorkSpace::ShutdownType)
-                cg.readEntry( "shutdownType", (int)KWorkSpace::ShutdownTypeNone );
-        choose = true;
-    }
-    if (sdmode == KWorkSpace::ShutdownModeDefault)
-        sdmode = KWorkSpace::ShutdownModeInteractive;
 
-	qCDebug(KSMSERVER) << "After modifications confirm is " << confirm
-			 << " type is " << sdtype << " and mode " << sdmode;
-    QString bopt;
-    if ( !logoutConfirmed ) {
-        int pipeFds[2];
-        if (pipe(pipeFds) != 0) {
-            return;
+    if (!logoutConfirmed) {
+        OrgKdeLogoutPromptInterface logoutPrompt(QStringLiteral("org.kde.LogoutPrompt"),
+                                                 QStringLiteral("/LogoutPrompt"),
+                                                 QDBusConnection::sessionBus());
+        switch (sdtype) {
+        case KWorkSpace::ShutdownTypeHalt:
+            logoutPrompt.promptShutDown();
+            break;
+        case KWorkSpace::ShutdownTypeReboot:
+            logoutPrompt.promptReboot();
+            break;
+        case KWorkSpace::ShutdownTypeNone:
+            Q_FALLTHROUGH();
+        default:
+            logoutPrompt.promptLogout();
+            break;
         }
-        QProcess *p = new QProcess(this);
-        p->setProgram(QStringLiteral(LOGOUT_GREETER_BIN));
-        QStringList arguments;
-        if (maysd) {
-            arguments << QStringLiteral("--shutdown-allowed");
-        }
-        if (choose) {
-            arguments << QStringLiteral("--choose");
-        }
-        if (sdtype != KWorkSpace::ShutdownTypeDefault) {
-            arguments << QStringLiteral("--mode");
-            switch (sdtype) {
-            case KWorkSpace::ShutdownTypeHalt:
-                arguments << QStringLiteral("shutdown");
-                break;
-            case KWorkSpace::ShutdownTypeReboot:
-                arguments << QStringLiteral("reboot");
-                break;
-            case KWorkSpace::ShutdownTypeNone:
-            default:
-                // logout
-                arguments << QStringLiteral("logout");
-                break;
-            }
-        }
-        arguments << QStringLiteral("--mode-fd");
-        arguments << QString::number(pipeFds[1]);
-        p->setArguments(arguments);
-
-        const int resultPipe = pipeFds[0];
-        connect(p, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error), this,
-            [this, resultPipe, sdmode, sdtype] {
-                close(resultPipe);
-                dialogActive = false;
-                auto fallbackPrompt = new QMessageBox;
-                fallbackPrompt->setAttribute(Qt::WA_DeleteOnClose, true);
-                fallbackPrompt->setStandardButtons(QMessageBox::Ok | QMessageBox::Cancel);
-                switch (sdtype) {
-                case KWorkSpace::ShutdownTypeHalt:
-                    //i18nd is used as this patch was backported to an LTS with stable translations
-                    fallbackPrompt->setText(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down"));
-                    break;
-                case KWorkSpace::ShutdownTypeReboot:
-                    fallbackPrompt->setText(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Reboot"));
-                    break;
-                case KWorkSpace::ShutdownTypeNone:
-                    Q_FALLTHROUGH();
-                default:
-                    fallbackPrompt->setText(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Logout"));
-                    break;
-                }
-                connect(fallbackPrompt, &QMessageBox::buttonClicked, this, [=](QAbstractButton *button) {
-                    if (button != fallbackPrompt->button(QMessageBox::Ok)) {
-                        return;
-                    }
-                    shutdownType = sdtype;
-                    shutdownMode = sdmode;
-                    bootOption = QString();
-                    performLogout();
-                });
-                fallbackPrompt->show();
-            }
-        );
-
-        connect(p, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this,
-            [this, resultPipe, sdmode, p] (int exitCode) {
-                p->deleteLater();
-                dialogActive = false;
-                if (exitCode != 0) {
-                    close(resultPipe);
-                    return;
-                }
-                QFutureWatcher<bool> *watcher = new QFutureWatcher<bool>();
-                QObject::connect(watcher, &QFutureWatcher<bool>::finished, this,
-                    [this, sdmode, watcher] {
-                        const bool result = watcher->result();
-                        if (!result) {
-                            // it failed to read, don't logout
-                            return;
-                        }
-                        shutdownMode = sdmode;
-                        bootOption = QString();
-                        performLogout();
-                    }, Qt::QueuedConnection);
-                QObject::connect(watcher, &QFutureWatcher<void>::finished, watcher, &QFutureWatcher<bool>::deleteLater, Qt::QueuedConnection);
-                watcher->setFuture(QtConcurrent::run(readFromPipe, resultPipe));
-            }
-        );
-
-        dialogActive = true;
-        p->start();
-        close(pipeFds[1]);
     } else {
         shutdownType = sdtype;
         shutdownMode = sdmode;
-        bootOption = bopt;
-
         performLogout();
     }
 }
@@ -349,7 +226,6 @@ void KSMServer::performLogout()
     qCDebug(KSMSERVER) << "clients should be empty, " << clients.isEmpty();
     if ( clients.isEmpty() )
         completeShutdownOrCheckpoint();
-    dialogActive = false;
 }
 
 void KSMServer::pendingShutdownTimeout()
@@ -359,7 +235,7 @@ void KSMServer::pendingShutdownTimeout()
 
 void KSMServer::saveCurrentSession()
 {
-    if ( state != Idle || dialogActive )
+    if ( state != Idle )
         return;
 
     if ( currentSession().isEmpty() || currentSession() == QString::fromLocal8Bit( SESSION_PREVIOUS_LOGOUT ) )
@@ -392,7 +268,7 @@ void KSMServer::saveCurrentSession()
 
 void KSMServer::saveCurrentSessionAs( const QString &session )
 {
-    if ( state != Idle || dialogActive )
+    if ( state != Idle )
         return;
     sessionGroup = QStringLiteral( "Session: " ) + session;
     saveCurrentSession();

@@ -43,22 +43,27 @@ class Greeter : public QObject
 {
     Q_OBJECT
 public:
-    Greeter(int fd, bool shutdownAllowed, bool choose, KWorkSpace::ShutdownType type);
+    Greeter(bool shutdownAllowed);
     ~Greeter() override;
 
     void init();
 
     bool eventFilter(QObject *watched, QEvent *event) override;
 
+public Q_SLOTS:
+    void promptLogout();
+    void promptShutDown();
+    void promptReboot();
+
 private:
     void adoptScreen(QScreen *screen);
     void rejected();
     void setupWaylandIntegration();
 
-    int m_fd;
     bool m_shutdownAllowed;
-    bool m_choose;
-    KWorkSpace::ShutdownType m_shutdownType;
+    bool m_running = false;
+
+    KWorkSpace::ShutdownType m_shutdownType = KWorkSpace::ShutdownTypeHalt;
     QVector<KSMShutdownDlg *> m_dialogs;
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
 };

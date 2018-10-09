@@ -31,6 +31,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "shutdowndlg.h"
 
+#include "logoutpromptadaptor.h"
+#include "ksmserveriface.h"
+
 #include <KQuickAddons/QtQuickSettings>
 #include <KWindowSystem>
 
@@ -38,16 +41,14 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KWayland/Client/registry.h>
 #include <KWayland/Client/plasmashell.h>
 
-#include <unistd.h>
-
-Greeter::Greeter(int fd, bool shutdownAllowed, bool choose, KWorkSpace::ShutdownType type)
+Greeter::Greeter(bool shutdownAllowed)
     : QObject()
-    , m_fd(fd)
     , m_shutdownAllowed(shutdownAllowed)
-    , m_choose(choose)
-    , m_shutdownType(type)
     , m_waylandPlasmaShell(nullptr)
 {
+    new LogoutPromptAdaptor(this);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/LogoutPrompt"), this);
+    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.LogoutPrompt"));
 }
 
 Greeter::~Greeter()
@@ -83,12 +84,13 @@ void Greeter::init()
         adoptScreen(screen);
     }
     connect(qApp, &QGuiApplication::screenAdded, this, &Greeter::adoptScreen);
+    m_running = true;
 }
 
 void Greeter::adoptScreen(QScreen* screen)
 {
     // TODO: last argument is the theme, maybe add command line option for it?
-    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownAllowed, m_choose, m_shutdownType, m_waylandPlasmaShell);
+    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownAllowed, m_shutdownType, m_waylandPlasmaShell);
     w->installEventFilter(this);
     m_dialogs << w;
 
@@ -97,18 +99,11 @@ void Greeter::adoptScreen(QScreen* screen)
         w->deleteLater();
     });
     connect(w, &KSMShutdownDlg::rejected, this, &Greeter::rejected);
-    connect(w, &KSMShutdownDlg::accepted, this,
-        [w, this] {
-            if (m_fd != -1) {
-                QFile f;
-                if (f.open(m_fd, QFile::WriteOnly, QFile::AutoCloseHandle)) {
-                    f.write(QByteArray::number(int(w->shutdownType())));
-                    f.close();
-                }
-            }
-            QApplication::quit();
-        }
-    );
+    connect(w, &KSMShutdownDlg::accepted, this, [w]() {
+        OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
+        ksmserver.logout(KWorkSpace::ShutdownConfirmNo, w->shutdownType(), KWorkSpace::ShutdownModeDefault);
+        QApplication::exit(1);
+    });
     w->setScreen(screen);
     w->setGeometry(screen->geometry());
     w->init();
@@ -116,9 +111,6 @@ void Greeter::adoptScreen(QScreen* screen)
 
 void Greeter::rejected()
 {
-    if (m_fd != -1) {
-        close(m_fd);
-    }
     QApplication::exit(1);
 }
 
@@ -139,3 +131,32 @@ bool Greeter::eventFilter(QObject *watched, QEvent *event)
     }
     return false;
 }
+
+void Greeter::promptLogout()
+{
+    if (m_running) {
+        return;
+    }
+    m_shutdownType = KWorkSpace::ShutdownTypeLogout;
+    init();
+}
+
+void Greeter::promptShutDown()
+{
+    if (m_running) {
+        return;
+    }
+    m_shutdownType = KWorkSpace::ShutdownTypeHalt;
+    init();
+}
+
+void Greeter::promptReboot()
+{
+    if (m_running) {
+        return;
+    }
+    m_shutdownType = KWorkSpace::ShutdownTypeReboot;
+    init();
+}
+
+

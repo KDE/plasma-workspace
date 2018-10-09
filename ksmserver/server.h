@@ -239,7 +239,6 @@ private:
         ClosingSubSession, KillingSubSession, RestoringSubSession
         };
     State state;
-    bool dialogActive;
     bool saveSession;
     int wmPhase1WaitingCount;
     int saveType;
@@ -289,7 +288,6 @@ private:
     QList<KSMClient*> clientsToSave;
 
     int sockets[2];
-    friend bool readFromPipe(int pipe);
 };
 
 #endif

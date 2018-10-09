@@ -68,8 +68,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Q_DECLARE_METATYPE(Solid::PowerManagement::SleepState)
 
-KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
-                                bool maysd, bool choose, KWorkSpace::ShutdownType sdtype,
+KSMShutdownDlg::KSMShutdownDlg(QWindow* parent,
+                                bool maysd, KWorkSpace::ShutdownType sdtype,
                                 KWayland::Client::PlasmaShell *plasmaShell)
   : QuickViewSharedEngine(parent),
     m_result(false),
@@ -100,7 +100,6 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
     //windowContainer->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     QQmlContext *context = rootContext();
     context->setContextProperty(QStringLiteral("maysd"), maysd);
-    context->setContextProperty(QStringLiteral("choose"), choose);
     context->setContextProperty(QStringLiteral("sdtype"), sdtype);
 
     QQmlPropertyMap *mapShutdownType = new QQmlPropertyMap(this);
@@ -121,6 +120,10 @@ KSMShutdownDlg::KSMShutdownDlg( QWindow* parent,
 
     // TODO KF6 remove, used to read "BootManager" from kdmrc
     context->setContextProperty(QStringLiteral("bootManager"), QStringLiteral("None"));
+
+    //TODO KF6 remove. Unused
+    context->setContextProperty(QStringLiteral("choose"), false);
+
 
     // TODO KF6 remove, used to call KDisplayManager::bootOptions
     QStringList rebootOptions;
