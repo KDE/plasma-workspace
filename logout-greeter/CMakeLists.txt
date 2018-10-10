@@ -1,4 +1,4 @@
-set(LOGOUT_GREETER_SRCS main.cpp shutdowndlg.cpp)
+set(LOGOUT_GREETER_SRCS main.cpp greeter.cpp shutdowndlg.cpp)
 ecm_qt_declare_logging_category(LOGOUT_GREETER_SRCS HEADER debug.h
                                 IDENTIFIER LOGOUT_GREETER
                                 CATEGORY_NAME kde.logout_greeter
