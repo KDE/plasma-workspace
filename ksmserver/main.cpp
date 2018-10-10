@@ -285,15 +285,6 @@ extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
 
     parser.process(*a);
 
-//TODO: should we still use this?
-//    if( !QDBusConnection::sessionBus().interface()->
-//            registerService( QStringLiteral( "org.kde.ksmserver" ),
-//                             QDBusConnectionInterface::DontQueueService ) )
-//    {
-//        qCWarning(KSMSERVER, "Could not register with D-BUS. Aborting.");
-//        return 1;
-//    }
-
     QString wm = parser.value(wmOption);
 
     bool only_local = !parser.isSet(nolocalOption);
