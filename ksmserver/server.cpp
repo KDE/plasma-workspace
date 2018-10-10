@@ -633,7 +633,6 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
 
     selectWm( windowManager );
 
-    connect(&startupSuspendTimeoutTimer, &QTimer::timeout, this, &KSMServer::startupSuspendTimeout);
     connect(&pendingShutdown, &QTimer::timeout, this, &KSMServer::pendingShutdownTimeout);
 
     only_local = flags.testFlag(InitFlag::OnlyLocal);

@@ -117,9 +117,6 @@ public:
                    KWorkSpace::ShutdownType sdtype,
                    KWorkSpace::ShutdownMode sdmode );
 
-    virtual void suspendStartup( const QString &app );
-    virtual void resumeStartup( const QString &app );
-
     void launchWM( const QList< QStringList >& wmStartCommands );
 
 public Q_SLOTS:
@@ -140,7 +137,6 @@ private Q_SLOTS:
     void autoStart1();
     void autoStart2();
     void tryRestoreNext();
-    void startupSuspendTimeout();
     void wmProcessChange();
     void autoStart0Done();
     void autoStart1Done();
@@ -199,9 +195,7 @@ private:
     WId windowWmClientLeader(WId w);
     QByteArray windowSessionId(WId w, WId leader);
 
-    bool checkStartupSuspend();
     void finishStartup();
-    void resumeStartupInternal();
     void setupShortcuts();
 
     void runShutdownScripts();
@@ -249,7 +243,6 @@ private:
     bool saveSession;
     int wmPhase1WaitingCount;
     int saveType;
-    QMap< QString, int > startupSuspendCount;
 
     KWorkSpace::ShutdownType shutdownType;
     KWorkSpace::ShutdownMode shutdownMode;
@@ -265,7 +258,6 @@ private:
     QTimer protectionTimer;
     QTimer restoreTimer;
     QString xonCommand;
-    QTimer startupSuspendTimeoutTimer;
     bool waitAutoStart2;
     bool waitKcmInit2;
     QTimer pendingShutdown;

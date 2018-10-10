@@ -249,8 +249,6 @@ void KSMServer::autoStart0()
 {
     if( state != LaunchingWM )
         return;
-    if( !checkStartupSuspend())
-        return;
     state = AutoStart0;
 #ifdef KSMSERVER_STARTUP_DEBUG1
     qCDebug(KSMSERVER) << t.elapsed();
@@ -262,8 +260,6 @@ void KSMServer::autoStart0()
 void KSMServer::autoStart0Done()
 {
     if( state != AutoStart0 )
-        return;
-    if( !checkStartupSuspend())
         return;
     qCDebug(KSMSERVER) << "Autostart 0 done";
 #ifdef KSMSERVER_STARTUP_DEBUG1
@@ -325,8 +321,6 @@ void KSMServer::autoStart1Done()
 {
     if( state != AutoStart1 )
         return;
-    if( !checkStartupSuspend())
-        return;
     qCDebug(KSMSERVER) << "Autostart 1 done";
     setupShortcuts(); // done only here, because it needs kglobalaccel :-/
     lastAppStarted = 0;
@@ -353,7 +347,6 @@ void KSMServer::tryRestoreNext()
     if( state != Restoring && state != RestoringSubSession )
         return;
     restoreTimer.stop();
-    startupSuspendTimeoutTimer.stop();
     KConfigGroup config(KSharedConfig::openConfig(), sessionGroup );
 
     while ( lastAppStarted < appsToStart ) {
@@ -405,8 +398,6 @@ void KSMServer::tryRestoreNext()
 void KSMServer::autoStart2()
 {
     if( state != Restoring )
-        return;
-    if( !checkStartupSuspend())
         return;
     state = FinishingStartup;
 #ifdef KSMSERVER_STARTUP_DEBUG1
@@ -572,67 +563,6 @@ void KSMServer::finishStartup()
 
     state = Idle;
     setupXIOErrorHandler(); // From now on handle X errors as normal shutdown.
-}
-
-bool KSMServer::checkStartupSuspend()
-{
-    if( startupSuspendCount.isEmpty())
-        return true;
-    // wait for the phase to finish
-    if( !startupSuspendTimeoutTimer.isActive())
-    {
-        startupSuspendTimeoutTimer.setSingleShot( true );
-        startupSuspendTimeoutTimer.start( 10000 );
-    }
-    return false;
-}
-
-void KSMServer::suspendStartup( const QString &app )
-{
-    if( !startupSuspendCount.contains( app ))
-        startupSuspendCount[ app ] = 0;
-    ++startupSuspendCount[ app ];
-}
-
-void KSMServer::resumeStartup( const QString &app )
-{
-    if( !startupSuspendCount.contains( app ))
-        return;
-    if( --startupSuspendCount[ app ] == 0 ) {
-        startupSuspendCount.remove( app );
-        if( startupSuspendCount.isEmpty() && startupSuspendTimeoutTimer.isActive()) {
-            startupSuspendTimeoutTimer.stop();
-            resumeStartupInternal();
-        }
-    }
-}
-
-void KSMServer::startupSuspendTimeout()
-{
-    qCDebug(KSMSERVER) << "Startup suspend timeout:" << state;
-    resumeStartupInternal();
-}
-
-void KSMServer::resumeStartupInternal()
-{
-    startupSuspendCount.clear();
-    switch( state ) {
-        case LaunchingWM:
-            autoStart0();
-          break;
-        case AutoStart0:
-            autoStart0Done();
-          break;
-        case AutoStart1:
-            autoStart1Done();
-          break;
-        case Restoring:
-            autoStart2();
-          break;
-        default:
-            qCWarning(KSMSERVER) << "Unknown resume startup state" ;
-          break;
-    }
 }
 
 void KSMServer::upAndRunning( const QString& msg )
