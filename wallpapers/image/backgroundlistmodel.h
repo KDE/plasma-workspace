@@ -23,6 +23,7 @@
 #include "image.h"
 
 #include <QAbstractListModel>
+#include <QCache>
 #include <QPixmap>
 #include <QRunnable>
 #include <QThread>
@@ -31,8 +32,6 @@
 
 #include <KDirWatch>
 #include <KFileItem>
-
-#include <kimagecache.h>
 
 #include <KPackage/PackageStructure>
 
@@ -115,7 +114,7 @@ private:
     QHash<QString, QSize> m_sizeCache;
     QHash<QUrl, QPersistentModelIndex> m_previewJobs;
     KDirWatch m_dirwatch;
-    KImageCache* m_imageCache;
+    QCache<QString, QPixmap> m_imageCache;
 
     QString m_findToken;
     int m_screenshotSize;
