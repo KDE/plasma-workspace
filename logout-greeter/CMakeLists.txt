@@ -1,5 +1,10 @@
-set(KSMSERVER_LOGOUT_GREETER_SRCS main.cpp shutdowndlg.cpp ../ksmserver_debug.cpp)
-add_executable(ksmserver-logout-greeter ${KSMSERVER_LOGOUT_GREETER_SRCS})
+set(LOGOUT_GREETER_SRCS main.cpp shutdowndlg.cpp)
+ecm_qt_declare_logging_category(LOGOUT_GREETER_SRCS HEADER debug.h
+                                IDENTIFIER LOGOUT_GREETER
+                                CATEGORY_NAME kde.logout_greeter
+                                DEFAULT_SEVERITY Info)
+
+add_executable(ksmserver-logout-greeter ${LOGOUT_GREETER_SRCS})
 target_link_libraries(ksmserver-logout-greeter
     PW::KWorkspace
     Qt5::Widgets

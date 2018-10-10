@@ -10,7 +10,6 @@ add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-add_subdirectory(logout-greeter)
 if(BUILD_TESTING)
    add_subdirectory(tests)
 endif()

@@ -1,6 +1,4 @@
 /*****************************************************************
-ksmserver - the KDE session management server
-
 Copyright 2000 Matthias Ettrich <ettrich@kde.org>
 Copyright 2007 Urs Wolfer <uwolfer @ kde.org>
 
@@ -24,7 +22,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ******************************************************************/
 
 #include "shutdowndlg.h"
-#include "ksmserver_debug.h"
 
 #include <QApplication>
 #include <QQuickItem>
@@ -64,6 +61,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <fixx11h.h>
 
 #include <config-workspace.h>
+#include <debug.h>
 
 #include <KWayland/Client/surface.h>
 #include <KWayland/Client/plasmashell.h>
@@ -155,15 +153,14 @@ void KSMShutdownDlg::init()
     fileName = package.filePath("logoutmainscript");
 
     if (QFile::exists(fileName)) {
-        //qCDebug(KSMSERVER) << "Using QML theme" << fileName;
         setSource(package.fileUrl("logoutmainscript"));
     } else {
-        qCWarning(KSMSERVER) << "Couldn't find a theme for the Shutdown dialog" << fileName;
+        qCWarning(LOGOUT_GREETER) << "Couldn't find a theme for the Shutdown dialog" << fileName;
         return;
     }
 
     if(!errors().isEmpty()) {
-        qCWarning(KSMSERVER) << errors();
+        qCWarning(LOGOUT_GREETER) << errors();
     }
 
     connect(rootObject(), SIGNAL(logoutRequested()), SLOT(slotLogout()));
