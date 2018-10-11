@@ -1,5 +1,9 @@
 [KNewStuff3]
 Name=Wallpaper Plugins
+Name[ca]=Connectors de fons de pantalla
+Name[sv]=Insticksprogram för skrivbordsunderlägg
+Name[uk]=Додатки зображень тла
+Name[x-test]=xxWallpaper Pluginsxx
 
 ProvidersUrl=https://download.kde.org/ocs/providers.xml
 Categories=Plasma Wallpaper Plugin
