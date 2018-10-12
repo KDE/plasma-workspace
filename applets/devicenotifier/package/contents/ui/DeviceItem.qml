@@ -119,6 +119,19 @@ MouseArea {
         }
     }
 
+    Timer {
+        id: updateStorageSpaceTimer
+        interval: 5000
+        repeat: true
+        running: mounted && plasmoid.expanded
+        triggeredOnStart: true     // Update the storage space as soon as we open the plasmoid
+        onTriggered: {
+            var service = sdSource.serviceForSource(udi);
+            var operation = service.operationDescription("updateFreespace");
+            service.startOperationCall(operation);
+        }
+    }
+
     RowLayout {
         id: row
         anchors.horizontalCenter: parent.horizontalCenter
@@ -239,8 +252,6 @@ MouseArea {
                 font.pointSize: theme.smallestFont.pointSize
                 visible: deviceItem.state != 0 || (!actionsList.visible && !deviceItem.hasMessage)
                 text: {
-                    // FIXME: state changes do not reach the plasmoid if the
-                    // device was already attached when the plasmoid was initialized
                     if (deviceItem.state == 0) {
                         if (!hpSource.data[udi]) {
                             return ""
