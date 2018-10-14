@@ -110,12 +110,22 @@ MouseArea {
         }
     }
 
-    ColumnLayout {
+    Item {
         anchors.fill: parent
 
+        PlasmaComponents.ToolButton {
+            id: unmountAll
+            visible: devicenotifier.mountedRemovables > 1;
+            anchors.right: parent.right
+            iconSource: "media-eject"
+            tooltip: i18n("Click to safely remove all devices")
+            text: i18n("Remove all")
+            implicitWidth: minimumWidth
+        }
+
         PlasmaExtras.ScrollArea {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
+            anchors.fill: parent
+            anchors.top: unmountAll.top
 
             ListView {
                 id: notifierDialog

@@ -48,6 +48,8 @@ Item {
 
     property bool itemClicked: false
     property int currentIndex: -1
+    property var connectedRemovables: []
+    property int mountedRemovables: 0
 
     // QTBUG-50380: As soon as the item gets removed from the model, all of ListView's
     // properties (count, contentHeight) pretend the delegate doesn't exist anymore
@@ -116,6 +118,10 @@ Item {
             connectSource(source);
             last = source;
             processLastDevice(true);
+            if (data[source].Removable) {
+                devicenotifier.connectedRemovables.push(source);
+                devicenotifier.connectedRemovables = devicenotifier.connectedRemovables;
+            }
         }
 
         onSourceRemoved: {
@@ -123,10 +129,24 @@ Item {
                 expandedDevice = "";
             }
             disconnectSource(source);
+            var index = devicenotifier.connectedRemovables.indexOf(source);
+            if (index >= 0) {
+                devicenotifier.connectedRemovables.splice(index, 1);
+                devicenotifier.connectedRemovables = devicenotifier.connectedRemovables;
+            }
         }
 
         onDataChanged: {
             processLastDevice(true);
+            var counter = 0;
+            for (var i = 0; i < devicenotifier.connectedRemovables.length; i++) {
+                if (isMounted(devicenotifier.connectedRemovables[i])) {
+                    counter++;
+                }
+            }
+            if (counter != devicenotifier.mountedRemovables) {
+                devicenotifier.mountedRemovables = counter;
+            }
         }
 
         onNewData: {
