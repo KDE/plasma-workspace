@@ -554,7 +554,7 @@ bool SolidDeviceEngine::updateStorageSpace(const QString &udi)
         QTimer *timer = new QTimer(this);
         timer->setSingleShot(true);
         connect(timer, &QTimer::timeout, [path]() {
-            KNotification::event(KNotification::Error, i18n("Filesystem is not responding", path),
+            KNotification::event(KNotification::Error, i18n("Filesystem is not responding"),
                                  i18n("Filesystem mounted at '%1' is not responding", path));
         });
 
