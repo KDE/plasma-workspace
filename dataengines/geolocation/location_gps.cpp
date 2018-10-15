@@ -51,7 +51,9 @@ void Gpsd::run()
     while (!m_abort) {
         Plasma::DataEngine::Data d;
 
-#if GPSD_API_MAJOR_VERSION >= 5
+#if GPSD_API_MAJOR_VERSION >= 7
+        if (gps_read(m_gpsdata, NULL, 0) != -1) {
+#elif GPSD_API_MAJOR_VERSION >= 5
 	if (gps_read(m_gpsdata) != -1) {
 #else
         if (gps_poll(m_gpsdata) != -1) {
