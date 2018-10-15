@@ -211,6 +211,7 @@ PlasmaCore.ColorScope {
 
             initialItem: MainBlock {
                 id: mainBlock
+                lockScreenUiVisible: lockScreenRoot.uiVisible
 
                 showUserList: userList.y + mainStack.y > 0
 
