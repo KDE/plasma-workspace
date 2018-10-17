@@ -30,6 +30,7 @@ import "../components"
 SessionManagementScreen {
 
     property Item mainPasswordBox: passwordBox
+    property bool lockScreenUiVisible: false
 
     //the y position that should be ensured visible when the on screen keyboard is visible
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
@@ -61,7 +62,11 @@ SessionManagementScreen {
         enabled: !authenticator.graceLocked
         revealPasswordButtonShown: true
 
-        onAccepted: startLogin()
+        onAccepted: {
+            if (lockScreenUiVisible) {
+                startLogin();
+            }
+        }
 
         //if empty and left or right is pressed change selection in user switch
         //this cannot be in keys.onLeftPressed as then it doesn't reach the password box
