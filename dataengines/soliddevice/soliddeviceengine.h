@@ -81,7 +81,7 @@ private:
     QMap<QString, Solid::Device> m_devicemap;
     //udi, corresponding encrypted container udi;
     QMap<QString, QString> m_encryptedContainerMap;
-    //path, corresponding timer
+    //path, for pending file system free space jobs
     QSet<QString> m_paths;
     DeviceSignalMapManager *m_signalmanager;
 
