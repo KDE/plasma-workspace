@@ -373,15 +373,7 @@ void Klipper::showPopupMenu( QMenu* menu )
 {
     Q_ASSERT( menu != nullptr );
 
-    QSize size = menu->sizeHint(); // geometry is not valid until it's shown
-    QPoint pos = QCursor::pos();
-    // ### We can't know where the systray icon is (since it can be hidden or shown
-    //     in several places), so the cursor position is the only option.
-
-    if ( size.height() < pos.y() )
-        pos.ry() -= size.height();
-
-    menu->popup(pos);
+    menu->popup(QCursor::pos());
 }
 
 bool Klipper::loadHistory() {
