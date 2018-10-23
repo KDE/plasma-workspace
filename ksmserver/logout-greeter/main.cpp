@@ -25,6 +25,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QCommandLineParser>
 #include <QDebug>
 #include <QScreen>
+#include <QLibraryInfo>
 #include "shutdowndlg.h"
 
 #include <KQuickAddons/QtQuickSettings>
@@ -163,8 +164,10 @@ bool Greeter::eventFilter(QObject *watched, QEvent *event)
 
 int main(int argc, char *argv[])
 {
-    // Qt does not currently (5.9.4) support fullscreen on xdg_shell v6.
-    qputenv("QT_WAYLAND_SHELL_INTEGRATION", "wl-shell");
+    if (QLibraryInfo::version() < QVersionNumber(5, 12)) {
+        // Before Qt 5.12, the xdg-shell v6 integration does not support fullscreen.
+        qputenv("QT_WAYLAND_SHELL_INTEGRATION", "wl-shell");
+    }
 
     KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);
