@@ -21,6 +21,13 @@ set(krunner_bookmarks_common_SRCS
     fetchsqlite.cpp
 )
 
+ecm_qt_declare_logging_category(krunner_bookmarks_common_SRCS
+    HEADER bookmarks_debug.h
+    IDENTIFIER RUNNER_BOOKMARKS
+    CATEGORY_NAME org.kde.plasma.runner.bookmarks
+    DEFAULT_SEVERITY Warning
+)
+
 set(krunner_bookmarksrunner_SRCS
     ${krunner_bookmarks_common_SRCS}
     bookmarksrunner.cpp
