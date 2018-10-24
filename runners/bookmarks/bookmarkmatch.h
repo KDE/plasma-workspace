@@ -23,7 +23,6 @@
 #define BOOKMARKMATCH_H
 
 #include <QString>
-#include <QIcon>
 #include <QList>
 #include <krunner/querymatch.h>
 
