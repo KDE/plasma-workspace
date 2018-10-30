@@ -617,7 +617,6 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
 
     new KSMServerInterfaceAdaptor( this );
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/KSMServer"), this);
-    kcminitSignals = nullptr;
     the_server = this;
     clean = false;
 
@@ -1067,6 +1066,182 @@ void KSMServer::setupShortcuts()
         connect(a, &QAction::triggered, this, &KSMServer::rebootWithoutConfirmation);
     }
 }
+
+/*!  Restores the previous session. Ensures the window manager is
+  running (if specified).
+ */
+void KSMServer::restoreSession( const QString &sessionName )
+{
+    if( state != Idle )
+        return;
+#ifdef KSMSERVER_STARTUP_DEBUG1
+    t.start();
+#endif
+    state = LaunchingWM;
+
+    qCDebug(KSMSERVER) << "KSMServer::restoreSession " << sessionName;
+    KSharedConfig::Ptr config = KSharedConfig::openConfig();
+
+    sessionGroup = QStringLiteral("Session: ") + sessionName;
+    KConfigGroup configSessionGroup( config, sessionGroup);
+
+    int count =  configSessionGroup.readEntry( "count", 0 );
+    appsToStart = count;
+
+    // find all commands to launch the wm in the session
+    QList<QStringList> wmStartCommands;
+    if ( !wm.isEmpty() ) {
+        for ( int i = 1; i <= count; i++ ) {
+            QString n = QString::number(i);
+            if ( isWM( configSessionGroup.readEntry( QStringLiteral("program")+n, QString())) ) {
+                wmStartCommands << configSessionGroup.readEntry( QStringLiteral("restartCommand")+n, QStringList() );
+            }
+        }
+    }
+    if( wmStartCommands.isEmpty()) // otherwise use the configured default
+        wmStartCommands << wmCommands;
+
+    launchWM( wmStartCommands );
+}
+
+void KSMServer::launchWM( const QList< QStringList >& wmStartCommands )
+{
+    assert( state == LaunchingWM );
+
+    if (!(qEnvironmentVariableIsSet("WAYLAND_DISPLAY") || qEnvironmentVariableIsSet("WAYLAND_SOCKET"))) {
+        // when we have a window manager, we start it first and give
+        // it some time before launching other processes. Results in a
+        // visually more appealing startup.
+        wmProcess = startApplication( wmStartCommands[ 0 ], QString(), QString(), true );
+        connect( wmProcess, SIGNAL(error(QProcess::ProcessError)), SLOT(wmProcessChange()));
+        connect( wmProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(wmProcessChange()));
+    }
+    emit windowManagerLoaded();
+}
+
+void KSMServer::wmProcessChange()
+{
+    if( state != LaunchingWM )
+    { // don't care about the process when not in the wm-launching state anymore
+        wmProcess = nullptr;
+        return;
+    }
+    if( wmProcess->state() == QProcess::NotRunning )
+    { // wm failed to launch for some reason, go with kwin instead
+        qCWarning(KSMSERVER) << "Window manager" << wm << "failed to launch";
+        if( wm == QStringLiteral( KWIN_BIN ) )
+            return; // uhoh, kwin itself failed
+        qCDebug(KSMSERVER) << "Launching KWin";
+        wm = QStringLiteral( KWIN_BIN );
+        wmCommands = ( QStringList() << QStringLiteral( KWIN_BIN ) );
+        // launch it
+        launchWM( QList< QStringList >() << wmCommands );
+        return;
+    }
+}
+
+/*!
+  Starts the default session.
+
+  Currently, that's the window manager only (if specified).
+ */
+void KSMServer::startDefaultSession()
+{
+    if( state != Idle )
+        return;
+    state = LaunchingWM;
+#ifdef KSMSERVER_STARTUP_DEBUG1
+    t.start();
+#endif
+    sessionGroup = QString();
+    launchWM( QList< QStringList >() << wmCommands );
+}
+
+void KSMServer::restoreSubSession( const QString& name )
+{
+    sessionGroup = QStringLiteral( "SubSession: " ) + name;
+
+    KConfigGroup configSessionGroup( KSharedConfig::openConfig(), sessionGroup);
+    int count =  configSessionGroup.readEntry( "count", 0 );
+    appsToStart = count;
+    lastAppStarted = 0;
+    lastIdStarted.clear();
+
+    state = RestoringSubSession;
+    tryRestoreNext();
+}
+
+void KSMServer::clientSetProgram( KSMClient* client )
+{
+    if( client->program() == wm ) {
+        emit windowManagerLoaded();
+    }
+}
+
+void KSMServer::clientRegistered( const char* previousId )
+{
+    if ( previousId && lastIdStarted == QString::fromLocal8Bit( previousId ) )
+        tryRestoreNext();
+}
+
+void KSMServer::tryRestoreNext()
+{
+    if( state != Restoring && state != RestoringSubSession )
+        return;
+    restoreTimer.stop();
+    KConfigGroup config(KSharedConfig::openConfig(), sessionGroup );
+
+    while ( lastAppStarted < appsToStart ) {
+        lastAppStarted++;
+        QString n = QString::number(lastAppStarted);
+        QString clientId = config.readEntry( QStringLiteral("clientId")+n, QString() );
+        bool alreadyStarted = false;
+        foreach ( KSMClient *c, clients ) {
+            if ( QString::fromLocal8Bit( c->clientId() ) == clientId ) {
+                alreadyStarted = true;
+                break;
+            }
+        }
+        if ( alreadyStarted )
+            continue;
+
+        QStringList restartCommand = config.readEntry( QStringLiteral("restartCommand")+n, QStringList() );
+        if ( restartCommand.isEmpty() ||
+             (config.readEntry( QStringLiteral("restartStyleHint")+n, 0 ) == SmRestartNever)) {
+            continue;
+        }
+        if ( isWM( config.readEntry( QStringLiteral("program")+n, QString())) )
+            continue; // wm already started
+        if( config.readEntry( QStringLiteral( "wasWm" )+n, false ))
+            continue; // it was wm before, but not now, don't run it (some have --replace in command :(  )
+        startApplication( restartCommand,
+                          config.readEntry( QStringLiteral("clientMachine")+n, QString() ),
+                          config.readEntry( QStringLiteral("userId")+n, QString() ));
+        lastIdStarted = clientId;
+        if ( !lastIdStarted.isEmpty() ) {
+            restoreTimer.setSingleShot( true );
+            restoreTimer.start( 2000 );
+            return; // we get called again from the clientRegistered handler
+        }
+    }
+
+    //all done
+    appsToStart = 0;
+    lastIdStarted.clear();
+
+    if (state == Restoring) {
+        emit sessionRestored();
+    } else { //subsession
+        emit subSessionOpened();
+    }
+    state = Idle;
+}
+
+void KSMServer::startupDone()
+{
+    state = Idle;
+}
+
 
 void KSMServer::defaultLogout()
 {
