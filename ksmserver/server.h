@@ -267,6 +267,7 @@ private:
 
     int sockets[2];
     friend bool readFromPipe(int pipe);
+    friend class RestoreSessionJob;
     friend class Startup;
 };
 

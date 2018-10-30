@@ -3,6 +3,8 @@ ksmserver - the KDE session management server
 
 Copyright 2000 Matthias Ettrich <ettrich@kde.org>
 Copyright 2005 Lubos Lunak <l.lunak@kde.org>
+Copyright 2018 David Edmundson <davidedmundson@kde.org>
+
 
 relatively small extensions by Oswald Buddenhagen <ob6@inf.tu-dresden.de>
 
@@ -32,69 +34,99 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "startup.h"
 #include "server.h"
 
-#include <QDir>
-#include <Kdelibs4Migration>
 #include <config-workspace.h>
 #include <config-unix.h> // HAVE_LIMITS_H
 #include <config-ksmserver.h>
 
 #include <ksmserver_debug.h>
 
-#include <pwd.h>
-#include <sys/types.h>
-#include <sys/param.h>
-#include <sys/stat.h>
-#ifdef HAVE_SYS_TIME_H
-#include <sys/time.h>
-#endif
-#include <sys/socket.h>
-#include <sys/un.h>
+#include "kcminit_interface.h"
+#include <klauncher_interface.h>
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <signal.h>
-#include <time.h>
-#include <errno.h>
-#include <string.h>
-#include <assert.h>
+#include <KCompositeJob>
+#include <Kdelibs4Migration>
+#include <KIO/DesktopExecParser>
+#include <KJob>
+#include <KNotifyConfig>
+#include <KProcess>
+#include <KService>
 
-#ifdef HAVE_LIMITS_H
-#include <limits.h>
-#endif
-
-#include <QTimer>
-#include <QDBusConnection>
-#include <QDBusMessage>
-#include <QDBusPendingCall>
 #include <phonon/audiooutput.h>
 #include <phonon/mediaobject.h>
 #include <phonon/mediasource.h>
+
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusPendingCall>
+#include <QDir>
 #include <QStandardPaths>
-
-#include <kconfig.h>
-#include <kconfiggroup.h>
-#include <kio/desktopexecparser.h>
-#include <KSharedConfig>
-#include <kprocess.h>
-#include <KNotifyConfig>
-#include <KService>
-
-#include "global.h"
-#include "server.h"
-#include "client.h"
-
+#include <QTimer>
 #include <QX11Info>
 
-//#include "kdesktop_interface.h"
-#include <klauncher_interface.h>
-#include <qstandardpaths.h>
-#include "kcminit_interface.h"
+class Phase: public KCompositeJob
+{
+Q_OBJECT
+public:
+    Phase(QObject *parent):
+        KCompositeJob(parent)
+    {}
 
-//#define KSMSERVER_STARTUP_DEBUG1
+    bool addSubjob(KJob *job) override {
+        bool rc = KCompositeJob::addSubjob(job);
+        job->start();
+        return rc;
+    }
 
-#ifdef KSMSERVER_STARTUP_DEBUG1
-static QTime t;
-#endif
+    void slotResult(KJob *job) override {
+        KCompositeJob::slotResult(job);
+        if (!hasSubjobs()) {
+            emitResult();
+        }
+    }
+};
+
+class StartupPhase0: public Phase
+{
+Q_OBJECT
+public:
+    StartupPhase0(QObject *parent) : Phase(parent)
+    {}
+    void start() override {
+        qCDebug(KSMSERVER) << "Phase 0";
+        addSubjob(new AutoStartAppsJob(0));
+        addSubjob(new KCMInitJob(1));
+    }
+};
+
+class StartupPhase1: public Phase
+{
+Q_OBJECT
+public:
+    StartupPhase1(QObject *parent) : Phase(parent)
+    {}
+    void start() override {
+        qCDebug(KSMSERVER) << "Phase 1";
+        addSubjob(new AutoStartAppsJob(1));
+    }
+};
+
+class StartupPhase2: public Phase
+{
+Q_OBJECT
+public:
+    StartupPhase2(QObject *parent) : Phase(parent)
+    {}
+    void runUserAutostart();
+    bool migrateKDE4Autostart(const QString &folder);
+
+    void start() override {
+        qCDebug(KSMSERVER) << "Phase 2";
+        addSubjob(new AutoStartAppsJob(2));
+        addSubjob(new KDEDInitJob());
+        addSubjob(new KCMInitJob(2));
+        runUserAutostart();
+    }
+};
 
 // Put the notification in its own thread as it can happen that
 // PulseAudio will start initializing with this, so let's not
@@ -152,157 +184,121 @@ class NotificationThread : public QThread
 
 Startup::Startup(KSMServer *parent):
     QObject(parent),
-    ksmserver(parent),
-    state(Waiting)
+    ksmserver(parent)
 {
-    connect(ksmserver, &KSMServer::windowManagerLoaded, this, &Startup::autoStart0);
+    auto phase0 = new StartupPhase0(this);
+    auto phase1 = new StartupPhase1(this);
+    auto phase2 = new StartupPhase2(this);
+    auto restoreSession = new RestoreSessionJob(ksmserver);
+
+    connect(ksmserver, &KSMServer::windowManagerLoaded, phase0, &KJob::start);
+    connect(phase0, &KJob::finished, phase1, &KJob::start);
+
+    connect(phase1, &KJob::finished, this, [=]() {
+        ksmserver->setupShortcuts(); // done only here, because it needs kglobalaccel :-/
+    });
+
+    if (ksmserver->defaultSession()) {
+        connect(phase1, &KJob::finished, phase2, &KJob::start);
+    } else {
+        connect(phase1, &KJob::finished, restoreSession, &KJob::start);
+        connect(restoreSession, &KJob::finished, phase2, &KJob::start);
+    }
+    connect(phase1, &KJob::finished, this, []() {
+        NotificationThread *loginSound = new NotificationThread();
+        connect(loginSound, &NotificationThread::finished, loginSound, &NotificationThread::deleteLater);
+        loginSound->start();});
+    connect(phase2, &KJob::finished, this, &Startup::finishStartup);
 }
 
-void Startup::autoStart0()
+void Startup::upAndRunning( const QString& msg )
 {
-    disconnect(ksmserver, &KSMServer::windowManagerLoaded, this, &Startup::autoStart0);
-    state = AutoStart0;
-#ifdef KSMSERVER_STARTUP_DEBUG1
-    qCDebug(KSMSERVER) << t.elapsed();
-#endif
-
-   autoStart(0);
+    QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
+                                                                         QStringLiteral("/KSplash"),
+                                                                         QStringLiteral("org.kde.KSplash"),
+                                                                         QStringLiteral("setStage"));
+    ksplashProgressMessage.setArguments(QList<QVariant>() << msg);
+    QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
 }
 
-void Startup::autoStart0Done()
+void Startup::finishStartup()
 {
-    if( state != AutoStart0 )
-        return;
-    qCDebug(KSMSERVER) << "Autostart 0 done";
-#ifdef KSMSERVER_STARTUP_DEBUG1
-    qCDebug(KSMSERVER) << t.elapsed();
-#endif
+    qCDebug(KSMSERVER) << "Finished";
+    ksmserver->state = KSMServer::Idle;
+    ksmserver->setupXIOErrorHandler();
+    upAndRunning(QStringLiteral("ready"));
+}
 
-    state = KcmInitPhase1;
-    kcminitSignals = new QDBusInterface( QStringLiteral( "org.kde.kcminit"),
+KCMInitJob::KCMInitJob(int phase)
+    :m_phase(phase)
+{
+}
+
+void KCMInitJob::start() {
+    //FIXME - replace all this with just a DBus call with a timeout and make kcminit delay the reply till it's done
+
+    auto kcminitSignals = new QDBusInterface( QStringLiteral( "org.kde.kcminit"),
                                          QStringLiteral( "/kcminit" ),
                                          QStringLiteral( "org.kde.KCMInit" ),
                                          QDBusConnection::sessionBus(), this );
     if( !kcminitSignals->isValid()) {
         qCWarning(KSMSERVER) << "kcminit not running? If we are running with mobile profile or in another platform other than X11 this is normal.";
-        delete kcminitSignals;
-        kcminitSignals = nullptr;
-        QTimer::singleShot(0, this, &Startup::kcmPhase1Done);
+        QTimer::singleShot(0, this, &KCMInitJob::done);
         return;
     }
-    connect( kcminitSignals, SIGNAL(phase1Done()), SLOT(kcmPhase1Done()));
-    QTimer::singleShot( 10000, this, &Startup::kcmPhase1Timeout); // protection
+    if (m_phase == 1) {
+        connect( kcminitSignals, SIGNAL(phase1Done()), this, SLOT(done()));
+    } else {
+        connect( kcminitSignals, SIGNAL(phase2Done()), this, SLOT(done()));
+    }
+    QTimer::singleShot( 10000, this, &KCMInitJob::done); // protection
 
     org::kde::KCMInit kcminit(QStringLiteral("org.kde.kcminit"),
                               QStringLiteral("/kcminit"),
                               QDBusConnection::sessionBus());
-    kcminit.runPhase1();
-}
 
-void Startup::kcmPhase1Done()
-{
-    if( state != KcmInitPhase1 )
-        return;
-    qCDebug(KSMSERVER) << "Kcminit phase 1 done";
-    if (kcminitSignals) {
-        disconnect( kcminitSignals, SIGNAL(phase1Done()), this, SLOT(kcmPhase1Done()));
+    if (m_phase == 1) {
+        kcminit.runPhase1();
+    } else {
+        kcminit.runPhase2();
     }
-    autoStart1();
 }
 
-void Startup::kcmPhase1Timeout()
+void KCMInitJob::done()
 {
-    if( state != KcmInitPhase1 )
-        return;
-    qCDebug(KSMSERVER) << "Kcminit phase 1 timeout";
-    kcmPhase1Done();
+    emitResult();
 }
 
-void Startup::autoStart1()
+KDEDInitJob::KDEDInitJob()
 {
-    if( state != KcmInitPhase1 )
-        return;
-    state = AutoStart1;
-#ifdef KSMSERVER_STARTUP_DEBUG1
-    qCDebug(KSMSERVER)<< t.elapsed();
-#endif
-    autoStart(1);
 }
 
-void Startup::autoStart1Done()
-{
-    if( state != AutoStart1 )
-        return;
-    qCDebug(KSMSERVER) << "Autostart 1 done";
-    ksmserver->setupShortcuts(); // done only here, because it needs kglobalaccel :-/
-    ksmserver->lastAppStarted = 0;
-    ksmserver->lastIdStarted.clear();
-    ksmserver->state = KSMServer::Restoring;
-#ifdef KSMSERVER_STARTUP_DEBUG1
-    qCDebug(KSMSERVER)<< t.elapsed();
-#endif
-    if( ksmserver->defaultSession()) {
-        autoStart2();
-        return;
-    }
-    ksmserver->tryRestoreNext();
-    connect(ksmserver, &KSMServer::sessionRestored, this, &Startup::autoStart2);
-}
-
-void Startup::autoStart2()
-{
-    if( ksmserver->state != KSMServer::Restoring )
-        return;
-    ksmserver->startupDone();
-
-    state = FinishingStartup;
-#ifdef KSMSERVER_STARTUP_DEBUG1
-    qCDebug(KSMSERVER)<< t.elapsed();
-#endif
-    waitAutoStart2 = true;
-    waitKcmInit2 = true;
-    autoStart(2);
-
+void KDEDInitJob::start() {
+    qCDebug(KSMSERVER());
     QDBusInterface kded( QStringLiteral( "org.kde.kded5" ),
                          QStringLiteral( "/kded" ),
                          QStringLiteral( "org.kde.kded5" ) );
     auto pending = kded.asyncCall( QStringLiteral( "loadSecondPhase" ) );
 
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, &Startup::secondKDEDPhaseLoaded);
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
-    runUserAutostart();
-
-    if (kcminitSignals) {
-        connect( kcminitSignals, SIGNAL(phase2Done()), SLOT(kcmPhase2Done()));
-        QTimer::singleShot( 10000, this, &Startup::kcmPhase2Timeout); // protection
-        org::kde::KCMInit kcminit(QStringLiteral("org.kde.kcminit"),
-                                  QStringLiteral("/kcminit"),
-                                  QDBusConnection::sessionBus());
-        kcminit.runPhase2();
-    } else {
-        QTimer::singleShot(0, this, &Startup::kcmPhase2Done);
-    }
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {emitResult();});
+    connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
 }
 
-void Startup::secondKDEDPhaseLoaded()
+RestoreSessionJob::RestoreSessionJob(KSMServer *server): KJob(),
+    m_ksmserver(server)
+{}
+
+void RestoreSessionJob::start()
 {
-
-#ifdef KSMSERVER_STARTUP_DEBUG1
-    qCDebug(KSMSERVER)<< "kded" << t.elapsed();
-#endif
-
-    if( !ksmserver->defaultSession())
-        ksmserver->restoreLegacySession(KSharedConfig::openConfig().data());
-
-    qCDebug(KSMSERVER) << "Starting notification thread";
-    NotificationThread *loginSound = new NotificationThread();
-    // Delete the thread when finished
-    connect(loginSound, &NotificationThread::finished, loginSound, &NotificationThread::deleteLater);
-    loginSound->start();
+    m_ksmserver->lastAppStarted = 0;
+    m_ksmserver->lastIdStarted.clear();
+    m_ksmserver->state = KSMServer::Restoring;
+    connect(m_ksmserver, &KSMServer::sessionRestored, this, [this]() {emitResult();});
+    m_ksmserver->tryRestoreNext();
 }
 
-void Startup::runUserAutostart()
+void StartupPhase2::runUserAutostart()
 {
     // Now let's execute the scripts in the KDE-specific autostart-scripts folder.
     const QString autostartFolder = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QDir::separator() + QStringLiteral("autostart-scripts");
@@ -338,7 +334,7 @@ void Startup::runUserAutostart()
     }
 }
 
-bool Startup::migrateKDE4Autostart(const QString &autostartFolder)
+bool StartupPhase2::migrateKDE4Autostart(const QString &autostartFolder)
 {
     // Migrate user autostart from kde4
     Kdelibs4Migration migration;
@@ -374,110 +370,38 @@ bool Startup::migrateKDE4Autostart(const QString &autostartFolder)
     return true;
 }
 
-void Startup::autoStart2Done()
+AutoStartAppsJob::AutoStartAppsJob(int phase)
 {
-    if( state != FinishingStartup )
-        return;
-    qCDebug(KSMSERVER) << "Autostart 2 done";
-    waitAutoStart2 = false;
-    finishStartup();
-}
-
-void Startup::kcmPhase2Done()
-{
-    if( state != FinishingStartup )
-        return;
-    qCDebug(KSMSERVER) << "Kcminit phase 2 done";
-    if (kcminitSignals) {
-        disconnect( kcminitSignals, SIGNAL(phase2Done()), this, SLOT(kcmPhase2Done()));
-        delete kcminitSignals;
-        kcminitSignals = nullptr;
-    }
-    waitKcmInit2 = false;
-    finishStartup();
-}
-
-void Startup::kcmPhase2Timeout()
-{
-    if( !waitKcmInit2 )
-        return;
-    qCDebug(KSMSERVER) << "Kcminit phase 2 timeout";
-    kcmPhase2Done();
-}
-
-void Startup::finishStartup()
-{
-    if( state != FinishingStartup )
-        return;
-    if( waitAutoStart2 || waitKcmInit2 )
-        return;
-
-    upAndRunning( QStringLiteral( "ready" ) );
-#ifdef KSMSERVER_STARTUP_DEBUG1
-    qCDebug(KSMSERVER)<< t.elapsed();
-#endif
-
-    state = Waiting;
-    ksmserver->setupXIOErrorHandler(); // From now on handle X errors as normal shutdown.
-}
-
-void Startup::upAndRunning( const QString& msg )
-{
-    QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
-                                                                         QStringLiteral("/KSplash"),
-                                                                         QStringLiteral("org.kde.KSplash"),
-                                                                         QStringLiteral("setStage"));
-    ksplashProgressMessage.setArguments(QList<QVariant>() << msg);
-    QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
-}
-
-
-void Startup::autoStart(int phase)
-{
-    if (m_autoStart.phase() >= phase) {
-        return;
-    }
+    m_autoStart.loadAutoStartList(); //FIXME, share this between jobs
     m_autoStart.setPhase(phase);
-    if (phase == 0) {
-        m_autoStart.loadAutoStartList();
-    }
-    QTimer::singleShot(0, this, &Startup::slotAutoStart);
 }
 
-void Startup::slotAutoStart()
-{
-    do {
-        QString serviceName = m_autoStart.startService();
-        if (serviceName.isEmpty()) {
-            // Done
-            if (!m_autoStart.phaseDone()) {
-                m_autoStart.setPhaseDone();
-                switch (m_autoStart.phase()) {
-                case 0:
-                    autoStart0Done();
-                    break;
-                case 1:
-                    autoStart1Done();
-                    break;
-                case 2:
-                    autoStart2Done();
-                    break;
+void AutoStartAppsJob::start() {
+    qCDebug(KSMSERVER());
+
+    QTimer::singleShot(0, this, [=]() {
+        do {
+            QString serviceName = m_autoStart.startService();
+            if (serviceName.isEmpty()) {
+                // Done
+                if (!m_autoStart.phaseDone()) {
+                    m_autoStart.setPhaseDone();
                 }
+                emitResult();
+                return;
             }
-            return;
-        }
-        KService service(serviceName);
-        auto arguments = KIO::DesktopExecParser(service, QList<QUrl>()).resultingArguments();
-        if (arguments.isEmpty()) {
-            qCWarning(KSMSERVER) << "failed to parse" << serviceName << "for autostart";
-            continue;
-        }
-        qCInfo(KSMSERVER) << "Starting autostart service " << serviceName << arguments;
-        auto program = arguments.takeFirst();
-        if (!QProcess::startDetached(program, arguments))
-            qCWarning(KSMSERVER) << "could not start" << serviceName << ":" << program << arguments;
-    } while (true);
-    // Loop till we find a service that we can start.
+            KService service(serviceName);
+            auto arguments = KIO::DesktopExecParser(service, QList<QUrl>()).resultingArguments();
+            if (arguments.isEmpty()) {
+                qCWarning(KSMSERVER) << "failed to parse" << serviceName << "for autostart";
+                continue;
+            }
+            qCInfo(KSMSERVER) << "Starting autostart service " << serviceName << arguments;
+            auto program = arguments.takeFirst();
+            if (!QProcess::startDetached(program, arguments))
+                qCWarning(KSMSERVER) << "could not start" << serviceName << ":" << program << arguments;
+        } while (true);
+    });
 }
 
 #include "startup.moc"
