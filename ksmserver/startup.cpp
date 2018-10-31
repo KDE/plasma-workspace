@@ -198,12 +198,9 @@ Startup::Startup(KSMServer *parent):
         ksmserver->setupShortcuts(); // done only here, because it needs kglobalaccel :-/
     });
 
-    if (ksmserver->defaultSession()) {
-        connect(phase1, &KJob::finished, phase2, &KJob::start);
-    } else {
-        connect(phase1, &KJob::finished, restoreSession, &KJob::start);
-        connect(restoreSession, &KJob::finished, phase2, &KJob::start);
-    }
+    connect(phase1, &KJob::finished, restoreSession, &KJob::start);
+    connect(restoreSession, &KJob::finished, phase2, &KJob::start);
+
     connect(phase1, &KJob::finished, this, []() {
         NotificationThread *loginSound = new NotificationThread();
         connect(loginSound, &NotificationThread::finished, loginSound, &NotificationThread::deleteLater);
@@ -291,6 +288,11 @@ RestoreSessionJob::RestoreSessionJob(KSMServer *server): KJob(),
 
 void RestoreSessionJob::start()
 {
+    if (m_ksmserver->defaultSession()) {
+        QTimer::singleShot(0, this, [this]() {emitResult();});
+        return;
+    }
+
     m_ksmserver->lastAppStarted = 0;
     m_ksmserver->lastIdStarted.clear();
     m_ksmserver->state = KSMServer::Restoring;
