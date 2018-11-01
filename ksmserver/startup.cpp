@@ -232,38 +232,20 @@ KCMInitJob::KCMInitJob(int phase)
 }
 
 void KCMInitJob::start() {
-    //FIXME - replace all this with just a DBus call with a timeout and make kcminit delay the reply till it's done
-
-    auto kcminitSignals = new QDBusInterface( QStringLiteral( "org.kde.kcminit"),
-                                         QStringLiteral( "/kcminit" ),
-                                         QStringLiteral( "org.kde.KCMInit" ),
-                                         QDBusConnection::sessionBus(), this );
-    if( !kcminitSignals->isValid()) {
-        qCWarning(KSMSERVER) << "kcminit not running? If we are running with mobile profile or in another platform other than X11 this is normal.";
-        QTimer::singleShot(0, this, &KCMInitJob::done);
-        return;
-    }
-    if (m_phase == 1) {
-        connect( kcminitSignals, SIGNAL(phase1Done()), this, SLOT(done()));
-    } else {
-        connect( kcminitSignals, SIGNAL(phase2Done()), this, SLOT(done()));
-    }
-    QTimer::singleShot( 10000, this, &KCMInitJob::done); // protection
-
     org::kde::KCMInit kcminit(QStringLiteral("org.kde.kcminit"),
                               QStringLiteral("/kcminit"),
                               QDBusConnection::sessionBus());
+    kcminit.setTimeout(10 * 1000);
 
+    QDBusPendingReply<void> pending;
     if (m_phase == 1) {
-        kcminit.runPhase1();
+        pending = kcminit.runPhase1();
     } else {
-        kcminit.runPhase2();
+        pending = kcminit.runPhase2();
     }
-}
-
-void KCMInitJob::done()
-{
-    emitResult();
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {emitResult();});
+    connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
 }
 
 KDEDInitJob::KDEDInitJob()

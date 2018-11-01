@@ -53,8 +53,6 @@ Q_OBJECT
 public:
     KCMInitJob(int phase);
     void start() override;
-public Q_SLOTS:
-    void done();
 private:
     int m_phase;
 };

@@ -34,9 +34,6 @@ class KCMInit : public QObject
 	public Q_SLOTS: //dbus
         Q_SCRIPTABLE void runPhase1();
         Q_SCRIPTABLE void runPhase2();
-    Q_SIGNALS: //dbus signal
-	Q_SCRIPTABLE void phase1Done();
-	Q_SCRIPTABLE void phase2Done();
     public:
         explicit KCMInit( const QCommandLineParser& args );
         ~KCMInit() override;
