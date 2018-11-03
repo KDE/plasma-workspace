@@ -87,6 +87,10 @@ KWin.Switcher {
                         width: parent.width - 2 * units.smallSpacing
                         spacing: units.smallSpacing
 
+                        focus: index == thumbnailListView.currentIndex
+                        Accessible.name: model.caption
+                        Accessible.role: Accessible.Client
+
                         Item {
                             Layout.fillWidth: true
                             Layout.preferredHeight: Math.round(width / tabBox.screenFactor)
