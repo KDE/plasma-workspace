@@ -41,6 +41,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <ksmserver_debug.h>
 
 #include "kcminit_interface.h"
+#include "kded_interface.h"
 #include <klauncher_interface.h>
 
 #include <KCompositeJob>
@@ -254,10 +255,10 @@ KDEDInitJob::KDEDInitJob()
 
 void KDEDInitJob::start() {
     qCDebug(KSMSERVER());
-    QDBusInterface kded( QStringLiteral( "org.kde.kded5" ),
-                         QStringLiteral( "/kded" ),
-                         QStringLiteral( "org.kde.kded5" ) );
-    auto pending = kded.asyncCall( QStringLiteral( "loadSecondPhase" ) );
+    org::kde::kded5 kded( QStringLiteral("org.kde.kded5"),
+                         QStringLiteral("/kded"),
+                         QDBusConnection::sessionBus());
+    auto pending = kded.loadSecondPhase();
 
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {emitResult();});

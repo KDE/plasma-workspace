@@ -33,6 +33,7 @@ set(kcminit_xml ${CMAKE_CURRENT_BINARY_DIR}/org.kde.KCMinit.xml)
 
 qt5_generate_dbus_interface( ${kcminit_adaptor} ${kcminit_xml} )
 qt5_add_dbus_interface( ksmserver_KDEINIT_SRCS ${kcminit_xml} kcminit_interface )
+qt5_add_dbus_interface( ksmserver_KDEINIT_SRCS ${KDED_DBUS_INTERFACE} kded_interface )
 
 # FIXME: This is actually not disabled any more because OrgKDEKlauncherInterface isn't provided
 # otherwise.
