@@ -28,9 +28,11 @@
 
 #include <QCoreApplication>
 #include <QFile>
-#include <QDBusInterface>
 #include <QDir>
 #include <QStandardPaths>
+
+#include "kded_interface.h"
+#include "desktopnotifier_interface.h"
 
 extern "C"
 {
@@ -52,8 +54,11 @@ DesktopProtocol::DesktopProtocol(const QByteArray& protocol, const QByteArray &p
 {
     checkLocalInstall();
 
-    QDBusInterface kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QStringLiteral("org.kde.kded5"));
-    kded.call(QStringLiteral("loadModule"), "desktopnotifier");
+    org::kde::kded5 kded(QStringLiteral("org.kde.kded5"),
+                        QStringLiteral("/kded"),
+                        QDBusConnection::sessionBus());
+    auto pending = kded.loadModule("desktopnotifier");
+    pending.waitForFinished();
 }
 
 DesktopProtocol::~DesktopProtocol()
@@ -124,8 +129,8 @@ void DesktopProtocol::listDir(const QUrl &url)
     QUrl actual;
     rewriteUrl(url, actual);
 
-    QDBusInterface kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/modules/desktopnotifier"), QStringLiteral("org.kde.DesktopNotifier"));
-    kded.call(QStringLiteral("watchDir"), actual.path());
+    org::kde::DesktopNotifier kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/modules/desktopnotifier"), QDBusConnection::sessionBus());
+    kded.watchDir(actual.path());
 }
 
 QString DesktopProtocol::desktopFile(KIO::UDSEntry &entry) const
