@@ -86,7 +86,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <KScreenLocker/KsldApp>
 
-#include <kdisplaymanager.h>
 #include <QX11Info>
 #include <krandom.h>
 #include <klauncher_interface.h>
@@ -620,8 +619,6 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
     the_server = this;
     clean = false;
 
-    shutdownType = KWorkSpace::ShutdownTypeNone;
-
     state = Idle;
     saveSession = false;
     wmPhase1WaitingCount = 0;
@@ -630,8 +627,6 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
     xonCommand = config.readEntry( "xonCommand", "xon" );
 
     selectWm( windowManager );
-
-    connect(&pendingShutdown, &QTimer::timeout, this, &KSMServer::pendingShutdownTimeout);
 
     only_local = flags.testFlag(InitFlag::OnlyLocal);
 #ifdef HAVE__ICETRANSNOLISTEN
@@ -757,10 +752,6 @@ void KSMServer::cleanUp()
     FreeAuthenticationData(numTransports, authDataEntries);
     signal(SIGTERM, SIG_DFL);
     signal(SIGINT, SIG_DFL);
-
-    runShutdownScripts();
-
-    KDisplayManager().shutdown( shutdownType, shutdownMode, bootOption );
 }
 
 
@@ -1268,29 +1259,4 @@ void KSMServer::openSwitchUserDialog()
     //this method exists only for compatibility. Users should ideally call this directly
     OrgKdeScreensaverInterface iface(QStringLiteral("org.freedesktop.ScreenSaver"), QStringLiteral("/ScreenSaver"), QDBusConnection::sessionBus());
     iface.SwitchUser();
-}
-
-void KSMServer::runShutdownScripts()
-{
-    const QStringList shutdownFolders = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("plasma-workspace/shutdown"), QStandardPaths::LocateDirectory);
-    foreach (const QString &shutDownFolder, shutdownFolders) {
-        QDir dir(shutDownFolder);
-        if (!dir.exists()) {
-            continue;
-        }
-
-        const QStringList entries = dir.entryList(QDir::Files);
-        foreach (const QString &file, entries) {
-            // Don't execute backup files
-            if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QStringLiteral(".bak")) &&
-                    (file[0] != QLatin1Char('%') || !file.endsWith(QLatin1Char('%'))) &&
-                    (file[0] != QLatin1Char('#') || !file.endsWith(QLatin1Char('#'))))
-            {
-                const QString fullPath = dir.absolutePath() + QLatin1Char('/') + file;
-
-                qCDebug(KSMSERVER) << "running shutdown script" << fullPath;
-                QProcess::execute(fullPath, QStringList());
-            }
-        }
-    }
 }

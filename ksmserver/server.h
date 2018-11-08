@@ -109,6 +109,7 @@ public:
     void clientRegistered( const char* previousId );
 
     // public API
+    void performLogout();
     void restoreSession( const QString &sessionName );
     void startDefaultSession();
     void shutdown( KWorkSpace::ShutdownConfirm confirm,
@@ -117,8 +118,10 @@ public:
 
 Q_SIGNALS:
     void windowManagerLoaded();
+    void logoutCancelled();
 
 public Q_SLOTS:
+
     void cleanUp();
 
 private Q_SLOTS:
@@ -129,7 +132,6 @@ private Q_SLOTS:
     void timeoutQuit();
     void timeoutWMQuit();
 
-    void pendingShutdownTimeout();
     void wmProcessChange();
 
     void defaultLogout();
@@ -187,7 +189,6 @@ private:
 
     void runShutdownScripts();
 
-    void performLogout();
 
     // public dcop interface
 
@@ -228,10 +229,6 @@ private:
     int wmPhase1WaitingCount;
     int saveType;
 
-    KWorkSpace::ShutdownType shutdownType;
-    KWorkSpace::ShutdownMode shutdownMode;
-    QString bootOption;
-
     bool clean;
     KSMClient* clientInteracting;
     QString wm;
@@ -242,12 +239,7 @@ private:
     QTimer protectionTimer;
     QTimer restoreTimer;
     QString xonCommand;
-    QTimer pendingShutdown;
     QWidget* logoutEffectWidget;
-    KWorkSpace::ShutdownConfirm pendingShutdown_confirm;
-    KWorkSpace::ShutdownType pendingShutdown_sdtype;
-    KWorkSpace::ShutdownMode pendingShutdown_sdmode;
-
     // sequential startup
     int appsToStart;
     int lastAppStarted;

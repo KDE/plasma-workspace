@@ -22,6 +22,7 @@ set(ksmserver_KDEINIT_SRCS
     legacy.cpp
     startup.cpp
     autostart.cpp
+    logout.cpp
     shutdown.cpp
     client.cpp
 )
@@ -45,8 +46,10 @@ qt5_add_dbus_interface( ksmserver_KDEINIT_SRCS ${klauncher_xml} klauncher_interf
 
 qt5_add_dbus_interface( ksmserver_KDEINIT_SRCS ${KSCREENLOCKER_DBUS_INTERFACES_DIR}/org.kde.screensaver.xml kscreenlocker_interface )
 qt5_add_dbus_interface( ksmserver_KDEINIT_SRCS org.kde.LogoutPrompt.xml logoutprompt_interface)
+qt5_add_dbus_interface( ksmserver_KDEINIT_SRCS org.kde.Shutdown.xml shutdown_interface)
 
 qt5_add_dbus_adaptor( ksmserver_KDEINIT_SRCS org.kde.KSMServerInterface.xml server.h KSMServer )
+qt5_add_dbus_adaptor( ksmserver_KDEINIT_SRCS org.kde.Shutdown.xml shutdown.h Shutdown)
 
 kf5_add_kdeinit_executable( ksmserver ${ksmserver_KDEINIT_SRCS})
 
