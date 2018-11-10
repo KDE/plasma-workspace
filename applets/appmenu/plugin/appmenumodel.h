@@ -27,6 +27,7 @@
 #include <QStringList>
 #include <KWindowSystem>
 #include <QPointer>
+#include <QRect>
 
 class QMenu;
 class QAction;
@@ -39,6 +40,9 @@ class AppMenuModel : public QAbstractListModel, public QAbstractNativeEventFilte
     Q_OBJECT
 
     Q_PROPERTY(bool menuAvailable READ menuAvailable WRITE setMenuAvailable NOTIFY menuAvailableChanged)
+    Q_PROPERTY(bool menuHidden READ menuHidden NOTIFY menuHiddenChanged)
+
+    Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
 
 public:
     explicit AppMenuModel(QObject *parent = nullptr);
@@ -58,6 +62,11 @@ public:
     bool menuAvailable() const;
     void setMenuAvailable(bool set);
 
+    bool menuHidden() const;
+
+    QRect screenGeometry() const;
+    void setScreenGeometry(QRect geometry);
+
 signals:
     void requestActivateIndex(int index);
 
@@ -66,17 +75,27 @@ protected:
 
 private Q_SLOTS:
     void onActiveWindowChanged(WId id);
+    void onWindowChanged(WId id);
+    void setMenuHidden(bool hide);
     void update();
 
 signals:
     void menuAvailableChanged();
+    void menuHiddenChanged();
     void modelNeedsUpdate();
+    void screenGeometryChanged();
 
 private:
     bool m_menuAvailable;
+    bool m_menuHidden = false;
     bool m_updatePending = false;
 
+    QRect m_screenGeometry;
+
+    //! current active window used
     WId m_currentWindowId = 0;
+    //! window that its menu initialization may be delayed
+    WId m_delayedMenuWindowId = 0;
 
     QPointer<QMenu> m_menu;
 
