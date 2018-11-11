@@ -2053,7 +2053,7 @@ void ShellCorona::activateLauncherMenu()
 
 void ShellCorona::activateTaskManagerEntry(int index)
 {
-    auto activateTaskManagerEntryOnContainment = [this](const Plasma::Containment *c, int index) {
+    auto activateTaskManagerEntryOnContainment = [](const Plasma::Containment *c, int index) {
         const auto &applets = c->applets();
         for (auto *applet : applets) {
             const auto &provides = KPluginMetaData::readStringList(applet->pluginMetaData().rawData(), QStringLiteral("X-Plasma-Provides"));
