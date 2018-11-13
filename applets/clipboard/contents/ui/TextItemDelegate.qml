@@ -30,7 +30,7 @@ PlasmaComponents.Label {
     text: {
         var highlightFontTag = "<font color='" + theme.highlightColor + "'>%1</font>"
 
-        var text = DisplayRole
+        var text = DisplayRole.slice(0, 100)
 
         // first escape any HTML characters to prevent privacy issues
         text = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
