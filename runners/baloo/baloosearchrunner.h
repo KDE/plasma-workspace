@@ -46,7 +46,7 @@ public:
 private:
     void performMatch();
     RemoteMatches matchInternal(const QString &searchTerm, const QString& type,
-                                    const QString& category);
+                                    const QString& category, QSet<QUrl> &foundUrls);
 
     QDBusMessage m_lastRequest;
     QString m_searchTerm;
