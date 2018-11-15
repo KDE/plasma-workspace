@@ -137,7 +137,7 @@ void Greeter::promptLogout()
     if (m_running) {
         return;
     }
-    m_shutdownType = KWorkSpace::ShutdownTypeLogout;
+    m_shutdownType = KWorkSpace::ShutdownTypeNone;
     init();
 }
 
