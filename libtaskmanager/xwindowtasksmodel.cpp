@@ -253,7 +253,7 @@ void XWindowTasksModel::Private::removeWindow(WId window)
         q->beginRemoveRows(QModelIndex(), row, row);
         windows.removeAt(row);
         transientsDemandingAttention.remove(window);
-        windowInfoCache.remove(window);
+        delete windowInfoCache.take(window);
         appDataCache.remove(window);
         usingFallbackIcon.remove(window);
         delegateGeometries.remove(window);
