@@ -410,7 +410,9 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
     for (QAction *action: menu->actions()) {
         int id = action->property(DBUSMENU_PROPERTY_ID).toInt();
         if (! newDBusMenuItemIds.contains(id)) {
-            menu->removeAction(action);
+            // Not calling removeAction() as QMenu will immediately close when it becomes empty,
+            // which can happen when an application completely reloads this menu.
+            // When the action is deleted deferred, it is removed from the menu.
             action->deleteLater();
             d->m_actionForId.remove(id);
         }
