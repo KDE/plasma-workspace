@@ -22,6 +22,8 @@
 #define SYSTEMTRAY_H
 
 #include <QAbstractItemModel>
+#include <QRegExp>
+
 #include <Plasma/Containment>
 
 class QDBusPendingCallWatcher;
@@ -114,7 +116,7 @@ private:
     void initDBusActivatables();
     QStringList m_defaultPlasmoids;
     QHash<QString /*plugin name*/, KPluginInfo> m_systrayApplets;
-    QHash<QString /*plugin name*/, QString /*DBus Service*/> m_dbusActivatableTasks;
+    QHash<QString /*plugin name*/, QRegExp /*DBus Service*/> m_dbusActivatableTasks;
 
     QStringList m_allowedPlasmoids;
     PlasmoidModel *m_availablePlasmoidsModel;

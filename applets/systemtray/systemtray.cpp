@@ -85,7 +85,9 @@ void SystemTray::init()
         const QString dbusactivation = info.value(QStringLiteral("X-Plasma-DBusActivationService"));
         if (!dbusactivation.isEmpty()) {
             qCDebug(SYSTEM_TRAY) << "ST Found DBus-able Applet: " << info.pluginId() << dbusactivation;
-            m_dbusActivatableTasks[info.pluginId()] = dbusactivation;
+            QRegExp rx(dbusactivation);
+            rx.setPatternSyntax(QRegExp::Wildcard);
+            m_dbusActivatableTasks[info.pluginId()] = rx;
         }
     }
 }
@@ -541,9 +543,7 @@ void SystemTray::serviceRegistered(const QString &service)
             continue;
         }
 
-        const QString &pattern = it.value();
-        QRegExp rx(pattern);
-        rx.setPatternSyntax(QRegExp::Wildcard);
+        const auto &rx = it.value();
         if (rx.exactMatch(service)) {
             //qCDebug(SYSTEM_TRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << "appeared. Loading " << plugin;
             newTask(plugin);
@@ -562,9 +562,7 @@ void SystemTray::serviceUnregistered(const QString &service)
             continue;
         }
 
-        const QString &pattern = it.value();
-        QRegExp rx(pattern);
-        rx.setPatternSyntax(QRegExp::Wildcard);
+        const auto &rx = it.value();
         if (rx.exactMatch(service)) {
             m_dbusServiceCounts[plugin]--;
             Q_ASSERT(m_dbusServiceCounts[plugin] >= 0);
