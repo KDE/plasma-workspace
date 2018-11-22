@@ -110,21 +110,21 @@ void AppMenuModel::setMenuAvailable(bool set)
 {
     if (m_menuAvailable != set) {
         m_menuAvailable = set;
-        setMenuHidden(false);
+        setVisible(true);
         emit menuAvailableChanged();
     }
 }
 
-bool AppMenuModel::menuHidden() const
+bool AppMenuModel::visible() const
 {
-    return m_menuHidden;
+    return m_visible;
 }
 
-void AppMenuModel::setMenuHidden(bool hide)
+void AppMenuModel::setVisible(bool visible)
 {
-    if (m_menuHidden != hide) {
-        m_menuHidden = hide;
-        emit menuHiddenChanged();
+    if (m_visible != visible) {
+        m_visible = visible;
+        emit visibleChanged();
     }
 }
 
@@ -232,14 +232,14 @@ void AppMenuModel::onActiveWindowChanged(WId id)
         // lok at transient windows first
         while (transientId) {
             if (updateMenuFromWindowIfHasMenu(transientId)) {
-                setMenuHidden(false);
+                setVisible(true);
                 return;
             }
             transientId = KWindowInfo(transientId, nullptr, NET::WM2TransientFor).transientFor();
         }
 
         if (updateMenuFromWindowIfHasMenu(id)) {
-            setMenuHidden(false);
+            setVisible(true);
             return;
         }
 
@@ -262,7 +262,7 @@ void AppMenuModel::onWindowChanged(WId id)
         KWindowInfo info(id, NET::WMState | NET::WMGeometry);
         const bool contained = m_screenGeometry.isNull() || m_screenGeometry.contains(info.geometry().center());
 
-        setMenuHidden(info.isMinimized() || !contained);
+        setVisible(contained && !info.isMinimized());
     }
 }
 

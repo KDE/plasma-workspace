@@ -40,7 +40,7 @@ class AppMenuModel : public QAbstractListModel, public QAbstractNativeEventFilte
     Q_OBJECT
 
     Q_PROPERTY(bool menuAvailable READ menuAvailable WRITE setMenuAvailable NOTIFY menuAvailableChanged)
-    Q_PROPERTY(bool menuHidden READ menuHidden NOTIFY menuHiddenChanged)
+    Q_PROPERTY(bool visible READ visible NOTIFY visibleChanged)
 
     Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
 
@@ -62,7 +62,7 @@ public:
     bool menuAvailable() const;
     void setMenuAvailable(bool set);
 
-    bool menuHidden() const;
+    bool visible() const;
 
     QRect screenGeometry() const;
     void setScreenGeometry(QRect geometry);
@@ -76,19 +76,19 @@ protected:
 private Q_SLOTS:
     void onActiveWindowChanged(WId id);
     void onWindowChanged(WId id);
-    void setMenuHidden(bool hide);
+    void setVisible(bool visible);
     void update();
 
 signals:
     void menuAvailableChanged();
-    void menuHiddenChanged();
     void modelNeedsUpdate();
     void screenGeometryChanged();
+    void visibleChanged();
 
 private:
     bool m_menuAvailable;
-    bool m_menuHidden = false;
     bool m_updatePending = false;
+    bool m_visible = true;
 
     QRect m_screenGeometry;
 

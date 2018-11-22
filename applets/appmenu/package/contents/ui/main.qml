@@ -104,7 +104,7 @@ Item {
 
         Repeater {
             id: buttonRepeater
-            model: !appMenuModel.menuHidden ? appMenuModel : null
+            model: appMenuModel.visible ? appMenuModel : null
 
             PlasmaComponents.ToolButton {
                 readonly property int buttonIndex: index
