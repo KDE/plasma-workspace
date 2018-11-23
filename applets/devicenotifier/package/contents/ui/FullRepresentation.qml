@@ -158,8 +158,14 @@ MouseArea {
         DeviceItem {
             width: notifierDialog.width
             udi: DataEngineSource
-            icon: sdSource.data[udi] ? sdSource.data[udi].Icon : ""
-            deviceName: sdSource.data[udi] ? sdSource.data[udi].Description : ""
+            Binding on icon {
+                when: sdSource.data[udi] !== undefined
+                value: sdSource.data[udi].Icon
+            }
+            Binding on deviceName {
+                when: sdSource.data[udi] !== undefined
+                value: sdSource.data[udi].Description
+            }
             emblemIcon: Emblems && Emblems[0] ? Emblems[0] : ""
             state: sdSource.data[udi] ? sdSource.data[udi].State : 0
 
