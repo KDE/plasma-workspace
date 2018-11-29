@@ -30,6 +30,7 @@ import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.kcm 1.1 as KCM
+import org.kde.kirigami 2.5 as Kirigami
 
 ColumnLayout {
     id: root
@@ -89,8 +90,11 @@ ColumnLayout {
         }
         QtControls.ComboBox {
             id: resizeComboBox
-            property int textLength: 24
-            width: theme.mSize(theme.defaultFont).width * textLength
+            TextMetrics {
+                id: resizeTextMetrics
+                text: resizeComboBox.currentText
+            }
+            width: resizeTextMetrics.width + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 2
             model: [
                         {
                             'label': i18nd("plasma_wallpaper_org.kde.image", "Scaled and Cropped"),
