@@ -325,6 +325,7 @@ void ProgressListModel::serviceUnregistered(const QString &name)
     if (!jobs.isEmpty()) {
         m_jobViewsOwners.remove(name);
         Q_FOREACH(JobView *job, jobs) {
+            job->setError(KIO::ERR_SLAVE_DIED);
             job->terminate(job->errorText());
         }
     }
