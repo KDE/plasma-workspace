@@ -19,9 +19,10 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 2.4 as QtControls
 import QtQuick.Layouts 1.0 as QtLayouts
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
+import org.kde.kirigami 2.5 as Kirigami
 
 Item {
     id: calendarPage
@@ -37,31 +38,37 @@ Item {
         plasmoid.configuration.enabledCalendarPlugins = PlasmaCalendar.EventPluginsManager.enabledPlugins;
     }
 
-    QtLayouts.ColumnLayout {
-        anchors.left: parent.left
-        QtControls.CheckBox {
-            id: showWeekNumbers
-            text: i18n("Show week numbers in Calendar")
+    Kirigami.FormLayout {
+        anchors {
+            left: parent.left
+            right: parent.right
         }
 
-        QtControls.GroupBox {
-            QtLayouts.Layout.fillWidth: true
-            title: i18n("Available Calendar Plugins")
-            flat: true
+        QtControls.CheckBox {
+            id: showWeekNumbers
+            Kirigami.FormData.label: i18n("General:")
+            text: i18n("Show week numbers")
+        }
 
-            QtLayouts.ColumnLayout {
-                Repeater {
-                    id: calendarPluginsRepeater
-                    model: PlasmaCalendar.EventPluginsManager.model
-                    delegate: QtLayouts.RowLayout {
-                        QtControls.CheckBox {
-                            text: model.display
-                            checked: model.checked
-                            onClicked: {
-                                //needed for model's setData to be called
-                                model.checked = checked;
-                                calendarPage.configurationChanged();
-                            }
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        QtLayouts.ColumnLayout {
+            Kirigami.FormData.label: i18n("Available Plugins:")
+            Kirigami.FormData.buddyFor: children[1] // 0 is the Repeater
+
+            Repeater {
+                id: calendarPluginsRepeater
+                model: PlasmaCalendar.EventPluginsManager.model
+                delegate: QtLayouts.RowLayout {
+                    QtControls.CheckBox {
+                        text: model.display
+                        checked: model.checked
+                        onClicked: {
+                            //needed for model's setData to be called
+                            model.checked = checked;
+                            calendarPage.configurationChanged();
                         }
                     }
                 }
