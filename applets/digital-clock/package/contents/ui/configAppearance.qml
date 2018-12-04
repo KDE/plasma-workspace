@@ -97,6 +97,10 @@ QtLayouts.ColumnLayout {
             text: i18n("Show local time zone")
         }
 
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
         QtLayouts.ColumnLayout {
             Kirigami.FormData.label: i18n("Display time zone as:")
             Kirigami.FormData.buddyFor: timezoneCityRadio
