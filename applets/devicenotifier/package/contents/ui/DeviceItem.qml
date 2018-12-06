@@ -188,6 +188,8 @@ MouseArea {
 
             move: Transition {
                 NumberAnimation { property: "y"; duration: units.longDuration; easing.type: Easing.InOutQuad }
+                // ensure opacity values return to 1.0 if the add transition animation has been interrupted
+                NumberAnimation { property: "opacity"; to: 1.0 }
             }
 
             add: Transition {
