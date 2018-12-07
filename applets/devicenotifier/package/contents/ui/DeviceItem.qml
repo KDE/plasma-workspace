@@ -36,6 +36,7 @@ MouseArea {
     property int state
 
     property bool mounted
+    property bool isRoot
     property bool expanded: devicenotifier.expandedDevice == udi
     property alias percentUsage: freeSpaceBar.value
     property string freeSpaceText
@@ -304,6 +305,7 @@ MouseArea {
             PlasmaComponents.ToolButton {
                 id: actionButton
                 visible: !busyIndicator.visible && deviceItem.actionVisible
+                enabled: !isRoot
                 onClicked: actionTriggered()
                 y: mounted ? deviceLabel.height + (freeSpaceBar.height - height - units.smallSpacing) / 2 : (deviceLabel.height + actionMessage.height - height) / 2
             }

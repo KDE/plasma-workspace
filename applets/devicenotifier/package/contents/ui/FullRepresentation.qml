@@ -168,6 +168,7 @@ MouseArea {
             }
             emblemIcon: Emblems && Emblems[0] ? Emblems[0] : ""
             state: sdSource.data[udi] ? sdSource.data[udi].State : 0
+            isRoot: sdSource.data[udi]["File Path"] == "/"
 
             percentUsage: {
                 if (!sdSource.data[udi]) {
