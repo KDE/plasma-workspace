@@ -231,6 +231,7 @@ MouseArea {
             }
 
             PlasmaComponents.Label {
+                id: actionMessage
                 width: parent.width
                 height: undefined
                 opacity: 0.6
@@ -304,6 +305,7 @@ MouseArea {
                 id: actionButton
                 visible: !busyIndicator.visible && deviceItem.actionVisible
                 onClicked: actionTriggered()
+                y: mounted ? deviceLabel.height + (freeSpaceBar.height - height - units.smallSpacing) / 2 : (deviceLabel.height + actionMessage.height - height) / 2
             }
 
             PlasmaComponents.BusyIndicator {
