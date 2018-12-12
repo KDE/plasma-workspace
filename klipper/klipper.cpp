@@ -29,6 +29,7 @@
 #include <QDir>
 #include <QDialog>
 #include <QMenu>
+#include <QMessageBox>
 #include <QPointer>
 #include <QDBusConnection>
 #include <QSaveFile>
@@ -502,9 +503,12 @@ void Klipper::saveSession()
 
 void Klipper::disableURLGrabber()
 {
-    KMessageBox::information( nullptr,
-                              i18n( "You can enable URL actions later by left-clicking on the "
-                                    "Klipper icon and selecting 'Enable Clipboard Actions'" ) );
+    QMessageBox *message = new QMessageBox(QMessageBox::Information, QString(),
+        i18n("You can enable URL actions later by left-clicking on the "
+             "Klipper icon and selecting 'Enable Clipboard Actions'"));
+    message->setAttribute(Qt::WA_DeleteOnClose);
+    message->setModal(false);
+    message->show();
 
     setURLGrabberEnabled( false );
 }
