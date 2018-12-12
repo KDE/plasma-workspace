@@ -47,6 +47,7 @@ Item {
         onCheckedChanged: plasmoid.configuration.pin = checked
         iconSource: "window-pin"
         z: 2
+        tooltip: i18n("Keep Open")
     }
 
     PlasmaExtras.Heading {

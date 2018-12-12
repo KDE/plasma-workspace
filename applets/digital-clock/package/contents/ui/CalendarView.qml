@@ -368,5 +368,6 @@ Item {
         iconSource: "window-pin"
         checked: plasmoid.configuration.pin
         onCheckedChanged: plasmoid.configuration.pin = checked
+        tooltip: i18n("Keep Open")
     }
 }
