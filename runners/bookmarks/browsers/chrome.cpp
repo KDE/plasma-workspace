@@ -23,8 +23,10 @@
 #include "faviconfromblob.h"
 #include "browsers/findprofile.h"
 
+#include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QJsonValue>
 #include <QFileInfo>
 #include <QDebug>
 #include "bookmarksrunner_defs.h"
@@ -33,14 +35,14 @@
 class ProfileBookmarks {
 public:
     ProfileBookmarks(Profile &profile) : m_profile(profile) {}
-    inline QList<QVariantMap> bookmarks() { return m_bookmarks; }
+    inline QJsonArray bookmarks() { return m_bookmarks; }
     inline Profile profile() { return m_profile; }
-    void tearDown() { m_profile.favicon()->teardown(); m_bookmarks.clear(); }
-    void add(QVariantMap &bookmarkEntry) { m_bookmarks << bookmarkEntry; }
-    void clear() { m_bookmarks.clear(); }
+    void tearDown() { m_profile.favicon()->teardown(); clear(); }
+    void add(const QJsonObject &bookmarkEntry) { m_bookmarks << bookmarkEntry; }
+    void clear() { m_bookmarks = QJsonArray(); }
 private:
     Profile m_profile;
-    QList<QVariantMap> m_bookmarks;
+    QJsonArray m_bookmarks;
 };
 
 Chrome::Chrome( FindProfile* findProfile, QObject* parent )
@@ -77,7 +79,11 @@ QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing)
 QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing, ProfileBookmarks *profileBookmarks)
 {
     QList<BookmarkMatch> results;
-    foreach(const QVariantMap &bookmark, profileBookmarks->bookmarks()) {
+
+    const auto bookmarks = profileBookmarks->bookmarks();
+    for (const QJsonValue &bookmarkValue : bookmarks) {
+        const QJsonObject bookmark = bookmarkValue.toObject();
+
         QString url = bookmark.value(QStringLiteral("url")).toString();
 
         BookmarkMatch bookmarkMatch(profileBookmarks->profile().favicon(), term, bookmark.value(QStringLiteral("name")).toString(), url);
@@ -100,13 +106,13 @@ void Chrome::prepare()
         if (jdoc.isNull()) {
             continue;
         }
-        const QVariantMap resultMap = jdoc.object().toVariantMap();
+        const QJsonObject resultMap = jdoc.object();
         if (!resultMap.contains(QStringLiteral("roots"))) {
             return;
         }
-        const QVariantMap entries = resultMap.value(QStringLiteral("roots")).toMap();
-        foreach(const QVariant &folder, entries) {
-            parseFolder(folder.toMap(), profileBookmarks);
+        const QJsonObject entries = resultMap.value(QStringLiteral("roots")).toObject();
+        for (const QJsonValue &folder : entries) {
+            parseFolder(folder.toObject(), profileBookmarks);
         }
         profile.favicon()->prepare();
     }
@@ -119,11 +125,11 @@ void Chrome::teardown()
     }
 }
 
-void Chrome::parseFolder(const QVariantMap &entry, ProfileBookmarks *profile)
+void Chrome::parseFolder(const QJsonObject &entry, ProfileBookmarks *profile)
 {
-    QVariantList children = entry.value(QStringLiteral("children")).toList();
-    foreach(const QVariant &child, children) {
-        QVariantMap entry = child.toMap();
+    const QJsonArray children = entry.value(QStringLiteral("children")).toArray();
+    for (const QJsonValue &child : children) {
+        const QJsonObject entry = child.toObject();
         if(entry.value(QStringLiteral("type")).toString() == QLatin1String("folder"))
             parseFolder(entry, profile);
         else {
