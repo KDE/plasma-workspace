@@ -404,7 +404,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         batterytype << I18N_NOOP("Unknown Battery") << I18N_NOOP("PDA Battery") << I18N_NOOP("UPS Battery")
                 << I18N_NOOP("Primary Battery") << I18N_NOOP("Mouse Battery") << I18N_NOOP("Keyboard Battery")
                 << I18N_NOOP("Keyboard Mouse Battery") << I18N_NOOP("Camera Battery") << I18N_NOOP("Phone Battery")
-                << I18N_NOOP("Monitor Battery") << I18N_NOOP("Gaming Input Battery");
+                << I18N_NOOP("Monitor Battery") << I18N_NOOP("Gaming Input Battery") << I18N_NOOP("Bluetooth Battery");
 
         QStringList chargestate;
         chargestate << I18N_NOOP("Not Charging") << I18N_NOOP("Charging") << I18N_NOOP("Discharging") << I18N_NOOP("Fully Charged");
