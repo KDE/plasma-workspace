@@ -95,9 +95,9 @@ Item {
             top: parent.top
             right: parent.right
             topMargin: hiddenItemsView.visible ? units.smallSpacing : 0
-            leftMargin: hiddenItemsView.iconColumnWidth + units.largeSpacing;
+            leftMargin: units.smallSpacing
         }
-        text: i18n("Status & Notifications")
+        text: i18n("Status and Notifications")
         visible: !heading.visible
     }
 
