@@ -64,11 +64,11 @@ Item {
             var percent = pmSource.data.Battery.Percent
             var state = pmSource.data.Battery.State
             if (state === "Charging") {
-                return i18n("%1%. Charging", percent)
+                return i18n("%1% Charging", percent)
             } else if (state === "NoCharge") {
-                return i18n("%1%. Plugged in, not Charging", percent)
+                return i18n("%1% Plugged in, not Charging", percent)
             } else {
-                return i18n("%1%. Plugged in", percent)
+                return i18n("%1% Plugged in", percent)
             }
         } else {
             if (remainingTime > 0) {
