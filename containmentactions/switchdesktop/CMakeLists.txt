@@ -9,9 +9,7 @@ kcoreaddons_desktop_to_json(plasma_containmentactions_switchdesktop plasma-conta
 target_link_libraries(plasma_containmentactions_switchdesktop
                         Qt5::Widgets
                         KF5::Plasma
-                        KF5::WindowSystem
-                        KF5::I18n
-                        KF5::KIOCore
+                        PW::LibTaskManager
                        )
 
 install(TARGETS plasma_containmentactions_switchdesktop DESTINATION ${KDE_INSTALL_PLUGINDIR})
