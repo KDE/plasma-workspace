@@ -44,7 +44,8 @@ namespace TaskManager
  * server the host process is connected to.
  *
  * FIXME: Filtering by window type still needed.
- * FIXME: Support for taskmanagerrulesrc (maybe) still needed.
+ *
+ * @see WindowTasksModel
  *
  * @author Eike Hein <hein@kde.org>
  */
@@ -162,15 +163,26 @@ public:
     void requestToggleShaded(const QModelIndex &index) override;
 
     /**
-     * Request moving the window at the given index to the specified virtual
-     * desktop.
+     * Request entering the window at the given index on the specified virtual desktops,
+     * leaving any other desktops.
      *
-     * FIXME: X Windows version has extra virtual desktop logic.
+     * Virtual desktop ids are QStrings.
+     *
+     * An empty list has a special meaning: The window is entered on all virtual desktops
+     * in the session.
      *
      * @param index An index in this window tasks model.
-     * @param desktop A virtual desktop number.
+     * @param desktops A list of virtual desktop ids.
      **/
-    void requestVirtualDesktop(const QModelIndex &index, qint32 desktop) override;
+    void requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops) override;
+
+    /**
+     * Request entering the window at the given index on a new virtual desktop,
+     * which is created in response to this request.
+     *
+     * @param index An index in this window tasks model.
+     **/
+    void requestNewVirtualDesktop(const QModelIndex &index) override;
 
     /**
      * Request moving the window at the given index to the specified activities
@@ -203,6 +215,22 @@ public:
      **/
     void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
         QObject *delegate = nullptr) override;
+
+    /**
+     * Tries to extract a process-internal Wayland window id from supplied mime data.
+     *
+     * @param mimeData Some mime data.
+     * @param @ok Set to true or false on success or failure.
+     */
+    static quint32 winIdFromMimeData(const QMimeData *mimeData, bool *ok = nullptr);
+
+    /**
+     * Tries to extract process-internal Wayland window ids from supplied mime data.
+     *
+     * @param mimeData Some mime data.
+     * @param @ok Set to true or false on success or failure.
+     */
+    static QList<quint32> winIdsFromMimeData(const QMimeData *mimeData, bool *ok = nullptr);
 
 private:
     class Private;

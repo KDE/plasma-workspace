@@ -265,8 +265,10 @@ QVariant StartupTasksModel::data(const QModelIndex &index, int role) const
         return d->launcherUrls.value(id);
     } else if (role == IsStartup) {
         return true;
-    } else if (role == VirtualDesktop) {
-        return data.desktop();
+    } else if (role == IsVirtualDesktopsChangeable) {
+        return false;
+    } else if (role == VirtualDesktops) {
+        return QVariantList() << QVariant(data.desktop());
     } else if (role == IsOnAllVirtualDesktops) {
         return (data.desktop() == 0);
     }

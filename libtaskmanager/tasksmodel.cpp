@@ -25,6 +25,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "taskfilterproxymodel.h"
 #include "taskgroupingproxymodel.h"
 #include "tasktools.h"
+#include "virtualdesktopinfo.h"
 
 #include "launchertasksmodel.h"
 #include "startuptasksmodel.h"
@@ -61,9 +62,6 @@ public:
     bool anyTaskDemandsAttention = false;
 
     int launcherCount = 0;
-    int virtualDesktop = -1;
-    int screen = -1;
-    QString activity;
 
     SortMode sortMode = SortAlpha;
     bool separateLaunchers = true;
@@ -75,6 +73,8 @@ public:
     QVector<int> sortRowInsertQueue;
     bool sortRowInsertQueueStale = false;
     QHash<QString, int> activityTaskCounts;
+    static VirtualDesktopInfo *virtualDesktopInfo;
+    static int virtualDesktopInfoUsers;
     static ActivityInfo* activityInfo;
     static int activityInfoUsers;
 
@@ -122,6 +122,8 @@ private:
 int TasksModel::Private::instanceCount = 0;
 WindowTasksModel* TasksModel::Private::windowTasksModel = nullptr;
 StartupTasksModel* TasksModel::Private::startupTasksModel = nullptr;
+VirtualDesktopInfo* TasksModel::Private::virtualDesktopInfo = nullptr;
+int TasksModel::Private::virtualDesktopInfoUsers = 0;
 ActivityInfo* TasksModel::Private::activityInfo = nullptr;
 int TasksModel::Private::activityInfoUsers = 0;
 
@@ -144,6 +146,8 @@ TasksModel::Private::~Private()
         windowTasksModel = nullptr;
         delete startupTasksModel;
         startupTasksModel = nullptr;
+        delete virtualDesktopInfo;
+        virtualDesktopInfo = nullptr;
         delete activityInfo;
         activityInfo = nullptr;
     }
@@ -877,21 +881,50 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
     // Sort other cases by sort mode.
     switch (sortMode) {
         case SortVirtualDesktop: {
-            const QVariant &leftDesktopVariant = left.data(AbstractTasksModel::VirtualDesktop);
-            bool leftOk = false;
-            const int leftDesktop = leftDesktopVariant.toInt(&leftOk);
+            const bool leftAll = left.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool();
+            const bool rightAll = right.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool();
 
-            const QVariant &rightDesktopVariant = right.data(AbstractTasksModel::VirtualDesktop);
-            bool rightOk = false;
-            const int rightDesktop = rightDesktopVariant.toInt(&rightOk);
-
-            if (leftOk && rightOk && (leftDesktop != rightDesktop)) {
-                return (leftDesktop < rightDesktop);
-            } else if (leftOk && !rightOk) {
-                return false;
-            } else if (!leftOk && rightOk) {
+            if (leftAll && !rightAll) {
+                return true;
+            } else if (rightAll && !leftAll) {
                 return true;
             }
+
+            const QVariantList &leftDesktops = left.data(AbstractTasksModel::VirtualDesktops).toList();
+            QVariant leftDesktop;
+            int leftDesktopPos = virtualDesktopInfo->numberOfDesktops();
+
+            for (const QVariant &desktop : leftDesktops) {
+                const int desktopPos = virtualDesktopInfo->position(desktop);
+
+                if (desktopPos < leftDesktopPos) {
+                    leftDesktop = desktop;
+                    leftDesktopPos = desktopPos;
+                }
+            }
+
+            const QVariantList &rightDesktops = right.data(AbstractTasksModel::VirtualDesktops).toList();
+            QVariant rightDesktop;
+            int rightDesktopPos = virtualDesktopInfo->numberOfDesktops();
+
+            for (const QVariant &desktop : rightDesktops) {
+                const int desktopPos = virtualDesktopInfo->position(desktop);
+
+                if (desktopPos < rightDesktopPos) {
+                    rightDesktop = desktop;
+                    rightDesktopPos = desktopPos;
+                }
+            }
+
+            if (!leftDesktop.isNull() && !rightDesktop.isNull() && (leftDesktop != rightDesktop)) {
+                return (virtualDesktopInfo->position(leftDesktop) < virtualDesktopInfo->position(rightDesktop));
+            } else if (!leftDesktop.isNull() && rightDesktop.isNull()) {
+                return false;
+            } else if (leftDesktop.isNull() && !rightDesktop.isNull()) {
+                return true;
+            }
+
+            return false;
         }
         case SortActivity: {
             // updateActivityTaskCounts() counts the number of window tasks on each
@@ -934,6 +967,8 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
             }
         }
         // Fall through to source order if sorting is disabled or manual, or alphabetical by app name otherwise.
+        // This marker comment makes gcc/clang happy:
+        // fall through
         default: {
             if (sortMode == SortDisabled) {
                 return (left.row() < right.row());
@@ -1039,11 +1074,11 @@ QVariant TasksModel::data(const QModelIndex &proxyIndex, int role) const
 
             return false;
         }
-    } else if (rowCount(proxyIndex) && role == AbstractTasksModel::LegacyWinIdList) {
+    } else if (rowCount(proxyIndex) && role == AbstractTasksModel::WinIdList) {
         QVariantList winIds;
 
         for (int i = 0; i < rowCount(proxyIndex); ++i) {
-            winIds.append(proxyIndex.child(i, 0).data(AbstractTasksModel::LegacyWinIdList).toList());
+            winIds.append(proxyIndex.child(i, 0).data(AbstractTasksModel::WinIdList).toList());
         }
 
         return winIds;
@@ -1082,14 +1117,14 @@ bool TasksModel::anyTaskDemandsAttention() const
     return d->anyTaskDemandsAttention;
 }
 
-int TasksModel::virtualDesktop() const
+QVariant TasksModel::virtualDesktop() const
 {
     return d->filterProxyModel->virtualDesktop();
 }
 
-void TasksModel::setVirtualDesktop(int virtualDesktop)
+void TasksModel::setVirtualDesktop(const QVariant &desktop)
 {
-    d->filterProxyModel->setVirtualDesktop(virtualDesktop);
+    d->filterProxyModel->setVirtualDesktop(desktop);
 }
 
 QRect TasksModel::screenGeometry() const
@@ -1164,6 +1199,25 @@ void TasksModel::setSortMode(SortMode mode)
             d->updateManualSortMap();
         } else if (d->sortMode == SortManual) {
             d->sortedPreFilterRows.clear();
+        }
+
+        if (mode == SortVirtualDesktop) {
+            if (!d->virtualDesktopInfo) {
+                d->virtualDesktopInfo = new VirtualDesktopInfo();
+            }
+
+            ++d->virtualDesktopInfoUsers;
+
+            setSortRole(AbstractTasksModel::VirtualDesktops);
+        } else if (d->sortMode == SortVirtualDesktop) {
+            --d->virtualDesktopInfoUsers;
+
+            if (!d->virtualDesktopInfoUsers) {
+                delete d->virtualDesktopInfo;
+                d->virtualDesktopInfo = nullptr;
+            }
+
+            setSortRole(Qt::DisplayRole);
         }
 
         if (mode == SortActivity) {
@@ -1505,10 +1559,17 @@ void TasksModel::requestToggleShaded(const QModelIndex &index)
     }
 }
 
-void TasksModel::requestVirtualDesktop(const QModelIndex &index, qint32 desktop)
+void TasksModel::requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops)
 {
     if (index.isValid() && index.model() == this) {
-        d->abstractTasksSourceModel->requestVirtualDesktop(mapToSource(index), desktop);
+        d->abstractTasksSourceModel->requestVirtualDesktops(mapToSource(index), desktops);
+    }
+}
+
+void TasksModel::requestNewVirtualDesktop(const QModelIndex &index)
+{
+    if (index.isValid() && index.model() == this) {
+        d->abstractTasksSourceModel->requestNewVirtualDesktop(mapToSource(index));
     }
 }
 

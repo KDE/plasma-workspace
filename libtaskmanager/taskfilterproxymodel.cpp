@@ -33,7 +33,7 @@ public:
 
     AbstractTasksModelIface *sourceTasksModel = nullptr;
 
-    uint virtualDesktop = 0;
+    QVariant virtualDesktop;
     QRect screenGeometry;
     QString activity;
 
@@ -68,15 +68,15 @@ void TaskFilterProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
     QSortFilterProxyModel::setSourceModel(sourceModel);
 }
 
-uint TaskFilterProxyModel::virtualDesktop() const
+QVariant TaskFilterProxyModel::virtualDesktop() const
 {
     return d->virtualDesktop;
 }
 
-void TaskFilterProxyModel::setVirtualDesktop(uint virtualDesktop)
+void TaskFilterProxyModel::setVirtualDesktop(const QVariant &desktop)
 {
-    if (d->virtualDesktop != virtualDesktop) {
-        d->virtualDesktop = virtualDesktop;
+    if (d->virtualDesktop != desktop) {
+        d->virtualDesktop = desktop;
 
         if (d->filterByVirtualDesktop) {
             invalidateFilter();
@@ -258,18 +258,13 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
     }
 
     // Filter by virtual desktop.
-    if (d->filterByVirtualDesktop && d->virtualDesktop != 0) {
+    if (d->filterByVirtualDesktop && !d->virtualDesktop.isNull()) {
         if (!sourceIdx.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool()
             && (!d->demandingAttentionSkipsFilters || !sourceIdx.data(AbstractTasksModel::IsDemandingAttention).toBool())) {
-            const QVariant &virtualDesktop = sourceIdx.data(AbstractTasksModel::VirtualDesktop);
+            const QVariantList &virtualDesktops = sourceIdx.data(AbstractTasksModel::VirtualDesktops).toList();
 
-            if (!virtualDesktop.isNull()) {
-                bool ok = false;
-                const uint i = virtualDesktop.toUInt(&ok);
-
-                if (ok && i != d->virtualDesktop) {
-                    return false;
-                }
+            if (!virtualDesktops.isEmpty() && !virtualDesktops.contains(d->virtualDesktop)) {
+                return false;
             }
         }
     }

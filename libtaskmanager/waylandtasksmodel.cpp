@@ -20,6 +20,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "waylandtasksmodel.h"
 #include "tasktools.h"
+#include "virtualdesktopinfo.h"
 
 #include <KActivities/ResourceInstance>
 #include <KDirWatch>
@@ -33,10 +34,12 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <KWindowSystem>
 
 #include <QGuiApplication>
+#include <QMimeData>
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QSet>
 #include <QUrl>
+#include <QUuid>
 #include <QWindow>
 
 namespace TaskManager
@@ -51,6 +54,8 @@ public:
     KWayland::Client::PlasmaWindowManagement *windowManagement = nullptr;
     KSharedConfig::Ptr rulesConfig;
     KDirWatch *configWatcher = nullptr;
+    VirtualDesktopInfo *virtualDesktopInfo = nullptr;
+    static QUuid uuid;
 
     void init();
     void initWayland();
@@ -60,12 +65,17 @@ public:
 
     QIcon icon(KWayland::Client::PlasmaWindow *window);
 
+    static QString mimeType();
+    static QString groupMimeType();
+
     void dataChanged(KWayland::Client::PlasmaWindow *window, int role);
     void dataChanged(KWayland::Client::PlasmaWindow *window, const QVector<int> &roles);
 
 private:
     WaylandTasksModel *q;
 };
+
+QUuid WaylandTasksModel::Private::uuid = QUuid::createUuid();
 
 WaylandTasksModel::Private::Private(WaylandTasksModel *q)
     : q(q)
@@ -105,6 +115,8 @@ void WaylandTasksModel::Private::init()
     QObject::connect(configWatcher, &KDirWatch::dirty, rulesConfigChange);
     QObject::connect(configWatcher, &KDirWatch::created, rulesConfigChange);
     QObject::connect(configWatcher, &KDirWatch::deleted, rulesConfigChange);
+
+    virtualDesktopInfo = new VirtualDesktopInfo(q);
 
     initWayland();
 }
@@ -260,16 +272,33 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
         [window, this] { this->dataChanged(window, IsShadeable); }
     );
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::virtualDesktopChangeableChanged, q,
-        [window, this] { this->dataChanged(window, IsVirtualDesktopChangeable); }
+// FIXME
+//     QObject::connect(window, &KWayland::Client::PlasmaWindow::virtualDesktopChangeableChanged, q,
+//         // TODO: This is marked deprecated in KWayland, but (IMHO) shouldn't be.
+//         [window, this] { this->dataChanged(window, IsVirtualDesktopsChangeable); }
+//     );
+
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::plasmaVirtualDesktopEntered, q,
+        [window, this] {
+            this->dataChanged(window, VirtualDesktops);
+
+            // If the count has changed from 0, the window may no longer be on all virtual
+            // desktops.
+            if (window->plasmaVirtualDesktops().count() > 0) {
+                this->dataChanged(window, VirtualDesktops);
+            }
+        }
     );
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::virtualDesktopChanged, q,
-        [window, this] { this->dataChanged(window, VirtualDesktop); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::plasmaVirtualDesktopLeft, q,
+        [window, this] {
+            this->dataChanged(window, VirtualDesktops);
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::onAllDesktopsChanged, q,
-        [window, this] { this->dataChanged(window, IsOnAllVirtualDesktops); }
+            // If the count has changed to 0, the window is now on all virtual desktops.
+            if (window->plasmaVirtualDesktops().count() == 0) {
+                this->dataChanged(window, VirtualDesktops);
+            }
+        }
     );
 
     QObject::connect(window, &KWayland::Client::PlasmaWindow::geometryChanged, q,
@@ -312,6 +341,20 @@ QIcon WaylandTasksModel::Private::icon(KWayland::Client::PlasmaWindow *window)
     appDataCache[window].icon = window->icon();
 
     return window->icon();
+}
+
+QString WaylandTasksModel::Private::mimeType()
+{
+    // Use a unique format id to make this intentionally useless for
+    // cross-process DND.
+    return QString("windowsystem/winid+" + uuid.toString().toAscii());
+}
+
+QString WaylandTasksModel::Private::groupMimeType()
+{
+    // Use a unique format id to make this intentionally useless for
+    // cross-process DND.
+    return QString("windowsystem/multiple-winids+" + uuid.toString().toAscii());
 }
 
 void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, int role)
@@ -361,6 +404,12 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return d->appData(window).genericName;
     } else if (role == LauncherUrl || role == LauncherUrlWithoutIcon) {
         return d->appData(window).url;
+    } else if (role == WinIdList) {
+        return QVariantList() << window->internalId();
+    } else if (role == MimeType) {
+        return d->mimeType();
+    } else if (role == MimeData) {
+        return QByteArray::number(window->internalId());
     } else if (role == IsWindow) {
         return true;
     } else if (role == IsActive) {
@@ -391,12 +440,13 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->isShadeable();
     } else if (role == IsShaded) {
         return window->isShaded();
-    } else if (role == IsVirtualDesktopChangeable) {
-        return window->isVirtualDesktopChangeable();
-    } else if (role == VirtualDesktop) {
-        return window->virtualDesktop();
+    } else if (role == IsVirtualDesktopsChangeable) {
+        // FIXME Currently not implemented in KWayland.
+        return true;
+    } else if (role == VirtualDesktops) {
+        return window->plasmaVirtualDesktops();
     } else if (role == IsOnAllVirtualDesktops) {
-        return window->isOnAllDesktops();
+        return window->plasmaVirtualDesktops().isEmpty();
     } else if (role == Geometry) {
         return window->geometry();
     } else if (role == ScreenGeometry) {
@@ -468,46 +518,70 @@ void WaylandTasksModel::requestClose(const QModelIndex &index)
 
 void WaylandTasksModel::requestMove(const QModelIndex &index)
 {
-    // FIXME Move-to-desktop logic from XWindows version. (See also others.)
-
     if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
         return;
     }
 
-    d->windows.at(index.row())->requestMove();
+    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
+
+    const QString &currentDesktop = d->virtualDesktopInfo->currentDesktop().toString();
+
+    if (!currentDesktop.isEmpty()) {
+        window->requestEnterVirtualDesktop(currentDesktop);
+    }
+
+    window->requestMove();
 }
 
 void WaylandTasksModel::requestResize(const QModelIndex &index)
 {
-    // FIXME Move-to-desktop logic from XWindows version. (See also others.)
-
     if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
         return;
     }
 
-    d->windows.at(index.row())->requestResize();
+    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
+
+    const QString &currentDesktop = d->virtualDesktopInfo->currentDesktop().toString();
+
+    if (!currentDesktop.isEmpty()) {
+        window->requestEnterVirtualDesktop(currentDesktop);
+    }
+
+    window->requestResize();
 }
 
 void WaylandTasksModel::requestToggleMinimized(const QModelIndex &index)
 {
-    // FIXME Move-to-desktop logic from XWindows version. (See also others.)
-
     if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
         return;
     }
 
-    d->windows.at(index.row())->requestToggleMinimized();
+    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
+
+    const QString &currentDesktop = d->virtualDesktopInfo->currentDesktop().toString();
+
+    if (!currentDesktop.isEmpty()) {
+        window->requestEnterVirtualDesktop(currentDesktop);
+    }
+
+    window->requestToggleMinimized();
 }
 
 void WaylandTasksModel::requestToggleMaximized(const QModelIndex &index)
 {
-    // FIXME Move-to-desktop logic from XWindows version. (See also others.)
-
     if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
         return;
     }
 
-    d->windows.at(index.row())->requestToggleMaximized();
+    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
+
+    const QString &currentDesktop = d->virtualDesktopInfo->currentDesktop().toString();
+
+    if (!currentDesktop.isEmpty()) {
+        window->requestEnterVirtualDesktop(currentDesktop);
+    }
+
+    window->requestToggleMaximized();
 }
 
 void WaylandTasksModel::requestToggleKeepAbove(const QModelIndex &index)
@@ -544,16 +618,53 @@ void WaylandTasksModel::requestToggleShaded(const QModelIndex &index)
     d->windows.at(index.row())->requestToggleShaded();
 }
 
-void WaylandTasksModel::requestVirtualDesktop(const QModelIndex &index, qint32 desktop)
+void WaylandTasksModel::requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops)
 {
-    // FIXME Lacks add-new-desktop code from XWindows version.
-    // FIXME Does this do the set-on-all-desktops stuff from the XWindows version?
+    // FIXME TODO: Lacks the "if we've requested the current desktop, force-activate
+    // the window" logic from X11 version. This behavior should be in KWin rather than
+    // libtm however.
 
     if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
         return;
     }
 
-    d->windows.at(index.row())->requestVirtualDesktop(desktop);
+    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
+
+    if (desktops.isEmpty()) {
+        foreach (const QVariant &desktop, window->plasmaVirtualDesktops()) {
+            window->requestLeaveVirtualDesktop(desktop.toString());
+        }
+    } else {
+        const QStringList &now = window->plasmaVirtualDesktops();
+        QStringList next;
+
+        foreach (const QVariant &desktop, desktops) {
+            const QString &desktopId = desktop.toString();
+
+            if (!desktopId.isEmpty()) {
+                next << desktopId;
+
+                if (!now.contains(desktopId)) {
+                    window->requestEnterVirtualDesktop(desktopId);
+                }
+            }
+        }
+
+        foreach (const QString &desktop, now) {
+            if (!next.contains(desktop)) {
+                window->requestLeaveVirtualDesktop(desktop);
+            }
+        }
+    }
+}
+
+void WaylandTasksModel::requestNewVirtualDesktop(const QModelIndex &index)
+{
+    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+        return;
+    }
+
+    d->windows.at(index.row())->requestEnterNewVirtualDesktop();
 }
 
 void WaylandTasksModel::requestActivities(const QModelIndex &index, const QStringList &activities)
@@ -603,6 +714,55 @@ void WaylandTasksModel::requestPublishDelegateGeometry(const QModelIndex &index,
     KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
 
     window->setMinimizedGeometry(surface, rect);
+}
+
+quint32 WaylandTasksModel::winIdFromMimeData(const QMimeData *mimeData, bool *ok)
+{
+    Q_ASSERT(mimeData);
+
+    if (ok) {
+        *ok = false;
+    }
+
+    if (!mimeData->hasFormat(Private::mimeType())) {
+        return 0;
+    }
+
+    quint32 id = mimeData->data(Private::mimeType()).toUInt(ok);
+
+    return id;
+}
+
+QList<quint32> WaylandTasksModel::winIdsFromMimeData(const QMimeData *mimeData, bool *ok)
+{
+    Q_ASSERT(mimeData);
+    QList<quint32> ids;
+
+    if (ok) {
+        *ok = false;
+    }
+
+    if (!mimeData->hasFormat(Private::groupMimeType())) {
+        // Try to extract single window id.
+        bool singularOk;
+        WId id = winIdFromMimeData(mimeData, &singularOk);
+
+        if (ok) {
+            *ok = singularOk;
+        }
+
+        if (singularOk) {
+            ids << id;
+        }
+
+        return ids;
+    }
+
+    // FIXME: Extracting multiple winids is still unimplemented;
+    // TaskGroupingProxy::data(..., ::MimeData) can't produce
+    // a payload with them anyways.
+
+    return ids;
 }
 
 }

@@ -46,6 +46,7 @@ target_link_libraries(taskmanager
         Qt5::DBus
         KF5::Activities
         KF5::ConfigCore
+        KF5::I18n
         KF5::KIOCore
         KF5::KIOWidgets
         KF5::ProcessCore

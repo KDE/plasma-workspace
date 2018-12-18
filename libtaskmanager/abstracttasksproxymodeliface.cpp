@@ -193,7 +193,7 @@ void AbstractTasksProxyModelIface::requestToggleShaded(const QModelIndex &index)
     }
 }
 
-void AbstractTasksProxyModelIface::requestVirtualDesktop(const QModelIndex &index, qint32 desktop)
+void AbstractTasksProxyModelIface::requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops)
 {
     if (!index.isValid()) {
         return;
@@ -203,7 +203,21 @@ void AbstractTasksProxyModelIface::requestVirtualDesktop(const QModelIndex &inde
     const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
-        const_cast<AbstractTasksModelIface *>(m)->requestVirtualDesktop(sourceIndex, desktop);
+        const_cast<AbstractTasksModelIface *>(m)->requestVirtualDesktops(sourceIndex, desktops);
+    }
+}
+
+void AbstractTasksProxyModelIface::requestNewVirtualDesktop(const QModelIndex &index)
+{
+    if (!index.isValid()) {
+        return;
+    }
+
+    const QModelIndex &sourceIndex = mapIfaceToSource(index);
+    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+
+    if (m) {
+        const_cast<AbstractTasksModelIface *>(m)->requestNewVirtualDesktop(sourceIndex);
     }
 }
 
@@ -220,7 +234,6 @@ void AbstractTasksProxyModelIface::requestActivities(const QModelIndex &index, c
         const_cast<AbstractTasksModelIface *>(m)->requestActivities(sourceIndex, activities);
     }
 }
-
 
 void AbstractTasksProxyModelIface::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
 {

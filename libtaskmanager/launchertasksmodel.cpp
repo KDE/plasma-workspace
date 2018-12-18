@@ -351,6 +351,8 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
         return url;
     } else if (role == IsLauncher) {
         return true;
+    } else if (role == IsVirtualDesktopsChangeable) {
+        return false;
     } else if (role == IsOnAllVirtualDesktops) {
         return true;
     } else if (role == Activities) {

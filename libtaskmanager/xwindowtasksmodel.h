@@ -34,7 +34,7 @@ namespace TaskManager
 {
 
 /**
- * @short A tasks model for X Windows windows.
+ * @short A tasks model for X Window System windows.
  *
  * This model presents tasks sourced from window data on the X Windows
  * server the host process is connected to.
@@ -43,6 +43,8 @@ namespace TaskManager
  * certain types of windows (e.g. utility windows, or windows that are
  * transients for an otherwise-included window) are omitted from the
  * model.
+ *
+ * @see WindowTasksModel
  *
  * @author Eike Hein <hein@kde.org>
  */
@@ -174,22 +176,29 @@ public:
     void requestToggleShaded(const QModelIndex &index) override;
 
     /**
-     * Request moving the window at the given index to the specified virtual
-     * desktop.
+     * Request entering the window at the given index on the specified virtual desktop.
+     * For compatibility across windowing systems the library supports, the desktops
+     * parameter is a list; however, on X11 a window can only be on one or all virtual
+     * desktops. Therefore, only the first list entry is actually used.
      *
-     * If the specified virtual desktop is 0, IsOnAllVirtualDesktops is
-     * toggled instead.
+     * An empty list has a special meaning: The window is entered on all virtual desktops
+     * in the session.
      *
-     * If the specified desktop number exceeds the number of virtual
-     * desktops in the session, a new desktop is created before moving
-     * the window.
-     *
-     * FIXME: Desktop logic should maybe move into proxy.
+     * The id 0 has a special meaning: The window is entered on all virtual desktops in
+     * the session.
      *
      * @param index An index in this window tasks model.
-     * @param desktop A virtual desktop number.
+     * @param desktops A list of virtual desktop ids (uint).
      **/
-    void requestVirtualDesktop(const QModelIndex &index, qint32 desktop) override;
+    void requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops) override;
+
+    /**
+     * Request entering the window at the given index on a new virtual desktop,
+     * which is created in response to this request.
+     *
+     * @param index An index in this window tasks model.
+     **/
+    void requestNewVirtualDesktop(const QModelIndex &index) override;
 
     /**
      * Request moving the task at the given index to the specified activities.

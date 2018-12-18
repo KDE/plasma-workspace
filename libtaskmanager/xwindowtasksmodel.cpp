@@ -365,12 +365,12 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
     if (properties2 & NET::WM2AllowedActions) {
         wipeInfoCache = true;
         changedRoles << IsClosable << IsMovable << IsResizable << IsMaximizable << IsMinimizable;
-        changedRoles << IsFullScreenable << IsShadeable << IsVirtualDesktopChangeable;
+        changedRoles << IsFullScreenable << IsShadeable << IsVirtualDesktopsChangeable;
     }
 
     if (properties & NET::WMDesktop) {
         wipeInfoCache = true;
-        changedRoles << VirtualDesktop << IsOnAllVirtualDesktops;
+        changedRoles << VirtualDesktops << IsOnAllVirtualDesktops;
     }
 
     if (properties & NET::WMGeometry) {
@@ -591,7 +591,7 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return d->launcherUrl(window);
     } else if (role == LauncherUrlWithoutIcon) {
         return d->launcherUrl(window, false /* encodeFallbackIcon */);
-    } else if (role == LegacyWinIdList) {
+    } else if (role == WinIdList) {
         return QVariantList() << window;
     } else if (role == MimeType) {
         return d->mimeType();
@@ -628,10 +628,10 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return d->windowInfo(window)->actionSupported(NET::ActionShade);
     } else if (role == IsShaded) {
         return d->windowInfo(window)->hasState(NET::Shaded);
-    } else if (role == IsVirtualDesktopChangeable) {
+    } else if (role == IsVirtualDesktopsChangeable) {
         return d->windowInfo(window)->actionSupported(NET::ActionChangeDesktop);
-    } else if (role == VirtualDesktop) {
-        return d->windowInfo(window)->desktop();
+    } else if (role == VirtualDesktops) {
+        return QVariantList() << d->windowInfo(window)->desktop();
     } else if (role == IsOnAllVirtualDesktops) {
         return d->windowInfo(window)->onAllDesktops();
     } else if (role == Geometry) {
@@ -910,9 +910,25 @@ void XWindowTasksModel::requestToggleShaded(const QModelIndex &index)
     }
 }
 
-void XWindowTasksModel::requestVirtualDesktop(const QModelIndex &index, qint32 desktop)
+void XWindowTasksModel::requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops)
 {
     if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+        return;
+    }
+
+    int desktop = 0;
+
+    if (!desktops.isEmpty()) {
+        bool ok = false;
+
+        desktop = desktops.first().toUInt(&ok);
+
+        if (!ok) {
+            return;
+        }
+    }
+
+    if (desktop > KWindowSystem::numberOfDesktops()) {
         return;
     }
 
@@ -928,17 +944,6 @@ void XWindowTasksModel::requestVirtualDesktop(const QModelIndex &index, qint32 d
         }
 
         return;
-    // FIXME Move add-new-desktop logic up into proxy.
-    } else if (desktop > KWindowSystem::numberOfDesktops()) {
-        desktop = KWindowSystem::numberOfDesktops() + 1;
-
-        // FIXME Arbitrary limit of 20 copied from old code.
-        if (desktop > 20) {
-            return;
-        }
-
-        NETRootInfo ri(QX11Info::connection(), NET::NumberOfDesktops);
-        ri.setNumberOfDesktops(desktop);
     }
 
     KWindowSystem::setOnDesktop(window, desktop);
@@ -946,6 +951,26 @@ void XWindowTasksModel::requestVirtualDesktop(const QModelIndex &index, qint32 d
     if (desktop == KWindowSystem::currentDesktop()) {
         KWindowSystem::forceActiveWindow(window);
     }
+}
+
+void XWindowTasksModel::requestNewVirtualDesktop(const QModelIndex &index)
+{
+    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+        return;
+    }
+
+    const WId window = d->windows.at(index.row());
+    const int desktop = KWindowSystem::numberOfDesktops() + 1;
+
+    // FIXME Arbitrary limit of 20 copied from old code.
+    if (desktop > 20) {
+        return;
+    }
+
+    NETRootInfo ri(QX11Info::connection(), NET::NumberOfDesktops);
+    ri.setNumberOfDesktops(desktop);
+
+    KWindowSystem::setOnDesktop(window, desktop);
 }
 
 void XWindowTasksModel::requestActivities(const QModelIndex &index, const QStringList &activities)

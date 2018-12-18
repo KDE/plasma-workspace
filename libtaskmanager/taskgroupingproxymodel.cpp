@@ -671,16 +671,15 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             }
 
             return appName;
-        } else if (role == AbstractTasksModel::LegacyWinIdList) {
+        } else if (role == AbstractTasksModel::WinIdList) {
             QVariantList winIds;
 
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
-                winIds.append(proxyIndex.child(i, 0).data(AbstractTasksModel::LegacyWinIdList).toList());
+                winIds.append(proxyIndex.child(i, 0).data(AbstractTasksModel::WinIdList).toList());
             }
 
             return winIds;
         } else if (role == AbstractTasksModel::MimeType) {
-            // FIXME: Legacy X11 stuff, but it's what we have for now.
             return QStringLiteral("windowsystem/multiple-winids");
         } else if (role == AbstractTasksModel::MimeData) {
             // FIXME TODO: Implement.
@@ -719,22 +718,17 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             return d->all(proxyIndex, AbstractTasksModel::IsShadeable);
         } else if (role == AbstractTasksModel::IsShaded) {
             return d->all(proxyIndex, AbstractTasksModel::IsShaded);
-        } else if (role == AbstractTasksModel::IsVirtualDesktopChangeable) {
-            return d->all(proxyIndex, AbstractTasksModel::IsVirtualDesktopChangeable);
-        } else if (role == AbstractTasksModel::VirtualDesktop) {
-            // Returns the lowest virtual desktop id among all children of the
-            // group.
-            int virtualDesktop = INT_MAX;
+        } else if (role == AbstractTasksModel::IsVirtualDesktopsChangeable) {
+            return d->all(proxyIndex, AbstractTasksModel::IsVirtualDesktopsChangeable);
+        } else if (role == AbstractTasksModel::VirtualDesktops) {
+            QStringList desktops;
 
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
-                const int childVirtualDesktop = proxyIndex.child(i, 0).data(AbstractTasksModel::VirtualDesktop).toInt();
-
-                if (childVirtualDesktop < virtualDesktop) {
-                    virtualDesktop = childVirtualDesktop;
-                }
+                desktops.append(proxyIndex.child(i, 0).data(AbstractTasksModel::VirtualDesktops).toStringList());
             }
 
-            return virtualDesktop;
+            desktops.removeDuplicates();
+            return desktops;
         } else if (role == AbstractTasksModel::ScreenGeometry) {
             // TODO: Nothing needs this for now and it would add complexity to
             // make it a list; skip it until needed. Once it is, do it similarly
@@ -1109,24 +1103,53 @@ void TaskGroupingProxyModel::requestToggleShaded(const QModelIndex &index)
     }
 }
 
-void TaskGroupingProxyModel::requestVirtualDesktop(const QModelIndex &index, qint32 desktop)
+void TaskGroupingProxyModel::requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops)
 {
     if (!d->abstractTasksSourceModel || !index.isValid() || index.model() != this) {
         return;
     }
 
     if (index.parent().isValid() || !d->isGroup(index.row())) {
-        d->abstractTasksSourceModel->requestVirtualDesktop(mapToSource(index), desktop);
+        d->abstractTasksSourceModel->requestVirtualDesktops(mapToSource(index), desktops);
     } else {
-        const int row = index.row();
+        QVector<QModelIndex> groupChildren;
 
-        for (int i = (rowCount(index) - 1); i >= 1; --i) {
-            const QModelIndex &sourceChild = mapToSource(index.child(i, 0));
-            d->abstractTasksSourceModel->requestVirtualDesktop(sourceChild, desktop);
+        const int childCount = rowCount(index);
+
+        groupChildren.reserve(childCount);
+
+        for (int i = (childCount - 1); i >= 0; --i) {
+            groupChildren.append(mapToSource(index.child(i, 0)));
         }
 
-        d->abstractTasksSourceModel->requestVirtualDesktop(mapToSource(TaskGroupingProxyModel::index(row, 0)),
-            desktop);
+        for (const QModelIndex &idx : groupChildren) {
+            d->abstractTasksSourceModel->requestVirtualDesktops(idx, desktops);
+        }
+    }
+}
+
+void TaskGroupingProxyModel::requestNewVirtualDesktop(const QModelIndex &index)
+{
+    if (!d->abstractTasksSourceModel || !index.isValid() || index.model() != this) {
+        return;
+    }
+
+    if (index.parent().isValid() || !d->isGroup(index.row())) {
+        d->abstractTasksSourceModel->requestNewVirtualDesktop(mapToSource(index));
+    } else {
+        QVector<QModelIndex> groupChildren;
+
+        const int childCount = rowCount(index);
+
+        groupChildren.reserve(childCount);
+
+        for (int i = (childCount - 1); i >= 0; --i) {
+            groupChildren.append(mapToSource(index.child(i, 0)));
+        }
+
+        for (const QModelIndex &idx : groupChildren) {
+            d->abstractTasksSourceModel->requestNewVirtualDesktop(idx);
+        }
     }
 }
 
@@ -1139,15 +1162,19 @@ void TaskGroupingProxyModel::requestActivities(const QModelIndex &index, const Q
     if (index.parent().isValid() || !d->isGroup(index.row())) {
         d->abstractTasksSourceModel->requestActivities(mapToSource(index), activities);
     } else {
-        const int row = index.row();
+        QVector<QModelIndex> groupChildren;
 
-        for (int i = (rowCount(index) - 1); i >= 1; --i) {
-            const QModelIndex &sourceChild = mapToSource(index.child(i, 0));
-            d->abstractTasksSourceModel->requestActivities(sourceChild, activities);
+        const int childCount = rowCount(index);
+
+        groupChildren.reserve(childCount);
+
+        for (int i = (childCount - 1); i >= 0; --i) {
+            groupChildren.append(mapToSource(index.child(i, 0)));
         }
 
-        d->abstractTasksSourceModel->requestActivities(mapToSource(TaskGroupingProxyModel::index(row, 0)),
-            activities);
+        for (const QModelIndex &idx : groupChildren) {
+            d->abstractTasksSourceModel->requestActivities(idx, activities);
+        }
     }
 }
 
