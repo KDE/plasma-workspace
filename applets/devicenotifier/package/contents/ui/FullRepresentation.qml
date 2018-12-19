@@ -158,10 +158,10 @@ MouseArea {
         DeviceItem {
             width: notifierDialog.width
             udi: DataEngineSource
-            icon: sdSource.data[udi].Icon
-            deviceName: sdSource.data[udi].Description
-            emblemIcon: Emblems[0]
-            state: sdSource.data[udi].State
+            icon: sdSource.data[udi] ? sdSource.data[udi].Icon : ""
+            deviceName: sdSource.data[udi] ? sdSource.data[udi].Description : ""
+            emblemIcon: Emblems && Emblems[0] ? Emblems[0] : ""
+            state: sdSource.data[udi] ? sdSource.data[udi].State : 0
 
             percentUsage: {
                 if (!sdSource.data[udi]) {
@@ -177,9 +177,10 @@ MouseArea {
             actionIcon: mounted ? "media-eject" : "media-mount"
             actionVisible: model["Device Types"].indexOf("Portable Media Player") == -1
             actionToolTip: {
+                var types = model["Device Types"];
                 if (!mounted) {
                     return i18n("Click to access this device from other applications.")
-                } else if (model["Device Types"].indexOf("OpticalDisc") != -1) {
+                } else if (types && types.indexOf("OpticalDisc") != -1) {
                     return i18n("Click to eject this disc.")
                 } else {
                     return i18n("Click to safely remove this device.")

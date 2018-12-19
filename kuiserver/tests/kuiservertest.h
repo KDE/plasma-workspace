@@ -17,8 +17,8 @@
   * Boston, MA 02110-1301, USA.
   */
 
-#ifndef __KJOBTEST_H__
-#define __KJOBTEST_H__
+#ifndef __KUISERVERTEST_H__
+#define __KUISERVERTEST_H__
 
 #include <kjob.h>
 #include <kjobuidelegate.h>
@@ -49,4 +49,4 @@ private:
     int seconds, total;
 };
 
-#endif // __KJOBTEST_H__
+#endif // __KUISERVERTEST_H__

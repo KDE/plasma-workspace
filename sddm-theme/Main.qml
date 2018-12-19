@@ -110,28 +110,9 @@ PlasmaCore.ColorScope {
             clock: clock
         }
 
-        DropShadow {
-            id: clockShadow
-            anchors.fill: clock
-            source: clock
-            horizontalOffset: 0
-            verticalOffset: 1
-            radius: 12
-            samples: 32
-            spread: 0.2
-            color: Qt.rgba(0, 0, 0, 1)
-            Behavior on opacity {
-                OpacityAnimator {
-                    duration: 1000
-                    easing.type: Easing.InOutQuad
-                }
-            }
-        }
-
         Clock {
             id: clock
             visible: y > 0
-            property Item shadow: clockShadow
             y: (userListComponent.userList.y + mainStack.y)/2 - height/2
             anchors.horizontalCenter: parent.horizontalCenter
         }
@@ -202,7 +183,7 @@ PlasmaCore.ColorScope {
                     },
                     ActionButton {
                         iconSource: "system-shutdown"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shutdown")
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shut Down")
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
                         visible: !inputPanel.keyboardActive
@@ -348,7 +329,7 @@ PlasmaCore.ColorScope {
                 notificationMessage: root.notificationMessage
 
                 userListModel: QtObject {
-                    property string name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login as different user")
+                    property string name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log in as a different user")
                     property string iconSource: ""
                 }
 

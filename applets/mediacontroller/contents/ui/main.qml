@@ -56,11 +56,11 @@ Item {
 
     property bool noPlayer: mpris2Source.sources.length <= 1
 
-    readonly property bool canControl: !root.noPlayer && mpris2Source.currentData.CanControl
-    readonly property bool canGoPrevious: canControl && mpris2Source.currentData.CanGoPrevious
-    readonly property bool canGoNext: canControl && mpris2Source.currentData.CanGoNext
-    readonly property bool canPlay: canControl && mpris2Source.currentData.CanPlay
-    readonly property bool canPause: canControl && mpris2Source.currentData.CanPause
+    readonly property bool canControl: (!root.noPlayer && mpris2Source.currentData.CanControl) || false
+    readonly property bool canGoPrevious: (canControl && mpris2Source.currentData.CanGoPrevious) || false
+    readonly property bool canGoNext: (canControl && mpris2Source.currentData.CanGoNext) || false
+    readonly property bool canPlay: (canControl && mpris2Source.currentData.CanPlay) || false
+    readonly property bool canPause: (canControl && mpris2Source.currentData.CanPause) || false
 
     Plasmoid.switchWidth: units.gridUnit * 14
     Plasmoid.switchHeight: units.gridUnit * 10

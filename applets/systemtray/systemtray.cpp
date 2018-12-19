@@ -85,7 +85,9 @@ void SystemTray::init()
         const QString dbusactivation = info.value(QStringLiteral("X-Plasma-DBusActivationService"));
         if (!dbusactivation.isEmpty()) {
             qCDebug(SYSTEM_TRAY) << "ST Found DBus-able Applet: " << info.pluginId() << dbusactivation;
-            m_dbusActivatableTasks[info.pluginId()] = dbusactivation;
+            QRegExp rx(dbusactivation);
+            rx.setPatternSyntax(QRegExp::Wildcard);
+            m_dbusActivatableTasks[info.pluginId()] = rx;
         }
     }
 }
@@ -163,7 +165,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     connect(this, &QObject::destroyed, desktopMenu, &QMenu::close);
     desktopMenu->setAttribute(Qt::WA_DeleteOnClose);
 
-    //this is a workaround where Qt will fail to realise a mouse has been released
+    //this is a workaround where Qt will fail to realize a mouse has been released
 
     // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
     // whilst the mouse is depressed
@@ -413,7 +415,7 @@ void SystemTray::restorePlasmoids()
                 }
             }
 
-            // insertMulti becase it is possible (though poor form) to have multiple applets
+            // insertMulti because it is possible (though poor form) to have multiple applets
             // with the same visible name but different plugins
             sortedApplets.insertMulti(info.name(), info);
         }
@@ -541,9 +543,7 @@ void SystemTray::serviceRegistered(const QString &service)
             continue;
         }
 
-        const QString &pattern = it.value();
-        QRegExp rx(pattern);
-        rx.setPatternSyntax(QRegExp::Wildcard);
+        const auto &rx = it.value();
         if (rx.exactMatch(service)) {
             //qCDebug(SYSTEM_TRAY) << "ST : DBus service " << m_dbusActivatableTasks[plugin] << "appeared. Loading " << plugin;
             newTask(plugin);
@@ -562,9 +562,7 @@ void SystemTray::serviceUnregistered(const QString &service)
             continue;
         }
 
-        const QString &pattern = it.value();
-        QRegExp rx(pattern);
-        rx.setPatternSyntax(QRegExp::Wildcard);
+        const auto &rx = it.value();
         if (rx.exactMatch(service)) {
             m_dbusServiceCounts[plugin]--;
             Q_ASSERT(m_dbusServiceCounts[plugin] >= 0);

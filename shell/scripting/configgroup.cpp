@@ -64,7 +64,7 @@ ConfigGroup::~ConfigGroup()
     if (d->synchTimer->isActive()) {
         //qDebug() << "SYNC......";
         d->synchTimer->stop();
-        d->configGroup->sync();
+        sync();
     }
 
     delete d;
@@ -139,6 +139,9 @@ QStringList ConfigGroup::keyList() const
 
 QStringList ConfigGroup::groupList() const
 {
+    if (!d->configGroup) {
+        return QStringList();
+    }
     return d->configGroup->groupList();
 }
 
@@ -178,13 +181,13 @@ bool ConfigGroup::readConfigFile()
 
 // Bound methods and slots
 
-bool ConfigGroup::writeEntry(const QString& key, const QVariant& value)
+bool ConfigGroup::writeEntry(const QString& key, const QJSValue& value)
 {
     if (!d->configGroup) {
         return false;
     }
 
-    d->configGroup->writeEntry(key, value);
+    d->configGroup->writeEntry(key, value.toVariant());
     d->synchTimer->start();
     return true;
 }
@@ -201,7 +204,9 @@ QVariant ConfigGroup::readEntry(const QString& key)
 
 void ConfigGroup::deleteEntry(const QString& key)
 {
-    d->configGroup->deleteEntry(key);
+    if (d->configGroup) {
+        d->configGroup->deleteEntry(key);
+    }
 }
 
 void ConfigGroup::sync()

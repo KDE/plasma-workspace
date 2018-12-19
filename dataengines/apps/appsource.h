@@ -16,8 +16,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef TASKSOURCE_H
-#define TASKSOURCE_H
+#ifndef APPSOURCE_H
+#define APPSOURCE_H
 
 // plasma
 #include <Plasma/DataContainer>
@@ -56,4 +56,4 @@ class AppSource : public Plasma::DataContainer
 
 };
 
-#endif // TASKSOURCE_H
+#endif // APPSOURCE_H

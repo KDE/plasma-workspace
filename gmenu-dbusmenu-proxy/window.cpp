@@ -456,7 +456,7 @@ uint Window::GetLayout(int parentId, int recursionDepth, const QStringList &prop
         return 1;
     }
 
-    // If a particular entry is requested, see what it is and resolve as neccessary
+    // If a particular entry is requested, see what it is and resolve as necessary
     // for example the "File" entry on root is 0,0,1 but is a menu reference to e.g. 1,0,0
     // so resolve that and return the correct menu
     if (index > 0) {

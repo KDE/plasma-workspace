@@ -948,6 +948,11 @@ void ShellCorona::loadDefaultLayout()
 
 void ShellCorona::processUpdateScripts()
 {
+    const QStringList scripts = WorkspaceScripting::ScriptEngine::pendingUpdateScripts(this);
+    if (scripts.isEmpty()) {
+        return;
+    }
+
     WorkspaceScripting::ScriptEngine scriptEngine(this);
 
     connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
@@ -958,7 +963,8 @@ void ShellCorona::processUpdateScripts()
             [](const QString &msg) {
                 qDebug() << msg;
             });
-    foreach (const QString &script, WorkspaceScripting::ScriptEngine::pendingUpdateScripts(this)) {
+
+    for (const QString &script : scripts) {
         QFile file(script);
         if (file.open(QIODevice::ReadOnly | QIODevice::Text) ) {
             QString code = file.readAll();
@@ -1703,8 +1709,7 @@ void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
     delete m_addPanelAction;
     m_addPanelAction = nullptr;
 
-    delete m_addPanelsMenu;
-    m_addPanelsMenu = nullptr;
+    m_addPanelsMenu.reset(nullptr);
 
     KPluginInfo::List panelContainmentPlugins = Plasma::PluginLoader::listContainmentsOfType(QStringLiteral("Panel"));
 
@@ -1719,12 +1724,12 @@ void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
         m_addPanelAction->setData(Plasma::Types::AddAction);
         connect(m_addPanelAction, SIGNAL(triggered(bool)), this, SLOT(addPanel()));
     } else if (!panelContainmentPlugins.isEmpty()) {
-        m_addPanelsMenu = new QMenu;
+        m_addPanelsMenu.reset(new QMenu);
         m_addPanelAction = m_addPanelsMenu->menuAction();
         m_addPanelAction->setText(i18n("Add Panel"));
         m_addPanelAction->setData(Plasma::Types::AddAction);
-        connect(m_addPanelsMenu, &QMenu::aboutToShow, this, &ShellCorona::populateAddPanelsMenu);
-        connect(m_addPanelsMenu, SIGNAL(triggered(QAction*)), this, SLOT(addPanel(QAction*)));
+        connect(m_addPanelsMenu.data(), &QMenu::aboutToShow, this, &ShellCorona::populateAddPanelsMenu);
+        connect(m_addPanelsMenu.data(), SIGNAL(triggered(QAction*)), this, SLOT(addPanel(QAction*)));
     }
 
     if (m_addPanelAction) {
@@ -2047,7 +2052,7 @@ void ShellCorona::activateLauncherMenu()
 
 void ShellCorona::activateTaskManagerEntry(int index)
 {
-    auto activateTaskManagerEntryOnContainment = [this](const Plasma::Containment *c, int index) {
+    auto activateTaskManagerEntryOnContainment = [](const Plasma::Containment *c, int index) {
         const auto &applets = c->applets();
         for (auto *applet : applets) {
             const auto &provides = KPluginMetaData::readStringList(applet->pluginMetaData().rawData(), QStringLiteral("X-Plasma-Provides"));

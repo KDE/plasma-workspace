@@ -23,12 +23,6 @@
     <method name="saveCurrentSessionAs">
       <arg type="s" direction="in"/>
     </method>
-    <method name="suspendStartup">
-      <arg type="s" direction="in"/>
-    </method>
-    <method name="resumeStartup">
-      <arg type="s" direction="in"/>
-    </method>
     <method name="wmChanged"/>
     <method name="saveSubSession">
       <arg type="s" direction="in"/>

@@ -51,6 +51,8 @@ HotplugEngine::HotplugEngine(QObject* parent, const QVariantList& args)
     foreach (const QString &folder, folders) {
         m_dirWatch->addDir(folder, KDirWatch::WatchFiles);
     }
+    connect(m_dirWatch, &KDirWatch::created, this, &HotplugEngine::updatePredicates);
+    connect(m_dirWatch, &KDirWatch::deleted, this, &HotplugEngine::updatePredicates);
     connect(m_dirWatch, &KDirWatch::dirty, this, &HotplugEngine::updatePredicates);
     init();
 }
@@ -148,6 +150,7 @@ void HotplugEngine::updatePredicates(const QString &path)
             if (sources().contains(udi)) {
                 Plasma::DataEngine::Data data;
                 data.insert(QStringLiteral("predicateFiles"), predicates);
+                data.insert(QStringLiteral("actions"), actionsForPredicates(predicates));
                 setData(udi, data);
             } else {
                 onDeviceAdded(device, false);
@@ -173,6 +176,26 @@ QStringList HotplugEngine::predicatesForDevice(Solid::Device &device) const
     }
 
     return interestingDesktopFiles;
+}
+
+QVariantList HotplugEngine::actionsForPredicates(const QStringList &predicates) const
+{
+    QVariantList actions;
+    actions.reserve(predicates.count());
+
+    for (const QString &desktop : predicates) {
+        const QString actionUrl = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "solid/actions/" + desktop);
+        QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(actionUrl, true);
+        if (!services.isEmpty()) {
+            Plasma::DataEngine::Data action;
+            action.insert(QStringLiteral("predicate"), desktop);
+            action.insert(QStringLiteral("text"), services[0].text());
+            action.insert(QStringLiteral("icon"), services[0].icon());
+            actions << action;
+        }
+    }
+
+    return actions;
 }
 
 void HotplugEngine::onDeviceAdded(const QString &udi)
@@ -234,21 +257,7 @@ void HotplugEngine::onDeviceAdded(Solid::Device &device, bool added)
         data.insert(QStringLiteral("icon"), device.icon());
         data.insert(QStringLiteral("emblems"), device.emblems());
         data.insert(QStringLiteral("predicateFiles"), interestingDesktopFiles);
-
-        QVariantList actions;
-        foreach(const QString& desktop, interestingDesktopFiles) {
-            const QString actionUrl = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "solid/actions/" + desktop);
-	    //qDebug() << actionUrl;
-            QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(actionUrl, true);
-            if (!services.isEmpty()) {
-                Plasma::DataEngine::Data action;
-                action.insert(QStringLiteral("predicate"), desktop);
-                action.insert(QStringLiteral("text"), services[0].text());
-                action.insert(QStringLiteral("icon"), services[0].icon());
-                actions << action;
-            }
-        }
-        data.insert(QStringLiteral("actions"), actions);
+        data.insert(QStringLiteral("actions"), actionsForPredicates(interestingDesktopFiles));
 
         data.insert(QStringLiteral("isEncryptedContainer"), isEncryptedContainer);
 

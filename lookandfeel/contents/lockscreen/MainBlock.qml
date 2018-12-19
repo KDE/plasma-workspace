@@ -30,6 +30,7 @@ import "../components"
 SessionManagementScreen {
 
     property Item mainPasswordBox: passwordBox
+    property bool lockScreenUiVisible: false
 
     //the y position that should be ensured visible when the on screen keyboard is visible
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
@@ -44,7 +45,7 @@ SessionManagementScreen {
         var password = passwordBox.text
 
         //this is partly because it looks nicer
-        //but more importantly it works round a Qt bug that can trigger if the app is closed with a TextField focussed
+        //but more importantly it works round a Qt bug that can trigger if the app is closed with a TextField focused
         //See https://bugreports.qt.io/browse/QTBUG-55460
         loginButton.forceActiveFocus();
         loginRequest(password);
@@ -61,7 +62,11 @@ SessionManagementScreen {
         enabled: !authenticator.graceLocked
         revealPasswordButtonShown: true
 
-        onAccepted: startLogin()
+        onAccepted: {
+            if (lockScreenUiVisible) {
+                startLogin();
+            }
+        }
 
         //if empty and left or right is pressed change selection in user switch
         //this cannot be in keys.onLeftPressed as then it doesn't reach the password box

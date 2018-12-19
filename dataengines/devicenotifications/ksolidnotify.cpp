@@ -72,6 +72,7 @@ void KSolidNotify::onDeviceRemoved(const QString &udi)
         }
     }
     m_devices.remove(udi);
+    emit clearNotification(udi);
 }
 
 bool KSolidNotify::isSafelyRemovable(const QString &udi) const
@@ -148,6 +149,11 @@ void KSolidNotify::queryBlockingApps(const QString &devicePath)
 
 void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, const QVariant &errorData, const QString &udi)
 {
+    if ((error == Solid::ErrorType::NoError) && (type == SolidReplyType::Setup)) {
+        emit clearNotification(udi);
+        return;
+    }
+
     QString errorMsg;
 
     switch (error) {

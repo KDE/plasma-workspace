@@ -18,6 +18,7 @@ target_link_libraries(plasma_engine_soliddevice
   KF5::Plasma
   KF5::Solid
   KF5::CoreAddons
+  KF5::Notifications
 )
 
 kcoreaddons_desktop_to_json(plasma_engine_soliddevice plasma-dataengine-soliddevice.desktop)

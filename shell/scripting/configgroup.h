@@ -22,6 +22,7 @@
 
 #include <QObject>
 #include <QVariant>
+#include <QJSValue>
 
 #include <KSharedConfig>
 
@@ -52,7 +53,7 @@ public:
     QStringList groupList() const;
 
     Q_INVOKABLE QVariant readEntry(const QString &key);
-    Q_INVOKABLE bool writeEntry(const QString &key, const QVariant &value);
+    Q_INVOKABLE bool writeEntry(const QString &key, const QJSValue &value);
     Q_INVOKABLE void deleteEntry(const QString& key);
 
 Q_SIGNALS:

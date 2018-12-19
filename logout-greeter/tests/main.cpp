@@ -31,7 +31,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <unistd.h>
 
-#include <config-ksmserver.h>
+#include <config.h>
 
 static void readFromPipe(int pipe)
 {

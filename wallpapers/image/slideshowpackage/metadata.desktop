@@ -82,6 +82,7 @@ Comment[ca@valencia]=Passe de diapositives al fons de pantalla
 Comment[cs]=Tapeta s promítáním
 Comment[da]=Diasshow som baggrundsbillede
 Comment[de]=Diaschau-Hintergrundbild
+Comment[el]=Παρουσίαση ταπετσαρίας
 Comment[en_GB]=Slideshow wallpaper
 Comment[es]=Fondo de escritorio de presentación
 Comment[eu]=Filmina erakusketa horma-papera
@@ -122,7 +123,7 @@ X-KDE-PluginInfo-Email=mart@kde.org
 X-KDE-PluginInfo-License=GPLv2+
 X-KDE-PluginInfo-Name=org.kde.slideshow
 X-KDE-PluginInfo-Version=
-X-KDE-PluginInfo-Website=
+X-KDE-PluginInfo-Website=https://plasma.kde.org
 X-Plasma-MainScript=ui/main.qml
 
 MimeType=image/jpeg;image/png;image/svg+xml;image/svg+xml-compressed;image/bmp;

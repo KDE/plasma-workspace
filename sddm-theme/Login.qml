@@ -35,7 +35,7 @@ SessionManagementScreen {
         var password = passwordBox.text
 
         //this is partly because it looks nicer
-        //but more importantly it works round a Qt bug that can trigger if the app is closed with a TextField focussed
+        //but more importantly it works round a Qt bug that can trigger if the app is closed with a TextField focused
         //DAVE REPORT THE FRICKING THING AND PUT A LINK
         loginButton.forceActiveFocus();
         loginRequest(username, password);
@@ -93,7 +93,7 @@ SessionManagementScreen {
         id: loginButton
         Layout.fillWidth: true
 
-        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login")
+        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log In")
         onClicked: startLogin();
     }
 

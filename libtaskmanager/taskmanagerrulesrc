@@ -11,3 +11,4 @@ VirtualBox Machine=virtualbox
 [Settings]
 MatchCommandLineFirst=perl
 TryIgnoreRuntimes=perl
+SkipTaskbar=Soffice

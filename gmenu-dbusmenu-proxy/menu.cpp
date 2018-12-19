@@ -94,7 +94,7 @@ void Menu::start(uint id)
                 m_menus[menu.id].append(menus);
             }
 
-            // LibreOffice on startup fails to give us some menus right away, we'll also subscribe in onMenuChanged() if neccessary
+            // LibreOffice on startup fails to give us some menus right away, we'll also subscribe in onMenuChanged() if necessary
             if (menus.isEmpty()) {
                 qCWarning(DBUSMENUPROXY) << "Got an empty menu for" << id << "on" << m_serviceName << "at" << m_objectPath;
                 return;

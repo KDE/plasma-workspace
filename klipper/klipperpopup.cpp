@@ -70,7 +70,7 @@ KlipperPopup::KlipperPopup( History* history )
       m_textForEmptyHistory( i18n( "<empty clipboard>" ) ),
       m_textForNoMatch( i18n( "<no matches>" ) ),
       m_history( history ),
-      m_helpMenu( new KHelpMenu( this, i18n("KDE cut & paste history utility"), false ) ),
+      m_helpMenu( nullptr ),
       m_popupProxy( nullptr ),
       m_filterWidget( nullptr ),
       m_filterWidgetAction( nullptr ),
@@ -128,6 +128,9 @@ void KlipperPopup::buildFromScratch() {
     for (int i = 0; i < m_actions.count(); i++) {
 
         if (i + 1 == m_actions.count() && m_showHelp) {
+            if (!m_helpMenu) {
+                m_helpMenu = new KHelpMenu( this, i18n("KDE cut & paste history utility"), false );
+            }
             addMenu(m_helpMenu->menu())->setIcon(QIcon::fromTheme(QStringLiteral("help-contents")));
             addSeparator();
         }

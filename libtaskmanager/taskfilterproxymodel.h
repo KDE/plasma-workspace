@@ -45,7 +45,7 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
 {
     Q_OBJECT
 
-    Q_PROPERTY(int virtualDesktop READ virtualDesktop WRITE setVirtualDesktop NOTIFY virtualDesktopChanged)
+    Q_PROPERTY(QVariant virtualDesktop READ virtualDesktop WRITE setVirtualDesktop NOTIFY virtualDesktopChanged)
     Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
     Q_PROPERTY(QString activity READ activity WRITE setActivity NOTIFY activityChanged)
 
@@ -65,26 +65,25 @@ public:
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 
     /**
-     * The number of the virtual desktop used in filtering by virtual
-     * desktop. Usually set to the number of the current virtual desktop.
-     * Defaults to @c 0 (virtual desktop numbers start at 1).
+     * The id of the virtual desktop used in filtering by virtual
+     * desktop. Usually set to the id of the current virtual desktop.
+     * Defaults to empty.
      *
      * @see setVirtualDesktop
      * @returns the number of the virtual desktop used in filtering.
      **/
-    uint virtualDesktop() const;
+    QVariant virtualDesktop() const;
 
     /**
-     * Set the number of the virtual desktop to use in filtering by virtual
+     * Set the id of the virtual desktop to use in filtering by virtual
      * desktop.
      *
-     * If set to 0 (virtual desktop numbers start at 1), filtering by virtual
-     * desktop is disabled.
+     * If set to an empty id, filtering by virtual desktop is disabled.
      *
      * @see virtualDesktop
-     * @param virtualDesktop A virtual desktop number.
+     * @param desktop A virtual desktop id (QString on Wayland; uint >0 on X11).
      **/
-    void setVirtualDesktop(uint virtualDesktop);
+    void setVirtualDesktop(const QVariant &desktop = QVariant());
 
     /**
      * The geometry of the screen used in filtering by screen. Defaults
@@ -270,6 +269,13 @@ public:
      * @param skip Whether tasks which demand attention should skip filters.
      **/
     void setDemandingAttentionSkipsFilters(bool skip);
+
+    /**
+     * Returns whether the filter model accepts this source row.
+     *
+     * @param int A row in the source model.
+     */
+    bool acceptsRow(int sourceRow) const;
 
 Q_SIGNALS:
     void virtualDesktopChanged() const;

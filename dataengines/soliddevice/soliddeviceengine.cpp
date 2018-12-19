@@ -24,9 +24,11 @@
 #include <Solid/GenericInterface>
 #include <klocalizedstring.h>
 
+#include <QApplication>
 #include <QDebug>
-#include <KDiskFreeSpaceInfo>
 #include <KFormat>
+#include <KIO/FileSystemFreeSpaceJob>
+#include <KNotification>
 
 #include <Plasma/DataContainer>
 
@@ -402,7 +404,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         batterytype << I18N_NOOP("Unknown Battery") << I18N_NOOP("PDA Battery") << I18N_NOOP("UPS Battery")
                 << I18N_NOOP("Primary Battery") << I18N_NOOP("Mouse Battery") << I18N_NOOP("Keyboard Battery")
                 << I18N_NOOP("Keyboard Mouse Battery") << I18N_NOOP("Camera Battery") << I18N_NOOP("Phone Battery")
-                << I18N_NOOP("Monitor Battery") << I18N_NOOP("Gaming Input Battery");
+                << I18N_NOOP("Monitor Battery") << I18N_NOOP("Gaming Input Battery") << I18N_NOOP("Bluetooth Battery");
 
         QStringList chargestate;
         chargestate << I18N_NOOP("Not Charging") << I18N_NOOP("Charging") << I18N_NOOP("Discharging") << I18N_NOOP("Fully Charged");
@@ -543,16 +545,43 @@ bool SolidDeviceEngine::updateStorageSpace(const QString &udi)
     Solid::Device device = m_devicemap.value(udi);
 
     Solid::StorageAccess *storageaccess = device.as<Solid::StorageAccess>();
-    if (!storageaccess) {
+    if (!storageaccess || !storageaccess->isAccessible()) {
         return false;
     }
 
-    KDiskFreeSpaceInfo info = KDiskFreeSpaceInfo::freeSpaceInfo(storageaccess->filePath());
-    if (info.isValid()) {
-        setData(udi, I18N_NOOP("Free Space"), QVariant(info.available()));
-        setData(udi, I18N_NOOP("Free Space Text"), KFormat().formatByteSize(info.available()));
-        setData(udi, I18N_NOOP("Size"), QVariant(info.size()));
-        return true;
+    QString path = storageaccess->filePath();
+    if (!m_paths.contains(path)) {
+        QTimer *timer = new QTimer(this);
+        timer->setSingleShot(true);
+        connect(timer, &QTimer::timeout, [path]() {
+            KNotification::event(KNotification::Error, i18n("Filesystem is not responding"),
+                                 i18n("Filesystem mounted at '%1' is not responding", path));
+        });
+
+        m_paths.insert(path);
+
+        // create job
+        KIO::FileSystemFreeSpaceJob *job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(path));
+
+        // delete later timer
+        connect(job, &KIO::FileSystemFreeSpaceJob::result, timer, &QTimer::deleteLater);
+
+        // collect and process info
+        connect(job, &KIO::FileSystemFreeSpaceJob::result, this,
+                [this, timer, path, udi](KIO::Job *job, KIO::filesize_t size, KIO::filesize_t available) {
+            timer->stop();
+
+            if (!job->error()) {
+                setData(udi, I18N_NOOP("Free Space"), QVariant(available));
+                setData(udi, I18N_NOOP("Free Space Text"), KFormat().formatByteSize(available));
+                setData(udi, I18N_NOOP("Size"), QVariant(size));
+            }
+
+            m_paths.remove(path);
+        });
+
+        // start timer: after 15 seconds we will get an error
+        timer->start(15000);
     }
 
     return false;

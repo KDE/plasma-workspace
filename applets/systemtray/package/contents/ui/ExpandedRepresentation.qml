@@ -47,6 +47,7 @@ Item {
         onCheckedChanged: plasmoid.configuration.pin = checked
         iconSource: "window-pin"
         z: 2
+        tooltip: i18n("Keep Open")
     }
 
     PlasmaExtras.Heading {
@@ -94,9 +95,9 @@ Item {
             top: parent.top
             right: parent.right
             topMargin: hiddenItemsView.visible ? units.smallSpacing : 0
-            leftMargin: hiddenItemsView.iconColumnWidth + units.largeSpacing;
+            leftMargin: units.smallSpacing
         }
-        text: i18n("Status & Notifications")
+        text: i18n("Status and Notifications")
         visible: !heading.visible
     }
 

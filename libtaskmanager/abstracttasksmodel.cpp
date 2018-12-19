@@ -113,10 +113,15 @@ void AbstractTasksModel::requestToggleShaded(const QModelIndex &index)
     Q_UNUSED(index)
 }
 
-void AbstractTasksModel::requestVirtualDesktop(const QModelIndex &index, qint32 desktop)
+void AbstractTasksModel::requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops)
 {
     Q_UNUSED(index)
-    Q_UNUSED(desktop)
+    Q_UNUSED(desktops)
+}
+
+void AbstractTasksModel::requestNewVirtualDesktop(const QModelIndex &index)
+{
+    Q_UNUSED(index)
 }
 
 void AbstractTasksModel::requestActivities(const QModelIndex &index, const QStringList &activities)

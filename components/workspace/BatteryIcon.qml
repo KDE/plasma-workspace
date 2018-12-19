@@ -129,6 +129,8 @@ Item {
                 return "battery-ups";
             case "GamingInput":
                 return "input-gaming-battery";
+            case "Bluetooth":
+                return "preferences-system-bluetooth-battery";
             default:
                 return "";
         }

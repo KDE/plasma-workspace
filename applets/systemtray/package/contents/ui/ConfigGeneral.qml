@@ -18,13 +18,13 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.0 as QtLayouts
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kirigami 2.5 as Kirigami
 
 Item {
     id: iconsPage
@@ -43,95 +43,80 @@ Item {
     property alias cfg_miscellaneousShown: miscellaneous.checked
     property var cfg_extraItems: []
 
-    SystemPalette {
-        id: palette
-    }
-
-    QtLayouts.ColumnLayout {
-        id: pageColumn
-        anchors.left: parent.left
-
-        PlasmaExtras.Heading {
-            level: 2
-            text: i18n("Categories")
-            color: palette.text
-        }
-        Item {
-            width: height
-            height: units.gridUnit / 2
-        }
-        QtLayouts.ColumnLayout {
-            spacing: units.smallSpacing * 2
-            QtControls.CheckBox {
-                id: applicationStatus
-                text: i18n("Application Status")
-            }
-            QtControls.CheckBox {
-                id: communications
-                text: i18n("Communications")
-            }
-            QtControls.CheckBox {
-                id: systemServices
-                text: i18n("System Services")
-            }
-            QtControls.CheckBox {
-                id: hardwareControl
-                text: i18n("Hardware Control")
-            }
-            QtControls.CheckBox {
-                id: miscellaneous
-                text: i18n("Miscellaneous")
-            }
-        }
-
-        Item {
-            width: height
-            height: units.gridUnit
-        }
-        PlasmaExtras.Heading {
-            level: 2
-            text: i18n("Extra Items")
-            color: palette.text
-        }
-        Item {
-            width: height
-            height: units.gridUnit / 2
-        }
-        QtLayouts.ColumnLayout {
-            spacing: units.smallSpacing * 2
-            QtControls.CheckBox {
+    QtControls.CheckBox {
                 id: dummyCheckbox
                 visible: false
             }
-            Repeater {
-                model: plasmoid.nativeInterface.availablePlasmoids
-                delegate: QtControls.CheckBox {
-                    QtLayouts.Layout.minimumWidth: childrenRect.width
-                    checked: cfg_extraItems.indexOf(plugin) != -1
-                    onCheckedChanged: {
-                        var index = cfg_extraItems.indexOf(plugin);
-                        if (checked) {
-                            if (index == -1) {
-                                cfg_extraItems.push(plugin);
-                            }
-                        } else {
-                            if (index > -1) {
-                                cfg_extraItems.splice(index, 1);
-                            }
+
+    Kirigami.FormLayout {
+        id: pageColumn
+        anchors {
+            left: parent.left
+            right: parent.right
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: i18n("Categories")
+        }
+
+        QtControls.CheckBox {
+            id: applicationStatus
+            text: i18n("Application Status")
+        }
+        QtControls.CheckBox {
+            id: communications
+            text: i18n("Communications")
+        }
+        QtControls.CheckBox {
+            id: systemServices
+            text: i18n("System Services")
+        }
+        QtControls.CheckBox {
+            id: hardwareControl
+            text: i18n("Hardware Control")
+        }
+        QtControls.CheckBox {
+            id: miscellaneous
+            text: i18n("Miscellaneous")
+        }
+
+
+        Item {
+            Kirigami.FormData.isSection: true
+            Kirigami.FormData.label: i18n("Extra Items")
+        }
+
+        Repeater {
+            model: plasmoid.nativeInterface.availablePlasmoids
+            delegate: QtControls.CheckBox {
+                QtLayouts.Layout.minimumWidth: childrenRect.width
+                checked: cfg_extraItems.indexOf(plugin) != -1
+                implicitWidth: itemLayout.width + itemLayout.x
+                onCheckedChanged: {
+                    var index = cfg_extraItems.indexOf(plugin);
+                    if (checked) {
+                        if (index == -1) {
+                            cfg_extraItems.push(plugin);
                         }
-                        configurationChanged() // qml cannot detect changes inside an Array
+                    } else {
+                        if (index > -1) {
+                            cfg_extraItems.splice(index, 1);
+                        }
                     }
-                    QtLayouts.RowLayout {
-                        anchors.verticalCenter: parent.verticalCenter
-                        x: dummyCheckbox.width
-                        QIconItem {
-                            icon: decoration
-                            width: units.iconSizes.small
-                            height: width
-                        }
-                        QtControls.Label {
-                            text: display
-                        }
+                    configurationChanged() // qml cannot detect changes inside an Array
+                }
+                QtLayouts.RowLayout {
+                    id: itemLayout
+                    anchors.verticalCenter: parent.verticalCenter
+                    x: dummyCheckbox.width
+                    QIconItem {
+                        icon: model.decoration
+                        width: units.iconSizes.small
+                        height: width
+                    }
+                    QtControls.Label {
+                        text: model.display
                     }
                 }
             }

@@ -161,24 +161,6 @@ PlasmaCore.ColorScope {
             clock: clock
         }
 
-        DropShadow {
-            id: clockShadow
-            anchors.fill: clock
-            source: clock
-            horizontalOffset: 0
-            verticalOffset: 1
-            radius: 12
-            samples: 32
-            spread: 0.2
-            color: Qt.rgba(0, 0, 0, 1)
-            Behavior on opacity {
-                OpacityAnimator {
-                    duration: 1000
-                    easing.type: Easing.InOutQuad
-                }
-            }
-        }
-
         Clock {
             id: clock
             property Item shadow: clockShadow
@@ -211,6 +193,7 @@ PlasmaCore.ColorScope {
 
             initialItem: MainBlock {
                 id: mainBlock
+                lockScreenUiVisible: lockScreenRoot.uiVisible
 
                 showUserList: userList.y + mainStack.y > 0
 
@@ -254,6 +237,14 @@ PlasmaCore.ColorScope {
                     Layout.preferredHeight: item ? item.implicitHeight : 0
                     active: config.showMediaControls
                     source: "MediaControls.qml"
+                }
+            }
+
+            Component.onCompleted: {
+                if (defaultToSwitchUser) { //context property
+                    mainStack.push({
+                        item: switchSessionPage,
+                        immediate: true});
                 }
             }
         }

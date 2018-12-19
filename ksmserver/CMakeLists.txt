@@ -10,8 +10,6 @@ add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-add_subdirectory(logout-greeter)
-add_subdirectory(switchuser-greeter)
 if(BUILD_TESTING)
    add_subdirectory(tests)
 endif()
@@ -24,6 +22,7 @@ set(ksmserver_KDEINIT_SRCS
     legacy.cpp
     startup.cpp
     autostart.cpp
+    logout.cpp
     shutdown.cpp
     client.cpp
 )
@@ -34,6 +33,7 @@ set(kcminit_xml ${CMAKE_CURRENT_BINARY_DIR}/org.kde.KCMinit.xml)
 
 qt5_generate_dbus_interface( ${kcminit_adaptor} ${kcminit_xml} )
 qt5_add_dbus_interface( ksmserver_KDEINIT_SRCS ${kcminit_xml} kcminit_interface )
+qt5_add_dbus_interface( ksmserver_KDEINIT_SRCS ${KDED_DBUS_INTERFACE} kded_interface )
 
 # FIXME: This is actually not disabled any more because OrgKDEKlauncherInterface isn't provided
 # otherwise.
@@ -45,7 +45,12 @@ qt5_add_dbus_interface( ksmserver_KDEINIT_SRCS ${kcminit_xml} kcminit_interface 
 set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
 qt5_add_dbus_interface( ksmserver_KDEINIT_SRCS ${klauncher_xml} klauncher_interface )
 
+qt5_add_dbus_interface( ksmserver_KDEINIT_SRCS ${KSCREENLOCKER_DBUS_INTERFACES_DIR}/org.kde.screensaver.xml kscreenlocker_interface )
+qt5_add_dbus_interface( ksmserver_KDEINIT_SRCS org.kde.LogoutPrompt.xml logoutprompt_interface)
+qt5_add_dbus_interface( ksmserver_KDEINIT_SRCS org.kde.Shutdown.xml shutdown_interface)
+
 qt5_add_dbus_adaptor( ksmserver_KDEINIT_SRCS org.kde.KSMServerInterface.xml server.h KSMServer )
+qt5_add_dbus_adaptor( ksmserver_KDEINIT_SRCS org.kde.Shutdown.xml shutdown.h Shutdown)
 
 kf5_add_kdeinit_executable( ksmserver ${ksmserver_KDEINIT_SRCS})
 
@@ -82,17 +87,7 @@ install(TARGETS ksmserver ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/KSMServerDBusInterfaceConfig.cmake
     DESTINATION ${CMAKECONFIG_INSTALL_DIR})
-########### next target ###############
 
-set(kcheckrunning_SRCS
-    kcheckrunning.cpp)
-
-add_executable( kcheckrunning ${kcheckrunning_SRCS})
-
-target_link_libraries(kcheckrunning ${X11_LIBRARIES})
-target_include_directories(kcheckrunning PRIVATE ${X11_X11_INCLUDE_PATH})
-
-install(TARGETS kcheckrunning ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### install files ###############
 

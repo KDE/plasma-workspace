@@ -87,6 +87,10 @@ KWin.Switcher {
                         width: parent.width - 2 * units.smallSpacing
                         spacing: units.smallSpacing
 
+                        focus: index == thumbnailListView.currentIndex
+                        Accessible.name: model.caption
+                        Accessible.role: Accessible.Client
+
                         Item {
                             Layout.fillWidth: true
                             Layout.preferredHeight: Math.round(width / tabBox.screenFactor)
@@ -123,6 +127,18 @@ KWin.Switcher {
                 }
 
                 highlight: PlasmaComponents.Highlight {}
+            }
+        }
+        /*
+        * Key navigation on outer item for two reasons:
+        * @li we have to emit the change signal
+        * @li on multiple invocation it does not work on the list view. Focus seems to be lost.
+        **/
+        Keys.onPressed: {
+            if (event.key == Qt.Key_Up) {
+                icons.decrementCurrentIndex();
+            } else if (event.key == Qt.Key_Down) {
+                icons.incrementCurrentIndex();
             }
         }
     }

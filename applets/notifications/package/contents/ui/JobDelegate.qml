@@ -38,6 +38,7 @@ Column {
     readonly property string labelName0: getData(jobsSource.data, "labelName0", '')
     readonly property string labelName1: getData(jobsSource.data, "labelName1", '')
     readonly property string labelFileName0: getData(jobsSource.data, "labelFileName0", '')
+    readonly property string labelFileName1: getData(jobsSource.data, "labelFileName1", '')
     readonly property string label0: getData(jobsSource.data, "label0", '')
     readonly property string label1: getData(jobsSource.data, "label1", '')
     readonly property bool isSuspended: getData(jobsSource.data, "state", '') === "suspended"
@@ -66,7 +67,7 @@ Column {
             Layout.fillWidth: true
             elide: Text.ElideMiddle
             text: {
-                var label = labelFileName0;
+                var label = labelFileName1 || labelFileName0;
                 var lastSlashIdx = label.lastIndexOf("/");
                 return label.slice(lastSlashIdx + 1);
             }

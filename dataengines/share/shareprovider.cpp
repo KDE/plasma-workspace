@@ -364,7 +364,7 @@ void ShareProvider::success(const QString &url)
 
 void ShareProvider::error(const QString &msg)
 {
-    // notify the service that it didnt work and the error msg
+    // notify the service that it didn't work and the error msg
     emit finishedError(msg);
 }
 

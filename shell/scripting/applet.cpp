@@ -102,16 +102,16 @@ QStringList Applet::configGroups() const
     return QStringList();
 }
 
-QVariant Applet::readConfig(const QString &key, const QVariant &def) const
+QVariant Applet::readConfig(const QString &key, const QJSValue &def) const
 {
     if (d->configGroup.isValid()) {
-        return d->configGroup.readEntry(key, def);
+        return d->configGroup.readEntry(key, def.toVariant());
     } else {
         return QVariant();
     }
 }
 
-void Applet::writeConfig(const QString &key, const QVariant &value)
+void Applet::writeConfig(const QString &key, const QJSValue &value)
 {
     if (d->configGroup.isValid()) {
         if (d->inWallpaperConfig) {
@@ -119,13 +119,13 @@ void Applet::writeConfig(const QString &key, const QVariant &value)
             QObject *wallpaperGraphicsObject = applet()->property("wallpaperGraphicsObject").value<QObject *>();
             if (wallpaperGraphicsObject) {
                 KDeclarative::ConfigPropertyMap *config = static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
-                config->setProperty(key.toLatin1(), value);
+                config->setProperty(key.toLatin1(), value.toVariant());
             }
         } else if (applet()->configScheme()) {
             //check if it can be written in the applets' configScheme
             KConfigSkeletonItem *item = applet()->configScheme()->findItemByName(key);
             if (item) {
-                item->setProperty(value);
+                item->setProperty(value.toVariant());
                 applet()->configScheme()->blockSignals(true);
                 applet()->configScheme()->save();
                 //why read? read will update KConfigSkeletonItem::mLoadedValue,
@@ -136,7 +136,7 @@ void Applet::writeConfig(const QString &key, const QVariant &value)
             }
         }
 
-        d->configGroup.writeEntry(key, value);
+        d->configGroup.writeEntry(key, value.toVariant());
         d->configDirty = true;
     }
 }
@@ -181,19 +181,19 @@ QStringList Applet::globalConfigGroups() const
     return QStringList();
 }
 
-QVariant Applet::readGlobalConfig(const QString &key, const QVariant &def) const
+QVariant Applet::readGlobalConfig(const QString &key, const QJSValue &def) const
 {
     if (d->globalConfigGroup.isValid()) {
-        return d->globalConfigGroup.readEntry(key, def);
+        return d->globalConfigGroup.readEntry(key, def.toVariant());
     } else {
         return QVariant();
     }
 }
 
-void Applet::writeGlobalConfig(const QString &key, const QVariant &value)
+void Applet::writeGlobalConfig(const QString &key, const QJSValue &value)
 {
     if (d->globalConfigGroup.isValid()) {
-        d->globalConfigGroup.writeEntry(key, value);
+        d->globalConfigGroup.writeEntry(key, value.toVariant());
         d->configDirty = true;
     }
 }

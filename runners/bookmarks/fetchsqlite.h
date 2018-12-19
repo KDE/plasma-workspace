@@ -31,12 +31,6 @@
 #include <QMutex>
 
 
-class BuildQuery {
-public:
-    virtual QString query(QSqlDatabase *database) const = 0;
-    virtual ~BuildQuery() {}
-};
-
 class FetchSqlite : public QObject
 {
     Q_OBJECT
@@ -46,13 +40,12 @@ public:
     void prepare();
     void teardown();
     QList<QVariantMap> query(const QString &sql, QMap<QString,QVariant> bindObjects);
-    QList<QVariantMap> query(BuildQuery *buildQuery, QMap<QString,QVariant> bindObjects);
     QList<QVariantMap> query(const QString &sql);
+    QStringList tables(QSql::TableType type = QSql::Tables);
 
 private:
     QString const m_databaseFile;
     QMutex m_mutex;
-    QSqlDatabase m_db;
 };
 
 #endif // FETCHSQLITE_H

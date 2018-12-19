@@ -110,7 +110,7 @@ PlasmaComponents.ListItem {
             width: parent.width
 
             compact: true
-            icon: appIcon
+            icon: model.appIcon
             image: model.image
             summary: model.summary
             body: model.body

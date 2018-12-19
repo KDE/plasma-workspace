@@ -20,6 +20,8 @@
 */
 #include "dbusmenuimporter.h"
 
+#include "debug.h"
+
 // Qt
 #include <QCoreApplication>
 #include <QDBusConnection>
@@ -46,12 +48,11 @@
 
 //#define BENCHMARK
 #ifdef BENCHMARK
-#include <QTime>
 static QTime sChrono;
 #endif
 
 #define DMRETURN_IF_FAIL(cond) if (!(cond)) { \
-    qWarning() << "Condition failed: " #cond; \
+    qCWarning(DBUSMENUQT) << "Condition failed: " #cond; \
     return; \
 }
 
@@ -182,7 +183,7 @@ public:
         } else if (key == QLatin1String("shortcut")) {
             updateActionShortcut(action, value);
         } else {
-            qWarning() << "Unhandled property update" << key;
+            qDebug(DBUSMENUQT) << "Unhandled property update" << key;
         }
     }
 
@@ -230,7 +231,7 @@ public:
         action->setProperty(DBUSMENU_PROPERTY_ICON_DATA_HASH, dataHash);
         QPixmap pix;
         if (!pix.loadFromData(data)) {
-            qWarning() << "Failed to decode icon-data property for action" << action->text();
+            qDebug(DBUSMENUQT) << "Failed to decode icon-data property for action" << action->text();
             action->setIcon(QIcon());
             return;
         }
@@ -383,7 +384,7 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
 
     QDBusPendingReply<uint, DBusMenuLayoutItem> reply = *watcher;
     if (!reply.isValid()) {
-        qWarning() << reply.error().message();
+        qDebug(DBUSMENUQT) << reply.error().message();
         if (menu) {
             emit menuUpdated(menu);
         }
@@ -396,7 +397,7 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
     DBusMenuLayoutItem rootItem = reply.argumentAt<1>();
 
     if (!menu) {
-        qWarning() << "No menu for id" << parentId;
+        qDebug(DBUSMENUQT) << "No menu for id" << parentId;
         return;
     }
 
@@ -409,7 +410,9 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
     for (QAction *action: menu->actions()) {
         int id = action->property(DBUSMENU_PROPERTY_ID).toInt();
         if (! newDBusMenuItemIds.contains(id)) {
-            menu->removeAction(action);
+            // Not calling removeAction() as QMenu will immediately close when it becomes empty,
+            // which can happen when an application completely reloads this menu.
+            // When the action is deleted deferred, it is removed from the menu.
             action->deleteLater();
             d->m_actionForId.remove(id);
         }
@@ -495,7 +498,7 @@ void DBusMenuImporter::slotAboutToShowDBusCallFinished(QDBusPendingCallWatcher *
 
     QDBusPendingReply<bool> reply = *watcher;
     if (reply.isError()) {
-        qWarning() << "Call to AboutToShow() failed:" << reply.error().message();
+        qDebug(DBUSMENUQT) << "Call to AboutToShow() failed:" << reply.error().message();
         menuUpdated(menu);
         return;
     }

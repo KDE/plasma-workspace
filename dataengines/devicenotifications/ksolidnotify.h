@@ -48,6 +48,7 @@ public:
 signals:
     void notify(Solid::ErrorType solidError, const QString& error, const QString& errorDetails, const QString &udi);
     void blockingAppsReady(const QStringList &apps);
+    void clearNotification(const QString &udi);
 
 protected slots:
     void onDeviceAdded(const QString &udi);

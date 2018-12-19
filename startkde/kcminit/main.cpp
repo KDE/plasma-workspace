@@ -197,13 +197,11 @@ KCMInit::~KCMInit()
 void KCMInit::runPhase1()
 {
   runModules( 1 );
-  emit phase1Done();
 }
 
 void KCMInit::runPhase2()
 {
   runModules( 2 );
-  emit phase2Done();
   qApp->exit( 0 );
 }
 

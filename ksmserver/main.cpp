@@ -41,6 +41,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kwindowsystem.h>
 #include <ksmserver_debug.h>
 #include "server.h"
+#include "startup.h"
+#include "shutdown.h"
 #include <QX11Info>
 
 #include <QApplication>
@@ -285,15 +287,6 @@ extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
 
     parser.process(*a);
 
-//TODO: should we still use this?
-//    if( !QDBusConnection::sessionBus().interface()->
-//            registerService( QStringLiteral( "org.kde.ksmserver" ),
-//                             QDBusConnectionInterface::DontQueueService ) )
-//    {
-//        qCWarning(KSMSERVER, "Could not register with D-BUS. Aborting.");
-//        return 1;
-//    }
-
     QString wm = parser.value(wmOption);
 
     bool only_local = !parser.isSet(nolocalOption);
@@ -320,6 +313,8 @@ extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
     }
 
     KSMServer *server = new KSMServer( wm, flags);
+    auto startup = new Startup(server);
+    new Shutdown(a);
 
     // for the KDE-already-running check in startkde
     KSelectionOwner kde_running( "_KDE_RUNNING", 0 );
@@ -345,6 +340,7 @@ extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
         server->restoreSession( QStringLiteral( SESSION_BY_USER ) );
     else
         server->startDefaultSession();
+    startup->upAndRunning(QStringLiteral( "ksmserver" ));
 
     KDBusService service(KDBusService::Unique);
 

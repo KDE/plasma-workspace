@@ -2,6 +2,7 @@ add_subdirectory(kcminit)
 add_subdirectory(kstartupconfig)
 add_subdirectory(ksyncdbusenv)
 add_subdirectory(waitforname)
+add_subdirectory(kcheckrunning)
 
 #FIXME: reconsider, looks fishy
 if(NOT CMAKE_INSTALL_PREFIX STREQUAL "/usr")

@@ -14,3 +14,4 @@ target_link_libraries(krunner_webshortcuts
 install(TARGETS krunner_webshortcuts DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 
 install(FILES plasma-runner-webshortcuts.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES plasma-runner-webshortcuts_config.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

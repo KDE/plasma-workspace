@@ -18,8 +18,8 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
-#ifndef ABSTRACTASKSMODELIFACE_H
-#define ABSTRACTASKSMODELIFACE_H
+#ifndef ABSTRACTTASKSMODELIFACE_H
+#define ABSTRACTTASKSMODELIFACE_H
 
 #include <QObject>
 
@@ -157,16 +157,32 @@ public:
     virtual void requestToggleShaded(const QModelIndex &index) = 0;
 
     /**
-     * Request moving the task at the given index to the specified virtual
-     * desktop.
+     * Request entering the window at the given index on the specified virtual desktops,
+     * leaving any other desktops.
      *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
+     * On Wayland, virtual desktop ids are QStrings. On X11, they are uint >0.
      *
-     * @param index An index in this tasks model.
-     * @param desktop A virtual desktop number.
+     * An empty list has a special meaning: The window is entered on all virtual desktops
+     * in the session.
+     *
+     * On X11, a window can only be on one or all virtual desktops. Therefore, only the
+     * first list entry is actually used.
+     *
+     * On X11, the id 0 has a special meaning: The window is entered on all virtual
+     * desktops in the session.
+     *
+     * @param index An index in this window tasks model.
+     * @param desktops A list of virtual desktop ids.
      **/
-    virtual void requestVirtualDesktop(const QModelIndex &index, qint32 desktop = -1) = 0;
+    virtual void requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops) = 0;
+
+    /**
+     * Request entering the window at the given index on a new virtual desktop,
+     * which is created in response to this request.
+     *
+     * @param index An index in this window tasks model.
+     **/
+    virtual void requestNewVirtualDesktop(const QModelIndex &index) = 0;
 
     /**
      * Request moving the task at the given index to the specified virtual

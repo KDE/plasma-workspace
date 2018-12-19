@@ -60,8 +60,12 @@ BookmarksRunner::~BookmarksRunner()
 
 void BookmarksRunner::prep()
 {
-    m_browser = m_browserFactory->find(findBrowserName(), this);
-    connect(this, SIGNAL(teardown()), dynamic_cast<QObject*>(m_browser), SLOT(teardown()));
+    auto browser = m_browserFactory->find(findBrowserName(), this);
+    if (m_browser != browser) {
+        m_browser = browser;
+        connect(this, &Plasma::AbstractRunner::teardown,
+                dynamic_cast<QObject*>(m_browser), [this] () { m_browser->teardown(); });
+    }
     m_browser->prepare();
 }
 

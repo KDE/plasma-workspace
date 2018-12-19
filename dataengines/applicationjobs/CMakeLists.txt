@@ -6,6 +6,7 @@ set(kuiserver_engine_SRCS
     jobaction.cpp
 )
 
+qt5_add_dbus_interface(kuiserver_engine_SRCS ${CMAKE_SOURCE_DIR}/kuiserver/org.kde.kuiserver.xml kuiserverinterface)
 qt5_add_dbus_adaptor(kuiserver_engine_SRCS ${CMAKE_SOURCE_DIR}/kuiserver/org.kde.JobView.xml kuiserverengine.h JobView jobviewadaptor )
 qt5_add_dbus_adaptor(kuiserver_engine_SRCS ${KJOBWIDGETS_DBUS_INTERFACES_DIR}/kf5_org.kde.JobViewServer.xml kuiserverengine.h KuiserverEngine jobviewserveradaptor )
 

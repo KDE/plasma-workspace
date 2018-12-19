@@ -78,7 +78,7 @@ class DeviceWrapper : public QObject
     QString m_description;
     QStringList m_actionIds;
     // Solid doesn't like multithreading that much
-    // We cache the informations we need locally so that
+    // We cache the information we need locally so that
     // 1) nothing possibly goes wrong when processing a query
     // 2) performance++
 

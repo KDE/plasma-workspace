@@ -39,7 +39,6 @@
 #include <QDebug>
 #include <KIO/PreviewJob>
 #include <KLocalizedString>
-#include <kimagecache.h>
 #include <kaboutdata.h>
 
 #include <KPackage/Package>
@@ -70,19 +69,16 @@ BackgroundListModel::BackgroundListModel(Image *wallpaper, QObject *parent)
     : QAbstractListModel(parent),
       m_wallpaper(wallpaper)
 {
+    m_imageCache.setMaxCost(10 * 1024 * 1024); // 10 MiB
+
     connect(&m_dirwatch, &KDirWatch::deleted, this, &BackgroundListModel::removeBackground);
 
     //TODO: on Qt 4.4 use the ui scale factor
     QFontMetrics fm(QGuiApplication::font());
     m_screenshotSize = fm.width('M') * 15;
-
-    m_imageCache = new KImageCache(QStringLiteral("plasma_wallpaper_preview"), 10485760);
 }
 
-BackgroundListModel::~BackgroundListModel()
-{
-    delete m_imageCache;
-}
+BackgroundListModel::~BackgroundListModel() = default;
 
 QHash<int, QByteArray> BackgroundListModel::BackgroundListModel::roleNames() const
 {
@@ -343,14 +339,14 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
     }
 
     case ScreenshotRole: {
-        QPixmap preview = QPixmap(QSize(m_screenshotSize*1.6,
-                                                    m_screenshotSize));
-        if (m_imageCache->findPixmap(b.filePath("preferred"), &preview)) {
-            return preview;
+        const QString path = b.filePath("preferred");
+
+        QPixmap *cachedPreview = m_imageCache.object(path);
+        if (cachedPreview) {
+            return *cachedPreview;
         }
-//         qCDebug(IMAGEWALLPAPER) << "WP preferred: " << b.filePath("preferred");
-//         qCDebug(IMAGEWALLPAPER) << "WP screenshot: " << b.filePath("screenshot");
-        QUrl file = QUrl::fromLocalFile(b.filePath("preferred"));
+
+        const QUrl file = QUrl::fromLocalFile(path);
         if (!m_previewJobs.contains(file) && file.isValid()) {
 
             KFileItemList list;
@@ -451,7 +447,9 @@ void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &prev
         return;
     }
 
-    m_imageCache->insertPixmap(b.filePath("preferred"), preview);
+    const int cost = preview.width() * preview.height() * preview.depth() / 8;
+    m_imageCache.insert(b.filePath("preferred"), new QPixmap(preview), cost);
+
     //qCDebug(IMAGEWALLPAPER) << "WP preview size:" << preview.size();
     emit dataChanged(index, index);
 }

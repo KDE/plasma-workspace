@@ -104,7 +104,7 @@ Item {
 
         Repeater {
             id: buttonRepeater
-            model: appMenuModel
+            model: appMenuModel.visible ? appMenuModel : null
 
             PlasmaComponents.ToolButton {
                 readonly property int buttonIndex: index
@@ -148,6 +148,7 @@ Item {
 
     AppMenuPrivate.AppMenuModel {
         id: appMenuModel
+        screenGeometry: plasmoid.screenGeometry
         onRequestActivateIndex: plasmoid.nativeInterface.requestActivateIndex(index)
         Component.onCompleted: {
             plasmoid.nativeInterface.model = appMenuModel

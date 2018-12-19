@@ -1,5 +1,6 @@
 /*
  *   Copyright 2009 by Chani Armitage <chani@kde.org>
+ *   Copyright 2018 by Eike Hein <hein@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -24,6 +25,10 @@
 
 class QAction;
 
+namespace TaskManager {
+    class VirtualDesktopInfo;
+}
+
 class SwitchDesktop : public Plasma::ContainmentActions
 {
     Q_OBJECT
@@ -41,6 +46,7 @@ class SwitchDesktop : public Plasma::ContainmentActions
 
     private:
         QHash<int, QAction *> m_actions;
+        TaskManager::VirtualDesktopInfo* m_virtualDesktopInfo;
 };
 
 

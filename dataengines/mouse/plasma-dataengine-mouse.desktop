@@ -97,7 +97,7 @@ Comment[hu]=Egérmutató-pozíció
 Comment[ia]=Position e cursor del mus
 Comment[id]=Posisi mouse dan kursor
 Comment[is]=Staðsetning músar og bendils
-Comment[it]=Posizione e cursore del mouse
+Comment[it]=Posizione e puntatore del mouse
 Comment[ja]=マウスの位置とカーソル
 Comment[kk]=Тышқанның орны және меңзері
 Comment[km]=ទីតាំង និង​ទស្សន៍ទ្រនិច្ច​កណ្ដុរ
@@ -145,7 +145,7 @@ X-KDE-PluginInfo-Author=
 X-KDE-PluginInfo-Email=
 X-KDE-PluginInfo-Name=mouse
 X-KDE-PluginInfo-Version=
-X-KDE-PluginInfo-Website=
+X-KDE-PluginInfo-Website=https://plasma.kde.org
 X-KDE-PluginInfo-Category=
 X-KDE-PluginInfo-Depends=
 

@@ -1,2 +1,4 @@
 org.kde.kf5.ksmserver ksmserver (ksmserver)
-
+org.kde.plasma.runner.services DEFAULT_SEVERITY [WARNING]
+org.kde.plasma.runner.appstream DEFAULT_SEVERITY [WARNING]
+org.kde.plasma.runner.bookmarks DEFAULT_SEVERITY [WARNING]

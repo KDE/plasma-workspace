@@ -87,28 +87,57 @@ QList< BookmarkMatch > Firefox::match(const QString& term, bool addEverything)
     QString tmpTerm = term;
     QString query;
     if (addEverything) {
-        query = QStringLiteral("SELECT moz_bookmarks.fk, moz_bookmarks.title, moz_places.url," \
-                    "moz_places.favicon_id FROM moz_bookmarks, moz_places WHERE " \
+        query = QStringLiteral("SELECT moz_bookmarks.fk, moz_bookmarks.title, moz_places.url " \
+                    "FROM moz_bookmarks, moz_places WHERE " \
                     "moz_bookmarks.type = 1 AND moz_bookmarks.fk = moz_places.id");
     } else {
         const QString escapedTerm = tmpTerm.replace('\'', QLatin1String("\\'"));
-        query = QString("SELECT moz_bookmarks.fk, moz_bookmarks.title, moz_places.url," \
-                        "moz_places.favicon_id FROM moz_bookmarks, moz_places WHERE " \
+        query = QString("SELECT moz_bookmarks.fk, moz_bookmarks.title, moz_places.url " \
+                        "FROM moz_bookmarks, moz_places WHERE " \
                         "moz_bookmarks.type = 1 AND moz_bookmarks.fk = moz_places.id AND " \
                         "(moz_bookmarks.title LIKE  '%" + escapedTerm + "%' or moz_places.url LIKE '%"
                         + escapedTerm + "%')");
     }
     QList<QVariantMap> results = m_fetchsqlite->query(query, QMap<QString, QVariant>());
+    QMultiMap<QString, QString> uniqueResults;
     foreach(QVariantMap result, results) {
         const QString title = result.value(QStringLiteral("title")).toString();
         const QUrl url = result.value(QStringLiteral("url")).toUrl();
-        if (url.scheme().contains(QStringLiteral("place"))) {
-            //Don't use bookmarks with empty title, url or Firefox intern url
+        if (url.isEmpty() || url.scheme() == QLatin1String("place")) {
+            // Don't use bookmarks with empty url or Firefox's "place:" scheme,
+            // e.g. used for "Most Visited" or "Recent Tags"
             //qDebug() << "element " << url << " was not added";
             continue;
         }
 
-        BookmarkMatch bookmarkMatch( m_favicon, term, title, url.toString());
+        auto urlString = url.toString();
+        // After joining we may have multiple results for each URL:
+        // 1) one for each bookmark folder (same or different titles)
+        // 2) one for each tag (no title for all but the first entry)
+        auto keyRange = uniqueResults.equal_range(urlString);
+        auto it = keyRange.first;
+        if (!title.isEmpty()) {
+            while (it != keyRange.second) {
+                if (*it == title) {
+                    // same URL and title in multiple bookmark folders
+                    break;
+                }
+                if (it->isEmpty()) {
+                    // add a title if there was none for the URL
+                    *it = title;
+                    break;
+                }
+                ++it;
+            }
+        }
+        if (it == keyRange.second) {
+            // first or unique entry
+            uniqueResults.insert(urlString, title);
+        }
+    }
+
+    for (auto result = uniqueResults.constKeyValueBegin(); result != uniqueResults.constKeyValueEnd(); ++result) {
+        BookmarkMatch bookmarkMatch(m_favicon, term, (*result).second, (*result).first);
         bookmarkMatch.addTo(matches, addEverything);
     }
 
@@ -120,9 +149,13 @@ void Firefox::teardown()
 {
     if(m_fetchsqlite) {
         m_fetchsqlite->teardown();
+        delete m_fetchsqlite;
+        m_fetchsqlite = nullptr;
     }
     if(m_fetchsqlite_fav) {
         m_fetchsqlite_fav->teardown();
+        delete m_fetchsqlite_fav;
+        m_fetchsqlite_fav = nullptr;
         delete m_favicon;
         m_favicon = nullptr;
     }
@@ -137,7 +170,7 @@ void Firefox::reloadConfiguration()
         KConfigGroup grp = config;
         /* This allows the user to specify a profile database */
         m_dbFile = grp.readEntry<QString>("dbfile", QLatin1String(""));
-        if (m_dbFile.isEmpty() || QFile::exists(m_dbFile)) {
+        if (m_dbFile.isEmpty() || !QFile::exists(m_dbFile)) {
             //Try to get the right database file, the default profile is used
             KConfig firefoxProfile(QDir::homePath() + "/.mozilla/firefox/profiles.ini",
                                    KConfig::SimpleConfig);
@@ -170,6 +203,12 @@ void Firefox::reloadConfiguration()
             m_dbFile = profilePath + "/places.sqlite";
             grp.writeEntry("dbfile", m_dbFile);
             m_dbFile_fav = profilePath + "/favicons.sqlite";
+        } else {
+            auto dir = QDir(m_dbFile);
+            if (dir.cdUp()) {
+                QString profilePath = dir.absolutePath();
+                m_dbFile_fav = profilePath + "/favicons.sqlite";
+            }
         }
     } else {
         //qDebug() << "SQLITE driver isn't available";

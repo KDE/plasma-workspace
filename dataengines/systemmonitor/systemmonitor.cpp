@@ -141,7 +141,7 @@ void SystemMonitorEngine::answerReceived(int id, const QList<QByteArray> &answer
             sensors.insert(newSensor);
             m_sensors.append(newSensor);
             {
-                // HACK: for backwards compability
+                // HACK: for backwards compatibility
                 // in case this source was created in sourceRequestEvent, stop it being
                 // automagically removed when disconnected from
                 Plasma::DataContainer *s = containerForSource( newSensor );

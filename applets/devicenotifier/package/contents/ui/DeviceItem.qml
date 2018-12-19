@@ -188,6 +188,8 @@ MouseArea {
 
             move: Transition {
                 NumberAnimation { property: "y"; duration: units.longDuration; easing.type: Easing.InOutQuad }
+                // ensure opacity values return to 1.0 if the add transition animation has been interrupted
+                NumberAnimation { property: "opacity"; to: 1.0 }
             }
 
             add: Transition {
@@ -229,6 +231,7 @@ MouseArea {
             }
 
             PlasmaComponents.Label {
+                id: actionMessage
                 width: parent.width
                 height: undefined
                 opacity: 0.6
@@ -251,7 +254,7 @@ MouseArea {
                     } else if (deviceItem.state == 1) {
                         return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing...")
                     } else {
-                        return i18nc("Removing is a less technical word for Unmounting; translation shoud be short and mean \'Currently unmounting this device\'", "Removing...")
+                        return i18nc("Removing is a less technical word for Unmounting; translation should be short and mean \'Currently unmounting this device\'", "Removing...")
                     }
                 }
             }
@@ -302,6 +305,7 @@ MouseArea {
                 id: actionButton
                 visible: !busyIndicator.visible && deviceItem.actionVisible
                 onClicked: actionTriggered()
+                y: mounted ? deviceLabel.height + (freeSpaceBar.height - height - units.smallSpacing) / 2 : (deviceLabel.height + actionMessage.height - height) / 2
             }
 
             PlasmaComponents.BusyIndicator {

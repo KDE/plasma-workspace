@@ -14,27 +14,47 @@ set(EXTERNAL_LIBS
     KF5::Bookmarks
 )
 
-set(krunner_bookmarksrunner_SRCS
-    browserfactory.cpp
+set(krunner_bookmarks_common_SRCS
     bookmarkmatch.cpp
     faviconfromblob.cpp
     favicon.cpp
     fetchsqlite.cpp
-    browsers/opera.cpp
-    bookmarksrunner.cpp
-    browsers/kdebrowser.cpp
-    browsers/firefox.cpp
+)
+
+ecm_qt_declare_logging_category(krunner_bookmarks_common_SRCS
+    HEADER bookmarks_debug.h
+    IDENTIFIER RUNNER_BOOKMARKS
+    CATEGORY_NAME org.kde.plasma.runner.bookmarks
+    DEFAULT_SEVERITY Warning
 )
 
 set(krunner_bookmarksrunner_SRCS
-    ${krunner_bookmarksrunner_SRCS}
+    ${krunner_bookmarks_common_SRCS}
+    bookmarksrunner.cpp
+    browserfactory.cpp
     browsers/chromefindprofile.cpp
     browsers/chrome.cpp
+    browsers/firefox.cpp
+    browsers/kdebrowser.cpp
+    browsers/opera.cpp
 )
 
 
 add_library(krunner_bookmarksrunner MODULE ${krunner_bookmarksrunner_SRCS})
 target_link_libraries(krunner_bookmarksrunner ${EXTERNAL_LIBS})
+
+set(krunner_bookmarks_test_SRCS
+    ${krunner_bookmarks_common_SRCS}
+    browsers/chromefindprofile.cpp
+    browsers/chrome.cpp
+ )
+
+add_library(krunner_bookmarks_test STATIC ${krunner_bookmarks_test_SRCS})
+target_link_libraries(krunner_bookmarks_test
+    Qt5::Sql
+    KF5::KIOCore
+    KF5::Runner
+)
 
 install(TARGETS krunner_bookmarksrunner DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 

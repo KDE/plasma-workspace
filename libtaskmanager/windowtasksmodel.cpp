@@ -60,7 +60,6 @@ WindowTasksModel::Private::~Private()
 {
     --instanceCount;
 
-
     if (!instanceCount) {
         delete sourceTasksModel;
         sourceTasksModel = nullptr;

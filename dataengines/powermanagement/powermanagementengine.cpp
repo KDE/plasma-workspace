@@ -360,6 +360,9 @@ QString PowermanagementEngine::batteryType(const Solid::Battery* battery) const
       case Solid::Battery::GamingInputBattery:
           return QStringLiteral("GamingInput");
           break;
+      case Solid::Battery::BluetoothBattery:
+          return QStringLiteral("Bluetooth");
+          break;
       default:
           return QStringLiteral("Unknown");
   }

@@ -19,28 +19,46 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
+import QtGraphicalEffects 1.0
 
 import org.kde.plasma.core 2.0
 import org.kde.plasma.components 2.0
 
-ColumnLayout {
-    Label {
-        text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
-        font.pointSize: 48 //Mockup says this, I'm not sure what to do?
-        font.weight: Font.Light
-        Layout.alignment: Qt.AlignHCenter
-        renderType: Text.QtRendering
+Item {
+    width: clock.implicitWidth
+    height: clock.implicitHeight
+
+    DropShadow {
+        id: clockShadow
+        anchors.fill: clock
+        source: clock
+        horizontalOffset: 0
+        verticalOffset: 2
+        radius: 14
+        samples: 32
+        spread: 0.3
+        color: ColorScope.backgroundColor
     }
-    Label {
-        text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
-        font.pointSize: 24
-        font.weight: Font.Light
-        Layout.alignment: Qt.AlignHCenter
-    }
-    DataSource {
-        id: timeSource
-        engine: "time"
-        connectedSources: ["Local"]
-        interval: 1000
+
+    ColumnLayout {
+        id: clock
+        Label {
+            text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
+            font.pointSize: 48
+            font.weight: Font.Light
+            Layout.alignment: Qt.AlignHCenter
+        }
+        Label {
+            text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
+            font.pointSize: 24
+            font.weight: Font.Light
+            Layout.alignment: Qt.AlignHCenter
+        }
+        DataSource {
+            id: timeSource
+            engine: "time"
+            connectedSources: ["Local"]
+            interval: 1000
+        }
     }
 }

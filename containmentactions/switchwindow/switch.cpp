@@ -1,5 +1,6 @@
 /*
  *   Copyright 2009 by Chani Armitage <chani@kde.org>
+ *   Copyright 2018 by Eike Hein <hein@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,34 +20,54 @@
 
 #include "switch.h"
 
-#include <QTimer>
-
-#include <QDebug>
-#include <QMenu>
-#include <KWindowSystem>
-
-#include <Plasma/DataEngine>
-#include <Plasma/Service>
-
 #include "abstracttasksmodel.h"
+#include "activityinfo.h"
+#include "tasksmodel.h"
+#include "virtualdesktopinfo.h"
+
+#include <QAction>
+#include <QMenu>
+
+using namespace TaskManager;
+
+ActivityInfo *SwitchWindow::s_activityInfo = nullptr;
+TasksModel *SwitchWindow::s_tasksModel = nullptr;int SwitchWindow::s_instanceCount = 0;
 
 SwitchWindow::SwitchWindow(QObject *parent, const QVariantList &args)
-    : Plasma::ContainmentActions(parent, args),
-      m_activityInfo(new TaskManager::ActivityInfo(this)),
-      m_tasksModel(new TaskManager::TasksModel(this)),
-      m_mode(AllFlat),
-      m_clearOrderTimer(nullptr)
+    : Plasma::ContainmentActions(parent, args)
+    , m_mode(AllFlat)
+    , m_virtualDesktopInfo(new VirtualDesktopInfo(this))
 {
-    m_tasksModel->setGroupMode(TaskManager::TasksModel::GroupDisabled);
+    ++s_instanceCount;
 
-    m_tasksModel->setActivity(m_activityInfo->currentActivity());
-    m_tasksModel->setFilterByActivity(true);
-    connect(m_activityInfo, &TaskManager::ActivityInfo::currentActivityChanged,
-        this, [this]() { m_tasksModel->setActivity(m_activityInfo->currentActivity()); });
+    if (!s_activityInfo) {
+        s_activityInfo = new ActivityInfo();
+    }
+
+    if (!s_tasksModel) {
+        s_tasksModel = new TasksModel();
+
+        s_tasksModel->setGroupMode(TasksModel::GroupDisabled);
+
+        s_tasksModel->setActivity(s_activityInfo->currentActivity());
+        s_tasksModel->setFilterByActivity(true);
+        connect(s_activityInfo, &ActivityInfo::currentActivityChanged,
+            this, [this]() { s_tasksModel->setActivity(s_activityInfo->currentActivity()); });
+    }
 }
 
 SwitchWindow::~SwitchWindow()
 {
+    --s_instanceCount;
+
+    if (!s_instanceCount) {
+        delete s_activityInfo;
+        s_activityInfo = nullptr;
+        delete s_tasksModel;
+        s_tasksModel = nullptr;
+    }
+
+    qDeleteAll(m_actions);
 }
 
 void SwitchWindow::restore(const KConfigGroup &config)
@@ -54,7 +75,7 @@ void SwitchWindow::restore(const KConfigGroup &config)
     m_mode = (MenuMode)config.readEntry("mode", (int)AllFlat);
 }
 
-QWidget* SwitchWindow::createConfigurationInterface(QWidget* parent)
+QWidget *SwitchWindow::createConfigurationInterface(QWidget *parent)
 {
     QWidget *widget = new QWidget(parent);
     m_ui.setupUi(widget);
@@ -94,86 +115,97 @@ void SwitchWindow::makeMenu()
     qDeleteAll(m_actions);
     m_actions.clear();
 
-    if (m_tasksModel->rowCount() == 0) {
+    if (s_tasksModel->rowCount() == 0) {
         return;
     }
 
-    QMultiHash<int, QAction*> desktops;
+    QMultiMap<QVariant, QAction *> desktops;
+    QList<QAction *> allDesktops;
 
-    //make all the window actions
-    for (int i = 0; i < m_tasksModel->rowCount(); ++i) {
-        if (m_tasksModel->data(m_tasksModel->index(i, 0), TaskManager::AbstractTasksModel::IsStartup).toBool()) {
-            qDebug() << "skipped fake task";
+    // Make all the window actions.
+    for (int i = 0; i < s_tasksModel->rowCount(); ++i) {
+        const QModelIndex &idx = s_tasksModel->index(i, 0);
+
+        if (!idx.data(AbstractTasksModel::IsWindow).toBool()) {
             continue;
         }
 
-        QString name = m_tasksModel->data(m_tasksModel->index(i, 0), Qt::DisplayRole).toString();
+        const QString &name = idx.data().toString();
 
         if (name.isEmpty()) {
             continue;
         }
 
-        const QVariantList &idList = m_tasksModel->data(m_tasksModel->index(i, 0), TaskManager::AbstractTasksModel::LegacyWinIdList).toList();
+        QAction *action = new QAction(name, this);
+        action->setIcon(idx.data(Qt::DecorationRole).value<QIcon>());
+        action->setData(idx.data(AbstractTasksModel::WinIdList).toList());
 
-        if (!idList.count()) {
-            continue;
+        const QVariantList &desktopList = idx.data(AbstractTasksModel::VirtualDesktops).toList();
+
+        for (const QVariant &desktop : desktopList) {
+            desktops.insert(desktop, action);
         }
 
-        QAction *action = new QAction(name, this);
-        action->setIcon(m_tasksModel->data(m_tasksModel->index(i, 0), Qt::DecorationRole).value<QIcon>());
-        action->setData(idList.at(0));
-        desktops.insert(m_tasksModel->data(m_tasksModel->index(i, 0), TaskManager::AbstractTasksModel::VirtualDesktop).toInt(), action);
+        if (idx.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool()) {
+            allDesktops << action;
+        }
+
         connect(action, &QAction::triggered, [=]() {
             switchTo(action);
         });
     }
 
-    //sort into menu
+    // Sort into menu(s).
     if (m_mode == CurrentDesktop) {
-        int currentDesktop = KWindowSystem::currentDesktop();
+        const QVariant &currentDesktop = m_virtualDesktopInfo->currentDesktop();
 
         QAction *a = new QAction(i18nc("plasma_containmentactions_switchwindow", "Windows"), this);
         a->setSeparator(true);
         m_actions << a;
         m_actions << desktops.values(currentDesktop);
-        m_actions << desktops.values(-1);
+        m_actions << allDesktops;
 
     } else {
-        int numDesktops = KWindowSystem::numberOfDesktops();
+        const QVariantList &desktopIds = m_virtualDesktopInfo->desktopIds();
+        const QStringList &desktopNames = m_virtualDesktopInfo->desktopNames();
+
         if (m_mode == AllFlat) {
-            for (int i = 1; i <= numDesktops; ++i) {
-                if (desktops.contains(i)) {
-                    QString name = KWindowSystem::desktopName(i);
-                    name = QStringLiteral("%1: %2").arg(i).arg(name);
+            for (int i = 0; i <= desktopIds.count(); ++i) {
+                const QVariant &desktop = desktopIds.at(i);
+
+                if (desktops.contains(desktop)) {
+                    const QString &name = QStringLiteral("%1: %2").arg(QString::number(i), desktopNames.at(i));
                     QAction *a = new QAction(name, this);
                     a->setSeparator(true);
                     m_actions << a;
-                    m_actions << desktops.values(i);
+                    m_actions << desktops.values(desktop);
                 }
             }
-            if (desktops.contains(-1)) {
+
+            if (allDesktops.count()) {
                 QAction *a = new QAction(i18nc("plasma_containmentactions_switchwindow", "All Desktops"), this);
                 a->setSeparator(true);
                 m_actions << a;
-                m_actions << desktops.values(-1);
+                m_actions << allDesktops;
             }
+        } else { // Submenus.
+            for (int i = 0; i <= desktopIds.count(); ++i) {
+                const QVariant &desktop = desktopIds.at(i);
 
-        } else { //submenus
-            for (int i = 1; i <= numDesktops; ++i) {
-                if (desktops.contains(i)) {
-                    QString name = KWindowSystem::desktopName(i);
-                    name = QStringLiteral("%1: %2").arg(i).arg(name);
+                if (desktops.contains(desktop)) {
+                    const QString &name = QStringLiteral("%1: %2").arg(QString::number(i), desktopNames.at(i));
                     QMenu *subMenu = new QMenu(name);
-                    subMenu->addActions(desktops.values(i));
+                    subMenu->addActions(desktops.values(desktop));
 
                     QAction *a = new QAction(name, this);
                     a->setMenu(subMenu);
                     m_actions << a;
                 }
             }
-            if (desktops.contains(-1)) {
+
+            if (allDesktops.count()) {
                 QMenu *subMenu = new QMenu(i18nc("plasma_containmentactions_switchwindow", "All Desktops"));
-                subMenu->addActions(desktops.values(-1));
+                subMenu->addActions(allDesktops);
                 QAction *a = new QAction(i18nc("plasma_containmentactions_switchwindow", "All Desktops"), this);
                 a->setMenu(subMenu);
                 m_actions << a;
@@ -182,7 +214,7 @@ void SwitchWindow::makeMenu()
     }
 }
 
-QList<QAction*> SwitchWindow::contextualActions()
+QList<QAction *> SwitchWindow::contextualActions()
 {
     makeMenu();
     return m_actions;
@@ -190,15 +222,17 @@ QList<QAction*> SwitchWindow::contextualActions()
 
 void SwitchWindow::switchTo(QAction *action)
 {
-    int id = action->data().toInt();
+    const QVariantList &idList = action->data().toList();
 
-    KWindowSystem::forceActiveWindow(id);
-}
+    for (int i = 0; i < s_tasksModel->rowCount(); ++i) {
+        const QModelIndex &idx = s_tasksModel->index(i, 0);
 
-void SwitchWindow::clearWindowsOrder()
-{
-    qDebug() << "CLEARING>.......................";
-    m_windowsOrder.clear();
+        if (idList == idx.data(AbstractTasksModel::WinIdList).toList()) {
+            s_tasksModel->requestActivate(idx);
+
+            return;
+        }
+    }
 }
 
 void SwitchWindow::performNextAction()
@@ -213,52 +247,29 @@ void SwitchWindow::performPreviousAction()
 
 void SwitchWindow::doSwitch(bool up)
 {
-    //TODO somehow find the "next" or "previous" window
-    //without changing hte window order (don't want to always go between two windows)
-    if (m_windowsOrder.isEmpty()) {
-        m_windowsOrder = KWindowSystem::stackingOrder();
+    const QModelIndex &activeTask = s_tasksModel->activeTask();
+
+    if (!activeTask.isValid()) {
+        return;
+    }
+
+    if (up) {
+        const QModelIndex &next = activeTask.sibling(activeTask.row() + 1, 0);
+
+        if (next.isValid()) {
+            s_tasksModel->requestActivate(next);
+        } else if (s_tasksModel->rowCount() > 1) {
+            s_tasksModel->requestActivate(s_tasksModel->index(0, 0));
+        }
     } else {
-        if (!m_clearOrderTimer) {
-            m_clearOrderTimer = new QTimer(this);
-            connect(m_clearOrderTimer, &QTimer::timeout, this, &SwitchWindow::clearWindowsOrder);
-            m_clearOrderTimer->setSingleShot(true);
-            m_clearOrderTimer->setInterval(1000);
-        }
+        const QModelIndex &previous = activeTask.sibling(activeTask.row() - 1, 0);
 
-        m_clearOrderTimer->start();
-    }
-
-    const WId activeWindow = KWindowSystem::activeWindow();
-    bool next = false;
-    WId first = 0;
-    WId last = 0;
-    for (int i = 0; i < m_windowsOrder.count(); ++i) {
-        const WId id = m_windowsOrder.at(i);
-        const KWindowInfo info(id, NET::WMDesktop | NET::WMVisibleName | NET::WMWindowType);
-        if (info.windowType(NET::NormalMask | NET::DialogMask | NET::UtilityMask) != -1 && info.isOnCurrentDesktop()) {
-            if (next) {
-                KWindowSystem::forceActiveWindow(id);
-                return;
-            }
-
-            if (first == 0) {
-                first = id;
-            }
-
-            if (id == activeWindow) {
-                if (up) {
-                    next = true;
-                } else if (last) {
-                    KWindowSystem::forceActiveWindow(last);
-                    return;
-                }
-            }
-
-            last = id;
+        if (previous.isValid()) {
+            s_tasksModel->requestActivate(previous);
+        } else if (s_tasksModel->rowCount() > 1) {
+            s_tasksModel->requestActivate(s_tasksModel->index(s_tasksModel->rowCount() - 1, 0));
         }
     }
-
-    KWindowSystem::forceActiveWindow(up ? first : last);
 }
 
 K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(switchwindow, SwitchWindow, "plasma-containmentactions-switchwindow.json")

@@ -30,7 +30,7 @@ Layouts.ColumnLayout {
 
     property alias cfg_compactView: compactViewRadioButton.checked
 
-    property bool disableSetting: plasmoid.formFactor === PlasmaCore.Types.Vertical || !plasmoid.nativeInterface.appletEnabled
+    property bool disableSetting: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     Controls.ExclusiveGroup {
         id: viewOptionGroup

@@ -14,8 +14,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#ifndef COLORCORRECT_COMPOSITORADAPTOR_H
-#define COLORCORRECT_COMPOSITORADAPTOR_H
+#ifndef COMPOSITORCOLORADAPTOR_H
+#define COMPOSITORCOLORADAPTOR_H
 
 #include <QObject>
 #include <QTime>
@@ -331,7 +331,7 @@ public:
      * longitude values and in Timings mode the morning and evening begin, as
      * well as the transition time.
      *
-     * Returns true, if the configuration was succesfully applied.
+     * Returns true, if the configuration was successfully applied.
      *
      * @return bool
      * @see sendConfigurationAll
@@ -344,7 +344,7 @@ public:
      * Send all currently staged values to the compositor in order
      * to trigger a configuration change.
      *
-     * Returns true, if the configuration was succesfully applied.
+     * Returns true, if the configuration was successfully applied.
      *
      * @return bool
      * @see sendConfiguration
@@ -476,4 +476,4 @@ private:
 
 }
 
-#endif // COLORCORRECT_COMPOSITORADAPTOR_H
+#endif // COMPOSITORCOLORADAPTOR_H

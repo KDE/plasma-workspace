@@ -42,7 +42,7 @@ SessionRunner::SessionRunner(QObject *parent, const QVariantList &args)
     if (m_canLogout) {
         addSyntax(Plasma::RunnerSyntax(i18nc("log out command", "logout"),
                   i18n("Logs out, exiting the current desktop session")));
-        addSyntax(Plasma::RunnerSyntax(i18nc("shutdown computer command", "shutdown"),
+        addSyntax(Plasma::RunnerSyntax(i18nc("shut down computer command", "shut down"),
                   i18n("Turns off the computer")));
     }
 
@@ -98,9 +98,10 @@ void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QStr
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
         matches << match;
-    } else if (term.compare(i18nc("shutdown computer command","shutdown"), Qt::CaseInsensitive) == 0) {
+    } else if (term.compare(i18nc("shut down computer command","shut down"), Qt::CaseInsensitive) == 0 ||
+            term.compare(i18nc("shut down computer command", "shutdown"), Qt::CaseInsensitive) == 0) {
         Plasma::QueryMatch match(this);
-        match.setText(i18n("Shutdown the computer"));
+        match.setText(i18n("Shut down the computer"));
         match.setIconName(QStringLiteral("system-shutdown"));
         match.setData(ShutdownAction);
         match.setType(Plasma::QueryMatch::ExactMatch);

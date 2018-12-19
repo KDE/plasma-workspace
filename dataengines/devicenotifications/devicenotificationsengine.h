@@ -39,9 +39,9 @@ public:
 
 private slots:
      void notify(Solid::ErrorType solidError, const QString& error, const QString& errorDetails, const QString &udi);
+    void clearNotification(const QString &udi);
 
 private:
-    uint m_id;
     KSolidNotify * m_solidNotify;
 };
 

@@ -164,7 +164,7 @@ void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem 
         dialog->show();
     });
 
-    //this is a workaround where Qt will fail to realise a mouse has been released
+    //this is a workaround where Qt will fail to realize a mouse has been released
     // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
     // whilst the mouse is depressed
     // https://bugreports.qt.io/browse/QTBUG-59044

@@ -1,5 +1,6 @@
 /*
  *   Copyright 2009 by Chani Armitage <chani@kde.org>
+ *   Copyright 2018 by Eike Hein <hein@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,80 +20,96 @@
 
 #include "desktop.h"
 
-#include <QAction>
-#include <QWheelEvent>
+#include <virtualdesktopinfo.h>
 
-#include <QDebug>
-#include <KWindowSystem>
-#include <KLocalizedString>
+#include <QAction>
+
+using namespace TaskManager;
 
 SwitchDesktop::SwitchDesktop(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args)
+    , m_virtualDesktopInfo(new VirtualDesktopInfo(this))
 {
 }
 
 SwitchDesktop::~SwitchDesktop()
 {
-    qDeleteAll(m_actions);
 }
 
 
 QList<QAction*> SwitchDesktop::contextualActions()
 {
-    QList<QAction*> list;
+    const int numDesktops = m_virtualDesktopInfo->numberOfDesktops();
+    const QVariantList &desktopIds = m_virtualDesktopInfo->desktopIds();
+    const QStringList &desktopNames = m_virtualDesktopInfo->desktopNames();
+    const QVariant &currentDesktop = m_virtualDesktopInfo->currentDesktop();
 
-    const int numDesktops = KWindowSystem::numberOfDesktops();
-    const int currentDesktop = KWindowSystem::currentDesktop();
+    QList<QAction*> actions;
+    actions.reserve(numDesktops);
 
-    //Is it either the first time or the desktop number changed?
     if (m_actions.count() < numDesktops) {
-        for (int i = m_actions.count() + 1; i <= numDesktops; ++i) {
-            QString name = KWindowSystem::desktopName(i);
-            QAction *action = new QAction(QStringLiteral("%1: %2").arg(i).arg(name), this);
+        for (int i = m_actions.count(); i < numDesktops; ++i) {
+            QString name = desktopNames.at(i);
+            QAction *action = new QAction(this);
             connect(action, &QAction::triggered, this, &SwitchDesktop::switchTo);
-            action->setData(i);
             m_actions[i] = action;
         }
-
     } else if (m_actions.count() > numDesktops) {
-        for (int i = numDesktops +1; i <= m_actions.count(); ++i) {
-            delete m_actions[i];
-            m_actions.remove(i);
+        for (int i = m_actions.count(); i > numDesktops; --i) {
+            delete m_actions.take(i - 1);
         }
     }
 
-    for (int i = 1; i <= numDesktops; ++i) {
+    for (int i = 0; i < numDesktops; ++i) {
         QAction *action = m_actions.value(i);
-        action->setEnabled(i != currentDesktop);
-        list << action;
+        action->setText(QStringLiteral("%1: %2").arg(QString::number(i), desktopNames.at(i)));
+        action->setData(desktopIds.at(i));
+        action->setEnabled(desktopIds.at(i) != currentDesktop);
+        actions << action;
     }
 
-    return list;
+    return actions;
 }
 
 void SwitchDesktop::switchTo()
 {
-    QAction *action = qobject_cast<QAction *>(sender());
+    const QAction *action = qobject_cast<QAction *>(sender());
+
     if (!action) {
         return;
     }
 
-    const int desktop = action->data().toInt();
-    KWindowSystem::setCurrentDesktop(desktop);
+    m_virtualDesktopInfo->requestActivate(action->data());
 }
 
 void SwitchDesktop::performNextAction()
 {
-    const int numDesktops = KWindowSystem::numberOfDesktops();
-    const int currentDesktop = KWindowSystem::currentDesktop();
-    KWindowSystem::setCurrentDesktop(currentDesktop % numDesktops + 1);
+    const QVariantList &desktopIds = m_virtualDesktopInfo->desktopIds();
+    const QVariant &currentDesktop = m_virtualDesktopInfo->currentDesktop();
+    const int currentDesktopIndex = desktopIds.indexOf(currentDesktop);
+
+    int nextDesktopIndex = currentDesktopIndex + 1;
+
+    if (nextDesktopIndex == desktopIds.count()) {
+        nextDesktopIndex = 0;
+    }
+
+    m_virtualDesktopInfo->requestActivate(desktopIds.at(nextDesktopIndex));
 }
 
 void SwitchDesktop::performPreviousAction()
 {
-    const int numDesktops = KWindowSystem::numberOfDesktops();
-    const int currentDesktop = KWindowSystem::currentDesktop();
-    KWindowSystem::setCurrentDesktop((numDesktops + currentDesktop - 2) % numDesktops + 1);
+    const QVariantList &desktopIds = m_virtualDesktopInfo->desktopIds();
+    const QVariant &currentDesktop = m_virtualDesktopInfo->currentDesktop();
+    const int currentDesktopIndex = desktopIds.indexOf(currentDesktop);
+
+    int previousDesktopIndex = currentDesktopIndex - 1;
+
+    if (previousDesktopIndex < 0) {
+        previousDesktopIndex = desktopIds.count() - 1;
+    }
+
+    m_virtualDesktopInfo->requestActivate(desktopIds.at(previousDesktopIndex));
 }
 
 K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(switchdesktop, SwitchDesktop, "plasma-containmentactions-switchdesktop.json")

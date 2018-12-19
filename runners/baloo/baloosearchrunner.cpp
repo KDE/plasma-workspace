@@ -32,7 +32,6 @@
 #include <QMimeData>
 #include <QApplication>
 #include <QDBusConnection>
-#include <QTimer>
 
 #include <Baloo/Query>
 #include <Baloo/IndexerConfig>
@@ -117,21 +116,24 @@ RemoteMatches SearchRunner::Match(const QString& searchTerm)
 
 void SearchRunner::performMatch()
 {
+    // Filter out duplicates
+    QSet<QUrl> foundUrls;
+
     RemoteMatches matches;
-    matches << matchInternal(m_searchTerm, QStringLiteral("Audio"), i18n("Audio"));
-    matches << matchInternal(m_searchTerm, QStringLiteral("Image"), i18n("Image"));
-    matches << matchInternal(m_searchTerm, QStringLiteral("Document"), i18n("Document"));
-    matches << matchInternal(m_searchTerm, QStringLiteral("Video"), i18n("Video"));
-    matches << matchInternal(m_searchTerm, QStringLiteral("Folder"), i18n("Folder"));
-    matches << matchInternal(m_searchTerm, QStringLiteral("Archive"), i18n("Archive"));
-    matches << matchInternal(m_searchTerm, QStringLiteral("Spreadsheet"), i18n("Spreadsheet"));
-    matches << matchInternal(m_searchTerm, QStringLiteral("Presentation"), i18n("Presentation"));
+    matches << matchInternal(m_searchTerm, QStringLiteral("Audio"), i18n("Audio"), foundUrls);
+    matches << matchInternal(m_searchTerm, QStringLiteral("Image"), i18n("Image"), foundUrls);
+    matches << matchInternal(m_searchTerm, QStringLiteral("Video"), i18n("Video"), foundUrls);
+    matches << matchInternal(m_searchTerm, QStringLiteral("Spreadsheet"), i18n("Spreadsheet"), foundUrls);
+    matches << matchInternal(m_searchTerm, QStringLiteral("Presentation"), i18n("Presentation"), foundUrls);
+    matches << matchInternal(m_searchTerm, QStringLiteral("Folder"), i18n("Folder"), foundUrls);
+    matches << matchInternal(m_searchTerm, QStringLiteral("Document"), i18n("Document"), foundUrls);
+    matches << matchInternal(m_searchTerm, QStringLiteral("Archive"), i18n("Archive"), foundUrls);
 
     QDBusConnection::sessionBus().send(m_lastRequest.createReply(QVariant::fromValue(matches)));
     m_lastRequest = QDBusMessage();
 }
 
-RemoteMatches SearchRunner::matchInternal(const QString& searchTerm, const QString &type, const QString &category)
+RemoteMatches SearchRunner::matchInternal(const QString& searchTerm, const QString &type, const QString &category, QSet<QUrl> &foundUrls)
 {
     Baloo::Query query;
     query.setSearchString(searchTerm);
@@ -155,6 +157,13 @@ RemoteMatches SearchRunner::matchInternal(const QString& searchTerm, const QStri
         RemoteMatch match;
         QString localUrl = it.filePath();
         const QUrl url = QUrl::fromLocalFile(localUrl);
+
+        if (foundUrls.contains(url)) {
+            continue;
+        }
+
+        foundUrls.insert(url);
+
         match.id = it.filePath();
         match.text = url.fileName();
         match.iconName = mimeDb.mimeTypeForFile(localUrl).iconName();

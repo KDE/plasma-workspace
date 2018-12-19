@@ -29,6 +29,7 @@
 #include <QDir>
 #include <QDialog>
 #include <QMenu>
+#include <QMessageBox>
 #include <QPointer>
 #include <QDBusConnection>
 #include <QSaveFile>
@@ -373,15 +374,7 @@ void Klipper::showPopupMenu( QMenu* menu )
 {
     Q_ASSERT( menu != nullptr );
 
-    QSize size = menu->sizeHint(); // geometry is not valid until it's shown
-    QPoint pos = QCursor::pos();
-    // ### We can't know where the systray icon is (since it can be hidden or shown
-    //     in several places), so the cursor position is the only option.
-
-    if ( size.height() < pos.y() )
-        pos.ry() -= size.height();
-
-    menu->popup(pos);
+    menu->popup(QCursor::pos());
 }
 
 bool Klipper::loadHistory() {
@@ -502,9 +495,12 @@ void Klipper::saveSession()
 
 void Klipper::disableURLGrabber()
 {
-    KMessageBox::information( nullptr,
-                              i18n( "You can enable URL actions later by left-clicking on the "
-                                    "Klipper icon and selecting 'Enable Clipboard Actions'" ) );
+    QMessageBox *message = new QMessageBox(QMessageBox::Information, QString(),
+        i18n("You can enable URL actions later by left-clicking on the "
+             "Klipper icon and selecting 'Enable Clipboard Actions'"));
+    message->setAttribute(Qt::WA_DeleteOnClose);
+    message->setModal(false);
+    message->show();
 
     setURLGrabberEnabled( false );
 }

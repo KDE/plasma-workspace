@@ -19,6 +19,7 @@
  */
 
 import QtQuick 2.8
+import QtGraphicalEffects 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -44,6 +45,18 @@ Item {
         OpacityAnimator {
             duration: units.longDuration
         }
+    }
+
+    // Draw a translucent background circle under the user picture
+    Rectangle {
+        anchors.centerIn: imageSource
+
+        width: imageSource.width + 2
+        height: width
+        radius: width / 2
+
+        color: PlasmaCore.ColorScope.backgroundColor
+        opacity: 0.9
     }
 
     Item {
@@ -131,7 +144,17 @@ Item {
     }
 
 
-
+    DropShadow {
+        id: labelShadow
+        anchors.fill: usernameDelegate
+        source: usernameDelegate
+        horizontalOffset: 0
+        verticalOffset: 1
+        radius: 12
+        samples: 32
+        spread: 0.35
+        color: PlasmaCore.ColorScope.backgroundColor
+    }
     PlasmaComponents.Label {
         id: usernameDelegate
         anchors {

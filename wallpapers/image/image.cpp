@@ -149,7 +149,7 @@ void Image::setRenderingMode(RenderingMode mode)
         updateDirWatch(m_slidePaths);
         updateDirWatch(m_slidePaths);
     } else {
-        // we need to reset the prefered image
+        // we need to reset the preferred image
         setSingleImage();
     }
 }

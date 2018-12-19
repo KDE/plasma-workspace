@@ -21,9 +21,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "tasktools.h"
 #include "abstracttasksmodel.h"
 
-#include "tasktools.h"
-#include "abstracttasksmodel.h"
-
 #include <KActivities/ResourceInstance>
 #include <KConfigGroup>
 #include <KDesktopFile>
@@ -67,6 +64,11 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
             QByteArray bytes = QByteArray::fromBase64(iconData.toLocal8Bit(), QByteArray::Base64UrlEncoding);
             pixmap.loadFromData(bytes);
             data.icon.addPixmap(pixmap);
+        }
+
+        if (uQuery.hasQueryItem(QLatin1String("skipTaskbar"))) {
+            QString skipTaskbar(uQuery.queryItemValue(QLatin1String("skipTaskbar")));
+            data.skipTaskbar = (skipTaskbar == QStringLiteral("true"));
         }
     }
 
@@ -408,6 +410,23 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid,
                 services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name) and (not exist NoDisplay or not NoDisplay)").arg(appId));
                 sortServicesByMenuId(services, appId);
             }
+
+            // Check rules configuration for whether we want to hide this task.
+            // Some window tasks update from bogus to useful metadata early during startup.
+            // This config key allows listing the bogus metadata, and the matching window
+            // tasks are hidden until they perform a metadate update that stops them from
+            // matching.
+            QStringList skipTaskbar = set.readEntry("SkipTaskbar", QStringList());
+
+            if (skipTaskbar.contains(appId)) {
+                QUrlQuery query(url);
+                query.addQueryItem(QStringLiteral("skipTaskbar"), QStringLiteral("true"));
+                url.setQuery(query);
+            } else if (skipTaskbar.contains(mapped)) {
+                QUrlQuery query(url);
+                query.addQueryItem(QStringLiteral("skipTaskbar"), QStringLiteral("true"));
+                url.setQuery(query);
+            }
         }
 
         // Ok, absolute *last* chance, try matching via pid (but only if we have not already tried this!) ...
@@ -454,7 +473,8 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid,
         // applications: URLs are used to refer to applications by their KService::menuId
         // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
         if (!menuId.isEmpty()) {
-            return QUrl(QStringLiteral("applications:") + menuId);
+            url.setUrl(QStringLiteral("applications:") + menuId);
+            return url;
         }
 
         QString path = services.at(0)->entryPath();
@@ -464,7 +484,10 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid,
         }
 
         if (!path.isEmpty()) {
+            QString query = url.query();
             url = QUrl::fromLocalFile(path);
+            url.setQuery(query);
+            return url;
         }
     }
 

@@ -33,7 +33,7 @@ public:
 
     AbstractTasksModelIface *sourceTasksModel = nullptr;
 
-    uint virtualDesktop = 0;
+    QVariant virtualDesktop;
     QRect screenGeometry;
     QString activity;
 
@@ -68,15 +68,15 @@ void TaskFilterProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
     QSortFilterProxyModel::setSourceModel(sourceModel);
 }
 
-uint TaskFilterProxyModel::virtualDesktop() const
+QVariant TaskFilterProxyModel::virtualDesktop() const
 {
     return d->virtualDesktop;
 }
 
-void TaskFilterProxyModel::setVirtualDesktop(uint virtualDesktop)
+void TaskFilterProxyModel::setVirtualDesktop(const QVariant &desktop)
 {
-    if (d->virtualDesktop != virtualDesktop) {
-        d->virtualDesktop = virtualDesktop;
+    if (d->virtualDesktop != desktop) {
+        d->virtualDesktop = desktop;
 
         if (d->filterByVirtualDesktop) {
             invalidateFilter();
@@ -239,11 +239,13 @@ QModelIndex TaskFilterProxyModel::mapIfaceToSource(const QModelIndex &index) con
     return mapToSource(index);
 }
 
-bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
+bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
 {
-    Q_UNUSED(sourceParent)
-
     const QModelIndex &sourceIdx = sourceModel()->index(sourceRow, 0);
+
+    if (!sourceIdx.isValid()) {
+        return false;
+    }
 
     // Filter tasks that are not to be shown on the task bar.
     if (d->filterSkipTaskbar && sourceIdx.data(AbstractTasksModel::SkipTaskbar).toBool()) {
@@ -256,18 +258,13 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
     }
 
     // Filter by virtual desktop.
-    if (d->filterByVirtualDesktop && d->virtualDesktop != 0) {
+    if (d->filterByVirtualDesktop && !d->virtualDesktop.isNull()) {
         if (!sourceIdx.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool()
             && (!d->demandingAttentionSkipsFilters || !sourceIdx.data(AbstractTasksModel::IsDemandingAttention).toBool())) {
-            const QVariant &virtualDesktop = sourceIdx.data(AbstractTasksModel::VirtualDesktop);
+            const QVariantList &virtualDesktops = sourceIdx.data(AbstractTasksModel::VirtualDesktops).toList();
 
-            if (!virtualDesktop.isNull()) {
-                bool ok = false;
-                const uint i = virtualDesktop.toUInt(&ok);
-
-                if (ok && i != d->virtualDesktop) {
-                    return false;
-                }
+            if (!virtualDesktops.isEmpty() && !virtualDesktops.contains(d->virtualDesktop)) {
+                return false;
             }
         }
     }
@@ -306,6 +303,13 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
     }
 
     return true;
+}
+
+bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
+{
+    Q_UNUSED(sourceParent)
+
+    return acceptsRow(sourceRow);
 }
 
 }

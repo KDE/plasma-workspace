@@ -30,6 +30,8 @@
 #include <KLocalizedString>
 #include <KServiceTypeTrader>
 
+#include "debug.h"
+
 K_EXPORT_PLASMA_RUNNER(installer, InstallerRunner)
 
 InstallerRunner::InstallerRunner(QObject *parent, const QVariantList &args)
@@ -107,16 +109,22 @@ void InstallerRunner::run(const Plasma::RunnerContext &/*context*/, const Plasma
 {
     const QUrl appstreamUrl = match.data().toUrl();
     if (!QDesktopServices::openUrl(appstreamUrl))
-        qWarning() << "couldn't open" << appstreamUrl;
+        qCWarning(RUNNER_APPSTREAM) << "couldn't open" << appstreamUrl;
 }
 
 QList<AppStream::Component> InstallerRunner::findComponentsByString(const QString &query)
 {
     QMutexLocker locker(&m_appstreamMutex);
-    static bool opened = m_db.load();
+    QString error;
+    static bool warnedOnce = false;
+    static bool opened = m_db.load(&error);
     if(!opened) {
-        qWarning() << "no appstream for you";
-        return QList<AppStream::Component>();
+        if (warnedOnce) {
+            qCDebug(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << error;
+        } else {
+            qCWarning(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << error;
+            warnedOnce = true;
+        }
     }
 
     return m_db.search(query);

@@ -25,11 +25,11 @@
 #include "browser.h"
 #include "findprofile.h"
 
-#include <QMap>
 #include <QList>
-#include <QVariantMap>
 
 #include <KDirWatch>
+
+class QJsonObject;
 
 class FaviconFromBlob;
 class ProfileBookmarks;
@@ -44,7 +44,7 @@ public Q_SLOTS:
     void prepare() override;
     void teardown() override;
 private:
-    void parseFolder(const QVariantMap &entry, ProfileBookmarks *profile);
+    void parseFolder(const QJsonObject &entry, ProfileBookmarks *profile);
     virtual QList<BookmarkMatch> match(const QString &term, bool addEveryThing, ProfileBookmarks *profileBookmarks);
     QList<ProfileBookmarks*> m_profileBookmarks;
     KDirWatch* m_watcher = nullptr;

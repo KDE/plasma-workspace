@@ -6,6 +6,10 @@
   <kcfgfile name=""/>
 
   <group name="General">
+    <entry name="Blur" type="bool">
+      <label>Blur background filling</label>
+      <default>false</default>
+    </entry>
     <entry name="Color" type="Color">
       <label>Color of the wallpaper</label>
       <default>#000000</default>
@@ -24,7 +28,7 @@
     </entry>
     <entry name="SlideInterval" type="int">
       <label>Interval between slides (s)</label>
-      <default>10</default>
+      <default>900</default>
     </entry>
     <entry name="TransitionAnimationDuration" type="int">
       <label>Fade Transition Animation  (ms)</label>

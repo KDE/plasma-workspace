@@ -105,9 +105,17 @@ void ScreenPool::setPrimaryConnector(const QString &primary)
     if (m_primaryConnector == primary) {
         return;
     }
-    Q_ASSERT(m_idForConnector.contains(primary));
 
-    int oldIdForPrimary = m_idForConnector.value(primary);
+    int oldIdForPrimary = -1;
+    if (m_idForConnector.contains(primary)) {
+        oldIdForPrimary = m_idForConnector.value(primary);
+    }
+
+    if (oldIdForPrimary == -1) {
+        // move old primary to new free id
+        oldIdForPrimary = firstAvailableId();
+        insertScreenMapping(oldIdForPrimary, m_primaryConnector);
+    }
 
     m_idForConnector[primary] = 0;
     m_connectorForId[0] = primary;

@@ -16,6 +16,9 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
+#ifndef SOFTWARERENDERNOTIFIER_H
+#define SOFTWARERENDERNOTIFIER_H
+
 #include <KStatusNotifierItem>
 
 /**
@@ -33,3 +36,5 @@ private:
     SoftwareRendererNotifier(QObject *parent=nullptr);
     ~SoftwareRendererNotifier();
 };
+
+#endif

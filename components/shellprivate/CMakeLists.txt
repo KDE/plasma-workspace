@@ -8,6 +8,7 @@ endif (KF5TextEditor_FOUND)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-shellprivate.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-shellprivate.h)
 
 set(plasmashellprivateplugin_SRCS
+    wallpaperplugin/wallpaperplugin.cpp
     widgetexplorer/kcategorizeditemsviewmodels.cpp
     widgetexplorer/plasmaappletitemmodel.cpp
     widgetexplorer/openwidgetassistant.cpp
@@ -42,7 +43,11 @@ if (KF5TextEditor_FOUND)
 endif (KF5TextEditor_FOUND)
 
 install(TARGETS plasmashellprivateplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/shell)
-install(FILES widgetexplorer/plasmoids.knsrc DESTINATION ${KDE_INSTALL_CONFDIR})
+install(FILES
+    wallpaperplugin/wallpaperplugin.knsrc
+    widgetexplorer/plasmoids.knsrc
+    DESTINATION ${KDE_INSTALL_CONFDIR}
+)
 
 install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/shell)
 

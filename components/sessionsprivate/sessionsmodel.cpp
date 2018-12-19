@@ -73,6 +73,22 @@ bool SessionsModel::shouldLock() const
     return m_shouldLock;
 }
 
+bool SessionsModel::includeUnusedSessions() const
+{
+    return m_includeUnusedSessions;
+}
+
+void SessionsModel::setIncludeUnusedSessions(bool includeUnusedSessions)
+{
+    if (m_includeUnusedSessions != includeUnusedSessions) {
+        m_includeUnusedSessions = includeUnusedSessions;
+
+        reload();
+
+        emit includeUnusedSessionsChanged();
+    }
+}
+
 void SessionsModel::switchUser(int vt, bool shouldLock)
 {
     if (vt < 0) {
@@ -154,6 +170,10 @@ void SessionsModel::reload()
 
     foreach (const SessEnt &session, sessions) {
         if (!session.vt || session.self) {
+            continue;
+        }
+
+        if (!m_includeUnusedSessions && session.session.isEmpty()) {
             continue;
         }
 

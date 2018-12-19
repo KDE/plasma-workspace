@@ -19,8 +19,8 @@
 *   Boston, MA 02110-1301, USA.                                               *
 *******************************************************************************/
 
-#ifndef SHELLPACKAGES_H
-#define SHELLPACKAGES_H
+#ifndef LAYOUTTEMPLATE_H
+#define LAYOUTTEMPLATE_H
 
 #include <KPackage/PackageStructure>
 

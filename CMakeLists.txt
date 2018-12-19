@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.0)
 
 project(plasma-workspace)
-set(PROJECT_VERSION "5.13.80")
+set(PROJECT_VERSION "5.14.80")
 set(PROJECT_VERSION_MAJOR 5)
 
-set(QT_MIN_VERSION "5.9.0")
-set(KF5_MIN_VERSION "5.45.0")
+set(QT_MIN_VERSION "5.11.0")
+set(KF5_MIN_VERSION "5.50.0")
 set(INSTALL_SDDM_THEME TRUE)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick QuickWidgets Concurrent Test Network)
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
@@ -27,6 +27,8 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet
                     IdleTime Declarative TextWidgets KDELibs4Support Crash GlobalAccel
                     DBusAddons Wayland CoreAddons)
+find_package(KDED CONFIG REQUIRED)
+
 find_package(KF5NetworkManagerQt ${KF5_MIN_VERSION})
 set_package_properties(KF5NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper for NetworkManager API"
                        TYPE OPTIONAL
@@ -47,7 +49,7 @@ set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
 find_package(KF5TextEditor)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 
-find_package(KScreenLocker REQUIRED)
+find_package(KScreenLocker 5.13.80 REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KF5Holidays)
 set_package_properties(KF5Holidays PROPERTIES DESCRIPTION "Holidays provider for Plasma calendar"
@@ -91,7 +93,7 @@ if(X11_FOUND AND XCB_XCB_FOUND)
   set(HAVE_X11 1)
 endif()
 
-find_package(AppStreamQt 0.10.4)
+find_package(AppStreamQt 0.10.6)
 set_package_properties(AppStreamQt PROPERTIES DESCRIPTION "Access metadata for listing available software"
                        URL "https://www.freedesktop.org/wiki/Distributions/AppStream/"
 		       TYPE OPTIONAL
@@ -150,6 +152,7 @@ add_subdirectory(freespacenotifier)
 add_subdirectory(klipper)
 add_subdirectory(krunner)
 add_subdirectory(ksmserver)
+add_subdirectory(logout-greeter)
 add_subdirectory(ksplash)
 add_subdirectory(systemmonitor)
 add_subdirectory(statusnotifierwatcher)

@@ -2,7 +2,7 @@
 ksmserver - the KDE session management server
 
 Copyright 2016 Martin Graesslin <mgraesslin@kde.org>
-Copyright 2016 Kai Uwe Broulik <kde@privat.broulik.de>
+Copyright 2018 David Edmundson <davidedmundson@kde.org>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,47 +23,32 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ******************************************************************/
 
-#include <QGuiApplication>
-#include <QScreen>
+#include "greeter.h"
 
-#include "../switchuserdialog.h"
+#include <QDebug>
+#include <QScreen>
+#include <QApplication>
+
+#include "shutdowndlg.h"
+
+#include "logoutpromptadaptor.h"
+#include "ksmserveriface.h"
 
 #include <KQuickAddons/QtQuickSettings>
-
-#include <kdisplaymanager.h>
 #include <KWindowSystem>
 
 #include <KWayland/Client/connection_thread.h>
 #include <KWayland/Client/registry.h>
 #include <KWayland/Client/plasmashell.h>
 
-#include <unistd.h>
-
-class Greeter : public QObject
-{
-    Q_OBJECT
-public:
-    Greeter();
-    ~Greeter() override;
-
-    void init();
-
-    bool eventFilter(QObject *watched, QEvent *event) override;
-
-private:
-    void adoptScreen(QScreen *screen);
-    void rejected();
-    void setupWaylandIntegration();
-
-    QVector<KSMSwitchUserDialog *> m_dialogs;
-    KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
-    KDisplayManager m_displayManager;
-};
-
-Greeter::Greeter()
+Greeter::Greeter(bool shutdownAllowed)
     : QObject()
+    , m_shutdownAllowed(shutdownAllowed)
     , m_waylandPlasmaShell(nullptr)
 {
+    new LogoutPromptAdaptor(this);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/LogoutPrompt"), this);
+    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.LogoutPrompt"));
 }
 
 Greeter::~Greeter()
@@ -99,11 +84,13 @@ void Greeter::init()
         adoptScreen(screen);
     }
     connect(qApp, &QGuiApplication::screenAdded, this, &Greeter::adoptScreen);
+    m_running = true;
 }
 
 void Greeter::adoptScreen(QScreen* screen)
 {
-    KSMSwitchUserDialog *w = new KSMSwitchUserDialog(&m_displayManager, m_waylandPlasmaShell);
+    // TODO: last argument is the theme, maybe add command line option for it?
+    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownAllowed, m_shutdownType, m_waylandPlasmaShell);
     w->installEventFilter(this);
     m_dialogs << w;
 
@@ -111,15 +98,25 @@ void Greeter::adoptScreen(QScreen* screen)
         m_dialogs.removeOne(w);
         w->deleteLater();
     });
-    connect(w, &KSMSwitchUserDialog::dismissed, qApp, &QCoreApplication::quit);
+    connect(w, &KSMShutdownDlg::rejected, this, &Greeter::rejected);
+    connect(w, &KSMShutdownDlg::accepted, this, [w]() {
+        OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
+        ksmserver.logout(KWorkSpace::ShutdownConfirmNo, w->shutdownType(), KWorkSpace::ShutdownModeDefault);
+        QApplication::exit(1);
+    });
     w->setScreen(screen);
     w->setGeometry(screen->geometry());
     w->init();
 }
 
+void Greeter::rejected()
+{
+    QApplication::exit(1);
+}
+
 bool Greeter::eventFilter(QObject *watched, QEvent *event)
 {
-    if (qobject_cast<KSMSwitchUserDialog*>(watched)) {
+    if (qobject_cast<KSMShutdownDlg*>(watched)) {
         if (event->type() == QEvent::MouseButtonPress) {
             // check that the position is on no window
             QMouseEvent *me = static_cast<QMouseEvent*>(event);
@@ -129,27 +126,37 @@ bool Greeter::eventFilter(QObject *watched, QEvent *event)
                 }
             }
             // click outside, close
-            qApp->quit();
+            rejected();
         }
     }
     return false;
 }
 
-int main(int argc, char *argv[])
+void Greeter::promptLogout()
 {
-    // Qt does not currently (5.9.4) support fullscreen on xdg_shell v6.
-    qputenv("QT_WAYLAND_SHELL_INTEGRATION", "wl-shell");
-
-    KWorkSpace::detectPlatform(argc, argv);
-    QQuickWindow::setDefaultAlphaBuffer(true);
-    QGuiApplication app(argc, argv);
-
-    KQuickAddons::QtQuickSettings::init();
-
-    Greeter greeter;
-    greeter.init();
-
-    return app.exec();
+    if (m_running) {
+        return;
+    }
+    m_shutdownType = KWorkSpace::ShutdownTypeNone;
+    init();
 }
 
-#include "main.moc"
+void Greeter::promptShutDown()
+{
+    if (m_running) {
+        return;
+    }
+    m_shutdownType = KWorkSpace::ShutdownTypeHalt;
+    init();
+}
+
+void Greeter::promptReboot()
+{
+    if (m_running) {
+        return;
+    }
+    m_shutdownType = KWorkSpace::ShutdownTypeReboot;
+    init();
+}
+
+

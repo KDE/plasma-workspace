@@ -51,8 +51,6 @@ extern "C" {
 #include <QTime>
 #include <QMap>
 
-#include "autostart.h"
-
 #define SESSION_PREVIOUS_LOGOUT "saved at previous logout"
 #define SESSION_BY_USER  "saved by user"
 
@@ -111,18 +109,19 @@ public:
     void clientRegistered( const char* previousId );
 
     // public API
+    void performLogout();
     void restoreSession( const QString &sessionName );
     void startDefaultSession();
     void shutdown( KWorkSpace::ShutdownConfirm confirm,
                    KWorkSpace::ShutdownType sdtype,
                    KWorkSpace::ShutdownMode sdmode );
 
-    virtual void suspendStartup( const QString &app );
-    virtual void resumeStartup( const QString &app );
-
-    void launchWM( const QList< QStringList >& wmStartCommands );
+Q_SIGNALS:
+    void windowManagerLoaded();
+    void logoutCancelled();
 
 public Q_SLOTS:
+
     void cleanUp();
 
 private Q_SLOTS:
@@ -132,27 +131,13 @@ private Q_SLOTS:
     void protectionTimeout();
     void timeoutQuit();
     void timeoutWMQuit();
-    void kcmPhase1Timeout();
-    void kcmPhase2Timeout();
-    void pendingShutdownTimeout();
 
-    void autoStart0();
-    void autoStart1();
-    void autoStart2();
-    void tryRestoreNext();
-    void startupSuspendTimeout();
     void wmProcessChange();
-    void autoStart0Done();
-    void autoStart1Done();
-    void autoStart2Done();
-    void kcmPhase1Done();
-    void kcmPhase2Done();
 
     void defaultLogout();
     void logoutWithoutConfirmation();
     void haltWithoutConfirmation();
     void rebootWithoutConfirmation();
-    void secondKDEDPhaseLoaded();
 
 private:
     void handlePendingInteractions();
@@ -169,14 +154,13 @@ private:
     void killingCompleted();
     void createLogoutEffectWidget();
 
-    void runUserAutostart();
-    bool migrateKDE4Autostart(const QString &autostartFolder);
-
     void discardSession();
     void storeSession();
 
     void startProtection();
     void endProtection();
+
+    void launchWM( const QList< QStringList >& wmStartCommands );
 
     KProcess* startApplication( const QStringList& command,
         const QString& clientMachine = QString(),
@@ -199,14 +183,12 @@ private:
     WId windowWmClientLeader(WId w);
     QByteArray windowSessionId(WId w, WId leader);
 
-    bool checkStartupSuspend();
-    void finishStartup();
-    void resumeStartupInternal();
     void setupShortcuts();
+    void tryRestoreNext();
+    void startupDone();
 
     void runShutdownScripts();
 
-    void performLogout();
 
     // public dcop interface
 
@@ -229,31 +211,23 @@ private:
     void subSessionClosed();
     void subSessionCloseCanceled();
     void subSessionOpened();
+    void sessionRestored();
 
  private:
     QList<KSMListener*> listener;
     QList<KSMClient*> clients;
 
-    void autoStart(int phase);
-    void slotAutoStart();
-
     enum State
         {
         Idle,
-        LaunchingWM, AutoStart0, KcmInitPhase1, AutoStart1, Restoring, FinishingStartup, // startup
+        LaunchingWM, Restoring,
         Shutdown, Checkpoint, Killing, KillingWM, WaitingForKNotify, // shutdown
         ClosingSubSession, KillingSubSession, RestoringSubSession
         };
     State state;
-    bool dialogActive;
     bool saveSession;
     int wmPhase1WaitingCount;
     int saveType;
-    QMap< QString, int > startupSuspendCount;
-
-    KWorkSpace::ShutdownType shutdownType;
-    KWorkSpace::ShutdownMode shutdownMode;
-    QString bootOption;
 
     bool clean;
     KSMClient* clientInteracting;
@@ -265,18 +239,7 @@ private:
     QTimer protectionTimer;
     QTimer restoreTimer;
     QString xonCommand;
-    QTimer startupSuspendTimeoutTimer;
-    bool waitAutoStart2;
-    bool waitKcmInit2;
-    QTimer pendingShutdown;
     QWidget* logoutEffectWidget;
-    KWorkSpace::ShutdownConfirm pendingShutdown_confirm;
-    KWorkSpace::ShutdownType pendingShutdown_sdtype;
-    KWorkSpace::ShutdownMode pendingShutdown_sdmode;
-
-    // ksplash interface
-    void upAndRunning( const QString& msg );
-
     // sequential startup
     int appsToStart;
     int lastAppStarted;
@@ -286,11 +249,9 @@ private:
 
     WindowMap legacyWindows;
 
-    QDBusInterface* kcminitSignals;
 
     int inhibitCookie;
 
-    AutoStart m_autoStart;
 
     //subSession stuff
     QList<KSMClient*> clientsToKill;
@@ -298,6 +259,8 @@ private:
 
     int sockets[2];
     friend bool readFromPipe(int pipe);
+    friend class RestoreSessionJob;
+    friend class Startup;
 };
 
 #endif

@@ -24,10 +24,10 @@
 
 DeviceNotificationsEngine::DeviceNotificationsEngine( QObject* parent, const QVariantList& args )
     : Plasma::DataEngine( parent, args ),
-      m_id(0),
       m_solidNotify(new KSolidNotify(this))
 {
     connect(m_solidNotify, &KSolidNotify::notify, this, &DeviceNotificationsEngine::notify);
+    connect(m_solidNotify, &KSolidNotify::clearNotification, this, &DeviceNotificationsEngine::clearNotification);
 }
 
 DeviceNotificationsEngine::~DeviceNotificationsEngine()
@@ -36,7 +36,7 @@ DeviceNotificationsEngine::~DeviceNotificationsEngine()
 
 void DeviceNotificationsEngine::notify(Solid::ErrorType solidError, const QString& error, const QString& errorDetails, const QString &udi)
 {
-    const QString source = QStringLiteral("notification %1").arg(m_id++);
+    const QString source = QStringLiteral("%1 notification").arg(udi);
 
     Plasma::DataEngine::Data notificationData;
     notificationData.insert(QStringLiteral("solidError"), solidError);
@@ -45,6 +45,11 @@ void DeviceNotificationsEngine::notify(Solid::ErrorType solidError, const QStrin
     notificationData.insert(QStringLiteral("udi"), udi);
 
     setData(source, notificationData );
+}
+
+void DeviceNotificationsEngine::clearNotification(const QString &udi)
+{
+    removeSource(QStringLiteral("%1 notification").arg(udi));
 }
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(devicenotifications, DeviceNotificationsEngine, "plasma-dataengine-devicenotifications.json")

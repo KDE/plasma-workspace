@@ -66,7 +66,7 @@ class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public Abstr
 
     Q_PROPERTY(bool anyTaskDemandsAttention READ anyTaskDemandsAttention NOTIFY anyTaskDemandsAttentionChanged)
 
-    Q_PROPERTY(int virtualDesktop READ virtualDesktop WRITE setVirtualDesktop NOTIFY virtualDesktopChanged)
+    Q_PROPERTY(QVariant virtualDesktop READ virtualDesktop WRITE setVirtualDesktop NOTIFY virtualDesktopChanged)
     Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
     Q_PROPERTY(QString activity READ activity WRITE setActivity NOTIFY activityChanged)
 
@@ -150,25 +150,25 @@ public:
     bool anyTaskDemandsAttention() const;
 
     /**
-     * The number of the virtual desktop used in filtering by virtual
-     * desktop. Usually set to the number of the current virtual desktop.
-     * Defaults to @c -1.
+     * The id of the virtual desktop used in filtering by virtual
+     * desktop. Usually set to the id of the current virtual desktop.
+     * Defaults to empty.
      *
      * @see setVirtualDesktop
      * @returns the number of the virtual desktop used in filtering.
      **/
-    int virtualDesktop() const;
+    QVariant virtualDesktop() const;
 
     /**
-     * Set the number of the virtual desktop to use in filtering by virtual
+     * Set the id of the virtual desktop to use in filtering by virtual
      * desktop.
      *
-     * If set to  @c -1, filtering by virtual desktop is disabled.
+     * If set to an empty id, filtering by virtual desktop is disabled.
      *
      * @see virtualDesktop
-     * @param virtualDesktop A virtual desktop number.
+     * @param desktop A virtual desktop id (QString on Wayland; uint >0 on X11).
      **/
-    void setVirtualDesktop(int virtualDesktop);
+    void setVirtualDesktop(const QVariant &desktop = QVariant());
 
     /**
      * The geometry of the screen used in filtering by screen. Defaults
@@ -712,16 +712,31 @@ public:
     Q_INVOKABLE void requestToggleShaded(const QModelIndex &index) override;
 
     /**
-     * Request moving the task at the given index to the specified virtual
-     * desktop.
+     * Request entering the window at the given index on the specified virtual desktops.
      *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
+     * On Wayland, virtual desktop ids are QStrings. On X11, they are uint >0.
      *
-     * @param index An index in this tasks model.
-     * @param desktop A virtual desktop number.
+     * An empty list has a special meaning: The window is entered on all virtual desktops
+     * in the session.
+     *
+     * On X11, a window can only be on one or all virtual desktops. Therefore, only the
+     * first list entry is actually used.
+     *
+     * On X11, the id 0 has a special meaning: The window is entered on all virtual
+     * desktops in the session.
+     *
+     * @param index An index in this window tasks model.
+     * @param desktops A list of virtual desktop ids.
      **/
-    Q_INVOKABLE void requestVirtualDesktop(const QModelIndex &index, qint32 desktop) override;
+    Q_INVOKABLE void requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops) override;
+
+    /**
+     * Request entering the window at the given index on a new virtual desktop,
+     * which is created in response to this request.
+     *
+     * @param index An index in this window tasks model.
+     **/
+    Q_INVOKABLE void requestNewVirtualDesktop(const QModelIndex &index) override;
 
     /**
      * Request moving the task at the given index to the specified activities.

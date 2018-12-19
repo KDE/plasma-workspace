@@ -28,6 +28,8 @@ import org.kde.kcoreaddons 1.0 as KCoreAddons
 import "../components"
 import "timer.js" as AutoTriggerTimer
 
+import org.kde.plasma.private.sessions 2.0
+
 PlasmaCore.ColorScope {
     id: root
     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
@@ -47,6 +49,10 @@ PlasmaCore.ColorScope {
     function sleepRequested() {
         root.suspendRequested(2);
     }
+
+    function hibernateRequested() {
+        root.suspendRequested(4);
+    }
  
     property real timeout: 30
     property real remainingTime: root.timeout
@@ -63,6 +69,12 @@ PlasmaCore.ColorScope {
 
     KCoreAddons.KUser {
         id: kuser
+    }
+
+    // For showing a "other users are logged in" hint
+    SessionsModel {
+        id: sessionsModel
+        includeUnusedSessions: false
     }
 
     Controls.Action {
@@ -128,6 +140,20 @@ PlasmaCore.ColorScope {
         height: Math.max(implicitHeight, units.gridUnit * 10)
         width: Math.max(implicitWidth, units.gridUnit * 16)
 
+        PlasmaComponents.Label {
+            Layout.maximumWidth: units.gridUnit * 16
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.WordWrap
+            font.italic: true
+            text: i18ndp("plasma_lookandfeel_org.kde.lookandfeel",
+                         "One other user is currently logged in. If the computer is shut down or rebooted, that user may lose work.",
+                         "%1 other users are currently logged in. If the computer is shut down or rebooted, those users may lose work.",
+                         sessionsModel.count)
+            visible: sessionsModel.count > 1
+        }
+
         RowLayout {
             spacing: units.largeSpacing * 2
             Layout.alignment: Qt.AlignHCenter
@@ -137,15 +163,24 @@ PlasmaCore.ColorScope {
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Suspend")
                 action: root.sleepRequested
                 KeyNavigation.left: logoutButton
-                KeyNavigation.right: rebootButton
+                KeyNavigation.right: hibernateButton
                 visible: spdMethods.SuspendState
+            }
+            LogoutButton {
+                id: hibernateButton
+                iconSource: "system-suspend-hibernate"
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Hibernate")
+                action: root.hibernateRequested
+                KeyNavigation.left: suspendButton
+                KeyNavigation.right: rebootButton
+                visible: spdMethods.HibernateState
             }
             LogoutButton {
                 id: rebootButton
                 iconSource: "system-reboot"
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Reboot")
                 action: root.rebootRequested
-                KeyNavigation.left: suspendButton
+                KeyNavigation.left: hibernateButton
                 KeyNavigation.right: shutdownButton
                 focus: sdtype == ShutdownType.ShutdownTypeReboot
                 visible: maysd
@@ -153,7 +188,7 @@ PlasmaCore.ColorScope {
             LogoutButton {
                 id: shutdownButton
                 iconSource: "system-shutdown"
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shutdown")
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
                 action: root.haltRequested
                 KeyNavigation.left: rebootButton
                 KeyNavigation.right: logoutButton

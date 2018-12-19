@@ -57,7 +57,7 @@ void TestResolutions::testResolutions_data()
 	    qDebug() << formatResolution(image);
     }
 
-    // The list of possible screen resolutions to test and the appropiate images that should be chosen
+    // The list of possible screen resolutions to test and the appropriate images that should be chosen
     QTest::addColumn<QString>("resolution");
     QTest::addColumn<QString>("expected");
     QTest::newRow("1280x1024") << QStringLiteral("1280x1024") << QStringLiteral("1280x1024");

@@ -25,6 +25,7 @@
 
 #include "plasma/corona.h"
 
+#include <QScopedPointer>
 #include <QSet>
 #include <QTimer>
 #include <QDBusVariant>
@@ -238,7 +239,7 @@ private:
     QList<Plasma::Containment *> m_waitingPanels;
     QHash<QString, QString> m_activityContainmentPlugins;
     QAction *m_addPanelAction;
-    QMenu *m_addPanelsMenu;
+    QScopedPointer<QMenu> m_addPanelsMenu;
     KPackage::Package m_lookAndFeelPackage;
     QSet<QScreen*> m_redundantOutputs;
     KDeclarative::QmlObjectSharedEngine *m_interactiveConsole;
