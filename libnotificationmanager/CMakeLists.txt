@@ -1,6 +1,6 @@
 add_subdirectory(declarative)
 if(BUILD_TESTING)
-   add_subdirectory(autotests)
+   #add_subdirectory(autotests)
 endif()
 
 set(notificationmanager_LIB_SRCS
