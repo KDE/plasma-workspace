@@ -109,6 +109,7 @@ public:
 
     QDBusObjectPath objectPath() const;
 
+    bool isTerminated() const;
 
 
      /**
