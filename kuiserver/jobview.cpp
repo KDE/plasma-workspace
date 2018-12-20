@@ -53,7 +53,6 @@ JobView::~JobView()
 
 void JobView::terminate(const QString &errorMessage)
 {
-    qDebug() << "is terminated" << errorMessage;
     QDBusConnection::sessionBus().unregisterObject(m_objectPath.path(), QDBusConnection::UnregisterTree);
 
     typedef QPair<QString, QDBusAbstractInterface*> iFacePair;
