@@ -667,7 +667,7 @@ void NOAAIon::updateWeather(const QString& source)
 
 /**
   * Determine the condition icon based on the list of possible NOAA weather conditions as defined at
-  * <http://www.weather.gov/xml/current_obs/weather.php> and
+  * <https://www.weather.gov/xml/current_obs/weather.php> and
   * <https://graphical.weather.gov/xml/mdl/XML/Design/MDL_XML_Design.htm#_Toc141760782>
   * Since the number of NOAA weather conditions need to be fitted into the narowly defined groups in IonInterface::ConditionIcons, we
   * try to group the NOAA conditions as best as we can based on their priorities/severity.
@@ -693,6 +693,9 @@ IonInterface::ConditionIcons NOAAIon::getConditionIcon(const QString& weather, b
     } else if (((weather.contains(QStringLiteral("rain")) || weather.contains(QStringLiteral("drizzle")) ||
               weather.contains(QStringLiteral("showers"))) && weather.contains(QStringLiteral("snow"))) || weather.contains(QStringLiteral("wintry mix"))) {
         result = IonInterface::RainSnow;
+
+    } else if (weather.contains(QStringLiteral("flurries"))) {
+        result = IonInterface::Flurries;
 
     } else if (weather.contains(QStringLiteral("snow")) && weather.contains(QStringLiteral("light"))) {
         result = IonInterface::LightSnow;
@@ -772,7 +775,7 @@ void NOAAIon::getForecast(const QString& source)
     /* Assuming that we have the latitude and longitude data at this point, get the 7-day
      * forecast.
      */
-    const QUrl url(QLatin1String("http://www.weather.gov/forecasts/xml/sample_products/browser_interface/"
+    const QUrl url(QLatin1String("https://graphical.weather.gov/xml/sample_products/browser_interface/"
                                  "ndfdBrowserClientByDay.php?lat=") + QString::number(lat) +
                                  QLatin1String("&lon=") + QString::number(lon) +
                                  QLatin1String("&format=24+hourly&numDays=7"));
