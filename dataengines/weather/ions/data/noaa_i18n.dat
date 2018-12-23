@@ -48,7 +48,6 @@ weather condition|Heavy Drizzle Fog
 weather condition|Heavy Drizzle Fog/Mist
 weather condition|Heavy Drizzle Ice Pellets
 weather condition|Heavy Drizzle Snow
-weather condition|Heavy Drizzle Snow
 weather condition|Heavy Dust Storm
 weather condition|Heavy Freezing Drizzle
 weather condition|Heavy Freezing Drizzle Rain
@@ -300,9 +299,6 @@ weather forecast|Flurries
 weather forecast|Chance Snow Showers
 weather forecast|Snow Showers Likely
 weather forecast|Snow Showers
-weather forecast|Chance Snow Showers
-weather forecast|Snow Showers Likely
-weather forecast|Snow Showers
 weather forecast|Chance Drizzle
 weather forecast|Drizzle Likely
 weather forecast|Drizzle
@@ -310,9 +306,6 @@ weather forecast|Chance Rain
 weather forecast|Rain Likely
 weather forecast|Rain
 weather forecast|Heavy Rain
-weather forecast|Chance Rain Showers
-weather forecast|Rain Showers Likely
-weather forecast|Rain Showers
 weather forecast|Chance Rain Showers
 weather forecast|Rain Showers Likely
 weather forecast|Rain Showers
@@ -345,5 +338,4 @@ weather forecast|Decreasing Clouds
 weather forecast|Becoming Sunny
 weather forecast|Clear
 weather forecast|Mostly Clear
-weather forecast|Chance Thunderstorms
 weather forecast|Slight Chance Thunderstorms
