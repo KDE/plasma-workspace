@@ -694,6 +694,9 @@ IonInterface::ConditionIcons NOAAIon::getConditionIcon(const QString& weather, b
               weather.contains(QStringLiteral("showers"))) && weather.contains(QStringLiteral("snow"))) || weather.contains(QStringLiteral("wintry mix"))) {
         result = IonInterface::RainSnow;
 
+    } else if (weather.contains(QStringLiteral("flurries"))) {
+        result = IonInterface::Flurries;
+
     } else if (weather.contains(QStringLiteral("snow")) && weather.contains(QStringLiteral("light"))) {
         result = IonInterface::LightSnow;
 
