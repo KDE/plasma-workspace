@@ -213,6 +213,7 @@ QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupForecastIconMappi
         { QStringLiteral("a mix of sun and cloud"), PartlyCloudyDay },
         { QStringLiteral("cloudy with sunny periods"), PartlyCloudyDay },
         { QStringLiteral("partly cloudy"), PartlyCloudyDay },
+        { QStringLiteral("mainly cloudy"), PartlyCloudyDay },
         { QStringLiteral("mainly sunny"), FewCloudsDay },
         { QStringLiteral("sunny"), ClearDay },
         { QStringLiteral("blizzard"), Snow },
