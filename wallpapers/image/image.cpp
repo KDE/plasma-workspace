@@ -661,7 +661,7 @@ void Image::showFileDialog()
                                       i18n("Image Files") + " ("+imageGlobPatterns.join(' ') + ')');
         //i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 
-        m_dialog->setFileMode(QFileDialog::ExistingFile);
+        m_dialog->setFileMode(QFileDialog::ExistingFiles);
         connect(m_dialog, &QDialog::accepted, this, &Image::wallpaperBrowseCompleted);
     }
 
@@ -679,7 +679,9 @@ void Image::wallpaperBrowseCompleted()
 {
     Q_ASSERT(m_model);
     if (m_dialog && m_dialog->selectedFiles().count() > 0) {
-        addUsersWallpaper(m_dialog->selectedFiles().first());
+        for (const QString image : m_dialog->selectedFiles()) {
+            addUsersWallpaper(image);
+        }
         emit customWallpaperPicked(m_dialog->selectedFiles().first());
     }
 }
