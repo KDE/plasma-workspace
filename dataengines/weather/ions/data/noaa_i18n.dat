@@ -289,6 +289,7 @@ weather forecast|Freezing Rain
 weather forecast|Chance Rain/Snow
 weather forecast|Rain/Snow Likely
 weather forecast|Rain/Snow
+weather forecast|Slight Chance Snow
 weather forecast|Chance Snow
 weather forecast|Snow Likely
 weather forecast|Snow
@@ -296,12 +297,14 @@ weather forecast|Heavy Snow
 weather forecast|Chance Flurries
 weather forecast|Flurries Likely
 weather forecast|Flurries
+weather forecast|Slight Chance Snow Showers
 weather forecast|Chance Snow Showers
 weather forecast|Snow Showers Likely
 weather forecast|Snow Showers
 weather forecast|Chance Drizzle
 weather forecast|Drizzle Likely
 weather forecast|Drizzle
+weather forecast|Slight Chance Rain
 weather forecast|Chance Rain
 weather forecast|Rain Likely
 weather forecast|Rain
@@ -328,6 +331,7 @@ weather forecast|Cloudy
 weather forecast|Mostly Cloudy
 weather forecast|Partly Cloudy
 weather forecast|Mostly Sunny
+weather forecast|Partly Sunny
 weather forecast|Sunny
 weather forecast|Increasing Clouds
 weather forecast|Becoming Cloudy
