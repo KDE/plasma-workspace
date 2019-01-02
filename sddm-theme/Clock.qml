@@ -45,13 +45,11 @@ Item {
         Label {
             text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
             font.pointSize: 48
-            font.weight: Font.Light
             Layout.alignment: Qt.AlignHCenter
         }
         Label {
             text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
             font.pointSize: 24
-            font.weight: Font.Light
             Layout.alignment: Qt.AlignHCenter
         }
         DataSource {
