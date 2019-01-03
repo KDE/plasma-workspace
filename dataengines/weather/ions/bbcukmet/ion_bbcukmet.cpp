@@ -993,6 +993,10 @@ void UKMETIon::updateWeather(const QString& source)
     int i = 0;
     for (const WeatherData::ForecastInfo* forecastInfo : forecasts) {
         QString period = forecastInfo->period;
+        // same day
+        period.replace(QStringLiteral("Today"), i18nc("Short for Today", "Today"));
+        period.replace(QStringLiteral("Tonight"), i18nc("Short for Tonight", "Tonight"));
+        // upcoming days
         period.replace(QStringLiteral("Saturday"), i18nc("Short for Saturday", "Sat"));
         period.replace(QStringLiteral("Sunday"), i18nc("Short for Sunday", "Sun"));
         period.replace(QStringLiteral("Monday"), i18nc("Short for Monday", "Mon"));
