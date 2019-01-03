@@ -57,6 +57,7 @@ Column {
             }
 
             if (!notifications) {
+                delete runningJobs[source]
                 return
             }
 
@@ -65,12 +66,14 @@ Column {
 
             // 1 = ERR_USER_CANCELED - don't show any notification at all
             if (error == 1) {
+                delete runningJobs[source]
                 return
             }
 
             var message = runningJobs[source]["label1"] ? runningJobs[source]["label1"] : runningJobs[source]["label0"]
             var infoMessage = runningJobs[source]["infoMessage"]
             if (!message && !infoMessage) {
+                delete runningJobs[source]
                 return
             }
 
