@@ -91,7 +91,7 @@ ColumnLayout {
 
         PlasmaComponents.TextField {
             id: filter
-            placeholderText: i18n("Search")
+            placeholderText: i18n("Search...")
             clearButtonShown: true
             Layout.fillWidth: true
         }
