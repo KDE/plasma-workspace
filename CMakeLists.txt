@@ -25,7 +25,7 @@ include(KDEPackageAppTemplates)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet
-                    IdleTime Declarative TextWidgets KDELibs4Support Crash GlobalAccel
+                    IdleTime Declarative I18n KCMUtils TextWidgets KDELibs4Support Crash GlobalAccel
                     DBusAddons Wayland CoreAddons)
 find_package(KDED CONFIG REQUIRED)
 
@@ -157,6 +157,8 @@ add_subdirectory(systemmonitor)
 add_subdirectory(statusnotifierwatcher)
 add_subdirectory(startkde)
 add_subdirectory(themes)
+
+add_subdirectory(kcms)
 
 add_subdirectory(containmentactions)
 add_subdirectory(runners)
