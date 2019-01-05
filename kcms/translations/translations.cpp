@@ -21,7 +21,7 @@
 #include "translations.h"
 #include "translationsmodel.h"
 
-#include "../formats/writeexports.h"
+#include "writeexports.h"
 
 #include <KAboutData>
 #include <KLocalizedString>
