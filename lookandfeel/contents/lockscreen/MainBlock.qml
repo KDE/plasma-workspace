@@ -55,7 +55,7 @@ SessionManagementScreen {
         id: passwordBox
         Layout.fillWidth: true
 
-        placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password...")
+        placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
         focus: true
         echoMode: TextInput.Password
         inputMethodHints: Qt.ImhHiddenText | Qt.ImhSensitiveData | Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
