@@ -41,10 +41,7 @@
 #include "deviceserviceaction.h"
 #include "devicenothingaction.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(SolidUiServerFactory,
-                           "soliduiserver.json",
-                           registerPlugin<SolidUiServer>();
-                          )
+K_PLUGIN_CLASS_WITH_JSON(SolidUiServer, "soliduiserver.json")
 
 SolidUiServer::SolidUiServer(QObject* parent, const QList<QVariant>&)
     : KDEDModule(parent)

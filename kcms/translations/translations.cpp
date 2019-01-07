@@ -28,7 +28,7 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 
-K_PLUGIN_FACTORY_WITH_JSON(TranslationsFactory, "kcm_translations.json", registerPlugin<Translations>();)
+K_PLUGIN_CLASS_WITH_JSON(Translations, "kcm_translations.json")
 
 Translations::Translations(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)

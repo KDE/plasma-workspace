@@ -29,9 +29,7 @@
 #include <QFile>
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(DesktopNotifierFactory,
-                           "desktopnotifier.json",
-                           registerPlugin<DesktopNotifier>();)
+K_PLUGIN_CLASS_WITH_JSON(DesktopNotifier, "desktopnotifier.json")
 
 DesktopNotifier::DesktopNotifier(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
