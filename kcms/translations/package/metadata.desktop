@@ -1,5 +1,11 @@
 [Desktop Entry]
 Name=Language
+Name[ca]=Idioma
+Name[nl]=Taal
+Name[pt]=Língua
+Name[sv]=Språk
+Name[uk]=Мова
+Name[x-test]=xxLanguagexx
 
 Icon=preferences-desktop-locale
 Type=Service
