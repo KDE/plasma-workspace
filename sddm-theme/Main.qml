@@ -147,6 +147,7 @@ PlasmaCore.ColorScope {
             initialItem: Login {
                 id: userListComponent
                 userListModel: userModel
+                loginScreenUiVisible: loginScreenRoot.uiVisible
                 userListCurrentIndex: userModel.lastIndex >= 0 ? userModel.lastIndex : 0
                 lastUserName: userModel.lastUser
                 showUserList: {
@@ -332,6 +333,7 @@ PlasmaCore.ColorScope {
             Login {
                 showUsernamePrompt: true
                 notificationMessage: root.notificationMessage
+                loginScreenUiVisible: loginScreenRoot.uiVisible
 
                 userListModel: QtObject {
                     property string name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log in as a different user")

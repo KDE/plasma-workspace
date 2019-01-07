@@ -7,12 +7,13 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 SessionManagementScreen {
-
+    id: root
     property Item mainPasswordBox: passwordBox
 
     property bool showUsernamePrompt: !showUserList
 
     property string lastUserName
+    property bool loginScreenUiVisible: false
 
     //the y position that should be ensured visible when the on screen keyboard is visible
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
@@ -50,7 +51,10 @@ SessionManagementScreen {
         focus: showUsernamePrompt && !lastUserName //if there's a username prompt it gets focus first, otherwise password does
         placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Username")
 
-        onAccepted: passwordBox.forceActiveFocus()
+        onAccepted:
+            if (root.loginScreenUiVisible) {
+                passwordBox.forceActiveFocus()
+            }
     }
 
     PlasmaComponents.TextField {
@@ -62,7 +66,11 @@ SessionManagementScreen {
         echoMode: TextInput.Password
         revealPasswordButtonShown: true
 
-        onAccepted: startLogin()
+        onAccepted: {
+            if (root.loginScreenUiVisible) {
+                startLogin();
+            }
+        }
 
         Keys.onEscapePressed: {
             mainStack.currentItem.forceActiveFocus();
