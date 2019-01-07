@@ -89,6 +89,11 @@ PlasmaCore.ColorScope {
             }
         }
 
+        Keys.onPressed: {
+            uiVisible = true;
+            event.accepted = false;
+        }
+
         //takes one full minute for the ui to disappear
         Timer {
             id: fadeoutTimer
