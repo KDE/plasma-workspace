@@ -33,14 +33,16 @@ Item {
     property bool showSeconds: plasmoid.configuration.showSeconds
     property bool showLocalTimezone: plasmoid.configuration.showLocalTimezone
     property bool showDate: plasmoid.configuration.showDate
-    property int dateFormat: {
-        if (plasmoid.configuration.dateFormat === "longDate") {
-            return  Qt.SystemLocaleLongDate;
+    property var dateFormat: {
+        if (plasmoid.configuration.dateFormat === "custom") {
+            return plasmoid.configuration.customDateFormat; // str
+        } else if (plasmoid.configuration.dateFormat === "longDate") {
+            return Qt.SystemLocaleLongDate; // int
         } else if (plasmoid.configuration.dateFormat === "isoDate") {
-            return Qt.ISODate;
+            return Qt.ISODate; // int
+        } else { // "shortDate"
+            return Qt.SystemLocaleShortDate; // int
         }
-
-        return Qt.SystemLocaleShortDate;
     }
 
     property string lastSelectedTimezone: plasmoid.configuration.lastSelectedTimezone

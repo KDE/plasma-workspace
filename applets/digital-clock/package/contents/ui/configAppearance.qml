@@ -44,6 +44,7 @@ QtLayouts.ColumnLayout {
 
     property alias cfg_showDate: showDate.checked
     property string cfg_dateFormat: "shortDate"
+    property alias cfg_customDateFormat: customDateFormat.text
     property alias cfg_use24hFormat: use24hFormat.checked
 
     onCfg_fontFamilyChanged: {
@@ -137,6 +138,10 @@ QtLayouts.ColumnLayout {
                 {
                     'label': i18n("ISO Date"),
                     'name': "isoDate"
+                },
+                {
+                    'label': i18nc("custom date format", "Custom"),
+                    'name': "custom"
                 }
             ]
             onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"]
@@ -147,6 +152,27 @@ QtLayouts.ColumnLayout {
                         dateFormat.currentIndex = i;
                     }
                 }
+            }
+        }
+
+        QtControls.TextField {
+            id: customDateFormat
+            QtLayouts.Layout.fillWidth: true
+            visible: cfg_dateFormat == "custom"
+        }
+
+        QtControls.Label {
+            text: i18n("<a href=\"http://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method\">Time Format Documentation</a>")
+            visible: cfg_dateFormat == "custom"
+            wrapMode: Text.Wrap
+            QtLayouts.Layout.preferredWidth: QtLayouts.Layout.maximumWidth
+            QtLayouts.Layout.maximumWidth: units.gridUnit * 16
+
+            onLinkActivated: Qt.openUrlExternally(link)
+            MouseArea {
+                anchors.fill: parent
+                acceptedButtons: Qt.NoButton // We don't want to eat clicks on the Label
+                cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
             }
         }
 
