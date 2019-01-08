@@ -13,10 +13,12 @@ X-KDE-Weight=40
 
 Name=Language
 Name[ca]=Idioma
+Name[ca@valencia]=Idioma
 Name[nl]=Taal
 Name[pt]=Língua
 Name[sv]=Språk
 Name[uk]=Мова
 Name[x-test]=xxLanguagexx
+Name[zh_TW]=語言
 
 Categories=Qt;KDE;X-KDE-settings-translations;
