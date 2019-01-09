@@ -246,19 +246,6 @@ void VirtualDesktopInfo::WaylandPrivate::init()
 
             const QList<KWayland::Client::PlasmaVirtualDesktop *> &desktops = virtualDesktopManagement->desktops();
 
-            /* FIXME: PlasmaVirtualDesktopManagement doesn't have this ...?
-            QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::interfaceAboutToBeReleased, q,
-                [this] {
-                    virtualDesktops.clear();
-                    emit numberOfDesktopsChanged();
-                    emit currentDesktopChanged();
-                    emit desktopIdsChanged();
-                    emit desktopNamesChanged();
-                    emit desktopLayoutRowsChanged();
-                }
-            );
-            */
-
             QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::desktopCreated, q,
                 [this](const QString &id, quint32 position) {
                     addDesktop(id, position);
