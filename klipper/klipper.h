@@ -108,7 +108,7 @@ protected:
 
     /**
      * Save history to disk
-     * @empty save empty history instead of actual history
+     * @param empty save empty history instead of actual history
      */
     void saveHistory(bool empty = false);
 
