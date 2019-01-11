@@ -30,7 +30,7 @@ import org.kde.kquickcontrolsaddons 2.0
 MouseArea {
     id: notificationItem
     width: parent.width
-    implicitHeight: Math.max(appIconItem.valid || imageItem.nativeWidth > 0 ? units.iconSizes.large : 0, mainLayout.height)
+    implicitHeight: bodyText.lineCount > 1 ? mainLayout.height : (appIconItem.valid || imageItem.nativeWidth > 0 ? (Math.max((mainLayout.height + 2 * units.smallSpacing),(units.iconSizes.large + 2 * units.smallSpacing))) : (bottomPart.height != 0 ? (mainLayout.height + 2 * units.smallSpacing) : (mainLayout.height + units.smallSpacing)))
 
     // We need to clip here because we support displaying images through <img/>
     // and if we don't clip, they will be painted over the borders of the dialog/item
@@ -68,7 +68,7 @@ MouseArea {
         }
 
         if (hasDefaultAction) {
-            // the notifications was clicked, trigger the default action if set
+            // the notification was clicked, trigger the default action if set
             action("default")
         }
     }
@@ -151,6 +151,8 @@ MouseArea {
         anchors {
             top: parent.top
             left: parent.left
+            leftMargin: units.smallSpacing
+            topMargin: units.smallSpacing
         }
 
         visible: imageItem.nativeWidth == 0 && valid
@@ -170,9 +172,11 @@ MouseArea {
 
         anchors {
             top: parent.top
+            topMargin: bodyText.lineCount > 1 ? 0 : units.smallSpacing // Lift up heading if bodyText is long
             left: appIconItem.valid || imageItem.nativeWidth > 0 ? appIconItem.right : parent.left
             right: parent.right
-            leftMargin: units.smallSpacing
+            leftMargin: units.smallSpacing * 2
+            rightMargin: units.smallSpacing // Equal padding on either side (notification icon margin)
         }
 
         spacing: Math.round(units.smallSpacing / 2)
@@ -211,7 +215,7 @@ MouseArea {
                 width: units.iconSizes.smallMedium
                 height: width
                 visible: false
-
+                
                 iconSource: "configure"
 
                 onClicked: {
