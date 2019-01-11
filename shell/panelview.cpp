@@ -587,7 +587,6 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
                     m_panelConfigView->hide();
                 } else {
                     m_panelConfigView->show();
-                    KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
                 }
                 return;
             }

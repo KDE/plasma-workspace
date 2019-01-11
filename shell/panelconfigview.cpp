@@ -238,6 +238,8 @@ bool PanelConfigView::event(QEvent *e)
     if (e->type() == QEvent::PlatformSurface) {
         switch (static_cast<QPlatformSurfaceEvent*>(e)->surfaceEventType()) {
         case QPlatformSurfaceEvent::SurfaceCreated:
+            KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+
             if (m_shellSurface) {
                 break;
             }
