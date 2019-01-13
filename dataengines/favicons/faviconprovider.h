@@ -39,6 +39,7 @@ class FaviconProvider : public QObject
          * Creates a new favicon provider.
          *
          * @param parent The parent object.
+         * @param url The provider URL.
          */
         FaviconProvider( QObject *parent, const QString &url);
 
@@ -50,7 +51,7 @@ class FaviconProvider : public QObject
         /**
          * Returns the requested image.
          *
-         * Note: This method returns only a valid image after the
+         * @note This method returns only a valid image after the
          *       finished() signal has been emitted.
          */
         QImage image() const;
