@@ -54,12 +54,15 @@ KQuickAddons.Plotter {
         return Qt.hsla(hue, saturation, lightness, 1.0);
     }
 
+    property string downloadColor: theme.highlightColor
+    property string uploadColor: cycle(theme.highlightColor, -90)
+
     dataSets: [
         KQuickAddons.PlotData {
-            color: theme.highlightColor
+            color: downloadColor
         },
         KQuickAddons.PlotData {
-            color: cycle(theme.highlightColor, -90)
+            color: uploadColor
         }
     ]
 
@@ -99,7 +102,11 @@ KQuickAddons.Plotter {
 
             if (plasmoid.formFactor != PlasmaCore.Types.Vertical) {
                 nameLabel.text = plotter.sensorName
-                speedLabel.text = formatData(data1) + " | " + formatData(data2)
+                speedLabel.text = i18n("<font color='%1'>⬇</font> %2 | <font color='%3'>⬆</font> %4",
+                                        downloadColor,
+                                        formatData(data1),
+                                        uploadColor,
+                                        formatData(data2))
             } else {
                 nameLabel.text = plotter.sensorName+ "\n" + formatData(data1) + "\n" + formatData(data2)
                 speedLabel.text = ""
