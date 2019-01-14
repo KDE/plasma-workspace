@@ -50,7 +50,8 @@ MouseArea {
 
     property alias statusNotifierModel: statusNotifierModel
 
-    property Component plasmoidItemComponent
+    // workaround https://bugreports.qt.io/browse/QTBUG-71238 / https://bugreports.qt.io/browse/QTBUG-72004
+    property Component plasmoidItemComponent: Qt.createComponent("items/PlasmoidItem.qml")
 
     Plasmoid.onExpandedChanged: {
         if (!plasmoid.expanded) {
@@ -102,9 +103,6 @@ MouseArea {
     }
 
     Containment.onAppletAdded: {
-        if (!plasmoidItemComponent) {
-            plasmoidItemComponent = Qt.createComponent("items/PlasmoidItem.qml");
-        }
         //Allow the plasmoid expander to know in what window it will be
         var plasmoidContainer = plasmoidItemComponent.createObject(invisibleEntriesContainer, {"x": x, "y": y, "applet": applet});
 
