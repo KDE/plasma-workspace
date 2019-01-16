@@ -215,7 +215,7 @@ public:
 
     QVariant currentVirtualDesktop;
     QStringList virtualDesktops;
-    uint cachedDesktopLayoutRows = 0;
+    uint cachedDesktopLayoutRows = 1;
     KWayland::Client::PlasmaVirtualDesktopManagement *virtualDesktopManagement = nullptr;
     QDBusServiceWatcher *kwinServiceWatcher = nullptr;
 
