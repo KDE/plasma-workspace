@@ -113,8 +113,8 @@ Item {
             }
 
             Hand {
-                anchors.topMargin: 3
-                elementId: "HourHandShdow"
+                anchors.topMargin: -6
+                elementId: "HourHandShadow"
                 rotation: 180 + hours * 30 + (minutes/2)
                 svgScale: face.width / face.naturalSize.width
 
@@ -138,7 +138,7 @@ Item {
             }
 
             Hand {
-                anchors.topMargin: 3
+                anchors.topMargin: 2
                 elementId: "SecondHandShadow"
                 rotation: 180 + seconds * 6
                 visible: showSecondsHand
