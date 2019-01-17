@@ -79,7 +79,7 @@ ColumnLayout {
     Row {
         //x: formAlignment - positionLabel.paintedWidth
         spacing: units.largeSpacing / 2
-        QtControls.Label {
+        QtControls2.Label {
             id: positionLabel
             width: formAlignment - units.largeSpacing
             anchors {
@@ -88,6 +88,8 @@ ColumnLayout {
             text: i18nd("plasma_wallpaper_org.kde.image", "Positioning:")
             horizontalAlignment: Text.AlignRight
         }
+
+        // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
         QtControls.ComboBox {
             id: resizeComboBox
             TextMetrics {
@@ -134,23 +136,23 @@ ColumnLayout {
         }
     }
 
-    QtControls.ExclusiveGroup { id: backgroundGroup }
+    QtControls2.ButtonGroup { id: backgroundGroup }
 
     Row {
         id: blurRow
         spacing: units.largeSpacing / 2
         visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
-        QtControls.Label {
+        QtControls2.Label {
             id: blurLabel
             width: formAlignment - units.largeSpacing
             anchors.verticalCenter: blurRadioButton.verticalCenter
             horizontalAlignment: Text.AlignRight
             text: i18nd("plasma_wallpaper_org.kde.image", "Background:")
         }
-        QtControls.RadioButton {
+        QtControls2.RadioButton {
             id: blurRadioButton
             text: i18nd("plasma_wallpaper_org.kde.image", "Blur")
-            exclusiveGroup: backgroundGroup
+            QtControls2.ButtonGroup.group: backgroundGroup
         }
     }
 
@@ -158,13 +160,13 @@ ColumnLayout {
         id: colorRow
         visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
         spacing: units.largeSpacing / 2
-        QtControls.Label {
+        QtControls2.Label {
             width: formAlignment - units.largeSpacing
         }
-        QtControls.RadioButton {
+        QtControls2.RadioButton {
             id: colorRadioButton
             text: i18nd("plasma_wallpaper_org.kde.image", "Solid color")
-            exclusiveGroup: backgroundGroup
+            QtControls2.ButtonGroup.group: backgroundGroup
             checked: !cfg_Blur
         }
         KQuickControls.ColorButton {
@@ -187,54 +189,54 @@ ColumnLayout {
             RowLayout {
                 Layout.fillWidth: true
                 spacing: units.largeSpacing / 2
-                QtControls.Label {
+                QtControls2.Label {
                     Layout.minimumWidth: formAlignment - units.largeSpacing
                     horizontalAlignment: Text.AlignRight
                     text: i18nd("plasma_wallpaper_org.kde.image","Change every:")
                 }
-                QtControls.SpinBox {
+                QtControls2.SpinBox {
                     id: hoursInterval
                     Layout.minimumWidth: textMetrics.width + units.gridUnit
                     width: units.gridUnit * 3
-                    decimals: 0
                     value: root.hoursIntervalValue
-                    minimumValue: 0
-                    maximumValue: 24
+                    from: 0
+                    to: 24
+                    editable: true
                     onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
                 }
-                QtControls.Label {
+                QtControls2.Label {
                     text: i18nd("plasma_wallpaper_org.kde.image","Hours")
                 }
                 Item {
                     Layout.preferredWidth: units.gridUnit
                 }
-                QtControls.SpinBox {
+                QtControls2.SpinBox {
                     id: minutesInterval
                     Layout.minimumWidth: textMetrics.width + units.gridUnit
                     width: units.gridUnit * 3
-                    decimals: 0
                     value: root.minutesIntervalValue
-                    minimumValue: 0
-                    maximumValue: 60
+                    from: 0
+                    to: 60
+                    editable: true
                     onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
                 }
-                QtControls.Label {
+                QtControls2.Label {
                     text: i18nd("plasma_wallpaper_org.kde.image","Minutes")
                 }
                 Item {
                     Layout.preferredWidth: units.gridUnit
                 }
-                QtControls.SpinBox {
+                QtControls2.SpinBox {
                     id: secondsInterval
                     Layout.minimumWidth: textMetrics.width + units.gridUnit
                     width: units.gridUnit * 3
-                    decimals: 0
                     value: root.secondsIntervalValue
-                    minimumValue: root.hoursIntervalValue === 0 && root.minutesIntervalValue === 0 ? 1 : 0
-                    maximumValue: 60
+                    from: root.hoursIntervalValue === 0 && root.minutesIntervalValue === 0 ? 1 : 0
+                    to: 60
+                    editable: true
                     onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
                 }
-                QtControls.Label {
+                QtControls2.Label {
                     text: i18nd("plasma_wallpaper_org.kde.image","Seconds")
                 }
             }
@@ -247,17 +249,17 @@ ColumnLayout {
                     id: slidePathsView
                     anchors.margins: 4
                     model: imageWallpaper.slidePaths
-                    delegate: QtControls.Label {
+                    delegate: QtControls2.Label {
                         text: modelData
                         width: slidePathsView.width
                         height: Math.max(paintedHeight, removeButton.height);
-                        QtControls.ToolButton {
+                        QtControls2.ToolButton {
                             id: removeButton
                             anchors {
                                 verticalCenter: parent.verticalCenter
                                 right: parent.right
                             }
-                            iconName: "list-remove"
+                            icon.name: "list-remove"
                             onClicked: imageWallpaper.removeSlidePath(modelData);
                         }
                     }
@@ -314,20 +316,20 @@ ColumnLayout {
     RowLayout {
         id: buttonsRow
         Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-        QtControls.Button {
+        QtControls2.Button {
             visible: (configDialog.currentWallpaper == "org.kde.slideshow")
-            iconName: "list-add"
+            icon.name: "list-add"
             text: i18nd("plasma_wallpaper_org.kde.image","Add Folder...")
             onClicked: imageWallpaper.showAddSlidePathsDialog()
         }
-        QtControls.Button {
+        QtControls2.Button {
             visible: (configDialog.currentWallpaper == "org.kde.image")
-            iconName: "list-add"
+            icon.name: "list-add"
             text: i18nd("plasma_wallpaper_org.kde.image","Add Image...")
             onClicked: imageWallpaper.showFileDialog();
         }
-        QtControls.Button {
-            iconName: "get-hot-new-stuff"
+        QtControls2.Button {
+            icon.name: "get-hot-new-stuff"
             text: i18nd("plasma_wallpaper_org.kde.image","Get New Wallpapers...")
             visible: KAuthorized.authorize("ghns")
             onClicked: imageWallpaper.getNewWallpaper(this);
