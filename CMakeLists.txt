@@ -35,6 +35,12 @@ set_package_properties(KF5NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper fo
                        PURPOSE "Needed by geolocation data engine."
                       )
 
+find_package(KF5Kirigami2 ${KF5_MIN_VERSION} CONFIG)
+set_package_properties(KF5Kirigami2 PROPERTIES
+    DESCRIPTION "A QtQuick based components set"
+    TYPE RUNTIME
+)
+
 # WARNING PlasmaQuick provides unversioned CMake config
 find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
 find_package(KF5 REQUIRED COMPONENTS SysGuard)
