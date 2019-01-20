@@ -17,30 +17,26 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 2.0
+import org.kde.kirigami 2.5 as Kirigami
 
-//FIXME this causes a crash in Oxygen style
-//QtControls.GroupBox {
-Item {
-    width: childrenRect.width
-    height: childrenRect.height
 
-//FIXME enable when we're back to being a group box
-//     flat: true
-//     title: i18n("Appearance")
-
+Kirigami.FormLayout {
     property alias cfg_showSecondHand: showSecondHandCheckBox.checked
     property alias cfg_showTimezoneString: showTimezoneCheckBox.checked
 
-    Column {
-        anchors.left: parent.left
-        QtControls.CheckBox {
-            id: showSecondHandCheckBox
-            text: i18n("Show seconds hand")
-        }
-        QtControls.CheckBox {
-            id: showTimezoneCheckBox
-            text: i18n("Show time zone")
-        }
+    anchors {
+        left: parent.left
+        right: parent.right
+    }
+
+    CheckBox {
+        id: showSecondHandCheckBox
+        text: i18n("Show seconds hand")
+        Kirigami.FormData.label: i18n("General:")
+    }
+    CheckBox {
+        id: showTimezoneCheckBox
+        text: i18n("Show time zone")
     }
 }
