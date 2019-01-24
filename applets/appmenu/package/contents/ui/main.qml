@@ -50,7 +50,7 @@ Item {
         enabled:  menuAvailable
         checkable: menuAvailable && plasmoid.nativeInterface.currentIndex === fakeIndex
         checked: checkable
-        iconSource: i18n("application-menu")
+        iconSource: "application-menu"
         onClicked: plasmoid.nativeInterface.trigger(this, 0);
     }
 
