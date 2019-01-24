@@ -60,11 +60,9 @@ Item {
         Plasmoid.status: {
             if (menuAvailable && plasmoid.nativeInterface.currentIndex > -1 && buttonRepeater.count > 0) {
                 return PlasmaCore.Types.NeedsAttentionStatus;
-            } else if (menuAvailable){
+            } else {
                 //when we're not enabled set to active to show the configure button
                 return buttonRepeater.count > 0 ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus;
-            } else {
-                return PlasmaCore.Types.PassiveStatus;
             }
         }
 
@@ -100,6 +98,15 @@ Item {
             id: keystateSource
             engine: "keystate"
             connectedSources: ["Alt"]
+        }
+
+        PlasmaComponents.ToolButton {
+            id: noMenuPlaceholder
+            visible: buttonRepeater.count == 0
+            text: plasmoid.title
+            Layout.preferredWidth: minimumWidth
+            Layout.fillWidth: root.vertical
+            Layout.fillHeight: !root.vertical
         }
 
         Repeater {
