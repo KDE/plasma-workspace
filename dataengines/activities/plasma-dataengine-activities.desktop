@@ -117,7 +117,7 @@ Comment[x-test]=xxInformation on Plasma Activitiesxx
 Comment[zh_CN]=关于 Plasma 活动的信息
 Comment[zh_TW]=Plasma 活動的資訊
 Type=Service
-Icon=preferences-activities
+Icon=preferences-desktop-activities
 
 X-KDE-ServiceTypes=Plasma/DataEngine
 X-KDE-Library=plasma_engine_activities
