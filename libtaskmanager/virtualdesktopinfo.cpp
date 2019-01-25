@@ -27,10 +27,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <KWindowSystem>
 
 #include <QDBusConnection>
-#include <QDBusPendingCall>
-#include <QDBusPendingCallWatcher>
-#include <QDBusPendingReply>
-#include <QDBusServiceWatcher>
 
 #include <config-X11.h>
 
@@ -201,23 +197,14 @@ void VirtualDesktopInfo::XWindowPrivate::requestRemoveDesktop(quint32 position)
 }
 #endif
 
-static const QString s_serviceName(QStringLiteral("org.kde.KWin"));
-static const QString s_virtualDesktopsInterface(QStringLiteral("org.kde.KWin.VirtualDesktopManager"));
-static const QString s_virtDesktopsPath(QStringLiteral("/VirtualDesktopManager"));
-static const QString s_fdoPropertiesInterface(QStringLiteral("org.freedesktop.DBus.Properties"));
-
 class Q_DECL_HIDDEN VirtualDesktopInfo::WaylandPrivate : public VirtualDesktopInfo::Private
 {
-Q_OBJECT
-
 public:
     WaylandPrivate(VirtualDesktopInfo *q);
 
     QVariant currentVirtualDesktop;
     QStringList virtualDesktops;
-    uint cachedDesktopLayoutRows = 1;
     KWayland::Client::PlasmaVirtualDesktopManagement *virtualDesktopManagement = nullptr;
-    QDBusServiceWatcher *kwinServiceWatcher = nullptr;
 
     void init() override;
     void addDesktop(const QString &id, quint32 position);
@@ -230,9 +217,6 @@ public:
     void requestActivate(const QVariant &desktop) override;
     void requestCreateDesktop(quint32 position) override;
     void requestRemoveDesktop(quint32 position) override;
-
-public Q_SLOTS:
-    void handleDesktopLayoutRowsChanged(uint rows);
 };
 
 VirtualDesktopInfo::WaylandPrivate::WaylandPrivate(VirtualDesktopInfo *q)
@@ -282,65 +266,13 @@ void VirtualDesktopInfo::WaylandPrivate::init()
                     }
                 }
             );
+
+            QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::rowsChanged,
+                this, &VirtualDesktopInfo::WaylandPrivate::desktopLayoutRowsChanged);
         }
     );
 
     registry->setup();
-
-    kwinServiceWatcher = new QDBusServiceWatcher(s_serviceName,
-        QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange);
-
-    QObject::connect(kwinServiceWatcher, &QDBusServiceWatcher::serviceRegistered,
-        this, [this]() {
-            QDBusConnection::sessionBus().connect(
-                s_serviceName,
-                s_virtDesktopsPath,
-                s_virtualDesktopsInterface,
-                QStringLiteral("rowsChanged"),
-                this,
-                SLOT(handleDesktopLayoutRowsChanged(uint)));
-        });
-
-    QObject::connect(kwinServiceWatcher, &QDBusServiceWatcher::serviceUnregistered,
-        this, [this]() {
-            QDBusConnection::sessionBus().disconnect(
-                s_serviceName,
-                s_virtDesktopsPath,
-                s_virtualDesktopsInterface,
-                QStringLiteral("rowsChanged"),
-                this,
-                SLOT(handleDesktopLayoutRowsChanged(uint)));
-            }
-    );
-
-    QDBusConnection::sessionBus().connect(
-        s_serviceName,
-        s_virtDesktopsPath,
-        s_virtualDesktopsInterface,
-        QStringLiteral("rowsChanged"),
-        this,
-        SLOT(handleDesktopLayoutRowsChanged(uint)));
-
-    auto callFinished = [this](QDBusPendingCallWatcher *call) {
-        QDBusPendingReply<QVariant> reply = *call;
-
-        handleDesktopLayoutRowsChanged(reply.value().toUInt());
-
-        call->deleteLater();
-    };
-
-    auto call = QDBusMessage::createMethodCall(
-        s_serviceName,
-        s_virtDesktopsPath,
-        s_fdoPropertiesInterface,
-        QStringLiteral("Get"));
-
-    call.setArguments({s_virtualDesktopsInterface, QStringLiteral("rows")});
-
-    QDBusPendingCall pending = QDBusConnection::sessionBus().asyncCall(call);
-
-    const QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, callFinished);
 }
 
 void VirtualDesktopInfo::WaylandPrivate::addDesktop(const QString &id, quint32 position)
@@ -419,7 +351,7 @@ QStringList VirtualDesktopInfo::WaylandPrivate::desktopNames() const
 
 int VirtualDesktopInfo::WaylandPrivate::desktopLayoutRows() const
 {
-    return (int)cachedDesktopLayoutRows;
+    return virtualDesktopManagement->rows();
 }
 
 void VirtualDesktopInfo::WaylandPrivate::requestActivate(const QVariant &desktop)
@@ -447,15 +379,6 @@ void VirtualDesktopInfo::WaylandPrivate::requestRemoveDesktop(quint32 position)
     }
 
     virtualDesktopManagement->requestRemoveVirtualDesktop(virtualDesktops.at(position));
-}
-
-void VirtualDesktopInfo::WaylandPrivate::handleDesktopLayoutRowsChanged(uint rows)
-{
-    if (cachedDesktopLayoutRows != rows) {
-        cachedDesktopLayoutRows = rows;
-
-        emit desktopLayoutRowsChanged();
-    }
 }
 
 VirtualDesktopInfo::Private* VirtualDesktopInfo::d = nullptr;
