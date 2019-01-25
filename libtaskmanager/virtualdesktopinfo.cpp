@@ -364,6 +364,12 @@ void VirtualDesktopInfo::WaylandPrivate::addDesktop(const QString &id, quint32 p
         }
     );
 
+    QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::done, q,
+        [this]() {
+            emit desktopNamesChanged();
+        }
+    );
+
     if (desktop->isActive()) {
         currentVirtualDesktop = id;
         emit currentDesktopChanged();
