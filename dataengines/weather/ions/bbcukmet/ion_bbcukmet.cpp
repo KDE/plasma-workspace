@@ -848,7 +848,11 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
 
             const QString summaryLC = summary.toLower();
             forecast->period = period;
-            forecast->iconName = getWeatherIcon(dayIcons(), summaryLC);
+            if (forecast->period == QLatin1String("Tonight")) {
+                forecast->iconName = getWeatherIcon(nightIcons(), summaryLC);
+            } else {
+                forecast->iconName = getWeatherIcon(dayIcons(), summaryLC);
+            }
             // db uses original strings normalized to lowercase, but we prefer the unnormalized if without translation
             const QString summaryTranslated = i18nc("weather forecast", summaryLC.toUtf8().data());
             forecast->summary = (summaryTranslated != summaryLC) ? summaryTranslated : summary;
