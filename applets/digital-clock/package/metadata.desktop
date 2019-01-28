@@ -82,7 +82,7 @@ Name[uz@cyrillic]=Рақамли соат
 Name[vi]=Đồng hồ số
 Name[wa]=Ôrlodje didjitåle
 Name[x-test]=xxDigital Clockxx
-Name[zh_CN]=数字钟
+Name[zh_CN]=数字时钟
 Name[zh_TW]=數位時鐘
 
 Comment=Time displayed in a digital format
@@ -128,7 +128,7 @@ Comment[sv]=Tid visad med digitalformat
 Comment[tr]=Dijital biçimde gösterilen saat
 Comment[uk]=Час, показаний у цифровому форматі
 Comment[x-test]=xxTime displayed in a digital formatxx
-Comment[zh_CN]=已数字格式显示时间
+Comment[zh_CN]=以数字格式显示时间
 Comment[zh_TW]=以數位格式顯示時間
 
 Icon=preferences-system-time

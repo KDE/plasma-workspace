@@ -130,7 +130,7 @@ Comment[uk]=Створює віджет з вмістом буфера обмі�
 Comment[vi]=Tạo một widget từ nội dung của bảng nhớ tạm
 Comment[wa]=Ahive ene ahesse avou ç' k' i gn a e presse-papî
 Comment[x-test]=xxCreates a widget from the contents of the clipboardxx
-Comment[zh_CN]=从剪贴板内容中创建部件
+Comment[zh_CN]=用剪贴板内容创建小部件
 Comment[zh_TW]=從剪貼簿內容建立一元件
 
 X-KDE-ServiceTypes=Plasma/ContainmentActions
