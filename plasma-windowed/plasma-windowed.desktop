@@ -82,7 +82,7 @@ Comment[sv]=Kör Plasmoider som enkla program
 Comment[tr]=Plasmoidleri basit uygulamalar olarak çalıştır
 Comment[uk]=Запуск плазмоїдів як простих програм
 Comment[x-test]=xxRun Plasmoids as simple applicationsxx
-Comment[zh_CN]=将小部件按一般程序运行
+Comment[zh_CN]=将小部件当作简单应用程序运行
 Comment[zh_TW]=以簡單應用程式執行 Plasma 小元件
 
 Exec=plasmawindowed %u

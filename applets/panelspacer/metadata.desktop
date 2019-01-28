@@ -126,7 +126,7 @@ Comment[ug]=تاختادا بوشلۇق قالدۇرىدۇ.
 Comment[uk]=Створює прогалини на панелі.
 Comment[wa]=Wårdez des vudes espåces e scriftôr.
 Comment[x-test]=xxReserve empty spaces within the panel.xx
-Comment[zh_CN]=在面板中保留空间。
+Comment[zh_CN]=在面板中预留空白。
 Comment[zh_TW]=在面板內保留空間。
 
 X-KDE-ServiceTypes=Plasma/Applet
