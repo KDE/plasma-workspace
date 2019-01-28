@@ -22,8 +22,6 @@ import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Controls 2.3 as QtControls2
 import QtQuick.Layouts 1.0
 import QtQuick.Window 2.0 // for Screen
-//We need units from it
-import org.kde.plasma.core 2.0 as Plasmacore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kquickcontrolsaddons 2.0
@@ -78,10 +76,10 @@ ColumnLayout {
 
     Row {
         //x: formAlignment - positionLabel.paintedWidth
-        spacing: units.largeSpacing / 2
+        spacing: Kirigami.Units.largeSpacing / 2
         QtControls2.Label {
             id: positionLabel
-            width: formAlignment - units.largeSpacing
+            width: formAlignment - Kirigami.Units.largeSpacing
             anchors {
                 verticalCenter: resizeComboBox.verticalCenter
             }
@@ -140,11 +138,11 @@ ColumnLayout {
 
     Row {
         id: blurRow
-        spacing: units.largeSpacing / 2
+        spacing: Kirigami.Units.largeSpacing / 2
         visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
         QtControls2.Label {
             id: blurLabel
-            width: formAlignment - units.largeSpacing
+            width: formAlignment - Kirigami.Units.largeSpacing
             anchors.verticalCenter: blurRadioButton.verticalCenter
             horizontalAlignment: Text.AlignRight
             text: i18nd("plasma_wallpaper_org.kde.image", "Background:")
@@ -159,9 +157,9 @@ ColumnLayout {
     Row {
         id: colorRow
         visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
-        spacing: units.largeSpacing / 2
+        spacing: Kirigami.Units.largeSpacing / 2
         QtControls2.Label {
-            width: formAlignment - units.largeSpacing
+            width: formAlignment - Kirigami.Units.largeSpacing
         }
         QtControls2.RadioButton {
             id: colorRadioButton
@@ -188,16 +186,16 @@ ColumnLayout {
             //FIXME: there should be only one spinbox: QtControls spinboxes are still too limited for it tough
             RowLayout {
                 Layout.fillWidth: true
-                spacing: units.largeSpacing / 2
+                spacing: Kirigami.Units.largeSpacing / 2
                 QtControls2.Label {
-                    Layout.minimumWidth: formAlignment - units.largeSpacing
+                    Layout.minimumWidth: formAlignment - Kirigami.Units.largeSpacing
                     horizontalAlignment: Text.AlignRight
                     text: i18nd("plasma_wallpaper_org.kde.image","Change every:")
                 }
                 QtControls2.SpinBox {
                     id: hoursInterval
-                    Layout.minimumWidth: textMetrics.width + units.gridUnit
-                    width: units.gridUnit * 3
+                    Layout.minimumWidth: textMetrics.width + Kirigami.Units.gridUnit
+                    width: Kirigami.Units.gridUnit * 3
                     value: root.hoursIntervalValue
                     from: 0
                     to: 24
@@ -208,12 +206,12 @@ ColumnLayout {
                     text: i18nd("plasma_wallpaper_org.kde.image","Hours")
                 }
                 Item {
-                    Layout.preferredWidth: units.gridUnit
+                    Layout.preferredWidth: Kirigami.Units.gridUnit
                 }
                 QtControls2.SpinBox {
                     id: minutesInterval
-                    Layout.minimumWidth: textMetrics.width + units.gridUnit
-                    width: units.gridUnit * 3
+                    Layout.minimumWidth: textMetrics.width + Kirigami.Units.gridUnit
+                    width: Kirigami.Units.gridUnit * 3
                     value: root.minutesIntervalValue
                     from: 0
                     to: 60
@@ -224,12 +222,12 @@ ColumnLayout {
                     text: i18nd("plasma_wallpaper_org.kde.image","Minutes")
                 }
                 Item {
-                    Layout.preferredWidth: units.gridUnit
+                    Layout.preferredWidth: Kirigami.Units.gridUnit
                 }
                 QtControls2.SpinBox {
                     id: secondsInterval
-                    Layout.minimumWidth: textMetrics.width + units.gridUnit
-                    width: units.gridUnit * 3
+                    Layout.minimumWidth: textMetrics.width + Kirigami.Units.gridUnit
+                    width: Kirigami.Units.gridUnit * 3
                     value: root.secondsIntervalValue
                     from: root.hoursIntervalValue === 0 && root.minutesIntervalValue === 0 ? 1 : 0
                     to: 60
