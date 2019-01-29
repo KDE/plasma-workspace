@@ -267,26 +267,33 @@ weather forecast|Volcanic Ash
 weather forecast|Water Spout
 weather forecast|Freezing Spray
 weather forecast|Frost
+weather forecast|Slight Chance Thunderstorms
 weather forecast|Chance Thunderstorms
 weather forecast|Thunderstorms Likely
 weather forecast|Thunderstorms
 weather forecast|Severe Tstms
+weather forecast|Slight Chance Snow/Sleet
 weather forecast|Chance Snow/Sleet
 weather forecast|Snow/Sleet Likely
 weather forecast|Snow/Sleet
+weather forecast|Slight Chance Rain/Sleet
 weather forecast|Chance Rain/Sleet
 weather forecast|Rain/Sleet Likely
 weather forecast|Rain/Sleet
+weather forecast|Slight Chance Rain/Freezing Rain
 weather forecast|Chance Rain/Freezing Rain
 weather forecast|Rain/Freezing Rain Likely
 weather forecast|Rain/Freezing Rain
 weather forecast|Wintry Mix
+weather forecast|Slight Chance Freezing Drizzle
 weather forecast|Chance Freezing Drizzle
 weather forecast|Freezing Drizzle Likely
 weather forecast|Freezing Drizzle
+weather forecast|Slight Chance Freezing Rain
 weather forecast|Chance Freezing Rain
 weather forecast|Freezing Rain Likely
 weather forecast|Freezing Rain
+weather forecast|Slight Chance Rain/Snow
 weather forecast|Chance Rain/Snow
 weather forecast|Rain/Snow Likely
 weather forecast|Rain/Snow
@@ -295,6 +302,7 @@ weather forecast|Chance Snow
 weather forecast|Snow Likely
 weather forecast|Snow
 weather forecast|Heavy Snow
+weather forecast|Slight Chance Flurries
 weather forecast|Chance Flurries
 weather forecast|Flurries Likely
 weather forecast|Flurries
@@ -302,6 +310,7 @@ weather forecast|Slight Chance Snow Showers
 weather forecast|Chance Snow Showers
 weather forecast|Snow Showers Likely
 weather forecast|Snow Showers
+weather forecast|Slight Chance Drizzle
 weather forecast|Chance Drizzle
 weather forecast|Drizzle Likely
 weather forecast|Drizzle
@@ -310,6 +319,7 @@ weather forecast|Chance Rain
 weather forecast|Rain Likely
 weather forecast|Rain
 weather forecast|Heavy Rain
+weather forecast|Slight Chance Rain Showers
 weather forecast|Chance Rain Showers
 weather forecast|Rain Showers Likely
 weather forecast|Rain Showers
@@ -343,4 +353,3 @@ weather forecast|Decreasing Clouds
 weather forecast|Becoming Sunny
 weather forecast|Clear
 weather forecast|Mostly Clear
-weather forecast|Slight Chance Thunderstorms
