@@ -291,7 +291,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             if (image.isEmpty()) {
                 iconName = properties[QStringLiteral("IconName")].toString();
                 if (!iconName.isEmpty()) {
-                    icon = QIcon(new KIconEngine(iconName, iconLoader()));
+                    icon = QIcon(new KIconEngine(iconName, iconLoader(), overlayNames));
 
                     if (overlayNames.isEmpty() && !overlay.isNull()) {
                         overlayIcon(&icon, &overlay);
@@ -317,7 +317,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                 QString iconName = properties[QStringLiteral("AttentionIconName")].toString();
                 setData(QStringLiteral("AttentionIconName"), iconName);
                 if (!iconName.isEmpty()) {
-                    attentionIcon = QIcon(new KIconEngine(iconName, iconLoader()));
+                    attentionIcon = QIcon(new KIconEngine(iconName, iconLoader(), overlayNames));
 
                     if (overlayNames.isEmpty() && !overlay.isNull()) {
                         overlayIcon(&attentionIcon, &overlay);
