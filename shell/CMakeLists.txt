@@ -66,12 +66,10 @@ target_link_libraries(plasmashell
  KF5::GlobalAccel
  KF5::CoreAddons
  KF5::DBusAddons
- KF5::Declarative
  KF5::QuickAddons
  KF5::XmlGui
  KF5::Package
  KF5::WaylandClient
- KF5::WindowSystem
  KF5::Notifications
  PW::KWorkspace
 )
