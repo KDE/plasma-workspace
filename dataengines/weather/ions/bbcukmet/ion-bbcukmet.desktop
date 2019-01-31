@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=BBC Weather from UK MET Office
+Name=BBC Weather
 Name[ar]=بي.بي.سي لأحوال الطقس من مكتب الأرصاد الجويّة البريطاني
 Name[be@latin]=Nadvorje „BBC” ad „UK MET Office”
 Name[bg]=Време от BBC (офис UK MET)
@@ -74,7 +74,7 @@ Name[wa]=Tins ki fwait BBC do UK MET Office
 Name[x-test]=xxBBC Weather from UK MET Officexx
 Name[zh_CN]=英国气象局提供的 BBC 天气报告
 Name[zh_TW]=BBC 天氣報告，從 UK MET 辦公室來
-Comment=XML Data from the UK MET Office
+Comment=XML Data from the British Broadcasting Corporation
 Comment[ar]=بيانات XML من مكتب MET البريطاني
 Comment[be@latin]=Źviestki ŭ farmacie „XML” ad „UK MET Office”
 Comment[bg]=XML данни от UK MET
