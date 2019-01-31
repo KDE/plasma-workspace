@@ -57,29 +57,29 @@ extern "C" {
 static void createFileEntry(KIO::UDSEntry& entry, const KService::Ptr& service, const QUrl& parentUrl)
 {
     entry.clear();
-    entry.insert(KIO::UDSEntry::UDS_NAME, KIO::encodeFileName(service->name()));
-    entry.insert(KIO::UDSEntry::UDS_FILE_TYPE, S_IFREG);
+    entry.fastInsert(KIO::UDSEntry::UDS_NAME, KIO::encodeFileName(service->name()));
+    entry.fastInsert(KIO::UDSEntry::UDS_FILE_TYPE, S_IFREG);
     const QString fileUrl = parentUrl.url() + '/' + service->desktopEntryName();
-    entry.insert(KIO::UDSEntry::UDS_URL, fileUrl);
-    entry.insert(KIO::UDSEntry::UDS_ACCESS, 0500);
-    entry.insert(KIO::UDSEntry::UDS_MIME_TYPE, QStringLiteral("application/x-desktop"));
-    entry.insert(KIO::UDSEntry::UDS_SIZE, 0);
+    entry.fastInsert(KIO::UDSEntry::UDS_URL, fileUrl);
+    entry.fastInsert(KIO::UDSEntry::UDS_ACCESS, 0500);
+    entry.fastInsert(KIO::UDSEntry::UDS_MIME_TYPE, QStringLiteral("application/x-desktop"));
+    entry.fastInsert(KIO::UDSEntry::UDS_SIZE, 0);
     const QString localPath = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, QStringLiteral("%1.desktop").arg(service->desktopEntryName()));
-    entry.insert(KIO::UDSEntry::UDS_LOCAL_PATH, localPath);
-    entry.insert(KIO::UDSEntry::UDS_MODIFICATION_TIME, time(nullptr));
-    entry.insert(KIO::UDSEntry::UDS_ICON_NAME, service->icon());
+    entry.fastInsert(KIO::UDSEntry::UDS_LOCAL_PATH, localPath);
+    entry.fastInsert(KIO::UDSEntry::UDS_MODIFICATION_TIME, time(nullptr));
+    entry.fastInsert(KIO::UDSEntry::UDS_ICON_NAME, service->icon());
 }
 
 static void createDirEntry(KIO::UDSEntry& entry, const QString& name, const QString& url, const QString& mime, const QString& iconName)
 {
     entry.clear();
-    entry.insert( KIO::UDSEntry::UDS_NAME, name );
-    entry.insert( KIO::UDSEntry::UDS_FILE_TYPE, S_IFDIR );
-    entry.insert( KIO::UDSEntry::UDS_ACCESS, 0500 );
-    entry.insert( KIO::UDSEntry::UDS_MIME_TYPE, mime );
+    entry.fastInsert( KIO::UDSEntry::UDS_NAME, name );
+    entry.fastInsert( KIO::UDSEntry::UDS_FILE_TYPE, S_IFDIR );
+    entry.fastInsert( KIO::UDSEntry::UDS_ACCESS, 0500 );
+    entry.fastInsert( KIO::UDSEntry::UDS_MIME_TYPE, mime );
     if (!url.isEmpty())
-        entry.insert( KIO::UDSEntry::UDS_URL, url );
-    entry.insert( KIO::UDSEntry::UDS_ICON_NAME, iconName );
+        entry.fastInsert( KIO::UDSEntry::UDS_URL, url );
+    entry.fastInsert( KIO::UDSEntry::UDS_ICON_NAME, iconName );
 }
 
 ApplicationsProtocol::ApplicationsProtocol( const QByteArray &protocol, const QByteArray &pool, const QByteArray &app)
