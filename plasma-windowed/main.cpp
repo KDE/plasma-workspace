@@ -23,6 +23,7 @@
 #include <qcommandlineparser.h>
 #include <qcommandlineoption.h>
 
+#include <KQuickAddons/QtQuickSettings>
 #include <KDBusService>
 #include <KLocalizedString>
 
@@ -40,6 +41,8 @@ int main(int argc, char **argv)
     app.setOrganizationDomain(QStringLiteral("kde.org"));
 
     KDBusService service(KDBusService::Unique);
+
+    KQuickAddons::QtQuickSettings::init();
 
     QCommandLineParser parser;
     parser.setApplicationDescription(i18n("Plasma Windowed"));
