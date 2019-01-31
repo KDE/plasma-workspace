@@ -38,7 +38,7 @@ Q_SIGNALS:
     void windowRemoved(WId window);
     void windowChanged(WId window, NET::Properties properties, NET::Properties2 properties2);
 protected:
-    void timerEvent(QTimerEvent *event);
+    void timerEvent(QTimerEvent *event) override;
 private:
     struct AllProps {
         NET::Properties properties = 0;
