@@ -41,8 +41,8 @@ protected:
     void timerEvent(QTimerEvent *event) override;
 private:
     struct AllProps {
-        NET::Properties properties = 0;
-        NET::Properties2 properties2 = 0;
+        NET::Properties properties = {};
+        NET::Properties2 properties2 = {};
     };
     QHash<WId, AllProps> m_cache;
     int m_timerId = 0;
