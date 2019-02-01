@@ -1,5 +1,5 @@
 [Protocol]
-exec=kio_applications
+exec=kf5/kio/applications
 protocol=programs
 input=none
 output=filesystem
