@@ -147,7 +147,7 @@ Comment[zh_CN]=显示通知和任务
 Comment[zh_TW]=顯示通知與工作
 
 Type=Service
-Icon=preferences-desktop-notification
+Icon=preferences-desktop-notification-bell
 X-KDE-ParentApp=
 X-KDE-PluginInfo-Author=Martin Klapetek
 X-KDE-PluginInfo-Category=Tasks

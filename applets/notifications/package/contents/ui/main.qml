@@ -154,7 +154,7 @@ MouseEventListener {
         })
 
         if (KCMShell.authorize("kcmnotify.desktop").length > 0) {
-            plasmoid.setAction("notificationskcm", i18n("&Configure Event Notifications and Actions..."), "preferences-desktop-notification")
+            plasmoid.setAction("notificationskcm", i18n("&Configure Event Notifications and Actions..."), "preferences-desktop-notification-bell")
         }
     }
 }
