@@ -27,6 +27,10 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 Item {
     id: wrapper
 
+    // If we're using software rendering, draw outlines instead of shadows
+    // See https://bugs.kde.org/show_bug.cgi?id=398317
+    readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
+
     property bool isCurrent: true
 
     readonly property var m: model
@@ -143,18 +147,6 @@ Item {
         "
     }
 
-
-    DropShadow {
-        id: labelShadow
-        anchors.fill: usernameDelegate
-        source: usernameDelegate
-        horizontalOffset: 0
-        verticalOffset: 1
-        radius: 12
-        samples: 32
-        spread: 0.35
-        color: PlasmaCore.ColorScope.backgroundColor
-    }
     PlasmaComponents.Label {
         id: usernameDelegate
         anchors {
@@ -164,10 +156,22 @@ Item {
         height: implicitHeight // work around stupid bug in Plasma Components that sets the height
         width: constrainText ? parent.width : implicitWidth
         text: wrapper.name
+        style: softwareRendering ? Text.Outline : undefined
+        styleColor: softwareRendering ? ColorScope.backgroundColor : undefined
         elide: Text.ElideRight
         horizontalAlignment: Text.AlignHCenter
         //make an indication that this has active focus, this only happens when reached with keyboard navigation
         font.underline: wrapper.activeFocus
+
+        layer.enabled: !softwareRendering
+        layer.effect: DropShadow {
+            horizontalOffset: 0
+            verticalOffset: 1
+            radius: 12
+            samples: 32
+            spread: 0.35
+            color: ColorScope.backgroundColor
+        }
     }
 
     MouseArea {
