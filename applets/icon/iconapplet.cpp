@@ -42,6 +42,7 @@
 #include <KLocalizedString>
 #include <KProtocolManager>
 #include <KRun>
+#include <KStartupInfo>
 
 #include <KIO/DropJob>
 #include <KIO/FavIconRequestJob>
@@ -393,6 +394,27 @@ QList<QAction *> IconApplet::contextualActions()
 
 void IconApplet::run()
 {
+    if (!m_startupInfo) {
+        m_startupInfo = new KStartupInfo(KStartupInfo::CleanOnCantDetect, this);
+
+        const KConfig klaunchrc("klaunchrc");
+        KConfigGroup c = KConfigGroup(&klaunchrc, "TaskbarButtonSettings");
+        m_startupInfo->setTimeout(c.readEntry("Timeout", 5));
+
+        connect(m_startupInfo, &KStartupInfo::gotNewStartup, this, [this](const KStartupInfoId &id, const KStartupInfoData &data) {
+            Q_UNUSED(id);
+            if (data.applicationId() == m_localPath) {
+                setBusy(true);
+            }
+        });
+        connect(m_startupInfo, &KStartupInfo::gotRemoveStartup, this, [this](const KStartupInfoId &id, const KStartupInfoData &data) {
+            Q_UNUSED(id);
+            if (data.applicationId() == m_localPath) {
+                setBusy(false);
+            }
+        });
+    }
+
     new KRun(QUrl::fromLocalFile(m_localPath), QApplication::desktop());
 }
 

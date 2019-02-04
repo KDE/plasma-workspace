@@ -28,6 +28,8 @@
 #include <KPropertiesDialog>
 
 class KFileItemActions;
+class KStartupInfo;
+
 class QMenu;
 
 class IconApplet : public Plasma::Applet
@@ -99,5 +101,7 @@ private:
     QScopedPointer<QMenu> m_openWithMenu;
 
     QPointer<KPropertiesDialog> m_configDialog;
+
+    KStartupInfo *m_startupInfo = nullptr;
 
 };
