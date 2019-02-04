@@ -32,8 +32,10 @@ KCM.GridDelegate {
     property alias color: backgroundRect.color
     property bool selected: (wallpapersGrid.currentIndex == index)
     opacity: model.pendingDeletion ? 0.5 : 1
+
+    text: model.display
     
-    toolTip: model.author.length > 0 ? i18nd("plasma_wallpaper_org.kde.image", "%1 by %2", model.display, model.author) : model.display
+    toolTip: model.author.length > 0 ? i18nd("plasma_wallpaper_org.kde.image", "By %1", model.author) : ""
 
     hoverEnabled: true
 
