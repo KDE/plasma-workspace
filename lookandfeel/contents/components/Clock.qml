@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.8
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 
@@ -25,30 +25,26 @@ import org.kde.plasma.core 2.0
 import org.kde.plasma.components 2.0
 
 Item {
+    // If we're using software rendering, draw outlines instead of shadows
+    // See https://bugs.kde.org/show_bug.cgi?id=398317
+    readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
+
     width: clock.implicitWidth
     height: clock.implicitHeight
-
-    DropShadow {
-        id: clockShadow
-        anchors.fill: clock
-        source: clock
-        horizontalOffset: 0
-        verticalOffset: 2
-        radius: 14
-        samples: 32
-        spread: 0.3
-        color: ColorScope.backgroundColor
-    }
 
     ColumnLayout {
         id: clock
         Label {
             text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
+            style: softwareRendering ? Text.Outline : undefined
+            styleColor: softwareRendering ? ColorScope.backgroundColor : undefined
             font.pointSize: 48
             Layout.alignment: Qt.AlignHCenter
         }
         Label {
             text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
+            style: softwareRendering ? Text.Outline : undefined
+            styleColor: softwareRendering ? ColorScope.backgroundColor : undefined
             font.pointSize: 24
             Layout.alignment: Qt.AlignHCenter
         }
@@ -58,5 +54,15 @@ Item {
             connectedSources: ["Local"]
             interval: 1000
         }
+    }
+
+    layer.enabled: !softwareRendering
+    layer.effect: DropShadow {
+        horizontalOffset: 0
+        verticalOffset: 2
+        radius: 14
+        samples: 32
+        spread: 0.3
+        color: ColorScope.backgroundColor
     }
 }
