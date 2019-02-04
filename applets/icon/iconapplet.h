@@ -32,6 +32,11 @@ class KStartupInfo;
 
 class QMenu;
 
+namespace TaskManager
+{
+class StartupTasksModel;
+}
+
 class IconApplet : public Plasma::Applet
 {
     Q_OBJECT
@@ -102,6 +107,6 @@ private:
 
     QPointer<KPropertiesDialog> m_configDialog;
 
-    KStartupInfo *m_startupInfo = nullptr;
+    TaskManager::StartupTasksModel *m_startupTasksModel = nullptr;
 
 };

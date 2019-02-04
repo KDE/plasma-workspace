@@ -42,12 +42,13 @@
 #include <KLocalizedString>
 #include <KProtocolManager>
 #include <KRun>
-#include <KStartupInfo>
 
 #include <KIO/DropJob>
 #include <KIO/FavIconRequestJob>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/StatJob>
+
+#include <startuptasksmodel.h>
 
 IconApplet::IconApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
@@ -394,25 +395,23 @@ QList<QAction *> IconApplet::contextualActions()
 
 void IconApplet::run()
 {
-    if (!m_startupInfo) {
-        m_startupInfo = new KStartupInfo(KStartupInfo::CleanOnCantDetect, this);
+    if (!m_startupTasksModel) {
+        m_startupTasksModel = new TaskManager::StartupTasksModel(this);
 
-        const KConfig klaunchrc("klaunchrc");
-        KConfigGroup c = KConfigGroup(&klaunchrc, "TaskbarButtonSettings");
-        m_startupInfo->setTimeout(c.readEntry("Timeout", 5));
+        auto handleRow = [this](bool busy, const QModelIndex &parent, int first, int last) {
+            Q_UNUSED(parent);
+            for (int i = first; i <= last; ++i) {
+                const QModelIndex idx = m_startupTasksModel->index(i, 0);
+                if (idx.data(TaskManager::AbstractTasksModel::LauncherUrlWithoutIcon).toUrl() == QUrl::fromLocalFile(m_localPath)) {
+                    setBusy(busy);
+                    break;
+                }
+            }
+        };
 
-        connect(m_startupInfo, &KStartupInfo::gotNewStartup, this, [this](const KStartupInfoId &id, const KStartupInfoData &data) {
-            Q_UNUSED(id);
-            if (data.applicationId() == m_localPath) {
-                setBusy(true);
-            }
-        });
-        connect(m_startupInfo, &KStartupInfo::gotRemoveStartup, this, [this](const KStartupInfoId &id, const KStartupInfoData &data) {
-            Q_UNUSED(id);
-            if (data.applicationId() == m_localPath) {
-                setBusy(false);
-            }
-        });
+        using namespace std::placeholders;
+        connect(m_startupTasksModel, &QAbstractItemModel::rowsInserted, this, std::bind(handleRow, true /*busy*/, _1, _2, _3));
+        connect(m_startupTasksModel, &QAbstractItemModel::rowsAboutToBeRemoved, this, std::bind(handleRow, false /*busy*/, _1, _2, _3));
     }
 
     new KRun(QUrl::fromLocalFile(m_localPath), QApplication::desktop());
