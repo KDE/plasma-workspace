@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=BBC Weather
 Name[ca]=BBC Weather
+Name[ca@valencia]=BBC Weather
 Name[gl]=BBC Weather
 Name[nl]=BBC Weather
 Name[pl]=Pogoda BBC
@@ -11,6 +12,7 @@ Name[uk]=Погода BBC
 Name[x-test]=xxBBC Weatherxx
 Comment=XML Data from the British Broadcasting Corporation
 Comment[ca]=Dades XML de la British Broadcasting Corporation
+Comment[ca@valencia]=Dades XML de la British Broadcasting Corporation
 Comment[gl]=Datos XML da British Broadcasting Corporation
 Comment[nl]=XML-gegevens van de British Broadcasting Corporation
 Comment[pl]=Dane XML z British Broadcasting Corporation
