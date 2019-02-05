@@ -35,7 +35,7 @@ KCM.GridDelegate {
 
     text: model.display
     
-    toolTip: model.author.length > 0 ? i18nd("plasma_wallpaper_org.kde.image", "By %1", model.author) : ""
+    toolTip: model.author.length > 0 ? i18nd("plasma_wallpaper_org.kde.image", "%1 by %2", model.display, model.author) : ""
 
     hoverEnabled: true
 
