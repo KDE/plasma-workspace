@@ -193,6 +193,5 @@ void ApplicationsProtocol::listDir(const QUrl& url)
     }
 
     totalSize(count);
-    listEntry(entry);
     finished();
 }
