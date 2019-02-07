@@ -196,7 +196,7 @@ PlasmaCore.ColorScope {
                     },
                     ActionButton {
                         iconSource: "system-switch-user"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Different User")
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Type User")
                         onClicked: mainStack.push(userPromptComponent)
                         enabled: true
                         visible: !userListComponent.showUsernamePrompt && !inputPanel.keyboardActive
@@ -336,7 +336,7 @@ PlasmaCore.ColorScope {
                 loginScreenUiVisible: loginScreenRoot.uiVisible
 
                 userListModel: QtObject {
-                    property string name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log in as a different user")
+                    property string name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Type in Username and Password")
                     property string iconSource: ""
                 }
 
