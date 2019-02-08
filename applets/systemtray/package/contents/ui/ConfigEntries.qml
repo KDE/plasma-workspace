@@ -44,6 +44,25 @@ QtLayouts.GridLayout {
         }
     }
 
+    PlasmaCore.DataSource {
+        id: statusNotifierSource
+        engine: "statusnotifieritem"
+        interval: 0
+        onSourceAdded: {
+            connectSource(source)
+        }
+        Component.onCompleted: {
+            connectedSources = sources
+        }
+   }
+
+    PlasmaCore.SortFilterModel {
+       id: statusNotifierModel
+       sourceModel: PlasmaCore.DataModel {
+           dataSource: statusNotifierSource
+       }
+    }
+
     QtControls.CheckBox {
         id: showAllCheckBox
         QtLayouts.Layout.fillWidth: true
@@ -66,11 +85,9 @@ QtLayouts.GridLayout {
     }
 
     function retrieveAllItems() {
-        print(plasmoid)
-        print(plasmoid.rootItem.statusNotifierModel)
         var list = [];
-        for (var i = 0; i < plasmoid.rootItem.statusNotifierModel.count; ++i) {
-            var item = plasmoid.rootItem.statusNotifierModel.get(i);
+        for (var i = 0; i < statusNotifierModel.count; ++i) {
+            var item = statusNotifierModel.get(i);
             list.push({
                 "index": i,
                 "taskId": item.Id,
@@ -233,7 +250,7 @@ QtLayouts.GridLayout {
                             // both SNIs and plasmoids are listed in the same TableView
                             // but they come from two separate models, so we need to subtract
                             // the SNI model count to get the actual plasmoid index
-                            var index = modelData.index - plasmoid.rootItem.statusNotifierModel.count
+                            var index = modelData.index - statusNotifierModel.count
                             plasmoid.applets[index].globalShortcut = keySequence
 
                             iconsPage.configurationChanged()
