@@ -739,7 +739,8 @@ bool EnvCanadaIon::readXMLData(const QString& source, QXmlStreamReader& xml)
             (data.observationDateTime.isValid() &&
             (!qIsNaN(data.stationLatitude) && !qIsNaN(data.stationLongitude)));
         if (canCalculateElevation) {
-            data.solarDataTimeEngineSourceName = QStringLiteral("Local|Solar|Latitude=%1|Longitude=%2|DateTime=%3")
+            data.solarDataTimeEngineSourceName = QStringLiteral("%1|Solar|Latitude=%2|Longitude=%3|DateTime=%4")
+                .arg(QString::fromUtf8(data.observationDateTime.timeZone().id()))
                 .arg(data.stationLatitude)
                 .arg(data.stationLongitude)
                 .arg(data.observationDateTime.toString(Qt::ISODate));
