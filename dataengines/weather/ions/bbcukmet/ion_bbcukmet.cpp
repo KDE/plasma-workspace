@@ -749,7 +749,8 @@ bool UKMETIon::readObservationXMLData(const QString& source, QXmlStreamReader& x
             (data.observationDateTime.isValid() &&
             (!qIsNaN(data.stationLatitude) && !qIsNaN(data.stationLongitude)));
         if (canCalculateElevation) {
-            data.solarDataTimeEngineSourceName = QStringLiteral("Local|Solar|Latitude=%1|Longitude=%2|DateTime=%3")
+            data.solarDataTimeEngineSourceName = QStringLiteral("%1|Solar|Latitude=%2|Longitude=%3|DateTime=%4")
+                .arg(QString::fromUtf8(data.observationDateTime.timeZone().id()))
                 .arg(data.stationLatitude)
                 .arg(data.stationLongitude)
                 .arg(data.observationDateTime.toString(Qt::ISODate));
@@ -848,7 +849,11 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
 
             const QString summaryLC = summary.toLower();
             forecast->period = period;
-            forecast->iconName = getWeatherIcon(dayIcons(), summaryLC);
+            if (forecast->period == QLatin1String("Tonight")) {
+                forecast->iconName = getWeatherIcon(nightIcons(), summaryLC);
+            } else {
+                forecast->iconName = getWeatherIcon(dayIcons(), summaryLC);
+            }
             // db uses original strings normalized to lowercase, but we prefer the unnormalized if without translation
             const QString summaryTranslated = i18nc("weather forecast", summaryLC.toUtf8().data());
             forecast->summary = (summaryTranslated != summaryLC) ? summaryTranslated : summary;
