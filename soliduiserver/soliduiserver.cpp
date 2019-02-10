@@ -219,7 +219,7 @@ void SolidUiServer::reparentDialog(QWidget *dialog, WId wId, const QString &appI
 
     KWindowSystem::setMainWindow(dialog, wId); // correct, set dialog parent
 
-#ifdef HAVE_X11
+#if HAVE_X11
     if (modal) {
         KWindowSystem::setState(dialog->winId(), NET::Modal);
     } else {
