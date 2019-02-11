@@ -4,7 +4,7 @@ project(plasma-workspace)
 set(PROJECT_VERSION "5.15.80")
 set(PROJECT_VERSION_MAJOR 5)
 
-set(QT_MIN_VERSION "5.11.0")
+set(QT_MIN_VERSION "5.12.0")
 set(KF5_MIN_VERSION "5.54.0")
 set(INSTALL_SDDM_THEME TRUE)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick QuickWidgets Concurrent Test Network)
