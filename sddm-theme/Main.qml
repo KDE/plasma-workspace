@@ -347,9 +347,31 @@ PlasmaCore.ColorScope {
 
                 actionItems: [
                     ActionButton {
-                        iconSource: "go-previous"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Back")
+                        iconSource: "system-suspend"
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Suspend")
+                        onClicked: sddm.suspend()
+                        enabled: sddm.canSuspend
+                        visible: !inputPanel.keyboardActive
+                    },
+                    ActionButton {
+                        iconSource: "system-reboot"
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
+                        onClicked: sddm.reboot()
+                        enabled: sddm.canReboot
+                        visible: !inputPanel.keyboardActive
+                    },
+                    ActionButton {
+                        iconSource: "system-shutdown"
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shut Down")
+                        onClicked: sddm.powerOff()
+                        enabled: sddm.canPowerOff
+                        visible: !inputPanel.keyboardActive
+                    },
+                    ActionButton {
+                        iconSource: "system-switch-user"
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","List Users")
                         onClicked: mainStack.pop()
+                        visible: !inputPanel.keyboardActive
                     }
                 ]
             }
