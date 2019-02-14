@@ -45,7 +45,7 @@ QtLayouts.ColumnLayout {
     property alias cfg_showDate: showDate.checked
     property string cfg_dateFormat: "shortDate"
     property alias cfg_customDateFormat: customDateFormat.text
-    property alias cfg_use24hFormat: use24hFormat.checked
+    property alias cfg_use24hFormat: use24hFormat.checkState
 
     onCfg_fontFamilyChanged: {
         // HACK by the time we populate our model and/or the ComboBox is finished the value is still undefined
@@ -91,6 +91,7 @@ QtLayouts.ColumnLayout {
         QtControls.CheckBox {
             id: use24hFormat
             text: i18nc("Checkbox label; means 24h clock format, without am/pm", "Use 24-hour Clock")
+            tristate: true
         }
 
         QtControls.CheckBox {
