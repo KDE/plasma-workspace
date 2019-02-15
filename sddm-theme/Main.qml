@@ -196,7 +196,7 @@ PlasmaCore.ColorScope {
                     },
                     ActionButton {
                         iconSource: "system-switch-user"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Type User")
+                        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "For switching to a username and password prompt", "Other...")
                         onClicked: mainStack.push(userPromptComponent)
                         enabled: true
                         visible: !userListComponent.showUsernamePrompt && !inputPanel.keyboardActive
