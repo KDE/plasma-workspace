@@ -30,6 +30,7 @@
 #include <kworkspace.h>
 
 #include <QCommandLineParser>
+#include <QSessionManager>
 
 Q_LOGGING_CATEGORY(KUISERVER, "kuiserver", QtInfoMsg)
 
@@ -40,6 +41,12 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char **argv)
     app.setApplicationName(QStringLiteral("kuiserver"));
     app.setApplicationVersion(QStringLiteral("2.0"));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
+
+    auto disableSessionManagement = [](QSessionManager &sm) {
+        sm.setRestartHint(QSessionManager::RestartNever);
+    };
+    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     QCommandLineParser parser;
     parser.addHelpOption();
