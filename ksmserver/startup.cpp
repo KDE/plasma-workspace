@@ -276,6 +276,7 @@ void RestoreSessionJob::start()
         return;
     }
 
+    m_ksmserver->restoreLegacySession(KSharedConfig::openConfig().data());
     m_ksmserver->lastAppStarted = 0;
     m_ksmserver->lastIdStarted.clear();
     m_ksmserver->state = KSMServer::Restoring;
