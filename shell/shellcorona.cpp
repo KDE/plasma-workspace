@@ -697,7 +697,7 @@ void ShellCorona::load()
     //containments on each startup otherwise
     for (QScreen* screen : qGuiApp->screens()) {
         //the containments may have been created already by the startup script
-        //check their existence in oder to not have duplicated desktopviews
+        //check their existence in order to not have duplicated desktopviews
         if (!m_desktopViewforId.contains(m_screenPool->id(screen->name()))) {
             addOutput(screen);
         }
