@@ -181,7 +181,7 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
             match2.setId(QStringLiteral("DimHalf"));
             matches.append(match2);
         }
-    } else if (term.compare(i18nc("Note this is a KRunner keyword", "suspend"), Qt::CaseInsensitive) == 0) {
+    } else if (term.compare(i18nc("Note this is a KRunner keyword", "sleep"), Qt::CaseInsensitive) == 0) {
         QSet< Solid::PowerManagement::SleepState > states = Solid::PowerManagement::supportedSleepStates();
 
         if (states.contains(Solid::PowerManagement::SuspendState)) {
@@ -191,7 +191,7 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
         if (states.contains(Solid::PowerManagement::HibernateState)) {
             addSuspendMatch(Solid::PowerManagement::HibernateState, matches);
         }
-    } else if (term.compare(i18nc("Note this is a KRunner keyword", "sleep"), Qt::CaseInsensitive) == 0 ||
+    } else if (term.compare(i18nc("Note this is a KRunner keyword", "suspend"), Qt::CaseInsensitive) == 0 ||
                term.compare(i18nc("Note this is a KRunner keyword", "to ram"), Qt::CaseInsensitive) == 0) {
         addSuspendMatch(Solid::PowerManagement::SuspendState, matches);
     } else if (term.compare(i18nc("Note this is a KRunner keyword", "hibernate"), Qt::CaseInsensitive) == 0 ||
@@ -213,18 +213,20 @@ void PowerDevilRunner::addSuspendMatch(int value, QList<Plasma::QueryMatch> &mat
         case Solid::PowerManagement::SuspendState:
         case Solid::PowerManagement::StandbyState:
             match.setIconName(QStringLiteral("system-suspend"));
-            match.setText(i18n("Suspend"));
+            match.setText(i18nc("Suspend to RAM", "Sleep"));
+            match.setSubtext(i18n("Suspend to RAM"));
             match.setRelevance(1);
             break;
         case Solid::PowerManagement::HibernateState:
             match.setIconName(QStringLiteral("system-suspend-hibernate"));
-            match.setText(i18n("Hibernate"));
+            match.setText(i18nc("Suspend to disk", "Hibernate"));
+            match.setSubtext(i18n("Suspend to disk"));
             match.setRelevance(0.99);
             break;
     }
 
     match.setData(value);
-    match.setId(QStringLiteral("Suspend"));
+    match.setId(QStringLiteral("Sleep"));
     matches.append(match);
 }
 

@@ -175,7 +175,7 @@ PlasmaCore.ColorScope {
                 actionItems: [
                     ActionButton {
                         iconSource: "system-suspend"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Suspend")
+                        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Suspend to RAM","Sleep")
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
                         visible: !inputPanel.keyboardActive

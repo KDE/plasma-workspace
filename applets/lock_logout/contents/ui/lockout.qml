@@ -138,7 +138,7 @@ Flow {
         id: sleepDialogComponent
         QueryDialog {
             titleIcon: "system-suspend"
-            titleText: i18n("Suspend")
+            titleText: i18nc("Suspend to RAM", "Sleep")
             message: i18n("Do you want to suspend to RAM (sleep)?")
             location: plasmoid.location
 

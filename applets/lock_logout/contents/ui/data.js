@@ -17,7 +17,7 @@ var data = [{
 }, {
     icon: "system-suspend",
     operation: "suspendToRam",
-    tooltip_mainText: i18n("Suspend"),
+    tooltip_mainText: i18nc("Suspend to RAM", "Sleep"),
     tooltip_subText: i18n("Sleep (suspend to RAM)"),
     requires: "Suspend"
 }, {
