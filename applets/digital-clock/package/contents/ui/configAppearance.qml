@@ -24,6 +24,7 @@ import QtQuick 2.0
 import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.0 as QtLayouts
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
+import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.5 as Kirigami
 
 QtLayouts.ColumnLayout {
@@ -45,7 +46,7 @@ QtLayouts.ColumnLayout {
     property alias cfg_showDate: showDate.checked
     property string cfg_dateFormat: "shortDate"
     property alias cfg_customDateFormat: customDateFormat.text
-    property alias cfg_use24hFormat: use24hFormat.checkState
+    property alias cfg_use24hFormat: use24hFormat.currentIndex
 
     onCfg_fontFamilyChanged: {
         // HACK by the time we populate our model and/or the ComboBox is finished the value is still undefined
@@ -89,12 +90,6 @@ QtLayouts.ColumnLayout {
         }
 
         QtControls.CheckBox {
-            id: use24hFormat
-            text: i18nc("Checkbox label; means 24h clock format, without am/pm", "Use 24-hour Clock")
-            tristate: true
-        }
-
-        QtControls.CheckBox {
             id: showLocalTimezone
             text: i18n("Show local time zone")
         }
@@ -115,6 +110,31 @@ QtLayouts.ColumnLayout {
             QtControls.RadioButton {
                 id: timezoneCodeRadio
                 text: i18n("Time zone code")
+            }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        QtLayouts.RowLayout {
+            QtLayouts.Layout.fillWidth: true
+            Kirigami.FormData.label: i18n("Time display:")
+
+            QtControls.ComboBox {
+                id: use24hFormat
+                model: [
+                    i18n("12-Hour"),
+                    i18n("Use Region Defaults"),
+                    i18n("24-Hour")
+                ]
+                onCurrentIndexChanged: cfg_use24hFormat = currentIndex
+            }
+
+            QtControls.Button {
+                text: i18n("Change Regional Settings...")
+                icon.name: "preferences-desktop-locale"
+                onClicked: KCMShell.open("formats.desktop")
             }
         }
 
