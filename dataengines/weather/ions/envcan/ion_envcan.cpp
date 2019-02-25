@@ -291,7 +291,7 @@ QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupForecastIconMappi
         { QStringLiteral("periods of light snow and blowing snow"), LightSnow },
         { QStringLiteral("periods of light snow mixed with freezing drizzle"), RainSnow },
         { QStringLiteral("periods of light snow mixed with freezing rain"), RainSnow },
-        { QStringLiteral("periods of light snow mixed with ice pelletS"), LightSnow },
+        { QStringLiteral("periods of light snow mixed with ice pellets"), LightSnow },
         { QStringLiteral("periods of light snow mixed with rain"), RainSnow },
         { QStringLiteral("periods of light snow or freezing drizzle"), RainSnow },
         { QStringLiteral("periods of light snow or freezing rain"), RainSnow },
