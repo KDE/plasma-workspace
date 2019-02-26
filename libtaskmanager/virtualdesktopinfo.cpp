@@ -336,6 +336,9 @@ QVariantList VirtualDesktopInfo::WaylandPrivate::desktopIds() const
 
 QStringList VirtualDesktopInfo::WaylandPrivate::desktopNames() const
 {
+    if (!virtualDesktopManagement) {
+        return QStringList();
+    }
     QStringList names;
 
     foreach(const QString &id, virtualDesktops) {
@@ -351,11 +354,18 @@ QStringList VirtualDesktopInfo::WaylandPrivate::desktopNames() const
 
 int VirtualDesktopInfo::WaylandPrivate::desktopLayoutRows() const
 {
+    if (!virtualDesktopManagement) {
+        return 0;
+    }
+
     return virtualDesktopManagement->rows();
 }
 
 void VirtualDesktopInfo::WaylandPrivate::requestActivate(const QVariant &desktop)
 {
+    if (!virtualDesktopManagement) {
+        return;
+    }
     KWayland::Client::PlasmaVirtualDesktop *desktopObj = virtualDesktopManagement->getVirtualDesktop(desktop.toString());
 
     if (desktopObj) {
@@ -365,11 +375,17 @@ void VirtualDesktopInfo::WaylandPrivate::requestActivate(const QVariant &desktop
 
 void VirtualDesktopInfo::WaylandPrivate::requestCreateDesktop(quint32 position)
 {
+    if (!virtualDesktopManagement) {
+        return;
+    }
     virtualDesktopManagement->requestCreateVirtualDesktop(i18n("New Desktop"), position);
 }
 
 void VirtualDesktopInfo::WaylandPrivate::requestRemoveDesktop(quint32 position)
 {
+    if (!virtualDesktopManagement) {
+        return;
+    }
     if (virtualDesktops.count() == 1) {
         return;
     }
