@@ -643,10 +643,13 @@ void ShellCorona::load()
         return;
     }
 
-    if (m_activityController->serviceStatus() != KActivities::Controller::Running &&
+    auto activityStatus = m_activityController->serviceStatus();
+    if (activityStatus != KActivities::Controller::Running &&
         !qApp->property("org.kde.KActivities.core.disableAutostart").toBool()) {
-        qWarning("Aborting shell load: The activity manager daemon (kactivitymanagerd) is not running.");
-        qWarning("If this Plasma has been installed into a custom prefix, verify that its D-Bus services dir is known to the system for the daemon to be activatable.");
+        if (activityStatus == KActivities::Controller::NotRunning) {
+            qWarning("Aborting shell load: The activity manager daemon (kactivitymanagerd) is not running.");
+            qWarning("If this Plasma has been installed into a custom prefix, verify that its D-Bus services dir is known to the system for the daemon to be activatable.");
+        }
         return;
     }
 
