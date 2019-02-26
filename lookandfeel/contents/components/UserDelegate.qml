@@ -147,6 +147,19 @@ Item {
         "
     }
 
+    DropShadow {
+        id: usernameShadow
+        visible: !softwareRendering
+        anchors.fill: usernameDelegate
+        source: usernameDelegate
+        horizontalOffset: 0
+        verticalOffset: 1
+        radius: 12
+        samples: 32
+        spread: 0.35
+        color: ColorScope.backgroundColor
+    }
+    
     PlasmaComponents.Label {
         id: usernameDelegate
         anchors {
@@ -162,16 +175,6 @@ Item {
         horizontalAlignment: Text.AlignHCenter
         //make an indication that this has active focus, this only happens when reached with keyboard navigation
         font.underline: wrapper.activeFocus
-
-        layer.enabled: !softwareRendering
-        layer.effect: DropShadow {
-            horizontalOffset: 0
-            verticalOffset: 1
-            radius: 12
-            samples: 32
-            spread: 0.35
-            color: ColorScope.backgroundColor
-        }
     }
 
     MouseArea {

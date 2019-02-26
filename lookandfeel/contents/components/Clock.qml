@@ -32,6 +32,19 @@ Item {
     width: clock.implicitWidth
     height: clock.implicitHeight
 
+    DropShadow {
+        id: clockShadow
+        visible: !softwareRendering
+        anchors.fill: clock
+        source: clock
+        horizontalOffset: 0
+        verticalOffset: 2
+        radius: 14
+        samples: 32
+        spread: 0.3
+        color: ColorScope.backgroundColor
+    }
+    
     ColumnLayout {
         id: clock
         Label {
@@ -54,15 +67,5 @@ Item {
             connectedSources: ["Local"]
             interval: 1000
         }
-    }
-
-    layer.enabled: !softwareRendering
-    layer.effect: DropShadow {
-        horizontalOffset: 0
-        verticalOffset: 2
-        radius: 14
-        samples: 32
-        spread: 0.3
-        color: ColorScope.backgroundColor
     }
 }
