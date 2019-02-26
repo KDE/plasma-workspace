@@ -152,12 +152,12 @@ Item {
         visible: !softwareRendering
         anchors.fill: usernameDelegate
         source: usernameDelegate
-        horizontalOffset: 0
+        horizontalOffset: 1
         verticalOffset: 1
-        radius: 12
-        samples: 32
+        radius: 4
+        samples: 9
         spread: 0.35
-        color: ColorScope.backgroundColor
+        color: "black" // matches Breeze window decoration and desktopcontainment
     }
     
     PlasmaComponents.Label {

@@ -37,12 +37,12 @@ Item {
         visible: !softwareRendering
         anchors.fill: clock
         source: clock
-        horizontalOffset: 0
-        verticalOffset: 2
-        radius: 14
-        samples: 32
+        horizontalOffset: 1
+        verticalOffset: 1
+        radius: 6
+        samples: 14
         spread: 0.3
-        color: ColorScope.backgroundColor
+        color: "black" // matches Breeze window decoration and desktopcontainment
     }
     
     ColumnLayout {
