@@ -378,7 +378,7 @@ AdvancedWidget::AdvancedWidget( QWidget *parent )
     : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
 
     QGroupBox *groupBox = new QGroupBox(i18n("D&isable Actions for Windows of Type WM_CLASS"), this);
     groupBox->setLayout(new QVBoxLayout(groupBox));
