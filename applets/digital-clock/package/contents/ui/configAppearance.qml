@@ -132,6 +132,7 @@ QtLayouts.ColumnLayout {
             }
 
             QtControls.Button {
+                visible: KCMShell.authorize("formats.desktop").length > 0
                 text: i18n("Change Regional Settings...")
                 icon.name: "preferences-desktop-locale"
                 onClicked: KCMShell.open("formats.desktop")
