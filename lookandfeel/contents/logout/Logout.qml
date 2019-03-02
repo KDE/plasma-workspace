@@ -149,8 +149,8 @@ PlasmaCore.ColorScope {
             wrapMode: Text.WordWrap
             font.italic: true
             text: i18ndp("plasma_lookandfeel_org.kde.lookandfeel",
-                         "One other user is currently logged in. If the computer is shut down or rebooted, that user may lose work.",
-                         "%1 other users are currently logged in. If the computer is shut down or rebooted, those users may lose work.",
+                         "One other user is currently logged in. If the computer is shut down or restarted, that user may lose work.",
+                         "%1 other users are currently logged in. If the computer is shut down or restarted, those users may lose work.",
                          sessionsModel.count)
             visible: sessionsModel.count > 1
         }
@@ -179,7 +179,7 @@ PlasmaCore.ColorScope {
             LogoutButton {
                 id: rebootButton
                 iconSource: "system-reboot"
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Reboot")
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
                 action: root.rebootRequested
                 KeyNavigation.left: hibernateButton
                 KeyNavigation.right: shutdownButton
@@ -199,7 +199,7 @@ PlasmaCore.ColorScope {
             LogoutButton {
                 id: logoutButton
                 iconSource: "system-log-out"
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Logout")
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log Out")
                 action: root.logoutRequested
                 KeyNavigation.left: shutdownButton
                 KeyNavigation.right: suspendButton
@@ -222,7 +222,7 @@ PlasmaCore.ColorScope {
             text: {
                 switch (sdtype) {
                     case ShutdownType.ShutdownTypeReboot:
-                        return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Reboot in 1 second", "Reboot in %1 seconds", root.remainingTime);
+                        return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Restarting in 1 second", "Restarting in %1 seconds", root.remainingTime);
                     case ShutdownType.ShutdownTypeHalt:
                         return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Shutting down in 1 second", "Shutting down in %1 seconds", root.remainingTime);
                     default:
