@@ -41,7 +41,7 @@ Item {
     property bool constrainText: true
     signal clicked()
 
-    property real faceSize: Math.min(width, height - usernameDelegate.height - units.largeSpacing)
+    property real faceSize: Math.min(width, height - usernameDelegate.height - units.smallSpacing)
 
     opacity: isCurrent ? 1.0 : 0.5
 
@@ -65,7 +65,11 @@ Item {
 
     Item {
         id: imageSource
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors {
+            bottom: usernameDelegate.top
+            bottomMargin: units.largeSpacing
+            horizontalCenter: parent.horizontalCenter
+        }
         width: faceSize
         height: faceSize
 
@@ -89,8 +93,11 @@ Item {
     }
 
     ShaderEffect {
-        anchors.top: parent.top
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors {
+            bottom: usernameDelegate.top
+            bottomMargin: units.largeSpacing
+            horizontalCenter: parent.horizontalCenter
+        }
 
         width: imageSource.width
         height: imageSource.height
@@ -162,6 +169,7 @@ Item {
     
     PlasmaComponents.Label {
         id: usernameDelegate
+        font.pointSize: 12
         anchors {
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter

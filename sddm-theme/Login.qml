@@ -44,6 +44,7 @@ SessionManagementScreen {
 
     PlasmaComponents.TextField {
         id: userNameInput
+        font.pointSize: 11
         Layout.fillWidth: true
 
         text: lastUserName
@@ -59,6 +60,7 @@ SessionManagementScreen {
 
     PlasmaComponents.TextField {
         id: passwordBox
+        font.pointSize: 11
         Layout.fillWidth: true
 
         placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
@@ -99,6 +101,7 @@ SessionManagementScreen {
     }
     PlasmaComponents.Button {
         id: loginButton
+        font.pointSize: 11
         Layout.fillWidth: true
 
         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log In")
