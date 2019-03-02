@@ -54,13 +54,12 @@ Item {
     // Draw a translucent background circle under the user picture
     Rectangle {
         anchors.centerIn: imageSource
-
-        width: imageSource.width + 2
+        width: imageSource.width - 2 // Subtract to prevent fringing
         height: width
         radius: width / 2
 
         color: PlasmaCore.ColorScope.backgroundColor
-        opacity: 0.9
+        opacity: 0.6
     }
 
     Item {
