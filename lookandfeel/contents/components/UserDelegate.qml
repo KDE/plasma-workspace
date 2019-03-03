@@ -70,8 +70,13 @@ Item {
             bottomMargin: units.largeSpacing
             horizontalCenter: parent.horizontalCenter
         }
-        width: faceSize
-        height: faceSize
+        Behavior on width { 
+            PropertyAnimation {
+                duration: units.longDuration * 2;
+            } 
+        }
+        width: isCurrent ? faceSize : faceSize - units.largeSpacing
+        height: width
 
         //Image takes priority, taking a full path to a file, if that doesn't exist we show an icon
         Image {
@@ -108,7 +113,7 @@ Item {
             sourceItem: imageSource
             // software rendering is just a fallback so we can accept not having a rounded avatar here
             hideSource: wrapper.GraphicsInfo.api !== GraphicsInfo.Software
-            live: false
+            live: true // otherwise the user in focus will show a blurred avatar
         }
 
         property var colorBorder: PlasmaCore.ColorScope.textColor
