@@ -360,8 +360,8 @@ private:
                 }
                 seen(action);
 
-
-                if (!action.text().contains(term, Qt::CaseInsensitive)) {
+                const int matchIndex = action.text().indexOf(term, 0, Qt::CaseInsensitive);
+                if (matchIndex < 0) {
                     continue;
                 }
 
@@ -377,7 +377,7 @@ private:
                 match.setData(action.exec());
 
                 qreal relevance = 0.5;
-                if (action.text().startsWith(term, Qt::CaseInsensitive)) {
+                if (matchIndex == 0) {
                     relevance += 0.05;
                 }
 
