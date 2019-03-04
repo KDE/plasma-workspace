@@ -27,6 +27,7 @@ Item {
     property alias iconSource: icon.source
     property alias containsMouse: mouseArea.containsMouse
     property alias font: label.font
+    property alias labelRendering: label.renderType
     signal clicked
 
     activeFocusOnTab: true

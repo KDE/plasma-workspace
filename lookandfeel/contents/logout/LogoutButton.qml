@@ -31,6 +31,7 @@ ActionButton {
     Layout.alignment: Qt.AlignTop
     iconSize: units.iconSizes.huge
     opacity: activeFocus || containsMouse ? 1 : 0.5
+    labelRendering: opacity != 1 ? Text.QtRendering : Text.NativeRendering // Remove once we've solved Qt bug: https://bugreports.qt.io/browse/QTBUG-70138 (KDE bug: https://bugs.kde.org/show_bug.cgi?id=401644)
     font.underline: false
     Behavior on opacity {
         OpacityAnimator {
