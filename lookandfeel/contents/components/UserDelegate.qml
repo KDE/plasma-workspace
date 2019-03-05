@@ -72,8 +72,9 @@ Item {
         }
         Behavior on width { 
             PropertyAnimation {
+                from: faceSize
                 duration: units.longDuration * 2;
-            } 
+            }
         }
         width: isCurrent ? faceSize : faceSize - units.largeSpacing
         height: width
