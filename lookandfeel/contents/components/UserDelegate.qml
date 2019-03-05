@@ -171,7 +171,7 @@ Item {
         spread: 0.35
         color: "black" // matches Breeze window decoration and desktopcontainment
     }
-    
+
     PlasmaComponents.Label {
         id: usernameDelegate
         font.pointSize: 12
