@@ -141,7 +141,7 @@ PlasmaCore.ColorScope {
         width: Math.max(implicitWidth, units.gridUnit * 16)
 
         PlasmaComponents.Label {
-            font.pointSize: 11
+            font.pointSize: theme.defaultFont.pointSize + 1
             Layout.maximumWidth: units.gridUnit * 16
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
@@ -209,7 +209,7 @@ PlasmaCore.ColorScope {
         }
 
         PlasmaComponents.Label {
-            font.pointSize: 11
+            font.pointSize: theme.defaultFont.pointSize + 1
             Layout.alignment: Qt.AlignHCenter
             //opacity, as visible would re-layout
             opacity: countDownTimer.running ? 1 : 0
@@ -234,13 +234,13 @@ PlasmaCore.ColorScope {
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
             PlasmaComponents.Button {
-                font.pointSize: 11
+                font.pointSize: theme.defaultFont.pointSize + 1
                 enabled: root.currentAction != null
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "OK")
                 onClicked: root.currentAction()
             }
             PlasmaComponents.Button {
-                font.pointSize: 11
+                font.pointSize: theme.defaultFont.pointSize + 1
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Cancel")
                 onClicked: root.cancelRequested()
             }

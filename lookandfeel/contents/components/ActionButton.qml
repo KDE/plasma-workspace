@@ -48,10 +48,10 @@ Item {
         colorGroup: PlasmaCore.ColorScope.colorGroup
         active: mouseArea.containsMouse || root.activeFocus
     }
-    
+
     PlasmaComponents.Label {
         id: label
-        font.pointSize: 11
+        font.pointSize: theme.defaultFont.pointSize + 1
         anchors {
             top: icon.bottom
             topMargin: units.smallSpacing

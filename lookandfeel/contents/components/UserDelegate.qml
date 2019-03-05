@@ -175,7 +175,7 @@ Item {
 
     PlasmaComponents.Label {
         id: usernameDelegate
-        font.pointSize: 12
+        font.pointSize: theme.defaultFont.pointSize + 2
         anchors {
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter
