@@ -44,20 +44,20 @@ Item {
         spread: 0.3
         color: "black" // matches Breeze window decoration and desktopcontainment
     }
-    
+
     ColumnLayout {
         id: clock
         Label {
             text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
-            style: softwareRendering ? Text.Outline : undefined
-            styleColor: softwareRendering ? ColorScope.backgroundColor : undefined
+            style: softwareRendering ? Text.Outline : Text.Normal
+            styleColor: softwareRendering ? ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
             font.pointSize: 48
             Layout.alignment: Qt.AlignHCenter
         }
         Label {
             text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
-            style: softwareRendering ? Text.Outline : undefined
-            styleColor: softwareRendering ? ColorScope.backgroundColor : undefined
+            style: softwareRendering ? Text.Outline : Text.Normal
+            styleColor: softwareRendering ? ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
             font.pointSize: 24
             Layout.alignment: Qt.AlignHCenter
         }

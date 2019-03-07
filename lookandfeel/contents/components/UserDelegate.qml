@@ -183,8 +183,8 @@ Item {
         height: implicitHeight // work around stupid bug in Plasma Components that sets the height
         width: constrainText ? parent.width : implicitWidth
         text: wrapper.name
-        style: softwareRendering ? Text.Outline : undefined
-        styleColor: softwareRendering ? ColorScope.backgroundColor : undefined
+        style: softwareRendering ? Text.Outline : Text.Normal
+        styleColor: softwareRendering ? ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
         elide: Text.ElideRight
         horizontalAlignment: Text.AlignHCenter
         //make an indication that this has active focus, this only happens when reached with keyboard navigation
