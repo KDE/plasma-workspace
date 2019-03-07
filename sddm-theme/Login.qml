@@ -58,54 +58,63 @@ SessionManagementScreen {
             }
     }
 
-    PlasmaComponents.TextField {
-        id: passwordBox
-        font.pointSize: theme.defaultFont.pointSize + 1
+    RowLayout {
         Layout.fillWidth: true
 
-        placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
-        focus: !showUsernamePrompt || lastUserName
-        echoMode: TextInput.Password
-        revealPasswordButtonShown: true
+        PlasmaComponents.TextField {
+            id: passwordBox
+            font.pointSize: theme.defaultFont.pointSize + 1
+            Layout.fillWidth: true
 
-        onAccepted: {
-            if (root.loginScreenUiVisible) {
-                startLogin();
+            placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
+            focus: !showUsernamePrompt || lastUserName
+            echoMode: TextInput.Password
+            revealPasswordButtonShown: true
+
+            onAccepted: {
+                if (root.loginScreenUiVisible) {
+                    startLogin();
+                }
+            }
+
+            Keys.onEscapePressed: {
+                mainStack.currentItem.forceActiveFocus();
+            }
+
+            //if empty and left or right is pressed change selection in user switch
+            //this cannot be in keys.onLeftPressed as then it doesn't reach the password box
+            Keys.onPressed: {
+                if (event.key == Qt.Key_Left && !text) {
+                    userList.decrementCurrentIndex();
+                    event.accepted = true
+                }
+                if (event.key == Qt.Key_Right && !text) {
+                    userList.incrementCurrentIndex();
+                    event.accepted = true
+                }
+            }
+
+            Connections {
+                target: sddm
+                onLoginFailed: {
+                    passwordBox.selectAll()
+                    passwordBox.forceActiveFocus()
+                }
             }
         }
 
-        Keys.onEscapePressed: {
-            mainStack.currentItem.forceActiveFocus();
-        }
+        PlasmaComponents.Button {
+            id: loginButton
+            Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log In")
+            implicitHeight: passwordBox.height - units.smallSpacing * 0.5 // otherwise it comes out taller than the password field
+            Layout.rightMargin: 1 // prevents it from extending beyond the username field
 
-        //if empty and left or right is pressed change selection in user switch
-        //this cannot be in keys.onLeftPressed as then it doesn't reach the password box
-        Keys.onPressed: {
-            if (event.key == Qt.Key_Left && !text) {
-                userList.decrementCurrentIndex();
-                event.accepted = true
+            PlasmaCore.IconItem { // no iconSource because if you take away half a unit (implicitHeight), "go-next" gets cut off
+                anchors.fill: parent
+                anchors.margins: units.smallSpacing
+                source: "go-next"
             }
-            if (event.key == Qt.Key_Right && !text) {
-                userList.incrementCurrentIndex();
-                event.accepted = true
-            }
-        }
-
-        Connections {
-            target: sddm
-            onLoginFailed: {
-                passwordBox.selectAll()
-                passwordBox.forceActiveFocus()
-            }
+            onClicked: startLogin();
         }
     }
-    PlasmaComponents.Button {
-        id: loginButton
-        font.pointSize: theme.defaultFont.pointSize + 1
-        Layout.fillWidth: true
-
-        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log In")
-        onClicked: startLogin();
-    }
-
 }
