@@ -28,6 +28,8 @@ Item {
     property alias containsMouse: mouseArea.containsMouse
     property alias font: label.font
     property alias labelRendering: label.renderType
+    property alias circleOpacity: iconCircle.opacity
+    property alias circleVisiblity: iconCircle.visible
     signal clicked
 
     activeFocusOnTab: true
@@ -36,6 +38,30 @@ Item {
 
     implicitWidth: Math.max(iconSize + units.largeSpacing * 2, label.contentWidth)
     implicitHeight: iconSize + units.smallSpacing + label.implicitHeight
+
+    opacity: activeFocus || containsMouse ? 1 : 0.85
+        Behavior on opacity {
+            PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
+                duration: units.longDuration * 2
+                easing.type: Easing.InOutQuad
+            }
+    }
+
+    Rectangle {
+        id: iconCircle
+        anchors.centerIn: icon
+        width: iconSize + units.smallSpacing
+        height: width
+        radius: width / 2
+        color: PlasmaCore.ColorScope.textColor
+        opacity: activeFocus || containsMouse ? 0.15 : 0
+        Behavior on opacity {
+                PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
+                    duration: units.longDuration * 3
+                    easing.type: Easing.InOutQuad
+                }
+        }
+    }
 
     PlasmaCore.IconItem {
         id: icon
