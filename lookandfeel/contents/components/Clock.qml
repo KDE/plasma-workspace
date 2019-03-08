@@ -19,53 +19,31 @@
 
 import QtQuick 2.8
 import QtQuick.Layouts 1.1
-import QtGraphicalEffects 1.0
 
 import org.kde.plasma.core 2.0
 import org.kde.plasma.components 2.0
 
-Item {
-    // If we're using software rendering, draw outlines instead of shadows
-    // See https://bugs.kde.org/show_bug.cgi?id=398317
+ColumnLayout {
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
 
-    width: clock.implicitWidth
-    height: clock.implicitHeight
-
-    DropShadow {
-        id: clockShadow
-        visible: !softwareRendering
-        anchors.fill: clock
-        source: clock
-        horizontalOffset: 1
-        verticalOffset: 1
-        radius: 6
-        samples: 14
-        spread: 0.3
-        color: "black" // matches Breeze window decoration and desktopcontainment
+    Label {
+        text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
+        style: softwareRendering ? Text.Outline : Text.Normal
+        styleColor: softwareRendering ? ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
+        font.pointSize: 48
+        Layout.alignment: Qt.AlignHCenter
     }
-
-    ColumnLayout {
-        id: clock
-        Label {
-            text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
-            style: softwareRendering ? Text.Outline : Text.Normal
-            styleColor: softwareRendering ? ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
-            font.pointSize: 48
-            Layout.alignment: Qt.AlignHCenter
-        }
-        Label {
-            text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
-            style: softwareRendering ? Text.Outline : Text.Normal
-            styleColor: softwareRendering ? ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
-            font.pointSize: 24
-            Layout.alignment: Qt.AlignHCenter
-        }
-        DataSource {
-            id: timeSource
-            engine: "time"
-            connectedSources: ["Local"]
-            interval: 1000
-        }
+    Label {
+        text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
+        style: softwareRendering ? Text.Outline : Text.Normal
+        styleColor: softwareRendering ? ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
+        font.pointSize: 24
+        Layout.alignment: Qt.AlignHCenter
+    }
+    DataSource {
+        id: timeSource
+        engine: "time"
+        connectedSources: ["Local"]
+        interval: 1000
     }
 }

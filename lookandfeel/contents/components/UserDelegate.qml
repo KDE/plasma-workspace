@@ -19,8 +19,6 @@
  */
 
 import QtQuick 2.8
-import QtGraphicalEffects 1.0
-
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
@@ -157,19 +155,6 @@ Item {
                             gl_FragColor = gl_FragColor * qt_Opacity;
                     }
         "
-    }
-
-    DropShadow {
-        id: usernameShadow
-        visible: !softwareRendering
-        anchors.fill: usernameDelegate
-        source: usernameDelegate
-        horizontalOffset: 1
-        verticalOffset: 1
-        radius: 4
-        samples: 9
-        spread: 0.35
-        color: "black" // matches Breeze window decoration and desktopcontainment
     }
 
     PlasmaComponents.Label {

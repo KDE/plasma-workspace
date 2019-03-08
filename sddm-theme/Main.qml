@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.2
+import QtQuick 2.8
 
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.1
@@ -31,6 +31,11 @@ import "components"
 
 PlasmaCore.ColorScope {
     id: root
+
+    // If we're using software rendering, draw outlines instead of shadows
+    // See https://bugs.kde.org/show_bug.cgi?id=398317
+    readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
+
     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
 
     width: 1600
@@ -115,9 +120,29 @@ PlasmaCore.ColorScope {
             clock: clock
         }
 
+        DropShadow {
+            id: clockShadow
+            anchors.fill: clock
+            source: clock
+            visible: !softwareRendering
+            horizontalOffset: 1
+            verticalOffset: 1
+            radius: 6
+            samples: 14
+            spread: 0.3
+            color: "black" // matches Breeze window decoration and desktopcontainment
+            Behavior on opacity {
+                OpacityAnimator {
+                    duration: 1000
+                    easing.type: Easing.InOutQuad
+                }
+            }
+        }
+
         Clock {
             id: clock
             visible: y > 0
+            property Item shadow: clockShadow
             y: (userListComponent.userList.y + mainStack.y)/2 - height/2
             anchors.horizontalCenter: parent.horizontalCenter
         }

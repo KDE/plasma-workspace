@@ -17,7 +17,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
-import QtQuick 2.6
+import QtQuick 2.8
 import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
@@ -29,6 +29,10 @@ import org.kde.plasma.private.sessions 2.0
 import "../components"
 
 PlasmaCore.ColorScope {
+
+    // If we're using software rendering, draw outlines instead of shadows
+    // See https://bugs.kde.org/show_bug.cgi?id=398317
+    readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
 
     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
 
@@ -161,6 +165,25 @@ PlasmaCore.ColorScope {
             clock: clock
         }
 
+        DropShadow {
+            id: clockShadow
+            anchors.fill: clock
+            source: clock
+            visible: !softwareRendering
+            horizontalOffset: 1
+            verticalOffset: 1
+            radius: 6
+            samples: 14
+            spread: 0.3
+            color: "black" // matches Breeze window decoration and desktopcontainment
+            Behavior on opacity {
+                OpacityAnimator {
+                    duration: 1000
+                    easing.type: Easing.InOutQuad
+                }
+            }
+        }
+
         Clock {
             id: clock
             property Item shadow: clockShadow
@@ -269,7 +292,7 @@ PlasmaCore.ColorScope {
                     state = "hidden";
                 }
             }
-            
+
             states: [
                 State {
                     name: "visible"
