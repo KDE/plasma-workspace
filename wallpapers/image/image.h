@@ -48,6 +48,7 @@ namespace KNS3 {
 }
 
 class BackgroundListModel;
+class SlideModel;
 
 class Image : public QObject, public QQmlParserStatus
 {
@@ -57,6 +58,7 @@ class Image : public QObject, public QQmlParserStatus
     Q_PROPERTY(RenderingMode renderingMode READ renderingMode WRITE setRenderingMode NOTIFY renderingModeChanged)
     Q_PROPERTY(QUrl wallpaperPath READ wallpaperPath NOTIFY wallpaperPathChanged)
     Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel *slideshowModel READ slideshowModel CONSTANT)
     Q_PROPERTY(int slideTimer READ slideTimer WRITE setSlideTimer NOTIFY slideTimerChanged)
     Q_PROPERTY(QStringList usersWallpapers READ usersWallpapers WRITE setUsersWallpapers NOTIFY usersWallpapersChanged)
     Q_PROPERTY(QStringList slidePaths READ slidePaths WRITE setSlidePaths NOTIFY slidePathsChanged)
@@ -82,6 +84,7 @@ class Image : public QObject, public QQmlParserStatus
 
         Q_INVOKABLE void addSlidePath(const QString &path);
         Q_INVOKABLE void removeSlidePath(const QString &path);
+        Q_INVOKABLE void openFolder(const QString& path);
 
         Q_INVOKABLE void getNewWallpaper(QQuickItem *ctx = nullptr);
         Q_INVOKABLE void showFileDialog();
@@ -98,6 +101,7 @@ class Image : public QObject, public QQmlParserStatus
         KPackage::Package *package();
 
         QAbstractItemModel* wallpaperModel();
+        QAbstractItemModel* slideshowModel();
 
         int slideTimer() const;
         void setSlideTimer(int time);
@@ -116,7 +120,7 @@ class Image : public QObject, public QQmlParserStatus
 
         QString photosPath() const;
 
-    public Q_SLOTS:
+        public Q_SLOTS:
         void nextSlide();
         void removeWallpaper(QString name);
 
@@ -178,6 +182,7 @@ class Image : public QObject, public QQmlParserStatus
         QTimer m_timer;
         int m_currentSlide;
         BackgroundListModel *m_model;
+        SlideModel* m_slideshowModel;
         QFileDialog *m_dialog;
         QString m_img;
         QDateTime m_previousModified;

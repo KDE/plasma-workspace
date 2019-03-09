@@ -238,29 +238,69 @@ ColumnLayout {
                     text: i18nd("plasma_wallpaper_org.kde.image","Seconds")
                 }
             }
-            QtControls2.ScrollView {
-                id: foldersScroll
-                Layout.fillHeight: true;
+            Kirigami.Heading {
+                text: "Folders"
+                level: 2
+            }
+            GridLayout {
+                columns: 2
                 Layout.fillWidth: true
-                Component.onCompleted: foldersScroll.background.visible = true;
-                ListView {
-                    id: slidePathsView
-                    anchors.margins: 4
-                    model: imageWallpaper.slidePaths
-                    delegate: QtControls2.Label {
-                        text: modelData
-                        width: slidePathsView.width
-                        height: Math.max(paintedHeight, removeButton.height);
-                        QtControls2.ToolButton {
-                            id: removeButton
-                            anchors {
-                                verticalCenter: parent.verticalCenter
-                                right: parent.right
+                Layout.fillHeight: true
+                columnSpacing: Kirigami.Units.largeSpacing
+                QtControls2.ScrollView {
+                    id: foldersScroll
+                    Layout.fillHeight: true
+                    Layout.preferredWidth: 0.25 * parent.width
+                    Component.onCompleted: foldersScroll.background.visible = true;
+                    ListView {
+                        id: slidePathsView
+                        anchors.margins: 4
+                        model: imageWallpaper.slidePaths
+                        delegate: Kirigami.SwipeListItem {
+                            id: folderDelegate
+                            actions: [
+                                Kirigami.Action {
+                                    iconName: "list-remove"
+                                    tooltip: i18nd("plasma_wallpaper_org.kde.image", "Remove Folder")
+                                    onTriggered: imageWallpaper.removeSlidePath(modelData)
+                                },
+                                Kirigami.Action {
+                                    icon.name: "document-open-folder"
+                                    tooltip: i18nd("plasma_wallpaper_org.kde.image", "Open Folder")
+                                    onTriggered: imageWallpaper.openFolder(modelData)
+                                }
+                            ]
+                            QtControls2.Label {
+                                text: modelData.endsWith("/") ? modelData.split('/').reverse()[1] : modelData.split('/').pop()
+                                Layout.fillWidth: true
+                                QtControls2.ToolTip.text: modelData
+                                QtControls2.ToolTip.visible: folderDelegate.hovered
+                                QtControls2.ToolTip.delay: 1000
+                                QtControls2.ToolTip.timeout: 5000
                             }
-                            icon.name: "list-remove"
-                            onClicked: imageWallpaper.removeSlidePath(modelData);
+                            width: slidePathsView.width
+                            height: paintedHeight;
                         }
                     }
+                }
+                Loader {
+                    sourceComponent: thumbnailsComponent
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    anchors.fill: undefined
+                }
+                QtControls2.Button {
+                    Layout.alignment: Qt.AlignRight
+                    icon.name: "list-add"
+                    text: i18nd("plasma_wallpaper_org.kde.image","Add Folder...")
+                    onClicked: imageWallpaper.showAddSlidePathsDialog()
+                }
+                QtControls2.Button {
+                    Layout.alignment: Qt.AlignRight
+                    icon.name: "get-hot-new-stuff"
+                    text: i18nd("plasma_wallpaper_org.kde.image","Get New Wallpapers...")
+                    visible: KAuthorized.authorize("ghns")
+                    onClicked: imageWallpaper.getNewWallpaper(this);
                 }
             }
         }
@@ -271,12 +311,12 @@ ColumnLayout {
         KCM.GridView {
             id: wallpapersGrid
             anchors.fill: parent
-
+            property var imageModel: (configDialog.currentWallpaper == "org.kde.image")? imageWallpaper.wallpaperModel : imageWallpaper.slideshowModel
             //that min is needed as the module will be populated in an async way
             //and only on demand so we can't ensure it already exists
-            view.currentIndex: Math.min(imageWallpaper.wallpaperModel.indexOf(cfg_Image), imageWallpaper.wallpaperModel.count-1)
+            view.currentIndex: Math.min(imageModel.indexOf(cfg_Image), imageModel.count-1)
             //kill the space for label under thumbnails
-            view.model: imageWallpaper.wallpaperModel
+            view.model: imageModel
             view.delegate: WallpaperDelegate {
                 color: cfg_Color
             }
@@ -307,21 +347,16 @@ ColumnLayout {
 
         Loader {
             anchors.fill: parent
-            sourceComponent: (configDialog.currentWallpaper == "org.kde.image") ? thumbnailsComponent : foldersComponent
+            sourceComponent: (configDialog.currentWallpaper == "org.kde.image") ? thumbnailsComponent :
+                ((configDialog.currentWallpaper == "org.kde.slideshow") ? foldersComponent : undefined)
         }
     }
 
     RowLayout {
         id: buttonsRow
         Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+        visible: configDialog.currentWallpaper == "org.kde.image"
         QtControls2.Button {
-            visible: (configDialog.currentWallpaper == "org.kde.slideshow")
-            icon.name: "list-add"
-            text: i18nd("plasma_wallpaper_org.kde.image","Add Folder...")
-            onClicked: imageWallpaper.showAddSlidePathsDialog()
-        }
-        QtControls2.Button {
-            visible: (configDialog.currentWallpaper == "org.kde.image")
             icon.name: "list-add"
             text: i18nd("plasma_wallpaper_org.kde.image","Add Image...")
             onClicked: imageWallpaper.showFileDialog();
