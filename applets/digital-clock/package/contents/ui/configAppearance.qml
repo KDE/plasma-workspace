@@ -52,7 +52,7 @@ QtLayouts.ColumnLayout {
         // HACK by the time we populate our model and/or the ComboBox is finished the value is still undefined
         if (cfg_fontFamily) {
             for (var i = 0, j = fontsModel.count; i < j; ++i) {
-                if (fontsModel.get(i).value == cfg_fontFamily) {
+                if (fontsModel.get(i).value === cfg_fontFamily) {
                     fontFamilyComboBox.currentIndex = i
                     break
                 }
@@ -170,7 +170,7 @@ QtLayouts.ColumnLayout {
 
             Component.onCompleted: {
                 for (var i = 0; i < model.length; i++) {
-                    if (model[i]["name"] == plasmoid.configuration.dateFormat) {
+                    if (model[i]["name"] === plasmoid.configuration.dateFormat) {
                         dateFormat.currentIndex = i;
                     }
                 }

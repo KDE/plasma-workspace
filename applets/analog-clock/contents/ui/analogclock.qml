@@ -66,7 +66,7 @@ Item {
         //console.log("Date/time changed!");
 
         var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
-        if (currentTZOffset != tzOffset) {
+        if (currentTZOffset !== tzOffset) {
             tzOffset = currentTZOffset;
             //console.log("TZ offset changed: " + tzOffset);
             Date.timeZoneUpdated(); // inform the QML JS engine about TZ change
@@ -81,8 +81,8 @@ Item {
 
     Plasmoid.compactRepresentation: Item {
         id: representation
-        Layout.minimumWidth: plasmoid.formFactor != PlasmaCore.Types.Vertical ? representation.height : units.gridUnit
-        Layout.minimumHeight: plasmoid.formFactor == PlasmaCore.Types.Vertical ? representation.width : units.gridUnit
+        Layout.minimumWidth: plasmoid.formFactor !== PlasmaCore.Types.Vertical ? representation.height : units.gridUnit
+        Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? representation.width : units.gridUnit
 
         MouseArea {
             anchors.fill: parent

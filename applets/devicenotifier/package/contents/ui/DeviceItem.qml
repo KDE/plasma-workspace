@@ -185,7 +185,7 @@ MouseArea {
                 id: iconToolTip
                 anchors.fill: parent
                 subText: {
-                    if ((mounted || deviceItem.state != 0) && model["Available Content"] != "Audio") {
+                    if ((mounted || deviceItem.state != 0) && model["Available Content"] !== "Audio") {
                         if (model["Removable"]) {
                             return i18n("It is currently <b>not safe</b> to remove this device: applications may be accessing it. Click the eject button to safely remove this device.")
                         } else {

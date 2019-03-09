@@ -72,7 +72,7 @@ PlasmaCore.ColorScope {
         anchors.fill: parent
 
         property bool uiVisible: true
-        property bool blockUI: mainStack.depth > 1 || userListComponent.mainPasswordBox.text.length > 0 || inputPanel.keyboardActive || config.type != "image"
+        property bool blockUI: mainStack.depth > 1 || userListComponent.mainPasswordBox.text.length > 0 || inputPanel.keyboardActive || config.type !== "image"
 
         hoverEnabled: true
         drag.filterChildren: true
@@ -111,7 +111,7 @@ PlasmaCore.ColorScope {
             }
         }
         WallpaperFader {
-            visible: config.type == "image"
+            visible: config.type === "image"
             anchors.fill: parent
             state: loginScreenRoot.uiVisible ? "on" : "off"
             source: wallpaper
@@ -180,7 +180,7 @@ PlasmaCore.ColorScope {
                     || !userListModel.hasOwnProperty("disableAvatarsThreshold"))
                         return (userList.y + mainStack.y) > 0
 
-                    if ( userListModel.count == 0 ) return false
+                    if ( userListModel.count === 0 ) return false
 
                     return userListModel.count <= userListModel.disableAvatarsThreshold && (userList.y + mainStack.y) > 0
                 }

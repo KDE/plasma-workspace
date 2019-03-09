@@ -183,7 +183,7 @@ PlasmaCore.ColorScope {
                 action: root.rebootRequested
                 KeyNavigation.left: hibernateButton
                 KeyNavigation.right: shutdownButton
-                focus: sdtype == ShutdownType.ShutdownTypeReboot
+                focus: sdtype === ShutdownType.ShutdownTypeReboot
                 visible: maysd
             }
             LogoutButton {
@@ -193,7 +193,7 @@ PlasmaCore.ColorScope {
                 action: root.haltRequested
                 KeyNavigation.left: rebootButton
                 KeyNavigation.right: logoutButton
-                focus: sdtype == ShutdownType.ShutdownTypeHalt
+                focus: sdtype === ShutdownType.ShutdownTypeHalt
                 visible: maysd
             }
             LogoutButton {
@@ -203,7 +203,7 @@ PlasmaCore.ColorScope {
                 action: root.logoutRequested
                 KeyNavigation.left: shutdownButton
                 KeyNavigation.right: suspendButton
-                focus: sdtype == ShutdownType.ShutdownTypeNone
+                focus: sdtype === ShutdownType.ShutdownTypeNone
                 visible: canLogout
             }
         }
@@ -235,7 +235,7 @@ PlasmaCore.ColorScope {
             Layout.alignment: Qt.AlignHCenter
             PlasmaComponents.Button {
                 font.pointSize: theme.defaultFont.pointSize + 1
-                enabled: root.currentAction != null
+                enabled: root.currentAction !== null
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "OK")
                 onClicked: root.currentAction()
             }

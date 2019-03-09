@@ -34,8 +34,8 @@ Item {
     width: units.gridUnit * 10
     height: units.gridUnit * 10
     Plasmoid.preferredRepresentation: plasmoid.fullRepresentation
-    Layout.minimumWidth: units.gridUnit * 12 * (plasmoid.formFactor == PlasmaCore.Types.Horizontal ? sourcesModel.count : 1)
-    Layout.minimumHeight: units.gridUnit * 4 * (plasmoid.formFactor == PlasmaCore.Types.Vertical ? sourcesModel.count : 1)
+    Layout.minimumWidth: units.gridUnit * 12 * (plasmoid.formFactor === PlasmaCore.Types.Horizontal ? sourcesModel.count : 1)
+    Layout.minimumHeight: units.gridUnit * 4 * (plasmoid.formFactor === PlasmaCore.Types.Vertical ? sourcesModel.count : 1)
 
     Layout.preferredHeight: Layout.minimumHeight
 
@@ -43,8 +43,8 @@ Item {
         var found = false;
         for (var i = 0; i < sourcesModel.count; ++i) {
             var obj = sourcesModel.get(i);
-            if (obj.source1 == encodeURIComponent(source1) &&
-                obj.source2 == encodeURIComponent(source2)) {
+            if (obj.source1 === encodeURIComponent(source1) &&
+                obj.source2 === encodeURIComponent(source2)) {
                 found = true;
                 break;
             }
@@ -91,7 +91,7 @@ Item {
         onSourceRemoved: {
             for (var i = sourcesModel.count - 1; i >= 0; --i) {
                 var obj = sourcesModel.get(i);
-                if (obj.source1 == source || obj.source2 == source) {
+                if (obj.source1 === source || obj.source2 === source) {
                     sourcesModel.remove(i);
                 }
             }
@@ -101,7 +101,7 @@ Item {
     Connections {
         target: plasmoid.configuration
         onSourcesChanged: {
-            if (plasmoid.configuration.sources.length == 0) {
+            if (plasmoid.configuration.sources.length === 0) {
                 for (var i in smSource.sources) {
                     var source = smSource.sources[i];
                     smSource.sourceAdded(source);
@@ -136,13 +136,13 @@ Item {
         width: parent.width
         level: 2
         text: plasmoid.title
-        visible: plasmoid.formFactor != PlasmaCore.Types.Horizontal && plasmoid.formFactor != PlasmaCore.Types.Vertical
+        visible: plasmoid.formFactor !== PlasmaCore.Types.Horizontal && plasmoid.formFactor !== PlasmaCore.Types.Vertical
     }
 
     GridLayout {
         rows: 1
         columns: 1
-        flow: plasmoid.formFactor != PlasmaCore.Types.Horizontal ? GridLayout.LeftToRight : GridLayout.TopToBottom
+        flow: plasmoid.formFactor !== PlasmaCore.Types.Horizontal ? GridLayout.LeftToRight : GridLayout.TopToBottom
         anchors {
             top: heading.visible ? heading.bottom : parent.top
             bottom: parent.bottom

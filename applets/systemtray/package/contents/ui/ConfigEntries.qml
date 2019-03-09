@@ -203,7 +203,7 @@ QtLayouts.GridLayout {
                         break;
                     }
                     case 1: {
-                        if (shownIndex == -1) {
+                        if (shownIndex === -1) {
                             cfg_shownItems.push(modelData.taskId);
                         }
                         if (hiddenIndex > -1) {
@@ -215,7 +215,7 @@ QtLayouts.GridLayout {
                         if (shownIndex > -1) {
                             cfg_shownItems.splice(shownIndex, 1);
                         }
-                        if (hiddenIndex == -1) {
+                        if (hiddenIndex === -1) {
                             cfg_hiddenItems.push(modelData.taskId);
                         }
                         break;
@@ -246,7 +246,7 @@ QtLayouts.GridLayout {
                     // only Plasmoids have that
                     visible: modelData.hasOwnProperty("shortcut")
                     onKeySequenceChanged: {
-                        if (keySequence != modelData.shortcut) {
+                        if (keySequence !== modelData.shortcut) {
                             // both SNIs and plasmoids are listed in the same TableView
                             // but they come from two separate models, so we need to subtract
                             // the SNI model count to get the actual plasmoid index

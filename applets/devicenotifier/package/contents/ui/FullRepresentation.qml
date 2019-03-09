@@ -178,7 +178,7 @@ MouseArea {
             }
             emblemIcon: Emblems && Emblems[0] ? Emblems[0] : ""
             state: sdSource.data[udi] ? sdSource.data[udi].State : 0
-            isRoot: sdSource.data[udi]["File Path"] == "/"
+            isRoot: sdSource.data[udi]["File Path"] === "/"
 
             percentUsage: {
                 if (!sdSource.data[udi]) {
@@ -192,12 +192,12 @@ MouseArea {
             freeSpaceText: sdSource.data[udi] && sdSource.data[udi]["Free Space Text"] ? sdSource.data[udi]["Free Space Text"] : ""
 
             actionIcon: mounted ? "media-eject" : "media-mount"
-            actionVisible: model["Device Types"].indexOf("Portable Media Player") == -1
+            actionVisible: model["Device Types"].indexOf("Portable Media Player") === -1
             actionToolTip: {
                 var types = model["Device Types"];
                 if (!mounted) {
                     return i18n("Click to access this device from other applications.")
-                } else if (types && types.indexOf("OpticalDisc") != -1) {
+                } else if (types && types.indexOf("OpticalDisc") !== -1) {
                     return i18n("Click to eject this disc.")
                 } else {
                     return i18n("Click to safely remove this device.")

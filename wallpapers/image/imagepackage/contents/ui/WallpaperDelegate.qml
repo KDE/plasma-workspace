@@ -30,7 +30,7 @@ KCM.GridDelegate {
 
   
     property alias color: backgroundRect.color
-    property bool selected: (wallpapersGrid.currentIndex == index)
+    property bool selected: (wallpapersGrid.currentIndex === index)
     opacity: model.pendingDeletion ? 0.5 : 1
 
     text: model.display
@@ -96,7 +96,7 @@ KCM.GridDelegate {
         QPixmapItem {
             id: walliePreview
             anchors.fill: parent
-            visible: model.screenshot != null
+            visible: model.screenshot !== null
             smooth: true
             pixmap: model.screenshot
             fillMode: {

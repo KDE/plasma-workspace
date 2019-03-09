@@ -56,7 +56,7 @@ Item {
     property int tzIndex: 0
 
     // if the date/timezone cannot be fit with the smallest font to its designated space
-    readonly property bool oneLineMode: plasmoid.formFactor == PlasmaCore.Types.Horizontal &&
+    readonly property bool oneLineMode: plasmoid.formFactor === PlasmaCore.Types.Horizontal &&
                                         main.height <= 2 * theme.smallestFont.pixelSize &&
                                         (main.showDate || timezoneLabel.visible)
 
@@ -87,7 +87,7 @@ Item {
             // If the currently selected timezone was removed,
             // default to the first one in the list
             var lastSelectedTimezone = plasmoid.configuration.lastSelectedTimezone;
-            if (plasmoid.configuration.selectedTimeZones.indexOf(lastSelectedTimezone) == -1) {
+            if (plasmoid.configuration.selectedTimeZones.indexOf(lastSelectedTimezone) === -1) {
                 plasmoid.configuration.lastSelectedTimezone = plasmoid.configuration.selectedTimeZones[0];
             }
 
@@ -99,7 +99,7 @@ Item {
     states: [
         State {
             name: "horizontalPanel"
-            when: plasmoid.formFactor == PlasmaCore.Types.Horizontal && !main.oneLineMode
+            when: plasmoid.formFactor === PlasmaCore.Types.Horizontal && !main.oneLineMode
 
             PropertyChanges {
                 target: main
@@ -181,7 +181,7 @@ Item {
 
         State {
             name: "horizontalPanelSmall"
-            when: plasmoid.formFactor == PlasmaCore.Types.Horizontal && main.oneLineMode
+            when: plasmoid.formFactor === PlasmaCore.Types.Horizontal && main.oneLineMode
 
             PropertyChanges {
                 target: main
@@ -254,7 +254,7 @@ Item {
 
         State {
             name: "verticalPanel"
-            when: plasmoid.formFactor == PlasmaCore.Types.Vertical
+            when: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
             PropertyChanges {
                 target: main
@@ -329,7 +329,7 @@ Item {
 
         State {
             name: "other"
-            when: plasmoid.formFactor != PlasmaCore.Types.Vertical && plasmoid.formFactor != PlasmaCore.Types.Horizontal
+            when: plasmoid.formFactor !== PlasmaCore.Types.Vertical && plasmoid.formFactor !== PlasmaCore.Types.Horizontal
 
             PropertyChanges {
                 target: main
@@ -443,7 +443,7 @@ Item {
                 newIndex = plasmoid.configuration.selectedTimeZones.length - 1;
             }
 
-            if (newIndex != main.tzIndex) {
+            if (newIndex !== main.tzIndex) {
                 plasmoid.configuration.lastSelectedTimezone = plasmoid.configuration.selectedTimeZones[newIndex];
                 main.tzIndex = newIndex;
 
@@ -576,7 +576,7 @@ Item {
         var minutes = match[3]
         var seconds = "ss";
         var amPm = "AP";
-        var uses24hFormatByDefault = timeFormatString.toLowerCase().indexOf("ap") == -1;
+        var uses24hFormatByDefault = timeFormatString.toLowerCase().indexOf("ap") === -1;
 
         // because QLocale is incredibly stupid and does not convert 12h/24h clock format
         // when uppercase H is used for hours, needs to be h or hh, so toLowerCase()
@@ -596,15 +596,15 @@ Item {
     }
 
     function setupLabels() {
-        var showTimezone = main.showLocalTimezone || (plasmoid.configuration.lastSelectedTimezone != "Local"
-                                                        && dataSource.data["Local"]["Timezone City"] != dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
+        var showTimezone = main.showLocalTimezone || (plasmoid.configuration.lastSelectedTimezone !== "Local"
+                                                        && dataSource.data["Local"]["Timezone City"] !== dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
 
         var timezoneString = "";
 
         if (showTimezone) {
             timezoneString = plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone Abbreviation"]
                                                                           : TimezonesI18n.i18nCity(dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
-            timezoneLabel.text = (main.showDate || main.oneLineMode) && plasmoid.formFactor == PlasmaCore.Types.Horizontal ? "(" + timezoneString + ")" : timezoneString;
+            timezoneLabel.text = (main.showDate || main.oneLineMode) && plasmoid.formFactor === PlasmaCore.Types.Horizontal ? "(" + timezoneString + ")" : timezoneString;
         } else {
             // this clears the label and that makes it hidden
             timezoneLabel.text = timezoneString;
@@ -653,14 +653,14 @@ Item {
             // If the date has changed, force size recalculation, because the day name
             // or the month name can now be longer/shorter, so we need to adjust applet size
             var currentDate = Qt.formatDateTime(dataSource.data["Local"]["DateTime"], "yyyy-mm-dd");
-            if (main.lastDate != currentDate) {
+            if (main.lastDate !== currentDate) {
                 doCorrections = true;
                 main.lastDate = currentDate
             }
         }
 
         var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
-        if (currentTZOffset != tzOffset) {
+        if (currentTZOffset !== tzOffset) {
             doCorrections = true;
             tzOffset = currentTZOffset;
             Date.timeZoneUpdated(); // inform the QML JS engine about TZ change
@@ -673,7 +673,7 @@ Item {
 
     function setTimezoneIndex() {
         for (var i = 0; i < plasmoid.configuration.selectedTimeZones.length; i++) {
-            if (plasmoid.configuration.selectedTimeZones[i] == plasmoid.configuration.lastSelectedTimezone) {
+            if (plasmoid.configuration.selectedTimeZones[i] === plasmoid.configuration.lastSelectedTimezone) {
                 main.tzIndex = i;
                 break;
             }

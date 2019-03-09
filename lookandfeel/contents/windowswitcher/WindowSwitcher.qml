@@ -135,9 +135,9 @@ KWin.Switcher {
         * @li on multiple invocation it does not work on the list view. Focus seems to be lost.
         **/
         Keys.onPressed: {
-            if (event.key == Qt.Key_Up) {
+            if (event.key === Qt.Key_Up) {
                 icons.decrementCurrentIndex();
-            } else if (event.key == Qt.Key_Down) {
+            } else if (event.key === Qt.Key_Down) {
                 icons.incrementCurrentIndex();
             }
         }

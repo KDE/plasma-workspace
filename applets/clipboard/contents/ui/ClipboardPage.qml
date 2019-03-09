@@ -58,10 +58,10 @@ ColumnLayout {
             }
             default: { // forward key to filter
                 // filter.text += event.text wil break if the key is backspace
-                if (event.key == Qt.Key_Backspace && filter.text == "") {
+                if (event.key === Qt.Key_Backspace && filter.text == "") {
                     return;
                 }
-                if (event.text != "" && !filter.activeFocus) {
+                if (event.text !== "" && !filter.activeFocus) {
                     clipboardMenu.view.currentIndex = -1
                     if (event.matches(StandardKey.Paste)) {
                         filter.paste();

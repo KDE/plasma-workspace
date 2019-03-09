@@ -33,7 +33,7 @@ MouseArea {
 
     onClicked: plasmoid.expanded = !plasmoid.expanded
 
-    readonly property bool isConstrained: plasmoid.formFactor == PlasmaCore.Types.Vertical || plasmoid.formFactor == PlasmaCore.Types.Horizontal
+    readonly property bool isConstrained: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
 
     //Should we consider turning this into a Flow item?
     Row {

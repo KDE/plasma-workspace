@@ -151,14 +151,14 @@ Flow {
     property QueryDialog sleepDialog
 
     function clickHandler(what, button) {
-        if (what == "suspendToDisk") {
+        if (what === "suspendToDisk") {
             if (!hibernateDialog) {
                 hibernateDialog = hibernateDialogComponent.createObject(lockout);
             }
             hibernateDialog.visualParent = button
             hibernateDialog.open();
 
-        } else if (what == "suspendToRam") {
+        } else if (what === "suspendToRam") {
             if (!sleepDialog) {
                 sleepDialog = sleepDialogComponent.createObject(lockout);
             }

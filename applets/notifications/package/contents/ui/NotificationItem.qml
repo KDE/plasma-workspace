@@ -155,7 +155,7 @@ MouseArea {
             topMargin: units.smallSpacing
         }
 
-        visible: imageItem.nativeWidth == 0 && valid
+        visible: imageItem.nativeWidth === 0 && valid
         animated: false
     }
 

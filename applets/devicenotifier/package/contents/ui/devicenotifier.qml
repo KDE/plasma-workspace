@@ -144,7 +144,7 @@ Item {
                     counter++;
                 }
             }
-            if (counter != devicenotifier.mountedRemovables) {
+            if (counter !== devicenotifier.mountedRemovables) {
                 devicenotifier.mountedRemovables = counter;
             }
         }
@@ -228,7 +228,7 @@ Item {
     }
 
     Component.onCompleted: {
-        if (sdSource.connectedSources.count == 0) {
+        if (sdSource.connectedSources.count === 0) {
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
         }
 

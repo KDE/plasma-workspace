@@ -124,7 +124,7 @@ ColumnLayout {
 
             function setMethod() {
                 for (var i = 0; i < model.length; i++) {
-                    if (model[i]["fillMode"] == wallpaper.configuration.FillMode) {
+                    if (model[i]["fillMode"] === wallpaper.configuration.FillMode) {
                         resizeComboBox.currentIndex = i;
                         var tl = model[i]["label"].length;
                         //resizeComboBox.textLength = Math.max(resizeComboBox.textLength, tl+5);

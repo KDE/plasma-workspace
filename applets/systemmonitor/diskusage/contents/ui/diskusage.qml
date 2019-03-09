@@ -68,7 +68,7 @@ Applet {
         Connections {
             target: model.dataSource
             onNewData: {
-                if (sourceName.indexOf(decodeURIComponent(model.source1)) != 0) {
+                if (sourceName.indexOf(decodeURIComponent(model.source1)) !== 0) {
                     return;
                 }
 

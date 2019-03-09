@@ -65,7 +65,7 @@ Column {
             var errorText = runningJobs[source]["errorText"]
 
             // 1 = ERR_USER_CANCELED - don't show any notification at all
-            if (error == 1) {
+            if (error === 1) {
                 delete runningJobs[source]
                 return
             }
