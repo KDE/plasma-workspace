@@ -30,8 +30,20 @@ import org.kde.kquickcontrolsaddons 2.0
 MouseArea {
     id: notificationItem
     width: parent.width
-    implicitHeight: bodyText.lineCount > 1 ? mainLayout.height : (appIconItem.valid || imageItem.nativeWidth > 0 ? (Math.max((mainLayout.height + 2 * units.smallSpacing),(units.iconSizes.large + 2 * units.smallSpacing))) : (bottomPart.height != 0 ? (mainLayout.height + 2 * units.smallSpacing) : (mainLayout.height + units.smallSpacing)))
-
+    implicitHeight: {
+        if (bodyText.lineCount > 1) {
+            return mainLayout.height + 0.5 * units.smallSpacing // close button height = about 1 unit
+        }  
+        if (appIconItem.valid || imageItem.nativeWidth > 0) {
+            return Math.max((mainLayout.height + 1.5 * units.smallSpacing),(units.iconSizes.large + 2 * units.smallSpacing))
+        }
+        if (bottomPart.height != 0) {
+            return mainLayout.height + (mainLayout.height > units.iconSizes.large ? 1.5 : 2) * units.smallSpacing 
+            } else {
+                return mainLayout.height + units.smallSpacing // close button again
+            }
+    }
+    
     // We need to clip here because we support displaying images through <img/>
     // and if we don't clip, they will be painted over the borders of the dialog/item
     clip: true
@@ -172,7 +184,7 @@ MouseArea {
 
         anchors {
             top: parent.top
-            topMargin: bodyText.lineCount > 1 ? 0 : units.smallSpacing // Lift up heading if bodyText is long
+            topMargin: bodyText.lineCount > 1 ? 0 : (mainLayout.height > units.iconSizes.large ? 0.5 : 1) * units.smallSpacing // lift up heading if bodyText is too long/tall
             left: appIconItem.valid || imageItem.nativeWidth > 0 ? appIconItem.right : parent.left
             right: parent.right
             leftMargin: units.smallSpacing * 2
