@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.2
+import QtQuick 2.8
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
@@ -30,6 +30,7 @@ Item {
     property alias labelRendering: label.renderType
     property alias circleOpacity: iconCircle.opacity
     property alias circleVisiblity: iconCircle.visible
+    readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
     signal clicked
 
     activeFocusOnTab: true
@@ -53,8 +54,8 @@ Item {
         width: iconSize + units.smallSpacing
         height: width
         radius: width / 2
-        color: PlasmaCore.ColorScope.textColor
-        opacity: activeFocus || containsMouse ? 0.15 : 0
+        color: softwareRendering ?  PlasmaCore.ColorScope.backgroundColor : PlasmaCore.ColorScope.textColor
+        opacity: activeFocus || containsMouse ? (softwareRendering ? 0.8 : 0.15) : (softwareRendering ? 0.6 : 0)
         Behavior on opacity {
                 PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
                     duration: units.longDuration * 3
@@ -81,10 +82,12 @@ Item {
         font.pointSize: theme.defaultFont.pointSize + 1
         anchors {
             top: icon.bottom
-            topMargin: units.smallSpacing
+            topMargin: (softwareRendering ? 1.5 : 1) * units.smallSpacing
             left: parent.left
             right: parent.right
         }
+        style: softwareRendering ? Text.Outline : Text.Normal
+        styleColor: softwareRendering ? PlasmaCore.ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
         wrapMode: Text.WordWrap
