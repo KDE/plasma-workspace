@@ -302,7 +302,7 @@ Item {
                 target: dateLabel
 
                 // this can be marginal bigger than contentHeight because of the horizontal fit
-                height: Math.max(0.8 * timeLabel.height, minimumPixelSize)
+                height: sizehelper.contentHeight
                 width: main.width
 
                 fontSizeMode: Text.Fit
