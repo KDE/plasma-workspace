@@ -294,7 +294,7 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
     QStringList scripts;
 
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "plasma/shells/" + appName + QStringLiteral("/contents/updates"), QStandardPaths::LocateDirectory);
-    Q_FOREACH(const QString& dir, dirs) {
+    for (const QString& dir : dirs) {
         QDirIterator it(dir, QStringList() << QStringLiteral("*.js"));
         while (it.hasNext()) {
             scripts.append(it.next());
