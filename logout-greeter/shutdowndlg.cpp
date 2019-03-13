@@ -30,6 +30,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
+#include <QDBusPendingCallWatcher>
+#include <QDBusPendingReply>
+#include <QDBusVariant>
 #include <QQuickView>
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -65,6 +68,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <KWayland/Client/surface.h>
 #include <KWayland/Client/plasmashell.h>
+
+static const QString s_login1Service = QStringLiteral("org.freedesktop.login1");
+static const QString s_login1Path = QStringLiteral("/org/freedesktop/login1");
+static const QString s_dbusPropertiesInterface = QStringLiteral("org.freedesktop.DBus.Properties");
+static const QString s_login1ManagerInterface = QStringLiteral("org.freedesktop.login1.Manager");
+static const QString s_login1RebootToFirmwareSetup = QStringLiteral("RebootToFirmwareSetup");
 
 Q_DECLARE_METATYPE(Solid::PowerManagement::SleepState)
 
@@ -117,6 +126,22 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow* parent,
     mapSpdMethods->insert(QStringLiteral("HibernateState"), QVariant::fromValue(spdMethods.contains(Solid::PowerManagement::HibernateState)));
     context->setContextProperty(QStringLiteral("spdMethods"), mapSpdMethods);
     context->setContextProperty(QStringLiteral("canLogout"), KAuthorized::authorize(QStringLiteral("logout")));
+
+    // Trying to access a non-existant context property throws an error, always create the property and then update it later
+    context->setContextProperty("rebootToFirmwareSetup", false);
+
+    QDBusMessage message = QDBusMessage::createMethodCall(s_login1Service, s_login1Path, s_dbusPropertiesInterface, QStringLiteral("Get"));
+    message.setArguments({s_login1ManagerInterface, s_login1RebootToFirmwareSetup});
+    QDBusPendingReply<QVariant> call = QDBusConnection::systemBus().asyncCall(message);
+    QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(call, this);
+    connect(callWatcher, &QDBusPendingCallWatcher::finished, context, [context](QDBusPendingCallWatcher *watcher) {
+        QDBusPendingReply<QVariant> reply = *watcher;
+        watcher->deleteLater();
+
+        if (reply.value().toBool()) {
+            context->setContextProperty("rebootToFirmwareSetup", true);
+        }
+    });
 
     // TODO KF6 remove, used to read "BootManager" from kdmrc
     context->setContextProperty(QStringLiteral("bootManager"), QStringLiteral("None"));

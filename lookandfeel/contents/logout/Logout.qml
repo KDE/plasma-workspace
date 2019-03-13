@@ -155,6 +155,18 @@ PlasmaCore.ColorScope {
             visible: sessionsModel.count > 1
         }
 
+        PlasmaComponents.Label {
+            font.pointSize: theme.defaultFont.pointSize + 1
+            Layout.maximumWidth: units.gridUnit * 16
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.WordWrap
+            font.italic: true
+            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "When restarted, the computer will enter the firmware setup screen.")
+            visible: rebootToFirmwareSetup
+        }
+
         RowLayout {
             spacing: units.largeSpacing * 2
             Layout.alignment: Qt.AlignHCenter
