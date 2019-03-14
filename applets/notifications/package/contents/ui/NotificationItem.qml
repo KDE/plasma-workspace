@@ -184,7 +184,7 @@ MouseArea {
 
         anchors {
             top: parent.top
-            topMargin: bodyText.lineCount > 1 ? 0 : (mainLayout.height > units.iconSizes.large ? 0.5 : 1) * units.smallSpacing // lift up heading if bodyText is too long/tall
+            topMargin: bodyText.lineCount > 1 ? 0 : Math.round((mainLayout.height > units.iconSizes.large ? 0.5 : 1) * units.smallSpacing) // lift up heading if bodyText is too long/tall
             left: appIconItem.valid || imageItem.nativeWidth > 0 ? appIconItem.right : parent.left
             right: parent.right
             leftMargin: units.smallSpacing * 2
