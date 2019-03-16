@@ -37,8 +37,9 @@
 #define TEST_STEP_INTERVAL 2000
 
 /**
- * There are 6 used stages in ksplash
+ * There are 7 used stages in ksplash
  *  - initial
+ *  - kcminit
  *  - kinit
  *  - ksmserver
  *  - wm
@@ -124,11 +125,10 @@ void SplashApp::setStage(const QString &stage)
 
 void SplashApp::setStage(int stage)
 {
-    if (m_stage == 6) {
+    m_stage = stage;
+    if (m_stage == 7) {
         QGuiApplication::exit(EXIT_SUCCESS);
     }
-
-    m_stage = stage;
     foreach (SplashWindow *w, m_windows) {
         w->setStage(stage);
     }
