@@ -34,6 +34,8 @@ PlasmaComponents.ToolButton {
 
     text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Desktop Session: %1", instantiator.objectAt(currentIndex).text || "")
 
+    font.pointSize: config.fontSize
+
     Component.onCompleted: {
         currentIndex = sessionModel.lastIndex
     }

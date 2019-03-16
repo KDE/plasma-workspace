@@ -19,6 +19,8 @@ SessionManagementScreen {
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
     onHeightChanged: visibleBoundary = mapFromItem(loginButton, 0, 0).y + loginButton.height + units.smallSpacing
 
+    property int fontSize: config.fontSize
+
     signal loginRequest(string username, string password)
 
     onShowUsernamePromptChanged: {
@@ -44,7 +46,7 @@ SessionManagementScreen {
 
     PlasmaComponents.TextField {
         id: userNameInput
-        font.pointSize: theme.defaultFont.pointSize + 1
+        font.pointSize: fontSize + 1
         Layout.fillWidth: true
 
         text: lastUserName
@@ -63,7 +65,7 @@ SessionManagementScreen {
 
         PlasmaComponents.TextField {
             id: passwordBox
-            font.pointSize: theme.defaultFont.pointSize + 1
+            font.pointSize: fontSize + 1
             Layout.fillWidth: true
 
             placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")

@@ -12,6 +12,7 @@ PlasmaComponents.ToolButton {
 
     text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keyboard Layout: %1", instantiator.objectAt(currentIndex).shortName)
     implicitWidth: minimumWidth
+    font.pointSize: config.fontSize
 
     visible: menu.items.length > 1
 

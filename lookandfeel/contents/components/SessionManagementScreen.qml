@@ -61,6 +61,8 @@ Item {
 
     property alias userList: userListView
 
+    property int fontSize: config.fontSize
+
     default property alias _children: innerLayout.children
 
     UserList {
@@ -85,6 +87,7 @@ Item {
         anchors.bottom: parent.bottom
         PlasmaComponents.Label {
             id: notificationsLabel
+            font.pointSize: Math.max(fontSize + 1,theme.defaultFont.pointSize + 1)
             Layout.maximumWidth: units.gridUnit * 16
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true

@@ -37,6 +37,8 @@ Item {
     property string avatarPath
     property string iconSource
     property bool constrainText: true
+    property alias nameFontSize: usernameDelegate.font.pointSize
+    property int fontSize: config.fontSize
     signal clicked()
 
     property real faceSize: Math.min(width, height - usernameDelegate.height - units.smallSpacing)
@@ -159,7 +161,7 @@ Item {
 
     PlasmaComponents.Label {
         id: usernameDelegate
-        font.pointSize: theme.defaultFont.pointSize + 2
+        font.pointSize: Math.max(fontSize + 2,theme.defaultFont.pointSize + 2)
         anchors {
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter

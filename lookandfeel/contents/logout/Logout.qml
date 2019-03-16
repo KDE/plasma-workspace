@@ -119,6 +119,7 @@ PlasmaCore.ColorScope {
     UserDelegate {
         width: units.iconSizes.enormous
         height: width
+        nameFontSize: theme.defaultFont.pointSize + 2
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: parent.verticalCenter

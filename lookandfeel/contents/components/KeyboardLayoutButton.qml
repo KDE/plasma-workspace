@@ -25,11 +25,15 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.workspace.keyboardlayout 1.0
 
 PlasmaComponents.ToolButton {
+
+    property int fontSize: config.fontSize
+
     id: kbLayoutButton
 
     iconName: "input-keyboard"
     implicitWidth: minimumWidth
     text: layout.currentLayoutDisplayName
+    font.pointSize: Math.max(fontSize,theme.defaultFont.pointSize)
 
     Accessible.name: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to change keyboard layout", "Switch layout")
 

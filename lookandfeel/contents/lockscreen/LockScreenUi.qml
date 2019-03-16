@@ -417,6 +417,7 @@ PlasmaCore.ColorScope {
 
                 PlasmaComponents.Button {
                     Layout.fillWidth: true
+                    font.pointSize: theme.defaultFont.pointSize + 1
                     // the magic "-1" vtNumber indicates the "New Session" entry
                     text: userListCurrentModelData.vtNumber === -1 ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Start New Session") : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch Session")
                     onClicked: initSwitchSession()
