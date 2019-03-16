@@ -65,6 +65,10 @@ SplashApp::SplashApp(int &argc, char ** argv)
     m_window = parser.isSet(QStringLiteral("window"));
     m_theme = parser.positionalArguments().value(0);
 
+    QDBusConnection dbus = QDBusConnection::sessionBus();
+    dbus.registerObject(QStringLiteral("/KSplash"), this, QDBusConnection::ExportScriptableSlots);
+    dbus.registerService(QStringLiteral("org.kde.KSplash"));
+
     setupWaylandIntegration();
 
     foreach(QScreen* screen, screens())
@@ -85,10 +89,6 @@ SplashApp::SplashApp(int &argc, char ** argv)
     }
 
     connect(this, &QGuiApplication::screenAdded, this, &SplashApp::adoptScreen);
-
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerObject(QStringLiteral("/KSplash"), this, QDBusConnection::ExportScriptableSlots);
-    dbus.registerService(QStringLiteral("org.kde.KSplash"));
 
 }
 
