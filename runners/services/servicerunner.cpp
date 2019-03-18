@@ -280,24 +280,7 @@ private:
 
             if (service->categories().contains(QStringLiteral("KDE")) || service->serviceTypes().contains(QStringLiteral("KCModule"))) {
                 qCDebug(RUNNER_SERVICES) << "found a kde thing" << id << match.subtext() << relevance;
-                if (id.startsWith(QLatin1String("kde-"))) {
-                    qCDebug(RUNNER_SERVICES) << "old" << !service->isApplication();
-                    if (!service->isApplication()) {
-                        // avoid showing old kcms and what not
-                        continue;
-                    }
-
-                    // This is an older version, let's disambiguate it
-                    QString subtext(QStringLiteral("KDE3"));
-
-                    if (!match.subtext().isEmpty()) {
-                        subtext.append(QStringLiteral(", ") + match.subtext());
-                    }
-
-                    match.setSubtext(subtext);
-                } else {
-                    relevance += .09;
-                }
+                relevance += .09;
             }
 
             qCDebug(RUNNER_SERVICES) << service->name() << "is this relevant:" << relevance;
