@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2019 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -18,19 +18,25 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "notificationmanagerplugin.h"
 
-#include "notifications.h"
-#include "jobdetails.h"
+#pragma once
 
-#include <QQmlEngine>
+#include <QSortFilterProxyModel>
 
-using namespace NotificationManager;
-
-void NotificationManagerPlugin::registerTypes(const char *uri)
+namespace NotificationManager
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.notificationmanager"));
 
-    qmlRegisterType<Notifications>(uri, 1, 0, "Notifications");
-    qmlRegisterType<JobDetails>();
-}
+class NotificationSortProxyModel : public QSortFilterProxyModel
+{
+    Q_OBJECT
+
+public:
+    explicit NotificationSortProxyModel(QObject *parent = nullptr);
+    ~NotificationSortProxyModel() override;
+
+protected:
+    bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
+
+};
+
+} // namespace NotificationManager

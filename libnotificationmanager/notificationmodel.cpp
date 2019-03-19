@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -21,6 +21,8 @@
 #include "notificationmodel.h"
 
 #include "notificationserver.h"
+
+#include "notifications.h"
 
 #include "notification.h"
 
@@ -68,6 +70,7 @@ void NotificationModel::Private::onNotificationAdded(const Notification &notific
 void NotificationModel::Private::onNotificationReplaced(uint replacedId, const Notification &notification)
 {
     // Completely remove the old notification and add the new one
+    // TODO why? we have a sort model that sorts by created/updated, so we should be able to reuse the instance
 
     const int row = indexOfNotification(replacedId);
 
@@ -83,8 +86,6 @@ void NotificationModel::Private::onNotificationReplaced(uint replacedId, const N
 
 void NotificationModel::Private::onNotificationRemoved(uint removedId, NotificationServer::CloseReason reason)
 {
-    qDebug() << "Notification" << removedId << "closed because" << reason;
-
     const int row = indexOfNotification(removedId);
     if (row == -1) {
         return;
@@ -96,7 +97,19 @@ void NotificationModel::Private::onNotificationRemoved(uint removedId, Notificat
 
         Notification &notification = notifications[row];
         notification.setExpired(true);
-        emit q->dataChanged(idx, idx, {NotificationModel::ExpiredRole});
+
+        // Since the notification is "closed" it cannot have any actions
+        // unless it is "resident" which we don't support
+        notification.setActions(QStringList());
+
+        emit q->dataChanged(idx, idx, {
+            Notifications::ExpiredRole,
+            // TODO only emit those if actually changed?
+            Notifications::ActionNamesRole,
+            Notifications::ActionLabelsRole,
+            Notifications::HasDefaultActionRole,
+            Notifications::ConfigurableRole
+        });
 
         return;
     }
@@ -139,12 +152,6 @@ NotificationModel::NotificationModel(QObject *parent)
 
 NotificationModel::~NotificationModel() = default;
 
-/*NotificationServer &NotificationServer::self()
-{
-    static NotificationServer s_self;
-    return s_self;
-}*/
-
 QVariant NotificationModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= d->notifications.count()) {
@@ -154,72 +161,46 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
     const Notification &notification = d->notifications.at(index.row());
 
     switch (role) {
-    case IdRole: return notification.id();
-    case CreatedRole: return notification.created();
-    case SummaryRole: return notification.summary();
-    case BodyRole: return notification.body();
-    case IconNameRole: return notification.iconName();
-    case ImageRole: return notification.image();
-    case ApplicationNameRole: return notification.applicationName();
-    case ApplicationIconNameRole: return notification.applicationIconName();
+    case Notifications::IdRole: return notification.id();
+    case Notifications::TypeRole: return Notifications::NotificationType;
 
-    case ActionNamesRole: return notification.actionNames();
-    case ActionLabelsRole: return notification.actionLabels();
-    case HasDefaultActionRole: return notification.hasDefaultAction();
+    case Notifications::CreatedRole:
+        if (notification.created().isValid()) {
+            return notification.created();
+        }
+        break;
+    case Notifications::UpdatedRole:
+        if (notification.updated().isValid()) {
+            return notification.updated();
+        }
+        break;
+    case Notifications::SummaryRole: return notification.summary();
+    case Notifications::BodyRole: return notification.body();
+    case Notifications::IconNameRole: return notification.iconName();
+    case Notifications::ImageRole:
+        if (!notification.image().isNull()) {
+            return notification.image();
+        }
+        break;
+    case Notifications::ApplicationNameRole: return notification.applicationName();
+    case Notifications::ApplicationIconNameRole: return notification.applicationIconName();
 
-    case UrlsRole: return QVariant::fromValue(notification.urls());
-    case UrgencyRole: return static_cast<int>(notification.urgency()); // FIXME?
-    //case UrgencyRole: return QVariant::fromValue(notification.urgency());
+    case Notifications::ActionNamesRole: return notification.actionNames();
+    case Notifications::ActionLabelsRole: return notification.actionLabels();
+    case Notifications::HasDefaultActionRole: return notification.hasDefaultAction();
 
-    case TimeoutRole: return notification.timeout();
-    case PersistentRole: return notification.isPersistent(); // WHY is
+    case Notifications::UrlsRole: return QVariant::fromValue(notification.urls());
+    case Notifications::UrgencyRole: return static_cast<int>(notification.urgency());
 
-        // FIXME why "is"
-    case IsConfigurableRole: return notification.isConfigurable();
-    case ConfigureActionLabelRole: return notification.configureActionLabel();
+    case Notifications::TimeoutRole: return notification.timeout();
 
-    case ExpiredRole: return notification.expired();
-    case SeenRole: return notification.seen();
+    case Notifications::ConfigurableRole: return notification.configurable();
+    case Notifications::ConfigureActionLabelRole: return notification.configureActionLabel();
 
-    default: Q_UNREACHABLE(); // FIXME
+    case Notifications::ExpiredRole: return notification.expired();
     }
 
     return QVariant();
-}
-
-bool NotificationModel::setData(const QModelIndex &index, const QVariant &value, int role)
-{
-    if (!index.isValid() || index.row() >= d->notifications.count()) {
-        return false;
-    }
-
-    Notification &notification = d->notifications[index.row()];
-
-    bool changed = false;
-
-    switch (role) {
-    /*case ExpiredRole: {
-        const bool expired = value.toBool();
-        if (notification.expired() != expired) {
-            notification.setExpired(expired);
-            changed = true;
-        }
-        break;
-    }*/
-    case SeenRole: {
-        const bool seen = value.toBool();
-        if (notification.seen() == seen) {
-            notification.setSeen(seen);
-            changed = true;
-        }
-    }
-    }
-
-    if (changed) {
-        emit dataChanged(index, index, {role});
-    }
-
-    return changed;
 }
 
 int NotificationModel::rowCount(const QModelIndex &parent) const
@@ -231,36 +212,6 @@ int NotificationModel::rowCount(const QModelIndex &parent) const
     return d->notifications.count();
 }
 
-QHash<int, QByteArray> NotificationModel::roleNames() const
-{
-    return QHash<int, QByteArray> {
-        {IdRole, QByteArrayLiteral("notificationId")}, // id is QML-reserved
-        {CreatedRole, QByteArrayLiteral("created")},
-        {SummaryRole, QByteArrayLiteral("summary")},
-        {BodyRole, QByteArrayLiteral("body")},
-        {IconNameRole, QByteArrayLiteral("iconName")},
-        {ImageRole, QByteArrayLiteral("image")},
-        {ApplicationNameRole, QByteArrayLiteral("applicationName")},
-        {ApplicationIconNameRole, QByteArrayLiteral("applicationIconName")},
-
-        {ActionNamesRole, QByteArrayLiteral("actionNames")},
-        {ActionLabelsRole, QByteArrayLiteral("actionLabels")},
-        {HasDefaultActionRole, QByteArrayLiteral("hasDefaultAction")},
-
-        {UrlsRole, QByteArrayLiteral("urls")},
-        {UrgencyRole, QByteArrayLiteral("urgency")},
-        {TimeoutRole, QByteArrayLiteral("timeout")},
-        {PersistentRole, QByteArrayLiteral("persistent")},
-
-        // FIXME why "is"
-        {IsConfigurableRole, QByteArrayLiteral("isConfigurable")},
-        {ConfigureActionLabelRole, QByteArrayLiteral("configureActionLabel")},
-
-        {ExpiredRole, QByteArrayLiteral("expired")},
-        {SeenRole, QByteArrayLiteral("seen")}
-    };
-}
-
 void NotificationModel::expire(uint notificationId)
 {
     if (d->indexOfNotification(notificationId) > -1) {
@@ -268,7 +219,7 @@ void NotificationModel::expire(uint notificationId)
     }
 }
 
-void NotificationModel::dismiss(uint notificationId)
+void NotificationModel::close(uint notificationId)
 {
     if (d->indexOfNotification(notificationId) > -1) {
         NotificationServer::self().closeNotification(notificationId, NotificationServer::CloseReason::DismissedByUser);
@@ -291,7 +242,7 @@ void NotificationModel::configure(uint notificationId)
 
     if (!notification.m_notifyRcName.isEmpty()) {
         // TODO show knotifyconfigwidget thingie or emit a signal so we don't have any widget deps in this lib
-        qDebug() << "IMPLEMENT ME configure" << notificationId << "of" << notification.m_notifyRcName;
+        qDebug() << "IMPLEMENT ME configure" << notificationId << "event" << notification.m_eventId << "of" << notification.m_notifyRcName;
         return;
     }
 

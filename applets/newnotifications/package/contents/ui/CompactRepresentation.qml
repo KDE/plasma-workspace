@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -26,6 +26,12 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 MouseArea {
     id: compactRoot
 
+    property int activeCount: 0
+    property int expiredCount: 0
+
+    property int jobsCount: 0
+    property int jobsPercentage: 0
+
     property bool wasExpanded: false
     onPressed: wasExpanded = plasmoid.expanded
     onClicked: plasmoid.expanded = !wasExpanded
@@ -37,25 +43,99 @@ MouseArea {
     }
 
     PlasmaCore.SvgItem {
+        id: notificationIcon
         anchors.centerIn: parent
         width: units.roundToIconSize(Math.min(parent.width, parent.height))
         height: width
         svg: notificationSvg
 
-        // TODO icon depending on unread notifications, active jobs, etc
-        // TODO use States for the icon handling including animation and what not?
-        elementId: {
-            return "notification-disabled"
+        elementId: "notification-disabled"
+
+        Item {
+            id: jobProgressItem
+            anchors {
+                left: parent.left
+                top: parent.top
+                bottom: parent.bottom
+            }
+            width: notificationIcon.width * (jobsPercentage / 100)
+
+            clip: true
+            visible: false
+
+            PlasmaCore.SvgItem {
+                anchors {
+                    left: parent.left
+                    top: parent.top
+                    bottom: parent.bottom
+                }
+                width: notificationIcon.width
+
+                svg: notificationSvg
+                elementId: "notification-progress-active"
+            }
         }
 
-        // FIXME just so I can tell the two apart in system tray
-        Text {
+        PlasmaComponents.Label {
+            id: countLabel
+            anchors {
+                fill: parent
+                margins: units.devicePixelRatio * 2
+            }
+            height: undefined
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            font.pointSize: 100
+            fontSizeMode: Text.Fit
+            minimumPointSize: 7
+        }
+
+        PlasmaComponents.BusyIndicator {
+            id: busyIndicator
             anchors.fill: parent
-            text: "N" // "New"
+            visible: false
+            running: visible
         }
     }
 
-    // TODO progress
-    // would be lovely if we could get back the circular pie thing back we had in Plasma < 4.10
+    states: [
+        State { // active process
+            when: compactRoot.jobsCount > 0
+            PropertyChanges {
+                target: notificationIcon
+                elementId: "notification-progress-inactive"
+            }
+            PropertyChanges {
+                target: countLabel
+                text: compactRoot.jobsCount
+            }
+            PropertyChanges {
+                target: busyIndicator
+                visible: true
+            }
+            PropertyChanges {
+                target: jobProgressItem
+                visible: true
+            }
+        },
+        State { // active notification
+            when: compactRoot.activeCount > 0
+            PropertyChanges {
+                target: notificationIcon
+                elementId: "notification-active";
+            }
+        },
+        State { // unread notifications
+            when: compactRoot.expiredCount > 0
+            PropertyChanges {
+                target: notificationIcon
+                elementId: "notification-empty"
+            }
+            PropertyChanges {
+                target: countLabel
+                text: compactRoot.expiredCount
+            }
+        }
+    ]
 
 }

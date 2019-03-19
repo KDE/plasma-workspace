@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2019 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -25,6 +25,8 @@
 
 #include "notificationmanager_export.h"
 
+#include <Plasma/DataEngine>
+
 namespace NotificationManager
 {
 
@@ -37,26 +39,27 @@ class Notification;
  *
  * @author Kai Uwe Broulik <kde@privat.broulik.de>
  **/
-class NOTIFICATIONMANAGER_EXPORT NotificationModel : public QAbstractListModel
+class NOTIFICATIONMANAGER_EXPORT JobsModel : public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit NotificationModel(QObject *parent = nullptr);
-    ~NotificationModel() override;
+    explicit JobsModel(QObject *parent = nullptr);
+    ~JobsModel() override;
 
-    // FIXME currently easier to debug if we crash when accessing invalid role
-    // instead of just "randomly" returning display role when
     QVariant data(const QModelIndex &index, int role/* = Qt::DisplayRole*/) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    // TODO should we have an API taking int row, or QModelIndex?
-    Q_INVOKABLE void expire(uint notificationId);
-    Q_INVOKABLE void close(uint notificationId);
-    Q_INVOKABLE void configure(uint notificationId);
-    Q_INVOKABLE void invokeDefaultAction(uint notificationId);
-    // FIXME rename invokeAction
-    Q_INVOKABLE void invoke(uint notificationId, const QString &actionName);
+    Q_INVOKABLE void close(const QString &jobId);
+    Q_INVOKABLE void dismiss(const QString &jobId);
+    Q_INVOKABLE void expire(const QString &jobId);
+
+    Q_INVOKABLE void suspend(const QString &jobId);
+    Q_INVOKABLE void resume(const QString &jobId);
+    Q_INVOKABLE void kill(const QString &jobId);
+
+private slots:
+    void dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data);
 
 private:
     class Private;

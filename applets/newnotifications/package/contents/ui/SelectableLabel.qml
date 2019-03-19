@@ -1,0 +1,152 @@
+/*
+ * Copyright 2011 Marco Martin <notmart@gmail.com>
+ * Copyright 2014, 2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License or (at your option) version 3 or any later version
+ * accepted by the membership of KDE e.V. (or its successor approved
+ * by the membership of KDE e.V.), which shall act as a proxy
+ * defined in Section 14 of version 3 of the license.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ */
+
+import QtQuick 2.8
+import QtQuick.Layouts 1.1
+
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
+
+// FIXME FIXME this thing doesn't work, doesn't scroll, etc :(
+PlasmaExtras.ScrollArea {
+    id: bodyTextScrollArea
+
+    property alias text: bodyText.text
+    property alias font: bodyText.font
+
+    property int cursorShape
+
+    signal clicked(var mouse)
+    signal linkActivated(string link)
+
+    implicitHeight: bodyText.paintedHeight
+
+    flickableItem.boundsBehavior: Flickable.StopAtBounds
+    flickableItem.flickableDirection: Flickable.VerticalFlick
+    horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
+
+    TextEdit {
+        id: bodyText
+        width: bodyTextScrollArea.width
+        //enabled: !Settings.isMobile
+
+        color: PlasmaCore.ColorScope.textColor
+        selectedTextColor: theme.viewBackgroundColor
+        selectionColor: theme.viewFocusColor
+        font.capitalization: theme.defaultFont.capitalization
+        font.family: theme.defaultFont.family
+        font.italic: theme.defaultFont.italic
+        font.letterSpacing: theme.defaultFont.letterSpacing
+        font.pointSize: theme.defaultFont.pointSize
+        font.strikeout: theme.defaultFont.strikeout
+        font.underline: theme.defaultFont.underline
+        font.weight: theme.defaultFont.weight
+        font.wordSpacing: theme.defaultFont.wordSpacing
+        renderType: Text.NativeRendering
+        selectByMouse: true
+        readOnly: true
+        wrapMode: Text.Wrap
+        textFormat: TextEdit.RichText
+
+        onLinkActivated: bodyTextScrollArea.linkActivated(link)
+
+        // ensure selecting text scrolls the view as needed...
+        onCursorRectangleChanged: {
+            var flick = bodyTextScrollArea.flickableItem
+            if (flick.contentY >= cursorRectangle.y) {
+                flick.contentY = cursorRectangle.y
+            } else if (flick.contentY + flick.height <= cursorRectangle.y + cursorRectangle.height) {
+                flick.contentY = cursorRectangle.y + cursorRectangle.height - flick.height
+            }
+        }
+        MouseArea {
+            property int selectionStart
+            property point mouseDownPos: Qt.point(-999, -999);
+
+            anchors.fill: parent
+            acceptedButtons: Qt.RightButton | Qt.LeftButton
+            cursorShape: {
+                if (bodyText.hoveredLink) {
+                    return Qt.PointingHandCursor;
+                } else if (bodyText.selectionStart !== bodyText.selectionEnd) {
+                    return Qt.IBeamCursor;
+                } else {
+                    return bodyTextScrollArea.cursorShape || Qt.IBeamCursor;
+                }
+            }
+            preventStealing: true // don't let us accidentally drag the Flickable
+
+            onPressed: {
+                if (mouse.button === Qt.RightButton) {
+                    var contextMenu = contextMenuComponent.createObject(bodyText);
+                    contextMenu.link = bodyText.linkAt(mouse.x, mouse.y);
+
+                    contextMenu.closed.connect(function() {
+                        contextMenu.destroy();
+                    });
+                    contextMenu.open(mouse.x, mouse.y);
+                    return;
+                }
+
+                mouseDownPos = Qt.point(mouse.x, mouse.y);
+                selectionStart = bodyText.positionAt(mouse.x, mouse.y);
+                var pos = bodyText.positionAt(mouse.x, mouse.y);
+                // deselect() would scroll to the end which we don't want
+                bodyText.select(pos, pos);
+            }
+
+            onReleased: {
+                // emulate "onClicked"
+                var manhattanLength = Math.abs(mouseDownPos.x - mouse.x) + Math.abs(mouseDownPos.y - mouse.y);
+                if (manhattanLength <= Qt.styleHints.startDragDistance) {
+                    var link = bodyText.linkAt(mouse.x, mouse.y);
+                    if (link) {
+                        Qt.openUrlExternally(link);
+                    } else {
+                        bodyTextScrollArea.clicked(mouse);
+                    }
+                }
+                mouseDownPos = Qt.point(-999, -999);
+            }
+
+            // HACK to be able to select text whilst still getting all mouse events to the MouseArea
+            onPositionChanged: {
+                if (pressed) {
+                    var pos = bodyText.positionAt(mouseX, mouseY);
+                    if (selectionStart < pos) {
+                        bodyText.select(selectionStart, pos);
+                    } else {
+                        bodyText.select(pos, selectionStart);
+                    }
+                }
+            }
+        }
+    }
+
+    Component {
+        id: contextMenuComponent
+
+        EditContextMenu {
+            target: bodyText
+        }
+    }
+}

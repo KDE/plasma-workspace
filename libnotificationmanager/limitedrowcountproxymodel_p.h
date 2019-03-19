@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2019 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -18,19 +18,30 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "notificationmanagerplugin.h"
+#pragma once
 
-#include "notifications.h"
-#include "jobdetails.h"
+#include <QSortFilterProxyModel>
 
-#include <QQmlEngine>
-
-using namespace NotificationManager;
-
-void NotificationManagerPlugin::registerTypes(const char *uri)
+class LimitedRowCountProxyModel : public QSortFilterProxyModel
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.notificationmanager"));
+    Q_OBJECT
 
-    qmlRegisterType<Notifications>(uri, 1, 0, "Notifications");
-    qmlRegisterType<JobDetails>();
-}
+public:
+    explicit LimitedRowCountProxyModel(QObject *parent = nullptr);
+    ~LimitedRowCountProxyModel() override;
+
+    void setSourceModel(QAbstractItemModel *sourceModel) override;
+
+    int limit() const;
+    void setLimit(int limit);
+
+signals:
+    void limitChanged();
+
+protected:
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
+
+private:
+    int m_limit = 0;
+
+};

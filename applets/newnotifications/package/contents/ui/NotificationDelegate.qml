@@ -19,7 +19,53 @@
  */
 
 import QtQuick 2.8
+import QtQuick.Layouts 1.1
 
-NotificationItem {
+import org.kde.plasma.core 2.0 as PlasmaCore
 
+// TODO grouping and what not
+ColumnLayout {
+    id: delegate
+
+    property alias applicationName: notificationItem.applicationName
+    property alias applicatonIconSource: notificationItem.applicationIconSource
+
+    property alias time: notificationItem.time
+
+    property alias summary: notificationItem.summary
+    property alias body: notificationItem.body
+    property alias icon: notificationItem.icon
+
+    property alias configurable: notificationItem.configurable
+    //property bool hasDefaultAction
+    //property alias actionNames: notificationItem.actionNames
+    //property alias actionLabels: notificationItem.actionLabels
+
+    signal closeClicked
+    signal configureClicked
+    //signal defaultActionInvoked
+    //signal actionInvoked(string actionName)
+    //signal expired
+
+    // FIXME
+    property alias svg: lineSvgItem.svg
+
+    spacing: 0
+
+    NotificationItem {
+        id: notificationItem
+        Layout.fillWidth: true
+
+        closable: true
+
+        onCloseClicked: delegate.closeClicked()
+        onConfigureClicked: delegate.configureClicked()
+    }
+
+    PlasmaCore.SvgItem {
+        id: lineSvgItem
+        elementId: "horizontal-line"
+        Layout.fillWidth: true
+        // TODO hide for last notification
+    }
 }

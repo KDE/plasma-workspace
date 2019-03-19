@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2019 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -21,17 +21,18 @@
 #pragma once
 
 #include <QDateTime>
-#include <QImage>
 #include <QString>
-#include <QStringList>
 #include <QUrl>
-
-#include "notifications.h"
 
 //#include "notificationmanager_export.h"
 
+#include "notifications.h"
+
+
 namespace NotificationManager
 {
+
+class JobDetails;
 
 /**
  * @short Represents a single notification
@@ -40,19 +41,13 @@ namespace NotificationManager
  *
  * @author Kai Uwe Broulik <kde@privat.broulik.de>
  **/
-class Notification
+class Job
 {
 public:
-    explicit Notification(uint id = 0);
-    ~Notification();
+    explicit Job(const QString &sourceName = QString());
+    ~Job();
 
-    /*enum class Urgency {
-        Low = 0,
-        Normal = 1,
-        Critical = 2
-    };*/
-
-    uint id() const;
+    QString sourceName() const;
 
     QDateTime created() const;
 
@@ -60,40 +55,28 @@ public:
     void setUpdated();
 
     QString summary() const;
-    void setSummary(const QString &summary);
 
     QString body() const;
-    void setBody(const QString &body);
+    /*void setBody(const QString &body);
 
     QString iconName() const;
     void setIconName(const QString &iconName);
 
     QImage image() const;
-    void setImage(const QImage &image);
+    void setImage(const QImage &image);*/
 
     QString applicationName() const;
-    void setApplicationName(const QString &applicationName);
 
     QString applicationIconName() const;
-    void setApplicationIconName(const QString &applicationIconName);
 
-    QStringList actionNames() const;
-    QStringList actionLabels() const;
-    bool hasDefaultAction() const;
-    void setActions(const QStringList &actions);
+    Notifications::JobState state() const;
+    int percentage() const;
+    int error() const;
+    QString errorText() const;
+    bool suspendable() const;
+    bool killable() const;
 
-    // QVector?
-    QList<QUrl> urls() const;
-    void setUrls(const QList<QUrl> &urls);
-
-    Notifications::Urgencies urgency() const;
-    void setUrgency(Notifications::Urgencies urgency);
-
-    int timeout() const;
-    void setTimeout(int timeout);
-
-    bool configurable() const;
-    QString configureActionLabel() const;
+    JobDetails *details() const;
 
     bool expired() const;
     void setExpired(bool expired);
@@ -101,40 +84,35 @@ public:
     bool dismissed() const;
     void setDismissed(bool dismissed);
 
-    void processHints(const QVariantMap &hints);
+    QVector<int> processData(const QVariantMap/*Plasma::DataEngine::Data*/ &data);
 
-    bool operator==(const Notification &other) const;
+    bool operator==(const Job &other) const;
 
-    friend class NotificationModel;
+    friend class JobsModel;
 
 private:
-    uint m_id = 0;
+    QString m_sourceName;
+
     QDateTime m_created;
     QDateTime m_updated;
 
     QString m_summary;
-    QString m_body;
-    QString m_iconName;
-    QImage m_image;
 
+    // raw appName and appIconName from kuiserver
+    QString m_appName;
+    QString m_appIconName;
+    // names looked up from a service
     QString m_applicationName;
     QString m_applicationIconName;
 
-    QStringList m_actionNames;
-    QStringList m_actionLabels;
-    bool m_hasDefaultAction = false;
+    Notifications::JobState m_state = Notifications::JobStateStopped;
+    int m_percentage = 0;
+    int m_error = 0;
+    QString m_errorText;
+    bool m_suspendable = false;
+    bool m_killable = false;
 
-    bool m_hasConfigureAction = false;
-    QString m_configureActionLabel;
-
-    bool m_configurableNotifyRc = false;
-    QString m_notifyRcName;
-    QString m_eventId;
-
-    QList<QUrl> m_urls;
-
-    Notifications::Urgencies m_urgency = Notifications::NormalUrgency;
-    int m_timeout = -1;
+    JobDetails *m_details = nullptr;
 
     bool m_expired = false;
     bool m_dismissed = false;

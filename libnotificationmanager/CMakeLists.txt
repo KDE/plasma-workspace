@@ -7,6 +7,13 @@ set(notificationmanager_LIB_SRCS
     notificationserver.cpp
     notification.cpp
     notificationmodel.cpp
+    notifications.cpp
+    notificationfilterproxymodel.cpp
+    notificationsortproxymodel.cpp
+    limitedrowcountproxymodel.cpp
+    jobsmodel.cpp
+    job.cpp
+    jobdetails.cpp
 )
 
 qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS org.freedesktop.Notifications.xml notificationserver.h  NotificationManager::NotificationServer)
@@ -25,11 +32,14 @@ target_link_libraries(notificationmanager
         Qt5::Core
         Qt5::Gui
         Qt5::Quick
-        #KF5::ItemModels
+        KF5::ItemModels
     PRIVATE
         Qt5::DBus
         KF5::ConfigCore
         KF5::Service
+        KF5::Plasma
+        KF5::I18n
+        KF5::IconThemes
 )
 
 set_target_properties(notificationmanager PROPERTIES

@@ -21,6 +21,7 @@
 #pragma once
 
 #include <QObject>
+#include <QDBusContext>
 #include <QVector>
 
 //#include "notificationmanager_export.h"
@@ -37,7 +38,7 @@ class Notification;
  *
  * @author Kai Uwe Broulik <kde@privat.broulik.de>
  **/
-class NotificationServer : public QObject
+class NotificationServer : public QObject, protected QDBusContext
 {
     Q_OBJECT
 
