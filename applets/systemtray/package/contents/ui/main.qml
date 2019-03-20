@@ -22,6 +22,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import org.kde.draganddrop 2.0 as DnD
+import org.kde.kirigami 2.5 as Kirigami
 
 import "items"
 
@@ -37,9 +38,10 @@ MouseArea {
     LayoutMirroring.childrenInherit: true
 
     property var iconSizes: ["small", "smallMedium", "medium", "large", "huge", "enormous"];
+    property int iconSize: plasmoid.configuration.iconSize + (Kirigami.Settings.tabletMode ? 1 : 0)
 
     property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
-    property int itemSize: units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes[iconSizes[plasmoid.configuration.iconSize]]))
+    readonly property int itemSize: units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes[iconSizes[Math.min(iconSizes.length-1, iconSize)]]))
     property int hiddenItemSize: units.iconSizes.smallMedium
     property alias expanded: dialog.visible
     property Item activeApplet
