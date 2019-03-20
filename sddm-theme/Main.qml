@@ -154,7 +154,7 @@ PlasmaCore.ColorScope {
                 left: parent.left
                 right: parent.right
             }
-            height: root.height
+            height: root.height + units.gridUnit * 3
 
             focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
 
