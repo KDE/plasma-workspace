@@ -1111,7 +1111,7 @@ void PanelView::themeChanged()
         KWindowEffects::enableBlurBehind(winId(), false);
         KWindowEffects::enableBackgroundContrast(winId(), false);        
     } else {
-        KWindowEffects::enableBlurBehind(winId(), true);
+        KWindowEffects::enableBlurBehind(winId(), m_theme.blurBehindEnabled());
         KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
                                                         m_theme.backgroundContrast(),
                                                         m_theme.backgroundIntensity(),
