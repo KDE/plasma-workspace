@@ -51,7 +51,8 @@ class NOTIFICATIONMANAGER_EXPORT JobDetails : public QObject
      */
     Q_PROPERTY(QString text READ text NOTIFY textChanged)
 
-    //Q_PROPERTY(QUrl destUrl READ destUrl NOTIFY destUrlChanged)
+    Q_PROPERTY(QUrl destUrl MEMBER m_destUrl NOTIFY destUrlChanged)
+
     /**
      * Current transfer rate in Byte/s
      */
@@ -75,11 +76,18 @@ class NOTIFICATIONMANAGER_EXPORT JobDetails : public QObject
     Q_PROPERTY(QString descriptionLabel2 MEMBER m_descriptionLabel2 NOTIFY descriptionLabel2Changed)
     Q_PROPERTY(QString descriptionValue2 MEMBER m_descriptionValue2 NOTIFY descriptionValue2Changed)
 
+    /**
+     * This tries to generate a valid URL for a file that's being processed by converting descriptionValue2
+     * (which is assumed to be the Destination) and if that isn't valid, descriptionValue1 to a URL.
+     */
+    Q_PROPERTY(QUrl descriptionUrl READ descriptionUrl NOTIFY descriptionUrlChanged)
+
 public:
     explicit JobDetails(QObject *parent = nullptr);
     ~JobDetails() override;
 
     QString text() const;
+    QUrl descriptionUrl() const;
 
     void processData(const QVariantMap /*Plasma::DataEngine::Data*/ &data);
 
@@ -87,6 +95,7 @@ public:
 
 signals:
     void textChanged();
+    void destUrlChanged();
     void speedChanged();
     void processedBytesChanged();
     void processedFilesChanged();
@@ -100,6 +109,7 @@ signals:
     void descriptionValue1Changed();
     void descriptionLabel2Changed();
     void descriptionValue2Changed();
+    void descriptionUrlChanged();
 
 private:
     QUrl m_destUrl;

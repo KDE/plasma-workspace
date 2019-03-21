@@ -66,7 +66,7 @@ QtObject {
     property int popupSpacing: units.largeSpacing
 
     // How much vertical screen real estate the notification popups may consume
-    readonly property real popupMaximumScreenFill: 0.67
+    readonly property real popupMaximumScreenFill: 0.75
 
     property var screenRect: plasmoid.availableScreenRect
 
@@ -175,6 +175,7 @@ QtObject {
             summary: model.summary
             body: model.body || "" // TODO
             icon: model.image || model.iconName
+            urls: model.urls || []
             hasDefaultAction: model.hasDefaultAction || false
             timeout: model.timeout
             urgency: model.urgency
@@ -191,16 +192,20 @@ QtObject {
             actionNames: model.actionNames
             actionLabels: model.actionLabels
 
-            onExpired: popupNotificationsModel.expire(popupNotificationsModel.makeModelIndex(index))
-            onCloseClicked: popupNotificationsModel.close(popupNotificationsModel.makeModelIndex(index))
-            onDismissClicked: popupNotificationsModel.dismiss(popupNotificationsModel.makeModelIndex(index))
-            onConfigureClicked: popupNotificationsModel.configure(popupNotificationsModel.makeModelIndex(index))
-            onDefaultActionInvoked: popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.makeModelIndex(index))
-            onActionInvoked: popupNotificationsModel.invokeAction(popupNotificationsModel.makeModelIndex(index), actionName)
+            onExpired: popupNotificationsModel.expire(popupNotificationsModel.index(index, 0))
+            onCloseClicked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+            onDismissClicked: popupNotificationsModel.dismiss(popupNotificationsModel.index(index, 0))
+            onConfigureClicked: popupNotificationsModel.configure(popupNotificationsModel.index(index, 0))
+            onDefaultActionInvoked: popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0))
+            onActionInvoked: popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName)
+            onOpenUrl: {
+                Qt.openUrlExternally(url);
+                popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+            }
 
-            onSuspendJobClicked: popupNotificationsModel.suspendJob(popupNotificationsModel.makeModelIndex(index))
-            onResumeJobClicked: popupNotificationsModel.resumeJob(popupNotificationsModel.makeModelIndex(index))
-            onKillJobClicked: popupNotificationsModel.killJob(popupNotificationsModel.makeModelIndex(index))
+            onSuspendJobClicked: popupNotificationsModel.suspendJob(popupNotificationsModel.index(index, 0))
+            onResumeJobClicked: popupNotificationsModel.resumeJob(popupNotificationsModel.index(index, 0))
+            onKillJobClicked: popupNotificationsModel.killJob(popupNotificationsModel.index(index, 0))
 
             onHeightChanged: Qt.callLater(positionPopups)
             onWidthChanged: Qt.callLater(positionPopups)

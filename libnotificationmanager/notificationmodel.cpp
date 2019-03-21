@@ -69,19 +69,15 @@ void NotificationModel::Private::onNotificationAdded(const Notification &notific
 
 void NotificationModel::Private::onNotificationReplaced(uint replacedId, const Notification &notification)
 {
-    // Completely remove the old notification and add the new one
-    // TODO why? we have a sort model that sorts by created/updated, so we should be able to reuse the instance
-
     const int row = indexOfNotification(replacedId);
 
-    if (row > -1) {
-        q->beginRemoveRows(QModelIndex(), row, row);
-        notifications.removeAt(row); // erase or something but we need the index for beginRemoveRows anyway
-        q->endRemoveRows();
+    if (row == -1) {
+        return;
     }
 
-    // now insert the new notification
-    onNotificationAdded(notification);
+    notifications[row] = notification;
+    const QModelIndex idx = q->index(row, 0);
+    emit q->dataChanged(idx, idx);
 }
 
 void NotificationModel::Private::onNotificationRemoved(uint removedId, NotificationServer::CloseReason reason)

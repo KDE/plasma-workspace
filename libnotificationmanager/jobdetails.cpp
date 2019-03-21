@@ -36,10 +36,7 @@ JobDetails::~JobDetails() = default;
 
 QString JobDetails::text() const
 {
-    QString currentFileName = QUrl::fromUserInput(m_descriptionValue2, QString(), QUrl::AssumeLocalFile).fileName();
-    if (currentFileName.isEmpty()) {
-        currentFileName = QUrl::fromUserInput(m_descriptionValue1, QString(), QUrl::AssumeLocalFile).fileName();
-    }
+    const QString currentFileName = descriptionUrl().fileName();
 
     QString destUrlString;
     if (m_destUrl.isLocalFile()) {
@@ -53,7 +50,17 @@ QString JobDetails::text() const
         destUrlString = m_destUrl.toDisplayString(); // strips password
     }
 
-    if (m_totalFiles == 1 && !currentFileName.isEmpty()) {
+    qDebug() << "JOB DETAILS" << "current file name" << currentFileName << "desturl" << destUrlString
+               << "processed files" << m_processedFiles << "total files" << m_totalFiles
+               << "processed dirs" << m_processedDirectories << "total dirs" << m_totalDirectories
+               << "dest url" << m_destUrl << "label1" << m_descriptionLabel1 << "value1" << m_descriptionValue1
+               << "label2" << m_descriptionLabel2 << "value2" << m_descriptionValue2;
+
+    if (m_totalFiles == 0) {
+        if (!destUrlString.isEmpty()) {
+            return i18nc("Copying unknown amount of files to location", "to %1", destUrlString);
+        }
+    } else if (m_totalFiles == 1 && !currentFileName.isEmpty()) {
         if (!destUrlString.isEmpty()) {
             return i18nc("Copying file to location", "%1 to %2", currentFileName, destUrlString);
         }
@@ -77,9 +84,17 @@ QString JobDetails::text() const
         return i18ncp("Copying n files", "%1 file", "%1 files", m_totalFiles);
     }
 
-    // TODO
-    qWarning() << "No job details!!!";
+    qWarning() << "  NO DETAILS";
     return QString();
+}
+
+QUrl JobDetails::descriptionUrl() const
+{
+    QUrl url = QUrl::fromUserInput(m_descriptionValue2, QString(), QUrl::AssumeLocalFile);
+    if (!url.isValid()) {
+        url = QUrl::fromUserInput(m_descriptionValue1, QString(), QUrl::AssumeLocalFile);
+    }
+    return url;
 }
 
 template<typename T> bool processField(const QVariantMap/*Plasma::DataEngine::Data*/ &data,
@@ -104,6 +119,7 @@ template<typename T> bool processField(const QVariantMap/*Plasma::DataEngine::Da
 void JobDetails::processData(const QVariantMap &data)
 {
     bool textDirty = false;
+    bool urlDirty = false;
 
     auto it = data.find(QStringLiteral("destUrl"));
     if (it != data.end()) {
@@ -111,6 +127,7 @@ void JobDetails::processData(const QVariantMap &data)
         if (m_destUrl != destUrl) {
             m_destUrl = destUrl;
             textDirty = true;
+            emit destUrlChanged();
         }
     }
 
@@ -119,6 +136,7 @@ void JobDetails::processData(const QVariantMap &data)
     if (processField(data, QStringLiteral("label0"), m_descriptionValue1,
                      this, &JobDetails::descriptionValue1Changed)) {
         textDirty = true;
+        urlDirty = true;
     }
 
     processField(data, QStringLiteral("labelName1"), m_descriptionLabel2,
@@ -126,6 +144,7 @@ void JobDetails::processData(const QVariantMap &data)
     if (processField(data, QStringLiteral("label1"), m_descriptionValue2,
                      this, &JobDetails::descriptionValue2Changed)) {
         textDirty = true;
+        urlDirty = true;
     }
 
     processField(data, QStringLiteral("numericSpeed"), m_speed,
@@ -163,7 +182,10 @@ void JobDetails::processData(const QVariantMap &data)
         }
     }
 
-    if (textDirty) {
+    if (urlDirty) {
+        emit descriptionUrlChanged();
+    }
+    if (urlDirty || textDirty) {
         emit textChanged();
     }
 }

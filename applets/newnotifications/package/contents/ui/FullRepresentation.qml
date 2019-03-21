@@ -138,8 +138,8 @@ ColumnLayout {
 
                     // TODO everything else
 
-                    onCloseClicked: historyModel.close(historyModel.makeModelIndex(index))
-                    onConfigureClicked: historyModel.configure(historyModel.makeModelIndex(index))
+                    onCloseClicked: historyModel.close(historyModel.index(index, 0))
+                    onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
 
                     svg: lineSvg
                 }

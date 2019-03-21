@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -52,6 +52,7 @@ ColumnLayout {
     // This isn't an alias because TextEdit RichText adds some HTML tags to it
     property string body
     property alias icon: iconItem.source
+    property var urls: []
 
     property int jobState
     property int percentage
@@ -67,11 +68,17 @@ ColumnLayout {
     property var actionNames: []
     property var actionLabels: []
 
+    property int thumbnailLeftPadding: 0
+    property int thumbnailRightPadding: 0
+    property int thumbnailTopPadding: 0
+    property int thumbnailBottomPadding: 0
+
     signal bodyClicked(var mouse) // TODO bodyClicked?
     signal closeClicked
     signal configureClicked
     signal dismissClicked
     signal actionInvoked(string actionName)
+    signal openUrl(string url)
 
     signal suspendJobClicked
     signal resumeJobClicked
@@ -213,7 +220,8 @@ ColumnLayout {
                 Layout.fillWidth: true
                 Layout.preferredHeight: implicitHeight
                 textFormat: Text.PlainText
-                wrapMode: Text.NoWrap
+                maximumLineCount: 3
+                wrapMode: Text.WordWrap
                 elide: Text.ElideRight
                 level: 4
                 text: {
@@ -289,6 +297,8 @@ ColumnLayout {
             onResumeJobClicked: notificationItem.resumeJobClicked()
             onKillJobClicked: notificationItem.killJobClicked()
 
+            onOpenUrl: notificationItem.openUrl(url)
+
             hovered: notificationItem.hovered
         }
     }
@@ -312,6 +322,26 @@ ColumnLayout {
                 Layout.preferredWidth: minimumWidth
                 onClicked: notificationItem.actionInvoked(modelData)
             }
+        }
+    }
+
+    // thumbnails
+    Loader {
+        id: thumbnailStripLoader
+        Layout.leftMargin: notificationItem.thumbnailLeftPadding
+        Layout.rightMargin: notificationItem.thumbnailRightPadding
+        Layout.topMargin: notificationItem.thumbnailTopPadding
+        Layout.bottomMargin: notificationItem.thumbnailBottomPadding
+        Layout.fillWidth: true
+        active: notificationItem.urls.length > 0
+        visible: active
+        sourceComponent: ThumbnailStrip {
+            leftPadding: -thumbnailStripLoader.Layout.leftMargin
+            rightPadding: -thumbnailStripLoader.Layout.rightMargin
+            topPadding: -thumbnailStripLoader.Layout.topMargin
+            bottomPadding: -thumbnailStripLoader.Layout.bottomMargin
+            urls: notificationItem.urls
+            onOpenUrl: notificationItem.openUrl(url)
         }
     }
 }

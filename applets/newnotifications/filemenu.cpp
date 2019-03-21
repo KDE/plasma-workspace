@@ -16,9 +16,7 @@
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "thumbnailer.h"
-
-#include <KIO/PreviewJob>
+#include "filemenu.h"
 
 #include <QApplication>
 #include <QClipboard>
@@ -38,104 +36,89 @@
 
 #include <KIO/OpenFileManagerWindowJob>
 
-Thumbnailer::Thumbnailer(QObject *parent) : QObject(parent)
+FileMenu::FileMenu(QObject *parent) : QObject(parent)
 {
 
 }
 
-Thumbnailer::~Thumbnailer() = default;
+FileMenu::~FileMenu() = default;
 
-void Thumbnailer::classBegin()
-{
-
-}
-
-void Thumbnailer::componentComplete()
-{
-    m_inited = true;
-    generatePreview();
-}
-
-QUrl Thumbnailer::url() const
+QUrl FileMenu::url() const
 {
     return m_url;
 }
 
-void Thumbnailer::setUrl(const QUrl &url)
+void FileMenu::setUrl(const QUrl &url)
 {
     if (m_url != url) {
         m_url = url;
         emit urlChanged();
-
-        generatePreview();
     }
 }
 
-QSize Thumbnailer::size() const
+QQuickItem *FileMenu::visualParent() const
 {
-    return m_size;
+    return m_visualParent.data();
 }
 
-void Thumbnailer::setSize(const QSize &size)
+void FileMenu::setVisualParent(QQuickItem *visualParent)
 {
-    if (m_size != size) {
-        m_size = size;
-        emit sizeChanged();
-
-        generatePreview();
-    }
-}
-
-bool Thumbnailer::hasPreview() const
-{
-    return !m_pixmap.isNull();
-}
-
-QPixmap Thumbnailer::pixmap() const
-{
-    return m_pixmap;
-}
-
-QSize Thumbnailer::pixmapSize() const
-{
-    return m_pixmap.size();
-}
-
-QString Thumbnailer::iconName() const
-{
-    return m_iconName;
-}
-
-bool Thumbnailer::menuVisible() const
-{
-    return m_menuVisible;
-}
-
-void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem *ctx)
-{
-    if (!ctx || !ctx->window()) {
+    if (m_visualParent.data() == visualParent) {
         return;
     }
 
-    const QUrl url(path);
-    if (!url.isValid()) {
+    if (m_visualParent) {
+        disconnect(m_visualParent.data(), nullptr, this, nullptr);
+    }
+    m_visualParent = visualParent;
+    if (m_visualParent) {
+        connect(m_visualParent.data(), &QObject::destroyed, this, &FileMenu::visualParentChanged);
+    }
+    emit visualParentChanged();
+}
+
+bool FileMenu::visible() const
+{
+    return m_visible;
+}
+
+void FileMenu::setVisible(bool visible)
+{
+    if (m_visible == visible) {
         return;
     }
 
-    KFileItem fileItem(url);
+    if (visible) {
+        open(0, 0);
+    } else {
+        // TODO warning or close?
+    }
+}
+
+void FileMenu::open(int x, int y)
+{
+    if (!m_visualParent || !m_visualParent->window()) {
+        return;
+    }
+
+    if (!m_url.isValid()) {
+        return;
+    }
+
+    KFileItem fileItem(m_url);
 
     QMenu *menu = new QMenu();
     menu->setAttribute(Qt::WA_DeleteOnClose, true);
 
     connect(menu, &QMenu::aboutToHide, this, [this] {
-        m_menuVisible = false;
-        emit menuVisibleChanged();
+        m_visible = false;
+        emit visibleChanged();
     });
 
-    if (KProtocolManager::supportsListing(url)) {
+    if (KProtocolManager::supportsListing(m_url)) {
         QAction *openContainingFolderAction = menu->addAction(QIcon::fromTheme(QStringLiteral("folder-open")), i18n("Open Containing Folder"));
-        connect(openContainingFolderAction, &QAction::triggered, [url] {
-            KIO::highlightInFileManager({url});
+        connect(openContainingFolderAction, &QAction::triggered, [this] {
+            KIO::highlightInFileManager({m_url});
         });
     }
 
@@ -171,71 +154,31 @@ void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem 
     // this causes the next click to go missing
 
     //by releasing manually we avoid that situation
-    auto ungrabMouseHack = [ctx]() {
-        if (ctx->window()->mouseGrabberItem()) {
-            ctx->window()->mouseGrabberItem()->ungrabMouse();
+    auto ungrabMouseHack = [this]() {
+        if (m_visualParent && m_visualParent->window() && m_visualParent->window()->mouseGrabberItem()) {
+            m_visualParent->window()->mouseGrabberItem()->ungrabMouse();
         }
     };
 
-    QTimer::singleShot(0, ctx, ungrabMouseHack);
+    QTimer::singleShot(0, m_visualParent, ungrabMouseHack);
     //end workaround
 
     QPoint pos;
-    if (x == -1 && y == -1) { // align "bottom left of ctx"
+    if (x == -1 && y == -1) { // align "bottom left of visualParent"
         menu->adjustSize();
 
-        pos = ctx->mapToGlobal(QPointF(0, ctx->height())).toPoint();
+        pos = m_visualParent->mapToGlobal(QPointF(0, m_visualParent->height())).toPoint();
 
         if (!qApp->isRightToLeft()) {
-            pos.rx() += ctx->width();
+            pos.rx() += m_visualParent->width();
             pos.rx() -= menu->width();
         }
     } else {
-        pos = ctx->mapToGlobal(QPointF(x, y)).toPoint();
+        pos = m_visualParent->mapToGlobal(QPointF(x, y)).toPoint();
     }
 
     menu->popup(pos);
 
-    m_menuVisible = true;
-    emit menuVisibleChanged();
-}
-
-void Thumbnailer::generatePreview()
-{
-    if (!m_inited) {
-        return;
-    }
-
-    if (!m_url.isValid() || !m_url.isLocalFile() || !m_size.isValid()) {
-        return;
-    }
-
-    auto maxSize = qMax(m_size.width(), m_size.height());
-    KIO::PreviewJob *job = KIO::filePreview(KFileItemList({KFileItem(m_url)}), QSize(maxSize,maxSize));
-    job->setScaleType(KIO::PreviewJob::Scaled);
-    job->setIgnoreMaximumSize(true);
-
-    connect(job, &KIO::PreviewJob::gotPreview, this, [this](const KFileItem &item, const QPixmap &preview) {
-        Q_UNUSED(item);
-        m_pixmap = preview;
-        emit pixmapChanged();
-
-        if (!m_iconName.isEmpty()) {
-            m_iconName.clear();
-            emit iconNameChanged();
-        }
-    });
-
-    connect(job, &KIO::PreviewJob::failed, this, [this](const KFileItem &item) {
-        m_pixmap = QPixmap();
-        emit pixmapChanged();
-
-        const QString &iconName = item.determineMimeType().iconName();
-        if (m_iconName != iconName) {
-            m_iconName = iconName;
-            emit iconNameChanged();
-        }
-    });
-
-    job->start();
+    m_visible = true;
+    emit visibleChanged();
 }

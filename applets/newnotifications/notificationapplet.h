@@ -23,9 +23,13 @@
 
 #include <Plasma/Applet>
 
+class QQuickItem;
+
 class NotificationApplet : public Plasma::Applet
 {
     Q_OBJECT
+
+    Q_PROPERTY(bool dragActive READ dragActive NOTIFY dragActiveChanged)
 
 public:
     explicit NotificationApplet(QObject *parent, const QVariantList &data);
@@ -34,6 +38,17 @@ public:
     void init() override;
     void configChanged() override;
 
+    bool dragActive() const;
+    Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
+    Q_INVOKABLE void startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap);
+
+signals:
+    void dragActiveChanged();
+
+private slots:
+    void doDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap);
+
 private:
+    bool m_dragActive = false;
 
 };

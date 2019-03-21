@@ -53,6 +53,11 @@ static QString sanitize(const QString &text)
     // Only &{apos, quot, gt, lt, amp}; as well as &#123 character references will be allowed
     t.replace(QRegularExpression(QStringLiteral("&(?!(?:apos|quot|[gl]t|amp);|#)")), QLatin1String("&amp;"));
 
+    // Don't bother adding some HTML structure if the body is now empty
+    if (t.isEmpty()) {
+        return t;
+    }
+
     QXmlStreamReader r(QStringLiteral("<html>") + t + QStringLiteral("</html>"));
     QString result;
     QXmlStreamWriter out(&result);
@@ -420,6 +425,15 @@ void Notification::processHints(const QVariantMap &hints)
 {
     auto end = hints.end();
 
+    const QString desktopEntry = hints.value(QStringLiteral("desktop-entry")).toString();
+    if (!desktopEntry.isEmpty()) {
+        KService::Ptr service = KService::serviceByStorageId(desktopEntry);
+        if (service) {
+            m_applicationName = service->name();
+            m_applicationIconName = service->icon();
+        }
+    }
+
     m_notifyRcName = hints.value(QStringLiteral("x-kde-appname")).toString();
     if (!m_notifyRcName.isEmpty()) {
         // Check whether the application actually has notifications we can configure
@@ -434,10 +448,14 @@ void Notification::processHints(const QVariantMap &hints)
         if (applicationName.isEmpty()) {
             applicationName = globalGroup.readEntry("Comment");
         }
-        m_applicationName = applicationName;
+        if (!applicationName.isEmpty()) {
+            m_applicationName = applicationName;
+        }
 
         const QString iconName = globalGroup.readEntry("IconName");
-        m_applicationIconName = iconName;
+        if (!iconName.isEmpty()) {
+            m_applicationIconName = iconName;
+        }
 
         const QRegularExpression regexp(QStringLiteral("^Event/([^/]*)$"));
 
@@ -445,15 +463,6 @@ void Notification::processHints(const QVariantMap &hints)
     }
 
     m_eventId = hints.value(QStringLiteral("x-kde-eventId")).toString();
-
-    const QString desktopEntry = hints.value(QStringLiteral("desktop-entry")).toString();
-    if (!desktopEntry.isEmpty()) {
-        KService::Ptr service = KService::serviceByStorageId(desktopEntry);
-        if (service) {
-            m_applicationName = service->name();
-            m_applicationIconName = service->icon();
-        }
-    }
 
     bool ok;
     const int urgency = hints.value(QStringLiteral("urgency")).toInt(&ok); // DBus type is actually "byte"
@@ -470,6 +479,8 @@ void Notification::processHints(const QVariantMap &hints)
             break;
         }
     }
+
+    m_urls = QUrl::fromStringList(hints.value(QStringLiteral("x-kde-urls")).toStringList());
 
     // Underscored hints was in use in version 1.1 of the spec but has been
     // replaced by dashed hints in version 1.2. We need to support it for

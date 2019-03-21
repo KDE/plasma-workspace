@@ -223,8 +223,6 @@ public:
     int activeJobsCount() const;
     int jobsPercentage() const;
 
-    Q_INVOKABLE QModelIndex makeModelIndex(int row, int childRow = -1) const;
-
     Q_INVOKABLE void expire(const QModelIndex &idx);
     Q_INVOKABLE void dismiss(const QModelIndex &idx);
     Q_INVOKABLE void close(const QModelIndex &idx);

@@ -26,6 +26,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.notificationmanager 1.0 as NotificationManager
+import org.kde.plasma.private.notifications 2.0 as Notifications
 
 ColumnLayout {
     id: jobItem
@@ -46,6 +47,8 @@ ColumnLayout {
     signal suspendJobClicked
     signal resumeJobClicked
     signal killJobClicked
+
+    signal openUrl(string url)
 
     spacing: 0
 
@@ -93,14 +96,15 @@ ColumnLayout {
                 iconSource: "media-playback-stop"
                 onClicked: jobItem.killJobClicked()
             }
-        }
 
-        PlasmaComponents.ToolButton {
-            id: expandButton
-            iconSource: checked ? "arrow-down" : (LayoutMirroring.enabled ? "arrow-left" : "arrow-right")
-            tooltip: checked ? i18nc("A button tooltip; hides item details", "Hide Details")
-                             : i18nc("A button tooltip; expands the item to show details", "Show Details")
-            checkable: true
+            PlasmaComponents.ToolButton {
+                id: expandButton
+                Layout.leftMargin: units.smallSpacing
+                iconSource: checked ? "arrow-down" : (LayoutMirroring.enabled ? "arrow-left" : "arrow-right")
+                tooltip: checked ? i18nc("A button tooltip; hides item details", "Hide Details")
+                                 : i18nc("A button tooltip; expands the item to show details", "Show Details")
+                checkable: true
+            }
         }
     }
 
@@ -114,29 +118,50 @@ ColumnLayout {
         }
     }
 
-    // TODO Notification actions
-    // Always show "Open Containing Folder" if possible
-    // Add "Open"/Open With or even hamburger menu with KFileItemActions etc for single files
-
-    /*Flow { // it's a Flow so it can wrap if too long
-        // FIXME probably doesnt need a flow
-        id: finishedJobActionsFlow
+    Flow { // it's a Flow so it can wrap if too long
+        id: jobDoneActions
         Layout.fillWidth: true
         spacing: units.smallSpacing
+        // We want the actions to be right-aligned but Flow also reverses
+        // the order of items, so we put them in reverse order
         layoutDirection: Qt.RightToLeft
-        visible: false
+        visible: url && url.toString() !== ""
 
+        property var url: {
+            if (jobItem.jobState !== NotificationManager.Notifications.JobStateStopped
+                    || jobItem.error
+                    || jobItem.jobDetails.totalFiles <= 0) {
+                return null;
+            }
 
-        PlasmaComponents.Button {
-            iconSource: "application-menu"
-            //text: i18n("Open Containing Folder")
+            // For a single file show actions for it
+            if (jobItem.jobDetails.totalFiles === 1) {
+                return jobItem.jobDetails.descriptionUrl;
+            } else {
+                return jobItem.jobDetails.destUrl;
+            }
         }
 
         PlasmaComponents.Button {
+            id: otherFileActionsButton
+            iconName: "application-menu"
+            tooltip: i18n("More Options...")
+            onClicked: otherFileActionsMenu.open(-1, -1)
+
+            Notifications.FileMenu {
+                id: otherFileActionsMenu
+                url: jobDoneActions.url
+                visualParent: otherFileActionsButton
+            }
+        }
+
+        PlasmaComponents.Button {
+            // would be nice to have the file icon here?
+            text: jobItem.jobDetails.totalFiles > 1 ? i18n("Open Containing Folder") : i18n("Open")
+            onClicked: jobItem.openUrl(jobDoneActions.url)
             width: minimumWidth
-            text: i18n("Open...")
         }
-    }*/
+    }
 
     states: [
         State {
@@ -157,21 +182,10 @@ ColumnLayout {
                 target: jobActionsRow
                 visible: false
             }
-            // FIXME move everything in job actions row?
-            // TODO Should we keep the details accessible when the job finishes?
             PropertyChanges {
                 target: expandButton
                 checked: false
-                visible: false
             }
-            PropertyChanges {
-                target: finishedJobActionsFlow
-                visible: true
-            }
-            /*PropertyChanges {
-                target: openButton
-                visible: !jobItem.error // && we have a sensible location
-            }*/
         }
     ]
 }

@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2016,2019 Kai Uwe Broulik <kde@privat.broulik.de>
+    Copyright (C) 2016 Kai Uwe Broulik <kde@privat.broulik.de>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public

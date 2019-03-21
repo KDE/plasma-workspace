@@ -21,10 +21,26 @@
 
 #include "notificationapplet.h"
 
+#include <QDrag>
+#include <QMimeData>
+#include <QQuickItem>
+#include <QQuickWindow>
+#include <QStyleHints>
+
+#include "filemenu.h"
+#include "thumbnailer.h"
+
 NotificationApplet::NotificationApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
 {
-
+    static bool s_typesRegistered = false;
+    if (!s_typesRegistered) {
+        const char uri[] = "org.kde.plasma.private.notifications";
+        qmlRegisterType<FileMenu>(uri, 2, 0, "FileMenu");
+        qmlRegisterType<Thumbnailer>(uri, 2, 0, "Thumbnailer");
+        qmlProtectModule(uri, 2);
+        s_typesRegistered = true;
+    }
 }
 
 NotificationApplet::~NotificationApplet() = default;
@@ -37,6 +53,54 @@ void NotificationApplet::init()
 void NotificationApplet::configChanged()
 {
 
+}
+
+bool NotificationApplet::dragActive() const
+{
+    return m_dragActive;
+}
+
+bool NotificationApplet::isDrag(int oldX, int oldY, int newX, int newY) const
+{
+    return ((QPoint(oldX, oldY) - QPoint(newX, newY)).manhattanLength() >= qApp->styleHints()->startDragDistance());
+}
+
+void NotificationApplet::startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap)
+{
+    // This allows the caller to return, making sure we don't crash if
+    // the caller is destroyed mid-drag
+
+    QMetaObject::invokeMethod(this, "doDrag", Qt::QueuedConnection,
+        Q_ARG(QQuickItem*, item), Q_ARG(QUrl, url), Q_ARG(QPixmap, pixmap));
+}
+
+void NotificationApplet::doDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap)
+{
+    if (item && item->window() && item->window()->mouseGrabberItem()) {
+        item->window()->mouseGrabberItem()->ungrabMouse();
+    }
+
+    QDrag *drag = new QDrag(item);
+
+    QMimeData *mimeData = new QMimeData();
+
+    if (!url.isEmpty()) {
+        mimeData->setUrls(QList<QUrl>() << url);
+    }
+
+    drag->setMimeData(mimeData);
+
+    if (!pixmap.isNull()) {
+        drag->setPixmap(pixmap);
+    }
+
+    m_dragActive = true;
+    emit dragActiveChanged();
+
+    drag->exec();
+
+    m_dragActive = false;
+    emit dragActiveChanged();
 }
 
 K_EXPORT_PLASMA_APPLET_WITH_JSON(icon, NotificationApplet, "metadata.json")

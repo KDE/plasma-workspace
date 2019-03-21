@@ -43,6 +43,7 @@ PlasmaCore.Dialog {
     property alias summary: notificationItem.summary
     property alias body: notificationItem.body
     property alias icon: notificationItem.icon
+    property alias urls: notificationItem.urls
     property int urgency
     property int timeout
 
@@ -69,6 +70,7 @@ PlasmaCore.Dialog {
 
     signal defaultActionInvoked
     signal actionInvoked(string actionName)
+    signal openUrl(string url)
     signal expired
 
     signal suspendJobClicked
@@ -86,6 +88,13 @@ PlasmaCore.Dialog {
     flags: Qt.WindowDoesNotAcceptFocus
 
     visible: false
+
+    // When notification is updated, restart hide timer
+    onTimeChanged: {
+        if (timer.running) {
+            timer.restart();
+        }
+    }
 
     mainItem: MouseArea {
         id: area
@@ -141,6 +150,11 @@ PlasmaCore.Dialog {
             hovered: area.containsMouse
             maximumLineCount: 8 // TODO configurable?
 
+            thumbnailLeftPadding: -notificationPopup.margins.left
+            thumbnailRightPadding: -notificationPopup.margins.right
+            thumbnailTopPadding: -notificationPopup.margins.top
+            thumbnailBottomPadding: -notificationPopup.margins.bottom
+
             closable: true // TODO with grouping and what not
             onBodyClicked: {
                 if (area.acceptedButtons & mouse.button) {
@@ -151,6 +165,7 @@ PlasmaCore.Dialog {
             onDismissClicked: notificationPopup.dismissClicked()
             onConfigureClicked: notificationPopup.configureClicked()
             onActionInvoked: notificationPopup.actionInvoked(actionName)
+            onOpenUrl: notificationPopup.openUrl(url)
 
             onSuspendJobClicked: notificationPopup.suspendJobClicked()
             onResumeJobClicked: notificationPopup.resumeJobClicked()

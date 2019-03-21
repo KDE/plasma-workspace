@@ -65,22 +65,25 @@ uint NotificationServer::Notify(const QString &app_name, uint replaces_id, const
 {
     Q_ASSERT(calledFromDBus());
 
-    // TODO architecture: should we let Notification struct count up a static in its constructor every time?
-    ++m_highestNotificationId;
-
     const bool wasReplaced = replaces_id > 0;
+    int notificationId = 0;
+    if (wasReplaced) {
+        notificationId = replaces_id;
+    } else {
+        ++m_highestNotificationId;
+        notificationId = m_highestNotificationId;
+    }
 
-    Notification notification(m_highestNotificationId);
+    Notification notification(notificationId);
     notification.setSummary(summary);
     notification.setBody(body);
     // we actually use that as notification icon (unless an image pixmap is provided in hints)
     notification.setIconName(app_icon);
     notification.setApplicationName(app_name);
 
-    // TODO remove
-    if (app_name.isEmpty()) {
+    /*if (app_name.isEmpty()) {
         notification.setApplicationName(message().service());
-    }
+    }*/
 
     notification.setActions(actions);
 
@@ -90,14 +93,13 @@ uint NotificationServer::Notify(const QString &app_name, uint replaces_id, const
     notification.processHints(hints);
 
     if (wasReplaced) {
-        // FIXME add "updated" timestamp
         notification.setUpdated();
         emit notificationReplaced(replaces_id, notification);
     } else {
         emit notificationAdded(notification);
     }
 
-    return m_highestNotificationId;
+    return notificationId;
 }
 
 void NotificationServer::CloseNotification(uint id)

@@ -353,25 +353,6 @@ int Notifications::jobsPercentage() const
     return d->jobsPercentage;
 }
 
-QModelIndex Notifications::makeModelIndex(int row, int childRow) const
-{
-    if (row < 0 || row >= rowCount()) {
-        return QModelIndex();
-    }
-
-    if (childRow == -1) {
-        return index(row, 0);
-    } else {
-        const QModelIndex &parent = index(row, 0);
-
-        if (childRow < rowCount(parent)) {
-            return parent.child(childRow, 0);
-        }
-    }
-
-    return QModelIndex();
-}
-
 void Notifications::expire(const QModelIndex &idx)
 {
     // TODO we could just call the NotificationServer directly?
