@@ -245,7 +245,7 @@ QString Notification::body() const
 
 void Notification::setBody(const QString &body)
 {
-    m_body = sanitize(body);
+    m_body = sanitize(body.trimmed());
 }
 
 QString Notification::iconName() const
@@ -429,7 +429,11 @@ void Notification::processHints(const QVariantMap &hints)
                                 QStringLiteral("knotifications5/") + m_notifyRcName + QStringLiteral(".notifyrc")));
 
         KConfigGroup globalGroup(&config, "Global");
-        const QString applicationName = globalGroup.readEntry("Name");
+
+        QString applicationName = globalGroup.readEntry("Name");
+        if (applicationName.isEmpty()) {
+            applicationName = globalGroup.readEntry("Comment");
+        }
         m_applicationName = applicationName;
 
         const QString iconName = globalGroup.readEntry("IconName");

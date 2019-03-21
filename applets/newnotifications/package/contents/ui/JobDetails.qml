@@ -57,17 +57,41 @@ GridLayout {
         model: [1, 2]
 
         PlasmaExtras.DescriptiveLabel {
+            id: descriptionValueLabel
             Layout.column: 1
             Layout.row: index
             Layout.fillWidth: true
-            text: jobDetails["descriptionLabel" + modelData] && jobDetails["descriptionValue" + modelData]
-                ? jobDetails["descriptionValue" + modelData] : ""
             font: theme.smallestFont
             elide: Text.ElideMiddle
             textFormat: Text.PlainText
             wrapMode: Text.WrapAtWordBoundaryOrAnywhere
             maximumLineCount: 5
             visible: text !== ""
+
+            Component.onCompleted: bindText()
+            function bindText() {
+                text = Qt.binding(function() {
+                    return jobDetails["descriptionLabel" + modelData] && jobDetails["descriptionValue" + modelData]
+                            ? jobDetails["descriptionValue" + modelData] : "";
+                });
+            }
+
+            MouseArea {
+                anchors.fill: parent
+                acceptedButtons: Qt.RightButton
+                onPressed: {
+                    // break binding so it doesn't update while the menu is opened
+                    descriptionValueLabel.text = descriptionValueLabel.text;
+                    descriptionValueMenu.open(mouse.x, mouse.y)
+                }
+            }
+
+            EditContextMenu {
+                id: descriptionValueMenu
+                target: descriptionValueLabel
+                // defer re-binding until after the "Copy" action in the menu has triggered
+                onClosed: Qt.callLater(descriptionValueLabel.bindText)
+            }
         }
     }
 
