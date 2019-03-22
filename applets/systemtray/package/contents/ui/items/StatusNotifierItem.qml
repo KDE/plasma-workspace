@@ -59,6 +59,10 @@ AbstractItem {
         }
     }
 
+    onContextMenu: {
+        openContextMenu(plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y))
+    }
+
     onClicked: {
         var pos = plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y);
 

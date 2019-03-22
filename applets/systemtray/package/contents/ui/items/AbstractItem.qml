@@ -112,6 +112,9 @@ PlasmaCore.ToolTipArea {
                 abstractItem.contextMenu(mouse)
             }
         }
+        onPressAndHold: {
+            abstractItem.contextMenu(mouse)
+        }
         onWheel: {
             abstractItem.wheel(wheel);
             //Don't accept the event in order to make the scrolling by mouse wheel working
