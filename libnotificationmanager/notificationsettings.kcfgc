@@ -1,0 +1,5 @@
+File=notificationsettings.kcfg
+NameSpace=NotificationManager
+ClassName=GeneralSettings
+Singleton=true
+#UseEnumTypes=true

@@ -53,7 +53,7 @@ Item {
         return lines.join("\n");
     }
 
-    Plasmoid.switchWidth: units.gridUnit * 18
+    Plasmoid.switchWidth: units.gridUnit * 14
     Plasmoid.switchHeight: units.gridUnit * 10
 
     Plasmoid.compactRepresentation: CompactRepresentation {
@@ -72,6 +72,7 @@ Item {
         showExpired: true
         showDismissed: true
         showJobs: true
+        groupMode: NotificationManager.Notifications.GroupApplicationsFlat
     }
 
     function action_notificationskcm() {

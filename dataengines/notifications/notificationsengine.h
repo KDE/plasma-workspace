@@ -25,6 +25,11 @@
 #include <QSet>
 #include <QHash>
 
+namespace NotificationManager
+{
+class Notification;
+}
+
 struct NotificationInhibiton
 {
     QString hint;
@@ -53,13 +58,7 @@ public:
      */
     uint Notify(const QString &app_name, uint replaces_id, const QString &app_icon, const QString &summary, const QString &body, const QStringList &actions, const QVariantMap &hints, int timeout);
 
-    void CloseNotification( uint id );
-
     Plasma::Service* serviceForSource(const QString& source) override;
-
-    QStringList GetCapabilities();
-
-    QString GetServerInformation(QString& vendor, QString& version, QString& specVersion);
 
     int createNotification(const QString &appName, const QString &appIcon, const QString &summary,
                            const QString &body, int timeout, const QStringList &actions, const QVariantMap &hints);
@@ -74,16 +73,11 @@ public:
     NotificationInhibitonPtr createInhibition(const QString &hint, const QString &value);
 
 public Q_SLOTS:
-    void removeNotification(uint id, uint closeReason);
-    bool registerDBusService();
-
     void onBroadcastNotification(const QMap<QString, QVariant> &properties);
 
-Q_SIGNALS:
-    void NotificationClosed( uint id, uint reason );
-    void ActionInvoked( uint id, const QString& actionKey );
-
 private:
+    void notificationAdded(const NotificationManager::Notification &notification);
+
     /**
      * Holds the id that will be assigned to the next notification source
      * that will be created

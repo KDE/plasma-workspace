@@ -1,0 +1,19 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.Notifications.Inhibit">
+    <method name="Inhibit">
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In2" value="QVariantMap"/>
+
+      <!-- Desktop entry of the application, e.g. org.kde.okular -->
+      <arg name="desktop_entry" type="s" direction="in"/>
+      <!-- Human-readable reason for the inhibition, e.g. "Giving a presentation -->
+      <arg name="reason" type="s" direction="in"/>
+      <!-- Reserved -->
+      <arg name="hints" type="a{sv}" direction="in"/>
+
+      <arg name="fd" type="h" direction="out"/>
+    </method>
+
+    <!-- TODO property for whether it is currently enabled? -->
+  </interface>
+</node>

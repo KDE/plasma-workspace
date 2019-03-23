@@ -21,10 +21,12 @@
 #include "notifications.h"
 
 #include <KConcatenateRowsProxyModel>
+#include <KDescendantsProxyModel>
 
 #include "notificationmodel.h"
 #include "notificationfilterproxymodel_p.h"
 #include "notificationsortproxymodel_p.h"
+#include "notificationgroupingproxymodel_p.h"
 #include "limitedrowcountproxymodel_p.h"
 
 #include "jobsmodel.h"
@@ -68,6 +70,9 @@ public:
 
     NotificationFilterProxyModel *filterModel = nullptr;
     NotificationSortProxyModel *sortModel = nullptr;
+    NotificationGroupingProxyModel *groupingModel = nullptr;
+    KDescendantsProxyModel *flattenModel = nullptr;
+
     LimitedRowCountProxyModel *limiterModel = nullptr;
 
 private:
@@ -109,24 +114,55 @@ void Notifications::Private::initModels()
         notificationsModel = new NotificationModel();
     }
 
-    // FIXME FIXME FIXME all of this leaks
+    if (!notificationsAndJobsModel) {
+        notificationsAndJobsModel = new KConcatenateRowsProxyModel(q);
+        notificationsAndJobsModel->addSourceModel(notificationsModel);
+    }
 
-    notificationsAndJobsModel = new KConcatenateRowsProxyModel();
-    notificationsAndJobsModel->addSourceModel(notificationsModel);
+    if (!filterModel) {
+        filterModel = new NotificationFilterProxyModel();
+        connect(filterModel, &NotificationFilterProxyModel::urgenciesChanged, q, &Notifications::urgenciesChanged);
+        connect(filterModel, &NotificationFilterProxyModel::showExpiredChanged, q, &Notifications::showExpiredChanged);
+        connect(filterModel, &NotificationFilterProxyModel::showDismissedChanged, q, &Notifications::showDismissedChanged);
+        filterModel->setSourceModel(notificationsAndJobsModel);
+    }
 
-    filterModel = new NotificationFilterProxyModel();
-    connect(filterModel, &NotificationFilterProxyModel::urgenciesChanged, q, &Notifications::urgenciesChanged);
-    connect(filterModel, &NotificationFilterProxyModel::showExpiredChanged, q, &Notifications::showExpiredChanged);
-    connect(filterModel, &NotificationFilterProxyModel::showDismissedChanged, q, &Notifications::showDismissedChanged);
+    if (!sortModel) {
+        sortModel = new NotificationSortProxyModel(q);
+    }
 
-    filterModel->setSourceModel(notificationsAndJobsModel);
+    if (!limiterModel) {
+        limiterModel = new LimitedRowCountProxyModel(q);
+        connect(limiterModel, &LimitedRowCountProxyModel::limitChanged, q, &Notifications::limitChanged);
+    }
 
-    sortModel = new NotificationSortProxyModel();
-    sortModel->setSourceModel(filterModel);
+    if (groupMode == GroupDisabled) {
+        sortModel->setSourceModel(filterModel);
+        limiterModel->setSourceModel(sortModel);
+        delete flattenModel;
+        flattenModel = nullptr;
+        delete groupingModel;
+        groupingModel = nullptr;
+    } else if (groupMode == GroupApplicationsTree || groupMode == GroupApplicationsFlat) {
+        if (!groupingModel) {
+            groupingModel = new NotificationGroupingProxyModel(q);
+            groupingModel->setSourceModel(filterModel);
+        }
 
-    limiterModel = new LimitedRowCountProxyModel();
-    connect(limiterModel, &LimitedRowCountProxyModel::limitChanged, q, &Notifications::limitChanged);
-    limiterModel->setSourceModel(sortModel);
+        sortModel->setSourceModel(groupingModel);
+
+        if (groupMode == GroupApplicationsFlat) {
+            flattenModel = new KDescendantsProxyModel(q);
+            flattenModel->setSourceModel(sortModel);
+
+            limiterModel->setSourceModel(flattenModel);
+        } else {
+            limiterModel->setSourceModel(groupingModel);
+
+            delete flattenModel;
+            flattenModel = nullptr;
+        }
+    }
 
     q->setSourceModel(limiterModel);
 }
@@ -321,9 +357,9 @@ Notifications::GroupMode Notifications::groupMode() const
 
 void Notifications::setGroupMode(GroupMode groupMode)
 {
-    if (d->groupMode) {
+    if (d->groupMode != groupMode) {
         d->groupMode = groupMode;
-        invalidate();
+        d->initModels();
         emit groupModeChanged();
     }
 }
@@ -394,6 +430,11 @@ void Notifications::close(const QModelIndex &idx)
     }
 }
 
+void Notifications::closeGroup(const QModelIndex &idx)
+{
+    qDebug() << "TODO CLOSE GROUP" << idx;
+}
+
 void Notifications::configure(const QModelIndex &idx)
 {
     d->notificationsModel->configure(Private::notificationId(idx));
@@ -453,6 +494,7 @@ QHash<int, QByteArray> Notifications::roleNames() const
 {
     return QHash<int, QByteArray> {
         {IdRole, QByteArrayLiteral("notificationId")}, // id is QML-reserved
+        {IsGroupRole, QByteArrayLiteral("isGroup")},
         {TypeRole, QByteArrayLiteral("type")},
         {CreatedRole, QByteArrayLiteral("created")},
         {UpdatedRole, QByteArrayLiteral("updated")},
@@ -468,6 +510,7 @@ QHash<int, QByteArray> Notifications::roleNames() const
         {HasDefaultActionRole, QByteArrayLiteral("hasDefaultAction")},
 
         {UrlsRole, QByteArrayLiteral("urls")},
+
         {UrgencyRole, QByteArrayLiteral("urgency")},
         {TimeoutRole, QByteArrayLiteral("timeout")},
 

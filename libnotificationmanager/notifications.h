@@ -91,7 +91,6 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
      */
     Q_PROPERTY(Urgencies urgencies READ urgencies WRITE setUrgencies NOTIFY urgenciesChanged)
 
-    // TODO
     Q_PROPERTY(GroupMode groupMode READ groupMode WRITE setGroupMode NOTIFY groupModeChanged)
 
     /**
@@ -120,14 +119,15 @@ public:
     enum Roles {
         // TODO we have uint for notifications and source name string for jobs
         IdRole = Qt::UserRole + 1,
-        TypeRole,
-        CreatedRole,
-        UpdatedRole,
+        IsGroupRole = Qt::UserRole + 2,
+        TypeRole = Qt::UserRole + 3,
+        CreatedRole = Qt::UserRole + 4,
+        UpdatedRole = Qt::UserRole + 5,
         SummaryRole = Qt::DisplayRole,
-        BodyRole = Qt::UserRole + 5,
-        IconNameRole = Qt::UserRole + 6,
+        BodyRole = Qt::UserRole + 6,
+        IconNameRole = Qt::UserRole + 7,
         ImageRole = Qt::DecorationRole,
-        ApplicationNameRole = Qt::UserRole + 7,
+        ApplicationNameRole = Qt::UserRole + 8,
         ApplicationIconNameRole,
 
         // Jobs
@@ -144,6 +144,7 @@ public:
         HasDefaultActionRole,
 
         UrlsRole,
+
         UrgencyRole,
         TimeoutRole,
 
@@ -191,7 +192,8 @@ public:
 
     enum GroupMode {
         GroupDisabled = 0,
-        GroupApplications
+        GroupApplicationsTree, // TODO make actual tree
+        GroupApplicationsFlat
     };
     Q_ENUM(GroupMode)
 
@@ -226,6 +228,7 @@ public:
     Q_INVOKABLE void expire(const QModelIndex &idx);
     Q_INVOKABLE void dismiss(const QModelIndex &idx);
     Q_INVOKABLE void close(const QModelIndex &idx);
+    Q_INVOKABLE void closeGroup(const QModelIndex &idx);
     Q_INVOKABLE void configure(const QModelIndex &idx); // TODO pass ctx for transient handling
     Q_INVOKABLE void invokeDefaultAction(const QModelIndex &idx);
     Q_INVOKABLE void invokeAction(const QModelIndex &idx, const QString &actionId);
@@ -233,6 +236,8 @@ public:
     Q_INVOKABLE void suspendJob(const QModelIndex &idx);
     Q_INVOKABLE void resumeJob(const QModelIndex &idx);
     Q_INVOKABLE void killJob(const QModelIndex &idx);
+
+    // TODO clearhistory or clear(flags what)
 
     QVariant data(const QModelIndex &index, int role/* = Qt::DisplayRole*/) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;

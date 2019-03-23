@@ -19,9 +19,13 @@
 #include "notificationaction.h"
 #include "notificationsengine.h"
 
+#include <notificationmanager/notificationserver.h>
+
 #include <klocalizedstring.h>
 
 #include "debug.h"
+
+using namespace NotificationManager;
 
 void NotificationAction::start()
 {
@@ -50,7 +54,7 @@ void NotificationAction::start()
 
     if (operationName() == QLatin1String("invokeAction")) {
         qCDebug(NOTIFICATIONS) << "invoking action on " << id;
-        emit m_engine->ActionInvoked(id, parameters()[QStringLiteral("actionId")].toString());
+        NotificationServer::self().invokeAction(id, parameters()[QStringLiteral("actionId")].toString());
     } else if (operationName() == QLatin1String("userClosed")) {
         //userClosedNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
         m_engine->metaObject()->invokeMethod(m_engine, "removeNotification", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 2));

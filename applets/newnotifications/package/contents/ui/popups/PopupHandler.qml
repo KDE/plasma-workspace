@@ -79,6 +79,7 @@ QtObject {
         showExpired: false
         showDismissed: false
         showJobs: true
+        groupMode: NotificationManager.Notifications.GroupDisabled
         urgencies: NotificationManager.Notifications.NormalUrgency | NotificationManager.Notifications.CriticalUrgency
     }
 
@@ -175,10 +176,12 @@ QtObject {
             summary: model.summary
             body: model.body || "" // TODO
             icon: model.image || model.iconName
-            urls: model.urls || []
             hasDefaultAction: model.hasDefaultAction || false
             timeout: model.timeout
+
+            urls: model.urls || []
             urgency: model.urgency
+            deviceName: model.deviceName || ""
 
             jobState: model.jobState || 0
             percentage: model.percentage || 0

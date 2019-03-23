@@ -24,12 +24,14 @@
 #include <QDBusContext>
 #include <QVector>
 
-//#include "notificationmanager_export.h"
+#include "notificationmanager_export.h"
 
 namespace NotificationManager
 {
 
 class Notification;
+
+class NotificationServerPrivate;
 
 /**
  * @short Registers a notification server on the DBus
@@ -38,50 +40,72 @@ class Notification;
  *
  * @author Kai Uwe Broulik <kde@privat.broulik.de>
  **/
-class NotificationServer : public QObject, protected QDBusContext
+class NOTIFICATIONMANAGER_EXPORT NotificationServer : public QObject
 {
     Q_OBJECT
 
 public:
     ~NotificationServer() override;
 
+    /**
+     * The reason a notification was closed
+     */
     enum class CloseReason {
-        Expired = 1,
-        DismissedByUser = 2,
-        Revoked = 3
+        Expired = 1, ///< The notification timed out
+        DismissedByUser = 2, ///< The user explicitly closed or acknowledged the notification
+        Revoked = 3 ///< The notification was revoked by the issuing app because it is no longer relevant
     };
     Q_ENUM(CloseReason)
 
     static NotificationServer &self();
 
+    /**
+     * Whether the notification service could be registered
+     */
+    // TODO add a retry or reconnect thing
+    bool isValid() const;
+
+    /**
+     * Sends a notification closed event
+     *
+     * @param id The notification ID
+     * @reason The reason why it was closed
+     */
     void closeNotification(uint id, CloseReason reason);
+    /**
+     * Sends an action invocation request
+     *
+     * @param id The notification ID
+     * @param actionName The name of the action, e.g. "Action 1", or "default"
+     */
     void invokeAction(uint id, const QString &actionName);
 
-    // DBus
-    uint Notify(const QString &app_name, uint replaces_id, const QString &app_icon,
-                const QString &summary, const QString &body, const QStringList &actions,
-                const QVariantMap &hints, int timeout);
-    void CloseNotification(uint id);
-    QStringList GetCapabilities() const;
-    QString GetServerInformation(QString &vendor, QString &version, QString &specVersion) const;
-
 Q_SIGNALS:
-    // FIXME added vs closed, should it be shown? opened? created?
+    /**
+     * Emitted when a notification was added
+     * @param notification The notification
+     */
     void notificationAdded(const Notification &notification);
+    /**
+     * Emitted when a notification is supposed to be updated
+     * @param replacedId The ID of the notification it replaces
+     * @param notification The new notification to use instead
+     */
     void notificationReplaced(uint replacedId, const Notification &notification);
+    /**
+     * Emitted when a notification got removed (closed)
+     * @param id The notification ID
+     * @param reason The reason why it was closed
+     */
     void notificationRemoved(uint id, CloseReason reason);
-
-    // DBus
-    void NotificationClosed(uint id, uint reason);
-    void ActionInvoked(uint id, const QString &actionKey);
 
 private:
     explicit NotificationServer(QObject *parent = nullptr);
     Q_DISABLE_COPY(NotificationServer)
     // FIXME we also need to disable move and other stuff?
 
-    //QVector<uint> m_knownNotificationIds;
-    uint m_highestNotificationId = 0;
+    class Private;
+    QScopedPointer<NotificationServerPrivate> d;
 };
 
 } // namespace NotificationManager

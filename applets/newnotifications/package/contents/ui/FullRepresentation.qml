@@ -31,6 +31,7 @@ import org.kde.notificationmanager 1.0 as NotificationManager
 ColumnLayout {
     Layout.preferredWidth: units.gridUnit * 22
     Layout.preferredHeight: units.gridUnit * 28
+    Layout.fillHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     RowLayout {
         Layout.fillWidth: true
@@ -122,26 +123,46 @@ ColumnLayout {
                     }
                 }*/
 
-                delegate: NotificationDelegate {
-                    width: list.width
+                delegate: Loader {
+                    sourceComponent: model.isGroup ? groupDelegate : notificationDelegate
 
-                    applicationName: model.applicationName
-                    applicatonIconSource: model.applicationIconName
+                    Component {
+                        id: groupDelegate
+                        NotificationHeader {
+                            width: list.width
 
-                    time: model.updated || model.created
+                            applicationName: model.applicationName
+                            applicationIconSource: model.applicationIconName
 
-                    configurable: model.configurable
+                            time: model.updated || model.created
+                        }
 
-                    summary: model.summary
-                    body: model.body || "" // TODO
-                    icon: model.image || model.iconName
+                    }
 
-                    // TODO everything else
+                    Component {
+                        id: notificationDelegate
+                        NotificationDelegate {
+                            width: list.width
 
-                    onCloseClicked: historyModel.close(historyModel.index(index, 0))
-                    onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
+                            applicationName: model.applicationName
+                            applicatonIconSource: model.applicationIconName
 
-                    svg: lineSvg
+                            time: model.updated || model.created
+
+                            configurable: model.configurable
+
+                            summary: model.summary
+                            body: model.body || "" // TODO
+                            icon: model.image || model.iconName
+
+                            // TODO everything else
+
+                            onCloseClicked: historyModel.close(historyModel.index(index, 0))
+                            onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
+
+                            svg: lineSvg
+                        }
+                    }
                 }
             }
         }

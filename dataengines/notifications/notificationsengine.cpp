@@ -22,6 +22,9 @@
 #include "notificationsadaptor.h"
 #include "notificationsanitizer.h"
 
+#include <notificationmanager/notificationserver.h>
+#include <notificationmanager/notification.h>
+
 #include <KConfigGroup>
 #include <klocalizedstring.h>
 #include <KSharedConfig>
@@ -44,11 +47,32 @@
 
 #include "debug.h"
 
+using namespace NotificationManager;
+
 NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& args )
     : Plasma::DataEngine( parent, args ), m_nextId( 1 ), m_alwaysReplaceAppsList({QStringLiteral("Clementine"), QStringLiteral("Spotify"), QStringLiteral("Amarok")})
 {
-    new NotificationsAdaptor(this);
 
+    connect(&NotificationServer::self(), &NotificationServer::notificationAdded, this, [this](const Notification &notification) {
+        // FIXME handle replaced
+        notificationAdded(notification);
+    });
+
+    connect(&NotificationServer::self(), &NotificationServer::notificationReplaced, this, [this](uint replacedId, const Notification &notification) {
+
+    });
+
+    connect(&NotificationServer::self(), &NotificationServer::notificationRemoved, this, [this](uint id, NotificationServer::CloseReason reason) {
+        const QString source = QStringLiteral("notification %1").arg(id);
+        // if we don't have that notification in our local list,
+        // it has already been closed so don't notify a second time
+        if (m_activeNotifications.remove(source) > 0) {
+            removeSource(source);
+        }
+    });
+
+    // FIXME let the new notification plasmoid do the killing
+    /*
     if (!registerDBusService()) {
         QDBusConnection dbus = QDBusConnection::sessionBus();
         // Retrieve the pid of the current o.f.Notifications service
@@ -67,8 +91,10 @@ NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& a
                 QTimer::singleShot(3000, this, &NotificationsEngine::registerDBusService);
             }
         }
-    }
+    }*/
 
+    // FIXME implement in notification server
+    /*
     KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("Notifications"));
     const bool broadcastsEnabled = config.readEntry("ListenForBroadcasts", false);
 
@@ -76,151 +102,55 @@ NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& a
         qCDebug(NOTIFICATIONS) << "Notifications engine is configured to listen for broadcasts";
         QDBusConnection::systemBus().connect({}, {}, QStringLiteral("org.kde.BroadcastNotifications"),
                                              QStringLiteral("Notify"), this, SLOT(onBroadcastNotification(QMap<QString,QVariant>)));
-    }
+    }*/
 
     // Read additional single-notification-popup-only from a config file
-    KConfig singlePopupConfig(QStringLiteral("plasma_single_popup_notificationrc"));
-    KConfigGroup singlePopupConfigGroup(&singlePopupConfig, "General");
-    m_alwaysReplaceAppsList += QSet<QString>::fromList(singlePopupConfigGroup.readEntry("applications", QStringList()));
+    //KConfig singlePopupConfig(QStringLiteral("plasma_single_popup_notificationrc"));
+    //KConfigGroup singlePopupConfigGroup(&singlePopupConfig, "General");
+    //m_alwaysReplaceAppsList += QSet<QString>::fromList(singlePopupConfigGroup.readEntry("applications", QStringList()));
 }
 
 NotificationsEngine::~NotificationsEngine()
 {
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.unregisterService( QStringLiteral("org.freedesktop.Notifications") );
+
 }
 
 void NotificationsEngine::init()
 {
 }
 
-bool NotificationsEngine::registerDBusService()
+void NotificationsEngine::notificationAdded(const Notification &notification)
 {
-    return true; // FIXME FIXME FIXME for libnotificationmanager testing
-
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerObject(QStringLiteral("/org/freedesktop/Notifications"), this);
-    bool so = dbus.registerService(QStringLiteral("org.freedesktop.Notifications"));
-    if (so) {
-        return true;
-    }
-
-    qCInfo(NOTIFICATIONS) << "Failed to register Notifications service";
-    return false;
-}
-
-inline void copyLineRGB32(QRgb* dst, const char* src, int width)
-{
-    const char* end = src + width * 3;
-    for (; src != end; ++dst, src+=3) {
-        *dst = qRgb(src[0], src[1], src[2]);
-    }
-}
-
-inline void copyLineARGB32(QRgb* dst, const char* src, int width)
-{
-    const char* end = src + width * 4;
-    for (; src != end; ++dst, src+=4) {
-        *dst = qRgba(src[0], src[1], src[2], src[3]);
-    }
-}
-
-static QImage decodeNotificationSpecImageHint(const QDBusArgument& arg)
-{
-    int width, height, rowStride, hasAlpha, bitsPerSample, channels;
-    QByteArray pixels;
-    char* ptr;
-    char* end;
-
-    arg.beginStructure();
-    arg >> width >> height >> rowStride >> hasAlpha >> bitsPerSample >> channels >> pixels;
-    arg.endStructure();
-
-    #define SANITY_CHECK(condition) \
-    if (!(condition)) { \
-        qWarning() << "Sanity check failed on" << #condition; \
-        return QImage(); \
-    }
-
-    SANITY_CHECK(width > 0);
-    SANITY_CHECK(width < 2048);
-    SANITY_CHECK(height > 0);
-    SANITY_CHECK(height < 2048);
-    SANITY_CHECK(rowStride > 0);
-
-    #undef SANITY_CHECK
-
-    QImage::Format format = QImage::Format_Invalid;
-    void (*fcn)(QRgb*, const char*, int) = nullptr;
-    if (bitsPerSample == 8) {
-        if (channels == 4) {
-            format = QImage::Format_ARGB32;
-            fcn = copyLineARGB32;
-        } else if (channels == 3) {
-            format = QImage::Format_RGB32;
-            fcn = copyLineRGB32;
-        }
-    }
-    if (format == QImage::Format_Invalid) {
-        qWarning() << "Unsupported image format (hasAlpha:" << hasAlpha << "bitsPerSample:" << bitsPerSample << "channels:" << channels << ")";
-        return QImage();
-    }
-
-    QImage image(width, height, format);
-    ptr = pixels.data();
-    end = ptr + pixels.length();
-    for (int y=0; y<height; ++y, ptr += rowStride) {
-        if (ptr + channels * width > end) {
-            qWarning() << "Image data is incomplete. y:" << y << "height:" << height;
-            break;
-        }
-        fcn((QRgb*)image.scanLine(y), ptr, width);
-    }
-
-    return image;
-}
-
-static QString findImageForSpecImagePath(const QString &_path)
-{
-    QString path = _path;
-    if (path.startsWith(QLatin1String("file:"))) {
-        QUrl url(path);
-        path = url.toLocalFile();
-    }
-    return KIconLoader::global()->iconPath(path, -KIconLoader::SizeHuge,
-                                           true /* canReturnNull */);
-}
-
-uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
-                                 const QString &app_icon, const QString &summary, const QString &body,
-                                 const QStringList &actions, const QVariantMap &hints, int timeout)
-{
-    foreach(NotificationInhibiton *ni, m_inhibitions) {
+    // FIXME
+    /*foreach(NotificationInhibiton *ni, m_inhibitions) {
         if (hints[ni->hint] == ni->value) {
             qCDebug(NOTIFICATIONS) << "notification inhibited. Skipping";
             return -1;
         }
-    }
+    }*/
 
     uint partOf = 0;
-    const QString appRealName = hints[QStringLiteral("x-kde-appname")].toString();
-    const QString eventId = hints[QStringLiteral("x-kde-eventId")].toString();
-    const bool skipGrouping = hints[QStringLiteral("x-kde-skipGrouping")].toBool();
-    const QStringList &urls = hints[QStringLiteral("x-kde-urls")].toStringList();
-    const QString &desktopEntry = hints[QStringLiteral("desktop-entry")].toString();
+    const QString appRealName; // FIXME = hints[QStringLiteral("x-kde-appname")].toString();
+    const QString eventId; // FIXME = hints[QStringLiteral("x-kde-eventId")].toString();
+    const bool skipGrouping = false;// FIXME hints[QStringLiteral("x-kde-skipGrouping")].toBool();
+    const QStringList urls; // FIXME there's no QUrl toStringList? = notification.urls();
+    const QString desktopEntry; // FIXME = hints[QStringLiteral("desktop-entry")].toString();
 
     // group notifications that have the same title coming from the same app
     // or if they are on the "blacklist", honor the skipGrouping hint sent
-    if (!replaces_id && m_activeNotifications.values().contains(app_name + summary) && !skipGrouping && urls.isEmpty() && !m_alwaysReplaceAppsList.contains(app_name)) {
+    // FIXME
+    /*if (!replaces_id && m_activeNotifications.values().contains(app_name + summary) && !skipGrouping && urls.isEmpty() && !m_alwaysReplaceAppsList.contains(app_name)) {
         // cut off the "notification " from the source name
         partOf = m_activeNotifications.key(app_name + summary).midRef(13).toUInt();
-    }
+    }*/
 
-    qCDebug(NOTIFICATIONS) << "Currrent active notifications:" << m_activeNotifications;
-    qCDebug(NOTIFICATIONS) << "Guessing partOf as:" << partOf;
-    qCDebug(NOTIFICATIONS) << " New Notification: " << summary << body << timeout << "& Part of:" << partOf;
-    QString bodyFinal = NotificationSanitizer::parse(body);
-    QString summaryFinal = summary;
+    //qCDebug(NOTIFICATIONS) << "Currrent active notifications:" << m_activeNotifications;
+    //qCDebug(NOTIFICATIONS) << "Guessing partOf as:" << partOf;
+    //qCDebug(NOTIFICATIONS) << " New Notification: " << summary << body << timeout << "& Part of:" << partOf;
+
+    QString bodyFinal = notification.body(); // is already sanitized
+    QString summaryFinal = notification.summary();
+    int timeout = notification.timeout();
 
     if (partOf > 0) {
         const QString source = QStringLiteral("notification %1").arg(partOf);
@@ -235,22 +165,22 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
                 bodyFinal = previousBody + QStringLiteral("<br/>") + bodyFinal;
             }
 
-            replaces_id = partOf;
+            //replaces_id = partOf;
 
             // remove the old notification and replace it with the new one
             // TODO: maybe just update the current notification?
-            CloseNotification(partOf);
+            //CloseNotification(partOf);
         }
     } else if (bodyFinal.isEmpty()) {
         //some ridiculous apps will send just a title (#372112), in that case, treat it as though there's only a body
-        bodyFinal = summary;
-        summaryFinal = app_name;
+        //bodyFinal = summary;
+        //summaryFinal = app_name;
     }
 
-    uint id = replaces_id ? replaces_id : m_nextId++;
+    uint id = notification.id();// replaces_id ? replaces_id : m_nextId++;
 
     // If the current app is in the "blacklist"...
-    if (m_alwaysReplaceAppsList.contains(app_name)) {
+    /*if (m_alwaysReplaceAppsList.contains(app_name)) {
         // ...check if we already have a notification from that particular
         // app and if yes, use its id to replace it
         if (m_notificationsFromReplaceableApp.contains(app_name)) {
@@ -258,18 +188,18 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
         } else {
             m_notificationsFromReplaceableApp.insert(app_name, id);
         }
-    }
+    }*/
 
-    QString appname_str = app_name;
+    /*QString appname_str = app_name;
     if (appname_str.isEmpty()) {
         appname_str = i18n("Unknown Application");
-    }
+    }*/
 
-    bool isPersistent = timeout == 0;
+    bool isPersistent = (timeout == 0);
 
     const int AVERAGE_WORD_LENGTH = 6;
     const int WORD_PER_MINUTE = 250;
-    int count = summary.length() + body.length() - strlen("<?xml version=\"1.0\"><html></html>");
+    int count = notification.summary().length() + notification.body().length() - strlen("<?xml version=\"1.0\"><html></html>");
 
     // -1 is "server default", 0 is persistent with "server default" display time,
     // anything more should honor the setting
@@ -287,11 +217,12 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     Plasma::DataEngine::Data notificationData;
     notificationData.insert(QStringLiteral("id"), QString::number(id));
     notificationData.insert(QStringLiteral("eventId"), eventId);
-    notificationData.insert(QStringLiteral("appName"), appname_str);
-    notificationData.insert(QStringLiteral("appIcon"), app_icon);
+    notificationData.insert(QStringLiteral("appName"), notification.applicationName());
+    // TODO should be proper passed in icon?
+    notificationData.insert(QStringLiteral("appIcon"), notification.applicationIconName());
     notificationData.insert(QStringLiteral("summary"), summaryFinal);
     notificationData.insert(QStringLiteral("body"), bodyFinal);
-    notificationData.insert(QStringLiteral("actions"), actions);
+    notificationData.insert(QStringLiteral("actions"), QStringList()); // FIXME
     notificationData.insert(QStringLiteral("isPersistent"), isPersistent);
     notificationData.insert(QStringLiteral("expireTimeout"), timeout);
 
@@ -322,88 +253,32 @@ uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
     notificationData.insert(QStringLiteral("appRealName"), appRealName);
     notificationData.insert(QStringLiteral("configurable"), configurable);
 
-    QImage image;
-    // Underscored hints was in use in version 1.1 of the spec but has been
-    // replaced by dashed hints in version 1.2. We need to support it for
-    // users of the 1.2 version of the spec.
-    if (hints.contains(QStringLiteral("image-data"))) {
-        QDBusArgument arg = hints[QStringLiteral("image-data")].value<QDBusArgument>();
-        image = decodeNotificationSpecImageHint(arg);
-    } else if (hints.contains(QStringLiteral("image_data"))) {
-        QDBusArgument arg = hints[QStringLiteral("image_data")].value<QDBusArgument>();
-        image = decodeNotificationSpecImageHint(arg);
-    } else if (hints.contains(QStringLiteral("image-path"))) {
-        QString path = findImageForSpecImagePath(hints[QStringLiteral("image-path")].toString());
-        if (!path.isEmpty()) {
-            image.load(path);
-        }
-    } else if (hints.contains(QStringLiteral("image_path"))) {
-        QString path = findImageForSpecImagePath(hints[QStringLiteral("image_path")].toString());
-        if (!path.isEmpty()) {
-            image.load(path);
-        }
-    } else if (hints.contains(QStringLiteral("icon_data"))) {
-        // This hint was in use in version 1.0 of the spec but has been
-        // replaced by "image_data" in version 1.1. We need to support it for
-        // users of the 1.0 version of the spec.
-        QDBusArgument arg = hints[QStringLiteral("icon_data")].value<QDBusArgument>();
-        image = decodeNotificationSpecImageHint(arg);
-    }
+    QImage image = notification.image();
     notificationData.insert(QStringLiteral("image"), image.isNull() ? QVariant() : image);
 
-    if (hints.contains(QStringLiteral("urgency"))) {
+    // FIXME did we even have this?
+    /*if (hints.contains(QStringLiteral("urgency"))) {
         notificationData.insert(QStringLiteral("urgency"), hints[QStringLiteral("urgency")].toInt());
-    }
+    }*/
 
     notificationData.insert(QStringLiteral("urls"), urls);
 
     setData(source, notificationData);
 
-    m_activeNotifications.insert(source, app_name + summary);
-
-    return id;
+    m_activeNotifications.insert(source, notification.applicationName() + notification.summary());
 }
 
-void NotificationsEngine::CloseNotification(uint id)
+uint NotificationsEngine::Notify(const QString &app_name, uint replaces_id,
+                                 const QString &app_icon, const QString &summary, const QString &body,
+                                 const QStringList &actions, const QVariantMap &hints, int timeout)
 {
-    removeNotification(id, 3);
-}
-
-void NotificationsEngine::removeNotification(uint id, uint closeReason)
-{
-    const QString source = QStringLiteral("notification %1").arg(id);
-    // if we don't have that notification in our local list,
-    // it has already been closed so don't notify a second time
-    if (m_activeNotifications.remove(source) > 0) {
-        removeSource(source);
-        emit NotificationClosed(id, closeReason);
-    }
+    // FIXME wire this thing up to the new one, it's used by notification action job or something
+    return 0;
 }
 
 Plasma::Service* NotificationsEngine::serviceForSource(const QString& source)
 {
     return new NotificationService(this, source);
-}
-
-QStringList NotificationsEngine::GetCapabilities()
-{
-    return QStringList()
-        << QStringLiteral("body")
-        << QStringLiteral("body-hyperlinks")
-        << QStringLiteral("body-markup")
-        << QStringLiteral("body-images")
-        << QStringLiteral("icon-static")
-        << QStringLiteral("actions")
-        ;
-}
-
-// FIXME: Signature is ugly
-QString NotificationsEngine::GetServerInformation(QString& vendor, QString& version, QString& specVersion)
-{
-    vendor = QLatin1String("KDE");
-    version = QLatin1String("2.0"); // FIXME
-    specVersion = QLatin1String("1.1");
-    return QStringLiteral("Plasma");
 }
 
 int NotificationsEngine::createNotification(const QString &appName, const QString &appIcon, const QString &summary,

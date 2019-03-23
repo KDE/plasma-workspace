@@ -33,6 +33,7 @@ using namespace NotificationManager;
 NotificationSortProxyModel::NotificationSortProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
+    setRecursiveFilteringEnabled(true);
     sort(0);
     // TODO set roles relevant for sorting
 }

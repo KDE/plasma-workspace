@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2019 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -18,43 +18,38 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "notificationserver.h"
-#include "notificationserver_p.h"
+#include "settings.h"
 
-#include "notification.h"
+#include <QDebug>
 
-#include <QDBusConnection>
+#include "notificationsettings.h"
 
 using namespace NotificationManager;
 
-NotificationServer::NotificationServer(QObject *parent)
+class Q_DECL_HIDDEN Settings::Private
+{
+public:
+    explicit Private(Settings *q);
+    ~Private();
+
+private:
+    Settings *q;
+};
+
+Settings::Private::Private(Settings *q)
+    : q(q)
+{
+
+}
+
+Settings::Private::~Private() = default;
+
+Settings::Settings(QObject *parent)
     : QObject(parent)
-    , d(new NotificationServerPrivate(this))
+    , d(new Private(this))
 {
-
+    GeneralSettings::self()->load();
 }
 
-NotificationServer::~NotificationServer() = default;
+Settings::~Settings() = default;
 
-NotificationServer &NotificationServer::self()
-{
-    static NotificationServer s_self;
-    return s_self;
-}
-
-bool NotificationServer::isValid() const
-{
-    return d->valid;
-}
-
-void NotificationServer::closeNotification(uint notificationId, CloseReason reason)
-{
-    emit notificationRemoved(notificationId, reason);
-
-    emit d->NotificationClosed(notificationId, static_cast<int>(reason)); // tell on DBus
-}
-
-void NotificationServer::invokeAction(uint notificationId, const QString &actionName)
-{
-    emit d->ActionInvoked(notificationId, actionName);
-}

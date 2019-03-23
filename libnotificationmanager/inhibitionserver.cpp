@@ -18,8 +18,9 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "notificationserver.h"
-#include "notificationserver_p.h"
+#include "inhibitionserver.h"
+
+#include "kdenotificationsadaptor.h"
 
 #include "notification.h"
 
@@ -27,34 +28,27 @@
 
 using namespace NotificationManager;
 
-NotificationServer::NotificationServer(QObject *parent)
+InhibitionServer::InhibitionServer(QObject *parent)
     : QObject(parent)
-    , d(new NotificationServerPrivate(this))
 {
+    new InhibitionAdaptor(this);
 
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/kde/Notifications"), this);
+    if (!QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.Notifications.Inhibit"))) {
+        qWarning() << "Failed to register Notification Inhibit service";
+    }
 }
 
-NotificationServer::~NotificationServer() = default;
+InhibitionServer::~InhibitionServer() = default;
 
-NotificationServer &NotificationServer::self()
+InhibitionServer &InhibitionServer::self()
 {
-    static NotificationServer s_self;
+    static InhibitionServer s_self;
     return s_self;
 }
 
-bool NotificationServer::isValid() const
+QDBusUnixFileDescriptor InhibitionServer::Inhibit(const QString &app_name, const QString &reason, const QVariantMap &hints)
 {
-    return d->valid;
-}
-
-void NotificationServer::closeNotification(uint notificationId, CloseReason reason)
-{
-    emit notificationRemoved(notificationId, reason);
-
-    emit d->NotificationClosed(notificationId, static_cast<int>(reason)); // tell on DBus
-}
-
-void NotificationServer::invokeAction(uint notificationId, const QString &actionName)
-{
-    emit d->ActionInvoked(notificationId, actionName);
+    qDebug() << "INHIBIT" << app_name << reason << hints;
+    return QDBusUnixFileDescriptor();
 }

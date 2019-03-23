@@ -21,9 +21,14 @@
  */
 
 #include "notification.h"
+#include "notification_p.h"
 
-#include <QDebug>
+#include "notifications.h"
+
 #include <QDBusArgument>
+#include <QDateTime>
+#include <QDebug>
+#include <QImage>
 #include <QRegularExpression>
 #include <QXmlStreamReader>
 
@@ -36,7 +41,14 @@
 
 using namespace NotificationManager;
 
-static QString sanitize(const QString &text)
+Notification::Private::Private()
+{
+
+}
+
+Notification::Private::~Private() = default;
+
+QString Notification::Private::sanitize(const QString &text)
 {
     // replace all \ns with <br/>
     QString t = text;
@@ -120,8 +132,7 @@ static QString sanitize(const QString &text)
     return result;
 }
 
-
-static QImage decodeNotificationSpecImageHint(const QDBusArgument& arg)
+QImage Notification::Private::decodeNotificationSpecImageHint(const QDBusArgument &arg)
 {
     int width, height, rowStride, hasAlpha, bitsPerSample, channels;
     QByteArray pixels;
@@ -192,7 +203,7 @@ static QImage decodeNotificationSpecImageHint(const QDBusArgument& arg)
     return image;
 }
 
-static QString findImageForSpecImagePath(const QString &_path)
+QString Notification::Private::findImageForSpecImagePath(const QString &_path)
 {
     QString path = _path;
     if (path.startsWith(QLatin1String("file:"))) {
@@ -203,225 +214,7 @@ static QString findImageForSpecImagePath(const QString &_path)
                                            true /* canReturnNull */);
 }
 
-Notification::Notification(uint id)
-    : m_id(id)
-    , m_created(QDateTime::currentDateTimeUtc())
-{
-    // QVector needs default constructor
-    //Q_ASSERT(id > 0);
-}
-
-Notification::~Notification() = default;
-
-uint Notification::id() const
-{
-    return m_id;
-}
-
-QDateTime Notification::created() const
-{
-    return m_created;
-}
-
-QDateTime Notification::updated() const
-{
-    return m_updated;
-}
-
-void Notification::setUpdated()
-{
-    m_updated = QDateTime::currentDateTimeUtc();
-}
-
-QString Notification::summary() const
-{
-    return m_summary;
-}
-
-void Notification::setSummary(const QString &summary)
-{
-    m_summary = summary;
-}
-
-QString Notification::body() const
-{
-    return m_body;
-}
-
-void Notification::setBody(const QString &body)
-{
-    m_body = sanitize(body.trimmed());
-}
-
-QString Notification::iconName() const
-{
-    return m_iconName;
-}
-
-void Notification::setIconName(const QString &iconName)
-{
-    m_iconName = iconName;
-}
-
-QImage Notification::image() const
-{
-    return m_image;
-}
-
-void Notification::setImage(const QImage &image)
-{
-    m_image = image;
-}
-
-QString Notification::applicationName() const
-{
-    return m_applicationName;
-}
-
-void Notification::setApplicationName(const QString &applicationName)
-{
-    m_applicationName = applicationName;
-
-    KService::Ptr service = KService::serviceByStorageId(applicationName);
-    if (service) {
-        m_applicationName = service->name();
-        m_applicationIconName = service->icon();
-    }
-}
-
-QString Notification::applicationIconName() const
-{
-    return m_applicationIconName;
-}
-
-void Notification::setApplicationIconName(const QString &applicationIconName)
-{
-    m_applicationIconName = applicationIconName;
-}
-
-QStringList Notification::actionNames() const
-{
-    return m_actionNames;
-}
-
-QStringList Notification::actionLabels() const
-{
-    return m_actionLabels;
-}
-
-bool Notification::hasDefaultAction() const
-{
-    return m_hasDefaultAction;
-}
-
-/*bool Notification::hasConfigureAction() const
-{
-    return m_hasConfigureAction;
-}*/
-
-void Notification::setActions(const QStringList &actions)
-{
-    if (actions.count() % 2 != 0) {
-        // FIXME qCWarning
-        qWarning() << "List of actions must contain an even number of items, tried to set actions to" << actions;
-        return;
-    }
-
-    m_hasDefaultAction = false;
-    m_hasConfigureAction = false;
-
-    QStringList names;
-    QStringList labels;
-
-    for (int i = 0; i < actions.count(); i += 2) {
-        const QString &name = actions.at(i);
-        const QString &label = actions.at(i + 1);
-
-        if (!m_hasDefaultAction && name == QLatin1String("default")) {
-            m_hasDefaultAction = true;
-            continue;
-        }
-
-        if (!m_hasConfigureAction && name == QLatin1String("settings")) {
-            m_hasConfigureAction = true;
-            m_configureActionLabel = label;
-            continue;
-        }
-
-        names << name;
-        labels << label;
-    }
-
-    m_actionNames = names;
-    m_actionLabels = labels;
-}
-
-QList<QUrl> Notification::urls() const
-{
-    return m_urls;
-}
-
-void Notification::setUrls(const QList<QUrl> &urls)
-{
-    m_urls = urls;
-}
-
-Notifications::Urgencies Notification::urgency() const
-{
-    return m_urgency;
-}
-
-void Notification::setUrgency(Notifications::Urgencies urgency)
-{
-    m_urgency = urgency;
-
-    // Critical notifications must not time out
-    if (urgency == Notifications::CriticalUrgency) {
-        m_timeout = 0;
-    }
-}
-
-int Notification::timeout() const
-{
-    return m_timeout;
-}
-
-void Notification::setTimeout(int timeout)
-{
-    m_timeout = timeout;
-}
-
-bool Notification::configurable() const
-{
-    return m_hasConfigureAction || m_configurableNotifyRc;
-}
-
-QString Notification::configureActionLabel() const
-{
-    return m_configureActionLabel;
-}
-
-bool Notification::expired() const
-{
-    return m_expired;
-}
-
-void Notification::setExpired(bool expired)
-{
-    m_expired = expired;
-}
-
-bool Notification::dismissed() const
-{
-    return m_dismissed;
-}
-
-void Notification::setDismissed(bool dismissed)
-{
-    m_dismissed = dismissed;
-}
-
-void Notification::processHints(const QVariantMap &hints)
+void Notification::Private::processHints(const QVariantMap &hints)
 {
     auto end = hints.end();
 
@@ -429,44 +222,41 @@ void Notification::processHints(const QVariantMap &hints)
     if (!desktopEntry.isEmpty()) {
         KService::Ptr service = KService::serviceByStorageId(desktopEntry);
         if (service) {
-            m_applicationName = service->name();
-            m_applicationIconName = service->icon();
+            serviceName = service->name();
+            applicationIconName = service->icon();
         }
     }
 
-    m_notifyRcName = hints.value(QStringLiteral("x-kde-appname")).toString();
-    if (!m_notifyRcName.isEmpty()) {
+    notifyRcName = hints.value(QStringLiteral("x-kde-appname")).toString();
+    if (!notifyRcName.isEmpty()) {
         // Check whether the application actually has notifications we can configure
-        // FIXME move out into a separate function
-        KConfig config(m_notifyRcName + QStringLiteral(".notifyrc"), KConfig::NoGlobals);
+        KConfig config(notifyRcName + QStringLiteral(".notifyrc"), KConfig::NoGlobals);
         config.addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-                                QStringLiteral("knotifications5/") + m_notifyRcName + QStringLiteral(".notifyrc")));
+                                QStringLiteral("knotifications5/") + notifyRcName + QStringLiteral(".notifyrc")));
 
         KConfigGroup globalGroup(&config, "Global");
 
-        QString applicationName = globalGroup.readEntry("Name");
-        if (applicationName.isEmpty()) {
-            applicationName = globalGroup.readEntry("Comment");
-        }
-        if (!applicationName.isEmpty()) {
-            m_applicationName = applicationName;
-        }
-
         const QString iconName = globalGroup.readEntry("IconName");
         if (!iconName.isEmpty()) {
-            m_applicationIconName = iconName;
+            applicationIconName = iconName;
         }
 
         const QRegularExpression regexp(QStringLiteral("^Event/([^/]*)$"));
 
-        m_configurableNotifyRc = !config.groupList().filter(regexp).isEmpty();
+        configurableNotifyRc = !config.groupList().filter(regexp).isEmpty();
     }
 
-    m_eventId = hints.value(QStringLiteral("x-kde-eventId")).toString();
+    const QString applicationDisplayName = hints.value(QStringLiteral("x-kde-display-app-name")).toString();
+    if (!applicationDisplayName.isEmpty()) {
+        applicationName = applicationDisplayName;
+    }
+
+    eventId = hints.value(QStringLiteral("x-kde-eventId")).toString();
 
     bool ok;
     const int urgency = hints.value(QStringLiteral("urgency")).toInt(&ok); // DBus type is actually "byte"
     if (ok) {
+        // FIXME use separate enum again
         switch (urgency) {
         case 0:
             setUrgency(Notifications::LowUrgency);
@@ -480,7 +270,7 @@ void Notification::processHints(const QVariantMap &hints)
         }
     }
 
-    m_urls = QUrl::fromStringList(hints.value(QStringLiteral("x-kde-urls")).toStringList());
+    urls = QUrl::fromStringList(hints.value(QStringLiteral("x-kde-urls")).toStringList());
 
     // Underscored hints was in use in version 1.1 of the spec but has been
     // replaced by dashed hints in version 1.2. We need to support it for
@@ -497,10 +287,10 @@ void Notification::processHints(const QVariantMap &hints)
     }
 
     if (it != end) {
-        m_image = decodeNotificationSpecImageHint(it->value<QDBusArgument>());
+        image = decodeNotificationSpecImageHint(it->value<QDBusArgument>());
     }
 
-    if (m_image.isNull()) {
+    if (image.isNull()) {
         it = hints.find(QStringLiteral("image-path"));
         if (it == end) {
             it = hints.find(QStringLiteral("image_path"));
@@ -509,13 +299,240 @@ void Notification::processHints(const QVariantMap &hints)
         if (it != end) {
             const QString path = findImageForSpecImagePath(it->toString());
             if (!path.isEmpty()) {
-                m_image.load(path);
+                image.load(path);
             }
         }
     }
 }
 
-bool Notification::operator==(const Notification &other) const
+void Notification::Private::setUrgency(Notifications::Urgencies urgency)
 {
-    return other.m_id == m_id;
+    this->urgency = urgency;
+
+    // Critical notifications must not time out
+    // TODO should we really imply this here?
+    if (urgency == Notifications::CriticalUrgency) {
+        timeout = 0;
+    }
 }
+
+Notification::Notification(uint id)
+    : d(new Private())
+{
+    d->id = id;
+    d->created = QDateTime::currentDateTimeUtc();
+}
+
+Notification::Notification(const Notification &other)
+    : d(new Private(*other.d))
+{
+
+}
+
+Notification &Notification::operator=(const Notification &other)
+{
+    d = new Private(*other.d);
+    return *this;
+}
+
+Notification::~Notification()
+{
+    delete d;
+}
+
+uint Notification::id() const
+{
+    return d->id;
+}
+
+QDateTime Notification::created() const
+{
+    return d->created;
+}
+
+QDateTime Notification::updated() const
+{
+    return d->updated;
+}
+
+void Notification::setUpdated()
+{
+    d->updated = QDateTime::currentDateTimeUtc();
+}
+
+QString Notification::summary() const
+{
+    return d->summary;
+}
+
+void Notification::setSummary(const QString &summary)
+{
+    d->summary = summary;
+}
+
+QString Notification::body() const
+{
+    return d->body;
+}
+
+void Notification::setBody(const QString &body)
+{
+    d->body = Private::sanitize(body.trimmed());
+}
+
+QString Notification::iconName() const
+{
+    return d->iconName;
+}
+
+void Notification::setIconName(const QString &iconName)
+{
+    d->iconName = iconName;
+}
+
+QImage Notification::image() const
+{
+    return d->image;
+}
+
+void Notification::setImage(const QImage &image)
+{
+    d->image = image;
+}
+
+QString Notification::applicationName() const
+{
+    return d->applicationName;
+}
+
+void Notification::setApplicationName(const QString &applicationName)
+{
+    d->applicationName = applicationName;
+}
+
+QString Notification::applicationIconName() const
+{
+    return d->applicationIconName;
+}
+
+void Notification::setApplicationIconName(const QString &applicationIconName)
+{
+    d->applicationIconName = applicationIconName;
+}
+
+QStringList Notification::actionNames() const
+{
+    return d->actionNames;
+}
+
+QStringList Notification::actionLabels() const
+{
+    return d->actionLabels;
+}
+
+bool Notification::hasDefaultAction() const
+{
+    return d->hasDefaultAction;
+}
+
+/*bool Notification::hasConfigureAction() const
+{
+    return m_hasConfigureAction;
+}*/
+
+void Notification::setActions(const QStringList &actions)
+{
+    if (actions.count() % 2 != 0) {
+        // FIXME qCWarning
+        qWarning() << "List of actions must contain an even number of items, tried to set actions to" << actions;
+        return;
+    }
+
+    d->hasDefaultAction = false;
+    d->hasConfigureAction = false;
+
+    QStringList names;
+    QStringList labels;
+
+    for (int i = 0; i < actions.count(); i += 2) {
+        const QString &name = actions.at(i);
+        const QString &label = actions.at(i + 1);
+
+        if (!d->hasDefaultAction && name == QLatin1String("default")) {
+            d->hasDefaultAction = true;
+            continue;
+        }
+
+        if (!d->hasConfigureAction && name == QLatin1String("settings")) {
+            d->hasConfigureAction = true;
+            d->configureActionLabel = label;
+            continue;
+        }
+
+        names << name;
+        labels << label;
+    }
+
+    d->actionNames = names;
+    d->actionLabels = labels;
+}
+
+QList<QUrl> Notification::urls() const
+{
+    return d->urls;
+}
+
+void Notification::setUrls(const QList<QUrl> &urls)
+{
+    d->urls = urls;
+}
+
+Notifications::Urgencies Notification::urgency() const
+{
+    return d->urgency;
+}
+
+int Notification::timeout() const
+{
+    return d->timeout;
+}
+
+void Notification::setTimeout(int timeout)
+{
+    d->timeout = timeout;
+}
+
+bool Notification::configurable() const
+{
+    return d->hasConfigureAction || d->configurableNotifyRc;
+}
+
+QString Notification::configureActionLabel() const
+{
+    return d->configureActionLabel;
+}
+
+bool Notification::expired() const
+{
+    return d->expired;
+}
+
+void Notification::setExpired(bool expired)
+{
+    d->expired = expired;
+}
+
+bool Notification::dismissed() const
+{
+    return d->dismissed;
+}
+
+void Notification::setDismissed(bool dismissed)
+{
+    d->dismissed = dismissed;
+}
+
+/*bool Notification::operator==(const Notification &other) const
+{
+    return other.d->id == d->id;
+}*/

@@ -21,14 +21,15 @@
 #pragma once
 
 #include <QDateTime>
+#include <QScopedPointer>
 #include <QImage>
+#include <QList>
 #include <QString>
-#include <QStringList>
 #include <QUrl>
 
 #include "notifications.h"
 
-//#include "notificationmanager_export.h"
+#include "notificationmanager_export.h"
 
 namespace NotificationManager
 {
@@ -40,10 +41,13 @@ namespace NotificationManager
  *
  * @author Kai Uwe Broulik <kde@privat.broulik.de>
  **/
-class Notification
+class NOTIFICATIONMANAGER_EXPORT Notification
 {
 public:
     explicit Notification(uint id = 0);
+    Notification(const Notification &other);
+    Notification &operator=(const Notification &other);
+
     ~Notification();
 
     /*enum class Urgency {
@@ -57,9 +61,10 @@ public:
     QDateTime created() const;
 
     QDateTime updated() const;
-    void setUpdated();
+    void setUpdated(); // FIXME find better name
 
     QString summary() const;
+    // FIXME remove all those setters as Notification is pretty much immutable
     void setSummary(const QString &summary);
 
     QString body() const;
@@ -77,6 +82,7 @@ public:
     QString applicationIconName() const;
     void setApplicationIconName(const QString &applicationIconName);
 
+    // should we group the two into a QPair or something?
     QStringList actionNames() const;
     QStringList actionLabels() const;
     bool hasDefaultAction() const;
@@ -86,6 +92,7 @@ public:
     QList<QUrl> urls() const;
     void setUrls(const QList<QUrl> &urls);
 
+    // FIXME use separate enum again
     Notifications::Urgencies urgency() const;
     void setUrgency(Notifications::Urgencies urgency);
 
@@ -101,43 +108,16 @@ public:
     bool dismissed() const;
     void setDismissed(bool dismissed);
 
-    void processHints(const QVariantMap &hints);
+    //bool operator==(const Notification &other) const;
 
-    bool operator==(const Notification &other) const;
-
-    friend class NotificationModel;
+    //Notification(Notification &&other);
 
 private:
-    uint m_id = 0;
-    QDateTime m_created;
-    QDateTime m_updated;
+    friend class NotificationModel;
+    friend class NotificationServerPrivate;
 
-    QString m_summary;
-    QString m_body;
-    QString m_iconName;
-    QImage m_image;
-
-    QString m_applicationName;
-    QString m_applicationIconName;
-
-    QStringList m_actionNames;
-    QStringList m_actionLabels;
-    bool m_hasDefaultAction = false;
-
-    bool m_hasConfigureAction = false;
-    QString m_configureActionLabel;
-
-    bool m_configurableNotifyRc = false;
-    QString m_notifyRcName;
-    QString m_eventId;
-
-    QList<QUrl> m_urls;
-
-    Notifications::Urgencies m_urgency = Notifications::NormalUrgency;
-    int m_timeout = -1;
-
-    bool m_expired = false;
-    bool m_dismissed = false;
+    class Private;
+    Private *d;
 
 };
 

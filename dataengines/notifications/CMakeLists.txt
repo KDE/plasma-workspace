@@ -14,8 +14,6 @@ ecm_qt_declare_logging_category(notifications_engine_SRCS HEADER debug.h
                                                CATEGORY_NAME kde.dataengine.notifications`
                                                DEFAULT_SEVERITY Info)
 
-qt5_add_dbus_adaptor( notifications_engine_SRCS org.freedesktop.Notifications.xml notificationsengine.h  NotificationsEngine )
-
 add_library(plasma_engine_notifications MODULE ${notifications_engine_SRCS})
 
 target_link_libraries(plasma_engine_notifications
@@ -27,6 +25,7 @@ target_link_libraries(plasma_engine_notifications
     KF5::Plasma
     KF5::Service
     KF5::NotifyConfig
+    PW::LibNotificationManager
 )
 
 kcoreaddons_desktop_to_json(plasma_engine_notifications plasma-dataengine-notifications.desktop)

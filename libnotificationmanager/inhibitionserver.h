@@ -18,43 +18,49 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "notificationserver.h"
-#include "notificationserver_p.h"
+#pragma once
 
-#include "notification.h"
+#include <QObject>
+#include <QDBusContext>
+#include <QDBusUnixFileDescriptor>
+#include <QVector>
 
-#include <QDBusConnection>
+//#include "notificationmanager_export.h"
 
-using namespace NotificationManager;
-
-NotificationServer::NotificationServer(QObject *parent)
-    : QObject(parent)
-    , d(new NotificationServerPrivate(this))
+namespace NotificationManager
 {
 
-}
+class Notification;
 
-NotificationServer::~NotificationServer() = default;
-
-NotificationServer &NotificationServer::self()
+/**
+ * @short Registers an inhibition server on the DBus
+ *
+ * TODO
+ *
+ * @author Kai Uwe Broulik <kde@privat.broulik.de>
+ **/
+class InhibitionServer : public QObject, protected QDBusContext
 {
-    static NotificationServer s_self;
-    return s_self;
-}
+    Q_OBJECT
 
-bool NotificationServer::isValid() const
-{
-    return d->valid;
-}
+public:
+    ~InhibitionServer() override;
 
-void NotificationServer::closeNotification(uint notificationId, CloseReason reason)
-{
-    emit notificationRemoved(notificationId, reason);
+    static InhibitionServer &self();
 
-    emit d->NotificationClosed(notificationId, static_cast<int>(reason)); // tell on DBus
-}
+    // DBus
+    QDBusUnixFileDescriptor Inhibit(const QString &app_name, const QString &reason, const QVariantMap &hints);
 
-void NotificationServer::invokeAction(uint notificationId, const QString &actionName)
-{
-    emit d->ActionInvoked(notificationId, actionName);
-}
+Q_SIGNALS:
+    void inhibitionAdded();
+    void inhibitionRemoved();
+
+private:
+    explicit InhibitionServer(QObject *parent = nullptr);
+    Q_DISABLE_COPY(InhibitionServer)
+    // FIXME we also need to disable move and other stuff?
+
+    // TODO list of fds
+};
+
+} // namespace NotificationManager

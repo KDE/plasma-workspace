@@ -20,11 +20,14 @@
 
 #include "notificationmodel.h"
 
+#include "debug.h"
+
 #include "notificationserver.h"
 
 #include "notifications.h"
 
 #include "notification.h"
+#include "notification_p.h"
 
 #include <QDebug>
 
@@ -62,6 +65,17 @@ NotificationModel::Private::~Private() = default;
 
 void NotificationModel::Private::onNotificationAdded(const Notification &notification)
 {
+    // If we get the same notification in succession, just compress them into one
+    if (!notifications.isEmpty()) {
+        const Notification &lastNotification = notifications.constLast();
+        if (lastNotification.applicationName() == notification.applicationName()
+                && lastNotification.summary() == notification.summary()
+                && lastNotification.body() == notification.body()) {
+            onNotificationReplaced(lastNotification.id(), notification);
+            return;
+        }
+    }
+
     q->beginInsertRows(QModelIndex(), notifications.count(), notifications.count());
     notifications.append(notification);
     q->endInsertRows();
@@ -186,6 +200,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
     case Notifications::HasDefaultActionRole: return notification.hasDefaultAction();
 
     case Notifications::UrlsRole: return QVariant::fromValue(notification.urls());
+
     case Notifications::UrgencyRole: return static_cast<int>(notification.urgency());
 
     case Notifications::TimeoutRole: return notification.timeout();
@@ -231,18 +246,18 @@ void NotificationModel::configure(uint notificationId)
 
     const Notification &notification = d->notifications.at(idx);
 
-    if (notification.m_hasConfigureAction) {
+    if (notification.d->hasConfigureAction) {
         NotificationServer::self().invokeAction(notificationId, QStringLiteral("settings")); // FIXME make a static Notification::configureActionName() or something
         return;
     }
 
-    if (!notification.m_notifyRcName.isEmpty()) {
+    if (!notification.d->notifyRcName.isEmpty()) {
         // TODO show knotifyconfigwidget thingie or emit a signal so we don't have any widget deps in this lib
-        qDebug() << "IMPLEMENT ME configure" << notificationId << "event" << notification.m_eventId << "of" << notification.m_notifyRcName;
+        qDebug() << "IMPLEMENT ME configure" << notification.d->id << "event" << notification.d->eventId << "of" << notification.d->notifyRcName;
         return;
     }
 
-    qWarning() << "Trying to configure notification" << notificationId << "which isn't configurable";
+    qCWarning(NOTIFICATIONMANAGER) << "Trying to configure notification" << notificationId << "which isn't configurable";
 }
 
 void NotificationModel::invokeDefaultAction(uint notificationId)
@@ -254,7 +269,7 @@ void NotificationModel::invokeDefaultAction(uint notificationId)
 
     const Notification &notification = d->notifications.at(idx);
     if (!notification.hasDefaultAction()) {
-        qWarning() << "Trying to invoke default action on notification" << notificationId << "which doesn't have one";
+        qCWarning(NOTIFICATIONMANAGER) << "Trying to invoke default action on notification" << notificationId << "which doesn't have one";
         return;
     }
 
@@ -270,7 +285,7 @@ void NotificationModel::invoke(uint notificationId, const QString &actionName)
 
     const Notification &notification = d->notifications.at(idx);
     if (!notification.actionNames().contains(actionName)) {
-        qWarning() << "Trying to invoke action" << actionName << "on notification" << notificationId << "which it doesn't have";
+        qCWarning(NOTIFICATIONMANAGER) << "Trying to invoke action" << actionName << "on notification" << notificationId << "which it doesn't have";
         return;
     }
 

@@ -72,7 +72,7 @@ MouseArea {
             menuButton.checked = false;
 
             fileMenu.visualParent = this;
-            fileMenu.show(mouse.x, mouse.y);
+            fileMenu.open(mouse.x, mouse.y);
         }
     }
     onPositionChanged: {

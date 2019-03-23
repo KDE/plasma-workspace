@@ -44,6 +44,8 @@ PlasmaCore.Dialog {
     property alias body: notificationItem.body
     property alias icon: notificationItem.icon
     property alias urls: notificationItem.urls
+    property alias deviceName: notificationItem.deviceName
+
     property int urgency
     property int timeout
 
@@ -115,8 +117,16 @@ PlasmaCore.Dialog {
             onTriggered: notificationPopup.expired()
         }
 
+        Timer {
+            id: timeoutIndicatorDelayTimer
+            // only show indicator for the last ten seconds of timeout
+            readonly property int remainingTimeout: 10000
+            interval: Math.max(0, timer.interval - remainingTimeout)
+            running: interval > 0 && timer.running
+        }
+
         Rectangle {
-            id: timeoutRect
+            id: timeoutIndicatorRect
             anchors {
                 right: parent.right
                 rightMargin: -notificationPopup.margins.right
@@ -126,7 +136,7 @@ PlasmaCore.Dialog {
             width: units.devicePixelRatio * 3
             radius: width
             color: theme.highlightColor
-            opacity: timer.running ? 0.6 : 0
+            opacity: timeoutIndicatorAnimation.running ? 0.6 : 0
             visible: units.longDuration > 1
             Behavior on opacity {
                 NumberAnimation {
@@ -135,12 +145,13 @@ PlasmaCore.Dialog {
             }
 
             NumberAnimation {
-                target: timeoutRect
+                id: timeoutIndicatorAnimation
+                target: timeoutIndicatorRect
                 property: "height"
                 from: area.height + notificationPopup.margins.top + notificationPopup.margins.bottom
                 to: 0
-                duration: timer.interval
-                running: timer.running && units.longDuration > 1
+                duration: Math.min(timer.interval, timeoutIndicatorDelayTimer.remainingTimeout)
+                running: timer.running && !timeoutIndicatorDelayTimer.running && units.longDuration > 1
             }
         }
 
@@ -149,6 +160,7 @@ PlasmaCore.Dialog {
             width: parent.width
             hovered: area.containsMouse
             maximumLineCount: 8 // TODO configurable?
+            bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0
 
             thumbnailLeftPadding: -notificationPopup.margins.left
             thumbnailRightPadding: -notificationPopup.margins.right

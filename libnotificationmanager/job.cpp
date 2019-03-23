@@ -158,8 +158,6 @@ QVector<int> Job::processData(const QVariantMap/*Plasma::DataEngine::Data*/ &dat
 
     auto end = data.end();
 
-    // can we avoid this boilerplate by using introspection and magic?
-
     processField(data, QStringLiteral("infoMessage"), m_summary, Notifications::SummaryRole, dirtyRoles);
     processField(data, QStringLiteral("percentage"), m_percentage, Notifications::PercentageRole, dirtyRoles);
     processField(data, QStringLiteral("errorText"), m_errorText, Notifications::ErrorTextRole, dirtyRoles);
@@ -172,7 +170,6 @@ QVector<int> Job::processData(const QVariantMap/*Plasma::DataEngine::Data*/ &dat
 
         }
     }
-
 
     processField(data, QStringLiteral("killable"), m_killable, Notifications::KillableRole, dirtyRoles);
     processField(data, QStringLiteral("suspendable"), m_suspendable, Notifications::SuspendableRole, dirtyRoles);

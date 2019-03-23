@@ -5,18 +5,35 @@ endif()
 
 set(notificationmanager_LIB_SRCS
     notificationserver.cpp
+    notificationserver_p.cpp
     notification.cpp
     notificationmodel.cpp
-    notifications.cpp
-    notificationfilterproxymodel.cpp
-    notificationsortproxymodel.cpp
-    limitedrowcountproxymodel.cpp
+
     jobsmodel.cpp
     job.cpp
     jobdetails.cpp
+
+    notifications.cpp
+    notificationfilterproxymodel.cpp
+    notificationsortproxymodel.cpp
+    notificationgroupingproxymodel.cpp
+    limitedrowcountproxymodel.cpp
+
+    inhibitionserver.cpp
+
+    settings.cpp
 )
 
-qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS org.freedesktop.Notifications.xml notificationserver.h  NotificationManager::NotificationServer)
+ecm_qt_declare_logging_category(notificationmanager_LIB_SRCS
+    HEADER debug.h
+    IDENTIFIER NOTIFICATIONMANAGER
+    CATEGORY_NAME org.kde.plasma.notifications)
+
+kconfig_add_kcfg_files(notificationmanager_LIB_SRCS notificationsettings.kcfgc)
+
+qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS org.freedesktop.Notifications.xml notificationserver_p.h NotificationManager::NotificationServerPrivate fdonotificationsadaptor)
+
+qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS org.kde.Notifications.xml inhibitionserver.h NotificationManager::InhibitionServer kdenotificationsadaptor InhibitionAdaptor)
 
 add_library(notificationmanager ${notificationmanager_LIB_SRCS})
 add_library(PW::LibNotificationManager ALIAS notificationmanager)
@@ -36,6 +53,7 @@ target_link_libraries(notificationmanager
     PRIVATE
         Qt5::DBus
         KF5::ConfigCore
+        KF5::ConfigGui
         KF5::Service
         KF5::Plasma
         KF5::I18n
@@ -50,7 +68,8 @@ set_target_properties(notificationmanager PROPERTIES
 install(TARGETS notificationmanager EXPORT notificationmanagerLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 install(FILES
-    #notificationserver.h # FIXME dont export this class
+    notificationserver.h
+    notification.h
     ${CMAKE_CURRENT_BINARY_DIR}/notificationmanager_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/notificationmanager COMPONENT Devel
 )
@@ -71,3 +90,5 @@ install(EXPORT notificationmanagerLibraryTargets
         NAMESPACE PW::
         DESTINATION ${CMAKECONFIG_INSTALL_DIR}
         FILE LibNotificationManagerLibraryTargets.cmake )
+
+#install(FILES notificationsettings.kcfg DESTINATION ${KCFG_INSTALL_DIR} RENAME plasmanotify.kcfg)

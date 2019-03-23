@@ -25,7 +25,7 @@ using namespace NotificationManager;
 NotificationFilterProxyModel::NotificationFilterProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
-
+    setRecursiveFilteringEnabled(true);
 }
 
 NotificationFilterProxyModel::~NotificationFilterProxyModel() = default;
