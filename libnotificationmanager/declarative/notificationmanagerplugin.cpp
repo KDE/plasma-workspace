@@ -22,6 +22,7 @@
 
 #include "notifications.h"
 #include "jobdetails.h"
+#include "settings.h"
 
 #include <QQmlEngine>
 
@@ -33,4 +34,5 @@ void NotificationManagerPlugin::registerTypes(const char *uri)
 
     qmlRegisterType<Notifications>(uri, 1, 0, "Notifications");
     qmlRegisterType<JobDetails>();
+    qmlRegisterType<Settings>(uri, 1, 0, "Settings");
 }

@@ -20,6 +20,8 @@
 
 #include "notifications.h"
 
+#include <QSharedPointer>
+
 #include <KConcatenateRowsProxyModel>
 #include <KDescendantsProxyModel>
 
@@ -31,7 +33,11 @@
 
 #include "jobsmodel.h"
 
+#include "settings.h"
+
 #include "notification.h"
+
+#include "debug.h"
 
 #include <QDebug>
 
@@ -58,13 +64,9 @@ public:
     static uint notificationId(const QModelIndex &idx);
     static QString jobId(const QModelIndex &idx);
 
-    // FIXME can we just use sharedptr?
-    static int instanceCount;
-
-    static NotificationModel *notificationsModel;
-
-    static int jobsInstanceCount;
-    static JobsModel *jobsModel;
+    NotificationModel::Ptr notificationsModel;
+    JobsModel::Ptr jobsModel;
+    QSharedPointer<Settings> settings() const;
 
     KConcatenateRowsProxyModel *notificationsAndJobsModel = nullptr;
 
@@ -79,44 +81,24 @@ private:
     Notifications *q;
 };
 
-int Notifications::Private::instanceCount = 0;
-NotificationModel *Notifications::Private::notificationsModel = nullptr;
-
-int Notifications::Private::jobsInstanceCount = 0;
-JobsModel *Notifications::Private::jobsModel;
-
 Notifications::Private::Private(Notifications *q)
     : q(q)
 {
-    ++instanceCount;
+
 }
 
 Notifications::Private::~Private()
 {
-    --instanceCount;
 
-    if (!instanceCount) {
-        delete notificationsModel;
-        notificationsModel = nullptr;
-    }
-
-    --jobsInstanceCount;
-
-    if (!jobsInstanceCount) {
-        delete jobsModel;
-        jobsModel = nullptr;
-    }
 }
 
 void Notifications::Private::initModels()
 {
-    if (!notificationsModel) {
-        notificationsModel = new NotificationModel();
-    }
+    notificationsModel = NotificationModel::createNotificationModel();
 
     if (!notificationsAndJobsModel) {
         notificationsAndJobsModel = new KConcatenateRowsProxyModel(q);
-        notificationsAndJobsModel->addSourceModel(notificationsModel);
+        notificationsAndJobsModel->addSourceModel(notificationsModel.data());
     }
 
     if (!filterModel) {
@@ -230,6 +212,17 @@ QString Notifications::Private::jobId(const QModelIndex &idx)
     return idx.data(Notifications::IdRole).toString();
 }
 
+QSharedPointer<Settings> Notifications::Private::settings() const
+{
+    static QWeakPointer<Settings> s_instance;
+    if (!s_instance) {
+        QSharedPointer<Settings> ptr(new Settings());
+        s_instance = ptr.toWeakRef();
+        return ptr;
+    }
+    return s_instance.toStrongRef();
+}
+
 Notifications::Notifications(QObject *parent)
     : QSortFilterProxyModel(parent)
     , d(new Private(this))
@@ -321,19 +314,13 @@ void Notifications::setShowJobs(bool showJobs)
     }
 
     if (showJobs) {
-        ++d->jobsInstanceCount;
-        if (!d->jobsModel) {
-            d->jobsModel = new JobsModel();
-        }
-        d->notificationsAndJobsModel->addSourceModel(d->jobsModel);
+        d->jobsModel = JobsModel::createJobsModel();
+        d->notificationsAndJobsModel->addSourceModel(d->jobsModel.data());
     } else {
-        d->notificationsAndJobsModel->removeSourceModel(d->jobsModel);
-        --d->jobsInstanceCount;
-        if (!d->jobsInstanceCount) {
-            delete d->jobsModel;
-            d->jobsModel = nullptr;
-        }
+        d->notificationsAndJobsModel->removeSourceModel(d->jobsModel.data());
+        d->jobsModel = nullptr;
     }
+    d->showJobs = showJobs;
 }
 
 Notifications::Urgencies Notifications::urgencies() const
@@ -344,8 +331,7 @@ Notifications::Urgencies Notifications::urgencies() const
 void Notifications::setUrgencies(Urgencies urgencies)
 {
     if (!urgencies) {
-        // FIXME categorized logging
-        qWarning("No urgencies set, no notifications will be added.");
+        qCWarning(NOTIFICATIONMANAGER) << "No urgency flags have been set, no notifications will be shown!";
     }
     d->filterModel->setUrgencies(urgencies);
 }
@@ -406,16 +392,6 @@ void Notifications::expire(const QModelIndex &idx)
     }
 }
 
-void Notifications::dismiss(const QModelIndex &idx)
-{
-    if (idx.data(Notifications::TypeRole).toInt() != Notifications::JobType) {
-        qWarning() << "Can only dismiss jobs";
-        return;
-    }
-
-    d->jobsModel->dismiss(Private::jobId(idx));
-}
-
 void Notifications::close(const QModelIndex &idx)
 {
     switch (static_cast<Notifications::Type>(idx.data(Notifications::TypeRole).toInt())) {
@@ -463,6 +439,12 @@ void Notifications::resumeJob(const QModelIndex &idx)
 void Notifications::killJob(const QModelIndex &idx)
 {
     d->jobsModel->kill(Private::jobId(idx));
+}
+
+void Notifications::clear(ClearFlags flags)
+{
+    Q_UNUSED(flags);
+    // TODO implement
 }
 
 QVariant Notifications::data(const QModelIndex &index, int role) const
@@ -525,6 +507,7 @@ QHash<int, QByteArray> Notifications::roleNames() const
         {KillableRole, QByteArrayLiteral("killable")},
         {JobDetailsRole, QByteArrayLiteral("jobDetails")},
 
-        {ExpiredRole, QByteArrayLiteral("expired")}
+        {ExpiredRole, QByteArrayLiteral("expired")},
+        {DismissedRole, QByteArrayLiteral("dismissed")}
     };
 }

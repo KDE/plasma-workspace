@@ -144,8 +144,8 @@ int NotificationModel::Private::indexOfNotification(uint id) const
     return std::distance(notifications.constBegin(), it);
 }
 
-NotificationModel::NotificationModel(QObject *parent)
-    : QAbstractListModel(parent)
+NotificationModel::NotificationModel()
+    : QAbstractListModel(nullptr)
     , d(new Private(this))
 {
     connect(&NotificationServer::self(), &NotificationServer::notificationAdded, this, [this](const Notification &notification) {
@@ -161,6 +161,17 @@ NotificationModel::NotificationModel(QObject *parent)
 }
 
 NotificationModel::~NotificationModel() = default;
+
+NotificationModel::Ptr NotificationModel::createNotificationModel()
+{
+    static QWeakPointer<NotificationModel> s_instance;
+    if (!s_instance) {
+        QSharedPointer<NotificationModel> ptr(new NotificationModel());
+        s_instance = ptr.toWeakRef();
+        return ptr;
+    }
+    return s_instance.toStrongRef();
+}
 
 QVariant NotificationModel::data(const QModelIndex &index, int role) const
 {

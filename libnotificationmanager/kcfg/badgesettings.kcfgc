@@ -1,0 +1,7 @@
+File=badgesettings.kcfg
+NameSpace=NotificationManager
+ClassName=BadgeSettings
+Singleton=true
+Mutators=true
+DefaultValueGetters=true
+Notifiers=true

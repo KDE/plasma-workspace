@@ -67,23 +67,19 @@ Item {
 
     }
 
+    NotificationManager.Settings {
+        id: notificationSettings
+    }
+
     NotificationManager.Notifications {
         id: historyModel
         showExpired: true
         showDismissed: true
-        showJobs: true
+        showJobs: notificationSettings.jobsInNotifications
         groupMode: NotificationManager.Notifications.GroupApplicationsFlat
     }
 
-    function action_notificationskcm() {
-        KCMShell.open("kcmnotify");
-    }
-
     Component.onCompleted: {
-        if (KCMShell.authorize("kcmnotify.desktop").length > 0) {
-            plasmoid.setAction("notificationskcm", i18n("&Configure Event Notifications and Actions..."), "preferences-desktop-notification")
-        }
-
         Popups.PopupHandler.adopt(plasmoid)
     }
 }

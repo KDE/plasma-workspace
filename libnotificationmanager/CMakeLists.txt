@@ -29,11 +29,15 @@ ecm_qt_declare_logging_category(notificationmanager_LIB_SRCS
     IDENTIFIER NOTIFICATIONMANAGER
     CATEGORY_NAME org.kde.plasma.notifications)
 
-kconfig_add_kcfg_files(notificationmanager_LIB_SRCS notificationsettings.kcfgc)
+# Settings
+kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/donotdisturbsettings.kcfgc)
+kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/notificationsettings.kcfgc)
+kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/jobsettings.kcfgc)
+kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/badgesettings.kcfgc)
 
-qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS org.freedesktop.Notifications.xml notificationserver_p.h NotificationManager::NotificationServerPrivate fdonotificationsadaptor)
-
-qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS org.kde.Notifications.xml inhibitionserver.h NotificationManager::InhibitionServer kdenotificationsadaptor InhibitionAdaptor)
+# DBus
+qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.freedesktop.Notifications.xml notificationserver_p.h NotificationManager::NotificationServerPrivate fdonotificationsadaptor)
+qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.Notifications.xml inhibitionserver.h NotificationManager::InhibitionServer kdenotificationsadaptor InhibitionAdaptor)
 
 add_library(notificationmanager ${notificationmanager_LIB_SRCS})
 add_library(PW::LibNotificationManager ALIAS notificationmanager)
@@ -49,10 +53,10 @@ target_link_libraries(notificationmanager
         Qt5::Core
         Qt5::Gui
         Qt5::Quick
+        KF5::ConfigCore
         KF5::ItemModels
     PRIVATE
         Qt5::DBus
-        KF5::ConfigCore
         KF5::ConfigGui
         KF5::Service
         KF5::Plasma
@@ -70,6 +74,7 @@ install(TARGETS notificationmanager EXPORT notificationmanagerLibraryTargets ${K
 install(FILES
     notificationserver.h
     notification.h
+    settings.h
     ${CMAKE_CURRENT_BINARY_DIR}/notificationmanager_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/notificationmanager COMPONENT Devel
 )
@@ -90,5 +95,3 @@ install(EXPORT notificationmanagerLibraryTargets
         NAMESPACE PW::
         DESTINATION ${CMAKECONFIG_INSTALL_DIR}
         FILE LibNotificationManagerLibraryTargets.cmake )
-
-#install(FILES notificationsettings.kcfg DESTINATION ${KCFG_INSTALL_DIR} RENAME plasmanotify.kcfg)

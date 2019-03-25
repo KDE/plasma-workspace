@@ -22,8 +22,7 @@
 
 #include <QAbstractListModel>
 #include <QScopedPointer>
-
-#include "notificationmanager_export.h"
+#include <QSharedPointer>
 
 #include <Plasma/DataEngine>
 
@@ -32,26 +31,21 @@ namespace NotificationManager
 
 class Notification;
 
-/**
- * @short TODO
- *
- * TODO
- *
- * @author Kai Uwe Broulik <kde@privat.broulik.de>
- **/
-class NOTIFICATIONMANAGER_EXPORT JobsModel : public QAbstractListModel
+class JobsModel : public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit JobsModel(QObject *parent = nullptr);
     ~JobsModel() override;
 
-    QVariant data(const QModelIndex &index, int role/* = Qt::DisplayRole*/) const override;
+    using Ptr = QSharedPointer<JobsModel>;
+    static Ptr createJobsModel();
+
+    QVariant data(const QModelIndex &index, int role) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role) override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     Q_INVOKABLE void close(const QString &jobId);
-    Q_INVOKABLE void dismiss(const QString &jobId);
     Q_INVOKABLE void expire(const QString &jobId);
 
     Q_INVOKABLE void suspend(const QString &jobId);
@@ -64,6 +58,9 @@ private slots:
 private:
     class Private;
     QScopedPointer<Private> d;
+
+    JobsModel();
+    Q_DISABLE_COPY(JobsModel)
 
 };
 

@@ -82,12 +82,14 @@ public:
 
 Q_SIGNALS:
     /**
-     * Emitted when a notification was added
+     * Emitted when a notification was added.
+     * This is emitted regardless of any filtering rules or user settings.
      * @param notification The notification
      */
     void notificationAdded(const Notification &notification);
     /**
      * Emitted when a notification is supposed to be updated
+     * This is emitted regardless of any filtering rules or user settings.
      * @param replacedId The ID of the notification it replaces
      * @param notification The new notification to use instead
      */

@@ -23,3 +23,4 @@ X-KDE-Library=plasma_applet_newnotifications
 X-Plasma-MainScript=ui/main.qml
 X-Plasma-NotificationArea=true
 X-Plasma-NotificationAreaCategory=ApplicationStatus
+X-Plasma-ConfigPlugins=kcm_notifications

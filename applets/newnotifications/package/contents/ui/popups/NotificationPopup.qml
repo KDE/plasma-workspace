@@ -32,8 +32,8 @@ PlasmaCore.Dialog {
     id: notificationPopup
 
     property alias notificationType: notificationItem.notificationType
-    readonly property bool isNotification: notificationType === NotificationManager.Notifications.NotificationType
-    readonly property bool isJob: notificationType === NotificationManager.Notifications.JobType
+    //readonly property bool isNotification: notificationType === NotificationManager.Notifications.NotificationType
+    //readonly property bool isJob: notificationType === NotificationManager.Notifications.JobType
 
     property alias applicationName: notificationItem.applicationName
     property alias applicatonIconSource: notificationItem.applicationIconSource
@@ -44,7 +44,6 @@ PlasmaCore.Dialog {
     property alias body: notificationItem.body
     property alias icon: notificationItem.icon
     property alias urls: notificationItem.urls
-    property alias deviceName: notificationItem.deviceName
 
     property int urgency
     property int timeout
@@ -79,7 +78,6 @@ PlasmaCore.Dialog {
     signal resumeJobClicked
     signal killJobClicked
 
-    // TODO configurable and/or based on notification size
     property int defaultTimeout: 5000
     readonly property int effectiveTimeout: timeout === -1 ? defaultTimeout : timeout
 

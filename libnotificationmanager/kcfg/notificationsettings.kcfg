@@ -5,12 +5,6 @@
                           http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
     <kcfgfile arg="true" />
 
-    <group name="DoNotDisturb">
-        <!-- ApplicationsCanEnable -->
-        <!-- KeyboardShortcut -->
-        <!-- Activities ids -->
-    </group>
-
     <group name="Notifications">
         <entry name="CriticalInDndMode" type="Bool">
             <default>true</default>
@@ -18,11 +12,11 @@
         <entry name="CriticalAlwaysOnTop" type="Bool">
             <default>true</default>
         </entry>
-        <entry name="LowPriorityPopup" type="Bool">
+        <entry name="LowPriorityPopups" type="Bool">
             <default>false</default>
         </entry>
         <entry name="PopupPosition" type="Enum">
-            <choices>
+            <choices name="Settings::PopupPosition">
                 <choice name="NearWidget" />
                 <choice name="TopLeft" />
                 <choice name="TopCenter" />
@@ -34,19 +28,8 @@
             <default>NearWidget</default>
         </entry>
         <entry name="PopupTimeout" type="Int">
-            <default>5</default>
+            <default>5000</default><!-- milliseconds -->
         </entry>
     </group>
 
-    <group name="Jobs">
-        <entry name="InTaskManager" type="Bool">
-            <default>true</default>
-        </entry>
-        <entry name="Popup" type="Bool">
-            <default>true</default>
-        </entry>
-        <entry name="AutoHidePopup" type="Bool">
-            <default>false</default>
-        </entry>
-    </group>
 </kcfg>

@@ -78,10 +78,12 @@ QtObject {
         limit: Math.ceil(popupHandler.screenRect.height / (theme.mSize(theme.defaultFont).height * 4))
         showExpired: false
         showDismissed: false
-        showJobs: true
+        showJobs: notificationSettings.jobsInNotifications
         groupMode: NotificationManager.Notifications.GroupDisabled
         urgencies: NotificationManager.Notifications.NormalUrgency | NotificationManager.Notifications.CriticalUrgency
     }
+
+    property QtObject notificationSettings: NotificationManager.Settings { }
 
     function adopt(plasmoid) {
         var newPlasmoids = plasmoids;
@@ -156,8 +158,6 @@ QtObject {
     property Instantiator popupInstantiator: Instantiator {
         model: popupNotificationsModel
         delegate: NotificationPopup {
-            // TODO defaultTimeout configurable
-
             notificationType: model.type
 
             applicationName: model.applicationName
@@ -178,10 +178,10 @@ QtObject {
             icon: model.image || model.iconName
             hasDefaultAction: model.hasDefaultAction || false
             timeout: model.timeout
+            defaultTimeout: notificationSettings.popupTimeout
 
             urls: model.urls || []
             urgency: model.urgency
-            deviceName: model.deviceName || ""
 
             jobState: model.jobState || 0
             percentage: model.percentage || 0
@@ -197,7 +197,7 @@ QtObject {
 
             onExpired: popupNotificationsModel.expire(popupNotificationsModel.index(index, 0))
             onCloseClicked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
-            onDismissClicked: popupNotificationsModel.dismiss(popupNotificationsModel.index(index, 0))
+            onDismissClicked: model.dismissed = true
             onConfigureClicked: popupNotificationsModel.configure(popupNotificationsModel.index(index, 0))
             onDefaultActionInvoked: popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0))
             onActionInvoked: popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName)

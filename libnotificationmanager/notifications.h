@@ -183,6 +183,15 @@ public:
     Q_DECLARE_FLAGS(Urgencies, Urgency)
     Q_FLAG(Urgencies)
 
+    enum ClearFlag {
+        ClearExpired = 1 << 1,
+        ClearDismissed = 1 << 2
+        // TODO more
+    };
+    Q_ENUM(ClearFlag)
+    Q_DECLARE_FLAGS(ClearFlags, ClearFlag)
+    Q_FLAG(ClearFlags)
+
     enum JobState {
         JobStateStopped,
         JobStateRunning,
@@ -226,7 +235,6 @@ public:
     int jobsPercentage() const;
 
     Q_INVOKABLE void expire(const QModelIndex &idx);
-    Q_INVOKABLE void dismiss(const QModelIndex &idx);
     Q_INVOKABLE void close(const QModelIndex &idx);
     Q_INVOKABLE void closeGroup(const QModelIndex &idx);
     Q_INVOKABLE void configure(const QModelIndex &idx); // TODO pass ctx for transient handling
@@ -237,7 +245,7 @@ public:
     Q_INVOKABLE void resumeJob(const QModelIndex &idx);
     Q_INVOKABLE void killJob(const QModelIndex &idx);
 
-    // TODO clearhistory or clear(flags what)
+    Q_INVOKABLE void clear(ClearFlags flags);
 
     QVariant data(const QModelIndex &index, int role/* = Qt::DisplayRole*/) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;

@@ -58,7 +58,6 @@ uint NotificationServerPrivate::Notify(const QString &app_name, uint replaces_id
                                        const QString &summary, const QString &body, const QStringList &actions,
                                        const QVariantMap &hints, int timeout)
 {
-    qDebug() << "noutifai";
     Q_ASSERT(calledFromDBus());
 
     const bool wasReplaced = replaces_id > 0;
@@ -84,8 +83,6 @@ uint NotificationServerPrivate::Notify(const QString &app_name, uint replaces_id
 
     // might override some of the things we set above (like application name)
     notification.d->processHints(hints);
-
-    qDebug() << "pärrent" << parent();
 
     if (wasReplaced) {
         notification.setUpdated();

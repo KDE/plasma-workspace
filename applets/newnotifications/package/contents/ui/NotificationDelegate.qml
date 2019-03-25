@@ -27,6 +27,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 ColumnLayout {
     id: delegate
 
+    property alias notificationType: notificationItem.notificationType
+
     property alias applicationName: notificationItem.applicationName
     property alias applicatonIconSource: notificationItem.applicationIconSource
 
@@ -35,17 +37,35 @@ ColumnLayout {
     property alias summary: notificationItem.summary
     property alias body: notificationItem.body
     property alias icon: notificationItem.icon
+    property alias urls: notificationItem.urls
 
+    property alias jobState: notificationItem.jobState
+    property alias percentage: notificationItem.percentage
+    property alias error: notificationItem.error
+    property alias errorText: notificationItem.errorText
+    property alias suspendable: notificationItem.suspendable
+    property alias killable: notificationItem.killable
+    property alias jobDetails: notificationItem.jobDetails
+
+    property alias configureActionLabel: notificationItem.configureActionLabel
     property alias configurable: notificationItem.configurable
-    //property bool hasDefaultAction
-    //property alias actionNames: notificationItem.actionNames
-    //property alias actionLabels: notificationItem.actionLabels
+    property alias dismissable: notificationItem.dismissable
+    property alias closable: notificationItem.closable
 
-    signal closeClicked
+    property alias actionNames: notificationItem.actionNames
+    property alias actionLabels: notificationItem.actionLabels
+
     signal configureClicked
+    signal dismissClicked
+    signal closeClicked
+
     //signal defaultActionInvoked
-    //signal actionInvoked(string actionName)
-    //signal expired
+    signal actionInvoked(string actionName)
+    signal openUrl(string url)
+
+    signal suspendJobClicked
+    signal resumeJobClicked
+    signal killJobClicked
 
     // FIXME
     property alias svg: lineSvgItem.svg
@@ -59,7 +79,15 @@ ColumnLayout {
         closable: true
 
         onCloseClicked: delegate.closeClicked()
+        onDismissClicked: delegate.dismissClicked()
         onConfigureClicked: delegate.configureClicked()
+
+        onActionInvoked: delegate.actionInvoked(actionName)
+        onOpenUrl: delegate.openUrl(url)
+
+        onSuspendJobClicked: delegate.suspendJobClicked()
+        onResumeJobClicked: delegate.resumeJobClicked()
+        onKillJobClicked: delegate.killJobClicked()
     }
 
     PlasmaCore.SvgItem {

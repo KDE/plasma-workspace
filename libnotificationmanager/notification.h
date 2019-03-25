@@ -46,6 +46,7 @@ class NOTIFICATIONMANAGER_EXPORT Notification
 public:
     explicit Notification(uint id = 0);
     Notification(const Notification &other);
+    Notification(Notification &&other) Q_DECL_NOEXCEPT;
     Notification &operator=(const Notification &other);
 
     ~Notification();

@@ -22,28 +22,20 @@
 
 #include <QAbstractListModel>
 #include <QScopedPointer>
-
-#include "notificationmanager_export.h"
+#include <QSharedPointer>
 
 namespace NotificationManager
 {
 
-class Notification;
-
-/**
- * @short TODO
- *
- * TODO
- *
- * @author Kai Uwe Broulik <kde@privat.broulik.de>
- **/
-class NOTIFICATIONMANAGER_EXPORT NotificationModel : public QAbstractListModel
+class NotificationModel : public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit NotificationModel(QObject *parent = nullptr);
     ~NotificationModel() override;
+
+    using Ptr = QSharedPointer<NotificationModel>;
+    static Ptr createNotificationModel();
 
     // FIXME currently easier to debug if we crash when accessing invalid role
     // instead of just "randomly" returning display role when
@@ -61,6 +53,9 @@ public:
 private:
     class Private;
     QScopedPointer<Private> d;
+
+    NotificationModel();
+    Q_DISABLE_COPY(NotificationModel)
 
 };
 

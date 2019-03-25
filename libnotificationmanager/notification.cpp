@@ -329,6 +329,12 @@ Notification::Notification(const Notification &other)
 
 }
 
+Notification::Notification(Notification &&other)
+    : d(other.d)
+{
+    other.d = nullptr;
+}
+
 Notification &Notification::operator=(const Notification &other)
 {
     d = new Private(*other.d);

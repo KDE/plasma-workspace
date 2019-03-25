@@ -29,8 +29,8 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.notificationmanager 1.0 as NotificationManager
 
 ColumnLayout {
-    Layout.preferredWidth: units.gridUnit * 22
-    Layout.preferredHeight: units.gridUnit * 28
+    Layout.preferredWidth: units.gridUnit * 18
+    Layout.preferredHeight: units.gridUnit * 24
     Layout.fillHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     RowLayout {
@@ -113,15 +113,17 @@ ColumnLayout {
             ListView {
                 id: list
                 model: historyModel
-                // FIXME
-                /*section {
-                    property: "applicationName"
-                    criteria: ViewSection.FullString
-                    delegate: NotificationDelegate {
-                        width: list.width
-                        applicationName: section
+
+                remove: Transition {
+                    ParallelAnimation {
+                        NumberAnimation { property: "opacity"; to: 0; duration: units.longDuration }
+                        NumberAnimation { property: "x"; to: list.width; duration: units.longDuration }
                     }
-                }*/
+                }
+                removeDisplaced: Transition {
+                    PauseAnimation { duration: units.longDuration }
+                    NumberAnimation { properties: "y"; duration:  units.longDuration }
+                }
 
                 delegate: Loader {
                     sourceComponent: model.isGroup ? groupDelegate : notificationDelegate
@@ -144,6 +146,8 @@ ColumnLayout {
                         NotificationDelegate {
                             width: list.width
 
+                            notificationType: model.type
+
                             applicationName: model.applicationName
                             applicatonIconSource: model.applicationIconName
 
@@ -151,15 +155,45 @@ ColumnLayout {
 
                             configurable: model.configurable
 
+                            // FIXME make the dismiss button a undismiss button
+                            dismissable: model.type === NotificationManager.Notifications.JobType
+                                && model.jobState !== NotificationManager.Notifications.JobStateStopped
+                            closable: model.type === NotificationManager.Notifications.NotificationType
+                                || model.jobState === NotificationManager.Notifications.JobStateStopped
+
                             summary: model.summary
                             body: model.body || "" // TODO
                             icon: model.image || model.iconName
 
-                            // TODO everything else
+                            urls: model.urls || []
+
+                            jobState: model.jobState || 0
+                            percentage: model.percentage || 0
+                            error: model.error || 0
+                            errorText: model.errorText || ""
+                            suspendable: !!model.suspendable
+                            killable: !!model.killable
+                            jobDetails: model.jobDetails || null
+
+                            configureActionLabel: model.configureActionLabel || ""
+                            actionNames: model.actionNames
+                            actionLabels: model.actionLabels
 
                             onCloseClicked: historyModel.close(historyModel.index(index, 0))
+                            onDismissClicked: model.dismissed = false
                             onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
 
+                            onActionInvoked: historyModel.invokeAction(historyModel.index(index, 0), actionName)
+                            onOpenUrl: {
+                                Qt.openUrlExternally(url);
+                                //historyModel.close(historyModel.index(index, 0))
+                            }
+
+                            onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
+                            onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
+                            onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
+
+                            // FIXME
                             svg: lineSvg
                         }
                     }

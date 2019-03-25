@@ -23,7 +23,6 @@
 #include "notifications.h"
 
 #include <QDebug>
-
 #include <QScopedPointer>
 
 #include <KJob>
@@ -43,6 +42,8 @@ public:
     explicit Private(JobsModel *q);
     ~Private();
 
+    void onSourceAdded(const QString &source);
+    void onSourceRemoved(const QString &source);
     void operationCall(const QString &source, const QString &operation);
 
     JobsModel *q;
@@ -51,8 +52,10 @@ public:
     Plasma::DataEngine *dataEngine;
 
     QStringList sources;
+    // FIXME why is this a pointer?
+    // Try making it not anymore and make sure jobdetails has
+    // a copy constructor that copies its private stuff
     QHash<QString, Job *> jobs;
-
 
 };
 
@@ -61,41 +64,22 @@ JobsModel::Private::Private(JobsModel *q)
     , dataEngineConsumer(new Plasma::DataEngineConsumer)
     , dataEngine(dataEngineConsumer->dataEngine(QStringLiteral("applicationjobs")))
 {
-    QObject::connect(dataEngine, &Plasma::DataEngine::sourceAdded, q, [this, q](const QString &source) {
-        q->beginInsertRows(QModelIndex(), sources.count(), sources.count());
-        sources.append(source);
-        jobs.insert(source, new Job(source));
-        // must connect after adding so we process the initial update call
-        dataEngine->connectSource(source, q);
-        q->endInsertRows();
-    });
-    QObject::connect(dataEngine, &Plasma::DataEngine::sourceRemoved, q, [this, q](const QString &source) {
-        const int row = sources.indexOf(source);
-        Q_ASSERT(row > -1);
 
-        const QModelIndex idx = q->index(row, 0);
-        Job *job = jobs.value(source);
-        Q_ASSERT(job);
-
-        dataEngine->disconnectSource(source, q);
-
-        // When user canceled transfer, remove it from the model
-        if (job->error() == 1) { // KIO::ERR_USER_CANCELED
-            q->close(source);
-            return;
+    // NOTE cannot call onSourceAdded from constructor directly
+    // because it does beginInsertRow and then blows up
+    QMetaObject::invokeMethod(q, [this] {
+        // FIXME why does connectAllSources() not work?
+        const QStringList allSources = dataEngine->sources();
+        for (const QString &source : allSources) {
+            onSourceAdded(source);
         }
+    }, Qt::QueuedConnection);
 
-        // update timestamp
-        job->setUpdated();
-
-        // when it was hidden in history, bring it up again
-        job->setDismissed(false);
-
-        emit q->dataChanged(idx, idx, {
-            Notifications::UpdatedRole,
-            Notifications::DismissedRole,
-            Notifications::TimeoutRole
-        });
+    QObject::connect(dataEngine, &Plasma::DataEngine::sourceAdded, q, [this](const QString &source) {
+        onSourceAdded(source);
+    });
+    QObject::connect(dataEngine, &Plasma::DataEngine::sourceRemoved, q, [this](const QString &source) {
+        onSourceRemoved(source);
     });
 }
 
@@ -103,6 +87,49 @@ JobsModel::Private::~Private()
 {
     qDeleteAll(jobs);
     jobs.clear();
+}
+
+void JobsModel::Private::onSourceAdded(const QString &source)
+{
+    q->beginInsertRows(QModelIndex(), sources.count(), sources.count());
+    sources.append(source);
+    jobs.insert(source, new Job(source));
+    // must connect after adding so we process the initial update call
+    dataEngine->connectSource(source, q);
+    q->endInsertRows();
+}
+
+void JobsModel::Private::onSourceRemoved(const QString &source)
+{
+    const int row = sources.indexOf(source);
+    // Job tracking might have been disabled in the meantime, otherwise this would not be neccessary
+    if (row == -1) {
+        return;
+    }
+
+    const QModelIndex idx = q->index(row, 0);
+    Job *job = jobs.value(source);
+    Q_ASSERT(job);
+
+    dataEngine->disconnectSource(source, q);
+
+    // When user canceled transfer, remove it from the model
+    if (job->error() == 1) { // KIO::ERR_USER_CANCELED
+        q->close(source);
+        return;
+    }
+
+    // update timestamp
+    job->setUpdated();
+
+    // when it was hidden in history, bring it up again
+    job->setDismissed(false);
+
+    emit q->dataChanged(idx, idx, {
+        Notifications::UpdatedRole,
+        Notifications::DismissedRole,
+        Notifications::TimeoutRole
+    });
 }
 
 void JobsModel::Private::operationCall(const QString &source, const QString &operation)
@@ -117,18 +144,31 @@ void JobsModel::Private::operationCall(const QString &source, const QString &ope
     QObject::connect(job, &KJob::finished, service, &QObject::deleteLater);
 }
 
-JobsModel::JobsModel(QObject *parent)
-    : QAbstractListModel(parent)
+JobsModel::JobsModel()
+    : QAbstractListModel(nullptr)
     , d(new Private(this))
 {
 }
 
 JobsModel::~JobsModel() = default;
 
+JobsModel::Ptr JobsModel::createJobsModel()
+{
+    static QWeakPointer<JobsModel> s_instance;
+    if (!s_instance) {
+        QSharedPointer<JobsModel> ptr(new JobsModel());
+        s_instance = ptr.toWeakRef();
+        return ptr;
+    }
+    return s_instance.toStrongRef();
+}
+
 void JobsModel::dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data)
 {
     const int row = d->sources.indexOf(sourceName);
-    Q_ASSERT(row > -1);
+    if (row == -1) {
+        return;
+    }
 
     const auto dirtyRoles = d->jobs.value(sourceName)->processData(data);
 
@@ -189,6 +229,33 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
+bool JobsModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    if (!index.isValid() || index.row() >= d->jobs.count()) {
+        return false;
+    }
+
+    const QString &sourceName = d->sources.at(index.row());
+    Job *job = d->jobs.value(sourceName);
+
+    bool dirty = false;
+
+    switch (role) {
+    case Notifications::DismissedRole:
+        if (value.toBool() != job->dismissed()) {
+            job->setDismissed(value.toBool());
+            dirty = true;
+        }
+        break;
+    }
+
+    if (dirty) {
+        emit dataChanged(index, index, {role});
+    }
+
+    return dirty;
+}
+
 int JobsModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {
@@ -223,20 +290,6 @@ void JobsModel::expire(const QString &jobId)
     Job *job = d->jobs.value(jobId);
     job->setExpired(true);
     emit dataChanged(idx, idx, {Notifications::ExpiredRole});
-}
-
-void JobsModel::dismiss(const QString &jobId)
-{
-    const int row = d->sources.indexOf(jobId);
-    if (row == -1) {
-        return;
-    }
-
-    const QModelIndex idx = index(row, 0);
-
-    Job *job = d->jobs.value(jobId);
-    job->setDismissed(true);
-    emit dataChanged(idx, idx, {Notifications::DismissedRole});
 }
 
 void JobsModel::suspend(const QString &jobId)
