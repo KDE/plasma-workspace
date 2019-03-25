@@ -55,7 +55,7 @@ QQC2.StackView {
         imageWallpaper.addUrl(configuredImage)
     }
     Component.onCompleted: {
-        if (wallpaper.pluginName == "org.kde.slideshow") {
+        if (wallpaper.pluginName === "org.kde.slideshow") {
             wallpaper.setAction("open", i18nd("plasma_wallpaper_org.kde.image", "Open Wallpaper Image"), "document-open");
             wallpaper.setAction("next", i18nd("plasma_wallpaper_org.kde.image", "Next Wallpaper Image"), "user-desktop");
         }
@@ -64,7 +64,7 @@ QQC2.StackView {
     Wallpaper.Image {
         id: imageWallpaper
         //the oneliner of difference between image and slideshow wallpapers
-        renderingMode: (wallpaper.pluginName == "org.kde.image") ? Wallpaper.Image.SingleImage : Wallpaper.Image.SlideShow
+        renderingMode: (wallpaper.pluginName === "org.kde.image") ? Wallpaper.Image.SingleImage : Wallpaper.Image.SlideShow
         targetSize: Qt.size(root.width, root.height)
         slidePaths: wallpaper.configuration.SlidePaths
         slideTimer: wallpaper.configuration.SlideInterval
@@ -87,7 +87,7 @@ QQC2.StackView {
                         "opacity": isFirst ? 1: 0});
 
         function replaceWhenLoaded() {
-            if (pendingImage.status != Image.Loading) {
+            if (pendingImage.status !== Image.Loading) {
                 root.replace(pendingImage, {},
                     isFirst ? QQC2.StackView.Immediate : QQC2.StackView.Transition);//dont' animate first show
                 pendingImage.statusChanged.disconnect(replaceWhenLoaded);

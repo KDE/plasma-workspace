@@ -36,6 +36,7 @@ MouseArea {
     property int state
 
     property bool mounted
+    property bool isRoot
     property bool expanded: devicenotifier.expandedDevice == udi
     property alias percentUsage: freeSpaceBar.value
     property string freeSpaceText
@@ -87,6 +88,15 @@ MouseArea {
         }
     }
 
+    Connections {
+        target: unmountAll
+        onClicked: {
+            if (model["Removable"] && mounted) {
+                actionTriggered();
+            }
+        }
+    }
+
     // this keeps the delegate around for 5 seconds after the device has been
     // removed in case there was a message, such as "you can now safely remove this"
     ListView.onRemove: {
@@ -115,6 +125,19 @@ MouseArea {
             statusSource.clearMessage()
 
             --devicenotifier.pendingDelegateRemoval // QTBUG-50380
+        }
+    }
+
+    Timer {
+        id: updateStorageSpaceTimer
+        interval: 5000
+        repeat: true
+        running: mounted && plasmoid.expanded
+        triggeredOnStart: true     // Update the storage space as soon as we open the plasmoid
+        onTriggered: {
+            var service = sdSource.serviceForSource(udi);
+            var operation = service.operationDescription("updateFreespace");
+            service.startOperationCall(operation);
         }
     }
 
@@ -162,7 +185,7 @@ MouseArea {
                 id: iconToolTip
                 anchors.fill: parent
                 subText: {
-                    if ((mounted || deviceItem.state != 0) && model["Available Content"] != "Audio") {
+                    if ((mounted || deviceItem.state != 0) && model["Available Content"] !== "Audio") {
                         if (model["Removable"]) {
                             return i18n("It is currently <b>not safe</b> to remove this device: applications may be accessing it. Click the eject button to safely remove this device.")
                         } else {
@@ -238,8 +261,6 @@ MouseArea {
                 font.pointSize: theme.smallestFont.pointSize
                 visible: deviceItem.state != 0 || (!actionsList.visible && !deviceItem.hasMessage)
                 text: {
-                    // FIXME: state changes do not reach the plasmoid if the
-                    // device was already attached when the plasmoid was initialized
                     if (deviceItem.state == 0) {
                         if (!hpSource.data[udi]) {
                             return ""
@@ -304,6 +325,7 @@ MouseArea {
             PlasmaComponents.ToolButton {
                 id: actionButton
                 visible: !busyIndicator.visible && deviceItem.actionVisible
+                enabled: !isRoot
                 onClicked: actionTriggered()
                 y: mounted ? deviceLabel.height + (freeSpaceBar.height - height - units.smallSpacing) / 2 : (deviceLabel.height + actionMessage.height - height) / 2
             }

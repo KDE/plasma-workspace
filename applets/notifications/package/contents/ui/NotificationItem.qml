@@ -30,8 +30,20 @@ import org.kde.kquickcontrolsaddons 2.0
 MouseArea {
     id: notificationItem
     width: parent.width
-    implicitHeight: Math.max(appIconItem.valid || imageItem.nativeWidth > 0 ? units.iconSizes.large : 0, mainLayout.height)
-
+    implicitHeight: {
+        if (bodyText.lineCount > 1) {
+            return mainLayout.height + 0.5 * units.smallSpacing // close button height = about 1 unit
+        }  
+        if (appIconItem.valid || imageItem.nativeWidth > 0) {
+            return Math.max((mainLayout.height + 1.5 * units.smallSpacing),(units.iconSizes.large + 2 * units.smallSpacing))
+        }
+        if (bottomPart.height != 0) {
+            return mainLayout.height + (mainLayout.height > units.iconSizes.large ? 1.5 : 2) * units.smallSpacing 
+            } else {
+                return mainLayout.height + units.smallSpacing // close button again
+            }
+    }
+    
     // We need to clip here because we support displaying images through <img/>
     // and if we don't clip, they will be painted over the borders of the dialog/item
     clip: true
@@ -68,7 +80,7 @@ MouseArea {
         }
 
         if (hasDefaultAction) {
-            // the notifications was clicked, trigger the default action if set
+            // the notification was clicked, trigger the default action if set
             action("default")
         }
     }
@@ -151,9 +163,11 @@ MouseArea {
         anchors {
             top: parent.top
             left: parent.left
+            leftMargin: units.smallSpacing
+            topMargin: units.smallSpacing
         }
 
-        visible: imageItem.nativeWidth == 0 && valid
+        visible: imageItem.nativeWidth === 0 && valid
         animated: false
     }
 
@@ -170,9 +184,11 @@ MouseArea {
 
         anchors {
             top: parent.top
+            topMargin: bodyText.lineCount > 1 ? 0 : Math.round((mainLayout.height > units.iconSizes.large ? 0.5 : 1) * units.smallSpacing) // lift up heading if bodyText is too long/tall
             left: appIconItem.valid || imageItem.nativeWidth > 0 ? appIconItem.right : parent.left
             right: parent.right
-            leftMargin: units.smallSpacing
+            leftMargin: units.smallSpacing * 2
+            rightMargin: units.smallSpacing // Equal padding on either side (notification icon margin)
         }
 
         spacing: Math.round(units.smallSpacing / 2)
@@ -211,7 +227,7 @@ MouseArea {
                 width: units.iconSizes.smallMedium
                 height: width
                 visible: false
-
+                
                 iconSource: "configure"
 
                 onClicked: {

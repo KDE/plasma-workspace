@@ -17,49 +17,40 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.1 as Controls
-import QtQuick.Layouts 1.1 as Layouts
-
-import org.kde.plasma.core 2.0 as PlasmaCore
-
+import QtQuick.Controls 2.5
+import org.kde.kirigami 2.4 as Kirigami
 
 Item {
-    id: iconsPage
     width: childrenRect.width
     height: childrenRect.height
-    implicitWidth: mainColumn.implicitWidth
-    implicitHeight: mainColumn.implicitHeight
 
     property alias cfg_removableDevices: removableOnly.checked
     property alias cfg_nonRemovableDevices: nonRemovableOnly.checked
     property alias cfg_allDevices: allDevices.checked
     property alias cfg_popupOnNewDevice: autoPopup.checked
 
-    Layouts.ColumnLayout {
-        id: mainColumn
+    Kirigami.FormLayout {
         anchors.left: parent.left
-        Controls.ExclusiveGroup{
-            id: deviceFilter
-        }
-        Controls.RadioButton {
+        anchors.right: parent.right
+
+        RadioButton {
             id: removableOnly
+            Kirigami.FormData.label: i18n("Show:")
             text: i18n("Removable devices only")
-            exclusiveGroup: deviceFilter
-        }
-        Controls.RadioButton {
-            id: nonRemovableOnly
-            text: i18n("Non-removable devices only")
-            exclusiveGroup: deviceFilter
-        }
-        Controls.RadioButton {
-            id: allDevices
-            text: i18n("All devices")
-            exclusiveGroup: deviceFilter
         }
 
-        Controls.CheckBox {
+        RadioButton {
+            id: nonRemovableOnly
+            text: i18n("Non-removable devices only")
+        }
+
+        RadioButton {
+            id: allDevices
+            text: i18n("All devices")
+        }
+
+        CheckBox {
             id: autoPopup
-            Layouts.Layout.fillWidth: true
             text: i18n("Open popup when new device is plugged in")
         }
     }

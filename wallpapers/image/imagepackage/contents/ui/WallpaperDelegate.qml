@@ -19,6 +19,7 @@
 
 import QtQuick 2.0
 import QtQuick.Controls.Private 1.0
+import QtQuick.Controls 2.3 as QtControls2
 import QtGraphicalEffects 1.0
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -28,12 +29,13 @@ import org.kde.kcm 1.1 as KCM
 KCM.GridDelegate {
     id: wallpaperDelegate
 
-  
     property alias color: backgroundRect.color
-    property bool selected: (wallpapersGrid.currentIndex == index)
+    property bool selected: (wallpapersGrid.currentIndex === index)
     opacity: model.pendingDeletion ? 0.5 : 1
+
+    text: model.display
     
-    toolTip: model.author.length > 0 ? i18nd("plasma_wallpaper_org.kde.image", "%1 by %2", model.display, model.author) : model.display
+    toolTip: model.author.length > 0 ? i18ndc("plasma_wallpaper_org.kde.image", "<image> by <author>", "By %1", model.author) : ""
 
     hoverEnabled: true
 
@@ -41,20 +43,20 @@ KCM.GridDelegate {
         Kirigami.Action {
             icon.name: "document-open-folder"
             tooltip: i18nd("plasma_wallpaper_org.kde.image", "Open Containing Folder")
-            onTriggered: imageWallpaper.wallpaperModel.openContainingFolder(index)
+            onTriggered: imageModel.openContainingFolder(index)
         },
         Kirigami.Action {
             icon.name: "edit-undo"
             visible: model.pendingDeletion
             tooltip: i18nd("plasma_wallpaper_org.kde.image", "Restore wallpaper")
-            onTriggered: imageWallpaper.wallpaperModel.setPendingDeletion(index, !model.pendingDeletion)
+            onTriggered: imageModel.setPendingDeletion(index, !model.pendingDeletion)
         },
         Kirigami.Action {
             icon.name: "edit-delete"
             tooltip: i18nd("plasma_wallpaper_org.kde.image", "Remove Wallpaper")
-            visible: model.removable && !model.pendingDeletion
+            visible: model.removable && !model.pendingDeletion && configDialog.currentWallpaper == "org.kde.image"
             onTriggered: {
-                imageWallpaper.wallpaperModel.setPendingDeletion(index, true);
+                imageModel.setPendingDeletion(index, true);
                 if (wallpapersGrid.currentIndex === index) {
                     wallpapersGrid.currentIndex = (index + 1) % wallpapersGrid.count;
                 }
@@ -94,7 +96,7 @@ KCM.GridDelegate {
         QPixmapItem {
             id: walliePreview
             anchors.fill: parent
-            visible: model.screenshot != null
+            visible: model.screenshot !== null
             smooth: true
             pixmap: model.screenshot
             fillMode: {

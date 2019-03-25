@@ -53,6 +53,7 @@
 #include <Plasma/PluginLoader>
 #include <qstandardpaths.h>
 #include "backgroundlistmodel.h"
+#include "slidemodel.h"
 
 #include <KPackage/PackageLoader>
 
@@ -64,6 +65,7 @@ Image::Image(QObject *parent)
       m_mode(SingleImage),
       m_currentSlide(-1),
       m_model(nullptr),
+      m_slideshowModel(nullptr),
       m_dialog(nullptr)
 {
     m_wallpaperPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
@@ -275,6 +277,15 @@ QAbstractItemModel* Image::wallpaperModel()
     return m_model;
 }
 
+QAbstractItemModel* Image::slideshowModel()
+{
+    if (!m_slideshowModel) {
+        m_slideshowModel = new SlideModel(this, this);
+        m_slideshowModel->reload(m_slidePaths);
+    }
+    return m_slideshowModel;
+}
+
 int Image::slideTimer() const
 {
     return m_delay;
@@ -336,7 +347,9 @@ void Image::setSlidePaths(const QStringList &slidePaths)
         updateDirWatch(m_slidePaths);
         startSlideshow();
     }
-
+    if (m_slideshowModel) {
+        m_slideshowModel->reload(m_slidePaths);
+    }
     emit slidePathsChanged();
 }
 
@@ -357,7 +370,9 @@ void Image::addSlidePath(const QString &path)
         if (m_mode == SlideShow) {
             updateDirWatch(m_slidePaths);
         }
-
+        if (m_slideshowModel) {
+            m_slideshowModel->addDirs({m_slidePaths});
+        }
         emit slidePathsChanged();
         startSlideshow();
     }
@@ -369,6 +384,28 @@ void Image::removeSlidePath(const QString &path)
         m_slidePaths.removeAll(path);
         if (m_mode == SlideShow) {
             updateDirWatch(m_slidePaths);
+        }
+        if (m_slideshowModel) {
+            bool haveParent = false;
+            QStringList children;
+            for (const QString& slidePath : m_slidePaths) {
+                if (path.startsWith(slidePath)) {
+                    haveParent = true;
+                }
+                if (slidePath.startsWith(path)) {
+                    children.append(slidePath);
+                }
+            }
+            /*If we have the parent directory do nothing since the directories are recursively searched. 
+             * If we have child directories just reload since removing the parent and then readding the children would 
+             * induce a race.*/
+            if (!haveParent) {
+                if (children.size() > 0) {
+                    m_slideshowModel->reload(m_slidePaths);
+                } else {
+                    m_slideshowModel->removeDir(path);
+                }
+            }
         }
 
         emit slidePathsChanged();
@@ -582,7 +619,6 @@ void Image::backgroundsFound(const QStringList &paths, const QString &token)
         startSlideshow();
         return;
     }
-
     m_slideshowBackgrounds = paths;
     m_unseenSlideshowBackgrounds.clear();
     // start slideshow
@@ -661,7 +697,7 @@ void Image::showFileDialog()
                                       i18n("Image Files") + " ("+imageGlobPatterns.join(' ') + ')');
         //i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 
-        m_dialog->setFileMode(QFileDialog::ExistingFile);
+        m_dialog->setFileMode(QFileDialog::ExistingFiles);
         connect(m_dialog, &QDialog::accepted, this, &Image::wallpaperBrowseCompleted);
     }
 
@@ -679,7 +715,9 @@ void Image::wallpaperBrowseCompleted()
 {
     Q_ASSERT(m_model);
     if (m_dialog && m_dialog->selectedFiles().count() > 0) {
-        addUsersWallpaper(m_dialog->selectedFiles().first());
+        for (const QString image : m_dialog->selectedFiles()) {
+            addUsersWallpaper(image);
+        }
         emit customWallpaperPicked(m_dialog->selectedFiles().first());
     }
 }
@@ -854,3 +892,7 @@ void Image::commitDeletion()
     }
 }
 
+void Image::openFolder(const QString& path)
+{
+   new KRun(QUrl::fromLocalFile(path), nullptr);
+}

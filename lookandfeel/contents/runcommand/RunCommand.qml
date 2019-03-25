@@ -120,10 +120,10 @@ ColumnLayout {
                 allowCompletion = (event.key !== Qt.Key_Backspace && event.key !== Qt.Key_Delete)
 
                 if (event.modifiers & Qt.ControlModifier) {
-                    if (event.key == Qt.Key_J) {
+                    if (event.key === Qt.Key_J) {
                         move_down()
                         event.accepted = true;
-                    } else if (event.key == Qt.Key_K) {
+                    } else if (event.key === Qt.Key_K) {
                         move_up()
                         event.accepted = true;
                     }
@@ -190,11 +190,11 @@ ColumnLayout {
 
             Keys.onPressed: {
                 var ctrl = event.modifiers & Qt.ControlModifier;
-                if (ctrl && event.key == Qt.Key_J) {
+                if (ctrl && event.key === Qt.Key_J) {
                     incrementCurrentIndex()
-                } else if (ctrl && event.key == Qt.Key_K) {
+                } else if (ctrl && event.key === Qt.Key_K) {
                     decrementCurrentIndex()
-                } else if (event.text != "") {
+                } else if (event.text !== "") {
                     queryField.text += event.text;
                     queryField.focus = true;
                 }
@@ -263,11 +263,11 @@ ColumnLayout {
             }
             Keys.onPressed: {
                 var ctrl = event.modifiers & Qt.ControlModifier;
-                if (ctrl && event.key == Qt.Key_J) {
+                if (ctrl && event.key === Qt.Key_J) {
                     incrementCurrentIndex()
-                } else if (ctrl && event.key == Qt.Key_K) {
+                } else if (ctrl && event.key === Qt.Key_K) {
                     decrementCurrentIndex()
-                } else if (event.text != "") {
+                } else if (event.text !== "") {
                     queryField.text += event.text;
                     queryField.focus = true;
                 }

@@ -22,9 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "../compositorcoloradaptor.h"
 #include "../geolocator.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(LocationUpdaterFactory,
-                           "colorcorrectlocationupdater.json",
-                           registerPlugin<LocationUpdater>();)
+K_PLUGIN_CLASS_WITH_JSON(LocationUpdater, "colorcorrectlocationupdater.json")
 
 LocationUpdater::LocationUpdater(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)

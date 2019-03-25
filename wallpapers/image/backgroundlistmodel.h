@@ -105,18 +105,20 @@ protected Q_SLOTS:
     void backgroundsFound(const QStringList &paths, const QString &token);
     void processPaths(const QStringList &paths);
 
+protected:
+    QPointer<Image> m_wallpaper;
+    QString m_findToken;
+    QList<KPackage::Package> m_packages;
+
 private:
     QSize bestSize(const KPackage::Package &package) const;
 
-    QPointer<Image> m_wallpaper;
-    QList<KPackage::Package> m_packages;
     QSet<QString> m_removableWallpapers;
     QHash<QString, QSize> m_sizeCache;
     QHash<QUrl, QPersistentModelIndex> m_previewJobs;
     KDirWatch m_dirwatch;
     QCache<QString, QPixmap> m_imageCache;
 
-    QString m_findToken;
     int m_screenshotSize;
     QHash<QString, int> m_pendingDeletion;
 };

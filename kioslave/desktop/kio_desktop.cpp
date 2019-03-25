@@ -166,21 +166,21 @@ void DesktopProtocol::prepareUDSEntry(KIO::UDSEntry &entry, bool listing) const
 
         const QString name = file.readName();
         if (!name.isEmpty())
-            entry.insert(KIO::UDSEntry::UDS_DISPLAY_NAME, name);
+            entry.replace(KIO::UDSEntry::UDS_DISPLAY_NAME, name);
 
         if (file.noDisplay() || !file.tryExec())
-            entry.insert(KIO::UDSEntry::UDS_HIDDEN, 1);
+            entry.replace(KIO::UDSEntry::UDS_HIDDEN, 1);
     }
 
     // Set a descriptive display name for the root item
     if (requestedUrl().path() == QLatin1String("/")
         && entry.stringValue(KIO::UDSEntry::UDS_NAME) == QLatin1String(".")) {
-        entry.insert(KIO::UDSEntry::UDS_DISPLAY_NAME, i18n("Desktop Folder"));
+        entry.replace(KIO::UDSEntry::UDS_DISPLAY_NAME, i18n("Desktop Folder"));
     }
 
     // Set the target URL to the local path 
     QUrl localUrl(QUrl::fromLocalFile(entry.stringValue(KIO::UDSEntry::UDS_LOCAL_PATH)));
-    entry.insert(KIO::UDSEntry::UDS_TARGET_URL, localUrl.toString());
+    entry.replace(KIO::UDSEntry::UDS_TARGET_URL, localUrl.toString());
 }
 
 void DesktopProtocol::rename(const QUrl &_src, const QUrl &_dest, KIO::JobFlags flags)

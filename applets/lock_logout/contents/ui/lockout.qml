@@ -138,7 +138,7 @@ Flow {
         id: sleepDialogComponent
         QueryDialog {
             titleIcon: "system-suspend"
-            titleText: i18n("Suspend")
+            titleText: i18nc("Suspend to RAM", "Sleep")
             message: i18n("Do you want to suspend to RAM (sleep)?")
             location: plasmoid.location
 
@@ -151,14 +151,14 @@ Flow {
     property QueryDialog sleepDialog
 
     function clickHandler(what, button) {
-        if (what == "suspendToDisk") {
+        if (what === "suspendToDisk") {
             if (!hibernateDialog) {
                 hibernateDialog = hibernateDialogComponent.createObject(lockout);
             }
             hibernateDialog.visualParent = button
             hibernateDialog.open();
 
-        } else if (what == "suspendToRam") {
+        } else if (what === "suspendToRam") {
             if (!sleepDialog) {
                 sleepDialog = sleepDialogComponent.createObject(lockout);
             }

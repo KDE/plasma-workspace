@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 3.0)
 
 project(plasma-workspace)
-set(PROJECT_VERSION "5.14.80")
+set(PROJECT_VERSION "5.15.80")
 set(PROJECT_VERSION_MAJOR 5)
 
-set(QT_MIN_VERSION "5.11.0")
-set(KF5_MIN_VERSION "5.50.0")
+set(QT_MIN_VERSION "5.12.0")
+set(KF5_MIN_VERSION "5.56.0")
 set(INSTALL_SDDM_THEME TRUE)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Widgets Quick QuickWidgets Concurrent Test Network)
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -25,7 +25,7 @@ include(KDEPackageAppTemplates)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet
-                    IdleTime Declarative TextWidgets KDELibs4Support Crash GlobalAccel
+                    IdleTime Declarative I18n KCMUtils TextWidgets KDELibs4Support Crash GlobalAccel
                     DBusAddons Wayland CoreAddons)
 find_package(KDED CONFIG REQUIRED)
 
@@ -34,6 +34,12 @@ set_package_properties(KF5NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper fo
                        TYPE OPTIONAL
                        PURPOSE "Needed by geolocation data engine."
                       )
+
+find_package(KF5Kirigami2 ${KF5_MIN_VERSION} CONFIG)
+set_package_properties(KF5Kirigami2 PROPERTIES
+    DESCRIPTION "A QtQuick based components set"
+    TYPE RUNTIME
+)
 
 # WARNING PlasmaQuick provides unversioned CMake config
 find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
@@ -158,6 +164,8 @@ add_subdirectory(systemmonitor)
 add_subdirectory(statusnotifierwatcher)
 add_subdirectory(startkde)
 add_subdirectory(themes)
+
+add_subdirectory(kcms)
 
 add_subdirectory(containmentactions)
 add_subdirectory(runners)

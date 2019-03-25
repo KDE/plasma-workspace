@@ -41,7 +41,7 @@ FocusScope {
     states: [
         State {
             name: "imageBackground"
-            when: sceneBackgroundType == "image"
+            when: sceneBackgroundType === "image"
             PropertyChanges {
                 target: sceneColorBackground
                 visible: false
@@ -53,7 +53,7 @@ FocusScope {
         },
         State {
             name: "colorBackground"
-            when: sceneBackgroundType != "image"
+            when: sceneBackgroundType !== "image"
             PropertyChanges {
                 target: sceneColorBackground
                 visible: true

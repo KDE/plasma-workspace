@@ -21,10 +21,7 @@
 
 #include <KPluginFactory>
 
-K_PLUGIN_FACTORY_WITH_JSON(FreeSpaceNotifierModuleFactory,
-                           "freespacenotifier.json",
-                           registerPlugin<FreeSpaceNotifierModule>();
-                          )
+K_PLUGIN_CLASS_WITH_JSON(FreeSpaceNotifierModule, "freespacenotifier.json")
 
 FreeSpaceNotifierModule::FreeSpaceNotifierModule(QObject* parent, const QList<QVariant>&)
     : KDEDModule(parent)

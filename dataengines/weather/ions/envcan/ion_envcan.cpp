@@ -213,6 +213,7 @@ QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupForecastIconMappi
         { QStringLiteral("a mix of sun and cloud"), PartlyCloudyDay },
         { QStringLiteral("cloudy with sunny periods"), PartlyCloudyDay },
         { QStringLiteral("partly cloudy"), PartlyCloudyDay },
+        { QStringLiteral("mainly cloudy"), PartlyCloudyDay },
         { QStringLiteral("mainly sunny"), FewCloudsDay },
         { QStringLiteral("sunny"), ClearDay },
         { QStringLiteral("blizzard"), Snow },
@@ -244,10 +245,10 @@ QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupForecastIconMappi
         { QStringLiteral("ice fog"), Mist },
         { QStringLiteral("ice fog developing"), Mist },
         { QStringLiteral("ice fog dissipating"), Mist },
-        { QStringLiteral("ice pellet"), Hail },
-        { QStringLiteral("ice pellet mixed with freezing rain"), Hail },
-        { QStringLiteral("ice pellet mixed with snow"), Hail },
-        { QStringLiteral("ice pellet or snow"), RainSnow },
+        { QStringLiteral("ice pellets"), Hail },
+        { QStringLiteral("ice pellets mixed with freezing rain"), Hail },
+        { QStringLiteral("ice pellets mixed with snow"), Hail },
+        { QStringLiteral("ice pellets or snow"), RainSnow },
         { QStringLiteral("light snow"), LightSnow },
         { QStringLiteral("light snow and blizzard"), LightSnow },
         { QStringLiteral("light snow and blizzard and blowing snow"), Snow },
@@ -279,18 +280,18 @@ QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupForecastIconMappi
         { QStringLiteral("periods of freezing rain or ice pellets"), FreezingRain },
         { QStringLiteral("periods of freezing rain or rain"), FreezingRain },
         { QStringLiteral("periods of freezing rain or snow"), FreezingRain },
-        { QStringLiteral("periods of ice pellet"), Hail },
-        { QStringLiteral("periods of ice pellet mixed with freezing rain"), Hail },
-        { QStringLiteral("periods of ice pellet mixed with snow"), Hail },
-        { QStringLiteral("periods of ice pellet or freezing rain"), Hail },
-        { QStringLiteral("periods of ice pellet or snow"), Hail },
+        { QStringLiteral("periods of ice pellets"), Hail },
+        { QStringLiteral("periods of ice pellets mixed with freezing rain"), Hail },
+        { QStringLiteral("periods of ice pellets mixed with snow"), Hail },
+        { QStringLiteral("periods of ice pellets or freezing rain"), Hail },
+        { QStringLiteral("periods of ice pellets or snow"), Hail },
         { QStringLiteral("periods of light snow"), LightSnow },
         { QStringLiteral("periods of light snow and blizzard"), Snow },
         { QStringLiteral("periods of light snow and blizzard and blowing snow"), Snow },
         { QStringLiteral("periods of light snow and blowing snow"), LightSnow },
         { QStringLiteral("periods of light snow mixed with freezing drizzle"), RainSnow },
         { QStringLiteral("periods of light snow mixed with freezing rain"), RainSnow },
-        { QStringLiteral("periods of light snow mixed with ice pelletS"), LightSnow },
+        { QStringLiteral("periods of light snow mixed with ice pellets"), LightSnow },
         { QStringLiteral("periods of light snow mixed with rain"), RainSnow },
         { QStringLiteral("periods of light snow or freezing drizzle"), RainSnow },
         { QStringLiteral("periods of light snow or freezing rain"), RainSnow },
@@ -738,7 +739,8 @@ bool EnvCanadaIon::readXMLData(const QString& source, QXmlStreamReader& xml)
             (data.observationDateTime.isValid() &&
             (!qIsNaN(data.stationLatitude) && !qIsNaN(data.stationLongitude)));
         if (canCalculateElevation) {
-            data.solarDataTimeEngineSourceName = QStringLiteral("Local|Solar|Latitude=%1|Longitude=%2|DateTime=%3")
+            data.solarDataTimeEngineSourceName = QStringLiteral("%1|Solar|Latitude=%2|Longitude=%3|DateTime=%4")
+                .arg(QString::fromUtf8(data.observationDateTime.timeZone().id()))
                 .arg(data.stationLatitude)
                 .arg(data.stationLongitude)
                 .arg(data.observationDateTime.toString(Qt::ISODate));

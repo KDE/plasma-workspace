@@ -34,10 +34,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 int main(int argc, char *argv[])
 {
-    if (QLibraryInfo::version() < QVersionNumber(5, 12)) {
-        // Before Qt 5.12, the xdg-shell v6 integration does not support fullscreen.
-        qputenv("QT_WAYLAND_SHELL_INTEGRATION", "wl-shell");
-    }
     qunsetenv("SESSION_MANAGER");
 
     KWorkSpace::detectPlatform(argc, argv);

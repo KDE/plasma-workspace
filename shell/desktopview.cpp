@@ -50,7 +50,6 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 
     setFlags(Qt::Window | Qt::FramelessWindowHint);
     setTitle(corona->kPackage().metadata().name());
-    setIcon(QIcon::fromTheme(corona->kPackage().metadata().iconName()));
     rootContext()->setContextProperty(QStringLiteral("desktop"), this);
     setSource(corona->kPackage().fileUrl("views", QStringLiteral("Desktop.qml")));
 

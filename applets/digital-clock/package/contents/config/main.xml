@@ -19,8 +19,12 @@
       <default>false</default>
     </entry>
     <entry name="dateFormat" type="string">
-      <label>The date format to display. Options are: shortDate, longDate or isoDate.</label>
+      <label>The date format to display. Options are: shortDate, longDate, isoDate or custom.</label>
       <default>shortDate</default>
+    </entry>
+    <entry name="customDateFormat" type="string">
+      <label>Custom date format string.</label>
+      <default>ddd d</default>
     </entry>
     <entry name="fontFamily" type="string">
       <label>Font family. e.g "arial". The system font is used if this is not set.</label>

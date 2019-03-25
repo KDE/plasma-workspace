@@ -24,9 +24,7 @@
 #include <solid/devicenotifier.h>
 #include <solid/opticaldrive.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(SolidAutoEjectFactory,
-                           "solidautoeject.json",
-                           registerPlugin<SolidAutoEject>();)
+K_PLUGIN_CLASS_WITH_JSON(SolidAutoEject, "solidautoeject.json")
 
 SolidAutoEject::SolidAutoEject(QObject* parent, const QList<QVariant>&)
     : KDEDModule(parent)

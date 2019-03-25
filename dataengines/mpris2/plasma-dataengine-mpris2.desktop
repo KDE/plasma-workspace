@@ -94,7 +94,7 @@ Comment[sv]=Tillhandahåller information från och styrning av mediaspelare via 
 Comment[tr]=MPRIS2 kullanarak çoklu ortam oynatıcılara bilgi sağlar ve onları denetler
 Comment[uk]=Надає дані з мультимедійних програвачів та керує ними за допомогою MPRIS2
 Comment[x-test]=xxProvides information from and control over media players via MPRIS2xx
-Comment[zh_CN]=通过 MPRIS2 提供信息和控制播放器
+Comment[zh_CN]=通过 MPRIS2 获取信息并控制播放器
 Comment[zh_TW]=透過 MPRIS2 取得媒體播放器的資訊並控制
 
 X-KDE-ServiceTypes=Plasma/DataEngine

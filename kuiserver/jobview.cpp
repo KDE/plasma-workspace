@@ -77,6 +77,11 @@ void JobView::terminate(const QString &errorMessage)
     m_isTerminated = true;
 }
 
+bool JobView::isTerminated() const
+{
+    return m_isTerminated;
+}
+
 void JobView::requestSuspend()
 {
     emit suspendRequested();

@@ -37,7 +37,7 @@
 #include <windows.h>
 #endif
 
-#ifdef HAVE_X11
+#if HAVE_X11
 #include <X11/Xlib.h>
 #include <fixx11h.h>
 #endif

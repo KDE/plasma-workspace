@@ -30,7 +30,7 @@ Name[hne]=अनुपरयोग सूचना
 Name[hr]=Obavijesti aplikacija
 Name[hu]=Értesítő üzenetek
 Name[ia]=Notificationes de application
-Name[id]=Notifikasi Aplikasi
+Name[id]=Application Notifications
 Name[is]=Tilkynningar forrita
 Name[it]=Notifiche delle applicazioni
 Name[ja]=アプリケーションの通知
@@ -136,7 +136,7 @@ Comment[zh_CN]=为用户提供被动出现的视觉通知。
 Comment[zh_TW]=給使用者的被動視覺通知。
 X-KDE-ServiceTypes=Plasma/DataEngine
 Type=Service
-Icon=preferences-desktop-notification
+Icon=preferences-desktop-notification-bell
 X-KDE-Library=plasma_engine_notifications
 
 X-KDE-PluginInfo-Author=

@@ -88,7 +88,7 @@ TASKMANAGER_EXPORT AppData appDataFromUrl(const QUrl &url, const QIcon &fallback
  * @param appId A string uniquely identifying the application owning
  * the window, ideally matching a .desktop file name.
  * @param pid The process id for the process owning the window.
- * @param rulesConfig A KConfig object parameterizing the matching
+ * @param config A KConfig object parameterizing the matching
  * behavior.
  * @param xWindowsWMClassName The instance name part of X Windows'
  * WM_CLASS window property.
@@ -159,7 +159,7 @@ TASKMANAGER_EXPORT QString defaultApplication(const QUrl &url);
  * @see LauncherTasksModel
  * @param a The first launcher URL.
  * @param b The second launcher URL.
- * @param c The comparison mode. Either Strict or IgnoreQueryItems.
+ * @param mode The comparison mode. Either Strict or IgnoreQueryItems.
  * @returns @c true if the URLs match.
  **/
 TASKMANAGER_EXPORT bool launcherUrlsMatch(const QUrl &a, const QUrl &b, UrlComparisonMode mode = Strict);

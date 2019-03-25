@@ -25,7 +25,7 @@ import org.kde.plasma.configuration 2.0
 ConfigModel {
     ConfigCategory {
          name: i18n("Information")
-         icon: "preferences-desktop-notification"
+         icon: "preferences-desktop-notification-bell"
          source: "configNotifications.qml"
     }
 }

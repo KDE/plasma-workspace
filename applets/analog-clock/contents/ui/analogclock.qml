@@ -66,7 +66,7 @@ Item {
         //console.log("Date/time changed!");
 
         var currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
-        if (currentTZOffset != tzOffset) {
+        if (currentTZOffset !== tzOffset) {
             tzOffset = currentTZOffset;
             //console.log("TZ offset changed: " + tzOffset);
             Date.timeZoneUpdated(); // inform the QML JS engine about TZ change
@@ -81,8 +81,8 @@ Item {
 
     Plasmoid.compactRepresentation: Item {
         id: representation
-        Layout.minimumWidth: plasmoid.formFactor != PlasmaCore.Types.Vertical ? representation.height : units.gridUnit
-        Layout.minimumHeight: plasmoid.formFactor == PlasmaCore.Types.Vertical ? representation.width : units.gridUnit
+        Layout.minimumWidth: plasmoid.formFactor !== PlasmaCore.Types.Vertical ? representation.height : units.gridUnit
+        Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? representation.width : units.gridUnit
 
         MouseArea {
             anchors.fill: parent
@@ -113,8 +113,8 @@ Item {
             }
 
             Hand {
-                anchors.topMargin: 3
-                elementId: "HourHandShdow"
+                anchors.topMargin: -6
+                elementId: "HourHandShadow"
                 rotation: 180 + hours * 30 + (minutes/2)
                 svgScale: face.width / face.naturalSize.width
 
@@ -138,7 +138,7 @@ Item {
             }
 
             Hand {
-                anchors.topMargin: 3
+                anchors.topMargin: 2
                 elementId: "SecondHandShadow"
                 rotation: 180 + seconds * 6
                 visible: showSecondsHand

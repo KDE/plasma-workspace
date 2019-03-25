@@ -38,20 +38,6 @@ PlasmaCore.Dialog {
     // false for displaying the value as normal text
     property bool showingProgress: false
 
-    property bool animateOpacity: false
-
-    Behavior on opacity {
-        SequentialAnimation {
-            // prevent press and hold from flickering
-            PauseAnimation { duration: 100 }
-            NumberAnimation {
-                duration: root.timeout
-                easing.type: Easing.InQuad
-            }
-        }
-        enabled: root.animateOpacity
-    }
-
     mainItem: OsdItem {
         rootItem: root
     }

@@ -28,7 +28,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 PlasmaCore.ToolTipArea {
     id: tooltip
 
-    property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
+    property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
     implicitWidth: units.iconSizes.smallMedium
     implicitHeight: implicitWidth
     visible: root.hiddenLayout.children.length > 0
@@ -69,11 +69,11 @@ PlasmaCore.ToolTipArea {
 
             svg: arrowSvg
             elementId: {
-                if (plasmoid.location == PlasmaCore.Types.TopEdge) {
+                if (plasmoid.location === PlasmaCore.Types.TopEdge) {
                     return "down-arrow";
-                } else if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
+                } else if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
                     return "right-arrow";
-                } else if (plasmoid.location == PlasmaCore.Types.RightEdge) {
+                } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
                     return "left-arrow";
                 } else {
                     return "up-arrow";
@@ -101,11 +101,11 @@ PlasmaCore.ToolTipArea {
 
             svg: arrowSvg
             elementId: {
-                if (plasmoid.location == PlasmaCore.Types.TopEdge) {
+                if (plasmoid.location === PlasmaCore.Types.TopEdge) {
                     return "up-arrow";
-                } else if (plasmoid.location == PlasmaCore.Types.LeftEdge) {
+                } else if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
                     return "left-arrow";
-                } else if (plasmoid.location == PlasmaCore.Types.RightEdge) {
+                } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
                     return "right-arrow";
                 } else {
                     return "down-arrow";

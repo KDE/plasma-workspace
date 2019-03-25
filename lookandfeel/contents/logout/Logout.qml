@@ -119,6 +119,7 @@ PlasmaCore.ColorScope {
     UserDelegate {
         width: units.iconSizes.enormous
         height: width
+        nameFontSize: theme.defaultFont.pointSize + 2
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: parent.verticalCenter
@@ -141,6 +142,7 @@ PlasmaCore.ColorScope {
         width: Math.max(implicitWidth, units.gridUnit * 16)
 
         PlasmaComponents.Label {
+            font.pointSize: theme.defaultFont.pointSize + 1
             Layout.maximumWidth: units.gridUnit * 16
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
@@ -148,10 +150,22 @@ PlasmaCore.ColorScope {
             wrapMode: Text.WordWrap
             font.italic: true
             text: i18ndp("plasma_lookandfeel_org.kde.lookandfeel",
-                         "One other user is currently logged in. If the computer is shut down or rebooted, that user may lose work.",
-                         "%1 other users are currently logged in. If the computer is shut down or rebooted, those users may lose work.",
+                         "One other user is currently logged in. If the computer is shut down or restarted, that user may lose work.",
+                         "%1 other users are currently logged in. If the computer is shut down or restarted, those users may lose work.",
                          sessionsModel.count)
             visible: sessionsModel.count > 1
+        }
+
+        PlasmaComponents.Label {
+            font.pointSize: theme.defaultFont.pointSize + 1
+            Layout.maximumWidth: units.gridUnit * 16
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.WordWrap
+            font.italic: true
+            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "When restarted, the computer will enter the firmware setup screen.")
+            visible: rebootToFirmwareSetup
         }
 
         RowLayout {
@@ -160,7 +174,7 @@ PlasmaCore.ColorScope {
             LogoutButton {
                 id: suspendButton
                 iconSource: "system-suspend"
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Suspend")
+                text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
                 action: root.sleepRequested
                 KeyNavigation.left: logoutButton
                 KeyNavigation.right: hibernateButton
@@ -178,11 +192,11 @@ PlasmaCore.ColorScope {
             LogoutButton {
                 id: rebootButton
                 iconSource: "system-reboot"
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Reboot")
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
                 action: root.rebootRequested
                 KeyNavigation.left: hibernateButton
                 KeyNavigation.right: shutdownButton
-                focus: sdtype == ShutdownType.ShutdownTypeReboot
+                focus: sdtype === ShutdownType.ShutdownTypeReboot
                 visible: maysd
             }
             LogoutButton {
@@ -192,22 +206,23 @@ PlasmaCore.ColorScope {
                 action: root.haltRequested
                 KeyNavigation.left: rebootButton
                 KeyNavigation.right: logoutButton
-                focus: sdtype == ShutdownType.ShutdownTypeHalt
+                focus: sdtype === ShutdownType.ShutdownTypeHalt
                 visible: maysd
             }
             LogoutButton {
                 id: logoutButton
                 iconSource: "system-log-out"
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Logout")
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log Out")
                 action: root.logoutRequested
                 KeyNavigation.left: shutdownButton
                 KeyNavigation.right: suspendButton
-                focus: sdtype == ShutdownType.ShutdownTypeNone
+                focus: sdtype === ShutdownType.ShutdownTypeNone
                 visible: canLogout
             }
         }
 
         PlasmaComponents.Label {
+            font.pointSize: theme.defaultFont.pointSize + 1
             Layout.alignment: Qt.AlignHCenter
             //opacity, as visible would re-layout
             opacity: countDownTimer.running ? 1 : 0
@@ -220,7 +235,7 @@ PlasmaCore.ColorScope {
             text: {
                 switch (sdtype) {
                     case ShutdownType.ShutdownTypeReboot:
-                        return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Reboot in 1 second", "Reboot in %1 seconds", root.remainingTime);
+                        return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Restarting in 1 second", "Restarting in %1 seconds", root.remainingTime);
                     case ShutdownType.ShutdownTypeHalt:
                         return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Shutting down in 1 second", "Shutting down in %1 seconds", root.remainingTime);
                     default:
@@ -232,11 +247,13 @@ PlasmaCore.ColorScope {
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
             PlasmaComponents.Button {
-                enabled: root.currentAction != null
+                font.pointSize: theme.defaultFont.pointSize + 1
+                enabled: root.currentAction !== null
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "OK")
                 onClicked: root.currentAction()
             }
             PlasmaComponents.Button {
+                font.pointSize: theme.defaultFont.pointSize + 1
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Cancel")
                 onClicked: root.cancelRequested()
             }

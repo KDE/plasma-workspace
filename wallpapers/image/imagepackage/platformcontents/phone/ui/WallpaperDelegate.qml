@@ -59,7 +59,7 @@ MouseArea {
             QPixmapItem {
                 id: walliePreview
                 anchors.fill: parent
-                visible: model.screenshot != null
+                visible: model.screenshot !== null
                 smooth: true
                 pixmap: model.screenshot
                 fillMode: {

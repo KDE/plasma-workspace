@@ -28,7 +28,14 @@
 #include <KPropertiesDialog>
 
 class KFileItemActions;
+class KStartupInfo;
+
 class QMenu;
+
+namespace TaskManager
+{
+class StartupTasksModel;
+}
 
 class IconApplet : public Plasma::Applet
 {
@@ -99,5 +106,7 @@ private:
     QScopedPointer<QMenu> m_openWithMenu;
 
     QPointer<KPropertiesDialog> m_configDialog;
+
+    TaskManager::StartupTasksModel *m_startupTasksModel = nullptr;
 
 };

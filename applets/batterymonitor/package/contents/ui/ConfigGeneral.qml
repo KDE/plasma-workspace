@@ -17,24 +17,23 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls
-import QtQuick.Layouts 1.0 as QtLayouts
-
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick.Controls 2.5
+import org.kde.kirigami 2.4 as Kirigami
 
 Item {
     id: root
 
-    implicitWidth: pageColumn.implicitWidth
-    implicitHeight: pageColumn.implicitHeight
+    width: pageColumn.width
+    height: pageColumn.height
 
     property alias cfg_showPercentage: showPercentage.checked
 
-    QtLayouts.ColumnLayout {
+    Kirigami.FormLayout {
         id: pageColumn
         anchors.left: parent.left
+        anchors.right: parent.right
 
-        QtControls.CheckBox {
+        CheckBox {
             id: showPercentage
             text: i18n("Show percentage")
         }

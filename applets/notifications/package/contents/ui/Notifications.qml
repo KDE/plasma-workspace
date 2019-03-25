@@ -56,19 +56,19 @@ Column {
     function addNotification(notification) {
         // Do not show duplicated notifications
         for (var i = 0; i < notificationsModel.count; ++i) {
-            if (notificationsModel.get(i).source == notification.source &&
-                notificationsModel.get(i).appName == notification.appName &&
-                notificationsModel.get(i).summary == notification.summary &&
-                notificationsModel.get(i).body == notification.body) {
+            if (notificationsModel.get(i).source === notification.source &&
+                notificationsModel.get(i).appName === notification.appName &&
+                notificationsModel.get(i).summary === notification.summary &&
+                notificationsModel.get(i).body === notification.body) {
                 return
             }
         }
 
         for (var i = 0; i < notificationsModel.count; ++i) {
-            if (notificationsModel.get(i).source == notification.source ||
-                (notificationsModel.get(i).appName == notification.appName &&
-                notificationsModel.get(i).summary == notification.summary &&
-                notificationsModel.get(i).body == notification.body)) {
+            if (notificationsModel.get(i).source === notification.source ||
+                (notificationsModel.get(i).appName === notification.appName &&
+                notificationsModel.get(i).summary === notification.summary &&
+                notificationsModel.get(i).body === notification.body)) {
 
                 notificationsModel.remove(i)
                 break
@@ -215,7 +215,7 @@ Column {
             notificationPositioner.closePopup(source);
 
             for (var i = 0; i < notificationsModel.count; ++i) {
-                if (notificationsModel.get(i).source == source) {
+                if (notificationsModel.get(i).source === source) {
                     notificationsModel.remove(i)
                     break
                 }
@@ -230,9 +230,9 @@ Column {
             if (data["actions"] && data["actions"].length % 2 == 0) {
                 for (var i = 0; i < data["actions"].length; i += 2) {
                     var action = data["actions"][i]
-                    if (action == "default") { // The default action is not shown, but we want to know it's there
+                    if (action === "default") { // The default action is not shown, but we want to know it's there
                         _data["hasDefaultAction"] = true
-                    } else if (action == "settings") { // configure icon in the notification for custom notification settings
+                    } else if (action === "settings") { // configure icon in the notification for custom notification settings
                         _data["hasConfigureAction"] = true;
                         _data["configurable"] = true;
                     } else {

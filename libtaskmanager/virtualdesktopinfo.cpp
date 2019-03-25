@@ -246,19 +246,6 @@ void VirtualDesktopInfo::WaylandPrivate::init()
 
             const QList<KWayland::Client::PlasmaVirtualDesktop *> &desktops = virtualDesktopManagement->desktops();
 
-            /* FIXME: PlasmaVirtualDesktopManagement doesn't have this ...?
-            QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::interfaceAboutToBeReleased, q,
-                [this] {
-                    virtualDesktops.clear();
-                    emit numberOfDesktopsChanged();
-                    emit currentDesktopChanged();
-                    emit desktopIdsChanged();
-                    emit desktopNamesChanged();
-                    emit desktopLayoutRowsChanged();
-                }
-            );
-            */
-
             QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::desktopCreated, q,
                 [this](const QString &id, quint32 position) {
                     addDesktop(id, position);
@@ -279,6 +266,9 @@ void VirtualDesktopInfo::WaylandPrivate::init()
                     }
                 }
             );
+
+            QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::rowsChanged,
+                this, &VirtualDesktopInfo::WaylandPrivate::desktopLayoutRowsChanged);
         }
     );
 
@@ -303,6 +293,12 @@ void VirtualDesktopInfo::WaylandPrivate::addDesktop(const QString &id, quint32 p
         [desktop, this]() {
             currentVirtualDesktop = desktop->id();
             emit currentDesktopChanged();
+        }
+    );
+
+    QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::done, q,
+        [this]() {
+            emit desktopNamesChanged();
         }
     );
 
@@ -340,6 +336,9 @@ QVariantList VirtualDesktopInfo::WaylandPrivate::desktopIds() const
 
 QStringList VirtualDesktopInfo::WaylandPrivate::desktopNames() const
 {
+    if (!virtualDesktopManagement) {
+        return QStringList();
+    }
     QStringList names;
 
     foreach(const QString &id, virtualDesktops) {
@@ -355,13 +354,18 @@ QStringList VirtualDesktopInfo::WaylandPrivate::desktopNames() const
 
 int VirtualDesktopInfo::WaylandPrivate::desktopLayoutRows() const
 {
-    // TODO FIXME: We don't have virtual desktop layout information in the Wayland
-    // protocol yet.
-    return 0;
+    if (!virtualDesktopManagement) {
+        return 0;
+    }
+
+    return virtualDesktopManagement->rows();
 }
 
 void VirtualDesktopInfo::WaylandPrivate::requestActivate(const QVariant &desktop)
 {
+    if (!virtualDesktopManagement) {
+        return;
+    }
     KWayland::Client::PlasmaVirtualDesktop *desktopObj = virtualDesktopManagement->getVirtualDesktop(desktop.toString());
 
     if (desktopObj) {
@@ -371,11 +375,17 @@ void VirtualDesktopInfo::WaylandPrivate::requestActivate(const QVariant &desktop
 
 void VirtualDesktopInfo::WaylandPrivate::requestCreateDesktop(quint32 position)
 {
+    if (!virtualDesktopManagement) {
+        return;
+    }
     virtualDesktopManagement->requestCreateVirtualDesktop(i18n("New Desktop"), position);
 }
 
 void VirtualDesktopInfo::WaylandPrivate::requestRemoveDesktop(quint32 position)
 {
+    if (!virtualDesktopManagement) {
+        return;
+    }
     if (virtualDesktops.count() == 1) {
         return;
     }

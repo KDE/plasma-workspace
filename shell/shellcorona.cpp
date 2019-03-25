@@ -639,9 +639,17 @@ QString ShellCorona::shell() const
 
 void ShellCorona::load()
 {
-    if (m_shell.isEmpty() ||
-        (m_activityController->serviceStatus() != KActivities::Controller::Running &&
-        !qApp->property("org.kde.KActivities.core.disableAutostart").toBool())) {
+    if (m_shell.isEmpty()) {
+        return;
+    }
+
+    auto activityStatus = m_activityController->serviceStatus();
+    if (activityStatus != KActivities::Controller::Running &&
+        !qApp->property("org.kde.KActivities.core.disableAutostart").toBool()) {
+        if (activityStatus == KActivities::Controller::NotRunning) {
+            qWarning("Aborting shell load: The activity manager daemon (kactivitymanagerd) is not running.");
+            qWarning("If this Plasma has been installed into a custom prefix, verify that its D-Bus services dir is known to the system for the daemon to be activatable.");
+        }
         return;
     }
 
@@ -692,7 +700,7 @@ void ShellCorona::load()
     //containments on each startup otherwise
     for (QScreen* screen : qGuiApp->screens()) {
         //the containments may have been created already by the startup script
-        //check their existence in oder to not have duplicated desktopviews
+        //check their existence in order to not have duplicated desktopviews
         if (!m_desktopViewforId.contains(m_screenPool->id(screen->name()))) {
             addOutput(screen);
         }

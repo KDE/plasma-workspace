@@ -44,10 +44,7 @@
 #include <Windows.h>
 #endif
 
-K_PLUGIN_FACTORY_WITH_JSON(KTimeZonedFactory,
-                           "ktimezoned.json",
-                           registerPlugin<KTimeZoned>();
-)
+K_PLUGIN_CLASS_WITH_JSON(KTimeZoned, "ktimezoned.json")
 
 // Config file entry names
 const char LOCAL_ZONE[]     = "LocalZone";     // name of local time zone

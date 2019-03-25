@@ -45,6 +45,7 @@ Row {
 
     PlasmaComponents.Label {
         id: batteryLabel
+        font.pointSize: config.fontSize
         height: undefined
         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1%", battery.percent)
         Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Battery at %1%", battery.percent)

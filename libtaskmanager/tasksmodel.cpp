@@ -887,45 +887,46 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
             if (leftAll && !rightAll) {
                 return true;
             } else if (rightAll && !leftAll) {
-                return true;
-            }
-
-            const QVariantList &leftDesktops = left.data(AbstractTasksModel::VirtualDesktops).toList();
-            QVariant leftDesktop;
-            int leftDesktopPos = virtualDesktopInfo->numberOfDesktops();
-
-            for (const QVariant &desktop : leftDesktops) {
-                const int desktopPos = virtualDesktopInfo->position(desktop);
-
-                if (desktopPos < leftDesktopPos) {
-                    leftDesktop = desktop;
-                    leftDesktopPos = desktopPos;
-                }
-            }
-
-            const QVariantList &rightDesktops = right.data(AbstractTasksModel::VirtualDesktops).toList();
-            QVariant rightDesktop;
-            int rightDesktopPos = virtualDesktopInfo->numberOfDesktops();
-
-            for (const QVariant &desktop : rightDesktops) {
-                const int desktopPos = virtualDesktopInfo->position(desktop);
-
-                if (desktopPos < rightDesktopPos) {
-                    rightDesktop = desktop;
-                    rightDesktopPos = desktopPos;
-                }
-            }
-
-            if (!leftDesktop.isNull() && !rightDesktop.isNull() && (leftDesktop != rightDesktop)) {
-                return (virtualDesktopInfo->position(leftDesktop) < virtualDesktopInfo->position(rightDesktop));
-            } else if (!leftDesktop.isNull() && rightDesktop.isNull()) {
                 return false;
-            } else if (leftDesktop.isNull() && !rightDesktop.isNull()) {
-                return true;
             }
 
-            return false;
+            if (!(leftAll && rightAll)) {
+                const QVariantList &leftDesktops = left.data(AbstractTasksModel::VirtualDesktops).toList();
+                QVariant leftDesktop;
+                int leftDesktopPos = virtualDesktopInfo->numberOfDesktops();
+
+                for (const QVariant &desktop : leftDesktops) {
+                    const int desktopPos = virtualDesktopInfo->position(desktop);
+
+                    if (desktopPos <= leftDesktopPos) {
+                        leftDesktop = desktop;
+                        leftDesktopPos = desktopPos;
+                    }
+                }
+
+                const QVariantList &rightDesktops = right.data(AbstractTasksModel::VirtualDesktops).toList();
+                QVariant rightDesktop;
+                int rightDesktopPos = virtualDesktopInfo->numberOfDesktops();
+
+                for (const QVariant &desktop : rightDesktops) {
+                    const int desktopPos = virtualDesktopInfo->position(desktop);
+
+                    if (desktopPos <= rightDesktopPos) {
+                        rightDesktop = desktop;
+                        rightDesktopPos = desktopPos;
+                    }
+                }
+
+                if (!leftDesktop.isNull() && !rightDesktop.isNull() && (leftDesktop != rightDesktop)) {
+                    return (virtualDesktopInfo->position(leftDesktop) < virtualDesktopInfo->position(rightDesktop));
+                } else if (!leftDesktop.isNull() && rightDesktop.isNull()) {
+                    return false;
+                } else if (leftDesktop.isNull() && !rightDesktop.isNull()) {
+                    return true;
+                }
+            }
         }
+        // fall through
         case SortActivity: {
             // updateActivityTaskCounts() counts the number of window tasks on each
             // activity. This will sort tasks by comparing a cumulative score made

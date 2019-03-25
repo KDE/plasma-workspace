@@ -110,12 +110,22 @@ MouseArea {
         }
     }
 
-    ColumnLayout {
+    Item {
         anchors.fill: parent
 
+        PlasmaComponents.ToolButton {
+            id: unmountAll
+            visible: devicenotifier.mountedRemovables > 1;
+            anchors.right: parent.right
+            iconSource: "media-eject"
+            tooltip: i18n("Click to safely remove all devices")
+            text: i18n("Remove all")
+            implicitWidth: minimumWidth
+        }
+
         PlasmaExtras.ScrollArea {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
+            anchors.fill: parent
+            anchors.top: unmountAll.top
 
             ListView {
                 id: notifierDialog
@@ -158,10 +168,17 @@ MouseArea {
         DeviceItem {
             width: notifierDialog.width
             udi: DataEngineSource
-            icon: sdSource.data[udi] ? sdSource.data[udi].Icon : ""
-            deviceName: sdSource.data[udi] ? sdSource.data[udi].Description : ""
+            Binding on icon {
+                when: sdSource.data[udi] !== undefined
+                value: sdSource.data[udi].Icon
+            }
+            Binding on deviceName {
+                when: sdSource.data[udi] !== undefined
+                value: sdSource.data[udi].Description
+            }
             emblemIcon: Emblems && Emblems[0] ? Emblems[0] : ""
             state: sdSource.data[udi] ? sdSource.data[udi].State : 0
+            isRoot: sdSource.data[udi]["File Path"] === "/"
 
             percentUsage: {
                 if (!sdSource.data[udi]) {
@@ -175,12 +192,12 @@ MouseArea {
             freeSpaceText: sdSource.data[udi] && sdSource.data[udi]["Free Space Text"] ? sdSource.data[udi]["Free Space Text"] : ""
 
             actionIcon: mounted ? "media-eject" : "media-mount"
-            actionVisible: model["Device Types"].indexOf("Portable Media Player") == -1
+            actionVisible: model["Device Types"].indexOf("Portable Media Player") === -1
             actionToolTip: {
                 var types = model["Device Types"];
                 if (!mounted) {
                     return i18n("Click to access this device from other applications.")
-                } else if (types && types.indexOf("OpticalDisc") != -1) {
+                } else if (types && types.indexOf("OpticalDisc") !== -1) {
                     return i18n("Click to eject this disc.")
                 } else {
                     return i18n("Click to safely remove this device.")

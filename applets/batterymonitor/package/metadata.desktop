@@ -111,7 +111,7 @@ Comment[ug]=توكدانىڭىزنىڭ توك ھالىتىنى كۆرسىتىد�
 Comment[uk]=Перегляньте стан заряду акумулятора
 Comment[wa]=Vey li tchedje di vosse batreye
 Comment[x-test]=xxSee the power status of your batteryxx
-Comment[zh_CN]=查看电池电源的状态
+Comment[zh_CN]=查看电池的电量状态
 Comment[zh_TW]=查看您的電池的電力狀態
 Keywords=Power Management;Battery;System;Energy;
 Keywords[ar]=إدارة الطاقة;بطارية;نظام;طاقة;
@@ -160,7 +160,7 @@ Keywords[sv]=Strömhantering;Batteri;System;Energi;
 Keywords[tr]=Güç Yönetimi;Pil;Sistem;Enerji;
 Keywords[uk]=Power Management;Battery;System;Energy;керування живленням;акумулятор;система;енергія;батарея;батарейка;живлення;
 Keywords[x-test]=xxPower Managementxx;xxBatteryxx;xxSystemxx;xxEnergyxx;
-Keywords[zh_CN]=Power Management;Battery;System;Energy;电源管理;电池;系统;能源;
+Keywords[zh_CN]=电源管理;电池;系统;能源;
 Keywords[zh_TW]=Power Management;Battery;System;Energy;
 
 Icon=battery

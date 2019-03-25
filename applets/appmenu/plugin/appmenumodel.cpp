@@ -260,7 +260,17 @@ void AppMenuModel::onWindowChanged(WId id)
 {
     if (m_currentWindowId == id) {
         KWindowInfo info(id, NET::WMState | NET::WMGeometry);
-        const bool contained = m_screenGeometry.isNull() || m_screenGeometry.contains(info.geometry().center());
+
+        //! HACK: if the user has enabled screen scaling under X11 environment
+        //! then the window and screen geometries can not be trusted for comparison
+        //! before windows coordinates be adjusted properly.
+        //! BUG: 404500
+        QPoint windowCenter = info.geometry().center();
+        if (KWindowSystem::isPlatformX11()) {
+            windowCenter /= qApp->devicePixelRatio();
+        }
+
+        const bool contained = m_screenGeometry.isNull() || m_screenGeometry.contains(windowCenter);
 
         setVisible(contained && !info.isMinimized());
     }

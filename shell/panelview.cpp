@@ -587,7 +587,6 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
                     m_panelConfigView->hide();
                 } else {
                     m_panelConfigView->show();
-                    KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
                 }
                 return;
             }
@@ -1112,7 +1111,7 @@ void PanelView::themeChanged()
         KWindowEffects::enableBlurBehind(winId(), false);
         KWindowEffects::enableBackgroundContrast(winId(), false);        
     } else {
-        KWindowEffects::enableBlurBehind(winId(), true);
+        KWindowEffects::enableBlurBehind(winId(), m_theme.blurBehindEnabled());
         KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
                                                         m_theme.backgroundContrast(),
                                                         m_theme.backgroundIntensity(),

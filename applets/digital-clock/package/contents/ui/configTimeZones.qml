@@ -39,7 +39,7 @@ Item {
         id: timeZones
 
         onSelectedTimeZonesChanged: {
-            if (selectedTimeZones.length == 0) {
+            if (selectedTimeZones.length === 0) {
                 messageWidget.visible = true;
 
                 timeZones.selectLocalTimeZone();

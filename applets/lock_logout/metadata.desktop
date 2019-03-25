@@ -32,7 +32,7 @@ Name[hr]=Zaključavanje/odjavljivanje
 Name[hsb]=Zamknjenje/Wotzjewjenje
 Name[hu]=Zárolás/kijelentkezés
 Name[ia]=Bloca/Claude session
-Name[id]=Kunci/Logout
+Name[id]=Lock/Logout
 Name[is]=Læsa/stimpla út
 Name[it]=Blocca/Esci
 Name[ja]=ロック/ログアウト
@@ -200,7 +200,7 @@ Keywords[sv]=Lås;Utloggning;Viloläge;Dvala;Byt användare;
 Keywords[tr]=Kilitle;Oturumu Kapat;Uyku;Askıya Al;Kullanıcı Değiştir;
 Keywords[uk]=Lock;Logout;Sleep;Hibernate;Switch User;блокування;вихід;присипляння;сон;перемикання;користувач;
 Keywords[x-test]=xxLockxx;xxLogoutxx;xxSleepxx;xxHibernatexx;xxSwitch Userxx;
-Keywords[zh_CN]=Lock;Logout;Sleep;Hibernate;Switch User;锁定;注销;待机;休眠;切换用户;
+Keywords[zh_CN]=锁定;注销;待机;睡眠;休眠;切换用户;
 Keywords[zh_TW]=Lock;Logout;Sleep;Hibernate;Switch User;
 
 Type=Service

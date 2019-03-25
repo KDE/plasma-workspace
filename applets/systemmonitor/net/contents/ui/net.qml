@@ -48,10 +48,7 @@ Applet {
             if (value > 1024) {
                 return i18nc("%1 is the displayed data transfer speed in kilobits per second", "%1 Kbps", (value / 1024));
             }
-            if (value > 0) {
-                return i18nc("%1 is the displayed data transfer speed in bits per second", "%1 bps", value);
-            }
-            return value;
+            return i18nc("%1 is the displayed data transfer speed in bits per second", "%1 bps", value);
         }
     }
 }

@@ -339,6 +339,7 @@ QImage SNIProxy::convertFromNative(xcb_image_t *xcbImage) const
             pixels[i] = qRgba(r, g, b, 0xff);
         }
         // fall through, Qt format is still Format_ARGB32_Premultiplied
+        Q_FALLTHROUGH();
     }
     case 32:
         format = QImage::Format_ARGB32_Premultiplied;

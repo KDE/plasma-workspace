@@ -45,7 +45,7 @@ PlasmaCore.ToolTipArea {
 
     property bool forcedHidden: plasmoid.configuration.hiddenItems.indexOf(itemId) !== -1
     property bool forcedShown: plasmoid.configuration.showAllItems || plasmoid.configuration.shownItems.indexOf(itemId) !== -1
-    property bool categoryShown: shownCategories.indexOf(category) != -1;
+    property bool categoryShown: shownCategories.indexOf(category) !== -1;
 
     readonly property int effectiveStatus: {
         if (!categoryShown || status === PlasmaCore.Types.HiddenStatus) {
@@ -111,6 +111,9 @@ PlasmaCore.ToolTipArea {
             if (mouse.button === Qt.RightButton) {
                 abstractItem.contextMenu(mouse)
             }
+        }
+        onPressAndHold: {
+            abstractItem.contextMenu(mouse)
         }
         onWheel: {
             abstractItem.wheel(wheel);

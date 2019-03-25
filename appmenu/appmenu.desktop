@@ -19,7 +19,7 @@ Name[gl]=Servizo de menús do aplicativo
 Name[he]=תהליך רקע של תפריט היישומים
 Name[hu]=Alkalmazás menük démon
 Name[ia]=Demone de menus de application
-Name[id]=Daemon menu aplikasi
+Name[id]=Application menus daemon
 Name[is]=Forritavalmyndamiðlari
 Name[it]=Demone dei menu delle applicazioni
 Name[ja]=アプリケーションメニューデーモン
@@ -102,4 +102,4 @@ X-KDE-ServiceTypes=KDEDModule
 X-KDE-Library=appmenu
 X-KDE-Kded-autoload=true
 X-KDE-Kded-load-on-demand=false
-
+X-KDE-Kded-phase=1

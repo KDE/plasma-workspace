@@ -65,7 +65,7 @@ MouseArea {
                 rightMargin: parent.margins.right
                 bottomMargin: parent.margins.bottom
             }
-            visible: model.screenshot != null
+            visible: model.screenshot !== null
             smooth: true
             pixmap: model.screenshot
             fillMode: QPixmapItem.Stretch

@@ -52,7 +52,7 @@ KQuickAddons.Plotter {
     PlasmaComponents.Label {
         id: speedLabel
         wrapMode: Text.WordWrap
-        visible: plasmoid.formFactor != PlasmaCore.Types.Vertical
+        visible: plasmoid.formFactor !== PlasmaCore.Types.Vertical
         anchors {
             right: parent.right
         }
@@ -61,7 +61,7 @@ KQuickAddons.Plotter {
     Connections {
         target: model.dataSource
         onNewData: {
-            if (sourceName.indexOf(decodeURIComponent(model.source1)) != 0) {
+            if (sourceName.indexOf(decodeURIComponent(model.source1)) !== 0) {
                 return;
             }
 
@@ -73,7 +73,7 @@ KQuickAddons.Plotter {
 
             plotter.addSample([data1.value]);
 
-            if (plasmoid.formFactor != PlasmaCore.Types.Vertical) {
+            if (plasmoid.formFactor !== PlasmaCore.Types.Vertical) {
                 nameLabel.text = plotter.sensorName
                 speedLabel.text = formatData(data1)
             } else {

@@ -48,6 +48,8 @@
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/StatJob>
 
+#include <startuptasksmodel.h>
+
 IconApplet::IconApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
 {
@@ -272,56 +274,7 @@ void IconApplet::populateFromDesktopFile(const QString &path)
     delete m_openContainingFolderAction;
     m_openContainingFolderAction = nullptr;
     m_openWithActions.clear();
-
-    if (desktopFile.hasLinkType()) {
-        const QUrl &linkUrl = QUrl(desktopFile.readUrl());
-
-        if (!m_fileItemActions) {
-            m_fileItemActions = new KFileItemActions(this);
-        }
-        KFileItemListProperties itemProperties(KFileItemList({KFileItem(linkUrl)}));
-        m_fileItemActions->setItemListProperties(itemProperties);
-
-        if (!m_openWithMenu) {
-            m_openWithMenu.reset(new QMenu());
-        }
-        m_openWithMenu->clear();
-        m_fileItemActions->addOpenWithActionsTo(m_openWithMenu.data());
-
-        m_openWithActions = m_openWithMenu->actions();
-
-        if (KProtocolManager::supportsListing(linkUrl)) {
-            if (!m_openContainingFolderAction) {
-                m_openContainingFolderAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"), this);
-                connect(m_openContainingFolderAction, &QAction::triggered, this, [this] {
-                    KIO::highlightInFileManager({m_openContainingFolderAction->property("linkUrl").toUrl()});
-                });
-            }
-            m_openContainingFolderAction->setProperty("linkUrl", linkUrl);
-        }
-    }
-
     m_jumpListActions.clear();
-    foreach (const QString &actionName, desktopFile.readActions()) {
-        const KConfigGroup &actionGroup = desktopFile.actionGroup(actionName);
-
-        if (!actionGroup.isValid() || !actionGroup.exists()) {
-            continue;
-        }
-
-        const QString &name = actionGroup.readEntry(QStringLiteral("Name"));
-        const QString &exec = actionGroup.readEntry(QStringLiteral("Exec"));
-        if (name.isEmpty() || exec.isEmpty()) {
-            continue;
-        }
-
-        QAction *action = new QAction(QIcon::fromTheme(actionGroup.readEntry("Icon")), name, this);
-        connect(action, &QAction::triggered, this, [this, exec] {
-            KRun::run(exec, {}, nullptr, m_name, m_iconName);
-        });
-
-        m_jumpListActions << action;
-    }
 
     m_localPath = path;
 
@@ -372,6 +325,36 @@ QString IconApplet::genericName() const
 QList<QAction *> IconApplet::contextualActions()
 {
     QList<QAction *> actions;
+    if (m_localPath.isEmpty()) {
+        return actions;
+    }
+
+    KDesktopFile desktopFile(m_localPath);
+
+    if (m_jumpListActions.isEmpty()) {
+        const QStringList actions = desktopFile.readActions();
+        for (const QString &actionName : actions) {
+            const KConfigGroup &actionGroup = desktopFile.actionGroup(actionName);
+
+            if (!actionGroup.isValid() || !actionGroup.exists()) {
+                continue;
+            }
+
+            const QString name = actionGroup.readEntry(QStringLiteral("Name"));
+            const QString exec = actionGroup.readEntry(QStringLiteral("Exec"));
+            if (name.isEmpty() || exec.isEmpty()) {
+                continue;
+            }
+
+            QAction *action = new QAction(QIcon::fromTheme(actionGroup.readEntry("Icon")), name, this);
+            connect(action, &QAction::triggered, this, [this, exec] {
+                KRun::run(exec, {}, nullptr, m_name, m_iconName);
+            });
+
+            m_jumpListActions << action;
+        }
+    }
+
     actions << m_jumpListActions;
 
     if (!actions.isEmpty()) {
@@ -380,6 +363,35 @@ QList<QAction *> IconApplet::contextualActions()
             m_separatorAction->setSeparator(true);
         }
         actions << m_separatorAction;
+    }
+
+    if (desktopFile.hasLinkType()) {
+        const QUrl linkUrl = QUrl(desktopFile.readUrl());
+
+        if (m_openWithActions.isEmpty()) {
+            if (!m_fileItemActions) {
+                m_fileItemActions = new KFileItemActions(this);
+            }
+            KFileItemListProperties itemProperties(KFileItemList({KFileItem(linkUrl)}));
+            m_fileItemActions->setItemListProperties(itemProperties);
+
+            if (!m_openWithMenu) {
+                m_openWithMenu.reset(new QMenu());
+            }
+            m_openWithMenu->clear();
+            m_fileItemActions->addOpenWithActionsTo(m_openWithMenu.data());
+
+            m_openWithActions = m_openWithMenu->actions();
+        }
+
+        if (!m_openContainingFolderAction) {
+            if (KProtocolManager::supportsListing(linkUrl)) {
+                m_openContainingFolderAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"), this);
+                connect(m_openContainingFolderAction, &QAction::triggered, this, [this, linkUrl] {
+                    KIO::highlightInFileManager({linkUrl});
+                });
+            }
+        }
     }
 
     actions << m_openWithActions;
@@ -393,6 +405,25 @@ QList<QAction *> IconApplet::contextualActions()
 
 void IconApplet::run()
 {
+    if (!m_startupTasksModel) {
+        m_startupTasksModel = new TaskManager::StartupTasksModel(this);
+
+        auto handleRow = [this](bool busy, const QModelIndex &parent, int first, int last) {
+            Q_UNUSED(parent);
+            for (int i = first; i <= last; ++i) {
+                const QModelIndex idx = m_startupTasksModel->index(i, 0);
+                if (idx.data(TaskManager::AbstractTasksModel::LauncherUrlWithoutIcon).toUrl() == QUrl::fromLocalFile(m_localPath)) {
+                    setBusy(busy);
+                    break;
+                }
+            }
+        };
+
+        using namespace std::placeholders;
+        connect(m_startupTasksModel, &QAbstractItemModel::rowsInserted, this, std::bind(handleRow, true /*busy*/, _1, _2, _3));
+        connect(m_startupTasksModel, &QAbstractItemModel::rowsAboutToBeRemoved, this, std::bind(handleRow, false /*busy*/, _1, _2, _3));
+    }
+
     new KRun(QUrl::fromLocalFile(m_localPath), QApplication::desktop());
 }
 

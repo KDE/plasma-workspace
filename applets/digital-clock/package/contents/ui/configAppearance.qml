@@ -24,6 +24,7 @@ import QtQuick 2.0
 import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.0 as QtLayouts
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
+import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.5 as Kirigami
 
 QtLayouts.ColumnLayout {
@@ -44,13 +45,14 @@ QtLayouts.ColumnLayout {
 
     property alias cfg_showDate: showDate.checked
     property string cfg_dateFormat: "shortDate"
-    property alias cfg_use24hFormat: use24hFormat.checked
+    property alias cfg_customDateFormat: customDateFormat.text
+    property alias cfg_use24hFormat: use24hFormat.currentIndex
 
     onCfg_fontFamilyChanged: {
         // HACK by the time we populate our model and/or the ComboBox is finished the value is still undefined
         if (cfg_fontFamily) {
             for (var i = 0, j = fontsModel.count; i < j; ++i) {
-                if (fontsModel.get(i).value == cfg_fontFamily) {
+                if (fontsModel.get(i).value === cfg_fontFamily) {
                     fontFamilyComboBox.currentIndex = i
                     break
                 }
@@ -88,11 +90,6 @@ QtLayouts.ColumnLayout {
         }
 
         QtControls.CheckBox {
-            id: use24hFormat
-            text: i18nc("Checkbox label; means 24h clock format, without am/pm", "Use 24-hour Clock")
-        }
-
-        QtControls.CheckBox {
             id: showLocalTimezone
             text: i18n("Show local time zone")
         }
@@ -120,6 +117,32 @@ QtLayouts.ColumnLayout {
             Kirigami.FormData.isSection: true
         }
 
+        QtLayouts.RowLayout {
+            QtLayouts.Layout.fillWidth: true
+            Kirigami.FormData.label: i18n("Time display:")
+
+            QtControls.ComboBox {
+                id: use24hFormat
+                model: [
+                    i18n("12-Hour"),
+                    i18n("Use Region Defaults"),
+                    i18n("24-Hour")
+                ]
+                onCurrentIndexChanged: cfg_use24hFormat = currentIndex
+            }
+
+            QtControls.Button {
+                visible: KCMShell.authorize("formats.desktop").length > 0
+                text: i18n("Change Regional Settings...")
+                icon.name: "preferences-desktop-locale"
+                onClicked: KCMShell.open("formats.desktop")
+            }
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
         QtControls.ComboBox {
             id: dateFormat
             Kirigami.FormData.label: i18n("Date format:")
@@ -137,16 +160,41 @@ QtLayouts.ColumnLayout {
                 {
                     'label': i18n("ISO Date"),
                     'name': "isoDate"
+                },
+                {
+                    'label': i18nc("custom date format", "Custom"),
+                    'name': "custom"
                 }
             ]
             onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"]
 
             Component.onCompleted: {
                 for (var i = 0; i < model.length; i++) {
-                    if (model[i]["name"] == plasmoid.configuration.dateFormat) {
+                    if (model[i]["name"] === plasmoid.configuration.dateFormat) {
                         dateFormat.currentIndex = i;
                     }
                 }
+            }
+        }
+
+        QtControls.TextField {
+            id: customDateFormat
+            QtLayouts.Layout.fillWidth: true
+            visible: cfg_dateFormat == "custom"
+        }
+
+        QtControls.Label {
+            text: i18n("<a href=\"http://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method\">Time Format Documentation</a>")
+            visible: cfg_dateFormat == "custom"
+            wrapMode: Text.Wrap
+            QtLayouts.Layout.preferredWidth: QtLayouts.Layout.maximumWidth
+            QtLayouts.Layout.maximumWidth: units.gridUnit * 16
+
+            onLinkActivated: Qt.openUrlExternally(link)
+            MouseArea {
+                anchors.fill: parent
+                acceptedButtons: Qt.NoButton // We don't want to eat clicks on the Label
+                cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
             }
         }
 

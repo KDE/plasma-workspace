@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.2
+import QtQuick 2.8
 
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.1
@@ -31,6 +31,11 @@ import "components"
 
 PlasmaCore.ColorScope {
     id: root
+
+    // If we're using software rendering, draw outlines instead of shadows
+    // See https://bugs.kde.org/show_bug.cgi?id=398317
+    readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
+
     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
 
     width: 1600
@@ -67,7 +72,7 @@ PlasmaCore.ColorScope {
         anchors.fill: parent
 
         property bool uiVisible: true
-        property bool blockUI: mainStack.depth > 1 || userListComponent.mainPasswordBox.text.length > 0 || inputPanel.keyboardActive || config.type != "image"
+        property bool blockUI: mainStack.depth > 1 || userListComponent.mainPasswordBox.text.length > 0 || inputPanel.keyboardActive || config.type !== "image"
 
         hoverEnabled: true
         drag.filterChildren: true
@@ -89,6 +94,11 @@ PlasmaCore.ColorScope {
             }
         }
 
+        Keys.onPressed: {
+            uiVisible = true;
+            event.accepted = false;
+        }
+
         //takes one full minute for the ui to disappear
         Timer {
             id: fadeoutTimer
@@ -101,7 +111,7 @@ PlasmaCore.ColorScope {
             }
         }
         WallpaperFader {
-            visible: config.type == "image"
+            visible: config.type === "image"
             anchors.fill: parent
             state: loginScreenRoot.uiVisible ? "on" : "off"
             source: wallpaper
@@ -110,9 +120,29 @@ PlasmaCore.ColorScope {
             clock: clock
         }
 
+        DropShadow {
+            id: clockShadow
+            anchors.fill: clock
+            source: clock
+            visible: !softwareRendering
+            horizontalOffset: 1
+            verticalOffset: 1
+            radius: 6
+            samples: 14
+            spread: 0.3
+            color: "black" // matches Breeze window decoration and desktopcontainment
+            Behavior on opacity {
+                OpacityAnimator {
+                    duration: 1000
+                    easing.type: Easing.InOutQuad
+                }
+            }
+        }
+
         Clock {
             id: clock
             visible: y > 0
+            property Item shadow: clockShadow
             y: (userListComponent.userList.y + mainStack.y)/2 - height/2
             anchors.horizontalCenter: parent.horizontalCenter
         }
@@ -124,7 +154,7 @@ PlasmaCore.ColorScope {
                 left: parent.left
                 right: parent.right
             }
-            height: root.height
+            height: root.height + units.gridUnit * 3
 
             focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
 
@@ -142,6 +172,7 @@ PlasmaCore.ColorScope {
             initialItem: Login {
                 id: userListComponent
                 userListModel: userModel
+                loginScreenUiVisible: loginScreenRoot.uiVisible
                 userListCurrentIndex: userModel.lastIndex >= 0 ? userModel.lastIndex : 0
                 lastUserName: userModel.lastUser
                 showUserList: {
@@ -149,7 +180,7 @@ PlasmaCore.ColorScope {
                     || !userListModel.hasOwnProperty("disableAvatarsThreshold"))
                         return (userList.y + mainStack.y) > 0
 
-                    if ( userListModel.count == 0 ) return false
+                    if ( userListModel.count === 0 ) return false
 
                     return userListModel.count <= userListModel.disableAvatarsThreshold && (userList.y + mainStack.y) > 0
                 }
@@ -169,7 +200,7 @@ PlasmaCore.ColorScope {
                 actionItems: [
                     ActionButton {
                         iconSource: "system-suspend"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Suspend")
+                        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Suspend to RAM","Sleep")
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
                         visible: !inputPanel.keyboardActive
@@ -189,8 +220,8 @@ PlasmaCore.ColorScope {
                         visible: !inputPanel.keyboardActive
                     },
                     ActionButton {
-                        iconSource: "system-switch-user"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Different User")
+                        iconSource: "system-user-prompt"
+                        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "For switching to a username and password prompt", "Other...")
                         onClicked: mainStack.push(userPromptComponent)
                         enabled: true
                         visible: !userListComponent.showUsernamePrompt && !inputPanel.keyboardActive
@@ -327,9 +358,10 @@ PlasmaCore.ColorScope {
             Login {
                 showUsernamePrompt: true
                 notificationMessage: root.notificationMessage
+                loginScreenUiVisible: loginScreenRoot.uiVisible
 
                 userListModel: QtObject {
-                    property string name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log in as a different user")
+                    property string name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Type in Username and Password")
                     property string iconSource: ""
                 }
 
@@ -340,9 +372,31 @@ PlasmaCore.ColorScope {
 
                 actionItems: [
                     ActionButton {
-                        iconSource: "go-previous"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Back")
+                        iconSource: "system-suspend"
+                        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Suspend to RAM","Sleep")
+                        onClicked: sddm.suspend()
+                        enabled: sddm.canSuspend
+                        visible: !inputPanel.keyboardActive
+                    },
+                    ActionButton {
+                        iconSource: "system-reboot"
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
+                        onClicked: sddm.reboot()
+                        enabled: sddm.canReboot
+                        visible: !inputPanel.keyboardActive
+                    },
+                    ActionButton {
+                        iconSource: "system-shutdown"
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shut Down")
+                        onClicked: sddm.powerOff()
+                        enabled: sddm.canPowerOff
+                        visible: !inputPanel.keyboardActive
+                    },
+                    ActionButton {
+                        iconSource: "system-user-list"
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","List Users")
                         onClicked: mainStack.pop()
+                        visible: !inputPanel.keyboardActive
                     }
                 ]
             }

@@ -22,6 +22,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import org.kde.draganddrop 2.0 as DnD
+import org.kde.kirigami 2.5 as Kirigami
 
 import "items"
 
@@ -37,9 +38,10 @@ MouseArea {
     LayoutMirroring.childrenInherit: true
 
     property var iconSizes: ["small", "smallMedium", "medium", "large", "huge", "enormous"];
+    property int iconSize: plasmoid.configuration.iconSize + (Kirigami.Settings.tabletMode ? 1 : 0)
 
-    property bool vertical: plasmoid.formFactor == PlasmaCore.Types.Vertical
-    property int itemSize: units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes[iconSizes[plasmoid.configuration.iconSize]]))
+    property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    readonly property int itemSize: units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes[iconSizes[Math.min(iconSizes.length-1, iconSize)]]))
     property int hiddenItemSize: units.iconSizes.smallMedium
     property alias expanded: dialog.visible
     property Item activeApplet
@@ -50,7 +52,8 @@ MouseArea {
 
     property alias statusNotifierModel: statusNotifierModel
 
-    property Component plasmoidItemComponent
+    // workaround https://bugreports.qt.io/browse/QTBUG-71238 / https://bugreports.qt.io/browse/QTBUG-72004
+    property Component plasmoidItemComponent: Qt.createComponent("items/PlasmoidItem.qml")
 
     Plasmoid.onExpandedChanged: {
         if (!plasmoid.expanded) {
@@ -61,7 +64,7 @@ MouseArea {
     function updateItemVisibility(item) {
         switch (item.effectiveStatus) {
         case PlasmaCore.Types.HiddenStatus:
-            if (item.parent == invisibleEntriesContainer) {
+            if (item.parent === invisibleEntriesContainer) {
                 return;
             }
 
@@ -69,26 +72,26 @@ MouseArea {
             break;
 
         case PlasmaCore.Types.ActiveStatus:
-            if (visibleLayout.children.length == 0) {
+            if (visibleLayout.children.length === 0) {
                 item.parent = visibleLayout;
             //notifications is always the first
-            } else if (visibleLayout.children[0].itemId == "org.kde.plasma.notifications" &&
-                       item.itemId != "org.kde.plasma.notifications") {
+            } else if (visibleLayout.children[0].itemId === "org.kde.plasma.notifications" &&
+                       item.itemId !== "org.kde.plasma.notifications") {
                 plasmoid.nativeInterface.reorderItemAfter(item, visibleLayout.children[0]);
-            } else if (visibleLayout.children[0] != item) {
+            } else if (visibleLayout.children[0] !== item) {
                 plasmoid.nativeInterface.reorderItemBefore(item, visibleLayout.children[0]);
             }
             break;
 
         case PlasmaCore.Types.PassiveStatus:
 
-            if (hiddenLayout.children.length == 0) {
+            if (hiddenLayout.children.length === 0) {
                 item.parent = hiddenLayout;
             //notifications is always the first
-            } else if (hiddenLayout.children[0].itemId == "org.kde.plasma.notifications" &&
-                       item.itemId != "org.kde.plasma.notifications") {
+            } else if (hiddenLayout.children[0].itemId === "org.kde.plasma.notifications" &&
+                       item.itemId !== "org.kde.plasma.notifications") {
                 plasmoid.nativeInterface.reorderItemAfter(item, hiddenLayout.children[0]);
-            } else if (hiddenLayout.children[0] != item) {
+            } else if (hiddenLayout.children[0] !== item) {
                 plasmoid.nativeInterface.reorderItemBefore(item, hiddenLayout.children[0]);
             }
             item.x = 0;
@@ -102,9 +105,6 @@ MouseArea {
     }
 
     Containment.onAppletAdded: {
-        if (!plasmoidItemComponent) {
-            plasmoidItemComponent = Qt.createComponent("items/PlasmoidItem.qml");
-        }
         //Allow the plasmoid expander to know in what window it will be
         var plasmoidContainer = plasmoidItemComponent.createObject(invisibleEntriesContainer, {"x": x, "y": y, "applet": applet});
 
@@ -225,7 +225,7 @@ MouseArea {
         }
 
         //nothing? make a regexp that matches nothing
-        if (array.length == 0) {
+        if (array.length === 0) {
             array.push("$^")
         }
         return array;

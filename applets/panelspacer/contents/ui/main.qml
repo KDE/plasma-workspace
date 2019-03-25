@@ -28,7 +28,7 @@ Item {
     id: root
 
     z: 9999
-    property bool horizontal: plasmoid.formFactor != PlasmaCore.Types.Vertical
+    property bool horizontal: plasmoid.formFactor !== PlasmaCore.Types.Vertical
 
     Layout.fillWidth: plasmoid.configuration.expanding
     Layout.fillHeight: plasmoid.configuration.expanding

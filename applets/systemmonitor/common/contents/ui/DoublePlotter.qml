@@ -38,13 +38,13 @@ KQuickAddons.Plotter {
         var c = max - min;
         var h;
 
-        if (c == 0) {
+        if (c === 0) {
             h = 0
-        } else if (max == color.r) {
+        } else if (max === color.r) {
             h = ((color.g - color.b) / c) % 6;
-        } else if (max == color.g) {
+        } else if (max === color.g) {
             h = ((color.b - color.r) / c) + 2;
-        } else if (max == color.b) {
+        } else if (max === color.b) {
             h = ((color.r - color.g) / c) + 4;
         }
         var hue = (1/6) * h + (degrees/360);
@@ -54,12 +54,15 @@ KQuickAddons.Plotter {
         return Qt.hsla(hue, saturation, lightness, 1.0);
     }
 
+    property string downloadColor: theme.highlightColor
+    property string uploadColor: cycle(theme.highlightColor, -90)
+
     dataSets: [
         KQuickAddons.PlotData {
-            color: theme.highlightColor
+            color: downloadColor
         },
         KQuickAddons.PlotData {
-            color: cycle(theme.highlightColor, -90)
+            color: uploadColor
         }
     ]
 
@@ -74,7 +77,7 @@ KQuickAddons.Plotter {
     PlasmaComponents.Label {
         id: speedLabel
         wrapMode: Text.WordWrap
-        visible: plasmoid.formFactor != PlasmaCore.Types.Vertical
+        visible: plasmoid.formFactor !== PlasmaCore.Types.Vertical
         anchors {
             right: parent.right
         }
@@ -83,7 +86,7 @@ KQuickAddons.Plotter {
     Connections {
         target: model.dataSource
         onNewData: {
-            if (sourceName.indexOf(decodeURIComponent(model.source1)) != 0 && sourceName.indexOf(decodeURIComponent(model.source2)) != 0) {
+            if (sourceName.indexOf(decodeURIComponent(model.source1)) !== 0 && sourceName.indexOf(decodeURIComponent(model.source2)) !== 0) {
                 return;
             }
 
@@ -97,9 +100,13 @@ KQuickAddons.Plotter {
 
             plotter.addSample([data1.value, data2.value]);
 
-            if (plasmoid.formFactor != PlasmaCore.Types.Vertical) {
+            if (plasmoid.formFactor !== PlasmaCore.Types.Vertical) {
                 nameLabel.text = plotter.sensorName
-                speedLabel.text = formatData(data1) + " | " + formatData(data2)
+                speedLabel.text = i18n("<font color='%1'>⬇</font> %2 | <font color='%3'>⬆</font> %4",
+                                        downloadColor,
+                                        formatData(data1),
+                                        uploadColor,
+                                        formatData(data2))
             } else {
                 nameLabel.text = plotter.sensorName+ "\n" + formatData(data1) + "\n" + formatData(data2)
                 speedLabel.text = ""

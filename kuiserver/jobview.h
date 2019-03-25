@@ -109,6 +109,7 @@ public:
 
     QDBusObjectPath objectPath() const;
 
+    bool isTerminated() const;
 
 
      /**
@@ -171,7 +172,7 @@ Q_SIGNALS:
      * Triggered when an internal data type changes. It is triggered
      * once for each data type of this JobView, that has changed.
      *
-     * @param uint unique job identifier
+     * Parameter uint is the unique job identifier
      */
     void changed(uint);
 

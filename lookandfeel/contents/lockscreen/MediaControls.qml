@@ -114,11 +114,12 @@ Item {
 
             PlasmaExtras.Heading {
                 Layout.fillWidth: true
-                level: 4
+                level: 5
                 wrapMode: Text.NoWrap
                 elide: Text.ElideRight
                 text: mpris2Source.track || i18n("No media playing")
                 textFormat: Text.PlainText
+                font.weight: Font.Bold
             }
 
             PlasmaExtras.Heading {
@@ -129,6 +130,7 @@ Item {
                 // if no artist is given, show player name instead
                 text: mpris2Source.artist || mpris2Source.identity || ""
                 textFormat: Text.PlainText
+                opacity: 0.75
             }
         }
 

@@ -267,7 +267,7 @@ Item {
                     id: seekTimer
                     interval: 1000 / expandedRepresentation.rate
                     repeat: true
-                    running: root.state == "playing" && plasmoid.expanded && !keyPressed && interval > 0 && seekSlider.to >= 1000000
+                    running: root.state === "playing" && plasmoid.expanded && !keyPressed && interval > 0 && seekSlider.to >= 1000000
                     onTriggered: {
                         // some players don't continuously update the seek slider position via mpris
                         // add one second; value in microseconds

@@ -46,7 +46,7 @@ install(TARGETS plasmashellprivateplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/k
 install(FILES
     wallpaperplugin/wallpaperplugin.knsrc
     widgetexplorer/plasmoids.knsrc
-    DESTINATION ${KDE_INSTALL_CONFDIR}
+    DESTINATION ${KDE_INSTALL_KNSRCDIR}
 )
 
 install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/shell)

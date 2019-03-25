@@ -22,8 +22,6 @@ import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Controls 2.3 as QtControls2
 import QtQuick.Layouts 1.0
 import QtQuick.Window 2.0 // for Screen
-//We need units from it
-import org.kde.plasma.core 2.0 as Plasmacore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kquickcontrolsaddons 2.0
@@ -78,16 +76,18 @@ ColumnLayout {
 
     Row {
         //x: formAlignment - positionLabel.paintedWidth
-        spacing: units.largeSpacing / 2
-        QtControls.Label {
+        spacing: Kirigami.Units.largeSpacing / 2
+        QtControls2.Label {
             id: positionLabel
-            width: formAlignment - units.largeSpacing
+            width: formAlignment - Kirigami.Units.largeSpacing
             anchors {
                 verticalCenter: resizeComboBox.verticalCenter
             }
             text: i18nd("plasma_wallpaper_org.kde.image", "Positioning:")
             horizontalAlignment: Text.AlignRight
         }
+
+        // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
         QtControls.ComboBox {
             id: resizeComboBox
             TextMetrics {
@@ -124,7 +124,7 @@ ColumnLayout {
 
             function setMethod() {
                 for (var i = 0; i < model.length; i++) {
-                    if (model[i]["fillMode"] == wallpaper.configuration.FillMode) {
+                    if (model[i]["fillMode"] === wallpaper.configuration.FillMode) {
                         resizeComboBox.currentIndex = i;
                         var tl = model[i]["label"].length;
                         //resizeComboBox.textLength = Math.max(resizeComboBox.textLength, tl+5);
@@ -134,37 +134,37 @@ ColumnLayout {
         }
     }
 
-    QtControls.ExclusiveGroup { id: backgroundGroup }
+    QtControls2.ButtonGroup { id: backgroundGroup }
 
     Row {
         id: blurRow
-        spacing: units.largeSpacing / 2
+        spacing: Kirigami.Units.largeSpacing / 2
         visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
-        QtControls.Label {
+        QtControls2.Label {
             id: blurLabel
-            width: formAlignment - units.largeSpacing
+            width: formAlignment - Kirigami.Units.largeSpacing
             anchors.verticalCenter: blurRadioButton.verticalCenter
             horizontalAlignment: Text.AlignRight
             text: i18nd("plasma_wallpaper_org.kde.image", "Background:")
         }
-        QtControls.RadioButton {
+        QtControls2.RadioButton {
             id: blurRadioButton
             text: i18nd("plasma_wallpaper_org.kde.image", "Blur")
-            exclusiveGroup: backgroundGroup
+            QtControls2.ButtonGroup.group: backgroundGroup
         }
     }
 
     Row {
         id: colorRow
         visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
-        spacing: units.largeSpacing / 2
-        QtControls.Label {
-            width: formAlignment - units.largeSpacing
+        spacing: Kirigami.Units.largeSpacing / 2
+        QtControls2.Label {
+            width: formAlignment - Kirigami.Units.largeSpacing
         }
-        QtControls.RadioButton {
+        QtControls2.RadioButton {
             id: colorRadioButton
             text: i18nd("plasma_wallpaper_org.kde.image", "Solid color")
-            exclusiveGroup: backgroundGroup
+            QtControls2.ButtonGroup.group: backgroundGroup
             checked: !cfg_Blur
         }
         KQuickControls.ColorButton {
@@ -186,81 +186,121 @@ ColumnLayout {
             //FIXME: there should be only one spinbox: QtControls spinboxes are still too limited for it tough
             RowLayout {
                 Layout.fillWidth: true
-                spacing: units.largeSpacing / 2
-                QtControls.Label {
-                    Layout.minimumWidth: formAlignment - units.largeSpacing
+                spacing: Kirigami.Units.largeSpacing / 2
+                QtControls2.Label {
+                    Layout.minimumWidth: formAlignment - Kirigami.Units.largeSpacing
                     horizontalAlignment: Text.AlignRight
                     text: i18nd("plasma_wallpaper_org.kde.image","Change every:")
                 }
-                QtControls.SpinBox {
+                QtControls2.SpinBox {
                     id: hoursInterval
-                    Layout.minimumWidth: textMetrics.width + units.gridUnit
-                    width: units.gridUnit * 3
-                    decimals: 0
+                    Layout.minimumWidth: textMetrics.width + Kirigami.Units.gridUnit
+                    width: Kirigami.Units.gridUnit * 3
                     value: root.hoursIntervalValue
-                    minimumValue: 0
-                    maximumValue: 24
+                    from: 0
+                    to: 24
+                    editable: true
                     onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
                 }
-                QtControls.Label {
+                QtControls2.Label {
                     text: i18nd("plasma_wallpaper_org.kde.image","Hours")
                 }
                 Item {
-                    Layout.preferredWidth: units.gridUnit
+                    Layout.preferredWidth: Kirigami.Units.gridUnit
                 }
-                QtControls.SpinBox {
+                QtControls2.SpinBox {
                     id: minutesInterval
-                    Layout.minimumWidth: textMetrics.width + units.gridUnit
-                    width: units.gridUnit * 3
-                    decimals: 0
+                    Layout.minimumWidth: textMetrics.width + Kirigami.Units.gridUnit
+                    width: Kirigami.Units.gridUnit * 3
                     value: root.minutesIntervalValue
-                    minimumValue: 0
-                    maximumValue: 60
+                    from: 0
+                    to: 60
+                    editable: true
                     onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
                 }
-                QtControls.Label {
+                QtControls2.Label {
                     text: i18nd("plasma_wallpaper_org.kde.image","Minutes")
                 }
                 Item {
-                    Layout.preferredWidth: units.gridUnit
+                    Layout.preferredWidth: Kirigami.Units.gridUnit
                 }
-                QtControls.SpinBox {
+                QtControls2.SpinBox {
                     id: secondsInterval
-                    Layout.minimumWidth: textMetrics.width + units.gridUnit
-                    width: units.gridUnit * 3
-                    decimals: 0
+                    Layout.minimumWidth: textMetrics.width + Kirigami.Units.gridUnit
+                    width: Kirigami.Units.gridUnit * 3
                     value: root.secondsIntervalValue
-                    minimumValue: root.hoursIntervalValue === 0 && root.minutesIntervalValue === 0 ? 1 : 0
-                    maximumValue: 60
+                    from: root.hoursIntervalValue === 0 && root.minutesIntervalValue === 0 ? 1 : 0
+                    to: 60
+                    editable: true
                     onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
                 }
-                QtControls.Label {
+                QtControls2.Label {
                     text: i18nd("plasma_wallpaper_org.kde.image","Seconds")
                 }
             }
-            QtControls2.ScrollView {
-                id: foldersScroll
-                Layout.fillHeight: true;
+            Kirigami.Heading {
+                text: "Folders"
+                level: 2
+            }
+            GridLayout {
+                columns: 2
                 Layout.fillWidth: true
-                Component.onCompleted: foldersScroll.background.visible = true;
-                ListView {
-                    id: slidePathsView
-                    anchors.margins: 4
-                    model: imageWallpaper.slidePaths
-                    delegate: QtControls.Label {
-                        text: modelData
-                        width: slidePathsView.width
-                        height: Math.max(paintedHeight, removeButton.height);
-                        QtControls.ToolButton {
-                            id: removeButton
-                            anchors {
-                                verticalCenter: parent.verticalCenter
-                                right: parent.right
+                Layout.fillHeight: true
+                columnSpacing: Kirigami.Units.largeSpacing
+                QtControls2.ScrollView {
+                    id: foldersScroll
+                    Layout.fillHeight: true
+                    Layout.preferredWidth: 0.25 * parent.width
+                    Component.onCompleted: foldersScroll.background.visible = true;
+                    ListView {
+                        id: slidePathsView
+                        anchors.margins: 4
+                        model: imageWallpaper.slidePaths
+                        delegate: Kirigami.SwipeListItem {
+                            id: folderDelegate
+                            actions: [
+                                Kirigami.Action {
+                                    iconName: "list-remove"
+                                    tooltip: i18nd("plasma_wallpaper_org.kde.image", "Remove Folder")
+                                    onTriggered: imageWallpaper.removeSlidePath(modelData)
+                                },
+                                Kirigami.Action {
+                                    icon.name: "document-open-folder"
+                                    tooltip: i18nd("plasma_wallpaper_org.kde.image", "Open Folder")
+                                    onTriggered: imageWallpaper.openFolder(modelData)
+                                }
+                            ]
+                            QtControls2.Label {
+                                text: modelData.endsWith("/") ? modelData.split('/').reverse()[1] : modelData.split('/').pop()
+                                Layout.fillWidth: true
+                                QtControls2.ToolTip.text: modelData
+                                QtControls2.ToolTip.visible: folderDelegate.hovered
+                                QtControls2.ToolTip.delay: 1000
+                                QtControls2.ToolTip.timeout: 5000
                             }
-                            iconName: "list-remove"
-                            onClicked: imageWallpaper.removeSlidePath(modelData);
+                            width: slidePathsView.width
+                            height: paintedHeight;
                         }
                     }
+                }
+                Loader {
+                    sourceComponent: thumbnailsComponent
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    anchors.fill: undefined
+                }
+                QtControls2.Button {
+                    Layout.alignment: Qt.AlignRight
+                    icon.name: "list-add"
+                    text: i18nd("plasma_wallpaper_org.kde.image","Add Folder...")
+                    onClicked: imageWallpaper.showAddSlidePathsDialog()
+                }
+                QtControls2.Button {
+                    Layout.alignment: Qt.AlignRight
+                    icon.name: "get-hot-new-stuff"
+                    text: i18nd("plasma_wallpaper_org.kde.image","Get New Wallpapers...")
+                    visible: KAuthorized.authorize("ghns")
+                    onClicked: imageWallpaper.getNewWallpaper(this);
                 }
             }
         }
@@ -271,12 +311,12 @@ ColumnLayout {
         KCM.GridView {
             id: wallpapersGrid
             anchors.fill: parent
-
+            property var imageModel: (configDialog.currentWallpaper == "org.kde.image")? imageWallpaper.wallpaperModel : imageWallpaper.slideshowModel
             //that min is needed as the module will be populated in an async way
             //and only on demand so we can't ensure it already exists
-            view.currentIndex: Math.min(imageWallpaper.wallpaperModel.indexOf(cfg_Image), imageWallpaper.wallpaperModel.count-1)
+            view.currentIndex: Math.min(imageModel.indexOf(cfg_Image), imageModel.count-1)
             //kill the space for label under thumbnails
-            view.model: imageWallpaper.wallpaperModel
+            view.model: imageModel
             view.delegate: WallpaperDelegate {
                 color: cfg_Color
             }
@@ -307,27 +347,22 @@ ColumnLayout {
 
         Loader {
             anchors.fill: parent
-            sourceComponent: (configDialog.currentWallpaper == "org.kde.image") ? thumbnailsComponent : foldersComponent
+            sourceComponent: (configDialog.currentWallpaper == "org.kde.image") ? thumbnailsComponent :
+                ((configDialog.currentWallpaper == "org.kde.slideshow") ? foldersComponent : undefined)
         }
     }
 
     RowLayout {
         id: buttonsRow
         Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-        QtControls.Button {
-            visible: (configDialog.currentWallpaper == "org.kde.slideshow")
-            iconName: "list-add"
-            text: i18nd("plasma_wallpaper_org.kde.image","Add Folder...")
-            onClicked: imageWallpaper.showAddSlidePathsDialog()
-        }
-        QtControls.Button {
-            visible: (configDialog.currentWallpaper == "org.kde.image")
-            iconName: "list-add"
+        visible: configDialog.currentWallpaper == "org.kde.image"
+        QtControls2.Button {
+            icon.name: "list-add"
             text: i18nd("plasma_wallpaper_org.kde.image","Add Image...")
             onClicked: imageWallpaper.showFileDialog();
         }
-        QtControls.Button {
-            iconName: "get-hot-new-stuff"
+        QtControls2.Button {
+            icon.name: "get-hot-new-stuff"
             text: i18nd("plasma_wallpaper_org.kde.image","Get New Wallpapers...")
             visible: KAuthorized.authorize("ghns")
             onClicked: imageWallpaper.getNewWallpaper(this);

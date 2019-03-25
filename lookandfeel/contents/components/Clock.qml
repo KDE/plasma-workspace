@@ -17,48 +17,34 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.0
+import QtQuick 2.8
 import QtQuick.Layouts 1.1
-import QtGraphicalEffects 1.0
-
+import QtQuick.Controls 2.5
 import org.kde.plasma.core 2.0
-import org.kde.plasma.components 2.0
 
-Item {
-    width: clock.implicitWidth
-    height: clock.implicitHeight
+ColumnLayout {
+    readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
 
-    DropShadow {
-        id: clockShadow
-        anchors.fill: clock
-        source: clock
-        horizontalOffset: 0
-        verticalOffset: 2
-        radius: 14
-        samples: 32
-        spread: 0.3
-        color: ColorScope.backgroundColor
+    Label {
+        text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
+        color: ColorScope.textColor
+        style: softwareRendering ? Text.Outline : Text.Normal
+        styleColor: softwareRendering ? ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
+        font.pointSize: 48
+        Layout.alignment: Qt.AlignHCenter
     }
-
-    ColumnLayout {
-        id: clock
-        Label {
-            text: Qt.formatTime(timeSource.data["Local"]["DateTime"])
-            font.pointSize: 48
-            font.weight: Font.Light
-            Layout.alignment: Qt.AlignHCenter
-        }
-        Label {
-            text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
-            font.pointSize: 24
-            font.weight: Font.Light
-            Layout.alignment: Qt.AlignHCenter
-        }
-        DataSource {
-            id: timeSource
-            engine: "time"
-            connectedSources: ["Local"]
-            interval: 1000
-        }
+    Label {
+        text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.DefaultLocaleLongDate)
+        color: ColorScope.textColor
+        style: softwareRendering ? Text.Outline : Text.Normal
+        styleColor: softwareRendering ? ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
+        font.pointSize: 24
+        Layout.alignment: Qt.AlignHCenter
+    }
+    DataSource {
+        id: timeSource
+        engine: "time"
+        connectedSources: ["Local"]
+        interval: 1000
     }
 }

@@ -18,7 +18,7 @@ Name[gl]=Reprodutor multimedia
 Name[he]=נגן מדיה
 Name[hu]=Médialejátszó
 Name[ia]=Media Player (Reproductor de Media)
-Name[id]=Player Media
+Name[id]=Media Player
 Name[is]=Margmiðlunarspilari
 Name[it]=Lettore multimediale
 Name[ja]=メディアプレーヤー
@@ -89,7 +89,7 @@ Comment[sv]=Kontroller för mediaspelare
 Comment[tr]=Ortam Yürütücüsü Denetimleri
 Comment[uk]=Керування мультимедійним програвачем
 Comment[x-test]=xxMedia Player Controlsxx
-Comment[zh_CN]=控制媒体播放器
+Comment[zh_CN]=媒体播放器控件
 Comment[zh_TW]=媒體播放器控制
 Icon=applications-multimedia
 

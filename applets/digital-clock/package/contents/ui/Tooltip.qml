@@ -50,7 +50,7 @@ Item {
 
         var formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormat);
 
-        if (dateTime.getDay() != dataSource.data["Local"]["DateTime"].getDay()) {
+        if (dateTime.getDay() !== dataSource.data["Local"]["DateTime"].getDay()) {
             formattedTime += " (" + Qt.formatDate(dateTime, compactRepresentationItem.dateFormat) + ")";
         }
 

@@ -37,8 +37,9 @@
 #define TEST_STEP_INTERVAL 2000
 
 /**
- * There are 6 used stages in ksplash
+ * There are 7 used stages in ksplash
  *  - initial
+ *  - kcminit
  *  - kinit
  *  - ksmserver
  *  - wm
@@ -65,6 +66,10 @@ SplashApp::SplashApp(int &argc, char ** argv)
     m_window = parser.isSet(QStringLiteral("window"));
     m_theme = parser.positionalArguments().value(0);
 
+    QDBusConnection dbus = QDBusConnection::sessionBus();
+    dbus.registerObject(QStringLiteral("/KSplash"), this, QDBusConnection::ExportScriptableSlots);
+    dbus.registerService(QStringLiteral("org.kde.KSplash"));
+
     setupWaylandIntegration();
 
     foreach(QScreen* screen, screens())
@@ -85,10 +90,6 @@ SplashApp::SplashApp(int &argc, char ** argv)
     }
 
     connect(this, &QGuiApplication::screenAdded, this, &SplashApp::adoptScreen);
-
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerObject(QStringLiteral("/KSplash"), this, QDBusConnection::ExportScriptableSlots);
-    dbus.registerService(QStringLiteral("org.kde.KSplash"));
 
 }
 
@@ -124,11 +125,10 @@ void SplashApp::setStage(const QString &stage)
 
 void SplashApp::setStage(int stage)
 {
-    if (m_stage == 6) {
+    m_stage = stage;
+    if (m_stage == 7) {
         QGuiApplication::exit(EXIT_SUCCESS);
     }
-
-    m_stage = stage;
     foreach (SplashWindow *w, m_windows) {
         w->setStage(stage);
     }

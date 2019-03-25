@@ -78,8 +78,6 @@ weather condition|Snow Crystals
 weather condition|Snow Grains
 weather condition|Squalls
 weather condition|Sunny
-weather condition|Mainly Sunny
-weather condition|Partly Cloudy
 weather condition|Thunderstorm with Hail
 weather condition|Thunderstorm with Rain
 weather condition|Thunderstorm with Sand or Dust Storm
@@ -161,6 +159,8 @@ weather forecast|Chance of wet snow or rain
 weather forecast|Clear
 weather forecast|Clearing
 weather forecast|Cloudy
+weather forecast|Partly cloudy
+weather forecast|Mainly cloudy
 weather forecast|Cloudy periods
 weather forecast|Cloudy with sunny periods
 weather forecast|Drizzle
@@ -322,7 +322,7 @@ weather forecast|Snow or ice pellets
 weather forecast|Snow or rain
 weather forecast|Snow squalls
 weather forecast|Sunny
-weather forecast|Mainly Sunny
+weather forecast|Mainly sunny
 weather forecast|Sunny with cloudy periods
 weather forecast|Thunderstorms
 weather forecast|Thunderstorms and possible hail

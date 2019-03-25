@@ -106,7 +106,7 @@ AppMenuModule::~AppMenuModule() = default;
 
 void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, const QDBusObjectPath &menuObjectPath)
 {
-#ifdef HAVE_X11
+#if HAVE_X11
     if (KWindowSystem::isPlatformX11()) {
         auto *c = QX11Info::connection();
 

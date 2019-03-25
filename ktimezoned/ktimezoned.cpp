@@ -35,10 +35,7 @@
 #include <KPluginFactory>
 #include <KPluginLoader>
 
-K_PLUGIN_FACTORY_WITH_JSON(KTimeZonedFactory,
-                           "ktimezoned.json",
-                           registerPlugin<KTimeZoned>();
-                          )
+K_PLUGIN_CLASS_WITH_JSON(KTimeZoned, "ktimezoned.json")
 
 const char LOCAL_ZONE[] = "LocalZone";     // name of local time zone
 const char ZONEINFO_DIR[]   = "ZoneinfoDir";   // path to zoneinfo/ directory

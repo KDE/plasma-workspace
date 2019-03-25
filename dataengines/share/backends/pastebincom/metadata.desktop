@@ -112,7 +112,7 @@ Comment[uk]=Уможливлює оприлюднення фрагментів �
 Comment[vi]=Cho phép chia sẻ văn bản qua dịch vụ pastebin.com
 Comment[wa]=Permete li pårtaedje di scrijhaedje e s' siervant do siervice pastebin.com
 Comment[x-test]=xxAllows text to be shared using the pastebin.com servicexx
-Comment[zh_CN]=用 pastebin.com 服务共享文字
+Comment[zh_CN]=用 pastebin.com 服务共享文本
 Comment[zh_TW]=允許使用 pastebin.com 服務分享文字
 Type=Service
 

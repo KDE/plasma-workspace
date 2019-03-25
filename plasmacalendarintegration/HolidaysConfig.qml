@@ -85,7 +85,7 @@ Item {
                 delegate: QtControls.CheckBox {
                     id: checkBox
                     anchors.centerIn: parent
-                    checked: model ? configHelper.selectedRegions.indexOf(model.region) != -1 : false
+                    checked: model ? configHelper.selectedRegions.indexOf(model.region) !== -1 : false
                     activeFocusOnTab: false // only let the TableView as a whole get focus
                     onClicked: {
                         //needed for model's setData to be called

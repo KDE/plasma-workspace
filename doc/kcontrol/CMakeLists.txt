@@ -1,1 +1,2 @@
 ecm_optional_add_subdirectory(screenlocker)
+ecm_optional_add_subdirectory(translations)

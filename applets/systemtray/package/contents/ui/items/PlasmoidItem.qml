@@ -36,10 +36,10 @@ AbstractItem {
     mainItem: applet && applet.toolTipItem ? applet.toolTipItem : null
     textFormat: applet ? applet.toolTipTextFormat : ""
     status: applet ? applet.status : PlasmaCore.Types.UnknownStatus
-    active: root.activeApplet != applet
+    active: root.activeApplet !== applet
 
     onClicked: {
-        if (applet && mouse.button == Qt.LeftButton) {
+        if (applet && mouse.button === Qt.LeftButton) {
             applet.expanded = true;
         }
     }
@@ -71,7 +71,7 @@ AbstractItem {
                 }
                 dialog.visible = true;
 
-            } else if (root.activeApplet == applet) {
+            } else if (root.activeApplet === applet) {
                 if (!applet.parent.hidden) {
                     dialog.visible = false;
                 }

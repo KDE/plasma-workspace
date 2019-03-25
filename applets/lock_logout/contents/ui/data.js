@@ -13,11 +13,11 @@ var data = [{
     icon: "system-shutdown",
     operation: "requestShutDown",
     tooltip_mainText: i18n("Leave..."),
-    tooltip_subText: i18n("Logout, turn off or restart the computer")
+    tooltip_subText: i18n("Log out, turn off or restart the computer")
 }, {
     icon: "system-suspend",
     operation: "suspendToRam",
-    tooltip_mainText: i18n("Suspend"),
+    tooltip_mainText: i18nc("Suspend to RAM", "Sleep"),
     tooltip_subText: i18n("Sleep (suspend to RAM)"),
     requires: "Suspend"
 }, {

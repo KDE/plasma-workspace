@@ -170,7 +170,7 @@ void SwitchWindow::makeMenu()
         const QStringList &desktopNames = m_virtualDesktopInfo->desktopNames();
 
         if (m_mode == AllFlat) {
-            for (int i = 0; i <= desktopIds.count(); ++i) {
+            for (int i = 0; i < desktopIds.count(); ++i) {
                 const QVariant &desktop = desktopIds.at(i);
 
                 if (desktops.contains(desktop)) {
@@ -189,7 +189,7 @@ void SwitchWindow::makeMenu()
                 m_actions << allDesktops;
             }
         } else { // Submenus.
-            for (int i = 0; i <= desktopIds.count(); ++i) {
+            for (int i = 0; i < desktopIds.count(); ++i) {
                 const QVariant &desktop = desktopIds.at(i);
 
                 if (desktops.contains(desktop)) {

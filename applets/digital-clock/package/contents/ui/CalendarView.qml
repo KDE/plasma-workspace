@@ -201,14 +201,14 @@ Item {
                         }
 
                         // Non-explicit all-day event
-                        var startIsMidnight = modelData.startDateTime.getHours() == 0
-                                           && modelData.startDateTime.getMinutes() == 0;
+                        var startIsMidnight = modelData.startDateTime.getHours() === 0
+                                           && modelData.startDateTime.getMinutes() === 0;
 
-                        var endIsMidnight = modelData.endDateTime.getHours() == 0
-                                         && modelData.endDateTime.getMinutes() == 0;
+                        var endIsMidnight = modelData.endDateTime.getHours() === 0
+                                         && modelData.endDateTime.getMinutes() === 0;
 
-                        var sameDay = modelData.startDateTime.getDate() == modelData.endDateTime.getDate()
-                                   && modelData.startDateTime.getDay() == modelData.endDateTime.getDay()
+                        var sameDay = modelData.startDateTime.getDate() === modelData.endDateTime.getDate()
+                                   && modelData.startDateTime.getDay() === modelData.endDateTime.getDay()
 
                         if (startIsMidnight && endIsMidnight && sameDay) {
                             return false

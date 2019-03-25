@@ -57,7 +57,7 @@ Item {
         var found = false;
         for (var i = 0; i < sourcesModel.count; ++i) {
             var obj = sourcesModel.get(i);
-            if (obj.source == source) {
+            if (obj.source === source) {
                 found = true;
                 break;
             }
@@ -82,7 +82,7 @@ Item {
         onSourceRemoved: {
             for (var i = sourcesModel.count - 1; i >= 0; --i) {
                 var obj = sourcesModel.get(i);
-                if (obj.source == source) {
+                if (obj.source === source) {
                     sourcesModel.remove(i);
                 }
             }

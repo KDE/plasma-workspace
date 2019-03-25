@@ -96,7 +96,7 @@ Item {
                 onCheckedChanged: {
                     var index = cfg_extraItems.indexOf(plugin);
                     if (checked) {
-                        if (index == -1) {
+                        if (index === -1) {
                             cfg_extraItems.push(plugin);
                         }
                     } else {

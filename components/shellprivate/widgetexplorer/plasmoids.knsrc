@@ -15,7 +15,7 @@ Name[fr]=Composants graphiques Plasma
 Name[gl]=Trebellos de Plasma
 Name[he]=יישומוני Plasma
 Name[hu]=Plasma widgetek
-Name[id]=Widget Plasma
+Name[id]=Plasma Widgets
 Name[it]=Oggetti di Plasma
 Name[ko]=Plasma 위젯
 Name[lt]=„Plasma“ valdikliai
@@ -36,7 +36,7 @@ Name[sv]=Plasma grafiska komponenter
 Name[tr]=Plasma Gereçleri
 Name[uk]=Віджети Плазми
 Name[x-test]=xxPlasma Widgetsxx
-Name[zh_CN]=Plasma 部件
+Name[zh_CN]=Plasma 小部件
 Name[zh_TW]=Plasma 元件
 
 ProvidersUrl=https://download.kde.org/ocs/providers.xml

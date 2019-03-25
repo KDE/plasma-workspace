@@ -102,6 +102,7 @@ public:
      * Adds a filter to the model
      * @param caption The localized string to be displayed as a name of the filter
      * @param filter The filter structure
+     * @param icon The filter icon
      */
     void addFilter(const QString &caption, const Filter &filter, const QIcon &icon = QIcon());
 
