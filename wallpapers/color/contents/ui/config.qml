@@ -18,27 +18,18 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls
 import org.kde.kquickcontrols 2.0 as KQuickControls
-//We need units from it
-import org.kde.plasma.core 2.0 as Plasmacore
+import org.kde.kirigami 2.5 as Kirigami
 
-Column {
+Kirigami.FormLayout {
     id: root
+    twinFormLayouts: parentLayout
+
     property alias cfg_Color: colorButton.color
 
-    Row {
-        spacing: units.largeSpacing / 2
-
-        QtControls.Label {
-            width: formAlignment - units.largeSpacing
-            anchors.verticalCenter: colorButton.verticalCenter
-            horizontalAlignment: Text.AlignRight
-            text: i18nd("plasma_wallpaper_org.kde.color", "Color:")
-        }
-        KQuickControls.ColorButton {
-            id: colorButton
-            dialogTitle: i18nd("plasma_wallpaper_org.kde.color", "Select Background Color")
-        }
+    KQuickControls.ColorButton {
+        id: colorButton
+        Kirigami.FormData.label: i18nd("plasma_wallpaper_org.kde.color", "Color:")
+        dialogTitle: i18nd("plasma_wallpaper_org.kde.color", "Select Background Color")
     }
 }
