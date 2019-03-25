@@ -40,8 +40,6 @@ public:
 
     void setEnabledBorders(const QWindow *window, Plasma::FrameSvg::EnabledBorders enabledBorders = Plasma::FrameSvg::AllBorders);
 
-    bool enabled() const;
-
 private:
     class Private;
     Private * const d;

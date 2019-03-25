@@ -77,6 +77,7 @@ public:
     void updateShadows();
     void windowDestroyed(QObject *deletedObject);
     void setupData(Plasma::FrameSvg::EnabledBorders enabledBorders);
+    bool hasShadows() const;
 
     void setupWaylandIntegration();
 
@@ -191,10 +192,19 @@ void PanelShadows::Private::windowDestroyed(QObject *deletedObject)
 
 void PanelShadows::Private::updateShadows()
 {
-    setupPixmaps();
-    QHash<const QWindow *, Plasma::FrameSvg::EnabledBorders>::const_iterator i;
-    for (i = m_windows.constBegin(); i != m_windows.constEnd(); ++i) {
-        updateShadow(i.key(), i.value());
+    // has shadows now?
+    if (hasShadows()) {
+        for (auto i = m_windows.constBegin(); i != m_windows.constEnd(); ++i) {
+            updateShadow(i.key(), i.value());
+        }
+    } else {
+        const bool hadShadowsBefore = !m_shadowPixmaps.isEmpty();
+        if (hadShadowsBefore) {
+            for (auto i = m_windows.constBegin(); i != m_windows.constEnd(); ++i) {
+                clearShadow(i.key());
+            }
+            clearPixmaps();
+        }
     }
 }
 
@@ -508,6 +518,10 @@ void PanelShadows::Private::freeWaylandBuffers()
 
 void PanelShadows::Private::updateShadow(const QWindow *window, Plasma::FrameSvg::EnabledBorders enabledBorders)
 {
+    if (!hasShadows()) {
+        return;
+    }
+
 #if HAVE_X11
     if (m_isX11) {
         updateShadowX11(window, enabledBorders);
@@ -675,9 +689,9 @@ void PanelShadows::Private::clearShadowWayland(const QWindow *window)
     surface->commit(KWayland::Client::Surface::CommitFlag::None);
 }
 
-bool PanelShadows::enabled() const
+bool PanelShadows::Private::hasShadows() const
 {
-     return hasElement(QStringLiteral("shadow-left"));
+     return q->hasElement(QStringLiteral("shadow-left"));
 }
 
 void PanelShadows::Private::setupWaylandIntegration()
