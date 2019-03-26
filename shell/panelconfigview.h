@@ -79,7 +79,7 @@ protected Q_SLOTS:
     void syncLocation();
 
 private Q_SLOTS:
-    void updateContrast();
+    void updateBlurBehindAndContrast();
 
 Q_SIGNALS:
     void visibilityModeChanged();
