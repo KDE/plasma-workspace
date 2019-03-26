@@ -77,6 +77,8 @@ public:
     QImage image() const;
     void setImage(const QImage &image);
 
+    QString desktopEntry() const;
+
     QString applicationName() const;
     void setApplicationName(const QString &applicationName);
 

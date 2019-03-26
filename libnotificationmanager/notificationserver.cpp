@@ -44,7 +44,7 @@ NotificationServer &NotificationServer::self()
 
 bool NotificationServer::isValid() const
 {
-    return d->valid;
+    return d->m_valid;
 }
 
 void NotificationServer::closeNotification(uint notificationId, CloseReason reason)

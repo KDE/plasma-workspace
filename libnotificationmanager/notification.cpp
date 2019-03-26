@@ -218,7 +218,7 @@ void Notification::Private::processHints(const QVariantMap &hints)
 {
     auto end = hints.end();
 
-    const QString desktopEntry = hints.value(QStringLiteral("desktop-entry")).toString();
+    desktopEntry = hints.value(QStringLiteral("desktop-entry")).toString();
     if (!desktopEntry.isEmpty()) {
         KService::Ptr service = KService::serviceByStorageId(desktopEntry);
         if (service) {
@@ -404,6 +404,11 @@ QImage Notification::image() const
 void Notification::setImage(const QImage &image)
 {
     d->image = image;
+}
+
+QString Notification::desktopEntry() const
+{
+    return d->desktopEntry;
 }
 
 QString Notification::applicationName() const

@@ -23,6 +23,15 @@
 #include <QObject>
 #include <QDBusContext>
 
+class QDBusServiceWatcher;
+
+struct Inhibition
+{
+    QString desktopEntry;
+    QString reason;
+    QVariantMap hints;
+};
+
 namespace NotificationManager
 {
 
@@ -31,6 +40,10 @@ class NotificatonServer;
 class Q_DECL_HIDDEN NotificationServerPrivate : public QObject, protected QDBusContext
 {
     Q_OBJECT
+
+    // DBus
+    // Inhibitions
+    Q_PROPERTY(bool Inhibited READ inhibited NOTIFY inhibitedChanged)
 
 public:
     NotificationServerPrivate(QObject *parent);
@@ -44,14 +57,34 @@ public:
     QStringList GetCapabilities() const;
     QString GetServerInformation(QString &vendor, QString &version, QString &specVersion) const;
 
+    // Inhibitions
+    uint Inhibit(const QString &desktop_entry,
+                 const QString &reason,
+                 const QVariantMap &hints);
+    void UnInhibit(uint cookie);
+    QList<Inhibition> ListInhibitors() const;
+    bool inhibited() const; // property getter
+
 Q_SIGNALS:
     // DBus
     void NotificationClosed(uint id, uint reason);
     void ActionInvoked(uint id, const QString &actionKey);
 
-public:
-    int highestNotificationId = 0;
-    bool valid = false;
+    // FIXME connect this to properties changed dbus signal
+    void inhibitedChanged();
+
+public: // stuff used by public class
+    bool m_valid = false;
+
+private:
+    void onServiceUnregistered(const QString &serviceName);
+
+    uint m_highestNotificationId = 0;
+
+    QDBusServiceWatcher *m_inhibitionWatcher = nullptr;
+    uint m_highestInhibitionCookie = 0;
+    QHash<uint /*cookie*/, Inhibition> m_inhibitions;
+    QHash<uint /*cookie*/, QString> m_inhibitionServices;
 
 };
 

@@ -19,8 +19,6 @@ set(notificationmanager_LIB_SRCS
     notificationgroupingproxymodel.cpp
     limitedrowcountproxymodel.cpp
 
-    inhibitionserver.cpp
-
     settings.cpp
 )
 
@@ -36,8 +34,7 @@ kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/jobsettings.kcfgc)
 kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/badgesettings.kcfgc)
 
 # DBus
-qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.freedesktop.Notifications.xml notificationserver_p.h NotificationManager::NotificationServerPrivate fdonotificationsadaptor)
-qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.Notifications.xml inhibitionserver.h NotificationManager::InhibitionServer kdenotificationsadaptor InhibitionAdaptor)
+qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.freedesktop.Notifications.xml notificationserver_p.h NotificationManager::NotificationServerPrivate)
 
 add_library(notificationmanager ${notificationmanager_LIB_SRCS})
 add_library(PW::LibNotificationManager ALIAS notificationmanager)

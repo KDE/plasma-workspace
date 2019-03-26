@@ -65,6 +65,14 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
 
     Q_PROPERTY(bool badgesInTaskManager READ badgesInTaskManager WRITE setBadgesInTaskManager NOTIFY settingsChanged)
 
+    /**
+     * A list of desktop entries of applications that have been seen sending a notification.
+     */
+    Q_PROPERTY(QStringList knownApplications READ knownApplications NOTIFY knownApplicationsChanged)
+
+    // TODO check how heavy this is
+    Q_PROPERTY(QStringList popupBlacklistedApplications READ popupBlacklistedApplications NOTIFY settingsChanged)
+
     Q_PROPERTY(bool dirty READ dirty NOTIFY dirtyChanged)
 
 public:
@@ -97,6 +105,8 @@ public:
 
     Q_INVOKABLE NotificationBehaviors serviceBehavior(const QString &desktopEntry) const;
     Q_INVOKABLE void setServiceBehavior(const QString &desktopEntry, NotificationBehaviors behaviors);
+
+    Q_INVOKABLE void registerKnownApplication(const QString &desktopEntry);
 
     Q_INVOKABLE void load();
     Q_INVOKABLE void save();
@@ -132,8 +142,14 @@ public:
     bool badgesInTaskManager() const;
     void setBadgesInTaskManager(bool enable);
 
+    QStringList knownApplications() const;
+
+    QStringList popupBlacklistedApplications() const;
+
 signals:
     void settingsChanged();
+
+    void knownApplicationsChanged();
 
     void dirtyChanged();
 

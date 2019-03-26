@@ -72,6 +72,11 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
     Q_PROPERTY(bool showDismissed READ showDismissed WRITE setShowDismissed NOTIFY showDismissedChanged)
 
     /**
+     * A list of desktop entries for which no notifications should be shown.
+     */
+    Q_PROPERTY(QStringList blacklistedDesktopEntries READ blacklistedDesktopEntries WRITE setBlacklistedDesktopEntries NOTIFY blacklistedDesktopEntriesChanged)
+
+    /**
      * Whether to show suppressed notifications.
      *
      * Supressed notifications are those that should not be shown to the user owing to
@@ -127,7 +132,8 @@ public:
         BodyRole = Qt::UserRole + 6,
         IconNameRole = Qt::UserRole + 7,
         ImageRole = Qt::DecorationRole,
-        ApplicationNameRole = Qt::UserRole + 8,
+        DesktopEntryRole = Qt::UserRole + 8,
+        ApplicationNameRole,
         ApplicationIconNameRole,
 
         // Jobs
@@ -215,6 +221,9 @@ public:
     bool showDismissed() const;
     void setShowDismissed(bool show);
 
+    QStringList blacklistedDesktopEntries() const;
+    void setBlacklistedDesktopEntries(const QStringList &blacklistedDesktopEntries);
+
     bool showSuppressed() const;
     void setShowSuppressed(bool show);
 
@@ -259,6 +268,7 @@ signals:
     void limitChanged();
     void showExpiredChanged();
     void showDismissedChanged();
+    void blacklistedDesktopEntriesChanged();
     void showSuppressedChanged();
     void showJobsChanged();
     void urgenciesChanged();

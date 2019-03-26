@@ -203,6 +203,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
             return notification.image();
         }
         break;
+    case Notifications::DesktopEntryRole: return notification.desktopEntry();
     case Notifications::ApplicationNameRole: return notification.applicationName();
     case Notifications::ApplicationIconNameRole: return notification.applicationIconName();
 

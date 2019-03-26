@@ -29,6 +29,8 @@ import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
+import ".."
+
 QtObject {
     id: popupHandler
 
@@ -78,6 +80,7 @@ QtObject {
         limit: Math.ceil(popupHandler.screenRect.height / (theme.mSize(theme.defaultFont).height * 4))
         showExpired: false
         showDismissed: false
+        blacklistedDesktopEntries: notificationSettings.popupBlacklistedApplications
         showJobs: notificationSettings.jobsInNotifications
         groupMode: NotificationManager.Notifications.GroupDisabled
         urgencies: NotificationManager.Notifications.NormalUrgency | NotificationManager.Notifications.CriticalUrgency
@@ -212,6 +215,13 @@ QtObject {
 
             onHeightChanged: Qt.callLater(positionPopups)
             onWidthChanged: Qt.callLater(positionPopups)
+
+            Component.onCompleted: {
+                // Register apps that were seen spawning a popup so they can be configured later
+                if (model.desktopEntry) {
+                    notificationSettings.registerKnownApplication(model.desktopEntry);
+                }
+            }
         }
         onObjectAdded: {
             // also needed for it to correctly layout its contents

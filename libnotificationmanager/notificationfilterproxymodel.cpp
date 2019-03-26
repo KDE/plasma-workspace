@@ -72,6 +72,20 @@ void NotificationFilterProxyModel::setShowDismissed(bool show)
     }
 }
 
+QStringList NotificationFilterProxyModel::blacklistedDesktopEntries() const
+{
+    return m_blacklistedDesktopEntries;
+}
+
+void NotificationFilterProxyModel::setBlackListedDesktopEntries(const QStringList &blacklistedDesktopEntries)
+{
+    if (m_blacklistedDesktopEntries != blacklistedDesktopEntries) {
+        m_blacklistedDesktopEntries = blacklistedDesktopEntries;
+        invalidateFilter();
+        emit blacklistedDesktopEntriesChanged();
+    }
+}
+
 bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     const QModelIndex sourceIdx = sourceModel()->index(source_row, 0, source_parent);
@@ -104,6 +118,15 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
                 return false;
             }
             break;
+        }
+    }
+
+    if (!m_blacklistedDesktopEntries.isEmpty()) {
+        const QString desktopEntry = sourceIdx.data(Notifications::DesktopEntryRole).toString();
+        if (!desktopEntry.isEmpty()) {
+            if (m_blacklistedDesktopEntries.contains(desktopEntry)) {
+                return false;
+            }
         }
     }
 

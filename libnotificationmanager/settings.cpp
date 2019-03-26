@@ -23,6 +23,9 @@
 #include <QDebug>
 
 #include <KConfigWatcher>
+#include <KService>
+
+#include "debug.h"
 
 // Settings
 #include "donotdisturbsettings.h"
@@ -86,9 +89,23 @@ void Settings::Private::setGroupBehavior(KConfigGroup &group, const Settings::No
         return;
     }
 
-    group.writeEntry("ShowPopups", behavior.testFlag(Settings::ShowPopups));
-    group.writeEntry("ShowPopupsInDndMode", behavior.testFlag(Settings::ShowPopupsInDoNotDisturbMode));
-    group.writeEntry("ShowBadges", behavior.testFlag(Settings::ShowBadges));
+    if (behavior.testFlag(Settings::ShowPopups)) {
+        group.revertToDefault("ShowPopups", KConfigBase::Notify);
+    } else {
+        group.writeEntry("ShowPopups", false, KConfigBase::Notify);
+    }
+
+    if (behavior.testFlag(Settings::ShowPopupsInDoNotDisturbMode)) {
+        group.writeEntry("ShowPopupsInDndMode", true, KConfigBase::Notify);
+    } else {
+        group.revertToDefault("ShowPopupsInDndMode", KConfigBase::Notify);
+    }
+
+    if (behavior.testFlag(Settings::ShowBadges)) {
+        group.revertToDefault("ShowBadges", KConfigBase::Notify);
+    } else {
+        group.writeEntry("ShowBadges", false, KConfigBase::Notify);
+    }
 
     setDirty(true);
 }
@@ -178,6 +195,26 @@ void Settings::setServiceBehavior(const QString &notifyRcName, NotificationBehav
     d->setGroupBehavior(group, behaviors);
 }
 
+void Settings::registerKnownApplication(const QString &desktopEntry)
+{
+    KService::Ptr service = KService::serviceByDesktopName(desktopEntry);
+    if (!service) {
+        qCDebug(NOTIFICATIONMANAGER) << "Application" << desktopEntry << "cannot be registered as seen application since there is no service for it";
+        return;
+    }
+
+    if (knownApplications().contains(desktopEntry)) {
+        return;
+    }
+
+    // have to write something...
+    d->applicatonsGroup().group(desktopEntry).writeEntry("Seen", true);
+
+    // TODO don't sync right away?
+    d->config->sync();
+
+    emit knownApplicationsChanged();
+}
 
 void Settings::load()
 {
@@ -343,4 +380,23 @@ void Settings::setBadgesInTaskManager(bool enable)
     }
     BadgeSettings::setInTaskManager(enable);
     d->setDirty(true);
+}
+
+QStringList Settings::knownApplications() const
+{
+    return d->applicatonsGroup().groupList();
+}
+
+QStringList Settings::popupBlacklistedApplications() const
+{
+    QStringList blacklist;
+
+    const QStringList apps = knownApplications();
+    for (const QString &app : apps) {
+        if (!d->groupBehavior(d->applicatonsGroup().group(app)).testFlag(ShowPopups)) {
+            blacklist.append(app);
+        }
+    }
+
+    return blacklist;
 }

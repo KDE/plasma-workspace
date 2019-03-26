@@ -22,7 +22,7 @@
 
 #include "debug.h"
 
-#include "fdonotificationsadaptor.h"
+#include "notificationsadaptor.h"
 
 #include "notification.h"
 #include "notification_p.h"
@@ -30,11 +30,13 @@
 #include "notificationserver.h"
 
 #include <QDBusConnection>
+#include <QDBusServiceWatcher>
 
 using namespace NotificationManager;
 
 NotificationServerPrivate::NotificationServerPrivate(QObject *parent)
     : QObject(parent)
+    , m_inhibitionWatcher(new QDBusServiceWatcher(this))
 {
     new NotificationsAdaptor(this);
 
@@ -48,8 +50,12 @@ NotificationServerPrivate::NotificationServerPrivate(QObject *parent)
         return;
     }
 
-    qCInfo(NOTIFICATIONMANAGER) << "Registered Notification service on DBus";
-    valid = true;
+    m_inhibitionWatcher->setConnection(QDBusConnection::sessionBus());
+    m_inhibitionWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
+    connect(m_inhibitionWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &NotificationServerPrivate::onServiceUnregistered);
+
+    qCDebug(NOTIFICATIONMANAGER) << "Registered Notification service on DBus";
+    m_valid = true;
 }
 
 NotificationServerPrivate::~NotificationServerPrivate() = default;
@@ -58,16 +64,14 @@ uint NotificationServerPrivate::Notify(const QString &app_name, uint replaces_id
                                        const QString &summary, const QString &body, const QStringList &actions,
                                        const QVariantMap &hints, int timeout)
 {
-    Q_ASSERT(calledFromDBus());
-
     const bool wasReplaced = replaces_id > 0;
     int notificationId = 0;
     if (wasReplaced) {
         notificationId = replaces_id;
     } else {
         // TODO according to spec should wrap around once INT_MAX is exceeded
-        ++highestNotificationId;
-        notificationId = highestNotificationId;
+        ++m_highestNotificationId;
+        notificationId = m_highestNotificationId;
     }
 
     Notification notification(notificationId);
@@ -113,7 +117,9 @@ QStringList NotificationServerPrivate::GetCapabilities() const
         // should we support "persistence" where notification stays present with "resident"
         // but that is basically an SNI isn't it?
 
-        QStringLiteral("x-kde-urls")
+        QStringLiteral("x-kde-urls"),
+
+        QStringLiteral("inhibitions")
     };
 }
 
@@ -123,4 +129,77 @@ QString NotificationServerPrivate::GetServerInformation(QString &vendor, QString
     version = QLatin1String(PROJECT_VERSION);
     specVersion = QStringLiteral("1.2");
     return QStringLiteral("Plasma");
+}
+
+uint NotificationServerPrivate::Inhibit(const QString &desktop_entry, const QString &reason, const QVariantMap &hints)
+{
+    const QString service = message().service();
+
+    qCDebug(NOTIFICATIONMANAGER) << "Request inhibit from service" << service << "which is" << desktop_entry << "with reason" << reason;
+
+    // should we check for this and/or if it's actually a valid service?
+    if (desktop_entry.isEmpty()) {
+        // TODO return error
+        return 0;
+    }
+
+    m_inhibitionWatcher->addWatchedService(service);
+
+    ++m_highestInhibitionCookie;
+
+    m_inhibitions.insert(m_highestInhibitionCookie, {
+        desktop_entry,
+        reason,
+        hints
+    });
+
+    m_inhibitionServices.insert(m_highestInhibitionCookie, service);
+
+    emit inhibitedChanged();
+
+    return m_highestInhibitionCookie;
+}
+
+void NotificationServerPrivate::onServiceUnregistered(const QString &serviceName)
+{
+    qCDebug(NOTIFICATIONMANAGER) << "Inhibition service unregistered" << serviceName;
+
+    const uint cookie = m_inhibitionServices.key(serviceName);
+    if (!cookie) {
+        qCInfo(NOTIFICATIONMANAGER) << "Unknown inhibition service unregistered" << serviceName;
+        return;
+    }
+
+    // We do lookups in there again...
+    UnInhibit(cookie);
+}
+
+void NotificationServerPrivate::UnInhibit(uint cookie)
+{
+    qCDebug(NOTIFICATIONMANAGER) << "Request release inhibition for cookie" << cookie;
+
+    const QString service = m_inhibitionServices.value(cookie);
+    if (service.isEmpty()) {
+        qCInfo(NOTIFICATIONMANAGER) << "Requested to release inhibition with cookie" << cookie << "that doesn't exist";
+        // TODO if called from dbus raise error
+        return;
+    }
+
+    m_inhibitionWatcher->removeWatchedService(service);
+    m_inhibitions.remove(cookie);
+    m_inhibitionServices.remove(cookie);
+
+    if (m_inhibitions.isEmpty()) {
+        emit inhibitedChanged();
+    }
+}
+
+QList<Inhibition> NotificationServerPrivate::ListInhibitors() const
+{
+    return {};
+}
+
+bool NotificationServerPrivate::inhibited() const
+{
+    return !m_inhibitions.isEmpty();
 }

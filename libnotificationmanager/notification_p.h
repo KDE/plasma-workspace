@@ -57,6 +57,7 @@ public:
     QImage image;
 
     QString applicationName;
+    QString desktopEntry;
     QString serviceName;
     QString applicationIconName;
 

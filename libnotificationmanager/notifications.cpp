@@ -106,6 +106,7 @@ void Notifications::Private::initModels()
         connect(filterModel, &NotificationFilterProxyModel::urgenciesChanged, q, &Notifications::urgenciesChanged);
         connect(filterModel, &NotificationFilterProxyModel::showExpiredChanged, q, &Notifications::showExpiredChanged);
         connect(filterModel, &NotificationFilterProxyModel::showDismissedChanged, q, &Notifications::showDismissedChanged);
+        connect(filterModel, &NotificationFilterProxyModel::blacklistedDesktopEntriesChanged, q, &Notifications::blacklistedDesktopEntriesChanged);
         filterModel->setSourceModel(notificationsAndJobsModel);
     }
 
@@ -288,6 +289,16 @@ bool Notifications::showDismissed() const
 void Notifications::setShowDismissed(bool show)
 {
     d->filterModel->setShowDismissed(show);
+}
+
+QStringList Notifications::blacklistedDesktopEntries() const
+{
+    return d->filterModel->blacklistedDesktopEntries();
+}
+
+void Notifications::setBlacklistedDesktopEntries(const QStringList &blacklistedDesktopEntries)
+{
+    d->filterModel->setBlackListedDesktopEntries(blacklistedDesktopEntries);
 }
 
 bool Notifications::showSuppressed() const
@@ -484,6 +495,7 @@ QHash<int, QByteArray> Notifications::roleNames() const
         {BodyRole, QByteArrayLiteral("body")},
         {IconNameRole, QByteArrayLiteral("iconName")},
         {ImageRole, QByteArrayLiteral("image")},
+        {DesktopEntryRole, QByteArrayLiteral("desktopEntry")},
         {ApplicationNameRole, QByteArrayLiteral("applicationName")},
         {ApplicationIconNameRole, QByteArrayLiteral("applicationIconName")},
 
