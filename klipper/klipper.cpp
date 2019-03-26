@@ -608,7 +608,7 @@ HistoryItemPtr Klipper::applyClipChanges( const QMimeData* clipData )
     if (clipData->data(QStringLiteral("x-kde-passwordManagerHint")) == QByteArrayLiteral("secret")) {
         saveHistory = false;
     }
-    if (clipdata->hasImage() && m_bIgnoreImages) {
+    if (clipData->hasImage() && m_bIgnoreImages) {
         saveHistory = false;
     }
 
