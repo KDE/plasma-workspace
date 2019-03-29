@@ -93,6 +93,34 @@ Item {
         PlasmaCore.Svg {
             id: clockSvg
             imagePath: "widgets/clock"
+            function estimateHorizontalHandShadowOffset() {
+                var id = "hint-hands-shadow-offset-to-west";
+                if (hasElement(id)) {
+                    return -elementSize(id).width;
+                }
+                id = "hint-hands-shadows-offset-to-east";
+                if (hasElement(id)) {
+                    return elementSize(id).width;
+                }
+                return 0;
+            }
+            function estimateVerticalHandShadowOffset() {
+                var id = "hint-hands-shadow-offset-to-north";
+                if (hasElement(id)) {
+                    return -elementSize(id).height;
+                }
+                id = "hint-hands-shadow-offset-to-south";
+                if (hasElement(id)) {
+                    return elementSize(id).height;
+                }
+                return 0;
+            }
+            property double naturalHorizontalHandShadowOffset: estimateHorizontalHandShadowOffset()
+            property double naturalVerticalHandShadowOffset: estimateVerticalHandShadowOffset()
+            onRepaintNeeded: {
+                naturalHorizontalHandShadowOffset = estimateHorizontalHandShadowOffset();
+                naturalVerticalHandShadowOffset = estimateVerticalHandShadowOffset();
+            }
         }
 
         Item {
@@ -102,6 +130,11 @@ Item {
                 top: parent.top
                 bottom: showTimezone ? timezoneBg.top : parent.bottom
             }
+            readonly property double svgScale: face.width / face.naturalSize.width
+            readonly property double horizontalShadowOffset:
+                Math.round(clockSvg.naturalHorizontalHandShadowOffset * svgScale) + Math.round(clockSvg.naturalHorizontalHandShadowOffset * svgScale) % 2
+            readonly property double verticalShadowOffset:
+                Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) + Math.round(clockSvg.naturalVerticalHandShadowOffset * svgScale) % 2
 
             PlasmaCore.SvgItem {
                 id: face
@@ -113,48 +146,57 @@ Item {
             }
 
             Hand {
-                anchors.topMargin: -6
                 elementId: "HourHandShadow"
+                rotationCenterHintId: "hint-hourhandshadow-rotation-center-offset"
+                horizontalRotationOffset: clock.horizontalShadowOffset
+                verticalRotationOffset: clock.verticalShadowOffset
                 rotation: 180 + hours * 30 + (minutes/2)
-                svgScale: face.width / face.naturalSize.width
+                svgScale: clock.svgScale
 
             }
             Hand {
                 elementId: "HourHand"
+                rotationCenterHintId: "hint-hourhand-rotation-center-offset"
                 rotation: 180 + hours * 30 + (minutes/2)
-                svgScale: face.width / face.naturalSize.width
+                svgScale: clock.svgScale
             }
 
             Hand {
-                anchors.topMargin: 3
                 elementId: "MinuteHandShadow"
+                rotationCenterHintId: "hint-minutehandshadow-rotation-center-offset"
+                horizontalRotationOffset: clock.horizontalShadowOffset
+                verticalRotationOffset: clock.verticalShadowOffset
                 rotation: 180 + minutes * 6
-                svgScale: face.width / face.naturalSize.width
+                svgScale: clock.svgScale
             }
             Hand {
                 elementId: "MinuteHand"
+                rotationCenterHintId: "hint-minutehand-rotation-center-offset"
                 rotation: 180 + minutes * 6
-                svgScale: face.width / face.naturalSize.width
+                svgScale: clock.svgScale
             }
 
             Hand {
-                anchors.topMargin: 2
                 elementId: "SecondHandShadow"
+                rotationCenterHintId: "hint-secondhandshadow-rotation-center-offset"
+                horizontalRotationOffset: clock.horizontalShadowOffset
+                verticalRotationOffset: clock.verticalShadowOffset
                 rotation: 180 + seconds * 6
                 visible: showSecondsHand
-                svgScale: face.width / face.naturalSize.width
+                svgScale: clock.svgScale
             }
             Hand {
                 elementId: "SecondHand"
+                rotationCenterHintId: "hint-secondhand-rotation-center-offset"
                 rotation: 180 + seconds * 6
                 visible: showSecondsHand
-                svgScale: face.width / face.naturalSize.width
+                svgScale: clock.svgScale
             }
 
             PlasmaCore.SvgItem {
                 id: center
-                width: naturalSize.width * face.width / face.naturalSize.width
-                height: naturalSize.height * face.width / face.naturalSize.width
+                width: naturalSize.width * clock.svgScale
+                height: naturalSize.height * clock.svgScale
                 anchors.centerIn: clock
                 svg: clockSvg
                 elementId: "HandCenterScrew"
@@ -165,8 +207,8 @@ Item {
                 anchors.fill: face
                 svg: clockSvg
                 elementId: "Glass"
-                width: naturalSize.width * face.width / face.naturalSize.width
-                height: naturalSize.height * face.width / face.naturalSize.width
+                width: naturalSize.width * clock.svgScale
+                height: naturalSize.height * clock.svgScale
             }
         }
 
