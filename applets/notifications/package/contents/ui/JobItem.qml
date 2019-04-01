@@ -27,7 +27,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
-import org.kde.plasma.private.notificationsng 2.0 as Notifications // FIXME
+import org.kde.plasma.private.notifications 2.0 as Notifications
 
 ColumnLayout {
     id: jobItem

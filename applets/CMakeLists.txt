@@ -18,6 +18,5 @@ if(NOT WIN32)
 #    #notifications
 #    #should compile also on windows? (even if doesn't really make sense)
     add_subdirectory(notifications)
-    add_subdirectory(newnotifications)
     add_subdirectory(systemtray)
 endif()

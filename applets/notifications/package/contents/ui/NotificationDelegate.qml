@@ -1,167 +1,101 @@
 /*
- *   Copyright 2011 Marco Martin <notmart@gmail.com>
+ * Copyright 2018 Kai Uwe Broulik <kde@privat.broulik.de>
  *
- *   This program is free software; you can redistribute it and/or modify
- *   it under the terms of the GNU Library General Public License as
- *   published by the Free Software Foundation; either version 2, or
- *   (at your option) any later version.
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License or (at your option) version 3 or any later version
+ * accepted by the membership of KDE e.V. (or its successor approved
+ * by the membership of KDE e.V.), which shall act as a proxy
+ * defined in Section 14 of version 3 of the license.
  *
- *   This program is distributed in the hope that it will be useful,
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *   GNU Library General Public License for more details
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- *   You should have received a copy of the GNU Library General Public
- *   License along with this program; if not, write to the
- *   Free Software Foundation, Inc.,
- *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-import QtQuick 2.0
-import QtQuick.Controls.Private 1.0
+import QtQuick 2.8
+import QtQuick.Layouts 1.1
+
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kquickcontrolsaddons 2.0
 
-PlasmaComponents.ListItem {
-    id: notificationItem
-    width: historyList.width
-    
-    property ListModel listModel;
+ColumnLayout {
+    id: delegate
 
-    opacity: 1-Math.abs(x)/width
+    property alias notificationType: notificationItem.notificationType
 
-    enabled: model.hasDefaultAction
-    checked: notificationItem.containsMouse
+    property alias headerVisible: notificationItem.headerVisible
 
-    Timer {
-        interval: 10*60*1000
-        repeat: false
-        running: !idleTimeSource.idle
-        onTriggered: {
-            if (!listModel.inserting)
-                listModel.remove(index)
-        }
+    property alias applicationName: notificationItem.applicationName
+    property alias applicatonIconSource: notificationItem.applicationIconSource
+    property alias deviceName: notificationItem.deviceName
+
+    property alias time: notificationItem.time
+
+    property alias summary: notificationItem.summary
+    property alias body: notificationItem.body
+    property alias icon: notificationItem.icon
+    property alias urls: notificationItem.urls
+
+    property alias jobState: notificationItem.jobState
+    property alias percentage: notificationItem.percentage
+    property alias error: notificationItem.error
+    property alias errorText: notificationItem.errorText
+    property alias suspendable: notificationItem.suspendable
+    property alias killable: notificationItem.killable
+    property alias jobDetails: notificationItem.jobDetails
+
+    property alias configureActionLabel: notificationItem.configureActionLabel
+    property alias configurable: notificationItem.configurable
+    property alias dismissable: notificationItem.dismissable
+    property alias closable: notificationItem.closable
+
+    property alias actionNames: notificationItem.actionNames
+    property alias actionLabels: notificationItem.actionLabels
+
+    signal configureClicked
+    signal dismissClicked
+    signal closeClicked
+
+    //signal defaultActionInvoked
+    signal actionInvoked(string actionName)
+    signal openUrl(string url)
+
+    signal suspendJobClicked
+    signal resumeJobClicked
+    signal killJobClicked
+
+    // FIXME
+    property alias svg: lineSvgItem.svg
+
+    spacing: 0
+
+    NotificationItem {
+        id: notificationItem
+        Layout.fillWidth: true
+
+        closable: true
+
+        onCloseClicked: delegate.closeClicked()
+        onDismissClicked: delegate.dismissClicked()
+        onConfigureClicked: delegate.configureClicked()
+
+        onActionInvoked: delegate.actionInvoked(actionName)
+        onOpenUrl: delegate.openUrl(url)
+
+        onSuspendJobClicked: delegate.suspendJobClicked()
+        onResumeJobClicked: delegate.resumeJobClicked()
+        onKillJobClicked: delegate.killJobClicked()
     }
 
-    MouseArea {
-        width: parent.width
-        height: childrenRect.height
-        acceptedButtons: Qt.NoButton
-
-        drag {
-            target: notificationItem
-            axis: Drag.XAxis
-            //kind of an hack over Column being too smart
-            minimumX: -parent.width + 1
-            maximumX: parent.width - 1
-        }
-        onReleased: {
-            if (notificationItem.x < -notificationItem.width/2) {
-                removeAnimation.exitFromRight = false
-                removeAnimation.running = true
-            } else if (notificationItem.x > notificationItem.width/2 ) {
-                removeAnimation.exitFromRight = true
-                removeAnimation.running = true
-            } else {
-                resetAnimation.running = true
-            }
-        }
-
-        SequentialAnimation {
-            id: removeAnimation
-            property bool exitFromRight: true
-            NumberAnimation {
-                target: notificationItem
-                properties: "x"
-                to: removeAnimation.exitFromRight ? notificationItem.width-1 : 1-notificationItem.width
-                duration: units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-            NumberAnimation {
-                target: notificationItem
-                properties: "height"
-                to: 0
-                duration: units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-            ScriptAction {
-                script: {
-                    closeNotification(model.source);
-                    listModel.remove(index);
-                }
-            }
-        }
-
-        SequentialAnimation {
-            id: resetAnimation
-            NumberAnimation {
-                target: notificationItem
-                properties: "x"
-                to: 0
-                duration: units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
-
-        NotificationItem {
-            id: notification
-            width: parent.width
-
-            compact: true
-            icon: model.appIcon
-            image: model.image
-            summary: model.summary
-            body: model.body
-            configurable: model.configurable && !Settings.isMobile
-            // model.actions JS array is implicitly turned into a ListModel which we can assign directly
-            actions: model.actions
-            created: model.created
-            hasDefaultAction: model.hasDefaultAction
-            hasConfigureAction: model.hasConfigureAction
-            urls: {
-                // QML ListModel tries to be smart and turns our urls Array into a dict with index as key...
-                var urls = []
-
-                var modelUrls = model.urls
-                if (modelUrls) {
-                    for (var key in modelUrls) {
-                        urls.push(modelUrls[key])
-                    }
-                }
-
-                return urls
-            }
-
-            onClose: {
-                if (listModel.count > 1) {
-                    removeAnimation.running = true
-                } else {
-                    closeNotification(model.source)
-                    listModel.remove(index)
-                }
-            }
-            onConfigure: {
-                plasmoid.expanded = false
-                configureNotification(model.appRealName, model.eventId)
-            }
-            onAction: {
-                executeAction(model.source, actionId)
-                actions.clear()
-            }
-            onOpenUrl: {
-                plasmoid.expanded = false
-                Qt.openUrlExternally(url)
-            }
-        }
-
-    } //MouseArea
-
-    Component.onCompleted: {
-        mainScrollArea.height = mainScrollArea.implicitHeight
-    }
-    Component.onDestruction: {
-        mainScrollArea.height = mainScrollArea.implicitHeight
+    PlasmaCore.SvgItem {
+        id: lineSvgItem
+        elementId: "horizontal-line"
+        Layout.fillWidth: true
+        // TODO hide for last notification
     }
 }

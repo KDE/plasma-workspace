@@ -1,430 +1,256 @@
 /*
- *   Copyright 2011 Marco Martin <notmart@gmail.com>
- *   Copyright 2014 Kai Uwe Broulik <kde@privat.broulik.de>
+ * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
  *
- *   This program is free software; you can redistribute it and/or modify
- *   it under the terms of the GNU Library General Public License as
- *   published by the Free Software Foundation; either version 2, or
- *   (at your option) any later version.
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License or (at your option) version 3 or any later version
+ * accepted by the membership of KDE e.V. (or its successor approved
+ * by the membership of KDE e.V.), which shall act as a proxy
+ * defined in Section 14 of version 3 of the license.
  *
- *   This program is distributed in the hope that it will be useful,
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *   GNU Library General Public License for more details
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- *   You should have received a copy of the GNU Library General Public
- *   License along with this program; if not, write to the
- *   Free Software Foundation, Inc.,
- *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-import QtQuick 2.5
+import QtQuick 2.8
 import QtQuick.Layouts 1.1
-import QtQuick.Controls.Private 1.0
+import QtQuick.Window 2.2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kquickcontrolsaddons 2.0
 
-MouseArea {
+import org.kde.notificationmanager 1.0 as NotificationManager
+
+ColumnLayout {
     id: notificationItem
-    width: parent.width
-    implicitHeight: {
-        if (bodyText.lineCount > 1) {
-            return mainLayout.height + 0.5 * units.smallSpacing // close button height = about 1 unit
-        }  
-        if (appIconItem.valid || imageItem.nativeWidth > 0) {
-            return Math.max((mainLayout.height + 1.5 * units.smallSpacing),(units.iconSizes.large + 2 * units.smallSpacing))
-        }
-        if (bottomPart.height != 0) {
-            return mainLayout.height + (mainLayout.height > units.iconSizes.large ? 1.5 : 2) * units.smallSpacing 
-            } else {
-                return mainLayout.height + units.smallSpacing // close button again
-            }
-    }
-    
-    // We need to clip here because we support displaying images through <img/>
-    // and if we don't clip, they will be painted over the borders of the dialog/item
-    clip: true
 
-    signal close
-    signal configure
-    signal action(string actionId)
-    signal openUrl(url url)
+    property bool hovered: false
+    property int maximumLineCount: 0
+    property alias bodyCursorShape: bodyLabel.cursorShape
 
-    property bool compact: false
+    property int notificationType
 
-    property alias icon: appIconItem.source
-    property alias image: imageItem.image
-    property alias summary: summaryLabel.text
-    property alias body: bodyText.text
-    property alias configurable: settingsButton.visible
-    property var created
+    property bool headerVisible: true
+
+    property alias applicationIconSource: notificationHeading.applicationIconSource
+    property alias applicationName: notificationHeading.applicationName
+    property alias deviceName: notificationHeading.deviceName
+
+    property string summary
+    property alias time: notificationHeading.time
+
+    property alias configurable: notificationHeading.configurable
+    property alias dismissable: notificationHeading.dismissable
+    property alias closable: notificationHeading.closable
+
+    // This isn't an alias because TextEdit RichText adds some HTML tags to it
+    property string body
+    property alias icon: iconItem.source
     property var urls: []
 
-    property int maximumTextHeight: -1
+    property int jobState
+    property int percentage
+    property int error: 0
+    property string errorText
+    property bool suspendable
+    property bool killable
 
-    property ListModel actions: ListModel { }
+    property QtObject jobDetails
+    property bool showDetails
 
-    property bool hasDefaultAction: false
-    property bool hasConfigureAction: false
+    property alias configureActionLabel: notificationHeading.configureActionLabel
+    property var actionNames: []
+    property var actionLabels: []
 
-    readonly property bool dragging: thumbnailStripLoader.item ? thumbnailStripLoader.item.dragging : false
+    property int thumbnailLeftPadding: 0
+    property int thumbnailRightPadding: 0
+    property int thumbnailTopPadding: 0
+    property int thumbnailBottomPadding: 0
 
-    onClicked: {
-        // the MEL would close the notification before the action button
-        // onClicked handler would fire effectively breaking notification actions
-        if (pressedAction()) {
-            return
-        }
+    readonly property bool menuOpen: bodyLabel.contextMenu !== null
+                                     || (thumbnailStripLoader.item && thumbnailStripLoader.item.menuOpen)
+                                     || (jobLoader.item && jobLoader.item.menuOpen)
+    readonly property bool dragging: thumbnailStripLoader.item && thumbnailStripLoader.item.dragging
 
-        if (hasDefaultAction) {
-            // the notification was clicked, trigger the default action if set
-            action("default")
-        }
+    signal bodyClicked(var mouse)
+    signal closeClicked
+    signal configureClicked
+    signal dismissClicked
+    signal actionInvoked(string actionName)
+    signal openUrl(string url)
+    signal fileActionInvoked
+
+    signal suspendJobClicked
+    signal resumeJobClicked
+    signal killJobClicked
+
+    spacing: units.smallSpacing
+
+    NotificationHeader {
+        id: notificationHeading
+        Layout.fillWidth: true
+
+        visible: notificationItem.headerVisible
+
+        notificationType: notificationItem.notificationType
+        jobState: notificationItem.jobState
+        jobDetails: notificationItem.jobDetails
+
+        onConfigureClicked: notificationItem.configureClicked()
+        onDismissClicked: notificationItem.dismissClicked()
+        onCloseClicked: notificationItem.closeClicked()
     }
 
-    function pressedAction() {
-        for (var i = 0, count = actionRepeater.count; i < count; ++i) {
-            var item = actionRepeater.itemAt(i)
-            if (item.pressed) {
-                return item
-            }
-        }
+    // Notification body
+    RowLayout {
+        Layout.fillWidth: true
+        spacing: units.smallSpacing
 
-        if (thumbnailStripLoader.item) {
-            var item = thumbnailStripLoader.item.pressedAction()
-            if (item) {
-                return item
-            }
-        }
-
-        if (settingsButton.pressed) {
-            return settingsButton
-        }
-
-        if (closeButton.pressed) {
-            return closeButton
-        }
-
-        return null
-    }
-
-    function updateTimeLabel() {
-        if (!created || created.getTime() <= 0) {
-            timeLabel.text = ""
-            return
-        }
-        var currentTime = new Date().getTime()
-        var createdTime = created.getTime()
-        var d = (currentTime - createdTime) / 1000
-        if (d < 10) {
-            timeLabel.text = i18nc("notification was just added, keep short", "Just now")
-        } else if (d < 20) {
-            timeLabel.text = i18nc("10 seconds ago, keep short", "10 s ago");
-        } else if (d < 40) {
-            timeLabel.text = i18nc("30 seconds ago, keep short", "30 s ago");
-        } else if (d < 60 * 60) {
-            timeLabel.text = i18ncp("minutes ago, keep short", "%1 min ago", "%1 min ago", Math.round(d / 60))
-        } else if (d <= 60 * 60 * 23) {
-            timeLabel.text = Qt.formatTime(created, Qt.locale().timeFormat(Locale.ShortFormat).replace(/.ss?/i, ""))
-        } else {
-            var yesterday = new Date()
-            yesterday.setDate(yesterday.getDate() - 1) // this will wrap
-            yesterday.setHours(0)
-            yesterday.setMinutes(0)
-            yesterday.setSeconds(0)
-
-            if (createdTime > yesterday.getTime()) {
-                timeLabel.text = i18nc("notification was added yesterday, keep short", "Yesterday");
-            } else {
-                timeLabel.text = i18ncp("notification was added n days ago, keep short",
-                                        "%1 day ago", "%1 days ago",
-                                        Math.round((currentTime - yesterday.getTime()) / 1000 / 3600 / 24));
-            }
-        }
-    }
-
-    Timer {
-        interval: 15000
-        running: plasmoid.expanded
-        repeat: true
-        triggeredOnStart: true
-        onTriggered: updateTimeLabel()
-    }
-
-    PlasmaCore.IconItem {
-        id: appIconItem
-
-        width: units.iconSizes.large
-        height: units.iconSizes.large
-
-        anchors {
-            top: parent.top
-            left: parent.left
-            leftMargin: units.smallSpacing
-            topMargin: units.smallSpacing
-        }
-
-        visible: imageItem.nativeWidth === 0 && valid
-        animated: false
-    }
-
-    QImageItem {
-        id: imageItem
-        anchors.fill: appIconItem
-
-        smooth: true
-        visible: nativeWidth > 0
-    }
-
-    ColumnLayout {
-        id: mainLayout
-
-        anchors {
-            top: parent.top
-            topMargin: bodyText.lineCount > 1 ? 0 : Math.round((mainLayout.height > units.iconSizes.large ? 0.5 : 1) * units.smallSpacing) // lift up heading if bodyText is too long/tall
-            left: appIconItem.valid || imageItem.nativeWidth > 0 ? appIconItem.right : parent.left
-            right: parent.right
-            leftMargin: units.smallSpacing * 2
-            rightMargin: units.smallSpacing // Equal padding on either side (notification icon margin)
-        }
-
-        spacing: Math.round(units.smallSpacing / 2)
-
-        RowLayout {
-            id: titleBar
-            spacing: units.smallSpacing
+        ColumnLayout {
+            Layout.fillWidth: true
+            spacing: 0
 
             PlasmaExtras.Heading {
                 id: summaryLabel
                 Layout.fillWidth: true
-                Layout.fillHeight: true
-                height: undefined
-                verticalAlignment: Text.AlignVCenter
-                level: 4
-                elide: Text.ElideRight
-                wrapMode: Text.NoWrap
+                Layout.preferredHeight: implicitHeight
                 textFormat: Text.PlainText
-            }
+                maximumLineCount: 3
+                wrapMode: Text.WordWrap
+                elide: Text.ElideRight
+                level: 4
+                text: {
+                    if (notificationItem.notificationType === NotificationManager.Notifications.JobType) {
+                        if (notificationItem.jobState === NotificationManager.Notifications.JobStateSuspended) {
+                            return i18nc("Job name, e.g. Copying is paused", "%1 (Paused)", notificationItem.summary);
+                        } else if (notificationItem.jobState === NotificationManager.Notifications.JobStateStopped) {
+                            if (notificationItem.error) {
+                                return i18nc("Job name, e.g. Copying has failed", "%1 (Failed)", notificationItem.summary);
+                            } else {
+                                return i18nc("Job name, e.g. Copying has finished", "%1 (Finished)", notificationItem.summary);
+                            }
+                        }
+                    }
+                    return notificationItem.summary;
+                }
 
-            PlasmaExtras.Heading {
-                id: timeLabel
-                Layout.fillHeight: true
-                level: 5
-                visible: text !== ""
-                verticalAlignment: Text.AlignVCenter
+                // some apps use their app name as summary, avoid showing the same text twice
+                // try very hard to match the two
+                visible: text !== "" && text.toLocaleLowerCase().trim() !== notificationItem.applicationName.toLocaleLowerCase().trim()
 
                 PlasmaCore.ToolTipArea {
                     anchors.fill: parent
-                    subText: Qt.formatDateTime(created, Qt.DefaultLocaleLongDate)
+                    active: summaryLabel.truncated
+                    textFormat: Text.PlainText
+                    subText: summaryLabel.text
                 }
             }
 
-            PlasmaComponents.ToolButton {
-                id: settingsButton
-                width: units.iconSizes.smallMedium
-                height: width
-                visible: false
-                
-                iconSource: "configure"
-
-                onClicked: {
-                    if (notificationItem.hasConfigureAction) {
-                        notificationItem.action("settings");
-                    } else {
-                        configure()
-                    }
-                }
-            }
-
-            PlasmaComponents.ToolButton {
-                id: closeButton
-
-                width: units.iconSizes.smallMedium
-                height: width
-                flat: compact
-
-                iconSource: "window-close"
-
-                onClicked: close()
-            }
-
-        }
-
-        RowLayout {
-            id: bottomPart
-            Layout.alignment: Qt.AlignTop
-            spacing: units.smallSpacing
-
-            // Force the whole thing to collapse if the children are invisible
-            // If there is a big notification followed by a small one, the height
-            // of the popup does not always shrink back, so this forces it to
-            // height=0 when those are invisible. -1 means "default to implicitHeight"
-            Layout.maximumHeight: bodyText.length > 0 || notificationItem.actions.count > 0 ? -1 : 0
-
-            PlasmaExtras.ScrollArea {
-                id: bodyTextScrollArea
-                Layout.alignment: Qt.AlignTop
+            SelectableLabel {
+                id: bodyLabel
+                Layout.alignment: Qt.AlignVCenter
                 Layout.fillWidth: true
 
-                implicitHeight: maximumTextHeight > 0 ? Math.min(maximumTextHeight, bodyText.paintedHeight) : bodyText.paintedHeight
-                visible: bodyText.length > 0
-
-                flickableItem.boundsBehavior: Flickable.StopAtBounds
-                flickableItem.flickableDirection: Flickable.VerticalFlick
-                horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
-
-                TextEdit {
-                    id: bodyText
-                    width: bodyTextScrollArea.width
-                    enabled: !Settings.isMobile
-
-                    color: PlasmaCore.ColorScope.textColor
-                    selectedTextColor: theme.viewBackgroundColor
-                    selectionColor: theme.viewFocusColor
-                    font.capitalization: theme.defaultFont.capitalization
-                    font.family: theme.defaultFont.family
-                    font.italic: theme.defaultFont.italic
-                    font.letterSpacing: theme.defaultFont.letterSpacing
-                    font.pointSize: theme.defaultFont.pointSize
-                    font.strikeout: theme.defaultFont.strikeout
-                    font.underline: theme.defaultFont.underline
-                    font.weight: theme.defaultFont.weight
-                    font.wordSpacing: theme.defaultFont.wordSpacing
-                    renderType: Text.NativeRendering
-                    selectByMouse: true
-                    readOnly: true
-                    wrapMode: Text.Wrap
-                    textFormat: TextEdit.RichText
-
-                    // ensure selecting text scrolls the view as needed...
-                    onCursorRectangleChanged: {
-                        var flick = bodyTextScrollArea.flickableItem
-                        if (flick.contentY >= cursorRectangle.y) {
-                            flick.contentY = cursorRectangle.y
-                        } else if (flick.contentY + flick.height <= cursorRectangle.y + cursorRectangle.height) {
-                            flick.contentY = cursorRectangle.y + cursorRectangle.height - flick.height
-                        }
-                    }
-                    MouseArea {
-                        property int selectionStart
-                        property point mouseDownPos: Qt.point(-999, -999);
-
-                        anchors.fill: parent
-                        acceptedButtons: Qt.RightButton | Qt.LeftButton
-                        cursorShape: bodyText.hoveredLink ? Qt.PointingHandCursor : Qt.IBeamCursor
-                        preventStealing: true // don't let us accidentally drag the Flickable
-
-                        onPressed: {
-                            if (mouse.button === Qt.RightButton) {
-                                contextMenu.link = bodyText.linkAt(mouse.x, mouse.y);
-                                contextMenu.open(mouse.x, mouse.y);
-                                return;
-                            }
-
-                            mouseDownPos = Qt.point(mouse.x, mouse.y);
-                            selectionStart = bodyText.positionAt(mouse.x, mouse.y);
-                            var pos = bodyText.positionAt(mouse.x, mouse.y);
-                            // deselect() would scroll to the end which we don't want
-                            bodyText.select(pos, pos);
-                        }
-
-                        onReleased: {
-                            // emulate "onClicked"
-                            var manhattanLength = Math.abs(mouseDownPos.x - mouse.x) + Math.abs(mouseDownPos.y - mouse.y);
-                            if (manhattanLength <= Qt.styleHints.startDragDistance) {
-                                var link = bodyText.linkAt(mouse.x, mouse.y);
-                                if (link) {
-                                    Qt.openUrlExternally(link);
-                                } else {
-                                    notificationItem.clicked(null/*mouse*/);
-                                }
-                            }
-                            mouseDownPos = Qt.point(-999, -999);
-                        }
-
-                        // HACK to be able to select text whilst still getting all mouse events to the MouseArea
-                        onPositionChanged: {
-                            if (pressed) {
-                                var pos = bodyText.positionAt(mouseX, mouseY);
-                                if (selectionStart < pos) {
-                                    bodyText.select(selectionStart, pos);
-                                } else {
-                                    bodyText.select(pos, selectionStart);
-                                }
-                            }
-                        }
-
-                        Clipboard {
-                            id: clipboard
-                        }
-
-                        PlasmaComponents.ContextMenu {
-                            id: contextMenu
-                            property string link
-
-                            PlasmaComponents.MenuItem {
-                                text: i18n("Copy Link Address")
-                                onClicked: clipboard.content = contextMenu.link
-                                visible: contextMenu.link !== ""
-                            }
-
-                            PlasmaComponents.MenuItem {
-                                separator: true
-                                visible: contextMenu.link !== ""
-                            }
-
-                            PlasmaComponents.MenuItem {
-                                text: i18n("Copy")
-                                icon: "edit-copy"
-                                enabled: bodyText.selectionStart !== bodyText.selectionEnd
-                                onClicked: bodyText.copy()
-                            }
-
-                            PlasmaComponents.MenuItem {
-                                text: i18n("Select All")
-                                onClicked: bodyText.selectAll()
-                            }
-                        }
-                    }
-                }
-            }
-
-            ColumnLayout {
-                id: actionsColumn
-                Layout.alignment: Qt.AlignTop
-                Layout.maximumWidth: theme.mSize(theme.defaultFont).width * (compact ? 10 : 16)
-                // this is so it never collapses but always follows what the Buttons below want
-                // but also don't let the buttons get too narrow (e.g. "View" or "Open" button)
-                Layout.minimumWidth: Math.max(units.gridUnit * 4, implicitWidth)
-
-                spacing: units.smallSpacing
-                visible: notificationItem.actions && notificationItem.actions.count > 0
-
-                Repeater {
-                    id: actionRepeater
-                    model: notificationItem.actions
-
-                    PlasmaComponents.Button {
-                        Layout.fillWidth: true
-                        Layout.preferredWidth: minimumWidth
-                        Layout.maximumWidth: actionsColumn.Layout.maximumWidth
-                        text: model.text
-                        tooltip: width < minimumWidth ? text : ""
-                        onClicked: notificationItem.action(model.id)
-                    }
-                }
+                Layout.maximumHeight: notificationItem.maximumLineCount > 0
+                                      ? (theme.mSize(font).height * notificationItem.maximumLineCount) : -1
+                text: notificationItem.body
+                // Cannot do text !== "" because RichText adds some HTML tags even when empty
+                visible: notificationItem.body !== ""
+                onClicked: notificationItem.bodyClicked(mouse)
+                onLinkActivated: Qt.openUrlExternally(link)
             }
         }
 
-        Loader {
-            id: thumbnailStripLoader
+        PlasmaCore.IconItem {
+            id: iconItem
+            Layout.alignment: Qt.AlignVCenter
+            Layout.preferredWidth: units.iconSizes.large
+            Layout.preferredHeight: units.iconSizes.large
+            usesPlasmaTheme: false
+            smooth: true
+            // don't show two identical icons
+            visible: valid && source != notificationItem.applicationIconSource
+        }
+    }
+
+    // Job progress reporting
+    Loader {
+        id: jobLoader
+        Layout.fillWidth: true
+        active: notificationItem.notificationType === NotificationManager.Notifications.JobType
+        sourceComponent: JobItem {
+            jobState: notificationItem.jobState
+            error: notificationItem.error
+            errorText: notificationItem.errorText
+            percentage: notificationItem.percentage
+            suspendable: notificationItem.suspendable
+            killable: notificationItem.killable
+
+            jobDetails: notificationItem.jobDetails
+            showDetails: notificationItem.showDetails
+
+            onSuspendJobClicked: notificationItem.suspendJobClicked()
+            onResumeJobClicked: notificationItem.resumeJobClicked()
+            onKillJobClicked: notificationItem.killJobClicked()
+
+            onOpenUrl: notificationItem.openUrl(url)
+            onFileActionInvoked: notificationItem.fileActionInvoked()
+
+            hovered: notificationItem.hovered
+        }
+    }
+
+    RowLayout {
+        Layout.fillWidth: true
+
+        // Notification actions
+        Flow { // it's a Flow so it can wrap if too long
             Layout.fillWidth: true
-            Layout.preferredHeight: item ? item.implicitHeight : 0
-            source: "ThumbnailStrip.qml"
-            active: notificationItem.urls.length > 0
+            visible: actionRepeater.count > 0
+            spacing: units.smallSpacing
+            layoutDirection: Qt.RightToLeft
+
+            Repeater {
+                id: actionRepeater
+                // HACK We want the actions to be right-aligned but Flow also reverses
+                // the order of items, so we manually reverse it here
+                model: (notificationItem.actionNames || []).reverse()
+
+                PlasmaComponents.ToolButton {
+                    flat: false
+                    text: notificationItem.actionLabels[actionRepeater.count - index - 1]
+                    Layout.preferredWidth: minimumWidth
+                    onClicked: notificationItem.actionInvoked(modelData)
+                }
+            }
+        }
+    }
+
+    // thumbnails
+    Loader {
+        id: thumbnailStripLoader
+        Layout.leftMargin: notificationItem.thumbnailLeftPadding
+        Layout.rightMargin: notificationItem.thumbnailRightPadding
+        Layout.topMargin: notificationItem.thumbnailTopPadding
+        Layout.bottomMargin: notificationItem.thumbnailBottomPadding
+        Layout.fillWidth: true
+        active: notificationItem.urls.length > 0
+        visible: active
+        sourceComponent: ThumbnailStrip {
+            leftPadding: -thumbnailStripLoader.Layout.leftMargin
+            rightPadding: -thumbnailStripLoader.Layout.rightMargin
+            topPadding: -thumbnailStripLoader.Layout.topMargin
+            bottomPadding: -thumbnailStripLoader.Layout.bottomMargin
+            urls: notificationItem.urls
+            onOpenUrl: notificationItem.openUrl(url)
+            onFileActionInvoked: notificationItem.fileActionInvoked()
         }
     }
 }

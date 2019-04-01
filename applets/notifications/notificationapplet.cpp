@@ -37,8 +37,7 @@ NotificationApplet::NotificationApplet(QObject *parent, const QVariantList &data
 {
     static bool s_typesRegistered = false;
     if (!s_typesRegistered) {
-        // FIXME register into org.kde.plasma.private.notifications once old applet is gone
-        const char uri[] = "org.kde.plasma.private.notificationsng";
+        const char uri[] = "org.kde.plasma.private.notifications";
         qmlRegisterType<FileMenu>(uri, 2, 0, "FileMenu");
         qmlRegisterType<Thumbnailer>(uri, 2, 0, "Thumbnailer");
         qmlProtectModule(uri, 2);
