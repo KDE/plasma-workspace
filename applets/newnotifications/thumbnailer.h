@@ -35,6 +35,7 @@ class Thumbnailer : public QObject, public QQmlParserStatus
     Q_PROPERTY(QUrl url READ url WRITE setUrl NOTIFY urlChanged)
     Q_PROPERTY(QSize size READ size WRITE setSize NOTIFY sizeChanged)
 
+    Q_PROPERTY(bool busy READ busy NOTIFY busyChanged)
     Q_PROPERTY(bool hasPreview READ hasPreview NOTIFY pixmapChanged)
     Q_PROPERTY(QPixmap pixmap READ pixmap NOTIFY pixmapChanged)
     Q_PROPERTY(QSize pixmapSize READ pixmapSize NOTIFY pixmapChanged)
@@ -53,6 +54,7 @@ public:
     QSize size() const;
     void setSize(const QSize &size);
 
+    bool busy() const;
     bool hasPreview() const;
     QPixmap pixmap() const;
     QSize pixmapSize() const;
@@ -60,8 +62,6 @@ public:
     QString iconName() const;
 
     bool menuVisible() const;
-
-    Q_INVOKABLE void showContextMenu(int x, int y, const QString &path, QQuickItem *ctx);
 
     void classBegin() override;
     void componentComplete() override;
@@ -71,6 +71,7 @@ signals:
 
     void urlChanged();
     void sizeChanged();
+    void busyChanged();
     void pixmapChanged();
     void iconNameChanged();
 
@@ -83,6 +84,8 @@ private:
 
     QUrl m_url;
     QSize m_size;
+
+    bool m_busy = false;
 
     QPixmap m_pixmap;
 

@@ -28,8 +28,6 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
-// TODO turn into MouseArea or MEL for "default action"
-// or should that be done where the Popup/ListView is?
 ColumnLayout {
     id: notificationItem
 
@@ -39,11 +37,14 @@ ColumnLayout {
 
     property int notificationType
 
+    property bool headerVisible: true
+
     property alias applicationIconSource: notificationHeading.applicationIconSource
     property alias applicationName: notificationHeading.applicationName
+    property alias deviceName: notificationHeading.deviceName
 
     property string summary
-    property var time
+    property alias time: notificationHeading.time
 
     property alias configurable: notificationHeading.configurable
     property alias dismissable: notificationHeading.dismissable
@@ -53,7 +54,6 @@ ColumnLayout {
     property string body
     property alias icon: iconItem.source
     property var urls: []
-    property string deviceName
 
     property int jobState
     property int percentage
@@ -74,24 +74,30 @@ ColumnLayout {
     property int thumbnailTopPadding: 0
     property int thumbnailBottomPadding: 0
 
-    signal bodyClicked(var mouse) // TODO bodyClicked?
+    readonly property bool menuOpen: bodyLabel.contextMenu !== null
+                                     || (thumbnailStripLoader.item && thumbnailStripLoader.item.menuOpen)
+                                     || (jobLoader.item && jobLoader.item.menuOpen)
+    readonly property bool dragging: thumbnailStripLoader.item && thumbnailStripLoader.item.dragging
+
+    signal bodyClicked(var mouse)
     signal closeClicked
     signal configureClicked
     signal dismissClicked
     signal actionInvoked(string actionName)
     signal openUrl(string url)
+    signal fileActionInvoked
 
     signal suspendJobClicked
     signal resumeJobClicked
     signal killJobClicked
-
-    onTimeChanged: notificationHeading.updateAgoText()
 
     spacing: units.smallSpacing
 
     NotificationHeader {
         id: notificationHeading
         Layout.fillWidth: true
+
+        visible: notificationItem.headerVisible
 
         notificationType: notificationItem.notificationType
         jobState: notificationItem.jobState
@@ -176,6 +182,7 @@ ColumnLayout {
 
     // Job progress reporting
     Loader {
+        id: jobLoader
         Layout.fillWidth: true
         active: notificationItem.notificationType === NotificationManager.Notifications.JobType
         sourceComponent: JobItem {
@@ -194,6 +201,7 @@ ColumnLayout {
             onKillJobClicked: notificationItem.killJobClicked()
 
             onOpenUrl: notificationItem.openUrl(url)
+            onFileActionInvoked: notificationItem.fileActionInvoked()
 
             hovered: notificationItem.hovered
         }
@@ -242,6 +250,7 @@ ColumnLayout {
             bottomPadding: -thumbnailStripLoader.Layout.bottomMargin
             urls: notificationItem.urls
             onOpenUrl: notificationItem.openUrl(url)
+            onFileActionInvoked: notificationItem.fileActionInvoked()
         }
     }
 }

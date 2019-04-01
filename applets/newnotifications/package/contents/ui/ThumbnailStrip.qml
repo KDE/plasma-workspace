@@ -32,15 +32,14 @@ import org.kde.plasma.private.notifications 2.0 as Notifications
 MouseArea {
     id: thumbnailArea
 
-    signal openUrl(string url)
-
     // The protocol supports multiple URLs but so far it's only used to show
     // a single preview image, so this code is simplified a lot to accomodate
     // this usecase and drops everything else (fallback to app icon or ListView
     // for multiple files)
     property var urls
 
-    property bool dragging: plasmoid.nativeInterface.dragActive
+    readonly property bool dragging: plasmoid.nativeInterface.dragActive
+    readonly property alias menuOpen: fileMenu.visible
 
     property int _pressX: -1
     property int _pressY: -1
@@ -50,8 +49,12 @@ MouseArea {
     property int topPadding: 0
     property int bottomPadding: 0
 
-    implicitHeight: Math.round(Math.min(width / 3, width / thumbnailer.ratio))
-    visible: thumbnailer.hasPreview
+    signal openUrl(string url)
+    signal fileActionInvoked
+
+    implicitHeight: Math.max(menuButton.height + 2 * menuButton.anchors.topMargin,
+                             Math.round(Math.min(width / 3, width / thumbnailer.ratio)))
+                    + topPadding + bottomPadding
 
     preventStealing: true
     cursorShape: pressed ? Qt.ClosedHandCursor : Qt.OpenHandCursor
@@ -97,6 +100,7 @@ MouseArea {
         id: fileMenu
         url: thumbnailer.url
         visualParent: menuButton
+        onActionTriggered: thumbnailArea.fileActionInvoked()
     }
 
     Notifications.Thumbnailer {
@@ -140,6 +144,20 @@ MouseArea {
             fillMode: Image.PreserveAspectFit
         }
 
+        PlasmaCore.IconItem {
+            anchors.centerIn: parent
+            width: height
+            height: units.roundToIconSize(parent.height)
+            usesPlasmaTheme: false
+            source: !thumbnailer.busy && !thumbnailer.hasPreview ? thumbnailer.iconName : ""
+        }
+
+        PlasmaComponents.BusyIndicator {
+            anchors.centerIn: parent
+            running: thumbnailer.busy
+            visible: thumbnailer.busy
+        }
+
         PlasmaComponents.Button {
             id: menuButton
             anchors {
@@ -152,13 +170,13 @@ MouseArea {
             checkable: true
             iconName: "application-menu"
 
-            // -1 tells it to "align bottom left of item (this)"
             onClicked: {
                 checked = Qt.binding(function() {
                     return thumbnailer.menuVisible;
                 });
 
                 fileMenu.visualParent = this;
+                // -1 tells it to "align bottom left of visualParent (this)"
                 fileMenu.open(-1, -1);
             }
         }

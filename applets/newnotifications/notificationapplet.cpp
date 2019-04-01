@@ -21,10 +21,12 @@
 
 #include "notificationapplet.h"
 
+#include <QClipboard>
 #include <QDrag>
 #include <QMimeData>
 #include <QQuickItem>
 #include <QQuickWindow>
+#include <QScreen>
 #include <QStyleHints>
 
 #include "filemenu.h"
@@ -101,6 +103,24 @@ void NotificationApplet::doDrag(QQuickItem *item, const QUrl &url, const QPixmap
 
     m_dragActive = false;
     emit dragActiveChanged();
+}
+
+void NotificationApplet::setSelectionClipboardText(const QString &text)
+{
+    // FIXME KDeclarative Clipboard item uses QClipboard::Mode for "mode"
+    // which is an enum inaccessible from QML
+    QGuiApplication::clipboard()->setText(text, QClipboard::Selection);
+}
+
+bool NotificationApplet::isPrimaryScreen(const QRect &rect) const
+{
+    QScreen *screen = QGuiApplication::primaryScreen();
+    if (!screen) {
+        return false;
+    }
+
+    // HACK
+    return rect == screen->geometry();
 }
 
 K_EXPORT_PLASMA_APPLET_WITH_JSON(icon, NotificationApplet, "metadata.json")

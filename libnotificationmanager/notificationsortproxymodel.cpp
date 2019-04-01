@@ -40,7 +40,20 @@ NotificationSortProxyModel::NotificationSortProxyModel(QObject *parent)
 
 NotificationSortProxyModel::~NotificationSortProxyModel() = default;
 
-// TODO using this helper method looks both smart and dumb at the same time
+Notifications::SortMode NotificationSortProxyModel::sortMode() const
+{
+    return m_sortMode;
+}
+
+void NotificationSortProxyModel::setSortMode(Notifications::SortMode sortMode)
+{
+    if (m_sortMode != sortMode) {
+        m_sortMode = sortMode;
+        invalidate();
+        emit sortModeChanged();
+    }
+}
+
 int sortScore(const QModelIndex &idx)
 {
     const auto urgency = idx.data(Notifications::UrgencyRole).toInt();
@@ -73,10 +86,15 @@ bool NotificationSortProxyModel::lessThan(const QModelIndex &source_left, const 
     // - Low urgency notifications
     // Within each group it's descending by created or last modified
 
-    const int scoreLeft = sortScore(source_left);
-    Q_ASSERT(scoreLeft >= 0);
-    const int scoreRight = sortScore(source_right);
-    Q_ASSERT(scoreRight >= 0);
+    int scoreLeft = 0;
+    int scoreRight = 0;
+
+    if (m_sortMode == Notifications::SortByTypeAndUrgency) {
+        scoreLeft = sortScore(source_left);
+        Q_ASSERT(scoreLeft >= 0);
+        scoreRight = sortScore(source_right);
+        Q_ASSERT(scoreRight >= 0);
+    }
 
     if (scoreLeft == scoreRight) {
         QDateTime timeLeft = source_left.data(Notifications::UpdatedRole).toDateTime();

@@ -37,6 +37,9 @@ public:
     using Ptr = QSharedPointer<NotificationModel>;
     static Ptr createNotificationModel();
 
+    QDateTime lastRead() const;
+    void setLastRead(const QDateTime &lastRead);
+
     // FIXME currently easier to debug if we crash when accessing invalid role
     // instead of just "randomly" returning display role when
     QVariant data(const QModelIndex &index, int role/* = Qt::DisplayRole*/) const override;
@@ -49,6 +52,9 @@ public:
     Q_INVOKABLE void invokeDefaultAction(uint notificationId);
     // FIXME rename invokeAction
     Q_INVOKABLE void invoke(uint notificationId, const QString &actionName);
+
+signals:
+    void lastReadChanged();
 
 private:
     class Private;

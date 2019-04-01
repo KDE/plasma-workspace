@@ -31,9 +31,7 @@ import "popups" as Popups
 Item {
     id: root 
 
-    Plasmoid.status: historyModel.activeJobsCount > 0
-                     || historyModel.activeNotificationsCount > 0 ? PlasmaCore.Types.ActiveStatus
-                                                                  : PlasmaCore.Types.PassiveStatus
+    Plasmoid.status: PlasmaCore.Types.PassiveStatus
 
     Plasmoid.toolTipSubText: {
         var lines = [];
@@ -42,11 +40,13 @@ Item {
             lines.push(i18np("%1 running job", "%1 running jobs", historyModel.activeJobsCount));
         }
 
-        if (historyModel.expiredNotificationsCount > 0) {
-            lines.push(i18np("%1 missed notification", "%1 missed notifications", historyModel.expiredNotificationsCount));
+        if (historyModel.unreadNotificationsCount > 0) {
+            lines.push(i18np("%1 unread notification", "%1 unread notifications", historyModel.unreadNotificationsCount));
         }
 
-        if (lines.length === 0) {
+        if (notificationSettings.notificationsInhibited) {
+            lines.push(i18n("Do not disturb mode enabled"));
+        } else if (lines.length === 0) {
             lines.push("No unread notificatons");
         }
 
@@ -56,15 +56,45 @@ Item {
     Plasmoid.switchWidth: units.gridUnit * 14
     Plasmoid.switchHeight: units.gridUnit * 10
 
+    Plasmoid.onExpandedChanged: {
+        historyModel.lastRead = undefined; // reset to now
+    }
+
     Plasmoid.compactRepresentation: CompactRepresentation {
-        activeCount: historyModel.activeNotificationsCount
-        expiredCount: historyModel.expiredNotificationsCount
+        activeCount: Popups.PopupHandler.popupNotificationsModel.activeNotificationsCount
+        unreadCount: historyModel.unreadNotificationsCount
+
         jobsCount: historyModel.activeJobsCount
         jobsPercentage: historyModel.jobsPercentage
+
+        inhibited: notificationSettings.notificationsInhibited
     }
 
     Plasmoid.fullRepresentation: FullRepresentation {
 
+    }
+
+    // Delay hiding the applet again so the user can see the unread count briefly before it goes away
+    Timer {
+        id: updateStatusTimer
+        readonly property int targetStatus: historyModel.activeJobsCount > 0
+                                            || Popups.PopupHandler.popupNotificationsModel.activeNotificationsCount > 0
+                                            || notificationSettings.notificationsInhibited ? PlasmaCore.Types.ActiveStatus
+                                                                                           : PlasmaCore.Types.PassiveStatus
+        interval: 2000
+
+        onTargetStatusChanged: {
+            if (targetStatus === PlasmaCore.Types.ActiveStatus) {
+                // become active right away
+                updateStatusTimer.stop();
+                updateStatusTimer.triggered();
+            } else {
+                updateStatusTimer.start();
+            }
+        }
+
+        onTriggered: plasmoid.status = targetStatus;
+        Component.onCompleted: triggered() // set correct status initially
     }
 
     NotificationManager.Settings {
@@ -76,7 +106,10 @@ Item {
         showExpired: true
         showDismissed: true
         showJobs: notificationSettings.jobsInNotifications
+        sortMode: NotificationManager.Notifications.SortByDate
         groupMode: NotificationManager.Notifications.GroupApplicationsFlat
+        blacklistedDesktopEntries: notificationSettings.historyBlacklistedApplications
+        blacklistedNotifyRcNames: notificationSettings.historyBlacklistedServices
     }
 
     Component.onCompleted: {

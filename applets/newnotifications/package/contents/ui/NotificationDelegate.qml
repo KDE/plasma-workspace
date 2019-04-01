@@ -23,14 +23,16 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-// TODO grouping and what not
 ColumnLayout {
     id: delegate
 
     property alias notificationType: notificationItem.notificationType
 
+    property alias headerVisible: notificationItem.headerVisible
+
     property alias applicationName: notificationItem.applicationName
     property alias applicatonIconSource: notificationItem.applicationIconSource
+    property alias deviceName: notificationItem.deviceName
 
     property alias time: notificationItem.time
 

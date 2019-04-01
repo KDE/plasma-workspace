@@ -32,8 +32,7 @@ PlasmaComponents.ContextMenu {
 
     property QtObject __clipboard: KQCAddons.Clipboard { }
 
-    // FIXME this was supposed to be able to deal with a Text {} item, too
-    // but it it isn't used for that not, so all of this typeof mess can be removed
+    // can be a Text or TextEdit
     property Item target
 
     property string link

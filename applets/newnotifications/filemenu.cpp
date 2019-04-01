@@ -109,6 +109,7 @@ void FileMenu::open(int x, int y)
 
     QMenu *menu = new QMenu();
     menu->setAttribute(Qt::WA_DeleteOnClose, true);
+    connect(menu, &QMenu::triggered, this, &FileMenu::actionTriggered);
 
     connect(menu, &QMenu::aboutToHide, this, [this] {
         m_visible = false;

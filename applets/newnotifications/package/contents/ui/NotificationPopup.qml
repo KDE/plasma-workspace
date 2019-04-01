@@ -37,6 +37,7 @@ PlasmaCore.Dialog {
 
     property alias applicationName: notificationItem.applicationName
     property alias applicatonIconSource: notificationItem.applicationIconSource
+    property alias deviceName: notificationItem.deviceName
 
     property alias time: notificationItem.time
 
@@ -47,6 +48,7 @@ PlasmaCore.Dialog {
 
     property int urgency
     property int timeout
+    property int dismissTimeout
 
     property alias jobState: notificationItem.jobState
     property alias percentage: notificationItem.percentage
@@ -72,6 +74,8 @@ PlasmaCore.Dialog {
     signal defaultActionInvoked
     signal actionInvoked(string actionName)
     signal openUrl(string url)
+    signal fileActionInvoked
+
     signal expired
 
     signal suspendJobClicked
@@ -79,13 +83,26 @@ PlasmaCore.Dialog {
     signal killJobClicked
 
     property int defaultTimeout: 5000
-    readonly property int effectiveTimeout: timeout === -1 ? defaultTimeout : timeout
+    readonly property int effectiveTimeout: {
+        if (timeout === -1) {
+            return defaultTimeout;
+        }
+        if (dismissTimeout) {
+            return dismissTimeout;
+        }
+        return timeout;
+    }
 
     location: PlasmaCore.Types.Floating
-    // FIXME make KWin allow notificaton + ontop hint
-    type: urgency === NotificationManager.Notifications.CriticalUrgency ? PlasmaCore.Dialog.OnScreenDisplay
-                                                                        : PlasmaCore.Dialog.Notification
-    flags: Qt.WindowDoesNotAcceptFocus
+
+    type: PlasmaCore.Dialog.Notification
+    flags: {
+        var flags = Qt.WindowDoesNotAcceptFocus;
+        if (urgency === NotificationManager.Notifications.CriticalUrgency) {
+            flags |= Qt.WindowStaysOnTopHint;
+        }
+        return flags;
+    }
 
     visible: false
 
@@ -110,9 +127,15 @@ PlasmaCore.Dialog {
         Timer {
             id: timer
             interval: notificationPopup.effectiveTimeout
-            // FIXME don't run when context menu is open or dragging thumbnail off
             running: notificationPopup.visible && !area.containsMouse && interval > 0
-            onTriggered: notificationPopup.expired()
+                && !notificationItem.dragging && !notificationItem.menuOpen
+            onTriggered: {
+                if (notificationPopup.dismissTimeout) {
+                    notificationPopup.dismissClicked();
+                } else {
+                    notificationPopup.expired();
+                }
+            }
         }
 
         Timer {
@@ -165,7 +188,7 @@ PlasmaCore.Dialog {
             thumbnailTopPadding: -notificationPopup.margins.top
             thumbnailBottomPadding: -notificationPopup.margins.bottom
 
-            closable: true // TODO with grouping and what not
+            closable: true
             onBodyClicked: {
                 if (area.acceptedButtons & mouse.button) {
                     area.clicked(null /*mouse*/)
@@ -176,6 +199,7 @@ PlasmaCore.Dialog {
             onConfigureClicked: notificationPopup.configureClicked()
             onActionInvoked: notificationPopup.actionInvoked(actionName)
             onOpenUrl: notificationPopup.openUrl(url)
+            onFileActionInvoked: notificationPopup.fileActionInvoked()
 
             onSuspendJobClicked: notificationPopup.suspendJobClicked()
             onResumeJobClicked: notificationPopup.resumeJobClicked()

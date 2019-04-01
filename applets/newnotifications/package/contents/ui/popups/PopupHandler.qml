@@ -34,32 +34,78 @@ import ".."
 QtObject {
     id: popupHandler
 
-    // FIXME figure out which plasmoid to use (prefer one in panel, prefer primary screen, etc etc)
-    property QtObject plasmoid: {
-        return plasmoids[plasmoids.length - 1];
-
-    }
-
+    // Some parts of the code rely on plasmoid.nativeInterface and since we're in a singleton here
+    // this is named "plasmoid", TODO fix?
+    property QtObject plasmoid: plasmoids[0]
+    // all notification plasmoids
     property var plasmoids: []
 
-    // TODO configurable
-    property int popupLocation: {
+    // This heuristic tries to find a suitable plasmoid to follow when placing popups
+    function plasmoidScore(plasmoid) {
         if (!plasmoid) {
             return 0;
         }
 
-        var alignment = 0;
-        if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
-            alignment |= Qt.AlignLeft;
-        } else {
-            alignment |= Qt.AlignRight;
+        var score = 0;
+
+        // Prefer plasmoids in a panel, prefer horizontal panels over vertical ones
+        if (plasmoid.location === PlasmaCore.Types.LeftEdge
+                || plasmoid.location === PlasmaCore.Types.RightEdge) {
+            score += 1;
+        } else if (plasmoid.location === PlasmaCore.Types.TopEdge
+                   || plasmoid.location === PlasmaCore.Types.BottomEdge) {
+            score += 2;
         }
-        if (plasmoid.location === PlasmaCore.Types.TopEdge) {
-            alignment |= Qt.AlignTop;
-        } else {
-            alignment |= Qt.AlignBottom;
+
+        // Prefer iconified plasmoids
+        if (!plasmoid.expanded) {
+            ++score;
         }
-        return alignment;
+
+        // Prefer plasmoids on primary screen
+        if (plasmoid.nativeInterface && plasmoid.nativeInterface.isPrimaryScreen(plasmoid.screenGeometry)) {
+            ++score;
+        }
+
+        return score;
+    }
+
+    property int popupLocation: {
+        switch (notificationSettings.popupPosition) {
+        // Auto-determine location based on plasmoid location
+        case NotificationManager.Settings.NearWidget:
+            if (!plasmoid) {
+                return Qt.AlignBottom | Qt.AlignRight; // just in case
+            }
+
+            var alignment = 0;
+            if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
+                alignment |= Qt.AlignLeft;
+            } else {
+                // would be nice to do plasmoid.compactRepresentationItem.mapToItem(null) and then
+                // position the popups depending on the relative position within the panel
+                alignment |= Qt.AlignRight;
+            }
+            if (plasmoid.location === PlasmaCore.Types.TopEdge) {
+                alignment |= Qt.AlignTop;
+            } else {
+                alignment |= Qt.AlignBottom;
+            }
+            return alignment;
+
+        case NotificationManager.Settings.TopLeft:
+            return Qt.AlignTop | Qt.AlignLeft;
+        case NotificationManager.Settings.TopCenter:
+            return Qt.AlignTop | Qt.AlignHCenter;
+        case NotificationManager.Settings.TopRight:
+            return Qt.AlignTop | Qt.AlignRight;
+        case NotificationManager.Settings.BottomLeft:
+            return Qt.AlignBottom | Qt.AlignLeft;
+        case NotificationManager.Settings.BottomCenter:
+            return Qt.AlignBottom | Qt.AlignHCenter;
+        case NotificationManager.Settings.BottomRight:
+            return Qt.AlignBottom | Qt.AlignRight;
+        }
     }
 
     // The raw width of the popup's content item, the Dialog itself adds some margins
@@ -75,31 +121,28 @@ QtObject {
     onPopupLocationChanged: Qt.callLater(positionPopups)
     onScreenRectChanged: Qt.callLater(positionPopups)
 
-    property QtObject popupNotificationsModel: NotificationManager.Notifications {
-        // TODO make these configurable
-        limit: Math.ceil(popupHandler.screenRect.height / (theme.mSize(theme.defaultFont).height * 4))
-        showExpired: false
-        showDismissed: false
-        blacklistedDesktopEntries: notificationSettings.popupBlacklistedApplications
-        showJobs: notificationSettings.jobsInNotifications
-        groupMode: NotificationManager.Notifications.GroupDisabled
-        urgencies: NotificationManager.Notifications.NormalUrgency | NotificationManager.Notifications.CriticalUrgency
-    }
-
-    property QtObject notificationSettings: NotificationManager.Settings { }
-
     function adopt(plasmoid) {
         var newPlasmoids = plasmoids;
         newPlasmoids.push(plasmoid);
+        newPlasmoids.sort(function (a, b) {
+            var scoreA = plasmoidScore(a);
+            var scoreB = plasmoidScore(b);
+            // Sort descending by score
+            if (scoreA < scoreB) {
+                return 1;
+            } else if (scoreA > scoreB) {
+                return -1;
+            } else {
+                return 0;
+            }
+        });
+
         popupHandler.plasmoids = newPlasmoids;
     }
 
     function positionPopups() {
-        // TODO clean this up a little, also, would be lovely if we could mapToGlobal the applet and then
-        // position the popups closed to it, e.g. if notification applet is on the left in the panel or sth like that?
         var rect = screenRect;
         if (!rect || rect.width <= 0 || rect.height <= 0) {
-            console.warn("Cannot position popups on screen of size", JSON.stringify(screenRect));
             return;
         }
 
@@ -113,10 +156,6 @@ QtObject {
         var x = screenRect.x;
         if (popupLocation & Qt.AlignLeft) {
             x += popupEdgeDistance;
-        } else if (popupLocation & Qt.AlignHCenter) {
-            x += (screenRect.width - popupWidth) / 2;
-        } else if (popupLocation & Qt.AlignRight) {
-            x += screenRect.width - popupEdgeDistance - popupWidth;
         }
 
         for (var i = 0; i < popupInstantiator.count; ++i) {
@@ -140,7 +179,7 @@ QtObject {
                 popup.y = y;
             }
 
-            // don't let notifications take more than 3/4 of the screen
+            // don't let notifications take more than popupMaximumScreenFill of the screen
             var visible = true;
             if (i > 0) { // however always show at least one popup
                 if (popupLocation & Qt.AlignTop) {
@@ -150,13 +189,30 @@ QtObject {
                 }
             }
 
-            // TODO hide popups when systray or panel controller is open or something
-            /*popup.visible = Qt.binding(function() {
-                return visible && !plasmoid.expanded;
-            });*/
+            // TODO would be nice to hide popups when systray or panel controller is open
             popup.visible = visible;
         }
     }
+
+    property QtObject popupNotificationsModel: NotificationManager.Notifications {
+        limit: Math.ceil(popupHandler.screenRect.height / (theme.mSize(theme.defaultFont).height * 4))
+        showExpired: false
+        showDismissed: false
+        blacklistedDesktopEntries: notificationSettings.popupBlacklistedApplications
+        blacklistedNotifyRcNames: notificationSettings.popupBlacklistedServices
+        showJobs: notificationSettings.jobsInNotifications
+        sortMode: NotificationManager.Notifications.SortByTypeAndUrgency
+        groupMode: NotificationManager.Notifications.GroupDisabled
+        urgencies: {
+            var urgencies = NotificationManager.Notifications.NormalUrgency | NotificationManager.Notifications.CriticalUrgency;
+            if (notificationSettings.lowPriorityPopups) {
+                urgencies |=NotificationManager.Notifications.LowUrgency;
+            }
+            return urgencies;
+        }
+    }
+
+    property QtObject notificationSettings: NotificationManager.Settings { }
 
     property Instantiator popupInstantiator: Instantiator {
         model: popupNotificationsModel
@@ -165,6 +221,7 @@ QtObject {
 
             applicationName: model.applicationName
             applicatonIconSource: model.applicationIconName
+            deviceName: model.deviceName || ""
 
             time: model.updated || model.created
 
@@ -173,15 +230,22 @@ QtObject {
             // think that will cancel the job, we offer a "dismiss" button that hides it in the history
             dismissable: model.type === NotificationManager.Notifications.JobType
                 && model.jobState !== NotificationManager.Notifications.JobStateStopped
+            // TODO would be nice to be able to "pin" jobs when they autohide
+                && notificationSettings.permanentJobPopups
             closable: model.type === NotificationManager.Notifications.NotificationType
                 || model.jobState === NotificationManager.Notifications.JobStateStopped
 
             summary: model.summary
-            body: model.body || "" // TODO
+            body: model.body || ""
             icon: model.image || model.iconName
             hasDefaultAction: model.hasDefaultAction || false
             timeout: model.timeout
             defaultTimeout: notificationSettings.popupTimeout
+            // When configured to not keep jobs open permanently, we autodismiss them after the standard timeout
+            dismissTimeout: !notificationSettings.permanentJobPopups
+                            && model.type === NotificationManager.Notifications.JobType
+                            && model.jobState !== NotificationManager.Notifications.JobStateStopped
+                            ? defaultTimeout : 0
 
             urls: model.urls || []
             urgency: model.urgency
@@ -208,6 +272,7 @@ QtObject {
                 Qt.openUrlExternally(url);
                 popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
             }
+            onFileActionInvoked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
 
             onSuspendJobClicked: popupNotificationsModel.suspendJob(popupNotificationsModel.index(index, 0))
             onResumeJobClicked: popupNotificationsModel.resumeJob(popupNotificationsModel.index(index, 0))
@@ -218,7 +283,8 @@ QtObject {
 
             Component.onCompleted: {
                 // Register apps that were seen spawning a popup so they can be configured later
-                if (model.desktopEntry) {
+                // Apps with notifyrc can already be configured anyway
+                if (model.desktopEntry && !model.notifyRcName) {
                     notificationSettings.registerKnownApplication(model.desktopEntry);
                 }
             }

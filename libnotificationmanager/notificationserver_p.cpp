@@ -54,6 +54,25 @@ NotificationServerPrivate::NotificationServerPrivate(QObject *parent)
     m_inhibitionWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
     connect(m_inhibitionWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &NotificationServerPrivate::onServiceUnregistered);
 
+    connect(this, &NotificationServerPrivate::inhibitedChanged, this, [this] {
+        // emit DBus change signal...
+        QDBusMessage signal = QDBusMessage::createSignal(
+            QStringLiteral("/org/freedesktop/Notifications"),
+            QStringLiteral("org.freedesktop.DBus.Properties"),
+            QStringLiteral("PropertiesChanged")
+        );
+
+        signal.setArguments({
+            QStringLiteral("org.freedesktop.Notifications"),
+            QVariantMap{ // updated
+                {QStringLiteral("Inhibited"), inhibited()},
+            },
+            QStringList() // invalidated
+        });
+
+        QDBusConnection::sessionBus().send(signal);
+    });
+
     qCDebug(NOTIFICATIONMANAGER) << "Registered Notification service on DBus";
     m_valid = true;
 }
@@ -196,7 +215,7 @@ void NotificationServerPrivate::UnInhibit(uint cookie)
 
 QList<Inhibition> NotificationServerPrivate::ListInhibitors() const
 {
-    return {};
+    return m_inhibitions.values();
 }
 
 bool NotificationServerPrivate::inhibited() const

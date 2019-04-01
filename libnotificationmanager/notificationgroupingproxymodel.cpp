@@ -26,8 +26,6 @@
 #include "notificationmodel.h"
 #include "notifications.h"
 
-#include <QDebug>
-
 using namespace NotificationManager;
 
 NotificationGroupingProxyModel::NotificationGroupingProxyModel(QObject *parent)
@@ -40,11 +38,13 @@ NotificationGroupingProxyModel::~NotificationGroupingProxyModel() = default;
 
 bool NotificationGroupingProxyModel::appsMatch(const QModelIndex &a, const QModelIndex &b) const
 {
-    // FIXME add "groupkey" or something which takes into account service name, notifyrc name, etc
     const QString aName = a.data(Notifications::ApplicationNameRole).toString();
     const QString bName = b.data(Notifications::ApplicationNameRole).toString();
 
-    return aName == bName;
+    const QString aDesktopEntry = a.data(Notifications::DesktopEntryRole).toString();
+    const QString bDesktopEntry = b.data(Notifications::DesktopEntryRole).toString();
+
+    return aName == bName && aDesktopEntry == bDesktopEntry;
 }
 
 bool NotificationGroupingProxyModel::isGroup(int row) const
@@ -458,9 +458,16 @@ QVariant NotificationGroupingProxyModel::data(const QModelIndex &proxyIndex, int
         switch (role) {
         case Notifications::IsGroupRole:
             return true;
+        case Notifications::IsInGroupRole:
+            return false;
         }
     } else {
-
+        switch (role) {
+        case Notifications::IsGroupRole:
+            return false;
+        case Notifications::IsInGroupRole:
+            return parent.isValid();
+        }
     }
 
     return sourceIndex.data(role);

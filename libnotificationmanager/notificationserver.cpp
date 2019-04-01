@@ -25,13 +25,17 @@
 
 #include <QDBusConnection>
 
+#include <QDebug>
+
 using namespace NotificationManager;
 
 NotificationServer::NotificationServer(QObject *parent)
     : QObject(parent)
     , d(new NotificationServerPrivate(this))
 {
-
+    connect(d.data(), &NotificationServerPrivate::inhibitedChanged, this, [this] {
+        emit inhibitedChanged(inhibited());
+    });
 }
 
 NotificationServer::~NotificationServer() = default;
@@ -57,4 +61,9 @@ void NotificationServer::closeNotification(uint notificationId, CloseReason reas
 void NotificationServer::invokeAction(uint notificationId, const QString &actionName)
 {
     emit d->ActionInvoked(notificationId, actionName);
+}
+
+bool NotificationServer::inhibited() const
+{
+    return d->inhibited();
 }

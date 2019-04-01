@@ -43,7 +43,7 @@ class Q_DECL_HIDDEN NotificationServerPrivate : public QObject, protected QDBusC
 
     // DBus
     // Inhibitions
-    Q_PROPERTY(bool Inhibited READ inhibited NOTIFY inhibitedChanged)
+    Q_PROPERTY(bool Inhibited READ inhibited)
 
 public:
     NotificationServerPrivate(QObject *parent);
@@ -70,7 +70,6 @@ Q_SIGNALS:
     void NotificationClosed(uint id, uint reason);
     void ActionInvoked(uint id, const QString &actionKey);
 
-    // FIXME connect this to properties changed dbus signal
     void inhibitedChanged();
 
 public: // stuff used by public class

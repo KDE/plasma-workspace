@@ -45,13 +45,17 @@ public:
     void setShowDismissed(bool show);
 
     QStringList blacklistedDesktopEntries() const;
-    void setBlackListedDesktopEntries(const QStringList &blacklistedDesktopEntries);
+    void setBlackListedDesktopEntries(const QStringList &blacklist);
+
+    QStringList blacklistedNotifyRcNames() const;
+    void setBlacklistedNotifyRcNames(const QStringList &blacklist);
 
 signals:
     void urgenciesChanged();
     void showExpiredChanged();
     void showDismissedChanged();
     void blacklistedDesktopEntriesChanged();
+    void blacklistedNotifyRcNamesChanged();
 
 protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
@@ -62,7 +66,9 @@ private:
             | Notifications::CriticalUrgency;
     bool m_showDismissed = false;
     bool m_showExpired = false;
+
     QStringList m_blacklistedDesktopEntries;
+    QStringList m_blacklistedNotifyRcNames;
 
 };
 

@@ -37,6 +37,7 @@ RowLayout {
 
     property alias applicationIconSource: applicationIconItem.source
     property string applicationName
+    property string deviceName
 
     property string configureActionLabel
 
@@ -53,16 +54,10 @@ RowLayout {
     signal dismissClicked
     signal closeClicked
 
+    onTimeChanged: updateAgoText()
+
     function updateAgoText() {
-        if (time && !isNaN(time.getTime())) {
-            var now = new Date();
-            var deltaMinutes = Math.floor((now.getTime() - time.getTime()) / 1000 / 60);
-            if (deltaMinutes > 0) {
-                ageLabel.agoText = i18ncp("Received minutes ago, keep short", "%1 min ago", "%1 min ago", deltaMinutes);
-                return;
-            }
-        }
-        ageLabel.agoText = "";
+        ageLabel.agoText = ageLabel.generateAgoText();
     }
 
     spacing: units.smallSpacing
@@ -93,87 +88,118 @@ RowLayout {
         Layout.fillWidth: true
         textFormat: Text.PlainText
         elide: Text.ElideRight
-        text: notificationHeading.applicationName// + (notificationHeading.deviceName ? " · " + notificationHeading.deviceName : "")
+        text: notificationHeading.applicationName + (notificationHeading.deviceName ? " · " + notificationHeading.deviceName : "")
     }
 
     PlasmaExtras.DescriptiveLabel {
         id: ageLabel
 
         // the "n minutes ago" text, for jobs we show remaining time instead
+        // updated periodically by a Timer hence this property with generate() function
         property string agoText: ""
         visible: text !== ""
-        text: remainingText() || agoText
+        text: generateRemainingText() || agoText
 
-        function remainingText() {
+        function generateAgoText() {
+            if (!time || isNaN(time.getTime())) {
+                return "";
+            }
+
+            var now = new Date();
+            var deltaMinutes = Math.floor((now.getTime() - time.getTime()) / 1000 / 60);
+            if (deltaMinutes < 1) {
+                return "";
+            }
+
+            // Received less than an hour ago, show relative minutes
+            if (deltaMinutes < 60) {
+                return i18ncp("Notification was added minutes ago, keep short", "%1 min ago", "%1 min ago", deltaMinutes);
+            }
+            // Received less than a day ago, show time, 23 hours so the time isn't ambiguous between today and yesterday
+            if (deltaMinutes < 60 * 23) {
+                return Qt.formatTime(time, Qt.locale().timeFormat(Locale.ShortFormat).replace(/.ss?/i, ""));
+            }
+
+            // Otherwise show relative date (Yesterday, "Last Sunday", or just date if too far in the past)
+            return KCoreAddons.Format.formatRelativeDate(time, Locale.ShortFormat);
+        }
+
+        function generateRemainingText() {
             if (notificationHeading.notificationType !== NotificationManager.Notifications.JobType
                 || notificationHeading.jobState === NotificationManager.Notifications.JobStateStopped) {
-                return;
+                return "";
             }
 
             var details = notificationHeading.jobDetails;
             if (!details || !details.speed) {
-                return;
+                return "";
             }
 
             var remaining = details.totalBytes - details.processedBytes;
             if (remaining <= 0) {
-                return;
+                return "";
             }
 
             var eta = remaining / details.speed;
             if (!eta) {
-                return;
+                return "";
             }
 
-            if (eta < 60 * 60) { // 1 hr
-                return i18ncp("minutes remaining, keep short",
-                              "%1min remaining", "%1min remaining",
-                              Math.round(eta / 60));
-            } else {
+            if (eta < 60) { // 1 minute
                 return i18ncp("seconds remaining, keep short",
                               "%1s remaining", "%1s remaining", Math.round(eta));
             }
+            if (eta < 60 * 60) {// 1 hour
+                return i18ncp("minutes remaining, keep short",
+                              "%1min remaining", "%1min remaining",
+                              Math.round(eta / 60));
+            }
+            if (eta < 60 * 60 * 5) { // 5 hours max, if it takes even longer there's no real point in shoing that
+                return i18ncp("hours remaining, keep short",
+                              "%1h remaining", "%1h remaining",
+                              Math.round(eta / 60 / 60));
+            }
+
+            return "";
         }
 
-        function updateAgoText() {
-
+        PlasmaCore.ToolTipArea {
+            anchors.fill: parent
+            active: ageLabel.agoText !== ""
+            subText: notificationHeading.time ? notificationHeading.time.toLocaleString(Qt.locale(), Locale.LongFormat) : ""
         }
     }
 
-    Item {
-        width: headerButtonsRow.width
+    RowLayout {
+        id: headerButtonsRow
+        spacing: units.smallSpacing * 2
+        Layout.leftMargin: units.smallSpacing
 
-        RowLayout {
-            id: headerButtonsRow
-            spacing: units.smallSpacing * 2
-            anchors.verticalCenter: parent.verticalCenter
+        // These aren't ToolButtons so they can be perfectly aligned
+        // FIXME fix layout overlap
+        HeaderButton {
+            id: configureButton
+            tooltip: notificationHeading.configureActionLabel || i18n("Configure")
+            iconSource: "configure"
+            visible: false
+            onClicked: notificationHeading.configureClicked()
+        }
 
-            // These aren't ToolButtons so they can be perfectly aligned
-            // FIXME fix layout overlap
-            HeaderButton {
-                id: configureButton
-                tooltip: notificationHeading.configureActionLabel || i18n("Configure")
-                iconSource: "configure"
-                visible: false
-                onClicked: notificationHeading.configureClicked()
-            }
+        HeaderButton {
+            id: dismissButton
+            tooltip: i18n("Hide")
+            // FIXME proper icon, perhaps from widgets/configuration-icon
+            iconSource: "file-zoom-out"
+            visible: false
+            onClicked: notificationHeading.dismissClicked()
+        }
 
-            HeaderButton {
-                id: dismissButton
-                tooltip: i18n("Hide")
-                // FIXME proper icon, perhaps from widgets/configuration-icon
-                iconSource: "file-zoom-out"
-                visible: false
-                onClicked: notificationHeading.dismissClicked()
-            }
-
-            HeaderButton {
-                id: closeButton
-                tooltip: i18n("Close")
-                iconSource: "window-close"
-                visible: false
-                onClicked: notificationHeading.closeClicked()
-            }
+        HeaderButton {
+            id: closeButton
+            tooltip: i18n("Close")
+            iconSource: "window-close"
+            visible: false
+            onClicked: notificationHeading.closeClicked()
         }
     }
 }

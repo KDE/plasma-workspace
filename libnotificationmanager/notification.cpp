@@ -214,20 +214,31 @@ QString Notification::Private::findImageForSpecImagePath(const QString &_path)
                                            true /* canReturnNull */);
 }
 
+QString Notification::Private::defaultComponentName()
+{
+    // NOTE Keep in sync with KNotification
+    return QStringLiteral("plasma_workspace");
+}
+
 void Notification::Private::processHints(const QVariantMap &hints)
 {
     auto end = hints.end();
 
     desktopEntry = hints.value(QStringLiteral("desktop-entry")).toString();
+    serviceName.clear();
+    configurableService = false;
     if (!desktopEntry.isEmpty()) {
         KService::Ptr service = KService::serviceByStorageId(desktopEntry);
         if (service) {
             serviceName = service->name();
             applicationIconName = service->icon();
+            configurableService = !service->noDisplay();
         }
     }
 
     notifyRcName = hints.value(QStringLiteral("x-kde-appname")).toString();
+    const bool isDefaultEvent = (notifyRcName == defaultComponentName());
+    configurableNotifyRc = false;
     if (!notifyRcName.isEmpty()) {
         // Check whether the application actually has notifications we can configure
         KConfig config(notifyRcName + QStringLiteral(".notifyrc"), KConfig::NoGlobals);
@@ -237,19 +248,30 @@ void Notification::Private::processHints(const QVariantMap &hints)
         KConfigGroup globalGroup(&config, "Global");
 
         const QString iconName = globalGroup.readEntry("IconName");
-        if (!iconName.isEmpty()) {
+
+        // For default events we try to show the application name from the desktop entry if possible
+        // This will have us show e.g. "Dr Konqi" instead of generic "Plasma Desktop"
+        if (isDefaultEvent && !serviceName.isEmpty()) {
+            applicationName = serviceName;
+        }
+
+        // also only overwrite application icon name for non-default events (or if we don't have a service icon)
+        if (!iconName.isEmpty() && (!isDefaultEvent || applicationIconName.isEmpty())) {
             applicationIconName = iconName;
         }
 
         const QRegularExpression regexp(QStringLiteral("^Event/([^/]*)$"));
-
         configurableNotifyRc = !config.groupList().filter(regexp).isEmpty();
     }
 
+    // Special override for KDE Connect since the notification is sent by kdeconnectd
+    // but actually comes from a different app on the phone
     const QString applicationDisplayName = hints.value(QStringLiteral("x-kde-display-app-name")).toString();
     if (!applicationDisplayName.isEmpty()) {
         applicationName = applicationDisplayName;
     }
+
+    deviceName = hints.value(QStringLiteral("x-kde-device-name")).toString();
 
     eventId = hints.value(QStringLiteral("x-kde-eventId")).toString();
 
@@ -411,6 +433,11 @@ QString Notification::desktopEntry() const
     return d->desktopEntry;
 }
 
+QString Notification::notifyRcName() const
+{
+    return d->notifyRcName;
+}
+
 QString Notification::applicationName() const
 {
     return d->applicationName;
@@ -429,6 +456,11 @@ QString Notification::applicationIconName() const
 void Notification::setApplicationIconName(const QString &applicationIconName)
 {
     d->applicationIconName = applicationIconName;
+}
+
+QString Notification::deviceName() const
+{
+    return d->deviceName;
 }
 
 QStringList Notification::actionNames() const
@@ -515,7 +547,7 @@ void Notification::setTimeout(int timeout)
 
 bool Notification::configurable() const
 {
-    return d->hasConfigureAction || d->configurableNotifyRc;
+    return d->hasConfigureAction || d->configurableNotifyRc || d->configurableService;
 }
 
 QString Notification::configureActionLabel() const

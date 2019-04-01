@@ -36,26 +36,31 @@ ColumnLayout {
     RowLayout {
         Layout.fillWidth: true
 
-        MouseArea {
-            width: dndRow.width + units.gridUnit
-            height: dndRow.height + units.gridUnit / 2
-            onClicked: dndCheck.checked = !dndCheck.checked
+        RowLayout {
+            id: dndRow
+            spacing: units.smallSpacing
 
-            RowLayout {
-                id: dndRow
-                anchors.centerIn: parent
+            PlasmaCore.IconItem {
+                // FIXME proper icon
+                source: "face-quiet"
+                Layout.preferredWidth: units.iconSizes.smallMedium
+                Layout.preferredHeight: units.iconSizes.smallMedium
+            }
 
-                PlasmaComponents.CheckBox {
-                    id: dndCheck
-                    tooltip: i18n("Do not disturb")
-                }
+            PlasmaComponents.Label {
+                text: i18n("Do not disturb:")
+            }
 
-                PlasmaCore.IconItem {
-                    // FIXME proper icon
-                    source: "face-quiet"
-                    width: height
-                    Layout.fillHeight: true
-                }
+            PlasmaComponents.ComboBox {
+                Layout.preferredWidth: units.gridUnit * 10 // FIXME
+                model: [
+                    "Disabled",
+                    "While Okular is active",
+                    "For 1 hour",
+                    "Until logging out",
+                    "Until this evening",
+                    "Until Monday morning"
+                ]
             }
         }
 
@@ -72,14 +77,21 @@ ColumnLayout {
     }
 
     RowLayout {
-        Layout.fillWidth: true
+        spacing: units.smallSpacing
+        Layout.leftMargin: units.iconSizes.smallMedium + units.smallSpacing
+
+        PlasmaCore.IconItem {
+            Layout.preferredWidth: units.iconSizes.smallMedium
+            Layout.preferredHeight: units.iconSizes.smallMedium
+            source: "okular"
+        }
 
         PlasmaExtras.DescriptiveLabel {
             Layout.fillWidth: true
-            // TODO
-            text: "Do not disturb mode is configured to automatically enable between 22:00 and 06:00."
+            text: i18n("Okular has enabled do not disturb mode: Giving a presentation")
+            textFormat: Text.PlainText
             wrapMode: Text.WordWrap
-            font: theme.smallestFont
+            maximumLineCount: 3 // just in case
         }
     }
 
@@ -104,7 +116,7 @@ ColumnLayout {
             level: 3
             opacity: 0.6
             visible: list.count === 0
-            text: i18n("No missed notifications.")
+            text: i18n("No unread notifications.")
         }
 
         PlasmaExtras.ScrollArea {
@@ -137,6 +149,14 @@ ColumnLayout {
                             applicationIconSource: model.applicationIconName
 
                             time: model.updated || model.created
+
+                            configurable: model.configurable
+
+                            // FIXME close group
+                            onCloseClicked: historyModel.close(historyModel.index(index, 0))
+                            //onDismissClicked: model.dismissed = false
+                            // FIXME don't configure event but just app
+                            onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
                         }
 
                     }
@@ -148,8 +168,11 @@ ColumnLayout {
 
                             notificationType: model.type
 
+                            headerVisible: !model.isInGroup
+
                             applicationName: model.applicationName
                             applicatonIconSource: model.applicationIconName
+                            deviceName: model.deviceName || ""
 
                             time: model.updated || model.created
 
@@ -158,11 +181,12 @@ ColumnLayout {
                             // FIXME make the dismiss button a undismiss button
                             dismissable: model.type === NotificationManager.Notifications.JobType
                                 && model.jobState !== NotificationManager.Notifications.JobStateStopped
+                                && model.dismissed
                             closable: model.type === NotificationManager.Notifications.NotificationType
                                 || model.jobState === NotificationManager.Notifications.JobStateStopped
 
                             summary: model.summary
-                            body: model.body || "" // TODO
+                            body: model.body || ""
                             icon: model.image || model.iconName
 
                             urls: model.urls || []

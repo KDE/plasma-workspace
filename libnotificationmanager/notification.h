@@ -79,11 +79,15 @@ public:
 
     QString desktopEntry() const;
 
+    QString notifyRcName() const;
+
     QString applicationName() const;
     void setApplicationName(const QString &applicationName);
 
     QString applicationIconName() const;
     void setApplicationIconName(const QString &applicationIconName);
+
+    QString deviceName() const;
 
     // should we group the two into a QPair or something?
     QStringList actionNames() const;

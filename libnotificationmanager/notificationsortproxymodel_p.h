@@ -23,6 +23,8 @@
 
 #include <QSortFilterProxyModel>
 
+#include "notifications.h"
+
 namespace NotificationManager
 {
 
@@ -34,8 +36,17 @@ public:
     explicit NotificationSortProxyModel(QObject *parent = nullptr);
     ~NotificationSortProxyModel() override;
 
+    Notifications::SortMode sortMode() const;
+    void setSortMode(Notifications::SortMode);
+
+signals:
+    void sortModeChanged();
+
 protected:
     bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
+
+private:
+    Notifications::SortMode m_sortMode = Notifications::SortByDate;
 
 };
 

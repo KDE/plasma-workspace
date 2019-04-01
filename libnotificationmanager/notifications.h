@@ -77,6 +77,11 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
     Q_PROPERTY(QStringList blacklistedDesktopEntries READ blacklistedDesktopEntries WRITE setBlacklistedDesktopEntries NOTIFY blacklistedDesktopEntriesChanged)
 
     /**
+     * A list of notifyrc names for which no notifications should be shown.
+     */
+    Q_PROPERTY(QStringList blacklistedNotifyRcNames READ blacklistedNotifyRcNames WRITE setBlacklistedNotifyRcNames NOTIFY blacklistedNotifyRcNamesChanged)
+
+    /**
      * Whether to show suppressed notifications.
      *
      * Supressed notifications are those that should not be shown to the user owing to
@@ -96,12 +101,13 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
      */
     Q_PROPERTY(Urgencies urgencies READ urgencies WRITE setUrgencies NOTIFY urgenciesChanged)
 
+    Q_PROPERTY(SortMode sortMode READ sortMode WRITE setSortMode NOTIFY sortModeChanged)
+
     Q_PROPERTY(GroupMode groupMode READ groupMode WRITE setGroupMode NOTIFY groupModeChanged)
 
     /**
      * The number of notifications in the model
      */
-    // FIXME not implemented I think
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
     /**
@@ -109,10 +115,16 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
      */
     Q_PROPERTY(int activeNotificationsCount READ activeNotificationsCount NOTIFY activeNotificationsCountChanged)
 
-    // TODO what about "dismissed" jobs?
     Q_PROPERTY(int expiredNotificationsCount READ expiredNotificationsCount NOTIFY expiredNotificationsCountChanged)
 
-    // TODO do we need an dismissed or suppressed notifications count?
+    /**
+     * The time when the user last could read the notifications.
+     * This is typically reset whenever the list of notifications is opened and is used to determine
+     * the @c unreadNotificationsCount
+     */
+    Q_PROPERTY(QDateTime lastRead READ lastRead WRITE setLastRead RESET resetLastRead NOTIFY lastReadChanged)
+
+    Q_PROPERTY(int unreadNotificationsCount READ unreadNotificationsCount NOTIFY unreadNotificationsCountChanged)
 
     Q_PROPERTY(int activeJobsCount READ activeJobsCount NOTIFY activeJobsCountChanged)
     Q_PROPERTY(int jobsPercentage READ jobsPercentage NOTIFY jobsPercentageChanged)
@@ -125,16 +137,20 @@ public:
         // TODO we have uint for notifications and source name string for jobs
         IdRole = Qt::UserRole + 1,
         IsGroupRole = Qt::UserRole + 2,
-        TypeRole = Qt::UserRole + 3,
-        CreatedRole = Qt::UserRole + 4,
-        UpdatedRole = Qt::UserRole + 5,
+        IsInGroupRole = Qt::UserRole + 3,
+        TypeRole = Qt::UserRole + 4,
+        CreatedRole = Qt::UserRole + 5,
+        UpdatedRole = Qt::UserRole + 6,
         SummaryRole = Qt::DisplayRole,
-        BodyRole = Qt::UserRole + 6,
-        IconNameRole = Qt::UserRole + 7,
+        BodyRole = Qt::UserRole + 7,
+        IconNameRole = Qt::UserRole + 8,
         ImageRole = Qt::DecorationRole,
-        DesktopEntryRole = Qt::UserRole + 8,
+        DesktopEntryRole = Qt::UserRole + 9,
+        NotifyRcNameRole,
+
         ApplicationNameRole,
         ApplicationIconNameRole,
+        DeviceNameRole,
 
         // Jobs
         JobStateRole,
@@ -205,6 +221,13 @@ public:
     };
     Q_ENUM(JobState)
 
+    enum SortMode {
+        SortByDate = 0,
+        // should this be flags? SortJobsFirst | SortByUrgency | ...?
+        SortByTypeAndUrgency
+    };
+    Q_ENUM(SortMode)
+
     enum GroupMode {
         GroupDisabled = 0,
         GroupApplicationsTree, // TODO make actual tree
@@ -222,7 +245,10 @@ public:
     void setShowDismissed(bool show);
 
     QStringList blacklistedDesktopEntries() const;
-    void setBlacklistedDesktopEntries(const QStringList &blacklistedDesktopEntries);
+    void setBlacklistedDesktopEntries(const QStringList &blacklist);
+
+    QStringList blacklistedNotifyRcNames() const;
+    void setBlacklistedNotifyRcNames(const QStringList &blacklist);
 
     bool showSuppressed() const;
     void setShowSuppressed(bool show);
@@ -233,6 +259,9 @@ public:
     Urgencies urgencies() const;
     void setUrgencies(Urgencies urgencies);
 
+    SortMode sortMode() const;
+    void setSortMode(SortMode sortMode);
+
     GroupMode groupMode() const;
     void setGroupMode(GroupMode groupMode);
 
@@ -240,6 +269,13 @@ public:
 
     int activeNotificationsCount() const;
     int expiredNotificationsCount() const;
+
+    QDateTime lastRead() const;
+    void setLastRead(const QDateTime &lastRead);
+    void resetLastRead();
+
+    int unreadNotificationsCount() const;
+
     int activeJobsCount() const;
     int jobsPercentage() const;
 
@@ -269,13 +305,17 @@ signals:
     void showExpiredChanged();
     void showDismissedChanged();
     void blacklistedDesktopEntriesChanged();
+    void blacklistedNotifyRcNamesChanged();
     void showSuppressedChanged();
     void showJobsChanged();
     void urgenciesChanged();
+    void sortModeChanged();
     void groupModeChanged();
     void countChanged();
     void activeNotificationsCountChanged();
     void expiredNotificationsCountChanged();
+    void lastReadChanged();
+    void unreadNotificationsCountChanged();
     void activeJobsCountChanged();
     void jobsPercentageChanged();
 

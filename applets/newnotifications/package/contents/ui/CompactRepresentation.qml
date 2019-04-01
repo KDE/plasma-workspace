@@ -42,10 +42,12 @@ MouseArea {
     Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1*/
 
     property int activeCount: 0
-    property int expiredCount: 0
+    property int unreadCount: 0
 
     property int jobsCount: 0
     property int jobsPercentage: 0
+
+    property bool inhibited: false
 
     property bool wasExpanded: false
     onPressed: wasExpanded = plasmoid.expanded
@@ -63,8 +65,22 @@ MouseArea {
         width: units.roundToIconSize(Math.min(parent.width, parent.height))
         height: width
         svg: notificationSvg
+        visible: opacity > 0
 
         elementId: "notification-disabled"
+
+        Behavior on scale {
+            NumberAnimation {
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+        Behavior on opacity {
+            NumberAnimation {
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
 
         Item {
             id: jobProgressItem
@@ -91,18 +107,11 @@ MouseArea {
             }
         }
 
-        PlasmaComponents.Label {
+        TightLabel {
             id: countLabel
-            anchors {
-                fill: parent
-                margins: units.devicePixelRatio * 2
-            }
-            height: undefined
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            font.pointSize: 100
-            fontSizeMode: Text.Fit
-            minimumPointSize: 7
+            anchors.centerIn: parent
+            font.pointSize: -1
+            font.pixelSize: Math.round(parent.height * 0.6)
         }
 
         PlasmaComponents.BusyIndicator {
@@ -110,6 +119,52 @@ MouseArea {
             anchors.fill: parent
             visible: false
             running: visible
+        }
+
+        PlasmaCore.SvgItem {
+            id: notificationActiveItem
+            anchors.fill: parent
+
+            svg: notificationSvg
+            elementId: "notification-active"
+            opacity: 0
+            scale: 2
+            visible: opacity > 0
+
+            Behavior on scale {
+                NumberAnimation {
+                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+        }
+    }
+
+    PlasmaCore.IconItem {
+        id: dndIcon
+        anchors.fill: parent
+        source: "face-quiet"
+        opacity: 0
+        scale: 2
+        visible: opacity > 0
+
+        Behavior on scale {
+            NumberAnimation {
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
+        Behavior on opacity {
+            NumberAnimation {
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
         }
     }
 
@@ -136,19 +191,33 @@ MouseArea {
         State { // active notification
             when: compactRoot.activeCount > 0
             PropertyChanges {
+                target: notificationActiveItem
+                scale: 1
+                opacity: 1
+            }
+        },
+        State { // do not disturb
+            when: compactRoot.inhibited
+            PropertyChanges {
+                target: dndIcon
+                scale: 1
+                opacity: 1
+            }
+            PropertyChanges {
                 target: notificationIcon
-                elementId: "notification-active";
+                scale: 0
+                opacity: 0
             }
         },
         State { // unread notifications
-            when: compactRoot.expiredCount > 0
+            when: compactRoot.unreadCount > 0
             PropertyChanges {
                 target: notificationIcon
                 elementId: "notification-empty"
             }
             PropertyChanges {
                 target: countLabel
-                text: compactRoot.expiredCount
+                text: compactRoot.unreadCount
             }
         }
     ]

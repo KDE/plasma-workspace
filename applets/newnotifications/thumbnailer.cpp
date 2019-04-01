@@ -86,6 +86,11 @@ void Thumbnailer::setSize(const QSize &size)
     }
 }
 
+bool Thumbnailer::busy() const
+{
+    return m_busy;
+}
+
 bool Thumbnailer::hasPreview() const
 {
     return !m_pixmap.isNull();
@@ -109,95 +114,6 @@ QString Thumbnailer::iconName() const
 bool Thumbnailer::menuVisible() const
 {
     return m_menuVisible;
-}
-
-void Thumbnailer::showContextMenu(int x, int y, const QString &path, QQuickItem *ctx)
-{
-    if (!ctx || !ctx->window()) {
-        return;
-    }
-
-    const QUrl url(path);
-    if (!url.isValid()) {
-        return;
-    }
-
-    KFileItem fileItem(url);
-
-    QMenu *menu = new QMenu();
-    menu->setAttribute(Qt::WA_DeleteOnClose, true);
-
-    connect(menu, &QMenu::aboutToHide, this, [this] {
-        m_menuVisible = false;
-        emit menuVisibleChanged();
-    });
-
-    if (KProtocolManager::supportsListing(url)) {
-        QAction *openContainingFolderAction = menu->addAction(QIcon::fromTheme(QStringLiteral("folder-open")), i18n("Open Containing Folder"));
-        connect(openContainingFolderAction, &QAction::triggered, [url] {
-            KIO::highlightInFileManager({url});
-        });
-    }
-
-    KFileItemActions *actions = new KFileItemActions(menu);
-    KFileItemListProperties itemProperties(KFileItemList({fileItem}));
-    actions->setItemListProperties(itemProperties);
-
-    actions->addOpenWithActionsTo(menu);
-
-    // KStandardAction? But then the Ctrl+C shortcut makes no sense in this context
-    QAction *copyAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("&Copy"));
-    connect(copyAction, &QAction::triggered, [fileItem] {
-        // inspired by KDirModel::mimeData()
-        QMimeData *data = new QMimeData(); // who cleans it up?
-        KUrlMimeData::setUrls({fileItem.url()}, {fileItem.mostLocalUrl()}, data);
-        QApplication::clipboard()->setMimeData(data);
-    });
-
-    actions->addServiceActionsTo(menu);
-    actions->addPluginActionsTo(menu);
-
-    QAction *propertiesAction = menu->addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("Properties"));
-    connect(propertiesAction, &QAction::triggered, [fileItem] {
-        KPropertiesDialog *dialog = new KPropertiesDialog(fileItem.url());
-        dialog->setAttribute(Qt::WA_DeleteOnClose);
-        dialog->show();
-    });
-
-    //this is a workaround where Qt will fail to realize a mouse has been released
-    // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
-    // whilst the mouse is depressed
-    // https://bugreports.qt.io/browse/QTBUG-59044
-    // this causes the next click to go missing
-
-    //by releasing manually we avoid that situation
-    auto ungrabMouseHack = [ctx]() {
-        if (ctx->window()->mouseGrabberItem()) {
-            ctx->window()->mouseGrabberItem()->ungrabMouse();
-        }
-    };
-
-    QTimer::singleShot(0, ctx, ungrabMouseHack);
-    //end workaround
-
-    QPoint pos;
-    if (x == -1 && y == -1) { // align "bottom left of ctx"
-        menu->adjustSize();
-
-        pos = ctx->mapToGlobal(QPointF(0, ctx->height())).toPoint();
-
-        if (!qApp->isRightToLeft()) {
-            pos.rx() += ctx->width();
-            pos.rx() -= menu->width();
-        }
-    } else {
-        pos = ctx->mapToGlobal(QPointF(x, y)).toPoint();
-    }
-
-    menu->popup(pos);
-
-    m_menuVisible = true;
-    emit menuVisibleChanged();
 }
 
 void Thumbnailer::generatePreview()
@@ -236,6 +152,14 @@ void Thumbnailer::generatePreview()
             emit iconNameChanged();
         }
     });
+
+    connect(job, &KJob::result, this, [this] {
+        m_busy = false;
+        emit busyChanged();
+    });
+
+    m_busy = true;
+    emit busyChanged();
 
     job->start();
 }

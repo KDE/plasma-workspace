@@ -66,6 +66,11 @@ public:
     bool isValid() const;
 
     /**
+     * Whether an application requested to inhibit notifications.
+     */
+    bool inhibited() const;
+
+    /**
      * Sends a notification closed event
      *
      * @param id The notification ID
@@ -100,6 +105,13 @@ Q_SIGNALS:
      * @param reason The reason why it was closed
      */
     void notificationRemoved(uint id, CloseReason reason);
+
+    /**
+     * Emitted when inhibitions have been changed. Becomes true
+     * as soon as there is one inhibition and becomes false again
+     * when all inhibitions have been lifted.
+     */
+    void inhibitedChanged(bool inhibited);
 
 private:
     explicit NotificationServer(QObject *parent = nullptr);

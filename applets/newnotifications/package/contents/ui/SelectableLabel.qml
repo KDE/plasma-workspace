@@ -37,6 +37,8 @@ Item {
 
     property int cursorShape
 
+    property QtObject contextMenu: null
+
     signal clicked(var mouse)
     signal linkActivated(string link)
 
@@ -107,11 +109,12 @@ Item {
 
                 onPressed: {
                     if (mouse.button === Qt.RightButton) {
-                        var contextMenu = contextMenuComponent.createObject(bodyText);
+                        contextMenu = contextMenuComponent.createObject(bodyText);
                         contextMenu.link = bodyText.linkAt(mouse.x, mouse.y);
 
                         contextMenu.closed.connect(function() {
                             contextMenu.destroy();
+                            contextMenu = null;
                         });
                         contextMenu.open(mouse.x, mouse.y);
                         return;
@@ -135,6 +138,12 @@ Item {
                             bodyTextContainer.clicked(mouse);
                         }
                     }
+
+                    // emulate selection clipboard
+                    if (bodyText.selectedText) {
+                        plasmoid.nativeInterface.setSelectionClipboardText(bodyText.selectedText);
+                    }
+
                     mouseDownPos = Qt.point(-999, -999);
                 }
 

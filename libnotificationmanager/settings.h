@@ -73,6 +73,14 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
     // TODO check how heavy this is
     Q_PROPERTY(QStringList popupBlacklistedApplications READ popupBlacklistedApplications NOTIFY settingsChanged)
 
+    Q_PROPERTY(QStringList popupBlacklistedServices READ popupBlacklistedServices NOTIFY settingsChanged)
+
+    Q_PROPERTY(QStringList historyBlacklistedApplications READ historyBlacklistedApplications NOTIFY settingsChanged)
+
+    Q_PROPERTY(QStringList historyBlacklistedServices READ historyBlacklistedServices NOTIFY settingsChanged)
+
+    Q_PROPERTY(bool notificationsInhibited READ notificationsInhibited /* WRITE? */ NOTIFY notificationsInhibitedChanged)
+
     Q_PROPERTY(bool dirty READ dirty NOTIFY dirtyChanged)
 
 public:
@@ -94,7 +102,8 @@ public:
     enum NotificationBehavior {
         ShowPopups = 1 << 1,
         ShowPopupsInDoNotDisturbMode = 1 << 2,
-        ShowBadges = 1 << 3
+        ShowInHistory = 1 << 3,
+        ShowBadges = 1 << 4
     };
     Q_ENUM(NotificationBehavior)
     Q_DECLARE_FLAGS(NotificationBehaviors, NotificationBehavior)
@@ -145,11 +154,19 @@ public:
     QStringList knownApplications() const;
 
     QStringList popupBlacklistedApplications() const;
+    QStringList popupBlacklistedServices() const;
+
+    QStringList historyBlacklistedApplications() const;
+    QStringList historyBlacklistedServices() const;
+
+    bool notificationsInhibited() const;
 
 signals:
     void settingsChanged();
 
     void knownApplicationsChanged();
+
+    void notificationsInhibitedChanged(bool notificationsInhibited);
 
     void dirtyChanged();
 

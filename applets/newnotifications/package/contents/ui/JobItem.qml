@@ -44,11 +44,14 @@ ColumnLayout {
     // TOOD make an alias on visible if we're not doing an animation
     property bool showDetails
 
+    readonly property alias menuOpen: otherFileActionsMenu.visible
+
     signal suspendJobClicked
     signal resumeJobClicked
     signal killJobClicked
 
     signal openUrl(string url)
+    signal fileActionInvoked
 
     spacing: 0
 
@@ -150,8 +153,9 @@ ColumnLayout {
 
             Notifications.FileMenu {
                 id: otherFileActionsMenu
-                url: jobDoneActions.url
+                url: jobDoneActions.url || ""
                 visualParent: otherFileActionsButton
+                onActionTriggered: jobItem.fileActionInvoked()
             }
         }
 

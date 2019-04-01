@@ -24,6 +24,8 @@
 #include <Plasma/Applet>
 
 class QQuickItem;
+class QString;
+class QRect;
 
 class NotificationApplet : public Plasma::Applet
 {
@@ -41,6 +43,10 @@ public:
     bool dragActive() const;
     Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
     Q_INVOKABLE void startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap);
+
+    Q_INVOKABLE void setSelectionClipboardText(const QString &text);
+
+    Q_INVOKABLE bool isPrimaryScreen(const QRect &rect) const;
 
 signals:
     void dragActiveChanged();

@@ -58,6 +58,9 @@ public:
 
     int activeNotificationsCount = 0;
     int expiredNotificationsCount = 0;
+
+    int unreadNotificationsCount = 0;
+
     int activeJobsCount = 0;
     int jobsPercentage = 0;
 
@@ -94,7 +97,13 @@ Notifications::Private::~Private()
 
 void Notifications::Private::initModels()
 {
-    notificationsModel = NotificationModel::createNotificationModel();
+    if (!notificationsModel) {
+        notificationsModel = NotificationModel::createNotificationModel();
+        connect(notificationsModel.data(), &NotificationModel::lastReadChanged, q, [this] {
+            updateCount();
+            emit q->lastReadChanged();
+        });
+    }
 
     if (!notificationsAndJobsModel) {
         notificationsAndJobsModel = new KConcatenateRowsProxyModel(q);
@@ -107,11 +116,13 @@ void Notifications::Private::initModels()
         connect(filterModel, &NotificationFilterProxyModel::showExpiredChanged, q, &Notifications::showExpiredChanged);
         connect(filterModel, &NotificationFilterProxyModel::showDismissedChanged, q, &Notifications::showDismissedChanged);
         connect(filterModel, &NotificationFilterProxyModel::blacklistedDesktopEntriesChanged, q, &Notifications::blacklistedDesktopEntriesChanged);
+        connect(filterModel, &NotificationFilterProxyModel::blacklistedNotifyRcNamesChanged, q, &Notifications::blacklistedNotifyRcNamesChanged);
         filterModel->setSourceModel(notificationsAndJobsModel);
     }
 
     if (!sortModel) {
         sortModel = new NotificationSortProxyModel(q);
+        connect(sortModel, &NotificationSortProxyModel::sortModeChanged, q, &Notifications::sortModeChanged);
     }
 
     if (!limiterModel) {
@@ -154,6 +165,7 @@ void Notifications::Private::updateCount()
 {
     int active = 0;
     int expired = 0;
+    int unread = 0;
 
     int jobs = 0;
     int totalPercentage = 0;
@@ -169,13 +181,24 @@ void Notifications::Private::updateCount()
             ++expired;
         }
 
-        if (idx.data(Notifications::TypeRole) == Notifications::JobType) {
-            if (idx.data(Notifications::JobStateRole) != Notifications::JobStateStopped) {
+        QDateTime date = idx.data(Notifications::UpdatedRole).toDateTime();
+        if (!date.isValid()) {
+            date = idx.data(Notifications::CreatedRole).toDateTime();
+        }
+
+        if (date > notificationsModel->lastRead()) {
+            ++unread;
+        }
+
+        if (idx.data(Notifications::TypeRole).toInt() == Notifications::JobType) {
+            if (idx.data(Notifications::JobStateRole).toInt() != Notifications::JobStateStopped) {
                 ++jobs;
 
                 totalPercentage += idx.data(Notifications::PercentageRole).toInt();
             }
-        } else if (!isExpired) {
+        }
+
+        if (!isExpired) {
             ++active;
         }
     }
@@ -187,6 +210,10 @@ void Notifications::Private::updateCount()
     if (expiredNotificationsCount != expired) {
         expiredNotificationsCount = expired;
         emit q->expiredNotificationsCountChanged();
+    }
+    if (unreadNotificationsCount != unread) {
+        unreadNotificationsCount = unread;
+        emit q->unreadNotificationsCountChanged();
     }
     if (activeJobsCount != jobs) {
         activeJobsCount = jobs;
@@ -240,6 +267,7 @@ Notifications::Notifications(QObject *parent)
         Q_UNUSED(topLeft);
         Q_UNUSED(bottomRight);
         if (roles.isEmpty()
+                || roles.contains(Notifications::UpdatedRole)
                 || roles.contains(Notifications::ExpiredRole)
                 || roles.contains(Notifications::JobStateRole)
                 || roles.contains(Notifications::PercentageRole)) {
@@ -296,9 +324,19 @@ QStringList Notifications::blacklistedDesktopEntries() const
     return d->filterModel->blacklistedDesktopEntries();
 }
 
-void Notifications::setBlacklistedDesktopEntries(const QStringList &blacklistedDesktopEntries)
+void Notifications::setBlacklistedDesktopEntries(const QStringList &blacklist)
 {
-    d->filterModel->setBlackListedDesktopEntries(blacklistedDesktopEntries);
+    d->filterModel->setBlackListedDesktopEntries(blacklist);
+}
+
+QStringList Notifications::blacklistedNotifyRcNames() const
+{
+    return d->filterModel->blacklistedNotifyRcNames();
+}
+
+void Notifications::setBlacklistedNotifyRcNames(const QStringList &blacklist)
+{
+    d->filterModel->setBlacklistedNotifyRcNames(blacklist);
 }
 
 bool Notifications::showSuppressed() const
@@ -341,10 +379,17 @@ Notifications::Urgencies Notifications::urgencies() const
 
 void Notifications::setUrgencies(Urgencies urgencies)
 {
-    if (!urgencies) {
-        qCWarning(NOTIFICATIONMANAGER) << "No urgency flags have been set, no notifications will be shown!";
-    }
     d->filterModel->setUrgencies(urgencies);
+}
+
+Notifications::SortMode Notifications::sortMode() const
+{
+    return d->sortModel->sortMode();
+}
+
+void Notifications::setSortMode(SortMode sortMode)
+{
+    d->sortModel->setSortMode(sortMode);
 }
 
 Notifications::GroupMode Notifications::groupMode() const
@@ -374,6 +419,26 @@ int Notifications::activeNotificationsCount() const
 int Notifications::expiredNotificationsCount() const
 {
     return d->expiredNotificationsCount;
+}
+
+QDateTime Notifications::lastRead() const
+{
+    return d->notificationsModel->lastRead();
+}
+
+void Notifications::setLastRead(const QDateTime &lastRead)
+{
+    d->notificationsModel->setLastRead(lastRead);
+}
+
+void Notifications::resetLastRead()
+{
+    setLastRead(QDateTime::currentDateTimeUtc());
+}
+
+int Notifications::unreadNotificationsCount() const
+{
+    return d->unreadNotificationsCount;
 }
 
 int Notifications::activeJobsCount() const
@@ -488,6 +553,7 @@ QHash<int, QByteArray> Notifications::roleNames() const
     return QHash<int, QByteArray> {
         {IdRole, QByteArrayLiteral("notificationId")}, // id is QML-reserved
         {IsGroupRole, QByteArrayLiteral("isGroup")},
+        {IsInGroupRole, QByteArrayLiteral("isInGroup")},
         {TypeRole, QByteArrayLiteral("type")},
         {CreatedRole, QByteArrayLiteral("created")},
         {UpdatedRole, QByteArrayLiteral("updated")},
@@ -496,8 +562,11 @@ QHash<int, QByteArray> Notifications::roleNames() const
         {IconNameRole, QByteArrayLiteral("iconName")},
         {ImageRole, QByteArrayLiteral("image")},
         {DesktopEntryRole, QByteArrayLiteral("desktopEntry")},
+        {NotifyRcNameRole, QByteArrayLiteral("notifyRcName")},
+
         {ApplicationNameRole, QByteArrayLiteral("applicationName")},
         {ApplicationIconNameRole, QByteArrayLiteral("applicationIconName")},
+        {DeviceNameRole, QByteArrayLiteral("deviceName")},
 
         {ActionNamesRole, QByteArrayLiteral("actionNames")},
         {ActionLabelsRole, QByteArrayLiteral("actionLabels")},

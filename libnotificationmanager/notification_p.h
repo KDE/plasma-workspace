@@ -43,6 +43,8 @@ public:
     static QImage decodeNotificationSpecImageHint(const QDBusArgument &arg);
     static QString findImageForSpecImagePath(const QString &_path);
 
+    static QString defaultComponentName();
+
     void processHints(const QVariantMap &hints);
 
     void setUrgency(Notifications::Urgencies urgency);
@@ -58,8 +60,11 @@ public:
 
     QString applicationName;
     QString desktopEntry;
-    QString serviceName;
+    QString serviceName; // TODO really needed?
+    bool configurableService = false;
     QString applicationIconName;
+
+    QString deviceName;
 
     QStringList actionNames;
     QStringList actionLabels;

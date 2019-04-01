@@ -46,17 +46,19 @@ public:
     void onNotificationReplaced(uint replacedId, const Notification &notification);
     void onNotificationRemoved(uint notificationId, NotificationServer::CloseReason reason);
 
-    QVector<Notification> notifications;
-
     int indexOfNotification(uint id) const;
 
-private:
+    QVector<Notification> notifications;
+
     NotificationModel *q;
+
+    QDateTime lastRead;
 
 };
 
 NotificationModel::Private::Private(NotificationModel *q)
     : q(q)
+    , lastRead(QDateTime::currentDateTimeUtc())
 {
 
 }
@@ -70,7 +72,9 @@ void NotificationModel::Private::onNotificationAdded(const Notification &notific
         const Notification &lastNotification = notifications.constLast();
         if (lastNotification.applicationName() == notification.applicationName()
                 && lastNotification.summary() == notification.summary()
-                && lastNotification.body() == notification.body()) {
+                && lastNotification.body() == notification.body()
+                && lastNotification.desktopEntry() == notification.desktopEntry()
+                && lastNotification.applicationName() == notification.applicationName()) {
             onNotificationReplaced(lastNotification.id(), notification);
             return;
         }
@@ -173,6 +177,19 @@ NotificationModel::Ptr NotificationModel::createNotificationModel()
     return s_instance.toStrongRef();
 }
 
+QDateTime NotificationModel::lastRead() const
+{
+    return d->lastRead;
+}
+
+void NotificationModel::setLastRead(const QDateTime &lastRead)
+{
+    if (d->lastRead != lastRead) {
+        d->lastRead = lastRead;
+        emit lastReadChanged();
+    }
+}
+
 QVariant NotificationModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= d->notifications.count()) {
@@ -204,8 +221,11 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
         }
         break;
     case Notifications::DesktopEntryRole: return notification.desktopEntry();
+    case Notifications::NotifyRcNameRole: return notification.notifyRcName();
+
     case Notifications::ApplicationNameRole: return notification.applicationName();
     case Notifications::ApplicationIconNameRole: return notification.applicationIconName();
+    case Notifications::DeviceNameRole: return notification.deviceName();
 
     case Notifications::ActionNamesRole: return notification.actionNames();
     case Notifications::ActionLabelsRole: return notification.actionLabels();

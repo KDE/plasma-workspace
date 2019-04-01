@@ -22,6 +22,7 @@
 #include <QPointer>
 #include <QUrl>
 
+class QAction;
 class QQuickItem;
 
 class FileMenu : public QObject
@@ -47,6 +48,8 @@ public:
     Q_INVOKABLE void open(int x, int y);
 
 signals:
+    void actionTriggered(QAction *action);
+
     void urlChanged();
     void visualParentChanged();
     void visibleChanged();
@@ -54,6 +57,6 @@ signals:
 private:
     QUrl m_url;
     QPointer<QQuickItem> m_visualParent;
-    bool m_visible;
+    bool m_visible = false;
 
 };

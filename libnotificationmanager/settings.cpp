@@ -25,6 +25,7 @@
 #include <KConfigWatcher>
 #include <KService>
 
+#include "notificationserver.h"
 #include "debug.h"
 
 // Settings
@@ -43,11 +44,13 @@ public:
 
     void setDirty(bool dirty);
 
-    Settings::NotificationBehaviors groupBehavior(const KConfigGroup &group);
+    Settings::NotificationBehaviors groupBehavior(const KConfigGroup &group) const;
     void setGroupBehavior(KConfigGroup &group, const Settings::NotificationBehaviors &behavior);
 
     KConfigGroup servicesGroup() const;
-    KConfigGroup applicatonsGroup() const;
+    KConfigGroup applicationsGroup() const;
+
+    QStringList blacklist(const KConfigGroup &group, Settings::NotificationBehavior behavior) const;
 
     Settings *q;
 
@@ -73,12 +76,12 @@ void Settings::Private::setDirty(bool dirty)
     }
 }
 
-// TODO do all of this with introspection?
-Settings::NotificationBehaviors Settings::Private::groupBehavior(const KConfigGroup &group)
+Settings::NotificationBehaviors Settings::Private::groupBehavior(const KConfigGroup &group) const
 {
     Settings::NotificationBehaviors behaviors;
     behaviors.setFlag(Settings::ShowPopups, group.readEntry("ShowPopups", true));
     behaviors.setFlag(Settings::ShowPopupsInDoNotDisturbMode, group.readEntry("ShowPopupsInDndMode", false));
+    behaviors.setFlag(Settings::ShowInHistory, group.readEntry("ShowInHistory", true));
     behaviors.setFlag(Settings::ShowBadges, group.readEntry("ShowBadges", true));
     return behaviors;
 }
@@ -101,6 +104,12 @@ void Settings::Private::setGroupBehavior(KConfigGroup &group, const Settings::No
         group.revertToDefault("ShowPopupsInDndMode", KConfigBase::Notify);
     }
 
+    if (behavior.testFlag(Settings::ShowInHistory)) {
+        group.revertToDefault("ShowInHistory", KConfig::Notify);
+    } else {
+        group.writeEntry("ShowInHistory", false, KConfigBase::Notify);
+    }
+
     if (behavior.testFlag(Settings::ShowBadges)) {
         group.revertToDefault("ShowBadges", KConfigBase::Notify);
     } else {
@@ -115,9 +124,23 @@ KConfigGroup Settings::Private::servicesGroup() const
     return config->group("Services");
 }
 
-KConfigGroup Settings::Private::applicatonsGroup() const
+KConfigGroup Settings::Private::applicationsGroup() const
 {
     return config->group("Applications");
+}
+
+QStringList Settings::Private::blacklist(const KConfigGroup &group, Settings::NotificationBehavior behavior) const
+{
+    QStringList blacklist;
+
+    const QStringList apps = group.groupList();
+    for (const QString &app : apps) {
+        if (!groupBehavior(group.group(app)).testFlag(behavior)) {
+            blacklist.append(app);
+        }
+    }
+
+    return blacklist;
 }
 
 Settings::Settings(QObject *parent)
@@ -169,18 +192,20 @@ Settings::Settings(const KSharedConfig::Ptr &config, QObject *parent)
 
         emit settingsChanged();
     });
+
+    connect(&NotificationServer::self(), &NotificationServer::inhibitedChanged, this, &Settings::notificationsInhibitedChanged);
 }
 
 Settings::~Settings() = default;
 
 Settings::NotificationBehaviors Settings::applicationBehavior(const QString &desktopEntry) const
 {
-    return d->groupBehavior(d->applicatonsGroup().group(desktopEntry));
+    return d->groupBehavior(d->applicationsGroup().group(desktopEntry));
 }
 
 void Settings::setApplicationBehavior(const QString &desktopEntry, NotificationBehaviors behaviors)
 {
-    KConfigGroup group(d->applicatonsGroup().group(desktopEntry));
+    KConfigGroup group(d->applicationsGroup().group(desktopEntry));
     d->setGroupBehavior(group, behaviors);
 }
 
@@ -203,14 +228,17 @@ void Settings::registerKnownApplication(const QString &desktopEntry)
         return;
     }
 
+    if (service->noDisplay()) {
+        qCDebug(NOTIFICATIONMANAGER) << "Application" << desktopEntry << "will not be registered as seen application since it's marked as NoDisplay";
+        return;
+    }
+
     if (knownApplications().contains(desktopEntry)) {
         return;
     }
 
     // have to write something...
-    d->applicatonsGroup().group(desktopEntry).writeEntry("Seen", true);
-
-    // TODO don't sync right away?
+    d->applicationsGroup().group(desktopEntry).writeEntry("Seen", true);
     d->config->sync();
 
     emit knownApplicationsChanged();
@@ -366,6 +394,7 @@ void Settings::setPermanentJobPopups(bool enable)
         return;
     }
     JobSettings::setPermanentPopups(enable);
+    d->setDirty(true);
 }
 
 bool Settings::badgesInTaskManager() const
@@ -384,19 +413,31 @@ void Settings::setBadgesInTaskManager(bool enable)
 
 QStringList Settings::knownApplications() const
 {
-    return d->applicatonsGroup().groupList();
+    return d->applicationsGroup().groupList();
 }
 
 QStringList Settings::popupBlacklistedApplications() const
 {
-    QStringList blacklist;
+    return d->blacklist(d->applicationsGroup(), ShowPopups);
+}
 
-    const QStringList apps = knownApplications();
-    for (const QString &app : apps) {
-        if (!d->groupBehavior(d->applicatonsGroup().group(app)).testFlag(ShowPopups)) {
-            blacklist.append(app);
-        }
-    }
+QStringList Settings::popupBlacklistedServices() const
+{
+    return d->blacklist(d->servicesGroup(), ShowPopups);
+}
 
-    return blacklist;
+QStringList Settings::historyBlacklistedApplications() const
+{
+    return d->blacklist(d->applicationsGroup(), ShowInHistory);
+}
+
+QStringList Settings::historyBlacklistedServices() const
+{
+    return d->blacklist(d->servicesGroup(), ShowInHistory);
+}
+
+bool Settings::notificationsInhibited() const
+{
+    return NotificationServer::self().inhibited();
+
 }
