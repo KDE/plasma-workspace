@@ -38,6 +38,7 @@ ColumnLayout {
     property alias cfg_Blur: blurRadioButton.checked
     property var cfg_SlidePaths: ""
     property int cfg_SlideInterval: 0
+    property var cfg_UncheckedSlides: []
 
     function saveConfig() {
         imageWallpaper.commitDeletion();
@@ -57,10 +58,14 @@ ColumnLayout {
             return Qt.size(Screen.width, Screen.height)
         }
         onSlidePathsChanged: cfg_SlidePaths = slidePaths
+        onUncheckedSlidesChanged: cfg_UncheckedSlides = uncheckedSlides
     }
 
     onCfg_SlidePathsChanged: {
         imageWallpaper.slidePaths = cfg_SlidePaths
+    }
+    onCfg_UncheckedSlidesChanged: {
+        imageWallpaper.uncheckedSlides = cfg_UncheckedSlides
     }
 
     property int hoursIntervalValue: Math.floor(cfg_SlideInterval / 3600)

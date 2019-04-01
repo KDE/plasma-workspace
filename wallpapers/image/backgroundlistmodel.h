@@ -67,7 +67,8 @@ public:
         PathRole,
         PackageNameRole,
         RemovableRole,
-        PendingDeletionRole
+        PendingDeletionRole,
+        ToggleRole
     };
 
     static const int BLUR_INCREMENT = 9;

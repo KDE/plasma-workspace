@@ -620,6 +620,9 @@ void Image::backgroundsFound(const QStringList &paths, const QString &token)
         return;
     }
     m_slideshowBackgrounds = paths;
+    for(const QString &slide : qAsConst(m_uncheckedSlides)) {
+        m_slideshowBackgrounds.removeAll(QUrl(slide).path());
+    }
     m_unseenSlideshowBackgrounds.clear();
     // start slideshow
     if (m_slideshowBackgrounds.isEmpty()) {
@@ -895,4 +898,32 @@ void Image::commitDeletion()
 void Image::openFolder(const QString& path)
 {
    new KRun(QUrl::fromLocalFile(path), nullptr);
+}
+
+void Image::toggleSlide(const QString& path, bool checked)
+{
+    if (checked && m_uncheckedSlides.contains(path)) {
+        m_uncheckedSlides.removeAll(path);
+        emit uncheckedSlidesChanged();
+        startSlideshow();
+    } else if (!checked && ! m_uncheckedSlides.contains(path)) {
+        m_uncheckedSlides.append(path);
+        emit uncheckedSlidesChanged();
+        startSlideshow();
+    }
+}
+
+QStringList Image::uncheckedSlides() const
+{
+    return m_uncheckedSlides;
+}
+
+void Image::setUncheckedSlides(const QStringList &uncheckedSlides)
+{
+    if (uncheckedSlides == m_uncheckedSlides) {
+        return;
+    }
+    m_uncheckedSlides = uncheckedSlides;
+    emit uncheckedSlidesChanged();
+    startSlideshow();
 }

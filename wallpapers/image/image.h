@@ -64,6 +64,7 @@ class Image : public QObject, public QQmlParserStatus
     Q_PROPERTY(QStringList slidePaths READ slidePaths WRITE setSlidePaths NOTIFY slidePathsChanged)
     Q_PROPERTY(QSize targetSize READ targetSize WRITE setTargetSize NOTIFY targetSizeChanged)
     Q_PROPERTY(QString photosPath READ photosPath CONSTANT)
+    Q_PROPERTY(QStringList uncheckedSlides READ uncheckedSlides WRITE setUncheckedSlides NOTIFY uncheckedSlidesChanged)
 
     public:
 
@@ -91,6 +92,8 @@ class Image : public QObject, public QQmlParserStatus
 
         Q_INVOKABLE void addUsersWallpaper(const QString &file);
         Q_INVOKABLE void commitDeletion();
+
+        Q_INVOKABLE void toggleSlide(const QString &path, bool checked);
 
         RenderingMode renderingMode() const;
         void setRenderingMode(RenderingMode mode);
@@ -120,6 +123,9 @@ class Image : public QObject, public QQmlParserStatus
 
         QString photosPath() const;
 
+        QStringList uncheckedSlides() const;
+        void setUncheckedSlides(const QStringList &uncheckedSlides);
+
         public Q_SLOTS:
         void nextSlide();
         void removeWallpaper(QString name);
@@ -134,6 +140,7 @@ class Image : public QObject, public QQmlParserStatus
         void slidePathsChanged();
         void resizeMethodChanged();
         void customWallpaperPicked(const QString &path);
+        void uncheckedSlidesChanged();
 
     protected Q_SLOTS:
         void showAddSlidePathsDialog();
@@ -179,6 +186,7 @@ class Image : public QObject, public QQmlParserStatus
         QStringList m_slideshowBackgrounds;
         QStringList m_unseenSlideshowBackgrounds;
         QStringList m_slidePaths;
+        QStringList m_uncheckedSlides;
         QTimer m_timer;
         int m_currentSlide;
         BackgroundListModel *m_model;

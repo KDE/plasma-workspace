@@ -603,7 +603,16 @@ HistoryItemPtr Klipper::applyClipChanges( const QMimeData* clipData )
     }
     Ignore lock( m_locklevel );
     HistoryItemPtr item = HistoryItem::create( clipData );
-    if (clipData->data(QStringLiteral("x-kde-passwordManagerHint")) != QByteArrayLiteral("secret")) {
+
+    bool saveHistory = true;
+    if (clipData->data(QStringLiteral("x-kde-passwordManagerHint")) == QByteArrayLiteral("secret")) {
+        saveHistory = false;
+    }
+    if (clipData->hasImage() && m_bIgnoreImages) {
+        saveHistory = false;
+    }
+
+    if (saveHistory) {
         history()->insert( item );
     }
     return item;
@@ -732,7 +741,7 @@ void Klipper::checkClipData( bool selectionMode )
         ; // ok
     else if( data->hasImage() )
     {
-        if( m_bIgnoreImages )
+        if (m_bIgnoreImages && !data->hasFormat(QStringLiteral("x-kde-force-image-copy")))
             return;
     }
     else // unknown, ignore

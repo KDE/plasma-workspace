@@ -67,9 +67,8 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     KWindowSystem::setState(winId(), NET::KeepAbove);
     KWindowSystem::forceActiveWindow(winId());
 
-    KWindowEffects::enableBlurBehind(winId(), true);
-    updateContrast();
-    connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelConfigView::updateContrast);
+    updateBlurBehindAndContrast();
+    connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelConfigView::updateBlurBehindAndContrast);
 
     rootContext()->setContextProperty(QStringLiteral("panel"), panelView);
     rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
@@ -88,8 +87,9 @@ void PanelConfigView::init()
     syncLocation();
 }
 
-void PanelConfigView::updateContrast()
+void PanelConfigView::updateBlurBehindAndContrast()
 {
+    KWindowEffects::enableBlurBehind(winId(), m_theme.blurBehindEnabled());
     KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
                                                       m_theme.backgroundContrast(),
                                                       m_theme.backgroundIntensity(),
@@ -190,8 +190,7 @@ void PanelConfigView::showEvent(QShowEvent *ev)
     setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)));
     KWindowSystem::setState(winId(), NET::KeepAbove);
     KWindowSystem::forceActiveWindow(winId());
-    KWindowEffects::enableBlurBehind(winId(), true);
-    updateContrast();
+    updateBlurBehindAndContrast();
     syncGeometry();
     syncLocation();
 
