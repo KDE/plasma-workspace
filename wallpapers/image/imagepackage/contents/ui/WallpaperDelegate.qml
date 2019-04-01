@@ -116,6 +116,13 @@ KCM.GridDelegate {
                 return QPixmapItem.PreserveAspectFit;
             }
         }
+        QtControls2.CheckBox {
+            visible: configDialog.currentWallpaper == "org.kde.slideshow"
+            anchors.right: parent.right
+            anchors.top: parent.top
+            checked: visible ? model.checked : false
+            onToggled: imageWallpaper.toggleSlide(model.path, checked)
+        }
     }
 
     onClicked: {

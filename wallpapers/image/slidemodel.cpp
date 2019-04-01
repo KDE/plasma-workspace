@@ -42,3 +42,18 @@ void SlideModel::removeBackgrounds(const QStringList &paths, const QString &toke
         removeBackground(file);
     }
 }
+
+QVariant SlideModel::data(const QModelIndex& index, int role) const
+{
+    if (role == ToggleRole) {
+        return !m_wallpaper.data()->uncheckedSlides().contains(data(index, PathRole).toString());
+    }
+    return BackgroundListModel::data(index, role);
+}
+
+QHash<int, QByteArray> SlideModel::roleNames() const
+{
+   QHash<int, QByteArray> roleNames = BackgroundListModel::roleNames();
+   roleNames.insert(ToggleRole, "checked");
+   return roleNames;
+}

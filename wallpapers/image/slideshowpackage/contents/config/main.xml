@@ -34,6 +34,10 @@
       <label>Fade Transition Animation  (ms)</label>
       <default>1000</default>
     </entry>
+    <entry name="UncheckedSlides" type="StringList">
+      <label>Unchecked Slides</label>
+      <default></default>
+    </entry>
   </group>
 
 </kcfg>
