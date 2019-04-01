@@ -499,7 +499,7 @@ void Notifications::invokeDefaultAction(const QModelIndex &idx)
 
 void Notifications::invokeAction(const QModelIndex &idx, const QString &actionId)
 {
-    d->notificationsModel->invoke(Private::notificationId(idx), actionId);
+    d->notificationsModel->invokeAction(Private::notificationId(idx), actionId);
 }
 
 void Notifications::suspendJob(const QModelIndex &idx)
@@ -519,8 +519,8 @@ void Notifications::killJob(const QModelIndex &idx)
 
 void Notifications::clear(ClearFlags flags)
 {
-    Q_UNUSED(flags);
-    // TODO implement
+    d->notificationsModel->clear(flags);
+    d->jobsModel->clear(flags);
 }
 
 QVariant Notifications::data(const QModelIndex &index, int role) const

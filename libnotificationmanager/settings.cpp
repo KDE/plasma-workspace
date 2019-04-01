@@ -237,9 +237,26 @@ void Settings::registerKnownApplication(const QString &desktopEntry)
         return;
     }
 
-    // have to write something...
     d->applicationsGroup().group(desktopEntry).writeEntry("Seen", true);
-    d->config->sync();
+    //d->config->sync();
+
+    emit knownApplicationsChanged();
+}
+
+void Settings::forgetKnownApplication(const QString &desktopEntry)
+{
+    if (!knownApplications().contains(desktopEntry)) {
+        return;
+    }
+
+    // Only remove applications that were added through registerKnownApplication
+    if (!d->applicationsGroup().group(desktopEntry).readEntry("Seen", false)) {
+        qCDebug(NOTIFICATIONMANAGER) << "Application" << desktopEntry << "will not be removed from seen applications since it wasn't one.";
+        return;
+    }
+
+    d->applicationsGroup().deleteGroup(desktopEntry); // notify?
+    //d->config->sync();
 
     emit knownApplicationsChanged();
 }

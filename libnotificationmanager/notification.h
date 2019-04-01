@@ -62,7 +62,7 @@ public:
     QDateTime created() const;
 
     QDateTime updated() const;
-    void setUpdated(); // FIXME find better name
+    void resetUpdated();
 
     QString summary() const;
     // FIXME remove all those setters as Notification is pretty much immutable
@@ -80,6 +80,7 @@ public:
     QString desktopEntry() const;
 
     QString notifyRcName() const;
+    QString eventId() const;
 
     QString applicationName() const;
     void setApplicationName(const QString &applicationName);
@@ -115,9 +116,7 @@ public:
     bool dismissed() const;
     void setDismissed(bool dismissed);
 
-    //bool operator==(const Notification &other) const;
-
-    //Notification(Notification &&other);
+    void processHints(const QVariantMap &hints);
 
 private:
     friend class NotificationModel;

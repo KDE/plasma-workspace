@@ -26,7 +26,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.notificationmanager 1.0 as NotificationManager
-import org.kde.plasma.private.notifications 2.0 as Notifications
+
+import org.kde.plasma.private.notificationsng 2.0 as Notifications // FIXME
 
 ColumnLayout {
     id: jobItem
@@ -149,7 +150,15 @@ ColumnLayout {
             id: otherFileActionsButton
             iconName: "application-menu"
             tooltip: i18n("More Options...")
-            onClicked: otherFileActionsMenu.open(-1, -1)
+            checkable: true
+            onPressedChanged: {
+                if (pressed) {
+                    checked = Qt.binding(function() {
+                        return otherFileActionsMenu.visible;
+                    });
+                    otherFileActionsMenu.open(-1, -1);
+                }
+            }
 
             Notifications.FileMenu {
                 id: otherFileActionsMenu

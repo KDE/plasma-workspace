@@ -105,19 +105,29 @@ ColumnLayout {
         }
     }
 
+    RowLayout {
+        Layout.fillWidth: true
+
+        PlasmaExtras.Heading {
+            Layout.fillWidth: true
+            level: 3
+            opacity: 0.6
+            text: list.count === 0 ? i18n("No unread notifications.") : i18n("Notifications")
+        }
+
+        PlasmaComponents.ToolButton {
+            iconName: "edit-clear-history"
+            tooltip: i18n("Clear History")
+            visible: historyModel.expiredNotificationsCount > 0
+            onClicked: historyModel.clear(NotificationManager.Notifications.ClearExpired)
+        }
+    }
+
     Item {
         Layout.fillWidth: true
         Layout.fillHeight: true
         Layout.preferredWidth: units.gridUnit * 18
         Layout.preferredHeight: units.gridUnit * 20
-
-        PlasmaExtras.Heading {
-            width: parent.width
-            level: 3
-            opacity: 0.6
-            visible: list.count === 0
-            text: i18n("No unread notifications.")
-        }
 
         PlasmaExtras.ScrollArea {
             anchors.fill: parent
@@ -207,7 +217,10 @@ ColumnLayout {
                             onDismissClicked: model.dismissed = false
                             onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
 
-                            onActionInvoked: historyModel.invokeAction(historyModel.index(index, 0), actionName)
+                            onActionInvoked: {
+                                historyModel.invokeAction(historyModel.index(index, 0), actionName);
+                                //historyModel.close(historyModel.index(index, 0));
+                            }
                             onOpenUrl: {
                                 Qt.openUrlExternally(url);
                                 //historyModel.close(historyModel.index(index, 0))

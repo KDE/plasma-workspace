@@ -30,6 +30,9 @@
 #include "notification_p.h"
 
 #include <QDebug>
+#include <QProcess>
+
+#include <KShell>
 
 #include <algorithm>
 #include <functional>
@@ -283,9 +286,30 @@ void NotificationModel::configure(uint notificationId)
         return;
     }
 
-    if (!notification.d->notifyRcName.isEmpty()) {
-        // TODO show knotifyconfigwidget thingie or emit a signal so we don't have any widget deps in this lib
-        qDebug() << "IMPLEMENT ME configure" << notification.d->id << "event" << notification.d->eventId << "of" << notification.d->notifyRcName;
+    if (!notification.desktopEntry().isEmpty() || !notification.notifyRcName().isEmpty()) {
+        // TODO would be nice to just have a signal but since NotificationModel is shared,
+        // if we connect to this from Notifications you would get a signal in every instance
+        // and potentialy open the config dialog multiple times.
+
+        QStringList args;
+        if (!notification.desktopEntry().isEmpty()) {
+            args.append(QStringLiteral("--desktop-entry"));
+            args.append(notification.desktopEntry());
+        }
+        if (!notification.notifyRcName().isEmpty()) {
+            args.append(QStringLiteral("--notifyrc"));
+            args.append(notification.notifyRcName());
+        }
+        if (!notification.d->eventId.isEmpty()) {
+            args.append(QStringLiteral("--event-id"));
+            args.append(notification.d->eventId);
+        }
+
+        QProcess::startDetached(QStringLiteral("kcmshell5"), {
+            QStringLiteral("notifications"),
+            QStringLiteral("--args"),
+            KShell::joinArgs(args)
+        });
         return;
     }
 
@@ -308,7 +332,7 @@ void NotificationModel::invokeDefaultAction(uint notificationId)
     NotificationServer::self().invokeAction(notificationId, QStringLiteral("default")); // FIXME make a static Notification::defaultActionName() or something
 }
 
-void NotificationModel::invoke(uint notificationId, const QString &actionName)
+void NotificationModel::invokeAction(uint notificationId, const QString &actionName)
 {
     const int idx = d->indexOfNotification(notificationId);
     if (idx == -1) {
@@ -322,4 +346,54 @@ void NotificationModel::invoke(uint notificationId, const QString &actionName)
     }
 
     NotificationServer::self().invokeAction(notificationId, actionName);
+}
+
+void NotificationModel::clear(Notifications::ClearFlags flags)
+{
+    if (d->notifications.isEmpty()) {
+        return;
+    }
+
+    // Tries to remove a contiguous group if possible as the likely case is
+    // you have n unread notifications at the end of the list, we don't want to
+    // remove and signal each item individually
+    QVector<QPair<int, int>> clearQueue;
+
+    QPair<int, int> clearRange{-1, -1};
+
+    for (int i = d->notifications.count() - 1; i >= 0; --i) {
+        const Notification &notification = d->notifications.at(i);
+
+        bool clear = (flags.testFlag(Notifications::ClearExpired) && notification.expired())
+                || (flags.testFlag(Notifications::ClearDismissed) && notification.dismissed());
+
+        if (clear) {
+            if (clearRange.second == -1) {
+                clearRange.second = i;
+            }
+            clearRange.first = i;
+        } else {
+            if (clearRange.first != -1) {
+                clearQueue.append(clearRange);
+                clearRange.first = -1;
+                clearRange.second = -1;
+            }
+        }
+    }
+
+    if (clearRange.first != -1) {
+        clearQueue.append(clearRange);
+        clearRange.first = -1;
+        clearRange.second = -1;
+    }
+
+    for (const auto &range : clearQueue) {
+        beginRemoveRows(QModelIndex(), range.first, range.second);
+        for (int i = range.second; i >= range.first; --i) {
+            d->notifications.removeAt(i);
+        }
+        endRemoveRows();
+    }
+
+    qDebug() << "clearing the following ranges" << clearQueue;
 }

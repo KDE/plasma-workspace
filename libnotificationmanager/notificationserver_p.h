@@ -35,7 +35,7 @@ struct Inhibition
 namespace NotificationManager
 {
 
-class NotificatonServer;
+class Notification;
 
 class Q_DECL_HIDDEN NotificationServerPrivate : public QObject, protected QDBusContext
 {
@@ -73,12 +73,16 @@ Q_SIGNALS:
     void inhibitedChanged();
 
 public: // stuff used by public class
+    uint add(const Notification &notification);
+
     bool m_valid = false;
+    uint m_highestNotificationId = 0;
+
+private slots:
+    void onBroadcastNotification(const QMap<QString, QVariant> &properties);
 
 private:
     void onServiceUnregistered(const QString &serviceName);
-
-    uint m_highestNotificationId = 0;
 
     QDBusServiceWatcher *m_inhibitionWatcher = nullptr;
     uint m_highestInhibitionCookie = 0;

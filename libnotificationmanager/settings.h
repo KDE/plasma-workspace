@@ -116,6 +116,7 @@ public:
     Q_INVOKABLE void setServiceBehavior(const QString &desktopEntry, NotificationBehaviors behaviors);
 
     Q_INVOKABLE void registerKnownApplication(const QString &desktopEntry);
+    Q_INVOKABLE void forgetKnownApplication(const QString &desktopEntry);
 
     Q_INVOKABLE void load();
     Q_INVOKABLE void save();

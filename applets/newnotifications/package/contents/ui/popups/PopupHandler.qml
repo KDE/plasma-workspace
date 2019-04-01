@@ -266,8 +266,14 @@ QtObject {
             onCloseClicked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
             onDismissClicked: model.dismissed = true
             onConfigureClicked: popupNotificationsModel.configure(popupNotificationsModel.index(index, 0))
-            onDefaultActionInvoked: popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0))
-            onActionInvoked: popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName)
+            onDefaultActionInvoked: {
+                popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0))
+                popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+            }
+            onActionInvoked: {
+                popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName)
+                popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+            }
             onOpenUrl: {
                 Qt.openUrlExternally(url);
                 popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
@@ -286,6 +292,7 @@ QtObject {
                 // Apps with notifyrc can already be configured anyway
                 if (model.desktopEntry && !model.notifyRcName) {
                     notificationSettings.registerKnownApplication(model.desktopEntry);
+                    notificationSettings.save();
                 }
             }
         }

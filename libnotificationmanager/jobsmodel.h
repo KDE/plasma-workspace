@@ -26,6 +26,8 @@
 
 #include <Plasma/DataEngine>
 
+#include "notifications.h"
+
 namespace NotificationManager
 {
 
@@ -45,12 +47,14 @@ public:
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    Q_INVOKABLE void close(const QString &jobId);
-    Q_INVOKABLE void expire(const QString &jobId);
+    void close(const QString &jobId);
+    void expire(const QString &jobId);
 
-    Q_INVOKABLE void suspend(const QString &jobId);
-    Q_INVOKABLE void resume(const QString &jobId);
-    Q_INVOKABLE void kill(const QString &jobId);
+    void suspend(const QString &jobId);
+    void resume(const QString &jobId);
+    void kill(const QString &jobId);
+
+    void clear(Notifications::ClearFlags flags);
 
 private slots:
     void dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data);

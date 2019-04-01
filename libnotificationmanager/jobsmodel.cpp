@@ -306,3 +306,9 @@ void JobsModel::kill(const QString &jobId)
 {
     d->operationCall(jobId, QStringLiteral("stop"));
 }
+
+void JobsModel::clear(Notifications::ClearFlags flags)
+{
+    Q_UNUSED(flags);
+    // TODO
+}

@@ -26,6 +26,7 @@ ecm_qt_declare_logging_category(notificationmanager_LIB_SRCS
     HEADER debug.h
     IDENTIFIER NOTIFICATIONMANAGER
     CATEGORY_NAME org.kde.plasma.notifications)
+install(FILES libnotificationmanager.categories DESTINATION ${KDE_INSTALL_CONFDIR})
 
 # Settings
 kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/donotdisturbsettings.kcfgc)
@@ -59,6 +60,7 @@ target_link_libraries(notificationmanager
         KF5::Plasma
         KF5::I18n
         KF5::IconThemes
+        KF5::ProcessCore
 )
 
 set_target_properties(notificationmanager PROPERTIES

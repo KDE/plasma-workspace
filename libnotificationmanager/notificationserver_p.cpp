@@ -32,6 +32,13 @@
 #include <QDBusConnection>
 #include <QDBusServiceWatcher>
 
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <KUser>
+
+#include <processcore/processes.h>
+#include <processcore/process.h>
+
 using namespace NotificationManager;
 
 NotificationServerPrivate::NotificationServerPrivate(QObject *parent)
@@ -75,6 +82,15 @@ NotificationServerPrivate::NotificationServerPrivate(QObject *parent)
 
     qCDebug(NOTIFICATIONMANAGER) << "Registered Notification service on DBus";
     m_valid = true;
+
+    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("Notifications"));
+    const bool broadcastsEnabled = config.readEntry("ListenForBroadcasts", false);
+
+    if (broadcastsEnabled) {
+        qCDebug(NOTIFICATIONMANAGER) << "Notification server is configured to listen for broadcasts";
+        QDBusConnection::systemBus().connect({}, {}, QStringLiteral("org.kde.BroadcastNotifications"),
+                                             QStringLiteral("Notify"), this, SLOT(onBroadcastNotification(QMap<QString,QVariant>)));
+    }
 }
 
 NotificationServerPrivate::~NotificationServerPrivate() = default;
@@ -107,8 +123,26 @@ uint NotificationServerPrivate::Notify(const QString &app_name, uint replaces_id
     // might override some of the things we set above (like application name)
     notification.d->processHints(hints);
 
+    // No application name? Try to figure out the process name using the sender's PID
+    if (notification.applicationName().isEmpty()) {
+        qCDebug(NOTIFICATIONMANAGER) << "Notification from service" << message().service() << "didn't contain any identification information, this is an application bug";
+
+        QDBusReply<uint> pidReply = connection().interface()->servicePid(message().service());
+        if (pidReply.isValid()) {
+            const auto pid = pidReply.value();
+
+            KSysGuard::Processes procs;
+            procs.updateOrAddProcess(pid);
+
+            if (KSysGuard::Process *proc = procs.getProcess(pid)) {
+                qCDebug(NOTIFICATIONMANAGER) << "Resolved notification to be from PID" << pid << "which is" << proc->name();
+                notification.setApplicationName(proc->name());
+            }
+        }
+    }
+
     if (wasReplaced) {
-        notification.setUpdated();
+        notification.resetUpdated();
         emit static_cast<NotificationServer*>(parent())->notificationReplaced(replaces_id, notification);
     } else {
         emit static_cast<NotificationServer*>(parent())->notificationAdded(notification);
@@ -148,6 +182,60 @@ QString NotificationServerPrivate::GetServerInformation(QString &vendor, QString
     version = QLatin1String(PROJECT_VERSION);
     specVersion = QStringLiteral("1.2");
     return QStringLiteral("Plasma");
+}
+
+void NotificationServerPrivate::onBroadcastNotification(const QMap<QString, QVariant> &properties)
+{
+    qCDebug(NOTIFICATIONMANAGER) << "Received broadcast notification";
+
+    const auto currentUserId = KUserId::currentEffectiveUserId().nativeId();
+
+    // a QVariantList with ints arrives as QDBusArgument here, using a QStringList for simplicity
+    const QStringList &userIds = properties.value(QStringLiteral("uids")).toStringList();
+    if (!userIds.isEmpty()) {
+        auto it = std::find_if(userIds.constBegin(), userIds.constEnd(), [currentUserId](const QVariant &id) {
+            bool ok;
+            auto uid = id.toString().toLongLong(&ok);
+            return ok && uid == currentUserId;
+        });
+
+        if (it == userIds.constEnd()) {
+            qCDebug(NOTIFICATIONMANAGER) << "It is not meant for us, ignoring";
+            return;
+        }
+    }
+
+    bool ok;
+    int timeout = properties.value(QStringLiteral("timeout")).toInt(&ok);
+    if (!ok) {
+        timeout = -1; // -1 = server default, 0 would be "persistent"
+    }
+
+    Notify(
+        properties.value(QStringLiteral("appName")).toString(),
+        0, // replaces_id
+        properties.value(QStringLiteral("appIcon")).toString(),
+        properties.value(QStringLiteral("summary")).toString(),
+        properties.value(QStringLiteral("body")).toString(),
+        {}, // no actions
+        properties.value(QStringLiteral("hints")).toMap(),
+        timeout
+    );
+}
+
+uint NotificationServerPrivate::add(const Notification &notification)
+{
+    // TODO check if notification with ID already exists and signal update instead
+    if (notification.id() == 0) {
+        ++m_highestNotificationId;
+        notification.d->id = m_highestNotificationId;
+
+        emit static_cast<NotificationServer*>(parent())->notificationAdded(notification);
+    } else {
+        emit static_cast<NotificationServer*>(parent())->notificationReplaced(notification.id(), notification);
+    }
+
+    return notification.id();
 }
 
 uint NotificationServerPrivate::Inhibit(const QString &desktop_entry, const QString &reason, const QVariantMap &hints)

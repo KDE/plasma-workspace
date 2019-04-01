@@ -19,7 +19,7 @@
 #include "notificationaction.h"
 #include "notificationsengine.h"
 
-#include <notificationmanager/notificationserver.h>
+#include "notificationserver.h"
 
 #include <klocalizedstring.h>
 

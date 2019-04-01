@@ -22,6 +22,9 @@
 #include "notificationserver_p.h"
 
 #include "notification.h"
+#include "notification_p.h"
+
+#include "debug.h"
 
 #include <QDBusConnection>
 
@@ -61,6 +64,11 @@ void NotificationServer::closeNotification(uint notificationId, CloseReason reas
 void NotificationServer::invokeAction(uint notificationId, const QString &actionName)
 {
     emit d->ActionInvoked(notificationId, actionName);
+}
+
+uint NotificationServer::add(const Notification &notification)
+{
+    return d->add(notification);
 }
 
 bool NotificationServer::inhibited() const

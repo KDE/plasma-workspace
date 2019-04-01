@@ -42,7 +42,7 @@ QString JobDetails::text() const
     if (m_destUrl.isLocalFile()) {
         destUrlString = m_destUrl.toLocalFile();
 
-        const QString homePath = QDir::homePath(); // TODO profile if this is heavy
+        const QString homePath = QDir::homePath();
         if (destUrlString.startsWith(homePath)) {
             destUrlString = QStringLiteral("~") + destUrlString.mid(homePath.length());
         }

@@ -179,7 +179,7 @@ public:
          */
         ExpiredRole,
         /**
-         * The notificaton got dismissed by the user or not presented
+         * The notification got dismissed by the user or not presented
          * because of Do Not Disturb settings, but can still be
          * listed in e.g. a missed notifications list.
          */

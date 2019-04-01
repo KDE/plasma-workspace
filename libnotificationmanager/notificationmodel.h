@@ -24,6 +24,8 @@
 #include <QScopedPointer>
 #include <QSharedPointer>
 
+#include "notifications.h"
+
 namespace NotificationManager
 {
 
@@ -46,12 +48,13 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     // TODO should we have an API taking int row, or QModelIndex?
-    Q_INVOKABLE void expire(uint notificationId);
-    Q_INVOKABLE void close(uint notificationId);
-    Q_INVOKABLE void configure(uint notificationId);
-    Q_INVOKABLE void invokeDefaultAction(uint notificationId);
-    // FIXME rename invokeAction
-    Q_INVOKABLE void invoke(uint notificationId, const QString &actionName);
+    void expire(uint notificationId);
+    void close(uint notificationId);
+    void configure(uint notificationId);
+    void invokeDefaultAction(uint notificationId);
+    void invokeAction(uint notificationId, const QString &actionName);
+
+    void clear(Notifications::ClearFlags flags);
 
 signals:
     void lastReadChanged();

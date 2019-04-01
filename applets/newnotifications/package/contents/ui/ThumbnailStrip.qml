@@ -27,7 +27,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 
-import org.kde.plasma.private.notifications 2.0 as Notifications
+import org.kde.plasma.private.notificationsng 2.0 as Notifications // FIXME
 
 MouseArea {
     id: thumbnailArea
@@ -167,17 +167,20 @@ MouseArea {
             }
             tooltip: i18n("More Options...")
             Accessible.name: tooltip
-            checkable: true
             iconName: "application-menu"
+            checkable: true
 
-            onClicked: {
-                checked = Qt.binding(function() {
-                    return thumbnailer.menuVisible;
-                });
+            onPressedChanged: {
+                if (pressed) {
+                    // fake "pressed" while menu is open
+                    checked = Qt.binding(function() {
+                        return fileMenu.visible;
+                    });
 
-                fileMenu.visualParent = this;
-                // -1 tells it to "align bottom left of visualParent (this)"
-                fileMenu.open(-1, -1);
+                    fileMenu.visualParent = this;
+                    // -1 tells it to "align bottom left of visualParent (this)"
+                    fileMenu.open(-1, -1);
+                }
             }
         }
     }

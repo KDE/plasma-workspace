@@ -85,6 +85,16 @@ public:
      */
     void invokeAction(uint id, const QString &actionName);
 
+    /**
+     * Adds a notification
+     *
+     * @note The notification isn't actually broadcast
+     * but just emitted locally.
+     *
+     * @return the ID of the notification
+     */
+    uint add(const Notification &notification);
+
 Q_SIGNALS:
     /**
      * Emitted when a notification was added.

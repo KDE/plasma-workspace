@@ -37,6 +37,8 @@
 #include <KIconLoader>
 #include <KService>
 
+#include "debug.h"
+
 #include "notifications.h"
 
 using namespace NotificationManager;
@@ -383,7 +385,7 @@ QDateTime Notification::updated() const
     return d->updated;
 }
 
-void Notification::setUpdated()
+void Notification::resetUpdated()
 {
     d->updated = QDateTime::currentDateTimeUtc();
 }
@@ -438,6 +440,11 @@ QString Notification::notifyRcName() const
     return d->notifyRcName;
 }
 
+QString Notification::eventId() const
+{
+    return d->eventId;
+}
+
 QString Notification::applicationName() const
 {
     return d->applicationName;
@@ -486,8 +493,7 @@ bool Notification::hasDefaultAction() const
 void Notification::setActions(const QStringList &actions)
 {
     if (actions.count() % 2 != 0) {
-        // FIXME qCWarning
-        qWarning() << "List of actions must contain an even number of items, tried to set actions to" << actions;
+        qCWarning(NOTIFICATIONMANAGER) << "List of actions must contain an even number of items, tried to set actions to" << actions;
         return;
     }
 
@@ -575,7 +581,7 @@ void Notification::setDismissed(bool dismissed)
     d->dismissed = dismissed;
 }
 
-/*bool Notification::operator==(const Notification &other) const
+void Notification::processHints(const QVariantMap &hints)
 {
-    return other.d->id == d->id;
-}*/
+    d->processHints(hints);
+}
