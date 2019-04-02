@@ -219,15 +219,27 @@ ColumnLayout {
 
             Repeater {
                 id: actionRepeater
-                // HACK We want the actions to be right-aligned but Flow also reverses
-                // the order of items, so we manually reverse it here
-                model: (notificationItem.actionNames || []).reverse()
+
+                model: {
+                    var buttons = [];
+                    // HACK We want the actions to be right-aligned but Flow also reverses
+                    var actionNames = (notificationItem.actionNames || []).reverse();
+                    var actionLabels = (notificationItem.actionLabels || []).reverse();
+                    for (var i = 0; i < actionNames.length; ++i) {
+                        buttons.push({
+                            actionName: actionNames[i],
+                            label: actionLabels[i]
+                        });
+                    }
+                    return buttons;
+                }
 
                 PlasmaComponents.ToolButton {
                     flat: false
-                    text: notificationItem.actionLabels[actionRepeater.count - index - 1]
+                    // why does it spit "cannot assign undefined to string" when a notification becomes expired?
+                    text: modelData.label || ""
                     Layout.preferredWidth: minimumWidth
-                    onClicked: notificationItem.actionInvoked(modelData)
+                    onClicked: notificationItem.actionInvoked(modelData.actionName)
                 }
             }
         }

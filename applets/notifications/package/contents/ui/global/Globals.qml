@@ -31,44 +31,38 @@ import org.kde.notificationmanager 1.0 as NotificationManager
 
 import ".."
 
+// This singleton object contains stuff shared between all notification plasmoids, namely:
+// - Popup creation and placement
+// - Do not disturb mode
 QtObject {
-    id: popupHandler
+    id: globals
+
+    // Listened to by "ago" label in NotificationHeader to update all of them in unison
+    signal timeChanged
+
+    property bool inhibited: false
+
+    // Reset the expire limiter so we don't get a flood of non-expired notifications
+    onInhibitedChanged: {
+
+    }
 
     // Some parts of the code rely on plasmoid.nativeInterface and since we're in a singleton here
-    // this is named "plasmoid", TODO fix?
+    // this is named "plasmoid"
     property QtObject plasmoid: plasmoids[0]
+
+    // HACK When a plasmoid is destroyed, QML sets its value to "null" in the Array
+    // so we then remove it so we have a working "plasmoid" again
+    onPlasmoidChanged: {
+        if (!plasmoid) {
+            // this doesn't emit a change, only in ratePlasmoids() it will detect the change
+            plasmoids.splice(0, 1); // remove first
+            ratePlasmoids();
+        }
+    }
+
     // all notification plasmoids
     property var plasmoids: []
-
-    // This heuristic tries to find a suitable plasmoid to follow when placing popups
-    function plasmoidScore(plasmoid) {
-        if (!plasmoid) {
-            return 0;
-        }
-
-        var score = 0;
-
-        // Prefer plasmoids in a panel, prefer horizontal panels over vertical ones
-        if (plasmoid.location === PlasmaCore.Types.LeftEdge
-                || plasmoid.location === PlasmaCore.Types.RightEdge) {
-            score += 1;
-        } else if (plasmoid.location === PlasmaCore.Types.TopEdge
-                   || plasmoid.location === PlasmaCore.Types.BottomEdge) {
-            score += 2;
-        }
-
-        // Prefer iconified plasmoids
-        if (!plasmoid.expanded) {
-            ++score;
-        }
-
-        // Prefer plasmoids on primary screen
-        if (plasmoid.nativeInterface && plasmoid.nativeInterface.isPrimaryScreen(plasmoid.screenGeometry)) {
-            ++score;
-        }
-
-        return score;
-    }
 
     property int popupLocation: {
         switch (notificationSettings.popupPosition) {
@@ -81,10 +75,12 @@ QtObject {
             var alignment = 0;
             if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
                 alignment |= Qt.AlignLeft;
+            } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
+                alignment |= Qt.AlignRight;
             } else {
                 // would be nice to do plasmoid.compactRepresentationItem.mapToItem(null) and then
                 // position the popups depending on the relative position within the panel
-                alignment |= Qt.AlignRight;
+                alignment |= Qt.application.layoutDirection === Qt.RightToLeft ? Qt.AlignLeft : Qt.AlignRight;
             }
             if (plasmoid.location === PlasmaCore.Types.TopEdge) {
                 alignment |= Qt.AlignTop;
@@ -121,9 +117,46 @@ QtObject {
     onPopupLocationChanged: Qt.callLater(positionPopups)
     onScreenRectChanged: Qt.callLater(positionPopups)
 
+    Component.onCompleted: checkInhibition()
+
     function adopt(plasmoid) {
+        // this doesn't emit a change, only in ratePlasmoids() it will detect the change
+        globals.plasmoids.push(plasmoid);
+        ratePlasmoids();
+    }
+
+    // Sorts plasmoids based on a heuristic to find a suitable plasmoid to follow when placing popups
+    function ratePlasmoids() {
+        var plasmoidScore = function(plasmoid) {
+            if (!plasmoid) {
+                return 0;
+            }
+
+            var score = 0;
+
+            // Prefer plasmoids in a panel, prefer horizontal panels over vertical ones
+            if (plasmoid.location === PlasmaCore.Types.LeftEdge
+                    || plasmoid.location === PlasmaCore.Types.RightEdge) {
+                score += 1;
+            } else if (plasmoid.location === PlasmaCore.Types.TopEdge
+                       || plasmoid.location === PlasmaCore.Types.BottomEdge) {
+                score += 2;
+            }
+
+            // Prefer iconified plasmoids
+            if (!plasmoid.expanded) {
+                ++score;
+            }
+
+            // Prefer plasmoids on primary screen
+            if (plasmoid.nativeInterface && plasmoid.nativeInterface.isPrimaryScreen(plasmoid.screenGeometry)) {
+                ++score;
+            }
+
+            return score;
+        }
+
         var newPlasmoids = plasmoids;
-        newPlasmoids.push(plasmoid);
         newPlasmoids.sort(function (a, b) {
             var scoreA = plasmoidScore(a);
             var scoreB = plasmoidScore(b);
@@ -136,8 +169,23 @@ QtObject {
                 return 0;
             }
         });
+        globals.plasmoids = newPlasmoids;
+    }
 
-        popupHandler.plasmoids = newPlasmoids;
+    function checkInhibition() {
+        globals.inhibited = Qt.binding(function() {
+            var inhibited = false;
+
+            var inhibitedUntil = notificationSettings.notificationsInhibitedUntil;
+            if (!isNaN(inhibitedUntil.getTime())) {
+                console.log("INH", inhibitedUntil);
+                inhibited |= (new Date().getTime() < inhibitedUntil.getTime());
+            }
+
+            // TODO check app inhibition
+
+            return inhibited;
+        });
     }
 
     function positionPopups() {
@@ -195,7 +243,7 @@ QtObject {
     }
 
     property QtObject popupNotificationsModel: NotificationManager.Notifications {
-        limit: Math.ceil(popupHandler.screenRect.height / (theme.mSize(theme.defaultFont).height * 4))
+        limit: Math.ceil(globals.screenRect.height / (theme.mSize(theme.defaultFont).height * 4))
         showExpired: false
         showDismissed: false
         blacklistedDesktopEntries: notificationSettings.popupBlacklistedApplications
@@ -204,19 +252,48 @@ QtObject {
         sortMode: NotificationManager.Notifications.SortByTypeAndUrgency
         groupMode: NotificationManager.Notifications.GroupDisabled
         urgencies: {
-            var urgencies = NotificationManager.Notifications.NormalUrgency | NotificationManager.Notifications.CriticalUrgency;
+            var urgencies = 0;
+
+            // Critical always except in do not disturb mode when disabled in settings
+            if (!globals.inhibited || notificationSettings.criticalPopupsInDoNotDisturbMode) {
+                urgencies |= NotificationManager.Notifications.CriticalUrgency;
+            }
+
+            // Normal only when not in do not disturb mode
+            if (!globals.inhibited) {
+                urgencies |= NotificationManager.Notifications.NormalUrgency;
+            }
+
+            // Low only when enabled in settings
             if (notificationSettings.lowPriorityPopups) {
                 urgencies |=NotificationManager.Notifications.LowUrgency;
             }
+
             return urgencies;
         }
     }
 
-    property QtObject notificationSettings: NotificationManager.Settings { }
+    property QtObject notificationSettings: NotificationManager.Settings {
+        onNotificationsInhibitedUntilChanged: globals.checkInhibition()
+    }
+
+    // This periodically checks whether do not disturb mode timed out
+    property QtObject timeSource: PlasmaCore.DataSource {
+        engine: "time"
+        connectedSources: ["Local"]
+        interval: 60000 // 1 min
+        intervalAlignment: PlasmaCore.Types.AlignToMinute
+        onDataChanged: {
+            checkInhibition();
+            globals.timeChanged();
+        }
+    }
 
     property Instantiator popupInstantiator: Instantiator {
         model: popupNotificationsModel
         delegate: NotificationPopup {
+            popupWidth: globals.popupWidth
+
             notificationType: model.type
 
             applicationName: model.applicationName

@@ -56,11 +56,12 @@ target_link_libraries(notificationmanager
     PRIVATE
         Qt5::DBus
         KF5::ConfigGui
-        KF5::Service
-        KF5::Plasma
         KF5::I18n
         KF5::IconThemes
+        KF5::KIOFileWidgets
+        KF5::Plasma
         KF5::ProcessCore
+        KF5::Service
 )
 
 set_target_properties(notificationmanager PROPERTIES

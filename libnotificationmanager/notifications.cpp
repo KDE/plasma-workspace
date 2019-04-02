@@ -571,6 +571,7 @@ QHash<int, QByteArray> Notifications::roleNames() const
         {ActionNamesRole, QByteArrayLiteral("actionNames")},
         {ActionLabelsRole, QByteArrayLiteral("actionLabels")},
         {HasDefaultActionRole, QByteArrayLiteral("hasDefaultAction")},
+        {DefaultActionLabelRole, QByteArrayLiteral("defaultActionLabel")},
 
         {UrlsRole, QByteArrayLiteral("urls")},
 

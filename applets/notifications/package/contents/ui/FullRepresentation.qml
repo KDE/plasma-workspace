@@ -24,81 +24,171 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import org.kde.kcoreaddons 1.0 as KCoreAddons
+
 import org.kde.notificationmanager 1.0 as NotificationManager
+
+import "global"
 
 ColumnLayout {
     Layout.preferredWidth: units.gridUnit * 18
     Layout.preferredHeight: units.gridUnit * 24
     Layout.fillHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    spacing: units.smallSpacing
 
-    RowLayout {
+    // TODO these should be configurable in the future
+    readonly property int dndMorningHour: 6
+    readonly property int dndEveningHour: 20
+
+    // header
+    ColumnLayout {
         Layout.fillWidth: true
+        spacing: 0
 
         RowLayout {
-            id: dndRow
-            spacing: units.smallSpacing
-
-            PlasmaCore.IconItem {
-                // FIXME proper icon
-                source: "face-quiet"
-                Layout.preferredWidth: units.iconSizes.smallMedium
-                Layout.preferredHeight: units.iconSizes.smallMedium
-            }
-
-            PlasmaComponents.Label {
-                text: i18n("Do not disturb:")
-            }
-
-            PlasmaComponents.ComboBox {
-                Layout.preferredWidth: units.gridUnit * 10 // FIXME
-                model: [
-                    "Disabled",
-                    "While Okular is active",
-                    "For 1 hour",
-                    "Until logging out",
-                    "Until this evening",
-                    "Until Monday morning"
-                ]
-            }
-        }
-
-        Item {
             Layout.fillWidth: true
-        }
 
-        PlasmaComponents.ToolButton {
-            iconName: "configure"
-            tooltip: plasmoid.action("configure").text
-            visible: plasmoid.action("configure").enabled
-            onClicked: plasmoid.action("configure").trigger()
-        }
-    }
+            RowLayout {
+                id: dndRow
+                spacing: units.smallSpacing
 
-    RowLayout {
-        spacing: units.smallSpacing
-        Layout.leftMargin: units.iconSizes.smallMedium + units.smallSpacing
+                PlasmaComponents3.CheckBox {
+                    id: dndCheck
+                    text: i18n("Do not disturb")
+                    spacing: units.smallSpacing
+                    checkable: true
+                    checked: Globals.inhibited
 
-        PlasmaCore.IconItem {
-            Layout.preferredWidth: units.iconSizes.smallMedium
-            Layout.preferredHeight: units.iconSizes.smallMedium
-            source: "okular"
+                    // Let the menu open on press
+                    onPressed: {
+                        if (!Globals.inhibited) {
+                            dndMenu.date = new Date();
+                            // shows ontop of CheckBox to hide the fact that it's unchecked
+                            // until you actually select something :)
+                            dndMenu.open(0, 0);
+                        }
+                    }
+                    // but disable only on click
+                    onClicked: {
+                        if (Globals.inhibited) {
+                            notificationSettings.notificationsInhibitedUntil = undefined;
+
+                            notificationSettings.save();
+                        }
+                    }
+
+                    contentItem: RowLayout {
+                        PlasmaCore.IconItem {
+                            Layout.leftMargin: dndCheck.mirrored ? 0 : dndCheck.indicator.width + dndCheck.spacing
+                            Layout.rightMargin: dndCheck.mirrored ? dndCheck.indicator.width + dndCheck.spacing : 0
+                            // FIXME proper icon
+                            source: "face-quiet"
+                            Layout.preferredWidth: units.iconSizes.smallMedium
+                            Layout.preferredHeight: units.iconSizes.smallMedium
+                        }
+
+                        PlasmaComponents.Label {
+                            text: i18n("Do not disturb")
+                        }
+                    }
+
+                    PlasmaComponents.ContextMenu {
+                        id: dndMenu
+                        property date date
+                        visualParent: dndCheck
+                        onTriggered: {
+                            notificationSettings.notificationsInhibitedUntil = item.date;
+                            notificationSettings.save();
+                        }
+
+                        PlasmaComponents.MenuItem {
+                            section: true
+                            text: i18n("Do not disturb")
+                        }
+
+                        PlasmaComponents.MenuItem {
+                            text: i18n("For 1 hour")
+                            readonly property date date: {
+                                var d = dndMenu.date;
+                                d.setHours(d.getHours() + 1);
+                                d.setSeconds(0);
+                                return d;
+                            }
+                        }
+                        PlasmaComponents.MenuItem {
+                            text: i18n("Until this evening")
+                            // TODO make the user's preferred time schedule configurable
+                            visible: dndMenu.date.getHours() < dndEveningHour
+                            readonly property date date: {
+                                var d = dndMenu.date;
+                                d.setHours(dndEveningHour);
+                                d.setMinutes(0);
+                                d.setSeconds(0);
+                                return d;
+                            }
+                        }
+                        PlasmaComponents.MenuItem {
+                            text: i18n("Until tomorrow morning")
+                            visible: dndMenu.date.getHours() > dndMorningHour
+                            readonly property date date: {
+                                var d = dndMenu.date;
+                                d.setDate(d.getDate() + 1);
+                                d.setHours(dndMorningHour);
+                                d.setMinutes(0);
+                                d.setSeconds(0);
+                                return d;
+                            }
+                        }
+                        PlasmaComponents.MenuItem {
+                            text: i18n("Until Monday")
+                        }
+                    }
+                }
+            }
+
+            Item {
+                Layout.fillWidth: true
+            }
+
+            PlasmaComponents.ToolButton {
+                iconName: "configure"
+                tooltip: plasmoid.action("configure").text
+                visible: plasmoid.action("configure").enabled
+                onClicked: plasmoid.action("configure").trigger()
+            }
         }
 
         PlasmaExtras.DescriptiveLabel {
+            leftPadding: dndCheck.mirrored ? 0 : units.smallSpacing + dndCheck.indicator.width + dndCheck.spacing
+            rightPadding: dndCheck.mirrored ? units.smallSpacing + dndCheck.indicator.width + dndCheck.spacing : 0
             Layout.fillWidth: true
-            text: i18n("Okular has enabled do not disturb mode: Giving a presentation")
-            textFormat: Text.PlainText
             wrapMode: Text.WordWrap
-            maximumLineCount: 3 // just in case
+            textFormat: Text.PlainText
+            text: {
+                if (Globals.inhibited) {
+                    var inhibitedUntil = notificationSettings.notificationsInhibitedUntil
+                    var inhibitedUntilValid = !isNaN(inhibitedUntil.getTime());
+
+                    // TODO check app inhibition, too
+                    if (inhibitedUntilValid) {
+                        return i18nc("Do not disturb mode enabled until date", "Until %1",
+                                     KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat));
+                    }
+                }
+                return "";
+            }
+            visible:  text !== ""
         }
     }
 
     PlasmaCore.SvgItem {
         elementId: "horizontal-line"
         Layout.fillWidth: true
-        Layout.preferredHeight: 2 // FIXME
+        // why is this needed here but not in the delegate?
+        Layout.preferredHeight: naturalSize.height
         svg: PlasmaCore.Svg {
             id: lineSvg
             imagePath: "widgets/line"
@@ -135,6 +225,7 @@ ColumnLayout {
             ListView {
                 id: list
                 model: historyModel
+                spacing: units.smallSpacing
 
                 remove: Transition {
                     ParallelAnimation {
@@ -210,28 +301,49 @@ ColumnLayout {
                             jobDetails: model.jobDetails || null
 
                             configureActionLabel: model.configureActionLabel || ""
-                            actionNames: model.actionNames
-                            actionLabels: model.actionLabels
+                            // In the popup the default action is triggered by clicking on the popup
+                            // however in the list this is undesirable, so instead show a clickable button
+                            // in case you have a non-expired notification in history (do not disturb mode)
+                            actionNames: {
+                                var actions = (model.actionNames || []);
+                                if (model.hasDefaultAction) {
+                                    actions.unshift("default"); // prepend
+                                }
+                                return actions;
+                            }
+                            actionLabels: {
+                                var labels = (model.actionLabels || []);
+                                if (model.hasDefaultAction) {
+                                    labels.unshift(model.defaultActionLabel || i18n("Open")); // make sure it has some label
+                                }
+                                return labels;
+                            }
 
                             onCloseClicked: historyModel.close(historyModel.index(index, 0))
                             onDismissClicked: model.dismissed = false
                             onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
 
                             onActionInvoked: {
-                                historyModel.invokeAction(historyModel.index(index, 0), actionName);
-                                //historyModel.close(historyModel.index(index, 0));
+                                if (actionName === "default") {
+                                    historyModel.invokeDefaultAction(historyModel.index(index, 0));
+                                } else {
+                                    historyModel.invokeAction(historyModel.index(index, 0), actionName);
+                                }
+                                // Keep it in the history
+                                historyModel.expire(historyModel.index(index, 0));
                             }
                             onOpenUrl: {
                                 Qt.openUrlExternally(url);
-                                //historyModel.close(historyModel.index(index, 0))
+                                historyModel.expire(historyModel.index(index, 0));
                             }
+                            onFileActionInvoked: popupNotificationsModel.expire(popupNotificationsModel.index(index, 0))
 
                             onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
                             onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
                             onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
 
-                            // FIXME
-                            svg: lineSvg
+                            separatorSvg: lineSvg
+                            separatorVisible: index < list.count - 1
                         }
                     }
                 }

@@ -45,10 +45,14 @@ class NOTIFICATIONMANAGER_EXPORT Notification
 {
 public:
     explicit Notification(uint id = 0);
+
     Notification(const Notification &other);
     Notification(Notification &&other) Q_DECL_NOEXCEPT;
-    Notification &operator=(const Notification &other);
 
+    Notification &operator=(const Notification &other);
+    Notification &operator=(Notification &&other) Q_DECL_NOEXCEPT;
+
+    // should this be virtual for good measure?
     ~Notification();
 
     /*enum class Urgency {
@@ -94,6 +98,7 @@ public:
     QStringList actionNames() const;
     QStringList actionLabels() const;
     bool hasDefaultAction() const;
+    QString defaultActionLabel() const;
     void setActions(const QStringList &actions);
 
     // QVector?

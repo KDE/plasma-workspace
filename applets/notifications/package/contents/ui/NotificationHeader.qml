@@ -30,6 +30,8 @@ import org.kde.notificationmanager 1.0 as NotificationManager
 
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 
+import "global"
+
 RowLayout {
     id: notificationHeading
 
@@ -54,6 +56,7 @@ RowLayout {
     signal dismissClicked
     signal closeClicked
 
+    // notification created/updated time changed
     onTimeChanged: updateAgoText()
 
     function updateAgoText() {
@@ -63,16 +66,11 @@ RowLayout {
     spacing: units.smallSpacing
     Layout.preferredHeight: Math.max(applicationNameLabel.implicitHeight, units.iconSizes.small)
 
-    // TODO this timer should probably be at a central location
-    // so every notification updates simultaneously
-    Timer {
-        interval: 60000
-        repeat: true
-        running: notificationHeading.visible
-                 && notificationHeading.Window.window
-                 && notificationHeading.Window.window.visible
-        triggeredOnStart: true
-        onTriggered: notificationHeading.updateAgoText()
+    Connections {
+        target: Globals
+        // clock time changed
+        // TODO should we do this only when actually visible/expanded?
+        onTimeChanged: notificationHeading.updateAgoText()
     }
 
     PlasmaCore.IconItem {
@@ -101,7 +99,7 @@ RowLayout {
         text: generateRemainingText() || agoText
 
         function generateAgoText() {
-            if (!time || isNaN(time.getTime())) {
+            if (!time || isNaN(time.getTime()) || notificationHeading.jobState === NotificationManager.Notifications.JobStateRunning) {
                 return "";
             }
 

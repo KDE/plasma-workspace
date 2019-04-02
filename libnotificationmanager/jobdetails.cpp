@@ -23,32 +23,77 @@
 #include <QDir>
 #include <QDebug>
 
+#include <KFilePlacesModel>
 #include <KLocalizedString>
+
+#include "jobdetails_p.h"
 
 using namespace NotificationManager;
 
-JobDetails::JobDetails(QObject *parent) : QObject(parent)
+JobDetails::Private::Private(JobDetails *q)
+    : q(q)
+    , m_placesModel(createPlacesModel())
 {
 
 }
 
-JobDetails::~JobDetails() = default;
+JobDetails::Private::~Private() = default;
 
-QString JobDetails::text() const
+QSharedPointer<KFilePlacesModel> JobDetails::Private::createPlacesModel()
 {
-    const QString currentFileName = descriptionUrl().fileName();
+    static QWeakPointer<KFilePlacesModel> s_instance;
+    if (!s_instance) {
+        QSharedPointer<KFilePlacesModel> ptr(new KFilePlacesModel());
+        s_instance = ptr.toWeakRef();
+        return ptr;
+    }
+    return s_instance.toStrongRef();
+}
 
-    QString destUrlString;
+// Tries to return a more user-friendly displayed destination
+// - if it is a place, show the name, e.g. "Downloads"
+// - if it is inside home, abbreviate that to tilde ~/foo
+// - otherwise print URL (without password)
+QString JobDetails::Private::prettyDestUrl() const
+{
+    if (!m_destUrl.isValid()) {
+        return QString();
+    }
+
+    if (!m_placesModel) {
+        m_placesModel = createPlacesModel();
+    }
+
+    // If we copy into a "place", show its pretty name instead of a URL/path
+    for (int row = 0; row < m_placesModel->rowCount(); ++row) {
+        const QModelIndex idx = m_placesModel->index(row, 0);
+        if (m_placesModel->isHidden(idx)) {
+            continue;
+        }
+
+        if (m_placesModel->url(idx).matches(m_destUrl, QUrl::StripTrailingSlash)) {
+            return m_placesModel->text(idx);
+        }
+    }
+
     if (m_destUrl.isLocalFile()) {
-        destUrlString = m_destUrl.toLocalFile();
+        QString destUrlString = m_destUrl.toLocalFile();
 
         const QString homePath = QDir::homePath();
         if (destUrlString.startsWith(homePath)) {
             destUrlString = QStringLiteral("~") + destUrlString.mid(homePath.length());
         }
-    } else {
-        destUrlString = m_destUrl.toDisplayString(); // strips password
+
+        return destUrlString;
     }
+
+    return m_destUrl.toDisplayString(); // strips password
+}
+
+QString JobDetails::Private::text() const
+{
+    const QString currentFileName = descriptionUrl().fileName();
+    const QString destUrlString = prettyDestUrl();
 
     qDebug() << "JOB DETAILS" << "current file name" << currentFileName << "desturl" << destUrlString
                << "processed files" << m_processedFiles << "total files" << m_totalFiles
@@ -88,15 +133,6 @@ QString JobDetails::text() const
     return QString();
 }
 
-QUrl JobDetails::descriptionUrl() const
-{
-    QUrl url = QUrl::fromUserInput(m_descriptionValue2, QString(), QUrl::AssumeLocalFile);
-    if (!url.isValid()) {
-        url = QUrl::fromUserInput(m_descriptionValue1, QString(), QUrl::AssumeLocalFile);
-    }
-    return url;
-}
-
 template<typename T> bool processField(const QVariantMap/*Plasma::DataEngine::Data*/ &data,
                                        const QString &field,
                                        T &target,
@@ -116,7 +152,7 @@ template<typename T> bool processField(const QVariantMap/*Plasma::DataEngine::Da
 }
 
 
-void JobDetails::processData(const QVariantMap &data)
+void JobDetails::Private::processData(const QVariantMap &data)
 {
     bool textDirty = false;
     bool urlDirty = false;
@@ -127,28 +163,28 @@ void JobDetails::processData(const QVariantMap &data)
         if (m_destUrl != destUrl) {
             m_destUrl = destUrl;
             textDirty = true;
-            emit destUrlChanged();
+            emit q->destUrlChanged();
         }
     }
 
     processField(data, QStringLiteral("labelName0"), m_descriptionLabel1,
-                 this, &JobDetails::descriptionLabel1Changed);
+                 q, &JobDetails::descriptionLabel1Changed);
     if (processField(data, QStringLiteral("label0"), m_descriptionValue1,
-                     this, &JobDetails::descriptionValue1Changed)) {
+                     q, &JobDetails::descriptionValue1Changed)) {
         textDirty = true;
         urlDirty = true;
     }
 
     processField(data, QStringLiteral("labelName1"), m_descriptionLabel2,
-                 this, &JobDetails::descriptionLabel2Changed);
+                 q, &JobDetails::descriptionLabel2Changed);
     if (processField(data, QStringLiteral("label1"), m_descriptionValue2,
-                     this, &JobDetails::descriptionValue2Changed)) {
+                     q, &JobDetails::descriptionValue2Changed)) {
         textDirty = true;
         urlDirty = true;
     }
 
     processField(data, QStringLiteral("numericSpeed"), m_speed,
-                 this, &JobDetails::speedChanged);
+                 q, &JobDetails::speedChanged);
 
     for (int i = 0; i <= 2; ++i) {
         {
@@ -156,13 +192,13 @@ void JobDetails::processData(const QVariantMap &data)
             const QString amountKey = QStringLiteral("processedAmount%1").arg(QString::number(i));
 
             if (unit == QLatin1String("bytes")){
-                processField(data, amountKey, m_processedBytes, this, &JobDetails::processedBytesChanged);
+                processField(data, amountKey, m_processedBytes, q, &JobDetails::processedBytesChanged);
             } else if (unit == QLatin1String("files")) {
-                if (processField(data, amountKey, m_processedFiles, this, &JobDetails::processedFilesChanged)) {
+                if (processField(data, amountKey, m_processedFiles, q, &JobDetails::processedFilesChanged)) {
                     textDirty = true;
                 }
             } else if (unit == QLatin1String("dirs")) {
-                processField(data, amountKey, m_processedDirectories, this, &JobDetails::processedDirectoriesChanged);
+                processField(data, amountKey, m_processedDirectories, q, &JobDetails::processedDirectoriesChanged);
             }
         }
 
@@ -171,21 +207,109 @@ void JobDetails::processData(const QVariantMap &data)
             const QString amountKey = QStringLiteral("totalAmount%1").arg(QString::number(i));
 
             if (unit == QLatin1String("bytes")){
-                processField(data, amountKey, m_totalBytes, this, &JobDetails::totalBytesChanged);
+                processField(data, amountKey, m_totalBytes, q, &JobDetails::totalBytesChanged);
             } else if (unit == QLatin1String("files")) {
-                if (processField(data, amountKey, m_totalFiles, this, &JobDetails::totalFilesChanged)) {
+                if (processField(data, amountKey, m_totalFiles, q, &JobDetails::totalFilesChanged)) {
                     textDirty = true;
                 }
             } else if (unit == QLatin1String("dirs")) {
-                processField(data, amountKey, m_totalDirectories, this, &JobDetails::totalDirectoriesChanged);
+                processField(data, amountKey, m_totalDirectories, q, &JobDetails::totalDirectoriesChanged);
             }
         }
     }
 
     if (urlDirty) {
-        emit descriptionUrlChanged();
+        emit q->descriptionUrlChanged();
     }
     if (urlDirty || textDirty) {
-        emit textChanged();
+        emit q->textChanged();
     }
+}
+
+QUrl JobDetails::Private::descriptionUrl() const
+{
+    QUrl url = QUrl::fromUserInput(m_descriptionValue2, QString(), QUrl::AssumeLocalFile);
+    if (!url.isValid()) {
+        url = QUrl::fromUserInput(m_descriptionValue1, QString(), QUrl::AssumeLocalFile);
+    }
+    return url;
+}
+
+JobDetails::JobDetails(QObject *parent)
+    : QObject(parent)
+    , d(new Private(this))
+{
+
+}
+
+JobDetails::~JobDetails() = default;
+
+QString JobDetails::text() const
+{
+    return d->text();
+}
+
+QUrl JobDetails::destUrl() const
+{
+    return d->m_destUrl;
+}
+
+qulonglong JobDetails::speed() const
+{
+    return d->m_speed;
+}
+
+qulonglong JobDetails::processedBytes() const
+{
+    return d->m_processedBytes;
+}
+
+qulonglong JobDetails::processedFiles() const
+{
+    return d->m_processedFiles;
+}
+
+qulonglong JobDetails::processedDirectories() const
+{
+    return d->m_processedDirectories;
+}
+
+qulonglong JobDetails::totalBytes() const
+{
+    return d->m_totalBytes;
+}
+
+qulonglong JobDetails::totalFiles() const
+{
+    return d->m_totalFiles;
+}
+
+qulonglong JobDetails::totalDirectories() const
+{
+    return d->m_totalDirectories;
+}
+
+QString JobDetails::descriptionLabel1() const
+{
+    return d->m_descriptionLabel1;
+}
+
+QString JobDetails::descriptionValue1() const
+{
+    return d->m_descriptionValue1;
+}
+
+QString JobDetails::descriptionLabel2() const
+{
+    return d->m_descriptionLabel2;
+}
+
+QString JobDetails::descriptionValue2() const
+{
+    return d->m_descriptionValue2;
+}
+
+QUrl JobDetails::descriptionUrl() const
+{
+    return d->descriptionUrl();
 }

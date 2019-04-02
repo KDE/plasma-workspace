@@ -49,6 +49,11 @@ NotificationServer &NotificationServer::self()
     return s_self;
 }
 
+bool NotificationServer::init()
+{
+    return d->init();
+}
+
 bool NotificationServer::isValid() const
 {
     return d->m_valid;

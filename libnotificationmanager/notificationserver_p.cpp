@@ -43,20 +43,31 @@ using namespace NotificationManager;
 
 NotificationServerPrivate::NotificationServerPrivate(QObject *parent)
     : QObject(parent)
-    , m_inhibitionWatcher(new QDBusServiceWatcher(this))
 {
+
+}
+
+NotificationServerPrivate::~NotificationServerPrivate() = default;
+
+bool NotificationServerPrivate::init()
+{
+    if (m_valid) {
+        return true;
+    }
+
     new NotificationsAdaptor(this);
 
     if (!QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/freedesktop/Notifications"), this)) {
         qCWarning(NOTIFICATIONMANAGER) << "Failed to register Notification DBus object";
-        return;
+        return false;
     }
 
     if (!QDBusConnection::sessionBus().registerService(QStringLiteral("org.freedesktop.Notifications"))) {
         qCWarning(NOTIFICATIONMANAGER) << "Failed to register Notification service on DBus";
-        return;
+        return false;
     }
 
+    m_inhibitionWatcher = new QDBusServiceWatcher(this);
     m_inhibitionWatcher->setConnection(QDBusConnection::sessionBus());
     m_inhibitionWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
     connect(m_inhibitionWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &NotificationServerPrivate::onServiceUnregistered);
@@ -81,7 +92,6 @@ NotificationServerPrivate::NotificationServerPrivate(QObject *parent)
     });
 
     qCDebug(NOTIFICATIONMANAGER) << "Registered Notification service on DBus";
-    m_valid = true;
 
     KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("Notifications"));
     const bool broadcastsEnabled = config.readEntry("ListenForBroadcasts", false);
@@ -91,9 +101,10 @@ NotificationServerPrivate::NotificationServerPrivate(QObject *parent)
         QDBusConnection::systemBus().connect({}, {}, QStringLiteral("org.kde.BroadcastNotifications"),
                                              QStringLiteral("Notify"), this, SLOT(onBroadcastNotification(QMap<QString,QVariant>)));
     }
-}
 
-NotificationServerPrivate::~NotificationServerPrivate() = default;
+    m_valid = true;
+    return true;
+}
 
 uint NotificationServerPrivate::Notify(const QString &app_name, uint replaces_id, const QString &app_icon,
                                        const QString &summary, const QString &body, const QStringList &actions,

@@ -27,6 +27,7 @@
 #include "notifications.h"
 
 #include "jobdetails.h"
+#include "jobdetails_p.h"
 
 #include <QQmlEngine>
 
@@ -163,18 +164,15 @@ QVector<int> Job::processData(const QVariantMap/*Plasma::DataEngine::Data*/ &dat
     processField(data, QStringLiteral("errorText"), m_errorText, Notifications::ErrorTextRole, dirtyRoles);
     processField(data, QStringLiteral("error"), m_error, Notifications::ErrorRole, dirtyRoles);
 
-    // should we provide some custom error messages for stuff like OWNER_DIED?
-    QString errorText;
-    if (m_errorText.isEmpty()) {
-        switch (m_error) {
-
-        }
-    }
+    /*if (m_errorText.isEmpty() && m_error) {
+        m_errorText = KIO::buildErrorString(m_error);
+        dirtyRoles.append(Notifications::ErrorTextRole);
+    }*/
 
     processField(data, QStringLiteral("killable"), m_killable, Notifications::KillableRole, dirtyRoles);
     processField(data, QStringLiteral("suspendable"), m_suspendable, Notifications::SuspendableRole, dirtyRoles);
 
-    auto it = data.find("appName"); // TODO should we monitor icon change too?
+    auto it = data.find("appName");
     if (it != end) {
         const QString appName = it->toString();
         if (m_appName != appName) {
@@ -225,7 +223,7 @@ QVector<int> Job::processData(const QVariantMap/*Plasma::DataEngine::Data*/ &dat
         }
     }
 
-    m_details->processData(data);
+    m_details->d->processData(data);
 
     return dirtyRoles;
 }

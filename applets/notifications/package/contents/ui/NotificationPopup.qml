@@ -31,6 +31,8 @@ import ".."
 PlasmaCore.Dialog {
     id: notificationPopup
 
+    property int popupWidth
+
     property alias notificationType: notificationItem.notificationType
     //readonly property bool isNotification: notificationType === NotificationManager.Notifications.NotificationType
     //readonly property bool isJob: notificationType === NotificationManager.Notifications.JobType
@@ -115,7 +117,7 @@ PlasmaCore.Dialog {
 
     mainItem: MouseArea {
         id: area
-        width: popupHandler.popupWidth
+        width: notificationPopup.popupWidth
         height: notificationItem.implicitHeight
         hoverEnabled: true
 
@@ -123,6 +125,9 @@ PlasmaCore.Dialog {
         acceptedButtons: hasDefaultAction ? Qt.LeftButton : Qt.NoButton
 
         onClicked: notificationPopup.defaultActionInvoked()
+
+        LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+        LayoutMirroring.childrenInherit: true
 
         Timer {
             id: timer

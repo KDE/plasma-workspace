@@ -365,6 +365,13 @@ Notification &Notification::operator=(const Notification &other)
     return *this;
 }
 
+Notification &Notification::operator=(Notification &&other)
+{
+    d = other.d;
+    other.d = nullptr;
+    return *this;
+}
+
 Notification::~Notification()
 {
     delete d;
@@ -485,10 +492,10 @@ bool Notification::hasDefaultAction() const
     return d->hasDefaultAction;
 }
 
-/*bool Notification::hasConfigureAction() const
+QString Notification::defaultActionLabel() const
 {
-    return m_hasConfigureAction;
-}*/
+    return d->defaultActionLabel;
+}
 
 void Notification::setActions(const QStringList &actions)
 {
@@ -509,6 +516,7 @@ void Notification::setActions(const QStringList &actions)
 
         if (!d->hasDefaultAction && name == QLatin1String("default")) {
             d->hasDefaultAction = true;
+            d->defaultActionLabel = label;
             continue;
         }
 

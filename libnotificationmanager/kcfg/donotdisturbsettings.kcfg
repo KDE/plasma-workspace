@@ -6,8 +6,8 @@
     <kcfgfile arg="true" />
 
     <group name="DoNotDisturb">
-        <!-- ApplicationsCanEnable -->
-        <!-- KeyboardShortcut -->
-        <!-- Activities ids -->
+        <entry name="Until" type="DateTime">
+            <default></default>
+        </entry>
     </group>
 </kcfg>

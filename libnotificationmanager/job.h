@@ -88,9 +88,9 @@ public:
 
     bool operator==(const Job &other) const;
 
+private:
     friend class JobsModel;
 
-private:
     QString m_sourceName;
 
     QDateTime m_created;

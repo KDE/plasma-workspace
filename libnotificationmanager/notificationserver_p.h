@@ -73,6 +73,7 @@ Q_SIGNALS:
     void inhibitedChanged();
 
 public: // stuff used by public class
+    bool init();
     uint add(const Notification &notification);
 
     bool m_valid = false;

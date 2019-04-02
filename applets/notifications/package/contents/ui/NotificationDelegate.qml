@@ -57,22 +57,22 @@ ColumnLayout {
     property alias actionNames: notificationItem.actionNames
     property alias actionLabels: notificationItem.actionLabels
 
+    property alias separatorSvg: lineSvgItem.svg
+    property alias separatorVisible: lineSvgItem.visible
+
     signal configureClicked
     signal dismissClicked
     signal closeClicked
 
-    //signal defaultActionInvoked
     signal actionInvoked(string actionName)
     signal openUrl(string url)
+    signal fileActionInvoked
 
     signal suspendJobClicked
     signal resumeJobClicked
     signal killJobClicked
 
-    // FIXME
-    property alias svg: lineSvgItem.svg
-
-    spacing: 0
+    spacing: units.smallSpacing
 
     NotificationItem {
         id: notificationItem
@@ -86,6 +86,7 @@ ColumnLayout {
 
         onActionInvoked: delegate.actionInvoked(actionName)
         onOpenUrl: delegate.openUrl(url)
+        onFileActionInvoked: delegate.fileActionInvoked()
 
         onSuspendJobClicked: delegate.suspendJobClicked()
         onResumeJobClicked: delegate.resumeJobClicked()
@@ -96,6 +97,5 @@ ColumnLayout {
         id: lineSvgItem
         elementId: "horizontal-line"
         Layout.fillWidth: true
-        // TODO hide for last notification
     }
 }

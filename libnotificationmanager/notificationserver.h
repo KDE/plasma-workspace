@@ -60,6 +60,13 @@ public:
     static NotificationServer &self();
 
     /**
+     * Registers the Notification Service on DBus.
+     *
+     * @return true if it succeeded, false otherwise.
+     */
+    bool init();
+
+    /**
      * Whether the notification service could be registered
      */
     // TODO add a retry or reconnect thing

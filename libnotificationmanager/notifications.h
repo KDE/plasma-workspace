@@ -164,6 +164,7 @@ public:
         ActionNamesRole,
         ActionLabelsRole,
         HasDefaultActionRole,
+        DefaultActionLabelRole,
 
         UrlsRole,
 

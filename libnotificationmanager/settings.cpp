@@ -55,8 +55,11 @@ public:
     Settings *q;
 
     KSharedConfig::Ptr config;
-    KConfigWatcher::Ptr watcher;
 
+    KConfigWatcher::Ptr watcher;
+    QMetaObject::Connection watcherConnection;
+
+    bool live = false; // set to true initially in constructor
     bool dirty = false;
 };
 
@@ -176,22 +179,7 @@ Settings::Settings(const KSharedConfig::Ptr &config, QObject *parent)
         qDebug() << "badge cfg changed";
     });
 
-    d->watcher = KConfigWatcher::create(config);
-    connect(d->watcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
-        Q_UNUSED(names);
-
-        if (group.name() == QLatin1String("DoNotDisturb")) {
-            DoNotDisturbSettings::self()->load();
-        } else if (group.name() == QLatin1String("Notifications")) {
-            NotificationSettings::self()->load();
-        } else if (group.name() == QLatin1String("Jobs")) {
-            JobSettings::self()->load();
-        } else if (group.name() == QLatin1String("Badges")) {
-            BadgeSettings::self()->load();
-        }
-
-        emit settingsChanged();
-    });
+    setLive(true);
 
     connect(&NotificationServer::self(), &NotificationServer::inhibitedChanged, this, &Settings::notificationsInhibitedChanged);
 }
@@ -290,6 +278,46 @@ void Settings::defaults()
     BadgeSettings::self()->setDefaults();
 }
 
+bool Settings::live() const
+{
+    return d->live;
+}
+
+void Settings::setLive(bool live)
+{
+    if (live == d->live) {
+        return;
+    }
+
+    d->live = live;
+
+    if (live) {
+        d->watcher = KConfigWatcher::create(d->config);
+        d->watcherConnection = connect(d->watcher.data(), &KConfigWatcher::configChanged, this,
+            [this](const KConfigGroup &group, const QByteArrayList &names) {
+                Q_UNUSED(names);
+
+                if (group.name() == QLatin1String("DoNotDisturb")) {
+                    DoNotDisturbSettings::self()->load();
+                } else if (group.name() == QLatin1String("Notifications")) {
+                    NotificationSettings::self()->load();
+                } else if (group.name() == QLatin1String("Jobs")) {
+                    JobSettings::self()->load();
+                } else if (group.name() == QLatin1String("Badges")) {
+                    BadgeSettings::self()->load();
+                }
+
+                emit settingsChanged();
+        });
+    } else {
+        disconnect(d->watcherConnection);
+        d->watcherConnection = QMetaObject::Connection();
+        d->watcher.reset();
+    }
+
+    emit liveChanged();
+}
+
 bool Settings::dirty() const
 {
     // KConfigSkeleton doesn't write into the KConfig until calling save()
@@ -370,7 +398,6 @@ void Settings::setPopupTimeout(int timeout)
 void Settings::resetPopupTimeout()
 {
     setPopupTimeout(NotificationSettings::defaultPopupTimeoutValue());
-    d->setDirty(true);
 }
 
 bool Settings::jobsInTaskManager() const
@@ -451,6 +478,22 @@ QStringList Settings::historyBlacklistedApplications() const
 QStringList Settings::historyBlacklistedServices() const
 {
     return d->blacklist(d->servicesGroup(), ShowInHistory);
+}
+
+QDateTime Settings::notificationsInhibitedUntil() const
+{
+    return DoNotDisturbSettings::until();
+}
+
+void Settings::setNotificationsInhibitedUntil(const QDateTime &time)
+{
+    DoNotDisturbSettings::setUntil(time);
+    d->setDirty(true);
+}
+
+void Settings::resetNotificationsInhibitedUntil()
+{
+    setNotificationsInhibitedUntil(QDateTime());// DoNotDisturbSettings::defaultUntilValue());
 }
 
 bool Settings::notificationsInhibited() const

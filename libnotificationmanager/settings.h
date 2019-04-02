@@ -24,7 +24,9 @@
 
 #include <KSharedConfig>
 
+#include <QDateTime>
 #include <QScopedPointer>
+#include <QString>
 
 #include "notificationmanager_export.h"
 
@@ -79,8 +81,29 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
 
     Q_PROPERTY(QStringList historyBlacklistedServices READ historyBlacklistedServices NOTIFY settingsChanged)
 
+    Q_PROPERTY(QDateTime notificationsInhibitedUntil
+               READ notificationsInhibitedUntil
+               WRITE setNotificationsInhibitedUntil
+               RESET resetNotificationsInhibitedUntil
+               NOTIFY settingsChanged)
+
     Q_PROPERTY(bool notificationsInhibited READ notificationsInhibited /* WRITE? */ NOTIFY notificationsInhibitedChanged)
 
+    /**
+     * Whether to update the properties immediately when they are changed on disk
+     *
+     * This can be undesirable for a settings dialog where outside changes
+     * should not suddenly cause the UI to change.
+     *
+     * Default is true
+     */
+    Q_PROPERTY(bool live READ live WRITE setLive NOTIFY liveChanged)
+
+    /**
+     * Whether the settings have changed and need to be saved
+     *
+     * @sa save()
+     */
     Q_PROPERTY(bool dirty READ dirty NOTIFY dirtyChanged)
 
 public:
@@ -122,6 +145,9 @@ public:
     Q_INVOKABLE void save();
     Q_INVOKABLE void defaults();
 
+    bool live() const;
+    void setLive(bool live);
+
     bool dirty() const;
 
     bool criticalPopupsInDoNotDisturbMode() const;
@@ -160,16 +186,23 @@ public:
     QStringList historyBlacklistedApplications() const;
     QStringList historyBlacklistedServices() const;
 
+    QDateTime notificationsInhibitedUntil() const;
+    void setNotificationsInhibitedUntil(const QDateTime &time);
+    void resetNotificationsInhibitedUntil();
+
     bool notificationsInhibited() const;
 
 signals:
     void settingsChanged();
 
+    void liveChanged();
+    void dirtyChanged();
+
     void knownApplicationsChanged();
 
-    void notificationsInhibitedChanged(bool notificationsInhibited);
+    void notificationsInhibitedUntilChanged();
 
-    void dirtyChanged();
+    void notificationsInhibitedChanged(bool notificationsInhibited);
 
 private:
     class Private;

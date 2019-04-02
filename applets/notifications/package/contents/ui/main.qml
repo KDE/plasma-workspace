@@ -24,9 +24,11 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
 
+import org.kde.kcoreaddons 1.0 as KCoreAddons
+
 import org.kde.notificationmanager 1.0 as NotificationManager
 
-import "popups" as Popups
+import "global"
 
 Item {
     id: root 
@@ -44,8 +46,15 @@ Item {
             lines.push(i18np("%1 unread notification", "%1 unread notifications", historyModel.unreadNotificationsCount));
         }
 
-        if (notificationSettings.notificationsInhibited) {
-            lines.push(i18n("Do not disturb mode enabled"));
+        if (Globals.inhibited) {
+            var inhibitedUntil = notificationSettings.notificationsInhibitedUntil
+            var inhibitedUntilValid = !isNaN(inhibitedUntil.getTime());
+
+            // TODO check app inhibition, too
+            if (inhibitedUntilValid) {
+                lines.push(i18n("Do not disturb until %1",
+                             KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat)));
+            }
         } else if (lines.length === 0) {
             lines.push("No unread notificatons");
         }
@@ -61,13 +70,13 @@ Item {
     }
 
     Plasmoid.compactRepresentation: CompactRepresentation {
-        activeCount: Popups.PopupHandler.popupNotificationsModel.activeNotificationsCount
+        activeCount: Globals.popupNotificationsModel.activeNotificationsCount
         unreadCount: historyModel.unreadNotificationsCount
 
         jobsCount: historyModel.activeJobsCount
         jobsPercentage: historyModel.jobsPercentage
 
-        inhibited: notificationSettings.notificationsInhibited
+        inhibited: Globals.inhibited
     }
 
     Plasmoid.fullRepresentation: FullRepresentation {
@@ -78,9 +87,9 @@ Item {
     Timer {
         id: updateStatusTimer
         readonly property int targetStatus: historyModel.activeJobsCount > 0
-                                            || Popups.PopupHandler.popupNotificationsModel.activeNotificationsCount > 0
-                                            || notificationSettings.notificationsInhibited ? PlasmaCore.Types.ActiveStatus
-                                                                                           : PlasmaCore.Types.PassiveStatus
+                                            || Globals.popupNotificationsModel.activeNotificationsCount > 0
+                                            || Globals.inhibited ? PlasmaCore.Types.ActiveStatus
+                                                                 : PlasmaCore.Types.PassiveStatus
         interval: 2000
 
         onTargetStatusChanged: {
@@ -113,6 +122,6 @@ Item {
     }
 
     Component.onCompleted: {
-        Popups.PopupHandler.adopt(plasmoid)
+        Globals.adopt(plasmoid)
     }
 }

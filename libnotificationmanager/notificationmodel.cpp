@@ -51,9 +51,9 @@ public:
 
     int indexOfNotification(uint id) const;
 
-    QVector<Notification> notifications;
-
     NotificationModel *q;
+
+    QVector<Notification> notifications;
 
     QDateTime lastRead;
 
@@ -125,6 +125,7 @@ void NotificationModel::Private::onNotificationRemoved(uint removedId, Notificat
             Notifications::ActionNamesRole,
             Notifications::ActionLabelsRole,
             Notifications::HasDefaultActionRole,
+            Notifications::DefaultActionLabelRole,
             Notifications::ConfigurableRole
         });
 
@@ -156,7 +157,6 @@ NotificationModel::NotificationModel()
     , d(new Private(this))
 {
     connect(&NotificationServer::self(), &NotificationServer::notificationAdded, this, [this](const Notification &notification) {
-        // why doesn't std::bind(&NotificationModel::Private::onNotificationAdded, d.data())); work?!
         d->onNotificationAdded(notification);
     });
     connect(&NotificationServer::self(), &NotificationServer::notificationReplaced, this, [this](uint replacedId, const Notification &notification) {
@@ -165,6 +165,8 @@ NotificationModel::NotificationModel()
     connect(&NotificationServer::self(), &NotificationServer::notificationRemoved, this, [this](uint removedId, NotificationServer::CloseReason reason) {
         d->onNotificationRemoved(removedId, reason);
     });
+
+    NotificationServer::self().init();
 }
 
 NotificationModel::~NotificationModel() = default;
@@ -233,6 +235,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
     case Notifications::ActionNamesRole: return notification.actionNames();
     case Notifications::ActionLabelsRole: return notification.actionLabels();
     case Notifications::HasDefaultActionRole: return notification.hasDefaultAction();
+    case Notifications::DefaultActionLabelRole: return notification.defaultActionLabel();
 
     case Notifications::UrlsRole: return QVariant::fromValue(notification.urls());
 
