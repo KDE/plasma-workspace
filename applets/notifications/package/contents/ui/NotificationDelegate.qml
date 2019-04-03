@@ -28,7 +28,7 @@ ColumnLayout {
 
     property alias notificationType: notificationItem.notificationType
 
-    property alias headerVisible: notificationItem.headerVisible
+    property alias inGroup: notificationItem.inGroup
 
     property alias applicationName: notificationItem.applicationName
     property alias applicatonIconSource: notificationItem.applicationIconSource

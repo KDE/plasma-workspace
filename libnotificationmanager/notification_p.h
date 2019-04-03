@@ -47,7 +47,7 @@ public:
 
     void processHints(const QVariantMap &hints);
 
-    void setUrgency(Notifications::Urgencies urgency);
+    void setUrgency(Notifications::Urgency urgency);
 
     uint id = 0;
     QDateTime created;
@@ -80,8 +80,7 @@ public:
 
     QList<QUrl> urls;
 
-    // FIXME use separate enum again
-    Notifications::Urgencies urgency = Notifications::NormalUrgency;
+    Notifications::Urgency urgency = Notifications::NormalUrgency;
     int timeout = -1;
 
     bool expired = false;

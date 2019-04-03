@@ -42,17 +42,17 @@ public:
     QDateTime lastRead() const;
     void setLastRead(const QDateTime &lastRead);
 
-    // FIXME currently easier to debug if we crash when accessing invalid role
-    // instead of just "randomly" returning display role when
-    QVariant data(const QModelIndex &index, int role/* = Qt::DisplayRole*/) const override;
+    QVariant data(const QModelIndex &index, int role) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    // TODO should we have an API taking int row, or QModelIndex?
     void expire(uint notificationId);
     void close(uint notificationId);
     void configure(uint notificationId);
     void invokeDefaultAction(uint notificationId);
     void invokeAction(uint notificationId, const QString &actionName);
+
+    void startTimeout(uint notificationId);
+    void stopTimeout(uint notificationId);
 
     void clear(Notifications::ClearFlags flags);
 

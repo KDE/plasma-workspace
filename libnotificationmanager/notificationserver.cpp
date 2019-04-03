@@ -39,6 +39,8 @@ NotificationServer::NotificationServer(QObject *parent)
     connect(d.data(), &NotificationServerPrivate::inhibitedChanged, this, [this] {
         emit inhibitedChanged(inhibited());
     });
+    connect(d.data(), &NotificationServerPrivate::inhibitionAdded, this, &NotificationServer::inhibitionApplicationsChanged);
+    connect(d.data(), &NotificationServerPrivate::inhibitionRemoved, this, &NotificationServer::inhibitionApplicationsChanged);
 }
 
 NotificationServer::~NotificationServer() = default;
@@ -79,4 +81,31 @@ uint NotificationServer::add(const Notification &notification)
 bool NotificationServer::inhibited() const
 {
     return d->inhibited();
+}
+
+QStringList NotificationServer::inhibitionApplications() const
+{
+    QStringList applications;
+    const auto inhibitions = d->inhibitions();
+    applications.reserve(inhibitions.count());
+    for (const auto &inhibition : inhibitions) {
+        applications.append(!inhibition.applicationName.isEmpty() ? inhibition.applicationName : inhibition.desktopEntry);
+    }
+    return applications;
+}
+
+QStringList NotificationServer::inhibitionReasons() const
+{
+    QStringList reasons;
+    const auto inhibitions = d->inhibitions();
+    reasons.reserve(inhibitions.count());
+    for (const auto &inhibition : inhibitions) {
+        reasons.append(inhibition.reason);
+    }
+    return reasons;
+}
+
+void NotificationServer::clearInhibitions()
+{
+    d->clearInhibitions();
 }

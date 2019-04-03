@@ -21,6 +21,7 @@
 #pragma once
 
 #include <QSortFilterProxyModel>
+#include <QStringList>
 
 #include "notifications.h"
 
@@ -50,12 +51,20 @@ public:
     QStringList blacklistedNotifyRcNames() const;
     void setBlacklistedNotifyRcNames(const QStringList &blacklist);
 
+    QStringList whitelistedDesktopEntries() const;
+    void setWhiteListedDesktopEntries(const QStringList &whitelist);
+
+    QStringList whitelistedNotifyRcNames() const;
+    void setWhitelistedNotifyRcNames(const QStringList &whitelist);
+
 signals:
     void urgenciesChanged();
     void showExpiredChanged();
     void showDismissedChanged();
     void blacklistedDesktopEntriesChanged();
     void blacklistedNotifyRcNamesChanged();
+    void whitelistedDesktopEntriesChanged();
+    void whitelistedNotifyRcNamesChanged();
 
 protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
@@ -69,6 +78,9 @@ private:
 
     QStringList m_blacklistedDesktopEntries;
     QStringList m_blacklistedNotifyRcNames;
+
+    QStringList m_whitelistedDesktopEntries;
+    QStringList m_whitelistedNotifyRcNames;
 
 };
 

@@ -128,7 +128,8 @@ void JobsModel::Private::onSourceRemoved(const QString &source)
     emit q->dataChanged(idx, idx, {
         Notifications::UpdatedRole,
         Notifications::DismissedRole,
-        Notifications::TimeoutRole
+        Notifications::TimeoutRole,
+        Notifications::ClosableRole
     });
 }
 
@@ -203,6 +204,7 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
         }
         break;
     case Notifications::SummaryRole: return job->summary();
+    case Notifications::DesktopEntryRole: return job->desktopEntry();
     case Notifications::ApplicationNameRole: return job->applicationName();
     case Notifications::ApplicationIconNameRole: return job->applicationIconName();
 
@@ -214,12 +216,12 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
     case Notifications::KillableRole: return job->killable();
     case Notifications::JobDetailsRole: return QVariant::fromValue(job->details());
 
-    case Notifications::UrgencyRole: return Notifications::NormalUrgency;
-
     // successfully finished jobs timeout like a regular notifiation
     // whereas running or error'd jobs are persistent
     case Notifications::TimeoutRole:
         return job->state() == Notifications::JobStateStopped && !job->error() ? -1 : 0;
+    case Notifications::ClosableRole:
+        return job->state() == Notifications::JobStateStopped;
 
     case Notifications::ConfigurableRole: return false;
     case Notifications::ExpiredRole: return job->expired();
@@ -274,8 +276,9 @@ void JobsModel::close(const QString &jobId)
 
     beginRemoveRows(QModelIndex(), row, row);
     d->sources.removeAt(row);
-    delete d->jobs.take(jobId);
     endRemoveRows();
+
+    delete d->jobs.take(jobId);
 }
 
 void JobsModel::expire(const QString &jobId)
@@ -309,6 +312,24 @@ void JobsModel::kill(const QString &jobId)
 
 void JobsModel::clear(Notifications::ClearFlags flags)
 {
-    Q_UNUSED(flags);
-    // TODO
+    if (d->sources.isEmpty()) {
+        return;
+    }
+
+    for (int i = d->sources.count() - 1; i >= 0; --i) {
+        const QString &sourceName = d->sources.at(i);
+        Job *job = d->jobs.value(sourceName);
+
+        bool clear = (flags.testFlag(Notifications::ClearExpired) && job->expired());
+
+        // Compared to notifications, the number of jobs is typically small
+        // so for simplicity we can just delete one item at a time
+        if (clear) {
+            beginRemoveRows(QModelIndex(), i, i);
+            d->sources.removeAt(i);
+            endRemoveRows();
+
+            delete d->jobs.take(sourceName);
+        }
+    }
 }

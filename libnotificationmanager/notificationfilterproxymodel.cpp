@@ -100,6 +100,34 @@ void NotificationFilterProxyModel::setBlacklistedNotifyRcNames(const QStringList
     }
 }
 
+QStringList NotificationFilterProxyModel::whitelistedDesktopEntries() const
+{
+    return m_whitelistedDesktopEntries;
+}
+
+void NotificationFilterProxyModel::setWhiteListedDesktopEntries(const QStringList &whitelist)
+{
+    if (m_whitelistedDesktopEntries != whitelist) {
+        m_whitelistedDesktopEntries = whitelist;
+        invalidateFilter();
+        emit whitelistedDesktopEntriesChanged();
+    }
+}
+
+QStringList NotificationFilterProxyModel::whitelistedNotifyRcNames() const
+{
+    return m_whitelistedNotifyRcNames;
+}
+
+void NotificationFilterProxyModel::setWhitelistedNotifyRcNames(const QStringList &whitelist)
+{
+    if (m_whitelistedNotifyRcNames != whitelist) {
+        m_whitelistedNotifyRcNames = whitelist;
+        invalidateFilter();
+        emit whitelistedNotifyRcNamesChanged();
+    }
+}
+
 bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     const QModelIndex sourceIdx = sourceModel()->index(source_row, 0, source_parent);
@@ -112,37 +140,41 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
         return false;
     }
 
-    // TODO can we just bitshift them back or match them better with some maths rather than a switch?
-    bool ok;
-    const int urgency = sourceIdx.data(Notifications::UrgencyRole).toInt(&ok);
-    if (ok) {
-        switch (static_cast<Notifications::Urgencies>(urgency)) {
-        case Notifications::LowUrgency:
-            if (!m_urgencies.testFlag(Notifications::LowUrgency)) {
-                return false;
-            }
-            break;
-        case Notifications::NormalUrgency:
-            if (!m_urgencies.testFlag(Notifications::NormalUrgency)) {
-                return false;
-            }
-            break;
-        case Notifications::CriticalUrgency:
-            if (!m_urgencies.testFlag(Notifications::CriticalUrgency)) {
-                return false;
-            }
-            break;
-        }
-    }
-
+    // Blacklist takes precedence over whitelist, ie. when in doubt don't show
     if (!m_blacklistedDesktopEntries.isEmpty()) {
         const QString desktopEntry = sourceIdx.data(Notifications::DesktopEntryRole).toString();
-        return !desktopEntry.isEmpty() && !m_blacklistedDesktopEntries.contains(desktopEntry);
+        if (!desktopEntry.isEmpty() && m_blacklistedDesktopEntries.contains(desktopEntry)) {
+            return false;
+        }
     }
 
     if (!m_blacklistedNotifyRcNames.isEmpty()) {
         const QString notifyRcName = sourceIdx.data(Notifications::NotifyRcNameRole).toString();
-        return !notifyRcName.isEmpty() && !m_blacklistedNotifyRcNames.contains(notifyRcName);
+        if (!notifyRcName.isEmpty() && m_blacklistedNotifyRcNames.contains(notifyRcName)) {
+            return false;
+        }
+    }
+
+    if (!m_whitelistedDesktopEntries.isEmpty()) {
+        const QString desktopEntry = sourceIdx.data(Notifications::DesktopEntryRole).toString();
+        if (!desktopEntry.isEmpty() && m_whitelistedDesktopEntries.contains(desktopEntry)) {
+            return true;
+        }
+    }
+
+    if (!m_whitelistedNotifyRcNames.isEmpty()) {
+        const QString notifyRcName = sourceIdx.data(Notifications::NotifyRcNameRole).toString();
+        if (!notifyRcName.isEmpty() && m_whitelistedNotifyRcNames.contains(notifyRcName)) {
+            return true;
+        }
+    }
+
+    bool ok;
+    const auto urgency = static_cast<Notifications::Urgency>(sourceIdx.data(Notifications::UrgencyRole).toInt(&ok));
+    if (ok) {
+        if (!m_urgencies.testFlag(urgency)) {
+            return false;
+        }
     }
 
     return true;

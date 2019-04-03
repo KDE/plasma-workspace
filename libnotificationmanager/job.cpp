@@ -72,6 +72,11 @@ QString Job::summary() const
     return m_summary;
 }
 
+QString Job::desktopEntry() const
+{
+    return m_desktopEntry;
+}
+
 QString Job::applicationName() const
 {
     return m_applicationName;
@@ -189,6 +194,11 @@ QVector<int> Job::processData(const QVariantMap/*Plasma::DataEngine::Data*/ &dat
             }
 
             if (service) {
+                if (m_desktopEntry != service->desktopEntryName()) {
+                    m_desktopEntry = service->desktopEntryName();
+                    dirtyRoles.append(Notifications::DesktopEntryRole);
+                }
+
                 applicationName = service->name();
                 applicationIconName = service->icon();
             }

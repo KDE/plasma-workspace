@@ -74,11 +74,16 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
 
     // TODO check how heavy this is
     Q_PROPERTY(QStringList popupBlacklistedApplications READ popupBlacklistedApplications NOTIFY settingsChanged)
-
     Q_PROPERTY(QStringList popupBlacklistedServices READ popupBlacklistedServices NOTIFY settingsChanged)
 
-    Q_PROPERTY(QStringList historyBlacklistedApplications READ historyBlacklistedApplications NOTIFY settingsChanged)
+    Q_PROPERTY(QStringList doNotDisturbPopupWhitelistedApplications
+               READ doNotDisturbPopupWhitelistedApplications
+               NOTIFY settingsChanged)
+    Q_PROPERTY(QStringList doNotDisturbPopupWhitelistedServices
+               READ doNotDisturbPopupWhitelistedServices
+               NOTIFY settingsChanged)
 
+    Q_PROPERTY(QStringList historyBlacklistedApplications READ historyBlacklistedApplications NOTIFY settingsChanged)
     Q_PROPERTY(QStringList historyBlacklistedServices READ historyBlacklistedServices NOTIFY settingsChanged)
 
     Q_PROPERTY(QDateTime notificationsInhibitedUntil
@@ -87,7 +92,17 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
                RESET resetNotificationsInhibitedUntil
                NOTIFY settingsChanged)
 
-    Q_PROPERTY(bool notificationsInhibited READ notificationsInhibited /* WRITE? */ NOTIFY notificationsInhibitedChanged)
+    Q_PROPERTY(bool notificationsInhibitedByApplication
+               READ notificationsInhibitedByApplication
+               NOTIFY notificationsInhibitedByApplicationChanged)
+
+    Q_PROPERTY(QStringList notificationInhibitionApplications
+               READ notificationInhibitionApplications
+               NOTIFY notificationInhibitionApplicationsChanged)
+
+    Q_PROPERTY(QStringList notificationInhibitionReasons
+               READ notificationInhibitionReasons
+               NOTIFY notificationInhibitionApplicationsChanged)
 
     /**
      * Whether to update the properties immediately when they are changed on disk
@@ -183,6 +198,9 @@ public:
     QStringList popupBlacklistedApplications() const;
     QStringList popupBlacklistedServices() const;
 
+    QStringList doNotDisturbPopupWhitelistedApplications() const;
+    QStringList doNotDisturbPopupWhitelistedServices() const;
+
     QStringList historyBlacklistedApplications() const;
     QStringList historyBlacklistedServices() const;
 
@@ -190,7 +208,11 @@ public:
     void setNotificationsInhibitedUntil(const QDateTime &time);
     void resetNotificationsInhibitedUntil();
 
-    bool notificationsInhibited() const;
+    bool notificationsInhibitedByApplication() const;
+    QStringList notificationInhibitionApplications() const;
+    QStringList notificationInhibitionReasons() const;
+
+    Q_INVOKABLE void revokeApplicationInhibitions();
 
 signals:
     void settingsChanged();
@@ -200,9 +222,8 @@ signals:
 
     void knownApplicationsChanged();
 
-    void notificationsInhibitedUntilChanged();
-
-    void notificationsInhibitedChanged(bool notificationsInhibited);
+    void notificationsInhibitedByApplicationChanged(bool notificationsInhibitedByApplication);
+    void notificationInhibitionApplicationsChanged();
 
 private:
     class Private;

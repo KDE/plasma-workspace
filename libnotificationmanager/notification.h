@@ -21,7 +21,6 @@
 #pragma once
 
 #include <QDateTime>
-#include <QScopedPointer>
 #include <QImage>
 #include <QList>
 #include <QString>
@@ -55,12 +54,6 @@ public:
     // should this be virtual for good measure?
     ~Notification();
 
-    /*enum class Urgency {
-        Low = 0,
-        Normal = 1,
-        Critical = 2
-    };*/
-
     uint id() const;
 
     QDateTime created() const;
@@ -69,7 +62,6 @@ public:
     void resetUpdated();
 
     QString summary() const;
-    // FIXME remove all those setters as Notification is pretty much immutable
     void setSummary(const QString &summary);
 
     QString body() const;
@@ -101,13 +93,12 @@ public:
     QString defaultActionLabel() const;
     void setActions(const QStringList &actions);
 
-    // QVector?
     QList<QUrl> urls() const;
     void setUrls(const QList<QUrl> &urls);
 
     // FIXME use separate enum again
-    Notifications::Urgencies urgency() const;
-    void setUrgency(Notifications::Urgencies urgency);
+    Notifications::Urgency urgency() const;
+    void setUrgency(Notifications::Urgency urgency);
 
     int timeout() const;
     void setTimeout(int timeout);

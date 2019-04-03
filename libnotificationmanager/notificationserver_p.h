@@ -28,6 +28,8 @@ class QDBusServiceWatcher;
 struct Inhibition
 {
     QString desktopEntry;
+    QString applicationName;
+    //QString applicationIconName;
     QString reason;
     QVariantMap hints;
 };
@@ -62,7 +64,7 @@ public:
                  const QString &reason,
                  const QVariantMap &hints);
     void UnInhibit(uint cookie);
-    QList<Inhibition> ListInhibitors() const;
+    //QList<Inhibition> ListInhibitors() const;
     bool inhibited() const; // property getter
 
 Q_SIGNALS:
@@ -71,10 +73,15 @@ Q_SIGNALS:
     void ActionInvoked(uint id, const QString &actionKey);
 
     void inhibitedChanged();
+    void inhibitionAdded();
+    void inhibitionRemoved();
 
 public: // stuff used by public class
     bool init();
     uint add(const Notification &notification);
+
+    QList<Inhibition> inhibitions() const;
+    void clearInhibitions();
 
     bool m_valid = false;
     uint m_highestNotificationId = 0;

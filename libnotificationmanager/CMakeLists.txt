@@ -95,3 +95,6 @@ install(EXPORT notificationmanagerLibraryTargets
         NAMESPACE PW::
         DESTINATION ${CMAKECONFIG_INSTALL_DIR}
         FILE LibNotificationManagerLibraryTargets.cmake )
+
+install(FILES plasmanotifyrc
+        DESTINATION ${KDE_INSTALL_CONFDIR})

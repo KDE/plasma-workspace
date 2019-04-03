@@ -33,6 +33,7 @@
 #include <QDBusServiceWatcher>
 
 #include <KConfigGroup>
+#include <KService>
 #include <KSharedConfig>
 #include <KUser>
 
@@ -136,7 +137,7 @@ uint NotificationServerPrivate::Notify(const QString &app_name, uint replaces_id
 
     // No application name? Try to figure out the process name using the sender's PID
     if (notification.applicationName().isEmpty()) {
-        qCDebug(NOTIFICATIONMANAGER) << "Notification from service" << message().service() << "didn't contain any identification information, this is an application bug";
+        qCInfo(NOTIFICATIONMANAGER) << "Notification from service" << message().service() << "didn't contain any identification information, this is an application bug!";
 
         QDBusReply<uint> pidReply = connection().interface()->servicePid(message().service());
         if (pidReply.isValid()) {
@@ -251,29 +252,36 @@ uint NotificationServerPrivate::add(const Notification &notification)
 
 uint NotificationServerPrivate::Inhibit(const QString &desktop_entry, const QString &reason, const QVariantMap &hints)
 {
-    const QString service = message().service();
+    const QString dbusService = message().service();
 
-    qCDebug(NOTIFICATIONMANAGER) << "Request inhibit from service" << service << "which is" << desktop_entry << "with reason" << reason;
+    qCDebug(NOTIFICATIONMANAGER) << "Request inhibit from service" << dbusService << "which is" << desktop_entry << "with reason" << reason;
 
-    // should we check for this and/or if it's actually a valid service?
     if (desktop_entry.isEmpty()) {
         // TODO return error
         return 0;
     }
 
-    m_inhibitionWatcher->addWatchedService(service);
+    KService::Ptr service = KService::serviceByDesktopName(desktop_entry);
+    QString applicationName;
+    if (service) { // should we check for this and error if it didn't find a service?
+        applicationName = service->name();
+    }
+
+    m_inhibitionWatcher->addWatchedService(dbusService);
 
     ++m_highestInhibitionCookie;
 
     m_inhibitions.insert(m_highestInhibitionCookie, {
         desktop_entry,
+        applicationName,
         reason,
         hints
     });
 
-    m_inhibitionServices.insert(m_highestInhibitionCookie, service);
+    m_inhibitionServices.insert(m_highestInhibitionCookie, dbusService);
 
     emit inhibitedChanged();
+    emit inhibitionAdded();
 
     return m_highestInhibitionCookie;
 }
@@ -309,10 +317,16 @@ void NotificationServerPrivate::UnInhibit(uint cookie)
 
     if (m_inhibitions.isEmpty()) {
         emit inhibitedChanged();
+        emit inhibitionRemoved();
     }
 }
 
-QList<Inhibition> NotificationServerPrivate::ListInhibitors() const
+/*QList<Inhibition> NotificationServerPrivate::ListInhibitors() const
+{
+    return m_inhibitions.values();
+}*/
+
+QList<Inhibition> NotificationServerPrivate::inhibitions() const
 {
     return m_inhibitions.values();
 }
@@ -320,4 +334,17 @@ QList<Inhibition> NotificationServerPrivate::ListInhibitors() const
 bool NotificationServerPrivate::inhibited() const
 {
     return !m_inhibitions.isEmpty();
+}
+
+void NotificationServerPrivate::clearInhibitions()
+{
+    if (m_inhibitions.isEmpty()) {
+        return;
+    }
+
+    m_inhibitionWatcher->setWatchedServices(QStringList()); // remove all watches
+    m_inhibitionServices.clear();
+    m_inhibitions.clear();
+    emit inhibitedChanged();
+    emit inhibitionRemoved();
 }

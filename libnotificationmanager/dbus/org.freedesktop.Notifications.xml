@@ -51,10 +51,10 @@
       <annotation name="org.freedesktop.DBus.Property.EmitsChangedSignal" value="true"/>
     </property>
 
-    <method name="ListInhibitors">
+    <!--<method name="ListInhibitors">
       <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QList&lt;Inhibition&gt;"/>
       <arg name="inhibitors" type="a(ssa{sv})" direction="out"/>
-    </method>
+    </method>-->
 
   </interface>
 </node>

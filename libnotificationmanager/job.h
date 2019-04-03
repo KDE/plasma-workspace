@@ -56,17 +56,8 @@ public:
 
     QString summary() const;
 
-    QString body() const;
-    /*void setBody(const QString &body);
-
-    QString iconName() const;
-    void setIconName(const QString &iconName);
-
-    QImage image() const;
-    void setImage(const QImage &image);*/
-
+    QString desktopEntry() const;
     QString applicationName() const;
-
     QString applicationIconName() const;
 
     Notifications::JobState state() const;
@@ -102,6 +93,7 @@ private:
     QString m_appName;
     QString m_appIconName;
     // names looked up from a service
+    QString m_desktopEntry;
     QString m_applicationName;
     QString m_applicationIconName;
 

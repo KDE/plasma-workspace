@@ -69,19 +69,6 @@ MouseArea {
 
         elementId: "notification-disabled"
 
-        Behavior on scale {
-            NumberAnimation {
-                duration: units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
-        Behavior on opacity {
-            NumberAnimation {
-                duration: units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
-
         Item {
             id: jobProgressItem
             anchors {
@@ -112,6 +99,22 @@ MouseArea {
             anchors.centerIn: parent
             font.pointSize: -1
             font.pixelSize: Math.round(parent.height * 0.6)
+            text: count || "" // don't show number zero
+
+            property int count: 0
+            onCountChanged: countChangeAnimation.start();
+
+            ParallelAnimation {
+                id: countChangeAnimation
+                NumberAnimation {
+                    target: countLabel
+                    property: "scale"
+                    from: 2
+                    to: 1
+                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
         }
 
         PlasmaComponents.BusyIndicator {
@@ -130,42 +133,16 @@ MouseArea {
             opacity: 0
             scale: 2
             visible: opacity > 0
-
-            Behavior on scale {
-                NumberAnimation {
-                    duration: units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-            Behavior on opacity {
-                NumberAnimation {
-                    duration: units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
         }
     }
 
     PlasmaCore.IconItem {
         id: dndIcon
         anchors.fill: parent
-        source: "face-quiet"
+        source: "notifications-disabled"
         opacity: 0
         scale: 2
         visible: opacity > 0
-
-        Behavior on scale {
-            NumberAnimation {
-                duration: units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
-        Behavior on opacity {
-            NumberAnimation {
-                duration: units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
     }
 
     states: [
@@ -177,7 +154,7 @@ MouseArea {
             }
             PropertyChanges {
                 target: countLabel
-                text: compactRoot.jobsCount
+                count: compactRoot.jobsCount
             }
             PropertyChanges {
                 target: busyIndicator
@@ -217,7 +194,19 @@ MouseArea {
             }
             PropertyChanges {
                 target: countLabel
-                text: compactRoot.unreadCount
+                count: compactRoot.unreadCount
+            }
+        }
+    ]
+
+    transitions: [
+        Transition {
+            to: "*" // any state
+            NumberAnimation {
+                targets: [notificationIcon, notificationActiveItem, dndIcon]
+                properties: "opacity,scale"
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
             }
         }
     ]

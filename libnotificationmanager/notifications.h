@@ -73,13 +73,43 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
 
     /**
      * A list of desktop entries for which no notifications should be shown.
+     *
+     * If the same desktop entry is present in both blacklist and whitelist,
+     * the blacklist takes precedence, ie. the notification is not shown.
      */
     Q_PROPERTY(QStringList blacklistedDesktopEntries READ blacklistedDesktopEntries WRITE setBlacklistedDesktopEntries NOTIFY blacklistedDesktopEntriesChanged)
 
     /**
      * A list of notifyrc names for which no notifications should be shown.
+     *
+     * If the same notifyrc name is present in both blacklist and whitelist,
+     * the blacklist takes precedence, ie. the notification is not shown.
      */
     Q_PROPERTY(QStringList blacklistedNotifyRcNames READ blacklistedNotifyRcNames WRITE setBlacklistedNotifyRcNames NOTIFY blacklistedNotifyRcNamesChanged)
+
+    /**
+     * A list of desktop entries for which notifications should be shown.
+     *
+     * This bypasses any filtering for urgency.
+     *
+     * If the same desktop entry is present in both whitelist and blacklist,
+     * the blacklist takes precedence, ie. the notification is not shown.
+     *
+     * Default is empty list, which means normal filtering is applied.
+     */
+    Q_PROPERTY(QStringList whitelistedDesktopEntries READ whitelistedDesktopEntries WRITE setWhitelistedDesktopEntries NOTIFY whitelistedDesktopEntriesChanged)
+
+    /**
+     * A list of notifyrc names for which notifications should be shown.
+     *
+     * This bypasses any filtering for urgency.
+     *
+     * If the same notifyrc name is present in both whitelist and blacklist,
+     * the blacklist takes precedence, ie. the notification is not shown.
+     *
+     * Default is empty list, which means normal filtering is applied.
+     */
+    Q_PROPERTY(QStringList whitelistedNotifyRcNames READ whitelistedNotifyRcNames WRITE setWhitelistedNotifyRcNames NOTIFY whitelistedNotifyRcNamesChanged)
 
     /**
      * Whether to show suppressed notifications.
@@ -104,6 +134,8 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
     Q_PROPERTY(SortMode sortMode READ sortMode WRITE setSortMode NOTIFY sortModeChanged)
 
     Q_PROPERTY(GroupMode groupMode READ groupMode WRITE setGroupMode NOTIFY groupModeChanged)
+
+    Q_PROPERTY(int groupLimit READ groupLimit WRITE setGroupLimit NOTIFY groupLimitChanged)
 
     /**
      * The number of notifications in the model
@@ -134,18 +166,23 @@ public:
     ~Notifications() override;
 
     enum Roles {
-        // TODO we have uint for notifications and source name string for jobs
-        IdRole = Qt::UserRole + 1,
-        IsGroupRole = Qt::UserRole + 2,
-        IsInGroupRole = Qt::UserRole + 3,
-        TypeRole = Qt::UserRole + 4,
-        CreatedRole = Qt::UserRole + 5,
-        UpdatedRole = Qt::UserRole + 6,
+        IdRole = Qt::UserRole + 1, ///< A notification identifier. This can be uint notification ID or string application job source.
         SummaryRole = Qt::DisplayRole,
-        BodyRole = Qt::UserRole + 7,
-        IconNameRole = Qt::UserRole + 8,
         ImageRole = Qt::DecorationRole,
-        DesktopEntryRole = Qt::UserRole + 9,
+
+        IsGroupRole = Qt::UserRole + 2,
+        GroupChildrenCountRole,
+        IsGroupExpandedRole,
+
+        IsInGroupRole,
+        TypeRole,
+        CreatedRole,
+        UpdatedRole,
+
+        BodyRole,
+        IconNameRole,
+
+        DesktopEntryRole,
         NotifyRcNameRole,
 
         ApplicationNameRole,
@@ -173,21 +210,11 @@ public:
 
         ConfigurableRole,
         ConfigureActionLabelRole,
+        ClosableRole,
 
-        /**
-         * The notification timed out and closed.
-         * Actions on it cannot be invoked anymore
-         */
-        ExpiredRole,
-        /**
-         * The notification got dismissed by the user or not presented
-         * because of Do Not Disturb settings, but can still be
-         * listed in e.g. a missed notifications list.
-         */
-        DismissedRole
-        // Ignored/SuppressedRole?
+        ExpiredRole, ///< The notification timed out and closed. Actions on it cannot be invoked anymore.
+        DismissedRole ///< The notification got temporarily hidden by the user but could still be interacted with.
     };
-    Q_ENUM(Roles) // for qDebug TODO remove?
 
     enum Type {
         NoType,
@@ -208,7 +235,6 @@ public:
 
     enum ClearFlag {
         ClearExpired = 1 << 1,
-        ClearDismissed = 1 << 2
         // TODO more
     };
     Q_ENUM(ClearFlag)
@@ -251,6 +277,12 @@ public:
     QStringList blacklistedNotifyRcNames() const;
     void setBlacklistedNotifyRcNames(const QStringList &blacklist);
 
+    QStringList whitelistedDesktopEntries() const;
+    void setWhitelistedDesktopEntries(const QStringList &whitelist);
+
+    QStringList whitelistedNotifyRcNames() const;
+    void setWhitelistedNotifyRcNames(const QStringList &whitelist);
+
     bool showSuppressed() const;
     void setShowSuppressed(bool show);
 
@@ -266,6 +298,9 @@ public:
     GroupMode groupMode() const;
     void setGroupMode(GroupMode groupMode);
 
+    int groupLimit() const;
+    void setGroupLimit(int limit);
+
     int count() const;
 
     int activeNotificationsCount() const;
@@ -280,17 +315,69 @@ public:
     int activeJobsCount() const;
     int jobsPercentage() const;
 
+    /**
+     * @brief Expire a notification
+     *
+     * Closes the notification in response to its timeout running out.
+     *
+     * Call this if you have an implementation that handles the timeout itself
+     * by having called @c stopTimeout
+     *
+     * @sa stopTimeout
+     */
     Q_INVOKABLE void expire(const QModelIndex &idx);
+    /**
+     * @brief Close a notification
+     *
+     * Closes the notification in response to the user explicitly closing it.
+     *
+     * When the model index belongs to a group, the entire group is closed.
+     */
     Q_INVOKABLE void close(const QModelIndex &idx);
-    Q_INVOKABLE void closeGroup(const QModelIndex &idx);
     Q_INVOKABLE void configure(const QModelIndex &idx); // TODO pass ctx for transient handling
+    /**
+     * @brief Invoke the default notification action
+     *
+     * Invokes the action that should be triggered when clicking
+     * the notification bubble itself.
+     */
     Q_INVOKABLE void invokeDefaultAction(const QModelIndex &idx);
+    /**
+     * @brief Invoke a notification action
+     *
+     * Invokes the action with the given actionId on the notification.
+     * For invoking the default action, ie. the one that is triggered
+     * when clicking the notification bubble, use invokeDefaultAction
+     */
     Q_INVOKABLE void invokeAction(const QModelIndex &idx, const QString &actionId);
+
+    Q_INVOKABLE void expand(const QModelIndex &idx);
+    Q_INVOKABLE void collapse(const QModelIndex &idx);
+
+    Q_INVOKABLE void startTimeout(const QModelIndex &idx);
+    Q_INVOKABLE void startTimeout(uint notificationId);
+    /**
+     * @brief Stop the automatic timeout of notifications
+     *
+     * Call this if you have an implementation that handles the timeout itself
+     * taking into account e.g. whether the user is currently interacting with
+     * the notification to not close it under their mouse. Call @c expire
+     * once your custom timer has run out.
+     *
+     * @sa expire
+     */
+    Q_INVOKABLE void stopTimeout(const QModelIndex &idx);
 
     Q_INVOKABLE void suspendJob(const QModelIndex &idx);
     Q_INVOKABLE void resumeJob(const QModelIndex &idx);
     Q_INVOKABLE void killJob(const QModelIndex &idx);
 
+    /**
+     * @brief Clear notifications
+     *
+     * Removes the notifications matching th ClearFlags from the model.
+     * This can be used for e.g. a "Clear History" action.
+     */
     Q_INVOKABLE void clear(ClearFlags flags);
 
     QVariant data(const QModelIndex &index, int role/* = Qt::DisplayRole*/) const override;
@@ -307,11 +394,14 @@ signals:
     void showDismissedChanged();
     void blacklistedDesktopEntriesChanged();
     void blacklistedNotifyRcNamesChanged();
+    void whitelistedDesktopEntriesChanged();
+    void whitelistedNotifyRcNamesChanged();
     void showSuppressedChanged();
     void showJobsChanged();
     void urgenciesChanged();
     void sortModeChanged();
     void groupModeChanged();
+    void groupLimitChanged();
     void countChanged();
     void activeNotificationsCountChanged();
     void expiredNotificationsCountChanged();

@@ -178,11 +178,12 @@ QtObject {
 
             var inhibitedUntil = notificationSettings.notificationsInhibitedUntil;
             if (!isNaN(inhibitedUntil.getTime())) {
-                console.log("INH", inhibitedUntil);
                 inhibited |= (new Date().getTime() < inhibitedUntil.getTime());
             }
 
-            // TODO check app inhibition
+            if (notificationSettings.notificationsInhibitedByApplication) {
+                inhibited |= true;
+            }
 
             return inhibited;
         });
@@ -248,6 +249,8 @@ QtObject {
         showDismissed: false
         blacklistedDesktopEntries: notificationSettings.popupBlacklistedApplications
         blacklistedNotifyRcNames: notificationSettings.popupBlacklistedServices
+        whitelistedDesktopEntries: globals.inhibited ? notificationSettings.doNotDisturbPopupWhitelistedApplications : []
+        whitelistedNotifyRcNames: globals.inhibited ? notificationSettings.doNotDisturbPopupWhitelistedServices : []
         showJobs: notificationSettings.jobsInNotifications
         sortMode: NotificationManager.Notifications.SortByTypeAndUrgency
         groupMode: NotificationManager.Notifications.GroupDisabled
@@ -292,6 +295,9 @@ QtObject {
     property Instantiator popupInstantiator: Instantiator {
         model: popupNotificationsModel
         delegate: NotificationPopup {
+            // so Instantiator can access that after the model row is gone
+            readonly property var notificationId: model.notificationId
+
             popupWidth: globals.popupWidth
 
             notificationType: model.type
@@ -309,8 +315,7 @@ QtObject {
                 && model.jobState !== NotificationManager.Notifications.JobStateStopped
             // TODO would be nice to be able to "pin" jobs when they autohide
                 && notificationSettings.permanentJobPopups
-            closable: model.type === NotificationManager.Notifications.NotificationType
-                || model.jobState === NotificationManager.Notifications.JobStateStopped
+            closable: model.closable
 
             summary: model.summary
             body: model.body || ""
@@ -371,13 +376,23 @@ QtObject {
                     notificationSettings.registerKnownApplication(model.desktopEntry);
                     notificationSettings.save();
                 }
+
+                // Tell the model that we're handling the timeout now
+                popupNotificationsModel.stopTimeout(popupNotificationsModel.index(index, 0));
             }
         }
         onObjectAdded: {
             // also needed for it to correctly layout its contents
             object.visible = true;
-            Qt.callLater(positionPopups)
+            Qt.callLater(positionPopups);
         }
-        onObjectRemoved: Qt.callLater(positionPopups)
+        onObjectRemoved: {
+            var notificationId = object.notificationId
+            // Popup might have been destroyed because of a filter change, tell the model to do the timeout work for us again
+            // cannot use QModelIndex here as the model row is already gone
+            popupNotificationsModel.startTimeout(notificationId);
+
+            Qt.callLater(positionPopups);
+        }
     }
 }

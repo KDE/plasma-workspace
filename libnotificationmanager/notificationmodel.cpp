@@ -31,6 +31,7 @@
 
 #include <QDebug>
 #include <QProcess>
+#include <QTimer>
 
 #include <KShell>
 
@@ -49,11 +50,17 @@ public:
     void onNotificationReplaced(uint replacedId, const Notification &notification);
     void onNotificationRemoved(uint notificationId, NotificationServer::CloseReason reason);
 
-    int indexOfNotification(uint id) const;
+    void setupNotificationTimeout(const Notification &notification);
+
+    int rowOfNotification(uint id) const;
 
     NotificationModel *q;
 
     QVector<Notification> notifications;
+    // Fallback timeout to ensure all notifications expire eventually
+    // otherwise when it isn't shown to the user and doesn't expire
+    // an app might wait indefinitely for the notification to do so
+    QHash<uint /*notificationId*/, QTimer*> notificationTimeouts;
 
     QDateTime lastRead;
 
@@ -66,7 +73,11 @@ NotificationModel::Private::Private(NotificationModel *q)
 
 }
 
-NotificationModel::Private::~Private() = default;
+NotificationModel::Private::~Private()
+{
+    qDeleteAll(notificationTimeouts);
+    notificationTimeouts.clear();
+}
 
 void NotificationModel::Private::onNotificationAdded(const Notification &notification)
 {
@@ -83,6 +94,8 @@ void NotificationModel::Private::onNotificationAdded(const Notification &notific
         }
     }
 
+    setupNotificationTimeout(notification);
+
     q->beginInsertRows(QModelIndex(), notifications.count(), notifications.count());
     notifications.append(notification);
     q->endInsertRows();
@@ -90,11 +103,14 @@ void NotificationModel::Private::onNotificationAdded(const Notification &notific
 
 void NotificationModel::Private::onNotificationReplaced(uint replacedId, const Notification &notification)
 {
-    const int row = indexOfNotification(replacedId);
+    const int row = rowOfNotification(replacedId);
 
     if (row == -1) {
         return;
     }
+
+    Q_ASSERT(notifications[row].id() == notification.id());
+    setupNotificationTimeout(notification);
 
     notifications[row] = notification;
     const QModelIndex idx = q->index(row, 0);
@@ -103,10 +119,12 @@ void NotificationModel::Private::onNotificationReplaced(uint replacedId, const N
 
 void NotificationModel::Private::onNotificationRemoved(uint removedId, NotificationServer::CloseReason reason)
 {
-    const int row = indexOfNotification(removedId);
+    const int row = rowOfNotification(removedId);
     if (row == -1) {
         return;
     }
+
+    q->stopTimeout(removedId);
 
     // When a notification expired, keep it around in the history and mark it as such
     if (reason == NotificationServer::CloseReason::Expired) {
@@ -139,7 +157,33 @@ void NotificationModel::Private::onNotificationRemoved(uint removedId, Notificat
     q->endRemoveRows();
 }
 
-int NotificationModel::Private::indexOfNotification(uint id) const
+void NotificationModel::Private::setupNotificationTimeout(const Notification &notification)
+{
+    if (notification.timeout() == 0) {
+        // In case it got replaced by a persistent notification
+        q->stopTimeout(notification.id());
+        return;
+    }
+
+    QTimer *timer = notificationTimeouts.value(notification.id());
+    if (!timer) {
+        timer = new QTimer();
+        timer->setSingleShot(true);
+
+        connect(timer, &QTimer::timeout, q, [this, timer] {
+            const uint id = timer->property("notificationId").toUInt();
+            q->expire(id);
+        });
+        notificationTimeouts.insert(notification.id(), timer);
+    }
+
+    timer->stop();
+    timer->setProperty("notificationId", notification.id());
+    timer->setInterval(60000 /*1min*/ + (notification.timeout() == -1 ? 120000 /*2min, max configurable default timeout*/ : notification.timeout()));
+    timer->start();
+}
+
+int NotificationModel::Private::rowOfNotification(uint id) const
 {
     auto it = std::find_if(notifications.constBegin(), notifications.constEnd(), [id](const Notification &item) {
         return item.id() == id;
@@ -243,6 +287,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
 
     case Notifications::TimeoutRole: return notification.timeout();
 
+    case Notifications::ClosableRole: return true;
     case Notifications::ConfigurableRole: return notification.configurable();
     case Notifications::ConfigureActionLabelRole: return notification.configureActionLabel();
 
@@ -263,26 +308,26 @@ int NotificationModel::rowCount(const QModelIndex &parent) const
 
 void NotificationModel::expire(uint notificationId)
 {
-    if (d->indexOfNotification(notificationId) > -1) {
+    if (d->rowOfNotification(notificationId) > -1) {
         NotificationServer::self().closeNotification(notificationId, NotificationServer::CloseReason::Expired);
     }
 }
 
 void NotificationModel::close(uint notificationId)
 {
-    if (d->indexOfNotification(notificationId) > -1) {
+    if (d->rowOfNotification(notificationId) > -1) {
         NotificationServer::self().closeNotification(notificationId, NotificationServer::CloseReason::DismissedByUser);
     }
 }
 
 void NotificationModel::configure(uint notificationId)
 {
-    const int idx = d->indexOfNotification(notificationId);
-    if (idx == -1) {
+    const int row = d->rowOfNotification(notificationId);
+    if (row == -1) {
         return;
     }
 
-    const Notification &notification = d->notifications.at(idx);
+    const Notification &notification = d->notifications.at(row);
 
     if (notification.d->hasConfigureAction) {
         NotificationServer::self().invokeAction(notificationId, QStringLiteral("settings")); // FIXME make a static Notification::configureActionName() or something
@@ -321,12 +366,12 @@ void NotificationModel::configure(uint notificationId)
 
 void NotificationModel::invokeDefaultAction(uint notificationId)
 {
-    const int idx = d->indexOfNotification(notificationId);
-    if (idx == -1) {
+    const int row = d->rowOfNotification(notificationId);
+    if (row == -1) {
         return;
     }
 
-    const Notification &notification = d->notifications.at(idx);
+    const Notification &notification = d->notifications.at(row);
     if (!notification.hasDefaultAction()) {
         qCWarning(NOTIFICATIONMANAGER) << "Trying to invoke default action on notification" << notificationId << "which doesn't have one";
         return;
@@ -337,18 +382,39 @@ void NotificationModel::invokeDefaultAction(uint notificationId)
 
 void NotificationModel::invokeAction(uint notificationId, const QString &actionName)
 {
-    const int idx = d->indexOfNotification(notificationId);
-    if (idx == -1) {
+    const int row = d->rowOfNotification(notificationId);
+    if (row == -1) {
         return;
     }
 
-    const Notification &notification = d->notifications.at(idx);
+    const Notification &notification = d->notifications.at(row);
     if (!notification.actionNames().contains(actionName)) {
         qCWarning(NOTIFICATIONMANAGER) << "Trying to invoke action" << actionName << "on notification" << notificationId << "which it doesn't have";
         return;
     }
 
     NotificationServer::self().invokeAction(notificationId, actionName);
+}
+
+void NotificationModel::startTimeout(uint notificationId)
+{
+    const int row = d->rowOfNotification(notificationId);
+    if (row == -1) {
+        return;
+    }
+
+    const Notification &notification = d->notifications.at(row);
+
+    if (!notification.timeout() || notification.expired()) {
+        return;
+    }
+
+    d->setupNotificationTimeout(notification);
+}
+
+void NotificationModel::stopTimeout(uint notificationId)
+{
+    delete d->notificationTimeouts.take(notificationId);
 }
 
 void NotificationModel::clear(Notifications::ClearFlags flags)
@@ -367,8 +433,7 @@ void NotificationModel::clear(Notifications::ClearFlags flags)
     for (int i = d->notifications.count() - 1; i >= 0; --i) {
         const Notification &notification = d->notifications.at(i);
 
-        bool clear = (flags.testFlag(Notifications::ClearExpired) && notification.expired())
-                || (flags.testFlag(Notifications::ClearDismissed) && notification.dismissed());
+        bool clear = (flags.testFlag(Notifications::ClearExpired) && notification.expired());
 
         if (clear) {
             if (clearRange.second == -1) {
@@ -397,6 +462,4 @@ void NotificationModel::clear(Notifications::ClearFlags flags)
         }
         endRemoveRows();
     }
-
-    qDebug() << "clearing the following ranges" << clearQueue;
 }

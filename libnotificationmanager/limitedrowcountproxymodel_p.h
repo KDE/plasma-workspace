@@ -32,16 +32,28 @@ public:
 
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 
-    int limit() const;
-    void setLimit(int limit);
+    QVariant data(const QModelIndex &index, int role) const override;
+
+    int rootLimit() const;
+    void setRootLimit(int limit);
+
+    int childLimit() const;
+    void setChildLimit(int limit);
+
+    // FIXME come up with a better name
+    void setNodeLimited(const QModelIndex &idx, bool limited);
 
 signals:
-    void limitChanged();
+    void rootLimitChanged();
+    void childLimitChanged();
 
 protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:
-    int m_limit = 0;
+    int m_rootLimit = 0;
+    int m_childLimit = 0;
+
+    mutable QList<QPersistentModelIndex> m_unlimitedChildren;
 
 };

@@ -34,14 +34,19 @@ import "global"
 
 RowLayout {
     id: notificationHeading
-
+    property bool inGroup
     property int notificationType
 
-    property alias applicationIconSource: applicationIconItem.source
+    property var applicationIconSource
     property string applicationName
     property string deviceName
 
     property string configureActionLabel
+
+    property alias expandable: expandButton.visible
+    property bool expanded
+    property int collapsedCount
+    property int expandedCount
 
     property alias configurable: configureButton.visible
     property alias dismissable: dismissButton.visible
@@ -52,6 +57,7 @@ RowLayout {
     property int jobState
     property QtObject jobDetails
 
+    signal expandClicked
     signal configureClicked
     signal dismissClicked
     signal closeClicked
@@ -69,7 +75,6 @@ RowLayout {
     Connections {
         target: Globals
         // clock time changed
-        // TODO should we do this only when actually visible/expanded?
         onTimeChanged: notificationHeading.updateAgoText()
     }
 
@@ -77,6 +82,7 @@ RowLayout {
         id: applicationIconItem
         Layout.preferredWidth: units.iconSizes.small
         Layout.preferredHeight: units.iconSizes.small
+        source: !notificationHeading.inGroup ? notificationHeading.applicationIconSource : ""
         usesPlasmaTheme: false
         visible: valid
     }
@@ -96,7 +102,16 @@ RowLayout {
         // updated periodically by a Timer hence this property with generate() function
         property string agoText: ""
         visible: text !== ""
-        text: generateRemainingText() || agoText
+        text: {
+            if (expandable) {
+                if (expanded) {
+                    return expandedCount;
+                } else {
+                    return i18nc("n more notifications", "+%1", (expandedCount - collapsedCount));
+                }
+            }
+            return generateRemainingText() || agoText;
+        }
 
         function generateAgoText() {
             if (!time || isNaN(time.getTime()) || notificationHeading.jobState === NotificationManager.Notifications.JobStateRunning) {
@@ -175,6 +190,15 @@ RowLayout {
 
         // These aren't ToolButtons so they can be perfectly aligned
         // FIXME fix layout overlap
+
+        HeaderButton {
+            id: expandButton
+            tooltip: notificationHeading.expanded ? i18n("Show Less") : i18n("Show More")
+            iconSource: notificationHeading.expanded ? "arrow-up" : "arrow-down"
+            visible: false
+            onClicked: notificationHeading.expandClicked()
+        }
+
         HeaderButton {
             id: configureButton
             tooltip: notificationHeading.configureActionLabel || i18n("Configure")

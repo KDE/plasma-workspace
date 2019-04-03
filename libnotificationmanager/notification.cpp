@@ -121,10 +121,10 @@ QString Notification::Private::sanitize(const QString &text)
     }
     out.writeEndDocument();
 
-    if (r.hasError()) { // FIXME FIXME FIXME
-        /*qCWarning(NOTIFICATIONS) << "Notification to send to backend contains invalid XML: "
-                      << r.errorString() << "line" << r.lineNumber()
-                      << "col" << r.columnNumber();*/
+    if (r.hasError()) {
+        qCWarning(NOTIFICATIONMANAGER) << "Notification to send to backend contains invalid XML: "
+                                       << r.errorString() << "line" << r.lineNumber()
+                                       << "col" << r.columnNumber();
     }
 
     // The Text.StyledText format handles only html3.2 stuff and &apos; is html4 stuff
@@ -230,7 +230,16 @@ void Notification::Private::processHints(const QVariantMap &hints)
     serviceName.clear();
     configurableService = false;
     if (!desktopEntry.isEmpty()) {
-        KService::Ptr service = KService::serviceByStorageId(desktopEntry);
+        KService::Ptr service = KService::serviceByDesktopName(desktopEntry);
+        // Also try lower-case desktopEntry (Firefox sends "Firefox" which doesn't match "firefox"...)
+        if (!service) {
+            const QString lowerDesktopEntry = desktopEntry.toLower();
+            service = KService::serviceByDesktopName(lowerDesktopEntry);
+            if (service) {
+                qCInfo(NOTIFICATIONMANAGER) << "Application sent desktop-entry" << desktopEntry << "but it actually was" << lowerDesktopEntry << ", this is an application bug!";
+                desktopEntry = lowerDesktopEntry;
+            }
+        }
         if (service) {
             serviceName = service->name();
             applicationIconName = service->icon();
@@ -329,12 +338,14 @@ void Notification::Private::processHints(const QVariantMap &hints)
     }
 }
 
-void Notification::Private::setUrgency(Notifications::Urgencies urgency)
+void Notification::Private::setUrgency(Notifications::Urgency urgency)
 {
     this->urgency = urgency;
 
     // Critical notifications must not time out
-    // TODO should we really imply this here?
+    // TODO should we really imply this here and not on the view side?
+    // are there usecases for critical but can expire?
+    // "critical updates available"?
     if (urgency == Notifications::CriticalUrgency) {
         timeout = 0;
     }
@@ -544,7 +555,7 @@ void Notification::setUrls(const QList<QUrl> &urls)
     d->urls = urls;
 }
 
-Notifications::Urgencies Notification::urgency() const
+Notifications::Urgency Notification::urgency() const
 {
     return d->urgency;
 }

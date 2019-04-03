@@ -100,6 +100,7 @@ PlasmaCore.Dialog {
     type: PlasmaCore.Dialog.Notification
     flags: {
         var flags = Qt.WindowDoesNotAcceptFocus;
+        // FIXME this needs support in KWin somehow...
         if (urgency === NotificationManager.Notifications.CriticalUrgency) {
             flags |= Qt.WindowStaysOnTopHint;
         }
@@ -185,7 +186,7 @@ PlasmaCore.Dialog {
             id: notificationItem
             width: parent.width
             hovered: area.containsMouse
-            maximumLineCount: 8 // TODO configurable?
+            maximumLineCount: 8
             bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0
 
             thumbnailLeftPadding: -notificationPopup.margins.left
@@ -196,7 +197,7 @@ PlasmaCore.Dialog {
             closable: true
             onBodyClicked: {
                 if (area.acceptedButtons & mouse.button) {
-                    area.clicked(null /*mouse*/)
+                    area.clicked(null /*mouse*/);
                 }
             }
             onCloseClicked: notificationPopup.closeClicked()

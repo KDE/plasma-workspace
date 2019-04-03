@@ -384,6 +384,10 @@ QModelIndex NotificationGroupingProxyModel::mapToSource(const QModelIndex &proxy
         // has its Qt::DisplayRole mangled by data(), and it's more useful for trans-
         // lating dataChanged() from the source model.
         // NOTE we changed that to be last
+        if (rowMap.isEmpty()) { // FIXME
+            // How can this happen? (happens when closing a group)
+            return QModelIndex();
+        }
         return sourceModel()->index(rowMap.at(proxyIndex.row())->constLast(), 0);
     }
 
@@ -407,7 +411,7 @@ int NotificationGroupingProxyModel::rowCount(const QModelIndex &parent) const
             return 0;
         }
 
-        const uint rowCount = rowMap.at(parent.row())->count();
+        const int rowCount = rowMap.at(parent.row())->count();
 
         // If this sub-list in the map only has one entry, it's a plain item, not
         // parent to a group.
@@ -458,8 +462,19 @@ QVariant NotificationGroupingProxyModel::data(const QModelIndex &proxyIndex, int
         switch (role) {
         case Notifications::IsGroupRole:
             return true;
+        case Notifications::GroupChildrenCountRole:
+            return rowCount(proxyIndex);
         case Notifications::IsInGroupRole:
             return false;
+
+        case Notifications::ClosableRole: // if there is any closable child item
+            for (int i = 0; i < rowCount(proxyIndex); ++i) {
+                if (proxyIndex.child(i, 0).data(Notifications::ClosableRole).toBool()) {
+                    return true;
+                }
+            }
+            return false;
+
         }
     } else {
         switch (role) {

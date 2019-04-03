@@ -25,6 +25,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.kcoreaddons 1.0 as KCoreAddons
+import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
@@ -42,8 +43,11 @@ Item {
             lines.push(i18np("%1 running job", "%1 running jobs", historyModel.activeJobsCount));
         }
 
-        if (historyModel.unreadNotificationsCount > 0) {
-            lines.push(i18np("%1 unread notification", "%1 unread notifications", historyModel.unreadNotificationsCount));
+        // Any notification that is newer than "lastRead" is "unread"
+        // since it doesn't know the popup is on screen which makes the user see it
+        var actualUnread = historyModel.unreadNotificationsCount - Globals.popupNotificationsModel.activeNotificationsCount;
+        if (actualUnread > 0) {
+            lines.push(i18np("%1 unread notification", "%1 unread notifications", actualUnread));
         }
 
         if (Globals.inhibited) {
@@ -117,11 +121,30 @@ Item {
         showJobs: notificationSettings.jobsInNotifications
         sortMode: NotificationManager.Notifications.SortByDate
         groupMode: NotificationManager.Notifications.GroupApplicationsFlat
+        groupLimit: 2
         blacklistedDesktopEntries: notificationSettings.historyBlacklistedApplications
         blacklistedNotifyRcNames: notificationSettings.historyBlacklistedServices
     }
 
+    function action_clearHistory() {
+        historyModel.clear(NotificationManager.Notifications.ClearExpired);
+    }
+
+    function action_openKcm() {
+        KQCAddons.KCMShell.open("kcm_notifications");
+    }
+
     Component.onCompleted: {
-        Globals.adopt(plasmoid)
+        Globals.adopt(plasmoid);
+
+        plasmoid.setAction("clearHistory", i18n("Clear History"), "edit-clear-history");
+        var clearAction = plasmoid.action("clearHistory");
+        clearAction.visible = Qt.binding(function() {
+            return historyModel.expiredNotificationsCount > 0;
+        });
+
+        // FIXME only while Multi-page KCMs are broken when embedded in plasmoid config
+        plasmoid.setAction("openKcm", i18n("&Configure Event Notifications and Actions..."), "preferences-desktop-notification-bell");
+        plasmoid.action("openKcm").visible = (KQCAddons.KCMShell.authorize("kcm_notifications.desktop").length > 0);
     }
 }

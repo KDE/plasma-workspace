@@ -165,4 +165,5 @@ X-KDE-Library=plasma_applet_notifications
 X-Plasma-MainScript=ui/main.qml
 X-Plasma-NotificationArea=true
 X-Plasma-NotificationAreaCategory=ApplicationStatus
-X-Plasma-ConfigPlugins=kcm_notifications
+# FIXME doesn't work with multi-page KCMs
+#X-Plasma-ConfigPlugins=kcm_notifications

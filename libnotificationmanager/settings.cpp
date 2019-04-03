@@ -50,7 +50,7 @@ public:
     KConfigGroup servicesGroup() const;
     KConfigGroup applicationsGroup() const;
 
-    QStringList blacklist(const KConfigGroup &group, Settings::NotificationBehavior behavior) const;
+    QStringList behaviorMatchesList(const KConfigGroup &group, Settings::NotificationBehavior behavior, bool on) const;
 
     Settings *q;
 
@@ -83,7 +83,8 @@ Settings::NotificationBehaviors Settings::Private::groupBehavior(const KConfigGr
 {
     Settings::NotificationBehaviors behaviors;
     behaviors.setFlag(Settings::ShowPopups, group.readEntry("ShowPopups", true));
-    behaviors.setFlag(Settings::ShowPopupsInDoNotDisturbMode, group.readEntry("ShowPopupsInDndMode", false));
+    // show popups in dnd mode implies the show popups
+    behaviors.setFlag(Settings::ShowPopupsInDoNotDisturbMode, behaviors.testFlag(Settings::ShowPopups) && group.readEntry("ShowPopupsInDndMode", false));
     behaviors.setFlag(Settings::ShowInHistory, group.readEntry("ShowInHistory", true));
     behaviors.setFlag(Settings::ShowBadges, group.readEntry("ShowBadges", true));
     return behaviors;
@@ -95,28 +96,32 @@ void Settings::Private::setGroupBehavior(KConfigGroup &group, const Settings::No
         return;
     }
 
-    if (behavior.testFlag(Settings::ShowPopups)) {
+    const bool showPopups = behavior.testFlag(Settings::ShowPopups);
+    if (showPopups && !group.hasDefault("ShowPopups")) {
         group.revertToDefault("ShowPopups", KConfigBase::Notify);
     } else {
-        group.writeEntry("ShowPopups", false, KConfigBase::Notify);
+        group.writeEntry("ShowPopups", showPopups, KConfigBase::Notify);
     }
 
-    if (behavior.testFlag(Settings::ShowPopupsInDoNotDisturbMode)) {
-        group.writeEntry("ShowPopupsInDndMode", true, KConfigBase::Notify);
-    } else {
+    const bool showPopupsInDndMode = behavior.testFlag(Settings::ShowPopupsInDoNotDisturbMode);
+    if (!showPopupsInDndMode && !group.hasDefault("ShowPopups")) {
         group.revertToDefault("ShowPopupsInDndMode", KConfigBase::Notify);
+    } else {
+        group.writeEntry("ShowPopupsInDndMode", showPopupsInDndMode, KConfigBase::Notify);
     }
 
-    if (behavior.testFlag(Settings::ShowInHistory)) {
+    const bool showInHistory = behavior.testFlag(Settings::ShowInHistory);
+    if (showInHistory && !group.hasDefault("ShowInHistory")) {
         group.revertToDefault("ShowInHistory", KConfig::Notify);
     } else {
-        group.writeEntry("ShowInHistory", false, KConfigBase::Notify);
+        group.writeEntry("ShowInHistory", showInHistory, KConfigBase::Notify);
     }
 
-    if (behavior.testFlag(Settings::ShowBadges)) {
+    const bool showBadges = behavior.testFlag(Settings::ShowBadges);
+    if (showBadges && !group.hasDefault("ShowBadges")) {
         group.revertToDefault("ShowBadges", KConfigBase::Notify);
     } else {
-        group.writeEntry("ShowBadges", false, KConfigBase::Notify);
+        group.writeEntry("ShowBadges", showBadges, KConfigBase::Notify);
     }
 
     setDirty(true);
@@ -132,18 +137,18 @@ KConfigGroup Settings::Private::applicationsGroup() const
     return config->group("Applications");
 }
 
-QStringList Settings::Private::blacklist(const KConfigGroup &group, Settings::NotificationBehavior behavior) const
+QStringList Settings::Private::behaviorMatchesList(const KConfigGroup &group, Settings::NotificationBehavior behavior, bool on) const
 {
-    QStringList blacklist;
+    QStringList matches;
 
     const QStringList apps = group.groupList();
     for (const QString &app : apps) {
-        if (!groupBehavior(group.group(app)).testFlag(behavior)) {
-            blacklist.append(app);
+        if (groupBehavior(group.group(app)).testFlag(behavior) == on) {
+            matches.append(app);
         }
     }
 
-    return blacklist;
+    return matches;
 }
 
 Settings::Settings(QObject *parent)
@@ -159,29 +164,21 @@ Settings::Settings(const KSharedConfig::Ptr &config, QObject *parent)
 {
     d->config = config;
 
-    DoNotDisturbSettings::instance(config);
-    connect(DoNotDisturbSettings::self(), &DoNotDisturbSettings::configChanged, this, [] {
-        qDebug() << "dnd cfg changed";
-    });
-
-    NotificationSettings::instance(config);
-    connect(NotificationSettings::self(), &NotificationSettings::configChanged, this, [] {
-        qDebug() << "notification cfg changed";
-    });
-
-    JobSettings::instance(config);
-    connect(JobSettings::self(), &JobSettings::configChanged, this, [] {
-        qDebug() << "job cfg changed";
-    });
-
-    BadgeSettings::instance(config);
-    connect(BadgeSettings::self(), &BadgeSettings::configChanged, this, [] {
-        qDebug() << "badge cfg changed";
-    });
+    static bool s_settingsInited = false;
+    if (!s_settingsInited) {
+        DoNotDisturbSettings::instance(config);
+        NotificationSettings::instance(config);
+        JobSettings::instance(config);
+        BadgeSettings::instance(config);
+        s_settingsInited = true;
+    }
 
     setLive(true);
 
-    connect(&NotificationServer::self(), &NotificationServer::inhibitedChanged, this, &Settings::notificationsInhibitedChanged);
+    connect(&NotificationServer::self(), &NotificationServer::inhibitedChanged,
+            this, &Settings::notificationsInhibitedByApplicationChanged);
+    connect(&NotificationServer::self(), &NotificationServer::inhibitionApplicationsChanged,
+            this, &Settings::notificationInhibitionApplicationsChanged);
 }
 
 Settings::~Settings() = default;
@@ -226,7 +223,6 @@ void Settings::registerKnownApplication(const QString &desktopEntry)
     }
 
     d->applicationsGroup().group(desktopEntry).writeEntry("Seen", true);
-    //d->config->sync();
 
     emit knownApplicationsChanged();
 }
@@ -243,8 +239,7 @@ void Settings::forgetKnownApplication(const QString &desktopEntry)
         return;
     }
 
-    d->applicationsGroup().deleteGroup(desktopEntry); // notify?
-    //d->config->sync();
+    d->applicationsGroup().deleteGroup(desktopEntry);
 
     emit knownApplicationsChanged();
 }
@@ -462,22 +457,32 @@ QStringList Settings::knownApplications() const
 
 QStringList Settings::popupBlacklistedApplications() const
 {
-    return d->blacklist(d->applicationsGroup(), ShowPopups);
+    return d->behaviorMatchesList(d->applicationsGroup(), ShowPopups, false);
 }
 
 QStringList Settings::popupBlacklistedServices() const
 {
-    return d->blacklist(d->servicesGroup(), ShowPopups);
+    return d->behaviorMatchesList(d->servicesGroup(), ShowPopups, false);
+}
+
+QStringList Settings::doNotDisturbPopupWhitelistedApplications() const
+{
+    return d->behaviorMatchesList(d->applicationsGroup(), ShowPopupsInDoNotDisturbMode, true);
+}
+
+QStringList Settings::doNotDisturbPopupWhitelistedServices() const
+{
+    return d->behaviorMatchesList(d->servicesGroup(), ShowPopupsInDoNotDisturbMode, true);
 }
 
 QStringList Settings::historyBlacklistedApplications() const
 {
-    return d->blacklist(d->applicationsGroup(), ShowInHistory);
+    return d->behaviorMatchesList(d->applicationsGroup(), ShowInHistory, false);
 }
 
 QStringList Settings::historyBlacklistedServices() const
 {
-    return d->blacklist(d->servicesGroup(), ShowInHistory);
+    return d->behaviorMatchesList(d->servicesGroup(), ShowInHistory, false);
 }
 
 QDateTime Settings::notificationsInhibitedUntil() const
@@ -493,11 +498,25 @@ void Settings::setNotificationsInhibitedUntil(const QDateTime &time)
 
 void Settings::resetNotificationsInhibitedUntil()
 {
-    setNotificationsInhibitedUntil(QDateTime());// DoNotDisturbSettings::defaultUntilValue());
+    setNotificationsInhibitedUntil(QDateTime());// FIXME DoNotDisturbSettings::defaultUntilValue());
 }
 
-bool Settings::notificationsInhibited() const
+bool Settings::notificationsInhibitedByApplication() const
 {
     return NotificationServer::self().inhibited();
+}
 
+QStringList Settings::notificationInhibitionApplications() const
+{
+    return NotificationServer::self().inhibitionApplications();
+}
+
+QStringList Settings::notificationInhibitionReasons() const
+{
+    return NotificationServer::self().inhibitionReasons();
+}
+
+void Settings::revokeApplicationInhibitions()
+{
+    NotificationServer::self().clearInhibitions();
 }

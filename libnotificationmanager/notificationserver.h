@@ -69,13 +69,23 @@ public:
     /**
      * Whether the notification service could be registered
      */
-    // TODO add a retry or reconnect thing
     bool isValid() const;
 
     /**
      * Whether an application requested to inhibit notifications.
      */
     bool inhibited() const;
+
+    // should we return a struct or pair or something?
+    QStringList inhibitionApplications() const;
+    QStringList inhibitionReasons() const;
+
+    /**
+     * Remove all inhibitions.
+     *
+     * @note The applications are not explicitly informed about this.
+     */
+    void clearInhibitions();
 
     /**
      * Sends a notification closed event
@@ -129,6 +139,13 @@ Q_SIGNALS:
      * when all inhibitions have been lifted.
      */
     void inhibitedChanged(bool inhibited);
+
+    /**
+     * Emitted when the list of applications holding a notification
+     * inhibition changes.
+     * Normally you would only want to listen do @c inhibitedChanged
+     */
+    void inhibitionApplicationsChanged();
 
 private:
     explicit NotificationServer(QObject *parent = nullptr);

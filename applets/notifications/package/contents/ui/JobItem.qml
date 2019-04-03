@@ -60,7 +60,7 @@ ColumnLayout {
         Layout.fillWidth: true
         textFormat: Text.PlainText
         wrapMode: Text.WordWrap
-        text: jobItem.errorText || jobItem.jobDetails.text
+        text: jobItem.errorText || (jobItem.jobDetails ? jobItem.jobDetails.text : "")
         visible: text !== ""
     }
 
@@ -134,6 +134,7 @@ ColumnLayout {
         property var url: {
             if (jobItem.jobState !== NotificationManager.Notifications.JobStateStopped
                     || jobItem.error
+                    || !jobItem.jobDetails
                     || jobItem.jobDetails.totalFiles <= 0) {
                 return null;
             }
@@ -170,7 +171,7 @@ ColumnLayout {
 
         PlasmaComponents.Button {
             // would be nice to have the file icon here?
-            text: jobItem.jobDetails.totalFiles > 1 ? i18n("Open Containing Folder") : i18n("Open")
+            text: jobItem.jobDetails && jobItem.jobDetails.totalFiles > 1 ? i18n("Open Containing Folder") : i18n("Open")
             onClicked: jobItem.openUrl(jobDoneActions.url)
             width: minimumWidth
         }

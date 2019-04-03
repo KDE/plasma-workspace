@@ -75,17 +75,19 @@ ColumnLayout {
                     onClicked: {
                         if (Globals.inhibited) {
                             notificationSettings.notificationsInhibitedUntil = undefined;
+                            notificationSettings.revokeApplicationInhibitions();
 
                             notificationSettings.save();
                         }
                     }
 
                     contentItem: RowLayout {
+                        spacing: dndCheck.spacing
+
                         PlasmaCore.IconItem {
                             Layout.leftMargin: dndCheck.mirrored ? 0 : dndCheck.indicator.width + dndCheck.spacing
                             Layout.rightMargin: dndCheck.mirrored ? dndCheck.indicator.width + dndCheck.spacing : 0
-                            // FIXME proper icon
-                            source: "face-quiet"
+                            source: "notifications-disabled"
                             Layout.preferredWidth: units.iconSizes.smallMedium
                             Layout.preferredHeight: units.iconSizes.smallMedium
                         }
@@ -144,6 +146,17 @@ ColumnLayout {
                         }
                         PlasmaComponents.MenuItem {
                             text: i18n("Until Monday")
+                            // show Friday and Saturday, Sunday is "0" but for that you can use "until tomorrow morning"
+                            visible: dndMenu.date.getDay() >= 5
+                            readonly property date date: {
+                                var d = dndMenu.date;
+                                d.setHours(dndMorningHour);
+                                // wraps around if neccessary
+                                d.setDate(d.getDate() + (7 - d.getDay() + 1));
+                                d.setMinutes(0);
+                                d.setSeconds(0);
+                                return d;
+                            }
                         }
                     }
                 }
@@ -155,30 +168,50 @@ ColumnLayout {
 
             PlasmaComponents.ToolButton {
                 iconName: "configure"
-                tooltip: plasmoid.action("configure").text
-                visible: plasmoid.action("configure").enabled
-                onClicked: plasmoid.action("configure").trigger()
+                tooltip: plasmoid.action("openKcm").text
+                visible: plasmoid.action("openKcm").enabled
+                onClicked: plasmoid.action("openKcm").trigger()
             }
         }
 
         PlasmaExtras.DescriptiveLabel {
-            leftPadding: dndCheck.mirrored ? 0 : units.smallSpacing + dndCheck.indicator.width + dndCheck.spacing
-            rightPadding: dndCheck.mirrored ? units.smallSpacing + dndCheck.indicator.width + dndCheck.spacing : 0
+            Layout.leftMargin: dndCheck.mirrored ? 0 : dndCheck.indicator.width + 2 * dndCheck.spacing + units.iconSizes.smallMedium
+            Layout.rightMargin: dndCheck.mirrored ? dndCheck.indicator.width + 2 * dndCheck.spacing + units.iconSizes.smallMedium : 0
             Layout.fillWidth: true
             wrapMode: Text.WordWrap
             textFormat: Text.PlainText
             text: {
-                if (Globals.inhibited) {
-                    var inhibitedUntil = notificationSettings.notificationsInhibitedUntil
-                    var inhibitedUntilValid = !isNaN(inhibitedUntil.getTime());
+                if (!Globals.inhibited) {
+                    return "";
+                }
 
-                    // TODO check app inhibition, too
-                    if (inhibitedUntilValid) {
-                        return i18nc("Do not disturb mode enabled until date", "Until %1",
-                                     KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat));
+                var inhibitedUntil = notificationSettings.notificationsInhibitedUntil;
+                var inhibitedByApp = notificationSettings.notificationsInhibitedByApplication;
+
+                var sections = [];
+
+                if (!isNaN(inhibitedUntil.getTime())) {
+                    sections.push(i18nc("Do not disturb until date", "Until %1",
+                                        KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat)));
+                }
+
+                if (inhibitedByApp) {
+                    var inhibitionAppNames = notificationSettings.notificationInhibitionApplications;
+                    var inhibitionAppReasons = notificationSettings.notificationInhibitionReasons;
+
+                    for (var i = 0, length = inhibitionAppNames.length; i < length; ++i) {
+                        var name = inhibitionAppNames[i];
+                        var reason = inhibitionAppReasons[i];
+
+                        if (reason) {
+                            sections.push(i18nc("Do not disturb until app has finished (reason)", "While %1 is active (%2)", name, reason));
+                        } else {
+                            sections.push(i18nc("Do not disturb until app has finished", "While %1 is active", name));
+                        }
                     }
                 }
-                return "";
+
+                return sections.join(" · ");
             }
             visible:  text !== ""
         }
@@ -208,8 +241,8 @@ ColumnLayout {
         PlasmaComponents.ToolButton {
             iconName: "edit-clear-history"
             tooltip: i18n("Clear History")
-            visible: historyModel.expiredNotificationsCount > 0
-            onClicked: historyModel.clear(NotificationManager.Notifications.ClearExpired)
+            visible: plasmoid.action("clearHistory").visible
+            onClicked: action_clearHistory()
         }
     }
 
@@ -249,11 +282,23 @@ ColumnLayout {
                             applicationName: model.applicationName
                             applicationIconSource: model.applicationIconName
 
-                            time: model.updated || model.created
+                            //time: model.updated || model.created
 
                             configurable: model.configurable
+                            closable: model.closable
 
-                            // FIXME close group
+                            expandable: true
+                            expanded: model.isGroupExpanded
+                            expandedCount: model.groupChildrenCount
+                            collapsedCount: historyModel.groupLimit
+                            onExpandClicked: {
+                                if (expanded) {
+                                    historyModel.collapse(historyModel.index(index, 0));
+                                } else {
+                                    historyModel.expand(historyModel.index(index, 0));
+                                }
+                            }
+
                             onCloseClicked: historyModel.close(historyModel.index(index, 0))
                             //onDismissClicked: model.dismissed = false
                             // FIXME don't configure event but just app
@@ -269,7 +314,7 @@ ColumnLayout {
 
                             notificationType: model.type
 
-                            headerVisible: !model.isInGroup
+                            inGroup: model.isInGroup
 
                             applicationName: model.applicationName
                             applicatonIconSource: model.applicationIconName
@@ -283,8 +328,7 @@ ColumnLayout {
                             dismissable: model.type === NotificationManager.Notifications.JobType
                                 && model.jobState !== NotificationManager.Notifications.JobStateStopped
                                 && model.dismissed
-                            closable: model.type === NotificationManager.Notifications.NotificationType
-                                || model.jobState === NotificationManager.Notifications.JobStateStopped
+                            closable: model.closable
 
                             summary: model.summary
                             body: model.body || ""
@@ -304,17 +348,21 @@ ColumnLayout {
                             // In the popup the default action is triggered by clicking on the popup
                             // however in the list this is undesirable, so instead show a clickable button
                             // in case you have a non-expired notification in history (do not disturb mode)
+                            // unless it has the same label as an action
+                            readonly property bool addDefaultAction: (model.hasDefaultAction
+                                                                     && model.defaultActionLabel
+                                                                     && (model.actionLabels || []).indexOf(model.defaultActionLabel) === -1) ? true : false
                             actionNames: {
                                 var actions = (model.actionNames || []);
-                                if (model.hasDefaultAction) {
+                                if (addDefaultAction) {
                                     actions.unshift("default"); // prepend
                                 }
                                 return actions;
                             }
                             actionLabels: {
                                 var labels = (model.actionLabels || []);
-                                if (model.hasDefaultAction) {
-                                    labels.unshift(model.defaultActionLabel || i18n("Open")); // make sure it has some label
+                                if (addDefaultAction) {
+                                    labels.unshift(model.defaultActionLabel);
                                 }
                                 return labels;
                             }

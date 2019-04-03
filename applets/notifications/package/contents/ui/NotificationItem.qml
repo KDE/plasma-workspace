@@ -37,7 +37,7 @@ ColumnLayout {
 
     property int notificationType
 
-    property bool headerVisible: true
+    property bool inGroup: false
 
     property alias applicationIconSource: notificationHeading.applicationIconSource
     property alias applicationName: notificationHeading.applicationName
@@ -97,7 +97,8 @@ ColumnLayout {
         id: notificationHeading
         Layout.fillWidth: true
 
-        visible: notificationItem.headerVisible
+        inGroup: notificationItem.inGroup
+        parent: inGroup ? inGroupHeaderContainer : defaultHeaderContainer
 
         notificationType: notificationItem.notificationType
         jobState: notificationItem.jobState
@@ -106,6 +107,11 @@ ColumnLayout {
         onConfigureClicked: notificationItem.configureClicked()
         onDismissClicked: notificationItem.dismissClicked()
         onCloseClicked: notificationItem.closeClicked()
+    }
+
+    RowLayout {
+        id: defaultHeaderContainer
+        Layout.fillWidth: true
     }
 
     // Notification body
@@ -117,39 +123,49 @@ ColumnLayout {
             Layout.fillWidth: true
             spacing: 0
 
-            PlasmaExtras.Heading {
-                id: summaryLabel
+            RowLayout {
                 Layout.fillWidth: true
-                Layout.preferredHeight: implicitHeight
-                textFormat: Text.PlainText
-                maximumLineCount: 3
-                wrapMode: Text.WordWrap
-                elide: Text.ElideRight
-                level: 4
-                text: {
-                    if (notificationItem.notificationType === NotificationManager.Notifications.JobType) {
-                        if (notificationItem.jobState === NotificationManager.Notifications.JobStateSuspended) {
-                            return i18nc("Job name, e.g. Copying is paused", "%1 (Paused)", notificationItem.summary);
-                        } else if (notificationItem.jobState === NotificationManager.Notifications.JobStateStopped) {
-                            if (notificationItem.error) {
-                                return i18nc("Job name, e.g. Copying has failed", "%1 (Failed)", notificationItem.summary);
-                            } else {
-                                return i18nc("Job name, e.g. Copying has finished", "%1 (Finished)", notificationItem.summary);
+
+                PlasmaExtras.Heading {
+                    id: summaryLabel
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: implicitHeight
+                    textFormat: Text.PlainText
+                    maximumLineCount: 3
+                    wrapMode: Text.WordWrap
+                    elide: Text.ElideRight
+                    level: 4
+                    text: {
+                        if (notificationItem.notificationType === NotificationManager.Notifications.JobType) {
+                            if (notificationItem.jobState === NotificationManager.Notifications.JobStateSuspended) {
+                                return i18nc("Job name, e.g. Copying is paused", "%1 (Paused)", notificationItem.summary);
+                            } else if (notificationItem.jobState === NotificationManager.Notifications.JobStateStopped) {
+                                if (notificationItem.error) {
+                                    return i18nc("Job name, e.g. Copying has failed", "%1 (Failed)", notificationItem.summary);
+                                } else {
+                                    return i18nc("Job name, e.g. Copying has finished", "%1 (Finished)", notificationItem.summary);
+                                }
                             }
                         }
+                        return notificationItem.summary;
                     }
-                    return notificationItem.summary;
+
+                    // some apps use their app name as summary, avoid showing the same text twice
+                    // try very hard to match the two
+                    visible: text !== "" && text.toLocaleLowerCase().trim() !== notificationItem.applicationName.toLocaleLowerCase().trim()
+
+                    PlasmaCore.ToolTipArea {
+                        anchors.fill: parent
+                        active: summaryLabel.truncated
+                        textFormat: Text.PlainText
+                        subText: summaryLabel.text
+                    }
                 }
 
-                // some apps use their app name as summary, avoid showing the same text twice
-                // try very hard to match the two
-                visible: text !== "" && text.toLocaleLowerCase().trim() !== notificationItem.applicationName.toLocaleLowerCase().trim()
-
-                PlasmaCore.ToolTipArea {
-                    anchors.fill: parent
-                    active: summaryLabel.truncated
-                    textFormat: Text.PlainText
-                    subText: summaryLabel.text
+                RowLayout {
+                    // When this notification is grouped, the header is reparented here here
+                    id: inGroupHeaderContainer
+                    Layout.fillHeight: true
                 }
             }
 
@@ -209,6 +225,7 @@ ColumnLayout {
 
     RowLayout {
         Layout.fillWidth: true
+        visible: actionRepeater.count > 0
 
         // Notification actions
         Flow { // it's a Flow so it can wrap if too long
