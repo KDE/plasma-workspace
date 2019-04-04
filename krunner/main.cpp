@@ -25,6 +25,8 @@
 #include <QDebug>
 #include <QQuickWindow>
 #include <QSessionManager>
+#include <QDBusMessage>
+#include <QDBusConnection>
 
 #include <KAuthorized>
 #include <KAboutData>
@@ -36,8 +38,6 @@
 #include <kworkspace.h>
 
 #include "view.h"
-
-static QCommandLineParser parser;
 
 int main(int argc, char **argv)
 {
@@ -68,10 +68,22 @@ int main(int argc, char **argv)
     KAboutData::setApplicationData(aboutData);
     app.setQuitOnLastWindowClosed(false);
 
-    aboutData.setupCommandLine(&parser);
+    {
+        QCommandLineParser parser;
+        QCommandLineOption replaceOption({QStringLiteral("replace")}, i18n("Replace an existing instance"));
+        parser.addOption(replaceOption);
+        aboutData.setupCommandLine(&parser);
 
-    parser.process(app);
-    aboutData.processCommandLine(&parser);
+        parser.process(app);
+        aboutData.processCommandLine(&parser);
+        if (parser.isSet(replaceOption)) {
+            auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.krunner"),
+                                                        QStringLiteral("/MainApplication"),
+                                                        QStringLiteral("org.qtproject.Qt.QCoreApplication"),
+                                                        QStringLiteral("quit"));
+            QDBusConnection::sessionBus().call(message); //deliberately block until it's done, so we register the name after the app quits
+        }
+    }
 
     if (!KAuthorized::authorize(QStringLiteral("run_command"))) {
         return -1;
