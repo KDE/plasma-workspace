@@ -25,7 +25,7 @@
 #include <KConfigWatcher>
 #include <KService>
 
-#include "notificationserver.h"
+#include "server.h"
 #include "debug.h"
 
 // Settings
@@ -175,9 +175,9 @@ Settings::Settings(const KSharedConfig::Ptr &config, QObject *parent)
 
     setLive(true);
 
-    connect(&NotificationServer::self(), &NotificationServer::inhibitedChanged,
+    connect(&Server::self(), &Server::inhibitedChanged,
             this, &Settings::notificationsInhibitedByApplicationChanged);
-    connect(&NotificationServer::self(), &NotificationServer::inhibitionApplicationsChanged,
+    connect(&Server::self(), &Server::inhibitionApplicationsChanged,
             this, &Settings::notificationInhibitionApplicationsChanged);
 }
 
@@ -362,6 +362,20 @@ void Settings::setLowPriorityPopups(bool enable)
     d->setDirty(true);
 }
 
+bool Settings::lowPriorityHistory() const
+{
+    return NotificationSettings::lowPriorityHistory();
+}
+
+void Settings::setLowPriorityHistory(bool enable)
+{
+    if (this->lowPriorityHistory() == enable) {
+        return;
+    }
+    NotificationSettings::setLowPriorityHistory(enable);
+    d->setDirty(true);
+}
+
 Settings::PopupPosition Settings::popupPosition() const
 {
     return NotificationSettings::popupPosition();
@@ -503,20 +517,20 @@ void Settings::resetNotificationsInhibitedUntil()
 
 bool Settings::notificationsInhibitedByApplication() const
 {
-    return NotificationServer::self().inhibited();
+    return Server::self().inhibited();
 }
 
 QStringList Settings::notificationInhibitionApplications() const
 {
-    return NotificationServer::self().inhibitionApplications();
+    return Server::self().inhibitionApplications();
 }
 
 QStringList Settings::notificationInhibitionReasons() const
 {
-    return NotificationServer::self().inhibitionReasons();
+    return Server::self().inhibitionReasons();
 }
 
 void Settings::revokeApplicationInhibitions()
 {
-    NotificationServer::self().clearInhibitions();
+    Server::self().clearInhibitions();
 }

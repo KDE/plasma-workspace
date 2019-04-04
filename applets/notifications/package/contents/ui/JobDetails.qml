@@ -107,7 +107,7 @@ GridLayout {
                 var total = jobDetails["total" + modelData];
 
                 if (processed > 0 || total > 1) {
-                    if (processed > 0 && total > 0) {
+                    if (processed > 0 && total > 0 && processed <= total) {
                         switch(modelData) {
                         case "Bytes":
                             return i18nc("How many bytes have been copied", "%2 of %1",

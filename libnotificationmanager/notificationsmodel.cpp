@@ -18,11 +18,11 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "notificationmodel.h"
+#include "notificationsmodel.h"
 
 #include "debug.h"
 
-#include "notificationserver.h"
+#include "server.h"
 
 #include "notifications.h"
 
@@ -40,21 +40,21 @@
 
 using namespace NotificationManager;
 
-class Q_DECL_HIDDEN NotificationModel::Private
+class Q_DECL_HIDDEN NotificationsModel::Private
 {
 public:
-    explicit Private(NotificationModel *q);
+    explicit Private(NotificationsModel *q);
     ~Private();
 
     void onNotificationAdded(const Notification &notification);
     void onNotificationReplaced(uint replacedId, const Notification &notification);
-    void onNotificationRemoved(uint notificationId, NotificationServer::CloseReason reason);
+    void onNotificationRemoved(uint notificationId, Server::CloseReason reason);
 
     void setupNotificationTimeout(const Notification &notification);
 
     int rowOfNotification(uint id) const;
 
-    NotificationModel *q;
+    NotificationsModel *q;
 
     QVector<Notification> notifications;
     // Fallback timeout to ensure all notifications expire eventually
@@ -66,20 +66,20 @@ public:
 
 };
 
-NotificationModel::Private::Private(NotificationModel *q)
+NotificationsModel::Private::Private(NotificationsModel *q)
     : q(q)
     , lastRead(QDateTime::currentDateTimeUtc())
 {
 
 }
 
-NotificationModel::Private::~Private()
+NotificationsModel::Private::~Private()
 {
     qDeleteAll(notificationTimeouts);
     notificationTimeouts.clear();
 }
 
-void NotificationModel::Private::onNotificationAdded(const Notification &notification)
+void NotificationsModel::Private::onNotificationAdded(const Notification &notification)
 {
     // If we get the same notification in succession, just compress them into one
     if (!notifications.isEmpty()) {
@@ -101,7 +101,7 @@ void NotificationModel::Private::onNotificationAdded(const Notification &notific
     q->endInsertRows();
 }
 
-void NotificationModel::Private::onNotificationReplaced(uint replacedId, const Notification &notification)
+void NotificationsModel::Private::onNotificationReplaced(uint replacedId, const Notification &notification)
 {
     const int row = rowOfNotification(replacedId);
 
@@ -117,7 +117,7 @@ void NotificationModel::Private::onNotificationReplaced(uint replacedId, const N
     emit q->dataChanged(idx, idx);
 }
 
-void NotificationModel::Private::onNotificationRemoved(uint removedId, NotificationServer::CloseReason reason)
+void NotificationsModel::Private::onNotificationRemoved(uint removedId, Server::CloseReason reason)
 {
     const int row = rowOfNotification(removedId);
     if (row == -1) {
@@ -127,7 +127,7 @@ void NotificationModel::Private::onNotificationRemoved(uint removedId, Notificat
     q->stopTimeout(removedId);
 
     // When a notification expired, keep it around in the history and mark it as such
-    if (reason == NotificationServer::CloseReason::Expired) {
+    if (reason == Server::CloseReason::Expired) {
         const QModelIndex idx = q->index(row, 0);
 
         Notification &notification = notifications[row];
@@ -157,7 +157,7 @@ void NotificationModel::Private::onNotificationRemoved(uint removedId, Notificat
     q->endRemoveRows();
 }
 
-void NotificationModel::Private::setupNotificationTimeout(const Notification &notification)
+void NotificationsModel::Private::setupNotificationTimeout(const Notification &notification)
 {
     if (notification.timeout() == 0) {
         // In case it got replaced by a persistent notification
@@ -183,7 +183,7 @@ void NotificationModel::Private::setupNotificationTimeout(const Notification &no
     timer->start();
 }
 
-int NotificationModel::Private::rowOfNotification(uint id) const
+int NotificationsModel::Private::rowOfNotification(uint id) const
 {
     auto it = std::find_if(notifications.constBegin(), notifications.constEnd(), [id](const Notification &item) {
         return item.id() == id;
@@ -196,42 +196,42 @@ int NotificationModel::Private::rowOfNotification(uint id) const
     return std::distance(notifications.constBegin(), it);
 }
 
-NotificationModel::NotificationModel()
+NotificationsModel::NotificationsModel()
     : QAbstractListModel(nullptr)
     , d(new Private(this))
 {
-    connect(&NotificationServer::self(), &NotificationServer::notificationAdded, this, [this](const Notification &notification) {
+    connect(&Server::self(), &Server::notificationAdded, this, [this](const Notification &notification) {
         d->onNotificationAdded(notification);
     });
-    connect(&NotificationServer::self(), &NotificationServer::notificationReplaced, this, [this](uint replacedId, const Notification &notification) {
+    connect(&Server::self(), &Server::notificationReplaced, this, [this](uint replacedId, const Notification &notification) {
         d->onNotificationReplaced(replacedId, notification);
     });
-    connect(&NotificationServer::self(), &NotificationServer::notificationRemoved, this, [this](uint removedId, NotificationServer::CloseReason reason) {
+    connect(&Server::self(), &Server::notificationRemoved, this, [this](uint removedId, Server::CloseReason reason) {
         d->onNotificationRemoved(removedId, reason);
     });
 
-    NotificationServer::self().init();
+    Server::self().init();
 }
 
-NotificationModel::~NotificationModel() = default;
+NotificationsModel::~NotificationsModel() = default;
 
-NotificationModel::Ptr NotificationModel::createNotificationModel()
+NotificationsModel::Ptr NotificationsModel::createNotificationsModel()
 {
-    static QWeakPointer<NotificationModel> s_instance;
+    static QWeakPointer<NotificationsModel> s_instance;
     if (!s_instance) {
-        QSharedPointer<NotificationModel> ptr(new NotificationModel());
+        QSharedPointer<NotificationsModel> ptr(new NotificationsModel());
         s_instance = ptr.toWeakRef();
         return ptr;
     }
     return s_instance.toStrongRef();
 }
 
-QDateTime NotificationModel::lastRead() const
+QDateTime NotificationsModel::lastRead() const
 {
     return d->lastRead;
 }
 
-void NotificationModel::setLastRead(const QDateTime &lastRead)
+void NotificationsModel::setLastRead(const QDateTime &lastRead)
 {
     if (d->lastRead != lastRead) {
         d->lastRead = lastRead;
@@ -239,7 +239,7 @@ void NotificationModel::setLastRead(const QDateTime &lastRead)
     }
 }
 
-QVariant NotificationModel::data(const QModelIndex &index, int role) const
+QVariant NotificationsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= d->notifications.count()) {
         return QVariant();
@@ -297,7 +297,7 @@ QVariant NotificationModel::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-int NotificationModel::rowCount(const QModelIndex &parent) const
+int NotificationsModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {
         return 0;
@@ -306,21 +306,21 @@ int NotificationModel::rowCount(const QModelIndex &parent) const
     return d->notifications.count();
 }
 
-void NotificationModel::expire(uint notificationId)
+void NotificationsModel::expire(uint notificationId)
 {
     if (d->rowOfNotification(notificationId) > -1) {
-        NotificationServer::self().closeNotification(notificationId, NotificationServer::CloseReason::Expired);
+        Server::self().closeNotification(notificationId, Server::CloseReason::Expired);
     }
 }
 
-void NotificationModel::close(uint notificationId)
+void NotificationsModel::close(uint notificationId)
 {
     if (d->rowOfNotification(notificationId) > -1) {
-        NotificationServer::self().closeNotification(notificationId, NotificationServer::CloseReason::DismissedByUser);
+        Server::self().closeNotification(notificationId, Server::CloseReason::DismissedByUser);
     }
 }
 
-void NotificationModel::configure(uint notificationId)
+void NotificationsModel::configure(uint notificationId)
 {
     const int row = d->rowOfNotification(notificationId);
     if (row == -1) {
@@ -330,41 +330,46 @@ void NotificationModel::configure(uint notificationId)
     const Notification &notification = d->notifications.at(row);
 
     if (notification.d->hasConfigureAction) {
-        NotificationServer::self().invokeAction(notificationId, QStringLiteral("settings")); // FIXME make a static Notification::configureActionName() or something
+        Server::self().invokeAction(notificationId, QStringLiteral("settings")); // FIXME make a static Notification::configureActionName() or something
         return;
     }
 
     if (!notification.desktopEntry().isEmpty() || !notification.notifyRcName().isEmpty()) {
-        // TODO would be nice to just have a signal but since NotificationModel is shared,
-        // if we connect to this from Notifications you would get a signal in every instance
-        // and potentialy open the config dialog multiple times.
-
-        QStringList args;
-        if (!notification.desktopEntry().isEmpty()) {
-            args.append(QStringLiteral("--desktop-entry"));
-            args.append(notification.desktopEntry());
-        }
-        if (!notification.notifyRcName().isEmpty()) {
-            args.append(QStringLiteral("--notifyrc"));
-            args.append(notification.notifyRcName());
-        }
-        if (!notification.d->eventId.isEmpty()) {
-            args.append(QStringLiteral("--event-id"));
-            args.append(notification.d->eventId);
-        }
-
-        QProcess::startDetached(QStringLiteral("kcmshell5"), {
-            QStringLiteral("notifications"),
-            QStringLiteral("--args"),
-            KShell::joinArgs(args)
-        });
+        configure(notification.desktopEntry(), notification.notifyRcName(), notification.eventId());
         return;
     }
 
     qCWarning(NOTIFICATIONMANAGER) << "Trying to configure notification" << notificationId << "which isn't configurable";
 }
 
-void NotificationModel::invokeDefaultAction(uint notificationId)
+void NotificationsModel::configure(const QString &desktopEntry, const QString &notifyRcName, const QString &eventId)
+{
+    // TODO would be nice to just have a signal but since NotificationsModel is shared,
+    // if we connect to this from Notifications you would get a signal in every instance
+    // and potentialy open the config dialog multiple times.
+
+    QStringList args;
+    if (!desktopEntry.isEmpty()) {
+        args.append(QStringLiteral("--desktop-entry"));
+        args.append(desktopEntry);
+    }
+    if (!notifyRcName.isEmpty()) {
+        args.append(QStringLiteral("--notifyrc"));
+        args.append(notifyRcName);
+    }
+    if (!eventId.isEmpty()) {
+        args.append(QStringLiteral("--event-id"));
+        args.append(eventId);
+    }
+
+    QProcess::startDetached(QStringLiteral("kcmshell5"), {
+        QStringLiteral("notifications"),
+        QStringLiteral("--args"),
+        KShell::joinArgs(args)
+    });
+}
+
+void NotificationsModel::invokeDefaultAction(uint notificationId)
 {
     const int row = d->rowOfNotification(notificationId);
     if (row == -1) {
@@ -377,10 +382,10 @@ void NotificationModel::invokeDefaultAction(uint notificationId)
         return;
     }
 
-    NotificationServer::self().invokeAction(notificationId, QStringLiteral("default")); // FIXME make a static Notification::defaultActionName() or something
+    Server::self().invokeAction(notificationId, QStringLiteral("default")); // FIXME make a static Notification::defaultActionName() or something
 }
 
-void NotificationModel::invokeAction(uint notificationId, const QString &actionName)
+void NotificationsModel::invokeAction(uint notificationId, const QString &actionName)
 {
     const int row = d->rowOfNotification(notificationId);
     if (row == -1) {
@@ -393,10 +398,10 @@ void NotificationModel::invokeAction(uint notificationId, const QString &actionN
         return;
     }
 
-    NotificationServer::self().invokeAction(notificationId, actionName);
+    Server::self().invokeAction(notificationId, actionName);
 }
 
-void NotificationModel::startTimeout(uint notificationId)
+void NotificationsModel::startTimeout(uint notificationId)
 {
     const int row = d->rowOfNotification(notificationId);
     if (row == -1) {
@@ -412,12 +417,12 @@ void NotificationModel::startTimeout(uint notificationId)
     d->setupNotificationTimeout(notification);
 }
 
-void NotificationModel::stopTimeout(uint notificationId)
+void NotificationsModel::stopTimeout(uint notificationId)
 {
     delete d->notificationTimeouts.take(notificationId);
 }
 
-void NotificationModel::clear(Notifications::ClearFlags flags)
+void NotificationsModel::clear(Notifications::ClearFlags flags)
 {
     if (d->notifications.isEmpty()) {
         return;

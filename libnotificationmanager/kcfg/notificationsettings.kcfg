@@ -13,6 +13,9 @@
             <default>true</default>
         </entry>
         <entry name="LowPriorityPopups" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="LowPriorityHistory" type="Bool">
             <default>false</default>
         </entry>
         <entry name="PopupPosition" type="Enum">

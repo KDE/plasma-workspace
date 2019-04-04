@@ -25,10 +25,11 @@
 #include <KConcatenateRowsProxyModel>
 #include <KDescendantsProxyModel>
 
-#include "notificationmodel.h"
+#include "notificationsmodel.h"
 #include "notificationfilterproxymodel_p.h"
 #include "notificationsortproxymodel_p.h"
 #include "notificationgroupingproxymodel_p.h"
+#include "notificationgroupcollapsingproxymodel_p.h"
 #include "limitedrowcountproxymodel_p.h"
 
 #include "jobsmodel.h"
@@ -65,11 +66,12 @@ public:
     int activeJobsCount = 0;
     int jobsPercentage = 0;
 
+    static bool isGroup(const QModelIndex &idx);
     static uint notificationId(const QModelIndex &idx);
     static QString jobId(const QModelIndex &idx);
     static QModelIndex mapToModel(const QModelIndex &idx, const QAbstractItemModel *model);
 
-    NotificationModel::Ptr notificationsModel;
+    NotificationsModel::Ptr notificationsModel;
     JobsModel::Ptr jobsModel;
     QSharedPointer<Settings> settings() const;
 
@@ -78,10 +80,10 @@ public:
     NotificationFilterProxyModel *filterModel = nullptr;
     NotificationSortProxyModel *sortModel = nullptr;
     NotificationGroupingProxyModel *groupingModel = nullptr;
+    NotificationGroupCollapsingProxyModel *groupCollapsingModel = nullptr;
     KDescendantsProxyModel *flattenModel = nullptr;
 
     LimitedRowCountProxyModel *limiterModel = nullptr;
-    LimitedRowCountProxyModel *groupLimiterModel = nullptr;
 
 private:
     Notifications *q;
@@ -100,9 +102,46 @@ Notifications::Private::~Private()
 
 void Notifications::Private::initModels()
 {
+    /* The data flow is as follows:
+     *
+     * NotificationsModel      JobsModel
+     *        \\                 /
+     *         \\               /
+     *     KConcatenateRowsProxyModel
+     *               |||
+     *               |||
+     *     NotificationFilterProxyModel
+     *     (filters by urgency, whitelist, etc)
+     *                |
+     *                |
+     *      NotificationSortProxyModel
+     *      (sorts by urgency, date, etc)
+     *                |
+     * --- BEGIN: Only when grouping is enabled ---
+     *                |
+     *    NotificationGroupingProxyModel
+     *    (turns list into tree grouped by app)
+     *               //\\
+     *               //\\
+     *   NotificationGroupCollapsingProxyModel
+     *   (limits number of tree leaves for expand/collapse feature)
+     *                /\
+     *                /\
+     *       KDescendantsProxyModel
+     *       (flattens tree back into a list for consumption in ListView)
+     *                |
+     * --- END: Only when grouping is enabled ---
+     *                |
+     *    LimitedRowCountProxyModel
+     *    (limits the total number of items in the model)
+     *                |
+     *                |
+     *               \o/ <- Happy user seeing their notifications
+     */
+
     if (!notificationsModel) {
-        notificationsModel = NotificationModel::createNotificationModel();
-        connect(notificationsModel.data(), &NotificationModel::lastReadChanged, q, [this] {
+        notificationsModel = NotificationsModel::createNotificationsModel();
+        connect(notificationsModel.data(), &NotificationsModel::lastReadChanged, q, [this] {
             updateCount();
             emit q->lastReadChanged();
         });
@@ -120,6 +159,25 @@ void Notifications::Private::initModels()
         connect(filterModel, &NotificationFilterProxyModel::showDismissedChanged, q, &Notifications::showDismissedChanged);
         connect(filterModel, &NotificationFilterProxyModel::blacklistedDesktopEntriesChanged, q, &Notifications::blacklistedDesktopEntriesChanged);
         connect(filterModel, &NotificationFilterProxyModel::blacklistedNotifyRcNamesChanged, q, &Notifications::blacklistedNotifyRcNamesChanged);
+
+        connect(filterModel, &QAbstractItemModel::rowsInserted, q, [this] {
+            updateCount();
+        });
+        connect(filterModel, &QAbstractItemModel::rowsRemoved, q, [this] {
+            updateCount();
+        });
+        connect(filterModel, &QAbstractItemModel::dataChanged, q, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
+            Q_UNUSED(topLeft);
+            Q_UNUSED(bottomRight);
+            if (roles.isEmpty()
+                    || roles.contains(Notifications::UpdatedRole)
+                    || roles.contains(Notifications::ExpiredRole)
+                    || roles.contains(Notifications::JobStateRole)
+                    || roles.contains(Notifications::PercentageRole)) {
+                updateCount();
+            }
+        });
+
         filterModel->setSourceModel(notificationsAndJobsModel);
     }
 
@@ -130,41 +188,34 @@ void Notifications::Private::initModels()
 
     if (!limiterModel) {
         limiterModel = new LimitedRowCountProxyModel(q);
-        connect(limiterModel, &LimitedRowCountProxyModel::rootLimitChanged, q, &Notifications::limitChanged);
+        connect(limiterModel, &LimitedRowCountProxyModel::limitChanged, q, &Notifications::limitChanged);
     }
 
-    if (groupMode == GroupDisabled) {
+    if (groupMode == GroupApplicationsFlat) {
+        if (!groupingModel) {
+            groupingModel = new NotificationGroupingProxyModel(q);
+            groupingModel->setSourceModel(filterModel);
+        }
+
+        if (!groupCollapsingModel) {
+            groupCollapsingModel = new NotificationGroupCollapsingProxyModel(q);
+            groupCollapsingModel->setLimit(groupLimit);
+            groupCollapsingModel->setSourceModel(groupingModel);
+        }
+
+        sortModel->setSourceModel(groupCollapsingModel);
+
+        flattenModel = new KDescendantsProxyModel(q);
+        flattenModel->setSourceModel(sortModel);
+
+        limiterModel->setSourceModel(flattenModel);
+    } else {
         sortModel->setSourceModel(filterModel);
         limiterModel->setSourceModel(sortModel);
         delete flattenModel;
         flattenModel = nullptr;
         delete groupingModel;
         groupingModel = nullptr;
-    } else if (groupMode == GroupApplicationsTree || groupMode == GroupApplicationsFlat) {
-        if (!groupingModel) {
-            groupingModel = new NotificationGroupingProxyModel(q);
-            groupingModel->setSourceModel(filterModel);
-        }
-
-        if (!groupLimiterModel) {
-            groupLimiterModel = new LimitedRowCountProxyModel(q);
-            groupLimiterModel->setChildLimit(groupLimit);
-        }
-
-        groupLimiterModel->setSourceModel(groupingModel);
-        sortModel->setSourceModel(groupLimiterModel);
-
-        if (groupMode == GroupApplicationsFlat) {
-            flattenModel = new KDescendantsProxyModel(q);
-            flattenModel->setSourceModel(sortModel);
-
-            limiterModel->setSourceModel(flattenModel);
-        } else {
-            limiterModel->setSourceModel(groupingModel);
-
-            delete flattenModel;
-            flattenModel = nullptr;
-        }
     }
 
     q->setSourceModel(limiterModel);
@@ -236,6 +287,11 @@ void Notifications::Private::updateCount()
     emit q->countChanged();
 }
 
+bool Notifications::Private::isGroup(const QModelIndex &idx)
+{
+    return idx.data(Notifications::IsGroupRole).toBool();
+}
+
 uint Notifications::Private::notificationId(const QModelIndex &idx)
 {
     return idx.data(Notifications::IdRole).toUInt();
@@ -277,24 +333,6 @@ Notifications::Notifications(QObject *parent)
     , d(new Private(this))
 {
     d->initModels();
-
-    connect(this, &QAbstractItemModel::rowsInserted, this, [this] {
-        d->updateCount();
-    });
-    connect(this, &QAbstractItemModel::rowsRemoved, this, [this] {
-        d->updateCount();
-    });
-    connect(this, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
-        Q_UNUSED(topLeft);
-        Q_UNUSED(bottomRight);
-        if (roles.isEmpty()
-                || roles.contains(Notifications::UpdatedRole)
-                || roles.contains(Notifications::ExpiredRole)
-                || roles.contains(Notifications::JobStateRole)
-                || roles.contains(Notifications::PercentageRole)) {
-            d->updateCount();
-        }
-    });
 }
 
 Notifications::~Notifications() = default;
@@ -312,12 +350,12 @@ void Notifications::componentComplete()
 
 int Notifications::limit() const
 {
-    return d->limiterModel->rootLimit();
+    return d->limiterModel->limit();
 }
 
 void Notifications::setLimit(int limit)
 {
-    d->limiterModel->setRootLimit(limit);
+    d->limiterModel->setLimit(limit);
 }
 
 int Notifications::groupLimit() const
@@ -332,8 +370,8 @@ void Notifications::setGroupLimit(int limit)
     }
 
     d->groupLimit = limit;
-    if (d->groupLimiterModel) {
-        d->groupLimiterModel->setChildLimit(limit);
+    if (d->groupCollapsingModel) {
+        d->groupCollapsingModel->setLimit(limit);
     }
     emit groupLimitChanged();
 }
@@ -512,7 +550,7 @@ int Notifications::jobsPercentage() const
 
 void Notifications::expire(const QModelIndex &idx)
 {
-    // TODO we could just call the NotificationServer directly?
+    // TODO we could just call the Server directly?
     // FIXME just pass QModelIndex around
 
     switch (static_cast<Notifications::Type>(idx.data(Notifications::TypeRole).toInt())) {
@@ -564,6 +602,15 @@ void Notifications::close(const QModelIndex &idx)
 
 void Notifications::configure(const QModelIndex &idx)
 {
+    // For groups just configure the application, not the individual event
+    if (Private::isGroup(idx)) {
+        const QString desktopEntry = idx.data(Notifications::DesktopEntryRole).toString();
+        const QString notifyRcName = idx.data(Notifications::NotifyRcNameRole).toString();
+
+        d->notificationsModel->configure(desktopEntry, notifyRcName, QString() /*eventId*/);
+        return;
+    }
+
     d->notificationsModel->configure(Private::notificationId(idx));
 }
 
@@ -575,29 +622,6 @@ void Notifications::invokeDefaultAction(const QModelIndex &idx)
 void Notifications::invokeAction(const QModelIndex &idx, const QString &actionId)
 {
     d->notificationsModel->invokeAction(Private::notificationId(idx), actionId);
-}
-
-// TODO merge them into a setExpanded(idx, bool)?
-void Notifications::expand(const QModelIndex &idx)
-{
-    if (!idx.data(Notifications::IsGroupRole).toBool()) {
-        qCWarning(NOTIFICATIONMANAGER) << "Cannot expand non-group";
-        return;
-    }
-
-    QModelIndex groupLimitIdx = Private::mapToModel(idx, d->groupLimiterModel);
-    d->groupLimiterModel->setNodeLimited(groupLimitIdx, false);
-}
-
-void Notifications::collapse(const QModelIndex &idx)
-{
-    if (!idx.data(Notifications::IsGroupRole).toBool()) {
-        qCWarning(NOTIFICATIONMANAGER) << "Cannot collapse non-group";
-        return;
-    }
-
-    QModelIndex groupLimitIdx = Private::mapToModel(idx, d->groupLimiterModel);
-    d->groupLimiterModel->setNodeLimited(groupLimitIdx, true);
 }
 
 void Notifications::startTimeout(const QModelIndex &idx)

@@ -34,7 +34,12 @@ import "global"
 Item {
     id: root 
 
-    Plasmoid.status: PlasmaCore.Types.PassiveStatus
+    Plasmoid.hideOnWindowDeactivate: false
+
+    Plasmoid.status: historyModel.activeJobsCount > 0
+                     || Globals.popupNotificationsModel.activeNotificationsCount > 0
+                     || Globals.inhibited ? PlasmaCore.Types.ActiveStatus
+                                          : PlasmaCore.Types.PassiveStatus
 
     Plasmoid.toolTipSubText: {
         var lines = [];
@@ -87,29 +92,6 @@ Item {
 
     }
 
-    // Delay hiding the applet again so the user can see the unread count briefly before it goes away
-    Timer {
-        id: updateStatusTimer
-        readonly property int targetStatus: historyModel.activeJobsCount > 0
-                                            || Globals.popupNotificationsModel.activeNotificationsCount > 0
-                                            || Globals.inhibited ? PlasmaCore.Types.ActiveStatus
-                                                                 : PlasmaCore.Types.PassiveStatus
-        interval: 2000
-
-        onTargetStatusChanged: {
-            if (targetStatus === PlasmaCore.Types.ActiveStatus) {
-                // become active right away
-                updateStatusTimer.stop();
-                updateStatusTimer.triggered();
-            } else {
-                updateStatusTimer.start();
-            }
-        }
-
-        onTriggered: plasmoid.status = targetStatus;
-        Component.onCompleted: triggered() // set correct status initially
-    }
-
     NotificationManager.Settings {
         id: notificationSettings
     }
@@ -119,11 +101,19 @@ Item {
         showExpired: true
         showDismissed: true
         showJobs: notificationSettings.jobsInNotifications
-        sortMode: NotificationManager.Notifications.SortByDate
+        sortMode: NotificationManager.Notifications.SortByTypeAndUrgency
         groupMode: NotificationManager.Notifications.GroupApplicationsFlat
         groupLimit: 2
         blacklistedDesktopEntries: notificationSettings.historyBlacklistedApplications
         blacklistedNotifyRcNames: notificationSettings.historyBlacklistedServices
+        urgencies: {
+            var urgencies = NotificationManager.Notifications.CriticalUrgency
+                          | NotificationManager.Notifications.NormalUrgency;
+            if (notificationSettings.lowPriorityHistory) {
+                urgencies |= NotificationManager.Notifications.LowUrgency;
+            }
+            return urgencies;
+        }
     }
 
     function action_clearHistory() {

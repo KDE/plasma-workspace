@@ -23,10 +23,7 @@
 
 #include <QDateTime>
 
-#include "notificationmodel.h"
 #include "notifications.h"
-
-#include <QDebug>
 
 using namespace NotificationManager;
 
@@ -35,7 +32,6 @@ NotificationSortProxyModel::NotificationSortProxyModel(QObject *parent)
 {
     setRecursiveFilteringEnabled(true);
     sort(0);
-    // TODO set roles relevant for sorting
 }
 
 NotificationSortProxyModel::~NotificationSortProxyModel() = default;
@@ -63,7 +59,13 @@ int sortScore(const QModelIndex &idx)
 
     const int type = idx.data(Notifications::TypeRole).toInt();
     if (type == Notifications::JobType) {
-        return 2;
+        const int jobState = idx.data(Notifications::JobStateRole).toInt();
+        // Treat finished jobs as normal notifications but running jobs more important
+        if (jobState == Notifications::JobStateStopped) {
+            return 1;
+        } else {
+            return 2;
+        }
     }
 
     if (urgency == Notifications::NormalUrgency) {

@@ -4,22 +4,23 @@ if(BUILD_TESTING)
 endif()
 
 set(notificationmanager_LIB_SRCS
-    notificationserver.cpp
-    notificationserver_p.cpp
+    server.cpp
+    server_p.cpp
+    settings.cpp
+    notifications.cpp
     notification.cpp
-    notificationmodel.cpp
+
+    notificationsmodel.cpp
+    notificationfilterproxymodel.cpp
+    notificationsortproxymodel.cpp
+    notificationgroupingproxymodel.cpp
+    notificationgroupcollapsingproxymodel.cpp
 
     jobsmodel.cpp
     job.cpp
     jobdetails.cpp
 
-    notifications.cpp
-    notificationfilterproxymodel.cpp
-    notificationsortproxymodel.cpp
-    notificationgroupingproxymodel.cpp
     limitedrowcountproxymodel.cpp
-
-    settings.cpp
 )
 
 ecm_qt_declare_logging_category(notificationmanager_LIB_SRCS
@@ -35,7 +36,7 @@ kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/jobsettings.kcfgc)
 kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/badgesettings.kcfgc)
 
 # DBus
-qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.freedesktop.Notifications.xml notificationserver_p.h NotificationManager::NotificationServerPrivate)
+qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.freedesktop.Notifications.xml server_p.h NotificationManager::ServerPrivate)
 
 add_library(notificationmanager ${notificationmanager_LIB_SRCS})
 add_library(PW::LibNotificationManager ALIAS notificationmanager)
@@ -72,7 +73,7 @@ set_target_properties(notificationmanager PROPERTIES
 install(TARGETS notificationmanager EXPORT notificationmanagerLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 install(FILES
-    notificationserver.h
+    server.h
     notification.h
     settings.h
     ${CMAKE_CURRENT_BINARY_DIR}/notificationmanager_export.h

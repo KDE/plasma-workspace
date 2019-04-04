@@ -47,6 +47,7 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
     Q_PROPERTY(bool criticalPopupsInDoNotDisturbMode READ criticalPopupsInDoNotDisturbMode WRITE setCriticalPopupsInDoNotDisturbMode NOTIFY settingsChanged)
     Q_PROPERTY(bool keepCriticalAlwaysOnTop READ keepCriticalAlwaysOnTop WRITE setKeepCriticalAlwaysOnTop NOTIFY settingsChanged)
     Q_PROPERTY(bool lowPriorityPopups READ lowPriorityPopups WRITE setLowPriorityPopups NOTIFY settingsChanged)
+    Q_PROPERTY(bool lowPriorityHistory READ lowPriorityHistory WRITE setLowPriorityHistory NOTIFY settingsChanged)
 
     /**
      * The notification popup position on screen.
@@ -173,6 +174,9 @@ public:
 
     bool lowPriorityPopups() const;
     void setLowPriorityPopups(bool enable);
+
+    bool lowPriorityHistory() const;
+    void setLowPriorityHistory(bool enable);
 
     PopupPosition popupPosition() const;
     void setPopupPosition(PopupPosition popupPosition);

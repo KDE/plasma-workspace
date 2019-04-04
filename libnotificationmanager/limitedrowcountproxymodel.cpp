@@ -46,75 +46,28 @@ void LimitedRowCountProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
     }
 }
 
-QVariant LimitedRowCountProxyModel::data(const QModelIndex &index, int role) const
+int LimitedRowCountProxyModel::limit() const
 {
-    // FIXME split all of this out into a group limiter proxy model thing
-    // so this one stays super generic
-    if (m_childLimit > 0 && /*!index.parent().isValid() && */role == NotificationManager::Notifications::IsGroupExpandedRole) {
-        return m_unlimitedChildren.contains(index);
-    }
-
-    return QSortFilterProxyModel::data(index, role);
+    return m_limit;
 }
 
-int LimitedRowCountProxyModel::rootLimit() const
+void LimitedRowCountProxyModel::setLimit(int limit)
 {
-    return m_rootLimit;
-}
-
-void LimitedRowCountProxyModel::setRootLimit(int limit)
-{
-    if (m_rootLimit != limit) {
-        m_rootLimit = limit;
+    if (m_limit != limit) {
+        m_limit = limit;
         invalidateFilter();
-        emit rootLimitChanged();
+        emit limitChanged();
     }
-}
-
-int LimitedRowCountProxyModel::childLimit() const
-{
-    return m_childLimit;
-}
-
-void LimitedRowCountProxyModel::setChildLimit(int limit)
-{
-    if (m_childLimit != limit) {
-        m_childLimit = limit;
-        invalidateFilter();
-        emit childLimitChanged();
-    }
-}
-
-void LimitedRowCountProxyModel::setNodeLimited(const QModelIndex &idx, bool limited)
-{
-    if (limited) {
-        // remove unlimited
-        m_unlimitedChildren.removeAll(QPersistentModelIndex(idx));
-    } else {
-        m_unlimitedChildren.append(QPersistentModelIndex(idx));
-    }
-
-    invalidateFilter();
-    emit dataChanged(idx, idx, {NotificationManager::Notifications::IsGroupExpandedRole});
 }
 
 bool LimitedRowCountProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     if (source_parent.isValid()) {
-        if (m_childLimit > 0) {
-            if (!m_unlimitedChildren.isEmpty()) {
-                const QModelIndex parent = mapFromSource(source_parent);
-                return m_unlimitedChildren.contains(parent);
-            }
-
-            return source_row < m_childLimit;
-        }
-
         return true;
     }
 
-    if (m_rootLimit > 0) {
-        return source_row < m_rootLimit;
+    if (m_limit > 0) {
+        return source_row < m_limit;
     }
 
     return true;

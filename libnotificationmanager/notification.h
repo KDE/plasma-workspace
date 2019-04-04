@@ -115,8 +115,8 @@ public:
     void processHints(const QVariantMap &hints);
 
 private:
-    friend class NotificationModel;
-    friend class NotificationServerPrivate;
+    friend class NotificationsModel;
+    friend class ServerPrivate;
 
     class Private;
     Private *d;

@@ -43,6 +43,15 @@ ColumnLayout {
     readonly property int dndMorningHour: 6
     readonly property int dndEveningHour: 20
 
+    Connections {
+        target: plasmoid
+        onExpandedChanged: {
+            if (plasmoid.expanded) {
+                list.positionViewAtBeginning();
+            }
+        }
+    }
+
     // header
     ColumnLayout {
         Layout.fillWidth: true
@@ -246,152 +255,197 @@ ColumnLayout {
         }
     }
 
-    Item {
+    // actual notifications
+    PlasmaExtras.ScrollArea {
         Layout.fillWidth: true
         Layout.fillHeight: true
         Layout.preferredWidth: units.gridUnit * 18
-        Layout.preferredHeight: units.gridUnit * 20
+        Layout.preferredHeight: units.gridUnit * 24
 
-        PlasmaExtras.ScrollArea {
-            anchors.fill: parent
+        ListView {
+            id: list
+            model: historyModel
 
-            ListView {
-                id: list
-                model: historyModel
-                spacing: units.smallSpacing
-
-                remove: Transition {
+            add: Transition {
+                SequentialAnimation {
+                    PauseAnimation { duration: units.longDuration }
                     ParallelAnimation {
-                        NumberAnimation { property: "opacity"; to: 0; duration: units.longDuration }
-                        NumberAnimation { property: "x"; to: list.width; duration: units.longDuration }
+                        NumberAnimation { property: "opacity"; from: 0; duration: units.longDuration }
+                        NumberAnimation { property: "height"; from: 0; duration: units.longDuration }
                     }
                 }
-                removeDisplaced: Transition {
+            }
+            addDisplaced: Transition {
+                NumberAnimation { properties: "y"; duration:  units.longDuration }
+            }
+
+            remove: Transition {
+                ParallelAnimation {
+                    NumberAnimation { property: "opacity"; to: 0; duration: units.longDuration }
+                    NumberAnimation { property: "x"; to: list.width; duration: units.longDuration }
+                }
+            }
+            removeDisplaced: Transition {
+                SequentialAnimation {
                     PauseAnimation { duration: units.longDuration }
                     NumberAnimation { properties: "y"; duration:  units.longDuration }
                 }
+            }
 
-                delegate: Loader {
-                    sourceComponent: model.isGroup ? groupDelegate : notificationDelegate
+            // This is so the delegates can detect the change in "isInGroup" and show a separator
+            section {
+                property: "isInGroup"
+                criteria: ViewSection.FullString
+            }
 
-                    Component {
-                        id: groupDelegate
-                        NotificationHeader {
-                            width: list.width
+            delegate: Loader {
+                id: delegateLoader
+                width: list.width
+                sourceComponent: model.isGroup ? groupDelegate : notificationDelegate
 
-                            applicationName: model.applicationName
-                            applicationIconSource: model.applicationIconName
+                Component {
+                    id: groupDelegate
+                    NotificationHeader {
+                        applicationName: model.applicationName
+                        applicationIconSource: model.applicationIconName
 
-                            //time: model.updated || model.created
+                        // don't show timestamp for group
 
-                            configurable: model.configurable
-                            closable: model.closable
+                        configurable: model.configurable
+                        closable: model.closable
+                        closeButtonTooltip: i18n("Close Group")
 
-                            expandable: true
-                            expanded: model.isGroupExpanded
-                            expandedCount: model.groupChildrenCount
-                            collapsedCount: historyModel.groupLimit
-                            onExpandClicked: {
-                                if (expanded) {
-                                    historyModel.collapse(historyModel.index(index, 0));
-                                } else {
-                                    historyModel.expand(historyModel.index(index, 0));
+                        onCloseClicked: historyModel.close(historyModel.index(index, 0))
+
+                        onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
+                    }
+                }
+
+                Component {
+                    id: notificationDelegate
+                    ColumnLayout {
+                        spacing: units.smallSpacing
+
+                        RowLayout {
+                            Item {
+                                id: groupLineContainer
+                                Layout.fillHeight: true
+                                Layout.topMargin: units.smallSpacing
+                                width: units.iconSizes.small
+                                visible: model.isInGroup
+
+                                PlasmaCore.SvgItem {
+                                    elementId: "vertical-line"
+                                    svg: lineSvg
+                                    anchors.horizontalCenter: parent.horizontalCenter
+                                    width: units.iconSizes.small
+                                    height: parent.height
                                 }
                             }
 
-                            onCloseClicked: historyModel.close(historyModel.index(index, 0))
-                            //onDismissClicked: model.dismissed = false
-                            // FIXME don't configure event but just app
-                            onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
+                            NotificationItem {
+                                Layout.fillWidth: true
+
+                                notificationType: model.type
+
+                                inGroup: model.isInGroup
+
+                                applicationName: model.applicationName
+                                applicationIconSource: model.applicationIconName
+                                deviceName: model.deviceName || ""
+
+                                time: model.updated || model.created
+
+                                // configure button on every single notifications is bit overwhelming
+                                configurable: !inGroup && model.configurable
+
+                                dismissable: model.type === NotificationManager.Notifications.JobType
+                                    && model.jobState !== NotificationManager.Notifications.JobStateStopped
+                                    && model.dismissed
+                                dismissed: model.dismissed || false
+                                closable: model.closable
+
+                                summary: model.summary
+                                body: model.body || ""
+                                icon: model.image || model.iconName
+
+                                urls: model.urls || []
+
+                                jobState: model.jobState || 0
+                                percentage: model.percentage || 0
+                                error: model.error || 0
+                                errorText: model.errorText || ""
+                                suspendable: !!model.suspendable
+                                killable: !!model.killable
+                                jobDetails: model.jobDetails || null
+
+                                configureActionLabel: model.configureActionLabel || ""
+                                // In the popup the default action is triggered by clicking on the popup
+                                // however in the list this is undesirable, so instead show a clickable button
+                                // in case you have a non-expired notification in history (do not disturb mode)
+                                // unless it has the same label as an action
+                                readonly property bool addDefaultAction: (model.hasDefaultAction
+                                                                         && model.defaultActionLabel
+                                                                         && (model.actionLabels || []).indexOf(model.defaultActionLabel) === -1) ? true : false
+                                actionNames: {
+                                    var actions = (model.actionNames || []);
+                                    if (addDefaultAction) {
+                                        actions.unshift("default"); // prepend
+                                    }
+                                    return actions;
+                                }
+                                actionLabels: {
+                                    var labels = (model.actionLabels || []);
+                                    if (addDefaultAction) {
+                                        labels.unshift(model.defaultActionLabel);
+                                    }
+                                    return labels;
+                                }
+
+                                onCloseClicked: historyModel.close(historyModel.index(index, 0))
+                                onDismissClicked: model.dismissed = false
+                                onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
+
+                                onActionInvoked: {
+                                    if (actionName === "default") {
+                                        historyModel.invokeDefaultAction(historyModel.index(index, 0));
+                                    } else {
+                                        historyModel.invokeAction(historyModel.index(index, 0), actionName);
+                                    }
+                                    // Keep it in the history
+                                    historyModel.expire(historyModel.index(index, 0));
+                                }
+                                onOpenUrl: {
+                                    Qt.openUrlExternally(url);
+                                    historyModel.expire(historyModel.index(index, 0));
+                                }
+                                onFileActionInvoked: historyModel.expire(historyModel.index(index, 0))
+
+                                onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
+                                onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
+                                onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
+                            }
                         }
 
-                    }
+                        PlasmaComponents.ToolButton {
+                            Layout.preferredWidth: minimumWidth
+                            iconName: model.isGroupExpanded ? "arrow-up" : "arrow-down"
+                            text: model.isGroupExpanded ? i18n("Show Fewer")
+                                                        : i18nc("Expand to show n more notifications",
+                                                                "Show %1 More", (model.groupChildrenCount - historyModel.groupLimit))
+                            visible: model.groupChildrenCount > historyModel.groupLimit && delegateLoader.ListView.nextSection !== delegateLoader.ListView.section
+                            onClicked: model.isGroupExpanded = !model.isGroupExpanded
+                        }
 
-                    Component {
-                        id: notificationDelegate
-                        NotificationDelegate {
-                            width: list.width
+                        PlasmaCore.SvgItem {
+                            Layout.fillWidth: true
+                            Layout.bottomMargin: units.smallSpacing
+                            elementId: "horizontal-line"
+                            svg: lineSvg
 
-                            notificationType: model.type
-
-                            inGroup: model.isInGroup
-
-                            applicationName: model.applicationName
-                            applicatonIconSource: model.applicationIconName
-                            deviceName: model.deviceName || ""
-
-                            time: model.updated || model.created
-
-                            configurable: model.configurable
-
-                            // FIXME make the dismiss button a undismiss button
-                            dismissable: model.type === NotificationManager.Notifications.JobType
-                                && model.jobState !== NotificationManager.Notifications.JobStateStopped
-                                && model.dismissed
-                            closable: model.closable
-
-                            summary: model.summary
-                            body: model.body || ""
-                            icon: model.image || model.iconName
-
-                            urls: model.urls || []
-
-                            jobState: model.jobState || 0
-                            percentage: model.percentage || 0
-                            error: model.error || 0
-                            errorText: model.errorText || ""
-                            suspendable: !!model.suspendable
-                            killable: !!model.killable
-                            jobDetails: model.jobDetails || null
-
-                            configureActionLabel: model.configureActionLabel || ""
-                            // In the popup the default action is triggered by clicking on the popup
-                            // however in the list this is undesirable, so instead show a clickable button
-                            // in case you have a non-expired notification in history (do not disturb mode)
-                            // unless it has the same label as an action
-                            readonly property bool addDefaultAction: (model.hasDefaultAction
-                                                                     && model.defaultActionLabel
-                                                                     && (model.actionLabels || []).indexOf(model.defaultActionLabel) === -1) ? true : false
-                            actionNames: {
-                                var actions = (model.actionNames || []);
-                                if (addDefaultAction) {
-                                    actions.unshift("default"); // prepend
-                                }
-                                return actions;
-                            }
-                            actionLabels: {
-                                var labels = (model.actionLabels || []);
-                                if (addDefaultAction) {
-                                    labels.unshift(model.defaultActionLabel);
-                                }
-                                return labels;
-                            }
-
-                            onCloseClicked: historyModel.close(historyModel.index(index, 0))
-                            onDismissClicked: model.dismissed = false
-                            onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
-
-                            onActionInvoked: {
-                                if (actionName === "default") {
-                                    historyModel.invokeDefaultAction(historyModel.index(index, 0));
-                                } else {
-                                    historyModel.invokeAction(historyModel.index(index, 0), actionName);
-                                }
-                                // Keep it in the history
-                                historyModel.expire(historyModel.index(index, 0));
-                            }
-                            onOpenUrl: {
-                                Qt.openUrlExternally(url);
-                                historyModel.expire(historyModel.index(index, 0));
-                            }
-                            onFileActionInvoked: popupNotificationsModel.expire(popupNotificationsModel.index(index, 0))
-
-                            onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
-                            onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
-                            onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
-
-                            separatorSvg: lineSvg
-                            separatorVisible: index < list.count - 1
+                            // property is only atached to the delegate itself (the Loader in our case)
+                            visible: (!model.isInGroup || delegateLoader.ListView.nextSection !== delegateLoader.ListView.section)
+                                             && delegateLoader.ListView.nextSection !== "" // don't show after last item
                         }
                     }
                 }

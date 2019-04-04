@@ -18,7 +18,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "notificationserver_p.h"
+#include "server_p.h"
 
 #include "debug.h"
 
@@ -27,7 +27,7 @@
 #include "notification.h"
 #include "notification_p.h"
 
-#include "notificationserver.h"
+#include "server.h"
 
 #include <QDBusConnection>
 #include <QDBusServiceWatcher>
@@ -42,15 +42,15 @@
 
 using namespace NotificationManager;
 
-NotificationServerPrivate::NotificationServerPrivate(QObject *parent)
+ServerPrivate::ServerPrivate(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-NotificationServerPrivate::~NotificationServerPrivate() = default;
+ServerPrivate::~ServerPrivate() = default;
 
-bool NotificationServerPrivate::init()
+bool ServerPrivate::init()
 {
     if (m_valid) {
         return true;
@@ -71,9 +71,9 @@ bool NotificationServerPrivate::init()
     m_inhibitionWatcher = new QDBusServiceWatcher(this);
     m_inhibitionWatcher->setConnection(QDBusConnection::sessionBus());
     m_inhibitionWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
-    connect(m_inhibitionWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &NotificationServerPrivate::onServiceUnregistered);
+    connect(m_inhibitionWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &ServerPrivate::onServiceUnregistered);
 
-    connect(this, &NotificationServerPrivate::inhibitedChanged, this, [this] {
+    connect(this, &ServerPrivate::inhibitedChanged, this, [this] {
         // emit DBus change signal...
         QDBusMessage signal = QDBusMessage::createSignal(
             QStringLiteral("/org/freedesktop/Notifications"),
@@ -107,9 +107,9 @@ bool NotificationServerPrivate::init()
     return true;
 }
 
-uint NotificationServerPrivate::Notify(const QString &app_name, uint replaces_id, const QString &app_icon,
-                                       const QString &summary, const QString &body, const QStringList &actions,
-                                       const QVariantMap &hints, int timeout)
+uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QString &app_icon,
+                           const QString &summary, const QString &body, const QStringList &actions,
+                           const QVariantMap &hints, int timeout)
 {
     const bool wasReplaced = replaces_id > 0;
     int notificationId = 0;
@@ -155,21 +155,21 @@ uint NotificationServerPrivate::Notify(const QString &app_name, uint replaces_id
 
     if (wasReplaced) {
         notification.resetUpdated();
-        emit static_cast<NotificationServer*>(parent())->notificationReplaced(replaces_id, notification);
+        emit static_cast<Server*>(parent())->notificationReplaced(replaces_id, notification);
     } else {
-        emit static_cast<NotificationServer*>(parent())->notificationAdded(notification);
+        emit static_cast<Server*>(parent())->notificationAdded(notification);
     }
 
     return notificationId;
 }
 
-void NotificationServerPrivate::CloseNotification(uint id)
+void ServerPrivate::CloseNotification(uint id)
 {
     // spec says "If the notification no longer exists, an empty D-BUS Error message is sent back."
-    static_cast<NotificationServer*>(parent())->closeNotification(id, NotificationServer::CloseReason::Revoked);
+    static_cast<Server*>(parent())->closeNotification(id, Server::CloseReason::Revoked);
 }
 
-QStringList NotificationServerPrivate::GetCapabilities() const
+QStringList ServerPrivate::GetCapabilities() const
 {
     // should this be configurable somehow so the UI can tell what it implements?
     return QStringList{
@@ -188,7 +188,7 @@ QStringList NotificationServerPrivate::GetCapabilities() const
     };
 }
 
-QString NotificationServerPrivate::GetServerInformation(QString &vendor, QString &version, QString &specVersion) const
+QString ServerPrivate::GetServerInformation(QString &vendor, QString &version, QString &specVersion) const
 {
     vendor = QStringLiteral("KDE");
     version = QLatin1String(PROJECT_VERSION);
@@ -196,7 +196,7 @@ QString NotificationServerPrivate::GetServerInformation(QString &vendor, QString
     return QStringLiteral("Plasma");
 }
 
-void NotificationServerPrivate::onBroadcastNotification(const QMap<QString, QVariant> &properties)
+void ServerPrivate::onBroadcastNotification(const QMap<QString, QVariant> &properties)
 {
     qCDebug(NOTIFICATIONMANAGER) << "Received broadcast notification";
 
@@ -235,22 +235,22 @@ void NotificationServerPrivate::onBroadcastNotification(const QMap<QString, QVar
     );
 }
 
-uint NotificationServerPrivate::add(const Notification &notification)
+uint ServerPrivate::add(const Notification &notification)
 {
     // TODO check if notification with ID already exists and signal update instead
     if (notification.id() == 0) {
         ++m_highestNotificationId;
         notification.d->id = m_highestNotificationId;
 
-        emit static_cast<NotificationServer*>(parent())->notificationAdded(notification);
+        emit static_cast<Server*>(parent())->notificationAdded(notification);
     } else {
-        emit static_cast<NotificationServer*>(parent())->notificationReplaced(notification.id(), notification);
+        emit static_cast<Server*>(parent())->notificationReplaced(notification.id(), notification);
     }
 
     return notification.id();
 }
 
-uint NotificationServerPrivate::Inhibit(const QString &desktop_entry, const QString &reason, const QVariantMap &hints)
+uint ServerPrivate::Inhibit(const QString &desktop_entry, const QString &reason, const QVariantMap &hints)
 {
     const QString dbusService = message().service();
 
@@ -286,7 +286,7 @@ uint NotificationServerPrivate::Inhibit(const QString &desktop_entry, const QStr
     return m_highestInhibitionCookie;
 }
 
-void NotificationServerPrivate::onServiceUnregistered(const QString &serviceName)
+void ServerPrivate::onServiceUnregistered(const QString &serviceName)
 {
     qCDebug(NOTIFICATIONMANAGER) << "Inhibition service unregistered" << serviceName;
 
@@ -300,7 +300,7 @@ void NotificationServerPrivate::onServiceUnregistered(const QString &serviceName
     UnInhibit(cookie);
 }
 
-void NotificationServerPrivate::UnInhibit(uint cookie)
+void ServerPrivate::UnInhibit(uint cookie)
 {
     qCDebug(NOTIFICATIONMANAGER) << "Request release inhibition for cookie" << cookie;
 
@@ -321,22 +321,22 @@ void NotificationServerPrivate::UnInhibit(uint cookie)
     }
 }
 
-/*QList<Inhibition> NotificationServerPrivate::ListInhibitors() const
+/*QList<Inhibition> ServerPrivate::ListInhibitors() const
 {
     return m_inhibitions.values();
 }*/
 
-QList<Inhibition> NotificationServerPrivate::inhibitions() const
+QList<Inhibition> ServerPrivate::inhibitions() const
 {
     return m_inhibitions.values();
 }
 
-bool NotificationServerPrivate::inhibited() const
+bool ServerPrivate::inhibited() const
 {
     return !m_inhibitions.isEmpty();
 }
 
-void NotificationServerPrivate::clearInhibitions()
+void ServerPrivate::clearInhibitions()
 {
     if (m_inhibitions.isEmpty()) {
         return;

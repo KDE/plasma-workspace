@@ -23,7 +23,6 @@
 
 #include <QDateTime>
 
-#include "notificationmodel.h"
 #include "notifications.h"
 
 using namespace NotificationManager;
@@ -244,6 +243,9 @@ void NotificationGroupingProxyModel::setSourceModel(QAbstractItemModel *sourceMo
                                 // Various roles of the parent evaluate child data, and the
                                 // child list has changed.
                                 dataChanged(parent, parent);
+
+                                // Signal children count change for all other items in the group.
+                                emit dataChanged(index(0, 0, parent), index(rowMap.count() - 1, 0, parent), {Notifications::GroupChildrenCountRole});
                             }
 
                             break;
@@ -467,6 +469,32 @@ QVariant NotificationGroupingProxyModel::data(const QModelIndex &proxyIndex, int
         case Notifications::IsInGroupRole:
             return false;
 
+        case Notifications::DesktopEntryRole:
+            for (int i = 0; i < rowCount(proxyIndex); ++i) {
+                const QString desktopEntry = proxyIndex.child(i, 0).data(Notifications::DesktopEntryRole).toString();
+                if (!desktopEntry.isEmpty()) {
+                    return desktopEntry;
+                }
+            }
+            return QString();
+        case Notifications::NotifyRcNameRole:
+            for (int i = 0; i < rowCount(proxyIndex); ++i) {
+                const QString notifyRcName = proxyIndex.child(i, 0).data(Notifications::NotifyRcNameRole).toString();
+                if (!notifyRcName.isEmpty()) {
+                    return notifyRcName;
+                }
+            }
+            return QString();
+
+
+        case Notifications::ConfigurableRole: // if there is any configurable child item
+            for (int i = 0; i < rowCount(proxyIndex); ++i) {
+                if (proxyIndex.child(i, 0).data(Notifications::ConfigurableRole).toBool()) {
+                    return true;
+                }
+            }
+            return false;
+
         case Notifications::ClosableRole: // if there is any closable child item
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
                 if (proxyIndex.child(i, 0).data(Notifications::ClosableRole).toBool()) {
@@ -480,6 +508,12 @@ QVariant NotificationGroupingProxyModel::data(const QModelIndex &proxyIndex, int
         switch (role) {
         case Notifications::IsGroupRole:
             return false;
+        // So a notification knows with how many other items it is in a group
+        case Notifications::GroupChildrenCountRole:
+            if (proxyIndex.parent().isValid()) {
+                return rowCount(proxyIndex.parent());
+            }
+            break;
         case Notifications::IsInGroupRole:
             return parent.isValid();
         }

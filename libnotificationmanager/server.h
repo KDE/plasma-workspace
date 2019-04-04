@@ -31,7 +31,7 @@ namespace NotificationManager
 
 class Notification;
 
-class NotificationServerPrivate;
+class ServerPrivate;
 
 /**
  * @short Registers a notification server on the DBus
@@ -40,12 +40,12 @@ class NotificationServerPrivate;
  *
  * @author Kai Uwe Broulik <kde@privat.broulik.de>
  **/
-class NOTIFICATIONMANAGER_EXPORT NotificationServer : public QObject
+class NOTIFICATIONMANAGER_EXPORT Server : public QObject
 {
     Q_OBJECT
 
 public:
-    ~NotificationServer() override;
+    ~Server() override;
 
     /**
      * The reason a notification was closed
@@ -57,7 +57,7 @@ public:
     };
     Q_ENUM(CloseReason)
 
-    static NotificationServer &self();
+    static Server &self();
 
     /**
      * Registers the Notification Service on DBus.
@@ -148,12 +148,12 @@ Q_SIGNALS:
     void inhibitionApplicationsChanged();
 
 private:
-    explicit NotificationServer(QObject *parent = nullptr);
-    Q_DISABLE_COPY(NotificationServer)
+    explicit Server(QObject *parent = nullptr);
+    Q_DISABLE_COPY(Server)
     // FIXME we also need to disable move and other stuff?
 
     class Private;
-    QScopedPointer<NotificationServerPrivate> d;
+    QScopedPointer<ServerPrivate> d;
 };
 
 } // namespace NotificationManager

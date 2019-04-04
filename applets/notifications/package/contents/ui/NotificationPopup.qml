@@ -34,11 +34,9 @@ PlasmaCore.Dialog {
     property int popupWidth
 
     property alias notificationType: notificationItem.notificationType
-    //readonly property bool isNotification: notificationType === NotificationManager.Notifications.NotificationType
-    //readonly property bool isJob: notificationType === NotificationManager.Notifications.JobType
 
     property alias applicationName: notificationItem.applicationName
-    property alias applicatonIconSource: notificationItem.applicationIconSource
+    property alias applicationIconSource: notificationItem.applicationIconSource
     property alias deviceName: notificationItem.deviceName
 
     property alias time: notificationItem.time
@@ -119,7 +117,7 @@ PlasmaCore.Dialog {
     mainItem: MouseArea {
         id: area
         width: notificationPopup.popupWidth
-        height: notificationItem.implicitHeight
+        height: notificationItem.implicitHeight + notificationItem.y
         hoverEnabled: true
 
         cursorShape: hasDefaultAction ? Qt.PointingHandCursor : Qt.ArrowCursor
@@ -184,6 +182,9 @@ PlasmaCore.Dialog {
 
         NotificationItem {
             id: notificationItem
+            // let the item bleed into the dialog margins so the close button margins cancel out
+            y: -notificationPopup.margins.top
+            headingRightPadding: -notificationPopup.margins.right
             width: parent.width
             hovered: area.containsMouse
             maximumLineCount: 8

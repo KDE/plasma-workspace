@@ -42,11 +42,6 @@ QtObject {
 
     property bool inhibited: false
 
-    // Reset the expire limiter so we don't get a flood of non-expired notifications
-    onInhibitedChanged: {
-
-    }
-
     // Some parts of the code rely on plasmoid.nativeInterface and since we're in a singleton here
     // this is named "plasmoid"
     property QtObject plasmoid: plasmoids[0]
@@ -112,7 +107,7 @@ QtObject {
     // How much vertical screen real estate the notification popups may consume
     readonly property real popupMaximumScreenFill: 0.75
 
-    property var screenRect: plasmoid.availableScreenRect
+    property var screenRect: plasmoid ? plasmoid.availableScreenRect : undefined
 
     onPopupLocationChanged: Qt.callLater(positionPopups)
     onScreenRectChanged: Qt.callLater(positionPopups)
@@ -244,7 +239,7 @@ QtObject {
     }
 
     property QtObject popupNotificationsModel: NotificationManager.Notifications {
-        limit: Math.ceil(globals.screenRect.height / (theme.mSize(theme.defaultFont).height * 4))
+        limit: globals.screenRect ? (Math.ceil(globals.screenRect.height / (theme.mSize(theme.defaultFont).height * 4))) : 0
         showExpired: false
         showDismissed: false
         blacklistedDesktopEntries: notificationSettings.popupBlacklistedApplications
@@ -303,7 +298,7 @@ QtObject {
             notificationType: model.type
 
             applicationName: model.applicationName
-            applicatonIconSource: model.applicationIconName
+            applicationIconSource: model.applicationIconName
             deviceName: model.deviceName || ""
 
             time: model.updated || model.created
@@ -330,7 +325,7 @@ QtObject {
                             ? defaultTimeout : 0
 
             urls: model.urls || []
-            urgency: model.urgency
+            urgency: model.urgency || NotificationManager.Notifications.NormalUrgency
 
             jobState: model.jobState || 0
             percentage: model.percentage || 0

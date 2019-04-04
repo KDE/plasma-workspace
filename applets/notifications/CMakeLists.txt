@@ -18,6 +18,14 @@ target_link_libraries(plasma_applet_notifications
                       KF5::KIOWidgets # for PreviewJob
                       )
 
+set(HAVE_PULSEAUDIOQT ${KF5PulseAudioQt_FOUND})
+if(KF5PulseAudioQt_FOUND)
+    target_link_libraries(plasma_applet_notifications KF5::PulseAudioQt)
+endif()
+
+# can't ECM do that for us these days?
+configure_file(config-notificationsapplet.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-notificationsapplet.h )
+
 install(TARGETS plasma_applet_notifications DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
 
 plasma_install_package(package org.kde.plasma.notifications)

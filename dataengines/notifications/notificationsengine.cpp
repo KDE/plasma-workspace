@@ -22,7 +22,7 @@
 #include "notificationsadaptor.h"
 #include "notificationsanitizer.h"
 
-#include "notificationserver.h"
+#include "server.h"
 #include "notification.h"
 
 #include <KConfig>
@@ -45,17 +45,17 @@ NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& a
     : Plasma::DataEngine( parent, args )
 {
 
-    connect(&NotificationServer::self(), &NotificationServer::notificationAdded, this, [this](const Notification &notification) {
+    connect(&Server::self(), &Server::notificationAdded, this, [this](const Notification &notification) {
         notificationAdded(notification);
     });
 
-    connect(&NotificationServer::self(), &NotificationServer::notificationReplaced, this, [this](uint replacedId, const Notification &notification) {
+    connect(&Server::self(), &Server::notificationReplaced, this, [this](uint replacedId, const Notification &notification) {
         // Notification will already have the correct identical ID
         Q_UNUSED(replacedId);
         notificationAdded(notification);
     });
 
-    connect(&NotificationServer::self(), &NotificationServer::notificationRemoved, this, [this](uint id, NotificationServer::CloseReason reason) {
+    connect(&Server::self(), &Server::notificationRemoved, this, [this](uint id, Server::CloseReason reason) {
         Q_UNUSED(reason);
         const QString source = QStringLiteral("notification %1").arg(id);
         // if we don't have that notification in our local list,
@@ -193,7 +193,7 @@ void NotificationsEngine::removeNotification(uint id, uint closeReason)
     // it has already been closed so don't notify a second time
     if (m_activeNotifications.remove(source) > 0) {
         removeSource(source);
-        NotificationServer::self().closeNotification(id, static_cast<NotificationServer::CloseReason>(closeReason));
+        Server::self().closeNotification(id, static_cast<Server::CloseReason>(closeReason));
     }
 }
 
@@ -213,7 +213,7 @@ int NotificationsEngine::createNotification(const QString &appName, const QStrin
     notification.setActions(actions);
     notification.setTimeout(timeout);
     notification.processHints(hints);
-    NotificationServer::self().add(notification);
+    Server::self().add(notification);
     return 0;
 }
 

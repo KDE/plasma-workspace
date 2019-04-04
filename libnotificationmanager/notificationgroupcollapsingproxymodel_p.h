@@ -22,15 +22,20 @@
 
 #include <QSortFilterProxyModel>
 
-class LimitedRowCountProxyModel : public QSortFilterProxyModel
+namespace NotificationManager {
+
+class NotificationGroupCollapsingProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 
 public:
-    explicit LimitedRowCountProxyModel(QObject *parent = nullptr);
-    ~LimitedRowCountProxyModel() override;
+    explicit NotificationGroupCollapsingProxyModel(QObject *parent = nullptr);
+    ~NotificationGroupCollapsingProxyModel() override;
 
     void setSourceModel(QAbstractItemModel *sourceModel) override;
+
+    QVariant data(const QModelIndex &index, int role) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
     int limit() const;
     void setLimit(int limit);
@@ -42,6 +47,11 @@ protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:
-    int m_limit = 0;
+    bool setGroupExpanded(const QModelIndex &idx, bool expanded);
+
+    int m_limit;
+    QList<QPersistentModelIndex> m_expandedGroups;
 
 };
+
+} // namespace NotificationManager

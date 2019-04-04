@@ -48,6 +48,7 @@ ColumnLayout {
 
     property alias configurable: notificationHeading.configurable
     property alias dismissable: notificationHeading.dismissable
+    property alias dismissed: notificationHeading.dismissed
     property alias closable: notificationHeading.closable
 
     // This isn't an alias because TextEdit RichText adds some HTML tags to it
@@ -68,6 +69,9 @@ ColumnLayout {
     property alias configureActionLabel: notificationHeading.configureActionLabel
     property var actionNames: []
     property var actionLabels: []
+
+    property int headingLeftPadding: 0
+    property int headingRightPadding: 0
 
     property int thumbnailLeftPadding: 0
     property int thumbnailRightPadding: 0
@@ -96,9 +100,10 @@ ColumnLayout {
     NotificationHeader {
         id: notificationHeading
         Layout.fillWidth: true
+        Layout.leftMargin: notificationItem.headingLeftPadding
+        Layout.rightMargin: notificationItem.headingRightPadding
 
         inGroup: notificationItem.inGroup
-        parent: inGroup ? inGroupHeaderContainer : defaultHeaderContainer
 
         notificationType: notificationItem.notificationType
         jobState: notificationItem.jobState
@@ -116,6 +121,7 @@ ColumnLayout {
 
     // Notification body
     RowLayout {
+        id: bodyRow
         Layout.fillWidth: true
         spacing: units.smallSpacing
 
@@ -124,7 +130,9 @@ ColumnLayout {
             spacing: 0
 
             RowLayout {
+                id: summaryRow
                 Layout.fillWidth: true
+                visible: summaryLabel.text !== ""
 
                 PlasmaExtras.Heading {
                     id: summaryLabel
@@ -141,52 +149,60 @@ ColumnLayout {
                                 return i18nc("Job name, e.g. Copying is paused", "%1 (Paused)", notificationItem.summary);
                             } else if (notificationItem.jobState === NotificationManager.Notifications.JobStateStopped) {
                                 if (notificationItem.error) {
-                                    return i18nc("Job name, e.g. Copying has failed", "%1 (Failed)", notificationItem.summary);
+                                    if (notificationItem.summary) {
+                                        return i18nc("Job name, e.g. Copying has failed", "%1 (Failed)", notificationItem.summary);
+                                    } else {
+                                        return i18n("Job Failed");
+                                    }
                                 } else {
-                                    return i18nc("Job name, e.g. Copying has finished", "%1 (Finished)", notificationItem.summary);
+                                    if (notificationItem.summary) {
+                                        return i18nc("Job name, e.g. Copying has finished", "%1 (Finished)", notificationItem.summary);
+                                    } else {
+                                        return i18n("Job Finished");
+                                    }
                                 }
                             }
                         }
-                        return notificationItem.summary;
+                        // some apps use their app name as summary, avoid showing the same text twice
+                        // try very hard to match the two
+                        if (notificationItem.summary && notificationItem.summary.toLocaleLowerCase().trim() != notificationItem.applicationName.toLocaleLowerCase().trim()) {
+                            return notificationItem.summary;
+                        }
+                        return "";
                     }
-
-                    // some apps use their app name as summary, avoid showing the same text twice
-                    // try very hard to match the two
-                    visible: text !== "" && text.toLocaleLowerCase().trim() !== notificationItem.applicationName.toLocaleLowerCase().trim()
-
-                    PlasmaCore.ToolTipArea {
-                        anchors.fill: parent
-                        active: summaryLabel.truncated
-                        textFormat: Text.PlainText
-                        subText: summaryLabel.text
-                    }
+                    visible: text !== ""
                 }
 
-                RowLayout {
-                    // When this notification is grouped, the header is reparented here here
-                    id: inGroupHeaderContainer
-                    Layout.fillHeight: true
-                }
+                // inGroup headerItem is reparented here
             }
 
-            SelectableLabel {
-                id: bodyLabel
-                Layout.alignment: Qt.AlignVCenter
-                Layout.fillWidth: true
+            RowLayout {
+                id: bodyTextRow
 
-                Layout.maximumHeight: notificationItem.maximumLineCount > 0
-                                      ? (theme.mSize(font).height * notificationItem.maximumLineCount) : -1
-                text: notificationItem.body
-                // Cannot do text !== "" because RichText adds some HTML tags even when empty
-                visible: notificationItem.body !== ""
-                onClicked: notificationItem.bodyClicked(mouse)
-                onLinkActivated: Qt.openUrlExternally(link)
+                Layout.fillWidth: true
+                spacing: units.smallSpacing
+
+                SelectableLabel {
+                    id: bodyLabel
+                    // FIXME how to assign this via State? target: bodyLabel.Layout doesn't work and just assigning the property doesn't either
+                    Layout.alignment: notificationItem.inGroup ? Qt.AlignTop : Qt.AlignVCenter
+                    Layout.fillWidth: true
+
+                    Layout.maximumHeight: notificationItem.maximumLineCount > 0
+                                          ? (theme.mSize(font).height * notificationItem.maximumLineCount) : -1
+                    text: notificationItem.body
+                    // Cannot do text !== "" because RichText adds some HTML tags even when empty
+                    visible: notificationItem.body !== ""
+                    onClicked: notificationItem.bodyClicked(mouse)
+                    onLinkActivated: Qt.openUrlExternally(link)
+                }
+
+                // inGroup IconItem is reparented here
             }
         }
 
         PlasmaCore.IconItem {
             id: iconItem
-            Layout.alignment: Qt.AlignVCenter
             Layout.preferredWidth: units.iconSizes.large
             Layout.preferredHeight: units.iconSizes.large
             usesPlasmaTheme: false
@@ -282,4 +298,33 @@ ColumnLayout {
             onFileActionInvoked: notificationItem.fileActionInvoked()
         }
     }
+
+    states: [
+         State {
+            when: notificationItem.inGroup
+            PropertyChanges {
+                target: notificationHeading
+                parent: summaryRow
+            }
+
+            PropertyChanges {
+                target: summaryRow
+                visible: true
+            }
+            PropertyChanges {
+                target: summaryLabel
+                visible: true
+            }
+
+            /*PropertyChanges {
+                target: bodyLabel.Label
+                alignment: Qt.AlignTop
+            }*/
+
+            PropertyChanges {
+                target: iconItem
+                parent: bodyTextRow
+            }
+        }
+    ]
 }

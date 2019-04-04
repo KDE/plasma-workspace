@@ -18,8 +18,8 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "notificationserver.h"
-#include "notificationserver_p.h"
+#include "server.h"
+#include "server_p.h"
 
 #include "notification.h"
 #include "notification_p.h"
@@ -32,58 +32,58 @@
 
 using namespace NotificationManager;
 
-NotificationServer::NotificationServer(QObject *parent)
+Server::Server(QObject *parent)
     : QObject(parent)
-    , d(new NotificationServerPrivate(this))
+    , d(new ServerPrivate(this))
 {
-    connect(d.data(), &NotificationServerPrivate::inhibitedChanged, this, [this] {
+    connect(d.data(), &ServerPrivate::inhibitedChanged, this, [this] {
         emit inhibitedChanged(inhibited());
     });
-    connect(d.data(), &NotificationServerPrivate::inhibitionAdded, this, &NotificationServer::inhibitionApplicationsChanged);
-    connect(d.data(), &NotificationServerPrivate::inhibitionRemoved, this, &NotificationServer::inhibitionApplicationsChanged);
+    connect(d.data(), &ServerPrivate::inhibitionAdded, this, &Server::inhibitionApplicationsChanged);
+    connect(d.data(), &ServerPrivate::inhibitionRemoved, this, &Server::inhibitionApplicationsChanged);
 }
 
-NotificationServer::~NotificationServer() = default;
+Server::~Server() = default;
 
-NotificationServer &NotificationServer::self()
+Server &Server::self()
 {
-    static NotificationServer s_self;
+    static Server s_self;
     return s_self;
 }
 
-bool NotificationServer::init()
+bool Server::init()
 {
     return d->init();
 }
 
-bool NotificationServer::isValid() const
+bool Server::isValid() const
 {
     return d->m_valid;
 }
 
-void NotificationServer::closeNotification(uint notificationId, CloseReason reason)
+void Server::closeNotification(uint notificationId, CloseReason reason)
 {
     emit notificationRemoved(notificationId, reason);
 
     emit d->NotificationClosed(notificationId, static_cast<int>(reason)); // tell on DBus
 }
 
-void NotificationServer::invokeAction(uint notificationId, const QString &actionName)
+void Server::invokeAction(uint notificationId, const QString &actionName)
 {
     emit d->ActionInvoked(notificationId, actionName);
 }
 
-uint NotificationServer::add(const Notification &notification)
+uint Server::add(const Notification &notification)
 {
     return d->add(notification);
 }
 
-bool NotificationServer::inhibited() const
+bool Server::inhibited() const
 {
     return d->inhibited();
 }
 
-QStringList NotificationServer::inhibitionApplications() const
+QStringList Server::inhibitionApplications() const
 {
     QStringList applications;
     const auto inhibitions = d->inhibitions();
@@ -94,7 +94,7 @@ QStringList NotificationServer::inhibitionApplications() const
     return applications;
 }
 
-QStringList NotificationServer::inhibitionReasons() const
+QStringList Server::inhibitionReasons() const
 {
     QStringList reasons;
     const auto inhibitions = d->inhibitions();
@@ -105,7 +105,7 @@ QStringList NotificationServer::inhibitionReasons() const
     return reasons;
 }
 
-void NotificationServer::clearInhibitions()
+void Server::clearInhibitions()
 {
     d->clearInhibitions();
 }

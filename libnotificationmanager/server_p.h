@@ -39,7 +39,7 @@ namespace NotificationManager
 
 class Notification;
 
-class Q_DECL_HIDDEN NotificationServerPrivate : public QObject, protected QDBusContext
+class Q_DECL_HIDDEN ServerPrivate : public QObject, protected QDBusContext
 {
     Q_OBJECT
 
@@ -48,8 +48,8 @@ class Q_DECL_HIDDEN NotificationServerPrivate : public QObject, protected QDBusC
     Q_PROPERTY(bool Inhibited READ inhibited)
 
 public:
-    NotificationServerPrivate(QObject *parent);
-    ~NotificationServerPrivate() override;
+    ServerPrivate(QObject *parent);
+    ~ServerPrivate() override;
 
     // DBus
     uint Notify(const QString &app_name, uint replaces_id, const QString &app_icon,

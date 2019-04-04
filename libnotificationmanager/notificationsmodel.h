@@ -29,15 +29,15 @@
 namespace NotificationManager
 {
 
-class NotificationModel : public QAbstractListModel
+class NotificationsModel : public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    ~NotificationModel() override;
+    ~NotificationsModel() override;
 
-    using Ptr = QSharedPointer<NotificationModel>;
-    static Ptr createNotificationModel();
+    using Ptr = QSharedPointer<NotificationsModel>;
+    static Ptr createNotificationsModel();
 
     QDateTime lastRead() const;
     void setLastRead(const QDateTime &lastRead);
@@ -48,6 +48,7 @@ public:
     void expire(uint notificationId);
     void close(uint notificationId);
     void configure(uint notificationId);
+    void configure(const QString &desktopEntry, const QString &notifyRcName, const QString &eventId);
     void invokeDefaultAction(uint notificationId);
     void invokeAction(uint notificationId, const QString &actionName);
 
@@ -63,8 +64,8 @@ private:
     class Private;
     QScopedPointer<Private> d;
 
-    NotificationModel();
-    Q_DISABLE_COPY(NotificationModel)
+    NotificationsModel();
+    Q_DISABLE_COPY(NotificationsModel)
 
 };
 

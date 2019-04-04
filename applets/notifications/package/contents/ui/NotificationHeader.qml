@@ -43,13 +43,10 @@ RowLayout {
 
     property string configureActionLabel
 
-    property alias expandable: expandButton.visible
-    property bool expanded
-    property int collapsedCount
-    property int expandedCount
-
     property alias configurable: configureButton.visible
     property alias dismissable: dismissButton.visible
+    property bool dismissed
+    property alias closeButtonTooltip: closeButton.tooltip
     property alias closable: closeButton.visible
 
     property var time
@@ -57,7 +54,6 @@ RowLayout {
     property int jobState
     property QtObject jobDetails
 
-    signal expandClicked
     signal configureClicked
     signal dismissClicked
     signal closeClicked
@@ -82,7 +78,7 @@ RowLayout {
         id: applicationIconItem
         Layout.preferredWidth: units.iconSizes.small
         Layout.preferredHeight: units.iconSizes.small
-        source: !notificationHeading.inGroup ? notificationHeading.applicationIconSource : ""
+        source: notificationHeading.applicationIconSource
         usesPlasmaTheme: false
         visible: valid
     }
@@ -102,16 +98,7 @@ RowLayout {
         // updated periodically by a Timer hence this property with generate() function
         property string agoText: ""
         visible: text !== ""
-        text: {
-            if (expandable) {
-                if (expanded) {
-                    return expandedCount;
-                } else {
-                    return i18nc("n more notifications", "+%1", (expandedCount - collapsedCount));
-                }
-            }
-            return generateRemainingText() || agoText;
-        }
+        text: generateRemainingText() || agoText
 
         function generateAgoText() {
             if (!time || isNaN(time.getTime()) || notificationHeading.jobState === NotificationManager.Notifications.JobStateRunning) {
@@ -185,21 +172,10 @@ RowLayout {
 
     RowLayout {
         id: headerButtonsRow
-        spacing: units.smallSpacing * 2
+        spacing: 0
         Layout.leftMargin: units.smallSpacing
 
-        // These aren't ToolButtons so they can be perfectly aligned
-        // FIXME fix layout overlap
-
-        HeaderButton {
-            id: expandButton
-            tooltip: notificationHeading.expanded ? i18n("Show Less") : i18n("Show More")
-            iconSource: notificationHeading.expanded ? "arrow-up" : "arrow-down"
-            visible: false
-            onClicked: notificationHeading.expandClicked()
-        }
-
-        HeaderButton {
+        PlasmaComponents.ToolButton {
             id: configureButton
             tooltip: notificationHeading.configureActionLabel || i18n("Configure")
             iconSource: "configure"
@@ -207,16 +183,15 @@ RowLayout {
             onClicked: notificationHeading.configureClicked()
         }
 
-        HeaderButton {
+        PlasmaComponents.ToolButton {
             id: dismissButton
-            tooltip: i18n("Hide")
-            // FIXME proper icon, perhaps from widgets/configuration-icon
-            iconSource: "file-zoom-out"
+            tooltip: notificationHeading.dismissed ? i18nc("Opposite of minimize", "Restore") : i18n("Minimize")
+            iconSource: notificationHeading.dismissed ? "window-restore" : "window-minimize"
             visible: false
             onClicked: notificationHeading.dismissClicked()
         }
 
-        HeaderButton {
+        PlasmaComponents.ToolButton {
             id: closeButton
             tooltip: i18n("Close")
             iconSource: "window-close"
@@ -224,4 +199,19 @@ RowLayout {
             onClicked: notificationHeading.closeClicked()
         }
     }
+
+    states: [
+        State {
+            when: notificationHeading.inGroup
+            PropertyChanges {
+                target: applicationIconItem
+                source: ""
+            }
+            PropertyChanges {
+                target: applicationNameLabel
+                visible: false
+            }
+        }
+
+    ]
 }

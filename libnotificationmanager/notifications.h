@@ -52,7 +52,7 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
     /**
      * Whether to show expired notifications.
      *
-     * Expired notifications are those that timed out, ie. ones that were not explicitly
+     * Expired notifications are those that timed out, i.e. ones that were not explicitly
      * closed or acted upon by the user, nor revoked by the issuing application.
      *
      * An expired notification has its actions removed.
@@ -75,7 +75,7 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
      * A list of desktop entries for which no notifications should be shown.
      *
      * If the same desktop entry is present in both blacklist and whitelist,
-     * the blacklist takes precedence, ie. the notification is not shown.
+     * the blacklist takes precedence, i.e. the notification is not shown.
      */
     Q_PROPERTY(QStringList blacklistedDesktopEntries READ blacklistedDesktopEntries WRITE setBlacklistedDesktopEntries NOTIFY blacklistedDesktopEntriesChanged)
 
@@ -83,7 +83,7 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
      * A list of notifyrc names for which no notifications should be shown.
      *
      * If the same notifyrc name is present in both blacklist and whitelist,
-     * the blacklist takes precedence, ie. the notification is not shown.
+     * the blacklist takes precedence, i.e. the notification is not shown.
      */
     Q_PROPERTY(QStringList blacklistedNotifyRcNames READ blacklistedNotifyRcNames WRITE setBlacklistedNotifyRcNames NOTIFY blacklistedNotifyRcNamesChanged)
 
@@ -93,7 +93,7 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
      * This bypasses any filtering for urgency.
      *
      * If the same desktop entry is present in both whitelist and blacklist,
-     * the blacklist takes precedence, ie. the notification is not shown.
+     * the blacklist takes precedence, i.e. the notification is not shown.
      *
      * Default is empty list, which means normal filtering is applied.
      */
@@ -105,7 +105,7 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
      * This bypasses any filtering for urgency.
      *
      * If the same notifyrc name is present in both whitelist and blacklist,
-     * the blacklist takes precedence, ie. the notification is not shown.
+     * the blacklist takes precedence, i.e. the notification is not shown.
      *
      * Default is empty list, which means normal filtering is applied.
      */
@@ -143,7 +143,7 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
     /**
-     * Whether there is an active, ie. non-expired notification currently in the model
+     * Whether there is an active, i.e. non-expired notification currently in the model
      */
     Q_PROPERTY(int activeNotificationsCount READ activeNotificationsCount NOTIFY activeNotificationsCountChanged)
 
@@ -257,7 +257,7 @@ public:
 
     enum GroupMode {
         GroupDisabled = 0,
-        GroupApplicationsTree, // TODO make actual tree
+        //GroupApplicationsTree, // TODO make actual tree
         GroupApplicationsFlat
     };
     Q_ENUM(GroupMode)
@@ -346,13 +346,10 @@ public:
      * @brief Invoke a notification action
      *
      * Invokes the action with the given actionId on the notification.
-     * For invoking the default action, ie. the one that is triggered
+     * For invoking the default action, i.e. the one that is triggered
      * when clicking the notification bubble, use invokeDefaultAction
      */
     Q_INVOKABLE void invokeAction(const QModelIndex &idx, const QString &actionId);
-
-    Q_INVOKABLE void expand(const QModelIndex &idx);
-    Q_INVOKABLE void collapse(const QModelIndex &idx);
 
     Q_INVOKABLE void startTimeout(const QModelIndex &idx);
     Q_INVOKABLE void startTimeout(uint notificationId);

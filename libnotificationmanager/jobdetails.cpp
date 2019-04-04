@@ -28,6 +28,8 @@
 
 #include "jobdetails_p.h"
 
+#include "debug.h"
+
 using namespace NotificationManager;
 
 JobDetails::Private::Private(JobDetails *q)
@@ -56,7 +58,13 @@ QSharedPointer<KFilePlacesModel> JobDetails::Private::createPlacesModel()
 // - otherwise print URL (without password)
 QString JobDetails::Private::prettyDestUrl() const
 {
-    if (!m_destUrl.isValid()) {
+    QUrl url = m_destUrl;
+    // In case of a single file and no destUrl, try using the second label (most likely "Destination")...
+    if (!url.isValid() && m_totalFiles == 1) {
+        url = QUrl::fromUserInput(m_descriptionValue2, QString(), QUrl::AssumeLocalFile).adjusted(QUrl::RemoveFilename);
+    }
+
+    if (!url.isValid()) {
         return QString();
     }
 
@@ -71,13 +79,13 @@ QString JobDetails::Private::prettyDestUrl() const
             continue;
         }
 
-        if (m_placesModel->url(idx).matches(m_destUrl, QUrl::StripTrailingSlash)) {
+        if (m_placesModel->url(idx).matches(url, QUrl::StripTrailingSlash)) {
             return m_placesModel->text(idx);
         }
     }
 
-    if (m_destUrl.isLocalFile()) {
-        QString destUrlString = m_destUrl.toLocalFile();
+    if (url.isLocalFile()) {
+        QString destUrlString = url.toLocalFile();
 
         const QString homePath = QDir::homePath();
         if (destUrlString.startsWith(homePath)) {
@@ -87,7 +95,7 @@ QString JobDetails::Private::prettyDestUrl() const
         return destUrlString;
     }
 
-    return m_destUrl.toDisplayString(); // strips password
+    return url.toDisplayString(); // strips password
 }
 
 QString JobDetails::Private::text() const
@@ -95,15 +103,15 @@ QString JobDetails::Private::text() const
     const QString currentFileName = descriptionUrl().fileName();
     const QString destUrlString = prettyDestUrl();
 
-    qDebug() << "JOB DETAILS" << "current file name" << currentFileName << "desturl" << destUrlString
-               << "processed files" << m_processedFiles << "total files" << m_totalFiles
-               << "processed dirs" << m_processedDirectories << "total dirs" << m_totalDirectories
-               << "dest url" << m_destUrl << "label1" << m_descriptionLabel1 << "value1" << m_descriptionValue1
-               << "label2" << m_descriptionLabel2 << "value2" << m_descriptionValue2;
-
     if (m_totalFiles == 0) {
         if (!destUrlString.isEmpty()) {
+            if (m_processedFiles > 0) {
+                return i18ncp("Copying n files to location", "%1 file to %2", "%1 files to %2",
+                              m_processedFiles, destUrlString);
+            }
             return i18nc("Copying unknown amount of files to location", "to %1", destUrlString);
+        } else if (m_processedFiles > 0) {
+            return i18ncp("Copying n files", "%1 file", "%1 files", m_processedFiles);
         }
     } else if (m_totalFiles == 1 && !currentFileName.isEmpty()) {
         if (!destUrlString.isEmpty()) {
@@ -113,23 +121,28 @@ QString JobDetails::Private::text() const
         return currentFileName;
     } else if (m_totalFiles > 1) {
         if (!destUrlString.isEmpty()) {
-            if (m_processedFiles > 0) {
+            if (m_processedFiles > 0 && m_processedFiles <= m_totalFiles) {
                 return i18ncp("Copying n of m files to locaton", "%2 of %1 file to %3", "%2 of %1 files to %3",
                               m_totalFiles, m_processedFiles, destUrlString);
             }
             return i18ncp("Copying n files to location", "%1 file to %2", "%1 files to %2",
-                          m_totalFiles, destUrlString);
+                          m_processedFiles > 0 ? m_processedFiles : m_totalFiles, destUrlString);
         }
 
-        if (m_processedFiles > 0) {
+        if (m_processedFiles > 0 && m_processedFiles <= m_totalFiles) {
             return i18ncp("Copying n of m files", "%2 of %1 file", "%2 of %1 files",
                           m_totalFiles, m_processedFiles);
         }
 
-        return i18ncp("Copying n files", "%1 file", "%1 files", m_totalFiles);
+        return i18ncp("Copying n files", "%1 file", "%1 files", m_processedFiles > 0 ? m_processedFiles : m_totalFiles);
     }
 
-    qWarning() << "  NO DETAILS";
+    qCInfo(NOTIFICATIONMANAGER) << "Failed to generate job text for job with following properties:";
+    qCInfo(NOTIFICATIONMANAGER) << "  processedFiles =" << m_processedFiles << ", totalFiles =" << m_totalFiles
+                                << ", current file name =" << currentFileName << ", destination url string =" << destUrlString;
+    qCInfo(NOTIFICATIONMANAGER) << "label1 =" << m_descriptionLabel1 << ", value1 =" << m_descriptionValue1
+                                << ", label2 =" << m_descriptionLabel2 << ", value2 =" << m_descriptionValue2;
+
     return QString();
 }
 

@@ -140,7 +140,7 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
         return false;
     }
 
-    // Blacklist takes precedence over whitelist, ie. when in doubt don't show
+    // Blacklist takes precedence over whitelist, i.e. when in doubt don't show
     if (!m_blacklistedDesktopEntries.isEmpty()) {
         const QString desktopEntry = sourceIdx.data(Notifications::DesktopEntryRole).toString();
         if (!desktopEntry.isEmpty() && m_blacklistedDesktopEntries.contains(desktopEntry)) {
