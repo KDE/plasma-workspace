@@ -20,6 +20,8 @@
 
 #include "settings.h"
 
+#include "config-notificationmanager.h"
+
 #include <QDebug>
 
 #include <KConfigWatcher>
@@ -33,6 +35,15 @@
 #include "notificationsettings.h"
 #include "jobsettings.h"
 #include "badgesettings.h"
+
+#ifdef HAVE_PULSEAUDIOQT
+#include <PulseAudioQt/Context>
+#include <PulseAudioQt/StreamRestore>
+
+using namespace PulseAudioQt;
+
+static const char *s_notificationStreamId = "sink-input-by-media-role:event";
+#endif
 
 using namespace NotificationManager;
 
@@ -61,11 +72,35 @@ public:
 
     bool live = false; // set to true initially in constructor
     bool dirty = false;
+
+#ifdef HAVE_PULSEAUDIOQT
+    QPointer<StreamRestore> notificationSounds;
+#endif
+
 };
 
 Settings::Private::Private(Settings *q)
     : q(q)
 {
+
+#ifdef HAVE_PULSEAUDIOQT
+    // Can there be multiple?
+    const auto streamRestores = Context::instance()->streamRestores();
+    for (StreamRestore *restore : streamRestores) {
+        if (restore->name() == QLatin1String(s_notificationStreamId)) {
+            notificationSounds = restore;
+            connect(notificationSounds.data(), &StreamRestore::mutedChanged, q, &Settings::notificationSoundsMutedChanged);
+            break;
+        }
+    }
+
+    QObject::connect(Context::instance(), &Context::streamRestoreAdded, q, [this, q](StreamRestore *restore) {
+        if (restore->name() == QLatin1String(s_notificationStreamId)) {
+            notificationSounds = restore;
+            connect(notificationSounds.data(), &StreamRestore::mutedChanged, q, &Settings::notificationSoundsMutedChanged);
+        }
+    });
+#endif
 
 }
 
@@ -533,4 +568,58 @@ QStringList Settings::notificationInhibitionReasons() const
 void Settings::revokeApplicationInhibitions()
 {
     Server::self().clearInhibitions();
+}
+
+bool Settings::notificationSoundsInhibited() const
+{
+#ifdef HAVE_PULSEAUDIOQT
+    return DoNotDisturbSettings::notificationSoundsMuted();
+#else
+    return false;
+#endif
+}
+
+bool Settings::notificationSoundsMuted() const
+{
+#ifdef HAVE_PULSEAUDIOQT
+    return !d->notificationSounds.isNull() & d->notificationSounds->isMuted();
+#else
+    return false;
+#endif
+}
+
+void Settings::setNotificationSoundsMuted(bool muted)
+{
+#ifdef HAVE_PULSEAUDIOQT
+    if (d->notificationSounds) {
+        d->notificationSounds->setMuted(muted);
+    }
+#else
+    Q_UNUSED(muted);
+#endif
+}
+
+void Settings::setNotificationSoundsInhibited(bool inhibited)
+{
+    if (inhibited == notificationSoundsInhibited()) {
+        return;
+    }
+
+#ifdef HAVE_PULSEAUDIOQT
+    if (!d->notificationSounds) {
+        qCInfo(NOTIFICATIONMANAGER) << "Cannot" << (inhibited ? "mute" : "unmute") << "notification sounds without appropriate stream restore";
+        return;
+    }
+
+    if (inhibited && d->notificationSounds->isMuted()) {
+        // Already muted, don't write soundsMuted=true to avoid us unmuting them later
+        qCDebug(NOTIFICATIONMANAGER) << "Not muting notification sounds as they already are";
+        return;
+    }
+
+    d->notificationSounds->setMuted(inhibited);
+
+    DoNotDisturbSettings::setNotificationSoundsMuted(inhibited);
+    d->setDirty(true);
+#endif
 }

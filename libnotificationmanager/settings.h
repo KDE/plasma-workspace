@@ -106,6 +106,29 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
                NOTIFY notificationInhibitionApplicationsChanged)
 
     /**
+     * Whether notification sounds should be disabled
+     *
+     * This does not reflect the actual mute state of the Notification Sounds
+     * but only remembers what value was assigned to this property.
+     *
+     * When @c true the notification sound stream is muted.
+     * When @c false the notification sound stream is unmuted only if it was
+     * previously muted by having set this property @c true. This is to avoid
+     * unmuting notification sounds if the user themselves have already muted them.
+     */
+    Q_PROPERTY(bool notificationSoundsInhibited
+               WRITE setNotificationSoundsInhibited
+               NOTIFY NotificationSoundsInhibitedChanged)
+
+    /**
+     * Whether the notification sound stream is actually muted
+     */
+    Q_PROPERTY(bool notificationSoundsMuted
+               READ notificationSoundsMuted
+               WRITE setNotificationSoundsMuted
+               NOTIFY notificationSoundsMutedChanged)
+
+    /**
      * Whether to update the properties immediately when they are changed on disk
      *
      * This can be undesirable for a settings dialog where outside changes
@@ -216,6 +239,12 @@ public:
     QStringList notificationInhibitionApplications() const;
     QStringList notificationInhibitionReasons() const;
 
+    bool notificationSoundsInhibited() const;
+    void setNotificationSoundsInhibited(bool inhibited);
+
+    bool notificationSoundsMuted() const;
+    void setNotificationSoundsMuted(bool muted);
+
     Q_INVOKABLE void revokeApplicationInhibitions();
 
 signals:
@@ -228,6 +257,8 @@ signals:
 
     void notificationsInhibitedByApplicationChanged(bool notificationsInhibitedByApplication);
     void notificationInhibitionApplicationsChanged();
+    void notificationSoundsInhibitedChanged();
+    void notificationSoundsMutedChanged();
 
 private:
     class Private;

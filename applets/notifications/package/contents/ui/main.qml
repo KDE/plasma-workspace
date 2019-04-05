@@ -34,8 +34,6 @@ import "global"
 Item {
     id: root 
 
-    Plasmoid.hideOnWindowDeactivate: false
-
     Plasmoid.status: historyModel.activeJobsCount > 0
                      || Globals.popupNotificationsModel.activeNotificationsCount > 0
                      || Globals.inhibited ? PlasmaCore.Types.ActiveStatus

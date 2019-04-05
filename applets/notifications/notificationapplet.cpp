@@ -34,11 +34,6 @@
 #include "filemenu.h"
 #include "thumbnailer.h"
 
-#ifdef HAVE_PULSEAUDIOQT
-#include <PulseAudioQt/Context>
-#include <PulseAudioQt/StreamRestore>
-#endif
-
 NotificationApplet::NotificationApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
 {
@@ -50,15 +45,6 @@ NotificationApplet::NotificationApplet(QObject *parent, const QVariantList &data
         qmlProtectModule(uri, 2);
         s_typesRegistered = true;
     }
-
-    // TODO PulseAudio stuff to mute notification sounds in do not disturb mode
-
-    /*PulseAudioQt::Context::instance()->streamRestores();
-    connect(PulseAudioQt::Context::instance(), &PulseAudioQt::Context::streamRestoreAdded, this, [this](PulseAudioQt::StreamRestore *restore) {
-        if (restore->name() == QLatin1String("sink-input-by-media-role:event")) {
-
-        }
-    });*/
 }
 
 NotificationApplet::~NotificationApplet() = default;

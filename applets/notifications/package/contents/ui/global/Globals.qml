@@ -272,6 +272,8 @@ QtObject {
     }
 
     property QtObject notificationSettings: NotificationManager.Settings {
+        notificationSoundsInhibited: globals.inhibited
+
         onNotificationsInhibitedUntilChanged: globals.checkInhibition()
     }
 

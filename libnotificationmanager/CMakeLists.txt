@@ -23,6 +23,9 @@ set(notificationmanager_LIB_SRCS
     limitedrowcountproxymodel.cpp
 )
 
+set(HAVE_PULSEAUDIOQT ${KF5PulseAudioQt_FOUND})
+configure_file(config-notificationmanager.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-notificationmanager.h )
+
 ecm_qt_declare_logging_category(notificationmanager_LIB_SRCS
     HEADER debug.h
     IDENTIFIER NOTIFICATIONMANAGER
@@ -64,6 +67,10 @@ target_link_libraries(notificationmanager
         KF5::ProcessCore
         KF5::Service
 )
+
+if(KF5PulseAudioQt_FOUND)
+    target_link_libraries(notificationmanager PRIVATE KF5::PulseAudioQt)
+endif()
 
 set_target_properties(notificationmanager PROPERTIES
                       VERSION ${PROJECT_VERSION}

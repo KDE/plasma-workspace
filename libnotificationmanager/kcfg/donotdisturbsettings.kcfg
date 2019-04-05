@@ -9,5 +9,9 @@
         <entry name="Until" type="DateTime">
             <default></default>
         </entry>
+
+        <entry name="NotificationSoundsMuted" type="Bool">
+            <default>false</default>
+        </entry>
     </group>
 </kcfg>

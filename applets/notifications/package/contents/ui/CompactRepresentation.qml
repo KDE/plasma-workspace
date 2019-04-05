@@ -98,23 +98,10 @@ MouseArea {
             id: countLabel
             anchors.centerIn: parent
             font.pointSize: -1
-            font.pixelSize: Math.round(parent.height * 0.6)
-            text: count || "" // don't show number zero
-
-            property int count: 0
-            onCountChanged: countChangeAnimation.start();
-
-            ParallelAnimation {
-                id: countChangeAnimation
-                NumberAnimation {
-                    target: countLabel
-                    property: "scale"
-                    from: 2
-                    to: 1
-                    duration: units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
+            // FIXME fontSizeMode is awful but FontMetrics also doesn't cut it
+            font.pixelSize: Math.round(parent.height * (0.3 + 0.3 * text.length))
+            // TODO add animation when it changes?
+            text: compactRoot.unreadCount || ""
         }
 
         PlasmaComponents.BusyIndicator {
@@ -154,7 +141,7 @@ MouseArea {
             }
             PropertyChanges {
                 target: countLabel
-                count: compactRoot.jobsCount
+                text: compactRoot.jobsCount
             }
             PropertyChanges {
                 target: busyIndicator
@@ -194,7 +181,7 @@ MouseArea {
             }
             PropertyChanges {
                 target: countLabel
-                count: compactRoot.unreadCount
+                text: compactRoot.unreadCount
             }
         }
     ]
