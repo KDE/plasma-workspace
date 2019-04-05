@@ -18,7 +18,6 @@
  */
 
 import QtQuick 2.5
-import QtQuick.Controls 1.0 as QtControls
 import QtQuick.Controls 2.3 as QtControls2
 import QtQuick.Layouts 1.0
 import QtQuick.Window 2.0 // for Screen
@@ -74,32 +73,11 @@ ColumnLayout {
 
     //Rectangle { color: "orange"; x: formAlignment; width: formAlignment; height: 20 }
 
-    TextMetrics {
-        id: textMetrics
-        text: "00"
-    }
-
-    Row {
-        //x: formAlignment - positionLabel.paintedWidth
-        spacing: Kirigami.Units.largeSpacing / 2
-        QtControls2.Label {
-            id: positionLabel
-            width: formAlignment - Kirigami.Units.largeSpacing
-            anchors {
-                verticalCenter: resizeComboBox.verticalCenter
-            }
-            text: i18nd("plasma_wallpaper_org.kde.image", "Positioning:")
-            horizontalAlignment: Text.AlignRight
-        }
-
-        // TODO: port to QQC2 version once we've fixed https://bugs.kde.org/show_bug.cgi?id=403153
-        QtControls.ComboBox {
+    Kirigami.FormLayout {
+        twinFormLayouts: parentLayout
+        QtControls2.ComboBox {
             id: resizeComboBox
-            TextMetrics {
-                id: resizeTextMetrics
-                text: resizeComboBox.currentText
-            }
-            width: resizeTextMetrics.width + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 2
+            Kirigami.FormData.label: i18nd("plasma_wallpaper_org.kde.image", "Positioning:")
             model: [
                         {
                             'label': i18nd("plasma_wallpaper_org.kde.image", "Scaled and Cropped"),
@@ -137,51 +115,36 @@ ColumnLayout {
                 }
             }
         }
-    }
 
-    QtControls2.ButtonGroup { id: backgroundGroup }
+        QtControls2.ButtonGroup { id: backgroundGroup }
 
-    Row {
-        id: blurRow
-        spacing: Kirigami.Units.largeSpacing / 2
-        visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
-        QtControls2.Label {
-            id: blurLabel
-            width: formAlignment - Kirigami.Units.largeSpacing
-            anchors.verticalCenter: blurRadioButton.verticalCenter
-            horizontalAlignment: Text.AlignRight
-            text: i18nd("plasma_wallpaper_org.kde.image", "Background:")
-        }
         QtControls2.RadioButton {
             id: blurRadioButton
+            visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
+            Kirigami.FormData.label: i18nd("plasma_wallpaper_org.kde.image", "Background:")
             text: i18nd("plasma_wallpaper_org.kde.image", "Blur")
             QtControls2.ButtonGroup.group: backgroundGroup
         }
-    }
 
-    Row {
-        id: colorRow
-        visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
-        spacing: Kirigami.Units.largeSpacing / 2
-        QtControls2.Label {
-            width: formAlignment - Kirigami.Units.largeSpacing
-        }
-        QtControls2.RadioButton {
-            id: colorRadioButton
-            text: i18nd("plasma_wallpaper_org.kde.image", "Solid color")
-            QtControls2.ButtonGroup.group: backgroundGroup
-            checked: !cfg_Blur
-        }
-        KQuickControls.ColorButton {
-            id: colorButton
-            dialogTitle: i18nd("plasma_wallpaper_org.kde.image", "Select Background Color")
+        RowLayout {
+            id: colorRow
+            visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
+            QtControls2.RadioButton {
+                id: colorRadioButton
+                text: i18nd("plasma_wallpaper_org.kde.image", "Solid color")
+                checked: !cfg_Blur
+                QtControls2.ButtonGroup.group: backgroundGroup
+            }
+            KQuickControls.ColorButton {
+                id: colorButton
+                dialogTitle: i18nd("plasma_wallpaper_org.kde.image", "Select Background Color")
+            }
         }
     }
 
     Component {
         id: foldersComponent
         ColumnLayout {
-            anchors.fill: parent
             Connections {
                 target: root
                 onHoursIntervalValueChanged: hoursInterval.value = root.hoursIntervalValue
@@ -189,62 +152,47 @@ ColumnLayout {
                 onSecondsIntervalValueChanged: secondsInterval.value = root.secondsIntervalValue
             }
             //FIXME: there should be only one spinbox: QtControls spinboxes are still too limited for it tough
-            RowLayout {
-                Layout.fillWidth: true
-                spacing: Kirigami.Units.largeSpacing / 2
-                QtControls2.Label {
-                    Layout.minimumWidth: formAlignment - Kirigami.Units.largeSpacing
-                    horizontalAlignment: Text.AlignRight
-                    text: i18nd("plasma_wallpaper_org.kde.image","Change every:")
-                }
-                QtControls2.SpinBox {
-                    id: hoursInterval
-                    Layout.minimumWidth: textMetrics.width + Kirigami.Units.gridUnit
-                    width: Kirigami.Units.gridUnit * 3
-                    value: root.hoursIntervalValue
-                    from: 0
-                    to: 24
-                    editable: true
-                    onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
-                }
-                QtControls2.Label {
-                    text: i18nd("plasma_wallpaper_org.kde.image","Hours")
-                }
-                Item {
-                    Layout.preferredWidth: Kirigami.Units.gridUnit
-                }
-                QtControls2.SpinBox {
-                    id: minutesInterval
-                    Layout.minimumWidth: textMetrics.width + Kirigami.Units.gridUnit
-                    width: Kirigami.Units.gridUnit * 3
-                    value: root.minutesIntervalValue
-                    from: 0
-                    to: 60
-                    editable: true
-                    onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
-                }
-                QtControls2.Label {
-                    text: i18nd("plasma_wallpaper_org.kde.image","Minutes")
-                }
-                Item {
-                    Layout.preferredWidth: Kirigami.Units.gridUnit
-                }
-                QtControls2.SpinBox {
-                    id: secondsInterval
-                    Layout.minimumWidth: textMetrics.width + Kirigami.Units.gridUnit
-                    width: Kirigami.Units.gridUnit * 3
-                    value: root.secondsIntervalValue
-                    from: root.hoursIntervalValue === 0 && root.minutesIntervalValue === 0 ? 1 : 0
-                    to: 60
-                    editable: true
-                    onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
-                }
-                QtControls2.Label {
-                    text: i18nd("plasma_wallpaper_org.kde.image","Seconds")
+            Kirigami.FormLayout {
+                twinFormLayouts: parentLayout
+                RowLayout {
+                    Kirigami.FormData.label: i18nd("plasma_wallpaper_org.kde.image","Change every:")
+                    QtControls2.SpinBox {
+                        id: hoursInterval
+                        value: root.hoursIntervalValue
+                        from: 0
+                        to: 24
+                        editable: true
+                        onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
+                    }
+                    QtControls2.Label {
+                        text: i18nd("plasma_wallpaper_org.kde.image","Hours")
+                    }
+                    QtControls2.SpinBox {
+                        id: minutesInterval
+                        value: root.minutesIntervalValue
+                        from: 0
+                        to: 60
+                        editable: true
+                        onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
+                    }
+                    QtControls2.Label {
+                        text: i18nd("plasma_wallpaper_org.kde.image","Minutes")
+                    }
+                    QtControls2.SpinBox {
+                        id: secondsInterval
+                        value: root.secondsIntervalValue
+                        from: root.hoursIntervalValue === 0 && root.minutesIntervalValue === 0 ? 1 : 0
+                        to: 60
+                        editable: true
+                        onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
+                    }
+                    QtControls2.Label {
+                        text: i18nd("plasma_wallpaper_org.kde.image","Seconds")
+                    }
                 }
             }
             Kirigami.Heading {
-                text: "Folders"
+                text: i18nd("plasma_wallpaper_org.kde.image","Folders")
                 level: 2
             }
             GridLayout {
