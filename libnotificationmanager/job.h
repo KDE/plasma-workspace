@@ -34,13 +34,6 @@ namespace NotificationManager
 
 class JobDetails;
 
-/**
- * @short Represents a single notification
- *
- * TODO
- *
- * @author Kai Uwe Broulik <kde@privat.broulik.de>
- **/
 class Job
 {
 public:

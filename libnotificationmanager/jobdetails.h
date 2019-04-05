@@ -35,9 +35,7 @@ namespace NotificationManager
 {
 
 /**
- * @short Provides detail information about a job
- *
- * TODO
+ * @short Provides detailed information about a job
  *
  * @author Kai Uwe Broulik <kde@privat.broulik.de>
  **/

@@ -34,9 +34,13 @@ namespace NotificationManager
 {
 
 /**
- * @short TODO
+ * @short Notification settings and state
  *
- * TODO
+ * This class encapsulates all global settings related to notifications
+ * as well as do not disturb mode and other state.
+ *
+ * This class can be used by applications to alter their behavior
+ * depending on user's notification preferences.
  *
  * @author Kai Uwe Broulik <kde@privat.broulik.de>
  **/
@@ -44,15 +48,26 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
 {
     Q_OBJECT
 
+    /**
+     * Whether to show critical notification popups in do not disturb mode.
+     */
     Q_PROPERTY(bool criticalPopupsInDoNotDisturbMode READ criticalPopupsInDoNotDisturbMode WRITE setCriticalPopupsInDoNotDisturbMode NOTIFY settingsChanged)
+    /**
+     * Whether to keep critical notifications always on top.
+     */
     Q_PROPERTY(bool keepCriticalAlwaysOnTop READ keepCriticalAlwaysOnTop WRITE setKeepCriticalAlwaysOnTop NOTIFY settingsChanged)
+    /**
+     * Whether to show popups for low priority notifications.
+     */
     Q_PROPERTY(bool lowPriorityPopups READ lowPriorityPopups WRITE setLowPriorityPopups NOTIFY settingsChanged)
+    /**
+     * Whether to add low priority notifications to the history.
+     */
     Q_PROPERTY(bool lowPriorityHistory READ lowPriorityHistory WRITE setLowPriorityHistory NOTIFY settingsChanged)
 
     /**
      * The notification popup position on screen.
-     * Near widget means they should be positioned closely to where the plasmoid is located on screen.
-     * This is also the default.
+     * NearWidget means they should be positioned closely to where the plasmoid is located on screen.
      */
     Q_PROPERTY(PopupPosition popupPosition READ popupPosition WRITE setPopupPosition NOTIFY settingsChanged)
 
@@ -62,10 +77,22 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
      */
     Q_PROPERTY(int popupTimeout READ popupTimeout WRITE setPopupTimeout RESET resetPopupTimeout NOTIFY settingsChanged)
 
+    /**
+     * Whether to show application jobs in task manager
+     */
     Q_PROPERTY(bool jobsInTaskManager READ jobsInTaskManager WRITE setJobsInTaskManager /*RESET resetJobsInTaskManager*/ NOTIFY settingsChanged)
+    /**
+     * Whether to show application jobs as notifications
+     */
     Q_PROPERTY(bool jobsInNotifications READ jobsInNotifications WRITE setJobsInNotifications /*RESET resetJobsPopup*/ NOTIFY settingsChanged)
+    /**
+     * Whether application jobs stay visible for the whole duration of the job
+     */
     Q_PROPERTY(bool permanentJobPopups READ permanentJobPopups WRITE setPermanentJobPopups /*RESET resetAutoHideJobsPopup*/ NOTIFY settingsChanged)
 
+    /**
+     * Whether to show notification badges (numbers in circles) in task manager
+     */
     Q_PROPERTY(bool badgesInTaskManager READ badgesInTaskManager WRITE setBadgesInTaskManager NOTIFY settingsChanged)
 
     /**
@@ -73,26 +100,58 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
      */
     Q_PROPERTY(QStringList knownApplications READ knownApplications NOTIFY knownApplicationsChanged)
 
-    // TODO check how heavy this is
+    /**
+     * A list of desktop entries of applications for which no popups should be shown.
+     */
     Q_PROPERTY(QStringList popupBlacklistedApplications READ popupBlacklistedApplications NOTIFY settingsChanged)
+    /**
+     * A list of notifyrc names of services for which no popups should be shown.
+     */
     Q_PROPERTY(QStringList popupBlacklistedServices READ popupBlacklistedServices NOTIFY settingsChanged)
 
+    /**
+     * A list of desktop entries of applications for which a popup should be shown even in do not disturb mode.
+     */
     Q_PROPERTY(QStringList doNotDisturbPopupWhitelistedApplications
                READ doNotDisturbPopupWhitelistedApplications
                NOTIFY settingsChanged)
+    /**
+     * A list of notifyrc names of services for which a popup should be shown even in do not disturb mode.
+     */
     Q_PROPERTY(QStringList doNotDisturbPopupWhitelistedServices
                READ doNotDisturbPopupWhitelistedServices
                NOTIFY settingsChanged)
 
+    /**
+     * A list of desktop entries of applications which shouldn't be shown in the history.
+     */
     Q_PROPERTY(QStringList historyBlacklistedApplications READ historyBlacklistedApplications NOTIFY settingsChanged)
+    /**
+     * A list of notifyrc names of services which shouldn't be shown in the history.
+     */
     Q_PROPERTY(QStringList historyBlacklistedServices READ historyBlacklistedServices NOTIFY settingsChanged)
 
+    /**
+     * The date until which do not disturb mode is enabled.
+     *
+     * When invalid or in the past, do not disturb mode should be considered disabled.
+     * Do not disturb mode is considered active when this property points to a date
+     * in the future OR notificationsInhibitedByApplication is true.
+     */
     Q_PROPERTY(QDateTime notificationsInhibitedUntil
                READ notificationsInhibitedUntil
                WRITE setNotificationsInhibitedUntil
                RESET resetNotificationsInhibitedUntil
                NOTIFY settingsChanged)
 
+    /**
+     * Whether an application currently requested do not disturb mode.
+     *
+     * Do not disturb mode is considered active when this property is true OR
+     * notificationsInhibitedUntil points to a date in the future.
+     *
+     * @sa revokeApplicationInhibitions
+     */
     Q_PROPERTY(bool notificationsInhibitedByApplication
                READ notificationsInhibitedByApplication
                NOTIFY notificationsInhibitedByApplicationChanged)
@@ -134,7 +193,7 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
      * This can be undesirable for a settings dialog where outside changes
      * should not suddenly cause the UI to change.
      *
-     * Default is true
+     * Default is true.
      */
     Q_PROPERTY(bool live READ live WRITE setLive NOTIFY liveChanged)
 
@@ -245,6 +304,12 @@ public:
     bool notificationSoundsMuted() const;
     void setNotificationSoundsMuted(bool muted);
 
+    /**
+     * Revoke application notification inhibitions.
+     *
+     * @note Applications are not notified of the fact that their
+     * inhibition might have been taken away.
+     */
     Q_INVOKABLE void revokeApplicationInhibitions();
 
 signals:

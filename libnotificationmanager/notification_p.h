@@ -60,7 +60,6 @@ public:
 
     QString applicationName;
     QString desktopEntry;
-    QString serviceName; // TODO really needed?
     bool configurableService = false;
     QString applicationIconName;
 

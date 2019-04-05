@@ -36,8 +36,6 @@ namespace NotificationManager
 /**
  * @short Represents a single notification
  *
- * TODO
- *
  * @author Kai Uwe Broulik <kde@privat.broulik.de>
  **/
 class NOTIFICATIONMANAGER_EXPORT Notification

@@ -436,18 +436,6 @@ void Notifications::setWhitelistedNotifyRcNames(const QStringList &whitelist)
     d->filterModel->setWhitelistedNotifyRcNames(whitelist);
 }
 
-bool Notifications::showSuppressed() const
-{
-    // TODO
-    return true;
-}
-
-void Notifications::setShowSuppressed(bool show)
-{
-    // TODO
-    Q_UNUSED(show);
-}
-
 bool Notifications::showJobs() const
 {
     return d->showJobs;
@@ -550,9 +538,6 @@ int Notifications::jobsPercentage() const
 
 void Notifications::expire(const QModelIndex &idx)
 {
-    // TODO we could just call the Server directly?
-    // FIXME just pass QModelIndex around
-
     switch (static_cast<Notifications::Type>(idx.data(Notifications::TypeRole).toInt())) {
     case Notifications::NotificationType:
         d->notificationsModel->expire(Private::notificationId(idx));

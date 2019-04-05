@@ -34,9 +34,7 @@ class Notification;
 class ServerPrivate;
 
 /**
- * @short Registers a notification server on the DBus
- *
- * TODO
+ * @short A notification DBus server
  *
  * @author Kai Uwe Broulik <kde@privat.broulik.de>
  **/

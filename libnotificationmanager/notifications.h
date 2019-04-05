@@ -31,9 +31,10 @@ namespace NotificationManager
 {
 
 /**
- * @short TODO
+ * @brief A model with notifications and jobs
  *
- * TODO
+ * This model contains application notifications as well as jobs
+ * and lets you apply fine-grained filter, sorting, and grouping rules.
  *
  * @author Kai Uwe Broulik <kde@privat.broulik.de>
  **/
@@ -112,14 +113,6 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
     Q_PROPERTY(QStringList whitelistedNotifyRcNames READ whitelistedNotifyRcNames WRITE setWhitelistedNotifyRcNames NOTIFY whitelistedNotifyRcNamesChanged)
 
     /**
-     * Whether to show suppressed notifications.
-     *
-     * Supressed notifications are those that should not be shown to the user owing to
-     * notification settings or Do Not Disturb mode.
-     */
-    Q_PROPERTY(bool showSuppressed READ showSuppressed WRITE setShowSuppressed NOTIFY showSuppressedChanged)
-
-    /**
      * Whether to show application jobs.
      */
     Q_PROPERTY(bool showJobs READ showJobs WRITE setShowJobs NOTIFY showJobsChanged)
@@ -131,10 +124,27 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
      */
     Q_PROPERTY(Urgencies urgencies READ urgencies WRITE setUrgencies NOTIFY urgenciesChanged)
 
+    /**
+     * The sort mode for notifications.
+     *
+     * Default is strictly by date created/updated.
+     */
     Q_PROPERTY(SortMode sortMode READ sortMode WRITE setSortMode NOTIFY sortModeChanged)
 
+    /**
+     * The group mode for notifications.
+     *
+     * Default is ungrouped.
+     */
     Q_PROPERTY(GroupMode groupMode READ groupMode WRITE setGroupMode NOTIFY groupModeChanged)
 
+    /**
+     * How many notifications are shown in each group.
+     *
+     * You can expand a group by setting the IsGroupExpandedRole to true.
+     *
+     * Default is 0, which means no limit.
+     */
     Q_PROPERTY(int groupLimit READ groupLimit WRITE setGroupLimit NOTIFY groupLimitChanged)
 
     /**
@@ -143,10 +153,13 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
     /**
-     * Whether there is an active, i.e. non-expired notification currently in the model
+     * The number of active, i.e. non-expired notifications
      */
     Q_PROPERTY(int activeNotificationsCount READ activeNotificationsCount NOTIFY activeNotificationsCountChanged)
 
+    /**
+     * The number of inactive, i.e. non-expired notifications
+     */
     Q_PROPERTY(int expiredNotificationsCount READ expiredNotificationsCount NOTIFY expiredNotificationsCountChanged)
 
     /**
@@ -156,9 +169,23 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
      */
     Q_PROPERTY(QDateTime lastRead READ lastRead WRITE setLastRead RESET resetLastRead NOTIFY lastReadChanged)
 
+    /**
+     * The number of notifications added since lastRead
+     *
+     * This can be used to show a "n unread notifications" label
+     */
     Q_PROPERTY(int unreadNotificationsCount READ unreadNotificationsCount NOTIFY unreadNotificationsCountChanged)
 
+    /**
+     * The number of active jobs
+     */
     Q_PROPERTY(int activeJobsCount READ activeJobsCount NOTIFY activeJobsCountChanged)
+    /**
+     * The combined percentage of all jobs.
+     *
+     * This is the average of all percentages and could can be used to show
+     * a global progress bar.
+     */
     Q_PROPERTY(int jobsPercentage READ jobsPercentage NOTIFY jobsPercentageChanged)
 
 public:
@@ -167,72 +194,83 @@ public:
 
     enum Roles {
         IdRole = Qt::UserRole + 1, ///< A notification identifier. This can be uint notification ID or string application job source.
-        SummaryRole = Qt::DisplayRole,
-        ImageRole = Qt::DecorationRole,
+        SummaryRole = Qt::DisplayRole, ///< The notification summary.
+        ImageRole = Qt::DecorationRole, ///< The notification main image, which is not the application icon. Only valid for pixmap icons.
 
-        IsGroupRole = Qt::UserRole + 2,
-        GroupChildrenCountRole,
-        IsGroupExpandedRole,
+        IsGroupRole = Qt::UserRole + 2, ///< Whether the item is a group
+        GroupChildrenCountRole, ///< The number of children in a group.
+        IsGroupExpandedRole, ///< Whether the group is expanded, this role is writable.
 
-        IsInGroupRole,
-        TypeRole,
-        CreatedRole,
-        UpdatedRole,
+        IsInGroupRole, ///< Whether the notification is currently inside a group.
+        TypeRole, ///< The type of model entry, either NotificationType or JobType.
+        CreatedRole, ///< When the notification was first created.
+        UpdatedRole, ///< When the notification was last updated, invalid when it hasn't been updated.
 
-        BodyRole,
-        IconNameRole,
+        BodyRole, ///< The notification body text.
+        IconNameRole, ///< The notification main icon, which is not the application icon. Only valid for icon names.
 
-        DesktopEntryRole,
-        NotifyRcNameRole,
+        DesktopEntryRole, ///< The desktop entry (without .desktop suffix, e.g. org.kde.spectacle) of the application that sent the notification.
+        NotifyRcNameRole, ///< The notifyrc name (e.g. spectaclerc) of the application that sent the notification.
 
-        ApplicationNameRole,
-        ApplicationIconNameRole,
-        DeviceNameRole,
+        ApplicationNameRole, ///< The user-visible name of the application (e.g. Spectacle)
+        ApplicationIconNameRole, ///< The icon name of the application
+        DeviceNameRole, ///< The name of the device the notification originally came from, if it was proxied through a sync service like KDE Connect
 
         // Jobs
-        JobStateRole,
-        PercentageRole,
-        ErrorRole,
-        ErrorTextRole,
-        SuspendableRole,
-        KillableRole,
-        JobDetailsRole,
+        JobStateRole, ///< The state of the job, either JobStateJopped, JobStateSuspended, or JobStateRunning.
+        PercentageRole, ///< The percentage of the job. Use @c jobsPercentage to get a global percentage for all jobs.
+        ErrorRole, ///< The error id of the job, zero in case of no error.
+        ErrorTextRole, ///< The user-visible error string of the job, empty in case of no error.
+        SuspendableRole, ///< Whether the job can be suspended @sa suspendJob
+        KillableRole, ///< Whether the job can be killed/canceled @sa killJob
+        JobDetailsRole, ///< A pointer to a JobDetails item containing more detailed information about the job
 
-        ActionNamesRole,
-        ActionLabelsRole,
-        HasDefaultActionRole,
-        DefaultActionLabelRole,
+        ActionNamesRole, ///< The IDs of the actions, excluding the default and settings action, e.g. [action1, action2]
+        ActionLabelsRole, ///< The user-visible labels of the actions, excluding the default and settings action, e.g. ["Accept", "Reject"]
+        HasDefaultActionRole, ///< Whether the notification has a default action, which is one that is invoked when the popup itself is clicked
+        DefaultActionLabelRole, ///< The user-visible label of the default action, typically not shown as the popup itself becomes clickable
 
-        UrlsRole,
+        UrlsRole, ///< A list of URLs associated with the notification, e.g. a path to a screenshot that was just taken or image received
 
-        UrgencyRole,
-        TimeoutRole,
+        UrgencyRole, ///< The notification urgency, either LowUrgency, NormalUrgency, or CriticalUrgency. Jobs do not have an urgency.
+        TimeoutRole, ///< The timeout for the notification in milliseconds. 0 means the notification should not timeout, -1 means a sensible default should be applied.
 
-        ConfigurableRole,
-        ConfigureActionLabelRole,
-        ClosableRole,
+        ConfigurableRole, ///< Whether the notification can be configured because a desktopEntry or notifyRcName is known, or the notification has a setting action. @sa configure
+        ConfigureActionLabelRole, ///< The user-visible label for the settings action
+        ClosableRole, ///< Whether the item can be closed. Notifications are always closable, jobs are only when in JobStateStopped.
 
         ExpiredRole, ///< The notification timed out and closed. Actions on it cannot be invoked anymore.
         DismissedRole ///< The notification got temporarily hidden by the user but could still be interacted with.
     };
 
+    /**
+     * The type of model item.
+     */
     enum Type {
         NoType,
-        NotificationType,
-        JobType
+        NotificationType, ///< This item represents a notification.
+        JobType ///< This item represents an application job.
     };
     Q_ENUM(Type)
 
+    /**
+     * The notification urgency.
+     *
+     * @note jobs do not have an urgency, yet still might be above normal urgency notifications.
+     */
     enum Urgency {
         // these don't match the spec's value
-        LowUrgency = 1 << 0,
-        NormalUrgency = 1 << 1,
+        LowUrgency = 1 << 0, ///< The notification has low urgency, it is not important and may not be shown or added to a history.
+        NormalUrgency = 1 << 1, ///< The notification has normal urgency. This is also the default if no urgecny is supplied.
         CriticalUrgency = 1 << 2
     };
     Q_ENUM(Urgency)
     Q_DECLARE_FLAGS(Urgencies, Urgency)
     Q_FLAG(Urgencies)
 
+    /**
+     * Which items should be cleared in a call to @c clear
+     */
     enum ClearFlag {
         ClearExpired = 1 << 1,
         // TODO more
@@ -241,20 +279,29 @@ public:
     Q_DECLARE_FLAGS(ClearFlags, ClearFlag)
     Q_FLAG(ClearFlags)
 
+    /**
+     * The state an application job is in.
+     */
     enum JobState {
-        JobStateStopped,
-        JobStateRunning,
-        JobStateSuspended
+        JobStateStopped, ///< The job is stopped. It has either finished (error is 0) or failed (error is not 0)
+        JobStateRunning, ///< The job is currently running.
+        JobStateSuspended ///< The job is currentl paused
     };
     Q_ENUM(JobState)
 
+    /**
+     * The sort mode for the model.
+     */
     enum SortMode {
-        SortByDate = 0,
+        SortByDate = 0, ///< Sort notifications strictly by the date they were updated or created.
         // should this be flags? SortJobsFirst | SortByUrgency | ...?
-        SortByTypeAndUrgency
+        SortByTypeAndUrgency ///< Sort notifications taking into account their type and urgency. The order is (descending): Critical, jobs, Normal, Low.
     };
     Q_ENUM(SortMode)
 
+    /**
+     * The group mode for the model.
+     */
     enum GroupMode {
         GroupDisabled = 0,
         //GroupApplicationsTree, // TODO make actual tree
@@ -282,9 +329,6 @@ public:
 
     QStringList whitelistedNotifyRcNames() const;
     void setWhitelistedNotifyRcNames(const QStringList &whitelist);
-
-    bool showSuppressed() const;
-    void setShowSuppressed(bool show);
 
     bool showJobs() const;
     void setShowJobs(bool showJobs);
@@ -334,6 +378,12 @@ public:
      * When the model index belongs to a group, the entire group is closed.
      */
     Q_INVOKABLE void close(const QModelIndex &idx);
+    /**
+     * @brief Configure a notification
+     *
+     * This will invoke the settings action, if available, otherwise open the
+     * kcm_notifications KCM for configuring the respective application and event.
+     */
     Q_INVOKABLE void configure(const QModelIndex &idx); // TODO pass ctx for transient handling
     /**
      * @brief Invoke the default notification action
@@ -351,7 +401,15 @@ public:
      */
     Q_INVOKABLE void invokeAction(const QModelIndex &idx, const QString &actionId);
 
+    /**
+     * @brief Start automatic timeout of notifications
+     *
+     * Call this if you no longer handle the timeout yourself.
+     *
+     * @sa stopTimeout
+     */
     Q_INVOKABLE void startTimeout(const QModelIndex &idx);
+
     Q_INVOKABLE void startTimeout(uint notificationId);
     /**
      * @brief Stop the automatic timeout of notifications
@@ -365,8 +423,17 @@ public:
      */
     Q_INVOKABLE void stopTimeout(const QModelIndex &idx);
 
+    /**
+     * @brief Suspend a job
+     */
     Q_INVOKABLE void suspendJob(const QModelIndex &idx);
+    /**
+     * @brief Resume a job
+     */
     Q_INVOKABLE void resumeJob(const QModelIndex &idx);
+    /**
+     * @brief Kill a job
+     */
     Q_INVOKABLE void killJob(const QModelIndex &idx);
 
     /**
@@ -393,7 +460,6 @@ signals:
     void blacklistedNotifyRcNamesChanged();
     void whitelistedDesktopEntriesChanged();
     void whitelistedNotifyRcNamesChanged();
-    void showSuppressedChanged();
     void showJobsChanged();
     void urgenciesChanged();
     void sortModeChanged();

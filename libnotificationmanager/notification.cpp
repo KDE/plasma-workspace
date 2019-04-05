@@ -227,7 +227,9 @@ void Notification::Private::processHints(const QVariantMap &hints)
     auto end = hints.end();
 
     desktopEntry = hints.value(QStringLiteral("desktop-entry")).toString();
-    serviceName.clear();
+
+    QString serviceName;
+
     configurableService = false;
     if (!desktopEntry.isEmpty()) {
         KService::Ptr service = KService::serviceByDesktopName(desktopEntry);
