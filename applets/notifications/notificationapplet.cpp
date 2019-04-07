@@ -21,8 +21,6 @@
 
 #include "notificationapplet.h"
 
-#include "config-notificationsapplet.h"
-
 #include <QClipboard>
 #include <QDrag>
 #include <QMimeData>
