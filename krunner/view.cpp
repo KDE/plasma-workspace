@@ -366,6 +366,11 @@ void View::addToHistory(const QString &item)
         return;
     }
 
+    // Avoid removing the same item from the front and prepending it again
+    if (!m_history.isEmpty() && m_history.constFirst() == item) {
+        return;
+    }
+
     if (!KAuthorized::authorize(QStringLiteral("lineedit_text_completion"))) {
         return;
     }
