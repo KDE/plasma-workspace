@@ -31,7 +31,8 @@ Item {
     implicitHeight: mainColumn.implicitHeight
 
     property var cfg_sources: []
-    onCfg_sourcesChanged: {
+
+    function sourcesChanged() {
         if (! cfg_sources) { cfg_sources = [] }
         if (cfg_sources.length == 0) {
             for (var i in mainColumn.children) {
@@ -49,6 +50,11 @@ Item {
             }
         }
     }
+
+    onCfg_sourcesChanged: {
+        sourcesChanged();
+    }
+
     property int cfg_updateInterval
 
     signal sourceAdded(string source)
@@ -94,6 +100,7 @@ Item {
             var source = smSource.sources[i];
             iconsPage.sourceAdded(source);
         }
+        sourcesChanged();
     }
 
     ListModel {
