@@ -1,2 +1,6 @@
 [Services][spectacle]
 ShowPopupsInDndMode=true
+
+# Defaults for media players so their track change notifications don't accumulate in the history
+[Applications][vlc]
+ShowInHistory=false

@@ -20,6 +20,7 @@
 
 #include "notifications.h"
 
+#include <QDebug>
 #include <QSharedPointer>
 
 #include <KConcatenateRowsProxyModel>
@@ -38,9 +39,9 @@
 
 #include "notification.h"
 
-#include "debug.h"
+#include "utils_p.h"
 
-#include <QDebug>
+#include "debug.h"
 
 using namespace NotificationManager;
 
@@ -50,13 +51,17 @@ public:
     explicit Private(Notifications *q);
     ~Private();
 
-    void initModels();
+    void initSourceModels();
+    void initProxyModels();
+
     void updateCount();
 
+    bool showNotifications = true;
     bool showJobs = false;
 
     Notifications::GroupMode groupMode = Notifications::GroupDisabled;
     int groupLimit = 0;
+    bool expandUnread = false;
 
     int activeNotificationsCount = 0;
     int expiredNotificationsCount = 0;
@@ -69,8 +74,9 @@ public:
     static bool isGroup(const QModelIndex &idx);
     static uint notificationId(const QModelIndex &idx);
     static QString jobId(const QModelIndex &idx);
-    static QModelIndex mapToModel(const QModelIndex &idx, const QAbstractItemModel *model);
+    QModelIndex mapFromModel(const QModelIndex &idx) const;
 
+    // NOTE when you add or re-arrange models make sure to update mapFromModel()!
     NotificationsModel::Ptr notificationsModel;
     JobsModel::Ptr jobsModel;
     QSharedPointer<Settings> settings() const;
@@ -100,9 +106,36 @@ Notifications::Private::~Private()
 
 }
 
-void Notifications::Private::initModels()
+void Notifications::Private::initSourceModels()
+{
+    Q_ASSERT(notificationsAndJobsModel); // initProxyModels must be called before initSourceModels
+
+    if (showNotifications && !notificationsModel) {
+        notificationsModel = NotificationsModel::createNotificationsModel();
+        connect(notificationsModel.data(), &NotificationsModel::lastReadChanged, q, [this] {
+            updateCount();
+            emit q->lastReadChanged();
+        });
+        notificationsAndJobsModel->addSourceModel(notificationsModel.data());
+    } else if (!showNotifications && notificationsModel) {
+        notificationsAndJobsModel->removeSourceModel(notificationsModel.data());
+        disconnect(notificationsModel.data(), nullptr, q, nullptr); // disconnect all
+        notificationsModel = nullptr;
+    }
+
+    if (showJobs && !jobsModel) {
+        jobsModel = JobsModel::createJobsModel();
+        notificationsAndJobsModel->addSourceModel(jobsModel.data());
+    } else if (!showJobs && jobsModel) {
+        notificationsAndJobsModel->removeSourceModel(jobsModel.data());
+        jobsModel = nullptr;
+    }
+}
+
+void Notifications::Private::initProxyModels()
 {
     /* The data flow is as follows:
+     * NOTE when you add or re-arrange models make sure to update mapFromModel()!
      *
      * NotificationsModel      JobsModel
      *        \\                 /
@@ -139,17 +172,8 @@ void Notifications::Private::initModels()
      *               \o/ <- Happy user seeing their notifications
      */
 
-    if (!notificationsModel) {
-        notificationsModel = NotificationsModel::createNotificationsModel();
-        connect(notificationsModel.data(), &NotificationsModel::lastReadChanged, q, [this] {
-            updateCount();
-            emit q->lastReadChanged();
-        });
-    }
-
     if (!notificationsAndJobsModel) {
         notificationsAndJobsModel = new KConcatenateRowsProxyModel(q);
-        notificationsAndJobsModel->addSourceModel(notificationsModel.data());
     }
 
     if (!filterModel) {
@@ -200,6 +224,8 @@ void Notifications::Private::initModels()
         if (!groupCollapsingModel) {
             groupCollapsingModel = new NotificationGroupCollapsingProxyModel(q);
             groupCollapsingModel->setLimit(groupLimit);
+            groupCollapsingModel->setExpandUnread(expandUnread);
+            groupCollapsingModel->setLastRead(q->lastRead());
             groupCollapsingModel->setSourceModel(groupingModel);
         }
 
@@ -247,8 +273,11 @@ void Notifications::Private::updateCount()
             date = idx.data(Notifications::CreatedRole).toDateTime();
         }
 
-        if (date > notificationsModel->lastRead()) {
-            ++unread;
+        // TODO Jobs could also be unread?
+        if (notificationsModel) {
+            if (date > notificationsModel->lastRead()) {
+                ++unread;
+            }
         }
 
         if (idx.data(Notifications::TypeRole).toInt() == Notifications::JobType) {
@@ -292,6 +321,7 @@ bool Notifications::Private::isGroup(const QModelIndex &idx)
     return idx.data(Notifications::IsGroupRole).toBool();
 }
 
+// FIXME remove once we just map to the source model
 uint Notifications::Private::notificationId(const QModelIndex &idx)
 {
     return idx.data(Notifications::IdRole).toUInt();
@@ -302,16 +332,49 @@ QString Notifications::Private::jobId(const QModelIndex &idx)
     return idx.data(Notifications::IdRole).toString();
 }
 
-QModelIndex Notifications::Private::mapToModel(const QModelIndex &idx, const QAbstractItemModel *model)
+QModelIndex Notifications::Private::mapFromModel(const QModelIndex &idx) const
 {
     QModelIndex resolvedIdx = idx;
-    while (resolvedIdx.isValid() && resolvedIdx.model() != model) {
-        if (auto *proxyModel = qobject_cast<const QAbstractProxyModel *>(resolvedIdx.model())) {
-            resolvedIdx = proxyModel->mapToSource(resolvedIdx);
-        } else {
-            if (resolvedIdx.model() != model) {
-                resolvedIdx = QModelIndex(); // give up
+
+    QAbstractItemModel *models[] = {
+        notificationsAndJobsModel,
+        filterModel,
+        sortModel,
+        groupingModel,
+        groupCollapsingModel,
+        flattenModel,
+        limiterModel,
+    };
+
+    // TODO can we do this with a generic loop like mapFromModel
+    while (resolvedIdx.isValid() && resolvedIdx.model() != q) {
+        const auto *idxModel = resolvedIdx.model();
+
+        // HACK try to find the model that uses the index' model as source
+        bool found = false;
+        for (QAbstractItemModel *model : models) {
+            if (!model) {
+                continue;
             }
+
+            if (auto *proxyModel = qobject_cast<QAbstractProxyModel *>(model)) {
+                if (proxyModel->sourceModel() == idxModel) {
+                    resolvedIdx = proxyModel->mapFromSource(resolvedIdx);
+                    found = true;
+                    break;
+                }
+            } else if (auto *concatenateModel = qobject_cast<KConcatenateRowsProxyModel *>(model)) {
+                // There's no "sourceModels()" on KConcatenateRowsProxyModel
+                if (idxModel == notificationsModel.data() || idxModel == jobsModel.data()) {
+                    resolvedIdx = concatenateModel->mapFromSource(resolvedIdx);
+                    found = true;
+                    break;
+                }
+            }
+        }
+
+        if (!found) {
+            break;
         }
     }
     return resolvedIdx;
@@ -332,12 +395,19 @@ Notifications::Notifications(QObject *parent)
     : QSortFilterProxyModel(parent)
     , d(new Private(this))
 {
-    d->initModels();
+    // The proxy models are always the same, just with different
+    // properties set whereas we want to avoid loading a source model
+    // e.g. notifications or jobs when we're not actually using them
+    d->initProxyModels();
+
+    // init source models when used from C++
+    QMetaObject::invokeMethod(this, [this] {
+        d->initSourceModels();
+    }, Qt::QueuedConnection);
 }
 
 Notifications::~Notifications() = default;
 
-// TODO why are we QQmlParserStatus if we don't use it?
 void Notifications::classBegin()
 {
 
@@ -345,7 +415,8 @@ void Notifications::classBegin()
 
 void Notifications::componentComplete()
 {
-
+    // init source models when used from QML
+    d->initSourceModels();
 }
 
 int Notifications::limit() const
@@ -374,6 +445,24 @@ void Notifications::setGroupLimit(int limit)
         d->groupCollapsingModel->setLimit(limit);
     }
     emit groupLimitChanged();
+}
+
+bool Notifications::expandUnread() const
+{
+    return d->expandUnread;
+}
+
+void Notifications::setExpandUnread(bool expand)
+{
+    if (d->expandUnread == expand) {
+        return;
+    }
+
+    d->expandUnread = expand;
+    if (d->groupCollapsingModel) {
+        d->groupCollapsingModel->setExpandUnread(expand);
+    }
+    emit expandUnreadChanged();
 }
 
 bool Notifications::showExpired() const
@@ -436,25 +525,36 @@ void Notifications::setWhitelistedNotifyRcNames(const QStringList &whitelist)
     d->filterModel->setWhitelistedNotifyRcNames(whitelist);
 }
 
+bool Notifications::showNotifications() const
+{
+    return d->showNotifications;
+}
+
+void Notifications::setShowNotifications(bool show)
+{
+    if (d->showNotifications == show) {
+        return;
+    }
+
+    d->showNotifications = show;
+    d->initSourceModels();
+    emit showNotificationsChanged();
+}
+
 bool Notifications::showJobs() const
 {
     return d->showJobs;
 }
 
-void Notifications::setShowJobs(bool showJobs)
+void Notifications::setShowJobs(bool show)
 {
-    if (d->showJobs == showJobs) {
+    if (d->showJobs == show) {
         return;
     }
 
-    if (showJobs) {
-        d->jobsModel = JobsModel::createJobsModel();
-        d->notificationsAndJobsModel->addSourceModel(d->jobsModel.data());
-    } else {
-        d->notificationsAndJobsModel->removeSourceModel(d->jobsModel.data());
-        d->jobsModel = nullptr;
-    }
-    d->showJobs = showJobs;
+    d->showJobs = show;
+    d->initSourceModels();
+    emit showJobsChanged();
 }
 
 Notifications::Urgencies Notifications::urgencies() const
@@ -486,7 +586,7 @@ void Notifications::setGroupMode(GroupMode groupMode)
 {
     if (d->groupMode != groupMode) {
         d->groupMode = groupMode;
-        d->initModels();
+        d->initProxyModels();
         emit groupModeChanged();
     }
 }
@@ -508,12 +608,21 @@ int Notifications::expiredNotificationsCount() const
 
 QDateTime Notifications::lastRead() const
 {
-    return d->notificationsModel->lastRead();
+    if (d->notificationsModel) {
+        return d->notificationsModel->lastRead();
+    }
+    return QDateTime();
 }
 
 void Notifications::setLastRead(const QDateTime &lastRead)
 {
-    d->notificationsModel->setLastRead(lastRead);
+    // TODO jobs could also be unread?
+    if (d->notificationsModel) {
+        d->notificationsModel->setLastRead(lastRead);
+    }
+    if (d->groupCollapsingModel) {
+        d->groupCollapsingModel->setLastRead(lastRead);
+    }
 }
 
 void Notifications::resetLastRead()
@@ -536,6 +645,11 @@ int Notifications::jobsPercentage() const
     return d->jobsPercentage;
 }
 
+QPersistentModelIndex Notifications::makePersistentModelIndex(const QModelIndex &idx) const
+{
+    return QPersistentModelIndex(idx);
+}
+
 void Notifications::expire(const QModelIndex &idx)
 {
     switch (static_cast<Notifications::Type>(idx.data(Notifications::TypeRole).toInt())) {
@@ -553,7 +667,7 @@ void Notifications::expire(const QModelIndex &idx)
 void Notifications::close(const QModelIndex &idx)
 {
     if (idx.data(Notifications::IsGroupRole).toBool()) {
-        const QModelIndex groupIdx = Private::mapToModel(idx, d->groupingModel);
+        const QModelIndex groupIdx = Utils::mapToModel(idx, d->groupingModel);
         if (!groupIdx.isValid()) {
             qCWarning(NOTIFICATIONMANAGER) << "Failed to find group model index for this item";
             return;
@@ -587,6 +701,10 @@ void Notifications::close(const QModelIndex &idx)
 
 void Notifications::configure(const QModelIndex &idx)
 {
+    if (!d->notificationsModel) {
+        return;
+    }
+
     // For groups just configure the application, not the individual event
     if (Private::isGroup(idx)) {
         const QString desktopEntry = idx.data(Notifications::DesktopEntryRole).toString();
@@ -601,12 +719,16 @@ void Notifications::configure(const QModelIndex &idx)
 
 void Notifications::invokeDefaultAction(const QModelIndex &idx)
 {
-    d->notificationsModel->invokeDefaultAction(Private::notificationId(idx));
+    if (d->notificationsModel) {
+        d->notificationsModel->invokeDefaultAction(Private::notificationId(idx));
+    }
 }
 
 void Notifications::invokeAction(const QModelIndex &idx, const QString &actionId)
 {
-    d->notificationsModel->invokeAction(Private::notificationId(idx), actionId);
+    if (d->notificationsModel) {
+        d->notificationsModel->invokeAction(Private::notificationId(idx), actionId);
+    }
 }
 
 void Notifications::startTimeout(const QModelIndex &idx)
@@ -616,33 +738,69 @@ void Notifications::startTimeout(const QModelIndex &idx)
 
 void Notifications::startTimeout(uint notificationId)
 {
-    d->notificationsModel->startTimeout(notificationId);
+    if (d->notificationsModel) {
+        d->notificationsModel->startTimeout(notificationId);
+    }
 }
 
 void Notifications::stopTimeout(const QModelIndex &idx)
 {
-    d->notificationsModel->stopTimeout(Private::notificationId(idx));
+    if (d->notificationsModel) {
+        d->notificationsModel->stopTimeout(Private::notificationId(idx));
+    }
 }
 
 void Notifications::suspendJob(const QModelIndex &idx)
 {
-    d->jobsModel->suspend(Private::jobId(idx));
+    if (d->jobsModel) {
+        d->jobsModel->suspend(Private::jobId(idx));
+    }
 }
 
 void Notifications::resumeJob(const QModelIndex &idx)
 {
-    d->jobsModel->resume(Private::jobId(idx));
+    if (d->jobsModel) {
+        d->jobsModel->resume(Private::jobId(idx));
+    }
 }
 
 void Notifications::killJob(const QModelIndex &idx)
 {
-    d->jobsModel->kill(Private::jobId(idx));
+    if (d->jobsModel) {
+        d->jobsModel->kill(Private::jobId(idx));
+    }
 }
 
 void Notifications::clear(ClearFlags flags)
 {
-    d->notificationsModel->clear(flags);
-    d->jobsModel->clear(flags);
+    if (d->notificationsModel) {
+        d->notificationsModel->clear(flags);
+    }
+    if (d->jobsModel) {
+        d->jobsModel->clear(flags);
+    }
+}
+
+QModelIndex Notifications::groupIndex(const QModelIndex &idx) const
+{
+    if (idx.data(Notifications::IsGroupRole).toBool()) {
+        return idx;
+    }
+
+    if (idx.data(Notifications::IsInGroupRole).toBool()) {
+        QModelIndex groupingIdx = Utils::mapToModel(idx, d->groupingModel);
+        return d->mapFromModel(groupingIdx.parent());
+    }
+
+    qCWarning(NOTIFICATIONMANAGER) << "Cannot get group index for item that isn't a group or inside one";
+    return QModelIndex();
+}
+
+void Notifications::collapseAllGroups()
+{
+    if (d->groupCollapsingModel) {
+        d->groupCollapsingModel->collapseAll();
+    }
 }
 
 QVariant Notifications::data(const QModelIndex &index, int role) const
@@ -676,6 +834,7 @@ QHash<int, QByteArray> Notifications::roleNames() const
         {IdRole, QByteArrayLiteral("notificationId")}, // id is QML-reserved
         {IsGroupRole, QByteArrayLiteral("isGroup")},
         {GroupChildrenCountRole, QByteArrayLiteral("groupChildrenCount")},
+        {ExpandedGroupChildrenCountRole, QByteArrayLiteral("expandedGroupChildrenCount")},
         {IsGroupExpandedRole, QByteArrayLiteral("isGroupExpanded")},
         {IsInGroupRole, QByteArrayLiteral("isInGroup")},
         {TypeRole, QByteArrayLiteral("type")},

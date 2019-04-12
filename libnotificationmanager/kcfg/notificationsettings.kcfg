@@ -20,7 +20,7 @@
         </entry>
         <entry name="PopupPosition" type="Enum">
             <choices name="Settings::PopupPosition">
-                <choice name="NearWidget" />
+                <choice name="CloseToWidget" />
                 <choice name="TopLeft" />
                 <choice name="TopCenter" />
                 <choice name="TopRight" />
@@ -28,7 +28,7 @@
                 <choice name="BottomCenter" />
                 <choice name="BottomRight" />
             </choices>
-            <default>NearWidget</default>
+            <default>CloseToWidget</default>
         </entry>
         <entry name="PopupTimeout" type="Int">
             <default>5000</default><!-- milliseconds -->

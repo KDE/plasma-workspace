@@ -38,6 +38,8 @@
 #include <algorithm>
 #include <functional>
 
+static const int s_notificationsLimit = 1000;
+
 using namespace NotificationManager;
 
 class Q_DECL_HIDDEN NotificationsModel::Private
@@ -94,10 +96,23 @@ void NotificationsModel::Private::onNotificationAdded(const Notification &notifi
         }
     }
 
+    // Once we reach a certain insane number of notifications discard some old ones
+    // as we keep pixmaps around etc
+    if (notifications.count() >= s_notificationsLimit) {
+        const int cleanupCount = s_notificationsLimit / 2;
+        qCDebug(NOTIFICATIONMANAGER) << "Reached the notification limit of" << s_notificationsLimit << ", discarding the oldest" << cleanupCount << "notifications";
+        q->beginRemoveRows(QModelIndex(), 0, cleanupCount - 1);
+        for (int i = 0 ; i < cleanupCount; ++i) {
+            notifications.removeAt(0);
+            // TODO close gracefully?
+        }
+        q->endRemoveRows();
+    }
+
     setupNotificationTimeout(notification);
 
     q->beginInsertRows(QModelIndex(), notifications.count(), notifications.count());
-    notifications.append(notification);
+    notifications.append(std::move(notification));
     q->endInsertRows();
 }
 
@@ -263,7 +278,11 @@ QVariant NotificationsModel::data(const QModelIndex &index, int role) const
         break;
     case Notifications::SummaryRole: return notification.summary();
     case Notifications::BodyRole: return notification.body();
-    case Notifications::IconNameRole: return notification.iconName();
+    case Notifications::IconNameRole:
+        if (notification.image().isNull()) {
+            return notification.icon();
+        }
+        break;
     case Notifications::ImageRole:
         if (!notification.image().isNull()) {
             return notification.image();

@@ -29,6 +29,8 @@
 
 #include "server.h"
 
+#include "utils_p.h"
+
 #include <QDBusConnection>
 #include <QDBusServiceWatcher>
 
@@ -36,9 +38,6 @@
 #include <KService>
 #include <KSharedConfig>
 #include <KUser>
-
-#include <processcore/processes.h>
-#include <processcore/process.h>
 
 using namespace NotificationManager;
 
@@ -116,16 +115,17 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
     if (wasReplaced) {
         notificationId = replaces_id;
     } else {
-        // TODO according to spec should wrap around once INT_MAX is exceeded
-        ++m_highestNotificationId;
+        // Avoid wrapping around to 0 in case of overflow
+        if (!m_highestNotificationId) {
+            ++m_highestNotificationId;
+        }
         notificationId = m_highestNotificationId;
+        ++m_highestNotificationId;
     }
 
     Notification notification(notificationId);
     notification.setSummary(summary);
     notification.setBody(body);
-    // we actually use that as notification icon (unless an image pixmap is provided in hints)
-    notification.setIconName(app_icon);
     notification.setApplicationName(app_name);
 
     notification.setActions(actions);
@@ -135,21 +135,19 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
     // might override some of the things we set above (like application name)
     notification.d->processHints(hints);
 
+    // If we didn't get a pixmap, load the app_icon instead
+    if (notification.d->image.isNull()) {
+        notification.setIcon(app_icon);
+    }
+
     // No application name? Try to figure out the process name using the sender's PID
     if (notification.applicationName().isEmpty()) {
         qCInfo(NOTIFICATIONMANAGER) << "Notification from service" << message().service() << "didn't contain any identification information, this is an application bug!";
 
-        QDBusReply<uint> pidReply = connection().interface()->servicePid(message().service());
-        if (pidReply.isValid()) {
-            const auto pid = pidReply.value();
-
-            KSysGuard::Processes procs;
-            procs.updateOrAddProcess(pid);
-
-            if (KSysGuard::Process *proc = procs.getProcess(pid)) {
-                qCDebug(NOTIFICATIONMANAGER) << "Resolved notification to be from PID" << pid << "which is" << proc->name();
-                notification.setApplicationName(proc->name());
-            }
+        const QString processName = Utils::processNameFromDBusService(connection(), message().service());
+        if (!processName.isEmpty()) {
+            qCDebug(NOTIFICATIONMANAGER) << "Resolved notification to be from" << processName;
+            notification.setApplicationName(processName);
         }
     }
 
@@ -179,10 +177,10 @@ QStringList ServerPrivate::GetCapabilities() const
         QStringLiteral("body-images"),
         QStringLiteral("icon-static"),
         QStringLiteral("actions"),
-        // should we support "persistence" where notification stays present with "resident"
-        // but that is basically an SNI isn't it?
 
         QStringLiteral("x-kde-urls"),
+        QStringLiteral("x-kde-device-name"),
+        QStringLiteral("x-kde-display-appname"),
 
         QStringLiteral("inhibitions")
     };
@@ -321,11 +319,6 @@ void ServerPrivate::UnInhibit(uint cookie)
     }
 }
 
-/*QList<Inhibition> ServerPrivate::ListInhibitors() const
-{
-    return m_inhibitions.values();
-}*/
-
 QList<Inhibition> ServerPrivate::inhibitions() const
 {
     return m_inhibitions.values();
@@ -333,6 +326,9 @@ QList<Inhibition> ServerPrivate::inhibitions() const
 
 bool ServerPrivate::inhibited() const
 {
+    // TODO this currently only returns whether an app has an inhibition going,
+    // there's no way for apps to query whether user enabled do not disturb from the applet
+    // so they could change their behavior.
     return !m_inhibitions.isEmpty();
 }
 

@@ -65,8 +65,8 @@ public:
     QString body() const;
     void setBody(const QString &body);
 
-    QString iconName() const;
-    void setIconName(const QString &iconName);
+    QString icon() const;
+    void setIcon(const QString &icon);
 
     QImage image() const;
     void setImage(const QImage &image);

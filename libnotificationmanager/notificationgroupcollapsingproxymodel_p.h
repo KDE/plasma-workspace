@@ -21,6 +21,7 @@
 #pragma once
 
 #include <QSortFilterProxyModel>
+#include <QDateTime>
 
 namespace NotificationManager {
 
@@ -40,8 +41,18 @@ public:
     int limit() const;
     void setLimit(int limit);
 
+    QDateTime lastRead() const;
+    void setLastRead(const QDateTime &lastRead);
+
+    bool expandUnread() const;
+    void setExpandUnread(bool expand);
+
+    void collapseAll();
+
 signals:
     void limitChanged();
+    void lastReadChanged();
+    void expandUnreadChanged();
 
 protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
@@ -49,7 +60,12 @@ protected:
 private:
     bool setGroupExpanded(const QModelIndex &idx, bool expanded);
 
+    void invalidateGroupRoles();
+
     int m_limit;
+    QDateTime m_lastRead;
+    bool m_expandUnread = false;
+
     QList<QPersistentModelIndex> m_expandedGroups;
 
 };

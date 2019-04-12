@@ -26,6 +26,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
+
 import org.kde.notificationmanager 1.0 as NotificationManager
 
 ColumnLayout {
@@ -53,7 +55,7 @@ ColumnLayout {
 
     // This isn't an alias because TextEdit RichText adds some HTML tags to it
     property string body
-    property alias icon: iconItem.source
+    property var icon
     property var urls: []
 
     property int jobState
@@ -197,18 +199,38 @@ ColumnLayout {
                     onLinkActivated: Qt.openUrlExternally(link)
                 }
 
-                // inGroup IconItem is reparented here
+                // inGroup iconContainer is reparented here
             }
         }
 
-        PlasmaCore.IconItem {
-            id: iconItem
+        Item {
+            id: iconContainer
+
             Layout.preferredWidth: units.iconSizes.large
             Layout.preferredHeight: units.iconSizes.large
-            usesPlasmaTheme: false
-            smooth: true
-            // don't show two identical icons
-            visible: valid && source != notificationItem.applicationIconSource
+
+            visible: iconItem.active || imageItem.active
+
+            PlasmaCore.IconItem {
+                id: iconItem
+                // don't show two identical icons
+                readonly property bool active: valid && source != notificationItem.applicationIconSource
+                anchors.fill: parent
+                usesPlasmaTheme: false
+                smooth: true
+                source: typeof notificationItem.icon === "string" ? notificationItem.icon : ""
+                visible: active
+            }
+
+            KQCAddons.QImageItem {
+                id: imageItem
+                readonly property bool active: !null && nativeWidth > 0
+                anchors.fill: parent
+                smooth: true
+                fillMode: KQCAddons.QImageItem.PreserveAspectFit
+                visible: active
+                image: typeof notificationItem.icon === "object" ? notificationItem.icon : undefined
+            }
         }
     }
 
@@ -322,7 +344,7 @@ ColumnLayout {
             }*/
 
             PropertyChanges {
-                target: iconItem
+                target: iconContainer
                 parent: bodyTextRow
             }
         }

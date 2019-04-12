@@ -1,6 +1,6 @@
 add_subdirectory(declarative)
 if(BUILD_TESTING)
-   #add_subdirectory(autotests)
+   add_subdirectory(autotests)
 endif()
 
 set(notificationmanager_LIB_SRCS
@@ -21,10 +21,9 @@ set(notificationmanager_LIB_SRCS
     jobdetails.cpp
 
     limitedrowcountproxymodel.cpp
-)
 
-set(HAVE_PULSEAUDIOQT ${KF5PulseAudioQt_FOUND})
-configure_file(config-notificationmanager.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-notificationmanager.h )
+    utils.cpp
+)
 
 ecm_qt_declare_logging_category(notificationmanager_LIB_SRCS
     HEADER debug.h
@@ -67,10 +66,6 @@ target_link_libraries(notificationmanager
         KF5::ProcessCore
         KF5::Service
 )
-
-if(KF5PulseAudioQt_FOUND)
-    target_link_libraries(notificationmanager PRIVATE KF5::PulseAudioQt)
-endif()
 
 set_target_properties(notificationmanager PROPERTIES
                       VERSION ${PROJECT_VERSION}

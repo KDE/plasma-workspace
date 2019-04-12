@@ -53,9 +53,8 @@ void NotificationGroupCollapsingProxyModel::setSourceModel(QAbstractItemModel *s
 
             if (roles.isEmpty() || roles.contains(Notifications::IsGroupRole)) {
                 if (!topLeft.data(Notifications::IsGroupRole).toBool()) {
-                    const QModelIndex proxyIdx = mapFromSource(topLeft);
-                    if (m_expandedGroups.contains(proxyIdx)) {
-                        setGroupExpanded(proxyIdx, false);
+                    if (m_expandedGroups.contains(topLeft)) {
+                        setGroupExpanded(topLeft, false);
                     }
                 }
             }
@@ -65,18 +64,17 @@ void NotificationGroupCollapsingProxyModel::setSourceModel(QAbstractItemModel *s
 
 QVariant NotificationGroupCollapsingProxyModel::data(const QModelIndex &index, int role) const
 {
-    if (role == NotificationManager::Notifications::IsGroupExpandedRole) {
+    switch (role) {
+    case NotificationManager::Notifications::IsGroupExpandedRole: {
         if (m_limit > 0) {
             // so each item in a group knows whether the group is expanded
-            const QModelIndex parentIdx = index.parent();
-            if (parentIdx.isValid()) {
-                return m_expandedGroups.contains(parentIdx);
-            } else {
-                return m_expandedGroups.contains(index);
-            }
-        } else {
-            return true;
+            const QModelIndex sourceIdx = mapToSource(index);
+            return m_expandedGroups.contains(sourceIdx.parent().isValid() ? sourceIdx.parent() : sourceIdx);
         }
+        return true;
+    }
+    case NotificationManager::Notifications::ExpandedGroupChildrenCountRole:
+        return rowCount(index.parent().isValid() ? index.parent() : index);
     }
 
     return QSortFilterProxyModel::data(index, role);
@@ -100,7 +98,7 @@ bool NotificationGroupCollapsingProxyModel::setData(const QModelIndex &index, co
         return setGroupExpanded(groupIdx, expanded);
     }
 
-    return false;
+    return QSortFilterProxyModel::setData(index, value, role);
 }
 
 int NotificationGroupCollapsingProxyModel::limit() const
@@ -113,8 +111,47 @@ void NotificationGroupCollapsingProxyModel::setLimit(int limit)
     if (m_limit != limit) {
         m_limit = limit;
         invalidateFilter();
+        invalidateGroupRoles();
         emit limitChanged();
     }
+}
+
+QDateTime NotificationGroupCollapsingProxyModel::lastRead() const
+{
+    return m_lastRead;
+}
+
+void NotificationGroupCollapsingProxyModel::setLastRead(const QDateTime &lastRead)
+{
+    if (m_lastRead != lastRead) {
+        m_lastRead = lastRead;
+        invalidateFilter();
+        invalidateGroupRoles();
+        emit lastReadChanged();
+    }
+}
+
+bool NotificationGroupCollapsingProxyModel::expandUnread() const
+{
+    return m_expandUnread;
+}
+
+void NotificationGroupCollapsingProxyModel::setExpandUnread(bool expand)
+{
+    if (m_expandUnread != expand) {
+        m_expandUnread = expand;
+        invalidateFilter();
+        invalidateGroupRoles();
+        emit expandUnreadChanged();
+    }
+}
+
+void NotificationGroupCollapsingProxyModel::collapseAll()
+{
+    m_expandedGroups.clear();
+
+    invalidateFilter();
+    invalidateGroupRoles();
 }
 
 bool NotificationGroupCollapsingProxyModel::setGroupExpanded(const QModelIndex &idx, bool expanded)
@@ -123,7 +160,7 @@ bool NotificationGroupCollapsingProxyModel::setGroupExpanded(const QModelIndex &
         return false;
     }
 
-    QPersistentModelIndex persistentIdx(idx);
+    QPersistentModelIndex persistentIdx(mapToSource(idx));
     if (expanded) {
         m_expandedGroups.append(persistentIdx);
     } else {
@@ -132,19 +169,43 @@ bool NotificationGroupCollapsingProxyModel::setGroupExpanded(const QModelIndex &
 
     invalidateFilter();
 
-    emit dataChanged(idx, idx, {Notifications::IsGroupExpandedRole});
+    const QVector<int> dirtyRoles = {Notifications::ExpandedGroupChildrenCountRole, Notifications::IsGroupExpandedRole};
 
-    // also signal the children
-    emit dataChanged(idx.child(0, 0), idx.child(rowCount(idx) - 1, 0), {Notifications::IsGroupExpandedRole});
+    emit dataChanged(idx, idx, dirtyRoles);
+    emit dataChanged(idx.child(0, 0), idx.child(rowCount(idx) - 1, 0), dirtyRoles);
 
     return true;
+}
+
+void NotificationGroupCollapsingProxyModel::invalidateGroupRoles()
+{
+    const QVector<int> dirtyRoles = {Notifications::ExpandedGroupChildrenCountRole, Notifications::IsGroupExpandedRole};
+
+    emit dataChanged(index(0, 0), index(rowCount() - 1, 0), dirtyRoles);
+
+    for (int row = 0; row < rowCount(); ++row) {
+        const QModelIndex groupIdx = index(row, 0);
+        emit dataChanged(groupIdx.child(0, 0), groupIdx.child(rowCount(groupIdx) - 1, 0), dirtyRoles);
+    }
 }
 
 bool NotificationGroupCollapsingProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     if (source_parent.isValid() && m_limit > 0) {
-        if (!m_expandedGroups.isEmpty() && m_expandedGroups.contains(mapFromSource(source_parent))) {
+        if (!m_expandedGroups.isEmpty() && m_expandedGroups.contains(source_parent)) {
             return true;
+        }
+
+        if (m_expandUnread && m_lastRead.isValid()) {
+            const QModelIndex sourceIdx = sourceModel()->index(source_row, 0, source_parent);
+            QDateTime time = sourceIdx.data(Notifications::UpdatedRole).toDateTime();
+            if (!time.isValid()) {
+                time = sourceIdx.data(Notifications::CreatedRole).toDateTime();
+            }
+
+            if (time.isValid() && m_lastRead < time) {
+                return true;
+            }
         }
 
         // should we raise the limit when there's just one group?

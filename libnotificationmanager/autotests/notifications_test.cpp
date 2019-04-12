@@ -20,7 +20,8 @@
 #include <QtTest>
 #include <QObject>
 #include <QDebug>
-#include "notificationsanitizer.h"
+
+#include "notification.h"
 
 class NotificationTest : public QObject
 {
@@ -76,11 +77,13 @@ void NotificationTest::parse()
     QFETCH(QString, messageIn);
     QFETCH(QString, expectedOut);
 
-    const QString out = NotificationSanitizer::parse(messageIn);
-    expectedOut = "<?xml version=\"1.0\"?><html>"  + expectedOut + "</html>\n";
-    QCOMPARE(out, expectedOut);
-}
+    NotificationManager::Notification notification;
+    notification.setBody(messageIn);
 
+    expectedOut = "<?xml version=\"1.0\"?><html>"  + expectedOut + "</html>\n";
+
+    QCOMPARE(notification.body(), expectedOut);
+}
 
 QTEST_GUILESS_MAIN(NotificationTest)
 

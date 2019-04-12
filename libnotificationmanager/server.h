@@ -21,8 +21,6 @@
 #pragma once
 
 #include <QObject>
-#include <QDBusContext>
-#include <QVector>
 
 #include "notificationmanager_export.h"
 
@@ -150,7 +148,6 @@ private:
     Q_DISABLE_COPY(Server)
     // FIXME we also need to disable move and other stuff?
 
-    class Private;
     QScopedPointer<ServerPrivate> d;
 };
 

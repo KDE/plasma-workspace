@@ -41,9 +41,12 @@ public:
 
     static QString sanitize(const QString &text);
     static QImage decodeNotificationSpecImageHint(const QDBusArgument &arg);
-    static QString findImageForSpecImagePath(const QString &_path);
+    static void sanitizeImage(QImage &image);
+
+    void loadImagePath(const QString &path);
 
     static QString defaultComponentName();
+    static QSize maximumImageSize();
 
     void processHints(const QVariantMap &hints);
 
@@ -55,7 +58,8 @@ public:
 
     QString summary;
     QString body;
-    QString iconName;
+    // Can be theme icon name or path
+    QString icon;
     QImage image;
 
     QString applicationName;

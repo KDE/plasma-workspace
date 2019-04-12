@@ -113,7 +113,16 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
     Q_PROPERTY(QStringList whitelistedNotifyRcNames READ whitelistedNotifyRcNames WRITE setWhitelistedNotifyRcNames NOTIFY whitelistedNotifyRcNamesChanged)
 
     /**
+     * Whether to show notifications.
+     *
+     * Default is true.
+     */
+    Q_PROPERTY(bool showNotifications READ showNotifications WRITE setShowNotifications NOTIFY showNotificationsChanged)
+
+    /**
      * Whether to show application jobs.
+     *
+     * Default is false.
      */
     Q_PROPERTY(bool showJobs READ showJobs WRITE setShowJobs NOTIFY showJobsChanged)
 
@@ -146,6 +155,13 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
      * Default is 0, which means no limit.
      */
     Q_PROPERTY(int groupLimit READ groupLimit WRITE setGroupLimit NOTIFY groupLimitChanged)
+
+    /**
+     * Whether to automatically show notifications that are unread.
+     *
+     * This is any notification that was created or updated after the value of @c lastRead.
+     */
+    Q_PROPERTY(bool expandUnread READ expandUnread WRITE setExpandUnread NOTIFY expandUnreadChanged)
 
     /**
      * The number of notifications in the model
@@ -199,6 +215,7 @@ public:
 
         IsGroupRole = Qt::UserRole + 2, ///< Whether the item is a group
         GroupChildrenCountRole, ///< The number of children in a group.
+        ExpandedGroupChildrenCountRole, ///< The number of children in a group that are expanded.
         IsGroupExpandedRole, ///< Whether the group is expanded, this role is writable.
 
         IsInGroupRole, ///< Whether the notification is currently inside a group.
@@ -207,7 +224,7 @@ public:
         UpdatedRole, ///< When the notification was last updated, invalid when it hasn't been updated.
 
         BodyRole, ///< The notification body text.
-        IconNameRole, ///< The notification main icon, which is not the application icon. Only valid for icon names.
+        IconNameRole, ///< The notification main icon name, which is not the application icon. Only valid for icon names, if a URL supplied, it is loaded and exposed as ImageRole instead.
 
         DesktopEntryRole, ///< The desktop entry (without .desktop suffix, e.g. org.kde.spectacle) of the application that sent the notification.
         NotifyRcNameRole, ///< The notifyrc name (e.g. spectaclerc) of the application that sent the notification.
@@ -330,6 +347,9 @@ public:
     QStringList whitelistedNotifyRcNames() const;
     void setWhitelistedNotifyRcNames(const QStringList &whitelist);
 
+    bool showNotifications() const;
+    void setShowNotifications(bool showNotifications);
+
     bool showJobs() const;
     void setShowJobs(bool showJobs);
 
@@ -345,6 +365,9 @@ public:
     int groupLimit() const;
     void setGroupLimit(int limit);
 
+    bool expandUnread() const;
+    void setExpandUnread(bool expand);
+
     int count() const;
 
     int activeNotificationsCount() const;
@@ -358,6 +381,11 @@ public:
 
     int activeJobsCount() const;
     int jobsPercentage() const;
+
+    /**
+     * Convert the given QModelIndex into a QPersistentModelIndex
+     */
+    Q_INVOKABLE QPersistentModelIndex makePersistentModelIndex(const QModelIndex &idx) const;
 
     /**
      * @brief Expire a notification
@@ -444,6 +472,13 @@ public:
      */
     Q_INVOKABLE void clear(ClearFlags flags);
 
+    /**
+     * Returns a model index pointing to the group of a notification.
+     */
+    Q_INVOKABLE QModelIndex groupIndex(const QModelIndex &idx) const;
+
+    Q_INVOKABLE void collapseAllGroups();
+
     QVariant data(const QModelIndex &index, int role/* = Qt::DisplayRole*/) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -460,11 +495,13 @@ signals:
     void blacklistedNotifyRcNamesChanged();
     void whitelistedDesktopEntriesChanged();
     void whitelistedNotifyRcNamesChanged();
+    void showNotificationsChanged();
     void showJobsChanged();
     void urgenciesChanged();
     void sortModeChanged();
     void groupModeChanged();
     void groupLimitChanged();
+    void expandUnreadChanged();
     void countChanged();
     void activeNotificationsCountChanged();
     void expiredNotificationsCountChanged();

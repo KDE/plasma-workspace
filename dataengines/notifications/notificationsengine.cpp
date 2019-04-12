@@ -19,8 +19,6 @@
 
 #include "notificationsengine.h"
 #include "notificationservice.h"
-#include "notificationsadaptor.h"
-#include "notificationsanitizer.h"
 
 #include "server.h"
 #include "notification.h"

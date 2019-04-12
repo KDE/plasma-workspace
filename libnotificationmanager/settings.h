@@ -67,7 +67,7 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
 
     /**
      * The notification popup position on screen.
-     * NearWidget means they should be positioned closely to where the plasmoid is located on screen.
+     * CloseToWidget means they should be positioned closely to where the plasmoid is located on screen.
      */
     Q_PROPERTY(PopupPosition popupPosition READ popupPosition WRITE setPopupPosition NOTIFY settingsChanged)
 
@@ -168,24 +168,18 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
      * Whether notification sounds should be disabled
      *
      * This does not reflect the actual mute state of the Notification Sounds
-     * but only remembers what value was assigned to this property.
+     * stream but only remembers what value was assigned to this property.
      *
-     * When @c true the notification sound stream is muted.
-     * When @c false the notification sound stream is unmuted only if it was
-     * previously muted by having set this property @c true. This is to avoid
-     * unmuting notification sounds if the user themselves have already muted them.
+     * This way you can tell whether to unmute notification sounds or not, in case
+     * the user had them explicitly muted previously.
+     *
+     * @note This does not actually mute or unmute the actual sound stream,
+     * you need to do this yourself using e.g. PulseAudio.
      */
     Q_PROPERTY(bool notificationSoundsInhibited
+               READ notificationSoundsInhibited
                WRITE setNotificationSoundsInhibited
-               NOTIFY NotificationSoundsInhibitedChanged)
-
-    /**
-     * Whether the notification sound stream is actually muted
-     */
-    Q_PROPERTY(bool notificationSoundsMuted
-               READ notificationSoundsMuted
-               WRITE setNotificationSoundsMuted
-               NOTIFY notificationSoundsMutedChanged)
+               NOTIFY settingsChanged)
 
     /**
      * Whether to update the properties immediately when they are changed on disk
@@ -210,7 +204,7 @@ public:
     ~Settings() override;
 
     enum PopupPosition {
-        NearWidget = 0, // TODO better name? CloseToWidget? AtWidget? AroundWidget?
+        CloseToWidget = 0,
         TopLeft,
         TopCenter,
         TopRight,
@@ -301,9 +295,6 @@ public:
     bool notificationSoundsInhibited() const;
     void setNotificationSoundsInhibited(bool inhibited);
 
-    bool notificationSoundsMuted() const;
-    void setNotificationSoundsMuted(bool muted);
-
     /**
      * Revoke application notification inhibitions.
      *
@@ -322,8 +313,6 @@ signals:
 
     void notificationsInhibitedByApplicationChanged(bool notificationsInhibitedByApplication);
     void notificationInhibitionApplicationsChanged();
-    void notificationSoundsInhibitedChanged();
-    void notificationSoundsMutedChanged();
 
 private:
     class Private;

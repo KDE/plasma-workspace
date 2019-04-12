@@ -64,7 +64,6 @@ public:
                  const QString &reason,
                  const QVariantMap &hints);
     void UnInhibit(uint cookie);
-    //QList<Inhibition> ListInhibitors() const;
     bool inhibited() const; // property getter
 
 Q_SIGNALS:
@@ -84,7 +83,7 @@ public: // stuff used by public class
     void clearInhibitions();
 
     bool m_valid = false;
-    uint m_highestNotificationId = 0;
+    uint m_highestNotificationId = 1;
 
 private slots:
     void onBroadcastNotification(const QMap<QString, QVariant> &properties);

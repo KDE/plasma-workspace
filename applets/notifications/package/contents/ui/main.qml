@@ -35,7 +35,7 @@ Item {
     id: root 
 
     Plasmoid.status: historyModel.activeJobsCount > 0
-                     || Globals.popupNotificationsModel.activeNotificationsCount > 0
+                     || historyModel.unreadNotificationsCount > 0
                      || Globals.inhibited ? PlasmaCore.Types.ActiveStatus
                                           : PlasmaCore.Types.PassiveStatus
 
@@ -73,12 +73,18 @@ Item {
     Plasmoid.switchHeight: units.gridUnit * 10
 
     Plasmoid.onExpandedChanged: {
-        historyModel.lastRead = undefined; // reset to now
+        if (!plasmoid.expanded) {
+            // FIXME Qt.callLater because system tray gets confused when an applet becomes passive when clicking to hide it
+            Qt.callLater(function() {
+                historyModel.lastRead = undefined; // reset to now
+                historyModel.collapseAllGroups();
+            });
+        }
     }
 
     Plasmoid.compactRepresentation: CompactRepresentation {
         activeCount: Globals.popupNotificationsModel.activeNotificationsCount
-        unreadCount: historyModel.unreadNotificationsCount
+        unreadCount: Math.min(99, historyModel.unreadNotificationsCount)
 
         jobsCount: historyModel.activeJobsCount
         jobsPercentage: historyModel.jobsPercentage
@@ -102,6 +108,7 @@ Item {
         sortMode: NotificationManager.Notifications.SortByTypeAndUrgency
         groupMode: NotificationManager.Notifications.GroupApplicationsFlat
         groupLimit: 2
+        expandUnread: true
         blacklistedDesktopEntries: notificationSettings.historyBlacklistedApplications
         blacklistedNotifyRcNames: notificationSettings.historyBlacklistedServices
         urgencies: {
@@ -116,6 +123,9 @@ Item {
 
     function action_clearHistory() {
         historyModel.clear(NotificationManager.Notifications.ClearExpired);
+        if (historyModel.count === 0) {
+            plasmoid.expanded = false;
+        }
     }
 
     function action_openKcm() {

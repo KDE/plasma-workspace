@@ -35,11 +35,6 @@ set_package_properties(KF5NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper fo
                        PURPOSE "Needed by geolocation data engine."
                       )
 
-find_package(KF5PulseAudioQt)
-set_package_properties(KF5PulseAudioQt PROPERTIES DESCRIPTION "Qt bindings for PulseAudio"
-                       TYPE RECOMMENDED
-                       PURPOSE "Needed so do not disturb mode when disable notification sounds")
-
 find_package(KF5Kirigami2 ${KF5_MIN_VERSION} CONFIG)
 set_package_properties(KF5Kirigami2 PROPERTIES
     DESCRIPTION "A QtQuick based components set"

@@ -99,6 +99,7 @@ RowLayout {
         property string agoText: ""
         visible: text !== ""
         text: generateRemainingText() || agoText
+        Layout.rightMargin: 0 // the ToolButton's margins are enough
 
         function generateAgoText() {
             if (!time || isNaN(time.getTime()) || notificationHeading.jobState === NotificationManager.Notifications.JobStateRunning) {
@@ -173,7 +174,6 @@ RowLayout {
     RowLayout {
         id: headerButtonsRow
         spacing: 0
-        Layout.leftMargin: units.smallSpacing
 
         PlasmaComponents.ToolButton {
             id: configureButton

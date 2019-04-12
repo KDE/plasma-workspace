@@ -99,7 +99,7 @@ MouseArea {
             anchors.centerIn: parent
             font.pointSize: -1
             // FIXME fontSizeMode is awful but FontMetrics also doesn't cut it
-            font.pixelSize: Math.round(parent.height * (0.3 + 0.3 * text.length))
+            font.pixelSize: Math.round(parent.height * (0.3 + 0.3 / text.length))
             // TODO add animation when it changes?
             text: compactRoot.unreadCount || ""
         }

@@ -42,6 +42,33 @@ QtObject {
 
     property bool inhibited: false
 
+    onInhibitedChanged: {
+        var pa = pulseAudio.item;
+        if (!pa) {
+            return;
+        }
+
+        var stream = pa.notificationStream;
+        if (!stream) {
+            return;
+        }
+
+        if (inhibited) {
+            // Only remember that we muted if previously not muted.
+            if (!stream.muted) {
+                notificationSettings.notificationSoundsInhibited = true;
+                stream.mute();
+            }
+        } else {
+            // Only unmute if we previously muted it.
+            if (notificationSettings.notificationSoundsInhibited) {
+                stream.unmute();
+            }
+            notificationSettings.notificationSoundsInhibited = false;
+        }
+        notificationSettings.save();
+    }
+
     // Some parts of the code rely on plasmoid.nativeInterface and since we're in a singleton here
     // this is named "plasmoid"
     property QtObject plasmoid: plasmoids[0]
@@ -62,7 +89,7 @@ QtObject {
     property int popupLocation: {
         switch (notificationSettings.popupPosition) {
         // Auto-determine location based on plasmoid location
-        case NotificationManager.Settings.NearWidget:
+        case NotificationManager.Settings.CloseToWidget:
             if (!plasmoid) {
                 return Qt.AlignBottom | Qt.AlignRight; // just in case
             }
@@ -262,8 +289,8 @@ QtObject {
                 urgencies |= NotificationManager.Notifications.NormalUrgency;
             }
 
-            // Low only when enabled in settings
-            if (notificationSettings.lowPriorityPopups) {
+            // Low only when enabled in settings and not in do not disturb mode
+            if (!globals.inhibited && notificationSettings.lowPriorityPopups) {
                 urgencies |=NotificationManager.Notifications.LowUrgency;
             }
 
@@ -272,12 +299,10 @@ QtObject {
     }
 
     property QtObject notificationSettings: NotificationManager.Settings {
-        notificationSoundsInhibited: globals.inhibited
-
         onNotificationsInhibitedUntilChanged: globals.checkInhibition()
     }
 
-    // This periodically checks whether do not disturb mode timed out
+    // This periodically checks whether do not disturb mode timed out and updates the "minutes ago" labels
     property QtObject timeSource: PlasmaCore.DataSource {
         engine: "time"
         connectedSources: ["Local"]
@@ -391,5 +416,10 @@ QtObject {
 
             Qt.callLater(positionPopups);
         }
+    }
+
+    // TODO use pulseaudio-qt for this once it becomes a framework
+    property QtObject pulseAudio: Loader {
+        source: "PulseAudio.qml"
     }
 }

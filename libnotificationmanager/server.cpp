@@ -26,8 +26,6 @@
 
 #include "debug.h"
 
-#include <QDBusConnection>
-
 #include <QDebug>
 
 using namespace NotificationManager;

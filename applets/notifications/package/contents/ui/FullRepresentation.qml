@@ -106,66 +106,63 @@ ColumnLayout {
                         }
                     }
 
-                    PlasmaComponents.ContextMenu {
+                    PlasmaComponents.ModelContextMenu {
                         id: dndMenu
                         property date date
                         visualParent: dndCheck
-                        onTriggered: {
-                            notificationSettings.notificationsInhibitedUntil = item.date;
+
+                        onClicked: {
+                            notificationSettings.notificationsInhibitedUntil = model.date;
                             notificationSettings.save();
                         }
 
-                        PlasmaComponents.MenuItem {
-                            section: true
-                            text: i18n("Do not disturb")
-                        }
+                        model: {
+                            var model = [];
 
-                        PlasmaComponents.MenuItem {
-                            text: i18n("For 1 hour")
-                            readonly property date date: {
-                                var d = dndMenu.date;
-                                d.setHours(d.getHours() + 1);
-                                d.setSeconds(0);
-                                return d;
-                            }
-                        }
-                        PlasmaComponents.MenuItem {
-                            text: i18n("Until this evening")
+                            // For 1 hour
+                            var d = dndMenu.date;
+                            d.setHours(d.getHours() + 1);
+                            d.setSeconds(0);
+                            model.push({date: d, text: i18n("For 1 hour")});
+
+                            d = dndMenu.date;
+                            d.setHours(d.getHours() + 4);
+                            d.setSeconds(0);
+                            model.push({date: d, text: i18n("For 4 hours")});
+
+                            // Until this evening
+                            d = dndMenu.date;
                             // TODO make the user's preferred time schedule configurable
-                            visible: dndMenu.date.getHours() < dndEveningHour
-                            readonly property date date: {
-                                var d = dndMenu.date;
-                                d.setHours(dndEveningHour);
-                                d.setMinutes(0);
-                                d.setSeconds(0);
-                                return d;
-                            }
-                        }
-                        PlasmaComponents.MenuItem {
-                            text: i18n("Until tomorrow morning")
-                            visible: dndMenu.date.getHours() > dndMorningHour
-                            readonly property date date: {
-                                var d = dndMenu.date;
-                                d.setDate(d.getDate() + 1);
-                                d.setHours(dndMorningHour);
-                                d.setMinutes(0);
-                                d.setSeconds(0);
-                                return d;
-                            }
-                        }
-                        PlasmaComponents.MenuItem {
-                            text: i18n("Until Monday")
+                            d.setHours(dndEveningHour);
+                            d.setMinutes(0);
+                            d.setSeconds(0);
+                            model.push({date: d, text: i18n("Until this evening"), visible: dndMenu.date.getHours() < dndEveningHour});
+
+                            // Until next morning
+                            d = dndMenu.date;
+                            d.setDate(d.getDate() + 1);
+                            d.setHours(dndMorningHour);
+                            d.setMinutes(0);
+                            d.setSeconds(0);
+                            model.push({date: d, text: i18n("Until tomorrow morning"), visible: dndMenu.date.getHours() > dndMorningHour});
+
+                            // Until Monday
+                            var d = dndMenu.date;
+                            d.setHours(dndMorningHour);
+                            // wraps around if neccessary
+                            d.setDate(d.getDate() + (7 - d.getDay() + 1));
+                            d.setMinutes(0);
+                            d.setSeconds(0);
                             // show Friday and Saturday, Sunday is "0" but for that you can use "until tomorrow morning"
-                            visible: dndMenu.date.getDay() >= 5
-                            readonly property date date: {
-                                var d = dndMenu.date;
-                                d.setHours(dndMorningHour);
-                                // wraps around if neccessary
-                                d.setDate(d.getDate() + (7 - d.getDay() + 1));
-                                d.setMinutes(0);
-                                d.setSeconds(0);
-                                return d;
-                            }
+                            model.push({date: d, text: i18n("Until Monday"), visible: dndMenu.date.getDay() >= 5});
+
+                            // Until "turned off"
+                            var d = dndMenu.date;
+                            // Just set it to one year in the future so we don't need yet another "do not disturb enabled" property
+                            d.setFullYear(d.getFullYear() + 1);
+                            model.push({date: d, text: i18n("Until turned off")});
+
+                            return model;
                         }
                     }
                 }
@@ -199,7 +196,8 @@ ColumnLayout {
 
                 var sections = [];
 
-                if (!isNaN(inhibitedUntil.getTime())) {
+                // Show until time if valid but not if too far int he future
+                if (!isNaN(inhibitedUntil.getTime()) && inhibitedUntil.getTime() - new Date().getTime() < 365 * 24 * 60 * 60 * 1000 /* 1 year*/) {
                     sections.push(i18nc("Do not disturb until date", "Until %1",
                                         KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat)));
                 }
@@ -362,6 +360,8 @@ ColumnLayout {
                                 dismissable: model.type === NotificationManager.Notifications.JobType
                                     && model.jobState !== NotificationManager.Notifications.JobStateStopped
                                     && model.dismissed
+                                    // TODO would be nice to be able to undismiss jobs even when they autohide
+                                    && notificationSettings.permanentJobPopups
                                 dismissed: model.dismissed || false
                                 closable: model.closable
 
@@ -432,9 +432,19 @@ ColumnLayout {
                             iconName: model.isGroupExpanded ? "arrow-up" : "arrow-down"
                             text: model.isGroupExpanded ? i18n("Show Fewer")
                                                         : i18nc("Expand to show n more notifications",
-                                                                "Show %1 More", (model.groupChildrenCount - historyModel.groupLimit))
-                            visible: model.groupChildrenCount > historyModel.groupLimit && delegateLoader.ListView.nextSection !== delegateLoader.ListView.section
-                            onClicked: model.isGroupExpanded = !model.isGroupExpanded
+                                                                "Show %1 More", (model.groupChildrenCount - model.expandedGroupChildrenCount))
+                            visible: (model.groupChildrenCount > model.expandedGroupChildrenCount || model.isGroupExpanded)
+                                && delegateLoader.ListView.nextSection !== delegateLoader.ListView.section
+                            onClicked: {
+                                // Scroll to the group top if groups are collsped
+                                if (model.isGroupExpanded) {
+                                    var persistentGroupIdx = historyModel.makePersistentModelIndex(historyModel.groupIndex(historyModel.index(model.index, 0)));
+                                    model.isGroupExpanded = false;
+                                    list.positionViewAtIndex(persistentGroupIdx.row, ListView.Contain);
+                                } else {
+                                    model.isGroupExpanded = true;
+                                }
+                            }
                         }
 
                         PlasmaCore.SvgItem {

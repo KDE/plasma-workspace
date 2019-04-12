@@ -183,7 +183,7 @@ PlasmaCore.Dialog {
         NotificationItem {
             id: notificationItem
             // let the item bleed into the dialog margins so the close button margins cancel out
-            y: -notificationPopup.margins.top
+            y: closable || dismissable || configurable ? -notificationPopup.margins.top : 0
             headingRightPadding: -notificationPopup.margins.right
             width: parent.width
             hovered: area.containsMouse

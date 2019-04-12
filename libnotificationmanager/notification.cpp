@@ -29,6 +29,7 @@
 #include <QDateTime>
 #include <QDebug>
 #include <QImage>
+#include <QImageReader>
 #include <QRegularExpression>
 #include <QXmlStreamReader>
 
@@ -205,21 +206,66 @@ QImage Notification::Private::decodeNotificationSpecImageHint(const QDBusArgumen
     return image;
 }
 
-QString Notification::Private::findImageForSpecImagePath(const QString &_path)
+void Notification::Private::sanitizeImage(QImage &image)
 {
-    QString path = _path;
-    if (path.startsWith(QLatin1String("file:"))) {
-        QUrl url(path);
-        path = url.toLocalFile();
+    if (image.isNull()) {
+        return;
     }
-    return KIconLoader::global()->iconPath(path, -KIconLoader::SizeHuge,
-                                           true /* canReturnNull */);
+
+    const QSize max = maximumImageSize();
+    if (image.size().width() > max.width()
+            || image.size().height() > max.height()) {
+        image = image.scaled(max, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    }
+}
+
+void Notification::Private::loadImagePath(const QString &path)
+{
+    // image_path and appIcon should either be a URL with file scheme or the name of a themed icon.
+    // We're lenient and also allow local paths.
+
+    image = QImage(); // clear
+    icon.clear();
+
+    QUrl imageUrl;
+    if (path.startsWith(QLatin1Char('/'))) {
+        imageUrl = QUrl::fromLocalFile(path);
+    } else if (path.contains(QLatin1Char('/'))) { // bad heuristic to detect a URL
+        imageUrl = QUrl(path);
+
+        if (!imageUrl.isLocalFile()) {
+            qCDebug(NOTIFICATIONMANAGER) << "Refused to load image from" << path << "which isn't a valid local location.";
+            return;
+        }
+    }
+
+    if (!imageUrl.isValid()) {
+        // try icon path instead;
+        icon = path;
+        return;
+    }
+
+    QImageReader reader(imageUrl.toLocalFile());
+    reader.setAutoTransform(true);
+
+    const QSize imageSize = reader.size();
+    if (imageSize.isValid() && (imageSize.width() > maximumImageSize().width() || imageSize.height() > maximumImageSize().height())) {
+        const QSize thumbnailSize = imageSize.scaled(maximumImageSize(), Qt::KeepAspectRatio);
+        reader.setScaledSize(thumbnailSize);
+    }
+
+    image = reader.read();
 }
 
 QString Notification::Private::defaultComponentName()
 {
     // NOTE Keep in sync with KNotification
     return QStringLiteral("plasma_workspace");
+}
+
+QSize Notification::Private::maximumImageSize()
+{
+    return QSize(256, 256);
 }
 
 void Notification::Private::processHints(const QVariantMap &hints)
@@ -279,7 +325,7 @@ void Notification::Private::processHints(const QVariantMap &hints)
 
     // Special override for KDE Connect since the notification is sent by kdeconnectd
     // but actually comes from a different app on the phone
-    const QString applicationDisplayName = hints.value(QStringLiteral("x-kde-display-app-name")).toString();
+    const QString applicationDisplayName = hints.value(QStringLiteral("x-kde-display-appname")).toString();
     if (!applicationDisplayName.isEmpty()) {
         applicationName = applicationDisplayName;
     }
@@ -332,12 +378,11 @@ void Notification::Private::processHints(const QVariantMap &hints)
         }
 
         if (it != end) {
-            const QString path = findImageForSpecImagePath(it->toString());
-            if (!path.isEmpty()) {
-                image.load(path);
-            }
+            loadImagePath(it->toString());
         }
     }
+
+    sanitizeImage(image);
 }
 
 void Notification::Private::setUrgency(Notifications::Urgency urgency)
@@ -430,14 +475,15 @@ void Notification::setBody(const QString &body)
     d->body = Private::sanitize(body.trimmed());
 }
 
-QString Notification::iconName() const
+QString Notification::icon() const
 {
-    return d->iconName;
+    return d->icon;
 }
 
-void Notification::setIconName(const QString &iconName)
+void Notification::setIcon(const QString &icon)
 {
-    d->iconName = iconName;
+    d->loadImagePath(icon);
+    Private::sanitizeImage(d->image);
 }
 
 QImage Notification::image() const
