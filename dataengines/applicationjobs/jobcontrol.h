@@ -21,21 +21,23 @@
 
 #include <plasma/service.h>
 
-class JobView;
+#include <QPointer>
+
+#include "job.h"
 
 class JobControl : public Plasma::Service
 {
     Q_OBJECT
 
     public:
-        JobControl(QObject* parent, JobView *jobview);
+        JobControl(QObject *parent, NotificationManager::Job *job);
 
     protected:
         Plasma::ServiceJob* createJob(const QString& operation,
                                       QMap<QString,QVariant>& parameters) override;
 
     private:
-        JobView *m_jobView;
+        QPointer<NotificationManager::Job> m_job;
 
 };
 

@@ -52,8 +52,7 @@ PlasmaCore.Dialog {
 
     property alias jobState: notificationItem.jobState
     property alias percentage: notificationItem.percentage
-    property alias error: notificationItem.error
-    property alias errorText: notificationItem.errorText
+    property alias jobError: notificationItem.jobError
     property alias suspendable: notificationItem.suspendable
     property alias killable: notificationItem.killable
     property alias jobDetails: notificationItem.jobDetails

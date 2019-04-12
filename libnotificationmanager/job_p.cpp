@@ -18,30 +18,49 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "jobdetails.h"
-
-#include <QDir>
-#include <QDebug>
-
-#include <KFilePlacesModel>
-#include <KLocalizedString>
-
-#include "jobdetails_p.h"
+#include "job_p.h"
+#include "job.h"
 
 #include "debug.h"
 
+#include <QDebug>
+#include <QDBusConnection>
+
+#include <KFilePlacesModel>
+#include <KService>
+#include <KLocalizedString>
+
+#include "notifications.h"
+
+#include "jobviewv2adaptor.h"
+#include "jobviewv3adaptor.h"
+
+#include <QDebug>
+
 using namespace NotificationManager;
 
-JobDetails::Private::Private(JobDetails *q)
-    : q(q)
+JobPrivate::JobPrivate(uint id, QObject *parent)
+    : QObject(parent)
+    , m_id(id)
     , m_placesModel(createPlacesModel())
 {
+    m_objectPath.setPath(QStringLiteral("/org/kde/notificationmanager/jobs/JobView_%1").arg(id));
 
+    // TODO also v1? it's identical to V2 except it doesn't have setError method so supporting it should be easy
+    new JobViewV2Adaptor(this);
+    new JobViewV3Adaptor(this);
+
+    QDBusConnection::sessionBus().registerObject(m_objectPath.path(), this);
 }
 
-JobDetails::Private::~Private() = default;
+JobPrivate::~JobPrivate() = default;
 
-QSharedPointer<KFilePlacesModel> JobDetails::Private::createPlacesModel()
+QDBusObjectPath JobPrivate::objectPath() const
+{
+    return m_objectPath;
+}
+
+QSharedPointer<KFilePlacesModel> JobPrivate::createPlacesModel()
 {
     static QWeakPointer<KFilePlacesModel> s_instance;
     if (!s_instance) {
@@ -56,7 +75,7 @@ QSharedPointer<KFilePlacesModel> JobDetails::Private::createPlacesModel()
 // - if it is a place, show the name, e.g. "Downloads"
 // - if it is inside home, abbreviate that to tilde ~/foo
 // - otherwise print URL (without password)
-QString JobDetails::Private::prettyDestUrl() const
+QString JobPrivate::prettyDestUrl() const
 {
     QUrl url = m_destUrl;
     // In case of a single file and no destUrl, try using the second label (most likely "Destination")...
@@ -98,8 +117,32 @@ QString JobDetails::Private::prettyDestUrl() const
     return url.toDisplayString(); // strips password
 }
 
-QString JobDetails::Private::text() const
+void JobPrivate::updateHasDetails()
 {
+    const bool hasDetails = m_totalBytes > 0
+        || m_totalFiles > 0
+        || m_totalDirectories > 0
+        || m_processedBytes > 0
+        || m_processedFiles > 0
+        || m_processedDirectories > 0
+        || !m_descriptionLabel1.isEmpty()
+        || !m_descriptionLabel2.isEmpty()
+        || !m_descriptionValue1.isEmpty()
+        || !m_descriptionValue2.isEmpty()
+        || m_speed > 0;
+
+    if (m_hasDetails != hasDetails) {
+        m_hasDetails = hasDetails;
+        emit static_cast<Job *>(parent())->hasDetailsChanged();
+    }
+}
+
+QString JobPrivate::text() const
+{
+    if (!m_errorText.isEmpty()) {
+        return m_errorText;
+    }
+
     const QString currentFileName = descriptionUrl().fileName();
     const QString destUrlString = prettyDestUrl();
 
@@ -146,100 +189,7 @@ QString JobDetails::Private::text() const
     return QString();
 }
 
-template<typename T> bool processField(const QVariantMap/*Plasma::DataEngine::Data*/ &data,
-                                       const QString &field,
-                                       T &target,
-                                       JobDetails *details,
-                                       void (JobDetails::*changeSignal)())
-{
-    auto it = data.find(field);
-    if (it != data.end()) {
-        const T newValue = it->value<T>();
-        if (target != newValue) {
-            target = newValue;
-            emit ((details)->*changeSignal)();
-            return true;
-        }
-    }
-    return false;
-}
-
-
-void JobDetails::Private::processData(const QVariantMap &data)
-{
-    bool textDirty = false;
-    bool urlDirty = false;
-
-    auto it = data.find(QStringLiteral("destUrl"));
-    if (it != data.end()) {
-        const QUrl destUrl = it->toUrl();
-        if (m_destUrl != destUrl) {
-            m_destUrl = destUrl;
-            textDirty = true;
-            emit q->destUrlChanged();
-        }
-    }
-
-    processField(data, QStringLiteral("labelName0"), m_descriptionLabel1,
-                 q, &JobDetails::descriptionLabel1Changed);
-    if (processField(data, QStringLiteral("label0"), m_descriptionValue1,
-                     q, &JobDetails::descriptionValue1Changed)) {
-        textDirty = true;
-        urlDirty = true;
-    }
-
-    processField(data, QStringLiteral("labelName1"), m_descriptionLabel2,
-                 q, &JobDetails::descriptionLabel2Changed);
-    if (processField(data, QStringLiteral("label1"), m_descriptionValue2,
-                     q, &JobDetails::descriptionValue2Changed)) {
-        textDirty = true;
-        urlDirty = true;
-    }
-
-    processField(data, QStringLiteral("numericSpeed"), m_speed,
-                 q, &JobDetails::speedChanged);
-
-    for (int i = 0; i <= 2; ++i) {
-        {
-            const QString unit = data.value(QStringLiteral("processedUnit%1").arg(QString::number(i))).toString();
-            const QString amountKey = QStringLiteral("processedAmount%1").arg(QString::number(i));
-
-            if (unit == QLatin1String("bytes")){
-                processField(data, amountKey, m_processedBytes, q, &JobDetails::processedBytesChanged);
-            } else if (unit == QLatin1String("files")) {
-                if (processField(data, amountKey, m_processedFiles, q, &JobDetails::processedFilesChanged)) {
-                    textDirty = true;
-                }
-            } else if (unit == QLatin1String("dirs")) {
-                processField(data, amountKey, m_processedDirectories, q, &JobDetails::processedDirectoriesChanged);
-            }
-        }
-
-        {
-            const QString unit = data.value(QStringLiteral("totalUnit%1").arg(QString::number(i))).toString();
-            const QString amountKey = QStringLiteral("totalAmount%1").arg(QString::number(i));
-
-            if (unit == QLatin1String("bytes")){
-                processField(data, amountKey, m_totalBytes, q, &JobDetails::totalBytesChanged);
-            } else if (unit == QLatin1String("files")) {
-                if (processField(data, amountKey, m_totalFiles, q, &JobDetails::totalFilesChanged)) {
-                    textDirty = true;
-                }
-            } else if (unit == QLatin1String("dirs")) {
-                processField(data, amountKey, m_totalDirectories, q, &JobDetails::totalDirectoriesChanged);
-            }
-        }
-    }
-
-    if (urlDirty) {
-        emit q->descriptionUrlChanged();
-    }
-    if (urlDirty || textDirty) {
-        emit q->textChanged();
-    }
-}
-
-QUrl JobDetails::Private::descriptionUrl() const
+QUrl JobPrivate::descriptionUrl() const
 {
     QUrl url = QUrl::fromUserInput(m_descriptionValue2, QString(), QUrl::AssumeLocalFile);
     if (!url.isValid()) {
@@ -248,81 +198,132 @@ QUrl JobDetails::Private::descriptionUrl() const
     return url;
 }
 
-JobDetails::JobDetails(QObject *parent)
-    : QObject(parent)
-    , d(new Private(this))
+void JobPrivate::finish()
 {
+    // Unregister the dbus service since the client is done with it
+    QDBusConnection::sessionBus().unregisterObject(m_objectPath.path());
 
+    // When user canceled transfer, remove it without notice
+    if (m_error == 1) { // KIO::ERR_USER_CANCELED
+        emit closed();
+        return;
+    }
+
+    Job *job = static_cast<Job *>(parent());
+    // update timestamp
+    job->resetUpdated();
+    // when it was hidden in history, bring it up again
+    job->setDismissed(false);
 }
 
-JobDetails::~JobDetails() = default;
-
-QString JobDetails::text() const
+// JobViewV2
+void JobPrivate::terminate(const QString &errorMessage)
 {
-    return d->text();
+    Job *job = static_cast<Job *>(parent());
+    job->setErrorText(errorMessage);
+    job->setState(Notifications::JobStateStopped);
+    finish();
 }
 
-QUrl JobDetails::destUrl() const
+void JobPrivate::setSuspended(bool suspended)
 {
-    return d->m_destUrl;
+    Job *job = static_cast<Job *>(parent());
+    if (suspended) {
+        job->setState(Notifications::JobStateSuspended);
+    } else {
+        job->setState(Notifications::JobStateRunning);
+    }
 }
 
-qulonglong JobDetails::speed() const
+void JobPrivate::setTotalAmount(quint64 amount, const QString &unit)
 {
-    return d->m_speed;
+    if (unit == QLatin1String("bytes")) {
+        updateField(amount, m_totalBytes, &Job::totalBytesChanged);
+    } else if (unit == QLatin1String("files")) {
+        updateField(amount, m_totalFiles, &Job::totalFilesChanged);
+    } else if (unit == QLatin1String("dirs")) {
+        updateField(amount, m_totalDirectories, &Job::totalDirectoriesChanged);
+    }
+    updateHasDetails();
 }
 
-qulonglong JobDetails::processedBytes() const
+void JobPrivate::setProcessedAmount(quint64 amount, const QString &unit)
 {
-    return d->m_processedBytes;
+    if (unit == QLatin1String("bytes")) {
+        updateField(amount, m_processedBytes, &Job::processedBytesChanged);
+    } else if (unit == QLatin1String("files")) {
+        updateField(amount, m_processedFiles, &Job::processedFilesChanged);
+    } else if (unit == QLatin1String("dirs")) {
+        updateField(amount, m_processedDirectories, &Job::processedDirectoriesChanged);
+    }
+    updateHasDetails();
 }
 
-qulonglong JobDetails::processedFiles() const
+void JobPrivate::setPercent(uint percent)
 {
-    return d->m_processedFiles;
+    const int percentage = static_cast<int>(percent);
+    if (m_percentage != percentage) {
+        m_percentage = percentage;
+        emit static_cast<Job *>(parent())->percentageChanged(percentage);
+    }
 }
 
-qulonglong JobDetails::processedDirectories() const
+void JobPrivate::setSpeed(quint64 bytesPerSecond)
 {
-    return d->m_processedDirectories;
+    updateField(bytesPerSecond, m_speed, &Job::speedChanged);
+    updateHasDetails();
 }
 
-qulonglong JobDetails::totalBytes() const
+void JobPrivate::setInfoMessage(const QString &infoMessage)
 {
-    return d->m_totalBytes;
+    updateField(infoMessage, m_summary, &Job::summaryChanged);
 }
 
-qulonglong JobDetails::totalFiles() const
+bool JobPrivate::setDescriptionField(uint number, const QString &name, const QString &value)
 {
-    return d->m_totalFiles;
+    if (number == 0) {
+        updateField(name, m_descriptionLabel1, &Job::descriptionLabel1Changed);
+        updateField(value, m_descriptionValue1, &Job::descriptionValue1Changed);
+    } else if (number == 1) {
+        updateField(name, m_descriptionLabel2, &Job::descriptionLabel2Changed);
+        updateField(value, m_descriptionValue2, &Job::descriptionValue2Changed);
+    }
+    updateHasDetails();
+
+    return false;
 }
 
-qulonglong JobDetails::totalDirectories() const
+void JobPrivate::clearDescriptionField(uint number)
 {
-    return d->m_totalDirectories;
+    setDescriptionField(number, QString(), QString());
 }
 
-QString JobDetails::descriptionLabel1() const
+void JobPrivate::setDestUrl(const QDBusVariant &urlVariant)
 {
-    return d->m_descriptionLabel1;
+    const QUrl destUrl = QUrl(urlVariant.variant().toUrl().adjusted(QUrl::StripTrailingSlash)); // urgh
+    updateField(destUrl, m_destUrl, &Job::destUrlChanged);
 }
 
-QString JobDetails::descriptionValue1() const
+void JobPrivate::setError(uint errorCode)
 {
-    return d->m_descriptionValue1;
+    static_cast<Job *>(parent())->setError(errorCode);
 }
 
-QString JobDetails::descriptionLabel2() const
+// JobViewV3
+void JobPrivate::terminate(uint errorCode, const QString &errorMessage, const QVariantMap &hints)
 {
-    return d->m_descriptionLabel2;
+    Q_UNUSED(hints) // reserved for future extension
+
+    Job *job = static_cast<Job *>(parent());
+    job->setError(errorCode);
+    job->setErrorText(errorMessage);
+    job->setState(Notifications::JobStateStopped);
+    finish();
 }
 
-QString JobDetails::descriptionValue2() const
+void JobPrivate::update(const QVariantMap &properties)
 {
-    return d->m_descriptionValue2;
-}
-
-QUrl JobDetails::descriptionUrl() const
-{
-    return d->descriptionUrl();
+    // TODO
+    sendErrorReply(QDBusError::NotSupported, QStringLiteral("JobViewV3 update is not yet implemented."));
+    Q_UNUSED(properties)
 }

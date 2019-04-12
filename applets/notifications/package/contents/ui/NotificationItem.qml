@@ -60,8 +60,7 @@ ColumnLayout {
 
     property int jobState
     property int percentage
-    property int error: 0
-    property string errorText
+    property int jobError: 0
     property bool suspendable
     property bool killable
 
@@ -241,8 +240,7 @@ ColumnLayout {
         active: notificationItem.notificationType === NotificationManager.Notifications.JobType
         sourceComponent: JobItem {
             jobState: notificationItem.jobState
-            error: notificationItem.error
-            errorText: notificationItem.errorText
+            jobError: notificationItem.jobError
             percentage: notificationItem.percentage
             suspendable: notificationItem.suspendable
             killable: notificationItem.killable

@@ -373,8 +373,7 @@ ColumnLayout {
 
                                 jobState: model.jobState || 0
                                 percentage: model.percentage || 0
-                                error: model.error || 0
-                                errorText: model.errorText || ""
+                                jobError: model.jobError || 0
                                 suspendable: !!model.suspendable
                                 killable: !!model.killable
                                 jobDetails: model.jobDetails || null

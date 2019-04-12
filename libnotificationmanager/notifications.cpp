@@ -73,7 +73,6 @@ public:
 
     static bool isGroup(const QModelIndex &idx);
     static uint notificationId(const QModelIndex &idx);
-    static QString jobId(const QModelIndex &idx);
     QModelIndex mapFromModel(const QModelIndex &idx) const;
 
     // NOTE when you add or re-arrange models make sure to update mapFromModel()!
@@ -126,6 +125,7 @@ void Notifications::Private::initSourceModels()
     if (showJobs && !jobsModel) {
         jobsModel = JobsModel::createJobsModel();
         notificationsAndJobsModel->addSourceModel(jobsModel.data());
+        jobsModel->init();
     } else if (!showJobs && jobsModel) {
         notificationsAndJobsModel->removeSourceModel(jobsModel.data());
         jobsModel = nullptr;
@@ -325,11 +325,6 @@ bool Notifications::Private::isGroup(const QModelIndex &idx)
 uint Notifications::Private::notificationId(const QModelIndex &idx)
 {
     return idx.data(Notifications::IdRole).toUInt();
-}
-
-QString Notifications::Private::jobId(const QModelIndex &idx)
-{
-    return idx.data(Notifications::IdRole).toString();
 }
 
 QModelIndex Notifications::Private::mapFromModel(const QModelIndex &idx) const
@@ -657,7 +652,7 @@ void Notifications::expire(const QModelIndex &idx)
         d->notificationsModel->expire(Private::notificationId(idx));
         break;
     case Notifications::JobType:
-        d->jobsModel->expire(Private::jobId(idx));
+        d->jobsModel->expire(Utils::mapToModel(idx, d->jobsModel.data()));
         break;
     default:
         Q_UNREACHABLE();
@@ -692,7 +687,7 @@ void Notifications::close(const QModelIndex &idx)
         d->notificationsModel->close(Private::notificationId(idx));
         break;
     case Notifications::JobType:
-        d->jobsModel->close(Private::jobId(idx));
+        d->jobsModel->close(Utils::mapToModel(idx, d->jobsModel.data()));
         break;
     default:
         Q_UNREACHABLE();
@@ -753,21 +748,21 @@ void Notifications::stopTimeout(const QModelIndex &idx)
 void Notifications::suspendJob(const QModelIndex &idx)
 {
     if (d->jobsModel) {
-        d->jobsModel->suspend(Private::jobId(idx));
+        d->jobsModel->suspend(Utils::mapToModel(idx, d->jobsModel.data()));
     }
 }
 
 void Notifications::resumeJob(const QModelIndex &idx)
 {
     if (d->jobsModel) {
-        d->jobsModel->resume(Private::jobId(idx));
+        d->jobsModel->resume(Utils::mapToModel(idx, d->jobsModel.data()));
     }
 }
 
 void Notifications::killJob(const QModelIndex &idx)
 {
     if (d->jobsModel) {
-        d->jobsModel->kill(Private::jobId(idx));
+        d->jobsModel->kill(Utils::mapToModel(idx, d->jobsModel.data()));
     }
 }
 
@@ -867,8 +862,7 @@ QHash<int, QByteArray> Notifications::roleNames() const
 
         {JobStateRole, QByteArrayLiteral("jobState")},
         {PercentageRole, QByteArrayLiteral("percentage")},
-        {ErrorRole, QByteArrayLiteral("error")},
-        {ErrorTextRole, QByteArrayLiteral("errorText")},
+        {JobErrorRole, QByteArrayLiteral("jobError")},
         {SuspendableRole, QByteArrayLiteral("suspendable")},
         {KillableRole, QByteArrayLiteral("killable")},
         {JobDetailsRole, QByteArrayLiteral("jobDetails")},

@@ -33,8 +33,7 @@ ColumnLayout {
     id: jobItem
 
     property int jobState
-    property int error
-    property string errorText
+    property int jobError
 
     property alias percentage: progressBar.value
     property alias suspendable: suspendButton.visible
@@ -56,15 +55,8 @@ ColumnLayout {
 
     spacing: 0
 
-    PlasmaComponents.Label {
-        Layout.fillWidth: true
-        textFormat: Text.PlainText
-        wrapMode: Text.WordWrap
-        text: jobItem.errorText || (jobItem.jobDetails ? jobItem.jobDetails.text : "")
-        visible: text !== ""
-    }
-
     RowLayout {
+        id: progressRow
         Layout.fillWidth: true
         spacing: units.smallSpacing
 
@@ -83,7 +75,6 @@ ColumnLayout {
         }
 
         RowLayout {
-            id: jobActionsRow
             spacing: 0
 
             PlasmaComponents.ToolButton {
@@ -108,6 +99,7 @@ ColumnLayout {
                 tooltip: checked ? i18nc("A button tooltip; hides item details", "Hide Details")
                                  : i18nc("A button tooltip; expands the item to show details", "Show Details")
                 checkable: true
+                enabled: jobItem.jobDetails && jobItem.jobDetails.hasDetails
             }
         }
     }
@@ -133,7 +125,7 @@ ColumnLayout {
 
         property var url: {
             if (jobItem.jobState !== NotificationManager.Notifications.JobStateStopped
-                    || jobItem.error
+                    || jobItem.jobError
                     || !jobItem.jobDetails
                     || jobItem.jobDetails.totalFiles <= 0) {
                 return null;
@@ -193,7 +185,7 @@ ColumnLayout {
         State {
             when: jobItem.jobState === NotificationManager.Notifications.JobStateStopped
             PropertyChanges {
-                target: jobActionsRow
+                target: progressRow
                 visible: false
             }
             PropertyChanges {

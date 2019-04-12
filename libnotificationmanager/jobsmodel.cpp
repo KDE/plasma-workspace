@@ -19,6 +19,7 @@
  */
 
 #include "jobsmodel.h"
+#include "jobsmodel_p.h"
 
 #include "notifications.h"
 
@@ -32,123 +33,36 @@
 #include <Plasma/ServiceJob>
 
 #include "job.h"
-#include "jobdetails.h"
+#include "job_p.h"
 
 using namespace NotificationManager;
 
-class Q_DECL_HIDDEN JobsModel::Private
-{
-public:
-    explicit Private(JobsModel *q);
-    ~Private();
-
-    void onSourceAdded(const QString &source);
-    void onSourceRemoved(const QString &source);
-    void operationCall(const QString &source, const QString &operation);
-
-    JobsModel *q;
-
-    QScopedPointer<Plasma::DataEngineConsumer> dataEngineConsumer;
-    Plasma::DataEngine *dataEngine;
-
-    QStringList sources;
-    // FIXME why is this a pointer?
-    // Try making it not anymore and make sure jobdetails has
-    // a copy constructor that copies its private stuff
-    QHash<QString, Job *> jobs;
-
-};
-
-JobsModel::Private::Private(JobsModel *q)
-    : q(q)
-    , dataEngineConsumer(new Plasma::DataEngineConsumer)
-    , dataEngine(dataEngineConsumer->dataEngine(QStringLiteral("applicationjobs")))
-{
-
-    // NOTE cannot call onSourceAdded from constructor directly
-    // because it does beginInsertRow and then blows up
-    QMetaObject::invokeMethod(q, [this] {
-        // FIXME why does connectAllSources() not work?
-        const QStringList allSources = dataEngine->sources();
-        for (const QString &source : allSources) {
-            onSourceAdded(source);
-        }
-    }, Qt::QueuedConnection);
-
-    QObject::connect(dataEngine, &Plasma::DataEngine::sourceAdded, q, [this](const QString &source) {
-        onSourceAdded(source);
-    });
-    QObject::connect(dataEngine, &Plasma::DataEngine::sourceRemoved, q, [this](const QString &source) {
-        onSourceRemoved(source);
-    });
-}
-
-JobsModel::Private::~Private()
-{
-    qDeleteAll(jobs);
-    jobs.clear();
-}
-
-void JobsModel::Private::onSourceAdded(const QString &source)
-{
-    q->beginInsertRows(QModelIndex(), sources.count(), sources.count());
-    sources.append(source);
-    jobs.insert(source, new Job(source));
-    // must connect after adding so we process the initial update call
-    dataEngine->connectSource(source, q);
-    q->endInsertRows();
-}
-
-void JobsModel::Private::onSourceRemoved(const QString &source)
-{
-    const int row = sources.indexOf(source);
-    // Job tracking might have been disabled in the meantime, otherwise this would not be neccessary
-    if (row == -1) {
-        return;
-    }
-
-    const QModelIndex idx = q->index(row, 0);
-    Job *job = jobs.value(source);
-    Q_ASSERT(job);
-
-    dataEngine->disconnectSource(source, q);
-
-    // When user canceled transfer, remove it from the model
-    if (job->error() == 1) { // KIO::ERR_USER_CANCELED
-        q->close(source);
-        return;
-    }
-
-    // update timestamp
-    job->setUpdated();
-
-    // when it was hidden in history, bring it up again
-    job->setDismissed(false);
-
-    emit q->dataChanged(idx, idx, {
-        Notifications::UpdatedRole,
-        Notifications::DismissedRole,
-        Notifications::TimeoutRole,
-        Notifications::ClosableRole
-    });
-}
-
-void JobsModel::Private::operationCall(const QString &source, const QString &operation)
-{
-    auto *service = dataEngine->serviceForSource(source);
-    if (!service) {
-        qWarning() << "Failed to get service for source" << source << "for operation" << operation;
-        return;
-    }
-
-    auto *job = service->startOperationCall(service->operationDescription(operation));
-    QObject::connect(job, &KJob::finished, service, &QObject::deleteLater);
-}
-
 JobsModel::JobsModel()
     : QAbstractListModel(nullptr)
-    , d(new Private(this))
+    , d(new JobsModelPrivate(this))
 {
+    connect(d, &JobsModelPrivate::jobViewAboutToBeAdded, this, [this](int row, Job *job) {
+        Q_UNUSED(job);
+        beginInsertRows(QModelIndex(), row, row);
+    });
+    connect(d, &JobsModelPrivate::jobViewAdded, this, [this](int row) {
+        Q_UNUSED(row);
+        endInsertRows();
+    });
+
+    connect(d, &JobsModelPrivate::jobViewAboutToBeRemoved, this, [this](int row) {
+        beginRemoveRows(QModelIndex(), row, row);
+    });
+    connect(d, &JobsModelPrivate::jobViewRemoved, this, [this](int row) {
+        Q_UNUSED(row);
+        endRemoveRows();
+    });
+
+    connect(d, &JobsModelPrivate::jobViewChanged, this, [this](int row, Job *job, const QVector<int> &roles) {
+        Q_UNUSED(job);
+        const QModelIndex idx = index(row, 0);
+        emit dataChanged(idx, idx, roles);
+    });
 }
 
 JobsModel::~JobsModel() = default;
@@ -164,32 +78,26 @@ JobsModel::Ptr JobsModel::createJobsModel()
     return s_instance.toStrongRef();
 }
 
-void JobsModel::dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data)
+bool JobsModel::init()
 {
-    const int row = d->sources.indexOf(sourceName);
-    if (row == -1) {
-        return;
-    }
+    return d->init();
+}
 
-    const auto dirtyRoles = d->jobs.value(sourceName)->processData(data);
-
-    if (!dirtyRoles.isEmpty()) {
-        const QModelIndex idx = index(row, 0);
-        emit dataChanged(idx, idx, dirtyRoles);
-    }
+bool JobsModel::isValid() const
+{
+    return d->m_valid;
 }
 
 QVariant JobsModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || index.row() >= d->jobs.count()) {
+    if (!index.isValid() || index.row() >= d->m_jobViews.count()) {
         return QVariant();
     }
 
-    const QString &sourceName = d->sources.at(index.row());
-    const Job *job = d->jobs.value(sourceName);
+    Job *job = d->m_jobViews.at(index.row());
 
     switch (role) {
-    case Notifications::IdRole: return job->sourceName();
+    case Notifications::IdRole: return job->id();
     case Notifications::TypeRole: return Notifications::JobType;
     // basically when it started
     case Notifications::CreatedRole:
@@ -204,17 +112,17 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
         }
         break;
     case Notifications::SummaryRole: return job->summary();
+    case Notifications::BodyRole: return job->text();
     case Notifications::DesktopEntryRole: return job->desktopEntry();
     case Notifications::ApplicationNameRole: return job->applicationName();
     case Notifications::ApplicationIconNameRole: return job->applicationIconName();
 
     case Notifications::JobStateRole: return job->state();
     case Notifications::PercentageRole: return job->percentage();
-    case Notifications::ErrorRole: return job->error();
-    case Notifications::ErrorTextRole: return job->errorText();
+    case Notifications::JobErrorRole: return job->error();
     case Notifications::SuspendableRole: return job->suspendable();
     case Notifications::KillableRole: return job->killable();
-    case Notifications::JobDetailsRole: return QVariant::fromValue(job->details());
+    case Notifications::JobDetailsRole: return QVariant::fromValue(job);
 
     // successfully finished jobs timeout like a regular notifiation
     // whereas running or error'd jobs are persistent
@@ -233,12 +141,11 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
 
 bool JobsModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    if (!index.isValid() || index.row() >= d->jobs.count()) {
+    if (!index.isValid() || index.row() >= d->m_jobViews.count()) {
         return false;
     }
 
-    const QString &sourceName = d->sources.at(index.row());
-    Job *job = d->jobs.value(sourceName);
+    Job *job = d->m_jobViews.at(index.row());
 
     bool dirty = false;
 
@@ -264,72 +171,69 @@ int JobsModel::rowCount(const QModelIndex &parent) const
         return 0;
     }
 
-    return d->sources.count();
+    return d->m_jobViews.count();
 }
 
-void JobsModel::close(const QString &jobId)
+void JobsModel::close(const QModelIndex &idx)
 {
-    const int row = d->sources.indexOf(jobId);
-    if (row == -1) {
+    if (!idx.isValid() || idx.row() >= d->m_jobViews.count()) {
         return;
     }
 
-    beginRemoveRows(QModelIndex(), row, row);
-    d->sources.removeAt(row);
-    endRemoveRows();
-
-    delete d->jobs.take(jobId);
+    d->removeAt(idx.row());
 }
 
-void JobsModel::expire(const QString &jobId)
+void JobsModel::expire(const QModelIndex &idx)
 {
-    const int row = d->sources.indexOf(jobId);
-    if (row == -1) {
+    if (!idx.isValid() || idx.row() >= d->m_jobViews.count()) {
         return;
     }
 
-    const QModelIndex idx = index(row, 0);
-
-    Job *job = d->jobs.value(jobId);
-    job->setExpired(true);
-    emit dataChanged(idx, idx, {Notifications::ExpiredRole});
+    d->m_jobViews.at(idx.row())->setExpired(true);
 }
 
-void JobsModel::suspend(const QString &jobId)
+void JobsModel::suspend(const QModelIndex &idx)
 {
-    d->operationCall(jobId, QStringLiteral("suspend"));
+    if (!idx.isValid() || idx.row() >= d->m_jobViews.count()) {
+        return;
+    }
+
+    emit d->m_jobViews.at(idx.row())->suspend();
 }
 
-void JobsModel::resume(const QString &jobId)
+void JobsModel::resume(const QModelIndex &idx)
 {
-    d->operationCall(jobId, QStringLiteral("resume"));
+    if (!idx.isValid() || idx.row() >= d->m_jobViews.count()) {
+        return;
+    }
+
+    emit d->m_jobViews.at(idx.row())->resume();
 }
 
-void JobsModel::kill(const QString &jobId)
+void JobsModel::kill(const QModelIndex &idx)
 {
-    d->operationCall(jobId, QStringLiteral("stop"));
+    if (!idx.isValid() || idx.row() >= d->m_jobViews.count()) {
+        return;
+    }
+
+    emit d->m_jobViews.at(idx.row())->kill();
 }
 
 void JobsModel::clear(Notifications::ClearFlags flags)
 {
-    if (d->sources.isEmpty()) {
+    if (d->m_jobViews.isEmpty()) {
         return;
     }
 
-    for (int i = d->sources.count() - 1; i >= 0; --i) {
-        const QString &sourceName = d->sources.at(i);
-        Job *job = d->jobs.value(sourceName);
+    for (int i = d->m_jobViews.count() - 1; i >= 0; --i) {
+        Job *job = d->m_jobViews.at(i);
 
         bool clear = (flags.testFlag(Notifications::ClearExpired) && job->expired());
 
         // Compared to notifications, the number of jobs is typically small
         // so for simplicity we can just delete one item at a time
         if (clear) {
-            beginRemoveRows(QModelIndex(), i, i);
-            d->sources.removeAt(i);
-            endRemoveRows();
-
-            delete d->jobs.take(sourceName);
+            d->removeAt(i);
         }
     }
 }

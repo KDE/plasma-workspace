@@ -20,19 +20,18 @@
 #include "jobaction.h"
 #include "kuiserverengine.h"
 
-JobControl::JobControl(QObject* parent, JobView *jobView)
+using namespace NotificationManager;
+
+JobControl::JobControl(QObject* parent, Job *job)
     : Plasma::Service(parent),
-      m_jobView(jobView)
+      m_job(job)
 {
     setName(QStringLiteral("applicationjobs"));
-    setDestination(jobView->objectName());
+    setDestination(KuiserverEngine::sourceName(job));
 }
 
 Plasma::ServiceJob* JobControl::createJob(const QString& operation,
                                           QMap<QString,QVariant>& parameters)
 {
-    return new JobAction(m_jobView, operation, parameters, this);
+    return new JobAction(m_job, operation, parameters, this);
 }
-
-
-

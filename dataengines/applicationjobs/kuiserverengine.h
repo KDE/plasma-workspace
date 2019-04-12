@@ -19,14 +19,17 @@
 #ifndef KUISERVERENGINE_H
 #define KUISERVERENGINE_H
 
-#include <QDBusObjectPath>
-#include <QBasicTimer>
-#include <QTimer>
+#include <QVector>
 
 #include <Plasma/DataContainer>
 #include <Plasma/DataEngine>
 
-class JobView;
+#include "jobsmodel.h"
+
+namespace NotificationManager
+{
+    class Job;
+}
 
 namespace Plasma
 {
@@ -36,7 +39,6 @@ namespace Plasma
 class KuiserverEngine : public Plasma::DataEngine
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.kde.JobViewServer")
 
 public:
     KuiserverEngine(QObject* parent, const QVariantList& args);
@@ -44,101 +46,54 @@ public:
 
     void init();
 
-    QDBusObjectPath requestView(const QString &appName, const QString &appIconName,
-                                int capabilities);
     Plasma::Service* serviceForSource(const QString& source) override;
 
-private Q_SLOTS:
-    void processPendingJobs();
+    static QString sourceName(NotificationManager::Job *job);
+    static uint jobId(const QString &sourceName);
 
 private:
-    QTimer m_pendingJobsTimer;
-    QList<JobView *> m_pendingJobs;
-};
+    template<typename T, typename signal> void connectJobField(
+            NotificationManager::Job *job,
+            T (NotificationManager::Job::*getter)() const,
+            signal changeSignal,
+            const QString &targetFieldName)
+    {
+        // Set value initially in case we missed the first change
+        const QString source = sourceName(job);
+        setData(source, targetFieldName, ((job)->*getter)());
+        // and then listen for changes
+        connect(job, changeSignal, this, [=] {
+            setData(source, targetFieldName, ((job)->*getter)());
+        });
+    }
 
-class JobView : public Plasma::DataContainer
-{
-    Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "org.kde.JobViewV2")
+    void updateDescriptionField(
+        NotificationManager::Job *job,
+        int number,
+        QString (NotificationManager::Job::*labelGetter)() const,
+        QString (NotificationManager::Job::*valueGetter)() const
+    );
 
-public:
-    enum State {
-                 UnknownState = -1,
-                 Running = 0,
-                 Suspended = 1,
-                 Stopped = 2
-               };
+    void updateUnit(
+        NotificationManager::Job *job,
+        int number,
+        const QString &unit,
+        qulonglong (NotificationManager::Job::*processedGetter)() const,
+        qulonglong (NotificationManager::Job::*totalGetter)() const
+    );
 
-    explicit JobView(QObject *parent = nullptr);
-    ~JobView() override;
+    void registerJob(NotificationManager::Job *job);
+    void removeJob(NotificationManager::Job *job);
 
-    uint jobId() const;
-    JobView::State state();
+    static QString speedString(qulonglong speed);
 
-    void setTotalAmount(qlonglong amount, const QString &unit);
-    QString totalAmountSize() const;
-    QString totalAmountFiles() const;
+    void updateState(NotificationManager::Job *job);
+    void updateSpeed(NotificationManager::Job *job);
+    void updateEta(NotificationManager::Job *job);
 
-    void setProcessedAmount(qlonglong amount, const QString &unit);
+    NotificationManager::JobsModel::Ptr m_jobsModel;
 
-    void setSpeed(qlonglong bytesPerSecond);
-    QString speedString() const;
-
-    void setInfoMessage(const QString &infoMessage);
-    QString infoMessage() const;
-
-    bool setDescriptionField(uint number, const QString &name, const QString &value);
-    void clearDescriptionField(uint number);
-
-    void setAppName(const QString &appName);
-    void setAppIconName(const QString &appIconName);
-    void setCapabilities(int capabilities);
-    void setPercent(uint percent);
-    void setSuspended(bool suspended);
-    void setError(uint errorCode);
-    void setDestUrl(const QDBusVariant &destUrl);
-
-    void terminate(const QString &errorMessage);
-
-    QDBusObjectPath objectPath() const;
-
-    void requestStateChange(State state);
-
-public Q_SLOTS:
-    void finished();
-
-Q_SIGNALS:
-    void suspendRequested();
-    void resumeRequested();
-    void cancelRequested();
-
-protected:
-    void timerEvent(QTimerEvent *event) override;
-
-private:
-    void scheduleUpdate();
-    void updateEta();
-    int unitId(const QString &unit);
-
-    QDBusObjectPath m_objectPath;
-    QBasicTimer m_updateTimer;
-
-    uint m_capabilities;
-    uint m_percent;
-    uint m_jobId;
-
-    // for ETA calculation we cache these values
-    qlonglong m_speed;
-    qlonglong m_totalBytes;
-    qlonglong m_processedBytes;
-
-    State m_state;
-
-    QMap<QString, int> m_unitMap;
-    int m_bytesUnitId;
-    int m_unitId;
-
-    static uint s_jobId;
+    QVector<NotificationManager::Job *> m_jobs;
 };
 
 #endif

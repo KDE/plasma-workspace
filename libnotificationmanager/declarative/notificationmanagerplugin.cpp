@@ -21,7 +21,7 @@
 #include "notificationmanagerplugin.h"
 
 #include "notifications.h"
-#include "jobdetails.h"
+#include "job.h"
 #include "settings.h"
 
 #include <QQmlEngine>
@@ -33,6 +33,6 @@ void NotificationManagerPlugin::registerTypes(const char *uri)
     Q_ASSERT(uri == QLatin1String("org.kde.notificationmanager"));
 
     qmlRegisterType<Notifications>(uri, 1, 0, "Notifications");
-    qmlRegisterType<JobDetails>();
+    qmlRegisterType<Job>();
     qmlRegisterType<Settings>(uri, 1, 0, "Settings");
 }

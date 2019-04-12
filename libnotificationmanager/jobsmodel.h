@@ -24,16 +24,15 @@
 #include <QScopedPointer>
 #include <QSharedPointer>
 
-#include <Plasma/DataEngine>
-
 #include "notifications.h"
+#include "notificationmanager_export.h"
 
 namespace NotificationManager
 {
 
-class Notification;
+class JobsModelPrivate;
 
-class JobsModel : public QAbstractListModel
+class NOTIFICATIONMANAGER_EXPORT JobsModel : public QAbstractListModel
 {
     Q_OBJECT
 
@@ -43,28 +42,53 @@ public:
     using Ptr = QSharedPointer<JobsModel>;
     static Ptr createJobsModel();
 
+    /**
+     * Registers the JobView service on DBus.
+     *
+     * @return true if succeeded, false otherwise.
+     */
+    bool init();
+
+    /**
+     * Whether the notification service could be reigstered
+     */
+    bool isValid() const;
+
     QVariant data(const QModelIndex &index, int role) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    void close(const QString &jobId);
-    void expire(const QString &jobId);
+    /**
+     * @brief Close a job
+     *
+     * This removes the job from the model. This will not cancel the job!
+     * Use @c kill if you want to cancel a job.
+     */
+    void close(const QModelIndex &idx);
+    void expire(const QModelIndex &idx);
 
-    void suspend(const QString &jobId);
-    void resume(const QString &jobId);
-    void kill(const QString &jobId);
+    /**
+     * @brief Suspend a job
+     */
+    void suspend(const QModelIndex &idx);
+    /**
+     * @brief Resume a job
+     */
+    void resume(const QModelIndex &idx);
+    /**
+     * @brief Kill a job
+     *
+     * This cancels the job.
+     */
+    void kill(const QModelIndex &idx);
 
     void clear(Notifications::ClearFlags flags);
 
-private slots:
-    void dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data);
-
 private:
-    class Private;
-    QScopedPointer<Private> d;
-
     JobsModel();
     Q_DISABLE_COPY(JobsModel)
+
+    JobsModelPrivate *d;
 
 };
 

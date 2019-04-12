@@ -236,11 +236,10 @@ public:
         // Jobs
         JobStateRole, ///< The state of the job, either JobStateJopped, JobStateSuspended, or JobStateRunning.
         PercentageRole, ///< The percentage of the job. Use @c jobsPercentage to get a global percentage for all jobs.
-        ErrorRole, ///< The error id of the job, zero in case of no error.
-        ErrorTextRole, ///< The user-visible error string of the job, empty in case of no error.
+        JobErrorRole, ///< The error id of the job, zero in case of no error.
         SuspendableRole, ///< Whether the job can be suspended @sa suspendJob
         KillableRole, ///< Whether the job can be killed/canceled @sa killJob
-        JobDetailsRole, ///< A pointer to a JobDetails item containing more detailed information about the job
+        JobDetailsRole, ///< A pointer to a Job item itself containing more detailed information about the job
 
         ActionNamesRole, ///< The IDs of the actions, excluding the default and settings action, e.g. [action1, action2]
         ActionLabelsRole, ///< The user-visible labels of the actions, excluding the default and settings action, e.g. ["Accept", "Reject"]
