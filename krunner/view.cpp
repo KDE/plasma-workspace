@@ -361,12 +361,17 @@ void View::addToHistory(const QString &item)
         return;
     }
 
-    if (!KAuthorized::authorize(QStringLiteral("lineedit_text_completion"))) {
+    // Mimic shell behavior of not storing lines starting with a space
+    if (item.at(0).isSpace()) {
         return;
     }
 
-    // Mimic shell behavior of not storing lines starting with a space
-    if (item.at(0).isSpace()) {
+    // Avoid removing the same item from the front and prepending it again
+    if (!m_history.isEmpty() && m_history.constFirst() == item) {
+        return;
+    }
+
+    if (!KAuthorized::authorize(QStringLiteral("lineedit_text_completion"))) {
         return;
     }
 
