@@ -128,7 +128,7 @@ void WidgetExplorerPrivate::initFilters()
 
         filterModel.addFilter(i18n("Uninstallable"),
                             KCategorizedItemsViewModels::Filter(QStringLiteral("local"), true),
-                            QIcon::fromTheme(QStringLiteral("list-remove")));
+                            QIcon::fromTheme(QStringLiteral("edit-delete")));
 
         filterModel.addSeparator(i18n("Categories:"));
     }
