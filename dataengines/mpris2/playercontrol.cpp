@@ -27,6 +27,8 @@
 #include <mprisroot.h>
 
 #include <QDBusConnection>
+#include <QDBusPendingCallWatcher>
+#include <QDBusPendingReply>
 
 PlayerControl::PlayerControl(PlayerContainer* container, QObject* parent)
     : Plasma::Service(parent)
@@ -90,29 +92,48 @@ void PlayerControl::containerDestroyed()
     m_container = nullptr;
 }
 
-void PlayerControl::changeVolume(double delta, bool showOSD) {
-    const double volume = playerInterface()->volume();
+void PlayerControl::changeVolume(double delta, bool showOSD)
+{
+    // Not relying on property/setProperty to avoid doing blocking DBus calls
+
+    const double volume = m_container->data().value(QStringLiteral("Volume")).toDouble();
     const double newVolume = qBound(0.0, volume + delta, qMax(volume, 1.0));
-    playerInterface()->setVolume(newVolume);
 
-    if (showOSD) {
-        const auto& data = m_container->data();
+    QDBusPendingCall reply = propertiesInterface()->Set(m_container->playerInterface()->interface(),
+                                                        QStringLiteral("Volume"), QDBusVariant(newVolume));
 
-        QDBusMessage msg = QDBusMessage::createMethodCall(
-            QStringLiteral("org.kde.plasmashell"),
-            QStringLiteral("/org/kde/osdService"),
-            QStringLiteral("org.kde.osdService"),
-            QStringLiteral("mediaPlayerVolumeChanged")
-        );
+    // Update the container value right away so when calling this method in quick succession
+    // (mouse wheeling the tray icon) next call already gets the new value
+    m_container->setData(QStringLiteral("Volume"), newVolume);
 
-        msg.setArguments({
-            (int)(100 * newVolume),
-            data.value("Identity", ""),
-            data.value("Desktop Icon Name", "")
-        });
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, [this, showOSD](QDBusPendingCallWatcher *watcher) {
+        watcher->deleteLater();
 
-        QDBusConnection::sessionBus().asyncCall(msg);
-    }
+        QDBusPendingReply<void> reply = *watcher;
+        if (reply.isError()) {
+            return;
+        }
+
+        if (showOSD) {
+            const auto& data = m_container->data();
+
+            QDBusMessage msg = QDBusMessage::createMethodCall(
+                QStringLiteral("org.kde.plasmashell"),
+                QStringLiteral("/org/kde/osdService"),
+                QStringLiteral("org.kde.osdService"),
+                QStringLiteral("mediaPlayerVolumeChanged")
+            );
+
+            msg.setArguments({
+                qRound(data.value(QStringLiteral("Volume")).toDouble() * 100),
+                data.value("Identity", ""),
+                data.value("Desktop Icon Name", "")
+            });
+
+            QDBusConnection::sessionBus().asyncCall(msg);
+        }
+    });
 }
 
 Plasma::ServiceJob* PlayerControl::createJob(const QString& operation,
