@@ -36,14 +36,12 @@ using namespace NotificationManager;
 
 QString Utils::processNameFromDBusService(const QDBusConnection &connection, const QString &serviceName)
 {
-    qDebug() << "gimme service pid for" << serviceName;
     QDBusReply<uint> pidReply = connection.interface()->servicePid(serviceName);
     if (!pidReply.isValid()) {
         return QString();
     }
 
     const auto pid = pidReply.value();
-    qDebug() << "PIDINHIER" << pid;
 
     KSysGuard::Processes procs;
     procs.updateOrAddProcess(pid);
@@ -61,7 +59,6 @@ QModelIndex Utils::mapToModel(const QModelIndex &idx, const QAbstractItemModel *
 {
     // KModelIndexProxyMapper can only map diferent indices to a single source
     // but we have the other way round, a single index that splits into different source models
-    qDebug() << "map to model" << idx << sourceModel;
     QModelIndex resolvedIdx = idx;
     while (resolvedIdx.isValid() && resolvedIdx.model() != sourceModel) {
         if (auto *proxyModel = qobject_cast<const QAbstractProxyModel *>(resolvedIdx.model())) {

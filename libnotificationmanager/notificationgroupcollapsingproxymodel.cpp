@@ -65,7 +65,7 @@ void NotificationGroupCollapsingProxyModel::setSourceModel(QAbstractItemModel *s
 QVariant NotificationGroupCollapsingProxyModel::data(const QModelIndex &index, int role) const
 {
     switch (role) {
-    case NotificationManager::Notifications::IsGroupExpandedRole: {
+    case Notifications::IsGroupExpandedRole: {
         if (m_limit > 0) {
             // so each item in a group knows whether the group is expanded
             const QModelIndex sourceIdx = mapToSource(index);
@@ -73,7 +73,7 @@ QVariant NotificationGroupCollapsingProxyModel::data(const QModelIndex &index, i
         }
         return true;
     }
-    case NotificationManager::Notifications::ExpandedGroupChildrenCountRole:
+    case Notifications::ExpandedGroupChildrenCountRole:
         return rowCount(index.parent().isValid() ? index.parent() : index);
     }
 

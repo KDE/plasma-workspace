@@ -70,7 +70,10 @@ Item {
     }
 
     Plasmoid.switchWidth: units.gridUnit * 14
-    Plasmoid.switchHeight: units.gridUnit * 10
+    // This is to let the plasmoid expand in a vertical panel for a "sidebar" notification panel
+    // The CompactRepresentation size is limited to not have the notification icon grow gigantic
+    // but it should still switch over to full rep once there's enough width (disregarding the limited height)
+    Plasmoid.switchHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? 1 : units.gridUnit * 10
 
     Plasmoid.onExpandedChanged: {
         if (!plasmoid.expanded) {

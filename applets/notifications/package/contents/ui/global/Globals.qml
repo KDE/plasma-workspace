@@ -393,7 +393,7 @@ QtObject {
             Component.onCompleted: {
                 // Register apps that were seen spawning a popup so they can be configured later
                 // Apps with notifyrc can already be configured anyway
-                if (model.desktopEntry && !model.notifyRcName) {
+                if (model.type === NotificationManager.Notifications.NotificationType && model.desktopEntry && !model.notifyRcName) {
                     notificationSettings.registerKnownApplication(model.desktopEntry);
                     notificationSettings.save();
                 }

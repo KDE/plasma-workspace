@@ -182,7 +182,10 @@ Settings::Settings(const KSharedConfig::Ptr &config, QObject *parent)
             this, &Settings::notificationInhibitionApplicationsChanged);
 }
 
-Settings::~Settings() = default;
+Settings::~Settings()
+{
+    d->config->markAsClean();
+}
 
 Settings::NotificationBehaviors Settings::applicationBehavior(const QString &desktopEntry) const
 {
@@ -247,6 +250,8 @@ void Settings::forgetKnownApplication(const QString &desktopEntry)
 
 void Settings::load()
 {
+    d->config->markAsClean();
+    d->config->reparseConfiguration();
     DoNotDisturbSettings::self()->load();
     NotificationSettings::self()->load();
     JobSettings::self()->load();

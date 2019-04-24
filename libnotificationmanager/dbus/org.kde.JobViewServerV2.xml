@@ -5,12 +5,6 @@
     <method name="requestView">
       <!-- The desktop entry of the application, e.g. "org.kde.dolphin" -->
       <arg name="desktopEntry" type="s" direction="in"/>
-      <!-- The user-visible application name, e.g. "Dolphin".
-      If not provided, this will be read from the desktopEntry -->
-      <arg name="appName" type="s" directon="in"/>
-      <!-- The application icon name, e.g. "system-file-manager".
-      If not provided, this will be read from the desktopEntry -->
-      <arg name="appIconName" type="s" direction="in"/>
 
       <!-- 'capabilities' is used as a bit field:
            0x0001 means that the user should be able to cancel the job
@@ -23,7 +17,7 @@
 
       <arg name="trackerPath" type="o" direction="out"/>
 
-      <annotation name="org.qtproject.QtDBus.QtTypeName.In4" value="QVariantMap"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In2" value="QVariantMap"/>
     </method>
   </interface>
 </node>

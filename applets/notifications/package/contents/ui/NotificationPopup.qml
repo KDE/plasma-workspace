@@ -94,15 +94,8 @@ PlasmaCore.Dialog {
 
     location: PlasmaCore.Types.Floating
 
-    type: PlasmaCore.Dialog.Notification
-    flags: {
-        var flags = Qt.WindowDoesNotAcceptFocus;
-        // FIXME this needs support in KWin somehow...
-        if (urgency === NotificationManager.Notifications.CriticalUrgency) {
-            flags |= Qt.WindowStaysOnTopHint;
-        }
-        return flags;
-    }
+    type: urgency === NotificationManager.Notifications.CriticalUrgency ? PlasmaCore.Dialog.CriticalNotification : PlasmaCore.Dialog.Notification
+    flags: Qt.WindowDoesNotAcceptFocus
 
     visible: false
 
@@ -158,7 +151,6 @@ PlasmaCore.Dialog {
                 bottomMargin: -notificationPopup.margins.bottom
             }
             width: units.devicePixelRatio * 3
-            radius: width
             color: theme.highlightColor
             opacity: timeoutIndicatorAnimation.running ? 0.6 : 0
             visible: units.longDuration > 1

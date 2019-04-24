@@ -147,9 +147,11 @@ ColumnLayout {
                     text: {
                         if (notificationItem.notificationType === NotificationManager.Notifications.JobType) {
                             if (notificationItem.jobState === NotificationManager.Notifications.JobStateSuspended) {
-                                return i18nc("Job name, e.g. Copying is paused", "%1 (Paused)", notificationItem.summary);
+                                if (notificationItem.summary) {
+                                    return i18nc("Job name, e.g. Copying is paused", "%1 (Paused)", notificationItem.summary);
+                                }
                             } else if (notificationItem.jobState === NotificationManager.Notifications.JobStateStopped) {
-                                if (notificationItem.error) {
+                                if (notificationItem.jobError) {
                                     if (notificationItem.summary) {
                                         return i18nc("Job name, e.g. Copying has failed", "%1 (Failed)", notificationItem.summary);
                                     } else {

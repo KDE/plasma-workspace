@@ -33,21 +33,33 @@ import org.kde.notificationmanager 1.0 as NotificationManager
 
 import "global"
 
-ColumnLayout {
-    Layout.preferredWidth: units.gridUnit * 18
-    Layout.preferredHeight: units.gridUnit * 24
+ColumnLayout{
+    // FIXME fix popup size when resizing panel smaller (so it collapses)
+    //Layout.preferredWidth: units.gridUnit * 18
+    //Layout.preferredHeight: units.gridUnit * 24
+    //Layout.minimumWidth: units.gridUnit * 10
+    //Layout.minimumHeight: units.gridUnit * 15
     Layout.fillHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical
+
     spacing: units.smallSpacing
 
     // TODO these should be configurable in the future
     readonly property int dndMorningHour: 6
     readonly property int dndEveningHour: 20
 
+    // HACK forward focus to the list
+    onActiveFocusChanged: {
+        if (activeFocus) {
+            list.forceActiveFocus();
+        }
+    }
+
     Connections {
         target: plasmoid
         onExpandedChanged: {
             if (plasmoid.expanded) {
                 list.positionViewAtBeginning();
+                list.currentIndex = -1;
             }
         }
     }
@@ -131,33 +143,39 @@ ColumnLayout {
                             model.push({date: d, text: i18n("For 4 hours")});
 
                             // Until this evening
-                            d = dndMenu.date;
-                            // TODO make the user's preferred time schedule configurable
-                            d.setHours(dndEveningHour);
-                            d.setMinutes(0);
-                            d.setSeconds(0);
-                            model.push({date: d, text: i18n("Until this evening"), visible: dndMenu.date.getHours() < dndEveningHour});
+                            if (dndMenu.date.getHours() < dndEveningHour) {
+                                d = dndMenu.date;
+                                // TODO make the user's preferred time schedule configurable
+                                d.setHours(dndEveningHour);
+                                d.setMinutes(0);
+                                d.setSeconds(0);
+                                model.push({date: d, text: i18n("Until this evening")});
+                            }
 
                             // Until next morning
-                            d = dndMenu.date;
-                            d.setDate(d.getDate() + 1);
-                            d.setHours(dndMorningHour);
-                            d.setMinutes(0);
-                            d.setSeconds(0);
-                            model.push({date: d, text: i18n("Until tomorrow morning"), visible: dndMenu.date.getHours() > dndMorningHour});
+                            if (dndMenu.date.getHours() > dndMorningHour) {
+                                d = dndMenu.date;
+                                d.setDate(d.getDate() + 1);
+                                d.setHours(dndMorningHour);
+                                d.setMinutes(0);
+                                d.setSeconds(0);
+                                model.push({date: d, text: i18n("Until tomorrow morning")});
+                            }
 
                             // Until Monday
-                            var d = dndMenu.date;
-                            d.setHours(dndMorningHour);
-                            // wraps around if neccessary
-                            d.setDate(d.getDate() + (7 - d.getDay() + 1));
-                            d.setMinutes(0);
-                            d.setSeconds(0);
                             // show Friday and Saturday, Sunday is "0" but for that you can use "until tomorrow morning"
-                            model.push({date: d, text: i18n("Until Monday"), visible: dndMenu.date.getDay() >= 5});
+                            if (dndMenu.date.getDay() >= 5) {
+                                d = dndMenu.date;
+                                d.setHours(dndMorningHour);
+                                // wraps around if neccessary
+                                d.setDate(d.getDate() + (7 - d.getDay() + 1));
+                                d.setMinutes(0);
+                                d.setSeconds(0);
+                                model.push({date: d, text: i18n("Until Monday")});
+                            }
 
                             // Until "turned off"
-                            var d = dndMenu.date;
+                            d = dndMenu.date;
                             // Just set it to one year in the future so we don't need yet another "do not disturb enabled" property
                             d.setFullYear(d.getFullYear() + 1);
                             model.push({date: d, text: i18n("Until turned off")});
@@ -235,24 +253,6 @@ ColumnLayout {
         }
     }
 
-    RowLayout {
-        Layout.fillWidth: true
-
-        PlasmaExtras.Heading {
-            Layout.fillWidth: true
-            level: 3
-            opacity: 0.6
-            text: list.count === 0 ? i18n("No unread notifications.") : i18n("Notifications")
-        }
-
-        PlasmaComponents.ToolButton {
-            iconName: "edit-clear-history"
-            tooltip: i18n("Clear History")
-            visible: plasmoid.action("clearHistory").visible
-            onClicked: action_clearHistory()
-        }
-    }
-
     // actual notifications
     PlasmaExtras.ScrollArea {
         Layout.fillWidth: true
@@ -263,6 +263,74 @@ ColumnLayout {
         ListView {
             id: list
             model: historyModel
+            currentIndex: -1
+
+            Keys.onDeletePressed: {
+                var idx = historyModel.index(currentIndex, 0);
+                if (historyModel.data(idx, NotificationManager.Notifications.ClosableRole)) {
+                    historyModel.close(idx);
+                    // TODO would be nice to stay inside the current group when deleting an item
+                }
+            }
+            Keys.onEnterPressed: Keys.onReturnPressed(event)
+            Keys.onReturnPressed: {
+                var idx = historyModel.index(currentIndex, 0);
+                if (historyModel.data(idx, NotificationManager.Notifications.HasDefaultActionRole)) {
+                    historyModel.invokeDefaultAction(idx);
+                }
+            }
+            Keys.onLeftPressed: setGroupExpanded(currentIndex, LayoutMirroring.enabled)
+            Keys.onRightPressed: setGroupExpanded(currentIndex, !LayoutMirroring.enabled)
+
+            function isRowExpanded(row) {
+                var idx = historyModel.index(row, 0);
+                return historyModel.data(idx, NotificationManager.Notifications.IsGroupExpandedRole);
+            }
+
+            function setGroupExpanded(row, expanded) {
+                var rowIdx = historyModel.index(row, 0);
+                var persistentRowIdx = historyModel.makePersistentModelIndex(rowIdx);
+                var persistentGroupIdx = historyModel.makePersistentModelIndex(historyModel.groupIndex(rowIdx));
+
+                historyModel.setData(rowIdx, expanded, NotificationManager.Notifications.IsGroupExpandedRole);
+
+                // If the current item went away when the group collapsed, scroll to the group heading
+                if (!persistentRowIdx || !persistentRowIdx.valid) {
+                    if (persistentGroupIdx && persistentGroupIdx.valid) {
+                        list.positionViewAtIndex(persistentGroupIdx.row, ListView.Contain);
+                        // When closed via keyboard, also set a sane current index
+                        if (list.currentIndex > -1) {
+                            list.currentIndex = persistentGroupIdx.row;
+                        }
+                    }
+                }
+            }
+
+            highlightMoveDuration: 0
+            highlightResizeDuration: 0
+            // Not using PlasmaComponents.Highlight as this is only for indicating keyboard focus
+            highlight: PlasmaCore.FrameSvgItem {
+                imagePath: "widgets/listitem"
+                prefix: "pressed"
+            }
+
+            header: RowLayout {
+                width: list.width
+
+                PlasmaExtras.Heading {
+                    Layout.fillWidth: true
+                    level: 3
+                    opacity: 0.6
+                    text: list.count === 0 ? i18n("No unread notifications.") : i18n("Notifications")
+                }
+
+                PlasmaComponents.ToolButton {
+                    iconName: "edit-clear-history"
+                    tooltip: i18n("Clear History")
+                    visible: plasmoid.action("clearHistory").visible
+                    onClicked: action_clearHistory()
+                }
+            }
 
             add: Transition {
                 SequentialAnimation {
@@ -434,16 +502,7 @@ ColumnLayout {
                                                                 "Show %1 More", (model.groupChildrenCount - model.expandedGroupChildrenCount))
                             visible: (model.groupChildrenCount > model.expandedGroupChildrenCount || model.isGroupExpanded)
                                 && delegateLoader.ListView.nextSection !== delegateLoader.ListView.section
-                            onClicked: {
-                                // Scroll to the group top if groups are collsped
-                                if (model.isGroupExpanded) {
-                                    var persistentGroupIdx = historyModel.makePersistentModelIndex(historyModel.groupIndex(historyModel.index(model.index, 0)));
-                                    model.isGroupExpanded = false;
-                                    list.positionViewAtIndex(persistentGroupIdx.row, ListView.Contain);
-                                } else {
-                                    model.isGroupExpanded = true;
-                                }
-                            }
+                            onClicked: list.setGroupExpanded(model.index, !model.isGroupExpanded)
                         }
 
                         PlasmaCore.SvgItem {

@@ -114,7 +114,7 @@ QString JobPrivate::prettyDestUrl() const
         return destUrlString;
     }
 
-    return url.toDisplayString(); // strips password
+    return url.toDisplayString(QUrl::RemoveUserInfo);
 }
 
 void JobPrivate::updateHasDetails()

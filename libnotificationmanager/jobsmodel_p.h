@@ -54,8 +54,6 @@ public:
     QDBusObjectPath requestView(const QString &appName, const QString &appIconName, int capabilities);
     // V2
     QDBusObjectPath requestView(const QString &desktopEntry,
-                                const QString &appName,
-                                const QString &appIconName,
                                 int capabilities,
                                 const QVariantMap &hints);
 

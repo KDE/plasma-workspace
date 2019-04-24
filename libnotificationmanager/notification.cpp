@@ -148,7 +148,7 @@ QImage Notification::Private::decodeNotificationSpecImageHint(const QDBusArgumen
 
     #define SANITY_CHECK(condition) \
     if (!(condition)) { \
-        qWarning() << "Sanity check failed on" << #condition; \
+        qCWarning(NOTIFICATIONMANAGER) << "Image decoding sanity check failed on" << #condition; \
         return QImage(); \
     }
 
@@ -188,7 +188,7 @@ QImage Notification::Private::decodeNotificationSpecImageHint(const QDBusArgumen
         }
     }
     if (format == QImage::Format_Invalid) {
-        qWarning() << "Unsupported image format (hasAlpha:" << hasAlpha << "bitsPerSample:" << bitsPerSample << "channels:" << channels << ")";
+        qCWarning(NOTIFICATIONMANAGER) << "Unsupported image format (hasAlpha:" << hasAlpha << "bitsPerSample:" << bitsPerSample << "channels:" << channels << ")";
         return QImage();
     }
 
@@ -197,7 +197,7 @@ QImage Notification::Private::decodeNotificationSpecImageHint(const QDBusArgumen
     end = ptr + pixels.length();
     for (int y=0; y<height; ++y, ptr += rowStride) {
         if (ptr + channels * width > end) {
-            qWarning() << "Image data is incomplete. y:" << y << "height:" << height;
+            qCWarning(NOTIFICATIONMANAGER)  << "Image data is incomplete. y:" << y << "height:" << height;
             break;
         }
         fcn((QRgb*)image.scanLine(y), ptr, width);

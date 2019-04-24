@@ -185,6 +185,8 @@ QStringList JobsModelPrivate::registeredJobContacts() const
 QDBusObjectPath JobsModelPrivate::requestView(const QString &appName, const QString &appIconName, int capabilities)
 {
     QString desktopEntry;
+    QVariantMap hints;
+
     QString applicationName = appName;
     QString applicationIconName = appIconName;
 
@@ -201,18 +203,21 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &appName, const QStr
         applicationIconName = service->icon();
     }
 
-    return requestView(desktopEntry, applicationName, applicationIconName, capabilities, QVariantMap() /*hints*/);
+    if (!applicationName.isEmpty()) {
+        hints.insert(QStringLiteral("application-display-name"), applicationName);
+    }
+    if (!applicationIconName.isEmpty()) {
+        hints.insert(QStringLiteral("application-icon-name"), applicationIconName);
+    }
+
+    return requestView(desktopEntry, capabilities, hints);
 }
 
 QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry,
-                                                  const QString &appName,
-                                                  const QString &appIconName,
                                                   int capabilities,
                                                   const QVariantMap &hints)
 {
-    Q_UNUSED(hints); // reserved for future extension)
-
-    qCDebug(NOTIFICATIONMANAGER) << "JobView requested by" << desktopEntry << "claiming to be" << appName;
+    qCDebug(NOTIFICATIONMANAGER) << "JobView requested by" << desktopEntry << "with hints" << hints;
 
     if (!m_highestJobId) {
         ++m_highestJobId;
@@ -221,13 +226,26 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry,
     Job *job = new Job(m_highestJobId);
     ++m_highestJobId;
 
-    const QString serviceName = message().service();
+    QString applicationName = hints.value(QStringLiteral("application-display-name")).toString();
+    QString applicationIconName = hints.value(QStringLiteral("application-icon-name")).toString();
 
     job->setDesktopEntry(desktopEntry);
-    job->setApplicationName(appName);
-    job->setApplicationIconName(appIconName);
+
+    KService::Ptr service = KService::serviceByDesktopName(desktopEntry);
+    if (service) {
+        if (applicationName.isEmpty()) {
+            applicationName = service->name();
+        }
+        if (applicationIconName.isEmpty()) {
+            applicationIconName = service->icon();
+        }
+    }
+
+    job->setApplicationName(applicationName);
+    job->setApplicationIconName(applicationIconName);
 
     // No application name? Try to figure out the process name using the sender's PID
+    const QString serviceName = message().service();
     if (job->applicationName().isEmpty()) {
         qCInfo(NOTIFICATIONMANAGER) << "JobView request from" << serviceName << "didn't contain any identification information, this is an application bug!";
         const QString processName = Utils::processNameFromDBusService(connection(), serviceName);
@@ -390,7 +408,10 @@ void JobsModelPrivate::onServiceUnregistered(const QString &serviceName)
 
     const QList<Job *> jobs = m_jobServices.keys(serviceName);
     for (Job *job : jobs) {
-        // Mark all jobs as failed
+        // Mark all non-finished jobs as failed
+        if (job->state() == Notifications::JobStateStopped) {
+            continue;
+        }
         job->setError(127); // KIO::ERR_SLAVE_DIED
         job->setErrorText(i18n("Application closed unexpectedly."));
         job->setState(Notifications::JobStateStopped);

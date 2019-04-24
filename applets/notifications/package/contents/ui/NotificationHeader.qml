@@ -99,7 +99,7 @@ RowLayout {
         property string agoText: ""
         visible: text !== ""
         text: generateRemainingText() || agoText
-        Layout.rightMargin: 0 // the ToolButton's margins are enough
+        Layout.rightMargin: -notificationHeading.spacing // the ToolButton's margins are enough
 
         function generateAgoText() {
             if (!time || isNaN(time.getTime()) || notificationHeading.jobState === NotificationManager.Notifications.JobStateRunning) {
@@ -116,8 +116,8 @@ RowLayout {
             if (deltaMinutes < 60) {
                 return i18ncp("Notification was added minutes ago, keep short", "%1 min ago", "%1 min ago", deltaMinutes);
             }
-            // Received less than a day ago, show time, 23 hours so the time isn't ambiguous between today and yesterday
-            if (deltaMinutes < 60 * 23) {
+            // Received less than a day ago, show time, 22 hours so the time isn't as ambiguous between today and yesterday
+            if (deltaMinutes < 60 * 22) {
                 return Qt.formatTime(time, Qt.locale().timeFormat(Locale.ShortFormat).replace(/.ss?/i, ""));
             }
 

@@ -42,7 +42,16 @@ using namespace NotificationManager;
 NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& args )
     : Plasma::DataEngine( parent, args )
 {
+    init();
+}
 
+NotificationsEngine::~NotificationsEngine()
+{
+
+}
+
+void NotificationsEngine::init()
+{
     connect(&Server::self(), &Server::notificationAdded, this, [this](const Notification &notification) {
         notificationAdded(notification);
     });
@@ -62,15 +71,8 @@ NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& a
             removeSource(source);
         }
     });
-}
 
-NotificationsEngine::~NotificationsEngine()
-{
-
-}
-
-void NotificationsEngine::init()
-{
+    Server::self().init();
 }
 
 void NotificationsEngine::notificationAdded(const Notification &notification)

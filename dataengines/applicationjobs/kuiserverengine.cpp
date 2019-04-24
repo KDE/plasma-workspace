@@ -76,8 +76,8 @@ Plasma::Service* KuiserverEngine::serviceForSource(const QString& source)
 void KuiserverEngine::init()
 {
     m_jobsModel = JobsModel::createJobsModel();
-    // don't init, applicationjobs engine should just passively listen
-    //m_jobsModel->init();
+    // TODO see if this causes any issues when/if other processes are using applicationjobs engine, e.g. Latte Dock
+    m_jobsModel->init();
 
     connect(m_jobsModel.data(), &Notifications::rowsInserted, this, [this](const QModelIndex &parent, int first, int last) {
         for (int i = first; i <= last; ++i) {

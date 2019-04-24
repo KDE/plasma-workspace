@@ -27,10 +27,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 MouseArea {
     id: compactRoot
 
-    // FIXME figure out a way how to let the compact icon not grow beond iconSizeHints
-    // but still let it expand eventually for a sidebar
-
-    /*readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
+    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
         || plasmoid.location === PlasmaCore.Types.RightEdge
         || plasmoid.location === PlasmaCore.Types.BottomEdge
         || plasmoid.location === PlasmaCore.Types.LeftEdge)
@@ -38,8 +35,8 @@ MouseArea {
     Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : units.iconSizes.small
     Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (units.iconSizes.small + 2 * theme.mSize(theme.defaultFont).height)
 
-    Layout.maximumWidth: -1//inPanel ? units.iconSizeHints.panel : -1
-    Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1*/
+    Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
+    Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
 
     property int activeCount: 0
     property int unreadCount: 0

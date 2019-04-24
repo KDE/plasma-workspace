@@ -258,6 +258,7 @@ public:
         ExpiredRole, ///< The notification timed out and closed. Actions on it cannot be invoked anymore.
         DismissedRole ///< The notification got temporarily hidden by the user but could still be interacted with.
     };
+    Q_ENUM(Roles)
 
     /**
      * The type of model item.
@@ -478,7 +479,7 @@ public:
 
     Q_INVOKABLE void collapseAllGroups();
 
-    QVariant data(const QModelIndex &index, int role/* = Qt::DisplayRole*/) const override;
+    QVariant data(const QModelIndex &index, int role) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QHash<int, QByteArray> roleNames() const override;
