@@ -25,7 +25,7 @@ import org.kde.plasma.configuration 2.0
 ConfigModel {
     ConfigCategory {
          name: i18n("General")
-         icon: "preferences-system-time"
+         icon: "preferences-desktop-plasma"
          source: "configGeneral.qml"
     }
 //     ConfigCategory {
