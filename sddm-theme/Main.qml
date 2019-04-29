@@ -444,6 +444,9 @@ PlasmaCore.ColorScope {
         target: sddm
         onLoginFailed: {
             notificationMessage = i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Login Failed")
+            footer.enabled = true
+            mainStack.enabled = true
+            userListComponent.userList.opacity = 1
         }
         onLoginSucceeded: {
             //note SDDM will kill the greeter at some random point after this

@@ -37,6 +37,10 @@ SessionManagementScreen {
         var username = showUsernamePrompt ? userNameInput.text : userList.selectedUser
         var password = passwordBox.text
 
+        footer.enabled = false
+        mainStack.enabled = false
+        userListComponent.userList.opacity = 0.5
+
         //this is partly because it looks nicer
         //but more importantly it works round a Qt bug that can trigger if the app is closed with a TextField focused
         //DAVE REPORT THE FRICKING THING AND PUT A LINK
