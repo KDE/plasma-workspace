@@ -26,6 +26,7 @@ Kirigami.FormLayout {
     twinFormLayouts: parentLayout
 
     property alias cfg_Color: colorButton.color
+    property alias formLayout: root
 
     KQuickControls.ColorButton {
         id: colorButton
