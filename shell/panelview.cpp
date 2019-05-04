@@ -712,7 +712,6 @@ void PanelView::setAutoHideEnabled(bool enabled)
 
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
-    updateMask();
     updateEnabledBorders();
     //don't setGeometry() to make really sure we aren't doing a resize loop
     const QPoint pos = geometryByDistance(m_distance).topLeft();
@@ -724,14 +723,16 @@ void PanelView::resizeEvent(QResizeEvent *ev)
     emit m_corona->availableScreenRegionChanged();
 
     PlasmaQuick::ContainmentView::resizeEvent(ev);
+
+    updateMask();
 }
 
 void PanelView::moveEvent(QMoveEvent *ev)
 {
-    updateMask();
     updateEnabledBorders();
     m_strutsTimer.start(STRUTSTIMERDELAY);
     PlasmaQuick::ContainmentView::moveEvent(ev);
+    updateMask();
 }
 
 void PanelView::integrateScreen()
