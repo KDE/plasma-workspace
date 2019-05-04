@@ -63,7 +63,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
        m_alignment(Qt::AlignLeft),
        m_corona(corona),
        m_visibilityMode(NormalPanel),
-       m_background(nullptr),
        m_backgroundHints(Plasma::Types::StandardBackground),
        m_shellSurface(nullptr)
 {
@@ -960,22 +959,6 @@ void PanelView::updateMask()
         if (static_cast<QMetaType::Type>(maskProperty.type()) == QMetaType::QRegion) {
             mask = maskProperty.value<QRegion>();
         }
-    }
-
-    // old hack for non-compositing:
-    // assuming the desktoptheme uses "widgets/panel-background" for the panel
-    // before "panelMask" was added to expected property set of panel objects
-    // TODO: understand if still needed
-    if (mask.isEmpty() && !KWindowSystem::compositingActive()) {
-        if (!m_background) {
-            m_background = new Plasma::FrameSvg(this);
-            m_background->setImagePath(QStringLiteral("widgets/panel-background"));
-        }
-
-        m_background->setEnabledBorders(enabledBorders());
-
-        m_background->resizeFrame(size());
-        mask = m_background->mask();
     }
 
     setMask(mask);

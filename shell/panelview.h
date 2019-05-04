@@ -230,8 +230,6 @@ private:
     Plasma::Theme m_theme;
     QTimer m_positionPaneltimer;
     QTimer m_unhideTimer;
-    //only for the mask, not to actually paint
-    Plasma::FrameSvg *m_background;
     Plasma::Types::BackgroundHints m_backgroundHints;
     Plasma::FrameSvg::EnabledBorders m_enabledBorders = Plasma::FrameSvg::AllBorders;
     KWayland::Client::PlasmaShellSurface *m_shellSurface;
