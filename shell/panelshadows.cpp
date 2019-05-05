@@ -192,13 +192,17 @@ void PanelShadows::Private::windowDestroyed(QObject *deletedObject)
 
 void PanelShadows::Private::updateShadows()
 {
+    const bool hadShadowsBefore = !m_shadowPixmaps.isEmpty();
+
     // has shadows now?
     if (hasShadows()) {
+        if (hadShadowsBefore) {
+            clearPixmaps();
+        }
         for (auto i = m_windows.constBegin(); i != m_windows.constEnd(); ++i) {
             updateShadow(i.key(), i.value());
         }
     } else {
-        const bool hadShadowsBefore = !m_shadowPixmaps.isEmpty();
         if (hadShadowsBefore) {
             for (auto i = m_windows.constBegin(); i != m_windows.constEnd(); ++i) {
                 clearShadow(i.key());
