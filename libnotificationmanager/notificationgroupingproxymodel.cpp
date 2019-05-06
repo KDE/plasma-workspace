@@ -43,7 +43,8 @@ bool NotificationGroupingProxyModel::appsMatch(const QModelIndex &a, const QMode
     const QString aDesktopEntry = a.data(Notifications::DesktopEntryRole).toString();
     const QString bDesktopEntry = b.data(Notifications::DesktopEntryRole).toString();
 
-    return aName == bName && aDesktopEntry == bDesktopEntry;
+    return !aName.isEmpty() && aName == bName
+            && !aDesktopEntry.isEmpty() && aDesktopEntry == bDesktopEntry;
 }
 
 bool NotificationGroupingProxyModel::isGroup(int row) const
@@ -471,7 +472,7 @@ QVariant NotificationGroupingProxyModel::data(const QModelIndex &proxyIndex, int
 
         case Notifications::DesktopEntryRole:
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
-                const QString desktopEntry = proxyIndex.child(i, 0).data(Notifications::DesktopEntryRole).toString();
+                const QString desktopEntry = index(i, 0, proxyIndex).data(Notifications::DesktopEntryRole).toString();
                 if (!desktopEntry.isEmpty()) {
                     return desktopEntry;
                 }
@@ -479,7 +480,7 @@ QVariant NotificationGroupingProxyModel::data(const QModelIndex &proxyIndex, int
             return QString();
         case Notifications::NotifyRcNameRole:
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
-                const QString notifyRcName = proxyIndex.child(i, 0).data(Notifications::NotifyRcNameRole).toString();
+                const QString notifyRcName = index(i, 0, proxyIndex).data(Notifications::NotifyRcNameRole).toString();
                 if (!notifyRcName.isEmpty()) {
                     return notifyRcName;
                 }
@@ -489,7 +490,7 @@ QVariant NotificationGroupingProxyModel::data(const QModelIndex &proxyIndex, int
 
         case Notifications::ConfigurableRole: // if there is any configurable child item
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
-                if (proxyIndex.child(i, 0).data(Notifications::ConfigurableRole).toBool()) {
+                if (index(i, 0, proxyIndex).data(Notifications::ConfigurableRole).toBool()) {
                     return true;
                 }
             }
@@ -497,7 +498,7 @@ QVariant NotificationGroupingProxyModel::data(const QModelIndex &proxyIndex, int
 
         case Notifications::ClosableRole: // if there is any closable child item
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
-                if (proxyIndex.child(i, 0).data(Notifications::ClosableRole).toBool()) {
+                if (index(i, 0, proxyIndex).data(Notifications::ClosableRole).toBool()) {
                     return true;
                 }
             }

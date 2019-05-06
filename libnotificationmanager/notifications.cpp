@@ -21,6 +21,7 @@
 #include "notifications.h"
 
 #include <QDebug>
+#include <QMetaEnum>
 #include <QSharedPointer>
 
 #include <KConcatenateRowsProxyModel>
@@ -321,7 +322,6 @@ bool Notifications::Private::isGroup(const QModelIndex &idx)
     return idx.data(Notifications::IsGroupRole).toBool();
 }
 
-// FIXME remove once we just map to the source model
 uint Notifications::Private::notificationId(const QModelIndex &idx)
 {
     return idx.data(Notifications::IdRole).toUInt();
@@ -825,49 +825,26 @@ int Notifications::rowCount(const QModelIndex &parent) const
 
 QHash<int, QByteArray> Notifications::roleNames() const
 {
-    return QHash<int, QByteArray> {
-        {IdRole, QByteArrayLiteral("notificationId")}, // id is QML-reserved
-        {IsGroupRole, QByteArrayLiteral("isGroup")},
-        {GroupChildrenCountRole, QByteArrayLiteral("groupChildrenCount")},
-        {ExpandedGroupChildrenCountRole, QByteArrayLiteral("expandedGroupChildrenCount")},
-        {IsGroupExpandedRole, QByteArrayLiteral("isGroupExpanded")},
-        {IsInGroupRole, QByteArrayLiteral("isInGroup")},
-        {TypeRole, QByteArrayLiteral("type")},
-        {CreatedRole, QByteArrayLiteral("created")},
-        {UpdatedRole, QByteArrayLiteral("updated")},
-        {SummaryRole, QByteArrayLiteral("summary")},
-        {BodyRole, QByteArrayLiteral("body")},
-        {IconNameRole, QByteArrayLiteral("iconName")},
-        {ImageRole, QByteArrayLiteral("image")},
-        {DesktopEntryRole, QByteArrayLiteral("desktopEntry")},
-        {NotifyRcNameRole, QByteArrayLiteral("notifyRcName")},
+    static QHash<int, QByteArray> s_roles;
 
-        {ApplicationNameRole, QByteArrayLiteral("applicationName")},
-        {ApplicationIconNameRole, QByteArrayLiteral("applicationIconName")},
-        {DeviceNameRole, QByteArrayLiteral("deviceName")},
+    if (s_roles.isEmpty()) {
+        s_roles = QSortFilterProxyModel::roleNames();
 
-        {ActionNamesRole, QByteArrayLiteral("actionNames")},
-        {ActionLabelsRole, QByteArrayLiteral("actionLabels")},
-        {HasDefaultActionRole, QByteArrayLiteral("hasDefaultAction")},
-        {DefaultActionLabelRole, QByteArrayLiteral("defaultActionLabel")},
+        // This generates role names from the Roles enum in the form of: FooRole -> foo
+        const QMetaEnum e = staticMetaObject.enumerator(staticMetaObject.indexOfEnumerator("Roles"));
 
-        {UrlsRole, QByteArrayLiteral("urls")},
+        for (int i = 0; i < e.keyCount(); ++i) {
+            const int value = e.value(i);
 
-        {UrgencyRole, QByteArrayLiteral("urgency")},
-        {TimeoutRole, QByteArrayLiteral("timeout")},
+            QByteArray key(e.key(i));
+            key[0] = key[0] + 32; // lower case first letter
+            key.chop(4); // strip "Role" suffix
 
-        {ClosableRole, QByteArrayLiteral("closable")},
-        {ConfigurableRole, QByteArrayLiteral("configurable")},
-        {ConfigureActionLabelRole, QByteArrayLiteral("configureActionLabel")},
+            s_roles.insert(value, key);
+        }
 
-        {JobStateRole, QByteArrayLiteral("jobState")},
-        {PercentageRole, QByteArrayLiteral("percentage")},
-        {JobErrorRole, QByteArrayLiteral("jobError")},
-        {SuspendableRole, QByteArrayLiteral("suspendable")},
-        {KillableRole, QByteArrayLiteral("killable")},
-        {JobDetailsRole, QByteArrayLiteral("jobDetails")},
+        s_roles.insert(IdRole, QByteArrayLiteral("notificationId")); // id is QML-reserved
+    }
 
-        {ExpiredRole, QByteArrayLiteral("expired")},
-        {DismissedRole, QByteArrayLiteral("dismissed")}
-    };
+    return s_roles;
 }

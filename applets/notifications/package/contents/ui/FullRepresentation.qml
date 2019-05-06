@@ -274,13 +274,36 @@ ColumnLayout{
             }
             Keys.onEnterPressed: Keys.onReturnPressed(event)
             Keys.onReturnPressed: {
+                // Trigger default action, if any
                 var idx = historyModel.index(currentIndex, 0);
                 if (historyModel.data(idx, NotificationManager.Notifications.HasDefaultActionRole)) {
                     historyModel.invokeDefaultAction(idx);
+                    return;
                 }
+
+                // Trigger thumbnail URL if there's one
+                var urls = historyModel.data(idx, NotificationManager.Notifications.UrlsRole);
+                if (urls && urls.length === 1) {
+                    Qt.openUrlExternally(urls[0]);
+                    historyModel.expire(idx);
+                    return;
+                }
+
+                // TODO for finished jobs trigger "Open" or "Open Containing Folder" action
             }
             Keys.onLeftPressed: setGroupExpanded(currentIndex, LayoutMirroring.enabled)
             Keys.onRightPressed: setGroupExpanded(currentIndex, !LayoutMirroring.enabled)
+
+            Keys.onPressed: {
+                switch (event.key) {
+                case Qt.Key_Home:
+                    currentIndex = 0;
+                    break;
+                case Qt.Key_End:
+                    currentIndex = count - 1;
+                    break;
+                }
+            }
 
             function isRowExpanded(row) {
                 var idx = historyModel.index(row, 0);
@@ -381,7 +404,12 @@ ColumnLayout{
                         closable: model.closable
                         closeButtonTooltip: i18n("Close Group")
 
-                        onCloseClicked: historyModel.close(historyModel.index(index, 0))
+                        onCloseClicked: {
+                            historyModel.close(historyModel.index(index, 0))
+                            if (list.count === 0) {
+                                plasmoid.expanded = false;
+                            }
+                        }
 
                         onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
                     }
@@ -469,7 +497,12 @@ ColumnLayout{
                                     return labels;
                                 }
 
-                                onCloseClicked: historyModel.close(historyModel.index(index, 0))
+                                onCloseClicked: {
+                                    historyModel.close(historyModel.index(index, 0));
+                                    if (list.count === 0) {
+                                        plasmoid.expanded = false;
+                                    }
+                                }
                                 onDismissClicked: model.dismissed = false
                                 onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
 

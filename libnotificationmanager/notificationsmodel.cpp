@@ -256,7 +256,7 @@ void NotificationsModel::setLastRead(const QDateTime &lastRead)
 
 QVariant NotificationsModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || index.row() >= d->notifications.count()) {
+    if (!checkIndex(index)) {
         return QVariant();
     }
 

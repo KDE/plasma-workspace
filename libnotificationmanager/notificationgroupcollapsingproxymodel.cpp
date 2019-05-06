@@ -47,14 +47,15 @@ void NotificationGroupCollapsingProxyModel::setSourceModel(QAbstractItemModel *s
         connect(source, &QAbstractItemModel::rowsRemoved, this, &NotificationGroupCollapsingProxyModel::invalidateFilter);
 
         // When a group is removed, there is no item that's being removed, instead the item morphs back into a single notification
-        connect(source, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
-            Q_UNUSED(bottomRight); // what about it?
-            Q_UNUSED(roles);
-
+        connect(source, &QAbstractItemModel::dataChanged, this, [this, source](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
             if (roles.isEmpty() || roles.contains(Notifications::IsGroupRole)) {
-                if (!topLeft.data(Notifications::IsGroupRole).toBool()) {
-                    if (m_expandedGroups.contains(topLeft)) {
-                        setGroupExpanded(topLeft, false);
+                for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
+                    const QModelIndex sourceIdx = source->index(i, 0);
+
+                    if (!sourceIdx.data(Notifications::IsGroupRole).toBool()) {
+                        if (m_expandedGroups.contains(sourceIdx)) {
+                            setGroupExpanded(topLeft, false);
+                        }
                     }
                 }
             }
@@ -172,7 +173,7 @@ bool NotificationGroupCollapsingProxyModel::setGroupExpanded(const QModelIndex &
     const QVector<int> dirtyRoles = {Notifications::ExpandedGroupChildrenCountRole, Notifications::IsGroupExpandedRole};
 
     emit dataChanged(idx, idx, dirtyRoles);
-    emit dataChanged(idx.child(0, 0), idx.child(rowCount(idx) - 1, 0), dirtyRoles);
+    emit dataChanged(index(0, 0, idx), index(rowCount(idx) - 1, 0, idx), dirtyRoles);
 
     return true;
 }
@@ -185,13 +186,13 @@ void NotificationGroupCollapsingProxyModel::invalidateGroupRoles()
 
     for (int row = 0; row < rowCount(); ++row) {
         const QModelIndex groupIdx = index(row, 0);
-        emit dataChanged(groupIdx.child(0, 0), groupIdx.child(rowCount(groupIdx) - 1, 0), dirtyRoles);
+        emit dataChanged(index(0, 0, groupIdx), index(rowCount(groupIdx) - 1, 0, groupIdx), dirtyRoles);
     }
 }
 
 bool NotificationGroupCollapsingProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
-    if (source_parent.isValid() && m_limit > 0) {
+    if (m_limit > 0 && source_parent.isValid()) {
         if (!m_expandedGroups.isEmpty() && m_expandedGroups.contains(source_parent)) {
             return true;
         }

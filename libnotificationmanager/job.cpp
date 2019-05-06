@@ -27,8 +27,6 @@
 
 #include "notifications.h"
 
-#include <QQmlEngine>
-
 using namespace NotificationManager;
 
 Job::Job(uint id, QObject *parent)
@@ -279,20 +277,4 @@ void Job::resume()
 void Job::kill()
 {
     emit d->cancelRequested();
-}
-
-template<typename T> void processField(const QVariantMap/*Plasma::DataEngine::Data*/ &data,
-                                            const QString &field,
-                                            T &target,
-                                            int role,
-                                            QVector<int> &dirtyRoles)
-{
-    auto it = data.find(field);
-    if (it != data.end()) {
-        const T newValue = it->value<T>();
-        if (target != newValue) {
-            target = newValue;
-            dirtyRoles.append(role);
-        }
-    }
 }

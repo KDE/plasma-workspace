@@ -84,6 +84,7 @@ install(TARGETS notificationmanager EXPORT notificationmanagerLibraryTargets ${K
 
 install(FILES
     server.h
+    notifications.h
     notification.h
     jobsmodel.h
     job.h

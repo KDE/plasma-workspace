@@ -90,7 +90,7 @@ bool JobsModel::isValid() const
 
 QVariant JobsModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || index.row() >= d->m_jobViews.count()) {
+    if (!checkIndex(index)) {
         return QVariant();
     }
 
@@ -141,7 +141,7 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
 
 bool JobsModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    if (!index.isValid() || index.row() >= d->m_jobViews.count()) {
+    if (!checkIndex(index)) {
         return false;
     }
 
@@ -176,47 +176,37 @@ int JobsModel::rowCount(const QModelIndex &parent) const
 
 void JobsModel::close(const QModelIndex &idx)
 {
-    if (!idx.isValid() || idx.row() >= d->m_jobViews.count()) {
-        return;
+    if (checkIndex(idx)) {
+        d->removeAt(idx.row());
     }
-
-    d->removeAt(idx.row());
 }
 
 void JobsModel::expire(const QModelIndex &idx)
 {
-    if (!idx.isValid() || idx.row() >= d->m_jobViews.count()) {
-        return;
+    if (checkIndex(idx)) {
+        d->m_jobViews.at(idx.row())->setExpired(true);
     }
-
-    d->m_jobViews.at(idx.row())->setExpired(true);
 }
 
 void JobsModel::suspend(const QModelIndex &idx)
 {
-    if (!idx.isValid() || idx.row() >= d->m_jobViews.count()) {
-        return;
+    if (checkIndex(idx)) {
+        emit d->m_jobViews.at(idx.row())->suspend();
     }
-
-    emit d->m_jobViews.at(idx.row())->suspend();
 }
 
 void JobsModel::resume(const QModelIndex &idx)
 {
-    if (!idx.isValid() || idx.row() >= d->m_jobViews.count()) {
-        return;
+    if (checkIndex(idx)) {
+        emit d->m_jobViews.at(idx.row())->resume();
     }
-
-    emit d->m_jobViews.at(idx.row())->resume();
 }
 
 void JobsModel::kill(const QModelIndex &idx)
 {
-    if (!idx.isValid() || idx.row() >= d->m_jobViews.count()) {
-        return;
+    if (checkIndex(idx)) {
+        emit d->m_jobViews.at(idx.row())->kill();
     }
-
-    emit d->m_jobViews.at(idx.row())->kill();
 }
 
 void JobsModel::clear(Notifications::ClearFlags flags)

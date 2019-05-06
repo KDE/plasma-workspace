@@ -344,7 +344,9 @@ QtObject {
             icon: model.image || model.iconName
             hasDefaultAction: model.hasDefaultAction || false
             timeout: model.timeout
-            defaultTimeout: notificationSettings.popupTimeout
+            // Increase default timeout for notifications with a URL so you have enough time
+            // to interact with the thumbnail or bring the window to the front where you want to drag it into
+            defaultTimeout: notificationSettings.popupTimeout + (model.urls && model.urls.length > 0 ? 5000 : 0)
             // When configured to not keep jobs open permanently, we autodismiss them after the standard timeout
             dismissTimeout: !notificationSettings.permanentJobPopups
                             && model.type === NotificationManager.Notifications.JobType

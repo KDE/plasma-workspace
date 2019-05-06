@@ -348,6 +348,8 @@ void JobsModelPrivate::removeAt(int row)
     m_pendingDirtyRoles.remove(job);
     m_pendingJobViews.removeOne(job);
 
+    const QString desktopEntry = job->desktopEntry();
+
     const QString serviceName = m_jobServices.take(job);
 
     // Check if there's any jobs left for this service, otherwise stop watching it
@@ -360,6 +362,8 @@ void JobsModelPrivate::removeAt(int row)
 
     delete job;
     emit jobViewRemoved(row);
+
+    updateApplicationPercentage(desktopEntry);
 }
 
 // This will forward overall application process via Unity API.
@@ -375,10 +379,13 @@ void JobsModelPrivate::updateApplicationPercentage(const QString &desktopEntry)
 
     for (int i = 0; i < m_jobViews.count(); ++i) {
         Job *job = m_jobViews.at(i);
-        if (job->state() != Notifications::JobStateStopped) {
-            jobsPercentages += job->percentage();
-            ++jobsCount;
+        if (job->state() == Notifications::JobStateStopped
+                || job->desktopEntry() != desktopEntry) {
+            continue;
         }
+
+        jobsPercentages += job->percentage();
+        ++jobsCount;
     }
 
     int percentage = 0;
