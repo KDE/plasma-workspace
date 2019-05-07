@@ -16,10 +16,12 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
-import QtQuick.Controls 1.1 as Controls
-import QtQuick.Layouts 1.1 as Layouts
+import QtQuick 2.5
+import QtQuick.Controls 1.4 as QQC1
+import QtQuick.Controls 2.5 as QQC2
+import QtQuick.Layouts 1.3
 
+import org.kde.kirigami 2.5 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 
@@ -27,23 +29,23 @@ Item {
     id: iconsPage
     width: childrenRect.width
     height: childrenRect.height
-    implicitWidth: mainColumn.implicitWidth
-    implicitHeight: mainColumn.implicitHeight
+    implicitWidth: formLayout.implicitWidth
+    implicitHeight: formLayout.implicitHeight
 
     property var cfg_sources: []
 
     function sourcesChanged() {
         if (! cfg_sources) { cfg_sources = [] }
         if (cfg_sources.length == 0) {
-            for (var i in mainColumn.children) {
-                var child = mainColumn.children[i];
+            for (var i in dataSourcesColumn.children) {
+                var child = dataSourcesColumn.children[i];
                 if (child.checked !== undefined) {
                     child.checked = true;
                 }
             }
         } else {
-            for (var i in mainColumn.children) {
-                var child = mainColumn.children[i];
+            for (var i in dataSourcesColumn.children) {
+                var child = dataSourcesColumn.children[i];
                 if (child.checked !== undefined) {
                     child.checked = cfg_sources.indexOf(child.source) !== -1;
                 }
@@ -107,45 +109,59 @@ Item {
         id: sourcesModel
     }
 
-    Layouts.ColumnLayout {
-        id: mainColumn
+    Kirigami.FormLayout {
+        id: formLayout
+
         anchors.left: parent.left
+        anchors.right: parent.right
 
-        Layouts.RowLayout {
-            Controls.Label {
-                text: i18n("Update Interval:")
-            }
+        // QQC2 SpinBox doesn't cleanly support non-integer values, which can be
+        // worked around, but the code is messy and the user experience is
+        // somewhat poor. So for now, we stick with the QQC1 SpinBox
+        QQC1.SpinBox {
+            id: updateIntervalSpinBox
 
-            Controls.SpinBox {
-                id: updateIntervalSpinBox
-                decimals: 2
-                suffix: i18nc("Suffix for spinbox (seconds)", " sec")
-                maximumValue: 1000
-                stepSize: 0.5
-                onValueChanged: cfg_updateInterval = value * 1000
-                Component.onCompleted: value = cfg_updateInterval / 1000
-            }
+            Kirigami.FormData.label: i18n("Update interval:")
+            decimals: 1
+            suffix: i18ncp("Suffix for spinbox (seconds)", " second", 
+            " seconds")
+            maximumValue: 1000
+            stepSize: 0.1
+            onValueChanged: cfg_updateInterval = value * 1000
+            Component.onCompleted: value = cfg_updateInterval / 1000
         }
 
-        Repeater {
-            id: repeater
-            model: sourcesModel
-            Controls.CheckBox {
-                id: checkBox
-                text: model.friendlyName
-                property string source: model.source
-                onCheckedChanged: {
-                    if (checked) {
-                        if (cfg_sources.indexOf(model.source) == -1) {
-                            cfg_sources.push(model.source);
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+
+        ColumnLayout {
+            id: dataSourcesColumn
+            Kirigami.FormData.label: i18n("Show:")
+            Kirigami.FormData.buddyFor: children[1] // 0 is the Repeater
+
+            Repeater {
+                id: repeater
+                model: sourcesModel
+                QQC2.CheckBox {
+                    id: checkBox
+                    text: model.friendlyName
+                    property string source: model.source
+                    onCheckedChanged: {
+                        if (checked) {
+                            if (cfg_sources.indexOf(model.source) == -1) {
+                                cfg_sources.push(model.source);
+                            }
+                        } else {
+                            var idx = cfg_sources.indexOf(model.source);
+                            if (idx !== -1) {
+                                cfg_sources.splice(idx, 1);
+                            }
                         }
-                    } else {
-                        var idx = cfg_sources.indexOf(model.source);
-                        if (idx !== -1) {
-                            cfg_sources.splice(idx, 1);
-                        }
+                        cfg_sourcesChanged();
                     }
-                    cfg_sourcesChanged();
                 }
             }
         }
