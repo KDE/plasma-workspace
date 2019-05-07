@@ -65,6 +65,22 @@ Item {
         }
     }
 
+    Rectangle {
+        anchors.centerIn: iconCircle
+        width: iconCircle.width
+        height: width
+        radius: width / 2
+        scale: mouseArea.containsPress ? 1 : 0
+        color: PlasmaCore.ColorScope.textColor
+        opacity: 0.15
+        Behavior on scale {
+                PropertyAnimation {
+                    duration: units.shortDuration
+                    easing.type: Easing.InOutQuart
+                }
+        }
+    }
+
     PlasmaCore.IconItem {
         id: icon
         anchors {
