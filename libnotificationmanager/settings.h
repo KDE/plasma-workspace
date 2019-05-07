@@ -132,6 +132,11 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
     Q_PROPERTY(QStringList historyBlacklistedServices READ historyBlacklistedServices NOTIFY settingsChanged)
 
     /**
+     * A list of desktop entries of applications which shouldn't show badges in task manager.
+     */
+    Q_PROPERTY(QStringList badgeBlacklistedApplications READ badgeBlacklistedApplications NOTIFY settingsChanged)
+
+    /**
      * The date until which do not disturb mode is enabled.
      *
      * When invalid or in the past, do not disturb mode should be considered disabled.
@@ -283,6 +288,8 @@ public:
 
     QStringList historyBlacklistedApplications() const;
     QStringList historyBlacklistedServices() const;
+
+    QStringList badgeBlacklistedApplications() const;
 
     QDateTime notificationsInhibitedUntil() const;
     void setNotificationsInhibitedUntil(const QDateTime &time);

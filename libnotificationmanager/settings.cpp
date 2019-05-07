@@ -505,6 +505,11 @@ QStringList Settings::historyBlacklistedServices() const
     return d->behaviorMatchesList(d->servicesGroup(), ShowInHistory, false);
 }
 
+QStringList Settings::badgeBlacklistedApplications() const
+{
+    return d->behaviorMatchesList(d->applicationsGroup(), ShowBadges, false);
+}
+
 QDateTime Settings::notificationsInhibitedUntil() const
 {
     return DoNotDisturbSettings::until();

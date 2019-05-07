@@ -124,7 +124,6 @@ void NotificationsModel::Private::onNotificationReplaced(uint replacedId, const 
         return;
     }
 
-    Q_ASSERT(notifications[row].id() == notification.id());
     setupNotificationTimeout(notification);
 
     notifications[row] = notification;
