@@ -2,6 +2,7 @@
 Name=BBC Weather
 Name[ca]=BBC Weather
 Name[ca@valencia]=BBC Weather
+Name[da]=BBC Weather
 Name[en_GB]=BBC Weather
 Name[es]=BBC Weather
 Name[fr]=Météo de la BBC
@@ -23,6 +24,7 @@ Name[zh_TW]=BBC 天氣
 Comment=XML Data from the British Broadcasting Corporation
 Comment[ca]=Dades XML de la British Broadcasting Corporation
 Comment[ca@valencia]=Dades XML de la British Broadcasting Corporation
+Comment[da]=XML-data fra British Broadcasting Corporation
 Comment[en_GB]=XML Data from the British Broadcasting Corporation
 Comment[es]=Datos XML de la British Broadcasting Corporation
 Comment[fr]=Données XML de la British Broadcasting Corporation
