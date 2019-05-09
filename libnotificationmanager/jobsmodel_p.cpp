@@ -38,15 +38,22 @@
 #include <KLocalizedString>
 #include <KService>
 
+#include <kio/global.h>
+
 #include <algorithm>
 
 using namespace NotificationManager;
 
 JobsModelPrivate::JobsModelPrivate(QObject *parent)
     : QObject(parent)
+    , m_serviceWatcher(new QDBusServiceWatcher(this))
     , m_compressUpdatesTimer(new QTimer(this))
     , m_pendingJobViewsTimer(new QTimer(this))
 {
+    m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
+    m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
+    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &JobsModelPrivate::onServiceUnregistered);
+
     m_compressUpdatesTimer->setInterval(0);
     m_compressUpdatesTimer->setSingleShot(true);
     connect(m_compressUpdatesTimer, &QTimer::timeout, this, [this] {
@@ -94,9 +101,18 @@ JobsModelPrivate::JobsModelPrivate(QObject *parent)
 
 JobsModelPrivate::~JobsModelPrivate()
 {
-    QDBusConnection::sessionBus().unregisterService(QStringLiteral("org.kde.JobViewServer"));
-    QDBusConnection::sessionBus().unregisterService(QStringLiteral("org.kde.kuiserver"));
-    QDBusConnection::sessionBus().unregisterObject(QStringLiteral("/JobViewServer"));
+    QDBusConnection sessionBus = QDBusConnection::sessionBus();
+    sessionBus.unregisterService(QStringLiteral("org.kde.JobViewServer"));
+    sessionBus.unregisterService(QStringLiteral("org.kde.kuiserver"));
+    sessionBus.unregisterObject(QStringLiteral("/JobViewServer"));
+
+    // Remember which services we had running and clear their progress
+    QStringList desktopEntries;
+    for (Job *job : qAsConst(m_jobViews)) {
+        if (!desktopEntries.contains(job->desktopEntry())) {
+            desktopEntries.append(job->desktopEntry());
+        }
+    }
 
     qDeleteAll(m_jobViews);
     m_jobViews.clear();
@@ -104,6 +120,10 @@ JobsModelPrivate::~JobsModelPrivate()
     m_pendingJobViews.clear();
 
     m_pendingDirtyRoles.clear();
+
+    for (const QString &desktopEntry : desktopEntries) {
+        updateApplicationPercentage(desktopEntry);
+    }
 }
 
 bool JobsModelPrivate::init()
@@ -134,11 +154,6 @@ bool JobsModelPrivate::init()
         qCWarning(NOTIFICATIONMANAGER) << "Failed to register org.kde.kuiserver service on DBus, is kuiserver running?";
         return false;
     }
-
-    m_serviceWatcher = new QDBusServiceWatcher(this);
-    m_serviceWatcher->setConnection(sessionBus);
-    m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
-    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &JobsModelPrivate::onServiceUnregistered);
 
     m_valid = true;
     return true;
@@ -333,25 +348,24 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry,
 
 void JobsModelPrivate::remove(Job *job)
 {
-    const int row = m_jobViews.indexOf(job);
-    if (row > -1) {
-        removeAt(row);
+    const int activeRow = m_jobViews.indexOf(job);
+    const int pendingRow = m_pendingJobViews.indexOf(job);
+
+    Job *jobToBeRemoved = nullptr;
+
+    if (activeRow > -1) {
+        emit jobViewAboutToBeRemoved(activeRow);
+        jobToBeRemoved = m_jobViews.takeAt(activeRow);
+    } else if (pendingRow > -1) {
+        jobToBeRemoved = m_pendingJobViews.takeAt(pendingRow);
     }
-}
+    Q_ASSERT(jobToBeRemoved);
 
-void JobsModelPrivate::removeAt(int row)
-{
-    Q_ASSERT(row >= 0 && row < m_jobViews.count());
+    m_pendingDirtyRoles.remove(jobToBeRemoved);
 
-    emit jobViewAboutToBeRemoved(row);//, job);
-    Job *job = m_jobViews.takeAt(row);
-    m_pendingDirtyRoles.remove(job);
-    m_pendingJobViews.removeOne(job);
+    const QString desktopEntry = jobToBeRemoved->desktopEntry();
 
-    const QString desktopEntry = job->desktopEntry();
-
-    const QString serviceName = m_jobServices.take(job);
-
+    const QString serviceName = m_jobServices.take(jobToBeRemoved);
     // Check if there's any jobs left for this service, otherwise stop watching it
     auto it = std::find_if(m_jobServices.constBegin(), m_jobServices.constEnd(), [&serviceName](const QString &item) {
         return item == serviceName;
@@ -360,10 +374,18 @@ void JobsModelPrivate::removeAt(int row)
         m_serviceWatcher->removeWatchedService(serviceName);
     }
 
-    delete job;
-    emit jobViewRemoved(row);
+    delete jobToBeRemoved;
+    if (activeRow > -1) {
+        emit jobViewRemoved(activeRow);
+    }
 
     updateApplicationPercentage(desktopEntry);
+}
+
+void JobsModelPrivate::removeAt(int row)
+{
+    Q_ASSERT(row >= 0 && row < m_jobViews.count());
+    remove(m_jobViews.at(row));
 }
 
 // This will forward overall application process via Unity API.
@@ -397,7 +419,9 @@ void JobsModelPrivate::updateApplicationPercentage(const QString &desktopEntry)
         {QStringLiteral("count-visible"), jobsCount > 0},
         {QStringLiteral("count"), jobsCount},
         {QStringLiteral("progress-visible"), jobsCount > 0},
-        {QStringLiteral("progress"), percentage / 100.0}
+        {QStringLiteral("progress"), percentage / 100.0},
+        // so Task Manager knows this is a job progress and can ignore it if disabled in settings
+        {QStringLiteral("proxied-for"), QStringLiteral("kuiserver")}
     };
 
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/org/kde/notificationmanager/jobs"),
@@ -419,7 +443,7 @@ void JobsModelPrivate::onServiceUnregistered(const QString &serviceName)
         if (job->state() == Notifications::JobStateStopped) {
             continue;
         }
-        job->setError(127); // KIO::ERR_SLAVE_DIED
+        job->setError(KIO::ERR_OWNER_DIED);
         job->setErrorText(i18n("Application closed unexpectedly."));
         job->setState(Notifications::JobStateStopped);
     }

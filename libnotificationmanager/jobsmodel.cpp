@@ -147,22 +147,16 @@ bool JobsModel::setData(const QModelIndex &index, const QVariant &value, int rol
 
     Job *job = d->m_jobViews.at(index.row());
 
-    bool dirty = false;
-
     switch (role) {
     case Notifications::DismissedRole:
         if (value.toBool() != job->dismissed()) {
             job->setDismissed(value.toBool());
-            dirty = true;
+            return true;
         }
         break;
     }
 
-    if (dirty) {
-        emit dataChanged(index, index, {role});
-    }
-
-    return dirty;
+    return false;
 }
 
 int JobsModel::rowCount(const QModelIndex &parent) const
@@ -191,21 +185,21 @@ void JobsModel::expire(const QModelIndex &idx)
 void JobsModel::suspend(const QModelIndex &idx)
 {
     if (checkIndex(idx)) {
-        emit d->m_jobViews.at(idx.row())->suspend();
+        d->m_jobViews.at(idx.row())->suspend();
     }
 }
 
 void JobsModel::resume(const QModelIndex &idx)
 {
     if (checkIndex(idx)) {
-        emit d->m_jobViews.at(idx.row())->resume();
+        d->m_jobViews.at(idx.row())->resume();
     }
 }
 
 void JobsModel::kill(const QModelIndex &idx)
 {
     if (checkIndex(idx)) {
-        emit d->m_jobViews.at(idx.row())->kill();
+        d->m_jobViews.at(idx.row())->kill();
     }
 }
 

@@ -49,8 +49,7 @@ public:
     Notification &operator=(const Notification &other);
     Notification &operator=(Notification &&other) Q_DECL_NOEXCEPT;
 
-    // should this be virtual for good measure?
-    ~Notification();
+    virtual ~Notification();
 
     uint id() const;
 

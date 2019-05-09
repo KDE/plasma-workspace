@@ -42,6 +42,7 @@ void LimitedRowCountProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
 
     if (sourceModel) {
         connect(sourceModel, &QAbstractItemModel::rowsInserted, this, &LimitedRowCountProxyModel::invalidateFilter);
+        connect(sourceModel, &QAbstractItemModel::rowsMoved, this, &LimitedRowCountProxyModel::invalidateFilter);
         connect(sourceModel, &QAbstractItemModel::rowsRemoved, this, &LimitedRowCountProxyModel::invalidateFilter);
     }
 }

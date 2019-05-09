@@ -30,6 +30,8 @@
 #include <KService>
 #include <KLocalizedString>
 
+#include <kio/global.h>
+
 #include "notifications.h"
 
 #include "jobviewv2adaptor.h"
@@ -204,7 +206,7 @@ void JobPrivate::finish()
     QDBusConnection::sessionBus().unregisterObject(m_objectPath.path());
 
     // When user canceled transfer, remove it without notice
-    if (m_error == 1) { // KIO::ERR_USER_CANCELED
+    if (m_error == KIO::ERR_USER_CANCELED) {
         emit closed();
         return;
     }
@@ -281,14 +283,18 @@ void JobPrivate::setInfoMessage(const QString &infoMessage)
 
 bool JobPrivate::setDescriptionField(uint number, const QString &name, const QString &value)
 {
+    bool dirty = false;
     if (number == 0) {
-        updateField(name, m_descriptionLabel1, &Job::descriptionLabel1Changed);
-        updateField(value, m_descriptionValue1, &Job::descriptionValue1Changed);
+        dirty |= updateField(name, m_descriptionLabel1, &Job::descriptionLabel1Changed);
+        dirty |= updateField(value, m_descriptionValue1, &Job::descriptionValue1Changed);
     } else if (number == 1) {
-        updateField(name, m_descriptionLabel2, &Job::descriptionLabel2Changed);
-        updateField(value, m_descriptionValue2, &Job::descriptionValue2Changed);
+        dirty |= updateField(name, m_descriptionLabel2, &Job::descriptionLabel2Changed);
+        dirty |= updateField(value, m_descriptionValue2, &Job::descriptionValue2Changed);
     }
-    updateHasDetails();
+    if (dirty) {
+        emit static_cast<Job*>(parent())->descriptionUrlChanged();
+        updateHasDetails();
+    }
 
     return false;
 }

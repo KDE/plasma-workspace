@@ -43,8 +43,11 @@ using namespace NotificationManager;
 
 ServerPrivate::ServerPrivate(QObject *parent)
     : QObject(parent)
+    , m_inhibitionWatcher(new QDBusServiceWatcher(this))
 {
-
+    m_inhibitionWatcher->setConnection(QDBusConnection::sessionBus());
+    m_inhibitionWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
+    connect(m_inhibitionWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &ServerPrivate::onServiceUnregistered);
 }
 
 ServerPrivate::~ServerPrivate() = default;
@@ -66,11 +69,6 @@ bool ServerPrivate::init()
         qCWarning(NOTIFICATIONMANAGER) << "Failed to register Notification service on DBus";
         return false;
     }
-
-    m_inhibitionWatcher = new QDBusServiceWatcher(this);
-    m_inhibitionWatcher->setConnection(QDBusConnection::sessionBus());
-    m_inhibitionWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
-    connect(m_inhibitionWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &ServerPrivate::onServiceUnregistered);
 
     connect(this, &ServerPrivate::inhibitedChanged, this, [this] {
         // emit DBus change signal...

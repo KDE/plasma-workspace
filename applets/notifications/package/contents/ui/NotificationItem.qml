@@ -219,7 +219,19 @@ ColumnLayout {
                 anchors.fill: parent
                 usesPlasmaTheme: false
                 smooth: true
-                source: typeof notificationItem.icon === "string" ? notificationItem.icon : ""
+                source: {
+                    var icon = notificationItem.icon;
+                    if (typeof icon !== "string") { // displayed by QImageItem below
+                        return "";
+                    }
+
+                    // don't show a generic "info" icon since this is a notification already
+                    if (icon === "dialog-information") {
+                        return "";
+                    }
+
+                    return icon;
+                }
                 visible: active
             }
 

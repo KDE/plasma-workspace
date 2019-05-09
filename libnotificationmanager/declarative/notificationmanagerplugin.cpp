@@ -33,6 +33,6 @@ void NotificationManagerPlugin::registerTypes(const char *uri)
     Q_ASSERT(uri == QLatin1String("org.kde.notificationmanager"));
 
     qmlRegisterType<Notifications>(uri, 1, 0, "Notifications");
-    qmlRegisterType<Job>();
+    qmlRegisterUncreatableType<Job>(uri, 1, 0, "Job", QStringLiteral("Can only access Job via JobDetailsRole of JobsModel"));
     qmlRegisterType<Settings>(uri, 1, 0, "Settings");
 }

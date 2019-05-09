@@ -94,7 +94,6 @@ PlasmaCore.Dialog {
 
     location: PlasmaCore.Types.Floating
 
-    type: urgency === NotificationManager.Notifications.CriticalUrgency ? PlasmaCore.Dialog.CriticalNotification : PlasmaCore.Dialog.Notification
     flags: Qt.WindowDoesNotAcceptFocus
 
     visible: false
