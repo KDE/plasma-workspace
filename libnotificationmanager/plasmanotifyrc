@@ -1,0 +1,7 @@
+# Screenshot notifications are explicit user interactions, always show them
+[Applications][org.kde.spectacle]
+ShowPopupsInDndMode=true
+
+# Defaults for media players so their track change notifications don't accumulate in the history
+[Applications][vlc]
+ShowInHistory=false

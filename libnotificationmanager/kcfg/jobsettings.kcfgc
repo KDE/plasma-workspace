@@ -1,0 +1,7 @@
+File=jobsettings.kcfg
+NameSpace=NotificationManager
+ClassName=JobSettings
+Singleton=true
+Mutators=true
+DefaultValueGetters=true
+Notifiers=true

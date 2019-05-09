@@ -25,6 +25,11 @@
 #include <QSet>
 #include <QHash>
 
+namespace NotificationManager
+{
+class Notification;
+}
+
 struct NotificationInhibiton
 {
     QString hint;
@@ -53,13 +58,7 @@ public:
      */
     uint Notify(const QString &app_name, uint replaces_id, const QString &app_icon, const QString &summary, const QString &body, const QStringList &actions, const QVariantMap &hints, int timeout);
 
-    void CloseNotification( uint id );
-
     Plasma::Service* serviceForSource(const QString& source) override;
-
-    QStringList GetCapabilities();
-
-    QString GetServerInformation(QString& vendor, QString& version, QString& specVersion);
 
     int createNotification(const QString &appName, const QString &appIcon, const QString &summary,
                            const QString &body, int timeout, const QStringList &actions, const QVariantMap &hints);
@@ -75,37 +74,11 @@ public:
 
 public Q_SLOTS:
     void removeNotification(uint id, uint closeReason);
-    bool registerDBusService();
-
-    void onBroadcastNotification(const QMap<QString, QVariant> &properties);
-
-Q_SIGNALS:
-    void NotificationClosed( uint id, uint reason );
-    void ActionInvoked( uint id, const QString& actionKey );
 
 private:
-    /**
-     * Holds the id that will be assigned to the next notification source
-     * that will be created
-     */
-    uint m_nextId;
+    void notificationAdded(const NotificationManager::Notification &notification);
 
     QHash<QString, QString> m_activeNotifications;
-
-    QHash<QString, bool> m_configurableApplications;
-
-    /**
-     * A "blacklist" of apps for which always the previous notification from this app
-     * is replaced by the newer one. This is the case for eg. media players
-     * as we simply want to update the notification, not get spammed by tens
-     * of notifications for quickly changing songs in playlist
-     */
-    QSet<QString> m_alwaysReplaceAppsList;
-    /**
-     * This holds the notifications sent from apps from the list above
-     * for fast lookup
-     */
-    QHash<QString, uint> m_notificationsFromReplaceableApp;
 
     QList<NotificationInhibiton*> m_inhibitions;
 

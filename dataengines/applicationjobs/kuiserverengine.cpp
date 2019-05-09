@@ -16,382 +16,267 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "jobviewadaptor.h"
-#include "jobviewserveradaptor.h"
-#include "kuiserverinterface.h"
 #include "kuiserverengine.h"
 #include "jobcontrol.h"
 
-#include <QDBusConnection>
 #include <QUrl>
 
 #include <KJob>
 #include <KFormat>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <Plasma/DataEngine>
 
+#include "notifications.h"
+#include "jobsmodel.h"
 
-uint JobView::s_jobId = 0;
+#include <algorithm>
 
-static const int UPDATE_INTERVAL = 100;
-
-JobView::JobView(QObject* parent)
-    : Plasma::DataContainer(parent),
-      m_capabilities(-1),
-      m_percent(0),
-      m_speed(0),
-      m_totalBytes(0),
-      m_processedBytes(0),
-      m_state(UnknownState),
-      m_bytesUnitId(-1),
-      m_unitId(0)
-{
-    m_jobId = ++s_jobId;
-    setObjectName(QStringLiteral("Job %1").arg(s_jobId));
-
-    new JobViewV2Adaptor(this);
-
-    m_objectPath.setPath(QStringLiteral("/DataEngine/applicationjobs/JobView_%1").arg(m_jobId));
-    QDBusConnection::sessionBus().registerObject(m_objectPath.path(), this);
-
-    setSuspended(false);
-}
-
-JobView::~JobView()
-{
-    QDBusConnection::sessionBus().unregisterObject(m_objectPath.path(), QDBusConnection::UnregisterTree);
-}
-
-uint JobView::jobId() const
-{
-    return m_jobId;
-}
-
-void JobView::scheduleUpdate()
-{
-    if (!m_updateTimer.isActive()) {
-        m_updateTimer.start(UPDATE_INTERVAL, this);
-    }
-}
-
-void JobView::timerEvent(QTimerEvent *event)
-{
-    if (event->timerId() == m_updateTimer.timerId()) {
-        m_updateTimer.stop();
-        checkForUpdate();
-
-        if (m_state == Stopped) {
-            emit becameUnused(objectName());
-        }
-    } else {
-        Plasma::DataContainer::timerEvent(event);
-    }
-}
-
-void JobView::terminate(const QString &errorMessage)
-{
-    setData(QStringLiteral("errorText"), errorMessage);
-    QTimer::singleShot(0, this, &JobView::finished);
-}
-
-void JobView::finished()
-{
-    if (m_state != Stopped) {
-        m_state = Stopped;
-        setData(QStringLiteral("state"), "stopped");
-        setData(QStringLiteral("speed"), QVariant());
-        setData(QStringLiteral("numericSpeed"), QVariant());
-        scheduleUpdate();
-    }
-}
-
-JobView::State JobView::state()
-{
-    return m_state;
-}
-
-void JobView::setSuspended(bool suspended)
-{
-    if (suspended) {
-        if (m_state != Suspended) {
-            m_state = Suspended;
-            setData(QStringLiteral("state"), "suspended");
-            setData(QStringLiteral("speed"), QVariant());
-            setData(QStringLiteral("numericSpeed"), QVariant());
-            scheduleUpdate();
-        }
-    } else if (m_state != Running) {
-        m_state = Running;
-        setData(QStringLiteral("state"), "running");
-        setData(QStringLiteral("speed"), speedString());
-        setData(QStringLiteral("numericSpeed"), m_speed);
-        scheduleUpdate();
-    }
-}
-
-void JobView::setError(uint errorCode)
-{
-    setData(QStringLiteral("error"), errorCode);
-}
-
-int JobView::unitId(const QString &unit)
-{
-    int id = 0;
-    if (m_unitMap.contains(unit)) {
-        id = m_unitMap.value(unit);
-    } else {
-        id = m_unitId;
-        setData(QStringLiteral("totalUnit%1").arg(id), unit);
-        setData(QStringLiteral("totalAmount%1").arg(id), 0);
-        setData(QStringLiteral("processedUnit%1").arg(id), unit);
-        setData(QStringLiteral("processedAmount%1").arg(id), 0);
-        m_unitMap.insert(unit, m_unitId);
-
-        if (unit == QLatin1String("bytes")) {
-            m_bytesUnitId = id;
-        }
-
-        ++m_unitId;
-        scheduleUpdate();
-    }
-
-    return id;
-}
-
-void JobView::updateEta()
-{
-    if (m_speed < 1) {
-        setData(QStringLiteral("eta"), 0);
-        return;
-    }
-
-    if (m_totalBytes < 1) {
-        setData(QStringLiteral("eta"), 0);
-        return;
-    }
-
-    const qlonglong remaining = 1000 * (m_totalBytes - m_processedBytes);
-    setData(QStringLiteral("eta"), remaining / m_speed);
-}
-
-void JobView::setTotalAmount(qlonglong amount, const QString &unit)
-{
-    const int id = unitId(unit);
-    const QString amountString = QStringLiteral("totalAmount%1").arg(id);
-    const qlonglong prevTotal = data().value(amountString).toLongLong();
-    if (prevTotal != amount) {
-        if (id == m_bytesUnitId) {
-            m_totalBytes = amount;
-            updateEta();
-        }
-
-        setData(amountString, amount);
-        scheduleUpdate();
-    }
-}
-
-void JobView::setProcessedAmount(qlonglong amount, const QString &unit)
-{
-    const int id = unitId(unit);
-    const QString processedString = QStringLiteral("processedAmount%1").arg(id);
-    const qlonglong prevTotal = data().value(processedString).toLongLong();
-    if (prevTotal != amount) {
-        if (id == m_bytesUnitId) {
-            m_processedBytes = amount;
-            if (!m_totalBytes && m_processedBytes && (m_percent != 0)) {
-                m_totalBytes = m_processedBytes / m_percent * 100;
-                const QString totalAmountString = QStringLiteral("totalAmount%1").arg(id);
-                setData(totalAmountString, m_totalBytes);
-            }
-            updateEta();
-        }
-
-        setData(processedString, amount);
-        scheduleUpdate();
-    }
-}
-
-void JobView::setDestUrl(const QDBusVariant & destUrl)
-{
-    setData(QStringLiteral("destUrl"), destUrl.variant().toUrl());
-}
-
-void JobView::setPercent(uint percent)
-{
-    if (m_percent != percent) {
-        m_percent = percent;
-        setData(QStringLiteral("percentage"), m_percent);
-        scheduleUpdate();
-    }
-}
-
-void JobView::setSpeed(qlonglong bytesPerSecond)
-{
-    if (m_speed != bytesPerSecond) {
-        m_speed = bytesPerSecond;
-        setData(QStringLiteral("speed"), speedString());
-        setData(QStringLiteral("numericSpeed"), m_speed);
-
-        if (m_bytesUnitId > -1) {
-            updateEta();
-        }
-
-        scheduleUpdate();
-    }
-}
-
-QString JobView::speedString() const
-{
-    return i18nc("Bytes per second", "%1/s", KFormat().formatByteSize(m_speed));
-}
-
-void JobView::setInfoMessage(const QString &infoMessage)
-{
-    if (data().value(QStringLiteral("infoMessage")) != infoMessage) {
-        setData(QStringLiteral("infoMessage"), infoMessage);
-        scheduleUpdate();
-    }
-}
-
-bool JobView::setDescriptionField(uint number, const QString &name, const QString &value)
-{
-    const QString labelString = QStringLiteral("label%1").arg(number);
-    const QString labelNameString = QStringLiteral("labelName%1").arg(number);
-    const QString labelFileNameString = QStringLiteral("labelFileName%1").arg(number);
-
-    if (!data().contains(labelNameString) || data().value(labelString) != value) {
-        setData(labelNameString, name);
-        setData(labelString, value);
-        QUrl url = QUrl::fromUserInput(value, QString(), QUrl::AssumeLocalFile);
-        setData(labelFileNameString, url.toString(QUrl::PreferLocalFile | QUrl::RemoveFragment | QUrl::RemoveQuery));
-        scheduleUpdate();
-    }
-    return true;
-}
-
-void JobView::clearDescriptionField(uint number)
-{
-    const QString labelString = QStringLiteral("label%1").arg(number);
-    const QString labelNameString = QStringLiteral("labelName%1").arg(number);
-    const QString labelFileNameString = QStringLiteral("labelFileName%1").arg(number);
-
-    setData(labelNameString, QVariant());
-    setData(labelString, QVariant());
-    setData(labelFileNameString, QVariant());
-    scheduleUpdate();
-}
-
-void JobView::setAppName(const QString &appName)
-{
-    // don't need to update, this is only set once at creation
-    setData(QStringLiteral("appName"), appName);
-}
-
-void JobView::setAppIconName(const QString &appIconName)
-{
-    // don't need to update, this is only set once at creation
-    setData(QStringLiteral("appIconName"), appIconName);
-}
-
-void JobView::setCapabilities(int capabilities)
-{
-    if (m_capabilities != uint(capabilities)) {
-        m_capabilities = capabilities;
-        setData(QStringLiteral("suspendable"), m_capabilities & KJob::Suspendable);
-        setData(QStringLiteral("killable"), m_capabilities & KJob::Killable);
-        scheduleUpdate();
-    }
-}
-
-QDBusObjectPath JobView::objectPath() const
-{
-    return m_objectPath;
-}
-
-void JobView::requestStateChange(State state)
-{
-    switch (state) {
-        case Running:
-            emit resumeRequested();
-            break;
-        case Suspended:
-            emit suspendRequested();
-            break;
-        case Stopped:
-            emit cancelRequested();
-            break;
-        default:
-            break;
-    }
-}
+using namespace NotificationManager;
 
 KuiserverEngine::KuiserverEngine(QObject* parent, const QVariantList& args)
     : Plasma::DataEngine(parent, args)
 {
-    new JobViewServerAdaptor(this);
-
-    QDBusConnection bus = QDBusConnection::sessionBus();
-    bus.registerObject(QLatin1String("/DataEngine/applicationjobs/JobWatcher"), this);
-
-    setMinimumPollingInterval(500);
-
-    m_pendingJobsTimer.setSingleShot(true);
-    m_pendingJobsTimer.setInterval(500);
-    connect(&m_pendingJobsTimer, &QTimer::timeout, this, &KuiserverEngine::processPendingJobs);
     init();
 }
 
 KuiserverEngine::~KuiserverEngine()
 {
-    QDBusConnection::sessionBus()
-    .unregisterObject(QLatin1String("/DataEngine/applicationjobs/JobWatcher"), QDBusConnection::UnregisterTree);
-    qDeleteAll(m_pendingJobs);
+
 }
 
-QDBusObjectPath KuiserverEngine::requestView(const QString &appName,
-                                             const QString &appIconName, int capabilities)
+QString KuiserverEngine::sourceName(Job *job)
 {
-    JobView *jobView = new JobView(this);
-    jobView->setAppName(appName);
-    jobView->setAppIconName(appIconName);
-    jobView->setCapabilities(capabilities);
-    connect(jobView, &Plasma::DataContainer::becameUnused, this, &KuiserverEngine::removeSource);
-
-    m_pendingJobs << jobView;
-    m_pendingJobsTimer.start();
-
-    return jobView->objectPath();
+    return QStringLiteral("Job %1").arg(job->id());
 }
 
-void KuiserverEngine::processPendingJobs()
+uint KuiserverEngine::jobId(const QString &sourceName)
 {
-    foreach (JobView *jobView, m_pendingJobs) {
-        if (jobView->state() == JobView::Stopped) {
-            delete jobView;
-        } else {
-            addSource(jobView);
-        }
-    }
-
-    m_pendingJobs.clear();
+    return sourceName.midRef(4 /*length of Job + space*/).toUInt();
 }
 
 Plasma::Service* KuiserverEngine::serviceForSource(const QString& source)
 {
-    JobView *jobView = qobject_cast<JobView *>(containerForSource(source));
-    if (jobView) {
-        return new JobControl(this, jobView);
-    } else {
+    const uint id = jobId(source);
+    if (!id) {
         return DataEngine::serviceForSource(source);
     }
+
+    auto it = std::find_if(m_jobs.constBegin(), m_jobs.constBegin(), [&id](Job *job) {
+        return job->id() == id;
+    });
+
+    if (it == m_jobs.constEnd()) {
+        return DataEngine::serviceForSource(source);
+    }
+
+    return new JobControl(this, *it);
 }
 
 void KuiserverEngine::init()
 {
-    // register with the Job UI Server to receive notifications of jobs becoming available
-    OrgKdeKuiserverInterface ksmserver(QStringLiteral("org.kde.kuiserver"), QStringLiteral("/JobViewServer"), QDBusConnection::sessionBus());
-    ksmserver.registerService(QDBusConnection::sessionBus().baseService(), QStringLiteral("/DataEngine/applicationjobs/JobWatcher"));
+    m_jobsModel = JobsModel::createJobsModel();
+    // TODO see if this causes any issues when/if other processes are using applicationjobs engine, e.g. Latte Dock
+    m_jobsModel->init();
+
+    connect(m_jobsModel.data(), &Notifications::rowsInserted, this, [this](const QModelIndex &parent, int first, int last) {
+        for (int i = first; i <= last; ++i) {
+            const QModelIndex idx = m_jobsModel->index(first, 0, parent);
+            Job *job = idx.data(Notifications::JobDetailsRole).value<Job *>();
+            registerJob(job);
+        }
+    });
+
+    connect(m_jobsModel.data(), &Notifications::rowsAboutToBeRemoved, this, [this](const QModelIndex &parent, int first, int last) {
+        for (int i = first; i <= last; ++i) {
+            const QModelIndex idx = m_jobsModel->index(first, 0, parent);
+            Job *job = idx.data(Notifications::JobDetailsRole).value<Job *>();
+            removeJob(job);
+        }
+    });
+}
+
+void KuiserverEngine::updateDescriptionField(
+    Job *job,
+    int number,
+    QString (Job::*labelGetter)() const,
+    QString (Job::*valueGetter)() const)
+{
+    const QString source = sourceName(job);
+    const QString labelString = QStringLiteral("label%1").arg(number);
+    const QString labelNameString = QStringLiteral("labelName%1").arg(number);
+    const QString labelFileNameString = QStringLiteral("labelFileName%1").arg(number);
+
+    const QString label = ((job)->*labelGetter)();
+    const QString value = ((job)->*valueGetter)();
+
+    if (label.isEmpty() && value.isEmpty()) {
+        setData(source, labelString, QVariant());
+        setData(source, labelNameString, QVariant());
+        setData(source, labelFileNameString, QVariant());
+    } else {
+       setData(source, labelNameString, label);
+       setData(source, labelString, value);
+
+       const QUrl url = QUrl::fromUserInput(value, QString(), QUrl::AssumeLocalFile);
+       setData(source, labelFileNameString, url.toString(QUrl::PreferLocalFile | QUrl::RemoveFragment | QUrl::RemoveQuery));
+    }
+    setData(source, labelString);
+}
+
+void KuiserverEngine::updateUnit(
+    Job *job,
+    int number,
+    const QString &unit,
+    qulonglong (NotificationManager::Job::*processedGetter)() const,
+    qulonglong (NotificationManager::Job::*totalGetter)() const)
+{
+    const QString source = sourceName(job);
+
+    setData(source, QStringLiteral("totalUnit%1").arg(number), unit);
+    setData(source, QStringLiteral("totalAmount%1").arg(number), ((job)->*totalGetter)());
+    setData(source, QStringLiteral("processedUnit%1").arg(number), unit);
+    setData(source, QStringLiteral("processedAmount%1").arg(number), ((job)->*processedGetter)());
+}
+
+void KuiserverEngine::registerJob(Job *job)
+{
+    if (m_jobs.contains(job)) { // shouldn't really happen
+        return;
+    }
+
+    const QString source = sourceName(job);
+
+    setData(source, QStringLiteral("appName"), job->desktopEntry());// job->applicationName());
+    setData(source, QStringLiteral("appIconName"), job->applicationIconName());
+    setData(source, QStringLiteral("suspendable"), job->suspendable());
+    setData(source, QStringLiteral("killable"), job->killable());
+    updateState(job);
+
+    connect(job, &Job::stateChanged, this, [this, job] {
+        updateState(job);
+    });
+    connect(job, &Job::speedChanged, this, [this, job] {
+        updateEta(job);
+    });
+
+    connectJobField(job, &Job::summary, &Job::summaryChanged, QStringLiteral("infoMessage"));
+    connectJobField(job, &Job::percentage, &Job::percentageChanged, QStringLiteral("percentage"));
+    connectJobField(job, &Job::error, &Job::errorChanged, QStringLiteral("error"));
+    connectJobField(job, &Job::errorText, &Job::errorTextChanged, QStringLiteral("errorText"));
+    connectJobField(job, &Job::destUrl, &Job::destUrlChanged, QStringLiteral("destUrl"));
+
+    static const struct {
+        int number;
+        QString (Job::*labelGetter)() const;
+        void (Job::*labelSignal)();
+        QString (Job::*valueGetter)() const;
+        void (Job::*valueSignal)();
+    } s_descriptionFields[] = {
+        {0, &Job::descriptionLabel1, &Job::descriptionLabel1Changed, &Job::descriptionValue1, &Job::descriptionValue1Changed},
+        {1, &Job::descriptionLabel2, &Job::descriptionLabel2Changed, &Job::descriptionValue2, &Job::descriptionValue2Changed},
+    };
+
+    for (auto fields : s_descriptionFields) {
+        updateDescriptionField(job, fields.number, fields.labelGetter, fields.valueGetter);
+        connect(job, fields.labelSignal, this, [=] {
+            updateDescriptionField(job, fields.number, fields.labelGetter, fields.valueGetter);
+        });
+        connect(job, fields.valueSignal, this, [=] {
+            updateDescriptionField(job, fields.number, fields.labelGetter, fields.valueGetter);
+        });
+    }
+
+    static const struct {
+        // Previously the dataengine counted units up but for simplicity a fixed number is assigned to each unit
+        int number;
+        QString unit;
+        qulonglong (Job::*processedGetter)() const;
+        void (Job::*processedSignal)();
+        qulonglong (Job::*totalGetter)() const;
+        void (Job::*totalSignal)();
+    } s_unitsFields[] = {
+        {0, QStringLiteral("bytes"), &Job::processedBytes, &Job::processedBytesChanged, &Job::totalBytes, &Job::totalBytesChanged},
+        {1, QStringLiteral("files"), &Job::processedFiles, &Job::processedFilesChanged, &Job::totalFiles, &Job::totalFilesChanged},
+        {2, QStringLiteral("dirs"), &Job::processedDirectories, &Job::processedDirectoriesChanged, &Job::totalDirectories, &Job::totalDirectoriesChanged}
+    };
+
+    for (auto fields : s_unitsFields) {
+        updateUnit(job, fields.number, fields.unit, fields.processedGetter, fields.totalGetter);
+        connect(job, fields.processedSignal, this, [=] {
+            updateUnit(job, fields.number, fields.unit, fields.processedGetter, fields.totalGetter);
+        });
+        connect(job, fields.totalSignal, this, [=] {
+            updateUnit(job, fields.number, fields.unit, fields.processedGetter, fields.totalGetter);
+        });
+    }
+
+    m_jobs.append(job);
+}
+
+void KuiserverEngine::removeJob(Job *job)
+{
+    if (!job || !m_jobs.contains(job)) {
+        return;
+    }
+
+    m_jobs.removeOne(job);
+
+    const QString source = sourceName(job);
+    removeSource(source);
+}
+
+QString KuiserverEngine::speedString(qulonglong speed)
+{
+    return i18nc("Bytes per second", "%1/s", KFormat().formatByteSize(speed));
+}
+
+void KuiserverEngine::updateState(Job *job)
+{
+    const QString source = sourceName(job);
+
+    QString stateString;
+    switch (job->state()) {
+    case Notifications::JobStateRunning:
+        stateString = QStringLiteral("running");
+        updateSpeed(job);
+        break;
+    case Notifications::JobStateSuspended:
+        stateString = QStringLiteral("suspended");
+        setData(source, QStringLiteral("speed"), QVariant());
+        setData(source, QStringLiteral("numericSpeed"), QVariant());
+        break;
+    case Notifications::JobStateStopped:
+        stateString = QStringLiteral("stopped");
+        break;
+    }
+
+    setData(source, QStringLiteral("state"), stateString);
+
+    if (job->state() == Notifications::JobStateStopped) {
+        removeJob(job);
+    }
+}
+
+void KuiserverEngine::updateSpeed(Job *job)
+{
+    const QString source = sourceName(job);
+    setData(source, QStringLiteral("speed"), speedString(job->speed()));
+    setData(source, QStringLiteral("numericSpeed"), job->speed());
+    updateEta(job);
+}
+
+void KuiserverEngine::updateEta(Job *job)
+{
+    const QString source = sourceName(job);
+
+    if (job->speed() < 1 || job->totalBytes() < 1) {
+        setData(source, QStringLiteral("eta"), 0);
+        return;
+    }
+
+    const qlonglong remaining = 1000 * (job->totalBytes() - job->processedBytes());
+    setData(source, QStringLiteral("eta"), remaining / job->speed());
 }
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(kuiserver, KuiserverEngine, "plasma-dataengine-applicationjobs.json")

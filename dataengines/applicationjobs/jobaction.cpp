@@ -27,7 +27,7 @@ void JobAction::start()
 {
     qDebug() << "Trying to perform the action" << operationName();
 
-    if (!m_jobView) {
+    if (!m_job) {
         setErrorText(i18nc("%1 is the subject (can be anything) upon which the job is performed",
                            "The JobView for %1 cannot be found", destination()));
         setError(-1);
@@ -37,18 +37,12 @@ void JobAction::start()
 
     //TODO: check with capabilities before performing actions.
     if (operationName() == QLatin1String("resume")) {
-        m_jobView->requestStateChange(JobView::Running);
+        m_job->resume();
     } else if (operationName() == QLatin1String("suspend")) {
-        m_jobView->requestStateChange(JobView::Suspended);
+        m_job->suspend();
     } else if (operationName() == QLatin1String("stop")) {
-        m_jobView->requestStateChange(JobView::Stopped);
-        //in case the app crashed and won't call terminate on the jobview.
-        m_jobView->setError(KIO::ERR_USER_CANCELED);
-        m_jobView->terminate(i18n("Job canceled by user."));
+        m_job->kill();
     }
 
     emitResult();
 }
-
-
-

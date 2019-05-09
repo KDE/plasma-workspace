@@ -1,160 +1,151 @@
-/***************************************************************************
- *   Copyright 2011 Davide Bettio <davide.bettio@kdemail.net>              *
- *   Copyright 2011 Marco Martin <mart@kde.org>                            *
- *                                                                         *
- *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU Library General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- *                                                                         *
- *   This program is distributed in the hope that it will be useful,       *
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
- *   GNU Library General Public License for more details.                          *
- *                                                                         *
- *   You should have received a copy of the GNU Library General Public License     *
- *   along with this program; if not, write to the                         *
- *   Free Software Foundation, Inc.,                                       *
- *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
- ***************************************************************************/
+/*
+ * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License or (at your option) version 3 or any later version
+ * accepted by the membership of KDE e.V. (or its successor approved
+ * by the membership of KDE e.V.), which shall act as a proxy
+ * defined in Section 14 of version 3 of the license.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
+ */
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
+import QtQuick 2.8
+
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-import org.kde.plasma.private.notifications 1.0
+import org.kde.kcoreaddons 1.0 as KCoreAddons
+import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 
-import "uiproperties.js" as UiProperties
+import org.kde.notificationmanager 1.0 as NotificationManager
 
-MouseEventListener {
-    id: notificationsApplet
-    //width: units.gridUnit.width * 10
-    //height: units.gridUnit.width * 15
+import "global"
 
-    //Layout.minimumWidth: mainScrollArea.implicitWidth
-    //Layout.minimumHeight: mainScrollArea.implicitHeight
-    Layout.minimumWidth: 256 // FIXME: use above
-    Layout.minimumHeight: 256
+Item {
+    id: root 
 
-    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
-    LayoutMirroring.childrenInherit: true
-
-    property int layoutSpacing: UiProperties.layoutSpacing
-
-    property real globalProgress: 0
-
-    property Item notifications: historyList.headerItem ? historyList.headerItem.notifications : null
-    property Item jobs: historyList.headerItem ? historyList.headerItem.jobs : null
-    
-    //notifications + jobs
-    property int activeItemsCount: (notifications ? notifications.count : 0) + (jobs ? jobs.count : 0)
-    property int totalCount: activeItemsCount + (notifications ? notifications.historyCount : 0)
-
-    Plasmoid.switchWidth: units.gridUnit * 20
-    Plasmoid.switchHeight: units.gridUnit * 30
-
-    Plasmoid.status: activeItemsCount > 0 ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
+    Plasmoid.status: historyModel.activeJobsCount > 0
+                     || historyModel.unreadNotificationsCount > 0
+                     || Globals.inhibited ? PlasmaCore.Types.ActiveStatus
+                                          : PlasmaCore.Types.PassiveStatus
 
     Plasmoid.toolTipSubText: {
-        if (activeItemsCount == 0) {
-            return i18n("No notifications or jobs")
-        } else if (!notifications || !notifications.count) {
-            return i18np("%1 running job", "%1 running jobs", jobs.count)
-        } else if (!jobs || !jobs.count) {
-            return i18np("%1 notification", "%1 notifications", notifications.count)
-        } else {
-            return i18np("%1 running job", "%1 running jobs", jobs.count) + "\n" + i18np("%1 notification", "%1 notifications", notifications.count)
+        var lines = [];
+
+        if (historyModel.activeJobsCount > 0) {
+            lines.push(i18np("%1 running job", "%1 running jobs", historyModel.activeJobsCount));
         }
+
+        // Any notification that is newer than "lastRead" is "unread"
+        // since it doesn't know the popup is on screen which makes the user see it
+        var actualUnread = historyModel.unreadNotificationsCount - Globals.popupNotificationsModel.activeNotificationsCount;
+        if (actualUnread > 0) {
+            lines.push(i18np("%1 unread notification", "%1 unread notifications", actualUnread));
+        }
+
+        if (Globals.inhibited) {
+            var inhibitedUntil = notificationSettings.notificationsInhibitedUntil
+            var inhibitedUntilValid = !isNaN(inhibitedUntil.getTime());
+
+            // TODO check app inhibition, too
+            if (inhibitedUntilValid) {
+                lines.push(i18n("Do not disturb until %1",
+                             KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat)));
+            }
+        } else if (lines.length === 0) {
+            lines.push("No unread notificatons");
+        }
+
+        return lines.join("\n");
     }
 
-    Plasmoid.compactRepresentation: NotificationIcon { }
+    Plasmoid.switchWidth: units.gridUnit * 14
+    // This is to let the plasmoid expand in a vertical panel for a "sidebar" notification panel
+    // The CompactRepresentation size is limited to not have the notification icon grow gigantic
+    // but it should still switch over to full rep once there's enough width (disregarding the limited height)
+    Plasmoid.switchHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? 1 : units.gridUnit * 10
 
-    // Always scroll to the top when opening as that's where the important stuff goes on
     Plasmoid.onExpandedChanged: {
-        if (Plasmoid.expanded) {
-            // contentY doesn't really work with ListView (creates and destroys delegates on demand and positions them randomly)
-            // so first use its "move to the top" method and then move it further up to reveal all of its "header" contents
-            historyList.positionViewAtBeginning();
-            historyList.contentY = historyList.originY;
+        if (!plasmoid.expanded) {
+            // FIXME Qt.callLater because system tray gets confused when an applet becomes passive when clicking to hide it
+            Qt.callLater(function() {
+                historyModel.lastRead = undefined; // reset to now
+                historyModel.collapseAllGroups();
+            });
         }
     }
 
-    hoverEnabled: !UiProperties.touchInput
+    Plasmoid.compactRepresentation: CompactRepresentation {
+        activeCount: Globals.popupNotificationsModel.activeNotificationsCount
+        unreadCount: Math.min(99, historyModel.unreadNotificationsCount)
 
-    onActiveItemsCountChanged: {
-        if (!activeItemsCount) {
+        jobsCount: historyModel.activeJobsCount
+        jobsPercentage: historyModel.jobsPercentage
+
+        inhibited: Globals.inhibited
+    }
+
+    Plasmoid.fullRepresentation: FullRepresentation {
+
+    }
+
+    NotificationManager.Settings {
+        id: notificationSettings
+    }
+
+    NotificationManager.Notifications {
+        id: historyModel
+        showExpired: true
+        showDismissed: true
+        showJobs: notificationSettings.jobsInNotifications
+        sortMode: NotificationManager.Notifications.SortByTypeAndUrgency
+        groupMode: NotificationManager.Notifications.GroupApplicationsFlat
+        groupLimit: 2
+        expandUnread: true
+        blacklistedDesktopEntries: notificationSettings.historyBlacklistedApplications
+        blacklistedNotifyRcNames: notificationSettings.historyBlacklistedServices
+        urgencies: {
+            var urgencies = NotificationManager.Notifications.CriticalUrgency
+                          | NotificationManager.Notifications.NormalUrgency;
+            if (notificationSettings.lowPriorityHistory) {
+                urgencies |= NotificationManager.Notifications.LowUrgency;
+            }
+            return urgencies;
+        }
+    }
+
+    function action_clearHistory() {
+        historyModel.clear(NotificationManager.Notifications.ClearExpired);
+        if (historyModel.count === 0) {
             plasmoid.expanded = false;
         }
     }
 
-    PlasmaExtras.Heading {
-        width: parent.width
-        level: 3
-        opacity: 0.6
-        visible: notificationsApplet.totalCount == 0
-        text: i18n("No new notifications.")
-    }
-
-    PlasmaExtras.ScrollArea {
-        id: mainScrollArea
-        anchors.fill: parent
-
-        // HACK The history of notifications can become quite large. In order to avoid a memory leak
-        // show them in a ListView which creates delegate instances only on demand.
-        // The ListView's header functionality is abused to provide the jobs and regular notifications
-        // which are few and might store some state inside the delegate (e.g. expanded state) and
-        // thus are created all at once by a Repeater.
-        ListView {
-            id: historyList
-
-            // The history stuff is quite entangled with regular notifications, so
-            // model and delegate are set by Bindings {} inside Notifications.qml
-
-            header: Column {
-                property alias jobs: jobsLoader.item
-                property alias notifications: notificationsLoader.item
-
-                width: historyList.width
-
-                Loader {
-                    id: jobsLoader
-                    width: parent.width
-                    source: "Jobs.qml"
-                    active: plasmoid.configuration.showJobs
-                }
-
-                Loader {
-                    id: notificationsLoader
-                    width: parent.width
-                    source: "Notifications.qml"
-                    active: plasmoid.configuration.showNotifications
-                }
-            }
-        }
-    }
-
-    function action_clearNotifications() {
-        notifications.clearNotifications();
-        notifications.clearHistory();
-    }
-
-    function action_notificationskcm() {
-        KCMShell.open("kcmnotify");
+    function action_openKcm() {
+        KQCAddons.KCMShell.open("kcm_notifications");
     }
 
     Component.onCompleted: {
-        plasmoid.setAction("clearNotifications", i18n("Clear Notifications"), "edit-clear-history")
-        var clearAction = plasmoid.action("clearNotifications");
-        clearAction.visible = Qt.binding(function() {
-            return notificationsApplet.notifications && (notificationsApplet.notifications.count > 0 || notificationsApplet.notifications.historyCount > 0);
-        })
+        Globals.adopt(plasmoid);
 
-        if (KCMShell.authorize("kcmnotify.desktop").length > 0) {
-            plasmoid.setAction("notificationskcm", i18n("&Configure Event Notifications and Actions..."), "preferences-desktop-notification-bell")
-        }
+        plasmoid.setAction("clearHistory", i18n("Clear History"), "edit-clear-history");
+        var clearAction = plasmoid.action("clearHistory");
+        clearAction.visible = Qt.binding(function() {
+            return historyModel.expiredNotificationsCount > 0;
+        });
+
+        // FIXME only while Multi-page KCMs are broken when embedded in plasmoid config
+        plasmoid.setAction("openKcm", i18n("&Configure Event Notifications and Actions..."), "preferences-desktop-notification-bell");
+        plasmoid.action("openKcm").visible = (KQCAddons.KCMShell.authorize("kcm_notifications.desktop").length > 0);
     }
 }

@@ -148,6 +148,7 @@ add_subdirectory(libdbusmenuqt)
 add_subdirectory(appmenu)
 
 add_subdirectory(libtaskmanager)
+add_subdirectory(libnotificationmanager)
 add_subdirectory(libcolorcorrect)
 add_subdirectory(components)
 
@@ -174,7 +175,6 @@ add_subdirectory(wallpapers)
 
 add_subdirectory(kioslave)
 add_subdirectory(ktimezoned)
-add_subdirectory(kuiserver)
 add_subdirectory(menu)
 add_subdirectory(phonon)
 

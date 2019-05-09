@@ -1,142 +1,206 @@
 /*
- *   Copyright 2014 Martin Klapetek <mklapetek@kde.org>
+ * Copyright 2019 Kai Uwe Broulik <kde@privat.broulik.de>
  *
- *   This program is free software; you can redistribute it and/or modify
- *   it under the terms of the GNU Library General Public License as
- *   published by the Free Software Foundation; either version 2, or
- *   (at your option) any later version.
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License or (at your option) version 3 or any later version
+ * accepted by the membership of KDE e.V. (or its successor approved
+ * by the membership of KDE e.V.), which shall act as a proxy
+ * defined in Section 14 of version 3 of the license.
  *
- *   This program is distributed in the hope that it will be useful,
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *   GNU Library General Public License for more details
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- *   You should have received a copy of the GNU Library General Public
- *   License along with this program; if not, write to the
- *   Free Software Foundation, Inc.,
- *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-import QtQuick 2.0
-import QtQuick.Controls.Private 1.0
+import QtQuick 2.8
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kquickcontrolsaddons 2.0
+import org.kde.plasma.components 2.0 as Components
 
-import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
+import org.kde.notificationmanager 1.0 as NotificationManager
+
+import ".."
 
 PlasmaCore.Dialog {
     id: notificationPopup
 
+    property int popupWidth
+
+    property alias notificationType: notificationItem.notificationType
+
+    property alias applicationName: notificationItem.applicationName
+    property alias applicationIconSource: notificationItem.applicationIconSource
+    property alias deviceName: notificationItem.deviceName
+
+    property alias time: notificationItem.time
+
+    property alias summary: notificationItem.summary
+    property alias body: notificationItem.body
+    property alias icon: notificationItem.icon
+    property alias urls: notificationItem.urls
+
+    property int urgency
+    property int timeout
+    property int dismissTimeout
+
+    property alias jobState: notificationItem.jobState
+    property alias percentage: notificationItem.percentage
+    property alias jobError: notificationItem.jobError
+    property alias suspendable: notificationItem.suspendable
+    property alias killable: notificationItem.killable
+    property alias jobDetails: notificationItem.jobDetails
+
+    property alias configureActionLabel: notificationItem.configureActionLabel
+    property alias configurable: notificationItem.configurable
+    property alias dismissable: notificationItem.dismissable
+    property alias closable: notificationItem.closable
+
+    property bool hasDefaultAction
+    property alias actionNames: notificationItem.actionNames
+    property alias actionLabels: notificationItem.actionLabels
+
+    signal configureClicked
+    signal dismissClicked
+    signal closeClicked
+
+    signal defaultActionInvoked
+    signal actionInvoked(string actionName)
+    signal openUrl(string url)
+    signal fileActionInvoked
+
+    signal expired
+
+    signal suspendJobClicked
+    signal resumeJobClicked
+    signal killJobClicked
+
+    property int defaultTimeout: 5000
+    readonly property int effectiveTimeout: {
+        if (timeout === -1) {
+            return defaultTimeout;
+        }
+        if (dismissTimeout) {
+            return dismissTimeout;
+        }
+        return timeout;
+    }
+
     location: PlasmaCore.Types.Floating
-    type: PlasmaCore.Dialog.Notification
+
     flags: Qt.WindowDoesNotAcceptFocus
 
-    property var notificationProperties: ({})
-    signal notificationTimeout()
+    visible: false
 
-    onVisibleChanged: {
-        if (!visible) {
-            notificationTimer.stop();
+    // When notification is updated, restart hide timer
+    onTimeChanged: {
+        if (timer.running) {
+            timer.restart();
         }
     }
 
-    onYChanged: {
-        if (visible && !notificationItem.dragging) {
-            notificationTimer.restart();
-        }
-    }
-
-    function populatePopup(notification) {
-        notificationProperties = notification
-        notificationTimer.interval = notification.expireTimeout
-        notificationTimer.restart();
-        //temporarly disable height binding, avoids an useless window resize when removing the old actions
-        heightBinding.when = false;
-        // notification.actions is a JS array, but we can easily append that to our model
-        notificationItem.actions.clear();
-        // Workaround a crash in Qt when appending an empty list (https://codereview.qt-project.org/#/c/223985/)
-        if (notificationProperties.actions.length > 0) {
-            notificationItem.actions.append(notificationProperties.actions);
-        }
-        //enable height binding again, finally do the resize
-        heightBinding.when = true;
-    }
-
-    function clearPopup() {
-        notificationProperties = {}
-        notificationItem.actions.clear()
-    }
-
-    mainItem: NotificationItem {
-        id: notificationItem
+    mainItem: MouseArea {
+        id: area
+        width: notificationPopup.popupWidth
+        height: notificationItem.implicitHeight + notificationItem.y
         hoverEnabled: true
+
+        cursorShape: hasDefaultAction ? Qt.PointingHandCursor : Qt.ArrowCursor
+        acceptedButtons: hasDefaultAction ? Qt.LeftButton : Qt.NoButton
+
+        onClicked: notificationPopup.defaultActionInvoked()
 
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true
 
-        //the binding needs to be disabled when re-populating actions, to minimize resizes
-        Binding on height {
-            id: heightBinding
-            value: notificationItem.implicitHeight
-            when: true
+        Timer {
+            id: timer
+            interval: notificationPopup.effectiveTimeout
+            running: notificationPopup.visible && !area.containsMouse && interval > 0
+                && !notificationItem.dragging && !notificationItem.menuOpen
+            onTriggered: {
+                if (notificationPopup.dismissTimeout) {
+                    notificationPopup.dismissClicked();
+                } else {
+                    notificationPopup.expired();
+                }
+            }
         }
 
         Timer {
-            id: notificationTimer
-            onTriggered: {
-                if (!notificationProperties.isPersistent) {
-                    expireNotification(notificationProperties.source)
+            id: timeoutIndicatorDelayTimer
+            // only show indicator for the last ten seconds of timeout
+            readonly property int remainingTimeout: 10000
+            interval: Math.max(0, timer.interval - remainingTimeout)
+            running: interval > 0 && timer.running
+        }
+
+        Rectangle {
+            id: timeoutIndicatorRect
+            anchors {
+                right: parent.right
+                rightMargin: -notificationPopup.margins.right
+                bottom: parent.bottom
+                bottomMargin: -notificationPopup.margins.bottom
+            }
+            width: units.devicePixelRatio * 3
+            color: theme.highlightColor
+            opacity: timeoutIndicatorAnimation.running ? 0.6 : 0
+            visible: units.longDuration > 1
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: units.longDuration
                 }
-                notificationPopup.notificationTimeout();
             }
-        }
-        onContainsMouseChanged: {
-            if (containsMouse) {
-                notificationTimer.stop()
-            } else if (!containsMouse && !dragging && visible) {
-                notificationTimer.restart()
-            }
-        }
-        onDraggingChanged: {
-            if (dragging) {
-                notificationTimer.stop()
-            } else if (!containsMouse && !dragging && visible) {
-                notificationTimer.restart()
+
+            NumberAnimation {
+                id: timeoutIndicatorAnimation
+                target: timeoutIndicatorRect
+                property: "height"
+                from: area.height + notificationPopup.margins.top + notificationPopup.margins.bottom
+                to: 0
+                duration: Math.min(timer.interval, timeoutIndicatorDelayTimer.remainingTimeout)
+                running: timer.running && !timeoutIndicatorDelayTimer.running && units.longDuration > 1
             }
         }
 
-        summary: notificationProperties.summary || ""
-        body: notificationProperties.body || ""
-        icon: notificationProperties.appIcon || ""
-        image: notificationProperties.image
-        // explicit true/false or else it complains about assigning undefined to bool
-        configurable: notificationProperties.configurable && !Settings.isMobile ? true : false
-        urls: notificationProperties.urls || []
-        hasDefaultAction: notificationProperties.hasDefaultAction || false
-        hasConfigureAction: notificationProperties.hasConfigureAction || false
+        NotificationItem {
+            id: notificationItem
+            // let the item bleed into the dialog margins so the close button margins cancel out
+            y: closable || dismissable || configurable ? -notificationPopup.margins.top : 0
+            headingRightPadding: -notificationPopup.margins.right
+            width: parent.width
+            hovered: area.containsMouse
+            maximumLineCount: 8
+            bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0
 
-        width: Math.round(23 * units.gridUnit)
-        maximumTextHeight: theme.mSize(theme.defaultFont).height * 10
+            thumbnailLeftPadding: -notificationPopup.margins.left
+            thumbnailRightPadding: -notificationPopup.margins.right
+            thumbnailTopPadding: -notificationPopup.margins.top
+            thumbnailBottomPadding: -notificationPopup.margins.bottom
 
-        onClose: {
-            closeNotification(notificationProperties.source)
-            // the popup will be closed in response to sourceRemoved
-        }
-        onConfigure: {
-            configureNotification(notificationProperties.appRealName, notificationProperties.eventId)
-            notificationPositioner.closePopup(notificationProperties.source);
-        }
-        onAction: {
-            executeAction(notificationProperties.source, actionId)
-            actions.clear()
-        }
-        onOpenUrl: {
-            Qt.openUrlExternally(url)
-            notificationPositioner.closePopup(notificationProperties.source);
+            closable: true
+            onBodyClicked: {
+                if (area.acceptedButtons & mouse.button) {
+                    area.clicked(null /*mouse*/);
+                }
+            }
+            onCloseClicked: notificationPopup.closeClicked()
+            onDismissClicked: notificationPopup.dismissClicked()
+            onConfigureClicked: notificationPopup.configureClicked()
+            onActionInvoked: notificationPopup.actionInvoked(actionName)
+            onOpenUrl: notificationPopup.openUrl(url)
+            onFileActionInvoked: notificationPopup.fileActionInvoked()
+
+            onSuspendJobClicked: notificationPopup.suspendJobClicked()
+            onResumeJobClicked: notificationPopup.resumeJobClicked()
+            onKillJobClicked: notificationPopup.killJobClicked()
         }
     }
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+"http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.JobViewV3">
+
+    <method name="terminate">
+      <!-- TODO does this need a "quiet" argument so we can tell between
+        "real" errors the user should see and "errors" like canceled?
+        or do we want to keep that on the view's side? -->
+
+      <!-- The error code why the job view was terminated.
+        0 means no error. An error can be e.g. ERR_USER_CANCELED -->
+      <arg name="errorCode" type="u" direction="in"/>
+      <!-- The user-visible error message, e.g. "Network connection lost" -->
+      <arg name="errorMessage" type="s" direction="in"/>
+      <!-- Custom hints for the server, used for future extension -->
+      <arg name="hints" type="a{sv}" direction="in"/>
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In2" value="QVariantMap"/>
+    </method>
+
+    <method name="update">
+      <arg name="properties" type="a{sv}" direction="in"/>
+      <!-- TODO Does this need a invalidatedProperties thing like dbus properties or do we just
+      send empty props over for removing stuff, is this even a thing we do?
+      There's "clearDescriptionField" which we can just do by sending empty description fields? -->
+      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="QVariantMap"/>
+    </method>
+
+    <!-- The view requested to be re-sent all properties.
+    TODO do we need this, how does it re-register when plasmashell restarts? -->
+    <signal name="updateRequested"/>
+
+    <signal name="suspendRequested"/>
+    <signal name="resumeRequested"/>
+    <signal name="cancelRequested"/>
+  </interface>
+</node>

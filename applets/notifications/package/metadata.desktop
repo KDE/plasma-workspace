@@ -149,13 +149,13 @@ Comment[zh_TW]=顯示通知與工作
 Type=Service
 Icon=preferences-desktop-notification-bell
 X-KDE-ParentApp=
-X-KDE-PluginInfo-Author=Martin Klapetek
+X-KDE-PluginInfo-Author=Kai Uwe Broulik
 X-KDE-PluginInfo-Category=Tasks
-X-KDE-PluginInfo-Email=mklapetek@kde.org
+X-KDE-PluginInfo-Email=kde@privat.broulik.de
 X-KDE-PluginInfo-License=GPL-2.0+
 X-KDE-PluginInfo-Name=org.kde.plasma.notifications
-X-KDE-PluginInfo-Version=3.0
-X-KDE-PluginInfo-Website=https://www.kde.org/plasma-desktop
+X-KDE-PluginInfo-Version=4.0
+X-KDE-PluginInfo-Website=https://plasma.kde.org/
 X-KDE-ServiceTypes=Plasma/Applet
 X-Plasma-API=declarativeappletscript
 X-Plasma-Provides=org.kde.plasma.notifications
@@ -163,6 +163,7 @@ X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-Library=plasma_applet_notifications
 
 X-Plasma-MainScript=ui/main.qml
-X-Plasma-RequiredExtensions=LaunchApp
 X-Plasma-NotificationArea=true
 X-Plasma-NotificationAreaCategory=ApplicationStatus
+# FIXME doesn't work with multi-page KCMs
+#X-Plasma-ConfigPlugins=kcm_notifications

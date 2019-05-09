@@ -1,0 +1,10 @@
+File=notificationsettings.kcfg
+NameSpace=NotificationManager
+ClassName=NotificationSettings
+Singleton=true
+Mutators=true
+DefaultValueGetters=true
+Notifiers=true
+# For Settings::PopupPosition
+IncludeFiles=\"settings.h\"
+UseEnumTypes=true

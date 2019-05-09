@@ -21,26 +21,35 @@
 
 #include "kuiserverengine.h"
 
+#include <QPointer>
+
 #include <plasma/servicejob.h>
+
+#include "job.h"
+
+namespace NotificationManager
+{
+class Job;
+}
 
 class JobAction : public Plasma::ServiceJob
 {
     Q_OBJECT
 
     public:
-        JobAction(JobView *jobView,
+        JobAction(NotificationManager::Job *job,
                   const QString& operation,
                   QMap<QString,QVariant>& parameters,
                   QObject* parent = nullptr)
-        : ServiceJob(jobView->objectName(), operation, parameters, parent),
-          m_jobView(jobView)
+        : ServiceJob(KuiserverEngine::sourceName(job), operation, parameters, parent),
+          m_job(job)
         {
         }
 
         void start() override;
 
     private:
-        JobView *m_jobView;
+        QPointer<NotificationManager::Job> m_job;
 };
 
 #endif //JOBVIEW_H

@@ -1,0 +1,7 @@
+File=donotdisturbsettings.kcfg
+NameSpace=NotificationManager
+ClassName=DoNotDisturbSettings
+Singleton=true
+Mutators=true
+DefaultValueGetters=true
+Notifiers=true
