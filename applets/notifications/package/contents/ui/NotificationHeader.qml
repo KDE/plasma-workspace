@@ -148,16 +148,16 @@ RowLayout {
 
             if (eta < 60) { // 1 minute
                 return i18ncp("seconds remaining, keep short",
-                              "%1s remaining", "%1s remaining", Math.round(eta));
+                              "%1 s remaining", "%1 s remaining", Math.round(eta));
             }
             if (eta < 60 * 60) {// 1 hour
                 return i18ncp("minutes remaining, keep short",
-                              "%1min remaining", "%1min remaining",
+                              "%1 min remaining", "%1 min remaining",
                               Math.round(eta / 60));
             }
             if (eta < 60 * 60 * 5) { // 5 hours max, if it takes even longer there's no real point in shoing that
                 return i18ncp("hours remaining, keep short",
-                              "%1h remaining", "%1h remaining",
+                              "%1 h remaining", "%1 h remaining",
                               Math.round(eta / 60 / 60));
             }
 
