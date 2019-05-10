@@ -252,6 +252,7 @@ ColumnLayout {
         id: jobLoader
         Layout.fillWidth: true
         active: notificationItem.notificationType === NotificationManager.Notifications.JobType
+        visible: active
         sourceComponent: JobItem {
             jobState: notificationItem.jobState
             jobError: notificationItem.jobError
@@ -280,7 +281,6 @@ ColumnLayout {
         // Notification actions
         Flow { // it's a Flow so it can wrap if too long
             Layout.fillWidth: true
-            visible: actionRepeater.count > 0
             spacing: units.smallSpacing
             layoutDirection: Qt.RightToLeft
 
