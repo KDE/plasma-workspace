@@ -134,7 +134,10 @@ QtObject {
     // How much vertical screen real estate the notification popups may consume
     readonly property real popupMaximumScreenFill: 0.75
 
-    property var screenRect: plasmoid ? plasmoid.availableScreenRect : undefined
+    property var screenRect: plasmoid ? Qt.rect(plasmoid.screenGeometry.x + plasmoid.availableScreenRect.x,
+                                                plasmoid.screenGeometry.y + plasmoid.availableScreenRect.y,
+                                                plasmoid.availableScreenRect.width,
+                                                plasmoid.availableScreenRect.height) : undefined
 
     onPopupLocationChanged: Qt.callLater(positionPopups)
     onScreenRectChanged: Qt.callLater(positionPopups)
