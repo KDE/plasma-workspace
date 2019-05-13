@@ -235,7 +235,7 @@ QtObject {
             if (popupLocation & Qt.AlignHCenter) {
                 popup.x = x + (screenRect.width - popup.width) / 2;
             } else if (popupLocation & Qt.AlignRight) {
-                popup.x = screenRect.width - popupEdgeDistance - popup.width;
+                popup.x = x + screenRect.width - popupEdgeDistance - popup.width;
             } else {
                 popup.x = x;
             }
