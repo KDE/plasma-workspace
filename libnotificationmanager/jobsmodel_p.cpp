@@ -32,6 +32,8 @@
 #include "jobviewserverv2adaptor.h"
 
 #include <QDBusConnection>
+#include <QDBusConnectionInterface>
+#include <QDBusMessage>
 #include <QDBusServiceWatcher>
 
 #include <KJob>
@@ -342,6 +344,13 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry,
 
     m_jobServices.insert(job, serviceName);
     m_serviceWatcher->addWatchedService(serviceName);
+
+    if (!connection().interface()->isServiceRegistered(serviceName)) {
+        qCWarning(NOTIFICATIONMANAGER) << "Service that requested the view wasn't registered anymore by the time the request was being processed";
+        QMetaObject::invokeMethod(this, [this, serviceName] {
+            onServiceUnregistered(serviceName);
+        }, Qt::QueuedConnection);
+    }
 
     return job->d->objectPath();
 }
