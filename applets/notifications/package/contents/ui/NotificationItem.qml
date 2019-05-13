@@ -43,7 +43,7 @@ ColumnLayout {
 
     property alias applicationIconSource: notificationHeading.applicationIconSource
     property alias applicationName: notificationHeading.applicationName
-    property alias deviceName: notificationHeading.deviceName
+    property alias originName: notificationHeading.originName
 
     property string summary
     property alias time: notificationHeading.time

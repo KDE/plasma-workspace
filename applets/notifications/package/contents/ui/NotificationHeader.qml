@@ -39,7 +39,7 @@ RowLayout {
 
     property var applicationIconSource
     property string applicationName
-    property string deviceName
+    property string originName
 
     property string configureActionLabel
 
@@ -88,7 +88,7 @@ RowLayout {
         Layout.fillWidth: true
         textFormat: Text.PlainText
         elide: Text.ElideRight
-        text: notificationHeading.applicationName + (notificationHeading.deviceName ? " · " + notificationHeading.deviceName : "")
+        text: notificationHeading.applicationName + (notificationHeading.originName ? " · " + notificationHeading.originName : "")
     }
 
     PlasmaExtras.DescriptiveLabel {

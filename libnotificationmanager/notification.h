@@ -81,7 +81,7 @@ public:
     QString applicationIconName() const;
     void setApplicationIconName(const QString &applicationIconName);
 
-    QString deviceName() const;
+    QString originName() const;
 
     // should we group the two into a QPair or something?
     QStringList actionNames() const;

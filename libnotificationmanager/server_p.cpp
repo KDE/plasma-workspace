@@ -177,7 +177,7 @@ QStringList ServerPrivate::GetCapabilities() const
         QStringLiteral("actions"),
 
         QStringLiteral("x-kde-urls"),
-        QStringLiteral("x-kde-device-name"),
+        QStringLiteral("x-kde-origin-name"),
         QStringLiteral("x-kde-display-appname"),
 
         QStringLiteral("inhibitions")

@@ -231,7 +231,7 @@ public:
 
         ApplicationNameRole, ///< The user-visible name of the application (e.g. Spectacle)
         ApplicationIconNameRole, ///< The icon name of the application
-        DeviceNameRole, ///< The name of the device the notification originally came from, if it was proxied through a sync service like KDE Connect
+        OriginNameRole, ///< The name of the device or account the notification originally came from, e.g. "My Phone" (in case of device sync) or "foo@example.com" (in case of an email notification)
 
         // Jobs
         JobStateRole, ///< The state of the job, either JobStateJopped, JobStateSuspended, or JobStateRunning.

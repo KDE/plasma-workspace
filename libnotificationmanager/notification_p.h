@@ -67,7 +67,7 @@ public:
     bool configurableService = false;
     QString applicationIconName;
 
-    QString deviceName;
+    QString originName;
 
     QStringList actionNames;
     QStringList actionLabels;

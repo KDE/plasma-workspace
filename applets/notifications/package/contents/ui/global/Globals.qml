@@ -328,7 +328,7 @@ QtObject {
 
             applicationName: model.applicationName
             applicationIconSource: model.applicationIconName
-            deviceName: model.deviceName || ""
+            originName: model.originName || ""
 
             time: model.updated || model.created
 

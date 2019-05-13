@@ -330,7 +330,7 @@ void Notification::Private::processHints(const QVariantMap &hints)
         applicationName = applicationDisplayName;
     }
 
-    deviceName = hints.value(QStringLiteral("x-kde-device-name")).toString();
+    originName = hints.value(QStringLiteral("x-kde-origin-name")).toString();
 
     eventId = hints.value(QStringLiteral("x-kde-eventId")).toString();
 
@@ -531,9 +531,9 @@ void Notification::setApplicationIconName(const QString &applicationIconName)
     d->applicationIconName = applicationIconName;
 }
 
-QString Notification::deviceName() const
+QString Notification::originName() const
 {
-    return d->deviceName;
+    return d->originName;
 }
 
 QStringList Notification::actionNames() const

@@ -292,7 +292,7 @@ QVariant NotificationsModel::data(const QModelIndex &index, int role) const
 
     case Notifications::ApplicationNameRole: return notification.applicationName();
     case Notifications::ApplicationIconNameRole: return notification.applicationIconName();
-    case Notifications::DeviceNameRole: return notification.deviceName();
+    case Notifications::OriginNameRole: return notification.originName();
 
     case Notifications::ActionNamesRole: return notification.actionNames();
     case Notifications::ActionLabelsRole: return notification.actionLabels();

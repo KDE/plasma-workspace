@@ -37,7 +37,7 @@ PlasmaCore.Dialog {
 
     property alias applicationName: notificationItem.applicationName
     property alias applicationIconSource: notificationItem.applicationIconSource
-    property alias deviceName: notificationItem.deviceName
+    property alias originName: notificationItem.originName
 
     property alias time: notificationItem.time
 
