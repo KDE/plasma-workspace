@@ -167,7 +167,6 @@ protected:
     void showEvent(QShowEvent *event) override;
     void moveEvent(QMoveEvent *ev) override;
     bool event(QEvent *e) override;
-    void updateMask();
 
 Q_SIGNALS:
     void alignmentChanged();
@@ -202,6 +201,8 @@ private Q_SLOTS:
     void restoreAutoHide();
     void screenDestroyed(QObject* screen);
     void adaptToScreen();
+    void handleQmlStatusChange(QQmlComponent::Status status);
+    void updateMask();
 
 private:
     void resizePanel();

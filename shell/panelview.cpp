@@ -37,6 +37,7 @@
 #include <kwindowsystem.h>
 #include <kwindoweffects.h>
 
+#include <plasma_version.h>
 #include <Plasma/Containment>
 #include <Plasma/Package>
 
@@ -78,6 +79,10 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
 
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelView::themeChanged);
     connect(this, SIGNAL(backgroundHintsChanged()), this, SLOT(themeChanged()));
+    // TODO: add finished/componentComplete signal to QuickViewSharedEngine,
+    // so we exactly know when rootobject is available
+    connect(this, &QuickViewSharedEngine::statusChanged,
+            this, &PanelView::handleQmlStatusChange);
 
     m_positionPaneltimer.setSingleShot(true);
     m_positionPaneltimer.setInterval(150);
@@ -723,7 +728,9 @@ void PanelView::resizeEvent(QResizeEvent *ev)
 
     PlasmaQuick::ContainmentView::resizeEvent(ev);
 
+#if PLASMA_VERSION < QT_VERSION_CHECK(5,59,0)
     updateMask();
+#endif
 }
 
 void PanelView::moveEvent(QMoveEvent *ev)
@@ -731,7 +738,9 @@ void PanelView::moveEvent(QMoveEvent *ev)
     updateEnabledBorders();
     m_strutsTimer.start(STRUTSTIMERDELAY);
     PlasmaQuick::ContainmentView::moveEvent(ev);
+#if PLASMA_VERSION < QT_VERSION_CHECK(5,59,0)
     updateMask();
+#endif
 }
 
 void PanelView::integrateScreen()
@@ -1116,7 +1125,9 @@ void PanelView::themeChanged()
                                                         m_theme.backgroundSaturation());        
     }
 
+#if PLASMA_VERSION < QT_VERSION_CHECK(5,59,0)
     updateMask();
+#endif
 }
 
 void PanelView::containmentChanged()
@@ -1146,6 +1157,26 @@ void PanelView::containmentChanged()
             }
         }
     });
+}
+
+void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
+{
+    if (status != QQmlComponent::Ready) {
+        return;
+    }
+
+    QQuickItem *rootObject = this->rootObject();
+    if (rootObject) {
+        disconnect(this, &QuickViewSharedEngine::statusChanged,
+                   this, &PanelView::handleQmlStatusChange);
+
+        const QVariant maskProperty = rootObject->property("panelMask");
+        if (static_cast<QMetaType::Type>(maskProperty.type()) == QMetaType::QRegion) {
+            connect(rootObject, SIGNAL(panelMaskChanged()),
+                    this, SLOT(updateMask()));
+            updateMask();
+        }
+    }
 }
 
 void PanelView::statusChanged(Plasma::Types::ItemStatus status)
