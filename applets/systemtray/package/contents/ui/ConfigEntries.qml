@@ -17,17 +17,19 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-import QtQuick 2.0
-import QtQuick.Controls 1.0 as QtControls
-import QtQuick.Layouts 1.1 as QtLayouts
+import QtQuick 2.5
+import QtQuick.Controls 1.4 as QQC1
+import QtQuick.Controls 2.5 as QQC2
+import QtQuick.Layouts 1.3
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kquickcontrols 2.0 as KQC
+import org.kde.kirigami 2.5 as Kirigami
 
-QtLayouts.GridLayout {
+ColumnLayout {
     id: iconsPage
 
     signal configurationChanged
@@ -35,8 +37,6 @@ QtLayouts.GridLayout {
     property var cfg_shownItems: []
     property var cfg_hiddenItems: []
     property alias cfg_showAllItems: showAllCheckBox.checked
-
-    columns: 2 // so we can indent the entries below...
 
     function saveConfig () {
         for (var i in tableView.model) {
@@ -63,26 +63,28 @@ QtLayouts.GridLayout {
        }
     }
 
-    QtControls.CheckBox {
-        id: showAllCheckBox
-        QtLayouts.Layout.fillWidth: true
-        QtLayouts.Layout.columnSpan: iconsPage.columns
-        QtLayouts.Layout.row: 1
-        text: i18n("Always show all entries")
+
+    Kirigami.FormLayout {
+
+        QQC2.CheckBox {
+            id: showAllCheckBox
+            text: i18n("Always show all entries")
+        }
+
+        QQC2.Button { // just for measurement
+            id: measureButton
+            text: "measureButton"
+            visible: false
+        }
+
+        // resizeToContents does not take into account the heading
+        QQC2.Label {
+            id: shortcutColumnMeasureLabel
+            text: shortcutColumn.title
+            visible: false
+        }
     }
 
-    QtControls.Button { // just for measurement
-        id: measureButton
-        text: "measureButton"
-        visible: false
-    }
-
-    // resizeToContents does not take into account the heading
-    QtControls.Label {
-        id: shortcutColumnMeasureLabel
-        text: shortcutColumn.title
-        visible: false
-    }
 
     function retrieveAllItems() {
         var list = [];
@@ -114,12 +116,11 @@ QtLayouts.GridLayout {
         return list;
     }
 
-    QtControls.TableView {
+    // There is no QQC2 version of TableView yet
+    QQC1.TableView {
         id: tableView
-        QtLayouts.Layout.fillWidth: true
-        QtLayouts.Layout.fillHeight: true
-        QtLayouts.Layout.row: 2
-        QtLayouts.Layout.column: 1
+        Layout.fillWidth: true
+        Layout.fillHeight: true
 
         model: retrieveAllItems()
         horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
@@ -139,17 +140,17 @@ QtLayouts.GridLayout {
             border.left: 4 ; border.right: 4
         }
 
-        QtControls.TableViewColumn {
+        QQC1.TableViewColumn {
             id: entryColumn
             width: tableView.viewport.width - visibilityColumn.width - shortcutColumn.width
             title: i18nc("Name of the system tray entry", "Entry")
             movable: false
             resizable: false
 
-            delegate: QtLayouts.RowLayout {
+            delegate: RowLayout {
                 Item { // spacer
-                    QtLayouts.Layout.preferredWidth: 1
-                    QtLayouts.Layout.fillHeight: true
+                    Layout.preferredWidth: 1
+                    Layout.fillHeight: true
                 }
 
                 QIconItem {
@@ -158,8 +159,8 @@ QtLayouts.GridLayout {
                     icon: modelData.iconName || modelData.icon || ""
                 }
 
-                QtControls.Label {
-                    QtLayouts.Layout.fillWidth: true
+                QQC2.Label {
+                    Layout.fillWidth: true
                     text: modelData.name
                     elide: Text.ElideRight
                     wrapMode: Text.NoWrap
@@ -167,13 +168,13 @@ QtLayouts.GridLayout {
             }
         }
 
-        QtControls.TableViewColumn {
+        QQC1.TableViewColumn {
             id: visibilityColumn
             title: i18n("Visibility")
             movable: false
             resizable: false
 
-            delegate: QtControls.ComboBox {
+            delegate: QQC2.ComboBox {
                 implicitWidth: Math.round(units.gridUnit * 6.5) // ComboBox sizing is broken
 
                 enabled: !showAllCheckBox.checked
@@ -227,7 +228,7 @@ QtLayouts.GridLayout {
             }
         }
 
-        QtControls.TableViewColumn {
+        QQC1.TableViewColumn {
             id: shortcutColumn
             title: i18n("Keyboard Shortcut") // FIXME doesn't fit
             movable: false
