@@ -73,6 +73,15 @@ QSharedPointer<KFilePlacesModel> JobPrivate::createPlacesModel()
     return s_instance.toStrongRef();
 }
 
+QUrl JobPrivate::localFileOrUrl(const QString &urlString)
+{
+    QUrl url(urlString);
+    if (url.scheme().isEmpty()) {
+        url = QUrl::fromLocalFile(urlString);
+    }
+    return url;
+}
+
 // Tries to return a more user-friendly displayed destination
 // - if it is a place, show the name, e.g. "Downloads"
 // - if it is inside home, abbreviate that to tilde ~/foo
@@ -82,7 +91,7 @@ QString JobPrivate::prettyDestUrl() const
     QUrl url = m_destUrl;
     // In case of a single file and no destUrl, try using the second label (most likely "Destination")...
     if (!url.isValid() && m_totalFiles == 1) {
-        url = QUrl::fromUserInput(m_descriptionValue2, QString(), QUrl::AssumeLocalFile).adjusted(QUrl::RemoveFilename);
+        url = localFileOrUrl(m_descriptionValue2).adjusted(QUrl::RemoveFilename);
     }
 
     if (!url.isValid()) {
@@ -193,9 +202,9 @@ QString JobPrivate::text() const
 
 QUrl JobPrivate::descriptionUrl() const
 {
-    QUrl url = QUrl::fromUserInput(m_descriptionValue2, QString(), QUrl::AssumeLocalFile);
+    QUrl url = localFileOrUrl(m_descriptionValue2);
     if (!url.isValid()) {
-        url = QUrl::fromUserInput(m_descriptionValue1, QString(), QUrl::AssumeLocalFile);
+        url = localFileOrUrl(m_descriptionValue1);
     }
     return url;
 }

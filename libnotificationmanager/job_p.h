@@ -97,6 +97,8 @@ private:
 
     static QSharedPointer<KFilePlacesModel> createPlacesModel();
 
+    static QUrl localFileOrUrl(const QString &stringUrl);
+
     QString prettyDestUrl() const;
     void updateHasDetails();
 
