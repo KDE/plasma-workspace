@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"libnotificationmanager\")
+
 add_subdirectory(declarative)
 if(BUILD_TESTING)
    add_subdirectory(autotests)
