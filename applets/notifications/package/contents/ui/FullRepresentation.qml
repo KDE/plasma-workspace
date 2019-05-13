@@ -503,7 +503,10 @@ ColumnLayout{
                                         plasmoid.expanded = false;
                                     }
                                 }
-                                onDismissClicked: model.dismissed = false
+                                onDismissClicked: {
+                                    model.dismissed = false;
+                                    plasmoid.expanded = false;
+                                }
                                 onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
 
                                 onActionInvoked: {
