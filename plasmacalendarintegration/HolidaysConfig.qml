@@ -19,9 +19,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-import QtQuick 2.0
-import QtQuick.Controls 1.2 as QtControls
-import QtQuick.Layouts 1.0
+import QtQuick 2.5
+import QtQuick.Controls 1.4 as QQC1
+import QtQuick.Controls 2.5 as QQC2
+import QtQuick.Layouts 1.3
 import QtQuick.Dialogs 1.1
 
 import org.kde.plasma.core 2.1 as PlasmaCore
@@ -29,10 +30,10 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kholidays 1.0 as KHolidays
 import org.kde.holidayeventshelperplugin 1.0
 
-Item {
+ColumnLayout {
     id: holidaysConfig
-    width: parent.width
-    height: parent.height
+    anchors.left: parent.left
+    anchors.right: parent.right
 
     signal configurationChanged
 
@@ -42,7 +43,7 @@ Item {
     }
 
     // This is just for getting the column width
-    QtControls.CheckBox {
+    QQC2.CheckBox {
         id: checkbox
         visible: false
     }
@@ -51,68 +52,65 @@ Item {
         id: configHelper
     }
 
-    ColumnLayout {
-        anchors.fill: parent
+    QQC2.TextField {
+        id: filter
+        Layout.fillWidth: true
+        placeholderText: i18nd("kholidays_calendar_plugin", "Search...")
+    }
 
-        QtControls.TextField {
-            id: filter
-            Layout.fillWidth: true
-            placeholderText: i18nd("kholidays_calendar_plugin", "Search Holiday Regions")
+    // Still QQC1 bevcause there's no QQC2 TableView
+    QQC1.TableView {
+        id: holidaysView
+
+        signal toggleCurrent
+
+        Layout.fillWidth: true
+        Layout.fillHeight: true
+
+        Keys.onSpacePressed: toggleCurrent()
+
+        model: PlasmaCore.SortFilterModel {
+            sourceModel: KHolidays.HolidayRegionsModel {
+                id: holidaysModel
+            }
+            // SortFilterModel doesn't have a case-sensitivity option...
+            // but filterRegExp always causes case-insensitive sorting
+            filterRegExp: filter.text
+            filterRole: "name"
         }
 
-        QtControls.TableView {
-            id: holidaysView
-
-            signal toggleCurrent
-
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            Keys.onSpacePressed: toggleCurrent()
-
-            model: PlasmaCore.SortFilterModel {
-                sourceModel: KHolidays.HolidayRegionsModel {
-                    id: holidaysModel
-                }
-                // SortFilterModel doesn't have a case-sensitivity option...
-                // but filterRegExp always causes case-insensitive sorting
-                filterRegExp: filter.text
-                filterRole: "name"
-            }
-
-            QtControls.TableViewColumn {
-                width: checkbox.width
-                delegate: QtControls.CheckBox {
-                    id: checkBox
-                    anchors.centerIn: parent
-                    checked: model ? configHelper.selectedRegions.indexOf(model.region) !== -1 : false
-                    activeFocusOnTab: false // only let the TableView as a whole get focus
-                    onClicked: {
-                        //needed for model's setData to be called
-                        if (checked) {
-                            configHelper.addRegion(model.region);
-                        } else {
-                            configHelper.removeRegion(model.region);
-                        }
-                        holidaysConfig.configurationChanged();
+        QQC1.TableViewColumn {
+            width: checkbox.width
+            delegate: QQC2.CheckBox {
+                id: checkBox
+                anchors.centerIn: parent
+                checked: model ? configHelper.selectedRegions.indexOf(model.region) !== -1 : false
+                activeFocusOnTab: false // only let the TableView as a whole get focus
+                onClicked: {
+                    //needed for model's setData to be called
+                    if (checked) {
+                        configHelper.addRegion(model.region);
+                    } else {
+                        configHelper.removeRegion(model.region);
                     }
+                    holidaysConfig.configurationChanged();
                 }
+            }
 
-                resizable: false
-                movable: false
-            }
-            QtControls.TableViewColumn {
-                role: "region"
-                title: i18nd("kholidays_calendar_plugin", "Region")
-            }
-            QtControls.TableViewColumn {
-                role: "name"
-                title: i18nd("kholidays_calendar_plugin", "Name")
-            }
-            QtControls.TableViewColumn {
-                role: "description"
-                title: i18nd("kholidays_calendar_plugin", "Description")
-            }
+            resizable: false
+            movable: false
+        }
+        QQC1.TableViewColumn {
+            role: "region"
+            title: i18nd("kholidays_calendar_plugin", "Region")
+        }
+        QQC1.TableViewColumn {
+            role: "name"
+            title: i18nd("kholidays_calendar_plugin", "Name")
+        }
+        QQC1.TableViewColumn {
+            role: "description"
+            title: i18nd("kholidays_calendar_plugin", "Description")
         }
     }
 }
