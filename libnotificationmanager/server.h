@@ -87,7 +87,7 @@ public:
      * Sends a notification closed event
      *
      * @param id The notification ID
-     * @reason The reason why it was closed
+     * @param reason The reason why it was closed
      */
     void closeNotification(uint id, CloseReason reason);
     /**
