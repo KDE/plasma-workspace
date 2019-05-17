@@ -21,7 +21,7 @@
       <label>The name of the icon of the notifying application</label>
     </entry>
     <entry name="summary" type="String">
-      <label>Summary of the notificaton text</label>
+      <label>Summary of the notification text</label>
     </entry>
     <entry name="body" type="String">
       <label>The whole text of the notification</label>
