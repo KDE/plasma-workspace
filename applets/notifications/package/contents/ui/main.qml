@@ -63,7 +63,7 @@ Item {
                              KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat)));
             }
         } else if (lines.length === 0) {
-            lines.push("No unread notificatons");
+            lines.push(i18n("No unread notificatons"));
         }
 
         return lines.join("\n");
