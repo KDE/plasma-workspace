@@ -90,9 +90,7 @@ public:
         // couldn't establish connection to compositor
         ErrorCodeConnectionFailed,
         // rendering backend doesn't support hardware color correction
-        ErrorCodeBackendNoSupport,
-        // it's an X session - no native color correction in general on X
-        ErrorCodeXSession
+        ErrorCodeBackendNoSupport
     };
     Q_ENUMS(ErrorCode)
 

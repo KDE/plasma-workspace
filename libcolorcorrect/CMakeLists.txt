@@ -23,7 +23,6 @@ target_link_libraries(colorcorrect
                       Qt5::Core
                       Qt5::Quick
                     PRIVATE
-                      KF5::WindowSystem
                       KF5::I18n
 
                       Qt5::DBus)

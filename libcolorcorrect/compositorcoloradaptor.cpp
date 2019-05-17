@@ -16,7 +16,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "compositorcoloradaptor.h"
 
-#include <KWindowSystem>
 #include <KLocalizedString>
 
 #include <QDBusReply>
@@ -28,10 +27,6 @@ namespace ColorCorrect
 CompositorAdaptor::CompositorAdaptor(QObject *parent)
     : QObject(parent)
 {
-    if(KWindowSystem::isPlatformX11()) {
-        setError(ErrorCode::ErrorCodeXSession);
-    }
-
     m_iface = new QDBusInterface (QStringLiteral("org.kde.KWin"),
                                     QStringLiteral("/ColorCorrect"),
                                     QStringLiteral("org.kde.kwin.ColorCorrect"),
@@ -49,7 +44,7 @@ CompositorAdaptor::CompositorAdaptor(QObject *parent)
 
 void CompositorAdaptor::setError(ErrorCode error)
 {
-    if (m_error == error || m_error == ErrorCode::ErrorCodeXSession) {
+    if (m_error == error) {
         return;
     }
     m_error = error;
@@ -59,9 +54,6 @@ void CompositorAdaptor::setError(ErrorCode error)
         break;
     case ErrorCode::ErrorCodeBackendNoSupport:
         m_errorText = i18nc("Critical error message", "Rendering backend doesn't support Color Correction.");
-        break;
-    case ErrorCode::ErrorCodeXSession:
-        m_errorText = i18nc("Critical error message", "You're currently using the X Windowing System. This functionality is Wayland exclusive.");
         break;
     default:
         m_errorText = "";
