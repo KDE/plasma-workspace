@@ -1,5 +1,6 @@
 /*
  *   Copyright 2015 Marco Martin <mart@kde.org>
+ *   Copyright 2019 ivan tkachenko <ratijastk@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -21,13 +22,14 @@ import QtQuick 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
+// Container for Plasma applet with expandable section, like Bluetooth, Volume, Networks etc.
 AbstractItem {
     id: plasmoidContainer
 
     property Item applet
-    iconItem: applet
-    text: applet ? applet.title : ""
 
+    text: applet ? applet.title : ""
+    iconItem: applet
     itemId: applet ? applet.pluginName : ""
     category: applet ? plasmoid.nativeInterface.plasmoidCategory(applet) : "UnknownCategory"
     mainText: applet ? applet.toolTipMainText : ""
@@ -40,7 +42,7 @@ AbstractItem {
 
     onClicked: {
         if (applet && mouse.button === Qt.LeftButton) {
-            applet.expanded = true;
+            applet.expanded = !applet.expanded;
         }
     }
     onContextMenu: {
@@ -72,7 +74,7 @@ AbstractItem {
                 dialog.visible = true;
 
             } else if (root.activeApplet === applet) {
-                if (!applet.parent.hidden) {
+                if (!hidden) {
                     dialog.visible = false;
                 }
                 //if not expanded we don't have an active applet anymore

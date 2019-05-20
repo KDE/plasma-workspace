@@ -1,5 +1,6 @@
 /*
  *   Copyright 2016 Marco Martin <mart@kde.org>
+ *   Copyright 2019 ivan tkachenko <ratijastk@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -44,19 +45,9 @@ AbstractItem {
         }
     }
 
-    iconItem: iconItem
-
-    PlasmaCore.IconItem {
-        id: iconItem
+    iconItem: PlasmaCore.IconItem {
         source: Icon ? Icon : IconName
-        width: Math.min(parent.width, parent.height)
-        height: width
         active: taskIcon.containsMouse
-
-        anchors {
-            left: parent.left
-            verticalCenter: parent.verticalCenter
-        }
     }
 
     onContextMenu: {
@@ -68,7 +59,7 @@ AbstractItem {
 
         switch (mouse.button) {
         case Qt.LeftButton: {
-            var service = statusNotifierSource.serviceForSource(DataEngineSource);
+            var service = statusNotifierModel.source.serviceForSource(DataEngineSource);
             var operation = service.operationDescription("Activate");
             operation.x = pos.x;
             operation.y = pos.y;
@@ -87,7 +78,7 @@ AbstractItem {
             break;
 
         case Qt.MiddleButton:
-            var service = statusNotifierSource.serviceForSource(DataEngineSource);
+            var service = statusNotifierModel.source.serviceForSource(DataEngineSource);
             var operation = service.operationDescription("SecondaryActivate");
             operation.x = pos.x;
 
@@ -98,7 +89,7 @@ AbstractItem {
     }
 
     function openContextMenu(pos) {
-        var service = statusNotifierSource.serviceForSource(DataEngineSource);
+        var service = statusNotifierModel.source.serviceForSource(DataEngineSource);
         var operation = service.operationDescription("ContextMenu");
         operation.x = pos.x;
         operation.y = pos.y;
@@ -112,14 +103,14 @@ AbstractItem {
     onWheel: {
         //don't send activateVertScroll with a delta of 0, some clients seem to break (kmix)
         if (wheel.angleDelta.y !== 0) {
-            var service = statusNotifierSource.serviceForSource(DataEngineSource);
+            var service = statusNotifierModel.source.serviceForSource(DataEngineSource);
             var operation = service.operationDescription("Scroll");
             operation.delta =wheel.angleDelta.y;
             operation.direction = "Vertical";
             service.startOperationCall(operation);
         }
         if (wheel.angleDelta.x !== 0) {
-            var service = statusNotifierSource.serviceForSource(DataEngineSource);
+            var service = statusNotifierModel.source.serviceForSource(DataEngineSource);
             var operation = service.operationDescription("Scroll");
             operation.delta =wheel.angleDelta.x;
             operation.direction = "Horizontal";

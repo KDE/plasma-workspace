@@ -1,5 +1,6 @@
 /*
  *   Copyright 2016 Marco Martin <mart@kde.org>
+ *   Copyright 2019 ivan tkachenko <ratijastk@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -26,9 +27,6 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 Item {
     id: expandedRepresentation
 
-    //set width/height to avoid an useless Dialog resize
-    width: Layout.minimumWidth
-    height: Layout.minimumHeight
     Layout.minimumWidth: units.gridUnit * 24
     Layout.minimumHeight: units.gridUnit * 21
     Layout.preferredWidth: Layout.minimumWidth
