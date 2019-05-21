@@ -111,7 +111,7 @@ Item {
         }
         Row { //deliberately not rowlayout as I'm not trying to resize child items
             id: actionItemsLayout
-            spacing: units.smallSpacing
+            spacing: units.largeSpacing / 2
             Layout.alignment: Qt.AlignHCenter
         }
         Item {

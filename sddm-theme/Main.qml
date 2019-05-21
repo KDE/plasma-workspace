@@ -205,10 +205,6 @@ PlasmaCore.ColorScope {
                         enabled: sddm.canSuspend
                         visible: !inputPanel.keyboardActive
                     },
-                    Item { // spacer
-                        width: units.largeSpacing / 2
-                        height: width
-                    },
                     ActionButton {
                         iconSource: "system-reboot"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
@@ -216,20 +212,12 @@ PlasmaCore.ColorScope {
                         enabled: sddm.canReboot
                         visible: !inputPanel.keyboardActive
                     },
-                    Item { // spacer
-                        width: units.largeSpacing / 2
-                        height: width
-                    },
                     ActionButton {
                         iconSource: "system-shutdown"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shut Down")
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
                         visible: !inputPanel.keyboardActive
-                    },
-                    Item { // spacer
-                        width: units.largeSpacing / 2
-                        height: width
                     },
                     ActionButton {
                         iconSource: "system-user-prompt"
