@@ -751,7 +751,7 @@ void PanelView::integrateScreen()
     KWindowSystem::setOnAllDesktops(winId(), true);
     KWindowSystem::setType(winId(), NET::Dock);
 #if HAVE_X11
-    setProperty("_q_xcb_wm_window_type", QXcbWindowFunctions::Dock);
+    QXcbWindowFunctions::setWmWindowType(this, QXcbWindowFunctions::Dock);
 #endif
     if (m_shellSurface) {
         m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
