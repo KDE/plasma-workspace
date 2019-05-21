@@ -48,6 +48,7 @@
 #include <xcb/xcb.h>
 #include <NETWM>
 #include <QX11Info>
+#include <QtPlatformHeaders/QXcbWindowFunctions>
 #endif
 
 static const int MINSIZE = 10;
@@ -749,6 +750,9 @@ void PanelView::integrateScreen()
     themeChanged();
     KWindowSystem::setOnAllDesktops(winId(), true);
     KWindowSystem::setType(winId(), NET::Dock);
+#if HAVE_X11
+    setProperty("_q_xcb_wm_window_type", QXcbWindowFunctions::Dock);
+#endif
     if (m_shellSurface) {
         m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
         m_shellSurface->setSkipTaskbar(true);
@@ -1183,10 +1187,13 @@ void PanelView::statusChanged(Plasma::Types::ItemStatus status)
 {
     if (status == Plasma::Types::NeedsAttentionStatus) {
         showTemporarily();
+        setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
     } else if (status == Plasma::Types::AcceptingInputStatus) {
+        setFlags(flags() & (!Qt::WindowDoesNotAcceptFocus));
         KWindowSystem::forceActiveWindow(winId());
     } else {
         restoreAutoHide();
+        setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
     }
 }
 
