@@ -70,17 +70,6 @@ test -f $exportformatssettings && {
     . $exportformatssettings
 }
 
-# Write a default kdeglobals file to set up the font
-kdeglobalsfile=$configDir/kdeglobals
-test -f $kdeglobalsfile || {
-cat >$kdeglobalsfile <<EOF
-[General]
-XftAntialias=true
-XftHintStyle=hintmedium
-XftSubPixel=none
-EOF
-}
-
 kstartupconfig5
 returncode=$?
 if test $returncode -ne 0; then

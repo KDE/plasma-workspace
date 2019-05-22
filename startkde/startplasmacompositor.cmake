@@ -39,17 +39,6 @@ test -f $exportformatssettings && {
     . $exportformatssettings
 }
 
-# Write a default kdeglobals file to set up the font
-kdeglobalsfile=$configDir/kdeglobals
-test -f $kdeglobalsfile || {
-cat >$kdeglobalsfile <<EOF
-[General]
-XftAntialias=true
-XftHintStyle=hintmedium
-XftSubPixel=none
-EOF
-}
-
 # Make sure the Oxygen font is installed
 # This is necessary for setups where CMAKE_INSTALL_PREFIX
 # is not in /usr. fontconfig looks in /usr, ~/.fonts and
