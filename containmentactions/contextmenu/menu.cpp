@@ -94,8 +94,8 @@ void ContextMenu::restore(const KConfigGroup &config)
 
     // everything below should only happen once, so check for it
     if (!m_runCommandAction) {
-        m_runCommandAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Run Command..."), this);
-        m_runCommandAction->setIcon(QIcon::fromTheme(QStringLiteral("system-run")));
+        m_runCommandAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Show KRunner"), this);
+        m_runCommandAction->setIcon(QIcon::fromTheme(QStringLiteral("plasma-search")));
         m_runCommandAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("krunner"), QStringLiteral("run command")).value(0));
         connect(m_runCommandAction, &QAction::triggered, this, &ContextMenu::runCommand);
 

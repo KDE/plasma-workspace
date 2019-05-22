@@ -61,7 +61,7 @@ ColumnLayout {
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure")
             Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure Search Plugins")
             visible: runnerWindow.canConfigure
-            tooltip: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure...")
+            tooltip: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure KRunner...")
         }
         PlasmaComponents.TextField {
             id: queryField
