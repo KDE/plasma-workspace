@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=XSession
-Exec=${CMAKE_INSTALL_FULL_BINDIR}/startkde
-TryExec=${CMAKE_INSTALL_FULL_BINDIR}/startkde
+Exec=${CMAKE_INSTALL_FULL_BINDIR}/startplasma-x11
+TryExec=${CMAKE_INSTALL_FULL_BINDIR}/startplasma-x11
 DesktopNames=KDE
 Name=Plasma
 Name[ar]=بلازما

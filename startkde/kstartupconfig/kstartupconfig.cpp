@@ -72,7 +72,7 @@ Otherwise kdostartupconfig is launched to create or update all the necessary fil
 #include <stdlib.h>
 #include <string>
 
-int main()
+int kStartupConfig()
 {
     time_t config_time;
     FILE* config;

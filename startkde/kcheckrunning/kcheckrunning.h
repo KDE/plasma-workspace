@@ -1,5 +1,5 @@
 /* This file is part of the KDE project
-   Copyright (C) 2005 Lubos Lunak <l.lunak@kde.org>
+   Copyright (C) 2019 Aleix Pol Gonzalez <aleixpol@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -17,18 +17,15 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include <X11/Xlib.h>
-#include "kcheckrunning.h"
+#ifndef KCHECKRUNNING_H
+#define KCHECKRUNNING_H
 
-/*
- Return 0 when KDE is running, 1 when KDE is not running but it is possible
- to connect to X, 2 when it's not possible to connect to X.
-*/
-CheckRunningState kCheckRunning()
-{
-    Display* dpy = XOpenDisplay( nullptr );
-    if( dpy == nullptr )
-        return NoX11;
-    Atom atom = XInternAtom( dpy, "_KDE_RUNNING", False );
-    return XGetSelectionOwner( dpy, atom ) != None ? PlasmaRunning : NoPlasmaRunning;
-}
+enum CheckRunningState {
+    PlasmaRunning,
+    NoPlasmaRunning,
+    NoX11
+};
+
+CheckRunningState kCheckRunning();
+
+#endif
