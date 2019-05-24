@@ -288,6 +288,7 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry,
         scheduleUpdate(job, Notifications::ClosableRole);
 
         if (job->state() == Notifications::JobStateStopped) {
+            unwatchJob(job);
             updateApplicationPercentage(job->desktopEntry());
             emitJobUrlsChanged();
         }
@@ -374,14 +375,7 @@ void JobsModelPrivate::remove(Job *job)
 
     const QString desktopEntry = jobToBeRemoved->desktopEntry();
 
-    const QString serviceName = m_jobServices.take(jobToBeRemoved);
-    // Check if there's any jobs left for this service, otherwise stop watching it
-    auto it = std::find_if(m_jobServices.constBegin(), m_jobServices.constEnd(), [&serviceName](const QString &item) {
-        return item == serviceName;
-    });
-    if (it == m_jobServices.constEnd()) {
-        m_serviceWatcher->removeWatchedService(serviceName);
-    }
+    unwatchJob(jobToBeRemoved);
 
     delete jobToBeRemoved;
     if (activeRow > -1) {
@@ -440,11 +434,21 @@ void JobsModelPrivate::updateApplicationPercentage(const QString &desktopEntry)
     QDBusConnection::sessionBus().send(message);
 }
 
+void JobsModelPrivate::unwatchJob(Job *job)
+{
+    const QString serviceName = m_jobServices.take(job);
+    // Check if there's any jobs left for this service, otherwise stop watching it
+    auto it = std::find_if(m_jobServices.constBegin(), m_jobServices.constEnd(), [&serviceName](const QString &item) {
+        return item == serviceName;
+    });
+    if (it == m_jobServices.constEnd()) {
+        m_serviceWatcher->removeWatchedService(serviceName);
+    }
+}
+
 void JobsModelPrivate::onServiceUnregistered(const QString &serviceName)
 {
     qCDebug(NOTIFICATIONMANAGER) << "JobView service unregistered" << serviceName;
-
-    m_serviceWatcher->removeWatchedService(serviceName);
 
     const QList<Job *> jobs = m_jobServices.keys(serviceName);
     for (Job *job : jobs) {
@@ -456,6 +460,8 @@ void JobsModelPrivate::onServiceUnregistered(const QString &serviceName)
         job->setErrorText(i18n("Application closed unexpectedly."));
         job->setState(Notifications::JobStateStopped);
     }
+
+    Q_ASSERT(!m_serviceWatcher->watchedServices().contains(serviceName));
 }
 
 void JobsModelPrivate::scheduleUpdate(Job *job, Notifications::Roles role)

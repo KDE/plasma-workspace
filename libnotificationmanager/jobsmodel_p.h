@@ -80,6 +80,7 @@ public: // stuff used by public class
     QVector<Job *> m_jobViews;
 
 private:
+    void unwatchJob(Job *job);
     void onServiceUnregistered(const QString &serviceName);
 
     void updateApplicationPercentage(const QString &desktopEntry);
