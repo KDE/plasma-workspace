@@ -192,7 +192,10 @@ ColumnLayout{
 
             PlasmaComponents.ToolButton {
                 iconName: "configure"
-                tooltip: plasmoid.action("openKcm").text
+                // remove mnemonics
+                tooltip: plasmoid.action("openKcm").text.replace(/([^&]*)&(.)([^&]*)/g, function (match, p1, p2, p3) {
+                    return p1.concat(p2, p3);
+                });
                 visible: plasmoid.action("openKcm").enabled
                 onClicked: plasmoid.action("openKcm").trigger()
             }
