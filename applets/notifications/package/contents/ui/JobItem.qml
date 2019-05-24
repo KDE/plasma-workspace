@@ -141,6 +141,7 @@ ColumnLayout {
 
         PlasmaComponents.Button {
             id: otherFileActionsButton
+            height: Math.max(implicitHeight, openButton.implicitHeight)
             iconName: "application-menu"
             tooltip: i18n("More Options...")
             checkable: true
@@ -162,6 +163,8 @@ ColumnLayout {
         }
 
         PlasmaComponents.Button {
+            id: openButton
+            height: Math.max(implicitHeight, otherFileActionsButton.implicitHeight)
             // would be nice to have the file icon here?
             text: jobItem.jobDetails && jobItem.jobDetails.totalFiles > 1 ? i18n("Open Containing Folder") : i18n("Open")
             onClicked: jobItem.openUrl(jobDoneActions.url)
