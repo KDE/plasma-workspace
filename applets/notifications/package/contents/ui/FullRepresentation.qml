@@ -71,6 +71,7 @@ ColumnLayout{
 
         RowLayout {
             Layout.fillWidth: true
+            spacing: 0
 
             RowLayout {
                 id: dndRow
@@ -188,6 +189,13 @@ ColumnLayout{
 
             Item {
                 Layout.fillWidth: true
+            }
+
+            PlasmaComponents.ToolButton {
+                iconName: "edit-clear-history"
+                tooltip: i18n("Clear History")
+                visible: plasmoid.action("clearHistory").visible
+                onClicked: action_clearHistory()
             }
 
             PlasmaComponents.ToolButton {
@@ -338,24 +346,6 @@ ColumnLayout{
             highlight: PlasmaCore.FrameSvgItem {
                 imagePath: "widgets/listitem"
                 prefix: "pressed"
-            }
-
-            header: RowLayout {
-                width: list.width
-
-                PlasmaExtras.Heading {
-                    Layout.fillWidth: true
-                    level: 3
-                    opacity: 0.6
-                    text: list.count === 0 ? i18n("No unread notifications.") : i18n("Notifications")
-                }
-
-                PlasmaComponents.ToolButton {
-                    iconName: "edit-clear-history"
-                    tooltip: i18n("Clear History")
-                    visible: plasmoid.action("clearHistory").visible
-                    onClicked: action_clearHistory()
-                }
             }
 
             add: Transition {
@@ -556,6 +546,14 @@ ColumnLayout{
                         }
                     }
                 }
+            }
+
+            PlasmaExtras.Heading {
+                width: list.width
+                level: 3
+                opacity: 0.6
+                text: i18n("No unread notifications.")
+                visible: list.count === 0
             }
         }
     }
