@@ -360,9 +360,16 @@ PlasmaCore.ColorScope {
                 notificationMessage: root.notificationMessage
                 loginScreenUiVisible: loginScreenRoot.uiVisible
 
-                userListModel: QtObject {
-                    property string name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Type in Username and Password")
-                    property string iconSource: ""
+                // using a model rather than a QObject list to avoid QTBUG-75900
+                userListModel: ListModel {
+                    ListElement {
+                        name: ""
+                        iconSource: ""
+                    }
+                    Component.onCompleted: {
+                        // as we can't bind inside ListElement
+                        setProperty(0, "name", i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Type in Username and Password"));
+                    }
                 }
 
                 onLoginRequest: {

@@ -71,6 +71,7 @@ ColumnLayout{
 
         RowLayout {
             Layout.fillWidth: true
+            spacing: 0
 
             RowLayout {
                 id: dndRow
@@ -191,8 +192,18 @@ ColumnLayout{
             }
 
             PlasmaComponents.ToolButton {
+                iconName: "edit-clear-history"
+                tooltip: i18n("Clear History")
+                visible: plasmoid.action("clearHistory").visible
+                onClicked: action_clearHistory()
+            }
+
+            PlasmaComponents.ToolButton {
                 iconName: "configure"
-                tooltip: plasmoid.action("openKcm").text
+                // remove mnemonics
+                tooltip: plasmoid.action("openKcm").text.replace(/([^&]*)&(.)([^&]*)/g, function (match, p1, p2, p3) {
+                    return p1.concat(p2, p3);
+                });
                 visible: plasmoid.action("openKcm").enabled
                 onClicked: plasmoid.action("openKcm").trigger()
             }
@@ -335,24 +346,6 @@ ColumnLayout{
             highlight: PlasmaCore.FrameSvgItem {
                 imagePath: "widgets/listitem"
                 prefix: "pressed"
-            }
-
-            header: RowLayout {
-                width: list.width
-
-                PlasmaExtras.Heading {
-                    Layout.fillWidth: true
-                    level: 3
-                    opacity: 0.6
-                    text: list.count === 0 ? i18n("No unread notifications.") : i18n("Notifications")
-                }
-
-                PlasmaComponents.ToolButton {
-                    iconName: "edit-clear-history"
-                    tooltip: i18n("Clear History")
-                    visible: plasmoid.action("clearHistory").visible
-                    onClicked: action_clearHistory()
-                }
             }
 
             add: Transition {
@@ -553,6 +546,14 @@ ColumnLayout{
                         }
                     }
                 }
+            }
+
+            PlasmaExtras.Heading {
+                width: list.width
+                level: 3
+                opacity: 0.6
+                text: i18n("No unread notifications.")
+                visible: list.count === 0
             }
         }
     }

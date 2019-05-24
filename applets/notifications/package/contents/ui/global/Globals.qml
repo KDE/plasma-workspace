@@ -134,13 +134,7 @@ QtObject {
     // How much vertical screen real estate the notification popups may consume
     readonly property real popupMaximumScreenFill: 0.75
 
-    property var screenRect: plasmoid ? Qt.rect(plasmoid.screenGeometry.x + plasmoid.availableScreenRect.x,
-                                                plasmoid.screenGeometry.y + plasmoid.availableScreenRect.y,
-                                                plasmoid.availableScreenRect.width,
-                                                plasmoid.availableScreenRect.height) : undefined
-
     onPopupLocationChanged: Qt.callLater(positionPopups)
-    onScreenRectChanged: Qt.callLater(positionPopups)
 
     Component.onCompleted: checkInhibition()
 
@@ -215,8 +209,15 @@ QtObject {
     }
 
     function positionPopups() {
-        var rect = screenRect;
-        if (!rect || rect.width <= 0 || rect.height <= 0) {
+        if (!plasmoid) {
+            return;
+        }
+
+        var screenRect = Qt.rect(plasmoid.screenGeometry.x + plasmoid.availableScreenRect.x,
+                                 plasmoid.screenGeometry.y + plasmoid.availableScreenRect.y,
+                                 plasmoid.availableScreenRect.width,
+                                 plasmoid.availableScreenRect.height);
+        if (screenRect.width <= 0 || screenRect.height <= 0) {
             return;
         }
 
@@ -269,7 +270,7 @@ QtObject {
     }
 
     property QtObject popupNotificationsModel: NotificationManager.Notifications {
-        limit: globals.screenRect ? (Math.ceil(globals.screenRect.height / (theme.mSize(theme.defaultFont).height * 4))) : 0
+        limit: plasmoid ? (Math.ceil(plasmoid.availableScreenRect.height / (theme.mSize(theme.defaultFont).height * 4))) : 0
         showExpired: false
         showDismissed: false
         blacklistedDesktopEntries: notificationSettings.popupBlacklistedApplications
@@ -427,5 +428,17 @@ QtObject {
     // TODO use pulseaudio-qt for this once it becomes a framework
     property QtObject pulseAudio: Loader {
         source: "PulseAudio.qml"
+    }
+
+    property Connections screenWatcher: Connections {
+        target: plasmoid
+        onAvailableScreenRectChanged: repositionTimer.start()
+        onScreenGeometryChanged: repositionTimer.start()
+    }
+
+    // Normally popups are repositioned through Qt.callLater but in case of e.g. screen geometry changes we want to compress that
+    property Timer repositionTimer: Timer {
+        interval: 250
+        onTriggered: positionPopups()
     }
 }
