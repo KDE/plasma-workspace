@@ -1,6 +1,6 @@
 [Desktop Entry]
-Exec=dbus-run-session ${CMAKE_INSTALL_FULL_BINDIR}/startplasmacompositor
-TryExec=${CMAKE_INSTALL_FULL_BINDIR}/startplasmacompositor
+Exec=dbus-run-session ${CMAKE_INSTALL_FULL_BINDIR}/startplasma-wayland
+TryExec=${CMAKE_INSTALL_FULL_BINDIR}/startplasma-wayland
 DesktopNames=KDE
 Name=Plasma
 Name[ar]=بلازما
