@@ -148,20 +148,20 @@ ColumnLayout {
                         if (notificationItem.notificationType === NotificationManager.Notifications.JobType) {
                             if (notificationItem.jobState === NotificationManager.Notifications.JobStateSuspended) {
                                 if (notificationItem.summary) {
-                                    return i18nc("Job name, e.g. Copying is paused", "%1 (Paused)", notificationItem.summary);
+                                    return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying is paused", "%1 (Paused)", notificationItem.summary);
                                 }
                             } else if (notificationItem.jobState === NotificationManager.Notifications.JobStateStopped) {
                                 if (notificationItem.jobError) {
                                     if (notificationItem.summary) {
-                                        return i18nc("Job name, e.g. Copying has failed", "%1 (Failed)", notificationItem.summary);
+                                        return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has failed", "%1 (Failed)", notificationItem.summary);
                                     } else {
-                                        return i18n("Job Failed");
+                                        return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Failed");
                                     }
                                 } else {
                                     if (notificationItem.summary) {
-                                        return i18nc("Job name, e.g. Copying has finished", "%1 (Finished)", notificationItem.summary);
+                                        return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has finished", "%1 (Finished)", notificationItem.summary);
                                     } else {
-                                        return i18n("Job Finished");
+                                        return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Finished");
                                     }
                                 }
                             }

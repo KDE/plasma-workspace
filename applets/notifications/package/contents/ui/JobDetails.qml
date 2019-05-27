@@ -46,7 +46,7 @@ GridLayout {
             Layout.row: index
             Layout.alignment: Qt.AlignTop | Qt.AlignRight
             text: jobDetails["descriptionLabel" + modelData] && jobDetails["descriptionValue" + modelData]
-                ? i18nc("Row description, e.g. Source", "%1:", jobDetails["descriptionLabel" + modelData]) : ""
+                ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Row description, e.g. Source", "%1:", jobDetails["descriptionLabel" + modelData]) : ""
             font: theme.smallestFont
             textFormat: Text.PlainText
             visible: text !== ""
@@ -110,14 +110,14 @@ GridLayout {
                     if (processed > 0 && total > 0 && processed <= total) {
                         switch(modelData) {
                         case "Bytes":
-                            return i18nc("How many bytes have been copied", "%2 of %1",
+                            return i18ndc("plasma_applet_org.kde.plasma.notifications", "How many bytes have been copied", "%2 of %1",
                                 KCoreAddons.Format.formatByteSize(total),
                                 KCoreAddons.Format.formatByteSize(processed))
                         case "Files":
-                            return i18ncp("How many files have been copied", "%2 of %1 file", "%2 of %1 files",
+                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many files have been copied", "%2 of %1 file", "%2 of %1 files",
                                           total, processed);
                         case "Directories":
-                            return i18ncp("How many dirs have been copied", "%2 of %1 folder", "%2 of %1 folders",
+                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many dirs have been copied", "%2 of %1 folder", "%2 of %1 folders",
                                          total, processed);
                         }
                     } else {
@@ -125,9 +125,9 @@ GridLayout {
                         case "Bytes":
                             return KCoreAddons.Format.formatByteSize(processed || total)
                         case "Files":
-                            return i18np("%1 file", "%1 files", (processed || total));
+                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 file", "%1 files", (processed || total));
                         case "Directories":
-                            return i18np("%1 folder", "%1 folders", (processed || total));
+                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 folder", "%1 folders", (processed || total));
                         }
                     }
                 }
@@ -144,7 +144,7 @@ GridLayout {
         Layout.column: 1
         Layout.row: 2 + 3
         Layout.fillWidth: true
-        text: jobDetails.speed > 0 ? i18nc("Bytes per second", "%1/s",
+        text: jobDetails.speed > 0 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
                                            KCoreAddons.Format.formatByteSize(jobDetails.speed)) : ""
         font: theme.smallestFont
         textFormat: Text.PlainText
