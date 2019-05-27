@@ -114,7 +114,7 @@ RowLayout {
 
             // Received less than an hour ago, show relative minutes
             if (deltaMinutes < 60) {
-                return i18ncp("Notification was added minutes ago, keep short", "%1 min ago", "%1 min ago", deltaMinutes);
+                return i18ndcp("plasma_applet_org.kde.plasma.notifications", "Notification was added minutes ago, keep short", "%1 min ago", "%1 min ago", deltaMinutes);
             }
             // Received less than a day ago, show time, 22 hours so the time isn't as ambiguous between today and yesterday
             if (deltaMinutes < 60 * 22) {
@@ -147,16 +147,16 @@ RowLayout {
             }
 
             if (eta < 60) { // 1 minute
-                return i18ncp("seconds remaining, keep short",
+                return i18ndcp("plasma_applet_org.kde.plasma.notifications", "seconds remaining, keep short",
                               "%1 s remaining", "%1 s remaining", Math.round(eta));
             }
             if (eta < 60 * 60) {// 1 hour
-                return i18ncp("minutes remaining, keep short",
+                return i18ndcp("plasma_applet_org.kde.plasma.notifications", "minutes remaining, keep short",
                               "%1 min remaining", "%1 min remaining",
                               Math.round(eta / 60));
             }
             if (eta < 60 * 60 * 5) { // 5 hours max, if it takes even longer there's no real point in shoing that
-                return i18ncp("hours remaining, keep short",
+                return i18ndcp("plasma_applet_org.kde.plasma.notifications", "hours remaining, keep short",
                               "%1 h remaining", "%1 h remaining",
                               Math.round(eta / 60 / 60));
             }
@@ -177,7 +177,7 @@ RowLayout {
 
         PlasmaComponents.ToolButton {
             id: configureButton
-            tooltip: notificationHeading.configureActionLabel || i18n("Configure")
+            tooltip: notificationHeading.configureActionLabel || i18nd("plasma_applet_org.kde.plasma.notifications", "Configure")
             iconSource: "configure"
             visible: false
             onClicked: notificationHeading.configureClicked()
@@ -185,7 +185,9 @@ RowLayout {
 
         PlasmaComponents.ToolButton {
             id: dismissButton
-            tooltip: notificationHeading.dismissed ? i18nc("Opposite of minimize", "Restore") : i18n("Minimize")
+            tooltip: notificationHeading.dismissed
+                     ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Opposite of minimize", "Restore")
+                     : i18nd("plasma_applet_org.kde.plasma.notifications", "Minimize")
             iconSource: notificationHeading.dismissed ? "window-restore" : "window-minimize"
             visible: false
             onClicked: notificationHeading.dismissClicked()
@@ -193,7 +195,7 @@ RowLayout {
 
         PlasmaComponents.ToolButton {
             id: closeButton
-            tooltip: i18n("Close")
+            tooltip: i18nd("plasma_applet_org.kde.plasma.notifications", "Close")
             iconSource: "window-close"
             visible: false
             onClicked: notificationHeading.closeClicked()

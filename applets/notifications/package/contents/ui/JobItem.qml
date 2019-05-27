@@ -79,7 +79,7 @@ ColumnLayout {
 
             PlasmaComponents.ToolButton {
                 id: suspendButton
-                tooltip: i18nc("Pause running job", "Pause")
+                tooltip: i18ndc("plasma_applet_org.kde.plasma.notifications", "Pause running job", "Pause")
                 iconSource: "media-playback-pause"
                 onClicked: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended ? jobItem.resumeJobClicked()
                                                                                                     : jobItem.suspendJobClicked()
@@ -87,7 +87,7 @@ ColumnLayout {
 
             PlasmaComponents.ToolButton {
                 id: killButton
-                tooltip: i18nc("Cancel running job", "Cancel")
+                tooltip: i18ndc("plasma_applet_org.kde.plasma.notifications", "Cancel running job", "Cancel")
                 iconSource: "media-playback-stop"
                 onClicked: jobItem.killJobClicked()
             }
@@ -96,8 +96,8 @@ ColumnLayout {
                 id: expandButton
                 Layout.leftMargin: units.smallSpacing
                 iconSource: checked ? "arrow-down" : (LayoutMirroring.enabled ? "arrow-left" : "arrow-right")
-                tooltip: checked ? i18nc("A button tooltip; hides item details", "Hide Details")
-                                 : i18nc("A button tooltip; expands the item to show details", "Show Details")
+                tooltip: checked ? i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; hides item details", "Hide Details")
+                                 : i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; expands the item to show details", "Show Details")
                 checkable: true
                 enabled: jobItem.jobDetails && jobItem.jobDetails.hasDetails
             }
@@ -143,7 +143,7 @@ ColumnLayout {
             id: otherFileActionsButton
             height: Math.max(implicitHeight, openButton.implicitHeight)
             iconName: "application-menu"
-            tooltip: i18n("More Options...")
+            tooltip: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options...")
             checkable: true
             onPressedChanged: {
                 if (pressed) {
@@ -166,7 +166,9 @@ ColumnLayout {
             id: openButton
             height: Math.max(implicitHeight, otherFileActionsButton.implicitHeight)
             // would be nice to have the file icon here?
-            text: jobItem.jobDetails && jobItem.jobDetails.totalFiles > 1 ? i18n("Open Containing Folder") : i18n("Open")
+            text: jobItem.jobDetails && jobItem.jobDetails.totalFiles > 1
+                    ? i18nd("plasma_applet_org.kde.plasma.notifications", "Open Containing Folder")
+                    : i18nd("plasma_applet_org.kde.plasma.notifications", "Open")
             onClicked: jobItem.openUrl(jobDoneActions.url)
             width: minimumWidth
         }
@@ -177,7 +179,7 @@ ColumnLayout {
             when: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended
             PropertyChanges {
                 target: suspendButton
-                tooltip: i18nc("Resume paused job", "Resume")
+                tooltip: i18ndc("plasma_applet_org.kde.plasma.notifications", "Resume paused job", "Resume")
                 iconSource: "media-playback-start"
             }
             PropertyChanges {

@@ -165,7 +165,7 @@ MouseArea {
                 right: parent.right
                 margins: units.smallSpacing
             }
-            tooltip: i18n("More Options...")
+            tooltip: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options...")
             Accessible.name: tooltip
             iconName: "application-menu"
             checkable: true
