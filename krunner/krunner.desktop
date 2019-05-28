@@ -49,4 +49,4 @@ Type=Application
 X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.krunner
 X-KDE-StartupNotify=false
-X-KDE-autostart-phase=0
+X-KDE-autostart-phase=2
