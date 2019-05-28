@@ -44,7 +44,7 @@ bool NotificationGroupingProxyModel::appsMatch(const QModelIndex &a, const QMode
     const QString bDesktopEntry = b.data(Notifications::DesktopEntryRole).toString();
 
     return !aName.isEmpty() && aName == bName
-            && !aDesktopEntry.isEmpty() && aDesktopEntry == bDesktopEntry;
+            && aDesktopEntry == bDesktopEntry;
 }
 
 bool NotificationGroupingProxyModel::isGroup(int row) const

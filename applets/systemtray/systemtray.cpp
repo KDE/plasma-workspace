@@ -536,6 +536,10 @@ void SystemTray::serviceOwnerChanged(const QString &serviceName, const QString &
 
 void SystemTray::serviceRegistered(const QString &service)
 {
+    if (service.startsWith(QLatin1Char(':'))) {
+        return;
+    }
+
     //qCDebug(SYSTEM_TRAY) << "DBus service appeared:" << service;
     for (auto it = m_dbusActivatableTasks.constBegin(), end = m_dbusActivatableTasks.constEnd(); it != end; ++it) {
         const QString &plugin = it.key();
