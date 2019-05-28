@@ -276,7 +276,7 @@ void Notifications::Private::updateCount()
 
         // TODO Jobs could also be unread?
         if (notificationsModel) {
-            if (date > notificationsModel->lastRead()) {
+            if (!active && date > notificationsModel->lastRead()) {
                 ++unread;
             }
         }

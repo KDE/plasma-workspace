@@ -107,17 +107,6 @@ MouseArea {
             visible: false
             running: visible
         }
-
-        PlasmaCore.SvgItem {
-            id: notificationActiveItem
-            anchors.fill: parent
-
-            svg: notificationSvg
-            elementId: "notification-active"
-            opacity: 0
-            scale: 2
-            visible: opacity > 0
-        }
     }
 
     PlasmaCore.IconItem {
@@ -147,14 +136,6 @@ MouseArea {
             PropertyChanges {
                 target: jobProgressItem
                 visible: true
-            }
-        },
-        State { // active notification
-            when: compactRoot.activeCount > 0
-            PropertyChanges {
-                target: notificationActiveItem
-                scale: 1
-                opacity: 1
             }
         },
         State { // do not disturb
@@ -187,7 +168,7 @@ MouseArea {
         Transition {
             to: "*" // any state
             NumberAnimation {
-                targets: [notificationIcon, notificationActiveItem, dndIcon]
+                targets: [notificationIcon, dndIcon]
                 properties: "opacity,scale"
                 duration: units.longDuration
                 easing.type: Easing.InOutQuad
