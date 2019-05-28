@@ -95,6 +95,7 @@ void sourceFiles(const QStringList &files)
     filteredFiles.prepend(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-sourceenv.sh");
 
     QProcess p;
+    qDebug() << "sourcing..." << filteredFiles;
     p.start("/bin/sh", filteredFiles);
     p.waitForFinished(-1);
 
@@ -102,11 +103,17 @@ void sourceFiles(const QStringList &files)
     auto envs = fullEnv.split('\n');
 
     for (auto &env: envs) {
-        const int idx = env.indexOf('=');
-        if (Q_UNLIKELY(idx > 0))
+        if (env.startsWith("_="))
             continue;
 
-        qputenv(env.left(idx), env.mid(idx+1));
+        const int idx = env.indexOf('=');
+        if (Q_UNLIKELY(idx <= 0))
+            continue;
+
+        if (qgetenv(env.left(idx)) != env.mid(idx+1)) {
+            qDebug() << "setting..." << env.left(idx) << env.mid(idx+1) << "was" << qgetenv(env.left(idx));
+            qputenv(env.left(idx), env.mid(idx+1));
+        }
     }
 }
 
@@ -300,22 +307,22 @@ void setupFontDpi()
     const QByteArray input = "Xft.dpi: kcmfonts_general_forcefontdpi";
     QProcess p;
     p.start("xrdb", { "-quiet", "-merge", "-nocpp" });
-//     qDebug() << "started..." << program << args;
     p.setProcessChannelMode(QProcess::ForwardedChannels);
     p.write(input);
     p.closeWriteChannel();
     p.waitForFinished(-1);
 }
 
-static int dl = -1;
+static bool dl = false;
 
 QProcess* setupKSplash()
 {
-    dl = qEnvironmentVariableIntValue("DESKTOP_LOCKED");
+    const auto dlstr = qgetenv("DESKTOP_LOCKED");
+    dl = dlstr == "true" || dlstr == "1";
     qunsetenv("DESKTOP_LOCKED"); // Don't want it in the environment
 
     QProcess* p = nullptr;
-    if (dl) {
+    if (!dl) {
         const auto ksplashrc_ksplash_engine = qgetenv("ksplashrc_ksplash_engine");
         // the splashscreen and progress indicator
         if (ksplashrc_ksplash_engine == "KSplashQML") {

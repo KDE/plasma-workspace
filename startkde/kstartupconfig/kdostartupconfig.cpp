@@ -108,7 +108,7 @@ int main( int argc, char **argv )
                 {
                 QString key = it.key();
                 QString value = *it;
-                startupconfig << file.replace( ' ', '_' ).toLower()
+                startupconfig << "export " << file.replace( ' ', '_' ).toLower()
                     << "_" << group.replace( ' ', '_' ).toLower()
                     << "_" << key.replace( ' ', '_' ).toLower()
                     << "=" << KShell::quoteArg( value ) << "\n";
@@ -122,7 +122,7 @@ int main( int argc, char **argv )
             KConfigGroup cg(&cfg, group );
             QString value = cg.readEntry( key, def );
             startupconfig << "# " << line << "\n";
-            startupconfig << file.replace( ' ', '_' ).toLower()
+            startupconfig << "export " << file.replace( ' ', '_' ).toLower()
                 << "_" << group.replace( ' ', '_' ).toLower()
                 << "_" << key.replace( ' ', '_' ).toLower()
                 << "=" << KShell::quoteArg( value ) << "\n";
