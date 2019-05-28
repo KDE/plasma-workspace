@@ -21,7 +21,6 @@
 #define STARTPLASMA_H
 
 #include "kcheckrunning/kcheckrunning.h"
-#include "kstartupconfig/kstartupconfig.h"
 #include <ksplashinterface.h>
 #include "config-startplasma.h"
 
@@ -33,7 +32,7 @@ void writeFile(const QString& path, const QByteArray& contents);
 void sourceFiles(const QStringList &files);
 void messageBox(const QString &text);
 
-bool createStartupConfig();
+void createConfigDirectory();
 void runStartupConfig();
 void setupCursor(bool wayland);
 void runEnvironmentScripts();

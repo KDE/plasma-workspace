@@ -18,21 +18,19 @@
 */
 
 #include "startplasma.h"
-#include <KSharedConfig>
+#include <KConfig>
 #include <KConfigGroup>
 #include <QDBusConnection>
 #include <QDBusInterface>
 
 int main(int /*argc*/, char** /*argv*/)
 {
-    if (!createStartupConfig())
-        return 1;
-
+    createConfigDirectory();
     setupCursor(true);
 
     {
-        KSharedConfig::Ptr fonts = KSharedConfig::openConfig("kcmfonts");
-        KConfigGroup group(fonts, "General");
+        KConfig fonts("kcmfonts");
+        KConfigGroup group = fonts.group("General");
         auto dpiSetting = group.readEntry("forceFontDPIWayland", 96);
         auto dpi = dpiSetting == 0 ? 96 : dpiSetting;
         qputenv("QT_WAYLAND_FORCE_DPI", QByteArray::number(dpi));

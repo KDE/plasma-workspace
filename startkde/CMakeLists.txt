@@ -1,5 +1,4 @@
 add_subdirectory(kcminit)
-add_subdirectory(kstartupconfig)
 add_subdirectory(ksyncdbusenv)
 add_subdirectory(waitforname)
 
@@ -9,9 +8,9 @@ qt5_add_dbus_interface(
     ksplashinterface
 )
 
-add_executable(startplasma-x11 startplasma.cpp startplasma-x11.cpp kcheckrunning/kcheckrunning.cpp kstartupconfig/kstartupconfig.cpp ${startplasma_SRCS})
-add_executable(startplasma-wayland startplasma.cpp startplasma-wayland.cpp kstartupconfig/kstartupconfig.cpp ${startplasma_SRCS})
-add_executable(startplasma-waylandsession startplasma.cpp startplasma-waylandsession.cpp kstartupconfig/kstartupconfig.cpp ${startplasma_SRCS})
+add_executable(startplasma-x11 startplasma.cpp startplasma-x11.cpp kcheckrunning/kcheckrunning.cpp ${startplasma_SRCS})
+add_executable(startplasma-wayland startplasma.cpp startplasma-wayland.cpp ${startplasma_SRCS})
+add_executable(startplasma-waylandsession startplasma.cpp startplasma-waylandsession.cpp ${startplasma_SRCS})
 
 target_link_libraries(startplasma-x11 PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore
     X11::X11 # for kcheckrunning

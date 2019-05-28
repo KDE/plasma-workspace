@@ -21,7 +21,7 @@
 
 #include <signal.h>
 #include <unistd.h>
-#include <KSharedConfig>
+#include <KConfig>
 #include <KConfigGroup>
 
 void sighupHandler(int)
@@ -61,15 +61,16 @@ int main(int /*argc*/, char** /*argv*/)
             break;
     }
 
-    if (!createStartupConfig())
-        return 1;
+    createConfigDirectory();
     runStartupConfig();
 
     //Do not sync any of this section with the wayland versions as there scale factors are
     //sent properly over wl_output
 
     {
-        const auto screenScaleFactors = qgetenv("kdeglobals_kscreen_screenscalefactors");
+        KConfig cfg("kdeglobals");
+
+        const auto screenScaleFactors = cfg.group("KScreen").readEntry("ScreenScaleFactors", QByteArray());
         if (!screenScaleFactors.isEmpty()) {
             qputenv("QT_SCREEN_SCALE_FACTORS", screenScaleFactors);
             if (screenScaleFactors == "2" || screenScaleFactors == "3") {

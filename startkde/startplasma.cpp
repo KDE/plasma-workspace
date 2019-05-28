@@ -22,12 +22,11 @@
 #include <QStandardPaths>
 #include <QTextStream>
 #include <QDBusConnectionInterface>
-#include <KSharedConfig>
+#include <KConfig>
 #include <KConfigGroup>
 
 #include <unistd.h>
 
-#include "kstartupconfig/kstartupconfig.h"
 #include "startplasma.h"
 
 QTextStream out(stderr);
@@ -117,38 +116,11 @@ void sourceFiles(const QStringList &files)
     }
 }
 
-bool createStartupConfig()
+void createConfigDirectory()
 {
     const QString configDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
     if (!QDir().mkpath(configDir))
         out << "Could not create config directory XDG_CONFIG_HOME: " << configDir << '\n';
-
-    //This is basically setting defaults so we can use them with kStartupConfig()
-    //TODO: see into passing them as an argument
-    writeFile(configDir + "/startupconfigkeys",
-        "kcminputrc Mouse cursorTheme 'breeze_cursors'\n"
-        "kcminputrc Mouse cursorSize ''\n"
-        "ksplashrc KSplash Theme Breeze\n"
-        "ksplashrc KSplash Engine KSplashQML\n"
-        "kdeglobals KScreen ScaleFactor ''\n"
-        "kdeglobals KScreen ScreenScaleFactors ''\n"
-        "kcmfonts General forceFontDPI 0\n"
-    );
-
-    //preload the user's locale on first start
-    const QString localeFile = configDir + "/plasma-localerc";
-    if (!QFile::exists(localeFile)) {
-        writeFile(localeFile,
-            QByteArray("[Formats]\n"
-            "LANG=" +qgetenv("LANG")+ "\n"));
-    }
-
-    if (int code = kStartupConfig()) {
-        messageBox("kStartupConfig() does not exist or fails. The error code is " + QByteArray::number(code) + ". Check your installation.\n");
-        return false;
-    }
-
-    return true;
 }
 
 void runStartupConfig()
@@ -157,13 +129,16 @@ void runStartupConfig()
 
     //export LC_* variables set by kcmshell5 formats into environment
     //so it can be picked up by QLocale and friends.
-    sourceFiles({configDir + "/startupconfig", configDir + "/plasma-locale-settings.sh"});
+    sourceFiles({configDir + "/plasma-locale-settings.sh"});
 }
 
 void setupCursor(bool wayland)
 {
-    const auto kcminputrc_mouse_cursorsize = qgetenv("kcminputrc_mouse_cursorsize");
-    const auto kcminputrc_mouse_cursortheme = qgetenv("kcminputrc_mouse_cursortheme");
+    const KConfig cfg("ksplashrc");
+    const KConfigGroup inputCfg = cfg.group("Mouse");
+
+    const auto kcminputrc_mouse_cursorsize = inputCfg.readEntry("cursorSize", QString());
+    const auto kcminputrc_mouse_cursortheme = inputCfg.readEntry("cursorTheme", QString());
     if (!kcminputrc_mouse_cursortheme.isEmpty() || !kcminputrc_mouse_cursorsize.isEmpty()) {
 #ifdef XCURSOR_PATH
         QByteArray path(XCURSOR_PATH);
@@ -177,10 +152,10 @@ void setupCursor(bool wayland)
     if (applyMouseStatus == 10) {
         qputenv("XCURSOR_THEME", "breeze_cursors");
     } else if (!kcminputrc_mouse_cursortheme.isEmpty()) {
-        qputenv("XCURSOR_THEME", kcminputrc_mouse_cursortheme);
+        qputenv("XCURSOR_THEME", kcminputrc_mouse_cursortheme.toUtf8());
     }
     if (!kcminputrc_mouse_cursorsize.isEmpty()) {
-        qputenv("XCURSOR_SIZE", kcminputrc_mouse_cursorsize);
+        qputenv("XCURSOR_SIZE", kcminputrc_mouse_cursorsize.toUtf8());
     }
 }
 
@@ -298,8 +273,10 @@ bool syncDBusEnvironment()
 
 void setupFontDpi()
 {
-    const auto kcmfonts_general_forcefontdpi = qgetenv("kcmfonts_general_forcefontdpi");
-    if (kcmfonts_general_forcefontdpi == "0") {
+    KConfig cfg("kcmfonts");
+    KConfigGroup fontsCfg(&cfg, "General");
+
+    if (!fontsCfg.readEntry("forceFontDPI", false)) {
         return;
     }
 
@@ -323,11 +300,12 @@ QProcess* setupKSplash()
 
     QProcess* p = nullptr;
     if (!dl) {
-        const auto ksplashrc_ksplash_engine = qgetenv("ksplashrc_ksplash_engine");
+        const KConfig cfg("ksplashrc");
         // the splashscreen and progress indicator
-        if (ksplashrc_ksplash_engine == "KSplashQML") {
+        KConfigGroup ksplashCfg = cfg.group("KSplash");
+        if (ksplashCfg.readEntry("Engine") == QLatin1String("KSplashQML")) {
             p = new QProcess;
-            p->start("ksplashqml", {QString::fromUtf8(qgetenv("ksplashrc_ksplash_theme"))});
+            p->start("ksplashqml", { ksplashCfg.readEntry("Theme") });
         }
     }
     return p;
@@ -356,7 +334,12 @@ bool startKDEInit()
     }
 
     OrgKdeKSplashInterface iface("org.kde.KSplash", "/KSplash", QDBusConnection::sessionBus());
-    iface.setStage("kinit");
+    auto reply = iface.setStage("kinit");
+    auto watcher = new QDBusPendingCallWatcher(reply);
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, watcher, [] (QDBusPendingCallWatcher* watcher) {
+        watcher->deleteLater();
+        qDebug() << "ksplash reply arrived" << watcher->error();
+    });
     return true;
 }
 
@@ -392,8 +375,8 @@ bool startKSMServer()
 
 void waitForKonqi()
 {
-    const auto cfg = KSharedConfig::openConfig("startkderc");
-    KConfigGroup grp(cfg, "WaitForDrKonqi");
+    const KConfig cfg("startkderc");
+    const KConfigGroup grp = cfg.group("WaitForDrKonqi");
     bool wait_drkonqi =  grp.readEntry("Enabled", true);
     if (wait_drkonqi) {
         // wait for remaining drkonqi instances with timeout (in seconds)
