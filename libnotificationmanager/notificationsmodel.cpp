@@ -108,6 +108,8 @@ void NotificationsModel::Private::onNotificationReplaced(uint replacedId, const 
     const int row = rowOfNotification(replacedId);
 
     if (row == -1) {
+        qCWarning(NOTIFICATIONMANAGER) << "Trying to replace notification with id" << replacedId << "which doesn't exist, creating a new one. This is an application bug!";
+        onNotificationAdded(notification);
         return;
     }
 
