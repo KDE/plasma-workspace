@@ -138,18 +138,6 @@ ShellCorona::ShellCorona(QObject *parent)
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerObject(QStringLiteral("/PlasmaShell"), this);
 
-    connect(this, &Plasma::Corona::startupCompleted, this,
-            []() {
-                qDebug() << "Plasma Shell startup completed";
-                QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
-                                               QStringLiteral("/KSplash"),
-                                               QStringLiteral("org.kde.KSplash"),
-                                               QStringLiteral("setStage"));
-                ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("desktop"));
-                QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
-                //TODO: remove
-            });
-
     // Look for theme config in plasmarc, if it isn't configured, take the theme from the
     // LookAndFeel package, if either is set, change the default theme
 
@@ -1231,6 +1219,8 @@ void ShellCorona::addOutput(QScreen* screen)
         removeAction->deleteLater();
     }
 
+    connect(containment, &Plasma::Containment::uiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady);
+
     m_screenPool->insertScreenMapping(insertPosition, screen->name());
     m_desktopViewforId[insertPosition] = view;
     view->setContainment(containment);
@@ -1250,6 +1240,24 @@ void ShellCorona::addOutput(QScreen* screen)
     emit screenAdded(m_screenPool->id(screen->name()));
 
     CHECK_SCREEN_INVARIANTS
+}
+
+void ShellCorona::checkAllDesktopsUiReady(bool ready)
+{
+    if (!ready)
+        return;
+    for (auto v : qAsConst(m_desktopViewforId)) {
+        if (!v->containment()->isUiReady())
+            return;
+
+        qDebug() << "Plasma Shell startup completed";
+        QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
+                                        QStringLiteral("/KSplash"),
+                                        QStringLiteral("org.kde.KSplash"),
+                                        QStringLiteral("setStage"));
+        ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("desktop"));
+        QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
+    }
 }
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& activity, int screenNum)
