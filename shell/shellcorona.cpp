@@ -865,9 +865,12 @@ void ShellCorona::unload()
     m_activityContainmentPlugins.clear();
 
     while (!containments().isEmpty()) {
-        //deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
-        //this form doesn't crash, while qDeleteAll(containments()) does
-        delete containments().first();
+        // Some applets react to destroyedChanged rather just destroyed,
+        // give them  the possibility to react
+        // deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
+        // this form doesn't crash, while qDeleteAll(containments()) does
+        // And is more correct anyways to use destroy()
+        containments().first()->destroy();
     }
 }
 
