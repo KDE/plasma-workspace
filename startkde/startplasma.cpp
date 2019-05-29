@@ -70,6 +70,9 @@ int runSync(const QString& program, const QStringList &args, const QStringList &
     p.start(program, args);
     qDebug() << "started..." << program << args;
     p.waitForFinished(-1);
+    if (p.exitCode()) {
+        qWarning() << program << args << "exited with code" << p.exitCode() << p.readAllStandardError();
+    }
     return p.exitCode();
 }
 
