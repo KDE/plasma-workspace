@@ -94,7 +94,6 @@ ColumnLayout {
 
             PlasmaComponents.ToolButton {
                 id: expandButton
-                Layout.leftMargin: units.smallSpacing
                 iconSource: checked ? "arrow-down" : (LayoutMirroring.enabled ? "arrow-left" : "arrow-right")
                 tooltip: checked ? i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; hides item details", "Hide Details")
                                  : i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; expands the item to show details", "Show Details")

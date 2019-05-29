@@ -105,7 +105,7 @@ void Settings::Private::setGroupBehavior(KConfigGroup &group, const Settings::No
     }
 
     const bool showPopupsInDndMode = behavior.testFlag(Settings::ShowPopupsInDoNotDisturbMode);
-    if (!showPopupsInDndMode && !group.hasDefault("ShowPopups")) {
+    if (!showPopupsInDndMode && !group.hasDefault("ShowPopupsInDndMode")) {
         group.revertToDefault("ShowPopupsInDndMode", KConfigBase::Notify);
     } else {
         group.writeEntry("ShowPopupsInDndMode", showPopupsInDndMode, KConfigBase::Notify);

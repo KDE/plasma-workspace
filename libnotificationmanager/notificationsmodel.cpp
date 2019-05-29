@@ -83,19 +83,6 @@ NotificationsModel::Private::~Private()
 
 void NotificationsModel::Private::onNotificationAdded(const Notification &notification)
 {
-    // If we get the same notification in succession, just compress them into one
-    if (!notifications.isEmpty()) {
-        const Notification &lastNotification = notifications.constLast();
-        if (lastNotification.applicationName() == notification.applicationName()
-                && lastNotification.summary() == notification.summary()
-                && lastNotification.body() == notification.body()
-                && lastNotification.desktopEntry() == notification.desktopEntry()
-                && lastNotification.applicationName() == notification.applicationName()) {
-            onNotificationReplaced(lastNotification.id(), notification);
-            return;
-        }
-    }
-
     // Once we reach a certain insane number of notifications discard some old ones
     // as we keep pixmaps around etc
     if (notifications.count() >= s_notificationsLimit) {
@@ -121,6 +108,8 @@ void NotificationsModel::Private::onNotificationReplaced(uint replacedId, const 
     const int row = rowOfNotification(replacedId);
 
     if (row == -1) {
+        qCWarning(NOTIFICATIONMANAGER) << "Trying to replace notification with id" << replacedId << "which doesn't exist, creating a new one. This is an application bug!";
+        onNotificationAdded(notification);
         return;
     }
 
