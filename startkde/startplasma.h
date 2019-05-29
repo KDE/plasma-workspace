@@ -28,7 +28,6 @@ extern QTextStream out;
 
 QStringList allServices(const QLatin1String& prefix);
 int runSync(const QString& program, const QStringList &args, const QStringList &env = {});
-void writeFile(const QString& path, const QByteArray& contents);
 void sourceFiles(const QStringList &files);
 void messageBox(const QString &text);
 

@@ -73,16 +73,6 @@ int runSync(const QString& program, const QStringList &args, const QStringList &
     return p.exitCode();
 }
 
-void writeFile(const QString& path, const QByteArray& contents)
-{
-    QFile f(path);
-    if (!f.open(QIODevice::WriteOnly)) {
-        out << "Could not write into " << f.fileName() <<".\n";
-        exit(1);
-    }
-    f.write(contents);
-}
-
 void sourceFiles(const QStringList &files)
 {
     QStringList filteredFiles;
@@ -94,7 +84,6 @@ void sourceFiles(const QStringList &files)
     filteredFiles.prepend(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-sourceenv.sh");
 
     QProcess p;
-    qDebug() << "sourcing..." << filteredFiles;
     p.start("/bin/sh", filteredFiles);
     p.waitForFinished(-1);
 
