@@ -130,7 +130,7 @@ void setupCursor(bool wayland)
     const KConfigGroup inputCfg = cfg.group("Mouse");
 
     const auto kcminputrc_mouse_cursorsize = inputCfg.readEntry("cursorSize", QString());
-    const auto kcminputrc_mouse_cursortheme = inputCfg.readEntry("cursorTheme", QString());
+    const auto kcminputrc_mouse_cursortheme = inputCfg.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
     if (!kcminputrc_mouse_cursortheme.isEmpty() || !kcminputrc_mouse_cursorsize.isEmpty()) {
 #ifdef XCURSOR_PATH
         QByteArray path(XCURSOR_PATH);
@@ -295,9 +295,9 @@ QProcess* setupKSplash()
         const KConfig cfg("ksplashrc");
         // the splashscreen and progress indicator
         KConfigGroup ksplashCfg = cfg.group("KSplash");
-        if (ksplashCfg.readEntry("Engine") == QLatin1String("KSplashQML")) {
+        if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
             p = new QProcess;
-            p->start("ksplashqml", { ksplashCfg.readEntry("Theme") });
+            p->start("ksplashqml", { ksplashCfg.readEntry("Theme", QStringLiteral("Breeze")) });
         }
     }
     return p;
