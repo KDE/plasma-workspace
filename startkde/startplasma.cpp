@@ -126,7 +126,7 @@ void runStartupConfig()
 
 void setupCursor(bool wayland)
 {
-    const KConfig cfg("ksplashrc");
+    const KConfig cfg("kcminputrc");
     const KConfigGroup inputCfg = cfg.group("Mouse");
 
     const auto kcminputrc_mouse_cursorsize = inputCfg.readEntry("cursorSize", QString());
