@@ -29,7 +29,7 @@ int main(int /*argc*/, char** /*argv*/)
     setupCursor(true);
 
     {
-        KConfig fonts("kcmfonts");
+        KConfig fonts(QStringLiteral("kcmfonts"));
         KConfigGroup group = fonts.group("General");
         auto dpiSetting = group.readEntry("forceFontDPIWayland", 96);
         auto dpi = dpiSetting == 0 ? 96 : dpiSetting;
@@ -38,21 +38,36 @@ int main(int /*argc*/, char** /*argv*/)
 
     // Query whether org.freedesktop.locale1 is available. If it is, try to
     // set XKB_DEFAULT_{MODEL,LAYOUT,VARIANT,OPTIONS} accordingly.
-    if (QDBusConnection::systemBus().interface()->isServiceRegistered("org.freedesktop.locale1")) {
-        auto queryAndSet = [](const QByteArray &var, const QByteArray & value) {
-            QDBusInterface iface(QStringLiteral("org.freedesktop.locale1"), QStringLiteral("/org/freedesktop/locale1"), QStringLiteral("org.freedesktop.locale1"), QDBusConnection::systemBus());
+    {
+        const QString locale1Service = QStringLiteral("org.freedesktop.locale1");
+        const QString locale1Path = QStringLiteral("/org/freedesktop/locale1");
+        QDBusMessage message = QDBusMessage::createMethodCall(locale1Service,
+                                                        locale1Path,
+                                                        QStringLiteral("org.freedesktop.DBus.Properties"),
+                                                        QLatin1String("GetAll"));
+        message << locale1Service;
+        QDBusMessage resultMessage = QDBusConnection::systemBus().call(message);
+        if (resultMessage.type() == QDBusMessage::ReplyMessage) {
+            QVariantMap result;
+            QDBusArgument dbusArgument = resultMessage.arguments().at(0).value<QDBusArgument>();
+            while (!dbusArgument.atEnd()) {
+                dbusArgument >> result;
+            }
 
-            QString r = iface.property(value).toString();
-            if (!r.isEmpty())
-                qputenv(var, r.toLatin1());
-        };
+            auto queryAndSet = [&](const QByteArray &var, const QString & value) {
+                const auto r = result.value(value).toString();
+                if (!r.isEmpty())
+                    qputenv(var, r.toUtf8());
+            };
 
-        queryAndSet("X11MODEL", "org.freedesktop.locale1.X11Model");
-        queryAndSet("X11LAYOUT", "org.freedesktop.locale1.X11Layout");
-        queryAndSet("X11VARIANT", "org.freedesktop.locale1.X11Variant");
-        queryAndSet("X11OPTIONS", "org.freedesktop.locale1.X11Options");
+            queryAndSet("X11MODEL", QStringLiteral("X11Model"));
+            queryAndSet("X11LAYOUT", QStringLiteral("X11Layout"));
+            queryAndSet("X11VARIANT", QStringLiteral("X11Variant"));
+            queryAndSet("X11OPTIONS", QStringLiteral("X11Options"));
+        } else {
+            qWarning() << "not a reply org.freedesktop.locale1" << resultMessage;
+        }
     }
-
     runEnvironmentScripts();
 
     if (!qEnvironmentVariableIsSet("DBUS_SESSION_BUS_ADDRESS")) {
@@ -67,7 +82,7 @@ int main(int /*argc*/, char** /*argv*/)
         return 1;
     }
 
-    runSync(KWIN_WAYLAND_BIN_PATH, { "--xwayland", "--libinput", "--exit-with-session=" CMAKE_INSTALL_FULL_LIBEXECDIR "/startplasma-waylandsession" });
+    runSync(QStringLiteral(KWIN_WAYLAND_BIN_PATH), { QStringLiteral("--xwayland"), QStringLiteral("--libinput"), QStringLiteral("--exit-with-session=" CMAKE_INSTALL_FULL_LIBEXECDIR "/startplasma-waylandsession") });
 
     out << "startplasmacompositor: Shutting down...\n";
     cleanupPlasmaEnvironment();

@@ -55,7 +55,7 @@ int main(int /*argc*/, char** /*argv*/)
             out << "$DISPLAY is not set or cannot connect to the X server.\n";
             return 1;
         case PlasmaRunning:
-            messageBox("Plasma seems to be already running on this display.\n");
+            messageBox(QStringLiteral("Plasma seems to be already running on this display.\n"));
             return 1;
         case NoPlasmaRunning:
             break;
@@ -68,14 +68,14 @@ int main(int /*argc*/, char** /*argv*/)
     //sent properly over wl_output
 
     {
-        KConfig cfg("kdeglobals");
+        KConfig cfg(QStringLiteral("kdeglobals"));
 
         const auto screenScaleFactors = cfg.group("KScreen").readEntry("ScreenScaleFactors", QByteArray());
         if (!screenScaleFactors.isEmpty()) {
             qputenv("QT_SCREEN_SCALE_FACTORS", screenScaleFactors);
             if (screenScaleFactors == "2" || screenScaleFactors == "3") {
                 qputenv("GDK_SCALE", screenScaleFactors);
-                qputenv("GDK_DPI_SCALE", QByteArray::number(1/screenScaleFactors.toInt(), 'g', 3));
+                qputenv("GDK_DPI_SCALE", QByteArray::number(1./screenScaleFactors.toDouble(), 'g', 3));
             }
         }
     }
@@ -93,7 +93,7 @@ int main(int /*argc*/, char** /*argv*/)
 
     if (!syncDBusEnvironment()) {
         // Startup error
-        messageBox("Could not sync environment to dbus.\n");
+        messageBox(QStringLiteral("Could not sync environment to dbus.\n"));
         return 1;
     }
 
@@ -109,7 +109,7 @@ int main(int /*argc*/, char** /*argv*/)
 
     out << "startkde: Shutting down...\n";
 
-    runSync("kdeinit5_shutdown", {});
+    runSync(QStringLiteral("kdeinit5_shutdown"), {});
 
     cleanupPlasmaEnvironment();
     cleanupX11();

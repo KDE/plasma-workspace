@@ -42,7 +42,7 @@ int main(int /*argc*/, char** /*argv*/)
     QScopedPointer<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
     qputenv("PLASMA_USE_QT_SCALING", "1");
 
-    qDebug() << "startplasma-waylandsession: Starting up... DISPLAY=" << qgetenv("DISPLAY");
+    out << "startplasma-waylandsession: Starting up...";
 
     if (qEnvironmentVariableIsSet("DISPLAY")) {
         setupX11();
@@ -67,7 +67,7 @@ int main(int /*argc*/, char** /*argv*/)
     waitForKonqi();
     out << "startplasma-waylandsession: Shutting down...\n";
 
-    runSync("kdeinit5_shutdown", {});
+    runSync(QStringLiteral("kdeinit5_shutdown"), {});
 
     cleanupX11();
     out << "startplasma-waylandsession: Done.\n";

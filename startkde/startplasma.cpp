@@ -34,7 +34,7 @@ QTextStream out(stderr);
 void messageBox(const QString &text)
 {
     out << text;
-    runSync("xmessage", {"-geometry", "500x100", text});
+    runSync(QStringLiteral("xmessage"), {QStringLiteral("-geometry"), QStringLiteral("500x100"), text});
 }
 
 QStringList allServices(const QLatin1String& prefix)
@@ -68,10 +68,10 @@ int runSync(const QString& program, const QStringList &args, const QStringList &
         p.setEnvironment(QProcess::systemEnvironment() << env);
     p.setProcessChannelMode(QProcess::ForwardedChannels);
     p.start(program, args);
-    qDebug() << "started..." << program << args;
+//     qDebug() << "started..." << program << args;
     p.waitForFinished(-1);
     if (p.exitCode()) {
-        qWarning() << program << args << "exited with code" << p.exitCode() << p.readAllStandardError();
+        qWarning() << program << args << "exited with code" << p.exitCode();
     }
     return p.exitCode();
 }
@@ -84,10 +84,10 @@ void sourceFiles(const QStringList &files)
     if (filteredFiles.isEmpty())
         return;
 
-    filteredFiles.prepend(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-sourceenv.sh");
+    filteredFiles.prepend(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-sourceenv.sh"));
 
     QProcess p;
-    p.start("/bin/sh", filteredFiles);
+    p.start(QStringLiteral("/bin/sh"), filteredFiles);
     p.waitForFinished(-1);
 
     const auto fullEnv = p.readAllStandardOutput();
@@ -102,7 +102,7 @@ void sourceFiles(const QStringList &files)
             continue;
 
         if (qgetenv(env.left(idx)) != env.mid(idx+1)) {
-            qDebug() << "setting..." << env.left(idx) << env.mid(idx+1) << "was" << qgetenv(env.left(idx));
+//             qDebug() << "setting..." << env.left(idx) << env.mid(idx+1) << "was" << qgetenv(env.left(idx));
             qputenv(env.left(idx), env.mid(idx+1));
         }
     }
@@ -119,14 +119,22 @@ void runStartupConfig()
 {
     const QString configDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
 
+    const QString localerc(configDir + QLatin1String("/plasma-localerc"));
+    if (!QFile::exists(localerc)) {
+        QFile f(localerc);
+        f.open(QFile::WriteOnly);
+        f.write("[Formats]\n"
+                "LANG=" + qgetenv("LANG") + '\n');
+    }
+
     //export LC_* variables set by kcmshell5 formats into environment
     //so it can be picked up by QLocale and friends.
-    sourceFiles({configDir + "/plasma-locale-settings.sh"});
+    sourceFiles({configDir + QStringLiteral("/plasma-locale-settings.sh")});
 }
 
 void setupCursor(bool wayland)
 {
-    const KConfig cfg("kcminputrc");
+    const KConfig cfg(QStringLiteral("kcminputrc"));
     const KConfigGroup inputCfg = cfg.group("Mouse");
 
     const auto kcminputrc_mouse_cursorsize = inputCfg.readEntry("cursorSize", QString());
@@ -140,7 +148,7 @@ void setupCursor(bool wayland)
     }
 
     //TODO: consider linking directly
-    const int applyMouseStatus = wayland ? 0 : runSync("kapplymousetheme", { "kcminputrc_mouse_cursortheme", "kcminputrc_mouse_cursorsize" });
+    const int applyMouseStatus = wayland ? 0 : runSync(QStringLiteral("kapplymousetheme"), { QStringLiteral("kcminputrc_mouse_cursortheme"), QStringLiteral("kcminputrc_mouse_cursorsize") });
     if (applyMouseStatus == 10) {
         qputenv("XCURSOR_THEME", "breeze_cursors");
     } else if (!kcminputrc_mouse_cursortheme.isEmpty()) {
@@ -230,15 +238,15 @@ void setupX11()
 //     If the user has overwritten fonts, the cursor font may be different now
 //     so don't move this up.
 
-    runSync("xsetroot", {"-cursor_name", "left_ptr"});
-    runSync("xprop", {"-root", "-f", "KDE_FULL_SESSION", "8t", "-set", "KDE_FULL_SESSION", "true"});
-    runSync("xprop", {"-root", "-f", "KDE_SESSION_VERSION", "32c", "-set", "KDE_SESSION_VERSION", "5"});
+    runSync(QStringLiteral("xsetroot"), {QStringLiteral("-cursor_name"), QStringLiteral("left_ptr")});
+    runSync(QStringLiteral("xprop"), {QStringLiteral("-root"), QStringLiteral("-f"), QStringLiteral("KDE_FULL_SESSION"), QStringLiteral("8t"), QStringLiteral("-set"), QStringLiteral("KDE_FULL_SESSION"), QStringLiteral("true")});
+    runSync(QStringLiteral("xprop"), {QStringLiteral("-root"), QStringLiteral("-f"), QStringLiteral("KDE_SESSION_VERSION"), QStringLiteral("32c"), QStringLiteral("-set"), QStringLiteral("KDE_SESSION_VERSION"), QStringLiteral("5")});
 }
 
 void cleanupX11()
 {
-    runSync("xprop", { "-root", "-remove", "KDE_FULL_SESSION" });
-    runSync("xprop", { "-root", "-remove", "KDE_SESSION_VERSION" });
+    runSync(QStringLiteral("xprop"), { QStringLiteral("-root"), QStringLiteral("-remove"), QStringLiteral("KDE_FULL_SESSION") });
+    runSync(QStringLiteral("xprop"), { QStringLiteral("-root"), QStringLiteral("-remove"), QStringLiteral("KDE_SESSION_VERSION") });
 }
 
 // TODO: Check if Necessary
@@ -255,49 +263,49 @@ bool syncDBusEnvironment()
 {
     int exitCode;
     // At this point all environment variables are set, let's send it to the DBus session server to update the activation environment
-    if (!QStandardPaths::findExecutable("dbus-update-activation-environment").isEmpty())
-        exitCode = runSync("dbus-update-activation-environment", { "--systemd", "--all" });
-    else
-        exitCode = runSync(CMAKE_INSTALL_FULL_LIBEXECDIR "/ksyncdbusenv", {});
-
+    if (!QStandardPaths::findExecutable(QStringLiteral("dbus-update-activation-environment")).isEmpty()) {
+        exitCode = runSync(QStringLiteral("dbus-update-activation-environment"), { QStringLiteral("--systemd"), QStringLiteral("--all") });
+    } else {
+        exitCode = runSync(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/ksyncdbusenv"), {});
+    }
     return exitCode == 0;
 }
 
 void setupFontDpi()
 {
-    KConfig cfg("kcmfonts");
+    KConfig cfg(QStringLiteral("kcmfonts"));
     KConfigGroup fontsCfg(&cfg, "General");
 
-    if (!fontsCfg.readEntry("forceFontDPI", false)) {
+    if (!fontsCfg.hasKey("forceFontDPI")) {
         return;
     }
 
     //TODO port to c++?
-    const QByteArray input = "Xft.dpi: kcmfonts_general_forcefontdpi";
+    const QByteArray input = "Xft.dpi: " + QByteArray::number(fontsCfg.readEntry("forceFontDPI", 0));
     QProcess p;
-    p.start("xrdb", { "-quiet", "-merge", "-nocpp" });
+    p.start(QStringLiteral("xrdb"), { QStringLiteral("-quiet"), QStringLiteral("-merge"), QStringLiteral("-nocpp") });
     p.setProcessChannelMode(QProcess::ForwardedChannels);
     p.write(input);
     p.closeWriteChannel();
     p.waitForFinished(-1);
 }
 
-static bool dl = false;
+static bool desktopLockedAtStart = false;
 
 QProcess* setupKSplash()
 {
     const auto dlstr = qgetenv("DESKTOP_LOCKED");
-    dl = dlstr == "true" || dlstr == "1";
+    desktopLockedAtStart = dlstr == "true" || dlstr == "1";
     qunsetenv("DESKTOP_LOCKED"); // Don't want it in the environment
 
     QProcess* p = nullptr;
-    if (!dl) {
-        const KConfig cfg("ksplashrc");
+    if (!desktopLockedAtStart) {
+        const KConfig cfg(QStringLiteral("ksplashrc"));
         // the splashscreen and progress indicator
         KConfigGroup ksplashCfg = cfg.group("KSplash");
         if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
             p = new QProcess;
-            p->start("ksplashqml", { ksplashCfg.readEntry("Theme", QStringLiteral("Breeze")) });
+            p->start(QStringLiteral("ksplashqml"), { ksplashCfg.readEntry("Theme", QStringLiteral("Breeze")) });
         }
     }
     return p;
@@ -307,7 +315,7 @@ QProcess* setupKSplash()
 void setupGSLib()
 // Get Ghostscript to look into user's KDE fonts dir for additional Fontmap
 {
-    const QByteArray usr_fdir = QFile::encodeName(QDir::home().absoluteFilePath(".fonts"));
+    const QByteArray usr_fdir = QFile::encodeName(QDir::home().absoluteFilePath(QStringLiteral(".fonts")));
     if (qEnvironmentVariableIsSet("GS_LIB")) {
         qputenv("GS_LIB", usr_fdir + ':' + qgetenv("GS_LIB"));
     } else {
@@ -319,19 +327,14 @@ bool startKDEInit()
 {
     // We set LD_BIND_NOW to increase the efficiency of kdeinit.
     // kdeinit unsets this variable before loading applications.
-    const int exitCode = runSync(CMAKE_INSTALL_FULL_LIBEXECDIR_KF5 "/start_kdeinit_wrapper", { "--kded", "+kcminit_startup" }, { "LD_BIND_NOW=true" });
+    const int exitCode = runSync(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF5 "/start_kdeinit_wrapper"), { QStringLiteral("--kded"), QStringLiteral("+kcminit_startup") }, { QStringLiteral("LD_BIND_NOW=true") });
     if (exitCode != 0) {
-        messageBox("startkde: Could not start kdeinit5. Check your installation.");
+        messageBox(QStringLiteral("startkde: Could not start kdeinit5. Check your installation."));
         return false;
     }
 
-    OrgKdeKSplashInterface iface("org.kde.KSplash", "/KSplash", QDBusConnection::sessionBus());
-    auto reply = iface.setStage("kinit");
-    auto watcher = new QDBusPendingCallWatcher(reply);
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, watcher, [] (QDBusPendingCallWatcher* watcher) {
-        watcher->deleteLater();
-        qDebug() << "ksplash reply arrived" << watcher->error();
-    });
+    OrgKdeKSplashInterface iface(QStringLiteral("org.kde.KSplash"), QStringLiteral("/KSplash"), QDBusConnection::sessionBus());
+    iface.setStage(QStringLiteral("kinit"));
     return true;
 }
 
@@ -351,15 +354,15 @@ bool startKSMServer()
     // lock now and do the rest of the KDE startup underneath the locker.
 
 
-    QStringList ksmserverOptions = { CMAKE_INSTALL_FULL_BINDIR "/ksmserver" };
-    if (dl) {
-        ksmserverOptions << "--lockscreen";
+    QStringList ksmserverOptions = { QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/ksmserver") };
+    if (desktopLockedAtStart) {
+        ksmserverOptions << QStringLiteral("--lockscreen");
     }
-    const auto exitCode = runSync("kwrapper5", ksmserverOptions);
+    const auto exitCode = runSync(QStringLiteral("kwrapper5"), ksmserverOptions);
 
     if (exitCode == 255) {
         // Startup error
-        messageBox("startkde: Could not start ksmserver. Check your installation.\n");
+        messageBox(QStringLiteral("startkde: Could not start ksmserver. Check your installation.\n"));
         return false;
     }
     return true;
@@ -367,7 +370,7 @@ bool startKSMServer()
 
 void waitForKonqi()
 {
-    const KConfig cfg("startkderc");
+    const KConfig cfg(QStringLiteral("startkderc"));
     const KConfigGroup grp = cfg.group("WaitForDrKonqi");
     bool wait_drkonqi =  grp.readEntry("Enabled", true);
     if (wait_drkonqi) {
@@ -382,8 +385,8 @@ void waitForKonqi()
             if (wait_drkonqi_counter.elapsed() >= wait_drkonqi_timeout) {
                 // ask remaining drkonqis to die in a graceful way
                 for (const auto &service: services) {
-                    QDBusInterface iface(service, "/MainApplication");
-                    iface.call("quit");
+                    QDBusInterface iface(service, QStringLiteral("/MainApplication"));
+                    iface.call(QStringLiteral("quit"));
                 }
                 break;
             }
