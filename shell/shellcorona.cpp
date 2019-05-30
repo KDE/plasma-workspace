@@ -993,23 +993,24 @@ int ShellCorona::numScreens() const
 
 QRect ShellCorona::screenGeometry(int id) const
 {
-    if (!m_desktopViewforId.contains(id)) {
+    DesktopView* view = m_desktopViewforId.value(id);
+    if (!view) {
         qWarning() << "requesting unexisting screen" << id;
         QScreen *s = qGuiApp->primaryScreen();
         return s ? s->geometry() : QRect();
     }
-    return m_desktopViewforId.value(id)->geometry();
+    return view->geometry();
 }
 
 QRegion ShellCorona::availableScreenRegion(int id) const
 {
-    if (!m_desktopViewforId.contains(id)) {
+    DesktopView* view = m_desktopViewforId.value(id);
+    if (!view) {
         //each screen should have a view
         qWarning() << "requesting unexisting screen" << id;
         QScreen *s = qGuiApp->primaryScreen();
         return s ? s->availableGeometry() : QRegion();
     }
-    DesktopView *view = m_desktopViewforId.value(id);
 
     QRegion r = view->geometry();
     foreach (const PanelView *v, m_panelViews) {
@@ -1023,14 +1024,13 @@ QRegion ShellCorona::availableScreenRegion(int id) const
 
 QRect ShellCorona::availableScreenRect(int id) const
 {
-    if (!m_desktopViewforId.contains(id)) {
+    DesktopView *view = m_desktopViewforId.value(id);
+    if (!view) {
         //each screen should have a view
         qWarning() << "requesting unexisting screen" << id;
         QScreen *s = qGuiApp->primaryScreen();
         return s ? s->availableGeometry() : QRect();
     }
-
-    DesktopView *view = m_desktopViewforId.value(id);
 
     QRect r = view->geometry();
     foreach (PanelView *v, m_panelViews) {
@@ -1064,9 +1064,11 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
 {
     const int idx = m_screenPool->id(desktopView->screenToFollow()->name());
 
-    if (!m_desktopViewforId.contains(idx)) {
+    auto itDesktop = m_desktopViewforId.find(idx);
+    if (itDesktop == m_desktopViewforId.end()) {
         return;
     }
+    Q_ASSERT(m_desktopViewforId.value(idx) == desktopView);
 
     QMutableHashIterator<const Plasma::Containment *, PanelView *> it(m_panelViews);
     while (it.hasNext()) {
@@ -1080,8 +1082,7 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
         }
     }
 
-    Q_ASSERT(m_desktopViewforId.value(idx) == desktopView);
-    m_desktopViewforId.remove(idx);
+    m_desktopViewforId.erase(itDesktop);
     delete desktopView;
 
     emit screenRemoved(idx);
@@ -1290,14 +1291,15 @@ void ShellCorona::createWaitingPanels()
             requestedScreen = 0;
         }
 
-        if (!m_desktopViewforId.contains(requestedScreen)) {
+        DesktopView* desktopView = m_desktopViewforId.value(requestedScreen);
+        if (!desktopView) {
             stillWaitingPanels << cont;
             continue;
         }
 
         //TODO: does a similar check make sense?
         //Q_ASSERT(qBound(0, requestedScreen, m_screenPool->count() - 1) == requestedScreen);
-        QScreen *screen = m_desktopViewforId.value(requestedScreen)->screenToFollow();
+        QScreen *screen = desktopView->screenToFollow();
         PanelView* panel = new PanelView(this, screen);
         if (panel->rendererInterface()->graphicsApi() != QSGRendererInterface::Software) {
             connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
@@ -1871,8 +1873,9 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
     const QPoint cursorPos(QCursor::pos());
     foreach (QScreen *screen, QGuiApplication::screens()) {
         //m_panelViews.contains(panel) == false iff addPanel is executed in a startup script
-        if (screen->geometry().contains(cursorPos) && m_panelViews.contains(panel)) {
-            m_panelViews[panel]->setScreenToFollow(screen);
+        auto panelView = m_panelViews.value(panel);
+        if (panelView && screen->geometry().contains(cursorPos)) {
+            panelView->setScreenToFollow(screen);
             break;
         }
     }
