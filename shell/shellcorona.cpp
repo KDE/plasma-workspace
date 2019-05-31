@@ -629,7 +629,8 @@ void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)
     }
     conf->sync();
     unload();
-    load();
+    // Put load in queue of the event loop to wait for the whole set of containments to have been deleteLater(), as some like FolderView operate on singletons which can cause inconsistent states
+    QTimer::singleShot(0, this, &ShellCorona::load);
 }
 
 QString ShellCorona::shell() const
