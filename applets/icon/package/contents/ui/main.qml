@@ -128,12 +128,12 @@ MouseArea {
 
         visible: !constrained
 
-        horizontalOffset: units.devicePixelRatio * 2
-        verticalOffset: horizontalOffset
+        horizontalOffset: 1
+        verticalOffset: 1
 
-        radius: 9.0
-        samples: 18
-        spread: 0.15
+        radius: 4
+        samples: 9
+        spread: 0.35
 
         color: "black"
 
