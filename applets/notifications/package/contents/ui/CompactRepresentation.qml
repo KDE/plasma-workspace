@@ -91,14 +91,19 @@ MouseArea {
             }
         }
 
-        TightLabel {
+        PlasmaComponents.Label {
             id: countLabel
             anchors.centerIn: parent
-            font.pointSize: -1
-            // FIXME fontSizeMode is awful but FontMetrics also doesn't cut it
-            font.pixelSize: Math.round(parent.height * (0.3 + 0.3 / text.length))
-            // TODO add animation when it changes?
+            width: Math.round(Math.min(parent.width, parent.height) * 0.75)
+            height: width
+            fontSizeMode: Text.Fit
+            font.pointSize: 1024
+            font.pixelSize: -1
+            minimumPointSize: 5//theme.smallestFont.pointSize
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
             text: compactRoot.unreadCount || ""
+            renderType: Text.QtRendering
         }
 
         PlasmaComponents.BusyIndicator {
