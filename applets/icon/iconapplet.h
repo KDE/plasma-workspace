@@ -28,7 +28,6 @@
 #include <KPropertiesDialog>
 
 class KFileItemActions;
-class KStartupInfo;
 
 class QMenu;
 

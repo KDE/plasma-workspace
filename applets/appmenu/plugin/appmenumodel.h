@@ -30,7 +30,6 @@
 #include <QRect>
 
 class QMenu;
-class QAction;
 class QModelIndex;
 class QDBusServiceWatcher;
 class KDBusMenuImporter;

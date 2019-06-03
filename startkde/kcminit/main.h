@@ -25,7 +25,6 @@
 #include <QSet>
 #include <QCommandLineParser>
 
-class KCmdLineArgs;
 
 class KCMInit : public QObject
 {

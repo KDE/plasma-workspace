@@ -35,8 +35,6 @@
 
 #include <KPackage/PackageStructure>
 
-class QEventLoop;
-class KProgressDialog;
 
 class Image;
 

@@ -25,7 +25,6 @@
 
 class KFileWidget;
 class QListWidget;
-class QListWidgetItem;
 
 namespace Plasma
 {

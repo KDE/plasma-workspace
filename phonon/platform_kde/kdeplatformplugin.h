@@ -27,7 +27,6 @@
 
 namespace Phonon {
 
-class DeviceListing;
 
 class KdePlatformPlugin : public QObject, public PlatformPlugin
 {

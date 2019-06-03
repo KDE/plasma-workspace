@@ -33,7 +33,6 @@
 #include <QDebug>
 #include <qwindowdefs.h>
 
-class KDBusMenuImporter;
 
 class AppmenuDBus : public QObject, protected QDBusContext
 {

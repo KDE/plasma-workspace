@@ -24,7 +24,6 @@
 #include <QSqlDatabase>
 #include "browser.h"
 
-class KJob;
 class Favicon;
 class FetchSqlite;
 class Firefox : public QObject, public Browser

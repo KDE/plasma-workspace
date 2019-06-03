@@ -20,11 +20,6 @@
 
 #include "geolocationprovider.h"
 
-class KJob;
-namespace KIO {
-    class Job;
-}
-
 class Ip : public GeolocationProvider
 {
     Q_OBJECT

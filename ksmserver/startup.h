@@ -29,9 +29,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "autostart.h"
 
-class KProcess;
 class KSMServer;
-class KCompositeJob;
 
 class Startup : public QObject
 {

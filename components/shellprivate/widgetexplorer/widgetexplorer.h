@@ -35,7 +35,6 @@ namespace Plasma {
     class Applet;
 }
 class WidgetExplorerPrivate;
-class PlasmaQuickView;
 
 //We need to access the separator property that is not exported by QAction
 class WidgetAction : public QAction

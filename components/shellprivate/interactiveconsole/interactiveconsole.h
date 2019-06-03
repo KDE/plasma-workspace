@@ -46,7 +46,6 @@ namespace Plasma
     class Corona;
 } // namespace Plasma
 
-class ScriptEngine;
 
 class InteractiveConsole : public QDialog
 {

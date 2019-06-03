@@ -22,7 +22,6 @@
 
 #include <KQuickAddons/QuickViewSharedEngine>
 
-class QResizeEvent;
 class QMouseEvent;
 class QKeyEvent;
 

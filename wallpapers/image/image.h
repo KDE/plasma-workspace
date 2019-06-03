@@ -36,7 +36,6 @@
 #include <KPackage/Package>
 
 
-class QPropertyAnimation;
 class QFileDialog;
 class QQuickItem;
 

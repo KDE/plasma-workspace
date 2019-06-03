@@ -31,7 +31,6 @@
 
 using InhibitionInfo = QPair<QString, QString>;
 
-class QDBusPendingCallWatcher;
 
 /**
  * This class provides runtime information about the battery and AC status

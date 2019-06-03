@@ -35,9 +35,7 @@
 #include <QWidget> // For WId
 
 class QDBusObjectPath;
-class QDBusPendingCallWatcher;
 class QDBusServiceWatcher;
-class QMenu;
 
 class MenuImporter : public QObject, protected QDBusContext
 {

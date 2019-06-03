@@ -37,7 +37,6 @@ class KFilePlacesModel;
 namespace NotificationManager
 {
 
-class JobDetails;
 
 class JobPrivate : public QObject, protected QDBusContext
 {

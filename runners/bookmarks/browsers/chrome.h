@@ -31,7 +31,6 @@
 
 class QJsonObject;
 
-class FaviconFromBlob;
 class ProfileBookmarks;
 class Chrome : public QObject, public Browser
 {

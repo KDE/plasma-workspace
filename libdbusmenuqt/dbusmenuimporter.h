@@ -26,7 +26,6 @@
 
 class QAction;
 class QDBusPendingCallWatcher;
-class QDBusVariant;
 class QIcon;
 class QMenu;
 

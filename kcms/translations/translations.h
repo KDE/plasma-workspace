@@ -29,7 +29,6 @@ class AvailableTranslationsModel;
 class SelectedTranslationsModel;
 class TranslationsModel;
 
-class QAbstractListModel;
 
 class Translations : public KQuickAddons::ConfigModule
 {

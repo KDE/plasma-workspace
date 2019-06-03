@@ -32,11 +32,9 @@
 #include <QPointer>
 #include "menuimporter.h"
 
-class QDBusPendingCallWatcher;
 class QDBusServiceWatcher;
 class KDBusMenuImporter;
 class AppmenuDBus;
-class TopMenuBar;
 class VerticalMenu;
 
 class AppMenuModule : public KDEDModule,

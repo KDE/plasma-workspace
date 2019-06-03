@@ -25,7 +25,6 @@
 #include <QSize>
 #include <QUrl>
 
-class QQuickItem;
 
 class Thumbnailer : public QObject, public QQmlParserStatus
 {

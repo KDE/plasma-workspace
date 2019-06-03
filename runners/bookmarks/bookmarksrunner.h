@@ -25,10 +25,8 @@
 #include <krunner/abstractrunner.h>
 
 
-class KBookmark;
 class Browser;
 class BrowserFactory;
-class KJob;
 
 /** This runner searchs for bookmarks in browsers like Konqueror, Firefox and Opera */
 class BookmarksRunner : public Plasma::AbstractRunner
