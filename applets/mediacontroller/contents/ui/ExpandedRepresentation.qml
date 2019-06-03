@@ -197,7 +197,8 @@ Item {
     Image {
         id: albumArt
         anchors {
-            horizontalCenter: parent.horizontalCenter
+            left: parent.left
+            right: parent.right
             top: playerCombo.bottom
             bottom: controlCol.top
             margins: units.smallSpacing
