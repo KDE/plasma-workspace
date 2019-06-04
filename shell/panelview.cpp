@@ -1189,7 +1189,7 @@ void PanelView::statusChanged(Plasma::Types::ItemStatus status)
         showTemporarily();
         setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
     } else if (status == Plasma::Types::AcceptingInputStatus) {
-        setFlags(flags() & (!Qt::WindowDoesNotAcceptFocus));
+        setFlags(flags() & ~Qt::WindowDoesNotAcceptFocus);
         KWindowSystem::forceActiveWindow(winId());
     } else {
         restoreAutoHide();
