@@ -34,6 +34,8 @@ FocusScope {
     Image {
         id: sceneImageBackground
         anchors.fill: parent
+        sourceSize.width: parent.width
+        sourceSize.height: parent.height
         fillMode: Image.PreserveAspectCrop
         smooth: true;
     }
