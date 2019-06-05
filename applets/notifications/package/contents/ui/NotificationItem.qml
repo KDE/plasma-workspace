@@ -317,7 +317,8 @@ ColumnLayout {
         id: thumbnailStripLoader
         Layout.leftMargin: notificationItem.thumbnailLeftPadding
         Layout.rightMargin: notificationItem.thumbnailRightPadding
-        Layout.topMargin: notificationItem.thumbnailTopPadding
+        // no change in Layout.topMargin to keep spacing to notification text consistent
+        Layout.topMargin: 0
         Layout.bottomMargin: notificationItem.thumbnailBottomPadding
         Layout.fillWidth: true
         active: notificationItem.urls.length > 0
@@ -325,7 +326,7 @@ ColumnLayout {
         sourceComponent: ThumbnailStrip {
             leftPadding: -thumbnailStripLoader.Layout.leftMargin
             rightPadding: -thumbnailStripLoader.Layout.rightMargin
-            topPadding: -thumbnailStripLoader.Layout.topMargin
+            topPadding: -notificationItem.thumbnailTopPadding
             bottomPadding: -thumbnailStripLoader.Layout.bottomMargin
             urls: notificationItem.urls
             onOpenUrl: notificationItem.openUrl(url)
