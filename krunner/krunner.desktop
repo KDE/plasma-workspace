@@ -49,4 +49,10 @@ Type=Application
 X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.krunner
 X-KDE-StartupNotify=false
-X-KDE-autostart-phase=2
+X-KDE-Shortcuts=Alt+Space,Alt+F2,Search
+Actions=RunClipboard
+
+[Desktop Action RunClipboard]
+Exec=krunner -c
+Name=Run command on clipboard contents
+X-KDE-Shortcuts=Alt+Shift+F2

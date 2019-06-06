@@ -42,6 +42,7 @@
 int main(int argc, char **argv)
 {
     qunsetenv("QT_DEVICE_PIXEL_RATIO");
+    QCommandLineParser parser;
     QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
 
     const bool qpaVariable = qEnvironmentVariableIsSet("QT_QPA_PLATFORM");
@@ -68,21 +69,28 @@ int main(int argc, char **argv)
     KAboutData::setApplicationData(aboutData);
     app.setQuitOnLastWindowClosed(false);
 
-    {
-        QCommandLineParser parser;
-        QCommandLineOption replaceOption({QStringLiteral("replace")}, i18n("Replace an existing instance"));
-        parser.addOption(replaceOption);
-        aboutData.setupCommandLine(&parser);
+    QCommandLineOption clipboardOption({QStringLiteral("c"), QStringLiteral("clipboard")},
+                                        i18n("Use the clipboard contents as query for KRunner"));
+    QCommandLineOption daemonOption({QStringLiteral("d"), QStringLiteral("daemon")},
+                                        i18n("Start KRunner in the background, don't show it."));
+    QCommandLineOption replaceOption({QStringLiteral("replace")}, i18n("Replace an existing instance"));
 
-        parser.process(app);
-        aboutData.processCommandLine(&parser);
-        if (parser.isSet(replaceOption)) {
-            auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.krunner"),
-                                                        QStringLiteral("/MainApplication"),
-                                                        QStringLiteral("org.qtproject.Qt.QCoreApplication"),
-                                                        QStringLiteral("quit"));
-            QDBusConnection::sessionBus().call(message); //deliberately block until it's done, so we register the name after the app quits
-        }
+    parser.addOption(clipboardOption);
+    parser.addOption(daemonOption);
+    parser.addOption(replaceOption);
+    parser.addPositionalArgument(QStringLiteral("query"), i18n("The query to run, only used if -c is not provided"));
+
+    aboutData.setupCommandLine(&parser);
+
+    parser.process(app);
+    aboutData.processCommandLine(&parser);
+
+    if (parser.isSet(replaceOption)) {
+        auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.krunner"),
+                                                    QStringLiteral("/MainApplication"),
+                                                    QStringLiteral("org.qtproject.Qt.QCoreApplication"),
+                                                    QStringLiteral("quit"));
+        QDBusConnection::sessionBus().call(message); //deliberately block until it's done, so we register the name after the app quits
     }
 
     if (!KAuthorized::authorize(QStringLiteral("run_command"))) {
@@ -100,9 +108,28 @@ int main(int argc, char **argv)
     QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     View view;
-    view.setVisible(false);
 
-    QObject::connect(&service, &KDBusService::activateRequested, &view, &View::display);
+    auto updateVisibility = [&]() {
+        const QString query = parser.positionalArguments().value(0);
+
+        if (parser.isSet(daemonOption)) {
+            view.setVisible(false);
+        } else if (parser.isSet(clipboardOption)) {
+            view.displayWithClipboardContents();
+        } else if (!query.isEmpty()) {
+            view.query(query);
+        } else {
+            view.display();
+        }
+    };
+
+    updateVisibility();
+
+    QObject::connect(&service, &KDBusService::activateRequested, &view, [&](const QStringList &arguments, const QString &workingDirectory) {
+        Q_UNUSED(workingDirectory)
+        parser.parse(arguments);
+        updateVisibility();
+    });
 
     return app.exec();
 }

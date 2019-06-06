@@ -31,7 +31,6 @@
 #include <KAuthorized>
 #include <KWindowSystem>
 #include <KWindowEffects>
-#include <KGlobalAccel>
 #include <KLocalizedString>
 #include <KDirWatch>
 #include <KCrash>
@@ -68,22 +67,6 @@ View::View(QWindow *)
 
     new AppAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/App"), this);
-
-    QAction *a = new QAction(nullptr);
-    QObject::connect(a, &QAction::triggered, this, &View::displayOrHide);
-    a->setText(i18n("Show KRunner"));
-    a->setObjectName(QStringLiteral("run command"));
-    a->setProperty("componentDisplayName", i18nc("Name for krunner shortcuts category", "KRunner"));
-    KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space), KGlobalAccel::NoAutoloading);
-    KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT + Qt::Key_Space) << QKeySequence(Qt::ALT + Qt::Key_F2) << Qt::Key_Search);
-
-    a = new QAction(nullptr);
-    QObject::connect(a, &QAction::triggered, this, &View::displayWithClipboardContents);
-    a->setText(i18n("Run Command on clipboard contents"));
-    a->setObjectName(QStringLiteral("run command on clipboard contents"));
-    a->setProperty("componentDisplayName", i18nc("Name for krunner shortcuts category", "KRunner"));
-    KGlobalAccel::self()->setDefaultShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::SHIFT+Qt::Key_F2));
-    KGlobalAccel::self()->setShortcut(a, QList<QKeySequence>() << QKeySequence(Qt::ALT+Qt::SHIFT+Qt::Key_F2));
 
     m_qmlObj = new KDeclarative::QmlObject(this);
     m_qmlObj->setInitializationDelayed(true);

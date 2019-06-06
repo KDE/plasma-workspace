@@ -18,7 +18,6 @@ target_link_libraries(krunner
     KF5::Declarative
     KF5::I18n
     KF5::PlasmaQuick
-    KF5::GlobalAccel
     KF5::DBusAddons
     KF5::Crash
     KF5::WaylandClient
@@ -29,7 +28,7 @@ target_compile_definitions(krunner PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}
 
 install(TARGETS krunner ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES ${krunner_dbusAppXML} DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
-install(FILES krunner.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
+install(FILES krunner.desktop DESTINATION ${DATA_INSTALL_DIR}/kglobalaccel)
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KRunnerAppDBusInterface")
 configure_package_config_file(KRunnerAppDBusInterfaceConfig.cmake.in
