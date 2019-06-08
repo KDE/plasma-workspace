@@ -55,4 +55,10 @@ Actions=RunClipboard
 [Desktop Action RunClipboard]
 Exec=krunner -c
 Name=Run command on clipboard contents
+Name[ca]=Executa una ordre al contingut del porta-retalls
+Name[nl]=Commando uitvoeren op klembordinhoud
+Name[pt]=Executar o comando no conteúdo da área de transferência
+Name[sv]=Kör kommando med klippbordets innehåll
+Name[uk]=Виконати команду над вмістом буфера обміну
+Name[x-test]=xxRun command on clipboard contentsxx
 X-KDE-Shortcuts=Alt+Shift+F2
