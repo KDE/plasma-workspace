@@ -56,6 +56,7 @@ Actions=RunClipboard
 Exec=krunner -c
 Name=Run command on clipboard contents
 Name[ca]=Executa una ordre al contingut del porta-retalls
+Name[eu]=Exekutatu komandoa arbelaren edukiaren gain
 Name[nl]=Commando uitvoeren op klembordinhoud
 Name[pt]=Executar o comando no conteúdo da área de transferência
 Name[sv]=Kör kommando med klippbordets innehåll
