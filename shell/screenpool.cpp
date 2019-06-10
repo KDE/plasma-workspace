@@ -66,7 +66,8 @@ void ScreenPool::load()
     }
 
     //restore the known ids to connector mappings
-    foreach (const QString &key, m_configGroup.keyList()) {
+    const auto keys = m_configGroup.keyList();
+    for (const QString &key : keys) {
         QString connector = m_configGroup.readEntry(key, QString());
         if (!key.isEmpty() && !connector.isEmpty() &&
             !m_connectorForId.contains(key.toInt()) &&

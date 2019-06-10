@@ -999,7 +999,8 @@ bool PanelView::canSetStrut() const
 
     //Extended struts against a screen edge near to another screen are really harmful, so windows maximized under the panel is a lesser pain
     //TODO: force "windows can cover" in those cases?
-    foreach (int id, m_corona->screenIds()) {
+    const auto screenIds = m_corona->screenIds();
+    for (int id : screenIds) {
         if (id == containment()->screen()) {
             continue;
         }
