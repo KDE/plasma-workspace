@@ -168,7 +168,6 @@ private:
 
     bool isWM( const KSMClient* client ) const;
     bool isWM( const QString& program ) const;
-    void selectWm( const QString& kdewm );
     bool defaultSession() const; // empty session
     void setupXIOErrorHandler();
 
@@ -198,7 +197,6 @@ private:
     void saveCurrentSession();
     void saveCurrentSessionAs( const QString & );
     QStringList sessionList();
-    void wmChanged();
     void saveSubSession( const QString &name, QStringList saveAndClose,
                        QStringList saveOnly = QStringList() );
     void restoreSubSession( const QString &name );

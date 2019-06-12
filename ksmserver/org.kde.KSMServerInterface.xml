@@ -23,7 +23,6 @@
     <method name="saveCurrentSessionAs">
       <arg type="s" direction="in"/>
     </method>
-    <method name="wmChanged"/>
     <method name="saveSubSession">
       <arg type="s" direction="in"/>
       <arg type="as" direction="in"/>

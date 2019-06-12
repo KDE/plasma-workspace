@@ -626,7 +626,12 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
     clientInteracting = nullptr;
     xonCommand = config.readEntry( "xonCommand", "xon" );
 
-    selectWm( windowManager );
+    if (windowManager.isEmpty()) {
+        wm = QStringLiteral(KWIN_BIN);
+    } else {
+        wm = windowManager;
+    }
+    wmCommands = QStringList({wm});
 
     only_local = flags.testFlag(InitFlag::OnlyLocal);
 #ifdef HAVE__ICETRANSNOLISTEN
@@ -981,53 +986,6 @@ bool KSMServer::isWM( const QString& program ) const
 bool KSMServer::defaultSession() const
 {
     return sessionGroup.isEmpty();
-}
-
-// selection logic:
-// - $KDEWM is set - use that
-// - a wm is selected using the kcm - use that
-// - if that fails, just use KWin
-void KSMServer::selectWm( const QString& kdewm )
-{
-    wm = QStringLiteral( KWIN_BIN ); // defaults
-    wmCommands = ( QStringList() << QStringLiteral( KWIN_BIN ) );
-    if( !kdewm.isEmpty())
-    {
-        wmCommands = ( QStringList() << kdewm );
-        wm = kdewm;
-        return;
-    }
-    KConfigGroup config(KSharedConfig::openConfig(), "General");
-
-    QString cfgwm = config.readEntry( "windowManager", "kwin" );
-    KDesktopFile file( QStandardPaths::AppDataLocation,
-                       QStringLiteral( "windowmanagers/" ) + cfgwm + QStringLiteral( ".desktop" ) );
-
-    if( file.noDisplay())
-        return;
-    if( !file.tryExec())
-        return;
-    QString testexec = file.desktopGroup().readEntry( "X-KDE-WindowManagerTestExec" );
-    if( !testexec.isEmpty())
-    {
-        KProcess proc;
-        proc.setShellCommand( testexec );
-        if( proc.execute() != 0 )
-            return;
-    }
-    QStringList cfgWmCommands = KShell::splitArgs( file.desktopGroup().readEntry( "Exec" ));
-    if( cfgWmCommands.isEmpty())
-        return;
-    QString smname = file.desktopGroup().readEntry( "X-KDE-WindowManagerId" );
-    // ok
-    wm = smname.isEmpty() ? cfgwm : smname;
-    wmCommands = cfgWmCommands;
-}
-
-void KSMServer::wmChanged()
-{
-    KSharedConfig::openConfig()->reparseConfiguration();
-    selectWm( QStringLiteral( "" ) );
 }
 
 void KSMServer::setupShortcuts()
