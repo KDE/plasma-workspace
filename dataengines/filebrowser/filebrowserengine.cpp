@@ -24,7 +24,6 @@
 #include <QDir>
 #include <KDirWatch>
 #include <QDebug>
-#include <KFileMetaInfo>
 
 #define InvalidIfEmpty(A) ((A.isEmpty())?(QVariant()):(QVariant(A)))
 #define forMatchingSources for (DataEngine::SourceDict::iterator it = sources.begin(); it != sources.end(); ++it) \
@@ -126,18 +125,8 @@ void FileBrowserEngine::updateData(const QString &path, EventType event)
         }
     } else if (type == FILE) {
         qDebug() << "file info processing: "<< path;
-        KFileMetaInfo kfmi(path, QString(), KFileMetaInfo::Everything);
-        if (kfmi.isValid()) {
-            qDebug() << "METAINFO: " << kfmi.keys();
-
-            forMatchingSources {
-                qDebug() << "MATCH";
-                it.value()->setData(QStringLiteral("item.type"), QVariant("file"));
-
-                for (QHash< QString, KFileMetaInfoItem >::const_iterator i = kfmi.items().constBegin(); i != kfmi.items().constEnd(); ++i) {
-                    it.value()->setData(i.key(), i.value().value());
-                }
-            }
+        forMatchingSources {
+            it.value()->setData(QStringLiteral("item.type"), QVariant("file"));
         }
     } else {
         forMatchingSources {

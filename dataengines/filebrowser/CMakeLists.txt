@@ -7,7 +7,6 @@ target_link_libraries(plasma_engine_filebrowser
     KF5::Plasma
     KF5::Service
     KF5::KIOCore
-    KF5::KDELibs4Support
 )
 
 kcoreaddons_desktop_to_json(plasma_engine_filebrowser plasma-dataengine-filebrowser.desktop)
