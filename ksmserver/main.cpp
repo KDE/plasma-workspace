@@ -324,16 +324,10 @@ extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
 
     KConfigGroup config(KSharedConfig::openConfig(), "General");
 
-    int realScreenCount = ScreenCount( QX11Info::display() );
-    bool screenCountChanged =
-         ( config.readEntry( "screenCount", realScreenCount ) != realScreenCount );
-
     QString loginMode = config.readEntry( "loginMode", "restorePreviousLogout" );
 
-    if ( parser.isSet( restoreOption ) && ! screenCountChanged )
+    if ( parser.isSet( restoreOption ))
         server->restoreSession( QStringLiteral( SESSION_BY_USER ) );
-    else if ( loginMode == QStringLiteral( "default" ) || screenCountChanged )
-        server->startDefaultSession();
     else if ( loginMode == QStringLiteral( "restorePreviousLogout" ) )
         server->restoreSession( QStringLiteral( SESSION_PREVIOUS_LOGOUT ) );
     else if ( loginMode == QStringLiteral( "restoreSavedSession" ) )
