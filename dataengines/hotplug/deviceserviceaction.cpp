@@ -27,7 +27,6 @@
 #include <solid/storageaccess.h>
 #include <solid/block.h>
 
-
 class MacroExpander : public KMacroExpanderBase
 {
 public:

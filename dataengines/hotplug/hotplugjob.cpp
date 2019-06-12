@@ -1,5 +1,6 @@
 /*
  *   Copyright (C) 2011 Viranch Mehta <viranch.mehta@gmail.com>
+ *   Copyright (C) 2019 Harald Sitter <sitter@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License version 2 as
@@ -19,29 +20,36 @@
 #include "hotplugjob.h"
 #include "hotplugengine.h"
 
-#include <QDBusInterface>
-#include <QDBusReply>
+#include "deviceserviceaction.h"
 
 #include <QDebug>
+#include <QStandardPaths>
+#include <KDesktopFileActions>
+#include <KLocalizedString>
 
 void HotplugJob::start()
 {
-    QString udi (m_dest);
-    QString operation = operationName();
-    
-    if (operation == QLatin1String("invokeAction")) {
-        QString action = parameters()[QStringLiteral("predicate")].toString();
+    if (operationName() == QLatin1String("invokeAction")) {
+        const QString desktopFile = parameters()[QStringLiteral("predicate")].toString();
+        const QString filePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "solid/actions/" + desktopFile);
 
-        QStringList desktopFiles;
-        desktopFiles << action;
+        QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(filePath, true);
+        if (services.size() < 1) {
+            qWarning() << "Failed to resolve hotplugjob action" << desktopFile << filePath;
+            setError(KJob::UserDefinedError);
+            setErrorText(i18nc("error; %1 is the desktop file name of the service",
+                               "Failed to resolve service action for %1.", desktopFile));
+            setResult(false); // calls emitResult internally.
+            return;
+        }
+        // Cannot be > 1, we only have one filePath, and < 1 was handled as error.
+        Q_ASSERT(services.size() == 1);
 
-        QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded5"),
-                                                          QStringLiteral("/modules/soliduiserver"),
-                                                          QStringLiteral("org.kde.SolidUiServer"),
-                                                          QStringLiteral("showActionsDialog"));
+        DeviceServiceAction action;
+        action.setService(services.takeFirst());
 
-        msg.setArguments(QList<QVariant>() << udi << desktopFiles);
-        QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
+        Solid::Device device(m_dest);
+        action.execute(device);
     }
 
     emitResult();
