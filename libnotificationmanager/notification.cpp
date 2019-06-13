@@ -37,6 +37,7 @@
 #include <KConfigGroup>
 #include <KIconLoader>
 #include <KService>
+#include <KServiceTypeTrader>
 
 #include "debug.h"
 
@@ -268,6 +269,36 @@ QSize Notification::Private::maximumImageSize()
     return QSize(256, 256);
 }
 
+KService::Ptr Notification::Private::serviceForDesktopEntry(const QString &desktopEntry)
+{
+    KService::Ptr service = KService::serviceByDesktopName(desktopEntry);
+
+    if (!service) {
+        const QString lowerDesktopEntry = desktopEntry.toLower();
+        service = KService::serviceByDesktopName(lowerDesktopEntry);
+    }
+
+    // Try if it's a renamed flatpak
+    if (!service) {
+        const QString desktopId = desktopEntry + QLatin1String(".desktop");
+        // HACK Querying for XDG lists in KServiceTypeTrader does not work, do it manually
+        const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
+                                                                QStringLiteral("exist Exec and exist [X-Flatpak-RenamedFrom]"));
+        for (auto it = services.constBegin(); it != services.constEnd() && !service; ++it) {
+            const QVariant renamedFrom = (*it)->property(QStringLiteral("X-Flatpak-RenamedFrom"), QVariant::String);
+            const auto names = renamedFrom.toString().split(QChar(';'));
+            for (const QString &name : names) {
+                if (name == desktopId) {
+                    service = *it;
+                    break;
+                }
+            }
+        }
+    }
+
+    return service;
+}
+
 void Notification::Private::processHints(const QVariantMap &hints)
 {
     auto end = hints.end();
@@ -277,22 +308,13 @@ void Notification::Private::processHints(const QVariantMap &hints)
     QString serviceName;
 
     configurableService = false;
-    if (!desktopEntry.isEmpty()) {
-        KService::Ptr service = KService::serviceByDesktopName(desktopEntry);
-        // Also try lower-case desktopEntry (Firefox sends "Firefox" which doesn't match "firefox"...)
-        if (!service) {
-            const QString lowerDesktopEntry = desktopEntry.toLower();
-            service = KService::serviceByDesktopName(lowerDesktopEntry);
-            if (service) {
-                qCInfo(NOTIFICATIONMANAGER) << "Application sent desktop-entry" << desktopEntry << "but it actually was" << lowerDesktopEntry << ", this is an application bug!";
-                desktopEntry = lowerDesktopEntry;
-            }
-        }
-        if (service) {
-            serviceName = service->name();
-            applicationIconName = service->icon();
-            configurableService = !service->noDisplay();
-        }
+
+    KService::Ptr service = serviceForDesktopEntry(desktopEntry);
+    if (service) {
+        desktopEntry = service->desktopEntryName();
+        serviceName = service->name();
+        applicationIconName = service->icon();
+        configurableService = !service->noDisplay();
     }
 
     notifyRcName = hints.value(QStringLiteral("x-kde-appname")).toString();
