@@ -28,6 +28,8 @@
 #include <QString>
 #include <QUrl>
 
+#include <KService>
+
 #include "notifications.h"
 
 namespace NotificationManager
@@ -47,6 +49,8 @@ public:
 
     static QString defaultComponentName();
     static QSize maximumImageSize();
+
+    static KService::Ptr serviceForDesktopEntry(const QString &desktopEntry);
 
     void processHints(const QVariantMap &hints);
 
