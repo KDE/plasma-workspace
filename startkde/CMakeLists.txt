@@ -16,6 +16,7 @@ add_executable(startplasma-x11 startplasma.cpp startplasma-x11.cpp kcheckrunning
 add_executable(startplasma-wayland startplasma.cpp startplasma-wayland.cpp ${startplasma_SRCS})
 add_executable(startplasma-waylandsession startplasma.cpp startplasma-waylandsession.cpp ${startplasma_SRCS})
 
+target_include_directories(startplasma-x11 PRIVATE ${X11_X11_INCLUDE_PATH})
 target_link_libraries(startplasma-x11 PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore
     ${X11_X11_LIB} # for kcheckrunning
 )
