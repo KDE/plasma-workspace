@@ -20,6 +20,7 @@ PlasmaComponents.ToolButton {
 
     menu: QQC.Menu {
         id: keyboardMenu
+        style: BreezeMenuStyle {}
         Instantiator {
             id: instantiator
             model: keyboard.layouts
