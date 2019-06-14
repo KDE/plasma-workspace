@@ -42,6 +42,7 @@ PlasmaComponents.ToolButton {
 
     menu: QQC.Menu {
         id: menu
+        style: BreezeMenuStyle {}
         Instantiator {
             id: instantiator
             model: sessionModel
