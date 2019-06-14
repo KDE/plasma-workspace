@@ -17,7 +17,7 @@ add_executable(startplasma-wayland startplasma.cpp startplasma-wayland.cpp ${sta
 add_executable(startplasma-waylandsession startplasma.cpp startplasma-waylandsession.cpp ${startplasma_SRCS})
 
 target_link_libraries(startplasma-x11 PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore
-    X11::X11 # for kcheckrunning
+    ${X11_X11_LIB} # for kcheckrunning
 )
 target_link_libraries(startplasma-wayland PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore)
 target_link_libraries(startplasma-waylandsession PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore)
