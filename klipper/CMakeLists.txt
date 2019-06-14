@@ -104,5 +104,9 @@ if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
 
-install( FILES klipper.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+if (${ECM_VERSION} STRGREATER "5.58.0")
+    install( FILES klipper.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR} )
+else()
+    install( FILES klipper.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+endif()
 
