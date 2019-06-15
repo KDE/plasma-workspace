@@ -191,7 +191,6 @@ protected Q_SLOTS:
     void showConfigurationInterface(Plasma::Applet *applet) override;
 
 private Q_SLOTS:
-    void themeChanged();
     void positionPanel();
     void restore();
     void setAutoHideEnabled(bool autoHideEnabled);

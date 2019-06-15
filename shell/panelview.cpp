@@ -78,8 +78,8 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint|Qt::WindowDoesNotAcceptFocus);
 
-    connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelView::themeChanged);
-    connect(this, SIGNAL(backgroundHintsChanged()), this, SLOT(themeChanged()));
+    connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelView::updateMask);
+    connect(this, &PanelView::backgroundHintsChanged, this, &PanelView::updateMask);
     // TODO: add finished/componentComplete signal to QuickViewSharedEngine,
     // so we exactly know when rootobject is available
     connect(this, &QuickViewSharedEngine::statusChanged,
@@ -747,7 +747,7 @@ void PanelView::moveEvent(QMoveEvent *ev)
 void PanelView::integrateScreen()
 {
     connect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &PanelView::restore);
-    themeChanged();
+    updateMask();
     KWindowSystem::setOnAllDesktops(winId(), true);
     KWindowSystem::setType(winId(), NET::Dock);
 #if HAVE_X11
@@ -964,17 +964,34 @@ QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
 
 void PanelView::updateMask()
 {
-    QRegion mask;
+    if (m_backgroundHints == Plasma::Types::NoBackground) {
+        KWindowEffects::enableBlurBehind(winId(), false);
+        KWindowEffects::enableBackgroundContrast(winId(), false);
+        setMask(QRegion());
+    } else {
+        QRegion mask;
 
-    QQuickItem *rootObject = this->rootObject();
-    if (rootObject) {
-        const QVariant maskProperty = rootObject->property("panelMask");
-        if (static_cast<QMetaType::Type>(maskProperty.type()) == QMetaType::QRegion) {
-            mask = maskProperty.value<QRegion>();
+        QQuickItem *rootObject = this->rootObject();
+        if (rootObject) {
+            const QVariant maskProperty = rootObject->property("panelMask");
+            if (static_cast<QMetaType::Type>(maskProperty.type()) == QMetaType::QRegion) {
+                mask = maskProperty.value<QRegion>();
+            }
+        }
+
+        KWindowEffects::enableBlurBehind(winId(), m_theme.blurBehindEnabled(), mask);
+        KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
+                                                          m_theme.backgroundContrast(),
+                                                          m_theme.backgroundIntensity(),
+                                                          m_theme.backgroundSaturation(),
+                                                          mask);
+
+        if (KWindowSystem::compositingActive()) {
+            setMask(QRegion());
+        } else {
+            setMask(mask);
         }
     }
-
-    setMask(mask);
 }
 
 bool PanelView::canSetStrut() const
@@ -1115,24 +1132,6 @@ void PanelView::updateStruts()
                                              strut.bottom_start,
                                              strut.bottom_end);
 
-}
-
-void PanelView::themeChanged()
-{
-    if (m_backgroundHints == Plasma::Types::NoBackground) {
-        KWindowEffects::enableBlurBehind(winId(), false);
-        KWindowEffects::enableBackgroundContrast(winId(), false);        
-    } else {
-        KWindowEffects::enableBlurBehind(winId(), m_theme.blurBehindEnabled());
-        KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
-                                                        m_theme.backgroundContrast(),
-                                                        m_theme.backgroundIntensity(),
-                                                        m_theme.backgroundSaturation());        
-    }
-
-#if PLASMA_VERSION < QT_VERSION_CHECK(5,59,0)
-    updateMask();
-#endif
 }
 
 void PanelView::containmentChanged()
