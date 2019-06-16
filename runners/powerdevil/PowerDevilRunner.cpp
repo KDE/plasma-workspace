@@ -249,7 +249,7 @@ void PowerDevilRunner::run(const Plasma::RunnerContext &context, const Plasma::Q
     } else if (match.id() == QLatin1String("PowerDevil_DimHalf")) {
         QDBusReply<int> brightness = brightnessIface.asyncCall(QStringLiteral("brightness"));
         brightnessIface.asyncCall(QStringLiteral("setBrightness"), static_cast<int>(brightness / 2));
-    } else if (match.id().startsWith(QLatin1String("PowerDevil_Suspend"))) {
+    } else if (match.id().startsWith(QLatin1String("PowerDevil_Sleep"))) {
         switch ((Solid::PowerManagement::SleepState)match.data().toInt()) {
             case Solid::PowerManagement::SuspendState:
             case Solid::PowerManagement::StandbyState:
