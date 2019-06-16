@@ -66,6 +66,18 @@ Item {
             "dataSource": smSource});
     }
 
+    function showSource(source) {
+        if (plasmoid.configuration.sources && plasmoid.configuration.sources.length > 0) {
+            return plasmoid.configuration.sources.indexOf(encodeURIComponent(source)) !== -1;
+        } else {
+            return sourceDefaultEnable(source);
+        }
+    }
+
+    function sourceDefaultEnable(source) {
+        return true;
+    }
+
     ListModel {
         id: sourcesModel
     }
@@ -82,11 +94,9 @@ Item {
         engine: "systemmonitor"
         interval: plasmoid.configuration.updateInterval
         onSourceAdded: {
-            if (plasmoid.configuration.sources && plasmoid.configuration.sources.length > 0 &&
-                plasmoid.configuration.sources.indexOf(encodeURIComponent(source)) === -1) {
-                return;
+            if (showSource(source)) {
+                rootItem.sourceAdded(source);
             }
-            rootItem.sourceAdded(source);
         }
         onSourceRemoved: {
             for (var i = sourcesModel.count - 1; i >= 0; --i) {

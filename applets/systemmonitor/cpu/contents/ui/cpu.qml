@@ -35,6 +35,10 @@ Applet {
         }
     }
 
+    function sourceDefaultEnable(source) {
+        return source.match(/^cpu(\/|%2F)system(\/|%2F)TotalLoad/);
+    }
+
     delegate: SinglePlotter {
         autoRange: false
         rangeMin: 0

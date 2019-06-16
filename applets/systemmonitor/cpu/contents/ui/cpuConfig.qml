@@ -34,4 +34,8 @@ ConfigGeneral {
             root.addSource(source, match[1]);
         }
     }
+
+    function sourceDefaultEnable(source) {
+        return source.match(/^cpu(\/|%2F)system(\/|%2F)TotalLoad/);
+    }
 }

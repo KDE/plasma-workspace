@@ -40,7 +40,7 @@ Item {
             for (var i in dataSourcesColumn.children) {
                 var child = dataSourcesColumn.children[i];
                 if (child.checked !== undefined) {
-                    child.checked = true;
+                    child.checked = sourceDefaultEnable(child.source);
                 }
             }
         } else {
@@ -51,6 +51,10 @@ Item {
                 }
             }
         }
+    }
+
+    function sourceDefaultEnable(source) {
+        return true;
     }
 
     onCfg_sourcesChanged: {
