@@ -52,6 +52,7 @@ public:
 
     static KService::Ptr serviceForDesktopEntry(const QString &desktopEntry);
 
+    void setDesktopEntry(const QString &desktopEntry);
     void processHints(const QVariantMap &hints);
 
     void setUrgency(Notifications::Urgency urgency);
@@ -69,6 +70,7 @@ public:
     QString applicationName;
     QString desktopEntry;
     bool configurableService = false;
+    QString serviceName; // "Name" field in KService from desktopEntry
     QString applicationIconName;
 
     QString originName;

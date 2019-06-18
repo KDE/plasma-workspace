@@ -138,13 +138,30 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
         notification.setIcon(app_icon);
     }
 
-    // No application name? Try to figure out the process name using the sender's PID
-    if (notification.applicationName().isEmpty()) {
+    uint pid = 0;
+    if (notification.desktopEntry().isEmpty() || notification.applicationName().isEmpty()) {
         qCInfo(NOTIFICATIONMANAGER) << "Notification from service" << message().service() << "didn't contain any identification information, this is an application bug!";
 
-        const QString processName = Utils::processNameFromDBusService(connection(), message().service());
+        QDBusReply<uint> pidReply = connection().interface()->servicePid(message().service());
+        if (pidReply.isValid()) {
+            pid = pidReply.value();
+        }
+    }
+
+    // No desktop entry? Try to read the BAMF_DESKTOP_FILE_HINT in the environment of snaps
+    if (notification.desktopEntry().isEmpty() && pid > 0) {
+        const QString desktopEntry = Utils::desktopEntryFromPid(pid);
+        if (!desktopEntry.isEmpty()) {
+            qCDebug(NOTIFICATIONMANAGER) << "Resolved notification to be from desktop entry" << desktopEntry;
+            notification.setDesktopEntry(desktopEntry);
+        }
+    }
+
+    // No application name? Try to figure out the process name using the sender's PID
+    if (notification.applicationName().isEmpty() && pid > 0) {
+        const QString processName = Utils::processNameFromPid(pid);
         if (!processName.isEmpty()) {
-            qCDebug(NOTIFICATIONMANAGER) << "Resolved notification to be from" << processName;
+            qCDebug(NOTIFICATIONMANAGER) << "Resolved notification to be from process name" << processName;
             notification.setApplicationName(processName);
         }
     }
