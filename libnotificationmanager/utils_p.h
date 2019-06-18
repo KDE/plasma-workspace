@@ -32,8 +32,9 @@ namespace NotificationManager
 namespace Utils
 {
 
-QString processNameFromDBusService(const QDBusConnection &connection,
-                                   const QString &serviceName);
+QString processNameFromPid(uint pid);
+
+QString desktopEntryFromPid(uint pid);
 
 QModelIndex mapToModel(const QModelIndex &idx, const QAbstractItemModel *sourceModel);
 

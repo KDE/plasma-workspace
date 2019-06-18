@@ -71,6 +71,7 @@ public:
     void setImage(const QImage &image);
 
     QString desktopEntry() const;
+    void setDesktopEntry(const QString &desktopEntry);
 
     QString notifyRcName() const;
     QString eventId() const;

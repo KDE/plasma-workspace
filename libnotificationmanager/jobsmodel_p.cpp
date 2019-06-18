@@ -265,10 +265,16 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry,
     const QString serviceName = message().service();
     if (job->applicationName().isEmpty()) {
         qCInfo(NOTIFICATIONMANAGER) << "JobView request from" << serviceName << "didn't contain any identification information, this is an application bug!";
-        const QString processName = Utils::processNameFromDBusService(connection(), serviceName);
-        if (!processName.isEmpty()) {
-            qCDebug(NOTIFICATIONMANAGER) << "Resolved JobView request to be from" << processName;
-            job->setApplicationName(processName);
+
+        QDBusReply<uint> pidReply = connection().interface()->servicePid(serviceName);
+        if (pidReply.isValid()) {
+            const auto pid = pidReply.value();
+
+            const QString processName = Utils::processNameFromPid(pid);
+            if (!processName.isEmpty()) {
+                qCDebug(NOTIFICATIONMANAGER) << "Resolved JobView request to be from" << processName;
+                job->setApplicationName(processName);
+            }
         }
     }
 

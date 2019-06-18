@@ -271,7 +271,13 @@ QSize Notification::Private::maximumImageSize()
 
 KService::Ptr Notification::Private::serviceForDesktopEntry(const QString &desktopEntry)
 {
-    KService::Ptr service = KService::serviceByDesktopName(desktopEntry);
+    KService::Ptr service;
+
+    if (desktopEntry.startsWith(QLatin1Char('/'))) {
+        service = KService::serviceByDesktopPath(desktopEntry);
+    } else {
+        service = KService::serviceByDesktopName(desktopEntry);
+    }
 
     if (!service) {
         const QString lowerDesktopEntry = desktopEntry.toLower();
@@ -299,25 +305,20 @@ KService::Ptr Notification::Private::serviceForDesktopEntry(const QString &deskt
     return service;
 }
 
-void Notification::Private::processHints(const QVariantMap &hints)
+void Notification::Private::setDesktopEntry(const QString &desktopEntry)
 {
-    auto end = hints.end();
-
-    desktopEntry = hints.value(QStringLiteral("desktop-entry")).toString();
-
     QString serviceName;
 
     configurableService = false;
 
     KService::Ptr service = serviceForDesktopEntry(desktopEntry);
     if (service) {
-        desktopEntry = service->desktopEntryName();
+        this->desktopEntry = service->desktopEntryName();
         serviceName = service->name();
         applicationIconName = service->icon();
         configurableService = !service->noDisplay();
     }
 
-    notifyRcName = hints.value(QStringLiteral("x-kde-appname")).toString();
     const bool isDefaultEvent = (notifyRcName == defaultComponentName());
     configurableNotifyRc = false;
     if (!notifyRcName.isEmpty()) {
@@ -344,6 +345,15 @@ void Notification::Private::processHints(const QVariantMap &hints)
         const QRegularExpression regexp(QStringLiteral("^Event/([^/]*)$"));
         configurableNotifyRc = !config.groupList().filter(regexp).isEmpty();
     }
+}
+
+void Notification::Private::processHints(const QVariantMap &hints)
+{
+    auto end = hints.end();
+
+    notifyRcName = hints.value(QStringLiteral("x-kde-appname")).toString();
+
+    setDesktopEntry(hints.value(QStringLiteral("desktop-entry")).toString());
 
     // Special override for KDE Connect since the notification is sent by kdeconnectd
     // but actually comes from a different app on the phone
@@ -521,6 +531,11 @@ void Notification::setImage(const QImage &image)
 QString Notification::desktopEntry() const
 {
     return d->desktopEntry;
+}
+
+void Notification::setDesktopEntry(const QString &desktopEntry)
+{
+    d->setDesktopEntry(desktopEntry);
 }
 
 QString Notification::notifyRcName() const

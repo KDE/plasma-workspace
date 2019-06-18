@@ -24,25 +24,18 @@
 #include <QAbstractProxyModel>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
+#include <QFile>
+#include <QTextStream>
 
 #include <KConcatenateRowsProxyModel>
-
-#include <QDebug>
 
 #include <processcore/processes.h>
 #include <processcore/process.h>
 
 using namespace NotificationManager;
 
-QString Utils::processNameFromDBusService(const QDBusConnection &connection, const QString &serviceName)
+QString Utils::processNameFromPid(uint pid)
 {
-    QDBusReply<uint> pidReply = connection.interface()->servicePid(serviceName);
-    if (!pidReply.isValid()) {
-        return QString();
-    }
-
-    const auto pid = pidReply.value();
-
     KSysGuard::Processes procs;
     procs.updateOrAddProcess(pid);
 
@@ -53,6 +46,32 @@ QString Utils::processNameFromDBusService(const QDBusConnection &connection, con
     }
 
     return proc->name();
+}
+
+QString Utils::desktopEntryFromPid(uint pid)
+{
+    QFile environFile(QStringLiteral("/proc/%1/environ").arg(QString::number(pid)));
+    if (!environFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        return QString();
+    }
+
+    const QByteArray bamfDesktopFileHint = QByteArrayLiteral("BAMF_DESKTOP_FILE_HINT");
+
+    const auto lines = environFile.readAll().split('\0');
+    for (const QByteArray &line : lines) {
+        const int equalsIdx = line.indexOf('=');
+        if (equalsIdx <= 0) {
+            continue;
+        }
+
+        const QByteArray key = line.left(equalsIdx);
+        const QByteArray value = line.mid(equalsIdx + 1);
+        if (key == bamfDesktopFileHint) {
+            return value;
+        }
+    }
+
+    return QString();
 }
 
 QModelIndex Utils::mapToModel(const QModelIndex &idx, const QAbstractItemModel *sourceModel)
