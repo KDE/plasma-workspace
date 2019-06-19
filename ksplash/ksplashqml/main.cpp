@@ -56,36 +56,13 @@ void logMessageHandler(QtMsgType type, const char *msg)
 
 int main(int argc, char **argv)
 {
-    bool nofork = false;
     bool test = false;
-    bool printPid = false;
 
     for (int i = 1; i < argc; i++) {
         if (strcmp("--test", argv[i]) == 0 || strcmp("--help", argv[i]) == 0)
             test = true;
-        else if (strcmp("--pid", argv[i]) == 0)
-            printPid = true;
-        else if (strcmp("--nofork", argv[i]) == 0)
-            nofork = true;
     }
 
-    // lets fork and all that...
-
-    if (!test && !nofork) {
-        pid_t pid = fork();
-        if (pid < -1) {
-            return -1;
-        }
-
-        if (pid != 0) {
-            // this is the parent process, returning pid of the fork
-            if (printPid) {
-                std::cout << pid << std::endl;
-            }
-
-            return 0;
-        }
-    }
 
     //enable to send log output to /tmp/ksplash
     //which is useful for debugging
@@ -93,13 +70,6 @@ int main(int argc, char **argv)
     KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);
     SplashApp app(argc, argv);
-
-    if (!test && !nofork) {
-        // close stdin,stdout,stderr, otherwise startkde will block
-        close(0);
-        close(1);
-        close(2);
-    }
 
     return app.exec();
 }
