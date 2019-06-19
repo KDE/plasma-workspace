@@ -75,7 +75,7 @@ BackgroundListModel::BackgroundListModel(Image *wallpaper, QObject *parent)
 
     //TODO: on Qt 4.4 use the ui scale factor
     QFontMetrics fm(QGuiApplication::font());
-    m_screenshotSize = fm.width('M') * 15;
+    m_screenshotSize = fm.horizontalAdvance('M') * 15;
 }
 
 BackgroundListModel::~BackgroundListModel() = default;
