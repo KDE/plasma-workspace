@@ -102,6 +102,9 @@ Item {
                                  "powerdevilglobalconfig.desktop"]
     readonly property bool kcmsAuthorized: KCMShell.authorize(batterymonitor.kcms).length > 0
 
+    readonly property var kcm_energyinfo: ["kcm_energyinfo.desktop"]
+    readonly property bool kcmEnergyInformationAuthorized: KCMShell.authorize(kcm_energyinfo).length > 0
+
     onScreenBrightnessChanged: {
         if (disableBrightnessUpdate) {
             return;
@@ -128,10 +131,17 @@ Item {
         KCMShell.open(batterymonitor.kcms);
     }
 
+    function action_energyinformationkcm() {
+        KCMShell.open(batterymonitor.kcm_energyinfo);
+    }
+
     Component.onCompleted: {
         Logic.updateBrightness(batterymonitor, pmSource);
         Logic.updateInhibitions(batterymonitor, pmSource)
 
+        if (batterymonitor.kcmEnergyInformationAuthorized) {
+            plasmoid.setAction("energyinformationkcm", i18n("&Show Energy Information..."), "battery");
+        }
         if (batterymonitor.kcmsAuthorized) {
             plasmoid.setAction("powerdevilkcm", i18n("&Configure Power Saving..."), "preferences-system-power-management");
         }
