@@ -1,5 +1,7 @@
 [Mapping]
 Gimp-2.8=GIMP
+Gimp-2.10=GIMP
+Gimp-2.12=GIMP
 Google-chrome=Google Chrome
 Google-chrome-stable=Google Chrome
 Systemsettings=System Settings
