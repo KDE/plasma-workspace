@@ -207,9 +207,9 @@ InteractiveConsole::~InteractiveConsole()
 void InteractiveConsole::setMode(const QString &mode)
 {
     if (mode.toLower() == QLatin1String("desktop")) {
-        m_plasmaAction->setChecked(true);
+        m_plasmaAction->trigger();
     } else if (mode.toLower() == QLatin1String("windowmanager")) {
-        m_kwinAction->setChecked(true);
+        m_kwinAction->trigger();
     }
 }
 
