@@ -612,6 +612,8 @@ HistoryItemPtr Klipper::applyClipChanges( const QMimeData* clipData )
         saveHistory = false;
     }
 
+    m_last = item;
+
     if (saveHistory) {
         history()->insert( item );
     }
@@ -693,7 +695,7 @@ void Klipper::checkClipData( bool selectionMode )
         // This won't quite work, but it's close enough for now.
         // The trouble is that the top selection =! top clipboard
         // but we don't track that yet. We will....
-        auto top = history()->first();
+        auto top = m_last;
         if ( top ) {
             setClipboard( *top, selectionMode ? Selection : Clipboard);
         }
@@ -717,7 +719,7 @@ void Klipper::checkClipData( bool selectionMode )
     }
 
     if ( changed && clipEmpty && m_bNoNullClipboard ) {
-        auto top = history()->first();
+        auto top = m_last;
         if ( top ) {
             // keep old clipboard after someone set it to null
             qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
