@@ -159,6 +159,8 @@ private:
 
     QClipboard* m_clip;
 
+    QSharedPointer<HistoryItem> m_last;
+
     QTime m_showTimer;
 
     History* m_history;
