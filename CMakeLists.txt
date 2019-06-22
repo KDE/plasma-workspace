@@ -113,17 +113,7 @@ include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
-configure_file(plasma.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasma.desktop)
-install(FILES
-        ${CMAKE_CURRENT_BINARY_DIR}/plasma.desktop
-        DESTINATION ${KDE_INSTALL_DATADIR}/xsessions
-)
-
-configure_file(plasmawayland.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasmawayland.desktop)
-install(FILES
-        ${CMAKE_CURRENT_BINARY_DIR}/plasmawayland.desktop
-        DESTINATION ${KDE_INSTALL_DATADIR}/wayland-sessions
-)
+add_subdirectory(login-sessions)
 
 plasma_install_package(lookandfeel org.kde.breeze.desktop look-and-feel lookandfeel)
 
