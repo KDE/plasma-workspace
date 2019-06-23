@@ -127,7 +127,7 @@ RowLayout {
 
         function generateRemainingText() {
             if (notificationHeading.notificationType !== NotificationManager.Notifications.JobType
-                || notificationHeading.jobState === NotificationManager.Notifications.JobStateStopped) {
+                || notificationHeading.jobState !== NotificationManager.Notifications.JobStateRunning) {
                 return "";
             }
 
