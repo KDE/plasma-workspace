@@ -66,6 +66,8 @@ Q_SIGNALS:
 
     void jobViewChanged(int row, Job *job, const QVector<int> &roles);
 
+    void serviceOwnershipLost();
+
     // DBus
     // kuiserver
     void jobUrlsChanged(const QStringList &urls);

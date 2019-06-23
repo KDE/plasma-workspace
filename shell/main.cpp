@@ -171,6 +171,9 @@ int main(int argc, char *argv[])
         } else {
             cliOptions.showHelp(1);
         }
+    } else {
+        // Tells libnotificationmanager that we're the only true application that may own notification and job progress services
+        qApp->setProperty("_plasma_dbus_master", true);
     }
 
     if (cliOptions.isSet(replaceOption)) {

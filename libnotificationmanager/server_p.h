@@ -74,6 +74,7 @@ Q_SIGNALS:
     void inhibitedChanged();
     void inhibitionAdded();
     void inhibitionRemoved();
+    void serviceOwnershipLost();
 
 public: // stuff used by public class
     bool init();

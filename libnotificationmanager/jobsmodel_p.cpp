@@ -145,14 +145,51 @@ bool JobsModelPrivate::init()
         return false;
     }
 
-    if (sessionBus.registerService(QStringLiteral("org.kde.JobViewServer"))) {
+    // Only the "dbus master" (effectively plasmashell) should be the true owner of job progress reporting
+    const bool master = Utils::isDBusMaster();
+    const auto queueOptions = master ? QDBusConnectionInterface::ReplaceExistingService : QDBusConnectionInterface::DontQueueService;
+    const auto replacementOptions = master ? QDBusConnectionInterface::DontAllowReplacement : QDBusConnectionInterface::AllowReplacement;
+
+    const QString jobViewServerService = QStringLiteral("org.kde.JobViewServer");
+    const QString kuiserverService = QStringLiteral("org.kde.kuiserver");
+
+    QDBusConnectionInterface *dbusIface = QDBusConnection::sessionBus().interface();
+
+    if (!master) {
+        connect(dbusIface, &QDBusConnectionInterface::serviceUnregistered, this, [=](const QString &serviceName) {
+            // Close all running jobs as we're defunct now
+            if (serviceName == jobViewServerService || serviceName == kuiserverService) {
+                qCDebug(NOTIFICATIONMANAGER) << "Lost ownership of" << serviceName << "service";
+
+                const auto pendingJobs = m_pendingJobViews;
+                for (Job *job : pendingJobs) {
+                    remove(job);
+                }
+
+                const auto jobs = m_jobViews;
+                for (Job *job : jobs) {
+                    // We can keep the finished ones as they're non-interactive anyway
+                    if (job->state() != Notifications::JobStateStopped) {
+                        remove(job);
+                    }
+                }
+
+                m_valid = false;
+                emit serviceOwnershipLost();
+            }
+        });
+    }
+
+    auto registration = dbusIface->registerService(jobViewServerService, queueOptions, replacementOptions);
+    if (registration.value() == QDBusConnectionInterface::ServiceRegistered) {
         qCDebug(NOTIFICATIONMANAGER) << "Registered JobViewServer service on DBus";
     } else {
         qCWarning(NOTIFICATIONMANAGER) << "Failed to register JobViewServer service on DBus, is kuiserver running?";
         return false;
     }
 
-    if (!sessionBus.registerService(QStringLiteral("org.kde.kuiserver"))) {
+    registration = dbusIface->registerService(kuiserverService, queueOptions, replacementOptions);
+    if (registration.value() != QDBusConnectionInterface::ServiceRegistered) {
         qCWarning(NOTIFICATIONMANAGER) << "Failed to register org.kde.kuiserver service on DBus, is kuiserver running?";
         return false;
     }

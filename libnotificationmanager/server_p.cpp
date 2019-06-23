@@ -65,7 +65,27 @@ bool ServerPrivate::init()
         return false;
     }
 
-    if (!QDBusConnection::sessionBus().registerService(QStringLiteral("org.freedesktop.Notifications"))) {
+    // Only the "dbus master" (effectively plasmashell) should be the true owner of notifications
+    const bool master = Utils::isDBusMaster();
+
+    const QString notificationService = QStringLiteral("org.freedesktop.Notifications");
+
+    QDBusConnectionInterface *dbusIface = QDBusConnection::sessionBus().interface();
+
+    if (!master) {
+        connect(dbusIface, &QDBusConnectionInterface::serviceUnregistered, this, [=](const QString &serviceName) {
+            if (serviceName == notificationService) {
+                qCDebug(NOTIFICATIONMANAGER) << "Lost ownership of" << serviceName << "service";
+                emit serviceOwnershipLost();
+            }
+        });
+    }
+
+    auto registration = dbusIface->registerService(notificationService,
+        master ? QDBusConnectionInterface::ReplaceExistingService : QDBusConnectionInterface::DontQueueService,
+        master ? QDBusConnectionInterface::DontAllowReplacement : QDBusConnectionInterface::AllowReplacement
+    );
+    if (registration.value() != QDBusConnectionInterface::ServiceRegistered) {
         qCWarning(NOTIFICATIONMANAGER) << "Failed to register Notification service on DBus";
         return false;
     }

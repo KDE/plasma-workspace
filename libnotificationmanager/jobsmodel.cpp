@@ -63,6 +63,8 @@ JobsModel::JobsModel()
         const QModelIndex idx = index(row, 0);
         emit dataChanged(idx, idx, roles);
     });
+
+    connect(d, &JobsModelPrivate::serviceOwnershipLost, this, &JobsModel::serviceOwnershipLost);
 }
 
 JobsModel::~JobsModel() = default;
