@@ -132,7 +132,16 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
 {
     const QModelIndex sourceIdx = sourceModel()->index(source_row, 0, source_parent);
 
-    if (!m_showExpired && sourceIdx.data(Notifications::ExpiredRole).toBool()) {
+    const bool expired = sourceIdx.data(Notifications::ExpiredRole).toBool();
+    if (!m_showExpired && expired) {
+        return false;
+    }
+
+    // If the application isn't configurable in any way, it doesn't deserve to be in the history
+    // since there's no way for the user to get rid of it there.
+    if (expired && !sourceIdx.data(Notifications::ConfigurableRole).toBool()
+            // jobs are never configurable so this only applies to notifications
+            && sourceIdx.data(Notifications::TypeRole).toInt() == Notifications::NotificationType) {
         return false;
     }
 
