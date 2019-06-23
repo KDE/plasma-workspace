@@ -235,16 +235,20 @@ QtObject {
 
         for (var i = 0; i < popupInstantiator.count; ++i) {
             var popup = popupInstantiator.objectAt(i);
+            // Popup width is fixed, so don't rely on the actual window size
+            var popupEffectiveWidth = popupWidth + popup.margins.left + popup.margins.right;
 
             if (popupLocation & Qt.AlignHCenter) {
-                popup.x = x + (screenRect.width - popup.width) / 2;
+                popup.x = x + (screenRect.width - popupEffectiveWidth) / 2;
             } else if (popupLocation & Qt.AlignRight) {
-                popup.x = x + screenRect.width - popupEdgeDistance - popup.width;
+                popup.x = x + screenRect.width - popupEdgeDistance - popupEffectiveWidth;
             } else {
                 popup.x = x;
             }
 
-            var delta = popupSpacing + popup.height;
+            // If the popup isn't ready yet, ignore its occupied space for now.
+            // We'll reposition everything in onHeightChanged eventually.
+            var delta = popup.height + (popup.height > 0 ? popupSpacing : 0);
 
             if (popupLocation & Qt.AlignTop) {
                 popup.y = y;
@@ -395,8 +399,8 @@ QtObject {
             onResumeJobClicked: popupNotificationsModel.resumeJob(popupNotificationsModel.index(index, 0))
             onKillJobClicked: popupNotificationsModel.killJob(popupNotificationsModel.index(index, 0))
 
-            onHeightChanged: Qt.callLater(positionPopups)
-            onWidthChanged: Qt.callLater(positionPopups)
+            // popup width is fixed
+            onHeightChanged: positionPopups()
 
             Component.onCompleted: {
                 // Register apps that were seen spawning a popup so they can be configured later
@@ -411,9 +415,8 @@ QtObject {
             }
         }
         onObjectAdded: {
-            // also needed for it to correctly layout its contents
+            positionPopups();
             object.visible = true;
-            Qt.callLater(positionPopups);
         }
         onObjectRemoved: {
             var notificationId = object.notificationId
@@ -421,7 +424,7 @@ QtObject {
             // cannot use QModelIndex here as the model row is already gone
             popupNotificationsModel.startTimeout(notificationId);
 
-            Qt.callLater(positionPopups);
+            positionPopups();
         }
     }
 
