@@ -132,7 +132,7 @@ Comment[zh_TW]=以數位格式顯示時間
 
 Icon=preferences-system-time
 Type=Service
-X-KDE-ParentApp=org.kde.plasmashell
+X-KDE-ParentApp=
 X-KDE-PluginInfo-Author=Martin Klapetek
 X-KDE-PluginInfo-Email=mklapetek@kde.org
 X-KDE-PluginInfo-License=GPL-2.0+

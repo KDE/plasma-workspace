@@ -147,7 +147,7 @@ Comment[zh_TW]=顯示通知與工作
 
 Type=Service
 Icon=preferences-desktop-notification-bell
-X-KDE-ParentApp=org.kde.plasmashell
+X-KDE-ParentApp=
 X-KDE-PluginInfo-Author=Kai Uwe Broulik
 X-KDE-PluginInfo-Category=Tasks
 X-KDE-PluginInfo-Email=kde@privat.broulik.de
