@@ -2,6 +2,9 @@
 Exec=dbus-run-session @CMAKE_INSTALL_FULL_LIBEXECDIR@/startplasma-dev.sh -wayland
 DesktopNames=KDE
 Name=Plasma (Development ${CMAKE_INSTALL_FULL_BINDIR})
+Name[sv]=Plasma (utveckling ${CMAKE_INSTALL_FULL_BINDIR})
+Name[uk]=Пзазма (Розробка ${CMAKE_INSTALL_FULL_BINDIR})
+Name[x-test]=xxPlasma (Development ${CMAKE_INSTALL_FULL_BINDIR})xx
 Comment=Plasma by KDE
 Comment[ar]=بلازما كدي
 Comment[bs]=Plazma od strane KDe
