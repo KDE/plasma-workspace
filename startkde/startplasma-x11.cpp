@@ -100,7 +100,7 @@ int main(int /*argc*/, char** /*argv*/)
     if (!startKDEInit())
         return 1;
 
-    if (!startKSMServer())
+    if (!startKSMServer(false))
         return 1;
 
     // Anything after here is logout

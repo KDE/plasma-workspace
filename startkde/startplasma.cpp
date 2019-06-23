@@ -338,7 +338,7 @@ bool startKDEInit()
     return true;
 }
 
-bool startKSMServer()
+bool startKSMServer(bool wayland)
 {
     // finally, give the session control to the session manager
     // see kdebase/ksmserver for the description of the rest of the startup sequence
@@ -355,8 +355,12 @@ bool startKSMServer()
 
 
     QStringList ksmserverOptions = { QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/ksmserver") };
-    if (desktopLockedAtStart) {
-        ksmserverOptions << QStringLiteral("--lockscreen");
+    if (wayland) {
+        ksmserverOptions << QStringLiteral("--no-lockscreen");
+    } else {
+        if (desktopLockedAtStart) {
+            ksmserverOptions << QStringLiteral("--lockscreen");
+        }
     }
     const auto exitCode = runSync(QStringLiteral("kwrapper5"), ksmserverOptions);
 

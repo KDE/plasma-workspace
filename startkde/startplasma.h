@@ -45,7 +45,7 @@ void setupGSLib();
 void setupX11();
 
 bool startKDEInit();
-bool startKSMServer();
+bool startKSMServer(bool wayland);
 
 void waitForKonqi();
 
