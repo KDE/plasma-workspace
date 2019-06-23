@@ -143,6 +143,11 @@ Q_SIGNALS:
      */
     void inhibitionApplicationsChanged();
 
+    /**
+     * Emitted when the ownership of the Notification DBus Service is lost.
+     */
+    void serviceOwnershipLost();
+
 private:
     explicit Server(QObject *parent = nullptr);
     Q_DISABLE_COPY(Server)

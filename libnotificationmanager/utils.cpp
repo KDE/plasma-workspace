@@ -22,6 +22,7 @@
 
 #include <QAbstractItemModel>
 #include <QAbstractProxyModel>
+#include <QCoreApplication>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QFile>
@@ -92,4 +93,9 @@ QModelIndex Utils::mapToModel(const QModelIndex &idx, const QAbstractItemModel *
         }
     }
     return resolvedIdx;
+}
+
+bool Utils::isDBusMaster()
+{
+    return qApp->property("_plasma_dbus_master").toBool();
 }

@@ -38,6 +38,8 @@ QString desktopEntryFromPid(uint pid);
 
 QModelIndex mapToModel(const QModelIndex &idx, const QAbstractItemModel *sourceModel);
 
+bool isDBusMaster();
+
 } // namespace Utils
 
 } // namespace NotificationManager

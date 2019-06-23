@@ -39,6 +39,7 @@ Server::Server(QObject *parent)
     });
     connect(d.data(), &ServerPrivate::inhibitionAdded, this, &Server::inhibitionApplicationsChanged);
     connect(d.data(), &ServerPrivate::inhibitionRemoved, this, &Server::inhibitionApplicationsChanged);
+    connect(d.data(), &ServerPrivate::serviceOwnershipLost, this, &Server::serviceOwnershipLost);
 }
 
 Server::~Server() = default;

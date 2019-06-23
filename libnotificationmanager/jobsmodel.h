@@ -84,6 +84,9 @@ public:
 
     void clear(Notifications::ClearFlags flags);
 
+signals:
+    void serviceOwnershipLost();
+
 private:
     JobsModel();
     Q_DISABLE_COPY(JobsModel)

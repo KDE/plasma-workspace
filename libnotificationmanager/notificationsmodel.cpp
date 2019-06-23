@@ -212,6 +212,15 @@ NotificationsModel::NotificationsModel()
     connect(&Server::self(), &Server::notificationRemoved, this, [this](uint removedId, Server::CloseReason reason) {
         d->onNotificationRemoved(removedId, reason);
     });
+    connect(&Server::self(), &Server::serviceOwnershipLost, this, [this] {
+        // Expire all notifications as we're defunct now
+        const auto notifications = d->notifications;
+        for (const Notification &notification : notifications) {
+            if (!notification.expired()) {
+                d->onNotificationRemoved(notification.id(), Server::CloseReason::Expired);
+            }
+        }
+    });
 
     Server::self().init();
 }
