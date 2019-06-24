@@ -94,7 +94,8 @@ void SystemTray::init()
 
 void SystemTray::newTask(const QString &task)
 {
-    foreach (Plasma::Applet *applet, applets()) {
+    const auto appletsList = applets();
+    for (Plasma::Applet *applet : appletsList) {
         if (!applet->pluginMetaData().isValid()) {
             continue;
         }
@@ -131,7 +132,8 @@ void SystemTray::newTask(const QString &task)
 
 void SystemTray::cleanupTask(const QString &task)
 {
-    foreach (Plasma::Applet *applet, applets()) {
+    const auto appletsList = applets();
+    for (Plasma::Applet *applet : appletsList) {
         if (applet->pluginMetaData().isValid() && task == applet->pluginMetaData().pluginId()) {
             //we are *not* cleaning the config here, because since is one
             //of those automatically loaded/unloaded by dbus, we want to recycle
@@ -184,7 +186,8 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
 
 
     emit applet->contextualActionsAboutToShow();
-    foreach (QAction *action, applet->contextualActions()) {
+    const auto contextActions = applet->contextualActions();
+    for (QAction *action : contextActions) {
         if (action) {
             desktopMenu->addAction(action);
         }
@@ -360,7 +363,8 @@ void SystemTray::restorePlasmoids()
     }
 
     //First: remove all that are not allowed anymore
-    foreach (Plasma::Applet *applet, applets()) {
+    const auto appletsList = applets();
+    for (Plasma::Applet *applet : appletsList) {
         //Here it should always be valid.
         //for some reason it not always is.
         if (!applet->pluginMetaData().isValid()) {
@@ -381,7 +385,8 @@ void SystemTray::restorePlasmoids()
 
     cg = KConfigGroup(&cg, "Applets");
 
-    foreach (const QString &group, cg.groupList()) {
+    const auto groups = cg.groupList();
+    for (const QString &group : groups) {
         KConfigGroup appletConfig(&cg, group);
         QString plugin = appletConfig.readEntry("plugin");
         if (!plugin.isEmpty()) {
@@ -403,7 +408,8 @@ void SystemTray::restorePlasmoids()
                 bool dupe = false;
                 // it is possible (though poor form) to have multiple applets
                 // with the same visible name but different plugins, so we hve to check all values
-                foreach (const KPluginInfo &existingInfo, sortedApplets.values(info.name())) {
+                const auto infos = sortedApplets.values(info.name());
+                for (const KPluginInfo &existingInfo : infos) {
                     if (existingInfo.pluginName() == info.pluginName()) {
                         dupe = true;
                         break;
@@ -421,7 +427,7 @@ void SystemTray::restorePlasmoids()
         }
     }
 
-    foreach (const KPluginInfo &info, sortedApplets) {
+    for (const KPluginInfo &info : qAsConst(sortedApplets)) {
         qCDebug(SYSTEM_TRAY) << " Adding applet: " << info.name();
         if (m_allowedPlasmoids.contains(info.pluginName())) {
             newTask(info.pluginName());
@@ -441,7 +447,7 @@ QAbstractItemModel* SystemTray::availablePlasmoids()
     if (!m_availablePlasmoidsModel) {
         m_availablePlasmoidsModel = new PlasmoidModel(this);
 
-        foreach (const KPluginInfo &info, m_systrayApplets) {
+        for (const KPluginInfo &info : qAsConst(m_systrayApplets)) {
             QString name = info.name();
             const QString dbusactivation = info.property(QStringLiteral("X-Plasma-DBusActivationService")).toString();
 
@@ -508,7 +514,8 @@ void SystemTray::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, cons
     if (propsReply.isError()) {
         qCWarning(SYSTEM_TRAY) << "Could not get list of available D-Bus services";
     } else {
-        foreach (const QString& serviceName, propsReply.value()) {
+        const auto propsReplyValue = propsReply.value();
+        for (const QString& serviceName : propsReplyValue) {
             serviceRegistered(serviceName);
         }
     }
