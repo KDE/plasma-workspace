@@ -159,6 +159,13 @@ bool AppInterface::coronaLocked() const
 
 void AppInterface::sleep(int ms)
 {
+    // The nested eventloop here may cause crashes when for example loading a
+    // LnF because the script runs out of the QML stack. Opening an eventloop
+    // there and processing QML events may result in touching members objects
+    // that were meant to be deleted but haven't yet, because the parent event
+    // loop hasn't returned yet.
+    qWarning() << "Scripted sleeping starts a nested event loop." \
+                  " This can cause process instability. Use with care!";
     QEventLoop loop;
     QTimer::singleShot(ms, &loop, &QEventLoop::quit);
     loop.exec(QEventLoop::ExcludeUserInputEvents);
