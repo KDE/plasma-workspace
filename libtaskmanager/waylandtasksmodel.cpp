@@ -347,14 +347,14 @@ QString WaylandTasksModel::Private::mimeType()
 {
     // Use a unique format id to make this intentionally useless for
     // cross-process DND.
-    return QString("windowsystem/winid+" + uuid.toString().toAscii());
+    return QStringLiteral("windowsystem/winid+") + uuid.toString();
 }
 
 QString WaylandTasksModel::Private::groupMimeType()
 {
     // Use a unique format id to make this intentionally useless for
     // cross-process DND.
-    return QString("windowsystem/multiple-winids+" + uuid.toString().toAscii());
+    return QStringLiteral("windowsystem/multiple-winids+") + uuid.toString();
 }
 
 void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, int role)
