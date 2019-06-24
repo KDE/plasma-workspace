@@ -192,13 +192,6 @@ ColumnLayout{
             }
 
             PlasmaComponents.ToolButton {
-                iconName: "edit-clear-history"
-                tooltip: i18n("Clear History")
-                visible: plasmoid.action("clearHistory").visible
-                onClicked: action_clearHistory()
-            }
-
-            PlasmaComponents.ToolButton {
                 iconName: "configure"
                 // remove mnemonics
                 tooltip: plasmoid.action("openKcm").text.replace(/([^&]*)&(.)([^&]*)/g, function (match, p1, p2, p3) {
@@ -206,6 +199,13 @@ ColumnLayout{
                 });
                 visible: plasmoid.action("openKcm").enabled
                 onClicked: plasmoid.action("openKcm").trigger()
+            }
+
+            PlasmaComponents.ToolButton {
+                iconName: "edit-clear-history"
+                tooltip: i18n("Clear History")
+                enabled: plasmoid.action("clearHistory").visible
+                onClicked: action_clearHistory()
             }
         }
 
