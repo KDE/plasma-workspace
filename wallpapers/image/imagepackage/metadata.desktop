@@ -117,7 +117,7 @@ Comment[zh_TW]=以桌布視角觀看圖片
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/Wallpaper
-X-KDE-ParentApp=
+X-KDE-ParentApp=org.kde.plasmashell
 X-KDE-PluginInfo-Author=Marco Martin
 X-KDE-PluginInfo-Category=
 X-KDE-PluginInfo-Email=mart@kde.org
