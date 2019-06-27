@@ -23,6 +23,8 @@
 #include <QObject>
 #include <QDBusContext>
 
+#include "notification.h"
+
 class QDBusServiceWatcher;
 
 struct Inhibition
@@ -36,8 +38,6 @@ struct Inhibition
 
 namespace NotificationManager
 {
-
-class Notification;
 
 class Q_DECL_HIDDEN ServerPrivate : public QObject, protected QDBusContext
 {
@@ -96,6 +96,8 @@ private:
     uint m_highestInhibitionCookie = 0;
     QHash<uint /*cookie*/, Inhibition> m_inhibitions;
     QHash<uint /*cookie*/, QString> m_inhibitionServices;
+
+    Notification m_lastNotification;
 
 };
 

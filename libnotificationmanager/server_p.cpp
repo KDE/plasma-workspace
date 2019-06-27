@@ -186,6 +186,24 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
         }
     }
 
+    // If multiple identical notifications are sent in quick succession, refuse the request
+    if (m_lastNotification.applicationName() == notification.applicationName()
+            && m_lastNotification.summary() == notification.summary()
+            && m_lastNotification.body() == notification.body()
+            && m_lastNotification.desktopEntry() == notification.desktopEntry()
+            && m_lastNotification.eventId() == notification.eventId()
+            && m_lastNotification.actionNames() == notification.actionNames()
+            && m_lastNotification.urls() == notification.urls()
+            && m_lastNotification.created().msecsTo(notification.created()) < 1000) {
+        qCDebug(NOTIFICATIONMANAGER) << "Discarding excess notification creation request";
+
+        sendErrorReply(QStringLiteral("org.freedesktop.Notifications.Error.ExcessNotificationGeneration"),
+                       QStringLiteral("Created too many similar notifications in quick succession"));
+        return 0;
+    }
+
+    m_lastNotification = notification;
+
     if (wasReplaced) {
         notification.resetUpdated();
         emit static_cast<Server*>(parent())->notificationReplaced(replaces_id, notification);
