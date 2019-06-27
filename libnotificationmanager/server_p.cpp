@@ -160,8 +160,9 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
 
     uint pid = 0;
     if (notification.desktopEntry().isEmpty() || notification.applicationName().isEmpty()) {
-        qCInfo(NOTIFICATIONMANAGER) << "Notification from service" << message().service() << "didn't contain any identification information, this is an application bug!";
-
+        if (notification.desktopEntry().isEmpty() && notification.applicationName().isEmpty()) {
+            qCInfo(NOTIFICATIONMANAGER) << "Notification from service" << message().service() << "didn't contain any identification information, this is an application bug!";
+        }
         QDBusReply<uint> pidReply = connection().interface()->servicePid(message().service());
         if (pidReply.isValid()) {
             pid = pidReply.value();
