@@ -160,8 +160,9 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
 
     uint pid = 0;
     if (notification.desktopEntry().isEmpty() || notification.applicationName().isEmpty()) {
-        qCInfo(NOTIFICATIONMANAGER) << "Notification from service" << message().service() << "didn't contain any identification information, this is an application bug!";
-
+        if (notification.desktopEntry().isEmpty() && notification.applicationName().isEmpty()) {
+            qCInfo(NOTIFICATIONMANAGER) << "Notification from service" << message().service() << "didn't contain any identification information, this is an application bug!";
+        }
         QDBusReply<uint> pidReply = connection().interface()->servicePid(message().service());
         if (pidReply.isValid()) {
             pid = pidReply.value();
@@ -185,6 +186,24 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
             notification.setApplicationName(processName);
         }
     }
+
+    // If multiple identical notifications are sent in quick succession, refuse the request
+    if (m_lastNotification.applicationName() == notification.applicationName()
+            && m_lastNotification.summary() == notification.summary()
+            && m_lastNotification.body() == notification.body()
+            && m_lastNotification.desktopEntry() == notification.desktopEntry()
+            && m_lastNotification.eventId() == notification.eventId()
+            && m_lastNotification.actionNames() == notification.actionNames()
+            && m_lastNotification.urls() == notification.urls()
+            && m_lastNotification.created().msecsTo(notification.created()) < 1000) {
+        qCDebug(NOTIFICATIONMANAGER) << "Discarding excess notification creation request";
+
+        sendErrorReply(QStringLiteral("org.freedesktop.Notifications.Error.ExcessNotificationGeneration"),
+                       QStringLiteral("Created too many similar notifications in quick succession"));
+        return 0;
+    }
+
+    m_lastNotification = notification;
 
     if (wasReplaced) {
         notification.resetUpdated();
