@@ -6,6 +6,7 @@ Name[ca]=Plasma (Desenvolupament ${CMAKE_INSTALL_FULL_BINDIR})
 Name[es]=Plasma (Desarrollo ${CMAKE_INSTALL_FULL_BINDIR})
 Name[nl]=Plasma (Ontwikkeling ${CMAKE_INSTALL_FULL_BINDIR})
 Name[pt]=Plasma (Desenvolvimento ${CMAKE_INSTALL_FULL_BINDIR})
+Name[pt_BR]=Plasma (Desenvolvimento ${CMAKE_INSTALL_FULL_BINDIR})
 Name[sv]=Plasma (utveckling ${CMAKE_INSTALL_FULL_BINDIR})
 Name[uk]=Пзазма (Розробка ${CMAKE_INSTALL_FULL_BINDIR})
 Name[x-test]=xxPlasma (Development ${CMAKE_INSTALL_FULL_BINDIR})xx
