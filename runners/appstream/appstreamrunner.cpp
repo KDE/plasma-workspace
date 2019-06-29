@@ -82,9 +82,9 @@ void InstallerRunner::match(Plasma::RunnerContext &context)
     if(context.query().size() <= 2)
         return;
 
-    auto components = findComponentsByString(context.query());
+    const auto components = findComponentsByString(context.query());
 
-    foreach(const AppStream::Component &component, components) {
+    for (const AppStream::Component &component : components) {
         if (component.kind() != AppStream::Component::KindDesktopApp)
             continue;
 
