@@ -53,123 +53,11 @@
 #include <pwd.h>
 #include <sys/types.h>
 
-#include "kworkspace_p.h"
-
 namespace KWorkSpace
 {
-#if HAVE_X11
-static void save_yourself_callback( SmcConn conn_P, SmPointer, int, Bool , int, Bool )
-    {
-    SmcSaveYourselfDone( conn_P, True );
-    }
-
-static void dummy_callback( SmcConn, SmPointer )
-    {
-    }
-#endif
-KRequestShutdownHelper::KRequestShutdownHelper()
-    {
-#if HAVE_X11
-    SmcCallbacks calls;
-    calls.save_yourself.callback = save_yourself_callback;
-    calls.die.callback = dummy_callback;
-    calls.save_complete.callback = dummy_callback;
-    calls.shutdown_cancelled.callback = dummy_callback;
-    char* id = nullptr;
-    char err[ 11 ];
-    conn = SmcOpenConnection( nullptr, nullptr, 1, 0,
-        SmcSaveYourselfProcMask | SmcDieProcMask | SmcSaveCompleteProcMask
-        | SmcShutdownCancelledProcMask, &calls, nullptr, &id, 10, err );
-    if( id != nullptr )
-        free( id );
-    if( conn == nullptr )
-        return; // no SM
-    // set the required properties, mostly dummy values
-    SmPropValue propvalue[ 5 ];
-    SmProp props[ 5 ];
-    propvalue[ 0 ].length = sizeof( unsigned char );
-    unsigned char value0 = SmRestartNever; // so that this extra SM connection doesn't interfere
-    propvalue[ 0 ].value = &value0;
-    props[ 0 ].name = const_cast< char* >( SmRestartStyleHint );
-    props[ 0 ].type = const_cast< char* >( SmCARD8 );
-    props[ 0 ].num_vals = 1;
-    props[ 0 ].vals = &propvalue[ 0 ];
-    struct passwd* entry = getpwuid( geteuid() );
-    propvalue[ 1 ].length = entry != nullptr ? strlen( entry->pw_name ) : 0;
-    propvalue[ 1 ].value = (SmPointer)( entry != nullptr ? entry->pw_name : "" );
-    props[ 1 ].name = const_cast< char* >( SmUserID );
-    props[ 1 ].type = const_cast< char* >( SmARRAY8 );
-    props[ 1 ].num_vals = 1;
-    props[ 1 ].vals = &propvalue[ 1 ];
-    propvalue[ 2 ].length = 0;
-    propvalue[ 2 ].value = (SmPointer)( "" );
-    props[ 2 ].name = const_cast< char* >( SmRestartCommand );
-    props[ 2 ].type = const_cast< char* >( SmLISTofARRAY8 );
-    props[ 2 ].num_vals = 1;
-    props[ 2 ].vals = &propvalue[ 2 ];
-    propvalue[ 3 ].length = strlen( "requestshutdownhelper" );
-    propvalue[ 3 ].value = (SmPointer)"requestshutdownhelper";
-    props[ 3 ].name = const_cast< char* >( SmProgram );
-    props[ 3 ].type = const_cast< char* >( SmARRAY8 );
-    props[ 3 ].num_vals = 1;
-    props[ 3 ].vals = &propvalue[ 3 ];
-    propvalue[ 4 ].length = 0;
-    propvalue[ 4 ].value = (SmPointer)( "" );
-    props[ 4 ].name = const_cast< char* >( SmCloneCommand );
-    props[ 4 ].type = const_cast< char* >( SmLISTofARRAY8 );
-    props[ 4 ].num_vals = 1;
-    props[ 4 ].vals = &propvalue[ 4 ];
-    SmProp* p[ 5 ] = { &props[ 0 ], &props[ 1 ], &props[ 2 ], &props[ 3 ], &props[ 4 ] };
-    SmcSetProperties( conn, 5, p );
-    notifier = new QSocketNotifier( IceConnectionNumber( SmcGetIceConnection( conn )),
-        QSocketNotifier::Read, this );
-    connect( notifier, &QSocketNotifier::activated, this, &KRequestShutdownHelper::processData);
-#endif
-    }
-
-KRequestShutdownHelper::~KRequestShutdownHelper()
-    {
-#if HAVE_X11
-    if( conn != nullptr )
-        {
-        delete notifier;
-        SmcCloseConnection( conn, 0, nullptr );
-        }
-#endif
-    }
-
-void KRequestShutdownHelper::processData()
-    {
-#if HAVE_X11
-    if( conn != nullptr )
-        IceProcessMessages( SmcGetIceConnection( conn ), nullptr, nullptr );
-#endif    
-    }
-
-bool KRequestShutdownHelper::requestShutdown( ShutdownConfirm confirm )
-    {
-#if HAVE_X11
-    if( conn == nullptr )
-        return false;
-    SmcRequestSaveYourself( conn, SmSaveBoth, True, SmInteractStyleAny,
-        confirm == ShutdownConfirmNo, True );
-    // flush the request
-    IceFlush(SmcGetIceConnection(conn));
-#endif    
-    return true;
-    }
-#if HAVE_X11
-static KRequestShutdownHelper* helper = nullptr;
-
-static void cleanup_sm()
-{
-    delete helper;
-}
-#endif
 
 void requestShutDown(ShutdownConfirm confirm, ShutdownType sdtype, ShutdownMode sdmode)
 {
-#if HAVE_X11
     /*  use ksmserver's dcop interface if necessary  */
     if ( confirm == ShutdownConfirmYes ||
          sdtype != ShutdownTypeDefault ||
@@ -179,14 +67,6 @@ void requestShutDown(ShutdownConfirm confirm, ShutdownType sdtype, ShutdownMode 
         ksmserver.logout((int)confirm,  (int)sdtype,  (int)sdmode);
         return;
     }
-
-    if( helper == nullptr )
-    {
-        helper = new KRequestShutdownHelper();
-        qAddPostRoutine(cleanup_sm);
-    }
-    helper->requestShutdown( confirm );
-#endif
 }
 
 bool canShutDown( ShutdownConfirm confirm,

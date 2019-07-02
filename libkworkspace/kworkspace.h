@@ -110,6 +110,7 @@ namespace KWorkSpace
    * ShutdownConfirm
    * @param sdtype The action to take after logging out. ShutdownType
    * @param sdmode If/When the action should be taken. ShutdownMode
+   * @deprecated
    */
   KWORKSPACE_EXPORT void requestShutDown( ShutdownConfirm confirm = ShutdownConfirmDefault,
                                    ShutdownType    sdtype  = ShutdownTypeDefault,
@@ -125,6 +126,7 @@ namespace KWorkSpace
    * Even if we can access the KDE session manager, the system or user
    * configuration may prevent the user from requesting a shutdown or
    * reboot.
+   * @deprecated
    */
   KWORKSPACE_EXPORT bool canShutDown( ShutdownConfirm confirm = ShutdownConfirmDefault,
                                ShutdownType    sdtype  = ShutdownTypeDefault,

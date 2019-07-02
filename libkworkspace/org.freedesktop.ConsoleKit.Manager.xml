@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node name="/org/freedesktop/ConsoleKit/Manager"
+  xmlns:doc="http://www.freedesktop.org/dbus/1.0/doc.dtd"
+>
+
+  <interface name="org.freedesktop.ConsoleKit.Manager">
+    <method name="Restart">
+      <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+      <doc:doc>
+        <doc:description>
+          <doc:para>This method initiates a request to restart (ie. reboot) the computer system.</doc:para>
+        </doc:description>
+      </doc:doc>
+    </method>
+
+    <method name="CanRestart">
+      <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+      <arg name="can_restart" type="b" direction="out"/>
+    </method>
+
+    <method name="Stop">
+      <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+      <doc:doc>
+        <doc:description>
+          <doc:para>This method initiates a request to stop (ie. shutdown) the computer system.</doc:para>
+        </doc:description>
+      </doc:doc>
+    </method>
+
+    <method name="CanStop">
+      <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+      <arg name="can_stop" type="b" direction="out"/>
+    </method>
+
+    <method name="OpenSession">
+      <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+      <arg name="cookie" direction="out" type="s">
+        <doc:doc>
+          <doc:summary>The secret cookie that is used to identify the new session</doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>This method requests that a new <doc:ref type="interface" to="Session">Session</doc:ref>
+          be created for the calling process.  The properties of this new Session are set automatically
+          from information collected about the calling process.
+          </doc:para>
+          <doc:para>This new session exists until the calling process disconnects from the system bus or
+          calls <doc:ref type="method" to="Manager.CloseSession">CloseSession()</doc:ref>.
+          </doc:para>
+          <doc:para>It is the responsibility of the calling process to set the environment variable
+          XDG_SESSION_COOKIE to the value of the returned cookie.  This cookie should only
+          be made available to child processes of the caller so that they may be identified
+          as members of this session.
+          </doc:para>
+          <doc:para>See this simple example:
+          <doc:example language="c" title="simple example"><doc:code>
+	DBusError       error;
+	DBusMessage    *message;
+	DBusMessage    *reply;
+
+	message = dbus_message_new_method_call ("org.freedesktop.ConsoleKit",
+						"/org/freedesktop/ConsoleKit/Manager",
+						"org.freedesktop.ConsoleKit.Manager",
+						"OpenSession");
+	if (message == NULL) {
+		goto out;
+	}
+
+        dbus_error_init (&amp;error);
+        reply = dbus_connection_send_with_reply_and_block (connector->connection,
+                                                           message,
+                                                           -1,
+                                                           &amp;error);
+        if (reply == NULL) {
+		goto out;
+        }
+
+        dbus_error_init (&amp;error);
+        if (! dbus_message_get_args (reply,
+                                     &amp;error,
+                                     DBUS_TYPE_STRING, &amp;cookie,
+                                     DBUS_TYPE_INVALID)) {
+		goto out;
+        }
+
+          </doc:code></doc:example></doc:para>
+        </doc:description>
+        <doc:seealso><doc:ref type="method" to="Manager.OpenSessionWithParameters">OpenSessionWithParameters()</doc:ref></doc:seealso>
+      </doc:doc>
+    </method>
+    <method name="GetSeats">
+      <arg name="seats" direction="out" type="ao">
+        <doc:doc>
+          <doc:summary>an array of Seat IDs</doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>This gets a list of all the <doc:ref type="interface" to="Seat">Seats</doc:ref>
+          that are currently present on the system.</doc:para>
+          <doc:para>Each Seat ID is an D-Bus object path for the object that implements the
+          <doc:ref type="interface" to="Seat">Seat</doc:ref> interface.</doc:para>
+        </doc:description>
+        <doc:seealso><doc:ref type="interface" to="Seat">org.freedesktop.ConsoleKit.Seat</doc:ref></doc:seealso>
+      </doc:doc>
+    </method>
+
+    <method name="GetSessions">
+      <arg name="sessions" direction="out" type="ao">
+        <doc:doc>
+          <doc:summary>an array of Session IDs</doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>This gets a list of all the <doc:ref type="interface" to="Session">Sessions</doc:ref>
+          that are currently present on the system.</doc:para>
+          <doc:para>Each Session ID is an D-Bus object path for the object that implements the
+          <doc:ref type="interface" to="Session">Session</doc:ref> interface.</doc:para>
+        </doc:description>
+        <doc:seealso><doc:ref type="interface" to="Session">org.freedesktop.ConsoleKit.Session</doc:ref></doc:seealso>
+      </doc:doc>
+    </method>
+
+    <method name="GetSessionForCookie">
+      <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+      <arg name="cookie" direction="in" type="s">
+        <doc:doc>
+          <doc:summary>The secret cookie that is used to identify the session</doc:summary>
+        </doc:doc>
+      </arg>
+      <arg name="ssid" direction="out" type="o">
+        <doc:doc>
+          <doc:summary>The object identifier for the current session</doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>Returns the session ID that is associated with the specified cookie.
+          </doc:para>
+        </doc:description>
+      </doc:doc>
+    </method>
+    <method name="GetSessionForUnixProcess">
+      <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+      <arg name="pid" direction="in" type="u">
+        <doc:doc>
+          <doc:summary>The POSIX process ID</doc:summary>
+        </doc:doc>
+      </arg>
+      <arg name="ssid" direction="out" type="o">
+        <doc:doc>
+          <doc:summary>The object identifier for the current session</doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>Attempts to determine the session ID for the specified
+          POSIX process ID (pid).
+          </doc:para>
+        </doc:description>
+      </doc:doc>
+    </method>
+    <method name="GetCurrentSession">
+      <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+      <arg name="ssid" direction="out" type="o">
+        <doc:doc>
+          <doc:summary>The object identifier for the current session</doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>Attempts to determine the session ID that the caller belongs to.
+          </doc:para>
+          <doc:para>See this example of using dbus-send:
+          <doc:example language="shell" title="shell example"><doc:code>
+  dbus-send --system --dest=org.freedesktop.ConsoleKit \
+  --type=method_call --print-reply --reply-timeout=2000 \
+  /org/freedesktop/ConsoleKit/Manager \
+  org.freedesktop.ConsoleKit.Manager.GetCurrentSession
+          </doc:code></doc:example></doc:para>
+        </doc:description>
+      </doc:doc>
+    </method>
+    <method name="GetSessionsForUnixUser">
+      <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+      <arg name="uid" direction="in" type="u">
+         <doc:doc>
+          <doc:summary>POSIX User identification</doc:summary>
+        </doc:doc>
+     </arg>
+      <arg name="sessions" direction="out" type="ao">
+        <doc:doc>
+          <doc:summary>an array of Session IDs</doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>This gets a list of all the <doc:ref type="interface" to="Session">Sessions</doc:ref>
+          that are currently open for the specified user.</doc:para>
+          <doc:para>Each Session ID is an D-Bus object path for the object that implements the
+          <doc:ref type="interface" to="Session">Session</doc:ref> interface.</doc:para>
+        </doc:description>
+      </doc:doc>
+    </method>
+    <method name="GetSessionsForUser">
+      <annotation name="org.freedesktop.DBus.GLib.Async" value=""/>
+      <arg name="uid" direction="in" type="u">
+         <doc:doc>
+          <doc:summary>User identification</doc:summary>
+        </doc:doc>
+     </arg>
+      <arg name="sessions" direction="out" type="ao">
+        <doc:doc>
+          <doc:summary>an array of Session IDs</doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>This gets a list of all the <doc:ref type="interface" to="Session">Sessions</doc:ref>
+          that are currently open for the specified user.</doc:para>
+          <doc:para>Each Session ID is an D-Bus object path for the object that implements the
+          <doc:ref type="interface" to="Session">Session</doc:ref> interface.</doc:para>
+        </doc:description>
+        <doc:deprecated version="0.1.3" instead="GetSessionsForUnixUser"/>
+      </doc:doc>
+    </method>
+
+    <method name="GetSystemIdleHint">
+      <arg name="idle_hint" type="b" direction="out">
+        <doc:doc>
+          <doc:summary>The value of the system-idle-hint</doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>Returns TRUE if the <doc:ref type="property" to="Session:idle-hint">idle-hint</doc:ref>
+          property of every open session is TRUE or if there are no open sessions.
+          </doc:para>
+        </doc:description>
+      </doc:doc>
+    </method>
+    <method name="GetSystemIdleSinceHint">
+      <arg name="iso8601_datetime" type="s" direction="out">
+        <doc:doc>
+          <doc:summary>An ISO 8601 format date-type string</doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>Returns an ISO 8601 date-time string that corresponds to
+          the time of the last change of the system-idle-hint.
+          </doc:para>
+        </doc:description>
+      </doc:doc>
+    </method>
+
+    <signal name="SeatAdded">
+      <arg name="sid" type="o">
+        <doc:doc>
+          <doc:summary>The Seat ID for the added seat</doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>Emitted when a Seat has been added to the system.
+          </doc:para>
+        </doc:description>
+      </doc:doc>
+    </signal>
+    <signal name="SeatRemoved">
+      <arg name="sid" type="o">
+        <doc:doc>
+          <doc:summary>The Seat ID for the removed seat</doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>Emitted when a Seat has been removed from the system.
+          </doc:para>
+        </doc:description>
+      </doc:doc>
+    </signal>
+    <signal name="SystemIdleHintChanged">
+      <arg name="hint" type="b">
+        <doc:doc>
+          <doc:summary>The value of the system-idle-hint</doc:summary>
+        </doc:doc>
+      </arg>
+      <doc:doc>
+        <doc:description>
+          <doc:para>Emitted when the value of the system-idle-hint has changed.
+          </doc:para>
+        </doc:description>
+      </doc:doc>
+    </signal>
+  </interface>
+</node>
