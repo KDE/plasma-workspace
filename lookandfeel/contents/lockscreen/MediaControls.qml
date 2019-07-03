@@ -112,25 +112,23 @@ Item {
             Layout.fillWidth: true
             spacing: 0
 
-            PlasmaExtras.Heading {
+            PlasmaComponents.Label {
                 Layout.fillWidth: true
-                level: 5
                 wrapMode: Text.NoWrap
                 elide: Text.ElideRight
                 text: mpris2Source.track || i18nd("plasma_lookandfeel_org.kde.lookandfeel", "No media playing")
                 textFormat: Text.PlainText
-                font.weight: Font.Bold
+                font.pointSize: theme.defaultFont.pointSize + 1
             }
 
-            PlasmaExtras.Heading {
+            PlasmaExtras.DescriptiveLabel {
                 Layout.fillWidth: true
-                level: 5
                 wrapMode: Text.NoWrap
                 elide: Text.ElideRight
                 // if no artist is given, show player name instead
                 text: mpris2Source.artist || mpris2Source.identity || ""
                 textFormat: Text.PlainText
-                opacity: 0.75
+                font.pointSize: theme.smallestFont.pointSize + 1
             }
         }
 
