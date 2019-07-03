@@ -70,12 +70,14 @@ int main(int /*argc*/, char** /*argv*/)
     {
         KConfig cfg(QStringLiteral("kdeglobals"));
 
-        const auto screenScaleFactors = cfg.group("KScreen").readEntry("ScreenScaleFactors", QByteArray());
+        KConfigGroup kscreenGroup = cfg.group("KScreen");
+        const auto screenScaleFactors = kscreenGroup.readEntry("ScreenScaleFactors", QByteArray());
         if (!screenScaleFactors.isEmpty()) {
             qputenv("QT_SCREEN_SCALE_FACTORS", screenScaleFactors);
-            if (screenScaleFactors == "2" || screenScaleFactors == "3") {
-                qputenv("GDK_SCALE", screenScaleFactors);
-                qputenv("GDK_DPI_SCALE", QByteArray::number(1./screenScaleFactors.toDouble(), 'g', 3));
+            qreal scaleFactor = qFloor(kscreenGroup.readEntry("ScaleFactor", 1.0));
+            if (scaleFactor > 1) {
+                qputenv("GDK_SCALE", QByteArray::number(scaleFactor, 'g', 0));
+                qputenv("GDK_DPI_SCALE", QByteArray::number(1.0/scaleFactor, 'g', 3));
             }
         }
     }
