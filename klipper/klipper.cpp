@@ -236,6 +236,8 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
                 m_notification->setText(text);
             } else {
                 m_notification = KNotification::event(KNotification::Notification, caption, text, QStringLiteral("klipper"));
+                // When Klipper is run as part of plasma, we still need to pretend to be it for notification settings to work
+                m_notification->setHint(QStringLiteral("desktop-entry"), QStringLiteral("org.kde.klipper"));
             }
         }
     );
