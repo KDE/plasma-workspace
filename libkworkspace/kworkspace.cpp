@@ -58,15 +58,8 @@ namespace KWorkSpace
 
 void requestShutDown(ShutdownConfirm confirm, ShutdownType sdtype, ShutdownMode sdmode)
 {
-    /*  use ksmserver's dcop interface if necessary  */
-    if ( confirm == ShutdownConfirmYes ||
-         sdtype != ShutdownTypeDefault ||
-         sdmode != ShutdownModeDefault )
-    {
-        org::kde::KSMServerInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-        ksmserver.logout((int)confirm,  (int)sdtype,  (int)sdmode);
-        return;
-    }
+    org::kde::KSMServerInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
+    ksmserver.logout((int)confirm,  (int)sdtype,  (int)sdmode);
 }
 
 bool canShutDown( ShutdownConfirm confirm,
