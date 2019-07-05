@@ -11,6 +11,4 @@ target_link_libraries(plasma_containmentactions_switchdesktop
                         KF5::Plasma
                         PW::LibTaskManager
                        )
-
-install(TARGETS plasma_containmentactions_switchdesktop DESTINATION ${KDE_INSTALL_PLUGINDIR})
-install(FILES plasma-containmentactions-switchdesktop.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS plasma_containmentactions_switchdesktop DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/containmentactions)

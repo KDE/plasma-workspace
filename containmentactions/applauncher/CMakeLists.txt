@@ -11,5 +11,4 @@ kcoreaddons_desktop_to_json(plasma_containmentactions_applauncher plasma-contain
 
 target_link_libraries(plasma_containmentactions_applauncher KF5::Plasma KF5::KIOCore KF5::KIOWidgets KF5::I18n)
 
-install(TARGETS plasma_containmentactions_applauncher DESTINATION ${KDE_INSTALL_PLUGINDIR})
-install(FILES plasma-containmentactions-applauncher.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS plasma_containmentactions_applauncher DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/containmentactions)
