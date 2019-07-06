@@ -58,6 +58,8 @@ KSolidNotify::KSolidNotify(QObject *parent):
 
 void KSolidNotify::onDeviceAdded(const QString &udi)
 {
+    // Clear any stale message from a previous instance
+    emit clearNotification(udi);
     Solid::Device device(udi);
     m_devices.insert(udi, device);
     connectSignals(&m_devices[udi]);
@@ -72,7 +74,6 @@ void KSolidNotify::onDeviceRemoved(const QString &udi)
         }
     }
     m_devices.remove(udi);
-    emit clearNotification(udi);
 }
 
 bool KSolidNotify::isSafelyRemovable(const QString &udi) const
