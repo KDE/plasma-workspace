@@ -76,8 +76,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "global.h"
 #include "client.h"
 
-#include <solid/powermanagement.h>
-
 #include "logoutprompt_interface.h"
 #include "shutdown_interface.h"
 
@@ -183,10 +181,6 @@ void KSMServer::performLogout()
         QTimer::singleShot(1000, this, &KSMServer::performLogout);
     }
     state = Shutdown;
-
-    // If the logout was confirmed, let's start a powermanagement inhibition.
-    // We store the cookie so we can interrupt it if the logout will be canceled
-    inhibitCookie = Solid::PowerManagement::beginSuppressingSleep(QStringLiteral("Shutting down system"));
 
     // shall we save the session on logout?
     KConfigGroup cg(KSharedConfig::openConfig(), "General");
@@ -393,7 +387,6 @@ void KSMServer::cancelShutdown( KSMClient* c )
         clientsToSave.clear();
         emit subSessionCloseCanceled();
     } else {
-        Solid::PowerManagement::stopSuppressingSleep(inhibitCookie);
         qCDebug(KSMSERVER) << "Client " << c->program() << " (" << c->clientId() << ") canceled shutdown.";
         KNotification::event( QStringLiteral( "cancellogout" ),
                               i18n( "Logout canceled by '%1'", c->program()),

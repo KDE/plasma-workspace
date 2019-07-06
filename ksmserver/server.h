@@ -245,10 +245,6 @@ private:
 
     WindowMap legacyWindows;
 
-
-    int inhibitCookie;
-
-
     //subSession stuff
     QList<KSMClient*> clientsToKill;
     QList<KSMClient*> clientsToSave;

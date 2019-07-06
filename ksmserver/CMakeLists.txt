@@ -66,6 +66,7 @@ target_link_libraries(kdeinit_ksmserver
     PW::KWorkspace
     KF5::XmlGui
     KF5::GlobalAccel
+    KF5::I18n
     KF5::KIOCore
     KF5::KIOWidgets
     ${X11_LIBRARIES}
@@ -75,8 +76,9 @@ target_link_libraries(kdeinit_ksmserver
     Qt5::Quick
     KF5::Declarative
     KF5::DBusAddons
+    KF5::Notifications
     KF5::Package
-    KF5::KDELibs4Support # Solid/PowerManagement
+    KF5::WindowSystem
     ${PHONON_LIBRARIES}
     Qt5::Concurrent
 )
