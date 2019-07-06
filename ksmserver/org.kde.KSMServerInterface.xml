@@ -1,11 +1,13 @@
 <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
 <node>
   <interface name="org.kde.KSMServerInterface">
-    <method name="logout">
+     <!--deprecated-->
+      <method name="logout">
       <arg type="i" direction="in"/>
       <arg type="i" direction="in"/>
       <arg type="i" direction="in"/>
     </method>
+    <!--deprecated-->
     <method name="canShutdown">
       <arg type="b" direction="out"/>
     </method>
@@ -35,5 +37,14 @@
     <signal name="subSessionClosed"/>
     <signal name="subSessionCloseCanceled"/>
     <signal name="subSessionOpened"/>
+
+    <method name="restoreSession">
+        <!-- Restore the main session. Should only be called once on startup -->
+    </method>
+
+    <method name="closeSession">
+        <!-- Performs a logout and closes the session. Returns true if the session was closed successfully, false if cancelled by the user-->
+        <arg type="b" direction="out"/>
+    </method>
   </interface>
 </node>

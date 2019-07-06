@@ -43,6 +43,8 @@ extern "C" {
 #define QT_CLEAN_NAMESPACE 1
 #include <QStringList>
 #include <QObject>
+#include <QDBusContext>
+#include <QDBusMessage>
 
 #include <kworkspace.h>
 #include <kmessagebox.h>
@@ -71,7 +73,7 @@ struct SMData
     };
 typedef QMap<WId,SMData> WindowMap;
 
-class KSMServer : public QObject
+class KSMServer : public QObject, protected QDBusContext
 {
 Q_OBJECT
 public:
@@ -108,11 +110,14 @@ public:
 
     // public API
     void performLogout();
+    void restoreSession();
     void restoreSession( const QString &sessionName );
     void startDefaultSession();
     void shutdown( KWorkSpace::ShutdownConfirm confirm,
                    KWorkSpace::ShutdownType sdtype,
                    KWorkSpace::ShutdownMode sdmode );
+
+    void setupShortcuts();
 
 Q_SIGNALS:
     void windowManagerLoaded();
@@ -180,7 +185,6 @@ private:
     WId windowWmClientLeader(WId w);
     QByteArray windowSessionId(WId w, WId leader);
 
-    void setupShortcuts();
     void tryRestoreNext();
     void startupDone();
 
@@ -202,6 +206,7 @@ private:
     void restoreSubSession( const QString &name );
 
     void openSwitchUserDialog();
+    bool closeSession();
 
  Q_SIGNALS:
     void subSessionClosed();
@@ -245,14 +250,15 @@ private:
 
     WindowMap legacyWindows;
 
+    QDBusMessage m_performLogoutCall;
+    QDBusMessage m_restoreSessionCall;
+
     //subSession stuff
     QList<KSMClient*> clientsToKill;
     QList<KSMClient*> clientsToSave;
 
     int sockets[2];
     friend bool readFromPipe(int pipe);
-    friend class RestoreSessionJob;
-    friend class Startup;
 };
 
 #endif

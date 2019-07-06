@@ -7,10 +7,9 @@
 #include <QProcess>
 #include <QStandardPaths>
 
-#include <kdisplaymanager.h>
-
-#include "server.h"
-#include "ksmserver_debug.h"
+#include "sessionmanagementbackend.h"
+#include "ksmserver_interface.h"
+#include "debug.h"
 
 
 Shutdown::Shutdown(QObject *parent):
@@ -21,9 +20,6 @@ Shutdown::Shutdown(QObject *parent):
 
     //registered as a new service name for easy moving to new process
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.Shutdown"));
-
-    connect(qApp, &QCoreApplication::aboutToQuit, this, &Shutdown::logoutComplete);
-    connect(KSMServer::self(), &KSMServer::logoutCancelled, this, &Shutdown::logoutCancelled);
 }
 
 void Shutdown::logout()
@@ -43,9 +39,22 @@ void Shutdown::logoutAndReboot()
 
 void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
 {
-    auto ksmserver = KSMServer::self();
     m_shutdownType = shutdownType;
-    ksmserver->performLogout();
+
+    OrgKdeKSMServerInterfaceInterface ksmserverIface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
+    auto closeSessionReply = ksmserverIface.closeSession();
+    auto watcher = new QDBusPendingCallWatcher(closeSessionReply, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [closeSessionReply, watcher, this]() {
+        watcher->deleteLater();
+        if (closeSessionReply.isError()) {
+            qDebug() << "ksmserver failed to complete logout";
+        }
+        if (closeSessionReply.value()) {
+            logoutComplete();
+        } else {
+            logoutCancelled();
+        }
+    });
 }
 
 void Shutdown::logoutCancelled()
@@ -55,7 +64,13 @@ void Shutdown::logoutCancelled()
 
 void Shutdown::logoutComplete() {
     runShutdownScripts();
-    KDisplayManager().shutdown( m_shutdownType, KWorkSpace::ShutdownModeDefault);
+    if (m_shutdownType == KWorkSpace::ShutdownTypeHalt) {
+            SessionBackend::self()->shutdown();
+    } else if (m_shutdownType == KWorkSpace::ShutdownTypeReboot) {
+            SessionBackend::self()->reboot();
+    } else { //logout
+        qApp->quit();
+    }
 }
 
 void Shutdown::runShutdownScripts()
@@ -73,7 +88,7 @@ void Shutdown::runShutdownScripts()
             {
                 const QString fullPath = dir.absolutePath() + QLatin1Char('/') + file;
 
-                qCDebug(KSMSERVER) << "running shutdown script" << fullPath;
+                qCDebug(PLASMA_SESSION) << "running shutdown script" << fullPath;
                 QProcess::execute(fullPath, QStringList());
             }
         }

@@ -95,6 +95,15 @@ void KSMServer::logout( int confirm, int sdtype, int sdmode )
             (KWorkSpace::ShutdownMode)sdmode );
 }
 
+bool KSMServer::closeSession()
+{
+    Q_ASSERT(calledFromDBus());
+    performLogout();
+    setDelayedReply(true);
+    m_performLogoutCall = message();
+    return false;
+}
+
 bool KSMServer::canShutdown()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
@@ -153,22 +162,22 @@ void KSMServer::shutdown( KWorkSpace::ShutdownConfirm confirm,
             break;
         }
     } else {
-        OrgKdeShutdownInterface shutdownIface(QStringLiteral("org.kde.Shutdown"),
-                                              QStringLiteral("/Shutdown"),
-                                              QDBusConnection::sessionBus());
-        switch (shutdownType) {
-        case KWorkSpace::ShutdownTypeHalt:
-            shutdownIface.logoutAndShutdown();
-            break;
-        case KWorkSpace::ShutdownTypeReboot:
-            shutdownIface.logoutAndReboot();
-            break;
-        case KWorkSpace::ShutdownTypeNone:
-            Q_FALLTHROUGH();
-        default:
-            shutdownIface.logout();
-            break;
-        }
+       OrgKdeShutdownInterface shutdownIface(QStringLiteral("org.kde.Shutdown"),
+                                             QStringLiteral("/Shutdown"),
+                                             QDBusConnection::sessionBus());
+       switch (shutdownType) {
+       case KWorkSpace::ShutdownTypeHalt:
+           shutdownIface.logoutAndShutdown();
+           break;
+       case KWorkSpace::ShutdownTypeReboot:
+           shutdownIface.logoutAndReboot();
+           break;
+       case KWorkSpace::ShutdownTypeNone:
+           Q_FALLTHROUGH();
+       default:
+           shutdownIface.logout();
+           break;
+       }
     }
 }
 
@@ -402,6 +411,11 @@ void KSMServer::cancelShutdown( KSMClient* c )
         }
     }
     state = Idle;
+    if (m_performLogoutCall.type() == QDBusMessage::MethodCallMessage) {
+        auto reply = m_performLogoutCall.createReply(false);
+        QDBusConnection::sessionBus().send(reply);
+        m_performLogoutCall = QDBusMessage();
+    }
     emit logoutCancelled();
 }
 
@@ -580,6 +594,11 @@ void KSMServer::completeKillingWM()
 // shutdown is fully complete
 void KSMServer::killingCompleted()
 {
+    if (m_performLogoutCall.type() == QDBusMessage::MethodCallMessage) {
+        auto reply = m_performLogoutCall.createReply(true);
+        QDBusConnection::sessionBus().send(reply);
+        m_performLogoutCall = QDBusMessage();
+    }
     qApp->quit();
 }
 

@@ -89,6 +89,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QX11Info>
 #include <krandom.h>
 #include <klauncher_interface.h>
+#include <startup_interface.h>
 #include <qstandardpaths.h>
 
 #include "kscreenlocker_interface.h"
@@ -691,6 +692,9 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
         org::kde::KLauncher klauncher( QStringLiteral( "org.kde.klauncher5" ), QStringLiteral( "/KLauncher" ), QDBusConnection::sessionBus());
         klauncher.setLaunchEnv( QStringLiteral( "SESSION_MANAGER" ), QString::fromLocal8Bit( (const char*) session_manager ) );
 
+        org::kde::Startup startup(QStringLiteral("org.kde.Startup"), QStringLiteral("/Startup"), QDBusConnection::sessionBus());
+        startup.updateLaunchEnv( QStringLiteral( "SESSION_MANAGER" ), QString::fromLocal8Bit( (const char*) session_manager ) );
+
         free(session_manager);
     }
 
@@ -720,6 +724,8 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
     connect(&protectionTimer, &QTimer::timeout, this, &KSMServer::protectionTimeout);
     connect(&restoreTimer, &QTimer::timeout, this, &KSMServer::tryRestoreNext);
     connect(qApp, &QApplication::aboutToQuit, this, &KSMServer::cleanUp);
+
+    setupXIOErrorHandler();
 }
 
 KSMServer::~KSMServer()
@@ -1103,6 +1109,29 @@ void KSMServer::startDefaultSession()
 #endif
     sessionGroup = QString();
     launchWM( QList< QStringList >() << wmCommands );
+}
+
+void KSMServer::restoreSession()
+{
+    Q_ASSERT(calledFromDBus());
+    if (defaultSession()) {
+        state = KSMServer::Idle;
+        return;
+   }
+
+   setDelayedReply(true);
+   m_restoreSessionCall = message();
+
+   restoreLegacySession(KSharedConfig::openConfig().data());
+   lastAppStarted = 0;
+   lastIdStarted.clear();
+   state = KSMServer::Restoring;
+   connect(this, &KSMServer::sessionRestored, this, [this]() {
+        auto reply = m_restoreSessionCall.createReply();
+        QDBusConnection::sessionBus().send(reply);
+        m_restoreSessionCall = QDBusMessage();
+   });
+   tryRestoreNext();
 }
 
 void KSMServer::restoreSubSession( const QString& name )

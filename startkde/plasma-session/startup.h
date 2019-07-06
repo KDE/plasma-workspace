@@ -30,19 +30,29 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "autostart.h"
 
 class KSMServer;
+class KCompositeJob;
 
 class Startup : public QObject
 {
 Q_OBJECT
 public:
-    Startup(KSMServer *parent);
+    Startup(QObject *parent);
     void upAndRunning( const QString& msg );
     void finishStartup();
+public Q_SLOTS:
+    // alternatively we could drop this and have a rule that we /always/ launch everything through klauncher
+    // need resolution from frameworks discussion on kdeinit
+    void updateLaunchEnv(const QString &key, const QString &value);
 private:
     void autoStart(int phase);
+};
 
-private:
-    KSMServer *ksmserver = nullptr;
+class SleepJob: public KJob
+{
+Q_OBJECT
+public:
+    SleepJob();
+    void start() override;
 };
 
 class KCMInitJob: public KJob
@@ -73,13 +83,26 @@ private:
     AutoStart m_autoStart;
 };
 
+/**
+ * Launches a process, and waits for the service to appear on the session bus
+ */
+class StartServiceJob: public KJob
+{
+    Q_OBJECT
+public:
+    StartServiceJob(const QString &process, const QStringList &args, const QString &serviceId);
+    void start() override;
+private:
+    const QString m_process;
+    const QStringList m_args;
+};
+
 class RestoreSessionJob: public KJob
 {
 Q_OBJECT
 public:
-    RestoreSessionJob(KSMServer *ksmserver);
-    void start() override;
+   RestoreSessionJob();
+   void start() override;
 private:
-    KSMServer *m_ksmserver;
 };
 

@@ -1,5 +1,4 @@
 /*****************************************************************
-ksmserver - the KDE session management server
 
 Copyright 2000 Matthias Ettrich <ettrich@kde.org>
 Copyright 2005 Lubos Lunak <l.lunak@kde.org>
@@ -32,17 +31,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ******************************************************************/
 
 #include "startup.h"
-#include "server.h"
 
-#include <config-workspace.h>
-#include <config-unix.h> // HAVE_LIMITS_H
-#include <config-ksmserver.h>
-
-#include <ksmserver_debug.h>
+#include "debug.h"
 
 #include "kcminit_interface.h"
 #include "kded_interface.h"
 #include <klauncher_interface.h>
+#include "ksmserver_interface.h"
 
 #include <KCompositeJob>
 #include <Kdelibs4Migration>
@@ -51,6 +46,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KNotifyConfig>
 #include <KProcess>
 #include <KService>
+#include <KConfigGroup>
 
 #include <phonon/audiooutput.h>
 #include <phonon/mediaobject.h>
@@ -62,7 +58,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QDir>
 #include <QStandardPaths>
 #include <QTimer>
-#include <QX11Info>
+#include <QProcess>
+
+#include "startupadaptor.h"
 
 class Phase: public KCompositeJob
 {
@@ -93,9 +91,10 @@ public:
     StartupPhase0(QObject *parent) : Phase(parent)
     {}
     void start() override {
-        qCDebug(KSMSERVER) << "Phase 0";
+        qCDebug(PLASMA_SESSION) << "Phase 0";
         addSubjob(new AutoStartAppsJob(0));
         addSubjob(new KCMInitJob(1));
+        addSubjob(new SleepJob());
     }
 };
 
@@ -106,7 +105,7 @@ public:
     StartupPhase1(QObject *parent) : Phase(parent)
     {}
     void start() override {
-        qCDebug(KSMSERVER) << "Phase 1";
+        qCDebug(PLASMA_SESSION) << "Phase 1";
         addSubjob(new AutoStartAppsJob(1));
     }
 };
@@ -121,13 +120,24 @@ public:
     bool migrateKDE4Autostart(const QString &folder);
 
     void start() override {
-        qCDebug(KSMSERVER) << "Phase 2";
+        qCDebug(PLASMA_SESSION) << "Phase 2";
         addSubjob(new AutoStartAppsJob(2));
         addSubjob(new KDEDInitJob());
         addSubjob(new KCMInitJob(2));
         runUserAutostart();
     }
 };
+
+SleepJob::SleepJob()
+{
+}
+
+void SleepJob::start()
+{
+    auto t = new QTimer(this);
+    connect(t, &QTimer::timeout, this, [this]() {emitResult();});
+    t->start(100);
+}
 
 // Put the notification in its own thread as it can happen that
 // PulseAudio will start initializing with this, so let's not
@@ -149,7 +159,7 @@ class NotificationThread : public QThread
 
         QString soundFilename = notifyConfig.readEntry(QStringLiteral("Sound"));
         if (soundFilename.isEmpty()) {
-            qCWarning(KSMSERVER) << "Audio notification requested, but no sound file provided in notifyrc file, aborting audio notification";
+            qCWarning(PLASMA_SESSION) << "Audio notification requested, but no sound file provided in notifyrc file, aborting audio notification";
             return;
         }
 
@@ -167,7 +177,7 @@ class NotificationThread : public QThread
             soundURL.clear();
         }
         if (soundURL.isEmpty()) {
-            qCWarning(KSMSERVER) << "Audio notification requested, but sound file from notifyrc file was not found, aborting audio notification";
+            qCWarning(PLASMA_SESSION) << "Audio notification requested, but sound file from notifyrc file was not found, aborting audio notification";
             return;
         }
 
@@ -183,30 +193,39 @@ class NotificationThread : public QThread
 
 };
 
-Startup::Startup(KSMServer *parent):
-    QObject(parent),
-    ksmserver(parent)
+Startup::Startup(QObject *parent):
+    QObject(parent)
 {
+    new StartupAdaptor(this);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/Startup"), QStringLiteral("org.kde.Startup"), this);
+    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.Startup"));
+
     auto phase0 = new StartupPhase0(this);
     auto phase1 = new StartupPhase1(this);
     auto phase2 = new StartupPhase2(this);
-    auto restoreSession = new RestoreSessionJob(ksmserver);
+    auto restoreSession = new RestoreSessionJob();
 
-    connect(ksmserver, &KSMServer::windowManagerLoaded, phase0, &KJob::start);
+    // this includes starting kwin (currently)
+    // forward our arguments into ksmserver to match startplasma expectations
+    QStringList arguments = qApp->arguments();
+    arguments.removeFirst();
+    auto ksmserverJob = new StartServiceJob(QStringLiteral("ksmserver"), arguments, QStringLiteral("org.kde.ksmserver"));
+
+    connect(ksmserverJob, &KJob::finished, phase0, &KJob::start);
+
     connect(phase0, &KJob::finished, phase1, &KJob::start);
-
-    connect(phase1, &KJob::finished, this, [=]() {
-        ksmserver->setupShortcuts(); // done only here, because it needs kglobalaccel :-/
-    });
 
     connect(phase1, &KJob::finished, restoreSession, &KJob::start);
     connect(restoreSession, &KJob::finished, phase2, &KJob::start);
+    upAndRunning(QStringLiteral("ksmserver"));
 
     connect(phase1, &KJob::finished, this, []() {
         NotificationThread *loginSound = new NotificationThread();
         connect(loginSound, &NotificationThread::finished, loginSound, &NotificationThread::deleteLater);
         loginSound->start();});
     connect(phase2, &KJob::finished, this, &Startup::finishStartup);
+
+    ksmserverJob->start();
 }
 
 void Startup::upAndRunning( const QString& msg )
@@ -221,10 +240,13 @@ void Startup::upAndRunning( const QString& msg )
 
 void Startup::finishStartup()
 {
-    qCDebug(KSMSERVER) << "Finished";
-    ksmserver->state = KSMServer::Idle;
-    ksmserver->setupXIOErrorHandler();
+    qCDebug(PLASMA_SESSION) << "Finished";
     upAndRunning(QStringLiteral("ready"));
+}
+
+void Startup::updateLaunchEnv(const QString &key, const QString &value)
+{
+    qputenv(key.toLatin1(), value.toLatin1());
 }
 
 KCMInitJob::KCMInitJob(int phase)
@@ -254,7 +276,7 @@ KDEDInitJob::KDEDInitJob()
 }
 
 void KDEDInitJob::start() {
-    qCDebug(KSMSERVER());
+    qCDebug(PLASMA_SESSION());
     org::kde::kded5 kded( QStringLiteral("org.kde.kded5"),
                          QStringLiteral("/kded"),
                          QDBusConnection::sessionBus());
@@ -265,23 +287,18 @@ void KDEDInitJob::start() {
     connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
 }
 
-RestoreSessionJob::RestoreSessionJob(KSMServer *server): KJob(),
-    m_ksmserver(server)
+RestoreSessionJob::RestoreSessionJob():
+    KJob()
 {}
 
 void RestoreSessionJob::start()
 {
-    if (m_ksmserver->defaultSession()) {
-        QTimer::singleShot(0, this, [this]() {emitResult();});
-        return;
-    }
+    OrgKdeKSMServerInterfaceInterface ksmserverIface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
+    auto pending = ksmserverIface.restoreSession();
 
-    m_ksmserver->restoreLegacySession(KSharedConfig::openConfig().data());
-    m_ksmserver->lastAppStarted = 0;
-    m_ksmserver->lastIdStarted.clear();
-    m_ksmserver->state = KSMServer::Restoring;
-    connect(m_ksmserver, &KSMServer::sessionRestored, this, [this]() {emitResult();});
-    m_ksmserver->tryRestoreNext();
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {emitResult();});
+    connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
 }
 
 void StartupPhase2::runUserAutostart()
@@ -308,12 +325,12 @@ void StartupPhase2::runUserAutostart()
         {
             const QString fullPath = dir.absolutePath() + QLatin1Char('/') + file;
 
-            qCInfo(KSMSERVER) << "Starting autostart script " << fullPath;
+            qCInfo(PLASMA_SESSION) << "Starting autostart script " << fullPath;
             auto p = new KProcess; //deleted in onFinished lambda
             p->setProgram(fullPath);
             p->start();
             connect(p, static_cast<void (QProcess::*)(int)>(&QProcess::finished), [p](int exitCode) {
-                qCInfo(KSMSERVER) << "autostart script" << p->program() << "finished with exit code " << exitCode;
+                qCInfo(PLASMA_SESSION) << "autostart script" << p->program() << "finished with exit code " << exitCode;
                 p->deleteLater();
             });
         }
@@ -336,7 +353,7 @@ bool StartupPhase2::migrateKDE4Autostart(const QString &autostartFolder)
     }
 
     const QDir oldFolder(oldAutostart);
-    qCDebug(KSMSERVER) << "Copying autostart files from" << oldFolder.path();
+    qCDebug(PLASMA_SESSION) << "Copying autostart files from" << oldFolder.path();
     const QStringList entries = oldFolder.entryList(QDir::Files);
     foreach (const QString &file, entries) {
         const QString src = oldFolder.absolutePath() + QLatin1Char('/') + file;
@@ -350,7 +367,7 @@ bool StartupPhase2::migrateKDE4Autostart(const QString &autostartFolder)
             success = QFile::copy(src, dest);
         }
         if (!success) {
-            qCWarning(KSMSERVER) << "Error copying" << src << "to" << dest;
+            qCWarning(PLASMA_SESSION) << "Error copying" << src << "to" << dest;
         }
     }
     return true;
@@ -363,7 +380,7 @@ AutoStartAppsJob::AutoStartAppsJob(int phase)
 }
 
 void AutoStartAppsJob::start() {
-    qCDebug(KSMSERVER());
+    qCDebug(PLASMA_SESSION);
 
     QTimer::singleShot(0, this, [=]() {
         do {
@@ -379,15 +396,33 @@ void AutoStartAppsJob::start() {
             KService service(serviceName);
             auto arguments = KIO::DesktopExecParser(service, QList<QUrl>()).resultingArguments();
             if (arguments.isEmpty()) {
-                qCWarning(KSMSERVER) << "failed to parse" << serviceName << "for autostart";
+                qCWarning(PLASMA_SESSION) << "failed to parse" << serviceName << "for autostart";
                 continue;
             }
-            qCInfo(KSMSERVER) << "Starting autostart service " << serviceName << arguments;
+            qCInfo(PLASMA_SESSION) << "Starting autostart service " << serviceName << arguments;
             auto program = arguments.takeFirst();
             if (!QProcess::startDetached(program, arguments))
-                qCWarning(KSMSERVER) << "could not start" << serviceName << ":" << program << arguments;
+                qCWarning(PLASMA_SESSION) << "could not start" << serviceName << ":" << program << arguments;
         } while (true);
     });
 }
+
+
+StartServiceJob::StartServiceJob(const QString &process, const QStringList &args, const QString &serviceId):
+    KJob(),
+    m_process(process),
+    m_args(args)
+{
+    auto watcher = new QDBusServiceWatcher(serviceId, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForRegistration, this);
+    connect(watcher, &QDBusServiceWatcher::serviceRegistered, this, [=]() {
+        emitResult();
+    });
+}
+
+void StartServiceJob::start()
+{
+    QProcess::startDetached(m_process, m_args);
+}
+
 
 #include "startup.moc"

@@ -354,7 +354,7 @@ bool startKSMServer(bool wayland)
     // lock now and do the rest of the KDE startup underneath the locker.
 
 
-    QStringList ksmserverOptions = { QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/ksmserver") };
+    QStringList ksmserverOptions;
     if (wayland) {
         ksmserverOptions << QStringLiteral("--no-lockscreen");
     } else {
@@ -362,7 +362,8 @@ bool startKSMServer(bool wayland)
             ksmserverOptions << QStringLiteral("--lockscreen");
         }
     }
-    const auto exitCode = runSync(QStringLiteral("kwrapper5"), ksmserverOptions);
+
+    const auto exitCode = runSync(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), ksmserverOptions);
 
     if (exitCode == 255) {
         // Startup error
