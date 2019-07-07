@@ -1,6 +1,5 @@
 /*
  *   Copyright 2011 Marco Martin <mart@kde.org>
- *   Copyright 2019 ivan tkachenko <ratijastk@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -30,10 +29,11 @@ import "items"
 MouseArea {
     id: root
 
-    Layout.fillWidth:   vertical
-    Layout.fillHeight: !vertical
-    Layout.minimumWidth:   vertical ? 0 : mainLayout.implicitWidth
-    Layout.minimumHeight: !vertical ? 0 : mainLayout.implicitHeight
+    Layout.minimumWidth: vertical ? units.iconSizes.small : tasksRow.implicitWidth + (expander.visible ? expander.implicitWidth : 0) + units.smallSpacing
+
+    Layout.minimumHeight: vertical ? tasksRow.implicitHeight + (expander.visible ? expander.implicitHeight : 0) + units.smallSpacing : units.smallSpacing
+
+    Layout.preferredHeight: Layout.minimumHeight
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
@@ -45,12 +45,9 @@ MouseArea {
     property int hiddenItemSize: units.iconSizes.smallMedium
     property alias expanded: dialog.visible
     property Item activeApplet
-    property Item activeAppletItem: findParentNamed(activeApplet, "abstractItem")
-    property Item activeAppletContainer: activeAppletItem ? activeAppletItem.parent : null
-
     property int status: dialog.visible ? PlasmaCore.Types.RequiresAttentionStatus : PlasmaCore.Types.PassiveStatus
 
-    property alias visibleLayout: tasksLayout
+    property alias visibleLayout: tasksRow
     property alias hiddenLayout: expandedRepresentation.hiddenLayout
 
     property alias statusNotifierModel: statusNotifierModel
@@ -61,28 +58,17 @@ MouseArea {
     Plasmoid.onExpandedChanged: {
         if (!plasmoid.expanded) {
             dialog.visible = plasmoid.expanded;
-            root.activeApplet = null;
         }
-    }
-
-    // Shouldn't it be part of Qt?
-    function findParentNamed(object, objectName) {
-        if (object) {
-            while (object = object.parent) {
-                if (object.objectName === objectName) {
-                    return object;
-                }
-            }
-        }
-        return null;
     }
 
     function updateItemVisibility(item) {
         switch (item.effectiveStatus) {
         case PlasmaCore.Types.HiddenStatus:
-            if (item.parent !== invisibleEntriesContainer) {
-                item.parent = invisibleEntriesContainer;
+            if (item.parent === invisibleEntriesContainer) {
+                return;
             }
+
+            item.parent = invisibleEntriesContainer;
             break;
 
         case PlasmaCore.Types.ActiveStatus:
@@ -108,6 +94,7 @@ MouseArea {
             } else if (hiddenLayout.children[0] !== item) {
                 plasmoid.nativeInterface.reorderItemBefore(item, hiddenLayout.children[0]);
             }
+            item.x = 0;
             break;
         }
     }
@@ -119,10 +106,16 @@ MouseArea {
 
     Containment.onAppletAdded: {
         //Allow the plasmoid expander to know in what window it will be
-        var plasmoidContainer = plasmoidItemComponent.createObject(invisibleEntriesContainer, {"applet": applet});
+        var plasmoidContainer = plasmoidItemComponent.createObject(invisibleEntriesContainer, {"x": x, "y": y, "applet": applet});
+
+        applet.parent = plasmoidContainer
+        applet.anchors.left = plasmoidContainer.left
+        applet.anchors.top = plasmoidContainer.top
+        applet.anchors.bottom = plasmoidContainer.bottom
+        applet.width = plasmoidContainer.height
         applet.visible = true
         plasmoidContainer.visible = true
-
+        
         //This is to make preloading effective, minimizes the scene changes
         if (applet.fullRepresentationItem) {
             applet.fullRepresentationItem.width = expandedRepresentation.width
@@ -155,7 +148,7 @@ MouseArea {
         }
     }
 
-    Connections {
+     Connections {
         target: plasmoid.configuration
 
         onExtraItemsChanged: plasmoid.nativeInterface.allowedPlasmoids = plasmoid.configuration.extraItems
@@ -198,6 +191,19 @@ MouseArea {
         return plasmoid.configuration.extraItems;
     }
 
+    PlasmaCore.DataSource {
+          id: statusNotifierSource
+          engine: "statusnotifieritem"
+          interval: 0
+          onSourceAdded: {
+             connectSource(source)
+          }
+          Component.onCompleted: {
+              connectedSources = sources
+          }
+    }
+
+
     //due to the magic of property bindings this function will be
     //re-executed all the times a setting changes
     property var shownCategories: {
@@ -225,8 +231,11 @@ MouseArea {
         return array;
     }
 
-    StatusNotifierItemModel {
-       id: statusNotifierModel
+    PlasmaCore.SortFilterModel {
+        id: statusNotifierModel
+        sourceModel: PlasmaCore.DataModel {
+            dataSource: statusNotifierSource
+        }
     }
 
     //This is a dump for items we don't want to be seen or as an incubation, when they are
@@ -250,9 +259,8 @@ MouseArea {
     }
 
     CurrentItemHighLight {
-        visualParent: mainLayout
-
-        target: root.activeAppletContainer === tasksLayout ? root.activeAppletItem : root
+        visualParent: tasksRow
+        target: root.activeApplet && root.activeApplet.parent.parent == tasksRow ? root.activeApplet.parent : root
         location: plasmoid.location
     }
 
@@ -296,47 +304,56 @@ MouseArea {
         }
     }
 
-    // Main layout
-    GridLayout {
-        id: mainLayout
+    //Main Layout
+    Flow {
+        id: tasksRow
+        spacing: 0
+        height: parent.height - (vertical && expander.visible ? expander.height : 0)
+        width: parent.width - (vertical || !expander.visible ? 0 : expander.width)
+        property string skipItems
+        flow: vertical ? Flow.LeftToRight : Flow.TopToBottom
+        //To make it look centered
+        y: Math.round(height/2 - childrenRect.height/2)
+        x: (expander.visible && LayoutMirroring.enabled ? expander.width : 0) + Math.round(width/2 - childrenRect.width/2)
 
-        rowSpacing: 0
-        columnSpacing: 0
-        anchors.fill: parent
 
-        flow: vertical ? GridLayout.TopToBottom : GridLayout.LeftToRight
-
-        GridLayout {
-            id: tasksLayout
-
-            rowSpacing: 0
-            columnSpacing: 0
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            flow: vertical ? GridLayout.TopToBottom : GridLayout.LeftToRight
-            rows:     vertical ? Math.round(children.length / columns)
-                               : Math.max(1, Math.floor(root.height / (itemSize + marginHints.top + marginHints.bottom)))
-            columns: !vertical ? Math.round(children.length / rows)
-                               : Math.max(1, Math.floor(root.width / (itemSize + marginHints.left + marginHints.right)))
-
-            // Do spacing with margins, to correctly compute the number of lines
-            property QtObject marginHints: QtObject {
-                property int left: Math.round(units.smallSpacing / 2)
-                property int top: Math.round(units.smallSpacing / 2)
-                property int right: Math.round(units.smallSpacing / 2)
-                property int bottom: Math.round(units.smallSpacing / 2)
-            }
+        //Do spacing with margins, to correctly compute the number of lines
+        property QtObject marginHints: QtObject {
+            property int left: Math.round(units.smallSpacing / 2)
+            property int top: Math.round(units.smallSpacing / 2)
+            property int right: Math.round(units.smallSpacing / 2)
+            property int bottom: Math.round(units.smallSpacing / 2)
         }
 
-        ExpanderArrow {
-            id: expander
-            Layout.fillWidth: vertical
-            Layout.fillHeight: !vertical
+        //add doesn't seem to work used in conjunction with stackBefore/stackAfter
+        /*add: Transition {
+            NumberAnimation {
+                property: "scale"
+                from: 0
+                to: 1
+                easing.type: Easing.InQuad
+                duration: units.longDuration
+            }
+        }
+        move: Transition {
+            NumberAnimation {
+                properties: "x,y"
+                easing.type: Easing.InQuad
+                duration: units.longDuration
+            }
+        }*/
+    }
+
+    ExpanderArrow {
+        id: expander
+        anchors {
+            fill: parent
+            leftMargin: vertical ? 0 : parent.width - implicitWidth
+            topMargin: vertical ? parent.height - implicitHeight : 0
         }
     }
 
-    // Main popup
+    //Main popup
     PlasmaCore.Dialog {
         id: dialog
         visualParent: root

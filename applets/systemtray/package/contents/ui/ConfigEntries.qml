@@ -1,7 +1,6 @@
 /*
  *  Copyright 2013 Sebastian Kügler <sebas@kde.org>
  *  Copyright 2014 Marco Martin <mart@kde.org>
- *  Copyright 2019 ivan tkachenko <ratijastk@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -45,8 +44,23 @@ ColumnLayout {
         }
     }
 
-    StatusNotifierItemModel {
+    PlasmaCore.DataSource {
+        id: statusNotifierSource
+        engine: "statusnotifieritem"
+        interval: 0
+        onSourceAdded: {
+            connectSource(source)
+        }
+        Component.onCompleted: {
+            connectedSources = sources
+        }
+   }
+
+    PlasmaCore.SortFilterModel {
        id: statusNotifierModel
+       sourceModel: PlasmaCore.DataModel {
+           dataSource: statusNotifierSource
+       }
     }
 
 

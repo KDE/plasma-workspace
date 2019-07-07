@@ -18,8 +18,8 @@ kcoreaddons_desktop_to_json(org.kde.plasma.private.systemtray package/metadata.d
 target_link_libraries(org.kde.plasma.private.systemtray
                       Qt5::Gui
                       Qt5::Quick
-                      Qt5::DBus
                       KF5::Plasma
+                      Qt5::DBus
                       KF5::IconThemes
                       KF5::XmlGui
                       KF5::I18n)

@@ -1,6 +1,5 @@
 /*
  *   Copyright 2016 Marco Martin <mart@kde.org>
- *   Copyright 2019 ivan tkachenko <ratijastk@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,29 +18,25 @@
  */
 
 import QtQuick 2.1
-import QtQuick.Layouts 1.12
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 PlasmaCore.ToolTipArea {
     id: abstractItem
-    objectName: "abstractItem"
 
-    Layout.fillHeight: !(labelVisible || vertical)
-    Layout.fillWidth:    labelVisible || vertical
-    Layout.preferredHeight: effectiveItemSize + marginHints.top + marginHints.bottom
-    Layout.preferredWidth: labelVisible ? -1 : effectiveItemSize + marginHints.left + marginHints.right
+    height: effectiveItemSize + marginHints.top + marginHints.bottom
+    width: labelVisible ? parent.width : effectiveItemSize + marginHints.left + marginHints.right
 
     property real effectiveItemSize: hidden ? root.hiddenItemSize : root.itemSize
     property string itemId
     property string category
     property alias text: label.text
-    property bool hidden: parent.objectName === "hiddenTasksColumn"
+    property bool hidden: parent.objectName == "hiddenTasksColumn"
     property QtObject marginHints: parent.marginHints
-    property alias labelVisible: label.visible
-    property Item iconItemContainer: iconItemContainer
+    property bool labelVisible: abstractItem.hidden && !root.activeApplet
     property Item iconItem
-    property int /* PlasmaCore.Types.ItemStatus */ status
+    //PlasmaCore.Types.ItemStatus
+    property int status
     property QtObject model
 
     signal clicked(var mouse)
@@ -62,43 +57,14 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    RowLayout {
-        anchors.fill: parent
-        spacing: 0
-
-        Item {
-            id: iconItemContainer
-            property real size: Math.min(parent.width - marginHints.left - marginHints.right,
-                                         parent.height - marginHints.top - marginHints.bottom)
-            Layout.preferredWidth: abstractItem.effectiveItemSize
-            Layout.preferredHeight: abstractItem.effectiveItemSize
-            Layout.leftMargin: labelVisible ? marginHints.left : 0
-            Layout.rightMargin: labelVisible ? marginHints.right : 0
-            Layout.alignment: Qt.AlignVCenter | (labelVisible ? Qt.AlignLeft : Qt.AlignHCenter)
-        }
-        PlasmaComponents.Label {
-            id: label
-            Layout.fillWidth: true
-
-            opacity: visible ? 1 : 0
-            visible: abstractItem.hidden && !root.activeApplet
-            Behavior on opacity {
-                NumberAnimation {
-                    duration: units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-        }
-    }
-
-    /* subclasses need to assign to this tooltip properties
+    /* subclasses need to assign to this tiiltip properties
     mainText:
     subText:
-    icon:
+    icon: 
     */
 
     location: {
-        if (hidden) {
+        if (abstractItem.parent && abstractItem.parent.objectName === "hiddenTasksColumn") {
             if (LayoutMirroring.enabled && plasmoid.location !== PlasmaCore.Types.RightEdge) {
                 return PlasmaCore.Types.LeftEdge;
             } else if (plasmoid.location !== PlasmaCore.Types.LeftEdge) {
@@ -124,13 +90,6 @@ PlasmaCore.ToolTipArea {
     //dangerous but needed due how repeater reparents
     onParentChanged: updateItemVisibility(abstractItem);
 
-    onIconItemChanged: {
-        if (iconItem) {
-            iconItem.parent = iconItemContainer;
-            iconItem.anchors.fill = iconItemContainer;
-        }
-    }
-
 //END CONNECTIONS
 
     PulseAnimation {
@@ -142,7 +101,7 @@ PlasmaCore.ToolTipArea {
 
     MouseArea {
         id: mouseArea
-        anchors.fill: parent
+        anchors.fill: abstractItem
         hoverEnabled: true
         drag.filterChildren: true
         acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
@@ -161,6 +120,23 @@ PlasmaCore.ToolTipArea {
             //Don't accept the event in order to make the scrolling by mouse wheel working
             //for the parent scrollview this icon is in.
             wheel.accepted = false;
+        }
+    }
+
+    PlasmaComponents.Label {
+        id: label
+        anchors {
+            left: parent.left
+            leftMargin: iconItem ? iconItem.width + units.smallSpacing : 0
+            verticalCenter: parent.verticalCenter
+        }
+        opacity: labelVisible ? 1 : 0
+        visible: abstractItem.hidden
+        Behavior on opacity {
+            NumberAnimation {
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
+            }
         }
     }
 }

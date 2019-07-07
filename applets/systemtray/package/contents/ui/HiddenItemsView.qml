@@ -1,6 +1,5 @@
 /*
  *   Copyright 2016 Marco Martin <mart@kde.org>
- *   Copyright 2019 ivan tkachenko <ratijastk@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -28,28 +27,27 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 PlasmaExtras.ScrollArea {
     id: hiddenTasksView
 
-    visible: !root.activeApplet || root.activeAppletContainer === hiddenTasksColumn
-    width: root.activeApplet ? iconColumnWidth : parent.width
+    visible: !activeApplet || activeApplet.parent.parent == hiddenTasksColumn
+    width: activeApplet ? iconColumnWidth : parent.width
     property alias layout: hiddenTasksColumn
     //Useful to align stuff to the column of icons, both in expanded and shrink modes
     property int iconColumnWidth: root.hiddenItemSize + highlight.marginHints.left + highlight.marginHints.right
     horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
-    verticalScrollBarPolicy: root.activeApplet ? Qt.ScrollBarAlwaysOff : Qt.ScrollBarAsNeeded
+    verticalScrollBarPolicy: activeApplet ? Qt.ScrollBarAlwaysOff : Qt.ScrollBarAsNeeded
 
     Flickable {
-        anchors.fill: parent
         contentWidth: width
         contentHeight: hiddenTasksColumn.height
 
         MouseArea {
-            width: hiddenTasksView.width
+            width: parent.width
             height: hiddenTasksColumn.height
             drag.filterChildren: true
             hoverEnabled: true
             onExited: hiddenTasksColumn.hoveredItem = null;
 
             CurrentItemHighLight {
-                target: root.activeAppletContainer === hiddenTasksColumn ? root.activeAppletItem : null
+                target: root.activeApplet && root.activeApplet.parent.parent == hiddenTasksColumn ? root.activeApplet.parent : null
                 location: PlasmaCore.Types.LeftEdge
             }
             PlasmaComponents.Highlight {
@@ -60,11 +58,11 @@ PlasmaExtras.ScrollArea {
                 height: hiddenTasksColumn.hoveredItem ? hiddenTasksColumn.hoveredItem.height : 0
             }
 
-            ColumnLayout {
+            Column {
                 id: hiddenTasksColumn
 
                 spacing: units.smallSpacing
-                width: hiddenTasksView.width
+                width: parent.width
                 property Item hoveredItem
                 property alias marginHints: highlight.marginHints
 
