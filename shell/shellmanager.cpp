@@ -111,15 +111,15 @@ void ShellManager::loadHandlers()
             }
 
             auto *handlerContainer = new KDeclarative::QmlObjectSharedEngine(this);
-            handlerContainer->setSource(QUrl::fromLocalFile(qmlFile));
+            auto handler = handlerContainer->createObjectFromSource(QUrl::fromLocalFile(qmlFile), nullptr, {
+                { "pluginName", dir },
 
-            QObject *handler = handlerContainer->rootObject();
-
-            if (handler) {
-                handler->setProperty("pluginName", dir);
                 // This property is useful for shells to launch themselves in some specific sessions
                 // For example mediacenter shell can be launched when in plasma-mediacenter session
-                handler->setProperty("currentSession", QString::fromUtf8(qgetenv("DESKTOP_SESSION")));
+                { "currentSession", QString::fromUtf8(qgetenv("DESKTOP_SESSION")) }
+            });
+
+            if (handler) {
                 registerHandler(handler);
             }
         }
