@@ -75,13 +75,14 @@ AutoStart::loadAutoStartList()
     // XDG autostart dirs
 
     // Make unique list of relative paths
-    QStringList files;
+    QHash<QString, QString> files;
     QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("autostart"), QStandardPaths::LocateDirectory);
     Q_FOREACH (const QString &dir, dirs) {
-        const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.desktop"));
+        const QDir d(dir);
+        const QStringList fileNames = d.entryList(QStringList() << QStringLiteral("*.desktop"));
         Q_FOREACH (const QString &file, fileNames) {
             if (!files.contains(file)) {
-                files.append(file);
+                files.insert(file, d.absoluteFilePath(file));
             }
         }
     }
@@ -92,10 +93,9 @@ AutoStart::loadAutoStartList()
             continue;
         }
 
-        const auto file = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("autostart/") + *it);
         AutoStartItem item;
-        item.name = extractName(file);
-        item.service = file;
+        item.service = *it;
+        item.name = extractName(it.key());
         item.startAfter = config.startAfter();
         item.phase = qMax(KAutostart::BaseDesktop, config.startPhase());
         m_startList.append(item);
