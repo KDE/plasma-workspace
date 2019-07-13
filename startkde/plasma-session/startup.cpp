@@ -414,9 +414,7 @@ StartServiceJob::StartServiceJob(const QString &process, const QStringList &args
     m_args(args)
 {
     auto watcher = new QDBusServiceWatcher(serviceId, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForRegistration, this);
-    connect(watcher, &QDBusServiceWatcher::serviceRegistered, this, [=]() {
-        emitResult();
-    });
+    connect(watcher, &QDBusServiceWatcher::serviceRegistered, this, &StartServiceJob::emitResult);
 }
 
 void StartServiceJob::start()
