@@ -115,11 +115,11 @@ void Translations::defaults()
     QString lang = formatsConfig.readEntry("LANG", QString());
 
     if (lang.isEmpty()
-        || !KLocalizedString::availableDomainTranslations("systemsettings").contains(lang)) {
+        || !KLocalizedString::availableDomainTranslations("plasmashell").contains(lang)) {
         lang = QLocale::system().name();
     }
 
-    if (!KLocalizedString::availableDomainTranslations("systemsettings").contains(lang)) {
+    if (!KLocalizedString::availableDomainTranslations("plasmashell").contains(lang)) {
         lang = QStringLiteral("en_US");
     }
 

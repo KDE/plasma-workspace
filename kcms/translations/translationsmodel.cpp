@@ -34,7 +34,7 @@ TranslationsModel::TranslationsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     if (m_installedLanguages.isEmpty()) {
-        m_installedLanguages = KLocalizedString::availableDomainTranslations("systemsettings");
+        m_installedLanguages = KLocalizedString::availableDomainTranslations("plasmashell");
         m_languages = m_installedLanguages.toList();
     }
 }
