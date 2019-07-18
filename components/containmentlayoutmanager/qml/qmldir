@@ -1,0 +1,7 @@
+module org.kde.plasma.private.containmentlayoutmanager
+
+plugin containmentlayoutmanagerplugin
+BasicAppletContainer 1.0 BasicAppletContainer.qml
+ConfigOverlayWithHandles 1.0 ConfigOverlayWithHandles.qml
+PlaceHolder 1.0 PlaceHolder.qml
+
