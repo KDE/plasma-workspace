@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=krunner
+Exec=@CMAKE_INSTALL_PREFIX@/bin/krunner
 Name=KRunner
 Name[ar]=مشغّل.ك
 Name[bs]=KPokretač
@@ -51,6 +51,7 @@ X-DBUS-ServiceName=org.kde.krunner
 X-KDE-StartupNotify=false
 X-KDE-Shortcuts=Alt+Space,Alt+F2,Search
 Actions=RunClipboard
+X-KDE-Wayland-Interfaces=org_kde_plasma_window_management
 
 [Desktop Action RunClipboard]
 Exec=krunner -c

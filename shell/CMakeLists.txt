@@ -81,9 +81,11 @@ if(HAVE_X11)
   target_link_libraries(plasmashell Qt5::X11Extras)
 endif()
 
+configure_file(org.kde.plasmashell.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop @ONLY)
+
 install(TARGETS plasmashell ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES org.kde.plasmashell.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-install(FILES org.kde.plasmashell.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
 
 install(FILES
