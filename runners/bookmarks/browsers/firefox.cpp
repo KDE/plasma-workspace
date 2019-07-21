@@ -84,21 +84,21 @@ QList< BookmarkMatch > Firefox::match(const QString& term, bool addEverything)
     }
     //qDebug() << "Firefox bookmark: match " << term;
 
-    QString tmpTerm = term;
     QString query;
     if (addEverything) {
         query = QStringLiteral("SELECT moz_bookmarks.fk, moz_bookmarks.title, moz_places.url " \
                     "FROM moz_bookmarks, moz_places WHERE " \
                     "moz_bookmarks.type = 1 AND moz_bookmarks.fk = moz_places.id");
     } else {
-        const QString escapedTerm = tmpTerm.replace('\'', QLatin1String("\\'"));
         query = QString("SELECT moz_bookmarks.fk, moz_bookmarks.title, moz_places.url " \
                         "FROM moz_bookmarks, moz_places WHERE " \
                         "moz_bookmarks.type = 1 AND moz_bookmarks.fk = moz_places.id AND " \
-                        "(moz_bookmarks.title LIKE  '%" + escapedTerm + "%' or moz_places.url LIKE '%"
-                        + escapedTerm + "%')");
+                        "(moz_bookmarks.title LIKE :term OR moz_places.url LIKE :term)");
     }
-    QList<QVariantMap> results = m_fetchsqlite->query(query, QMap<QString, QVariant>());
+    const QMap<QString, QVariant> bindVariables {
+        {QStringLiteral(":term"), QStringLiteral("%%%1%%").arg(term)},
+    };
+    QList<QVariantMap> results = m_fetchsqlite->query(query, bindVariables);
     QMultiMap<QString, QString> uniqueResults;
     foreach(QVariantMap result, results) {
         const QString title = result.value(QStringLiteral("title")).toString();
