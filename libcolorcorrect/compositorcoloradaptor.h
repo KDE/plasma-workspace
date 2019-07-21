@@ -97,7 +97,8 @@ public:
     enum class Mode {
         ModeAutomatic,
         ModeLocation,
-        ModeTimings
+        ModeTimings,
+        ModeConstant,
     };
     Q_ENUMS(Mode)
 
@@ -160,7 +161,7 @@ public:
         return (int)m_modeStaged;
     }
     void setModeStaged(int mode) {
-        if (mode < 0 || 2 < mode || (int)m_modeStaged == mode) {
+        if (mode < 0 || 3 < mode || (int)m_modeStaged == mode) {
             return;
         }
         m_modeStaged = (Mode)mode;

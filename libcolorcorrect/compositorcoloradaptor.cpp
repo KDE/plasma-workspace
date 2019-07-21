@@ -259,6 +259,8 @@ bool CompositorAdaptor::checkStaged()
                 m_morningBeginFixed != m_morningBeginFixedStaged ||
                 m_eveningBeginFixed != m_eveningBeginFixedStaged ||
                 m_transitionTime != m_transitionTimeStaged;
+    case Mode::ModeConstant:
+        return baseDataChange;
     default:
         // never reached
         return false;
