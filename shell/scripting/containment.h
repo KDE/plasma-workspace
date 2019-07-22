@@ -76,7 +76,7 @@ public:
     void setWallpaperMode(const QString &wallpaperMode);
 
     Q_INVOKABLE QJSValue widgetById(const QJSValue &paramId = QJSValue()) const;
-    Q_INVOKABLE QJSValue addWidget(const QJSValue &v = QJSValue(), qreal x = -1, qreal y = -1, qreal w = -1, qreal h = -1);
+    Q_INVOKABLE QJSValue addWidget(const QJSValue &v = QJSValue(), qreal x = -1, qreal y = -1, qreal w = -1, qreal h = -1, const QVariantList &args = QVariantList());
     Q_INVOKABLE QJSValue widgets(const QString &widgetType = QString()) const;
 
 public Q_SLOTS:

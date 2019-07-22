@@ -173,7 +173,7 @@ QJSValue Containment::widgetById(const QJSValue &paramId) const
     return QJSValue();
 }
 
-QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qreal h)
+QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qreal h, const QVariantList &args)
 {
     if (!v.isString() && !v.isQObject()) {
         return d->engine->newError(i18n("addWidget requires a name of a widget or a widget object"));
@@ -194,7 +194,7 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
             containmentItem = d->containment.data()->property("_plasma_graphicObject").value<QQuickItem *>();
 
             if (containmentItem) {
-                QMetaObject::invokeMethod(containmentItem , "createApplet", Qt::DirectConnection, Q_RETURN_ARG(Plasma::Applet *, applet), Q_ARG(QString, v.toString()), Q_ARG(QVariantList, QVariantList()), Q_ARG(QRectF, geometry));
+                QMetaObject::invokeMethod(containmentItem , "createApplet", Qt::DirectConnection, Q_RETURN_ARG(Plasma::Applet *, applet), Q_ARG(QString, v.toString()), Q_ARG(QVariantList, args), Q_ARG(QRectF, geometry));
             }
             if (applet) {
                 return d->engine->wrap(applet);
@@ -205,7 +205,7 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
         //Case in which either:
         // * a geometry wasn't provided
         // * containmentItem wasn't found
-        applet = d->containment.data()->createApplet(v.toString());
+        applet = d->containment.data()->createApplet(v.toString(), args);
 
         if (applet) {
             return d->engine->wrap(applet);
