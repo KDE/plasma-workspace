@@ -36,6 +36,7 @@ AppletContainer::AppletContainer(QQuickItem *parent)
         m_appletItem = qobject_cast<PlasmaQuick::AppletQuickItem *>(contentItem());
 
         connectBusyIndicator();
+        connectConfigurationRequired();
 
         emit appletChanged();
     });
@@ -48,6 +49,7 @@ AppletContainer::~AppletContainer()
 void AppletContainer::componentComplete()
 {
     connectBusyIndicator();
+    connectConfigurationRequired();
     ItemContainer::componentComplete();
 }
 
@@ -103,6 +105,63 @@ void AppletContainer::connectBusyIndicator()
             m_busyIndicatorItem->setZ(999);
             m_busyIndicatorComponent->completeCreate();
         });
+    }
+}
+
+QQmlComponent *AppletContainer::configurationRequiredComponent() const
+{
+    return m_configurationRequiredComponent;
+}
+
+void AppletContainer::setConfigurationRequiredComponent(QQmlComponent *component)
+{
+    if (m_configurationRequiredComponent == component) {
+        return;
+    }
+
+    m_configurationRequiredComponent = component;
+
+    if (m_configurationRequiredItem) {
+        m_configurationRequiredItem->deleteLater();
+        m_configurationRequiredItem = nullptr;
+    }
+
+    emit configurationRequiredComponentChanged();
+}
+
+void AppletContainer::connectConfigurationRequired()
+{
+    if (m_appletItem && !m_configurationRequiredItem) {
+        Q_ASSERT(m_appletItem->applet());
+
+        auto syncConfigRequired = [this] () {
+            if (!m_configurationRequiredComponent || !m_appletItem->applet()->configurationRequired() || m_configurationRequiredItem) {
+                return;
+            }
+
+            QQmlContext *context = QQmlEngine::contextForObject(this);
+            Q_ASSERT(context);
+            QObject *instance = m_configurationRequiredComponent->beginCreate(context);
+            m_configurationRequiredItem = qobject_cast<QQuickItem *>(instance);
+
+            if (!m_configurationRequiredItem) {
+                qWarning() << "Error: configurationRequiredComponent not of Item type";
+                if (instance) {
+                    instance->deleteLater();
+                }
+                return;
+            }
+
+            m_configurationRequiredItem->setParentItem(this);
+            m_configurationRequiredItem->setZ(998);
+            m_configurationRequiredComponent->completeCreate();
+        };
+
+        connect(m_appletItem->applet(), &Plasma::Applet::configurationRequiredChanged, this, syncConfigRequired);
+
+        if (m_appletItem->applet()->configurationRequired()) {
+            syncConfigRequired();
+        }
     }
 }
 

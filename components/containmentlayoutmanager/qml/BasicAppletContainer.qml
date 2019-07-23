@@ -81,4 +81,9 @@ ContainmentLayoutManager.AppletContainer {
         visible: applet.busy
         running: visible
     }
+    configurationRequiredComponent: PlasmaComponents.Button {
+        anchors.centerIn: parent
+        text: i18n("Configure...")
+        onClicked: applet.action("configure").trigger();
+    }
 } 
