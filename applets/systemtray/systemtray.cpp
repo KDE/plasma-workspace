@@ -77,7 +77,7 @@ void SystemTray::init()
         if (!info.isValid() || info.value(QStringLiteral("X-Plasma-NotificationArea")) != "true") {
             continue;
         }
-        m_systrayApplets[info.pluginId()] = KPluginInfo(info);
+        m_systrayApplets[info.pluginId()] = info;
 
         if (info.isEnabledByDefault()) {
             m_defaultPlasmoids += info.pluginId();
@@ -396,11 +396,11 @@ void SystemTray::restorePlasmoids()
 
     QStringList ownApplets;
 
-    QMap<QString, KPluginInfo> sortedApplets;
+    QMap<QString, KPluginMetaData> sortedApplets;
     for (auto it = m_systrayApplets.constBegin(); it != m_systrayApplets.constEnd(); ++it) {
-        const KPluginInfo &info = it.value();
-        if (m_allowedPlasmoids.contains(info.pluginName()) && !
-            m_dbusActivatableTasks.contains(info.pluginName())) {
+        const KPluginMetaData &info = it.value();
+        if (m_allowedPlasmoids.contains(info.pluginId()) && !
+            m_dbusActivatableTasks.contains(info.pluginId())) {
             //FIXME
             // if we already have a plugin with this exact name in it, then check if it is the
             // same plugin and skip it if it is indeed already listed
@@ -409,8 +409,8 @@ void SystemTray::restorePlasmoids()
                 // it is possible (though poor form) to have multiple applets
                 // with the same visible name but different plugins, so we hve to check all values
                 const auto infos = sortedApplets.values(info.name());
-                for (const KPluginInfo &existingInfo : infos) {
-                    if (existingInfo.pluginName() == info.pluginName()) {
+                for (const KPluginMetaData &existingInfo : infos) {
+                    if (existingInfo.pluginId() == info.pluginId()) {
                         dupe = true;
                         break;
                     }
@@ -427,10 +427,10 @@ void SystemTray::restorePlasmoids()
         }
     }
 
-    for (const KPluginInfo &info : qAsConst(sortedApplets)) {
+    for (const KPluginMetaData &info : qAsConst(sortedApplets)) {
         qCDebug(SYSTEM_TRAY) << " Adding applet: " << info.name();
-        if (m_allowedPlasmoids.contains(info.pluginName())) {
-            newTask(info.pluginName());
+        if (m_allowedPlasmoids.contains(info.pluginId())) {
+            newTask(info.pluginId());
         }
     }
 
@@ -447,15 +447,15 @@ QAbstractItemModel* SystemTray::availablePlasmoids()
     if (!m_availablePlasmoidsModel) {
         m_availablePlasmoidsModel = new PlasmoidModel(this);
 
-        for (const KPluginInfo &info : qAsConst(m_systrayApplets)) {
+        for (const KPluginMetaData &info : qAsConst(m_systrayApplets)) {
             QString name = info.name();
-            const QString dbusactivation = info.property(QStringLiteral("X-Plasma-DBusActivationService")).toString();
+            const QString dbusactivation = info.rawData().value(QStringLiteral("X-Plasma-DBusActivationService")).toString();
 
             if (!dbusactivation.isEmpty()) {
                 name += i18n(" (Automatic load)");
             }
-            QStandardItem *item = new QStandardItem(QIcon::fromTheme(info.icon()), name);
-            item->setData(info.pluginName());
+            QStandardItem *item = new QStandardItem(QIcon::fromTheme(info.iconName()), name);
+            item->setData(info.pluginId());
             m_availablePlasmoidsModel->appendRow(item);
         }
         m_availablePlasmoidsModel->sort(0 /*column*/);
