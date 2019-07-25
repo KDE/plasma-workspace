@@ -1,6 +1,7 @@
 /*
  *  Copyright 2013 Marco Martin <mart@kde.org>
  *  Copyright 2014 Kai Uwe Broulik <kde@privat.broulik.de>
+ *  Copyright 2019 David Redondo <kde@david-redondo.de>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -34,6 +35,7 @@ ColumnLayout {
     property alias cfg_Color: colorButton.color
     property string cfg_Image
     property int cfg_FillMode
+    property int cfg_SlideshowMode
     property alias cfg_Blur: blurRadioButton.checked
     property var cfg_SlidePaths: ""
     property int cfg_SlideInterval: 0
@@ -58,6 +60,7 @@ ColumnLayout {
         }
         onSlidePathsChanged: cfg_SlidePaths = slidePaths
         onUncheckedSlidesChanged: cfg_UncheckedSlides = uncheckedSlides
+        onSlideshowModeChanged: cfg_SlideshowMode = slideshowMode
     }
 
     onCfg_SlidePathsChanged: {
@@ -65,6 +68,10 @@ ColumnLayout {
     }
     onCfg_UncheckedSlidesChanged: {
         imageWallpaper.uncheckedSlides = cfg_UncheckedSlides
+    }
+
+    onCfg_SlideshowModeChanged: {
+        imageWallpaper.slideshowMode = cfg_SlideshowMode
     }
 
     property int hoursIntervalValue: Math.floor(cfg_SlideInterval / 3600)
@@ -111,6 +118,46 @@ ColumnLayout {
                         resizeComboBox.currentIndex = i;
                         var tl = model[i]["label"].length;
                         //resizeComboBox.textLength = Math.max(resizeComboBox.textLength, tl+5);
+                    }
+                }
+            }
+        }
+
+        QtControls2.ComboBox {
+            id: slideshowComboBox
+            visible: configDialog.currentWallpaper == "org.kde.slideshow"
+            Kirigami.FormData.label: i18nd("plasma_wallpaper_org.kde.image", "Order:")
+            model: [
+                {
+                    'label': i18nd("plasma_wallpaper_org.kde.image", "Random"),
+                    'slideshowMode':  Wallpaper.Image.Random
+                },
+                {
+                    'label': i18nd("plasma_wallpaper_org.kde.image", "A to Z"),
+                    'slideshowMode':  Wallpaper.Image.Alphabetical
+                },
+                {
+                    'label': i18nd("plasma_wallpaper_org.kde.image", "Z to A"),
+                    'slideshowMode':  Wallpaper.Image.AlphabeticalReversed
+                },
+                {
+                    'label': i18nd("plasma_wallpaper_org.kde.image", "Date modified (newest first)"),
+                    'slideshowMode':  Wallpaper.Image.ModifiedReversed
+                },
+                {
+                    'label': i18nd("plasma_wallpaper_org.kde.image", "Date modified (oldest first)"),
+                    'slideshowMode':  Wallpaper.Image.Modified
+                }
+            ]
+            textRole: "label"
+            onCurrentIndexChanged: {
+                cfg_SlideshowMode = model[currentIndex]["slideshowMode"];
+            }
+            Component.onCompleted: setMethod();
+            function setMethod() {
+                for (var i = 0; i < model.length; i++) {
+                    if (model[i]["slideshowMode"] === wallpaper.configuration.SlideshowMode) {
+                        slideshowComboBox.currentIndex = i;
                     }
                 }
             }
@@ -264,12 +311,15 @@ ColumnLayout {
         KCM.GridView {
             id: wallpapersGrid
             anchors.fill: parent
-            property var imageModel: (configDialog.currentWallpaper == "org.kde.image")? imageWallpaper.wallpaperModel : imageWallpaper.slideshowModel
+            property var imageModel: (configDialog.currentWallpaper == "org.kde.image")? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
             //that min is needed as the module will be populated in an async way
             //and only on demand so we can't ensure it already exists
-            view.currentIndex: Math.min(imageModel.indexOf(cfg_Image), imageModel.count-1)
+            view.currentIndex: Math.min(imageModel.indexOf(cfg_Image), imageModel.rowCount()-1)
             //kill the space for label under thumbnails
             view.model: imageModel
+            Component.onCompleted: {
+                imageModel.usedInConfig = true;
+            }
             view.delegate: WallpaperDelegate {
                 color: cfg_Color
             }

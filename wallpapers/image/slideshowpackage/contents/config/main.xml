@@ -38,6 +38,9 @@
       <label>Unchecked Slides</label>
       <default></default>
     </entry>
+    <entry name="SlideshowMode" type="int">
+        <label>Ordering mode for the slideshow</label>
+        <default>0</default>
+    </entry>
   </group>
-
 </kcfg>

@@ -3,6 +3,7 @@
  *   Copyright 2008 by Petri Damsten <damu@iki.fi>                         *
  *   Copyright 2014 Sebastian Kügler <sebas@kde.org>                       *
  *   Copyright 2015 Kai Uwe Broulik <kde@privat.broulik.de>                *
+ *   Copyright 2019 David Redondo <kde@david-redondo.de>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -23,6 +24,7 @@
 
 #ifndef IMAGE_HEADER
 #define IMAGE_HEADER
+
 
 #include <QTimer>
 #include <QPixmap>
@@ -48,6 +50,7 @@ namespace KNS3 {
 
 class BackgroundListModel;
 class SlideModel;
+class SlideFilterModel;
 
 class Image : public QObject, public QQmlParserStatus
 {
@@ -55,9 +58,10 @@ class Image : public QObject, public QQmlParserStatus
     Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(RenderingMode renderingMode READ renderingMode WRITE setRenderingMode NOTIFY renderingModeChanged)
+    Q_PROPERTY(SlideshowMode slideshowMode READ slideshowMode WRITE setSlideshowMode NOTIFY slideshowModeChanged)
     Q_PROPERTY(QUrl wallpaperPath READ wallpaperPath NOTIFY wallpaperPathChanged)
     Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel CONSTANT)
-    Q_PROPERTY(QAbstractItemModel *slideshowModel READ slideshowModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel *slideFilterModel READ slideFilterModel CONSTANT)
     Q_PROPERTY(int slideTimer READ slideTimer WRITE setSlideTimer NOTIFY slideTimerChanged)
     Q_PROPERTY(QStringList usersWallpapers READ usersWallpapers WRITE setUsersWallpapers NOTIFY usersWallpapersChanged)
     Q_PROPERTY(QStringList slidePaths READ slidePaths WRITE setSlidePaths NOTIFY slidePathsChanged)
@@ -72,6 +76,15 @@ class Image : public QObject, public QQmlParserStatus
             SlideShow
         };
         Q_ENUM(RenderingMode)
+
+        enum SlideshowMode {
+            Random,
+            Alphabetical,
+            AlphabeticalReversed,
+            Modified,
+            ModifiedReversed
+        };
+        Q_ENUM(SlideshowMode)
 
         explicit Image(QObject* parent = nullptr);
         ~Image() override;
@@ -97,13 +110,16 @@ class Image : public QObject, public QQmlParserStatus
         RenderingMode renderingMode() const;
         void setRenderingMode(RenderingMode mode);
 
+        SlideshowMode slideshowMode() const;
+        void setSlideshowMode(SlideshowMode mode);
+
         QSize targetSize() const;
         void setTargetSize(const QSize &size);
 
         KPackage::Package *package();
 
         QAbstractItemModel* wallpaperModel();
-        QAbstractItemModel* slideshowModel();
+        QAbstractItemModel* slideFilterModel();
 
         int slideTimer() const;
         void setSlideTimer(int time);
@@ -133,6 +149,7 @@ class Image : public QObject, public QQmlParserStatus
         void settingsChanged(bool);
         void wallpaperPathChanged();
         void renderingModeChanged();
+        void slideshowModeChanged();
         void targetSizeChanged();
         void slideTimerChanged();
         void usersWallpapersChanged();
@@ -161,7 +178,7 @@ class Image : public QObject, public QQmlParserStatus
         void pathCreated(const QString &path);
         void pathDeleted(const QString &path);
         void pathDirty(const QString &path);
-        void backgroundsFound(const QStringList &paths, const QString &token);
+        void backgroundsFound();
 
     protected:
         void syncWallpaperPackage();
@@ -169,7 +186,6 @@ class Image : public QObject, public QQmlParserStatus
         void useSingleImageDefaults();
 
     private:
-
         bool m_ready;
         int m_delay;
         QStringList m_dirs;
@@ -181,15 +197,16 @@ class Image : public QObject, public QQmlParserStatus
         QSize m_targetSize;
 
         RenderingMode m_mode;
+        SlideshowMode m_slideshowMode;
+
         KPackage::Package m_wallpaperPackage;
-        QStringList m_slideshowBackgrounds;
-        QStringList m_unseenSlideshowBackgrounds;
         QStringList m_slidePaths;
         QStringList m_uncheckedSlides;
         QTimer m_timer;
         int m_currentSlide;
         BackgroundListModel *m_model;
         SlideModel* m_slideshowModel;
+        SlideFilterModel* m_slideFilterModel;
         QFileDialog *m_dialog;
         QString m_img;
         QDateTime m_previousModified;

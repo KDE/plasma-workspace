@@ -5,6 +5,7 @@
  *   Copyright 2008 Alexis Ménard <darktears31@gmail.com>                  *
  *   Copyright 2014 Sebastian Kügler <sebas@kde.org>                       *
  *   Copyright 2015 Kai Uwe Broulik <kde@privat.broulik.de>                *
+ *   Copyright 2019 David Redondo <kde@david-redondo.de>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -54,6 +55,7 @@
 #include <qstandardpaths.h>
 #include "backgroundlistmodel.h"
 #include "slidemodel.h"
+#include "slidefiltermodel.h"
 
 #include <KPackage/PackageLoader>
 
@@ -63,9 +65,11 @@ Image::Image(QObject *parent)
       m_delay(10),
       m_dirWatch(new KDirWatch(this)),
       m_mode(SingleImage),
+      m_slideshowMode(Random),
       m_currentSlide(-1),
       m_model(nullptr),
-      m_slideshowModel(nullptr),
+      m_slideshowModel(new SlideModel(this, this)),
+      m_slideFilterModel(new SlideFilterModel(this)),
       m_dialog(nullptr)
 {
     m_wallpaperPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
@@ -77,7 +81,11 @@ Image::Image(QObject *parent)
     connect(m_dirWatch, &KDirWatch::deleted, this, &Image::pathDeleted);
     m_dirWatch->startScan();
 
+    m_slideFilterModel->setSourceModel(m_slideshowModel);
+    connect(this, &Image::uncheckedSlidesChanged, m_slideFilterModel, &SlideFilterModel::invalidateFilter);
+
     useSingleImageDefaults();
+
 }
 
 Image::~Image()
@@ -154,6 +162,25 @@ void Image::setRenderingMode(RenderingMode mode)
         // we need to reset the preferred image
         setSingleImage();
     }
+}
+
+Image::SlideshowMode Image::slideshowMode() const
+{
+    return m_slideshowMode;
+}
+
+void Image::setSlideshowMode(Image::SlideshowMode mode)
+{
+    if (mode == m_slideshowMode) {
+        return;
+    }
+    m_slideshowMode = mode;
+    m_slideFilterModel->setSortingMode(mode);
+    m_slideFilterModel->sort(0);
+    if (m_mode == SlideShow) {
+        startSlideshow();
+    }
+    emit slideshowModeChanged();
 }
 
 float distance(const QSize& size, const QSize& desired)
@@ -277,15 +304,9 @@ QAbstractItemModel* Image::wallpaperModel()
     return m_model;
 }
 
-QAbstractItemModel* Image::slideshowModel()
-{
-    if (!m_slideshowModel) {
-        m_slideshowModel = new SlideModel(this, this);
-        m_slideshowModel->reload(m_slidePaths);
-    }
-    return m_slideshowModel;
+QAbstractItemModel * Image::slideFilterModel() {
+    return m_slideFilterModel;
 }
-
 int Image::slideTimer() const
 {
     return m_delay;
@@ -546,8 +567,7 @@ void Image::addUrl(const QUrl &url, bool setAsCurrent)
     } else {
         if (m_mode != SingleImage) {
             // it's a slide show, add it to the slide show
-            m_slideshowBackgrounds.append(path);
-            m_unseenSlideshowBackgrounds.append(path);
+            m_slideshowModel->addBackground(path);
         }
         // always add it to the user papers, though
         addUsersWallpaper(path);
@@ -576,9 +596,9 @@ void Image::setWallpaper(const QString &path)
         m_wallpaper = path;
         setSingleImage();
     } else {
-        m_slideshowBackgrounds.append(path);
-        m_unseenSlideshowBackgrounds.clear();
-        m_currentSlide = m_slideshowBackgrounds.size() - 2;
+        m_wallpaper = path;
+        m_slideshowModel->addBackground(path);
+        m_currentSlide = m_slideFilterModel->indexOf(path) - 1;
         nextSlide();
     }
     //addUsersWallpaper(path);
@@ -586,51 +606,39 @@ void Image::setWallpaper(const QString &path)
 
 void Image::startSlideshow()
 {
-    if (!m_ready) {
+    if (!m_ready || m_slideFilterModel->property("usedInConfig").toBool()) {
         return;
     }
-
-    if(m_findToken.isEmpty()) {
-        // populate background list
-        m_timer.stop();
-        m_slideshowBackgrounds.clear();
-        m_unseenSlideshowBackgrounds.clear();
-        BackgroundFinder *finder = new BackgroundFinder(this, m_dirs);
-        m_findToken = finder->token();
-        connect(finder, &BackgroundFinder::backgroundsFound, this, &Image::backgroundsFound);
-        finder->start();
-        //TODO: what would be cool: paint on the wallpaper itself a busy widget and perhaps some text
-        //about loading wallpaper slideshow while the thread runs
-    } else {
-        m_scanDirty = true;
-    }
+    // populate background list
+    m_timer.stop();
+    m_slideshowModel->reload(m_slidePaths);
+    connect(m_slideshowModel, &SlideModel::done, this, &Image::backgroundsFound);
+    //TODO: what would be cool: paint on the wallpaper itself a busy widget and perhaps some text
+    //about loading wallpaper slideshow while the thread runs
 }
 
-void Image::backgroundsFound(const QStringList &paths, const QString &token)
+void Image::backgroundsFound()
 {
-    if (token != m_findToken) {
-        return;
-    }
-
-    m_findToken.clear();
+    disconnect(m_slideshowModel, &SlideModel::done, this, 0);
 
     if(m_scanDirty) {
         m_scanDirty = false;
         startSlideshow();
         return;
     }
-    m_slideshowBackgrounds = paths;
-    for(const QString &slide : qAsConst(m_uncheckedSlides)) {
-        m_slideshowBackgrounds.removeAll(QUrl(slide).path());
-    }
-    m_unseenSlideshowBackgrounds.clear();
+
     // start slideshow
-    if (m_slideshowBackgrounds.isEmpty()) {
+    if (m_slideFilterModel->rowCount() == 0) {
         // no image has been found, which is quite weird... try again later (this is useful for events which
         // are not detected by KDirWatch, like a NFS directory being mounted)
         QTimer::singleShot(1000, this, &Image::startSlideshow);
     } else {
-        m_currentSlide = -1;
+        if (m_currentSlide == -1 && m_slideshowMode != Random) {
+            m_currentSlide = m_slideFilterModel->indexOf(m_wallpaper) - 1;
+        } else {
+            m_currentSlide = -1;
+        }
+        m_slideFilterModel->sort(0);
         nextSlide();
         m_timer.start(m_delay * 1000);
     }
@@ -759,46 +767,33 @@ void Image::addUsersWallpaper(const QString &file)
 
 void Image::nextSlide()
 {
-    if (!m_ready || m_slideshowBackgrounds.isEmpty()) {
+    if (!m_ready || m_slideFilterModel->rowCount() == 0) {
         return;
     }
-
-    QString previousPath;
-    if (m_currentSlide > -1 && m_currentSlide < m_unseenSlideshowBackgrounds.size()) {
-        previousPath = m_unseenSlideshowBackgrounds.takeAt(m_currentSlide);
+    int previousSlide = m_currentSlide;
+    QUrl previousPath = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PathRole).toUrl();
+    if (m_currentSlide == m_slideFilterModel->rowCount() - 1 || m_currentSlide < 0) {
+        m_currentSlide = 0;
+    }  else {
+        m_currentSlide += 1;
     }
-
-    if (m_unseenSlideshowBackgrounds.isEmpty()) {
-        m_unseenSlideshowBackgrounds = m_slideshowBackgrounds;
-
-        // We're filling the queue again, make sure we can't pick up again
-        // the last one picked from the previous set
-        if (!previousPath.isEmpty()) {
-            m_unseenSlideshowBackgrounds.removeAll(previousPath);
-
-            // prevent empty list
-            if (m_unseenSlideshowBackgrounds.isEmpty()) {
-                m_unseenSlideshowBackgrounds = m_slideshowBackgrounds;
-            }
-        }
+     //We are starting again - avoid having the same random order when we restart the slideshow
+    if (m_slideshowMode == Random && previousSlide == m_slideFilterModel->rowCount() - 1) {
+            m_slideFilterModel->invalidate();
     }
-
-    m_currentSlide = KRandom::random() % m_unseenSlideshowBackgrounds.size();
-    const QString currentPath = m_unseenSlideshowBackgrounds.at(m_currentSlide);
-
-    m_wallpaperPackage.setPath(currentPath);
-    findPreferedImageInPackage(m_wallpaperPackage);
-
+    QUrl next = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PathRole).toUrl();
+    // And  avoid showing the same picture twice
+    if (previousSlide == m_slideFilterModel->rowCount() - 1 && previousPath == next && m_slideFilterModel->rowCount() > 1) {
+        m_currentSlide += 1;
+        next = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PathRole).toUrl();
+    }
     m_timer.stop();
     m_timer.start(m_delay * 1000);
-
-    QString current = m_wallpaperPackage.filePath("preferred");
-    if (current.isEmpty()) {
-        m_wallpaperPath = currentPath;
+    if (next.isEmpty()) {
+        m_wallpaperPath = previousPath.toLocalFile();
     } else {
-        m_wallpaperPath = current;
+        m_wallpaperPath = next.toLocalFile();
     }
-
     Q_EMIT wallpaperPathChanged();
 }
 
@@ -816,12 +811,11 @@ void Image::openSlide()
 
 void Image::pathCreated(const QString &path)
 {
-    if(!m_slideshowBackgrounds.contains(path)) {
+    if(m_slideshowModel->indexOf(path) == -1) {
         QFileInfo fileInfo(path);
         if(fileInfo.isFile() && BackgroundFinder::isAcceptableSuffix(fileInfo.suffix())) {
-            m_slideshowBackgrounds.append(path);
-            m_unseenSlideshowBackgrounds.append(path);
-            if(m_slideshowBackgrounds.count() == 1) {
+            m_slideshowModel->addBackground(path);
+            if(m_slideFilterModel->rowCount() == 1) {
                 nextSlide();
             }
         }
@@ -830,8 +824,8 @@ void Image::pathCreated(const QString &path)
 
 void Image::pathDeleted(const QString &path)
 {
-    if(m_slideshowBackgrounds.removeAll(path)) {
-        m_unseenSlideshowBackgrounds.removeAll(path);
+    if(m_slideshowModel->indexOf(path) != -1) {
+        m_slideshowModel->removeBackground(path);
         if(path == m_img) {
             nextSlide();
         }

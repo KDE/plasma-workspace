@@ -84,6 +84,7 @@ public:
     void reload();
     void reload(const QStringList &selected);
     void addBackground(const QString &path);
+    void removeBackground(const QString &path);
     Q_INVOKABLE int indexOf(const QString &path) const;
     virtual bool contains(const QString &bg) const;
 
@@ -97,7 +98,6 @@ Q_SIGNALS:
     void countChanged();
 
 protected Q_SLOTS:
-    void removeBackground(const QString &path);
     void showPreview(const KFileItem &item, const QPixmap &preview);
     void previewFailed(const KFileItem &item);
     void sizeFound(const QString &path, const QSize &s);

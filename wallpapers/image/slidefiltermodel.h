@@ -16,28 +16,35 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-#ifndef SLIDEMODEL_H
-#define SLIDEMODEL_H
+#ifndef SLIDEFILTERMODEL_H
+#define SLIDEFILTERMODEL_H
 
-#include "backgroundlistmodel.h"
+#include <image.h>
 
-class SlideModel : public BackgroundListModel
-{
+#include <QSortFilterProxyModel>
+
+
+class SlideFilterModel : public QSortFilterProxyModel {
+
     Q_OBJECT
+
+    Q_PROPERTY(bool usedInConfig MEMBER m_usedInConfig NOTIFY usedInConfigChanged);
+
 public:
-    using BackgroundListModel::BackgroundListModel;
-    void reload(const QStringList &selected);
-    void addDirs(const QStringList &selected);
-    void removeDir(const QString &selected);
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    QHash<int, QByteArray> roleNames() const override;
+    SlideFilterModel(QObject* parent);
+    bool lessThan(const QModelIndex& source_left, const QModelIndex& source_right) const override;
+    bool filterAcceptsRow(int source_row, const QModelIndex& source_parent) const override;
+    void setSortingMode(Image::SlideshowMode mode);
+    void invalidateFilter();
+
+    Q_INVOKABLE int indexOf(const QString& path);
+    Q_INVOKABLE void openContainingFolder(int rowIndex);
 
 Q_SIGNALS:
-    void done();
+    void usedInConfigChanged();
 
-private Q_SLOTS:
-    void removeBackgrounds(const QStringList &paths, const QString &token);
-    void backgroundsFound(const QStringList &paths, const QString &token);
+private:
+    Image::SlideshowMode m_SortingMode;
+    bool m_usedInConfig;
 };
-
 #endif

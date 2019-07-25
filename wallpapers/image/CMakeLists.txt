@@ -5,6 +5,7 @@ set(image_SRCS
     imageplugin.cpp
     backgroundlistmodel.cpp
     slidemodel.cpp
+    slidefiltermodel.cpp
 )
 
 ecm_qt_declare_logging_category(image_SRCS HEADER debug.h
