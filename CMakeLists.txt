@@ -24,7 +24,7 @@ include(ECMQtDeclareLoggingCategory)
 include(KDEPackageAppTemplates)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-                    Plasma DocTools Runner JsEmbed NotifyConfig Su NewStuff Wallet
+                    Plasma DocTools Runner NotifyConfig Su NewStuff Wallet
                     IdleTime Declarative I18n KCMUtils TextWidgets KDELibs4Support Crash GlobalAccel
                     DBusAddons Wayland CoreAddons)
 find_package(KDED CONFIG REQUIRED)
