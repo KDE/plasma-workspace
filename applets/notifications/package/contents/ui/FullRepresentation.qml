@@ -350,9 +350,10 @@ ColumnLayout{
 
             add: Transition {
                 SequentialAnimation {
+                    PropertyAction { property: "opacity"; value: 0 }
                     PauseAnimation { duration: units.longDuration }
                     ParallelAnimation {
-                        NumberAnimation { property: "opacity"; from: 0; duration: units.longDuration }
+                        NumberAnimation { property: "opacity"; from: 0; to: 1; duration: units.longDuration }
                         NumberAnimation { property: "height"; from: 0; duration: units.longDuration }
                     }
                 }
