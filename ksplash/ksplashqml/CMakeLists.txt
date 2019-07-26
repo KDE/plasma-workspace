@@ -16,6 +16,7 @@ target_link_libraries(ksplashqml
     KF5::QuickAddons
     KF5::WaylandClient
     KF5::WindowSystem
+    KF5::QuickAddons
     PW::KWorkspace
    )
 

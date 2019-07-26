@@ -23,6 +23,8 @@
 
 #include <QTextStream>
 
+#include <KQuickAddons/QtQuickSettings>
+
 #include <kworkspace.h>
 
 #include <iostream>
@@ -63,7 +65,7 @@ int main(int argc, char **argv)
             test = true;
     }
 
-
+    KQuickAddons::QtQuickSettings::init();
     //enable to send log output to /tmp/ksplash
     //which is useful for debugging
 //     qInstallMsgHandler(myMessageHandler);
