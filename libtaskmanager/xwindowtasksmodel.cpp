@@ -513,7 +513,7 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
     }
 
     return windowUrlFromMetadata(info->windowClassClass(),
-        NETWinInfo(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMPid, NET::Properties2()).pid(),
+        info->pid(),
         rulesConfig, info->windowClassName());
 }
 
