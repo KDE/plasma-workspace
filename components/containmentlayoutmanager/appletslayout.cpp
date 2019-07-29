@@ -444,6 +444,7 @@ void AppletsLayout::updatePolish()
 void AppletsLayout::componentComplete()
 {
     if (!m_containment || !m_containmentItem) {
+        QQuickItem::componentComplete();
         return;
     }
 
