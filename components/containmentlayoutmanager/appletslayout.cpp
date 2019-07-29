@@ -424,6 +424,7 @@ void AppletsLayout::geometryChanged(const QRectF &newGeometry, const QRectF &old
 
     // Don't care for anythin happening before startup completion
     if (!m_containment || !m_containment->corona() || !m_containment->corona()->isStartupCompleted()) {
+        QQuickItem::geometryChanged(newGeometry, oldGeometry);
         return;
     }
 
