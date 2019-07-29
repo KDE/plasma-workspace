@@ -42,8 +42,12 @@ Comment=Change workspace and application languages
 Comment[ca]=Canvi dels idiomes de l'espai de treball i les aplicacions
 Comment[es]=Cambiar los idiomas del espacio de trabajo y de las aplicaciones
 Comment[eu]=Aldatu languneko eta aplikazioko hizkuntzak
+Comment[nl]=Werkruimte en talen van toepassingen wijzigen
+Comment[nn]=Endra språk for arbeidsflate og program
 Comment[pt]=Mudar as línguas da área de trabalho e da aplicação
 Comment[pt_BR]=Altera os idiomas do espaço de trabalho e aplicativos
+Comment[sk]=Zmeniť jazyky pracovného priestoru a aplikácií
+Comment[uk]=Зміна мови перекладу робочого простору і програм
 Comment[x-test]=xxChange workspace and application languagesxx
 
 Categories=Qt;KDE;X-KDE-settings-translations;
