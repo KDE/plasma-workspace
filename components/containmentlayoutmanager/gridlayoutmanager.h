@@ -94,6 +94,9 @@ private:
     // The next cell that is available given the direction
     QPair<int, int> nextAvailableCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const;
 
+    // The next cell that is has something in it given the direction
+    QPair<int, int> nextTakenCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const;
+
     // How many cells are available in the row starting from the given cell and direction
     int freeSpaceInDirection(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const;
 

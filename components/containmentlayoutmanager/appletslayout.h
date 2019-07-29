@@ -130,7 +130,7 @@ public:
 
     Q_INVOKABLE void save();
     Q_INVOKABLE void showPlaceHolderAt(const QRectF &geom);
-    Q_INVOKABLE void showPlaceHolderForItem(QQuickItem *item);
+    Q_INVOKABLE void showPlaceHolderForItem(ItemContainer *item);
     Q_INVOKABLE void hidePlaceHolder();
 
     Q_INVOKABLE bool isRectAvailable(qreal x, qreal y, qreal width, qreal height);

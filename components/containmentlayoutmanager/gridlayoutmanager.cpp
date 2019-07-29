@@ -412,6 +412,42 @@ QPair<int, int> GridLayoutManager::nextAvailableCell(const QPair<int, int> &cell
     return QPair<int, int>(-1, -1);
 }
 
+QPair<int, int> GridLayoutManager::nextTakenCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const
+{
+    QPair<int, int> nCell = cell;
+    while (!isOutOfBounds(nCell)) {
+        nCell = nextCell(nCell, direction);
+
+        if (isOutOfBounds(nCell)) {
+            switch (direction) {
+            case AppletsLayout::AppletsLayout::BottomToTop:
+                nCell.first = rows() - 1;
+                --nCell.second;
+                break;
+            case AppletsLayout::AppletsLayout::TopToBottom:
+                nCell.first = 0;
+                ++nCell.second;
+                break;
+            case AppletsLayout::AppletsLayout::RightToLeft:
+                --nCell.first;
+                nCell.second = columns() - 1;
+                break;
+            case AppletsLayout::AppletsLayout::LeftToRight:
+            default:
+                ++nCell.first;
+                nCell.second = 0;
+                break;
+            }
+        }
+
+        if (!isCellAvailable(nCell)) {
+            return nCell;
+        }
+    }
+
+    return QPair<int, int>(-1, -1);
+}
+
 int GridLayoutManager::freeSpaceInDirection(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const
 {
     QPair<int, int> nCell = cell;
@@ -447,11 +483,11 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
         cell.first += itemCellGeom.height();
     }
 
-    while (!isOutOfBounds(cell)) {
+    if (!isCellAvailable(cell)) {
+        cell = nextAvailableCell(cell, direction);
+    }
 
-        if (!isCellAvailable(cell)) {
-            cell = nextAvailableCell(cell, direction);
-        }
+    while (!isOutOfBounds(cell)) {
 
         if (direction == AppletsLayout::LeftToRight || direction == AppletsLayout::RightToLeft) {
             partialSize = QSize(INT_MAX, 0);
@@ -494,7 +530,7 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
                         width, height);
                 }
             } else {
-                cell.first = currentRow + 1;
+                cell = nextAvailableCell(nextTakenCell(cell, direction), direction);
             }
 
         } else if (direction == AppletsLayout::TopToBottom || direction == AppletsLayout::BottomToTop) {
@@ -538,7 +574,7 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
                         width, height);
                 }
             } else {
-                cell.second = currentColumn + 1;
+                cell = nextAvailableCell(nextTakenCell(cell, direction), direction);
             }
         }
     }

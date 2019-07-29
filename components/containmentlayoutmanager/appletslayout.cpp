@@ -370,12 +370,13 @@ void AppletsLayout::showPlaceHolderAt(const QRectF &geom)
     m_placeHolder->setProperty("opacity", 1);
 }
 
-void AppletsLayout::showPlaceHolderForItem(QQuickItem *item)
+void AppletsLayout::showPlaceHolderForItem(ItemContainer *item)
 {
     if (!m_placeHolder) {
         return;
     }
 
+    m_placeHolder->setPreferredLayoutDirection(item->preferredLayoutDirection());
     m_placeHolder->setPosition(item->position());
     m_placeHolder->setSize(item->size());
 
