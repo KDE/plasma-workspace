@@ -676,15 +676,6 @@ void Image::showFileDialog()
         if(m_wallpaper.indexOf(QDir::homePath()) > -1){
             baseUrl = QUrl(m_wallpaper);
         }
-        /*
-        m_dialog = new KFileDialog(baseUrl, QString::fromLatin1("*.png *.jpeg *.jpg *.xcf *.svg *.svgz *.bmp"), 0);
-        m_dialog->setOperationMode(KFileDialog::Opening);
-        m_dialog->setInlinePreviewShown(true);
-        m_dialog->setModal(false);
-
-        connect(m_dialog, SIGNAL(okClicked()), this, SLOT(wallpaperBrowseCompleted()));
-        connect(m_dialog, SIGNAL(destroyed(QObject*)), this, SLOT(fileDialogFinished()));
-        */
 
         QString path;
         const QStringList &locations = QStandardPaths::standardLocations(QStandardPaths::PicturesLocation);
