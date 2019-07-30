@@ -544,8 +544,7 @@ void PanelView::restore()
         m_offset = qMax(0, m_offset);
     }
 
-    const int defaultThickness = 30;
-    setThickness(config().readEntry<int>("thickness", defaultThickness));
+    setThickness(config().readEntry<int>("thickness", m_thickness));
 
     const QSize screenSize = m_screenToFollow->size();
     setMinimumSize(QSize(-1, -1));
