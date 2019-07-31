@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2014  Daniel Vratil <dvratil@redhat.com>
+ * Copyright (C) 2019  David Edmundson <davidedmundson@kde.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -25,13 +26,14 @@
 #include <QDebug>
 #include "debug.h"
 
+#include "keyboard_layout_interface.h"
+
 KeyboardLayout::KeyboardLayout(QObject* parent)
     : QObject(parent)
     , mIface(nullptr)
 {
-    mIface = new QDBusInterface(QStringLiteral("org.kde.keyboard"),
+    mIface = new OrgKdeKeyboardLayoutsInterface(QStringLiteral("org.kde.keyboard"),
                                 QStringLiteral("/Layouts"),
-                                QStringLiteral("org.kde.KeyboardLayouts"),
                                 QDBusConnection::sessionBus(),
                                 this);
     if (!mIface->isValid()) {
@@ -40,10 +42,10 @@ KeyboardLayout::KeyboardLayout(QObject* parent)
           return;
     }
 
-    connect(mIface, SIGNAL(currentLayoutChanged(QString)),
-            this, SLOT(setCurrentLayout(QString)));
-    connect(mIface, SIGNAL(layoutListChanged()),
-            this, SLOT(requestLayoutsList()));
+    connect(mIface, &OrgKdeKeyboardLayoutsInterface::currentLayoutChanged,
+            this, &KeyboardLayout::setCurrentLayout);
+    connect(mIface, &OrgKdeKeyboardLayoutsInterface::layoutListChanged,
+            this, &KeyboardLayout::requestLayoutsList);
 
     requestCurrentLayout();
     requestLayoutsList();
@@ -60,7 +62,7 @@ void KeyboardLayout::requestCurrentLayout()
         return;
     }
 
-    QDBusPendingCall pendingLayout = mIface->asyncCall(QStringLiteral("getCurrentLayout"));
+    QDBusPendingReply<QString> pendingLayout = mIface->getCurrentLayout();
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingLayout, this);
     connect(watcher, &QDBusPendingCallWatcher::finished,
             this, &KeyboardLayout::onCurrentLayoutReceived);
@@ -81,7 +83,7 @@ void KeyboardLayout::onCurrentLayoutReceived(QDBusPendingCallWatcher *watcher)
 
 void KeyboardLayout::requestCurrentLayoutDisplayName()
 {
-    QDBusPendingCall pendingDisplayName = mIface->asyncCallWithArgumentList(QStringLiteral("getLayoutDisplayName"), {mCurrentLayout});
+    QDBusPendingReply<QString> pendingDisplayName = mIface->getLayoutDisplayName(mCurrentLayout);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingDisplayName, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, &KeyboardLayout::onCurrentLayoutDisplayNameReceived);
 }
@@ -109,7 +111,7 @@ void KeyboardLayout::requestLayoutsList()
         return;
     }
 
-    QDBusPendingCall pendingLayout = mIface->asyncCall(QStringLiteral("getLayoutsList"));
+    QDBusPendingReply<QStringList> pendingLayout = mIface->getLayoutsList();
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingLayout, this);
     connect(watcher, &QDBusPendingCallWatcher::finished,
             this, &KeyboardLayout::onLayoutsListReceived);
@@ -150,7 +152,7 @@ void KeyboardLayout::setCurrentLayout(const QString &layout)
 
     mCurrentLayout = layout;
     requestCurrentLayoutDisplayName();
-    mIface->asyncCall(QStringLiteral("setLayout"), layout);
+    mIface->setLayout(layout);
     Q_EMIT currentLayoutChanged(layout);
 }
 

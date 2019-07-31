@@ -1,0 +1,26 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+"http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.KeyboardLayouts">
+    <signal name="currentLayoutChanged">
+      <arg name="layout" type="s" direction="out"/>
+    </signal>
+    <signal name="layoutListChanged">
+    </signal>
+    <method name="setLayout">
+      <arg type="b" direction="out"/>
+      <arg name="layout" type="s" direction="in"/>
+    </method>
+    <method name="getCurrentLayout">
+      <arg type="s" direction="out"/>
+    </method>
+    <method name="getLayoutsList">
+      <arg type="as" direction="out"/>
+    </method>
+    <method name="getLayoutDisplayName">
+      <arg type="s" direction="out"/>
+      <arg name="layout" type="s" direction="in"/>
+    </method>
+  </interface>
+</node>
+

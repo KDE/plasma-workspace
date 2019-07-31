@@ -23,7 +23,7 @@
 #include <QObject>
 #include <QStringList>
 
-class QDBusInterface;
+class OrgKdeKeyboardLayoutsInterface;
 class QDBusPendingCallWatcher;
 
 class KeyboardLayout : public QObject
@@ -72,7 +72,7 @@ private:
     QStringList mLayouts;
     QString mCurrentLayout;
     QString mCurrentLayoutDisplayName;
-    QDBusInterface *mIface;
+    OrgKdeKeyboardLayoutsInterface *mIface;
 
 };
 

@@ -8,6 +8,8 @@ ecm_qt_declare_logging_category(keyboardlayoutplugin_SRCS HEADER debug.h
     CATEGORY_NAME kde.keyboardlayout
     DEFAULT_SEVERITY Info)
 
+qt5_add_dbus_interface(keyboardlayoutplugin_SRCS "org.kde.KeyboardLayouts.xml" keyboard_layout_interface)
+
 add_library(keyboardlayoutplugin SHARED ${keyboardlayoutplugin_SRCS})
 
 target_link_libraries(keyboardlayoutplugin Qt5::Core
