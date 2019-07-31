@@ -155,7 +155,7 @@ void TestNightColor::testStageData()
     QCOMPARE(aptr->checkStaged(), isChange);
     QCOMPARE(aptr->checkStagedAll(), isChangeAll);
 
-    QSignalSpy *dataUpdateSpy = new QSignalSpy(aptr, SIGNAL(dataUpdated()));
+    QSignalSpy *dataUpdateSpy = new QSignalSpy(aptr, &CompositorAdaptor::dataUpdated);
     QVERIFY(dataUpdateSpy->isValid());
 
     // send config relative to active and mode state
@@ -169,7 +169,7 @@ void TestNightColor::testStageData()
     setCompBackToDefault();
     delete aptr;
     aptr = new CompositorAdaptor(this);
-    dataUpdateSpy = new QSignalSpy(aptr, SIGNAL(dataUpdated()));
+    dataUpdateSpy = new QSignalSpy(aptr, &CompositorAdaptor::dataUpdated);
     QVERIFY(dataUpdateSpy->isValid());
 
     QVERIFY(!aptr->checkStaged());
@@ -192,7 +192,7 @@ void TestNightColor::testAutoLocationUpdate()
     setCompBackToDefault();
 
     CompositorAdaptor *aptr = new CompositorAdaptor(this);
-    QSignalSpy *dataUpdateSpy = new QSignalSpy(aptr, SIGNAL(dataUpdated()));
+    QSignalSpy *dataUpdateSpy = new QSignalSpy(aptr, &CompositorAdaptor::dataUpdated);
     QVERIFY(dataUpdateSpy->isValid());
 
     aptr->sendAutoLocationUpdate(10, 20);
