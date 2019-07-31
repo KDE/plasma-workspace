@@ -20,6 +20,7 @@
  */
 
 import QtQuick 2.8
+import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -73,7 +74,9 @@ Item {
             font.underline: theme.defaultFont.underline
             font.weight: theme.defaultFont.weight
             font.wordSpacing: theme.defaultFont.wordSpacing
-            renderType: Text.NativeRendering
+            // Work around Qt bug where NativeRendering breaks for non-integer scale factors
+            // https://bugreports.qt.io/browse/QTBUG-67007
+            renderType: Screen.devicePixelRatio % 1 !== 0 ? Text.QtRendering : Text.NativeRendering
             selectByMouse: true
             readOnly: true
             wrapMode: Text.Wrap
