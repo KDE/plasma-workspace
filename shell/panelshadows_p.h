@@ -43,9 +43,6 @@ public:
 private:
     class Private;
     Private * const d;
-
-    Q_PRIVATE_SLOT(d, void updateShadows())
-    Q_PRIVATE_SLOT(d, void windowDestroyed(QObject *deletedObject))
 };
 
 #endif

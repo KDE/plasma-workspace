@@ -75,7 +75,6 @@ public:
     void clearShadowX11(const QWindow *window);
     void clearShadowWayland(const QWindow *window);
     void updateShadows();
-    void windowDestroyed(QObject *deletedObject);
     void setupData(Plasma::FrameSvg::EnabledBorders enabledBorders);
     bool hasShadows() const;
 
@@ -130,7 +129,9 @@ PanelShadows::PanelShadows(QObject *parent, const QString &prefix)
       d(new Private(this))
 {
     setImagePath(prefix);
-    connect(this, SIGNAL(repaintNeeded()), this, SLOT(updateShadows()));
+    connect(this, &Plasma::Svg::repaintNeeded, this, [this]() {
+        d->updateShadows();
+    });
 }
 
 PanelShadows::~PanelShadows()
@@ -151,8 +152,12 @@ void PanelShadows::addWindow(const QWindow *window, Plasma::FrameSvg::EnabledBor
 
     d->m_windows[window] = enabledBorders;
     d->updateShadow(window, enabledBorders);
-    connect(window, SIGNAL(destroyed(QObject*)),
-            this, SLOT(windowDestroyed(QObject*)), Qt::UniqueConnection);
+    connect(window, &QObject::destroyed, this, [this, window]() {
+        d->m_windows.remove(window);
+        if (d->m_windows.isEmpty()) {
+            d->clearPixmaps();
+        }
+    });
 }
 
 void PanelShadows::removeWindow(const QWindow *window)
@@ -178,16 +183,6 @@ void PanelShadows::setEnabledBorders(const QWindow *window, Plasma::FrameSvg::En
 
     d->m_windows[window] = enabledBorders;
     d->updateShadow(window, enabledBorders);
-}
-
-
-void PanelShadows::Private::windowDestroyed(QObject *deletedObject)
-{
-    m_windows.remove(static_cast<QWindow *>(deletedObject));
-
-    if (m_windows.isEmpty()) {
-        clearPixmaps();
-    }
 }
 
 void PanelShadows::Private::updateShadows()
