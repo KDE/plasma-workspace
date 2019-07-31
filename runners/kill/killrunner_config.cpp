@@ -43,9 +43,9 @@ KillRunnerConfig::KillRunnerConfig(QWidget* parent, const QVariantList& args) :
     m_ui->sorting->addItem(i18n("inverted CPU usage"), CPUI);
     m_ui->sorting->addItem(i18n("nothing"), NONE);
 
-    connect(m_ui->useTriggerWord,SIGNAL(stateChanged(int)),this,SLOT(changed()));
-    connect(m_ui->triggerWord,SIGNAL(textChanged(QString)),this,SLOT(changed()));
-    connect(m_ui->sorting,SIGNAL(currentIndexChanged(int)),this,SLOT(changed()));
+    connect(m_ui->useTriggerWord, &QCheckBox::stateChanged, this, QOverload<>::of(&KillRunnerConfig::changed));
+    connect(m_ui->triggerWord, &KLineEdit::textChanged, this, QOverload<>::of(&KillRunnerConfig::changed));
+    connect(m_ui->sorting, QOverload<int>::of(&QComboBox::currentIndexChanged), this, QOverload<>::of(&KillRunnerConfig::changed));
 
     load();
 }
