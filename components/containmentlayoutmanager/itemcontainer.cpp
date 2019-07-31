@@ -130,7 +130,7 @@ void ItemContainer::setEditMode(bool editMode)
 
 ItemContainer::EditModeCondition ItemContainer::editModeCondition() const
 {
-    if (m_layout->editModeCondition() == AppletsLayout::Locked) {
+    if (m_layout && m_layout->editModeCondition() == AppletsLayout::Locked) {
         return Locked;
     }
 
@@ -450,7 +450,7 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
         }
 
         const bool wasEditMode = m_editMode;
-        if (m_layout->editMode()) {
+        if (m_layout && m_layout->editMode()) {
             setEditMode(true);
         } else if (m_editModeCondition == AfterPressAndHold) {
             m_editModeTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
@@ -494,7 +494,7 @@ void ItemContainer::mousePressEvent(QMouseEvent *event)
         m_configOverlay->setTouchInteraction(m_mouseSynthetizedFromTouch);
     }
 
-    if (m_layout->editMode()) {
+    if (m_layout && m_layout->editMode()) {
         setEditMode(true);
     }
 
@@ -532,7 +532,6 @@ void ItemContainer::mouseReleaseEvent(QMouseEvent *event)
 void ItemContainer::mouseMoveEvent(QMouseEvent *event)
 {
     if ((event->button() == Qt::NoButton && event->buttons() == Qt::NoButton)
-        || !m_layout
         || (!m_editMode && m_editModeCondition == Manual)) {
         return;
     }
@@ -550,7 +549,7 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
         return;
     }
 
-    if (m_layout->itemIsManaged(this)) {
+    if (m_layout && m_layout->itemIsManaged(this)) {
         m_layout->releaseSpace(this);
         grabMouse();
 
@@ -558,7 +557,9 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
         setPosition(QPointF(x() + event->windowPos().x() - m_lastMousePosition.x(),
                             y() + event->windowPos().y() - m_lastMousePosition.y()));
 
-        m_layout->showPlaceHolderForItem(this);
+        if (m_layout) {
+            m_layout->showPlaceHolderForItem(this);
+        }
         
         emit userDrag(QPointF(x(), y()), event->pos());
     }
@@ -572,7 +573,7 @@ void ItemContainer::mouseUngrabEvent()
     m_editModeTimer->stop();
     ungrabMouse();
 
-    if (m_editMode && !m_layout->itemIsManaged(this)) {
+    if (m_layout && m_editMode && !m_layout->itemIsManaged(this)) {
         m_layout->hidePlaceHolder();
         m_layout->positionItem(this);
     }
