@@ -360,9 +360,10 @@ void InteractiveConsole::loadScriptFromUrl(const QUrl &url)
             m_job.data()->kill();
         }
 
-        m_job = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
-        connect(m_job.data(), SIGNAL(data(KIO::Job*,QByteArray)), this, SLOT(scriptFileDataRecvd(KIO::Job*,QByteArray)));
-        connect(m_job.data(), &KJob::result, this, &InteractiveConsole::reenableEditor);
+        auto job = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
+        connect(job, &KIO::TransferJob::data, this, &InteractiveConsole::scriptFileDataRecvd);
+        connect(job, &KJob::result, this, &InteractiveConsole::reenableEditor);
+        m_job = job;
     }
 }
 
@@ -495,9 +496,10 @@ void InteractiveConsole::saveScript(const QUrl &url)
             m_job.data()->kill();
         }
 
-        m_job = KIO::put(url, -1, KIO::HideProgressInfo);
-        connect(m_job.data(), SIGNAL(dataReq(KIO::Job*,QByteArray&)), this, SLOT(scriptFileDataReq(KIO::Job*,QByteArray&)));
-        connect(m_job.data(), &KJob::result, this, &InteractiveConsole::reenableEditor);
+        auto job = KIO::put(url, -1, KIO::HideProgressInfo);
+        connect(job, &KIO::TransferJob::dataReq, this, &InteractiveConsole::scriptFileDataReq);
+        connect(job, &KJob::result, this, &InteractiveConsole::reenableEditor);
+        m_job = job;
     }
 }
 
