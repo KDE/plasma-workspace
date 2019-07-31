@@ -48,7 +48,7 @@ class HotplugEngine : public Plasma::DataEngine
         void onDeviceRemoved(const QString &udi);
 
     private:
-        void onDeviceAdded(Solid::Device &dev, bool added = true);
+        void handleDeviceAdded(Solid::Device &dev, bool added = true);
         void findPredicates();
         QStringList predicatesForDevice(Solid::Device &device) const;
         QVariantList actionsForPredicates(const QStringList &predicates) const;

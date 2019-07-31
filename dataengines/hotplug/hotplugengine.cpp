@@ -78,8 +78,8 @@ void HotplugEngine::init()
         m_startList.insert(dev.udi(), dev);
     }
 
-    connect(Solid::DeviceNotifier::instance(), SIGNAL(deviceAdded(QString)),
-            this, SLOT(onDeviceAdded(QString)));
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded,
+            this, &HotplugEngine::onDeviceAdded);
     connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved,
             this, &HotplugEngine::onDeviceRemoved);
 
@@ -98,7 +98,7 @@ void HotplugEngine::processNextStartupDevice()
     if (!m_startList.isEmpty()) {
         QHash<QString, Solid::Device>::iterator it = m_startList.begin();
         //Solid::Device dev = const_cast<Solid::Device &>(m_startList.takeFirst());
-        onDeviceAdded(it.value(), false);
+        handleDeviceAdded(it.value(), false);
         m_startList.erase(it);
     }
 
@@ -153,7 +153,7 @@ void HotplugEngine::updatePredicates(const QString &path)
                 data.insert(QStringLiteral("actions"), actionsForPredicates(predicates));
                 setData(udi, data);
             } else {
-                onDeviceAdded(device, false);
+                handleDeviceAdded(device, false);
             }
         } else if (!m_encryptedPredicate.matches(device) && sources().contains(udi)) {
             removeSource(udi);
@@ -201,10 +201,10 @@ QVariantList HotplugEngine::actionsForPredicates(const QStringList &predicates) 
 void HotplugEngine::onDeviceAdded(const QString &udi)
 {
     Solid::Device device(udi);
-    onDeviceAdded(device);
+    handleDeviceAdded(device);
 }
 
-void HotplugEngine::onDeviceAdded(Solid::Device &device, bool added)
+void HotplugEngine::handleDeviceAdded(Solid::Device &device, bool added)
 {
     //qDebug() << "adding" << device.udi();
 #ifdef HOTPLUGENGINE_TIMING
