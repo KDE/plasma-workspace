@@ -64,6 +64,7 @@ Name[fr]=Exécuter la commande en utilisant le contenu du presse-papier
 Name[id]=Jalankan perintah pada konten-konten papan-klip
 Name[it]=Esegui comando sui contenuti degli appunti
 Name[ko]=클립보드 내용에서 명령 실행하기
+Name[lt]=Vykdyti komandas su iškarpinės turiniu
 Name[nl]=Commando uitvoeren op klembordinhoud
 Name[nn]=Køyr kommando på innhaldet på utklippstavla
 Name[pl]=Wykonaj polecenie na zawartości schowka
