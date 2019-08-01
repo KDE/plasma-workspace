@@ -509,7 +509,7 @@ void ItemContainer::mousePressEvent(QMouseEvent *event)
 
     if (m_editMode) {
         grabMouse();
-        m_dragActive = false;
+        m_dragActive = true;
         emit dragActiveChanged();
     } else if (m_editModeCondition == AfterPressAndHold) {
         m_editModeTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
@@ -533,13 +533,14 @@ void ItemContainer::mouseReleaseEvent(QMouseEvent *event)
     m_mouseSynthetizedFromTouch = false;
     m_editModeTimer->stop();
     ungrabMouse();
-    m_dragActive = false;
-    emit dragActiveChanged();
 
     if (m_editMode && !m_layout->itemIsManaged(this)) {
         m_layout->hidePlaceHolder();
         m_layout->positionItem(this);
     }
+
+    m_dragActive = false;
+    emit dragActiveChanged();
 }
 
 void ItemContainer::mouseMoveEvent(QMouseEvent *event)
@@ -587,13 +588,14 @@ void ItemContainer::mouseUngrabEvent()
     m_mouseSynthetizedFromTouch = false;
     m_editModeTimer->stop();
     ungrabMouse();
-    m_dragActive = false;
-    emit dragActiveChanged();
 
     if (m_layout && m_editMode && !m_layout->itemIsManaged(this)) {
         m_layout->hidePlaceHolder();
         m_layout->positionItem(this);
     }
+
+    m_dragActive = false;
+    emit dragActiveChanged();
 }
 
 void ItemContainer::hoverEnterEvent(QHoverEvent *event)
