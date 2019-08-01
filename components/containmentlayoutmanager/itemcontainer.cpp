@@ -95,6 +95,11 @@ bool ItemContainer::editMode() const
     return m_editMode;
 }
 
+bool ItemContainer::dragActive() const
+{
+    return m_dragActive;
+}
+
 void ItemContainer::setEditMode(bool editMode)
 {
     if (m_editMode == editMode) {
@@ -121,6 +126,8 @@ void ItemContainer::setEditMode(bool editMode)
     if (m_mouseDown) {
         sendUngrabRecursive(m_contentItem);
         grabMouse();
+        m_dragActive = true;
+        emit dragActiveChanged();
     }
 
     setConfigOverlayVisible(editMode);
@@ -475,6 +482,8 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
         m_mouseDown = false;
         m_mouseSynthetizedFromTouch = false;
         ungrabMouse();
+        m_dragActive = false;
+        emit dragActiveChanged();
     }
 
     return QQuickItem::childMouseEventFilter(item, event);
@@ -500,6 +509,8 @@ void ItemContainer::mousePressEvent(QMouseEvent *event)
 
     if (m_editMode) {
         grabMouse();
+        m_dragActive = false;
+        emit dragActiveChanged();
     } else if (m_editModeCondition == AfterPressAndHold) {
         m_editModeTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
     }
@@ -522,6 +533,8 @@ void ItemContainer::mouseReleaseEvent(QMouseEvent *event)
     m_mouseSynthetizedFromTouch = false;
     m_editModeTimer->stop();
     ungrabMouse();
+    m_dragActive = false;
+    emit dragActiveChanged();
 
     if (m_editMode && !m_layout->itemIsManaged(this)) {
         m_layout->hidePlaceHolder();
@@ -552,6 +565,8 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
     if (m_layout && m_layout->itemIsManaged(this)) {
         m_layout->releaseSpace(this);
         grabMouse();
+        m_dragActive = true;
+        emit dragActiveChanged();
 
     } else {
         setPosition(QPointF(x() + event->windowPos().x() - m_lastMousePosition.x(),
@@ -572,6 +587,8 @@ void ItemContainer::mouseUngrabEvent()
     m_mouseSynthetizedFromTouch = false;
     m_editModeTimer->stop();
     ungrabMouse();
+    m_dragActive = false;
+    emit dragActiveChanged();
 
     if (m_layout && m_editMode && !m_layout->itemIsManaged(this)) {
         m_layout->hidePlaceHolder();

@@ -40,6 +40,7 @@ class ItemContainer: public QQuickItem
     Q_PROPERTY(QString key READ key WRITE setKey NOTIFY keyChanged)
     Q_PROPERTY(ItemContainer::EditModeCondition editModeCondition READ editModeCondition WRITE setEditModeCondition NOTIFY editModeConditionChanged)
     Q_PROPERTY(bool editMode READ editMode WRITE setEditMode NOTIFY editModeChanged)
+    Q_PROPERTY(bool dragActive READ dragActive NOTIFY dragActiveChanged)
     Q_PROPERTY(AppletsLayout::PreferredLayoutDirection preferredLayoutDirection READ preferredLayoutDirection WRITE setPreferredLayoutDirection NOTIFY preferredLayoutDirectionChanged)
 
     Q_PROPERTY(QQmlComponent *configOverlayComponent READ configOverlayComponent WRITE setConfigOverlayComponent NOTIFY configOverlayComponentChanged)
@@ -92,6 +93,8 @@ public:
 
     bool editMode() const;
     void setEditMode(bool edit);
+
+    bool dragActive() const;
 
     EditModeCondition editModeCondition() const;
     void setEditModeCondition(EditModeCondition condition);
@@ -164,6 +167,8 @@ Q_SIGNALS:
      */
     void userDrag(const QPointF &newPosition, const QPointF &dragCenter);
 
+    void dragActiveChanged();
+
     /**
      * The attached layout object changed some of its size hints
      */
@@ -235,5 +240,6 @@ private:
     bool m_editMode = false;
     bool m_mouseDown = false;
     bool m_mouseSynthetizedFromTouch = false;
+    bool m_dragActive = false;
 };
 
