@@ -162,6 +162,8 @@ public Q_SLOTS:
     void previousActivity();
     void stopCurrentActivity();
 
+    void setTestModeLayout(const QString &layout) { m_testModeLayout = layout; }
+
 protected Q_SLOTS:
     /**
      * Loads the layout and performs the needed checks
@@ -251,6 +253,7 @@ private:
 
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
     bool m_closingDown : 1;
+    QString m_testModeLayout;
 };
 
 #endif // SHELLCORONA_H

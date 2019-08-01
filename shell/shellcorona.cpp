@@ -63,7 +63,6 @@
 #include "desktopview.h"
 #include "panelview.h"
 #include "scripting/scriptengine.h"
-#include "shellmanager.h"
 #include "osd.h"
 #include "screenpool.h"
 
@@ -910,7 +909,7 @@ void ShellCorona::loadDefaultLayout()
         addOutput(screen);
     }
 
-    script = ShellManager::s_testModeLayout;
+    script = m_testModeLayout;
 
     if (script.isEmpty()) {
         script = m_lookAndFeelPackage.filePath("layouts", QString(shell() + "-layout.js").toLatin1());

@@ -38,7 +38,6 @@
 
 #include "shellcorona.h"
 #include "standaloneappcorona.h"
-#include "shellmanager.h"
 #include "coronatesthelper.h"
 #include "softwarerendernotifier.h"
 
@@ -101,7 +100,7 @@ int main(int argc, char *argv[])
 
     QCommandLineOption shellPluginOption(QStringList() << QStringLiteral("p") << QStringLiteral("shell-plugin"),
                                          i18n("Force loading the given shell plugin"),
-                                         QStringLiteral("plugin"));
+                                         QStringLiteral("plugin"), QStringLiteral("org.kde.plasma.desktop"));
 
     QCommandLineOption standaloneOption(QStringList() << QStringLiteral("a") << QStringLiteral("standalone"),
                                         i18n("Load plasmashell as a standalone application, needs the shell-plugin option to be specified"));
@@ -131,7 +130,8 @@ int main(int argc, char *argv[])
     QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
     QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
-    ShellManager::s_fixedShell = cliOptions.value(shellPluginOption);
+    ShellCorona* corona = new ShellCorona(&app);
+    corona->setShell(cliOptions.value(shellPluginOption));
 
     if (!cliOptions.isSet(noRespawnOption) && !cliOptions.isSet(testOption)) {
         KCrash::setFlags(KCrash::AutoRestart);
@@ -146,21 +146,15 @@ int main(int argc, char *argv[])
 
         QStandardPaths::setTestModeEnabled(true);
         QDir(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation)).removeRecursively();
-        ShellManager::s_testModeLayout = layoutUrl.toLocalFile();
+        corona->setTestModeLayout(layoutUrl.toLocalFile());
 
         qApp->setProperty("org.kde.KActivities.core.disableAutostart", true);
 
-        QObject::connect(ShellManager::instance(), &ShellManager::shellChanged,
-                         ShellManager::instance(),
-                            [layoutUrl]() {
-                                new CoronaTestHelper(ShellManager::instance()->corona());
-                            }
-                        );
+        new CoronaTestHelper(corona);
     }
 
     if (cliOptions.isSet(standaloneOption)) {
         if (cliOptions.isSet(shellPluginOption)) {
-            ShellManager::s_standaloneOption = true;
             app.setApplicationName(QStringLiteral("plasmashell_") + cliOptions.value(shellPluginOption));
             app.setQuitOnLastWindowClosed(true);
 
@@ -183,11 +177,7 @@ int main(int argc, char *argv[])
                                                       QStringLiteral("quit"));
         QDBusConnection::sessionBus().call(message); //deliberately block until it's done, so we register the name after the app quits
     }
-    }
-
-    KDBusService service(KDBusService::Unique);
-
-    QObject::connect(ShellManager::instance(), &ShellManager::glInitializationFailed, &app, [&app]() {
+    QObject::connect(corona, &ShellCorona::glInitializationFailed, &app, [&app]() {
         //scene graphs errors come from a thread
         //even though we process them in the main thread, app.exit could still process these events
         static bool s_multipleInvokations = false;
@@ -209,8 +199,11 @@ int main(int argc, char *argv[])
         }
         app.exit(-1);
     });
+    }
+
+    KDBusService service(KDBusService::Unique);
+
     SoftwareRendererNotifier::notifyIfRelevant();
-    QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, ShellManager::instance(), &QObject::deleteLater);
 
     return app.exec();
 }
