@@ -94,7 +94,7 @@ MouseArea {
         PlasmaComponents.Label {
             id: countLabel
             anchors.centerIn: parent
-            width: Math.round(Math.min(parent.width, parent.height) * 0.75)
+            width: Math.round(Math.min(parent.width, parent.height) * (text.length > 1 ? 0.67 : 0.75))
             height: width
             fontSizeMode: Text.Fit
             font.pointSize: 1024
