@@ -136,9 +136,32 @@ KConfigGroup PanelView::panelConfig(ShellCorona *corona, Plasma::Containment *co
     }
 }
 
+KConfigGroup PanelView::panelConfigDefaults(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen)
+{
+    if (!containment || !screen) {
+        return KConfigGroup();
+    }
+
+    KConfigGroup views(corona->applicationConfig(), "PlasmaViews");
+    views = KConfigGroup(&views, QStringLiteral("Panel %1").arg(containment->id()));
+
+    return KConfigGroup(&views, QStringLiteral("Defaults"));
+}
+
+int PanelView::readConfigValueWithFallBack(const QString &key, int defaultValue)
+{
+    int value = config().readEntry(key, configDefaults().readEntry(key, defaultValue));
+    return value;
+}
+
 KConfigGroup PanelView::config() const
 {
     return panelConfig(m_corona, containment(), m_screenToFollow);
+}
+
+KConfigGroup PanelView::configDefaults() const
+{
+    return panelConfigDefaults(m_corona, containment(), m_screenToFollow);
 }
 
 void PanelView::maximize()
@@ -166,7 +189,7 @@ void PanelView::setAlignment(Qt::Alignment alignment)
     }
 
     m_alignment = alignment;
-    //alignment is not resolution dependent
+    //alignment is not resolution dependent, doesn't save to Defaults
     config().parent().writeEntry("alignment", (int)m_alignment);
     emit alignmentChanged();
     positionPanel();
@@ -195,6 +218,7 @@ void PanelView::setOffset(int offset)
 
     m_offset = offset;
     config().writeEntry("offset", m_offset);
+    configDefaults().writeEntry("offset", m_offset);
     positionPanel();
     emit offsetChanged();
     m_corona->requestApplicationConfigSync();
@@ -216,6 +240,7 @@ void PanelView::setThickness(int value)
     emit thicknessChanged();
 
     config().writeEntry("thickness", value);
+    configDefaults().writeEntry("thickness", value);
     m_corona->requestApplicationConfigSync();
     resizePanel();
 }
@@ -252,6 +277,7 @@ void PanelView::setMaximumLength(int length)
     }
 
     config().writeEntry("maxLength", length);
+    configDefaults().writeEntry("maxLength", length);
     m_maxLength = length;
     emit maximumLengthChanged();
     m_corona->requestApplicationConfigSync();
@@ -275,6 +301,7 @@ void PanelView::setMinimumLength(int length)
     }
 
     config().writeEntry("minLength", length);
+    configDefaults().writeEntry("minLength", length);
     m_minLength = length;
     emit minimumLengthChanged();
     m_corona->requestApplicationConfigSync();
@@ -333,7 +360,7 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
     }
 
     if (config().isValid() && config().parent().isValid()) {
-        //panelVisibility is not resolution dependent
+        //panelVisibility is not resolution dependent, don't write to Defaults
         config().parent().writeEntry("panelVisibility", (int)mode);
         m_corona->requestApplicationConfigSync();
     }
@@ -532,19 +559,25 @@ void PanelView::restore()
         return;
     }
 
-    //defaults, may be altered by values written by the scripting in startup phase
-    const int defaultOffset = 0;
-    const int defaultAlignment = Qt::AlignLeft;
+    // All the defaults are based on whatever are the current values
+    // so won't be weirdly resetted after screen resolution change
+
     //alignment is not resolution dependent
     //but if fails read it from the resolution dependent one as
     //the place for this config key is changed in Plasma 5.9
-    setAlignment((Qt::Alignment)config().parent().readEntry<int>("alignment", config().readEntry<int>("alignment", defaultAlignment)));
-    m_offset = config().readEntry<int>("offset", defaultOffset);
+    //Do NOT use readConfigValueWithFallBack
+    setAlignment((Qt::Alignment)config().parent().readEntry<int>("alignment", config().readEntry<int>("alignment", m_alignment)));
+
+    // All the other values are read from screen independent values,
+    // but fallback on the screen independent section, as is the only place
+    // is safe to directly write during plasma startup, as there can be 
+    // resolutoin changes
+    m_offset = readConfigValueWithFallBack("offset", m_offset);
     if (m_alignment != Qt::AlignCenter) {
         m_offset = qMax(0, m_offset);
     }
 
-    setThickness(config().readEntry<int>("thickness", m_thickness));
+    setThickness(readConfigValueWithFallBack("thickness", m_thickness));
 
     const QSize screenSize = m_screenToFollow->size();
     setMinimumSize(QSize(-1, -1));
@@ -553,12 +586,13 @@ void PanelView::restore()
 
     const int side = containment()->formFactor() == Plasma::Types::Vertical ? screenSize.height() : screenSize.width();
     const int maxSize = side - m_offset;
-    m_maxLength = qBound<int>(MINSIZE, config().readEntry<int>("maxLength", side), maxSize);
-    m_minLength = qBound<int>(MINSIZE, config().readEntry<int>("minLength", side), maxSize);
+    m_maxLength = qBound<int>(MINSIZE, readConfigValueWithFallBack("maxLength", side), maxSize);
+    m_minLength = qBound<int>(MINSIZE, readConfigValueWithFallBack("minLength", side), maxSize);
 
     //panelVisibility is not resolution dependent
     //but if fails read it from the resolution dependent one as
     //the place for this config key is changed in Plasma 5.9
+    //Do NOT use readConfigValueWithFallBack
     setVisibilityMode((VisibilityMode)config().parent().readEntry<int>("panelVisibility", config().readEntry<int>("panelVisibility", (int)NormalPanel)));
     m_initCompleted = true;
     resizePanel();

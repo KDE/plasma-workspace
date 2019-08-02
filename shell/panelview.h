@@ -114,6 +114,7 @@ public:
     ~PanelView() override;
 
     KConfigGroup config() const override;
+    KConfigGroup configDefaults() const;
 
     Q_INVOKABLE void maximize();
 
@@ -151,8 +152,9 @@ public:
      */
     QRect geometryByDistance(int distance) const;
 
-    /* Shared with script/panel.cpp */
+    /* Both Shared with script/panel.cpp */
     static KConfigGroup panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
+    static KConfigGroup panelConfigDefaults(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
 
     void updateStruts();
 
@@ -204,6 +206,7 @@ private Q_SLOTS:
     void updateMask();
 
 private:
+    int readConfigValueWithFallBack(const QString &key, int defaultValue);
     void resizePanel();
     void integrateScreen();
     bool containmentContainsPosition(const QPointF &point) const;

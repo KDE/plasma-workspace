@@ -112,7 +112,7 @@ PanelView *Panel::panel() const
     return corona()->panelView(c);
 }
 
-
+// NOTE: this is used *only* for alignment and visibility
 KConfigGroup Panel::panelConfig() const
 {
     int screenNum = qMax(screen(), 0); //if we don't have a screen (-1) we'll be put on screen 0
@@ -124,9 +124,29 @@ KConfigGroup Panel::panelConfig() const
     return PanelView::panelConfig(corona(), containment(), s);
 }
 
+//NOTE: when we don't have a view we should write only to the defaults group as we don't know yet during startup if we are on the "final" screen resolution yet
+KConfigGroup Panel::panelConfigDefaults() const
+{
+    int screenNum = qMax(screen(), 0); //if we don't have a screen (-1) we'll be put on screen 0
+
+    if (QGuiApplication::screens().size() < screenNum) {
+        return KConfigGroup();
+    }
+    QScreen *s = QGuiApplication::screens().at(screenNum);
+    return PanelView::panelConfigDefaults(corona(), containment(), s);
+}
+
+// NOTE: Alignment is the only one that reads and writes directly from panelconfig()
 QString Panel::alignment() const
 {
-    switch (panelConfig().readEntry("alignment", 0)) {
+    int alignment;
+    if (panel()) {
+        alignment = panel()->alignment();
+    } else {
+        alignment = panelConfig().readEntry("alignment", 0);
+    }
+
+    switch (alignment) {
         case Qt::AlignRight:
             return "right";
         case Qt::AlignCenter:
@@ -138,6 +158,7 @@ QString Panel::alignment() const
     return "left";
 }
 
+// NOTE: Alignment is the only one that reads and writes directly from panelconfig()
 void Panel::setAlignment(const QString &alignment)
 {
     int a = Qt::AlignLeft;
@@ -147,80 +168,117 @@ void Panel::setAlignment(const QString &alignment)
         a = Qt::AlignCenter;
     }
 
-    panelConfig().writeEntry("alignment", a);
+    // Always prefer the view, if available
     if (panel()) {
-        QMetaObject::invokeMethod(panel(), "restore");
+        panel()->setAlignment(Qt::Alignment(a));
+    } else {
+        panelConfig().writeEntry("alignment", a);
     }
 }
 
+
+// From now on only panelConfigDefaults should be used
 int Panel::offset() const
 {
-    return panelConfig().readEntry("offset", 0);
+    if (panel()) {
+        return panel()->offset();
+    } else {
+        return panelConfigDefaults().readEntry("offset", 0);
+    }
 }
 
 void Panel::setOffset(int pixels)
 {
-   panelConfig().writeEntry("offset", pixels);
-   if (panel()) {
-       QMetaObject::invokeMethod(panel(), "restore");
-   }
+    panelConfigDefaults().writeEntry("offset", pixels);
+    if (panel()) {
+        panel()->setOffset(pixels);
+    } else {
+        panelConfigDefaults().readEntry("offset", pixels);
+    }
 }
 
 int Panel::length() const
 {
-    return panelConfig().readEntry("length", 0);
+    if (panel()) {
+        return panel()->length();
+    } else {
+        return panelConfigDefaults().readEntry("length", 0);
+    }
 }
 
 void Panel::setLength(int pixels)
 {
-   panelConfig().writeEntry("length", pixels);
-   if (panel()) {
-       QMetaObject::invokeMethod(panel(), "restore");
-   }
+    if (panel()) {
+        panel()->setLength(pixels);
+    } else {
+        panelConfigDefaults().writeEntry("length", pixels);
+    }
 }
 
 int Panel::minimumLength() const
 {
-    return panelConfig().readEntry("minLength", 0);
+    if (panel()) {
+        return panel()->minimumLength();
+    } else {
+        return panelConfigDefaults().readEntry("minLength", 0);
+    }
 }
 
 void Panel::setMinimumLength(int pixels)
 {
-   panelConfig().writeEntry("minLength", pixels);
-   if (panel()) {
-       QMetaObject::invokeMethod(panel(), "restore");
-   }
+    if (panel()) {
+        panel()->setMinimumLength(pixels);
+    } else {
+        panelConfigDefaults().writeEntry("minLength", pixels);
+    }
 }
 
 int Panel::maximumLength() const
 {
-    return panelConfig().readEntry("maxLength", 0);
+    if (panel()) {
+        return panel()->maximumLength();
+    } else {
+        return panelConfigDefaults().readEntry("maxLength", 0);
+    }
 }
 
 void Panel::setMaximumLength(int pixels)
 {
-   panelConfig().writeEntry("maxLength", pixels);
-   if (panel()) {
-       QMetaObject::invokeMethod(panel(), "restore");
-   }
+    if (panel()) {
+        panel()->setMaximumLength(pixels);
+    } else {
+        panelConfigDefaults().writeEntry("maxLength", pixels);
+    }
 }
 
 int Panel::height() const
 {
-    return panelConfig().readEntry("thickness", 0);
+    if (panel()) {
+        return panel()->thickness();
+    } else {
+        return panelConfigDefaults().readEntry("thickness", 0);
+    }
 }
 
 void Panel::setHeight(int height)
 {
-    panelConfig().writeEntry("thickness", height);
     if (panel()) {
-        QMetaObject::invokeMethod(panel(), "restore");
+        panel()->setThickness(height);
+    } else {
+        panelConfigDefaults().writeEntry("thickness", height);
     }
 }
 
 QString Panel::hiding() const
 {
-    switch (panelConfig().readEntry("panelVisibility", 0)) {
+    int visibility;
+    if (panel()) {
+        visibility = panel()->visibilityMode();
+    } else {
+        visibility = panelConfig().readEntry("panelVisibility", 0);
+    }
+    
+    switch (visibility) {
         case PanelView::NormalPanel:
             return "none";
         case PanelView::AutoHide:
@@ -244,9 +302,10 @@ void Panel::setHiding(const QString &mode)
         visibilityMode = PanelView::WindowsGoBelow;
     }
 
-    panelConfig().writeEntry("panelVisibility", (int)visibilityMode);
     if (panel()) {
-        QMetaObject::invokeMethod(panel(), "restore");
+        panel()->setVisibilityMode(visibilityMode);
+    } else {
+        panelConfig().writeEntry("panelVisibility", (int)visibilityMode);
     }
 }
 
