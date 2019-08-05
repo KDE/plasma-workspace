@@ -42,6 +42,7 @@
 #include "softwarerendernotifier.h"
 
 #include <QDir>
+#include <QDBusConnectionInterface>
 
 int main(int argc, char *argv[])
 {
@@ -176,7 +177,11 @@ int main(int argc, char *argv[])
                                                       QStringLiteral("/MainApplication"),
                                                       QStringLiteral("org.qtproject.Qt.QCoreApplication"),
                                                       QStringLiteral("quit"));
-        QDBusConnection::sessionBus().call(message); //deliberately block until it's done, so we register the name after the app quits
+        auto reply = QDBusConnection::sessionBus().call(message); //deliberately block until it's done, so we register the name after the app quits
+
+        while (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.plasmashell"))) {
+            QCoreApplication::processEvents(QEventLoop::AllEvents);
+        }
     }
     QObject::connect(corona, &ShellCorona::glInitializationFailed, &app, [&app]() {
         //scene graphs errors come from a thread
