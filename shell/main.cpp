@@ -132,6 +132,7 @@ int main(int argc, char *argv[])
 
     ShellCorona* corona = new ShellCorona(&app);
     corona->setShell(cliOptions.value(shellPluginOption));
+    QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, corona, &QObject::deleteLater);
 
     if (!cliOptions.isSet(noRespawnOption) && !cliOptions.isSet(testOption)) {
         KCrash::setFlags(KCrash::AutoRestart);
