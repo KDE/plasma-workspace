@@ -1,21 +1,20 @@
-import QtQuick 2.4
-import QtQuick.Controls 2.0
+import QtQuick 2.5
+import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.1
-
-import org.kde.plasma.core 2.0 as Plasmacore
 
 RowLayout {
     property alias cfg_showMediaControls: showMediaControls.checked
 
     spacing: units.largeSpacing / 2
 
-    Label {
+    QQC2.Label {
         Layout.minimumWidth: formAlignment - units.largeSpacing //to match wallpaper config...
         horizontalAlignment: Text.AlignRight
-        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Show media controls:")
+        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Media controls:")
     }
-    CheckBox {
+    QQC2.CheckBox {
         id: showMediaControls
+        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "verb, to show something", "Show")
     }
     Item {
         Layout.fillWidth: true
