@@ -21,6 +21,8 @@
 
 #include <KRunner/AbstractRunner>
 
+#include <QMutex>
+
 class KWindowInfo;
 
 class WindowsRunner : public Plasma::AbstractRunner
