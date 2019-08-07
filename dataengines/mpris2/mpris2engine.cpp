@@ -120,15 +120,26 @@ bool Mpris2Engine::sourceRequestEvent(const QString& source)
 void Mpris2Engine::initialFetchFinished(PlayerContainer* container)
 {
     qCDebug(MPRIS2) << "Props fetch for" << container->objectName() << "finished; adding";
-    addSource(container);
-    if (m_multiplexer) {
-        m_multiplexer.data()->addPlayer(container);
-    }
+
     // don't let future refreshes trigger this
     disconnect(container, &PlayerContainer::initialFetchFinished,
                this,      &Mpris2Engine::initialFetchFinished);
     disconnect(container, &PlayerContainer::initialFetchFailed,
                this,      &Mpris2Engine::initialFetchFailed);
+
+    // Check if the player follows the specification dutifully.
+    const auto data = container->data();
+    if (data.value(QStringLiteral("Identity")).toString().isEmpty()
+            || !data.value(QStringLiteral("SupportedUriSchemes")).isValid()
+            || !data.value(QStringLiteral("SupportedMimeTypes")).isValid()) {
+        qCDebug(MPRIS2) << "MPRIS2 service" << container->objectName() << "isn't standard-compliant, ignoring";
+        return;
+    }
+
+    addSource(container);
+    if (m_multiplexer) {
+        m_multiplexer.data()->addPlayer(container);
+    }
 }
 
 void Mpris2Engine::initialFetchFailed(PlayerContainer* container)
