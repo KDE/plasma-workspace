@@ -58,6 +58,7 @@ Exec=krunner -c
 Name=Run command on clipboard contents
 Name[ca]=Executa una ordre al contingut del porta-retalls
 Name[ca@valencia]=Executa una ordre al contingut del porta-retalls
+Name[de]=Befehl mit dem Inhalt der Zwischenablage ausführen
 Name[en_GB]=Run command on clipboard contents
 Name[es]=Ejecutar orden sobre el contenido del portapapeles
 Name[eu]=Exekutatu komandoa arbelaren edukiaren gain

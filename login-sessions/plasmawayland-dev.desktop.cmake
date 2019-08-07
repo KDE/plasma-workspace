@@ -3,6 +3,7 @@ Exec=dbus-run-session @CMAKE_INSTALL_FULL_LIBEXECDIR@/startplasma-dev.sh -waylan
 DesktopNames=KDE
 Name=Plasma (Development ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ca]=Plasma (Desenvolupament ${CMAKE_INSTALL_FULL_BINDIR})
+Name[de]=Plasma (Development ${CMAKE_INSTALL_FULL_BINDIR})
 Name[en_GB]=Plasma (Development ${CMAKE_INSTALL_FULL_BINDIR})
 Name[es]=Plasma (Desarrollo ${CMAKE_INSTALL_FULL_BINDIR})
 Name[eu]=Plasma (Garapena ${CMAKE_INSTALL_FULL_BINDIR})
