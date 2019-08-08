@@ -89,7 +89,7 @@ int main(int argc, char *argv[])
     app.setQuitOnLastWindowClosed(false);
 
 
-    KSharedConfig::Ptr startupConf = KSharedConfig::openConfig(QStringLiteral("plasmarc"));
+    KSharedConfig::Ptr startupConf = KSharedConfig::openConfig(QStringLiteral("plasmashellrc"));
     KConfigGroup startupConfGroup(startupConf, "Shell");
     const QString defaultShell = startupConfGroup.readEntry("ShellPackage", "org.kde.plasma.desktop");
 
