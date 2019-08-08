@@ -30,6 +30,7 @@
 #include <QQmlContext>
 #include <QDBusConnection>
 #include <QUrl>
+#include <QScreen>
 
 #include <QJsonObject>
 #include <QJsonDocument>
