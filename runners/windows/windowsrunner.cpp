@@ -24,6 +24,7 @@
 
 #include <QDebug>
 #include <QIcon>
+#include <QMutexLocker>
 #include <KWindowSystem>
 #include <KLocalizedString>
 
