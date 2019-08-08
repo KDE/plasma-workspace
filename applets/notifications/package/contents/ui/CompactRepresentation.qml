@@ -64,7 +64,7 @@ MouseArea {
         svg: notificationSvg
         visible: opacity > 0
 
-        elementId: "notification-inactive"
+        elementId: "notification-disabled"
 
         Item {
             id: jobProgressItem
@@ -104,6 +104,7 @@ MouseArea {
             verticalAlignment: Text.AlignVCenter
             text: compactRoot.unreadCount || ""
             renderType: Text.QtRendering
+            visible: false
         }
 
         PlasmaComponents.BusyIndicator {
@@ -133,6 +134,7 @@ MouseArea {
             PropertyChanges {
                 target: countLabel
                 text: compactRoot.jobsCount
+                visible: true
             }
             PropertyChanges {
                 target: busyIndicator
@@ -160,11 +162,7 @@ MouseArea {
             when: compactRoot.unreadCount > 0
             PropertyChanges {
                 target: notificationIcon
-                elementId: "notification-empty"
-            }
-            PropertyChanges {
-                target: countLabel
-                text: compactRoot.unreadCount
+                elementId: "notification-active"
             }
         }
     ]
