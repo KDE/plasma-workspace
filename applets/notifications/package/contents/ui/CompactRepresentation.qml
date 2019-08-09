@@ -159,6 +159,7 @@ MouseArea {
             }
         },
         State { // unread notifications
+            name: "UNREAD"
             when: compactRoot.unreadCount > 0
             PropertyChanges {
                 target: notificationIcon
@@ -175,6 +176,30 @@ MouseArea {
                 properties: "opacity,scale"
                 duration: units.longDuration
                 easing.type: Easing.InOutQuad
+            }
+        },
+        Transition {
+            from: ""
+            to: "UNREAD"
+            SequentialAnimation {
+                RotationAnimation {
+                    target: notificationIcon
+                    to: 30
+                    easing.type: Easing.InOutQuad
+                    duration: units.longDuration
+                }
+                RotationAnimation {
+                    target: notificationIcon
+                    to: -30
+                    easing.type: Easing.InOutQuad
+                    duration: units.longDuration * 2 // twice the swing distance, keep speed uniform
+                }
+                RotationAnimation {
+                    target: notificationIcon
+                    to: 0
+                    easing.type: Easing.InOutQuad
+                    duration: units.longDuration
+                }
             }
         }
     ]
