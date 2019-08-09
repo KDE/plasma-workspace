@@ -62,6 +62,7 @@ Name[de]=Befehl mit dem Inhalt der Zwischenablage ausführen
 Name[en_GB]=Run command on clipboard contents
 Name[es]=Ejecutar orden sobre el contenido del portapapeles
 Name[eu]=Exekutatu komandoa arbelaren edukiaren gain
+Name[fi]=Suorita komento leikepöydän sisällöstä
 Name[fr]=Exécuter la commande en utilisant le contenu du presse-papier
 Name[id]=Jalankan perintah pada konten-konten papan-klip
 Name[it]=Esegui comando sui contenuti degli appunti
