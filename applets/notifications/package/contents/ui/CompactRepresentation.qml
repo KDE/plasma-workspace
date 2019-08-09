@@ -64,7 +64,7 @@ MouseArea {
         svg: notificationSvg
         visible: opacity > 0
 
-        elementId: "notification-disabled"
+        elementId: "notification-inactive"
 
         Item {
             id: jobProgressItem
