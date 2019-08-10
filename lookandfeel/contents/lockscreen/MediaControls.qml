@@ -98,6 +98,7 @@ Item {
             Layout.preferredWidth: height
             Layout.fillHeight: true
             asynchronous: true
+            fillMode: Image.PreserveAspectFit
             source: mpris2Source.albumArt
             sourceSize: Qt.size(width, height)
             visible: status === Image.Loading || status === Image.Ready
