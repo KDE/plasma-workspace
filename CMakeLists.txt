@@ -55,6 +55,7 @@ set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
 find_package(KF5TextEditor)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 
+find_package(KF5Screen CONFIG REQUIRED)
 find_package(KScreenLocker 5.13.80 REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KF5Holidays)
