@@ -9,6 +9,7 @@ set(notificationmanager_LIB_SRCS
     server.cpp
     server_p.cpp
     settings.cpp
+    mirroredscreenstracker.cpp
     notifications.cpp
     notification.cpp
 
@@ -79,6 +80,7 @@ target_link_libraries(notificationmanager
         KF5::KIOFileWidgets
         KF5::Plasma
         KF5::ProcessCore
+        KF5::Screen
         KF5::Service
 )
 

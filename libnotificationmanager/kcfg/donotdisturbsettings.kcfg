@@ -10,6 +10,10 @@
             <default></default>
         </entry>
 
+        <entry name="WhenScreensMirrored" type="Bool">
+            <default>true</default>
+        </entry>
+
         <entry name="NotificationSoundsMuted" type="Bool">
             <default>false</default>
         </entry>

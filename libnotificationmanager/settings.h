@@ -170,6 +170,28 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
                NOTIFY notificationInhibitionApplicationsChanged)
 
     /**
+     * Whether to enable do not disturb mode when screens are mirrored/overlapping
+     *
+     * @since 5.17
+     */
+    Q_PROPERTY(bool inhibitNotificationsWhenScreensMirrored
+               READ inhibitNotificationsWhenScreensMirrored
+               WRITE setInhibitNotificationsWhenScreensMirrored
+               NOTIFY settingsChanged)
+
+    /**
+     * Whether there currently are mirrored/overlapping screens
+     *
+     * This property is only updated when @c inhibitNotificationsWhenScreensMirrored
+     * is set to true, otherwise it is always false.
+     * You can assign false to this property if you want to temporarily revoke automatic do not disturb
+     * mode when screens are mirrored until the screen configuration changes.
+     *
+     * @since 5.17
+     */
+    Q_PROPERTY(bool screensMirrored READ screensMirrored WRITE setScreensMirrored NOTIFY screensMirroredChanged)
+
+    /**
      * Whether notification sounds should be disabled
      *
      * This does not reflect the actual mute state of the Notification Sounds
@@ -299,6 +321,12 @@ public:
     QStringList notificationInhibitionApplications() const;
     QStringList notificationInhibitionReasons() const;
 
+    bool inhibitNotificationsWhenScreensMirrored() const;
+    void setInhibitNotificationsWhenScreensMirrored(bool mirrored);
+
+    bool screensMirrored() const;
+    void setScreensMirrored(bool enable);
+
     bool notificationSoundsInhibited() const;
     void setNotificationSoundsInhibited(bool inhibited);
 
@@ -320,6 +348,8 @@ signals:
 
     void notificationsInhibitedByApplicationChanged(bool notificationsInhibitedByApplication);
     void notificationInhibitionApplicationsChanged();
+
+    void screensMirroredChanged();
 
 private:
     class Private;

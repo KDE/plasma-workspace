@@ -98,6 +98,8 @@ ColumnLayout{
                         if (Globals.inhibited) {
                             notificationSettings.notificationsInhibitedUntil = undefined;
                             notificationSettings.revokeApplicationInhibitions();
+                            // overrules current mirrored screen setup, updates again when screen configuration changes
+                            notificationSettings.screensMirrored = false;
 
                             notificationSettings.save();
                         }
@@ -222,6 +224,8 @@ ColumnLayout{
 
                 var inhibitedUntil = notificationSettings.notificationsInhibitedUntil;
                 var inhibitedByApp = notificationSettings.notificationsInhibitedByApplication;
+                var inhibitedByMirroredScreens = notificationSettings.inhibitNotificationsWhenScreensMirrored
+                                                    && notificationSettings.screensMirrored;
 
                 var sections = [];
 
@@ -245,6 +249,10 @@ ColumnLayout{
                             sections.push(i18nc("Do not disturb until app has finished", "While %1 is active", name));
                         }
                     }
+                }
+
+                if (inhibitedByMirroredScreens) {
+                    sections.push(i18nc("Do not disturb because external mirrored screens connected", "Screens are mirrored"))
                 }
 
                 return sections.join(" · ");

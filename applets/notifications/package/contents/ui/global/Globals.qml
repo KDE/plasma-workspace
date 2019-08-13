@@ -204,6 +204,10 @@ QtObject {
                 inhibited |= true;
             }
 
+            if (notificationSettings.inhibitNotificationsWhenScreensMirrored) {
+                inhibited |= notificationSettings.screensMirrored;
+            }
+
             return inhibited;
         });
     }

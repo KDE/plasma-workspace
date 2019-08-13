@@ -26,6 +26,7 @@
 #include <KService>
 
 #include "server.h"
+#include "mirroredscreenstracker_p.h"
 #include "debug.h"
 
 // Settings
@@ -58,6 +59,8 @@ public:
 
     KConfigWatcher::Ptr watcher;
     QMetaObject::Connection watcherConnection;
+
+    MirroredScreensTracker::Ptr mirroredScreensTracker;
 
     bool live = false; // set to true initially in constructor
     bool dirty = false;
@@ -180,6 +183,11 @@ Settings::Settings(const KSharedConfig::Ptr &config, QObject *parent)
             this, &Settings::notificationsInhibitedByApplicationChanged);
     connect(&Server::self(), &Server::inhibitionApplicationsChanged,
             this, &Settings::notificationInhibitionApplicationsChanged);
+
+    if (DoNotDisturbSettings::whenScreensMirrored()) {
+        d->mirroredScreensTracker = MirroredScreensTracker::createTracker();
+        connect(d->mirroredScreensTracker.data(), &MirroredScreensTracker::screensMirroredChanged, this, &Settings::screensMirroredChanged);
+    }
 }
 
 Settings::~Settings()
@@ -300,6 +308,22 @@ void Settings::setLive(bool live)
 
                 if (group.name() == QLatin1String("DoNotDisturb")) {
                     DoNotDisturbSettings::self()->load();
+
+                    bool emitScreensMirroredChanged = false;
+                    if (DoNotDisturbSettings::whenScreensMirrored()) {
+                        if (!d->mirroredScreensTracker) {
+                            d->mirroredScreensTracker = MirroredScreensTracker::createTracker();
+                            emitScreensMirroredChanged = d->mirroredScreensTracker->screensMirrored();
+                            connect(d->mirroredScreensTracker.data(), &MirroredScreensTracker::screensMirroredChanged, this, &Settings::screensMirroredChanged);
+                        }
+                    } else if (d->mirroredScreensTracker) {
+                        emitScreensMirroredChanged = d->mirroredScreensTracker->screensMirrored();
+                        d->mirroredScreensTracker.reset();
+                    }
+
+                    if (emitScreensMirroredChanged) {
+                        emit screensMirroredChanged();
+                    }
                 } else if (group.name() == QLatin1String("Notifications")) {
                     NotificationSettings::self()->load();
                 } else if (group.name() == QLatin1String("Jobs")) {
@@ -539,6 +563,38 @@ QStringList Settings::notificationInhibitionApplications() const
 QStringList Settings::notificationInhibitionReasons() const
 {
     return Server::self().inhibitionReasons();
+}
+
+bool Settings::inhibitNotificationsWhenScreensMirrored() const
+{
+    return DoNotDisturbSettings::whenScreensMirrored();
+}
+
+void Settings::setInhibitNotificationsWhenScreensMirrored(bool inhibit)
+{
+    if (inhibit == inhibitNotificationsWhenScreensMirrored()) {
+        return;
+    }
+
+    DoNotDisturbSettings::setWhenScreensMirrored(inhibit);
+    d->setDirty(true);
+}
+
+bool Settings::screensMirrored() const
+{
+    return d->mirroredScreensTracker && d->mirroredScreensTracker->screensMirrored();
+}
+
+void Settings::setScreensMirrored(bool mirrored)
+{
+    if (mirrored) {
+        qCWarning(NOTIFICATIONMANAGER) << "Cannot forcefully set screens mirrored";
+        return;
+    }
+
+    if (d->mirroredScreensTracker) {
+        d->mirroredScreensTracker->setScreensMirrored(mirrored);
+    }
 }
 
 void Settings::revokeApplicationInhibitions()
