@@ -76,7 +76,7 @@ bool GridLayoutManager::itemIsManaged(ItemContainer *item)
     return m_pointsForItem.contains(item);
 }
 
-inline void maintainItemEdgeAlignment(QQuickItem *item, const QRectF &newRect, const QRectF &oldRect)
+inline void maintainItemEdgeAlignment(ItemContainer *item, const QRectF &newRect, const QRectF &oldRect)
 {
     const qreal leftDist = item->x() - oldRect.x();
     const qreal hCenterDist = item->x() + item->width()/2 - oldRect.center().x();
@@ -112,7 +112,13 @@ void GridLayoutManager::layoutGeometryChanged(const QRectF &newGeometry, const Q
         // Stash the old config
         //m_parsedConfig[item->key()] = {item->x(), item->y(), item->width(), item->height(), item->rotation()};
         // Move the item to maintain the distance with the anchors point
-        maintainItemEdgeAlignment(item, newGeometry, oldGeometry);
+        auto *itemCont = qobject_cast<ItemContainer *>(item);
+        if (itemCont && itemCont != layout()->placeHolder()) {
+            maintainItemEdgeAlignment(itemCont, newGeometry, oldGeometry);
+            // NOTE: do not use positionItemAndAssign here, because we do not want to emit layoutNeedsSaving, to not save after resize
+            positionItem(itemCont);
+            assignSpaceImpl(itemCont);
+        }
     }
 }
 
