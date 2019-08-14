@@ -205,7 +205,7 @@ void WeatherEngine::forceUpdate(IonInterface *ion, const QString &source)
         qCDebug(WEATHER) << "immediate update of" << source;
         container->forceImmediateUpdate();
     } else {
-        qCWarning(WEATHER) << "innexplicable failure of" << source;
+        qCWarning(WEATHER) << "inexplicable failure of" << source;
     }
 }
 
