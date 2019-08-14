@@ -1648,7 +1648,7 @@ void EnvCanadaIon::updateWeather(const QString& source)
         data.insert(QStringLiteral("Record Snowfall Unit"), KUnitConversion::Centimeter);
     }
 
-    data.insert(QStringLiteral("Credit"), i18nc("credit line, keep string short", "Data from Environment\302\240Canada"));
+    data.insert(QStringLiteral("Credit"), i18nc("credit line, keep string short", "Data from Environment and Climate Change\302\240Canada"));
 
     setData(source, data);
 }
