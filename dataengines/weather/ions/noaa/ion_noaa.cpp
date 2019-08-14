@@ -553,7 +553,6 @@ void NOAAIon::updateWeather(const QString& source)
 
     Plasma::DataEngine::Data data;
 
-    data.insert(QStringLiteral("Country"), QStringLiteral("USA"));
     data.insert(QStringLiteral("Place"), weatherData.locationName);
     data.insert(QStringLiteral("Station"), weatherData.stationID);
 

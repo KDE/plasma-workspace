@@ -42,7 +42,6 @@ class WeatherData
 public:
     WeatherData();
 
-    //QString countryName; // USA
     QString locationName;
     QString stationID;
     double stationLatitude;
