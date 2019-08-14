@@ -70,6 +70,7 @@ public:
         int forecastHumidity;
     };
 
+    QString creditUrl;
     QString countryName;
     QString longTerritoryName;
     QString shortTerritoryName;

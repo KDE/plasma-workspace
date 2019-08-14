@@ -680,7 +680,7 @@ void EnvCanadaIon::parseWeatherSite(WeatherData& data, QXmlStreamReader& xml)
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("license")) {
-                xml.readElementText();
+                data.creditUrl = xml.readElementText();
             } else if (elementName == QLatin1String("location")) {
                 parseLocations(data, xml);
             } else if (elementName == QLatin1String("warnings")) {
@@ -1649,7 +1649,7 @@ void EnvCanadaIon::updateWeather(const QString& source)
     }
 
     data.insert(QStringLiteral("Credit"), i18nc("credit line, keep string short", "Data from Environment and Climate Change\302\240Canada"));
-
+    data.insert(QStringLiteral("Credit Url"), weatherData.creditUrl);
     setData(source, data);
 }
 
