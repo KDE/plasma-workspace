@@ -30,23 +30,19 @@
 
 #include <KConcatenateRowsProxyModel>
 
-#include <processcore/processes.h>
-#include <processcore/process.h>
+#include <KProcessList>
 
 using namespace NotificationManager;
 
 QString Utils::processNameFromPid(uint pid)
 {
-    KSysGuard::Processes procs;
-    procs.updateOrAddProcess(pid);
+    auto processInfo = KProcessList::processInfo(pid);
 
-    KSysGuard::Process *proc = procs.getProcess(pid);
-
-    if (!proc) {
+    if (!processInfo.isValid()) {
         return QString();
     }
 
-    return proc->name();
+    return processInfo.name();
 }
 
 QString Utils::desktopEntryFromPid(uint pid)

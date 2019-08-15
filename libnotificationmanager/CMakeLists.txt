@@ -79,7 +79,6 @@ target_link_libraries(notificationmanager
         KF5::IconThemes
         KF5::KIOFileWidgets
         KF5::Plasma
-        KF5::ProcessCore
         KF5::Screen
         KF5::Service
 )
