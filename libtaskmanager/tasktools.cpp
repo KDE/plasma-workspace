@@ -32,9 +32,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <KSharedConfig>
 #include <KStartupInfo>
 #include <KWindowSystem>
-
-#include <processcore/processes.h>
-#include <processcore/process.h>
+#include <KProcessList>
 
 #include <config-X11.h>
 
@@ -505,17 +503,18 @@ KService::List servicesFromPid(quint32 pid, KSharedConfig::Ptr rulesConfig)
         return KService::List();
     }
 
-    KSysGuard::Processes procs;
-    procs.updateOrAddProcess(pid);
+    auto proc = KProcessList::processInfo(pid);
+    if (!proc.isValid()) {
+        return KService::List();
+    }
 
-    KSysGuard::Process *proc = procs.getProcess(pid);
-    const QString &cmdLine = proc ? proc->command().simplified() : QString(); // proc->command has a trailing space???
+    const QString cmdLine = proc.command();
 
     if (cmdLine.isEmpty()) {
         return KService::List();
     }
 
-    return servicesFromCmdLine(cmdLine, proc->name(), rulesConfig);
+    return servicesFromCmdLine(cmdLine, proc.name(), rulesConfig);
 }
 
 KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &processName,
