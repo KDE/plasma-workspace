@@ -182,6 +182,7 @@ QMap<QString, IonInterface::ConditionIcons> EnvCanadaIon::setupConditionIconMapp
         { QStringLiteral("snow crystals"), Flurries },
         { QStringLiteral("snow grains"), Flurries },
         { QStringLiteral("squalls"), Snow },
+	{ QStringLiteral("thunderstorm"), Thunderstorm },
         { QStringLiteral("thunderstorm with hail"), Thunderstorm },
         { QStringLiteral("thunderstorm with rain"), Thunderstorm },
         { QStringLiteral("thunderstorm with sand or dust storm"), Thunderstorm },
@@ -948,7 +949,7 @@ void EnvCanadaIon::parseConditions(WeatherData& data, QXmlStreamReader& xml)
             } else if (elementName == QLatin1String("dateTime")) {
                 parseDateTime(data, xml);
             } else if (elementName == QLatin1String("condition")) {
-                data.condition = xml.readElementText();
+                data.condition = xml.readElementText().trimmed();
             } else if (elementName == QLatin1String("temperature")) {
                 // prevent N/A text to result in 0.0 value
                 parseFloat(data.temperature, xml);
