@@ -43,6 +43,11 @@ AbstractItem {
             applet.expanded = true;
         }
     }
+    onPressed: {
+        if (mouse.button === Qt.RightButton) {
+            plasmoidContainer.contextMenu(mouse);
+        }
+    }
     onContextMenu: {
         if (applet) {
             plasmoid.nativeInterface.showPlasmoidMenu(applet, 0, plasmoidContainer.hidden ? applet.height : 0);
