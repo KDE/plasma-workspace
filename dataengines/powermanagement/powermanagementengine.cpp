@@ -179,6 +179,9 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
             updateBatteryPresentState(battery->isPresent(), deviceBattery.udi());
             updateBatteryPowerSupplyState(battery->isPowerSupply(), deviceBattery.udi());
 
+            setData(source, QStringLiteral("Vendor"), deviceBattery.vendor());
+            setData(source, QStringLiteral("Product"), deviceBattery.product());
+            setData(source, QStringLiteral("Capacity"), battery->capacity());
             setData(source, QStringLiteral("Type"), batteryType(battery));
         }
 
@@ -584,6 +587,9 @@ void PowermanagementEngine::deviceAdded(const QString& udi)
             updateBatteryPresentState(battery->isPresent(), device.udi());
             updateBatteryPowerSupplyState(battery->isPowerSupply(), device.udi());
 
+            setData(source, QStringLiteral("Vendor"), device.vendor());
+            setData(source, QStringLiteral("Product"), device.product());
+            setData(source, QStringLiteral("Capacity"), battery->capacity());
             setData(source, QStringLiteral("Type"), batteryType(battery));
 
             setData(QStringLiteral("Battery"), QStringLiteral("Sources"), sourceNames);
