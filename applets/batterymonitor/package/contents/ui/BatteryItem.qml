@@ -50,7 +50,7 @@ Item {
             id: brokenBatteryLabel
             width: parent ? parent.width : implicitWidth
             wrapMode: Text.WordWrap
-            text: batteryItem.isBroken && typeof model.Capacity !== "undefined" ? i18n("The capacity of this battery is %1%. This means it is broken and needs a replacement. Please contact your hardware vendor for more details.", model.Capacity) : ""
+            text: batteryItem.isBroken && typeof model.Capacity !== "undefined" ? i18n("This battery is %1% degraded and should be replaced. Please contact your hardware vendor for more details.", 100 - model.Capacity) : ""
             font.pointSize: !!detailsLayout.parent.inListView ? theme.smallestFont.pointSize : theme.defaultFont.pointSize
             visible: batteryItem.isBroken
         }
