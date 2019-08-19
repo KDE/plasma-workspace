@@ -46,19 +46,6 @@ function batteryDetails(batteryData, remainingTime) {
         data.push({value: i18nc("Placeholder is battery capacity", "%1%", batteryData["Capacity"]) })
     }
 
-    // Non-powersupply batteries have a name consisting of the vendor and model already
-    if (batteryData["Is Power Supply"]) {
-        if (batteryData["Vendor"] != "" && typeof batteryData["Vendor"] == "string") {
-            data.push({label: i18n("Vendor:") })
-            data.push({value: batteryData["Vendor"] })
-        }
-
-        if (batteryData["Product"] != "" && typeof batteryData["Product"] == "string") {
-            data.push({label: i18n("Model:") })
-            data.push({value: batteryData["Product"] })
-        }
-    }
-
     return data
 }
 

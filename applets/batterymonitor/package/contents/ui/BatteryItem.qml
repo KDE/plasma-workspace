@@ -209,7 +209,6 @@ Item {
             visible: !!item
             opacity: 0.5
             sourceComponent: batteryDetails
-            active: batterymonitor.batteries.count < 2
         }
     }
 
