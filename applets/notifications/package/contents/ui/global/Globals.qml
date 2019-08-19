@@ -128,7 +128,7 @@ QtObject {
 
     // The raw width of the popup's content item, the Dialog itself adds some margins
     property int popupWidth: units.gridUnit * 18
-    property int popupEdgeDistance: units.largeSpacing
+    property int popupEdgeDistance: units.largeSpacing * 2
     property int popupSpacing: units.largeSpacing
 
     // How much vertical screen real estate the notification popups may consume
@@ -227,7 +227,7 @@ QtObject {
 
         var y = screenRect.y;
         if (popupLocation & Qt.AlignBottom) {
-            y += screenRect.height;
+            y += screenRect.height - popupEdgeDistance;
         } else {
             y += popupEdgeDistance;
         }
