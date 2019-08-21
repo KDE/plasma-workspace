@@ -502,6 +502,12 @@ void JobsModelPrivate::onServiceUnregistered(const QString &serviceName)
         job->setError(KIO::ERR_OWNER_DIED);
         job->setErrorText(i18n("Application closed unexpectedly."));
         job->setState(Notifications::JobStateStopped);
+
+        // basically JobPrivate::finish()
+        // update timestamp
+        job->resetUpdated();
+        // when it was hidden in history, bring it up again
+        job->setDismissed(false);
     }
 
     Q_ASSERT(!m_serviceWatcher->watchedServices().contains(serviceName));
