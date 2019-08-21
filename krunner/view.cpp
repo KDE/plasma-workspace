@@ -56,8 +56,6 @@ View::View(QWindow *)
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
 
-    KCrash::setFlags(KCrash::AutoRestart);
-
     //used only by screen readers
     setTitle(i18n("KRunner"));
     m_config = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("krunnerrc")), "General");
