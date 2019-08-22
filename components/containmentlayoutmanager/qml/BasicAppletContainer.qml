@@ -31,6 +31,11 @@ ContainmentLayoutManager.AppletContainer {
         ? ContainmentLayoutManager.ItemContainer.Manual
         : ContainmentLayoutManager.ItemContainer.AfterPressAndHold
 
+    onFocusChanged: {
+        if (!focus) {
+            editMode = false;
+        }
+    }
     Layout.minimumWidth: {
         if (!applet) {
             return leftPadding + rightPadding;

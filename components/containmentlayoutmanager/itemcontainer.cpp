@@ -58,13 +58,6 @@ ItemContainer::ItemContainer(QQuickItem *parent)
     m_sizeHintAdjustTimer->setInterval(0);
 
     connect(m_sizeHintAdjustTimer, &QTimer::timeout, this, &ItemContainer::sizeHintsChanged);
-
-    // Lose edit mode when going out of focus
-    connect(this, &QQuickItem::focusChanged, this, [this]() {
-        if (!hasFocus()) {
-            setEditMode(false);
-        }
-    });
 }
 
 ItemContainer::~ItemContainer()
