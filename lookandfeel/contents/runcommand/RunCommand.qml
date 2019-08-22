@@ -77,6 +77,31 @@ ColumnLayout {
                                                 : i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
                                                          "Textfield placeholder text", "Search...")
 
+            PlasmaComponents.BusyIndicator {
+                anchors {
+                    right: parent.right
+                    top: parent.top
+                    bottom: parent.bottom
+                    margins: units.smallSpacing
+                    rightMargin: height
+                }
+
+                Behavior on opacity {
+                    OpacityAnimator {
+                        duration: units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                }
+
+                Timer {
+                    id: queryTimer
+                    running: results.querying
+                    interval: 500
+                }
+
+                opacity: !queryTimer.running && results.querying ? 1 : 0
+                running: visible
+            }
             function move_up() {
                 if (length === 0) {
                     root.showHistory = true;
