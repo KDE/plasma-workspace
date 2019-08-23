@@ -89,7 +89,7 @@ void InstallerRunner::match(Plasma::RunnerContext &context)
             continue;
 
         const auto idWithoutDesktop = component.id().remove(".desktop");
-        const auto serviceQuery = QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName or '%1' in [X-Flatpak-RenamedFrom] or '%2' =~ DesktopEntryName)").arg(component.id(), idWithoutDesktop);
+        const auto serviceQuery = QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName or (exist [X-Flatpak-RenamedFrom] and ('%1' in [X-Flatpak-RenamedFrom] or '%1;' in [X-Flatpak-RenamedFrom])) or '%2' =~ DesktopEntryName)").arg(component.id(), idWithoutDesktop);
         const auto servicesFound = KServiceTypeTrader::self()->query(QStringLiteral("Application"), serviceQuery);
 
         if (!servicesFound.isEmpty())
