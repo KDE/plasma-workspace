@@ -176,7 +176,21 @@ void ItemContainer::setLayout(AppletsLayout *layout)
         return;
     }
 
+    if (m_layout) {
+        disconnect(m_layout, &AppletsLayout::editModeConditionChanged, this,  nullptr);
+
+        if (m_editMode) {
+            m_layout->hidePlaceHolder();
+        }
+    }
+
     m_layout = layout;
+
+    if (!layout) {
+        emit layoutChanged();
+        return;
+    }
+
     if (parentItem() != layout) {
         setParentItem(layout);
     }
