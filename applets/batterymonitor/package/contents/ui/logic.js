@@ -42,8 +42,8 @@ function batteryDetails(batteryData, remainingTime) {
     }
 
     if (batteryData["Is Power Supply"] && batteryData["Capacity"] != "" && typeof batteryData["Capacity"] == "number") {
-        data.push({label: i18nc("The degradation in the battery's energy capacity", "Capacity degradation:") })
-        data.push({value: i18nc("Placeholder is battery's capacity degradation", "%1%", 100 - batteryData["Capacity"]) })
+        data.push({label: i18n("Battery Health:") })
+        data.push({value: i18nc("Placeholder is battery health percentage", "%1%", batteryData["Capacity"]) })
     }
 
     return data
