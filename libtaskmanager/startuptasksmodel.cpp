@@ -174,9 +174,8 @@ QUrl StartupTasksModel::Private::launcherUrl(const KStartupInfoData &data)
             // Fall-through to menuId() handling below
             services = {service};
         } else {
-            if (appId.endsWith(QLatin1String(".desktop"))) {
-                appId = appId.mid(appId.length() - 8);
-            }
+            // turn into KService desktop entry name
+            appId.chop(strlen(".desktop"));
 
             services = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
                 QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(appId));
