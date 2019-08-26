@@ -100,6 +100,7 @@ ColumnLayout {
                 }
 
                 opacity: !queryTimer.running && results.querying ? 1 : 0
+                visible: opacity > 0
                 running: visible
             }
             function move_up() {
