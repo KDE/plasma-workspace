@@ -38,22 +38,21 @@ class FaviconProvider::Private
         {
         }
 
-        void imageRequestFinished( KJob *job );
+        void imageRequestFinished(KIO::StoredTransferJob *job);
 
         FaviconProvider *q;
         QImage image;
         QString cachePath;
 };
 
-void FaviconProvider::Private::imageRequestFinished(KJob *job)
+void FaviconProvider::Private::imageRequestFinished(KIO::StoredTransferJob *job)
 {
     if (job->error()) {
         emit q->error(q);
         return;
     }
 
-    KIO::StoredTransferJob *storedJob = qobject_cast<KIO::StoredTransferJob*>(job);
-    image = QImage::fromData(storedJob->data());
+    image = QImage::fromData(job->data());
     if (!image.isNull()) {
         image.save(cachePath, "PNG");
     }
@@ -81,7 +80,9 @@ FaviconProvider::FaviconProvider(QObject *parent, const QString &url)
         if (faviconUrl.isValid()) {
             KIO::StoredTransferJob *job = KIO::storedGet(faviconUrl, KIO::NoReload, KIO::HideProgressInfo);
             //job->setProperty("uid", id);
-            connect(job, SIGNAL(result(KJob*)), this, SLOT(imageRequestFinished(KJob*)));
+            connect(job, &KJob::result, this, [this, job]() {
+                d->imageRequestFinished(job);
+            });
         }
     }
 }

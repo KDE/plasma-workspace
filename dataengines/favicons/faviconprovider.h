@@ -25,7 +25,6 @@
 #include <QObject>
 
 class QImage;
-class KJob;
 
 /**
  * This class provides a favicon for a given url
@@ -83,7 +82,6 @@ class FaviconProvider : public QObject
       class Private;
       Private* const d;
 
-      Q_PRIVATE_SLOT( d, void imageRequestFinished(KJob *job) )
 };
 
 #endif
