@@ -270,8 +270,8 @@ ColumnLayout {
                     currentIndex = 0;
                 }
             }
-            Keys.onReturnPressed: runCurrentIndex()
-            Keys.onEnterPressed: runCurrentIndex()
+            Keys.onReturnPressed: runCurrentIndex(event)
+            Keys.onEnterPressed: runCurrentIndex(event)
             
             Keys.onTabPressed: {
                 if (currentIndex == listView.count-1) {
@@ -302,9 +302,16 @@ ColumnLayout {
             Keys.onUpPressed: decrementCurrentIndex()
             Keys.onDownPressed: incrementCurrentIndex()
 
-            function runCurrentIndex() {
+            function runCurrentIndex(event) {
                 var entry = runnerWindow.history[currentIndex]
                 if (entry) {
+                    // If user presses Shift+Return to invoke an action, invoke the first runner action
+                    if (event && event.modifiers === Qt.ShiftModifier
+                            && currentItem.additionalActions && currentItem.additionalActions.length > 0) {
+                        runAction(0);
+                        return
+                    }
+
                     queryField.text = entry
                     queryField.forceActiveFocus();
                 }
