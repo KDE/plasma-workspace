@@ -373,6 +373,51 @@ QImage SNIProxy::convertFromNative(xcb_image_t *xcbImage) const
     return image;
 }
 
+/*
+  Wine is using XWindow Shape Extension for transparent tray icons.
+  We need to find first clickable point starting from top-left.
+*/
+QPoint SNIProxy::calculateClickPoint() const
+{
+    QPoint clickPoint = QPoint(0, 0);
+
+    auto c = QX11Info::connection();
+
+    // request extent to check if shape has been set
+    xcb_shape_query_extents_cookie_t extentsCookie = xcb_shape_query_extents(c, m_windowId);
+    // at the same time make the request for rectangles (even if this request isn't needed)
+    xcb_shape_get_rectangles_cookie_t rectaglesCookie = xcb_shape_get_rectangles(c, m_windowId, XCB_SHAPE_SK_BOUNDING);
+
+    QScopedPointer<xcb_shape_query_extents_reply_t, QScopedPointerPodDeleter>
+        extentsReply(xcb_shape_query_extents_reply(c, extentsCookie, nullptr));
+    QScopedPointer<xcb_shape_get_rectangles_reply_t, QScopedPointerPodDeleter>
+        rectanglesReply(xcb_shape_get_rectangles_reply(c, rectaglesCookie, nullptr));
+
+    if (!extentsReply || !rectanglesReply || !extentsReply->bounding_shaped) {
+        return clickPoint;
+    }
+
+    xcb_rectangle_t *rectangles = xcb_shape_get_rectangles_rectangles(rectanglesReply.get());
+    if (!rectangles) {
+        return clickPoint;
+    }
+
+    const QImage image = getImageNonComposite();
+
+    double minLength = sqrt(pow(image.height(), 2) + pow(image.width(), 2));
+    const int nRectangles = xcb_shape_get_rectangles_rectangles_length(rectanglesReply.get());
+    for (int i = 0; i < nRectangles; ++i) {
+        double length = sqrt(pow(rectangles[i].x, 2) + pow(rectangles[i].y, 2));
+        if (length < minLength) {
+            minLength = length;
+            clickPoint = QPoint(rectangles[i].x, rectangles[i].y);
+        }
+    }
+
+    qCDebug(SNIPROXY) << "Click point:" << clickPoint;
+    return clickPoint;
+}
+
 //____________properties__________
 
 QString SNIProxy::Category() const
@@ -474,6 +519,7 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
 
     //move our window so the mouse is within its geometry
     uint32_t configVals[2] = {0, 0};
+    const QPoint clickPoint = calculateClickPoint();
     if (mouseButton >= XCB_BUTTON_INDEX_4) {
 	//scroll event, take pointer position
 	configVals[0] = pointer->root_x;
@@ -482,11 +528,11 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
 	if (pointer->root_x > x + clientGeom->width)
 	    configVals[0] = pointer->root_x - clientGeom->width + 1;
 	else
-	    configVals[0] = static_cast<uint32_t>(x);
+	    configVals[0] = static_cast<uint32_t>(x - clickPoint.x());
 	if (pointer->root_y > y + clientGeom->height)
 	    configVals[1] = pointer->root_y - clientGeom->height + 1;
 	else
-	    configVals[1] = static_cast<uint32_t>(y);
+	    configVals[1] = static_cast<uint32_t>(y - clickPoint.y());
     }
     xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_X | XCB_CONFIG_WINDOW_Y, configVals);
 
@@ -505,8 +551,8 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
         event->root = QX11Info::appRootWindow();
         event->root_x = x;
         event->root_y = y;
-        event->event_x = 0;
-        event->event_y = 0;
+        event->event_x = static_cast<int16_t>(clickPoint.x());
+        event->event_y = static_cast<int16_t>(clickPoint.y());
         event->child = 0;
         event->state = 0;
         event->detail = mouseButton;
@@ -529,8 +575,8 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
         event->root = QX11Info::appRootWindow();
         event->root_x = x;
         event->root_y = y;
-        event->event_x = 0;
-        event->event_y = 0;
+        event->event_x = static_cast<int16_t>(clickPoint.x());
+        event->event_y = static_cast<int16_t>(clickPoint.y());
         event->child = 0;
         event->state = 0;
         event->detail = mouseButton;

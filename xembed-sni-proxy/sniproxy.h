@@ -26,6 +26,7 @@
 #include <QDBusConnection>
 #include <QDBusObjectPath>
 #include <QPixmap>
+#include <QPoint>
 
 #include <xcb/xcb.h>
 #include <xcb/xcb_image.h>
@@ -149,6 +150,7 @@ private:
     QImage getImageNonComposite() const;
     bool isTransparentImage(const QImage &image) const;
     QImage convertFromNative(xcb_image_t *xcbImage) const;
+    QPoint calculateClickPoint() const;
 
     QDBusConnection m_dbus;
     xcb_window_t m_windowId;
