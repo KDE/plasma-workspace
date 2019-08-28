@@ -51,7 +51,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
 
     setScreen(panelView->screen());
 
-    connect(panelView, SIGNAL(screenChanged(QScreen *)), &m_screenSyncTimer, SLOT(start()));
+    connect(panelView, &QWindow::screenChanged, &m_screenSyncTimer, QOverload<>::of(&QTimer::start));
     m_screenSyncTimer.setSingleShot(true);
     m_screenSyncTimer.setInterval(150);
     connect(&m_screenSyncTimer, &QTimer::timeout,
