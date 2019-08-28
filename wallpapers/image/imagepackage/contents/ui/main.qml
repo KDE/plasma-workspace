@@ -57,6 +57,8 @@ QQC2.StackView {
         }
     }
     Component.onCompleted: {
+        wallpaper.loading = true; // delays ksplash until the wallpaper has been loaded
+
         if (wallpaper.pluginName === "org.kde.slideshow") {
             wallpaper.setAction("open", i18nd("plasma_wallpaper_org.kde.image", "Open Wallpaper Image"), "document-open");
             wallpaper.setAction("next", i18nd("plasma_wallpaper_org.kde.image", "Next Wallpaper Image"), "user-desktop");
@@ -98,6 +100,8 @@ QQC2.StackView {
                 root.replace(pendingImage, {},
                     isFirst ? QQC2.StackView.Immediate : QQC2.StackView.Transition);//dont' animate first show
                 pendingImage.statusChanged.disconnect(replaceWhenLoaded);
+
+                wallpaper.loading = false;
             }
         }
         pendingImage.statusChanged.connect(replaceWhenLoaded);
