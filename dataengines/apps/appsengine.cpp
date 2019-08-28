@@ -35,7 +35,7 @@ AppsEngine::~AppsEngine()
 void AppsEngine::init()
 {
     addGroup(KServiceGroup::root());
-    connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(sycocaChanged(QStringList)));
+    connect(KSycoca::self(), QOverload<const QStringList &>::of(&KSycoca::databaseChanged), this, &AppsEngine::sycocaChanged);
 }
 
 void AppsEngine::sycocaChanged(const QStringList &changes)
