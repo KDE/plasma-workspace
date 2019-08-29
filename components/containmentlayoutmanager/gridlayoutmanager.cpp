@@ -223,7 +223,8 @@ bool GridLayoutManager::assignSpaceImpl(ItemContainer *item)
     // Reorder items tab order
     for (auto *i2 : layout()->childItems()) {
         ItemContainer *item2 = qobject_cast<ItemContainer*>(i2);
-        if (item2 && item != item2 && item2 != layout()->placeHolder()
+        if (item2 && item2->parentItem() == item->parentItem()
+            && item != item2 && item2 != layout()->placeHolder()
             && item->y() < item2->y() + item2->height()
             && item->x() <= item2->x()) {
             item->stackBefore(item2);
