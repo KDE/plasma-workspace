@@ -401,17 +401,29 @@ bool AppletsLayout::isRectAvailable(qreal x, qreal y, qreal width, qreal height)
 
 bool AppletsLayout::itemIsManaged(ItemContainer *item)
 {
+    if (!item) {
+        return false;
+    }
+
     return m_layoutManager->itemIsManaged(item);
 }
 
 void AppletsLayout::positionItem(ItemContainer *item)
 {
+    if (!item) {
+        return;
+    }
+
     item->setParent(this);
     m_layoutManager->positionItemAndAssign(item);
 }
 
 void AppletsLayout::releaseSpace(ItemContainer *item)
 {
+    if (!item) {
+        return;
+    }
+
     m_layoutManager->releaseSpace(item);
 }
 
