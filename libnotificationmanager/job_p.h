@@ -71,6 +71,8 @@ public:
 signals:
     void closed();
 
+    void infoMessageChanged();
+
     // DBus
     // V1 and V2
     void suspendRequested();
@@ -94,6 +96,19 @@ private:
         return false;
     }
 
+    template<typename T> bool updateFieldFromProperties(const QVariantMap &properties,
+                                                        const QString &keyName,
+                                                        T &target,
+                                                        void (Job::*changeSignal)())
+    {
+        auto it = properties.find(keyName);
+        if (it == properties.end()) {
+            return false;
+        }
+
+        return updateField(it->value<T>(), target, changeSignal);
+    }
+
     static QSharedPointer<KFilePlacesModel> createPlacesModel();
 
     static QUrl localFileOrUrl(const QString &stringUrl);
@@ -110,6 +125,7 @@ private:
     QDateTime m_updated;
 
     QString m_summary;
+    QString m_infoMessage;
 
     QString m_desktopEntry;
     QString m_applicationName;
