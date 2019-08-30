@@ -1,7 +1,8 @@
 [Desktop Entry]
 Comment=Breeze by the KDE VDG
 Comment[ca]=Brisa pel VDG del KDE
-Comment[ca@valencia]=Brisa pel VDG del KDE
+Comment[ca@valencia]=Brisa per a VDG de KDE
+Comment[cs]=Breeze od KDE VDG
 Comment[da]=Breeze af KDE VDG
 Comment[de]=Breeze der KDE VG
 Comment[en_GB]=Breeze by the KDE VDG
@@ -28,7 +29,7 @@ Comment[zh_CN]=微风，由 KDE VDG 创作
 Comment[zh_TW]=由 KDE VDG 設計的 Breeze
 Keywords=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;
 Keywords[ca]=Escriptori;Espai de treball;Aparença;Aspecte i comportament;Sortida;Bloqueig;Suspensió;Aturada;Hibernació;
-Keywords[ca@valencia]=Escriptori;Espai de treball;Aparença;Aspecte i comportament;Eixida;Bloqueig;Suspensió;Aturada;Hibernació;
+Keywords[ca@valencia]=Escriptori;Espai de treball;Aparença;Aspecte i comportament;Eixida;Bloqueig;Suspensió;Parada;Hibernació;
 Keywords[da]=Skrivebord;Desktop;Arbejdsområde;Udseende;log ud;Lås;Suspendér;Nedlukning;dvale;
 Keywords[de]=Desktop;Arbeitsfläche;Arbeitsbereich;Erscheinungsbild;Erscheinungsbild und Verhalten;Abmelden;Sperren;Standby;Ruhezustand;Tiefschlaf;Herunterfahren;
 Keywords[el]=Επιφάνεια εργασίας;Χώρος εργασίας;Εμφάνιση;Όψη και Αίσθηση;Αποσύνδεση;Κλείδωμα;Αναστολή;Τερματισμός;Νάρκη;
