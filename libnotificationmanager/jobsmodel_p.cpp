@@ -324,6 +324,9 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry,
     connect(job, &Job::summaryChanged, this, [this, job] {
         scheduleUpdate(job, Notifications::SummaryRole);
     });
+    connect(job, &Job::textChanged, this, [this, job] {
+        scheduleUpdate(job, Notifications::BodyRole);
+    });
     connect(job, &Job::stateChanged, this, [this, job] {
         scheduleUpdate(job, Notifications::JobStateRole);
         // Timeout and Closable depend on state, signal a change for those, too
@@ -349,26 +352,7 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry,
         scheduleUpdate(job, Notifications::DismissedRole);
     });
 
-    // The following are used in generating the pretty job text
-    connect(job, &Job::processedFilesChanged, this, [this, job] {
-        scheduleUpdate(job, Notifications::BodyRole);
-    });
-    connect(job, &Job::totalFilesChanged, this, [this, job] {
-        scheduleUpdate(job, Notifications::BodyRole);
-    });
-    connect(job, &Job::descriptionValue1Changed, this, [this, job] {
-        scheduleUpdate(job, Notifications::BodyRole);
-    });
-    connect(job, &Job::descriptionValue2Changed, this, [this, job] {
-        scheduleUpdate(job, Notifications::BodyRole);
-    });
-    connect(job, &Job::destUrlChanged, this, [this, job] {
-        scheduleUpdate(job, Notifications::BodyRole);
-        emitJobUrlsChanged();
-    });
-    connect(job, &Job::errorTextChanged, this, [this, job] {
-        scheduleUpdate(job, Notifications::BodyRole);
-    });
+    connect(job, &Job::destUrlChanged, this, &JobsModelPrivate::emitJobUrlsChanged);
 
     connect(job->d, &JobPrivate::closed, this, [this, job] {
         remove(job);

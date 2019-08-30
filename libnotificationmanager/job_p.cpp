@@ -154,6 +154,10 @@ QString JobPrivate::text() const
         return m_errorText;
     }
 
+    if (!m_infoMessage.isEmpty()) {
+        return m_infoMessage;
+    }
+
     const QString currentFileName = descriptionUrl().fileName();
     const QString destUrlString = prettyDestUrl();
 
@@ -285,6 +289,8 @@ void JobPrivate::setSpeed(quint64 bytesPerSecond)
     updateHasDetails();
 }
 
+// NOTE infoMessage isn't supposed to be the "Copying..." heading but e.g. a "Connecting to server..." status message
+// JobViewV1/V2 got that wrong but JobView3 uses "title" and "infoMessage" correctly respectively.
 void JobPrivate::setInfoMessage(const QString &infoMessage)
 {
     updateField(infoMessage, m_summary, &Job::summaryChanged);
@@ -338,7 +344,56 @@ void JobPrivate::terminate(uint errorCode, const QString &errorMessage, const QV
 
 void JobPrivate::update(const QVariantMap &properties)
 {
-    // TODO
-    sendErrorReply(QDBusError::NotSupported, QStringLiteral("JobViewV3 update is not yet implemented."));
-    Q_UNUSED(properties)
+    auto end = properties.end();
+
+    auto it = properties.find(QStringLiteral("title"));
+    if (it != end) {
+        updateField(it->toString(), m_summary, &Job::summaryChanged);
+    }
+
+    it = properties.find(QStringLiteral("infoMessage"));
+    if (it != end) {
+        // InfoMessage is exposed via text()/BodyRole, not via public API, hence no public signal
+        const QString infoMessage = it->toString();
+        if (m_infoMessage != infoMessage) {
+            m_infoMessage = it->toString();
+            emit infoMessageChanged();
+        }
+    }
+
+    it = properties.find(QStringLiteral("percent"));
+    if (it != end) {
+        setPercent(it->toUInt());
+    }
+
+    it = properties.find(QStringLiteral("destUrl"));
+    if (it != end) {
+        const QUrl destUrl = QUrl(it->toUrl().adjusted(QUrl::StripTrailingSlash)); // urgh
+        updateField(destUrl, m_destUrl, &Job::destUrlChanged);
+    }
+
+    it = properties.find(QStringLiteral("speed"));
+    if (it != end) {
+        setSpeed(it->value<qulonglong>());
+    }
+
+    updateFieldFromProperties(properties, QStringLiteral("processedFiles"), m_processedFiles, &Job::processedFilesChanged);
+    updateFieldFromProperties(properties, QStringLiteral("processedBytes"), m_processedBytes, &Job::processedBytesChanged);
+    updateFieldFromProperties(properties, QStringLiteral("processedDirectories"), m_processedDirectories, &Job::processedDirectoriesChanged);
+
+    updateFieldFromProperties(properties, QStringLiteral("totalFiles"), m_totalFiles, &Job::totalFilesChanged);
+    updateFieldFromProperties(properties, QStringLiteral("totalBytes"), m_totalBytes, &Job::totalBytesChanged);
+    updateFieldFromProperties(properties, QStringLiteral("totalDirectories"), m_totalDirectories, &Job::totalDirectoriesChanged);
+
+    updateFieldFromProperties(properties, QStringLiteral("descriptionLabel1"), m_descriptionLabel1, &Job::descriptionLabel1Changed);
+    updateFieldFromProperties(properties, QStringLiteral("descriptionValue1"), m_descriptionValue1, &Job::descriptionValue1Changed);
+    updateFieldFromProperties(properties, QStringLiteral("descriptionLabel2"), m_descriptionLabel2, &Job::descriptionLabel2Changed);
+    updateFieldFromProperties(properties, QStringLiteral("descriptionValue2"), m_descriptionValue2, &Job::descriptionValue2Changed);
+
+    it = properties.find(QStringLiteral("suspended"));
+    if (it != end) {
+        setSuspended(it->toBool());
+    }
+
+    updateHasDetails();
 }
