@@ -399,6 +399,7 @@ ColumnLayout{
                     NotificationHeader {
                         applicationName: model.applicationName
                         applicationIconSource: model.applicationIconName
+                        originName: model.originName || ""
 
                         // don't show timestamp for group
 

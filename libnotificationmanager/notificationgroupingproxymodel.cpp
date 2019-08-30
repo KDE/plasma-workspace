@@ -43,8 +43,12 @@ bool NotificationGroupingProxyModel::appsMatch(const QModelIndex &a, const QMode
     const QString aDesktopEntry = a.data(Notifications::DesktopEntryRole).toString();
     const QString bDesktopEntry = b.data(Notifications::DesktopEntryRole).toString();
 
+    const QString aOriginName = a.data(Notifications::OriginNameRole).toString();
+    const QString bOriginName = a.data(Notifications::OriginNameRole).toString();
+
     return !aName.isEmpty() && aName == bName
-            && aDesktopEntry == bDesktopEntry;
+            && aDesktopEntry == bDesktopEntry
+            && aOriginName == bOriginName;
 }
 
 bool NotificationGroupingProxyModel::isGroup(int row) const
@@ -471,22 +475,15 @@ QVariant NotificationGroupingProxyModel::data(const QModelIndex &proxyIndex, int
             return false;
 
         case Notifications::DesktopEntryRole:
-            for (int i = 0; i < rowCount(proxyIndex); ++i) {
-                const QString desktopEntry = index(i, 0, proxyIndex).data(Notifications::DesktopEntryRole).toString();
-                if (!desktopEntry.isEmpty()) {
-                    return desktopEntry;
-                }
-            }
-            return QString();
         case Notifications::NotifyRcNameRole:
+        case Notifications::OriginNameRole:
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
-                const QString notifyRcName = index(i, 0, proxyIndex).data(Notifications::NotifyRcNameRole).toString();
-                if (!notifyRcName.isEmpty()) {
-                    return notifyRcName;
+                const QString stringData = index(i, 0, proxyIndex).data(role).toString();
+                if (!stringData.isEmpty()) {
+                    return stringData;
                 }
             }
             return QString();
-
 
         case Notifications::ConfigurableRole: // if there is any configurable child item
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
