@@ -136,6 +136,7 @@ public:
     Q_INVOKABLE bool isRectAvailable(qreal x, qreal y, qreal width, qreal height);
     Q_INVOKABLE bool itemIsManaged(ItemContainer *item);
     Q_INVOKABLE void positionItem(ItemContainer *item);
+    Q_INVOKABLE void restoreItem(ItemContainer *item);
     Q_INVOKABLE void releaseSpace(ItemContainer *item);
 
 Q_SIGNALS:

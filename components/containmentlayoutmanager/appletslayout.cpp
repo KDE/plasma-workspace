@@ -418,6 +418,11 @@ void AppletsLayout::positionItem(ItemContainer *item)
     m_layoutManager->positionItemAndAssign(item);
 }
 
+void AppletsLayout::restoreItem(ItemContainer *item)
+{
+    m_layoutManager->restoreItem(item);
+}
+
 void AppletsLayout::releaseSpace(ItemContainer *item)
 {
     if (!item) {
