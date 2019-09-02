@@ -62,7 +62,7 @@ private:
 
     void invalidateGroupRoles();
 
-    int m_limit;
+    int m_limit = 0;
     QDateTime m_lastRead;
     bool m_expandUnread = false;
 
