@@ -87,7 +87,7 @@ RowLayout {
         id: applicationNameLabel
         Layout.fillWidth: true
         textFormat: Text.PlainText
-        elide: Text.ElideRight
+        elide: Text.ElideLeft
         text: notificationHeading.applicationName + (notificationHeading.originName ? " · " + notificationHeading.originName : "")
     }
 
