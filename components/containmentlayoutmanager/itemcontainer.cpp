@@ -119,7 +119,10 @@ void ItemContainer::setEditMode(bool editMode)
     if (m_mouseDown) {
         sendUngrabRecursive(m_contentItem);
         grabMouse();
-        m_dragActive = true;
+    }
+
+    if (m_dragActive != editMode && m_mouseDown) {
+        m_dragActive = editMode && m_mouseDown;
         emit dragActiveChanged();
     }
 
@@ -490,7 +493,9 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
         m_mouseSynthetizedFromTouch = false;
         ungrabMouse();
         m_dragActive = false;
-        emit dragActiveChanged();
+        if (m_editMode) {
+            emit dragActiveChanged();
+        }
     }
 
     return QQuickItem::childMouseEventFilter(item, event);
@@ -547,7 +552,9 @@ void ItemContainer::mouseReleaseEvent(QMouseEvent *event)
     }
 
     m_dragActive = false;
-    emit dragActiveChanged();
+    if (m_editMode) {
+        emit dragActiveChanged();
+    }
 }
 
 void ItemContainer::mouseMoveEvent(QMouseEvent *event)
@@ -602,7 +609,9 @@ void ItemContainer::mouseUngrabEvent()
     }
 
     m_dragActive = false;
-    emit dragActiveChanged();
+    if (m_editMode) {
+        emit dragActiveChanged();
+    }
 }
 
 void ItemContainer::hoverEnterEvent(QHoverEvent *event)
