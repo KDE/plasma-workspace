@@ -77,9 +77,10 @@ void ShellPackage::pathChanged(KPackage::Package *package)
     }
 
     const QString pluginName = package->metadata().pluginId();
-
     if (!pluginName.isEmpty() && pluginName != DEFAULT_SHELL) {
-        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"), DEFAULT_SHELL);
+        const QString fallback = package->metadata().value("X-Plasma-FallbackPackage", DEFAULT_SHELL);
+
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"), fallback);
         package->setFallbackPackage(pkg);
     } else if (package->fallbackPackage().isValid() && pluginName == DEFAULT_SHELL) {
         package->setFallbackPackage(KPackage::Package());
