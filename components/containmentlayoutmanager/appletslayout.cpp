@@ -94,9 +94,25 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
         }
     });
 
-    connect(this, &QQuickItem::focusChanged, this, [this]() {
-        if (!hasFocus()) {
-            setEditMode(false);
+    m_window = window();
+    if (m_window) {
+        connect(m_window, &QWindow::activeChanged, this, [this]() {
+            if (!m_window->isActive()) {
+                setEditMode(false);
+            }
+        });
+    }
+    connect(this, &QQuickItem::windowChanged, this, [this]() {
+        if (m_window) {
+            disconnect(m_window, &QWindow::activeChanged, this, nullptr);
+        }
+        m_window = window();
+        if (m_window) {
+            connect(m_window, &QWindow::activeChanged, this, [this]() {
+                if (!m_window->isActive()) {
+                    setEditMode(false);
+                }
+            });
         }
     });
 }

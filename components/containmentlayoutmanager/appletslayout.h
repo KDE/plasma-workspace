@@ -23,6 +23,7 @@
 #include <QQuickItem>
 #include <QQmlParserStatus>
 #include <QPointer>
+#include <QQuickWindow>
 
 class QTimer;
 
@@ -199,6 +200,7 @@ private:
 
     QHash <PlasmaQuick::AppletQuickItem *, AppletContainer*> m_containerForApplet;
 
+    QPointer<QQuickWindow> m_window;
     QSizeF m_minimumItemSize;
     QSizeF m_defaultItemSize;
     QSizeF m_savedSize;
