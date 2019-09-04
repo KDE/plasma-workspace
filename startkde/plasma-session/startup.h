@@ -77,7 +77,7 @@ class AutoStartAppsJob: public KJob
 {
 Q_OBJECT
 public:
-    AutoStartAppsJob(int phase);
+    AutoStartAppsJob(const AutoStart &autoStart, int phase);
     void start() override;
 private:
     AutoStart m_autoStart;

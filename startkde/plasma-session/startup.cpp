@@ -66,8 +66,9 @@ class Phase: public KCompositeJob
 {
 Q_OBJECT
 public:
-    Phase(QObject *parent):
-        KCompositeJob(parent)
+    Phase(const AutoStart &autostart, QObject *parent)
+        : KCompositeJob(parent)
+        , m_autostart(autostart)
     {}
 
     bool addSubjob(KJob *job) override {
@@ -82,17 +83,20 @@ public:
             emitResult();
         }
     }
+
+protected:
+    const AutoStart m_autostart;
 };
 
 class StartupPhase0: public Phase
 {
 Q_OBJECT
 public:
-    StartupPhase0(QObject *parent) : Phase(parent)
+    StartupPhase0(const AutoStart& autostart, QObject *parent) : Phase(autostart, parent)
     {}
     void start() override {
         qCDebug(PLASMA_SESSION) << "Phase 0";
-        addSubjob(new AutoStartAppsJob(0));
+        addSubjob(new AutoStartAppsJob(m_autostart, 0));
         addSubjob(new KCMInitJob(1));
         addSubjob(new SleepJob());
     }
@@ -102,11 +106,11 @@ class StartupPhase1: public Phase
 {
 Q_OBJECT
 public:
-    StartupPhase1(QObject *parent) : Phase(parent)
+    StartupPhase1(const AutoStart& autostart, QObject *parent) : Phase(autostart, parent)
     {}
     void start() override {
         qCDebug(PLASMA_SESSION) << "Phase 1";
-        addSubjob(new AutoStartAppsJob(1));
+        addSubjob(new AutoStartAppsJob(m_autostart, 1));
     }
 };
 
@@ -114,14 +118,14 @@ class StartupPhase2: public Phase
 {
 Q_OBJECT
 public:
-    StartupPhase2(QObject *parent) : Phase(parent)
+    StartupPhase2(const AutoStart& autostart, QObject *parent) : Phase(autostart, parent)
     {}
     void runUserAutostart();
     bool migrateKDE4Autostart(const QString &folder);
 
     void start() override {
         qCDebug(PLASMA_SESSION) << "Phase 2";
-        addSubjob(new AutoStartAppsJob(2));
+        addSubjob(new AutoStartAppsJob(m_autostart, 2));
         addSubjob(new KDEDInitJob());
         addSubjob(new KCMInitJob(2));
         runUserAutostart();
@@ -200,9 +204,11 @@ Startup::Startup(QObject *parent):
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/Startup"), QStringLiteral("org.kde.Startup"), this);
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.Startup"));
 
-    auto phase0 = new StartupPhase0(this);
-    auto phase1 = new StartupPhase1(this);
-    auto phase2 = new StartupPhase2(this);
+    const AutoStart autostart;
+
+    auto phase0 = new StartupPhase0(autostart, this);
+    auto phase1 = new StartupPhase1(autostart, this);
+    auto phase2 = new StartupPhase2(autostart, this);
     auto restoreSession = new RestoreSessionJob();
 
     // this includes starting kwin (currently)
@@ -373,9 +379,9 @@ bool StartupPhase2::migrateKDE4Autostart(const QString &autostartFolder)
     return true;
 }
 
-AutoStartAppsJob::AutoStartAppsJob(int phase)
+AutoStartAppsJob::AutoStartAppsJob(const AutoStart & autostart, int phase)
+    : m_autoStart(autostart)
 {
-    m_autoStart.loadAutoStartList(); //FIXME, share this between jobs
     m_autoStart.setPhase(phase);
 }
 

@@ -23,19 +23,10 @@
 #include <QStandardPaths>
 #include <QDir>
 
-class AutoStartItem
-{
-public:
-    QString name;
-    QString service;
-    QString startAfter;
-    int     phase;
-};
-Q_DECLARE_TYPEINFO(AutoStartItem, Q_MOVABLE_TYPE);
-
 AutoStart::AutoStart()
     : m_phase(-1), m_phasedone(false)
 {
+    loadAutoStartList();
 }
 
 AutoStart::~AutoStart()

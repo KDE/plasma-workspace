@@ -23,7 +23,14 @@
 #include <QStringList>
 #include <QVector>
 
-class AutoStartItem;
+class AutoStartItem
+{
+public:
+    QString name;
+    QString service;
+    QString startAfter;
+    int     phase;
+};
 
 class AutoStart
 {
@@ -31,7 +38,6 @@ public:
     AutoStart();
     ~AutoStart();
 
-    void loadAutoStartList();
     QString startService();
     void    setPhase(int phase);
     void    setPhaseDone();
@@ -45,6 +51,7 @@ public:
     }
 
 private:
+    void loadAutoStartList();
     QVector<AutoStartItem> m_startList;
     QStringList m_started;
     int m_phase;
