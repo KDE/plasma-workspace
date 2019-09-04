@@ -77,6 +77,8 @@ public:
 
     QVariantMap candidateContainmentsGraphicItems() const;
 
+    Q_INVOKABLE QString fileFromPackage(const QString &key, const QString &fileName);
+
 protected:
     bool event(QEvent *e) override;
     void keyPressEvent(QKeyEvent *e) override;

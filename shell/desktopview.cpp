@@ -218,6 +218,11 @@ QVariantMap DesktopView::candidateContainmentsGraphicItems() const
     return map;
 }
 
+Q_INVOKABLE QString DesktopView::fileFromPackage(const QString &key, const QString &fileName)
+{
+    return corona()->kPackage().filePath(key.toUtf8(), fileName);
+}
+
 bool DesktopView::event(QEvent *e)
 {
     if (e->type() == QEvent::PlatformSurface) {

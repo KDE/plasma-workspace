@@ -116,6 +116,7 @@ public:
     KConfigGroup config() const override;
     KConfigGroup configDefaults() const;
 
+    Q_INVOKABLE QString fileFromPackage(const QString &key, const QString &fileName);
     Q_INVOKABLE void maximize();
 
     Qt::Alignment alignment() const;
