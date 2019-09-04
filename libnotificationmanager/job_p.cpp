@@ -119,7 +119,7 @@ QString JobPrivate::prettyDestUrl() const
 
         const QString homePath = QDir::homePath();
         if (destUrlString.startsWith(homePath)) {
-            destUrlString = QStringLiteral("~") + destUrlString.mid(homePath.length());
+            destUrlString = QLatin1String("~") + destUrlString.mid(homePath.length());
         }
 
         return destUrlString;

@@ -43,7 +43,7 @@ FaviconFromBlob *FaviconFromBlob::chrome(const QString &profileDirectory, QObjec
     FetchSqlite *fetchSqlite = new FetchSqlite(profileDirectory + QStringLiteral("/Favicons"), faviconCache, parent);
 
     QString faviconQuery;
-    if(fetchSqlite->tables().contains(QStringLiteral("favicon_bitmaps"))) {
+    if(fetchSqlite->tables().contains(QLatin1String("favicon_bitmaps"))) {
         faviconQuery = QLatin1String("SELECT * FROM favicons " \
                                      "inner join icon_mapping on icon_mapping.icon_id = favicons.id " \
                                      "inner join favicon_bitmaps on icon_mapping.icon_id = favicon_bitmaps.icon_id " \

@@ -305,7 +305,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
             watcher->deleteLater();
         });
 
-    } else if (name == QLatin1Literal("Inhibitions")) {
+    } else if (name == QLatin1String("Inhibitions")) {
         QDBusMessage inhibitionsMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
                                                                      QStringLiteral("/org/kde/Solid/PowerManagement/PolicyAgent"),
                                                                      QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),

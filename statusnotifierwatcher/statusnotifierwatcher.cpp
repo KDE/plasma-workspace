@@ -111,7 +111,7 @@ void StatusNotifierWatcher::serviceUnregistered(const QString& name)
 
 void StatusNotifierWatcher::RegisterStatusNotifierHost(const QString &service)
 {
-    if (service.contains(QStringLiteral("org.kde.StatusNotifierHost-")) &&
+    if (service.contains(QLatin1String("org.kde.StatusNotifierHost-")) &&
         QDBusConnection::sessionBus().interface()->isServiceRegistered(service).value() &&
         !m_statusNotifierHostServices.contains(service)) {
         qDebug()<<"Registering"<<service<<"as system tray";

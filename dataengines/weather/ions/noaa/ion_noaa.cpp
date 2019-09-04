@@ -317,7 +317,7 @@ void NOAAIon::parseStationID()
                 info.stationID = stationID;
                 info.XMLurl = xmlurl;
 
-                QString tmp = stationName + QStringLiteral(", ") + state; // Build the key name.
+                QString tmp = stationName + QLatin1String(", ") + state; // Build the key name.
                 m_places[tmp] = info;
             }
             break;
@@ -677,83 +677,83 @@ IonInterface::ConditionIcons NOAAIon::getConditionIcon(const QString& weather, b
 {
     IonInterface::ConditionIcons result;
     // Consider any type of storm, tornado or funnel to be a thunderstorm.
-    if (weather.contains(QStringLiteral("thunderstorm")) || weather.contains(QStringLiteral("funnel")) ||
-        weather.contains(QStringLiteral("tornado")) || weather.contains(QStringLiteral("storm")) || weather.contains(QStringLiteral("tstms"))) {
+    if (weather.contains(QLatin1String("thunderstorm")) || weather.contains(QLatin1String("funnel")) ||
+        weather.contains(QLatin1String("tornado")) || weather.contains(QLatin1String("storm")) || weather.contains(QLatin1String("tstms"))) {
 
-        if (weather.contains(QStringLiteral("vicinity")) || weather.contains(QStringLiteral("chance"))) {
+        if (weather.contains(QLatin1String("vicinity")) || weather.contains(QLatin1String("chance"))) {
             result = isDayTime ? IonInterface::ChanceThunderstormDay : IonInterface::ChanceThunderstormNight;
         } else {
             result = IonInterface::Thunderstorm;
         }
 
-    } else if (weather.contains(QStringLiteral("pellets")) || weather.contains(QStringLiteral("crystals")) ||
-             weather.contains(QStringLiteral("hail"))) {
+    } else if (weather.contains(QLatin1String("pellets")) || weather.contains(QLatin1String("crystals")) ||
+             weather.contains(QLatin1String("hail"))) {
         result = IonInterface::Hail;
 
-    } else if (((weather.contains(QStringLiteral("rain")) || weather.contains(QStringLiteral("drizzle")) ||
-              weather.contains(QStringLiteral("showers"))) && weather.contains(QStringLiteral("snow"))) || weather.contains(QStringLiteral("wintry mix"))) {
+    } else if (((weather.contains(QLatin1String("rain")) || weather.contains(QLatin1String("drizzle")) ||
+              weather.contains(QLatin1String("showers"))) && weather.contains(QLatin1String("snow"))) || weather.contains(QLatin1String("wintry mix"))) {
         result = IonInterface::RainSnow;
 
-    } else if (weather.contains(QStringLiteral("flurries"))) {
+    } else if (weather.contains(QLatin1String("flurries"))) {
         result = IonInterface::Flurries;
 
-    } else if (weather.contains(QStringLiteral("snow")) && weather.contains(QStringLiteral("light"))) {
+    } else if (weather.contains(QLatin1String("snow")) && weather.contains(QLatin1String("light"))) {
         result = IonInterface::LightSnow;
 
-    } else if (weather.contains(QStringLiteral("snow"))) {
-        if (weather.contains(QStringLiteral("vicinity")) || weather.contains(QStringLiteral("chance"))) {
+    } else if (weather.contains(QLatin1String("snow"))) {
+        if (weather.contains(QLatin1String("vicinity")) || weather.contains(QLatin1String("chance"))) {
             result = isDayTime ? IonInterface::ChanceSnowDay : IonInterface::ChanceSnowNight;
         } else {
             result = IonInterface::Snow;
         }
 
-    } else if (weather.contains(QStringLiteral("freezing rain"))) {
+    } else if (weather.contains(QLatin1String("freezing rain"))) {
         result = IonInterface::FreezingRain;
 
-    } else if (weather.contains(QStringLiteral("freezing drizzle"))) {
+    } else if (weather.contains(QLatin1String("freezing drizzle"))) {
         result = IonInterface::FreezingDrizzle;
 
-    } else if (weather.contains(QStringLiteral("cold"))) {
+    } else if (weather.contains(QLatin1String("cold"))) {
         // temperature condition has not hint about air ingredients, so let's assume chance of snow
         result = isDayTime ? IonInterface::ChanceSnowDay : IonInterface::ChanceSnowNight;
 
-    } else if (weather.contains(QStringLiteral("showers"))) {
+    } else if (weather.contains(QLatin1String("showers"))) {
 
-        if (weather.contains(QStringLiteral("vicinity")) || weather.contains(QStringLiteral("chance"))) {
+        if (weather.contains(QLatin1String("vicinity")) || weather.contains(QLatin1String("chance"))) {
             result = isDayTime ? IonInterface::ChanceShowersDay : IonInterface::ChanceShowersNight;
         } else {
             result = IonInterface::Showers;
         }
-    } else if (weather.contains(QStringLiteral("light rain")) || weather.contains(QStringLiteral("drizzle"))) {
+    } else if (weather.contains(QLatin1String("light rain")) || weather.contains(QLatin1String("drizzle"))) {
         result = IonInterface::LightRain;
 
-    } else if (weather.contains(QStringLiteral("rain"))) {
+    } else if (weather.contains(QLatin1String("rain"))) {
         result = IonInterface::Rain;
 
-    } else if (weather.contains(QStringLiteral("few clouds")) || weather.contains(QStringLiteral("mostly sunny")) ||
-               weather.contains(QStringLiteral("mostly clear")) || weather.contains(QStringLiteral("increasing clouds")) ||
-               weather.contains(QStringLiteral("becoming cloudy")) || weather.contains(QStringLiteral("clearing")) ||
-               weather.contains(QStringLiteral("decreasing clouds")) || weather.contains(QStringLiteral("becoming sunny"))) {
+    } else if (weather.contains(QLatin1String("few clouds")) || weather.contains(QLatin1String("mostly sunny")) ||
+               weather.contains(QLatin1String("mostly clear")) || weather.contains(QLatin1String("increasing clouds")) ||
+               weather.contains(QLatin1String("becoming cloudy")) || weather.contains(QLatin1String("clearing")) ||
+               weather.contains(QLatin1String("decreasing clouds")) || weather.contains(QLatin1String("becoming sunny"))) {
         result = isDayTime ? IonInterface::FewCloudsDay : IonInterface::FewCloudsNight;
 
-    } else if (weather.contains(QStringLiteral("partly cloudy")) || weather.contains(QStringLiteral("partly sunny")) ||
-               weather.contains(QStringLiteral("partly clear"))) {
+    } else if (weather.contains(QLatin1String("partly cloudy")) || weather.contains(QLatin1String("partly sunny")) ||
+               weather.contains(QLatin1String("partly clear"))) {
         result = isDayTime ? IonInterface::PartlyCloudyDay : IonInterface::PartlyCloudyNight;
 
-    } else if (weather.contains(QStringLiteral("overcast")) || weather.contains(QStringLiteral("cloudy"))) {
+    } else if (weather.contains(QLatin1String("overcast")) || weather.contains(QLatin1String("cloudy"))) {
         result = IonInterface::Overcast;
 
-    } else if (weather.contains(QStringLiteral("haze")) || weather.contains(QStringLiteral("smoke")) ||
-             weather.contains(QStringLiteral("dust")) || weather.contains(QStringLiteral("sand"))) {
+    } else if (weather.contains(QLatin1String("haze")) || weather.contains(QLatin1String("smoke")) ||
+             weather.contains(QLatin1String("dust")) || weather.contains(QLatin1String("sand"))) {
         result = IonInterface::Haze;
 
-    } else if (weather.contains(QStringLiteral("fair")) || weather.contains(QStringLiteral("clear")) || weather.contains(QStringLiteral("sunny"))) {
+    } else if (weather.contains(QLatin1String("fair")) || weather.contains(QLatin1String("clear")) || weather.contains(QLatin1String("sunny"))) {
         result = isDayTime ? IonInterface::ClearDay : IonInterface::ClearNight;
 
-    } else if (weather.contains(QStringLiteral("fog"))) {
+    } else if (weather.contains(QLatin1String("fog"))) {
         result = IonInterface::Mist;
 
-    } else if (weather.contains(QStringLiteral("hot"))) {
+    } else if (weather.contains(QLatin1String("hot"))) {
         // temperature condition has not hint about air ingredients, so let's assume the sky is clear when it is hot
         result = isDayTime ? IonInterface::ClearDay : IonInterface::ClearNight;
 

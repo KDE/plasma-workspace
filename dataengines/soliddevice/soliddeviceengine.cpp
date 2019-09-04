@@ -533,7 +533,7 @@ void SolidDeviceEngine::setIdleState(Solid::ErrorType error, QVariant errorData,
 void SolidDeviceEngine::deviceChanged(const QMap<QString, int> &props)
 {
     Solid::GenericInterface * iface = qobject_cast<Solid::GenericInterface *>(sender());
-    if (iface && iface->isValid() && props.contains(QStringLiteral("Size")) && iface->property(QStringLiteral("Size")).toInt() > 0) {
+    if (iface && iface->isValid() && props.contains(QLatin1String("Size")) && iface->property(QStringLiteral("Size")).toInt() > 0) {
         const QString udi = qobject_cast<QObject *>(iface)->property("udi").toString();
         if (populateDeviceData(udi))
             forceImmediateUpdateOfAllVisualizations();

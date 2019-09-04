@@ -252,7 +252,7 @@ QHash<int, QByteArray> PlasmaAppletItemModel::roleNames() const
 
 void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
 {
-    if (!whatChanged.isEmpty() && !whatChanged.contains(QStringLiteral("services"))) {
+    if (!whatChanged.isEmpty() && !whatChanged.contains(QLatin1String("services"))) {
         return;
     }
 

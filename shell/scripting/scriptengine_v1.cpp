@@ -487,14 +487,14 @@ bool ScriptEngine::V1::fileExists(const QString &path) const
 
 bool ScriptEngine::V1::loadTemplate(const QString &layout)
 {
-    if (layout.isEmpty() || layout.contains(QStringLiteral("'"))) {
+    if (layout.isEmpty() || layout.contains(QLatin1Char('\''))) {
         // qDebug() << "layout is empty";
         return false;
     }
 
     auto filter = [&layout](const KPluginMetaData &md) -> bool
     {
-        return md.pluginId() == layout && KPluginMetaData::readStringList(md.rawData(), QStringLiteral("X-Plasma-ContainmentCategories")).contains(QStringLiteral("panel"));
+        return md.pluginId() == layout && KPluginMetaData::readStringList(md.rawData(), QStringLiteral("X-Plasma-ContainmentCategories")).contains(QLatin1String("panel"));
     };
     QList<KPluginMetaData> offers = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
 
@@ -510,7 +510,7 @@ bool ScriptEngine::V1::loadTemplate(const QString &layout)
     {
         ShellCorona *sc = qobject_cast<ShellCorona *>(m_engine->m_corona);
         if (sc) {
-            const QString overridePackagePath = sc->lookAndFeelPackage().path() + QStringLiteral("contents/layouts/") + pluginData.pluginId();
+            const QString overridePackagePath = sc->lookAndFeelPackage().path() + QLatin1String("contents/layouts/") + pluginData.pluginId();
 
             path = overridePackagePath + QStringLiteral("/metadata.json");
             if (QFile::exists(path)) {
@@ -580,7 +580,7 @@ bool ScriptEngine::V1::applicationExists(const QString &application) const
         return true;
     }
 
-    if (application.contains(QStringLiteral("'"))) {
+    if (application.contains(QLatin1Char('\''))) {
         // apostrophes just screw up the trader lookups below, so check for it
         return false;
     }
@@ -648,7 +648,7 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
                 browserApp = storageId ? htmlApp->storageId() : htmlApp->exec();
             }
         } else if (browserApp.startsWith('!')) {
-            browserApp = browserApp.mid(1);
+            browserApp.remove(0, 1);
         }
 
         return onlyExec(browserApp);
@@ -725,7 +725,7 @@ QJSValue ScriptEngine::V1::applicationPath(const QString &application) const
                                       service->entryPath());
     }
 
-    if (application.contains(QStringLiteral("'"))) {
+    if (application.contains(QLatin1Char('\''))) {
         // apostrophes just screw up the trader lookups below, so check for it
         return QString();
     }

@@ -41,7 +41,7 @@ QList<BookmarkMatch> Opera::match( const QString& term, bool addEverything )
     // search
     foreach (const QString & entry, m_operaBookmarkEntries) {
         QStringList entryLines = entry.split(QStringLiteral("\n"));
-        if (!entryLines.first().startsWith(QStringLiteral("#URL"))) {
+        if (!entryLines.first().startsWith(QLatin1String("#URL"))) {
             continue; // skip folder entries
         }
         entryLines.pop_front();

@@ -195,7 +195,7 @@ void KSMServer::performLogout()
     KConfigGroup cg(KSharedConfig::openConfig(), "General");
     saveSession = ( cg.readEntry( "loginMode",
                                     QStringLiteral( "restorePreviousLogout" ) )
-                    == QStringLiteral( "restorePreviousLogout" ) );
+                    == QLatin1String( "restorePreviousLogout" ) );
 
     qCDebug(KSMSERVER) << "saveSession is " << saveSession;
 
@@ -254,7 +254,7 @@ void KSMServer::saveCurrentSession()
         return;
 
     if ( currentSession().isEmpty() || currentSession() == QString::fromLocal8Bit( SESSION_PREVIOUS_LOGOUT ) )
-        sessionGroup = QStringLiteral("Session: ") + QString::fromLocal8Bit( SESSION_BY_USER );
+        sessionGroup = QLatin1String("Session: ") + QString::fromLocal8Bit( SESSION_BY_USER );
 
     state = Checkpoint;
     wmPhase1WaitingCount = 0;

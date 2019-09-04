@@ -151,7 +151,7 @@ class NotificationThread : public QThread
         QObject parent;
         KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QList< QPair<QString,QString> >(), QStringLiteral("startkde"));
         const QString action = notifyConfig.readEntry(QStringLiteral("Action"));
-        if (action.isEmpty() || !action.split(QLatin1Char('|')).contains(QStringLiteral("Sound"))) {
+        if (action.isEmpty() || !action.split(QLatin1Char('|')).contains(QLatin1String("Sound"))) {
             // no startup sound configured
             return;
         }
@@ -319,7 +319,7 @@ void StartupPhase2::runUserAutostart()
     const QStringList entries = dir.entryList(QDir::Files);
     foreach (const QString &file, entries) {
         // Don't execute backup files
-        if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QStringLiteral(".bak")) &&
+        if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QLatin1String(".bak")) &&
                 (file[0] != QLatin1Char('%') || !file.endsWith(QLatin1Char('%'))) &&
                 (file[0] != QLatin1Char('#') || !file.endsWith(QLatin1Char('#'))))
         {

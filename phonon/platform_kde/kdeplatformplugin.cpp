@@ -61,9 +61,9 @@ void KdePlatformPlugin::notification(const char *notificationName, const QString
         const char *actionSlot) const
 {
     KNotification *notification = new KNotification(notificationName);
-    notification->setComponentName(QLatin1Literal("phonon"));
+    notification->setComponentName(QLatin1String("phonon"));
     notification->setText(text);
-    notification->addContext(QLatin1Literal("Application"),
+    notification->addContext(QLatin1String("Application"),
                              KAboutData::applicationData().componentName());
     if (!actions.isEmpty() && receiver && actionSlot) {
         notification->setActions(actions);
@@ -82,7 +82,7 @@ QString KdePlatformPlugin::applicationName() const
         return aboutData.componentName();
     }
     // FIXME: why was this not localized?
-    return QLatin1Literal("Qt Application");
+    return QLatin1String("Qt Application");
 }
 
 // Phonon4Qt5 internally implements backend lookup an creation. Driving it

@@ -91,7 +91,7 @@ QString TranslationsModel::languageCodeToName(const QString& languageCode) const
         return languageCode;
     }
 
-    if (languageCode.contains(QStringLiteral("@"))) {
+    if (languageCode.contains(QLatin1Char('@'))) {
         return i18nc("%1 is language name, %2 is language code name", "%1 (%2)", languageName, languageCode);
     }
 

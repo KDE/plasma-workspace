@@ -119,7 +119,7 @@ KProcess* KSMServer::startApplication( const QStringList& cmd, const QString& cl
             command.prepend( QStandardPaths::findExecutable(QStringLiteral("kdesu")));
         }
     }
-    if ( !clientMachine.isEmpty() && clientMachine != QStringLiteral("localhost") ) {
+    if ( !clientMachine.isEmpty() && clientMachine != QLatin1String("localhost") ) {
         command.prepend( clientMachine );
         command.prepend( xonCommand ); // "xon" by default
     }
@@ -1036,7 +1036,7 @@ void KSMServer::restoreSession( const QString &sessionName )
     qCDebug(KSMSERVER) << "KSMServer::restoreSession " << sessionName;
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
 
-    sessionGroup = QStringLiteral("Session: ") + sessionName;
+    sessionGroup = QLatin1String("Session: ") + sessionName;
     KConfigGroup configSessionGroup( config, sessionGroup);
 
     int count =  configSessionGroup.readEntry( "count", 0 );
@@ -1083,7 +1083,7 @@ void KSMServer::wmProcessChange()
     if( wmProcess->state() == QProcess::NotRunning )
     { // wm failed to launch for some reason, go with kwin instead
         qCWarning(KSMSERVER) << "Window manager" << wm << "failed to launch";
-        if( wm == QStringLiteral( KWIN_BIN ) )
+        if( wm == QLatin1String( KWIN_BIN ) )
             return; // uhoh, kwin itself failed
         qCDebug(KSMSERVER) << "Launching KWin";
         wm = QStringLiteral( KWIN_BIN );
@@ -1171,7 +1171,7 @@ void KSMServer::tryRestoreNext()
     while ( lastAppStarted < appsToStart ) {
         lastAppStarted++;
         QString n = QString::number(lastAppStarted);
-        QString clientId = config.readEntry( QStringLiteral("clientId")+n, QString() );
+        QString clientId = config.readEntry( QLatin1String("clientId")+n, QString() );
         bool alreadyStarted = false;
         foreach ( KSMClient *c, clients ) {
             if ( QString::fromLocal8Bit( c->clientId() ) == clientId ) {
@@ -1182,7 +1182,7 @@ void KSMServer::tryRestoreNext()
         if ( alreadyStarted )
             continue;
 
-        QStringList restartCommand = config.readEntry( QStringLiteral("restartCommand")+n, QStringList() );
+        QStringList restartCommand = config.readEntry( QLatin1String("restartCommand")+n, QStringList() );
         if ( restartCommand.isEmpty() ||
              (config.readEntry( QStringLiteral("restartStyleHint")+n, 0 ) == SmRestartNever)) {
             continue;

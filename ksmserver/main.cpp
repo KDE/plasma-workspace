@@ -324,9 +324,9 @@ extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
 
     if ( parser.isSet( restoreOption ))
         server->restoreSession( QStringLiteral( SESSION_BY_USER ) );
-    else if ( loginMode == QStringLiteral( "restorePreviousLogout" ) )
+    else if ( loginMode == QLatin1String( "restorePreviousLogout" ) )
         server->restoreSession( QStringLiteral( SESSION_PREVIOUS_LOGOUT ) );
-    else if ( loginMode == QStringLiteral( "restoreSavedSession" ) )
+    else if ( loginMode == QLatin1String( "restoreSavedSession" ) )
         server->restoreSession( QStringLiteral( SESSION_BY_USER ) );
     else
         server->startDefaultSession();

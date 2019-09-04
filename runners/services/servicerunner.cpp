@@ -278,14 +278,14 @@ private:
                 }
             }
 
-            if (service->categories().contains(QStringLiteral("KDE")) || service->serviceTypes().contains(QStringLiteral("KCModule"))) {
+            if (service->categories().contains(QLatin1String("KDE")) || service->serviceTypes().contains(QLatin1String("KCModule"))) {
                 qCDebug(RUNNER_SERVICES) << "found a kde thing" << id << match.subtext() << relevance;
                 relevance += .09;
             }
 
             qCDebug(RUNNER_SERVICES) << service->name() << "is this relevant:" << relevance;
             match.setRelevance(relevance);
-            if (service->serviceTypes().contains(QStringLiteral("KCModule"))) {
+            if (service->serviceTypes().contains(QLatin1String("KCModule"))) {
                 match.setMatchCategory(i18n("System Settings"));
             }
             matches << match;
@@ -309,7 +309,7 @@ private:
             setupMatch(service, match);
 
             qreal relevance = 0.6;
-            if (service->categories().contains(QStringLiteral("X-KDE-More")) ||
+            if (service->categories().contains(QLatin1String("X-KDE-More")) ||
                     !service->showInCurrentDesktop()) {
                 relevance = 0.5;
             }
@@ -451,7 +451,7 @@ QMimeData * ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 
     QString path = service->entryPath();
     if (!QDir::isAbsolutePath(path)) {
-        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kservices5/") + path);
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("kservices5/") + path);
     }
 
     if (path.isEmpty()) {

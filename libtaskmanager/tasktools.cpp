@@ -66,13 +66,13 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
 
         if (uQuery.hasQueryItem(QLatin1String("skipTaskbar"))) {
             QString skipTaskbar(uQuery.queryItemValue(QLatin1String("skipTaskbar")));
-            data.skipTaskbar = (skipTaskbar == QStringLiteral("true"));
+            data.skipTaskbar = (skipTaskbar == QLatin1String("true"));
         }
     }
 
     // applications: URLs are used to refer to applications by their KService::menuId
     // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
-    if (url.scheme() == QStringLiteral("applications")) {
+    if (url.scheme() == QLatin1String("applications")) {
         const KService::Ptr service = KService::serviceByMenuId(url.path());
 
         if (service && url.path() == service->menuId()) {
@@ -94,7 +94,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
             const QString &menuId = service->menuId();
 
             if (!menuId.isEmpty()) {
-                data.url = QUrl(QStringLiteral("applications:") + menuId);
+                data.url = QUrl(QLatin1String("applications:") + menuId);
             }
         }
 
@@ -141,7 +141,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
 
             // Update with resolved URL.
             if (!menuId.isEmpty()) {
-                data.url = QUrl(QStringLiteral("applications:") + menuId);
+                data.url = QUrl(QLatin1String("applications:") + menuId);
             } else {
                 data.url = QUrl::fromLocalFile(desktopFile);
             }
@@ -175,7 +175,7 @@ AppData appDataFromAppId(const QString &appId)
         // applications: URLs are used to refer to applications by their KService::menuId
         // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
         if (!menuId.isEmpty()) {
-            data.url = QUrl(QStringLiteral("applications:") + menuId);
+            data.url = QUrl(QLatin1String("applications:") + menuId);
         } else {
             data.url = QUrl::fromLocalFile(service->entryPath());
         }
@@ -371,7 +371,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid,
             }
 
             // The appId looks like a path.
-            if (services.isEmpty() && appId.startsWith(QStringLiteral("/"))) {
+            if (services.isEmpty() && appId.startsWith(QLatin1String("/"))) {
                 // Check if it's a path to a .desktop file.
                 if (KDesktopFile::isDesktopFile(appId) && QFile::exists(appId)) {
                     return QUrl::fromLocalFile(appId);
@@ -543,7 +543,7 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
 
     if (services.isEmpty() && firstSpace > 0) {
         // Could not find with arguments, so try without ...
-        cmdLine = cmdLine.left(firstSpace);
+        cmdLine.truncate(firstSpace);
 
         services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Exec)").arg(cmdLine));
 
@@ -626,7 +626,7 @@ QString defaultApplication(const QUrl &url)
                 browserApp = htmlApp->storageId();
             }
         } else if (browserApp.startsWith('!')) {
-            browserApp = browserApp.mid(1);
+            browserApp.remove(0, 1);
         }
 
         return browserApp;
@@ -699,7 +699,7 @@ bool launcherUrlsMatch(const QUrl &a, const QUrl &b, UrlComparisonMode mode)
                 const QString &menuId = service->menuId();
 
                 if (!menuId.isEmpty()) {
-                    resolvedUrl = QUrl(QStringLiteral("applications:") + menuId);
+                    resolvedUrl = QUrl(QLatin1String("applications:") + menuId);
                     resolvedUrl.setQuery(url.query());
                 }
             }
@@ -779,7 +779,7 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
 
         // applications: URLs are used to refer to applications by their KService::menuId
         // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
-        if (appData.url.scheme() == QStringLiteral("applications")) {
+        if (appData.url.scheme() == QLatin1String("applications")) {
             service = KService::serviceByMenuId(appData.url.path());
         } else if (appData.url.scheme() == QLatin1String("preferred")) {
             const KService::Ptr service = KService::serviceByStorageId(defaultApplication(appData.url));

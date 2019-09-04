@@ -100,7 +100,7 @@ void Translations::save()
         m_configuredLanguages.removeOne(lang);
     }
 
-    m_config.writeEntry(lcLanguage, m_configuredLanguages.join(QStringLiteral(":")), KConfig::Persistent);
+    m_config.writeEntry(lcLanguage, m_configuredLanguages.join(QLatin1Char(':')), KConfig::Persistent);
     m_config.sync();
 
     writeExports();

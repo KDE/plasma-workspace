@@ -253,7 +253,7 @@ void KSMServer::restoreLegacySession( KConfig* config )
     if( config->hasGroup( QStringLiteral( "Legacy" ) + sessionGroup )) {
         KConfigGroup group( config, QStringLiteral( "Legacy" ) + sessionGroup );
         restoreLegacySessionInternal( &group );
-    } else if( wm == QStringLiteral( "kwin" ) ) { // backwards comp. - get it from kwinrc
+    } else if( wm == QLatin1String( "kwin" ) ) { // backwards comp. - get it from kwinrc
         KConfigGroup group( config, sessionGroup );
         int count =  group.readEntry( "count", 0 );
         for ( int i = 1; i <= count; i++ ) {
@@ -265,7 +265,7 @@ void KSMServer::restoreLegacySession( KConfig* config )
             for( QStringList::ConstIterator it = restartCommand.constBegin();
                 it != restartCommand.constEnd();
                 ++it ) {
-                if( (*it) == QStringLiteral( "-session" ) ) {
+                if( (*it) == QLatin1String( "-session" ) ) {
                     ++it;
                     if( it != restartCommand.constEnd()) {
                         KConfig cfg( QStringLiteral( "session/" ) + wm +
@@ -349,15 +349,15 @@ QStringList KSMServer::windowWmCommand(WId w)
         // Mozilla is launched using wrapper scripts, so it's launched using "mozilla",
         // but the actual binary is "mozilla-bin" or "<path>/mozilla-bin", and that's what
         // will be also in WM_COMMAND - using this "mozilla-bin" doesn't work at all though
-        if( command.endsWith( QStringLiteral( "mozilla-bin" )))
+        if( command.endsWith(QLatin1String( "mozilla-bin" )))
             return QStringList() << QStringLiteral( "mozilla" );
-        if( command.endsWith( QStringLiteral( "firefox-bin" )))
+        if( command.endsWith(QLatin1String( "firefox-bin" )))
             return QStringList() << QStringLiteral( "firefox" );
-        if( command.endsWith( QStringLiteral( "thunderbird-bin" )))
+        if( command.endsWith(QLatin1String( "thunderbird-bin" )))
             return QStringList() << QStringLiteral( "thunderbird" );
-        if( command.endsWith( QStringLiteral( "sunbird-bin" )))
+        if( command.endsWith(QLatin1String( "sunbird-bin" )))
             return QStringList() << QStringLiteral( "sunbird" );
-        if( command.endsWith( QStringLiteral( "seamonkey-bin" )))
+        if( command.endsWith(QLatin1String( "seamonkey-bin" )))
             return QStringList() << QStringLiteral( "seamonkey" );
     }
     return ret;

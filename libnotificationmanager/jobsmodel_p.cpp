@@ -248,7 +248,7 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &appName, const QStr
     KService::Ptr service = KService::serviceByStorageId(applicationName);
     if (!service) {
         // HACK :)
-        service = KService::serviceByStorageId(QStringLiteral("org.kde.") + appName);
+        service = KService::serviceByStorageId(QLatin1String("org.kde.") + appName);
     }
 
     if (service) {

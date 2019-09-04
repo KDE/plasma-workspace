@@ -267,7 +267,7 @@ bool ScriptEngine::evaluateScript(const QString &script, const QString &path)
         QString error = i18n("Error: %1 at line %2\n\nBacktrace:\n%3",
                              result.toString(),
                              result.property("lineNumber").toInt(),
-                             result.property("stack").toVariant().value<QStringList>().join(QStringLiteral("\n  ")));
+                             result.property("stack").toVariant().value<QStringList>().join(QLatin1String("\n  ")));
         emit printError(error);
         emit exception(result);
         m_errorString = error;

@@ -72,19 +72,19 @@ CalculatorRunner::~CalculatorRunner()
 
 void CalculatorRunner::powSubstitutions(QString& cmd)
 {
-    if (cmd.contains(QStringLiteral("e+"), Qt::CaseInsensitive)) {
-        cmd = cmd.replace(QLatin1String("e+"), QLatin1String("*10^"), Qt::CaseInsensitive);
+    if (cmd.contains(QLatin1String("e+"), Qt::CaseInsensitive)) {
+        cmd.replace(QLatin1String("e+"), QLatin1String("*10^"), Qt::CaseInsensitive);
     }
 
-    if (cmd.contains(QStringLiteral("e-"), Qt::CaseInsensitive)) {
-        cmd = cmd.replace(QLatin1String("e-"), QLatin1String("*10^-"), Qt::CaseInsensitive);
+    if (cmd.contains(QLatin1String("e-"), Qt::CaseInsensitive)) {
+        cmd.replace(QLatin1String("e-"), QLatin1String("*10^-"), Qt::CaseInsensitive);
     }
 
     // the below code is scary mainly because we have to honor priority
     // honor decimal numbers and parenthesis.
     while (cmd.contains(QLatin1Char('^'))) {
         int where = cmd.indexOf(QLatin1Char('^'));
-        cmd = cmd.replace(where, 1, QLatin1Char(','));
+        cmd.replace(where, 1, QLatin1Char(','));
         int preIndex = where - 1;
         int postIndex = where + 1;
         int count = 0;
@@ -158,16 +158,16 @@ void CalculatorRunner::powSubstitutions(QString& cmd)
 
 void CalculatorRunner::hexSubstitutions(QString& cmd)
 {
-    if (cmd.contains(QStringLiteral("0x"))) {
+    if (cmd.contains(QLatin1String("0x"))) {
         //Append +0 so that the calculator can serve also as a hex converter
         cmd.append(QLatin1String("+0"));
         bool ok;
         int pos = 0;
         QString hex;
 
-        while (cmd.contains(QStringLiteral("0x"))) {
+        while (cmd.contains(QLatin1String("0x"))) {
             hex.clear();
-            pos = cmd.indexOf(QStringLiteral("0x"), pos);
+            pos = cmd.indexOf(QLatin1String("0x"), pos);
 
             for (int q = 0; q < cmd.size(); q++) {//find end of hex number
                 QChar current = cmd[pos+q+2];
@@ -187,7 +187,7 @@ void CalculatorRunner::hexSubstitutions(QString& cmd)
 void CalculatorRunner::userFriendlySubstitutions(QString& cmd)
 {
     if (cmd.contains(QLocale().decimalPoint(), Qt::CaseInsensitive)) {
-         cmd=cmd.replace(QLocale().decimalPoint(), QLatin1Char('.'), Qt::CaseInsensitive);
+         cmd.replace(QLocale().decimalPoint(), QLatin1Char('.'), Qt::CaseInsensitive);
     }
 
     // the following substitutions are not needed with libqalculate
@@ -196,13 +196,13 @@ void CalculatorRunner::userFriendlySubstitutions(QString& cmd)
     powSubstitutions(cmd);
 
     if (cmd.contains(QRegExp(QStringLiteral("\\d+and\\d+")))) {
-         cmd = cmd.replace(QRegExp(QStringLiteral("(\\d+)and(\\d+)")), QStringLiteral("\\1&\\2"));
+         cmd.replace(QRegExp(QStringLiteral("(\\d+)and(\\d+)")), QStringLiteral("\\1&\\2"));
     }
     if (cmd.contains(QRegExp(QStringLiteral("\\d+or\\d+")))) {
-         cmd = cmd.replace(QRegExp(QStringLiteral("(\\d+)or(\\d+)")), QStringLiteral("\\1|\\2"));
+         cmd.replace(QRegExp(QStringLiteral("(\\d+)or(\\d+)")), QStringLiteral("\\1|\\2"));
     }
     if (cmd.contains(QRegExp(QStringLiteral("\\d+xor\\d+")))) {
-         cmd = cmd.replace(QRegExp(QStringLiteral("(\\d+)xor(\\d+)")), QStringLiteral("\\1^\\2"));
+         cmd.replace(QRegExp(QStringLiteral("(\\d+)xor(\\d+)")), QStringLiteral("\\1^\\2"));
     }
     #endif
 }
@@ -268,7 +268,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     QString result = calculate(cmd, &isApproximate);
     if (!result.isEmpty() && result != cmd) {
         if (toHex) {
-            result = QStringLiteral("0x") + QString::number(result.toInt(), 16).toUpper();
+            result = QLatin1String("0x") + QString::number(result.toInt(), 16).toUpper();
         }
 
         Plasma::QueryMatch match(this);

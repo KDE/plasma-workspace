@@ -82,7 +82,7 @@ void Shutdown::runShutdownScripts()
         const QStringList entries = dir.entryList(QDir::Files);
         foreach (const QString &file, entries) {
             // Don't execute backup files
-            if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QStringLiteral(".bak")) &&
+            if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QLatin1String(".bak")) &&
                     (file[0] != QLatin1Char('%') || !file.endsWith(QLatin1Char('%'))) &&
                     (file[0] != QLatin1Char('#') || !file.endsWith(QLatin1Char('#'))))
             {

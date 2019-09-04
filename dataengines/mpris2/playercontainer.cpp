@@ -248,18 +248,18 @@ void PlayerContainer::copyProperty(const QString& propName, const QVariant& _val
         } else if (propName == QLatin1String("Rate") &&
                 data().value(QStringLiteral("PlaybackStatus")).toString() == QLatin1String("Playing")) {
 
-            if (data().contains(QStringLiteral("Position")))
+            if (data().contains(QLatin1String("Position")))
                 recalculatePosition();
             m_currentRate = value.toDouble();
 
         } else if (propName == QLatin1String("PlaybackStatus")) {
 
-            if (data().contains(QStringLiteral("Position")) && data().contains(QStringLiteral("PlaybackStatus"))) {
+            if (data().contains(QLatin1String("Position")) && data().contains(QLatin1String("PlaybackStatus"))) {
                 updatePosition();
             }
 
             // update the effective rate
-            if (data().contains(QStringLiteral("Rate"))) {
+            if (data().contains(QLatin1String("Rate"))) {
                 if (value.toString() == QLatin1String("Playing"))
                     m_currentRate = data().value(QStringLiteral("Rate")).toDouble();
                 else

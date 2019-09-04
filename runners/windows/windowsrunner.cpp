@@ -175,7 +175,7 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
     // keyword match: when term starts with "window" we list all windows
     // the list can be restricted to windows matching a given name, class, role or desktop
     if (term.startsWith(i18nc("Note this is a KRunner keyword", "window") , Qt::CaseInsensitive)) {
-        const QStringList keywords = term.split(QStringLiteral(" "));
+        const QStringList keywords = term.split(QLatin1Char(' '));
         QString windowName;
         QString windowClass;
         QString windowRole;
@@ -253,7 +253,7 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
     bool desktopAdded = false;
     // check for desktop keyword
     if (term.startsWith(i18nc("Note this is a KRunner keyword", "desktop") , Qt::CaseInsensitive)) {
-        const QStringList parts = term.split(QStringLiteral(" "));
+        const QStringList parts = term.split(QLatin1Char(' '));
         if (parts.size() == 1) {
             // only keyword - list all desktops
             for (int i=1; i<=KWindowSystem::numberOfDesktops(); i++) {
@@ -333,7 +333,7 @@ void WindowsRunner::run(const Plasma::RunnerContext& context, const Plasma::Quer
         return;
     }
 
-    const QStringList parts = match.data().toString().split(QStringLiteral("_"));
+    const QStringList parts = match.data().toString().split(QLatin1Char('_'));
     WindowAction action = WindowAction(parts[0].toInt());
     WId w(parts[1].toULong());
     //this is needed since KWindowInfo() doesn't exist, m_windows[w] doesn't work

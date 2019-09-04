@@ -273,7 +273,7 @@ bool UKMETIon::updateIonSource(const QString& source)
                 return true;
             }
 
-            XMLMapInfo& place = m_place[QStringLiteral("bbcukmet|") + sourceAction[2]];
+            XMLMapInfo& place = m_place[QLatin1String("bbcukmet|") + sourceAction[2]];
 
             // backward compatibility after rss feed url change in 2018/03
             place.sourceExtraArg = sourceAction[3];
@@ -375,11 +375,11 @@ void UKMETIon::readSearchHTMLData(const QString& source, const QByteArray& html)
             const QString fullName = result.value(QStringLiteral("fullName")).toString();
 
             if (!id.isEmpty() && !fullName.isEmpty()) {
-                QString tmp = QStringLiteral("bbcukmet|") + fullName;
+                QString tmp = QLatin1String("bbcukmet|") + fullName;
 
                 // Duplicate places can exist
                 if (m_locations.contains(tmp)) {
-                    tmp += QStringLiteral(" (#") + QString::number(counter) + QLatin1Char(')');
+                    tmp += QLatin1String(" (#") + QString::number(counter) + QLatin1Char(')');
                     counter++;
                 }
                 XMLMapInfo& place = m_place[tmp];
@@ -430,7 +430,7 @@ void UKMETIon::setup_slotJobFinished(KJob *job)
     }
 
     // If Redirected, don't go to this routine
-    if (!m_locations.contains(QStringLiteral("bbcukmet|") + m_jobList[job])) {
+    if (!m_locations.contains(QLatin1String("bbcukmet|") + m_jobList[job])) {
         QByteArray *reader = m_jobHtml.value(job);
         if (reader) {
             readSearchHTMLData(m_jobList[job], *reader);
@@ -671,7 +671,7 @@ void UKMETIon::parseWeatherObservation(const QString& source, WeatherData& data,
                 parseFloat(data.temperature_C, temperature_C);
 
                 data.windDirection = observeData[2].section(QLatin1Char(','), 0, 0).trimmed();
-                if (data.windDirection.contains(QStringLiteral("null"))) {
+                if (data.windDirection.contains(QLatin1String("null"))) {
                     data.windDirection.clear();
                 }
 
@@ -925,7 +925,7 @@ void UKMETIon::updateWeather(const QString& source)
 
     // work-around for buggy observation RSS feed missing the station name
     QString stationName = weatherData.stationName;
-    if (stationName.isEmpty() || stationName == QLatin1String(",")) {
+    if (stationName.isEmpty() || stationName == QLatin1Char(',')) {
         stationName = source.section(QLatin1Char('|'), 1, 1);
     }
 

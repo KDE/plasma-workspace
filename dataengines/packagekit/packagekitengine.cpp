@@ -42,7 +42,7 @@ void PackagekitEngine::init()
     if (reply.type() == QDBusMessage::ReplyMessage
         && reply.arguments().size() == 1) {
         QStringList list = reply.arguments().first().toStringList();
-        if (list.contains(QStringLiteral("org.freedesktop.PackageKit"))) {
+        if (list.contains(QLatin1String("org.freedesktop.PackageKit"))) {
             m_pk_available = true;
         }
     }

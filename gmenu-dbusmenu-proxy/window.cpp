@@ -564,11 +564,11 @@ QVariantMap Window::gMenuToDBusMenuProperties(const QVariantMap &source) const
 
     result.insert(QStringLiteral("label"), source.value(QStringLiteral("label")).toString());
 
-    if (source.contains(QStringLiteral(":section"))) {
+    if (source.contains(QLatin1String(":section"))) {
         result.insert(QStringLiteral("type"), QStringLiteral("separator"));
     }
 
-    const bool isMenu = source.contains(QStringLiteral(":submenu"));
+    const bool isMenu = source.contains(QLatin1String(":submenu"));
     if (isMenu) {
         result.insert(QStringLiteral("children-display"), QStringLiteral("submenu"));
     }

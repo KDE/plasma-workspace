@@ -107,7 +107,7 @@ void Chrome::prepare()
             continue;
         }
         const QJsonObject resultMap = jdoc.object();
-        if (!resultMap.contains(QStringLiteral("roots"))) {
+        if (!resultMap.contains(QLatin1String("roots"))) {
             return;
         }
         const QJsonObject entries = resultMap.value(QStringLiteral("roots")).toObject();

@@ -64,7 +64,7 @@ static QString extractName(QString path) // krazy:exclude=passbyvalue
     }
     i = path.lastIndexOf(QLatin1Char('.'));
     if (i >= 0) {
-        path = path.left(i);
+        path.truncate(i);
     }
     return path;
 }

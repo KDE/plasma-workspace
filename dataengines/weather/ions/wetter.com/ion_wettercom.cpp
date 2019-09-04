@@ -629,7 +629,7 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
             } else if (elementName == QLatin1String("tn")) {
                 tempMin = qRound(xml.readElementText().toDouble());
                 qCDebug(IONENGINE_WETTERCOM) << "parsed t_min:" << tempMin;
-            } else if (elementName == QLatin1String("w")) {
+            } else if (elementName == QLatin1Char('w')) {
                 int tmp = xml.readElementText().toInt();
 
                 if (!time.isEmpty())
@@ -656,7 +656,7 @@ void WetterComIon::parseWeatherForecast(const QString& source, QXmlStreamReader&
             } else if (elementName == QLatin1String("link")) {
                 weatherData.creditsUrl = xml.readElementText();
                 qCDebug(IONENGINE_WETTERCOM) << "parsed credits url:" << weatherData.creditsUrl;
-            } else if (elementName == QLatin1String("d")) {
+            } else if (elementName == QLatin1Char('d')) {
                 localTime = xml.readElementText().toInt();
                 qCDebug(IONENGINE_WETTERCOM) << "parsed local time:" << localTime;
             } else if (elementName == QLatin1String("du")) {

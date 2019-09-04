@@ -402,7 +402,7 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
                 || cont->location() == Plasma::Types::BottomEdge
                 || cont->location() == Plasma::Types::LeftEdge
                 || cont->location() == Plasma::Types::RightEdge) &&
-            cont->pluginMetaData().pluginId() != QStringLiteral("org.kde.plasma.private.systemtray");
+            cont->pluginMetaData().pluginId() != QLatin1String("org.kde.plasma.private.systemtray");
     };
 
     auto isDesktop = [] (Plasma::Containment *cont) {
@@ -610,7 +610,7 @@ void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)
         return;
     }
 
-    KSharedConfig::Ptr conf = KSharedConfig::openConfig(QStringLiteral("plasma-") + m_shell + QStringLiteral("-appletsrc"), KConfig::SimpleConfig);
+    KSharedConfig::Ptr conf = KSharedConfig::openConfig(QLatin1String("plasma-") + m_shell + QLatin1String("-appletsrc"), KConfig::SimpleConfig);
 
     m_lookAndFeelPackage.setPath(packageName);
 
@@ -1552,7 +1552,7 @@ void ShellCorona::checkActivities()
 
     // Checking whether the result we got is valid. Just in case.
     Q_ASSERT_X(!existingActivities.isEmpty(), "isEmpty", "There are no activities, and the service is running");
-    Q_ASSERT_X(existingActivities[0] != QStringLiteral("00000000-0000-0000-0000-000000000000"),
+    Q_ASSERT_X(existingActivities[0] != QLatin1String("00000000-0000-0000-0000-000000000000"),
             "null uuid", "There is a nulluuid activity present");
 
     // Killing the unassigned containments
@@ -1733,7 +1733,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
 
 void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
 {
-    if (!sycocaChanges.isEmpty() && !sycocaChanges.contains(QStringLiteral("services"))) {
+    if (!sycocaChanges.isEmpty() && !sycocaChanges.contains(QLatin1String("services"))) {
         return;
     }
 
@@ -1746,7 +1746,7 @@ void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
 
     auto filter = [](const KPluginMetaData &md) -> bool
     {
-        return md.value(QStringLiteral("NoDisplay")) != QStringLiteral("true") && KPluginMetaData::readStringList(md.rawData(), QStringLiteral("X-Plasma-ContainmentCategories")).contains(QStringLiteral("panel"));
+        return md.value(QStringLiteral("NoDisplay")) != QLatin1String("true") && KPluginMetaData::readStringList(md.rawData(), QStringLiteral("X-Plasma-ContainmentCategories")).contains(QLatin1String("panel"));
     };
     QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
 
@@ -1777,7 +1777,7 @@ void ShellCorona::populateAddPanelsMenu()
     const KPluginInfo::List panelContainmentPlugins = Plasma::PluginLoader::listContainmentsOfType(QStringLiteral("Panel"));
     QMap<QString, QPair<KPluginInfo, KPluginMetaData> > sorted;
     for (const KPluginInfo &plugin : panelContainmentPlugins) {
-        if (plugin.property(QStringLiteral("NoDisplay")).toString() == QStringLiteral("true")) {
+        if (plugin.property(QStringLiteral("NoDisplay")).toString() == QLatin1String("true")) {
             continue;
         }
         sorted.insert(plugin.name(), qMakePair(plugin, KPluginMetaData()));
@@ -1785,7 +1785,7 @@ void ShellCorona::populateAddPanelsMenu()
 
     auto filter = [](const KPluginMetaData &md) -> bool
     {
-        return md.value(QStringLiteral("NoDisplay")) != QStringLiteral("true") && KPluginMetaData::readStringList(md.rawData(), QStringLiteral("X-Plasma-ContainmentCategories")).contains(QStringLiteral("panel"));
+        return md.value(QStringLiteral("NoDisplay")) != QLatin1String("true") && KPluginMetaData::readStringList(md.rawData(), QStringLiteral("X-Plasma-ContainmentCategories")).contains(QLatin1String("panel"));
     };
     const QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
     for (auto tpl : templates) {

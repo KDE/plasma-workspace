@@ -165,7 +165,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
         // package (could have been symlinked) and we should work
         // with the package (which can already be present) rather
         // than just one file from it
-        int contentsIndex = file.indexOf(QStringLiteral("contents"));
+        int contentsIndex = file.indexOf(QLatin1String("contents"));
 
         // FIXME: additionally check for metadata.desktop being present
         //        which would confirm a package but might be slowing things
@@ -236,7 +236,7 @@ int BackgroundListModel::indexOf(const QString &path) const
         // packages will end with a '/', but the path passed in may not
         QString package = m_packages[i].path();
         if (package.at(package.length() - 1) == QChar::fromLatin1('/')) {
-            package.truncate(package.length() - 1);
+            package.chop(1);
         }
         //remove eventual file:///
         const QString filteredPath = QUrl(path).path();
@@ -529,7 +529,7 @@ bool BackgroundFinder::isAcceptableSuffix(const QString &suffix)
     // Despite its name, suffixes() returns a list of glob patterns.
     // Therefore the file suffix check needs to include the "*." prefix.
     const QStringList &globPatterns = suffixes();
-    return globPatterns.contains(QStringLiteral("*.") + suffix.toLower());
+    return globPatterns.contains(QLatin1String("*.") + suffix.toLower());
 }
 
 void BackgroundFinder::run()

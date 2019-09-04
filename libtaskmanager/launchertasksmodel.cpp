@@ -162,7 +162,7 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
             const QString &menuId = service->menuId();
 
             if (!menuId.isEmpty()) {
-                url = QUrl(QStringLiteral("applications:") + menuId);
+                url = QUrl(QLatin1String("applications:") + menuId);
             }
         }
     }

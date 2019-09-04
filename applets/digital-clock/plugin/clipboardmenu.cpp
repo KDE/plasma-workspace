@@ -97,7 +97,7 @@ void ClipboardMenu::setupMenu(QAction *action)
         a->setData(s);
         if (m_secondsIncluded) {
             s = time.toString(Qt::SystemLocaleLongDate);
-            s.replace(rx, QString());
+            s.remove(rx);
             a = menu->addAction(s);
             a->setData(s);
             s = time.toString(Qt::SystemLocaleLongDate);

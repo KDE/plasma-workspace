@@ -136,7 +136,7 @@ void DesktopProtocol::listDir(const QUrl &url)
 QString DesktopProtocol::desktopFile(KIO::UDSEntry &entry) const
 {
     const QString name = entry.stringValue(KIO::UDSEntry::UDS_NAME);
-    if (name == QLatin1String(".") || name == QLatin1String(".."))
+    if (name == QLatin1Char('.') || name == QLatin1String(".."))
         return QString();
 
     QUrl url = processedUrl();
@@ -174,7 +174,7 @@ void DesktopProtocol::prepareUDSEntry(KIO::UDSEntry &entry, bool listing) const
 
     // Set a descriptive display name for the root item
     if (requestedUrl().path() == QLatin1String("/")
-        && entry.stringValue(KIO::UDSEntry::UDS_NAME) == QLatin1String(".")) {
+        && entry.stringValue(KIO::UDSEntry::UDS_NAME) == QLatin1Char('.')) {
         entry.replace(KIO::UDSEntry::UDS_DISPLAY_NAME, i18n("Desktop Folder"));
     }
 

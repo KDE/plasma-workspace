@@ -103,7 +103,7 @@ QString Notification::Private::sanitize(const QString &text)
 
                 out.writeAttribute(QStringLiteral("alt"), alt);
             }
-            if (name == QLatin1String("a")) {
+            if (name == QLatin1Char('a')) {
                 out.writeAttribute(QStringLiteral("href"), r.attributes().value("href").toString());
             }
         }
@@ -131,7 +131,7 @@ QString Notification::Private::sanitize(const QString &text)
 
     // The Text.StyledText format handles only html3.2 stuff and &apos; is html4 stuff
     // so we need to replace it here otherwise it will not render at all.
-    result = result.replace(QLatin1String("&apos;"), QChar('\''));
+    result.replace(QLatin1String("&apos;"), QChar('\''));
 
     return result;
 }

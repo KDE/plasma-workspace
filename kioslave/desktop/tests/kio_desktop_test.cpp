@@ -93,15 +93,15 @@ private Q_SLOTS:
         QCOMPARE(QFileInfo(localLink).symLinkTarget(), source);
 
         // Now try changing the link target, without Overwrite -> error
-        linkJob = KIO::symlink(m_testFileName + "2", desktopLink, KIO::HideProgressInfo);
+        linkJob = KIO::symlink(m_testFileName + QLatin1Char('2'), desktopLink, KIO::HideProgressInfo);
         QVERIFY(!linkJob->exec());
         QCOMPARE(linkJob->error(), (int)KIO::ERR_FILE_ALREADY_EXIST);
 
         // Now try changing the link target, with Overwrite (bug 360487)
-        linkJob = KIO::symlink(m_testFileName + "3", desktopLink, KIO::Overwrite | KIO::HideProgressInfo);
+        linkJob = KIO::symlink(m_testFileName + QLatin1Char('3'), desktopLink, KIO::Overwrite | KIO::HideProgressInfo);
         QVERIFY(linkJob->exec());
         QVERIFY(QFileInfo(localLink).isSymLink());
-        QCOMPARE(QFileInfo(localLink).symLinkTarget(), source + "3");
+        QCOMPARE(QFileInfo(localLink).symLinkTarget(), source + QLatin1Char('3'));
     }
 
     void testRename_data()

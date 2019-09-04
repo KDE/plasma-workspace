@@ -40,7 +40,7 @@ void AppsEngine::init()
 
 void AppsEngine::sycocaChanged(const QStringList &changes)
 {
-    if (changes.contains(QStringLiteral("apps")) || changes.contains(QStringLiteral("xdgdata-apps"))) {
+    if (changes.contains(QLatin1String("apps")) || changes.contains(QLatin1String("xdgdata-apps"))) {
         removeAllSources();
         addGroup(KServiceGroup::root());
     }

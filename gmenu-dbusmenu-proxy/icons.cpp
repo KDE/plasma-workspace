@@ -224,7 +224,7 @@ QString Icons::actionIcon(const QString &actionName)
 
             // now we can be sure we only have a single hyphen at the start or end, remove it if needed
             if (action.startsWith(QLatin1Char('-'))) {
-                action = action.mid(1);
+                action.remove(0, 1);
             }
             if (action.endsWith(QLatin1Char('-'))) {
                 action.chop(1);
@@ -252,7 +252,7 @@ QString Icons::actionIcon(const QString &actionName)
 
         // LibreOffice's "Open" entry is always "OpenFromAppname" so we just chop that off
         if (action.startsWith(QLatin1String("OpenFrom"))) {
-            action = action.left(4); // basically "Open"
+            action.truncate(4); // basically "Open"
         }
 
         icon = s_icons.value(action);

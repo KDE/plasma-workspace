@@ -181,7 +181,7 @@ void IconApplet::populate()
         }
 
         // KFileItem might return "." as text for e.g. root folders
-        if (name == QLatin1String(".")) {
+        if (name == QLatin1Char('.')) {
             name.clear();
         }
 
