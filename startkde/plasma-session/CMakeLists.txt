@@ -1,3 +1,4 @@
+add_subdirectory(plasma-autostart-list)
 
 set(plasma_session_SRCS
     main.cpp

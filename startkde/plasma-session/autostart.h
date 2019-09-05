@@ -49,6 +49,7 @@ public:
     {
         return m_phasedone;
     }
+    QVector<AutoStartItem> startList() const;
 
 private:
     void loadAutoStartList();

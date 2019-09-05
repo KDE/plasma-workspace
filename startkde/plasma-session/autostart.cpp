@@ -145,3 +145,13 @@ AutoStart::startService()
 
     return QString();
 }
+
+QVector<AutoStartItem> AutoStart::startList() const
+{
+    QVector<AutoStartItem> ret;
+    for (const auto &asi : m_startList) {
+        if (asi.phase == m_phase)
+            ret << asi;
+    }
+    return ret;
+}

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Comment=TEST ALL THE THINGS! ;)
+Name=TestShell
+Type=Service
+Icon=user-desktop
+
+X-KDE-ServiceTypes=Plasma/Shell
+X-KDE-PluginInfo-Name=org.kde.plasmashelltest
+X-Plasma-MainScript=layout.js
