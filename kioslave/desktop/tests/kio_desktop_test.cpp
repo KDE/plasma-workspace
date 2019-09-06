@@ -64,7 +64,7 @@ private Q_SLOTS:
         tempFile.close();
         KIO::Job* job = KIO::file_copy(QUrl::fromLocalFile(fileName), QUrl("desktop:/" + m_testFileName), -1, KIO::HideProgressInfo);
         job->setUiDelegate(nullptr);
-        QVERIFY(job->exec());
+        QVERIFY2(job->exec(), qPrintable(job->errorString()));
         QVERIFY(QFile::exists(m_desktopPath + '/' + m_testFileName));
     }
 
@@ -74,8 +74,7 @@ private Q_SLOTS:
         const QString filePath(m_desktopPath + '/' + m_testFileName);
         KIO::StatJob* job = KIO::mostLocalUrl(desktopUrl, KIO::HideProgressInfo);
         QVERIFY(job);
-        bool ok = job->exec();
-        QVERIFY(ok);
+        QVERIFY2(job->exec(), qPrintable(job->errorString()));
         QCOMPARE(job->mostLocalUrl().toLocalFile(), filePath);
     }
 
@@ -148,8 +147,7 @@ private Q_SLOTS:
         KIO::Job* job = KIO::rename(srcUrl, destUrl, KIO::HideProgressInfo);
         job->setUiDelegate(nullptr);
         QVERIFY(job);
-        bool ok = job->exec();
-        QVERIFY(ok);
+        QVERIFY2(job->exec(), qPrintable(job->errorString()));
         QVERIFY(!QFile::exists(srcFilePath));
         QVERIFY(QFile::exists(destFilePath));
 
