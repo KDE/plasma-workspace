@@ -174,7 +174,7 @@ ShellCorona::ShellCorona(QObject *parent)
     connect(activityAction, &QAction::triggered,
             this, &ShellCorona::toggleActivityManager);
     activityAction->setText(i18n("Activities..."));
-    activityAction->setIcon(QIcon::fromTheme(QStringLiteral("preferences-activities")));
+    activityAction->setIcon(QIcon::fromTheme(QStringLiteral("activities")));
     activityAction->setData(Plasma::Types::ConfigureAction);
     activityAction->setShortcut(QKeySequence(QStringLiteral("alt+d, alt+a")));
     activityAction->setShortcutContext(Qt::ApplicationShortcut);
