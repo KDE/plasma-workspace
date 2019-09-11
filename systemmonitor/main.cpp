@@ -34,7 +34,7 @@ int main(int argc, char** argv)
     app.setOrganizationDomain(QStringLiteral("kde.org"));
     app.setDesktopFileName(QStringLiteral("org.kde.systemmonitor"));
 
-    app::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     QDBusConnection con = QDBusConnection::sessionBus();
     if (!con.registerService(QStringLiteral("org.kde.systemmonitor"))) {
