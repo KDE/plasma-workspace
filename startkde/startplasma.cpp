@@ -358,6 +358,9 @@ bool startKSMServer(bool wayland)
     if (wayland) {
         ksmserverOptions << QStringLiteral("--no-lockscreen");
     } else {
+        if (qEnvironmentVariableIsSet("KDEWM")) {
+            ksmserverOptions << QStringLiteral("--windowmanager") << qEnvironmentVariable("KDEWM");
+        }
         if (desktopLockedAtStart) {
             ksmserverOptions << QStringLiteral("--lockscreen");
         }
