@@ -44,7 +44,6 @@ using namespace NotificationManager;
 JobPrivate::JobPrivate(uint id, QObject *parent)
     : QObject(parent)
     , m_id(id)
-    , m_placesModel(createPlacesModel())
 {
     m_objectPath.setPath(QStringLiteral("/org/kde/notificationmanager/jobs/JobView_%1").arg(id));
 
