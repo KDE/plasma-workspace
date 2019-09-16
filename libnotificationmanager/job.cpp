@@ -280,7 +280,7 @@ void Job::suspend()
 
 void Job::resume()
 {
-    emit d->resumeRequested();;
+    emit d->resumeRequested();
 }
 
 void Job::kill()
