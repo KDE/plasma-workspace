@@ -26,7 +26,7 @@ include(KDEPackageAppTemplates)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner NotifyConfig Su NewStuff Wallet
                     IdleTime Declarative I18n KCMUtils TextWidgets KDELibs4Support Crash GlobalAccel
-                    DBusAddons Wayland CoreAddons)
+                    DBusAddons Wayland CoreAddons People ActivitiesStats)
 find_package(KDED CONFIG REQUIRED)
 
 find_package(KF5NetworkManagerQt ${KF5_MIN_VERSION})
@@ -57,6 +57,8 @@ find_package(KWinDBusInterface CONFIG REQUIRED)
 
 find_package(KF5Screen CONFIG REQUIRED)
 find_package(KScreenLocker 5.13.80 REQUIRED)
+find_package(KRunnerAppDBusInterface CONFIG REQUIRED)
+find_package(KSMServerDBusInterface CONFIG REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 find_package(KF5Holidays)
 set_package_properties(KF5Holidays PROPERTIES DESCRIPTION "Holidays provider for Plasma calendar"
@@ -114,6 +116,7 @@ include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )
 configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
+configure_file(config-appstream.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-appstream.h )
 add_subdirectory(login-sessions)
 
 plasma_install_package(lookandfeel org.kde.breeze.desktop look-and-feel lookandfeel)
