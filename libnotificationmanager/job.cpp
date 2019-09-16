@@ -285,5 +285,5 @@ void Job::resume()
 
 void Job::kill()
 {
-    emit d->cancelRequested();
+    d->kill();
 }

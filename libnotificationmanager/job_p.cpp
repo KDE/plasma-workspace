@@ -25,6 +25,7 @@
 
 #include <QDebug>
 #include <QDBusConnection>
+#include <QTimer>
 
 #include <KFilePlacesModel>
 #include <KService>
@@ -201,6 +202,28 @@ QString JobPrivate::text() const
                                 << ", label2 =" << m_descriptionLabel2 << ", value2 =" << m_descriptionValue2;
 
     return QString();
+}
+
+void JobPrivate::kill()
+{
+    emit cancelRequested();
+
+    // In case the application doesn't respond, remove the job
+    if (!m_killTimer) {
+        m_killTimer = new QTimer(this);
+        m_killTimer->setSingleShot(true);
+        connect(m_killTimer, &QTimer::timeout, this, [this] {
+            qCWarning(NOTIFICATIONMANAGER) << "Application" << m_applicationName << "failed to respond to a cancel request in time";
+            Job *job = static_cast<Job *>(parent());
+            job->setError(KIO::ERR_USER_CANCELED);
+            job->setState(Notifications::JobStateStopped);
+            finish();
+        });
+    }
+
+    if (!m_killTimer->isActive()) {
+        m_killTimer->start(2000);
+    }
 }
 
 QUrl JobPrivate::descriptionUrl() const

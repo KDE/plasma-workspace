@@ -32,6 +32,7 @@
 #include "notifications.h"
 #include "job.h"
 
+class QTimer;
 class KFilePlacesModel;
 
 namespace NotificationManager
@@ -49,6 +50,8 @@ public:
     QDBusObjectPath objectPath() const;
     QUrl descriptionUrl() const;
     QString text() const;
+
+    void kill();
 
     // DBus
     // JobViewV1
@@ -117,6 +120,8 @@ private:
     void updateHasDetails();
 
     void finish();
+
+    QTimer *m_killTimer = nullptr;
 
     uint m_id = 0;
     QDBusObjectPath m_objectPath;
