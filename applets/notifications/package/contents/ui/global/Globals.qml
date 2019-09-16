@@ -382,6 +382,7 @@ QtObject {
             actionLabels: model.actionLabels
 
             onExpired: popupNotificationsModel.expire(popupNotificationsModel.index(index, 0))
+            onHoverEntered: model.read = true
             onCloseClicked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
             onDismissClicked: model.dismissed = true
             onConfigureClicked: popupNotificationsModel.configure(popupNotificationsModel.index(index, 0))

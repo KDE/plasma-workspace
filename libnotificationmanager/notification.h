@@ -58,6 +58,9 @@ public:
     QDateTime updated() const;
     void resetUpdated();
 
+    bool read() const;
+    void setRead(bool read);
+
     QString summary() const;
     void setSummary(const QString &summary);
 

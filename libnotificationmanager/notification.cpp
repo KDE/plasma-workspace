@@ -487,6 +487,16 @@ void Notification::resetUpdated()
     d->updated = QDateTime::currentDateTimeUtc();
 }
 
+bool Notification::read() const
+{
+    return d->read;
+}
+
+void Notification::setRead(bool read)
+{
+    d->read = read;
+}
+
 QString Notification::summary() const
 {
     return d->summary;

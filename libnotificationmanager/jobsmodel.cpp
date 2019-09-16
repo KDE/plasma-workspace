@@ -136,6 +136,12 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
     case Notifications::ConfigurableRole: return false;
     case Notifications::ExpiredRole: return job->expired();
     case Notifications::DismissedRole: return job->dismissed();
+
+    // A job is usually either a long lasting operation you're aware about
+    // or a quick job you don't care about.
+    // When it's running, it's there, when it failed, it's persistent.
+    // There's hardly a reason why it should show up as "unread".
+    case Notifications::ReadRole: return true;
     }
 
     return QVariant();

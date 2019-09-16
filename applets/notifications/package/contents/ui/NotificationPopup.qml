@@ -76,6 +76,8 @@ PlasmaCore.Dialog {
     signal fileActionInvoked
 
     signal expired
+    signal hoverEntered
+    signal hoverExited
 
     signal suspendJobClicked
     signal resumeJobClicked
@@ -115,6 +117,8 @@ PlasmaCore.Dialog {
         acceptedButtons: hasDefaultAction ? Qt.LeftButton : Qt.NoButton
 
         onClicked: notificationPopup.defaultActionInvoked()
+        onEntered: notificationPopup.hoverEntered()
+        onExited: notificationPopup.hoverExited()
 
         LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
         LayoutMirroring.childrenInherit: true

@@ -60,6 +60,7 @@ public:
     uint id = 0;
     QDateTime created;
     QDateTime updated;
+    bool read = false;
 
     QString summary;
     QString body;

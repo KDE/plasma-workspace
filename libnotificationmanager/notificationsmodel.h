@@ -43,6 +43,7 @@ public:
     void setLastRead(const QDateTime &lastRead);
 
     QVariant data(const QModelIndex &index, int role) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role) override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     void expire(uint notificationId);

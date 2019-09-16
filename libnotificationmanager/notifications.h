@@ -256,7 +256,8 @@ public:
         ClosableRole, ///< Whether the item can be closed. Notifications are always closable, jobs are only when in JobStateStopped.
 
         ExpiredRole, ///< The notification timed out and closed. Actions on it cannot be invoked anymore.
-        DismissedRole ///< The notification got temporarily hidden by the user but could still be interacted with.
+        DismissedRole, ///< The notification got temporarily hidden by the user but could still be interacted with.
+        ReadRole ///< Whether the notification got read by the user. If true, the notification isn't considered unread even if created after lastRead. @since 5.17
     };
     Q_ENUM(Roles)
 

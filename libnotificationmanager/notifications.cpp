@@ -269,14 +269,14 @@ void Notifications::Private::updateCount()
             ++active;
         }
 
-        QDateTime date = idx.data(Notifications::UpdatedRole).toDateTime();
-        if (!date.isValid()) {
-            date = idx.data(Notifications::CreatedRole).toDateTime();
-        }
+        const bool read = idx.data(Notifications::ReadRole).toBool();
+        if (!active && !read) {
+            QDateTime date = idx.data(Notifications::UpdatedRole).toDateTime();
+            if (!date.isValid()) {
+                date = idx.data(Notifications::CreatedRole).toDateTime();
+            }
 
-        // TODO Jobs could also be unread?
-        if (notificationsModel) {
-            if (!active && date > notificationsModel->lastRead()) {
+            if (notificationsModel && date > notificationsModel->lastRead()) {
                 ++unread;
             }
         }

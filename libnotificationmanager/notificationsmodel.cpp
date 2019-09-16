@@ -308,9 +308,30 @@ QVariant NotificationsModel::data(const QModelIndex &index, int role) const
     case Notifications::ConfigureActionLabelRole: return notification.configureActionLabel();
 
     case Notifications::ExpiredRole: return notification.expired();
+    case Notifications::ReadRole: return notification.read();
     }
 
     return QVariant();
+}
+
+bool NotificationsModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    if (!checkIndex(index)) {
+        return false;
+    }
+
+    Notification &notification = d->notifications[index.row()];
+
+    switch (role) {
+    case Notifications::ReadRole:
+        if (value.toBool() != notification.read()) {
+            notification.setRead(value.toBool());
+            return true;
+        }
+        break;
+    }
+
+    return false;
 }
 
 int NotificationsModel::rowCount(const QModelIndex &parent) const

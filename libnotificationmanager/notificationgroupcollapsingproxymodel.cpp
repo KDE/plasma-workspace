@@ -199,13 +199,16 @@ bool NotificationGroupCollapsingProxyModel::filterAcceptsRow(int source_row, con
 
         if (m_expandUnread && m_lastRead.isValid()) {
             const QModelIndex sourceIdx = sourceModel()->index(source_row, 0, source_parent);
-            QDateTime time = sourceIdx.data(Notifications::UpdatedRole).toDateTime();
-            if (!time.isValid()) {
-                time = sourceIdx.data(Notifications::CreatedRole).toDateTime();
-            }
 
-            if (time.isValid() && m_lastRead < time) {
-                return true;
+            if (!sourceIdx.data(Notifications::ReadRole).toBool()) {
+                QDateTime time = sourceIdx.data(Notifications::UpdatedRole).toDateTime();
+                if (!time.isValid()) {
+                    time = sourceIdx.data(Notifications::CreatedRole).toDateTime();
+                }
+
+                if (time.isValid() && m_lastRead < time) {
+                    return true;
+                }
             }
         }
 
