@@ -164,6 +164,8 @@ public Q_SLOTS:
 
     void setTestModeLayout(const QString &layout) { m_testModeLayout = layout; }
 
+    int panelCount() const { return m_panelViews.count(); }
+
 protected Q_SLOTS:
     /**
      * Loads the layout and performs the needed checks

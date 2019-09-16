@@ -51,6 +51,14 @@
 #include <kdeclarative/qmlobjectsharedengine.h>
 #include <KMessageBox>
 #include <kdirwatch.h>
+#include <KUserFeedback/Provider>
+#include <KUserFeedback/ApplicationVersionSource>
+#include <KUserFeedback/CompilerInfoSource>
+#include <KUserFeedback/PlatformInfoSource>
+#include <KUserFeedback/QtVersionSource>
+#include <KUserFeedback/UsageTimeSource>
+#include <KUserFeedback/OpenGLInfoSource>
+#include <KUserFeedback/ScreenInfoSource>
 
 #include <KPackage/PackageLoader>
 
@@ -70,6 +78,7 @@
 #include "plasmashelladaptor.h"
 #include "debug.h"
 #include "futureutil.h"
+#include "panelcountsource.h"
 
 #ifndef NDEBUG
     #define CHECK_SCREEN_INVARIANTS screenInvariants();
@@ -82,7 +91,6 @@
 #include <QX11Info>
 #include <xcb/xcb.h>
 #endif
-
 
 static const int s_configSyncDelay = 10000; // 10 seconds
 
@@ -273,6 +281,26 @@ void ShellCorona::setShell(const QString &shell)
         t->setThemeName(themeName);
     }
 
+    auto m_feedbackProvider = new KUserFeedback::Provider(this);
+    m_feedbackProvider->setProductIdentifier(QStringLiteral("org.kde.plasmashell"));
+    m_feedbackProvider->setFeedbackServer(QUrl(QStringLiteral("https://telemetry.kde.org/")));
+    m_feedbackProvider->setSubmissionInterval(7);
+    m_feedbackProvider->setApplicationStartsUntilEncouragement(5);
+    m_feedbackProvider->setEncouragementDelay(30);
+    m_feedbackProvider->addDataSource(new KUserFeedback::ApplicationVersionSource);
+    m_feedbackProvider->addDataSource(new KUserFeedback::CompilerInfoSource);
+    m_feedbackProvider->addDataSource(new KUserFeedback::PlatformInfoSource);
+    m_feedbackProvider->addDataSource(new KUserFeedback::QtVersionSource);
+    m_feedbackProvider->addDataSource(new KUserFeedback::UsageTimeSource);
+    m_feedbackProvider->addDataSource(new KUserFeedback::OpenGLInfoSource);
+    m_feedbackProvider->addDataSource(new KUserFeedback::ScreenInfoSource);
+    m_feedbackProvider->addDataSource(new PanelCountSource(this));
+
+    {
+        auto plasmaConfig = KSharedConfig::openConfig(QStringLiteral("PlasmaUserFeedback"));
+        m_feedbackProvider->setTelemetryMode(KUserFeedback::Provider::TelemetryMode(plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::BasicUsageStatistics))));
+    }
+
     //FIXME: this would change the runtime platform to a fixed one if available
     // but a different way to load platform specific components is needed beforehand
     // because if we import and use two different components plugin, the second time
@@ -308,7 +336,6 @@ void ShellCorona::setShell(const QString &shell)
 
     load();
 }
-
 
 QJsonObject dumpconfigGroupJS(const KConfigGroup &rootGroup)
 {

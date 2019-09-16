@@ -42,6 +42,7 @@ set_package_properties(KF5Kirigami2 PROPERTIES
 )
 
 # WARNING PlasmaQuick provides unversioned CMake config
+find_package(KUserFeedback)
 find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
 find_package(KF5 REQUIRED COMPONENTS SysGuard)
 find_package(KF5 REQUIRED COMPONENTS Package)
