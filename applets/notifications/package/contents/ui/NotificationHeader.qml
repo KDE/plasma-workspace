@@ -68,6 +68,8 @@ RowLayout {
     spacing: units.smallSpacing
     Layout.preferredHeight: Math.max(applicationNameLabel.implicitHeight, units.iconSizes.small)
 
+    Component.onCompleted: updateAgoText()
+
     Connections {
         target: Globals
         // clock time changed
