@@ -30,7 +30,7 @@
 #include <kworkspace.h>
 #include <Solid/PowerManagement>
 #include "ksmserver_interface.h"
-#include <kworkspace5/kdisplaymanager.h>
+#include <kdisplaymanager.h>
 
 SystemEntry::SystemEntry(AbstractModel *owner, Action action) : AbstractEntry(owner)
 , m_action(action)
