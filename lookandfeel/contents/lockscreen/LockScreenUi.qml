@@ -57,7 +57,7 @@ PlasmaCore.ColorScope {
 
     SessionsModel {
         id: sessionsModel
-        showNewSessionEntry: true
+        showNewSessionEntry: false
     }
 
     PlasmaCore.DataSource {
@@ -249,7 +249,18 @@ PlasmaCore.ColorScope {
                     ActionButton {
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
                         iconSource: "system-switch-user"
-                        onClicked: mainStack.push(switchSessionPage)
+                        onClicked: {
+                            // If there are no existing sessions to switch to, create a new one instead
+                            if (((sessionsModel.showNewSessionEntry && sessionsModel.count === 1) ||
+                               (!sessionsModel.showNewSessionEntry && sessionsModel.count === 0)) &&
+                               sessionsModel.canSwitchUser) {
+                                mainStack.pop({immediate:true})
+                                sessionsModel.startNewSession(true /* lock the screen too */)
+                                lockScreenRoot.state = ''
+                            } else {
+                                mainStack.push(switchSessionPage)
+                            }
+                        }
                         visible: sessionsModel.canStartNewSession && sessionsModel.canSwitchUser
                     }
                 ]
@@ -264,9 +275,17 @@ PlasmaCore.ColorScope {
 
             Component.onCompleted: {
                 if (defaultToSwitchUser) { //context property
-                    mainStack.push({
-                        item: switchSessionPage,
-                        immediate: true});
+                    // If we are in the only session, then going to the session switcher is
+                    // a pointless extra step; instead create a new session immediately
+                    if (((sessionsModel.showNewSessionEntry && sessionsModel.count === 1)  ||
+                       (!sessionsModel.showNewSessionEntry && sessionsModel.count === 0)) &&
+                       sessionsModel.canStartNewSession) {
+                        sessionsModel.startNewSession(true /* lock the screen too */)
+                    } else {
+                        mainStack.push({
+                            item: switchSessionPage,
+                            immediate: true});
+                    }
                 }
             }
         }
@@ -414,13 +433,30 @@ PlasmaCore.ColorScope {
                 Keys.onReturnPressed: initSwitchSession()
                 Keys.onEscapePressed: mainStack.pop()
 
-                PlasmaComponents.Button {
+                ColumnLayout {
                     Layout.fillWidth: true
-                    font.pointSize: theme.defaultFont.pointSize + 1
-                    // the magic "-1" vtNumber indicates the "New Session" entry
-                    text: userListCurrentModelData.vtNumber === -1 ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Start New Session") : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch Session")
-                    onClicked: initSwitchSession()
+                    spacing: units.largeSpacing
+
+                    PlasmaComponents.Button {
+                        Layout.fillWidth: true
+                        font.pointSize: theme.defaultFont.pointSize + 1
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch to This Session")
+                        onClicked: initSwitchSession()
+                        visible: sessionsModel.count > 0
+                    }
+
+                    PlasmaComponents.Button {
+                        Layout.fillWidth: true
+                        font.pointSize: theme.defaultFont.pointSize + 1
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Start New Session")
+                        onClicked: {
+                            mainStack.pop({immediate:true})
+                            sessionsModel.startNewSession(true /* lock the screen too */)
+                            lockScreenRoot.state = ''
+                        }
+                    }
                 }
+
 
                 actionItems: [
                     ActionButton {

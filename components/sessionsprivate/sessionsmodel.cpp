@@ -251,7 +251,7 @@ QVariant SessionsModel::data(const QModelIndex &index, int role) const
     if (index.row() == m_data.count()) {
         switch (static_cast<Role>(role)) {
         case Role::RealName: return i18n("New Session");
-        case Role::IconName: return QStringLiteral("list-add");
+        case Role::IconName: return QStringLiteral("system-switch-user");
         case Role::Name: return i18n("New Session");
         case Role::DisplayNumber: return 0; //NA
         case Role::VtNumber: return -1; //an invalid VtNumber - which we'll use to indicate it's to start a new session
