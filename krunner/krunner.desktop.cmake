@@ -49,7 +49,7 @@ Type=Application
 X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.krunner
 X-KDE-StartupNotify=false
-X-KDE-Shortcuts=Alt+Space,Alt+F2,Search
+X-KDE-Shortcuts=Alt+Space,Alt+F2,Meta+Space,Search
 Actions=RunClipboard
 X-KDE-Wayland-Interfaces=org_kde_plasma_window_management
 
