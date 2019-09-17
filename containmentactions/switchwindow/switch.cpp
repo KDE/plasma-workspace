@@ -174,7 +174,7 @@ void SwitchWindow::makeMenu()
                 const QVariant &desktop = desktopIds.at(i);
 
                 if (desktops.contains(desktop)) {
-                    const QString &name = QStringLiteral("%1: %2").arg(QString::number(i), desktopNames.at(i));
+                    const QString &name = QStringLiteral("%1: %2").arg(QString::number(i + 1), desktopNames.at(i));
                     QAction *a = new QAction(name, this);
                     a->setSeparator(true);
                     m_actions << a;
@@ -193,7 +193,7 @@ void SwitchWindow::makeMenu()
                 const QVariant &desktop = desktopIds.at(i);
 
                 if (desktops.contains(desktop)) {
-                    const QString &name = QStringLiteral("%1: %2").arg(QString::number(i), desktopNames.at(i));
+                    const QString &name = QStringLiteral("%1: %2").arg(QString::number(i + 1), desktopNames.at(i));
                     QMenu *subMenu = new QMenu(name);
                     subMenu->addActions(desktops.values(desktop));
 
