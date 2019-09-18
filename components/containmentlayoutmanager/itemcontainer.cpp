@@ -53,6 +53,7 @@ ItemContainer::ItemContainer(QQuickItem *parent)
     });
 
 
+    setKeepMouseGrab(true);
     m_sizeHintAdjustTimer = new QTimer(this);
     m_sizeHintAdjustTimer->setSingleShot(true);
     m_sizeHintAdjustTimer->setInterval(0);
@@ -476,6 +477,7 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
         m_mouseDownPosition = me->windowPos();
 
         if (m_editMode && !wasEditMode) {
+            event->accept();
             return true;
         }
 
@@ -485,6 +487,8 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
         if (!m_editMode
         && QPointF(me->windowPos() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
             m_editModeTimer->stop();
+        } else if (m_editMode) {
+            event->accept();
         }
 
     } else if (event->type() == QEvent::MouseButtonRelease) {
@@ -492,6 +496,7 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
         m_mouseDown = false;
         m_mouseSynthetizedFromTouch = false;
         ungrabMouse();
+        event->accept();
         m_dragActive = false;
         if (m_editMode) {
             emit dragActiveChanged();
@@ -555,6 +560,7 @@ void ItemContainer::mouseReleaseEvent(QMouseEvent *event)
     if (m_editMode) {
         emit dragActiveChanged();
     }
+    event->accept();
 }
 
 void ItemContainer::mouseMoveEvent(QMouseEvent *event)
@@ -594,6 +600,7 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
         emit userDrag(QPointF(x(), y()), event->pos());
     }
     m_lastMousePosition = event->windowPos();
+    event->accept();
 }
 
 void ItemContainer::mouseUngrabEvent()
