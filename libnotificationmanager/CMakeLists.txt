@@ -34,11 +34,7 @@ ecm_qt_declare_logging_category(notificationmanager_LIB_SRCS
     IDENTIFIER NOTIFICATIONMANAGER
     CATEGORY_NAME org.kde.plasma.notifications)
 
-if (${ECM_VERSION} STRGREATER "5.58.0")
-    install(FILES libnotificationmanager.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
-else()
-    install(FILES libnotificationmanager.categories DESTINATION ${KDE_INSTALL_CONFDIR})
-endif()
+install(FILES libnotificationmanager.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 # Settings
 kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/donotdisturbsettings.kcfgc)
