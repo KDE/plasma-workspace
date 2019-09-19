@@ -106,6 +106,9 @@ set_package_properties(AppStreamQt PROPERTIES DESCRIPTION "Access metadata for l
 		       TYPE OPTIONAL
                       )
 
+if(${AppStreamQt_FOUND})
+    set(HAVE_APPSTREAMQT true)
+endif()
 
 include(ConfigureChecks.cmake)
 
