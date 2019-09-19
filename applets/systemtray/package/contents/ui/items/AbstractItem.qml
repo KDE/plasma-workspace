@@ -78,18 +78,20 @@ PlasmaCore.ToolTipArea {
 
 //BEGIN CONNECTIONS
 
-    onEffectiveStatusChanged: updateItemVisibility(abstractItem);
+    property int creationId // used for item order tie breaking
+    onEffectiveStatusChanged: updateItemVisibility(abstractItem)
+    onCategoryChanged: updateItemVisibility(abstractItem)
+    onTextChanged: updateItemVisibility(abstractItem)
+    Component.onCompleted: {
+        creationId = root.creationIdCounter++
+        updateItemVisibility(abstractItem)
+    }
 
     onContainsMouseChanged: {
         if (hidden && containsMouse) {
             root.hiddenLayout.hoveredItem = abstractItem
         }
     }
-
-    Component.onCompleted: updateItemVisibility(abstractItem);
-
-    //dangerous but needed due how repeater reparents
-    onParentChanged: updateItemVisibility(abstractItem);
 
 //END CONNECTIONS
 

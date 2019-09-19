@@ -55,45 +55,84 @@ MouseArea {
     // workaround https://bugreports.qt.io/browse/QTBUG-71238 / https://bugreports.qt.io/browse/QTBUG-72004
     property Component plasmoidItemComponent: Qt.createComponent("items/PlasmoidItem.qml")
 
+    property int creationIdCounter: 0
+
     Plasmoid.onExpandedChanged: {
         if (!plasmoid.expanded) {
             dialog.visible = plasmoid.expanded;
         }
     }
 
+    // temporary hack to fix known broken categories
+    // should go away as soon as fixes are merged
+    readonly property var categoryOverride: {
+        "org.kde.discovernotifier": "SystemServices",
+        "org.kde.plasma.networkmanagement": "Hardware",
+        "org.kde.kdeconnect": "Hardware",
+        "org.kde.plasma.keyboardindicator": "Hardware",
+        "touchpad": "Hardware"
+    }
+
+    readonly property var categoryOrder: [
+        "UnknownCategory", "ApplicationStatus", "Communications",
+        "SystemServices", "Hardware"
+    ]
+    function indexForItemCategory(item) {
+        if (item.itemId == "org.kde.plasma.notifications") {
+            return -1
+        }
+        var i = categoryOrder.indexOf(categoryOverride[item.itemId] || item.category)
+        return i == -1 ? categoryOrder.indexOf("UnknownCategory") : i
+    }
+
+    // return negative integer if a < b, 0 if a === b, and positive otherwise
+    function compareItems(a, b) {
+        var categoryDiff = indexForItemCategory(a) - indexForItemCategory(b)
+        var textDiff = (categoryDiff != 0 ? categoryDiff : a.text.localeCompare(b.text))
+        return textDiff != 0 ? textDiff : b.creationId - a.creationId
+    }
+
+    function moveItemAt(item, container, index) {
+        if (container.children.length == 0) {
+            item.parent = container
+        } else {
+            if (index == container.children.length) {
+                var other = container.children[index - 1]
+                if (item != other) {
+                    plasmoid.nativeInterface.reorderItemAfter(item, other)
+                }
+            } else {
+                var other = container.children[index]
+                if (item != other) {
+                    plasmoid.nativeInterface.reorderItemBefore(item, other)
+                }
+            }
+        }
+    }
+
+    function reorderItem(item, container) {
+        var i = 0;
+        while (i < container.children.length &&
+               compareItems(container.children[i], item) <= 0) {
+            i++
+        }
+        moveItemAt(item, container, i)
+    }
+
     function updateItemVisibility(item) {
         switch (item.effectiveStatus) {
         case PlasmaCore.Types.HiddenStatus:
-            if (item.parent === invisibleEntriesContainer) {
-                return;
+            if (item.parent != invisibleEntriesContainer) {
+                item.parent = invisibleEntriesContainer;
             }
-
-            item.parent = invisibleEntriesContainer;
             break;
 
         case PlasmaCore.Types.ActiveStatus:
-            if (visibleLayout.children.length === 0) {
-                item.parent = visibleLayout;
-            //notifications is always the first
-            } else if (visibleLayout.children[0].itemId === "org.kde.plasma.notifications" &&
-                       item.itemId !== "org.kde.plasma.notifications") {
-                plasmoid.nativeInterface.reorderItemAfter(item, visibleLayout.children[0]);
-            } else if (visibleLayout.children[0] !== item) {
-                plasmoid.nativeInterface.reorderItemBefore(item, visibleLayout.children[0]);
-            }
+            reorderItem(item, visibleLayout)
             break;
 
         case PlasmaCore.Types.PassiveStatus:
-
-            if (hiddenLayout.children.length === 0) {
-                item.parent = hiddenLayout;
-            //notifications is always the first
-            } else if (hiddenLayout.children[0].itemId === "org.kde.plasma.notifications" &&
-                       item.itemId !== "org.kde.plasma.notifications") {
-                plasmoid.nativeInterface.reorderItemAfter(item, hiddenLayout.children[0]);
-            } else if (hiddenLayout.children[0] !== item) {
-                plasmoid.nativeInterface.reorderItemBefore(item, hiddenLayout.children[0]);
-            }
+            reorderItem(item, hiddenLayout)
             item.x = 0;
             break;
         }
