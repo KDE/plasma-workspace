@@ -7,7 +7,7 @@ add_definitions(
   -DQT_NO_CAST_FROM_BYTEARRAY
   -DQT_NO_SIGNALS_SLOTS_KEYWORDS
   -DQT_USE_FAST_OPERATOR_PLUS
-  -DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.kicker\"
+  -DTRANSLATION_DOMAIN=\"libkicker\"
 )
 
 set(kickerplugin_SRCS
