@@ -262,6 +262,10 @@ PlasmaCore.ColorScope {
                             }
                         }
                         visible: sessionsModel.canStartNewSession && sessionsModel.canSwitchUser
+                        //Button gets cut off on smaller displays without this.
+                        anchors{
+                            verticalCenter: parent.top
+                        }
                     }
                 ]
 
@@ -463,6 +467,10 @@ PlasmaCore.ColorScope {
                         iconSource: "go-previous"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Back")
                         onClicked: mainStack.pop()
+                        //Button gets cut off on smaller displays without this.
+                        anchors{
+                            verticalCenter: parent.top
+                        }
                     }
                 ]
             }
