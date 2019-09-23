@@ -144,7 +144,10 @@ QVariantList AppEntry::actions() const
 
     QObject *appletInterface = m_owner->rootModel()->property("appletInterface").value<QObject *>();
 
-    const bool systemImmutable = appletInterface->property("immutability").toInt() == Plasma::Types::SystemImmutable;
+    bool systemImmutable = false;
+    if (appletInterface) {
+        systemImmutable = (appletInterface->property("immutability").toInt() == Plasma::Types::SystemImmutable);
+    }
 
     const QVariantList &addLauncherActions = Kicker::createAddLauncherActionList(appletInterface, m_service);
     if (!systemImmutable && !addLauncherActions.isEmpty()) {
@@ -169,15 +172,17 @@ QVariantList AppEntry::actions() const
         actionList << Kicker::appstreamActions(m_service);
     }
 
-    QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
+    if (appletInterface) {
+        QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
 
-    if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications")) && qobject_cast<AppsModel *>(m_owner)) {
-        const QStringList &hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
+        if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications")) && qobject_cast<AppsModel *>(m_owner)) {
+            const QStringList &hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
 
-        if (!hiddenApps.contains(m_service->menuId())) {
-            QVariantMap hideAction = Kicker::createActionItem(i18n("Hide Application"), QStringLiteral("hideApplication"));
-            hideAction[QStringLiteral("icon")] = QStringLiteral("hint");
-            actionList << hideAction;
+            if (!hiddenApps.contains(m_service->menuId())) {
+                QVariantMap hideAction = Kicker::createActionItem(i18n("Hide Application"), QStringLiteral("hideApplication"));
+                hideAction[QStringLiteral("icon")] = QStringLiteral("hint");
+                actionList << hideAction;
+            }
         }
     }
 

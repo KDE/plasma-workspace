@@ -124,7 +124,10 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
 
             QObject *appletInterface = static_cast<RunnerModel *>(parent())->appletInterface();
 
-            const bool systemImmutable = appletInterface->property("immutability").toInt() == Plasma::Types::SystemImmutable;
+            bool systemImmutable = false;
+            if (appletInterface) {
+                systemImmutable = (appletInterface->property("immutability").toInt() == Plasma::Types::SystemImmutable);
+            }
 
             const QVariantList &addLauncherActions = Kicker::createAddLauncherActionList(appletInterface, service);
             if (!systemImmutable && !addLauncherActions.isEmpty()) {
