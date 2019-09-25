@@ -250,16 +250,17 @@ QtObject {
                 popup.x = x;
             }
 
-            // If the popup isn't ready yet, ignore its occupied space for now.
-            // We'll reposition everything in onHeightChanged eventually.
-            var delta = popup.height + (popup.height > 0 ? popupSpacing : 0);
-
             if (popupLocation & Qt.AlignTop) {
                 popup.y = y;
-                y += delta;
+                // If the popup isn't ready yet, ignore its occupied space for now.
+                // We'll reposition everything in onHeightChanged eventually.
+                y += popup.height + (popup.height > 0 ? popupSpacing : 0);
             } else {
-                y -= delta;
+                y -= popup.height;
                 popup.y = y;
+                if (popup.height > 0) {
+                    y -= popupSpacing;
+                }
             }
 
             // don't let notifications take more than popupMaximumScreenFill of the screen
