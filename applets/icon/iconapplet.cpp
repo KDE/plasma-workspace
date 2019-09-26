@@ -38,6 +38,7 @@
 #include <KDesktopFile>
 #include <KFileItemActions>
 #include <KFileItemListProperties>
+#include <KFileUtils>
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KProtocolManager>
@@ -121,9 +122,9 @@ void IconApplet::populate()
         }
 
         QString backingDesktopFile = plasmaIconsFolderPath + QLatin1Char('/');
-        // KIO::suggestName always appends a suffix, i.e. it expects that we already know the file already exists
+        // KFileUtils::suggestName always appends a suffix, i.e. it expects that we already know the file already exists
         if (QFileInfo::exists(backingDesktopFile + desiredDesktopFileName)) {
-            desiredDesktopFileName = KIO::suggestName(QUrl::fromLocalFile(plasmaIconsFolderPath), desiredDesktopFileName);
+            desiredDesktopFileName = KFileUtils::suggestName(QUrl::fromLocalFile(plasmaIconsFolderPath), desiredDesktopFileName);
         }
         backingDesktopFile.append(desiredDesktopFileName);
 
