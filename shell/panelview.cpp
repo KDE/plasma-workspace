@@ -902,7 +902,7 @@ bool PanelView::event(QEvent *e)
             if (!containmentContainsPosition(we->pos())) {
                 auto we2 = new QWheelEvent(positionAdjustedForContainment(we->pos()),
                                 positionAdjustedForContainment(we->pos()) + position(),
-                                we->pixelDelta(), we->angleDelta(), we->delta(),
+                                we->pixelDelta(), we->angleDelta(), we->angleDelta().y(),
                                 we->orientation(), we->buttons(), we->modifiers(), we->phase());
 
                 QCoreApplication::postEvent(this, we2);

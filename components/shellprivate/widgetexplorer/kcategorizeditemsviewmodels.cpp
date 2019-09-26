@@ -96,7 +96,7 @@ void DefaultFilterModel::addFilter(const QString &caption, const Filter &filter,
 {
     QList<QStandardItem *> newRow;
     QStandardItem *item = new QStandardItem(caption);
-    item->setData(qVariantFromValue<Filter>(filter));
+    item->setData(QVariant::fromValue<Filter>(filter));
     if (!icon.isNull()) {
         item->setIcon(icon);
     }

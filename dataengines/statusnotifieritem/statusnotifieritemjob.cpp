@@ -57,6 +57,6 @@ void StatusNotifierItemJob::activateCallback(bool success)
 void StatusNotifierItemJob::contextMenuReady(QMenu *menu)
 {
     if (operationName() == QString::fromLatin1("ContextMenu")) {
-        setResult(qVariantFromValue((QObject*)menu));
+        setResult(QVariant::fromValue((QObject*)menu));
     }
 }

@@ -23,7 +23,7 @@
 
 #include "config-klipper.h"
 
-#include <QTime>
+#include <QElapsedTimer>
 #include <QTimer>
 #include <QClipboard>
 #include <QPointer>
@@ -161,7 +161,7 @@ private:
 
     QSharedPointer<HistoryItem> m_last;
 
-    QTime m_showTimer;
+    QElapsedTimer m_showTimer;
 
     History* m_history;
     KlipperPopup *m_popup;

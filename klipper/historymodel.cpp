@@ -84,11 +84,11 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     case Qt::DecorationRole:
         return item->image();
     case Qt::UserRole:
-        return qVariantFromValue<HistoryItemConstPtr>(qSharedPointerConstCast<const HistoryItem>(item));
+        return QVariant::fromValue<HistoryItemConstPtr>(qSharedPointerConstCast<const HistoryItem>(item));
     case Qt::UserRole+1:
         return item->uuid();
     case Qt::UserRole+2:
-        return qVariantFromValue<HistoryItemType>(type);
+        return QVariant::fromValue<HistoryItemType>(type);
     case Qt::UserRole+3:
         return item->uuid().toBase64();
     case Qt::UserRole+4:
