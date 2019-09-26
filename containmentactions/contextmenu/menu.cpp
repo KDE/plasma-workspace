@@ -22,7 +22,6 @@
 #include <QAction>
 #include <QCheckBox>
 #include <QVBoxLayout>
-#include <QSignalMapper>
 #include <QDBusPendingReply>
 
 #include <KActionCollection>
