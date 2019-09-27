@@ -23,11 +23,14 @@
 
 #include <QClipboard>
 #include <QDrag>
+#include <QGuiApplication>
 #include <QMimeData>
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QScreen>
 #include <QStyleHints>
+
+#include <PlasmaQuick/Dialog>
 
 #include "filemenu.h"
 #include "thumbnailer.h"
@@ -43,6 +46,8 @@ NotificationApplet::NotificationApplet(QObject *parent, const QVariantList &data
         qmlProtectModule(uri, 2);
         s_typesRegistered = true;
     }
+
+    connect(qApp, &QGuiApplication::focusWindowChanged, this, &NotificationApplet::focussedPlasmaDialogChanged);
 }
 
 NotificationApplet::~NotificationApplet() = default;
@@ -103,6 +108,11 @@ void NotificationApplet::doDrag(QQuickItem *item, const QUrl &url, const QPixmap
 
     m_dragActive = false;
     emit dragActiveChanged();
+}
+
+QWindow *NotificationApplet::focussedPlasmaDialog() const
+{
+    return qobject_cast<PlasmaQuick::Dialog *>(qApp->focusWindow());
 }
 
 void NotificationApplet::setSelectionClipboardText(const QString &text)

@@ -33,6 +33,8 @@ class NotificationApplet : public Plasma::Applet
 
     Q_PROPERTY(bool dragActive READ dragActive NOTIFY dragActiveChanged)
 
+    Q_PROPERTY(QWindow *focussedPlasmaDialog READ focussedPlasmaDialog NOTIFY focussedPlasmaDialogChanged)
+
 public:
     explicit NotificationApplet(QObject *parent, const QVariantList &data);
     ~NotificationApplet() override;
@@ -44,12 +46,15 @@ public:
     Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
     Q_INVOKABLE void startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap);
 
+    QWindow *focussedPlasmaDialog() const;
+
     Q_INVOKABLE void setSelectionClipboardText(const QString &text);
 
     Q_INVOKABLE bool isPrimaryScreen(const QRect &rect) const;
 
 signals:
     void dragActiveChanged();
+    void focussedPlasmaDialogChanged();
 
 private slots:
     void doDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap);

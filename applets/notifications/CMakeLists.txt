@@ -15,6 +15,7 @@ target_link_libraries(plasma_applet_notifications
                       Qt5::Quick # for QQmlParserStatus
                       KF5::I18n
                       KF5::Plasma
+                      KF5::PlasmaQuick
                       KF5::KIOWidgets # for PreviewJob
                       )
 

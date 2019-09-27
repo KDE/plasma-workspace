@@ -238,7 +238,7 @@ QtObject {
         }
 
         for (var i = 0; i < popupInstantiator.count; ++i) {
-            var popup = popupInstantiator.objectAt(i);
+            let popup = popupInstantiator.objectAt(i);
             // Popup width is fixed, so don't rely on the actual window size
             var popupEffectiveWidth = popupWidth + popup.margins.left + popup.margins.right;
 
@@ -273,8 +273,18 @@ QtObject {
                 }
             }
 
-            // TODO would be nice to hide popups when systray or panel controller is open
-            popup.visible = visible;
+            popup.visible = Qt.binding(function() {
+                const dialog = plasmoid.nativeInterface.focussedPlasmaDialog;
+                if (dialog && dialog.visible && dialog !== popup) {
+                    // If the notification obscures any other Plasma dialog, hide it
+                    // No rect intersects in JS...
+                    if (dialog.x < popup.x + popup.width && popup.x < dialog.x + dialog.width && dialog.y < popup.y + popup.height && popup.y < dialog.y + dialog.height) {
+                        return false;
+                    }
+                }
+
+                return visible;
+            });
         }
     }
 
