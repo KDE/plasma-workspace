@@ -35,7 +35,7 @@ ConfigModel {
     }
     ConfigCategory {
         name: i18n("Calendar")
-        icon: "view-calendar"
+        icon: "office-calendar"
         source: "configCalendar.qml"
     }
     ConfigCategory {
