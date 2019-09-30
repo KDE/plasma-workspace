@@ -42,6 +42,7 @@ Name[sr@ijekavian]=Плазма
 Name[sr@ijekavianlatin]=Plasma
 Name[sr@latin]=Plasma
 Name[sv]=Plasma
+Name[tg]=Плазма
 Name[tr]=Plama
 Name[uk]=Плазма
 Name[x-test]=xxPlasmaxx
