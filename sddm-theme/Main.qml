@@ -182,6 +182,8 @@ PlasmaCore.ColorScope {
 
                     if ( userListModel.count === 0 ) return false
 
+                    if ( userListModel.hasOwnProperty("containsAllUsers") && !userListModel.containsAllUsers ) return false
+
                     return userListModel.count <= userListModel.disableAvatarsThreshold && (userList.y + mainStack.y) > 0
                 }
 
