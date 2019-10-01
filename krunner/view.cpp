@@ -125,8 +125,9 @@ View::~View()
 
 void View::objectIncubated()
 {
-    connect(m_qmlObj->rootObject(), SIGNAL(widthChanged()), this, SLOT(resetScreenPos()));
-    setMainItem(qobject_cast<QQuickItem *>(m_qmlObj->rootObject()));
+    auto mainItem = qobject_cast<QQuickItem *>(m_qmlObj->rootObject());
+    connect(mainItem, &QQuickItem::widthChanged, this, &View::resetScreenPos);
+    setMainItem(mainItem);
 }
 
 void View::slotFocusWindowChanged()
