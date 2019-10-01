@@ -72,7 +72,7 @@ void SolidUiServer::showPassphraseDialog(const QString &udi,
     label+= device.product();
 
     dialog->setPrompt(i18n("'%1' needs a password to be accessed. Please enter a password.", label));
-    dialog->setPixmap(QIcon::fromTheme(device.icon()).pixmap(64, 64));
+    dialog->setIcon(QIcon::fromTheme(device.icon()));
     dialog->setProperty("soliduiserver.udi", udi);
     dialog->setProperty("soliduiserver.returnService", returnService);
     dialog->setProperty("soliduiserver.returnObject", returnObject);
