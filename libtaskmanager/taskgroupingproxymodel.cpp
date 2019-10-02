@@ -771,20 +771,22 @@ void TaskGroupingProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
     if (sourceModel) {
         d->rebuildMap();
 
-        connect(sourceModel, SIGNAL(rowsAboutToBeInserted(QModelIndex,int,int)),
-            this, SLOT(sourceRowsAboutToBeInserted(QModelIndex,int,int)), Qt::UniqueConnection);
-        connect(sourceModel, SIGNAL(rowsInserted(QModelIndex,int,int)),
-            this, SLOT(sourceRowsInserted(QModelIndex,int,int)), Qt::UniqueConnection);
-        connect(sourceModel, SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)),
-            this, SLOT(sourceRowsAboutToBeRemoved(QModelIndex,int,int)), Qt::UniqueConnection);
-        connect(sourceModel, SIGNAL(rowsRemoved(QModelIndex,int,int)),
-            this, SLOT(sourceRowsRemoved(QModelIndex,int,int)), Qt::UniqueConnection);
-        connect(sourceModel, SIGNAL(modelAboutToBeReset()),
-            this, SLOT(sourceModelAboutToBeReset()), Qt::UniqueConnection);
-        connect(sourceModel, SIGNAL(modelReset()),
-            this, SLOT(sourceModelReset()), Qt::UniqueConnection);
-        connect(sourceModel, SIGNAL(dataChanged(QModelIndex,QModelIndex,QVector<int>)),
-            this, SLOT(sourceDataChanged(QModelIndex,QModelIndex,QVector<int>)), Qt::UniqueConnection);
+        using namespace std::placeholders;
+        auto dd = d.data();
+        connect(sourceModel, &QSortFilterProxyModel::rowsAboutToBeInserted,
+            this, std::bind(&TaskGroupingProxyModel::Private::sourceRowsAboutToBeInserted, dd, _1, _2, _3));
+        connect(sourceModel, &QSortFilterProxyModel::rowsInserted,
+            this, std::bind(&TaskGroupingProxyModel::Private::sourceRowsInserted, dd, _1, _2, _3));
+        connect(sourceModel, &QSortFilterProxyModel::rowsAboutToBeRemoved,
+            this, std::bind(&TaskGroupingProxyModel::Private::sourceRowsAboutToBeRemoved, dd, _1, _2, _3));
+        connect(sourceModel, &QSortFilterProxyModel::rowsRemoved,
+            this, std::bind(&TaskGroupingProxyModel::Private::sourceRowsRemoved, dd, _1, _2, _3));
+        connect(sourceModel, &QSortFilterProxyModel::modelAboutToBeReset,
+            this, std::bind(&TaskGroupingProxyModel::Private::sourceModelAboutToBeReset, dd));
+        connect(sourceModel, &QSortFilterProxyModel::modelReset,
+            this, std::bind(&TaskGroupingProxyModel::Private::sourceModelReset, dd));
+        connect(sourceModel, &QSortFilterProxyModel::dataChanged,
+            this, std::bind(&TaskGroupingProxyModel::Private::sourceDataChanged, dd, _1, _2, _3));
     } else {
         d->rowMap.clear();
     }
