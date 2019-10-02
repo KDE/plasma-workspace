@@ -32,69 +32,77 @@ SimpleKCM {
     leftPadding: width * 0.1
     rightPadding: leftPadding
 
-    Kirigami.FormLayout {
+    ColumnLayout {
+
         QQC2.CheckBox {
-            Kirigami.FormData.label: i18n("Feedback:")
+            Layout.topMargin: Kirigami.Units.gridUnit
+            Layout.bottomMargin: Kirigami.Units.gridUnit
+            Layout.alignment: Qt.AlignHCenter
             checked: kcm.feedbackEnabled
             onToggled: kcm.feedbackEnabled = checked
             text: i18n("Allow KDE software to collect anomymous usage information")
         }
 
-        Kirigami.Separator {
-            Layout.fillWidth: true
-        }
-
         QQC2.Label {
             Kirigami.FormData.label: i18n("Plasma:")
-            Layout.maximumWidth: root.width * 0.5
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
             wrapMode: Text.WordWrap
-            text: xi18nc("@info", "We make Plasma for you. You can help us improve it by contributing information on how you use it. This allows us to focus on things that matter to you.<nl/><nl/>Contributing usage information is optional and entirely anonymous. It will not associate the data with any kind of unique identifier, and will never track the documents you open, the websites you visit, or any other kind of personal information.<nl/><nl/>You can read more about our policy in the following link.")
+            text: xi18nc("@info", "You can help us improve this software by sharing information about how you use it. This allows us to focus on things that matter to you.<nl/><nl/>Contributing usage information is optional and entirely anonymous. It will not associate the data with any kind of unique identifier, and will never track the documents you open, the websites you visit, or any other kind of personal information.<nl/><nl/>You can read more about our policy in the following link:")
         }
 
         Kirigami.UrlButton {
-            Layout.leftMargin: Kirigami.Units.gridUnit
-            Layout.rightMargin: Kirigami.Units.gridUnit
+            Layout.alignment: Qt.AlignHCenter
             url: "https://kde.org/privacypolicy-apps.php"
         }
 
-        QQC2.ComboBox {
-            id: statisticsModeCombo
-            enabled: kcm.feedbackEnabled
+        Kirigami.Separator {
             Layout.fillWidth: true
-            textRole: "text"
-            model: ListModel { id: modeOptions }
+            Layout.topMargin: Kirigami.Units.gridUnit
+            Layout.bottomMargin: Kirigami.Units.gridUnit
+        }
 
-            Component.onCompleted: {
-                modeOptions.append({text: i18n("Basic System Information"), value: UserFeedback.Provider.BasicSystemInformation})
-                modeOptions.append({text: i18n("Basic Usage Information"), value: UserFeedback.Provider.BasicUsageStatistics})
-                modeOptions.append({text: i18n("Detailed System Information"), value: UserFeedback.Provider.DetailedSystemInformation})
-                modeOptions.append({text: i18n("Detailed Usage Information"), value: UserFeedback.Provider.DetailedUsageStatistics})
+        Kirigami.FormLayout {
 
-                for(var i = 0, c=modeOptions.count; i<c; ++i) {
-                    if (modeOptions.get(i).value === kcm.plasmaFeedbackLevel) {
-                        currentIndex = i;
-                        break;
+            QQC2.ComboBox {
+                id: statisticsModeCombo
+                Kirigami.FormData.label: i18n("Plasma:")
+                enabled: kcm.feedbackEnabled
+                Layout.fillWidth: true
+                textRole: "text"
+                model: ListModel { id: modeOptions }
+
+                Component.onCompleted: {
+                    modeOptions.append({text: i18n("Send basic system information"), value: UserFeedback.Provider.BasicSystemInformation})
+                    modeOptions.append({text: i18n("Send basic usage information"), value: UserFeedback.Provider.BasicUsageStatistics})
+                    modeOptions.append({text: i18n("Send detailed system information"), value: UserFeedback.Provider.DetailedSystemInformation})
+                    modeOptions.append({text: i18n("Send detailed usage information"), value: UserFeedback.Provider.DetailedUsageStatistics})
+
+                    for(var i = 0, c=modeOptions.count; i<c; ++i) {
+                        if (modeOptions.get(i).value === kcm.plasmaFeedbackLevel) {
+                            currentIndex = i;
+                            break;
+                        }
                     }
+                    if (currentIndex < 0)
+                        currentIndex = 2
                 }
-                if (currentIndex < 0)
-                    currentIndex = 2
+
+                onActivated: {
+                    kcm.plasmaFeedbackLevel = modeOptions.get(index).value;
+                }
             }
 
-            onActivated: {
-                kcm.plasmaFeedbackLevel = modeOptions.get(index).value;
+            UserFeedback.FeedbackConfigUiController {
+                id: feedbackController
             }
-        }
 
-        UserFeedback.FeedbackConfigUiController {
-            id: feedbackController
-        }
-
-        QQC2.Label {
-            Layout.maximumWidth: root.width * 0.5
-            wrapMode: Text.WordWrap
-            text: feedbackController.telemetryDescription(modeOptions.get(statisticsModeCombo.currentIndex).value)
+            QQC2.Label {
+                Layout.alignment: Qt.AlignHCenter
+                Layout.maximumWidth: root.width * 0.5
+                wrapMode: Text.WordWrap
+                text: feedbackController.telemetryDescription(modeOptions.get(statisticsModeCombo.currentIndex).value)
+            }
         }
     }
 }
