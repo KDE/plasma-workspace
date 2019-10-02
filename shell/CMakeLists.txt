@@ -71,8 +71,12 @@ target_link_libraries(plasmashell
  KF5::WaylandClient
  KF5::Notifications
  PW::KWorkspace
- KUserFeedbackCore
 )
+if (TARGET KUserFeedbackCore)
+    target_link_libraries(plasmashell KUserFeedbackCore)
+    target_compile_definitions(plasmashell PRIVATE -DWITH_KUSERFEEDBACKCORE)
+endif()
+
 target_include_directories(plasmashell PRIVATE "${CMAKE_BINARY_DIR}")
 target_compile_definitions(plasmashell PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 

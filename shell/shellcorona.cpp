@@ -51,6 +51,8 @@
 #include <kdeclarative/qmlobjectsharedengine.h>
 #include <KMessageBox>
 #include <kdirwatch.h>
+
+#ifdef WITH_KUSERFEEDBACKCORE
 #include <KUserFeedback/Provider>
 #include <KUserFeedback/ApplicationVersionSource>
 #include <KUserFeedback/CompilerInfoSource>
@@ -59,6 +61,9 @@
 #include <KUserFeedback/UsageTimeSource>
 #include <KUserFeedback/OpenGLInfoSource>
 #include <KUserFeedback/ScreenInfoSource>
+
+#include "panelcountsource.h"
+#endif
 
 #include <KPackage/PackageLoader>
 
@@ -78,7 +83,6 @@
 #include "plasmashelladaptor.h"
 #include "debug.h"
 #include "futureutil.h"
-#include "panelcountsource.h"
 
 #ifndef NDEBUG
     #define CHECK_SCREEN_INVARIANTS screenInvariants();
@@ -281,25 +285,27 @@ void ShellCorona::setShell(const QString &shell)
         t->setThemeName(themeName);
     }
 
-    auto m_feedbackProvider = new KUserFeedback::Provider(this);
-    m_feedbackProvider->setProductIdentifier(QStringLiteral("org.kde.plasmashell"));
-    m_feedbackProvider->setFeedbackServer(QUrl(QStringLiteral("https://telemetry.kde.org/")));
-    m_feedbackProvider->setSubmissionInterval(7);
-    m_feedbackProvider->setApplicationStartsUntilEncouragement(5);
-    m_feedbackProvider->setEncouragementDelay(30);
-    m_feedbackProvider->addDataSource(new KUserFeedback::ApplicationVersionSource);
-    m_feedbackProvider->addDataSource(new KUserFeedback::CompilerInfoSource);
-    m_feedbackProvider->addDataSource(new KUserFeedback::PlatformInfoSource);
-    m_feedbackProvider->addDataSource(new KUserFeedback::QtVersionSource);
-    m_feedbackProvider->addDataSource(new KUserFeedback::UsageTimeSource);
-    m_feedbackProvider->addDataSource(new KUserFeedback::OpenGLInfoSource);
-    m_feedbackProvider->addDataSource(new KUserFeedback::ScreenInfoSource);
-    m_feedbackProvider->addDataSource(new PanelCountSource(this));
+#ifdef WITH_KUSERFEEDBACKCORE
+    auto feedbackProvider = new KUserFeedback::Provider(this);
+    feedbackProvider->setProductIdentifier(QStringLiteral("org.kde.plasmashell"));
+    feedbackProvider->setFeedbackServer(QUrl(QStringLiteral("https://telemetry.kde.org/")));
+    feedbackProvider->setSubmissionInterval(7);
+    feedbackProvider->setApplicationStartsUntilEncouragement(5);
+    feedbackProvider->setEncouragementDelay(30);
+    feedbackProvider->addDataSource(new KUserFeedback::ApplicationVersionSource);
+    feedbackProvider->addDataSource(new KUserFeedback::CompilerInfoSource);
+    feedbackProvider->addDataSource(new KUserFeedback::PlatformInfoSource);
+    feedbackProvider->addDataSource(new KUserFeedback::QtVersionSource);
+    feedbackProvider->addDataSource(new KUserFeedback::UsageTimeSource);
+    feedbackProvider->addDataSource(new KUserFeedback::OpenGLInfoSource);
+    feedbackProvider->addDataSource(new KUserFeedback::ScreenInfoSource);
+    feedbackProvider->addDataSource(new PanelCountSource(this));
 
     {
         auto plasmaConfig = KSharedConfig::openConfig(QStringLiteral("PlasmaUserFeedback"));
-        m_feedbackProvider->setTelemetryMode(KUserFeedback::Provider::TelemetryMode(plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::BasicUsageStatistics))));
+        feedbackProvider->setTelemetryMode(KUserFeedback::Provider::TelemetryMode(plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::BasicUsageStatistics))));
     }
+#endif
 
     //FIXME: this would change the runtime platform to a fixed one if available
     // but a different way to load platform specific components is needed beforehand
