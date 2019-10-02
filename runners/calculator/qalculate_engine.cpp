@@ -66,7 +66,7 @@ void QalculateEngine::updateExchangeRates()
     QUrl dest = QUrl::fromLocalFile(QFile::decodeName(CALCULATOR->getExchangeRatesFileName().c_str()));
 
     KIO::Job* getJob = KIO::file_copy(source, dest, -1, KIO::Overwrite | KIO::HideProgressInfo);
-    connect( getJob, SIGNAL(result(KJob*)), this, SLOT(updateResult(KJob*)) );
+    connect( getJob, &KJob::result, this, &QalculateEngine::updateResult );
 }
 
 void QalculateEngine::updateResult(KJob* job)
