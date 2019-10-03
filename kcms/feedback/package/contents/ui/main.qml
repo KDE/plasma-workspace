@@ -40,7 +40,7 @@ SimpleKCM {
             Layout.alignment: Qt.AlignHCenter
             checked: kcm.feedbackEnabled
             onToggled: kcm.feedbackEnabled = checked
-            text: i18n("Allow KDE software to collect anomymous usage information")
+            text: i18n("Allow KDE software to collect anonymous usage information")
         }
 
         QQC2.Label {
