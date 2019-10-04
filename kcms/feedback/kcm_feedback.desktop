@@ -11,6 +11,18 @@ X-KDE-ParentApp=kcontrol
 X-KDE-System-Settings-Parent-Category=personalization
 
 Name=User Feedback
+Name[ca]=Comentaris de l'usuari
+Name[nl]=Terugkoppeling van gebruiker
+Name[pt]=Reacções do Utilizador
+Name[pt_BR]=Comentários dos usuários
+Name[uk]=Відгуки користувача
+Name[x-test]=xxUser Feedbackxx
 Comment=Configure user feedback settings
+Comment[ca]=Configura els ajustaments dels comentaris de l'usuari
+Comment[nl]=Instellingen voor terugkoppeling van gebruikers configureren
+Comment[pt]=Configurar as opções das reacções do utilizador
+Comment[pt_BR]=Configure as definições dos comentários dos usuários
+Comment[uk]=Налаштовування системи відгуків користувача
+Comment[x-test]=xxConfigure user feedback settingsxx
 
 Categories=Qt;KDE;

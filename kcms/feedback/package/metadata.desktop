@@ -1,5 +1,11 @@
 [Desktop Entry]
 Name=Feedback
+Name[ca]=Comentaris
+Name[nl]=Terugkoppeling
+Name[pt]=Reacções
+Name[pt_BR]=Comentários
+Name[uk]=Відгуки
+Name[x-test]=xxFeedbackxx
 
 Icon=preferences-desktop-locale
 Type=Service
