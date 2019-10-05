@@ -1,5 +1,5 @@
  ########### install files ###############
- 
+
  install( FILES
    kf5-development.directory
    kf5-development-translation.directory
@@ -25,6 +25,7 @@
    kf5-main.directory
    kf5-more.directory
    kf5-multimedia.directory
+   kf5-network.directory
    kf5-office.directory
    kf5-science.directory
    kf5-settingsmenu.directory
