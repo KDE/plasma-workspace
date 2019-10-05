@@ -1,5 +1,5 @@
  ########### install files ###############
-
+ 
  install( FILES
    kf5-development.directory
    kf5-development-translation.directory
@@ -30,6 +30,7 @@
    kf5-settingsmenu.directory
    kf5-system.directory
    kf5-system-terminal.directory
+   kf5-toys.directory
    kf5-unknown.directory
    kf5-utilities-accessibility.directory
    kf5-utilities-desktop.directory
