@@ -17,6 +17,7 @@ Name[lt]=Naudotojo grįžtamasis ryšys
 Name[nl]=Terugkoppeling van gebruiker
 Name[pt]=Reacções do Utilizador
 Name[pt_BR]=Comentários dos usuários
+Name[ru]=Обратная связь
 Name[uk]=Відгуки користувача
 Name[x-test]=xxUser Feedbackxx
 Comment=Configure user feedback settings
@@ -26,6 +27,7 @@ Comment[lt]=Konfigūruoti naudotojo grįžtamojo ryšio nuostatas
 Comment[nl]=Instellingen voor terugkoppeling van gebruikers configureren
 Comment[pt]=Configurar as opções das reacções do utilizador
 Comment[pt_BR]=Configure as definições dos comentários dos usuários
+Comment[ru]=Настройка параметров обратной связи
 Comment[uk]=Налаштовування системи відгуків користувача
 Comment[x-test]=xxConfigure user feedback settingsxx
 
