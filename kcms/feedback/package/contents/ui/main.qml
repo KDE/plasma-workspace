@@ -63,33 +63,25 @@ SimpleKCM {
         }
 
         Kirigami.FormLayout {
-
-            QQC2.ComboBox {
-                id: statisticsModeCombo
+            QQC2.Slider {
+                id: statisticsModeSlider
                 Kirigami.FormData.label: i18n("Plasma:")
                 enabled: kcm.feedbackEnabled
                 Layout.fillWidth: true
-                textRole: "text"
-                model: ListModel { id: modeOptions }
+
+                readonly property var modeOptions: [UserFeedback.Provider.BasicSystemInformation, UserFeedback.Provider.BasicUsageStatistics, UserFeedback.Provider.DetailedSystemInformation, UserFeedback.Provider.DetailedUsageStatistics]
+                from: 0
+                to: modeOptions.length - 1
+                stepSize: 1
+                snapMode: QQC2.Slider.SnapAlways
 
                 Component.onCompleted: {
-                    modeOptions.append({text: i18n("Send basic system information"), value: UserFeedback.Provider.BasicSystemInformation})
-                    modeOptions.append({text: i18n("Send basic usage information"), value: UserFeedback.Provider.BasicUsageStatistics})
-                    modeOptions.append({text: i18n("Send detailed system information"), value: UserFeedback.Provider.DetailedSystemInformation})
-                    modeOptions.append({text: i18n("Send detailed usage information"), value: UserFeedback.Provider.DetailedUsageStatistics})
-
-                    for(var i = 0, c=modeOptions.count; i<c; ++i) {
-                        if (modeOptions.get(i).value === kcm.plasmaFeedbackLevel) {
-                            currentIndex = i;
-                            break;
-                        }
-                    }
-                    if (currentIndex < 0)
-                        currentIndex = 2
+                    var idx = modeOptions.findIndex(kcm.plasmaFeedbackLevel)
+                    value = idx < 0 ? 2 : modeOptions[idx]
                 }
 
-                onActivated: {
-                    kcm.plasmaFeedbackLevel = modeOptions.get(index).value;
+                onMoved: {
+                    kcm.plasmaFeedbackLevel = modeOptions[value]
                 }
             }
 
@@ -97,11 +89,18 @@ SimpleKCM {
                 id: feedbackController
             }
 
+            Kirigami.Heading {
+                Layout.alignment: Qt.AlignHCenter
+                Layout.maximumWidth: root.width * 0.5
+                wrapMode: Text.WordWrap
+                level: 3
+                text: feedbackController.telemetryName(statisticsModeSlider.modeOptions[statisticsModeSlider.value])
+            }
             QQC2.Label {
                 Layout.alignment: Qt.AlignHCenter
                 Layout.maximumWidth: root.width * 0.5
                 wrapMode: Text.WordWrap
-                text: feedbackController.telemetryDescription(modeOptions.get(statisticsModeCombo.currentIndex).value)
+                text: feedbackController.telemetryDescription(statisticsModeSlider.modeOptions[statisticsModeSlider.value])
             }
         }
     }
