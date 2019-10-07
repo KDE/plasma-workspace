@@ -129,7 +129,7 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
                            const QVariantMap &hints, int timeout)
 {
     const bool wasReplaced = replaces_id > 0;
-    int notificationId = 0;
+    uint notificationId = 0;
     if (wasReplaced) {
         notificationId = replaces_id;
     } else {
