@@ -67,7 +67,7 @@ DesktopProtocol::~DesktopProtocol()
 
 void DesktopProtocol::checkLocalInstall()
 {
-#ifndef Q_WS_WIN
+#ifndef Q_OS_WIN
     // QStandardPaths::writableLocation(QStandardPaths::DesktopLocation) returns the home dir
     // if the desktop folder doesn't exist, so verify its result
     QString desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
