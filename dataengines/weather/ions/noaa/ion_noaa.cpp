@@ -734,29 +734,64 @@ IonInterface::ConditionIcons NOAAIon::getConditionIcon(const QString& weather, b
                weather.contains(QLatin1String("mostly clear")) || weather.contains(QLatin1String("increasing clouds")) ||
                weather.contains(QLatin1String("becoming cloudy")) || weather.contains(QLatin1String("clearing")) ||
                weather.contains(QLatin1String("decreasing clouds")) || weather.contains(QLatin1String("becoming sunny"))) {
-        result = isDayTime ? IonInterface::FewCloudsDay : IonInterface::FewCloudsNight;
+        if (weather.contains(QLatin1String("breezy")) ||
+            weather.contains(QLatin1String("wind")) ||
+            weather.contains (QLatin1String("gust"))) {
+            result = isDayTime ? IonInterface::FewCloudsWindyDay : IonInterface::FewCloudsWindyNight;
+        } else {
+            result = isDayTime ? IonInterface::FewCloudsDay : IonInterface::FewCloudsNight;
+        }
 
     } else if (weather.contains(QLatin1String("partly cloudy")) || weather.contains(QLatin1String("partly sunny")) ||
                weather.contains(QLatin1String("partly clear"))) {
-        result = isDayTime ? IonInterface::PartlyCloudyDay : IonInterface::PartlyCloudyNight;
+        if (weather.contains(QLatin1String("breezy")) ||
+            weather.contains(QLatin1String("wind")) ||
+            weather.contains (QLatin1String("gust"))) {
+            result = isDayTime ? IonInterface::PartlyCloudyWindyDay : IonInterface::PartlyCloudyWindyNight;
+        } else {
+            result = isDayTime ? IonInterface::PartlyCloudyDay : IonInterface::PartlyCloudyNight;
+        }
 
     } else if (weather.contains(QLatin1String("overcast")) || weather.contains(QLatin1String("cloudy"))) {
-        result = IonInterface::Overcast;
+         if (weather.contains(QLatin1String("breezy")) ||
+            weather.contains(QLatin1String("wind")) ||
+            weather.contains (QLatin1String("gust"))) {
+            result = IonInterface::OvercastWindy;
+        } else {
+            result = IonInterface::Overcast;
+        }
 
     } else if (weather.contains(QLatin1String("haze")) || weather.contains(QLatin1String("smoke")) ||
              weather.contains(QLatin1String("dust")) || weather.contains(QLatin1String("sand"))) {
         result = IonInterface::Haze;
 
     } else if (weather.contains(QLatin1String("fair")) || weather.contains(QLatin1String("clear")) || weather.contains(QLatin1String("sunny"))) {
-        result = isDayTime ? IonInterface::ClearDay : IonInterface::ClearNight;
+        if (weather.contains(QLatin1String("breezy")) ||
+            weather.contains(QLatin1String("wind")) ||
+            weather.contains (QLatin1String("gust"))) {
+            result = isDayTime ? IonInterface::ClearWindyDay : IonInterface::ClearWindyNight;
+        } else {
+            result = isDayTime ? IonInterface::ClearDay : IonInterface::ClearNight;
+        }
 
     } else if (weather.contains(QLatin1String("fog"))) {
         result = IonInterface::Mist;
 
     } else if (weather.contains(QLatin1String("hot"))) {
         // temperature condition has not hint about air ingredients, so let's assume the sky is clear when it is hot
-        result = isDayTime ? IonInterface::ClearDay : IonInterface::ClearNight;
+        if (weather.contains(QLatin1String("breezy")) ||
+            weather.contains(QLatin1String("wind")) ||
+            weather.contains (QLatin1String("gust"))) {
+            result = isDayTime ? IonInterface::ClearWindyDay : IonInterface::ClearWindyNight;
+        } else {
+            result = isDayTime ? IonInterface::ClearDay : IonInterface::ClearNight;
+        }
 
+    } else if (weather.contains (QLatin1String("breezy")) ||
+               weather.contains (QLatin1String("wind")) ||
+               weather.contains (QLatin1String("gust"))) {
+        // Assume a clear sky when it's windy but no clouds have been mentioned
+        result = isDayTime ? IonInterface::ClearWindyDay : IonInterface::ClearWindyNight;
     } else {
         result = IonInterface::NotAvailable;
     }
