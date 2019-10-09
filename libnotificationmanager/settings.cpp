@@ -179,7 +179,7 @@ Settings::Settings(const KSharedConfig::Ptr &config, QObject *parent)
 
     setLive(true);
 
-    connect(&Server::self(), &Server::inhibitedChanged,
+    connect(&Server::self(), &Server::inhibitedByApplicationChanged,
             this, &Settings::notificationsInhibitedByApplicationChanged);
     connect(&Server::self(), &Server::inhibitionApplicationsChanged,
             this, &Settings::notificationInhibitionApplicationsChanged);
@@ -552,7 +552,7 @@ void Settings::resetNotificationsInhibitedUntil()
 
 bool Settings::notificationsInhibitedByApplication() const
 {
-    return Server::self().inhibited();
+    return Server::self().inhibitedByApplication();
 }
 
 QStringList Settings::notificationInhibitionApplications() const

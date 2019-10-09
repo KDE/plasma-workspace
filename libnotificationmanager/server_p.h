@@ -72,16 +72,23 @@ Q_SIGNALS:
     void ActionInvoked(uint id, const QString &actionKey);
 
     void inhibitedChanged();
-    void inhibitionAdded();
-    void inhibitionRemoved();
+
+    void externalInhibitedChanged();
+    void externalInhibitionsChanged();
+
     void serviceOwnershipLost();
 
 public: // stuff used by public class
     bool init();
     uint add(const Notification &notification);
 
-    QList<Inhibition> inhibitions() const;
-    void clearInhibitions();
+    // Server only handles external application inhibitions but we still want the Inhibited property
+    // expose the actual inhibition state for applications to check.
+    void setInhibited(bool inhibited);
+
+    bool externalInhibited() const;
+    QList<Inhibition> externalInhibitions() const;
+    void clearExternalInhibitions();
 
     bool m_valid = false;
     uint m_highestNotificationId = 1;
@@ -94,8 +101,10 @@ private:
 
     QDBusServiceWatcher *m_inhibitionWatcher = nullptr;
     uint m_highestInhibitionCookie = 0;
-    QHash<uint /*cookie*/, Inhibition> m_inhibitions;
+    QHash<uint /*cookie*/, Inhibition> m_externalInhibitions;
     QHash<uint /*cookie*/, QString> m_inhibitionServices;
+
+    bool m_inhibited = false;
 
     Notification m_lastNotification;
 

@@ -22,6 +22,7 @@
 
 #include "notifications.h"
 #include "job.h"
+#include "server.h"
 #include "settings.h"
 
 #include <QQmlEngine>
@@ -35,4 +36,8 @@ void NotificationManagerPlugin::registerTypes(const char *uri)
     qmlRegisterType<Notifications>(uri, 1, 0, "Notifications");
     qmlRegisterUncreatableType<Job>(uri, 1, 0, "Job", QStringLiteral("Can only access Job via JobDetailsRole of JobsModel"));
     qmlRegisterType<Settings>(uri, 1, 0, "Settings");
+    qmlRegisterSingletonType<Server>(uri, 1, 0, "Server", [](QQmlEngine *, QJSEngine *) -> QObject* {
+        QQmlEngine::setObjectOwnership(&Server::self(), QQmlEngine::CppOwnership);
+        return &Server::self();
+    });
 }

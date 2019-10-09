@@ -323,7 +323,9 @@ uint ServerPrivate::Inhibit(const QString &desktop_entry, const QString &reason,
 
     ++m_highestInhibitionCookie;
 
-    m_inhibitions.insert(m_highestInhibitionCookie, {
+    const bool oldExternalInhibited = externalInhibited();
+
+    m_externalInhibitions.insert(m_highestInhibitionCookie, {
         desktop_entry,
         applicationName,
         reason,
@@ -332,8 +334,10 @@ uint ServerPrivate::Inhibit(const QString &desktop_entry, const QString &reason,
 
     m_inhibitionServices.insert(m_highestInhibitionCookie, dbusService);
 
-    emit inhibitedChanged();
-    emit inhibitionAdded();
+    if (externalInhibited() != oldExternalInhibited) {
+        emit externalInhibitedChanged();
+    }
+    emit externalInhibitionsChanged();
 
     return m_highestInhibitionCookie;
 }
@@ -364,37 +368,48 @@ void ServerPrivate::UnInhibit(uint cookie)
     }
 
     m_inhibitionWatcher->removeWatchedService(service);
-    m_inhibitions.remove(cookie);
+    m_externalInhibitions.remove(cookie);
     m_inhibitionServices.remove(cookie);
 
-    if (m_inhibitions.isEmpty()) {
-        emit inhibitedChanged();
-        emit inhibitionRemoved();
+    if (m_externalInhibitions.isEmpty()) {
+        emit externalInhibitedChanged();
     }
+    emit externalInhibitionsChanged();
 }
 
-QList<Inhibition> ServerPrivate::inhibitions() const
+QList<Inhibition> ServerPrivate::externalInhibitions() const
 {
-    return m_inhibitions.values();
+    return m_externalInhibitions.values();
 }
 
 bool ServerPrivate::inhibited() const
 {
-    // TODO this currently only returns whether an app has an inhibition going,
-    // there's no way for apps to query whether user enabled do not disturb from the applet
-    // so they could change their behavior.
-    return !m_inhibitions.isEmpty();
+    return m_inhibited;
 }
 
-void ServerPrivate::clearInhibitions()
+void ServerPrivate::setInhibited(bool inhibited)
 {
-    if (m_inhibitions.isEmpty()) {
+    if (m_inhibited != inhibited) {
+        m_inhibited = inhibited;
+        emit inhibitedChanged();
+    }
+}
+
+bool ServerPrivate::externalInhibited() const
+{
+    return !m_externalInhibitions.isEmpty();
+}
+
+void ServerPrivate::clearExternalInhibitions()
+{
+    if (m_externalInhibitions.isEmpty()) {
         return;
     }
 
     m_inhibitionWatcher->setWatchedServices(QStringList()); // remove all watches
     m_inhibitionServices.clear();
-    m_inhibitions.clear();
-    emit inhibitedChanged();
-    emit inhibitionRemoved();
+    m_externalInhibitions.clear();
+
+    emit externalInhibitedChanged();
+    emit externalInhibitionsChanged();
 }
