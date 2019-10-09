@@ -40,6 +40,16 @@ class NOTIFICATIONMANAGER_EXPORT Server : public QObject
 {
     Q_OBJECT
 
+    /**
+     * Whether notifications are currently inhibited.
+     *
+     * This is what is announced to other applicatons on the bus.
+     *
+     * @note This does not keep track of inhibitions on its own,
+     * you need to calculate this yourself and update the property accordingly.
+     */
+    Q_PROPERTY(bool inhibited READ inhibited WRITE setInhibited NOTIFY inhibitedChanged)
+
 public:
     ~Server() override;
 
@@ -68,9 +78,24 @@ public:
     bool isValid() const;
 
     /**
-     * Whether an application requested to inhibit notifications.
+     * Whether notifications are currently inhibited.
+     * @since 5.17
      */
     bool inhibited() const;
+
+    /**
+     * Whether notifications are currently effectively inhibited.
+     *
+     * @note You need to keep track of inhibitions and call this
+     * yourself when appropriate.
+     * @since 5.17
+     */
+    void setInhibited(bool inhibited);
+
+    /**
+     * Whether an application requested to inhibit notifications.
+     */
+    bool inhibitedByApplication() const;
 
     // should we return a struct or pair or something?
     QStringList inhibitionApplications() const;
@@ -130,11 +155,17 @@ Q_SIGNALS:
     void notificationRemoved(uint id, CloseReason reason);
 
     /**
-     * Emitted when inhibitions have been changed. Becomes true
-     * as soon as there is one inhibition and becomes false again
-     * when all inhibitions have been lifted.
+     * Emitted when the inhbited state changed.
      */
     void inhibitedChanged(bool inhibited);
+
+    /**
+     * Emitted when inhibitions by application have been changed.
+     * Becomes true as soon as there is one inhibition and becomes
+     * false again when all inhibitions have been lifted.
+     * @since 5.17
+     */
+    void inhibitedByApplicationChanged(bool inhibited);
 
     /**
      * Emitted when the list of applications holding a notification

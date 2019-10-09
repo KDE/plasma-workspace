@@ -460,4 +460,11 @@ QtObject {
         interval: 250
         onTriggered: positionPopups()
     }
+
+    // Keeps the Inhibited property on DBus in sync with our inhibition handling
+    property Binding serverInhibitedBinding: Binding {
+        target: NotificationManager.Server
+        property: "inhibited"
+        value: globals.inhibited
+    }
 }

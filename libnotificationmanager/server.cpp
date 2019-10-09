@@ -37,8 +37,10 @@ Server::Server(QObject *parent)
     connect(d.data(), &ServerPrivate::inhibitedChanged, this, [this] {
         emit inhibitedChanged(inhibited());
     });
-    connect(d.data(), &ServerPrivate::inhibitionAdded, this, &Server::inhibitionApplicationsChanged);
-    connect(d.data(), &ServerPrivate::inhibitionRemoved, this, &Server::inhibitionApplicationsChanged);
+    connect(d.data(), &ServerPrivate::externalInhibitedChanged, this, [this] {
+        emit inhibitedByApplicationChanged(inhibitedByApplication());
+    });
+    connect(d.data(), &ServerPrivate::externalInhibitionsChanged, this, &Server::inhibitionApplicationsChanged);
     connect(d.data(), &ServerPrivate::serviceOwnershipLost, this, &Server::serviceOwnershipLost);
 }
 
@@ -82,10 +84,20 @@ bool Server::inhibited() const
     return d->inhibited();
 }
 
+void Server::setInhibited(bool inhibited)
+{
+    d->setInhibited(inhibited);
+}
+
+bool Server::inhibitedByApplication() const
+{
+    return d->externalInhibited();
+}
+
 QStringList Server::inhibitionApplications() const
 {
     QStringList applications;
-    const auto inhibitions = d->inhibitions();
+    const auto inhibitions = d->externalInhibitions();
     applications.reserve(inhibitions.count());
     for (const auto &inhibition : inhibitions) {
         applications.append(!inhibition.applicationName.isEmpty() ? inhibition.applicationName : inhibition.desktopEntry);
@@ -96,7 +108,7 @@ QStringList Server::inhibitionApplications() const
 QStringList Server::inhibitionReasons() const
 {
     QStringList reasons;
-    const auto inhibitions = d->inhibitions();
+    const auto inhibitions = d->externalInhibitions();
     reasons.reserve(inhibitions.count());
     for (const auto &inhibition : inhibitions) {
         reasons.append(inhibition.reason);
@@ -106,5 +118,5 @@ QStringList Server::inhibitionReasons() const
 
 void Server::clearInhibitions()
 {
-    d->clearInhibitions();
+    d->clearExternalInhibitions();
 }
