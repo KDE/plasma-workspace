@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Feedback
 Name[ca]=Comentaris
+Name[cs]=Zpětná vazba
 Name[en_GB]=Feedback
 Name[es]=Comentarios
 Name[gl]=Achegas
@@ -12,6 +13,8 @@ Name[pt_BR]=Comentários
 Name[ru]=Обратная связь
 Name[uk]=Відгуки
 Name[x-test]=xxFeedbackxx
+Name[zh_CN]=反馈
+Name[zh_TW]=意見回應
 
 Icon=preferences-desktop-locale
 Type=Service

@@ -12,6 +12,7 @@ X-KDE-System-Settings-Parent-Category=personalization
 
 Name=User Feedback
 Name[ca]=Comentaris de l'usuari
+Name[cs]=Zpětná vazba uživatele
 Name[en_GB]=User Feedback
 Name[es]=Comentarios del usuario
 Name[gl]=Achegas de usuario
@@ -23,8 +24,11 @@ Name[pt_BR]=Comentários dos usuários
 Name[ru]=Обратная связь
 Name[uk]=Відгуки користувача
 Name[x-test]=xxUser Feedbackxx
+Name[zh_CN]=用户反馈
+Name[zh_TW]=使用者意見回應
 Comment=Configure user feedback settings
 Comment[ca]=Configura els ajustaments dels comentaris de l'usuari
+Comment[cs]=Nastavení voleb uživatelské zpětné vazby
 Comment[en_GB]=Configure user feedback settings
 Comment[es]=Configurar las preferencias de los comentarios del usuario
 Comment[gl]=Configurar as achegas de usuario
@@ -36,5 +40,7 @@ Comment[pt_BR]=Configure as definições dos comentários dos usuários
 Comment[ru]=Настройка параметров обратной связи
 Comment[uk]=Налаштовування системи відгуків користувача
 Comment[x-test]=xxConfigure user feedback settingsxx
+Comment[zh_CN]=配置用户反馈设置
+Comment[zh_TW]=設定使用者意見回應設定
 
 Categories=Qt;KDE;
