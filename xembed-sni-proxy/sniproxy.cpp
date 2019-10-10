@@ -206,7 +206,7 @@ void SNIProxy::update()
     int h = image.height();
 
     m_pixmap = QPixmap::fromImage(image);
-    if (w != s_embedSize || h != s_embedSize) {
+    if (w > s_embedSize || h > s_embedSize) {
         qCDebug(SNIPROXY) << "Scaling pixmap of window" << m_windowId << Title() << "from w*h" << w << h;
         m_pixmap = m_pixmap.scaled(s_embedSize, s_embedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     }
