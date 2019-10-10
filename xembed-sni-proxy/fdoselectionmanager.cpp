@@ -66,7 +66,7 @@ void FdoSelectionManager::init()
     xcb_connection_t *c = QX11Info::connection();
     xcb_prefetch_extension_data(c, &xcb_damage_id);
     const auto *reply = xcb_get_extension_data(c, &xcb_damage_id);
-    if (reply->present) {
+    if (reply && reply->present) {
         m_damageEventBase = reply->first_event;
         xcb_damage_query_version_unchecked(c, XCB_DAMAGE_MAJOR_VERSION, XCB_DAMAGE_MINOR_VERSION);
     } else {
@@ -117,24 +117,24 @@ bool FdoSelectionManager::addDamageWatch(xcb_window_t client)
     return true;
 }
 
-bool FdoSelectionManager::nativeEventFilter(const QByteArray& eventType, void* message, long int* result)
+bool FdoSelectionManager::nativeEventFilter(const QByteArray &eventType, void *message, long int *result)
 {
-    Q_UNUSED(result);
+    Q_UNUSED(result)
 
     if (eventType != "xcb_generic_event_t") {
         return false;
     }
 
-    xcb_generic_event_t* ev = static_cast<xcb_generic_event_t *>(message);
+    xcb_generic_event_t *ev = static_cast<xcb_generic_event_t *>(message);
 
     const auto responseType = XCB_EVENT_RESPONSE_TYPE(ev);
     if (responseType == XCB_CLIENT_MESSAGE) {
         const auto ce = reinterpret_cast<xcb_client_message_event_t *>(ev);
         if (ce->type == Xcb::atoms->opcodeAtom) {
             switch (ce->data.data32[1]) {
-                case SYSTEM_TRAY_REQUEST_DOCK:
-                    dock(ce->data.data32[2]);
-                    return true;
+            case SYSTEM_TRAY_REQUEST_DOCK:
+                dock(ce->data.data32[2]);
+                return true;
             }
         }
     } else if (responseType == XCB_UNMAP_NOTIFY) {
@@ -149,9 +149,9 @@ bool FdoSelectionManager::nativeEventFilter(const QByteArray& eventType, void* m
         }
     } else if (responseType == m_damageEventBase + XCB_DAMAGE_NOTIFY) {
         const auto damagedWId = reinterpret_cast<xcb_damage_notify_event_t *>(ev)->drawable;
-        const auto sniProx = m_proxies.value(damagedWId);
-        if(sniProx) {
-            sniProx->update();
+        const auto sniProxy = m_proxies.value(damagedWId);
+        if (sniProxy) {
+            sniProxy->update();
             xcb_damage_subtract(QX11Info::connection(), m_damageWatches[damagedWId], XCB_NONE, XCB_NONE);
         }
     }
@@ -207,7 +207,7 @@ void FdoSelectionManager::onLostOwnership()
 void FdoSelectionManager::compositingChanged()
 {
     xcb_connection_t *c = QX11Info::connection();
-    auto screen = xcb_setup_roots_iterator (xcb_get_setup (c)).data;
+    auto screen = xcb_setup_roots_iterator(xcb_get_setup(c)).data;
     auto trayVisual = screen->root_visual;
     if (KWindowSystem::compositingActive()) {
         xcb_depth_iterator_t depth_iterator = xcb_screen_allowed_depths_iterator(screen);
