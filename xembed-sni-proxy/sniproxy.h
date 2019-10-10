@@ -146,6 +146,7 @@ private:
         XTest
     };
 
+    QSize calculateClientWindowSize() const;
     void sendClick(uint8_t mouseButton, int x, int y);
     QImage getImageNonComposite() const;
     bool isTransparentImage(const QImage &image) const;
