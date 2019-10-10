@@ -92,10 +92,6 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
 
     auto c = QX11Info::connection();
 
-    auto cookie = xcb_get_geometry(c, m_windowId);
-    QScopedPointer<xcb_get_geometry_reply_t, QScopedPointerPodDeleter>
-        clientGeom(xcb_get_geometry_reply(c, cookie, nullptr));
-
     //create a container window
     auto screen = xcb_setup_roots_iterator (xcb_get_setup (c)).data;
     m_containerWid = xcb_generate_id(c);
@@ -162,36 +158,7 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
                              XCB_CONFIG_WINDOW_X | XCB_CONFIG_WINDOW_Y,
                              windowMoveConfigVals);
 
-
-    QSize clientWindowSize;
-
-    if (clientGeom) {
-        clientWindowSize = QSize(clientGeom->width, clientGeom->height);
-    }
-    //if the window is a clearly stupid size resize to be something sensible
-    //this is needed as chormium and such when resized just fill the icon with transparent space and only draw in the middle
-    //however spotify does need this as by default the window size is 900px wide.
-    //use an artbitrary heuristic to make sure icons are always sensible
-    if (clientWindowSize.isEmpty() || clientWindowSize.width() > s_embedSize || clientWindowSize.height() > s_embedSize )
-    {
-        qCDebug(SNIPROXY) << "Resizing window" << wid << Title() << "from w*h" << clientWindowSize;
-
-        xcb_configure_notify_event_t event;
-        memset(&event, 0x00, sizeof(xcb_configure_notify_event_t));
-        event.response_type = XCB_CONFIGURE_NOTIFY;
-        event.event = wid;
-        event.window = wid;
-        event.width = s_embedSize;
-        event.height = s_embedSize;
-        xcb_send_event(c, false, wid, XCB_EVENT_MASK_STRUCTURE_NOTIFY, (char *) &event);
-
-        const uint32_t windowMoveConfigVals[2] = { s_embedSize, s_embedSize };
-        xcb_configure_window(c, wid,
-                                XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT,
-                                windowMoveConfigVals);
-
-        clientWindowSize = QSize(s_embedSize, s_embedSize);
-    }
+    QSize clientWindowSize = calculateClientWindowSize();
 
     //show the embedded window otherwise nothing happens
     xcb_map_window(c, wid);
@@ -247,6 +214,45 @@ void SNIProxy::update()
     emit NewToolTip();
 }
 
+QSize SNIProxy::calculateClientWindowSize() const
+{
+    auto c = QX11Info::connection();
+
+    auto cookie = xcb_get_geometry(c, m_windowId);
+    QScopedPointer<xcb_get_geometry_reply_t, QScopedPointerPodDeleter>
+    clientGeom(xcb_get_geometry_reply(c, cookie, nullptr));
+
+    QSize clientWindowSize;
+    if (clientGeom) {
+        clientWindowSize = QSize(clientGeom->width, clientGeom->height);
+    }
+    //if the window is a clearly stupid size resize to be something sensible
+    //this is needed as chromium and such when resized just fill the icon with transparent space and only draw in the middle
+    //however KeePass2 does need this as by default the window size is 273px wide and is not transparent
+    //use an artbitrary heuristic to make sure icons are always sensible
+    if (clientWindowSize.isEmpty() || clientWindowSize.width() > s_embedSize || clientWindowSize.height() > s_embedSize) {
+        qCDebug(SNIPROXY) << "Resizing window" << m_windowId << Title() << "from w*h" << clientWindowSize;
+
+        xcb_configure_notify_event_t event;
+        memset(&event, 0x00, sizeof(xcb_configure_notify_event_t));
+        event.response_type = XCB_CONFIGURE_NOTIFY;
+        event.event = m_windowId;
+        event.window = m_windowId;
+        event.width = s_embedSize;
+        event.height = s_embedSize;
+        xcb_send_event(c, false, m_windowId, XCB_EVENT_MASK_STRUCTURE_NOTIFY, (char *) &event);
+
+        const uint32_t windowMoveConfigVals[2] = { s_embedSize, s_embedSize };
+        xcb_configure_window(c, m_windowId,
+                             XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT,
+                             windowMoveConfigVals);
+
+        clientWindowSize = QSize(s_embedSize, s_embedSize);
+    }
+
+    return clientWindowSize;
+}
+
 void sni_cleanup_xcb_image(void *data) {
     xcb_image_destroy(static_cast<xcb_image_t*>(data));
 }
@@ -277,15 +283,10 @@ bool SNIProxy::isTransparentImage(const QImage& image) const
 QImage SNIProxy::getImageNonComposite() const
 {
     auto c = QX11Info::connection();
-    auto cookie = xcb_get_geometry(c, m_windowId);
-    QScopedPointer<xcb_get_geometry_reply_t, QScopedPointerPodDeleter>
-        geom(xcb_get_geometry_reply(c, cookie, nullptr));
 
-    if (!geom) {
-        return QImage();
-    }
+    QSize clientWindowSize = calculateClientWindowSize();
 
-    xcb_image_t *image = xcb_image_get(c, m_windowId, 0, 0, geom->width, geom->height, 0xFFFFFFFF, XCB_IMAGE_FORMAT_Z_PIXMAP);
+    xcb_image_t *image = xcb_image_get(c, m_windowId, 0, 0, clientWindowSize.width(), clientWindowSize.height(), 0xFFFFFFFF, XCB_IMAGE_FORMAT_Z_PIXMAP);
 
     // Don't hook up cleanup yet, we may use a different QImage after all
     QImage naiveConversion;
