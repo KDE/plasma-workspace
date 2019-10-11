@@ -160,7 +160,7 @@ public:
     void updateStruts();
 
     /*This is different from screen() as is always there, even if the window is
-      temporarly outside the screen or if is hidden: only plasmashell will ever
+      temporarily outside the screen or if is hidden: only plasmashell will ever
       change this property, unlike QWindow::screen()*/
     void setScreenToFollow(QScreen* screen);
     QScreen* screenToFollow() const;

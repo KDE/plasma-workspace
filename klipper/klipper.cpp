@@ -69,7 +69,7 @@ namespace {
      *
      * This avoids issues such as mouse-selections that immediately
      * disappear.
-     * pattern: Resource Acqusition is Initialisation (RAII)
+     * pattern: Resource Acquisition is Initialisation (RAII)
      *
      * (This is not threadsafe, so don't try to use such in threaded
      * applications).

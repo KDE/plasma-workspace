@@ -105,7 +105,7 @@ private:
      */
     void adjustToItemSizeHints(ItemContainer *item);
 
-    // What is the item that occupies the point. The point is expressed in cells rather than pixels. a qpair rather a QPointF as QHash doesn't support indicization by QPointF
+    // What is the item that occupies the point. The point is expressed in cells rather than pixels. a qpair rather a QPointF as QHash doesn't support identification by QPointF
     QHash <QPair<int, int>, ItemContainer *> m_grid;
     QHash <ItemContainer *, QSet<QPair<int, int> > > m_pointsForItem;
 

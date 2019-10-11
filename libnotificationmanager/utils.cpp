@@ -73,7 +73,7 @@ QString Utils::desktopEntryFromPid(uint pid)
 
 QModelIndex Utils::mapToModel(const QModelIndex &idx, const QAbstractItemModel *sourceModel)
 {
-    // KModelIndexProxyMapper can only map diferent indices to a single source
+    // KModelIndexProxyMapper can only map different indices to a single source
     // but we have the other way round, a single index that splits into different source models
     QModelIndex resolvedIdx = idx;
     while (resolvedIdx.isValid() && resolvedIdx.model() != sourceModel) {

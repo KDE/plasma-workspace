@@ -392,7 +392,7 @@ void ItemContainer::geometryChanged(const QRectF &newGeometry, const QRectF &old
 void ItemContainer::componentComplete()
 {
     if (!m_contentItem) {
-        //qWarning()<<"Creting default contentItem";
+        //qWarning()<<"Creating default contentItem";
         m_contentItem = new QQuickItem(this);
         syncChildItemsGeometry(size());
     }

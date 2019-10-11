@@ -101,7 +101,7 @@ class ActionDetailModel : public QAbstractTableModel {
             DESCRIPTION_COL = 2
         };
         QList<ClipCommand> m_commands;
-        QVariant displayData(ClipCommand* command, column_t colunm) const;
+        QVariant displayData(ClipCommand* command, column_t column) const;
         QVariant editData(ClipCommand* command, column_t column) const;
         QVariant decorationData(ClipCommand* command, column_t column) const;
         void setIconForCommand(ClipCommand& cmd);

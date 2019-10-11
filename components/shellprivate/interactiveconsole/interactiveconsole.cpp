@@ -55,7 +55,7 @@
 #include <KPackage/PackageLoader>
 
 //TODO:
-// interative help?
+// interactive help?
 static const QString s_autosaveFileName(QStringLiteral("interactiveconsoleautosave.js"));
 static const QString s_kwinService = QStringLiteral("org.kde.KWin");
 

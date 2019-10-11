@@ -62,11 +62,11 @@ void NotificationTest::parse_data()
 
     QTest::newRow("image remote URL") << "This is <img src=\"http://foo.com/boo.png\" alt=\"cheese\" /> and more text" << "This is <img alt=\"cheese\"/> and more text";
 
-    //more bad formatted options. To some extent actual output doesn't matter. Garbage in, garbabe out.
+    //more bad formatted options. To some extent actual output doesn't matter. Garbage in, garbage out.
     //the important thing is that it doesn't contain anything that could be parsed as the remote URL
     QTest::newRow("image remote URL no close") << "This is <img src=\"http://foo.com/boo.png>\" alt=\"cheese\">  and more text" << "This is <img alt=\"cheese\"> and more text</img>";
     QTest::newRow("image remote URL double open") << "This is <<img src=\"http://foo.com/boo.png>\"  and more text" << "This is ";
-    QTest::newRow("image remote URL no entitiy close") << "This is <img src=\"http://foo.com/boo.png\"  and more text" << "This is ";
+    QTest::newRow("image remote URL no entity close") << "This is <img src=\"http://foo.com/boo.png\"  and more text" << "This is ";
     QTest::newRow("image remote URL space in element name") << "This is < img src=\"http://foo.com/boo.png\" alt=\"cheese\" /> and more text" << "This is ";
 
     QTest::newRow("link") << "This is a link <a href=\"http://foo.com/boo\"/> and more text" << "This is a link <a href=\"http://foo.com/boo\"/> and more text";

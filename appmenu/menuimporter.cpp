@@ -69,7 +69,7 @@ void MenuImporter::RegisterWindow(WId id, const QDBusObjectPath& path)
     KWindowInfo info(id, NET::WMWindowType, NET::WM2WindowClass);
     NET::WindowTypes mask = NET::AllTypesMask;
 
-    // Menu can try to register, right click in gimp for exemple
+    // Menu can try to register, right click in gimp for example
     if (info.windowType(mask) & (NET::Menu|NET::DropdownMenu|NET::PopupMenu)) {
         return;
     }

@@ -448,7 +448,7 @@ QJSValue ScriptEngine::V1::desktops() const
 
     for (const auto c : result) {
         // make really sure we get actual desktops, so check for a non empty
-        // activty id
+        // activity id
         if (!isPanel(c) && !c->activity().isEmpty()) {
             containments.setProperty(count, m_engine->wrap(c));
             ++count;

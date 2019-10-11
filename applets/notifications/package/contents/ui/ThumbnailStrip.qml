@@ -33,7 +33,7 @@ MouseArea {
     id: thumbnailArea
 
     // The protocol supports multiple URLs but so far it's only used to show
-    // a single preview image, so this code is simplified a lot to accomodate
+    // a single preview image, so this code is simplified a lot to accommodate
     // this usecase and drops everything else (fallback to app icon or ListView
     // for multiple files)
     property var urls

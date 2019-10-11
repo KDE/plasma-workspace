@@ -301,7 +301,7 @@ public:
      * The sort mode used in sorting tasks. Defaults to SortAlpha.
      *
      * @see setSortMode
-     * @returns the curent sort mode.
+     * @returns the current sort mode.
      **/
     SortMode sortMode() const;
 

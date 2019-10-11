@@ -170,7 +170,7 @@ ColumnLayout{
                             if (dndMenu.date.getDay() >= 5) {
                                 d = dndMenu.date;
                                 d.setHours(dndMorningHour);
-                                // wraps around if neccessary
+                                // wraps around if necessary
                                 d.setDate(d.getDate() + (7 - d.getDay() + 1));
                                 d.setMinutes(0);
                                 d.setSeconds(0);

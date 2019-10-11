@@ -565,7 +565,7 @@ void PanelView::restore()
     }
 
     // All the defaults are based on whatever are the current values
-    // so won't be weirdly resetted after screen resolution change
+    // so won't be weirdly reset after screen resolution change
 
     //alignment is not resolution dependent
     //but if fails read it from the resolution dependent one as
@@ -576,7 +576,7 @@ void PanelView::restore()
     // All the other values are read from screen independent values,
     // but fallback on the screen independent section, as is the only place
     // is safe to directly write during plasma startup, as there can be 
-    // resolutoin changes
+    // resolution changes
     m_offset = readConfigValueWithFallBack("offset", m_offset);
     if (m_alignment != Qt::AlignCenter) {
         m_offset = qMax(0, m_offset);

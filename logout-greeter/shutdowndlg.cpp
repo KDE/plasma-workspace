@@ -127,7 +127,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow* parent,
     context->setContextProperty(QStringLiteral("spdMethods"), mapSpdMethods);
     context->setContextProperty(QStringLiteral("canLogout"), KAuthorized::authorize(QStringLiteral("logout")));
 
-    // Trying to access a non-existant context property throws an error, always create the property and then update it later
+    // Trying to access a non-existent context property throws an error, always create the property and then update it later
     context->setContextProperty("rebootToFirmwareSetup", false);
 
     QDBusMessage message = QDBusMessage::createMethodCall(s_login1Service, s_login1Path, s_dbusPropertiesInterface, QStringLiteral("Get"));

@@ -203,7 +203,7 @@ void TasksModel::Private::initModels()
             // This is particularly useful in concert with taskmanagerrulesrc's SkipTaskbar
             // key, which is used to hide window tasks which update from bogus to useful
             // window metadata early in startup. The role change then coincides with positive
-            // app identication, which is when updateManualSortMap() becomes able to sort the
+            // app identification, which is when updateManualSortMap() becomes able to sort the
             // task adjacent to its launcher when required to do so.
             if (sortMode == SortManual && roles.contains(AbstractTasksModel::SkipTaskbar)) {
                 updateManualSortMap();
@@ -930,7 +930,7 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
         case SortActivity: {
             // updateActivityTaskCounts() counts the number of window tasks on each
             // activity. This will sort tasks by comparing a cumulative score made
-            // up of the task counts for each acvtivity a task is assigned to, and
+            // up of the task counts for each activity a task is assigned to, and
             // otherwise fall through to alphabetical sorting.
             int leftScore = -1;
             int rightScore = -1;
@@ -1719,7 +1719,7 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
 
         // Move launcher for launcher-backed task along with task if launchers
         // are not being kept separate.
-        // We don't need to resort again because the launcher is implictly hidden
+        // We don't need to resort again because the launcher is implicitly hidden
         // at this time.
         if (!idx.data(AbstractTasksModel::IsLauncher).toBool()) {
             const int launcherPos = d->launcherTasksModel->launcherPosition(launcherUrl);

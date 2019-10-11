@@ -39,15 +39,15 @@
 #include <Plasma/PluginLoader>
 
 
-CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containment *cotainment, QObject *parent)
+CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containment *containment, QObject *parent)
     : QStandardItemModel(parent),
-      m_containment(cotainment),
+      m_containment(containment),
       m_tempConfigParent(QString(), KConfig::SimpleConfig)
 {
     m_baseCfg = KConfigGroup(m_containment->corona()->config(), "ActionPlugins");
     m_baseCfg = KConfigGroup(&m_baseCfg, QString::number(m_containment->containmentType()));
 
-    QHash<QString, Plasma::ContainmentActions*> actions = cotainment->containmentActions();
+    QHash<QString, Plasma::ContainmentActions*> actions = containment->containmentActions();
 
     QHashIterator<QString, Plasma::ContainmentActions*> i(actions);
     while (i.hasNext()) {

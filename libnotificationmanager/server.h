@@ -155,7 +155,7 @@ Q_SIGNALS:
     void notificationRemoved(uint id, CloseReason reason);
 
     /**
-     * Emitted when the inhbited state changed.
+     * Emitted when the inhibited state changed.
      */
     void inhibitedChanged(bool inhibited);
 

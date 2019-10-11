@@ -224,7 +224,7 @@ void ContextMenu::startLogout()
 {
     // this short delay is due to two issues:
     // a) KWorkSpace's DBus alls are all synchronous
-    // b) the destrution of the menu that this action is in is delayed
+    // b) the destruction of the menu that this action is in is delayed
     //
     // (a) leads to the menu hanging out where everyone can see it because
     // the even loop doesn't get returned to allowing it to close.

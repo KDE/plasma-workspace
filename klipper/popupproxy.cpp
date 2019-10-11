@@ -117,7 +117,7 @@ void PopupProxy::tryInsertItem( HistoryItem const * const item,
     // It would be much easier to use QMenu::initStyleOptions. But that is protected, so until we have a better
     // excuse to subclass that, I'd rather implement this manually.
     // Note 2 properties, tabwidth and maxIconWidth, are not available from the public interface, so those are left out (probably not 
-    // important for height. Also, Exlsive checkType is disregarded as  I don't think we will ever use it)
+    // important for height. Also, Exclusive checkType is disregarded as  I don't think we will ever use it)
     style_options.initFrom(m_proxy_for_menu);
     style_options.checkType = action->isCheckable() ? QStyleOptionMenuItem::NonExclusive : QStyleOptionMenuItem::NotCheckable;
     style_options.checked = action->isChecked();

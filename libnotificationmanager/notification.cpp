@@ -41,8 +41,6 @@
 
 #include "debug.h"
 
-#include "notifications.h"
-
 using namespace NotificationManager;
 
 Notification::Private::Private()

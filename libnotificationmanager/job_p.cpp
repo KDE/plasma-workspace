@@ -38,8 +38,6 @@
 #include "jobviewv2adaptor.h"
 #include "jobviewv3adaptor.h"
 
-#include <QDebug>
-
 using namespace NotificationManager;
 
 JobPrivate::JobPrivate(uint id, QObject *parent)

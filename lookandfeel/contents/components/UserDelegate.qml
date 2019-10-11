@@ -118,7 +118,7 @@ Item {
 
         property var colorBorder: PlasmaCore.ColorScope.textColor
 
-        //draw a circle with an antialised border
+        //draw a circle with an antialiased border
         //innerRadius = size of the inner circle with contents
         //outerRadius = size of the border
         //blend = area to blend between two colours

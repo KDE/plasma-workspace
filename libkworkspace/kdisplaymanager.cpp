@@ -377,7 +377,7 @@ KDisplayManager::exec(const char *cmd)
  * @param buf the result buffer.
  * @return result:
  *  @li If true, the command was successfully executed.
- *   @p ret might contain addional results.
+ *   @p ret might contain additional results.
  *  @li If false and @p ret is empty, a communication error occurred
  *   (most probably KDM is not running).
  *  @li If false and @p ret is non-empty, it contains the error message
