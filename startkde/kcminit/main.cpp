@@ -79,17 +79,27 @@ bool KCMInit::runModule(const QString &libName, KService::Ptr service)
     else
         kcminit = KCMINIT_PREFIX + libName;
 
-    // get the kcminit_ function
-    QFunctionPointer init = QLibrary::resolve(KPluginLoader::findPlugin(libName), kcminit.toUtf8().constData());
-    if (init) {
-        // initialize the module
-        qDebug() << "Initializing " << libName << ": " << kcminit;
-        init();
-        return true;
-    } else {
-        qWarning() << "Module" << libName << "was not found or does not actually have a kcminit function";
+    QString path = KPluginLoader::findPlugin(libName);
+    if (path.isEmpty()) {
+        path = KPluginLoader::findPlugin(QStringLiteral("kcms/") + libName);
     }
-    return false;
+
+    if (path.isEmpty()) {
+        qWarning() << "Module" << libName << "was not found";
+        return false;
+    }
+
+    // get the kcminit_ function
+    QFunctionPointer init = QLibrary::resolve(path, kcminit.toUtf8().constData());
+    if (!init) {
+        qWarning() << "Module" << libName << "does not actually have a kcminit function";
+        return false;
+    }
+
+    // initialize the module
+    qDebug() << "Initializing " << libName << ": " << kcminit;
+    init();
+    return true;
 }
 
 void KCMInit::runModules( int phase )
