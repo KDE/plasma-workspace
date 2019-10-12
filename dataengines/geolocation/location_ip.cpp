@@ -24,7 +24,6 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
-#include <QJsonArray>
 #include <QUrl>
 #include <KJob>
 #include <KIO/Job>
