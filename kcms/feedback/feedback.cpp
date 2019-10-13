@@ -53,10 +53,11 @@ Feedback::~Feedback() = default;
 
 void Feedback::load()
 {
-    KUserFeedback::Provider p;
+    setFeedbackEnabled(m_globalConfig->group("UserFeedback").readEntry("Enabled", false));
 
-    setFeedbackEnabled(m_globalConfig->group("UserFeedback").readEntry("Enabled", p.isEnabled()));
-    setPlasmaFeedbackLevel(m_plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::BasicUsageStatistics)));
+    // See 412913. global killswitch is off by default, therefore globally we're enabled by default :/
+    // default to Plama off by default until that situation is resolved to be double sure no user accidentally sends anything
+    setPlasmaFeedbackLevel(m_plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::NoTelemetry)));
     setNeedsSave(false);
 }
 
