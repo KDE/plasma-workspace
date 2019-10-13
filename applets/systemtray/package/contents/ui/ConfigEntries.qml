@@ -23,8 +23,6 @@ import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kquickcontrols 2.0 as KQC
 import org.kde.kirigami 2.5 as Kirigami
