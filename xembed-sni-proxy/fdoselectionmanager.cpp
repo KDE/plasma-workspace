@@ -28,7 +28,6 @@
 #include <QTextDocument>
 #include <QX11Info>
 
-#include <KWindowSystem>
 #include <KSelectionOwner>
 
 #include <xcb/xcb.h>
@@ -187,8 +186,7 @@ void FdoSelectionManager::onClaimedOwnership()
 {
     qCDebug(SNIPROXY) << "Manager selection claimed";
 
-    connect(KWindowSystem::self(), &KWindowSystem::compositingChanged, this, &FdoSelectionManager::compositingChanged);
-    compositingChanged();
+    setSystemTrayVisual();
 }
 
 void FdoSelectionManager::onFailedToClaimOwnership()
@@ -200,37 +198,34 @@ void FdoSelectionManager::onFailedToClaimOwnership()
 void FdoSelectionManager::onLostOwnership()
 {
     qCWarning(SNIPROXY) << "lost ownership of Systray Manager";
-    disconnect(KWindowSystem::self(), &KWindowSystem::compositingChanged, this, &FdoSelectionManager::compositingChanged);
     qApp->exit(-1);
 }
 
-void FdoSelectionManager::compositingChanged()
+void FdoSelectionManager::setSystemTrayVisual()
 {
     xcb_connection_t *c = QX11Info::connection();
     auto screen = xcb_setup_roots_iterator(xcb_get_setup(c)).data;
     auto trayVisual = screen->root_visual;
-    if (KWindowSystem::compositingActive()) {
-        xcb_depth_iterator_t depth_iterator = xcb_screen_allowed_depths_iterator(screen);
-        xcb_depth_t *depth = nullptr;
+    xcb_depth_iterator_t depth_iterator = xcb_screen_allowed_depths_iterator(screen);
+    xcb_depth_t *depth = nullptr;
 
-        while (depth_iterator.rem) {
-            if (depth_iterator.data->depth == 32) {
-                depth = depth_iterator.data;
+    while (depth_iterator.rem) {
+        if (depth_iterator.data->depth == 32) {
+            depth = depth_iterator.data;
+            break;
+        }
+        xcb_depth_next(&depth_iterator);
+    }
+
+    if (depth) {
+        xcb_visualtype_iterator_t visualtype_iterator = xcb_depth_visuals_iterator(depth);
+        while (visualtype_iterator.rem) {
+            xcb_visualtype_t *visualtype = visualtype_iterator.data;
+            if (visualtype->_class == XCB_VISUAL_CLASS_TRUE_COLOR) {
+                trayVisual = visualtype->visual_id;
                 break;
             }
-            xcb_depth_next(&depth_iterator);
-        }
-
-        if (depth) {
-            xcb_visualtype_iterator_t visualtype_iterator = xcb_depth_visuals_iterator(depth);
-            while (visualtype_iterator.rem) {
-                xcb_visualtype_t *visualtype = visualtype_iterator.data;
-                if (visualtype->_class == XCB_VISUAL_CLASS_TRUE_COLOR) {
-                    trayVisual = visualtype->visual_id;
-                    break;
-                }
-                xcb_visualtype_next(&visualtype_iterator);
-            }
+            xcb_visualtype_next(&visualtype_iterator);
         }
     }
 
