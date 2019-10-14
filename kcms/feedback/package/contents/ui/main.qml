@@ -75,9 +75,17 @@ SimpleKCM {
                 stepSize: 1
                 snapMode: QQC2.Slider.SnapAlways
 
+                function findIndex(array, what) {
+                    for (var v in array) {
+                        if (array[v] == what)
+                            return v;
+                    }
+                    return null;
+                }
+
                 Component.onCompleted: {
-                    var idx = modeOptions.findIndex(kcm.plasmaFeedbackLevel)
-                    value = idx < 0 ? 2 : modeOptions[idx]
+                    var idx = findIndex(modeOptions, kcm.plasmaFeedbackLevel)
+                    value = idx===null ? 2 : modeOptions[idx]
                 }
 
                 onMoved: {
