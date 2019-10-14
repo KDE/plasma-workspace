@@ -110,7 +110,7 @@ Item {
                     x: dummyCheckbox.width
                     QIconItem {
                         icon: model.decoration
-                        width: units.iconSizes.small
+                        width: Kirigami.Units.iconSizes.small
                         height: width
                     }
                     QtControls.Label {
