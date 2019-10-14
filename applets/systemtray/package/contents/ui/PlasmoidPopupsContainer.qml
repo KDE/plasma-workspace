@@ -20,6 +20,8 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.4
+//needed for units
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 StackView {
     id: mainStack
