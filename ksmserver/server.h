@@ -84,7 +84,7 @@ public:
         NoLockScreen = 1 << 2
     };
     Q_DECLARE_FLAGS(InitFlags, InitFlag)
-    KSMServer( const QString& windowManager, InitFlags flags );
+    KSMServer( InitFlags flags );
     ~KSMServer() override;
 
     static KSMServer* self();
@@ -105,7 +105,6 @@ public:
     void ioError( IceConn iceConn );
 
     // notification
-    void clientSetProgram( KSMClient* client );
     void clientRegistered( const char* previousId );
 
     // public API
@@ -120,11 +119,9 @@ public:
     void setupShortcuts();
 
 Q_SIGNALS:
-    void windowManagerLoaded();
     void logoutCancelled();
 
 public Q_SLOTS:
-
     void cleanUp();
 
 private Q_SLOTS:
@@ -133,9 +130,6 @@ private Q_SLOTS:
 
     void protectionTimeout();
     void timeoutQuit();
-    void timeoutWMQuit();
-
-    void wmProcessChange();
 
     void defaultLogout();
     void logoutWithoutConfirmation();
@@ -163,16 +157,11 @@ private:
     void startProtection();
     void endProtection();
 
-    void launchWM( const QList< QStringList >& wmStartCommands );
-
     KProcess* startApplication( const QStringList& command,
         const QString& clientMachine = QString(),
-        const QString& userId = QString(),
-        bool wm = false );
+        const QString& userId = QString());
     void executeCommand( const QStringList& command );
 
-    bool isWM( const KSMClient* client ) const;
-    bool isWM( const QString& program ) const;
     bool defaultSession() const; // empty session
     void setupXIOErrorHandler();
 
@@ -232,9 +221,6 @@ private:
 
     bool clean;
     KSMClient* clientInteracting;
-    QString wm;
-    QStringList wmCommands;
-    KProcess* wmProcess;
     QString sessionGroup;
     QString sessionName;
     QTimer protectionTimer;

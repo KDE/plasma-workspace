@@ -253,29 +253,6 @@ void KSMServer::restoreLegacySession( KConfig* config )
     if( config->hasGroup( QStringLiteral( "Legacy" ) + sessionGroup )) {
         KConfigGroup group( config, QStringLiteral( "Legacy" ) + sessionGroup );
         restoreLegacySessionInternal( &group );
-    } else if( wm == QLatin1String( "kwin" ) ) { // backwards comp. - get it from kwinrc
-        KConfigGroup group( config, sessionGroup );
-        int count =  group.readEntry( "count", 0 );
-        for ( int i = 1; i <= count; i++ ) {
-            QString n = QString::number(i);
-            if ( !isWM( group.readEntry( QStringLiteral("program")+n, QString())))
-                continue;
-            QStringList restartCommand =
-                group.readEntry( QStringLiteral("restartCommand")+n, QStringList() );
-            for( QStringList::ConstIterator it = restartCommand.constBegin();
-                it != restartCommand.constEnd();
-                ++it ) {
-                if( (*it) == QLatin1String( "-session" ) ) {
-                    ++it;
-                    if( it != restartCommand.constEnd()) {
-                        KConfig cfg( QStringLiteral( "session/" ) + wm +
-                                     QLatin1Char( '_' ) + (*it) );
-                        KConfigGroup group(&cfg, "LegacySession");
-                        restoreLegacySessionInternal( &group, ' ' );
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -288,8 +265,6 @@ void KSMServer::restoreLegacySessionInternal( KConfigGroup* config, char sep )
                 config->readEntry( QStringLiteral("command")+n, QStringList() ) :
                 KShell::splitArgs( config->readEntry( QStringLiteral("command")+n, QString() ) ); // close enough(?)
         if( wmCommand.isEmpty())
-            continue;
-        if( isWM( wmCommand.first()))
             continue;
         startApplication( wmCommand,
                         config->readEntry( QStringLiteral("clientMachine")+n, QString() ),

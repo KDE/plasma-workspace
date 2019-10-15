@@ -47,6 +47,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KProcess>
 #include <KService>
 #include <KConfigGroup>
+#include <KWindowSystem>
 
 #include <phonon/audiooutput.h>
 #include <phonon/mediaobject.h>
@@ -86,6 +87,24 @@ public:
 
 protected:
     const AutoStart m_autostart;
+};
+
+class InitialSetupPhase: public Phase
+{
+Q_OBJECT
+public:
+    InitialSetupPhase(const AutoStart& autostart, QObject *parent) : Phase(autostart, parent)
+    {}
+    void start() override {
+        if (KWindowSystem::isPlatformX11()) {
+            addSubjob(new StartServiceJob(QStringLiteral("kwin_x11"), {}, QStringLiteral("org.kde.KWin")));
+        }
+        
+        // forward all our arguments to ksmserver for compatibility
+        QStringList arguments = qApp->arguments();
+        arguments.removeFirst();
+        addSubjob(new StartServiceJob(QStringLiteral("ksmserver"), arguments, QStringLiteral("org.kde.ksmserver")));
+    }
 };
 
 class StartupPhase0: public Phase
@@ -206,19 +225,13 @@ Startup::Startup(QObject *parent):
 
     const AutoStart autostart;
 
+    auto initialSetup = new InitialSetupPhase(autostart, this);
     auto phase0 = new StartupPhase0(autostart, this);
     auto phase1 = new StartupPhase1(autostart, this);
     auto phase2 = new StartupPhase2(autostart, this);
     auto restoreSession = new RestoreSessionJob();
 
-    // this includes starting kwin (currently)
-    // forward our arguments into ksmserver to match startplasma expectations
-    QStringList arguments = qApp->arguments();
-    arguments.removeFirst();
-    auto ksmserverJob = new StartServiceJob(QStringLiteral("ksmserver"), arguments, QStringLiteral("org.kde.ksmserver"));
-
-    connect(ksmserverJob, &KJob::finished, phase0, &KJob::start);
-
+    connect(initialSetup, &KJob::finished, phase0, &KJob::start);
     connect(phase0, &KJob::finished, phase1, &KJob::start);
 
     connect(phase1, &KJob::finished, restoreSession, &KJob::start);
@@ -231,7 +244,7 @@ Startup::Startup(QObject *parent):
         loginSound->start();});
     connect(phase2, &KJob::finished, this, &Startup::finishStartup);
 
-    ksmserverJob->start();
+    initialSetup->start();
 }
 
 void Startup::upAndRunning( const QString& msg )
