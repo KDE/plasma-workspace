@@ -2,7 +2,7 @@
 Type=XSession
 Exec=@CMAKE_INSTALL_FULL_LIBEXECDIR@/startplasma-dev.sh -x11
 DesktopNames=KDE
-Name=Plasma (Development ${CMAKE_INSTALL_FULL_BINDIR})
+Name=Plasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ca]=Plasma (Desenvolupament ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ca@valencia]=Plasma (Desenvolupament ${CMAKE_INSTALL_FULL_BINDIR})
 Name[de]=Plasma (Development ${CMAKE_INSTALL_FULL_BINDIR})
