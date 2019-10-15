@@ -98,7 +98,7 @@ MenuProxy::MenuProxy()
         enableGtkSettings(false);
     }
 
-    // kde-gtk-config just deletes and re-creates the gtkrc-2.0, watch this and add out config to it again
+    // kde-gtk-config just deletes and re-creates the gtkrc-2.0, watch this and add our config to it again
     m_writeGtk2SettingsTimer->setSingleShot(true);
     m_writeGtk2SettingsTimer->setInterval(1000);
     connect(m_writeGtk2SettingsTimer, &QTimer::timeout, this, &MenuProxy::writeGtk2Settings);
@@ -178,9 +178,15 @@ QString MenuProxy::gtk3SettingsIniPath()
 
 void MenuProxy::writeGtk2Settings()
 {
+    QFile rcFile(gtkRc2Path());
+    if (!rcFile.exists()) {
+        // Don't create it here, that would break writing default GTK-2.0 settings on first login,
+        // as the gtkbreeze kconf_update script only does so if it does not exist
+        return;
+    }
+
     qCDebug(DBUSMENUPROXY) << "Writing gtkrc-2.0 to" << (m_enabled ? "enable" : "disable") << "global menu support";
 
-    QFile rcFile(gtkRc2Path());
     if (!rcFile.open(QIODevice::ReadWrite | QIODevice::Text)) {
         return;
     }
