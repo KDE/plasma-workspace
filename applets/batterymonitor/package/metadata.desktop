@@ -164,7 +164,7 @@ Keywords[x-test]=xxPower Managementxx;xxBatteryxx;xxSystemxx;xxEnergyxx;
 Keywords[zh_CN]=电源管理;电池;系统;能源;
 Keywords[zh_TW]=Power Management;Battery;System;Energy;
 
-Icon=battery
+Icon=battery-full
 Type=Service
 X-KDE-ServiceTypes=Plasma/Applet
 
