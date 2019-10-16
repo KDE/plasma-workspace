@@ -34,6 +34,7 @@ Column {
 
     property alias count: notificationsRepeater.count
     readonly property int historyCount: historyList.count
+    property alias historyModel: notificationsHistoryModel
     
     property bool showHistory: plasmoid.configuration.showHistory
     
@@ -276,13 +277,6 @@ Column {
 
     // History stuff
     // The history is shown outside in a ListView
-    Binding {
-        target: historyList
-        property: "model"
-        value: notificationsHistoryModel
-        when: showHistory
-    }
-
     Binding {
         target: historyList
         property: "delegate"

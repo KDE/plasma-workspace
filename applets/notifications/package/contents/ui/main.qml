@@ -117,7 +117,15 @@ MouseEventListener {
             id: historyList
 
             // The history stuff is quite entangled with regular notifications, so
-            // model and delegate are set by Bindings {} inside Notifications.qml
+            // we have to dive into the header item's notification loader to get it
+
+            // NOTE Previously this was done by a Binding {} in Notifications, however
+            // since Qt 5.12.5 changing the model causes ListView to recreate its header
+            // items (among other things) causing infinite recursion until it aborts
+            // item creation. Since the NotificationPopup {} is also created in Notifications
+            // this will then leave the NotificationsHelper try to access a null
+            // popup and crash.
+            model: headerItem && headerItem.notifications && headerItem.notifications.historyModel ? headerItem.notifications.historyModel : null
 
             header: Column {
                 property alias jobs: jobsLoader.item
