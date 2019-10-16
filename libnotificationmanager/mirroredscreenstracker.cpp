@@ -84,7 +84,7 @@ void MirroredScreensTracker::checkScreensMirrored()
         }
 
         for (const KScreen::OutputPtr &checkOutput : outputs) {
-            if (checkOutput == output) {
+            if (checkOutput == output || !checkOutput->isConnected() || !checkOutput->isEnabled()) {
                 continue;
             }
 
