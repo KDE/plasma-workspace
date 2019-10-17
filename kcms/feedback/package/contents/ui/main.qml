@@ -96,6 +96,7 @@ SimpleKCM {
 
             UserFeedback.FeedbackConfigUiController {
                 id: feedbackController
+                applicationName: i18n("Plasma")
             }
 
             Kirigami.Heading {
