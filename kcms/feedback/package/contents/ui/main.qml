@@ -69,7 +69,8 @@ SimpleKCM {
                 enabled: kcm.feedbackEnabled
                 Layout.fillWidth: true
 
-                readonly property var modeOptions: [UserFeedback.Provider.BasicSystemInformation, UserFeedback.Provider.BasicUsageStatistics, UserFeedback.Provider.DetailedSystemInformation, UserFeedback.Provider.DetailedUsageStatistics]
+                readonly property var modeOptions: [UserFeedback.Provider.NoTelemetry, UserFeedback.Provider.BasicSystemInformation, UserFeedback.Provider.BasicUsageStatistics,
+                                                    UserFeedback.Provider.DetailedSystemInformation, UserFeedback.Provider.DetailedUsageStatistics]
                 from: 0
                 to: modeOptions.length - 1
                 stepSize: 1

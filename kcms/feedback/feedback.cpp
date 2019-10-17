@@ -53,10 +53,10 @@ Feedback::~Feedback() = default;
 
 void Feedback::load()
 {
-    setFeedbackEnabled(m_globalConfig->group("UserFeedback").readEntry("Enabled", false));
+    //The global kill switch is off by default, all KDE components should default to KUserFeedback::Provider::NoTelemetry
+    KUserFeedback::Provider p;
+    setFeedbackEnabled(p.isEnabled());
 
-    // See 412913. global killswitch is off by default, therefore globally we're enabled by default :/
-    // default to Plama off by default until that situation is resolved to be double sure no user accidentally sends anything
     setPlasmaFeedbackLevel(m_plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::NoTelemetry)));
     setNeedsSave(false);
 }
@@ -72,8 +72,8 @@ void Feedback::save()
 
 void Feedback::defaults()
 {
-    setFeedbackEnabled(false);
-    setPlasmaFeedbackLevel(KUserFeedback::Provider::BasicUsageStatistics);
+    setFeedbackEnabled(true);
+    setPlasmaFeedbackLevel(KUserFeedback::Provider::NoTelemetry);
 }
 
 #include "feedback.moc"
