@@ -24,6 +24,8 @@
 #include <QRandomGenerator>
 #include <QFileInfo>
 
+#include <algorithm>
+
 SlideFilterModel::SlideFilterModel(QObject* parent)
     : QSortFilterProxyModel{parent}
     , m_SortingMode{Image::Random}
@@ -39,11 +41,43 @@ bool SlideFilterModel::filterAcceptsRow(int source_row, const QModelIndex& sourc
     return m_usedInConfig || index.data(BackgroundListModel::ToggleRole).toBool();
 }
 
+void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
+{
+    if (this->sourceModel()) {
+        disconnect(this->sourceModel(), nullptr, this, nullptr);
+    }
+    QSortFilterProxyModel::setSourceModel(sourceModel);
+    if (m_SortingMode == Image::Random && !m_usedInConfig) {
+        buildRandomOrder();
+    }
+    if(sourceModel) {
+        connect(sourceModel, &QAbstractItemModel::rowsInserted, this, [this] {
+            if (m_SortingMode !=  Image::Random || m_usedInConfig) {
+                return;
+            }
+            const int old_count = m_randomOrder.size();
+            m_randomOrder.resize(this->sourceModel()->rowCount());
+            std::iota(m_randomOrder.begin() + old_count, m_randomOrder.end(), old_count);
+        });
+        connect(sourceModel, &QAbstractItemModel::rowsRemoved, this, [this] {
+            if (m_SortingMode !=  Image::Random || m_usedInConfig) {
+                return;
+            }
+            m_randomOrder.erase(std::remove_if(m_randomOrder.begin(), m_randomOrder.end(), [this] (const int v) {
+                return v >= this->sourceModel()->rowCount();
+            }), m_randomOrder.end());
+        });
+    }
+}
+
 bool SlideFilterModel::lessThan(const QModelIndex& source_left, const QModelIndex& source_right) const
 {
         switch (m_SortingMode) {
         case Image::Random:
-            return (*QRandomGenerator::system())() % 2 == 0;
+            if (m_usedInConfig) {
+                return source_left.row() < source_right.row();
+            }
+            return m_randomOrder.indexOf(source_left.row()) < m_randomOrder.indexOf(source_right.row());
         case Image::Alphabetical:
             return QSortFilterProxyModel::lessThan(source_left, source_right);
         case Image::AlphabeticalReversed:
@@ -66,10 +100,18 @@ bool SlideFilterModel::lessThan(const QModelIndex& source_left, const QModelInde
 
 void SlideFilterModel::setSortingMode(Image::SlideshowMode mode)
 {
-    m_SortingMode = mode;
-    if (!(m_usedInConfig && mode == Image::Random)) {
-        QSortFilterProxyModel::invalidate();
+    if (m_SortingMode == Image::Random && !m_usedInConfig) {
+        buildRandomOrder();
     }
+    QSortFilterProxyModel::invalidate();
+}
+
+void SlideFilterModel::invalidate()
+{
+    if (m_SortingMode == Image::Random && !m_usedInConfig) {
+        std::random_shuffle(m_randomOrder.begin(), m_randomOrder.end());
+    }
+    QSortFilterProxyModel::invalidate();
 }
 
 void SlideFilterModel::invalidateFilter()
@@ -87,4 +129,13 @@ void SlideFilterModel::openContainingFolder(int rowIndex)
 {
     auto sourceIndex = mapToSource(index(rowIndex, 0));
     static_cast<SlideModel*>(sourceModel())->openContainingFolder(sourceIndex.row());
+}
+
+void SlideFilterModel::buildRandomOrder()
+{
+    if (sourceModel()) {
+        m_randomOrder.resize(sourceModel()->rowCount());
+        std::iota(m_randomOrder.begin(), m_randomOrder.end(), 0);
+        std::random_shuffle(m_randomOrder.begin(), m_randomOrder.end());
+    }
 }
