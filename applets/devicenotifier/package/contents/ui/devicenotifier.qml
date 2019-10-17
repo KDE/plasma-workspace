@@ -100,8 +100,11 @@ Item {
         source: devicenotifier.popupIcon
         width: units.iconSizes.medium;
         height: units.iconSizes.medium;
+        active: compactMouse.containsMouse
         MouseArea {
+            id: compactMouse
             anchors.fill: parent
+            hoverEnabled: true
             onClicked: plasmoid.expanded = !plasmoid.expanded
         }
     }
