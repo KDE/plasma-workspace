@@ -32,15 +32,15 @@ SimpleKCM {
     leftPadding: width * 0.1
     rightPadding: leftPadding
 
-    ColumnLayout {
 
-        QQC2.CheckBox {
-            Layout.topMargin: Kirigami.Units.gridUnit
-            Layout.bottomMargin: Kirigami.Units.gridUnit
-            Layout.alignment: Qt.AlignHCenter
-            checked: kcm.feedbackEnabled
-            onToggled: kcm.feedbackEnabled = checked
-            text: i18n("Allow KDE software to collect anonymous usage information")
+    ColumnLayout {
+        Kirigami.InlineMessage {
+            id: infoLabel
+            Layout.fillWidth: true
+
+            type: Kirigami.MessageType.Information
+            visible: !form.enabled
+            text: i18n("User Feedback has been disabled centrally. Please contact your distributor.")
         }
 
         QQC2.Label {
@@ -48,7 +48,7 @@ SimpleKCM {
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
             wrapMode: Text.WordWrap
-            text: xi18nc("@info", "You can help us improve this software by sharing information about how you use it. This allows us to focus on things that matter to you.<nl/><nl/>Contributing usage information is optional and entirely anonymous. It will not associate the data with any kind of unique identifier, and will never track the documents you open, the websites you visit, or any other kind of personal information.<nl/><nl/>You can read more about our policy in the following link:")
+            text: xi18nc("@info", "You can read about our policy in the following link:")
         }
 
         Kirigami.UrlButton {
@@ -63,6 +63,8 @@ SimpleKCM {
         }
 
         Kirigami.FormLayout {
+            id: form
+            enabled: kcm.feedbackEnabled
             QQC2.Slider {
                 id: statisticsModeSlider
                 Kirigami.FormData.label: i18n("Plasma:")
@@ -110,7 +112,12 @@ SimpleKCM {
                 Layout.alignment: Qt.AlignHCenter
                 Layout.maximumWidth: root.width * 0.5
                 wrapMode: Text.WordWrap
-                text: feedbackController.telemetryDescription(statisticsModeSlider.modeOptions[statisticsModeSlider.value])
+                enabled: statisticsModeSlider.value > 0
+
+                text: {
+                    feedbackController.applicationName
+                    return feedbackController.telemetryDescription(statisticsModeSlider.modeOptions[statisticsModeSlider.value])
+                }
             }
         }
     }

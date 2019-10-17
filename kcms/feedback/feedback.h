@@ -28,22 +28,15 @@ class Feedback : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
 
-    Q_PROPERTY(bool feedbackEnabled READ feedbackEnabled WRITE setFeedbackEnabled NOTIFY feedbackEnabledChanged)
+    Q_PROPERTY(bool feedbackEnabled READ feedbackEnabled CONSTANT)
     Q_PROPERTY(int plasmaFeedbackLevel READ plasmaFeedbackLevel WRITE setPlasmaFeedbackLevel NOTIFY plasmaFeedbackLevelChanged)
 
     public:
         explicit Feedback(QObject* parent = nullptr, const QVariantList &list = QVariantList());
         ~Feedback() override;
 
-        bool feedbackEnabled() const { return m_feedbackEnabled; }
+        bool feedbackEnabled() const;
         int plasmaFeedbackLevel() const { return m_plasmaFeedbackLevel; }
-
-        void setFeedbackEnabled(bool feedbackEnabled) {
-            if (feedbackEnabled != m_feedbackEnabled) {
-                m_feedbackEnabled = feedbackEnabled;
-                Q_EMIT feedbackEnabledChanged(feedbackEnabled);
-            }
-        }
 
         void setPlasmaFeedbackLevel(int plasmaFeedbackLevel) {
             if (plasmaFeedbackLevel != m_plasmaFeedbackLevel) {
@@ -58,12 +51,9 @@ class Feedback : public KQuickAddons::ConfigModule
         void defaults() override;
 
     Q_SIGNALS:
-        void feedbackEnabledChanged(bool feedbackEnabled) const;
         void plasmaFeedbackLevelChanged(bool plasmaFeedbackLevel);
 
     private:
-        KSharedConfig::Ptr m_globalConfig;
         KSharedConfig::Ptr m_plasmaConfig;
-        bool m_feedbackEnabled = false;
         int m_plasmaFeedbackLevel = 0;
 };

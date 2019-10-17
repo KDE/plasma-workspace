@@ -33,7 +33,6 @@ K_PLUGIN_CLASS_WITH_JSON(Feedback, "kcm_feedback.json");
 Feedback::Feedback(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent)
     //UserFeedback.conf is used by KUserFeedback which uses QSettings and won't go through globals
-    , m_globalConfig(KSharedConfig::openConfig(QStringLiteral("KDE/UserFeedback.conf"), KConfig::NoGlobals))
     , m_plasmaConfig(KSharedConfig::openConfig(QStringLiteral("PlasmaUserFeedback")))
 {
     Q_UNUSED(args)
@@ -41,9 +40,6 @@ Feedback::Feedback(QObject *parent, const QVariantList &args)
                                        i18n("User Feedback"),
                                        QStringLiteral("1.0"), i18n("Configure user feedback settings"), KAboutLicense::LGPL));
 
-    connect(this, &Feedback::feedbackEnabledChanged, this, [this](){
-        setNeedsSave(true);
-    });
     connect(this, &Feedback::plasmaFeedbackLevelChanged, this, [this](){
         setNeedsSave(true);
     });
@@ -51,28 +47,27 @@ Feedback::Feedback(QObject *parent, const QVariantList &args)
 
 Feedback::~Feedback() = default;
 
+bool Feedback::feedbackEnabled() const
+{
+    KUserFeedback::Provider p;
+    return p.isEnabled();
+}
+
 void Feedback::load()
 {
-    //The global kill switch is off by default, all KDE components should default to KUserFeedback::Provider::NoTelemetry
-    KUserFeedback::Provider p;
-    setFeedbackEnabled(p.isEnabled());
-
+    //We only operate if the kill switch is off, all KDE components should default to KUserFeedback::Provider::NoTelemetry
     setPlasmaFeedbackLevel(m_plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::NoTelemetry)));
     setNeedsSave(false);
 }
 
 void Feedback::save()
 {
-    m_globalConfig->group("UserFeedback").writeEntry("Enabled", m_feedbackEnabled);
-    m_globalConfig->sync();
-
     m_plasmaConfig->group("Global").writeEntry("FeedbackLevel", m_plasmaFeedbackLevel);
     m_plasmaConfig->sync();
 }
 
 void Feedback::defaults()
 {
-    setFeedbackEnabled(true);
     setPlasmaFeedbackLevel(KUserFeedback::Provider::NoTelemetry);
 }
 
