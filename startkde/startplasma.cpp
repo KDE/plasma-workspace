@@ -91,7 +91,7 @@ void sourceFiles(const QStringList &files)
     p.waitForFinished(-1);
 
     const auto fullEnv = p.readAllStandardOutput();
-    auto envs = fullEnv.split('\n');
+    auto envs = fullEnv.split('\0');
 
     for (auto &env: envs) {
         if (env.startsWith("_=") || env.startsWith("SHLVL"))
