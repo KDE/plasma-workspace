@@ -1,4 +1,9 @@
 [Desktop Entry]
 Type=Directory
 Name=Network
+Name[ca]=Xarxa
+Name[lt]=Tinklas
+Name[pt]=Rede
+Name[uk]=Мережа
+Name[x-test]=xxNetworkxx
 Icon=applications-network
