@@ -93,28 +93,6 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
             polish();
         }
     });
-
-    m_window = window();
-    if (m_window) {
-        connect(m_window, &QWindow::activeChanged, this, [this]() {
-            if (!m_window->isActive()) {
-                setEditMode(false);
-            }
-        });
-    }
-    connect(this, &QQuickItem::windowChanged, this, [this]() {
-        if (m_window) {
-            disconnect(m_window, &QWindow::activeChanged, this, nullptr);
-        }
-        m_window = window();
-        if (m_window) {
-            connect(m_window, &QWindow::activeChanged, this, [this]() {
-                if (!m_window->isActive()) {
-                    setEditMode(false);
-                }
-            });
-        }
-    });
 }
 
 AppletsLayout::~AppletsLayout()
@@ -367,6 +345,23 @@ void AppletsLayout::setPlaceHolder(ItemContainer *placeHolder)
     emit placeHolderChanged();
 }
 
+QQuickItem *AppletsLayout::eventManagerToFilter() const
+{
+    return m_eventManagerToFilter;
+}
+
+void AppletsLayout::setEventManagerToFilter(QQuickItem *item)
+{
+    if (m_eventManagerToFilter == item) {
+        return;
+    }
+
+    m_eventManagerToFilter = item;
+    setFiltersChildMouseEvents(m_eventManagerToFilter);
+    emit eventManagerToFilterChanged();
+}
+
+
 void AppletsLayout::save()
 {
     m_saveLayoutTimer->start();
@@ -527,6 +522,39 @@ void AppletsLayout::componentComplete()
 }
 
 
+bool AppletsLayout::childMouseEventFilter(QQuickItem *item, QEvent *event)
+{
+    if (item != m_eventManagerToFilter) {
+        return QQuickItem::childMouseEventFilter(item, event);
+    }
+
+    switch (event->type()) {
+    case QEvent::MouseButtonPress: {
+        QMouseEvent *me = static_cast<QMouseEvent *>(event);
+        if (me->buttons() & Qt::LeftButton) {
+            mousePressEvent(me);
+        }
+        break;
+        }
+    case QEvent::MouseMove: {
+        QMouseEvent *me = static_cast<QMouseEvent *>(event);
+        mouseMoveEvent(me);
+        break;
+        }
+    case QEvent::MouseButtonRelease: {
+        QMouseEvent *me = static_cast<QMouseEvent *>(event);
+        mouseReleaseEvent(me);
+        break;
+        }
+    case QEvent::UngrabMouse:
+        mouseUngrabEvent();
+        break;
+    default:
+        break;
+    }
+
+    return QQuickItem::childMouseEventFilter(item, event);
+}
 
 void AppletsLayout::mousePressEvent(QMouseEvent *event)
 {
@@ -562,6 +590,12 @@ void AppletsLayout::mouseReleaseEvent(QMouseEvent *event)
 {
     if (m_editMode
         && m_mouseDownWasEditMode
+        // By only accepting synthetyzed events, this makes the
+        // close by tapping in any empty area only work with real
+        // touch events, as we want a different behavior between desktop
+        // and tablet mode
+        && (event->source() == Qt::MouseEventSynthesizedBySystem
+            || event->source() == Qt::MouseEventSynthesizedByQt)
         && QPointF(event->windowPos() - m_mouseDownPosition).manhattanLength() < QGuiApplication::styleHints()->startDragDistance()) {
         setEditMode(false);
     }
@@ -576,6 +610,11 @@ void AppletsLayout::mouseReleaseEvent(QMouseEvent *event)
             }
         }
     }
+}
+
+void AppletsLayout::mouseUngrabEvent()
+{
+    m_pressAndHoldTimer->stop();
 }
 
 void AppletsLayout::appletAdded(QObject *applet, int x, int y)

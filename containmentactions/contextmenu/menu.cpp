@@ -71,11 +71,11 @@ void ContextMenu::restore(const KConfigGroup &config)
 
     if (c->containmentType() == Plasma::Types::PanelContainment ||
         c->containmentType() == Plasma::Types::CustomPanelContainment) {
-        m_actionOrder << QStringLiteral("add widgets") << QStringLiteral("_add panel") << QStringLiteral("lock widgets") << QStringLiteral("_context") << QStringLiteral("configure") << QStringLiteral("remove");
+        m_actionOrder << QStringLiteral("add widgets") << QStringLiteral("_add panel") << QStringLiteral("lock widgets") << QStringLiteral("edit mode") << QStringLiteral("_context") << QStringLiteral("configure") << QStringLiteral("remove");
     } else {
         actions.insert(QStringLiteral("configure shortcuts"), false);
         m_actionOrder << QStringLiteral("_context") << QStringLiteral("_run_command") << QStringLiteral("add widgets") << QStringLiteral("_add panel")
-                      << QStringLiteral("manage activities") << QStringLiteral("remove") << QStringLiteral("lock widgets") << QStringLiteral("_sep1")
+                      << QStringLiteral("manage activities") << QStringLiteral("remove") << QStringLiteral("lock widgets") << QStringLiteral("edit mode") << QStringLiteral("_sep1")
                       <<QStringLiteral("_lock_screen") << QStringLiteral("_logout") << QStringLiteral("_sep2") << QStringLiteral("run associated application") << QStringLiteral("configure")
                       << QStringLiteral("configure shortcuts") << QStringLiteral("_sep3") << QStringLiteral("_wallpaper");
         disabled.insert(QStringLiteral("configure shortcuts"));
@@ -179,6 +179,10 @@ QAction *ContextMenu::action(const QString &name)
     } else if (name == QLatin1String("lock widgets")) {
         if (c->corona()) {
             return c->corona()->actions()->action(QStringLiteral("lock widgets"));
+        }
+    } else if (name == QLatin1String("edit mode")) {
+        if (c->corona()) {
+            return c->corona()->actions()->action(QStringLiteral("edit mode"));
         }
     } else if (name == QLatin1String("manage activities")) {
         if (c->corona()) {

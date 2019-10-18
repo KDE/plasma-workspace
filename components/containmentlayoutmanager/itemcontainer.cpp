@@ -106,8 +106,7 @@ void ItemContainer::setEditMode(bool editMode)
 
     m_editMode = editMode;
 
-    // Leave this decision to QML?
-    if (m_editModeCondition != AfterMouseOver || m_layout->editMode()) {
+    if (m_editModeCondition != AfterMouseOver || (m_layout && m_layout->editMode())) {
         m_contentItem->setEnabled(!editMode);
     }
 
@@ -153,7 +152,7 @@ void ItemContainer::setEditModeCondition(EditModeCondition condition)
 
     m_editModeCondition = condition;
 
-    setAcceptHoverEvents(condition == AfterMouseOver);
+    setAcceptHoverEvents(condition == AfterMouseOver || (m_layout && m_layout->editMode()));
 
     emit editModeConditionChanged();
 }
@@ -182,6 +181,7 @@ void ItemContainer::setLayout(AppletsLayout *layout)
 
     if (m_layout) {
         disconnect(m_layout, &AppletsLayout::editModeConditionChanged, this,  nullptr);
+        disconnect(m_layout, &AppletsLayout::editModeChanged, this,  nullptr);
 
         if (m_editMode) {
             m_layout->hidePlaceHolder();
@@ -207,6 +207,9 @@ void ItemContainer::setLayout(AppletsLayout *layout)
             (m_editModeCondition == ItemContainer::Locked)) {
             emit editModeConditionChanged();
         }
+    });
+    connect(m_layout, &AppletsLayout::editModeChanged, this, [this]() {
+        setAcceptHoverEvents(m_editModeCondition == AfterMouseOver || m_layout->editMode());
     });
     emit layoutChanged();
 }
@@ -625,7 +628,7 @@ void ItemContainer::hoverEnterEvent(QHoverEvent *event)
 {
     Q_UNUSED(event);
 
-    if (m_editModeCondition != AfterMouseOver) {
+    if (m_editModeCondition != AfterMouseOver && !m_layout->editMode()) {
         return;
     }
 
@@ -633,14 +636,18 @@ void ItemContainer::hoverEnterEvent(QHoverEvent *event)
         m_closeEditModeTimer->stop();
     }
 
-    m_editModeTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
+    if (m_layout->editMode()) {
+        setEditMode(true);
+    } else {
+        m_editModeTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
+    }
 }
 
 void ItemContainer::hoverLeaveEvent(QHoverEvent *event)
 {
     Q_UNUSED(event);
 
-    if (m_editModeCondition != AfterMouseOver) {
+    if (m_editModeCondition != AfterMouseOver && !m_layout->editMode()) {
         return;
     }
 

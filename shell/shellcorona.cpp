@@ -228,6 +228,19 @@ ShellCorona::ShellCorona(QObject *parent)
     KDirWatch::self()->addFile(m_configPath);
     connect(KDirWatch::self(), &KDirWatch::dirty, this, &ShellCorona::configurationChanged);
     connect(KDirWatch::self(), &KDirWatch::created, this, &ShellCorona::configurationChanged);
+
+    connect(qApp, &QGuiApplication::focusWindowChanged,
+            this, [this] (QWindow *focusWindow) {
+            if (!focusWindow) {
+                setEditMode(false);
+            }
+        }
+    );
+    connect(this, &ShellCorona::editModeChanged,
+            this, [this](bool edit) {
+                setDashboardShown(edit);
+            }
+    );
 }
 
 ShellCorona::~ShellCorona()

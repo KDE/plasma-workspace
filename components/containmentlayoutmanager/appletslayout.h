@@ -66,6 +66,13 @@ class AppletsLayout: public QQuickItem
 
     Q_PROPERTY(ItemContainer *placeHolder READ placeHolder WRITE setPlaceHolder NOTIFY placeHolderChanged);
 
+    /**
+     * if the applets layout contains some kind of main MouseArea,
+     * MouseEventListener or Flickable, we want to filter its events to make the
+     * long mouse press work
+     */
+    Q_PROPERTY(QQuickItem *eventManagerToFilter READ eventManagerToFilter WRITE setEventManagerToFilter NOTIFY eventManagerToFilterChanged);
+
     Q_PROPERTY(AppletsLayout::EditModeCondition editModeCondition READ editModeCondition WRITE setEditModeCondition NOTIFY editModeConditionChanged)
     Q_PROPERTY(bool editMode READ editMode WRITE setEditMode NOTIFY editModeChanged)
 
@@ -123,6 +130,9 @@ public:
     ItemContainer *placeHolder() const;
     void setPlaceHolder(ItemContainer *placeHolder);
 
+    QQuickItem *eventManagerToFilter() const;
+    void setEventManagerToFilter(QQuickItem *item);
+
     EditModeCondition editModeCondition() const;
     void setEditModeCondition(EditModeCondition condition);
 
@@ -158,10 +168,12 @@ Q_SIGNALS:
     void acceptsAppletCallbackChanged();
     void appletContainerComponentChanged();
     void placeHolderChanged();
+    void eventManagerToFilterChanged();
     void editModeConditionChanged();
     void editModeChanged();
 
 protected:
+    bool childMouseEventFilter(QQuickItem *item, QEvent *event) override;
     void updatePolish() override;
     void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
 
@@ -170,6 +182,7 @@ protected:
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
+    void mouseUngrabEvent() override;
 
 private Q_SLOTS:
     void appletAdded(QObject *applet, int x, int y);
@@ -190,6 +203,7 @@ private:
     AbstractLayoutManager *m_layoutManager = nullptr;
 
     QPointer<ItemContainer> m_placeHolder;
+    QPointer<QQuickItem> m_eventManagerToFilter;
 
     QTimer *m_pressAndHoldTimer;
     QTimer *m_sizeSyncTimer;
@@ -200,7 +214,6 @@ private:
 
     QHash <PlasmaQuick::AppletQuickItem *, AppletContainer*> m_containerForApplet;
 
-    QPointer<QQuickWindow> m_window;
     QSizeF m_minimumItemSize;
     QSizeF m_defaultItemSize;
     QSizeF m_savedSize;
