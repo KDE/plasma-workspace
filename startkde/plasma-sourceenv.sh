@@ -3,4 +3,4 @@ do
     . $i >/dev/null
 done
 
-env
+env -0
