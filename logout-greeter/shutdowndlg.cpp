@@ -46,7 +46,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KPackage/PackageLoader>
 
 #include <KAuthorized>
-#include <KIconLoader>
 #include <KLocalizedString>
 #include <KUser>
 #include <Solid/PowerManagement>

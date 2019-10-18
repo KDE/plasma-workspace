@@ -20,7 +20,6 @@ target_link_libraries(org.kde.plasma.private.systemtray
                       Qt5::Quick
                       KF5::Plasma
                       Qt5::DBus
-                      KF5::IconThemes
                       KF5::XmlGui
                       KF5::I18n)
 

@@ -15,7 +15,6 @@ target_link_libraries(ksmserver-logout-greeter
     Qt5::Quick
     Qt5::X11Extras
     KF5::Declarative
-    KF5::IconThemes
     KF5::I18n
     KF5::Package
     KF5::QuickAddons

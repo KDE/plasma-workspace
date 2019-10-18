@@ -23,6 +23,7 @@
 #include "klipper_debug.h"
 #include <QMimeDatabase>
 #include <QHash>
+#include <QIcon>
 #include <QTimer>
 #include <QUuid>
 #include <QFile>
@@ -30,7 +31,6 @@
 
 #include <KLocalizedString>
 #include <KService>
-#include <KIconLoader>
 #include <KStringHandler>
 #include <KMimeTypeTrader>
 #include <KRun>
@@ -393,11 +393,7 @@ ClipCommand::ClipCommand(const QString&_command, const QString& _description,
         QString appName = command.section( QLatin1Char(' '), 0, 0 );
         if ( !appName.isEmpty() )
         {
-            QPixmap iconPix = KIconLoader::global()->loadIcon(
-                                         appName, KIconLoader::Small, 0,
-                                         KIconLoader::DefaultState,
-                                         QStringList(), nullptr, true /* canReturnNull */ );
-            if ( !iconPix.isNull() )
+            if (QIcon::hasThemeIcon(appName))
                 icon = appName;
             else
                 icon.clear();

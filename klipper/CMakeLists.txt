@@ -46,7 +46,6 @@ target_link_libraries(kdeinit_klipper
     KF5::CoreAddons
     KF5::DBusAddons
     KF5::GlobalAccel
-    KF5::IconThemes
     KF5::KIOWidgets
     KF5::Notifications
     KF5::Service
@@ -80,7 +79,6 @@ target_link_libraries(plasma_engine_clipboard
     KF5::ConfigGui
     KF5::CoreAddons    # KUrlMimeData
     KF5::GlobalAccel
-    KF5::IconThemes
     KF5::KIOWidgets    # PreviewJob
     KF5::Plasma
     KF5::Notifications

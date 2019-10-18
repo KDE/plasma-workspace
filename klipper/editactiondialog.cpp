@@ -20,12 +20,12 @@
 
 #include "editactiondialog.h"
 
+#include <QIcon>
 #include <QItemDelegate>
 #include <QComboBox>
 #include "klipper_debug.h"
 #include <QDialogButtonBox>
 
-#include <KIconLoader>
 #include <kwindowconfig.h>
 #include <KWindowConfig>
 
@@ -129,12 +129,7 @@ void ActionDetailModel::setIconForCommand(ClipCommand& cmd)
         command = command.section( QLatin1Char(' '), 0, 0 );
     }
 
-    QPixmap iconPix = KIconLoader::global()->loadIcon(
-                                        command, KIconLoader::Small, 0,
-                                        KIconLoader::DefaultState,
-                                        QStringList(), nullptr, true /* canReturnNull */ );
-
-    if ( !iconPix.isNull() ) {
+    if (QIcon::hasThemeIcon(command)) {
         cmd.icon = command;
     } else {
         cmd.icon.clear();
