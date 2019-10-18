@@ -49,7 +49,21 @@ Item {
         var lastUrlPart = xesamUrl.substring(lastSlashPos + 1)
         return decodeURIComponent(lastUrlPart)
     }
-    property string artist: currentMetadata ? currentMetadata["xesam:artist"] || "" : ""
+    property string artist: {
+        if (!currentMetadata) {
+            return ""
+        }
+        var xesamArtist = currentMetadata["xesam:artist"]
+        if (!xesamArtist) {
+            return "";
+        }
+
+        if (typeof xesamArtist == "string") {
+            return xesamArtist
+        } else {
+            return xesamArtist.join(", ")
+        }
+    }
     property string albumArt: currentMetadata ? currentMetadata["mpris:artUrl"] || "" : ""
 
     readonly property string identity: !root.noPlayer ? mpris2Source.currentData.Identity || mpris2Source.current : ""
