@@ -72,7 +72,6 @@ target_link_libraries(notificationmanager
         Qt5::DBus
         KF5::ConfigGui
         KF5::I18n
-        KF5::IconThemes
         KF5::KIOFileWidgets
         KF5::Plasma
         KF5::Screen

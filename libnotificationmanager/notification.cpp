@@ -35,7 +35,6 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <KIconLoader>
 #include <KService>
 #include <KServiceTypeTrader>
 
