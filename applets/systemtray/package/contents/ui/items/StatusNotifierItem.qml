@@ -43,6 +43,11 @@ AbstractItem {
         }
     }
 
+    onStatusChanged: {
+        //binding is not working in PlasmaCore.IconItem
+        iconItem.source = status === PlasmaCore.Types.NeedsAttentionStatus ? (AttentionIcon ? AttentionIcon : AttentionIconName) : (Icon ? Icon : IconName)
+    }
+
     iconItem: iconItem
 
     PlasmaCore.IconItem {
