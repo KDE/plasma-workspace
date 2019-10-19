@@ -2,6 +2,8 @@
 Type=Directory
 Name=Network
 Name[ca]=Xarxa
+Name[cs]=Síť
+Name[es]=Red
 Name[lt]=Tinklas
 Name[pt]=Rede
 Name[uk]=Мережа

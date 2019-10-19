@@ -4,6 +4,7 @@ Exec=@CMAKE_INSTALL_FULL_LIBEXECDIR@/startplasma-dev.sh -x11
 DesktopNames=KDE
 Name=Plasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ca]=Plasma (Desenvolupament, X11 ${CMAKE_INSTALL_FULL_BINDIR})
+Name[es]=Plasma (Desarrollo, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[lt]=Plasma (Plėtojimas, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[pt]=Plasma (Desenvolvimento, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[uk]=Пзазма (Розробка, X11 ${CMAKE_INSTALL_FULL_BINDIR})
