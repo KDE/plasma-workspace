@@ -22,7 +22,7 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as Plasmacore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrolsaddons 2.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 2.8 as QQC2
 
 Item {
     id: root
@@ -41,7 +41,7 @@ Item {
 
     //Rectangle { color: "orange"; x: formAlignment; width: formAlignment; height: 20 }
 
-    QtControls.ScrollView {
+    QQC2.ScrollView {
         anchors.fill: parent
 
         frameVisible: true
@@ -71,7 +71,7 @@ Item {
         }
     }
 
-    QtControls.Button {
+    QQC2.Button {
         anchors {
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter

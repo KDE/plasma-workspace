@@ -22,7 +22,7 @@ import Qt.labs.folderlistmodel 2.1
 import org.kde.plasma.core 2.0 as Plasmacore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrolsaddons 2.0
-import QtQuick.Controls 1.0 as QtControls
+import QtQuick.Controls 2.8 as QQC2
 
 Rectangle {
     id: root
@@ -31,7 +31,7 @@ Rectangle {
 
     SystemPalette {id: syspal}
 
-    QtControls.ScrollView {
+    QQC2.ScrollView {
         anchors.fill: parent
 
         frameVisible: true
@@ -76,7 +76,7 @@ Rectangle {
             }
         }
     }
-    QtControls.Button {
+    QQC2.Button {
         anchors {
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter

@@ -45,7 +45,7 @@ PlasmaComponents.ToolButton {
 
     QQC2.Menu {
         id: sessionMenu
-        
+
         property int largestWidth: 9999
 
         Component.onCompleted: {
@@ -55,7 +55,7 @@ PlasmaComponents.ToolButton {
             }
             sessionMenu.largestWidth = trueWidth
         }
-        
+
         background: Rectangle {
             implicitHeight: 40
             implicitWidth: sessionMenu.largestWidth > sessionButton.implicitWidth ? sessionMenu.largestWidth : sessionButton.implicitWidth

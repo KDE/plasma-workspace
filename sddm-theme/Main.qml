@@ -20,7 +20,7 @@
 import QtQuick 2.8
 
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.0 as QQC2
 import QtGraphicalEffects 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -147,7 +147,6 @@ PlasmaCore.ColorScope {
             y: (userListComponent.userList.y + mainStack.y)/2 - height/2
             anchors.horizontalCenter: parent.horizontalCenter
         }
-
 
         StackView {
             id: mainStack
@@ -435,7 +434,7 @@ PlasmaCore.ColorScope {
         DropShadow {
             id: logoShadow
             anchors.fill: logo
-            source: logo 
+            source: logo
             visible: !softwareRendering && config.showlogo == "shown"
             horizontalOffset: 1
             verticalOffset: 1

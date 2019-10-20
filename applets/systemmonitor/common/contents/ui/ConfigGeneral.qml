@@ -17,7 +17,6 @@
  */
 
 import QtQuick 2.5
-import QtQuick.Controls 1.4 as QQC1
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 
@@ -119,22 +118,27 @@ Item {
         anchors.left: parent.left
         anchors.right: parent.right
 
-        // QQC2 SpinBox doesn't cleanly support non-integer values, which can be
-        // worked around, but the code is messy and the user experience is
-        // somewhat poor. So for now, we stick with the QQC1 SpinBox
-        QQC1.SpinBox {
+        QQC2.SpinBox {
             id: updateIntervalSpinBox
-
             Kirigami.FormData.label: i18n("Update interval:")
-            decimals: 1
-            suffix: i18ncp("Suffix for spinbox (seconds)", " second", 
-            " seconds")
-            maximumValue: 1000
-            stepSize: 0.1
-            onValueChanged: cfg_updateInterval = value * 1000
-            Component.onCompleted: value = cfg_updateInterval / 1000
+            from: 100
+            stepSize: 100
+            to: 1000000
+            editable: true
+            validator: DoubleValidator {
+                bottom: spinbox.from
+                top: spinbox.to
+            }
+            textFromValue: function(value) {
+                var seconds = value / 1000
+                return i18n("%1 seconds", seconds.toFixed(1))
+            }
+            valueFromText: function(text) {
+                return parseFloat(text) * 1000
+            }
+            value: cfg_updateInterval
+            onValueModified: cfg_updateInterval = value
         }
-
 
         Item {
             Kirigami.FormData.isSection: true

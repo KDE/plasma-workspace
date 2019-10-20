@@ -18,8 +18,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-import QtQuick 2.0
-import QtQuick.Controls 1.2 as QtControls
+import QtQuick 2.13
+import QtQuick.Controls 2.13 as QQC2
 import QtQuick.Layouts 1.0
 import QtQuick.Dialogs 1.1
 
@@ -45,90 +45,63 @@ ColumnLayout {
         }
     }
 
-    // This is just for getting the column width
-    QtControls.CheckBox {
-        id: checkbox
-        visible: false
-    }
-
     Kirigami.InlineMessage {
         id: messageWidget
-
         Layout.fillWidth: true
-
+        Layout.margins: Kirigami.Units.smallSpacing
         type: Kirigami.MessageType.Warning
         text: i18n("At least one time zone needs to be enabled. 'Local' was enabled automatically.")
-
         showCloseButton: true
     }
 
-    QtControls.TextField {
+    QQC2.TextField {
         id: filter
         Layout.fillWidth: true
         placeholderText: i18n("Search Time Zones")
     }
 
-    QtControls.TableView {
-        id: timeZoneView
-
-        signal toggleCurrent
-
+    Item {
         Layout.fillWidth: true
         Layout.fillHeight: true
 
-        Keys.onSpacePressed: toggleCurrent()
+        QQC2.ScrollView {
+            anchors.fill: parent
+            clip: true
+            Component.onCompleted: background.visible = true // enable border
 
-        model: TimeZoneFilterProxy {
-            sourceModel: timeZones
-            filterString: filter.text
-        }
+            ListView {
+                id: listView
+                focus: true // keyboard navigation
+                activeFocusOnTab: true // keyboard navigation
 
-        QtControls.TableViewColumn {
-            role: "checked"
-            width: checkbox.width
-            delegate:
-                QtControls.CheckBox {
-                    id: checkBox
-                    anchors.centerIn: parent
-                    checked: styleData.value
-                    activeFocusOnTab: false // only let the TableView as a whole get focus
-                    onClicked: {
-                        //needed for model's setData to be called
-                        model.checked = checked;
-                    }
-
-                    Connections {
-                        target: timeZoneView
-                        onToggleCurrent: {
-                            if (styleData.row === timeZoneView.currentRow) {
-                                model.checked = !checkBox.checked
-                            }
-                        }
-                    }
+                model: TimeZoneFilterProxy {
+                    sourceModel: timeZones
+                    filterString: filter.text
                 }
 
-            resizable: false
-            movable: false
-        }
-        QtControls.TableViewColumn {
-            role: "city"
-            title: i18n("City")
-        }
-        QtControls.TableViewColumn {
-            role: "region"
-            title: i18n("Region")
-        }
-        QtControls.TableViewColumn {
-            role: "comment"
-            title: i18n("Comment")
+                delegate: QQC2.CheckDelegate {
+                    id: checkbox
+                    focus: true // keyboard navigation
+                    width: parent.width
+                    text: !city || city.indexOf("UTC") === 0 ? comment : comment ? i18n("%1, %2 (%3)", city, region, comment) : i18n("%1, %2", city, region)
+                    checked: model.checked
+                    onToggled: {
+                        model.checked = checkbox.checked
+                        listView.currentIndex = index // highlight
+                        listView.forceActiveFocus() // keyboard navigation
+                    }
+                    highlighted: ListView.isCurrentItem
+                }
+            }
         }
     }
 
     RowLayout {
         Layout.fillWidth: true
-        QtControls.CheckBox {
+        QQC2.CheckBox {
             id: enableWheelCheckBox
             text: i18n("Switch time zone with mouse wheel")
         }
     }
+
 }

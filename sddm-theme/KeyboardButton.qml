@@ -25,9 +25,9 @@ PlasmaComponents.ToolButton {
 
     QQC2.Menu {
         id: keyboardMenu
-        
+
         property int largestWidth: 9999
-        
+
         Component.onCompleted: {
             var trueWidth = 0;
             for (var i = 0; i < keyboardMenu.count; i++) {
@@ -63,11 +63,11 @@ PlasmaComponents.ToolButton {
                 id: menuItem
                 property string name: modelData.longName
                 property string shortName: modelData.shortName
-                
+
                 property real textWidth: text.contentWidth + 20
                 implicitWidth: text.contentWidth + 20
                 implicitHeight: Math.round(text.contentHeight * 1.6)
-                
+
                 contentItem: QQC2.Label {
                     id: text
                     font.pointSize: config.fontSize
