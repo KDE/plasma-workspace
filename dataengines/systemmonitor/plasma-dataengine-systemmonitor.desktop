@@ -2,6 +2,7 @@
 Name=System Monitor
 Name[af]=Stelsel Monitor
 Name[ar]=مرقاب النظام
+Name[ast]=Supervisor del sistema
 Name[be]=Сістэмны назіральнік
 Name[be@latin]=Systemny nazirańnik
 Name[bg]=Наблюдение на системата
@@ -84,6 +85,7 @@ Name[zh_CN]=系统监视器
 Name[zh_TW]=系統監視器
 Comment=System status information
 Comment[ar]=معلومات حالة النظام
+Comment[ast]=Información del estáu del sistema
 Comment[bg]=Данни за състоянието на системата
 Comment[bn]=সিস্টেম স্ট্যাটাস তথ্য
 Comment[bs]=Podaci o stanju sistema

@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Battery and Brightness
 Name[ar]=البطّاريّة والسّطوع
+Name[ast]=Batería y rellumu
 Name[ca]=Bateria i lluminositat
 Name[ca@valencia]=Bateria i brillantor
 Name[cs]=Baterie a Jas
@@ -44,6 +45,7 @@ Name[zh_CN]=电池和亮度
 Name[zh_TW]=電池與亮度
 Comment=See the power status of your battery
 Comment[ar]=طالع حالة طاقة البطارية
+Comment[ast]=Visualiza l'estáu de la carga de la batería
 Comment[be@latin]=Naziraje za kolkaściu enerhii ŭ tvajoj batarei
 Comment[bg]=Показва състоянието на батерията
 Comment[bs]=Pazite na stanje popunjenosti baterije
@@ -116,6 +118,7 @@ Comment[zh_CN]=查看电池的电量状态
 Comment[zh_TW]=查看您的電池的電力狀態
 Keywords=Power Management;Battery;System;Energy;
 Keywords[ar]=إدارة الطاقة;بطارية;نظام;طاقة;
+Keywords[ast]=Xestión d'enerxía;Batería;Sistema;Enerxía;
 Keywords[bs]=Upravljanje napajenjem;Baterija;Sistem;Energija;
 Keywords[ca]=Sistema de gestió d'energia;Bateria;Sistema;Energia;
 Keywords[ca@valencia]=Sistema de gestió d'energia;Bateria;Sistema;Energia;

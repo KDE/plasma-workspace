@@ -2,6 +2,7 @@
 IconName=drive-harddisk
 Comment=KDE Free Space Notifier Daemon
 Comment[ar]=عفريت مُخطِر كدي للمساحة الحرة
+Comment[ast]=Degorriu del avisador d'espaciu llibre de KDE
 Comment[bg]=Демон на KDE за свободно пространство
 Comment[bn]=কে.ডি.ই. ফ্রী স্পেস বিজ্ঞপ্তি ডিমন
 Comment[bs]=KDE‑ov demon izveštavača o slobodnom prostoru
@@ -289,6 +290,7 @@ Comment[zh_TW]=用於警告通知
 [Event/freespacenotif]
 Name=Running low on disk space
 Name[ar]=مساحة القرص منخفضة
+Name[ast]=Pocu espaciu nel discu
 Name[bg]=Дисковото пространство е твърде малко
 Name[bn]=ডিস্ক-এ বেশী জায়গা বাকি নেই
 Name[bs]=Ponestaje prostora na disku
@@ -351,6 +353,7 @@ Name[zh_CN]=磁盘空间过低
 Name[zh_TW]=磁碟空間快用完了
 Comment=You are running low on disk space
 Comment[ar]=أنت تعمل على مساحة قرص منخفضة
+Comment[ast]=Quédate pocu espaciu nel discu
 Comment[bg]=Дисковото Ви пространство е твърде малко
 Comment[bn]=আপনার ডিস্ক-এ বেশী জায়গা বাকি নেই
 Comment[bs]=Ponestaje vam prostora na disku

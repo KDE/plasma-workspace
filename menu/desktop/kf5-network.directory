@@ -1,11 +1,16 @@
 [Desktop Entry]
 Type=Directory
 Name=Network
+Name[ast]=Rede
 Name[ca]=Xarxa
 Name[cs]=Síť
 Name[es]=Red
+Name[gl]=Rede
 Name[lt]=Tinklas
+Name[nl]=Netwerk
 Name[pt]=Rede
+Name[pt_BR]=Rede
 Name[uk]=Мережа
 Name[x-test]=xxNetworkxx
+Name[zh_TW]=網路
 Icon=applications-network

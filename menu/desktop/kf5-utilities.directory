@@ -2,6 +2,7 @@
 Type=Directory
 Name=Utilities
 Name[ar]=الأدوات
+Name[ast]=Utilidaes
 Name[bs]=Usluge
 Name[ca]=Utilitats
 Name[ca@valencia]=Utilitats
@@ -52,6 +53,7 @@ Name[zh_TW]=實用工具
 Icon=applications-utilities
 Comment=Utilities
 Comment[ar]=الأدوات
+Comment[ast]=Utilidaes
 Comment[bs]=Usluge
 Comment[ca]=Utilitats
 Comment[ca@valencia]=Utilitats

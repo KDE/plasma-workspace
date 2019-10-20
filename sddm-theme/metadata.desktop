@@ -1,6 +1,7 @@
 [SddmGreeterTheme]
 Name=Breeze
 Name[ar]=نسيم
+Name[ast]=Breeze
 Name[bs]=Breeze
 Name[ca]=Brisa
 Name[ca@valencia]=Brisa
@@ -45,6 +46,7 @@ Name[x-test]=xxBreezexx
 Name[zh_CN]=微风
 Name[zh_TW]=微風
 Description=Breeze
+Description[ast]=Breeze
 Description[ca]=Brisa
 Description[ca@valencia]=Brisa
 Description[cs]=Breeze
