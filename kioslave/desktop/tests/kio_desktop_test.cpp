@@ -25,6 +25,16 @@
 #include <QTest>
 #include <kio/job.h>
 #include <kio/copyjob.h>
+#include <KIO/FileUndoManager>
+
+static void doUndo() // see FileUndoManagerTest::doUndo()
+{
+    QEventLoop eventLoop;
+    QObject::connect(KIO::FileUndoManager::self(), &KIO::FileUndoManager::undoJobFinished,
+            &eventLoop, &QEventLoop::quit);
+    KIO::FileUndoManager::self()->undo();
+    eventLoop.exec(QEventLoop::ExcludeUserInputEvents); // wait for undo job to finish
+}
 
 class TestDesktop : public QObject
 {
@@ -165,6 +175,27 @@ private Q_SLOTS:
             QVERIFY(!fileItem.isNull());
             QCOMPARE(fileItem.targetUrl(), QUrl::fromLocalFile(destFilePath));
         }
+    }
+
+    void testTrashAndUndo()
+    {
+        // Given a file on the desktop...
+        const QString localPath = m_desktopPath + '/' + m_testFileName;
+        QVERIFY(QFile::exists(localPath));
+
+        // ...moved to the trash
+        const QUrl desktopUrl("desktop:/" + m_testFileName);
+        KIO::Job *job = KIO::trash({desktopUrl}, KIO::HideProgressInfo);
+        job->setUiDelegate(nullptr);
+        KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Trash, {desktopUrl}, QUrl(QStringLiteral("trash:/")), job);
+        QVERIFY2(job->exec(), qPrintable(job->errorString()));
+        QVERIFY(!QFile::exists(localPath));
+
+        // When the user calls undo
+        doUndo();
+
+        // Then the file should re-appear
+        QVERIFY(QFile::exists(localPath));
     }
 
 private:
