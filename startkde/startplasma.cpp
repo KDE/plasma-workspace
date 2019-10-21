@@ -148,7 +148,7 @@ void setupCursor(bool wayland)
     }
 
     //TODO: consider linking directly
-    const int applyMouseStatus = wayland ? 0 : runSync(QStringLiteral("kapplymousetheme"), { QStringLiteral("kcminputrc_mouse_cursortheme"), QStringLiteral("kcminputrc_mouse_cursorsize") });
+    const int applyMouseStatus = wayland ? 0 : runSync(QStringLiteral("kapplymousetheme"), { kcminputrc_mouse_cursortheme, kcminputrc_mouse_cursorsize });
     if (applyMouseStatus == 10) {
         qputenv("XCURSOR_THEME", "breeze_cursors");
     } else if (!kcminputrc_mouse_cursortheme.isEmpty()) {
