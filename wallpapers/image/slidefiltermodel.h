@@ -22,7 +22,7 @@
 #include <image.h>
 
 #include <QSortFilterProxyModel>
-
+#include <QVector>
 
 class SlideFilterModel : public QSortFilterProxyModel {
 
@@ -34,7 +34,9 @@ public:
     SlideFilterModel(QObject* parent);
     bool lessThan(const QModelIndex& source_left, const QModelIndex& source_right) const override;
     bool filterAcceptsRow(int source_row, const QModelIndex& source_parent) const override;
+    void setSourceModel(QAbstractItemModel *sourceModel) override;
     void setSortingMode(Image::SlideshowMode mode);
+    void invalidate();
     void invalidateFilter();
 
     Q_INVOKABLE int indexOf(const QString& path);
@@ -44,6 +46,9 @@ Q_SIGNALS:
     void usedInConfigChanged();
 
 private:
+    void buildRandomOrder();
+
+    QVector<int> m_randomOrder;
     Image::SlideshowMode m_SortingMode;
     bool m_usedInConfig;
 };

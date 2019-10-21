@@ -769,7 +769,7 @@ void Image::nextSlide()
         m_currentSlide += 1;
     }
      //We are starting again - avoid having the same random order when we restart the slideshow
-    if (m_slideshowMode == Random && previousSlide == m_slideFilterModel->rowCount() - 1) {
+    if (m_slideshowMode == Random && m_currentSlide == 0) {
             m_slideFilterModel->invalidate();
     }
     QUrl next = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PathRole).toUrl();
