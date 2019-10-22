@@ -107,104 +107,114 @@ PlasmaCore.Dialog {
         }
     }
 
-    mainItem: MouseArea {
-        id: area
+    mainItem: Item {
         width: notificationPopup.popupWidth
         height: notificationItem.implicitHeight + notificationItem.y
-        hoverEnabled: true
-
-        cursorShape: hasDefaultAction ? Qt.PointingHandCursor : Qt.ArrowCursor
-        acceptedButtons: hasDefaultAction ? Qt.LeftButton : Qt.NoButton
-
-        onClicked: notificationPopup.defaultActionInvoked()
-        onEntered: notificationPopup.hoverEntered()
-        onExited: notificationPopup.hoverExited()
-
-        LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
-        LayoutMirroring.childrenInherit: true
-
-        Timer {
-            id: timer
-            interval: notificationPopup.effectiveTimeout
-            running: notificationPopup.visible && !area.containsMouse && interval > 0
-                && !notificationItem.dragging && !notificationItem.menuOpen
-            onTriggered: {
-                if (notificationPopup.dismissTimeout) {
-                    notificationPopup.dismissClicked();
-                } else {
-                    notificationPopup.expired();
-                }
-            }
-        }
-
-        Timer {
-            id: timeoutIndicatorDelayTimer
-            // only show indicator for the last ten seconds of timeout
-            readonly property int remainingTimeout: 10000
-            interval: Math.max(0, timer.interval - remainingTimeout)
-            running: interval > 0 && timer.running
-        }
-
-        Rectangle {
-            id: timeoutIndicatorRect
-            anchors {
-                right: parent.right
-                rightMargin: -notificationPopup.margins.right
-                bottom: parent.bottom
-                bottomMargin: -notificationPopup.margins.bottom
-            }
-            width: units.devicePixelRatio * 3
-            color: theme.highlightColor
-            opacity: timeoutIndicatorAnimation.running ? 0.6 : 0
-            visible: units.longDuration > 1
-            Behavior on opacity {
-                NumberAnimation {
-                    duration: units.longDuration
-                }
-            }
-
-            NumberAnimation {
-                id: timeoutIndicatorAnimation
-                target: timeoutIndicatorRect
-                property: "height"
-                from: area.height + notificationPopup.margins.top + notificationPopup.margins.bottom
-                to: 0
-                duration: Math.min(timer.interval, timeoutIndicatorDelayTimer.remainingTimeout)
-                running: timer.running && !timeoutIndicatorDelayTimer.running && units.longDuration > 1
-            }
-        }
-
-        NotificationItem {
-            id: notificationItem
-            // let the item bleed into the dialog margins so the close button margins cancel out
-            y: closable || dismissable || configurable ? -notificationPopup.margins.top : 0
-            headingRightPadding: -notificationPopup.margins.right
+        DraggableDelegate {
+            id: area
             width: parent.width
-            hovered: area.containsMouse
-            maximumLineCount: 8
-            bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0
+            height: parent.height
+            hoverEnabled: true
+            draggable: notificationItem.notificationType != NotificationManager.Notifications.JobType
+            onDismissRequested: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
 
-            thumbnailLeftPadding: -notificationPopup.margins.left
-            thumbnailRightPadding: -notificationPopup.margins.right
-            thumbnailTopPadding: -notificationPopup.margins.top
-            thumbnailBottomPadding: -notificationPopup.margins.bottom
+            cursorShape: hasDefaultAction ? Qt.PointingHandCursor : Qt.ArrowCursor
+            acceptedButtons: hasDefaultAction || draggable ? Qt.LeftButton : Qt.NoButton
 
-            closable: true
-            onBodyClicked: {
-                if (area.acceptedButtons & mouse.button) {
-                    area.clicked(null /*mouse*/);
+            onClicked: {
+                if (hasDefaultAction) {
+                    notificationPopup.defaultActionInvoked();
                 }
             }
-            onCloseClicked: notificationPopup.closeClicked()
-            onDismissClicked: notificationPopup.dismissClicked()
-            onConfigureClicked: notificationPopup.configureClicked()
-            onActionInvoked: notificationPopup.actionInvoked(actionName)
-            onOpenUrl: notificationPopup.openUrl(url)
-            onFileActionInvoked: notificationPopup.fileActionInvoked()
+            onEntered: notificationPopup.hoverEntered()
+            onExited: notificationPopup.hoverExited()
 
-            onSuspendJobClicked: notificationPopup.suspendJobClicked()
-            onResumeJobClicked: notificationPopup.resumeJobClicked()
-            onKillJobClicked: notificationPopup.killJobClicked()
+            LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+            LayoutMirroring.childrenInherit: true
+
+            Timer {
+                id: timer
+                interval: notificationPopup.effectiveTimeout
+                running: notificationPopup.visible && !area.containsMouse && interval > 0
+                    && !notificationItem.dragging && !notificationItem.menuOpen
+                onTriggered: {
+                    if (notificationPopup.dismissTimeout) {
+                        notificationPopup.dismissClicked();
+                    } else {
+                        notificationPopup.expired();
+                    }
+                }
+            }
+
+            Timer {
+                id: timeoutIndicatorDelayTimer
+                // only show indicator for the last ten seconds of timeout
+                readonly property int remainingTimeout: 10000
+                interval: Math.max(0, timer.interval - remainingTimeout)
+                running: interval > 0 && timer.running
+            }
+
+            Rectangle {
+                id: timeoutIndicatorRect
+                anchors {
+                    right: parent.right
+                    rightMargin: -notificationPopup.margins.right
+                    bottom: parent.bottom
+                    bottomMargin: -notificationPopup.margins.bottom
+                }
+                width: units.devicePixelRatio * 3
+                color: theme.highlightColor
+                opacity: timeoutIndicatorAnimation.running ? 0.6 : 0
+                visible: units.longDuration > 1
+                Behavior on opacity {
+                    NumberAnimation {
+                        duration: units.longDuration
+                    }
+                }
+
+                NumberAnimation {
+                    id: timeoutIndicatorAnimation
+                    target: timeoutIndicatorRect
+                    property: "height"
+                    from: area.height + notificationPopup.margins.top + notificationPopup.margins.bottom
+                    to: 0
+                    duration: Math.min(timer.interval, timeoutIndicatorDelayTimer.remainingTimeout)
+                    running: timer.running && !timeoutIndicatorDelayTimer.running && units.longDuration > 1
+                }
+            }
+
+            NotificationItem {
+                id: notificationItem
+                // let the item bleed into the dialog margins so the close button margins cancel out
+                y: closable || dismissable || configurable ? -notificationPopup.margins.top : 0
+                headingRightPadding: -notificationPopup.margins.right
+                width: parent.width
+                hovered: area.containsMouse
+                maximumLineCount: 8
+                bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0
+
+                thumbnailLeftPadding: -notificationPopup.margins.left
+                thumbnailRightPadding: -notificationPopup.margins.right
+                thumbnailTopPadding: -notificationPopup.margins.top
+                thumbnailBottomPadding: -notificationPopup.margins.bottom
+
+                closable: true
+                onBodyClicked: {
+                    if (area.acceptedButtons & mouse.button) {
+                        area.clicked(null /*mouse*/);
+                    }
+                }
+                onCloseClicked: notificationPopup.closeClicked()
+                onDismissClicked: notificationPopup.dismissClicked()
+                onConfigureClicked: notificationPopup.configureClicked()
+                onActionInvoked: notificationPopup.actionInvoked(actionName)
+                onOpenUrl: notificationPopup.openUrl(url)
+                onFileActionInvoked: notificationPopup.fileActionInvoked()
+
+                onSuspendJobClicked: notificationPopup.suspendJobClicked()
+                onResumeJobClicked: notificationPopup.resumeJobClicked()
+                onKillJobClicked: notificationPopup.killJobClicked()
+            }
         }
     }
 }

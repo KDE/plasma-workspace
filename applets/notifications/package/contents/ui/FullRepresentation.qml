@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-import QtQuick 2.8
+import QtQuick 2.10
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
@@ -26,6 +26,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.11 as Kirigami
 
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 
@@ -66,6 +67,8 @@ ColumnLayout{
 
     // header
     ColumnLayout {
+        id: header
+        visible: !Kirigami.Settings.isMobile
         Layout.fillWidth: true
         spacing: 0
 
@@ -262,6 +265,7 @@ ColumnLayout{
     }
 
     PlasmaCore.SvgItem {
+        visible: header.visible
         elementId: "horizontal-line"
         Layout.fillWidth: true
         // why is this needed here but not in the delegate?
@@ -371,9 +375,14 @@ ColumnLayout{
             }
 
             remove: Transition {
+                id: removeTransition
                 ParallelAnimation {
                     NumberAnimation { property: "opacity"; to: 0; duration: units.longDuration }
-                    NumberAnimation { property: "x"; to: list.width; duration: units.longDuration }
+                    NumberAnimation {
+                        property: "x"
+                        to: removeTransition.ViewTransition.item.x >= 0 ? list.width : -list.width
+                        duration: units.longDuration
+                    }
                 }
             }
             removeDisplaced: Transition {
@@ -389,170 +398,179 @@ ColumnLayout{
                 criteria: ViewSection.FullString
             }
 
-            delegate: Loader {
-                id: delegateLoader
+            delegate: DraggableDelegate {
                 width: list.width
-                sourceComponent: model.isGroup ? groupDelegate : notificationDelegate
+                contentItem: delegateLoader
 
-                Component {
-                    id: groupDelegate
-                    NotificationHeader {
-                        applicationName: model.applicationName
-                        applicationIconSource: model.applicationIconName
-                        originName: model.originName || ""
+                draggable: !model.isGroup && model.type != NotificationManager.Notifications.JobType
 
-                        // don't show timestamp for group
+                onDismissRequested: historyModel.close(historyModel.index(index, 0));
 
-                        configurable: model.configurable
-                        closable: model.closable
-                        closeButtonTooltip: i18n("Close Group")
+                Loader {
+                    id: delegateLoader
+                    width: list.width
+                    sourceComponent: model.isGroup ? groupDelegate : notificationDelegate
 
-                        onCloseClicked: {
-                            historyModel.close(historyModel.index(index, 0))
-                            if (list.count === 0) {
-                                plasmoid.expanded = false;
-                            }
-                        }
+                    Component {
+                        id: groupDelegate
+                        NotificationHeader {
+                            applicationName: model.applicationName
+                            applicationIconSource: model.applicationIconName
+                            originName: model.originName || ""
 
-                        onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
-                    }
-                }
+                            // don't show timestamp for group
 
-                Component {
-                    id: notificationDelegate
-                    ColumnLayout {
-                        spacing: units.smallSpacing
+                            configurable: model.configurable
+                            closable: model.closable
+                            closeButtonTooltip: i18n("Close Group")
 
-                        RowLayout {
-                            Item {
-                                id: groupLineContainer
-                                Layout.fillHeight: true
-                                Layout.topMargin: units.smallSpacing
-                                width: units.iconSizes.small
-                                visible: model.isInGroup
-
-                                PlasmaCore.SvgItem {
-                                    elementId: "vertical-line"
-                                    svg: lineSvg
-                                    anchors.horizontalCenter: parent.horizontalCenter
-                                    width: units.iconSizes.small
-                                    height: parent.height
-                                }
-                            }
-
-                            NotificationItem {
-                                Layout.fillWidth: true
-
-                                notificationType: model.type
-
-                                inGroup: model.isInGroup
-
-                                applicationName: model.applicationName
-                                applicationIconSource: model.applicationIconName
-                                originName: model.originName || ""
-
-                                time: model.updated || model.created
-
-                                // configure button on every single notifications is bit overwhelming
-                                configurable: !inGroup && model.configurable
-
-                                dismissable: model.type === NotificationManager.Notifications.JobType
-                                    && model.jobState !== NotificationManager.Notifications.JobStateStopped
-                                    && model.dismissed
-                                    // TODO would be nice to be able to undismiss jobs even when they autohide
-                                    && notificationSettings.permanentJobPopups
-                                dismissed: model.dismissed || false
-                                closable: model.closable
-
-                                summary: model.summary
-                                body: model.body || ""
-                                icon: model.image || model.iconName
-
-                                urls: model.urls || []
-
-                                jobState: model.jobState || 0
-                                percentage: model.percentage || 0
-                                jobError: model.jobError || 0
-                                suspendable: !!model.suspendable
-                                killable: !!model.killable
-                                jobDetails: model.jobDetails || null
-
-                                configureActionLabel: model.configureActionLabel || ""
-                                // In the popup the default action is triggered by clicking on the popup
-                                // however in the list this is undesirable, so instead show a clickable button
-                                // in case you have a non-expired notification in history (do not disturb mode)
-                                // unless it has the same label as an action
-                                readonly property bool addDefaultAction: (model.hasDefaultAction
-                                                                         && model.defaultActionLabel
-                                                                         && (model.actionLabels || []).indexOf(model.defaultActionLabel) === -1) ? true : false
-                                actionNames: {
-                                    var actions = (model.actionNames || []);
-                                    if (addDefaultAction) {
-                                        actions.unshift("default"); // prepend
-                                    }
-                                    return actions;
-                                }
-                                actionLabels: {
-                                    var labels = (model.actionLabels || []);
-                                    if (addDefaultAction) {
-                                        labels.unshift(model.defaultActionLabel);
-                                    }
-                                    return labels;
-                                }
-
-                                onCloseClicked: {
-                                    historyModel.close(historyModel.index(index, 0));
-                                    if (list.count === 0) {
-                                        plasmoid.expanded = false;
-                                    }
-                                }
-                                onDismissClicked: {
-                                    model.dismissed = false;
+                            onCloseClicked: {
+                                historyModel.close(historyModel.index(index, 0))
+                                if (list.count === 0) {
                                     plasmoid.expanded = false;
                                 }
-                                onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
-
-                                onActionInvoked: {
-                                    if (actionName === "default") {
-                                        historyModel.invokeDefaultAction(historyModel.index(index, 0));
-                                    } else {
-                                        historyModel.invokeAction(historyModel.index(index, 0), actionName);
-                                    }
-                                    // Keep it in the history
-                                    historyModel.expire(historyModel.index(index, 0));
-                                }
-                                onOpenUrl: {
-                                    Qt.openUrlExternally(url);
-                                    historyModel.expire(historyModel.index(index, 0));
-                                }
-                                onFileActionInvoked: historyModel.expire(historyModel.index(index, 0))
-
-                                onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
-                                onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
-                                onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
                             }
+
+                            onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
                         }
+                    }
 
-                        PlasmaComponents.ToolButton {
-                            Layout.preferredWidth: minimumWidth
-                            iconName: model.isGroupExpanded ? "arrow-up" : "arrow-down"
-                            text: model.isGroupExpanded ? i18n("Show Fewer")
-                                                        : i18nc("Expand to show n more notifications",
-                                                                "Show %1 More", (model.groupChildrenCount - model.expandedGroupChildrenCount))
-                            visible: (model.groupChildrenCount > model.expandedGroupChildrenCount || model.isGroupExpanded)
-                                && delegateLoader.ListView.nextSection !== delegateLoader.ListView.section
-                            onClicked: list.setGroupExpanded(model.index, !model.isGroupExpanded)
-                        }
+                    Component {
+                        id: notificationDelegate
+                        ColumnLayout {
+                            spacing: units.smallSpacing
 
-                        PlasmaCore.SvgItem {
-                            Layout.fillWidth: true
-                            Layout.bottomMargin: units.smallSpacing
-                            elementId: "horizontal-line"
-                            svg: lineSvg
+                            RowLayout {
+                                Item {
+                                    id: groupLineContainer
+                                    Layout.fillHeight: true
+                                    Layout.topMargin: units.smallSpacing
+                                    width: units.iconSizes.small
+                                    visible: model.isInGroup
 
-                            // property is only atached to the delegate itself (the Loader in our case)
-                            visible: (!model.isInGroup || delegateLoader.ListView.nextSection !== delegateLoader.ListView.section)
-                                             && delegateLoader.ListView.nextSection !== "" // don't show after last item
+                                    PlasmaCore.SvgItem {
+                                        elementId: "vertical-line"
+                                        svg: lineSvg
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        width: units.iconSizes.small
+                                        height: parent.height
+                                    }
+                                }
+
+                                NotificationItem {
+                                    Layout.fillWidth: true
+
+                                    notificationType: model.type
+
+                                    inGroup: model.isInGroup
+
+                                    applicationName: model.applicationName
+                                    applicationIconSource: model.applicationIconName
+                                    originName: model.originName || ""
+
+                                    time: model.updated || model.created
+
+                                    // configure button on every single notifications is bit overwhelming
+                                    configurable: !inGroup && model.configurable
+
+                                    dismissable: model.type === NotificationManager.Notifications.JobType
+                                        && model.jobState !== NotificationManager.Notifications.JobStateStopped
+                                        && model.dismissed
+                                        // TODO would be nice to be able to undismiss jobs even when they autohide
+                                        && notificationSettings.permanentJobPopups
+                                    dismissed: model.dismissed || false
+                                    closable: model.closable
+
+                                    summary: model.summary
+                                    body: model.body || ""
+                                    icon: model.image || model.iconName
+
+                                    urls: model.urls || []
+
+                                    jobState: model.jobState || 0
+                                    percentage: model.percentage || 0
+                                    jobError: model.jobError || 0
+                                    suspendable: !!model.suspendable
+                                    killable: !!model.killable
+                                    jobDetails: model.jobDetails || null
+
+                                    configureActionLabel: model.configureActionLabel || ""
+                                    // In the popup the default action is triggered by clicking on the popup
+                                    // however in the list this is undesirable, so instead show a clickable button
+                                    // in case you have a non-expired notification in history (do not disturb mode)
+                                    // unless it has the same label as an action
+                                    readonly property bool addDefaultAction: (model.hasDefaultAction
+                                                                            && model.defaultActionLabel
+                                                                            && (model.actionLabels || []).indexOf(model.defaultActionLabel) === -1) ? true : false
+                                    actionNames: {
+                                        var actions = (model.actionNames || []);
+                                        if (addDefaultAction) {
+                                            actions.unshift("default"); // prepend
+                                        }
+                                        return actions;
+                                    }
+                                    actionLabels: {
+                                        var labels = (model.actionLabels || []);
+                                        if (addDefaultAction) {
+                                            labels.unshift(model.defaultActionLabel);
+                                        }
+                                        return labels;
+                                    }
+
+                                    onCloseClicked: {
+                                        historyModel.close(historyModel.index(index, 0));
+                                        if (list.count === 0) {
+                                            plasmoid.expanded = false;
+                                        }
+                                    }
+                                    onDismissClicked: {
+                                        model.dismissed = false;
+                                        plasmoid.expanded = false;
+                                    }
+                                    onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
+
+                                    onActionInvoked: {
+                                        if (actionName === "default") {
+                                            historyModel.invokeDefaultAction(historyModel.index(index, 0));
+                                        } else {
+                                            historyModel.invokeAction(historyModel.index(index, 0), actionName);
+                                        }
+                                        // Keep it in the history
+                                        historyModel.expire(historyModel.index(index, 0));
+                                    }
+                                    onOpenUrl: {
+                                        Qt.openUrlExternally(url);
+                                        historyModel.expire(historyModel.index(index, 0));
+                                    }
+                                    onFileActionInvoked: historyModel.expire(historyModel.index(index, 0))
+
+                                    onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
+                                    onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
+                                    onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
+                                }
+                            }
+
+                            PlasmaComponents.ToolButton {
+                                Layout.preferredWidth: minimumWidth
+                                iconName: model.isGroupExpanded ? "arrow-up" : "arrow-down"
+                                text: model.isGroupExpanded ? i18n("Show Fewer")
+                                                            : i18nc("Expand to show n more notifications",
+                                                                    "Show %1 More", (model.groupChildrenCount - model.expandedGroupChildrenCount))
+                                visible: (model.groupChildrenCount > model.expandedGroupChildrenCount || model.isGroupExpanded)
+                                    && delegateLoader.ListView.nextSection !== delegateLoader.ListView.section
+                                onClicked: list.setGroupExpanded(model.index, !model.isGroupExpanded)
+                            }
+
+                            PlasmaCore.SvgItem {
+                                Layout.fillWidth: true
+                                Layout.bottomMargin: units.smallSpacing
+                                elementId: "horizontal-line"
+                                svg: lineSvg
+
+                                // property is only atached to the delegate itself (the Loader in our case)
+                                visible: (!model.isInGroup || delegateLoader.ListView.nextSection !== delegateLoader.ListView.section)
+                                                && delegateLoader.ListView.nextSection !== "" // don't show after last item
+                            }
                         }
                     }
                 }

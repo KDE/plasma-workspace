@@ -26,6 +26,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.kirigami 2.11 as Kirigami
 
 // NOTE This wrapper item is needed for QQC ScrollView to work
 // In NotificationItem we just do SelectableLabel {} and then it gets confused
@@ -46,6 +47,7 @@ Item {
     implicitWidth: bodyText.paintedWidth
     implicitHeight: bodyText.paintedHeight
 
+
     PlasmaExtras.ScrollArea {
         id: bodyTextScrollArea
 
@@ -60,7 +62,7 @@ Item {
             width: bodyTextScrollArea.width
             // TODO check that this doesn't causes infinite loops when it starts adding and removing the scrollbar
             //width: bodyTextScrollArea.viewport.width
-            //enabled: !Settings.isMobile
+            enabled: !Kirigami.Settings.isMobile
 
             color: PlasmaCore.ColorScope.textColor
             selectedTextColor: theme.viewBackgroundColor
@@ -77,7 +79,9 @@ Item {
             // Work around Qt bug where NativeRendering breaks for non-integer scale factors
             // https://bugreports.qt.io/browse/QTBUG-67007
             renderType: Screen.devicePixelRatio % 1 !== 0 ? Text.QtRendering : Text.NativeRendering
-            selectByMouse: true
+            // Selectable only when we are in desktop mode
+            selectByMouse: !Kirigami.Settings.tabletMode
+            
             readOnly: true
             wrapMode: Text.Wrap
             textFormat: TextEdit.RichText
