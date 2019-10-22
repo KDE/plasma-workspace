@@ -155,7 +155,6 @@ private:
     void completeKillingWM();
     void cancelShutdown( KSMClient* c );
     void killingCompleted();
-    void createLogoutEffectWidget();
 
     void discardSession();
     void storeSession();
@@ -240,7 +239,6 @@ private:
     QTimer protectionTimer;
     QTimer restoreTimer;
     QString xonCommand;
-    QWidget* logoutEffectWidget;
     // sequential startup
     int appsToStart;
     int lastAppStarted;

@@ -58,12 +58,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #endif
 
 #include <QApplication>
-#include <QPushButton>
 #include <QTimer>
 #include <QFile>
-#include <QProcess>
 #include <QFutureWatcher>
 #include <QtConcurrentRun>
+#include <QDesktopWidget>
 
 #include <KConfig>
 #include <KSharedConfig>
@@ -78,11 +77,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "logoutprompt_interface.h"
 #include "shutdown_interface.h"
-
-#include <QDesktopWidget>
-#include <QX11Info>
-#include <X11/Xutil.h>
-#include <X11/Xatom.h>
 
 void KSMServer::logout( int confirm, int sdtype, int sdmode )
 {
@@ -505,8 +499,6 @@ void KSMServer::completeShutdownOrCheckpoint()
                 startKilling();
             }
         });
-        createLogoutEffectWidget();
-
     } else if ( state == Checkpoint ) {
         foreach( KSMClient* c, clients ) {
             SmsSaveComplete( c->connection());
@@ -561,7 +553,6 @@ void KSMServer::killWM()
 {
     if( state != Killing )
         return;
-    delete logoutEffectWidget;
 
     qCDebug(KSMSERVER) << "Starting killing WM";
     state = KillingWM;
@@ -616,25 +607,6 @@ void KSMServer::timeoutWMQuit()
         qCWarning(KSMSERVER) << "SmsDie WM timeout" ;
     }
     killingCompleted();
-}
-
-void KSMServer::createLogoutEffectWidget()
-{
-// Ok, this is rather a hack. In order to fade the whole desktop when playing the logout
-// sound, killing applications and leaving KDE, create a dummy window that triggers
-// the logout fade effect again.
-    logoutEffectWidget = new QWidget( nullptr, Qt::X11BypassWindowManagerHint );
-    logoutEffectWidget->winId(); // workaround for Qt4.3 setWindowRole() assert
-    logoutEffectWidget->setWindowRole( QStringLiteral( "logouteffect" ) );
-
-    // Qt doesn't set this on unmanaged windows
-    //FIXME: or does it?
-    XChangeProperty( QX11Info::display(), logoutEffectWidget->winId(),
-        XInternAtom( QX11Info::display(), "WM_WINDOW_ROLE", False ), XA_STRING, 8, PropModeReplace,
-        (unsigned char *)"logouteffect", strlen( "logouteffect" ));
-
-    logoutEffectWidget->setGeometry( -100, -100, 1, 1 );
-    logoutEffectWidget->show();
 }
 
 void KSMServer::saveSubSession(const QString &name, QStringList saveAndClose, QStringList saveOnly)

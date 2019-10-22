@@ -599,7 +599,6 @@ extern "C" int _IceTransNoListen(const char * protocol);
 KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
   : wmProcess( nullptr )
   , sessionGroup( QStringLiteral( "" ) )
-  , logoutEffectWidget( nullptr )
   , sockets{ -1, -1 }
 {
     if (!flags.testFlag(InitFlag::NoLockScreen)) {
