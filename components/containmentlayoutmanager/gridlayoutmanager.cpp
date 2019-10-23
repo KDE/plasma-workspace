@@ -108,6 +108,8 @@ inline void maintainItemEdgeAlignment(ItemContainer *item, const QRectF &newRect
 
 void GridLayoutManager::layoutGeometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
 {
+    m_grid.clear();
+    m_pointsForItem.clear();
     for (auto *item : layout()->childItems()) {
         // Stash the old config
         //m_parsedConfig[item->key()] = {item->x(), item->y(), item->width(), item->height(), item->rotation()};
