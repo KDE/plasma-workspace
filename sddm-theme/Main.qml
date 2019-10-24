@@ -411,6 +411,46 @@ PlasmaCore.ColorScope {
             }
         }
 
+        Image {
+            id: logo
+            visible: config.showlogo == "shown"
+            source: config.logo
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottom: footer.top
+            anchors.bottomMargin: units.largeSpacing
+            asynchronous: true
+            sourceSize.height: height
+            opacity: loginScreenRoot.uiVisible ? 0 : 1
+            fillMode: Image.PreserveAspectFit
+            height: Math.round(units.gridUnit * 3.5)
+            Behavior on opacity {
+                OpacityAnimator {
+                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+        }
+
+        DropShadow {
+            id: logoShadow
+            anchors.fill: logo
+            source: logo 
+            visible: !softwareRendering && config.showlogo == "shown"
+            horizontalOffset: 1
+            verticalOffset: 1
+            radius: 6
+            samples: 14
+            spread: 0.3
+            color: "black" // matches Breeze window decoration and desktopcontainment
+            opacity: loginScreenRoot.uiVisible ? 0 : 1
+            Behavior on opacity {
+                OpacityAnimator {
+                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+        }
+
         //Footer
         RowLayout {
             id: footer
