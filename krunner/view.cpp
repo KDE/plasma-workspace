@@ -90,13 +90,15 @@ View::View(QWindow *)
         }
     };
 
-    auto screenAdded = [this](QScreen* screen) {
+    auto screenAdded = [this](const QScreen* screen) {
         connect(screen, &QScreen::geometryChanged, this, &View::screenGeometryChanged);
         screenGeometryChanged();
     };
 
-    foreach(QScreen* s, QGuiApplication::screens())
+    const auto screens = QGuiApplication::screens();
+    for(QScreen* s : screens) {
         screenAdded(s);
+    }
     connect(qGuiApp, &QGuiApplication::screenAdded, this, screenAdded);
     connect(qGuiApp, &QGuiApplication::screenRemoved, this, screenRemoved);
 
@@ -219,7 +221,8 @@ void View::positionOnScreen()
 {
     QScreen *shownOnScreen = QGuiApplication::primaryScreen();
 
-    Q_FOREACH (QScreen* screen, QGuiApplication::screens()) {
+    const auto screens = QGuiApplication::screens();
+    for (QScreen* screen : screens) {
         if (screen->geometry().contains(QCursor::pos(screen))) {
             shownOnScreen = screen;
             break;
