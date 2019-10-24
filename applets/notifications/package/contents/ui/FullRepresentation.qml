@@ -578,6 +578,10 @@ ColumnLayout{
 
             PlasmaExtras.Heading {
                 width: list.width
+                height: list.height
+                horizontalAlignment: Kirigami.Settings.isMobile ? Text.AlignHCenter : Text.AlignLeft
+                verticalAlignment: Kirigami.Settings.isMobile ? Text.AlignVCenter : Text.AlignTop
+                wrapMode: Text.WordWrap
                 level: 3
                 opacity: 0.6
                 text: i18n("No unread notifications.")
