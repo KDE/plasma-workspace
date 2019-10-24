@@ -335,7 +335,7 @@ void Menu::actionsChanged(const QStringList &dirtyActions, const QString &prefix
     for (const QString &action : dirtyActions) {
         const QString prefixedAction = prefix + action;
 
-        forEachMenuItem([this, &prefixedAction, &dirtyItems](int subscription, int section, int index, const QVariantMap &item) {
+        forEachMenuItem([ &prefixedAction, &dirtyItems](int subscription, int section, int index, const QVariantMap &item) {
             const QString actionName = Utils::itemActionName(item);
 
             if (actionName == prefixedAction) {

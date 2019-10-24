@@ -189,14 +189,14 @@ void RecentContactsModel::refresh()
     }
 
     // FIXME TODO: Don't wipe entire cache on transactions.
-    connect(model, SIGNAL(rowsInserted(QModelIndex,int,int)),
-            this, SLOT(buildCache()), Qt::UniqueConnection);
-    connect(model, SIGNAL(rowsRemoved(QModelIndex,int,int)),
-            this, SLOT(buildCache()), Qt::UniqueConnection);
-    connect(model, SIGNAL(rowsMoved(QModelIndex,int,int,QModelIndex,int)),
-            this, SLOT(buildCache()), Qt::UniqueConnection);
-    connect(model, SIGNAL(modelReset()),
-            this, SLOT(buildCache()), Qt::UniqueConnection);
+    connect(model, &QAbstractItemModel::rowsInserted,
+            this, &RecentContactsModel::buildCache, Qt::UniqueConnection);
+    connect(model, &QAbstractItemModel::rowsRemoved,
+            this, &RecentContactsModel::buildCache, Qt::UniqueConnection);
+    connect(model, &QAbstractItemModel::rowsMoved,
+            this, &RecentContactsModel::buildCache, Qt::UniqueConnection);
+    connect(model, &QAbstractItemModel::modelReset,
+            this, &RecentContactsModel::buildCache, Qt::UniqueConnection);
 
     setSourceModel(model);
 
@@ -229,7 +229,7 @@ void RecentContactsModel::insertPersonData(const QString& id, int row)
     m_idToData[id] = data;
     m_dataToRow[data] = row;
 
-    connect(data, SIGNAL(dataChanged()), this, SLOT(personDataChanged()));
+    connect(data, &KPeople::PersonData::dataChanged, this, &RecentContactsModel::personDataChanged);
 }
 
 void RecentContactsModel::personDataChanged()

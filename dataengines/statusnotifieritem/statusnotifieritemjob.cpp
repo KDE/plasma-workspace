@@ -25,7 +25,7 @@ StatusNotifierItemJob::StatusNotifierItemJob(StatusNotifierItemSource *source, c
     m_source(source)
 {
     connect(source, SIGNAL(contextMenuReady(QMenu*)), this, SLOT(contextMenuReady(QMenu*)));
-    connect(source, SIGNAL(activateResult(bool)), this, SLOT(activateCallback(bool)));
+    connect(source, &StatusNotifierItemSource::activateResult, this, &StatusNotifierItemJob::activateCallback);
 }
 
 StatusNotifierItemJob::~StatusNotifierItemJob()

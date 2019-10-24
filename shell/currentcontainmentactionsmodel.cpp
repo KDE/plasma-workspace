@@ -223,7 +223,7 @@ void CurrentContainmentActionsModel::showConfiguration(int row, QQuickItem *ctx)
     connect(buttons, &QDialogButtonBox::rejected, configDlg, &QDialog::reject);
 
     QObject::connect(configDlg, &QDialog::accepted, pluginInstance,
-            [configDlg, pluginInstance] () {
+            [ pluginInstance] () {
                 pluginInstance->configurationAccepted();
             });
 

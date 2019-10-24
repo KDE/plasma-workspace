@@ -175,7 +175,7 @@ void AppMenuModel::onActiveWindowChanged(WId id)
     if (KWindowSystem::isPlatformX11()) {
         auto *c = QX11Info::connection();
 
-        auto getWindowPropertyString = [c, this](WId id, const QByteArray &name) -> QByteArray {
+        auto getWindowPropertyString = [c](WId id, const QByteArray &name) -> QByteArray {
             QByteArray value;
             if (!s_atoms.contains(name)) {
                 const xcb_intern_atom_cookie_t atomCookie = xcb_intern_atom(c, false, name.length(), name.constData());

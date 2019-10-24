@@ -36,7 +36,7 @@ RunnerModel::RunnerModel(QObject *parent) : QAbstractListModel(parent)
 {
     m_queryTimer.setSingleShot(true);
     m_queryTimer.setInterval(10);
-    connect(&m_queryTimer, SIGNAL(timeout()), this, SLOT(startQuery()));
+    connect(&m_queryTimer, &QTimer::timeout, this, &RunnerModel::startQuery);
 }
 
 RunnerModel::~RunnerModel()
@@ -311,8 +311,8 @@ void RunnerModel::createManager()
     if (!m_runnerManager) {
         m_runnerManager = new Plasma::RunnerManager(this); // FIXME: Which KConfigGroup is this using now?
         m_runnerManager->setAllowedRunners(m_runners);
-        connect(m_runnerManager, SIGNAL(matchesChanged(QList<Plasma::QueryMatch>)),
-                this, SLOT(matchesChanged(QList<Plasma::QueryMatch>)));
+        connect(m_runnerManager, &Plasma::RunnerManager::matchesChanged,
+                this, &RunnerModel::matchesChanged);
     }
 }
 

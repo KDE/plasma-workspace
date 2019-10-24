@@ -213,45 +213,45 @@ void ForwardingModel::connectSignals()
     }
 
     connect(m_sourceModel, SIGNAL(destroyed()), this, SLOT(reset()));
-    connect(m_sourceModel, SIGNAL(dataChanged(QModelIndex,QModelIndex,QVector<int>)),
-            this, SIGNAL(dataChanged(QModelIndex,QModelIndex,QVector<int>)),
+    connect(m_sourceModel.data(), &QAbstractItemModel::dataChanged,
+            this, &QAbstractItemModel::dataChanged,
             Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(rowsAboutToBeInserted(QModelIndex,int,int)),
-            this, SIGNAL(rowsAboutToBeInserted(QModelIndex,int,int)),
+    connect(m_sourceModel.data(), &QAbstractItemModel::rowsAboutToBeInserted,
+            this, &QAbstractItemModel::rowsAboutToBeInserted,
             Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)),
-            this, SIGNAL(rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)),
+    connect(m_sourceModel.data(), &QAbstractItemModel::rowsAboutToBeMoved,
+            this, &QAbstractItemModel::rowsAboutToBeMoved,
             Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)),
-            this, SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)),
+    connect(m_sourceModel.data(), &QAbstractItemModel::rowsAboutToBeRemoved,
+            this, &QAbstractItemModel::rowsAboutToBeRemoved,
             Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(layoutAboutToBeChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
-            this, SIGNAL(layoutAboutToBeChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
+    connect(m_sourceModel.data(), &QAbstractItemModel::layoutAboutToBeChanged,
+            this, &QAbstractItemModel::layoutAboutToBeChanged,
             Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(rowsInserted(QModelIndex,int,int)),
-            this, SIGNAL(rowsInserted(QModelIndex,int,int)),
+    connect(m_sourceModel.data(), &QAbstractItemModel::rowsInserted,
+            this, &QAbstractItemModel::rowsInserted,
             Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(rowsInserted(QModelIndex,int,int)),
-            this, SIGNAL(countChanged()), Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(rowsMoved(QModelIndex,int,int,QModelIndex,int)),
-            this, SIGNAL(rowsMoved(QModelIndex,int,int,QModelIndex,int)),
+    connect(m_sourceModel.data(), &QAbstractItemModel::rowsInserted,
+            this, &AbstractModel::countChanged, Qt::UniqueConnection);
+    connect(m_sourceModel.data(), &QAbstractItemModel::rowsMoved,
+            this, &QAbstractItemModel::rowsMoved,
             Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(rowsRemoved(QModelIndex,int,int)),
-            this, SIGNAL(rowsRemoved(QModelIndex,int,int)),
+    connect(m_sourceModel.data(), &QAbstractItemModel::rowsRemoved,
+            this, &QAbstractItemModel::rowsRemoved,
             Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(rowsRemoved(QModelIndex,int,int)),
-            this, SIGNAL(countChanged()), Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(modelAboutToBeReset()),
-            this, SIGNAL(modelAboutToBeReset()),
+    connect(m_sourceModel.data(), &QAbstractItemModel::rowsRemoved,
+            this, &AbstractModel::countChanged, Qt::UniqueConnection);
+    connect(m_sourceModel.data(), &QAbstractItemModel::modelAboutToBeReset,
+            this, &QAbstractItemModel::modelAboutToBeReset,
             Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(modelReset()),
-            this, SIGNAL(modelReset()),
+    connect(m_sourceModel.data(), &QAbstractItemModel::modelReset,
+            this, &QAbstractItemModel::modelReset,
             Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(modelReset()),
-            this, SIGNAL(countChanged()),
+    connect(m_sourceModel.data(), &QAbstractItemModel::modelReset,
+            this, &AbstractModel::countChanged,
             Qt::UniqueConnection);
-    connect(m_sourceModel, SIGNAL(layoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
-            this, SIGNAL(layoutChanged(QList<QPersistentModelIndex>,QAbstractItemModel::LayoutChangeHint)),
+    connect(m_sourceModel.data(), &QAbstractItemModel::layoutChanged,
+            this, &QAbstractItemModel::layoutChanged,
             Qt::UniqueConnection);
 }
 

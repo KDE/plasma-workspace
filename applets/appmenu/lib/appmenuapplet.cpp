@@ -55,7 +55,7 @@ AppMenuApplet::AppMenuApplet(QObject *parent, const QVariantList &data)
       another destroyedchanged and destroyed will be false.
       When this happens, if we are the only appmenu applet existing, the dbus interface
       will have to be registered again*/
-    connect(this, &Applet::destroyedChanged, this, [this](bool destroyed) {
+    connect(this, &Applet::destroyedChanged, this, [](bool destroyed) {
         if (destroyed) {
             //if we were the last, unregister
             if (--s_refs == 0) {

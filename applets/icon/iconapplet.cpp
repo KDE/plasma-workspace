@@ -388,7 +388,7 @@ QList<QAction *> IconApplet::contextualActions()
         if (!m_openContainingFolderAction) {
             if (KProtocolManager::supportsListing(linkUrl)) {
                 m_openContainingFolderAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"), this);
-                connect(m_openContainingFolderAction, &QAction::triggered, this, [this, linkUrl] {
+                connect(m_openContainingFolderAction, &QAction::triggered, this, [ linkUrl] {
                     KIO::highlightInFileManager({linkUrl});
                 });
             }

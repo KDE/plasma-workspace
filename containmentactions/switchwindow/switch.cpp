@@ -52,7 +52,7 @@ SwitchWindow::SwitchWindow(QObject *parent, const QVariantList &args)
         s_tasksModel->setActivity(s_activityInfo->currentActivity());
         s_tasksModel->setFilterByActivity(true);
         connect(s_activityInfo, &ActivityInfo::currentActivityChanged,
-            this, [this]() { s_tasksModel->setActivity(s_activityInfo->currentActivity()); });
+            this, []() { s_tasksModel->setActivity(s_activityInfo->currentActivity()); });
     }
 }
 

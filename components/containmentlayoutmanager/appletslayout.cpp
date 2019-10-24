@@ -508,7 +508,7 @@ void AppletsLayout::componentComplete()
     }
 
     if (m_containment && m_containment->corona()) {
-        connect(m_containment->corona(), &Plasma::Corona::startupCompleted, this, [this](){
+        connect(m_containment->corona(), &Plasma::Corona::startupCompleted, this, [](){
            // m_savedSize = size();
         });
         // When the screen geometry changes, we need to know the geometry just before it did, so we can apply out heuristic of keeping the distance with borders constant

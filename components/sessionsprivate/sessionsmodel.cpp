@@ -209,7 +209,7 @@ void SessionsModel::checkScreenLocked(const std::function<void (bool)> &cb)
 {
     auto reply = m_screensaverInterface->GetActive();
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, cb](QDBusPendingCallWatcher *watcher) {
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [ cb](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<bool> reply = *watcher;
         if (!reply.isError()) {
             cb(reply.value());
