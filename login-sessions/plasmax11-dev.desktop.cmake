@@ -13,6 +13,7 @@ Name[lt]=Plasma (Plėtojimas, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[nl]=Plasma (Ontwikkeling, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[pt]=Plasma (Desenvolvimento, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[pt_BR]=Plasma (Desenvolvimento, X11 ${CMAKE_INSTALL_FULL_BINDIR})
+Name[sk]=Plasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[uk]=Пзазма (Розробка, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[x-test]=xxPlasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})xx
 Name[zh_TW]=Plasma (開發版本，X11 ${CMAKE_INSTALL_FULL_BINDIR})

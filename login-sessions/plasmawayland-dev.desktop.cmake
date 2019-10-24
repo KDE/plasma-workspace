@@ -12,6 +12,7 @@ Name[lt]=Plasma (Plėtojimas, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[nl]=Plasma (Ontwikkeling, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[pt]=Plasma (Desenvolvimento, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[pt_BR]=Plasma (Desenvolvimento, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
+Name[sk]=Plasma (Development, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[uk]=Пзазма (Розробка, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[x-test]=xxPlasma (Development, Wayland ${CMAKE_INSTALL_FULL_BINDIR})xx
 Name[zh_TW]=Plasma (開發版本，Wayland ${CMAKE_INSTALL_FULL_BINDIR})
