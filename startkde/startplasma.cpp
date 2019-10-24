@@ -63,12 +63,19 @@ QStringList allServices(const QLatin1String& prefix)
 
 int runSync(const QString& program, const QStringList &args, const QStringList &env)
 {
+    static const bool withCGroups = !QStandardPaths::findExecutable("systemd-run").isEmpty();
+
     QProcess p;
     if (!env.isEmpty())
         p.setEnvironment(QProcess::systemEnvironment() << env);
     p.setProcessChannelMode(QProcess::ForwardedChannels);
-    p.start(program, args);
-//     qDebug() << "started..." << program << args;
+    if (withCGroups) {
+        const QStringRef execName = program.midRef(program.lastIndexOf(QLatin1Char('/')) + 1);
+        p.start(QStringLiteral("systemd-run"), QStringList{QStringLiteral("--user"), QStringLiteral("--scope"), QStringLiteral("--unit"), QStringLiteral("plasma-")+execName, program} << args);
+    } else {
+        p.start(program, args);
+    }
+    qDebug() << "started..." << p.program() << p.arguments();
     p.waitForFinished(-1);
     if (p.exitCode()) {
         qWarning() << program << args << "exited with code" << p.exitCode();
