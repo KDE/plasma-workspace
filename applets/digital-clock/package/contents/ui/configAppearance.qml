@@ -29,8 +29,6 @@ import org.kde.kirigami 2.5 as Kirigami
 
 QtLayouts.ColumnLayout {
     id: appearancePage
-    width: childrenRect.width
-    height: childrenRect.height
 
     signal configurationChanged
 
@@ -233,7 +231,7 @@ QtLayouts.ColumnLayout {
                 }
                 icon.name: "format-text-bold"
                 checkable: true
-                Accessible.name: tooltip
+                Accessible.name: QtControls.ToolTip.text
             }
 
             QtControls.Button {
@@ -243,7 +241,7 @@ QtLayouts.ColumnLayout {
                 }
                 icon.name: "format-text-italic"
                 checkable: true
-                Accessible.name: tooltip
+                Accessible.name: QtControls.ToolTip.text
             }
         }
     }

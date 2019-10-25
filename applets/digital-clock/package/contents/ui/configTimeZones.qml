@@ -25,12 +25,10 @@ import QtQuick.Dialogs 1.1
 
 import org.kde.plasma.private.digitalclock 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.kirigami 2.5 as Kirigami
 
-Item {
+ColumnLayout {
     id: timeZonesPage
-    width: parent.width
-    height: parent.height
 
     property alias cfg_selectedTimeZones: timeZones.selectedTimeZones
     property alias cfg_wheelChangesTimezone: enableWheelCheckBox.checked
@@ -53,157 +51,84 @@ Item {
         visible: false
     }
 
+    Kirigami.InlineMessage {
+        id: messageWidget
 
-    ColumnLayout {
-        anchors.fill: parent
+        Layout.fillWidth: true
 
-        Rectangle {
-            id: messageWidget
+        type: Kirigami.MessageType.Warning
+        text: i18n("At least one time zone needs to be enabled. 'Local' was enabled automatically.")
 
-            anchors {
-                left: parent.left
-                right: parent.right
-                margins: 1
-            }
+        showCloseButton: true
+    }
 
-            height: 0
+    QtControls.TextField {
+        id: filter
+        Layout.fillWidth: true
+        placeholderText: i18n("Search Time Zones")
+    }
 
-            //TODO: This is the actual color KMessageWidget uses as its base color but here it gives
-            //      a different color, figure out why
-            //property color gradBaseColor: Qt.rgba(0.69, 0.5, 0, 1)
-            gradient: Gradient {
-                GradientStop { position: 0.0; color: "#FFD86D" } //Qt.lighter(messageWidget.gradBaseColor, 1.1)
-                GradientStop { position: 0.1; color: "#EAC360" } // messageWidget.gradBaseColor
-                GradientStop { position: 1.0; color: "#CAB064" } //Qt.darker(messageWidget.gradBaseColor, 1.1)
-            }
+    QtControls.TableView {
+        id: timeZoneView
 
-            radius: 5
-            border.width: 1
-            border.color: "#79735B"
+        signal toggleCurrent
 
-            visible: false
+        Layout.fillWidth: true
+        Layout.fillHeight: true
 
-            Behavior on visible {
-                ParallelAnimation {
-                    PropertyAnimation {
-                        target: messageWidget
-                        property: "opacity"
-                        to: messageWidget.visible ? 0 : 1.0
-                        easing.type: Easing.Linear
-                    }
-                    PropertyAnimation {
-                        target: messageWidget
-                        property: "Layout.minimumHeight"
-                        to: messageWidget.visible ? 0 : messageWidgetLabel.height + (2 *units.largeSpacing)
-                        easing.type: Easing.Linear
-                    }
-                }
-            }
+        Keys.onSpacePressed: toggleCurrent()
 
-            RowLayout {
-                anchors.fill: parent
-                anchors.margins: units.largeSpacing
-                anchors.leftMargin: units.smallSpacing
-                anchors.rightMargin: units.smallSpacing
-                spacing: units.smallSpacing
+        model: TimeZoneFilterProxy {
+            sourceModel: timeZones
+            filterString: filter.text
+        }
 
-                PlasmaCore.IconItem {
-                    anchors.verticalCenter: parent.verticalCenter
-                    height: units.iconSizes.smallMedium
-                    width: height
-                    source: "dialog-warning"
-                }
-
-                QtControls.Label {
-                    id: messageWidgetLabel
-                    anchors.verticalCenter: parent.verticalCenter
-                    Layout.fillWidth: true
-                    text: i18n("At least one time zone needs to be enabled. 'Local' was enabled automatically.")
-                    verticalAlignment: Text.AlignVCenter
-                    wrapMode: Text.WordWrap
-                }
-
-                PlasmaComponents.ToolButton {
-                    anchors.verticalCenter: parent.verticalCenter
-                    iconName: "dialog-close"
-                    flat: true
-
+        QtControls.TableViewColumn {
+            role: "checked"
+            width: checkbox.width
+            delegate:
+                QtControls.CheckBox {
+                    id: checkBox
+                    anchors.centerIn: parent
+                    checked: styleData.value
+                    activeFocusOnTab: false // only let the TableView as a whole get focus
                     onClicked: {
-                        messageWidget.visible = false;
+                        //needed for model's setData to be called
+                        model.checked = checked;
                     }
-                }
-            }
-        }
 
-        QtControls.TextField {
-            id: filter
-            Layout.fillWidth: true
-            placeholderText: i18n("Search Time Zones")
-        }
-
-        QtControls.TableView {
-            id: timeZoneView
-
-            signal toggleCurrent
-
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            Keys.onSpacePressed: toggleCurrent()
-
-            model: TimeZoneFilterProxy {
-                sourceModel: timeZones
-                filterString: filter.text
-            }
-
-            QtControls.TableViewColumn {
-                role: "checked"
-                width: checkbox.width
-                delegate:
-                    QtControls.CheckBox {
-                        id: checkBox
-                        anchors.centerIn: parent
-                        checked: styleData.value
-                        activeFocusOnTab: false // only let the TableView as a whole get focus
-                        onClicked: {
-                            //needed for model's setData to be called
-                            model.checked = checked;
-                        }
-
-                        Connections {
-                            target: timeZoneView
-                            onToggleCurrent: {
-                                if (styleData.row === timeZoneView.currentRow) {
-                                    model.checked = !checkBox.checked
-                                }
+                    Connections {
+                        target: timeZoneView
+                        onToggleCurrent: {
+                            if (styleData.row === timeZoneView.currentRow) {
+                                model.checked = !checkBox.checked
                             }
                         }
                     }
+                }
 
-                resizable: false
-                movable: false
-            }
-            QtControls.TableViewColumn {
-                role: "city"
-                title: i18n("City")
-            }
-            QtControls.TableViewColumn {
-                role: "region"
-                title: i18n("Region")
-            }
-            QtControls.TableViewColumn {
-                role: "comment"
-                title: i18n("Comment")
-            }
+            resizable: false
+            movable: false
         }
-
-        RowLayout {
-            Layout.fillWidth: true
-            QtControls.CheckBox {
-                id: enableWheelCheckBox
-                text: i18n("Switch time zone with mouse wheel")
-            }
+        QtControls.TableViewColumn {
+            role: "city"
+            title: i18n("City")
         }
+        QtControls.TableViewColumn {
+            role: "region"
+            title: i18n("Region")
+        }
+        QtControls.TableViewColumn {
+            role: "comment"
+            title: i18n("Comment")
+        }
+    }
 
+    RowLayout {
+        Layout.fillWidth: true
+        QtControls.CheckBox {
+            id: enableWheelCheckBox
+            text: i18n("Switch time zone with mouse wheel")
+        }
     }
 }
