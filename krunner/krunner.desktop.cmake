@@ -46,7 +46,6 @@ Name[x-test]=xxKRunnerxx
 Name[zh_CN]=KRunner
 Name[zh_TW]=KRunner
 OnlyShowIn=KDE;
-NoDisplay=true;
 Type=Application
 X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.krunner
