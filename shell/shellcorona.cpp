@@ -316,7 +316,7 @@ void ShellCorona::setShell(const QString &shell)
 
     {
         auto plasmaConfig = KSharedConfig::openConfig(QStringLiteral("PlasmaUserFeedback"));
-        feedbackProvider->setTelemetryMode(KUserFeedback::Provider::TelemetryMode(plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::BasicUsageStatistics))));
+        feedbackProvider->setTelemetryMode(KUserFeedback::Provider::TelemetryMode(plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::NoTelemetry))));
     }
 #endif
 
