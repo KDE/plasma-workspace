@@ -43,16 +43,22 @@ AbstractItem {
         }
     }
 
-    onStatusChanged: {
-        //binding is not working in PlasmaCore.IconItem
-        iconItem.source = status === PlasmaCore.Types.NeedsAttentionStatus ? (AttentionIcon ? AttentionIcon : AttentionIconName) : (Icon ? Icon : IconName)
-    }
-
     iconItem: iconItem
 
     PlasmaCore.IconItem {
         id: iconItem
-        source: Icon ? Icon : IconName
+        source: {
+            if (taskIcon.status === PlasmaCore.Types.NeedsAttentionStatus) {
+                if (AttentionIcon) {
+                    return AttentionIcon
+                }
+                if (AttentionIconName) {
+                    return AttentionIconName
+                }
+            }
+            return Icon ? Icon : IconName
+        }
+
         width: Math.min(parent.width, parent.height)
         height: width
         active: taskIcon.containsMouse
