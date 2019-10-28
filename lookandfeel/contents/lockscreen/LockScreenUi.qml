@@ -30,9 +30,11 @@ import "../components"
 
 PlasmaCore.ColorScope {
 
+    id: lockScreenUi
     // If we're using software rendering, draw outlines instead of shadows
     // See https://bugs.kde.org/show_bug.cgi?id=398317
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
+    readonly property bool lightBackground: Math.max(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b) > 0.5
 
     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
 
@@ -175,7 +177,7 @@ PlasmaCore.ColorScope {
             radius: 6
             samples: 14
             spread: 0.3
-            color: "black" // matches Breeze window decoration and desktopcontainment
+            color: lockScreenUi.lightBackground ? PlasmaCore.ColorScope.backgroundColor : "black" // black matches Breeze window decoration and desktopcontainment
             Behavior on opacity {
                 OpacityAnimator {
                     duration: 1000
