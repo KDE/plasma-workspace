@@ -33,7 +33,6 @@ MouseArea {
     opacity: 1 - Math.min(1, 1.5 * Math.abs(x) / width)
 
     drag {
-        filterChildren: draggable
         axis: Drag.XAxis
         target: draggable && Kirigami.Settings.tabletMode ? this : null
     }
