@@ -117,7 +117,7 @@ PlasmaCore.ColorScope {
         onClicked: root.cancelRequested()
     }
     UserDelegate {
-        width: units.iconSizes.enormous
+        width: units.gridUnit * 7
         height: width
         nameFontSize: theme.defaultFont.pointSize + 2
         anchors {

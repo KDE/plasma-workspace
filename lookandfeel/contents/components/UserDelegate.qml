@@ -41,7 +41,7 @@ Item {
     property int fontSize: config.fontSize
     signal clicked()
 
-    property real faceSize: Math.min(width, height - usernameDelegate.height - units.smallSpacing)
+    property real faceSize: units.gridUnit * 7
 
     opacity: isCurrent ? 1.0 : 0.5
 
