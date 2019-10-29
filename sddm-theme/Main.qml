@@ -37,6 +37,7 @@ PlasmaCore.ColorScope {
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
 
     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
+    readonly property bool lightBackground: Math.max(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b) > 0.5
 
     width: 1600
     height: 900
@@ -130,7 +131,7 @@ PlasmaCore.ColorScope {
             radius: 6
             samples: 14
             spread: 0.3
-            color: "black" // matches Breeze window decoration and desktopcontainment
+            color: root.lightBackground ? PlasmaCore.ColorScope.backgroundColor : "black" // black matches Breeze window decoration and desktopcontainment
             Behavior on opacity {
                 OpacityAnimator {
                     duration: 1000
