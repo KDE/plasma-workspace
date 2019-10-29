@@ -142,7 +142,9 @@ QList<QAction*> ContextMenu::contextualActions()
                 (c->containmentType() != Plasma::Types::PanelContainment
                  && c->containmentType() != Plasma::Types::CustomPanelContainment)) {
 
-                actions << a;
+                if (name != QLatin1String("lock widgets") || c->corona()->immutability() != Plasma::Types::Mutable) {
+                    actions << a;
+                }
             }
         }
     }
