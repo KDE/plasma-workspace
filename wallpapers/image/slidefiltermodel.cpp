@@ -31,6 +31,7 @@ SlideFilterModel::SlideFilterModel(QObject* parent)
     , m_SortingMode{Image::Random}
     , m_usedInConfig{false}
 {
+    srand(time(nullptr));
     setSortCaseSensitivity(Qt::CaseSensitivity::CaseInsensitive);
     connect(this, &SlideFilterModel::usedInConfigChanged, this, &SlideFilterModel::invalidateFilter);
 }
@@ -58,6 +59,7 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
             const int old_count = m_randomOrder.size();
             m_randomOrder.resize(this->sourceModel()->rowCount());
             std::iota(m_randomOrder.begin() + old_count, m_randomOrder.end(), old_count);
+            std::random_shuffle(m_randomOrder.begin() + old_count, m_randomOrder.end());
         });
         connect(sourceModel, &QAbstractItemModel::rowsRemoved, this, [this] {
             if (m_SortingMode !=  Image::Random || m_usedInConfig) {
