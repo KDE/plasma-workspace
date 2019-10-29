@@ -71,7 +71,7 @@ void ContextMenu::restore(const KConfigGroup &config)
 
     if (c->containmentType() == Plasma::Types::PanelContainment ||
         c->containmentType() == Plasma::Types::CustomPanelContainment) {
-        m_actionOrder << QStringLiteral("add widgets") << QStringLiteral("_add panel") << QStringLiteral("lock widgets") << QStringLiteral("edit mode") << QStringLiteral("_context") << QStringLiteral("configure") << QStringLiteral("remove");
+        m_actionOrder << QStringLiteral("add widgets") << QStringLiteral("_add panel") << QStringLiteral("lock widgets") << QStringLiteral("_context") << QStringLiteral("configure") << QStringLiteral("remove");
     } else {
         actions.insert(QStringLiteral("configure shortcuts"), false);
         m_actionOrder << QStringLiteral("_context") << QStringLiteral("_run_command") << QStringLiteral("add widgets") << QStringLiteral("_add panel")
