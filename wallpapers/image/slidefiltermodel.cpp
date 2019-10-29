@@ -31,6 +31,7 @@ SlideFilterModel::SlideFilterModel(QObject* parent)
     , m_SortingMode{Image::Random}
     , m_usedInConfig{false}
 {
+    srand(time(nullptr));
     setSortCaseSensitivity(Qt::CaseSensitivity::CaseInsensitive);
     connect(this, &SlideFilterModel::usedInConfigChanged, this, &SlideFilterModel::invalidateFilter);
 }
