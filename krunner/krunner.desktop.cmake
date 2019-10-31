@@ -63,6 +63,7 @@ Name[cs]=Spustit příkaz nad obsahem schránky
 Name[de]=Befehl mit dem Inhalt der Zwischenablage ausführen
 Name[en_GB]=Run command on clipboard contents
 Name[es]=Ejecutar orden sobre el contenido del portapapeles
+Name[et]=Käsu käivitamine lõikepuhvri sisuga
 Name[eu]=Exekutatu komandoa arbelaren edukiaren gain
 Name[fi]=Suorita komento leikepöydän sisällöstä
 Name[fr]=Exécuter la commande en utilisant le contenu du presse-papier
