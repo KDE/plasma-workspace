@@ -1,7 +1,5 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"ksmserver\")
 
-include_directories(${PHONON_INCLUDE_DIR})
-
 check_library_exists(ICE _IceTransNoListen "" HAVE__ICETRANSNOLISTEN)
 configure_file(config-ksmserver.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ksmserver.h)
 
@@ -59,7 +57,6 @@ target_link_libraries(kdeinit_ksmserver
     KF5::Notifications
     KF5::Package
     KF5::WindowSystem
-    ${PHONON_LIBRARIES}
     Qt5::Concurrent
 )
 
