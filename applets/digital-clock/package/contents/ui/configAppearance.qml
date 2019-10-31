@@ -191,11 +191,13 @@ QtLayouts.ColumnLayout {
         QtControls.TextField {
             id: customDateFormat
             QtLayouts.Layout.fillWidth: true
+            enabled: showDate.checked
             visible: cfg_dateFormat == "custom"
         }
 
         QtControls.Label {
             text: i18n("<a href=\"http://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method\">Time Format Documentation</a>")
+            enabled: showDate.checked
             visible: cfg_dateFormat == "custom"
             wrapMode: Text.Wrap
             QtLayouts.Layout.preferredWidth: QtLayouts.Layout.maximumWidth
