@@ -141,37 +141,50 @@ QtLayouts.ColumnLayout {
             Kirigami.FormData.isSection: true
         }
 
-        QtControls.ComboBox {
-            id: dateFormat
+        QtLayouts.RowLayout {
             Kirigami.FormData.label: i18n("Date format:")
             enabled: showDate.checked
-            textRole: "label"
-            model: [
-                {
-                    'label': i18n("Long Date"),
-                    'name': "longDate"
-                },
-                {
-                    'label': i18n("Short Date"),
-                    'name': "shortDate"
-                },
-                {
-                    'label': i18n("ISO Date"),
-                    'name': "isoDate"
-                },
-                {
-                    'label': i18nc("custom date format", "Custom"),
-                    'name': "custom"
-                }
-            ]
-            onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"]
 
-            Component.onCompleted: {
-                for (var i = 0; i < model.length; i++) {
-                    if (model[i]["name"] === plasmoid.configuration.dateFormat) {
-                        dateFormat.currentIndex = i;
+            QtControls.ComboBox {
+                id: dateFormat
+                textRole: "label"
+                model: [
+                    {
+                        'label': i18n("Long Date"),
+                        'name': "longDate",
+                        format: Qt.SystemLocaleLongDate
+                    },
+                    {
+                        'label': i18n("Short Date"),
+                        'name': "shortDate",
+                        format: Qt.SystemLocaleShortDate
+                    },
+                    {
+                        'label': i18n("ISO Date"),
+                        'name': "isoDate",
+                        format: Qt.ISODate
+                    },
+                    {
+                        'label': i18nc("custom date format", "Custom"),
+                        'name': "custom"
+                    }
+                ]
+                onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"]
+
+                Component.onCompleted: {
+                    for (var i = 0; i < model.length; i++) {
+                        if (model[i]["name"] === plasmoid.configuration.dateFormat) {
+                            dateFormat.currentIndex = i;
+                        }
                     }
                 }
+            }
+
+            QtControls.Label {
+                QtLayouts.Layout.fillWidth: true
+                textFormat: Text.PlainText
+                text: Qt.formatDate(new Date(), cfg_dateFormat === "custom" ? customDateFormat.text
+                                                                            : dateFormat.model[dateFormat.currentIndex].format)
             }
         }
 
