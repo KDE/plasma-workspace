@@ -77,6 +77,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "logoutprompt_interface.h"
 #include "shutdown_interface.h"
+#include "kwinsession_interface.h"
+
+enum KWinSessionState {
+    Normal = 0,
+    Saving = 1,
+    Quitting = 2
+};
 
 void KSMServer::logout( int confirm, int sdtype, int sdmode )
 {
@@ -183,6 +190,11 @@ void KSMServer::performLogout()
     if (state != Idle) {
         QTimer::singleShot(1000, this, &KSMServer::performLogout);
     }
+
+    auto reply = m_kwinInterface->setState(KWinSessionState::Saving);
+    // we don't need to block as we wait for kwin to handle it's session 1
+    // before messaging the clients
+
     state = Shutdown;
 
     // shall we save the session on logout?
@@ -251,6 +263,7 @@ void KSMServer::saveCurrentSession()
         sessionGroup = QLatin1String("Session: ") + QString::fromLocal8Bit( SESSION_BY_USER );
 
     state = Checkpoint;
+
     wmPhase1WaitingCount = 0;
     saveType = SmSaveLocal;
     saveSession = true;
@@ -405,6 +418,9 @@ void KSMServer::cancelShutdown( KSMClient* c )
         }
     }
     state = Idle;
+
+    m_kwinInterface->setState(KWinSessionState::Normal);
+
     if (m_performLogoutCall.type() == QDBusMessage::MethodCallMessage) {
         auto reply = m_performLogoutCall.createReply(false);
         QDBusConnection::sessionBus().send(reply);
@@ -519,6 +535,9 @@ void KSMServer::startKilling()
     }
     // kill all clients
     state = Killing;
+
+    m_kwinInterface->setState(KWinSessionState::Quitting);
+
     foreach( KSMClient* c, clients ) {
         if( isWM( c )) // kill the WM as the last one in order to reduce flicker
             continue;

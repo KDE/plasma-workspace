@@ -93,6 +93,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <qstandardpaths.h>
 
 #include "kscreenlocker_interface.h"
+#include "kwinsession_interface.h"
 
 KSMServer* the_server = nullptr;
 
@@ -599,6 +600,7 @@ extern "C" int _IceTransNoListen(const char * protocol);
 KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
   : wmProcess( nullptr )
   , sessionGroup( QStringLiteral( "" ) )
+  , m_kwinInterface(new OrgKdeKWinSessionInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/Session"), QDBusConnection::sessionBus(), this))
   , sockets{ -1, -1 }
 {
     if (!flags.testFlag(InitFlag::NoLockScreen)) {

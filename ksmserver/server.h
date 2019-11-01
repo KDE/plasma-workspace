@@ -62,6 +62,7 @@ class KSMListener;
 class KSMConnection;
 class KSMClient;
 
+class OrgKdeKWinSessionInterface;
 
 enum SMType { SM_ERROR, SM_WMCOMMAND, SM_WMSAVEYOURSELF };
 struct SMData
@@ -83,6 +84,7 @@ public:
         ImmediateLockScreen = 1 << 1,
         NoLockScreen = 1 << 2
     };
+
     Q_DECLARE_FLAGS(InitFlags, InitFlag)
     KSMServer( const QString& windowManager, InitFlags flags );
     ~KSMServer() override;
@@ -254,6 +256,8 @@ private:
     //subSession stuff
     QList<KSMClient*> clientsToKill;
     QList<KSMClient*> clientsToSave;
+
+    OrgKdeKWinSessionInterface *m_kwinInterface;
 
     int sockets[2];
     friend bool readFromPipe(int pipe);
