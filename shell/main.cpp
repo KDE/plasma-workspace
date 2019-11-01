@@ -88,11 +88,11 @@ int main(int argc, char *argv[])
 
     app.setQuitOnLastWindowClosed(false);
 
-
     KSharedConfig::Ptr startupConf = KSharedConfig::openConfig(QStringLiteral("plasmashellrc"));
     KConfigGroup startupConfGroup(startupConf, "Shell");
     const QString defaultShell = startupConfGroup.readEntry("ShellPackage", "org.kde.plasma.desktop");
 
+    bool replace = false;
     {
     QCommandLineParser cliOptions;
 
@@ -177,17 +177,6 @@ int main(int argc, char *argv[])
         qApp->setProperty("_plasma_dbus_master", true);
     }
 
-    if (cliOptions.isSet(replaceOption)) {
-        auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
-                                                      QStringLiteral("/MainApplication"),
-                                                      QStringLiteral("org.qtproject.Qt.QCoreApplication"),
-                                                      QStringLiteral("quit"));
-        auto reply = QDBusConnection::sessionBus().call(message); //deliberately block until it's done, so we register the name after the app quits
-
-        while (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.plasmashell"))) {
-            QCoreApplication::processEvents(QEventLoop::AllEvents);
-        }
-    }
     QObject::connect(corona, &ShellCorona::glInitializationFailed, &app, [&app]() {
         //scene graphs errors come from a thread
         //even though we process them in the main thread, app.exit could still process these events
@@ -210,9 +199,10 @@ int main(int argc, char *argv[])
         }
         app.exit(-1);
     });
+    replace = cliOptions.isSet(replaceOption);
     }
 
-    KDBusService service(KDBusService::Unique);
+    KDBusService service(KDBusService::Unique | KDBusService::StartupOption(replace ? KDBusService::Replace : 0));
 
     SoftwareRendererNotifier::notifyIfRelevant();
 

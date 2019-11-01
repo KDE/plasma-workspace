@@ -85,19 +85,11 @@ int main(int argc, char **argv)
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    if (parser.isSet(replaceOption)) {
-        auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.krunner"),
-                                                    QStringLiteral("/MainApplication"),
-                                                    QStringLiteral("org.qtproject.Qt.QCoreApplication"),
-                                                    QStringLiteral("quit"));
-        QDBusConnection::sessionBus().call(message); //deliberately block until it's done, so we register the name after the app quits
-    }
-
     if (!KAuthorized::authorize(QStringLiteral("run_command"))) {
         return -1;
     }
 
-    KDBusService service(KDBusService::Unique);
+    KDBusService service(KDBusService::Unique | KDBusService::StartupOption(parser.isSet(replaceOption) ? KDBusService::Replace : 0));
 
     QGuiApplication::setFallbackSessionManagementEnabled(false);
 
