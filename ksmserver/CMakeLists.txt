@@ -73,3 +73,8 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/KSMServerDBusInterfaceConfig.cmake
 ########### install files ###############
 
 install( FILES org.kde.KSMServerInterface.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR})
+
+configure_file(ksmserver.service.cmake ${CMAKE_CURRENT_BINARY_DIR}/ksmserver.service @ONLY)
+
+install( FILES  ${CMAKE_CURRENT_BINARY_DIR}/ksmserver.service DESTINATION
+        ${SYSTEMD_USER_UNIT_INSTALL_DIR})

@@ -357,6 +357,15 @@ bool startKSMServer(bool wayland)
     // If the session should be locked from the start (locked autologin),
     // lock now and do the rest of the KDE startup underneath the locker.
 
+    if (qEnvironmentVariableIsSet("PLASMA_SYSTEMD")) {
+        auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                                                       QStringLiteral("/org/freedesktop/systemd1"),
+                                                                        QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                                                        QStringLiteral("StartUnit"));
+        msg << QStringLiteral("plasma-workspace.target") << QStringLiteral("fail");
+        QDBusConnection::sessionBus().call(msg);
+        return msg.type() == QDBusMessage::ReplyMessage;
+    }
 
     QStringList ksmserverOptions;
     if (wayland) {

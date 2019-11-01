@@ -52,6 +52,7 @@ Name[zh_CN]=Plasma 桌面工作空间
 Name[zh_TW]=Plasma 桌面工作空間
 Type=Application
 X-KDE-StartupNotify=false
+X-KDE-HiddenUnderSystemd=true
 X-DBUS-ServiceName=org.kde.plasmashell
 OnlyShowIn=KDE;
 X-KDE-autostart-phase=0
