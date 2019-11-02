@@ -205,6 +205,7 @@ private Q_SLOTS:
     void adaptToScreen();
     void handleQmlStatusChange(QQmlComponent::Status status);
     void updateMask();
+    void updateEnabledBorders();    
 
 private:
     int readConfigValueWithFallBack(const QString &key, int defaultValue);
@@ -215,7 +216,6 @@ private:
     void setupWaylandIntegration();
     void visibilityModeToWayland();
     bool edgeActivated() const;
-    void updateEnabledBorders();
     bool canSetStrut() const;
 
     int m_offset;

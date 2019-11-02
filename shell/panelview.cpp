@@ -80,6 +80,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
 
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &PanelView::updateMask);
     connect(this, &PanelView::backgroundHintsChanged, this, &PanelView::updateMask);
+    connect(this, &PanelView::backgroundHintsChanged, this, &PanelView::updateEnabledBorders);
     // TODO: add finished/componentComplete signal to QuickViewSharedEngine,
     // so we exactly know when rootobject is available
     connect(this, &QuickViewSharedEngine::statusChanged,
@@ -1321,12 +1322,7 @@ void PanelView::updateEnabledBorders()
     }
 
     if (m_enabledBorders != borders) {
-        if (m_backgroundHints == Plasma::Types::NoBackground) {
-            PanelShadows::self()->removeWindow(this);
-        } else {
-            PanelShadows::self()->setEnabledBorders(this, borders);
-        }
-
+        PanelShadows::self()->setEnabledBorders(this, borders);
         m_enabledBorders = borders;
         emit enabledBordersChanged();
     }
