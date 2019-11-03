@@ -22,6 +22,7 @@ include(FeatureSummary)
 include(ECMOptionalAddSubdirectory)
 include(ECMQtDeclareLoggingCategory)
 include(KDEPackageAppTemplates)
+include(KDEClangFormat)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner NotifyConfig Su NewStuff Wallet
@@ -195,3 +196,7 @@ add_subdirectory(templates)
 
 install(FILES plasma-workspace.categories   DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
+
+# add clang-format target for all our real source files
+file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
+kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
