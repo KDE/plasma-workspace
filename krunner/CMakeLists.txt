@@ -41,4 +41,8 @@ configure_package_config_file(KRunnerAppDBusInterfaceConfig.cmake.in
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/KRunnerAppDBusInterfaceConfig.cmake
     DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 
+configure_file(krunner.service.cmake ${CMAKE_CURRENT_BINARY_DIR}/krunner.service @ONLY)
+install( FILES  ${CMAKE_CURRENT_BINARY_DIR}/krunner.service DESTINATION
+        ${SYSTEMD_USER_UNIT_INSTALL_DIR})
+
 add_subdirectory(update)

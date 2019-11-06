@@ -1,6 +1,6 @@
 [Unit]
 Description=KDE Plasma Workspace
-Requires=plasma-workspace.service window-manager.service
+Requires=plasmashell.service kwin.service ksmserver.service
 #launcher.service
 Wants=kwalletd.service indexer.service
 #BindsTo=ksmserver.service
