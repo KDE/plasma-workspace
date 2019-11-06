@@ -102,6 +102,7 @@ bool SlideFilterModel::lessThan(const QModelIndex& source_left, const QModelInde
 
 void SlideFilterModel::setSortingMode(Image::SlideshowMode mode)
 {
+    m_SortingMode = mode;
     if (m_SortingMode == Image::Random && !m_usedInConfig) {
         buildRandomOrder();
     }
