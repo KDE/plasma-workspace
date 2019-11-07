@@ -38,6 +38,8 @@ Item {
     property real factor: 0
     readonly property bool lightBackground: Math.max(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b) > 0.5
 
+    property bool alwaysShowClock: typeof config === "undefined" || config.alwaysShowClock === true
+
     Behavior on factor {
         NumberAnimation {
             target: wallpaperFader
@@ -119,6 +121,10 @@ Item {
                 target: clock.shadow
                 opacity: 0
             }
+            PropertyChanges {
+                target: clock
+                opacity: 1
+            }
         },
         State {
             name: "off"
@@ -136,7 +142,11 @@ Item {
             }
             PropertyChanges {
                 target: clock.shadow
-                opacity: 1
+                opacity: wallpaperFader.alwaysShowClock ? 1 : 0
+            }
+            PropertyChanges {
+                target: clock
+                opacity: wallpaperFader.alwaysShowClock ? 1 : 0
             }
         }
     ]
@@ -145,37 +155,21 @@ Item {
             from: "off"
             to: "on"
             //Note: can't use animators as they don't play well with parallelanimations
-            ParallelAnimation {
-                NumberAnimation {
-                    target: mainStack
-                    property: "opacity"
-                    duration: units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-                NumberAnimation {
-                    target: footer
-                    property: "opacity"
-                    duration: units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
+            NumberAnimation {
+                targets: [mainStack, footer, clock]
+                property: "opacity"
+                duration: units.longDuration
+                easing.type: Easing.InOutQuad
             }
         },
         Transition {
             from: "on"
             to: "off"
-            ParallelAnimation {
-                NumberAnimation {
-                    target: mainStack
-                    property: "opacity"
-                    duration: 500
-                    easing.type: Easing.InOutQuad
-                }
-                NumberAnimation {
-                    target: footer
-                    property: "opacity"
-                    duration: 500
-                    easing.type: Easing.InOutQuad
-                }
+            NumberAnimation {
+                targets: [mainStack, footer, clock]
+                property: "opacity"
+                duration: 500
+                easing.type: Easing.InOutQuad
             }
         }
     ]
