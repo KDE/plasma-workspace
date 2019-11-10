@@ -24,6 +24,7 @@ Name[sk]=Plasma (Wayland)
 Name[sv]=Plasma (Wayland)
 Name[uk]=Плазма (Wayland)
 Name[x-test]=xxPlasma (Wayland)xx
+Name[zh_CN]=Plasma (Wayland)
 Name[zh_TW]=Plasma (Wayland)
 Comment=Plasma by KDE
 Comment[ar]=بلازما كدي

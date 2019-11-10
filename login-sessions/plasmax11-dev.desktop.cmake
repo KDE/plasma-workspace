@@ -23,6 +23,7 @@ Name[sk]=Plasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[sv]=Plasma (utveckling, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[uk]=Пзазма (Розробка, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[x-test]=xxPlasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})xx
+Name[zh_CN]=Plasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[zh_TW]=Plasma (開發版本，X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Comment=Plasma by KDE
 Comment[ar]=بلازما كدي
