@@ -100,7 +100,7 @@ Item {
             asynchronous: true
             fillMode: Image.PreserveAspectFit
             source: mpris2Source.albumArt
-            sourceSize: Qt.size(width, height)
+            sourceSize.height: height
             visible: status === Image.Loading || status === Image.Ready
         }
 
