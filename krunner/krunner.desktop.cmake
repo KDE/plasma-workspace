@@ -68,6 +68,7 @@ Name[eu]=Exekutatu komandoa arbelaren edukiaren gain
 Name[fi]=Suorita komento leikepöydän sisällöstä
 Name[fr]=Exécuter la commande en utilisant le contenu du presse-papier
 Name[gl]=Executar a orde segundo o contido do portapapeis
+Name[hu]=Parancs futtatása a vágólap tartalmával
 Name[id]=Jalankan perintah pada konten-konten papan-klip
 Name[it]=Esegui comando sui contenuti degli appunti
 Name[ko]=클립보드 내용에서 명령 실행하기
