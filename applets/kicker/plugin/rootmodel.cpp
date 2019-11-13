@@ -394,7 +394,7 @@ void RootModel::refresh()
     int separatorPosition = 0;
 
     if (allModel) {
-        m_entryList.prepend(new GroupEntry(this, i18n("All Applications"), QString(), allModel));
+        m_entryList.prepend(new GroupEntry(this, i18n("All Applications"), QString("applications-all"), allModel));
         ++separatorPosition;
     }
 
