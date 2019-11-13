@@ -19,6 +19,7 @@
 
 //Project-Includes
 #include "killrunner_config.h"
+#include <kconfigwidgets_version.h>
 //KDE-Includes
 #include <KSharedConfig>
 #include <KPluginFactory>
@@ -42,10 +43,15 @@ KillRunnerConfig::KillRunnerConfig(QWidget* parent, const QVariantList& args) :
     m_ui->sorting->addItem(i18n("CPU usage"), CPU);
     m_ui->sorting->addItem(i18n("inverted CPU usage"), CPUI);
     m_ui->sorting->addItem(i18n("nothing"), NONE);
-
+#if KCONFIGWIDGETS_VERSION < QT_VERSION_CHECK(5, 64, 0)
     connect(m_ui->useTriggerWord, &QCheckBox::stateChanged, this, QOverload<>::of(&KillRunnerConfig::changed));
     connect(m_ui->triggerWord, &KLineEdit::textChanged, this, QOverload<>::of(&KillRunnerConfig::changed));
     connect(m_ui->sorting, QOverload<int>::of(&QComboBox::currentIndexChanged), this, QOverload<>::of(&KillRunnerConfig::changed));
+#else
+    connect(m_ui->useTriggerWord, &QCheckBox::stateChanged, this, &KillRunnerConfig::markAsChanged);
+    connect(m_ui->triggerWord, &KLineEdit::textChanged, this, &KillRunnerConfig::markAsChanged);
+    connect(m_ui->sorting, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &KillRunnerConfig::markAsChanged);
+#endif
 
     load();
 }

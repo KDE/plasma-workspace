@@ -24,6 +24,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <QObject>
 
 #include <KWindowSystem>
+#include <QHash>
 
 /*
  * Relay class for KWindowSystem events that batches updates

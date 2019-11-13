@@ -17,6 +17,7 @@
 
 #include "solarsystem.h"
 #include <math.h>
+#include <QList>
 
 /*
  *   Mathematics, ideas, public domain code used for these classes from:

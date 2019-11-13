@@ -22,6 +22,7 @@
 #include <kautostart.h>
 #include <QStandardPaths>
 #include <QDir>
+#include <QHash>
 
 AutoStart::AutoStart()
     : m_phase(-1), m_phasedone(false)
