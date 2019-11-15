@@ -131,7 +131,7 @@ Item {
             }
             textFromValue: function(value) {
                 var seconds = value / 1000
-                return i18n("%1 seconds", seconds.toFixed(1))
+                return i18nc("SpinBox text", "%1 seconds", seconds.toFixed(1))
             }
             valueFromText: function(text) {
                 return parseFloat(text) * 1000

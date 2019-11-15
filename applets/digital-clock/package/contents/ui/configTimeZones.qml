@@ -19,7 +19,7 @@
  */
 
 import QtQuick 2.13
-import QtQuick.Controls 2.13 as QQC2
+import QtQuick.Controls 2.8 as QQC2
 import QtQuick.Layouts 1.0
 import QtQuick.Dialogs 1.1
 
