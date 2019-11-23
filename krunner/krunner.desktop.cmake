@@ -59,6 +59,7 @@ Name=Run command on clipboard contents
 Name[ca]=Executa una ordre al contingut del porta-retalls
 Name[ca@valencia]=Executa una ordre en el contingut del porta-retalls
 Name[cs]=Spustit příkaz nad obsahem schránky
+Name[da]=Kør kommando på udklipsholderindholdet
 Name[de]=Befehl mit dem Inhalt der Zwischenablage ausführen
 Name[en_GB]=Run command on clipboard contents
 Name[es]=Ejecutar orden sobre el contenido del portapapeles

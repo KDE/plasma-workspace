@@ -4,6 +4,7 @@ DesktopNames=KDE
 Name=Plasma (Development ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ca]=Plasma (Desenvolupament ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ca@valencia]=Plasma (Desenvolupament ${CMAKE_INSTALL_FULL_BINDIR})
+Name[da]=Plasma (Development ${CMAKE_INSTALL_FULL_BINDIR})
 Name[de]=Plasma (Development ${CMAKE_INSTALL_FULL_BINDIR})
 Name[en_GB]=Plasma (Development ${CMAKE_INSTALL_FULL_BINDIR})
 Name[es]=Plasma (Desarrollo ${CMAKE_INSTALL_FULL_BINDIR})
