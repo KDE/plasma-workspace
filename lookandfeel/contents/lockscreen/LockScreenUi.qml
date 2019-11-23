@@ -57,6 +57,17 @@ PlasmaCore.ColorScope {
         }
     }
 
+    SessionManagement {
+        id: sessionManagement
+    }
+
+    Connections {
+        target: sessionManagement
+        onAboutToSuspend: {
+            mainBlock.mainPasswordBox.text = "";
+        }
+    }
+
     SessionsModel {
         id: sessionsModel
         showNewSessionEntry: false

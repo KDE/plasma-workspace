@@ -62,6 +62,8 @@ SessionManagement::SessionManagement(QObject *parent)
     connect(backend, &SessionBackend::canSuspendChanged, this, &SessionManagement::canSuspendChanged);
     connect(backend, &SessionBackend::canHybridSuspendChanged, this, &SessionManagement::canHybridSuspendChanged);
     connect(backend, &SessionBackend::canHibernateChanged, this, &SessionManagement::canHibernateChanged);
+    connect(backend, &SessionBackend::aboutToSuspend, this, &SessionManagement::aboutToSuspend);
+    connect(backend, &SessionBackend::resumingFromSuspend, this, &SessionManagement::resumingFromSuspend);
 }
 
 bool SessionManagement::canShutdown() const
