@@ -617,7 +617,7 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsMinimized) {
         return d->windowInfo(window)->isMinimized();
     } else if (role == IsKeepAbove) {
-        return d->windowInfo(window)->hasState(NET::StaysOnTop);
+        return d->windowInfo(window)->hasState(NET::KeepAbove);
     } else if (role == IsKeepBelow) {
         return d->windowInfo(window)->hasState(NET::KeepBelow);
     } else if (role == IsFullScreenable) {
@@ -849,10 +849,10 @@ void XWindowTasksModel::requestToggleKeepAbove(const QModelIndex &index)
 
     NETWinInfo ni(QX11Info::connection(), window, QX11Info::appRootWindow(), NET::WMState, NET::Properties2());
 
-    if (info->hasState(NET::StaysOnTop)) {
-        ni.setState(NET::States(), NET::StaysOnTop);
+    if (info->hasState(NET::KeepAbove)) {
+        ni.setState(NET::States(), NET::KeepAbove);
     } else {
-        ni.setState(NET::StaysOnTop, NET::StaysOnTop);
+        ni.setState(NET::KeepAbove, NET::KeepAbove);
     }
 }
 
