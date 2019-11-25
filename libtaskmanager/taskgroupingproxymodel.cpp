@@ -1011,13 +1011,26 @@ void TaskGroupingProxyModel::requestToggleMaximized(const QModelIndex &index)
     } else {
         const bool goalState = !index.data(AbstractTasksModel::IsMaximized).toBool();
 
-         for (int i = 0; i < rowCount(index); ++i) {
-             const QModelIndex &child = index.child(i, 0);
+        QModelIndexList inStackingOrder;
 
-             if (child.data(AbstractTasksModel::IsMaximized).toBool() != goalState) {
-                 d->abstractTasksSourceModel->requestToggleMaximized(mapToSource(child));
-             }
-         }
+        for (int i = 0; i < rowCount(index); ++i) {
+            const QModelIndex &child = index.child(i, 0);
+
+            if (child.data(AbstractTasksModel::IsMaximized).toBool() != goalState) {
+                inStackingOrder << mapToSource(child);
+            }
+        }
+
+        std::sort(inStackingOrder.begin(), inStackingOrder.end(),
+            [](const QModelIndex &a, const QModelIndex &b)  {
+                return (a.data(AbstractTasksModel::StackingOrder).toInt()
+                    < b.data(AbstractTasksModel::StackingOrder).toInt());
+            }
+        );
+
+        for (const QModelIndex &sourceChild : inStackingOrder) {
+            d->abstractTasksSourceModel->requestToggleMaximized(sourceChild);
+        }
     }
 }
 

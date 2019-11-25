@@ -65,6 +65,8 @@ public:
     QHash<WId, AppData> appDataCache;
     QHash<WId, QRect> delegateGeometries;
     QSet<WId> usingFallbackIcon;
+    QHash<WId, QTime> lastActivated;
+    QList<WId> cachedStackingOrder;
     WId activeWindow = -1;
     KSharedConfig::Ptr rulesConfig;
     KDirWatch *configWatcher = nullptr;
@@ -119,6 +121,8 @@ void XWindowTasksModel::Private::init()
             AbstractTasksModel::LauncherUrlWithoutIcon,
             AbstractTasksModel::SkipTaskbar});
     };
+
+    cachedStackingOrder = KWindowSystem::stackingOrder();
 
     sycocaChangeTimer.setSingleShot(true);
     sycocaChangeTimer.setInterval(100);
@@ -177,6 +181,7 @@ void XWindowTasksModel::Private::init()
         [this](WId window) {
             const WId oldActiveWindow = activeWindow;
             activeWindow = window;
+            lastActivated[activeWindow] = QTime::currentTime();
 
             int row = windows.indexOf(oldActiveWindow);
 
@@ -189,6 +194,14 @@ void XWindowTasksModel::Private::init()
             if (row != -1) {
                 dataChanged(window, QVector<int>{IsActive});
             }
+        }
+    );
+
+    QObject::connect(KWindowSystem::self(), &KWindowSystem::stackingOrderChanged, q,
+        [this]() {
+            cachedStackingOrder = KWindowSystem::stackingOrder();
+            q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0),
+                QVector<int>{StackingOrder});
         }
     );
 
@@ -255,8 +268,9 @@ void XWindowTasksModel::Private::removeWindow(WId window)
         transientsDemandingAttention.remove(window);
         delete windowInfoCache.take(window);
         appDataCache.remove(window);
-        usingFallbackIcon.remove(window);
         delegateGeometries.remove(window);
+        usingFallbackIcon.remove(window);
+        lastActivated.remove(window);
         q->endRemoveRows();
     } else { // Could be a transient.
         // Removing a transient might change the demands attention state of the leader.
@@ -653,6 +667,12 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return d->windowInfo(window)->hasState(NET::SkipPager);
     } else if (role == AppPid) {
         return d->windowInfo(window)->pid();
+    } else if (role == StackingOrder) {
+        return d->cachedStackingOrder.indexOf(window);
+    } else if (role == LastActivated) {
+        if (d->lastActivated.contains(window)) {
+            return d->lastActivated.value(window);
+        }
     }
 
     return QVariant();

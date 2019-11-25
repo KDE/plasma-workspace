@@ -91,6 +91,11 @@ public:
                                itself. DO NOT use this for destructive actions such as closing
                                the application. The intended use case is to try and (smartly)
                                gather more information about the task when needed. */
+        StackingOrder,    /**< A window task's index in the window stacking order. Care must be
+                               taken not to assume this index to be unique when iterating over
+                               model contents due to the asynchronous nature of the windowing
+                               system. */
+        LastActivated,    /**< The timestamp of the last time a task was the active task. */
     };
     Q_ENUM(AdditionalRoles)
 
