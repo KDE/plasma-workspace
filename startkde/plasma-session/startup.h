@@ -29,6 +29,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "autostart.h"
 
+class QProcess;
+
 class Startup : public QObject
 {
 Q_OBJECT
@@ -81,17 +83,31 @@ private:
 };
 
 /**
+ * Launches a process, and waits for the process to start
+ */
+class StartProcessJob: public KJob
+{
+    Q_OBJECT
+public:
+    StartProcessJob(const QString &process, const QStringList &args, const QStringList &env = {});
+    void start() override;
+private:
+    QProcess* m_process;
+};
+
+/**
  * Launches a process, and waits for the service to appear on the session bus
  */
 class StartServiceJob: public KJob
 {
     Q_OBJECT
 public:
-    StartServiceJob(const QString &process, const QStringList &args, const QString &serviceId);
+    StartServiceJob(const QString &process, const QStringList &args, const QString &serviceId, const QStringList &env = {});
     void start() override;
 private:
     const QString m_process;
     const QStringList m_args;
+    const QStringList m_env;
 };
 
 class RestoreSessionJob: public KJob
