@@ -78,13 +78,13 @@ set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasm
 
 find_package(ZLIB)
 set_package_properties(ZLIB PROPERTIES DESCRIPTION "Support for gzip compressed files and data streams"
-                       URL "http://www.zlib.net"
+                       URL "https://www.zlib.net"
                        TYPE REQUIRED
                       )
 
 find_package(X11)
 set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
-                        URL "http://www.x.org"
+                        URL "https://www.x.org"
                         TYPE OPTIONAL
                         PURPOSE "Required for building the X11 based workspace")
 

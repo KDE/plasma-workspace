@@ -91,7 +91,7 @@
    <item>
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>Click on a highlighted item's column to change it. &quot;%s&quot; in a command will be replaced with the clipboard contents.&lt;br&gt;For more information about regular expressions, you could have a look at the &lt;a href=&quot;http://en.wikipedia.org/wiki/Regular_expression&quot;&gt;Wikipedia entry about this topic&lt;/a&gt;.</string>
+      <string>Click on a highlighted item's column to change it. &quot;%s&quot; in a command will be replaced with the clipboard contents.&lt;br&gt;For more information about regular expressions, you could have a look at the &lt;a href=&quot;https://en.wikipedia.org/wiki/Regular_expression&quot;&gt;Wikipedia entry about this topic&lt;/a&gt;.</string>
      </property>
      <property name="textFormat">
       <enum>Qt::RichText</enum>

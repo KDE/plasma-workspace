@@ -492,7 +492,7 @@ QRect PanelView::geometryByDistance(int distance) const
     case Plasma::Types::RightEdge:
         switch (m_alignment) {
         case Qt::AlignCenter:
-            // Never use rect.right(); for historical reasons it returns left() + width() - 1; see http://doc.qt.io/qt-5/qrect.html#right
+            // Never use rect.right(); for historical reasons it returns left() + width() - 1; see https://doc.qt.io/qt-5/qrect.html#right
             position = QPoint(QPoint(screenGeometry.x() + screenGeometry.width(), screenGeometry.center().y()) - QPoint(thickness() + distance, 0) + QPoint(0, m_offset - height()/2));
             break;
         case Qt::AlignRight:

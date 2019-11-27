@@ -61,7 +61,7 @@ install(TARGETS plasma-geolocation-ip DESTINATION ${KDE_INSTALL_PLUGINDIR})
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
 find_package(libgps)
 set_package_properties(libgps PROPERTIES DESCRIPTION "GPS support for geolocation"
-                       URL "http://gpsd.berlios.de/"
+                       URL "https://www.berlios.de/software/gpsd/"
                        TYPE OPTIONAL
                       )
 if(LIBGPS_FOUND)

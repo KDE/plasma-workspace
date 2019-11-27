@@ -5,7 +5,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_calculatorrunner\")
 
 find_package(Qalculate)
 set_package_properties(Qalculate PROPERTIES DESCRIPTION "Qalculate Library"
-                       URL "http://qalculate.sourceforge.net"
+                       URL "https://qalculate.github.io/"
                        TYPE OPTIONAL
                        PURPOSE "Needed to enable advanced features of the calculator runner"
                       )

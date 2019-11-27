@@ -24,7 +24,7 @@ ecm_qt_declare_logging_category(libklipper_common_SRCS HEADER klipper_debug.h ID
 
 find_package(KF5Prison ${KF5_MIN_VERSION})
 set_package_properties(KF5Prison PROPERTIES DESCRIPTION "Prison library"
-                       URL "http://projects.kde.org/prison"
+                       URL "https://commits.kde.org/prison"
                        TYPE OPTIONAL
                        PURPOSE "Needed to create mobile barcodes from clipboard data"
                       )

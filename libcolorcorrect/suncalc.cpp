@@ -29,7 +29,7 @@ static const double SUN_HIGH         =     2.0;
 
 QVariantMap calculateSunTimings(double latitude, double longitude, bool morning)
 {
-    // calculations based on http://aa.quae.nl/en/reken/zonpositie.html
+    // calculations based on https://aa.quae.nl/en/reken/zonpositie.html
     // accuracy: +/- 5min
 
     // positioning

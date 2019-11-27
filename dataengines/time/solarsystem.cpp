@@ -21,11 +21,11 @@
 
 /*
  *   Mathematics, ideas, public domain code used for these classes from:
- *   http://www.stjarnhimlen.se/comp/tutorial.html
- *   http://www.stjarnhimlen.se/comp/riset.html
- *   http://www.srrb.noaa.gov/highlights/solarrise/azel.html
- *   http://www.srrb.noaa.gov/highlights/sunrise/sunrise.html
- *   http://bodmas.org/astronomy/riset.html
+ *   https://www.stjarnhimlen.se/comp/tutorial.html
+ *   https://www.stjarnhimlen.se/comp/riset.html
+ *   https://www.esrl.noaa.gov/gmd/grad/solcalc/azel.html
+ *   https://www.esrl.noaa.gov/gmd/grad/solcalc/sunrise.html
+ *   http://web.archive.org/web/20080309162302/http://bodmas.org/astronomy/riset.html
  *   moontool.c by John Walker
  *   Wikipedia
  */

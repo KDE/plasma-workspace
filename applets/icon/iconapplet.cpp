@@ -111,7 +111,7 @@ void IconApplet::populate()
     connect(statJob, &KIO::StatJob::finished, this, [=] {
         QString desiredDesktopFileName = m_url.fileName();
 
-        // in doubt, just encode the entire URL, e.g. http://www.kde.org/ has no filename
+        // in doubt, just encode the entire URL, e.g. https://www.kde.org/ has no filename
         if (desiredDesktopFileName.isEmpty()) {
             desiredDesktopFileName = KIO::encodeFileName(m_url.toDisplayString());
         }

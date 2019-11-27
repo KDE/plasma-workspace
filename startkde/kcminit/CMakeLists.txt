@@ -1,6 +1,6 @@
 find_package(XCB OPTIONAL_COMPONENTS XCB)
 set_package_properties(XCB PROPERTIES DESCRIPTION "Xcb libraries"
-                       URL "http://www.x.org"
+                       URL "https://www.x.org"
                        TYPE OPTIONAL
                        PURPOSE "Required for enabling special X11 multihead mode")
 configure_file(config-xcb.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-xcb.h)

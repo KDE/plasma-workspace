@@ -114,7 +114,7 @@ void BookmarksRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
     const QString term = action.data().toString();
     QUrl url = QUrl(term);
 
-    //support urls like "kde.org" by transforming them to http://kde.org
+    //support urls like "kde.org" by transforming them to https://kde.org
     if (url.scheme().isEmpty()) {
         const int idx = term.indexOf('/');
 

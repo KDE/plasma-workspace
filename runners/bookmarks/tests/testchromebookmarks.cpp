@@ -82,9 +82,9 @@ void TestChromeBookmarks::itShouldFindAllBookmarks()
     chrome->prepare();
     QList<BookmarkMatch> matches = chrome->match("any", true);
     QCOMPARE(matches.size(), 3);
-    verifyMatch(matches[0], "some bookmark in bookmark bar", "http://somehost.com/", 0.18, QueryMatch::PossibleMatch);
-    verifyMatch(matches[1], "bookmark in other bookmarks", "http://otherbookmarks.com/", 0.18, QueryMatch::PossibleMatch);
-    verifyMatch(matches[2], "bookmark in somefolder", "http://somefolder.com/", 0.18, QueryMatch::PossibleMatch);
+    verifyMatch(matches[0], "some bookmark in bookmark bar", "https://somehost.com/", 0.18, QueryMatch::PossibleMatch);
+    verifyMatch(matches[1], "bookmark in other bookmarks", "https://otherbookmarks.com/", 0.18, QueryMatch::PossibleMatch);
+    verifyMatch(matches[2], "bookmark in somefolder", "https://somefolder.com/", 0.18, QueryMatch::PossibleMatch);
 }
 
 void TestChromeBookmarks::itShouldFindOnlyMatches()
@@ -93,7 +93,7 @@ void TestChromeBookmarks::itShouldFindOnlyMatches()
     chrome->prepare();
     QList<BookmarkMatch> matches = chrome->match("other", false);
     QCOMPARE(matches.size(), 1);
-    verifyMatch(matches[0], "bookmark in other bookmarks", "http://otherbookmarks.com/", 0.45, QueryMatch::PossibleMatch);
+    verifyMatch(matches[0], "bookmark in other bookmarks", "https://otherbookmarks.com/", 0.45, QueryMatch::PossibleMatch);
 }
 
 void TestChromeBookmarks::itShouldClearResultAfterCallingTeardown()
@@ -115,10 +115,10 @@ void TestChromeBookmarks::itShouldFindBookmarksFromAllProfiles()
     chrome->prepare();
     QList<BookmarkMatch> matches = chrome->match("any", true);
     QCOMPARE(matches.size(), 4);
-    verifyMatch(matches[0], "some bookmark in bookmark bar", "http://somehost.com/", 0.18, QueryMatch::PossibleMatch);
-    verifyMatch(matches[1], "bookmark in other bookmarks", "http://otherbookmarks.com/", 0.18, QueryMatch::PossibleMatch);
-    verifyMatch(matches[2], "bookmark in somefolder", "http://somefolder.com/", 0.18, QueryMatch::PossibleMatch);
-    verifyMatch(matches[3], "bookmark in secondProfile", "http://secondprofile.com/", 0.18, QueryMatch::PossibleMatch);
+    verifyMatch(matches[0], "some bookmark in bookmark bar", "https://somehost.com/", 0.18, QueryMatch::PossibleMatch);
+    verifyMatch(matches[1], "bookmark in other bookmarks", "https://otherbookmarks.com/", 0.18, QueryMatch::PossibleMatch);
+    verifyMatch(matches[2], "bookmark in somefolder", "https://somefolder.com/", 0.18, QueryMatch::PossibleMatch);
+    verifyMatch(matches[3], "bookmark in secondProfile", "https://secondprofile.com/", 0.18, QueryMatch::PossibleMatch);
 }
 
 

@@ -27,7 +27,7 @@
 
 void LookAndFeelPackage::initPackage(KPackage::Package *package)
 {
-    // http://community.kde.org/Plasma/lookAndFeelPackage#
+    // https://community.kde.org/Plasma/lookAndFeelPackage#
     package->setDefaultPackageRoot(QStringLiteral("plasma/look-and-feel/"));
 
     //Defaults
