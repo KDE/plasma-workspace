@@ -63,6 +63,10 @@ ColumnLayout {
         onSlideshowModeChanged: cfg_SlideshowMode = slideshowMode
     }
 
+    onCfg_FillModeChanged: {
+        resizeComboBox.setMethod()
+    }
+
     onCfg_SlidePathsChanged: {
         imageWallpaper.slidePaths = cfg_SlidePaths
     }
@@ -114,7 +118,7 @@ ColumnLayout {
 
             function setMethod() {
                 for (var i = 0; i < model.length; i++) {
-                    if (model[i]["fillMode"] === wallpaper.configuration.FillMode) {
+                    if (model[i]["fillMode"] === root.cfg_FillMode) {
                         resizeComboBox.currentIndex = i;
                         var tl = model[i]["label"].length;
                         //resizeComboBox.textLength = Math.max(resizeComboBox.textLength, tl+5);
@@ -312,13 +316,29 @@ ColumnLayout {
             id: wallpapersGrid
             anchors.fill: parent
             property var imageModel: (configDialog.currentWallpaper == "org.kde.image")? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
-            //that min is needed as the module will be populated in an async way
-            //and only on demand so we can't ensure it already exists
-            view.currentIndex: Math.min(imageModel.indexOf(cfg_Image), imageModel.rowCount()-1)
+
+            function resetCurrentIndex() {
+                //that min is needed as the module will be populated in an async way
+                //and only on demand so we can't ensure it already exists
+                view.currentIndex = Math.min(imageModel.indexOf(cfg_Image), imageModel.rowCount()-1)
+            }
+
+            Connections {
+                target: imageModel
+                onRowsInserted: resetCurrentIndex()
+                onRowsRemoved: resetCurrentIndex()
+            }
+
+            Connections {
+                target: root
+                onCfg_ImageChanged: resetCurrentIndex()
+            }
+
             //kill the space for label under thumbnails
             view.model: imageModel
             Component.onCompleted: {
                 imageModel.usedInConfig = true;
+                resetCurrentIndex()
             }
             view.delegate: WallpaperDelegate {
                 color: cfg_Color

@@ -30,7 +30,7 @@ KCM.GridDelegate {
     id: wallpaperDelegate
 
     property alias color: backgroundRect.color
-    property bool selected: (wallpapersGrid.currentIndex === index)
+    readonly property bool selected: (view.currentIndex === index)
     opacity: model.pendingDeletion ? 0.5 : 1
 
     text: model.display
