@@ -32,6 +32,7 @@ Item {
     width: units.gridUnit * 10
     height: units.gridUnit * 4
     property string dateFormatString: setDateFormatString()
+    Plasmoid.backgroundHints: PlasmaCore.Types.ShadowBackground | PlasmaCore.Types.ConfigurableBackground
     property date tzDate: {
         // get the time for the given timezone from the dataengine
         var now = dataSource.data[plasmoid.configuration.lastSelectedTimezone]["DateTime"];

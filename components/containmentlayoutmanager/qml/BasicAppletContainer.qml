@@ -19,17 +19,31 @@
 
 import QtQuick 2.12
 import QtQuick.Layouts 1.2
+import QtGraphicalEffects 1.0
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager
+import org.kde.kirigami 2.11 as Kirigami
 
 ContainmentLayoutManager.AppletContainer {
     id: appletContainer
     editModeCondition: plasmoid.immutable
         ? ContainmentLayoutManager.ItemContainer.Manual
         : ContainmentLayoutManager.ItemContainer.AfterPressAndHold
+
+    Kirigami.Theme.inherit: false
+    Kirigami.Theme.colorSet: (contentItem.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground)
+        && !(contentItem.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
+        && !(contentItem.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground)
+            ? Kirigami.Theme.Complementary
+            : Kirigami.Theme.Window
+
+    PlasmaCore.ColorScope.inherit: false
+    PlasmaCore.ColorScope.colorGroup: Kirigami.Theme.colorSet == Kirigami.Theme.Complementary
+        ? PlasmaCore.Theme.ComplementaryColorGroup
+        : PlasmaCore.Theme.NormalColorGroup
 
     onFocusChanged: {
         if (!focus) {
@@ -78,7 +92,40 @@ ContainmentLayoutManager.AppletContainer {
     initialSize.height: applet.switchHeight + topPadding + bottomPadding
 
     background: PlasmaCore.FrameSvgItem {
-        imagePath: contentItem && contentItem.backgroundHints == PlasmaCore.Types.StandardBackground ? "widgets/background" : ""
+        imagePath: {
+            if (!contentItem) {
+                return "";
+            }
+            if (contentItem.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground) {
+                return "widgets/translucentbackground";
+            } else if (contentItem.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground) {
+                return "widgets/background";
+            } else {
+                return "";
+            }
+        }
+        DropShadow {
+            anchors {
+                fill: parent
+                leftMargin: appletContainer.leftPadding
+                topMargin: appletContainer.topPadding
+                rightMargin: appletContainer.rightPadding
+                bottomMargin: appletContainer.bottomPadding
+            }
+            z: -1
+            horizontalOffset: 0
+            verticalOffset: 1
+
+            radius: 4
+            samples: 9
+            spread: 0.35
+
+            color: Qt.rgba(0, 0, 0, 0.5)
+            opacity: 1
+
+            source: contentItem && contentItem.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground ? contentItem : null
+            visible: source != null
+        }
     }
 
     busyIndicatorComponent: PlasmaComponents.BusyIndicator {
