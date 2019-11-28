@@ -100,6 +100,8 @@ ColumnLayout {
 
         PlasmaComponents.ToolButton {
             id: pinButton
+            Layout.preferredHeight: Math.round(units.gridUnit * 1.25)
+            Layout.preferredWidth: Layout.preferredHeight
             checkable: true
             checked: plasmoid.configuration.pin
             onCheckedChanged: plasmoid.configuration.pin = checked
