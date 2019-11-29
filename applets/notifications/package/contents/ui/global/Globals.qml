@@ -126,6 +126,9 @@ QtObject {
         }
     }
 
+    readonly property QtObject focusDialog: plasmoid.nativeInterface.focussedPlasmaDialog
+    onFocusDialogChanged: positionPopups()
+
     // The raw width of the popup's content item, the Dialog itself adds some margins
     property int popupWidth: units.gridUnit * 18
     property int popupEdgeDistance: units.largeSpacing * 2
@@ -212,6 +215,13 @@ QtObject {
         });
     }
 
+    function rectIntersect(rect1 /*dialog*/, rect2 /*popup*/) {
+        return rect1.x < rect2.x + rect2.width
+                && rect2.x < rect1.x + rect1.width
+                && rect1.y < rect2.y + rect2.height
+                && rect2.y < rect1.y + rect1.height;
+    }
+
     function positionPopups() {
         if (!plasmoid) {
             return;
@@ -251,12 +261,22 @@ QtObject {
             }
 
             if (popupLocation & Qt.AlignTop) {
+                // We want to calculate the new position based on its original target position to avoid positioning it and then
+                // positioning it again, hence the temporary Qt.rect with explicit "y" and not just the popup as a whole
+                if (focusDialog && focusDialog.visible && focusDialog !== popup
+                        && rectIntersect(focusDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
+                    y = focusDialog.y + focusDialog.height + popupEdgeDistance;
+                }
                 popup.y = y;
                 // If the popup isn't ready yet, ignore its occupied space for now.
                 // We'll reposition everything in onHeightChanged eventually.
                 y += popup.height + (popup.height > 0 ? popupSpacing : 0);
             } else {
                 y -= popup.height;
+                if (focusDialog && focusDialog.visible && focusDialog !== popup
+                        && rectIntersect(focusDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
+                    y = focusDialog.y - popup.height - popupEdgeDistance;
+                }
                 popup.y = y;
                 if (popup.height > 0) {
                     y -= popupSpacing;
@@ -273,18 +293,7 @@ QtObject {
                 }
             }
 
-            popup.visible = Qt.binding(function() {
-                const dialog = plasmoid.nativeInterface.focussedPlasmaDialog;
-                if (dialog && dialog.visible && dialog !== popup) {
-                    // If the notification obscures any other Plasma dialog, hide it
-                    // No rect intersects in JS...
-                    if (dialog.x < popup.x + popup.width && popup.x < dialog.x + dialog.width && dialog.y < popup.y + popup.height && popup.y < dialog.y + dialog.height) {
-                        return false;
-                    }
-                }
-
-                return visible;
-            });
+            popup.visible = visible;
         }
     }
 
