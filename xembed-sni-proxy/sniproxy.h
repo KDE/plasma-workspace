@@ -49,6 +49,7 @@ public:
     ~SNIProxy() override;
 
     void update();
+    void stackContainerWindow(const uint32_t stackMode) const;
 
     /**
      * @return the category of the application associated to this item
