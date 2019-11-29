@@ -21,14 +21,15 @@
 #include "translations.h"
 #include "translationsmodel.h"
 
-#include "writeexports.h"
-
 #include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KSharedConfig>
 
 K_PLUGIN_CLASS_WITH_JSON(Translations, "kcm_translations.json")
+
+static const QString configFile = QStringLiteral("plasma-localerc");
+static const QString lcLanguage = QStringLiteral("LANGUAGE");
 
 Translations::Translations(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
@@ -102,8 +103,6 @@ void Translations::save()
 
     m_config.writeEntry(lcLanguage, m_configuredLanguages.join(QLatin1Char(':')), KConfig::Persistent);
     m_config.sync();
-
-    writeExports();
 
     m_selectedTranslationsModel->setSelectedLanguages(m_configuredLanguages);
 }

@@ -117,19 +117,31 @@ void createConfigDirectory()
 
 void runStartupConfig()
 {
-    const QString configDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
-
-    const QString localerc(configDir + QLatin1String("/plasma-localerc"));
-    if (!QFile::exists(localerc)) {
-        QFile f(localerc);
-        f.open(QFile::WriteOnly);
-        f.write("[Formats]\n"
-                "LANG=" + qgetenv("LANG") + '\n');
-    }
-
     //export LC_* variables set by kcmshell5 formats into environment
     //so it can be picked up by QLocale and friends.
-    sourceFiles({configDir + QStringLiteral("/plasma-locale-settings.sh")});
+    KConfig config(QStringLiteral("plasma-localerc"));
+    KConfigGroup formatsConfig = KConfigGroup(&config, "Formats");
+
+    const auto lcValues = {
+        "LANG", "LC_NUMERIC", "LC_MONETARY", "LC_MEASUREMENT", "LC_COLLATE", "LC_CTYPE"
+    };
+    for (auto lc : lcValues) {
+        const QString value = formatsConfig.readEntry(lc, QString());
+        if (!value.isEmpty()) {
+            qputenv(lc, value.toUtf8());
+        }
+    }
+
+    KConfigGroup languageConfig = KConfigGroup(&config, "Translations");
+    const QString value = formatsConfig.readEntry("LANGUAGE", QString());
+    if (!value.isEmpty()) {
+        qputenv("LANGUAGE", value.toUtf8());
+    }
+
+    if (!formatsConfig.hasKey("LANG") && !qEnvironmentVariableIsEmpty("LANG")) {
+        formatsConfig.writeEntry("LANG", qgetenv("LANG"));
+        formatsConfig.sync();
+    }
 }
 
 void setupCursor(bool wayland)
