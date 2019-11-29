@@ -25,6 +25,7 @@ import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutM
 ContainmentLayoutManager.ResizeHandle {
     width: overlay.touchInteraction ? units.gridUnit * 2 : units.gridUnit
     height: width
+    z: 999
     Rectangle {
         color: resizeBlocked ? theme.negativeTextColor : theme.backgroundColor
         anchors.fill: parent
