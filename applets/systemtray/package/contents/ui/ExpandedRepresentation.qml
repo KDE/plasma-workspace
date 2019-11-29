@@ -39,10 +39,10 @@ ColumnLayout {
     property alias hiddenLayout: hiddenItemsView.layout
 
     RowLayout {
-        Layout.maximumWidth: parent.width //otherwise the pin button disappears in noApplet mode
 
         PlasmaExtras.Heading {
             id: heading
+            Layout.fillWidth: true
             level: 1
             Layout.leftMargin: {
                 //Menu mode
@@ -88,14 +88,10 @@ ColumnLayout {
 
         PlasmaExtras.Heading {
             id: noAppletHeading
+            visible: !activeApplet
+            Layout.fillWidth: true
             level: 1
             text: i18n("Status and Notifications")
-            visible: !heading.visible
-        }
-
-        //spacer
-        Item {
-            Layout.fillWidth: true
         }
 
         PlasmaComponents.ToolButton {
@@ -104,7 +100,7 @@ ColumnLayout {
             Layout.preferredWidth: Layout.preferredHeight
             checkable: true
             checked: plasmoid.configuration.pin
-            onCheckedChanged: plasmoid.configuration.pin = checked
+            onToggled: plasmoid.configuration.pin = checked
             icon.name: "window-pin"
             PlasmaComponents.ToolTip {
                 text: i18n("Keep Open")
@@ -117,7 +113,8 @@ ColumnLayout {
 
         HiddenItemsView {
             id: hiddenItemsView
-            Layout.preferredWidth: visible && activeApplet ? iconColumnWidth : expandedRepresentation.width
+            Layout.fillWidth: !activeApplet
+            Layout.preferredWidth: activeApplet ? iconColumnWidth : -1
             Layout.fillHeight: true
         }
 
@@ -134,6 +131,7 @@ ColumnLayout {
 
         PlasmoidPopupsContainer {
             id: container
+            visible: activeApplet
             Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.leftMargin: hiddenItemsView.visible && activeApplet && !LayoutMirroring.enabled ? units.largeSpacing : 0
