@@ -22,9 +22,10 @@
 #include "debug.h"
 
 #include <QCoreApplication>
+#include <QDBusConnection>
+#include <QDBusServiceWatcher>
 #include <QHash>
 #include <QTimer>
-
 #include <QTextDocument>
 #include <QX11Info>
 
@@ -187,6 +188,17 @@ void FdoSelectionManager::onClaimedOwnership()
     qCDebug(SNIPROXY) << "Manager selection claimed";
 
     setSystemTrayVisual();
+
+    // send all container windows to background on KWin restart
+    QDBusServiceWatcher *watcher = new QDBusServiceWatcher(QStringLiteral("org.kde.KWin"), QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForRegistration, this);
+    connect(watcher, &QDBusServiceWatcher::serviceRegistered, this, [=](const QString &) {
+        // some delay is necesary
+        QTimer::singleShot(100, this, [=]() {
+            for (auto sniproxy : m_proxies) {
+                sniproxy->stackContainerWindow(XCB_STACK_MODE_BELOW);
+            }
+        });
+    });
 }
 
 void FdoSelectionManager::onFailedToClaimOwnership()

@@ -122,8 +122,7 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     */
 
 #ifndef VISUAL_DEBUG
-    const uint32_t stackBelowData[] = {XCB_STACK_MODE_BELOW};
-    xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackBelowData);
+    stackContainerWindow(XCB_STACK_MODE_BELOW);
 
     NETWinInfo wm(c, m_containerWid, screen->root, NET::Properties(), NET::Properties2());
     wm.setOpacity(0);
@@ -212,6 +211,13 @@ void SNIProxy::update()
     }
     emit NewIcon();
     emit NewToolTip();
+}
+
+void SNIProxy::stackContainerWindow(const uint32_t stackMode) const
+{
+    auto c = QX11Info::connection();
+    const uint32_t stackData[] = {stackMode};
+    xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackData);
 }
 
 QSize SNIProxy::calculateClientWindowSize() const
@@ -538,8 +544,7 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
     xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_X | XCB_CONFIG_WINDOW_Y, configVals);
 
     //pull window up
-    const uint32_t stackAboveData[] = {XCB_STACK_MODE_ABOVE};
-    xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackAboveData);
+    stackContainerWindow(XCB_STACK_MODE_ABOVE);
 
     //mouse down
     if (m_injectMode == Direct) {
@@ -589,7 +594,6 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
     }
 
 #ifndef VISUAL_DEBUG
-    const uint32_t stackBelowData[] = {XCB_STACK_MODE_BELOW};
-    xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackBelowData);
+    stackContainerWindow(XCB_STACK_MODE_BELOW);
 #endif
 }
