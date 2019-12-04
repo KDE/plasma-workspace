@@ -23,7 +23,7 @@
 #include <QDBusConnection>
 #include <QDBusInterface>
 
-int main(int /*argc*/, char** /*argv*/)
+int main(int argc, char** argv)
 {
     createConfigDirectory();
     setupCursor(true);
@@ -82,7 +82,16 @@ int main(int /*argc*/, char** /*argv*/)
         return 1;
     }
 
-    runSync(QStringLiteral(KWIN_WAYLAND_BIN_PATH), { QStringLiteral("--xwayland"), QStringLiteral("--libinput"), QStringLiteral("--exit-with-session=" CMAKE_INSTALL_FULL_LIBEXECDIR "/startplasma-waylandsession") });
+    QStringList args;
+    if (argc > 1) {
+        args.reserve(argc);
+        for (int i = 1; i < argc; ++i) {
+            args << QString::fromLocal8Bit(argv[i]);
+        }
+    } else {
+        args = QStringList { QStringLiteral("--xwayland"), QStringLiteral("--libinput"), QStringLiteral("--exit-with-session=" CMAKE_INSTALL_FULL_LIBEXECDIR "/startplasma-waylandsession") };
+    }
+    runSync(QStringLiteral(KWIN_WAYLAND_BIN_PATH), args);
 
     out << "startplasmacompositor: Shutting down...\n";
     cleanupPlasmaEnvironment();

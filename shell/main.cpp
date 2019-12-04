@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 
     KSharedConfig::Ptr startupConf = KSharedConfig::openConfig(QStringLiteral("plasmashellrc"));
     KConfigGroup startupConfGroup(startupConf, "Shell");
-    const QString defaultShell = startupConfGroup.readEntry("ShellPackage", "org.kde.plasma.desktop");
+    const QString defaultShell = startupConfGroup.readEntry("ShellPackage", qEnvironmentVariable("PLASMA_DEFAULT_SHELL", "org.kde.plasma.desktop"));
 
     bool replace = false;
     {
