@@ -503,6 +503,31 @@ KService::List servicesFromPid(quint32 pid, KSharedConfig::Ptr rulesConfig)
         return KService::List();
     }
 
+    // Read the BAMF_DESKTOP_FILE_HINT environment variable which contains the actual desktop file path for Snaps.
+    QFile environFile(QStringLiteral("/proc/%1/environ").arg(QString::number(pid)));
+    if (environFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        const QByteArray bamfDesktopFileHint = QByteArrayLiteral("BAMF_DESKTOP_FILE_HINT");
+
+        const auto lines = environFile.readAll().split('\0');
+        for (const QByteArray &line : lines) {
+            const int equalsIdx = line.indexOf('=');
+            if (equalsIdx <= 0) {
+                continue;
+            }
+
+            const QByteArray key = line.left(equalsIdx);
+            if (key == bamfDesktopFileHint) {
+                const QByteArray value = line.mid(equalsIdx + 1);
+
+                KService::Ptr service = KService::serviceByDesktopPath(QString::fromUtf8(value));
+                if (service) {
+                    return {service};
+                }
+                break;
+            }
+        }
+    }
+
     auto proc = KProcessList::processInfo(pid);
     if (!proc.isValid()) {
         return KService::List();
