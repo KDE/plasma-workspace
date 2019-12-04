@@ -20,6 +20,7 @@
 #include "widget.h"
 
 #include <QAction>
+#include <QMetaEnum>
 
 #include <Plasma/Applet>
 #include <Plasma/Containment>
@@ -174,6 +175,22 @@ void Widget::showConfigurationInterface()
    /* if (d->applet) {
         d->applet.data()->showConfigurationInterface();
     }*/
+}
+
+QString Widget::userBackgroundHints() const
+{qWarning()<<"DJENT";
+    QMetaEnum hintEnum = QMetaEnum::fromType<Plasma::Types::BackgroundHints>();
+    return hintEnum.valueToKey(applet()->userBackgroundHints());
+}
+
+void Widget::setUserBackgroundHints(QString hint)
+{
+    QMetaEnum hintEnum = QMetaEnum::fromType<Plasma::Types::BackgroundHints>();
+    bool ok;
+    int value = hintEnum.keyToValue(hint.toUtf8().constData(), &ok);
+    if (ok) {
+        applet()->setUserBackgroundHints(Plasma::Types::BackgroundHints(value));
+    }
 }
 
 }

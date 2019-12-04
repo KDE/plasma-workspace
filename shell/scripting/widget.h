@@ -49,6 +49,7 @@ class Widget : public Applet
     Q_PROPERTY(QStringList currentConfigGroup WRITE setCurrentConfigGroup READ currentConfigGroup)
     Q_PROPERTY(QString globalShortcut WRITE setGlobalShortcut READ globalShorcut)
     Q_PROPERTY(bool locked READ locked WRITE setLocked)
+    Q_PROPERTY(QString userBackgroundHints WRITE setUserBackgroundHints READ userBackgroundHints)
 
 public:
     explicit Widget(Plasma::Applet *applet, QObject *parent = nullptr);
@@ -65,6 +66,9 @@ public:
 
     void setGlobalShortcut(const QString &shortcut);
     QString globalShorcut() const;
+
+    QString userBackgroundHints() const;
+    void setUserBackgroundHints(QString hint);
 
     Plasma::Applet *applet() const override;
 
