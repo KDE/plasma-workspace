@@ -178,7 +178,7 @@ void Widget::showConfigurationInterface()
 }
 
 QString Widget::userBackgroundHints() const
-{qWarning()<<"DJENT";
+{
     QMetaEnum hintEnum = QMetaEnum::fromType<Plasma::Types::BackgroundHints>();
     return hintEnum.valueToKey(applet()->userBackgroundHints());
 }
