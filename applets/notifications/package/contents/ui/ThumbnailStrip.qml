@@ -29,7 +29,7 @@ import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 
 import org.kde.plasma.private.notifications 2.0 as Notifications
 
-MouseArea {
+DraggableFileArea {
     id: thumbnailArea
 
     // The protocol supports multiple URLs but so far it's only used to show
@@ -38,7 +38,6 @@ MouseArea {
     // for multiple files)
     property var urls
 
-    readonly property bool dragging: plasmoid.nativeInterface.dragActive
     readonly property alias menuOpen: fileMenu.visible
 
     property int _pressX: -1
@@ -52,48 +51,21 @@ MouseArea {
     signal openUrl(string url)
     signal fileActionInvoked
 
+    dragParent: previewPixmap
+    dragUrl: thumbnailer.url
+    dragPixmap: thumbnailer.pixmap
+
     implicitHeight: Math.max(menuButton.height + 2 * menuButton.anchors.topMargin,
                              Math.round(Math.min(width / 3, width / thumbnailer.ratio)))
                     + topPadding + bottomPadding
 
-    preventStealing: true
-    cursorShape: pressed ? Qt.ClosedHandCursor : Qt.OpenHandCursor
-    acceptedButtons: Qt.LeftButton | Qt.RightButton
+    onActivated: thumbnailArea.openUrl(thumbnailer.url)
+    onContextMenuRequested: {
+        // avoid menu button glowing if we didn't actually press it
+        menuButton.checked = false;
 
-    onClicked: {
-        if (mouse.button === Qt.LeftButton) {
-            thumbnailArea.openUrl(thumbnailer.url)
-        }
-    }
-
-    onPressed: {
-        if (mouse.button === Qt.LeftButton) {
-            _pressX = mouse.x;
-            _pressY = mouse.y;
-        } else if (mouse.button === Qt.RightButton) {
-            // avoid menu button glowing if we didn't actually press it
-            menuButton.checked = false;
-
-            fileMenu.visualParent = this;
-            fileMenu.open(mouse.x, mouse.y);
-        }
-    }
-    onPositionChanged: {
-        if (_pressX !== -1 && _pressY !== -1 && plasmoid.nativeInterface.isDrag(_pressX, _pressY, mouse.x, mouse.y)) {
-            plasmoid.nativeInterface.startDrag(previewPixmap, thumbnailer.url, thumbnailer.pixmap);
-            _pressX = -1;
-            _pressY = -1;
-        }
-    }
-    onReleased: {
-        _pressX = -1;
-        _pressY = -1;
-    }
-    onContainsMouseChanged: {
-        if (!containsMouse) {
-            _pressX = -1;
-            _pressY = -1;
-        }
+        fileMenu.visualParent = this;
+        fileMenu.open(x, y);
     }
 
     Notifications.FileMenu {
