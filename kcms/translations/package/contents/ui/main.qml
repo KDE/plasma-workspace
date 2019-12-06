@@ -134,9 +134,9 @@ ScrollViewKCM {
         Kirigami.InlineMessage {
             Layout.fillWidth: true
 
-            type: Kirigami.MessageType.Information
+            type: Kirigami.MessageType.Error
 
-            text: i18nc("@info", "There are no languages available on this system.")
+            text: i18nc("@info", "There are no additional languages available on this system.")
 
             visible: !availableLanguagesList.count
         }
