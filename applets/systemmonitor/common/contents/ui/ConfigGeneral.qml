@@ -164,8 +164,10 @@ Item {
                             }
                         } else {
                             var idx = cfg_sources.indexOf(model.source);
-                            if (idx !== -1) {
-                                cfg_sources.splice(idx, 1);
+                            if (cfg_sources.length !== 1) { // This condition prohibits turning off the last item from the list.
+                                if (idx !== -1) {
+                                    cfg_sources.splice(idx, 1);
+                                }
                             }
                         }
                         cfg_sourcesChanged();
