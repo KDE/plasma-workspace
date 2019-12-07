@@ -222,7 +222,6 @@ PlasmaCore.ColorScope {
 
                 showUserList: userList.y + mainStack.y > 0
 
-                focus: true // Drop this and hack below when porting this stackview to QQC2
                 Stack.onStatusChanged: {
                     // prepare for presenting again to the user
                     if (Stack.status == Stack.Activating) {
