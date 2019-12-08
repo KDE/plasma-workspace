@@ -28,6 +28,7 @@ Name[it]=Plasma
 Name[ja]=プラズマ
 Name[ko]=Plasma
 Name[lt]=Plasma
+Name[lv]=Plasma
 Name[nb]=Plasma
 Name[nds]=Plasma
 Name[nl]=Plasma
