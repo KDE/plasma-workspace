@@ -133,7 +133,7 @@ void runStartupConfig()
     }
 
     KConfigGroup languageConfig = KConfigGroup(&config, "Translations");
-    const QString value = formatsConfig.readEntry("LANGUAGE", QString());
+    const QString value = languageConfig.readEntry("LANGUAGE", QString());
     if (!value.isEmpty()) {
         qputenv("LANGUAGE", value.toUtf8());
     }
