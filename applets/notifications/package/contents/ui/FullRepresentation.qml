@@ -379,8 +379,9 @@ ColumnLayout{
                 ParallelAnimation {
                     NumberAnimation { property: "opacity"; to: 0; duration: units.longDuration }
                     NumberAnimation {
+                        id: removeXAnimation
                         property: "x"
-                        to: removeTransition.ViewTransition.item.x >= 0 ? list.width : -list.width
+                        to: list.width
                         duration: units.longDuration
                     }
                 }
@@ -404,7 +405,16 @@ ColumnLayout{
 
                 draggable: !model.isGroup && model.type != NotificationManager.Notifications.JobType
 
-                onDismissRequested: historyModel.close(historyModel.index(index, 0));
+                onDismissRequested: {
+                    // Setting the animation target explicitly before removing the notification:
+                    // Using ViewTransition.item.x to get the x position in the animation
+                    // causes random crash in attached property access (cf. Bug 414066)
+                    if (x < 0) {
+                        removeXAnimation.to = -list.width;
+                    }
+
+                    historyModel.close(historyModel.index(index, 0));
+                }
 
                 Loader {
                     id: delegateLoader
