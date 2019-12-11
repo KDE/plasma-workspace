@@ -36,7 +36,8 @@ install(TARGETS plasma_wallpaper_imageplugin DESTINATION ${KDE_INSTALL_QMLDIR}/o
 
 install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/wallpapers/image)
 
-install(FILES wallpaper.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
+configure_file(wallpaper.knsrc.cmake ${CMAKE_CURRENT_BINARY_DIR}/wallpaper.knsrc)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/wallpaper.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 plasma_install_package(imagepackage org.kde.image wallpapers wallpaper)
 plasma_install_package(slideshowpackage org.kde.slideshow wallpapers wallpaper)

@@ -21,6 +21,7 @@ include(CheckIncludeFiles)
 include(FeatureSummary)
 include(ECMOptionalAddSubdirectory)
 include(ECMQtDeclareLoggingCategory)
+include(ECMQueryQmake)
 include(KDEPackageAppTemplates)
 include(KDEClangFormat)
 
@@ -138,6 +139,9 @@ if (INSTALL_SDDM_THEME)
 endif()
 
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
+
+# locate qdbus in the Qt path because not every distro makes a symlink at /usr/bin/qdbus
+query_qmake(QtBinariesDir QT_INSTALL_BINS)
 
 add_subdirectory(doc)
 add_subdirectory(libkworkspace)
