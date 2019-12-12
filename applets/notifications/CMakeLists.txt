@@ -3,6 +3,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.notification
 set(notificationapplet_SRCS
     notificationapplet.cpp
     filemenu.cpp
+    globalshortcuts.cpp
     thumbnailer.cpp
 )
 
@@ -16,6 +17,7 @@ target_link_libraries(plasma_applet_notifications
                       KF5::I18n
                       KF5::Plasma
                       KF5::PlasmaQuick
+                      KF5::GlobalAccel
                       KF5::KIOWidgets # for PreviewJob
                       )
 

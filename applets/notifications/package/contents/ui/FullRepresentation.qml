@@ -99,12 +99,7 @@ ColumnLayout{
                     // but disable only on click
                     onClicked: {
                         if (Globals.inhibited) {
-                            notificationSettings.notificationsInhibitedUntil = undefined;
-                            notificationSettings.revokeApplicationInhibitions();
-                            // overrules current mirrored screen setup, updates again when screen configuration changes
-                            notificationSettings.screensMirrored = false;
-
-                            notificationSettings.save();
+                            Globals.revokeInhibitions();
                         }
                     }
 

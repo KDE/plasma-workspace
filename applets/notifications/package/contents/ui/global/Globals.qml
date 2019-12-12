@@ -29,6 +29,8 @@ import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
+import org.kde.plasma.private.notifications 2.0 as Notifications
+
 import ".."
 
 // This singleton object contains stuff shared between all notification plasmoids, namely:
@@ -213,6 +215,15 @@ QtObject {
 
             return inhibited;
         });
+    }
+
+    function revokeInhibitions() {
+        notificationSettings.notificationsInhibitedUntil = undefined;
+        notificationSettings.revokeApplicationInhibitions();
+        // overrules current mirrored screen setup, updates again when screen configuration changes
+        notificationSettings.screensMirrored = false;
+
+        notificationSettings.save();
     }
 
     function rectIntersect(rect1 /*dialog*/, rect2 /*popup*/) {
@@ -475,5 +486,22 @@ QtObject {
         target: NotificationManager.Server
         property: "inhibited"
         value: globals.inhibited
+    }
+
+    property Notifications.GlobalShortcuts shortcuts: Notifications.GlobalShortcuts {
+        onToggleDoNotDisturbTriggered: {
+            if (globals.inhibited) {
+                globals.revokeInhibitions();
+            } else {
+                // Effectively "in a year" is "until turned off"
+                var d = new Date();
+                d.setFullYear(d.getFullYear() + 1);
+                notificationSettings.notificationsInhibitedUntil = d;
+                notificationSettings.save();
+            }
+
+            checkInhibition();
+            showDoNotDisturbOsd(globals.inhibited);
+        }
     }
 }
