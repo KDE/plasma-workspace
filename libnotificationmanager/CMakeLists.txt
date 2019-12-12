@@ -8,6 +8,7 @@ endif()
 set(notificationmanager_LIB_SRCS
     server.cpp
     server_p.cpp
+    serverinfo.cpp
     settings.cpp
     mirroredscreenstracker.cpp
     notifications.cpp

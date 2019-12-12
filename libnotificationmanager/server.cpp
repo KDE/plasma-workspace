@@ -34,6 +34,7 @@ Server::Server(QObject *parent)
     : QObject(parent)
     , d(new ServerPrivate(this))
 {
+    connect(d.data(), &ServerPrivate::validChanged, this, &Server::validChanged);
     connect(d.data(), &ServerPrivate::inhibitedChanged, this, [this] {
         emit inhibitedChanged(inhibited());
     });
@@ -60,6 +61,11 @@ bool Server::init()
 bool Server::isValid() const
 {
     return d->m_valid;
+}
+
+ServerInfo *Server::currentOwner() const
+{
+    return d->currentOwner();
 }
 
 void Server::closeNotification(uint notificationId, CloseReason reason)

@@ -23,6 +23,7 @@
 #include "notifications.h"
 #include "job.h"
 #include "server.h"
+#include "serverinfo.h"
 #include "settings.h"
 
 #include <QQmlEngine>
@@ -40,4 +41,5 @@ void NotificationManagerPlugin::registerTypes(const char *uri)
         QQmlEngine::setObjectOwnership(&Server::self(), QQmlEngine::CppOwnership);
         return &Server::self();
     });
+    qmlRegisterUncreatableType<ServerInfo>(uri, 1, 0, "ServerInfo", QStringLiteral("Can only access ServerInfo via Server"));
 }

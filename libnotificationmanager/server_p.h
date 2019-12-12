@@ -39,6 +39,8 @@ struct Inhibition
 namespace NotificationManager
 {
 
+class ServerInfo;
+
 class Q_DECL_HIDDEN ServerPrivate : public QObject, protected QDBusContext
 {
     Q_OBJECT
@@ -71,6 +73,8 @@ Q_SIGNALS:
     void NotificationClosed(uint id, uint reason);
     void ActionInvoked(uint id, const QString &actionKey);
 
+    void validChanged();
+
     void inhibitedChanged();
 
     void externalInhibitedChanged();
@@ -79,8 +83,13 @@ Q_SIGNALS:
     void serviceOwnershipLost();
 
 public: // stuff used by public class
+    friend class ServerInfo;
+    static QString notificationServiceName();
+
     bool init();
     uint add(const Notification &notification);
+
+    ServerInfo *currentOwner() const;
 
     // Server only handles external application inhibitions but we still want the Inhibited property
     // expose the actual inhibition state for applications to check.
@@ -97,7 +106,13 @@ private slots:
     void onBroadcastNotification(const QMap<QString, QVariant> &properties);
 
 private:
-    void onServiceUnregistered(const QString &serviceName);
+    void onServiceOwnershipLost(const QString &serviceName);
+    void onInhibitionServiceUnregistered(const QString &serviceName);
+    void onInhibitedChanged(); // emit DBus change signal
+
+    bool m_dbusObjectValid = false;
+
+    mutable QScopedPointer<ServerInfo> m_currentOwner;
 
     QDBusServiceWatcher *m_inhibitionWatcher = nullptr;
     uint m_highestInhibitionCookie = 0;

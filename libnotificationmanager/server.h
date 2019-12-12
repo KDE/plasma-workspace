@@ -29,6 +29,7 @@ namespace NotificationManager
 
 class Notification;
 
+class ServerInfo;
 class ServerPrivate;
 
 /**
@@ -39,6 +40,24 @@ class ServerPrivate;
 class NOTIFICATIONMANAGER_EXPORT Server : public QObject
 {
     Q_OBJECT
+
+    /**
+     * Whether the notification service could be registered.
+     * Call @c init() to register.
+     */
+    Q_PROPERTY(bool valid READ isValid NOTIFY validChanged)
+
+    /**
+     * Information about the current owner of the Notification service.
+     *
+     * This can be used to tell the user which application is currently
+     * owning the service in case service registration failed.
+     *
+     * This is never null, even if there is no notification service running.
+     *
+     * @since 5.18
+     */
+    Q_PROPERTY(NotificationManager::ServerInfo *currentOwner READ currentOwner CONSTANT)
 
     /**
      * Whether notifications are currently inhibited.
@@ -76,6 +95,12 @@ public:
      * Whether the notification service could be registered
      */
     bool isValid() const;
+
+    /**
+     * Information about the current owner of the Notification service.
+     * @since 5.18
+     */
+    ServerInfo *currentOwner() const;
 
     /**
      * Whether notifications are currently inhibited.
@@ -134,6 +159,14 @@ public:
     uint add(const Notification &notification);
 
 Q_SIGNALS:
+    /**
+     * Emitted when the notification service validity changes,
+     * because it sucessfully registered the service or lost
+     * ownership of it.
+     * @since 5.18
+     */
+    void validChanged();
+
     /**
      * Emitted when a notification was added.
      * This is emitted regardless of any filtering rules or user settings.

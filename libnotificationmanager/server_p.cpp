@@ -28,6 +28,7 @@
 #include "notification_p.h"
 
 #include "server.h"
+#include "serverinfo.h"
 
 #include "utils_p.h"
 
@@ -47,10 +48,24 @@ ServerPrivate::ServerPrivate(QObject *parent)
 {
     m_inhibitionWatcher->setConnection(QDBusConnection::sessionBus());
     m_inhibitionWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
-    connect(m_inhibitionWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &ServerPrivate::onServiceUnregistered);
+    connect(m_inhibitionWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &ServerPrivate::onInhibitionServiceUnregistered);
 }
 
 ServerPrivate::~ServerPrivate() = default;
+
+QString ServerPrivate::notificationServiceName()
+{
+    return QStringLiteral("org.freedesktop.Notifications");
+}
+
+ServerInfo *ServerPrivate::currentOwner() const
+{
+    if (!m_currentOwner) {
+        m_currentOwner.reset(new ServerInfo());
+    }
+
+    return m_currentOwner.data();
+}
 
 bool ServerPrivate::init()
 {
@@ -60,7 +75,11 @@ bool ServerPrivate::init()
 
     new NotificationsAdaptor(this);
 
-    if (!QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/freedesktop/Notifications"), this)) {
+    if (!m_dbusObjectValid) { // if already registered, don't fail here
+        m_dbusObjectValid = QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/freedesktop/Notifications"), this);
+     }
+
+    if (!m_dbusObjectValid) {
         qCWarning(NOTIFICATIONMANAGER) << "Failed to register Notification DBus object";
         return false;
     }
@@ -68,20 +87,15 @@ bool ServerPrivate::init()
     // Only the "dbus master" (effectively plasmashell) should be the true owner of notifications
     const bool master = Utils::isDBusMaster();
 
-    const QString notificationService = QStringLiteral("org.freedesktop.Notifications");
-
     QDBusConnectionInterface *dbusIface = QDBusConnection::sessionBus().interface();
 
     if (!master) {
-        connect(dbusIface, &QDBusConnectionInterface::serviceUnregistered, this, [=](const QString &serviceName) {
-            if (serviceName == notificationService) {
-                qCDebug(NOTIFICATIONMANAGER) << "Lost ownership of" << serviceName << "service";
-                emit serviceOwnershipLost();
-            }
-        });
+        // NOTE this connects to whether the application lost ownership of given service
+        // This is not a wildcard listener for all unregistered services on the bus!
+        connect(dbusIface, &QDBusConnectionInterface::serviceUnregistered, this, &ServerPrivate::onServiceOwnershipLost, Qt::UniqueConnection);
     }
 
-    auto registration = dbusIface->registerService(notificationService,
+    auto registration = dbusIface->registerService(notificationServiceName(),
         master ? QDBusConnectionInterface::ReplaceExistingService : QDBusConnectionInterface::DontQueueService,
         master ? QDBusConnectionInterface::DontAllowReplacement : QDBusConnectionInterface::AllowReplacement
     );
@@ -90,24 +104,7 @@ bool ServerPrivate::init()
         return false;
     }
 
-    connect(this, &ServerPrivate::inhibitedChanged, this, [this] {
-        // emit DBus change signal...
-        QDBusMessage signal = QDBusMessage::createSignal(
-            QStringLiteral("/org/freedesktop/Notifications"),
-            QStringLiteral("org.freedesktop.DBus.Properties"),
-            QStringLiteral("PropertiesChanged")
-        );
-
-        signal.setArguments({
-            QStringLiteral("org.freedesktop.Notifications"),
-            QVariantMap{ // updated
-                {QStringLiteral("Inhibited"), inhibited()},
-            },
-            QStringList() // invalidated
-        });
-
-        QDBusConnection::sessionBus().send(signal);
-    });
+    connect(this, &ServerPrivate::inhibitedChanged, this, &ServerPrivate::onInhibitedChanged, Qt::UniqueConnection);
 
     qCDebug(NOTIFICATIONMANAGER) << "Registered Notification service on DBus";
 
@@ -116,11 +113,14 @@ bool ServerPrivate::init()
 
     if (broadcastsEnabled) {
         qCDebug(NOTIFICATIONMANAGER) << "Notification server is configured to listen for broadcasts";
+        // NOTE Keep disconnect() call in onServiceOwnershipLost in sync if you change this!
         QDBusConnection::systemBus().connect({}, {}, QStringLiteral("org.kde.BroadcastNotifications"),
                                              QStringLiteral("Notify"), this, SLOT(onBroadcastNotification(QMap<QString,QVariant>)));
     }
 
     m_valid = true;
+    emit validChanged();
+
     return true;
 }
 
@@ -342,7 +342,28 @@ uint ServerPrivate::Inhibit(const QString &desktop_entry, const QString &reason,
     return m_highestInhibitionCookie;
 }
 
-void ServerPrivate::onServiceUnregistered(const QString &serviceName)
+void ServerPrivate::onServiceOwnershipLost(const QString &serviceName)
+{
+    if (serviceName != notificationServiceName()) {
+        return;
+    }
+
+    qCDebug(NOTIFICATIONMANAGER) << "Lost ownership of" << serviceName << "service";
+
+    disconnect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceUnregistered,
+               this, &ServerPrivate::onServiceOwnershipLost);
+    disconnect(this, &ServerPrivate::inhibitedChanged, this, &ServerPrivate::onInhibitedChanged);
+
+    QDBusConnection::systemBus().disconnect({}, {}, QStringLiteral("org.kde.BroadcastNotifications"),
+                                         QStringLiteral("Notify"), this, SLOT(onBroadcastNotification(QMap<QString,QVariant>)));
+
+    m_valid = false;
+
+    emit validChanged();
+    emit serviceOwnershipLost();
+}
+
+void ServerPrivate::onInhibitionServiceUnregistered(const QString &serviceName)
 {
     qCDebug(NOTIFICATIONMANAGER) << "Inhibition service unregistered" << serviceName;
 
@@ -354,6 +375,26 @@ void ServerPrivate::onServiceUnregistered(const QString &serviceName)
 
     // We do lookups in there again...
     UnInhibit(cookie);
+}
+
+void ServerPrivate::onInhibitedChanged()
+{
+    // emit DBus change signal...
+    QDBusMessage signal = QDBusMessage::createSignal(
+        QStringLiteral("/org/freedesktop/Notifications"),
+        QStringLiteral("org.freedesktop.DBus.Properties"),
+        QStringLiteral("PropertiesChanged")
+    );
+
+    signal.setArguments({
+        QStringLiteral("org.freedesktop.Notifications"),
+        QVariantMap{ // updated
+            {QStringLiteral("Inhibited"), inhibited()},
+        },
+        QStringList() // invalidated
+    });
+
+    QDBusConnection::sessionBus().send(signal);
 }
 
 void ServerPrivate::UnInhibit(uint cookie)
