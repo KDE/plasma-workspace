@@ -62,8 +62,8 @@ QString Utils::desktopEntryFromPid(uint pid)
         }
 
         const QByteArray key = line.left(equalsIdx);
-        const QByteArray value = line.mid(equalsIdx + 1);
         if (key == bamfDesktopFileHint) {
+            const QByteArray value = line.mid(equalsIdx + 1);
             return value;
         }
     }
