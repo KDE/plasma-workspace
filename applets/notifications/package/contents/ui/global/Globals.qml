@@ -490,7 +490,8 @@ QtObject {
 
     property Notifications.GlobalShortcuts shortcuts: Notifications.GlobalShortcuts {
         onToggleDoNotDisturbTriggered: {
-            if (globals.inhibited) {
+            var oldInhibited = globals.inhibited;
+            if (oldInhibited) {
                 globals.revokeInhibitions();
             } else {
                 // Effectively "in a year" is "until turned off"
@@ -501,7 +502,10 @@ QtObject {
             }
 
             checkInhibition();
-            showDoNotDisturbOsd(globals.inhibited);
+
+            if (globals.inhibited !== oldInhibited) {
+                showDoNotDisturbOsd(globals.inhibited);
+            }
         }
     }
 }
