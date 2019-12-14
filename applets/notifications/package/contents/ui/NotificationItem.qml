@@ -79,6 +79,9 @@ ColumnLayout {
     property int thumbnailTopPadding: 0
     property int thumbnailBottomPadding: 0
 
+    property alias timeout: notificationHeading.timeout
+    property alias remainingTime: notificationHeading.remainingTime
+
     readonly property bool menuOpen: bodyLabel.contextMenu !== null
                                      || (thumbnailStripLoader.item && thumbnailStripLoader.item.menuOpen)
                                      || (jobLoader.item && jobLoader.item.menuOpen)

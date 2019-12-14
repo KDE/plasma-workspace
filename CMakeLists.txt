@@ -43,6 +43,12 @@ set_package_properties(KF5Kirigami2 PROPERTIES
     TYPE RUNTIME
 )
 
+find_package(KF5QuickCharts ${KF5_MIN_VERSION} CONFIG)
+set_package_properties(KF5QuickCharts PROPERTIES
+    DESCRIPTION "Used for rendering charts"
+    TYPE RUNTIME
+)
+
 # WARNING PlasmaQuick provides unversioned CMake config
 find_package(KUserFeedback)
 find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)

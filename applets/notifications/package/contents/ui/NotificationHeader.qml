@@ -30,6 +30,8 @@ import org.kde.notificationmanager 1.0 as NotificationManager
 
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 
+import org.kde.quickcharts 1.0 as Charts
+
 import "global"
 
 RowLayout {
@@ -53,6 +55,9 @@ RowLayout {
 
     property int jobState
     property QtObject jobDetails
+
+    property real timeout: 5000
+    property real remainingTime: 0
 
     signal configureClicked
     signal dismissClicked
@@ -198,9 +203,35 @@ RowLayout {
         PlasmaComponents.ToolButton {
             id: closeButton
             tooltip: i18nd("plasma_applet_org.kde.plasma.notifications", "Close")
-            iconSource: "window-close"
             visible: false
             onClicked: notificationHeading.closeClicked()
+
+            PlasmaCore.IconItem {
+                anchors.fill: parent
+                anchors.margins: units.smallSpacing + units.devicePixelRatio * 2
+                source: "window-close"
+                roundToIconSize: false
+                active: closeButton.hovered
+
+                Charts.PieChart {
+                    anchors.fill: parent
+                    anchors.margins: -units.devicePixelRatio
+
+                    opacity: (notificationHeading.remainingTime > 0 && notificationHeading.remainingTime < notificationHeading.timeout) ? 1 : 0
+                    Behavior on opacity {
+                        NumberAnimation { duration: units.longDuration }
+                    }
+
+                    range { from: 0; to: notificationHeading.timeout; automatic: false }
+
+                    valueSources: Charts.SingleValueSource { value: notificationHeading.timeout - notificationHeading.remainingTime }
+                    colorSource: Charts.SingleValueSource { value: "transparent" }
+
+                    backgroundColor: theme.highlightColor
+
+                    thickness: units.devicePixelRatio * 5
+                }
+            }
         }
     }
 
