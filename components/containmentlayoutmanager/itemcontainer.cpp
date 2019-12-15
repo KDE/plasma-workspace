@@ -529,6 +529,7 @@ void ItemContainer::mousePressEvent(QMouseEvent *event)
 
     if (m_editMode) {
         grabMouse();
+        setCursor(Qt::ClosedHandCursor);
         m_dragActive = true;
         emit dragActiveChanged();
     } else if (m_editModeCondition == AfterPressAndHold) {
@@ -562,6 +563,7 @@ void ItemContainer::mouseReleaseEvent(QMouseEvent *event)
     m_dragActive = false;
     if (m_editMode) {
         emit dragActiveChanged();
+        setCursor(Qt::OpenHandCursor);
     }
     event->accept();
 }
@@ -637,6 +639,7 @@ void ItemContainer::hoverEnterEvent(QHoverEvent *event)
     }
 
     if (m_layout->editMode()) {
+        setCursor(Qt::OpenHandCursor);
         setEditMode(true);
     } else {
         m_editModeTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
