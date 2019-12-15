@@ -60,10 +60,14 @@ Item {
                 var inhibitedUntil = notificationSettings.notificationsInhibitedUntil
                 var inhibitedUntilValid = !isNaN(inhibitedUntil.getTime());
 
+                // Show until time if valid but not if too far in the future
                 // TODO check app inhibition, too
-                if (inhibitedUntilValid) {
+                if (inhibitedUntilValid
+                        && inhibitedUntil.getTime() - new Date().getTime() < 365 * 24 * 60 * 60 * 1000 /* 1 year*/) {
                         lines.push(i18n("Do not disturb until %1",
                                      KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat)));
+                } else {
+                    lines.push(i18n("Do not disturb"));
                 }
             } else if (lines.length === 0) {
                 lines.push(i18n("No unread notifications"));
