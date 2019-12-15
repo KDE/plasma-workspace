@@ -46,24 +46,28 @@ Item {
             lines.push(i18np("%1 running job", "%1 running jobs", historyModel.activeJobsCount));
         }
 
-        // Any notification that is newer than "lastRead" is "unread"
-        // since it doesn't know the popup is on screen which makes the user see it
-        var actualUnread = historyModel.unreadNotificationsCount - Globals.popupNotificationsModel.activeNotificationsCount;
-        if (actualUnread > 0) {
-            lines.push(i18np("%1 unread notification", "%1 unread notifications", actualUnread));
-        }
-
-        if (Globals.inhibited) {
-            var inhibitedUntil = notificationSettings.notificationsInhibitedUntil
-            var inhibitedUntilValid = !isNaN(inhibitedUntil.getTime());
-
-            // TODO check app inhibition, too
-            if (inhibitedUntilValid) {
-                lines.push(i18n("Do not disturb until %1",
-                             KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat)));
+        if (!NotificationManager.Server.valid) {
+            lines.push(i18n("Notification service not available"));
+        } else {
+            // Any notification that is newer than "lastRead" is "unread"
+            // since it doesn't know the popup is on screen which makes the user see it
+            var actualUnread = historyModel.unreadNotificationsCount - Globals.popupNotificationsModel.activeNotificationsCount;
+            if (actualUnread > 0) {
+                lines.push(i18np("%1 unread notification", "%1 unread notifications", actualUnread));
             }
-        } else if (lines.length === 0) {
-            lines.push(i18n("No unread notifications"));
+
+            if (Globals.inhibited) {
+                var inhibitedUntil = notificationSettings.notificationsInhibitedUntil
+                var inhibitedUntilValid = !isNaN(inhibitedUntil.getTime());
+
+                // TODO check app inhibition, too
+                if (inhibitedUntilValid) {
+                        lines.push(i18n("Do not disturb until %1",
+                                     KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat)));
+                }
+            } else if (lines.length === 0) {
+                lines.push(i18n("No unread notifications"));
+            }
         }
 
         return lines.join("\n");
@@ -92,7 +96,7 @@ Item {
         jobsCount: historyModel.activeJobsCount
         jobsPercentage: historyModel.jobsPercentage
 
-        inhibited: Globals.inhibited
+        inhibited: Globals.inhibited || !NotificationManager.Server.valid
     }
 
     Plasmoid.fullRepresentation: FullRepresentation {

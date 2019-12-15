@@ -200,6 +200,10 @@ QtObject {
         globals.inhibited = Qt.binding(function() {
             var inhibited = false;
 
+            if (!NotificationManager.Server.valid) {
+                return false;
+            }
+
             var inhibitedUntil = notificationSettings.notificationsInhibitedUntil;
             if (!isNaN(inhibitedUntil.getTime())) {
                 inhibited |= (new Date().getTime() < inhibitedUntil.getTime());

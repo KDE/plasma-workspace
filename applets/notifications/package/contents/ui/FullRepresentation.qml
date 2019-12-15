@@ -79,6 +79,7 @@ ColumnLayout{
             RowLayout {
                 id: dndRow
                 spacing: units.smallSpacing
+                enabled: NotificationManager.Server.valid
 
                 PlasmaComponents3.CheckBox {
                     id: dndCheck
@@ -590,7 +591,37 @@ ColumnLayout{
                 level: 3
                 opacity: 0.6
                 text: i18n("No unread notifications.")
-                visible: list.count === 0
+                visible: list.count === 0 && NotificationManager.Server.valid
+            }
+
+            ColumnLayout {
+                id: serverUnavailableColumn
+
+                width: list.width
+                visible: list.count === 0 && !NotificationManager.Server.valid
+
+                PlasmaExtras.Heading {
+                    Layout.fillWidth: true
+                    level: 3
+                    opacity: 0.6
+                    text: i18n("Notification service not available")
+                    wrapMode: Text.WordWrap
+                }
+
+                PlasmaComponents.Label {
+                    // Checking valid to avoid creating ServerInfo object if everything is alright
+                    readonly property NotificationManager.ServerInfo currentOwner: !NotificationManager.Server.valid ? NotificationManager.Server.currentOwner
+                                                                                                                     : null
+
+                    Layout.fillWidth: true
+                    wrapMode: Text.WordWrap
+                    text: currentOwner ? i18nc("Vendor and product name",
+                                         "Notifications are currently provided by '%1 %2'",
+                                         currentOwner.vendor,
+                                         currentOwner.name)
+                                       : ""
+                    visible: currentOwner && currentOwner.vendor && currentOwner.name
+                }
             }
         }
     }
