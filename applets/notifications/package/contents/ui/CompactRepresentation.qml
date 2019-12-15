@@ -24,6 +24,8 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
+import org.kde.quickcharts 1.0 as Charts
+
 MouseArea {
     id: compactRoot
 
@@ -66,29 +68,19 @@ MouseArea {
 
         elementId: "notification-inactive"
 
-        Item {
-            id: jobProgressItem
-            anchors {
-                left: parent.left
-                top: parent.top
-                bottom: parent.bottom
-            }
-            width: notificationIcon.width * (jobsPercentage / 100)
+        Charts.PieChart {
+            id: chart
 
-            clip: true
+            anchors.fill: parent
+
             visible: false
 
-            PlasmaCore.SvgItem {
-                anchors {
-                    left: parent.left
-                    top: parent.top
-                    bottom: parent.bottom
-                }
-                width: notificationIcon.width
+            range { from: 0; to: 100; automatic: false }
 
-                svg: notificationSvg
-                elementId: "notification-progress-active"
-            }
+            valueSources: Charts.SingleValueSource { value: compactRoot.jobsPercentage }
+            colorSource: Charts.SingleValueSource { value: theme.highlightColor }
+
+            thickness: units.devicePixelRatio * 5
         }
 
         PlasmaComponents.Label {
@@ -138,10 +130,14 @@ MouseArea {
             }
             PropertyChanges {
                 target: busyIndicator
-                visible: true
+                visible: compactRoot.jobsPercentage == 0
             }
             PropertyChanges {
                 target: jobProgressItem
+                visible: true
+            }
+            PropertyChanges {
+                target: chart
                 visible: true
             }
         },
