@@ -29,11 +29,17 @@
 class QDBusPendingCallWatcher;
 class QDBusConnection;
 class QQuickItem;
+namespace Plasma {
+    class Service;
+}
 class PlasmoidModel;
+class StatusNotifierModel;
+class SystemTrayModel;
 
 class SystemTray : public Plasma::Containment
 {
     Q_OBJECT
+    Q_PROPERTY(QAbstractItemModel* systemTrayModel READ systemTrayModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel* availablePlasmoids READ availablePlasmoids CONSTANT)
     Q_PROPERTY(QStringList allowedPlasmoids READ allowedPlasmoids WRITE setAllowedPlasmoids NOTIFY allowedPlasmoidsChanged)
     Q_PROPERTY(QStringList defaultPlasmoids READ defaultPlasmoids CONSTANT)
@@ -46,6 +52,8 @@ public:
 
     void restoreContents(KConfigGroup &group) override;
     void restorePlasmoids();
+
+    QAbstractItemModel* systemTrayModel();
 
     QStringList defaultPlasmoids() const;
 
@@ -120,6 +128,8 @@ private:
 
     QStringList m_allowedPlasmoids;
     PlasmoidModel *m_availablePlasmoidsModel;
+    StatusNotifierModel *m_statusNotifierModel;
+    SystemTrayModel *m_systemTrayModel;
     QHash<QString, int> m_knownPlugins;
     QHash<QString, int> m_dbusServiceCounts;
 };

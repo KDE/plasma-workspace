@@ -18,6 +18,7 @@
  ***************************************************************************/
 
 #include "systemtray.h"
+#include "systemtraymodel.h"
 #include "debug.h"
 
 #include <QDebug>
@@ -42,27 +43,21 @@
 
 #include <plasma_version.h>
 
-class PlasmoidModel: public QStandardItemModel
-{
-public:
-    explicit PlasmoidModel(QObject *parent = nullptr)
-        : QStandardItemModel(parent)
-    {
-    }
-
-    QHash<int, QByteArray> roleNames() const override {
-        QHash<int, QByteArray> roles = QStandardItemModel::roleNames();
-        roles[Qt::UserRole+1] = "plugin";
-        return roles;
-    }
-};
-
 SystemTray::SystemTray(QObject *parent, const QVariantList &args)
     : Plasma::Containment(parent, args),
-      m_availablePlasmoidsModel(nullptr)
+      m_availablePlasmoidsModel(nullptr),
+      m_systemTrayModel(new SystemTrayModel(this))
 {
     setHasConfigurationInterface(true);
     setContainmentType(Plasma::Types::CustomEmbeddedContainment);
+
+    PlasmoidModel *currentPlasmoidsModel = new PlasmoidModel(m_systemTrayModel);
+    connect(this, &SystemTray::appletAdded, currentPlasmoidsModel, &PlasmoidModel::addApplet);
+    connect(this, &SystemTray::appletRemoved, currentPlasmoidsModel, &PlasmoidModel::removeApplet);
+    m_systemTrayModel->addSourceModel(currentPlasmoidsModel);
+
+    m_statusNotifierModel = new StatusNotifierModel(m_systemTrayModel);
+    m_systemTrayModel->addSourceModel(m_statusNotifierModel);
 }
 
 SystemTray::~SystemTray()
@@ -437,6 +432,11 @@ void SystemTray::restorePlasmoids()
     initDBusActivatables();
 }
 
+QAbstractItemModel *SystemTray::systemTrayModel()
+{
+    return m_systemTrayModel;
+}
+
 QStringList SystemTray::defaultPlasmoids() const
 {
     return m_defaultPlasmoids;
@@ -446,19 +446,6 @@ QAbstractItemModel* SystemTray::availablePlasmoids()
 {
     if (!m_availablePlasmoidsModel) {
         m_availablePlasmoidsModel = new PlasmoidModel(this);
-
-        for (const KPluginMetaData &info : qAsConst(m_systrayApplets)) {
-            QString name = info.name();
-            const QString dbusactivation = info.rawData().value(QStringLiteral("X-Plasma-DBusActivationService")).toString();
-
-            if (!dbusactivation.isEmpty()) {
-                name += i18n(" (Automatic load)");
-            }
-            QStandardItem *item = new QStandardItem(QIcon::fromTheme(info.iconName()), name);
-            item->setData(info.pluginId());
-            m_availablePlasmoidsModel->appendRow(item);
-        }
-        m_availablePlasmoidsModel->sort(0 /*column*/);
     }
     return m_availablePlasmoidsModel;
 }

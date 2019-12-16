@@ -89,13 +89,13 @@ Item {
             model: plasmoid.nativeInterface.availablePlasmoids
             delegate: QtControls.CheckBox {
                 QtLayouts.Layout.minimumWidth: childrenRect.width
-                checked: cfg_extraItems.indexOf(plugin) != -1
+                checked: cfg_extraItems.indexOf(itemId) != -1
                 implicitWidth: itemLayout.width + itemLayout.x
                 onCheckedChanged: {
-                    var index = cfg_extraItems.indexOf(plugin);
+                    var index = cfg_extraItems.indexOf(itemId);
                     if (checked) {
                         if (index === -1) {
-                            cfg_extraItems.push(plugin);
+                            cfg_extraItems.push(itemId);
                         }
                     } else {
                         if (index > -1) {

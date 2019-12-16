@@ -36,31 +36,10 @@ ColumnLayout {
     property var cfg_hiddenItems: []
     property alias cfg_showAllItems: showAllCheckBox.checked
 
-    function saveConfig () {
-        for (var i in tableView.model) {
-            //tableView.model[i].applet.globalShortcut = tableView.model[i].shortcut
-        }
-    }
-
-    PlasmaCore.DataSource {
-        id: statusNotifierSource
-        engine: "statusnotifieritem"
-        interval: 0
-        onSourceAdded: {
-            connectSource(source)
-        }
-        Component.onCompleted: {
-            connectedSources = sources
-        }
-   }
-
     PlasmaCore.SortFilterModel {
-       id: statusNotifierModel
-       sourceModel: PlasmaCore.DataModel {
-           dataSource: statusNotifierSource
-       }
+       id: systemTrayModel
+       sourceModel: plasmoid.nativeInterface.systemTrayModel
     }
-
 
     Kirigami.FormLayout {
 
@@ -83,29 +62,19 @@ ColumnLayout {
         }
     }
 
-
+    // convert to QtObjects compatible with TableView
     function retrieveAllItems() {
         var list = [];
-        for (var i = 0; i < statusNotifierModel.count; ++i) {
-            var item = statusNotifierModel.get(i);
+        for (var i = 0; i < systemTrayModel.count; i++) {
+            var item = systemTrayModel.get(i);
+            if (item.itemType === "Plasmoid" && !item.hasApplet) {
+                continue;
+            }
             list.push({
-                "index": i,
-                "taskId": item.Id,
-                "name": item.Title,
-                "iconName": item.IconName,
-                "icon": item.Icon
-            });
-        }
-        var lastIndex = list.length;
-        for (var i = 0; i < plasmoid.applets.length; ++i) {
-            var item = plasmoid.applets[i]
-            list.push({
-                "index": (i + lastIndex),
-                "applet": item,
-                "taskId": item.pluginName,
-                "name": item.title,
-                "iconName": item.icon,
-                "shortcut": item.globalShortcut
+                "taskId": item.itemId,
+                "name": item.display,
+                "icon": item.decoration,
+                "applet": item.applet
             });
         }
         list.sort(function(a, b) {
@@ -154,7 +123,7 @@ ColumnLayout {
                 QIconItem {
                     width: units.iconSizes.small
                     height: width
-                    icon: modelData.iconName || modelData.icon || ""
+                    icon: modelData.icon
                 }
 
                 QQC2.Label {
@@ -241,16 +210,12 @@ ColumnLayout {
                     id: keySequenceItem
                     anchors.right: parent.right
 
-                    keySequence: modelData.shortcut
+                    keySequence: modelData.applet ? modelData.applet.globalShortcut : ""
                     // only Plasmoids have that
-                    visible: modelData.hasOwnProperty("shortcut")
+                    visible: modelData.hasOwnProperty("applet")
                     onKeySequenceChanged: {
-                        if (keySequence !== modelData.shortcut) {
-                            // both SNIs and plasmoids are listed in the same TableView
-                            // but they come from two separate models, so we need to subtract
-                            // the SNI model count to get the actual plasmoid index
-                            var index = modelData.index - statusNotifierModel.count
-                            plasmoid.applets[index].globalShortcut = keySequence
+                        if (modelData.applet && keySequence !== modelData.applet.globalShortcut) {
+                            modelData.applet.globalShortcut = keySequence
 
                             iconsPage.configurationChanged()
                         }
