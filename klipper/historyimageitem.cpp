@@ -16,10 +16,16 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
+
 #include "historyimageitem.h"
 
-#include <QMimeData>
+#include "historymodel.h"
+
 #include <QCryptographicHash>
+#include <QIcon>
+#include <QMimeData>
+
+#include <KLocalizedString>
 
 namespace {
     QByteArray compute_uuid(const QPixmap& data) {
@@ -38,14 +44,15 @@ HistoryImageItem::HistoryImageItem( const QPixmap& data )
 }
 
 QString HistoryImageItem::text() const {
-    if ( m_text.isNull() ) {
-        m_text = QStringLiteral( "%1x%2x%3 %4" )
-                 .arg( m_data.width() )
-                 .arg( m_data.height() )
-                 .arg( m_data.depth() );
+    if (m_text.isNull()) {
+        m_text =
+            QStringLiteral("▨ ") +
+            i18n("%1x%2 %3bpp")
+                 .arg(m_data.width())
+                 .arg(m_data.height())
+                 .arg(m_data.depth());
     }
     return m_text;
-
 }
 
 /* virtual */
@@ -60,3 +67,12 @@ QMimeData* HistoryImageItem::mimeData() const
     return data;
 }
 
+const QPixmap& HistoryImageItem::image() const {
+    if (m_model->displayImages()) {
+        return m_data;
+    }
+    static QPixmap imageIcon(
+        QIcon::fromTheme(QStringLiteral("view-preview")).pixmap(QSize(48, 48))
+    );
+    return imageIcon;
+}

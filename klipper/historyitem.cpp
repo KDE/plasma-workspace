@@ -30,8 +30,8 @@
 #include "historymodel.h"
 
 HistoryItem::HistoryItem(const QByteArray& uuid)
-    : m_uuid(uuid)
-    , m_model(nullptr)
+    : m_model(nullptr)
+    , m_uuid(uuid)
 {
 }
 

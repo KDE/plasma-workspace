@@ -100,9 +100,12 @@ public:
     QByteArray next_uuid() const;
 
     void setModel(HistoryModel *model);
+
+protected:
+    HistoryModel *m_model;
+
 private:
     QByteArray m_uuid;
-    HistoryModel *m_model;
 };
 
 inline

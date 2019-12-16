@@ -24,7 +24,8 @@ import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 KQuickControlsAddons.QPixmapItem {
     id: previewPixmap
-    height: Math.round(width * (nativeHeight/nativeWidth) + units.smallSpacing * 2)
+    width: Math.min(nativeWidth, width)
+    height: Math.min(nativeHeight, Math.round(width * (nativeHeight/nativeWidth) + units.smallSpacing * 2))
     pixmap: DecorationRole
     fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
 }

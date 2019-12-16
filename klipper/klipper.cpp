@@ -116,6 +116,7 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
     m_history = new History( this );
     m_popup = new KlipperPopup(m_history);
     m_popup->setShowHelp(m_mode == KlipperMode::Standalone);
+    connect(m_history, &History::changed, this, &Klipper::slotHistoryChanged);
     connect(m_history, &History::changed, m_popup, &KlipperPopup::slotHistoryChanged);
     connect(m_history, &History::topIsUserSelectedSet, m_popup, &KlipperPopup::slotTopIsUserSelectedSet);
 
@@ -288,7 +289,6 @@ void Klipper::clearClipboardContents()
 void Klipper::clearClipboardHistory()
 {
     updateTimestamp();
-    slotClearClipboard();
     history()->slotClear();
     saveSession();
 }
@@ -330,6 +330,8 @@ void Klipper::loadSettings()
     // this will cause it to loadSettings too
     setURLGrabberEnabled(m_bURLGrabber);
     history()->setMaxSize( KlipperSettings::maxClipItems() );
+    history()->model()->setDisplayImages(!m_bIgnoreImages);
+
     // Convert 4.3 settings
     if (KlipperSettings::synchronize() != 3) {
       // 2 was the id of "Ignore selection" radiobutton
@@ -604,23 +606,24 @@ HistoryItemPtr Klipper::applyClipChanges( const QMimeData* clipData )
         return HistoryItemPtr();
     }
     Ignore lock( m_locklevel );
+
+    if (!(history()->empty())) {
+        if (m_bIgnoreImages && history()->first()->mimeData()->hasImage()) {
+            history()->remove(history()->first());
+        }
+    }
+
     HistoryItemPtr item = HistoryItem::create( clipData );
 
-    bool saveHistory = true;
+    bool saveToHistory = true;
     if (clipData->data(QStringLiteral("x-kde-passwordManagerHint")) == QByteArrayLiteral("secret")) {
-        saveHistory = false;
+        saveToHistory = false;
     }
-    if (clipData->hasImage() && m_bIgnoreImages) {
-        saveHistory = false;
-    }
-
-    m_last = item;
-
-    if (saveHistory) {
+    if (saveToHistory) {
         history()->insert( item );
     }
-    return item;
 
+    return item;
 }
 
 void Klipper::newClipData( QClipboard::Mode mode )
@@ -634,6 +637,13 @@ void Klipper::newClipData( QClipboard::Mode mode )
 
     checkClipData( mode == QClipboard::Selection ? true : false );
 
+}
+
+void Klipper::slotHistoryChanged()
+{
+    if (history()->empty()) {
+        slotClearClipboard();
+    }
 }
 
 // Protection against too many clipboard data changes. Lyx responds to clipboard data
@@ -697,7 +707,7 @@ void Klipper::checkClipData( bool selectionMode )
         // This won't quite work, but it's close enough for now.
         // The trouble is that the top selection =! top clipboard
         // but we don't track that yet. We will....
-        auto top = m_last;
+        auto top = history()->first();
         if ( top ) {
             setClipboard( *top, selectionMode ? Selection : Clipboard);
         }
@@ -721,7 +731,7 @@ void Klipper::checkClipData( bool selectionMode )
     }
 
     if ( changed && clipEmpty && m_bNoNullClipboard ) {
-        auto top = m_last;
+        auto top = history()->first();
         if ( top ) {
             // keep old clipboard after someone set it to null
             qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
@@ -992,7 +1002,6 @@ void Klipper::slotAskClearHistory()
                                                KMessageBox::Dangerous);
     if (clearHist == KMessageBox::Yes) {
       history()->slotClear();
-      slotClearClipboard();
       saveHistory();
     }
 

@@ -37,7 +37,7 @@ public:
         }
         return false;
     }
-    const QPixmap& image() const override { return m_data; }
+    const QPixmap& image() const override;
     QMimeData* mimeData() const override;
 
     void write( QDataStream& stream ) const override;

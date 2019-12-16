@@ -145,6 +145,8 @@ private Q_SLOTS:
     void newClipData( QClipboard::Mode );
     void slotClearClipboard();
 
+    void slotHistoryChanged();
+
     void slotQuit();
     void slotStartShowTimer();
 
@@ -158,8 +160,6 @@ private:
     static void updateTimestamp();
 
     QClipboard* m_clip;
-
-    QSharedPointer<HistoryItem> m_last;
 
     QElapsedTimer m_showTimer;
 

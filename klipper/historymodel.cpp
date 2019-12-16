@@ -25,6 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 HistoryModel::HistoryModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_maxSize(0)
+    , m_displayImages(true)
     , m_mutex(QMutex::Recursive)
 {
 }

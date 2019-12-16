@@ -46,6 +46,9 @@ public:
     int maxSize() const;
     void setMaxSize(int size);
 
+    bool displayImages() const;
+    void setDisplayImages(bool show);
+
     void clear();
     void moveToTop(const QByteArray &uuid);
     void moveTopToBack();
@@ -64,12 +67,21 @@ private:
     void moveToTop(int row);
     QList<QSharedPointer<HistoryItem>> m_items;
     int m_maxSize;
+    bool m_displayImages;
     QMutex m_mutex;
 };
 
 inline int HistoryModel::maxSize() const
 {
     return m_maxSize;
+}
+
+inline bool HistoryModel::displayImages() const {
+    return m_displayImages;
+}
+
+inline void HistoryModel::setDisplayImages(bool show) {
+    m_displayImages = show;
 }
 
 Q_DECLARE_METATYPE(HistoryItemType)

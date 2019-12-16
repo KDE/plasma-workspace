@@ -82,7 +82,7 @@ ColumnLayout {
         level: 3
         opacity: 0.6
         visible: clipboardMenu.model.count === 0 && filter.length === 0
-        text: i18n("Clipboard history is empty.")
+        text: i18n("Clipboard is empty")
     }
 
     RowLayout {
