@@ -105,6 +105,7 @@ Item {
     readonly property var kcm_energyinfo: ["kcm_energyinfo.desktop"]
     readonly property bool kcmEnergyInformationAuthorized: KCMShell.authorize(kcm_energyinfo).length > 0
 
+    property QtObject updateScreenBrightnessJob
     onScreenBrightnessChanged: {
         if (disableBrightnessUpdate) {
             return;
@@ -114,8 +115,13 @@ Item {
         operation.brightness = screenBrightness;
         // show OSD only when the plasmoid isn't expanded since the moving slider is feedback enough
         operation.silent = plasmoid.expanded
-        service.startOperationCall(operation);
+        updateScreenBrightnessJob = service.startOperationCall(operation);
+        updateScreenBrightnessJob.finished.connect(function(job) {
+            Logic.updateBrightness(batterymonitor, pmSource);
+        });
     }
+
+    property QtObject updateKeyboardBrightnessJob
     onKeyboardBrightnessChanged: {
         if (disableBrightnessUpdate) {
             return;
@@ -124,7 +130,10 @@ Item {
         var operation = service.operationDescription("setKeyboardBrightness");
         operation.brightness = keyboardBrightness;
         operation.silent = plasmoid.expanded
-        service.startOperationCall(operation);
+        updateKeyboardBrightnessJob = service.startOperationCall(operation);
+        updateKeyboardBrightnessJob.finished.connect(function(job) {
+            Logic.updateBrightness(batterymonitor, pmSource);
+        });
     }
 
     function action_powerdevilkcm() {

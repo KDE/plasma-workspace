@@ -23,12 +23,16 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
+import org.kde.plasma.components 3.0 as Components3
 
 RowLayout {
+    id: item
     property alias icon: brightnessIcon.source
     property alias label: brightnessLabel.text
     property alias value: brightnessSlider.value
-    property alias maximumValue: brightnessSlider.maximumValue
+    property alias maximumValue: brightnessSlider.to
+    property alias stepSize: brightnessSlider.stepSize
+    signal moved()
 
     spacing: units.gridUnit
 
@@ -51,13 +55,14 @@ RowLayout {
             height: paintedHeight
         }
 
-        Components.Slider {
+        Components3.Slider {
             id: brightnessSlider
             width: parent.width
             // Don't allow the slider to turn off the screen
             // Please see https://git.reviewboard.kde.org/r/122505/ for more information
-            minimumValue: maximumValue > 100 ? 1 : 0
+            from: to > 100 ? 1 : 0
             stepSize: 1
+            onMoved: item.moved()
         }
     }
 }

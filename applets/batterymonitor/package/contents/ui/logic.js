@@ -50,6 +50,9 @@ function batteryDetails(batteryData, remainingTime) {
 }
 
 function updateBrightness(rootItem, source) {
+    if (rootItem.updateScreenBrightnessJob || rootItem.updateKeyboardBrightnessJob)
+        return;
+
     if (!source.data["PowerDevil"]) {
         return;
     }

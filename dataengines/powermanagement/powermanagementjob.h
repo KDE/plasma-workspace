@@ -22,9 +22,10 @@
 // plasma
 #include <Plasma/ServiceJob>
 
+class QDBusPendingCall;
+
 class PowerManagementJob : public Plasma::ServiceJob
 {
-
     Q_OBJECT
 
     public:
@@ -37,8 +38,8 @@ class PowerManagementJob : public Plasma::ServiceJob
 
     private:
         void requestShutDown();
-        void setScreenBrightness(int value, bool silent);
-        void setKeyboardBrightness(int value, bool silent);
+        QDBusPendingCall setScreenBrightness(int value, bool silent);
+        QDBusPendingCall setKeyboardBrightness(int value, bool silent);
 };
 
 #endif // POWERMANAGEMENTJOB_H

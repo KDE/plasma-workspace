@@ -38,18 +38,6 @@ FocusScope {
 
     signal powermanagementChanged(bool checked)
 
-    Component.onCompleted: {
-        // setup handler on slider value manually to avoid change on creation
-
-        brightnessSlider.valueChanged.connect(function() {
-            batterymonitor.screenBrightness = brightnessSlider.value
-        })
-
-        keyboardBrightnessSlider.valueChanged.connect(function() {
-            batterymonitor.keyboardBrightness = keyboardBrightnessSlider.value
-        })
-    }
-
     Column {
         id: settingsColumn
         anchors.horizontalCenter: parent.horizontalCenter
@@ -82,6 +70,9 @@ FocusScope {
             maximumValue: batterymonitor.maximumScreenBrightness
             KeyNavigation.tab: keyboardBrightnessSlider
             KeyNavigation.backtab: batteryList
+            stepSize: batterymonitor.maximumScreenBrightness/100
+
+            onMoved: batterymonitor.screenBrightness = value
 
             // Manually dragging the slider around breaks the binding
             Connections {
@@ -101,6 +92,8 @@ FocusScope {
             visible: isKeyboardBrightnessAvailable
             KeyNavigation.tab: pmSwitch
             KeyNavigation.backtab: brightnessSlider
+
+            onMoved: batterymonitor.keyboardBrightness = value
 
             // Manually dragging the slider around breaks the binding
             Connections {
