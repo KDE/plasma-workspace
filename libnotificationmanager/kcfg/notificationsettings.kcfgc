@@ -1,10 +1,12 @@
 File=notificationsettings.kcfg
 NameSpace=NotificationManager
 ClassName=NotificationSettings
-Singleton=true
+Visibility=NOTIFICATIONMANAGER_EXPORT
 Mutators=true
 DefaultValueGetters=true
 Notifiers=true
+GenerateProperties=true
+ParentInConstructor=true
 # For Settings::PopupPosition
-IncludeFiles=\"settings.h\"
-UseEnumTypes=true
+IncludeFiles=\"settings.h\",\"notificationmanager_export.h\"
+UseEnumTypes=false

@@ -38,10 +38,10 @@ ecm_qt_declare_logging_category(notificationmanager_LIB_SRCS
 install(FILES libnotificationmanager.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 # Settings
-kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/donotdisturbsettings.kcfgc)
-kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/notificationsettings.kcfgc)
-kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/jobsettings.kcfgc)
-kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/badgesettings.kcfgc)
+kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/donotdisturbsettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/notificationsettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/jobsettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/badgesettings.kcfgc GENERATE_MOC)
 
 # DBus
 # Notifications
@@ -93,6 +93,10 @@ install(FILES
     jobsmodel.h
     job.h
     settings.h
+    ${CMAKE_CURRENT_BINARY_DIR}/donotdisturbsettings.h
+    ${CMAKE_CURRENT_BINARY_DIR}/notificationsettings.h
+    ${CMAKE_CURRENT_BINARY_DIR}/jobsettings.h
+    ${CMAKE_CURRENT_BINARY_DIR}/badgesettings.h
     ${CMAKE_CURRENT_BINARY_DIR}/notificationmanager_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/notificationmanager COMPONENT Devel
 )

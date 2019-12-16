@@ -62,6 +62,11 @@ public:
 
     MirroredScreensTracker::Ptr mirroredScreensTracker;
 
+    DoNotDisturbSettings dndSettings;
+    NotificationSettings notificationSettings;
+    JobSettings jobSettings;
+    BadgeSettings badgeSettings;
+
     bool live = false; // set to true initially in constructor
     bool dirty = false;
 
@@ -168,15 +173,6 @@ Settings::Settings(const KSharedConfig::Ptr &config, QObject *parent)
 {
     d->config = config;
 
-    static bool s_settingsInited = false;
-    if (!s_settingsInited) {
-        DoNotDisturbSettings::instance(config);
-        NotificationSettings::instance(config);
-        JobSettings::instance(config);
-        BadgeSettings::instance(config);
-        s_settingsInited = true;
-    }
-
     setLive(true);
 
     connect(&Server::self(), &Server::inhibitedByApplicationChanged,
@@ -184,7 +180,7 @@ Settings::Settings(const KSharedConfig::Ptr &config, QObject *parent)
     connect(&Server::self(), &Server::inhibitionApplicationsChanged,
             this, &Settings::notificationInhibitionApplicationsChanged);
 
-    if (DoNotDisturbSettings::whenScreensMirrored()) {
+    if (d->dndSettings.whenScreensMirrored()) {
         d->mirroredScreensTracker = MirroredScreensTracker::createTracker();
         connect(d->mirroredScreensTracker.data(), &MirroredScreensTracker::screensMirroredChanged, this, &Settings::screensMirroredChanged);
     }
@@ -260,20 +256,20 @@ void Settings::load()
 {
     d->config->markAsClean();
     d->config->reparseConfiguration();
-    DoNotDisturbSettings::self()->load();
-    NotificationSettings::self()->load();
-    JobSettings::self()->load();
-    BadgeSettings::self()->load();
+    d->dndSettings.load();
+    d->notificationSettings.load();
+    d->jobSettings.load();
+    d->badgeSettings.load();
     emit settingsChanged();
     d->setDirty(false);
 }
 
 void Settings::save()
 {
-    DoNotDisturbSettings::self()->save();
-    NotificationSettings::self()->save();
-    JobSettings::self()->save();
-    BadgeSettings::self()->save();
+    d->dndSettings.save();
+    d->notificationSettings.save();
+    d->jobSettings.save();
+    d->badgeSettings.save();
 
     d->config->sync();
     d->setDirty(false);
@@ -281,10 +277,12 @@ void Settings::save()
 
 void Settings::defaults()
 {
-    DoNotDisturbSettings::self()->setDefaults();
-    NotificationSettings::self()->setDefaults();
-    JobSettings::self()->setDefaults();
-    BadgeSettings::self()->setDefaults();
+    d->dndSettings.setDefaults();
+    d->notificationSettings.setDefaults();
+    d->jobSettings.setDefaults();
+    d->badgeSettings.setDefaults();
+    emit settingsChanged();
+    d->setDirty(false);
 }
 
 bool Settings::live() const
@@ -307,10 +305,10 @@ void Settings::setLive(bool live)
                 Q_UNUSED(names);
 
                 if (group.name() == QLatin1String("DoNotDisturb")) {
-                    DoNotDisturbSettings::self()->load();
+                    d->dndSettings.load();
 
                     bool emitScreensMirroredChanged = false;
-                    if (DoNotDisturbSettings::whenScreensMirrored()) {
+                    if (d->dndSettings.whenScreensMirrored()) {
                         if (!d->mirroredScreensTracker) {
                             d->mirroredScreensTracker = MirroredScreensTracker::createTracker();
                             emitScreensMirroredChanged = d->mirroredScreensTracker->screensMirrored();
@@ -325,11 +323,11 @@ void Settings::setLive(bool live)
                         emit screensMirroredChanged();
                     }
                 } else if (group.name() == QLatin1String("Notifications")) {
-                    NotificationSettings::self()->load();
+                    d->notificationSettings.load();
                 } else if (group.name() == QLatin1String("Jobs")) {
-                    JobSettings::self()->load();
+                    d->jobSettings.load();
                 } else if (group.name() == QLatin1String("Badges")) {
-                    BadgeSettings::self()->load();
+                    d->badgeSettings.load();
                 }
 
                 emit settingsChanged();
@@ -352,7 +350,7 @@ bool Settings::dirty() const
 
 bool Settings::keepCriticalAlwaysOnTop() const
 {
-    return NotificationSettings::criticalAlwaysOnTop();
+    return d->notificationSettings.criticalAlwaysOnTop();
 }
 
 void Settings::setKeepCriticalAlwaysOnTop(bool enable)
@@ -360,13 +358,13 @@ void Settings::setKeepCriticalAlwaysOnTop(bool enable)
     if (this->keepCriticalAlwaysOnTop() == enable) {
         return;
     }
-    NotificationSettings::setCriticalAlwaysOnTop(enable);
+    d->notificationSettings.setCriticalAlwaysOnTop(enable);
     d->setDirty(true);
 }
 
 bool Settings::criticalPopupsInDoNotDisturbMode() const
 {
-    return NotificationSettings::criticalInDndMode();
+    return d->notificationSettings.criticalInDndMode();
 }
 
 void Settings::setCriticalPopupsInDoNotDisturbMode(bool enable)
@@ -374,13 +372,13 @@ void Settings::setCriticalPopupsInDoNotDisturbMode(bool enable)
     if (this->criticalPopupsInDoNotDisturbMode() == enable) {
         return;
     }
-    NotificationSettings::setCriticalInDndMode(enable);
+    d->notificationSettings.setCriticalInDndMode(enable);
     d->setDirty(true);
 }
 
 bool Settings::lowPriorityPopups() const
 {
-    return NotificationSettings::lowPriorityPopups();
+    return d->notificationSettings.lowPriorityPopups();
 }
 
 void Settings::setLowPriorityPopups(bool enable)
@@ -388,13 +386,13 @@ void Settings::setLowPriorityPopups(bool enable)
     if (this->lowPriorityPopups() == enable) {
         return;
     }
-    NotificationSettings::setLowPriorityPopups(enable);
+    d->notificationSettings.setLowPriorityPopups(enable);
     d->setDirty(true);
 }
 
 bool Settings::lowPriorityHistory() const
 {
-    return NotificationSettings::lowPriorityHistory();
+    return d->notificationSettings.lowPriorityHistory();
 }
 
 void Settings::setLowPriorityHistory(bool enable)
@@ -402,13 +400,13 @@ void Settings::setLowPriorityHistory(bool enable)
     if (this->lowPriorityHistory() == enable) {
         return;
     }
-    NotificationSettings::setLowPriorityHistory(enable);
+    d->notificationSettings.setLowPriorityHistory(enable);
     d->setDirty(true);
 }
 
 Settings::PopupPosition Settings::popupPosition() const
 {
-    return NotificationSettings::popupPosition();
+    return static_cast<Settings::PopupPosition>(d->notificationSettings.popupPosition());
 }
 
 void Settings::setPopupPosition(Settings::PopupPosition position)
@@ -416,13 +414,13 @@ void Settings::setPopupPosition(Settings::PopupPosition position)
     if (this->popupPosition() == position) {
         return;
     }
-    NotificationSettings::setPopupPosition(position);
+    d->notificationSettings.setPopupPosition(position);
     d->setDirty(true);
 }
 
 int Settings::popupTimeout() const
 {
-    return NotificationSettings::popupTimeout();
+    return d->notificationSettings.popupTimeout();
 }
 
 void Settings::setPopupTimeout(int timeout)
@@ -430,18 +428,18 @@ void Settings::setPopupTimeout(int timeout)
     if (this->popupTimeout() == timeout) {
         return;
     }
-    NotificationSettings::setPopupTimeout(timeout);
+    d->notificationSettings.setPopupTimeout(timeout);
     d->setDirty(true);
 }
 
 void Settings::resetPopupTimeout()
 {
-    setPopupTimeout(NotificationSettings::defaultPopupTimeoutValue());
+    setPopupTimeout(d->notificationSettings.defaultPopupTimeoutValue());
 }
 
 bool Settings::jobsInTaskManager() const
 {
-    return JobSettings::inTaskManager();
+    return d->jobSettings.inTaskManager();
 }
 
 void Settings::setJobsInTaskManager(bool enable)
@@ -449,26 +447,26 @@ void Settings::setJobsInTaskManager(bool enable)
     if (jobsInTaskManager() == enable) {
         return;
     }
-    JobSettings::setInTaskManager(enable);
+    d->jobSettings.setInTaskManager(enable);
     d->setDirty(true);
 }
 
 bool Settings::jobsInNotifications() const
 {
-    return JobSettings::inNotifications();
+    return d->jobSettings.inNotifications();
 }
 void Settings::setJobsInNotifications(bool enable)
 {
     if (jobsInNotifications() == enable) {
         return;
     }
-    JobSettings::setInNotifications(enable);
+    d->jobSettings.setInNotifications(enable);
     d->setDirty(true);
 }
 
 bool Settings::permanentJobPopups() const
 {
-    return JobSettings::permanentPopups();
+    return d->jobSettings.permanentPopups();
 }
 
 void Settings::setPermanentJobPopups(bool enable)
@@ -476,13 +474,13 @@ void Settings::setPermanentJobPopups(bool enable)
     if (permanentJobPopups() == enable) {
         return;
     }
-    JobSettings::setPermanentPopups(enable);
+    d->jobSettings.setPermanentPopups(enable);
     d->setDirty(true);
 }
 
 bool Settings::badgesInTaskManager() const
 {
-    return BadgeSettings::inTaskManager();
+    return d->badgeSettings.inTaskManager();
 }
 
 void Settings::setBadgesInTaskManager(bool enable)
@@ -490,7 +488,7 @@ void Settings::setBadgesInTaskManager(bool enable)
     if (badgesInTaskManager() == enable) {
         return;
     }
-    BadgeSettings::setInTaskManager(enable);
+    d->badgeSettings.setInTaskManager(enable);
     d->setDirty(true);
 }
 
@@ -536,18 +534,18 @@ QStringList Settings::badgeBlacklistedApplications() const
 
 QDateTime Settings::notificationsInhibitedUntil() const
 {
-    return DoNotDisturbSettings::until();
+    return d->dndSettings.until();
 }
 
 void Settings::setNotificationsInhibitedUntil(const QDateTime &time)
 {
-    DoNotDisturbSettings::setUntil(time);
+    d->dndSettings.setUntil(time);
     d->setDirty(true);
 }
 
 void Settings::resetNotificationsInhibitedUntil()
 {
-    setNotificationsInhibitedUntil(QDateTime());// FIXME DoNotDisturbSettings::defaultUntilValue());
+    setNotificationsInhibitedUntil(QDateTime());// FIXME d->dndSettings.defaultUntilValue());
 }
 
 bool Settings::notificationsInhibitedByApplication() const
@@ -567,7 +565,7 @@ QStringList Settings::notificationInhibitionReasons() const
 
 bool Settings::inhibitNotificationsWhenScreensMirrored() const
 {
-    return DoNotDisturbSettings::whenScreensMirrored();
+    return d->dndSettings.whenScreensMirrored();
 }
 
 void Settings::setInhibitNotificationsWhenScreensMirrored(bool inhibit)
@@ -576,7 +574,7 @@ void Settings::setInhibitNotificationsWhenScreensMirrored(bool inhibit)
         return;
     }
 
-    DoNotDisturbSettings::setWhenScreensMirrored(inhibit);
+    d->dndSettings.setWhenScreensMirrored(inhibit);
     d->setDirty(true);
 }
 
@@ -604,7 +602,7 @@ void Settings::revokeApplicationInhibitions()
 
 bool Settings::notificationSoundsInhibited() const
 {
-    return DoNotDisturbSettings::notificationSoundsMuted();
+    return d->dndSettings.notificationSoundsMuted();
 }
 
 void Settings::setNotificationSoundsInhibited(bool inhibited)
@@ -613,6 +611,6 @@ void Settings::setNotificationSoundsInhibited(bool inhibited)
         return;
     }
 
-    DoNotDisturbSettings::setNotificationSoundsMuted(inhibited);
+    d->dndSettings.setNotificationSoundsMuted(inhibited);
     d->setDirty(true);
 }
