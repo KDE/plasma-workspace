@@ -16,7 +16,7 @@
  */
 
 #include "location_gps.h"
-#include <QDebug>
+#include "geolocdebug.h"
 
 Gpsd::Gpsd(gps_data_t* gpsdata)
     : m_gpsdata(gpsdata)
@@ -90,12 +90,12 @@ Gps::Gps(QObject* parent, const QVariantList& args)
     gps_data_t* m_gpsdata = gps_open("localhost", DEFAULT_GPSD_PORT);
     if (m_gpsdata) {
 #endif
-        qDebug() << "gpsd found.";
+        qCDebug(DATAENGINE_GEOLOCATION)<< "gpsd found.";
         m_gpsd = new Gpsd(m_gpsdata);
         connect(m_gpsd, SIGNAL(dataReady(Plasma::DataEngine::Data)),
                 this, SLOT(setData(Plasma::DataEngine::Data)));
     } else {
-        qDebug() << "gpsd not found";
+        qCWarning(DATAENGINE_GEOLOCATION) << "gpsd not found";
     }
 
     setIsAvailable(m_gpsd);

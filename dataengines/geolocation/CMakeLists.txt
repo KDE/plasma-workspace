@@ -67,6 +67,7 @@ set_package_properties(libgps PROPERTIES DESCRIPTION "GPS support for geolocatio
 if(LIBGPS_FOUND)
     include_directories(${LIBGPS_INCLUDES} ${LIBGPS_INCLUDE_DIR})
     set(plasma_geolocation_gps_SRCS location_gps.cpp)
+    ecm_qt_declare_logging_category(plasma_geolocation_gps_SRCS HEADER geolocdebug.h IDENTIFIER DATAENGINE_GEOLOCATION CATEGORY_NAME org.kde.plasma.dataengine.geolocation)
     add_library(plasma-geolocation-gps MODULE ${plasma_geolocation_gps_SRCS})
     target_link_libraries(plasma-geolocation-gps plasma-geolocation-interface ${LIBGPS_LIBRARIES})
     install(FILES plasma-geolocation-gps.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
