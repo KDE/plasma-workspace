@@ -442,7 +442,7 @@ void ItemContainer::sendUngrabRecursive(QQuickItem *item)
 
     QEvent ev(QEvent::UngrabMouse);
 
-    item->window()->sendEvent(item, &ev);
+    QCoreApplication::sendEvent(item, &ev);
 }
 
 bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
