@@ -85,7 +85,8 @@ ColumnLayout {
     readonly property bool menuOpen: bodyLabel.contextMenu !== null
                                      || (thumbnailStripLoader.item && thumbnailStripLoader.item.menuOpen)
                                      || (jobLoader.item && jobLoader.item.menuOpen)
-    readonly property bool dragging: thumbnailStripLoader.item && thumbnailStripLoader.item.dragging
+    readonly property bool dragging: (thumbnailStripLoader.item && thumbnailStripLoader.item.dragging)
+                                        || (jobLoader.item && jobLoader.item.dragging)
 
     signal bodyClicked(var mouse)
     signal closeClicked
@@ -247,6 +248,8 @@ ColumnLayout {
                 visible: active
                 image: typeof notificationItem.icon === "object" ? notificationItem.icon : undefined
             }
+
+            // JobItem reparents a file icon here for finished jobs with one total file
         }
     }
 
@@ -257,6 +260,8 @@ ColumnLayout {
         active: notificationItem.notificationType === NotificationManager.Notifications.JobType
         visible: active
         sourceComponent: JobItem {
+            iconContainerItem: iconContainer
+
             jobState: notificationItem.jobState
             jobError: notificationItem.jobError
             percentage: notificationItem.percentage

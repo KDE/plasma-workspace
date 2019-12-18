@@ -25,6 +25,8 @@
 #include <QDrag>
 #include <QGuiApplication>
 #include <QMimeData>
+#include <QMimeDatabase>
+#include <QMimeType>
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QScreen>
@@ -69,9 +71,27 @@ bool NotificationApplet::dragActive() const
     return m_dragActive;
 }
 
+int NotificationApplet::dragPixmapSize() const
+{
+    return m_dragPixmapSize;
+}
+
+void NotificationApplet::setDragPixmapSize(int dragPixmapSize)
+{
+    if (m_dragPixmapSize != dragPixmapSize) {
+        m_dragPixmapSize = dragPixmapSize;
+        emit dragPixmapSizeChanged();
+    }
+}
+
 bool NotificationApplet::isDrag(int oldX, int oldY, int newX, int newY) const
 {
     return ((QPoint(oldX, oldY) - QPoint(newX, newY)).manhattanLength() >= qApp->styleHints()->startDragDistance());
+}
+
+void NotificationApplet::startDrag(QQuickItem *item, const QUrl &url, const QString &iconName)
+{
+    startDrag(item, url, QIcon::fromTheme(iconName).pixmap(m_dragPixmapSize, m_dragPixmapSize));
 }
 
 void NotificationApplet::startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap)
@@ -133,6 +153,16 @@ bool NotificationApplet::isPrimaryScreen(const QRect &rect) const
 
     // HACK
     return rect == screen->geometry();
+}
+
+QString NotificationApplet::iconNameForUrl(const QUrl &url) const
+{
+    QMimeType mime = QMimeDatabase().mimeTypeForUrl(url);
+    if (mime.isDefault()) {
+        return QString();
+    }
+
+    return mime.iconName();
 }
 
 K_EXPORT_PLASMA_APPLET_WITH_JSON(icon, NotificationApplet, "metadata.json")

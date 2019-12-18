@@ -132,6 +132,12 @@ Item {
         }
     }
 
+    Binding {
+        target: plasmoid.nativeInterface
+        property: "dragPixmapSize"
+        value: units.iconSizes.large
+    }
+
     function action_clearHistory() {
         historyModel.clear(NotificationManager.Notifications.ClearExpired);
         if (historyModel.count === 0) {

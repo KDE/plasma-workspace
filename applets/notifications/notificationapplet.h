@@ -32,6 +32,7 @@ class NotificationApplet : public Plasma::Applet
     Q_OBJECT
 
     Q_PROPERTY(bool dragActive READ dragActive NOTIFY dragActiveChanged)
+    Q_PROPERTY(int dragPixmapSize READ dragPixmapSize WRITE setDragPixmapSize NOTIFY dragPixmapSizeChanged)
 
     Q_PROPERTY(QWindow *focussedPlasmaDialog READ focussedPlasmaDialog NOTIFY focussedPlasmaDialogChanged)
 
@@ -43,7 +44,12 @@ public:
     void configChanged() override;
 
     bool dragActive() const;
+
+    int dragPixmapSize() const;
+    void setDragPixmapSize(int dragPixmapSize);
+
     Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
+    Q_INVOKABLE void startDrag(QQuickItem *item, const QUrl &url, const QString &iconName);
     Q_INVOKABLE void startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap);
 
     QWindow *focussedPlasmaDialog() const;
@@ -52,8 +58,11 @@ public:
 
     Q_INVOKABLE bool isPrimaryScreen(const QRect &rect) const;
 
+    Q_INVOKABLE QString iconNameForUrl(const QUrl &url) const;
+
 signals:
     void dragActiveChanged();
+    void dragPixmapSizeChanged();
     void focussedPlasmaDialogChanged();
 
 private slots:
@@ -61,5 +70,6 @@ private slots:
 
 private:
     bool m_dragActive = false;
+    int m_dragPixmapSize = 48; // Bound to units.iconSizes.large in main.qml
 
 };

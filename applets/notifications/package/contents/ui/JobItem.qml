@@ -44,6 +44,26 @@ ColumnLayout {
     // TOOD make an alias on visible if we're not doing an animation
     property bool showDetails
 
+    readonly property int totalFiles: jobItem.jobDetails && jobItem.jobDetails.totalFiles || 0
+    readonly property var url: {
+       if (jobItem.jobState !== NotificationManager.Notifications.JobStateStopped
+               || jobItem.jobError
+               || totalFiles <= 0) {
+           return null;
+       }
+
+       // For a single file show actions for it
+       if (totalFiles === 1) {
+           return jobItem.jobDetails.descriptionUrl;
+       // Otherwise the destination folder all of them were copied into
+       } else {
+           return jobItem.jobDetails.destUrl;
+       }
+   }
+
+    property alias iconContainerItem: jobDragIcon.parent
+
+    readonly property alias dragging: jobDragArea.dragging
     readonly property alias menuOpen: otherFileActionsMenu.visible
 
     signal suspendJobClicked
@@ -54,6 +74,43 @@ ColumnLayout {
     signal fileActionInvoked
 
     spacing: 0
+
+    // This item is parented to the NotificationItem iconContainer
+    PlasmaCore.IconItem {
+        id: jobDragIcon
+        width: parent ? parent.width : 0
+        height: parent ? parent.height : 0
+        usesPlasmaTheme: false
+        visible: valid
+        active: jobDragArea.containsMouse
+        source: jobItem.totalFiles === 1 && jobItem.url ? plasmoid.nativeInterface.iconNameForUrl(jobItem.url) : ""
+
+        Binding {
+            target: jobDragIcon.parent
+            property: "visible"
+            value: true
+            when: jobDragIcon.valid
+        }
+
+        DraggableFileArea {
+            id: jobDragArea
+            anchors.fill: parent
+
+            hoverEnabled: true
+            dragParent: jobDragIcon
+            dragUrl: jobItem.url || ""
+            dragPixmap: jobDragIcon.source
+
+            onActivated: jobItem.openUrl(jobItem.url)
+            onContextMenuRequested: {
+                // avoid menu button glowing if we didn't actually press it
+                otherFileActionsButton.checked = false;
+
+                otherFileActionsMenu.visualParent = this;
+                otherFileActionsMenu.open(x, y);
+            }
+        }
+    }
 
     RowLayout {
         id: progressRow
@@ -114,29 +171,12 @@ ColumnLayout {
     }
 
     Flow { // it's a Flow so it can wrap if too long
-        id: jobDoneActions
         Layout.fillWidth: true
         spacing: units.smallSpacing
         // We want the actions to be right-aligned but Flow also reverses
         // the order of items, so we put them in reverse order
         layoutDirection: Qt.RightToLeft
         visible: url && url.toString() !== ""
-
-        property var url: {
-            if (jobItem.jobState !== NotificationManager.Notifications.JobStateStopped
-                    || jobItem.jobError
-                    || !jobItem.jobDetails
-                    || jobItem.jobDetails.totalFiles <= 0) {
-                return null;
-            }
-
-            // For a single file show actions for it
-            if (jobItem.jobDetails.totalFiles === 1) {
-                return jobItem.jobDetails.descriptionUrl;
-            } else {
-                return jobItem.jobDetails.destUrl;
-            }
-        }
 
         PlasmaComponents.Button {
             id: otherFileActionsButton
@@ -149,14 +189,15 @@ ColumnLayout {
                     checked = Qt.binding(function() {
                         return otherFileActionsMenu.visible;
                     });
+                    otherFileActionsMenu.visualParent = this;
+                    // -1 tells it to "align bottom left of visualParent (this)"
                     otherFileActionsMenu.open(-1, -1);
                 }
             }
 
             Notifications.FileMenu {
                 id: otherFileActionsMenu
-                url: jobDoneActions.url || ""
-                visualParent: otherFileActionsButton
+                url: jobItem.url || ""
                 onActionTriggered: jobItem.fileActionInvoked()
             }
         }
@@ -168,7 +209,7 @@ ColumnLayout {
             text: jobItem.jobDetails && jobItem.jobDetails.totalFiles > 1
                     ? i18nd("plasma_applet_org.kde.plasma.notifications", "Open Containing Folder")
                     : i18nd("plasma_applet_org.kde.plasma.notifications", "Open")
-            onClicked: jobItem.openUrl(jobDoneActions.url)
+            onClicked: jobItem.openUrl(jobItem.url)
             width: minimumWidth
         }
     }
