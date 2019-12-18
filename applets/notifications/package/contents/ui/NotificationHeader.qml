@@ -207,15 +207,17 @@ RowLayout {
             onClicked: notificationHeading.closeClicked()
 
             PlasmaCore.IconItem {
-                anchors.fill: parent
-                anchors.margins: units.smallSpacing + units.devicePixelRatio * 2
+                anchors.centerIn: parent
+                width: units.iconSizes.smallMedium
+                height: width
+
                 source: "window-close"
                 roundToIconSize: false
                 active: closeButton.hovered
 
                 Charts.PieChart {
                     anchors.fill: parent
-                    anchors.margins: -units.devicePixelRatio
+                    anchors.margins: -Math.round(units.devicePixelRatio)
 
                     opacity: (notificationHeading.remainingTime > 0 && notificationHeading.remainingTime < notificationHeading.timeout) ? 1 : 0
                     Behavior on opacity {
@@ -229,7 +231,7 @@ RowLayout {
 
                     backgroundColor: theme.highlightColor
 
-                    thickness: units.devicePixelRatio * 5
+                    thickness: Math.round(units.devicePixelRatio) * 5
                 }
             }
         }
