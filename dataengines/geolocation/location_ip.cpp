@@ -20,7 +20,7 @@
  */
 
 #include "location_ip.h"
-#include <QDebug>
+#include "geolocdebug.h"
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -41,7 +41,7 @@ public:
     {
         m_geoLocationResolved = true;
         if (job && job->error()) {
-            qDebug() << "error" << job->errorString();
+            qCCritical(DATAENGINE_GEOLOCATION) << "error: " << job->errorString();
             m_geoLocationPayload.clear();
             checkUpdateData();
             return;
@@ -94,7 +94,7 @@ public:
     void readCountry(KJob *job) {
         m_countryResolved = true;
         if (job && job->error()) {
-            qDebug() << "error" << job->errorString();
+            qCCritical(DATAENGINE_GEOLOCATION) << "error: " << job->errorString();
             m_countryPayload.clear();
             checkUpdateData();
             return;
@@ -180,7 +180,7 @@ void Ip::update()
                                                KIO::HideProgressInfo);
     datajob->addMetaData(QStringLiteral("content-type"), QStringLiteral("application/json"));
 
-    qDebug() << "Fetching https://location.services.mozilla.com/v1/geolocate";
+    qCDebug(DATAENGINE_GEOLOCATION) << "Fetching https://location.services.mozilla.com/v1/geolocate";
     connect(datajob, &KIO::TransferJob::data, d, &Ip::Private::geoLocationData);
     connect(datajob, &KIO::TransferJob::result, d, &Ip::Private::readGeoLocation);
 

@@ -50,6 +50,7 @@ install(FILES plasma-geolocationprovider.desktop DESTINATION ${KDE_INSTALL_KSERV
 # -------------------------------------------------------------------------------------------------
 
 set(plasma_geolocation_ip_SRCS location_ip.cpp)
+ecm_qt_declare_logging_category(plasma_geolocation_ip_SRCS HEADER geolocdebug.h IDENTIFIER DATAENGINE_GEOLOCATION CATEGORY_NAME org.kde.plasma.dataengine.geolocation)
 add_library(plasma-geolocation-ip MODULE ${plasma_geolocation_ip_SRCS})
 target_compile_definitions(plasma-geolocation-ip PRIVATE -DQT_NO_KEYWORDS)
 target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF5::KIOCore KF5::NetworkManagerQt)
