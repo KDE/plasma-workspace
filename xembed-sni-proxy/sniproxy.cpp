@@ -49,6 +49,7 @@
 #define SNI_WATCHER_PATH "/StatusNotifierWatcher"
 
 static uint16_t s_embedSize = 32; //max size of window to embed. We no longer resize the embedded window as Chromium acts stupidly.
+static unsigned int XEMBED_VERSION = 0;
 
 int SNIProxy::s_serviceCount = 0;
 
@@ -95,10 +96,12 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     //create a container window
     auto screen = xcb_setup_roots_iterator (xcb_get_setup (c)).data;
     m_containerWid = xcb_generate_id(c);
-    uint32_t values[2];
-    auto mask = XCB_CW_BACK_PIXEL | XCB_CW_OVERRIDE_REDIRECT;
+    uint32_t values[3];
+    uint32_t mask = XCB_CW_BACK_PIXEL | XCB_CW_OVERRIDE_REDIRECT | XCB_CW_EVENT_MASK;
     values[0] = screen->black_pixel; //draw a solid background so the embedded icon doesn't get garbage in it
     values[1] = true; //bypass wM
+    // Redirect and handle structure (size, position) requests on the embedded window.
+    values[2] = XCB_EVENT_MASK_STRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_REDIRECT;
     xcb_create_window (c,                          /* connection    */
                     XCB_COPY_FROM_PARENT,          /* depth         */
                      m_containerWid,               /* window Id     */
@@ -148,7 +151,7 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     xcb_change_save_set(c, XCB_SET_MODE_INSERT, wid);
 
     //tell client we're embedding it
-    xembed_message_send(wid, XEMBED_EMBEDDED_NOTIFY, m_containerWid, 0, 0);
+    xembed_message_send(wid, XEMBED_EMBEDDED_NOTIFY, 0, m_containerWid, XEMBED_VERSION);
 
     //move window we're embedding
     const uint32_t windowMoveConfigVals[2] = { 0, 0 };
@@ -220,6 +223,22 @@ void SNIProxy::stackContainerWindow(const uint32_t stackMode) const
     xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackData);
 }
 
+void SNIProxy::sendConfigureNotification() const
+{
+    xcb_configure_notify_event_t event;
+    memset(&event, 0x00, sizeof(xcb_configure_notify_event_t));
+    event.response_type = XCB_CONFIGURE_NOTIFY;
+    event.event = m_windowId;
+    event.window = m_windowId;
+    event.x = 0;
+    event.y = 0;
+    event.width = s_embedSize;
+    event.height = s_embedSize;
+
+    auto connection = QX11Info::connection();
+    xcb_send_event(connection, false, m_windowId, XCB_EVENT_MASK_STRUCTURE_NOTIFY, reinterpret_cast<char *>(&event));
+}
+
 QSize SNIProxy::calculateClientWindowSize() const
 {
     auto c = QX11Info::connection();
@@ -239,19 +258,12 @@ QSize SNIProxy::calculateClientWindowSize() const
     if (clientWindowSize.isEmpty() || clientWindowSize.width() > s_embedSize || clientWindowSize.height() > s_embedSize) {
         qCDebug(SNIPROXY) << "Resizing window" << m_windowId << Title() << "from w*h" << clientWindowSize;
 
-        xcb_configure_notify_event_t event;
-        memset(&event, 0x00, sizeof(xcb_configure_notify_event_t));
-        event.response_type = XCB_CONFIGURE_NOTIFY;
-        event.event = m_windowId;
-        event.window = m_windowId;
-        event.width = s_embedSize;
-        event.height = s_embedSize;
-        xcb_send_event(c, false, m_windowId, XCB_EVENT_MASK_STRUCTURE_NOTIFY, (char *) &event);
+        sendConfigureNotification();
 
-        const uint32_t windowMoveConfigVals[2] = { s_embedSize, s_embedSize };
+        const uint32_t windowSizeConfigVals[2] = { s_embedSize, s_embedSize };
         xcb_configure_window(c, m_windowId,
                              XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT,
-                             windowMoveConfigVals);
+                             windowSizeConfigVals);
 
         clientWindowSize = QSize(s_embedSize, s_embedSize);
     }

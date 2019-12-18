@@ -154,6 +154,13 @@ bool FdoSelectionManager::nativeEventFilter(const QByteArray &eventType, void *m
             sniProxy->update();
             xcb_damage_subtract(QX11Info::connection(), m_damageWatches[damagedWId], XCB_NONE, XCB_NONE);
         }
+    } else if (responseType == XCB_CONFIGURE_REQUEST) {
+        const auto event = reinterpret_cast<xcb_configure_request_event_t *>(ev);
+        const auto sniProxy = m_proxies.value(event->window);
+        if (sniProxy) {
+            // The embedded window tries to move or resize. Ignore this request and send the current configuration.
+            sniProxy->sendConfigureNotification();
+        }
     }
 
     return false;

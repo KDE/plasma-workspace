@@ -50,6 +50,7 @@ public:
 
     void update();
     void stackContainerWindow(const uint32_t stackMode) const;
+    void sendConfigureNotification() const;
 
     /**
      * @return the category of the application associated to this item
