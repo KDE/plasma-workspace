@@ -20,6 +20,7 @@
 
 #include "sniproxy.h"
 
+#include <algorithm>
 #include <xcb/xcb.h>
 #include <xcb/xcb_atom.h>
 #include <xcb/xcb_event.h>
@@ -223,20 +224,19 @@ void SNIProxy::stackContainerWindow(const uint32_t stackMode) const
     xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackData);
 }
 
-void SNIProxy::sendConfigureNotification() const
+void SNIProxy::resizeWindow(const uint16_t width, const uint16_t height) const
 {
-    xcb_configure_notify_event_t event;
-    memset(&event, 0x00, sizeof(xcb_configure_notify_event_t));
-    event.response_type = XCB_CONFIGURE_NOTIFY;
-    event.event = m_windowId;
-    event.window = m_windowId;
-    event.x = 0;
-    event.y = 0;
-    event.width = s_embedSize;
-    event.height = s_embedSize;
-
     auto connection = QX11Info::connection();
-    xcb_send_event(connection, false, m_windowId, XCB_EVENT_MASK_STRUCTURE_NOTIFY, reinterpret_cast<char *>(&event));
+
+    uint16_t widthNormalized = std::min(width, s_embedSize);
+    uint16_t heighNormalized = std::min(height, s_embedSize);
+
+    const uint32_t windowSizeConfigVals[2] = { widthNormalized, heighNormalized };
+    xcb_configure_window(connection, m_windowId,
+                         XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT,
+                         windowSizeConfigVals);
+
+    xcb_flush(connection);
 }
 
 QSize SNIProxy::calculateClientWindowSize() const
@@ -258,12 +258,7 @@ QSize SNIProxy::calculateClientWindowSize() const
     if (clientWindowSize.isEmpty() || clientWindowSize.width() > s_embedSize || clientWindowSize.height() > s_embedSize) {
         qCDebug(SNIPROXY) << "Resizing window" << m_windowId << Title() << "from w*h" << clientWindowSize;
 
-        sendConfigureNotification();
-
-        const uint32_t windowSizeConfigVals[2] = { s_embedSize, s_embedSize };
-        xcb_configure_window(c, m_windowId,
-                             XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT,
-                             windowSizeConfigVals);
+        resizeWindow(s_embedSize, s_embedSize);
 
         clientWindowSize = QSize(s_embedSize, s_embedSize);
     }

@@ -158,8 +158,10 @@ bool FdoSelectionManager::nativeEventFilter(const QByteArray &eventType, void *m
         const auto event = reinterpret_cast<xcb_configure_request_event_t *>(ev);
         const auto sniProxy = m_proxies.value(event->window);
         if (sniProxy) {
-            // The embedded window tries to move or resize. Ignore this request and send the current configuration.
-            sniProxy->sendConfigureNotification();
+            // The embedded window tries to move or resize. Ignore move, handle resize only.
+            if ((event->value_mask & XCB_CONFIG_WINDOW_WIDTH) || (event->value_mask & XCB_CONFIG_WINDOW_HEIGHT)) {
+                sniProxy->resizeWindow(event->width, event->height);
+            }
         }
     }
 

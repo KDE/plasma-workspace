@@ -50,7 +50,7 @@ public:
 
     void update();
     void stackContainerWindow(const uint32_t stackMode) const;
-    void sendConfigureNotification() const;
+    void resizeWindow(const uint16_t width, const uint16_t height) const;
 
     /**
      * @return the category of the application associated to this item
