@@ -367,14 +367,16 @@ void ServerPrivate::onInhibitionServiceUnregistered(const QString &serviceName)
 {
     qCDebug(NOTIFICATIONMANAGER) << "Inhibition service unregistered" << serviceName;
 
-    const uint cookie = m_inhibitionServices.key(serviceName);
-    if (!cookie) {
+    const QList<uint> cookies = m_inhibitionServices.keys(serviceName);
+    if (cookies.isEmpty()) {
         qCInfo(NOTIFICATIONMANAGER) << "Unknown inhibition service unregistered" << serviceName;
         return;
     }
 
     // We do lookups in there again...
-    UnInhibit(cookie);
+    for (uint cookie : cookies) {
+        UnInhibit(cookie);
+    }
 }
 
 void ServerPrivate::onInhibitedChanged()
