@@ -34,10 +34,25 @@ import "global"
 Item {
     id: root 
 
-    Plasmoid.status: historyModel.activeJobsCount > 0
+    readonly property int effectiveStatus: historyModel.activeJobsCount > 0
                      || historyModel.unreadNotificationsCount > 0
                      || Globals.inhibited ? PlasmaCore.Types.ActiveStatus
                                           : PlasmaCore.Types.PassiveStatus
+    onEffectiveStatusChanged: {
+        if (effectiveStatus === PlasmaCore.Types.PassiveStatus) {
+            // HACK System Tray only lets applets self-hide when in Active state
+            // When we clear the notifications, the status is updated right away
+            // as a result of model signals, and when we then try to collapse
+            // the popup isn't hidden.
+            Qt.callLater(function() {
+                Plasmoid.status = effectiveStatus;
+            });
+        } else {
+            Plasmoid.status = effectiveStatus;
+        }
+    }
+
+    Plasmoid.status: effectiveStatus
 
     Plasmoid.toolTipSubText: {
         var lines = [];
@@ -85,11 +100,8 @@ Item {
 
     Plasmoid.onExpandedChanged: {
         if (!plasmoid.expanded) {
-            // FIXME Qt.callLater because system tray gets confused when an applet becomes passive when clicking to hide it
-            Qt.callLater(function() {
-                historyModel.lastRead = undefined; // reset to now
-                historyModel.collapseAllGroups();
-            });
+            historyModel.lastRead = undefined; // reset to now
+            historyModel.collapseAllGroups();
         }
     }
 
@@ -138,10 +150,16 @@ Item {
         value: units.iconSizes.large
     }
 
+    function closePassivePlasmoid() {
+        if (plasmoid.status !== PlasmaCore.Types.PassiveStatus) {
+            plasmoid.expanded = false;
+        }
+    }
+
     function action_clearHistory() {
         historyModel.clear(NotificationManager.Notifications.ClearExpired);
         if (historyModel.count === 0) {
-            plasmoid.expanded = false;
+            closePassivePlasmoid();
         }
     }
 

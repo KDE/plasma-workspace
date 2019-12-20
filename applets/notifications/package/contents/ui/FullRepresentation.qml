@@ -433,7 +433,7 @@ ColumnLayout{
                             onCloseClicked: {
                                 historyModel.close(historyModel.index(index, 0))
                                 if (list.count === 0) {
-                                    plasmoid.expanded = false;
+                                    root.closePassivePlasmoid();
                                 }
                             }
 
@@ -526,12 +526,12 @@ ColumnLayout{
                                     onCloseClicked: {
                                         historyModel.close(historyModel.index(index, 0));
                                         if (list.count === 0) {
-                                            plasmoid.expanded = false;
+                                            root.closePassivePlasmoid();
                                         }
                                     }
                                     onDismissClicked: {
                                         model.dismissed = false;
-                                        plasmoid.expanded = false;
+                                        root.closePassivePlasmoid();
                                     }
                                     onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
 
