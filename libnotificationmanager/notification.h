@@ -101,6 +101,8 @@ public:
     Notifications::Urgency urgency() const;
     void setUrgency(Notifications::Urgency urgency);
 
+    bool userActionFeedback() const;
+
     int timeout() const;
     void setTimeout(int timeout);
 

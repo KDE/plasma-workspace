@@ -257,7 +257,9 @@ public:
 
         ExpiredRole, ///< The notification timed out and closed. Actions on it cannot be invoked anymore.
         DismissedRole, ///< The notification got temporarily hidden by the user but could still be interacted with.
-        ReadRole ///< Whether the notification got read by the user. If true, the notification isn't considered unread even if created after lastRead. @since 5.17
+        ReadRole, ///< Whether the notification got read by the user. If true, the notification isn't considered unread even if created after lastRead. @since 5.17
+
+        UserActionFeedbackRole, ///< Whether this notification is a response/confirmation to an explicit user action. @since 5.18
     };
     Q_ENUM(Roles)
 

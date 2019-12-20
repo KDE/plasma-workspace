@@ -300,6 +300,7 @@ QVariant NotificationsModel::data(const QModelIndex &index, int role) const
     case Notifications::UrlsRole: return QVariant::fromValue(notification.urls());
 
     case Notifications::UrgencyRole: return static_cast<int>(notification.urgency());
+    case Notifications::UserActionFeedbackRole: return notification.userActionFeedback();
 
     case Notifications::TimeoutRole: return notification.timeout();
 

@@ -380,6 +380,12 @@ void Notification::Private::processHints(const QVariantMap &hints)
         }
     }
 
+    userActionFeedback = hints.value(QStringLiteral("x-kde-user-action-feedback")).toBool();
+    if (userActionFeedback) {
+        // A confirmation of an explicit user interaction is assumed to have been seen by the user.
+        read = true;
+    }
+
     urls = QUrl::fromStringList(hints.value(QStringLiteral("x-kde-urls")).toStringList());
 
     // Underscored hints was in use in version 1.1 of the spec but has been
@@ -650,6 +656,11 @@ void Notification::setUrls(const QList<QUrl> &urls)
 Notifications::Urgency Notification::urgency() const
 {
     return d->urgency;
+}
+
+bool Notification::userActionFeedback() const
+{
+    return d->userActionFeedback;
 }
 
 int Notification::timeout() const

@@ -90,6 +90,7 @@ public:
 
     QList<QUrl> urls;
 
+    bool userActionFeedback = false;
     Notifications::Urgency urgency = Notifications::NormalUrgency;
     int timeout = -1;
 

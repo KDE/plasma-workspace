@@ -178,6 +178,11 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
         }
     }
 
+    const bool userActionFeedback = sourceIdx.data(Notifications::UserActionFeedbackRole).toBool();
+    if (userActionFeedback) {
+        return true;
+    }
+
     bool ok;
     const auto urgency = static_cast<Notifications::Urgency>(sourceIdx.data(Notifications::UrgencyRole).toInt(&ok));
     if (ok) {
