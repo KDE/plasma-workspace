@@ -518,7 +518,7 @@ QStringList BackgroundFinder::suffixes()
             }
         }
 
-        s_suffixes = suffixes.toList();
+        s_suffixes = suffixes.values();
     }
 
     return s_suffixes;

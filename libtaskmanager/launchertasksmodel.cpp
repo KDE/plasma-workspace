@@ -356,7 +356,7 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsOnAllVirtualDesktops) {
         return true;
     } else if (role == Activities) {
-        return QStringList(d->activitiesForLauncher[url].toList());
+        return QStringList(d->activitiesForLauncher[url].values());
     }
 
     return QVariant();
@@ -381,7 +381,7 @@ QStringList LauncherTasksModel::launcherList() const
 
         } else {
             serializedLauncher =
-                "[" + d->activitiesForLauncher[launcher].toList().join(",") + "]\n" +
+                "[" + d->activitiesForLauncher[launcher].values().join(",") + "]\n" +
                 launcher.toString();
         }
 
@@ -536,7 +536,7 @@ QStringList LauncherTasksModel::launcherActivities(const QUrl &_url) const
 
         // If the launcher is on all activities, return a null uuid
         return d->activitiesForLauncher.contains(url)
-                    ? d->activitiesForLauncher[url].toList()
+                    ? d->activitiesForLauncher[url].values()
                     : QStringList { NULL_UUID };
     }
 }

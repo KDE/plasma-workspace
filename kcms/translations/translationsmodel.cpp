@@ -35,7 +35,7 @@ TranslationsModel::TranslationsModel(QObject *parent)
 {
     if (m_installedLanguages.isEmpty()) {
         m_installedLanguages = KLocalizedString::availableDomainTranslations("plasmashell");
-        m_languages = m_installedLanguages.toList();
+        m_languages = m_installedLanguages.values();
     }
 }
 
@@ -274,7 +274,7 @@ void AvailableTranslationsModel::setSelectedLanguages(const QStringList &languag
 {
     beginResetModel();
 
-    m_availableLanguages = (m_installedLanguages - QSet<QString>::fromList(languages)).toList();
+    m_availableLanguages = (m_installedLanguages - QSet<QString>::fromList(languages)).values();
 
     QCollator c;
     c.setCaseSensitivity(Qt::CaseInsensitive);

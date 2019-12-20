@@ -846,7 +846,7 @@ void TaskGroupingProxyModel::setWindowTasksThreshold(int threshold)
 
 QStringList TaskGroupingProxyModel::blacklistedAppIds() const
 {
-    return d->blacklistedAppIds.toList();
+    return d->blacklistedAppIds.values();
 }
 
 void TaskGroupingProxyModel::setBlacklistedAppIds(const QStringList &list)
@@ -877,7 +877,7 @@ void TaskGroupingProxyModel::setBlacklistedAppIds(const QStringList &list)
 
 QStringList TaskGroupingProxyModel::blacklistedLauncherUrls() const
 {
-    return d->blacklistedLauncherUrls.toList();
+    return d->blacklistedLauncherUrls.values();
 }
 
 void TaskGroupingProxyModel::setBlacklistedLauncherUrls(const QStringList &list)
