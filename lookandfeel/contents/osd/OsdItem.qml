@@ -17,7 +17,7 @@
 
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtra
 import QtQuick.Window 2.2
 
@@ -49,7 +49,7 @@ Item {
         source: rootItem.icon
     }
 
-    PlasmaComponents3.ProgressBar {
+    PlasmaComponents.ProgressBar {
         id: progressBar
 
         anchors {
@@ -60,8 +60,8 @@ Item {
         }
 
         visible: rootItem.showingProgress
-        from: 0
-        to: 100
+        minimumValue: 0
+        maximumValue: 100
 
         value: Number(rootItem.osdValue)
     }
