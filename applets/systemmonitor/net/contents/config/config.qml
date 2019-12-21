@@ -26,4 +26,9 @@ ConfigModel {
          icon: "network-workgroup"
          source: "netConfig.qml"
     }
+    ConfigCategory {
+         name: i18n("Display")
+         icon: "network-workgroup"
+         source: "displayConfig.qml"
+    }
 }

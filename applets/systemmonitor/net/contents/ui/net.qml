@@ -24,6 +24,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
+import org.kde.kcoreaddons 1.0 as KCoreAddons
 
 Applet {
     id: root
@@ -41,14 +42,19 @@ Applet {
 
     delegate: DoublePlotter {
         function formatData(data) {
-            var value = data.value * 1024 * 8
-            if (value > (1024 * 1024)) {
-                return i18nc("%1 is the displayed data transfer speed in megabits per second", "%1 Mbps", (value / (1024 * 1024)).toFixed(1));
+            if (plasmoid.configuration.displayUnit === 0) {
+                var value = data.value * 1024
+                return i18nc("%1 is the displayed data transfer speed in bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(value));
+            } else {
+                var value = data.value * 1024 * 8
+                if (value > (1024 * 1024)) {
+                    return i18nc("%1 is the displayed data transfer speed in megabits per second", "%1 Mbps", (value / (1024 * 1024)).toFixed(1));
+                }
+                if (value > 1024) {
+                    return i18nc("%1 is the displayed data transfer speed in kilobits per second", "%1 Kbps", (value / 1024));
+                }
+                return i18nc("%1 is the displayed data transfer speed in bits per second", "%1 bps", value);
             }
-            if (value > 1024) {
-                return i18nc("%1 is the displayed data transfer speed in kilobits per second", "%1 Kbps", (value / 1024));
-            }
-            return i18nc("%1 is the displayed data transfer speed in bits per second", "%1 bps", value);
         }
     }
 }

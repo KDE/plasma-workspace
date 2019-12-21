@@ -13,6 +13,14 @@
         <label>The interval in milliseconds to update the data shown.</label>
         <default>2000</default>
     </entry>
+    <entry name="displayUnit" type="Enum">
+        <label>The unit used to display the data.</label>
+        <choices>
+            <choice name="Byte" value="0"/>
+            <choice name="bit" value="1"/>
+        </choices>
+        <default>1</default>
+    </entry>
   </group>
 
 </kcfg>
