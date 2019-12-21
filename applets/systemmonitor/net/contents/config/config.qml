@@ -27,8 +27,8 @@ ConfigModel {
          source: "netConfig.qml"
     }
     ConfigCategory {
-         name: i18n("Display")
-         icon: "network-workgroup"
+         name: i18n("Units")
+         icon: "kruler"
          source: "displayConfig.qml"
     }
 }
