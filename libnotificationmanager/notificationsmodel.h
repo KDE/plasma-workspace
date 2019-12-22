@@ -52,6 +52,7 @@ public:
     void configure(const QString &desktopEntry, const QString &notifyRcName, const QString &eventId);
     void invokeDefaultAction(uint notificationId);
     void invokeAction(uint notificationId, const QString &actionName);
+    void reply(uint notificationId, const QString &text);
 
     void startTimeout(uint notificationId);
     void stopTimeout(uint notificationId);

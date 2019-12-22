@@ -80,6 +80,11 @@ void Server::invokeAction(uint notificationId, const QString &actionName)
     emit d->ActionInvoked(notificationId, actionName);
 }
 
+void Server::reply(uint notificationId, const QString &text)
+{
+    emit d->NotificationReplied(notificationId, text);
+}
+
 uint Server::add(const Notification &notification)
 {
     return d->add(notification);

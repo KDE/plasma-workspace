@@ -88,6 +88,12 @@ public:
     QString notifyRcName;
     QString eventId;
 
+    bool hasReplyAction = false;
+    QString replyActionLabel;
+    QString replyPlaceholderText;
+    QString replySubmitButtonText;
+    QString replySubmitButtonIconName;
+
     QList<QUrl> urls;
 
     bool userActionFeedback = false;

@@ -72,6 +72,8 @@ Q_SIGNALS:
     // DBus
     void NotificationClosed(uint id, uint reason);
     void ActionInvoked(uint id, const QString &actionKey);
+    // non-standard
+    void NotificationReplied(uint id, const QString &text);
 
     void validChanged();
 

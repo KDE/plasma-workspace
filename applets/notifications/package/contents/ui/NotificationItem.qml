@@ -71,6 +71,12 @@ ColumnLayout {
     property var actionNames: []
     property var actionLabels: []
 
+    property bool hasReplyAction
+    property string replyActionLabel
+    property string replyPlaceholderText
+    property string replySubmitButtonText
+    property string replySubmitButtonIconName
+
     property int headingLeftPadding: 0
     property int headingRightPadding: 0
 
@@ -85,14 +91,17 @@ ColumnLayout {
     readonly property bool menuOpen: bodyLabel.contextMenu !== null
                                      || (thumbnailStripLoader.item && thumbnailStripLoader.item.menuOpen)
                                      || (jobLoader.item && jobLoader.item.menuOpen)
+
     readonly property bool dragging: (thumbnailStripLoader.item && thumbnailStripLoader.item.dragging)
                                         || (jobLoader.item && jobLoader.item.dragging)
+    property bool replying: false
 
     signal bodyClicked(var mouse)
     signal closeClicked
     signal configureClicked
     signal dismissClicked
     signal actionInvoked(string actionName)
+    signal replied(string text)
     signal openUrl(string url)
     signal fileActionInvoked
 
@@ -282,13 +291,46 @@ ColumnLayout {
         }
     }
 
-    RowLayout {
+    Item {
+        id: actionContainer
         Layout.fillWidth: true
+        Layout.preferredHeight: Math.max(actionFlow.implicitHeight, replyLoader.height)
         visible: actionRepeater.count > 0
+
+        states: [
+            State {
+                when: notificationItem.replying
+                PropertyChanges {
+                    target: actionFlow
+                    enabled: false
+                    opacity: 0
+                }
+                PropertyChanges {
+                    target: replyLoader
+                    active: true
+                    visible: true
+                    opacity: 1
+                    x: 0
+                }
+            }
+        ]
+
+        transitions: [
+            Transition {
+                to: "*" // any state
+                NumberAnimation {
+                    targets: [actionFlow, replyLoader]
+                    properties: "opacity,scale,x"
+                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+        ]
 
         // Notification actions
         Flow { // it's a Flow so it can wrap if too long
-            Layout.fillWidth: true
+            id: actionFlow
+            width: parent.width
             spacing: units.smallSpacing
             layoutDirection: Qt.RightToLeft
 
@@ -306,6 +348,14 @@ ColumnLayout {
                             label: actionLabels[i]
                         });
                     }
+
+                    if (notificationItem.hasReplyAction) {
+                        buttons.unshift({
+                            actionName: "inline-reply",
+                            label: notificationItem.replyActionLabel || i18nc("Reply to message", "Reply")
+                        });
+                    }
+
                     return buttons;
                 }
 
@@ -314,8 +364,36 @@ ColumnLayout {
                     // why does it spit "cannot assign undefined to string" when a notification becomes expired?
                     text: modelData.label || ""
                     Layout.preferredWidth: minimumWidth
-                    onClicked: notificationItem.actionInvoked(modelData.actionName)
+
+                    onClicked: {
+                        if (modelData.actionName === "inline-reply") {
+                            notificationItem.replying = true;
+
+                            plasmoid.nativeInterface.forceActivateWindow(notificationItem.Window.window);
+                            replyLoader.item.activate();
+                            return;
+                        }
+
+                        notificationItem.actionInvoked(modelData.actionName);
+                    }
                 }
+            }
+        }
+
+        // inline reply field
+        Loader {
+            id: replyLoader
+            width: parent.width
+            height: active ? item.implicitHeight : 0
+            active: false
+            visible: false
+            opacity: 0
+            x: parent.width
+            sourceComponent: NotificationReplyField {
+                placeholderText: notificationItem.replyPlaceholderText
+                buttonIconName: notificationItem.replySubmitButtonIconName
+                buttonText: notificationItem.replySubmitButtonText
+                onReplied: notificationItem.replied(text)
             }
         }
     }

@@ -310,6 +310,12 @@ QVariant NotificationsModel::data(const QModelIndex &index, int role) const
 
     case Notifications::ExpiredRole: return notification.expired();
     case Notifications::ReadRole: return notification.read();
+
+    case Notifications::HasReplyActionRole: return notification.hasReplyAction();
+    case Notifications::ReplyActionLabelRole: return notification.replyActionLabel();
+    case Notifications::ReplyPlaceholderTextRole: return notification.replyPlaceholderText();
+    case Notifications::ReplySubmitButtonTextRole: return notification.replySubmitButtonText();
+    case Notifications::ReplySubmitButtonIconNameRole: return notification.replySubmitButtonIconName();
     }
 
     return QVariant();
@@ -437,6 +443,22 @@ void NotificationsModel::invokeAction(uint notificationId, const QString &action
     }
 
     Server::self().invokeAction(notificationId, actionName);
+}
+
+void NotificationsModel::reply(uint notificationId, const QString &text)
+{
+    const int row = d->rowOfNotification(notificationId);
+    if (row == -1) {
+        return;
+    }
+
+    const Notification &notification = d->notifications.at(row);
+    if (!notification.hasReplyAction()) {
+        qCWarning(NOTIFICATIONMANAGER) << "Trying to reply to a notification which doesn't have a reply action";
+        return;
+    }
+
+    Server::self().reply(notificationId, text);
 }
 
 void NotificationsModel::startTimeout(uint notificationId)

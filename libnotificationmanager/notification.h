@@ -109,6 +109,12 @@ public:
     bool configurable() const;
     QString configureActionLabel() const;
 
+    bool hasReplyAction() const;
+    QString replyActionLabel() const;
+    QString replyPlaceholderText() const;
+    QString replySubmitButtonText() const;
+    QString replySubmitButtonIconName() const;
+
     bool expired() const;
     void setExpired(bool expired);
 
