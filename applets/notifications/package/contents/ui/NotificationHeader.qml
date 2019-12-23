@@ -208,7 +208,7 @@ RowLayout {
 
             PlasmaCore.IconItem {
                 anchors.centerIn: parent
-                width: units.iconSizes.smallMedium
+                width: units.iconSizes.small
                 height: width
 
                 source: "window-close"
