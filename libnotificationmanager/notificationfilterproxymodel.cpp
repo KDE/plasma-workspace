@@ -137,21 +137,22 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
         return false;
     }
 
-    // If the application isn't configurable in any way, it doesn't deserve to be in the history
-    // since there's no way for the user to get rid of it there.
-    if (expired && !sourceIdx.data(Notifications::ConfigurableRole).toBool()
-            // jobs are never configurable so this only applies to notifications
-            && sourceIdx.data(Notifications::TypeRole).toInt() == Notifications::NotificationType) {
-        return false;
-    }
-
     if (!m_showDismissed && sourceIdx.data(Notifications::DismissedRole).toBool()) {
         return false;
     }
 
+    QString desktopEntry = sourceIdx.data(Notifications::DesktopEntryRole).toString();
+    if (desktopEntry.isEmpty()) {
+        // For non-configurable notifications use the fake "@other" category.
+        if (!sourceIdx.data(Notifications::ConfigurableRole).toBool()
+                // jobs are never configurable so this only applies to notifications
+                && sourceIdx.data(Notifications::TypeRole).toInt() == Notifications::NotificationType) {
+            desktopEntry = QStringLiteral("@other");
+        }
+    }
+
     // Blacklist takes precedence over whitelist, i.e. when in doubt don't show
     if (!m_blacklistedDesktopEntries.isEmpty()) {
-        const QString desktopEntry = sourceIdx.data(Notifications::DesktopEntryRole).toString();
         if (!desktopEntry.isEmpty() && m_blacklistedDesktopEntries.contains(desktopEntry)) {
             return false;
         }
@@ -165,7 +166,6 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
     }
 
     if (!m_whitelistedDesktopEntries.isEmpty()) {
-        const QString desktopEntry = sourceIdx.data(Notifications::DesktopEntryRole).toString();
         if (!desktopEntry.isEmpty() && m_whitelistedDesktopEntries.contains(desktopEntry)) {
             return true;
         }
