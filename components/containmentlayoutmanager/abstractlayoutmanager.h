@@ -120,8 +120,9 @@ protected:
 
     /**
      * @returns a rectangle big at least as minimumSize, trying to be as near as possible to the current item's geometry, displaced in the direction we asked, forwards or backwards
-     * @param rect the rect we want to place an item in
+     * @param item the item container we want to place an item in
      * @param minimumSize the minimum size we need to make sure is available
+     * @param direction the preferred item layout direction, can be Closest, LeftToRight, RightToLeft, TopToBottom, and BottomToTop
      */
     virtual QRectF nextAvailableSpace(ItemContainer *item, const QSizeF &minimumSize, AppletsLayout::PreferredLayoutDirection direction) const = 0;
 
