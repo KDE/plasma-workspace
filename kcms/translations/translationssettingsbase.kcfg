@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                           http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name="plasma-localerc" />
+  <include>KLocalizedString</include>
+  <group name="Translations">
+    <entry name="languageString" key="LANGUAGE" type="String">
+      <code>
+      KConfigGroup formatsConfig = KConfigGroup(KSharedConfig::openConfig("plasma-localerc"), "Formats");
+
+      QString lang = formatsConfig.readEntry("LANG", QString());
+
+      if (lang.isEmpty()
+          || !KLocalizedString::availableDomainTranslations("plasmashell").contains(lang)) {
+          lang = QLocale::system().name();
+      }
+
+      if (!KLocalizedString::availableDomainTranslations("plasmashell").contains(lang)) {
+          lang = QStringLiteral("en_US");
+      }
+      </code>
+      <default code="true">lang</default>
+      <label>Configured languages</label>
+    </entry>
+  </group>
+</kcfg>

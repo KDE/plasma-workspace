@@ -1,0 +1,6 @@
+File=translationssettingsbase.kcfg
+ClassName=TranslationsSettingsBase
+Mutators=true
+DefaultValueGetters=true
+GenerateProperties=true
+ParentInConstructor=true

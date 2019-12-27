@@ -1,6 +1,7 @@
 /*
  *  Copyright (C) 2014 John Layt <john@layt.net>
  *  Copyright (C) 2018 Eike Hein <hein@kde.org>
+ *  Copyright (C) 2019 Kevin Ottens <kevin.ottens@enioka.com>
  *
  *  This library is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU Library General Public
@@ -20,6 +21,7 @@
 
 #include "translations.h"
 #include "translationsmodel.h"
+#include "translationssettings.h"
 
 #include <KAboutData>
 #include <KLocalizedString>
@@ -28,11 +30,9 @@
 
 K_PLUGIN_CLASS_WITH_JSON(Translations, "kcm_translations.json")
 
-static const QString configFile = QStringLiteral("plasma-localerc");
-static const QString lcLanguage = QStringLiteral("LANGUAGE");
-
 Translations::Translations(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+    : KQuickAddons::ManagedConfigModule(parent, args)
+    , m_settings(new TranslationsSettings(this))
     , m_translationsModel(new TranslationsModel(this))
     , m_selectedTranslationsModel(new SelectedTranslationsModel(this))
     , m_availableTranslationsModel(new AvailableTranslationsModel(this))
@@ -45,15 +45,10 @@ Translations::Translations(QObject *parent, const QVariantList &args)
 
     setButtons(Apply | Default);
 
-    m_config = KConfigGroup(KSharedConfig::openConfig(configFile), "Translations");
-
     connect(m_selectedTranslationsModel, &SelectedTranslationsModel::selectedLanguagesChanged,
-        this, &Translations::selectedLanguagesChanged);
-    connect(m_selectedTranslationsModel, &SelectedTranslationsModel::missingLanguagesChanged,
-        this, &Translations::missingLanguagesChanged);
-
+            this, &Translations::selectedLanguagesChanged);
     connect(m_selectedTranslationsModel, &SelectedTranslationsModel::selectedLanguagesChanged,
-        m_availableTranslationsModel, &AvailableTranslationsModel::setSelectedLanguages);
+            m_availableTranslationsModel, &AvailableTranslationsModel::setSelectedLanguages);
 }
 
 Translations::~Translations()
@@ -82,62 +77,41 @@ bool Translations::everSaved() const
 
 void Translations::load()
 {
-    m_configuredLanguages = m_config.readEntry(lcLanguage,
-        QString()).split(QLatin1Char(':'), QString::SkipEmptyParts);
-
-    m_availableTranslationsModel->setSelectedLanguages(m_configuredLanguages);
-    m_selectedTranslationsModel->setSelectedLanguages(m_configuredLanguages);
+    KQuickAddons::ManagedConfigModule::load();
+    m_availableTranslationsModel->setSelectedLanguages(m_settings->configuredLanguages());
+    m_selectedTranslationsModel->setSelectedLanguages(m_settings->configuredLanguages());
 }
 
 void Translations::save()
 {
     m_everSaved = true;
     emit everSavedChanged();
-
-    m_configuredLanguages = m_selectedTranslationsModel->selectedLanguages();
-
-    const auto missingLanguages = m_selectedTranslationsModel->missingLanguages();
-    for (const QString& lang : missingLanguages) {
-        m_configuredLanguages.removeOne(lang);
-    }
-
-    m_config.writeEntry(lcLanguage, m_configuredLanguages.join(QLatin1Char(':')), KConfig::Persistent);
-    m_config.sync();
-
-    m_selectedTranslationsModel->setSelectedLanguages(m_configuredLanguages);
+    KQuickAddons::ManagedConfigModule::save();
 }
 
 void Translations::defaults()
 {
-    KConfigGroup formatsConfig = KConfigGroup(KSharedConfig::openConfig(configFile), "Formats");
-
-    QString lang = formatsConfig.readEntry("LANG", QString());
-
-    if (lang.isEmpty()
-        || !KLocalizedString::availableDomainTranslations("plasmashell").contains(lang)) {
-        lang = QLocale::system().name();
-    }
-
-    if (!KLocalizedString::availableDomainTranslations("plasmashell").contains(lang)) {
-        lang = QStringLiteral("en_US");
-    }
-
-    QStringList languages;
-    languages << lang;
-
-    m_selectedTranslationsModel->setSelectedLanguages(languages);
+    KQuickAddons::ManagedConfigModule::defaults();
+    m_availableTranslationsModel->setSelectedLanguages(m_settings->configuredLanguages());
+    m_selectedTranslationsModel->setSelectedLanguages(m_settings->configuredLanguages());
 }
 
 void Translations::selectedLanguagesChanged()
 {
-    setNeedsSave(m_configuredLanguages != m_selectedTranslationsModel->selectedLanguages());
+    auto configuredLanguages = m_selectedTranslationsModel->selectedLanguages();
+
+    const auto missingLanguages = m_selectedTranslationsModel->missingLanguages();
+    for (const auto &lang : missingLanguages) {
+        configuredLanguages.removeOne(lang);
+    }
+
+    m_settings->setConfiguredLanguages(configuredLanguages);
+    m_selectedTranslationsModel->setSelectedLanguages(configuredLanguages);
 }
 
-void Translations::missingLanguagesChanged()
+bool Translations::isSaveNeeded() const
 {
-    if (!m_selectedTranslationsModel->missingLanguages().isEmpty()) {
-        setNeedsSave(true);
-    }
+    return !m_selectedTranslationsModel->missingLanguages().isEmpty();
 }
 
 #include "translations.moc"

@@ -1,6 +1,7 @@
 /*
  *  Copyright (C) 2014 John Layt <john@layt.net>
  *  Copyright (C) 2018 Eike Hein <hein@kde.org>
+ *  Copyright (C) 2019 Kevin Ottens <kevin.ottens@enioka.com>
  *
  *  This library is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU Library General Public
@@ -21,16 +22,14 @@
 #ifndef TRANSLATIONS_H
 #define TRANSLATIONS_H
 
-#include <KQuickAddons/ConfigModule>
-
-#include <KConfigGroup>
+#include <KQuickAddons/ManagedConfigModule>
 
 class AvailableTranslationsModel;
 class SelectedTranslationsModel;
 class TranslationsModel;
+class TranslationsSettings;
 
-
-class Translations : public KQuickAddons::ConfigModule
+class Translations : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
 
@@ -59,15 +58,14 @@ class Translations : public KQuickAddons::ConfigModule
 
     private Q_SLOTS:
         void selectedLanguagesChanged();
-        void missingLanguagesChanged();
 
     private:
+        bool isSaveNeeded() const override;
+
+        TranslationsSettings *m_settings;
         TranslationsModel *m_translationsModel;
         SelectedTranslationsModel *m_selectedTranslationsModel;
         AvailableTranslationsModel *m_availableTranslationsModel;
-
-        KConfigGroup m_config;
-        QStringList m_configuredLanguages;
 
         bool m_everSaved;
 };

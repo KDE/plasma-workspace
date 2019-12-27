@@ -6,7 +6,8 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_translations\")
 
 ########### next target ###############
 
-set(kcm_translations_PART_SRCS translations.cpp translationsmodel.cpp)
+set(kcm_translations_PART_SRCS translations.cpp translationsmodel.cpp translationssettings.cpp)
+kconfig_add_kcfg_files(kcm_translations_PART_SRCS translationssettingsbase.kcfgc GENERATE_MOC)
 
 add_library(kcm_translations MODULE ${kcm_translations_PART_SRCS})
 
