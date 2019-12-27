@@ -178,58 +178,63 @@ ScrollViewKCM {
     Component {
         id: languagesListItemComponent
 
-        Kirigami.SwipeListItem {
-            id: listItem
+        Item {
+            width: ListView.view.width
+            height: listItem.implicitHeight
 
-            contentItem: RowLayout {
-                Kirigami.ListItemDragHandle {
-                    listItem: listItem
-                    listView: languagesList
-                    onMoveRequested: kcm.selectedTranslationsModel.move(oldIndex, newIndex)
+            Kirigami.SwipeListItem {
+                id: listItem
+
+                contentItem: RowLayout {
+                    Kirigami.ListItemDragHandle {
+                        listItem: listItem
+                        listView: languagesList
+                        onMoveRequested: kcm.selectedTranslationsModel.move(oldIndex, newIndex)
+                    }
+
+                    Kirigami.Icon {
+                        visible: model.IsMissing
+
+                        Layout.alignment: Qt.AlignVCenter
+
+                        width: Kirigami.Units.iconSizes.smallMedium
+                        height: width
+
+                        source: "error"
+                        color: Kirigami.Theme.negativeTextColor
+                    }
+
+                    QtControls.Label {
+                        Layout.fillWidth: true
+
+                        Layout.alignment: Qt.AlignVCenter
+
+                        text: (index == 0) ? i18nc("@item:inlistbox 1 = Language name", "%1 (Default)", model.display) : model.display
+
+                        color: (model.IsMissing ? Kirigami.Theme.negativeTextColor
+                            : (listItem.checked || (listItem.pressed && !listItem.checked && !listItem.sectionDelegate)
+                            ? listItem.activeTextColor : listItem.textColor))
+                    }
                 }
 
-                Kirigami.Icon {
-                    visible: model.IsMissing
-
-                    Layout.alignment: Qt.AlignVCenter
-
-                    width: Kirigami.Units.iconSizes.smallMedium
-                    height: width
-
-                    source: "error"
-                    color: Kirigami.Theme.negativeTextColor
-                }
-
-                QtControls.Label {
-                    Layout.fillWidth: true
-
-                    Layout.alignment: Qt.AlignVCenter
-
-                    text: (index == 0) ? i18nc("@item:inlistbox 1 = Language name", "%1 (Default)", model.display) : model.display
-
-                    color: (model.IsMissing ? Kirigami.Theme.negativeTextColor
-                        : (listItem.checked || (listItem.pressed && !listItem.checked && !listItem.sectionDelegate)
-                        ? listItem.activeTextColor : listItem.textColor))
-                }
+            actions: [
+                Kirigami.Action {
+                    enabled: !model.IsMissing && index > 0
+                    iconName: "go-top"
+                    tooltip: i18nc("@info:tooltip", "Promote to default")
+                    onTriggered: kcm.selectedTranslationsModel.move(index, 0)
+                },
+                Kirigami.Action {
+                    property bool removing: false
+                    enabled: removing || !model.IsMissing && languagesList.count > 1
+                    iconName: "list-remove"
+                    tooltip: i18nc("@info:tooltip", "Remove")
+                    onTriggered: {
+                        removing = true; // Don't crash by re-evaluating `enabled` during destruction.
+                        kcm.selectedTranslationsModel.remove(model.LanguageCode);
+                    }
+                }]
             }
-
-        actions: [
-            Kirigami.Action {
-                enabled: !model.IsMissing && index > 0
-                iconName: "go-top"
-                tooltip: i18nc("@info:tooltip", "Promote to default")
-                onTriggered: kcm.selectedTranslationsModel.move(index, 0)
-            },
-            Kirigami.Action {
-                property bool removing: false
-                enabled: removing || !model.IsMissing && languagesList.count > 1
-                iconName: "list-remove"
-                tooltip: i18nc("@info:tooltip", "Remove")
-                onTriggered: {
-                    removing = true; // Don't crash by re-evaluating `enabled` during destruction.
-                    kcm.selectedTranslationsModel.remove(model.LanguageCode);
-                }
-            }]
         }
     }
 
@@ -237,12 +242,7 @@ ScrollViewKCM {
         id: languagesList
 
         model: kcm.selectedTranslationsModel
-
-        delegate: Kirigami.DelegateRecycler {
-            width: languagesList.width
-
-            sourceComponent: languagesListItemComponent
-        }
+        delegate: languagesListItemComponent
     }
 
     footer: RowLayout {
