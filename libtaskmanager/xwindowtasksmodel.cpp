@@ -535,15 +535,23 @@ QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon
 {
     const AppData &data = appData(window);
 
-    if (!encodeFallbackIcon || !data.icon.name().isEmpty()) {
-        return data.url;
-    }
 
     QUrl url = data.url;
+    if (!encodeFallbackIcon || !data.icon.name().isEmpty()) {
+        return url;
+    }
 
     // Forego adding the window icon pixmap if the URL is otherwise empty.
     if (!url.isValid()) {
         return QUrl();
+    }
+
+    // Only serialize pixmap data if the window pixmap is actually being used.
+    // QIcon::name() used above only returns a themed icon name but nothing when
+    // the icon was created using an absolute path, as can be the case with, e.g.
+    // containerized apps.
+    if (!usingFallbackIcon.contains(window)) {
+        return url;
     }
 
     const QPixmap pixmap = KWindowSystem::icon(window, KIconLoader::SizeLarge, KIconLoader::SizeLarge, false);
