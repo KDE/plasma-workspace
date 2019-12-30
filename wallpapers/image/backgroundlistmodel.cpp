@@ -35,6 +35,7 @@
 #include <QMimeType>
 #include <QMutex>
 #include <QMutexLocker>
+#include <QElapsedTimer>
 
 #include <QDebug>
 #include <KIO/PreviewJob>
@@ -534,7 +535,7 @@ bool BackgroundFinder::isAcceptableSuffix(const QString &suffix)
 
 void BackgroundFinder::run()
 {
-    QTime t;
+    QElapsedTimer t;
     t.start();
 
     QStringList papersFound;

@@ -31,6 +31,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <QX11Info>
 #include <QDebug>
+#include <QElapsedTimer>
 
 #include <config-workspace.h>
 
@@ -168,7 +169,7 @@ void KSMServer::performLegacySessionSave()
     }
     // Wait for change in WM_COMMAND with timeout
     XFlush(newdisplay);
-    QTime start = QTime::currentTime();
+    QElapsedTimer start;
     while (awaiting_replies > 0) {
         if (XPending(newdisplay)) {
             /* Process pending event */

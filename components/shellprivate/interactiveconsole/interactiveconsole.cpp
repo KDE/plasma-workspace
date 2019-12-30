@@ -35,6 +35,7 @@
 #include <QStandardPaths>
 #include <QTextBrowser>
 #include <QIcon>
+#include <QElapsedTimer>
 
 #include <klocalizedstring.h>
 #include <KSharedConfig>
@@ -552,7 +553,7 @@ void InteractiveConsole::evaluateScript()
     QTextBlockFormat block = cursor.blockFormat();
     block.setLeftMargin(10);
     cursor.insertBlock(block, format);
-    QTime t;
+    QElapsedTimer t;
     t.start();
 
     if (m_mode == PlasmaConsole) {
