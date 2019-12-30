@@ -301,13 +301,13 @@ Item {
             PropertyChanges {
                 target: dateLabel
 
-                // this can be marginal bigger than contentHeight because of the horizontal fit
-                height: sizehelper.contentHeight
+                height: dateLabel.paintedHeight
                 width: main.width
 
                 fontSizeMode: Text.Fit
                 minimumPixelSize: Math.min(0.7 * theme.smallestFont.pixelSize, timeLabel.height)
                 elide: Text.ElideRight
+                wrapMode: Text.WordWrap
             }
 
             AnchorChanges {
