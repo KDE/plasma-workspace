@@ -10,6 +10,10 @@ ShowInHistory=false
 [Applications][org.kde.klipper]
 ShowInHistory=false
 
+# DrKonqi creates a tray icon, no point in being in history
+[Applications][org.kde.drkonqi]
+ShowInHistory=false
+
 # Non-configurable applications don't deserve to be in history by default
 [Applications][@other]
 ShowInHistory=false
