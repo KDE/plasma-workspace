@@ -21,6 +21,7 @@
  */
 
 #include "shellcorona.h"
+#include "strutmanager.h"
 
 #include <config-plasma.h>
 
@@ -107,7 +108,8 @@ ShellCorona::ShellCorona(QObject *parent)
       m_addPanelsMenu(nullptr),
       m_interactiveConsole(nullptr),
       m_waylandPlasmaShell(nullptr),
-      m_closingDown(false)
+      m_closingDown(false),
+      m_strutManager(new StrutManager(this))
 {
     setupWaylandIntegration();
     qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", QStringLiteral("It is not possible to create objects of type Desktop"));
@@ -1043,6 +1045,11 @@ QRect ShellCorona::screenGeometry(int id) const
 
 QRegion ShellCorona::availableScreenRegion(int id) const
 {
+    return m_strutManager->availableScreenRegion(id);
+}
+
+QRegion ShellCorona::_availableScreenRegion(int id) const
+{
     DesktopView* view = m_desktopViewforId.value(id);
     if (!view) {
         //each screen should have a view
@@ -1062,6 +1069,11 @@ QRegion ShellCorona::availableScreenRegion(int id) const
 }
 
 QRect ShellCorona::availableScreenRect(int id) const
+{
+    return m_strutManager->availableScreenRect(id);
+}
+
+QRect ShellCorona::_availableScreenRect(int id) const
 {
     DesktopView *view = m_desktopViewforId.value(id);
     if (!view) {

@@ -36,6 +36,7 @@ set (plasma_shell_SRCS
     standaloneappcorona
     osd.cpp
     coronatesthelper.cpp
+    strutmanager.cpp
     debug.cpp
     screenpool.cpp
     softwarerendernotifier.cpp

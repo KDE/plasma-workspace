@@ -38,6 +38,7 @@ class PanelView;
 class QMenu;
 class QScreen;
 class ScreenPool;
+class StrutManager;
 
 namespace KActivities
 {
@@ -88,6 +89,10 @@ public:
     Q_INVOKABLE QRect screenGeometry(int id) const override;
     Q_INVOKABLE QRegion availableScreenRegion(int id) const override;
     Q_INVOKABLE QRect availableScreenRect(int id) const override;
+
+    // plasmashellCorona's value
+    QRegion _availableScreenRegion(int id) const;
+    QRect _availableScreenRect(int id) const;
 
     Q_INVOKABLE QStringList availableActivities() const;
 
@@ -256,6 +261,8 @@ private:
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
     bool m_closingDown : 1;
     QString m_testModeLayout;
+
+    StrutManager *m_strutManager;
 };
 
 #endif // SHELLCORONA_H
