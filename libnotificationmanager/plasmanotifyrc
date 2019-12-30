@@ -9,3 +9,7 @@ ShowInHistory=false
 # Klipper notifications might contain sensitive information
 [Applications][org.kde.klipper]
 ShowInHistory=false
+
+# DrKonqi creates a tray icon, no point in being in history
+[Applications][org.kde.drkonqi]
+ShowInHistory=false
