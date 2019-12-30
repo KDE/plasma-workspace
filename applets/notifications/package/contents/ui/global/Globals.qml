@@ -416,6 +416,12 @@ QtObject {
             actionNames: model.actionNames
             actionLabels: model.actionLabels
 
+            hasReplyAction: model.hasReplyAction || false
+            replyActionLabel: model.replyActionLabel || ""
+            replyPlaceholderText: model.replyPlaceholderText || ""
+            replySubmitButtonText: model.replySubmitButtonText || ""
+            replySubmitButtonIconName: model.replySubmitButtonIconName || ""
+
             onExpired: popupNotificationsModel.expire(popupNotificationsModel.index(index, 0))
             onHoverEntered: model.read = true
             onCloseClicked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
@@ -428,6 +434,10 @@ QtObject {
             onActionInvoked: {
                 popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName)
                 popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+            }
+            onReplied: {
+                popupNotificationsModel.reply(popupNotificationsModel.index(index, 0), text);
+                popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
             }
             onOpenUrl: {
                 Qt.openUrlExternally(url);

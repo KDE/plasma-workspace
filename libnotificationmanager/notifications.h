@@ -260,6 +260,12 @@ public:
         ReadRole, ///< Whether the notification got read by the user. If true, the notification isn't considered unread even if created after lastRead. @since 5.17
 
         UserActionFeedbackRole, ///< Whether this notification is a response/confirmation to an explicit user action. @since 5.18
+
+        HasReplyActionRole, ///< Whether the action has a reply action. @since 5.18
+        ReplyActionLabelRole, ///< The user-visible label for the reply action. @since 5.18
+        ReplyPlaceholderTextRole, ///< A custom placeholder text for the reply action, e.g. "Reply to Max...". @since 5.18
+        ReplySubmitButtonTextRole, ///< A custom text for the reply submit button, e.g. "Submit Comment". @since 5.18
+        ReplySubmitButtonIconNameRole, ///< A custom icon name for the reply submit button. @since 5.18
     };
     Q_ENUM(Roles)
 
@@ -431,6 +437,14 @@ public:
      * when clicking the notification bubble, use invokeDefaultAction
      */
     Q_INVOKABLE void invokeAction(const QModelIndex &idx, const QString &actionId);
+
+    /**
+     * @brief Reply to a notification
+     *
+     * Replies to the given notification with the given text.
+     * @since 5.18
+     */
+    Q_INVOKABLE void reply(const QModelIndex &idx, const QString &text);
 
     /**
      * @brief Start automatic timeout of notifications

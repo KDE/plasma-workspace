@@ -26,6 +26,7 @@
 class QQuickItem;
 class QString;
 class QRect;
+class QWindow;
 
 class NotificationApplet : public Plasma::Applet
 {
@@ -59,6 +60,7 @@ public:
     Q_INVOKABLE bool isPrimaryScreen(const QRect &rect) const;
 
     Q_INVOKABLE QString iconNameForUrl(const QUrl &url) const;
+    Q_INVOKABLE void forceActivateWindow(QWindow *window);
 
 signals:
     void dragActiveChanged();

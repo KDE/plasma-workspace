@@ -31,6 +31,9 @@
 #include <QQuickWindow>
 #include <QScreen>
 #include <QStyleHints>
+#include <QWindow>
+
+#include <KWindowSystem>
 
 #include <PlasmaQuick/Dialog>
 
@@ -163,6 +166,13 @@ QString NotificationApplet::iconNameForUrl(const QUrl &url) const
     }
 
     return mime.iconName();
+}
+
+void NotificationApplet::forceActivateWindow(QWindow *window)
+{
+    if (window && window->winId()) {
+        KWindowSystem::forceActiveWindow(window->winId());
+    }
 }
 
 K_EXPORT_PLASMA_APPLET_WITH_JSON(icon, NotificationApplet, "metadata.json")

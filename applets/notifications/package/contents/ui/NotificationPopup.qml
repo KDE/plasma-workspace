@@ -66,12 +66,19 @@ PlasmaCore.Dialog {
     property alias actionNames: notificationItem.actionNames
     property alias actionLabels: notificationItem.actionLabels
 
+    property alias hasReplyAction: notificationItem.hasReplyAction
+    property alias replyActionLabel: notificationItem.replyActionLabel
+    property alias replyPlaceholderText: notificationItem.replyPlaceholderText
+    property alias replySubmitButtonText: notificationItem.replySubmitButtonText
+    property alias replySubmitButtonIconName: notificationItem.replySubmitButtonIconName
+
     signal configureClicked
     signal dismissClicked
     signal closeClicked
 
     signal defaultActionInvoked
     signal actionInvoked(string actionName)
+    signal replied(string text)
     signal openUrl(string url)
     signal fileActionInvoked
 
@@ -95,8 +102,7 @@ PlasmaCore.Dialog {
     }
 
     location: PlasmaCore.Types.Floating
-
-    flags: Qt.WindowDoesNotAcceptFocus
+    flags: notificationItem.replying ? 0 : Qt.WindowDoesNotAcceptFocus
 
     visible: false
 
@@ -136,7 +142,7 @@ PlasmaCore.Dialog {
                 id: timer
                 interval: notificationPopup.effectiveTimeout
                 running: notificationPopup.visible && !area.containsMouse && interval > 0
-                    && !notificationItem.dragging && !notificationItem.menuOpen
+                    && !notificationItem.dragging && !notificationItem.menuOpen && !notificationItem.replying
                 onTriggered: {
                     if (notificationPopup.dismissTimeout) {
                         notificationPopup.dismissClicked();
@@ -182,6 +188,7 @@ PlasmaCore.Dialog {
                 onDismissClicked: notificationPopup.dismissClicked()
                 onConfigureClicked: notificationPopup.configureClicked()
                 onActionInvoked: notificationPopup.actionInvoked(actionName)
+                onReplied: notificationPopup.replied(text)
                 onOpenUrl: notificationPopup.openUrl(url)
                 onFileActionInvoked: notificationPopup.fileActionInvoked()
 

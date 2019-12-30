@@ -149,6 +149,15 @@ public:
     void invokeAction(uint id, const QString &actionName);
 
     /**
+     * Sends a notification reply text
+     *
+     * @param id The notification ID
+     * @param text The reply message text
+     * @since 5.18
+     */
+    void reply(uint id, const QString &text);
+
+    /**
      * Adds a notification
      *
      * @note The notification isn't actually broadcast

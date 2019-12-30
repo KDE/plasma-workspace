@@ -726,6 +726,13 @@ void Notifications::invokeAction(const QModelIndex &idx, const QString &actionId
     }
 }
 
+void Notifications::reply(const QModelIndex &idx, const QString &text)
+{
+    if (d->notificationsModel) {
+        d->notificationsModel->reply(Private::notificationId(idx), text);
+    }
+}
+
 void Notifications::startTimeout(const QModelIndex &idx)
 {
     startTimeout(Private::notificationId(idx));

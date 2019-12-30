@@ -388,6 +388,10 @@ void Notification::Private::processHints(const QVariantMap &hints)
 
     urls = QUrl::fromStringList(hints.value(QStringLiteral("x-kde-urls")).toStringList());
 
+    replyPlaceholderText = hints.value(QStringLiteral("x-kde-reply-placeholder-text")).toString();
+    replySubmitButtonText = hints.value(QStringLiteral("x-kde-reply-submit-button-text")).toString();
+    replySubmitButtonIconName = hints.value(QStringLiteral("x-kde-reply-submit-button-icon-name")).toString();
+
     // Underscored hints was in use in version 1.1 of the spec but has been
     // replaced by dashed hints in version 1.2. We need to support it for
     // users of the 1.2 version of the spec.
@@ -615,6 +619,7 @@ void Notification::setActions(const QStringList &actions)
 
     d->hasDefaultAction = false;
     d->hasConfigureAction = false;
+    d->hasReplyAction = false;
 
     QStringList names;
     QStringList labels;
@@ -632,6 +637,12 @@ void Notification::setActions(const QStringList &actions)
         if (!d->hasConfigureAction && name == QLatin1String("settings")) {
             d->hasConfigureAction = true;
             d->configureActionLabel = label;
+            continue;
+        }
+
+        if (!d->hasReplyAction && name == QLatin1String("inline-reply")) {
+            d->hasReplyAction = true;
+            d->replyActionLabel = label;
             continue;
         }
 
@@ -681,6 +692,31 @@ bool Notification::configurable() const
 QString Notification::configureActionLabel() const
 {
     return d->configureActionLabel;
+}
+
+bool Notification::hasReplyAction() const
+{
+    return d->hasReplyAction;
+}
+
+QString Notification::replyActionLabel() const
+{
+    return d->replyActionLabel;
+}
+
+QString Notification::replyPlaceholderText() const
+{
+    return d->replyPlaceholderText;
+}
+
+QString Notification::replySubmitButtonText() const
+{
+    return d->replySubmitButtonText;
+}
+
+QString Notification::replySubmitButtonIconName() const
+{
+    return d->replySubmitButtonIconName;
 }
 
 bool Notification::expired() const
