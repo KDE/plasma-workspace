@@ -24,6 +24,7 @@
 
 #include <QQmlParserStatus>
 #include <QSortFilterProxyModel>
+#include <KFilePlacesModel>
 
 class GroupSortProxy : public QSortFilterProxyModel
 {
@@ -110,6 +111,7 @@ class RecentUsageModel : public ForwardingModel, public QQmlParserStatus
         Ordering m_ordering;
 
         bool m_complete;
+        KFilePlacesModel *m_placesModel;
 };
 
 #endif

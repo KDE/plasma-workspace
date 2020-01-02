@@ -30,6 +30,7 @@
 #include <QMimeDatabase>
 #include <QQmlEngine>
 #include <QTimer>
+#include <QDir>
 #if HAVE_X11
 #include <QX11Info>
 #endif
@@ -41,6 +42,7 @@
 #include <KRun>
 #include <KService>
 #include <KStartupInfo>
+#include <KIO/OpenFileManagerWindowJob>
 
 #include <KActivities/Stats/Cleaning>
 #include <KActivities/Stats/ResultModel>
@@ -127,6 +129,7 @@ RecentUsageModel::RecentUsageModel(QObject *parent, IncludeUsage usage, int orde
 , m_usage(usage)
 , m_ordering((Ordering)ordering)
 , m_complete(false)
+, m_placesModel(new KFilePlacesModel(this))
 {
     refresh();
 }
@@ -256,6 +259,13 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
     }
 
     if (role == Qt::DisplayRole) {
+        const auto index = m_placesModel->closestItem(fileItem.url());
+        if (index.isValid()) {
+            const auto parentUrl = m_placesModel->url(index);
+            if (parentUrl == fileItem.url()) {
+                return m_placesModel->text(index);
+            }
+        }
         return fileItem.text();
     } else if (role == Qt::DecorationRole) {
         return QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme(QStringLiteral("unknown")));
@@ -263,6 +273,25 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
         return i18n("Documents");
     } else if (role == Kicker::FavoriteIdRole || role == Kicker::UrlRole) {
         return url.toString();
+    } else if (role == Kicker::DescriptionRole) {
+        QString desc = fileItem.localPath();
+
+        const auto index = m_placesModel->closestItem(fileItem.url());
+        if (index.isValid()) {
+            // the current file has a parent in placesModel
+            const auto parentUrl = m_placesModel->url(index);
+            if (parentUrl == fileItem.url()) {
+                // if the current item is a place
+                return QString();
+            }
+            desc.truncate(desc.lastIndexOf(QChar('/')));
+            const auto text = m_placesModel->text(index);
+            desc.replace(0, parentUrl.path().length(), text);
+        } else {
+            // remove filename
+            desc.truncate(desc.lastIndexOf(QChar('/')));
+        }
+        return desc;
     } else if (role == Kicker::UrlRole) {
         return url;
     } else if (role == Kicker::HasActionListRole) {
@@ -271,6 +300,9 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
         QVariantList actionList = Kicker::createActionListForFileItem(fileItem);
 
         actionList << Kicker::createSeparatorActionItem();
+
+        const QVariantMap &openParentFolder = Kicker::createActionItem(i18n("Open Containing Folder"), QStringLiteral("openParentFolder"));
+        actionList << openParentFolder;
 
         const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Document"), QStringLiteral("forget"));
         actionList << forgetAction;
@@ -347,6 +379,9 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         }
 
         return false;
+    } else if (actionId == QLatin1String("openParentFolder") && withinBounds) {
+        const auto url = QUrl::fromUserInput(resourceAt(row));
+        KIO::highlightInFileManager({url});
     } else if (actionId == QLatin1String("forgetAll")) {
         if (m_activitiesModel) {
             static_cast<ResultModel *>(m_activitiesModel.data())->forgetAllResources();
