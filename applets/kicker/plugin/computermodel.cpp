@@ -223,9 +223,6 @@ QVariant ComputerModel::data(const QModelIndex &index, int role) const
                 } else {
                     return QString();
                 }
-            } else {
-                const QUrl &url = m_filteredPlacesModel->url(sourceIndex);
-                return url.toString(QUrl::PreferLocalFile);
             }
         } else if (role == Kicker::FavoriteIdRole) {
             if (!m_filteredPlacesModel->isDevice(sourceIndex)) {
