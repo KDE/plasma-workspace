@@ -260,7 +260,7 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
 
     if (role == Qt::DisplayRole) {
         const auto index = m_placesModel->closestItem(fileItem.url());
-        if (index.isValid()) {
+        if (index.isValid() && !m_placesModel->isHidden(index)) {
             const auto parentUrl = m_placesModel->url(index);
             if (parentUrl == fileItem.url()) {
                 return m_placesModel->text(index);
