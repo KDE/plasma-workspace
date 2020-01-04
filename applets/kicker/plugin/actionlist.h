@@ -43,7 +43,7 @@ enum {
     UrlRole
 };
 
-QVariantMap createActionItem(const QString &label, const QString &actionId, const QVariant &argument = QVariant());
+QVariantMap createActionItem(const QString &label, const QString &icon, const QString &actionId, const QVariant &argument = QVariant());
 
 QVariantMap createTitleActionItem(const QString &label);
 

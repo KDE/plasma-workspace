@@ -82,15 +82,15 @@ QVariant RecentContactsModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList ;
 
-        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Contact"), QStringLiteral("forget"));
+        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Contact"), QStringLiteral("edit-clear-history"), QStringLiteral("forget"));
         actionList << forgetAction;
 
-        const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Contacts"), QStringLiteral("forgetAll"));
+        const QVariantMap &forgetAllAction = Kicker::createActionItem(i18n("Forget All Contacts"), QStringLiteral("edit-clear-history"), QStringLiteral("forgetAll"));
         actionList << forgetAllAction;
 
         actionList << Kicker::createSeparatorActionItem();
 
-        actionList << Kicker::createActionItem(i18n("Show Contact Information..."), QStringLiteral("showContactInfo"));
+        actionList << Kicker::createActionItem(i18n("Show Contact Information..."), QStringLiteral("identity"), QStringLiteral("showContactInfo"));
 
         return actionList;
     } else if (role == Kicker::DescriptionRole) {
@@ -162,7 +162,7 @@ QVariantList RecentContactsModel::actions() const
     QVariantList actionList;
 
     if (rowCount()) {
-        actionList << Kicker::createActionItem(i18n("Forget All Contacts"), QStringLiteral("forgetAll"));
+        actionList << Kicker::createActionItem(i18n("Forget All Contacts"), QStringLiteral("edit-clear-history"), QStringLiteral("forgetAll"));
     }
 
     return actionList;

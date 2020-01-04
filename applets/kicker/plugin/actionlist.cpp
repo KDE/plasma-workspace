@@ -52,11 +52,12 @@ using namespace KAStats::Terms;
 namespace Kicker
 {
 
-QVariantMap createActionItem(const QString &label, const QString &actionId, const QVariant &argument)
+QVariantMap createActionItem(const QString &label, const QString &icon, const QString &actionId, const QVariant &argument)
 {
     QVariantMap map;
 
     map[QStringLiteral("text")] = label;
+    map[QStringLiteral("icon")] = icon;
     map[QStringLiteral("actionId")] = actionId;
 
     if (argument.isValid()) {
@@ -96,8 +97,7 @@ QVariantList createActionListForFileItem(const KFileItem &fileItem)
 
         foreach (const KService::Ptr service, services) {
             const QString text = service->name().replace(QLatin1Char('&'), QStringLiteral("&&"));
-            QVariantMap item = createActionItem(text, QStringLiteral("_kicker_fileItem_openWith"), service->entryPath());
-            item[QStringLiteral("icon")] = service->icon();
+            QVariantMap item = createActionItem(text, service->icon(), QStringLiteral("_kicker_fileItem_openWith"), service->entryPath());
 
             list << item;
         }
@@ -105,8 +105,7 @@ QVariantList createActionListForFileItem(const KFileItem &fileItem)
         list << createSeparatorActionItem();
     }
 
-    QVariantMap propertiesItem = createActionItem(i18n("Properties"), QStringLiteral("_kicker_fileItem_properties"));
-    propertiesItem[QStringLiteral("icon")] = QStringLiteral("document-properties");
+    const QVariantMap &propertiesItem = createActionItem(i18n("Properties"), QStringLiteral("document-properties"), QStringLiteral("_kicker_fileItem_properties"));
     list << propertiesItem;
 
     return list;
@@ -150,20 +149,17 @@ QVariantList createAddLauncherActionList(QObject *appletInterface, const KServic
     }
 
     if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Desktop)) {
-        QVariantMap addToDesktopAction = Kicker::createActionItem(i18n("Add to Desktop"), QStringLiteral("addToDesktop"));
-        addToDesktopAction[QStringLiteral("icon")] = QStringLiteral("list-add");
+        QVariantMap addToDesktopAction = Kicker::createActionItem(i18n("Add to Desktop"), QStringLiteral("list-add"), QStringLiteral("addToDesktop"));
         actionList << addToDesktopAction;
     }
 
     if (ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::Panel)) {
-        QVariantMap addToPanelAction = Kicker::createActionItem(i18n("Add to Panel (Widget)"), QStringLiteral("addToPanel"));
-        addToPanelAction[QStringLiteral("icon")] = QStringLiteral("list-add");
+        QVariantMap addToPanelAction = Kicker::createActionItem(i18n("Add to Panel (Widget)"), QStringLiteral("list-add"), QStringLiteral("addToPanel"));
         actionList << addToPanelAction;
     }
 
     if (service && ContainmentInterface::mayAddLauncher(appletInterface, ContainmentInterface::TaskManager, Kicker::resolvedServiceEntryPath(service))) {
-        QVariantMap addToTaskManagerAction = Kicker::createActionItem(i18n("Pin to Task Manager"), QStringLiteral("addToTaskManager"));
-        addToTaskManagerAction[QStringLiteral("icon")] = QStringLiteral("pin");
+        QVariantMap addToTaskManagerAction = Kicker::createActionItem(i18n("Pin to Task Manager"), QStringLiteral("pin"), QStringLiteral("addToTaskManager"));
         actionList << addToTaskManagerAction;
     }
 
@@ -221,8 +217,7 @@ QVariantList jumpListActions(KService::Ptr service)
             continue;
         }
 
-        QVariantMap item = createActionItem(action.text(), QStringLiteral("_kicker_jumpListAction"), action.exec());
-        item[QStringLiteral("icon")] = action.icon();
+        QVariantMap item = createActionItem(action.text(), action.icon(), QStringLiteral("_kicker_jumpListAction"), action.exec());
 
         list << item;
     }
@@ -276,15 +271,13 @@ QVariantList recentDocumentActions(KService::Ptr service)
             list << createTitleActionItem(i18n("Recent Documents"));
         }
 
-        QVariantMap item = createActionItem(url.fileName(), QStringLiteral("_kicker_recentDocument"), resource);
-        item[QStringLiteral("icon")] = fileItem.iconName();
+        QVariantMap item = createActionItem(url.fileName(), fileItem.iconName(), QStringLiteral("_kicker_recentDocument"), resource);
 
         list << item;
     }
 
     if (!list.isEmpty()) {
-        QVariantMap forgetAction = createActionItem(i18n("Forget Recent Documents"), QStringLiteral("_kicker_forgetRecentDocuments"));
-        forgetAction[QStringLiteral("icon")] = QStringLiteral("edit-clear-history");
+        QVariantMap forgetAction = createActionItem(i18n("Forget Recent Documents"), QStringLiteral("edit-clear-history"), QStringLiteral("_kicker_forgetRecentDocuments"));
         list << forgetAction;
     }
 
@@ -341,8 +334,8 @@ QVariantList editApplicationAction(const KService::Ptr &service)
     QVariantList actionList;
 
     if (canEditApplication(service)) {
-        QVariantMap editAction = Kicker::createActionItem(i18n("Edit Application..."), QStringLiteral("editApplication"));
-        editAction[QStringLiteral("icon")] = QStringLiteral("kmenuedit"); // TODO: Using the KMenuEdit icon might be misleading.
+        // TODO: Using the KMenuEdit icon might be misleading.
+        QVariantMap editAction = Kicker::createActionItem(i18n("Edit Application..."), QStringLiteral("kmenuedit"), QStringLiteral("editApplication"));
         actionList << editAction;
     }
 
@@ -388,8 +381,10 @@ QVariantList appstreamActions(const KService::Ptr &service)
     for(const auto &component: components) {
         const QString componentId = component.id();
 
-        QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons..."), "manageApplication", QVariant(QLatin1String("appstream://") + componentId));
-        appstreamAction[QStringLiteral("icon")] = appStreamHandler->icon();
+        QVariantMap appstreamAction = Kicker::createActionItem(
+                    i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons..."),
+                    appStreamHandler->icon(),
+                    "manageApplication", QVariant(QLatin1String("appstream://") + componentId));
         ret << appstreamAction;
     }
 #else

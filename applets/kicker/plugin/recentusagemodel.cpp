@@ -227,10 +227,10 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
             actionList << recentDocuments << Kicker::createSeparatorActionItem();
         }
 
-        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Application"), QStringLiteral("forget"));
+        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Application"), QStringLiteral("edit-clear-history"), QStringLiteral("forget"));
         actionList << forgetAction;
 
-        const QVariantMap &forgetAllAction = Kicker::createActionItem(forgetAllActionName(), QStringLiteral("forgetAll"));
+        const QVariantMap &forgetAllAction = Kicker::createActionItem(forgetAllActionName(), QStringLiteral("edit-clear-history"), QStringLiteral("forgetAll"));
         actionList << forgetAllAction;
 
         return actionList;
@@ -303,13 +303,13 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
 
         actionList << Kicker::createSeparatorActionItem();
 
-        const QVariantMap &openParentFolder = Kicker::createActionItem(i18n("Open Containing Folder"), QStringLiteral("openParentFolder"));
+        QVariantMap openParentFolder = Kicker::createActionItem(i18n("Open Containing Folder"), QStringLiteral("folder-open"), QStringLiteral("openParentFolder"));
         actionList << openParentFolder;
 
-        const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Document"), QStringLiteral("forget"));
+        QVariantMap forgetAction = Kicker::createActionItem(i18n("Forget Document"), QStringLiteral("edit-clear-history"), QStringLiteral("forget"));
         actionList << forgetAction;
 
-        const QVariantMap &forgetAllAction = Kicker::createActionItem(forgetAllActionName(), QStringLiteral("forgetAll"));
+        QVariantMap forgetAllAction = Kicker::createActionItem(forgetAllActionName(), QStringLiteral("edit-clear-history"), QStringLiteral("forgetAll"));
         actionList << forgetAllAction;
 
         return actionList;
@@ -427,7 +427,7 @@ QVariantList RecentUsageModel::actions() const
     QVariantList actionList;
 
     if (rowCount()) {
-        actionList << Kicker::createActionItem(forgetAllActionName(), QStringLiteral("forgetAll"));
+        actionList << Kicker::createActionItem(forgetAllActionName(), QStringLiteral("edit-clear-history"), QStringLiteral("forgetAll"));
     }
 
     return actionList;

@@ -162,16 +162,14 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
 
         if (!m_hiddenEntries.isEmpty()) {
             actionList << Kicker::createSeparatorActionItem();
-            QVariantMap unhideSiblingApplicationsAction = Kicker::createActionItem(i18n("Unhide Applications in this Submenu"), QStringLiteral("unhideSiblingApplications"));
-            unhideSiblingApplicationsAction[QStringLiteral("icon")] = QStringLiteral("view-visible");
+            QVariantMap unhideSiblingApplicationsAction = Kicker::createActionItem(i18n("Unhide Applications in this Submenu"), QStringLiteral("view-visible"), QStringLiteral("unhideSiblingApplications"));
             actionList << unhideSiblingApplicationsAction;
         }
 
         const AppsModel *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
 
         if (appsModel && !appsModel->hiddenEntries().isEmpty()) {
-            QVariantMap unhideChildApplicationsAction = Kicker::createActionItem(i18n("Unhide Applications in '%1'", entry->name()), QStringLiteral("unhideChildApplications"));
-            unhideChildApplicationsAction[QStringLiteral("icon")] = QStringLiteral("view-visible");
+            QVariantMap unhideChildApplicationsAction = Kicker::createActionItem(i18n("Unhide Applications in '%1'", entry->name()), QStringLiteral("view-visible"), QStringLiteral("unhideChildApplications"));
             actionList << unhideChildApplicationsAction;
         }
 

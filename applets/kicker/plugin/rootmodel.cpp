@@ -105,7 +105,7 @@ QVariant RootModel::data(const QModelIndex& index, int role) const
                     actionList << model->actions();
                     actionList << Kicker::createSeparatorActionItem();
                     actionList << Kicker::createActionItem(i18n("Hide %1",
-                        group->name()), QStringLiteral("hideCategory"));
+                        group->name()), QStringLiteral("view-hidden"), QStringLiteral("hideCategory"));
                     return actionList;
                 }
             }

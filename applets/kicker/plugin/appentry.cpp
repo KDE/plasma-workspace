@@ -179,8 +179,7 @@ QVariantList AppEntry::actions() const
             const QStringList &hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
 
             if (!hiddenApps.contains(m_service->menuId())) {
-                QVariantMap hideAction = Kicker::createActionItem(i18n("Hide Application"), QStringLiteral("hideApplication"));
-                hideAction[QStringLiteral("icon")] = QStringLiteral("hint");
+                QVariantMap hideAction = Kicker::createActionItem(i18n("Hide Application"), QStringLiteral("view-hidden"), QStringLiteral("hideApplication"));
                 actionList << hideAction;
             }
         }

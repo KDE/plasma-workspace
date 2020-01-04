@@ -95,9 +95,8 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         QVariantList actionList;
 
         foreach (QAction *action, m_runnerManager->actionsForMatch(match)) {
-            QVariantMap item = Kicker::createActionItem(action->text(), QStringLiteral("runnerAction"),
+            QVariantMap item = Kicker::createActionItem(action->text(), action->icon().name(), QStringLiteral("runnerAction"),
                 QVariant::fromValue<QObject *>(action));
-            item[QStringLiteral("icon")] = action->icon();
 
             actionList << item;
         }
