@@ -554,7 +554,16 @@ QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon
         return url;
     }
 
-    const QPixmap pixmap = KWindowSystem::icon(window, KIconLoader::SizeLarge, KIconLoader::SizeLarge, false);
+    QPixmap pixmap;
+
+    if (!data.icon.isNull()) {
+        pixmap = data.icon.pixmap(KIconLoader::SizeLarge);
+    }
+
+    if (pixmap.isNull()) {
+        pixmap = KWindowSystem::icon(window, KIconLoader::SizeLarge, KIconLoader::SizeLarge, false);
+    }
+
     if (pixmap.isNull()) {
         return data.url;
     }
