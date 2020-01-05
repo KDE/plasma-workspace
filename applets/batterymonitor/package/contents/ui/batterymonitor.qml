@@ -40,12 +40,9 @@ Item {
             return PlasmaCore.Types.ActiveStatus
         }
 
-        if (pmSource.data.Battery["Has Cumulative"]) {
-            if (pmSource.data.Battery.State !== "Charging" && pmSource.data.Battery.Percent <= 5) {
-                return PlasmaCore.Types.NeedsAttentionStatus
-            } else if (pmSource.data["Battery"]["State"] !== "FullyCharged") {
-                return PlasmaCore.Types.ActiveStatus
-            }
+        if (pmSource.data.Battery["Has Cumulative"]
+            && pmSource.data["Battery"]["State"] !== "FullyCharged") {
+            return PlasmaCore.Types.ActiveStatus
         }
 
         return PlasmaCore.Types.PassiveStatus
