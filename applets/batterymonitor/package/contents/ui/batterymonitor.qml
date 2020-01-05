@@ -49,35 +49,43 @@ Item {
     }
 
     Plasmoid.toolTipMainText: {
-        if (batteries.count === 0) {
-            return i18n("No Batteries Available");
-        } else if (!pmSource.data["Battery"]["Has Cumulative"]) {
-            // Bug 362924: Distinguish between no batteries and no power supply batteries
-            // just show the generic applet title in the latter case
-            return i18n("Battery and Brightness")
+        if (batteries.count === 0 || !pmSource.data["Battery"]["Has Cumulative"]) {
+            return plasmoid.title
         } else if (pmSource.data["Battery"]["State"] === "FullyCharged") {
             return i18n("Fully Charged");
-        } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
-            var percent = pmSource.data.Battery.Percent
-            var state = pmSource.data.Battery.State
-            if (state === "Charging") {
-                return i18n("%1% Charging", percent)
-            } else if (state === "NoCharge") {
-                return i18n("%1% Plugged in, not Charging", percent)
-            } else {
-                return i18n("%1% Plugged in", percent)
+        }
+        if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
+            if (pmSource.data.Battery.State === "NoCharge") {
+                return i18n("Battery at %1%, not Charging", pmSource.data.Battery.Percent)
             }
         } else {
-            if (remainingTime > 0) {
-                return i18nc("%1 is remaining time, %2 is percentage", "%1 Remaining (%2%)",
-                             KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds),
-                             pmSource.data["Battery"]["Percent"])
-            } else {
-                return i18n("%1% Battery Remaining", pmSource.data["Battery"]["Percent"]);
-            }
+            return i18n("Battery at %1%", pmSource.data.Battery.Percent);
         }
     }
-    Plasmoid.toolTipSubText: powermanagementDisabled ? i18n("Power management is disabled") : ""
+
+    Plasmoid.toolTipSubText: {
+        var parts = [];
+        if (batteries.count === 0) {
+            parts.push("No Batteries Available");
+        } else if (remainingTime > 0) {
+            var remainingTimeString = KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds);
+            if (pmSource.data["Battery"]["State"] === "FullyCharged") {
+                // Don't add anything
+            } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
+                parts.push(i18nc("time until fully charged - HH:MM","%1 until fully charged", remainingTimeString));
+            } else {
+                parts.push(i18nc("remaining time left of battery usage - HH:MM","%1 remaining", remainingTimeString));
+            }
+        } else if (pmSource.data.Battery.State === "NoCharge") {
+            parts.push(i18n("Not charging"))
+        } // otherwise, don't add anything
+
+        if (powermanagementDisabled) {
+            parts.push(i18n("Power management is disabled"));
+        }
+        return parts.join("\n");
+    }
+
     Plasmoid.icon: "battery"
 
     property bool disableBrightnessUpdate: true
