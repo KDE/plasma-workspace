@@ -134,7 +134,7 @@ private:
         return relevanceIncrement;
     }
 
-    QString generateQuery(QVector<QStringRef> &strList)
+    QString generateQuery(const QVector<QStringRef> &strList)
     {
         QString keywordTemplate = QStringLiteral("exist Keywords");
         QString genericNameTemplate = QStringLiteral("exist GenericName");
@@ -147,7 +147,7 @@ private:
         // * a substring of the Name field
         // Note that before asking for the content of e.g. Keywords and GenericName we need to ask if
         // they exist to prevent a tree evaluation error if they are not defined.
-        foreach (QStringRef str, strList)
+        for (const QStringRef &str : strList)
         {
             keywordTemplate += QStringLiteral(" and '%1' ~subin Keywords").arg(str.toString());
             genericNameTemplate += QStringLiteral(" and '%1' ~~ GenericName").arg(str.toString());
@@ -190,13 +190,13 @@ private:
         // See https://techbase.kde.org/Development/Tutorials/Services/Traders#The_KTrader_Query_Language
         // if the following is unclear to you.
         query = QStringLiteral("exist Exec and ('%1' =~ Name)").arg(term);
-        KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
+        const KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
 
         if (services.isEmpty()) {
             return;
         }
 
-        foreach (const KService::Ptr &service, services) {
+        for (const KService::Ptr &service : services) {
             qCDebug(RUNNER_SERVICES) << service->name() << "is an exact match!" << service->storageId() << service->exec();
             if (disqualify(service)) {
                 continue;
@@ -226,7 +226,7 @@ private:
         services += KServiceTypeTrader::self()->query(QStringLiteral("KCModule"), query);
 
         qCDebug(RUNNER_SERVICES) << "got " << services.count() << " services from " << query;
-        foreach (const KService::Ptr &service, services) {
+        for (const KService::Ptr &service : qAsConst(services)) {
             if (disqualify(service)) {
                 continue;
             }
@@ -296,9 +296,9 @@ private:
     {
         //search for applications whose categories contains the query
         query = QStringLiteral("exist Exec and (exist Categories and '%1' ~subin Categories)").arg(term);
-        auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
+        const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
 
-        foreach (const KService::Ptr &service, services) {
+        for (const KService::Ptr &service : services) {
             qCDebug(RUNNER_SERVICES) << service->name() << "is an exact match!" << service->storageId() << service->exec();
             if (disqualify(service)) {
                 continue;
@@ -330,14 +330,14 @@ private:
         }
 
         query = QStringLiteral("exist Actions"); // doesn't work
-        auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"));//, query);
+        const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"));//, query);
 
-        foreach (const KService::Ptr &service, services) {
+        for (const KService::Ptr &service : services) {
             if (service->noDisplay()) {
                 continue;
             }
 
-            foreach (const KServiceAction &action, service->actions()) {
+            for (const KServiceAction &action : service->actions()) {
                 if (action.text().isEmpty() || action.exec().isEmpty() || hasSeen(action)) {
                     continue;
                 }

@@ -97,8 +97,8 @@ QList<QVariantMap> FetchSqlite::query(const QString &sql, QMap<QString, QVariant
     //qDebug() << "query: " << sql;
     QSqlQuery query(db);
     query.prepare(sql);
-    foreach(const QString &variableName, bindObjects.keys()) {
-        query.bindValue(variableName, bindObjects.value(variableName));
+    for (auto entry = bindObjects.constKeyValueBegin(); entry != bindObjects.constKeyValueEnd(); ++entry) {
+        query.bindValue((*entry).first, (*entry).second);
         //qDebug() << "* Bound " << variableName << " to " << query.boundValue(variableName);
     }
 

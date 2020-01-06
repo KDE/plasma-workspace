@@ -55,7 +55,7 @@ static QIcon componentIcon(const AppStream::Component &comp)
     const auto icons = comp.icons();
     if (icons.isEmpty()) {
         ret = QIcon::fromTheme(QStringLiteral("package-x-generic"));
-    } else foreach(const AppStream::Icon &icon, icons) {
+    } else for(const AppStream::Icon &icon : icons) {
         QStringList stock;
         switch(icon.kind()) {
             case AppStream::Icon::KindLocal:

@@ -34,7 +34,7 @@
 
 class ProfileBookmarks {
 public:
-    ProfileBookmarks(Profile &profile) : m_profile(profile) {}
+    ProfileBookmarks(const Profile &profile) : m_profile(profile) {}
     inline QJsonArray bookmarks() { return m_bookmarks; }
     inline Profile profile() { return m_profile; }
     void tearDown() { m_profile.favicon()->teardown(); clear(); }
@@ -50,7 +50,8 @@ Chrome::Chrome( FindProfile* findProfile, QObject* parent )
     m_watcher(new KDirWatch(this)),
     m_dirty(false)
 {
-    foreach(Profile profile, findProfile->find()) {
+    const auto profiles = findProfile->find();
+    for(const Profile &profile : profiles) {
         m_profileBookmarks << new ProfileBookmarks(profile);
         m_watcher->addFile(profile.path());
     }
@@ -59,7 +60,7 @@ Chrome::Chrome( FindProfile* findProfile, QObject* parent )
 
 Chrome::~Chrome()
 {
-    foreach(ProfileBookmarks *profileBookmark, m_profileBookmarks) {
+    for(ProfileBookmarks *profileBookmark : qAsConst(m_profileBookmarks)) {
         delete profileBookmark;
     }
 }
@@ -70,7 +71,7 @@ QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing)
         prepare();
     }
     QList<BookmarkMatch> results;
-    foreach(ProfileBookmarks *profileBookmarks, m_profileBookmarks) {
+    for(ProfileBookmarks *profileBookmarks : qAsConst(m_profileBookmarks)) {
         results << match(term, addEveryThing, profileBookmarks);
     }
     return results;
@@ -95,7 +96,7 @@ QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing, Prof
 void Chrome::prepare()
 {
     m_dirty = false;
-    foreach(ProfileBookmarks *profileBookmarks, m_profileBookmarks) {
+    for(ProfileBookmarks *profileBookmarks : qAsConst(m_profileBookmarks)) {
         Profile profile = profileBookmarks->profile();
         profileBookmarks->clear();
         QFile bookmarksFile(profile.path());
@@ -120,7 +121,7 @@ void Chrome::prepare()
 
 void Chrome::teardown()
 {
-    foreach(ProfileBookmarks *profileBookmarks, m_profileBookmarks) {
+    for(ProfileBookmarks *profileBookmarks : qAsConst(m_profileBookmarks)) {
         profileBookmarks->tearDown();
     }
 }

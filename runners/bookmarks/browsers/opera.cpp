@@ -39,7 +39,7 @@ QList<BookmarkMatch> Opera::match( const QString& term, bool addEverything )
     QLatin1String descriptionStart("\tDESCRIPTION=");
 
     // search
-    foreach (const QString & entry, m_operaBookmarkEntries) {
+    for (const QString & entry : qAsConst(m_operaBookmarkEntries)) {
         QStringList entryLines = entry.split(QStringLiteral("\n"));
         if (!entryLines.first().startsWith(QLatin1String("#URL"))) {
             continue; // skip folder entries
@@ -50,7 +50,7 @@ QList<BookmarkMatch> Opera::match( const QString& term, bool addEverything )
         QString url;
         QString description;
 
-        foreach (const QString & line, entryLines) {
+        for (const QString & line : qAsConst(entryLines)) {
             if (line.startsWith(nameStart)) {
                 name = line.mid( QString(nameStart).length() ).simplified();
             } else if (line.startsWith(urlStart)) {

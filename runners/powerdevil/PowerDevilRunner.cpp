@@ -60,7 +60,7 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const QVariantList &args)
              << i18nc("Note this is a KRunner keyword", "screen brightness")
              << i18nc("Note this is a KRunner keyword", "dim screen");
 
-    foreach (const QString &command, commands) {
+    for (const QString &command : qAsConst(commands)) {
         if (command.length() < m_shortestCommand) {
             m_shortestCommand = command.length();
         }
@@ -124,7 +124,7 @@ void PowerDevilRunner::updateStatus()
 
 bool PowerDevilRunner::parseQuery(const QString& query, const QList<QRegExp>& rxList, QString& parameter) const
 {
-    foreach (const QRegExp& rx, rxList) {
+    for (const QRegExp& rx : rxList) {
         if (rx.exactMatch(query)) {
              parameter = rx.cap(1).trimmed();
              return true;

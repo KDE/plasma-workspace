@@ -120,7 +120,7 @@ void KillRunner::match(Plasma::RunnerContext &context)
 
     QList<Plasma::QueryMatch> matches;
     const QList<KSysGuard::Process *> processlist = m_processes->getAllProcesses();
-    foreach (const KSysGuard::Process *process, processlist) {
+    for (const KSysGuard::Process *process : processlist) {
         if (!context.isValid()) {
             return;
         }

@@ -121,7 +121,7 @@ void ActivityRunner::match(Plasma::RunnerContext &context)
     }
 
     if (list) {
-        foreach (const QString &activity, activities) {
+        for (const QString &activity : qAsConst(activities)) {
             if (current == activity) {
                 continue;
             }
@@ -134,7 +134,7 @@ void ActivityRunner::match(Plasma::RunnerContext &context)
             }
         }
     } else {
-        foreach (const QString &activity, activities) {
+        for (const QString &activity : qAsConst(activities)) {
             if (current == activity) {
                 continue;
             }

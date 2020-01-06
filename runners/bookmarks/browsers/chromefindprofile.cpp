@@ -58,7 +58,7 @@ QList<Profile> FindChromeProfile::find()
   QVariantMap localState = jdoc.object().toVariantMap();
   QVariantMap profilesConfig = localState.value(QStringLiteral("profile")).toMap().value(QStringLiteral("info_cache")).toMap();
 
-  foreach(const QString &profile, profilesConfig.keys()) {
+  for(const QString &profile : profilesConfig.keys()) {
       const QString profilePath = QStringLiteral("%1/%2").arg(configDirectory, profile);
       const QString profileBookmarksPath = QStringLiteral("%1/%2").arg(profilePath, QStringLiteral("Bookmarks"));
       profiles << Profile(profileBookmarksPath, FaviconFromBlob::chrome(profilePath, this));

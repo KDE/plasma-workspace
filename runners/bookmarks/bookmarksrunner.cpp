@@ -82,8 +82,8 @@ void BookmarksRunner::match(Plasma::RunnerContext &context)
     bool allBookmarks = term.compare(i18nc("list of all konqueror bookmarks", "bookmarks"),
                                      Qt::CaseInsensitive) == 0;
                                      
-    QList<BookmarkMatch> matches = m_browser->match(term, allBookmarks);
-    foreach(BookmarkMatch match, matches) {
+    const QList<BookmarkMatch> matches = m_browser->match(term, allBookmarks);
+    for(BookmarkMatch match : matches) {
         if(!context.isValid())
             return;
         context.addMatch(match.asQueryMatch(this));

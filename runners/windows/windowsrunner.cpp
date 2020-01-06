@@ -75,7 +75,8 @@ void WindowsRunner::gatherInfo()
         return;
     }
 
-    foreach (const WId w, KWindowSystem::windows()) {
+    const auto windows = KWindowSystem::windows();
+    for (const WId &w : windows) {
         KWindowInfo info(w, NET::WMWindowType | NET::WMDesktop |
                                                         NET::WMState | NET::XAWMState |
                                                         NET::WMName,
@@ -180,7 +181,7 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
         QString windowClass;
         QString windowRole;
         int desktop = -1;
-        foreach (const QString& keyword, keywords) {
+        for (const QString& keyword : keywords) {
             if (keyword.endsWith(QLatin1Char('='))) {
                 continue;
             }
@@ -215,7 +216,7 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
             if (!KWindowSystem::hasWId(w)) {
                 continue;
             }
-            if (!windowName.isEmpty() && !info.name().contains(windowName, Qt::CaseInsensitive)) {
+            if (!windowName.isEmpty() && !info.name().startsWith(windowName, Qt::CaseInsensitive)) {
                 continue;
             }
             if (!windowClass.isEmpty() && !windowClassCompare.contains(windowClass, Qt::CaseInsensitive)) {
@@ -296,7 +297,7 @@ void WindowsRunner::match(Plasma::RunnerContext& context)
     }
 
     // check for matching desktops by name
-    foreach (const QString& desktopName, m_desktopNames) {
+    for (const QString& desktopName : qAsConst(m_desktopNames)) {
         int desktop = m_desktopNames.indexOf(desktopName) +1;
         if (desktopName.contains(term, Qt::CaseInsensitive)) {
             // desktop name matches - offer switch to

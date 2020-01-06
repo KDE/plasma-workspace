@@ -171,7 +171,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
         SessList sessions;
         dm.localSessions(sessions);
 
-        foreach (const SessEnt& session, sessions) {
+        for (const SessEnt& session : qAsConst(sessions)) {
             if (!session.vt || session.self) {
                 continue;
             }

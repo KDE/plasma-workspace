@@ -57,10 +57,10 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
         return;
     }
 
+    QList<Plasma::QueryMatch> matches;
 
-   QList<Plasma::QueryMatch> matches;
-
-    foreach (const KPluginMetaData &md, Plasma::PluginLoader::self()->listAppletMetaData(QString())) {
+    const auto &listMetadata =  Plasma::PluginLoader::self()->listAppletMetaData(QString());
+    for (const KPluginMetaData &md : listMetadata) {
         if (!md.isValid()) {
             continue;
         }

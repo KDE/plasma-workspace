@@ -78,7 +78,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
     // avoid duplicates
     QSet<QUrl> knownUrls;
 
-    foreach (const QString &document, m_recentdocuments) {
+    for (const QString &document : qAsConst(m_recentdocuments)) {
         if (!context.isValid()) {
             return;
         }

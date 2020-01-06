@@ -98,9 +98,9 @@ QList< BookmarkMatch > Firefox::match(const QString& term, bool addEverything)
     const QMap<QString, QVariant> bindVariables {
         {QStringLiteral(":term"), QStringLiteral("%%%1%%").arg(term)},
     };
-    QList<QVariantMap> results = m_fetchsqlite->query(query, bindVariables);
+    const QList<QVariantMap> results = m_fetchsqlite->query(query, bindVariables);
     QMultiMap<QString, QString> uniqueResults;
-    foreach(QVariantMap result, results) {
+    for(const QVariantMap &result : results) {
         const QString title = result.value(QStringLiteral("title")).toString();
         const QUrl url = result.value(QStringLiteral("url")).toUrl();
         if (url.isEmpty() || url.scheme() == QLatin1String("place")) {
