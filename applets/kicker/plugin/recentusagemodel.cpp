@@ -247,18 +247,17 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
         url.setScheme(QStringLiteral("file"));
     }
 
-#if KIO_VERSION >= QT_VERSION_CHECK(5,57,0)
-    // Avoid calling QT_LSTAT and accessing recent documents
-    const KFileItem fileItem(url, KFileItem::SkipMimeTypeFromContent);
-#else
-    const KFileItem fileItem(url);
-#endif
+    auto getFileItem = [=] () {
+        // Avoid calling QT_LSTAT and accessing recent documents
+        return KFileItem(url, KFileItem::SkipMimeTypeFromContent);
+    };
 
     if (!url.isValid()) {
         return QVariant();
     }
 
     if (role == Qt::DisplayRole) {
+        auto fileItem = getFileItem();
         const auto index = m_placesModel->closestItem(fileItem.url());
         if (index.isValid()) {
             const auto parentUrl = m_placesModel->url(index);
@@ -268,12 +267,14 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
         }
         return fileItem.text();
     } else if (role == Qt::DecorationRole) {
+        auto fileItem = getFileItem();
         return QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme(QStringLiteral("unknown")));
     } else if (role == Kicker::GroupRole) {
         return i18n("Documents");
     } else if (role == Kicker::FavoriteIdRole || role == Kicker::UrlRole) {
         return url.toString();
     } else if (role == Kicker::DescriptionRole) {
+        auto fileItem = getFileItem();
         QString desc = fileItem.localPath();
 
         const auto index = m_placesModel->closestItem(fileItem.url());
@@ -297,6 +298,7 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
     } else if (role == Kicker::HasActionListRole) {
         return true;
     } else if (role == Kicker::ActionListRole) {
+        auto fileItem = getFileItem();
         QVariantList actionList = Kicker::createActionListForFileItem(fileItem);
 
         actionList << Kicker::createSeparatorActionItem();
