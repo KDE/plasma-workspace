@@ -396,6 +396,7 @@ ColumnLayout{
             }
 
             delegate: DraggableDelegate {
+                id: delegate
                 width: list.width
                 contentItem: delegateLoader
 
@@ -563,7 +564,7 @@ ColumnLayout{
                                                             : i18nc("Expand to show n more notifications",
                                                                     "Show %1 More", (model.groupChildrenCount - model.expandedGroupChildrenCount))
                                 visible: (model.groupChildrenCount > model.expandedGroupChildrenCount || model.isGroupExpanded)
-                                    && delegateLoader.ListView.nextSection !== delegateLoader.ListView.section
+                                    && delegate.ListView.nextSection !== delegate.ListView.section
                                 onClicked: list.setGroupExpanded(model.index, !model.isGroupExpanded)
                             }
 
@@ -574,8 +575,8 @@ ColumnLayout{
                                 svg: lineSvg
 
                                 // property is only atached to the delegate itself (the Loader in our case)
-                                visible: (!model.isInGroup || delegateLoader.ListView.nextSection !== delegateLoader.ListView.section)
-                                                && delegateLoader.ListView.nextSection !== "" // don't show after last item
+                                visible: (!model.isInGroup || delegate.ListView.nextSection !== delegate.ListView.section)
+                                                && delegate.ListView.nextSection !== "" // don't show after last item
                             }
                         }
                     }
