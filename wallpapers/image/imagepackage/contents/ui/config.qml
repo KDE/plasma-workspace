@@ -286,16 +286,37 @@ ColumnLayout {
                                     onTriggered: imageWallpaper.openFolder(modelData)
                                 }
                             ]
-                            QtControls2.Label {
-                                text: modelData.endsWith("/") ? modelData.split('/').reverse()[1] : modelData.split('/').pop()
-                                Layout.fillWidth: true
+                            ColumnLayout {
+
+                                width: slidePathsView.width
+
                                 QtControls2.ToolTip.text: modelData
-                                QtControls2.ToolTip.visible: folderDelegate.hovered
+                                QtControls2.ToolTip.visible: folderDelegate.hovered && subtitle.truncated
                                 QtControls2.ToolTip.delay: 1000
                                 QtControls2.ToolTip.timeout: 5000
+
+                                // Header: the folder
+                                QtControls2.Label {
+                                    Layout.fillWidth: true
+                                    elide: Text.ElideRight
+                                    text: {
+                                        var strippedPath = modelData.replace(/\/+$/, "");
+                                        return strippedPath.split('/').pop()
+                                    }
+                                }
+                                // Subtitle: the path to the folder
+                                QtControls2.Label {
+                                    id: subtitle
+                                    Layout.fillWidth: true
+                                    elide: Text.ElideRight
+                                    text: {
+                                        var strippedPath = modelData.replace(/\/+$/, "");
+                                        return strippedPath.replace(/\/[^\/]*$/, '');;
+                                    }
+                                    font.pointSize: theme.smallestFont.pointSize
+                                    opacity: 0.6
+                                }
                             }
-                            width: slidePathsView.width
-                            height: paintedHeight;
                         }
 
                         Kirigami.Heading {
