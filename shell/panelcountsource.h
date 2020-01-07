@@ -36,7 +36,7 @@ public:
     QString name() const override { return i18n("Panel Count"); }
     QString description() const override { return i18n("Counts the panels"); }
 
-    QVariant data() override { return corona->panelCount(); }
+    QVariant data() override { return QVariantMap{ { QStringLiteral("panelCount"), corona->panelCount() } } ; }
 
 private:
     ShellCorona* const corona;
