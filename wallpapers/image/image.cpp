@@ -149,9 +149,6 @@ void Image::setRenderingMode(RenderingMode mode)
     m_mode = mode;
 
     if (m_mode == SlideShow) {
-        if (m_slidePaths.isEmpty()) {
-            m_slidePaths << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("share/wallpapers"), QStandardPaths::LocateDirectory);
-        }
 
         startSlideshow();
 
@@ -359,8 +356,15 @@ void Image::setSlidePaths(const QStringList &slidePaths)
     m_slidePaths = slidePaths;
     m_slidePaths.removeAll(QString());
 
-    if (m_slidePaths.isEmpty()) {
-        m_slidePaths << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("share/wallpapers"), QStandardPaths::LocateDirectory);
+    if (!m_slidePaths.isEmpty()) {
+        // Replace 'preferred://wallpaperlocations' with real paths
+        const QStringList preProcessedPaths = m_slidePaths;
+        for (const QString &path : preProcessedPaths) {
+            if (path == QLatin1String("preferred://wallpaperlocations")) {
+                m_slidePaths << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers"), QStandardPaths::LocateDirectory);
+                m_slidePaths.removeAll(path);
+            }
+        }
     }
 
     if (m_mode == SlideShow) {
