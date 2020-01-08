@@ -285,6 +285,18 @@ ColumnLayout {
                             width: slidePathsView.width
                             height: paintedHeight;
                         }
+
+                        Kirigami.Heading {
+                            anchors.fill: parent
+                            anchors.margins: Kirigami.Units.largeSpacing
+                            horizontalAlignment: Text.AlignHCenter
+                            verticalAlignment: Text.AlignVCenter
+                            wrapMode: Text.WordWrap
+                            visible: slidePathsView.count === 0
+                            level: 2
+                            text: i18n("There are no wallpaper locations configured")
+                            opacity: 0.3
+                        }
                     }
                 }
                 Loader {
@@ -342,6 +354,20 @@ ColumnLayout {
             }
             view.delegate: WallpaperDelegate {
                 color: cfg_Color
+            }
+
+            Kirigami.Heading {
+                anchors.fill: parent
+                anchors.margins: Kirigami.Units.largeSpacing
+                // FIXME: this is needed to vertically center it in the grid for some reason
+                anchors.topMargin: wallpapersGrid.height
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                wrapMode: Text.WordWrap
+                visible: wallpapersGrid.view.count === 0
+                level: 2
+                text: i18n("There are no wallpapers in this slideshow")
+                opacity: 0.3
             }
         }
     }
