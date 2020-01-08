@@ -1,6 +1,7 @@
 /*
  * Registers as a embed container
  * Copyright (C) 2015 <davidedmundson@kde.org> David Edmundson
+ * Copyright (C) 2019 <materka@gmail.com> Konrad Materka
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -22,11 +23,7 @@
 #include "debug.h"
 
 #include <QCoreApplication>
-#include <QDBusConnection>
-#include <QDBusServiceWatcher>
-#include <QHash>
 #include <QTimer>
-#include <QTextDocument>
 #include <QX11Info>
 
 #include <KSelectionOwner>
@@ -163,6 +160,15 @@ bool FdoSelectionManager::nativeEventFilter(const QByteArray &eventType, void *m
                 sniProxy->resizeWindow(event->width, event->height);
             }
         }
+    } else if (responseType == XCB_VISIBILITY_NOTIFY) {
+        const auto event = reinterpret_cast<xcb_visibility_notify_event_t *>(ev);
+        // it's possible that something showed our container window, we have to hide it
+        // workaround for BUG 357443: when KWin is restarted, container window is shown on top
+        if (event->state == XCB_VISIBILITY_UNOBSCURED) {
+            for (auto sniProxy : m_proxies.values()) {
+                sniProxy->hideContainerWindow(event->window);
+            }
+        }
     }
 
     return false;
@@ -197,17 +203,6 @@ void FdoSelectionManager::onClaimedOwnership()
     qCDebug(SNIPROXY) << "Manager selection claimed";
 
     setSystemTrayVisual();
-
-    // send all container windows to background on KWin restart
-    QDBusServiceWatcher *watcher = new QDBusServiceWatcher(QStringLiteral("org.kde.KWin"), QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForRegistration, this);
-    connect(watcher, &QDBusServiceWatcher::serviceRegistered, this, [=](const QString &) {
-        // some delay is necesary
-        QTimer::singleShot(100, this, [=]() {
-            for (auto sniproxy : m_proxies) {
-                sniproxy->stackContainerWindow(XCB_STACK_MODE_BELOW);
-            }
-        });
-    });
 }
 
 void FdoSelectionManager::onFailedToClaimOwnership()

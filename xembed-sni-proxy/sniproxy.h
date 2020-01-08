@@ -1,6 +1,7 @@
 /*
  * Holds one embedded window, registers as DBus entry
  * Copyright (C) 2015 <davidedmundson@kde.org> David Edmundson
+ * Copyright (C) 2019 <materka@gmail.com> Konrad Materka
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -49,8 +50,8 @@ public:
     ~SNIProxy() override;
 
     void update();
-    void stackContainerWindow(const uint32_t stackMode) const;
     void resizeWindow(const uint16_t width, const uint16_t height) const;
+    void hideContainerWindow(xcb_window_t windowId) const;
 
     /**
      * @return the category of the application associated to this item
@@ -154,13 +155,14 @@ private:
     bool isTransparentImage(const QImage &image) const;
     QImage convertFromNative(xcb_image_t *xcbImage) const;
     QPoint calculateClickPoint() const;
+    void stackContainerWindow(const uint32_t stackMode) const;
 
     QDBusConnection m_dbus;
     xcb_window_t m_windowId;
     xcb_window_t m_containerWid;
     static int s_serviceCount;
     QPixmap m_pixmap;
-
+    bool sendingClickEvent;
     InjectMode m_injectMode;
 };
 

@@ -1,6 +1,7 @@
 /*
  * Holds one embedded window, registers as DBus entry
  * Copyright (C) 2015 <davidedmundson@kde.org> David Edmundson
+ * Copyright (C) 2019 <materka@gmail.com> Konrad Materka
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -79,6 +80,7 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     //instead lets use one DBus connection per SNI
     m_dbus(QDBusConnection::connectToBus(QDBusConnection::SessionBus, QStringLiteral("XembedSniProxy%1").arg(s_serviceCount++))),
     m_windowId(wid),
+    sendingClickEvent(false),
     m_injectMode(Direct)
 {
     //create new SNI
@@ -101,8 +103,9 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject* parent):
     uint32_t mask = XCB_CW_BACK_PIXEL | XCB_CW_OVERRIDE_REDIRECT | XCB_CW_EVENT_MASK;
     values[0] = screen->black_pixel; //draw a solid background so the embedded icon doesn't get garbage in it
     values[1] = true; //bypass wM
-    // Redirect and handle structure (size, position) requests on the embedded window.
-    values[2] = XCB_EVENT_MASK_STRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_REDIRECT;
+    values[2] = XCB_EVENT_MASK_VISIBILITY_CHANGE | // receive visibility change, to handle KWin restart #357443
+                // Redirect and handle structure (size, position) requests from the embedded window.
+                XCB_EVENT_MASK_STRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_REDIRECT;
     xcb_create_window (c,                          /* connection    */
                     XCB_COPY_FROM_PARENT,          /* depth         */
                      m_containerWid,               /* window Id     */
@@ -217,13 +220,6 @@ void SNIProxy::update()
     emit NewToolTip();
 }
 
-void SNIProxy::stackContainerWindow(const uint32_t stackMode) const
-{
-    auto c = QX11Info::connection();
-    const uint32_t stackData[] = {stackMode};
-    xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackData);
-}
-
 void SNIProxy::resizeWindow(const uint16_t width, const uint16_t height) const
 {
     auto connection = QX11Info::connection();
@@ -237,6 +233,14 @@ void SNIProxy::resizeWindow(const uint16_t width, const uint16_t height) const
                          windowSizeConfigVals);
 
     xcb_flush(connection);
+}
+
+void SNIProxy::hideContainerWindow(xcb_window_t windowId) const
+{
+    if (m_containerWid == windowId && !sendingClickEvent) {
+        qDebug() << "Container window visible, stack below";
+        stackContainerWindow(XCB_STACK_MODE_BELOW);
+    }
 }
 
 QSize SNIProxy::calculateClientWindowSize() const
@@ -432,6 +436,13 @@ QPoint SNIProxy::calculateClickPoint() const
     return clickPoint;
 }
 
+void SNIProxy::stackContainerWindow(const uint32_t stackMode) const
+{
+    auto c = QX11Info::connection();
+    const uint32_t stackData[] = {stackMode};
+    xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackData);
+}
+
 //____________properties__________
 
 QString SNIProxy::Category() const
@@ -513,6 +524,7 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
     //ideally we should make this match the plasmoid hit area
 
     qCDebug(SNIPROXY) << "Received click" << mouseButton << "with passed x*y" << x << y;
+    sendingClickEvent = true;
 
     auto c = QX11Info::connection();
 
@@ -603,4 +615,6 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
 #ifndef VISUAL_DEBUG
     stackContainerWindow(XCB_STACK_MODE_BELOW);
 #endif
+
+    sendingClickEvent = false;
 }
