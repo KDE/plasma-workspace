@@ -214,9 +214,13 @@ ColumnLayout {
                         to: 24
                         editable: true
                         onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
-                    }
-                    QtControls2.Label {
-                        text: i18nd("plasma_wallpaper_org.kde.image","Hours")
+
+                        textFromValue: function(value, locale) {
+                            return i18np("%1 hour", "%1 hours", value)
+                        }
+                        valueFromText: function(text, locale) {
+                            return parseInt(text);
+                        }
                     }
                     QtControls2.SpinBox {
                         id: minutesInterval
@@ -225,9 +229,13 @@ ColumnLayout {
                         to: 60
                         editable: true
                         onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
-                    }
-                    QtControls2.Label {
-                        text: i18nd("plasma_wallpaper_org.kde.image","Minutes")
+
+                        textFromValue: function(value, locale) {
+                            return i18np("%1 minute", "%1 minutes", value)
+                        }
+                        valueFromText: function(text, locale) {
+                            return parseInt(text);
+                        }
                     }
                     QtControls2.SpinBox {
                         id: secondsInterval
@@ -236,9 +244,13 @@ ColumnLayout {
                         to: 60
                         editable: true
                         onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
-                    }
-                    QtControls2.Label {
-                        text: i18nd("plasma_wallpaper_org.kde.image","Seconds")
+
+                        textFromValue: function(value, locale) {
+                            return i18np("%1 second", "%1 seconds", value)
+                        }
+                        valueFromText: function(text, locale) {
+                            return parseInt(text);
+                        }
                     }
                 }
             }
