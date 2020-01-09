@@ -196,14 +196,6 @@ void runEnvironmentScripts()
         }
     }
     sourceFiles(scripts);
-
-    // Make sure that the KDE prefix is first in XDG_DATA_DIRS and that it's set at all.
-    // The spec allows XDG_DATA_DIRS to be not set, but X session startup scripts tend
-    // to set it to a list of paths *not* including the KDE prefix if it's not /usr or
-    // /usr/local.
-    if (!qEnvironmentVariableIsSet("XDG_DATA_DIRS")) {
-        qputenv("XDG_DATA_DIRS", KDE_INSTALL_FULL_DATAROOTDIR ":/usr/share:/usr/local/share");
-    }
 }
 
 
