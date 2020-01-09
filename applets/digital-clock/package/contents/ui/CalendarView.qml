@@ -33,6 +33,8 @@ Item {
     property int _minimumHeight: units.gridUnit * 14
     Layout.preferredWidth: _minimumWidth
     Layout.preferredHeight: _minimumHeight * 1.5
+    Layout.maximumWidth: Layout.preferredWidth
+    Layout.maximumHeight: Layout.preferredHeight
 
     readonly property bool showAgenda: PlasmaCalendar.EventPluginsManager.enabledPlugins.length > 0
 

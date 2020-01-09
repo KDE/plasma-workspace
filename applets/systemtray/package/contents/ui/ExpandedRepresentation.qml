@@ -32,7 +32,9 @@ ColumnLayout {
     Layout.minimumWidth: units.gridUnit * 24
     Layout.minimumHeight: units.gridUnit * 21
     Layout.preferredWidth: Layout.minimumWidth
-    Layout.preferredHeight: Layout.minimumHeight * 1.5
+    Layout.preferredHeight: Layout.minimumHeight
+    Layout.maximumWidth: Layout.minimumWidth
+    Layout.maximumHeight: Layout.minimumHeight
     spacing: 0 // avoid gap between title and content
 
     property alias activeApplet: container.activeApplet
