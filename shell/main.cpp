@@ -30,6 +30,9 @@
 
 #include <KAboutData>
 #include <KQuickAddons/QtQuickSettings>
+#ifdef WITH_KUSERFEEDBACKCORE
+#include <KUserFeedback/Provider>
+#endif
 
 #include <kdbusservice.h>
 #include <klocalizedstring.h>
@@ -117,12 +120,20 @@ int main(int argc, char *argv[])
     QCommandLineOption testOption(QStringList() << QStringLiteral("test"),
                                         i18n("Enables test mode and specifies the layout javascript file to set up the testing environment"), i18n("file"), QStringLiteral("layout.js"));
 
+
+#ifdef WITH_KUSERFEEDBACKCORE
+    QCommandLineOption feedbackOption(QStringList() << QStringLiteral("feedback"),
+                                        i18n("Lists the available options for user feedback"));
+#endif
     cliOptions.addOption(dbgOption);
     cliOptions.addOption(noRespawnOption);
     cliOptions.addOption(shellPluginOption);
     cliOptions.addOption(standaloneOption);
     cliOptions.addOption(testOption);
     cliOptions.addOption(replaceOption);
+#ifdef WITH_KUSERFEEDBACKCORE
+    cliOptions.addOption(feedbackOption);
+#endif
 
     aboutData.setupCommandLine(&cliOptions);
     cliOptions.process(app);
@@ -138,6 +149,14 @@ int main(int argc, char *argv[])
 
     ShellCorona* corona = new ShellCorona(&app);
     corona->setShell(cliOptions.value(shellPluginOption));
+
+#ifdef WITH_KUSERFEEDBACKCORE
+    if (cliOptions.isSet(feedbackOption)) {
+        QTextStream(stdout) << corona->feedbackProvider()->describeDataSources();
+        return 0;
+    }
+#endif
+
     QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, corona, &QObject::deleteLater);
 
     if (!cliOptions.isSet(noRespawnOption) && !cliOptions.isSet(testOption)) {

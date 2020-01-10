@@ -28,6 +28,7 @@ class Feedback : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
 
+    Q_PROPERTY(QJsonArray feedbackSources MEMBER m_feedbackSources NOTIFY feedbackSourcesChanged)
     Q_PROPERTY(bool feedbackEnabled READ feedbackEnabled CONSTANT)
     Q_PROPERTY(int plasmaFeedbackLevel READ plasmaFeedbackLevel WRITE setPlasmaFeedbackLevel NOTIFY plasmaFeedbackLevelChanged)
 
@@ -40,15 +41,20 @@ class Feedback : public KQuickAddons::ConfigModule
 
         void setPlasmaFeedbackLevel(int plasmaFeedbackLevel);
 
+        void programFinished(int exitCode);
+
     public Q_SLOTS:
         void load() override;
         void save() override;
         void defaults() override;
 
     Q_SIGNALS:
+        void feedbackSourcesChanged();
         void plasmaFeedbackLevelChanged(bool plasmaFeedbackLevel);
 
     private:
         KSharedConfig::Ptr m_plasmaConfig;
         int m_plasmaFeedbackLevel = 0;
+        QHash<int, QHash<QString, QJsonArray>> m_uses;
+        QJsonArray m_feedbackSources;
 };

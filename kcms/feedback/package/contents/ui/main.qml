@@ -70,6 +70,7 @@ SimpleKCM {
             QQC2.Slider {
                 id: statisticsModeSlider
                 Kirigami.FormData.label: i18n("Plasma:")
+                readonly property var currentMode: modeOptions[value]
                 enabled: kcm.feedbackEnabled
                 Layout.fillWidth: true
                 Layout.minimumWidth: Kirigami.Units.gridUnit * 21
@@ -81,20 +82,15 @@ SimpleKCM {
                 stepSize: 1
                 snapMode: QQC2.Slider.SnapAlways
 
-                function findIndex(array, what) {
+                function findIndex(array, what, defaultValue) {
                     for (var v in array) {
                         if (array[v] == what)
                             return v;
                     }
-                    return null;
+                    return defaultValue;
                 }
 
-                Connections {
-                    target: kcm
-                    onPlasmaFeedbackLevelChanged: {
-                        statisticsModeSlider.value = statisticsModeSlider.findIndex(statisticsModeSlider.modeOptions, kcm.plasmaFeedbackLevel)
-                    }
-                }
+                value: findIndex(modeOptions, kcm.plasmaFeedbackLevel, 0)
 
                 onMoved: {
                     kcm.plasmaFeedbackLevel = modeOptions[value]
@@ -111,7 +107,7 @@ SimpleKCM {
                 Layout.maximumWidth: statisticsModeSlider.width
                 wrapMode: Text.WordWrap
                 level: 3
-                text: feedbackController.telemetryName(statisticsModeSlider.modeOptions[statisticsModeSlider.value])
+                text: feedbackController.telemetryName(statisticsModeSlider.currentMode)
             }
             QQC2.Label {
                 Layout.alignment: Qt.AlignHCenter
@@ -120,7 +116,37 @@ SimpleKCM {
 
                 text: {
                     feedbackController.applicationName
-                    return feedbackController.telemetryDescription(statisticsModeSlider.modeOptions[statisticsModeSlider.value])
+                    return feedbackController.telemetryDescription(statisticsModeSlider.currentMode)
+                }
+            }
+            ColumnLayout {
+                Layout.maximumWidth: root.width * 0.5
+                Repeater {
+                    model: kcm.feedbackSources
+                    delegate: QQC2.Label {
+                        visible: modelData.mode <= statisticsModeSlider.currentMode
+                        text: "· " + modelData.description
+
+                        MouseArea {
+                            anchors.fill: parent
+                            hoverEnabled: true
+                            QQC2.ToolTip {
+                                width: iconsLayout.implicitWidth + Kirigami.Units.largeSpacing * 2
+                                height: iconsLayout.implicitHeight + Kirigami.Units.smallSpacing * 2
+                                visible: parent.containsMouse
+                                RowLayout {
+                                    id: iconsLayout
+                                    anchors.centerIn: parent
+                                    Repeater {
+                                        model: modelData.icons
+                                        delegate: Image {
+                                            source: "image://icon/" + modelData
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
                 opacity: 0.6
             }
