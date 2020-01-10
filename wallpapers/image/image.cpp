@@ -46,6 +46,7 @@
 #include <QFileDialog>
 #include <KRandom>
 #include <KIO/Job>
+#include <KIO/CopyJob>
 #include <krun.h>
 #include <klocalizedstring.h>
 
@@ -551,10 +552,12 @@ void Image::addUrl(const QUrl &url, bool setAsCurrent)
             return;
         }
     } else {
-        QString wallpaperPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("wallpapers/") + url.path();
+        QDir wallpaperDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/wallpapers/");
+        const QString wallpaperPath = wallpaperDir.absoluteFilePath(url.fileName());
 
-        if (!wallpaperPath.isEmpty()) {
-            KIO::FileCopyJob *job = KIO::file_copy(url, QUrl(wallpaperPath), -1, KIO::HideProgressInfo);
+        if (wallpaperDir.mkpath(wallpaperDir.absolutePath()) && !url.fileName().isEmpty()) {
+            KIO::CopyJob *job = KIO::copy(url, QUrl::fromLocalFile(wallpaperPath), KIO::HideProgressInfo);
+
             if (setAsCurrent) {
                 connect(job, &KJob::result, this, &Image::setWallpaperRetrieved);
             } else {
@@ -579,7 +582,7 @@ void Image::addUrl(const QUrl &url, bool setAsCurrent)
 
 void Image::setWallpaperRetrieved(KJob *job)
 {
-    KIO::FileCopyJob *copyJob = qobject_cast<KIO::FileCopyJob *>(job);
+    KIO::CopyJob *copyJob = qobject_cast<KIO::CopyJob *>(job);
     if (copyJob && !copyJob->error()) {
         setWallpaper(copyJob->destUrl().toLocalFile());
     }
@@ -587,7 +590,7 @@ void Image::setWallpaperRetrieved(KJob *job)
 
 void Image::addWallpaperRetrieved(KJob *job)
 {
-    KIO::FileCopyJob *copyJob = qobject_cast<KIO::FileCopyJob *>(job);
+    KIO::CopyJob *copyJob = qobject_cast<KIO::CopyJob *>(job);
     if (copyJob && !copyJob->error()) {
         addUrl(copyJob->destUrl(), false);
     }
