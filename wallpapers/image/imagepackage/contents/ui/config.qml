@@ -216,7 +216,7 @@ ColumnLayout {
                         onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
 
                         textFromValue: function(value, locale) {
-                            return i18np("%1 hour", "%1 hours", value)
+                            return i18ndp("plasma_wallpaper_org.kde.image","%1 hour", "%1 hours", value)
                         }
                         valueFromText: function(text, locale) {
                             return parseInt(text);
@@ -231,7 +231,7 @@ ColumnLayout {
                         onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
 
                         textFromValue: function(value, locale) {
-                            return i18np("%1 minute", "%1 minutes", value)
+                            return i18ndp("plasma_wallpaper_org.kde.image","%1 minute", "%1 minutes", value)
                         }
                         valueFromText: function(text, locale) {
                             return parseInt(text);
@@ -246,7 +246,7 @@ ColumnLayout {
                         onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
 
                         textFromValue: function(value, locale) {
-                            return i18np("%1 second", "%1 seconds", value)
+                            return i18ndp("plasma_wallpaper_org.kde.image","%1 second", "%1 seconds", value)
                         }
                         valueFromText: function(text, locale) {
                             return parseInt(text);
@@ -327,7 +327,7 @@ ColumnLayout {
                             wrapMode: Text.WordWrap
                             visible: slidePathsView.count === 0
                             level: 2
-                            text: i18n("There are no wallpaper locations configured")
+                            text: i18nd("plasma_wallpaper_org.kde.image", "There are no wallpaper locations configured")
                             opacity: 0.3
                         }
                     }
@@ -399,7 +399,7 @@ ColumnLayout {
                 wrapMode: Text.WordWrap
                 visible: wallpapersGrid.view.count === 0
                 level: 2
-                text: i18n("There are no wallpapers in this slideshow")
+                text: i18nd("plasma_wallpaper_org.kde.image", "There are no wallpapers in this slideshow")
                 opacity: 0.3
             }
         }
