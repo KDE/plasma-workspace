@@ -90,6 +90,7 @@ AbstractItem {
                     openContextMenu(pos);
                 }
             });
+            taskIcon.activated()
             break;
         }
         case Qt.RightButton:
@@ -103,6 +104,7 @@ AbstractItem {
 
             operation.y = pos.y;
             service.startOperationCall(operation);
+            taskIcon.activated()
             break;
         }
     }

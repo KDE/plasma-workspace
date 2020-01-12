@@ -66,6 +66,8 @@ AbstractItem {
     }
     Connections {
         target: applet
+        onActivated: plasmoidContainer.activated()
+
         onExpandedChanged: {
             if (expanded) {
                 var oldApplet = root.activeApplet;
@@ -74,6 +76,7 @@ AbstractItem {
                     oldApplet.expanded = false;
                 }
                 dialog.visible = true;
+                plasmoidContainer.activated()
 
             } else if (root.activeApplet === applet) {
                 if (!applet.parent.hidden) {
