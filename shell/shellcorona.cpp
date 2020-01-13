@@ -203,8 +203,25 @@ ShellCorona::ShellCorona(QObject *parent)
     stopActivityAction->setData(Plasma::Types::ControlAction);
     stopActivityAction->setVisible(false);
 
-
     KGlobalAccel::self()->setGlobalShortcut(stopActivityAction, Qt::META + Qt::Key_S);
+
+    QAction *previousActivityAction = actions()->addAction(QStringLiteral("switch to previous activity"));
+    connect(previousActivityAction, &QAction::triggered,
+            this, &ShellCorona::previousActivity);
+    previousActivityAction->setText(i18n("Switch to Previous Activity"));
+    previousActivityAction->setData(Plasma::Types::ConfigureAction);
+    previousActivityAction->setShortcutContext(Qt::ApplicationShortcut);
+
+    KGlobalAccel::self()->setGlobalShortcut(previousActivityAction, QKeySequence());
+
+    QAction *nextActivityAction = actions()->addAction(QStringLiteral("switch to next activity"));
+    connect(nextActivityAction, &QAction::triggered,
+            this, &ShellCorona::nextActivity);
+    nextActivityAction->setText(i18n("Switch to Next Activity"));
+    nextActivityAction->setData(Plasma::Types::ConfigureAction);
+    nextActivityAction->setShortcutContext(Qt::ApplicationShortcut);
+
+    KGlobalAccel::self()->setGlobalShortcut(nextActivityAction, QKeySequence());
 
     connect(m_activityController, &KActivities::Controller::currentActivityChanged, this, &ShellCorona::currentActivityChanged);
     connect(m_activityController, &KActivities::Controller::activityAdded, this, &ShellCorona::activityAdded);
