@@ -369,28 +369,30 @@ QList<QAction *> IconApplet::contextualActions()
     if (desktopFile.hasLinkType()) {
         const QUrl linkUrl = QUrl(desktopFile.readUrl());
 
-        if (m_openWithActions.isEmpty()) {
-            if (!m_fileItemActions) {
-                m_fileItemActions = new KFileItemActions(this);
+        if (linkUrl.isValid() && !linkUrl.scheme().isEmpty()) {
+            if (m_openWithActions.isEmpty()) {
+                if (!m_fileItemActions) {
+                    m_fileItemActions = new KFileItemActions(this);
+                }
+                KFileItemListProperties itemProperties(KFileItemList({KFileItem(linkUrl)}));
+                m_fileItemActions->setItemListProperties(itemProperties);
+
+                if (!m_openWithMenu) {
+                    m_openWithMenu.reset(new QMenu());
+                }
+                m_openWithMenu->clear();
+                m_fileItemActions->addOpenWithActionsTo(m_openWithMenu.data());
+
+                m_openWithActions = m_openWithMenu->actions();
             }
-            KFileItemListProperties itemProperties(KFileItemList({KFileItem(linkUrl)}));
-            m_fileItemActions->setItemListProperties(itemProperties);
 
-            if (!m_openWithMenu) {
-                m_openWithMenu.reset(new QMenu());
-            }
-            m_openWithMenu->clear();
-            m_fileItemActions->addOpenWithActionsTo(m_openWithMenu.data());
-
-            m_openWithActions = m_openWithMenu->actions();
-        }
-
-        if (!m_openContainingFolderAction) {
-            if (KProtocolManager::supportsListing(linkUrl)) {
-                m_openContainingFolderAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"), this);
-                connect(m_openContainingFolderAction, &QAction::triggered, this, [ linkUrl] {
-                    KIO::highlightInFileManager({linkUrl});
-                });
+            if (!m_openContainingFolderAction) {
+                if (KProtocolManager::supportsListing(linkUrl)) {
+                    m_openContainingFolderAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"), this);
+                    connect(m_openContainingFolderAction, &QAction::triggered, this, [ linkUrl] {
+                        KIO::highlightInFileManager({linkUrl});
+                    });
+                }
             }
         }
     }
