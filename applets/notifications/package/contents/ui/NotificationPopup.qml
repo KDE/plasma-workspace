@@ -63,6 +63,7 @@ PlasmaCore.Dialog {
     property alias closable: notificationItem.closable
 
     property bool hasDefaultAction
+    property var defaultActionFallbackWindowIdx
     property alias actionNames: notificationItem.actionNames
     property alias actionLabels: notificationItem.actionLabels
 

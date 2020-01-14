@@ -28,6 +28,7 @@ import org.kde.plasma.components 2.0 as Components
 import org.kde.kquickcontrolsaddons 2.0
 
 import org.kde.notificationmanager 1.0 as NotificationManager
+import org.kde.taskmanager 0.1 as TaskManager
 
 import org.kde.plasma.private.notifications 2.0 as Notifications
 
@@ -349,6 +350,11 @@ QtObject {
         onNotificationsInhibitedUntilChanged: globals.checkInhibition()
     }
 
+    property QtObject tasksModel: TaskManager.TasksModel {
+        groupMode: TaskManager.TasksModel.GroupApplications
+        groupInline: false
+    }
+
     // This periodically checks whether do not disturb mode timed out and updates the "minutes ago" labels
     property QtObject timeSource: PlasmaCore.DataSource {
         engine: "time"
@@ -428,6 +434,41 @@ QtObject {
             onDismissClicked: model.dismissed = true
             onConfigureClicked: popupNotificationsModel.configure(popupNotificationsModel.index(index, 0))
             onDefaultActionInvoked: {
+                if (defaultActionFallbackWindowIdx) {
+                    if (!defaultActionFallbackWindowIdx.valid) {
+                        console.warn("Failed fallback notification activation as window no longer exists");
+                        return;
+                    }
+
+                    // When it's a group, activate the window highest in stacking order (presumably last used)
+                    if (tasksModel.data(defaultActionFallbackWindowIdx, TaskManager.AbstractTasksModel.IsGroupParent)) {
+                        let highestStacking = -1;
+                        let highestIdx = undefined;
+
+                        for (let i = 0; i < tasksModel.rowCount(defaultActionFallbackWindowIdx); ++i) {
+                            const idx = tasksModel.index(i, 0, defaultActionFallbackWindowIdx);
+
+                            const stacking = tasksModel.data(idx, TaskManager.AbstractTasksModel.StackingOrder);
+
+                            if (stacking > highestStacking) {
+                                highestStacking = stacking;
+                                highestIdx = tasksModel.makePersistentModelIndex(defaultActionFallbackWindowIdx.row, i);
+                            }
+                        }
+
+                        if (highestIdx && highestIdx.valid) {
+                            tasksModel.requestActivate(highestIdx);
+                            popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
+
+                        }
+                        return;
+                    }
+
+                    tasksModel.requestActivate(defaultActionFallbackWindowIdx);
+                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
+                    return;
+                }
+
                 popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0))
                 popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
             }
@@ -453,11 +494,29 @@ QtObject {
             onHeightChanged: positionPopups()
 
             Component.onCompleted: {
-                // Register apps that were seen spawning a popup so they can be configured later
-                // Apps with notifyrc can already be configured anyway
-                if (model.type === NotificationManager.Notifications.NotificationType && model.desktopEntry && !model.notifyRcName) {
-                    notificationSettings.registerKnownApplication(model.desktopEntry);
-                    notificationSettings.save();
+                if (model.type === NotificationManager.Notifications.NotificationType && model.desktopEntry) {
+                    // Register apps that were seen spawning a popup so they can be configured later
+                    // Apps with notifyrc can already be configured anyway
+                    if (!model.notifyRcName) {
+                        notificationSettings.registerKnownApplication(model.desktopEntry);
+                        notificationSettings.save();
+                    }
+
+                    // If there is no default action, check if there is a window we could activate instead
+                    if (!model.hasDefaultAction) {
+                        for (let i = 0; i < tasksModel.rowCount(); ++i) {
+                            const idx = tasksModel.index(i, 0);
+
+                            const appId = tasksModel.data(idx, TaskManager.AbstractTasksModel.AppId);
+                            if (appId === model.desktopEntry + ".desktop") {
+                                console.log("Associated window titled", tasksModel.data(idx, Qt.DisplayRole), "of", appId, "with this notification");
+                                // Takes a row number, not a QModelIndex
+                                defaultActionFallbackWindowIdx = tasksModel.makePersistentModelIndex(i);
+                                hasDefaultAction = true;
+                                break;
+                            }
+                        }
+                    }
                 }
 
                 // Tell the model that we're handling the timeout now
