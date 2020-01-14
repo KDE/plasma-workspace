@@ -99,7 +99,6 @@ class Image : public QObject, public QQmlParserStatus
         Q_INVOKABLE void removeSlidePath(const QString &path);
         Q_INVOKABLE void openFolder(const QString& path);
 
-        Q_INVOKABLE void getNewWallpaper(QQuickItem *ctx = nullptr);
         Q_INVOKABLE void showFileDialog();
 
         Q_INVOKABLE void addUsersWallpaper(const QString &file);

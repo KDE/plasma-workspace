@@ -47,7 +47,6 @@
 #include <KRandom>
 #include <KIO/Job>
 #include <krun.h>
-#include <KNewStuff3/KNS3/DownloadDialog>
 #include <klocalizedstring.h>
 
 #include <Plasma/Theme>
@@ -644,27 +643,9 @@ void Image::backgroundsFound()
     }
 }
 
-void Image::getNewWallpaper(QQuickItem *ctx)
-{
-    if (!m_newStuffDialog) {
-        m_newStuffDialog = new KNS3::DownloadDialog( QString::fromLatin1("wallpaper.knsrc") );
-        KNS3::DownloadDialog *strong = m_newStuffDialog.data();
-        strong->setTitle(i18n("Download Wallpapers"));
-        connect(m_newStuffDialog.data(), &QDialog::accepted, this, &Image::newStuffFinished);
-    }
-
-    if (ctx && ctx->window()) {
-        m_newStuffDialog->setWindowModality(Qt::WindowModal);
-        m_newStuffDialog->winId(); // so it creates the windowHandle();
-        m_newStuffDialog->windowHandle()->setTransientParent(ctx->window());
-    }
-
-    m_newStuffDialog.data()->show();
-}
-
 void Image::newStuffFinished()
 {
-    if (m_model && (!m_newStuffDialog || m_newStuffDialog.data()->changedEntries().size() > 0)) {
+    if (m_model) {
         m_model->reload(m_usersWallpapers);
     }
 }

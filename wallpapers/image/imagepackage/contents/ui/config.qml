@@ -25,7 +25,7 @@ import QtQuick.Window 2.0 // for Screen
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kconfig 1.0 // for KAuthorized
+import org.kde.newstuff 1.62 as NewStuff
 import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.kcm 1.1 as KCM
 import org.kde.kirigami 2.5 as Kirigami
@@ -344,12 +344,12 @@ ColumnLayout {
                     text: i18nd("plasma_wallpaper_org.kde.image","Add Folder...")
                     onClicked: imageWallpaper.showAddSlidePathsDialog()
                 }
-                QtControls2.Button {
+                NewStuff.Button {
                     Layout.alignment: Qt.AlignRight
-                    icon.name: "get-hot-new-stuff"
-                    text: i18nd("plasma_wallpaper_org.kde.image","Get New Wallpapers...")
-                    visible: KAuthorized.authorize("ghns")
-                    onClicked: imageWallpaper.getNewWallpaper(this);
+                    configFile: "wallpaper.knsrc"
+                    downloadNewWhat: i18n("Wallpapers")
+                    viewMode: NewStuff.Page.ViewMode.Preview
+                    onChangedEntriesChanged: imageWallpaper.newStuffFinished();
                 }
             }
         }
@@ -443,11 +443,12 @@ ColumnLayout {
             text: i18nd("plasma_wallpaper_org.kde.image","Add Image...")
             onClicked: imageWallpaper.showFileDialog();
         }
-        QtControls2.Button {
-            icon.name: "get-hot-new-stuff"
-            text: i18nd("plasma_wallpaper_org.kde.image","Get New Wallpapers...")
-            visible: KAuthorized.authorize("ghns")
-            onClicked: imageWallpaper.getNewWallpaper(this);
+        NewStuff.Button {
+            Layout.alignment: Qt.AlignRight
+            configFile: "wallpaper.knsrc"
+            downloadNewWhat: i18n("Wallpapers")
+            viewMode: NewStuff.Page.ViewMode.Preview
+            onChangedEntriesChanged: imageWallpaper.newStuffFinished();
         }
     }
 }
