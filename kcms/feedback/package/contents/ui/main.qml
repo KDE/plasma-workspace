@@ -28,7 +28,7 @@ import org.kde.kcm 1.2
 SimpleKCM {
     id: root
 
-    ConfigModule.buttons: ConfigModule.Defaults | ConfigModule.Apply
+    ConfigModule.buttons: ConfigModule.Default | ConfigModule.Apply
     leftPadding: width * 0.1
     rightPadding: leftPadding
 
