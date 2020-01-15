@@ -242,34 +242,6 @@ MouseArea {
           }
     }
 
-
-    //due to the magic of property bindings this function will be
-    //re-executed all the times a setting changes
-    property var shownCategories: {
-        var array = [];
-        if (plasmoid.configuration.applicationStatusShown) {
-            array.push("ApplicationStatus");
-        }
-        if (plasmoid.configuration.communicationsShown) {
-            array.push("Communications");
-        }
-        if (plasmoid.configuration.systemServicesShown) {
-            array.push("SystemServices");
-        }
-        if (plasmoid.configuration.hardwareControlShown) {
-            array.push("Hardware");
-        }
-        if (plasmoid.configuration.miscellaneousShown) {
-            array.push("UnknownCategory");
-        }
-
-        //nothing? make a regexp that matches nothing
-        if (array.length === 0) {
-            array.push("$^")
-        }
-        return array;
-    }
-
     PlasmaCore.SortFilterModel {
         id: statusNotifierModel
         sourceModel: PlasmaCore.DataModel {

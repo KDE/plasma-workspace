@@ -1,6 +1,7 @@
 /*
  *  Copyright 2013 Sebastian Kügler <sebas@kde.org>
  *  Copyright 2014 Marco Martin <mart@kde.org>
+ *  Copyright 2019 Konrad Materka <materka@gmail.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,14 +19,12 @@
  */
 
 import QtQuick 2.5
-import QtQuick.Controls 1.4 as QQC1
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kquickcontrolsaddons 2.0
+import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.kquickcontrols 2.0 as KQC
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.10 as Kirigami
 
 ColumnLayout {
     id: iconsPage
@@ -34,193 +33,254 @@ ColumnLayout {
 
     property var cfg_shownItems: []
     property var cfg_hiddenItems: []
+    property var cfg_extraItems: []
     property alias cfg_showAllItems: showAllCheckBox.checked
 
-    PlasmaCore.SortFilterModel {
-       id: systemTrayModel
-       sourceModel: plasmoid.nativeInterface.systemTrayModel
+    QQC2.CheckBox {
+        id: showAllCheckBox
+        text: i18n("Always show all entries")
     }
 
-    Kirigami.FormLayout {
-
-        QQC2.CheckBox {
-            id: showAllCheckBox
-            text: i18n("Always show all entries")
-        }
-
-        QQC2.Button { // just for measurement
-            id: measureButton
-            text: "measureButton"
-            visible: false
-        }
-
-        // resizeToContents does not take into account the heading
-        QQC2.Label {
-            id: shortcutColumnMeasureLabel
-            text: shortcutColumn.title
-            visible: false
+    function categoryName(category) {
+        switch (category) {
+        case "ApplicationStatus":
+            return i18n("Application Status")
+        case "Communications":
+            return i18n("Communications")
+        case "SystemServices":
+            return i18n("System Services")
+        case "Hardware":
+            return i18n("Hardware Control")
+        case "UnknownCategory":
+        default:
+            return i18n("Miscellaneous")
         }
     }
 
-    // convert to QtObjects compatible with TableView
-    function retrieveAllItems() {
-        var list = [];
-        for (var i = 0; i < systemTrayModel.count; i++) {
-            var item = systemTrayModel.get(i);
-            if (item.itemType === "Plasmoid" && !item.hasApplet) {
-                continue;
-            }
-            list.push({
-                "taskId": item.itemId,
-                "name": item.display,
-                "icon": item.decoration,
-                "applet": item.applet
-            });
-        }
-        list.sort(function(a, b) {
-            return a.name.localeCompare(b.name);
-        });
-        return list;
-    }
+    QQC2.ScrollView {
+        id: scrollView
 
-    // There is no QQC2 version of TableView yet
-    QQC1.TableView {
-        id: tableView
         Layout.fillWidth: true
         Layout.fillHeight: true
+        contentHeight: itemsList.implicitHeight
 
-        model: retrieveAllItems()
-        horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
-        flickableItem.boundsBehavior: Flickable.StopAtBounds
+        Component.onCompleted: scrollView.background.visible = true
 
-        Component.onCompleted: {
-            visibilityColumn.resizeToContents()
-            shortcutColumn.resizeToContents()
-        }
+        property bool scrollBarVisible: QQC2.ScrollBar.vertical && QQC2.ScrollBar.vertical.visible
+        property var scrollBarWidth: scrollBarVisible ? QQC2.ScrollBar.vertical.width : 0
 
-        // Taken from QtQuickControls BasicTableViewStyle, just to make its height sensible...
-        rowDelegate: BorderImage {
-            visible: styleData.selected || styleData.alternate
-            source: "image://__tablerow/" + (styleData.alternate ? "alternate_" : "")
-                    + (tableView.activeFocus ? "active" : "")
-            height: measureButton.height
-            border.left: 4 ; border.right: 4
-        }
+        ListView {
+            id: itemsList
 
-        QQC1.TableViewColumn {
-            id: entryColumn
-            width: tableView.viewport.width - visibilityColumn.width - shortcutColumn.width
-            title: i18nc("Name of the system tray entry", "Entry")
-            movable: false
-            resizable: false
+            property var visibilityColumnWidth: units.gridUnit
+            property var keySequenceColumnWidth: units.gridUnit
 
-            delegate: RowLayout {
-                Item { // spacer
-                    Layout.preferredWidth: 1
-                    Layout.fillHeight: true
+            model: PlasmaCore.SortFilterModel {
+                sourceModel: PlasmaCore.SortFilterModel {
+                    sourceModel: plasmoid.nativeInterface.systemTrayModel
+
+                    sortRole: "display"
+                    sortColumn: 0
+                    isSortLocaleAware: true
                 }
 
-                QIconItem {
-                    width: units.iconSizes.small
-                    height: width
-                    icon: modelData.icon
-                }
+                sortRole: "category"
+                sortColumn: 0
+                isSortLocaleAware: true
+            }
 
-                QQC2.Label {
-                    Layout.fillWidth: true
-                    text: modelData.name
-                    elide: Text.ElideRight
-                    wrapMode: Text.NoWrap
+            header: Kirigami.AbstractListItem {
+
+                leftPadding: LayoutMirroring.enabled && scrollView.scrollBarVisible ? scrollView.scrollBarWidth : padding * 2
+                rightPadding: !LayoutMirroring.enabled && scrollView.scrollBarVisible ? scrollView.scrollBarWidth : padding * 2
+
+                hoverEnabled: false
+
+                RowLayout {
+                    Kirigami.Heading {
+                        text: i18nc("Name of the system tray entry", "Entry")
+                        level: 2
+                        Layout.fillWidth: true
+                    }
+                    Kirigami.Heading {
+                        text: i18n("Visibility")
+                        level: 2
+                        Layout.preferredWidth: itemsList.visibilityColumnWidth
+                        Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
+                    }
+                    Kirigami.Heading {
+                        text: i18n("Keyboard Shortcut")
+                        level: 2
+                        Layout.preferredWidth: itemsList.keySequenceColumnWidth
+                        Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
+                    }
                 }
             }
-        }
 
-        QQC1.TableViewColumn {
-            id: visibilityColumn
-            title: i18n("Visibility")
-            movable: false
-            resizable: false
+            section {
+                property: "category"
+                delegate: Kirigami.ListSectionHeader {
+                    label: categoryName(section)
 
-            delegate: QQC2.ComboBox {
-                implicitWidth: Math.round(units.gridUnit * 6.5) // ComboBox sizing is broken
-
-                enabled: !showAllCheckBox.checked
-                currentIndex: {
-                    if (cfg_shownItems.indexOf(modelData.taskId) != -1) {
-                        return 1;
-                    } else if (cfg_hiddenItems.indexOf(modelData.taskId) != -1) {
-                        return 2;
-                    } else {
-                        return 0;
-                    }
+                    leftPadding: LayoutMirroring.enabled && scrollView.scrollBarVisible ? scrollView.scrollBarWidth : padding * 2
+                    rightPadding: !LayoutMirroring.enabled && scrollView.scrollBarVisible ? scrollView.scrollBarWidth : padding * 2
                 }
-
-                // activated, in contrast to currentIndexChanged, only fires if the user himself changed the value
-                onActivated: {
-                    var shownIndex = cfg_shownItems.indexOf(modelData.taskId);
-                    var hiddenIndex = cfg_hiddenItems.indexOf(modelData.taskId);
-
-                    switch (index) {
-                    case 0: {
-                        if (shownIndex > -1) {
-                            cfg_shownItems.splice(shownIndex, 1);
-                        }
-                        if (hiddenIndex > -1) {
-                            cfg_hiddenItems.splice(hiddenIndex, 1);
-                        }
-                        break;
-                    }
-                    case 1: {
-                        if (shownIndex === -1) {
-                            cfg_shownItems.push(modelData.taskId);
-                        }
-                        if (hiddenIndex > -1) {
-                            cfg_hiddenItems.splice(hiddenIndex, 1);
-                        }
-                        break;
-                    }
-                    case 2: {
-                        if (shownIndex > -1) {
-                            cfg_shownItems.splice(shownIndex, 1);
-                        }
-                        if (hiddenIndex === -1) {
-                            cfg_hiddenItems.push(modelData.taskId);
-                        }
-                        break;
-                    }
-                    }
-                    iconsPage.configurationChanged();
-                }
-                model: [i18n("Auto"), i18n("Shown"), i18n("Hidden")]
             }
-        }
 
-        QQC1.TableViewColumn {
-            id: shortcutColumn
-            title: i18n("Keyboard Shortcut") // FIXME doesn't fit
-            movable: false
-            resizable: false
+            delegate: Kirigami.AbstractListItem {
 
-            // this Item wrapper prevents TableView from ripping apart the two KeySequenceItem buttons
-            delegate: Item {
-                implicitWidth: Math.max(shortcutColumnMeasureLabel.width, keySequenceItem.width) + 10
-                height: keySequenceItem.height
+                highlighted: false
+                hoverEnabled: false
 
-                KQC.KeySequenceItem {
-                    id: keySequenceItem
-                    anchors.right: parent.right
+                leftPadding: LayoutMirroring.enabled && scrollView.scrollBarVisible ? scrollView.scrollBarWidth : padding * 2
+                rightPadding: !LayoutMirroring.enabled && scrollView.scrollBarVisible ? scrollView.scrollBarWidth : padding * 2
 
-                    keySequence: modelData.applet ? modelData.applet.globalShortcut : ""
-                    // only Plasmoids have that
-                    visible: modelData.hasOwnProperty("applet")
-                    onKeySequenceChanged: {
-                        if (modelData.applet && keySequence !== modelData.applet.globalShortcut) {
-                            modelData.applet.globalShortcut = keySequence
+                property bool isPlasmoid: model.itemType === "Plasmoid"
 
+                contentItem: RowLayout {
+                    RowLayout {
+                        Layout.fillWidth: true
+
+                        Kirigami.Icon {
+                            width: units.iconSizes.small
+                            height: width
+                            source: model.decoration
+                        }
+                        QQC2.Label {
+                            Layout.fillWidth: true
+                            text: model.display
+                            elide: Text.ElideRight
+                            wrapMode: Text.NoWrap
+                        }
+                    }
+
+                    QQC2.ComboBox {
+                        id: visibilityComboBox
+
+                        property var contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
+                                                            implicitContentWidth + leftPadding + rightPadding)
+                        implicitWidth: Math.max(contentWidth, itemsList.visibilityColumnWidth)
+                        Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
+
+                        enabled: (!showAllCheckBox.checked || isPlasmoid) && itemId
+                        textRole: "text"
+                        model: comboBoxModel()
+
+                        currentIndex: {
+                            var value
+
+                            if (cfg_shownItems.indexOf(itemId) !== -1) {
+                                value = "shown"
+                            } else if (cfg_hiddenItems.indexOf(itemId) !== -1) {
+                                value = "hidden"
+                            } else if (isPlasmoid && cfg_extraItems.indexOf(itemId) === -1) {
+                                value = "disabled"
+                            } else {
+                                value = "auto"
+                            }
+
+                            for (var i = 0; i < model.length; i++) {
+                                if (model[i].value === value) {
+                                    return i
+                                }
+                            }
+
+                            return 0
+                        }
+
+                        property var currentValue: model[currentIndex].value
+
+                        onActivated: {
+                            var shownIndex = cfg_shownItems.indexOf(itemId)
+                            var hiddenIndex = cfg_hiddenItems.indexOf(itemId)
+                            var extraIndex = cfg_extraItems.indexOf(itemId)
+
+                            switch (currentValue) {
+                            case "auto":
+                                if (shownIndex > -1) {
+                                    cfg_shownItems.splice(shownIndex, 1)
+                                }
+                                if (hiddenIndex > -1) {
+                                    cfg_hiddenItems.splice(hiddenIndex, 1)
+                                }
+                                if (extraIndex === -1) {
+                                    cfg_extraItems.push(itemId)
+                                }
+                                break
+                            case "shown":
+                                if (shownIndex === -1) {
+                                    cfg_shownItems.push(itemId)
+                                }
+                                if (hiddenIndex > -1) {
+                                    cfg_hiddenItems.splice(hiddenIndex, 1)
+                                }
+                                if (extraIndex === -1) {
+                                    cfg_extraItems.push(itemId)
+                                }
+                                break
+                            case "hidden":
+                                if (shownIndex > -1) {
+                                    cfg_shownItems.splice(shownIndex, 1)
+                                }
+                                if (hiddenIndex === -1) {
+                                    cfg_hiddenItems.push(itemId)
+                                }
+                                if (extraIndex === -1) {
+                                    cfg_extraItems.push(itemId)
+                                }
+                                break
+                            case "disabled":
+                                if (extraIndex > -1) {
+                                    cfg_extraItems.splice(extraIndex, 1)
+                                }
+                                break
+                            }
                             iconsPage.configurationChanged()
                         }
 
-                        shortcutColumn.resizeToContents()
+                        function comboBoxModel() {
+                            var autoElement = {"value": "auto", "text": i18n("Shown when relevant")}
+                            var shownElement = {"value": "shown", "text": i18n("Always shown")}
+                            var hiddenElement = {"value": "hidden", "text": i18n("Always hidden")}
+                            var disabledElement = {"value": "disabled", "text": i18n("Disabled")}
+
+                            if (showAllCheckBox.checked) {
+                                if (isPlasmoid) {
+                                    return [autoElement, disabledElement]
+                                } else {
+                                    return [shownElement]
+                                }
+                            } else {
+                                if (isPlasmoid) {
+                                    return [autoElement, shownElement, hiddenElement, disabledElement]
+                                } else {
+                                    return [autoElement, shownElement, hiddenElement]
+                                }
+                            }
+                        }
+                    }
+                    KQC.KeySequenceItem {
+                        id: keySequenceItem
+                        Layout.minimumWidth: itemsList.keySequenceColumnWidth
+                        Layout.preferredWidth: itemsList.keySequenceColumnWidth
+                        Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
+
+                        visible: isPlasmoid
+                        enabled: visibilityComboBox.currentValue !== "disabled"
+                        keySequence: model.applet ? model.applet.globalShortcut : ""
+                        onKeySequenceChanged: {
+                            if (model.applet && keySequence !== model.applet.globalShortcut) {
+                                model.applet.globalShortcut = keySequence
+
+                                itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
+                            }
+                        }
+                    }
+                    // Placeholder for when KeySequenceItem is not visible
+                    Item {
+                        Layout.minimumWidth: itemsList.keySequenceColumnWidth
+                        Layout.maximumWidth: itemsList.keySequenceColumnWidth
+                        visible: !keySequenceItem.visible
                     }
                 }
             }

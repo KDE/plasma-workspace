@@ -34,6 +34,7 @@ enum class BaseRole {
     ItemType = Qt::UserRole + 1,
     ItemId,
     CanRender,
+    Category,
     LastBaseRole
 };
 

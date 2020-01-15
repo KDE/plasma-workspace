@@ -46,10 +46,9 @@ PlasmaCore.ToolTipArea {
 
     property bool forcedHidden: plasmoid.configuration.hiddenItems.indexOf(itemId) !== -1
     property bool forcedShown: plasmoid.configuration.showAllItems || plasmoid.configuration.shownItems.indexOf(itemId) !== -1
-    property bool categoryShown: shownCategories.indexOf(category) !== -1;
 
     readonly property int effectiveStatus: {
-        if (!categoryShown || status === PlasmaCore.Types.HiddenStatus) {
+        if (status === PlasmaCore.Types.HiddenStatus) {
             return PlasmaCore.Types.HiddenStatus
         } else if (forcedShown || (!forcedHidden && status !== PlasmaCore.Types.PassiveStatus)) {
             return PlasmaCore.Types.ActiveStatus

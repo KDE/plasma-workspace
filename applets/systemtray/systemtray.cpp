@@ -21,18 +21,15 @@
 #include "systemtraymodel.h"
 #include "debug.h"
 
-#include <QDebug>
-#include <QTimer>
-
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusPendingCallWatcher>
 #include <QMenu>
 #include <QQuickItem>
+#include <QQuickWindow>
 #include <QRegExp>
 #include <QScreen>
-#include <QStandardItemModel>
-#include <QQuickWindow>
+#include <QTimer>
 
 #include <Plasma/PluginLoader>
 #include <Plasma/ServiceJob>

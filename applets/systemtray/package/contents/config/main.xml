@@ -6,27 +6,6 @@
   <kcfgfile name=""/>
 
   <group name="General">
-    <entry name="applicationStatusShown" type="bool">
-      <label>If true, the items of "Application status" category are shown in the systray.</label>
-      <default>true</default>
-    </entry>
-    <entry name="communicationsShown" type="bool">
-      <label>If true, the items of "Communications" category are shown in the systray.</label>
-      <default>true</default>
-    </entry>
-    <entry name="systemServicesShown" type="bool">
-      <label>If true, the items of "System services" category are shown in the systray.</label>
-      <default>true</default>
-    </entry>
-    <entry name="hardwareControlShown" type="bool">
-      <label>If true, the items of "Hardware Control" category are shown in the systray.</label>
-      <default>true</default>
-    </entry>
-    <entry name="miscellaneousShown" type="bool">
-      <label>If true, the items of "miscellaneous" category are shown in the systray.</label>
-      <default>true</default>
-    </entry>
-
     <entry name="extraItems" type="StringList">
       <label>All plasmoid items that are explicitly enabled in the systray. It's a comma-separated string list of plasmoid plugin ids.</label>
       <default></default>
