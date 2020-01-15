@@ -38,12 +38,7 @@ class Feedback : public KQuickAddons::ConfigModule
         bool feedbackEnabled() const;
         int plasmaFeedbackLevel() const { return m_plasmaFeedbackLevel; }
 
-        void setPlasmaFeedbackLevel(int plasmaFeedbackLevel) {
-            if (plasmaFeedbackLevel != m_plasmaFeedbackLevel) {
-                m_plasmaFeedbackLevel = plasmaFeedbackLevel;
-                Q_EMIT plasmaFeedbackLevelChanged(plasmaFeedbackLevel);
-            }
-        }
+        void setPlasmaFeedbackLevel(int plasmaFeedbackLevel);
 
     public Q_SLOTS:
         void load() override;

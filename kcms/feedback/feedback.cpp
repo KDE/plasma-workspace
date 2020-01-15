@@ -71,4 +71,12 @@ void Feedback::defaults()
     setPlasmaFeedbackLevel(KUserFeedback::Provider::NoTelemetry);
 }
 
+void Feedback::setPlasmaFeedbackLevel(int plasmaFeedbackLevel) {
+    if (plasmaFeedbackLevel != m_plasmaFeedbackLevel) {
+        m_plasmaFeedbackLevel = plasmaFeedbackLevel;
+        Q_EMIT plasmaFeedbackLevelChanged(plasmaFeedbackLevel);
+    }
+    setRepresentsDefaults(plasmaFeedbackLevel == KUserFeedback::Provider::NoTelemetry);
+}
+
 #include "feedback.moc"
