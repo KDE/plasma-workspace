@@ -89,9 +89,11 @@ SimpleKCM {
                     return null;
                 }
 
-                Component.onCompleted: {
-                    var idx = findIndex(modeOptions, kcm.plasmaFeedbackLevel)
-                    value = idx===null ? 2 : modeOptions[idx]
+                Connections {
+                    target: kcm
+                    onPlasmaFeedbackLevelChanged: {
+                        statisticsModeSlider.value = statisticsModeSlider.findIndex(statisticsModeSlider.modeOptions, kcm.plasmaFeedbackLevel)
+                    }
                 }
 
                 onMoved: {
