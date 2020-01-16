@@ -120,7 +120,7 @@ SimpleKCM {
                 }
             }
             ColumnLayout {
-                Layout.maximumWidth: root.width * 0.5
+                Layout.maximumWidth: parent.width * 0.5
                 Repeater {
                     model: kcm.feedbackSources
                     delegate: QQC2.Label {
