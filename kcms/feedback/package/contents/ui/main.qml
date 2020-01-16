@@ -109,15 +109,16 @@ SimpleKCM {
                 level: 3
                 text: feedbackController.telemetryName(statisticsModeSlider.currentMode)
             }
+            Item {
+                Kirigami.FormData.isSection: true
+            }
             QQC2.Label {
                 Layout.alignment: Qt.AlignHCenter
                 Layout.maximumWidth: statisticsModeSlider.width
                 wrapMode: Text.WordWrap
 
-                text: {
-                    feedbackController.applicationName
-                    return feedbackController.telemetryDescription(statisticsModeSlider.currentMode)
-                }
+                text: i18n("The following information will be sent:")
+                visible: statisticsModeSlider.value != 0 // This is "disabled"
             }
             ColumnLayout {
                 Layout.maximumWidth: parent.width * 0.5
@@ -148,7 +149,6 @@ SimpleKCM {
                         }
                     }
                 }
-                opacity: 0.6
             }
         }
     }
