@@ -140,8 +140,10 @@ SimpleKCM {
                                     anchors.centerIn: parent
                                     Repeater {
                                         model: modelData.icons
-                                        delegate: Image {
-                                            source: "image://icon/" + modelData
+                                        delegate: Kirigami.Icon {
+                                            height: Kirigami.Units.gridUnit * 2
+                                            width: Kirigami.Units.gridUnit * 2
+                                            source: modelData
                                         }
                                     }
                                 }
