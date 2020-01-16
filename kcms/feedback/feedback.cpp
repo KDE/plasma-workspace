@@ -56,7 +56,8 @@ Feedback::Feedback(QObject *parent, const QVariantList &args)
                                        QStringLiteral("1.0"), i18n("Configure user feedback settings"), KAboutLicense::LGPL));
 
     connect(this, &Feedback::plasmaFeedbackLevelChanged, this, [this](){
-        setNeedsSave(true);
+        auto current = m_plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::NoTelemetry));
+        setNeedsSave(current != m_plasmaFeedbackLevel);
     });
 
     QVector<QProcess*> processes;
