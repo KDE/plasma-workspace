@@ -46,13 +46,17 @@ private Q_SLOTS:
     void playerUpdated(const QString &name, const Plasma::DataEngine::Data &data);
 
 private:
+    void evaluatePlayer(PlayerContainer *container);
     void setBestActive();
     void replaceData(const Plasma::DataEngine::Data &data);
+    PlayerContainer *firstPlayerFromHash(const QHash<QString, PlayerContainer *> &hash, PlayerContainer **proxyCandidate) const;
 
     QString m_activeName;
     QHash<QString,PlayerContainer*> m_playing;
     QHash<QString,PlayerContainer*> m_paused;
     QHash<QString,PlayerContainer*> m_stopped;
+
+    QHash<qlonglong, PlayerContainer *> m_proxies;
 };
 
 #endif // MULTIPLEXER_H

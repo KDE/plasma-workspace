@@ -25,6 +25,9 @@
 #include <QDebug> // for Q_ASSERT
 #include <QAction>
 
+#include <algorithm>
+
+#include "debug.h"
 
 // the '@' at the start is not valid for D-Bus names, so it will
 // never interfere with an actual MPRIS2 player
@@ -36,36 +39,88 @@ Multiplexer::Multiplexer(QObject* parent)
     setObjectName(sourceName);
 }
 
-void Multiplexer::addPlayer(PlayerContainer *container)
+void Multiplexer::evaluatePlayer(PlayerContainer *container)
 {
     bool makeActive = m_activeName.isEmpty();
 
-    if (container->data().value(QStringLiteral("PlaybackStatus")) == QLatin1String("Playing")) {
-        m_playing.insert(container->objectName(), container);
-        if (!makeActive &&
-                data().value(QStringLiteral("PlaybackStatus")) != QLatin1String("Playing")) {
-            makeActive = true;
-        }
-    } else if (container->data().value(QStringLiteral("PlaybackStatus")) == QLatin1String("Paused")) {
-        m_paused.insert(container->objectName(), container);
-        if (!makeActive &&
-                data().value(QStringLiteral("PlaybackStatus")) != QLatin1String("Playing") &&
-                data().value(QStringLiteral("PlaybackStatus")) != QLatin1String("Paused")) {
-            makeActive = true;
-        }
+    QString name = container->objectName();
+    const QString containerPlaybackStatus = container->data().value(QStringLiteral("PlaybackStatus")).toString();
+    const QString multiplexerPlaybackStatus = data().value(QStringLiteral("PlaybackStatus")).toString();
+
+    m_playing.remove(name);
+    m_paused.remove(name);
+    m_stopped.remove(name);
+
+    // Ensure the actual player is always in the correct category
+    if (containerPlaybackStatus == QLatin1String("Playing")) {
+        m_playing.insert(name, container);
+    } else if (containerPlaybackStatus == QLatin1String("Paused")) {
+        m_paused.insert(name, container);
     } else {
-        m_stopped.insert(container->objectName(), container);
+        m_stopped.insert(name, container);
     }
 
-    connect(container, &Plasma::DataContainer::dataUpdated,
-            this,      &Multiplexer::playerUpdated);
+    const auto proxyPid = container->data().value(QStringLiteral("Metadata")).toMap().value(QStringLiteral("kde:pid")).toUInt();
+    if (proxyPid) {
+        auto it = m_proxies.find(proxyPid);
+        if (it == m_proxies.end()) {
+            m_proxies.insert(proxyPid, container);
+        }
+    }
+
+    const auto containerPid = container->data().value(QStringLiteral("InstancePid")).toUInt();
+    PlayerContainer *proxy = m_proxies.value(containerPid);
+    if (proxy) {
+        // Operate on the proxy from now on
+        container = proxy;
+        name = container->objectName();
+    }
+
+    if (!makeActive) {
+        // If this player has higher status than the current multiplexer player, switch over to it
+        if (m_playing.value(name) && multiplexerPlaybackStatus != QLatin1String("Playing")) {
+            qCDebug(MPRIS2) << "Player" << name << "is now playing but current was not";
+            makeActive = true;
+        } else if (m_paused.value(name)
+           && multiplexerPlaybackStatus != QLatin1String("Playing")
+           && multiplexerPlaybackStatus != QLatin1String("Paused")) {
+            qCDebug(MPRIS2) << "Player" << name << "is now paused but current was stopped";
+            makeActive = true;
+        }
+    }
+
+    if (m_activeName == name) {
+        // If we are the current player and move to a lower status, switch to another one, if necessary
+        if (m_paused.value(name) && !m_playing.isEmpty()) {
+            qCDebug(MPRIS2) << "Current player" << m_activeName << "is now paused but there is another playing one, switching players";
+            setBestActive();
+            makeActive = false;
+        } else if (m_stopped.value(name) && (!m_playing.isEmpty() || !m_paused.isEmpty())) {
+            qCDebug(MPRIS2) << "Current player" << m_activeName << "is now stopped but there is another playing or paused one, switching players";
+            setBestActive();
+            makeActive = false;
+        } else {
+            makeActive = true;
+        }
+    }
 
     if (makeActive) {
-        m_activeName = container->objectName();
+        if (m_activeName != name) {
+            qCDebug(MPRIS2) << "Switching from" << m_activeName << "to" << name;
+            m_activeName = name;
+        }
         replaceData(container->data());
         checkForUpdate();
         emit activePlayerChanged(container);
     }
+}
+
+void Multiplexer::addPlayer(PlayerContainer *container)
+{
+    evaluatePlayer(container);
+
+    connect(container, &Plasma::DataContainer::dataUpdated,
+            this,      &Multiplexer::playerUpdated);
 }
 
 void Multiplexer::removePlayer(const QString &name)
@@ -77,6 +132,12 @@ void Multiplexer::removePlayer(const QString &name)
         container = m_stopped.take(name);
     if (container)
         container->disconnect(this);
+
+    // Remove proxy by value (container), not key (pid), which could have changed
+    const auto pid = m_proxies.key(container);
+    if (pid) {
+        m_proxies.remove(pid);
+    }
 
     if (name == m_activeName) {
         setBestActive();
@@ -100,93 +161,75 @@ PlayerContainer *Multiplexer::activePlayer() const
 
 void Multiplexer::playerUpdated(const QString &name, const Plasma::DataEngine::Data &newData)
 {
-    if (newData.value(QStringLiteral("PlaybackStatus")) == QLatin1String("Playing")) {
-        if (!m_playing.contains(name)) {
-            PlayerContainer *container = m_paused.take(name);
-            if (!container) {
-                container = m_stopped.take(name);
-            }
-            Q_ASSERT(container);
-            m_playing.insert(name, container);
-        }
-        if (m_activeName != name &&
-                data().value(QStringLiteral("PlaybackStatus")) != QLatin1String("Playing")) {
-            m_activeName = name;
-            replaceData(newData);
-            checkForUpdate();
-            emit activePlayerChanged(activePlayer());
-            return;
-        }
-    } else if (newData.value(QStringLiteral("PlaybackStatus")) == QLatin1String("Paused")) {
-        if (!m_paused.contains(name)) {
-            PlayerContainer *container = m_playing.take(name);
-            if (!container) {
-                container = m_stopped.take(name);
-            }
-            Q_ASSERT(container);
-            m_paused.insert(name, container);
-        }
-        if (m_activeName != name &&
-                data().value(QStringLiteral("PlaybackStatus")) != QLatin1String("Playing") &&
-                data().value(QStringLiteral("PlaybackStatus")) != QLatin1String("Paused")) {
-            m_activeName = name;
-            replaceData(newData);
-            checkForUpdate();
-            emit activePlayerChanged(activePlayer());
-            return;
-        }
-    } else {
-        if (!m_stopped.contains(name)) {
-            PlayerContainer *container = m_playing.take(name);
-            if (!container) {
-                container = m_paused.take(name);
-            }
-            Q_ASSERT(container);
-            m_stopped.insert(name, container);
-        }
+    Q_UNUSED(name);
+    Q_UNUSED(newData);
+    evaluatePlayer(qobject_cast<PlayerContainer *>(sender()));
+}
+
+PlayerContainer *Multiplexer::firstPlayerFromHash(const QHash<QString, PlayerContainer *> &hash, PlayerContainer **proxyCandidate) const
+{
+    if (proxyCandidate) {
+        *proxyCandidate = nullptr;
     }
 
-    if (m_activeName == name) {
-        bool isPaused = newData.value(QStringLiteral("PlaybackStatus")) == QLatin1String("Paused");
-        bool isStopped = !isPaused && newData.value(QStringLiteral("PlaybackStatus")) != QLatin1String("Playing");
-        if (isPaused && !m_playing.isEmpty()) {
-            setBestActive();
-        } else if (isStopped && (!m_playing.isEmpty() || !m_paused.isEmpty())) {
-            setBestActive();
-        } else {
-            replaceData(newData);
-            checkForUpdate();
-        }
+    auto it = hash.begin();
+    if (it == hash.end()) {
+        return nullptr;
     }
+
+    PlayerContainer *container = it.value();
+    const auto containerPid = container->data().value(QStringLiteral("InstancePid")).toUInt();
+
+    // Check if this player is being proxied by someone else and prefer the proxy
+    // but only if it is in the same hash (same state)
+    if (PlayerContainer *proxy = m_proxies.value(containerPid)) {
+        if (std::find(hash.begin(), hash.end(), proxy) == hash.end()) {
+            if (proxyCandidate) {
+                *proxyCandidate = proxy;
+            }
+            return nullptr;
+            //continue;
+        }
+        return proxy;
+    }
+
+    return container;
 }
 
 void Multiplexer::setBestActive()
 {
-    QHash<QString,PlayerContainer*>::const_iterator it = m_playing.constBegin();
-    if (it != m_playing.constEnd()) {
-        m_activeName = it.key();
-        replaceData(it.value()->data());
-        emit activePlayerChanged(it.value());
-    } else {
-        it = m_paused.constBegin();
-        if (it != m_paused.constEnd()) {
-            m_activeName = it.key();
-            replaceData(it.value()->data());
-            emit activePlayerChanged(it.value());
+    qCDebug(MPRIS2) << "Activating best player";
+    PlayerContainer *proxyCandidate = nullptr;
+
+    PlayerContainer *container = firstPlayerFromHash(m_playing, &proxyCandidate);
+    if (!container) {
+        // If we found a proxy earlier, prefer it over a random other player in that category
+        if (proxyCandidate && std::find(m_paused.constBegin(), m_paused.constEnd(), proxyCandidate) != m_paused.constEnd()) {
+            container = proxyCandidate;
         } else {
-            it = m_stopped.constBegin();
-            if (it != m_stopped.constEnd()) {
-                m_activeName = it.key();
-                replaceData(it.value()->data());
-                emit activePlayerChanged(it.value());
-            } else {
-                m_activeName = QString();
-                removeAllData();
-                emit activePlayerChanged(nullptr);
-            }
+            container = firstPlayerFromHash(m_paused, &proxyCandidate);
         }
     }
-    checkForUpdate();
+    if (!container) {
+        if (proxyCandidate && std::find(m_stopped.constBegin(), m_stopped.constEnd(), proxyCandidate) != m_stopped.constEnd()) {
+            container = proxyCandidate;
+        } else {
+            container = firstPlayerFromHash(m_stopped, &proxyCandidate);
+        }
+    }
+
+    if (!container) {
+        qCDebug(MPRIS2) << "There is currently no player";
+        m_activeName.clear();
+        removeAllData();
+    } else {
+        m_activeName = container->objectName();
+        qCDebug(MPRIS2) << "Determined" << m_activeName << "to be the best player";
+        replaceData(container->data());
+        checkForUpdate();
+    }
+
+    emit activePlayerChanged(container);
 }
 
 void Multiplexer::replaceData(const Plasma::DataEngine::Data &data)
