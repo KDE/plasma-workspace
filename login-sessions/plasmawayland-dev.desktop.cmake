@@ -4,6 +4,7 @@ DesktopNames=KDE
 Name=Plasma (Development, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ast]=Plasma (Desendolcu, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ca]=Plasma (Desenvolupament, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
+Name[da]=Plasma (udvikling, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[de]=Plasma (Development, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[en_GB]=Plasma (Development, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[es]=Plasma (Desarrollo, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
