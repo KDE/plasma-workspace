@@ -151,11 +151,12 @@ public:
     /**
      * Sends a notification reply text
      *
+     * @param dbusService The bus name of the receiving application
      * @param id The notification ID
      * @param text The reply message text
      * @since 5.18
      */
-    void reply(uint id, const QString &text);
+    void reply(const QString &dbusService, uint id, const QString &text);
 
     /**
      * Adds a notification

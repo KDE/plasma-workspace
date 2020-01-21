@@ -73,6 +73,7 @@ Q_SIGNALS:
     void NotificationClosed(uint id, uint reason);
     void ActionInvoked(uint id, const QString &actionKey);
     // non-standard
+    // This is manually emitted as targeted signal in sendReplyText()
     void NotificationReplied(uint id, const QString &text);
 
     void validChanged();
@@ -87,9 +88,12 @@ Q_SIGNALS:
 public: // stuff used by public class
     friend class ServerInfo;
     static QString notificationServiceName();
+    static QString notificationServicePath();
+    static QString notificationServiceInterface();
 
     bool init();
     uint add(const Notification &notification);
+    void sendReplyText(const QString &dbusService, uint notificationId, const QString &text);
 
     ServerInfo *currentOwner() const;
 

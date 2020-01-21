@@ -297,42 +297,20 @@ ColumnLayout {
         Layout.preferredHeight: Math.max(actionFlow.implicitHeight, replyLoader.height)
         visible: actionRepeater.count > 0
 
-        states: [
-            State {
-                when: notificationItem.replying
-                PropertyChanges {
-                    target: actionFlow
-                    enabled: false
-                    opacity: 0
-                }
-                PropertyChanges {
-                    target: replyLoader
-                    active: true
-                    visible: true
-                    opacity: 1
-                    x: 0
-                }
-            }
-        ]
-
-        transitions: [
-            Transition {
-                to: "*" // any state
-                NumberAnimation {
-                    targets: [actionFlow, replyLoader]
-                    properties: "opacity,scale,x"
-                    duration: units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-        ]
-
         // Notification actions
         Flow { // it's a Flow so it can wrap if too long
             id: actionFlow
             width: parent.width
             spacing: units.smallSpacing
             layoutDirection: Qt.RightToLeft
+            enabled: !replyLoader.active
+            opacity: replyLoader.active ? 0 : 1
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
 
             Repeater {
                 id: actionRepeater
@@ -367,10 +345,7 @@ ColumnLayout {
 
                     onClicked: {
                         if (modelData.actionName === "inline-reply") {
-                            notificationItem.replying = true;
-
-                            plasmoid.nativeInterface.forceActivateWindow(notificationItem.Window.window);
-                            replyLoader.item.activate();
+                            replyLoader.beginReply();
                             return;
                         }
 
@@ -385,15 +360,39 @@ ColumnLayout {
             id: replyLoader
             width: parent.width
             height: active ? item.implicitHeight : 0
-            active: false
-            visible: false
-            opacity: 0
-            x: parent.width
+            // When there is only one action and it is a reply action, show text field right away
+            active: notificationItem.replying || (notificationItem.hasReplyAction && (notificationItem.actionNames || []).length === 0)
+            visible: active
+            opacity: active ? 1 : 0
+            x: active ? 0 : parent.width
+            Behavior on x {
+                NumberAnimation {
+                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+
+            function beginReply() {
+                notificationItem.replying = true;
+
+                plasmoid.nativeInterface.forceActivateWindow(notificationItem.Window.window);
+                replyLoader.item.activate();
+            }
+
             sourceComponent: NotificationReplyField {
                 placeholderText: notificationItem.replyPlaceholderText
                 buttonIconName: notificationItem.replySubmitButtonIconName
                 buttonText: notificationItem.replySubmitButtonText
                 onReplied: notificationItem.replied(text)
+
+                replying: notificationItem.replying
+                onBeginReplyRequested: replyLoader.beginReply()
             }
         }
     }

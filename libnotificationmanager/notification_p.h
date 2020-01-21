@@ -58,6 +58,8 @@ public:
     void setUrgency(Notifications::Urgency urgency);
 
     uint id = 0;
+    // Bus name of the creator/sender
+    QString dBusService;
     QDateTime created;
     QDateTime updated;
     bool read = false;
