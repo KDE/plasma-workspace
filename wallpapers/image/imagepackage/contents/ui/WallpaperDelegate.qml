@@ -34,8 +34,7 @@ KCM.GridDelegate {
     opacity: model.pendingDeletion ? 0.5 : 1
 
     text: model.display
-    
-    toolTip: model.author.length > 0 ? i18ndc("plasma_wallpaper_org.kde.image", "<image> by <author>", "By %1", model.author) : ""
+    subtitle: model.author
 
     hoverEnabled: true
 
