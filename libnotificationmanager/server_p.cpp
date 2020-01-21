@@ -58,6 +58,16 @@ QString ServerPrivate::notificationServiceName()
     return QStringLiteral("org.freedesktop.Notifications");
 }
 
+QString ServerPrivate::notificationServicePath()
+{
+    return QStringLiteral("/org/freedesktop/Notifications");
+}
+
+QString ServerPrivate::notificationServiceInterface()
+{
+    return notificationServiceName();
+}
+
 ServerInfo *ServerPrivate::currentOwner() const
 {
     if (!m_currentOwner) {
@@ -76,7 +86,7 @@ bool ServerPrivate::init()
     new NotificationsAdaptor(this);
 
     if (!m_dbusObjectValid) { // if already registered, don't fail here
-        m_dbusObjectValid = QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/freedesktop/Notifications"), this);
+        m_dbusObjectValid = QDBusConnection::sessionBus().registerObject(notificationServicePath(), this);
      }
 
     if (!m_dbusObjectValid) {
@@ -142,6 +152,7 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
     }
 
     Notification notification(notificationId);
+    notification.setDBusService(message().service());
     notification.setSummary(summary);
     notification.setBody(body);
     notification.setApplicationName(app_name);
@@ -303,6 +314,20 @@ uint ServerPrivate::add(const Notification &notification)
     return notification.id();
 }
 
+void ServerPrivate::sendReplyText(const QString &dbusService, uint notificationId, const QString &text)
+{
+    if (dbusService.isEmpty()) {
+        qCWarning(NOTIFICATIONMANAGER) << "Sending notification reply text for notification" << notificationId << "untargeted";
+    }
+
+    QDBusMessage msg = QDBusMessage::createTargetedSignal(dbusService,
+                                                          notificationServicePath(),
+                                                          notificationServiceName(),
+                                                          QStringLiteral("NotificationReplied"));
+    msg.setArguments({notificationId, text});
+    QDBusConnection::sessionBus().send(msg);
+}
+
 uint ServerPrivate::Inhibit(const QString &desktop_entry, const QString &reason, const QVariantMap &hints)
 {
     const QString dbusService = message().service();
@@ -384,13 +409,13 @@ void ServerPrivate::onInhibitedChanged()
 {
     // emit DBus change signal...
     QDBusMessage signal = QDBusMessage::createSignal(
-        QStringLiteral("/org/freedesktop/Notifications"),
+        notificationServicePath(),
         QStringLiteral("org.freedesktop.DBus.Properties"),
         QStringLiteral("PropertiesChanged")
     );
 
     signal.setArguments({
-        QStringLiteral("org.freedesktop.Notifications"),
+        notificationServiceInterface(),
         QVariantMap{ // updated
             {QStringLiteral("Inhibited"), inhibited()},
         },

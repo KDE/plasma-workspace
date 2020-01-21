@@ -479,6 +479,16 @@ uint Notification::id() const
     return d->id;
 }
 
+QString Notification::dBusService() const
+{
+    return d->dBusService;
+}
+
+void Notification::setDBusService(const QString &dBusService)
+{
+    d->dBusService = dBusService;
+}
+
 QDateTime Notification::created() const
 {
     return d->created;

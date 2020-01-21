@@ -458,7 +458,7 @@ void NotificationsModel::reply(uint notificationId, const QString &text)
         return;
     }
 
-    Server::self().reply(notificationId, text);
+    Server::self().reply(notification.dBusService(), notificationId, text);
 }
 
 void NotificationsModel::startTimeout(uint notificationId)

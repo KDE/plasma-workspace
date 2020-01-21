@@ -53,6 +53,9 @@ public:
 
     uint id() const;
 
+    QString dBusService() const;
+    void setDBusService(const QString &dBusService);
+
     QDateTime created() const;
 
     QDateTime updated() const;

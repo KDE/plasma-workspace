@@ -80,9 +80,9 @@ void Server::invokeAction(uint notificationId, const QString &actionName)
     emit d->ActionInvoked(notificationId, actionName);
 }
 
-void Server::reply(uint notificationId, const QString &text)
+void Server::reply(const QString &dbusService, uint notificationId, const QString &text)
 {
-    emit d->NotificationReplied(notificationId, text);
+    d->sendReplyText(dbusService, notificationId, text);
 }
 
 uint Server::add(const Notification &notification)
