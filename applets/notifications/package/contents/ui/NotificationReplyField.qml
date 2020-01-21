@@ -26,7 +26,10 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 RowLayout {
     id: replyRow
 
+    signal beginReplyRequested
     signal replied(string text)
+
+    property bool replying: false
 
     property alias text: replyTextField.text
     property string placeholderText
@@ -48,6 +51,14 @@ RowLayout {
             if (replyButton.enabled) {
                 replyRow.replied(text);
             }
+        }
+
+        // Catches mouse click when reply field is already shown to start a reply
+        MouseArea {
+            anchors.fill: parent
+            cursorShape: Qt.IBeamCursor
+            visible: !replyRow.replying
+            onPressed: replyRow.beginReplyRequested()
         }
     }
 
