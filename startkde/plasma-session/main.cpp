@@ -29,8 +29,8 @@ int main(int argc, char **argv)
     // the internal QEventLoopLocker expires and our app exits
     app.setQuitLockEnabled(false);
 
-    auto startup = new Startup(&app);
-    auto shutdown = new Shutdown(&app);
+    new Startup(&app);
+    new Shutdown(&app);
 
     app.exec();
 }

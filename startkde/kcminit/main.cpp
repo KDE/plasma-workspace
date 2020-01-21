@@ -105,7 +105,7 @@ bool KCMInit::runModule(const QString &libName, KService::Ptr service)
 void KCMInit::runModules( int phase )
 {
     QString KCMINIT_PREFIX=QStringLiteral("kcminit_");
-    foreach (const KService::Ptr & service, list) {
+    for (const KService::Ptr & service : qAsConst(m_list)) {
       const QVariant tmp = service->property(QStringLiteral("X-KDE-Init-Library"), QVariant::String);
       QString library;
       if( tmp.isValid() )
@@ -135,9 +135,9 @@ void KCMInit::runModules( int phase )
           continue;
 
       // try to load the library
-      if (!alreadyInitialized.contains(library)) {
+      if (!m_alreadyInitialized.contains(library)) {
           runModule(library, service);
-          alreadyInitialized.insert(library);
+          m_alreadyInitialized.insert(library);
       }
   }
 }
@@ -150,9 +150,9 @@ KCMInit::KCMInit( const QCommandLineParser& args )
   }
 
   if (args.isSet(QStringLiteral("list"))) {
-    list = KServiceTypeTrader::self()->query( QStringLiteral("KCModuleInit") );
+    m_list = KServiceTypeTrader::self()->query( QStringLiteral("KCModuleInit") );
 
-    foreach (const KService::Ptr & service, list) {
+    for (const KService::Ptr &service : qAsConst(m_list)) {
       if (service->library().isEmpty())
         continue; // Skip
       printf("%s\n", QFile::encodeName(service->desktopEntryName()).data());
@@ -170,11 +170,11 @@ KCMInit::KCMInit( const QCommandLineParser& args )
       qCritical() << i18n("Module %1 not found", module);
       return;
     } else {
-      list.append(serv);
+      m_list.append(serv);
     }
   } else {
     // locate the desktop files
-    list = KServiceTypeTrader::self()->query( QStringLiteral("KCModuleInit") );
+    m_list = KServiceTypeTrader::self()->query( QStringLiteral("KCModuleInit") );
   }
 
   if( startup ) {

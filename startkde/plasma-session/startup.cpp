@@ -323,7 +323,7 @@ void StartupPhase2::runUserAutostart()
     }
 
     const QStringList entries = dir.entryList(QDir::Files);
-    foreach (const QString &file, entries) {
+    for (const QString &file : entries) {
         // Don't execute backup files
         if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QLatin1String(".bak")) &&
                 (file[0] != QLatin1Char('%') || !file.endsWith(QLatin1Char('%'))) &&
@@ -361,7 +361,7 @@ bool StartupPhase2::migrateKDE4Autostart(const QString &autostartFolder)
     const QDir oldFolder(oldAutostart);
     qCDebug(PLASMA_SESSION) << "Copying autostart files from" << oldFolder.path();
     const QStringList entries = oldFolder.entryList(QDir::Files);
-    foreach (const QString &file, entries) {
+    for (const QString &file : entries) {
         const QString src = oldFolder.absolutePath() + QLatin1Char('/') + file;
         const QString dest = autostartFolder + QLatin1Char('/') + file;
         QFileInfo info(src);

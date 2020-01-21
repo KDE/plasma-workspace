@@ -76,11 +76,11 @@ void Shutdown::logoutComplete() {
 void Shutdown::runShutdownScripts()
 {
     const QStringList shutdownFolders = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("plasma-workspace/shutdown"), QStandardPaths::LocateDirectory);
-    foreach (const QString &shutDownFolder, shutdownFolders) {
+    for (const QString &shutDownFolder : shutdownFolders) {
         QDir dir(shutDownFolder);
 
         const QStringList entries = dir.entryList(QDir::Files);
-        foreach (const QString &file, entries) {
+        for (const QString &file : entries) {
             // Don't execute backup files
             if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QLatin1String(".bak")) &&
                     (file[0] != QLatin1Char('%') || !file.endsWith(QLatin1Char('%'))) &&
