@@ -239,6 +239,19 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
     return QVariant();
 }
 
+
+QModelIndex RecentUsageModel::findPlaceForKFileItem(const KFileItem &fileItem) const {
+
+    const auto index = m_placesModel->closestItem(fileItem.url());
+    if (index.isValid()) {
+        const auto parentUrl = m_placesModel->url(index);
+        if (parentUrl == fileItem.url()) {
+            return index;
+        }
+    }
+    return QModelIndex();
+}
+
 QVariant RecentUsageModel::docData(const QString &resource, int role) const
 {
     QUrl url(resource);
@@ -258,16 +271,17 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
 
     if (role == Qt::DisplayRole) {
         auto fileItem = getFileItem();
-        const auto index = m_placesModel->closestItem(fileItem.url());
+        const auto index = findPlaceForKFileItem(fileItem);
         if (index.isValid()) {
-            const auto parentUrl = m_placesModel->url(index);
-            if (parentUrl == fileItem.url()) {
-                return m_placesModel->text(index);
-            }
+            return m_placesModel->text(index);
         }
         return fileItem.text();
     } else if (role == Qt::DecorationRole) {
         auto fileItem = getFileItem();
+        const auto index = findPlaceForKFileItem(fileItem);
+        if (index.isValid()) {
+            return m_placesModel->icon(index);
+        }
         return QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme(QStringLiteral("unknown")));
     } else if (role == Kicker::GroupRole) {
         return i18n("Documents");

@@ -26,6 +26,9 @@
 #include <QSortFilterProxyModel>
 #include <KFilePlacesModel>
 
+class QModelIndex;
+class KFileItem;
+
 class GroupSortProxy : public QSortFilterProxyModel
 {
     Q_OBJECT
@@ -104,6 +107,8 @@ class RecentUsageModel : public ForwardingModel, public QQmlParserStatus
         QString resourceAt(int row) const;
 
         QString forgetAllActionName() const;
+
+        QModelIndex findPlaceForKFileItem(const KFileItem &fileItem) const;
 
         IncludeUsage m_usage;
         QPointer<QAbstractItemModel> m_activitiesModel;
