@@ -17,6 +17,7 @@
 */
 
 #include "panelshadows_p.h"
+#include "debug.h"
 
 #include <KWindowShadow>
 
@@ -285,7 +286,7 @@ void PanelShadows::Private::updateShadow(const QWindow *window, Plasma::FrameSvg
     shadow->setWindow(const_cast<QWindow *>(window));
 
     if (!shadow->create()) {
-        qWarning() << "Couldn't create KWindowShadow for" << window;
+        qCWarning(PLASMASHELL) << "Couldn't create KWindowShadow for" << window;
     }
 }
 
