@@ -63,7 +63,6 @@ class WindowsRunner : public Plasma::AbstractRunner
         QMutex m_mutex;
 
         bool m_inSession : 1; // only used in the main thread
-        bool m_ready : 1; // protected by m_mutex
 };
 
 #endif // WINDOWSRUNNER_H
