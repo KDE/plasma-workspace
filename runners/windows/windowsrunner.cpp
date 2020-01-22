@@ -37,8 +37,7 @@ K_EXPORT_PLASMA_RUNNER(windows, WindowsRunner)
 
 WindowsRunner::WindowsRunner(QObject* parent, const QVariantList& args)
     : AbstractRunner(parent, args),
-      m_inSession(false),
-      m_ready(false)
+      m_inSession(false)
 {
     Q_UNUSED(args)
     setObjectName( QLatin1String("Windows") );
@@ -70,7 +69,6 @@ WindowsRunner::~WindowsRunner()
 // Called in the main thread
 void WindowsRunner::gatherInfo()
 {
-    QMutexLocker locker(&m_mutex);
     if (!m_inSession) {
         return;
     }
@@ -101,15 +99,16 @@ void WindowsRunner::gatherInfo()
         m_desktopNames << KWindowSystem::desktopName(i);
     }
 
-    m_ready = true;
+    // unlock lock locked in prepareForMatchSession
+    m_mutex.unlock();
 }
 
 // Called in the main thread
 void WindowsRunner::prepareForMatchSession()
 {
-    QMutexLocker locker(&m_mutex);
+    // gatherInfo will unlock the lock
+    m_mutex.lock();
     m_inSession = true;
-    m_ready = false;
     QTimer::singleShot(0, this, &WindowsRunner::gatherInfo);
 }
 
@@ -118,7 +117,6 @@ void WindowsRunner::matchSessionComplete()
 {
     QMutexLocker locker(&m_mutex);
     m_inSession = false;
-    m_ready = false;
     m_desktopNames.clear();
     m_icons.clear();
     m_windows.clear();
@@ -127,10 +125,8 @@ void WindowsRunner::matchSessionComplete()
 // Called in the secondary thread
 void WindowsRunner::match(Plasma::RunnerContext& context)
 {
+    // will run block as long as gatherInfo has not finished
     QMutexLocker locker(&m_mutex);
-    if (!m_ready) {
-        return;
-    }
 
     QString term = context.query();
 
