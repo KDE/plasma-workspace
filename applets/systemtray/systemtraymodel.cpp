@@ -265,6 +265,14 @@ QHash<int, QByteArray> SystemTrayModel::roleNames() const
 
 void SystemTrayModel::addSourceModel(QAbstractItemModel *sourceModel)
 {
-    m_roleNames.unite(sourceModel->roleNames());
+    QHashIterator<int, QByteArray> it(sourceModel->roleNames());
+    while (it.hasNext()) {
+        it.next();
+
+        if (!m_roleNames.contains(it.key())) {
+            m_roleNames.insert(it.key(), it.value());
+        }
+    }
+
     KConcatenateRowsProxyModel::addSourceModel(sourceModel);
 }
