@@ -91,9 +91,6 @@ ColumnLayout {
 
             header: Kirigami.AbstractListItem {
 
-                leftPadding: LayoutMirroring.enabled && scrollView.scrollBarVisible ? scrollView.scrollBarWidth : padding * 2
-                rightPadding: !LayoutMirroring.enabled && scrollView.scrollBarVisible ? scrollView.scrollBarWidth : padding * 2
-
                 hoverEnabled: false
 
                 RowLayout {
@@ -121,9 +118,6 @@ ColumnLayout {
                 property: "category"
                 delegate: Kirigami.ListSectionHeader {
                     label: categoryName(section)
-
-                    leftPadding: LayoutMirroring.enabled && scrollView.scrollBarVisible ? scrollView.scrollBarWidth : padding * 2
-                    rightPadding: !LayoutMirroring.enabled && scrollView.scrollBarVisible ? scrollView.scrollBarWidth : padding * 2
                 }
             }
 
@@ -131,9 +125,6 @@ ColumnLayout {
 
                 highlighted: false
                 hoverEnabled: false
-
-                leftPadding: LayoutMirroring.enabled && scrollView.scrollBarVisible ? scrollView.scrollBarWidth : padding * 2
-                rightPadding: !LayoutMirroring.enabled && scrollView.scrollBarVisible ? scrollView.scrollBarWidth : padding * 2
 
                 property bool isPlasmoid: model.itemType === "Plasmoid"
 
