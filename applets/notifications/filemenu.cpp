@@ -178,6 +178,8 @@ void FileMenu::open(int x, int y)
         pos = m_visualParent->mapToGlobal(QPointF(x, y)).toPoint();
     }
 
+    menu->winId();
+    menu->windowHandle()->setTransientParent(m_visualParent->window());
     menu->popup(pos);
 
     m_visible = true;
