@@ -36,15 +36,15 @@ public:
     void clearTiles();
     void setupTiles();
     void initTile(const QString &element);
-    void updateShadow(const QWindow *window, Plasma::FrameSvg::EnabledBorders);
-    void clearShadow(const QWindow *window);
+    void updateShadow(QWindow *window, Plasma::FrameSvg::EnabledBorders);
+    void clearShadow(QWindow *window);
     void updateShadows();
     bool hasShadows() const;
 
     PanelShadows *q;
 
-    QHash<const QWindow *, Plasma::FrameSvg::EnabledBorders> m_windows;
-    QHash<const QWindow *, KWindowShadow *> m_shadows;
+    QHash<QWindow *, Plasma::FrameSvg::EnabledBorders> m_windows;
+    QHash<QWindow *, KWindowShadow *> m_shadows;
     QVector<KWindowShadowTile::Ptr> m_tiles;
 };
 
@@ -80,7 +80,7 @@ PanelShadows *PanelShadows::self()
     return &privatePanelShadowsSelf->self;
 }
 
-void PanelShadows::addWindow(const QWindow *window, Plasma::FrameSvg::EnabledBorders enabledBorders)
+void PanelShadows::addWindow(QWindow *window, Plasma::FrameSvg::EnabledBorders enabledBorders)
 {
     if (!window) {
         return;
@@ -96,7 +96,7 @@ void PanelShadows::addWindow(const QWindow *window, Plasma::FrameSvg::EnabledBor
     });
 }
 
-void PanelShadows::removeWindow(const QWindow *window)
+void PanelShadows::removeWindow(QWindow *window)
 {
     if (!d->m_windows.contains(window)) {
         return;
@@ -111,7 +111,7 @@ void PanelShadows::removeWindow(const QWindow *window)
     }
 }
 
-void PanelShadows::setEnabledBorders(const QWindow *window, Plasma::FrameSvg::EnabledBorders enabledBorders)
+void PanelShadows::setEnabledBorders(QWindow *window, Plasma::FrameSvg::EnabledBorders enabledBorders)
 {
     if (!window || !d->m_windows.contains(window)) {
         return;
@@ -172,7 +172,7 @@ void PanelShadows::Private::clearTiles()
     m_tiles.clear();
 }
 
-void PanelShadows::Private::updateShadow(const QWindow *window, Plasma::FrameSvg::EnabledBorders enabledBorders)
+void PanelShadows::Private::updateShadow(QWindow *window, Plasma::FrameSvg::EnabledBorders enabledBorders)
 {
     if (!hasShadows()) {
         return;
@@ -283,14 +283,14 @@ void PanelShadows::Private::updateShadow(const QWindow *window, Plasma::FrameSvg
     }
 
     shadow->setPadding(padding);
-    shadow->setWindow(const_cast<QWindow *>(window));
+    shadow->setWindow(window);
 
     if (!shadow->create()) {
         qCWarning(PLASMASHELL) << "Couldn't create KWindowShadow for" << window;
     }
 }
 
-void PanelShadows::Private::clearShadow(const QWindow *window)
+void PanelShadows::Private::clearShadow(QWindow *window)
 {
     delete m_shadows.take(window);
 }
