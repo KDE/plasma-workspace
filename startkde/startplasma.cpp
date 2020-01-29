@@ -123,7 +123,7 @@ void runStartupConfig()
     KConfigGroup formatsConfig = KConfigGroup(&config, "Formats");
 
     const auto lcValues = {
-        "LANG", "LC_NUMERIC", "LC_MONETARY", "LC_MEASUREMENT", "LC_COLLATE", "LC_CTYPE"
+        "LANG", "LC_NUMERIC", "LC_TIME", "LC_MONETARY", "LC_MEASUREMENT", "LC_COLLATE", "LC_CTYPE"
     };
     for (auto lc : lcValues) {
         const QString value = formatsConfig.readEntry(lc, QString());
