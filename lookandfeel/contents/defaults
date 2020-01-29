@@ -10,6 +10,9 @@ Theme=breeze
 [plasmarc][Theme]
 name=default
 
+[Wallpaper]
+Image=Next
+
 [kcminputrc][Mouse]
 cursorTheme=breeze_cursors
 

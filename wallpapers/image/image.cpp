@@ -279,11 +279,39 @@ KPackage::Package *Image::package()
 
 void Image::useSingleImageDefaults()
 {
-    Plasma::Theme theme;
-    m_wallpaper = theme.wallpaperPath();
-    int index = m_wallpaper.indexOf(QString::fromLatin1("/contents/images/"));
-    if (index > -1) { // We have file from package -> get path to package
-        m_wallpaper.truncate(index);
+    m_wallpaper = QString();
+
+    // Try from the look and feel package first, then from the plasma theme
+    KPackage::Package lookAndFeelPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
+    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
+    // If empty, it will be the default (currently Breeze)
+    if (!packageName.isEmpty()) {
+        lookAndFeelPackage.setPath(packageName);
+    }
+
+    KConfigGroup lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(lookAndFeelPackage.filePath("defaults")), "Wallpaper");
+
+    const QString image = lnfDefaultsConfig.readEntry("Image", "");
+    if (!image.isEmpty()) {
+        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
+        package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/") + image, QStandardPaths::LocateDirectory));
+
+        if (package.isValid()) {
+            m_wallpaper = package.path();
+        } else {
+            m_wallpaper = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/") + image);
+        }
+    }
+
+    // Try to get a default from the plasma theme
+    if (m_wallpaper.isEmpty()) {
+        Plasma::Theme theme;
+        m_wallpaper = theme.wallpaperPath();
+        int index = m_wallpaper.indexOf(QString::fromLatin1("/contents/images/"));
+        if (index > -1) { // We have file from package -> get path to package
+            m_wallpaper = m_wallpaper.left(index);
+        }
     }
 }
 
