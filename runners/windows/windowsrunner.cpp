@@ -22,6 +22,8 @@
 
 #include <QTimer>
 
+#include <QMutex>
+#include <QMutexLocker>
 #include <QDebug>
 #include <QIcon>
 #include <QMutexLocker>
