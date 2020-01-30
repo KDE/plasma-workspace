@@ -39,7 +39,7 @@ Name[x-test]=xxPlasma Widgetsxx
 Name[zh_CN]=Plasma 部件
 Name[zh_TW]=Plasma 元件
 
-ProvidersUrl=https://download.kde.org/ocs/providers.xml
+ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=Plasma 5 Plasmoid
 StandardResource=tmp
 InstallationCommand=kpackagetool5 --install %f --type Plasma/Applet
