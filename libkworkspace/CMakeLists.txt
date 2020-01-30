@@ -3,6 +3,7 @@ set(kworkspace_LIB_SRCS kdisplaymanager.cpp
                         kworkspace.cpp
                         sessionmanagement.cpp
                         sessionmanagementbackend.cpp
+                        updatelaunchenvjob.cpp
    )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libkworkspace\")
@@ -12,9 +13,11 @@ remove_definitions(-DQT_NO_CAST_TO_ASCII)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
+qt5_add_dbus_interface(kworkspace_LIB_SRCS ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml klauncher_interface)
 qt5_add_dbus_interface(kworkspace_LIB_SRCS ${KSCREENLOCKER_DBUS_INTERFACES_DIR}/kf5_org.freedesktop.ScreenSaver.xml screenlocker_interface )
 qt5_add_dbus_interface(kworkspace_LIB_SRCS ${KSCREENLOCKER_DBUS_INTERFACES_DIR}/org.kde.screensaver.xml kscreenlocker_interface )
 qt5_add_dbus_interface(kworkspace_LIB_SRCS ${plasma-workspace_SOURCE_DIR}/ksmserver/org.kde.LogoutPrompt.xml logoutprompt_interface)
+qt5_add_dbus_interface(kworkspace_LIB_SRCS ${plasma-workspace_SOURCE_DIR}/startkde/plasma-session/org.kde.Startup.xml startup_interface)
 qt5_add_dbus_interface(kworkspace_LIB_SRCS ${plasma-workspace_SOURCE_DIR}/startkde/plasma-session/org.kde.Shutdown.xml shutdown_interface)
 
 set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/org.freedesktop.login1.Manager.xml"
@@ -78,6 +81,7 @@ install(TARGETS kworkspace EXPORT libkworkspaceLibraryTargets ${KDE_INSTALL_TARG
 install( FILES kdisplaymanager.h
                kworkspace.h
                sessionmanagement.h
+               updatelaunchenvjob.h
                ${CMAKE_CURRENT_BINARY_DIR}/config-libkworkspace.h
                ${CMAKE_CURRENT_BINARY_DIR}/kworkspace_export.h
          DESTINATION ${KDE_INSTALL_INCLUDEDIR}/kworkspace5 COMPONENT Devel )
