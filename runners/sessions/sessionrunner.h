@@ -22,6 +22,7 @@
 #include <kdisplaymanager.h>
 #include <krunner/abstractrunner.h>
 
+#include <sessionmanagement.h>
 
 /**
  * This class provides matches for running sessions as well as
@@ -41,11 +42,11 @@ class SessionRunner : public Plasma::AbstractRunner
         enum { LogoutAction = 1, ShutdownAction, RestartAction, LockAction };
 
     private:
-        void lock();
         void matchCommands(QList<Plasma::QueryMatch> &matches, const QString& term);
 
         QString m_triggerWord;
         KDisplayManager dm;
+        SessionManagement m_session;
         bool m_canLogout;
 };
 

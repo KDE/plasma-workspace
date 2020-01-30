@@ -35,13 +35,8 @@
 #include <Plasma/Corona>
 
 #include "kworkspace.h"
+#include <sessionmanagement.h>
 #include "krunner_interface.h"
-#include "screensaver_interface.h"
-
-#ifdef Q_OS_WIN
-#define _WIN32_WINNT 0x0500 // require NT 5.0 (win 2k pro)
-#include <windows.h>
-#endif // Q_OS_WIN
 
 ContextMenu::ContextMenu(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args),
@@ -51,7 +46,8 @@ ContextMenu::ContextMenu(QObject *parent, const QVariantList &args)
       m_separator1(nullptr),
       m_separator2(nullptr),
       m_separator3(nullptr),
-      m_buttons(nullptr)
+      m_buttons(nullptr),
+      m_session(new SessionManagement(this))
 {
 }
 
@@ -101,11 +97,20 @@ void ContextMenu::restore(const KConfigGroup &config)
         m_lockScreenAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Lock Screen"), this);
         m_lockScreenAction->setIcon(QIcon::fromTheme(QStringLiteral("system-lock-screen")));
         m_lockScreenAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("ksmserver"), QStringLiteral("Lock Session")).value(0));
-        connect(m_lockScreenAction, &QAction::triggered, this, &ContextMenu::lockScreen);
+        m_lockScreenAction->setEnabled(m_session->canLock());
+        connect(m_session, &SessionManagement::canLockChanged, this, [this]() {
+            m_lockScreenAction->setEnabled(m_session->canLock());
+        });
+        connect(m_lockScreenAction, &QAction::triggered, m_session, &SessionManagement::lock);
+
 
         m_logoutAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Leave..."), this);
         m_logoutAction->setIcon(QIcon::fromTheme(QStringLiteral("system-log-out")));
         m_logoutAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("ksmserver"), QStringLiteral("Log Out")).value(0));
+        m_logoutAction->setEnabled(m_session->canLogout());
+        connect(m_session, &SessionManagement::canLogoutChanged, this, [this]() {
+                m_logoutAction->setEnabled(m_session->canLogout());
+        });
         connect(m_logoutAction, &QAction::triggered, this, &ContextMenu::startLogout);
 
         m_separator1 = new QAction(this);
@@ -208,47 +213,21 @@ void ContextMenu::runCommand()
     krunner.display();
 }
 
-void ContextMenu::lockScreen()
-{
-    if (!KAuthorized::authorizeAction(QStringLiteral("lock_screen"))) {
-        return;
-    }
-
-#ifndef Q_OS_WIN
-    QString interface(QStringLiteral("org.freedesktop.ScreenSaver"));
-    org::freedesktop::ScreenSaver screensaver(interface, QStringLiteral("/ScreenSaver"),
-                                              QDBusConnection::sessionBus());
-    if (screensaver.isValid()) {
-        screensaver.Lock();
-    }
-#else
-    LockWorkStation();
-#endif // !Q_OS_WIN
-}
-
 void ContextMenu::startLogout()
 {
-    // this short delay is due to two issues:
-    // a) KWorkSpace's DBus alls are all synchronous
-    // b) the destruction of the menu that this action is in is delayed
-    //
-    // (a) leads to the menu hanging out where everyone can see it because
-    // the even loop doesn't get returned to allowing it to close.
-    //
-    // (b) leads to a 0ms timer not working since a 0ms timer just appends to
-    // the event queue, and then the menu closing event gets appended to that.
-    //
-    // ergo a timer with small timeout
-    QTimer::singleShot(10, this, &ContextMenu::logout);
-}
-
-void ContextMenu::logout()
-{
-    if (!KAuthorized::authorizeAction(QStringLiteral("logout"))) {
-        return;
+    KConfig config(QStringLiteral("ksmserverrc"));
+    const auto group = config.group("General");
+    switch (group.readEntry("shutdownType", int(KWorkSpace::ShutdownTypeNone))) {
+        case int(KWorkSpace::ShutdownTypeHalt):
+            m_session->requestShutdown();
+            break;
+        case int(KWorkSpace::ShutdownTypeReboot):
+            m_session->requestReboot();
+            break;
+        default:
+            m_session->requestLogout();
+            break;
     }
-
-    KWorkSpace::requestShutDown();
 }
 
 QWidget* ContextMenu::createConfigurationInterface(QWidget* parent)
