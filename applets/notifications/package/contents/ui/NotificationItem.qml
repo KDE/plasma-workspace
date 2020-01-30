@@ -341,7 +341,7 @@ ColumnLayout {
                     flat: false
                     // why does it spit "cannot assign undefined to string" when a notification becomes expired?
                     text: modelData.label || ""
-                    Layout.preferredWidth: minimumWidth
+                    width: minimumWidth
 
                     onClicked: {
                         if (modelData.actionName === "inline-reply") {
