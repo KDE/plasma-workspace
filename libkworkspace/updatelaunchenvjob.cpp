@@ -60,6 +60,7 @@ UpdateLaunchEnvJob::UpdateLaunchEnvJob(const QString &varName, const QString &va
 {
     d->varName = varName;
     d->value = value;
+    start();
 }
 
 UpdateLaunchEnvJob::~UpdateLaunchEnvJob()
