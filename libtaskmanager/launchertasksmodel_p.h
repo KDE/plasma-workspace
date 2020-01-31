@@ -29,10 +29,25 @@ namespace TaskManager {
 
 #define NULL_UUID "00000000-0000-0000-0000-000000000000"
 
+inline static bool isValidLauncherUrl(const QUrl &url)
+{
+    if (url.isEmpty() || !url.isValid()) {
+        return false;
+    }
+
+    if (!url.isLocalFile()
+            && url.scheme() != QLatin1String("applications")
+            && url.scheme() != QLatin1String("preferred")) {
+        return false;
+    }
+
+    return true;
+}
+
 inline static std::pair<QUrl, QStringList> deserializeLauncher(const QString &serializedLauncher)
 {
     QStringList activities;
-    QUrl url(serializedLauncher, QUrl::StrictMode);
+    QUrl url(serializedLauncher);
 
     // The storage format is: [list of activity ids]\nURL
     // The activity IDs list can not be empty, it at least needs
@@ -47,7 +62,7 @@ inline static std::pair<QUrl, QStringList> deserializeLauncher(const QString &se
             activities = serializedLauncher.mid(1, activitiesBlockEnd - 1).split(",", QString::SkipEmptyParts);
 
             if (!activities.isEmpty()) {
-                url = QUrl(serializedLauncher.mid(activitiesBlockEnd + 2), QUrl::StrictMode);
+                url = QUrl(serializedLauncher.mid(activitiesBlockEnd + 2));
             }
         }
     }
