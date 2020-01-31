@@ -509,7 +509,6 @@ QtObject {
 
                             const appId = tasksModel.data(idx, TaskManager.AbstractTasksModel.AppId);
                             if (appId === model.desktopEntry + ".desktop") {
-                                console.log("Associated window titled", tasksModel.data(idx, Qt.DisplayRole), "of", appId, "with this notification");
                                 // Takes a row number, not a QModelIndex
                                 defaultActionFallbackWindowIdx = tasksModel.makePersistentModelIndex(i);
                                 hasDefaultAction = true;
