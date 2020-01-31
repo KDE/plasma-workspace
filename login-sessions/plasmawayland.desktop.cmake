@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=dbus-run-session ${CMAKE_INSTALL_FULL_BINDIR}/startplasma-wayland
+Exec=${CMAKE_INSTALL_FULL_BINDIR}/startplasma-wayland
 TryExec=${CMAKE_INSTALL_FULL_BINDIR}/startplasma-wayland
 DesktopNames=KDE
 Name=Plasma (Wayland)

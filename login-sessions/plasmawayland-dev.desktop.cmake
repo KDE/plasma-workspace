@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=dbus-run-session @CMAKE_INSTALL_FULL_LIBEXECDIR@/startplasma-dev.sh -wayland
+Exec=@CMAKE_INSTALL_FULL_LIBEXECDIR@/startplasma-dev.sh -wayland
 DesktopNames=KDE
 Name=Plasma (Development, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ast]=Plasma (Desendolcu, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
