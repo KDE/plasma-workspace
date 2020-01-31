@@ -36,6 +36,7 @@ class LauncherTasksModelTest : public QObject
 
         void shouldRoundTripLauncherUrlList();
         void shouldIgnoreInvalidUrls();
+        void shouldAcceptSpaces();
         void shouldRejectDuplicates();
         void shouldAddRemoveLauncher();
         void shouldReturnValidLauncherPositions();
@@ -89,6 +90,25 @@ void LauncherTasksModelTest::shouldIgnoreInvalidUrls()
     QCOMPARE(launcherListChangedSpy.count(), 0);
 
     QCOMPARE(m.launcherList(), QStringList());
+}
+
+void LauncherTasksModelTest::shouldAcceptSpaces()
+{
+    LauncherTasksModel m;
+
+    const QStringList urlStrings{
+        QLatin1String("applications:App with spaces.desktop")
+    };
+
+    QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::launcherListChanged);
+    QVERIFY(launcherListChangedSpy.isValid());
+
+    const bool added = m.requestAddLauncher(QUrl(urlStrings.at(0)));
+
+    QVERIFY(added);
+    QCOMPARE(launcherListChangedSpy.count(), 1);
+
+    QCOMPARE(m.launcherList(), QStringList() << urlStrings.at(0));
 }
 
 void LauncherTasksModelTest::shouldRejectDuplicates()
