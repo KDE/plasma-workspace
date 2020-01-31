@@ -29,6 +29,20 @@
 
 #include <KLocalizedString>
 
+static QString plasmoidCategoryForMetadata(const KPluginMetaData &metadata)
+{
+    QString category = QStringLiteral("UnknownCategory");
+
+    if (metadata.isValid()) {
+        const QString notificationAreaCategory = metadata.value(QStringLiteral("X-Plasma-NotificationAreaCategory"));
+        if (!notificationAreaCategory.isEmpty()) {
+            category = notificationAreaCategory;
+        }
+    }
+
+    return category;
+}
+
 PlasmoidModel::PlasmoidModel(QObject *parent) : QStandardItemModel(parent)
 {
     for (const auto &info : Plasma::PluginLoader::self()->listAppletMetaData(QString())) {
@@ -47,7 +61,7 @@ PlasmoidModel::PlasmoidModel(QObject *parent) : QStandardItemModel(parent)
         item->setData(info.pluginId(), static_cast<int>(BaseRole::ItemId));
         item->setData(QStringLiteral("Plasmoid"), static_cast<int>(BaseRole::ItemType));
         item->setData(false, static_cast<int>(BaseRole::CanRender));
-        item->setData(QStringLiteral("UnknownCategory"), static_cast<int>(BaseRole::Category));
+        item->setData(plasmoidCategoryForMetadata(info), static_cast<int>(BaseRole::Category));
         item->setData(false, static_cast<int>(Role::HasApplet));
         appendRow(item);
     }
@@ -90,17 +104,7 @@ void PlasmoidModel::addApplet(Plasma::Applet *applet)
     dataItem->setData(applet->property("_plasma_graphicObject"), static_cast<int>(Role::Applet));
     dataItem->setData(true, static_cast<int>(Role::HasApplet));
     dataItem->setData(true, static_cast<int>(BaseRole::CanRender));
-
-    if (applet->pluginMetaData().isValid()) {
-        const QString category = applet->pluginMetaData().value(QStringLiteral("X-Plasma-NotificationAreaCategory"));
-        if (category.isEmpty()) {
-            dataItem->setData(QStringLiteral("UnknownCategory"), static_cast<int>(BaseRole::Category));
-        } else {
-            dataItem->setData(category, static_cast<int>(BaseRole::Category));
-        }
-    } else {
-        dataItem->setData(QStringLiteral("UnknownCategory"), static_cast<int>(BaseRole::Category));
-    }
+    dataItem->setData(plasmoidCategoryForMetadata(applet->pluginMetaData()), static_cast<int>(BaseRole::Category));
 }
 
 void PlasmoidModel::removeApplet(Plasma::Applet *applet)
