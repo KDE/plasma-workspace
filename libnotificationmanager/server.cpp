@@ -72,7 +72,7 @@ void Server::closeNotification(uint notificationId, CloseReason reason)
 {
     emit notificationRemoved(notificationId, reason);
 
-    emit d->NotificationClosed(notificationId, static_cast<int>(reason)); // tell on DBus
+    emit d->NotificationClosed(notificationId, static_cast<uint>(reason)); // tell on DBus
 }
 
 void Server::invokeAction(uint notificationId, const QString &actionName)
