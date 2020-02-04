@@ -255,9 +255,9 @@ void JobPrivate::finish()
 void JobPrivate::terminate(const QString &errorMessage)
 {
     Job *job = static_cast<Job *>(parent());
-    job->setErrorText(errorMessage);
-    job->setState(Notifications::JobStateStopped);
-    finish();
+    // forward to JobViewV3. In V2 we get a setError before a terminate
+    // so we want to forward the current error to the V3 call.
+    terminate(job->error(), errorMessage, {});
 }
 
 void JobPrivate::setSuspended(bool suspended)
