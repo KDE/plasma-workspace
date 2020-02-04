@@ -76,7 +76,7 @@ will be loaded later. [More information about kded modules could be
 found in kdelibs/kded/HOWTO]
 
 Startkde also launches kcminit, which performs initialization done by kcontrol
-modules. There are three kcminit phases, 0, 1 and 2, controlled
+modules. There are two kcminit phases, 0, 1, controlled
 by X-KDE-Init-Phase= in the .desktop file, which defaults to 1. Phase 0 kcminit
 modules should be only those that really need to be run early in the startup
 process (and those should probably actually use kstartupconfig in startkde
@@ -105,9 +105,8 @@ saving (usually logout).
 By this time KDE session is considered to be more or less ready and
 ksmserver does the knotify startkde event (i.e. plays the login sound).
 It also tells klauncher to perform autostart phase 2, kded to load all
-remaining autoload (i.e. kded phase 2) modules, kcminit to execute
-kcminit phase 2 (kcontrol modules that do initialization that can wait,
-like launching daemons) and it itself executes the user Autostart folder.
+remaining autoload (i.e. kded phase 2) modules, and it itself executes
+the user Autostart folder.
 
 Technical note: There's a reason why kded modules and items in autostart
 default to the latest phase. Before you explicitly use a different phase,

@@ -97,7 +97,7 @@ public:
     void start() override {
         qCDebug(PLASMA_SESSION) << "Phase 0";
         addSubjob(new AutoStartAppsJob(m_autostart, 0));
-        addSubjob(new KCMInitJob(1));
+        addSubjob(new KCMInitJob());
         addSubjob(new SleepJob());
     }
 };
@@ -127,7 +127,6 @@ public:
         qCDebug(PLASMA_SESSION) << "Phase 2";
         addSubjob(new AutoStartAppsJob(m_autostart, 2));
         addSubjob(new KDEDInitJob());
-        addSubjob(new KCMInitJob(2));
         runUserAutostart();
     }
 };
@@ -255,8 +254,8 @@ void Startup::updateLaunchEnv(const QString &key, const QString &value)
     qputenv(key.toLatin1(), value.toLatin1());
 }
 
-KCMInitJob::KCMInitJob(int phase)
-    :m_phase(phase)
+KCMInitJob::KCMInitJob()
+    : KJob()
 {
 }
 
@@ -266,12 +265,7 @@ void KCMInitJob::start() {
                               QDBusConnection::sessionBus());
     kcminit.setTimeout(10 * 1000);
 
-    QDBusPendingReply<void> pending;
-    if (m_phase == 1) {
-        pending = kcminit.runPhase1();
-    } else {
-        pending = kcminit.runPhase2();
-    }
+    QDBusPendingReply<void> pending = kcminit.runPhase1();
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {emitResult();});
     connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);

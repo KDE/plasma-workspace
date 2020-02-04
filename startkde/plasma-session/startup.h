@@ -56,10 +56,8 @@ class KCMInitJob: public KJob
 {
 Q_OBJECT
 public:
-    KCMInitJob(int phase);
+    KCMInitJob();
     void start() override;
-private:
-    int m_phase;
 };
 
 class KDEDInitJob: public KJob
