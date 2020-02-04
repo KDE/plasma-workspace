@@ -36,8 +36,12 @@ NotificationGroupCollapsingProxyModel::~NotificationGroupCollapsingProxyModel() 
 
 void NotificationGroupCollapsingProxyModel::setSourceModel(QAbstractItemModel *source)
 {
-    if (sourceModel()) {
-        disconnect(sourceModel(), nullptr, this, nullptr);
+    if (source == QAbstractProxyModel::sourceModel()) {
+        return;
+    }
+
+    if (QAbstractProxyModel::sourceModel()) {
+        disconnect(QAbstractProxyModel::sourceModel(), nullptr, this, nullptr);
     }
 
     QSortFilterProxyModel::setSourceModel(source);
