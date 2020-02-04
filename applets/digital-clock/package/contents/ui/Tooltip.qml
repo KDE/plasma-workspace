@@ -34,6 +34,8 @@ Item {
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
+    PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
+    PlasmaCore.ColorScope.inherit: false
 
     function timeForZone(zone) {
         var compactRepresentationItem = plasmoid.compactRepresentationItem;
