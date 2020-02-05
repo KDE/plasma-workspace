@@ -1,6 +1,7 @@
 /***************************************************************************
  *   Copyright 2013 Sebastian Kügler <sebas@kde.org>                       *
  *   Copyright 2014 Kai Uwe Broulik <kde@privat.broulik.de>                *
+ *   Copyright 2020 Ismael Asensio <isma.af@gmail.com>                     *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU Library General Public License as       *
@@ -69,6 +70,8 @@ Item {
     readonly property string identity: !root.noPlayer ? mpris2Source.currentData.Identity || mpris2Source.current : ""
 
     property bool noPlayer: mpris2Source.sources.length <= 1
+
+    property var mprisSourcesModel: []
 
     readonly property bool canControl: (!root.noPlayer && mpris2Source.currentData.CanControl) || false
     readonly property bool canGoPrevious: (canControl && mpris2Source.currentData.CanGoPrevious) || false
@@ -205,18 +208,24 @@ Item {
         readonly property var currentData: data[current]
 
         engine: "mpris2"
-        connectedSources: current
+        connectedSources: sources
+
+        onSourceAdded: {
+            updateMprisSourcesModel()
+        }
 
         onSourceRemoved: {
             // if player is closed, reset to multiplex source
             if (source === current) {
                 current = multiplexSource
             }
+            updateMprisSourcesModel()
         }
     }
 
     Component.onCompleted: {
-        mpris2Source.serviceForSource("@multiplex").enableGlobalShortcuts();
+        mpris2Source.serviceForSource("@multiplex").enableGlobalShortcuts()
+        updateMprisSourcesModel()
     }
 
     function togglePlaying() {
@@ -266,6 +275,31 @@ Item {
         var service = mpris2Source.serviceForSource(src);
         var operation = service.operationDescription(op);
         return service.startOperationCall(operation);
+    }
+
+    function updateMprisSourcesModel () {
+
+        var model = [{
+            'text': i18n("Choose player automatically"),
+            'icon': 'emblem-favorite',
+            'source': mpris2Source.multiplexSource
+        }]
+
+        var sources = mpris2Source.sources
+        for (var i = 0, length = sources.length; i < length; ++i) {
+            var source = sources[i]
+            if (source === mpris2Source.multiplexSource) {
+                continue
+            }
+
+            model.push({
+                'text': mpris2Source.data[source]["Identity"],
+                'icon': mpris2Source.data[source]["Desktop Icon Name"] || mpris2Source.data[source]["Desktop Entry"] || source,
+                'source': source
+            });
+        }
+
+        root.mprisSourcesModel = model;
     }
 
     states: [
