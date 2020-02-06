@@ -37,6 +37,10 @@ AbstractItem {
     status: applet ? applet.status : PlasmaCore.Types.UnknownStatus
     active: root.activeApplet !== applet
 
+    Component.onDestruction: {
+        applet = null
+    }
+
     onClicked: {
         if (applet && mouse.button === Qt.LeftButton) {
             applet.expanded = true;
@@ -49,7 +53,7 @@ AbstractItem {
     }
     onContextMenu: {
         if (applet) {
-            plasmoid.nativeInterface.showPlasmoidMenu(applet, 0, plasmoidContainer.hidden ? applet.height : 0);
+            plasmoid.nativeInterface.showPlasmoidMenu(applet, 0, plasmoidContainer.inHiddenLayout ? applet.height : 0);
         }
     }
 
@@ -58,12 +62,33 @@ AbstractItem {
             applet.width = height
         }
     }
-    onAppletChanged: {
-        if (!applet) {
-            plasmoidContainer.destroy();
-            print("applet destroyed")
+
+    //This is to make preloading effective, minimizes the scene changes
+    function preloadFullRepresentationItem(fullRepresentationItem) {
+        if (fullRepresentationItem && applet.fullRepresentationItem.parent === null) {
+            fullRepresentationItem.width = expandedRepresentation.width
+            fullRepresentationItem.width = expandedRepresentation.height
+            fullRepresentationItem.parent = preloadedStorage;
         }
     }
+
+    onAppletChanged: {
+        if (applet) {
+            applet.parent = plasmoidContainer
+            applet.anchors.left = plasmoidContainer.left
+            applet.anchors.top = plasmoidContainer.top
+            applet.anchors.bottom = plasmoidContainer.bottom
+            applet.width = plasmoidContainer.height
+            applet.visible = true
+            plasmoidContainer.visible = true
+
+            preloadFullRepresentationItem(applet.fullRepresentationItem)
+        }
+        if (!applet) {
+            plasmoidContainer.destroy();
+        }
+    }
+
     Connections {
         target: applet
         onActivated: plasmoidContainer.activated()
@@ -72,19 +97,23 @@ AbstractItem {
             if (expanded) {
                 var oldApplet = root.activeApplet;
                 root.activeApplet = applet;
-                if (oldApplet) {
+                if (oldApplet && oldApplet !== applet) {
                     oldApplet.expanded = false;
                 }
                 dialog.visible = true;
                 plasmoidContainer.activated()
 
             } else if (root.activeApplet === applet) {
-                if (!applet.parent.hidden) {
+                if (!inHiddenLayout) {
                     dialog.visible = false;
                 }
                 //if not expanded we don't have an active applet anymore
                 root.activeApplet = null;
             }
+        }
+
+        onFullRepresentationItemChanged: {
+            preloadFullRepresentationItem(fullRepresentationItem)
         }
     }
 }
