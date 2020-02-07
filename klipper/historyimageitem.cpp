@@ -47,10 +47,10 @@ QString HistoryImageItem::text() const {
     if (m_text.isNull()) {
         m_text =
             QStringLiteral("▨ ") +
-            i18n("%1x%2 %3bpp")
-                 .arg(m_data.width())
-                 .arg(m_data.height())
-                 .arg(m_data.depth());
+            i18n("%1x%2 %3bpp",
+                 m_data.width(),
+                 m_data.height(),
+                 m_data.depth());
     }
     return m_text;
 }

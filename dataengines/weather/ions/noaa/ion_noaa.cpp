@@ -462,7 +462,7 @@ void NOAAIon::parseWeatherSite(WeatherData& data, QXmlStreamReader& xml)
     }
 }
 
-// Parse Weather data main loop, from here we have to decend into each tag pair
+// Parse Weather data main loop, from here we have to descend into each tag pair
 bool NOAAIon::readXMLData(const QString& source, QXmlStreamReader& xml)
 {
     WeatherData data;

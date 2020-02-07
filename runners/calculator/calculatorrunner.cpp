@@ -261,7 +261,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
 
     userFriendlySubstitutions(cmd);
     #ifndef ENABLE_QALCULATE
-    cmd.replace(QRegExp(QStringLiteral("([a-zA-Z]+)")), QStringLiteral("Math.\\1")); //needed for accessing math funktions like sin(),....
+    cmd.replace(QRegExp(QStringLiteral("([a-zA-Z]+)")), QStringLiteral("Math.\\1")); //needed for accessing math functions like sin(),....
     #endif
 
     bool isApproximate = false;

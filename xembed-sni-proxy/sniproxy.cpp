@@ -258,7 +258,7 @@ QSize SNIProxy::calculateClientWindowSize() const
     //if the window is a clearly stupid size resize to be something sensible
     //this is needed as chromium and such when resized just fill the icon with transparent space and only draw in the middle
     //however KeePass2 does need this as by default the window size is 273px wide and is not transparent
-    //use an artbitrary heuristic to make sure icons are always sensible
+    //use an arbitrary heuristic to make sure icons are always sensible
     if (clientWindowSize.isEmpty() || clientWindowSize.width() > s_embedSize || clientWindowSize.height() > s_embedSize) {
         qCDebug(SNIPROXY) << "Resizing window" << m_windowId << Title() << "from w*h" << clientWindowSize;
 

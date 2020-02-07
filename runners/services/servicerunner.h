@@ -28,7 +28,7 @@
 /**
  * This class looks for matches in the set of .desktop files installed by
  * applications. This way the user can type exactly what they see in the
- * appications menu and have it start the appropriate app. Essentially anything
+ * applications menu and have it start the appropriate app. Essentially anything
  * that KService knows about, this runner can launch
  */
 
