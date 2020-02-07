@@ -96,6 +96,8 @@ public:
 
     bool dragActive() const;
 
+    Q_INVOKABLE void cancelEdit();
+
     EditModeCondition editModeCondition() const;
     void setEditModeCondition(EditModeCondition condition);
 

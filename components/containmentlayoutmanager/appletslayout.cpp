@@ -361,7 +361,6 @@ void AppletsLayout::setEventManagerToFilter(QQuickItem *item)
     emit eventManagerToFilterChanged();
 }
 
-
 void AppletsLayout::save()
 {
     m_saveLayoutTimer->start();
