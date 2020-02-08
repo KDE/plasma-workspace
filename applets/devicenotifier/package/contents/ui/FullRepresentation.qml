@@ -43,7 +43,7 @@ MouseArea {
         verticalAlignment: Text.AlignVCenter
         wrapMode: Text.WordWrap
         level: 3
-        text: i18n("No Devices Available")
+        text: i18n("No devices available")
         visible: notifierDialog.count === 0 && !devicenotifier.pendingDelegateRemoval
         enabled: false
     }

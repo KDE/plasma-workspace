@@ -589,7 +589,7 @@ ColumnLayout{
                 verticalAlignment: Text.AlignVCenter
                 wrapMode: Text.WordWrap
                 level: 3
-                text: i18n("No unread notifications.")
+                text: i18n("No unread notifications")
                 visible: list.count === 0 && NotificationManager.Server.valid
                 enabled: false
             }
