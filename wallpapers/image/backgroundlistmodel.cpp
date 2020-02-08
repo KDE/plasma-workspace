@@ -491,7 +491,7 @@ const QStringList BackgroundListModel::wallpapersAwaitingDeletion()
 BackgroundFinder::BackgroundFinder(Image *wallpaper, const QStringList &paths)
     : QThread(wallpaper),
       m_paths(paths),
-      m_token(QUuid().toString())
+      m_token(QUuid::createUuid().toString())
 {
 }
 
