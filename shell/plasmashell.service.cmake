@@ -1,6 +1,6 @@
 [Unit]
 Description=KDE Plasma Workspace
-#   Requires=ksmserver.service
+Wants=ksmserver.service kcminit.service
 #kded.service kactivitymanagerd.service
 
 [Service]
@@ -10,4 +10,4 @@ KillMode=none
 BusName=org.kde.plasmashell
 
 [Install]
-Alias=plasma-workspace.service
+WantedBy=plasma-core.target
