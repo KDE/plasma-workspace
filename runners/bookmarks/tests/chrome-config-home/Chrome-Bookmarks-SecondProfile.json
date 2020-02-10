@@ -15,6 +15,6 @@
                "id": "7",
                "name": "bookmark in secondProfile",
                "type": "url",
-               "url": "http://secondprofile.com/"
+               "url": "https://secondprofile.com/"
             } ] } }
 }
