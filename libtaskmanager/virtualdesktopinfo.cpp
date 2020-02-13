@@ -42,7 +42,7 @@ class Q_DECL_HIDDEN VirtualDesktopInfo::Private : public QObject
     Q_OBJECT
 
 public:
-    Private(VirtualDesktopInfo *q);
+    Private();
     virtual ~Private() {}
 
     uint refCount = 1;
@@ -64,21 +64,18 @@ Q_SIGNALS:
     void desktopIdsChanged() const;
     void desktopNamesChanged() const;
     void desktopLayoutRowsChanged() const;
-
-protected:
-    VirtualDesktopInfo *q;
 };
 
-VirtualDesktopInfo::Private::Private(VirtualDesktopInfo *q)
-    : q(q)
+VirtualDesktopInfo::Private::Private()
 {
 }
 
 #if HAVE_X11
 class Q_DECL_HIDDEN VirtualDesktopInfo::XWindowPrivate : public VirtualDesktopInfo::Private
 {
+    Q_OBJECT
 public:
-    XWindowPrivate(VirtualDesktopInfo *q);
+    XWindowPrivate();
 
     void init() override;
     QVariant currentDesktop() const override;
@@ -92,8 +89,8 @@ public:
     void requestRemoveDesktop(quint32 position) override;
 };
 
-VirtualDesktopInfo::XWindowPrivate::XWindowPrivate(VirtualDesktopInfo *q)
-    : VirtualDesktopInfo::Private(q)
+VirtualDesktopInfo::XWindowPrivate::XWindowPrivate()
+    : VirtualDesktopInfo::Private()
 {
     init();
 }
@@ -199,8 +196,9 @@ void VirtualDesktopInfo::XWindowPrivate::requestRemoveDesktop(quint32 position)
 
 class Q_DECL_HIDDEN VirtualDesktopInfo::WaylandPrivate : public VirtualDesktopInfo::Private
 {
+    Q_OBJECT
 public:
-    WaylandPrivate(VirtualDesktopInfo *q);
+    WaylandPrivate();
 
     QVariant currentVirtualDesktop;
     QStringList virtualDesktops;
@@ -219,8 +217,8 @@ public:
     void requestRemoveDesktop(quint32 position) override;
 };
 
-VirtualDesktopInfo::WaylandPrivate::WaylandPrivate(VirtualDesktopInfo *q)
-    : VirtualDesktopInfo::Private(q)
+VirtualDesktopInfo::WaylandPrivate::WaylandPrivate()
+    : VirtualDesktopInfo::Private()
 {
     init();
 }
@@ -231,28 +229,28 @@ void VirtualDesktopInfo::WaylandPrivate::init()
         return;
     }
 
-    KWayland::Client::ConnectionThread *connection = KWayland::Client::ConnectionThread::fromApplication(q);
+    KWayland::Client::ConnectionThread *connection = KWayland::Client::ConnectionThread::fromApplication(this);
 
     if (!connection) {
         return;
     }
 
-    KWayland::Client::Registry *registry = new KWayland::Client::Registry(q);
+    KWayland::Client::Registry *registry = new KWayland::Client::Registry(this);
     registry->create(connection);
 
     QObject::connect(registry, &KWayland::Client::Registry::plasmaVirtualDesktopManagementAnnounced,
         [this, registry] (quint32 name, quint32 version) {
-            virtualDesktopManagement = registry->createPlasmaVirtualDesktopManagement(name, version, q);
+            virtualDesktopManagement = registry->createPlasmaVirtualDesktopManagement(name, version, this);
 
             const QList<KWayland::Client::PlasmaVirtualDesktop *> &desktops = virtualDesktopManagement->desktops();
 
-            QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::desktopCreated, q,
+            QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::desktopCreated, this,
                 [this](const QString &id, quint32 position) {
                     addDesktop(id, position);
                 }
             );
 
-            QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::desktopRemoved, q,
+            QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::desktopRemoved, this,
                 [this](const QString &id) {
                     virtualDesktops.removeOne(id);
 
@@ -289,14 +287,14 @@ void VirtualDesktopInfo::WaylandPrivate::addDesktop(const QString &id, quint32 p
 
     const KWayland::Client::PlasmaVirtualDesktop *desktop = virtualDesktopManagement->getVirtualDesktop(id);
 
-    QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::activated, q,
+    QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::activated, this,
         [desktop, this]() {
             currentVirtualDesktop = desktop->id();
             emit currentDesktopChanged();
         }
     );
 
-    QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::done, q,
+    QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::done, this,
         [this]() {
             emit desktopNamesChanged();
         }
@@ -404,11 +402,11 @@ VirtualDesktopInfo::VirtualDesktopInfo(QObject *parent) : QObject(parent)
     if (!d) {
     #if HAVE_X11
         if (KWindowSystem::isPlatformX11()) {
-            d = new VirtualDesktopInfo::XWindowPrivate(this);
+            d = new VirtualDesktopInfo::XWindowPrivate;
         } else
     #endif
         {
-            d = new VirtualDesktopInfo::WaylandPrivate(this);
+            d = new VirtualDesktopInfo::WaylandPrivate;
         }
     } else {
         ++d->refCount;
