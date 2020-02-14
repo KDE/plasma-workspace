@@ -37,10 +37,6 @@ AbstractItem {
     status: applet ? applet.status : PlasmaCore.Types.UnknownStatus
     active: root.activeApplet !== applet
 
-    Component.onDestruction: {
-        applet = null
-    }
-
     onClicked: {
         if (applet && mouse.button === Qt.LeftButton) {
             applet.expanded = true;
@@ -65,7 +61,7 @@ AbstractItem {
 
     //This is to make preloading effective, minimizes the scene changes
     function preloadFullRepresentationItem(fullRepresentationItem) {
-        if (fullRepresentationItem && applet.fullRepresentationItem.parent === null) {
+        if (fullRepresentationItem && fullRepresentationItem.parent === null) {
             fullRepresentationItem.width = expandedRepresentation.width
             fullRepresentationItem.width = expandedRepresentation.height
             fullRepresentationItem.parent = preloadedStorage;
