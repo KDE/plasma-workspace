@@ -107,6 +107,9 @@ void Image::componentComplete()
     if (m_mode == SingleImage) {
         setSingleImage();
     } else if (m_mode == SlideShow) {
+        // show the last image shown the last time
+        m_wallpaperPath = m_wallpaper;
+        emit wallpaperPathChanged();
         startSlideshow();
     }
 }
@@ -667,7 +670,7 @@ void Image::backgroundsFound()
         // are not detected by KDirWatch, like a NFS directory being mounted)
         QTimer::singleShot(1000, this, &Image::startSlideshow);
     } else {
-        if (m_currentSlide == -1 && m_slideshowMode != Random) {
+        if (m_currentSlide == -1) {
             m_currentSlide = m_slideFilterModel->indexOf(m_wallpaper) - 1;
         } else {
             m_currentSlide = -1;
