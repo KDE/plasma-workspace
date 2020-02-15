@@ -75,19 +75,7 @@ ColumnLayout {
             property var visibilityColumnWidth: units.gridUnit
             property var keySequenceColumnWidth: units.gridUnit
 
-            model: PlasmaCore.SortFilterModel {
-                sourceModel: PlasmaCore.SortFilterModel {
-                    sourceModel: plasmoid.nativeInterface.systemTrayModel
-
-                    sortRole: "display"
-                    sortColumn: 0
-                    isSortLocaleAware: true
-                }
-
-                sortRole: "category"
-                sortColumn: 0
-                isSortLocaleAware: true
-            }
+            model: plasmoid.nativeInterface.configSystemTrayModel
 
             header: Kirigami.AbstractListItem {
 
