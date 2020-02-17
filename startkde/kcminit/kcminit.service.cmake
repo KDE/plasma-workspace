@@ -8,7 +8,6 @@ ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/kcminit
 Restart=none
 KillMode=none
 Type=forking
-BusName=org.kde.plasmashell
 
 [Install]
 Alias=plasma-workspace.service
