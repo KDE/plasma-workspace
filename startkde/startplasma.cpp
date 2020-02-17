@@ -357,7 +357,7 @@ bool startKSMServer(bool wayland)
     // If the session should be locked from the start (locked autologin),
     // lock now and do the rest of the KDE startup underneath the locker.
 
-    if (qEnvironmentVariableIsSet("PLASMA_SYSTEMD")) {
+    if (qEnvironmentVariableIsSet("PLASMA_SYSTEMD") || true) { //FIXME remove the || true when merging into master!!!!
         auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
                                                                        QStringLiteral("/org/freedesktop/systemd1"),
                                                                         QStringLiteral("org.freedesktop.systemd1.Manager"),

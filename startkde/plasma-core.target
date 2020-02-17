@@ -1,3 +1,4 @@
 [Unit]
-Description=KDE Plasma Workspace
-Requires=plasmashell.service kwin.service ksmserver.service kcminit.service kded.service
+Description=KDE Plasma Workspace Core
+Requires=plasmashell.service kwin.service ksmserver.service kcminit.service
+#kded.service
