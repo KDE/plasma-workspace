@@ -36,17 +36,31 @@ Item {
     Layout.minimumWidth: 1
     Layout.minimumHeight: 1
     Layout.preferredWidth: horizontal
-        ? (plasmoid.configuration.expanding ? optimalSpace : plasmoid.configuration.length)
+        ? (plasmoid.configuration.expanding ? optimalSize : plasmoid.configuration.length)
         : 0
     Layout.preferredHeight: horizontal
         ? 0
-        : (plasmoid.configuration.expanding ? plasmoid.nativeInterface.containment.width : plasmoid.configuration.length)
+        : (plasmoid.configuration.expanding ? optimalSize : plasmoid.configuration.length)
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
+
+    property int optimalSize: units.largeSpacing
 
     function action_expanding() {
         plasmoid.configuration.expanding = plasmoid.action("expanding").checked;
     }
+
+    // Search the actual gridLayout of the panel
+    property GridLayout panelLayout: {
+        var candidate = root.parent;
+        while (candidate) {
+            if (candidate instanceof GridLayout) {
+                return candidate;
+            }
+            candidate = candidate.parent;
+        }
+    }
+
     Component.onCompleted: {
         plasmoid.setAction("expanding", i18n("Set flexible size"));
         var action = plasmoid.action("expanding");
@@ -56,6 +70,60 @@ Item {
         plasmoid.removeAction("configure");
     }
 
+    property real leftItemsSizeHint: 0
+    property real rightItemsSizeHint: 0
+    property real middleItemsSizeHint: {
+        // Every time this binding gets reevaluated we want to queue a recomputation of the size hints
+        relayoutTimer.restart();
+        if (!twinSpacer || !panelLayout || !leftTwin || !rightTwin) {
+            return 0;
+        }
+
+        var leftTwinParent = leftTwin.parent;
+        var rightTwinParent = rightTwin.parent;
+        if (!leftTwinParent || !rightTwinParent) {
+            return 0;
+        }
+        var firstSpacerFound = false;
+        var secondSpacerFound = false;
+        var leftItemsHint = 0;
+        var middleItemsHint = 0;
+        var rightItemsHint = 0;
+
+        // Children order is guaranteed to be the same as the visual order of items in the layout
+        for (var i in panelLayout.children) {
+            if (!panelLayout.children[i].visible) {
+                continue;
+            } else if (panelLayout.children[i] == leftTwinParent) {
+                firstSpacerFound = true;
+            } else if (panelLayout.children[i] == rightTwinParent) {
+                secondSpacerFound = true;
+            } else if (secondSpacerFound) {
+                if (root.horizontal) {
+                    rightItemsHint += Math.max(panelLayout.children[i].Layout.minimumWidth, panelLayout.children[i].Layout.preferredWidth);
+                } else {
+                    rightItemsHint += Math.max(panelLayout.children[i].Layout.minimumHeight, panelLayout.children[i].Layout.preferredHeight);
+                }
+            } else if (firstSpacerFound) {
+                if (root.horizontal) {
+                    middleItemsHint += Math.max(panelLayout.children[i].Layout.minimumWidth, panelLayout.children[i].Layout.preferredWidth);
+                } else {
+                    middleItemsHint += Math.max(panelLayout.children[i].Layout.minimumHeight, panelLayout.children[i].Layout.preferredHeight);
+                }
+            } else {
+                if (root.horizontal) {
+                    leftItemsHint += Math.max(panelLayout.children[i].Layout.minimumWidth, panelLayout.children[i].Layout.preferredWidth);
+                } else {
+                    leftItemsHint += Math.max(panelLayout.children[i].Layout.minimumHeight, panelLayout.children[i].Layout.preferredHeight);
+                }
+            }
+        }
+
+        rightItemsSizeHint = rightItemsHint;
+        leftItemsSizeHint = leftItemsHint;
+        return middleItemsHint;
+    }
+
     readonly property Item twinSpacer: plasmoid.nativeInterface.twinSpacer
     readonly property Item leftTwin: {
         if (!twinSpacer) {
@@ -63,9 +131,9 @@ Item {
         }
 
         if (root.horizontal) {
-            return root.Kirigami.ScenePosition.x < twinSpacer.Kirigami.ScenePosition.x ? root : twinSpacer;
+            return root.Kirigami.ScenePosition.x < twinSpacer.Kirigami.ScenePosition.x ? plasmoid : twinSpacer;
         } else {
-            return root.Kirigami.ScenePosition.y < twinSpacer.Kirigami.ScenePosition.y ? root : twinSpacer;
+            return root.Kirigami.ScenePosition.y < twinSpacer.Kirigami.ScenePosition.y ? plasmoid : twinSpacer;
         }
     }
     readonly property Item rightTwin: {
@@ -74,42 +142,30 @@ Item {
         }
 
         if (root.horizontal) {
-            return root.Kirigami.ScenePosition.x >= twinSpacer.Kirigami.ScenePosition.x ? root : twinSpacer;
+            return root.Kirigami.ScenePosition.x >= twinSpacer.Kirigami.ScenePosition.x ? plasmoid : twinSpacer;
         } else {
-            return root.Kirigami.ScenePosition.y >= twinSpacer.Kirigami.ScenePosition.y ? root : twinSpacer;
+            return root.Kirigami.ScenePosition.y >= twinSpacer.Kirigami.ScenePosition.y ? plasmoid : twinSpacer;
         }
     }
 
-    readonly property int containmentLeftSpace: twinSpacer
-        ? (horizontal ? leftTwin.Kirigami.ScenePosition.x : leftTwin.Kirigami.ScenePosition.y)
-        : -1
-    readonly property int containmentRightSpace: twinSpacer
-        ? ( horizontal
-            ? plasmoid.nativeInterface.containment.width - rightTwin.Kirigami.ScenePosition.x - rightTwin.width
-            : plasmoid.nativeInterface.containment.height - rightTwin.Kirigami.ScenePosition.y - rightTwin.height)
-        : -1
-    readonly property real misalignment: containmentRightSpace - containmentLeftSpace
-    onWidthChanged: {
-        if (twinSpacer) {
-            relayoutTimer.restart();
-        }
-    }
     Timer {
         id: relayoutTimer
         interval: 0
         onTriggered: {
-            if (!twinSpacer) {
-                root.optimalSpace = plasmoid.nativeInterface.containment.width;
+            if (!twinSpacer || !panelLayout || !leftTwin || !rightTwin) {
+                root.optimalSize = root.horizontal ? plasmoid.nativeInterface.containment.width : plasmoid.nativeInterface.containment.height;
+                return;
             }
-            var chenterX = ((leftTwin.Kirigami.ScenePosition.x + leftTwin.width)+(plasmoid.nativeInterface.containment.width - rightTwin.Kirigami.ScenePosition.x))/2
-            if (leftTwin == root) {
-                root.optimalSpace =  Math.min(plasmoid.nativeInterface.containment.width, Math.max(0, chenterX - containmentLeftSpace))
+
+            var halfContainment = root.horizontal ?plasmoid.nativeInterface.containment.width/2 : plasmoid.nativeInterface.containment.height/2;
+
+            if (leftTwin == plasmoid) {
+                root.optimalSize = Math.max(units.smallSpacing, halfContainment - middleItemsSizeHint/2 - leftItemsSizeHint)
             } else {
-                root.optimalSpace =  Math.min(plasmoid.nativeInterface.containment.width, Math.max(0, chenterX - containmentRightSpace))
+                root.optimalSize = Math.max(units.smallSpacing, halfContainment - middleItemsSizeHint/2 - rightItemsSizeHint)
             }
         }
     }
-    property int optimalSpace: plasmoid.nativeInterface.containment.width
 
     Rectangle {
         anchors.fill: parent
