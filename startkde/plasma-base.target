@@ -1,3 +1,0 @@
-[Unit]
-Description=KDE Plasma Workspace
-Requires=plasma-core.target
