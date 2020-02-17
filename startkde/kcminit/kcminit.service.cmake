@@ -1,11 +1,10 @@
 [Unit]
-Description=KDE Plasma Workspace
-#   Requires=ksmserver.service
+Description=KDE Config Module Initialization
 #kded.service kactivitymanagerd.service
 
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/kcminit
-Restart=none
+Restart=no
 KillMode=none
 Type=forking
 
