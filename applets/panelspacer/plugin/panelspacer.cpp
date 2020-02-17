@@ -60,7 +60,6 @@ void SpacersTracker::insertSpacer(Plasma::Containment *containment, PanelSpacer 
         auto *lay2 = m_spacers[containment].last();
         lay1->setTwinSpacer(lay2->property("_plasma_graphicObject").value<PlasmaQuick::AppletQuickItem *>());
         lay2->setTwinSpacer(lay1->property("_plasma_graphicObject").value<PlasmaQuick::AppletQuickItem *>());
-qWarning()<<"AAAAAAAAAAAAAAAAAAAA"<<lay1<<lay2<<lay2->property("_plasma_graphicObject").value<PlasmaQuick::AppletQuickItem *>()<<lay1->property("_plasma_graphicObject").value<PlasmaQuick::AppletQuickItem *>();
     } else if (wasTwin) {
         for (auto *lay : m_spacers[containment]) {
             lay->setTwinSpacer(nullptr);
