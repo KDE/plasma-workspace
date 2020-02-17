@@ -1,4 +1,4 @@
 [Unit]
 Description=KDE Plasma Workspace Core
-Requires=plasmashell.service kwin.service ksmserver.service kcminit.service
+Requires=plasmashell.service kwin_x11.service ksmserver.service kcminit.service
 #kded.service
