@@ -90,6 +90,7 @@ public:
 private:
     const QString m_process;
     const QStringList m_args;
+    const QString m_serviceId;
 };
 
 class RestoreSessionJob: public KJob
