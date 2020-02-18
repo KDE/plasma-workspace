@@ -417,7 +417,8 @@ void AutoStartAppsJob::start() {
 StartServiceJob::StartServiceJob(const QString &process, const QStringList &args, const QString &serviceId):
     KJob(),
     m_process(process),
-    m_args(args)
+    m_args(args),
+    m_serviceId(serviceId)
 {
     auto watcher = new QDBusServiceWatcher(serviceId, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForRegistration, this);
     connect(watcher, &QDBusServiceWatcher::serviceRegistered, this, &StartServiceJob::emitResult);
@@ -425,6 +426,12 @@ StartServiceJob::StartServiceJob(const QString &process, const QStringList &args
 
 void StartServiceJob::start()
 {
+    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(m_serviceId)) {
+        qCDebug(PLASMA_SESSION) << m_process << "already running";
+        emitResult();
+        return;
+    }
+    qCDebug(PLASMA_SESSION) << "Starting " << m_process << m_args;
     QProcess::startDetached(m_process, m_args);
 }
 
