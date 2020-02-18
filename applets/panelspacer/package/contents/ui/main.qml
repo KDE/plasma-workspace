@@ -100,21 +100,21 @@ Item {
                 secondSpacerFound = true;
             } else if (secondSpacerFound) {
                 if (root.horizontal) {
-                    rightItemsHint += Math.max(panelLayout.children[i].Layout.minimumWidth, panelLayout.children[i].Layout.preferredWidth);
+                    rightItemsHint += Math.max(panelLayout.children[i].Layout.minimumWidth, panelLayout.children[i].Layout.preferredWidth) + panelLayout.rowSpacing;
                 } else {
-                    rightItemsHint += Math.max(panelLayout.children[i].Layout.minimumHeight, panelLayout.children[i].Layout.preferredHeight);
+                    rightItemsHint += Math.max(panelLayout.children[i].Layout.minimumHeight, panelLayout.children[i].Layout.preferredHeight) + panelLayout.columnSpacing;
                 }
             } else if (firstSpacerFound) {
                 if (root.horizontal) {
-                    middleItemsHint += Math.max(panelLayout.children[i].Layout.minimumWidth, panelLayout.children[i].Layout.preferredWidth);
+                    middleItemsHint += Math.max(panelLayout.children[i].Layout.minimumWidth, panelLayout.children[i].Layout.preferredWidth) + panelLayout.rowSpacing;
                 } else {
-                    middleItemsHint += Math.max(panelLayout.children[i].Layout.minimumHeight, panelLayout.children[i].Layout.preferredHeight);
+                    middleItemsHint += Math.max(panelLayout.children[i].Layout.minimumHeight, panelLayout.children[i].Layout.preferredHeight) + panelLayout.columnSpacing;
                 }
             } else {
                 if (root.horizontal) {
-                    leftItemsHint += Math.max(panelLayout.children[i].Layout.minimumWidth, panelLayout.children[i].Layout.preferredWidth);
+                    leftItemsHint += Math.max(panelLayout.children[i].Layout.minimumWidth, panelLayout.children[i].Layout.preferredWidth) + panelLayout.rowSpacing;
                 } else {
-                    leftItemsHint += Math.max(panelLayout.children[i].Layout.minimumHeight, panelLayout.children[i].Layout.preferredHeight);
+                    leftItemsHint += Math.max(panelLayout.children[i].Layout.minimumHeight, panelLayout.children[i].Layout.preferredHeight) + panelLayout.columnSpacing;
                 }
             }
         }
