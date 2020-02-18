@@ -327,10 +327,23 @@ void setupGSLib()
     }
 }
 
-bool startKSMServer(bool wayland)
+bool startKDEInit()
 {
+    // We set LD_BIND_NOW to increase the efficiency of kdeinit.
+    // kdeinit unsets this variable before loading applications.
+    const int exitCode = runSync(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF5 "/start_kdeinit_wrapper"), { QStringLiteral("--kded"), QStringLiteral("+kcminit_startup") }, { QStringLiteral("LD_BIND_NOW=true") });
+    if (exitCode != 0) {
+        messageBox(QStringLiteral("startkde: Could not start kdeinit5. Check your installation."));
+        return false;
+    }
+
     OrgKdeKSplashInterface iface(QStringLiteral("org.kde.KSplash"), QStringLiteral("/KSplash"), QDBusConnection::sessionBus());
     iface.setStage(QStringLiteral("kinit"));
+    return true;
+}
+
+bool startKSMServer(bool wayland)
+{
     // finally, give the session control to the session manager
     // see kdebase/ksmserver for the description of the rest of the startup sequence
     // if the KDEWM environment variable has been set, then it will be used as KDE's
