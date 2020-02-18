@@ -5,7 +5,6 @@ Description=KDE Config Module Initialization
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/kcminit_startup
 Restart=no
-KillMode=none
 Type=forking
 
 [Install]

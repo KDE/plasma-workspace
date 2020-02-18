@@ -6,7 +6,7 @@ Wants=ksmserver.service kcminit.service
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/plasmashell --no-respawn
 Restart=on-failure
-KillMode=none
+KillMode=process
 BusName=org.kde.plasmashell
 
 [Install]

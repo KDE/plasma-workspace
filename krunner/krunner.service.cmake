@@ -3,5 +3,5 @@ Description=KRunner
 
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/krunner
-KillMode=none
+KillMode=process
 BusName=org.kde.krunner
