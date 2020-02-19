@@ -57,7 +57,7 @@ ColumnLayout {
 
                 //applet open, no sidebar
                 } else {
-                    return 0;
+                    return units.smallSpacing;
                 }
             }
             Layout.rightMargin: {

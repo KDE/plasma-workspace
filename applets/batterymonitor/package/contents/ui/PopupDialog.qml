@@ -41,8 +41,8 @@ FocusScope {
     Column {
         id: settingsColumn
         anchors.horizontalCenter: parent.horizontalCenter
-        width: parent.width - units.gridUnit
-        spacing: Math.round(units.gridUnit / 2)
+        width: parent.width - units.smallSpacing * 2
+        spacing: units.gridUnit
 
         Components.Label {
             // this is just for metrics, TODO use TextMetrics in 5.4 instead
@@ -107,16 +107,17 @@ FocusScope {
         anchors {
             horizontalCenter: parent.horizontalCenter
             top: settingsColumn.bottom
-            topMargin: units.gridUnit // not divided by 2 for unified looks
+            topMargin: units.gridUnit
+            leftMargin: units.smallSpacing
             bottom: dialog.bottom
         }
-        width: parent.width - units.gridUnit
+        width: parent.width - units.smallSpacing * 2
 
         ListView {
             id: batteryList
 
             boundsBehavior: Flickable.StopAtBounds
-            spacing: Math.round(units.gridUnit / 2)
+            spacing: Math.round(units.smallSpacing / 2)
 
             KeyNavigation.tab: brightnessSlider
             KeyNavigation.backtab: pmSwitch

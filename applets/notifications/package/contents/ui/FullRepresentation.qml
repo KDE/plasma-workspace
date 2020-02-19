@@ -70,6 +70,7 @@ ColumnLayout{
         id: header
         visible: !Kirigami.Settings.isMobile
         Layout.fillWidth: true
+        Layout.leftMargin: units.smallSpacing
         spacing: 0
 
         RowLayout {
@@ -278,6 +279,7 @@ ColumnLayout{
         Layout.fillHeight: true
         Layout.preferredWidth: units.gridUnit * 18
         Layout.preferredHeight: units.gridUnit * 24
+        Layout.leftMargin: units.smallSpacing
 
         ListView {
             id: list
