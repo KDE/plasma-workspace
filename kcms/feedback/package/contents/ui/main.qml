@@ -33,7 +33,7 @@ SimpleKCM {
     rightPadding: leftPadding
 
     implicitWidth: Kirigami.Units.gridUnit * 38
-    implicitHeight: Kirigami.Units.gridUnit * 33
+    implicitHeight: Kirigami.Units.gridUnit * 35
 
 
     ColumnLayout {
