@@ -136,6 +136,7 @@ ContainmentLayoutManager.AppletContainer {
     configurationRequiredComponent: PlasmaComponents.Button {
         anchors.centerIn: parent
         text: i18n("Configure...")
+        icon.name: "configure"
         visible: applet.configurationRequired
         onClicked: applet.action("configure").trigger();
     }
