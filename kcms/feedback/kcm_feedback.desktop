@@ -11,6 +11,7 @@ X-KDE-ParentApp=kcontrol
 X-KDE-System-Settings-Parent-Category=personalization
 
 Name=User Feedback
+Name[ast]=Comentarios d'usuariu
 Name[ca]=Comentaris de l'usuari
 Name[cs]=Zpětná vazba uživatele
 Name[da]=Brugerfeedback
