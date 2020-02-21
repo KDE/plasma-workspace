@@ -44,7 +44,6 @@ QProcess* setupKSplash();
 void setupGSLib();
 void setupX11();
 
-bool startKDEInit();
 bool startKSMServer(bool wayland);
 
 void waitForKonqi();
