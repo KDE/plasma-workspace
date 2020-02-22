@@ -75,6 +75,8 @@ ColumnLayout {
             property var visibilityColumnWidth: units.gridUnit
             property var keySequenceColumnWidth: units.gridUnit
 
+            clip: true
+
             model: plasmoid.nativeInterface.configSystemTrayModel
 
             header: Kirigami.AbstractListItem {
