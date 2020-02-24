@@ -38,6 +38,18 @@ PlasmaCore.ColorScope {
 
     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
 
+    function performOperation(what) {
+        var service = dataEngine.serviceForSource("PowerDevil");
+        var operation = service.operationDescription(what);
+        service.startOperationCall(operation);
+    }
+
+    PlasmaCore.DataSource {
+      id: dataEngine
+      engine: "powermanagement"
+      connectedSources: ["PowerDevil"]
+    }
+
     Connections {
         target: authenticator
         onFailed: {
@@ -125,6 +137,7 @@ PlasmaCore.ColorScope {
             }
         }
         Keys.onPressed: {
+            if (event.key == 16908292) performOperation("suspendToRam")
             uiVisible = true;
             event.accepted = false;
         }
