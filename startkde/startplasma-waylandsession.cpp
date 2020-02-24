@@ -19,7 +19,9 @@
 
 #include "startplasma.h"
 
-int main(int /*argc*/, char** /*argv*/)
+#include <QCoreApplication>
+
+int main(int argc, char** argv)
 {
     // Boot sequence:
     //
@@ -34,6 +36,9 @@ int main(int /*argc*/, char** /*argv*/)
     //   certain devices according to the user's settings
     //
     // * Then ksmserver is started which takes control of the rest of the startup sequence
+
+
+    QCoreApplication app(argc, argv);
 
     runStartupConfig();
 
