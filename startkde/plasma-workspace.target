@@ -1,4 +1,4 @@
 [Unit]
 Description=KDE Plasma Workspace
 Requires=plasma-core.target
-Wants=ksplash.target
+Wants=ksplash-ready.service
