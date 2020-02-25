@@ -4,6 +4,7 @@ Wants=kcminit.service
 
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/ksmserver
+ExecStartPost=@CMAKE_INSTALL_FULL_BINDIR@/qdbus org.kde.KSplash /KSplash org.kde.KSplash.setStage ksmserver
 BusName=org.kde.ksmserver
 
 [Install]
