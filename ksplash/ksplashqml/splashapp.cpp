@@ -40,7 +40,6 @@
  * There are 7 used stages in ksplash
  *  - initial
  *  - kcminit
- *  - kinit
  *  - ksmserver
  *  - wm
  *  - ready
@@ -111,8 +110,8 @@ void SplashApp::timerEvent(QTimerEvent * event)
 
 void SplashApp::setStage(const QString &stage)
 {
-    //filter out startup events from KDED as they will be removed in a future release
-    if (stage == QLatin1String("kded") || stage == QLatin1String("confupdate")) {
+    //filter out startup events from KInit, KDED as they will be removed in a future release
+    if (stage == QLatin1String("kinit") || stage == QLatin1String("kded") || stage == QLatin1String("confupdate")) {
         return;
     }
 
@@ -126,7 +125,7 @@ void SplashApp::setStage(const QString &stage)
 void SplashApp::setStage(int stage)
 {
     m_stage = stage;
-    if (m_stage == 7) {
+    if (m_stage == 6) {
         QGuiApplication::exit(EXIT_SUCCESS);
     }
     foreach (SplashWindow *w, m_windows) {
