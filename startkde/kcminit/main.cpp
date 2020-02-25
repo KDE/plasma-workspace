@@ -228,7 +228,8 @@ extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])
   }
   close( ready[ 0 ] );
 
-  startup = ( strcmp( argv[ 0 ], "kcminit_startup" ) == 0 ); // started from startkde?
+  const QString executableName = QString::fromUtf8(argv[0]);
+  startup = executableName.endsWith(QLatin1String("kcminit_startup" )); // started from startkde?
 
   KWorkSpace::detectPlatform(argc, argv);
   QGuiApplication::setDesktopSettingsAware(false);
