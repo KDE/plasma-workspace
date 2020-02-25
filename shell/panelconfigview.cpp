@@ -106,7 +106,20 @@ void PanelConfigView::showAddWidgetDialog()
 
 void PanelConfigView::addPanelSpacer()
 {
-    m_containment->createApplet(QStringLiteral("org.kde.plasma.panelspacer"));
+    ShellCorona *c = qobject_cast<ShellCorona *>(m_containment->corona());
+    if (!c) {
+        return;
+    }
+    // Add a spacer at the end *except* if there is exactly one spacer already
+    // this to trigger the panel centering mode of the spacer in a slightly more discoverable way
+    c->evaluateScript(QStringLiteral("panel = panelById(") + QString::number(m_containment->id()) 
+                + QStringLiteral(");"
+                                 "var spacers = panel.widgets(\"org.kde.plasma.panelspacer\");"
+                                "if (spacers.length === 1) {"
+                                "    panel.addWidget(\"org.kde.plasma.panelspacer\", 0,0,1,1);"
+                                "} else {"
+                                "    panel.addWidget(\"org.kde.plasma.panelspacer\");"
+                                "}"));
 }
 
 void PanelConfigView::syncGeometry()
