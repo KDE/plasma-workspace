@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <kcfgfile name="plasmanotifyrc">
+        <parameter name="GroupEntry" />
+        <parameter name="DesktopEntry"/>
+    </kcfgfile>
+    <group name="$(DesktopEntry)" parentGroupName="$(GroupEntry)">
+        <entry name="ShowPopups" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="ShowPopupsInDndMode" type="Bool">
+            <default>false</default>
+        </entry>
+        <entry name="ShowInHistory" type="Bool">
+            <default>true</default>
+        </entry>
+        <entry name="ShowBadges" type="Bool">
+            <default>true</default>
+        </entry>
+    </group>
+</kcfg>

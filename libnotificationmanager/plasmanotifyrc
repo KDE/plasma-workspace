@@ -17,4 +17,5 @@ ShowInHistory=false
 # Non-configurable applications don't deserve to be in history by default
 [Applications][@other]
 ShowInHistory=false
-ShowBadges=false # wouldn't work anyway
+# Badges wouldn't work anyway
+ShowBadges=false

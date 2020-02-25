@@ -1,0 +1,10 @@
+File=behaviorsettings.kcfg
+NameSpace=NotificationManager
+ClassName=BehaviorSettings
+Visibility=NOTIFICATIONMANAGER_EXPORT
+IncludeFiles=\"notificationmanager_export.h\"
+Mutators=true
+DefaultValueGetters=true
+Notifiers=true
+GenerateProperties=true
+ParentInConstructor=true

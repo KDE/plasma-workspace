@@ -42,6 +42,7 @@ kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/donotdisturbsettings.kc
 kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/notificationsettings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/jobsettings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/badgesettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/behaviorsettings.kcfgc GENERATE_MOC)
 
 # DBus
 # Notifications
@@ -97,6 +98,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/notificationsettings.h
     ${CMAKE_CURRENT_BINARY_DIR}/jobsettings.h
     ${CMAKE_CURRENT_BINARY_DIR}/badgesettings.h
+    ${CMAKE_CURRENT_BINARY_DIR}/behaviorsettings.h
     ${CMAKE_CURRENT_BINARY_DIR}/notificationmanager_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/notificationmanager COMPONENT Devel
 )
