@@ -2,3 +2,4 @@
 Description=KDE Plasma Workspace Core
 Wants=plasmashell.service kwin_x11.service kcminit.service kded.service
 Requires=ksmserver.service
+BindsTo=ksmserver.service

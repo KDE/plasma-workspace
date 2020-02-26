@@ -1063,7 +1063,15 @@ void KSMServer::launchWM( const QList< QStringList >& wmStartCommands )
 {
     assert( state == LaunchingWM );
 
-    if (!(qEnvironmentVariableIsSet("WAYLAND_DISPLAY") || qEnvironmentVariableIsSet("WAYLAND_SOCKET"))) {
+    bool shouldLaunchWm = true;
+    if (qEnvironmentVariableIsSet("WAYLAND_DISPLAY") || qEnvironmentVariableIsSet("WAYLAND_SOCKET")) {
+        shouldLaunchWm = false;
+    }
+    if (qEnvironmentVariableIsSet("PLASMA_SYSTEMD")) {
+        shouldLaunchWm = false;
+    }
+
+    if (shouldLaunchWm) {
         // when we have a window manager, we start it first and give
         // it some time before launching other processes. Results in a
         // visually more appealing startup.

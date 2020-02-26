@@ -349,9 +349,6 @@ bool startKSMServer(bool wayland)
                                                                         QStringLiteral("StartUnit"));
         msg << QStringLiteral("plasma-workspace.target") << QStringLiteral("fail");
         QDBusConnection::sessionBus().call(msg);
-        QEventLoop loop;
-        loop.exec();
-        return true;
     }
 
     QStringList ksmserverOptions;
