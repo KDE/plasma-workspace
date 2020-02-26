@@ -99,9 +99,6 @@ int main(int /*argc*/, char** /*argv*/)
         return 1;
     }
 
-    if (!startKDEInit())
-        return 1;
-
     if (!startKSMServer(false))
         return 1;
 
