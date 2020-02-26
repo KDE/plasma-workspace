@@ -99,7 +99,7 @@ int main(int /*argc*/, char** /*argv*/)
         return 1;
     }
 
-    if (!startKSMServer(false))
+    if (!startPlasmaSession(false))
         return 1;
 
     // Anything after here is logout
