@@ -62,7 +62,7 @@ class NOTIFICATIONMANAGER_EXPORT Server : public QObject
     /**
      * Whether notifications are currently inhibited.
      *
-     * This is what is announced to other applicatons on the bus.
+     * This is what is announced to other applications on the bus.
      *
      * @note This does not keep track of inhibitions on its own,
      * you need to calculate this yourself and update the property accordingly.
@@ -171,7 +171,7 @@ public:
 Q_SIGNALS:
     /**
      * Emitted when the notification service validity changes,
-     * because it sucessfully registered the service or lost
+     * because it successfully registered the service or lost
      * ownership of it.
      * @since 5.18
      */

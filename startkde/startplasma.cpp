@@ -327,8 +327,12 @@ void setupGSLib()
     }
 }
 
-bool startKSMServer(bool wayland)
+
+bool startPlasmaSession(bool wayland)
 {
+    OrgKdeKSplashInterface iface(QStringLiteral("org.kde.KSplash"), QStringLiteral("/KSplash"), QDBusConnection::sessionBus());
+    iface.setStage(QStringLiteral("kinit"));
+
     // finally, give the session control to the session manager
     // see kdebase/ksmserver for the description of the rest of the startup sequence
     // if the KDEWM environment variable has been set, then it will be used as KDE's
@@ -354,19 +358,19 @@ bool startKSMServer(bool wayland)
         return true;
     }
 
-    QStringList ksmserverOptions;
+    QStringList plasmaSessionOptions;
     if (wayland) {
-        ksmserverOptions << QStringLiteral("--no-lockscreen");
+        plasmaSessionOptions << QStringLiteral("--no-lockscreen");
     } else {
         if (qEnvironmentVariableIsSet("KDEWM")) {
-            ksmserverOptions << QStringLiteral("--windowmanager") << qEnvironmentVariable("KDEWM");
+            plasmaSessionOptions << QStringLiteral("--windowmanager") << qEnvironmentVariable("KDEWM");
         }
         if (desktopLockedAtStart) {
-            ksmserverOptions << QStringLiteral("--lockscreen");
+            plasmaSessionOptions << QStringLiteral("--lockscreen");
         }
     }
 
-    const auto exitCode = runSync(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), ksmserverOptions);
+    const auto exitCode = runSync(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
 
     if (exitCode == 255) {
         // Startup error

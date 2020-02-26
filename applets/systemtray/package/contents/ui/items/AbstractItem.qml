@@ -24,19 +24,16 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 PlasmaCore.ToolTipArea {
     id: abstractItem
 
-    height: effectiveItemSize + marginHints.top + marginHints.bottom
-    width: labelVisible ? parent.width : effectiveItemSize + marginHints.left + marginHints.right
+    height: inVisibleLayout ? visibleLayout.iconSize : hiddenLayout.iconItemHeight
+    width: inVisibleLayout ? visibleLayout.iconSize : hiddenLayout.width
 
-    property real effectiveItemSize: hidden ? root.hiddenItemSize : root.itemSize
     property string itemId
     property string category
     property alias text: label.text
-    property bool hidden: parent.objectName == "hiddenTasksColumn"
-    property QtObject marginHints: parent.marginHints
-    property bool labelVisible: abstractItem.hidden && !root.activeApplet
     property Item iconItem
-    //PlasmaCore.Types.ItemStatus
-    property int status
+    property int /*PlasmaCore.Types.ItemStatus*/ status
+    readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
+    readonly property bool inVisibleLayout: effectiveStatus === PlasmaCore.Types.ActiveStatus
     property QtObject model
 
     signal clicked(var mouse)
@@ -57,14 +54,14 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    /* subclasses need to assign to this tiiltip properties
+    /* subclasses need to assign to this tooltip properties
     mainText:
     subText:
-    icon: 
+    icon:
     */
 
     location: {
-        if (abstractItem.parent && abstractItem.parent.objectName === "hiddenTasksColumn") {
+        if (inHiddenLayout) {
             if (LayoutMirroring.enabled && plasmoid.location !== PlasmaCore.Types.RightEdge) {
                 return PlasmaCore.Types.LeftEdge;
             } else if (plasmoid.location !== PlasmaCore.Types.LeftEdge) {
@@ -87,7 +84,7 @@ PlasmaCore.ToolTipArea {
     }
 
     onContainsMouseChanged: {
-        if (hidden && containsMouse) {
+        if (inHiddenLayout && containsMouse) {
             root.hiddenLayout.hoveredItem = abstractItem
         }
     }
@@ -154,8 +151,8 @@ PlasmaCore.ToolTipArea {
             leftMargin: iconItem ? iconItem.width + units.smallSpacing : 0
             verticalCenter: parent.verticalCenter
         }
-        opacity: labelVisible ? 1 : 0
-        visible: abstractItem.hidden
+        opacity: visible ? 1 : 0
+        visible: abstractItem.inHiddenLayout && !root.activeApplet
         Behavior on opacity {
             NumberAnimation {
                 duration: units.longDuration

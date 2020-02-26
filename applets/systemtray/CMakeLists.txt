@@ -4,6 +4,7 @@ plasma_install_package(package org.kde.plasma.private.systemtray)
 
 set(systemtray_SRCS
     systemtraymodel.cpp
+    sortedsystemtraymodel.cpp
     systemtray.cpp
 )
 

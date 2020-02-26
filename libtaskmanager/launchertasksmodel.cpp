@@ -143,14 +143,12 @@ AppData LauncherTasksModel::Private::appData(const QUrl &url)
 
 bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_url, const QStringList &_activities)
 {
-    // isValid() for the passed-in URL might return true if it was
-    // constructed in TolerantMode, but we want to reject invalid URLs.
-    QUrl url(_url.toString(), QUrl::StrictMode);
-    const auto activities = ActivitiesSet::fromList(_activities);
-
-    if (url.isEmpty() || !url.isValid()) {
+    QUrl url(_url);
+    if (!isValidLauncherUrl(url)) {
         return false;
     }
+
+    const auto activities = ActivitiesSet::fromList(_activities);
 
     if (url.isLocalFile() && KDesktopFile::isDesktopFile(url.toLocalFile())) {
         KDesktopFile f(url.toLocalFile());
@@ -409,7 +407,9 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
         auto activities = ActivitiesSet::fromList(_activities);
 
         // Is url is not valid, ignore it
-        if (!url.isValid()) continue;
+        if (!isValidLauncherUrl(url)) {
+            continue;
+        }
 
         // If we have a null uuid, it means we are on all activities
         // and we should contain only the null uuid

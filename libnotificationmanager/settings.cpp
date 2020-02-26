@@ -35,6 +35,11 @@
 #include "jobsettings.h"
 #include "badgesettings.h"
 
+namespace NotificationManager
+{
+constexpr const char s_configFile[] = "plasmanotifyrc";
+}
+
 using namespace NotificationManager;
 
 class Q_DECL_HIDDEN Settings::Private
@@ -69,7 +74,6 @@ public:
 
     bool live = false; // set to true initially in constructor
     bool dirty = false;
-
 };
 
 Settings::Private::Private(Settings *q)
@@ -161,17 +165,10 @@ QStringList Settings::Private::behaviorMatchesList(const KConfigGroup &group, Se
 }
 
 Settings::Settings(QObject *parent)
-    // FIXME static thing for config file name
-    : Settings(KSharedConfig::openConfig(QStringLiteral("plasmanotifyrc")), parent)
-{
-
-}
-
-Settings::Settings(const KSharedConfig::Ptr &config, QObject *parent)
     : QObject(parent)
     , d(new Private(this))
 {
-    d->config = config;
+    d->config = KSharedConfig::openConfig(s_configFile);
 
     setLive(true);
 
@@ -184,6 +181,12 @@ Settings::Settings(const KSharedConfig::Ptr &config, QObject *parent)
         d->mirroredScreensTracker = MirroredScreensTracker::createTracker();
         connect(d->mirroredScreensTracker.data(), &MirroredScreensTracker::screensMirroredChanged, this, &Settings::screensMirroredChanged);
     }
+}
+
+Settings::Settings(const KSharedConfig::Ptr &config, QObject *parent)
+    : Settings(parent)
+{
+    d->config = config;
 }
 
 Settings::~Settings()

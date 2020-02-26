@@ -57,8 +57,6 @@ void ActivityRunner::prep()
 
 void ActivityRunner::down()
 {
-    delete m_activities;
-    m_activities = nullptr;
 }
 
 void ActivityRunner::serviceStatusChanged(KActivities::Consumer::ServiceStatus status)

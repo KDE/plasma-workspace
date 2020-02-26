@@ -279,7 +279,7 @@ QtObject {
             if (popupLocation & Qt.AlignTop) {
                 // We want to calculate the new position based on its original target position to avoid positioning it and then
                 // positioning it again, hence the temporary Qt.rect with explicit "y" and not just the popup as a whole
-                if (focusDialog && focusDialog.visible && focusDialog !== popup
+                if (focusDialog && focusDialog.visible && !(focusDialog instanceof NotificationPopup)
                         && rectIntersect(focusDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
                     y = focusDialog.y + focusDialog.height + popupEdgeDistance;
                 }
@@ -289,7 +289,7 @@ QtObject {
                 y += popup.height + (popup.height > 0 ? popupSpacing : 0);
             } else {
                 y -= popup.height;
-                if (focusDialog && focusDialog.visible && focusDialog !== popup
+                if (focusDialog && focusDialog.visible && !(focusDialog instanceof NotificationPopup)
                         && rectIntersect(focusDialog, Qt.rect(popup.x, y, popup.width, popup.height))) {
                     y = focusDialog.y - popup.height - popupEdgeDistance;
                 }
@@ -509,7 +509,6 @@ QtObject {
 
                             const appId = tasksModel.data(idx, TaskManager.AbstractTasksModel.AppId);
                             if (appId === model.desktopEntry + ".desktop") {
-                                console.log("Associated window titled", tasksModel.data(idx, Qt.DisplayRole), "of", appId, "with this notification");
                                 // Takes a row number, not a QModelIndex
                                 defaultActionFallbackWindowIdx = tasksModel.makePersistentModelIndex(i);
                                 hasDefaultAction = true;

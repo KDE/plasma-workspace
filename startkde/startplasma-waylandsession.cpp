@@ -61,7 +61,8 @@ int main(int argc, char** argv)
         return 2;
     }
 
-    if (!startKSMServer(true))
+
+    if (!startPlasmaSession(true))
         return 4;
 
     // Anything after here is logout

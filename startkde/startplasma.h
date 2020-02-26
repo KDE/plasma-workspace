@@ -44,7 +44,7 @@ QProcess* setupKSplash();
 void setupGSLib();
 void setupX11();
 
-bool startKSMServer(bool wayland);
+bool startPlasmaSession(bool wayland);
 
 void waitForKonqi();
 

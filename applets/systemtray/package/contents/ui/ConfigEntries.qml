@@ -75,19 +75,9 @@ ColumnLayout {
             property var visibilityColumnWidth: units.gridUnit
             property var keySequenceColumnWidth: units.gridUnit
 
-            model: PlasmaCore.SortFilterModel {
-                sourceModel: PlasmaCore.SortFilterModel {
-                    sourceModel: plasmoid.nativeInterface.systemTrayModel
+            clip: true
 
-                    sortRole: "display"
-                    sortColumn: 0
-                    isSortLocaleAware: true
-                }
-
-                sortRole: "category"
-                sortColumn: 0
-                isSortLocaleAware: true
-            }
+            model: plasmoid.nativeInterface.configSystemTrayModel
 
             header: Kirigami.AbstractListItem {
 
@@ -179,14 +169,14 @@ ColumnLayout {
                             return 0
                         }
 
-                        property var currentValue: model[currentIndex].value
+                        property var myCurrentValue: model[currentIndex].value
 
                         onActivated: {
                             var shownIndex = cfg_shownItems.indexOf(itemId)
                             var hiddenIndex = cfg_hiddenItems.indexOf(itemId)
                             var extraIndex = cfg_extraItems.indexOf(itemId)
 
-                            switch (currentValue) {
+                            switch (myCurrentValue) {
                             case "auto":
                                 if (shownIndex > -1) {
                                     cfg_shownItems.splice(shownIndex, 1)
@@ -257,7 +247,7 @@ ColumnLayout {
                         Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
 
                         visible: isPlasmoid
-                        enabled: visibilityComboBox.currentValue !== "disabled"
+                        enabled: visibilityComboBox.myCurrentValue !== "disabled"
                         keySequence: model.applet ? model.applet.globalShortcut : ""
                         onKeySequenceChanged: {
                             if (model.applet && keySequence !== model.applet.globalShortcut) {

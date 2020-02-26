@@ -343,18 +343,9 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
 
         if (!resource.startsWith(QLatin1String("applications:"))) {
             const QUrl resourceUrl = docData(resource, Kicker::UrlRole).toUrl();
-            const QList<QUrl> urlsList{resourceUrl};
 
-            QMimeDatabase db;
-            QMimeType mime = db.mimeTypeForUrl(resourceUrl);
-            KService::Ptr service = KMimeTypeTrader::self()->preferredService(mime.name());
-            if (service) {
-                KRun::runApplication(*service, urlsList, nullptr);
-            } else {
-                QTimer::singleShot(0, [urlsList] {
-                    KRun::displayOpenWithDialog(urlsList, nullptr);
-                });
-            }
+            KRun *run = new KRun(resourceUrl, nullptr);
+            run->setRunExecutables(false);
 
             return true;
         }

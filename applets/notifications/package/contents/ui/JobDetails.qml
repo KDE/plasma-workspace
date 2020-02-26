@@ -65,8 +65,16 @@ GridLayout {
             elide: Text.ElideMiddle
             textFormat: Text.PlainText
             wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+            verticalAlignment: Text.AlignTop
             maximumLineCount: 5
             visible: text !== ""
+
+            // Only let the label grow, never shrink, to avoid repeatedly resizing the dialog when copying many files
+            onImplicitHeightChanged: {
+                if (implicitHeight > Layout.preferredHeight) {
+                    Layout.preferredHeight = implicitHeight;
+                }
+            }
 
             Component.onCompleted: bindText()
             function bindText() {

@@ -60,6 +60,7 @@ UpdateLaunchEnvJob::UpdateLaunchEnvJob(const QString &varName, const QString &va
 {
     d->varName = varName;
     d->value = value;
+    start();
 }
 
 UpdateLaunchEnvJob::~UpdateLaunchEnvJob()
@@ -97,5 +98,16 @@ void UpdateLaunchEnvJob::start()
 
     auto dbusActivationReply = QDBusConnection::sessionBus().asyncCall(dbusActivationMsg);
     d->monitorReply(dbusActivationReply);
+
+    // _user_ systemd env
+    QDBusMessage systemdActivationMsg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                                                       QStringLiteral("/org/freedesktop/systemd1"),
+                                                                       QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                                                       QStringLiteral("SetEnvironment"));
+    const QString updateString = d->varName + QStringLiteral("=") + d->value;
+    systemdActivationMsg.setArguments({QVariant(QStringList{updateString})});
+
+    auto systemdActivationReply = QDBusConnection::sessionBus().asyncCall(systemdActivationMsg);
+    d->monitorReply(systemdActivationReply);
 }
 

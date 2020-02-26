@@ -11,7 +11,8 @@
         <default>true</default>
     </entry>
     <entry name="length" type="Int">
-        <label>length in pixels of the spacer. Configuration effective only if expanding is set to false.</label>
+        <label>length in pixels of the spacer. Configuration effective only if expanding is set to false. A negative value means an invalid value that should be completely ignored.</label>
+        <default>-1</default>
     </entry>
   </group>
 
