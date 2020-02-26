@@ -17,7 +17,6 @@
  */
 
 #include "startup.h"
-#include "shutdown.h"
 
 #include <QCoreApplication>
 
@@ -30,7 +29,5 @@ int main(int argc, char **argv)
     app.setQuitLockEnabled(false);
 
     new Startup(&app);
-    new Shutdown(&app);
-
     app.exec();
 }

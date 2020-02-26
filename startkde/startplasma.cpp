@@ -21,7 +21,11 @@
 #include <QProcess>
 #include <QStandardPaths>
 #include <QTextStream>
+#include <QEventLoop>
+
 #include <QDBusConnectionInterface>
+#include <QDBusServiceWatcher>
+
 #include <KConfig>
 #include <KConfigGroup>
 
@@ -327,8 +331,12 @@ void setupGSLib()
     }
 }
 
-bool startKSMServer(bool wayland)
+
+bool startPlasmaSession(bool wayland)
 {
+    OrgKdeKSplashInterface iface(QStringLiteral("org.kde.KSplash"), QStringLiteral("/KSplash"), QDBusConnection::sessionBus());
+    iface.setStage(QStringLiteral("kinit"));
+
     // finally, give the session control to the session manager
     // see kdebase/ksmserver for the description of the rest of the startup sequence
     // if the KDEWM environment variable has been set, then it will be used as KDE's
@@ -351,26 +359,53 @@ bool startKSMServer(bool wayland)
         QDBusConnection::sessionBus().call(msg);
     }
 
-    QStringList ksmserverOptions;
+    QStringList plasmaSessionOptions;
     if (wayland) {
-        ksmserverOptions << QStringLiteral("--no-lockscreen");
+        plasmaSessionOptions << QStringLiteral("--no-lockscreen");
     } else {
         if (qEnvironmentVariableIsSet("KDEWM")) {
-            ksmserverOptions << QStringLiteral("--windowmanager") << qEnvironmentVariable("KDEWM");
+            plasmaSessionOptions << QStringLiteral("--windowmanager") << qEnvironmentVariable("KDEWM");
         }
         if (desktopLockedAtStart) {
-            ksmserverOptions << QStringLiteral("--lockscreen");
+            plasmaSessionOptions << QStringLiteral("--lockscreen");
         }
     }
 
-    const auto exitCode = runSync(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), ksmserverOptions);
+    bool rc = true;
+    QEventLoop e;
 
-    if (exitCode == 255) {
-        // Startup error
-        messageBox(QStringLiteral("startkde: Could not start ksmserver. Check your installation.\n"));
-        return false;
-    }
-    return true;
+    QProcess startPlasmaSession;
+    QDBusServiceWatcher serviceWatcher;
+    serviceWatcher.setConnection(QDBusConnection::sessionBus());
+
+    // We want to exit when both ksmserver and plasma-session-shutdown have finished
+    // This also closes if ksmserver crashes unexpectedly, as in those cases plasma-shutdown is not running
+    serviceWatcher.addWatchedService(QStringLiteral("org.kde.ksmserver"));
+    serviceWatcher.addWatchedService(QStringLiteral("org.kde.shutdown"));
+    serviceWatcher.setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
+
+    QObject::connect(&startPlasmaSession, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [&rc, &e](int exitCode, QProcess::ExitStatus) {
+        if (exitCode == 255) {
+            // Startup error
+            messageBox(QStringLiteral("startkde: Could not start ksmserver. Check your installation.\n"));
+            rc = false;
+            e.quit();
+        }
+    });
+
+    QObject::connect(&serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, [&]() {
+        const QStringList watchedServices = serviceWatcher.watchedServices();
+        bool plasmaSessionRunning = std::any_of(watchedServices.constBegin(), watchedServices.constEnd(), [](const QString &service) {
+            return QDBusConnection::sessionBus().interface()->isServiceRegistered(service);
+        });
+        if (!plasmaSessionRunning) {
+            e.quit();
+        }
+    });
+
+    startPlasmaSession.start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
+    e.exec();
+    return rc;
 }
 
 void waitForKonqi()

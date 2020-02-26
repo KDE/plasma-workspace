@@ -7,7 +7,7 @@
             "id": "4",
             "name": "some bookmark in bookmark bar",
             "type": "url",
-            "url": "http://somehost.com/"
+            "url": "https://somehost.com/"
          } ],
          "date_added": "12987182274941985",
          "date_modified": "12987182320843562",
@@ -21,14 +21,14 @@
             "id": "5",
             "name": "bookmark in other bookmarks",
             "type": "url",
-            "url": "http://otherbookmarks.com/"
+            "url": "https://otherbookmarks.com/"
          }, {
             "children": [ {
                "date_added": "12987182366305763",
                "id": "7",
                "name": "bookmark in somefolder",
                "type": "url",
-               "url": "http://somefolder.com/"
+               "url": "https://somefolder.com/"
             } ],
             "date_added": "12987182352136671",
             "date_modified": "12987182366305763",

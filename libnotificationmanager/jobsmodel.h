@@ -50,7 +50,7 @@ public:
     bool init();
 
     /**
-     * Whether the notification service could be reigstered
+     * Whether the notification service could be registered
      */
     bool isValid() const;
 

@@ -42,7 +42,7 @@ AppMenuApplet::AppMenuApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
 {
     ++s_refs;
-    //if we're the first, regster the service
+    //if we're the first, register the service
     if (s_refs == 1) {
         QDBusConnection::sessionBus().interface()->registerService(viewService(),
                 QDBusConnectionInterface::QueueService,
@@ -62,7 +62,7 @@ AppMenuApplet::AppMenuApplet(QObject *parent, const QVariantList &data)
                 QDBusConnection::sessionBus().interface()->unregisterService(viewService());
             }
         } else {
-            //if we're the first, regster the service
+            //if we're the first, register the service
             if (++s_refs == 1) {
                 QDBusConnection::sessionBus().interface()->registerService(viewService(),
                     QDBusConnectionInterface::QueueService,

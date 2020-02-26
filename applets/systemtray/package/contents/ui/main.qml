@@ -146,36 +146,12 @@ MouseArea {
     Containment.onAppletAdded: {
         //Allow the plasmoid expander to know in what window it will be
         var plasmoidContainer = plasmoidItemComponent.createObject(invisibleEntriesContainer, {"x": x, "y": y, "applet": applet});
-
-        applet.parent = plasmoidContainer
-        applet.anchors.left = plasmoidContainer.left
-        applet.anchors.top = plasmoidContainer.top
-        applet.anchors.bottom = plasmoidContainer.bottom
-        applet.width = plasmoidContainer.height
-        applet.visible = true
-        plasmoidContainer.visible = true
-        
-        //This is to make preloading effective, minimizes the scene changes
-        if (applet.fullRepresentationItem) {
-            applet.fullRepresentationItem.width = expandedRepresentation.width
-            applet.fullRepresentationItem.width = expandedRepresentation.height
-            applet.fullRepresentationItem.parent = preloadedStorage;
-        } else {
-            applet.fullRepresentationItemChanged.connect(function() {
-                applet.fullRepresentationItem.width = expandedRepresentation.width
-                applet.fullRepresentationItem.width = expandedRepresentation.height
-                applet.fullRepresentationItem.parent = preloadedStorage;
-            });
-        }
     }
 
     //being there forces the items to fully load, and they will be reparented in the popup one by one, this item is *never* visible
     Item {
         id: preloadedStorage
         visible: false
-    }
-
-    Containment.onAppletRemoved: {
     }
 
     Connections {
@@ -187,7 +163,7 @@ MouseArea {
         }
     }
 
-     Connections {
+    Connections {
         target: plasmoid.configuration
 
         onExtraItemsChanged: plasmoid.nativeInterface.allowedPlasmoids = plasmoid.configuration.extraItems
@@ -260,18 +236,11 @@ MouseArea {
 
             delegate: StatusNotifierItem {}
         }
-        //NOTE: this exists mostly for not causing reference errors
-        property QtObject marginHints: QtObject {
-            property int left: 0
-            property int top: 0
-            property int right: 0
-            property int bottom: 0
-        }
     }
 
     CurrentItemHighLight {
         visualParent: tasksRow
-        target: root.activeApplet && root.activeApplet.parent.parent == tasksRow ? root.activeApplet.parent : root
+        target: root.activeApplet && root.activeApplet.parent && root.activeApplet.parent.inVisibleLayout ? root.activeApplet.parent : root
         location: plasmoid.location
     }
 
@@ -327,14 +296,7 @@ MouseArea {
         y: Math.round(height/2 - childrenRect.height/2)
         x: (expander.visible && LayoutMirroring.enabled ? expander.width : 0) + Math.round(width/2 - childrenRect.width/2)
 
-
-        //Do spacing with margins, to correctly compute the number of lines
-        property QtObject marginHints: QtObject {
-            property int left: Math.round(units.smallSpacing / 2)
-            property int top: Math.round(units.smallSpacing / 2)
-            property int right: Math.round(units.smallSpacing / 2)
-            property int bottom: Math.round(units.smallSpacing / 2)
-        }
+        readonly property var iconSize: root.itemSize + units.smallSpacing
 
         //add doesn't seem to work used in conjunction with stackBefore/stackAfter
         /*add: Transition {

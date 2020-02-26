@@ -77,7 +77,7 @@ AbstractItem {
         var pos = plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y);
 
         switch (mouse.button) {
-        case Qt.LeftButton: {
+        case Qt.LeftButton:
             var service = statusNotifierSource.serviceForSource(DataEngineSource);
             var operation = service.operationDescription("Activate");
             operation.x = pos.x;
@@ -92,7 +92,6 @@ AbstractItem {
             });
             taskIcon.activated()
             break;
-        }
         case Qt.RightButton:
             openContextMenu(pos);
             break;

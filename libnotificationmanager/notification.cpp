@@ -59,7 +59,7 @@ QString Notification::Private::sanitize(const QString &text)
     t = t.simplified();
     // Finally, check if we don't have multiple <br/>s following,
     // can happen for example when "\n       \n" is sent, this replaces
-    // all <br/>s in succsession with just one
+    // all <br/>s in succession with just one
     t.replace(QRegularExpression(QStringLiteral("<br/>\\s*<br/>(\\s|<br/>)*")), QLatin1String("<br/>"));
     // This fancy RegExp escapes every occurrence of & since QtQuick Text will blatantly cut off
     // text where it finds a stray ampersand.

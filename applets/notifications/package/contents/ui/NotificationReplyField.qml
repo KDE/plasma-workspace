@@ -45,7 +45,7 @@ RowLayout {
     PlasmaComponents.TextField {
         id: replyTextField
         Layout.fillWidth: true
-        placeholderText: replyRow.replyPlaceholderText
+        placeholderText: replyRow.placeholderText
                          || i18ndc("plasma_applet_org.kde.plasma.notifications", "Text field placeholder", "Type a reply...")
         onAccepted: {
             if (replyButton.enabled) {

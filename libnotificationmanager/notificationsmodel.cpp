@@ -390,7 +390,7 @@ void NotificationsModel::configure(const QString &desktopEntry, const QString &n
 {
     // TODO would be nice to just have a signal but since NotificationsModel is shared,
     // if we connect to this from Notifications you would get a signal in every instance
-    // and potentialy open the config dialog multiple times.
+    // and potentially open the config dialog multiple times.
 
     QStringList args;
     if (!desktopEntry.isEmpty()) {

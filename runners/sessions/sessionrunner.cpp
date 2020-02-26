@@ -246,7 +246,7 @@ void SessionRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
                 "F%2 to the second session and so on. "
                 "You can switch between sessions by pressing "
                 "Ctrl, Alt and the appropriate F-key at the same time. "
-                "Additionally, the KDE Panel and Desktop menus have "
+                "Additionally, the Plasma Panel and Desktop menus have "
                 "actions for switching between sessions.</p>",
                 7, 8));
 

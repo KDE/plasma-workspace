@@ -131,6 +131,10 @@ void KCMInit::runModules( int phase )
       if( vphase.isValid() )
           libphase = vphase.toInt();
 
+      if (libphase > 1) {
+          libphase = 1;
+      }
+
       if( phase != -1 && libphase != phase )
           continue;
 
@@ -193,7 +197,7 @@ KCMInit::KCMInit( const QCommandLineParser& args )
      QDBusConnection::sessionBus().registerObject(QStringLiteral("/kcminit"), this, QDBusConnection::ExportScriptableContents);
      QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.kcminit"));
 
-     qApp->exec(); // wait for runPhase1() and runPhase2()
+     qApp->exec(); // wait for runPhase1()
   }
   else
      runModules( -1 ); // all phases
@@ -207,12 +211,7 @@ KCMInit::~KCMInit()
 void KCMInit::runPhase1()
 {
   runModules( 1 );
-}
-
-void KCMInit::runPhase2()
-{
-  runModules( 2 );
-  qApp->exit( 0 );
+  qApp->exit(0);
 }
 
 extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])

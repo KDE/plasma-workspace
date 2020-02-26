@@ -49,7 +49,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <X11/extensions/Xrender.h>
 
 static const char version[] = "0.4";
-static const char description[] = I18N_NOOP( "The reliable KDE session manager that talks the standard X11R6 \nsession management protocol (XSMP)." );
+static const char description[] = I18N_NOOP( "The reliable Plasma session manager that talks the standard X11R6 \nsession management protocol (XSMP)." );
 
 Display* dpy = nullptr;
 Colormap colormap = 0;
@@ -213,9 +213,9 @@ void sanity_check( int argc, char* argv[] )
     {
         const QString msg_pre =
                 i18n("The following installation problem was detected\n"
-                     "while trying to start KDE:") +
+                     "while trying to start Plasma:") +
                 QStringLiteral("\n\n    ");
-        const QString msg_post = i18n("\n\nKDE is unable to start.\n");
+        const QString msg_post = i18n("\n\nPlasma is unable to start.\n");
         fputs(msg_pre.toUtf8().constData(), stderr);
         fprintf(stderr, "%s", msg.toUtf8().constData());
         fputs(msg_post.toUtf8().constData(), stderr);

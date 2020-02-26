@@ -19,6 +19,7 @@
 
 #include "systemtray.h"
 #include "systemtraymodel.h"
+#include "sortedsystemtraymodel.h"
 #include "debug.h"
 
 #include <QDBusConnection>
@@ -43,7 +44,8 @@
 SystemTray::SystemTray(QObject *parent, const QVariantList &args)
     : Plasma::Containment(parent, args),
       m_availablePlasmoidsModel(nullptr),
-      m_systemTrayModel(new SystemTrayModel(this))
+      m_systemTrayModel(new SystemTrayModel(this)),
+      m_configSystemTrayModel(nullptr)
 {
     setHasConfigurationInterface(true);
     setContainmentType(Plasma::Types::CustomEmbeddedContainment);
@@ -51,9 +53,10 @@ SystemTray::SystemTray(QObject *parent, const QVariantList &args)
     PlasmoidModel *currentPlasmoidsModel = new PlasmoidModel(m_systemTrayModel);
     connect(this, &SystemTray::appletAdded, currentPlasmoidsModel, &PlasmoidModel::addApplet);
     connect(this, &SystemTray::appletRemoved, currentPlasmoidsModel, &PlasmoidModel::removeApplet);
-    m_systemTrayModel->addSourceModel(currentPlasmoidsModel);
 
     m_statusNotifierModel = new StatusNotifierModel(m_systemTrayModel);
+
+    m_systemTrayModel->addSourceModel(currentPlasmoidsModel);
     m_systemTrayModel->addSourceModel(m_statusNotifierModel);
 }
 
@@ -386,8 +389,6 @@ void SystemTray::restorePlasmoids()
         }
     }
 
-    QStringList ownApplets;
-
     QMap<QString, KPluginMetaData> sortedApplets;
     for (auto it = m_systrayApplets.constBegin(); it != m_systrayApplets.constEnd(); ++it) {
         const KPluginMetaData &info = it.value();
@@ -429,9 +430,13 @@ void SystemTray::restorePlasmoids()
     initDBusActivatables();
 }
 
-QAbstractItemModel *SystemTray::systemTrayModel()
+QAbstractItemModel *SystemTray::configSystemTrayModel()
 {
-    return m_systemTrayModel;
+    if (!m_configSystemTrayModel) {
+        m_configSystemTrayModel = new SortedSystemTrayModel(SortedSystemTrayModel::SortingType::ConfigurationPage, this);
+        m_configSystemTrayModel->setSourceModel(m_systemTrayModel);
+    }
+    return m_configSystemTrayModel;
 }
 
 QStringList SystemTray::defaultPlasmoids() const
@@ -487,7 +492,7 @@ void SystemTray::initDBusActivatables()
     connect(systemCallWatcher, &QDBusPendingCallWatcher::finished,
             [=](QDBusPendingCallWatcher *callWatcher){
                 SystemTray::serviceNameFetchFinished(callWatcher, QDBusConnection::systemBus());
-            });
+    });
 }
 
 void SystemTray::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection)

@@ -34,8 +34,12 @@ LimitedRowCountProxyModel::~LimitedRowCountProxyModel() = default;
 
 void LimitedRowCountProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
 {
-    if (this->sourceModel()) {
-        disconnect(this->sourceModel(), nullptr, this, nullptr);
+    if (sourceModel == QAbstractProxyModel::sourceModel()) {
+        return;
+    }
+
+    if (QAbstractProxyModel::sourceModel()) {
+        disconnect(QAbstractProxyModel::sourceModel(), nullptr, this, nullptr);
     }
 
     QSortFilterProxyModel::setSourceModel(sourceModel);

@@ -94,6 +94,13 @@ bool ItemContainer::dragActive() const
     return m_dragActive;
 }
 
+void ItemContainer::cancelEdit()
+{
+    m_editModeTimer->stop();
+    m_mouseDown = false;
+    setEditMode(false);
+}
+
 void ItemContainer::setEditMode(bool editMode)
 {
     if (m_editMode == editMode) {

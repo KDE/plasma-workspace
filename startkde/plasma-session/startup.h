@@ -26,6 +26,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <QObject>
 #include <KJob>
+#include <QProcessEnvironment>
 
 #include "autostart.h"
 
@@ -56,10 +57,8 @@ class KCMInitJob: public KJob
 {
 Q_OBJECT
 public:
-    KCMInitJob(int phase);
+    KCMInitJob();
     void start() override;
-private:
-    int m_phase;
 };
 
 class KDEDInitJob: public KJob
@@ -81,17 +80,35 @@ private:
 };
 
 /**
+ * Launches a process, and waits for the process to start
+ */
+class StartProcessJob: public KJob
+{
+    Q_OBJECT
+public:
+    StartProcessJob(const QString &process,
+                    const QStringList &args,
+                    const QProcessEnvironment &additionalEnv = QProcessEnvironment());
+    void start() override;
+private:
+    QProcess* m_process;
+};
+
+/**
  * Launches a process, and waits for the service to appear on the session bus
  */
 class StartServiceJob: public KJob
 {
     Q_OBJECT
 public:
-    StartServiceJob(const QString &process, const QStringList &args, const QString &serviceId);
+    StartServiceJob(const QString &process,
+                    const QStringList &args,
+                    const QString &serviceId,
+                    const QProcessEnvironment &additionalEnv = QProcessEnvironment());
     void start() override;
 private:
-    const QString m_process;
-    const QStringList m_args;
+    QProcess* m_process;
+    const QString m_serviceId;
 };
 
 class RestoreSessionJob: public KJob

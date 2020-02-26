@@ -18,7 +18,7 @@ qt5_add_dbus_interface(kworkspace_LIB_SRCS ${KSCREENLOCKER_DBUS_INTERFACES_DIR}/
 qt5_add_dbus_interface(kworkspace_LIB_SRCS ${KSCREENLOCKER_DBUS_INTERFACES_DIR}/org.kde.screensaver.xml kscreenlocker_interface )
 qt5_add_dbus_interface(kworkspace_LIB_SRCS ${plasma-workspace_SOURCE_DIR}/ksmserver/org.kde.LogoutPrompt.xml logoutprompt_interface)
 qt5_add_dbus_interface(kworkspace_LIB_SRCS ${plasma-workspace_SOURCE_DIR}/startkde/plasma-session/org.kde.Startup.xml startup_interface)
-qt5_add_dbus_interface(kworkspace_LIB_SRCS ${plasma-workspace_SOURCE_DIR}/startkde/plasma-session/org.kde.Shutdown.xml shutdown_interface)
+qt5_add_dbus_interface(kworkspace_LIB_SRCS ${plasma-workspace_SOURCE_DIR}/startkde/plasma-shutdown/org.kde.Shutdown.xml shutdown_interface)
 
 set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/org.freedesktop.login1.Manager.xml"
                             "${CMAKE_SOURCE_DIR}/data/interfaces/org.freedesktop.login1.Seat.xml"

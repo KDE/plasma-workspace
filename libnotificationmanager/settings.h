@@ -227,6 +227,9 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
 
 public:
     explicit Settings(QObject *parent = nullptr);
+    /**
+     * @deprecated
+     */
     Settings(const KSharedConfig::Ptr &config, QObject *parent = nullptr);
     ~Settings() override;
 

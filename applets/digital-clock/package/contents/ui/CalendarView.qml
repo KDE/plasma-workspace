@@ -331,12 +331,14 @@ Item {
 
         PlasmaExtras.Heading {
             anchors.fill: holidaysView
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
             anchors.leftMargin: units.largeSpacing
             anchors.rightMargin: units.largeSpacing
             text: monthView.isToday(monthView.currentDate) ? i18n("No events for today")
                                                            : i18n("No events for this day");
             level: 3
-            opacity: 0.4
+            enabled: false
             visible: holidaysList.count == 0
         }
 

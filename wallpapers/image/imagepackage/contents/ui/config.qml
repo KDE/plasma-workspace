@@ -347,7 +347,7 @@ ColumnLayout {
                 NewStuff.Button {
                     Layout.alignment: Qt.AlignRight
                     configFile: "wallpaper.knsrc"
-                    downloadNewWhat: i18n("Wallpapers")
+                    text: i18nd("plasma_wallpaper_org.kde.image", "Get New Wallpapers...")
                     viewMode: NewStuff.Page.ViewMode.Preview
                     onChangedEntriesChanged: imageWallpaper.newStuffFinished();
                 }
@@ -446,7 +446,7 @@ ColumnLayout {
         NewStuff.Button {
             Layout.alignment: Qt.AlignRight
             configFile: "wallpaper.knsrc"
-            downloadNewWhat: i18n("Wallpapers")
+            text: i18nd("plasma_wallpaper_org.kde.image", "Get New Wallpapers...")
             viewMode: NewStuff.Page.ViewMode.Preview
             onChangedEntriesChanged: imageWallpaper.newStuffFinished();
         }

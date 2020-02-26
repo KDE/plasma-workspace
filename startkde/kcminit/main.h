@@ -32,7 +32,6 @@ class KCMInit : public QObject
     Q_CLASSINFO("D-Bus Interface", "org.kde.KCMInit")
 	public Q_SLOTS: //dbus
         Q_SCRIPTABLE void runPhase1();
-        Q_SCRIPTABLE void runPhase2();
     public:
         explicit KCMInit( const QCommandLineParser& args );
         ~KCMInit() override;

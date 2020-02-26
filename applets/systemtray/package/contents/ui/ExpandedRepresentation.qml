@@ -98,8 +98,8 @@ ColumnLayout {
 
         PlasmaComponents.ToolButton {
             id: pinButton
-            Layout.preferredHeight: Math.round(units.gridUnit * 1.25)
-            Layout.preferredWidth: Layout.preferredHeight
+            implicitHeight: Math.round(units.gridUnit * 1.25)
+            implicitWidth: implicitHeight
             checkable: true
             checked: plasmoid.configuration.pin
             onToggled: plasmoid.configuration.pin = checked
@@ -116,7 +116,6 @@ ColumnLayout {
         HiddenItemsView {
             id: hiddenItemsView
             Layout.fillWidth: !activeApplet
-            Layout.preferredWidth: activeApplet ? iconColumnWidth : -1
             Layout.fillHeight: true
         }
 

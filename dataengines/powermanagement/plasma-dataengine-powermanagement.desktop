@@ -2,7 +2,7 @@
 # ctxt: plasma data engine
 Name=Power Management
 Name[ar]=إدارة الطاقة
-Name[ast]=Xestión d'enerxía
+Name[ast]=Xestión enerxética
 Name[bg]=Управление на захранването
 Name[bn]=শক্তি ব্যবস্থাপনা
 Name[bs]=Upravljanje napajanjem
@@ -79,7 +79,7 @@ Comment[da]=Information om batteri, strømforsyning, dvale og PowerDevil.
 Comment[de]=Informationen zu Akku, Netzanschluss, Standby-Modus und PowerDevil.
 Comment[el]=Πληροφορίες μπαταρίας, AC, αδράνειας και PowerDevil
 Comment[en_GB]=Battery, AC, sleep and PowerDevil information.
-Comment[es]=Información de batería, CA, hibernación y PowerDevil.
+Comment[es]=Información de batería, CA, suspensión y PowerDevil.
 Comment[et]=Aku, voolutoite, puhkeseisundi ja PowerDevili teave.
 Comment[eu]=Bateria, korronte alternoa, loa eta PowerDevil-i buruzko informazioa.
 Comment[fi]=Akku, vaihtovirta, nukkumis- ja PowerDevil-tiedot.
@@ -139,6 +139,6 @@ X-KDE-PluginInfo-Author=
 X-KDE-PluginInfo-Email=
 X-KDE-PluginInfo-Name=powermanagement
 X-KDE-PluginInfo-Version=
-X-KDE-PluginInfo-Website=https://plasma.kde.org
+X-KDE-PluginInfo-Website=https://kde.org/plasma-desktop
 X-KDE-PluginInfo-Category=
 X-KDE-PluginInfo-Depends=

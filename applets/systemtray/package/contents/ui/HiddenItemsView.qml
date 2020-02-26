@@ -27,8 +27,8 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 PlasmaExtras.ScrollArea {
     id: hiddenTasksView
 
-    visible: !activeApplet || activeApplet.parent.parent == hiddenTasksColumn
-    width: activeApplet ? iconColumnWidth : parent.width
+    visible: !root.activeApplet || (root.activeApplet.parent && root.activeApplet.parent.inHiddenLayout)
+    implicitWidth: root.activeApplet ? iconColumnWidth : parent.width
     property alias layout: hiddenTasksColumn
     //Useful to align stuff to the column of icons, both in expanded and shrink modes
     property int iconColumnWidth: root.hiddenItemSize + highlight.marginHints.left + highlight.marginHints.right
@@ -64,9 +64,7 @@ PlasmaExtras.ScrollArea {
                 spacing: units.smallSpacing
                 width: parent.width
                 property Item hoveredItem
-                property alias marginHints: highlight.marginHints
-
-                objectName: "hiddenTasksColumn"
+                readonly property int iconItemHeight: root.hiddenItemSize + highlight.marginHints.top + highlight.marginHints.bottom
             }
         }
     }

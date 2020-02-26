@@ -35,11 +35,12 @@ namespace Plasma {
 class PlasmoidModel;
 class StatusNotifierModel;
 class SystemTrayModel;
+class SortedSystemTrayModel;
 
 class SystemTray : public Plasma::Containment
 {
     Q_OBJECT
-    Q_PROPERTY(QAbstractItemModel* systemTrayModel READ systemTrayModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel* configSystemTrayModel READ configSystemTrayModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel* availablePlasmoids READ availablePlasmoids CONSTANT)
     Q_PROPERTY(QStringList allowedPlasmoids READ allowedPlasmoids WRITE setAllowedPlasmoids NOTIFY allowedPlasmoidsChanged)
     Q_PROPERTY(QStringList defaultPlasmoids READ defaultPlasmoids CONSTANT)
@@ -53,7 +54,7 @@ public:
     void restoreContents(KConfigGroup &group) override;
     void restorePlasmoids();
 
-    QAbstractItemModel* systemTrayModel();
+    QAbstractItemModel *configSystemTrayModel();
 
     QStringList defaultPlasmoids() const;
 
@@ -130,6 +131,7 @@ private:
     PlasmoidModel *m_availablePlasmoidsModel;
     StatusNotifierModel *m_statusNotifierModel;
     SystemTrayModel *m_systemTrayModel;
+    SortedSystemTrayModel *m_configSystemTrayModel;
     QHash<QString, int> m_knownPlugins;
     QHash<QString, int> m_dbusServiceCounts;
 };

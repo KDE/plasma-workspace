@@ -261,7 +261,7 @@ public:
 
         UserActionFeedbackRole, ///< Whether this notification is a response/confirmation to an explicit user action. @since 5.18
 
-        HasReplyActionRole, ///< Whether the action has a reply action. @since 5.18
+        HasReplyActionRole, ///< Whether the notification has a reply action. @since 5.18
         ReplyActionLabelRole, ///< The user-visible label for the reply action. @since 5.18
         ReplyPlaceholderTextRole, ///< A custom placeholder text for the reply action, e.g. "Reply to Max...". @since 5.18
         ReplySubmitButtonTextRole, ///< A custom text for the reply submit button, e.g. "Submit Comment". @since 5.18
