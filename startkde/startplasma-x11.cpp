@@ -33,8 +33,6 @@ void sighupHandler(int)
 
 int main(int argc, char** argv)
 {
-    QCoreApplication app(argc, argv);
-
     // When the X server dies we get a HUP signal from xinit. We must ignore it
     // because we still need to do some cleanup.
     signal(SIGHUP, sighupHandler);
