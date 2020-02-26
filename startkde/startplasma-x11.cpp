@@ -39,6 +39,8 @@ int main(int argc, char** argv)
     // because we still need to do some cleanup.
     signal(SIGHUP, sighupHandler);
 
+    QCoreApplication app(argc, argv);
+
     // Boot sequence:
     //
     // kdeinit is used to fork off processes which improves memory usage

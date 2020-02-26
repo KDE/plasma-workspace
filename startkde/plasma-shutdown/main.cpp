@@ -16,18 +16,13 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "startup.h"
+#include "shutdown.h"
 
 #include <QCoreApplication>
 
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
-
-    // This is needed with KJobs in a QCoreApplication as when they finish
-    // the internal QEventLoopLocker expires and our app exits
-    app.setQuitLockEnabled(false);
-
-    new Startup(&app);
+    new Shutdown(&app);
     app.exec();
 }

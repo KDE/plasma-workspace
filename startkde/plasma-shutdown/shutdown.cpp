@@ -47,7 +47,8 @@ void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [closeSessionReply, watcher, this]() {
         watcher->deleteLater();
         if (closeSessionReply.isError()) {
-            qDebug() << "ksmserver failed to complete logout";
+            qCWarning(PLASMA_SESSION) << "ksmserver failed to complete logout";
+            qApp->quit();
         }
         if (closeSessionReply.value()) {
             logoutComplete();
@@ -60,6 +61,7 @@ void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
 void Shutdown::logoutCancelled()
 {
     m_shutdownType = KWorkSpace::ShutdownTypeNone;
+    qApp->quit();
 }
 
 void Shutdown::logoutComplete() {
