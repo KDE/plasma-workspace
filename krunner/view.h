@@ -73,6 +73,7 @@ protected:
     void showEvent(QShowEvent *event) override;
 
 public Q_SLOTS:
+    void setVisible(bool visible);
     void display();
     void displaySingleRunner(const QString &runnerName);
     void displayWithClipboardContents();
@@ -96,6 +97,7 @@ private:
     KConfigGroup m_config;
     qreal m_offset;
     bool m_floating : 1;
+    bool m_requestedVisible = false;
     QStringList m_history;
 };
 

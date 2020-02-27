@@ -39,6 +39,8 @@ class StrutManager : public QObject
         QRegion availableScreenRegion(int id) const;
 
     public Q_SLOTS:
+        QRect availableScreenRect(const QString &screenName) const;
+
         void setAvailableScreenRect(const QString &service, const QString &screenName, const QRect &rect);
         void setAvailableScreenRegion(const QString &service, const QString &screenName, const QList<QRect> &rects);
 
