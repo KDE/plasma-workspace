@@ -16,7 +16,13 @@ target_link_libraries(plasma_waitforname
 configure_file(org.kde.plasma.Notifications.service.in
                ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasma.Notifications.service)
 
+configure_file(org.kde.KSplash.service.in
+               ${CMAKE_CURRENT_BINARY_DIR}/org.kde.KSplash.service)
+
 install(TARGETS plasma_waitforname ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasma.Notifications.service
         DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})
 
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.KSplash.service
+        DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})
