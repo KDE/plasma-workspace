@@ -41,7 +41,15 @@ MouseArea {
     property int iconSize: plasmoid.configuration.iconSize + (Kirigami.Settings.tabletMode ? 1 : 0)
 
     property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
-    readonly property int itemSize: units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes[iconSizes[Math.min(iconSizes.length-1, iconSize)]]))
+    readonly property int itemSize: {
+        var baseSize = units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes[iconSizes[Math.min(iconSizes.length-1, iconSize)]]));
+        if (Kirigami.Settings.tabletMode) {
+            // Set the tray items' clickable areas on the panel to be bigger than normal to allow for easier touchability
+            return baseSize + units.smallSpacing;
+        } else {
+            return baseSize;
+        }
+    }
     property int hiddenItemSize: units.iconSizes.smallMedium
     property alias expanded: dialog.visible
     property Item activeApplet
