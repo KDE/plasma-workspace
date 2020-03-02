@@ -328,12 +328,6 @@ void Notification::Private::setDesktopEntry(const QString &desktopEntry)
 
         const QString iconName = globalGroup.readEntry("IconName");
 
-        // For default events we try to show the application name from the desktop entry if possible
-        // This will have us show e.g. "Dr Konqi" instead of generic "Plasma Desktop"
-        if (isDefaultEvent && !serviceName.isEmpty()) {
-            applicationName = serviceName;
-        }
-
         // also only overwrite application icon name for non-default events (or if we don't have a service icon)
         if (!iconName.isEmpty() && (!isDefaultEvent || applicationIconName.isEmpty())) {
             applicationIconName = iconName;
@@ -341,6 +335,13 @@ void Notification::Private::setDesktopEntry(const QString &desktopEntry)
 
         const QRegularExpression regexp(QStringLiteral("^Event/([^/]*)$"));
         configurableNotifyRc = !config.groupList().filter(regexp).isEmpty();
+    }
+
+    // For default events we try to show the application name from the desktop entry if possible
+    // This will have us show e.g. "Dr Konqi" instead of generic "Plasma Desktop"
+    // The application may not send an applicationName. Use the name from the desktop entry then
+    if ((isDefaultEvent || applicationName.isEmpty()) && !serviceName.isEmpty()) {
+        applicationName = serviceName;
     }
 }
 
