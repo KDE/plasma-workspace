@@ -66,9 +66,16 @@ class RecentUsageModel : public ForwardingModel, public QQmlParserStatus
     Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(int ordering READ ordering WRITE setOrdering NOTIFY orderingChanged)
+    Q_PROPERTY(IncludeUsage shownItems READ shownItems WRITE setShownItems NOTIFY shownItemsChanged)
 
     public:
-        enum IncludeUsage { AppsAndDocs, OnlyApps, OnlyDocs };
+        enum IncludeUsage {
+            AppsAndDocs,
+            OnlyApps,
+            OnlyDocs
+        };
+        Q_ENUM(IncludeUsage)
+
         enum Ordering { Recent, Popular };
 
         explicit RecentUsageModel(
@@ -86,7 +93,8 @@ class RecentUsageModel : public ForwardingModel, public QQmlParserStatus
         bool hasActions() const override;
         QVariantList actions() const override;
 
-        IncludeUsage usage() const;
+        void setShownItems(IncludeUsage usage);
+        IncludeUsage shownItems() const;
 
         void setOrdering(int ordering);
         int ordering() const;
@@ -96,6 +104,7 @@ class RecentUsageModel : public ForwardingModel, public QQmlParserStatus
 
     Q_SIGNALS:
         void orderingChanged(int ordering);
+        void shownItemsChanged();
 
     private Q_SLOTS:
         void refresh() override;
