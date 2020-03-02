@@ -250,6 +250,7 @@ void Startup::finishStartup()
 {
     qCDebug(PLASMA_SESSION) << "Finished";
     upAndRunning(QStringLiteral("ready"));
+    qApp->quit();
 }
 
 void Startup::updateLaunchEnv(const QString &key, const QString &value)
