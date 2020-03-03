@@ -365,6 +365,8 @@ bool startPlasmaSession(bool wayland)
     QEventLoop e;
 
     QProcess startPlasmaSession;
+    startPlasmaSession.setProcessChannelMode(QProcess::ForwardedChannels);
+
     QDBusServiceWatcher serviceWatcher;
     serviceWatcher.setConnection(QDBusConnection::sessionBus());
 
