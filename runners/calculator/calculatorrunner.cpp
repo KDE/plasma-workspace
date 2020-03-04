@@ -27,6 +27,7 @@
 #include <QJSEngine>
 #include <QGuiApplication>
 #include <QClipboard>
+#include <QRegularExpression>
 #endif
 
 #include <QIcon>
@@ -195,14 +196,14 @@ void CalculatorRunner::userFriendlySubstitutions(QString& cmd)
     hexSubstitutions(cmd);
     powSubstitutions(cmd);
 
-    if (cmd.contains(QRegExp(QStringLiteral("\\d+and\\d+")))) {
-         cmd.replace(QRegExp(QStringLiteral("(\\d+)and(\\d+)")), QStringLiteral("\\1&\\2"));
+    if (cmd.contains(QRegularExpression(QStringLiteral("\\d+and\\d+")))) {
+         cmd.replace(QRegularExpression(QStringLiteral("(\\d+)and(\\d+)")), QStringLiteral("\\1&\\2"));
     }
-    if (cmd.contains(QRegExp(QStringLiteral("\\d+or\\d+")))) {
-         cmd.replace(QRegExp(QStringLiteral("(\\d+)or(\\d+)")), QStringLiteral("\\1|\\2"));
+    if (cmd.contains(QRegularExpression(QStringLiteral("\\d+or\\d+")))) {
+         cmd.replace(QRegularExpression(QStringLiteral("(\\d+)or(\\d+)")), QStringLiteral("\\1|\\2"));
     }
-    if (cmd.contains(QRegExp(QStringLiteral("\\d+xor\\d+")))) {
-         cmd.replace(QRegExp(QStringLiteral("(\\d+)xor(\\d+)")), QStringLiteral("\\1^\\2"));
+    if (cmd.contains(QRegularExpression(QStringLiteral("\\d+xor\\d+")))) {
+         cmd.replace(QRegularExpression(QStringLiteral("(\\d+)xor(\\d+)")), QStringLiteral("\\1^\\2"));
     }
     #endif
 }
@@ -261,7 +262,8 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
 
     userFriendlySubstitutions(cmd);
     #ifndef ENABLE_QALCULATE
-    cmd.replace(QRegExp(QStringLiteral("([a-zA-Z]+)")), QStringLiteral("Math.\\1")); //needed for accessing math functions like sin(),....
+    //needed for accessing math functions like sin(),....
+    cmd.replace(QRegularExpression(QStringLiteral("([a-zA-Z]+)")), QStringLiteral("Math.\\1"));
     #endif
 
     bool isApproximate = false;

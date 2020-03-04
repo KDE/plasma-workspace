@@ -31,6 +31,7 @@
 #include <QQmlEngine>
 #include <QQmlContext>
 #include <QGuiApplication>
+#include <QRegularExpression>
 #include <QTimer>
 
 #include <kactioncollection.h>
@@ -1192,7 +1193,8 @@ void PanelView::containmentChanged()
         if (containment()->destroyed()) {
             KConfigGroup views(m_corona->applicationConfig(), "PlasmaViews");
             for (auto grp : views.groupList()) {
-                if (grp.contains(QRegExp(QStringLiteral("Panel ") + QString::number(containment()->id()) + QStringLiteral("$")))) {
+                if (grp.contains(QRegularExpression(QStringLiteral("Panel %1$").arg(
+                                                        QString::number(containment()->id()))))) {
                     qDebug() << "Panel" << containment()->id() << "removed by user";
                     views.deleteGroup(grp);
                 }

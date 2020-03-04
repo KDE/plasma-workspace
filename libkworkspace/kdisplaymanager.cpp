@@ -32,7 +32,6 @@
 #include <QDBusMetaType>
 #include <QDBusConnectionInterface>
 #include <QCoreApplication>
-#include <QRegExp>
 #include <QX11Info>
 
 #include <X11/Xauth.h>
