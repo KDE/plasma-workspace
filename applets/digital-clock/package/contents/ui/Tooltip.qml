@@ -36,79 +36,64 @@ Item {
     PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
     PlasmaCore.ColorScope.inherit: false
 
-    RowLayout {
+    ColumnLayout {
         anchors {
             left: parent.left
             top: parent.top
             margins: units.gridUnit / 2
         }
 
-        spacing: units.largeSpacing
-
-        PlasmaCore.IconItem {
-            id: tooltipIcon
-            source: "preferences-system-time"
-            Layout.alignment: Qt.AlignTop
-            visible: true
-            implicitWidth: units.iconSizes.medium
-            Layout.preferredWidth: implicitWidth
-            Layout.preferredHeight: implicitWidth
+        PlasmaExtras.Heading {
+            id: tooltipMaintext
+            level: 3
+            Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
+            Layout.maximumWidth: preferredTextWidth
+            elide: Text.ElideRight
+            text: Qt.formatDate(tzDate,"dddd")
         }
 
-        ColumnLayout {
+        PlasmaComponents.Label {
+            id: tooltipSubtext
+            Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
+            Layout.maximumWidth: preferredTextWidth
+            text: Qt.formatDate(tzDate, dateFormatString)
+            opacity: 0.6
+        }
 
-            PlasmaExtras.Heading {
-                id: tooltipMaintext
-                level: 3
-                Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
-                Layout.maximumWidth: preferredTextWidth
-                elide: Text.ElideRight
-                text: Qt.formatDate(tzDate,"dddd")
-            }
+        GridLayout {
+            Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
+            Layout.maximumWidth: preferredTextWidth
+            Layout.maximumHeight: childrenRect.height
+            columns: 2
+            visible: plasmoid.configuration.selectedTimeZones.length > 1
 
-            PlasmaComponents.Label {
-                id: tooltipSubtext
-                Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
-                Layout.maximumWidth: preferredTextWidth
-                text: Qt.formatDate(tzDate, dateFormatString)
-                opacity: 0.6
-            }
-
-            GridLayout {
-                Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
-                Layout.maximumWidth: preferredTextWidth
-                Layout.maximumHeight: childrenRect.height
-                columns: 2
-                visible: plasmoid.configuration.selectedTimeZones.length > 1
-
-                Repeater {
-                    model: {
-                        // The timezones need to be duplicated in the array
-                        // because we need their data twice - once for the name
-                        // and once for the time and the Repeater delegate cannot
-                        // be one Item with two Labels because that wouldn't work
-                        // in a grid then
-                        var timezones = [];
-                        for (var i = 0; i < plasmoid.configuration.selectedTimeZones.length; i++) {
-                            timezones.push(plasmoid.configuration.selectedTimeZones[i]);
-                            timezones.push(plasmoid.configuration.selectedTimeZones[i]);
-                        }
-
-                        return timezones;
+            Repeater {
+                model: {
+                    // The timezones need to be duplicated in the array
+                    // because we need their data twice - once for the name
+                    // and once for the time and the Repeater delegate cannot
+                    // be one Item with two Labels because that wouldn't work
+                    // in a grid then
+                    var timezones = [];
+                    for (var i = 0; i < plasmoid.configuration.selectedTimeZones.length; i++) {
+                        timezones.push(plasmoid.configuration.selectedTimeZones[i]);
+                        timezones.push(plasmoid.configuration.selectedTimeZones[i]);
                     }
 
-                    PlasmaComponents.Label {
-                        id: timezone
-                        // Layout.fillWidth is buggy here
-                        Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
+                    return timezones;
+                }
 
-                        wrapMode: Text.NoWrap
-                        text: index % 2 == 0 ? nameForZone(modelData) : timeForZone(modelData)
-                        font.weight: modelData === plasmoid.configuration.lastSelectedTimezone ? Font.Bold : Font.Normal
-                        height: paintedHeight
-                        elide: Text.ElideNone
-                        opacity: 0.6
-                    }
+                PlasmaComponents.Label {
+                    id: timezone
+                    // Layout.fillWidth is buggy here
+                    Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
+
+                    wrapMode: Text.NoWrap
+                    text: index % 2 == 0 ? nameForZone(modelData) : timeForZone(modelData)
+                    font.weight: modelData === plasmoid.configuration.lastSelectedTimezone ? Font.Bold : Font.Normal
+                    height: paintedHeight
+                    elide: Text.ElideNone
+                    opacity: 0.6
                 }
             }
         }
