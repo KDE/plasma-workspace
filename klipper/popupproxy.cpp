@@ -18,7 +18,6 @@
 */
 #include "popupproxy.h"
 
-#include <QRegExp>
 #include <QStyle>
 #include <QPixmap>
 #include <QStyleOption>
@@ -28,7 +27,6 @@
 #include "historyitem.h"
 #include "history.h"
 #include "klipperpopup.h"
-
 
 PopupProxy::PopupProxy( KlipperPopup* parent, int menu_height, int menu_width )
     : QObject( parent ),
@@ -64,7 +62,7 @@ void PopupProxy::deleteMoreMenus() {
     }
 }
 
-int PopupProxy::buildParent( int index, const QRegExp& filter ) {
+int PopupProxy::buildParent( int index, const QRegularExpression &filter ) {
     deleteMoreMenus();
     // Start from top of  history (again)
     m_spill_uuid = parent()->history()->empty() ? QByteArray() : parent()->history()->first()->uuid();
@@ -154,7 +152,7 @@ int PopupProxy::insertFromSpill( int index ) {
         return count;
     }
     do {
-        if ( m_filter.indexIn( item->text() ) != -1) {
+        if (m_filter.match(item->text()).hasMatch()) {
             tryInsertItem( item.data(), remainingHeight, index++ );
             count++;
         }

@@ -321,7 +321,7 @@ void EditActionDialog::updateWidgets(int commandIdxToSelect)
         return;
     }
 
-    m_ui->leRegExp->setText(m_action->regExp());
+    m_ui->leRegExp->setText(m_action->actionRegexPattern());
     m_ui->automatic->setChecked(m_action->automatic());
     m_ui->leDescription->setText(m_action->description());
 
@@ -340,7 +340,7 @@ void EditActionDialog::saveAction()
         return;
     }
 
-    m_action->setRegExp( m_ui->leRegExp->text() );
+    m_action->setActionRegexPattern( m_ui->leRegExp->text() );
     m_action->setDescription( m_ui->leDescription->text() );
     m_action->setAutomatic( m_ui->automatic->isChecked() );
 

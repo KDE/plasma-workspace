@@ -140,7 +140,7 @@ void ActionsWidget::updateActionItem( QTreeWidgetItem* item, ClipAction* action 
 
     // clear children if any
     item->takeChildren();
-    item->setText( 0, action->regExp() );
+    item->setText( 0, action->actionRegexPattern() );
     item->setText( 1, action->description() );
 
     foreach (const ClipCommand& command, action->commands()) {

@@ -150,8 +150,9 @@ void KlipperPopup::rebuild( const QString& filter ) {
     }
 
     // We search case insensitive until one uppercased character appears in the search term
-    Qt::CaseSensitivity caseSens = (filter.toLower() == filter ? Qt::CaseInsensitive : Qt::CaseSensitive);
-    QRegExp filterexp( filter, caseSens );
+    QRegularExpression filterexp( filter, filter.toLower() == filter ?
+                                          QRegularExpression::CaseInsensitiveOption
+                                          : QRegularExpression::NoPatternOption );
 
     QPalette palette = m_filterWidget->palette();
     if ( filterexp.isValid() ) {

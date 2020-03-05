@@ -20,7 +20,6 @@
 #define URLGRABBER_H
 
 #include <QHash>
-#include <QRegExp>
 #include <QStringList>
 #include <QSharedPointer>
 
@@ -145,12 +144,11 @@ public:
   ClipAction( KSharedConfigPtr kc, const QString& );
   ~ClipAction();
 
-  void  setRegExp( const QString& r) { m_myRegExp = QRegExp( r ); }
-  QString regExp() const             { return m_myRegExp.pattern(); }
+  QString actionRegexPattern() const { return m_regexPattern; }
+  void  setActionRegexPattern(const QString &pattern) { m_regexPattern = pattern; }
 
-  bool matches( const QString& string ) const { return ( m_myRegExp.indexIn( string ) != -1 ); }
-
-  QStringList regExpMatches() const { return m_myRegExp.capturedTexts(); }
+  QStringList actionCapturedTexts() const { return m_regexCapturedTexts; }
+  void setActionCapturedTexts(const QStringList &captured) { m_regexCapturedTexts = captured; }
 
   void setDescription( const QString& d) { m_myDescription = d; }
   QString description() const            { return m_myDescription; }
@@ -184,7 +182,8 @@ public:
 
 
 private:
-  QRegExp m_myRegExp;
+  QString m_regexPattern;
+  QStringList m_regexCapturedTexts;
   QString m_myDescription;
   QList<ClipCommand> m_myCommands;
   bool m_automatic;

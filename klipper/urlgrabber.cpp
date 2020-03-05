@@ -28,6 +28,7 @@
 #include <QUuid>
 #include <QFile>
 #include <QMenu>
+#include <QRegularExpression>
 
 #include <KLocalizedString>
 #include <KService>
@@ -162,10 +163,13 @@ const ActionList& URLGrabber::matchingActions( const QString& clipData, bool aut
 
     matchingMimeActions(clipData);
 
-
     // now look for matches in custom user actions
+    QRegularExpression re;
     foreach (ClipAction* action, m_myActions) {
-        if ( action->matches( clipData ) && (action->automatic() || !automatically_invoked) ) {
+        re.setPattern(action->actionRegexPattern());
+        const QRegularExpressionMatch match = re.match(clipData);
+        if (match.hasMatch() && (action->automatic() || !automatically_invoked)) {
+            action->setActionCapturedTexts(match.capturedTexts());
             m_myMatches.append( action );
         }
     }
@@ -402,12 +406,12 @@ ClipCommand::ClipCommand(const QString&_command, const QString& _description,
 
 
 ClipAction::ClipAction( const QString& regExp, const QString& description, bool automatic )
-    : m_myRegExp( regExp ), m_myDescription( description ), m_automatic(automatic)
+    : m_regexPattern( regExp ), m_myDescription( description ), m_automatic(automatic)
 {
 }
 
 ClipAction::ClipAction( KSharedConfigPtr kc, const QString& group )
-    : m_myRegExp( kc->group(group).readEntry("Regexp") ),
+    : m_regexPattern( kc->group(group).readEntry("Regexp") ),
       m_myDescription (kc->group(group).readEntry("Description") ),
       m_automatic(kc->group(group).readEntry("Automatic", QVariant(true)).toBool() )
 {
@@ -459,7 +463,7 @@ void ClipAction::save( KSharedConfigPtr kc, const QString& group ) const
 {
     KConfigGroup cg(kc, group);
     cg.writeEntry( "Description", description() );
-    cg.writeEntry( "Regexp", regExp() );
+    cg.writeEntry( "Regexp", actionRegexPattern() );
     cg.writeEntry( "Number of commands", m_myCommands.count() );
     cg.writeEntry( "Automatic", automatic() );
 

@@ -40,7 +40,7 @@ ClipCommandProcess::ClipCommandProcess(const ClipAction& action, const ClipComma
     map.insert( QLatin1Char('f'), clip );
     map.insert( QLatin1Char('F'), clip );
 
-    const QStringList matches = action.regExpMatches();
+    const QStringList matches = action.actionCapturedTexts();
     // support only %0 and the first 9 matches...
     const int numMatches = qMin(10, matches.count());
     for ( int i = 0; i < numMatches; ++i ) {

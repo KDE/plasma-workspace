@@ -20,7 +20,7 @@
 #define POPUPPROXY_H
 
 #include <QObject>
-#include <QRegExp>
+#include <QRegularExpression>
 
 #include "history.h"
 
@@ -53,7 +53,7 @@ public:
      * @param filter If non-empty, only insert items that match filter as a regex
      * @return number of items inserted.
      */
-    int buildParent( int index, const QRegExp& filter = QRegExp() );
+    int buildParent( int index, const QRegularExpression &filter = QRegularExpression() );
 
 public Q_SLOTS:
     void slotAboutToShow();
@@ -81,7 +81,7 @@ private:
 private:
     QMenu* m_proxy_for_menu;
     QByteArray m_spill_uuid;
-    QRegExp m_filter;
+    QRegularExpression m_filter;
     int m_menu_height;
     int m_menu_width;
 };
