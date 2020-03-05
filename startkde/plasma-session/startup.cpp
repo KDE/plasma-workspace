@@ -62,6 +62,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "startupadaptor.h"
 
+#include "../config-startplasma.h"
+
 class Phase: public KCompositeJob
 {
 Q_OBJECT
@@ -205,6 +207,8 @@ Startup::Startup(QObject *parent):
 
     upAndRunning(QStringLiteral("ksmserver"));
     const AutoStart autostart;
+
+    QProcess::execute(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF5 "/start_kdeinit_wrapper"));
 
     KJob* phase1;
     QProcessEnvironment kdedProcessEnv;
