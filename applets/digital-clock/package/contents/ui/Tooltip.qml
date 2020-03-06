@@ -22,7 +22,6 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.private.digitalclock 1.0
 
 Item {
     id: tooltipContentItem
@@ -36,36 +35,6 @@ Item {
     LayoutMirroring.childrenInherit: true
     PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
     PlasmaCore.ColorScope.inherit: false
-
-    function timeForZone(zone) {
-        var compactRepresentationItem = plasmoid.compactRepresentationItem;
-        if (!compactRepresentationItem) {
-            return "";
-        }
-
-        // get the time for the given timezone from the dataengine
-        var now = dataSource.data[zone]["DateTime"];
-        // get current UTC time
-        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
-        // add the dataengine TZ offset to it
-        var dateTime = new Date(msUTC + (dataSource.data[zone]["Offset"] * 1000));
-
-        var formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormat);
-
-        if (dateTime.getDay() !== dataSource.data["Local"]["DateTime"].getDay()) {
-            formattedTime += " (" + Qt.formatDate(dateTime, compactRepresentationItem.dateFormat) + ")";
-        }
-
-        return formattedTime;
-    }
-
-    function nameForZone(zone) {
-        // add the timezone string to the clock
-        var timezoneString = plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[zone]["Timezone Abbreviation"]
-                                                                          : TimezonesI18n.i18nCity(dataSource.data[zone]["Timezone City"]);
-
-        return timezoneString;
-    }
 
     RowLayout {
         anchors {
