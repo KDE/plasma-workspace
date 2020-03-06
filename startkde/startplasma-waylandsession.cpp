@@ -19,8 +19,10 @@
 
 #include "startplasma.h"
 
-int main(int /*argc*/, char** /*argv*/)
+int main(int argc, char** argv)
 {
+    QCoreApplication app(argc, argv);
+
     // Boot sequence:
     //
     // kdeinit is used to fork off processes which improves memory usage
