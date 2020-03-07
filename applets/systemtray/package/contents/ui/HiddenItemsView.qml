@@ -1,5 +1,6 @@
 /*
  *   Copyright 2016 Marco Martin <mart@kde.org>
+ *   Copyright 2020 Konrad Materka <materka@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,12 +20,13 @@
 
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import "items"
 
-PlasmaExtras.ScrollArea {
+MouseArea {
     id: hiddenTasksView
 
     visible: !root.activeApplet || (root.activeApplet.parent && root.activeApplet.parent.inHiddenLayout)
@@ -32,40 +34,48 @@ PlasmaExtras.ScrollArea {
     property alias layout: hiddenTasksColumn
     //Useful to align stuff to the column of icons, both in expanded and shrink modes
     property int iconColumnWidth: root.hiddenItemSize + highlight.marginHints.left + highlight.marginHints.right
-    horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
-    verticalScrollBarPolicy: activeApplet ? Qt.ScrollBarAlwaysOff : Qt.ScrollBarAsNeeded
 
-    Flickable {
-        contentWidth: width
-        contentHeight: hiddenTasksColumn.height
+    hoverEnabled: true
+    onExited: hiddenTasksColumn.currentIndex = -1
 
-        MouseArea {
-            width: parent.width
-            height: hiddenTasksColumn.height
-            drag.filterChildren: true
-            hoverEnabled: true
-            onExited: hiddenTasksColumn.hoveredItem = null;
+    PlasmaExtras.ScrollArea {
+        width: parent.width
+        height: parent.height
 
-            CurrentItemHighLight {
-                target: root.activeApplet && root.activeApplet.parent.parent == hiddenTasksColumn ? root.activeApplet.parent : null
-                location: PlasmaCore.Types.LeftEdge
+        horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
+        verticalScrollBarPolicy: root.activeApplet ? Qt.ScrollBarAlwaysOff : Qt.ScrollBarAsNeeded
+
+        ListView {
+            id: hiddenTasksColumn
+
+            spacing: units.smallSpacing
+
+            currentIndex: -1
+            highlight: PlasmaComponents.Highlight {}
+            highlightMoveDuration: 0
+            highlightResizeDuration: 0
+
+            readonly property int iconItemHeight: root.hiddenItemSize + highlight.marginHints.top + highlight.marginHints.bottom
+
+            model: PlasmaCore.SortFilterModel {
+                sourceModel: plasmoid.nativeInterface.systemTrayModel
+                filterRole: "effectiveStatus"
+                filterCallback: function(source_row, value) {
+                    return value === PlasmaCore.Types.PassiveStatus
+                }
             }
-            PlasmaComponents.Highlight {
-                id: highlight
-                visible: hiddenTasksColumn.hoveredItem != null && !root.activeApplet
-                y: hiddenTasksColumn.hoveredItem ? hiddenTasksColumn.hoveredItem.y : 0
-                width: hiddenTasksColumn.hoveredItem ? hiddenTasksColumn.hoveredItem.width : 0
-                height: hiddenTasksColumn.hoveredItem ? hiddenTasksColumn.hoveredItem.height : 0
-            }
-
-            Column {
-                id: hiddenTasksColumn
-
-                spacing: units.smallSpacing
-                width: parent.width
-                property Item hoveredItem
-                readonly property int iconItemHeight: root.hiddenItemSize + highlight.marginHints.top + highlight.marginHints.bottom
-            }
+            delegate: ItemLoader {}
         }
+    }
+
+    PlasmaComponents.Highlight {
+        id: highlight
+        visible: false
+    }
+
+    CurrentItemHighLight {
+        parent: hiddenTasksColumn.contentItem
+        target: root.activeApplet && root.activeApplet.parent && root.activeApplet.parent.inHiddenLayout ? root.activeApplet.parent.parent : null
+        location: PlasmaCore.Types.LeftEdge
     }
 }

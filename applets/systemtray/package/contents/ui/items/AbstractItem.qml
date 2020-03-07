@@ -1,5 +1,6 @@
 /*
  *   Copyright 2016 Marco Martin <mart@kde.org>
+ *   Copyright 2020 Konrad Materka <materka@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -24,35 +25,21 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 PlasmaCore.ToolTipArea {
     id: abstractItem
 
-    height: inVisibleLayout ? visibleLayout.iconSize : hiddenLayout.iconItemHeight
-    width: inVisibleLayout ? visibleLayout.iconSize : hiddenLayout.width
+    height: inVisibleLayout ? visibleLayout.cellHeight : hiddenLayout.iconItemHeight
+    width: inVisibleLayout ? visibleLayout.cellWidth : hiddenLayout.width
 
     property string itemId
-    property string category
     property alias text: label.text
     property Item iconItem
     property int /*PlasmaCore.Types.ItemStatus*/ status
+    property int /*PlasmaCore.Types.ItemStatus*/ effectiveStatus
     readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
     readonly property bool inVisibleLayout: effectiveStatus === PlasmaCore.Types.ActiveStatus
-    property QtObject model
 
     signal clicked(var mouse)
     signal pressed(var mouse)
     signal wheel(var wheel)
     signal contextMenu(var mouse)
-
-    property bool forcedHidden: plasmoid.configuration.hiddenItems.indexOf(itemId) !== -1
-    property bool forcedShown: plasmoid.configuration.showAllItems || plasmoid.configuration.shownItems.indexOf(itemId) !== -1
-
-    readonly property int effectiveStatus: {
-        if (status === PlasmaCore.Types.HiddenStatus) {
-            return PlasmaCore.Types.HiddenStatus
-        } else if (forcedShown || (!forcedHidden && status !== PlasmaCore.Types.PassiveStatus)) {
-            return PlasmaCore.Types.ActiveStatus
-        } else {
-            return PlasmaCore.Types.PassiveStatus
-        }
-    }
 
     /* subclasses need to assign to this tooltip properties
     mainText:
@@ -74,18 +61,9 @@ PlasmaCore.ToolTipArea {
 
 //BEGIN CONNECTIONS
 
-    property int creationId // used for item order tie breaking
-    onEffectiveStatusChanged: updateItemVisibility(abstractItem)
-    onCategoryChanged: updateItemVisibility(abstractItem)
-    onTextChanged: updateItemVisibility(abstractItem)
-    Component.onCompleted: {
-        creationId = root.creationIdCounter++
-        updateItemVisibility(abstractItem)
-    }
-
     onContainsMouseChanged: {
         if (inHiddenLayout && containsMouse) {
-            root.hiddenLayout.hoveredItem = abstractItem
+            root.hiddenLayout.currentIndex = index
         }
     }
 

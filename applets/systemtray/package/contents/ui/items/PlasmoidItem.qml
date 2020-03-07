@@ -28,7 +28,6 @@ AbstractItem {
     text: applet ? applet.title : ""
 
     itemId: applet ? applet.pluginName : ""
-    category: applet ? plasmoid.nativeInterface.plasmoidCategory(applet) : "UnknownCategory"
     mainText: applet ? applet.toolTipMainText : ""
     subText: applet ? applet.toolTipSubText : ""
     icon: applet ? applet.icon : ""
@@ -79,9 +78,6 @@ AbstractItem {
             plasmoidContainer.visible = true
 
             preloadFullRepresentationItem(applet.fullRepresentationItem)
-        }
-        if (!applet) {
-            plasmoidContainer.destroy();
         }
     }
 

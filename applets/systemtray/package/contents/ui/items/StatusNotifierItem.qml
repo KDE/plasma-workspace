@@ -23,40 +23,31 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 AbstractItem {
     id: taskIcon
 
-    itemId: Id
-    text: Title
-    mainText: ToolTipTitle != "" ? ToolTipTitle : Title
-    subText: ToolTipSubTitle
-    icon: ToolTipIcon != "" ? ToolTipIcon : Icon ? Icon : IconName
-    textFormat: Text.AutoText
-    category: Category
+    property var model
 
-    status: {
-        switch (Status) {
-        case "Active":
-            return PlasmaCore.Types.ActiveStatus;
-        case "NeedsAttention":
-            return PlasmaCore.Types.NeedsAttentionStatus;
-        //just assume passive
-        default:
-            return PlasmaCore.Types.PassiveStatus;
-        }
-    }
+    itemId: model.Id
+    text: model.Title
+    mainText: model.ToolTipTitle !== "" ? model.ToolTipTitle : model.Title
+    subText: model.ToolTipSubTitle
+    icon: model.ToolTipIcon !== "" ? model.ToolTipIcon : model.Icon ? model.Icon : model.IconName
+    textFormat: Text.AutoText
+
+    status: model.status
 
     iconItem: iconItem
 
     PlasmaCore.IconItem {
         id: iconItem
         source: {
-            if (taskIcon.status === PlasmaCore.Types.NeedsAttentionStatus) {
-                if (AttentionIcon) {
-                    return AttentionIcon
+            if (model.status === PlasmaCore.Types.NeedsAttentionStatus) {
+                if (model.AttentionIcon) {
+                    return model.AttentionIcon
                 }
-                if (AttentionIconName) {
-                    return AttentionIconName
+                if (model.AttentionIconName) {
+                    return model.AttentionIconName
                 }
             }
-            return Icon ? Icon : IconName
+            return model.Icon ? model.Icon : model.IconName
         }
 
         width: Math.min(parent.width, parent.height)
@@ -78,7 +69,7 @@ AbstractItem {
 
         switch (mouse.button) {
         case Qt.LeftButton:
-            var service = statusNotifierSource.serviceForSource(DataEngineSource);
+            var service = plasmoid.nativeInterface.serviceForSource(model.DataEngineSource);
             var operation = service.operationDescription("Activate");
             operation.x = pos.x;
             operation.y = pos.y;
@@ -97,7 +88,7 @@ AbstractItem {
             break;
 
         case Qt.MiddleButton:
-            var service = statusNotifierSource.serviceForSource(DataEngineSource);
+            var service = plasmoid.nativeInterface.serviceForSource(model.DataEngineSource);
             var operation = service.operationDescription("SecondaryActivate");
             operation.x = pos.x;
 
@@ -109,7 +100,7 @@ AbstractItem {
     }
 
     function openContextMenu(pos) {
-        var service = statusNotifierSource.serviceForSource(DataEngineSource);
+        var service = plasmoid.nativeInterface.serviceForSource(model.DataEngineSource);
         var operation = service.operationDescription("ContextMenu");
         operation.x = pos.x;
         operation.y = pos.y;
@@ -123,14 +114,14 @@ AbstractItem {
     onWheel: {
         //don't send activateVertScroll with a delta of 0, some clients seem to break (kmix)
         if (wheel.angleDelta.y !== 0) {
-            var service = statusNotifierSource.serviceForSource(DataEngineSource);
+            var service = plasmoid.nativeInterface.serviceForSource(model.DataEngineSource);
             var operation = service.operationDescription("Scroll");
             operation.delta =wheel.angleDelta.y;
             operation.direction = "Vertical";
             service.startOperationCall(operation);
         }
         if (wheel.angleDelta.x !== 0) {
-            var service = statusNotifierSource.serviceForSource(DataEngineSource);
+            var service = plasmoid.nativeInterface.serviceForSource(model.DataEngineSource);
             var operation = service.operationDescription("Scroll");
             operation.delta =wheel.angleDelta.x;
             operation.direction = "Horizontal";
