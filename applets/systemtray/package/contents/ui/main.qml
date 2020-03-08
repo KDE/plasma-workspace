@@ -48,7 +48,7 @@ MouseArea {
             // Set the tray items' clickable areas on the panel to be bigger than normal to allow for easier touchability
             return baseSize + units.smallSpacing;
         } else {
-            return baseSize;
+            return baseSize + Math.round(units.smallSpacing/2);
         }
     }
     property int hiddenItemSize: units.iconSizes.smallMedium
