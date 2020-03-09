@@ -299,16 +299,15 @@ bool Window::getAction(const QString &name, GMenuAction &action) const
     return actions->get(lookupName, action);
 }
 
-void Window::triggerAction(const QString &name, uint timestamp)
+void Window::triggerAction(const QString &name, const QVariant &target, uint timestamp)
 {
     QString lookupName;
     Actions *actions = getActionsForAction(name, lookupName);
-
     if (!actions) {
         return;
     }
 
-    actions->trigger(lookupName, timestamp);
+    actions->trigger(lookupName, target, timestamp);
 }
 
 Actions *Window::getActionsForAction(const QString &name, QString &lookupName) const
@@ -409,9 +408,11 @@ void Window::Event(int id, const QString &eventId, const QDBusVariant &data, uin
     // GMenu dbus doesn't have any "opened" or "closed" signals, we'll only handle "clicked"
 
     if (eventId == QLatin1String("clicked")) {
-        const QString action = m_currentMenu->getItem(id).value(QStringLiteral("action")).toString();
+        const QVariantMap item = m_currentMenu->getItem(id);
+        const QString action = item.value(QStringLiteral("action")).toString();
+        const QVariant target = item.value(QStringLiteral("target"));
         if (!action.isEmpty()) {
-            triggerAction(action, timestamp);
+            triggerAction(action, target, timestamp);
         }
     }
 
@@ -651,23 +652,20 @@ QVariantMap Window::gMenuToDBusMenuProperties(const QVariantMap &source) const
         result.insert(QStringLiteral("icon-name"), icon);
     }
 
+    const QVariant target = source.value(QStringLiteral("target"));
+
     if (actionOk) {
-        const auto args = action.state;
-        if (args.count() == 1) {
-            const auto &firstArg = args.first();
+        const auto actionStates = action.state;
+        if (actionStates.count() == 1) {
+            const auto &actionState = actionStates.first();
             // assume this is a checkbox
             if (!isMenu) {
-                if (firstArg.type() == QVariant::Bool) {
+                if (actionState.type() == QVariant::Bool) {
                     result.insert(QStringLiteral("toggle-type"), QStringLiteral("checkbox"));
-                    result.insert(QStringLiteral("toggle-state"), firstArg.toBool() ? 1 : 0);
-                } else if (firstArg.type() == QVariant::String) {
+                    result.insert(QStringLiteral("toggle-state"), actionState.toBool() ? 1 : 0);
+                } else if (actionState.type() == QVariant::String) {
                     result.insert(QStringLiteral("toggle-type"), QStringLiteral("radio"));
-                    const QString checkedAction = firstArg.toString();
-                    if (!checkedAction.isEmpty() && actionName.endsWith(checkedAction)) {
-                        result.insert(QStringLiteral("toggle-state"), 1);
-                    } else {
-                        result.insert(QStringLiteral("toggle-state"), 0);
-                    }
+                    result.insert(QStringLiteral("toggle-state"), actionState == target ? 1 : 0);
                 }
             }
         }

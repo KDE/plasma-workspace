@@ -63,6 +63,8 @@ ItemContainer::ItemContainer(QQuickItem *parent)
 
 ItemContainer::~ItemContainer()
 {
+    disconnect(this, &QQuickItem::parentChanged, this, nullptr);
+
     if (m_contentItem) {
         m_contentItem->setEnabled(true);
     }

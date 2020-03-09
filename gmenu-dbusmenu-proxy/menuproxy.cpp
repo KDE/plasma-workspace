@@ -288,7 +288,7 @@ void MenuProxy::onWindowAdded(WId id)
 
     // Only top level windows typically have a menu bar, dialogs, such as settings don't
     if (wType != NET::Normal) {
-        qCInfo(DBUSMENUPROXY) << "Ignoring window" << id << "of type" << wType;
+        qCDebug(DBUSMENUPROXY) << "Ignoring window" << id << "of type" << wType;
         return;
     }
 
