@@ -54,7 +54,14 @@ AbstractItem {
 
     onHeightChanged: {
         if (applet) {
-            applet.width = height
+            applet.width = Math.min(plasmoidContainer.width, plasmoidContainer.height)
+            applet.height = applet.width
+        }
+    }
+    onWidthChanged: {
+        if (applet) {
+            applet.width = Math.min(plasmoidContainer.width, plasmoidContainer.height)
+            applet.height = applet.width
         }
     }
 
@@ -71,11 +78,10 @@ AbstractItem {
         if (applet) {
             applet.parent = plasmoidContainer
             applet.anchors.left = plasmoidContainer.left
-            applet.anchors.top = plasmoidContainer.top
-            applet.anchors.bottom = plasmoidContainer.bottom
-            applet.width = plasmoidContainer.height
+            applet.anchors.verticalCenter = plasmoidContainer.verticalCenter
+            applet.width = Math.min(plasmoidContainer.width, plasmoidContainer.height)
+            applet.height = applet.width
             applet.visible = true
-            plasmoidContainer.visible = true
 
             preloadFullRepresentationItem(applet.fullRepresentationItem)
         }
