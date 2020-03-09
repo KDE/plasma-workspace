@@ -652,23 +652,20 @@ QVariantMap Window::gMenuToDBusMenuProperties(const QVariantMap &source) const
         result.insert(QStringLiteral("icon-name"), icon);
     }
 
+    const QVariant target = source.value(QStringLiteral("target"));
+
     if (actionOk) {
-        const auto args = action.state;
-        if (args.count() == 1) {
-            const auto &firstArg = args.first();
+        const auto actionStates = action.state;
+        if (actionStates.count() == 1) {
+            const auto &actionState = actionStates.first();
             // assume this is a checkbox
             if (!isMenu) {
-                if (firstArg.type() == QVariant::Bool) {
+                if (actionState.type() == QVariant::Bool) {
                     result.insert(QStringLiteral("toggle-type"), QStringLiteral("checkbox"));
-                    result.insert(QStringLiteral("toggle-state"), firstArg.toBool() ? 1 : 0);
-                } else if (firstArg.type() == QVariant::String) {
+                    result.insert(QStringLiteral("toggle-state"), actionState.toBool() ? 1 : 0);
+                } else if (actionState.type() == QVariant::String) {
                     result.insert(QStringLiteral("toggle-type"), QStringLiteral("radio"));
-                    const QString checkedAction = firstArg.toString();
-                    if (!checkedAction.isEmpty() && actionName.endsWith(checkedAction)) {
-                        result.insert(QStringLiteral("toggle-state"), 1);
-                    } else {
-                        result.insert(QStringLiteral("toggle-state"), 0);
-                    }
+                    result.insert(QStringLiteral("toggle-state"), actionState == target ? 1 : 0);
                 }
             }
         }
