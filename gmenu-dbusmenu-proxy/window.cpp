@@ -299,16 +299,15 @@ bool Window::getAction(const QString &name, GMenuAction &action) const
     return actions->get(lookupName, action);
 }
 
-void Window::triggerAction(const QString &name, uint timestamp)
+void Window::triggerAction(const QString &name, const QVariant &target, uint timestamp)
 {
     QString lookupName;
     Actions *actions = getActionsForAction(name, lookupName);
-
     if (!actions) {
         return;
     }
 
-    actions->trigger(lookupName, timestamp);
+    actions->trigger(lookupName, target, timestamp);
 }
 
 Actions *Window::getActionsForAction(const QString &name, QString &lookupName) const
@@ -409,9 +408,11 @@ void Window::Event(int id, const QString &eventId, const QDBusVariant &data, uin
     // GMenu dbus doesn't have any "opened" or "closed" signals, we'll only handle "clicked"
 
     if (eventId == QLatin1String("clicked")) {
-        const QString action = m_currentMenu->getItem(id).value(QStringLiteral("action")).toString();
+        const QVariantMap item = m_currentMenu->getItem(id);
+        const QString action = item.value(QStringLiteral("action")).toString();
+        const QVariant target = item.value(QStringLiteral("target"));
         if (!action.isEmpty()) {
-            triggerAction(action, timestamp);
+            triggerAction(action, target, timestamp);
         }
     }
 

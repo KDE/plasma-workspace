@@ -89,7 +89,7 @@ GMenuActionMap Actions::getAll() const
     return m_actions;
 }
 
-void Actions::trigger(const QString &name, uint timestamp)
+void Actions::trigger(const QString &name, const QVariant &target, uint timestamp)
 {
     if (!m_actions.contains(name)) {
         qCWarning(DBUSMENUPROXY) << "Cannot invoke action" << name << "which doesn't exist";
@@ -101,8 +101,12 @@ void Actions::trigger(const QString &name, uint timestamp)
                                                       s_orgGtkActions,
                                                       QStringLiteral("Activate"));
     msg << name;
-    // TODO use the arguments provided by "target" in the menu item
-    msg << QVariant::fromValue(QVariantList());
+
+    QVariantList args;
+    if (target.isValid()) {
+        args << target;
+    }
+    msg << QVariant::fromValue(args);
 
     QVariantMap platformData;
 

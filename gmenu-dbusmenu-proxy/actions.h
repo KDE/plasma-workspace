@@ -38,7 +38,7 @@ public:
 
     bool get(const QString &name, GMenuAction &action) const;
     GMenuActionMap getAll() const;
-    void trigger(const QString &name, uint timestamp = 0);
+    void trigger(const QString &name, const QVariant &target, uint timestamp = 0);
 
     bool isValid() const; // basically "has actions"
 
