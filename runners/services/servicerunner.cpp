@@ -349,7 +349,7 @@ private:
                 }
 
                 Plasma::QueryMatch match(m_runner);
-                match.setType(Plasma::QueryMatch::HelperMatch);
+                match.setType(Plasma::QueryMatch::PossibleMatch);
                 if (!action.icon().isEmpty()) {
                     match.setIconName(action.icon());
                 } else {
@@ -357,7 +357,7 @@ private:
                 }
                 match.setText(i18nc("Jump list search result, %1 is action (eg. open new tab), %2 is application (eg. browser)",
                                     "%1 - %2", action.text(), service->name()));
-                match.setData(action.exec());
+                match.setData(QStringLiteral("exec::") + action.exec());
 
                 qreal relevance = 0.5;
                 if (matchIndex == 0) {
@@ -426,12 +426,16 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
 void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     Q_UNUSED(context);
-    if (match.type() == Plasma::QueryMatch::HelperMatch) { // Jump List Action
-         KRun::run(match.data().toString(), {}, nullptr);
+
+    const QString dataString = match.data().toString();
+
+    const QString execPrefix = QStringLiteral("exec::");
+    if (dataString.startsWith(execPrefix)) {
+         KRun::run(dataString.mid(execPrefix.length()), {}, nullptr);
          return;
     }
 
-    KService::Ptr service = KService::serviceByStorageId(match.data().toString());
+    KService::Ptr service = KService::serviceByStorageId(dataString);
     if (service) {
         KActivities::ResourceInstance::notifyAccessed(
             QUrl(QStringLiteral("applications:") + service->storageId()),
