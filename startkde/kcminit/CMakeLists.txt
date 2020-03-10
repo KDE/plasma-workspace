@@ -36,8 +36,8 @@ configure_file(kcminit.service.cmake ${CMAKE_CURRENT_BINARY_DIR}/kcminit.service
 install( FILES  ${CMAKE_CURRENT_BINARY_DIR}/kcminit.service DESTINATION
         ${SYSTEMD_USER_UNIT_INSTALL_DIR})
 
-configure_file(kcminit@phase1.service.cmake ${CMAKE_CURRENT_BINARY_DIR}/kcminit@phase1.service @ONLY)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kcminit@phase1.service DESTINATION
+configure_file(kcminit-phase1.service.cmake ${CMAKE_CURRENT_BINARY_DIR}/kcminit-phase1.service @ONLY)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kcminit-phase1.service DESTINATION
         ${SYSTEMD_USER_UNIT_INSTALL_DIR})
 
 target_link_libraries(kdeinit_kcminit_startup Qt5::Core Qt5::Gui Qt5::DBus KF5::CoreAddons KF5::Service KF5::I18n PW::KWorkspace)
