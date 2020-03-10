@@ -26,6 +26,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kirigami 2.11 as Kirigami
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 import org.kde.taskmanager 0.1 as TaskManager
@@ -90,6 +91,11 @@ QtObject {
     property var plasmoids: []
 
     property int popupLocation: {
+        // if we are on mobile, we can ignore the settings totally and just
+        // align it to top left
+        if (Kirigami.Settings.isMobile) {
+            return Qt.AlignTop | Qt.AlignHCenter;
+        }
         switch (notificationSettings.popupPosition) {
         // Auto-determine location based on plasmoid location
         case NotificationManager.Settings.CloseToWidget:
