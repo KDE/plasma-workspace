@@ -109,23 +109,29 @@ ColumnLayout {
     signal resumeJobClicked
     signal killJobClicked
 
-    spacing: units.smallSpacing
+    spacing: 0
 
-    NotificationHeader {
-        id: notificationHeading
-        Layout.fillWidth: true
+    PlasmaExtras.PlasmoidHeading {
+        bottomInset: 0
+        bottomPadding: 0
         Layout.leftMargin: notificationItem.headingLeftPadding
         Layout.rightMargin: notificationItem.headingRightPadding
+        background.visible: !notificationItem.inGroup
 
-        inGroup: notificationItem.inGroup
+        NotificationHeader {
+            id: notificationHeading
+            anchors.fill: parent
 
-        notificationType: notificationItem.notificationType
-        jobState: notificationItem.jobState
-        jobDetails: notificationItem.jobDetails
+            inGroup: notificationItem.inGroup
 
-        onConfigureClicked: notificationItem.configureClicked()
-        onDismissClicked: notificationItem.dismissClicked()
-        onCloseClicked: notificationItem.closeClicked()
+            notificationType: notificationItem.notificationType
+            jobState: notificationItem.jobState
+            jobDetails: notificationItem.jobDetails
+
+            onConfigureClicked: notificationItem.configureClicked()
+            onDismissClicked: notificationItem.dismissClicked()
+            onCloseClicked: notificationItem.closeClicked()
+        }
     }
 
     RowLayout {
@@ -222,6 +228,8 @@ ColumnLayout {
 
             Layout.preferredWidth: units.iconSizes.large
             Layout.preferredHeight: units.iconSizes.large
+            Layout.topMargin: units.smallSpacing
+            Layout.bottomMargin: units.smallSpacing
 
             visible: iconItem.active || imageItem.active
 
