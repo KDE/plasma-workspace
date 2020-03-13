@@ -40,72 +40,76 @@ ColumnLayout {
     property alias activeApplet: container.activeApplet
     property alias hiddenLayout: hiddenItemsView.layout
 
-    RowLayout {
+    PlasmaExtras.PlasmoidHeading {
 
-        PlasmaExtras.Heading {
-            id: heading
-            Layout.fillWidth: true
-            level: 1
-            Layout.leftMargin: {
-                //Menu mode
-                if (!activeApplet && hiddenItemsView.visible && !LayoutMirroring.enabled) {
-                    return units.smallSpacing;
+        RowLayout {
+            anchors.fill: parent
 
-                //applet open, sidebar
-                } else if (activeApplet && hiddenItemsView.visible && !LayoutMirroring.enabled) {
-                    return hiddenItemsView.width + units.largeSpacing;
+            PlasmaExtras.Heading {
+                id: heading
+                Layout.fillWidth: true
+                level: 1
+                Layout.leftMargin: {
+                    //Menu mode
+                    if (!activeApplet && hiddenItemsView.visible && !LayoutMirroring.enabled) {
+                        return units.smallSpacing;
 
-                //applet open, no sidebar
-                } else {
-                    return units.smallSpacing;
+                    //applet open, sidebar
+                    } else if (activeApplet && hiddenItemsView.visible && !LayoutMirroring.enabled) {
+                        return hiddenItemsView.width + units.largeSpacing;
+
+                    //applet open, no sidebar
+                    } else {
+                        return units.smallSpacing;
+                    }
                 }
-            }
-            Layout.rightMargin: {
-                //Menu mode
-                if (!activeApplet && hiddenItemsView.visible && LayoutMirroring.enabled) {
-                    return units.smallSpacing;
+                Layout.rightMargin: {
+                    //Menu mode
+                    if (!activeApplet && hiddenItemsView.visible && LayoutMirroring.enabled) {
+                        return units.smallSpacing;
 
-                //applet open, sidebar
-                } else if (activeApplet && hiddenItemsView.visible && LayoutMirroring.enabled) {
-                    return hiddenItemsView.width + units.largeSpacing;
+                    //applet open, sidebar
+                    } else if (activeApplet && hiddenItemsView.visible && LayoutMirroring.enabled) {
+                        return hiddenItemsView.width + units.largeSpacing;
 
-                //applet open, no sidebar
-                } else {
-                    return 0;
+                    //applet open, no sidebar
+                    } else {
+                        return 0;
+                    }
                 }
-            }
 
-            visible: activeApplet
-            text: activeApplet ? activeApplet.title : ""
-            MouseArea {
-                anchors.fill: parent
-                onClicked: {
-                    if (activeApplet) {
-                        activeApplet.expanded = false;
-                        dialog.visible = true;
+                visible: activeApplet
+                text: activeApplet ? activeApplet.title : ""
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        if (activeApplet) {
+                            activeApplet.expanded = false;
+                            dialog.visible = true;
+                        }
                     }
                 }
             }
-        }
 
-        PlasmaExtras.Heading {
-            id: noAppletHeading
-            visible: !activeApplet
-            Layout.fillWidth: true
-            level: 1
-            text: i18n("Status and Notifications")
-        }
+            PlasmaExtras.Heading {
+                id: noAppletHeading
+                visible: !activeApplet
+                Layout.fillWidth: true
+                level: 1
+                text: i18n("Status and Notifications")
+            }
 
-        PlasmaComponents.ToolButton {
-            id: pinButton
-            implicitHeight: Math.round(units.gridUnit * 1.25)
-            implicitWidth: implicitHeight
-            checkable: true
-            checked: plasmoid.configuration.pin
-            onToggled: plasmoid.configuration.pin = checked
-            icon.name: "window-pin"
-            PlasmaComponents.ToolTip {
-                text: i18n("Keep Open")
+            PlasmaComponents.ToolButton {
+                id: pinButton
+                implicitHeight: Math.round(units.gridUnit * 1.25)
+                implicitWidth: implicitHeight
+                checkable: true
+                checked: plasmoid.configuration.pin
+                onToggled: plasmoid.configuration.pin = checked
+                icon.name: "window-pin"
+                PlasmaComponents.ToolTip {
+                    text: i18n("Keep Open")
+                }
             }
         }
     }
