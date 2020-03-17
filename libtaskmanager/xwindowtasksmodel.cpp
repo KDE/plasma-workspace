@@ -81,6 +81,8 @@ public:
 
     KWindowInfo* windowInfo(WId window);
     AppData appData(WId window);
+    QString appMenuServiceName(WId window);
+    QString appMenuObjectPath(WId window);
 
     QIcon icon(WId window);
     static QString mimeType();
@@ -465,6 +467,18 @@ AppData XWindowTasksModel::Private::appData(WId window)
     return data;
 }
 
+QString XWindowTasksModel::Private::appMenuServiceName(WId window)
+{
+    const KWindowInfo *info = windowInfo(window);
+    return QString::fromUtf8(info->applicationMenuServiceName());
+}
+
+QString XWindowTasksModel::Private::appMenuObjectPath(WId window)
+{
+    const KWindowInfo *info = windowInfo(window);
+    return QString::fromUtf8(info->applicationMenuServiceName());
+}
+
 QIcon XWindowTasksModel::Private::icon(WId window)
 {
     const AppData &app = appData(window);
@@ -690,6 +704,10 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         if (d->lastActivated.contains(window)) {
             return d->lastActivated.value(window);
         }
+    } else if (role == ApplicationMenuObjectPath) {
+        return d->appMenuObjectPath(window);
+    } else if (role == ApplicationMenuServiceName) {
+        return d->appMenuServiceName(window);
     }
 
     return QVariant();

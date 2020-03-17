@@ -96,6 +96,10 @@ public:
                                model contents due to the asynchronous nature of the windowing
                                system. */
         LastActivated,    /**< The timestamp of the last time a task was the active task. */
+        ApplicationMenuServiceName, /**< The DBus service name for the application's menu.
+                                         May be empty. @since 5.19 */
+        ApplicationMenuObjectPath,/**< The DBus object path for the application's menu.
+                                       May be empty. @since 5.19 */
     };
     Q_ENUM(AdditionalRoles)
 
