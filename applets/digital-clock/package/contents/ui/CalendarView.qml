@@ -67,7 +67,7 @@ Item {
         ColumnLayout {
             id: leftColumnLayout
 
-            Layout.minimumWidth: units.gridUnit * 18
+            Layout.minimumWidth: units.gridUnit * 19
 
             function dateString(format) {
                 return Qt.formatDate(monthView.currentDate, format);
@@ -120,7 +120,7 @@ Item {
             Item {
                 id: monthViewContainer
                 Layout.fillWidth: true
-                Layout.minimumHeight: units.gridUnit * 12
+                Layout.minimumHeight: units.gridUnit * 19
 
                 PlasmaCalendar.MonthView {
                     id: monthView
