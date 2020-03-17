@@ -139,8 +139,12 @@ ColumnLayout {
             visible: activeApplet
             Layout.fillWidth: true
             Layout.fillHeight: true
-            Layout.leftMargin: hiddenItemsView.visible && activeApplet && !LayoutMirroring.enabled ? units.largeSpacing : 0
-            Layout.rightMargin: hiddenItemsView.visible && activeApplet && LayoutMirroring.enabled ? units.largeSpacing : 0
+            // We need to add our own margins on the top and left (when the
+            // hidden items view is visible, at least) so it matches the
+            //  dialog's own margins and content is centered correctly
+            Layout.topMargin: dialog.margins.top
+            Layout.leftMargin: hiddenItemsView.visible && activeApplet && !LayoutMirroring.enabled ? dialog.margins.left : 0
+            Layout.rightMargin: hiddenItemsView.visible && activeApplet && LayoutMirroring.enabled ? dialog.margins.right : 0
         }
     }
 }
