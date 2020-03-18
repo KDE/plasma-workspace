@@ -187,25 +187,22 @@ void CalculatorRunner::hexSubstitutions(QString& cmd)
 
 void CalculatorRunner::userFriendlySubstitutions(QString& cmd)
 {
-    if (cmd.contains(QLocale().decimalPoint(), Qt::CaseInsensitive)) {
-         cmd.replace(QLocale().decimalPoint(), QLatin1Char('.'), Qt::CaseInsensitive);
-    }
+    cmd.replace(QLocale().decimalPoint(), QLatin1Char('.'), Qt::CaseInsensitive);
 
     // the following substitutions are not needed with libqalculate
-    #ifndef ENABLE_QALCULATE
+#ifndef ENABLE_QALCULATE
     hexSubstitutions(cmd);
     powSubstitutions(cmd);
 
-    if (cmd.contains(QRegularExpression(QStringLiteral("\\d+and\\d+")))) {
-         cmd.replace(QRegularExpression(QStringLiteral("(\\d+)and(\\d+)")), QStringLiteral("\\1&\\2"));
-    }
-    if (cmd.contains(QRegularExpression(QStringLiteral("\\d+or\\d+")))) {
-         cmd.replace(QRegularExpression(QStringLiteral("(\\d+)or(\\d+)")), QStringLiteral("\\1|\\2"));
-    }
-    if (cmd.contains(QRegularExpression(QStringLiteral("\\d+xor\\d+")))) {
-         cmd.replace(QRegularExpression(QStringLiteral("(\\d+)xor(\\d+)")), QStringLiteral("\\1^\\2"));
-    }
-    #endif
+    QRegularExpression re(QStringLiteral("(\\d+)and(\\d+)"));
+    cmd.replace(re, QStringLiteral("\\1&\\2"));
+
+    re.setPattern(QStringLiteral("(\\d+)or(\\d+)"));
+    cmd.replace(re, QStringLiteral("\\1|\\2"));
+
+    re.setPattern(QStringLiteral("(\\d+)xor(\\d+)"));
+    cmd.replace(re, QStringLiteral("\\1^\\2"));
+#endif
 }
 
 
