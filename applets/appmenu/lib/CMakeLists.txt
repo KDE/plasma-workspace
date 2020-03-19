@@ -11,6 +11,7 @@ target_link_libraries(plasma_applet_appmenu
                       Qt5::Quick
                       Qt5::DBus
                       KF5::Plasma
-                      KF5::WindowSystem)
+                      KF5::WindowSystem
+                      PW::LibTaskManager)
 
 install(TARGETS plasma_applet_appmenu DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)

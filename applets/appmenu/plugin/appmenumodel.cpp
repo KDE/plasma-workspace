@@ -23,13 +23,6 @@
 
 #include "appmenumodel.h"
 
-#include <config-X11.h>
-
-#if HAVE_X11
-#include <QX11Info>
-#include <xcb/xcb.h>
-#endif
-
 #include <QAction>
 #include <QMenu>
 #include <QDBusConnection>
@@ -38,13 +31,7 @@
 #include <QGuiApplication>
 
 #include <dbusmenuimporter.h>
-
-static const QByteArray s_x11AppMenuServiceNamePropertyName = QByteArrayLiteral("_KDE_NET_WM_APPMENU_SERVICE_NAME");
-static const QByteArray s_x11AppMenuObjectPathPropertyName = QByteArrayLiteral("_KDE_NET_WM_APPMENU_OBJECT_PATH");
-
-#if HAVE_X11
-static QHash<QByteArray, xcb_atom_t> s_atoms;
-#endif
+#include <abstracttasksmodel.h>
 
 class KDBusMenuImporter : public DBusMenuImporter
 {
@@ -66,13 +53,12 @@ protected:
 
 AppMenuModel::AppMenuModel(QObject *parent)
             : QAbstractListModel(parent),
-              m_serviceWatcher(new QDBusServiceWatcher(this))
+              m_serviceWatcher(new QDBusServiceWatcher(this)),
+              m_tasksModel(new TaskManager::TasksModel(this))
 {
-    connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, this, &AppMenuModel::onActiveWindowChanged);
-    connect(KWindowSystem::self()
-            , static_cast<void (KWindowSystem::*)(WId)>(&KWindowSystem::windowChanged)
-            , this
-            , &AppMenuModel::onWindowChanged);
+    m_tasksModel->setFilterByScreen(true);
+    connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, this, &AppMenuModel::onActiveWindowChanged);
+    connect(m_tasksModel, &TaskManager::TasksModel::screenGeometryChanged, this, &AppMenuModel::screenGeometryChanged);
 
     connect(this, &AppMenuModel::modelNeedsUpdate, this, [this] {
         if (!m_updatePending) {
@@ -81,11 +67,7 @@ AppMenuModel::AppMenuModel(QObject *parent)
         }
     });
 
-    connect(this, &AppMenuModel::screenGeometryChanged, this, [this] {
-        onWindowChanged(m_currentWindowId);
-    });
-
-    onActiveWindowChanged(KWindowSystem::activeWindow());
+    onActiveWindowChanged();
 
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
     //if our current DBus connection gets lost, close the menu
@@ -130,17 +112,12 @@ void AppMenuModel::setVisible(bool visible)
 
 QRect AppMenuModel::screenGeometry() const
 {
-    return m_screenGeometry;
+    return m_tasksModel->screenGeometry();
 }
 
 void AppMenuModel::setScreenGeometry(QRect geometry)
 {
-    if (m_screenGeometry == geometry) {
-        return;
-    }
-
-    m_screenGeometry = geometry;
-    emit screenGeometryChanged();
+    m_tasksModel->setScreenGeometry(geometry);
 }
 
 int AppMenuModel::rowCount(const QModelIndex &parent) const
@@ -160,119 +137,20 @@ void AppMenuModel::update()
     m_updatePending = false;
 }
 
-
-void AppMenuModel::onActiveWindowChanged(WId id)
+void AppMenuModel::onActiveWindowChanged()
 {
-    qApp->removeNativeEventFilter(this);
+    const QModelIndex activeTaskIndex = m_tasksModel->activeTask();
+    const QString objectPath = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::ApplicationMenuObjectPath).toString();
+    const QString serviceName = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::ApplicationMenuServiceName).toString();
 
-    if (!id) {
-        setMenuAvailable(false);
+    if (!objectPath.isEmpty() && !serviceName.isEmpty()) {
+        setMenuAvailable(true);
+        updateApplicationMenu(serviceName, objectPath);
+        setVisible(true);
         emit modelNeedsUpdate();
-        return;
-    }
-
-#if HAVE_X11
-    if (KWindowSystem::isPlatformX11()) {
-        auto *c = QX11Info::connection();
-
-        auto getWindowPropertyString = [c](WId id, const QByteArray &name) -> QByteArray {
-            QByteArray value;
-            if (!s_atoms.contains(name)) {
-                const xcb_intern_atom_cookie_t atomCookie = xcb_intern_atom(c, false, name.length(), name.constData());
-                QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> atomReply(xcb_intern_atom_reply(c, atomCookie, nullptr));
-                if (atomReply.isNull()) {
-                    return value;
-                }
-
-                s_atoms[name] = atomReply->atom;
-                if (s_atoms[name] == XCB_ATOM_NONE) {
-                     return value;
-                }
-            }
-
-            static const long MAX_PROP_SIZE = 10000;
-            auto propertyCookie = xcb_get_property(c, false, id, s_atoms[name], XCB_ATOM_STRING, 0, MAX_PROP_SIZE);
-            QScopedPointer<xcb_get_property_reply_t, QScopedPointerPodDeleter> propertyReply(xcb_get_property_reply(c, propertyCookie, nullptr));
-            if (propertyReply.isNull()) {
-                return value;
-            }
-
-            if (propertyReply->type == XCB_ATOM_STRING && propertyReply->format == 8 && propertyReply->value_len > 0) {
-                const char *data = (const char *) xcb_get_property_value(propertyReply.data());
-                int len = propertyReply->value_len;
-                if (data) {
-                    value = QByteArray(data, data[len - 1] ? len : len - 1);
-                }
-            }
-
-            return value;
-        };
-
-        auto updateMenuFromWindowIfHasMenu = [this, &getWindowPropertyString](WId id) {
-            const QString serviceName = QString::fromUtf8(getWindowPropertyString(id, s_x11AppMenuServiceNamePropertyName));
-            const QString menuObjectPath = QString::fromUtf8(getWindowPropertyString(id, s_x11AppMenuObjectPathPropertyName));
-
-            if (!serviceName.isEmpty() && !menuObjectPath.isEmpty()) {
-                updateApplicationMenu(serviceName, menuObjectPath);
-                return true;
-            }
-            return false;
-        };
-
-        KWindowInfo info(id, NET::WMState | NET::WMWindowType, NET::WM2TransientFor);
-        if (info.hasState(NET::SkipTaskbar) ||
-                info.windowType(NET::UtilityMask) == NET::Utility ||
-                info.windowType(NET::DesktopMask) == NET::Desktop) {
-            return;
-        }
-
-        m_currentWindowId = id;
-
-        WId transientId = info.transientFor();
-        // lok at transient windows first
-        while (transientId) {
-            if (updateMenuFromWindowIfHasMenu(transientId)) {
-                setVisible(true);
-                return;
-            }
-            transientId = KWindowInfo(transientId, nullptr, NET::WM2TransientFor).transientFor();
-        }
-
-        if (updateMenuFromWindowIfHasMenu(id)) {
-            setVisible(true);
-            return;
-        }
-
-        // monitor whether an app menu becomes available later
-        // this can happen when an app starts, shows its window, and only later announces global menu (e.g. Firefox)
-        qApp->installNativeEventFilter(this);
-        m_delayedMenuWindowId = id;
-
-        //no menu found, set it to unavailable
+    } else {
         setMenuAvailable(false);
-        emit modelNeedsUpdate();
-    }
-#endif
-
-}
-
-void AppMenuModel::onWindowChanged(WId id)
-{
-    if (m_currentWindowId == id) {
-        KWindowInfo info(id, NET::WMState | NET::WMGeometry);
-
-        //! HACK: if the user has enabled screen scaling under X11 environment
-        //! then the window and screen geometries can not be trusted for comparison
-        //! before windows coordinates be adjusted properly.
-        //! BUG: 404500
-        QPoint windowCenter = info.geometry().center();
-        if (KWindowSystem::isPlatformX11()) {
-            windowCenter /= qApp->devicePixelRatio();
-        }
-
-        const bool contained = m_screenGeometry.isNull() || m_screenGeometry.contains(windowCenter);
-
-        setVisible(contained && !info.isMinimized());
+        setVisible(false);
     }
 }
 
@@ -369,37 +247,3 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
         }
     });
 }
-
-bool AppMenuModel::nativeEventFilter(const QByteArray &eventType, void *message, long *result)
-{
-    Q_UNUSED(result);
-
-    if (!KWindowSystem::isPlatformX11() || eventType != "xcb_generic_event_t") {
-        return false;
-    }
-
-#if HAVE_X11
-    auto e = static_cast<xcb_generic_event_t *>(message);
-    const uint8_t type = e->response_type & ~0x80;
-    if (type == XCB_PROPERTY_NOTIFY) {
-        auto *event = reinterpret_cast<xcb_property_notify_event_t *>(e);
-        if (event->window == m_delayedMenuWindowId) {
-
-            auto serviceNameAtom = s_atoms.value(s_x11AppMenuServiceNamePropertyName);
-            auto objectPathAtom = s_atoms.value(s_x11AppMenuObjectPathPropertyName);
-
-            if (serviceNameAtom != XCB_ATOM_NONE && objectPathAtom != XCB_ATOM_NONE) { // shouldn't happen
-                if (event->atom == serviceNameAtom || event->atom == objectPathAtom) {
-                    // see if we now have a menu
-                    onActiveWindowChanged(KWindowSystem::activeWindow());
-                }
-            }
-        }
-    }
-#else
-    Q_UNUSED(message);
-#endif
-
-    return false;
-}
-

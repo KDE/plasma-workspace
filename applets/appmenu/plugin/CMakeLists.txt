@@ -10,11 +10,8 @@ target_link_libraries(appmenuplugin
                       Qt5::Quick
                       KF5::Plasma
                       KF5::WindowSystem
+                      PW::LibTaskManager
                       dbusmenuqt)
-
-if(HAVE_X11)
-    target_link_libraries(appmenuplugin Qt5::X11Extras XCB::XCB)
-endif()
 
 install(TARGETS appmenuplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/appmenu)
 

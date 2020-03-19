@@ -23,18 +23,18 @@
 #define APPMENUMODEL_H
 
 #include <QAbstractListModel>
-#include <QAbstractNativeEventFilter>
 #include <QStringList>
 #include <KWindowSystem>
 #include <QPointer>
 #include <QRect>
+#include <tasksmodel.h>
 
 class QMenu;
 class QModelIndex;
 class QDBusServiceWatcher;
 class KDBusMenuImporter;
 
-class AppMenuModel : public QAbstractListModel, public QAbstractNativeEventFilter
+class AppMenuModel : public QAbstractListModel
 {
     Q_OBJECT
 
@@ -69,12 +69,8 @@ public:
 signals:
     void requestActivateIndex(int index);
 
-protected:
-    bool nativeEventFilter(const QByteArray &eventType, void *message, long int *result) override;
-
 private Q_SLOTS:
-    void onActiveWindowChanged(WId id);
-    void onWindowChanged(WId id);
+    void onActiveWindowChanged();
     void setVisible(bool visible);
     void update();
 
@@ -89,7 +85,7 @@ private:
     bool m_updatePending = false;
     bool m_visible = true;
 
-    QRect m_screenGeometry;
+    TaskManager::TasksModel* m_tasksModel;
 
     //! current active window used
     WId m_currentWindowId = 0;
