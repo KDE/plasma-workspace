@@ -465,7 +465,3 @@ QMimeData * ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
     data->setUrls(QList<QUrl>{QUrl::fromLocalFile(path)});
     return data;
 }
-
-K_EXPORT_PLASMA_RUNNER(services, ServiceRunner)
-
-#include "servicerunner.moc"
