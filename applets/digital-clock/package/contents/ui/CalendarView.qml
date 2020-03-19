@@ -431,6 +431,12 @@ Item {
                         id: listItem
                         readonly property bool isCurrentTimeZone: modelData === plasmoid.configuration.lastSelectedTimezone
 
+                        MouseArea {
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
+                            onClicked: plasmoid.configuration.lastSelectedTimezone = modelData
+                        }
+
                         ColumnLayout {
 
                             width: clocksList.width
