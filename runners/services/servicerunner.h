@@ -41,7 +41,7 @@ class ServiceRunner : public Plasma::AbstractRunner
         ~ServiceRunner() override;
 
         void match(Plasma::RunnerContext &context) override;
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
         QStringList categories() const override;
         QIcon categoryIcon(const QString& category) const override;
 
