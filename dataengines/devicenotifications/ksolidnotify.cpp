@@ -38,6 +38,7 @@
 #include <QStringList>
 #include <QProcess>
 #include <QRegularExpression>
+#include <QStringRef>
 
 KSolidNotify::KSolidNotify(QObject *parent):
     QObject(parent)
