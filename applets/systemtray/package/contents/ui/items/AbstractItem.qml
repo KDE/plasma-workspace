@@ -28,11 +28,13 @@ PlasmaCore.ToolTipArea {
     height: inVisibleLayout ? visibleLayout.cellHeight : hiddenLayout.iconItemHeight
     width: inVisibleLayout ? visibleLayout.cellWidth : hiddenLayout.width
 
+    property var model: itemModel
+
     property string itemId
     property alias text: label.text
     property Item iconItem
-    property int /*PlasmaCore.Types.ItemStatus*/ status
-    property int /*PlasmaCore.Types.ItemStatus*/ effectiveStatus
+    property int /*PlasmaCore.Types.ItemStatus*/ status: model.status || PlasmaCore.Types.UnknownStatus
+    property int /*PlasmaCore.Types.ItemStatus*/ effectiveStatus: model.effectiveStatus || PlasmaCore.Types.UnknownStatus
     readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
     readonly property bool inVisibleLayout: effectiveStatus === PlasmaCore.Types.ActiveStatus
 

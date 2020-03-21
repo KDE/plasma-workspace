@@ -23,7 +23,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 AbstractItem {
     id: plasmoidContainer
 
-    property Item applet
+    property Item applet: model.applet || null
     iconItem: applet
     text: applet ? applet.title : ""
 
@@ -33,7 +33,6 @@ AbstractItem {
     icon: applet ? applet.icon : ""
     mainItem: applet && applet.toolTipItem ? applet.toolTipItem : null
     textFormat: applet ? applet.toolTipTextFormat : ""
-    status: applet ? applet.status : PlasmaCore.Types.UnknownStatus
     active: root.activeApplet !== applet
 
     onClicked: {

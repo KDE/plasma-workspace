@@ -22,17 +22,13 @@ import QtQuick 2.0
 Loader {
     id: itemLoader
 
-    Component.onCompleted: {
+    property var itemModel: model
+
+    source: {
         if (model.itemType === "Plasmoid" && model.hasApplet) {
-            itemLoader.setSource("PlasmoidItem.qml", {
-                                     "applet": model.applet,
-                                     "effectiveStatus": model.effectiveStatus
-                                 })
+            return "PlasmoidItem.qml"
         } else if (model.itemType === "StatusNotifier") {
-            itemLoader.setSource("StatusNotifierItem.qml", {
-                                     "model": model,
-                                     "effectiveStatus": model.effectiveStatus
-                                 })
+            return "StatusNotifierItem.qml"
         }
     }
 }
