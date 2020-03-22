@@ -19,7 +19,7 @@
 #ifndef SHELLRUNNER_H
 #define SHELLRUNNER_H
 
-#include <krunner/abstractrunner.h>
+#include <KRunner/AbstractRunner>
 
 /**
  * This class runs programs using the literal name of the binary, much as one
@@ -39,6 +39,8 @@ class ShellRunner : public Plasma::AbstractRunner
 
     private:
         bool m_enabled;
+        QList<QAction *> m_actionList;
+        QIcon m_matchIcon;
 };
 
 

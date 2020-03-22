@@ -20,34 +20,27 @@
 #include "shellrunner.h"
 
 #include <KAuthorized>
-#include <QDebug>
 #include <KLocalizedString>
 #include <KRun>
-#include <KShell>
-#include <QStandardPaths>
 #include <KToolInvocation>
 
-#include <Plasma/Theme>
-
-#include "shell_config.h"
-
 K_EXPORT_PLASMA_RUNNER(shell, ShellRunner)
-
-static QString s_runInTerminalId = QStringLiteral("runInTerminal");
 
 ShellRunner::ShellRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
 {
-    setObjectName( QLatin1String("Command" ));
+    setObjectName(QStringLiteral("Command"));
     setPriority(AbstractRunner::HighestPriority);
-    setHasRunOptions(true);
     m_enabled = KAuthorized::authorize(QStringLiteral("run_command")) && KAuthorized::authorize(QStringLiteral("shell_access"));
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File |
                     Plasma::RunnerContext::NetworkLocation | Plasma::RunnerContext::UnknownType |
                     Plasma::RunnerContext::Help);
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds commands that match :q:, using common shell syntax")));
-    addAction(s_runInTerminalId, QIcon::fromTheme(QStringLiteral("utilities-terminal")), i18n("Run in Terminal Window"));
+    m_actionList = {addAction(QStringLiteral("runInTerminal"),
+                            QIcon::fromTheme(QStringLiteral("utilities-terminal")),
+                            i18n("Run in Terminal Window"))};
+    m_matchIcon = QIcon::fromTheme(QStringLiteral("system-run"));
 }
 
 ShellRunner::~ShellRunner()
@@ -56,33 +49,26 @@ ShellRunner::~ShellRunner()
 
 void ShellRunner::match(Plasma::RunnerContext &context)
 {
-    if (!m_enabled) {
+    if (!context.isValid() || !m_enabled) {
         return;
     }
 
-    if (context.type() == Plasma::RunnerContext::Executable ||
-        context.type() == Plasma::RunnerContext::ShellCommand)  {
-        const QString term = context.query();
-        Plasma::QueryMatch match(this);
-        match.setId(term);
-        match.setType(Plasma::QueryMatch::ExactMatch);
-        match.setIconName(QStringLiteral("system-run"));
-        match.setText(i18n("Run %1", term));
-        match.setRelevance(0.7);
-        context.addMatch(match);
-    }
+    const QString term = context.query();
+    Plasma::QueryMatch match(this);
+    match.setId(term);
+    match.setType(Plasma::QueryMatch::ExactMatch);
+    match.setIcon(m_matchIcon);
+    match.setText(i18n("Run %1", term));
+    match.setRelevance(0.7);
+    context.addMatch(match);
 }
 
 void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
-    Q_UNUSED(match);
-
-    if (m_enabled) {
-        if (match.selectedAction() && match.selectedAction() == action(s_runInTerminalId)) {
-            KToolInvocation::invokeTerminal(context.query());
-        } else {
-            KRun::runCommand(context.query(), nullptr);
-        }
+    if (match.selectedAction()) {
+        KToolInvocation::invokeTerminal(context.query());
+    } else {
+        KRun::runCommand(context.query(), nullptr);
     }
 }
 
@@ -90,7 +76,7 @@ QList<QAction *> ShellRunner::actionsForMatch(const Plasma::QueryMatch &match)
 {
     Q_UNUSED(match)
 
-    return {action(s_runInTerminalId)};
+    return m_actionList;
 }
 
 #include "shellrunner.moc"
