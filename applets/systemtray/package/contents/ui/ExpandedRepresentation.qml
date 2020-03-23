@@ -101,8 +101,6 @@ ColumnLayout {
 
             PlasmaComponents.ToolButton {
                 id: pinButton
-                implicitHeight: Math.round(units.gridUnit * 1.25)
-                implicitWidth: implicitHeight
                 checkable: true
                 checked: plasmoid.configuration.pin
                 onToggled: plasmoid.configuration.pin = checked

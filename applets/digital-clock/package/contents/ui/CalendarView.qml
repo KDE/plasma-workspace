@@ -20,6 +20,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
@@ -469,14 +470,14 @@ Item {
 
 
     // Allows the user to keep the calendar open for reference
-    PlasmaComponents.ToolButton {
+    PlasmaComponents3.ToolButton {
         anchors.right: parent.right
-        width: Math.round(units.gridUnit * 1.25)
-        height: width
         checkable: true
-        iconSource: "window-pin"
         checked: plasmoid.configuration.pin
-        onCheckedChanged: plasmoid.configuration.pin = checked
-        tooltip: i18n("Keep Open")
+        onToggled: plasmoid.configuration.pin = checked
+        icon.name: "window-pin"
+        PlasmaComponents3.ToolTip {
+            text: i18n("Keep Open")
+        }
     }
 }
