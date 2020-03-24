@@ -19,26 +19,21 @@
 #ifndef WEBSHORTCUTRUNNER_H
 #define WEBSHORTCUTRUNNER_H
 
-#include <QIcon>
-
 #include <KRunner/AbstractRunner>
 
-class WebshortcutRunner : public Plasma::AbstractRunner {
+class WebshortcutRunner : public Plasma::AbstractRunner 
+{
     Q_OBJECT
 
     public:
-        WebshortcutRunner( QObject *parent, const QVariantList& args );
+        WebshortcutRunner(QObject *parent, const QVariantList& args);
         ~WebshortcutRunner() override;
 
         void match(Plasma::RunnerContext &context) override;
         void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
 
-    private:
-        void loadSyntaxes();
-
     private Q_SLOTS:
-        void readFiltersConfig();
-        void resetState();
+        void loadSyntaxes();
 
     private:
         Plasma::QueryMatch m_match;
