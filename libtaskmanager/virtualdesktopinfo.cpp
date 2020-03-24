@@ -107,7 +107,10 @@ void VirtualDesktopInfo::XWindowPrivate::init()
         this, &VirtualDesktopInfo::XWindowPrivate::desktopNamesChanged);
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.connect(QString(), QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"),
+    dbus.connect(QString(),
+                 QStringLiteral("/VirtualDesktopManager"),
+                 QStringLiteral("org.kde.KWin.VirtualDesktopManager"),
+                 QStringLiteral("rowsChanged"),
         this, SIGNAL(desktopLayoutRowsChanged()));
 }
 
