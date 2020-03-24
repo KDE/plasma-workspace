@@ -44,7 +44,7 @@ Item {
     opacity: activeFocus || containsMouse ? 1 : 0.85
         Behavior on opacity {
             PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
-                duration: units.longDuration * 2
+                duration: units.longDuration
                 easing.type: Easing.InOutQuad
             }
     }
@@ -59,7 +59,7 @@ Item {
         opacity: activeFocus || containsMouse ? (softwareRendering ? 0.8 : 0.15) : (softwareRendering ? 0.6 : 0)
         Behavior on opacity {
                 PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
-                    duration: units.longDuration * 3
+                    duration: units.longDuration
                     easing.type: Easing.InOutQuad
                 }
         }

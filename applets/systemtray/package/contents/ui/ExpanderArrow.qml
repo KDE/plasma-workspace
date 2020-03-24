@@ -37,7 +37,7 @@ PlasmaCore.ToolTipArea {
         anchors.fill: parent
         onClicked: root.expanded = !root.expanded
 
-        readonly property int arrowAnimationDuration: units.shortDuration * 3
+        readonly property int arrowAnimationDuration: units.shortDuration
 
         PlasmaCore.Svg {
             id: arrowSvg

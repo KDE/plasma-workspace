@@ -225,7 +225,7 @@ MouseArea {
                     popupIconTimer.restart()
                 }
             }
-            Behavior on height { NumberAnimation { duration: units.shortDuration * 3 } }
+            Behavior on height { NumberAnimation { duration: units.shortDuration } }
         }
     }
 }
