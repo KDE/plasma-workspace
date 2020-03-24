@@ -30,5 +30,6 @@ Loader {
         } else if (model.itemType === "StatusNotifier") {
             return "StatusNotifierItem.qml"
         }
+        return ""
     }
 }
