@@ -24,7 +24,6 @@ AbstractItem {
     id: plasmoidContainer
 
     property Item applet: model.applet || null
-    iconItem: applet
     text: applet ? applet.title : ""
 
     itemId: applet ? applet.pluginName : ""
@@ -51,19 +50,6 @@ AbstractItem {
         }
     }
 
-    onHeightChanged: {
-        if (applet) {
-            applet.width = Math.min(plasmoidContainer.width, plasmoidContainer.height)
-            applet.height = applet.width
-        }
-    }
-    onWidthChanged: {
-        if (applet) {
-            applet.width = Math.min(plasmoidContainer.width, plasmoidContainer.height)
-            applet.height = applet.width
-        }
-    }
-
     //This is to make preloading effective, minimizes the scene changes
     function preloadFullRepresentationItem(fullRepresentationItem) {
         if (fullRepresentationItem && fullRepresentationItem.parent === null) {
@@ -75,11 +61,8 @@ AbstractItem {
 
     onAppletChanged: {
         if (applet) {
-            applet.parent = plasmoidContainer
-            applet.anchors.left = plasmoidContainer.left
-            applet.anchors.verticalCenter = plasmoidContainer.verticalCenter
-            applet.width = Math.min(plasmoidContainer.width, plasmoidContainer.height)
-            applet.height = applet.width
+            applet.parent = plasmoidContainer.iconContainer
+            applet.anchors.fill = applet.parent
             applet.visible = true
 
             preloadFullRepresentationItem(applet.fullRepresentationItem)

@@ -32,7 +32,7 @@ PlasmaCore.ToolTipArea {
 
     property string itemId
     property alias text: label.text
-    property Item iconItem
+    property alias iconContainer: iconContainer
     property int /*PlasmaCore.Types.ItemStatus*/ status: model.status || PlasmaCore.Types.UnknownStatus
     property int /*PlasmaCore.Types.ItemStatus*/ effectiveStatus: model.effectiveStatus || PlasmaCore.Types.UnknownStatus
     readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
@@ -72,7 +72,7 @@ PlasmaCore.ToolTipArea {
 //END CONNECTIONS
 
     PulseAnimation {
-        targetItem: iconItem
+        targetItem: iconContainer
         running: (abstractItem.status === PlasmaCore.Types.NeedsAttentionStatus ||
             abstractItem.status === PlasmaCore.Types.RequiresAttentionStatus ) &&
             units.longDuration > 0
@@ -87,7 +87,7 @@ PlasmaCore.ToolTipArea {
         loops: 1
 
         ScaleAnimator {
-            target: iconItem
+            target: iconContainer
             from: 1
             to: 0.5
             duration: units.shortDuration
@@ -95,7 +95,7 @@ PlasmaCore.ToolTipArea {
         }
 
         ScaleAnimator {
-            target: iconItem
+            target: iconContainer
             from: 0.5
             to: 1
             duration: units.shortDuration
@@ -124,19 +124,27 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    PlasmaComponents.Label {
-        id: label
-        anchors {
-            left: parent.left
-            leftMargin: iconItem ? iconItem.width + units.smallSpacing : 0
-            verticalCenter: parent.verticalCenter
+    Row {
+        spacing: units.smallSpacing
+        anchors.horizontalCenter: inVisibleLayout ? parent.horizontalCenter : undefined
+        Item {
+            id: iconContainer
+            anchors.verticalCenter: parent.verticalCenter
+            width: Math.min(abstractItem.width, abstractItem.height)
+            height: width
+            property alias inHiddenLayout: abstractItem.inHiddenLayout
+            property alias inVisibleLayout: abstractItem.inVisibleLayout
         }
-        opacity: visible ? 1 : 0
-        visible: abstractItem.inHiddenLayout && !root.activeApplet
-        Behavior on opacity {
-            NumberAnimation {
-                duration: units.longDuration
-                easing.type: Easing.InOutQuad
+        PlasmaComponents.Label {
+            id: label
+            anchors.verticalCenter: parent.verticalCenter
+            visible: abstractItem.inHiddenLayout && !root.activeApplet
+            opacity: visible ? 1 : 0
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
             }
         }
     }

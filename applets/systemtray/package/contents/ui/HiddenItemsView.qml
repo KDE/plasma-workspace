@@ -74,8 +74,9 @@ MouseArea {
     }
 
     CurrentItemHighLight {
-        parent: hiddenTasksColumn.contentItem
-        target: root.activeApplet && root.activeApplet.parent && root.activeApplet.parent.inHiddenLayout ? root.activeApplet.parent.parent : null
-        location: PlasmaCore.Types.LeftEdge
+        readonly property bool hiddenAppletActivated: root.activeApplet && root.activeApplet.parent && root.activeApplet.parent.inHiddenLayout
+        parent: hiddenAppletActivated ? root.activeApplet.parent : hiddenTasksColumn.contentItem
+        target: hiddenAppletActivated ? root.activeApplet.parent : null
+        location: LayoutMirroring.enabled ? PlasmaCore.Types.RightEdge : PlasmaCore.Types.LeftEdge
     }
 }

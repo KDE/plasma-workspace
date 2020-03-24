@@ -30,10 +30,11 @@ AbstractItem {
     icon: model.ToolTipIcon !== "" ? model.ToolTipIcon : model.Icon ? model.Icon : model.IconName
     textFormat: Text.AutoText
 
-    iconItem: iconItem
-
     PlasmaCore.IconItem {
         id: iconItem
+        parent: taskIcon.iconContainer
+        anchors.fill: iconItem.parent
+
         source: {
             if (model.status === PlasmaCore.Types.NeedsAttentionStatus) {
                 if (model.AttentionIcon) {
@@ -45,15 +46,7 @@ AbstractItem {
             }
             return model.Icon ? model.Icon : model.IconName
         }
-
-        width: Math.min(parent.width, parent.height)
-        height: width
         active: taskIcon.containsMouse
-
-        anchors {
-            left: parent.left
-            verticalCenter: parent.verticalCenter
-        }
     }
 
     onContextMenu: {
