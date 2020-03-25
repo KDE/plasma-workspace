@@ -29,7 +29,7 @@
 
 #include "../servicerunner.h"
 
-#include <locale.h>
+#include <clocale>
 
 class ServiceRunnerTest : public QObject
 {

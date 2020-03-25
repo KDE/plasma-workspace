@@ -65,7 +65,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <QFile>
 #include <QPushButton>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QSocketNotifier>
@@ -668,7 +668,7 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
         qCDebug(KSMSERVER) << fName;
         QString display = QString::fromLocal8Bit(::getenv("DISPLAY"));
         // strip the screen number from the display
-        display.remove(QRegExp(QStringLiteral("\\.[0-9]+$")));
+        display.remove(QRegularExpression(QStringLiteral("\\.[0-9]+$")));
         int i;
         while( (i = display.indexOf(QLatin1Char(':'))) >= 0)
            display[i] = '_';
@@ -751,7 +751,7 @@ void KSMServer::cleanUp()
     QByteArray fName = QFile::encodeName(QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation) + QLatin1Char('/') + QStringLiteral("KSMserver"));
     QString display  = QString::fromLocal8Bit(::getenv("DISPLAY"));
     // strip the screen number from the display
-    display.remove(QRegExp(QStringLiteral("\\.[0-9]+$")));
+    display.remove(QRegularExpression(QStringLiteral("\\.[0-9]+$")));
     int i;
     while( (i = display.indexOf(QLatin1Char(':'))) >= 0)
          display[i] = '_';
@@ -895,7 +895,7 @@ void KSMServer::storeSession()
     config->reparseConfiguration(); // config may have changed in the KControl module
     KConfigGroup generalGroup(config, "General");
     excludeApps = generalGroup.readEntry( "excludeApps" ).toLower()
-                  .split( QRegExp( QStringLiteral("[,:]") ), QString::SkipEmptyParts );
+                  .split( QRegularExpression( QStringLiteral("[,:]") ), QString::SkipEmptyParts );
     KConfigGroup configSessionGroup(config, sessionGroup);
     int count =  configSessionGroup.readEntry( "count", 0 );
     for ( int i = 1; i <= count; i++ ) {

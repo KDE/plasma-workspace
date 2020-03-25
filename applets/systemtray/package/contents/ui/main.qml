@@ -1,5 +1,6 @@
 /*
  *   Copyright 2011 Marco Martin <mart@kde.org>
+ *   Copyright 2020 Konrad Materka <materka@gmail.com>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,7 +20,7 @@
 
 import QtQuick 2.5
 import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import org.kde.draganddrop 2.0 as DnD
 import org.kde.kirigami 2.5 as Kirigami
@@ -29,9 +30,9 @@ import "items"
 MouseArea {
     id: root
 
-    Layout.minimumWidth: vertical ? units.iconSizes.small : tasksRow.implicitWidth + (expander.visible ? expander.implicitWidth : 0) + units.smallSpacing
+    Layout.minimumWidth: vertical ? units.iconSizes.small : tasksGrid.implicitWidth + (expander.visible ? expander.implicitWidth : 0) + units.smallSpacing
 
-    Layout.minimumHeight: vertical ? tasksRow.implicitHeight + (expander.visible ? expander.implicitHeight : 0) + units.smallSpacing : units.smallSpacing
+    Layout.minimumHeight: vertical ? tasksGrid.implicitHeight + (expander.visible ? expander.implicitHeight : 0) + units.smallSpacing : units.smallSpacing
 
     Layout.preferredHeight: Layout.minimumHeight
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
@@ -41,21 +42,22 @@ MouseArea {
     property int iconSize: plasmoid.configuration.iconSize + (Kirigami.Settings.tabletMode ? 1 : 0)
 
     property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
-    readonly property int itemSize: units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes[iconSizes[Math.min(iconSizes.length-1, iconSize)]]))
+    readonly property int itemSize: {
+        var baseSize = units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes[iconSizes[Math.min(iconSizes.length-1, iconSize)]]));
+        if (Kirigami.Settings.tabletMode) {
+            // Set the tray items' clickable areas on the panel to be bigger than normal to allow for easier touchability
+            return baseSize + units.smallSpacing;
+        } else {
+            return baseSize + Math.round(units.smallSpacing/2);
+        }
+    }
     property int hiddenItemSize: units.iconSizes.smallMedium
     property alias expanded: dialog.visible
     property Item activeApplet
     property int status: dialog.visible ? PlasmaCore.Types.RequiresAttentionStatus : PlasmaCore.Types.PassiveStatus
 
-    property alias visibleLayout: tasksRow
+    property alias visibleLayout: tasksGrid
     property alias hiddenLayout: expandedRepresentation.hiddenLayout
-
-    property alias statusNotifierModel: statusNotifierModel
-
-    // workaround https://bugreports.qt.io/browse/QTBUG-71238 / https://bugreports.qt.io/browse/QTBUG-72004
-    property Component plasmoidItemComponent: Qt.createComponent("items/PlasmoidItem.qml")
-
-    property int creationIdCounter: 0
 
     Plasmoid.onExpandedChanged: {
         if (!plasmoid.expanded) {
@@ -63,89 +65,9 @@ MouseArea {
         }
     }
 
-    // temporary hack to fix known broken categories
-    // should go away as soon as fixes are merged
-    readonly property var categoryOverride: {
-        "org.kde.discovernotifier": "SystemServices",
-        "org.kde.plasma.networkmanagement": "Hardware",
-        "org.kde.kdeconnect": "Hardware",
-        "org.kde.plasma.keyboardindicator": "Hardware",
-        "touchpad": "Hardware"
-    }
-
-    readonly property var categoryOrder: [
-        "UnknownCategory", "ApplicationStatus", "Communications",
-        "SystemServices", "Hardware"
-    ]
-    function indexForItemCategory(item) {
-        if (item.itemId == "org.kde.plasma.notifications") {
-            return -1
-        }
-        var i = categoryOrder.indexOf(categoryOverride[item.itemId] || item.category)
-        return i == -1 ? categoryOrder.indexOf("UnknownCategory") : i
-    }
-
-    // return negative integer if a < b, 0 if a === b, and positive otherwise
-    function compareItems(a, b) {
-        var categoryDiff = indexForItemCategory(a) - indexForItemCategory(b)
-        var textDiff = (categoryDiff != 0 ? categoryDiff : a.text.localeCompare(b.text))
-        return textDiff != 0 ? textDiff : b.creationId - a.creationId
-    }
-
-    function moveItemAt(item, container, index) {
-        if (container.children.length == 0) {
-            item.parent = container
-        } else {
-            if (index == container.children.length) {
-                var other = container.children[index - 1]
-                if (item != other) {
-                    plasmoid.nativeInterface.reorderItemAfter(item, other)
-                }
-            } else {
-                var other = container.children[index]
-                if (item != other) {
-                    plasmoid.nativeInterface.reorderItemBefore(item, other)
-                }
-            }
-        }
-    }
-
-    function reorderItem(item, container) {
-        var i = 0;
-        while (i < container.children.length &&
-               compareItems(container.children[i], item) <= 0) {
-            i++
-        }
-        moveItemAt(item, container, i)
-    }
-
-    function updateItemVisibility(item) {
-        switch (item.effectiveStatus) {
-        case PlasmaCore.Types.HiddenStatus:
-            if (item.parent != invisibleEntriesContainer) {
-                item.parent = invisibleEntriesContainer;
-            }
-            break;
-
-        case PlasmaCore.Types.ActiveStatus:
-            reorderItem(item, visibleLayout)
-            break;
-
-        case PlasmaCore.Types.PassiveStatus:
-            reorderItem(item, hiddenLayout)
-            item.x = 0;
-            break;
-        }
-    }
-
     onWheel: {
         // Don't propagate unhandled wheel events
         wheel.accepted = true;
-    }
-
-    Containment.onAppletAdded: {
-        //Allow the plasmoid expander to know in what window it will be
-        var plasmoidContainer = plasmoidItemComponent.createObject(invisibleEntriesContainer, {"x": x, "y": y, "applet": applet});
     }
 
     //being there forces the items to fully load, and they will be reparented in the popup one by one, this item is *never* visible
@@ -169,78 +91,9 @@ MouseArea {
         onExtraItemsChanged: plasmoid.nativeInterface.allowedPlasmoids = plasmoid.configuration.extraItems
     }
 
-    Component.onCompleted: {
-        //script, don't bind
-        plasmoid.nativeInterface.allowedPlasmoids = initializePlasmoidList();
-    }
-
-    function initializePlasmoidList() {
-        var newKnownItems = [];
-        var newExtraItems = [];
-
-        //NOTE:why this? otherwise the interpreter will execute plasmoid.nativeInterface.defaultPlasmoids() on
-        //every access of defaults[], resulting in a very slow iteration
-        var defaults = [];
-        //defaults = defaults.concat(plasmoid.nativeInterface.defaultPlasmoids);
-        defaults = plasmoid.nativeInterface.defaultPlasmoids.slice()
-        var candidate;
-
-        //Add every plasmoid that is both not enabled explicitly and not already known
-        for (var i = 0; i < defaults.length; ++i) {
-            candidate = defaults[i];
-            if (plasmoid.configuration.knownItems.indexOf(candidate) === -1) {
-                newKnownItems.push(candidate);
-                if (plasmoid.configuration.extraItems.indexOf(candidate) === -1) {
-                    newExtraItems.push(candidate);
-                }
-            }
-        }
-
-        if (newExtraItems.length > 0) {
-            plasmoid.configuration.extraItems = plasmoid.configuration.extraItems.slice().concat(newExtraItems);
-        }
-        if (newKnownItems.length > 0) {
-            plasmoid.configuration.knownItems = plasmoid.configuration.knownItems.slice().concat(newKnownItems);
-        }
-
-        return plasmoid.configuration.extraItems;
-    }
-
-    PlasmaCore.DataSource {
-          id: statusNotifierSource
-          engine: "statusnotifieritem"
-          interval: 0
-          onSourceAdded: {
-             connectSource(source)
-          }
-          Component.onCompleted: {
-              connectedSources = sources
-          }
-    }
-
-    PlasmaCore.SortFilterModel {
-        id: statusNotifierModel
-        sourceModel: PlasmaCore.DataModel {
-            dataSource: statusNotifierSource
-        }
-    }
-
-    //This is a dump for items we don't want to be seen or as an incubation, when they are
-    //created as a nursery before going in their final place
-    Item {
-        id: invisibleEntriesContainer
-        visible: false
-        Repeater {
-            id: tasksRepeater
-            model: statusNotifierModel
-
-            delegate: StatusNotifierItem {}
-        }
-    }
-
     CurrentItemHighLight {
-        visualParent: tasksRow
-        target: root.activeApplet && root.activeApplet.parent && root.activeApplet.parent.inVisibleLayout ? root.activeApplet.parent : root
+        visualParent: tasksGrid
+        target: root.activeApplet && root.activeApplet.parent && root.activeApplet.parent.inVisibleLayout ? root.activeApplet.parent.parent : root
         location: plasmoid.location
     }
 
@@ -285,44 +138,79 @@ MouseArea {
     }
 
     //Main Layout
-    Flow {
-        id: tasksRow
-        spacing: 0
-        height: parent.height - (vertical && expander.visible ? expander.height : 0)
-        width: parent.width - (vertical || !expander.visible ? 0 : expander.width)
-        property string skipItems
-        flow: vertical ? Flow.LeftToRight : Flow.TopToBottom
-        //To make it look centered
-        y: Math.round(height/2 - childrenRect.height/2)
-        x: (expander.visible && LayoutMirroring.enabled ? expander.width : 0) + Math.round(width/2 - childrenRect.width/2)
+    GridLayout {
+        id: mainLayout
 
-        readonly property var iconSize: root.itemSize + units.smallSpacing
+        rowSpacing: 0
+        columnSpacing: 0
+        anchors.fill: parent
 
-        //add doesn't seem to work used in conjunction with stackBefore/stackAfter
-        /*add: Transition {
-            NumberAnimation {
-                property: "scale"
-                from: 0
-                to: 1
-                easing.type: Easing.InQuad
-                duration: units.longDuration
+        flow: vertical ? GridLayout.TopToBottom : GridLayout.LeftToRight
+
+        GridView {
+            id: tasksGrid
+            Layout.alignment: Qt.AlignCenter
+
+            interactive: false //disable features we don't need
+            flow: vertical ? GridView.LeftToRight : GridView.TopToBottom
+
+            cellHeight: Math.min(root.itemSize + units.smallSpacing, root.height)
+            cellWidth: Math.min(root.itemSize + units.smallSpacing, root.width)
+
+            readonly property int columns: !vertical ? Math.ceil(count / rows)
+                                           : Math.max(1, Math.floor(root.width / cellWidth))
+            readonly property int rows: vertical ? Math.ceil(count / columns)
+                                           : Math.max(1, Math.floor(root.height / cellHeight))
+
+            implicitHeight: rows * cellHeight
+            implicitWidth: columns * cellWidth
+
+            model: PlasmaCore.SortFilterModel {
+                sourceModel: plasmoid.nativeInterface.systemTrayModel
+                filterRole: "effectiveStatus"
+                filterCallback: function(source_row, value) {
+                    return value === PlasmaCore.Types.ActiveStatus
+                }
+            }
+
+            delegate: ItemLoader {}
+
+            add: Transition {
+                enabled: root.itemSize > 0
+
+                NumberAnimation {
+                    property: "scale"
+                    from: 0
+                    to: 1
+                    easing.type: Easing.InOutQuad
+                    duration: units.longDuration
+                }
+            }
+
+            displaced: Transition {
+                //ensure scale value returns to 1.0
+                //https://doc.qt.io/qt-5/qml-qtquick-viewtransition.html#handling-interrupted-animations
+                NumberAnimation {
+                    property: "scale"
+                    to: 1
+                    easing.type: Easing.InOutQuad
+                    duration: units.longDuration
+                }
+            }
+
+            move: Transition {
+                NumberAnimation {
+                    properties: "x,y"
+                    easing.type: Easing.InOutQuad
+                    duration: units.longDuration
+                }
             }
         }
-        move: Transition {
-            NumberAnimation {
-                properties: "x,y"
-                easing.type: Easing.InQuad
-                duration: units.longDuration
-            }
-        }*/
-    }
 
-    ExpanderArrow {
-        id: expander
-        anchors {
-            fill: parent
-            leftMargin: vertical ? 0 : parent.width - implicitWidth
-            topMargin: vertical ? parent.height - implicitHeight : 0
+        ExpanderArrow {
+            id: expander
+            Layout.fillWidth: vertical
+            Layout.fillHeight: !vertical
         }
     }
 

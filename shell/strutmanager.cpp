@@ -58,6 +58,11 @@ QRect StrutManager::availableScreenRect(int id) const
     return r;
 }
 
+QRect StrutManager::availableScreenRect(const QString &screenName) const
+{
+    return availableScreenRect(m_plasmashellCorona->screenPool()->id(screenName));
+}
+
 QRegion StrutManager::availableScreenRegion(int id) const
 {
     QRegion r = m_plasmashellCorona->_availableScreenRegion(id);

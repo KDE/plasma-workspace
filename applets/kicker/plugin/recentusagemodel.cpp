@@ -138,7 +138,19 @@ RecentUsageModel::~RecentUsageModel()
 {
 }
 
-RecentUsageModel::IncludeUsage RecentUsageModel::usage() const
+void RecentUsageModel::setShownItems(IncludeUsage usage)
+{
+    if (m_usage == usage) {
+        return;
+    }
+
+    m_usage = usage;
+
+    emit shownItemsChanged();
+    refresh();
+}
+
+RecentUsageModel::IncludeUsage RecentUsageModel::shownItems() const
 {
     return m_usage;
 }

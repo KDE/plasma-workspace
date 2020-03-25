@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.kde.KSplash
+Exec=@KDE_INSTALL_FULL_BINDIR@/plasma_waitforname org.kde.KSplash

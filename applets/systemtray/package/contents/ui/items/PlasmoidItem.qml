@@ -23,18 +23,16 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 AbstractItem {
     id: plasmoidContainer
 
-    property Item applet
+    property Item applet: model.applet || null
     iconItem: applet
     text: applet ? applet.title : ""
 
     itemId: applet ? applet.pluginName : ""
-    category: applet ? plasmoid.nativeInterface.plasmoidCategory(applet) : "UnknownCategory"
     mainText: applet ? applet.toolTipMainText : ""
     subText: applet ? applet.toolTipSubText : ""
     icon: applet ? applet.icon : ""
     mainItem: applet && applet.toolTipItem ? applet.toolTipItem : null
     textFormat: applet ? applet.toolTipTextFormat : ""
-    status: applet ? applet.status : PlasmaCore.Types.UnknownStatus
     active: root.activeApplet !== applet
 
     onClicked: {
@@ -55,7 +53,14 @@ AbstractItem {
 
     onHeightChanged: {
         if (applet) {
-            applet.width = height
+            applet.width = Math.min(plasmoidContainer.width, plasmoidContainer.height)
+            applet.height = applet.width
+        }
+    }
+    onWidthChanged: {
+        if (applet) {
+            applet.width = Math.min(plasmoidContainer.width, plasmoidContainer.height)
+            applet.height = applet.width
         }
     }
 
@@ -72,16 +77,12 @@ AbstractItem {
         if (applet) {
             applet.parent = plasmoidContainer
             applet.anchors.left = plasmoidContainer.left
-            applet.anchors.top = plasmoidContainer.top
-            applet.anchors.bottom = plasmoidContainer.bottom
-            applet.width = plasmoidContainer.height
+            applet.anchors.verticalCenter = plasmoidContainer.verticalCenter
+            applet.width = Math.min(plasmoidContainer.width, plasmoidContainer.height)
+            applet.height = applet.width
             applet.visible = true
-            plasmoidContainer.visible = true
 
             preloadFullRepresentationItem(applet.fullRepresentationItem)
-        }
-        if (!applet) {
-            plasmoidContainer.destroy();
         }
     }
 

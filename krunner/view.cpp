@@ -104,8 +104,6 @@ View::View(QWindow *)
 
     connect(KWindowSystem::self(), &KWindowSystem::workAreaChanged, this, &View::resetScreenPos);
 
-    connect(this, &View::visibleChanged, this, &View::resetScreenPos);
-
     KDirWatch::self()->addFile(m_config.name());
 
     // Catch both, direct changes to the config file ...
@@ -219,6 +217,10 @@ void View::resetScreenPos()
 
 void View::positionOnScreen()
 {
+    if (!m_requestedVisible) {
+        return;
+    }
+
     QScreen *shownOnScreen = QGuiApplication::primaryScreen();
 
     const auto screens = QGuiApplication::screens();
@@ -229,42 +231,55 @@ void View::positionOnScreen()
         }
     }
 
-    setScreen(shownOnScreen);
-    const QRect r = shownOnScreen->availableGeometry();
+    // in wayland, QScreen::availableGeometry() returns QScreen::geometry()
+    // we could get a better value from plasmashell
+    // BUG: 386114
+    QDBusInterface strutManager("org.kde.plasmashell", "/StrutManager", "org.kde.PlasmaShell.StrutManager");
+    QDBusPendingCall async = strutManager.asyncCall("availableScreenRect", shownOnScreen->name());
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
 
-    if (m_floating && !m_customPos.isNull()) {
-        int x = qBound(r.left(), m_customPos.x(), r.right() - width());
-        int y = qBound(r.top(), m_customPos.y(), r.bottom() - height());
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [=]() {
+        QDBusPendingReply<QRect> reply = *watcher;
+
+        setScreen(shownOnScreen);
+        const QRect r = reply.isValid() ? reply.value() : shownOnScreen->availableGeometry();
+
+        if (m_floating && !m_customPos.isNull()) {
+            int x = qBound(r.left(), m_customPos.x(), r.right() - width());
+            int y = qBound(r.top(), m_customPos.y(), r.bottom() - height());
+            setPosition(x, y);
+            PlasmaQuick::Dialog::setVisible(true);
+            return;
+        }
+
+        const int w = width();
+        int x = r.left() + (r.width() * m_offset) - (w / 2);
+
+        int y = r.top();
+        if (m_floating) {
+            y += r.height() / 3;
+        }
+
+        x = qBound(r.left(), x, r.right() - width());
+        y = qBound(r.top(), y, r.bottom() - height());
+
         setPosition(x, y);
-        show();
-        return;
-    }
+        PlasmaQuick::Dialog::setVisible(true);
 
-    const int w = width();
-    int x = r.left() + (r.width() * m_offset) - (w / 2);
+        if (m_floating) {
+            KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
+            KWindowSystem::setType(winId(), NET::Normal);
+            //Turn the sliding effect off
+            KWindowEffects::slideWindow(winId(), KWindowEffects::NoEdge, 0);
+        } else {
+            KWindowSystem::setOnAllDesktops(winId(), true);
+            KWindowEffects::slideWindow(winId(), KWindowEffects::TopEdge, 0);
+        }
 
-    int y = r.top();
-    if (m_floating) {
-        y += r.height() / 3;
-    }
+        KWindowSystem::forceActiveWindow(winId());
+        watcher->deleteLater();
 
-    x = qBound(r.left(), x, r.right() - width());
-    y = qBound(r.top(), y, r.bottom() - height());
-
-    setPosition(x, y);
-
-    if (m_floating) {
-        KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
-        KWindowSystem::setType(winId(), NET::Normal);
-        //Turn the sliding effect off
-        KWindowEffects::slideWindow(winId(), KWindowEffects::NoEdge, 0);
-    } else {
-        KWindowSystem::setOnAllDesktops(winId(), true);
-        KWindowEffects::slideWindow(winId(), KWindowEffects::TopEdge, 0);
-    }
-
-    KWindowSystem::forceActiveWindow(winId());
-    //qDebug() << "moving to" << m_screenPos[screen];
+    });
 }
 
 void View::displayOrHide()
@@ -389,4 +404,15 @@ void View::removeFromHistory(int index)
 void View::writeHistory()
 {
     m_config.writeEntry("history", m_history);
+}
+
+void View::setVisible(bool visible)
+{
+    m_requestedVisible = visible;
+
+    if (visible && !m_floating) {
+        positionOnScreen();
+    } else {
+        PlasmaQuick::Dialog::setVisible(visible);
+    }
 }

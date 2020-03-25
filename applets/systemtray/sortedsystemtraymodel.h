@@ -26,7 +26,8 @@ class SortedSystemTrayModel : public QSortFilterProxyModel {
     Q_OBJECT
 public:
     enum class SortingType {
-        ConfigurationPage
+        ConfigurationPage,
+        SystemTray
     };
 
     explicit SortedSystemTrayModel(SortingType sorting, QObject *parent = nullptr);
@@ -36,8 +37,10 @@ protected:
 
 private:
     bool lessThanConfigurationPage(const QModelIndex &left, const QModelIndex &right) const;
+    bool lessThanSystemTray(const QModelIndex &left, const QModelIndex &right) const;
 
     int compareCategoriesAlphabetically(const QModelIndex &left, const QModelIndex &right) const;
+    int compareCategoriesOrderly(const QModelIndex &left, const QModelIndex &right) const;
 
     SortingType m_sorting;
 };

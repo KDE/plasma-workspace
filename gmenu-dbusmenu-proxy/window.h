@@ -100,7 +100,7 @@ private:
     void updateWindowProperties();
 
     bool getAction(const QString &name, GMenuAction &action) const;
-    void triggerAction(const QString &name, uint timestamp = 0);
+    void triggerAction(const QString &name, const QVariant &target, uint timestamp = 0);
     Actions *getActionsForAction(const QString &name, QString &lookupName) const;
 
     void menuChanged(const QVector<uint> &menuIds);

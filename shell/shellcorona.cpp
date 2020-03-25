@@ -2024,31 +2024,12 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
 
 void ShellCorona::nextActivity()
 {
-    const QStringList list = m_activityController->activities(KActivities::Info::Running);
-    if (list.isEmpty()) {
-        return;
-    }
-
-    const int start = list.indexOf(m_activityController->currentActivity());
-    const int i = (start + 1) % list.size();
-
-    m_activityController->setCurrentActivity(list.at(i));
+    m_activityController->nextActivity();
 }
 
 void ShellCorona::previousActivity()
 {
-    const QStringList list = m_activityController->activities(KActivities::Info::Running);
-    if (list.isEmpty()) {
-        return;
-    }
-
-    const int start = list.indexOf(m_activityController->currentActivity());
-    int i = start - 1;
-    if(i < 0) {
-        i = list.size() - 1;
-    }
-
-    m_activityController->setCurrentActivity(list.at(i));
+    m_activityController->previousActivity();
 }
 
 void ShellCorona::stopCurrentActivity()

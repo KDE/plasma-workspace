@@ -37,6 +37,9 @@
 
 #include <QStringList>
 #include <QProcess>
+#include <QRegularExpression>
+#include <QStringRef>
+#include <QVector>
 
 KSolidNotify::KSolidNotify(QObject *parent):
     QObject(parent)
@@ -127,9 +130,9 @@ void KSolidNotify::queryBlockingApps(const QString &devicePath)
     connect(p, static_cast<void (QProcess::*)(int,QProcess::ExitStatus)>(&QProcess::finished), [=](int,QProcess::ExitStatus) {
                 QStringList blockApps;
                 QString out(p->readAll());
-                const QStringList &pidList = out.split(QRegExp(QStringLiteral("\\s+")), QString::SkipEmptyParts);
+                const QVector<QStringRef> pidList = out.splitRef(QRegularExpression(QStringLiteral("\\s+")), QString::SkipEmptyParts);
                 KSysGuard::Processes procs;
-                Q_FOREACH (const QString &pidStr, pidList) {
+                for (const QStringRef &pidStr : pidList) {
                     int pid = pidStr.toInt();
                     if (!pid) {
                         continue;

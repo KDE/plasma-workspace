@@ -41,7 +41,7 @@ FocusScope {
     Column {
         id: settingsColumn
         anchors.horizontalCenter: parent.horizontalCenter
-        width: parent.width - units.gridUnit
+        width: parent.width - units.smallSpacing * 2
         spacing: Math.round(units.gridUnit / 2)
 
         Components.Label {
@@ -107,10 +107,11 @@ FocusScope {
         anchors {
             horizontalCenter: parent.horizontalCenter
             top: settingsColumn.bottom
-            topMargin: units.gridUnit // not divided by 2 for unified looks
+            topMargin: units.gridUnit
+            leftMargin: units.smallSpacing
             bottom: dialog.bottom
         }
-        width: parent.width - units.gridUnit
+        width: parent.width - units.smallSpacing * 2
 
         ListView {
             id: batteryList

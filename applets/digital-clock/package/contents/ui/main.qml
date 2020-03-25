@@ -50,6 +50,36 @@ Item {
         root.allTimezones = tz.concat(plasmoid.configuration.selectedTimeZones);
     }
 
+    function timeForZone(zone) {
+        var compactRepresentationItem = plasmoid.compactRepresentationItem;
+        if (!compactRepresentationItem) {
+            return "";
+        }
+
+        // get the time for the given timezone from the dataengine
+        var now = dataSource.data[zone]["DateTime"];
+        // get current UTC time
+        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
+        // add the dataengine TZ offset to it
+        var dateTime = new Date(msUTC + (dataSource.data[zone]["Offset"] * 1000));
+
+        var formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormat);
+
+        if (dateTime.getDay() !== dataSource.data["Local"]["DateTime"].getDay()) {
+            formattedTime += " (" + Qt.formatDate(dateTime, compactRepresentationItem.dateFormat) + ")";
+        }
+
+        return formattedTime;
+    }
+
+    function nameForZone(zone) {
+        // add the timezone string to the clock
+        var timezoneString = plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[zone]["Timezone Abbreviation"]
+                                                                          : TimezonesI18n.i18nCity(dataSource.data[zone]["Timezone City"]);
+
+        return timezoneString;
+    }
+
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.compactRepresentation: DigitalClock { }
     Plasmoid.fullRepresentation: CalendarView { }

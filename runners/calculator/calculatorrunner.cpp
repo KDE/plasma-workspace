@@ -27,6 +27,7 @@
 #include <QJSEngine>
 #include <QGuiApplication>
 #include <QClipboard>
+#include <QRegularExpression>
 #endif
 
 #include <QIcon>
@@ -186,25 +187,22 @@ void CalculatorRunner::hexSubstitutions(QString& cmd)
 
 void CalculatorRunner::userFriendlySubstitutions(QString& cmd)
 {
-    if (cmd.contains(QLocale().decimalPoint(), Qt::CaseInsensitive)) {
-         cmd.replace(QLocale().decimalPoint(), QLatin1Char('.'), Qt::CaseInsensitive);
-    }
+    cmd.replace(QLocale().decimalPoint(), QLatin1Char('.'), Qt::CaseInsensitive);
 
     // the following substitutions are not needed with libqalculate
-    #ifndef ENABLE_QALCULATE
+#ifndef ENABLE_QALCULATE
     hexSubstitutions(cmd);
     powSubstitutions(cmd);
 
-    if (cmd.contains(QRegExp(QStringLiteral("\\d+and\\d+")))) {
-         cmd.replace(QRegExp(QStringLiteral("(\\d+)and(\\d+)")), QStringLiteral("\\1&\\2"));
-    }
-    if (cmd.contains(QRegExp(QStringLiteral("\\d+or\\d+")))) {
-         cmd.replace(QRegExp(QStringLiteral("(\\d+)or(\\d+)")), QStringLiteral("\\1|\\2"));
-    }
-    if (cmd.contains(QRegExp(QStringLiteral("\\d+xor\\d+")))) {
-         cmd.replace(QRegExp(QStringLiteral("(\\d+)xor(\\d+)")), QStringLiteral("\\1^\\2"));
-    }
-    #endif
+    QRegularExpression re(QStringLiteral("(\\d+)and(\\d+)"));
+    cmd.replace(re, QStringLiteral("\\1&\\2"));
+
+    re.setPattern(QStringLiteral("(\\d+)or(\\d+)"));
+    cmd.replace(re, QStringLiteral("\\1|\\2"));
+
+    re.setPattern(QStringLiteral("(\\d+)xor(\\d+)"));
+    cmd.replace(re, QStringLiteral("\\1^\\2"));
+#endif
 }
 
 
@@ -261,7 +259,8 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
 
     userFriendlySubstitutions(cmd);
     #ifndef ENABLE_QALCULATE
-    cmd.replace(QRegExp(QStringLiteral("([a-zA-Z]+)")), QStringLiteral("Math.\\1")); //needed for accessing math functions like sin(),....
+    //needed for accessing math functions like sin(),....
+    cmd.replace(QRegularExpression(QStringLiteral("([a-zA-Z]+)")), QStringLiteral("Math.\\1"));
     #endif
 
     bool isApproximate = false;

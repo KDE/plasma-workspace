@@ -50,7 +50,7 @@ namespace TaskManager
 static const NET::Properties windowInfoFlags = NET::WMState | NET::XAWMState | NET::WMDesktop |
     NET::WMVisibleName | NET::WMGeometry | NET::WMFrameExtents | NET::WMWindowType | NET::WMPid;
 static const NET::Properties2 windowInfoFlags2 = NET::WM2DesktopFileName | NET::WM2Activities |
-    NET::WM2WindowClass | NET::WM2AllowedActions;
+    NET::WM2WindowClass | NET::WM2AllowedActions | NET::WM2AppMenuObjectPath | NET::WM2AppMenuServiceName;
 
 class Q_DECL_HIDDEN XWindowTasksModel::Private
 {
@@ -81,6 +81,8 @@ public:
 
     KWindowInfo* windowInfo(WId window);
     AppData appData(WId window);
+    QString appMenuServiceName(WId window);
+    QString appMenuObjectPath(WId window);
 
     QIcon icon(WId window);
     static QString mimeType();
@@ -465,6 +467,18 @@ AppData XWindowTasksModel::Private::appData(WId window)
     return data;
 }
 
+QString XWindowTasksModel::Private::appMenuServiceName(WId window)
+{
+    const KWindowInfo *info = windowInfo(window);
+    return QString::fromUtf8(info->applicationMenuServiceName());
+}
+
+QString XWindowTasksModel::Private::appMenuObjectPath(WId window)
+{
+    const KWindowInfo *info = windowInfo(window);
+    return QString::fromUtf8(info->applicationMenuObjectPath());
+}
+
 QIcon XWindowTasksModel::Private::icon(WId window)
 {
     const AppData &app = appData(window);
@@ -690,6 +704,10 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         if (d->lastActivated.contains(window)) {
             return d->lastActivated.value(window);
         }
+    } else if (role == ApplicationMenuObjectPath) {
+        return d->appMenuObjectPath(window);
+    } else if (role == ApplicationMenuServiceName) {
+        return d->appMenuServiceName(window);
     }
 
     return QVariant();

@@ -102,7 +102,7 @@ void propagateSessionManager()
     QByteArray fName = QFile::encodeName(QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation)+"/KSMserver");
     QString display = QString::fromLocal8Bit( ::getenv(DISPLAY) );
     // strip the screen number from the display
-    display.remove(QRegExp(QStringLiteral("\\.[0-9]+$")));
+    display.remove(QRegularExpression(QStringLiteral("\\.\\d+$")));
     int i;
     while( (i = display.indexOf(':')) >= 0)
        display[i] = '_';

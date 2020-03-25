@@ -25,6 +25,7 @@
 #include <QClipboard>
 #include <QGuiApplication>
 #include <QMenu>
+#include <QRegularExpression>
 
 ClipboardMenu::ClipboardMenu(QObject *parent) : QObject(parent)
 {
@@ -75,7 +76,7 @@ void ClipboardMenu::setupMenu(QAction *action)
 
         const QDate date = m_currentDate.date();
         const QTime time = m_currentDate.time();
-        const QRegExp rx ("[^0-9:]");
+        const QRegularExpression rx ("[^0-9:]");
         const QChar ws = QLatin1Char(' ');
         QString s;
         QAction *a;
@@ -111,7 +112,7 @@ void ClipboardMenu::setupMenu(QAction *action)
         a = menu->addAction(s);
         a->setData(s);
         if (m_secondsIncluded) {
-            s = date.toString(Qt::SystemLocaleShortDate) + ws + time.toString(Qt::SystemLocaleLongDate).replace(rx, "");
+            s = date.toString(Qt::SystemLocaleShortDate) + ws + time.toString(Qt::SystemLocaleLongDate).remove(rx);
             a = menu->addAction(s);
             a->setData(s);
             s = date.toString(Qt::SystemLocaleShortDate) + ws + time.toString(Qt::SystemLocaleLongDate);
@@ -122,7 +123,7 @@ void ClipboardMenu::setupMenu(QAction *action)
         a = menu->addAction(s);
         a->setData(s);
         if (m_secondsIncluded) {
-            s = date.toString(Qt::ISODate) + ws + time.toString(Qt::SystemLocaleLongDate).replace(rx, "");
+            s = date.toString(Qt::ISODate) + ws + time.toString(Qt::SystemLocaleLongDate).remove(rx);
             a = menu->addAction(s);
             a->setData(s);
             s = date.toString(Qt::ISODate) + ws + time.toString(Qt::SystemLocaleLongDate);

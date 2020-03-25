@@ -28,7 +28,7 @@
 #include <QDebug>
 
 #include <KLocalizedString>
-#include <KServiceTypeTrader>
+#include <KApplicationTrader>
 
 #include "debug.h"
 
@@ -88,20 +88,35 @@ void InstallerRunner::match(Plasma::RunnerContext &context)
         if (component.kind() != AppStream::Component::KindDesktopApp)
             continue;
 
-        const auto idWithoutDesktop = component.id().remove(".desktop");
-        const auto serviceQuery = QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName or (exist [X-Flatpak-RenamedFrom] and ('%1' in [X-Flatpak-RenamedFrom] or '%1;' in [X-Flatpak-RenamedFrom])) or '%2' =~ DesktopEntryName)").arg(component.id(), idWithoutDesktop);
-        const auto servicesFound = KServiceTypeTrader::self()->query(QStringLiteral("Application"), serviceQuery);
+        const QString componentId = component.id();
+        const auto servicesFound = KApplicationTrader::query([&componentId] (const KService::Ptr &service) {
+            if (service->exec().isEmpty())
+                return false;
+
+            if (service->desktopEntryName() == componentId)
+                return true;
+
+            const auto idWithoutDesktop = QString(componentId).remove(".desktop");
+            if (service->desktopEntryName() == idWithoutDesktop)
+                return true;
+
+            const auto renamedFrom = service->property("X-Flatpak-RenamedFrom").toStringList();
+            if (renamedFrom.contains(componentId) || renamedFrom.contains(idWithoutDesktop))
+                return true;
+
+            return false;
+        });
 
         if (!servicesFound.isEmpty())
             continue;
 
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::PossibleMatch);
-        match.setId(component.id());
+        match.setId(componentId);
         match.setIcon(componentIcon(component));
         match.setText(i18n("Get %1...", component.name()));
         match.setSubtext(component.summary());
-        match.setData(QUrl("appstream://" + component.id()));
+        match.setData(QUrl("appstream://" + componentId));
         context.addMatch(match);
     }
 }

@@ -39,12 +39,29 @@ public:
         ItemId,
         CanRender,
         Category,
+        Status,
+        EffectiveStatus,
         LastBaseRole
     };
 
     explicit BaseModel(QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
+
+public slots:
+    void onConfigurationChanged(const KConfigGroup &config);
+
+private slots:
+    void onDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles);
+
+private:
+    void updateEffectiveStatus(QStandardItem *dataItem);
+    Plasma::Types::ItemStatus calculateEffectiveStatus(QStandardItem *dataItem);
+    Plasma::Types::ItemStatus readStatus(QStandardItem *dataItem) const;
+
+    bool m_showAllItems;
+    QStringList m_shownItems;
+    QStringList m_hiddenItems;
 };
 
 class PlasmoidModel: public BaseModel

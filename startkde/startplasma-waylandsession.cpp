@@ -19,10 +19,10 @@
 
 #include "startplasma.h"
 
-#include <QCoreApplication>
-
 int main(int argc, char** argv)
 {
+    QCoreApplication app(argc, argv);
+
     // Boot sequence:
     //
     // kdeinit is used to fork off processes which improves memory usage
@@ -36,9 +36,6 @@ int main(int argc, char** argv)
     //   certain devices according to the user's settings
     //
     // * Then ksmserver is started which takes control of the rest of the startup sequence
-
-
-    QCoreApplication app(argc, argv);
 
     runStartupConfig();
 
@@ -60,7 +57,6 @@ int main(int argc, char** argv)
         out << "Could not sync environment to dbus.\n";
         return 2;
     }
-
 
     if (!startPlasmaSession(true))
         return 4;

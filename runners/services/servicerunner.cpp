@@ -105,27 +105,27 @@ private:
         return ret;
     }
 
-    qreal increaseMatchRelavance(const KService::Ptr &service, QVector<QStringRef> &strList, QString category)
+    qreal increaseMatchRelavance(const KService::Ptr &service, const QVector<QStringRef> &strList, const QString &category)
     {
         //Increment the relevance based on all the words (other than the first) of the query list
         qreal relevanceIncrement = 0;
 
-        for(int i=1; i<strList.size(); i++)
-        {
+        for(int i = 1; i < strList.size(); ++i) {
+            const auto &str = strList.at(i);
             if (category == QLatin1String("Name")) {
-                if (service->name().contains(strList[i], Qt::CaseInsensitive)) {
+                if (service->name().contains(str, Qt::CaseInsensitive)) {
                     relevanceIncrement += 0.01;
                 }
             } else if (category == QLatin1String("GenericName")) {
-                if (service->genericName().contains(strList[i], Qt::CaseInsensitive)) {
+                if (service->genericName().contains(str, Qt::CaseInsensitive)) {
                     relevanceIncrement += 0.01;
                 }
             } else if (category == QLatin1String("Exec")) {
-                if (service->exec().contains(strList[i], Qt::CaseInsensitive)) {
+                if (service->exec().contains(str, Qt::CaseInsensitive)) {
                     relevanceIncrement += 0.01;
                 }
             } else if (category == QLatin1String("Comment")) {
-                if (service->comment().contains(strList[i], Qt::CaseInsensitive)) {
+                if (service->comment().contains(str, Qt::CaseInsensitive)) {
                     relevanceIncrement += 0.01;
                 }
             }
@@ -337,7 +337,8 @@ private:
                 continue;
             }
 
-            for (const KServiceAction &action : service->actions()) {
+            const auto actions = service->actions();
+            for (const KServiceAction &action : actions) {
                 if (action.text().isEmpty() || action.exec().isEmpty() || hasSeen(action)) {
                     continue;
                 }
@@ -349,7 +350,7 @@ private:
                 }
 
                 Plasma::QueryMatch match(m_runner);
-                match.setType(Plasma::QueryMatch::HelperMatch);
+                match.setType(Plasma::QueryMatch::PossibleMatch);
                 if (!action.icon().isEmpty()) {
                     match.setIconName(action.icon());
                 } else {
@@ -357,7 +358,7 @@ private:
                 }
                 match.setText(i18nc("Jump list search result, %1 is action (eg. open new tab), %2 is application (eg. browser)",
                                     "%1 - %2", action.text(), service->name()));
-                match.setData(action.exec());
+                match.setData(QStringLiteral("exec::") + action.exec());
 
                 qreal relevance = 0.5;
                 if (matchIndex == 0) {
@@ -377,7 +378,7 @@ private:
     QList<Plasma::QueryMatch> matches;
     QString query;
     QString term;
-    int weightedTermLength;
+    int weightedTermLength = -1;
 };
 
 ServiceRunner::ServiceRunner(QObject *parent, const QVariantList &args)
@@ -391,9 +392,7 @@ ServiceRunner::ServiceRunner(QObject *parent, const QVariantList &args)
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds applications whose name or description match :q:")));
 }
 
-ServiceRunner::~ServiceRunner()
-{
-}
+ServiceRunner::~ServiceRunner() = default;
 
 QStringList ServiceRunner::categories() const
 {
@@ -426,12 +425,16 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
 void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     Q_UNUSED(context);
-    if (match.type() == Plasma::QueryMatch::HelperMatch) { // Jump List Action
-         KRun::run(match.data().toString(), {}, nullptr);
+
+    const QString dataString = match.data().toString();
+
+    const QString execPrefix = QStringLiteral("exec::");
+    if (dataString.startsWith(execPrefix)) {
+         KRun::run(dataString.mid(execPrefix.length()), {}, nullptr);
          return;
     }
 
-    KService::Ptr service = KService::serviceByStorageId(match.data().toString());
+    KService::Ptr service = KService::serviceByStorageId(dataString);
     if (service) {
         KActivities::ResourceInstance::notifyAccessed(
             QUrl(QStringLiteral("applications:") + service->storageId()),
@@ -451,18 +454,14 @@ QMimeData * ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 
     QString path = service->entryPath();
     if (!QDir::isAbsolutePath(path)) {
-        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("kservices5/") + path);
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kservices5/") + path);
     }
 
     if (path.isEmpty()) {
         return nullptr;
     }
 
-    QMimeData *data = new QMimeData();
+    auto *data = new QMimeData();
     data->setUrls(QList<QUrl>{QUrl::fromLocalFile(path)});
     return data;
 }
-
-K_EXPORT_PLASMA_RUNNER(services, ServiceRunner)
-
-#include "servicerunner.moc"

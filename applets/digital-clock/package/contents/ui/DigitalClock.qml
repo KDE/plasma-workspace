@@ -113,7 +113,8 @@ Item {
                 target: contentItem
 
                 height: timeLabel.height + (main.showDate || timezoneLabel.visible ? 0.8 * timeLabel.height : 0)
-                width: Math.max(labelsGrid.width, timezoneLabel.paintedWidth, dateLabel.paintedWidth)
+                width: Math.max(timeLabel.paintedWidth + (main.showDate ? timezoneLabel.paintedWidth : 0), 
+                                timezoneLabel.paintedWidth, dateLabel.paintedWidth) + units.smallSpacing * 2
             }
 
             PropertyChanges {

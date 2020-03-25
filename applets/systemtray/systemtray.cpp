@@ -43,8 +43,8 @@
 
 SystemTray::SystemTray(QObject *parent, const QVariantList &args)
     : Plasma::Containment(parent, args),
-      m_availablePlasmoidsModel(nullptr),
       m_systemTrayModel(new SystemTrayModel(this)),
+      m_sortedSystemTrayModel(nullptr),
       m_configSystemTrayModel(nullptr)
 {
     setHasConfigurationInterface(true);
@@ -53,8 +53,10 @@ SystemTray::SystemTray(QObject *parent, const QVariantList &args)
     PlasmoidModel *currentPlasmoidsModel = new PlasmoidModel(m_systemTrayModel);
     connect(this, &SystemTray::appletAdded, currentPlasmoidsModel, &PlasmoidModel::addApplet);
     connect(this, &SystemTray::appletRemoved, currentPlasmoidsModel, &PlasmoidModel::removeApplet);
+    connect(this, &SystemTray::configurationChanged, currentPlasmoidsModel, &PlasmoidModel::onConfigurationChanged);
 
     m_statusNotifierModel = new StatusNotifierModel(m_systemTrayModel);
+    connect(this, &SystemTray::configurationChanged, m_statusNotifierModel, &StatusNotifierModel::onConfigurationChanged);
 
     m_systemTrayModel->addSourceModel(currentPlasmoidsModel);
     m_systemTrayModel->addSourceModel(m_statusNotifierModel);
@@ -315,39 +317,47 @@ QPointF SystemTray::popupPosition(QQuickItem* visualParent, int x, int y)
     return pos;
 }
 
-void SystemTray::reorderItemBefore(QQuickItem* before, QQuickItem* after)
-{
-    if (!before || !after) {
-        return;
-    }
-
-    before->setVisible(false);
-    before->setParentItem(after->parentItem());
-    before->stackBefore(after);
-    before->setVisible(true);
-}
-
-void SystemTray::reorderItemAfter(QQuickItem* after, QQuickItem* before)
-{
-    if (!before || !after) {
-        return;
-    }
-
-    after->setVisible(false);
-    after->setParentItem(before->parentItem());
-    after->stackAfter(before);
-    after->setVisible(true);
-}
-
 bool SystemTray::isSystemTrayApplet(const QString &appletId)
 {
     return m_systrayApplets.contains(appletId);
 }
 
+Plasma::Service *SystemTray::serviceForSource(const QString &source)
+{
+    return m_statusNotifierModel->serviceForSource(source);
+}
+
 void SystemTray::restoreContents(KConfigGroup &group)
 {
-    Q_UNUSED(group);
-    //NOTE: RestoreContents shouldn't do anything here because is too soon, so have an empty reimplementation
+    QStringList newKnownItems;
+    QStringList newExtraItems;
+
+    KConfigGroup general = group.group("General");
+
+    QStringList knownItems = general.readEntry("knownItems", QStringList());
+    QStringList extraItems = general.readEntry("extraItems", QStringList());
+
+    //Add every plasmoid that is both not enabled explicitly and not already known
+    for (int i = 0; i < m_defaultPlasmoids.length(); ++i) {
+        QString candidate = m_defaultPlasmoids[i];
+        if (!knownItems.contains(candidate)) {
+            newKnownItems.append(candidate);
+            if (!extraItems.contains(candidate)) {
+                newExtraItems.append(candidate);
+            }
+        }
+    }
+
+    if (newExtraItems.length() > 0) {
+        general.writeEntry("extraItems", extraItems + newExtraItems);
+    }
+    if (newKnownItems.length() > 0) {
+        general.writeEntry("knownItems", knownItems + newKnownItems);
+    }
+
+    setAllowedPlasmoids(general.readEntry("extraItems", QStringList()));
+
+    emit configurationChanged(config());
 }
 
 void SystemTray::restorePlasmoids()
@@ -430,6 +440,21 @@ void SystemTray::restorePlasmoids()
     initDBusActivatables();
 }
 
+void SystemTray::configChanged()
+{
+    Containment::configChanged();
+    emit configurationChanged(config());
+}
+
+QAbstractItemModel *SystemTray::systemTrayModel()
+{
+    if (!m_sortedSystemTrayModel) {
+        m_sortedSystemTrayModel = new SortedSystemTrayModel(SortedSystemTrayModel::SortingType::SystemTray, this);
+        m_sortedSystemTrayModel->setSourceModel(m_systemTrayModel);
+    }
+    return m_sortedSystemTrayModel;
+}
+
 QAbstractItemModel *SystemTray::configSystemTrayModel()
 {
     if (!m_configSystemTrayModel) {
@@ -437,19 +462,6 @@ QAbstractItemModel *SystemTray::configSystemTrayModel()
         m_configSystemTrayModel->setSourceModel(m_systemTrayModel);
     }
     return m_configSystemTrayModel;
-}
-
-QStringList SystemTray::defaultPlasmoids() const
-{
-    return m_defaultPlasmoids;
-}
-
-QAbstractItemModel* SystemTray::availablePlasmoids()
-{
-    if (!m_availablePlasmoidsModel) {
-        m_availablePlasmoidsModel = new PlasmoidModel(this);
-    }
-    return m_availablePlasmoidsModel;
 }
 
 QStringList SystemTray::allowedPlasmoids() const

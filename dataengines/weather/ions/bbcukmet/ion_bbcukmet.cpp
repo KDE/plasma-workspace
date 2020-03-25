@@ -31,6 +31,7 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QXmlStreamReader>
+#include <QRegularExpression>
 #include <QTimeZone>
 
 
@@ -825,8 +826,8 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
     QString line;
     QString period;
     QString summary;
-    QRegExp high(QStringLiteral("Maximum Temperature: (-?\\d+).C"), Qt::CaseInsensitive);
-    QRegExp  low(QStringLiteral("Minimum Temperature: (-?\\d+).C"), Qt::CaseInsensitive);
+    const QRegularExpression high(QStringLiteral("Maximum Temperature: (-?\\d+).C"), QRegularExpression::CaseInsensitiveOption);
+    const QRegularExpression  low(QStringLiteral("Minimum Temperature: (-?\\d+).C"), QRegularExpression::CaseInsensitiveOption);
     while (!xml.atEnd()) {
         xml.readNext();
         if (xml.name() == QLatin1String("title")) {
@@ -840,11 +841,12 @@ void UKMETIon::parseFiveDayForecast(const QString& source, QXmlStreamReader& xml
 
             const QString temps = line.section(QLatin1Char(','), 1, 1);
             // Sometimes only one of min or max are reported
-            if (high.indexIn(temps) != -1) {
-                parseFloat(forecast->tempHigh, high.cap(1));
+            QRegularExpressionMatch rmatch;
+            if (temps.contains(high, &rmatch)) {
+                parseFloat(forecast->tempHigh, rmatch.captured(1));
             }
-            if (low.indexIn(temps) != -1) {
-                parseFloat(forecast->tempLow, low.cap(1));
+            if (temps.contains(low, &rmatch)) {
+                parseFloat(forecast->tempLow, rmatch.captured(1));
             }
 
             const QString summaryLC = summary.toLower();

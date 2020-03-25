@@ -171,6 +171,7 @@ ScrollViewKCM {
             visible: languagesList.count
 
             text: i18n("The language at the top of this list is the one you want to see and use most often.")
+            wrapMode: Text.WordWrap
         }
     }
 

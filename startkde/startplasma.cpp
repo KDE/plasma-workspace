@@ -375,6 +375,8 @@ bool startPlasmaSession(bool wayland)
     QEventLoop e;
 
     QProcess startPlasmaSession;
+    startPlasmaSession.setProcessChannelMode(QProcess::ForwardedChannels);
+
     QDBusServiceWatcher serviceWatcher;
     serviceWatcher.setConnection(QDBusConnection::sessionBus());
 
@@ -403,7 +405,8 @@ bool startPlasmaSession(bool wayland)
         }
     });
 
-    startPlasmaSession.start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
+//     startPlasmaSession.start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
+
     e.exec();
     return rc;
 }
