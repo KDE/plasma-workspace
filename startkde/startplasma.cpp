@@ -234,6 +234,8 @@ void setupPlasmaEnvironment()
     qputenv("KDE_SESSION_VERSION", "5");
     qputenv("KDE_SESSION_UID", QByteArray::number(getuid()));
     qputenv("XDG_CURRENT_DESKTOP", "KDE");
+
+    qputenv("KDE_APPLICATIONS_AS_SCOPE", "1");
 }
 
 void setupX11()
