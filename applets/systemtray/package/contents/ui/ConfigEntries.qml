@@ -211,6 +211,12 @@ ColumnLayout {
                                 }
                                 break
                             case "disabled":
+                                if (shownIndex > -1) {
+                                    cfg_shownItems.splice(shownIndex, 1)
+                                }
+                                if (hiddenIndex > -1) {
+                                    cfg_hiddenItems.splice(hiddenIndex, 1)
+                                }
                                 if (extraIndex > -1) {
                                     cfg_extraItems.splice(extraIndex, 1)
                                 }
