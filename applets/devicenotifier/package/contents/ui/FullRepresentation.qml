@@ -3,6 +3,7 @@
  *   Copyright 2012 Jacopo De Simoi <wilderkde@gmail.com>
  *   Copyright 2014 David Edmundson <davidedmundson@kde.org>
  *   Copyright 2014 Marco Martin <mart@kde.org>
+ *   Copyright 2020 Nate Graham <nate@kde.org>
  *
  *
  *   This program is free software; you can redistribute it and/or modify
@@ -137,11 +138,10 @@ MouseArea {
 
                 model: filterModel
 
-                delegate: deviceItem
+                delegate: DeviceItem {
+                    udi: DataEngineSource
+                }
                 highlight: PlasmaComponents.Highlight { }
-                highlightMoveDuration: 0
-                highlightResizeDuration: 0
-                spacing: units.smallSpacing
 
                 currentIndex: devicenotifier.currentIndex
 
@@ -162,70 +162,6 @@ MouseArea {
                     }
                 }
             }
-        }
-    }
-
-    Component {
-        id: deviceItem
-
-        DeviceItem {
-            width: notifierDialog.width
-            udi: DataEngineSource
-            Binding on icon {
-                when: sdSource.data[udi] !== undefined
-                value: sdSource.data[udi].Icon
-            }
-            Binding on deviceName {
-                when: sdSource.data[udi] !== undefined
-                value: sdSource.data[udi].Description
-            }
-            emblemIcon: Emblems && Emblems[0] ? Emblems[0] : ""
-            state: sdSource.data[udi] ? sdSource.data[udi].State : 0
-            isRoot: sdSource.data[udi]["File Path"] === "/"
-
-            percentUsage: {
-                if (!sdSource.data[udi]) {
-                    return 0
-                }
-                var freeSpace = new Number(sdSource.data[udi]["Free Space"]);
-                var size = new Number(sdSource.data[udi]["Size"]);
-                var used = size-freeSpace;
-                return used*100/size;
-            }
-            freeSpaceText: sdSource.data[udi] && sdSource.data[udi]["Free Space Text"] ? sdSource.data[udi]["Free Space Text"] : ""
-
-            actionIcon: mounted ? "media-eject" : "media-mount"
-            actionVisible: model["Device Types"].indexOf("Portable Media Player") === -1
-            actionToolTip: {
-                var types = model["Device Types"];
-                if (!mounted) {
-                    return i18n("Click to access this device from other applications.")
-                } else if (types && types.indexOf("OpticalDisc") !== -1) {
-                    return i18n("Click to eject this disc.")
-                } else {
-                    return i18n("Click to safely remove this device.")
-                }
-            }
-            mounted: devicenotifier.isMounted(udi)
-
-            onActionTriggered: {
-                var operationName = mounted ? "unmount" : "mount";
-                var service = sdSource.serviceForSource(udi);
-                var operation = service.operationDescription(operationName);
-                service.startOperationCall(operation);
-            }
-            property int operationResult: (model["Operation result"])
-
-            onOperationResultChanged: {
-                if (operationResult == 1) {
-                    devicenotifier.popupIcon = "dialog-ok"
-                    popupIconTimer.restart()
-                } else if (operationResult == 2) {
-                    devicenotifier.popupIcon = "dialog-error"
-                    popupIconTimer.restart()
-                }
-            }
-            Behavior on height { NumberAnimation { duration: units.shortDuration } }
         }
     }
 }

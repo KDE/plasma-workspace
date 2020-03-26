@@ -572,9 +572,10 @@ bool SolidDeviceEngine::updateStorageSpace(const QString &udi)
             timer->stop();
 
             if (!job->error()) {
-                setData(udi, I18N_NOOP("Free Space"), QVariant(available));
+                setData(udi, I18N_NOOP("Free Space"), QVariant(available).toDouble());
                 setData(udi, I18N_NOOP("Free Space Text"), KFormat().formatByteSize(available));
-                setData(udi, I18N_NOOP("Size"), QVariant(size));
+                setData(udi, I18N_NOOP("Size"), QVariant(size).toDouble());
+                setData(udi, I18N_NOOP("Size Text"), KFormat().formatByteSize(size));
             }
 
             m_paths.remove(path);

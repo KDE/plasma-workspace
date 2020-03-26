@@ -43,7 +43,6 @@ Item {
             return "nonRemovable"
         }
     }
-    property string expandedDevice
     property string popupIcon: "device-notifier"
 
     property bool itemClicked: false
@@ -124,13 +123,13 @@ Item {
             if (data[source].Removable) {
                 devicenotifier.connectedRemovables.push(source);
                 devicenotifier.connectedRemovables = devicenotifier.connectedRemovables;
+                devicenotifier.popupIcon = "preferences-desktop-notification";
+                expandTimer.restart();
+                popupIconTimer.restart()
             }
         }
 
         onSourceRemoved: {
-            if (expandedDevice == source) {
-                expandedDevice = "";
-            }
             disconnectSource(source);
             var index = devicenotifier.connectedRemovables.indexOf(source);
             if (index >= 0) {
@@ -174,9 +173,6 @@ Item {
         function processLastDevice(expand) {
             if (last) {
                 if (isViableDevice(last)) {
-                    if (expand && hpSource.data[last].added) {
-                        expandDevice(last);
-                    }
                     last = "";
                 }
             }
@@ -253,24 +249,8 @@ Item {
             // reset the property that lets us remember if an item was clicked
             // (versus only hovered) for autohide purposes
             devicenotifier.itemClicked = true;
-            expandedDevice = "";
             devicenotifier.currentIndex = -1;
         }
-    }
-
-    function expandDevice(udi) {
-        if (hpSource.data[udi]["actions"].length > 1) {
-            expandedDevice = udi
-        }
-
-        // reset the property that lets us remember if an item was clicked
-        // (versus only hovered) for autohide purposes
-        devicenotifier.itemClicked = false;
-
-        devicenotifier.popupIcon = "preferences-desktop-notification";
-        //plasmoid.expanded = true;
-        expandTimer.restart();
-        popupIconTimer.restart()
     }
 
     function isMounted(udi) {

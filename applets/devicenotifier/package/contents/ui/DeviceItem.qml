@@ -2,6 +2,7 @@
  *   Copyright 2011 Viranch Mehta <viranch.mehta@gmail.com>
  *   Copyright 2012 Jacopo De Simoi <wilderkde@gmail.com>
  *   Copyright 2016 Kai Uwe Broulik <kde@privat.broulik.de>
+ *   Copyright 2020 Nate Graham <nate@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -20,78 +21,55 @@
  */
 
 import QtQuick 2.0
-import QtQuick.Layouts 1.1
+import QtQuick.Controls 2.12 as QQC2
+import QtQml.Models 2.14
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
+
 import org.kde.kquickcontrolsaddons 2.0
 
-MouseArea {
+PlasmaExtras.ExpandableListItem {
     id: deviceItem
 
     property string udi
-    property alias icon: deviceIcon.source
-    property alias deviceName: deviceLabel.text
-    property string emblemIcon
-    property int state
+    readonly property int state: sdSource.data[udi] ? sdSource.data[udi].State : 0
+    readonly property int operationResult: (model["Operation result"])
 
-    property bool mounted
-    property bool isRoot
-    property bool expanded: devicenotifier.expandedDevice == udi
-    property alias percentUsage: freeSpaceBar.value
-    property string freeSpaceText
-
-    signal actionTriggered
-
-    property alias actionIcon: actionButton.iconName
-    property alias actionToolTip: actionButton.tooltip
-    property bool actionVisible
-
+    // don't show unmount actions for root and media players; instead, show an
+    // "Open in file manager" button instead, so the user can do something useful
+    readonly property bool unmountable: sdSource.data[udi]["File Path"] !== "/"
+                                        && model["Device Types"].indexOf("Portable Media Player") == -1
+    readonly property bool isMounted: devicenotifier.isMounted(udi)
     readonly property bool hasMessage: statusSource.lastUdi == udi && statusSource.data[statusSource.last] ? true : false
     readonly property var message: hasMessage ? statusSource.data[statusSource.last] || ({}) : ({})
 
-    height: row.childrenRect.height + 2 * row.y
-    hoverEnabled: true
+    readonly property double freeSpace: sdSource.data[udi] && sdSource.data[udi]["Free Space"] ? sdSource.data[udi]["Free Space"] : -1.0
+    readonly property double totalSpace: sdSource.data[udi] && sdSource.data[udi]["Size"] ? sdSource.data[udi]["Size"] : -1.0
+    property bool freeSpaceKnown: freeSpace > 0 && totalSpace > 0
+
+    onOperationResultChanged: {
+        if (!popupIconTimer.running) {
+            if (operationResult == 1) {
+                devicenotifier.popupIcon = "dialog-ok"
+                popupIconTimer.restart()
+            } else if (operationResult == 2) {
+                devicenotifier.popupIcon = "dialog-error"
+                popupIconTimer.restart()
+            }
+        }
+    }
 
     onHasMessageChanged: {
-        if (hasMessage) {
+        if (deviceItem.hasMessage) {
             messageHighlight.highlight(this)
-        }
-    }
-
-    onContainsMouseChanged: {
-        if (containsMouse) {
-            devicenotifier.currentIndex = index
-        }
-
-        // this is done to hide the highlight if the mouse moves out of the list view
-        // and we are not hovering anything
-        if (deviceItem.ListView.view.highlightItem) {
-            deviceItem.ListView.view.highlightItem.opacity = (containsMouse ? 1 : 0)
-        }
-    }
-
-    onClicked: {
-        var data = hpSource.data[udi]
-        if (!data) {
-            return
-        }
-
-        var actions = data.actions
-        if (actions.length === 1) {
-            var service = hpSource.serviceForSource(udi)
-            var operation = service.operationDescription("invokeAction")
-            operation.predicate = actions[0].predicate
-            service.startOperationCall(operation)
-        } else {
-            devicenotifier.expandedDevice = (expanded ? "" : udi)
         }
     }
 
     Connections {
         target: unmountAll
         onClicked: {
-            if (model["Removable"] && mounted) {
+            if (model["Removable"] && isMounted) {
                 actionTriggered();
             }
         }
@@ -100,25 +78,21 @@ MouseArea {
     // this keeps the delegate around for 5 seconds after the device has been
     // removed in case there was a message, such as "you can now safely remove this"
     ListView.onRemove: {
-        if (devicenotifier.expandedDevice == udi) {
-            devicenotifier.expandedDevice = ""
-        }
+        deviceItem.isEnabled = false
 
         if (deviceItem.hasMessage) {
             ListView.delayRemove = true
             keepDelegateTimer.restart()
 
-            statusMessage.opacity = 1 // HACK seems the Column animation breaksf
-            freeSpaceBar.visible = false
-            actionButton.visible = false
-
             ++devicenotifier.pendingDelegateRemoval // QTBUG-50380
         }
+        // Otherwise there are briefly multiple highlight effects
+        devicenotifier.currentIndex = -1
     }
 
     Timer {
         id: keepDelegateTimer
-        interval: 3000 // same interval as the auto hide / passive timer
+        interval: 5000 // same interval as the auto hide / passive timer
         onTriggered: {
             deviceItem.ListView.delayRemove = false
             // otherwise the last message will show again when this device reappears
@@ -132,7 +106,7 @@ MouseArea {
         id: updateStorageSpaceTimer
         interval: 5000
         repeat: true
-        running: mounted && plasmoid.expanded
+        running: isMounted && plasmoid.expanded
         triggeredOnStart: true     // Update the storage space as soon as we open the plasmoid
         onTriggered: {
             var service = sdSource.serviceForSource(udi);
@@ -141,202 +115,127 @@ MouseArea {
         }
     }
 
-    RowLayout {
-        id: row
-        anchors.horizontalCenter: parent.horizontalCenter
-        y: units.smallSpacing
-        width: parent.width - 2 * units.smallSpacing
-        spacing: units.smallSpacing
+    Component {
+        id: deviceActionComponent
+        QQC2.Action { }
+    }
 
-        // FIXME: Device item loses focus on mounting/unmounting it,
-        // or specifically, when some UI element changes.
-        PlasmaCore.IconItem {
-            id: deviceIcon
-            Layout.alignment: Qt.AlignTop
-            Layout.preferredWidth: units.iconSizes.medium
-            Layout.preferredHeight: width
-            enabled: deviceItem.state == 0
-            active: iconToolTip.containsMouse
+    function actionTriggered() {
+        var service
+        var operationName
+        var operation
+        if (!deviceItem.unmountable) {
+            service = hpSource.serviceForSource(udi);
+            operation = service.operationDescription('invokeAction');
+            operation.predicate = "test-predicate-openinwindow.desktop";
+        } else {
+            var wasMounted = isMounted;
+            service = sdSource.serviceForSource(udi);
+            operation = service.operationDescription(wasMounted ? "unmount" : "mount");
+        }
+        service.startOperationCall(operation);
+        if (wasMounted) {
+            deviceItem.collapse();
+        }
+    }
 
-            PlasmaCore.IconItem {
-                id: deviceEmblem
-                anchors {
-                    left: parent.left
-                    bottom: parent.bottom
+
+    icon: sdSource.data[udi] == undefined ? "" : sdSource.data[udi].Icon
+
+    iconEmblem: {
+        if (sdSource.data[udi] != undefined) {
+            if (deviceItem.hasMessage) {
+                if (deviceItem.message.solidError === 0) {
+                    return "emblem-information"
+                } else {
+                    return "emblem-error"
                 }
-                width: units.iconSizes.small
-                height: width
-                source: {
-                    if (deviceItem.hasMessage) {
-                        if (deviceItem.message.solidError === 0) {
-                            return "emblem-information"
-                        } else {
-                            return "emblem-error"
-                        }
-                    } else if (deviceItem.state == 0) {
-                        return emblemIcon
-                    } else {
-                        return ""
-                    }
-                }
+            } else if (deviceItem.state == 0 && Emblems && Emblems[0]) {
+                return Emblems[0]
+            } else {
+                return ""
             }
+        }
+        return ""
+    }
 
-            PlasmaCore.ToolTipArea {
-                id: iconToolTip
-                anchors.fill: parent
-                subText: {
-                    if ((mounted || deviceItem.state != 0) && model["Available Content"] !== "Audio") {
-                        if (model["Removable"]) {
-                            return i18n("It is currently <b>not safe</b> to remove this device: applications may be accessing it. Click the eject button to safely remove this device.")
-                        } else {
-                            return i18n("This device is currently accessible.")
-                        }
-                    } else {
-                        if (model["Removable"]) {
-                            if (model["In Use"]) {
-                                return i18n("It is currently <b>not safe</b> to remove this device: applications may be accessing other volumes on this device. Click the eject button on these other volumes to safely remove this device.");
-                            } else {
-                                return i18n("It is currently safe to remove this device.")
-                            }
-                        } else {
-                            return i18n("This device is not currently accessible.")
-                        }
-                    }
+    title: sdSource.data[udi] == undefined ? "" : sdSource.data[udi].Description
+
+    subtitle: {
+        if (deviceItem.hasMessage) {
+            return deviceItem.message.error
+        }
+        if (deviceItem.state == 0) {
+            if (!hpSource.data[udi]) {
+                return ""
+            }
+            if (freeSpaceKnown) {
+                var freeSpaceText = sdSource.data[udi]["Free Space Text"]
+                var totalSpaceText = sdSource.data[udi]["Size Text"]
+                return i18nc("@info:status Free disk space", "%1 free of %2", freeSpaceText, totalSpaceText)
+            }
+            return ""
+        } else if (deviceItem.state == 1) {
+            return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing...")
+        } else {
+            return i18nc("Removing is a less technical word for Unmounting; translation should be short and mean \'Currently unmounting this device\'", "Removing...")
+        }
+    }
+
+    subtitleCanWrap: true
+
+    // Color the subtitle red for disks with less than 5% free space
+    subtitleColor: {
+        if (freeSpaceKnown) {
+            if (freeSpace / totalSpace <= 0.05) {
+                return theme.negativeTextColor
+            }
+        }
+        return theme.textColor
+    }
+
+    defaultActionButtonAction: QQC2.Action {
+        icon.name: {
+            if (!deviceItem.unmountable) {
+                return "document-open-folder"
+            } else {
+                return isMounted ? "media-eject" : "media-mount"
+            }
+        }
+        text: {
+            if (!deviceItem.unmountable) {
+                return i18n("Open in File Manager")
+            } else {
+                var types = model["Device Types"];
+                if (!isMounted) {
+                    return i18n("Mount")
+                } else if (types && types.indexOf("OpticalDisc") !== -1) {
+                    return i18n("Eject")
+                } else {
+                    return i18n("Safely remove")
                 }
             }
         }
+        onTriggered: actionTriggered()
+    }
 
-        Column {
-            Layout.fillWidth: true
+    isBusy: deviceItem.state != 0
 
-            move: Transition {
-                NumberAnimation { property: "y"; duration: units.longDuration; easing.type: Easing.InOutQuad }
-                // ensure opacity values return to 1.0 if the add transition animation has been interrupted
-                NumberAnimation { property: "opacity"; to: 1.0 }
-            }
-
-            add: Transition {
-                NumberAnimation {
-                    property: "opacity"
-                    from: 0
-                    to: 1
-                    duration: units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-
-            PlasmaComponents.Label {
-                id: deviceLabel
-                width: parent.width
-                height: undefined // reset PlasmaComponent.Label's strange default height
-                elide: Text.ElideRight
-            }
-
-            PlasmaComponents.ProgressBar {
-                id: freeSpaceBar
-                width: parent.width
-                height: units.gridUnit // default is * 1.6
-                visible: deviceItem.state == 0 && mounted
-                minimumValue: 0
-                maximumValue: 100
-
-                PlasmaCore.ToolTipArea {
-                    anchors.fill: parent
-                    subText: freeSpaceText != "" ? i18nc("@info:status Free disk space", "%1 free", freeSpaceText) : ""
-                }
-
-                // ProgressBar eats click events, so we'll forward them manually here...
-                // setting enabled to false will also make the ProgressBar *look* disabled
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: deviceItem.clicked(mouse)
-                }
-            }
-
-            PlasmaComponents.Label {
-                id: actionMessage
-                width: parent.width
-                height: undefined
-                opacity: 0.6
-                font.pointSize: theme.smallestFont.pointSize
-                visible: deviceItem.state != 0 || (!actionsList.visible && !deviceItem.hasMessage)
-                text: {
-                    if (deviceItem.state == 0) {
-                        if (!hpSource.data[udi]) {
-                            return ""
-                        }
-
-                        var actions = hpSource.data[udi].actions
-                        if (actions.length > 1) {
-                            return i18np("1 action for this device", "%1 actions for this device", actions.length);
-                        } else {
-                            return actions[0].text
-                        }
-                    } else if (deviceItem.state == 1) {
-                        return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing...")
-                    } else {
-                        return i18nc("Removing is a less technical word for Unmounting; translation should be short and mean \'Currently unmounting this device\'", "Removing...")
-                    }
-                }
-            }
-
-            PlasmaComponents.Label {
-                id: statusMessage
-                width: parent.width
-                height: undefined
-                font.pointSize: theme.smallestFont.pointSize
-                text: deviceItem.hasMessage ? (deviceItem.message.error || "") : ""
-                wrapMode: Text.WordWrap
-                maximumLineCount: 10
-                elide: Text.ElideRight
-                visible: deviceItem.hasMessage
-            }
-
-            Item { // spacer
-                width: 1
-                height: units.smallSpacing
-                visible: actionsList.visible
-            }
-
-            ListView {
-                id: actionsList
-                width: parent.width
-                interactive: false
-                model: hpSource.data[udi] ? hpSource.data[udi].actions : null
-                height: deviceItem.expanded ? actionsList.contentHeight : 0
-                visible: height > 0
-                cacheBuffer: 50000 // create all items
-                delegate: ActionItem {
-                    width: actionsList.width
-                    icon: modelData.icon
-                    label: modelData.text
-                    predicate: modelData.predicate
-                }
-                highlight: PlasmaComponents.Highlight {}
-                highlightMoveDuration: 0
-                highlightResizeDuration: 0
+    // We need a JS array full of QQC2 actions; this Instantiator creates them
+    // from the actions list of the data source
+    Instantiator {
+        model: hpSource.data[udi] ? hpSource.data[udi].actions : []
+        delegate: QQC2.Action {
+            text: modelData.text
+            icon.name: modelData.icon
+            onTriggered: {
+                var service = hpSource.serviceForSource(udi);
+                var operation = service.operationDescription('invokeAction');
+                operation.predicate = modelData.predicate;
+                service.startOperationCall(operation);
+                devicenotifier.currentIndex = -1;
             }
         }
-
-        Item {
-            Layout.preferredWidth: units.iconSizes.medium
-            Layout.fillHeight: true
-
-            PlasmaComponents.ToolButton {
-                id: actionButton
-                visible: !busyIndicator.visible && deviceItem.actionVisible
-                enabled: !isRoot
-                onClicked: actionTriggered()
-                y: mounted ? deviceLabel.height + (freeSpaceBar.height - height - units.smallSpacing) / 2 : (deviceLabel.height + actionMessage.height - height) / 2
-            }
-
-            PlasmaComponents.BusyIndicator {
-                id: busyIndicator
-                width: parent.width
-                height: width
-                running: visible
-                visible: deviceItem.state != 0
-            }
-        }
+        onObjectAdded: contextualActionsModel.push(object)
     }
 }
