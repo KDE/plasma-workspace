@@ -2,7 +2,7 @@
 Name=Network speed
 Comment=System monitor Widget that shows the download and upload data rate
 Type=Service
-Icon=ksysguardd
+Icon=network-workgroup
 X-KDE-ServiceTypes=Plasma/Applet
 
 X-Plasma-API=declarativeappletscript
