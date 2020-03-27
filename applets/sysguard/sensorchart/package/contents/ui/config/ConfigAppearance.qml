@@ -28,7 +28,7 @@ import org.kde.kquickcontrols 2.0
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-import org.kde.ksgrd2 0.1 as KSGRD
+import org.kde.ksysguard.sensors 1.0 as Sensors
 
 Kirigami.FormLayout {
     id: root

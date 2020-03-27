@@ -28,7 +28,7 @@ import QtQml.Models 2.12
 
 import org.kde.kirigami 2.2 as Kirigami
 
-import org.kde.ksgrd2 0.1 as KSGRD2
+import org.kde.ksysguard.sensors 1.0 as Sensors2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.quickcharts 1.0 as Charts
@@ -71,7 +71,7 @@ ColumnLayout {
 
             valueSources: [
                 Charts.ModelHistorySource {
-                    model: KSGRD2.SensorDataModel { sensors: [ plasmoid.configuration.totalSensor ] }
+                    model: Sensors2.SensorDataModel { sensors: [ plasmoid.configuration.totalSensor ] }
                     column: 0;
                     row: 0
                     roleName: "Value";
@@ -87,7 +87,7 @@ ColumnLayout {
         Layout.fillWidth: true
         visible: plasmoid.nativeInterface.faceConfiguration.showTableHeaders
         Repeater {
-            model: KSGRD2.HeadingHelperModel {
+            model: Sensors2.HeadingHelperModel {
                 id: headingHelperModel
 
                 sourceModel: tableView.model
@@ -150,7 +150,7 @@ ColumnLayout {
             sortRole: "Value"
             sortOrder: plasmoid.nativeInterface.faceConfiguration.sortDescending ? Qt.DescendingOrder : Qt.AscendingOrder
 
-            sourceModel:  KSGRD2.SensorDataModel {
+            sourceModel:  Sensors2.SensorDataModel {
                 id: dataModel
                 sensors: plasmoid.configuration.sensorIds
                 onSensorsChanged: {

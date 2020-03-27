@@ -27,7 +27,7 @@ import QtQml.Models 2.12
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kquickcontrols 2.0
 
-import org.kde.ksgrd2 0.1 as KSGRD
+import org.kde.ksysguard.sensors 1.0 as Sensors
 
 DropArea {
     id: root
@@ -95,7 +95,7 @@ DropArea {
                 Controls.Label {
                     Layout.fillWidth: true
                     text: sensor.name
-                    KSGRD.Sensor {
+                    Sensors.Sensor {
                         id: sensor
                         sensorId: model.sensorId
                     }

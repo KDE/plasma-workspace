@@ -24,7 +24,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.kirigami 2.8 as Kirigami
 
-import org.kde.ksgrd2 0.1 as KSGRD
+import org.kde.ksysguard.sensors 1.0 as Sensors
 import org.kde.quickcharts 1.0 as Charts
 
 ColumnLayout
@@ -53,7 +53,7 @@ ColumnLayout
         Layout.preferredHeight: 5 * Kirigami.Units.gridUnit
     }
 
-    KSGRD.ExtendedLegend {
+    Sensors.ExtendedLegend {
         Layout.fillWidth: true
         Layout.fillHeight: true
         visible: root.showLegend

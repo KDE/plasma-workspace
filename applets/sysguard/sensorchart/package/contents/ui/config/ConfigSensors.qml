@@ -29,7 +29,7 @@ import org.kde.kquickcontrols 2.0
 
 import org.kde.kitemmodels 1.0 as KItemModels
 
-import org.kde.ksgrd2 0.1 as KSGRD
+import org.kde.ksysguard.sensors 1.0 as Sensors
 
 import org.kde.plasma.core 2.1 as PlasmaCore
 
@@ -44,7 +44,7 @@ ColumnLayout {
 
     property alias cfg_textOnlySensorIds: textOnlySensorsView.sensorIds
 
-    KSGRD.Sensor {
+    Sensors.Sensor {
         id: totalSensor
         sensorId: cfg_totalSensor
     }
@@ -91,7 +91,7 @@ ColumnLayout {
                 Controls.Label {
                     Layout.fillWidth: true
                     text: sensor.name
-                    KSGRD.Sensor {
+                    Sensors.Sensor {
                         id: sensor
                         sensorId: model.sensorId
                     }
@@ -206,7 +206,7 @@ ColumnLayout {
                         }
                     }
 
-                    KSGRD.SensorTreeModel {
+                    Sensors.SensorTreeModel {
                         id: allSensorsTreeModel
                     }
 

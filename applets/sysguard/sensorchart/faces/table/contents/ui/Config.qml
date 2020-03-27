@@ -23,7 +23,7 @@ import QtQuick.Controls 2.2 as Controls
 
 import org.kde.kirigami 2.8 as Kirigami
 
-import org.kde.ksgrd2 0.1 as KSGRD
+import org.kde.ksysguard.sensors 1.0 as Sensors
 
 Kirigami.FormLayout {
     id: root
@@ -38,8 +38,8 @@ Kirigami.FormLayout {
         Controls.ComboBox {
             id: sortColumnCombo
             textRole: "display"
-            model: KSGRD.HeadingHelperModel {
-                sourceModel: KSGRD.SensorDataModel {
+            model: Sensors.HeadingHelperModel {
+                sourceModel: Sensors.SensorDataModel {
                     sensors: plasmoid.configuration.sensorIds
                 }
             }
