@@ -9,7 +9,7 @@ set(krunner_powerdevil_SRCS
 )
 
 add_library(krunner_powerdevil MODULE ${krunner_powerdevil_SRCS})
-target_link_libraries(krunner_powerdevil Qt5::DBus KF5::ConfigCore KF5::I18n KF5::KIOWidgets KF5::Plasma KF5::Runner KF5::KDELibs4Support)
+target_link_libraries(krunner_powerdevil Qt5::DBus KF5::ConfigCore KF5::I18n KF5::Plasma KF5::Runner KF5::KDELibs4Support)
 
 install(TARGETS krunner_powerdevil DESTINATION ${KDE_INSTALL_PLUGINDIR})
 

@@ -29,7 +29,6 @@
 
 #include <KSharedConfig>
 #include <KLocalizedString>
-#include <KRun>
 
 #include <Solid/PowerManagement>
 
