@@ -26,6 +26,7 @@ Name[pt]=Plasma (Desenvolvimento, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[pt_BR]=Plasma (Desenvolvimento, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ru]=Plasma (разрабатываемая версия, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[sk]=Plasma (Development, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
+Name[sl]=Plasma (Razvoj, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[sv]=Plasma (utveckling, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[uk]=Пзазма (Розробка, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[x-test]=xxPlasma (Development, Wayland ${CMAKE_INSTALL_FULL_BINDIR})xx

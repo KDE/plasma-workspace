@@ -83,6 +83,7 @@ Name[pt]=Executar o comando no conteúdo da área de transferência
 Name[pt_BR]=Executar comando no conteúdo da área de transferência
 Name[ru]=Запустить команду из буфера обмена
 Name[sk]=Spustiť príkaz na obsahu schránky
+Name[sl]=Zaženi ukaz na vsebini odložišča
 Name[sv]=Kör kommando med klippbordets innehåll
 Name[uk]=Виконати команду над вмістом буфера обміну
 Name[x-test]=xxRun command on clipboard contentsxx

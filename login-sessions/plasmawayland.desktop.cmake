@@ -30,6 +30,7 @@ Name[pt]=Plasma (Wayland)
 Name[pt_BR]=Plasma (Wayland)
 Name[ru]=Plasma (Wayland)
 Name[sk]=Plasma (Wayland)
+Name[sl]=Plasma (Wayland)
 Name[sv]=Plasma (Wayland)
 Name[uk]=Плазма (Wayland)
 Name[x-test]=xxPlasma (Wayland)xx

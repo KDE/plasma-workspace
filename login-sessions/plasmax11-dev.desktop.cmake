@@ -27,6 +27,7 @@ Name[pt]=Plasma (Desenvolvimento, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[pt_BR]=Plasma (Desenvolvimento, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ru]=Plasma (разрабатываемая версия, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[sk]=Plasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})
+Name[sl]=Plasma (Razvoj, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[sv]=Plasma (utveckling, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[uk]=Пзазма (Розробка, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[x-test]=xxPlasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})xx
