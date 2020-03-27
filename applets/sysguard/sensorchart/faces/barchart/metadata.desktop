@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Bar Chart
+Icon=office-chart-bar
+
+Type=Service
+X-KDE-ServiceTypes=Plasma/SensorApplet
+X-KDE-ParentApp=org.kde.plasmashell
+X-KDE-PluginInfo-Author=Kai Uwe Broulik
+X-KDE-PluginInfo-Email=kde@broulik.de
+X-KDE-PluginInfo-License=LGPLv2+
+X-KDE-PluginInfo-Name=org.kde.ksysguard.barchart
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=https://kde.org
+
+[Config]
+SupportsSensorsColors=true
+SupportsTotalSensor=false
+SupportsTextOnlySensors=true

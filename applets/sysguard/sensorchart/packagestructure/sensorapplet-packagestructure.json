@@ -1,0 +1,21 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "mart@kde.org",
+                "Name": "Marco Martin"
+            },
+            {
+                "Email": "aseigo@kde.org",
+                "Name": "Aaron Seigo"
+            }
+        ],
+        "Id": "Plasma/SensorApplet",
+        "Name": "Face for the KSysguard Sensor Applet",
+        "ServiceTypes": [
+            "KPackage/PackageStructure"
+        ],
+        "Version": "1"
+    },
+    "X-KDE-ParentApp": "org.kde.plasmashell"
+}

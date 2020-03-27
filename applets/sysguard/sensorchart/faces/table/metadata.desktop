@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Table
+Icon=table
+
+Type=Service
+X-KDE-ServiceTypes=Plasma/SensorApplet
+X-KDE-ParentApp=org.kde.plasmashell
+X-KDE-PluginInfo-Author=Marco Martin
+X-KDE-PluginInfo-Email=mart@kde.org
+X-KDE-PluginInfo-License=LGPLv2+
+X-KDE-PluginInfo-Name=org.kde.ksysguard.table
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=https://kde.org
+
+[Config]
+SupportsSensorsColors=false
+SupportsTotalSensor=true
+SupportsTextOnlySensors=false
