@@ -24,7 +24,6 @@
 #include <QUrl>
 #include <QDebug>
 #include <QQuickWindow>
-#include <QSessionManager>
 #include <QDBusMessage>
 #include <QDBusConnection>
 
@@ -44,6 +43,7 @@ int main(int argc, char **argv)
     qunsetenv("QT_DEVICE_PIXEL_RATIO");
     QCommandLineParser parser;
     QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
 
     const bool qpaVariable = qEnvironmentVariableIsSet("QT_QPA_PLATFORM");
     KWorkSpace::detectPlatform(argc, argv);
@@ -90,14 +90,6 @@ int main(int argc, char **argv)
     }
 
     KDBusService service(KDBusService::Unique | KDBusService::StartupOption(parser.isSet(replaceOption) ? KDBusService::Replace : 0));
-
-    QGuiApplication::setFallbackSessionManagementEnabled(false);
-
-    auto disableSessionManagement = [](QSessionManager &sm) {
-        sm.setRestartHint(QSessionManager::RestartNever);
-    };
-    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
-    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     View view;
 

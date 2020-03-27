@@ -18,7 +18,6 @@
  */
 
 #include <QGuiApplication>
-#include <QSessionManager>
 
 #include <KWindowSystem>
 
@@ -29,18 +28,13 @@ int main(int argc, char ** argv)
     qputenv("QT_QPA_PLATFORM", "xcb");
 
     QGuiApplication::setDesktopSettingsAware(false);
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
 
     QGuiApplication app(argc, argv);
 
     if (!KWindowSystem::isPlatformX11()) {
         qFatal("qdbusmenuproxy is only useful XCB. Aborting");
     }
-
-    auto disableSessionManagement = [](QSessionManager &sm) {
-        sm.setRestartHint(QSessionManager::RestartNever);
-    };
-    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
-    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     app.setQuitOnLastWindowClosed(false);
 
