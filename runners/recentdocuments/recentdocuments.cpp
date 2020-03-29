@@ -127,7 +127,8 @@ void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::Qu
         return;
     }
 
-    new KRun(QUrl(url), nullptr);
+    auto run = new KRun(QUrl(url), nullptr);
+    run->setRunExecutables(false);
 }
 
 QList<QAction *> RecentDocuments::actionsForMatch(const Plasma::QueryMatch &match)
