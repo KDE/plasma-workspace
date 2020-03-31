@@ -52,6 +52,7 @@ public slots:
     void onConfigurationChanged(const KConfigGroup &config);
 
 private slots:
+    void onRowsInserted(const QModelIndex &parent, int first, int last);
     void onDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles);
 
 private:

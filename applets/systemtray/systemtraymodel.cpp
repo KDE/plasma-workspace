@@ -33,6 +33,7 @@ BaseModel::BaseModel(QObject *parent)
     : QStandardItemModel(parent),
       m_showAllItems(false)
 {
+    connect(this, &BaseModel::rowsInserted, this, &BaseModel::onRowsInserted);
     connect(this, &BaseModel::dataChanged, this, &BaseModel::onDataChanged);
 }
 
@@ -63,6 +64,18 @@ void BaseModel::onConfigurationChanged(const KConfigGroup &config)
     m_hiddenItems = generalGroup.readEntry("hiddenItems", QStringList());
 
     for (int i = 0; i < rowCount(); i++) {
+        QStandardItem *dataItem = item(i);
+        updateEffectiveStatus(dataItem);
+    }
+}
+
+void BaseModel::onRowsInserted(const QModelIndex &parent, int first, int last)
+{
+    if (parent.isValid()) {
+        return;
+    }
+
+    for (int i = first; i <= last; ++i) {
         QStandardItem *dataItem = item(i);
         updateEffectiveStatus(dataItem);
     }
