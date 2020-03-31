@@ -44,7 +44,8 @@ PlasmaComponents.ListItem {
 
     onClicked: {
         menuItem.itemSelected(UuidRole);
-        plasmoid.expanded = false;
+        if (plasmoid.hideOnWindowDeactivate)
+            plasmoid.expanded = false;
     }
     onContainsMouseChanged: {
         if (containsMouse) {
