@@ -347,11 +347,11 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
             return *cachedPreview;
         }
 
-        const QUrl file = QUrl::fromLocalFile(path);
-        if (!m_previewJobs.contains(file) && file.isValid()) {
-
+        const QUrl url = QUrl::fromLocalFile(path);
+        const QPersistentModelIndex persistentIndex(index);
+        if (!m_previewJobsUrls.contains(persistentIndex) && url.isValid()) {
             KFileItemList list;
-            list.append(KFileItem(file, QString(), 0));
+            list.append(KFileItem(url, QString(), 0));
             QStringList availablePlugins = KIO::PreviewJob::availablePlugins();
             KIO::PreviewJob* job = KIO::filePreview(list,
                                                     QSize(m_screenshotSize*1.6,
@@ -361,7 +361,7 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
                     this, &BackgroundListModel::showPreview);
             connect(job, &KIO::PreviewJob::failed,
                     this, &BackgroundListModel::previewFailed);
-            const_cast<BackgroundListModel *>(this)->m_previewJobs.insert(file, QPersistentModelIndex(index));
+            const_cast<BackgroundListModel *>(this)->m_previewJobsUrls.insert(persistentIndex, url);
         }
 
         return QVariant();
@@ -436,8 +436,8 @@ void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &prev
         return;
     }
 
-    QPersistentModelIndex index = m_previewJobs.value(item.url());
-    m_previewJobs.remove(item.url());
+    QPersistentModelIndex index = m_previewJobsUrls.key(item.url());
+    m_previewJobsUrls.remove(index);
 
     if (!index.isValid()) {
         return;
@@ -457,7 +457,7 @@ void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &prev
 
 void BackgroundListModel::previewFailed(const KFileItem &item)
 {
-    m_previewJobs.remove(item.url());
+    m_previewJobsUrls.remove(m_previewJobsUrls.key(item.url()));
 }
 
 KPackage::Package BackgroundListModel::package(int index) const

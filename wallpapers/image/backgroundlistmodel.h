@@ -114,7 +114,7 @@ private:
 
     QSet<QString> m_removableWallpapers;
     QHash<QString, QSize> m_sizeCache;
-    QHash<QUrl, QPersistentModelIndex> m_previewJobs;
+    QHash<QPersistentModelIndex, QUrl> m_previewJobsUrls;
     KDirWatch m_dirwatch;
     QCache<QString, QPixmap> m_imageCache;
 
