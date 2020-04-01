@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include "sensorchart.h"
+#include "systemmonitor.h"
 
 #include <QtQml>
 #include <QDebug>
@@ -91,7 +91,7 @@ QHash<int, QByteArray> PresetsModel::roleNames() const
     return roles;
 }
 
-SensorChart::SensorChart(QObject *parent, const QVariantList &args)
+SystemMonitor::SystemMonitor(QObject *parent, const QVariantList &args)
     : Plasma::Applet(parent, args)
 {
     setHasConfigurationInterface(true);
@@ -107,14 +107,14 @@ SensorChart::SensorChart(QObject *parent, const QVariantList &args)
     }
 }
 
-SensorChart::~SensorChart()
+SystemMonitor::~SystemMonitor()
 = default;
 
-void SensorChart::init()
+void SystemMonitor::init()
 {
     configChanged();
 
-    // NOTE: taking the pluginId this way, we take it from the child applet (cpu monitor, memory, whatever) rather than the parent fallback applet (sensorchart)
+    // NOTE: taking the pluginId this way, we take it from the child applet (cpu monitor, memory, whatever) rather than the parent fallback applet (systemmonitor)
     const QString pluginId = KPluginMetaData(kPackage().path() + QStringLiteral("metadata.desktop")).pluginId();
 
     if (!m_pendingStartupPreset.isNull()) {
@@ -130,13 +130,13 @@ void SensorChart::init()
     }
 }
 
-void SensorChart::configChanged()
+void SystemMonitor::configChanged()
 {
     setFace(configScheme()->property("chartFace").toString());
 }
 
-void SensorChart::setFace(const QString &face)
-{
+void SystemMonitor::setFace(const QString &face)
+{qWarning()<<"AAAA"<<face;
     if (face.length() == 0 || face == m_face || face.contains("..")) {
         return;
     }
@@ -155,7 +155,7 @@ void SensorChart::setFace(const QString &face)
     m_faceMetadata = new KDesktopFile(m_facePackage.path() + QStringLiteral("metadata.desktop"));
 
     const QString xmlPath = m_facePackage.filePath("mainconfigxml");
-
+qWarning()<<"AAAAA"<<xmlPath;
     if (!xmlPath.isEmpty()) {
         QFile file(xmlPath);
         KConfigGroup cg = config();
@@ -173,12 +173,12 @@ void SensorChart::setFace(const QString &face)
     emit faceChanged();
 }
 
-QString SensorChart::face() const
+QString SystemMonitor::face() const
 {
     return m_face;
 }
 
-QString SensorChart::faceName() const
+QString SystemMonitor::faceName() const
 {
     if (!m_faceMetadata) {
         return QString();
@@ -186,7 +186,7 @@ QString SensorChart::faceName() const
     return m_faceMetadata->readName();
 }
 
-QString SensorChart::faceIcon() const
+QString SystemMonitor::faceIcon() const
 {
     if (!m_faceMetadata) {
         return QString();
@@ -194,12 +194,12 @@ QString SensorChart::faceIcon() const
     return m_faceMetadata->readIcon();
 }
 
-QString SensorChart::currentPreset() const
+QString SystemMonitor::currentPreset() const
 {
     return m_currentPreset;
 }
 
-void SensorChart::setCurrentPreset(const QString &preset)
+void SystemMonitor::setCurrentPreset(const QString &preset)
 {
     if (preset == m_currentPreset) {
         return;
@@ -222,12 +222,12 @@ void SensorChart::setCurrentPreset(const QString &preset)
         return;
     }
 
-    if (presetPackage.metadata().value(QStringLiteral("X-Plasma-RootPath")) != QStringLiteral("org.kde.ksysguard.sensorchart")) {
+    if (presetPackage.metadata().value(QStringLiteral("X-Plasma-RootPath")) != QStringLiteral("org.kde.plasma.systemmonitor")) {
         return;
     }
 
-    disconnect(configScheme(), &KCoreConfigSkeleton::configChanged, this, &SensorChart::resetToCustomPresetUserConfiguring);
-    disconnect(m_faceConfigLoader, &KCoreConfigSkeleton::configChanged, this, &SensorChart::resetToCustomPresetUserConfiguring);
+    disconnect(configScheme(), &KCoreConfigSkeleton::configChanged, this, &SystemMonitor::resetToCustomPresetUserConfiguring);
+    disconnect(m_faceConfigLoader, &KCoreConfigSkeleton::configChanged, this, &SystemMonitor::resetToCustomPresetUserConfiguring);
 
     KDesktopFile df(presetPackage.path() + QStringLiteral("metadata.desktop"));
     KConfigGroup configGroup(df.group("Config"));
@@ -284,27 +284,29 @@ void SensorChart::setCurrentPreset(const QString &preset)
         }
     }
 
-    configGroup = KConfigGroup(df.group("FaceConfig"));
-    for (const QString &key : configGroup.keyList()) {
-        KConfigSkeletonItem *item = m_faceConfigLoader->findItemByName(key);
-        if (item) {
-            if (item->property().type() == QVariant::StringList) {
-                item->setProperty(configGroup.readEntry(key, QStringList()));
-            } else {
-                item->setProperty(configGroup.readEntry(key));
+    if (m_faceConfigLoader) {
+        configGroup = KConfigGroup(df.group("FaceConfig"));
+        for (const QString &key : configGroup.keyList()) {
+            KConfigSkeletonItem *item = m_faceConfigLoader->findItemByName(key);
+            if (item) {
+                if (item->property().type() == QVariant::StringList) {
+                    item->setProperty(configGroup.readEntry(key, QStringList()));
+                } else {
+                    item->setProperty(configGroup.readEntry(key));
+                }
+                m_faceConfigLoader->save();
+                m_faceConfigLoader->read();
             }
-            m_faceConfigLoader->save();
-            m_faceConfigLoader->read();
         }
     }
 
     emit currentPresetChanged();
 
-    connect(configScheme(), &KCoreConfigSkeleton::configChanged, this, &SensorChart::resetToCustomPresetUserConfiguring);
-    connect(m_faceConfigLoader, &KCoreConfigSkeleton::configChanged, this, &SensorChart::resetToCustomPresetUserConfiguring);
+    connect(configScheme(), &KCoreConfigSkeleton::configChanged, this, &SystemMonitor::resetToCustomPresetUserConfiguring);
+    connect(m_faceConfigLoader, &KCoreConfigSkeleton::configChanged, this, &SystemMonitor::resetToCustomPresetUserConfiguring);
 }
 
-void SensorChart::resetToCustomPresetUserConfiguring()
+void SystemMonitor::resetToCustomPresetUserConfiguring()
 {
     // automatically switch to "custom" preset only when the user changes settings from the dialog, *not* nettings changed programmatically by the plasmoid itself
     if (isUserConfiguring()) {
@@ -312,7 +314,7 @@ void SensorChart::resetToCustomPresetUserConfiguring()
     }
 }
 
-void SensorChart::resetToCustomPreset()
+void SystemMonitor::resetToCustomPreset()
 {
     if (m_availablePresetsModel &&
         !m_availablePresetsModel->data(m_availablePresetsModel->index(0, 0), PresetsModel::PluginIdRole).toString().isEmpty()) {
@@ -324,22 +326,22 @@ void SensorChart::resetToCustomPreset()
     setCurrentPreset(QString());
 }
 
-QString SensorChart::compactRepresentationPath() const
+QString SystemMonitor::compactRepresentationPath() const
 {
     return m_facePackage.filePath("CompactRepresentation");
 }
 
-QString SensorChart::fullRepresentationPath() const
+QString SystemMonitor::fullRepresentationPath() const
 {
     return m_facePackage.filePath("FullRepresentation");
 }
 
-QString SensorChart::configPath() const
+QString SystemMonitor::configPath() const
 {
     return m_facePackage.filePath("ConfigUI");
 }
 
-bool SensorChart::supportsSensorsColors() const
+bool SystemMonitor::supportsSensorsColors() const
 {
     if (!m_faceMetadata) {
         return false;
@@ -349,7 +351,7 @@ bool SensorChart::supportsSensorsColors() const
     return cg.readEntry("SupportsSensorsColors", false);
 }
 
-bool SensorChart::supportsTotalSensor() const
+bool SystemMonitor::supportsTotalSensor() const
 {
     if (!m_faceMetadata) {
         return false;
@@ -359,7 +361,7 @@ bool SensorChart::supportsTotalSensor() const
     return cg.readEntry("SupportsTotalSensor", false);
 }
 
-bool SensorChart::supportsTextOnlySensors() const
+bool SystemMonitor::supportsTextOnlySensors() const
 {
     if (!m_faceMetadata) {
         return false;
@@ -369,7 +371,7 @@ bool SensorChart::supportsTextOnlySensors() const
     return cg.readEntry("SupportsTextOnlySensors", false);
 }
 
-QAbstractItemModel *SensorChart::availableFacesModel()
+QAbstractItemModel *SystemMonitor::availableFacesModel()
 {
     if (m_availableFacesModel) {
         return m_availableFacesModel;
@@ -380,7 +382,7 @@ QAbstractItemModel *SensorChart::availableFacesModel()
     return m_availableFacesModel;
 }
 
-QAbstractItemModel *SensorChart::availablePresetsModel()
+QAbstractItemModel *SystemMonitor::availablePresetsModel()
 {
     if (m_availablePresetsModel) {
         return m_availablePresetsModel;
@@ -398,7 +400,7 @@ QAbstractItemModel *SensorChart::availablePresetsModel()
     return m_availablePresetsModel;
 }
 
-void SensorChart::reloadAvailablePresetsModel()
+void SystemMonitor::reloadAvailablePresetsModel()
 {
     if (!m_availablePresetsModel) {
         availablePresetsModel();
@@ -407,7 +409,7 @@ void SensorChart::reloadAvailablePresetsModel()
 
     m_availablePresetsModel->clear();
     QList<KPluginMetaData> plugins = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/Applet"), QString(), [](const KPluginMetaData &plugin) {
-        return plugin.value(QStringLiteral("X-Plasma-RootPath")) == QStringLiteral("org.kde.ksysguard.sensorchart");
+        return plugin.value(QStringLiteral("X-Plasma-RootPath")) == QStringLiteral("org.kde.plasma.systemmonitor");
     });
 
     QSet<QString> usedNames;
@@ -451,12 +453,12 @@ void SensorChart::reloadAvailablePresetsModel()
     }
 }
 
-QObject *SensorChart::faceConfiguration() const
+QObject *SystemMonitor::faceConfiguration() const
 {
     return m_faceConfiguration;
 }
 
-void SensorChart::createNewPreset(const QString &pluginName, const QString &comment, const QString &author, const QString &email, const QString &license, const QString &website)
+void SystemMonitor::createNewPreset(const QString &pluginName, const QString &comment, const QString &author, const QString &email, const QString &license, const QString &website)
 {
     QTemporaryDir dir;
     if (!dir.isValid()) {
@@ -472,7 +474,7 @@ void SensorChart::createNewPreset(const QString &pluginName, const QString &comm
     cg.writeEntry("X-Plasma-API", "declarativeappletscript");
     cg.writeEntry("X-Plasma-MainScript", "ui/main.qml");
     cg.writeEntry("X-Plasma-Provides", "org.kde.plasma.systemmonitor");
-    cg.writeEntry("X-Plasma-RootPath", "org.kde.ksysguard.sensorchart");
+    cg.writeEntry("X-Plasma-RootPath", "org.kde.plasma.systemmonitor");
     cg.writeEntry("X-KDE-PluginInfo-Name", pluginName);
     cg.writeEntry("X-KDE-ServiceTypes", "Plasma/Applet");
     cg.writeEntry("X-KDE-PluginInfo-Author", author);
@@ -506,9 +508,9 @@ void SensorChart::createNewPreset(const QString &pluginName, const QString &comm
     });
 }
 
-void SensorChart::savePreset()
+void SystemMonitor::savePreset()
 {
-    QString pluginName = QStringLiteral("org.kde.ksysguard.sensorchart.preset");
+    QString pluginName = QStringLiteral("org.kde.plasma.systemmonitor.preset");
     int suffix = 0;
 
     auto presetPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"));
@@ -523,16 +525,16 @@ void SensorChart::savePreset()
     createNewPreset(pluginName, QString(), QString(), QString(), QStringLiteral("LGPL 2.1+"), QString());
 }
 
-void SensorChart::getNewPresets(QQuickItem *ctx)
+void SystemMonitor::getNewPresets(QQuickItem *ctx)
 {
-    return getNewStuff(ctx, QStringLiteral("sensorchart-presets.knsrc"), i18n("Download New Presets"));
+    return getNewStuff(ctx, QStringLiteral("systemmonitor-presets.knsrc"), i18n("Download New Presets"));
 }
 
-void SensorChart::uninstallPreset(const QString &pluginId)
+void SystemMonitor::uninstallPreset(const QString &pluginId)
 {
     auto presetPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"), pluginId);
 
-    if (presetPackage.metadata().value("X-Plasma-RootPath") != QStringLiteral("org.kde.ksysguard.sensorchart")) {
+    if (presetPackage.metadata().value("X-Plasma-RootPath") != QStringLiteral("org.kde.plasma.systemmonitor")) {
         return;
     }
 
@@ -545,12 +547,12 @@ void SensorChart::uninstallPreset(const QString &pluginId)
     });
 }
 
-void SensorChart::getNewFaces(QQuickItem *ctx)
+void SystemMonitor::getNewFaces(QQuickItem *ctx)
 {
-    getNewStuff(ctx, QStringLiteral("sensorchart-faces.knsrc"), i18n("Download New Display Styles"));
+    getNewStuff(ctx, QStringLiteral("systemmonitor-faces.knsrc"), i18n("Download New Display Styles"));
 }
 
-void SensorChart::getNewStuff(QQuickItem *ctx, const QString &knsrc, const QString &title)
+void SystemMonitor::getNewStuff(QQuickItem *ctx, const QString &knsrc, const QString &title)
 {
     if (m_newStuffDialog) {
         return;
@@ -576,6 +578,6 @@ void SensorChart::getNewStuff(QQuickItem *ctx, const QString &knsrc, const QStri
     m_newStuffDialog->show();
 }
 
-K_EXPORT_PLASMA_APPLET_WITH_JSON(sensorchart, SensorChart, "metadata.json")
+K_EXPORT_PLASMA_APPLET_WITH_JSON(systemmonitor, SystemMonitor, "metadata.json")
 
-#include "sensorchart.moc"
+#include "systemmonitor.moc"

@@ -22,9 +22,13 @@
 #include <QAction>
 #include <QMetaEnum>
 
+#include  <QQuickItem>
+
 #include <Plasma/Applet>
 #include <Plasma/Containment>
 #include <Plasma/Corona>
+
+#include "scriptengine.h"
 
 namespace WorkspaceScripting
 {
@@ -36,13 +40,15 @@ public:
     {
     }
 
+    QPointer<ScriptEngine> engine;
     QPointer<Plasma::Applet> applet;
 };
 
-Widget::Widget(Plasma::Applet *applet, QObject *parent)
+Widget::Widget(Plasma::Applet *applet, ScriptEngine *parent)
     : Applet(parent),
       d(new Widget::Private)
 {
+    d->engine = parent;
     d->applet = applet;
     setCurrentConfigGroup(QStringList());
     setCurrentGlobalConfigGroup(QStringList());
@@ -151,11 +157,24 @@ void Widget::setIndex(int index)
 
 QJSValue Widget::geometry() const
 {
-    /*if (d->applet) {
-        return d->applet.data()->geometry();
+    if (!d->applet) {
+        return QJSValue();
     }
-*/
-    return QJSValue();
+
+    QQuickItem *appletItem = d->applet->property("_plasma_graphicObject").value<QQuickItem *>();
+
+    if (!appletItem) {
+        return QJSValue();
+    }
+
+    QRectF geom(appletItem->x(), appletItem->y(), appletItem->width(), appletItem->height());
+    geom = appletItem->mapRectToScene(geom);
+    QJSValue val = d->engine->newObject();
+    val.setProperty(QStringLiteral("x"), geom.x());
+    val.setProperty(QStringLiteral("y"), geom.y());
+    val.setProperty(QStringLiteral("width"), geom.width());
+    val.setProperty(QStringLiteral("height"), geom.height());
+    return val;
 }
 
 void Widget::setGeometry(const QJSValue &geometry)

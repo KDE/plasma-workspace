@@ -78,7 +78,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 };
 
-class SensorChart : public Plasma::Applet
+class SystemMonitor : public Plasma::Applet
 {
     Q_OBJECT
     Q_PROPERTY(QString face READ face NOTIFY faceChanged)
@@ -102,8 +102,8 @@ class SensorChart : public Plasma::Applet
     Q_PROPERTY(QObject *faceConfiguration READ faceConfiguration NOTIFY faceChanged)
 
 public:
-    SensorChart( QObject *parent, const QVariantList &args );
-    ~SensorChart() override;
+    SystemMonitor( QObject *parent, const QVariantList &args );
+    ~SystemMonitor() override;
 
     void init() override;
 

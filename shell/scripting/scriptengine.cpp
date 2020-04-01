@@ -81,7 +81,7 @@ QString ScriptEngine::errorString() const
 
 QJSValue ScriptEngine::wrap(Plasma::Applet *w)
 {
-    Widget *wrapper = new Widget(w);
+    Widget *wrapper = new Widget(w, this);
     return newQObject(wrapper);
 }
 

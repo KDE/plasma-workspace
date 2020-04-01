@@ -49,7 +49,7 @@ public:
     bool inWallpaperConfig : 1;
 };
 
-Applet::Applet(QObject *parent)
+Applet::Applet(ScriptEngine *parent)
     : QObject(parent),
       d(new Applet::Private)
 {

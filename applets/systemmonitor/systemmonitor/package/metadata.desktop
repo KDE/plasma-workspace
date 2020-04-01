@@ -9,12 +9,12 @@ X-KDE-ServiceTypes=Plasma/Applet
 
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/main.qml
-X-KDE-Library=plasma_applet_ksysguard_sensorchart
+X-KDE-Library=plasma_applet_systemmonitor
 
 X-KDE-PluginInfo-Author=Marco Martin
 X-KDE-PluginInfo-Email=mart@kde.org
 X-KDE-PluginInfo-License=GPL
-X-KDE-PluginInfo-Name=org.kde.ksysguard.sensorchart
+X-KDE-PluginInfo-Name=org.kde.plasma.systemmonitor
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=kde.org
 
