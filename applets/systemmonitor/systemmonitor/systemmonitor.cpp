@@ -136,7 +136,7 @@ void SystemMonitor::configChanged()
 }
 
 void SystemMonitor::setFace(const QString &face)
-{qWarning()<<"AAAA"<<face;
+{
     if (face.length() == 0 || face == m_face || face.contains("..")) {
         return;
     }
@@ -155,7 +155,7 @@ void SystemMonitor::setFace(const QString &face)
     m_faceMetadata = new KDesktopFile(m_facePackage.path() + QStringLiteral("metadata.desktop"));
 
     const QString xmlPath = m_facePackage.filePath("mainconfigxml");
-qWarning()<<"AAAAA"<<xmlPath;
+
     if (!xmlPath.isEmpty()) {
         QFile file(xmlPath);
         KConfigGroup cg = config();

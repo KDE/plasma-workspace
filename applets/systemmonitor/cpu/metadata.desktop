@@ -13,7 +13,7 @@ X-Plasma-RootPath=org.kde.plasma.systemmonitor
 
 X-KDE-PluginInfo-Author=Kai Uwe Broulik
 X-KDE-PluginInfo-Email=kde@privat.broulik.de
-X-KDE-PluginInfo-Name=org.kde.systemmonitor.cpu
+X-KDE-PluginInfo-Name=org.kde.plasma.systemmonitor.cpu
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=kde.org
 X-KDE-PluginInfo-Depends=
