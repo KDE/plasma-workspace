@@ -89,10 +89,6 @@ MouseArea {
         target: plasmoid.configuration
 
         onExtraItemsChanged: plasmoid.nativeInterface.allowedPlasmoids = plasmoid.configuration.extraItems
-        onPinChanged: {
-            if (root.activeApplet)
-                root.activeApplet.hideOnWindowDeactivate = !plasmoid.configuration.pin;
-        }
     }
 
     CurrentItemHighLight {

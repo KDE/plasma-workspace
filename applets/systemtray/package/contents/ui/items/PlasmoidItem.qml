@@ -96,4 +96,11 @@ AbstractItem {
             preloadFullRepresentationItem(fullRepresentationItem)
         }
     }
+
+    Binding {
+        property: "hideOnWindowDeactivate"
+        value: !plasmoid.configuration.pin
+        target: plasmoidContainer.applet
+        when: null !== plasmoidContainer.applet
+    }
 }
