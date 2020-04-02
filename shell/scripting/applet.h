@@ -26,14 +26,11 @@
 
 #include <kconfiggroup.h>
 
-#include "scriptengine.h"
 
 namespace Plasma
 {
     class Applet;
 } // namespace Plasma
-
-class ScriptEngine;
 
 namespace WorkspaceScripting
 {
@@ -44,7 +41,7 @@ class Applet : public QObject
     Q_PROPERTY(QStringList currentConfigGroup WRITE setCurrentConfigGroup READ currentConfigGroup)
 
 public:
-    explicit Applet(ScriptEngine *parent = nullptr);
+    explicit Applet(QObject *parent = nullptr);
     ~Applet() override;
 
     QStringList configKeys() const;
