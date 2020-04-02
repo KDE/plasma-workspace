@@ -86,7 +86,7 @@ public:
     };
 
     Q_DECLARE_FLAGS(InitFlags, InitFlag)
-    KSMServer( const QString& windowManager, InitFlags flags );
+    KSMServer(InitFlags flags );
     ~KSMServer() override;
 
     static KSMServer* self();
@@ -107,7 +107,6 @@ public:
     void ioError( IceConn iceConn );
 
     // notification
-    void clientSetProgram( KSMClient* client );
     void clientRegistered( const char* previousId );
 
     // public API
@@ -122,7 +121,6 @@ public:
     void setupShortcuts();
 
 Q_SIGNALS:
-    void windowManagerLoaded();
     void logoutCancelled();
 
 public Q_SLOTS:
@@ -135,9 +133,6 @@ private Q_SLOTS:
 
     void protectionTimeout();
     void timeoutQuit();
-    void timeoutWMQuit();
-
-    void wmProcessChange();
 
     void defaultLogout();
     void logoutWithoutConfirmation();
@@ -152,9 +147,7 @@ private:
     void performStandardKilling();
     void completeKilling();
     void completeKillingSubSession();
-    void killWM();
     void signalSubSessionClosed();
-    void completeKillingWM();
     void cancelShutdown( KSMClient* c );
     void killingCompleted();
 
@@ -164,16 +157,12 @@ private:
     void startProtection();
     void endProtection();
 
-    void launchWM( const QList< QStringList >& wmStartCommands );
-
     KProcess* startApplication( const QStringList& command,
         const QString& clientMachine = QString(),
         const QString& userId = QString(),
         bool wm = false );
     void executeCommand( const QStringList& command );
 
-    bool isWM( const KSMClient* client ) const;
-    bool isWM( const QString& program ) const;
     bool defaultSession() const; // empty session
     void setupXIOErrorHandler();
 
@@ -222,8 +211,8 @@ private:
     enum State
         {
         Idle,
-        LaunchingWM, Restoring,
-        Shutdown, Checkpoint, Killing, KillingWM, WaitingForKNotify, // shutdown
+        LaunchingWM /* FIXME rename this*/, Restoring,
+        Shutdown, Checkpoint, Killing, KillingWMDONTUSETHIS, WaitingForKNotify, // shutdown
         ClosingSubSession, KillingSubSession, RestoringSubSession
         };
     State state;
@@ -233,11 +222,7 @@ private:
 
     bool clean;
     KSMClient* clientInteracting;
-    QString wm;
-    QStringList wmCommands;
-    KProcess* wmProcess;
     QString sessionGroup;
-    QString sessionName;
     QTimer protectionTimer;
     QTimer restoreTimer;
     QString xonCommand;

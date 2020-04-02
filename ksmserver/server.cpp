@@ -279,8 +279,6 @@ void KSMSetPropertiesProc (
             SmFreeProperty( p );
         }
         client->properties.append( props[i] );
-        if ( !qstrcmp( props[i]->name, SmProgram ) )
-            the_server->clientSetProgram( client );
     }
 
     if ( numProps )
@@ -597,9 +595,8 @@ static Status KSMNewClientProc ( SmsConn conn, SmPointer manager_data,
 extern "C" int _IceTransNoListen(const char * protocol);
 #endif
 
-KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
-  : wmProcess( nullptr )
-  , sessionGroup( QStringLiteral( "" ) )
+KSMServer::KSMServer(InitFlags flags)
+  : sessionGroup( QStringLiteral( "" ) )
   , m_kwinInterface(new OrgKdeKWinSessionInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/Session"), QDBusConnection::sessionBus(), this))
   , sockets{ -1, -1 }
 {
@@ -627,13 +624,6 @@ KSMServer::KSMServer( const QString& windowManager, InitFlags flags )
     KConfigGroup config(KSharedConfig::openConfig(), "General");
     clientInteracting = nullptr;
     xonCommand = config.readEntry( "xonCommand", "xon" );
-
-    if (windowManager.isEmpty()) {
-        wm = QStringLiteral(KWIN_BIN);
-    } else {
-        wm = windowManager;
-    }
-    wmCommands = QStringList({wm});
 
     only_local = flags.testFlag(InitFlag::OnlyLocal);
 #ifdef HAVE__ICETRANSNOLISTEN
@@ -832,8 +822,6 @@ void KSMServer::deleteClient( KSMClient* client )
         completeKilling();
     else if ( state == KillingSubSession )
         completeKillingSubSession();
-    if ( state == KillingWM )
-        completeKillingWM();
 }
 
 void KSMServer::newConnection( int /*socket*/ )
@@ -861,12 +849,11 @@ void KSMServer::newConnection( int /*socket*/ )
     fcntl( IceConnectionNumber(iceConn), F_SETFD, FD_CLOEXEC );
 }
 
-
 QString KSMServer::currentSession()
 {
     if ( sessionGroup.startsWith( QLatin1String( "Session: " ) ) )
         return sessionGroup.mid( 9 );
-    return QStringLiteral( "" ); // empty, not null, since used for KConfig::setGroup
+    return QStringLiteral( "" ); // empty, not null, since used for KConfig::setGroup // TODO does this comment make any sense?
 }
 
 void KSMServer::discardSession()
@@ -917,15 +904,9 @@ void KSMServer::storeSession()
 	KConfigGroup cg( config, sessionGroup);
     count =  0;
 
-    if (state != ClosingSubSession) {
-        // put the wm first
-        foreach ( KSMClient *c, clients )
-            if ( c->program() == wm ) {
-                clients.removeAll( c );
-                clients.prepend( c );
-                break;
-            }
-    }
+    // Tell kwin to save its state
+    auto reply = m_kwinInterface->finishSaveSession(currentSession());
+    reply.waitForFinished(); // boo!
 
     foreach ( KSMClient *c, clients ) {
         int restartHint = c->restartStyleHint();
@@ -956,7 +937,6 @@ void KSMServer::storeSession()
         cg.writePathEntry( QStringLiteral("discardCommand")+n, c->discardCommand() );
         cg.writeEntry( QStringLiteral("restartStyleHint")+n, restartHint );
         cg.writeEntry( QStringLiteral("userId")+n, c->userId() );
-        cg.writeEntry( QStringLiteral("wasWm")+n, isWM( c ));
     }
     cg.writeEntry( "count", count );
 
@@ -975,19 +955,6 @@ QStringList KSMServer::sessionList()
         if ( (*it).startsWith( QLatin1String( "Session: " ) ) )
             sessions << (*it).mid( 9 );
     return sessions;
-}
-
-bool KSMServer::isWM( const KSMClient* client ) const
-{
-    return isWM( client->program());
-}
-
-bool KSMServer::isWM( const QString& program ) const
-{
-    // Strip possible paths, so that even /usr/bin/kwin is recognized as kwin.
-    QString wmName = wm.mid( wm.lastIndexOf( QDir::separator()) + 1 );
-    QString programName = program.mid( program.lastIndexOf( QDir::separator()) + 1 );
-    return programName == wmName;
 }
 
 bool KSMServer::defaultSession() const
@@ -1043,56 +1010,8 @@ void KSMServer::restoreSession( const QString &sessionName )
     int count =  configSessionGroup.readEntry( "count", 0 );
     appsToStart = count;
 
-    // find all commands to launch the wm in the session
-    QList<QStringList> wmStartCommands;
-    if ( !wm.isEmpty() ) {
-        for ( int i = 1; i <= count; i++ ) {
-            QString n = QString::number(i);
-            if ( isWM( configSessionGroup.readEntry( QStringLiteral("program")+n, QString())) ) {
-                wmStartCommands << configSessionGroup.readEntry( QStringLiteral("restartCommand")+n, QStringList() );
-            }
-        }
-    }
-    if( wmStartCommands.isEmpty()) // otherwise use the configured default
-        wmStartCommands << wmCommands;
-
-    launchWM( wmStartCommands );
-}
-
-void KSMServer::launchWM( const QList< QStringList >& wmStartCommands )
-{
-    assert( state == LaunchingWM );
-
-    if (!(qEnvironmentVariableIsSet("WAYLAND_DISPLAY") || qEnvironmentVariableIsSet("WAYLAND_SOCKET"))) {
-        // when we have a window manager, we start it first and give
-        // it some time before launching other processes. Results in a
-        // visually more appealing startup.
-        wmProcess = startApplication( wmStartCommands[ 0 ], QString(), QString(), true );
-        connect( wmProcess, SIGNAL(error(QProcess::ProcessError)), SLOT(wmProcessChange()));
-        connect( wmProcess, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(wmProcessChange()));
-    }
-    emit windowManagerLoaded();
-}
-
-void KSMServer::wmProcessChange()
-{
-    if( state != LaunchingWM )
-    { // don't care about the process when not in the wm-launching state anymore
-        wmProcess = nullptr;
-        return;
-    }
-    if( wmProcess->state() == QProcess::NotRunning )
-    { // wm failed to launch for some reason, go with kwin instead
-        qCWarning(KSMSERVER) << "Window manager" << wm << "failed to launch";
-        if( wm == QLatin1String( KWIN_BIN ) )
-            return; // uhoh, kwin itself failed
-        qCDebug(KSMSERVER) << "Launching KWin";
-        wm = QStringLiteral( KWIN_BIN );
-        wmCommands = ( QStringList() << QStringLiteral( KWIN_BIN ) );
-        // launch it
-        launchWM( QList< QStringList >() << wmCommands );
-        return;
-    }
+    auto reply = m_kwinInterface->loadSession(sessionName);
+    reply.waitForFinished(); // boo!
 }
 
 /*!
@@ -1109,7 +1028,6 @@ void KSMServer::startDefaultSession()
     t.start();
 #endif
     sessionGroup = QString();
-    launchWM( QList< QStringList >() << wmCommands );
 }
 
 void KSMServer::restoreSession()
@@ -1149,13 +1067,6 @@ void KSMServer::restoreSubSession( const QString& name )
     tryRestoreNext();
 }
 
-void KSMServer::clientSetProgram( KSMClient* client )
-{
-    if( client->program() == wm ) {
-        emit windowManagerLoaded();
-    }
-}
-
 void KSMServer::clientRegistered( const char* previousId )
 {
     if ( previousId && lastIdStarted == QString::fromLocal8Bit( previousId ) )
@@ -1188,10 +1099,6 @@ void KSMServer::tryRestoreNext()
              (config.readEntry( QStringLiteral("restartStyleHint")+n, 0 ) == SmRestartNever)) {
             continue;
         }
-        if ( isWM( config.readEntry( QStringLiteral("program")+n, QString())) )
-            continue; // wm already started
-        if( config.readEntry( QStringLiteral( "wasWm" )+n, false ))
-            continue; // it was wm before, but not now, don't run it (some have --replace in command :(  )
         startApplication( restartCommand,
                           config.readEntry( QStringLiteral("clientMachine")+n, QString() ),
                           config.readEntry( QStringLiteral("userId")+n, QString() ));

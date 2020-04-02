@@ -191,9 +191,7 @@ void KSMServer::performLogout()
         QTimer::singleShot(1000, this, &KSMServer::performLogout);
     }
 
-    auto reply = m_kwinInterface->setState(KWinSessionState::Saving);
-    // we don't need to block as we wait for kwin to handle it's session 1
-    // before messaging the clients
+    auto setStateReply = m_kwinInterface->setState(KWinSessionState::Saving);
 
     state = Shutdown;
 
@@ -219,43 +217,35 @@ void KSMServer::performLogout()
     performLegacySessionSave();
 #endif
     startProtection();
-    foreach( KSMClient* c, clients ) {
+
+    // Tell KWin to start saving before we start tearing down clients
+    // as any "Save changes?" prompt might meddle with the state
+    if (saveSession) {
+        setStateReply.waitForFinished(); // do we have to wait for this to finish?
+
+        qCDebug(KSMSERVER) << "Telling KWin we're about to save session" << currentSession();
+
+        auto saveSessionCall = m_kwinInterface->aboutToSaveSession(currentSession());
+        saveSessionCall.waitForFinished(); // hehe
+    }
+
+    const auto pendingClients = clients;
+
+    for (KSMClient *c : pendingClients) {
         c->resetState();
-        // Whoever came with the idea of phase 2 got it backwards
-        // unfortunately. Window manager should be the very first
-        // one saving session data, not the last one, as possible
-        // user interaction during session save may alter
-        // window positions etc.
-        // Moreover, KWin's focus stealing prevention would lead
-        // to undesired effects while session saving (dialogs
-        // wouldn't be activated), so it needs be assured that
-        // KWin will turn it off temporarily before any other
-        // user interaction takes place.
-        // Therefore, make sure the WM finishes its phase 1
-        // before others a chance to change anything.
-        // KWin will check if the session manager is ksmserver,
-        // and if yes it will save in phase 1 instead of phase 2.
-        if( isWM( c ) )
-            ++wmPhase1WaitingCount;
+
+        SmsSaveYourself(c->connection(), saveType, true, SmInteractStyleAny, false);
     }
-    if (wmPhase1WaitingCount > 0) {
-        foreach( KSMClient* c, clients ) {
-            if( isWM( c ) )
-                SmsSaveYourself( c->connection(), saveType,
-                            true, SmInteractStyleAny, false );
-        }
-    } else { // no WM, simply start them all
-        foreach( KSMClient* c, clients )
-            SmsSaveYourself( c->connection(), saveType,
-                        true, SmInteractStyleAny, false );
-    }
-    qCDebug(KSMSERVER) << "clients should be empty, " << clients.isEmpty();
+
+    qCDebug(KSMSERVER) << "clients should be empty, " << clients.count();
+
     if ( clients.isEmpty() )
         completeShutdownOrCheckpoint();
 }
 
 void KSMServer::saveCurrentSession()
 {
+    abort(); // FIXME IMPLEMENT NEW SAVING ALSO HERE!
     if ( state != Idle )
         return;
 
@@ -270,19 +260,10 @@ void KSMServer::saveCurrentSession()
 #ifndef NO_LEGACY_SESSION_MANAGEMENT
     performLegacySessionSave();
 #endif
-    foreach( KSMClient* c, clients ) {
-        c->resetState();
-        if( isWM( c ) )
-            ++wmPhase1WaitingCount;
-    }
-    if (wmPhase1WaitingCount > 0) {
-        foreach( KSMClient* c, clients ) {
-            if( isWM( c ) )
-                SmsSaveYourself( c->connection(), saveType, false, SmInteractStyleNone, false );
-        }
-    } else {
-        foreach( KSMClient* c, clients )
-            SmsSaveYourself( c->connection(), saveType, false, SmInteractStyleNone, false );
+
+    const auto pendingClients = clients;
+    for (KSMClient *c : pendingClients) {
+        SmsSaveYourself( c->connection(), saveType, false, SmInteractStyleNone, false );
     }
     if ( clients.isEmpty() )
         completeShutdownOrCheckpoint();
@@ -320,17 +301,6 @@ void KSMServer::saveYourselfDone( KSMClient* client, bool success )
         completeShutdownOrCheckpoint();
     }
     startProtection();
-    if( isWM( client ) && !client->wasPhase2 && wmPhase1WaitingCount > 0 ) {
-        --wmPhase1WaitingCount;
-        // WM finished its phase1, save the rest
-        if( wmPhase1WaitingCount == 0 ) {
-            foreach( KSMClient* c, clients )
-                if( !isWM( c ))
-                    SmsSaveYourself( c->connection(), saveType, saveType != SmSaveLocal,
-                        saveType != SmSaveLocal ? SmInteractStyleAny : SmInteractStyleNone,
-                        false );
-        }
-    }
 }
 
 void KSMServer::interactRequest( KSMClient* client, int /*dialogType*/ )
@@ -360,17 +330,6 @@ void KSMServer::phase2Request( KSMClient* client )
     client->waitForPhase2 = true;
     client->wasPhase2 = true;
     completeShutdownOrCheckpoint();
-    if( isWM( client ) && wmPhase1WaitingCount > 0 ) {
-        --wmPhase1WaitingCount;
-        // WM finished its phase1 and requests phase2, save the rest
-        if( wmPhase1WaitingCount == 0 ) {
-            foreach( KSMClient* c, clients )
-                if( !isWM( c ))
-                    SmsSaveYourself( c->connection(), saveType, saveType != SmSaveLocal,
-                        saveType != SmSaveLocal ? SmInteractStyleAny : SmInteractStyleNone,
-                        false );
-        }
-    }
 }
 
 void KSMServer::handlePendingInteractions()
@@ -539,8 +498,6 @@ void KSMServer::startKilling()
     m_kwinInterface->setState(KWinSessionState::Quitting);
 
     foreach( KSMClient* c, clients ) {
-        if( isWM( c )) // kill the WM as the last one in order to reduce flicker
-            continue;
         qCDebug(KSMSERVER) << "startKilling: client " << c->program() << "(" << c->clientId() << ")";
         SmsDie( c->connection() );
     }
@@ -558,46 +515,11 @@ void KSMServer::completeKilling()
     if( state == Killing ) {
         bool wait = false;
         foreach( KSMClient* c, clients ) {
-            if( isWM( c ))
-                continue;
             wait = true; // still waiting for clients to go away
         }
         if( wait )
             return;
-        killWM();
-    }
-}
-
-void KSMServer::killWM()
-{
-    if( state != Killing )
-        return;
-
-    qCDebug(KSMSERVER) << "Starting killing WM";
-    state = KillingWM;
-    bool iswm = false;
-    foreach( KSMClient* c, clients ) {
-        if( isWM( c )) {
-            iswm = true;
-            qCDebug(KSMSERVER) << "killWM: client " << c->program() << "(" << c->clientId() << ")";
-            SmsDie( c->connection() );
-        }
-    }
-    if( iswm ) {
-        completeKillingWM();
-        QTimer::singleShot( 5000, this, &KSMServer::timeoutWMQuit );
-    }
-    else
         killingCompleted();
-}
-
-void KSMServer::completeKillingWM()
-{
-    qCDebug(KSMSERVER) << "KSMServer::completeKillingWM clients.count()=" <<
-        clients.count() << endl;
-    if( state == KillingWM ) {
-        if( clients.isEmpty())
-            killingCompleted();
     }
 }
 
@@ -616,14 +538,6 @@ void KSMServer::timeoutQuit()
 {
     foreach( KSMClient* c, clients ) {
         qCWarning(KSMSERVER) << "SmsDie timeout, client " << c->program() << "(" << c->clientId() << ")" ;
-    }
-    killWM();
-}
-
-void KSMServer::timeoutWMQuit()
-{
-    if( state == KillingWM ) {
-        qCWarning(KSMSERVER) << "SmsDie WM timeout" ;
     }
     killingCompleted();
 }
@@ -683,14 +597,9 @@ void KSMServer::completeKillingSubSession()
     qCDebug(KSMSERVER) << "KSMServer::completeKillingSubSession clients.count()=" <<
         clients.count() << endl;
     if( state == KillingSubSession ) {
-        bool wait = false;
-        foreach( KSMClient* c, clientsToKill ) {
-            if( isWM( c ))
-                continue;
-            wait = true; // still waiting for clients to go away
+        if (!clientsToKill.isEmpty()) {
+            return; // still waiting for clients to go away
         }
-        if( wait )
-            return;
         signalSubSessionClosed();
     }
 }
