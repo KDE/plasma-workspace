@@ -4,6 +4,10 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-plasma.h.cmake ${CMAKE_CURRENT
 
 add_definitions(-DPLASMA_DEPRECATED=)
 
+include_directories(${CMAKE_CURRENT_BINARY_DIR})
+find_package(QtWaylandScanner REQUIRED)
+find_package(Wayland 1.15 COMPONENTS Client)
+
 set(scripting_SRC
     scripting/appinterface.cpp
     scripting/applet.cpp
@@ -46,6 +50,11 @@ set (plasma_shell_SRCS
 set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)
 qt5_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
 
+ecm_add_qtwayland_client_protocol(plasma_shell_SRCS
+PROTOCOL /home/david/projects/kde5/src/frameworks/kwayland/src/client/protocols/plasma-shell.xml
+BASENAME plasma-shell
+PREFIX org_kde)
+
 add_executable(plasmashell
     ${plasma_shell_SRCS}
 )
@@ -71,6 +80,10 @@ target_link_libraries(plasmashell
  KF5::WaylandClient
  KF5::Notifications
  PW::KWorkspace
+ Wayland::Client
+ Qt5::WaylandClient
+ Qt5::GuiPrivate # just for wl_resource
+
 )
 if (TARGET KUserFeedbackCore)
     target_link_libraries(plasmashell KUserFeedbackCore)

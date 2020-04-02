@@ -36,6 +36,12 @@ namespace KWayland
     }
 }
 
+namespace QtWayland
+{
+    class org_kde_plasma_surface;
+}
+class PlasmaManager;
+
 class PanelView : public PlasmaQuick::ContainmentView
 
 {
@@ -240,6 +246,9 @@ private:
     QPointer<QScreen> m_lastScreen;
     QPointer<QScreen> m_screenToFollow;
     QMetaObject::Connection m_transientWindowVisibleWatcher;
+
+    PlasmaManager *m_manager;
+    QtWayland::org_kde_plasma_surface *m_plasmaSurface = nullptr;
 
     static const int STRUTSTIMERDELAY = 200;
 };

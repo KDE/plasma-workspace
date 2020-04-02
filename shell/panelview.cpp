@@ -42,9 +42,6 @@
 #include <Plasma/Containment>
 #include <Plasma/Package>
 
-#include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/surface.h>
-
 #if HAVE_X11
 #include <xcb/xcb.h>
 #include <NETWM>
@@ -52,7 +49,22 @@
 #include <QtPlatformHeaders/QXcbWindowFunctions>
 #endif
 
+#include <QtWaylandClient/QWaylandClientExtension>
+#include <QtWaylandClient/QWaylandClientExtensionTemplate>
+
+#include <qpa/qplatformnativeinterface.h>
+
+#include "qwayland-plasma-shell.h"
+
 static const int MINSIZE = 10;
+
+
+class PlasmaManager :  public QWaylandClientExtensionTemplate<PlasmaManager>, public QtWayland::org_kde_plasma_shell
+{
+public:
+    PlasmaManager(): QWaylandClientExtensionTemplate(6)
+    {}
+};
 
 PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent)
     : PlasmaQuick::ContainmentView(corona, parent),
@@ -66,9 +78,18 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
        m_alignment(Qt::AlignLeft),
        m_corona(corona),
        m_visibilityMode(NormalPanel),
-       m_backgroundHints(Plasma::Types::StandardBackground),
-       m_shellSurface(nullptr)
+       m_backgroundHints(Plasma::Types::StandardBackground)
 {
+    m_manager = new PlasmaManager();
+
+    // this is inherently async
+    // old code resolved it by doing a roundtrip here
+    connect(m_manager, &PlasmaManager::activeChanged, this, [this]() {
+        qDebug() << "Manager bound!";
+        setupWaylandIntegration();
+    });
+
+
     if (targetScreen) {
         setPosition(targetScreen->geometry().center());
         setScreenToFollow(targetScreen);
@@ -382,28 +403,28 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
 
 void PanelView::visibilityModeToWayland()
 {
-    if (!m_shellSurface) {
+    if (!m_plasmaSurface) {
         return;
     }
-    KWayland::Client::PlasmaShellSurface::PanelBehavior behavior;
+    QtWayland::org_kde_plasma_surface::panel_behavior  behavior;
     switch (m_visibilityMode) {
     case NormalPanel:
-        behavior = KWayland::Client::PlasmaShellSurface::PanelBehavior::AlwaysVisible;
+        behavior = QtWayland::org_kde_plasma_surface::panel_behavior_always_visible;
         break;
     case AutoHide:
-        behavior = KWayland::Client::PlasmaShellSurface::PanelBehavior::AutoHide;
+        behavior = QtWayland::org_kde_plasma_surface::panel_behavior_auto_hide;
         break;
     case LetWindowsCover:
-        behavior = KWayland::Client::PlasmaShellSurface::PanelBehavior::WindowsCanCover;
+        behavior = QtWayland::org_kde_plasma_surface::panel_behavior_windows_can_cover;
         break;
     case WindowsGoBelow:
-        behavior = KWayland::Client::PlasmaShellSurface::PanelBehavior::WindowsGoBelow;
+        behavior = QtWayland::org_kde_plasma_surface::panel_behavior_windows_go_below;
         break;
     default:
         Q_UNREACHABLE();
         return;
     }
-    m_shellSurface->setPanelBehavior(behavior);
+    m_plasmaSurface->set_panel_behavior(behavior);
 }
 
 PanelView::VisibilityMode PanelView::visibilityMode() const
@@ -448,8 +469,8 @@ void PanelView::positionPanel()
     const QPoint pos = geometryByDistance(m_distance).topLeft();
     setPosition(pos);
 
-    if (m_shellSurface) {
-        m_shellSurface->setPosition(pos);
+    if (m_plasmaSurface) {
+        m_plasmaSurface->set_position(pos.x(), pos.y());
     }
 
     KWindowEffects::slideWindow(winId(), slideLocation, -1);
@@ -746,12 +767,12 @@ void PanelView::setAutoHideEnabled(bool enabled)
         KWindowEffects::slideWindow(winId(), slideLocation, -1);
     }
 #endif
-    if (m_shellSurface && m_visibilityMode == PanelView::AutoHide) {
-        if (enabled) {
-            m_shellSurface->requestHideAutoHidingPanel();
-        } else {
-            m_shellSurface->requestShowAutoHidingPanel();
-        }
+    if (m_plasmaSurface && m_visibilityMode == PanelView::AutoHide) {
+//         if (enabled) {
+//             m_plasmaSurface->panel_auto_hide_hide();
+//         } else {
+//             m_plasmaSurface->panel_auto_hide_show();
+//         }
     }
 }
 
@@ -761,8 +782,9 @@ void PanelView::resizeEvent(QResizeEvent *ev)
     //don't setGeometry() to make really sure we aren't doing a resize loop
     const QPoint pos = geometryByDistance(m_distance).topLeft();
     setPosition(pos);
-    if (m_shellSurface) {
-        m_shellSurface->setPosition(pos);
+    if (m_plasmaSurface) {
+        qDebug() << "doing things!";
+        m_plasmaSurface->set_position(pos.x(), pos.y());
     }
     m_strutsTimer.start(STRUTSTIMERDELAY);
     emit m_corona->availableScreenRegionChanged();
@@ -793,9 +815,9 @@ void PanelView::integrateScreen()
 #if HAVE_X11
     QXcbWindowFunctions::setWmWindowType(this, QXcbWindowFunctions::Dock);
 #endif
-    if (m_shellSurface) {
-        m_shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
-        m_shellSurface->setSkipTaskbar(true);
+    if (m_plasmaSurface) {
+        m_plasmaSurface->set_role(QtWayland::org_kde_plasma_surface::role_panel);
+        m_plasmaSurface->set_skip_taskbar(true);
     }
     setVisibilityMode(m_visibilityMode);
 
@@ -964,8 +986,9 @@ bool PanelView::event(QEvent *e)
                 PanelShadows::self()->addWindow(this, enabledBorders());
                 break;
             case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
-                delete m_shellSurface;
-                m_shellSurface = nullptr;
+                qDebug() << "unbound!";
+                delete m_plasmaSurface ;
+                m_plasmaSurface = nullptr;
                 PanelShadows::self()->removeWindow(this);
                 break;
             }
@@ -1262,22 +1285,28 @@ void PanelView::screenDestroyed(QObject* )
 
 void PanelView::setupWaylandIntegration()
 {
-    if (m_shellSurface) {
+    if (m_plasmaSurface || !m_manager->isActive()) {
         // already setup
         return;
     }
-    if (ShellCorona *c = qobject_cast<ShellCorona*>(corona())) {
-        using namespace KWayland::Client;
-        PlasmaShell *interface = c->waylandPlasmaShellInterface();
-        if (!interface) {
-            return;
-        }
-        Surface *s = Surface::fromWindow(this);
-        if (!s) {
-            return;
-        }
-        m_shellSurface = interface->createSurface(s, this);
+
+
+    qDebug() << "about to create!";
+    void *surf = QGuiApplication::platformNativeInterface()->nativeResourceForWindow("surface", this);
+    if (!surf) {
+        return;
     }
+
+    qDebug() << "getting plasma+surface" << m_manager->isActive();
+
+    //probably should check m_manager is bound..
+
+    auto t = m_manager->get_surface(static_cast<struct ::wl_surface *>(surf));
+
+    qDebug() << "got " << t;
+
+    m_plasmaSurface = new QtWayland::org_kde_plasma_surface(t);
+    qDebug() << "done " << m_plasmaSurface;
 }
 
 bool PanelView::edgeActivated() const
