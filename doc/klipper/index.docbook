@@ -30,8 +30,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2015-07-20</date>
-<releaseinfo>Plasma 5.4</releaseinfo>
+<date>2020-04-03</date>
+<releaseinfo>Plasma 5.19</releaseinfo>
 
 <abstract>
 <para>&klipper; is the &plasma; clipboard cut &amp; paste utility.</para>
@@ -382,18 +382,16 @@ expression text can be edited as you wish.</para></listitem>
 <term>Adding Expressions/Actions</term>
 <listitem><para>Click the <guibutton>Add Action...</guibutton> button
 to add a regular expression for &klipper; to match. &klipper; uses
-&Qt;'s <classname>QRegExp</classname>, which understands most regular
-expressions as you would use in <application>grep</application> or
-<application>egrep</application> for instance.</para>
+&Qt;'s <classname>QRegularExpression</classname>, which uses PCRE (Perl
+Compatible Regular Expressions).</para>
 <para>You can add a description of the regular expression type (&eg;
 <quote>HTTP URL</quote>) by <mousebutton>left</mousebutton> clicking in the
 <guilabel>Description</guilabel> column.</para>   
 
 <note><para>You can find detailed information about the use of
-		<classname>QRegExp</classname> regular expressions at <ulink
-url="http://doc.qt.io/qt-5/qregexp.html#details">http://doc.qt.io/qt-5/qregexp.html#details</ulink>.
-Note that &klipper; does not support the wildcard mode mentioned on this
-page.</para></note> 
+<classname>QRegularExpression</classname> regular expressions in <ulink
+url="https://doc.qt.io/qt-5/qregularexpression.html#details">the Qt upstream
+documentation</ulink>.</para></note>
 
 <para>Edit the regular expression as described above. To add a command
 to execute, click <guimenuitem>Add Command</guimenuitem> and edit the command 
