@@ -63,7 +63,7 @@ View::View(QWindow *)
     m_config = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("krunnerrc")), "General");
 
     setFreeFloating(m_config.readEntry("FreeFloating", false));
-    reloadConfig();
+    loadConfig();
 
     new AppAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/App"), this);
@@ -107,8 +107,14 @@ View::View(QWindow *)
     KDirWatch::self()->addFile(m_config.name());
 
     // Catch both, direct changes to the config file ...
-    connect(KDirWatch::self(), &KDirWatch::dirty, this, &View::reloadConfig);
-    connect(KDirWatch::self(), &KDirWatch::created, this, &View::reloadConfig);
+    connect(KDirWatch::self(), &KDirWatch::dirty, this, [this]() {
+            m_config.config()->reparseConfiguration();
+            loadConfig();
+    });
+    connect(KDirWatch::self(), &KDirWatch::created, this, [this]() {
+            m_config.config()->reparseConfiguration();
+            loadConfig();
+    });
 
     if (m_floating) {
         setLocation(Plasma::Types::Floating);
@@ -158,9 +164,8 @@ void View::setFreeFloating(bool floating)
     positionOnScreen();
 }
 
-void View::reloadConfig()
+void View::loadConfig()
 {
-    m_config.config()->reparseConfiguration();
     setFreeFloating(m_config.readEntry("FreeFloating", false));
 
     const QStringList history = m_config.readEntry("history", QStringList());

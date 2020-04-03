@@ -86,7 +86,7 @@ protected Q_SLOTS:
     void screenGeometryChanged();
     void resetScreenPos();
     void displayOrHide();
-    void reloadConfig();
+    void loadConfig();
     void objectIncubated();
     void slotFocusWindowChanged();
 
