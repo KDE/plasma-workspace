@@ -60,7 +60,7 @@ View::View(QWindow *)
 
     //used only by screen readers
     setTitle(i18n("KRunner"));
-    m_config = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("krunnerrc")), "General");
+    m_config = KConfigGroup(KSharedConfig::openConfig(), "General");
 
     loadConfig();
 
