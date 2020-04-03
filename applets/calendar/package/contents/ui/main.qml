@@ -64,6 +64,7 @@ Item {
                     fill: parent
                     margins: Math.round(parent.width * 0.1)
                 }
+                color: "#000000"
                 height: undefined
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
