@@ -73,7 +73,7 @@ View::View(QWindow *)
     connect(m_qmlObj, &KDeclarative::QmlObject::finished, this, &View::objectIncubated);
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
+    KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     if (!packageName.isEmpty()) {
         package.setPath(packageName);
