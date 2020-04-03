@@ -62,7 +62,6 @@ View::View(QWindow *)
     setTitle(i18n("KRunner"));
     m_config = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("krunnerrc")), "General");
 
-    setFreeFloating(m_config.readEntry("FreeFloating", false));
     loadConfig();
 
     new AppAdaptor(this);
@@ -115,12 +114,6 @@ View::View(QWindow *)
             m_config.config()->reparseConfiguration();
             loadConfig();
     });
-
-    if (m_floating) {
-        setLocation(Plasma::Types::Floating);
-    } else {
-        setLocation(Plasma::Types::TopEdge);
-    }
 
     connect(qGuiApp, &QGuiApplication::focusWindowChanged, this, &View::slotFocusWindowChanged);
 }
