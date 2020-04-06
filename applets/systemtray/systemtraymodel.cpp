@@ -264,7 +264,6 @@ QHash<int, QByteArray> StatusNotifierModel::roleNames() const
     roles.insert(static_cast<int>(Role::Title), QByteArrayLiteral("Title"));
     roles.insert(static_cast<int>(Role::TitleChanged), QByteArrayLiteral("TitleChanged"));
     roles.insert(static_cast<int>(Role::ToolTipChanged), QByteArrayLiteral("ToolTipChanged"));
-    roles.insert(static_cast<int>(Role::ToolTipIcon), QByteArrayLiteral("ToolTipIcon"));
     roles.insert(static_cast<int>(Role::ToolTipSubTitle), QByteArrayLiteral("ToolTipSubTitle"));
     roles.insert(static_cast<int>(Role::ToolTipTitle), QByteArrayLiteral("ToolTipTitle"));
     roles.insert(static_cast<int>(Role::WindowId), QByteArrayLiteral("WindowId"));
@@ -355,7 +354,6 @@ void StatusNotifierModel::dataUpdated(const QString &sourceName, const Plasma::D
     updateItemData(dataItem, data, Role::Title);
     updateItemData(dataItem, data, Role::TitleChanged);
     updateItemData(dataItem, data, Role::ToolTipChanged);
-    updateItemData(dataItem, data, Role::ToolTipIcon);
     updateItemData(dataItem, data, Role::ToolTipSubTitle);
     updateItemData(dataItem, data, Role::ToolTipTitle);
     updateItemData(dataItem, data, Role::WindowId);

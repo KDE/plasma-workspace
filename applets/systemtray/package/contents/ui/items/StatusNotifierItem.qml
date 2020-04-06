@@ -27,7 +27,6 @@ AbstractItem {
     text: model.Title
     mainText: model.ToolTipTitle !== "" ? model.ToolTipTitle : model.Title
     subText: model.ToolTipSubTitle
-    icon: model.ToolTipIcon !== "" ? model.ToolTipIcon : model.Icon ? model.Icon : model.IconName
     textFormat: Text.AutoText
 
     PlasmaCore.IconItem {

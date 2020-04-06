@@ -29,7 +29,6 @@ AbstractItem {
     itemId: applet ? applet.pluginName : ""
     mainText: applet ? applet.toolTipMainText : ""
     subText: applet ? applet.toolTipSubText : ""
-    icon: applet ? applet.icon : ""
     mainItem: applet && applet.toolTipItem ? applet.toolTipItem : null
     textFormat: applet ? applet.toolTipTextFormat : ""
     active: root.activeApplet !== applet

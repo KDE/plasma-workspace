@@ -104,7 +104,6 @@ public:
         Title,
         TitleChanged,
         ToolTipChanged,
-        ToolTipIcon,
         ToolTipSubTitle,
         ToolTipTitle,
         WindowId

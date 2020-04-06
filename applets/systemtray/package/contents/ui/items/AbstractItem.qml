@@ -46,7 +46,6 @@ PlasmaCore.ToolTipArea {
     /* subclasses need to assign to this tooltip properties
     mainText:
     subText:
-    icon:
     */
 
     location: {
