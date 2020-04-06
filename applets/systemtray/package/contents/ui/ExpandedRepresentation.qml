@@ -24,26 +24,38 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-ColumnLayout {
-    id: expandedRepresentation
-    //set width/height to avoid an useless Dialog resize
-    width: Layout.minimumWidth
-    height: Layout.minimumHeight
-    Layout.minimumWidth: units.gridUnit * 24
-    Layout.minimumHeight: units.gridUnit * 21
-    Layout.preferredWidth: Layout.minimumWidth
-    Layout.preferredHeight: Layout.minimumHeight
-    Layout.maximumWidth: Layout.minimumWidth
-    Layout.maximumHeight: Layout.minimumHeight
-    spacing: 0 // avoid gap between title and content
+Item {
+    width: expandedRepresentation.width
+    height: expandedRepresentation.height
 
     property alias activeApplet: container.activeApplet
     property alias hiddenLayout: hiddenItemsView.layout
 
     PlasmaExtras.PlasmoidHeading {
+        id: plasmoidHeading
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+        }
+        height: trayHeading.height + bottomPadding + container.headingHeight
+    }
+
+    ColumnLayout {
+        id: expandedRepresentation
+        //set width/height to avoid an useless Dialog resize
+        width: Layout.minimumWidth
+        height: Layout.minimumHeight
+        Layout.minimumWidth: units.gridUnit * 24
+        Layout.minimumHeight: units.gridUnit * 21
+        Layout.preferredWidth: Layout.minimumWidth
+        Layout.preferredHeight: Layout.minimumHeight
+        Layout.maximumWidth: Layout.minimumWidth
+        Layout.maximumHeight: Layout.minimumHeight
+        spacing: plasmoidHeading.bottomPadding
 
         RowLayout {
-            anchors.fill: parent
+            id: trayHeading
 
             PlasmaExtras.Heading {
                 id: heading
@@ -110,39 +122,41 @@ ColumnLayout {
                 }
             }
         }
-    }
 
-    RowLayout {
-        spacing: 0 // must be 0 so that the separator is as close to the indicator as possible
+        RowLayout {
+            spacing: 0 // must be 0 so that the separator is as close to the indicator as possible
 
-        HiddenItemsView {
-            id: hiddenItemsView
-            Layout.fillWidth: !activeApplet
-            Layout.fillHeight: true
-        }
-
-        PlasmaCore.SvgItem {
-            visible: hiddenItemsView.visible && activeApplet
-            Layout.fillHeight: true
-            Layout.preferredWidth: lineSvg.elementSize("vertical-line").width
-            elementId: "vertical-line"
-            svg: PlasmaCore.Svg {
-                id: lineSvg;
-                imagePath: "widgets/line"
+            HiddenItemsView {
+                id: hiddenItemsView
+                Layout.fillWidth: !activeApplet
+                Layout.fillHeight: true
+                Layout.topMargin: container.headingHeight
             }
-        }
 
-        PlasmoidPopupsContainer {
-            id: container
-            visible: activeApplet
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            // We need to add our own margins on the top and left (when the
-            // hidden items view is visible, at least) so it matches the
-            //  dialog's own margins and content is centered correctly
-            Layout.topMargin: dialog.margins.top
-            Layout.leftMargin: hiddenItemsView.visible && activeApplet && !LayoutMirroring.enabled ? dialog.margins.left : 0
-            Layout.rightMargin: hiddenItemsView.visible && activeApplet && LayoutMirroring.enabled ? dialog.margins.right : 0
+            PlasmaCore.SvgItem {
+                visible: hiddenItemsView.visible && activeApplet
+                Layout.fillHeight: true
+                Layout.preferredWidth: lineSvg.elementSize("vertical-line").width
+                Layout.topMargin: container.headingHeight
+                elementId: "vertical-line"
+                svg: PlasmaCore.Svg {
+                    id: lineSvg;
+                    imagePath: "widgets/line"
+                }
+            }
+
+            PlasmoidPopupsContainer {
+                id: container
+                visible: activeApplet
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                // We need to add our own margins on the top and left (when the
+                // hidden items view is visible, at least) so it matches the
+                //  dialog's own margins and content is centered correctly
+                Layout.topMargin: mergeHeadings ? 0 : dialog.margins.top
+                Layout.leftMargin: hiddenItemsView.visible && activeApplet && !LayoutMirroring.enabled ? dialog.margins.left : 0
+                Layout.rightMargin: hiddenItemsView.visible && activeApplet && LayoutMirroring.enabled ? dialog.margins.right : 0
+            }
         }
     }
 }

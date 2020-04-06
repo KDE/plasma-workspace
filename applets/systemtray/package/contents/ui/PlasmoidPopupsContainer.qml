@@ -22,6 +22,8 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.4
 //needed for units
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 StackView {
     id: mainStack
@@ -32,6 +34,10 @@ StackView {
     Layout.minimumHeight: units.gridUnit * 12
 
     property Item activeApplet
+    property bool appletHasHeading: false
+    property bool appletHeadingShown: appletHasHeading && activeApplet.fullRepresentationItem.header.visible
+    property bool mergeHeadings: appletHasHeading && appletHeadingShown
+    property int headingHeight: mergeHeadings ? activeApplet.fullRepresentationItem.header.height : 0
 
     onActiveAppletChanged: {
         if (activeApplet != null) {
@@ -43,8 +49,18 @@ StackView {
             activeApplet.fullRepresentationItem.anchors.centerIn = undefined;
             activeApplet.fullRepresentationItem.anchors.fill = undefined;
 
+            if (activeApplet.fullRepresentationItem instanceof PlasmaComponents3.Page
+                && activeApplet.fullRepresentationItem.header instanceof PlasmaExtras.PlasmoidHeading
+            ) {
+                mainStack.appletHasHeading = true
+                activeApplet.fullRepresentationItem.header.background.visible = false
+            } else {
+                mainStack.appletHasHeading = false
+            }
+
             mainStack.replace({item: activeApplet.fullRepresentationItem, immediate: !dialog.visible, properties: {focus: true}});
         } else {
+            mainStack.appletHasHeading = false
             mainStack.replace(emptyPage);
         }
     }
