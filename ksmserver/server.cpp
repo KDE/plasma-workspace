@@ -620,7 +620,6 @@ KSMServer::KSMServer(InitFlags flags)
 
     state = Idle;
     saveSession = false;
-    wmPhase1WaitingCount = 0;
     KConfigGroup config(KSharedConfig::openConfig(), "General");
     clientInteracting = nullptr;
     xonCommand = config.readEntry( "xonCommand", "xon" );

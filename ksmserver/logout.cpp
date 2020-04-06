@@ -211,7 +211,6 @@ void KSMServer::performLogout()
             QPalette palette;
     palette.setColor( QApplication::desktop()->backgroundRole(), Qt::black );
     QApplication::setPalette(palette);
-    wmPhase1WaitingCount = 0;
     saveType = saveSession?SmSaveBoth:SmSaveGlobal;
 #ifndef NO_LEGACY_SESSION_MANAGEMENT
     performLegacySessionSave();
@@ -249,7 +248,6 @@ void KSMServer::performLogout()
 
 void KSMServer::saveCurrentSession()
 {
-    abort(); // FIXME IMPLEMENT NEW SAVING ALSO HERE!
     if ( state != Idle )
         return;
 
@@ -258,12 +256,14 @@ void KSMServer::saveCurrentSession()
 
     state = Checkpoint;
 
-    wmPhase1WaitingCount = 0;
     saveType = SmSaveLocal;
     saveSession = true;
 #ifndef NO_LEGACY_SESSION_MANAGEMENT
     performLegacySessionSave();
 #endif
+
+    auto aboutToSaveCall = m_kwinInterface->aboutToSaveSession(currentSession());
+    aboutToSaveCall.waitForFinished();
 
     const auto pendingClients = clients;
     for (KSMClient *c : pendingClients) {

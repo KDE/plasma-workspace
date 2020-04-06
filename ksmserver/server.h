@@ -217,7 +217,6 @@ private:
         };
     State state;
     bool saveSession;
-    int wmPhase1WaitingCount;
     int saveType;
 
     bool clean;
