@@ -323,23 +323,6 @@ QProcess* setupKSplash()
     return p;
 }
 
-// FIXME Move this into plasma-session/startup!
-void startWindowManager()
-{
-    QProcess windowManager;
-    windowManager.setProcessChannelMode(QProcess::ForwardedChannels);
-
-    if (qEnvironmentVariableIsSet("KDEWM")) {
-        windowManager.setProgram(qEnvironmentVariable("KDEWM"));
-    }
-
-    if (windowManager.program().isEmpty()) {
-        windowManager.setProgram(QStringLiteral(KWIN_BIN));
-    }
-
-    windowManager.startDetached();
-}
-
 void setupGSLib()
 // Get Ghostscript to look into user's KDE fonts dir for additional Fontmap
 {
@@ -373,9 +356,6 @@ bool startPlasmaSession(bool wayland)
     if (wayland) {
         plasmaSessionOptions << QStringLiteral("--no-lockscreen");
     } else {
-        // FIXME Move this into plasma-session/startup!
-        startWindowManager();
-
         if (desktopLockedAtStart) {
             plasmaSessionOptions << QStringLiteral("--lockscreen");
         }

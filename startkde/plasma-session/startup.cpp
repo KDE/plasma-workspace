@@ -214,9 +214,28 @@ Startup::Startup(QObject *parent):
     QProcessEnvironment kdedProcessEnv;
     kdedProcessEnv.insert(QStringLiteral("KDED_STARTED_BY_KDEINIT"), QStringLiteral("1"));
 
+    KJob *windowManagerJob = nullptr;
+
+    if (qEnvironmentVariable("XDG_SESSION_TYPE") != QLatin1String("wayland")) {
+        QString windowManager;
+        if (qEnvironmentVariableIsSet("KDEWM")) {
+            windowManager = qEnvironmentVariable("KDEWM");
+        }
+        if (windowManager.isEmpty()) {
+            windowManager = QStringLiteral(KWIN_BIN);
+        }
+
+        if (windowManager == QLatin1String(KWIN_BIN)) {
+            windowManagerJob = new StartServiceJob(windowManager, {}, QStringLiteral("org.kde.KWin"));
+        } else {
+            windowManagerJob = new StartServiceJob(windowManager, {}, {});
+        }
+    }
+
     const QVector<KJob*> sequence = {
         new StartProcessJob(QStringLiteral("kcminit_startup"), {}),
         new StartServiceJob(QStringLiteral("kded5"), {}, QStringLiteral("org.kde.kded5"), kdedProcessEnv),
+        windowManagerJob,
         new StartServiceJob(QStringLiteral("ksmserver"), QCoreApplication::instance()->arguments().mid(1), QStringLiteral("org.kde.ksmserver")),
         new StartupPhase0(autostart, this),
         phase1 = new StartupPhase1(autostart, this),
@@ -225,6 +244,9 @@ Startup::Startup(QObject *parent):
     };
     KJob* last = nullptr;
     for(KJob* job : sequence) {
+        if (!job) {
+            continue;
+        }
         if (last) {
             connect(last, &KJob::finished, job, &KJob::start);
         }
@@ -434,7 +456,7 @@ StartServiceJob::StartServiceJob(const QString &process, const QStringList &args
 
 void StartServiceJob::start()
 {
-    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(m_serviceId)) {
+    if (!m_serviceId.isEmpty() && QDBusConnection::sessionBus().interface()->isServiceRegistered(m_serviceId)) {
         qCDebug(PLASMA_SESSION) << m_process << "already running";
         emitResult();
         return;
@@ -442,6 +464,10 @@ void StartServiceJob::start()
     qCDebug(PLASMA_SESSION) << "Starting " << m_process->program() << m_process->arguments();
     if (!m_process->startDetached()) {
         qCWarning(PLASMA_SESSION) << "error starting process" << m_process->program() << m_process->arguments();
+        emitResult();
+    }
+
+    if (m_serviceId.isEmpty()) {
         emitResult();
     }
 }
