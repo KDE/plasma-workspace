@@ -544,7 +544,7 @@ QStringList LauncherTasksModel::launcherActivities(const QUrl &_url) const
 int LauncherTasksModel::launcherPosition(const QUrl &url) const
 {
     for (int i = 0; i < d->launchersOrder.count(); ++i) {
-        if (launcherUrlsMatch(url, d->launchersOrder.at(i), IgnoreQueryItems)) {
+        if (launcherUrlsMatch(url, d->appData(d->launchersOrder.at(i)).url, IgnoreQueryItems)) {
             return i;
         }
     }
