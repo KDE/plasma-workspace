@@ -5,8 +5,9 @@ set(krunner_shell_SRCS shellrunner.cpp)
 add_library(krunner_shell MODULE ${krunner_shell_SRCS})
 target_link_libraries(krunner_shell
     KF5::KIOCore
-    KF5::KIOWidgets
+    KF5::KIOGui
     KF5::I18n
+    KF5::Notifications
     KF5::Plasma
     KF5::Runner
     KF5::Completion

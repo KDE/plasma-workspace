@@ -21,8 +21,10 @@
 
 #include <KAuthorized>
 #include <KLocalizedString>
-#include <KRun>
+#include <KNotificationJobUiDelegate>
 #include <KToolInvocation>
+
+#include <KIO/CommandLauncherJob>
 
 K_EXPORT_PLASMA_RUNNER(shell, ShellRunner)
 
@@ -67,9 +69,14 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
 {
     if (match.selectedAction()) {
         KToolInvocation::invokeTerminal(context.query());
-    } else {
-        KRun::runCommand(context.query(), nullptr);
+        return;
     }
+
+    auto *job = new KIO::CommandLauncherJob(context.query());
+    auto *delegate = new KNotificationJobUiDelegate;
+    delegate->setAutoErrorHandlingEnabled(true);
+    job->setUiDelegate(delegate);
+    job->start();
 }
 
 QList<QAction *> ShellRunner::actionsForMatch(const Plasma::QueryMatch &match)

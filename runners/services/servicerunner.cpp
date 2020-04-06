@@ -20,6 +20,8 @@
 
 #include "servicerunner.h"
 
+#include <algorithm>
+
 #include <QMimeData>
 
 #include <QDebug>
@@ -30,10 +32,13 @@
 
 #include <KActivities/ResourceInstance>
 #include <KLocalizedString>
-#include <KRun>
+#include <KNotificationJobUiDelegate>
 #include <KService>
+#include <KServiceAction>
 #include <KServiceTypeTrader>
 #include <KStringHandler>
+
+#include <KIO/ApplicationLauncherJob>
 
 #include "debug.h"
 
@@ -167,7 +172,10 @@ private:
         const QString name = service->name();
 
         match.setText(name);
-        match.setData(service->storageId());
+
+        QUrl url(service->storageId());
+        url.setScheme(QStringLiteral("applications"));
+        match.setData(url);
 
         if (!service->genericName().isEmpty() && service->genericName() != name) {
             match.setSubtext(service->genericName());
@@ -358,7 +366,15 @@ private:
                 }
                 match.setText(i18nc("Jump list search result, %1 is action (eg. open new tab), %2 is application (eg. browser)",
                                     "%1 - %2", action.text(), service->name()));
-                match.setData(QStringLiteral("exec::") + action.exec());
+
+                QUrl url(service->storageId());
+                url.setScheme(QStringLiteral("applications"));
+
+                QUrlQuery query;
+                query.addQueryItem(QStringLiteral("action"), action.name());
+                url.setQuery(query);
+
+                match.setData(url);
 
                 qreal relevance = 0.5;
                 if (matchIndex == 0) {
@@ -426,23 +442,37 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
 {
     Q_UNUSED(context);
 
-    const QString dataString = match.data().toString();
+    const QUrl dataUrl = match.data().toUrl();
 
-    const QString execPrefix = QStringLiteral("exec::");
-    if (dataString.startsWith(execPrefix)) {
-         KRun::run(dataString.mid(execPrefix.length()), {}, nullptr);
-         return;
+    KService::Ptr service = KService::serviceByStorageId(dataUrl.path());
+    if (!service) {
+        return;
     }
 
-    KService::Ptr service = KService::serviceByStorageId(dataString);
-    if (service) {
-        KActivities::ResourceInstance::notifyAccessed(
-            QUrl(QStringLiteral("applications:") + service->storageId()),
-            QStringLiteral("org.kde.krunner")
-        );
+    KActivities::ResourceInstance::notifyAccessed(
+        QUrl(QStringLiteral("applications:") + service->storageId()),
+        QStringLiteral("org.kde.krunner")
+    );
 
-        KRun::runService(*service, {}, nullptr, true);
+    KIO::ApplicationLauncherJob *job = nullptr;
+
+    const QString actionName = QUrlQuery(dataUrl).queryItemValue(QStringLiteral("action"));
+    if (actionName.isEmpty()) {
+        job = new KIO::ApplicationLauncherJob(service);
+    } else {
+        const auto actions = service->actions();
+        auto it = std::find_if(actions.begin(), actions.end(), [&actionName](const KServiceAction &action) {
+            return action.name() == actionName;
+        });
+        Q_ASSERT(it != actions.end());
+
+        job = new KIO::ApplicationLauncherJob(*it);
     }
+
+    auto *delegate = new KNotificationJobUiDelegate;
+    delegate->setAutoErrorHandlingEnabled(true);
+    job->setUiDelegate(delegate);
+    job->start();
 }
 
 QMimeData * ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
