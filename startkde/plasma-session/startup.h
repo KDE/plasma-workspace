@@ -109,6 +109,7 @@ public:
 private:
     QProcess* m_process;
     const QString m_serviceId;
+    const QProcessEnvironment m_additionalEnv;
 };
 
 class RestoreSessionJob: public KJob

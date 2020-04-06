@@ -421,12 +421,10 @@ StartServiceJob::StartServiceJob(const QString &process, const QStringList &args
     : KJob()
     , m_process(new QProcess(this))
     , m_serviceId(serviceId)
+    , m_additionalEnv(additionalEnv)
 {
     m_process->setProgram(process);
     m_process->setArguments(args);
-    auto env = QProcessEnvironment::systemEnvironment();
-    env.insert(additionalEnv);
-    m_process->setProcessEnvironment(env);
 
     auto watcher = new QDBusServiceWatcher(serviceId, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForRegistration, this);
     connect(watcher, &QDBusServiceWatcher::serviceRegistered, this, &StartServiceJob::emitResult);
@@ -434,6 +432,10 @@ StartServiceJob::StartServiceJob(const QString &process, const QStringList &args
 
 void StartServiceJob::start()
 {
+    auto env = QProcessEnvironment::systemEnvironment();
+    env.insert(m_additionalEnv);
+    m_process->setProcessEnvironment(env);
+
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(m_serviceId)) {
         qCDebug(PLASMA_SESSION) << m_process << "already running";
         emitResult();
