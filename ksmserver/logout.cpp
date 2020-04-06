@@ -226,7 +226,11 @@ void KSMServer::performLogout()
         qCDebug(KSMSERVER) << "Telling KWin we're about to save session" << currentSession();
 
         auto saveSessionCall = m_kwinInterface->aboutToSaveSession(currentSession());
-        saveSessionCall.waitForFinished(); // hehe
+        // We need to wait for KWin to save the initial state, e.g. active client and
+        // current desktop before we signal any clients to quit. They might bring up
+        // "Save changes?" prompts altering the state.
+        // KWin doesn't talk to KSMServer directly anymore, so this won't deadlock.
+        saveSessionCall.waitForFinished();
     }
 
     const auto pendingClients = clients;

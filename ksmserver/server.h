@@ -211,8 +211,8 @@ private:
     enum State
         {
         Idle,
-        LaunchingWM /* FIXME rename this*/, Restoring,
-        Shutdown, Checkpoint, Killing, KillingWMDONTUSETHIS, WaitingForKNotify, // shutdown
+        RestoringWMSession, Restoring,
+        Shutdown, Checkpoint, Killing, WaitingForKNotify, // shutdown
         ClosingSubSession, KillingSubSession, RestoringSubSession
         };
     State state;

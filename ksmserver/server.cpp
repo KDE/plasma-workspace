@@ -989,8 +989,7 @@ void KSMServer::setupShortcuts()
     }
 }
 
-/*!  Restores the previous session. Ensures the window manager is
-  running (if specified).
+/*!  Restores the previous session.
  */
 void KSMServer::restoreSession( const QString &sessionName )
 {
@@ -999,7 +998,7 @@ void KSMServer::restoreSession( const QString &sessionName )
 #ifdef KSMSERVER_STARTUP_DEBUG1
     t.start();
 #endif
-    state = LaunchingWM;
+    state = RestoringWMSession;
 
     qCDebug(KSMSERVER) << "KSMServer::restoreSession " << sessionName;
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
@@ -1011,19 +1010,23 @@ void KSMServer::restoreSession( const QString &sessionName )
     appsToStart = count;
 
     auto reply = m_kwinInterface->loadSession(sessionName);
-    reply.waitForFinished(); // boo!
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+        watcher->deleteLater();
+        if (state == RestoringWMSession) {
+            state = Idle;
+        }
+    });
 }
 
 /*!
   Starts the default session.
-
-  Currently, that's the window manager only (if specified).
  */
 void KSMServer::startDefaultSession()
 {
     if( state != Idle )
         return;
-    state = LaunchingWM;
+    state = RestoringWMSession;
 #ifdef KSMSERVER_STARTUP_DEBUG1
     t.start();
 #endif
