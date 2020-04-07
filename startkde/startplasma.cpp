@@ -155,9 +155,9 @@ void setupCursor(bool wayland)
     const KConfig cfg(QStringLiteral("kcminputrc"));
     const KConfigGroup inputCfg = cfg.group("Mouse");
 
-    const auto kcminputrc_mouse_cursorsize = inputCfg.readEntry("cursorSize", QString());
+    const auto kcminputrc_mouse_cursorsize = inputCfg.readEntry("cursorSize", 24);
     const auto kcminputrc_mouse_cursortheme = inputCfg.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
-    if (!kcminputrc_mouse_cursortheme.isEmpty() || !kcminputrc_mouse_cursorsize.isEmpty()) {
+    if (!kcminputrc_mouse_cursortheme.isEmpty()) {
 #ifdef XCURSOR_PATH
         QByteArray path(XCURSOR_PATH);
         path.replace("$XCURSOR_PATH", qgetenv("XCURSOR_PATH"));
@@ -166,15 +166,13 @@ void setupCursor(bool wayland)
     }
 
     //TODO: consider linking directly
-    const int applyMouseStatus = wayland ? 0 : runSync(QStringLiteral("kapplymousetheme"), { kcminputrc_mouse_cursortheme, kcminputrc_mouse_cursorsize });
+    const int applyMouseStatus = wayland ? 0 : runSync(QStringLiteral("kapplymousetheme"), { kcminputrc_mouse_cursortheme, QString::number(kcminputrc_mouse_cursorsize) });
     if (applyMouseStatus == 10) {
         qputenv("XCURSOR_THEME", "breeze_cursors");
     } else if (!kcminputrc_mouse_cursortheme.isEmpty()) {
         qputenv("XCURSOR_THEME", kcminputrc_mouse_cursortheme.toUtf8());
     }
-    if (!kcminputrc_mouse_cursorsize.isEmpty()) {
-        qputenv("XCURSOR_SIZE", kcminputrc_mouse_cursorsize.toUtf8());
-    }
+    qputenv("XCURSOR_SIZE", QByteArray::number(kcminputrc_mouse_cursorsize));
 }
 
 // Source scripts found in <config locations>/plasma-workspace/env/*.sh
