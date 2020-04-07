@@ -50,6 +50,20 @@ void NotificationSortProxyModel::setSortMode(Notifications::SortMode sortMode)
     }
 }
 
+Qt::SortOrder NotificationSortProxyModel::sortOrder() const
+{
+    return m_sortOrder;
+}
+
+void NotificationSortProxyModel::setSortOrder(Qt::SortOrder sortOrder)
+{
+    if (m_sortOrder != sortOrder) {
+        m_sortOrder = sortOrder;
+        invalidate();
+        emit sortOrderChanged();
+    }
+}
+
 int sortScore(const QModelIndex &idx)
 {
     const auto urgency = idx.data(Notifications::UrgencyRole).toInt();
@@ -109,8 +123,11 @@ bool NotificationSortProxyModel::lessThan(const QModelIndex &source_left, const 
             timeRight = source_right.data(Notifications::CreatedRole).toDateTime();
         }
 
-        // sorts descending by time (newest first)
-        return timeLeft > timeRight;
+        if (m_sortOrder == Qt::DescendingOrder) {
+            return timeLeft > timeRight;
+        } else {
+            return timeLeft < timeRight;
+        }
     }
 
     return scoreLeft > scoreRight;

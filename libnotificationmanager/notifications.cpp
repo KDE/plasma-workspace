@@ -209,6 +209,7 @@ void Notifications::Private::initProxyModels()
     if (!sortModel) {
         sortModel = new NotificationSortProxyModel(q);
         connect(sortModel, &NotificationSortProxyModel::sortModeChanged, q, &Notifications::sortModeChanged);
+        connect(sortModel, &NotificationSortProxyModel::sortOrderChanged, q, &Notifications::sortOrderChanged);
     }
 
     if (!limiterModel) {
@@ -570,6 +571,16 @@ Notifications::SortMode Notifications::sortMode() const
 void Notifications::setSortMode(SortMode sortMode)
 {
     d->sortModel->setSortMode(sortMode);
+}
+
+Qt::SortOrder Notifications::sortOrder() const
+{
+    return d->sortModel->sortOrder();
+}
+
+void Notifications::setSortOrder(Qt::SortOrder sortOrder)
+{
+    d->sortModel->setSortOrder(sortOrder);
 }
 
 Notifications::GroupMode Notifications::groupMode() const

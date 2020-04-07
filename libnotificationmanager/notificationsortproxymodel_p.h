@@ -39,14 +39,19 @@ public:
     Notifications::SortMode sortMode() const;
     void setSortMode(Notifications::SortMode);
 
+    Qt::SortOrder sortOrder() const;
+    void setSortOrder(Qt::SortOrder sortOrder);
+
 signals:
     void sortModeChanged();
+    void sortOrderChanged();
 
 protected:
     bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
 
 private:
     Notifications::SortMode m_sortMode = Notifications::SortByDate;
+    Qt::SortOrder m_sortOrder = Qt::DescendingOrder;
 
 };
 

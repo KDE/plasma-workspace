@@ -141,6 +141,20 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
     Q_PROPERTY(SortMode sortMode READ sortMode WRITE setSortMode NOTIFY sortModeChanged)
 
     /**
+     * The sort order for notifications.
+     *
+     * This only affects the sort order by date. When @c sortMode is set to SortByTypeAndUrgency
+     * the order of notification groups (e.g. high - jobs - normal - low) is unaffected, and only
+     * notifications within the same group are either sorted ascending or descending by their
+     * creation/update date.
+     *
+     * Default is DescendingOrder, i.e. newest notifications come first.
+     *
+     * @since 5.19
+     */
+    Q_PROPERTY(Qt::SortOrder sortOrder READ sortOrder WRITE setSortOrder NOTIFY sortOrderChanged)
+
+    /**
      * The group mode for notifications.
      *
      * Default is ungrouped.
@@ -368,6 +382,9 @@ public:
     SortMode sortMode() const;
     void setSortMode(SortMode sortMode);
 
+    Qt::SortOrder sortOrder() const;
+    void setSortOrder(Qt::SortOrder sortOrder);
+
     GroupMode groupMode() const;
     void setGroupMode(GroupMode groupMode);
 
@@ -516,6 +533,7 @@ signals:
     void showJobsChanged();
     void urgenciesChanged();
     void sortModeChanged();
+    void sortOrderChanged();
     void groupModeChanged();
     void groupLimitChanged();
     void expandUnreadChanged();

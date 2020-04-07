@@ -329,6 +329,7 @@ QtObject {
         whitelistedNotifyRcNames: globals.inhibited ? notificationSettings.doNotDisturbPopupWhitelistedServices : []
         showJobs: notificationSettings.jobsInNotifications
         sortMode: NotificationManager.Notifications.SortByTypeAndUrgency
+        sortOrder: Qt.AscendingOrder
         groupMode: NotificationManager.Notifications.GroupDisabled
         urgencies: {
             var urgencies = 0;
