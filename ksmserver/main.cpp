@@ -227,7 +227,7 @@ void sanity_check( int argc, char* argv[] )
     }
 }
 
-extern "C" Q_DECL_EXPORT int kdemain( int argc, char* argv[] )
+int main(int argc, char* argv[])
 {
     sanity_check(argc, argv);
 
