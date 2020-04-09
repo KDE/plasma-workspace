@@ -17,6 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
+#include <config-startplasma.h>
+
 #include <QDir>
 #include <QProcess>
 #include <QStandardPaths>
@@ -321,7 +323,6 @@ QProcess* setupKSplash()
     return p;
 }
 
-
 void setupGSLib()
 // Get Ghostscript to look into user's KDE fonts dir for additional Fontmap
 {
@@ -355,9 +356,6 @@ bool startPlasmaSession(bool wayland)
     if (wayland) {
         plasmaSessionOptions << QStringLiteral("--no-lockscreen");
     } else {
-        if (qEnvironmentVariableIsSet("KDEWM")) {
-            plasmaSessionOptions << QStringLiteral("--windowmanager") << qEnvironmentVariable("KDEWM");
-        }
         if (desktopLockedAtStart) {
             plasmaSessionOptions << QStringLiteral("--lockscreen");
         }
