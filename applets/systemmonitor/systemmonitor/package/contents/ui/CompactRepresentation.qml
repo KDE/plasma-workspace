@@ -21,35 +21,32 @@
 
 import QtQuick 2.9
 import QtQuick.Layouts 1.1
+import QtQuick.Controls 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.quickcharts 1.0 as Charts
 import org.kde.kirigami 2.8 as Kirigami
 
-Item {
-    Layout.fillWidth: chartFace.item ? chartFace.item.Layout.fillWidth : false
-    Layout.fillHeight: chartFace.item ? chartFace.item.Layout.fillHeight : false
+Control {
+    id: chartFace
+    Layout.fillWidth: contentItem ? contentItem.Layout.fillWidth : false
+    Layout.fillHeight: contentItem ? contentItem.Layout.fillHeight : false
 
-    Layout.minimumWidth: chartFace.item ? chartFace.item.Layout.minimumWidth : 0
-    Layout.minimumHeight: chartFace.item ? chartFace.item.Layout.minimumHeight : 0
+    Layout.minimumWidth: contentItem ? contentItem.Layout.minimumWidth : 0
+    Layout.minimumHeight: contentItem ? contentItem.Layout.minimumHeight : 0
 
-    Layout.preferredWidth: chartFace.item ? chartFace.item.Layout.preferredWidth : 0
-    Layout.preferredHeight: chartFace.item ? chartFace.item.Layout.preferredHeight : 0
+    Layout.preferredWidth: contentItem ? contentItem.Layout.preferredWidth : 0
+    Layout.preferredHeight: contentItem ? contentItem.Layout.preferredHeight : 0
 
-    Layout.maximumWidth: chartFace.item ? chartFace.item.Layout.maximumWidth : 0
-    Layout.maximumHeight: chartFace.item ? chartFace.item.Layout.maximumHeight : 0
+    Layout.maximumWidth: contentItem ? contentItem.Layout.maximumWidth : 0
+    Layout.maximumHeight: contentItem ? contentItem.Layout.maximumHeight : 0
 
     Kirigami.Theme.textColor: PlasmaCore.ColorScope.textColor
 
-    Charts.ArraySource {
-        id: globalColorSource
-        array: plasmoid.configuration.sensorColors
-    }
-    Loader {
-        id: chartFace
-        anchors.fill: parent
-        source: plasmoid.nativeInterface.compactRepresentationPath
-    }
+    anchors.fill: parent
+    contentItem: plasmoid.nativeInterface.faceController.compactRepresentation
+
     MouseArea {
+        parent: chartFace
         anchors.fill: parent
         onClicked: plasmoid.expanded = !plasmoid.expanded
     }

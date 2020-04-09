@@ -27,14 +27,16 @@
 #include <QWindow>
 
 #include <sensors/SensorQuery.h>
+#include <sensors/SensorFace.h>
+#include <sensors/SensorFaceController.h>
 
 #include <KConfigLoader>
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 #include <KDeclarative/ConfigPropertyMap>
+#include <KDeclarative/QmlObjectSharedEngine>
 
 #include <KNewPasswordDialog>
-
 
 FacesModel::FacesModel(QObject *parent)
     : QStandardItemModel(parent)
@@ -117,6 +119,12 @@ void SystemMonitor::init()
     // NOTE: taking the pluginId this way, we take it from the child applet (cpu monitor, memory, whatever) rather than the parent fallback applet (systemmonitor)
     const QString pluginId = KPluginMetaData(kPackage().path() + QStringLiteral("metadata.desktop")).pluginId();
 
+    //FIXME: better way to get the engine (KF6?)
+    KDeclarative::QmlObjectSharedEngine *qmlObject = new  KDeclarative::QmlObjectSharedEngine();
+    KConfigGroup cg = config();
+    m_sensorFaceController = new SensorFaceController(cg, qmlObject->engine());
+    qmlObject->deleteLater();
+
     if (!m_pendingStartupPreset.isNull()) {
         setCurrentPreset(m_pendingStartupPreset);
     } else {
@@ -128,6 +136,11 @@ void SystemMonitor::init()
             emit currentPresetChanged();
         }
     }
+}
+
+SensorFaceController *SystemMonitor::faceController() const
+{
+    return m_sensorFaceController;
 }
 
 void SystemMonitor::configChanged()
@@ -341,6 +354,11 @@ QString SystemMonitor::configPath() const
     return m_facePackage.filePath("ConfigUI");
 }
 
+SensorFace *SystemMonitor::sensorFullRepresentation()
+{
+    return m_sensorFaceController->fullRepresentation();
+}
+
 bool SystemMonitor::supportsSensorsColors() const
 {
     if (!m_faceMetadata) {
@@ -455,7 +473,7 @@ void SystemMonitor::reloadAvailablePresetsModel()
 
 QObject *SystemMonitor::faceConfiguration() const
 {
-    return m_faceConfiguration;
+    return m_sensorFaceController->faceConfiguration();
 }
 
 void SystemMonitor::createNewPreset(const QString &pluginName, const QString &comment, const QString &author, const QString &email, const QString &license, const QString &website)

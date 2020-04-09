@@ -44,17 +44,24 @@ ColumnLayout {
 
     property alias cfg_textOnlySensorIds: textOnlySensorsView.sensorIds
 
+    readonly property Sensors.SensorFaceController faceController: plasmoid.nativeInterface.faceController
+
     Sensors.Sensor {
         id: totalSensor
         sensorId: cfg_totalSensor
     }
 
+    function saveConfig() {
+        faceController.sensorIds = cfg_sensorIds;
+        faceController.sensorColors = cfg_sensorColors;
+        faceController.textOnlySensorIds = cfg_textOnlySensorIds;
+    }
     Component.onCompleted: {
-        cfg_sensorIds = plasmoid.configuration.sensorIds
-        cfg_sensorColors = plasmoid.configuration.sensorColors
+        cfg_sensorIds = faceController.sensorIds
+        cfg_sensorColors = faceController.sensorColors
         usedSensorsView.load();
 
-        cfg_textOnlySensorIds = plasmoid.configuration.textOnlySensorIds
+        cfg_textOnlySensorIds = faceController.textOnlySensorIds
         textOnlySensorsView.load();
     }
 
@@ -102,7 +109,7 @@ ColumnLayout {
 
     RowLayout {
         Layout.preferredHeight: sensorListHeader.implicitHeight
-        visible: plasmoid.nativeInterface.supportsTotalSensor
+        visible: faceController.supportsTotalSensor
         Controls.Label {
             text: i18n("Total Sensor:")
         }
@@ -149,7 +156,7 @@ ColumnLayout {
             }
             UsedSensorsView {
                 id: usedSensorsView
-                showColor: plasmoid.nativeInterface.supportsSensorsColors
+                showColor: faceController.supportsSensorsColors
             }
             Kirigami.Heading {
                 Layout.preferredHeight: sensorListHeader.implicitHeight
@@ -159,7 +166,7 @@ ColumnLayout {
             }
             UsedSensorsView {
                 id: textOnlySensorsView
-                visible: plasmoid.nativeInterface.supportsTextOnlySensors
+                visible: faceController.supportsTextOnlySensors
                 showColor: false
             }
         }

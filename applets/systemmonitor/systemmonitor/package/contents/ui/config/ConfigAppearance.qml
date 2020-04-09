@@ -35,19 +35,23 @@ Kirigami.FormLayout {
 
     signal configurationChanged
 
-    property alias cfg_title: titleField.text
-    property string cfg_chartFace
-
-    // config keys of the selected preset to be applied on save
-    property string pendingPreset
-
     function saveConfig() {
         var preset = pendingPreset;
         pendingPreset = "";
         if (preset != "") {
             plasmoid.nativeInterface.currentPreset = preset;
         }
+
+        faceController.title = cfg_title;
+        faceController.faceId = cfg_chartFace;
     }
+
+    readonly property Sensors.SensorFaceController faceController: plasmoid.nativeInterface.faceController
+    property alias cfg_title: titleField.text
+    property string cfg_chartFace
+
+    // config keys of the selected preset to be applied on save
+    property string pendingPreset
 
     RowLayout {
         Kirigami.FormData.label: i18n("Preset:")

@@ -29,7 +29,6 @@ import org.kde.ksysguard.sensors 1.0 as Sensors
 import org.kde.quickcharts 1.0 as Charts
 import org.kde.quickcharts.controls 1.0 as ChartControls
 
-import org.kde.plasma.core 2.0 as PlasmaCore
 
 ChartControls.PieChartControl {
     id: chart
@@ -38,22 +37,22 @@ ChartControls.PieChartControl {
     property alias sensors: sensorsModel.sensors
     property alias sensorsModel: sensorsModel
 
-    Layout.minimumWidth: plasmoid.formFactor != PlasmaCore.Types.Vertical ? Kirigami.Units.gridUnit * 4 : Kirigami.Units.gridUnit
-    Layout.minimumHeight: plasmoid.formFactor == PlasmaCore.Types.Vertical ? width : Kirigami.Units.gridUnit
+    Layout.minimumWidth: root.formFactor != Sensors.SensorFace.Vertical ? Kirigami.Units.gridUnit * 4 : Kirigami.Units.gridUnit
+    Layout.minimumHeight: root.formFactor == Sensors.SensorFace.Vertical ? width : Kirigami.Units.gridUnit
 
     leftPadding: 0
     rightPadding: 0
     topPadding: 0
     bottomPadding: 0
 
-    chart.smoothEnds: plasmoid.nativeInterface.faceConfiguration.smoothEnds
-    chart.fromAngle: plasmoid.nativeInterface.faceConfiguration.fromAngle
-    chart.toAngle: plasmoid.nativeInterface.faceConfiguration.toAngle
+    chart.smoothEnds: root.controller.faceConfiguration.smoothEnds
+    chart.fromAngle: root.controller.faceConfiguration.fromAngle
+    chart.toAngle: root.controller.faceConfiguration.toAngle
 
     range {
-        from: plasmoid.nativeInterface.faceConfiguration.rangeFrom
-        to: plasmoid.nativeInterface.faceConfiguration.rangeTo
-        automatic: plasmoid.nativeInterface.faceConfiguration.rangeAuto
+        from: root.controller.faceConfiguration.rangeFrom
+        to: root.controller.faceConfiguration.rangeTo
+        automatic: root.controller.faceConfiguration.rangeAuto
     }
 
     chart.backgroundColor: Qt.rgba(0.0, 0.0, 0.0, 0.2)
@@ -62,7 +61,7 @@ ChartControls.PieChartControl {
     valueSources: Charts.ModelSource {
         model: Sensors.SensorDataModel {
             id: sensorsModel
-            sensors: plasmoid.configuration.sensorIds
+            sensors: root.controller.sensorIds
         }
         roleName: "Value"
         indexColumns: true
@@ -72,11 +71,11 @@ ChartControls.PieChartControl {
         model: valueSources[0].model;
         indexColumns: true
     }
-    chart.colorSource: globalColorSource
+    chart.colorSource: root.colorSource
 
     Sensors.Sensor {
         id: sensor
-        sensorId: plasmoid.configuration.totalSensor
+        sensorId: root.controller.totalSensor
     }
 }
 

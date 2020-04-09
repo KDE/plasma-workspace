@@ -31,6 +31,8 @@
 
 class ApplicationListModel;
 class QQuickItem;
+class SensorFace;
+class SensorFaceController;
 
 class KConfigLoader;
 
@@ -96,16 +98,21 @@ class SystemMonitor : public Plasma::Applet
     Q_PROPERTY(QAbstractItemModel *availableFacesModel READ availableFacesModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel *availablePresetsModel READ availablePresetsModel CONSTANT)
 
+    Q_PROPERTY(SensorFace *sensorFullRepresentation READ sensorFullRepresentation CONSTANT)
     /**
      * Configuration object: each config key will be a writable property of this object. property bindings work.
      */
     Q_PROPERTY(QObject *faceConfiguration READ faceConfiguration NOTIFY faceChanged)
+
+    Q_PROPERTY(SensorFaceController *faceController READ faceController CONSTANT)
 
 public:
     SystemMonitor( QObject *parent, const QVariantList &args );
     ~SystemMonitor() override;
 
     void init() override;
+
+    SensorFaceController *faceController() const;
 
     // Getter, also for QML
     QString face() const;
@@ -121,6 +128,8 @@ public:
     QString compactRepresentationPath() const;
     QString fullRepresentationPath() const;
     QString configPath() const;
+
+    SensorFace *sensorFullRepresentation();
 
     bool supportsSensorsColors() const;
     bool supportsTotalSensor() const;
@@ -155,6 +164,7 @@ private:
 
     void getNewStuff(QQuickItem *ctx, const QString &knsrc, const QString &title);
 
+    SensorFaceController *m_sensorFaceController = nullptr;
     QString m_face;
     QString m_currentPreset;
     QString m_pendingStartupPreset;

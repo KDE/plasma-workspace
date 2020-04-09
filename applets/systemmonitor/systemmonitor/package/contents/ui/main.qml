@@ -34,7 +34,7 @@ Item {
     Plasmoid.switchWidth: Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumWidth : units.gridUnit * 8
     Plasmoid.switchHeight: Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumHeight : units.gridUnit * 12
 
-    Plasmoid.title: plasmoid.configuration.title || i18n("System Monitor")
+    Plasmoid.title: plasmoid.nativeInterface.faceController.title || i18n("System Monitor")
     Plasmoid.toolTipSubText: ""
 
     Plasmoid.compactRepresentation: CompactRepresentation {
@@ -42,22 +42,22 @@ Item {
     Plasmoid.fullRepresentation: FullRepresentation {
     }
 
-    Plasmoid.configurationRequired: plasmoid.configuration.sensorIds.length == 0 && plasmoid.configuration.textOnlySensorIds.length == 0 && plasmoid.configuration.totalSensor.length == 0 
+    Plasmoid.configurationRequired: plasmoid.nativeInterface.faceController.sensorIds.length == 0 && plasmoid.nativeInterface.faceController.textOnlySensorIds.length == 0 && plasmoid.nativeInterface.faceController.totalSensor.length == 0 
 
     //FIXME: things in faces refer to this id in the global context, should probably be fixed
     Charts.ColorGradientSource {
         id: colorSource
         // originally ColorGenerator used Kirigami.Theme.highlightColor
         baseColor: theme.highlightColor
-        itemCount: plasmoid.configuration.sensorIds.length
+        itemCount: plasmoid.nativeInterface.faceController.sensorIds.length
 
         onItemCountChanged: generate()
         Component.onCompleted: generate()
 
         function generate() {
             var colors = colorSource.colors;
-            var savedColors = plasmoid.configuration.sensorColors;
-            for (var i = 0; i < plasmoid.configuration.sensorIds.length; ++i) {
+            var savedColors = plasmoid.nativeInterface.faceController.sensorColors;
+            for (var i = 0; i < plasmoid.nativeInterface.faceController.sensorIds.length; ++i) {
                 if (savedColors.length <= i) {
                     savedColors.push(colors[i]);
                 } else {
@@ -68,7 +68,7 @@ Item {
                     }
                 }
             }
-            plasmoid.configuration.sensorColors = savedColors;
+            plasmoid.nativeInterface.faceController.sensorColors = savedColors;
         }
     }
 }

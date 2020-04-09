@@ -27,39 +27,38 @@ import org.kde.kirigami 2.8 as Kirigami
 import org.kde.ksysguard.sensors 1.0 as Sensors
 import org.kde.quickcharts 1.0 as Charts
 
-ColumnLayout
-{
+Sensors.SensorFace {
     id: root
-
-    readonly property bool showLegend: plasmoid.nativeInterface.faceConfiguration.showLegend
-
+    readonly property bool showLegend: controller.faceConfiguration.showLegend
     // Arbitrary minimumWidth to make easier to align plasmoids in a predictable way
     Layout.minimumWidth: Kirigami.Units.gridUnit * 8
 
-    Kirigami.Heading {
-        Layout.fillWidth: true
-        horizontalAlignment: Text.AlignHCenter
-        elide: Text.ElideRight
-        text: plasmoid.configuration.title
-        visible: text.length > 0
-        level: 2
-    }
+    contentItem: ColumnLayout {
+        Kirigami.Heading {
+            Layout.fillWidth: true
+            horizontalAlignment: Text.AlignHCenter
+            elide: Text.ElideRight
+            text: root.controller.title
+            visible: text.length > 0
+            level: 2
+        }
 
-    LineChart {
-        id: compactRepresentation
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-        Layout.minimumHeight: 3 * Kirigami.Units.gridUnit
-        Layout.preferredHeight: 5 * Kirigami.Units.gridUnit
-    }
+        LineChart {
+            id: compactRepresentation
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.minimumHeight: 3 * Kirigami.Units.gridUnit
+            Layout.preferredHeight: 5 * Kirigami.Units.gridUnit
+        }
 
-    Sensors.ExtendedLegend {
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-        visible: root.showLegend
-        chart: compactRepresentation
-        sourceModel: root.showLegend ? compactRepresentation.sensorsModel : null
-        colorSource: globalColorSource
-        textOnlySensorIds: root.showLegend ? plasmoid.configuration.textOnlySensorIds : []
+        Sensors.ExtendedLegend {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            visible: root.showLegend
+            chart: compactRepresentation
+            sourceModel: root.showLegend ? compactRepresentation.sensorsModel : null
+            colorSource: root.colorSource
+            textOnlySensorIds: root.showLegend ? root.controller.textOnlySensorIds : []
+        }
     }
 }

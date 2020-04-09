@@ -28,9 +28,9 @@ import org.kde.ksysguard.sensors 1.0 as Sensors
 import org.kde.quickcharts 1.0 as Charts
 
 Charts.LineChart {
-    id: root
+    id: chart
     
-    property var sensors: plasmoid.configuration.sensorIds
+    //property var sensors: root.controller.sensorIds
 
     readonly property alias sensorsModel: sensorsModel
 
@@ -38,27 +38,27 @@ Charts.LineChart {
 
     direction: Charts.XYChart.ZeroAtEnd
 
-    fillOpacity: plasmoid.nativeInterface.faceConfiguration.lineChartFillOpacity / 100
-    stacked: plasmoid.nativeInterface.faceConfiguration.lineChartStacked
-    smooth: plasmoid.nativeInterface.faceConfiguration.lineChartSmooth
+    fillOpacity: root.controller.faceConfiguration.lineChartFillOpacity / 100
+    stacked: root.controller.faceConfiguration.lineChartStacked
+    smooth: root.controller.faceConfiguration.lineChartSmooth
 
     //TODO: Have a central heading here too?
     //TODO: Have a plasmoid config value for line thickness?
 
     xRange {
-        from: plasmoid.nativeInterface.faceConfiguration.rangeFromX
-        to: plasmoid.nativeInterface.faceConfiguration.rangeToX
-        automatic: plasmoid.nativeInterface.faceConfiguration.rangeAutoX
+        from: root.controller.faceConfiguration.rangeFromX
+        to: root.controller.faceConfiguration.rangeToX
+        automatic: root.controller.faceConfiguration.rangeAutoX
     }
     yRange {
-        from: plasmoid.nativeInterface.faceConfiguration.rangeFromY
-        to: plasmoid.nativeInterface.faceConfiguration.rangeToY
-        automatic: plasmoid.nativeInterface.faceConfiguration.rangeAutoY
+        from: root.controller.faceConfiguration.rangeFromY
+        to: root.controller.faceConfiguration.rangeToY
+        automatic: root.controller.faceConfiguration.rangeAutoY
     }
 
     Sensors.SensorDataModel {
         id: sensorsModel
-        sensors: plasmoid.configuration.sensorIds
+        sensors: root.controller.sensorIds
     }
 
     Instantiator {
@@ -71,14 +71,14 @@ Charts.LineChart {
             maximumHistory: 50
         }
         onObjectAdded: {
-            root.insertValueSource(index, object)
+            chart.insertValueSource(index, object)
         }
         onObjectRemoved: {
-            root.removeValueSource(object)
+            chart.removeValueSource(object)
         }
     }
 
-    colorSource: globalColorSource
+    colorSource: root.colorSource
     nameSource: Charts.ModelSource {
         model: sensorsModel
         roleName: "ShortName"

@@ -33,37 +33,27 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.ksysguard.sensors 1.0 as Sensors
 import org.kde.quickcharts 1.0 as Charts
 
-Item {
-    id: root
+Control {
+    id: chartFace
+    
+    anchors {
+        fill: parent
+        margins: Kirigami.Units.smallSpacing * (plasmoid.configuration.backgroundEnabled ? 1 : 2)
+    }
 
-    Layout.minimumWidth: chartFace.item ? chartFace.item.Layout.minimumWidth : 0
-    Layout.minimumHeight: chartFace.item ? chartFace.item.Layout.minimumHeight : 0
-    Layout.preferredWidth: chartFace.item
-            ? (chartFace.item.Layout.preferredWidth > 0 ? chartFace.item.Layout.preferredWidth : chartFace.item.implicitWidth)
+    Layout.minimumWidth: contentItem ? contentItem.Layout.minimumWidth : 0
+    Layout.minimumHeight: contentItem ? contentItem.Layout.minimumHeight : 0
+    Layout.preferredWidth: contentItem
+            ? (contentItem.Layout.preferredWidth > 0 ? contentItem.Layout.preferredWidth : contentItem.implicitWidth)
             : 0
-    Layout.preferredHeight: chartFace.item
-            ? (chartFace.item.Layout.preferredHeight > 0 ? chartFace.item.Layout.preferredHeight: chartFace.item.implicitHeight)
+    Layout.preferredHeight: contentItem
+            ? (contentItem.Layout.preferredHeight > 0 ? contentItem.Layout.preferredHeight: contentItem.implicitHeight)
             : 0
-    Layout.maximumWidth: chartFace.item ? chartFace.item.Layout.maximumWidth : 0
-    Layout.maximumHeight: chartFace.item ? chartFace.item.Layout.maximumHeight : 0
+    Layout.maximumWidth: contentItem ? contentItem.Layout.maximumWidth : 0
+    Layout.maximumHeight: contentItem ? contentItem.Layout.maximumHeight : 0
 
     Kirigami.Theme.textColor: PlasmaCore.ColorScope.textColor
 
-    //FIXME: things in faces refer to this id in the global context, should probably be fixed or just moved in each face
-    Charts.ArraySource {
-        id: globalColorSource
-        array: plasmoid.configuration.sensorColors
-    }
-
-    // NOTE: having the loader as root item seems to crash
-    Loader {
-        id: chartFace
-        anchors {
-            fill: parent
-            margins: Kirigami.Units.smallSpacing * (plasmoid.configuration.backgroundEnabled ? 1 : 2)
-        }
-
-        visible: status == Loader.Ready
-        source: plasmoid.nativeInterface.fullRepresentationPath
-    }
+    contentItem: plasmoid.nativeInterface.faceController.fullRepresentation
 }
+
