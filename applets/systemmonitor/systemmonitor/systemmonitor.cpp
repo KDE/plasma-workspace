@@ -68,7 +68,7 @@ QHash<int, QByteArray> FacesModel::roleNames() const
 {
     QHash<int, QByteArray> roles = QAbstractItemModel::roleNames();
  
-    roles[ModelDataRole] = "modelData";
+   // roles[ModelDataRole] = "modelData";
     roles[PluginIdRole] = "pluginId";
     return roles;
 }
@@ -86,7 +86,7 @@ QHash<int, QByteArray> PresetsModel::roleNames() const
 {
     QHash<int, QByteArray> roles = QAbstractItemModel::roleNames();
 
-    roles[ModelDataRole] = "modelData";
+    //roles[ModelDataRole] = "modelData";
     roles[PluginIdRole] = "pluginId";
     roles[ConfigRole] = "config";
     roles[WritableRole] = "writable";

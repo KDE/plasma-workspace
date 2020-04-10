@@ -27,6 +27,7 @@ import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kquickcontrols 2.0
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.newstuff 1.62 as NewStuff
 
 import org.kde.ksysguard.sensors 1.0 as Sensors
 
@@ -36,14 +37,14 @@ Kirigami.FormLayout {
     signal configurationChanged
 
     function saveConfig() {
+        faceController.title = cfg_title;
+        faceController.faceId = cfg_chartFace;
+
         var preset = pendingPreset;
         pendingPreset = "";
         if (preset != "") {
-            plasmoid.nativeInterface.currentPreset = preset;
+            faceController.currentPreset = preset;
         }
-
-        faceController.title = cfg_title;
-        faceController.faceId = cfg_chartFace;
     }
 
     readonly property Sensors.SensorFaceController faceController: plasmoid.nativeInterface.faceController
@@ -57,13 +58,14 @@ Kirigami.FormLayout {
         Kirigami.FormData.label: i18n("Preset:")
         Controls.ComboBox {
             id: presetCombo
-            model: plasmoid.nativeInterface.availablePresetsModel
+            model: faceController.availablePresetsModel
+            textRole: "display"
 
             Connections {
                 target: plasmoid.nativeInterface
                 onCurrentPresetChanged: {
                     for (var i = 0; i < presetCombo.count; ++i) {
-                        if (presetCombo.model.pluginId(i) === plasmoid.nativeInterface.currentPreset) {
+                        if (presetCombo.model.pluginId(i) === faceController.currentPreset) {
                             presetCombo.currentIndex = i;
                             return;
                         }
@@ -72,20 +74,19 @@ Kirigami.FormLayout {
             }
             currentIndex: {
                 for (var i = 0; i < count; ++i) {
-                    if (model.pluginId(i) === plasmoid.nativeInterface.currentPreset) {
+                    if (model.pluginId(i) === faceController.currentPreset) {
                         return i;
                     }
                 }
                 return -1;
             }
             onActivated: {
-                var presetsModel = plasmoid.nativeInterface.availablePresetsModel;
-                var idx = presetsModel.index(index, 0);
+                var idx = model.index(index, 0);
 
-                cfg_title = presetsModel.data(idx, /* DisplayRole */) || "";
+                cfg_title = model.data(idx, /* DisplayRole */) || "";
 
-                var pendingPresetConfig = presetsModel.data(idx, Qt.UserRole + 3); // FIXME proper enum
-                pendingPreset = presetsModel.pluginId(index);
+                var pendingPresetConfig = model.data(idx, Qt.UserRole + 3); // FIXME proper enum
+                pendingPreset = model.pluginId(index);
                 if (pendingPresetConfig.chartFace) {
                     cfg_chartFace = pendingPresetConfig.chartFace;
                 }
@@ -94,12 +95,11 @@ Kirigami.FormLayout {
             }
         }
 
-        Controls.Button {
-            icon.name: "get-hot-new-stuff"
-            onClicked: plasmoid.nativeInterface.getNewPresets(this)
-            visible: KAuthorized.authorize("ghns")
+        NewStuff.Button {
             Accessible.name: i18n("Get new presets")
-
+            configFile: "systemmonitor-presets.knsrc"
+            text: ""
+            onChangedEntriesChanged: faceController.availablePresetsModel.reload();
             Controls.ToolTip {
                 text: parent.Accessible.name
             }
@@ -109,7 +109,7 @@ Kirigami.FormLayout {
             id: saveButton
             icon.name: "document-save"
             text: i18n("Save")
-            enabled: plasmoid.nativeInterface.currentPreset.length == 0
+            enabled: faceController.currentPreset.length == 0
             onClicked: plasmoid.nativeInterface.savePreset();
         }
         Controls.Button {
@@ -136,7 +136,8 @@ Kirigami.FormLayout {
         Kirigami.FormData.label: i18n("Display Style:")
         Controls.ComboBox {
             id: faceCombo
-            model: plasmoid.nativeInterface.availableFacesModel
+            model: faceController.availableFacesModel
+            textRole: "display"
             currentIndex: {
                 // TODO just make an indexOf invokable on the model?
                 for (var i = 0; i < count; ++i) {
@@ -151,11 +152,10 @@ Kirigami.FormLayout {
             }
         }
 
-        Controls.Button {
-            icon.name: "get-hot-new-stuff"
-            text: i18n("Get New Display Styles")
-            visible: KAuthorized.authorize("ghns")
-            onClicked: plasmoid.nativeInterface.getNewFaces(this)
+        NewStuff.Button {
+            text: i18n("Get New Display Styles...")
+            configFile: "systemmonitor-faces.knsrc"
+            onChangedEntriesChanged: faceController.availableFacesModel.reload();
         }
     }
 }

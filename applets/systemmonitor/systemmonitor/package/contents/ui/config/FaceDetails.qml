@@ -36,9 +36,9 @@ Loader {
         if (item.saveConfig) {
             item.saveConfig()
         }
-        for (var key in plasmoid.nativeInterface.faceConfiguration) {
+        for (var key in plasmoid.nativeInterface.faceController.faceConfiguration) {
             if (item.hasOwnProperty("cfg_" + key)) {
-                plasmoid.nativeInterface.faceConfiguration[key] = item["cfg_"+key]
+                plasmoid.nativeInterface.faceController.faceConfiguration[key] = item["cfg_"+key]
             }
         }
     }
@@ -46,16 +46,16 @@ Loader {
     source: plasmoid.nativeInterface.configPath
 
     onItemChanged: {
-        if (!item || !plasmoid.nativeInterface.faceConfiguration) {
+        if (!item || !plasmoid.nativeInterface.faceController.faceConfiguration) {
             return;
         }
 
-        for (var key in plasmoid.nativeInterface.faceConfiguration) {
+        for (var key in plasmoid.nativeInterface.faceController.faceConfiguration) {
             if (!item.hasOwnProperty("cfg_" + key)) {
                 continue;
             }
 
-            item["cfg_" + key] = plasmoid.nativeInterface.faceConfiguration[key];
+            item["cfg_" + key] = plasmoid.nativeInterface.faceController.faceConfiguration[key];
             var changedSignal = item["cfg_" + key + "Changed"];
             if (changedSignal) {
                 changedSignal.connect(root.configurationChanged);
