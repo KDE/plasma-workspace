@@ -236,10 +236,10 @@ void View::positionOnScreen()
     QDBusPendingCall async = strutManager.asyncCall("availableScreenRect", shownOnScreen->name());
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
 
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [=]() {
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher, shownOnScreen]() {
+        watcher->deleteLater();
         QDBusPendingReply<QRect> reply = *watcher;
 
-        setScreen(shownOnScreen);
         const QRect r = reply.isValid() ? reply.value() : shownOnScreen->availableGeometry();
 
         if (m_floating && !m_customPos.isNull()) {
@@ -268,14 +268,13 @@ void View::positionOnScreen()
             KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
             KWindowSystem::setType(winId(), NET::Normal);
             //Turn the sliding effect off
-            KWindowEffects::slideWindow(winId(), KWindowEffects::NoEdge, 0);
+            setLocation(Plasma::Types::Floating);
         } else {
             KWindowSystem::setOnAllDesktops(winId(), true);
-            KWindowEffects::slideWindow(winId(), KWindowEffects::TopEdge, 0);
+            setLocation(Plasma::Types::TopEdge);
         }
 
         KWindowSystem::forceActiveWindow(winId());
-        watcher->deleteLater();
 
     });
 }
