@@ -32,6 +32,8 @@ namespace NotificationManager
 namespace Utils
 {
 
+QHash<int, QByteArray> roleNames();
+
 QString processNameFromPid(uint pid);
 
 QString desktopEntryFromPid(uint pid);

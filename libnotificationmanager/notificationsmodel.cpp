@@ -23,6 +23,7 @@
 #include "debug.h"
 
 #include "server.h"
+#include "utils_p.h"
 
 #include "notifications.h"
 
@@ -348,6 +349,11 @@ int NotificationsModel::rowCount(const QModelIndex &parent) const
     }
 
     return d->notifications.count();
+}
+
+QHash<int, QByteArray> NotificationsModel::roleNames() const
+{
+    return Utils::roleNames();
 }
 
 void NotificationsModel::expire(uint notificationId)

@@ -22,6 +22,7 @@
 #include "jobsmodel_p.h"
 
 #include "notifications.h"
+#include "utils_p.h"
 
 #include <QDebug>
 #include <QScopedPointer>
@@ -174,6 +175,11 @@ int JobsModel::rowCount(const QModelIndex &parent) const
     }
 
     return d->m_jobViews.count();
+}
+
+QHash<int, QByteArray> JobsModel::roleNames() const
+{
+    return Utils::roleNames();
 }
 
 void JobsModel::close(const QModelIndex &idx)

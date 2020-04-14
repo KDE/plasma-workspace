@@ -20,12 +20,15 @@
 
 #include "utils_p.h"
 
+#include "notifications.h"
+
 #include <QAbstractItemModel>
 #include <QAbstractProxyModel>
 #include <QCoreApplication>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QFile>
+#include <QMetaEnum>
 #include <QTextStream>
 
 #include <KConcatenateRowsProxyModel>
@@ -33,6 +36,34 @@
 #include <KProcessList>
 
 using namespace NotificationManager;
+
+QHash<int, QByteArray> Utils::roleNames()
+{
+    static QHash<int, QByteArray> s_roles;
+
+    if (s_roles.isEmpty()) {
+        // This generates role names from the Roles enum in the form of: FooRole -> foo
+        const QMetaEnum e = QMetaEnum::fromType<Notifications::Roles>();
+
+        // Qt built-in roles we use
+        s_roles.insert(Qt::DisplayRole, QByteArrayLiteral("display"));
+        s_roles.insert(Qt::DecorationRole, QByteArrayLiteral("decoration"));
+
+        for (int i = 0; i < e.keyCount(); ++i) {
+            const int value = e.value(i);
+
+            QByteArray key(e.key(i));
+            key[0] = key[0] + 32; // lower case first letter
+            key.chop(4); // strip "Role" suffix
+
+            s_roles.insert(value, key);
+        }
+
+        s_roles.insert(Notifications::IdRole, QByteArrayLiteral("notificationId")); // id is QML-reserved
+    }
+
+    return s_roles;
+}
 
 QString Utils::processNameFromPid(uint pid)
 {
