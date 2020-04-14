@@ -325,10 +325,10 @@ ColumnLayout {
 
                 model: {
                     var buttons = [];
+                    var actionNames = (notificationItem.actionNames || []);
+                    var actionLabels = (notificationItem.actionLabels || []);
                     // HACK We want the actions to be right-aligned but Flow also reverses
-                    var actionNames = (notificationItem.actionNames || []).reverse();
-                    var actionLabels = (notificationItem.actionLabels || []).reverse();
-                    for (var i = 0; i < actionNames.length; ++i) {
+                    for (var i = actionNames.length - 1; i >= 0; --i) {
                         buttons.push({
                             actionName: actionNames[i],
                             label: actionLabels[i]
