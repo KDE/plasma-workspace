@@ -9,8 +9,8 @@ ConfigModel {
          source: "config/ConfigAppearance.qml"
     }
     ConfigCategory {
-         name: i18n("%1 Details", plasmoid.nativeInterface.faceName)
-         icon: plasmoid.nativeInterface.faceIcon
+         name: i18n("%1 Details", plasmoid.nativeInterface.faceController.name)
+         icon: plasmoid.nativeInterface.faceController.icon
          visible: plasmoid.nativeInterface.configPath.length > 0
          source: "config/FaceDetails.qml"
     }

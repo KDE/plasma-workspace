@@ -54,49 +54,45 @@ Kirigami.FormLayout {
     // config keys of the selected preset to be applied on save
     property string pendingPreset
 
-    RowLayout {
-        Kirigami.FormData.label: i18n("Preset:")
-        Controls.ComboBox {
-            id: presetCombo
+    Kirigami.OverlaySheet {
+        id: presetSheet
+        parent: root
+        ListView {
+            implicitWidth: Kirigami.Units.gridUnit * 15
             model: faceController.availablePresetsModel
-            textRole: "display"
-
-            Connections {
-                target: plasmoid.nativeInterface
-                onCurrentPresetChanged: {
-                    for (var i = 0; i < presetCombo.count; ++i) {
-                        if (presetCombo.model.pluginId(i) === faceController.currentPreset) {
-                            presetCombo.currentIndex = i;
-                            return;
-                        }
+            delegate: Kirigami.SwipeListItem {
+                contentItem: Controls.Label {
+                    Layout.fillWidth: true
+                    text: model.display
+                }
+                actions: Kirigami.Action {
+                    icon.name: "delete"
+                    visible: model.writable
+                    onTriggered: faceController.uninstallPreset("pluginId");
+                }
+                onClicked: {
+                    cfg_title = model.display;
+                    pendingPreset = model.pluginId;
+                    if (model.config.chartFace) {
+                        cfg_chartFace = model.config.chartFace;
                     }
+
+                    root.configurationChanged();
                 }
             }
-            currentIndex: {
-                for (var i = 0; i < count; ++i) {
-                    if (model.pluginId(i) === faceController.currentPreset) {
-                        return i;
-                    }
-                }
-                return -1;
-            }
-            onActivated: {
-                var idx = model.index(index, 0);
-
-                cfg_title = model.data(idx, /* DisplayRole */) || "";
-
-                var pendingPresetConfig = model.data(idx, Qt.UserRole + 3); // FIXME proper enum
-                pendingPreset = model.pluginId(index);
-                if (pendingPresetConfig.chartFace) {
-                    cfg_chartFace = pendingPresetConfig.chartFace;
-                }
-
-                root.configurationChanged();
-            }
+        }
+    }
+    RowLayout {
+        Kirigami.FormData.label: i18n("Presets:")
+        
+        Controls.Button {
+            icon.name: "document-open"
+            text: i18n("Load Preset...")
+            onClicked: presetSheet.open()
         }
 
         NewStuff.Button {
-            Accessible.name: i18n("Get new presets")
+            Accessible.name: i18n("Get new presets...")
             configFile: "systemmonitor-presets.knsrc"
             text: ""
             onChangedEntriesChanged: faceController.availablePresetsModel.reload();
@@ -108,18 +104,9 @@ Kirigami.FormLayout {
         Controls.Button {
             id: saveButton
             icon.name: "document-save"
-            text: i18n("Save")
+            text: i18n("Save Settings As Preset")
             enabled: faceController.currentPreset.length == 0
-            onClicked: plasmoid.nativeInterface.savePreset();
-        }
-        Controls.Button {
-            icon.name: "delete"
-            enabled: {
-                var presetsModel = plasmoid.nativeInterface.availablePresetsModel;
-                var idx = presetsModel.index(presetCombo.currentIndex, 0);
-                presetCombo.currentIndex >= 0 && presetsModel.data(idx, Qt.UserRole + 4); // FIXME: proper role
-            }
-            onClicked: plasmoid.nativeInterface.uninstallPreset(presetCombo.model.pluginId(presetCombo.currentIndex));
+            onClicked: faceController.savePreset();
         }
     }
 

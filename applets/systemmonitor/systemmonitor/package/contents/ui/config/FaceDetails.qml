@@ -27,39 +27,19 @@ import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kquickcontrols 2.0
 
 
-Loader {
+Controls.Control {
     id: root
 
     signal configurationChanged
 
     function saveConfig() {
-        if (item.saveConfig) {
-            item.saveConfig()
-        }
-        for (var key in plasmoid.nativeInterface.faceController.faceConfiguration) {
-            if (item.hasOwnProperty("cfg_" + key)) {
-                plasmoid.nativeInterface.faceController.faceConfiguration[key] = item["cfg_"+key]
-            }
-        }
+        contentItem.saveConfig();
     }
-
-    source: plasmoid.nativeInterface.configPath
-
-    onItemChanged: {
-        if (!item || !plasmoid.nativeInterface.faceController.faceConfiguration) {
-            return;
-        }
-
-        for (var key in plasmoid.nativeInterface.faceController.faceConfiguration) {
-            if (!item.hasOwnProperty("cfg_" + key)) {
-                continue;
-            }
-
-            item["cfg_" + key] = plasmoid.nativeInterface.faceController.faceConfiguration[key];
-            var changedSignal = item["cfg_" + key + "Changed"];
-            if (changedSignal) {
-                changedSignal.connect(root.configurationChanged);
-            }
-        }
+    
+    contentItem: plasmoid.nativeInterface.faceController.faceConfigUi
+    
+    Connections {
+        target: contentItem
+        onConfigurationChanged: root.configurationChanged()
     }
 }
