@@ -27,8 +27,6 @@
 #include <KDesktopFile>
 #include <KPackage/Package>
 
-#include <KNewStuff3/KNS3/DownloadDialog>
-
 class ApplicationListModel;
 class QQuickItem;
 class SensorFace;

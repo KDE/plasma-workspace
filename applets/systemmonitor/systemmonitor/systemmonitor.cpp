@@ -31,11 +31,7 @@
 
 #include <KConfigLoader>
 #include <KLocalizedString>
-#include <KPackage/PackageLoader>
-#include <KDeclarative/ConfigPropertyMap>
 #include <KDeclarative/QmlObjectSharedEngine>
-
-#include <KNewPasswordDialog>
 
 SystemMonitor::SystemMonitor(QObject *parent, const QVariantList &args)
     : Plasma::Applet(parent, args)
@@ -61,7 +57,7 @@ void SystemMonitor::init()
     // NOTE: taking the pluginId this way, we take it from the child applet (cpu monitor, memory, whatever) rather than the parent fallback applet (systemmonitor)
     const QString pluginId = KPluginMetaData(kPackage().path() + QStringLiteral("metadata.desktop")).pluginId();
 
-    //FIXME: better way to get the engine (KF6?)
+    //FIXME HACK: better way to get the engine At least AppletQuickItem should have an engine() getter
     KDeclarative::QmlObjectSharedEngine *qmlObject = new  KDeclarative::QmlObjectSharedEngine();
     KConfigGroup cg = config();
     m_sensorFaceController = new SensorFaceController(cg, qmlObject->engine());
@@ -83,7 +79,9 @@ SensorFaceController *SystemMonitor::faceController() const
 
 void SystemMonitor::configChanged()
 {
-    //TODO: trigger reload of config of the facecontroller
+    if (m_sensorFaceController) {
+        m_sensorFaceController->reloadConfig();
+    }
 }
 
 K_EXPORT_PLASMA_APPLET_WITH_JSON(systemmonitor, SystemMonitor, "metadata.json")

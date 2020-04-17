@@ -31,118 +31,19 @@ import org.kde.newstuff 1.62 as NewStuff
 
 import org.kde.ksysguard.sensors 1.0 as Sensors
 
-Kirigami.FormLayout {
+Controls.Control {
     id: root
 
     signal configurationChanged
 
     function saveConfig() {
-        faceController.title = cfg_title;
-        faceController.faceId = cfg_chartFace;
-
-        var preset = pendingPreset;
-        pendingPreset = "";
-        if (preset != "") {
-            faceController.currentPreset = preset;
-        }
+        contentItem.saveConfig();
     }
-
-    readonly property Sensors.SensorFaceController faceController: plasmoid.nativeInterface.faceController
-    property alias cfg_title: titleField.text
-    property string cfg_chartFace
-
-    // config keys of the selected preset to be applied on save
-    property string pendingPreset
-
-    Kirigami.OverlaySheet {
-        id: presetSheet
-        parent: root
-        ListView {
-            implicitWidth: Kirigami.Units.gridUnit * 15
-            model: faceController.availablePresetsModel
-            delegate: Kirigami.SwipeListItem {
-                contentItem: Controls.Label {
-                    Layout.fillWidth: true
-                    text: model.display
-                }
-                actions: Kirigami.Action {
-                    icon.name: "delete"
-                    visible: model.writable
-                    onTriggered: faceController.uninstallPreset("pluginId");
-                }
-                onClicked: {
-                    cfg_title = model.display;
-                    pendingPreset = model.pluginId;
-                    if (model.config.chartFace) {
-                        cfg_chartFace = model.config.chartFace;
-                    }
-
-                    root.configurationChanged();
-                }
-            }
-        }
-    }
-    RowLayout {
-        Kirigami.FormData.label: i18n("Presets:")
-        
-        Controls.Button {
-            icon.name: "document-open"
-            text: i18n("Load Preset...")
-            onClicked: presetSheet.open()
-        }
-
-        NewStuff.Button {
-            Accessible.name: i18n("Get new presets...")
-            configFile: "systemmonitor-presets.knsrc"
-            text: ""
-            onChangedEntriesChanged: faceController.availablePresetsModel.reload();
-            Controls.ToolTip {
-                text: parent.Accessible.name
-            }
-        }
-
-        Controls.Button {
-            id: saveButton
-            icon.name: "document-save"
-            text: i18n("Save Settings As Preset")
-            enabled: faceController.currentPreset.length == 0
-            onClicked: faceController.savePreset();
-        }
-    }
-
-    Kirigami.Separator {
-        Kirigami.FormData.isSection: true
-    }
-
-    Controls.TextField {
-        id: titleField
-        Kirigami.FormData.label: i18n("Title:")
-    }
-
-    RowLayout {
-        Kirigami.FormData.label: i18n("Display Style:")
-        Controls.ComboBox {
-            id: faceCombo
-            model: faceController.availableFacesModel
-            textRole: "display"
-            currentIndex: {
-                // TODO just make an indexOf invokable on the model?
-                for (var i = 0; i < count; ++i) {
-                    if (model.pluginId(i) === cfg_chartFace) {
-                        return i;
-                    }
-                }
-                return -1;
-            }
-            onActivated: {
-                cfg_chartFace = model.pluginId(index);
-            }
-        }
-
-        NewStuff.Button {
-            text: i18n("Get New Display Styles...")
-            configFile: "systemmonitor-faces.knsrc"
-            onChangedEntriesChanged: faceController.availableFacesModel.reload();
-        }
+    
+    contentItem: plasmoid.nativeInterface.faceController.appearanceConfigUi
+    
+    Connections {
+        target: contentItem
+        onConfigurationChanged: root.configurationChanged()
     }
 }

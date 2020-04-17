@@ -12,14 +12,12 @@ target_link_libraries(plasma_applet_systemmonitor
                       Qt5::Quick
                       Qt5::DBus
                       KF5::Plasma
-                      KF5::Package
                       KF5::I18n
                       KF5::ConfigCore
                       KF5::ConfigGui
                       KF5::Declarative
                       KF5::SysGuard
                       KF5::Sensors
-                      KF5::NewStuff
                      )
 
 
