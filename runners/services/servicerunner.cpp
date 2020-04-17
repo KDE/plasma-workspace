@@ -477,7 +477,14 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
 
 QMimeData * ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
-    KService::Ptr service = KService::serviceByStorageId(match.data().toString());
+    const QUrl dataUrl = match.data().toUrl();
+
+    const QString actionName = QUrlQuery(dataUrl).queryItemValue(QStringLiteral("action"));
+    if (!actionName.isEmpty()) {
+        return nullptr;
+    }
+
+    KService::Ptr service = KService::serviceByStorageId(dataUrl.path());
     if (!service) {
         return nullptr;
     }
