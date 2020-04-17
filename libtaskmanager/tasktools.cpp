@@ -807,7 +807,7 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
         if (appData.url.scheme() == QLatin1String("applications")) {
             service = KService::serviceByMenuId(appData.url.path());
         } else if (appData.url.scheme() == QLatin1String("preferred")) {
-            const KService::Ptr service = KService::serviceByStorageId(defaultApplication(appData.url));
+            service = KService::serviceByStorageId(defaultApplication(appData.url));
         } else {
             service = KService::serviceByDesktopPath(appData.url.toLocalFile());
         }
