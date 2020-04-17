@@ -22,9 +22,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "tasktools.h"
 #include "virtualdesktopinfo.h"
 
-#include <KActivities/ResourceInstance>
 #include <KDirWatch>
-#include <KRun>
 #include <KService>
 #include <KSharedConfig>
 #include <KWayland/Client/connection_thread.h>

@@ -26,7 +26,7 @@ include(KDEPackageAppTemplates)
 include(KDEClangFormat)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-                    Plasma DocTools Runner NotifyConfig Su NewStuff Wallet
+                    Plasma DocTools Runner Notifications NotifyConfig Su NewStuff Wallet
                     IdleTime Declarative I18n KCMUtils TextWidgets KDELibs4Support Crash GlobalAccel
                     DBusAddons Wayland CoreAddons People ActivitiesStats)
 find_package(KDED CONFIG REQUIRED)

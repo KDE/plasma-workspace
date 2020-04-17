@@ -48,7 +48,9 @@ target_link_libraries(taskmanager
         KF5::ConfigCore
         KF5::I18n
         KF5::KIOCore
+        KF5::KIOGui
         KF5::KIOWidgets
+        KF5::Notifications
         KF5::WaylandClient
         KF5::WindowSystem
 )
