@@ -81,7 +81,7 @@ Item {
 
     Plasmoid.switchWidth: units.gridUnit * 14
     Plasmoid.switchHeight: units.gridUnit * 10
-    Plasmoid.icon: albumArt ? albumArt : "media-playback-playing"
+    Plasmoid.icon: "media-playback-playing"
     Plasmoid.toolTipMainText: i18n("No media playing")
     Plasmoid.toolTipSubText: identity
     Plasmoid.toolTipTextFormat: Text.PlainText
