@@ -81,7 +81,9 @@ InvalidAppsFilterProxy::~InvalidAppsFilterProxy()
 void InvalidAppsFilterProxy::connectNewFavoritesModel()
 {
     KAStatsFavoritesModel* favoritesModel = static_cast<KAStatsFavoritesModel *>(m_parentModel->favoritesModel());
-    connect(favoritesModel, &KAStatsFavoritesModel::favoritesChanged, this, &QSortFilterProxyModel::invalidate);
+    if (favoritesModel) {
+        connect(favoritesModel, &KAStatsFavoritesModel::favoritesChanged, this, &QSortFilterProxyModel::invalidate);
+    }
 
     invalidate();
 }
