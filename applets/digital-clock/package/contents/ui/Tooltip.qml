@@ -43,13 +43,15 @@ Item {
             margins: units.gridUnit / 2
         }
 
+        spacing: 0
+
         PlasmaExtras.Heading {
             id: tooltipMaintext
             level: 3
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
             elide: Text.ElideRight
-            text: Qt.formatDate(tzDate,"dddd")
+            text: clocks.visible ? Qt.formatDate(tzDate, Locale.LongFormat) : Qt.formatDate(tzDate,"dddd")
         }
 
         PlasmaComponents.Label {
@@ -58,14 +60,17 @@ Item {
             Layout.maximumWidth: preferredTextWidth
             text: Qt.formatDate(tzDate, dateFormatString)
             opacity: 0.6
+            visible: !clocks.visible
         }
 
         GridLayout {
+            id: clocks
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
             Layout.maximumHeight: childrenRect.height
             columns: 2
             visible: plasmoid.configuration.selectedTimeZones.length > 1
+            rowSpacing: 0
 
             Repeater {
                 model: {
