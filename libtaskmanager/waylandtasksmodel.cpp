@@ -465,6 +465,8 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         // FIXME Implement.
     } else if (role == AppPid) {
         return window->pid();
+    } else if (role == StackingOrder) {
+        return d->windowManagement->stackingOrder().indexOf(window->internalId());
     } else if (role == ApplicationMenuObjectPath) {
         return window->applicationMenuObjectPath();
     } else if (role == ApplicationMenuServiceName) {
