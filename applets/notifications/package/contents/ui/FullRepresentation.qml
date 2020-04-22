@@ -26,7 +26,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.11 as Kirigami
+import org.kde.kirigami 2.12 as Kirigami
 
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 
@@ -577,15 +577,14 @@ PlasmaComponents3.Page {
                     }
                 }
 
-                PlasmaExtras.Heading {
-                    anchors.fill: parent
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    wrapMode: Text.WordWrap
-                    level: 3
+                Kirigami.PlaceholderMessage {
+                    anchors.centerIn: parent
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.margins: units.largeSpacing
+
                     text: i18n("No unread notifications")
                     visible: list.count === 0 && NotificationManager.Server.valid
-                    enabled: false
                 }
 
                 ColumnLayout {
