@@ -23,7 +23,8 @@
 
 #include <KLocalizedString>
 #include <kmacroexpander.h>
-#include <krun.h>
+#include <KIO/CommandLauncherJob>
+#include <KNotificationJobUiDelegate>
 #include <solid/storageaccess.h>
 #include <solid/block.h>
 
@@ -159,7 +160,11 @@ void DelayedExecutor::delayedExecute(const QString &udi)
     MacroExpander mx(device);
     mx.expandMacrosShellQuote(exec);
 
-    KRun::runCommand(exec, QString(), m_service.icon(), nullptr);
+    KIO::CommandLauncherJob *job = new KIO::CommandLauncherJob(exec);
+    job->setIcon(m_service.icon());
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+    job->start();
+
     deleteLater();
 }
 

@@ -15,7 +15,8 @@ target_link_libraries(plasma_engine_hotplug
     KF5::Solid
     KF5::Service
     KF5::KIOCore
-    KF5::KIOWidgets
+    KF5::KIOWidgets      # KDesktopFileActions
+    KF5::Notifications
     KF5::I18n
 )
 
