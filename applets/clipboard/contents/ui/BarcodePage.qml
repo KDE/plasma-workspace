@@ -21,6 +21,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 ColumnLayout {
     id: barcodeView
@@ -46,74 +47,78 @@ ColumnLayout {
         });
     }
 
-    RowLayout {
-        Layout.fillWidth: true
-        PlasmaComponents.Button {
-            Layout.fillWidth: true
-            iconSource: "go-previous-view"
-            text: i18n("Return to Clipboard")
-            onClicked: stack.pop()
-        }
-        PlasmaComponents.ContextMenu {
-            id: menu
-            visualParent: configureButton
-            placement: PlasmaCore.Types.BottomPosedLeftAlignedPopup
-            onStatusChanged: {
-                if (status == PlasmaComponents.DialogStatus.Closed) {
-                    configureButton.checked = false;
+    property var header: PlasmaExtras.PlasmoidHeading {
+        RowLayout {
+            anchors.fill: parent
+            PlasmaComponents.Button {
+                Layout.fillWidth: true
+                iconSource: "go-previous-view"
+                text: i18n("Return to Clipboard")
+                onClicked: stack.pop()
+            }
+            PlasmaComponents.ContextMenu {
+                id: menu
+                visualParent: configureButton
+                placement: PlasmaCore.Types.BottomPosedLeftAlignedPopup
+                onStatusChanged: {
+                    if (status == PlasmaComponents.DialogStatus.Closed) {
+                        configureButton.checked = false;
+                    }
+                }
+
+                function change(type) {
+                    barcodeView.barcodeType = type;
+                    barcodeView.show(barcodeView.uuid);
+                }
+
+                PlasmaComponents.MenuItem {
+                    text: i18n("QR Code")
+                    checkable: true
+                    checked: barcodeView.barcodeType == 0
+                    onClicked: menu.change(0)
+                }
+                PlasmaComponents.MenuItem {
+                    text: i18n("Data Matrix")
+                    checkable: true
+                    checked: barcodeView.barcodeType == 1
+                    onClicked: menu.change(1)
+                }
+                PlasmaComponents.MenuItem {
+                    text: i18nc("Aztec barcode", "Aztec")
+                    checkable: true
+                    checked: barcodeView.barcodeType == 4
+                    onClicked: menu.change(4)
+                }
+                PlasmaComponents.MenuItem {
+                    text: i18n("Code 39")
+                    checkable: true
+                    checked: barcodeView.barcodeType == 2
+                    onClicked: menu.change(2)
+                }
+                PlasmaComponents.MenuItem {
+                    text: i18n("Code 93")
+                    checkable: true
+                    checked: barcodeView.barcodeType == 3
+                    onClicked: menu.change(3)
                 }
             }
-
-            function change(type) {
-                barcodeView.barcodeType = type;
-                barcodeView.show(barcodeView.uuid);
-            }
-
-            PlasmaComponents.MenuItem {
-                text: i18n("QR Code")
+            PlasmaComponents.ToolButton {
+                id: configureButton
                 checkable: true
-                checked: barcodeView.barcodeType == 0
-                onClicked: menu.change(0)
+                iconSource: "configure"
+                tooltip: i18n("Change the barcode type")
+                onClicked: menu.openRelative()
             }
-            PlasmaComponents.MenuItem {
-                text: i18n("Data Matrix")
-                checkable: true
-                checked: barcodeView.barcodeType == 1
-                onClicked: menu.change(1)
-            }
-            PlasmaComponents.MenuItem {
-                text: i18nc("Aztec barcode", "Aztec")
-                checkable: true
-                checked: barcodeView.barcodeType == 4
-                onClicked: menu.change(4)
-            }
-            PlasmaComponents.MenuItem {
-                text: i18n("Code 39")
-                checkable: true
-                checked: barcodeView.barcodeType == 2
-                onClicked: menu.change(2)
-            }
-            PlasmaComponents.MenuItem {
-                text: i18n("Code 93")
-                checkable: true
-                checked: barcodeView.barcodeType == 3
-                onClicked: menu.change(3)
-            }
-        }
-        PlasmaComponents.ToolButton {
-            id: configureButton
-            checkable: true
-            iconSource: "configure"
-            tooltip: i18n("Change the barcode type")
-            onClicked: menu.openRelative()
         }
     }
+
     QImageItem {
         id: barcodePreview
         property alias busy: busyIndicator.visible
         fillMode: QImageItem.PreserveAspectFit
         Layout.fillWidth: true
         Layout.fillHeight: true
+        Layout.topMargin: units.smallSpacing
         onWidthChanged: barcodeView.show(barcodeView.uuid)
         onHeightChanged: barcodeView.show(barcodeView.uuid)
         PlasmaComponents.BusyIndicator {

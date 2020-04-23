@@ -76,22 +76,25 @@ ColumnLayout {
         }
     }
 
-    RowLayout {
-        Layout.fillWidth: true
-        visible: clipboardMenu.model.count > 0
+    property var header: PlasmaExtras.PlasmoidHeading {
+        RowLayout {
+            anchors.fill: parent
+            enabled: clipboardMenu.model.count > 0
 
-        PlasmaComponents.TextField {
-            id: filter
-            placeholderText: i18n("Search...")
-            clearButtonShown: true
-            Layout.fillWidth: true
-        }
-        PlasmaComponents.ToolButton {
-            iconSource: "edit-clear-history"
-            tooltip: i18n("Clear history")
-            onClicked: clipboardSource.service("", "clearHistory")
+            PlasmaComponents.TextField {
+                id: filter
+                placeholderText: i18n("Search...")
+                clearButtonShown: true
+                Layout.fillWidth: true
+            }
+            PlasmaComponents.ToolButton {
+                iconSource: "edit-clear-history"
+                tooltip: i18n("Clear history")
+                onClicked: clipboardSource.service("", "clearHistory")
+            }
         }
     }
+
     Menu {
         id: clipboardMenu
         model: PlasmaCore.SortFilterModel {
@@ -102,6 +105,7 @@ ColumnLayout {
         supportsBarcodes: clipboardSource.data["clipboard"]["supportsBarcodes"]
         Layout.fillWidth: true
         Layout.fillHeight: true
+        Layout.topMargin: units.smallSpacing
         onItemSelected: clipboardSource.service(uuid, "select")
         onRemove: clipboardSource.service(uuid, "remove")
         onEdit: clipboardSource.edit(uuid)
