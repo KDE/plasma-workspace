@@ -21,12 +21,12 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 
-FocusScope {
+PlasmaComponents3.Page {
     id: dialog
-    focus: true
 
     property alias model: batteryList.model
     property bool pluggedIn
@@ -38,19 +38,7 @@ FocusScope {
 
     signal powermanagementChanged(bool checked)
 
-    Column {
-        id: settingsColumn
-        anchors.horizontalCenter: parent.horizontalCenter
-        width: parent.width - units.smallSpacing * 2
-        spacing: Math.round(units.gridUnit / 2)
-
-        Components.Label {
-            // this is just for metrics, TODO use TextMetrics in 5.4 instead
-            id: percentageMeasurementLabel
-            text: i18nc("Used for measurement", "100%")
-            visible: false
-        }
-
+    header: PlasmaExtras.PlasmoidHeading {
         PowerManagementItem {
             id: pmSwitch
             width: parent.width
@@ -58,75 +46,88 @@ FocusScope {
             KeyNavigation.tab: batteryList
             KeyNavigation.backtab: keyboardBrightnessSlider
         }
-
-        BrightnessItem {
-            id: brightnessSlider
-            width: parent.width
-
-            icon: "video-display-brightness"
-            label: i18n("Display Brightness")
-            visible: isBrightnessAvailable
-            value: batterymonitor.screenBrightness
-            maximumValue: batterymonitor.maximumScreenBrightness
-            KeyNavigation.tab: keyboardBrightnessSlider
-            KeyNavigation.backtab: batteryList
-            stepSize: batterymonitor.maximumScreenBrightness/100
-
-            onMoved: batterymonitor.screenBrightness = value
-
-            // Manually dragging the slider around breaks the binding
-            Connections {
-                target: batterymonitor
-                onScreenBrightnessChanged: brightnessSlider.value = batterymonitor.screenBrightness
-            }
-        }
-
-        BrightnessItem {
-            id: keyboardBrightnessSlider
-            width: parent.width
-
-            icon: "input-keyboard-brightness"
-            label: i18n("Keyboard Brightness")
-            value: batterymonitor.keyboardBrightness
-            maximumValue: batterymonitor.maximumKeyboardBrightness
-            visible: isKeyboardBrightnessAvailable
-            KeyNavigation.tab: pmSwitch
-            KeyNavigation.backtab: brightnessSlider
-
-            onMoved: batterymonitor.keyboardBrightness = value
-
-            // Manually dragging the slider around breaks the binding
-            Connections {
-                target: batterymonitor
-                onKeyboardBrightnessChanged: keyboardBrightnessSlider.value = batterymonitor.keyboardBrightness
-            }
-        }
     }
 
-    PlasmaExtras.ScrollArea {
-        anchors {
-            horizontalCenter: parent.horizontalCenter
-            top: settingsColumn.bottom
-            topMargin: units.gridUnit
-            leftMargin: units.smallSpacing
-            bottom: dialog.bottom
-        }
-        width: parent.width - units.smallSpacing * 2
+    FocusScope {
+        anchors.fill: parent
+        anchors.topMargin: units.smallSpacing * 2
 
-        ListView {
-            id: batteryList
+        focus: true
 
-            boundsBehavior: Flickable.StopAtBounds
+        Column {
+            id: settingsColumn
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.width - units.smallSpacing * 2
             spacing: Math.round(units.gridUnit / 2)
 
-            KeyNavigation.tab: brightnessSlider
-            KeyNavigation.backtab: pmSwitch
-
-            delegate: BatteryItem {
+            BrightnessItem {
+                id: brightnessSlider
                 width: parent.width
-                battery: model
+
+                icon: "video-display-brightness"
+                label: i18n("Display Brightness")
+                visible: isBrightnessAvailable
+                value: batterymonitor.screenBrightness
+                maximumValue: batterymonitor.maximumScreenBrightness
+                KeyNavigation.tab: keyboardBrightnessSlider
+                KeyNavigation.backtab: batteryList
+                stepSize: batterymonitor.maximumScreenBrightness/100
+
+                onMoved: batterymonitor.screenBrightness = value
+
+                // Manually dragging the slider around breaks the binding
+                Connections {
+                    target: batterymonitor
+                    onScreenBrightnessChanged: brightnessSlider.value = batterymonitor.screenBrightness
+                }
+            }
+
+            BrightnessItem {
+                id: keyboardBrightnessSlider
+                width: parent.width
+
+                icon: "input-keyboard-brightness"
+                label: i18n("Keyboard Brightness")
+                value: batterymonitor.keyboardBrightness
+                maximumValue: batterymonitor.maximumKeyboardBrightness
+                visible: isKeyboardBrightnessAvailable
+                KeyNavigation.tab: pmSwitch
+                KeyNavigation.backtab: brightnessSlider
+
+                onMoved: batterymonitor.keyboardBrightness = value
+
+                // Manually dragging the slider around breaks the binding
+                Connections {
+                    target: batterymonitor
+                    onKeyboardBrightnessChanged: keyboardBrightnessSlider.value = batterymonitor.keyboardBrightness
+                }
+            }
+        }
+
+        PlasmaExtras.ScrollArea {
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                top: settingsColumn.bottom
+                topMargin: units.gridUnit
+                leftMargin: units.smallSpacing
+                bottom: dialog.bottom
+            }
+            width: parent.width - units.smallSpacing * 2
+
+            ListView {
+                id: batteryList
+
+                boundsBehavior: Flickable.StopAtBounds
+                spacing: Math.round(units.gridUnit / 2)
+
+                KeyNavigation.tab: brightnessSlider
+                KeyNavigation.backtab: pmSwitch
+
+                delegate: BatteryItem {
+                    width: parent.width
+                    battery: model
+                }
             }
         }
     }
-
 }
