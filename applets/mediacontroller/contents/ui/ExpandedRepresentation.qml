@@ -175,9 +175,14 @@ Item {
             }
             RowLayout { // Album Art + Details
                 id: albumRow
-                spacing: units.largeSpacing
 
-                anchors.fill: parent
+                anchors {
+                    fill: parent
+                    leftMargin: units.largeSpacing
+                    rightMargin: units.largeSpacing
+                }
+
+                spacing: units.largeSpacing
 
                 Item {
                     Layout.fillWidth: true
@@ -187,11 +192,7 @@ Item {
                     Image { // Album Art
                         id: albumArt
 
-                        anchors {
-                            fill: parent
-                            margins: units.smallSpacing
-                            leftMargin: units.largeSpacing
-                        }
+                        anchors.fill: parent
 
                         visible: !!root.track && status === Image.Ready
 
