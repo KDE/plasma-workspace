@@ -34,12 +34,19 @@ StackView {
     Layout.minimumHeight: units.gridUnit * 12
 
     property Item activeApplet
+
+    /* Heading */
     property bool appletHasHeading: false
-    property bool appletHeadingShown: appletHasHeading && activeApplet.fullRepresentationItem.header.visible
-    property bool mergeHeadings: appletHasHeading && appletHeadingShown
+    property bool mergeHeadings: appletHasHeading && activeApplet.fullRepresentationItem.header.visible
     property int headingHeight: mergeHeadings ? activeApplet.fullRepresentationItem.header.height : 0
+    /* Footer */
+    property bool appletHasFooter: false
+    property bool mergeFooters: appletHasFooter && activeApplet.fullRepresentationItem.footer.visible
+    property int footerHeight: mergeFooters ? activeApplet.fullRepresentationItem.footer.height : 0
 
     onActiveAppletChanged: {
+        mainStack.appletHasHeading = false
+        mainStack.appletHasFooter = false
         if (activeApplet != null) {
             //reset any potential anchor
             activeApplet.fullRepresentationItem.anchors.left = undefined;
@@ -49,18 +56,19 @@ StackView {
             activeApplet.fullRepresentationItem.anchors.centerIn = undefined;
             activeApplet.fullRepresentationItem.anchors.fill = undefined;
 
-            if (activeApplet.fullRepresentationItem instanceof PlasmaComponents3.Page
-                && activeApplet.fullRepresentationItem.header instanceof PlasmaExtras.PlasmoidHeading
-            ) {
-                mainStack.appletHasHeading = true
-                activeApplet.fullRepresentationItem.header.background.visible = false
-            } else {
-                mainStack.appletHasHeading = false
+            if (activeApplet.fullRepresentationItem instanceof PlasmaComponents3.Page) {
+                if (activeApplet.fullRepresentationItem.header && activeApplet.fullRepresentationItem.header instanceof PlasmaExtras.PlasmoidHeading) {
+                    mainStack.appletHasHeading = true
+                    activeApplet.fullRepresentationItem.header.background.visible = false
+                }
+                if (activeApplet.fullRepresentationItem.footer && activeApplet.fullRepresentationItem.footer instanceof PlasmaExtras.PlasmoidHeading) {
+                    mainStack.appletHasFooter = true
+                    activeApplet.fullRepresentationItem.footer.background.visible = false
+                }
             }
 
             mainStack.replace({item: activeApplet.fullRepresentationItem, immediate: !dialog.visible, properties: {focus: true}});
         } else {
-            mainStack.appletHasHeading = false
             mainStack.replace(emptyPage);
         }
     }

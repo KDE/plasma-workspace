@@ -41,6 +41,18 @@ Item {
         height: trayHeading.height + bottomPadding + container.headingHeight
     }
 
+    PlasmaExtras.PlasmoidHeading {
+        id: plasmoidFooter
+        location: PlasmaExtras.PlasmoidHeading.Location.Footer
+        anchors {
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+        }
+        visible: container.appletHasFooter
+        height: container.footerHeight
+    }
+
     ColumnLayout {
         id: expandedRepresentation
         //set width/height to avoid an useless Dialog resize
@@ -147,9 +159,9 @@ Item {
 
             PlasmoidPopupsContainer {
                 id: container
-                visible: activeApplet
                 Layout.fillWidth: true
                 Layout.fillHeight: true
+                visible: activeApplet
                 // We need to add our own margins on the top and left (when the
                 // hidden items view is visible, at least) so it matches the
                 //  dialog's own margins and content is centered correctly
