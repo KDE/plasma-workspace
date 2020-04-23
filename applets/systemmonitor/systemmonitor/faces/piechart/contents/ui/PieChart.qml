@@ -26,6 +26,8 @@ import QtQuick.Layouts 1.1
 import org.kde.kirigami 2.8 as Kirigami
 
 import org.kde.ksysguard.sensors 1.0 as Sensors
+import org.kde.ksysguard.faces 1.0 as Faces
+
 import org.kde.quickcharts 1.0 as Charts
 import org.kde.quickcharts.controls 1.0 as ChartControls
 
@@ -37,8 +39,8 @@ ChartControls.PieChartControl {
     property alias sensors: sensorsModel.sensors
     property alias sensorsModel: sensorsModel
 
-    Layout.minimumWidth: root.formFactor != Sensors.SensorFace.Vertical ? Kirigami.Units.gridUnit * 4 : Kirigami.Units.gridUnit
-    Layout.minimumHeight: root.formFactor == Sensors.SensorFace.Vertical ? width : Kirigami.Units.gridUnit
+    Layout.minimumWidth: root.formFactor != Faces.SensorFace.Vertical ? Kirigami.Units.gridUnit * 4 : Kirigami.Units.gridUnit
+    Layout.minimumHeight: root.formFactor == Faces.SensorFace.Vertical ? width : Kirigami.Units.gridUnit
 
     leftPadding: 0
     rightPadding: 0

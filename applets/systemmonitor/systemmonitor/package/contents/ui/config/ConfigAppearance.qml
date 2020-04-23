@@ -30,6 +30,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.newstuff 1.62 as NewStuff
 
 import org.kde.ksysguard.sensors 1.0 as Sensors
+import org.kde.ksysguard.faces 1.0 as Faces
 
 Controls.Control {
     id: root

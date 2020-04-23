@@ -27,7 +27,7 @@
 #include <QWindow>
 
 #include <sensors/SensorQuery.h>
-#include <sensors/SensorFaceController.h>
+#include <faces/SensorFaceController.h>
 
 #include <KConfigLoader>
 #include <KLocalizedString>

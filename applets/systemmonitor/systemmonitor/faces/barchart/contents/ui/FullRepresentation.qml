@@ -55,7 +55,7 @@ ColumnLayout
         Layout.maximumHeight: Math.max(root.width, Layout.minimumHeight)
     }
 
-    Sensors.ExtendedLegend {
+    Faces.ExtendedLegend {
         Layout.fillWidth: true
         Layout.fillHeight: true
         visible: root.showLegend

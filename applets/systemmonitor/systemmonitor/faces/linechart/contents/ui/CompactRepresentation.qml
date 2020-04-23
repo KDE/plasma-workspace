@@ -32,7 +32,7 @@ import org.kde.quickcharts.controls 1.0 as ChartControls
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-Sensors.SensorFace {
+Faces.SensorFace {
     id: root
     contentItem: ColumnLayout {
         LineChart {
@@ -42,7 +42,7 @@ Sensors.SensorFace {
         }
         Controls.Label {
             id: label
-            visible: root.formFactor == Sensors.SensorFace.Planar
+            visible: root.formFactor == Faces.SensorFace.Planar
             Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
             text: root.controller.title
         }

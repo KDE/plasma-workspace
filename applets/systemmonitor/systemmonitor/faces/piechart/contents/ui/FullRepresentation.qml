@@ -26,10 +26,12 @@ import QtQuick.Layouts 1.4
 import org.kde.kirigami 2.8 as Kirigami
 
 import org.kde.ksysguard.sensors 1.0 as Sensors
+import org.kde.ksysguard.faces 1.0 as Faces
+
 import org.kde.quickcharts 1.0 as Charts
 import org.kde.quickcharts.controls 1.0 as ChartsControls
 
-Sensors.SensorFace {
+Faces.SensorFace {
     id: root
     readonly property bool showLegend: controller.faceConfiguration.showLegend
 
@@ -57,7 +59,7 @@ Sensors.SensorFace {
             Layout.maximumHeight: Math.max(root.width, Layout.minimumHeight)
         }
 
-        Sensors.ExtendedLegend {
+        Faces.ExtendedLegend {
             Layout.fillWidth: true
             Layout.fillHeight: true
             visible: root.showLegend
