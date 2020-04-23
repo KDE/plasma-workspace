@@ -73,9 +73,7 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
     }
 
     auto *job = new KIO::CommandLauncherJob(context.query());
-    auto *delegate = new KNotificationJobUiDelegate;
-    delegate->setAutoErrorHandlingEnabled(true);
-    job->setUiDelegate(delegate);
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
     job->start();
 }
 
