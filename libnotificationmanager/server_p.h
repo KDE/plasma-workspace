@@ -22,6 +22,7 @@
 
 #include <QObject>
 #include <QDBusContext>
+#include <QStringList>
 
 #include "notification.h"
 
@@ -67,6 +68,12 @@ public:
                  const QVariantMap &hints);
     void UnInhibit(uint cookie);
     bool inhibited() const; // property getter
+
+    // Notifition watcher
+    void RegisterWatcher();
+    void UnRegisterWatcher();
+    
+    void InvokeAction(uint id, const QString &actionKey);
 
 Q_SIGNALS:
     // DBus
@@ -121,6 +128,7 @@ private:
     mutable QScopedPointer<ServerInfo> m_currentOwner;
 
     QDBusServiceWatcher *m_inhibitionWatcher = nullptr;
+    QDBusServiceWatcher *m_notificationWatchers = nullptr;
     uint m_highestInhibitionCookie = 0;
     QHash<uint /*cookie*/, Inhibition> m_externalInhibitions;
     QHash<uint /*cookie*/, QString> m_inhibitionServices;

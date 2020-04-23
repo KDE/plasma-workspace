@@ -66,6 +66,8 @@ public:
 
     QString summary;
     QString body;
+    // raw body text without sanitize called.
+    QString rawBody;
     // Can be theme icon name or path
     QString icon;
     QImage image;
@@ -97,6 +99,7 @@ public:
     QString replySubmitButtonIconName;
 
     QList<QUrl> urls;
+    QVariantMap hints = QVariantMap();
 
     bool userActionFeedback = false;
     Notifications::Urgency urgency = Notifications::NormalUrgency;

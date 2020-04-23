@@ -23,6 +23,7 @@
 #include "debug.h"
 
 #include "notificationsadaptor.h"
+#include "notificationmanageradaptor.h"
 
 #include "notification.h"
 #include "notification_p.h"
@@ -45,10 +46,17 @@ using namespace NotificationManager;
 ServerPrivate::ServerPrivate(QObject *parent)
     : QObject(parent)
     , m_inhibitionWatcher(new QDBusServiceWatcher(this))
+    , m_notificationWatchers (new QDBusServiceWatcher(this))
 {
     m_inhibitionWatcher->setConnection(QDBusConnection::sessionBus());
     m_inhibitionWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
     connect(m_inhibitionWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &ServerPrivate::onInhibitionServiceUnregistered);
+
+    m_notificationWatchers->setConnection(QDBusConnection::sessionBus());
+    m_notificationWatchers->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
+    connect(m_notificationWatchers, &QDBusServiceWatcher::serviceUnregistered, [=](const QString &service) {
+        m_notificationWatchers->removeWatchedService(service);
+    });
 }
 
 ServerPrivate::~ServerPrivate() = default;
@@ -84,6 +92,7 @@ bool ServerPrivate::init()
     }
 
     new NotificationsAdaptor(this);
+    new NotificationManagerAdaptor(this);
 
     if (!m_dbusObjectValid) { // if already registered, don't fail here
         m_dbusObjectValid = QDBusConnection::sessionBus().registerObject(notificationServicePath(), this);
@@ -223,11 +232,48 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
         emit static_cast<Server*>(parent())->notificationAdded(notification);
     }
 
+    // currently we dispatch all notification, this is ugly
+    // TODO: come up with proper authentication/user selection
+    for (const QString &service : m_notificationWatchers->watchedServices()) {
+        QDBusMessage msg = QDBusMessage::createMethodCall(
+            service,
+            QStringLiteral("/NotificationWatcher"),
+            QStringLiteral("org.kde.NotificationWatcher"),
+            QStringLiteral("Notify")
+        );
+        msg.setArguments({
+            notificationId,
+            notification.applicationName(),
+            replaces_id,
+            notification.applicationIconName(),
+            notification.summary(),
+            // we pass raw body data since this data goes through another sanitization
+            // in WatchedNotificationsModel when notification object is created.
+            notification.rawBody(),
+            notification.actionNames(),
+            hints,
+            notification.timeout()
+        });
+        QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
+    }
+
     return notificationId;
 }
 
 void ServerPrivate::CloseNotification(uint id)
 {
+    for (const QString &service : m_notificationWatchers->watchedServices()) {
+        QDBusMessage msg = QDBusMessage::createMethodCall(
+            service,
+            QStringLiteral("/NotificationWatcher"),
+            QStringLiteral("org.kde.NotificationWatcher"),
+            QStringLiteral("CloseNotification")
+        );
+        msg.setArguments({
+            id
+        });
+        QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
+    }
     // spec says "If the notification no longer exists, an empty D-BUS Error message is sent back."
     static_cast<Server*>(parent())->closeNotification(id, Server::CloseReason::Revoked);
 }
@@ -481,4 +527,19 @@ void ServerPrivate::clearExternalInhibitions()
 
     emit externalInhibitedChanged();
     emit externalInhibitionsChanged();
+}
+
+void ServerPrivate::RegisterWatcher()
+{
+    m_notificationWatchers->addWatchedService(message().service());
+}
+
+void ServerPrivate::UnRegisterWatcher()
+{
+    m_notificationWatchers->removeWatchedService(message().service());
+}
+
+void ServerPrivate::InvokeAction(uint id, const QString& actionKey)
+{
+    ActionInvoked(id, actionKey);
 }

@@ -532,7 +532,13 @@ QString Notification::body() const
 
 void Notification::setBody(const QString &body)
 {
+    d->rawBody = body;
     d->body = Private::sanitize(body.trimmed());
+}
+
+QString Notification::rawBody() const
+{
+    return d->rawBody;
 }
 
 QString Notification::icon() const
@@ -748,6 +754,16 @@ bool Notification::dismissed() const
 void Notification::setDismissed(bool dismissed)
 {
     d->dismissed = dismissed;
+}
+
+QVariantMap Notification::hints() const
+{
+    return d->hints;
+}
+
+void Notification::setHints(const QVariantMap &hints)
+{
+    d->hints = hints;
 }
 
 void Notification::processHints(const QVariantMap &hints)

@@ -70,6 +70,11 @@ public:
     QString body() const;
     void setBody(const QString &body);
 
+    // This returns the raw body data as provided by the notification
+    // this is useful when you want to html sanitization at different
+    // stage then the notification server.
+    QString rawBody() const;
+
     QString icon() const;
     void setIcon(const QString &icon);
 
@@ -124,10 +129,15 @@ public:
     bool dismissed() const;
     void setDismissed(bool dismissed);
 
+    // Little bit of mess here, we want to sometime keep track of processed hints, and not process it.
+    QVariantMap hints() const;
+    void setHints(const QVariantMap &hints);
+
     void processHints(const QVariantMap &hints);
 
 private:
     friend class NotificationsModel;
+    friend class AbstractNotificationsModel;
     friend class ServerPrivate;
 
     class Private;

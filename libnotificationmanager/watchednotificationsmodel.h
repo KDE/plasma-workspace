@@ -1,6 +1,5 @@
 /*
  * Copyright 2020 Shah Bhushan <bshah@kde.org>
- * Copyright 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,29 +18,43 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#pragma once
+#ifndef WATCHEDNOTIFICATIONSMODEL_H
+#define WATCHEDNOTIFICATIONSMODEL_H
 
 #include "abstractnotificationsmodel.h"
 
-namespace NotificationManager {
+#include "notificationmanager_export.h"
 
-class NotificationsModel : public AbstractNotificationsModel
+namespace NotificationManager
 {
+
+class NOTIFICATIONMANAGER_EXPORT WatchedNotificationsModel : public AbstractNotificationsModel
+{
+    Q_OBJECT
+    Q_PROPERTY(bool valid READ valid NOTIFY validChanged)
+
 public:
-    using Ptr = QSharedPointer<NotificationsModel>;
-    static Ptr createNotificationsModel();
+    explicit WatchedNotificationsModel();
+    ~WatchedNotificationsModel();
+    
     void expire(uint notificationId) override;
     void close(uint notificationId) override;
 
     void invokeDefaultAction(uint notificationId) override;
     void invokeAction(uint notificationId, const QString &actionName) override;
     void reply(uint notificationId, const QString &text) override;
+    bool valid();
 
-    void configure(uint notificationId);
-    void configure(const QString &desktopEntry, const QString &notifyRcName, const QString &eventId);
+signals:
+    void validChanged(bool valid);
 
 private:
-    NotificationsModel();
+    class Private;
+    Private * const d;
+    Q_DISABLE_COPY(WatchedNotificationsModel)
+
 };
 
 }
+
+#endif // WATCHEDNOTIFICATIONSMODEL_H
