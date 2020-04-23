@@ -84,8 +84,9 @@ QList< BookmarkMatch > KDEBrowser::match(const QString& term, bool addEverything
 
             continue;
         }
-        
-        BookmarkMatch bookmarkMatch(m_favicon, term, bookmark.text(), bookmark.url().url() );
+
+        const QString url = bookmark.url().url();
+        BookmarkMatch bookmarkMatch(m_favicon->iconFor(url), term, bookmark.text(), url);
         bookmarkMatch.addTo(matches, addEverything);
 
         bookmark = bookmarkGroup.next(bookmark);

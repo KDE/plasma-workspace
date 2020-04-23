@@ -24,19 +24,19 @@
 
 #include <QString>
 #include <QList>
-#include <krunner/querymatch.h>
+#include <KRunner/QueryMatch>
+#include <QIcon>
 
-class Favicon;
 class BookmarkMatch
 {
 public:
-    BookmarkMatch(Favicon *favicon, const QString &searchTerm, const QString &bookmarkTitle, const QString &bookmarkURL, const QString &description = QString());
+    BookmarkMatch(const QIcon &icon, const QString &searchTerm, const QString &bookmarkTitle, const QString &bookmarkURL, const QString &description = QString());
     void addTo(QList< BookmarkMatch >& listOfResults, bool addEvenOnNoMatch);
     Plasma::QueryMatch asQueryMatch(Plasma::AbstractRunner *runner);
 private:
     bool matches(const QString &search, const QString &matchingField);
 private:
-  Favicon * m_favicon;
+  QIcon m_icon;
   QString m_searchTerm;
   QString m_bookmarkTitle;
   QString m_bookmarkURL;

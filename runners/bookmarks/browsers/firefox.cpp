@@ -137,7 +137,8 @@ QList< BookmarkMatch > Firefox::match(const QString& term, bool addEverything)
     }
 
     for (auto result = uniqueResults.constKeyValueBegin(); result != uniqueResults.constKeyValueEnd(); ++result) {
-        BookmarkMatch bookmarkMatch(m_favicon, term, (*result).second, (*result).first);
+        const QString url = (*result).first;
+        BookmarkMatch bookmarkMatch(m_favicon->iconFor(url), term, (*result).second, url);
         bookmarkMatch.addTo(matches, addEverything);
     }
 

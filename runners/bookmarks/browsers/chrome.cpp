@@ -82,12 +82,11 @@ QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing, Prof
     QList<BookmarkMatch> results;
 
     const auto bookmarks = profileBookmarks->bookmarks();
+    Favicon *favicon = profileBookmarks->profile().favicon();
     for (const QJsonValue &bookmarkValue : bookmarks) {
         const QJsonObject bookmark = bookmarkValue.toObject();
-
-        QString url = bookmark.value(QStringLiteral("url")).toString();
-
-        BookmarkMatch bookmarkMatch(profileBookmarks->profile().favicon(), term, bookmark.value(QStringLiteral("name")).toString(), url);
+        const QString url = bookmark.value(QStringLiteral("url")).toString();
+        BookmarkMatch bookmarkMatch(favicon->iconFor(url), term, bookmark.value(QStringLiteral("name")).toString(), url);
         bookmarkMatch.addTo(results, addEveryThing);
     }
     return results;

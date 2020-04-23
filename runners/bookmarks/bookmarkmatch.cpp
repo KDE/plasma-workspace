@@ -21,18 +21,17 @@
 
 #include "bookmarkmatch.h"
 #include <QVariant>
-#include "favicon.h"
 
 // TODO: test
 
-BookmarkMatch::BookmarkMatch(Favicon *favicon, const QString& searchTerm, const QString& bookmarkTitle, const QString& bookmarkURL, const QString& description )
-    : m_favicon(favicon), m_searchTerm(searchTerm), m_bookmarkTitle(bookmarkTitle), m_bookmarkURL(bookmarkURL), m_description(description)
+BookmarkMatch::BookmarkMatch(const QIcon &icon, const QString& searchTerm, const QString& bookmarkTitle, const QString& bookmarkURL, const QString& description )
+    : m_icon(icon), m_searchTerm(searchTerm), m_bookmarkTitle(bookmarkTitle), m_bookmarkURL(bookmarkURL), m_description(description)
 {
 }
 
 Plasma::QueryMatch BookmarkMatch::asQueryMatch( Plasma::AbstractRunner* runner )
 {
-    Plasma::QueryMatch::Type type = Plasma::QueryMatch::NoMatch;
+    Plasma::QueryMatch::Type type;
     qreal relevance = 0;
 
     if (m_bookmarkTitle.compare(m_searchTerm, Qt::CaseInsensitive) == 0 ||
@@ -60,7 +59,7 @@ Plasma::QueryMatch BookmarkMatch::asQueryMatch( Plasma::AbstractRunner* runner )
     Plasma::QueryMatch match(runner);
     match.setType(type);
     match.setRelevance(relevance);
-    match.setIcon(m_favicon->iconFor(m_bookmarkURL));
+    match.setIcon(m_icon);
     match.setSubtext(m_bookmarkURL);
 
     // Try to set the following as text in this order: name, description, url
