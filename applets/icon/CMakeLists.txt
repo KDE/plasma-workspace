@@ -13,6 +13,7 @@ target_link_libraries(plasma_applet_icon
                       KF5::KIOCore # for OpenFileManagerWindowJob
                       KF5::KIOGui # for FavIconRequestJob
                       KF5::KIOWidgets # for KRun
+                      KF5::Notifications
                       KF5::Plasma
                       PW::LibTaskManager)
 

@@ -40,7 +40,9 @@
 #include <KFileItemListProperties>
 #include <KFileUtils>
 #include <KJobWidgets>
+#include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
+#include <KNotificationJobUiDelegate>
 #include <KProtocolManager>
 #include <KRun>
 
@@ -444,7 +446,11 @@ void IconApplet::processDrop(QObject *dropEvent)
     const QString &localPath = m_url.toLocalFile();
 
     if (KDesktopFile::isDesktopFile(localPath)) {
-        KRun::runService(KService(localPath), urls, nullptr);
+        KService::Ptr service(new KService(localPath));
+        auto *job = new KIO::ApplicationLauncherJob(service);
+        job->setUrls(urls);
+        job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+        job->start();
         return;
     }
 

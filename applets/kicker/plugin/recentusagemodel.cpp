@@ -37,8 +37,10 @@
 
 #include <KActivities/ResourceInstance>
 #include <KFileItem>
+#include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
 #include <KMimeTypeTrader>
+#include <KNotificationJobUiDelegate>
 #include <KRun>
 #include <KService>
 #include <KStartupInfo>
@@ -379,8 +381,10 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         }
 #endif
 
-        // TODO Once we depend on KDE Frameworks 5.24 and D1902 is merged, use KRun::runApplication instead
-        KRun::runService(*service, {}, nullptr, true, {}, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+        auto *job = new KIO::ApplicationLauncherJob(service);
+        job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+        job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+        job->start();
 
         KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + storageId),
             QStringLiteral("org.kde.plasma.kicker"));

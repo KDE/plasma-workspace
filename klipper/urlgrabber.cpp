@@ -31,10 +31,11 @@
 #include <QRegularExpression>
 
 #include <KLocalizedString>
+#include <KIO/ApplicationLauncherJob>
+#include <KNotificationJobUiDelegate>
 #include <KService>
 #include <KStringHandler>
 #include <KMimeTypeTrader>
-#include <KRun>
 #include <KWindowSystem>
 
 #include "klippersettings.h"
@@ -298,7 +299,10 @@ void URLGrabber::execute( const ClipAction* action, int cmdIdx ) const
         }
         if( !command.serviceStorageId.isEmpty()) {
             KService::Ptr service = KService::serviceByStorageId( command.serviceStorageId );
-            KRun::runApplication( *service, QList< QUrl >() << QUrl( text ), nullptr );
+            auto *job = new KIO::ApplicationLauncherJob(service);
+            job->setUrls({QUrl(text)});
+            job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+            job->start();
         } else {
             ClipCommandProcess* proc = new ClipCommandProcess(*action, command, text, m_history, m_myClipItem);
             if (proc->program().isEmpty()) {
