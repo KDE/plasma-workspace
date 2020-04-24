@@ -965,7 +965,7 @@ void KSMServer::setupShortcuts()
 {
     if (KAuthorized::authorize( QStringLiteral( "logout" ))) {
         KActionCollection* actionCollection = new KActionCollection(this);
-        actionCollection->setComponentDisplayName(i18n("Session Managment"));
+        actionCollection->setComponentDisplayName(i18n("Session Management"));
         QAction* a;
         a = actionCollection->addAction(QStringLiteral("Log Out"));
         a->setText(i18n("Log Out"));
