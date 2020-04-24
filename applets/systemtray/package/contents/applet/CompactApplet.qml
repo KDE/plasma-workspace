@@ -44,7 +44,9 @@ PlasmaCore.ToolTipArea {
 
     Connections {
         target: plasmoid
-        onContextualActionsAboutToShow: appletRoot.hideToolTip()
+        function onContextualActionsAboutToShow() {
+            appletRoot.hideToolTip()
+        }
     }
 
     Layout.minimumWidth: {

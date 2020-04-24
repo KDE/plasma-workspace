@@ -78,8 +78,8 @@ MouseArea {
 
     Connections {
         target: plasmoid
-        onUserConfiguringChanged: {
-            if (plasmoid.userConfiguring) {
+        function onUserConfiguringChanged(userConfiguring) {
+            if (userConfiguring) {
                 dialog.visible = false
             }
         }
@@ -88,7 +88,9 @@ MouseArea {
     Connections {
         target: plasmoid.configuration
 
-        onExtraItemsChanged: plasmoid.nativeInterface.allowedPlasmoids = plasmoid.configuration.extraItems
+        function onExtraItemsChanged(extraItems) {
+            plasmoid.nativeInterface.allowedPlasmoids = extraItems
+        }
     }
 
     CurrentItemHighLight {

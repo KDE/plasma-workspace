@@ -70,9 +70,11 @@ AbstractItem {
 
     Connections {
         target: applet
-        onActivated: plasmoidContainer.activated()
+        function onActivated() {
+            plasmoidContainer.activated()
+        }
 
-        onExpandedChanged: {
+        function onExpandedChanged(expanded) {
             if (expanded) {
                 var oldApplet = root.activeApplet;
                 root.activeApplet = applet;
@@ -91,7 +93,7 @@ AbstractItem {
             }
         }
 
-        onFullRepresentationItemChanged: {
+        function onFullRepresentationItemChanged(fullRepresentationItem) {
             preloadFullRepresentationItem(fullRepresentationItem)
         }
     }
