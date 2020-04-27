@@ -40,6 +40,28 @@ PlasmaComponents3.Page {
     readonly property int dndEveningHour: 20
     Layout.fillHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
+    // HACK forward focus to the list
+    onActiveFocusChanged: {
+        if (activeFocus) {
+            list.forceActiveFocus();
+        }
+    }
+
+    Connections {
+        target: plasmoid
+        onExpandedChanged: {
+            if (plasmoid.expanded) {
+                list.positionViewAtBeginning();
+                list.currentIndex = -1;
+            }
+        }
+    }
+
+    PlasmaCore.Svg {
+        id: lineSvg
+        imagePath: "widgets/line"
+    }
+
     header: PlasmaExtras.PlasmoidHeading {
         ColumnLayout {
             anchors.fill: parent
@@ -247,23 +269,6 @@ PlasmaComponents3.Page {
         anchors.fill: parent
 
         spacing: units.smallSpacing
-
-        // HACK forward focus to the list
-        onActiveFocusChanged: {
-            if (activeFocus) {
-                list.forceActiveFocus();
-            }
-        }
-
-        Connections {
-            target: plasmoid
-            onExpandedChanged: {
-                if (plasmoid.expanded) {
-                    list.positionViewAtBeginning();
-                    list.currentIndex = -1;
-                }
-            }
-        }
 
         // actual notifications
         PlasmaExtras.ScrollArea {

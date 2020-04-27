@@ -92,6 +92,7 @@ RowLayout {
 
     PlasmaExtras.DescriptiveLabel {
         id: applicationNameLabel
+        Layout.fillWidth: true
         textFormat: Text.PlainText
         elide: Text.ElideLeft
         text: notificationHeading.applicationName + (notificationHeading.originName ? " · " + notificationHeading.originName : "")

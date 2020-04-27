@@ -111,16 +111,31 @@ ColumnLayout {
 
     spacing: 0
 
-    PlasmaExtras.PlasmoidHeading {
-        bottomInset: 0
-        bottomPadding: 0
-        Layout.leftMargin: notificationItem.headingLeftPadding
-        Layout.rightMargin: notificationItem.headingRightPadding
-        background.visible: !notificationItem.inGroup
+    Item {
+        id: headingElement
+        Layout.fillWidth: true
+        Layout.preferredHeight: notificationHeading.implicitHeight
+        Layout.preferredWidth: notificationHeading.implicitWidth
+
+        PlasmaCore.FrameSvgItem {
+            imagePath: "widgets/plasmoidheading"
+            prefix: "header"
+            anchors {
+                fill: parent
+                topMargin: -margins.top
+                leftMargin: -margins.left
+                rightMargin: -margins.right
+            }
+            visible: !notificationItem.inGroup && fromCurrentTheme
+        }
 
         NotificationHeader {
             id: notificationHeading
-            anchors.fill: parent
+            anchors {
+                fill: parent
+                leftMargin: notificationItem.headingLeftPadding
+                rightMargin: notificationItem.headingRightPadding
+            }
 
             inGroup: notificationItem.inGroup
 
@@ -431,7 +446,7 @@ ColumnLayout {
          State {
             when: notificationItem.inGroup
             PropertyChanges {
-                target: notificationHeading
+                target: headingElement
                 parent: summaryRow
             }
 
