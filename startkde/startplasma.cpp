@@ -179,6 +179,12 @@ void setupCursor(bool wayland)
 // (where <config locations> correspond to the system and user's configuration
 // directory.
 //
+// Scripts are sourced in reverse order of priority of their directory, as defined
+// by `QStandardPaths::standardLocations`. This ensures that high-priority scripts
+// (such as those in the user's home directory) are sourced last and take precedence
+// over lower-priority scripts (such as system defaults). Scripts in the same 
+// directory are sourced in lexical order of their filename.
+//
 // This is where you can define environment variables that will be available to
 // all KDE programs, so this is where you can run agents using e.g. eval `ssh-agent`
 // or eval `gpg-agent --daemon`.
@@ -191,10 +197,17 @@ void setupCursor(bool wayland)
 void runEnvironmentScripts()
 {
     QStringList scripts;
-    const auto locations = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("plasma-workspace/env"), QStandardPaths::LocateDirectory);
-    for (const QString & location : locations) {
-        QDir dir(location);
-        const auto dirScripts = dir.entryInfoList({QStringLiteral("*.sh")});
+    auto locations = QStandardPaths::standardLocations(QStandardPaths::GenericConfigLocation);
+
+    //`standardLocations()` returns locations sorted by "order of priority". We iterate in reverse
+    // order so that high-priority scripts are sourced last and their modifications take precedence.
+    for (auto loc = locations.crbegin(); loc != locations.crend(); loc++) {
+        QDir dir(*loc);
+        if (! dir.cd(QStringLiteral("./plasma-workspace/env"))) {
+            // Skip location if plasma-workspace/env subdirectory does not exist
+            continue;
+        }
+        const auto dirScripts = dir.entryInfoList({QStringLiteral("*.sh")}, QDir::Files, QDir::Name);
         for (const auto script : dirScripts) {
             scripts << script.absoluteFilePath();
         }
