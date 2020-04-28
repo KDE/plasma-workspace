@@ -26,6 +26,7 @@
 #include <QMessageBox>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QtQml/QQmlDebuggingEnabler>
 
 #include <KAboutData>
 #include <KQuickAddons/QtQuickSettings>
@@ -48,6 +49,7 @@
 
 int main(int argc, char *argv[])
 {
+    QQmlDebuggingEnabler debugger;
     //Plasma scales itself to font DPI
     //on X, where we don't have compositor scaling, this generally works fine.
     //also there are bugs on older Qt, especially when it comes to fractional scaling
