@@ -48,7 +48,7 @@ target_link_libraries(ksmserver
     KF5::GlobalAccel
     KF5::I18n
     KF5::KIOCore
-    KF5::KIOWidgets
+    KF5::KIOGui
     ${X11_LIBRARIES}
     ${X11_Xrender_LIB}
     Qt5::X11Extras

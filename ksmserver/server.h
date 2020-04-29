@@ -157,10 +157,9 @@ private:
     void startProtection();
     void endProtection();
 
-    KProcess* startApplication( const QStringList& command,
+    void startApplication( const QStringList& command,
         const QString& clientMachine = QString(),
-        const QString& userId = QString(),
-        bool wm = false );
+        const QString& userId = QString());
     void executeCommand( const QStringList& command );
 
     bool defaultSession() const; // empty session
