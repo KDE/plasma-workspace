@@ -84,6 +84,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kprocess.h>
 #include <kshell.h>
 
+#include <KIO/CommandLauncherJob>
+
 #include <KScreenLocker/KsldApp>
 
 #include <QX11Info>
@@ -105,12 +107,12 @@ KSMServer* KSMServer::self()
 /*! Utility function to execute a command on the local machine. Used
  * to restart applications.
  */
-KProcess* KSMServer::startApplication( const QStringList& cmd, const QString& clientMachine,
-    const QString& userId, bool wm )
+void KSMServer::startApplication( const QStringList& cmd, const QString& clientMachine,
+    const QString& userId)
 {
     QStringList command = cmd;
     if ( command.isEmpty() )
-        return nullptr;
+        return;
     if ( !userId.isEmpty()) {
         struct passwd* pw = getpwuid( getuid());
         if( pw != nullptr && userId != QString::fromLocal8Bit( pw->pw_name )) {
@@ -125,29 +127,10 @@ KProcess* KSMServer::startApplication( const QStringList& cmd, const QString& cl
         command.prepend( xonCommand ); // "xon" by default
     }
 
-// TODO this function actually should not use KProcess at all and use klauncher (kdeinit) instead.
-// Klauncher should also have support for tracking whether the launched process is still alive
-// or not, so this should be redone. For now, use KProcess for wm's, as they need to be tracked,
-// klauncher for the rest where ksmserver doesn't care.
-    if( wm ) {
-        KProcess* process = new KProcess( this );
-        *process << command;
-        // make it auto-delete
-        connect(process, static_cast<void (KProcess::*)(QProcess::ProcessError)>(&KProcess::error), process, &KProcess::deleteLater);
-        connect(process, static_cast<void (KProcess::*)(int, QProcess::ExitStatus)>(&KProcess::finished), process, &KProcess::deleteLater);
-        process->start();
-        return process;
-    } else {
-        int n = command.count();
-        org::kde::KLauncher klauncher(QStringLiteral("org.kde.klauncher5"),
-                                      QStringLiteral("/KLauncher"), QDBusConnection::sessionBus());
-        QString app = command[0];
-        QStringList argList;
-        for ( int i=1; i < n; i++)
-           argList.append( command[i]);
-        klauncher.exec_blind(app, argList );
-        return nullptr;
-    }
+    const QString app = command.takeFirst();
+    const QStringList argList = command;
+    auto *job = new KIO::CommandLauncherJob(app, argList);
+    job->start();
 }
 
 /*! Utility function to execute a command on the local machine. Used
