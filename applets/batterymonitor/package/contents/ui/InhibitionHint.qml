@@ -30,8 +30,8 @@ RowLayout {
 
     PlasmaCore.IconItem {
         id: iconItem
-        Layout.preferredWidth: units.iconSizes.medium
-        Layout.preferredHeight: units.iconSizes.medium
+        Layout.preferredWidth: units.iconSizes.small
+        Layout.preferredHeight: units.iconSizes.small
         visible: valid
     }
 

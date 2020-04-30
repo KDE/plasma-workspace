@@ -24,13 +24,13 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components
 import org.kde.kquickcontrolsaddons 2.0
 
-Column {
+ColumnLayout {
     property alias enabled: pmCheckBox.checked
 
     spacing: 0
 
     RowLayout {
-        width: parent.width
+        Layout.fillWidth: true
 
         Components.CheckBox {
             id: pmCheckBox
@@ -57,23 +57,20 @@ Column {
         }
     }
 
-    Column {
-        anchors {
-            left: parent.left
-            leftMargin: units.iconSizes.medium + units.gridUnit
-            right: parent.right
-        }
+    ColumnLayout {
+        Layout.fillWidth: true
+        Layout.leftMargin: units.gridUnit + units.smallSpacing // width of checkbox and spacer
         spacing: units.smallSpacing
 
         InhibitionHint {
-            width: parent.width
+            Layout.fillWidth: true
             visible: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] && !pmSource.data["PowerDevil"]["Triggers Lid Action"] ? true : false
             iconSource: "computer-laptop"
             text: i18n("Your notebook is configured not to suspend when closing the lid while an external monitor is connected.")
         }
 
         InhibitionHint {
-            width: parent.width
+            Layout.fillWidth: true
             visible: inhibitions.length > 0
             iconSource: inhibitions.length > 0 ? inhibitions[0].Icon || "" : ""
             text: {
