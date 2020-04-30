@@ -240,6 +240,7 @@ Item {
                         textFormat: Text.PlainText
                         wrapMode: Text.Wrap
                         fontSizeMode: Text.VerticalFit
+                        elide: Text.ElideRight
 
                         text: root.track || i18n("No media playing")
 
@@ -256,6 +257,7 @@ Item {
                         textFormat: Text.PlainText
                         wrapMode: Text.Wrap
                         fontSizeMode: Text.VerticalFit
+                        elide: Text.ElideRight
 
                         text: root.artist
                         Layout.fillWidth: true
@@ -270,6 +272,7 @@ Item {
                         textFormat: Text.PlainText
                         wrapMode: Text.Wrap
                         fontSizeMode: Text.VerticalFit
+                        elide: Text.ElideRight
 
                         visible: text.length !== 0
                         text: {
