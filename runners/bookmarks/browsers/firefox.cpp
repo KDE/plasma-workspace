@@ -199,7 +199,6 @@ void Firefox::reloadConfiguration()
         }
         profilePath.prepend(QStringLiteral("%1/.mozilla/firefox/").arg(QDir::homePath()));
         m_dbFile = profilePath + "/places.sqlite";
-        grp.writeEntry("dbfile", m_dbFile);
         m_dbFile_fav = profilePath + "/favicons.sqlite";
     } else {
         auto dir = QDir(m_dbFile);
