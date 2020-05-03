@@ -33,6 +33,7 @@ PlasmaCore.FrameSvgItem {
            0 : Math.max(0, (target ? target.x : 0) + (visualParent ? visualParent.x : 0))
     y: plasmoid.formFactor === PlasmaCore.Types.Horizontal && target === root ?
            0 : Math.max(0, (target ? target.y : 0) + (visualParent ? visualParent.y : 0))
+    z: -1 // always draw behind icons
     width: plasmoid.formFactor === PlasmaCore.Types.Vertical && target === root ?
                parent.width : Math.min(parent.width, target ? target.width : 0)
     height: plasmoid.formFactor === PlasmaCore.Types.Horizontal && target === root ?
