@@ -303,7 +303,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                     overlayIcon(&icon, &overlay);
                 }
             }
-            setData(QStringLiteral("Icon"), icon.isNull() ? QVariant() : icon);
+            setData(QStringLiteral("Icon"), icon);
             setData(QStringLiteral("IconName"), iconName);
         }
 
@@ -329,7 +329,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                     overlayIcon(&attentionIcon, &overlay);
                 }
             }
-            setData(QStringLiteral("AttentionIcon"), attentionIcon.isNull() ? QVariant() : attentionIcon);
+            setData(QStringLiteral("AttentionIcon"), attentionIcon);
         }
 
         //ToolTip
