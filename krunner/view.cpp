@@ -32,7 +32,6 @@
 #include <KWindowSystem>
 #include <KWindowEffects>
 #include <KLocalizedString>
-#include <KDirWatch>
 #include <KCrash>
 
 #include <kdeclarative/qmlobject.h>
@@ -60,10 +59,17 @@ View::View(QWindow *)
 
     //used only by screen readers
     setTitle(i18n("KRunner"));
-    m_config = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("krunnerrc")), "General");
 
-    setFreeFloating(m_config.readEntry("FreeFloating", false));
-    reloadConfig();
+    m_config = KConfigGroup(KSharedConfig::openConfig(), "General");
+    m_configWatcher = KConfigWatcher::create(KSharedConfig::openConfig());
+    connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
+        Q_UNUSED(names);
+        if (group.name() == QLatin1String("General")) {
+            loadConfig();
+        }
+    });
+
+    loadConfig();
 
     new AppAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/App"), this);
@@ -73,7 +79,7 @@ View::View(QWindow *)
     connect(m_qmlObj, &KDeclarative::QmlObject::finished, this, &View::objectIncubated);
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
+    KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     if (!packageName.isEmpty()) {
         package.setPath(packageName);
@@ -105,12 +111,6 @@ View::View(QWindow *)
     connect(KWindowSystem::self(), &KWindowSystem::workAreaChanged, this, &View::resetScreenPos);
 
     connect(this, &View::visibleChanged, this, &View::resetScreenPos);
-
-    KDirWatch::self()->addFile(m_config.name());
-
-    // Catch both, direct changes to the config file ...
-    connect(KDirWatch::self(), &KDirWatch::dirty, this, &View::reloadConfig);
-    connect(KDirWatch::self(), &KDirWatch::created, this, &View::reloadConfig);
 
     if (m_floating) {
         setLocation(Plasma::Types::Floating);
@@ -160,9 +160,8 @@ void View::setFreeFloating(bool floating)
     positionOnScreen();
 }
 
-void View::reloadConfig()
+void View::loadConfig()
 {
-    m_config.config()->reparseConfiguration();
     setFreeFloating(m_config.readEntry("FreeFloating", false));
 
     const QStringList history = m_config.readEntry("history", QStringList());
