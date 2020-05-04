@@ -206,7 +206,6 @@ void PlasmoidModel::addApplet(Plasma::Applet *applet)
     });
 
     dataItem->setData(pluginMetaData.pluginId(), static_cast<int>(BaseModel::BaseRole::ItemId));
-    dataItem->setData(true, static_cast<int>(BaseModel::BaseRole::CanRender));
     dataItem->setData(plasmoidCategoryForMetadata(pluginMetaData), static_cast<int>(BaseModel::BaseRole::Category));
     dataItem->setData(applet->status(), static_cast<int>(BaseModel::BaseRole::Status));
     connect(applet, &Plasma::Applet::statusChanged, this, [dataItem] (Plasma::Types::ItemStatus status) {
@@ -215,6 +214,9 @@ void PlasmoidModel::addApplet(Plasma::Applet *applet)
 
     dataItem->setData(applet->property("_plasma_graphicObject"), static_cast<int>(Role::Applet));
     dataItem->setData(true, static_cast<int>(Role::HasApplet));
+
+    // CanRender has to be the last one
+    dataItem->setData(true, static_cast<int>(BaseModel::BaseRole::CanRender));
 }
 
 void PlasmoidModel::removeApplet(Plasma::Applet *applet)

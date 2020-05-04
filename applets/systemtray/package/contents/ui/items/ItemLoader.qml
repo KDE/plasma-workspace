@@ -30,6 +30,7 @@ Loader {
         } else if (model.itemType === "StatusNotifier") {
             return "StatusNotifierItem.qml"
         }
+        console.warn("SystemTray ItemLoader: Invalid state, cannot determine source!")
         return ""
     }
 }
