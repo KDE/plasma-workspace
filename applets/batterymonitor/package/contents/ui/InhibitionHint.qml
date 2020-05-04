@@ -39,7 +39,7 @@ RowLayout {
         id: label
         Layout.fillWidth: true
         height: implicitHeight
-        font.pointSize: theme.smallestFont.pointSize
+        font: theme.smallestFont
         wrapMode: Text.WordWrap
         elide: Text.ElideRight
         maximumLineCount: 3

@@ -85,7 +85,7 @@ Item {
                 }
             }
             PlasmaComponents.Label {
-                font.pointSize: theme.smallestFont.pointSize
+                font: theme.smallestFont
                 color: theme.backgroundColor
                 maximumLineCount: 1
                 anchors {
@@ -118,6 +118,6 @@ Item {
         }
         verticalAlignment: Text.AlignBottom
         horizontalAlignment: Text.AlignCenter
-        font.pointSize: theme.smallestFont.pointSize
+        font: theme.smallestFont
     }
 }
