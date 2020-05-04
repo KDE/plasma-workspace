@@ -32,7 +32,6 @@
 #include <KWindowSystem>
 #include <KWindowEffects>
 #include <KLocalizedString>
-#include <KDirWatch>
 #include <KCrash>
 
 #include <kdeclarative/qmlobject.h>
@@ -60,7 +59,15 @@ View::View(QWindow *)
 
     //used only by screen readers
     setTitle(i18n("KRunner"));
+
     m_config = KConfigGroup(KSharedConfig::openConfig(), "General");
+    m_configWatcher = KConfigWatcher::create(KSharedConfig::openConfig());
+    connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
+        Q_UNUSED(names);
+        if (group.name() == QLatin1String("General")) {
+            loadConfig();
+        }
+    });
 
     loadConfig();
 
@@ -102,18 +109,6 @@ View::View(QWindow *)
     connect(qGuiApp, &QGuiApplication::screenRemoved, this, screenRemoved);
 
     connect(KWindowSystem::self(), &KWindowSystem::workAreaChanged, this, &View::resetScreenPos);
-
-    KDirWatch::self()->addFile(m_config.name());
-
-    // Catch both, direct changes to the config file ...
-    connect(KDirWatch::self(), &KDirWatch::dirty, this, [this]() {
-            m_config.config()->reparseConfiguration();
-            loadConfig();
-    });
-    connect(KDirWatch::self(), &KDirWatch::created, this, [this]() {
-            m_config.config()->reparseConfiguration();
-            loadConfig();
-    });
 
     connect(qGuiApp, &QGuiApplication::focusWindowChanged, this, &View::slotFocusWindowChanged);
 }

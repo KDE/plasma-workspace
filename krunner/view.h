@@ -22,6 +22,7 @@
 #include <QPointer>
 #include <QQuickView>
 #include <KConfigGroup>
+#include <KConfigWatcher>
 #include <KSharedConfig>
 
 #include <KWayland/Client/plasmashell.h>
@@ -95,6 +96,7 @@ private:
     QPoint m_customPos;
     KDeclarative::QmlObject *m_qmlObj;
     KConfigGroup m_config;
+    KConfigWatcher::Ptr m_configWatcher;
     qreal m_offset;
     bool m_floating : 1;
     bool m_requestedVisible = false;
