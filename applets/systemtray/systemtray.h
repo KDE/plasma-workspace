@@ -109,6 +109,13 @@ public:
 
     Q_INVOKABLE bool isSystemTrayApplet(const QString &appletId);
 
+    /**
+     * @brief isIconNull checks if icon is null
+     * @param icon
+     * @return true if icon is null
+     */
+    Q_INVOKABLE bool isIconNull(const QIcon &icon) const;
+
 private Q_SLOTS:
     void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);
     void serviceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner);

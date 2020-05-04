@@ -341,6 +341,11 @@ bool SystemTray::isSystemTrayApplet(const QString &appletId)
     return m_systrayApplets.contains(appletId);
 }
 
+bool SystemTray::isIconNull(const QIcon &icon) const
+{
+    return icon.isNull();
+}
+
 void SystemTray::restoreContents(KConfigGroup &group)
 {
     Q_UNUSED(group);

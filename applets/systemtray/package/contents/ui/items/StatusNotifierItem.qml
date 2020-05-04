@@ -45,18 +45,22 @@ AbstractItem {
 
     iconItem: iconItem
 
+    function isIconNotNull(icon) {
+        return icon && !plasmoid.nativeInterface.isIconNull(icon);
+    }
+
     PlasmaCore.IconItem {
         id: iconItem
         source: {
             if (taskIcon.status === PlasmaCore.Types.NeedsAttentionStatus) {
-                if (AttentionIcon) {
+                if (isIconNotNull(AttentionIcon)) {
                     return AttentionIcon
                 }
                 if (AttentionIconName) {
                     return AttentionIconName
                 }
             }
-            return Icon ? Icon : IconName
+            return isIconNotNull(Icon) ? Icon : IconName
         }
 
         width: Math.min(parent.width, parent.height)
