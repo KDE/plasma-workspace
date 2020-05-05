@@ -229,7 +229,7 @@ ColumnLayout{
                 var sections = [];
 
                 // Show until time if valid but not if too far int he future
-                if (!isNaN(inhibitedUntil.getTime()) && inhibitedUntil.getTime() - new Date().getTime() < 365 * 24 * 60 * 60 * 1000 /* 1 year*/) {
+                if (!isNaN(inhibitedUntil.getTime()) && inhibitedUntil.getTime() - new Date().getTime() < 100 * 24 * 60 * 60 * 1000 /* 100 days*/) {
                     sections.push(i18nc("Do not disturb until date", "Until %1",
                                         KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat)));
                 }
