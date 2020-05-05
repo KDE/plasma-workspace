@@ -24,7 +24,7 @@ X-KDE-FormFactors=tablet,mediacenter,desktop
 
 [Config]
 chartFace=org.kde.ksysguard.linechart
-sensorIds=disk/all/write,disk/all/read
+highPrioritySensorIds=disk/all/write,disk/all/read
 
 [FaceConfig]
 rangeAuto=true

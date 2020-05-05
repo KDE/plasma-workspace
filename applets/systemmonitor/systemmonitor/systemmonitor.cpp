@@ -60,7 +60,7 @@ void SystemMonitor::init()
     //FIXME HACK: better way to get the engine At least AppletQuickItem should have an engine() getter
     KDeclarative::QmlObjectSharedEngine *qmlObject = new  KDeclarative::QmlObjectSharedEngine();
     KConfigGroup cg = config();
-    m_sensorFaceController = new SensorFaceController(cg, qmlObject->engine());
+    m_sensorFaceController = new KSysGuard::SensorFaceController(cg, qmlObject->engine());
     qmlObject->deleteLater();
 
     if (!m_pendingStartupPreset.isNull()) {
@@ -72,7 +72,7 @@ void SystemMonitor::init()
     }
 }
 
-SensorFaceController *SystemMonitor::faceController() const
+KSysGuard::SensorFaceController *SystemMonitor::faceController() const
 {
     return m_sensorFaceController;
 }

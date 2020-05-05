@@ -23,9 +23,9 @@ X-KDE-PluginInfo-Category=System Information
 
 [Config]
 chartFace=org.kde.ksysguard.piechart
-sensorIds=mem/physical/allocated
+highPrioritySensorIds=mem/physical/allocated
 totalSensor=mem/physical/allocatedlevel
-textOnlySensorIds=mem/physical/total
+lowPrioritySensorIds=mem/physical/total
 
 [FaceConfig]
 rangeAuto=true

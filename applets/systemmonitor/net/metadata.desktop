@@ -22,9 +22,9 @@ X-KDE-PluginInfo-Category=System Information
 
 [Config]
 chartFace=org.kde.ksysguard.linechart
-sensorIds=network/all/receivedDataRate,network/all/sentDataRate
+highPrioritySensorIds=network/all/receivedDataRate,network/all/sentDataRate
 totalSensor=
-textOnlySensorIds=
+lowPrioritySensorIds=
 
 [FaceConfig]
 lineChartSmooth=true

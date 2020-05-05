@@ -26,6 +26,9 @@ import QtQuick.Window 2.12
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 
+import org.kde.ksysguard.sensors 1.0 as Sensors
+import org.kde.ksysguard.faces 1.0 as Faces
+
 import org.kde.quickcharts 1.0 as Charts
 
 Item {
@@ -42,33 +45,5 @@ Item {
     Plasmoid.fullRepresentation: FullRepresentation {
     }
 
-    Plasmoid.configurationRequired: plasmoid.nativeInterface.faceController.sensorIds.length == 0 && plasmoid.nativeInterface.faceController.textOnlySensorIds.length == 0 && plasmoid.nativeInterface.faceController.totalSensor.length == 0 
-
-    //FIXME: things in faces refer to this id in the global context, should probably be fixed
-    Charts.ColorGradientSource {
-        id: colorSource
-        // originally ColorGenerator used Kirigami.Theme.highlightColor
-        baseColor: theme.highlightColor
-        itemCount: plasmoid.nativeInterface.faceController.sensorIds.length
-
-        onItemCountChanged: generate()
-        Component.onCompleted: generate()
-
-        function generate() {
-            var colors = colorSource.colors;
-            var savedColors = plasmoid.nativeInterface.faceController.sensorColors;
-            for (var i = 0; i < plasmoid.nativeInterface.faceController.sensorIds.length; ++i) {
-                if (savedColors.length <= i) {
-                    savedColors.push(colors[i]);
-                } else {
-                    // Use the darker trick to make Qt validate the scring as a valid color;
-                    var currentColor = Qt.darker(savedColors[i], 1);
-                    if (!currentColor) {
-                        savedColors[i] = (colors[i]);
-                    }
-                }
-            }
-            plasmoid.nativeInterface.faceController.sensorColors = savedColors;
-        }
-    }
+    Plasmoid.configurationRequired: plasmoid.nativeInterface.faceController.highPrioritySensorIds.length == 0 && plasmoid.nativeInterface.faceController.lowPrioritySensorIds.length == 0 && plasmoid.nativeInterface.faceController.totalSensor.length == 0
 }

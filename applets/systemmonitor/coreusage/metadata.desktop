@@ -23,7 +23,7 @@ X-KDE-PluginInfo-Category=System Information
 
 [Config]
 chartFace=org.kde.ksysguard.barchart
-sensorIds=cpu/cpu*/TotalLoad
+highPrioritySensorIds=cpu/cpu*/TotalLoad
 totalSensor=cpu/system/TotalLoad
 textOnlySensorIds=cpu/system/loadavg1,cpu/system/loadavg5
 

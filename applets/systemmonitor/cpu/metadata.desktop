@@ -23,9 +23,9 @@ X-KDE-PluginInfo-Category=System Information
 
 [Config]
 chartFace=org.kde.ksysguard.piechart
-sensorIds=cpu/system/TotalLoad
+highPrioritySensorIds=cpu/system/TotalLoad
 totalSensor=cpu/system/TotalLoad
-textOnlySensorIds=cpu/system/processors,cpu/system/cores
+lowPrioritySensorIds=cpu/system/processors,cpu/system/cores
 
 [FaceConfig]
 rangeAuto=false

@@ -22,9 +22,9 @@ X-KDE-PluginInfo-Category=System Information
 
 [Config]
 chartFace=org.kde.ksysguard.piechart
-sensorIds=partitions/all/usedspace
+highPrioritySensorIds=partitions/all/usedspace
 totalSensor=partitions/all/filllevel
-textOnlySensorIds=partitions/all/total
+lowPrioritySensorIds=partitions/all/total
 
 [FaceConfig]
 rangeAuto=true

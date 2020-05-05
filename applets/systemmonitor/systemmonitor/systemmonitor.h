@@ -29,8 +29,11 @@
 
 class ApplicationListModel;
 class QQuickItem;
-class SensorFace;
-class SensorFaceController;
+
+namespace KSysGuard {
+    class SensorFace;
+    class SensorFaceController;
+}
 
 class KConfigLoader;
 
@@ -39,7 +42,7 @@ class SystemMonitor : public Plasma::Applet
 {
     Q_OBJECT
 
-    Q_PROPERTY(SensorFaceController *faceController READ faceController CONSTANT)
+    Q_PROPERTY(KSysGuard::SensorFaceController *faceController READ faceController CONSTANT)
 
 public:
     SystemMonitor( QObject *parent, const QVariantList &args );
@@ -47,13 +50,13 @@ public:
 
     void init() override;
 
-    SensorFaceController *faceController() const;
+    KSysGuard::SensorFaceController *faceController() const;
 
 public Q_SLOTS:
     void configChanged() override;
 
 private:
-    SensorFaceController *m_sensorFaceController = nullptr;
+    KSysGuard::SensorFaceController *m_sensorFaceController = nullptr;
     QString m_pendingStartupPreset;
 };
 
