@@ -19,12 +19,3 @@ X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL-2.0+
 X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-PluginInfo-Category=System Information
-
-[Config]
-chartFace=org.kde.ksysguard.linechart
-highPrioritySensorIds=network/all/receivedDataRate,network/all/sentDataRate
-totalSensor=
-lowPrioritySensorIds=
-
-[FaceConfig]
-lineChartSmooth=true

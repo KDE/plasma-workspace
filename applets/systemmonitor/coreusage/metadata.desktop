@@ -21,14 +21,3 @@ X-KDE-PluginInfo-License=GPL-2.0+
 X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-PluginInfo-Category=System Information
 
-[Config]
-chartFace=org.kde.ksysguard.barchart
-highPrioritySensorIds=cpu/cpu*/TotalLoad
-totalSensor=cpu/system/TotalLoad
-textOnlySensorIds=cpu/system/loadavg1,cpu/system/loadavg5
-
-[FaceConfig]
-rangeAuto=false
-rangeFrom=0
-rangeTo=100
-
