@@ -469,6 +469,7 @@ PlasmaComponents3.Page {
                                         notificationType: model.type
 
                                         inGroup: model.isInGroup
+                                        inHistory: true
 
                                         applicationName: model.applicationName
                                         applicationIconSource: model.applicationIconName

@@ -40,6 +40,7 @@ ColumnLayout {
     property int notificationType
 
     property bool inGroup: false
+    property bool inHistory: false
 
     property alias applicationIconSource: notificationHeading.applicationIconSource
     property alias applicationName: notificationHeading.applicationName
@@ -126,7 +127,7 @@ ColumnLayout {
                 leftMargin: -margins.left
                 rightMargin: -margins.right
             }
-            visible: !notificationItem.inGroup && fromCurrentTheme
+            visible: !notificationItem.inHistory && fromCurrentTheme
         }
 
         NotificationHeader {
