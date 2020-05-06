@@ -60,9 +60,11 @@ ColumnLayout {
     ColumnLayout {
         Layout.fillWidth: true
         Layout.leftMargin: units.gridUnit + units.smallSpacing // width of checkbox and spacer
+        visible: inhibitingAppsList.visible || laptopLidWarning.visible
         spacing: units.smallSpacing
 
         InhibitionHint {
+            id: laptopLidWarning
             Layout.fillWidth: true
             visible: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] && !pmSource.data["PowerDevil"]["Triggers Lid Action"] ? true : false
             iconSource: "computer-laptop"
@@ -70,6 +72,7 @@ ColumnLayout {
         }
 
         InhibitionHint {
+            id: inhibitingAppsList
             Layout.fillWidth: true
             visible: inhibitions.length > 0
             iconSource: inhibitions.length > 0 ? inhibitions[0].Icon || "" : ""
