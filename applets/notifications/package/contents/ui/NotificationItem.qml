@@ -123,7 +123,6 @@ ColumnLayout {
             prefix: "header"
             anchors {
                 fill: parent
-                topMargin: -margins.top
                 leftMargin: -margins.left
                 rightMargin: -margins.right
             }
