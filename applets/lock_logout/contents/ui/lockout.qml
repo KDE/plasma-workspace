@@ -111,7 +111,6 @@ Flow {
                         anchors.fill: parent
                         mainText: modelData.tooltip_mainText
                         subText: modelData.tooltip_subText
-                        icon: modelData.icon
                     }
                 }
             } 
