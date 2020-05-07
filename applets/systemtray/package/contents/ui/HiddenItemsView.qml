@@ -56,6 +56,7 @@ MouseArea {
             highlightResizeDuration: 0
 
             readonly property int iconItemHeight: root.hiddenItemSize + highlight.marginHints.top + highlight.marginHints.bottom
+            property int itemCount: model.rowCount()
 
             model: PlasmaCore.SortFilterModel {
                 sourceModel: plasmoid.nativeInterface.systemTrayModel
@@ -66,6 +67,16 @@ MouseArea {
             }
             delegate: ItemLoader {}
         }
+    }
+
+    Connections {
+        target: hiddenTasksColumn.model
+        // hiddenTasksColumn.count is not updated when ListView is hidden and is not rendered
+        // manually update itemCount so that expander arrow hides/shows itself correctly
+        onModelReset: hiddenTasksColumn.itemCount = hiddenTasksColumn.model.rowCount()
+        onRowsInserted: hiddenTasksColumn.itemCount = hiddenTasksColumn.model.rowCount()
+        onRowsRemoved: hiddenTasksColumn.itemCount = hiddenTasksColumn.model.rowCount()
+        onLayoutChanged: hiddenTasksColumn.itemCount = hiddenTasksColumn.model.rowCount()
     }
 
     PlasmaComponents.Highlight {
