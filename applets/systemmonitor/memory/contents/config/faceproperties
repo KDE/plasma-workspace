@@ -1,8 +1,8 @@
 [Config]
 chartFace=org.kde.ksysguard.piechart
-highPrioritySensorIds=mem/physical/allocated
-totalSensor=mem/physical/allocatedlevel
-lowPrioritySensorIds=mem/physical/total
+highPrioritySensorIds=["mem/physical/allocated"]
+totalSensors=["mem/physical/allocatedlevel"]
+lowPrioritySensorIds=["mem/physical/total"]
 
 [FaceConfig]
 rangeAuto=true

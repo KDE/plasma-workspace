@@ -1,8 +1,8 @@
 [Config]
 chartFace=org.kde.ksysguard.barchart
-highPrioritySensorIds=partitions/.*/filllevel
-totalSensor=partitions/all/filllevel
-lowPrioritySensorIds=partitions/all/total
+highPrioritySensorIds=["partitions/.*/filllevel"]
+totalSensors=["partitions/all/filllevel"]
+lowPrioritySensorIds=["partitions/all/total"]
 
 [FaceConfig]
 rangeAuto=true
