@@ -1,6 +1,6 @@
 [Config]
 chartFace=org.kde.ksysguard.barchart
-highPrioritySensorIds=cpu/cpu*/TotalLoad
+highPrioritySensorIds=cpu/cpu.*/TotalLoad
 totalSensor=cpu/system/TotalLoad
 textOnlySensorIds=cpu/system/loadavg1,cpu/system/loadavg5
 

@@ -1,6 +1,6 @@
 [Config]
-chartFace=org.kde.ksysguard.piechart
-highPrioritySensorIds=partitions/all/usedspace
+chartFace=org.kde.ksysguard.barchart
+highPrioritySensorIds=partitions/.*/filllevel
 totalSensor=partitions/all/filllevel
 lowPrioritySensorIds=partitions/all/total
 
