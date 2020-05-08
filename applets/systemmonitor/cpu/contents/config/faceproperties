@@ -1,0 +1,11 @@
+[Config]
+chartFace=org.kde.ksysguard.piechart
+highPrioritySensorIds=["cpu/system/TotalLoad"]
+totalSensors=["cpu/system/TotalLoad"]
+lowPrioritySensorIds=["cpu/system/processors","cpu/system/cores"]
+
+[FaceConfig]
+rangeAuto=false
+rangeFrom=0
+rangeTo=100
+

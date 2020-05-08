@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="Appearance">
+    <entry name="title" type="String"/>
+    <entry name="chartFace" type="String">
+      <default>org.kde.ksysguard.piechart</default>
+    </entry>
+  </group>
+
+  <group name="Sensors">
+    <entry name="totalSensor" type="String">
+    </entry>
+    <entry name="sensorIds" type="StringList">
+    </entry>
+    <entry name="sensorColors" type="StringList"/>
+
+    <entry name="textOnlySensorIds" type="StringList"/>
+  </group>
+
+</kcfg>

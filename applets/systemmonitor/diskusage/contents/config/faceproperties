@@ -1,0 +1,11 @@
+[Config]
+chartFace=org.kde.ksysguard.barchart
+highPrioritySensorIds=["partitions/.*/filllevel"]
+totalSensors=["partitions/all/filllevel"]
+lowPrioritySensorIds=["partitions/all/total"]
+
+[FaceConfig]
+rangeAuto=true
+rangeFrom=0
+rangeTo=100
+

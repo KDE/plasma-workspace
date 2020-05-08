@@ -1,0 +1,8 @@
+[Config]
+chartFace=org.kde.ksysguard.linechart
+highPrioritySensorIds=["disk/all/write","disk/all/read"]
+
+[FaceConfig]
+rangeAuto=true
+lineChartStacked=true
+

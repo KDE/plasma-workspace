@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=Total CPU Use
-Name[de]=Gesamte Prozessorauslastung
-Comment=System monitor Widget that shows the total CPU usage
+Name=Individual Core Usage
+Name[de]=Einzelne Prozessorkernbelastung
+Comment=System monitor Widget that shows usage of individual CPU cores
 Type=Service
-Icon=cpu
+Icon=ksysguardd
 X-KDE-ServiceTypes=Plasma/Applet
 
 X-Plasma-API=declarativeappletscript
@@ -13,10 +13,11 @@ X-Plasma-RootPath=org.kde.plasma.systemmonitor
 
 X-KDE-PluginInfo-Author=Kai Uwe Broulik
 X-KDE-PluginInfo-Email=kde@privat.broulik.de
-X-KDE-PluginInfo-Name=org.kde.plasma.systemmonitor.cpu
+X-KDE-PluginInfo-Name=org.kde.plasma.systemmonitor.cpucore
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=kde.org
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL-2.0+
 X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-PluginInfo-Category=System Information
+
