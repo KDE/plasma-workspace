@@ -31,6 +31,7 @@ ColumnLayout {
 
     RowLayout {
         Layout.fillWidth: true
+        Layout.leftMargin: units.smallSpacing
 
         Components.CheckBox {
             id: pmCheckBox

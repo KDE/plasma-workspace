@@ -64,11 +64,12 @@ PlasmaComponents3.Page {
 
     header: PlasmaExtras.PlasmoidHeading {
         ColumnLayout {
-            anchors.fill: parent
+            anchors {
+                fill: parent
+                leftMargin: units.smallSpacing
+            }
             id: header
             visible: !Kirigami.Settings.isMobile
-            Layout.fillWidth: true
-            Layout.leftMargin: units.smallSpacing
             spacing: 0
 
             RowLayout {

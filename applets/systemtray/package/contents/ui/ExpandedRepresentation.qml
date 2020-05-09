@@ -80,7 +80,7 @@ Item {
 
                     //applet open, sidebar
                     } else if (activeApplet && hiddenItemsView.visible && !LayoutMirroring.enabled) {
-                        return hiddenItemsView.width + units.largeSpacing;
+                        return hiddenItemsView.width + units.smallSpacing + dialog.margins.left;
 
                     //applet open, no sidebar
                     } else {
