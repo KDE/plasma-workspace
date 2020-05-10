@@ -26,11 +26,10 @@
 #include <KProcess>
 #include <KUser>
 #include <kauth.h>
+#include <KLocalizedString>
 
 #include "processcore/processes.h"
 #include "processcore/process.h"
-
-#include "killrunner_config.h"
 
 K_EXPORT_PLASMA_RUNNER(kill, KillRunner)
 
@@ -63,7 +62,7 @@ void KillRunner::reloadConfiguration()
         m_triggerWord = grp.readEntry(CONFIG_TRIGGERWORD, i18n("kill")) + QLatin1Char(' ');
     }
 
-    m_sorting = (KillRunnerConfig::Sort) grp.readEntry(CONFIG_SORTING, 0);
+    m_sorting = (Sort) grp.readEntry(CONFIG_SORTING, static_cast<int>(Sort::NONE));
     QList<Plasma::RunnerSyntax> syntaxes;
     syntaxes << Plasma::RunnerSyntax(m_triggerWord + QStringLiteral(":q:"),
                                      i18n("Terminate running applications whose names match the query."));
@@ -147,13 +146,13 @@ void KillRunner::match(Plasma::RunnerContext &context)
 
         // Set the relevance
         switch (m_sorting) {
-        case KillRunnerConfig::CPU:
+        case Sort::CPU:
             match.setRelevance((process->userUsage() + process->sysUsage()) / 100);
             break;
-        case KillRunnerConfig::CPUI:
+        case Sort::CPUI:
             match.setRelevance(1 - (process->userUsage() + process->sysUsage()) / 100);
             break;
-        case KillRunnerConfig::NONE:
+        case Sort::NONE:
             match.setRelevance(name.compare(term, Qt::CaseInsensitive) == 0 ? 1 : 9);
             break;
         }

@@ -25,7 +25,7 @@
 
 #include <KRunner/AbstractRunner>
 
-#include "killrunner_config.h"
+#include "config_keys.h"
 class QAction;
 
 namespace KSysGuard
@@ -61,7 +61,7 @@ private:
     QString m_triggerWord;
 
     /** How to sort */
-    KillRunnerConfig::Sort m_sorting;
+    Sort m_sorting;
 
     /** process lister */
     KSysGuard::Processes *m_processes;

@@ -24,6 +24,7 @@
 #include <KSharedConfig>
 #include <KPluginFactory>
 #include <krunner/abstractrunner.h>
+#include "config_keys.h"
 
 K_PLUGIN_FACTORY(KillRunnerConfigFactory, registerPlugin<KillRunnerConfig>(QStringLiteral("kcm_krunner_kill"));)
 
