@@ -197,7 +197,7 @@ void AbstractNotificationsModel::setLastRead(const QDateTime &lastRead)
 
 QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) const
 {
-    if (!checkIndex(index)) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid)) {
         return QVariant();
     }
 
@@ -267,7 +267,7 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
 
 bool AbstractNotificationsModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    if (!checkIndex(index)) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid)) {
         return false;
     }
 
