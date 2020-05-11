@@ -327,6 +327,12 @@ void StatusNotifierModel::dataUpdated(const QString &sourceName, const Plasma::D
         dataItem->setData(data.value("IconName"), Qt::DecorationRole);
         dataItem->setData(QVariant(), static_cast<int>(Role::Icon));
     }
+    QVariant attentionIcon = data.value("AttentionIcon");
+    if (attentionIcon.isValid() && attentionIcon.canConvert<QIcon>() && !attentionIcon.value<QIcon>().isNull()) {
+        dataItem->setData(attentionIcon, static_cast<int>(Role::AttentionIcon));
+    } else {
+        dataItem->setData(QVariant(), static_cast<int>(Role::AttentionIcon));
+    }
 
     dataItem->setData(data.value("Id"), static_cast<int>(BaseModel::BaseRole::ItemId));
     QVariant category = data.value("Category");
@@ -342,7 +348,6 @@ void StatusNotifierModel::dataUpdated(const QString &sourceName, const Plasma::D
     }
 
     dataItem->setData(sourceName, static_cast<int>(Role::DataEngineSource));
-    updateItemData(dataItem, data, Role::AttentionIcon);
     updateItemData(dataItem, data, Role::AttentionIconName);
     updateItemData(dataItem, data, Role::AttentionMovieName);
     updateItemData(dataItem, data, Role::Category);
