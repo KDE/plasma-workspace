@@ -52,7 +52,7 @@ set_package_properties(KF5QuickCharts PROPERTIES
 # WARNING PlasmaQuick provides unversioned CMake config
 find_package(KUserFeedback)
 find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
-find_package(KSysGuard)
+find_package(KSysGuard CONFIG REQUIRED)
 find_package(KF5 REQUIRED COMPONENTS Package)
 
 find_package(KF5Baloo)

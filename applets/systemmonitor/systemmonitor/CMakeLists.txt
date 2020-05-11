@@ -16,9 +16,9 @@ target_link_libraries(plasma_applet_systemmonitor
                       KF5::ConfigCore
                       KF5::ConfigGui
                       KF5::Declarative
-                      KF5::SysGuard
-                      KF5::Sensors
-                      KF5::SensorFaces
+                      KSysGuard::SysGuard
+                      KSysGuard::Sensors
+                      KSysGuard::SensorFaces
                      )
 
 

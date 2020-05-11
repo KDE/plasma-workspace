@@ -26,7 +26,7 @@ target_link_libraries(krunner_kill
                       KF5::ConfigWidgets
                       KF5::AuthCore
                       KF5::Runner
-                      KF5::ProcessCore
+                      KSysGuard::ProcessCore
                       )
 add_dependencies(krunner_kill kcm_krunner_kill)
 

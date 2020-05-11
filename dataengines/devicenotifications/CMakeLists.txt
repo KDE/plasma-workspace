@@ -12,7 +12,7 @@ target_link_libraries(plasma_engine_devicenotifications
     KF5::Plasma
     KF5::Solid
     KF5::I18n
-    KF5::ProcessCore
+    KSysGuard::ProcessCore
 ) # todo: add kworkspace once ported
 
 kcoreaddons_desktop_to_json(plasma_engine_devicenotifications plasma-dataengine-devicenotifications.desktop)
