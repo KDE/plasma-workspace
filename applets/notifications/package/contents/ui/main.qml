@@ -151,7 +151,7 @@ Item {
     }
 
     function closePassivePlasmoid() {
-        if (plasmoid.status !== PlasmaCore.Types.PassiveStatus) {
+        if (plasmoid.status !== PlasmaCore.Types.PassiveStatus && plasmoid.hideOnWindowDeactivate) {
             plasmoid.expanded = false;
         }
     }
