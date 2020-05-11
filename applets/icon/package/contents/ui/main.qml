@@ -162,7 +162,6 @@ MouseArea {
         anchors.fill: parent
         mainText: plasmoid.title
         subText: plasmoid.nativeInterface.genericName !== mainText ? plasmoid.nativeInterface.genericName :""
-        icon: plasmoid.icon
         textFormat: Text.PlainText
     }
 }
