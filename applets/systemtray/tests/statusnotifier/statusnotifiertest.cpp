@@ -63,6 +63,7 @@ StatusNotifierTest::StatusNotifierTest(QWidget* parent) :
     connect(updateButton, &QPushButton::clicked, this, &StatusNotifierTest::updateNotifier);
     connect(jobEnabledCheck, &QCheckBox::toggled, this, &StatusNotifierTest::enableJob);
     updateUi();
+    iconName->setText(QStringLiteral("plasma"));
     show();
     raise();
     log(QStringLiteral("started"));
@@ -126,7 +127,6 @@ void StatusNotifierTest::updateUi()
     statusPassive->setEnabled(!statusAuto->isChecked());
     statusNeedsAttention->setEnabled(!statusAuto->isChecked());
 
-    iconName->setText(d->systemNotifier->iconName());
     tooltipText->setText(d->systemNotifier->toolTipTitle());
     tooltipSubtext->setText(d->systemNotifier->toolTipSubTitle());
 
@@ -163,7 +163,12 @@ void StatusNotifierTest::updateNotifier()
     }
     d->systemNotifier->setStatus(s);
 
-    d->systemNotifier->setIconByName(iconName->text());
+    iconPixmapCheckbox->isChecked() ? d->systemNotifier->setIconByPixmap(QIcon::fromTheme(iconName->text()))
+        : d->systemNotifier->setIconByName(iconName->text());
+    overlayIconPixmapCheckbox->isChecked() ?  d->systemNotifier->setOverlayIconByPixmap(QIcon::fromTheme(overlayIconName->text()))
+        : d->systemNotifier->setOverlayIconByName(overlayIconName->text());
+    attentionIconPixmapCheckbox->isChecked() ? d->systemNotifier->setAttentionIconByPixmap(QIcon::fromTheme(attentionIconName->text()))
+        :  d->systemNotifier->setAttentionIconByName(attentionIconName->text());
 
     d->systemNotifier->setToolTip(iconName->text(), tooltipText->text(), tooltipSubtext->text());
 

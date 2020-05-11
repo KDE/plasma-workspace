@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>434</width>
-    <height>572</height>
+    <width>471</width>
+    <height>692</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -21,14 +21,13 @@
   </property>
   <property name="windowIcon">
    <iconset theme="plasma">
-    <normaloff/>
-   </iconset>
+    <normaloff>.</normaloff>.</iconset>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_2">
    <item>
     <widget class="QTabWidget" name="JobTab">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
@@ -110,10 +109,7 @@
          </property>
         </widget>
        </item>
-       <item row="9" column="1">
-        <widget class="QLineEdit" name="iconName"/>
-       </item>
-       <item row="10" column="0">
+       <item row="9" column="0">
         <widget class="QLabel" name="label_2">
          <property name="text">
           <string>&lt;b&gt;ToolTip&lt;/b&gt;</string>
@@ -126,15 +122,79 @@
        <item row="12" column="1">
         <widget class="QLineEdit" name="tooltipSubtext"/>
        </item>
-       <item row="14" column="1">
-        <layout class="QHBoxLayout" name="horizontalLayout"/>
-       </item>
        <item row="13" column="1">
         <widget class="QPushButton" name="updateButton">
          <property name="text">
           <string>Update</string>
          </property>
         </widget>
+       </item>
+       <item row="8" column="1">
+        <layout class="QFormLayout" name="iconsLayout">
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>Icon</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>AttentionIcon</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>OverlayIcon</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <layout class="QHBoxLayout" name="iconLayout">
+           <item>
+            <widget class="QLineEdit" name="iconName"/>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="iconPixmapCheckbox">
+             <property name="text">
+              <string>Use Pixmap</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="1">
+          <layout class="QHBoxLayout" name="attentionIconLayout">
+           <item>
+            <widget class="QLineEdit" name="attentionIconName"/>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="attentionIconPixmapCheckbox">
+             <property name="text">
+              <string>Use Pixmap</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="3" column="1">
+          <layout class="QHBoxLayout" name="overlayIconLayout">
+           <item>
+            <widget class="QLineEdit" name="overlayIconName"/>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="overlayIconPixmapCheckbox">
+             <property name="text">
+              <string>Use Pixmap</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
        </item>
       </layout>
      </widget>
