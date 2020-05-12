@@ -43,7 +43,6 @@
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KProtocolManager>
-#include <KRun>
 #include <KService>
 #include <KServiceAction>
 
@@ -432,7 +431,9 @@ void IconApplet::run()
         connect(m_startupTasksModel, &QAbstractItemModel::rowsAboutToBeRemoved, this, std::bind(handleRow, false /*busy*/, _1, _2, _3));
     }
 
-    new KRun(QUrl::fromLocalFile(m_localPath), QApplication::desktop());
+    KIO::ApplicationLauncherJob *job = new KIO::ApplicationLauncherJob(KService::Ptr(new KService(m_localPath)));
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+    job->start();
 }
 
 void IconApplet::processDrop(QObject *dropEvent)
