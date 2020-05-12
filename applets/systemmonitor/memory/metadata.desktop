@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=Memory Usage
-Name[de]=Speicherverwendung
 Comment=System monitor Widget that shows physical memory usage
 Type=Service
 Icon=ksysguardd

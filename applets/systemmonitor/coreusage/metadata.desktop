@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=Individual Core Usage
-Name[de]=Einzelne Prozessorkernbelastung
 Comment=System monitor Widget that shows usage of individual CPU cores
 Type=Service
 Icon=ksysguardd
