@@ -46,8 +46,28 @@ Control {
 
     Kirigami.Theme.textColor: PlasmaCore.ColorScope.textColor
 
+    leftPadding: 0
+    topPadding: 0
+    rightPadding: 0
+    bottomPadding: 0
+
     anchors.fill: parent
     contentItem: plasmoid.nativeInterface.faceController.compactRepresentation
+
+    Binding {
+        target: plasmoid.nativeInterface.faceController.compactRepresentation
+        property: "formFactor"
+        value: {
+            switch (plasmoid.formFactor) {
+            case Faces.SensorFace.Horizontal:
+                return PlasmaCore.Types.Horizontal;
+            case Faces.SensorFace.Verical:
+                return PlasmaCore.Types.Vertical;
+            default:
+                return PlasmaCore.Types.Planar;
+            }
+        }
+    }
 
     MouseArea {
         parent: chartFace

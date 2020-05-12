@@ -57,5 +57,20 @@ Control {
     Kirigami.Theme.textColor: PlasmaCore.ColorScope.textColor
 
     contentItem: plasmoid.nativeInterface.faceController.fullRepresentation
+
+    Binding {
+        target: plasmoid.nativeInterface.faceController.compactRepresentation
+        property: "formFactor"
+        value: {
+            switch (plasmoid.formFactor) {
+            case Faces.SensorFace.Horizontal:
+                return PlasmaCore.Types.Horizontal;
+            case Faces.SensorFace.Verical:
+                return PlasmaCore.Types.Vertical;
+            default:
+                return PlasmaCore.Types.Planar;
+            }
+        }
+    }
 }
 
