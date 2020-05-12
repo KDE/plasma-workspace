@@ -54,13 +54,17 @@ Item {
         } else if (pmSource.data["Battery"]["State"] === "FullyCharged") {
             return i18n("Fully Charged");
         }
+
+        const percent = pmSource.data.Battery.Percent;
         if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
-            if (pmSource.data.Battery.State === "NoCharge") {
-                return i18n("Battery at %1%, not Charging", pmSource.data.Battery.Percent)
+            const state = pmSource.data.Battery.State;
+            if (state === "NoCharge") {
+                return i18n("Battery at %1%, not Charging", percent);
+            } else if (state === "Charging") {
+                return i18n("Battery at %1%, Charging", percent);
             }
-        } else {
-            return i18n("Battery at %1%", pmSource.data.Battery.Percent);
         }
+        return i18n("Battery at %1%", percent);
     }
 
     Plasmoid.toolTipSubText: {
