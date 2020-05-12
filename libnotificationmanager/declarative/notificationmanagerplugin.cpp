@@ -43,5 +43,7 @@ void NotificationManagerPlugin::registerTypes(const char *uri)
         return &Server::self();
     });
     qmlRegisterUncreatableType<ServerInfo>(uri, 1, 0, "ServerInfo", QStringLiteral("Can only access ServerInfo via Server"));
+
+    // WARNING: this is unstable API and does not provide any API or ABI gurantee for future Plasma releases and can be removed without any further notice
     qmlRegisterType<WatchedNotificationsModel>(uri, 1, 1, "WatchedNotificationsModel");
 }
