@@ -586,9 +586,7 @@ PlasmaComponents3.Page {
 
                 Kirigami.PlaceholderMessage {
                     anchors.centerIn: parent
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    anchors.margins: units.largeSpacing
+                    width: parent.width - (units.largeSpacing * 4)
 
                     text: i18n("No unread notifications")
                     visible: list.count === 0 && NotificationManager.Server.valid

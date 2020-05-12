@@ -59,9 +59,7 @@ PlasmaExtras.ScrollArea {
             id: emptyHint
 
             anchors.centerIn: parent
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.margins: units.largeSpacing
+            width: parent.width - (units.largeSpacing * 4)
 
             visible: menuListView.count === 0
             text: i18n("Clipboard is empty")
