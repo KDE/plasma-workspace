@@ -11,5 +11,5 @@ UploadCategories=Plasma Charts Face
 
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 StandardResource=tmp
-InstallationCommand=kpackagetool5 -t Plasma/SensorApplet -i %f
-UninstallCommand=kpackagetool5 -t Plasma/SensorApplet -r %f
+InstallationCommand=kpackagetool5 -t KSysguard/SensorFace -i %f
+UninstallCommand=kpackagetool5 -t KSysguard/SensorFace -r %f
