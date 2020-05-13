@@ -164,7 +164,7 @@ Item {
     }
 
     function action_openKcm() {
-        KQCAddons.KCMShell.open("kcm_notifications");
+        KQCAddons.KCMShell.openSystemSettings("kcm_notifications");
     }
 
     Component.onCompleted: {

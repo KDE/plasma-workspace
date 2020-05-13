@@ -241,7 +241,7 @@ Item {
     }
 
     function action_openAutomounterKcm() {
-        KCMShell.open([devicenotifier.automounterKcmName])
+        KCMShell.openSystemSettings(devicenotifier.automounterKcmName)
     }
 
     Plasmoid.onExpandedChanged: {

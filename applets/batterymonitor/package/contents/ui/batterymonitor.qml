@@ -111,8 +111,7 @@ Item {
                                  "powerdevilglobalconfig.desktop"]
     readonly property bool kcmsAuthorized: KCMShell.authorize(batterymonitor.kcms).length > 0
 
-    readonly property var kcm_energyinfo: ["kcm_energyinfo.desktop"]
-    readonly property bool kcmEnergyInformationAuthorized: KCMShell.authorize(kcm_energyinfo).length > 0
+    readonly property bool kcmEnergyInformationAuthorized: KCMShell.authorize("kcm_energyinfo.desktop").length > 0
 
     property QtObject updateScreenBrightnessJob
     onScreenBrightnessChanged: {
@@ -150,7 +149,7 @@ Item {
     }
 
     function action_energyinformationkcm() {
-        KCMShell.open(batterymonitor.kcm_energyinfo);
+        KCMShell.openInfoCenter("kcm_energyinfo");
     }
 
     Component.onCompleted: {

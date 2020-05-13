@@ -122,11 +122,11 @@ Item {
     }
 
     function action_clockkcm() {
-        KCMShell.open("clock");
+        KCMShell.openSystemSettings("clock");
     }
 
     function action_formatskcm() {
-        KCMShell.open("formats");
+        KCMShell.openSystemSettings("formats");
     }
 
     Component.onCompleted: {
