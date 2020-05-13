@@ -1,7 +1,5 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_kill\")
 
-set(krunner_kill_SRCS killrunner.cpp)
-
 set(kcm_krunner_kill_SRCS
     killrunner_config.cpp
 )
@@ -18,8 +16,8 @@ target_link_libraries(kcm_krunner_kill
     KF5::ConfigWidgets
     KF5::Runner
     )
-    
-add_library(krunner_kill MODULE ${krunner_kill_SRCS})
+
+add_library(krunner_kill MODULE killrunner.cpp)
 target_link_libraries(krunner_kill
                       KF5::I18n
                       KF5::Completion
@@ -30,8 +28,5 @@ target_link_libraries(krunner_kill
                       )
 add_dependencies(krunner_kill kcm_krunner_kill)
 
-install(TARGETS krunner_kill kcm_krunner_kill
-        DESTINATION ${KDE_INSTALL_PLUGINDIR})
-        
-install(FILES plasma-runner-kill.desktop plasma-runner-kill_config.desktop
-        DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS krunner_kill kcm_krunner_kill DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(FILES plasma-runner-kill.desktop plasma-runner-kill_config.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

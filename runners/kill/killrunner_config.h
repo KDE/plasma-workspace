@@ -1,4 +1,5 @@
 /* Copyright 2009  <Jan Gerrit Marker> <jangerrit@weiler-marker.com>
+ * Copyright 2020  <Alexander Lohnau> <alexander.lohnau@gmx.de>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -31,7 +32,7 @@ class KillRunnerConfigForm : public QWidget, public Ui::KillRunnerConfigUi
     Q_OBJECT
 
 public:
-    explicit KillRunnerConfigForm(QWidget* parent);
+    explicit KillRunnerConfigForm(QWidget *parent);
 };
 
 class KillRunnerConfig : public KCModule
@@ -39,7 +40,7 @@ class KillRunnerConfig : public KCModule
     Q_OBJECT
 
 public:
-    explicit KillRunnerConfig(QWidget* parent = nullptr, const QVariantList& args = QVariantList());
+    explicit KillRunnerConfig(QWidget *parent = nullptr, const QVariantList &args = QVariantList());
 
 public Q_SLOTS:
     void save() override;
@@ -47,6 +48,6 @@ public Q_SLOTS:
     void defaults() override;
 
 private:
-    KillRunnerConfigForm* m_ui;
+    KillRunnerConfigForm *m_ui;
 };
 #endif

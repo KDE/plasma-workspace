@@ -1,4 +1,5 @@
 /* Copyright 2009  <Jan Gerrit Marker> <jangerrit@weiler-marker.com>
+ * Copyright 2020  <Alexander Lohnau> <alexander.lohnau@gmx.de>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,40 +20,34 @@
 
 //Project-Includes
 #include "killrunner_config.h"
-#include <kconfigwidgets_version.h>
 //KDE-Includes
 #include <KSharedConfig>
+#include <KConfigGroup>
 #include <KPluginFactory>
-#include <krunner/abstractrunner.h>
 #include "config_keys.h"
 
 K_PLUGIN_FACTORY(KillRunnerConfigFactory, registerPlugin<KillRunnerConfig>(QStringLiteral("kcm_krunner_kill"));)
 
-KillRunnerConfigForm::KillRunnerConfigForm(QWidget* parent) : QWidget(parent)
+KillRunnerConfigForm::KillRunnerConfigForm(QWidget *parent) : QWidget(parent)
 {
     setupUi(this);
 }
 
-KillRunnerConfig::KillRunnerConfig(QWidget* parent, const QVariantList& args) :
-        KCModule(parent, args)
+KillRunnerConfig::KillRunnerConfig(QWidget *parent, const QVariantList &args)
+    : KCModule(parent, args)
 {
     m_ui = new KillRunnerConfigForm(this);
 
-    QGridLayout* layout = new QGridLayout(this);
+    QGridLayout *layout = new QGridLayout(this);
     layout->addWidget(m_ui, 0, 0);
 
     m_ui->sorting->addItem(i18n("CPU usage"), CPU);
     m_ui->sorting->addItem(i18n("inverted CPU usage"), CPUI);
     m_ui->sorting->addItem(i18n("nothing"), NONE);
-#if KCONFIGWIDGETS_VERSION < QT_VERSION_CHECK(5, 64, 0)
-    connect(m_ui->useTriggerWord, &QCheckBox::stateChanged, this, QOverload<>::of(&KillRunnerConfig::changed));
-    connect(m_ui->triggerWord, &KLineEdit::textChanged, this, QOverload<>::of(&KillRunnerConfig::changed));
-    connect(m_ui->sorting, QOverload<int>::of(&QComboBox::currentIndexChanged), this, QOverload<>::of(&KillRunnerConfig::changed));
-#else
+
     connect(m_ui->useTriggerWord, &QCheckBox::stateChanged, this, &KillRunnerConfig::markAsChanged);
     connect(m_ui->triggerWord, &KLineEdit::textChanged, this, &KillRunnerConfig::markAsChanged);
     connect(m_ui->sorting, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &KillRunnerConfig::markAsChanged);
-#endif
 
     load();
 }
@@ -62,12 +57,11 @@ void KillRunnerConfig::load()
     KCModule::load();
 
     KSharedConfig::Ptr cfg = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
-    KConfigGroup grp = cfg->group("Runners");
-    grp = KConfigGroup(&grp, "Kill Runner");
+    const KConfigGroup grp = cfg->group("Runners").group("Kill Runner");
 
     m_ui->useTriggerWord->setChecked(grp.readEntry(CONFIG_USE_TRIGGERWORD,true));
-    m_ui->triggerWord->setText(grp.readEntry(CONFIG_TRIGGERWORD,i18n("kill")));
-    m_ui->sorting->setCurrentIndex(m_ui->sorting->findData(grp.readEntry<int>(CONFIG_SORTING, static_cast<int>(NONE))));
+    m_ui->triggerWord->setText(grp.readEntry(CONFIG_TRIGGERWORD, i18n("kill")));
+    m_ui->sorting->setCurrentIndex(m_ui->sorting->findData(grp.readEntry<int>(CONFIG_SORTING, NONE)));
 
     emit changed(false);
 }
@@ -77,12 +71,11 @@ void KillRunnerConfig::save()
     KCModule::save();
 
     KSharedConfig::Ptr cfg = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
-    KConfigGroup grp = cfg->group("Runners");
-    grp = KConfigGroup(&grp, "Kill Runner");
+    KConfigGroup grp = cfg->group("Runners").group("Kill Runner");
 
-    grp.writeEntry(CONFIG_USE_TRIGGERWORD,m_ui->useTriggerWord->isChecked());
-    grp.writeEntry(CONFIG_TRIGGERWORD,m_ui->triggerWord->text());
-    grp.writeEntry(CONFIG_SORTING,m_ui->sorting->itemData(m_ui->sorting->currentIndex()));
+    grp.writeEntry(CONFIG_USE_TRIGGERWORD, m_ui->useTriggerWord->isChecked());
+    grp.writeEntry(CONFIG_TRIGGERWORD, m_ui->triggerWord->text());
+    grp.writeEntry(CONFIG_SORTING, m_ui->sorting->itemData(m_ui->sorting->currentIndex()));
 
     emit changed(false);
 }
@@ -95,7 +88,7 @@ void KillRunnerConfig::defaults()
     m_ui->triggerWord->setText(i18n("kill"));
     m_ui->sorting->setCurrentIndex(m_ui->sorting->findData((int) NONE));
 
-    emit changed(true);
+    emit markAsChanged();
 }
 
 #include "killrunner_config.moc"
