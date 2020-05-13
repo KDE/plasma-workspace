@@ -411,26 +411,6 @@ PlasmaCore.ColorScope {
             }
         }
 
-        Image {
-            id: logo
-            visible: config.showlogo == "shown"
-            source: config.logo
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottom: footer.top
-            anchors.bottomMargin: units.largeSpacing
-            asynchronous: true
-            sourceSize.height: height
-            opacity: loginScreenRoot.uiVisible ? 0 : 1
-            fillMode: Image.PreserveAspectFit
-            height: Math.round(units.gridUnit * 3.5)
-            Behavior on opacity {
-                OpacityAnimator {
-                    duration: units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-        }
-
         DropShadow {
             id: logoShadow
             anchors.fill: logo
@@ -444,7 +424,29 @@ PlasmaCore.ColorScope {
             color: "black" // matches Breeze window decoration and desktopcontainment
             opacity: loginScreenRoot.uiVisible ? 0 : 1
             Behavior on opacity {
-                OpacityAnimator {
+                //OpacityAnimator when starting from 0 is buggy (it shows one frame with opacity 1)"
+                NumberAnimation {
+                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                }
+            }
+        }
+
+        Image {
+            id: logo
+            visible: config.showlogo == "shown"
+            source: config.logo
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottom: footer.top
+            anchors.bottomMargin: units.largeSpacing
+            asynchronous: true
+            sourceSize.height: height
+            opacity: loginScreenRoot.uiVisible ? 0 : 1
+            fillMode: Image.PreserveAspectFit
+            height: Math.round(units.gridUnit * 3.5)
+            Behavior on opacity {
+                // OpacityAnimator when starting from 0 is buggy (it shows one frame with opacity 1)"
+                NumberAnimation {
                     duration: units.longDuration
                     easing.type: Easing.InOutQuad
                 }
