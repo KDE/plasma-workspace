@@ -25,5 +25,3 @@ target_link_libraries(plasma_applet_systemmonitor
 install(TARGETS plasma_applet_systemmonitor DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
 
 plasma_install_package(package org.kde.plasma.systemmonitor)
-
-install(FILES systemmonitor-faces.knsrc systemmonitor-presets.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
