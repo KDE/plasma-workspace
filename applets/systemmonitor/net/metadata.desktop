@@ -1,6 +1,16 @@
 [Desktop Entry]
 Name=Network speed
+Name[ca]=Velocitat de xarxa
+Name[et]=Võrgukiirus
+Name[nl]=Netwerksnelheid
+Name[uk]=Швидкість мережі
+Name[x-test]=xxNetwork speedxx
 Comment=System monitor Widget that shows the download and upload data rate
+Comment[ca]=Estri del monitor del sistema que mostra la velocitat de baixada i pujada de les dades
+Comment[et]=Süsteemi jälgija vidin, mis näitab alla- ja üleslaadimise kiirust
+Comment[nl]=Systeemmonitorwidget die gegevenssnelheid van down- en uploaden toont
+Comment[uk]=Віджет нагляду за системою, який показує швидкість отримання та вивантаження даних
+Comment[x-test]=xxSystem monitor Widget that shows the download and upload data ratexx
 
 Type=Service
 Icon=network-workgroup

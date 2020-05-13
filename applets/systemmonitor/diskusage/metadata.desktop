@@ -1,6 +1,16 @@
 [Desktop Entry]
 Name=Disk Usage
+Name[ca]=Ús de disc
+Name[et]=Kettakasutus
+Name[nl]=Schijfgebruik
+Name[uk]=Використання диска
+Name[x-test]=xxDisk Usagexx
 Comment=System monitor Widget that shows the usage of the root partition
+Comment[ca]=Estri del monitor del sistema que mostra l'ús de la partició arrel
+Comment[et]=Süsteemi jälgija vidin, mis näitab juurpartitsiooni kasutust
+Comment[nl]=Systeemmonitorwidget die het totale gebruik toont van de root-partitie
+Comment[uk]=Віджет нагляду за системою, який показує використання кореневого розділу
+Comment[x-test]=xxSystem monitor Widget that shows the usage of the root partitionxx
 Type=Service
 Icon=cpu
 X-KDE-ServiceTypes=Plasma/Applet

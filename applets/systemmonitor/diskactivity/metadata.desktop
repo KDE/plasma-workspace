@@ -1,5 +1,10 @@
 [Desktop Entry]
 Name=Hard Disk Activity
+Name[ca]=Activitat de disc dur
+Name[et]=Kõvaketta tegevis
+Name[nl]=Activiteit van de vaste schijf
+Name[uk]=Робота із жорстким диском
+Name[x-test]=xxHard Disk Activityxx
 Comment=An applet that monitors hard disk throughput and input/output
 Comment[ar]=بُريْمج يراقب استخدام إنتاجيّة القرص الصلب ودَخْله/خَرْجه
 Comment[bs]=Aplet koji prati hard disk protok ulaz / izlaz

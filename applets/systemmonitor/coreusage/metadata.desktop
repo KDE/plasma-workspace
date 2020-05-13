@@ -1,6 +1,16 @@
 [Desktop Entry]
 Name=Individual Core Usage
+Name[ca]=Ús individual de nucli
+Name[et]=Iga tuuma kasutus
+Name[nl]=Individueel gebruik van kernen
+Name[uk]=Використання окремих ядер
+Name[x-test]=xxIndividual Core Usagexx
 Comment=System monitor Widget that shows usage of individual CPU cores
+Comment[ca]=Estri del monitor del sistema que mostra l'ús dels nuclis individuals de la CPU
+Comment[et]=Süsteemi jälgija vidin, mis näitab iga protsessorituuma kasutust
+Comment[nl]=Systeemmonitorwidget die gebruik toont van individuele CPU-kernen
+Comment[uk]=Віджет нагляду за системою, який показує використання окремих ядер процесора
+Comment[x-test]=xxSystem monitor Widget that shows usage of individual CPU coresxx
 Type=Service
 Icon=ksysguardd
 X-KDE-ServiceTypes=Plasma/Applet

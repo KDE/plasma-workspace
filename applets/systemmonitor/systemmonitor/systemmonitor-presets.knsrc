@@ -1,5 +1,10 @@
 [KNewStuff3]
 Name=System monitor Sensor Presets
+Name[ca]=Valors predefinits del sensor del monitor del sistema
+Name[et]=Süsteemi jälgija sensori valmisvalikud
+Name[nl]=Voorinstellingen van systeemmonitorsensor
+Name[uk]=Набори налаштувань датчика нагляду за системою
+Name[x-test]=xxSystem monitor Sensor Presetsxx
 
 Categories=Plasma Charts Preset
 UploadCategories=Plasma Charts Preset
