@@ -28,16 +28,30 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 Item {
     id: main
 
+    property bool isClipboardEmpty: clipboardSource.data["clipboard"]["empty"]
+
     Plasmoid.switchWidth: units.gridUnit * 5
     Plasmoid.switchHeight: units.gridUnit * 5
-    Plasmoid.status: clipboardSource.data["clipboard"]["empty"] ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
+    Plasmoid.status: PlasmaCore.Types.PassiveStatus
     Plasmoid.toolTipMainText: i18n("Clipboard Contents")
-    Plasmoid.toolTipSubText: clipboardSource.data["clipboard"]["empty"] ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
+    Plasmoid.toolTipSubText: isClipboardEmpty ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
     Plasmoid.toolTipTextFormat: Text.PlainText
     Plasmoid.icon: "klipper"
 
     function action_configure() {
         clipboardSource.service("", "configureKlipper");
+    }
+
+    onIsClipboardEmptyChanged: {
+        if (isClipboardEmpty) {
+            // We need to hide the applet before changing its status to passive
+            // because only the active applet can hide itself
+            if (plasmoid.hideOnWindowDeactivate)
+                plasmoid.expanded = false;
+            Plasmoid.status = PlasmaCore.Types.PassiveStatus;
+        } else {
+            Plasmoid.status = PlasmaCore.Types.ActiveStatus
+        }
     }
 
     Component.onCompleted: {
