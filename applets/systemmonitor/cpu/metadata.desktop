@@ -1,18 +1,22 @@
 [Desktop Entry]
 Name=Total CPU Use
 Name[ca]=Ús total de CPU
+Name[es]=Uso total de CPU
 Name[et]=Protsessori kogukasutus
 Name[nl]=Totaal CPU-gebruik
 Name[pt]=Carga Total do CPU
 Name[uk]=Загальне використання процесора
 Name[x-test]=xxTotal CPU Usexx
+Name[zh_TW]=總 CPU 用量
 Comment=System monitor Widget that shows the total CPU usage
 Comment[ca]=Estri del monitor del sistema que mostra l'ús total de la CPU
+Comment[es]=Elemento gráfico del monitor del sistema que muestra el uso total de CPU
 Comment[et]=Süsteemi jälgija vidin, mis näitab protsessori kogukasutust
 Comment[nl]=Systeemmonitorwidget die het totale gebruik toont de CPU toont
 Comment[pt]=Elemento de monitorização do sistema que mostra a carga total do CPU
 Comment[uk]=Віджет нагляду за системою, який показує загальне використання процесора
 Comment[x-test]=xxSystem monitor Widget that shows the total CPU usagexx
+Comment[zh_TW]=顯示總 CPU 用量的系統監視器元件
 Type=Service
 Icon=cpu
 X-KDE-ServiceTypes=Plasma/Applet
