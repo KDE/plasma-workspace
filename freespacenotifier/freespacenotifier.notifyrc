@@ -416,3 +416,4 @@ Comment[zh_CN]=您现在的磁盘空间过低
 Comment[zh_TW]=您的磁碟空間快用完了
 Contexts=warningnot
 Action=Popup
+Urgency=Critical

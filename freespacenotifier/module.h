@@ -31,8 +31,10 @@ class FreeSpaceNotifierModule
     Q_OBJECT
 public:
     FreeSpaceNotifierModule(QObject* parent, const QList<QVariant>&);
+
 private:
-    FreeSpaceNotifier notifier;
+    void showConfiguration();
+
 };
 
 #endif

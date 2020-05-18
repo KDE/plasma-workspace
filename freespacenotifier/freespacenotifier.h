@@ -2,6 +2,7 @@
    Copyright (c) 2006 Lukas Tinkl <ltinkl@suse.cz>
    Copyright (c) 2008 Lubos Lunak <l.lunak@suse.cz>
    Copyright (c) 2009 Ivo Anjo <knuckles@gmail.com>
+   Copyright (c) 2020 Kai Uwe Broulik <kde@broulik.de>
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -21,37 +22,41 @@
 #define _FREESPACENOTIFIER_H_
 
 #include <QTimer>
+#include <QPointer>
+
+#include <KLocalizedString>
+#include <KService>
 
 class KNotification;
-class KStatusNotifierItem;
-class QDBusInterface;
 
 class FreeSpaceNotifier : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit FreeSpaceNotifier(QObject *parent = nullptr);
+    explicit FreeSpaceNotifier(const QString &path, const KLocalizedString &notificationText, QObject *parent = nullptr);
     ~FreeSpaceNotifier() override;
 
-private Q_SLOTS:
-    void checkFreeDiskSpace();
-    void resetLastAvailable();
-    void openFileManager();
-    void showConfiguration();
-    void cleanupNotification();
-    void configDialogClosed();
-    void hideSni();
+signals:
+    void configureRequested();
 
 private:
-    QTimer timer;
-    QTimer *m_lastAvailTimer;
-    KNotification *m_notification;
-    KStatusNotifierItem *m_sni;
-    qint64 m_lastAvail; // used to suppress repeated warnings when available space hasn't changed
+    void checkFreeDiskSpace();
+    void resetLastAvailable();
 
-    void disableFSNotifier();
-    bool dbusError(QDBusInterface &iface);
+    KService::Ptr filelightService() const;
+    void exploreDrive();
+    void onNotificationClosed();
+
+    QString m_path;
+    KLocalizedString m_notificationText;
+
+    QTimer m_timer;
+    QTimer *m_lastAvailTimer = nullptr;
+    QPointer<KNotification> m_notification;
+    qint64 m_lastAvail = -1; // used to suppress repeated warnings when available space hasn't changed
+
+
 };
 
 #endif
