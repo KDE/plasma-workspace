@@ -99,15 +99,8 @@ bool NotificationSortProxyModel::lessThan(const QModelIndex &source_left, const 
     }
 
     if (scoreLeft == scoreRight) {
-        QDateTime timeLeft = source_left.data(Notifications::UpdatedRole).toDateTime();
-        if (!timeLeft.isValid()) {
-            timeLeft = source_left.data(Notifications::CreatedRole).toDateTime();
-        }
-
-        QDateTime timeRight = source_right.data(Notifications::UpdatedRole).toDateTime();
-        if (!timeRight.isValid()) {
-            timeRight = source_right.data(Notifications::CreatedRole).toDateTime();
-        }
+        const QDateTime timeLeft = source_left.data(Notifications::CreatedRole).toDateTime();
+        const QDateTime timeRight = source_right.data(Notifications::CreatedRole).toDateTime();
 
         // sorts descending by time (newest first)
         return timeLeft > timeRight;
