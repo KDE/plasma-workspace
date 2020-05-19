@@ -110,13 +110,14 @@ ColumnLayout {
     signal resumeJobClicked
     signal killJobClicked
 
-    spacing: 0
+    spacing: units.smallSpacing
 
     Item {
         id: headingElement
         Layout.fillWidth: true
         Layout.preferredHeight: notificationHeading.implicitHeight
         Layout.preferredWidth: notificationHeading.implicitWidth
+        Layout.bottomMargin: -parent.spacing
 
         PlasmaCore.FrameSvgItem {
             imagePath: "widgets/plasmoidheading"
