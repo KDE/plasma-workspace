@@ -147,7 +147,9 @@ Item {
                 // QMenu opens on press, so we'll replicate that here
                 MouseArea {
                     anchors.fill: parent
+                    hoverEnabled: plasmoid.nativeInterface.currentIndex !== -1
                     onPressed: parent.clicked()
+                    onEntered: parent.clicked()
                 }
             }
         }
