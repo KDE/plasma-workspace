@@ -32,7 +32,7 @@ Item {
 
     Plasmoid.switchWidth: units.gridUnit * 5
     Plasmoid.switchHeight: units.gridUnit * 5
-    Plasmoid.status: PlasmaCore.Types.PassiveStatus
+    Plasmoid.status: isClipboardEmpty ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
     Plasmoid.toolTipMainText: i18n("Clipboard Contents")
     Plasmoid.toolTipSubText: isClipboardEmpty ? i18n("Clipboard is empty") : clipboardSource.data["clipboard"]["current"]
     Plasmoid.toolTipTextFormat: Text.PlainText
