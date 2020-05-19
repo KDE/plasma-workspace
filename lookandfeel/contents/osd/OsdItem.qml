@@ -1,5 +1,6 @@
 /*
  * Copyright 2014 Martin Klapetek <mklapetek@kde.org>
+ * Copyright 2019 Kai Uwe Broulik <kde@broulik.de>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -16,72 +17,47 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtra
 import QtQuick.Window 2.2
 
-Item {
+RowLayout {
     property QtObject rootItem
-    height: Math.min(units.gridUnit * 15, Screen.desktopAvailableHeight / 5)
-    width: height
 
-    //  /--------------------\
-    //  |      spacing       |
-    //  | /----------------\ |
-    //  | |                | |
-    //  | |      icon      | |
-    //  | |                | |
-    //  | |                | |
-    //  | \----------------/ |
-    //  |      spacing       |
-    //  | [progressbar/text] |
-    //  |      spacing       |
-    //  \--------------------/
+    spacing: units.smallSpacing
+
+    width: Math.max(Math.min(Screen.desktopAvailableWidth / 2, implicitWidth), units.gridUnit * 15)
+    height: units.iconSizes.medium
 
     PlasmaCore.IconItem {
-        id: icon
-
-        height: parent.height - Math.max(progressBar.height, label.height)
-                              - ((units.smallSpacing/2) * 3) //it's an svg
-        width: parent.width
-
+        Layout.preferredWidth: units.iconSizes.medium
+        Layout.preferredHeight: units.iconSizes.medium
         source: rootItem.icon
+        visible: valid
     }
 
     PlasmaComponents.ProgressBar {
         id: progressBar
-
-        anchors {
-            bottom: parent.bottom
-            left: parent.left
-            right: parent.right
-            margins: Math.floor(units.smallSpacing / 2)
-        }
-
+        Layout.fillWidth: true
         visible: rootItem.showingProgress
         minimumValue: 0
         maximumValue: 100
-
         value: Number(rootItem.osdValue)
     }
+
     PlasmaExtra.Heading {
         id: label
-        anchors {
-            bottom: parent.bottom
-            left: parent.left
-            right: parent.right
-            margins: Math.floor(units.smallSpacing / 2)
-        }
-
-        visible: !rootItem.showingProgress
-        text: rootItem.showingProgress ? "" : (rootItem.osdValue ? rootItem.osdValue : "")
+        Layout.fillWidth: true
+        Layout.fillHeight: true
+        level: 3
         horizontalAlignment: Text.AlignHCenter
-        wrapMode: Text.WordWrap
-        maximumLineCount: 2
-        elide: Text.ElideLeft
-        minimumPointSize: theme.defaultFont.pointSize
-        fontSizeMode: Text.HorizontalFit
+        verticalAlignment: Text.AlignVCenter
         textFormat: Text.PlainText
+        wrapMode: Text.NoWrap
+        elide: Text.ElideRight
+        text: !rootItem.showingProgress && rootItem.osdValue ? rootItem.osdValue : ""
+        visible: !rootItem.showingProgress
     }
 }
