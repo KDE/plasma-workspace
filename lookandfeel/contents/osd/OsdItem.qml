@@ -41,6 +41,8 @@ RowLayout {
     PlasmaComponents3.ProgressBar {
         id: progressBar
         Layout.fillWidth: true
+        // So it never exceeds the minimum popup size
+        Layout.preferredWidth: 1
         visible: rootItem.showingProgress
         from: 0
         to: 100
