@@ -42,6 +42,6 @@ RowLayout {
         font: theme.smallestFont
         wrapMode: Text.WordWrap
         elide: Text.ElideRight
-        maximumLineCount: 3
+        maximumLineCount: 4
     }
 }

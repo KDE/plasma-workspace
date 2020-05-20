@@ -85,7 +85,7 @@ Item {
         } // otherwise, don't add anything
 
         if (powermanagementDisabled) {
-            parts.push(i18n("Power management is disabled"));
+            parts.push(i18n("Automatic sleep and screen locking are disabled"));
         }
         return parts.join("\n");
     }
