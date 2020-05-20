@@ -210,11 +210,14 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
         actionMenu->winId();//create window handle
         actionMenu->windowHandle()->setTransientParent(ctx->window());
 
-        actionMenu->popup(pos);
+        // hide the old menu only after showing the new one to avoid brief focus flickering on X11.
+        // on wayland, you can't have more than one grabbing popup at a time so we show it after
+        // the menu has hidden. thankfully, wayland doesn't have this flickering.
+        if (!KWindowSystem::isPlatformWayland()) {
+            actionMenu->popup(pos);
+        }
 
         if (view() == FullView) {
-            // hide the old menu only after showing the new one to avoid brief flickering
-            // in other windows as they briefly re-gain focus
             QMenu *oldMenu = m_currentMenu;
             m_currentMenu = actionMenu;
             if (oldMenu && oldMenu != actionMenu) {
@@ -222,6 +225,10 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
                 disconnect(oldMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide);
                 oldMenu->hide();
             }
+        }
+
+        if (KWindowSystem::isPlatformWayland()) {
+            actionMenu->popup(pos);
         }
 
         setCurrentIndex(idx);
