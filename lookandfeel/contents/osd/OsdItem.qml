@@ -32,6 +32,7 @@ RowLayout {
     height: units.iconSizes.medium
 
     PlasmaCore.IconItem {
+        Layout.leftMargin: units.smallSpacing
         Layout.preferredWidth: units.iconSizes.medium
         Layout.preferredHeight: units.iconSizes.medium
         source: rootItem.icon
@@ -43,6 +44,7 @@ RowLayout {
         Layout.fillWidth: true
         // So it never exceeds the minimum popup size
         Layout.preferredWidth: 1
+        Layout.rightMargin: units.smallSpacing
         visible: rootItem.showingProgress
         from: 0
         to: 100
@@ -53,6 +55,7 @@ RowLayout {
         id: label
         Layout.fillWidth: true
         Layout.fillHeight: true
+        Layout.rightMargin: units.smallSpacing
         level: 3
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
