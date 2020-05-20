@@ -110,7 +110,7 @@ PlasmaComponents3.Page {
                 top: settingsColumn.bottom
                 topMargin: units.gridUnit
                 leftMargin: units.smallSpacing
-                bottom: dialog.bottom
+                bottom: parent.bottom
             }
             width: parent.width - units.smallSpacing * 2
 
