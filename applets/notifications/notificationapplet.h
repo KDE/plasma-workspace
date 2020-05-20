@@ -36,6 +36,7 @@ class NotificationApplet : public Plasma::Applet
     Q_PROPERTY(int dragPixmapSize READ dragPixmapSize WRITE setDragPixmapSize NOTIFY dragPixmapSizeChanged)
 
     Q_PROPERTY(QWindow *focussedPlasmaDialog READ focussedPlasmaDialog NOTIFY focussedPlasmaDialogChanged)
+    Q_PROPERTY(QQuickItem *systemTrayRepresentation READ systemTrayRepresentation CONSTANT)
 
 public:
     explicit NotificationApplet(QObject *parent, const QVariantList &data);
@@ -54,6 +55,7 @@ public:
     Q_INVOKABLE void startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap);
 
     QWindow *focussedPlasmaDialog() const;
+    QQuickItem *systemTrayRepresentation() const;
 
     Q_INVOKABLE void setSelectionClipboardText(const QString &text);
 

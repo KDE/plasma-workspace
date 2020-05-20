@@ -24,6 +24,7 @@
 #include <QClipboard>
 #include <QDrag>
 #include <QGuiApplication>
+#include <QMetaObject>
 #include <QMimeData>
 #include <QMimeDatabase>
 #include <QMimeType>
@@ -35,6 +36,7 @@
 
 #include <KWindowSystem>
 
+#include <Plasma/Containment>
 #include <PlasmaQuick/Dialog>
 
 #include "filemenu.h"
@@ -138,6 +140,20 @@ void NotificationApplet::doDrag(QQuickItem *item, const QUrl &url, const QPixmap
 QWindow *NotificationApplet::focussedPlasmaDialog() const
 {
     return qobject_cast<PlasmaQuick::Dialog *>(qApp->focusWindow());
+}
+
+QQuickItem *NotificationApplet::systemTrayRepresentation() const
+{
+    auto *c = containment();
+    if (!c) {
+        return nullptr;
+    }
+
+    if (strcmp(c->metaObject()->className(), "SystemTray") != 0) {
+        return nullptr;
+    }
+
+    return c->property("_plasma_graphicObject").value<QQuickItem *>();
 }
 
 void NotificationApplet::setSelectionClipboardText(const QString &text)
