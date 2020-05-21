@@ -465,7 +465,6 @@ QVariant NotificationGroupingProxyModel::data(const QModelIndex &proxyIndex, int
     }
 
     if (isGroup) {
-        // For group parent items, DisplayRole is mapped to AppName of the first child.
         switch (role) {
         case Notifications::IsGroupRole:
             return true;
@@ -473,6 +472,21 @@ QVariant NotificationGroupingProxyModel::data(const QModelIndex &proxyIndex, int
             return rowCount(proxyIndex);
         case Notifications::IsInGroupRole:
             return false;
+
+        // Combine all notifications into one for some basic grouping
+        case Notifications::BodyRole: {
+            QString body;
+            for (int i = 0; i < rowCount(proxyIndex); ++i) {
+                const QString stringData = index(i, 0, proxyIndex).data(role).toString();
+                if (!stringData.isEmpty()) {
+                    if (!body.isEmpty()) {
+                        body.append(QLatin1String("<br>"));
+                    }
+                    body.append(stringData);
+                }
+            }
+            return body;
+        }
 
         case Notifications::DesktopEntryRole:
         case Notifications::NotifyRcNameRole:
