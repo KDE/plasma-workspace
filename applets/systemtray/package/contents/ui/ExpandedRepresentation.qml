@@ -25,8 +25,14 @@ import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
-    width: expandedRepresentation.width
-    height: expandedRepresentation.height
+    width: Layout.minimumWidth
+    height: Layout.minimumHeight
+    Layout.minimumWidth: units.gridUnit * 24
+    Layout.minimumHeight: units.gridUnit * 21
+    Layout.preferredWidth: Layout.minimumWidth
+    Layout.preferredHeight: Layout.minimumHeight
+    Layout.maximumWidth: Layout.minimumWidth
+    Layout.maximumHeight: Layout.minimumHeight
 
     property alias activeApplet: container.activeApplet
     property alias hiddenLayout: hiddenItemsView.layout
@@ -56,14 +62,7 @@ Item {
     ColumnLayout {
         id: expandedRepresentation
         //set width/height to avoid an useless Dialog resize
-        width: Layout.minimumWidth
-        height: Layout.minimumHeight
-        Layout.minimumWidth: units.gridUnit * 24
-        Layout.minimumHeight: units.gridUnit * 21
-        Layout.preferredWidth: Layout.minimumWidth
-        Layout.preferredHeight: Layout.minimumHeight
-        Layout.maximumWidth: Layout.minimumWidth
-        Layout.maximumHeight: Layout.minimumHeight
+        anchors.fill: parent
         spacing: plasmoidHeading.bottomPadding
 
         RowLayout {
