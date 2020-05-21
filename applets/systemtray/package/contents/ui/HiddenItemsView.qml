@@ -41,6 +41,7 @@ MouseArea {
     PlasmaExtras.ScrollArea {
         width: parent.width
         height: parent.height
+        frameVisible: false
 
         horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
         verticalScrollBarPolicy: root.activeApplet ? Qt.ScrollBarAlwaysOff : Qt.ScrollBarAsNeeded
