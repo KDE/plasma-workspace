@@ -25,6 +25,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
+    //set width/height to avoid an useless Dialog resize
     width: Layout.minimumWidth
     height: Layout.minimumHeight
     Layout.minimumWidth: units.gridUnit * 24
@@ -61,7 +62,6 @@ Item {
 
     ColumnLayout {
         id: expandedRepresentation
-        //set width/height to avoid an useless Dialog resize
         anchors.fill: parent
         spacing: plasmoidHeading.bottomPadding
 
