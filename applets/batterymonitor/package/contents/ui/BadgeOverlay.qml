@@ -21,7 +21,7 @@
 import QtQuick 2.4
 import QtGraphicalEffects 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 Item {
     property alias text: label.text
@@ -40,10 +40,9 @@ Item {
         opacity: 0.9
     }
 
-    PlasmaComponents.Label {
+    PlasmaComponents3.Label {
         id: label
         anchors.centerIn: badgeRect
-        height: paintedHeight
         font.pixelSize: Math.max(icon.height/4, theme.smallestFont.pixelSize*0.8)
     }
 

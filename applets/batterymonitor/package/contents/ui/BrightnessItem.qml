@@ -22,8 +22,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as Components
-import org.kde.plasma.components 3.0 as Components3
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 RowLayout {
     id: item
@@ -49,13 +48,12 @@ RowLayout {
         Layout.alignment: Qt.AlignTop
         spacing: 0
 
-        Components.Label {
+        PlasmaComponents3.Label {
             id: brightnessLabel
             width: parent.width
-            height: paintedHeight
         }
 
-        Components3.Slider {
+        PlasmaComponents3.Slider {
             id: brightnessSlider
             width: parent.width
             // Don't allow the slider to turn off the screen

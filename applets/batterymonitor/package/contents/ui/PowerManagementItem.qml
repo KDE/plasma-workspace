@@ -21,7 +21,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as Components
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0
 
 ColumnLayout {
@@ -33,18 +33,21 @@ ColumnLayout {
         Layout.fillWidth: true
         Layout.leftMargin: units.smallSpacing
 
-        Components.CheckBox {
+        PlasmaComponents3.CheckBox {
             id: pmCheckBox
             Layout.fillWidth: true
             text: i18nc("Minimize the length of this string as much as possible", "Allow automatic sleep and screen locking")
             checked: true
         }
 
-        Components.ToolButton {
-            iconSource: "configure"
+        PlasmaComponents3.ToolButton {
+            icon.name: "configure"
             onClicked: batterymonitor.action_powerdevilkcm()
-            tooltip: i18n("Configure Power Saving...")
             visible: batterymonitor.kcmsAuthorized
+
+            PlasmaComponents3.ToolTip {
+                text: i18n("Configure Power Saving...")
+            }
         }
     }
 
@@ -60,7 +63,7 @@ ColumnLayout {
             text: i18nc("Minimize the length of this string as much as possible", "Your notebook is configured not to sleep when closing the lid while an external monitor is connected.")
         }
 
-        Components.Label {
+        PlasmaComponents3.Label {
             id: inhibitionExplanation
             Layout.fillWidth: true
             // Don't need to show the inhibitions when power management
