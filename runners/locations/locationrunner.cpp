@@ -100,7 +100,6 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
         }
 
         Plasma::QueryMatch match(this);
-        match.setText(i18n("Go to %1", url.toDisplayString()));
         match.setIconName(KProtocolInfo::icon(url.scheme()));
         match.setData(url.url());
 
