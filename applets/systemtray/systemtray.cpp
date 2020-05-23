@@ -43,23 +43,12 @@
 
 SystemTray::SystemTray(QObject *parent, const QVariantList &args)
     : Plasma::Containment(parent, args),
-      m_systemTrayModel(new SystemTrayModel(this)),
+      m_systemTrayModel(nullptr),
       m_sortedSystemTrayModel(nullptr),
       m_configSystemTrayModel(nullptr)
 {
     setHasConfigurationInterface(true);
     setContainmentType(Plasma::Types::CustomEmbeddedContainment);
-
-    PlasmoidModel *currentPlasmoidsModel = new PlasmoidModel(m_systemTrayModel);
-    connect(this, &SystemTray::appletAdded, currentPlasmoidsModel, &PlasmoidModel::addApplet);
-    connect(this, &SystemTray::appletRemoved, currentPlasmoidsModel, &PlasmoidModel::removeApplet);
-    connect(this, &SystemTray::configurationChanged, currentPlasmoidsModel, &PlasmoidModel::onConfigurationChanged);
-
-    m_statusNotifierModel = new StatusNotifierModel(m_systemTrayModel);
-    connect(this, &SystemTray::configurationChanged, m_statusNotifierModel, &StatusNotifierModel::onConfigurationChanged);
-
-    m_systemTrayModel->addSourceModel(currentPlasmoidsModel);
-    m_systemTrayModel->addSourceModel(m_statusNotifierModel);
 }
 
 SystemTray::~SystemTray()
@@ -446,11 +435,34 @@ void SystemTray::configChanged()
     emit configurationChanged(config());
 }
 
-QAbstractItemModel *SystemTray::systemTrayModel()
+SystemTrayModel *SystemTray::systemTrayModel()
+{
+    if (!m_systemTrayModel) {
+        m_systemTrayModel = new SystemTrayModel(this);
+
+        PlasmoidModel *currentPlasmoidsModel = new PlasmoidModel(m_systemTrayModel);
+        connect(this, &SystemTray::appletAdded, currentPlasmoidsModel, &PlasmoidModel::addApplet);
+        connect(this, &SystemTray::appletRemoved, currentPlasmoidsModel, &PlasmoidModel::removeApplet);
+        connect(this, &SystemTray::configurationChanged, currentPlasmoidsModel, &PlasmoidModel::onConfigurationChanged);
+        for (auto applet : applets()) {
+            currentPlasmoidsModel->addApplet(applet);
+        }
+
+        m_statusNotifierModel = new StatusNotifierModel(m_systemTrayModel);
+        connect(this, &SystemTray::configurationChanged, m_statusNotifierModel, &StatusNotifierModel::onConfigurationChanged);
+
+        m_systemTrayModel->addSourceModel(currentPlasmoidsModel);
+        m_systemTrayModel->addSourceModel(m_statusNotifierModel);
+    }
+
+    return m_systemTrayModel;
+}
+
+QAbstractItemModel *SystemTray::sortedSystemTrayModel()
 {
     if (!m_sortedSystemTrayModel) {
         m_sortedSystemTrayModel = new SortedSystemTrayModel(SortedSystemTrayModel::SortingType::SystemTray, this);
-        m_sortedSystemTrayModel->setSourceModel(m_systemTrayModel);
+        m_sortedSystemTrayModel->setSourceModel(systemTrayModel());
     }
     return m_sortedSystemTrayModel;
 }
@@ -459,7 +471,7 @@ QAbstractItemModel *SystemTray::configSystemTrayModel()
 {
     if (!m_configSystemTrayModel) {
         m_configSystemTrayModel = new SortedSystemTrayModel(SortedSystemTrayModel::SortingType::ConfigurationPage, this);
-        m_configSystemTrayModel->setSourceModel(m_systemTrayModel);
+        m_configSystemTrayModel->setSourceModel(systemTrayModel());
     }
     return m_configSystemTrayModel;
 }

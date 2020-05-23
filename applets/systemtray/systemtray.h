@@ -40,7 +40,7 @@ class SortedSystemTrayModel;
 class SystemTray : public Plasma::Containment
 {
     Q_OBJECT
-    Q_PROPERTY(QAbstractItemModel* systemTrayModel READ systemTrayModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel* systemTrayModel READ sortedSystemTrayModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel* configSystemTrayModel READ configSystemTrayModel CONSTANT)
     Q_PROPERTY(QStringList allowedPlasmoids READ allowedPlasmoids WRITE setAllowedPlasmoids NOTIFY allowedPlasmoidsChanged)
 
@@ -55,7 +55,7 @@ public:
 
     void configChanged() override;
 
-    QAbstractItemModel *systemTrayModel();
+    QAbstractItemModel *sortedSystemTrayModel();
 
     QAbstractItemModel *configSystemTrayModel();
 
@@ -113,6 +113,8 @@ Q_SIGNALS:
 
 private:
     void initDBusActivatables();
+    SystemTrayModel *systemTrayModel();
+
     QStringList m_defaultPlasmoids;
     QHash<QString /*plugin name*/, KPluginMetaData> m_systrayApplets;
     QHash<QString /*plugin name*/, QRegExp /*DBus Service*/> m_dbusActivatableTasks;
