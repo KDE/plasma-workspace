@@ -40,7 +40,7 @@ FaviconFromBlob *FaviconFromBlob::chrome(const QString &profileDirectory, QObjec
     QString profileName = QFileInfo(profileDirectory).fileName();
     QString faviconCache = QStringLiteral("%1/KRunner-Chrome-Favicons-%2.sqlite")
             .arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation), profileName);
-    FetchSqlite *fetchSqlite = new FetchSqlite(profileDirectory + QStringLiteral("/Favicons"), faviconCache, parent);
+    FetchSqlite *fetchSqlite = new FetchSqlite(faviconCache, parent);
 
     QString faviconQuery;
     if(fetchSqlite->tables().contains(QLatin1String("favicon_bitmaps"))) {

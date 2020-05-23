@@ -20,7 +20,11 @@
 
 #ifndef BROWSER_H
 #define BROWSER_H
+
 #include <QObject>
+#include <QFile>
+#include <QFileInfo>
+#include <QDateTime>
 #include <QString>
 #include "bookmarkmatch.h"
 
@@ -31,8 +35,35 @@ public:
     virtual QList<BookmarkMatch> match(const QString& term, bool addEveryThing) = 0;
     virtual void prepare() {}
 
+    enum CacheResult{
+        Error,
+        Copied,
+        Unchanged
+    };
+
 public Q_SLOTS:
     virtual void teardown() {}
+
+protected:
+    /*
+     * Updates the cached file if the source has been modified
+    */
+    CacheResult updateCacheFile(const QString &source, const QString &cache) {
+        if (source.isEmpty() || cache.isEmpty()) {
+            return Error;
+        }
+        QFileInfo cacheInfo(cache);
+        if (!QFileInfo::exists(cache) || !cacheInfo.isFile()) {
+            return QFile(source).copy(cache) ? Copied : Error;
+        }
+
+        QFileInfo sourceInfo(source);
+        if (sourceInfo.lastModified() > cacheInfo.lastModified()) {
+            QFile::remove(cache);
+            return QFile(source).copy(cache) ? Copied : Error;
+        }
+        return Unchanged;
+    }
 };
 
 

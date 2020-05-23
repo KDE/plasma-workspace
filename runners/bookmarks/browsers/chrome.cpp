@@ -52,6 +52,7 @@ Chrome::Chrome( FindProfile* findProfile, QObject* parent )
 {
     const auto profiles = findProfile->find();
     for(const Profile &profile : profiles) {
+        updateCacheFile(profile.faviconSource(), profile.faviconCache());
         m_profileBookmarks << new ProfileBookmarks(profile);
         m_watcher->addFile(profile.path());
     }
@@ -114,6 +115,7 @@ void Chrome::prepare()
         for (const QJsonValue &folder : entries) {
             parseFolder(folder.toObject(), profileBookmarks);
         }
+        updateCacheFile(profile.faviconSource(), profile.faviconCache());
         profile.favicon()->prepare();
     }
 }

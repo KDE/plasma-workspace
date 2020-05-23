@@ -30,21 +30,13 @@
 #include <thread>
 #include <sstream>
 
-FetchSqlite::FetchSqlite(const QString &originalFilePath, const QString &copyTo, QObject *parent) :
-    QObject(parent), m_databaseFile(copyTo)
+FetchSqlite::FetchSqlite(const QString &databaseFile, QObject *parent) :
+    QObject(parent), m_databaseFile(databaseFile)
 {
-    QFile originalFile(originalFilePath);
-    QFile(copyTo).remove();
-    bool couldCopy = originalFile.copy(copyTo);
-    if(!couldCopy) {
-        //qDebug() << "error copying favicon database from " << originalFile.fileName() << " to " << copyTo;
-        //qDebug() << originalFile.errorString();
-    }
 }
 
 FetchSqlite::~FetchSqlite()
 {
-    QFile(m_databaseFile).remove();
 }
 
 void FetchSqlite::prepare()
@@ -93,6 +85,9 @@ QList<QVariantMap> FetchSqlite::query(const QString &sql, QMap<QString, QVariant
     QMutexLocker lock(&m_mutex);
 
     auto db = openDbConnection(m_databaseFile);
+    if  (!db.isValid()) {
+        return QList<QVariantMap>();
+    }
 
     //qDebug() << "query: " << sql;
     QSqlQuery query(db);

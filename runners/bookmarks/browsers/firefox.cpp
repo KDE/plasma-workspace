@@ -37,35 +37,37 @@ Firefox::Firefox(QObject *parent) :
     m_fetchsqlite_fav(nullptr)
 {
     reloadConfiguration();
+    m_dbCacheFile = QStandardPaths::writableLocation(QStandardPaths::CacheLocation)
+        + QStringLiteral("/bookmarkrunnerfirefoxdbfile.sqlite");
+    m_dbCacheFile_fav = QStandardPaths::writableLocation(QStandardPaths::CacheLocation)
+        + QStringLiteral("/bookmarkrunnerfirefoxfavdbfile.sqlite");
 }
 
 Firefox::~Firefox()
 {
-    if (!m_dbCacheFile.isEmpty()) {
+    // Delete the cached databases
+    if (!m_dbFile.isEmpty()) {
         QFile db_CacheFile(m_dbCacheFile);
         if (db_CacheFile.exists()) {
-            //qDebug() << "Cache file was removed: " << db_CacheFile.remove();
+            db_CacheFile.remove();
         }
     }
-    //qDebug() << "Deleted Firefox Bookmarks Browser";
+    if (!m_dbFile_fav.isEmpty()) {
+        QFile db_CacheFileFav(m_dbCacheFile_fav);
+        if (db_CacheFileFav.exists()) {
+            db_CacheFileFav.remove();
+        }
+    }
 }
 
 void Firefox::prepare()
 {
-    if (m_dbCacheFile.isEmpty()) {
-        m_dbCacheFile = QStandardPaths::writableLocation(QStandardPaths::CacheLocation)
-            + QStringLiteral("/bookmarkrunnerfirefoxdbfile.sqlite");
-    }
-    if (m_dbCacheFile_fav.isEmpty()) {
-        m_dbCacheFile_fav = QStandardPaths::writableLocation(QStandardPaths::CacheLocation)
-            + QStringLiteral("/bookmarkrunnerfirefoxfavdbfile.sqlite");
-    }
-    if (!m_dbFile.isEmpty()) {
-        m_fetchsqlite = new FetchSqlite(m_dbFile, m_dbCacheFile);
+    if (updateCacheFile(m_dbFile, m_dbCacheFile) != Error) {
+        m_fetchsqlite = new FetchSqlite(m_dbCacheFile);
         m_fetchsqlite->prepare();
     }
-    if (!m_dbFile_fav.isEmpty()) {
-        m_fetchsqlite_fav = new FetchSqlite(m_dbFile_fav, m_dbCacheFile_fav);
+    if (updateCacheFile(m_dbFile_fav, m_dbCacheFile_fav) != Error) {
+        m_fetchsqlite_fav = new FetchSqlite(m_dbCacheFile_fav);
         m_fetchsqlite_fav->prepare();
 
         delete m_favicon;

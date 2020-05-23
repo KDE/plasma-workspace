@@ -61,7 +61,7 @@ QList<Profile> FindChromeProfile::find()
   for(const QString &profile : profilesConfig.keys()) {
       const QString profilePath = QStringLiteral("%1/%2").arg(configDirectory, profile);
       const QString profileBookmarksPath = QStringLiteral("%1/%2").arg(profilePath, QStringLiteral("Bookmarks"));
-      profiles << Profile(profileBookmarksPath, FaviconFromBlob::chrome(profilePath, this));
+      profiles << Profile(profileBookmarksPath, profile, FaviconFromBlob::chrome(profilePath, this));
   }
 
   return profiles;
