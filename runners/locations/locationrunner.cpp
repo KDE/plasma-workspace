@@ -29,6 +29,7 @@
 #include <KProtocolInfo>
 #include <KUriFilter>
 #include <KIO/Global>
+#include <KShell>
 
 #include <kservicetypetrader.h>
 
@@ -100,7 +101,6 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
         }
 
         Plasma::QueryMatch match(this);
-        match.setText(i18n("Go to %1", url.toDisplayString()));
         match.setIconName(KProtocolInfo::icon(url.scheme()));
         match.setData(url.url());
 
@@ -113,7 +113,11 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
             }
         } else {
             //qDebug() << "protocol managed by browser" << url.protocol();
-            match.setText(i18n("Go to %1", url.toDisplayString()));
+            if (url.scheme() == QStringLiteral("file")) {
+                match.setText(i18n("Open %1", KShell::tildeCollapse(url.path())));
+            } else {
+                match.setText(i18n("Go to %1", url.toDisplayString()));
+            }
         }
 
         if (type == Plasma::RunnerContext::UnknownType) {
