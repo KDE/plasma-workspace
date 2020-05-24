@@ -309,7 +309,7 @@ Item {
 
             PropertyChanges {
                 target: plasmoid
-                icon: albumArt ? albumArt : "media-playback-playing"
+                icon: "media-playback-playing"
                 toolTipMainText: track
                 toolTipSubText: artist ? i18nc("by Artist (player name)", "by %1 (%2)", artist, identity) : identity
             }
@@ -320,7 +320,7 @@ Item {
 
             PropertyChanges {
                 target: plasmoid
-                icon: albumArt ? albumArt : "media-playback-paused"
+                icon: "media-playback-paused"
                 toolTipMainText: track
                 toolTipSubText: artist ? i18nc("by Artist (paused, player name)", "by %1 (paused, %2)", artist, identity) : i18nc("Paused (player name)", "Paused (%1)", identity)
             }
