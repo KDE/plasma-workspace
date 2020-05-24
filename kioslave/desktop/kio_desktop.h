@@ -36,6 +36,11 @@ protected:
     void listDir(const QUrl &url) override;
     void prepareUDSEntry(KIO::UDSEntry &entry, bool listing=false) const override;
     void rename(const QUrl &, const QUrl &, KIO::JobFlags flags) override;
+
+    void virtual_hook(int id, void *data) override;
+
+private:
+    void fileSystemFreeSpace(const QUrl &url);
 };
 
 #endif
