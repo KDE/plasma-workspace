@@ -153,9 +153,7 @@ PlasmoidModel::PlasmoidModel(QObject *parent) : BaseModel(parent)
         }
 
         QString name = info.name();
-        const QString dbusactivation =
-                info.rawData().value(QStringLiteral("X-Plasma-DBusActivationService")).toString();
-
+        const QString dbusactivation = info.value(QStringLiteral("X-Plasma-DBusActivationService"));
         if (!dbusactivation.isEmpty()) {
             name += i18n(" (Automatic load)");
         }
@@ -192,18 +190,14 @@ void PlasmoidModel::addApplet(Plasma::Applet *applet)
     }
 
     if (!dataItem) {
-        dataItem = new QStandardItem();
+        QString name = pluginMetaData.name();
+        const QString dbusactivation = pluginMetaData.value(QStringLiteral("X-Plasma-DBusActivationService"));
+        if (!dbusactivation.isEmpty()) {
+            name += i18n(" (Automatic load)");
+        }
+        dataItem = new QStandardItem(QIcon::fromTheme(pluginMetaData.iconName()), name);
         appendRow(dataItem);
     }
-
-    dataItem->setData(applet->title(), Qt::DisplayRole);
-    connect(applet, &Plasma::Applet::titleChanged, this, [dataItem] (const QString &title) {
-        dataItem->setData(title, static_cast<int>(Qt::DisplayRole));
-    });
-    dataItem->setData(QIcon::fromTheme(applet->icon()), Qt::DecorationRole);
-    connect(applet, &Plasma::Applet::iconChanged, this, [dataItem] (const QString &icon) {
-        dataItem->setData(QIcon::fromTheme(icon), Qt::DecorationRole);
-    });
 
     dataItem->setData(pluginMetaData.pluginId(), static_cast<int>(BaseModel::BaseRole::ItemId));
     dataItem->setData(plasmoidCategoryForMetadata(pluginMetaData), static_cast<int>(BaseModel::BaseRole::Category));
