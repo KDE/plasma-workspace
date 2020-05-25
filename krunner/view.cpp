@@ -176,6 +176,15 @@ bool View::event(QEvent *event)
     if (setState) {
         KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
     }
+    if (KWindowSystem::isPlatformWayland() && event->type() == QEvent::Expose && !static_cast<QExposeEvent*>(event)->region().isNull()) {
+        auto surface = KWayland::Client::Surface::fromWindow(this);
+        auto shellSurface = KWayland::Client::PlasmaShellSurface::get(surface);
+        if (shellSurface && isVisible()) {
+            shellSurface->setPanelBehavior(KWayland::Client::PlasmaShellSurface::PanelBehavior::WindowsGoBelow);
+            shellSurface->setPanelTakesFocus(true);
+            shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
+        }
+    }
     return retval;
 }
 
