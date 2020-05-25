@@ -22,10 +22,9 @@
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KDirNotify>
-#include <KLocalizedString>
 #include <KDiskFreeSpaceInfo>
-#include <KIO/StatJob>
 #include <KIO/UDSEntry>
+#include <KLocalizedString>
 
 #include <QCoreApplication>
 #include <QFile>
