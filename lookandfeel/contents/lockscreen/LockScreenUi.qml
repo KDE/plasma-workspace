@@ -28,6 +28,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.private.sessions 2.0
 import "../components"
 
+import org.kde.kirigami 2.8 as Kirigami
+
 PlasmaCore.ColorScope {
 
     id: lockScreenUi
@@ -169,6 +171,46 @@ PlasmaCore.ColorScope {
             }
         }
 
+//         Kirigami.OverlaySheet {
+//             id: powerManagementWarningSheet
+// 
+//             property string title: titleLabel.text
+//             property alias description: descriptionLabel.text
+// 
+//             // TODO: needed?
+// //             topPadding: 0
+// //             leftPadding: 0
+// //             rightPadding: 0
+// //             bottomPadding: 0
+// 
+//             header: Kirigami.Heading {
+//                 id: titleLabel
+//             }
+// 
+//             PlasmaComponents.Label {
+//                 id: descriptionLabel
+//             }
+// 
+//             footer: RowLayout {
+//                 PlasmaComponents.Button {
+//                     text: i18nc("@action:button", "Proceed")
+//                     iconName: "dialog-ok"
+//                     onClicked: {
+//                         console.Warn("Proceeded")
+//                         powerManagementWarningSheet.sheetOpen = false
+//                     }
+//                 }
+//                 PlasmaComponents.Button {
+//                     text: i18nc("@action:button", "Cancel")
+//                     iconName: "dialog-cancel"
+//                     onClicked: {
+//                         console.Warn("Canceled")
+//                         powerManagementWarningSheet.sheetOpen = false
+//                     }
+//                 }
+//             }
+//         }
+
         WallpaperFader {
             anchors.fill: parent
             state: lockScreenRoot.uiVisible ? "on" : "off"
@@ -177,7 +219,6 @@ PlasmaCore.ColorScope {
             footer: footer
             clock: clock
         }
-
         DropShadow {
             id: clockShadow
             anchors.fill: clock
@@ -224,6 +265,7 @@ PlasmaCore.ColorScope {
                 left: parent.left
                 right: parent.right
             }
+
             height: lockScreenRoot.height + units.gridUnit * 3
             focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
 
@@ -258,7 +300,55 @@ PlasmaCore.ColorScope {
                     authenticator.tryUnlock(password)
                 }
 
+                function performPowerManagementAction (action) {
+                    if (action == 0) {
+                        console.warn("Sleeping")
+//                         powerManagementWarningSheet.title = i18n("Confirm sleep")
+//                         powerManagementWarningSheet.description = i18n("If you put the system to sleep, any currently operating processes may behave unexpectedly.")
+//                         powerManagementWarningSheet.sheetOpen = true;
+//                         sessionManagement.suspend();
+                    } else if (action == 1) {
+                        console.warn("Restarting")
+//                         powerManagementWarningSheet.title = i18n("Confirm restart")
+//                         powerManagementWarningSheet.description = i18n("If you restart the system, any currently logged in users will lose unsaved work.")
+//                         powerManagementWarningSheet.sheetOpen = true;
+//                         sessionManagement.requestReboot(0 /* ConfirmationMode::Skip */);
+                    } else if (action == 2) {
+                        console.warn("Shutting down")
+//                         powerManagementWarningSheet.title = i18n("Confirm shut down")
+//                         powerManagementWarningSheet.description = i18n("If you shut down the system, any currently logged in users will lose unsaved work.")
+//                         powerManagementWarningSheet.sheetOpen = true;
+//                         sessionManagement.requestShutdown(0 /* ConfirmationMode::Skip */);
+                    } else {
+                        console.warn("Um, you did something wrong.");
+                    }
+                }
+
                 actionItems: [
+                    ActionButton {
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Sleep")
+                        iconSource: "system-suspend"
+                        onClicked: mainBlock.performPowerManagementAction(0)
+                        visible: sessionManagement.canSleep
+                        //Button gets cut off on smaller displays without this.
+                        anchors.verticalCenter: parent.top
+                    },
+                    ActionButton {
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
+                        iconSource: "system-reboot"
+                        onClicked: mainBlock.performPowerManagementAction(1)
+                        visible: sessionManagement.canReboot
+                        //Button gets cut off on smaller displays without this.
+                        anchors.verticalCenter: parent.top
+                    },
+                    ActionButton {
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
+                        iconSource: "system-shutdown"
+                        onClicked: mainBlock.performPowerManagementAction(2)
+                        visible: sessionManagement.canShutdown
+                        //Button gets cut off on smaller displays without this.
+                        anchors.verticalCenter: parent.top
+                    },
                     ActionButton {
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
                         iconSource: "system-switch-user"
@@ -276,9 +366,7 @@ PlasmaCore.ColorScope {
                         }
                         visible: sessionsModel.canStartNewSession && sessionsModel.canSwitchUser
                         //Button gets cut off on smaller displays without this.
-                        anchors{
-                            verticalCenter: parent.top
-                        }
+                        anchors.verticalCenter: parent.top
                     }
                 ]
 
@@ -481,9 +569,7 @@ PlasmaCore.ColorScope {
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Back")
                         onClicked: mainStack.pop()
                         //Button gets cut off on smaller displays without this.
-                        anchors{
-                            verticalCenter: parent.top
-                        }
+                        anchors.verticalCenter: parent.top
                     }
                 ]
             }
