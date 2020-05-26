@@ -1,5 +1,7 @@
+
+
 /***************************************************************************
- *   Copyright 2013 by Sebastian Kügler <sebas@kde.org>                    *
+ *   Copyright (C) 2020 Konrad Materka <materka@gmail.com>                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -16,20 +18,21 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
+import QtQuick 2.14
+import QtQuick.Controls 2.14 as QtControls
+import QtQuick.Layouts 1.14 as QtLayouts
+import org.kde.kirigami 2.13 as Kirigami
 
-import QtQuick 2.0
+Kirigami.FormLayout {
 
-import org.kde.plasma.configuration 2.0
+    property alias cfg_iconSize: iconSizeComboBox.currentIndex
 
-ConfigModel {
-    ConfigCategory {
-         name: i18n("General")
-         icon: "plasma"
-         source: "ConfigGeneral.qml"
+    QtControls.ComboBox {
+        id: iconSizeComboBox
+
+        Kirigami.FormData.label: i18n("Maximum icon size:")
+
+        model: [i18n("Very Small"), i18n("Small"), i18n("Medium"), i18n("Large"), i18n("Huge"), i18n("Enormous")]
     }
-    ConfigCategory {
-         name: i18n("Entries")
-         icon: "preferences-desktop-notification"
-         source: "ConfigEntries.qml"
-    }
+
 }

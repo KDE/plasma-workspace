@@ -157,8 +157,8 @@ MouseArea {
             interactive: false //disable features we don't need
             flow: vertical ? GridView.LeftToRight : GridView.TopToBottom
 
-            cellHeight: Math.min(root.itemSize + units.smallSpacing, root.height)
-            cellWidth: Math.min(root.itemSize + units.smallSpacing, root.width)
+            cellHeight: root.itemSize + units.smallSpacing
+            cellWidth: root.itemSize + units.smallSpacing
 
             readonly property int columns: !vertical ? Math.ceil(count / rows)
                                            : Math.max(1, Math.floor(root.width / cellWidth))

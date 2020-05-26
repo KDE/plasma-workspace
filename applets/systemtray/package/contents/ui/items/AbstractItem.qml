@@ -129,7 +129,7 @@ PlasmaCore.ToolTipArea {
         Item {
             id: iconContainer
             anchors.verticalCenter: parent.verticalCenter
-            width: Math.min(abstractItem.width, abstractItem.height)
+            width: inVisibleLayout ? root.itemSize : hiddenLayout.iconItemHeight
             height: width
             property alias inHiddenLayout: abstractItem.inHiddenLayout
             property alias inVisibleLayout: abstractItem.inVisibleLayout
