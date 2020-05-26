@@ -444,12 +444,14 @@ SystemTrayModel *SystemTray::systemTrayModel()
         connect(this, &SystemTray::appletAdded, currentPlasmoidsModel, &PlasmoidModel::addApplet);
         connect(this, &SystemTray::appletRemoved, currentPlasmoidsModel, &PlasmoidModel::removeApplet);
         connect(this, &SystemTray::configurationChanged, currentPlasmoidsModel, &PlasmoidModel::onConfigurationChanged);
+        currentPlasmoidsModel->onConfigurationChanged(this->config());
         for (auto applet : applets()) {
             currentPlasmoidsModel->addApplet(applet);
         }
 
         m_statusNotifierModel = new StatusNotifierModel(m_systemTrayModel);
         connect(this, &SystemTray::configurationChanged, m_statusNotifierModel, &StatusNotifierModel::onConfigurationChanged);
+        m_statusNotifierModel->onConfigurationChanged(this->config());
 
         m_systemTrayModel->addSourceModel(currentPlasmoidsModel);
         m_systemTrayModel->addSourceModel(m_statusNotifierModel);
