@@ -167,8 +167,7 @@ void Firefox::reloadConfiguration()
         qCWarning(RUNNER_BOOKMARKS) << "SQLITE driver isn't available";
         return;
     }
-    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General"));
-    KConfigGroup grp = config;
+    KConfigGroup grp(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General"));
     /* This allows the user to specify a profile database */
     m_dbFile = grp.readEntry("dbfile", QString());
     if (m_dbFile.isEmpty() || !QFile::exists(m_dbFile)) {
@@ -177,15 +176,20 @@ void Firefox::reloadConfiguration()
                                KConfig::SimpleConfig);
         QStringList profilesList = firefoxProfile.groupList();
         profilesList = profilesList.filter(QRegularExpression(QStringLiteral("^Profile\\d+$")));
-        int size = profilesList.size();
 
         QString profilePath;
-        if (size == 1) {
+        if (profilesList.size() == 1) {
             // There is only 1 profile so we select it
             KConfigGroup fGrp = firefoxProfile.group(profilesList.first());
             profilePath = fGrp.readEntry("Path");
         } else {
-            // There are multiple profiles, find the default one
+            const QStringList installConfig = firefoxProfile.groupList().filter(QRegularExpression("^Install.*"));
+            // The profile with Default=1 is not always the default profile, see BUG: 418526
+            // If there is only one Install* group it contains the default profile
+            if (installConfig.size() == 1) {
+                profilePath = firefoxProfile.group(installConfig.first()).readEntry("Default");
+            } else {
+                // There are multiple profiles, find the default one
                 for (const QString &profileName: qAsConst(profilesList)) {
                     KConfigGroup fGrp = firefoxProfile.group(profileName);
                     if (fGrp.readEntry<int>("Default", 0)) {
@@ -193,6 +197,7 @@ void Firefox::reloadConfiguration()
                         break;
                     }
                 }
+            }
         }
 
         if (profilePath.isEmpty()) {
