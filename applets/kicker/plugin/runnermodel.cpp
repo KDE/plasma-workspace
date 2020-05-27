@@ -320,6 +320,7 @@ void RunnerModel::clear()
 {
     if (m_runnerManager) {
         m_runnerManager->reset();
+        m_runnerManager->matchSessionComplete();
     }
 
     if (m_models.isEmpty()) {
