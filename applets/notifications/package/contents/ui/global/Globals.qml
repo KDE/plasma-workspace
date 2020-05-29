@@ -154,7 +154,7 @@ QtObject {
             const visualParentWindow = visualParent.Window.window;
             if (visualParentWindow) {
                 const left = Math.max(rect.left, visualParentWindow.x);
-                const right = Math.max(rect.right, visualParentWindow.x + visualParentWindow.width);
+                const right = Math.min(rect.right, visualParentWindow.x + visualParentWindow.width);
                 rect = Qt.rect(left, rect.y, right - left, rect.height);
             }
         }
