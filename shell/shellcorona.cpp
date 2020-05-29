@@ -1398,6 +1398,7 @@ void ShellCorona::createWaitingPanels()
             connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
         }
         connect(panel, &QWindow::visibleChanged, this, &Plasma::Corona::availableScreenRectChanged);
+        connect(panel, &QWindow::screenChanged, this, &Plasma::Corona::availableScreenRectChanged);
         connect(panel, &PanelView::locationChanged, this, &Plasma::Corona::availableScreenRectChanged);
         connect(panel, &PanelView::visibilityModeChanged, this, &Plasma::Corona::availableScreenRectChanged);
         connect(panel, &PanelView::thicknessChanged, this, &Plasma::Corona::availableScreenRectChanged);
