@@ -87,6 +87,12 @@ RemoteActions SearchRunner::Actions()
 
 RemoteMatches SearchRunner::Match(const QString& searchTerm)
 {
+    // Do not try to show results for queries starting with =
+    // this should trigger the calculator, but the AdvancedQueryParser::parse method
+    // in baloo interpreted it as an operator, BUG 345134
+    if (searchTerm.startsWith(QLatin1Char('='))) {
+        return RemoteMatches();
+    }
     setDelayedReply(true);
 
     if (m_lastRequest.type() != QDBusMessage::InvalidMessage) {

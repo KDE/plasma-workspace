@@ -179,11 +179,12 @@ QtObject {
     // The raw width of the popup's content item, the Dialog itself adds some margins
     // Make it wider when on the top or the bottom center, since there's more horizontal
     // space available without looking weird
-    property int popupWidth: popupLocation & Qt.AlignHCenter ? units.gridUnit * 28 : units.gridUnit * 18
+    // On mobile however we don't really want to have larger notifications
+    property int popupWidth: (popupLocation & Qt.AlignHCenter) && !Kirigami.Settings.isMobile ? units.gridUnit * 28 : units.gridUnit * 18
     property int popupEdgeDistance: units.largeSpacing * 2
     // Reduce spacing between popups when centered so the stack doesn't intrude into the
     // view as much
-    property int popupSpacing: popupLocation & Qt.AlignHCenter ? units.smallSpacing : units.largeSpacing
+    property int popupSpacing: (popupLocation & Qt.AlignHCenter) && !Kirigami.Settings.isMobile ? units.smallSpacing : units.largeSpacing
 
     // How much vertical screen real estate the notification popups may consume
     readonly property real popupMaximumScreenFill: 0.75
