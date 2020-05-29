@@ -28,7 +28,7 @@ include(KDEClangFormat)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner Notifications NotifyConfig Su NewStuff Wallet
                     IdleTime Declarative I18n KCMUtils TextWidgets KDELibs4Support Crash GlobalAccel
-                    DBusAddons Wayland CoreAddons People ActivitiesStats)
+                    DBusAddons Wayland CoreAddons People ActivitiesStats Activities)
 find_package(KDED CONFIG REQUIRED)
 
 find_package(KF5NetworkManagerQt ${KF5_MIN_VERSION})
@@ -77,11 +77,6 @@ find_package(Phonon4Qt5 4.6.60 REQUIRED NO_MODULE)
 set_package_properties(Phonon4Qt5 PROPERTIES
    DESCRIPTION "Qt-based audio library"
    TYPE REQUIRED)
-find_package(KF5Activities ${KF5_MIN_VERSION})
-set_package_properties(KF5Activities PROPERTIES DESCRIPTION "management of Plasma activities"
-                       TYPE OPTIONAL
-                       PURPOSE "Needed by activity related plasmoids."
-                      )
 
 find_package(ZLIB)
 set_package_properties(ZLIB PROPERTIES DESCRIPTION "Support for gzip compressed files and data streams"

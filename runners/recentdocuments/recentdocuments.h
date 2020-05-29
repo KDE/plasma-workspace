@@ -37,12 +37,6 @@ class RecentDocuments : public Plasma::AbstractRunner {
     private Q_SLOTS:
         QList<QAction *> actionsForMatch(const Plasma::QueryMatch &match) override;
         QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;
-
-    private Q_SLOTS:
-        void loadRecentDocuments();
-
-    private:
-        QStringList m_recentdocuments;
 };
 
 

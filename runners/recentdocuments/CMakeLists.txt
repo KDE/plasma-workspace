@@ -10,6 +10,7 @@ target_link_libraries(krunner_recentdocuments
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::I18n
+    KF5::ActivitiesStats
     KF5::Runner
 )
 

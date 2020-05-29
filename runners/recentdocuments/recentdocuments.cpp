@@ -23,13 +23,18 @@
 #include <QDir>
 #include <QMimeData>
 
-#include <KDesktopFile>
-#include <KConfigGroup>
-#include <KDirWatch>
 #include <KRun>
-#include <KRecentDocument>
 #include <KLocalizedString>
 #include <KIO/OpenFileManagerWindowJob>
+#include <KIO/Job>
+#include <KShell>
+
+#include <KActivities/Stats/ResultModel>
+#include <KActivities/Stats/Terms>
+#include <KActivities/Stats/Query>
+
+using namespace KActivities::Stats;
+using namespace KActivities::Stats::Terms;
 
 K_EXPORT_PLASMA_RUNNER(recentdocuments, RecentDocuments)
 
@@ -40,13 +45,7 @@ RecentDocuments::RecentDocuments(QObject *parent, const QVariantList& args)
 {
     Q_UNUSED(args);
     setObjectName( QStringLiteral("Recent Documents" ));
-    loadRecentDocuments();
-    // listen for changes to the list of recent documents
-    KDirWatch *recentDocWatch = new KDirWatch(this);
-    recentDocWatch->addDir(KRecentDocument::recentDocumentDirectory(), KDirWatch::WatchFiles);
-    connect(recentDocWatch, &KDirWatch::created, this, &RecentDocuments::loadRecentDocuments);
-    connect(recentDocWatch, &KDirWatch::deleted, this, &RecentDocuments::loadRecentDocuments);
-    connect(recentDocWatch, &KDirWatch::dirty, this, &RecentDocuments::loadRecentDocuments);
+
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:.")));
 
     addAction(s_openParentDirId, QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"));
@@ -56,15 +55,9 @@ RecentDocuments::~RecentDocuments()
 {
 }
 
-void RecentDocuments::loadRecentDocuments()
-{
-    m_recentdocuments = KRecentDocument::recentDocuments();
-}
-
-
 void RecentDocuments::match(Plasma::RunnerContext &context)
 {
-    if (m_recentdocuments.isEmpty()) {
+    if (!context.isValid()) {
         return;
     }
 
@@ -73,46 +66,45 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         return;
     }
 
-    const QString homePath = QDir::homePath();
+    auto query = UsedResources
+            | Activity::current()
+            | Order::RecentlyUsedFirst
+            | Agent::any()
+            // we search only on file name, as KActivity does not support better options
+            | Url("/*/" + term + "*")
+            | Limit(30);
 
-    // avoid duplicates
-    QSet<QUrl> knownUrls;
+    const auto result = new ResultModel(query);
 
-    for (const QString &document : qAsConst(m_recentdocuments)) {
-        if (!context.isValid()) {
-            return;
-        }
+    for (int i = 0; i < result->rowCount(); i++) {
+        const auto index = result->index(i, 0);
 
-        if (document.contains(term, Qt::CaseInsensitive)) {
-            KDesktopFile config(document);
+        const auto url = QUrl::fromUserInput(result->data(index, ResultModel::ResourceRole).toString(),
+                                             QString(),
+                                             // We can assume local file thanks to the request Url
+                                             QUrl::AssumeLocalFile);
+        const auto name = result->data(index, ResultModel::TitleRole).toString();
 
-            const QUrl url = QUrl(config.readUrl());
-            if (knownUrls.contains(url)) {
-                continue;
-            }
+        Plasma::QueryMatch match(this);
 
-            knownUrls.insert(url);
-
-            Plasma::QueryMatch match(this);
+        auto relevance = 0.5;
+        match.setType(Plasma::QueryMatch::PossibleMatch);
+        if (url.fileName() == term) {
+            relevance = 1.0;
+            match.setType(Plasma::QueryMatch::ExactMatch);
+        } else if(url.fileName().startsWith(term)) {
+            relevance = 0.9;
             match.setType(Plasma::QueryMatch::PossibleMatch);
-            match.setRelevance(1.0);
-            match.setIconName(config.readIcon());
-            match.setData(url);
-            match.setText(config.readName());
-
-            QUrl folderUrl = url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash);
-            if (folderUrl.isLocalFile()) {
-                QString folderPath = folderUrl.toLocalFile();
-                if (folderPath.startsWith(homePath)) {
-                    folderPath.replace(0, homePath.length(), QStringLiteral("~"));
-                }
-                match.setSubtext(folderPath);
-            } else {
-                match.setSubtext(folderUrl.toDisplayString());
-            }
-
-            context.addMatch(match);
         }
+        match.setIconName(KIO::iconNameForUrl(url));
+        match.setRelevance(relevance);
+        match.setData(QVariant(url));
+        match.setText(name);
+
+        QString destUrlString = KShell::tildeCollapse(url.adjusted(QUrl::RemoveFilename).path());
+        match.setSubtext(destUrlString);
+
+        context.addMatch(match);
     }
 }
 
@@ -120,14 +112,14 @@ void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::Qu
 {
     Q_UNUSED(context)
 
-    const QString url = match.data().toString();
+    const QUrl url = match.data().toUrl();
 
-    if (match.selectedAction() && match.selectedAction() == action(s_openParentDirId)) {
-        KIO::highlightInFileManager({QUrl(url)});
+    if (match.selectedAction() == action(s_openParentDirId)) {
+        KIO::highlightInFileManager({url});
         return;
     }
 
-    auto run = new KRun(QUrl(url), nullptr);
+    auto run = new KRun(url, nullptr);
     run->setRunExecutables(false);
 }
 
@@ -137,7 +129,9 @@ QList<QAction *> RecentDocuments::actionsForMatch(const Plasma::QueryMatch &matc
 
     QList<QAction *> actions;
 
-    if (QUrl(match.data().toString()).isLocalFile()) {
+    const QUrl url = match.data().toUrl();
+
+    if (url.isLocalFile()) {
         actions << action(s_openParentDirId);
     }
 
@@ -147,7 +141,7 @@ QList<QAction *> RecentDocuments::actionsForMatch(const Plasma::QueryMatch &matc
 QMimeData * RecentDocuments::mimeDataForMatch(const Plasma::QueryMatch& match)
 {
     QMimeData *result = new QMimeData();
-    result->setText(match.data().toString());
+    result->setUrls({match.data().toUrl()});
     return result;
 }
 
