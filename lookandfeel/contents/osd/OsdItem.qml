@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.0
+import QtQuick 2.14
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -49,6 +49,27 @@ RowLayout {
         from: 0
         to: 100
         value: Number(rootItem.osdValue)
+    }
+
+    // Get the width of a three-digit number so we can size the label
+    // to the maximum width to avoid the progress bad resizing itself
+    TextMetrics {
+        id: widestLabelSize
+        text: i18n("100%")
+        font: percentageLabel.font
+    }
+
+    // Numerical display of progress bar value
+    PlasmaExtra.Heading {
+        id: percentageLabel
+        Layout.fillHeight: true
+        Layout.preferredWidth: widestLabelSize.width
+        Layout.rightMargin: units.smallSpacing
+        level: 3
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
+        text: i18nc("Percentage value", "%1%", progressBar.value)
+        visible: rootItem.showingProgress
     }
 
     PlasmaExtra.Heading {
