@@ -34,7 +34,7 @@ PlasmaComponents.ListItem {
     signal itemSelected(string uuid)
     signal remove(string uuid)
     signal edit(string uuid)
-    signal barcode(string uuid)
+    signal barcode(string text)
     signal action(string uuid)
 
     // the 1.6 comes from ToolButton's default height

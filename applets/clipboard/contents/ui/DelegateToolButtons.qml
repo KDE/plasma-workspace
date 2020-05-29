@@ -36,7 +36,8 @@ Row {
         id: barcodeToolButton
         iconSource: "view-barcode-qr"
         tooltip: i18n("Show barcode")
-        onClicked: menuItem.barcode(UuidRole)
+        visible: supportsBarcodes
+        onClicked: menuItem.barcode(DisplayRole)
     }
     PlasmaComponents.ToolButton {
         iconSource: "document-edit"

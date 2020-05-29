@@ -30,7 +30,7 @@ PlasmaExtras.ScrollArea {
     signal itemSelected(string uuid)
     signal remove(string uuid)
     signal edit(string uuid)
-    signal barcode(string uuid)
+    signal barcode(string text)
     signal action(string uuid)
 
     ListView {
@@ -51,7 +51,7 @@ PlasmaExtras.ScrollArea {
             onItemSelected: menu.itemSelected(uuid)
             onRemove: menu.remove(uuid)
             onEdit: menu.edit(uuid)
-            onBarcode: menu.barcode(uuid)
+            onBarcode: menu.barcode(text)
             onAction: menu.action(uuid)
         }
 

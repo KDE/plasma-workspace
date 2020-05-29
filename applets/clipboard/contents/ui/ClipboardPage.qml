@@ -102,7 +102,16 @@ ColumnLayout {
             filterRole: "DisplayRole"
             filterRegExp: filter.text
         }
-        supportsBarcodes: clipboardSource.data["clipboard"]["supportsBarcodes"]
+        supportsBarcodes: {
+            try {
+                let prisonTest = Qt.createQmlObject("import QtQml 2.0; import org.kde.prison 1.0; QtObject {}", this);
+                prisonTest.destroy();
+            } catch (e) {
+                console.log("Barcodes not supported:", e);
+                return false;
+            }
+            return true;
+        }
         Layout.fillWidth: true
         Layout.fillHeight: true
         Layout.topMargin: units.smallSpacing
@@ -110,8 +119,9 @@ ColumnLayout {
         onRemove: clipboardSource.service(uuid, "remove")
         onEdit: clipboardSource.edit(uuid)
         onBarcode: {
-            var page = stack.push(barcodePage);
-            page.show(uuid);
+            stack.push(barcodePage, {
+                text: text
+            });
         }
         onAction: {
             clipboardSource.service(uuid, "action")

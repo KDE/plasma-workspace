@@ -23,29 +23,12 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import org.kde.prison 1.0 as Prison
+
 ColumnLayout {
     id: barcodeView
 
-    property var uuid: ""
-    property int barcodeType: 0
-
-    function show(uuid) {
-        barcodeView.uuid = uuid;
-        barcodePreview.image = undefined;
-        barcodePreview.busy = true;
-        var service = clipboardSource.serviceForSource(uuid)
-        var operation = service.operationDescription("barcode");
-        operation.width = barcodePreview.width;
-        operation.height = barcodePreview.height;
-        operation.barcodeType = barcodeView.barcodeType;
-        var serviceJob = service.startOperationCall(operation);
-        serviceJob.finished.connect(function (job) {
-            if (!job.error) {
-                barcodePreview.image = job.result;
-                barcodePreview.busy = false;
-            }
-        });
-    }
+    property alias text: barcodeItem.content
 
     property var header: PlasmaExtras.PlasmoidHeading {
         RowLayout {
@@ -56,6 +39,12 @@ ColumnLayout {
                 text: i18n("Return to Clipboard")
                 onClicked: stack.pop()
             }
+
+            Component {
+                id: menuItemComponent
+                PlasmaComponents.MenuItem { }
+            }
+
             PlasmaComponents.ContextMenu {
                 id: menu
                 visualParent: configureButton
@@ -66,40 +55,27 @@ ColumnLayout {
                     }
                 }
 
-                function change(type) {
-                    barcodeView.barcodeType = type;
-                    barcodeView.show(barcodeView.uuid);
-                }
-
-                PlasmaComponents.MenuItem {
-                    text: i18n("QR Code")
-                    checkable: true
-                    checked: barcodeView.barcodeType == 0
-                    onClicked: menu.change(0)
-                }
-                PlasmaComponents.MenuItem {
-                    text: i18n("Data Matrix")
-                    checkable: true
-                    checked: barcodeView.barcodeType == 1
-                    onClicked: menu.change(1)
-                }
-                PlasmaComponents.MenuItem {
-                    text: i18nc("Aztec barcode", "Aztec")
-                    checkable: true
-                    checked: barcodeView.barcodeType == 4
-                    onClicked: menu.change(4)
-                }
-                PlasmaComponents.MenuItem {
-                    text: i18n("Code 39")
-                    checkable: true
-                    checked: barcodeView.barcodeType == 2
-                    onClicked: menu.change(2)
-                }
-                PlasmaComponents.MenuItem {
-                    text: i18n("Code 93")
-                    checkable: true
-                    checked: barcodeView.barcodeType == 3
-                    onClicked: menu.change(3)
+                Component.onCompleted: {
+                    [
+                        {text: i18n("QR Code"), type: Prison.Barcode.QRCode},
+                        {text: i18n("Data Matrix"), type: Prison.Barcode.DataMatrix},
+                        {text: i18nc("Aztec barcode", "Aztec"), type: Prison.Barcode.Aztec},
+                        {text: i18n("Code 39"), type: Prison.Barcode.Code39},
+                        {text: i18n("Code 93"), type: Prison.Barcode.Code93},
+                        {text: i18n("Code 128"), type: Prison.Barcode.Code128}
+                    ].forEach((item) => {
+                        let menuItem = menuItemComponent.createObject(menu, {
+                            text: item.text,
+                            checkable: true,
+                            checked: Qt.binding(() => {
+                                return barcodeItem.barcodeType === item.type;
+                            })
+                        });
+                        menuItem.clicked.connect(() => {
+                            barcodeItem.barcodeType = item.type;
+                        });
+                        menu.addMenuItem(menuItem);
+                    });
                 }
             }
             PlasmaComponents.ToolButton {
@@ -112,23 +88,36 @@ ColumnLayout {
         }
     }
 
-    QImageItem {
-        id: barcodePreview
-        property alias busy: busyIndicator.visible
-        fillMode: QImageItem.PreserveAspectFit
-        Layout.fillWidth: true
-        Layout.fillHeight: true
+    Item {
+        Layout.fillWidth: parent
+        Layout.fillHeight: parent
         Layout.topMargin: units.smallSpacing
-        onWidthChanged: barcodeView.show(barcodeView.uuid)
-        onHeightChanged: barcodeView.show(barcodeView.uuid)
-        PlasmaComponents.BusyIndicator {
-            id: busyIndicator
-            anchors.centerIn: parent
+
+        Prison.Barcode {
+            id: barcodeItem
+            readonly property bool valid: implicitWidth > 0 && implicitHeight > 0 && implicitWidth <= width && implicitHeight <= height
+            anchors.fill: parent
+            barcodeType: Prison.Barcode.QRCode
+            // Cannot set visible to false as we need it to re-render when changing its size
+            opacity: valid ? 1 : 0
         }
+
         PlasmaComponents.Label {
-            anchors.centerIn: parent
+            anchors.fill: parent
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
             text: i18n("Creating barcode failed")
-            visible: !barcodePreview.busy && barcodePreview.null
+            wrapMode: Text.WordWrap
+            visible: barcodeItem.implicitWidth === 0 && barcodeItem.implicitHeight === 0
+        }
+
+        PlasmaComponents.Label {
+            anchors.fill: parent
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            text: i18n("The barcode is too large to be displayed")
+            wrapMode: Text.WordWrap
+            visible: barcodeItem.implicitWidth > barcodeItem.width || barcodeItem.implicitHeight > barcodeItem.height
         }
     }
 }
