@@ -93,15 +93,15 @@ void InstallerRunner::match(Plasma::RunnerContext &context)
             if (service->exec().isEmpty())
                 return false;
 
-            if (service->desktopEntryName() == componentId)
+            if (service->desktopEntryName().compare(componentId, Qt::CaseInsensitive) == 0)
                 return true;
 
             const auto idWithoutDesktop = QString(componentId).remove(".desktop");
-            if (service->desktopEntryName() == idWithoutDesktop)
+            if (service->desktopEntryName().compare(idWithoutDesktop, Qt::CaseInsensitive) == 0)
                 return true;
 
             const auto renamedFrom = service->property("X-Flatpak-RenamedFrom").toStringList();
-            if (renamedFrom.contains(componentId) || renamedFrom.contains(idWithoutDesktop))
+            if (renamedFrom.contains(componentId, Qt::CaseInsensitive) || renamedFrom.contains(idWithoutDesktop, Qt::CaseInsensitive))
                 return true;
 
             return false;
