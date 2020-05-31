@@ -313,6 +313,7 @@ void DesktopView::screenGeometryChanged()
     if (m_shellSurface) {
         m_shellSurface->setPosition(geo.topLeft());
     }
+    emit geometryChanged();
 }
 
 

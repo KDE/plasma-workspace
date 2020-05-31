@@ -96,6 +96,7 @@ Q_SIGNALS:
     void stayBehindChanged();
     void windowTypeChanged();
     void candidateContainmentsChanged();
+    void geometryChanged();
 
 private:
     void coronaPackageChanged(const KPackage::Package &package);
