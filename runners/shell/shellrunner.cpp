@@ -33,7 +33,9 @@ ShellRunner::ShellRunner(QObject *parent, const QVariantList &args)
 {
     setObjectName(QStringLiteral("Command"));
     setPriority(AbstractRunner::HighestPriority);
-    m_enabled = KAuthorized::authorize(QStringLiteral("run_command")) && KAuthorized::authorize(QStringLiteral("shell_access"));
+    // If the runner is not authorized we can suspend it
+    bool enabled = KAuthorized::authorize(QStringLiteral("run_command")) && KAuthorized::authorize(QStringLiteral("shell_access"));
+    suspendMatching(!enabled);
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File |
                     Plasma::RunnerContext::NetworkLocation | Plasma::RunnerContext::UnknownType |
                     Plasma::RunnerContext::Help);
@@ -51,10 +53,6 @@ ShellRunner::~ShellRunner()
 
 void ShellRunner::match(Plasma::RunnerContext &context)
 {
-    if (!context.isValid() || !m_enabled) {
-        return;
-    }
-
     const QString term = context.query();
     Plasma::QueryMatch match(this);
     match.setId(term);

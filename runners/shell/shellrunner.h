@@ -38,7 +38,6 @@ class ShellRunner : public Plasma::AbstractRunner
         QList<QAction *> actionsForMatch(const Plasma::QueryMatch &match) override;
 
     private:
-        bool m_enabled;
         QList<QAction *> m_actionList;
         QIcon m_matchIcon;
 };
