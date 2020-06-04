@@ -221,7 +221,10 @@ ColumnLayout {
                 } else if (ctrl && event.key === Qt.Key_K) {
                     decrementCurrentIndex()
                 } else if (event.text !== "") {
-                    queryField.text += event.text;
+                    // This prevents unprintable control characters from being inserted
+                    if (!/[\x00-\x1F\x7F]/.test(event.text)) {
+                        queryField.text += event.text;
+                    }
                     queryField.focus = true;
                 }
             }
