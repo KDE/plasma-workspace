@@ -19,7 +19,6 @@ endif()
 if(NOT WIN32)
  add_subdirectory(powerdevil)
  add_subdirectory(sessions)
- add_subdirectory(windows)
  add_subdirectory(kill)
 endif()
 #
