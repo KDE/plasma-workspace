@@ -37,8 +37,6 @@ class ActivityRunner : public Plasma::AbstractRunner
         void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
     private Q_SLOTS:
-        void prep();
-        void down();
         void serviceStatusChanged(KActivities::Consumer::ServiceStatus status);
 
     private:
@@ -48,7 +46,6 @@ class ActivityRunner : public Plasma::AbstractRunner
         KActivities::Consumer *m_consumer;
         const QString m_keywordi18n;
         const QString m_keyword;
-        bool m_enabled;
 };
 
 #endif

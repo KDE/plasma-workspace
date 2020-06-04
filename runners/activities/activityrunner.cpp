@@ -26,52 +26,25 @@ K_EXPORT_PLASMA_RUNNER(activities, ActivityRunner)
 
 ActivityRunner::ActivityRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args),
-      m_activities(nullptr),
-      m_consumer(nullptr),
+      m_activities(new KActivities::Controller(this)),
+      m_consumer(new KActivities::Consumer(this)),
       m_keywordi18n(i18nc("KRunner keyword", "activity")),
-      m_keyword(QStringLiteral("activity")),
-      m_enabled(false)
+      m_keyword(QStringLiteral("activity"))
 {
     setObjectName(QStringLiteral("Activities"));
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File |
                     Plasma::RunnerContext::NetworkLocation | Plasma::RunnerContext::Help);
-
-    connect(this, &Plasma::AbstractRunner::prepare, this, &ActivityRunner::prep);
-    connect(this, &Plasma::AbstractRunner::teardown, this, &ActivityRunner::down);
+    setDefaultSyntax(Plasma::RunnerSyntax(m_keywordi18n, i18n("Lists all activities currently available to be run.")));
+    addSyntax(Plasma::RunnerSyntax(i18nc("KRunner keyword", "activity :q:"), i18n("Switches to activity :q:.")));
 
     qRegisterMetaType<KActivities::Consumer::ServiceStatus>();
-
-    serviceStatusChanged(KActivities::Consumer::Running);
-}
-
-void ActivityRunner::prep()
-{
-    if (!m_activities) {
-        m_activities = new KActivities::Controller(this);
-        m_consumer = new KActivities::Consumer(this);
-        connect(m_consumer, &KActivities::Consumer::serviceStatusChanged,
-                this, &ActivityRunner::serviceStatusChanged);
-        serviceStatusChanged(m_activities->serviceStatus());
-    }
-}
-
-void ActivityRunner::down()
-{
+    connect(m_consumer, &KActivities::Consumer::serviceStatusChanged, this, &ActivityRunner::serviceStatusChanged);
+    serviceStatusChanged(m_activities->serviceStatus());
 }
 
 void ActivityRunner::serviceStatusChanged(KActivities::Consumer::ServiceStatus status)
 {
-    const bool active = status != KActivities::Consumer::NotRunning;
-    if (m_enabled == active) {
-        return;
-    }
-
-    m_enabled = active;
-    QList<Plasma::RunnerSyntax> syntaxes;
-    if (m_enabled) {
-        setDefaultSyntax(Plasma::RunnerSyntax(m_keywordi18n, i18n("Lists all activities currently available to be run.")));
-        addSyntax(Plasma::RunnerSyntax(i18nc("KRunner keyword", "activity :q:"), i18n("Switches to activity :q:.")));
-    }
+    suspendMatching(status == KActivities::Consumer::NotRunning);
 }
 
 ActivityRunner::~ActivityRunner()
@@ -80,10 +53,6 @@ ActivityRunner::~ActivityRunner()
 
 void ActivityRunner::match(Plasma::RunnerContext &context)
 {
-    if (!m_enabled) {
-        return;
-    }
-
     const QString term = context.query().trimmed();
     bool list = false;
     QString name;
@@ -166,10 +135,6 @@ void ActivityRunner::addMatch(const KActivities::Info &activity, QList<Plasma::Q
 void ActivityRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     Q_UNUSED(context)
-
-    if (!m_enabled || !m_activities) {
-        return;
-    }
 
     m_activities->setCurrentActivity(match.data().toString());
 }
