@@ -62,7 +62,7 @@ SessionBackend::SessionBackend()
 
 bool SessionBackend::confirmLogout() const
 {
-    return m_kserverConfig->group("General").readEntry("ConfirmLogout", true);
+    return m_kserverConfig->group("General").readEntry("confirmLogout", true);
 }
 
 bool SessionBackend::canSwitchUser() const
