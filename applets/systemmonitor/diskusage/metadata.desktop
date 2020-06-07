@@ -2,6 +2,7 @@
 Name=Disk Usage
 Name[ca]=Ús de disc
 Name[cs]=Zaplnění Disku
+Name[en_GB]=Disk Usage
 Name[es]=Uso del disco duro
 Name[et]=Kettakasutus
 Name[fr]=Utilisation des disques
@@ -17,6 +18,7 @@ Name[x-test]=xxDisk Usagexx
 Name[zh_TW]=磁碟用量
 Comment=System monitor Widget that shows the usage of the root partition
 Comment[ca]=Estri del monitor del sistema que mostra l'ús de la partició arrel
+Comment[en_GB]=System monitor Widget that shows the usage of the root partition
 Comment[es]=Elemento gráfico del monitor del sistema que muestra el uso de la partición raíz
 Comment[et]=Süsteemi jälgija vidin, mis näitab juurpartitsiooni kasutust
 Comment[fr]=Composant graphique de surveillance du système, affichant l'utilisation de la partition « Système »

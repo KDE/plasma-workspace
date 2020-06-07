@@ -2,6 +2,7 @@
 Name=Network speed
 Name[ca]=Velocitat de xarxa
 Name[cs]=Rychlost sítě
+Name[en_GB]=Network speed
 Name[es]=Velocidad de la red
 Name[et]=Võrgukiirus
 Name[fr]=Débit du réseau
@@ -17,6 +18,7 @@ Name[x-test]=xxNetwork speedxx
 Name[zh_TW]=網路速度
 Comment=System monitor Widget that shows the download and upload data rate
 Comment[ca]=Estri del monitor del sistema que mostra la velocitat de baixada i pujada de les dades
+Comment[en_GB]=System monitor Widget that shows the download and upload data rate
 Comment[es]=Elemento gráfico del monitor del sistema que muestra las velocidades de subida y bajada de datos
 Comment[et]=Süsteemi jälgija vidin, mis näitab alla- ja üleslaadimise kiirust
 Comment[fr]=Composant graphique de surveillance du système, affichant le débit de transfert montant /descendant de données
