@@ -78,6 +78,7 @@ Name[ko]=클립보드 내용에서 명령 실행하기
 Name[lt]=Vykdyti komandas su iškarpinės turiniu
 Name[nl]=Commando uitvoeren op klembordinhoud
 Name[nn]=Køyr kommando på innhaldet på utklippstavla
+Name[pa]=ਕਲਿੱਪਬੋਡ ਸਮੱਗਰੀ ਉੱਤੇ ਕਮਾਂਡ ਚਲਾਓ
 Name[pl]=Wykonaj polecenie na zawartości schowka
 Name[pt]=Executar o comando no conteúdo da área de transferência
 Name[pt_BR]=Executar comando no conteúdo da área de transferência
