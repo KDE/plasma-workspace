@@ -102,7 +102,7 @@ SessionManagementScreen {
 
             Connections {
                 target: sddm
-                onLoginFailed: {
+                function onLoginFailed() {
                     passwordBox.selectAll()
                     passwordBox.forceActiveFocus()
                 }
