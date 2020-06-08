@@ -89,7 +89,7 @@ SessionManagementScreen {
                 target: root
                 onClearPassword: {
                     passwordBox.forceActiveFocus()
-                    passwordBox.selectAll()
+                    passwordBox.text = "";
                 }
             }
         }

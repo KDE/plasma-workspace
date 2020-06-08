@@ -64,7 +64,7 @@ PlasmaCore.ColorScope {
     Connections {
         target: sessionManagement
         onAboutToSuspend: {
-            mainBlock.mainPasswordBox.text = "";
+            root.clearPassword();
         }
     }
 
@@ -121,7 +121,7 @@ PlasmaCore.ColorScope {
                 inputPanel.showHide();
             }
             if (!uiVisible) {
-                mainBlock.mainPasswordBox.text = "";
+                root.clearPassword();
             }
         }
         Keys.onPressed: {
