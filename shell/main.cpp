@@ -49,9 +49,8 @@
 
 int main(int argc, char *argv[])
 {
-    if (qEnvironmentVariableIsSet("PLASMA_ENABLE_QML_DEBUG")) {
-        QQmlDebuggingEnabler debugger;
-    }
+    QQmlDebuggingEnabler debugger(false); // The parameter here supresses the warning
+
     //Plasma scales itself to font DPI
     //on X, where we don't have compositor scaling, this generally works fine.
     //also there are bugs on older Qt, especially when it comes to fractional scaling
