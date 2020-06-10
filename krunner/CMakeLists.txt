@@ -16,6 +16,7 @@ add_executable(krunner ${krunner_SRCS})
 target_link_libraries(krunner
     Qt5::Quick
     Qt5::Widgets
+    KF5::KIOWidgets
     KF5::Declarative
     KF5::I18n
     KF5::PlasmaQuick

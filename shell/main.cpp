@@ -49,7 +49,9 @@
 
 int main(int argc, char *argv[])
 {
-    QQmlDebuggingEnabler debugger;
+    if (qEnvironmentVariableIsSet("PLASMA_ENABLE_QML_DEBUG")) {
+        QQmlDebuggingEnabler debugger;
+    }
     //Plasma scales itself to font DPI
     //on X, where we don't have compositor scaling, this generally works fine.
     //also there are bugs on older Qt, especially when it comes to fractional scaling

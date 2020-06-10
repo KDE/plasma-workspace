@@ -33,6 +33,8 @@
 #include <KWindowEffects>
 #include <KLocalizedString>
 #include <KCrash>
+#include <KService>
+#include <KIO/CommandLauncherJob>
 
 #include <kdeclarative/qmlobject.h>
 
@@ -341,7 +343,18 @@ void View::switchUser()
 
 void View::displayConfiguration()
 {
-    QProcess::startDetached(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("plasmasearch"));
+    const QString systemSettings = QStringLiteral("systemsettings");
+    const QStringList kcmToOpen = QStringList(QStringLiteral("kcm_plasmasearch"));
+    KIO::CommandLauncherJob *job = nullptr;
+
+    if (KService::serviceByDesktopName(systemSettings)) {
+        job = new KIO::CommandLauncherJob(QStringLiteral("systemsettings5"), kcmToOpen);
+        job->setDesktopName(systemSettings);
+    } else {
+        job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell5"), kcmToOpen);
+    }
+
+    job->start();
 }
 
 bool View::canConfigure() const
