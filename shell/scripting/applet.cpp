@@ -18,6 +18,7 @@
  */
 
 #include "applet.h"
+#include "scriptengine.h"
 
 #include <QAction>
 
@@ -41,6 +42,7 @@ public:
     {
     }
 
+    QPointer<ScriptEngine> engine = nullptr;
     KConfigGroup configGroup;
     QStringList configGroupPath;
     KConfigGroup globalConfigGroup;
@@ -49,10 +51,11 @@ public:
     bool inWallpaperConfig : 1;
 };
 
-Applet::Applet(QObject *parent)
+Applet::Applet(ScriptEngine *parent)
     : QObject(parent),
       d(new Applet::Private)
 {
+    d->engine = parent;
 }
 
 Applet::~Applet()
@@ -266,6 +269,11 @@ bool Applet::locked() const
 Plasma::Applet *Applet::applet() const
 {
     return nullptr;
+}
+
+ScriptEngine *Applet::engine() const
+{
+    return d->engine;
 }
 
 }

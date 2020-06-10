@@ -40,7 +40,6 @@ namespace WorkspaceScripting
 class Containment::Private
 {
 public:
-    QPointer<ScriptEngine> engine;
     QPointer<Plasma::Containment> containment;
     ShellCorona *corona;
     QString oldWallpaperPlugin;
@@ -56,7 +55,6 @@ Containment::Containment(Plasma::Containment *containment, ScriptEngine *engine)
     : Applet(engine),
       d(new Containment::Private)
 {
-    d->engine = engine;
     d->containment = containment;
     d->corona = qobject_cast<ShellCorona *>(containment->corona());
 
@@ -157,7 +155,7 @@ QList<int> Containment::widgetIds() const
 QJSValue Containment::widgetById(const QJSValue &paramId) const
 {
     if (!paramId.isNumber()) {
-        return d->engine->newError(i18n("widgetById requires an id"));
+        return engine()->newError(i18n("widgetById requires an id"));
     }
 
     const uint id = paramId.toInt();
@@ -165,7 +163,7 @@ QJSValue Containment::widgetById(const QJSValue &paramId) const
     if (d->containment) {
         foreach (Plasma::Applet *w, d->containment.data()->applets()) {
             if (w->id() == id) {
-                return d->engine->wrap(w);
+                return engine()->wrap(w);
             }
         }
     }
@@ -176,7 +174,7 @@ QJSValue Containment::widgetById(const QJSValue &paramId) const
 QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qreal h, const QVariantList &args)
 {
     if (!v.isString() && !v.isQObject()) {
-        return d->engine->newError(i18n("addWidget requires a name of a widget or a widget object"));
+        return engine()->newError(i18n("addWidget requires a name of a widget or a widget object"));
     }
 
     if (!d->containment) {
@@ -197,9 +195,9 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
                 QMetaObject::invokeMethod(containmentItem , "createApplet", Qt::DirectConnection, Q_RETURN_ARG(Plasma::Applet *, applet), Q_ARG(QString, v.toString()), Q_ARG(QVariantList, args), Q_ARG(QRectF, geometry));
             }
             if (applet) {
-                return d->engine->wrap(applet);
+                return engine()->wrap(applet);
             }
-            return d->engine->newError(i18n("Could not create the %1 widget!", v.toString()));
+            return engine()->newError(i18n("Could not create the %1 widget!", v.toString()));
         }
 
         //Case in which either:
@@ -208,10 +206,10 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
         applet = d->containment.data()->createApplet(v.toString(), args);
 
         if (applet) {
-            return d->engine->wrap(applet);
+            return engine()->wrap(applet);
         }
 
-        return d->engine->newError(i18n("Could not create the %1 widget!", v.toString()));
+        return engine()->newError(i18n("Could not create the %1 widget!", v.toString()));
     } else if (Widget *widget = qobject_cast<Widget*>(v.toQObject())) {
         applet = widget->applet();
         d->containment.data()->addApplet(applet);
@@ -227,12 +225,12 @@ QJSValue Containment::widgets(const QString &widgetType) const
         return QJSValue();
     }
 
-    QJSValue widgets = d->engine->newArray();
+    QJSValue widgets = engine()->newArray();
     int count = 0;
 
     foreach (Plasma::Applet *widget, d->containment.data()->applets()) {
         if (widgetType.isEmpty() || widget->pluginMetaData().pluginId() == widgetType) {
-            widgets.setProperty(count, d->engine->wrap(widget));
+            widgets.setProperty(count, engine()->wrap(widget));
             ++count;
         }
     }

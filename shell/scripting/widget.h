@@ -52,7 +52,7 @@ class Widget : public Applet
     Q_PROPERTY(QString userBackgroundHints WRITE setUserBackgroundHints READ userBackgroundHints)
 
 public:
-    explicit Widget(Plasma::Applet *applet, QObject *parent = nullptr);
+    explicit Widget(Plasma::Applet *applet, ScriptEngine *parent = nullptr);
     ~Widget() override;
 
     uint id() const;

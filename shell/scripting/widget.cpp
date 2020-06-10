@@ -18,9 +18,11 @@
  */
 
 #include "widget.h"
+#include "scriptengine.h"
 
 #include <QAction>
 #include <QMetaEnum>
+#include <QQuickItem>
 
 #include <Plasma/Applet>
 #include <Plasma/Containment>
@@ -39,7 +41,7 @@ public:
     QPointer<Plasma::Applet> applet;
 };
 
-Widget::Widget(Plasma::Applet *applet, QObject *parent)
+Widget::Widget(Plasma::Applet *applet, ScriptEngine *parent)
     : Applet(parent),
       d(new Widget::Private)
 {
@@ -151,10 +153,18 @@ void Widget::setIndex(int index)
 
 QJSValue Widget::geometry() const
 {
-    /*if (d->applet) {
-        return d->applet.data()->geometry();
+    QQuickItem *appletItem = d->applet.data()->property("_plasma_graphicObject").value<QQuickItem *>();
+
+    if (appletItem) {
+        QJSValue rect = engine()->newObject();
+        const QPointF pos = appletItem->mapToScene(QPointF(0,0));
+        rect.setProperty(QStringLiteral("x"), pos.x());
+        rect.setProperty(QStringLiteral("y"), pos.y());
+        rect.setProperty(QStringLiteral("width"), appletItem->width());
+        rect.setProperty(QStringLiteral("height"), appletItem->height());
+        return rect;
     }
-*/
+
     return QJSValue();
 }
 

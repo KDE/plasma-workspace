@@ -35,13 +35,15 @@ namespace Plasma
 namespace WorkspaceScripting
 {
 
+class ScriptEngine;
+
 class Applet : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QStringList currentConfigGroup WRITE setCurrentConfigGroup READ currentConfigGroup)
 
 public:
-    explicit Applet(QObject *parent = nullptr);
+    explicit Applet(ScriptEngine *parent);
     ~Applet() override;
 
     QStringList configKeys() const;
@@ -62,6 +64,8 @@ public:
     bool locked() const;
 
     virtual Plasma::Applet *applet() const;
+
+    ScriptEngine *engine() const;
 
 protected:
     void reloadConfigIfNeeded();
