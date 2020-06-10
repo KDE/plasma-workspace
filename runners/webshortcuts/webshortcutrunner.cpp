@@ -26,7 +26,6 @@
 #include <KMimeTypeTrader>
 #include <KIO/CommandLauncherJob>
 #include <KShell>
-#include <QDebug>
 
 WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
     : Plasma::AbstractRunner(parent, args),
@@ -100,7 +99,7 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
                 return;
             }
             privateBrowserCommand = privateBrowserArgs.takeFirst();
-            const QString actionText = containsPrivate ? i18n("Search in private window") : i18n("Search in incognoto window");
+            const QString actionText = containsPrivate ? i18n("Search in private window") : i18n("Search in incognito window");
             const QIcon icon = QIcon::fromTheme(QStringLiteral("view-private"), QIcon::fromTheme(QStringLiteral("view-hidden")));
             addAction(QStringLiteral("privateSearch"), icon, actionText);
             return;
