@@ -1,5 +1,6 @@
 /*
  *   Copyright 2016 Marco Martin <mart@kde.org>
+ *   Copyright 2020 Nate Graham <nate@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -25,19 +26,25 @@ import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
-    //set width/height to avoid an useless Dialog resize
-    width: Layout.minimumWidth
-    height: Layout.minimumHeight
-    Layout.minimumWidth: units.gridUnit * 24
-    Layout.minimumHeight: units.gridUnit * 21
-    Layout.preferredWidth: Layout.minimumWidth
-    Layout.preferredHeight: Layout.minimumHeight
-    Layout.maximumWidth: Layout.minimumWidth
-    Layout.maximumHeight: Layout.minimumHeight
+    id: popup
+    //set width/height to avoid useless Dialog resize
+    readonly property int defaultWidth: units.gridUnit * 24
+    readonly property int defaultHeight: units.gridUnit * 21
+
+    width: defaultWidth
+    Layout.minimumWidth: defaultWidth
+    Layout.preferredWidth: defaultWidth
+    Layout.maximumWidth: defaultWidth
+
+    height: defaultHeight
+    Layout.minimumHeight: defaultHeight
+    Layout.preferredHeight: defaultHeight
+    Layout.maximumHeight: defaultHeight
 
     property alias activeApplet: container.activeApplet
     property alias hiddenLayout: hiddenItemsView.layout
 
+    // Header
     PlasmaExtras.PlasmoidHeading {
         id: plasmoidHeading
         anchors {
@@ -48,78 +55,35 @@ Item {
         height: trayHeading.height + bottomPadding + container.headingHeight
     }
 
-    PlasmaExtras.PlasmoidHeading {
-        id: plasmoidFooter
-        location: PlasmaExtras.PlasmoidHeading.Location.Footer
-        anchors {
-            bottom: parent.bottom
-            left: parent.left
-            right: parent.right
-        }
-        visible: container.appletHasFooter
-        height: container.footerHeight
-    }
-
+    // Main content layout
     ColumnLayout {
         id: expandedRepresentation
         anchors.fill: parent
+        // TODO: remove this so the scrollview fully touches the header;
+        // add top padding internally
         spacing: plasmoidHeading.bottomPadding
 
+        // Header content layout
         RowLayout {
             id: trayHeading
 
-            PlasmaExtras.Heading {
-                id: heading
-                Layout.fillWidth: true
-                level: 1
-                Layout.leftMargin: {
-                    //Menu mode
-                    if (!activeApplet && hiddenItemsView.visible && !LayoutMirroring.enabled) {
-                        return units.smallSpacing;
-
-                    //applet open, sidebar
-                    } else if (activeApplet && hiddenItemsView.visible && !LayoutMirroring.enabled) {
-                        return hiddenItemsView.width + units.smallSpacing + dialog.margins.left;
-
-                    //applet open, no sidebar
-                    } else {
-                        return units.smallSpacing;
-                    }
-                }
-                Layout.rightMargin: {
-                    //Menu mode
-                    if (!activeApplet && hiddenItemsView.visible && LayoutMirroring.enabled) {
-                        return units.smallSpacing;
-
-                    //applet open, sidebar
-                    } else if (activeApplet && hiddenItemsView.visible && LayoutMirroring.enabled) {
-                        return hiddenItemsView.width + units.largeSpacing;
-
-                    //applet open, no sidebar
-                    } else {
-                        return 0;
-                    }
-                }
-
+            PlasmaComponents.ToolButton {
+                id: backButton
                 visible: activeApplet
-                text: activeApplet ? activeApplet.title : ""
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: {
-                        if (activeApplet) {
-                            activeApplet.expanded = false;
-                            dialog.visible = true;
-                        }
+                icon.name: "go-previous"
+                onClicked: {
+                    if (activeApplet) {
+                        activeApplet.expanded = false;
+                        dialog.visible = true;
                     }
                 }
             }
 
             PlasmaExtras.Heading {
-                id: noAppletHeading
-                visible: !activeApplet
                 Layout.fillWidth: true
+
                 level: 1
-                text: i18n("Status and Notifications")
+                text: activeApplet ? activeApplet.title : i18n("Status and Notifications")
             }
 
             PlasmaComponents.ToolButton {
@@ -134,40 +98,43 @@ Item {
             }
         }
 
-        RowLayout {
-            spacing: 0 // must be 0 so that the separator is as close to the indicator as possible
-
-            HiddenItemsView {
-                id: hiddenItemsView
-                Layout.fillWidth: !activeApplet
-                Layout.fillHeight: true
-                Layout.topMargin: container.headingHeight
-            }
-
-            PlasmaCore.SvgItem {
-                visible: hiddenItemsView.visible && activeApplet
-                Layout.fillHeight: true
-                Layout.preferredWidth: lineSvg.elementSize("vertical-line").width
-                Layout.topMargin: container.headingHeight
-                elementId: "vertical-line"
-                svg: PlasmaCore.Svg {
-                    id: lineSvg;
-                    imagePath: "widgets/line"
-                }
-            }
-
-            PlasmoidPopupsContainer {
-                id: container
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                visible: activeApplet
-                // We need to add our own margins on the top and left (when the
-                // hidden items view is visible, at least) so it matches the
-                //  dialog's own margins and content is centered correctly
-                Layout.topMargin: mergeHeadings ? 0 : dialog.margins.top
-                Layout.leftMargin: hiddenItemsView.visible && activeApplet && !LayoutMirroring.enabled ? dialog.margins.left : 0
-                Layout.rightMargin: hiddenItemsView.visible && activeApplet && LayoutMirroring.enabled ? dialog.margins.right : 0
-            }
+        // Grid view of all available items
+        HiddenItemsView {
+            id: hiddenItemsView
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.topMargin: units.smallSpacing
+            visible: !activeApplet
         }
+
+        // Container for currently visible item
+        PlasmoidPopupsContainer {
+            id: container
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            visible: activeApplet
+            // We need to add our own margins on the top and left (when the
+            // hidden items view is visible, at least) so it matches the
+            //  dialog's own margins and content is centered correctly
+            Layout.topMargin: mergeHeadings ? 0 : dialog.margins.top
+            Layout.leftMargin: hiddenItemsView.visible && activeApplet && !LayoutMirroring.enabled ? dialog.margins.left : 0
+            Layout.rightMargin: hiddenItemsView.visible && activeApplet && LayoutMirroring.enabled ? dialog.margins.right : 0
+        }
+    }
+
+    // Footer
+    PlasmaExtras.PlasmoidHeading {
+        id: plasmoidFooter
+        location: PlasmaExtras.PlasmoidHeading.Location.Footer
+        anchors {
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+        }
+        visible: container.appletHasFooter
+        height: container.footerHeight
+        // So that it doesn't appear over the content view, which results in
+        // the footer controls being inaccessible
+        z: -9999
     }
 }

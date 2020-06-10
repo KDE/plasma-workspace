@@ -24,20 +24,11 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 PlasmaCore.FrameSvgItem {
     id: expandedItem
 
-    property Item visualParent
-    property Item target
     property int location
 
-    //! when the target is the root item we use the maximum thickness of the panel
-    x: plasmoid.formFactor === PlasmaCore.Types.Vertical && target === root ?
-           0 : Math.max(0, (target ? target.x : 0) + (visualParent ? visualParent.x : 0))
-    y: plasmoid.formFactor === PlasmaCore.Types.Horizontal && target === root ?
-           0 : Math.max(0, (target ? target.y : 0) + (visualParent ? visualParent.y : 0))
     z: -1 // always draw behind icons
-    width: plasmoid.formFactor === PlasmaCore.Types.Vertical && target === root ?
-               parent.width : Math.min(parent.width, target ? target.width : 0)
-    height: plasmoid.formFactor === PlasmaCore.Types.Horizontal && target === root ?
-                parent.height : Math.min(parent.height, target ? target.height : 0)
+    width: parent.width
+    height: parent.height
 
     imagePath: "widgets/tabbar"
     prefix: {
@@ -60,7 +51,7 @@ PlasmaCore.FrameSvgItem {
             }
             return prefix;
         }
-    opacity: target && dialog.visible ? 1 : 0
+    opacity: parent && dialog.visible ? 1 : 0
     Behavior on opacity {
         NumberAnimation {
             duration: units.longDuration
@@ -68,28 +59,28 @@ PlasmaCore.FrameSvgItem {
         }
     }
     Behavior on x {
-        enabled: target && expandedItem.opacity == 1
+        enabled: parent && expandedItem.opacity == 1
         NumberAnimation {
             duration: units.longDuration
             easing.type: Easing.InOutQuad
         }
     }
     Behavior on y {
-        enabled: target && expandedItem.opacity == 1
+        enabled: parent && expandedItem.opacity == 1
         NumberAnimation {
             duration: units.longDuration
             easing.type: Easing.InOutQuad
         }
     }
     Behavior on width {
-        enabled: target && expandedItem.opacity == 1
+        enabled: parent && expandedItem.opacity == 1
         NumberAnimation {
             duration: units.longDuration
             easing.type: Easing.InOutQuad
         }
     }
     Behavior on height {
-        enabled: target && expandedItem.opacity == 1
+        enabled: parent && expandedItem.opacity == 1
         NumberAnimation {
             duration: units.longDuration
             easing.type: Easing.InOutQuad

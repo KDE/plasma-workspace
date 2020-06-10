@@ -1,6 +1,7 @@
 /*
  *   Copyright 2016 Marco Martin <mart@kde.org>
  *   Copyright 2020 Konrad Materka <materka@gmail.com>
+ *   Copyright 2020 Nate Graham <nate@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -19,14 +20,15 @@
  */
 
 import QtQuick 2.2
+import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 PlasmaCore.ToolTipArea {
     id: abstractItem
 
-    height: inVisibleLayout ? visibleLayout.cellHeight : hiddenLayout.iconItemHeight
-    width: inVisibleLayout ? visibleLayout.cellWidth : hiddenLayout.width
+    height: inVisibleLayout ? visibleLayout.cellHeight : hiddenTasks.cellHeight
+    width: inVisibleLayout ? visibleLayout.cellWidth : hiddenTasks.cellWidth
 
     property var model: itemModel
 
@@ -123,21 +125,36 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    Row {
-        spacing: units.smallSpacing
-        anchors.horizontalCenter: inVisibleLayout ? parent.horizontalCenter : undefined
+    ColumnLayout {
+        anchors.fill: abstractItem
+        spacing: 0
+
         Item {
             id: iconContainer
-            anchors.verticalCenter: parent.verticalCenter
-            width: inVisibleLayout ? root.itemSize : hiddenLayout.iconItemHeight
-            height: width
-            property alias inHiddenLayout: abstractItem.inHiddenLayout
+
             property alias inVisibleLayout: abstractItem.inVisibleLayout
+            readonly property int size: abstractItem.inVisibleLayout ? root.itemSize : units.iconSizes.medium
+
+            Layout.alignment: Qt.AlignHCenter
+            implicitWidth: size
+            implicitHeight: size
+            Layout.topMargin: abstractItem.inHiddenLayout ? units.smallSpacing : 0
         }
         PlasmaComponents.Label {
             id: label
-            anchors.verticalCenter: parent.verticalCenter
+
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.bottomMargin: abstractItem.inHiddenLayout ? units.smallSpacing : 0
+
             visible: abstractItem.inHiddenLayout && !root.activeApplet
+
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
+            elide: Text.ElideRight
+            wrapMode: Text.Wrap
+            maximumLineCount: 3
+
             opacity: visible ? 1 : 0
             Behavior on opacity {
                 NumberAnimation {

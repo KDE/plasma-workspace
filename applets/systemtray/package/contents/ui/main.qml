@@ -96,7 +96,6 @@ MouseArea {
     CurrentItemHighLight {
         readonly property bool visibleAppletActivated: root.activeApplet && root.activeApplet.parent && root.activeApplet.parent.inVisibleLayout
         parent: visibleAppletActivated ? root.activeApplet.parent : root
-        target: visibleAppletActivated ? root.activeApplet.parent : root
         location: plasmoid.location
     }
 
