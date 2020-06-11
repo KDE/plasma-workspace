@@ -26,6 +26,8 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.quickcharts 1.0 as Charts
 
+import "global"
+
 MouseArea {
     id: compactRoot
 
@@ -40,6 +42,8 @@ MouseArea {
     Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
     Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
 
+    acceptedButtons: Qt.LeftButton | Qt.MiddleButton
+
     property int activeCount: 0
     property int unreadCount: 0
 
@@ -50,7 +54,13 @@ MouseArea {
 
     property bool wasExpanded: false
     onPressed: wasExpanded = plasmoid.expanded
-    onClicked: plasmoid.expanded = !wasExpanded
+    onClicked: {
+        if (mouse.button === Qt.MiddleButton) {
+            Globals.toggleDoNotDisturbMode();
+        } else {
+            plasmoid.expanded = !wasExpanded;
+        }
+    }
 
     PlasmaCore.Svg {
         id: notificationSvg

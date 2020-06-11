@@ -652,24 +652,26 @@ QtObject {
         value: globals.inhibited
     }
 
-    property Notifications.GlobalShortcuts shortcuts: Notifications.GlobalShortcuts {
-        onToggleDoNotDisturbTriggered: {
-            var oldInhibited = globals.inhibited;
-            if (oldInhibited) {
-                globals.revokeInhibitions();
-            } else {
-                // Effectively "in a year" is "until turned off"
-                var d = new Date();
-                d.setFullYear(d.getFullYear() + 1);
-                notificationSettings.notificationsInhibitedUntil = d;
-                notificationSettings.save();
-            }
-
-            checkInhibition();
-
-            if (globals.inhibited !== oldInhibited) {
-                showDoNotDisturbOsd(globals.inhibited);
-            }
+    function toggleDoNotDisturbMode() {
+        var oldInhibited = globals.inhibited;
+        if (oldInhibited) {
+            globals.revokeInhibitions();
+        } else {
+            // Effectively "in a year" is "until turned off"
+            var d = new Date();
+            d.setFullYear(d.getFullYear() + 1);
+            notificationSettings.notificationsInhibitedUntil = d;
+            notificationSettings.save();
         }
+
+        checkInhibition();
+
+        if (globals.inhibited !== oldInhibited) {
+            shortcuts.showDoNotDisturbOsd(globals.inhibited);
+        }
+    }
+
+    property Notifications.GlobalShortcuts shortcuts: Notifications.GlobalShortcuts {
+        onToggleDoNotDisturbTriggered: globals.toggleDoNotDisturbMode()
     }
 }
