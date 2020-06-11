@@ -28,6 +28,7 @@
 #include <QProcess>
 #include <QQmlPropertyMap>
 #include <QStandardPaths>
+#include <QFileInfo>
 #if HAVE_X11
 #include <QX11Info>
 #endif
@@ -91,7 +92,11 @@ bool AppEntry::isValid() const
 QIcon AppEntry::icon() const
 {
     if (m_icon.isNull()) {
-        m_icon = QIcon::fromTheme(m_service->icon(), QIcon::fromTheme(QStringLiteral("unknown")));
+        if (QFileInfo::exists(m_service->icon())) {
+            m_icon = QIcon(m_service->icon());
+        } else {
+            m_icon = QIcon::fromTheme(m_service->icon(), QIcon::fromTheme(QStringLiteral("unknown")));
+        }
     }
     return m_icon;
 }
