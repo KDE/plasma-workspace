@@ -497,6 +497,34 @@ void SystemTray::setAllowedPlasmoids(const QStringList &allowed)
 
 void SystemTray::initDBusActivatables()
 {
+    // Watch for new services
+    // We need to watch for all of new services here, since we want to "match" the names,
+    // not just compare them
+    // This makes mpris work, since it wants to match org.mpris.MediaPlayer2.dragonplayer
+    // against org.mpris.MediaPlayer2
+    // QDBusServiceWatcher is not capable for watching wildcard service right now
+    // See:
+    // https://bugreports.qt.io/browse/QTBUG-51683
+    // https://bugreports.qt.io/browse/QTBUG-33829
+    // This is fixed in Qt 5.15
+
+    // order of events has to be:
+    //  - create a match rule for new servies on DBus daemon
+    //  - start fetching a list of names
+    //  - ignore all changes that happen in the meantime
+    //  - handle the list of all names
+    connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged, this, [=](const QString &serviceName, const QString &oldOwner, const QString &newOwner) {
+        if (!m_dbusSessionServiceNamesFetched) {
+            return;
+        }
+        serviceOwnerChanged(serviceName, oldOwner, newOwner);
+    });
+    connect(QDBusConnection::systemBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged, this, [=](const QString &serviceName, const QString &oldOwner, const QString &newOwner) {
+        if (!m_dbusSystemServiceNamesFetched) {
+            return;
+        }
+        serviceOwnerChanged(serviceName, oldOwner, newOwner);
+    });
     /* Loading and unloading Plasmoids when dbus services come and go
      *
      * This works as follows:
@@ -508,20 +536,20 @@ void SystemTray::initDBusActivatables()
      */
     QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall(QStringLiteral("ListNames"));
     QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(async, this);
-    connect(callWatcher, &QDBusPendingCallWatcher::finished,
-            [=](QDBusPendingCallWatcher *callWatcher){
-                SystemTray::serviceNameFetchFinished(callWatcher, QDBusConnection::sessionBus());
-            });
+    connect(callWatcher, &QDBusPendingCallWatcher::finished, [=](QDBusPendingCallWatcher *callWatcher) {
+        serviceNameFetchFinished(callWatcher);
+        m_dbusSessionServiceNamesFetched = true;
+    });
 
     QDBusPendingCall systemAsync = QDBusConnection::systemBus().interface()->asyncCall(QStringLiteral("ListNames"));
     QDBusPendingCallWatcher *systemCallWatcher = new QDBusPendingCallWatcher(systemAsync, this);
-    connect(systemCallWatcher, &QDBusPendingCallWatcher::finished,
-            [=](QDBusPendingCallWatcher *callWatcher){
-                SystemTray::serviceNameFetchFinished(callWatcher, QDBusConnection::systemBus());
+    connect(systemCallWatcher, &QDBusPendingCallWatcher::finished, [=](QDBusPendingCallWatcher *callWatcher) {
+        serviceNameFetchFinished(callWatcher);
+        m_dbusSystemServiceNamesFetched = true;
     });
 }
 
-void SystemTray::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection)
+void SystemTray::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher)
 {
     QDBusPendingReply<QStringList> propsReply = *watcher;
     watcher->deleteLater();
@@ -534,17 +562,6 @@ void SystemTray::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, cons
             serviceRegistered(serviceName);
         }
     }
-
-    // Watch for new services
-    // We need to watch for all of new services here, since we want to "match" the names,
-    // not just compare them
-    // This makes mpris work, since it wants to match org.mpris.MediaPlayer2.dragonplayer
-    // against org.mpris.MediaPlayer2
-    // QDBusServiceWatcher is not capable for watching wildcard service right now
-    // See:
-    // https://bugreports.qt.io/browse/QTBUG-51683
-    // https://bugreports.qt.io/browse/QTBUG-33829
-    connect(connection.interface(), &QDBusConnectionInterface::serviceOwnerChanged, this, &SystemTray::serviceOwnerChanged);
 }
 
 void SystemTray::serviceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner)

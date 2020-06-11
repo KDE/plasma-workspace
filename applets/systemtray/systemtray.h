@@ -100,7 +100,7 @@ public:
     Q_INVOKABLE Plasma::Service *serviceForSource(const QString &source);
 
 private Q_SLOTS:
-    void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher, const QDBusConnection &connection);
+    void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher);
     void serviceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner);
 
 private:
@@ -126,6 +126,8 @@ private:
     SortedSystemTrayModel *m_configSystemTrayModel;
     QHash<QString, int> m_knownPlugins;
     QHash<QString, int> m_dbusServiceCounts;
+    bool m_dbusSessionServiceNamesFetched = false;
+    bool m_dbusSystemServiceNamesFetched = false;
 };
 
 #endif
