@@ -126,6 +126,7 @@ PlasmaCore.ToolTipArea {
     Row {
         spacing: units.smallSpacing
         anchors.horizontalCenter: inVisibleLayout ? parent.horizontalCenter : undefined
+        anchors.verticalCenter: parent.verticalCenter
         Item {
             id: iconContainer
             anchors.verticalCenter: parent.verticalCenter
