@@ -28,6 +28,7 @@
 #include <KLocalizedString>
 #include <KRunner/RunnerManager>
 #include <KRun>
+#include <QDebug>
 
 #include <Plasma/Plasma>
 
@@ -173,6 +174,8 @@ int RunnerMatchesModel::rowCount(const QModelIndex &parent) const
 
 bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
+            qWarning() <<"RunnerMatchesModel::trigger"<<row<<actionId<<argument;
+
     if (row < 0 || row >= m_matches.count()) {
         return false;
     }
