@@ -221,7 +221,7 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
             return AppEntry::nameFromService(service, AppEntry::NameOnly);
         }
     } else if (role == Qt::DecorationRole) {
-        return QIcon::fromTheme(service->icon(), QIcon::fromTheme(QStringLiteral("unknown")));
+        return service->icon();
     } else if (role == Kicker::DescriptionRole) {
         return service->comment();
     } else if (role == Kicker::GroupRole) {
