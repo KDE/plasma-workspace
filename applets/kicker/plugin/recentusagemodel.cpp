@@ -413,6 +413,14 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         }
 
         return false;
+    } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
+        const QString storageId = sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole)
+                                .toString().section(QLatin1Char(':'), 1);
+        KService::Ptr service = KService::serviceByStorageId(storageId);
+        service->setExec(argument.toString());
+        KIO::ApplicationLauncherJob *job = new KIO::ApplicationLauncherJob(service);
+        job->start();
+        return true;
     } else if (withinBounds) {
         const QString &resource = resourceAt(row);
 
