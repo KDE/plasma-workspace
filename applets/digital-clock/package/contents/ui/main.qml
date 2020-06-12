@@ -100,7 +100,7 @@ Item {
     property var allTimezones
     Connections {
         target: plasmoid.configuration
-        onSelectedTimeZonesChanged: root.initTimezones();
+        function onSelectedTimeZonesChanged() { root.initTimezones(); }
     }
 
     PlasmaCore.DataSource {

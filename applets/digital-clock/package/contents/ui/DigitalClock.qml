@@ -75,7 +75,7 @@ Item {
 
     Connections {
         target: plasmoid
-        onContextualActionsAboutToShow: {
+        function onContextualActionsAboutToShow() {
             ClipboardMenu.secondsIncluded = main.showSeconds;
             ClipboardMenu.currentDate = main.currentTime;
         }
@@ -83,7 +83,7 @@ Item {
 
     Connections {
         target: plasmoid.configuration
-        onSelectedTimeZonesChanged: {
+        function onSelectedTimeZonesChanged() {
             // If the currently selected timezone was removed,
             // default to the first one in the list
             var lastSelectedTimezone = plasmoid.configuration.lastSelectedTimezone;
