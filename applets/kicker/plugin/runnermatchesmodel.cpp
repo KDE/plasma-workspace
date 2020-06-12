@@ -185,7 +185,7 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
 
     QObject *appletInterface = static_cast<RunnerModel *>(parent())->appletInterface();
 
-    const KService::Ptr service = KService::serviceByStorageId(match.data().toString());
+    const KService::Ptr service = KService::serviceByStorageId(match.data().toUrl().toString(QUrl::RemoveScheme));
 
     if (Kicker::handleAddLauncherAction(actionId, appletInterface, service)) {
         return true;
