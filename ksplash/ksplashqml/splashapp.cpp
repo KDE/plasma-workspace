@@ -29,6 +29,7 @@
 #include <QDebug>
 #include <QCommandLineParser>
 
+#include <KQuickAddons/QtQuickSettings>
 #include <KWindowSystem>
 #include <KWayland/Client/connection_thread.h>
 #include <KWayland/Client/registry.h>
@@ -53,6 +54,8 @@ SplashApp::SplashApp(int &argc, char ** argv)
       m_testing(false),
       m_window(false)
 {
+    KQuickAddons::QtQuickSettings::init();
+
     QCommandLineParser parser;
     parser.addOption(QCommandLineOption(QStringLiteral("test"), QStringLiteral("Run in test mode")));
     parser.addOption(QCommandLineOption(QStringLiteral("window"), QStringLiteral("Run in windowed mode")));
