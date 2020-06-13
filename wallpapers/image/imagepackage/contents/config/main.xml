@@ -24,16 +24,23 @@
     </entry>
     <entry name="SlidePaths" type="StringList">
       <label>Paths used for the slideshow</label>
-      <default></default>
+      <default>preferred://wallpaperlocations</default>
     </entry>
     <entry name="SlideInterval" type="int">
-      <label>Interval between slides</label>
-      <default>10</default>
+      <label>Interval between slides (s)</label>
+      <default>900</default>
     </entry>
     <entry name="TransitionAnimationDuration" type="int">
       <label>Fade Transition Animation  (ms)</label>
       <default>1000</default>
     </entry>
+    <entry name="UncheckedSlides" type="StringList">
+      <label>Unchecked Slides</label>
+      <default></default>
+    </entry>
+    <entry name="SlideshowMode" type="int">
+        <label>Ordering mode for the slideshow</label>
+        <default>0</default>
+    </entry>
   </group>
-
 </kcfg>
