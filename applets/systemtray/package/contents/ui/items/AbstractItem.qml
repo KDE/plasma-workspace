@@ -136,8 +136,8 @@ PlasmaCore.ToolTipArea {
             readonly property int size: abstractItem.inVisibleLayout ? root.itemSize : units.iconSizes.medium
 
             Layout.alignment: Qt.AlignHCenter
-            implicitWidth: size
-            implicitHeight: size
+            implicitWidth: root.vertical && abstractItem.inVisibleLayout ? abstractItem.width : size
+            implicitHeight: !root.vertical && abstractItem.inVisibleLayout ? abstractItem.height : size
             Layout.topMargin: abstractItem.inHiddenLayout ? units.smallSpacing : 0
         }
         PlasmaComponents.Label {
