@@ -409,11 +409,11 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == LauncherUrl || role == LauncherUrlWithoutIcon) {
         return d->appData(window).url;
     } else if (role == WinIdList) {
-        return QVariantList() << window->internalId();
+        return QVariantList() << window->uuid();
     } else if (role == MimeType) {
         return d->mimeType();
     } else if (role == MimeData) {
-        return QByteArray::number(window->internalId());
+        return window->uuid();
     } else if (role == IsWindow) {
         return true;
     } else if (role == IsActive) {
@@ -466,7 +466,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == AppPid) {
         return window->pid();
     } else if (role == StackingOrder) {
-        return d->windowManagement->stackingOrder().indexOf(window->internalId());
+        return d->windowManagement->stackingOrderUuids().indexOf(window->uuid());
     } else if (role == ApplicationMenuObjectPath) {
         return window->applicationMenuObjectPath();
     } else if (role == ApplicationMenuServiceName) {

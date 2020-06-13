@@ -93,6 +93,13 @@ set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                         TYPE OPTIONAL
                         PURPOSE "Required for building the X11 based workspace")
 
+pkg_check_modules(PipeWire IMPORTED_TARGET libpipewire-0.3)
+add_feature_info(PipeWire PipeWire_FOUND "Required for Wayland screencasting")
+
+find_package(QtWaylandScanner REQUIRED)
+find_package(PlasmaWaylandProtocols REQUIRED)
+find_package(Wayland REQUIRED COMPONENTS Client)
+
 if(X11_FOUND)
   find_package(XCB MODULE REQUIRED COMPONENTS XCB RANDR)
   set_package_properties(XCB PROPERTIES TYPE REQUIRED)

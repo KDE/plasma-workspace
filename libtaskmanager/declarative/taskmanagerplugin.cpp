@@ -24,6 +24,8 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "tasksmodel.h"
 #include "activityinfo.h"
 #include "virtualdesktopinfo.h"
+#include "PipeWireSourceItem.h"
+#include "screencastingitem.h"
 
 #include <QQmlEngine>
 
@@ -44,6 +46,8 @@ void TaskManagerPlugin::registerTypes(const char *uri)
     qmlRegisterType<TasksModel>(uri, 0, 1, "TasksModel");
     qmlRegisterType<ActivityInfo>(uri, 0, 1, "ActivityInfo");
     qmlRegisterType<VirtualDesktopInfo>(uri, 0, 1, "VirtualDesktopInfo");
+    qmlRegisterType<PipeWireSourceItem>(uri, 0, 1, "PipeWireSourceItem");
+    qmlRegisterType<ScreencastingItem>(uri, 0, 1, "ScreencastingItem");
 }
 
 }
