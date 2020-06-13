@@ -134,7 +134,7 @@ void WaylandTasksModel::Private::initWayland()
     KWayland::Client::Registry *registry = new KWayland::Client::Registry(q);
     registry->create(connection);
 
-    QObject::connect(registry, &KWayland::Client::Registry::plasmaWindowManagementAnnounced, [this, registry] (quint32 name, quint32 version) {
+    QObject::connect(registry, &KWayland::Client::Registry::plasmaWindowManagementAnnounced, q, [this, registry] (quint32 name, quint32 version) {
             windowManagement = registry->createPlasmaWindowManagement(name, version, q);
 
             QObject::connect(windowManagement, &KWayland::Client::PlasmaWindowManagement::interfaceAboutToBeReleased, q,
