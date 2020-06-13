@@ -37,6 +37,7 @@ MouseArea {
 
     //Should we consider turning this into a Flow item?
     Row {
+        anchors.centerIn: parent
         Repeater {
             id: view
 
