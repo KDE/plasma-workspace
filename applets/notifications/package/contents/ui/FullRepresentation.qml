@@ -585,7 +585,7 @@ PlasmaComponents3.Page {
                     }
                 }
 
-                Kirigami.PlaceholderMessage {
+                PlasmaExtras.PlaceholderMessage {
                     anchors.centerIn: parent
                     width: parent.width - (units.largeSpacing * 4)
 

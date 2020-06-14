@@ -55,7 +55,7 @@ PlasmaExtras.ScrollArea {
             onAction: menu.action(uuid)
         }
 
-        Kirigami.PlaceholderMessage {
+        PlasmaExtras.PlaceholderMessage {
             id: emptyHint
 
             anchors.centerIn: parent
