@@ -85,6 +85,24 @@ Item {
             return Qt.formatDate(date, format);
         }
 
+        function dateEquals(date1, date2) {
+            var values1 = [
+                date1.getFullYear(),
+                date1.getMonth(),
+                date1.getDate()
+            ];
+
+            var values2 = [
+                date2.getFullYear(),
+                date2.getMonth(),
+                date2.getDate()
+            ];
+
+            return values1.every((value, index) => {
+                return (value === values2[index]);
+            }, false)
+        }
+
         Connections {
             target: monthView
 
@@ -104,10 +122,7 @@ Item {
             target: monthView.daysModel
 
             onAgendaUpdated: {
-                // Checks if the dates are the same, comparing the date objects
-                // directly won't work and this does a simple integer subtracting
-                // so should be fastest. One of the JS weirdness.
-                if (updatedDate - monthView.currentDate === 0) {
+                if (agenda.dateEquals(updatedDate, monthView.currentDate)) {
                     holidaysList.model = null;
                     holidaysList.model = monthView.daysModel.eventsForDate(monthView.currentDate);
                 }
