@@ -337,8 +337,10 @@ void StatusNotifierModel::dataUpdated(const QString &sourceName, const Plasma::D
         dataItem->setData(Plasma::Types::ItemStatus::ActiveStatus, static_cast<int>(BaseModel::BaseRole::Status));
     } else if (status == QLatin1String("NeedsAttention")) {
         dataItem->setData(Plasma::Types::ItemStatus::NeedsAttentionStatus, static_cast<int>(BaseModel::BaseRole::Status));
-    } else {
+    } else if (status == QLatin1String("Passive")) {
         dataItem->setData(Plasma::Types::ItemStatus::PassiveStatus, static_cast<int>(BaseModel::BaseRole::Status));
+    } else {
+        dataItem->setData(Plasma::Types::ItemStatus::UnknownStatus, static_cast<int>(BaseModel::BaseRole::Status));
     }
 
     dataItem->setData(sourceName, static_cast<int>(Role::DataEngineSource));
