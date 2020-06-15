@@ -26,9 +26,9 @@
 #include "browsers/chromefindprofile.h"
 #include "browsers/chrome.h"
 
-Browser *BrowserFactory::find(const QString& browserName, QObject* parent)
+Browser *BrowserFactory::find(const QString &browserName, QObject *parent)
 {
-    if(m_previousBrowserName == browserName) {
+    if (m_previousBrowserName == browserName) {
         return m_previousBrowser;
     }
     delete m_previousBrowser;

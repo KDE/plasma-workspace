@@ -88,7 +88,7 @@ void KillRunnerConfig::defaults()
     m_ui->triggerWord->setText(i18n("kill"));
     m_ui->sorting->setCurrentIndex(m_ui->sorting->findData((int) NONE));
 
-    emit markAsChanged();
+    markAsChanged();
 }
 
 #include "killrunner_config.moc"

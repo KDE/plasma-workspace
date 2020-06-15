@@ -38,17 +38,14 @@ using namespace KActivities::Stats::Terms;
 
 K_EXPORT_PLASMA_RUNNER(recentdocuments, RecentDocuments)
 
-static const QString s_openParentDirId = QStringLiteral("openParentDir");
-
-RecentDocuments::RecentDocuments(QObject *parent, const QVariantList& args)
+RecentDocuments::RecentDocuments(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
 {
-    Q_UNUSED(args);
-    setObjectName( QStringLiteral("Recent Documents" ));
+    setObjectName(QStringLiteral("Recent Documents"));
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:.")));
 
-    addAction(s_openParentDirId, QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"));
+    addAction(QStringLiteral("openParentDir"), QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"));
 }
 
 RecentDocuments::~RecentDocuments()
@@ -72,11 +69,11 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
             | Agent::any()
             // we search only on file name, as KActivity does not support better options
             | Url("/*/" + term + "*")
-            | Limit(30);
+            | Limit(20);
 
     const auto result = new ResultModel(query);
 
-    for (int i = 0; i < result->rowCount(); i++) {
+    for (int i = 0; i < result->rowCount(); ++i) {
         const auto index = result->index(i, 0);
 
         const auto url = QUrl::fromUserInput(result->data(index, ResultModel::ResourceRole).toString(),
@@ -92,7 +89,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         if (url.fileName() == term) {
             relevance = 1.0;
             match.setType(Plasma::QueryMatch::ExactMatch);
-        } else if(url.fileName().startsWith(term)) {
+        } else if (url.fileName().startsWith(term)) {
             relevance = 0.9;
             match.setType(Plasma::QueryMatch::PossibleMatch);
         }
@@ -114,7 +111,7 @@ void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::Qu
 
     const QUrl url = match.data().toUrl();
 
-    if (match.selectedAction() == action(s_openParentDirId)) {
+    if (match.selectedAction()) {
         KIO::highlightInFileManager({url});
         return;
     }
@@ -125,17 +122,12 @@ void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::Qu
 
 QList<QAction *> RecentDocuments::actionsForMatch(const Plasma::QueryMatch &match)
 {
-    Q_UNUSED(match)
-
-    QList<QAction *> actions;
-
     const QUrl url = match.data().toUrl();
-
     if (url.isLocalFile()) {
-        actions << action(s_openParentDirId);
+        return actions().values();
     }
 
-    return actions;
+    return {};
 }
 
 QMimeData * RecentDocuments::mimeDataForMatch(const Plasma::QueryMatch& match)

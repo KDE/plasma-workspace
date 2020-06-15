@@ -32,7 +32,7 @@ K_EXPORT_PLASMA_RUNNER(calculatorrunner, SessionRunner)
 SessionRunner::SessionRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
 {
-    setObjectName( QLatin1String("Sessions" ));
+    setObjectName(QStringLiteral("Sessions"));
     setPriority(LowPriority);
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File | 
                     Plasma::RunnerContext::NetworkLocation);

@@ -36,21 +36,17 @@
 #include <KLocalizedString>
 #include <krunner/querymatch.h>
 
-static const QString s_copyToClipboardId = QStringLiteral("copyToClipboard");
-
 K_EXPORT_PLASMA_RUNNER(calculatorrunner, CalculatorRunner)
 
-CalculatorRunner::CalculatorRunner( QObject* parent, const QVariantList &args )
+CalculatorRunner::CalculatorRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
 {
-    Q_UNUSED(args)
-
     #ifdef ENABLE_QALCULATE
     m_engine = new QalculateEngine;
     setSpeed(SlowSpeed);
     #endif
 
-    setObjectName( QStringLiteral("Calculator" ));
+    setObjectName(QStringLiteral("Calculator"));
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File |
                          Plasma::RunnerContext::NetworkLocation | Plasma::RunnerContext::Executable |
                          Plasma::RunnerContext::ShellCommand);
@@ -61,7 +57,7 @@ CalculatorRunner::CalculatorRunner( QObject* parent, const QVariantList &args )
     addSyntax(Plasma::RunnerSyntax(QStringLiteral("=:q:"), description));
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:="), description));
 
-    addAction(s_copyToClipboardId, QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard"));
+    addAction(QStringLiteral("copyToClipboard"), QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard"));
 }
 
 CalculatorRunner::~CalculatorRunner()
@@ -71,7 +67,7 @@ CalculatorRunner::~CalculatorRunner()
     #endif
 }
 
-void CalculatorRunner::powSubstitutions(QString& cmd)
+void CalculatorRunner::powSubstitutions(QString &cmd)
 {
     if (cmd.contains(QLatin1String("e+"), Qt::CaseInsensitive)) {
         cmd.replace(QLatin1String("e+"), QLatin1String("*10^"), Qt::CaseInsensitive);
@@ -328,8 +324,8 @@ QString CalculatorRunner::calculate(const QString& term, bool *isApproximate)
 
 void CalculatorRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
-    Q_UNUSED(context);
-    if (match.selectedAction() == action(s_copyToClipboardId)) {
+    Q_UNUSED(context)
+    if (match.selectedAction()) {
 #ifdef ENABLE_QALCULATE
         m_engine->copyToClipboard();
 #else
@@ -342,7 +338,7 @@ QList<QAction *> CalculatorRunner::actionsForMatch(const Plasma::QueryMatch &mat
 {
     Q_UNUSED(match)
 
-    return {action(s_copyToClipboardId)};
+    return actions().values();
 }
 
 QMimeData * CalculatorRunner::mimeDataForMatch(const Plasma::QueryMatch &match)

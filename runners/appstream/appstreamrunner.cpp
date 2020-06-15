@@ -37,9 +37,7 @@ K_EXPORT_PLASMA_RUNNER(installer, InstallerRunner)
 InstallerRunner::InstallerRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
 {
-    Q_UNUSED(args)
-
-    setObjectName("Installation Suggestions");
+    setObjectName(QStringLiteral("Installation Suggestions"));
     setPriority(AbstractRunner::HighestPriority);
 
     addSyntax(Plasma::RunnerSyntax(":q:", i18n("Looks for non-installed components according to :q:")));

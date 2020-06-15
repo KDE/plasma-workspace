@@ -45,10 +45,9 @@ void FetchSqlite::prepare()
 
 void FetchSqlite::teardown()
 {
-    QString connectionPrefix = m_databaseFile + "-";
-
+    const QString connectionPrefix = m_databaseFile + "-";
     const auto connections = QSqlDatabase::connectionNames();
-    for (auto c : connections) {
+    for (const auto &c : connections) {
         if (c.startsWith(connectionPrefix)) {
             qCDebug(RUNNER_BOOKMARKS) << "Closing connection" << c;
             QSqlDatabase::removeDatabase(c);

@@ -39,8 +39,7 @@ WindowsRunner::WindowsRunner(QObject* parent, const QVariantList& args)
     : AbstractRunner(parent, args),
       m_inSession(false)
 {
-    Q_UNUSED(args)
-    setObjectName( QLatin1String("Windows") );
+    setObjectName(QStringLiteral("Windows"));
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds windows whose name, window class or window role match :q:. "
                                    "It is possible to interact with the windows by using one of the following keywords: "
@@ -125,14 +124,14 @@ void WindowsRunner::matchSessionComplete()
 // Called in the secondary thread
 void WindowsRunner::match(Plasma::RunnerContext& context)
 {
-    // will run block as long as gatherInfo has not finished
-    QMutexLocker locker(&m_mutex);
-
     QString term = context.query();
-
     if (!context.singleRunnerQueryMode() && (term.length() < 3)) {
         return;
     }
+
+    // will run block as long as gatherInfo has not finished
+    QMutexLocker locker(&m_mutex);
+
     QList<Plasma::QueryMatch> matches;
 
     // check if the search term ends with an action keyword

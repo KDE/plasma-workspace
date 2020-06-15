@@ -35,7 +35,7 @@ public:
 	QString lastResult() const { return m_lastResult; }
 
 public Q_SLOTS:
-    QString evaluate(const QString& expression, bool *isApproximate = nullptr);
+    QString evaluate(const QString &expression, bool *isApproximate = nullptr);
 	void updateExchangeRates();
 
 	void copyToClipboard(bool flag = true);

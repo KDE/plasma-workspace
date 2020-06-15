@@ -36,7 +36,7 @@ class CalculatorRunner : public Plasma::AbstractRunner
     Q_OBJECT
 
     public:
-        CalculatorRunner(QObject* parent, const QVariantList &args);
+        CalculatorRunner(QObject *parent, const QVariantList &args);
         ~CalculatorRunner() override;
 
         void match(Plasma::RunnerContext &context) override;
@@ -47,10 +47,10 @@ class CalculatorRunner : public Plasma::AbstractRunner
         QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
     private:
-        QString calculate(const QString& term, bool *isApproximate);
-        void userFriendlySubstitutions(QString& cmd);
-        void powSubstitutions(QString& cmd);
-        void hexSubstitutions(QString& cmd);
+        QString calculate(const QString &term, bool *isApproximate);
+        void userFriendlySubstitutions(QString &cmd);
+        void powSubstitutions(QString &cmd);
+        void hexSubstitutions(QString &cmd);
 
         #ifdef ENABLE_QALCULATE
         QalculateEngine* m_engine;

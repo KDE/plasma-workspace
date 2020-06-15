@@ -51,7 +51,8 @@ void ServiceRunnerTest::initTestCase()
     QDir(appsPath).removeRecursively();
     QVERIFY(QDir().mkpath(appsPath));
     auto fixtureDir = QDir(QFINDTESTDATA("fixtures"));
-    for(auto fileInfo : fixtureDir.entryInfoList(QDir::Files)) {
+    const auto infoList = fixtureDir.entryInfoList(QDir::Files);
+    for (const auto &fileInfo : infoList) {
         auto source = fileInfo.absoluteFilePath();
         auto target = appsPath + QDir::separator() + fileInfo.fileName();
         QVERIFY2(QFile::copy(fileInfo.absoluteFilePath(), target),
@@ -82,7 +83,8 @@ void ServiceRunnerTest::testChromeAppsRelevance()
 
     bool chromeFound = false;
     bool signalFound = false;
-    for (auto match : context.matches()) {
+    const auto matches = context.matches();
+    for (const auto &match : matches) {
         qDebug() << "matched" << match.text();
         if (!match.text().contains(QLatin1String("ServiceRunnerTest"))) {
             continue;
@@ -112,7 +114,8 @@ void ServiceRunnerTest::testKonsoleVsYakuakeComment()
 
     bool konsoleFound = false;
     bool yakuakeFound = false;
-    for (auto match : context.matches()) {
+    const auto matches = context.matches();
+    for (const auto &match : matches) {
         qDebug() << "matched" << match.text();
         if (!match.text().contains(QLatin1String("ServiceRunnerTest"))) {
             continue;
@@ -146,7 +149,8 @@ void ServiceRunnerTest::testSystemSettings()
 
     bool systemSettingsFound = false;
     bool foreignSystemSettingsFound = false;
-    for (auto match : context.matches()) {
+    const auto matches = context.matches();
+    for (const auto &match : matches) {
         qDebug() << "matched" << match.text();
         if (match.text() == QLatin1String("System Settings ServiceRunnerTest")) {
             systemSettingsFound = true;

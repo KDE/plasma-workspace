@@ -36,9 +36,7 @@ K_EXPORT_PLASMA_RUNNER(windowedwidgets, WindowedWidgetsRunner)
 WindowedWidgetsRunner::WindowedWidgetsRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
 {
-    Q_UNUSED(args)
-
-    setObjectName( QLatin1String("WindowedWidgets" ));
+    setObjectName(QStringLiteral("WindowedWidgets"));
     setPriority(AbstractRunner::HighestPriority);
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds Plasma widgets whose name or description match :q:")));

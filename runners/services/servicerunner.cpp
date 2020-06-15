@@ -404,9 +404,7 @@ private:
 ServiceRunner::ServiceRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
 {
-    Q_UNUSED(args)
-
-    setObjectName( QStringLiteral("Application" ));
+    setObjectName(QStringLiteral("Application"));
     setPriority(AbstractRunner::HighestPriority);
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds applications whose name or description match :q:")));
@@ -416,10 +414,7 @@ ServiceRunner::~ServiceRunner() = default;
 
 QStringList ServiceRunner::categories() const
 {
-    QStringList cat;
-    cat << i18n("Applications") << i18n("System Settings");
-
-    return cat;
+    return {i18n("Applications"), i18n("System Settings")};
 }
 
 QIcon ServiceRunner::categoryIcon(const QString& category) const
@@ -444,7 +439,7 @@ void ServiceRunner::match(Plasma::RunnerContext &context)
 
 void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
-    Q_UNUSED(context);
+    Q_UNUSED(context)
 
     const QUrl dataUrl = match.data().toUrl();
 

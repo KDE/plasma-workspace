@@ -40,7 +40,6 @@ QAtomicInt QalculateEngine::s_counter;
 QalculateEngine::QalculateEngine(QObject* parent):
     QObject(parent)
 {
-    m_lastResult = "";
     s_counter.ref();
     if (!CALCULATOR) {
         new Calculator();
@@ -66,7 +65,7 @@ void QalculateEngine::updateExchangeRates()
     QUrl dest = QUrl::fromLocalFile(QFile::decodeName(CALCULATOR->getExchangeRatesFileName().c_str()));
 
     KIO::Job* getJob = KIO::file_copy(source, dest, -1, KIO::Overwrite | KIO::HideProgressInfo);
-    connect( getJob, &KJob::result, this, &QalculateEngine::updateResult );
+    connect(getJob, &KJob::result, this, &QalculateEngine::updateResult);
 }
 
 void QalculateEngine::updateResult(KJob* job)
@@ -79,10 +78,10 @@ void QalculateEngine::updateResult(KJob* job)
     }
 }
 
-QString QalculateEngine::evaluate(const QString& expression, bool *isApproximate)
+QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate)
 {
     if (expression.isEmpty()) {
-        return "";
+        return QString();
     }
 
     QString input = expression;

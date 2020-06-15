@@ -38,7 +38,6 @@ K_EXPORT_PLASMA_RUNNER(locations, LocationsRunner)
 LocationsRunner::LocationsRunner(QObject *parent, const QVariantList& args)
     : Plasma::AbstractRunner(parent, args)
 {
-    Q_UNUSED(args);
     // set the name shown after the result in krunner window
     setObjectName(QStringLiteral("Locations"));
     setIgnoredTypes(Plasma::RunnerContext::Executable | Plasma::RunnerContext::ShellCommand);
@@ -182,9 +181,6 @@ void LocationsRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
     }
 
     location = convertCaseInsensitivePath(location);
-
-    //qDebug() << "command: " << context.query();
-    //qDebug() << "url: " << location << data;
 
     QUrl urlToRun(KUriFilter::self()->filteredUri(location, {QStringLiteral("kshorturifilter")}));
 
