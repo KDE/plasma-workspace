@@ -29,7 +29,7 @@ Item {
     id: popup
     //set width/height to avoid useless Dialog resize
     readonly property int defaultWidth: units.gridUnit * 24
-    readonly property int defaultHeight: units.gridUnit * 21
+    readonly property int defaultHeight: units.gridUnit * 24
 
     width: defaultWidth
     Layout.minimumWidth: defaultWidth
