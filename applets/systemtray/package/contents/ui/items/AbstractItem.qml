@@ -145,6 +145,8 @@ PlasmaCore.ToolTipArea {
 
             Layout.fillWidth: true
             Layout.fillHeight: true
+            Layout.leftMargin: abstractItem.inHiddenLayout ? units.smallSpacing : 0
+            Layout.rightMargin: abstractItem.inHiddenLayout ? units.smallSpacing : 0
             Layout.bottomMargin: abstractItem.inHiddenLayout ? units.smallSpacing : 0
 
             visible: abstractItem.inHiddenLayout && !root.activeApplet
