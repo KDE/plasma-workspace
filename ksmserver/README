@@ -6,13 +6,13 @@ Lubos Lunak <l.lunak@kde.org>
 
 ksmserver is KDE's session management server. It talks the
 standard X11R6 session management protocol (XSMP).  Thus, in theory,
-it should be compatible with all session managment compliant X11R6
+it should be compatible with all session management compliant X11R6
 applications. Unfortunately, there aren't that many of them. To be
 precise, I have never seen a single commercial application that
 supports it and even within the official X11R6 distribution, 'xclock'
 is the only exception. Nevertheless we've chosen to support XSMP
-despites the complexity of the protocol in order to provide KDE users
-more interoperability with applications that were not explicitely
+despite the complexity of the protocol in order to provide KDE users
+more interoperability with applications that were not explicitly
 written with KDE in mind. XSMP, as an official X standard, promised to
 be more likely to be supported by third parties than even a superior
 KDE-specific protocol. Let's see whether we were right and more
