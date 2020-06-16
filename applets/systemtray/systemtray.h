@@ -75,12 +75,6 @@ public:
     Q_INVOKABLE void showPlasmoidMenu(QQuickItem *appletInterface, int x, int y);
 
     /**
-     * Returns the "X-Plasma-NotificationAreaCategory"
-     * of the plasmoid metadata
-     */
-    Q_INVOKABLE QString plasmoidCategory(QQuickItem *appletInterface) const;
-
-    /**
      * Shows the context menu for a statusnotifieritem
      */
     Q_INVOKABLE void showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNotifierIcon);

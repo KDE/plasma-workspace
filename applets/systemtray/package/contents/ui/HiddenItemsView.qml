@@ -30,11 +30,7 @@ import "items"
 MouseArea {
     id: hiddenTasksView
 
-    visible: !root.activeApplet || (root.activeApplet.parent && root.activeApplet.parent.inHiddenLayout)
-    implicitWidth: root.activeApplet ? iconColumnWidth : parent.width
     property alias layout: hiddenTasks
-    //Useful to align stuff to the column of icons, both in expanded and shrink modes
-    property int iconColumnWidth: root.hiddenItemSize + highlight.marginHints.left + highlight.marginHints.right
 
     hoverEnabled: true
     onExited: hiddenTasks.currentIndex = -1
@@ -60,7 +56,6 @@ MouseArea {
             highlight: PlasmaComponents.Highlight {}
             highlightMoveDuration: 0
 
-            readonly property int iconItemHeight: root.hiddenItemSize + highlight.marginHints.top + highlight.marginHints.bottom
             property int itemCount: model.rowCount()
 
             model: PlasmaCore.SortFilterModel {
@@ -82,10 +77,5 @@ MouseArea {
         onRowsInserted: hiddenTasks.itemCount = hiddenTasks.model.rowCount()
         onRowsRemoved: hiddenTasks.itemCount = hiddenTasks.model.rowCount()
         onLayoutChanged: hiddenTasks.itemCount = hiddenTasks.model.rowCount()
-    }
-
-    PlasmaComponents.Highlight {
-        id: highlight
-        visible: false
     }
 }

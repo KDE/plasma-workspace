@@ -208,25 +208,6 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     desktopMenu->popup(pos.toPoint());
 }
 
-QString SystemTray::plasmoidCategory(QQuickItem *appletInterface) const
-{
-    if (!appletInterface) {
-        return QStringLiteral("UnknownCategory");
-    }
-
-    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet*>();
-    if (!applet || !applet->pluginMetaData().isValid()) {
-        return QStringLiteral("UnknownCategory");
-    }
-
-    const QString cat = applet->pluginMetaData().value(QStringLiteral("X-Plasma-NotificationAreaCategory"));
-
-    if (cat.isEmpty()) {
-        return QStringLiteral("UnknownCategory");
-    }
-    return cat;
-}
-
 void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNotifierIcon)
 {
     if (QCoreApplication::closingDown() || !statusNotifierIcon) {
