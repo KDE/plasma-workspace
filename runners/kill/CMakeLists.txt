@@ -18,6 +18,7 @@ target_link_libraries(kcm_krunner_kill
     )
 
 add_library(krunner_kill MODULE killrunner.cpp)
+kcoreaddons_desktop_to_json(krunner_kill plasma-runner-kill.desktop)
 target_link_libraries(krunner_kill
                       KF5::I18n
                       KF5::Completion
@@ -28,5 +29,6 @@ target_link_libraries(krunner_kill
                       )
 add_dependencies(krunner_kill kcm_krunner_kill)
 
-install(TARGETS krunner_kill kcm_krunner_kill DESTINATION ${KDE_INSTALL_PLUGINDIR})
-install(FILES plasma-runner-kill.desktop plasma-runner-kill_config.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS krunner_kill DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner")
+install(TARGETS kcm_krunner_kill DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(FILES plasma-runner-kill_config.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

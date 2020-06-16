@@ -154,7 +154,6 @@ Comment[zh_TW]=檔案與網址開啟器
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=system-file-manager
-X-KDE-Library=krunner_locations
 X-KDE-PluginInfo-Author=Plasma Team
 X-KDE-PluginInfo-Email=plasma-devel@kde.org
 X-KDE-PluginInfo-Name=locations

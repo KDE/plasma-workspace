@@ -129,7 +129,6 @@ Comment[uk]=Відкриття пристроїв та закладок на т�
 Comment[x-test]=xxOpen devices and folder bookmarksxx
 Comment[zh_CN]=打开设备和文件夹书签
 Comment[zh_TW]=開啟裝置與資料夾書籤
-X-KDE-Library=krunner_placesrunner
 X-KDE-PluginInfo-Author=David Edmundson
 X-KDE-PluginInfo-Email=kde@davidedmundson.co.uk
 X-KDE-PluginInfo-Name=places

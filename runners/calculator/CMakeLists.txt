@@ -26,6 +26,7 @@ set(krunner_calculatorrunner_SRCS
 
 if ( QALCULATE_FOUND )
     add_library(krunner_calculatorrunner MODULE ${qalculate_engine_SRCS} ${krunner_calculatorrunner_SRCS})
+    kcoreaddons_desktop_to_json(krunner_calculatorrunner plasma-runner-calculator.desktop )
     target_link_libraries(krunner_calculatorrunner
                           ${QALCULATE_LIBRARIES}
                           ${CLN_LIBRARIES}
@@ -37,6 +38,7 @@ if ( QALCULATE_FOUND )
     )
 else ()
     add_library(krunner_calculatorrunner MODULE ${krunner_calculatorrunner_SRCS})
+    kcoreaddons_desktop_to_json(krunner_calculatorrunner plasma-runner-calculator.desktop )
     target_link_libraries(krunner_calculatorrunner
                           KF5::Runner
                           KF5::I18n
@@ -45,7 +47,4 @@ else ()
     )
 endif ()
 
-install(TARGETS krunner_calculatorrunner DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-
-########### install files ###############
-install(FILES plasma-runner-calculator.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS krunner_calculatorrunner DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner" )

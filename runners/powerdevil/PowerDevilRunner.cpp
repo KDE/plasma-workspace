@@ -32,7 +32,7 @@
 
 #include <Solid/PowerManagement>
 
-K_EXPORT_PLASMA_RUNNER(powerdevil, PowerDevilRunner)
+K_EXPORT_PLASMA_RUNNER_WITH_JSON(PowerDevilRunner, "plasma-runner-powerdevil.json")
 
 PowerDevilRunner::PowerDevilRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args),

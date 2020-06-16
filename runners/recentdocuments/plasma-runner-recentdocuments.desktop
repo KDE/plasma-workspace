@@ -87,7 +87,6 @@ Icon=document-open-recent
 
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
-X-KDE-Library=krunner_recentdocuments
 X-KDE-PluginInfo-Author=Sebastian Kügler
 X-KDE-PluginInfo-Email=sebas@kde.org
 X-KDE-PluginInfo-Name=recentdocuments

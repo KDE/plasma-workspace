@@ -11,7 +11,7 @@ ecm_qt_declare_logging_category(krunner_appstream_SRCS
     DEFAULT_SEVERITY Warning)
 
 add_library(krunner_appstream MODULE ${krunner_appstream_SRCS})
+kcoreaddons_desktop_to_json(krunner_appstream plasma-runner-appstream.desktop )
 target_link_libraries(krunner_appstream PUBLIC KF5::Runner KF5::I18n KF5::Service AppStreamQt)
 
-install(TARGETS krunner_appstream DESTINATION ${KDE_INSTALL_PLUGINDIR})
-install(FILES plasma-runner-appstream.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS krunner_appstream DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner")

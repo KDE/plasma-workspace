@@ -5,7 +5,7 @@ set(krunner_placesrunner_SRCS
 )
 
 add_library(krunner_placesrunner MODULE ${krunner_placesrunner_SRCS})
-
+kcoreaddons_desktop_to_json(krunner_placesrunner plasma-runner-places.desktop)
 target_link_libraries(krunner_placesrunner
     KF5::KIOCore
     KF5::KIOWidgets
@@ -14,7 +14,4 @@ target_link_libraries(krunner_placesrunner
     KF5::Runner
 )
 
-install(TARGETS krunner_placesrunner DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-
-install(FILES plasma-runner-places.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-
+install(TARGETS krunner_placesrunner DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner" )

@@ -30,7 +30,7 @@
 #include <KRun>
 #include <KLocalizedString>
 
-K_EXPORT_PLASMA_RUNNER(placesrunner, PlacesRunner)
+K_EXPORT_PLASMA_RUNNER_WITH_JSON(PlacesRunner, "plasma-runner-places.json")
 
 //Q_DECLARE_METATYPE(Plasma::RunnerContext)
 PlacesRunner::PlacesRunner(QObject* parent, const QVariantList &args)

@@ -26,7 +26,7 @@ install(
 
 install(
   FILES plasma-runner-baloosearch.desktop
-  DESTINATION ${KDE_INSTALL_KSERVICES5DIR}
+  DESTINATION "${KDE_INSTALL_DATAROOTDIR}/krunner/dbusplugins"
 )
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.baloorunner.service

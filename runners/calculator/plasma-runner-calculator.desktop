@@ -161,7 +161,6 @@ Comment[zh_TW]=計算機表示式
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=accessories-calculator
-X-KDE-Library=krunner_calculatorrunner
 X-KDE-PluginInfo-Author=Plasma Team
 X-KDE-PluginInfo-Email=plasma-devel@kde.org
 X-KDE-PluginInfo-Name=calculator

@@ -31,7 +31,7 @@
 #include <Plasma/Applet>
 #include <Plasma/PluginLoader>
 
-K_EXPORT_PLASMA_RUNNER(windowedwidgets, WindowedWidgetsRunner)
+K_EXPORT_PLASMA_RUNNER_WITH_JSON(WindowedWidgetsRunner, "plasma-runner-windowedwidgets.json")
 
 WindowedWidgetsRunner::WindowedWidgetsRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)

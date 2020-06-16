@@ -150,7 +150,6 @@ Comment[zh_TW]=快速切換使用者
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=system-shutdown
-X-KDE-Library=krunner_sessions
 X-KDE-PluginInfo-Author=Plasma Team
 X-KDE-PluginInfo-Email=plasma-devel@kde.org
 X-KDE-PluginInfo-Name=desktopsessions

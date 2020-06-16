@@ -134,7 +134,6 @@ Icon=application-exit
 
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
-X-KDE-Library=krunner_kill
 X-KDE-PluginInfo-Author=Jan Gerrit Marker
 X-KDE-PluginInfo-Email=jangerrit@weiler-marker.com
 X-KDE-PluginInfo-Name=Kill Runner

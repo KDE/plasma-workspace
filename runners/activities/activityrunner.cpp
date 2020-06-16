@@ -22,7 +22,7 @@
 #include <QIcon>
 #include <klocalizedstring.h>
 
-K_EXPORT_PLASMA_RUNNER(activities, ActivityRunner)
+K_EXPORT_PLASMA_RUNNER_WITH_JSON(ActivityRunner, "plasma-runner-activityrunner.json")
 
 ActivityRunner::ActivityRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args),

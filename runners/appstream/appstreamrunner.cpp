@@ -32,7 +32,7 @@
 
 #include "debug.h"
 
-K_EXPORT_PLASMA_RUNNER(installer, InstallerRunner)
+K_EXPORT_PLASMA_RUNNER_WITH_JSON(InstallerRunner, "plasma-runner-appstream.json")
 
 InstallerRunner::InstallerRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)

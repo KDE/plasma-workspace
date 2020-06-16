@@ -20,6 +20,6 @@
 
 #include "servicerunner.h"
 
-K_EXPORT_PLASMA_RUNNER(services, ServiceRunner)
+K_EXPORT_PLASMA_RUNNER_WITH_JSON(ServiceRunner, "plasma-runner-services.json")
 
 #include "plugin.moc"

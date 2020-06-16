@@ -33,7 +33,7 @@
 #include <netwm.h>
 #endif
 
-K_EXPORT_PLASMA_RUNNER(windows, WindowsRunner)
+K_EXPORT_PLASMA_RUNNER_WITH_JSON(WindowsRunner, "plasma-runner-windows.json")
 
 WindowsRunner::WindowsRunner(QObject* parent, const QVariantList& args)
     : AbstractRunner(parent, args),

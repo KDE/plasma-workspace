@@ -32,7 +32,7 @@
 
 #include <kservicetypetrader.h>
 
-K_EXPORT_PLASMA_RUNNER(locations, LocationsRunner)
+K_EXPORT_PLASMA_RUNNER_WITH_JSON(LocationsRunner, "plasma-runner-locations.json")
 
 
 LocationsRunner::LocationsRunner(QObject *parent, const QVariantList& args)

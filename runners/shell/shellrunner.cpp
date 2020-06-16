@@ -26,7 +26,7 @@
 
 #include <KIO/CommandLauncherJob>
 
-K_EXPORT_PLASMA_RUNNER(shell, ShellRunner)
+K_EXPORT_PLASMA_RUNNER_WITH_JSON(ShellRunner, "plasma-runner-shell.json")
 
 ShellRunner::ShellRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
