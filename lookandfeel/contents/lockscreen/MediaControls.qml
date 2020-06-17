@@ -138,7 +138,10 @@ Item {
         PlasmaComponents.ToolButton {
             enabled: mpris2Source.canGoBack
             iconName: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
-            onClicked: mpris2Source.goPrevious()
+            onClicked: {
+                fadeoutTimer.running = false
+                mpris2Source.goPrevious()
+            }
             visible: mpris2Source.canGoBack || mpris2Source.canGoNext
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Previous track")
         }
@@ -147,14 +150,20 @@ Item {
             Layout.fillHeight: true
             Layout.preferredWidth: height // make this button bigger
             iconName: mpris2Source.playing ? "media-playback-pause" : "media-playback-start"
-            onClicked: mpris2Source.playPause()
+            onClicked: {
+                fadeoutTimer.running = false
+                mpris2Source.playPause()
+            }
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Play or Pause media")
         }
 
         PlasmaComponents.ToolButton {
             enabled: mpris2Source.canGoNext
             iconName: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
-            onClicked: mpris2Source.goNext()
+            onClicked: {
+                fadeoutTimer.running = false
+                mpris2Source.goNext()
+            }
             visible: mpris2Source.canGoBack || mpris2Source.canGoNext
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Next track")
         }
