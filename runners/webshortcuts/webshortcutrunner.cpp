@@ -25,6 +25,7 @@
 #include <KSharedConfig>
 #include <KMimeTypeTrader>
 #include <KIO/CommandLauncherJob>
+#include <KSycoca>
 
 WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
     : Plasma::AbstractRunner(parent, args),
@@ -42,6 +43,7 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
                         QStringLiteral("configure"), this, SLOT(loadSyntaxes()));
     loadSyntaxes();
     configurePrivateBrowsingActions();
+    connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, &WebshortcutRunner::configurePrivateBrowsingActions);
 }
 
 WebshortcutRunner::~WebshortcutRunner()
