@@ -68,7 +68,6 @@ Name[ug]=Mac OS X
 Name[uk]=Mac OS X
 Name[vi]=Mac OS X
 Name[wa]=Mac OS X
-Name[x-test]=xxMac OS Xxx
 Name[zh_CN]=Mac OS X
 Name[zh_TW]=Mac OS X
 Comment=Style that uses the Apple Appearance Manager
@@ -131,7 +130,6 @@ Comment[tr]=Apple Appearance Manager kullanan stil
 Comment[ug]=ئالما كومپيۇتېر قىياپەت باشقۇرغۇچنى ئىشلەتكەن ئۇسلۇب
 Comment[uk]=Стиль, що використовує Apple Appearance Manager
 Comment[wa]=Stîle ki s' sieve do Manaedjeu d' Aparince d' Apple
-Comment[x-test]=xxStyle that uses the Apple Appearance Managerxx
 Comment[zh_CN]=使用苹果电脑外观的风格
 Comment[zh_TW]=使用 Apple 外觀管理員的樣式
 [KDE]

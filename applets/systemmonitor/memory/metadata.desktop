@@ -59,7 +59,6 @@ Name[tr]=Bellek Durumu
 Name[ug]=ئەسلەك ھالىتى
 Name[uk]=Стан пам’яті
 Name[wa]=Estat del memwere
-Name[x-test]=xxMemory Statusxx
 Name[zh_CN]=内存状态
 Name[zh_TW]=記憶體狀態
 Comment=A RAM usage monitor
@@ -127,7 +126,6 @@ Comment[tr]=Bir bellek kullanımı izleyici
 Comment[ug]=RAM ئىشلىتىشنى كۆزەتكۈچ
 Comment[uk]=Монітор використання пам’яті
 Comment[wa]=On corwaitoe di l' eployaedje del RAM
-Comment[x-test]=xxA RAM usage monitorxx
 Comment[zh_CN]=RAM 利用率监视器
 Comment[zh_TW]=記憶體使用量監視器
 
