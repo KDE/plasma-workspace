@@ -79,7 +79,6 @@ Name[uk]=Motif
 Name[uz]=Motif
 Name[uz@cyrillic]=Motif
 Name[wa]=Motif
-Name[x-test]=xxMotifxx
 Name[zh_CN]=Motif
 Name[zh_TW]=Motif
 Comment=Built-in unthemed Motif style
@@ -155,7 +154,6 @@ Comment[tr]=Dahili temalandırılmamış Motif biçimi
 Comment[ug]=ئىچكى ئۆرنەكسىز Motif ئۇسلۇبى
 Comment[uk]=Вбудований стиль Motif без теми
 Comment[wa]=Stîle Motif tchôkî-dvins sins tinme
-Comment[x-test]=xxBuilt-in unthemed Motif stylexx
 Comment[zh_CN]=内建的无主题的 Motif 风格
 Comment[zh_TW]=內建的 Motif 樣式
 [KDE]

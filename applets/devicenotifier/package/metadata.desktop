@@ -72,7 +72,6 @@ Name[ug]=ئۈسكۈنە ئۇقتۇرۇشى
 Name[uk]=Сповіщення про пристрої
 Name[vi]=Trình thông báo thiết bị
 Name[wa]=Notifiaedje d' éndjin
-Name[x-test]=xxDevice Notifierxx
 Name[zh_CN]=设备通知器
 Name[zh_TW]=裝置通知
 Comment=Notifications and access for new devices
@@ -144,7 +143,6 @@ Comment[tr]=Yeni donanım bildirimleri ve yeni donanımlara erişim
 Comment[ug]=يېڭى ئۈسكۈنە ئۇقتۇرۇشى ۋە زىيارىتى
 Comment[uk]=Сповіщення і доступ до нових пристроїв
 Comment[wa]=Notifiaedjes eyet accès ås noveas éndjins
-Comment[x-test]=xxNotifications and access for new devicesxx
 Comment[zh_CN]=通知和访问新设备
 Comment[zh_TW]=通知與存取新裝置
 
