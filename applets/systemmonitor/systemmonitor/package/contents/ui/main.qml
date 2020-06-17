@@ -34,8 +34,14 @@ import org.kde.quickcharts 1.0 as Charts
 Item {
     Plasmoid.backgroundHints: PlasmaCore.Types.DefaultBackground | PlasmaCore.Types.ConfigurableBackground
 
-    Plasmoid.switchWidth: Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumWidth : units.gridUnit * 8
-    Plasmoid.switchHeight: Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumHeight : units.gridUnit * 12
+    Plasmoid.switchWidth: Plasmoid.formFactor === PlasmaCore.Types.Planar
+        ? -1
+        : (Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumWidth : units.gridUnit * 8)
+    Plasmoid.switchHeight: Plasmoid.formFactor === PlasmaCore.Types.Planar
+        ? -1
+        : (Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumHeight : units.gridUnit * 12)
+
+    Plasmoid.preferredRepresentation: Plasmoid.formFactor === PlasmaCore.Types.Planar ? Plasmoid.fullRepresentation : null
 
     Plasmoid.title: plasmoid.nativeInterface.faceController.title || i18n("System Monitor")
     Plasmoid.toolTipSubText: ""

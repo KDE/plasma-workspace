@@ -37,22 +37,17 @@ import org.kde.quickcharts 1.0 as Charts
 
 Control {
     id: chartFace
-    
-    anchors {
-        fill: parent
-        margins: Kirigami.Units.smallSpacing * (plasmoid.configuration.backgroundEnabled ? 1 : 2)
-    }
 
-    Layout.minimumWidth: contentItem ? contentItem.Layout.minimumWidth : 0
-    Layout.minimumHeight: contentItem ? contentItem.Layout.minimumHeight : 0
-    Layout.preferredWidth: contentItem
+    Layout.minimumWidth: (contentItem ? contentItem.Layout.minimumWidth : 0) + leftPadding + rightPadding
+    Layout.minimumHeight: (contentItem ? contentItem.Layout.minimumHeight : 0) + leftPadding + rightPadding
+    Layout.preferredWidth: (contentItem
             ? (contentItem.Layout.preferredWidth > 0 ? contentItem.Layout.preferredWidth : contentItem.implicitWidth)
-            : 0
-    Layout.preferredHeight: contentItem
+            : 0) + leftPadding + rightPadding
+    Layout.preferredHeight: (contentItem
             ? (contentItem.Layout.preferredHeight > 0 ? contentItem.Layout.preferredHeight: contentItem.implicitHeight)
-            : 0
-    Layout.maximumWidth: contentItem ? contentItem.Layout.maximumWidth : 0
-    Layout.maximumHeight: contentItem ? contentItem.Layout.maximumHeight : 0
+            : 0) + leftPadding + rightPadding
+    Layout.maximumWidth: (contentItem ? contentItem.Layout.maximumWidth : 0) + leftPadding + rightPadding
+    Layout.maximumHeight: (contentItem ? contentItem.Layout.maximumHeight : 0) + leftPadding + rightPadding
 
     Kirigami.Theme.textColor: PlasmaCore.ColorScope.textColor
 

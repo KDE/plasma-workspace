@@ -35,14 +35,14 @@ Control {
     Layout.fillWidth: contentItem ? contentItem.Layout.fillWidth : false
     Layout.fillHeight: contentItem ? contentItem.Layout.fillHeight : false
 
-    Layout.minimumWidth: contentItem ? contentItem.Layout.minimumWidth : 0
-    Layout.minimumHeight: contentItem ? contentItem.Layout.minimumHeight : 0
+    Layout.minimumWidth: (contentItem ? contentItem.Layout.minimumWidth : 0) + leftPadding + rightPadding
+    Layout.minimumHeight: (contentItem ? contentItem.Layout.minimumHeight : 0) + leftPadding + rightPadding
 
-    Layout.preferredWidth: contentItem ? contentItem.Layout.preferredWidth : 0
-    Layout.preferredHeight: contentItem ? contentItem.Layout.preferredHeight : 0
+    Layout.preferredWidth: (contentItem ? contentItem.Layout.preferredWidth : 0) + leftPadding + rightPadding
+    Layout.preferredHeight: (contentItem ? contentItem.Layout.preferredHeight : 0) + leftPadding + rightPadding
 
-    Layout.maximumWidth: contentItem ? contentItem.Layout.maximumWidth : 0
-    Layout.maximumHeight: contentItem ? contentItem.Layout.maximumHeight : 0
+    Layout.maximumWidth: (contentItem ? contentItem.Layout.maximumWidth : 0) + leftPadding + rightPadding
+    Layout.maximumHeight: (contentItem ? contentItem.Layout.maximumHeight : 0) + leftPadding + rightPadding
 
     Kirigami.Theme.textColor: PlasmaCore.ColorScope.textColor
 
