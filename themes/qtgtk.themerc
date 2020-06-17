@@ -65,7 +65,6 @@ Name[ug]=GTK+ ئۇسلۇبى
 Name[uk]=Стиль GTK+
 Name[vi]=Kiểu dáng GTK+
 Name[wa]=Stîle GTK+
-Name[x-test]=xxGTK+ Stylexx
 Name[zh_CN]=GTK+ 风格
 Name[zh_TW]=GTK+ 風格
 Comment=Style that uses the GTK+ theming engine
@@ -129,7 +128,6 @@ Comment[tr]=GTK+ temalandırma motoru kullanan bir biçim
 Comment[ug]=GTK+ ئۆرنەك ماتورىنى ئىشلەتكەن ئۇسلۇب
 Comment[uk]=Стиль, що використовує рушій тем GTK+
 Comment[wa]=Stîle ki s' sieve do moteur di tinmes di GTK+
-Comment[x-test]=xxStyle that uses the GTK+ theming enginexx
 Comment[zh_CN]=使用 GTK+ 主题引擎的风格
 Comment[zh_TW]=GTK+ 主題引擎使用的樣式
 [KDE]

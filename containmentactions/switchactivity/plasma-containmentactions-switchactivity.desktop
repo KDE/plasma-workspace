@@ -61,7 +61,6 @@ Name[tr]=Etkinlik Değiştir
 Name[ug]=پائالىيەت ئالماشتۇر
 Name[uk]=Перемкнути простір дій
 Name[wa]=Potchî a ene ôte activité
-Name[x-test]=xxSwitch Activityxx
 Name[zh_CN]=切换活动
 Name[zh_TW]=切換活動
 Type=Service
@@ -127,7 +126,6 @@ Comment[tr]=Başka bir etkinliğe geç
 Comment[ug]=باشقا بىر پائالىيەتكە ئالماشتۇر
 Comment[uk]=Перемкнутися на інший простір дій
 Comment[wa]=Potchî a ene ôte activité
-Comment[x-test]=xxSwitch to another activityxx
 Comment[zh_CN]=切换到另一个活动
 Comment[zh_TW]=切換到其它活動
 

@@ -57,7 +57,6 @@ Name[tr]=Pencerelendirilmiş gereçler
 Name[ug]=كۆزنەكلىك ۋىجېتلار
 Name[uk]=Віджети-вікна
 Name[wa]=Ahesses metous dins des fniesses
-Name[x-test]=xxWindowed widgetsxx
 Name[zh_CN]=窗口化小部件
 Name[zh_TW]=視窗元件
 
@@ -118,7 +117,6 @@ Comment[ug]=مۇستەقىل كۆزنەك شەكلىدە ئىجرا قىلغىل
 Comment[uk]=Пошук віджетів Плазми, які можна запускати у окремих вікнах
 Comment[vi]=Tìm các widget có thể được chạy trong cửa sổ riêng
 Comment[wa]=Trover des ahesses Plasma k' on sait enonder dins des fniesses mierseules
-Comment[x-test]=xxFind Plasma widgets that can be run as standalone windowsxx
 Comment[zh_CN]=查找可以独立窗口形式运行的 Plasma 小部件
 Comment[zh_TW]=尋找可以以獨立視窗執行的 Plasma 元件
 

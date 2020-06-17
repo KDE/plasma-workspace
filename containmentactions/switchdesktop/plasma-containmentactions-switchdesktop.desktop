@@ -63,7 +63,6 @@ Name[tr]=Masaüstünü Değiştir
 Name[ug]=ئۈستەلئۈستى ئالماشتۇر
 Name[uk]=Перемкнути стільницю
 Name[wa]=Potchî a èn ôte sicribanne
-Name[x-test]=xxSwitch Desktopxx
 Name[zh_CN]=切换桌面
 Name[zh_TW]=切換桌面
 Type=Service
@@ -130,7 +129,6 @@ Comment[tr]=Başka bir sanal masaüstüne geç
 Comment[ug]=باشقا بىر مەۋھۇم ئۈستەلئۈستىگە ئالماشتۇر
 Comment[uk]=Перемкнутися на іншу віртуальну стільницю
 Comment[wa]=Potchî a èn ôte forveyou scribanne
-Comment[x-test]=xxSwitch to another virtual desktopxx
 Comment[zh_CN]=切换到另一个虚拟桌面
 Comment[zh_TW]=切換到其它虛擬桌面
 

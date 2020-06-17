@@ -81,7 +81,6 @@ Name[uz]=Dasturlarni ishga tushiruvchi
 Name[uz@cyrillic]=Дастурларни ишга туширувчи
 Name[vi]=Trình chạy ứng dụng
 Name[wa]=Enondeu di programe
-Name[x-test]=xxApplication Launcherxx
 Name[zh_CN]=程序启动器
 Name[zh_TW]=應用程式啟動器
 Type=Service
@@ -148,7 +147,6 @@ Comment[tr]=Basit uygulama başlatıcı
 Comment[ug]=ئاددىي پروگرامما ئىجراچىسى
 Comment[uk]=Простий інструмент запуску програм
 Comment[wa]=Simpe enondeu di programe
-Comment[x-test]=xxSimple application launcherxx
 Comment[zh_CN]=简易程序启动器
 Comment[zh_TW]=簡單的應用程式啟動器
 

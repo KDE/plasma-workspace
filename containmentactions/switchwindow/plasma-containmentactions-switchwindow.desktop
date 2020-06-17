@@ -61,7 +61,6 @@ Name[tr]=Pencereyi Değiştir
 Name[ug]=كۆزنەك ئالماشتۇر
 Name[uk]=Перемкнути вікно
 Name[wa]=Passer a ene ôte finiesse
-Name[x-test]=xxSwitch Windowxx
 Name[zh_CN]=切换窗口
 Name[zh_TW]=切換視窗
 Type=Service
@@ -125,7 +124,6 @@ Comment[tr]=Değiştirilecek pencereler listesini göster
 Comment[ug]=كۆزنەك ئالماشتۇرۇشقا ئىشلىتىدىغان تىزىمنى كۆرسىتىدۇ
 Comment[uk]=Показує список вікон для перемикання
 Comment[wa]=Mostrer ene djivêye des fniesse k' on sait potchî dvins
-Comment[x-test]=xxShow a list of windows to switch toxx
 Comment[zh_CN]=显示可供切换的窗口列表
 Comment[zh_TW]=列出視窗並切換
 
