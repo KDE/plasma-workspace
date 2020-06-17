@@ -22,6 +22,9 @@
 #include <QDesktopServices>
 #include <KLocalizedString>
 #include <KUriFilter>
+#include <KSharedConfig>
+#include <KMimeTypeTrader>
+#include <KIO/CommandLauncherJob>
 
 WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
     : Plasma::AbstractRunner(parent, args),
@@ -38,6 +41,7 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
     sessionDbus.connect(QString(), QStringLiteral("/"), QStringLiteral("org.kde.KUriFilterPlugin"),
                         QStringLiteral("configure"), this, SLOT(loadSyntaxes()));
     loadSyntaxes();
+    configurePrivateBrowsingActions();
 }
 
 WebshortcutRunner::~WebshortcutRunner()
@@ -64,6 +68,34 @@ void WebshortcutRunner::loadSyntaxes()
     m_lastFailedKey.clear();
     m_lastProvider.clear();
     m_lastKey.clear();
+}
+
+void WebshortcutRunner::configurePrivateBrowsingActions()
+{
+    clearActions();
+    const QString browserFile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"))->group("General").readEntry("BrowserApplication");
+    KService::Ptr service;
+    if (!browserFile.isEmpty()) {
+        service = KService::serviceByStorageId(browserFile);
+    }
+    if (!service) {
+        service = KMimeTypeTrader::self()->preferredService(QStringLiteral("text/html"));
+    }
+    if (!service) {
+        return;
+    }
+    const auto actions = service->actions();
+    for (const auto &action : actions) {
+        bool containsPrivate = action.text().contains(QLatin1String("private"), Qt::CaseInsensitive);
+        bool containsIncognito = action.text().contains(QLatin1String("incognito"), Qt::CaseInsensitive);
+        if (containsPrivate || containsIncognito) {
+            m_privateAction = action;
+            const QString actionText = containsPrivate ? i18n("Search in private window") : i18n("Search in incognito window");
+            const QIcon icon = QIcon::fromTheme(QStringLiteral("view-private"), QIcon::fromTheme(QStringLiteral("view-hidden")));
+            addAction(QStringLiteral("privateSearch"), icon, actionText);
+            return;
+        }
+    }
 }
 
 void WebshortcutRunner::match(Plasma::RunnerContext &context)
@@ -111,6 +143,12 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
     context.addMatch(m_match);
 }
 
+QList<QAction *> WebshortcutRunner::actionsForMatch(const Plasma::QueryMatch &match)
+{
+    Q_UNUSED(match)
+    return actions().values();
+}
+
 void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     QUrl location;
@@ -124,7 +162,12 @@ void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::
     }
 
     if (!location.isEmpty()) {
-        QDesktopServices::openUrl(location);
+        if (match.selectedAction()) {
+            auto *job = new KIO::CommandLauncherJob(m_privateAction.exec() + QLatin1Char(' ') + location.toString());
+            job->start();
+        } else {
+            QDesktopServices::openUrl(location);
+        }
     }
 }
 
