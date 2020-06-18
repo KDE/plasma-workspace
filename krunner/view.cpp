@@ -238,9 +238,10 @@ void View::positionOnScreen()
     // in wayland, QScreen::availableGeometry() returns QScreen::geometry()
     // we could get a better value from plasmashell
     // BUG: 386114
-    QDBusInterface strutManager("org.kde.plasmashell", "/StrutManager", "org.kde.PlasmaShell.StrutManager");
-    QDBusPendingCall async = strutManager.asyncCall("availableScreenRect", shownOnScreen->name());
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
+    auto message = QDBusMessage::createMethodCall("org.kde.plasmashell", "/StrutManager",  "org.kde.PlasmaShell.StrutManager", "availableScreenRect");
+    message.setArguments({shownOnScreen->name()});
+    QDBusPendingCall call = QDBusConnection::sessionBus().asyncCall(message);
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
 
     QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher, shownOnScreen]() {
         watcher->deleteLater();
