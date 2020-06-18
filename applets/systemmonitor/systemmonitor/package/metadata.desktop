@@ -21,6 +21,7 @@ Name[sk]=Senzor monitorovania systému
 Name[sl]=Sistemski nadzornik senzorja
 Name[sv]=Systemövervakningssensor
 Name[uk]=Датчик нагляду за системою
+Name[x-test]=xxSystem monitor Sensorxx
 Name[zh_TW]=系統監視器感測器
 Comment=Displays a configurable chart of a system monitor sensor
 Comment[ca]=Mostra un diagrama configurable d'un sensor del monitor del sistema
@@ -42,6 +43,7 @@ Comment[sk]=Zobrazuje konfigurovateľný graf senzoru monitorovania systému
 Comment[sl]=Prikaže nastavljiv grafikon sistemskega monitorja senzorja
 Comment[sv]=Visar ett anpassningsbart diagram av en systemövervakningssensor
 Comment[uk]=Показує придатну до налаштовування діаграму на основі даних датчика нагляду за системою
+Comment[x-test]=xxDisplays a configurable chart of a system monitor sensorxx
 Comment[zh_TW]=顯示可設定的系統監視器感測器圖表
 Icon=ksysguardd
 

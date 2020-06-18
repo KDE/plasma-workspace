@@ -64,6 +64,7 @@ Name[tr]=Yapıştır
 Name[ug]=چاپلا
 Name[uk]=Вставка
 Name[wa]=Aclaper
+Name[x-test]=xxPastexx
 Name[zh_CN]=粘贴
 Name[zh_TW]=貼上
 Type=Service
@@ -128,6 +129,7 @@ Comment[ug]=چاپلاش تاختىدىكى مەزمۇندىن  كىچىك ئە�
 Comment[uk]=Створює віджет з вмістом буфера обміну даними
 Comment[vi]=Tạo một widget từ nội dung của bảng nhớ tạm
 Comment[wa]=Ahive ene ahesse avou ç' k' i gn a e presse-papî
+Comment[x-test]=xxCreates a widget from the contents of the clipboardxx
 Comment[zh_CN]=用剪贴板内容创建小部件
 Comment[zh_TW]=從剪貼簿內容建立一元件
 
