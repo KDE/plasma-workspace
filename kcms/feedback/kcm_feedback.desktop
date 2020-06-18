@@ -38,6 +38,7 @@ Name[sk]=Používateľská odozva
 Name[sv]=Användaråterkoppling
 Name[tg]=Изҳори назари корбар
 Name[uk]=Відгуки користувача
+Name[x-test]=xxUser Feedbackxx
 Name[zh_CN]=用户反馈
 Name[zh_TW]=使用者意見回應
 Comment=Configure user feedback settings
@@ -65,6 +66,7 @@ Comment[ru]=Настройка параметров обратной связи
 Comment[sk]=Nastaviť používateľskú odozvu
 Comment[sv]=Anpassa inställningar av användaråterkoppling
 Comment[uk]=Налаштовування системи відгуків користувача
+Comment[x-test]=xxConfigure user feedback settingsxx
 Comment[zh_CN]=配置用户反馈设置
 Comment[zh_TW]=設定使用者意見回應設定
 

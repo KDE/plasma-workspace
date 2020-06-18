@@ -48,6 +48,7 @@ Name[sv]=Utrymmesanvändning för hårddisk
 Name[tr]=Sabit Disk Alanı Kullanımı
 Name[uk]=Використання місця на диску
 Name[vi]=Sử dụng không gian đĩa
+Name[x-test]=xxHard Disk Space Usagexx
 Name[zh_CN]=硬盘空间使用情况
 Name[zh_TW]=硬碟空間使用量
 Comment=An applet that monitors hard disk space usage and percentage
@@ -98,6 +99,7 @@ Comment[sv]=Ett miniprogram som övervakar hårddiskutrymme och procent
 Comment[tr]=Sabit disk kullanımını izleyen ve yüzde olarak gösteren bir programcık
 Comment[uk]=Аплет, який стежить за використанням місця на диску
 Comment[vi]=Một ứng dụng nhỏ quản lý phần trăm sử dụng không gian đĩa
+Comment[x-test]=xxAn applet that monitors hard disk space usage and percentagexx
 Comment[zh_CN]=监视硬盘空间使用率的小程序
 Comment[zh_TW]=監視硬碟空間使用量百分比的小程式
 

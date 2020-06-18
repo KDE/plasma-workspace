@@ -65,6 +65,7 @@ Name[tr]=MS Windows XP
 Name[ug]=مىكروسوفت Windows XP
 Name[uk]=MS Windows XP
 Name[wa]=MS Windows XP
+Name[x-test]=xxMS Windows XPxx
 Name[zh_CN]=微软 Windows XP
 Name[zh_TW]=MS Windows XP
 Comment=Style that uses the Windows XP style engine
@@ -128,6 +129,7 @@ Comment[tr]=Windows XP stil motorunu kullanan stil
 Comment[ug]=Windows XP دىكى ئۇسلۇب ماتورىدا ئىشلىتىلگەن ئۇسلۇب
 Comment[uk]=Стиль, що використовує рушій стилів Windows XP
 Comment[wa]=Stîle ki s' sieve do moteur di stîle di Windows XP
+Comment[x-test]=xxStyle that uses the Windows XP style enginexx
 Comment[zh_CN]=使用 Windows XP 样式引擎的风格
 Comment[zh_TW]=使用 Windows XP 樣式引擎的樣式
 [KDE]

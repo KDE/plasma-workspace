@@ -65,6 +65,7 @@ Name[tr]=MS Windows Vista
 Name[ug]=MS Windows Vista
 Name[uk]=MS Windows Vista
 Name[wa]=MS Windows Vista
+Name[x-test]=xxMS Windows Vistaxx
 Name[zh_CN]=MS Windows Vista
 Name[zh_TW]=MS Windows Vista
 Comment=Style that uses the Windows Vista style engine
@@ -128,6 +129,7 @@ Comment[tr]=Windows Vista stil motorunu kullanan stil
 Comment[ug]=Windows Vista دىكى ئۇسلۇب ماتورىدا ئىشلىتىلگەن ئۇسلۇب
 Comment[uk]=Стиль, що використовує рушій стилів Windows Vista
 Comment[wa]=Stîle ki s' sieve do moteur di stîle di Windows Vista
+Comment[x-test]=xxStyle that uses the Windows Vista style enginexx
 Comment[zh_CN]=使用 Windows Vista 样式引擎的风格
 Comment[zh_TW]=使用 Windows Vista 樣式引擎的樣式
 [KDE]

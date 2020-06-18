@@ -82,6 +82,7 @@ Name[uk]=Сповіщення
 Name[uz]=Xabarnomalar
 Name[uz@cyrillic]=Хабарномалар
 Name[wa]=Notifiaedjes
+Name[x-test]=xxNotificationsxx
 Name[zh_CN]=通知
 Name[zh_TW]=通知
 Comment=Display notifications and jobs
@@ -141,6 +142,7 @@ Comment[ug]=ئۇقتۇرۇش ۋە ۋەزىپىلەرنى كۆرسىتىدۇ
 Comment[uk]=Показ сповіщень і завдань
 Comment[vi]=Hiển thị thông báo và công việc
 Comment[wa]=Håyner notifiaedjes eyet bouyes
+Comment[x-test]=xxDisplay notifications and jobsxx
 Comment[zh_CN]=显示通知和任务
 Comment[zh_TW]=顯示通知與工作
 

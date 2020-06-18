@@ -57,6 +57,7 @@ Name[tr]=Durum Bildirim Yöneticisi
 Name[ug]=ھالەت بىلدۈرگۈ باشقۇرغۇچ
 Name[uk]=Керування сповіщенням про стан
 Name[wa]=Manaedjeu do notifiaedje d' estat
+Name[x-test]=xxStatus Notifier Managerxx
 Name[zh_CN]=状态通知管理器
 Name[zh_TW]=狀態通知管理員
 Comment=Manages services that provide status notifier user interfaces
@@ -114,6 +115,7 @@ Comment[ug]=ھالەت بىلدۈرگۈ ئىشلەتكۈچى ئارايۈزىن�
 Comment[uk]=Керує службами інтерфейсів користувача для сповіщення про стан
 Comment[vi]=Quản lý các dịch vụ cung cấp thông báo trạng thái
 Comment[wa]=Manaedje les siervices ki dnèt ls eterfaces uzeu d' notifiaedje di l' estat
+Comment[x-test]=xxManages services that provide status notifier user interfacesxx
 Comment[zh_CN]=状态通知协议的管理服务
 Comment[zh_TW]=管理提供狀態通知使用者介面的服務
 

@@ -60,6 +60,7 @@ Name[tr]=Panel Ayırıcı
 Name[ug]=تاختا ئارىلىقى
 Name[uk]=Розпірка панелі
 Name[wa]=Separateu e scriftôr
+Name[x-test]=xxPanel Spacerxx
 Name[zh_CN]=面板间距
 Name[zh_TW]=面板間隔器
 Comment=Reserve empty spaces within the panel.
@@ -123,6 +124,7 @@ Comment[tr]=Paneldeki boş alanları koruyun.
 Comment[ug]=تاختادا بوشلۇق قالدۇرىدۇ.
 Comment[uk]=Створює прогалини на панелі.
 Comment[wa]=Wårdez des vudes espåces e scriftôr.
+Comment[x-test]=xxReserve empty spaces within the panel.xx
 Comment[zh_CN]=在面板中预留空白。
 Comment[zh_TW]=在面板內保留空間。
 
