@@ -18,6 +18,7 @@ Name[ru]=Скорость передачи данных по сети
 Name[sk]=Rýchlosť siete
 Name[sv]=Nätverkshastighet
 Name[uk]=Швидкість мережі
+Name[x-test]=xxNetwork speedxx
 Name[zh_TW]=網路速度
 Comment=System monitor Widget that shows the download and upload data rate
 Comment[ca]=Estri del monitor del sistema que mostra la velocitat de baixada i pujada de les dades
@@ -36,6 +37,7 @@ Comment[ru]=Мониторинг скорости получения и пере
 Comment[sk]=Miniaplikácia monitorovania systému, ktorá zobrazuje množstvo sťahovaných a odosielaných dát
 Comment[sv]=Grafisk systemövervakningskomponent som visar nerladdnings- och uppladdningshastighet för data
 Comment[uk]=Віджет нагляду за системою, який показує швидкість отримання та вивантаження даних
+Comment[x-test]=xxSystem monitor Widget that shows the download and upload data ratexx
 Comment[zh_TW]=顯示下載與上傳之資料速率的系統監視器元件
 
 Type=Service
