@@ -221,6 +221,7 @@ RowLayout {
                 active: closeButton.hovered
 
                 Charts.PieChart {
+                    id: chart
                     anchors.fill: parent
                     anchors.margins: -Math.round(units.devicePixelRatio)
 
@@ -231,12 +232,12 @@ RowLayout {
 
                     range { from: 0; to: notificationHeading.timeout; automatic: false }
 
-                    valueSources: Charts.SingleValueSource { value: notificationHeading.timeout - notificationHeading.remainingTime }
-                    colorSource: Charts.SingleValueSource { value: "transparent" }
-
-                    backgroundColor: theme.highlightColor
+                    valueSources: Charts.SingleValueSource { value: notificationHeading.remainingTime }
+                    colorSource: Charts.SingleValueSource { value: theme.highlightColor }
 
                     thickness: Math.round(units.devicePixelRatio) * 5
+
+                    transform: Scale { origin.x: chart.width / 2; xScale: -1 }
                 }
             }
         }
