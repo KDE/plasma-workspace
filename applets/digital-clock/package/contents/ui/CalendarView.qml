@@ -23,12 +23,12 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-Item {
+PlasmaComponents3.Page {
     id: calendar
 
     // The "sensible" values
-    property int _minimumWidth: rootLayout.childrenRect.width + (rootLayout.anchors.margins * 2)
-    property int _minimumHeight: rootLayout.childrenRect.height + (rootLayout.anchors.margins * 2)
+    property int _minimumWidth: rootLayout.childrenRect.width + (calendar.paddings * 2)
+    property int _minimumHeight: rootLayout.childrenRect.height + (calendar.paddings * 2) + headerArea.height
 
     Layout.minimumWidth: _minimumWidth
     Layout.minimumHeight: _minimumHeight
@@ -37,6 +37,7 @@ Item {
     Layout.maximumWidth: _minimumWidth
     Layout.maximumHeight: _minimumHeight
 
+    readonly property int paddings: units.smallSpacing
     readonly property bool showAgenda: PlasmaCalendar.EventPluginsManager.enabledPlugins.length > 0
     readonly property bool showClocks: plasmoid.configuration.selectedTimeZones.length > 1
 
@@ -52,6 +53,33 @@ Item {
         monthView.resetToToday();
     }
 
+    // Header containing date and pin button
+    header: PlasmaExtras.PlasmoidHeading {
+        id: headerArea
+
+        RowLayout {
+            width: parent.width
+
+            PlasmaExtras.Heading {
+                Layout.fillWidth: true
+                Layout.leftMargin: calendar.paddings // Match calendar title
+
+                level: 1
+
+                text: monthView.currentDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
+            }
+            // Allows the user to keep the calendar open for reference
+            PlasmaComponents3.ToolButton {
+                checkable: true
+                checked: plasmoid.configuration.pin
+                onToggled: plasmoid.configuration.pin = checked
+                icon.name: "window-pin"
+                PlasmaComponents3.ToolTip {
+                    text: i18n("Keep Open")
+                }
+            }
+        }
+    }
     // Top-level layout containing:
     // - Left column with current date header, calendar, and agenda view
     // - Right column with world clocks
@@ -61,84 +89,81 @@ Item {
         anchors {
             top: parent.top
             left: parent.left
-            margins: units.largeSpacing
+            margins: calendar.paddings
         }
 
-        // Left column containing header, calendar, and event view
+        spacing: calendar.paddings
+
+        // Left column containing calendar
+        // ===============================
+        // TODO KF6: remove the `Item` wrapper, which this is only needed since
+        // PlasmaCalendar.MonthView internally has `anchors.fill:parent` set on
+        // it, erroneously expecting to never be in a Layout
+        Item {
+            Layout.fillWidth: true
+            Layout.minimumHeight: units.gridUnit * 22
+            Layout.minimumWidth: units.gridUnit * 22
+
+            PlasmaCalendar.MonthView {
+                id: monthView
+                borderOpacity: 0.25
+                today: root.tzDate
+                showWeekNumbers: plasmoid.configuration.showWeekNumbers
+            }
+        }
+
+
+        // Vertical separator line between columns
+        // =======================================
+        PlasmaCore.SvgItem {
+            visible: rightColumn.visible
+
+            Layout.preferredWidth: naturalSize.width
+            Layout.fillHeight: true
+            // Unify margins because the calendar includes its own
+            Layout.topMargin: calendar.paddings
+            Layout.rightMargin: calendar.paddings
+
+            elementId: "vertical-line"
+            svg: PlasmaCore.Svg {
+                imagePath: "widgets/line"
+            }
+        }
+
+
+        // Right column containing agenda view and time zones
+        // ==================================================
         ColumnLayout {
-            id: leftColumnLayout
+            id: rightColumn
 
-            Layout.minimumWidth: units.gridUnit * 19
+            visible: agenda.visible || worldClocks.visible
 
-            function dateString(format) {
-                return Qt.formatDate(monthView.currentDate, format);
-            }
+            Layout.minimumWidth: units.gridUnit * 14
 
-            // Header for the calendar: Current day, month, and year
-            RowLayout {
-                id: currentDateHeaderLayout
+            // Agenda view stuff
+            // -----------------
+            // Header text
+            PlasmaExtras.Heading {
+                visible: agenda.visible
 
-                PlasmaComponents.Label {
-                    height: dayAndMonthLayout.height
-                    width: paintedWidth
-                    font.pixelSize: dayAndMonthLayout.height
-                    font.weight: Font.Light
-                    text: leftColumnLayout.dateString("dd")
-                    opacity: 0.6
-                }
-
-                ColumnLayout {
-                    id: dayAndMonthLayout
-                    PlasmaExtras.Heading {
-                        level: 1
-                        elide: Text.ElideRight
-                        text: leftColumnLayout.dateString("dddd")
-                    }
-                    PlasmaComponents.Label {
-                        elide: Text.ElideRight
-                        text: Qt.locale().standaloneMonthName(monthView.currentDate.getMonth())
-                                        + leftColumnLayout.dateString(" yyyy")
-                    }
-                }
-            }
-
-
-            // Horizontal separator line
-            PlasmaCore.SvgItem {
                 Layout.fillWidth: true
-                Layout.preferredHeight: naturalSize.height
-                elementId: "horizontal-line"
-                svg: PlasmaCore.Svg {
-                    imagePath: "widgets/line"
-                }
+
+                level: 2
+
+                text: i18n("Events")
+                maximumLineCount: 1
+                elide: Text.ElideRight
             }
 
-
-            // Calendar
-            // TODO KF6: remove the `Item` wrapper, which this is only needed since
-            // PlasmaCalendar.MonthView internally has `anchors.fill:parent` set on
-            // it, erroneously expecting to never be in a Layout
-            Item {
-                id: monthViewContainer
-                Layout.fillWidth: true
-                Layout.minimumHeight: units.gridUnit * 19
-
-                PlasmaCalendar.MonthView {
-                    id: monthView
-                    borderOpacity: 0.25
-                    today: root.tzDate
-                    showWeekNumbers: plasmoid.configuration.showWeekNumbers
-                }
-            }
-
-
-            // Agenda view
+            // Agenda view itself
             Item {
                 id: agenda
                 visible: calendar.showAgenda
 
                 Layout.fillWidth: true
-                Layout.minimumHeight: units.gridUnit * 12
+                Layout.fillHeight: true
+                Layout.minimumHeight: units.gridUnit * 4
+                Layout.leftMargin: -units.smallSpacing
 
                 function formatDateWithoutYear(date) {
                     // Unfortunatelly Qt overrides ECMA's Date.toLocaleDateString(),
@@ -318,7 +343,7 @@ Item {
                                                 ? Qt.formatTime(modelData.endDateTime)
                                                 : agenda.formatDateWithoutYear(modelData.endDateTime)
                                         horizontalAlignment: Qt.AlignRight
-                                        enabled: false
+                                        opacity: 0.7
 
                                         visible: eventItem.hasTime
                                     }
@@ -333,7 +358,6 @@ Item {
                                         Layout.column: 2
                                         Layout.fillWidth: true
 
-                                        font.weight: Font.Bold
                                         elide: Text.ElideRight
                                         text: modelData.title
                                         verticalAlignment: Text.AlignVCenter
@@ -343,6 +367,8 @@ Item {
 
                                     PlasmaComponents.Label {
                                         id: eventDescription
+
+                                        opacity: 0.7
 
                                         Layout.row: 1
                                         Layout.column: 2
@@ -357,13 +383,6 @@ Item {
                                     }
                                 }
                             }
-                        }
-
-                        section.property: "modelData.eventType"
-                        section.delegate: PlasmaExtras.Heading {
-                            level: 3
-                            elide: Text.ElideRight
-                            text: section
                         }
                     }
                 }
@@ -381,58 +400,48 @@ Item {
                     visible: holidaysList.count == 0
                 }
             }
-        }
 
-
-        // Vertical separator line between columns
-        PlasmaCore.SvgItem {
-            visible: calendar.showClocks
-            Layout.preferredWidth: naturalSize.width
-            Layout.leftMargin: units.largeSpacing
-            Layout.rightMargin: units.largeSpacing
-            Layout.fillHeight: true
-            elementId: "vertical-line"
-            svg: PlasmaCore.Svg {
-                imagePath: "widgets/line"
-            }
-        }
-
-
-        // List of world clocks
-        ColumnLayout {
-            id: worldClocks
-
-            visible: calendar.showClocks
-
-            Layout.minimumWidth: units.gridUnit * 12
-            Layout.fillHeight: true
-
-            // Header text
-            PlasmaExtras.Heading {
-                Layout.minimumHeight: currentDateHeaderLayout.height
-                verticalAlignment: Text.AlignBottom
-                text: i18n("Time Zones")
-                maximumLineCount: 1
-                elide: Text.ElideRight
-            }
-
-            // Horizontal separator line
+            // Horizontal separator line between events and time zones
             PlasmaCore.SvgItem {
+                visible: worldClocks.visible && agenda.visible
+
                 Layout.fillWidth: true
                 Layout.preferredHeight: naturalSize.height
+
                 elementId: "horizontal-line"
                 svg: PlasmaCore.Svg {
                     imagePath: "widgets/line"
                 }
             }
 
-            // Clocks list
-            PlasmaExtras.ScrollArea {
+            // Clocks stuff
+            // ------------
+            // Header text
+            PlasmaExtras.Heading {
+                visible: worldClocks.visible
+
                 Layout.fillWidth: true
-                Layout.fillHeight: true
+
+                level: 2
+
+                text: i18n("Time Zones")
+                maximumLineCount: 1
+                elide: Text.ElideRight
+            }
+
+            // Clocks view itself
+            PlasmaExtras.ScrollArea {
+                id: worldClocks
+                visible: calendar.showClocks
+
+                Layout.fillWidth: true
+                Layout.fillHeight: !agenda.visible
+                Layout.leftMargin: -units.smallSpacing
 
                 ListView {
                     id: clocksList
+
+                    width: parent.width
 
                     model: {
                         var timezones = [];
@@ -446,6 +455,10 @@ Item {
                     delegate: PlasmaComponents.ListItem {
                         id: listItem
                         readonly property bool isCurrentTimeZone: modelData === plasmoid.configuration.lastSelectedTimezone
+                        separatorVisible: false
+
+                        width: clocksList.width
+                        height: units.gridUnit + units.smallSpacing
 
                         MouseArea {
                             anchors.fill: parent
@@ -453,46 +466,28 @@ Item {
                             onClicked: plasmoid.configuration.lastSelectedTimezone = modelData
                         }
 
-                        ColumnLayout {
+                        RowLayout {
+                            anchors.fill: parent
 
-                            width: clocksList.width
-                            spacing: 0
-
-                            PlasmaExtras.Heading {
-                                Layout.fillWidth: true
-                                level: 3
+                            PlasmaComponents3.Label {
                                 text: root.nameForZone(modelData)
                                 font.weight: listItem.isCurrentTimeZone ? Font.Bold : Font.Normal
                                 maximumLineCount: 1
                                 elide: Text.ElideRight
                             }
 
-                            PlasmaExtras.Heading {
+                            PlasmaComponents3.Label {
                                 Layout.fillWidth: true
-                                level: 5
+                                horizontalAlignment: Qt.AlignRight
                                 text: root.timeForZone(modelData)
                                 font.weight: listItem.isCurrentTimeZone ? Font.Bold : Font.Normal
-                                maximumLineCount: 2
                                 elide: Text.ElideRight
-                                opacity: 0.6
+                                maximumLineCount: 1
                             }
                         }
                     }
                 }
             }
-        }
-    }
-
-
-    // Allows the user to keep the calendar open for reference
-    PlasmaComponents3.ToolButton {
-        anchors.right: parent.right
-        checkable: true
-        checked: plasmoid.configuration.pin
-        onToggled: plasmoid.configuration.pin = checked
-        icon.name: "window-pin"
-        PlasmaComponents3.ToolTip {
-            text: i18n("Keep Open")
         }
     }
 }
