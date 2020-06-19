@@ -134,8 +134,6 @@ void JobPrivate::updateHasDetails()
         || m_processedBytes > 0
         || m_processedFiles > 0
         || m_processedDirectories > 0
-        || !m_descriptionLabel1.isEmpty()
-        || !m_descriptionLabel2.isEmpty()
         || !m_descriptionValue1.isEmpty()
         || !m_descriptionValue2.isEmpty()
         || m_speed > 0;

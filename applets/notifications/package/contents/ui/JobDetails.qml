@@ -79,8 +79,7 @@ GridLayout {
             Component.onCompleted: bindText()
             function bindText() {
                 text = Qt.binding(function() {
-                    return jobDetails["descriptionLabel" + modelData] && jobDetails["descriptionValue" + modelData]
-                            ? jobDetails["descriptionValue" + modelData] : "";
+                    return jobDetails["descriptionValue" + modelData] || "";
                 });
             }
 
