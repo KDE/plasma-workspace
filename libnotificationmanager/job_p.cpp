@@ -131,9 +131,11 @@ void JobPrivate::updateHasDetails()
     const bool hasDetails = m_totalBytes > 0
         || m_totalFiles > 0
         || m_totalDirectories > 0
+        || m_totalItems > 0
         || m_processedBytes > 0
         || m_processedFiles > 0
         || m_processedDirectories > 0
+        || m_processedItems > 0
         || !m_descriptionLabel1.isEmpty()
         || !m_descriptionLabel2.isEmpty()
         || !m_descriptionValue1.isEmpty()
@@ -278,6 +280,8 @@ void JobPrivate::setTotalAmount(quint64 amount, const QString &unit)
         updateField(amount, m_totalFiles, &Job::totalFilesChanged);
     } else if (unit == QLatin1String("dirs")) {
         updateField(amount, m_totalDirectories, &Job::totalDirectoriesChanged);
+    } else if (unit == QLatin1String("items")) {
+        updateField(amount, m_totalItems, &Job::totalItemsChanged);
     }
     updateHasDetails();
 }
@@ -290,6 +294,8 @@ void JobPrivate::setProcessedAmount(quint64 amount, const QString &unit)
         updateField(amount, m_processedFiles, &Job::processedFilesChanged);
     } else if (unit == QLatin1String("dirs")) {
         updateField(amount, m_processedDirectories, &Job::processedDirectoriesChanged);
+    } else if (unit == QLatin1String("items")) {
+        updateField(amount, m_processedItems, &Job::processedItemsChanged);
     }
     updateHasDetails();
 }
@@ -400,10 +406,12 @@ void JobPrivate::update(const QVariantMap &properties)
     updateFieldFromProperties(properties, QStringLiteral("processedFiles"), m_processedFiles, &Job::processedFilesChanged);
     updateFieldFromProperties(properties, QStringLiteral("processedBytes"), m_processedBytes, &Job::processedBytesChanged);
     updateFieldFromProperties(properties, QStringLiteral("processedDirectories"), m_processedDirectories, &Job::processedDirectoriesChanged);
+    updateFieldFromProperties(properties, QStringLiteral("Items"), m_processedItems, &Job::processedItemsChanged);
 
     updateFieldFromProperties(properties, QStringLiteral("totalFiles"), m_totalFiles, &Job::totalFilesChanged);
     updateFieldFromProperties(properties, QStringLiteral("totalBytes"), m_totalBytes, &Job::totalBytesChanged);
     updateFieldFromProperties(properties, QStringLiteral("totalDirectories"), m_totalDirectories, &Job::totalDirectoriesChanged);
+    updateFieldFromProperties(properties, QStringLiteral("totalItems"), m_totalItems, &Job::totalItemsChanged);
 
     updateFieldFromProperties(properties, QStringLiteral("descriptionLabel1"), m_descriptionLabel1, &Job::descriptionLabel1Changed);
     updateFieldFromProperties(properties, QStringLiteral("descriptionValue1"), m_descriptionValue1, &Job::descriptionValue1Changed);

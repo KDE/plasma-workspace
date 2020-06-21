@@ -104,7 +104,7 @@ GridLayout {
     }
 
     Repeater {
-        model: ["Bytes", "Files", "Directories"]
+        model: ["Bytes", "Files", "Directories", "Items"]
 
         PlasmaExtras.DescriptiveLabel {
             Layout.column: 1
@@ -127,6 +127,9 @@ GridLayout {
                         case "Directories":
                             return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many dirs have been copied", "%2 of %1 folder", "%2 of %1 folders",
                                          total, processed);
+                        case "Items":
+                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many items (that includes files and dirs) have been copied", "%2 of %1 item", "%2 of %1 items",
+                                         total, processed);
                         }
                     } else {
                         switch(modelData) {
@@ -136,6 +139,8 @@ GridLayout {
                             return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 file", "%1 files", (processed || total));
                         case "Directories":
                             return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 folder", "%1 folders", (processed || total));
+                        case "Items":
+                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 item", "%1 items", (processed || total));
                         }
                     }
                 }

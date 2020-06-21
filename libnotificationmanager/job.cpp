@@ -202,6 +202,11 @@ qulonglong Job::processedDirectories() const
     return d->m_processedDirectories;
 }
 
+qulonglong Job::processedItems() const
+{
+    return d->m_processedItems;
+}
+
 qulonglong Job::totalBytes() const
 {
     return d->m_totalBytes;
@@ -215,6 +220,11 @@ qulonglong Job::totalFiles() const
 qulonglong Job::totalDirectories() const
 {
     return d->m_totalDirectories;
+}
+
+qulonglong Job::totalItems() const
+{
+    return d->m_totalItems;
 }
 
 QString Job::descriptionLabel1() const

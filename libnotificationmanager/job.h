@@ -99,10 +99,12 @@ class NOTIFICATIONMANAGER_EXPORT Job : public QObject
     Q_PROPERTY(qulonglong processedBytes READ processedBytes NOTIFY processedBytesChanged)
     Q_PROPERTY(qulonglong processedFiles READ processedFiles NOTIFY processedFilesChanged)
     Q_PROPERTY(qulonglong processedDirectories READ processedDirectories NOTIFY processedDirectoriesChanged)
+    Q_PROPERTY(qulonglong processedItems READ processedItems NOTIFY processedItemsChanged)
 
     Q_PROPERTY(qulonglong totalBytes READ totalBytes NOTIFY totalBytesChanged)
     Q_PROPERTY(qulonglong totalFiles READ totalFiles NOTIFY totalFilesChanged)
     Q_PROPERTY(qulonglong totalDirectories READ totalDirectories NOTIFY totalDirectoriesChanged)
+    Q_PROPERTY(qulonglong totalItems READ totalItems NOTIFY totalItemsChanged)
 
     Q_PROPERTY(QString descriptionLabel1 READ descriptionLabel1 NOTIFY descriptionLabel1Changed)
     Q_PROPERTY(QString descriptionValue1 READ descriptionValue1 NOTIFY descriptionValue1Changed)
@@ -179,10 +181,12 @@ public:
     qulonglong processedBytes() const;
     qulonglong processedFiles() const;
     qulonglong processedDirectories() const;
+    qulonglong processedItems() const;
 
     qulonglong totalBytes() const;
     qulonglong totalFiles() const;
     qulonglong totalDirectories() const;
+    qulonglong totalItems() const;
 
     QString descriptionLabel1() const;
     QString descriptionValue1() const;
@@ -217,10 +221,12 @@ signals:
     void processedBytesChanged();
     void processedFilesChanged();
     void processedDirectoriesChanged();
+    void processedItemsChanged();
     void processedAmountChanged();
     void totalBytesChanged();
     void totalFilesChanged();
     void totalDirectoriesChanged();
+    void totalItemsChanged();
     void totalAmountChanged();
     void descriptionLabel1Changed();
     void descriptionValue1Changed();

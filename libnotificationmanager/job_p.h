@@ -150,10 +150,12 @@ private:
     qulonglong m_processedBytes = 0;
     qulonglong m_processedFiles = 0;
     qulonglong m_processedDirectories = 0;
+    qulonglong m_processedItems = 0;
 
     qulonglong m_totalBytes = 0;
     qulonglong m_totalFiles = 0;
     qulonglong m_totalDirectories = 0;
+    qulonglong m_totalItems = 0;
 
     QString m_descriptionLabel1;
     QString m_descriptionValue1;
