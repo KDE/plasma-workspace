@@ -414,6 +414,9 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
             // which can happen when an application completely reloads this menu.
             // When the action is deleted deferred, it is removed from the menu.
             action->deleteLater();
+            if (action->menu()) {
+                action->menu()->deleteLater();
+            }
             d->m_actionForId.remove(id);
         }
     }
