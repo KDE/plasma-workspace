@@ -345,12 +345,10 @@ QtObject {
             const rightMostX = screenRect.x + screenRect.width - popupEdgeDistance - popupEffectiveWidth;
 
             // If available screen rect is narrower than the popup, center it in the available rect
-            if (screenRect.width < popupEffectiveWidth) {
+            if (screenRect.width < popupEffectiveWidth || effectivePopupLocation & Qt.AlignHCenter) {
                 popup.x = screenRect.x + (screenRect.width - popupEffectiveWidth) / 2
             } else if (effectivePopupLocation & Qt.AlignLeft) {
                 popup.x = leftMostX;
-            } else if (effectivePopupLocation & Qt.AlignHCenter) {
-                popup.x = screenRect.x + popupEdgeDistance + (screenRect.width - popupEffectiveWidth) / 2;
             } else if (effectivePopupLocation & Qt.AlignRight) {
                 popup.x = rightMostX;
             }
