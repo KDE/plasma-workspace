@@ -167,10 +167,19 @@ void View::loadConfig()
 
 bool View::event(QEvent *event)
 {
+    if (KWindowSystem::isPlatformWayland() && event->type() == QEvent::Expose && !dynamic_cast<QExposeEvent*>(event)->region().isNull()) {
+        auto surface = KWayland::Client::Surface::fromWindow(this);
+        auto shellSurface = KWayland::Client::PlasmaShellSurface::get(surface);
+        if (shellSurface && isVisible()) {
+            shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
+            shellSurface->setPanelBehavior(KWayland::Client::PlasmaShellSurface::PanelBehavior::WindowsGoBelow);
+            shellSurface->setPanelTakesFocus(true);
+        }
+    }
+    const bool retval = Dialog::event(event);
     // QXcbWindow overwrites the state in its show event. There are plans
     // to fix this in 5.4, but till then we must explicitly overwrite it
     // each time.
-    const bool retval = Dialog::event(event);
     bool setState = event->type() == QEvent::Show;
     if (event->type() == QEvent::PlatformSurface) {
         setState = (static_cast<QPlatformSurfaceEvent*>(event)->surfaceEventType() == QPlatformSurfaceEvent::SurfaceCreated);
@@ -178,15 +187,7 @@ bool View::event(QEvent *event)
     if (setState) {
         KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
     }
-    if (KWindowSystem::isPlatformWayland() && event->type() == QEvent::Expose && !static_cast<QExposeEvent*>(event)->region().isNull()) {
-        auto surface = KWayland::Client::Surface::fromWindow(this);
-        auto shellSurface = KWayland::Client::PlasmaShellSurface::get(surface);
-        if (shellSurface && isVisible()) {
-            shellSurface->setPanelBehavior(KWayland::Client::PlasmaShellSurface::PanelBehavior::WindowsGoBelow);
-            shellSurface->setPanelTakesFocus(true);
-            shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
-        }
-    }
+
     return retval;
 }
 
