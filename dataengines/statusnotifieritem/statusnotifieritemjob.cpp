@@ -24,7 +24,8 @@ StatusNotifierItemJob::StatusNotifierItemJob(StatusNotifierItemSource *source, c
     ServiceJob(source->objectName(), operation, parameters, parent),
     m_source(source)
 {
-    connect(source, SIGNAL(contextMenuReady(QMenu*)), this, SLOT(contextMenuReady(QMenu*)));
+    // Queue connection, so that all 'deleteLater' are performed before we use updated menu.
+    connect(source, SIGNAL(contextMenuReady(QMenu*)), this, SLOT(contextMenuReady(QMenu*)), Qt::QueuedConnection);
     connect(source, &StatusNotifierItemSource::activateResult, this, &StatusNotifierItemJob::activateCallback);
 }
 
