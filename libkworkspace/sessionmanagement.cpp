@@ -47,7 +47,7 @@ class ShutdownIface : public OrgKdeShutdownInterface
     Q_OBJECT
 public:
     ShutdownIface()
-        : OrgKdeShutdownInterface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/Shutdown"), QDBusConnection::sessionBus())
+        : OrgKdeShutdownInterface(QStringLiteral("org.kde.Shutdown"), QStringLiteral("/Shutdown"), QDBusConnection::sessionBus())
     {
     }
 };
