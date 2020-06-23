@@ -47,7 +47,7 @@ RowLayout {
         Layout.rightMargin: units.smallSpacing
         visible: rootItem.showingProgress
         from: 0
-        to: 100
+        to: rootItem.osdMaxValue
         value: Number(rootItem.osdValue)
     }
 

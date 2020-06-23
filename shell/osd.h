@@ -45,6 +45,7 @@ public Q_SLOTS:
     void brightnessChanged(int percent);
     void keyboardBrightnessChanged(int percent);
     void volumeChanged(int percent);
+    void volumeChanged(int percent, int maximumPercent);
     void microphoneVolumeChanged(int percent);
     void mediaPlayerVolumeChanged(int percent, const QString &playerName, const QString &playerIconName);
     void kbdLayoutChanged(const QString &layoutName);
@@ -66,7 +67,7 @@ private Q_SLOTS:
 private:
     bool init();
 
-    void showProgress(const QString &icon, const int percent, const QString &additionalText = QString());
+    void showProgress(const QString &icon, const int percent, const int maximumPercent, const QString &additionalText = QString());
     void showOsd();
 
     QUrl m_osdUrl;

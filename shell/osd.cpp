@@ -43,15 +43,20 @@ Osd::~Osd()
 
 void Osd::brightnessChanged(int percent)
 {
-    showProgress(QStringLiteral("video-display-brightness"), percent);
+    showProgress(QStringLiteral("video-display-brightness"), percent, 100);
 }
 
 void Osd::keyboardBrightnessChanged(int percent)
 {
-    showProgress(QStringLiteral("input-keyboard-brightness"), percent);
+    showProgress(QStringLiteral("input-keyboard-brightness"), percent, 100);
 }
 
 void Osd::volumeChanged(int percent)
+{
+    volumeChanged(percent, 100);
+}
+
+void Osd::volumeChanged(int percent, int maximumPercent)
 {
     QString icon;
     if (percent <= 0) {
@@ -66,7 +71,7 @@ void Osd::volumeChanged(int percent)
         icon = QStringLiteral("audio-volume-high");
     }
 
-    showProgress(icon, percent);
+    showProgress(icon, percent, maximumPercent);
 }
 
 void Osd::microphoneVolumeChanged(int percent)
@@ -84,7 +89,7 @@ void Osd::microphoneVolumeChanged(int percent)
         icon = QStringLiteral("microphone-sensitivity-high");
     }
 
-    showProgress(icon, percent);
+    showProgress(icon, percent, 100);
 }
 
 void Osd::mediaPlayerVolumeChanged(int percent, const QString &playerName, const QString &playerIconName)
@@ -92,7 +97,7 @@ void Osd::mediaPlayerVolumeChanged(int percent, const QString &playerName, const
     if (percent == 0) {
         showText(playerIconName, i18nc("OSD informing that some media app is muted, eg. Amarok Muted", "%1 Muted", playerName));
     } else {
-        showProgress(playerIconName, percent, playerName);
+        showProgress(playerIconName, percent, 100, playerName);
     }
 }
 
@@ -188,16 +193,16 @@ bool Osd::init()
     return true;
 }
 
-void Osd::showProgress(const QString &icon, const int percent, const QString &additionalText)
+void Osd::showProgress(const QString &icon, const int percent, const int maximumPercent, const QString &additionalText)
 {
     if (!init()) {
         return;
     }
 
     auto *rootObject = m_osdObject->rootObject();
-
-    int value = qBound(0, percent, 100);
+    int value = qBound(0, percent, maximumPercent);
     rootObject->setProperty("osdValue", value);
+    rootObject->setProperty("osdMaxValue", maximumPercent);
     rootObject->setProperty("osdAdditionalText", additionalText);
     rootObject->setProperty("showingProgress", true);
     rootObject->setProperty("icon", icon);
