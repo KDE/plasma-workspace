@@ -54,16 +54,16 @@ Control {
     contentItem: plasmoid.nativeInterface.faceController.fullRepresentation
 
     Binding {
-        target: plasmoid.nativeInterface.faceController.compactRepresentation
+        target: plasmoid.nativeInterface.faceController.fullRepresentation
         property: "formFactor"
         value: {
             switch (plasmoid.formFactor) {
-            case Faces.SensorFace.Horizontal:
-                return PlasmaCore.Types.Horizontal;
-            case Faces.SensorFace.Verical:
-                return PlasmaCore.Types.Vertical;
+            case PlasmaCore.Types.Horizontal:
+                return Faces.SensorFace.Horizontal;
+            case PlasmaCore.Types.Vertical:
+                return Faces.SensorFace.Verical;
             default:
-                return PlasmaCore.Types.Planar;
+                return Faces.SensorFace.Planar;
             }
         }
     }
