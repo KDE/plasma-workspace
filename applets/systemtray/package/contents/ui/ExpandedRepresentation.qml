@@ -87,6 +87,21 @@ Item {
             }
 
             PlasmaComponents.ToolButton {
+                // Don't show when displaying an applet's own view since then
+                // there would be two configure buttons and that would be weird
+                // TODO: in the future make this button context-sensitive so
+                // that it triggers the config action for whatever applet is
+                // being viewed, and then hide the applet's own config button
+                // if both would be shown at the same time
+                visible: !backButton.visible
+                icon.name: "configure"
+                onClicked: plasmoid.action("configure").trigger()
+                PlasmaComponents.ToolTip {
+                    text: i18n("Configure System Tray...")
+                }
+            }
+
+            PlasmaComponents.ToolButton {
                 id: pinButton
                 checkable: true
                 checked: plasmoid.configuration.pin
