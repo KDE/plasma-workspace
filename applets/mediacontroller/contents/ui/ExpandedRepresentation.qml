@@ -32,8 +32,8 @@ import QtGraphicalEffects 1.0
 Item {
     id: expandedRepresentation
 
-    Layout.minimumWidth: units.gridUnit * 15
-    Layout.minimumHeight: units.gridUnit * 23
+    Layout.minimumWidth: units.gridUnit * 14
+    Layout.minimumHeight: units.gridUnit * 14
     Layout.preferredWidth: Layout.minimumWidth * 1.5
     Layout.preferredHeight: Layout.minimumHeight * 1.5
 
