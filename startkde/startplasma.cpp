@@ -128,11 +128,27 @@ void runStartupConfig()
     KConfig config(QStringLiteral("plasma-localerc"));
     KConfigGroup formatsConfig = KConfigGroup(&config, "Formats");
 
-    const auto lcValues = {
-        "LANG", "LC_NUMERIC", "LC_TIME", "LC_MONETARY", "LC_MEASUREMENT", "LC_COLLATE", "LC_CTYPE"
-    };
-    for (auto lc : lcValues) {
-        const QString value = formatsConfig.readEntry(lc, QString());
+    // In case we don't have a value in the config file, but in the ENV variables, write it
+    if (!formatsConfig.hasKey("LANG") && !qEnvironmentVariableIsEmpty("LANG")) {
+        formatsConfig.writeEntry("LANG", qgetenv("LANG"));
+        formatsConfig.sync();
+    }
+
+    const auto explicitLCValues = { "LANG", "LC_COLLATE", "LC_CTYPE" };
+    const auto detailedLCValues = { "LC_NUMERIC", "LC_TIME", "LC_MONETARY", "LC_MEASUREMENT" };
+    const QString lcLang =  formatsConfig.readEntry("LANG");
+    const bool useDetailed = formatsConfig.readEntry("useDetailed", false);
+
+    // These values have to explicitly set
+    for (auto lc : explicitLCValues) {
+        const QString value = formatsConfig.readEntry(lc);
+        if (!value.isEmpty()) {
+            qputenv(lc, value.toUtf8());
+        }
+    }
+    // If we have the "Detailed Settings" checkbox unchecked we want to use the value from the LANG entry
+    for (auto lc : detailedLCValues) {
+        const QString value = useDetailed ? formatsConfig.readEntry(lc) : lcLang;
         if (!value.isEmpty()) {
             qputenv(lc, value.toUtf8());
         }
@@ -142,11 +158,6 @@ void runStartupConfig()
     const QString value = languageConfig.readEntry("LANGUAGE", QString());
     if (!value.isEmpty()) {
         qputenv("LANGUAGE", value.toUtf8());
-    }
-
-    if (!formatsConfig.hasKey("LANG") && !qEnvironmentVariableIsEmpty("LANG")) {
-        formatsConfig.writeEntry("LANG", qgetenv("LANG"));
-        formatsConfig.sync();
     }
 }
 
