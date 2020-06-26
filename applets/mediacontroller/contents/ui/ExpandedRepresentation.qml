@@ -165,9 +165,9 @@ Item {
                     layer.effect: GaussianBlur {
                         cached: true
 
-                        radius: 256
+                        radius: 128
                         deviation: 12
-                        samples: 129
+                        samples: 63
 
                         transparentBorder: false
                     }
