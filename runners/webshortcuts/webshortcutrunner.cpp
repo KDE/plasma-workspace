@@ -26,6 +26,7 @@
 #include <KMimeTypeTrader>
 #include <KIO/CommandLauncherJob>
 #include <KSycoca>
+#include <KShell>
 
 WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
     : Plasma::AbstractRunner(parent, args),
@@ -165,7 +166,8 @@ void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::
 
     if (!location.isEmpty()) {
         if (match.selectedAction()) {
-            auto *job = new KIO::CommandLauncherJob(m_privateAction.exec() + QLatin1Char(' ') + location.toString());
+            const auto command = m_privateAction.exec() + QLatin1Char(' ') + KShell::quoteArg(location.toString());
+            auto *job = new KIO::CommandLauncherJob(command);
             job->start();
         } else {
             QDesktopServices::openUrl(location);
