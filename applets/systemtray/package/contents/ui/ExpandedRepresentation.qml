@@ -93,11 +93,11 @@ Item {
                 // that it triggers the config action for whatever applet is
                 // being viewed, and then hide the applet's own config button
                 // if both would be shown at the same time
-                visible: !backButton.visible
+                visible: !backButton.visible && plasmoid.action("configure").enabled
                 icon.name: "configure"
                 onClicked: plasmoid.action("configure").trigger()
                 PlasmaComponents.ToolTip {
-                    text: i18n("Configure System Tray...")
+                    text: plasmoid.action("configure").text
                 }
             }
 
