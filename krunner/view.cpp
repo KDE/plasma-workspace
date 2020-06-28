@@ -51,7 +51,8 @@
 View::View(QWindow *)
     : PlasmaQuick::Dialog(),
       m_offset(.5),
-      m_floating(false)
+      m_floating(false),
+      m_maxHistoryLength(50)
 {
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
@@ -158,7 +159,12 @@ void View::loadConfig()
 {
     setFreeFloating(m_config.readEntry("FreeFloating", false));
 
-    const QStringList history = m_config.readEntry("history", QStringList());
+    m_maxHistoryLength = m_config.readEntry("maxHistoryLength", 50);
+    QStringList history = m_config.readEntry("history", QStringList());
+    // If the user already has a history but configured the config value later
+    while (history.count() > m_maxHistoryLength) {
+        history.removeLast();
+    }
     if (m_history != history) {
         m_history = history;
         emit historyChanged();
@@ -395,7 +401,7 @@ void View::addToHistory(const QString &item)
     m_history.removeOne(item);
     m_history.prepend(item);
 
-    while (m_history.count() > 50) { // make configurable?
+    while (m_history.count() > m_maxHistoryLength) {
         m_history.removeLast();
     }
 

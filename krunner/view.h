@@ -101,6 +101,7 @@ private:
     bool m_floating : 1;
     bool m_requestedVisible = false;
     QStringList m_history;
+    int m_maxHistoryLength;
 };
 
 
