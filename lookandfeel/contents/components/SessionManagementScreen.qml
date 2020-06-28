@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 Item {
     id: root
@@ -85,7 +85,7 @@ Item {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
-        PlasmaComponents.Label {
+        PlasmaComponents3.Label {
             id: notificationsLabel
             font.pointSize: Math.max(fontSize + 1,theme.defaultFont.pointSize + 1)
             Layout.maximumWidth: units.gridUnit * 16

@@ -21,7 +21,7 @@ import QtQuick 2.5
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
@@ -113,7 +113,7 @@ Item {
             Layout.fillWidth: true
             spacing: 0
 
-            PlasmaComponents.Label {
+            PlasmaComponents3.Label {
                 Layout.fillWidth: true
                 wrapMode: Text.NoWrap
                 elide: Text.ElideRight
@@ -135,9 +135,9 @@ Item {
             }
         }
 
-        PlasmaComponents.ToolButton {
+        PlasmaComponents3.ToolButton {
             enabled: mpris2Source.canGoBack
-            iconName: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
+            icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
             onClicked: {
                 fadeoutTimer.running = false
                 mpris2Source.goPrevious()
@@ -146,10 +146,10 @@ Item {
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Previous track")
         }
 
-        PlasmaComponents.ToolButton {
+        PlasmaComponents3.ToolButton {
             Layout.fillHeight: true
             Layout.preferredWidth: height // make this button bigger
-            iconName: mpris2Source.playing ? "media-playback-pause" : "media-playback-start"
+            icon.name: mpris2Source.playing ? "media-playback-pause" : "media-playback-start"
             onClicked: {
                 fadeoutTimer.running = false
                 mpris2Source.playPause()
@@ -157,9 +157,9 @@ Item {
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Play or Pause media")
         }
 
-        PlasmaComponents.ToolButton {
+        PlasmaComponents3.ToolButton {
             enabled: mpris2Source.canGoNext
-            iconName: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
+            icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
             onClicked: {
                 fadeoutTimer.running = false
                 mpris2Source.goNext()

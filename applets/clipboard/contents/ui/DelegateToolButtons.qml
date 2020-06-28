@@ -20,35 +20,47 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import QtQuick 2.0
 
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 Row {
     id: toolButtonsLayout
     visible: menuItem.ListView.isCurrentItem
 
-    PlasmaComponents.ToolButton {
+    PlasmaComponents3.ToolButton {
         // TODO: only show for items supporting actions?
-        iconSource: "system-run"
-        tooltip: i18n("Invoke action")
+        icon.name: "system-run"
         onClicked: menuItem.action(UuidRole)
+
+        PlasmaComponents3.ToolTip {
+            text: i18n("Invoke action")
+        }
     }
-    PlasmaComponents.ToolButton {
+    PlasmaComponents3.ToolButton {
         id: barcodeToolButton
-        iconSource: "view-barcode-qr"
-        tooltip: i18n("Show barcode")
+        icon.name: "view-barcode-qr"
         visible: supportsBarcodes
         onClicked: menuItem.barcode(DisplayRole)
+
+        PlasmaComponents3.ToolTip {
+            text: i18n("Show barcode")
+        }
     }
-    PlasmaComponents.ToolButton {
-        iconSource: "document-edit"
+    PlasmaComponents3.ToolButton {
+        icon.name: "document-edit"
         enabled: !clipboardSource.editing
         visible: TypeRole === 0
-        tooltip: i18n("Edit contents")
         onClicked: menuItem.edit(UuidRole)
+
+        PlasmaComponents3.ToolTip {
+            text: i18n("Edit contents")
+        }
     }
-    PlasmaComponents.ToolButton {
-        iconSource: "edit-delete"
-        tooltip: i18n("Remove from history")
+    PlasmaComponents3.ToolButton {
+        icon.name: "edit-delete"
         onClicked: menuItem.remove(UuidRole)
+
+        PlasmaComponents3.ToolTip {
+            text: i18n("Remove from history")
+        }
     }
 }

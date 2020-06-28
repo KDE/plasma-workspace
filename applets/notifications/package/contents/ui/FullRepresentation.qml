@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 2.0 as PlasmaComponents // For ModelContextMenu
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.12 as Kirigami
@@ -115,7 +115,7 @@ PlasmaComponents3.Page {
                                 Layout.preferredHeight: units.iconSizes.smallMedium
                             }
 
-                            PlasmaComponents.Label {
+                            PlasmaComponents3.Label {
                                 text: i18n("Do not disturb")
                             }
                         }
@@ -192,21 +192,27 @@ PlasmaComponents3.Page {
                     Layout.fillWidth: true
                 }
 
-                PlasmaComponents.ToolButton {
-                    iconName: "configure"
-                    // remove mnemonics
-                    tooltip: plasmoid.action("openKcm").text.replace(/([^&]*)&(.)([^&]*)/g, function (match, p1, p2, p3) {
-                        return p1.concat(p2, p3);
-                    });
+                PlasmaComponents3.ToolButton {
+                    icon.name: "configure"
                     visible: plasmoid.action("openKcm").enabled
                     onClicked: plasmoid.action("openKcm").trigger()
+
+                    // remove mnemonics
+                    PlasmaComponents3.ToolTip {
+                        text: plasmoid.action("openKcm").text.replace(/([^&]*)&(.)([^&]*)/g, function (match, p1, p2, p3) {
+                            return p1.concat(p2, p3);
+                        });
+                    }
                 }
 
-                PlasmaComponents.ToolButton {
-                    iconName: "edit-clear-history"
-                    tooltip: i18n("Clear History")
+                PlasmaComponents3.ToolButton {
+                    icon.name: "edit-clear-history"
                     enabled: plasmoid.action("clearHistory").visible
                     onClicked: action_clearHistory()
+
+                    PlasmaComponents3.ToolTip {
+                        text: i18n("Clear History")
+                    }
                 }
             }
 
@@ -559,9 +565,9 @@ PlasmaComponents3.Page {
                                     }
                                 }
 
-                                PlasmaComponents.ToolButton {
+                                PlasmaComponents3.ToolButton {
                                     Layout.preferredWidth: minimumWidth
-                                    iconName: model.isGroupExpanded ? "arrow-up" : "arrow-down"
+                                    icon.name: model.isGroupExpanded ? "arrow-up" : "arrow-down"
                                     text: model.isGroupExpanded ? i18n("Show Fewer")
                                                                 : i18nc("Expand to show n more notifications",
                                                                         "Show %1 More", (model.groupChildrenCount - model.expandedGroupChildrenCount))
@@ -607,7 +613,7 @@ PlasmaComponents3.Page {
                         wrapMode: Text.WordWrap
                     }
 
-                    PlasmaComponents.Label {
+                    PlasmaComponents3.Label {
                         // Checking valid to avoid creating ServerInfo object if everything is alright
                         readonly property NotificationManager.ServerInfo currentOwner: !NotificationManager.Server.valid ? NotificationManager.Server.currentOwner
                                                                                                                         : null

@@ -19,7 +19,7 @@
 
 import QtQuick 2.8
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 Item {
     id: root
@@ -94,7 +94,7 @@ Item {
         active: mouseArea.containsMouse || root.activeFocus
     }
 
-    PlasmaComponents.Label {
+    PlasmaComponents3.Label {
         id: label
         font.pointSize: Math.max(fontSize + 1,theme.defaultFont.pointSize + 1)
         anchors {

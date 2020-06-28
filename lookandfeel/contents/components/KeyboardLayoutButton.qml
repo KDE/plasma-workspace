@@ -20,18 +20,17 @@
 import QtQuick 2.1
 import QtQuick.Controls 1.1 as QQC
 
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import org.kde.plasma.workspace.keyboardlayout 1.0
 
-PlasmaComponents.ToolButton {
+PlasmaComponents3.ToolButton {
 
     property int fontSize: config.fontSize
 
     id: kbLayoutButton
 
-    iconName: "input-keyboard"
-    implicitWidth: minimumWidth
+    icon.name: "input-keyboard"
     text: layout.currentLayoutDisplayName
     font.pointSize: Math.max(fontSize,theme.defaultFont.pointSize)
 

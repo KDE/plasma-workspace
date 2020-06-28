@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import QtQuick 2.0
 
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 Item {
@@ -84,7 +84,7 @@ Item {
                     bottom: parent.bottom
                 }
             }
-            PlasmaComponents.Label {
+            PlasmaComponents3.Label {
                 font: theme.smallestFont
                 color: theme.backgroundColor
                 maximumLineCount: 1
@@ -104,7 +104,7 @@ Item {
             }
         }
     }
-    PlasmaComponents.Label {
+    PlasmaComponents3.Label {
         property int additionalItems: DisplayRole.split(" ").length - maximumNumberOfPreviews
         visible: additionalItems > 0
         opacity: 0.6

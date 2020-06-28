@@ -21,7 +21,7 @@
 import QtQuick 2.8
 import QtQuick.Layouts 1.1
 
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 RowLayout {
     id: replyRow
@@ -42,7 +42,7 @@ RowLayout {
         replyTextField.forceActiveFocus();
     }
 
-    PlasmaComponents.TextField {
+    PlasmaComponents3.TextField {
         id: replyTextField
         Layout.fillWidth: true
         placeholderText: replyRow.placeholderText
@@ -62,10 +62,10 @@ RowLayout {
         }
     }
 
-    PlasmaComponents.Button {
+    PlasmaComponents3.Button {
         id: replyButton
         Layout.preferredWidth: minimumWidth
-        iconName: replyRow.buttonIconName || "document-send"
+        icon.name: replyRow.buttonIconName || "document-send"
         text: replyRow.buttonText
               || i18ndc("plasma_applet_org.kde.plasma.notifications", "@action:button", "Send")
         enabled: replyTextField.length > 0

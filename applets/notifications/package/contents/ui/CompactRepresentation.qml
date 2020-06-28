@@ -22,7 +22,7 @@ import QtQuick 2.8
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import org.kde.quickcharts 1.0 as Charts
 
@@ -93,7 +93,7 @@ MouseArea {
             thickness: units.devicePixelRatio * 5
         }
 
-        PlasmaComponents.Label {
+        PlasmaComponents3.Label {
             id: countLabel
             anchors.centerIn: parent
             width: Math.round(Math.min(parent.width, parent.height) * (text.length > 1 ? 0.67 : 0.75))
@@ -109,7 +109,7 @@ MouseArea {
             visible: false
         }
 
-        PlasmaComponents.BusyIndicator {
+        PlasmaComponents3.BusyIndicator {
             id: busyIndicator
             anchors.fill: parent
             visible: false

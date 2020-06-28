@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import org.kde.plasma.private.sessions 2.0
 import "../components"
@@ -454,7 +454,7 @@ PlasmaCore.ColorScope {
                     Layout.fillWidth: true
                     spacing: units.largeSpacing
 
-                    PlasmaComponents.Button {
+                    PlasmaComponents3.Button {
                         Layout.fillWidth: true
                         font.pointSize: theme.defaultFont.pointSize + 1
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch to This Session")
@@ -462,7 +462,7 @@ PlasmaCore.ColorScope {
                         visible: sessionsModel.count > 0
                     }
 
-                    PlasmaComponents.Button {
+                    PlasmaComponents3.Button {
                         Layout.fillWidth: true
                         font.pointSize: theme.defaultFont.pointSize + 1
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Start New Session")
@@ -508,9 +508,9 @@ PlasmaCore.ColorScope {
                 margins: units.smallSpacing
             }
 
-            PlasmaComponents.ToolButton {
+            PlasmaComponents3.ToolButton {
                 text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to show/hide virtual keyboard", "Virtual Keyboard")
-                iconName: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
+                icon.name: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
                 onClicked: inputPanel.showHide()
 
                 visible: inputPanel.status == Loader.Ready

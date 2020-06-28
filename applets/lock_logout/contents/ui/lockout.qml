@@ -21,7 +21,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.0
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0
+import org.kde.plasma.components 2.0 as PlasmaComponents // For QueryDialog
 import org.kde.kquickcontrolsaddons 2.0
 import "data.js" as Data
 
@@ -119,7 +119,7 @@ Flow {
 
     Component {
         id: hibernateDialogComponent
-        QueryDialog {
+        PlasmaComponents.QueryDialog {
             titleIcon: "system-suspend-hibernate"
             titleText: i18n("Hibernate")
             message: i18n("Do you want to suspend to disk (hibernate)?")
@@ -131,11 +131,11 @@ Flow {
             onAccepted: performOperation("suspendToDisk")
         }
     }
-    property QueryDialog hibernateDialog
+    property PlasmaComponents.QueryDialog hibernateDialog
 
     Component {
         id: sleepDialogComponent
-        QueryDialog {
+        PlasmaComponents.QueryDialog {
             titleIcon: "system-suspend"
             titleText: i18nc("Suspend to RAM", "Sleep")
             message: i18n("Do you want to suspend to RAM (sleep)?")
@@ -147,7 +147,7 @@ Flow {
             onAccepted: performOperation("suspendToRam")
         }
     }
-    property QueryDialog sleepDialog
+    property PlasmaComponents.QueryDialog sleepDialog
 
     function clickHandler(what, button) {
         if (what === "suspendToDisk") {

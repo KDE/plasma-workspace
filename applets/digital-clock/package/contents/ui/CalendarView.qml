@@ -19,7 +19,7 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 2.0 as PlasmaComponents // For ListItem
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -312,7 +312,7 @@ PlasmaComponents3.Page {
                                         visible: modelData.eventColor !== ""
                                     }
 
-                                    PlasmaComponents.Label {
+                                    PlasmaComponents3.Label {
                                         id: startTimeLabel
 
                                         readonly property bool startsToday: modelData.startDateTime - monthView.currentDate >= 0
@@ -329,7 +329,7 @@ PlasmaComponents3.Page {
                                         visible: eventItem.hasTime
                                     }
 
-                                    PlasmaComponents.Label {
+                                    PlasmaComponents3.Label {
                                         id: endTimeLabel
 
                                         readonly property bool endsToday: modelData.endDateTime - monthView.currentDate <= 86400000 // 24hrs in ms
@@ -348,7 +348,7 @@ PlasmaComponents3.Page {
                                         visible: eventItem.hasTime
                                     }
 
-                                    PlasmaComponents.Label {
+                                    PlasmaComponents3.Label {
                                         id: eventTitle
 
                                         readonly property bool wrap: eventDescription.text === ""
@@ -365,7 +365,7 @@ PlasmaComponents3.Page {
                                         wrapMode: wrap ? Text.Wrap : Text.NoWrap
                                     }
 
-                                    PlasmaComponents.Label {
+                                    PlasmaComponents3.Label {
                                         id: eventDescription
 
                                         opacity: 0.7

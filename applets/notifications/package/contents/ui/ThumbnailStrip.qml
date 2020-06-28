@@ -22,7 +22,7 @@ import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
@@ -124,22 +124,21 @@ DraggableFileArea {
             source: !thumbnailer.busy && !thumbnailer.hasPreview ? thumbnailer.iconName : ""
         }
 
-        PlasmaComponents.BusyIndicator {
+        PlasmaComponents3.BusyIndicator {
             anchors.centerIn: parent
             running: thumbnailer.busy
             visible: thumbnailer.busy
         }
 
-        PlasmaComponents.Button {
+        PlasmaComponents3.Button {
             id: menuButton
             anchors {
                 top: parent.top
                 right: parent.right
                 margins: units.smallSpacing
             }
-            tooltip: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options...")
-            Accessible.name: tooltip
-            iconName: "application-menu"
+            Accessible.name: tooltip.text
+            icon.name: "application-menu"
             checkable: true
 
             onPressedChanged: {
@@ -153,6 +152,11 @@ DraggableFileArea {
                     // -1 tells it to "align bottom left of visualParent (this)"
                     fileMenu.open(-1, -1);
                 }
+            }
+
+            PlasmaComponents3.ToolTip {
+                id: tooltip
+                text: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options...")
             }
         }
     }

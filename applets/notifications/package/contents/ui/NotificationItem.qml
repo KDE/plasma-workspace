@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
@@ -361,7 +361,7 @@ ColumnLayout {
                     return buttons;
                 }
 
-                PlasmaComponents.ToolButton {
+                PlasmaComponents3.ToolButton {
                     flat: false
                     // why does it spit "cannot assign undefined to string" when a notification becomes expired?
                     text: modelData.label || ""

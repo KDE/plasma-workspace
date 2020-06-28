@@ -25,7 +25,7 @@ import QtGraphicalEffects 1.0
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as Components
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.draganddrop 2.0 as DragDrop
 
@@ -140,7 +140,7 @@ MouseArea {
         source: constrained ? null : text
     }
 
-    Components.Label {
+    PlasmaComponents3.Label {
         id : text
         text : plasmoid.title
         anchors {
@@ -148,7 +148,6 @@ MouseArea {
             bottom : parent.bottom
             right : parent.right
         }
-        height: undefined // unset Label defaults
         horizontalAlignment : Text.AlignHCenter
         visible: false // rendered by DropShadow
         maximumLineCount: 2

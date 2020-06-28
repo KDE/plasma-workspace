@@ -22,7 +22,7 @@
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 PlasmaCore.ToolTipArea {
     id: abstractItem
@@ -140,7 +140,7 @@ PlasmaCore.ToolTipArea {
             implicitHeight: !root.vertical && abstractItem.inVisibleLayout ? abstractItem.height : size
             Layout.topMargin: abstractItem.inHiddenLayout ? units.smallSpacing : 0
         }
-        PlasmaComponents.Label {
+        PlasmaComponents3.Label {
             id: label
 
             Layout.fillWidth: true

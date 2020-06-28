@@ -20,7 +20,7 @@
 import QtQuick 2.2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 2.0 as PlasmaComponents // Because PC3 ToolButton can't take a menu
 
 import QtQuick.Controls 1.3 as QQC
 

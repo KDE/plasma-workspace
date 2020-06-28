@@ -23,7 +23,7 @@ import QtQuick.Controls 2.8
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.private.appmenu 1.0 as AppMenuPrivate
 
 Item {
@@ -41,7 +41,7 @@ Item {
 
     Plasmoid.preferredRepresentation: (plasmoid.configuration.compactView || vertical) ? Plasmoid.compactRepresentation : Plasmoid.fullRepresentation
 
-    Plasmoid.compactRepresentation: PlasmaComponents.ToolButton {
+    Plasmoid.compactRepresentation: PlasmaComponents3.ToolButton {
         readonly property int fakeIndex: 0
         Layout.fillWidth: false
         Layout.fillHeight: false
@@ -50,7 +50,7 @@ Item {
         enabled:  menuAvailable
         checkable: menuAvailable && plasmoid.nativeInterface.currentIndex === fakeIndex
         checked: checkable
-        iconSource: "application-menu"
+        icon.name: "application-menu"
         onClicked: plasmoid.nativeInterface.trigger(this, 0);
     }
 
@@ -100,7 +100,7 @@ Item {
             connectedSources: ["Alt"]
         }
 
-        PlasmaComponents.ToolButton {
+        PlasmaComponents3.ToolButton {
             id: noMenuPlaceholder
             visible: buttonRepeater.count == 0
             text: plasmoid.title
@@ -113,7 +113,7 @@ Item {
             id: buttonRepeater
             model: appMenuModel.visible ? appMenuModel : null
 
-            PlasmaComponents.ToolButton {
+            PlasmaComponents3.ToolButton {
                 readonly property int buttonIndex: index
 
                 Layout.preferredWidth: minimumWidth

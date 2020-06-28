@@ -21,7 +21,7 @@
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as Components
+import org.kde.plasma.components 2.0 as Components // Date label height breaks on vertical panel with PC3 version
 import org.kde.plasma.private.digitalclock 1.0
 
 Item {

@@ -23,7 +23,7 @@ import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
@@ -117,11 +117,11 @@ ColumnLayout {
         Layout.fillWidth: true
         spacing: units.smallSpacing
 
-        PlasmaComponents.ProgressBar {
+        PlasmaComponents3.ProgressBar {
             id: progressBar
             Layout.fillWidth: true
-            minimumValue: 0
-            maximumValue: 100
+            from: 0
+            to: 100
             // TODO do we actually need the window visible check? perhaps I do because it can be in popup or expanded plasmoid
             indeterminate: visible && Window.window && Window.window.visible && percentage < 1
                            && jobItem.jobState === NotificationManager.Notifications.JobStateRunning
@@ -134,28 +134,37 @@ ColumnLayout {
         RowLayout {
             spacing: 0
 
-            PlasmaComponents.ToolButton {
+            PlasmaComponents3.ToolButton {
                 id: suspendButton
-                tooltip: i18ndc("plasma_applet_org.kde.plasma.notifications", "Pause running job", "Pause")
-                iconSource: "media-playback-pause"
+                icon.name: "media-playback-pause"
                 onClicked: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended ? jobItem.resumeJobClicked()
                                                                                                     : jobItem.suspendJobClicked()
+
+                PlasmaComponents3.ToolTip {
+                    text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Pause running job", "Pause")
+                }
             }
 
-            PlasmaComponents.ToolButton {
+            PlasmaComponents3.ToolButton {
                 id: killButton
-                tooltip: i18ndc("plasma_applet_org.kde.plasma.notifications", "Cancel running job", "Cancel")
-                iconSource: "media-playback-stop"
+                icon.name: "media-playback-stop"
                 onClicked: jobItem.killJobClicked()
+
+                PlasmaComponents3.ToolTip {
+                    text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Cancel running job", "Cancel")
+                }
             }
 
-            PlasmaComponents.ToolButton {
+            PlasmaComponents3.ToolButton {
                 id: expandButton
-                iconSource: checked ? "arrow-down" : (LayoutMirroring.enabled ? "arrow-left" : "arrow-right")
-                tooltip: checked ? i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; hides item details", "Hide Details")
-                                 : i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; expands the item to show details", "Show Details")
+                icon.name: checked ? "arrow-down" : (LayoutMirroring.enabled ? "arrow-left" : "arrow-right")
                 checkable: true
                 enabled: jobItem.jobDetails && jobItem.jobDetails.hasDetails
+
+                PlasmaComponents3.ToolTip {
+                    text: checked ? i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; hides item details", "Hide Details")
+                                  : i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; expands the item to show details", "Show Details")
+                }
             }
         }
     }
@@ -178,11 +187,10 @@ ColumnLayout {
         layoutDirection: Qt.RightToLeft
         visible: url && url.toString() !== ""
 
-        PlasmaComponents.Button {
+        PlasmaComponents3.Button {
             id: otherFileActionsButton
             height: Math.max(implicitHeight, openButton.implicitHeight)
-            iconName: "application-menu"
-            tooltip: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options...")
+            icon.name: "application-menu"
             checkable: true
             onPressedChanged: {
                 if (pressed) {
@@ -195,6 +203,10 @@ ColumnLayout {
                 }
             }
 
+            PlasmaComponents3.ToolTip {
+                text: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options...")
+            }
+
             Notifications.FileMenu {
                 id: otherFileActionsMenu
                 url: jobItem.url || ""
@@ -202,7 +214,7 @@ ColumnLayout {
             }
         }
 
-        PlasmaComponents.Button {
+        PlasmaComponents3.Button {
             id: openButton
             height: Math.max(implicitHeight, otherFileActionsButton.implicitHeight)
             // would be nice to have the file icon here?

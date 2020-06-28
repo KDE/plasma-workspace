@@ -19,7 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 2.0 as PlasmaComponents // For ContextMenu
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -33,9 +34,9 @@ ColumnLayout {
     property var header: PlasmaExtras.PlasmoidHeading {
         RowLayout {
             anchors.fill: parent
-            PlasmaComponents.Button {
+            PlasmaComponents3.Button {
                 Layout.fillWidth: true
-                iconSource: "go-previous-view"
+                icon.name: "go-previous-view"
                 text: i18n("Return to Clipboard")
                 onClicked: stack.pop()
             }
@@ -78,12 +79,15 @@ ColumnLayout {
                     });
                 }
             }
-            PlasmaComponents.ToolButton {
+            PlasmaComponents3.ToolButton {
                 id: configureButton
                 checkable: true
-                iconSource: "configure"
-                tooltip: i18n("Change the barcode type")
+                icon.name: "configure"
                 onClicked: menu.openRelative()
+
+                PlasmaComponents3.ToolTip {
+                    text: i18n("Change the barcode type")
+                }
             }
         }
     }
@@ -102,7 +106,7 @@ ColumnLayout {
             opacity: valid ? 1 : 0
         }
 
-        PlasmaComponents.Label {
+        PlasmaComponents3.Label {
             anchors.fill: parent
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
@@ -111,7 +115,7 @@ ColumnLayout {
             visible: barcodeItem.implicitWidth === 0 && barcodeItem.implicitHeight === 0
         }
 
-        PlasmaComponents.Label {
+        PlasmaComponents3.Label {
             anchors.fill: parent
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter

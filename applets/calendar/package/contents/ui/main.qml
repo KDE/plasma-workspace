@@ -21,7 +21,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import org.kde.plasma.calendar 2.0
 
@@ -59,12 +59,11 @@ Item {
             anchors.fill: parent
             source: Qt.resolvedUrl("../images/mini-calendar.svgz")
 
-            PlasmaComponents.Label {
+            PlasmaComponents3.Label {
                 anchors {
                     fill: parent
                     margins: Math.round(parent.width * 0.1)
                 }
-                height: undefined
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 1000

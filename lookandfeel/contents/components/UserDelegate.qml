@@ -20,7 +20,7 @@
 
 import QtQuick 2.8
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 Item {
     id: wrapper
@@ -159,14 +159,13 @@ Item {
         "
     }
 
-    PlasmaComponents.Label {
+    PlasmaComponents3.Label {
         id: usernameDelegate
         font.pointSize: Math.max(fontSize + 2,theme.defaultFont.pointSize + 2)
         anchors {
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter
         }
-        height: implicitHeight // work around stupid bug in Plasma Components that sets the height
         width: constrainText ? parent.width : implicitWidth
         text: wrapper.name
         style: softwareRendering ? Text.Outline : Text.Normal

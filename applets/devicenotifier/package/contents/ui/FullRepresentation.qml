@@ -27,7 +27,8 @@ import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 2.0 as PlasmaComponents // For Highlight
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 MouseArea {
@@ -117,14 +118,17 @@ MouseArea {
     Item {
         anchors.fill: parent
 
-        PlasmaComponents.ToolButton {
+        PlasmaComponents3.ToolButton {
             id: unmountAll
             visible: devicenotifier.mountedRemovables > 1;
             anchors.right: parent.right
-            iconSource: "media-eject"
-            tooltip: i18n("Click to safely remove all devices")
+            icon.name: "media-eject"
             text: i18n("Remove all")
             implicitWidth: minimumWidth
+
+            PlasmaComponents3.ToolTip {
+                text: i18n("Click to safely remove all devices")
+            }
         }
 
         PlasmaExtras.ScrollArea {

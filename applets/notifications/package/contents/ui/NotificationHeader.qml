@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.notificationmanager 1.0 as NotificationManager
@@ -48,7 +48,7 @@ RowLayout {
     property alias configurable: configureButton.visible
     property alias dismissable: dismissButton.visible
     property bool dismissed
-    property alias closeButtonTooltip: closeButton.tooltip
+    property alias closeButtonTooltip: closeButtonToolTip.text
     property alias closable: closeButton.visible
 
     property var time
@@ -187,58 +187,59 @@ RowLayout {
         id: headerButtonsRow
         spacing: 0
 
-        PlasmaComponents.ToolButton {
+        PlasmaComponents3.ToolButton {
             id: configureButton
-            tooltip: notificationHeading.configureActionLabel || i18nd("plasma_applet_org.kde.plasma.notifications", "Configure")
-            iconSource: "configure"
+            icon.name: "configure"
             visible: false
             onClicked: notificationHeading.configureClicked()
+
+            PlasmaComponents3.ToolTip {
+                text: notificationHeading.configureActionLabel || i18nd("plasma_applet_org.kde.plasma.notifications", "Configure")
+            }
         }
 
-        PlasmaComponents.ToolButton {
+        PlasmaComponents3.ToolButton {
             id: dismissButton
-            tooltip: notificationHeading.dismissed
-                     ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Opposite of minimize", "Restore")
-                     : i18nd("plasma_applet_org.kde.plasma.notifications", "Minimize")
-            iconSource: notificationHeading.dismissed ? "window-restore" : "window-minimize"
+            icon.name: notificationHeading.dismissed ? "window-restore" : "window-minimize"
             visible: false
             onClicked: notificationHeading.dismissClicked()
+
+            PlasmaComponents3.ToolTip {
+                text: notificationHeading.dismissed
+                      ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Opposite of minimize", "Restore")
+                      : i18nd("plasma_applet_org.kde.plasma.notifications", "Minimize")
+            }
         }
 
-        PlasmaComponents.ToolButton {
+        PlasmaComponents3.ToolButton {
             id: closeButton
-            tooltip: i18nd("plasma_applet_org.kde.plasma.notifications", "Close")
             visible: false
+            icon.name: "window-close"
             onClicked: notificationHeading.closeClicked()
 
-            PlasmaCore.IconItem {
-                anchors.centerIn: parent
-                width: units.iconSizes.small
-                height: width
+            PlasmaComponents3.ToolTip {
+                id: closeButtonToolTip
+                text: i18nd("plasma_applet_org.kde.plasma.notifications", "Close")
+            }
 
-                source: "window-close"
-                roundToIconSize: false
-                active: closeButton.hovered
+            Charts.PieChart {
+                id: chart
+                anchors.fill: parent
+                anchors.margins: Math.round(units.devicePixelRatio * units.smallSpacing)
 
-                Charts.PieChart {
-                    id: chart
-                    anchors.fill: parent
-                    anchors.margins: -Math.round(units.devicePixelRatio)
-
-                    opacity: (notificationHeading.remainingTime > 0 && notificationHeading.remainingTime < notificationHeading.timeout) ? 1 : 0
-                    Behavior on opacity {
-                        NumberAnimation { duration: units.longDuration }
-                    }
-
-                    range { from: 0; to: notificationHeading.timeout; automatic: false }
-
-                    valueSources: Charts.SingleValueSource { value: notificationHeading.remainingTime }
-                    colorSource: Charts.SingleValueSource { value: theme.highlightColor }
-
-                    thickness: Math.round(units.devicePixelRatio) * 5
-
-                    transform: Scale { origin.x: chart.width / 2; xScale: -1 }
+                opacity: (notificationHeading.remainingTime > 0 && notificationHeading.remainingTime < notificationHeading.timeout) ? 1 : 0
+                Behavior on opacity {
+                    NumberAnimation { duration: units.longDuration }
                 }
+
+                range { from: 0; to: notificationHeading.timeout; automatic: false }
+
+                valueSources: Charts.SingleValueSource { value: notificationHeading.remainingTime }
+                colorSource: Charts.SingleValueSource { value: theme.highlightColor }
+
+                thickness: Math.round(units.devicePixelRatio) * 5
+
+                transform: Scale { origin.x: chart.width / 2; xScale: -1 }
             }
         }
     }

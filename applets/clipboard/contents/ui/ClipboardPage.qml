@@ -22,7 +22,7 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 ColumnLayout {
@@ -81,16 +81,19 @@ ColumnLayout {
             anchors.fill: parent
             enabled: clipboardMenu.model.count > 0
 
-            PlasmaComponents.TextField {
+            PlasmaComponents3.TextField {
                 id: filter
                 placeholderText: i18n("Search...")
                 clearButtonShown: true
                 Layout.fillWidth: true
             }
-            PlasmaComponents.ToolButton {
-                iconSource: "edit-clear-history"
-                tooltip: i18n("Clear history")
+            PlasmaComponents3.ToolButton {
+                icon.name: "edit-clear-history"
                 onClicked: clipboardSource.service("", "clearHistory")
+
+                PlasmaComponents3.ToolTip {
+                    text: i18n("Clear history")
+                }
             }
         }
     }

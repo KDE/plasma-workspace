@@ -20,7 +20,7 @@
 import QtQuick 2.0
 import QtQuick.Controls.Private 1.0
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 MouseArea {
     id: wallpaperDelegate
@@ -79,17 +79,20 @@ MouseArea {
                     return QPixmapItem.Pad;
                 }
             }
-            PlasmaComponents.ToolButton {
+            PlasmaComponents3.ToolButton {
                 anchors {
                     top: parent.top
                     right: parent.right
                     margins: units.smallSpacing
                 }
-                iconSource: "list-remove"
-                tooltip: i18nd("plasma_wallpaper_org.kde.image", "Remove wallpaper")
+                icon.name: "list-remove"
                 flat: false
                 visible: model.removable
                 onClicked: imageWallpaper.removeWallpaper(model.packageName)
+
+                PlasmaComponents3.ToolTip {
+                    text: i18nd("plasma_wallpaper_org.kde.image", "Remove wallpaper")
+                }
             }
         }
     }

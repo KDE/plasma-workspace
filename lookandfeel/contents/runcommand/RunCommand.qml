@@ -19,7 +19,8 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 2.0 as PlasmaComponents // For Highlight
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.milou 0.1 as Milou
 
@@ -52,8 +53,8 @@ ColumnLayout {
 
     RowLayout {
         Layout.alignment: Qt.AlignTop
-        PlasmaComponents.ToolButton {
-            iconSource: "configure"
+        PlasmaComponents3.ToolButton {
+            icon.name: "configure"
             onClicked: {
                 runnerWindow.visible = false
                 runnerWindow.displayConfiguration()
@@ -61,9 +62,11 @@ ColumnLayout {
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure")
             Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure Search Plugins")
             visible: runnerWindow.canConfigure
-            tooltip: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure KRunner...")
+            PlasmaComponents3.ToolTip {
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure KRunner...")
+            }
         }
-        PlasmaComponents.TextField {
+        PlasmaComponents3.TextField {
             id: queryField
             property bool allowCompletion: false
 
@@ -77,7 +80,7 @@ ColumnLayout {
                                                 : i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
                                                          "Textfield placeholder text", "Search...")
 
-            PlasmaComponents.BusyIndicator {
+            PlasmaComponents3.BusyIndicator {
                 anchors {
                     right: parent.right
                     top: parent.top
@@ -193,12 +196,14 @@ ColumnLayout {
                 }
             }
         }
-        PlasmaComponents.ToolButton {
-            iconSource: "window-close"
+        PlasmaComponents3.ToolButton {
+            icon.name: "window-close"
             onClicked: runnerWindow.visible = false
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close")
             Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close Search")
-            tooltip: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close")
+            PlasmaComponents3.ToolTip {
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close")
+            }
         }
     }
 
