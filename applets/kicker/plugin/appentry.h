@@ -40,6 +40,7 @@ class AppEntry : public AbstractEntry
 
         explicit AppEntry(AbstractModel *owner, KService::Ptr service, NameFormat nameFormat);
         explicit AppEntry(AbstractModel *owner, const QString &id);
+        ~AppEntry() override;
 
         EntryType type() const override { return RunnableType; }
 
@@ -72,6 +73,7 @@ class AppEntry : public AbstractEntry
         mutable QIcon m_icon;
         KService::Ptr m_service;
         static MenuEntryEditor *m_menuEntryEditor;
+        QMetaObject::Connection m_con;
 };
 
 class AppGroupEntry : public AbstractGroupEntry

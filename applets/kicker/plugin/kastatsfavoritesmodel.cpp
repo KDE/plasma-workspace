@@ -379,10 +379,16 @@ public:
         }
 
         const QString id = data(index(row, 0), Kicker::UrlRole).toString();
-
-        return m_itemEntries.contains(id)
-                    ? m_itemEntries[id]->run(actionId, argument)
-                    : false;
+        if (m_itemEntries.contains(id)) {
+            return m_itemEntries[id]->run(actionId, argument);
+        }
+        // Entries with preferred:// can be changed by the user, BUG: 416161
+        // then the list of entries could be out of sync
+        const auto entry = m_itemEntries[m_items[row].value()];
+        if (QUrl(entry->id()).scheme() == QLatin1String("preferred")) {
+           return entry->run(actionId, argument);
+        }
+        return false;
     }
 
     void move(int from, int to)

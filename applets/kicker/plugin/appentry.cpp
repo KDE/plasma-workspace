@@ -64,6 +64,15 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id) : AbstractEntry(owne
     if (url.scheme() == QLatin1String("preferred")) {
         m_service = defaultAppByName(url.host());
         m_id = id;
+        m_con = QObject::connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), owner, [this, owner, id](){
+            KSharedConfig::openConfig()->reparseConfiguration();
+            m_service = defaultAppByName(QUrl(id).host());
+            if (m_service) {
+                init((NameFormat)owner->rootModel()->property("appNameFormat").toInt());
+                m_icon = QIcon();
+                Q_EMIT owner->layoutChanged();
+            }
+        });
     } else {
         m_service = KService::serviceByStorageId(id);
     }
@@ -273,6 +282,12 @@ KService::Ptr AppEntry::defaultAppByName(const QString& name)
     }
 
     return KService::Ptr();
+}
+
+AppEntry::~AppEntry() {
+    if (m_con){
+        QObject::disconnect(m_con);
+    }
 }
 
 AppGroupEntry::AppGroupEntry(AppsModel *parentModel, KServiceGroup::Ptr group,
