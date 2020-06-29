@@ -151,6 +151,8 @@ class NotificationThread : public QThread
 {
     Q_OBJECT
     void run() override {
+        // Prevent application exit until the thread (and hence the sound) completes
+        QEventLoopLocker(this);
         // We cannot parent to the thread itself so let's create
         // a QObject on the stack and parent everythign to it
         QObject parent;
