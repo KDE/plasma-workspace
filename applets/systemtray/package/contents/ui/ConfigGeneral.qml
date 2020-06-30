@@ -19,15 +19,14 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 import QtQuick 2.14
-import QtQuick.Controls 2.14 as QtControls
-import QtQuick.Layouts 1.14 as QtLayouts
+import QtQuick.Controls 2.14 as QQC2
 import org.kde.kirigami 2.13 as Kirigami
 
 Kirigami.FormLayout {
 
     property alias cfg_iconSize: iconSizeComboBox.currentIndex
 
-    QtControls.ComboBox {
+    QQC2.ComboBox {
         id: iconSizeComboBox
 
         Kirigami.FormData.label: i18n("Maximum icon size:")
