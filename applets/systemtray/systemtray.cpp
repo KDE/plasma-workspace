@@ -37,6 +37,7 @@
 
 #include <KActionCollection>
 #include <KAcceleratorManager>
+#include <KConfigLoader>
 #include <KLocalizedString>
 
 #include <plasma_version.h>
@@ -302,10 +303,11 @@ void SystemTray::restoreContents(KConfigGroup &group)
     QStringList newKnownItems;
     QStringList newExtraItems;
 
+    KConfigLoader *scheme = configScheme();
     KConfigGroup general = group.group("General");
 
-    QStringList knownItems = general.readEntry("knownItems", QStringList());
-    QStringList extraItems = general.readEntry("extraItems", QStringList());
+    QStringList knownItems = general.readEntry("knownItems", scheme->property("knownItems").toStringList());
+    QStringList extraItems = general.readEntry("extraItems", scheme->property("extraItems").toStringList());
 
     //Add every plasmoid that is both not enabled explicitly and not already known
     for (int i = 0; i < m_defaultPlasmoids.length(); ++i) {
@@ -325,7 +327,7 @@ void SystemTray::restoreContents(KConfigGroup &group)
         general.writeEntry("knownItems", knownItems + newKnownItems);
     }
 
-    setAllowedPlasmoids(general.readEntry("extraItems", QStringList()));
+    setAllowedPlasmoids(general.readEntry("extraItems", scheme->property("extraItems").toStringList()));
 
     emit configurationChanged(config());
 }
