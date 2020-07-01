@@ -80,9 +80,12 @@ public:
 
     void initFilters();
     void initRunningApplets();
+    void screenAdded(int screen);
+    void screenRemoved(int screen);
     void containmentDestroyed();
 
     void addContainment(Containment *containment);
+    void removeContainment(Containment *containment);
 
     /**
      * Tracks a new running applet
@@ -255,9 +258,11 @@ void WidgetExplorerPrivate::initRunningApplets()
         qWarning() << "WidgetExplorer failed to find corona";
         return;
     }
-
     appletNames.clear();
     runningApplets.clear();
+
+    QObject::connect(c, &Plasma::Corona::screenAdded, q, [this] (int screen) {screenAdded(screen);});
+    QObject::connect(c, &Plasma::Corona::screenRemoved, q, [this] (int screen) {screenRemoved(screen);});
 
     const QList<Containment*> containments = c->containments();
     for (Containment *containment : containments) {
@@ -265,11 +270,34 @@ void WidgetExplorerPrivate::initRunningApplets()
             && containment->activity() != activitiesConsumer->currentActivity()) {
             continue;
         }
-
-        addContainment(containment);
+        if (containment->screen() != -1) {
+            addContainment(containment);
+        }
     }
 
     //qDebug() << runningApplets;
+    itemModel.setRunningApplets(runningApplets);
+}
+
+void WidgetExplorerPrivate::screenAdded(int screen)
+{
+    const QList<Containment*> containments = containment->corona()->containments();
+    for (auto c : containments) {
+        if (c->screen() == screen) {
+            addContainment(c);
+        }
+    }
+    itemModel.setRunningApplets(runningApplets);
+}
+
+void WidgetExplorerPrivate::screenRemoved(int screen)
+{
+    const QList<Containment*> containments = containment->corona()->containments();
+        for (auto c : containments) {
+        if (c->lastScreen() == screen) {
+            removeContainment(c);
+        }
+    }
     itemModel.setRunningApplets(runningApplets);
 }
 
@@ -290,6 +318,22 @@ void WidgetExplorerPrivate::addContainment(Containment *containment)
         }
     }
 }
+
+void WidgetExplorerPrivate::removeContainment(Plasma::Containment *containment)
+{
+    containment->disconnect(q);
+    const QList<Applet*> applets = containment->applets();
+    for (auto applet : applets) {
+        if (applet->pluginMetaData().isValid()) {
+            Containment *childContainment = applet->property("containment").value<Containment*>();
+            if (childContainment) {
+                removeContainment(childContainment);
+            }
+            runningApplets[applet->pluginMetaData().pluginId()]--;
+        }
+    }
+}
+
 
 void WidgetExplorerPrivate::containmentDestroyed()
 {
