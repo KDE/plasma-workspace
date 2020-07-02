@@ -12,9 +12,9 @@
 <author>&Mike.McBride; &Mike.McBride.mail;</author>
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
-<!--FIXME code in workspace/kscreenlocker - docbook in workspace/plasma-desktop -->
-<date>2016-09-19</date>
-<releaseinfo>Plasma 5.8</releaseinfo>
+<!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
+<date>2020-07-02</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -23,30 +23,27 @@
 <keyword>screen locker</keyword>
 </keywordset>
 </articleinfo>
-<!--https://bugs.kde.org/show_bug.cgi?id=317156 does this effect screenlock in kf5?-->
 <para>Using this module, you can determine
-how much time must pass before the screen locker is activated, and add
-or remove password protection to your screen locker.</para>
+how much time must pass before the screen locker is activated, configure the grace period for unlocking the screen without password, and choose the appearance of your screen locker.</para>
 
-<para>At the top is a check box to have the screen locker <guilabel>Lock screen automatically after</guilabel>, 
+<para>At the top is a check box to have the screen locker <guilabel>Lock screen automatically</guilabel>, 
 and a spin box which determines the period of inactivity before the screen locker should be started. 
 You can enter any positive number of minutes in this box.</para>
 
-<para>Below that is a spinbox labeled <guilabel>Require password 
-after locking</guilabel>.  When you press a key
-or click a mouse button to end the screen locker after the time in the spinbox and return to your
-work, you must enter a password.  The password used is the same
-password you used to login to your machine. <!--FIXME --></para>
+<para>The <guilabel>After waking from sleep</guilabel> check box an be used to switch locking the desktop screen after the system suspension on and off.</para>
+
+<para>Below that is a spinbox labeled <guilabel>Allow unlocking without password for</guilabel>. When you press a key or click a mouse button to end the screen locker before the time in the spinbox and return to your
+work, you must not enter a password. The password used is the same
+password you used to login to your machine.</para>
 
 <para>Locking the screen manually causes the password protection to engage immediately.</para>
+
+<para>You can define a shortcut to lock the screen using the <guilabel>Keyboard shortcut</guilabel> field.</para>
 
 <para>The default shortcut <keycombo action="simul">&Ctrl;&Alt;<keycap>L</keycap></keycombo> provides a quick 
 way to lock the screen manually.</para>
 
-<para>Check <guilabel>Lock screen on resume</guilabel> if you want a password protected system
-when waking up from suspension.</para>
-
-<para>If you would like to change the background in locked status switch to the <guilabel>Wallpaper</guilabel> tab.</para>
+<para>If you would like to change the background in locked status press the <guibutton>Configure</guibutton> besides the <guilabel>Appearance</guilabel> label. Then you can change the <guilabel>Wallpaper type</guilabel>.</para>
 
 <para>You can select a <guilabel>Plain Color</guilabel> as wallpaper type.</para>
 
