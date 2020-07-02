@@ -464,7 +464,7 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
         if (service->serviceTypes().contains(QLatin1String("KCModule"))) {
             if (service->parentApp() == QStringLiteral("kinfocenter")) {
                 service->setExec(QStringLiteral("kinfocenter ") + service->desktopEntryName());
-            } else {
+            } else if (!service->property("X-KDE-System-Settings-Parent-Category", QVariant::String).toString().isEmpty()){
                 service->setExec(QStringLiteral("systemsettings5 ") + service->desktopEntryName());
             }
         }
