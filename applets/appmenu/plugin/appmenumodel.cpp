@@ -58,6 +58,13 @@ AppMenuModel::AppMenuModel(QObject *parent)
 {
     m_tasksModel->setFilterByScreen(true);
     connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, this, &AppMenuModel::onActiveWindowChanged);
+    connect(m_tasksModel, &TaskManager::TasksModel::dataChanged, [=](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles = QVector<int>()) {
+        Q_UNUSED(topLeft)
+        Q_UNUSED(bottomRight)
+        if (roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuObjectPath) || roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuServiceName) || roles.isEmpty()) {
+            onActiveWindowChanged();
+        }
+    });
     connect(m_tasksModel, &TaskManager::TasksModel::activityChanged, this, &AppMenuModel::onActiveWindowChanged);
     connect(m_tasksModel, &TaskManager::TasksModel::virtualDesktopChanged, this, &AppMenuModel::onActiveWindowChanged);
     connect(m_tasksModel, &TaskManager::TasksModel::countChanged, this, &AppMenuModel::onActiveWindowChanged);
