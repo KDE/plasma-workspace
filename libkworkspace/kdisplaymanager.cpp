@@ -55,9 +55,9 @@
 #define _SYSTEMD_SERVICE "org.freedesktop.login1"
 #define _SYSTEMD_BASE_PATH "/org/freedesktop/login1"
 #define _SYSTEMD_MANAGER_IFACE _SYSTEMD_SERVICE ".Manager"
-#define _SYSTEMD_SESSION_BASE_PATH _SYSTEMD_BASE_PATH "/Session"
+#define _SYSTEMD_SESSION_BASE_PATH _SYSTEMD_BASE_PATH "/session"
 #define _SYSTEMD_SEAT_IFACE _SYSTEMD_SERVICE ".Seat"
-#define _SYSTEMD_SEAT_BASE_PATH _SYSTEMD_BASE_PATH "/Seat"
+#define _SYSTEMD_SEAT_BASE_PATH _SYSTEMD_BASE_PATH "/seat"
 #define _SYSTEMD_SESSION_IFACE _SYSTEMD_SERVICE ".Session"
 #define _SYSTEMD_USER_PROPERTY "User"
 #define _SYSTEMD_SEAT_PROPERTY "Seat"
@@ -429,18 +429,25 @@ KDisplayManager::exec(const char *cmd, QByteArray &buf)
 static bool getCurrentSeat(QDBusObjectPath *currentSession, QDBusObjectPath *currentSeat)
 {
     SystemdManager man;
-    QDBusReply<QDBusObjectPath> r = man.call(QStringLiteral("GetSessionByPID"), (uint) QCoreApplication::applicationPid());
-    if (r.isValid()) {
-        SystemdSession sess(r.value());
-        if (sess.isValid()) {
-            NamedDBusObjectPath namedPath = sess.getSeat();
-            if (currentSession)
-                *currentSession = r.value();
-            *currentSeat = namedPath.path;
+    if (man.isValid()) {
+        *currentSeat = QDBusObjectPath(_SYSTEMD_SEAT_BASE_PATH "/auto");
+        SystemdSeat seat(*currentSeat);
+        if (seat.isValid()) {
             return true;
         }
-    }
-    else {
+
+        // auto is newer and may not exist on all platforms, fallback to GetSessionByPID if the above failed
+
+        QDBusReply<QDBusObjectPath> r = man.call(QStringLiteral("GetSessionByPID"), (uint) QCoreApplication::applicationPid());
+        if (r.isValid()) {
+            SystemdSession sess(r.value());
+            if (sess.isValid()) {
+                NamedDBusObjectPath namedPath = sess.getSeat();
+                *currentSeat = namedPath.path;
+                return true;
+            }
+        }
+    } else {
         CKManager man;
         QDBusReply<QDBusObjectPath> r = man.call(QStringLiteral("GetCurrentSession"));
         if (r.isValid()) {
@@ -699,7 +706,8 @@ KDisplayManager::localSessions(SessList &list)
                              * doesn't seem exactly... right to me --mbriza
                              */
                             se.session = QStringLiteral("<unknown>");
-                            se.self = sp == currentSession;
+
+                            se.self = lsess.property("Id").toString() == qgetenv("XDG_SESSION_ID");
                             se.tty = !lsess.property("TTY").toString().isEmpty();
                         }
                         list.append(se);
