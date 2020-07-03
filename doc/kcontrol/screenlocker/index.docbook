@@ -30,7 +30,7 @@ how much time must pass before the screen locker is activated, configure the gra
 and a spin box which determines the period of inactivity before the screen locker should be started. 
 You can enter any positive number of minutes in this box.</para>
 
-<para>The <guilabel>After waking from sleep</guilabel> check box an be used to switch locking the desktop screen after the system suspension on and off.</para>
+<para>The <guilabel>After waking from sleep</guilabel> check box can be used to switch locking the desktop screen after the system suspension on and off.</para>
 
 <para>Below that is a spinbox labeled <guilabel>Allow unlocking without password for</guilabel>. When you press a key or click a mouse button to end the screen locker before the time in the spinbox and return to your
 work, you must not enter a password. The password used is the same
@@ -43,7 +43,7 @@ password you used to login to your machine.</para>
 <para>The default shortcut <keycombo action="simul">&Ctrl;&Alt;<keycap>L</keycap></keycombo> provides a quick 
 way to lock the screen manually.</para>
 
-<para>If you would like to change the background in locked status press the <guibutton>Configure</guibutton> besides the <guilabel>Appearance</guilabel> label. Then you can change the <guilabel>Wallpaper type</guilabel>.</para>
+<para>If you would like to change the background in locked status press the <guibutton>Configure</guibutton> button besides the <guilabel>Appearance</guilabel> label. Then you can change the <guilabel>Wallpaper type</guilabel>.</para>
 
 <para>You can select a <guilabel>Plain Color</guilabel> as wallpaper type.</para>
 
