@@ -70,6 +70,20 @@ RowLayout {
         verticalAlignment: Text.AlignVCenter
         text: i18nc("Percentage value", "%1%", progressBar.value)
         visible: rootItem.showingProgress
+        // Display a subtle visual indication that the volume might be
+        // dangerously high
+        // ------------------------------------------------
+        // Keep this in sync with the copies in plasma-pa:ListItemBase.qml
+        // and plasma-pa:VolumeSlider.qml
+        color: {
+            if (progressBar.value <= 100) {
+                return theme.textColor
+            } else if (progressBar.value > 100 && progressBar.value <= 125) {
+                return theme.neutralTextColor
+            } else {
+                return theme.negativeTextColor
+            }
+        }
     }
 
     PlasmaExtra.Heading {
