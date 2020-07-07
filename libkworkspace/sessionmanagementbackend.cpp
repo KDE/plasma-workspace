@@ -57,12 +57,12 @@ SessionBackend *SessionBackend::self()
 
 SessionBackend::SessionBackend()
 {
-    m_kserverConfig = KSharedConfig::openConfig("ksmserverrc");
+    m_kserverConfig = KConfigWatcher::create(KSharedConfig::openConfig("ksmserverrc"));
 }
 
 bool SessionBackend::confirmLogout() const
 {
-    return m_kserverConfig->group("General").readEntry("confirmLogout", true);
+    return m_kserverConfig->config()->group("General").readEntry("confirmLogout", true);
 }
 
 bool SessionBackend::canSwitchUser() const

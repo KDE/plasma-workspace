@@ -18,7 +18,7 @@
 */
 #pragma once
 
-#include <KSharedConfig>
+#include <KConfigWatcher>
 #include <QObject>
 
 #include "kworkspace_export.h"
@@ -75,7 +75,7 @@ protected:
     ~SessionBackend() override = default;
 
 private:
-    KSharedConfigPtr m_kserverConfig;
+    KConfigWatcher::Ptr m_kserverConfig;
 };
 
 /*
