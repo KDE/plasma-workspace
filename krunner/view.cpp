@@ -171,8 +171,8 @@ bool View::event(QEvent *event)
         auto surface = KWayland::Client::Surface::fromWindow(this);
         auto shellSurface = KWayland::Client::PlasmaShellSurface::get(surface);
         if (shellSurface && isVisible()) {
-            shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
             shellSurface->setPanelBehavior(KWayland::Client::PlasmaShellSurface::PanelBehavior::WindowsGoBelow);
+            shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
             shellSurface->setPanelTakesFocus(true);
         }
     }
