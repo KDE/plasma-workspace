@@ -148,7 +148,6 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow* parent,
     //TODO KF6 remove. Unused
     context->setContextProperty(QStringLiteral("choose"), false);
 
-
     // TODO KF6 remove, used to call KDisplayManager::bootOptions
     QStringList rebootOptions;
     int def = 0;
@@ -211,6 +210,7 @@ void KSMShutdownDlg::init()
         (backgroundColor.value() > 128 ? 1.6 : 0.3),
         1.7);
     KQuickAddons::QuickViewSharedEngine::showFullScreen();
+    setFlag(Qt::FramelessWindowHint);
     requestActivate();
 
     KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
@@ -253,18 +253,22 @@ void KSMShutdownDlg::setupWaylandIntegration()
         // already setup
         return;
     }
-    using namespace KWayland::Client;
     if (!m_waylandPlasmaShell) {
         return;
     }
+    using namespace KWayland::Client;
     Surface *s = Surface::fromWindow(this);
     if (!s) {
         return;
     }
+
     m_shellSurface = m_waylandPlasmaShell->createSurface(s, this);
-    // TODO: set a proper window type to indicate to KWin that this is the logout dialog
-    // maybe we need a dedicated type for it?
+    // Use Role::Panel to make it go above all other windows
+    // see allso KSplash splashwindow.cpp
     m_shellSurface->setPosition(geometry().topLeft());
+    m_shellSurface->setRole(PlasmaShellSurface::Role::Panel);
+    m_shellSurface->setPanelTakesFocus(true);
+    m_shellSurface->setPanelBehavior(PlasmaShellSurface::PanelBehavior::WindowsGoBelow);
 }
 
 void KSMShutdownDlg::slotLogout()

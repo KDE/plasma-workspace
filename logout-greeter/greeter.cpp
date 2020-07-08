@@ -80,7 +80,8 @@ void Greeter::setupWaylandIntegration()
 void Greeter::init()
 {
     setupWaylandIntegration();
-    foreach (QScreen *screen, qApp->screens()) {
+    const auto screens = qApp->screens();
+    for (QScreen *screen: screens) {
         adoptScreen(screen);
     }
     connect(qApp, &QGuiApplication::screenAdded, this, &Greeter::adoptScreen);
