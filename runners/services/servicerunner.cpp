@@ -469,7 +469,8 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
         if (service->serviceTypes().contains(QLatin1String("KCModule"))) {
             if (service->parentApp() == QStringLiteral("kinfocenter")) {
                 service->setExec(QStringLiteral("kinfocenter ") + service->desktopEntryName());
-            } else {
+            // We can't display a KCM in systemsettings if it has no parent, BUG: 423612
+            } else if (!service->property("X-KDE-System-Settings-Parent-Category").toString().isEmpty()) {
                 service->setExec(QStringLiteral("systemsettings5 ") + service->desktopEntryName());
             }
         }
