@@ -345,6 +345,8 @@ void SystemTray::restoreContents(KConfigGroup &group)
     if (newKnownItems.length() > 0) {
         general.writeEntry("knownItems", knownItems + newKnownItems);
     }
+    // refresh state of config scheme, if not, above writes are ignored
+    scheme->read();
 
     setAllowedPlasmoids(general.readEntry("extraItems", scheme->property("extraItems").toStringList()));
 
