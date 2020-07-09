@@ -38,19 +38,12 @@ MouseArea {
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    property var iconSizes: ["small", "smallMedium", "medium", "large", "huge", "enormous"];
-    property int iconSize: plasmoid.configuration.iconSize + (Kirigami.Settings.tabletMode ? 1 : 0)
-
     property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
-    readonly property int itemSize: {
-        var baseSize = units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes[iconSizes[Math.min(iconSizes.length-1, iconSize)]]));
-        if (Kirigami.Settings.tabletMode) {
-            // Set the tray items' clickable areas on the panel to be bigger than normal to allow for easier touchability
-            return baseSize + units.smallSpacing;
-        } else {
-            return baseSize + Math.round(units.smallSpacing/2);
-        }
-    }
+
+    // Used only by AbstractItem, but it's easiest to keep it here since it
+    // uses dimensions from this item to calculate the final value
+    readonly property int itemSize: units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes.enormous));
+
     property alias expanded: dialog.visible
     property Item activeApplet
 
@@ -149,22 +142,33 @@ MouseArea {
 
         GridView {
             id: tasksGrid
+
+            readonly property int thickness: root.vertical ? root.width : root.height
+            readonly property bool autoSize: plasmoid.configuration.automaticRowsOrColumns
+            readonly property int rowsOrColumns: {
+                if (autoSize) {
+                    if (thickness <= units.iconSizes.smallMedium * 2) {
+                        return 1
+                    } else {
+                        return 2
+                    }
+                } else {
+                    return plasmoid.configuration.rowsOrColumns
+                }
+            }
+            readonly property int cellLength: thickness / rowsOrColumns
+            readonly property int totalLength: cellLength * Math.round(count / rowsOrColumns)
+
             Layout.alignment: Qt.AlignCenter
 
             interactive: false //disable features we don't need
             flow: vertical ? GridView.LeftToRight : GridView.TopToBottom
 
-            cellHeight: vertical ? cellLength : root.height / rows
-            cellWidth: vertical ? root.width / columns : cellLength
+            implicitHeight: root.vertical ? totalLength : root.height
+            implicitWidth: !root.vertical ? totalLength : root.width
 
-            readonly property int cellLength: root.itemSize + units.smallSpacing
-            readonly property int columns: !vertical ? Math.ceil(count / rows) :
-                                                       Math.max(1, Math.floor(root.width / cellLength))
-            readonly property int rows: vertical ? Math.ceil(count / columns) :
-                                                   Math.max(1, Math.floor(root.height / cellLength))
-
-            implicitHeight: rows * cellHeight
-            implicitWidth: columns * cellWidth
+            cellHeight: cellLength
+            cellWidth:  cellLength
 
             model: PlasmaCore.SortFilterModel {
                 sourceModel: plasmoid.nativeInterface.systemTrayModel
