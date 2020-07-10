@@ -1,5 +1,5 @@
 [Config]
-chartFace=org.kde.ksysguard.barchart
+chartFace=org.kde.ksysguard.horizontalbars
 highPrioritySensorIds=["partitions/.*/filllevel"]
 totalSensors=["partitions/all/filllevel"]
 lowPrioritySensorIds=["partitions/all/total"]
