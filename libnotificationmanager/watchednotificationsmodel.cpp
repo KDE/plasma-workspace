@@ -62,29 +62,15 @@ WatchedNotificationsModel::Private::Private(WatchedNotificationsModel* q, QObjec
                                                                          this);
     connect(fdoNotificationsInterface, &OrgFreedesktopNotificationsInterface::NotificationClosed,
             this, &WatchedNotificationsModel::Private::NotificationClosed);
+
     dbus.registerObject("/NotificationWatcher", QStringLiteral("org.kde.NotificationWatcher"), this, QDBusConnection::ExportScriptableSlots);
-    QDBusMessage msg = QDBusMessage::createMethodCall(
-        QStringLiteral("org.freedesktop.Notifications"),
-        QStringLiteral("/org/freedesktop/Notifications"),
-        QStringLiteral("org.kde.NotificationManager"),
-        QStringLiteral("RegisterWatcher")
-    );
-    QDBusMessage reply = QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
-    if(reply.type() != QDBusMessage::ErrorMessage) {
-        valid = true;
-        Q_EMIT q->validChanged(valid);
-    }
+
+    valid = true;
+    Q_EMIT q->validChanged(valid);
 }
 
 WatchedNotificationsModel::Private::~Private()
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall(
-        QStringLiteral("org.freedesktop.Notifications"),
-        QStringLiteral("/org/freedesktop/Notifications"),
-        QStringLiteral("org.kde.NotificationManager"),
-        QStringLiteral("UnRegisterWatcher")
-    );
-    QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
 }
 
 void WatchedNotificationsModel::Private::Notify(uint id, const QString &app_name, uint replaces_id, const QString &app_icon,

@@ -69,10 +69,6 @@ public:
     void UnInhibit(uint cookie);
     bool inhibited() const; // property getter
 
-    // Notifition watcher
-    void RegisterWatcher();
-    void UnRegisterWatcher();
-    
     void InvokeAction(uint id, const QString &actionKey);
 
 Q_SIGNALS:

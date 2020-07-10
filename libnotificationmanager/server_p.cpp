@@ -55,7 +55,8 @@ ServerPrivate::ServerPrivate(QObject *parent)
     m_notificationWatchers->setConnection(QDBusConnection::sessionBus());
     m_notificationWatchers->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
     connect(m_notificationWatchers, &QDBusServiceWatcher::serviceUnregistered, [=](const QString &service) {
-        m_notificationWatchers->removeWatchedService(service);
+        //m_notificationWatchers->removeWatchedService(service);
+        qCDebug(NOTIFICATIONMANAGER) << "Service unregistered";
     });
 }
 
@@ -527,16 +528,6 @@ void ServerPrivate::clearExternalInhibitions()
 
     emit externalInhibitedChanged();
     emit externalInhibitionsChanged();
-}
-
-void ServerPrivate::RegisterWatcher()
-{
-    m_notificationWatchers->addWatchedService(message().service());
-}
-
-void ServerPrivate::UnRegisterWatcher()
-{
-    m_notificationWatchers->removeWatchedService(message().service());
 }
 
 void ServerPrivate::InvokeAction(uint id, const QString& actionKey)
