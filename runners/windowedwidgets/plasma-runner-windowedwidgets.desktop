@@ -2,6 +2,7 @@
 Name=Windowed widgets
 Name[ar]=الودجات ذات النوافذ
 Name[ast]=Widgets en ventana
+Name[az]=Mobil Vidjetlər
 Name[bg]=Джаджи като прозорци
 Name[bs]=Grafičke kontrole s prozorom
 Name[ca]=Estris en finestres
@@ -64,6 +65,7 @@ Name[zh_TW]=視窗元件
 
 Comment=Find Plasma widgets that can be run as standalone windows
 Comment[ar]=اعثر على ودجات بلازما التي يمكن أن تعمل كنوافذ مستقلّة
+Comment[az]=Müstəqil pəncərə şəklində açıla bilən Plasma vidjetlərini tapmaq
 Comment[bg]=Търсене на джаджи, които могат да се използват като самостоятелни прозорци
 Comment[bs]=Nađite plazma grafičke kontrole koje mogu da rade kao samostalni prozori
 Comment[ca]=Cerca estris del Plasma que es poden executar en finestres autònomes

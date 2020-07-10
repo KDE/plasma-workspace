@@ -2,6 +2,7 @@
 Name=Activity Bar
 Name[ar]=شريط أنشطة
 Name[ast]=Barra d'actividaes
+Name[az]=İş Otağı paneli
 Name[be@latin]=Panel zaniatkaŭ
 Name[bg]=Лента за активност
 Name[bs]=Traka aktivnosti
@@ -75,6 +76,7 @@ Name[zh_CN]=活动栏
 Name[zh_TW]=活動列
 Comment=Tab bar to switch activities
 Comment[ar]=شريط ألسنة لتبديل الأنشطة
+Comment[az]=İş Otaqlarına keçid
 Comment[bg]=Лента за превключване на активността
 Comment[bs]=Traka jezičaka za prebacivanje aktivnosti
 Comment[ca]=Barra de pestanyes per a canviar d'activitat

@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Switch Desktop
 Name[ar]=بدّل سطح المكتب
+Name[az]=İş Masasına keçid
 Name[bg]=Превключване на работен плот
 Name[bn]=অন্য ডেস্কটপ
 Name[bs]=Prebacivanje površi
@@ -70,6 +71,7 @@ Type=Service
 Icon=user-desktop
 Comment=Switch to another virtual desktop
 Comment[ar]=بدّل إلى سطح مكتب وهمي آخر
+Comment[az]=Başqa İş Masasına keçidi təmin edir
 Comment[bg]=Превключване към друг работен плот
 Comment[bs]=Prebacuje na drugu virtuelnu površ
 Comment[ca]=Canvia a un altre escriptori virtual

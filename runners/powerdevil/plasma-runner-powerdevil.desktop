@@ -1,6 +1,7 @@
 [Desktop Entry]
 Comment=Basic Power Management Operations
 Comment[ar]=عمليات إدارة الطاقة الأساسية
+Comment[az]=El. qidalanmasının İdarə edilməsi
 Comment[be@latin]=Prostyja aperacyi dla kiravańnia enerhijaj
 Comment[bg]=Основни операции по захранването
 Comment[bs]=Osnovni postupci upravljanja napajanjem
@@ -73,6 +74,7 @@ Comment[zh_TW]=基本的電源管理操作
 Icon=preferences-system-power-management
 Name=Power
 Name[ast]=Enerxía
+Name[az]=El. qidalanması
 Name[ca]=Energia
 Name[ca@valencia]=Energia
 Name[cs]=Energie

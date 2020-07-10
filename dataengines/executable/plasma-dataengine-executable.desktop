@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Run Commands
 Name[ar]=شغّل أوامر
+Name[az]=Əmrləri başlatmaq
 Name[be@latin]=Vykonvaj zahady
 Name[bg]=Изпълнение на команди
 Name[bn]=কমান্ড চালাও
@@ -73,6 +74,7 @@ Name[x-test]=xxRun Commandsxx
 Name[zh_CN]=运行命令
 Name[zh_TW]=執行指令
 Comment=Run Executable Data Engine
+Comment[az]=İcra oluna bilən verilənlər mexanizmini işə salmaq
 Comment[be@latin]=Uklučaj systemu dostupu da źviestak
 Comment[bg]=Изпълнение на програми
 Comment[bs]=Datomotor pokretanja izvršnih

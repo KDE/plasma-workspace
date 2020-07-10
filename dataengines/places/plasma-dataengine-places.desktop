@@ -2,6 +2,7 @@
 Name=Places
 Name[ar]=أماكن
 Name[ast]=Llugares
+Name[az]=Giriş Nöqtələri
 Name[be@latin]=Miescy
 Name[bg]=Места
 Name[bn]=স্থান
@@ -77,6 +78,7 @@ Name[zh_CN]=位置
 Name[zh_TW]=地方
 Comment=Places, as seen in the file manager and in file dialogs.
 Comment[ar]=الأماكن، كما في مدير الملفات وحواريات الملفات.
+Comment[az]=Fayl menecerində və fayl dialoqlarında görünən Giriş Nöqtələri.
 Comment[bg]=Местата, както се виждат във файловия мениджър и прозорците.
 Comment[bs]=Mjesta, kako se vide u menadžeru datoteka i datotečnim dijalozima.
 Comment[ca]=Llocs, com es veuen en el gestor de fitxers i en els diàlegs de fitxer.

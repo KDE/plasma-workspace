@@ -2,6 +2,7 @@
 Name=Calculator
 Name[ar]=آلة حاسبة
 Name[ast]=Calculadora
+Name[az]=Kalkulyator
 Name[be@latin]=Kalkulatar
 Name[bg]=Калкулатор
 Name[bn]=ক্যালকুলেটর
@@ -83,6 +84,7 @@ Name[zh_TW]=計算機
 Comment=Calculate expressions
 Comment[ar]=احسب التعابير
 Comment[ast]=Calcula espresiones
+Comment[az]=İfadələrin hesablanması
 Comment[be@latin]=Padlik vyrazaŭ.
 Comment[bg]=Изчисления
 Comment[bs]=Računajte izraze

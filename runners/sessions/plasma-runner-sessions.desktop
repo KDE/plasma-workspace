@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Desktop Sessions
 Name[ar]=جلسات سطح المكتب
+Name[az]=İş Masası sesiyaları
 Name[be@latin]=Sesii rabočaha stała
 Name[bg]=Сесии
 Name[bn]=ডেস্কটপ সেশন
@@ -77,6 +78,7 @@ Name[zh_CN]=桌面会话
 Name[zh_TW]=桌面工作階段
 Comment=Fast user switching
 Comment[ar]=تبديل سريع للمستخدِم
+Comment[az]=İstifadəçinin cəld dəyişdirilməsi
 Comment[be@latin]=Chutkaje pieraklučeńnie karystańnikaŭ
 Comment[bg]=Превключване на потребители
 Comment[bs]=Brzo prebacivanje korisnika

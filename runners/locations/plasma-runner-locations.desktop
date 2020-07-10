@@ -2,6 +2,7 @@
 Name=Locations
 Name[ar]=المواقع
 Name[ast]=Allugamientos
+Name[az]=Məkanlar
 Name[be@latin]=Miescy
 Name[bg]=Местоположения
 Name[bn]=অবস্থান
@@ -79,6 +80,7 @@ Name[zh_TW]=位置
 Comment=File and URL opener
 Comment[ar]=فاتح ملفات ووصلات
 Comment[ast]=Abridor de ficheros y URLs
+Comment[az]=Fayl və URL-ların açılması
 Comment[be@latin]=Adčynieńnie fajłaŭ i adrasoŭ
 Comment[bg]=Отваряне на файлове и адреси
 Comment[bn_IN]=ফাইল ও URL প্রদর্শক

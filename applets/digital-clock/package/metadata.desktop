@@ -3,6 +3,7 @@ Name=Digital Clock
 Name[af]=Digitale horlosie
 Name[ar]=ساعة رقمية
 Name[ast]=Reló dixital
+Name[az]=Rəqəmsal saat
 Name[be]=Лічбавы гадзіннік
 Name[be@latin]=Ličbavy hadzińnik
 Name[bg]=Цифров часовник
@@ -88,6 +89,7 @@ Name[zh_TW]=數位時鐘
 
 Comment=Time displayed in a digital format
 Comment[ar]=الوقت بتنسيق رقميّ
+Comment[az]=Saat, rəqəmsal formatda göstərilir
 Comment[bs]=Vrijeme prikazano u digitalnom obliku
 Comment[ca]=Mostra l'hora en un format digital
 Comment[ca@valencia]=Mostra l'hora en un format digital

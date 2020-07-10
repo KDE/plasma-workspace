@@ -2,6 +2,7 @@
 Name=Clipboard
 Name[ar]=الحافظة
 Name[ast]=Cartafueyu
+Name[az]=Mübadilə buferi
 Name[bs]=Klipbord
 Name[ca]=Porta-retalls
 Name[ca@valencia]=Porta-retalls
@@ -50,6 +51,7 @@ Name[x-test]=xxClipboardxx
 Name[zh_CN]=剪贴板
 Name[zh_TW]=剪貼簿
 Comment=Clipboard Tool.
+Comment[az]=Mübadilə buferi Aləti.
 Comment[bs]=Klipbord alat.
 Comment[ca]=Eina de porta-retalls.
 Comment[ca@valencia]=Eina de porta-retalls.

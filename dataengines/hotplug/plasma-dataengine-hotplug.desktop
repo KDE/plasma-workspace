@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Hotplug Events
+Name[az]=Cihaz qoşulmaları bildirişləri
 Name[be@latin]=Źjaŭleńnie novych pryładaŭ
 Name[bn]=হট-প্লাগ ঘটনাবলী
 Name[bs]=Događaji vrućeg uključivanja
@@ -68,6 +69,7 @@ Name[x-test]=xxHotplug Eventsxx
 Name[zh_CN]=热插拔事件
 Name[zh_TW]=熱插拔事件
 Comment=Tracks hot-pluggable devices as they appear and disappear.
+Comment[az]=Qoşulduğunda və ayrıldığında qoşulabilən cihazların izlənməsi
 Comment[bs]=Prati pojavljivanja i nestanke vruće uklonjivih uređaja.
 Comment[ca]=Segueix els dispositius de connexió en calent quan apareixen i desapareixen.
 Comment[ca@valencia]=Segueix els dispositius de connexió en calent quan apareixen i desapareixen.

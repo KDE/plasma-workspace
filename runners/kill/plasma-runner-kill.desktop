@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Terminate Applications
 Name[ar]=أنهِ التطبيقات
+Name[az]=Tətbiqləri dayandırmaq
 Name[bg]=Прекъсване на програми
 Name[bn]=অ্যাপলিকেশন থামাও
 Name[bs]=Obustavljanje programa
@@ -69,6 +70,7 @@ Name[zh_CN]=终止程序
 Name[zh_TW]=終端機應用程式
 Comment=Stop applications that are currently running
 Comment[ar]=أوقف التطبيقات التي تعمل حاليًا
+Comment[az]=Hal-hazırda işləyən tətbiqləri dayandırmaq
 Comment[bg]=Спиране на работещи в момента програми
 Comment[bs]=Zaustavlja programe trenutno u pogonu
 Comment[ca]=Atura les aplicacions que estan en execució

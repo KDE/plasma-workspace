@@ -2,6 +2,7 @@
 Name=Notifications
 Name[ar]=إخطارات
 Name[ast]=Avisos
+Name[az]=Bildirilşlər
 Name[be]=Абвяшчэнні
 Name[be@latin]=Infarmavańnie
 Name[bg]=Уведомяване
@@ -87,6 +88,7 @@ Name[zh_CN]=通知
 Name[zh_TW]=通知
 Comment=Display notifications and jobs
 Comment[ar]=اعرض الإخطارات والمهام
+Comment[az]=Bildirişləri və əməlləri göstərmək
 Comment[bg]=Показване на уведомления и задачи
 Comment[bs]=Prikazuje obavještenja i poslove
 Comment[ca]=Mostra les notificacions i els treballs

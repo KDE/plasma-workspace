@@ -12,6 +12,7 @@ X-KDE-System-Settings-Parent-Category=personalization
 
 Name=User Feedback
 Name[ast]=Comentarios d'usuariu
+Name[az]=İstifadəşi Rəyi
 Name[ca]=Comentaris de l'usuari
 Name[cs]=Zpětná vazba uživatele
 Name[da]=Brugerfeedback
@@ -44,6 +45,7 @@ Name[x-test]=xxUser Feedbackxx
 Name[zh_CN]=用户反馈
 Name[zh_TW]=使用者意見回應
 Comment=Configure user feedback settings
+Comment[az]=İstifadəçi rəyi ayarlarını tənzimləmək
 Comment[ca]=Configura els ajustaments dels comentaris de l'usuari
 Comment[cs]=Nastavení voleb uživatelské zpětné vazby
 Comment[da]=Indstillinger for brugerfeedback

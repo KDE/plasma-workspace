@@ -3,6 +3,7 @@
 Name=Web Shortcuts
 Name[ar]=اختصارات الوِب
 Name[ast]=Atayos web
+Name[az]=Veb Qısayolları
 Name[bg]=Уеб отметки
 Name[bn]=ওয়েব শর্টকাট
 Name[bs]=Veb prečice
@@ -72,6 +73,7 @@ Name[zh_TW]=網頁捷徑
 Comment=Allows user to use Konqueror's web shortcuts
 Comment[ar]=يسمح للمستخدِم باستخدام اختصارات كنكر للوِب
 Comment[ast]=Permite al usuariu qu'use los atayos web de Konqueror
+Comment[az]=İstifadəçiyə Konqueror-in veb qısayollarını istifadə etməyə imkan verir
 Comment[bs]=Dozvoli koristenje Koquerorovih web prečica
 Comment[ca]=Permet que l'usuari utilitzi les dreceres web del Konqueror
 Comment[ca@valencia]=Permet que l'usuari utilitze les dreceres web de Konqueror

@@ -3,6 +3,7 @@
 Name=Bookmarks
 Name[ar]=العلامات
 Name[ast]=Marcadores
+Name[az]=Əlfəcinlər
 Name[bg]=Отметки
 Name[bn]=বুকমার্ক
 Name[bs]=Zabilješke
@@ -73,6 +74,7 @@ Name[zh_TW]=書籤
 Comment=Find and open bookmarks
 Comment[ar]=اعثر على العلامات وافتحها
 Comment[ast]=Alcuentra y abre marcadores
+Comment[az]=Əlfəcinləri tapmaq və açmaq
 Comment[be@latin]=Pošuk i adčynieńnie zakładak.
 Comment[bg]=Търсене и зареждане на отметки
 Comment[bn]=বুকমার্ক খোঁজো এবং খোলো

@@ -2,6 +2,7 @@
 Name=PackageKit
 Name[ar]=عُدّة الحزم
 Name[ast]=PackageKit
+Name[az]=PackageKit
 Name[bs]=Paket opreme
 Name[ca]=PackageKit
 Name[ca@valencia]=PackageKit
@@ -51,6 +52,7 @@ Name[zh_TW]=PackageKit
 Comment=PackageKit Data Engine
 Comment[ar]=محرّك بيانات عُدّة الحزم
 Comment[ast]=Motor de datos de PackageKit
+Comment[az]=PackageKit verilənlər mənbəyi
 Comment[bs]=Pogon podataka za package kit
 Comment[ca]=Motor de dades del PackageKit
 Comment[ca@valencia]=Motor de dades de PackageKit

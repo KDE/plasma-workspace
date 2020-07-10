@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Service
 Name=ColorCorrect Geolocation Updater
+Name[az]=Rənglərin korreksiyası üçün coğrafi məkan yenilənməsi
 Name[ca]=Actualitzador de la geolocalització del ColorCorrect
 Name[ca@valencia]=Actualitzador de la geolocalització de ColorCorrect
 Name[da]=Opdatering af geolokalisering til ColorCorrect Geolocation
@@ -40,6 +41,7 @@ X-KDE-Library=colorcorrectlocationupdater
 X-KDE-FactoryName=colorcorrectlocationupdater
 X-KDE-Kded-autoload=true
 Comment=Sends updated location data to the compositor
+Comment[az]=Yenilənmiş məlumatları Plasma pəncərə menecerinə göndərir
 Comment[ca]=Envia les dades actualitzades de la ubicació al compositor
 Comment[ca@valencia]=Envia les dades actualitzades de la ubicació al compositor
 Comment[da]=Sender opdaterede lokaliseringsdata til compositoren

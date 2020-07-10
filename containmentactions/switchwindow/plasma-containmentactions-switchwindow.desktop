@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Switch Window
 Name[ar]=بدّل النافذة
+Name[az]=Pəncərə dəyişmə
 Name[bg]=Превключване на прозорци
 Name[bs]=Prebacivanje prozora
 Name[ca]=Canvi de finestra
@@ -68,6 +69,7 @@ Type=Service
 Icon=preferences-system-windows
 Comment=Show a list of windows to switch to
 Comment[ar]=أظهر قائمة النوافذ للتبديل بينها
+Comment[az]=Bütün pəncərələrin siyahısı
 Comment[bg]=Списък с прозорци за превключване
 Comment[bs]=Pokazuje spisak prozora za prebacivanje
 Comment[ca]=Mostra una llista de les finestres per a canviar

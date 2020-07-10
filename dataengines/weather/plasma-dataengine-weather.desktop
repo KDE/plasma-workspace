@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Weather
 Name[ar]=الطقس
+Name[az]=Hava
 Name[be@latin]=Nadvorje
 Name[bg]=Метеорологично време
 Name[bn]=আবহাওয়া
@@ -76,6 +77,7 @@ Name[zh_CN]=天气
 Name[zh_TW]=天氣
 Comment=Weather data from multiple online sources
 Comment[ar]=بيانات الطقس من عدّة مصادر على الإنترنت
+Comment[az]=İntertetdəki müxtəlif mənbələrdən hava haqqında məlumat
 Comment[bg]=Данни за метеорологичното време
 Comment[bs]=Meteorološki podaci iz više izvora na vezi
 Comment[ca]=Dades meteorològiques de múltiples fonts en línia

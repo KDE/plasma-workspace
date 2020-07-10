@@ -2,6 +2,7 @@
 Name=Calendar
 Name[ar]=التقويم
 Name[ast]=Calendariu
+Name[az]=Təqvim
 Name[be@latin]=Kalandar
 Name[bg]=Календар
 Name[bn]=ক্যালেণ্ডার
@@ -79,6 +80,7 @@ Name[zh_CN]=日历
 Name[zh_TW]=行事曆
 Comment=Month display with your appointments and events
 Comment[ar]=عرض للشّهر فيه المواعيد والأحداث
+Comment[az]=Hər aya planlaşdırılmış işlərin və tədbirlərin təqvimi
 Comment[ca]=Mostra el mes amb les cites i els esdeveniments
 Comment[ca@valencia]=Mostra el mes amb les cites i els esdeveniments
 Comment[da]=Månedsvisning med dine aftaler og begivenheder

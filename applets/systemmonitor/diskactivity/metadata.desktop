@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Hard Disk Activity
+Name[az]=Sərt Disk istifadəsi
 Name[ca]=Activitat de disc dur
 Name[cs]=Aktivita pevného disku
 Name[en_GB]=Hard Disk Activity
@@ -26,6 +27,7 @@ Name[zh_CN]=磁盘活动
 Name[zh_TW]=硬碟活動
 Comment=An applet that monitors hard disk throughput and input/output
 Comment[ar]=بُريْمج يراقب استخدام إنتاجيّة القرص الصلب ودَخْله/خَرْجه
+Comment[az]=Sərt Diskdə verilənlərin ötürmələsini və giriş/çıxışını izləyən tətbiq
 Comment[bs]=Aplet koji prati hard disk protok ulaz / izlaz
 Comment[ca]=Una miniaplicació que controla la velocitat de transferència, així com l'entrada/sortida de les dades al disc dur
 Comment[ca@valencia]=Una miniaplicació que controla la velocitat de transferència, així com l'entrada/eixida de les dades en el disc dur

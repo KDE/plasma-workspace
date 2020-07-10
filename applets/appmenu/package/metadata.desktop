@@ -2,6 +2,7 @@
 Name=Global Menu
 Name[ar]=القائمة العموميّة
 Name[ast]=Menú global
+Name[az]=Qlobal menyu
 Name[ca]=Menú global
 Name[ca@valencia]=Menú global
 Name[cs]=Globální nabídka
@@ -45,6 +46,7 @@ Name[zh_CN]=全局菜单
 Name[zh_TW]=全域選單
 Comment=Global menubar on top of the screen
 Comment[ar]=شريط القوائم العموميّ أعلى الشّاشة
+Comment[az]=Ekranın yuxarı hissəsində tətbiqlərin qlobal menyusu
 Comment[ca]=Barra de menús global a la part superior de la pantalla
 Comment[ca@valencia]=Barra de menús global en la part superior de la pantalla
 Comment[da]=Global menulinje øverst på skærmen

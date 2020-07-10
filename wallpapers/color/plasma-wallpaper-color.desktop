@@ -2,6 +2,7 @@
 Name=Color
 Name[ar]=لون
 Name[ast]=Color
+Name[az]=Rəng
 Name[bs]=Boja
 Name[ca]=Color
 Name[ca@valencia]=Color
@@ -54,6 +55,7 @@ Name[zh_TW]=顏色
 Comment=A plain color or gradient
 Comment[ar]=لون صِرف أو تدرّج
 Comment[ast]=Un color planu o dilíu
+Comment[az]=Tək rəng və qardient
 Comment[bs]=Prosta boja ili gradijent
 Comment[ca]=Un color llis o degradat
 Comment[ca@valencia]=Un color llis o degradat

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=BBC Weather
+Name[az]=BBC Hava Məlumatı
 Name[ca]=BBC Weather
 Name[ca@valencia]=BBC Weather
 Name[cs]=BBC Weather
@@ -35,6 +36,7 @@ Name[x-test]=xxBBC Weatherxx
 Name[zh_CN]=BBC 天气
 Name[zh_TW]=BBC 天氣
 Comment=XML Data from the British Broadcasting Corporation
+Comment[az]=Britaniya Yayım Korporasiyasının XML formatında məlumatları
 Comment[ca]=Dades XML de la British Broadcasting Corporation
 Comment[ca@valencia]=Dades XML de la British Broadcasting Corporation
 Comment[da]=XML-data fra British Broadcasting Corporation

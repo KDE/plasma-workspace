@@ -3,6 +3,7 @@ Exec=@CMAKE_INSTALL_PREFIX@/bin/krunner
 Name=KRunner
 Name[ar]=مشغّل.ك
 Name[ast]=KRunner
+Name[az]=KRunner
 Name[bs]=KPokretač
 Name[ca]=KRunner
 Name[ca@valencia]=KRunner
@@ -58,6 +59,7 @@ X-KDE-Wayland-Interfaces=org_kde_plasma_window_management
 [Desktop Action RunClipboard]
 Exec=krunner -c
 Name=Run command on clipboard contents
+Name[az]=Əmri, mübadilə buferindən başlatmaq
 Name[ca]=Executa una ordre al contingut del porta-retalls
 Name[ca@valencia]=Executa una ordre en el contingut del porta-retalls
 Name[cs]=Spustit příkaz nad obsahem schránky

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Environment Canada
+Name[az]=Environment Canada
 Name[be@latin]=Environment Canada
 Name[bg]=Environment Canada
 Name[bs]=Prirodna sredina Kanada
@@ -70,6 +71,7 @@ Name[x-test]=xxEnvironment Canadaxx
 Name[zh_CN]=加拿大环境部
 Name[zh_TW]=Environment Canada
 Comment=XML Data from Environment Canada
+Comment[az]=Environment Canada-dan XML formatında məlumatlar
 Comment[be@latin]=Źviestki ŭ farmacie „XML” ad „Environment Canada”
 Comment[bg]=XML данни от Environment Canada
 Comment[bs]=IksML podaci Prirodne sredine Kanada

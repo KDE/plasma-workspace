@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Application Job Information
 Name[ar]=معلومات مهمّة التطبيق
+Name[az]=Tətbiq Tapşırığı Məlumatları
 Name[be@latin]=Źviestki pra zadańnie aplikacyi
 Name[bs]=Podaci o poslovima programâ
 Name[ca]=Informació de les tasques de les aplicacions
@@ -71,6 +72,7 @@ Name[zh_CN]=程序任务信息
 Name[zh_TW]=應用程式工作資訊
 Comment=Application job updates (via kuiserver)
 Comment[ar]=تحديثات مهمّة التطبيق (عبر kuiserver)
+Comment[az]=Tətbiq Tapşırığı yenilənmələri (kuiserver ilə)
 Comment[bs]=Ažuriranja programskih poslova (preko KUI‑servera)
 Comment[ca]=Actualització de treballs d'aplicacions (via kuiserver)
 Comment[ca@valencia]=Actualització de treballs d'aplicacions (via kuiserver)

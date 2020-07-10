@@ -1,5 +1,6 @@
 [Desktop Entry]
 Comment=Breeze by the KDE VDG
+Comment[az]=KDE VDG tərəfindən Breeze İş mühiti görünüşü
 Comment[ca]=Brisa, creat pel VDG del KDE
 Comment[ca@valencia]=Brisa per a VDG de KDE
 Comment[cs]=Breeze od KDE VDG
@@ -34,6 +35,7 @@ Comment[zh_CN]=微风，由 KDE VDG 创作
 Comment[zh_TW]=由 KDE VDG 設計的 Breeze
 Keywords=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;
 Keywords[ast]=Escritoriu;Estaya de trabayu;Aspeutu;Estilu;Aspeutu y Estilu;Zarrar sesión;Zarru de sesión;Bloquiar;Bloquéu;Suspender;Suspensión;Apagar;Apagáu;Ivernar;Ivernación;Hibernar;Hibernación;
+Keywords[az]=iş masası;iş mühiti;iş mühiti;vizual təqdimat;çıxış;seansdan çıxış;kilidləmə;işi dayandırmaq;işin bitirilməsi;söndürmək;yuxu rejimi;gözləmə rejimi;
 Keywords[ca]=Escriptori;Espai de treball;Aparença;Aspecte i comportament;Sortida;Bloqueig;Suspensió;Aturada;Hibernació;
 Keywords[ca@valencia]=Escriptori;Espai de treball;Aparença;Aspecte i comportament;Eixida;Bloqueig;Suspensió;Parada;Hibernació;
 Keywords[da]=Skrivebord;Desktop;Arbejdsområde;Udseende;log ud;Lås;Suspendér;Nedlukning;dvale;
@@ -76,6 +78,7 @@ Keywords[zh_TW]=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;S
 Name=Breeze
 Name[ar]=نسيم
 Name[ast]=Breeze
+Name[az]=Breeze
 Name[bs]=Breeze
 Name[ca]=Brisa
 Name[ca@valencia]=Brisa

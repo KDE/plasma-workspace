@@ -3,6 +3,7 @@ Exec=@CMAKE_INSTALL_PREFIX@/bin/plasmashell
 X-DBUS-StartupType=Unique
 Name=Plasma Desktop Workspace
 Name[ar]=مساحة عمل سطح مكتب بلازما
+Name[az]=Plasma İş Masası Mühiti
 Name[bs]=Radni prostor plazma radne površi
 Name[ca]=Espai de treball de l'escriptori Plasma
 Name[ca@valencia]=Espai de treball de l'escriptori Plasma

@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=MPRIS2
 Name[ast]=MPRIS2
+Name[az]=MPRIS2
 Name[bs]=MPRIS2
 Name[ca]=MPRIS2
 Name[ca@valencia]=MPRIS2
@@ -51,6 +52,7 @@ Name[x-test]=xxMPRIS2xx
 Name[zh_CN]=MPRIS2
 Name[zh_TW]=MPRIS2
 Comment=Provides information from and control over media players via MPRIS2
+Comment[az]=MPRIS2 ilə media pleyerin idarəsini və onun haqqında məlumatları təmin edir
 Comment[bs]=Pruža informacije putem i kontrolom medija plejera pomoću MPRIS2
 Comment[ca]=Proporciona informació i controla els reproductors de suports via el MPRIS2
 Comment[ca@valencia]=Proporciona informació i controla els reproductors de suports via el MPRIS2

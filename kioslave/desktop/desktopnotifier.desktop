@@ -2,6 +2,7 @@
 Type=Service
 Name=Directory Watcher
 Name[ast]=Supervisor de direutorios
+Name[az]=Qovluqlara nəzarət
 Name[ca]=Vigilant de directori
 Name[ca@valencia]=Vigilant de directori
 Name[cs]=Sledovač adresářů
@@ -52,6 +53,7 @@ X-KDE-Kded-load-on-demand=true
 X-KDE-Kded-autoload=false
 Comment=Monitors directories for changes
 Comment[ast]=Supervisa cambeos nos direutorios
+Comment[az]=Qovluqdakı dəyişiklikləri izləyir
 Comment[ca]=Controla els canvis en els directoris
 Comment[ca@valencia]=Controla els canvis en els directoris
 Comment[cs]=Monitoruje změny v adresáři

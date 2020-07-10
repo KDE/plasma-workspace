@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Media Player
 Name[ar]=مشغّل وسائط
+Name[az]=Mediya Pleyer
 Name[bs]=Izvođač medija
 Name[ca]=Reproductor multimèdia
 Name[ca@valencia]=Reproductor multimèdia
@@ -49,6 +50,7 @@ Name[zh_CN]=媒体播放器
 Name[zh_TW]=媒體播放器
 Comment=Media Player Controls
 Comment[ar]=تحكّمات مشغّل الوسائط
+Comment[az]=Media Pleyer İdarəsi
 Comment[bs]=Kontrole izvođača medija
 Comment[ca]=Controls del reproductor multimèdia
 Comment[ca@valencia]=Controls del reproductor multimèdia

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Disk Usage
+Name[az]=Disk sahəsnin İstifadəsi
 Name[ca]=Ús de disc
 Name[cs]=Zaplnění Disku
 Name[en_GB]=Disk Usage
@@ -25,6 +26,7 @@ Name[x-test]=xxDisk Usagexx
 Name[zh_CN]=磁盘使用率
 Name[zh_TW]=磁碟用量
 Comment=System monitor Widget that shows the usage of the root partition
+Comment[az]=Diskin kök bölmə sahəsinin istifadəsini izləyir
 Comment[ca]=Estri del monitor del sistema que mostra l'ús de la partició arrel
 Comment[en_GB]=System monitor Widget that shows the usage of the root partition
 Comment[es]=Elemento gráfico del monitor del sistema que muestra el uso de la partición raíz

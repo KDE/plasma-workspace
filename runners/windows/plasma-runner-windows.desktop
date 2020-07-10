@@ -3,6 +3,7 @@
 Name=Windows
 Name[ar]=النوافذ
 Name[ast]=Ventanes
+Name[az]=Pəncərələr
 Name[bg]=Прозорци
 Name[bn]=উইণ্ডো
 Name[bs]=Prozori
@@ -71,6 +72,7 @@ Name[zh_CN]=窗口
 Name[zh_TW]=視窗
 Comment=List windows and desktops and switch them
 Comment[ar]=اسرد النوافذ وأسطح المكتب وبدّل بينها
+Comment[az]=Pəncərələrin, İş Masalarının siyahısı və onlar arası keçid
 Comment[bg]=Показване и превключване на прозорци и работни плотове
 Comment[bs]=Nabrajanje i prebacivanje između prozora i površî
 Comment[ca]=Llista finestres i escriptoris, i canvia entre ells

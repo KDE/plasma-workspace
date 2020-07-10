@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Network speed
+Name[az]=Şəbəkə sürəti
 Name[ca]=Velocitat de xarxa
 Name[cs]=Rychlost sítě
 Name[en_GB]=Network speed
@@ -25,6 +26,7 @@ Name[x-test]=xxNetwork speedxx
 Name[zh_CN]=网络速度
 Name[zh_TW]=網路速度
 Comment=System monitor Widget that shows the download and upload data rate
+Comment[az]=Şəbəkə üzərindən verilənlərin yükləmə və ötürmə sürətini göstərir
 Comment[ca]=Estri del monitor del sistema que mostra la velocitat de baixada i pujada de les dades
 Comment[en_GB]=System monitor Widget that shows the download and upload data rate
 Comment[es]=Elemento gráfico del monitor del sistema que muestra las velocidades de subida y bajada de datos

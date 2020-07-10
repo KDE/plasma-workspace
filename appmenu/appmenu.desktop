@@ -2,6 +2,7 @@
 Type=Service
 Name=Application menus daemon
 Name[ar]=عفريت قوائم التطبيقات
+Name[az]=Tətbiqlər menyusu fon xidməti
 Name[bs]=Demon za aplikacijske menije
 Name[ca]=Dimoni de menús d'aplicació
 Name[ca@valencia]=Dimoni de menús d'aplicació
@@ -52,6 +53,7 @@ Name[zh_CN]=应用程序菜单守护程序
 Name[zh_TW]=應用程式選單伺服程式
 Comment=Transfers application's menu to the desktop
 Comment[ar]=ينقل قائمة التطبيقات إلى سطح المكتب
+Comment[az]=Tətbiqlər menyusunu İş masasında yerləşdirir
 Comment[bs]=Prebacuje aplikacijski meni na radnu površinu
 Comment[ca]=Transfereix els menús d'aplicació a l'escriptori
 Comment[ca@valencia]=Transfereix els menús d'aplicació a l'escriptori

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Total CPU Use
+Name[az]=Ümumi MP istifadəsi
 Name[ca]=Ús total de CPU
 Name[cs]=Celkové použití CPU
 Name[en_GB]=Total CPU Use
@@ -25,6 +26,7 @@ Name[x-test]=xxTotal CPU Usexx
 Name[zh_CN]=总 CPU 使用
 Name[zh_TW]=總 CPU 用量
 Comment=System monitor Widget that shows the total CPU usage
+Comment[az]=MP-un ümumi istifadəsini göstərən sistem izləmə vidjeti
 Comment[ca]=Estri del monitor del sistema que mostra l'ús total de la CPU
 Comment[en_GB]=System monitor Widget that shows the total CPU usage
 Comment[es]=Elemento gráfico del monitor del sistema que muestra el uso total de CPU
