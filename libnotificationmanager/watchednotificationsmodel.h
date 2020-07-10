@@ -45,6 +45,9 @@ public:
     void reply(uint notificationId, const QString &text) override;
     bool valid();
 
+public Q_SLOTS:
+    void registerWatcher(const QString &service);
+
 signals:
     void validChanged(bool valid);
 

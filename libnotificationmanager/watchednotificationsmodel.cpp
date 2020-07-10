@@ -38,6 +38,7 @@ public:
     explicit Private(WatchedNotificationsModel* q, QObject* parent = nullptr);
     ~Private();
     bool valid = false;
+    void registerWatcher(const QString &service);
 
 public Q_SLOTS:
     Q_SCRIPTABLE void Notify(uint id, const QString &app_name, uint replaces_id, const QString &app_icon,
@@ -52,8 +53,12 @@ private:
 };
 
 WatchedNotificationsModel::Private::Private(WatchedNotificationsModel* q, QObject *parent)
-    : q(q)
-    , QObject(parent)
+    : QObject(parent)
+    , q(q)
+{
+}
+
+void WatchedNotificationsModel::Private::registerWatcher(const QString& service)
 {
     QDBusConnection dbus = QDBusConnection::sessionBus();
     fdoNotificationsInterface = new OrgFreedesktopNotificationsInterface(QStringLiteral("org.freedesktop.Notifications"),
@@ -64,8 +69,7 @@ WatchedNotificationsModel::Private::Private(WatchedNotificationsModel* q, QObjec
             this, &WatchedNotificationsModel::Private::NotificationClosed);
 
     dbus.registerObject("/NotificationWatcher", QStringLiteral("org.kde.NotificationWatcher"), this, QDBusConnection::ExportScriptableSlots);
-
-    valid = true;
+    valid = dbus.registerService(service);
     Q_EMIT q->validChanged(valid);
 }
 
@@ -111,6 +115,11 @@ WatchedNotificationsModel::WatchedNotificationsModel()
     : AbstractNotificationsModel(),
     d(new Private(this, nullptr))
 {
+}
+
+void WatchedNotificationsModel::registerWatcher(const QString& service)
+{
+    d->registerWatcher(service);
 }
 
 WatchedNotificationsModel::~WatchedNotificationsModel()

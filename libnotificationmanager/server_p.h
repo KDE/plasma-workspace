@@ -24,6 +24,8 @@
 #include <QDBusContext>
 #include <QStringList>
 
+#include <KDirWatch>
+
 #include "notification.h"
 
 class QDBusServiceWatcher;
@@ -35,6 +37,14 @@ struct Inhibition
     //QString applicationIconName;
     QString reason;
     QVariantMap hints;
+};
+
+struct NotificationWatcher
+{
+    QString desktopEntry;
+    QString id;
+    QString name;
+    QString dbusService;
 };
 
 namespace NotificationManager
@@ -119,19 +129,22 @@ private:
     void onInhibitionServiceUnregistered(const QString &serviceName);
     void onInhibitedChanged(); // emit DBus change signal
 
+    void updateWatcher(const QString &path = QString());
     bool m_dbusObjectValid = false;
 
     mutable QScopedPointer<ServerInfo> m_currentOwner;
 
     QDBusServiceWatcher *m_inhibitionWatcher = nullptr;
-    QDBusServiceWatcher *m_notificationWatchers = nullptr;
+
     uint m_highestInhibitionCookie = 0;
     QHash<uint /*cookie*/, Inhibition> m_externalInhibitions;
     QHash<uint /*cookie*/, QString> m_inhibitionServices;
 
+    QVector<NotificationWatcher> m_notificationWatcherList;
     bool m_inhibited = false;
 
     Notification m_lastNotification;
+    KDirWatch m_dirWatcher;
 
 };
 
