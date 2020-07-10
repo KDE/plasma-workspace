@@ -41,6 +41,9 @@ ListView {
     preferredHighlightBegin: width/2 - userItemWidth/2
     preferredHighlightEnd: preferredHighlightBegin
 
+    // Disable flicking if we only have on user (like on the lockscreen)
+    interactive: count > 1
+
     delegate: UserDelegate {
         avatarPath: model.icon || ""
         iconSource: model.iconName || "user-identity"
