@@ -168,7 +168,7 @@ QString RecentUsageModel::description() const
             return i18n("Applications");
         case OnlyDocs:
         default:
-            return i18n("Documents");
+            return i18n("Files");
     }
 }
 
@@ -300,7 +300,7 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
         }
         return QIcon::fromTheme(fileItem.iconName(), QIcon::fromTheme(QStringLiteral("unknown")));
     } else if (role == Kicker::GroupRole) {
-        return i18n("Documents");
+        return i18n("Files");
     } else if (role == Kicker::FavoriteIdRole || role == Kicker::UrlRole) {
         return url.toString();
     } else if (role == Kicker::DescriptionRole) {
@@ -336,7 +336,7 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
         QVariantMap openParentFolder = Kicker::createActionItem(i18n("Open Containing Folder"), QStringLiteral("folder-open"), QStringLiteral("openParentFolder"));
         actionList << openParentFolder;
 
-        QVariantMap forgetAction = Kicker::createActionItem(i18n("Forget Document"), QStringLiteral("edit-clear-history"), QStringLiteral("forget"));
+        QVariantMap forgetAction = Kicker::createActionItem(i18n("Forget File"), QStringLiteral("edit-clear-history"), QStringLiteral("forget"));
         actionList << forgetAction;
 
         QVariantMap forgetAllAction = Kicker::createActionItem(forgetAllActionName(), QStringLiteral("edit-clear-history"), QStringLiteral("forgetAll"));
@@ -473,7 +473,7 @@ QString RecentUsageModel::forgetAllActionName() const
             return i18n("Forget All Applications");
         case OnlyDocs:
         default:
-            return i18n("Forget All Documents");
+            return i18n("Forget All Files");
     }
 }
 

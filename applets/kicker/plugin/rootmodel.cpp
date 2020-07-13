@@ -408,8 +408,8 @@ void RootModel::refresh()
         m_recentDocsModel = new RecentUsageModel(this, RecentUsageModel::OnlyDocs, m_recentOrdering);
         m_entryList.prepend(new GroupEntry(this,
                     m_recentOrdering == RecentUsageModel::Recent
-                        ? i18n("Recent Documents")
-                        : i18n("Often Used Documents"),
+                        ? i18n("Recent Files")
+                        : i18n("Often Used Files"),
                     m_recentOrdering == RecentUsageModel::Recent
                         ? QString("view-history")
                         : QString("office-chart-pie"),

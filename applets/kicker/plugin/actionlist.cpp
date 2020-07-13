@@ -272,7 +272,7 @@ QVariantList recentDocumentActions(KService::Ptr service)
         }
 
         if (list.isEmpty()) {
-            list << createTitleActionItem(i18n("Recent Documents"));
+            list << createTitleActionItem(i18n("Recent Files"));
         }
 
         QVariantMap item = createActionItem(url.fileName(), fileItem.iconName(), QStringLiteral("_kicker_recentDocument"), resource);
@@ -281,7 +281,7 @@ QVariantList recentDocumentActions(KService::Ptr service)
     }
 
     if (!list.isEmpty()) {
-        QVariantMap forgetAction = createActionItem(i18n("Forget Recent Documents"), QStringLiteral("edit-clear-history"), QStringLiteral("_kicker_forgetRecentDocuments"));
+        QVariantMap forgetAction = createActionItem(i18n("Forget Recent Files"), QStringLiteral("edit-clear-history"), QStringLiteral("_kicker_forgetRecentDocuments"));
         list << forgetAction;
     }
 
