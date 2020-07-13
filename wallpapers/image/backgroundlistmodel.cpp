@@ -388,7 +388,7 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
         return QUrl::fromLocalFile(b.filePath("preferred"));
 
     case PackageNameRole:
-        return !b.metadata().isValid() || b.metadata().pluginId().isEmpty() ? b.filePath("preferred") : b.metadata().pluginId();
+        return !b.metadata().isValid() ? b.filePath("preferred") : b.path();
 
     case RemovableRole: {
         QString localWallpapers = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/wallpapers/";
