@@ -36,6 +36,10 @@ QQC2.StackView {
     readonly property size sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
 
     //public API, the C++ part will look for those
+    function setUrl(url) {
+        wallpaper.configuration.Image = url
+        imageWallpaper.addUsersWallpaper(url);
+    }
 
     function action_next() {
         imageWallpaper.nextSlide();
