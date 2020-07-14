@@ -517,7 +517,7 @@ void RecentUsageModel::refresh()
     auto query = UsedResources
                     | (m_ordering == Recent ? RecentlyUsedFirst : HighScoredFirst)
                     | Agent::any()
-                    | Type::any()
+                    | (m_usage == OnlyDocs ? Type::files() : Type::any())
                     | Activity::current();
 
     switch (m_usage) {
