@@ -38,7 +38,7 @@ MouseArea {
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     // Used only by AbstractItem, but it's easiest to keep it here since it
     // uses dimensions from this item to calculate the final value
