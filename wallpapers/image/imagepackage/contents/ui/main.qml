@@ -35,16 +35,20 @@ QQC2.StackView {
     readonly property bool blur: wallpaper.configuration.Blur
     readonly property size sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
 
-    //public API, the C++ part will look for those
+    // Ppublic API functions accessible from C++:
+
+    // e.g. used by WallpaperInterface for drag and drop
     function setUrl(url) {
         wallpaper.configuration.Image = url
         imageWallpaper.addUsersWallpaper(url);
     }
 
+    // e.g. used by slideshow wallpaper plugin
     function action_next() {
         imageWallpaper.nextSlide();
     }
 
+    // e.g. used by slideshow wallpaper plugin
     function action_open() {
         Qt.openUrlExternally(modelImage)
     }
