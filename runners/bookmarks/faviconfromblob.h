@@ -31,6 +31,7 @@ class FaviconFromBlob : public Favicon
 public:
     static FaviconFromBlob *chrome(const QString &profileDirectory, QObject *parent = nullptr);
     static FaviconFromBlob *firefox(FetchSqlite *fetchSqlite, QObject *parent = nullptr);
+    static FaviconFromBlob *falkon(const QString &profileDirectory, QObject *parent = nullptr);
     ~FaviconFromBlob() override;
     QIcon iconFor(const QString &url) override;
 

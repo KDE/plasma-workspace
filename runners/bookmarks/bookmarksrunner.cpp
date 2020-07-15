@@ -19,7 +19,7 @@
  */
 
 #include "bookmarksrunner.h"
-#include "browser.h"
+#include "browsers/browser.h"
 
 #include <QList>
 #include <QStack>

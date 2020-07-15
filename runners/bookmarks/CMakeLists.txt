@@ -37,6 +37,7 @@ set(krunner_bookmarksrunner_SRCS
     browsers/firefox.cpp
     browsers/kdebrowser.cpp
     browsers/opera.cpp
+    browsers/falkon.cpp
 )
 
 

@@ -19,12 +19,13 @@
  */
 
 #include "browserfactory.h"
-#include "browser.h"
+#include "browsers/browser.h"
 #include "browsers/kdebrowser.h"
 #include "browsers/firefox.h"
 #include "browsers/opera.h"
 #include "browsers/chromefindprofile.h"
 #include "browsers/chrome.h"
+#include "browsers/falkon.h"
 
 Browser *BrowserFactory::find(const QString &browserName, QObject *parent)
 {
@@ -41,6 +42,8 @@ Browser *BrowserFactory::find(const QString &browserName, QObject *parent)
         m_previousBrowser = new Chrome(new FindChromeProfile(QStringLiteral("google-chrome"), QDir::homePath(), parent), parent);
     } else if (browserName.contains(QLatin1String("chromium"), Qt::CaseInsensitive)) {
         m_previousBrowser = new Chrome(new FindChromeProfile(QStringLiteral("chromium"), QDir::homePath(), parent), parent);
+    } else if (browserName.contains(QLatin1String("falkon"), Qt::CaseInsensitive)) {
+        m_previousBrowser = new Falkon(parent);
     } else {
         m_previousBrowser = new KDEBrowser(parent);
     }

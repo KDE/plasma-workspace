@@ -67,6 +67,13 @@ FaviconFromBlob *FaviconFromBlob::firefox(FetchSqlite *fetchSqlite, QObject *par
     return new FaviconFromBlob(QStringLiteral("firefox-default"), faviconQuery, QStringLiteral("data"), fetchSqlite, parent);
 }
 
+FaviconFromBlob *FaviconFromBlob::falkon(const QString &profileDirectory, QObject *parent)
+{
+    const QString dbPath = profileDirectory + QStringLiteral("/browsedata.db");
+    FetchSqlite *fetchSqlite = new FetchSqlite(dbPath, parent);
+    const QString faviconQuery = QStringLiteral("SELECT icon FROM icons WHERE url = :url LIMIT 1;");
+    return new FaviconFromBlob(faviconQuery, faviconQuery, QStringLiteral("icon"), fetchSqlite, parent);
+}
 
 FaviconFromBlob::FaviconFromBlob(const QString &profileName, const QString &query, const QString &blobColumn, FetchSqlite *fetchSqlite, QObject *parent)
     : Favicon(parent), m_query(query), m_blobcolumn(blobColumn), m_fetchsqlite(fetchSqlite)
