@@ -1024,6 +1024,8 @@ TasksModel::TasksModel(QObject *parent)
     // Start sorting.
     sort(0);
 
+    connect(this, &TasksModel::sourceModelChanged, this, &TasksModel::countChanged);
+
     // Private::updateGroupInline() sets our source model, populating the model. We
     // delay running this until the QML runtime had a chance to call our implementation
     // of QQmlParserStatus::classBegin(), setting Private::usedByQml to true. If used
