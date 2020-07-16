@@ -94,7 +94,7 @@ bool TaskGroupingProxyModel::Private::any(const QModelIndex &parent, int role)
     bool is = false;
 
     for (int i = 0; i < q->rowCount(parent); ++i) {
-        if (parent.child(i, 0).data(role).toBool()) {
+        if (q->index(i, 0, parent).data(role).toBool()) {
             return true;
         }
     }
@@ -107,7 +107,7 @@ bool TaskGroupingProxyModel::Private::all(const QModelIndex &parent, int role)
     bool is = true;
 
     for (int i = 0; i < q->rowCount(parent); ++i) {
-        if (!parent.child(i, 0).data(role).toBool()) {
+        if (!q->index(i, 0, parent).data(role).toBool()) {
             return false;
         }
     }
@@ -675,7 +675,7 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             QVariantList winIds;
 
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
-                winIds.append(proxyIndex.child(i, 0).data(AbstractTasksModel::WinIdList).toList());
+                winIds.append(index(i, 0, proxyIndex).data(AbstractTasksModel::WinIdList).toList());
             }
 
             return winIds;
@@ -724,7 +724,7 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             QStringList desktops;
 
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
-                desktops.append(proxyIndex.child(i, 0).data(AbstractTasksModel::VirtualDesktops).toStringList());
+                desktops.append(index(i, 0, proxyIndex).data(AbstractTasksModel::VirtualDesktops).toStringList());
             }
 
             desktops.removeDuplicates();
@@ -738,7 +738,7 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             QStringList activities;
 
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
-                activities.append(proxyIndex.child(i, 0).data(AbstractTasksModel::Activities).toStringList());
+                activities.append(index(i, 0, proxyIndex).data(AbstractTasksModel::Activities).toStringList());
             }
 
             activities.removeDuplicates();
@@ -949,7 +949,7 @@ void TaskGroupingProxyModel::requestClose(const QModelIndex &index)
         const int row = index.row();
 
         for (int i = (rowCount(index) - 1); i >= 1; --i) {
-            const QModelIndex &sourceChild = mapToSource(index.child(i, 0));
+            const QModelIndex &sourceChild = mapToSource(this->index(i, 0, index));
             d->abstractTasksSourceModel->requestClose(sourceChild);
         }
 
@@ -991,7 +991,7 @@ void TaskGroupingProxyModel::requestToggleMinimized(const QModelIndex &index)
         const bool goalState = !index.data(AbstractTasksModel::IsMinimized).toBool();
 
          for (int i = 0; i < rowCount(index); ++i) {
-             const QModelIndex &child = index.child(i, 0);
+             const QModelIndex &child = this->index(i, 0, index);
 
              if (child.data(AbstractTasksModel::IsMinimized).toBool() != goalState) {
                  d->abstractTasksSourceModel->requestToggleMinimized(mapToSource(child));
@@ -1014,7 +1014,7 @@ void TaskGroupingProxyModel::requestToggleMaximized(const QModelIndex &index)
         QModelIndexList inStackingOrder;
 
         for (int i = 0; i < rowCount(index); ++i) {
-            const QModelIndex &child = index.child(i, 0);
+            const QModelIndex &child = thid->index(i, 0, index);
 
             if (child.data(AbstractTasksModel::IsMaximized).toBool() != goalState) {
                 inStackingOrder << mapToSource(child);
@@ -1046,7 +1046,7 @@ void TaskGroupingProxyModel::requestToggleKeepAbove(const QModelIndex &index)
         const bool goalState = !index.data(AbstractTasksModel::IsKeepAbove).toBool();
 
          for (int i = 0; i < rowCount(index); ++i) {
-             const QModelIndex &child = index.child(i, 0);
+             const QModelIndex &child = this->index(i, 0, index);
 
              if (child.data(AbstractTasksModel::IsKeepAbove).toBool() != goalState) {
                  d->abstractTasksSourceModel->requestToggleKeepAbove(mapToSource(child));
@@ -1067,7 +1067,7 @@ void TaskGroupingProxyModel::requestToggleKeepBelow(const QModelIndex &index)
         const bool goalState = !index.data(AbstractTasksModel::IsKeepBelow).toBool();
 
          for (int i = 0; i < rowCount(index); ++i) {
-             const QModelIndex &child = index.child(i, 0);
+             const QModelIndex &child = this->index(i, 0, index);
 
              if (child.data(AbstractTasksModel::IsKeepBelow).toBool() != goalState) {
                  d->abstractTasksSourceModel->requestToggleKeepBelow(mapToSource(child));
@@ -1088,7 +1088,7 @@ void TaskGroupingProxyModel::requestToggleFullScreen(const QModelIndex &index)
         const bool goalState = !index.data(AbstractTasksModel::IsFullScreen).toBool();
 
          for (int i = 0; i < rowCount(index); ++i) {
-             const QModelIndex &child = index.child(i, 0);
+             const QModelIndex &child = this->index(i, 0, index);
 
              if (child.data(AbstractTasksModel::IsFullScreen).toBool() != goalState) {
                  d->abstractTasksSourceModel->requestToggleFullScreen(mapToSource(child));
@@ -1109,7 +1109,7 @@ void TaskGroupingProxyModel::requestToggleShaded(const QModelIndex &index)
         const bool goalState = !index.data(AbstractTasksModel::IsShaded).toBool();
 
          for (int i = 0; i < rowCount(index); ++i) {
-             const QModelIndex &child = index.child(i, 0);
+             const QModelIndex &child = this->index(i, 0, index);
 
              if (child.data(AbstractTasksModel::IsShaded).toBool() != goalState) {
                  d->abstractTasksSourceModel->requestToggleShaded(mapToSource(child));
@@ -1134,7 +1134,7 @@ void TaskGroupingProxyModel::requestVirtualDesktops(const QModelIndex &index, co
         groupChildren.reserve(childCount);
 
         for (int i = (childCount - 1); i >= 0; --i) {
-            groupChildren.append(mapToSource(index.child(i, 0)));
+            groupChildren.append(mapToSource(this->index(i, 0, index)));
         }
 
         for (const QModelIndex &idx : groupChildren) {
@@ -1159,7 +1159,7 @@ void TaskGroupingProxyModel::requestNewVirtualDesktop(const QModelIndex &index)
         groupChildren.reserve(childCount);
 
         for (int i = (childCount - 1); i >= 0; --i) {
-            groupChildren.append(mapToSource(index.child(i, 0)));
+            groupChildren.append(mapToSource(this->index(i, 0, index)));
         }
 
         for (const QModelIndex &idx : groupChildren) {
@@ -1184,7 +1184,7 @@ void TaskGroupingProxyModel::requestActivities(const QModelIndex &index, const Q
         groupChildren.reserve(childCount);
 
         for (int i = (childCount - 1); i >= 0; --i) {
-            groupChildren.append(mapToSource(index.child(i, 0)));
+            groupChildren.append(mapToSource(this->index(i, 0, index)));
         }
 
         for (const QModelIndex &idx : groupChildren) {
@@ -1204,7 +1204,7 @@ void TaskGroupingProxyModel::requestPublishDelegateGeometry(const QModelIndex &i
             geometry, delegate);
     } else {
         for (int i = 0; i < rowCount(index); ++i) {
-            d->abstractTasksSourceModel->requestPublishDelegateGeometry(mapToSource(index.child(i, 0)),
+            d->abstractTasksSourceModel->requestPublishDelegateGeometry(mapToSource(this->index(i, 0, index)),
                 geometry, delegate);
         }
     }

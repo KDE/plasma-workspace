@@ -694,13 +694,13 @@ void TasksModel::Private::consolidateManualSortMapForGroup(const QModelIndex &gr
         return;
     }
 
-    const QModelIndex &leader = groupingProxyIndex.child(0, 0);
+    const QModelIndex &leader = groupingProxyModel->index(0, 0, groupingProxyIndex);
     const QModelIndex &preFilterLeader = filterProxyModel->mapToSource(groupingProxyModel->mapToSource(leader));
 
     // We're moving the trailing children to the sort map position of
     // the first child, so we're skipping the first child.
     for (int i = 1; i < childCount; ++i) {
-        const QModelIndex &child = groupingProxyIndex.child(i, 0);
+        const QModelIndex &child = groupingProxyModel->index(i, 0, groupingProxyIndex);
         const QModelIndex &preFilterChild = filterProxyModel->mapToSource(groupingProxyModel->mapToSource(child));
         const int leaderPos = sortedPreFilterRows.indexOf(preFilterLeader.row());
         const int childPos = sortedPreFilterRows.indexOf(preFilterChild.row());
@@ -1081,7 +1081,7 @@ QVariant TasksModel::data(const QModelIndex &proxyIndex, int role) const
         QVariantList winIds;
 
         for (int i = 0; i < rowCount(proxyIndex); ++i) {
-            winIds.append(proxyIndex.child(i, 0).data(AbstractTasksModel::WinIdList).toList());
+            winIds.append(index(i, 0, proxyIndex).data(AbstractTasksModel::WinIdList).toList());
         }
 
         return winIds;
@@ -1670,7 +1670,7 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
             if (newPos > row) {
                 newPos += extra;
                 newPos -= groupingNewPosIndex.row();
-                groupingNewPosIndex = groupingNewPosIndexParent.child(extra, 0);
+                groupingNewPosIndex = groupingNewPosIndexParent.model()->index(extra, 0, groupingNewPosIndexParent);
             } else {
                 newPos -= groupingNewPosIndex.row();
                 groupingNewPosIndex = groupingNewPosIndexParent;
@@ -1820,7 +1820,7 @@ QModelIndex TasksModel::activeTask() const
         if (idx.data(AbstractTasksModel::IsActive).toBool()) {
             if (groupMode() != GroupDisabled && rowCount(idx)) {
                 for (int j = 0; j < rowCount(idx); ++j) {
-                    const QModelIndex &child = idx.child(j, 0);
+                    const QModelIndex &child = index(j, 0, idx);
 
                     if (child.data(AbstractTasksModel::IsActive).toBool()) {
                         return child;
@@ -1847,7 +1847,7 @@ QModelIndex TasksModel::makeModelIndex(int row, int childRow) const
         const QModelIndex &parent = index(row, 0);
 
         if (childRow < rowCount(parent)) {
-            return parent.child(childRow, 0);
+            return index(childRow, 0, parent);
         }
     }
 
