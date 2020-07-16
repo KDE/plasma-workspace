@@ -1,9 +1,12 @@
 [Desktop Entry]
 Name=Recent Files
 Name[ca]=Fitxers recents
+Name[it]=File recenti
 Name[nl]=Recente bestanden
 Name[pt]=Ficheiros Recentes
 Name[pt_BR]=Arquivos recentes
+Name[sv]=Senaste filer
+Name[uk]=Нещодавні файли
 Name[x-test]=xxRecent Filesxx
 Icon=document-open-recent
 
