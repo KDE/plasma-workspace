@@ -50,7 +50,6 @@
 #include <KToolBar>
 #include <KWindowSystem>
 #include <KConfigGroup>
-#include <KPluginInfo>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
@@ -371,48 +370,30 @@ void InteractiveConsole::loadScriptFromUrl(const QUrl &url)
 void InteractiveConsole::populateTemplatesMenu()
 {
     m_snippetsMenu->clear();
-
-    QMap<QString, KService::Ptr> sorted;
-    const QString constraint = QStringLiteral("[X-Plasma-Shell] == '%1'")
-                                      .arg(qApp->applicationName());
-    KService::List templates = KServiceTypeTrader::self()->query(QStringLiteral("Plasma/LayoutTemplate"), constraint);
-    foreach (const KService::Ptr &service, templates) {
-        sorted.insert(service->name(), service);
-    }
-
-    QMapIterator<QString, KService::Ptr> it(sorted);
-
+    auto templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), [] (const KPluginMetaData &metaData) {
+        return metaData.value(QStringLiteral("X-Plasma-Shell")) == qApp->applicationName();
+    });
+    std::sort(templates.begin(), templates.end(), [] (const KPluginMetaData &left, const KPluginMetaData &right) {
+        return left.name() < right.name();
+    });
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"));
-
-    while (it.hasNext()) {
-        it.next();
-        KPluginInfo info(it.value());
-        const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation
-, package.defaultPackageRoot() + '/' + info.pluginName() + '/');
-        if (!path.isEmpty()) {
-            package.setPath(info.pluginName());
-            const QString scriptFile = package.filePath("mainscript");
-            if (!scriptFile.isEmpty()) {
-                QAction *action = m_snippetsMenu->addAction(info.name());
-                action->setData(info.pluginName());
-            }
+    for (const auto &templateMetaData : templates){
+        package.setPath(templateMetaData.pluginId());
+        const QString scriptFile = package.filePath("mainscript");
+        if (!scriptFile.isEmpty()) {
+            QAction *action = m_snippetsMenu->addAction(templateMetaData.name());
+            action->setData(templateMetaData.pluginId());
         }
     }
 }
 
 void InteractiveConsole::loadTemplate(QAction *action)
 {
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"));
-
-    const QString pluginName = action->data().toString();
-    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation
-, package.defaultPackageRoot() + '/' + pluginName + '/');
-    if (!path.isEmpty()) {
-        package.setPath(pluginName);
-        const QString scriptFile = package.filePath("mainscript");
-        if (!scriptFile.isEmpty()) {
-            loadScriptFromUrl(QUrl::fromLocalFile(scriptFile));
-        }
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"),
+        action->data().toString());
+    const QString scriptFile = package.filePath("mainscript");
+    if (!scriptFile.isEmpty()) {
+        loadScriptFromUrl(QUrl::fromLocalFile(scriptFile));
     }
 }
 
