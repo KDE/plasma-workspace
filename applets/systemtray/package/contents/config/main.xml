@@ -30,7 +30,7 @@
       <default>true</default>
     </entry>
     <entry name="rowsOrColumns" type="Int">
-      <label>Number of rows or columns to show in the panel view (depending on whether the panel is horizontal or vertical, respectively) when not using automatic row/column determination.</label>
+      <label>Number of rows or columns of small icons to show in the panel view (depending on whether the panel is horizontal or vertical, respectively) when not using automatic row/column determination.</label>
       <default>1</default>
     </entry>
     <entry name="pin" type="Bool">

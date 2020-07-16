@@ -20,30 +20,51 @@
  ***************************************************************************/
 import QtQuick 2.14
 import QtQuick.Controls 2.14 as QQC2
+import QtQuick.Layouts 1.13
 
 import org.kde.plasma.core 2.1 as PlasmaCore
 
 import org.kde.kirigami 2.13 as Kirigami
 
-Kirigami.FormLayout {
-
+ColumnLayout {
     property alias cfg_automaticRowsOrColumns: automaticRadioButton.checked
     property int cfg_rowsOrColumns
 
-    QQC2.RadioButton {
-        id: automaticRadioButton
-        Kirigami.FormData.label: i18nc("The arrangement of system tray icons in the Panel", "Panel icon arrangement:")
-        text: plasmoid.formFactor === PlasmaCore.Types.Horizontal ?
-            i18n("Adapt to Panel height") : i18n("Adapt to Panel width")
+    Component.onCompleted: {
+        console.warn("Plasmoid width is " + plasmoid.width)
+        console.warn("Plasmoid height is " + plasmoid.height)
     }
-    QQC2.RadioButton {
-        text: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("One row") : i18n("One column")
-        checked: !automaticRadioButton.checked && cfg_rowsOrColumns === 1
-        onClicked: cfg_rowsOrColumns = 1
+
+    Kirigami.InlineMessage {
+        readonly property int minimumSize: units.iconSizes.small * 2
+
+        Layout.fillWidth: true
+
+        visible: twoRowsOrColumnsRadioButton.checked && (plasmoid.width <= minimumSize || plasmoid.height <= minimumSize)
+
+        type: Kirigami.MessageType.Warning
+        text: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("This layout may look odd with a short panel.") : i18n("This layout may look odd with a narrow panel.")
     }
-    QQC2.RadioButton {
-        text: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("Two rows") : i18n("Two columns")
-        checked: !automaticRadioButton.checked && cfg_rowsOrColumns === 2
-        onClicked: cfg_rowsOrColumns = 2
+
+    Kirigami.FormLayout {
+        Layout.fillHeight: true
+
+        QQC2.RadioButton {
+            id: automaticRadioButton
+            Kirigami.FormData.label: i18nc("The arrangement of system tray icons in the Panel", "Panel icon arrangement:")
+            text: plasmoid.formFactor === PlasmaCore.Types.Horizontal ?
+                i18n("Adapt to Panel height") : i18n("Adapt to Panel width")
+        }
+        QQC2.RadioButton {
+            text: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("One row of small icons") : i18n("One column of small icons")
+            checked: !automaticRadioButton.checked && cfg_rowsOrColumns === 1
+            onClicked: cfg_rowsOrColumns = 1
+        }
+        QQC2.RadioButton {
+            id: twoRowsOrColumnsRadioButton
+            text: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("Two rows of small icons") : i18n("Two columns of small icons")
+            checked: !automaticRadioButton.checked && cfg_rowsOrColumns === 2
+            onClicked: cfg_rowsOrColumns = 2
+        }
     }
 }

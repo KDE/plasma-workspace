@@ -38,11 +38,16 @@ MouseArea {
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
+    // The icon size to display when not using the default auto-scaling setting
+    readonly property int smallIconSize: units.iconSizes.smallMedium
+
     readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+
+    readonly property bool autoSize: plasmoid.configuration.automaticRowsOrColumns
 
     // Used only by AbstractItem, but it's easiest to keep it here since it
     // uses dimensions from this item to calculate the final value
-    readonly property int itemSize: units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes.enormous));
+    readonly property int itemSize: autoSize ? units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes.enormous)) : smallIconSize
 
     property alias expanded: dialog.visible
     property Item activeApplet
@@ -144,9 +149,8 @@ MouseArea {
             id: tasksGrid
 
             readonly property int thickness: root.vertical ? root.width : root.height
-            readonly property bool autoSize: plasmoid.configuration.automaticRowsOrColumns
             readonly property int rowsOrColumns: {
-                if (autoSize) {
+                if (root.autoSize) {
                     if (thickness <= units.iconSizes.smallMedium * 2) {
                         return 1
                     } else {
@@ -156,8 +160,9 @@ MouseArea {
                     return plasmoid.configuration.rowsOrColumns
                 }
             }
-            readonly property int cellLength: thickness / rowsOrColumns
-            readonly property int totalLength: cellLength * Math.round(count / rowsOrColumns)
+            readonly property int autoSizeCellLength: thickness / rowsOrColumns
+            readonly property int totalLength: root.vertical ? cellHeight * Math.round(count / rowsOrColumns)
+                                                             : cellWidth * Math.round(count / rowsOrColumns)
 
             Layout.alignment: Qt.AlignCenter
 
@@ -167,8 +172,8 @@ MouseArea {
             implicitHeight: root.vertical ? totalLength : root.height
             implicitWidth: !root.vertical ? totalLength : root.width
 
-            cellHeight: cellLength
-            cellWidth:  cellLength
+            cellHeight: root.vertical && !root.autoSize ? root.smallIconSize + units.smallSpacing : autoSizeCellLength
+            cellWidth:  !root.vertical && !root.autoSize ? root.smallIconSize + units.smallSpacing : autoSizeCellLength
 
             model: PlasmaCore.SortFilterModel {
                 sourceModel: plasmoid.nativeInterface.systemTrayModel
