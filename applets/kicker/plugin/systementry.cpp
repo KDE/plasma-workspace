@@ -28,20 +28,25 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <kworkspace.h>
-#include <Solid/PowerManagement>
-#include "ksmserver_interface.h"
-#include <kdisplaymanager.h>
+#include <sessionmanagement.h>
+
+int SystemEntry::s_instanceCount = 0;
+SessionManagement* SystemEntry::s_sessionManagement = nullptr;
 
 SystemEntry::SystemEntry(AbstractModel *owner, Action action) : AbstractEntry(owner)
 , m_action(action)
 , m_valid(false)
+, m_initialized(false)
 {
-    init();
+    refresh();
+    ++s_instanceCount;
+    m_initialized = true;
 }
 
 SystemEntry::SystemEntry(AbstractModel *owner, const QString &id) : AbstractEntry(owner)
 , m_action(NoAction)
 , m_valid(false)
+, m_initialized(false)
 {
     if (id == QLatin1String("lock-screen")) {
         m_action = LockSession;
@@ -52,60 +57,103 @@ SystemEntry::SystemEntry(AbstractModel *owner, const QString &id) : AbstractEntr
     } else if (id == QLatin1String("switch-user")) {
         m_action = SwitchUser;
     } else if (id == QLatin1String("suspend")) {
-        m_action = SuspendToRam;
+        m_action = Suspend;
     } else if (id == QLatin1String("hibernate")) {
-        m_action = SuspendToDisk;
+        m_action = Hibernate;
     } else if (id == QLatin1String("reboot")) {
         m_action = Reboot;
     } else if (id == QLatin1String("shutdown")) {
         m_action = Shutdown;
     }
 
-    init();
+    refresh();
+    ++s_instanceCount;
+    m_initialized = true;
 }
 
-void SystemEntry::init()
+SystemEntry::~SystemEntry()
 {
+    --s_instanceCount;
+
+    if (!s_instanceCount) {
+        delete s_sessionManagement;
+        s_sessionManagement = nullptr;
+    }
+}
+
+SystemEntry::Action SystemEntry::action() const
+{
+    return m_action;
+}
+
+void SystemEntry::refresh()
+{
+    if (!s_sessionManagement) {
+        s_sessionManagement = new SessionManagement();
+    }
+
+    bool valid = false;
+
     switch (m_action) {
-        case NoAction:
-            m_valid = false;
-            break;
-        case LockSession:
-            m_valid = KAuthorized::authorizeAction(QStringLiteral("lock_screen"));
-            break;
-        case LogoutSession:
-        case SaveSession:
-        {
-            bool authorize = KAuthorized::authorizeAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
-
-            if (m_action == SaveSession) {
-                const KConfigGroup c(KSharedConfig::openConfig(QStringLiteral("ksmserverrc"), KConfig::NoGlobals), "General");
-
-                m_valid = authorize && c.readEntry("loginMode") == QLatin1String("restoreSavedSession");
-            } else {
-                m_valid = authorize;
-            }
-
+        case LockSession: {
+            valid = s_sessionManagement->canLock();
+            QObject::connect(s_sessionManagement, &SessionManagement::canLockChanged,
+                this, &SystemEntry::refresh);
             break;
         }
-        case SwitchUser:
-            m_valid = (KAuthorized::authorizeAction(QStringLiteral("start_new_session")) || KAuthorized::authorizeAction(QStringLiteral("switch_user")))
-                && KDisplayManager().isSwitchable();
+        case LogoutSession: {
+            valid = s_sessionManagement->canLogout();
+            QObject::connect(s_sessionManagement, &SessionManagement::canLogoutChanged,
+                this, &SystemEntry::refresh);
             break;
-        case SuspendToRam:
-            m_valid = Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::SuspendState);
+        }
+        case SaveSession: {
+            valid = s_sessionManagement->canSaveSession();
+            QObject::connect(s_sessionManagement, &SessionManagement::canSaveSessionChanged,
+                this, &SystemEntry::refresh);
             break;
-        case SuspendToDisk:
-            m_valid = Solid::PowerManagement::supportedSleepStates().contains(Solid::PowerManagement::HibernateState);
+        }
+        case SwitchUser: {
+            valid = s_sessionManagement->canSwitchUser();
+            QObject::connect(s_sessionManagement, &SessionManagement::canSwitchUserChanged,
+                this, &SystemEntry::refresh);
             break;
-        case Reboot:
-            m_valid = KWorkSpace::canShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeReboot);
+        }
+        case Suspend: {
+            valid = s_sessionManagement->canSuspend();
+            QObject::connect(s_sessionManagement, &SessionManagement::canSuspendChanged,
+                this, &SystemEntry::refresh);
             break;
-        case Shutdown:
-            m_valid = KWorkSpace::canShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeHalt);
+        }
+        case Hibernate: {
+            valid = s_sessionManagement->canHibernate();
+            QObject::connect(s_sessionManagement, &SessionManagement::canHibernateChanged,
+                this, &SystemEntry::refresh);
             break;
+        }
+        case Reboot: {
+            valid = s_sessionManagement->canReboot();
+            QObject::connect(s_sessionManagement, &SessionManagement::canRebootChanged,
+                this, &SystemEntry::refresh);
+            break;
+        }
+        case Shutdown: {
+            valid = s_sessionManagement->canShutdown();
+            QObject::connect(s_sessionManagement, &SessionManagement::canShutdownChanged,
+                this, &SystemEntry::refresh);
+            break;
+        }
         default:
-            m_valid = true;
+            break;
+    }
+
+
+    if (m_valid != valid) {
+        m_valid = valid;
+
+        if (m_initialized) {
+            emit isValidChanged();
+        }
     }
 }
 
@@ -140,10 +188,10 @@ QString SystemEntry::iconName() const
         case SwitchUser:
             return QStringLiteral("system-switch-user");
             break;
-        case SuspendToRam:
+        case Suspend:
             return QStringLiteral("system-suspend");
             break;
-        case SuspendToDisk:
+        case Hibernate:
             return QStringLiteral("system-suspend-hibernate");
             break;
         case Reboot:
@@ -174,10 +222,10 @@ QString SystemEntry::name() const
         case SwitchUser:
             return i18n("Switch User");
             break;
-        case SuspendToRam:
+        case Suspend:
             return i18nc("Suspend to RAM", "Sleep");
             break;
-        case SuspendToDisk:
+        case Hibernate:
             return i18n("Hibernate");
             break;
         case Reboot:
@@ -208,10 +256,10 @@ QString SystemEntry::group() const
         case SwitchUser:
             return i18n("Session");
             break;
-        case SuspendToRam:
+        case Suspend:
             return i18n("System");
             break;
-        case SuspendToDisk:
+        case Hibernate:
             return i18n("System");
             break;
         case Reboot:
@@ -242,10 +290,10 @@ QString SystemEntry::description() const
         case SwitchUser:
             return i18n("Start a parallel session as a different user");
             break;
-        case SuspendToRam:
+        case Suspend:
             return i18n("Suspend to RAM");
             break;
-        case SuspendToDisk:
+        case Hibernate:
             return i18n("Suspend to disk");
             break;
         case Reboot:
@@ -276,10 +324,10 @@ QString SystemEntry::id() const
         case SwitchUser:
             return QStringLiteral("switch-user");
             break;
-        case SuspendToRam:
+        case Suspend:
             return QStringLiteral("suspend");
             break;
-        case SuspendToDisk:
+        case Hibernate:
             return QStringLiteral("hibernate");
             break;
         case Reboot:
@@ -301,49 +349,20 @@ bool SystemEntry::run(const QString& actionId, const QVariant &argument)
     Q_UNUSED(actionId)
     Q_UNUSED(argument)
 
+    if (!m_valid) {
+        return false;
+    }
+
     switch (m_action) {
-        case LockSession:
-        {
-            QDBusConnection bus = QDBusConnection::sessionBus();
-            QDBusInterface interface(QStringLiteral("org.freedesktop.ScreenSaver"), QStringLiteral("/ScreenSaver"), QStringLiteral("org.freedesktop.ScreenSaver"), bus);
-            interface.asyncCall(QStringLiteral("Lock"));
-            break;
-        }
-        case LogoutSession:
-            KWorkSpace::requestShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeNone);
-            break;
-        case SaveSession:
-        {
-            org::kde::KSMServerInterface ksmserver(QStringLiteral("org.kde.ksmserver"),
-                QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-
-            if (ksmserver.isValid()) {
-                ksmserver.saveCurrentSession();
-            }
-
-            break;
-        }
-        case SwitchUser:
-        {
-            QDBusConnection bus = QDBusConnection::sessionBus();
-            QDBusInterface interface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QStringLiteral("org.kde.KSMServerInterface"), bus);
-            interface.asyncCall(QStringLiteral("openSwitchUserDialog"));
-            break;
-        };
-        case SuspendToRam:
-            Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, nullptr, nullptr);
-            break;
-        case SuspendToDisk:
-            Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, nullptr, nullptr);
-            break;
-        case Reboot:
-            KWorkSpace::requestShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeReboot);
-            break;
-        case Shutdown:
-            KWorkSpace::requestShutDown(KWorkSpace::ShutdownConfirmDefault, KWorkSpace::ShutdownTypeHalt);
-            break;
-        default:
-            return false;
+        case LockSession: s_sessionManagement->lock(); break;
+        case LogoutSession: s_sessionManagement->requestLogout(); break;
+        case SaveSession: s_sessionManagement->saveSession(); break;
+        case SwitchUser: s_sessionManagement->switchUser(); break;
+        case Suspend: s_sessionManagement->suspend(); break;
+        case Hibernate: s_sessionManagement->hibernate(); break;
+        case Reboot: s_sessionManagement->requestReboot(); break;
+        case Shutdown: s_sessionManagement->requestShutdown(); break;
+        default: break;
     }
 
     return true;

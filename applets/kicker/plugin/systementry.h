@@ -22,8 +22,14 @@
 
 #include "abstractentry.h"
 
-class SystemEntry : public AbstractEntry
+#include <QObject>
+
+class SessionManagement;
+
+class SystemEntry : public QObject, public AbstractEntry
 {
+    Q_OBJECT
+
     public:
         enum Action
         {
@@ -32,14 +38,17 @@ class SystemEntry : public AbstractEntry
             LogoutSession,
             SaveSession,
             SwitchUser,
-            SuspendToRam,
-            SuspendToDisk,
+            Suspend,
+            Hibernate,
             Reboot,
             Shutdown
         };
 
         explicit SystemEntry(AbstractModel *owner, Action action);
         explicit SystemEntry(AbstractModel *owner, const QString &id);
+        ~SystemEntry();
+
+        Action action() const;
 
         EntryType type() const override { return RunnableType; }
 
@@ -55,12 +64,20 @@ class SystemEntry : public AbstractEntry
 
         bool run(const QString& actionId = QString(), const QVariant &argument = QVariant()) override;
 
+    Q_SIGNALS:
+        void isValidChanged() const;
+
+    private Q_SLOTS:
+        void refresh();
+
     private:
-        void init();
+        bool m_initialized;
 
         Action m_action;
         bool m_valid;
 
+        static int s_instanceCount;
+        static SessionManagement *s_sessionManagement;
 };
 
 #endif

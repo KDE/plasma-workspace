@@ -58,7 +58,6 @@ add_library(kickerplugin SHARED ${kickerplugin_SRCS})
 
 target_link_libraries(kickerplugin
                       Qt5::Core
-                      Qt5::DBus
                       Qt5::Qml
                       Qt5::Quick
                       Qt5::X11Extras
@@ -67,17 +66,17 @@ target_link_libraries(kickerplugin
                       KF5::ConfigCore
                       KF5::CoreAddons
                       KF5::I18n
+                      KF5::IconThemes
                       KF5::ItemModels
-                      KF5::KDELibs4Support # FIXME: New Solid power management API doesn't exist yet, so we need to use deprecated stuff.
                       KF5::KIOCore
                       KF5::KIOWidgets
                       KF5::KIOFileWidgets
+                      KF5::Notifications
                       KF5::People
                       KF5::PeopleWidgets
                       KF5::PlasmaQuick
                       KF5::Runner
                       KF5::Service
-                      KF5::Solid
                       KF5::WindowSystem
                       PW::KWorkspace)
 

@@ -40,7 +40,8 @@ enum {
     HasChildrenRole,
     HasActionListRole,
     ActionListRole,
-    UrlRole
+    UrlRole,
+    DisabledRole
 };
 
 QVariantMap createActionItem(const QString &label, const QString &icon, const QString &actionId, const QVariant &argument = QVariant());

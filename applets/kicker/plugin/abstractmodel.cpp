@@ -44,6 +44,7 @@ QHash<int, QByteArray> AbstractModel::roleNames() const
     roles.insert(Kicker::HasActionListRole, "hasActionList");
     roles.insert(Kicker::ActionListRole, "actionList");
     roles.insert(Kicker::UrlRole, "url");
+    roles.insert(Kicker::DisabledRole, "disabled");
 
     return roles;
 }

@@ -21,8 +21,7 @@
 #define SYSTEMMODEL_H
 
 #include "abstractmodel.h"
-
-class SystemEntry;
+#include "systementry.h"
 
 class SystemModel : public AbstractModel
 {
@@ -44,9 +43,7 @@ class SystemModel : public AbstractModel
         void refresh() override;
 
     private:
-        void init();
-
-        QList<SystemEntry *> m_entryList;
+        QHash<SystemEntry::Action, SystemEntry *> m_entries;
 };
 
 #endif

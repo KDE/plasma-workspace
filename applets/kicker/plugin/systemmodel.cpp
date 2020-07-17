@@ -20,7 +20,6 @@
 #include "systemmodel.h"
 #include "actionlist.h"
 #include "simplefavoritesmodel.h"
-#include "systementry.h"
 
 #include <QStandardPaths>
 
@@ -29,45 +28,32 @@
 
 SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
 {
-    init();
-
     m_favoritesModel = new SimpleFavoritesModel(this);
 
-    const QString configFile = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/ksmserverrc");
+    m_entries[SystemEntry::LockSession] = new SystemEntry(this, SystemEntry::LockSession);
+    m_entries[SystemEntry::LogoutSession] = new SystemEntry(this, SystemEntry::LogoutSession);
+    m_entries[SystemEntry::SaveSession] = new SystemEntry(this, SystemEntry::SaveSession);
+    m_entries[SystemEntry::SwitchUser] = new SystemEntry(this, SystemEntry::SwitchUser);
+    m_entries[SystemEntry::Suspend] = new SystemEntry(this, SystemEntry::Suspend);
+    m_entries[SystemEntry::Hibernate] = new SystemEntry(this, SystemEntry::Hibernate);
+    m_entries[SystemEntry::Reboot] = new SystemEntry(this, SystemEntry::Reboot);
+    m_entries[SystemEntry::Shutdown] = new SystemEntry(this, SystemEntry::Shutdown);
 
-    KDirWatch *watch = new KDirWatch(this);
+    for (SystemEntry *entry : m_entries.values()) {
+        QObject::connect(entry, &SystemEntry::isValidChanged, this,
+            [this, entry]() {
+                const QModelIndex &idx = index(entry->action(), 0);
+                emit dataChanged(idx, idx, QVector<int>{Kicker::DisabledRole});
+            }
+        );
 
-    watch->addFile(configFile);
-
-    connect(watch, &KDirWatch::dirty, this, &SystemModel::refresh);
-    connect(watch, &KDirWatch::created, this, &SystemModel::refresh);
+        QObject::connect(entry, &SystemEntry::isValidChanged, m_favoritesModel, &AbstractModel::refresh);
+    }
 }
 
 SystemModel::~SystemModel()
 {
-    qDeleteAll(m_entryList);
-}
-
-void SystemModel::init()
-{
-    QList<SystemEntry *> actions;
-
-    actions << new SystemEntry(this, SystemEntry::LockSession);
-    actions << new SystemEntry(this, SystemEntry::LogoutSession);
-    actions << new SystemEntry(this, SystemEntry::SaveSession);
-    actions << new SystemEntry(this, SystemEntry::SwitchUser);
-    actions << new SystemEntry(this, SystemEntry::SuspendToRam);
-    actions << new SystemEntry(this, SystemEntry::SuspendToDisk);
-    actions << new SystemEntry(this, SystemEntry::Reboot);
-    actions << new SystemEntry(this, SystemEntry::Shutdown);
-
-    foreach(SystemEntry *entry, actions) {
-        if (entry->isValid()) {
-            m_entryList << entry;
-        } else {
-            delete entry;
-        }
-    }
+    qDeleteAll(m_entries);
 }
 
 QString SystemModel::description() const
@@ -77,11 +63,11 @@ QString SystemModel::description() const
 
 QVariant SystemModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || index.row() >= m_entryList.count()) {
+    if (!index.isValid() || index.row() >= m_entries.count()) {
         return QVariant();
     }
 
-    const SystemEntry *entry = m_entryList.at(index.row());
+    const SystemEntry *entry = m_entries.value(static_cast<SystemEntry::Action>(index.row() + 1));
 
     if (role == Qt::DisplayRole) {
         return entry->name();
@@ -97,6 +83,8 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
         return entry->hasActions();
     } else if (role == Kicker::ActionListRole) {
         return entry->actions();
+    } else if (role == Kicker::DisabledRole) {
+        return !entry->isValid();
     }
 
     return QVariant();
@@ -104,13 +92,13 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
 
 int SystemModel::rowCount(const QModelIndex &parent) const
 {
-    return parent.isValid() ? 0 : m_entryList.count();
+    return parent.isValid() ? 0 : m_entries.count();
 }
 
 bool SystemModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
-    if (row >= 0 && row < m_entryList.count()) {
-        m_entryList.at(row)->run(actionId, argument);
+    if (row >= 0 && row < m_entries.count()) {
+        m_entries.value(static_cast<SystemEntry::Action>(row + 1))->run(actionId, argument);
 
         return true;
     }
@@ -120,16 +108,5 @@ bool SystemModel::trigger(int row, const QString &actionId, const QVariant &argu
 
 void SystemModel::refresh()
 {
-    beginResetModel();
-
-    qDeleteAll(m_entryList);
-    m_entryList.clear();
-
-    init();
-
-    endResetModel();
-
-    emit countChanged();
-
     m_favoritesModel->refresh();
 }
