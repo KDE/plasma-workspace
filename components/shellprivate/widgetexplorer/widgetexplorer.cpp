@@ -233,16 +233,6 @@ QList <QObject *>  WidgetExplorer::widgetsMenuActions()
     return actionList;
 }
 
-QList<QObject *> WidgetExplorer::extraActions() const
-{
-    QList<QObject *> actionList;
-//     foreach (QAction *action, actions()) { // FIXME: where did actions() come from?
-//         actionList << action;
-//     }
-    qWarning() << "extraactions needs reimplementation";
-    return actionList;
-}
-
 void WidgetExplorerPrivate::initRunningApplets()
 {
     //get applets from corona, count them, send results to model

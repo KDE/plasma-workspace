@@ -77,11 +77,6 @@ class WidgetExplorer : public QObject, public QQmlParserStatus
     Q_PROPERTY(QList<QObject *> widgetsMenuActions READ widgetsMenuActions NOTIFY widgetsMenuActionsChanged)
 
     /**
-     * Extra actions assigned by the shell, like switch to activity manager
-     */
-    Q_PROPERTY(QList<QObject *> extraActions READ extraActions NOTIFY extraActionsChanged)
-
-    /**
      * The application that owns the widget list. different application may show different lists
      */
     Q_PROPERTY(QString application READ application WRITE setApplication NOTIFY applicationChanged)
@@ -135,7 +130,6 @@ public:
     void setShowSpecialFilters(bool show);
 
     QList <QObject *>  widgetsMenuActions();
-    QList <QObject *>  extraActions() const;
 
     /**
      * Uninstall a plasmoid with a given plugin name. only user-installed ones are uninstallable
