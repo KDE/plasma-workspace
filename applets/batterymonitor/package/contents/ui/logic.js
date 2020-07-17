@@ -37,7 +37,7 @@ function batteryDetails(batteryData, remainingTime) {
     var data = []
 
     if (remainingTime > 0 && batteryData["Is Power Supply"] && (batteryData["State"] == "Discharging" || batteryData["State"] == "Charging")) {
-        data.push({label: (batteryData["State"] == "Charging" ? i18n("Time To Full:") : i18n("Time To Empty:")) })
+        data.push({label: (batteryData["State"] == "Charging" ? i18n("Time To Full:") : i18n("Remaining Time:")) })
         data.push({value: KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds) })
     }
 
