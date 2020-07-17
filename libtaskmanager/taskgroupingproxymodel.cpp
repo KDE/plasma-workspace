@@ -1014,7 +1014,7 @@ void TaskGroupingProxyModel::requestToggleMaximized(const QModelIndex &index)
         QModelIndexList inStackingOrder;
 
         for (int i = 0; i < rowCount(index); ++i) {
-            const QModelIndex &child = thid->index(i, 0, index);
+            const QModelIndex &child = this->index(i, 0, index);
 
             if (child.data(AbstractTasksModel::IsMaximized).toBool() != goalState) {
                 inStackingOrder << mapToSource(child);
