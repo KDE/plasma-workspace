@@ -48,6 +48,7 @@ class CalculatorRunner : public Plasma::AbstractRunner
 
     private:
         QString calculate(const QString &term, bool *isApproximate);
+        void userFriendlyMultiplication(QString &cmd);
         void userFriendlySubstitutions(QString &cmd);
         void powSubstitutions(QString &cmd);
         void hexSubstitutions(QString &cmd);

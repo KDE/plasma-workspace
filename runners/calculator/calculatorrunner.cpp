@@ -27,9 +27,9 @@
 #include <QJSEngine>
 #include <QGuiApplication>
 #include <QClipboard>
-#include <QRegularExpression>
 #endif
 
+#include <QRegularExpression>
 #include <QIcon>
 #include <QDebug>
 
@@ -228,6 +228,8 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     bool toHex = cmd.startsWith(QLatin1String("hex="));
     bool startsWithEquals = !toHex && cmd[0] == QLatin1Char('=');
 
+    userFriendlyMultiplication(cmd);
+
     if (toHex || startsWithEquals) {
         cmd.remove(0, cmd.indexOf(QLatin1Char('=')) + 1);
     } else if (cmd.endsWith(QLatin1Char('='))) {
@@ -347,6 +349,26 @@ QMimeData * CalculatorRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
     QMimeData *result = new QMimeData();
     result->setText(match.text());
     return result;
+}
+
+void CalculatorRunner::userFriendlyMultiplication(QString &cmd)
+{
+    // convert multiplication sign to *
+    cmd.replace(QChar(U'\u00D7'), QChar('*'));
+
+    for (int i = 0; i < cmd.length(); ++i) {
+        if (i == 0 || i == cmd.length() - 1) {
+            continue;
+        }
+        const QChar prev = cmd.at(i - 1);
+        const QChar current = cmd.at(i);
+        const QChar next = cmd.at(i + 1);
+        if (current == QLatin1Char('x')) {
+            if (prev.isDigit() && (next.isDigit() || next == QLatin1Char(',') || next == QLatin1Char('.'))) {
+                cmd[i] = '*';
+            }
+        }
+    }
 }
 
 #include "calculatorrunner.moc"
