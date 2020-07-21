@@ -36,6 +36,7 @@ Name[uk]=Мова
 Name[x-test]=xxLanguagexx
 Name[zh_CN]=语言
 Name[zh_TW]=語言
+Comment=Change workspace and application languages
 
 Icon=preferences-desktop-locale
 Type=Service
