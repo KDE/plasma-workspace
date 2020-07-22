@@ -116,3 +116,4 @@ X-Plasma-NotificationArea=true
 X-Plasma-NotificationAreaCategory=ApplicationStatus
 X-Plasma-Provides=org.kde.plasma.multimediacontrols
 X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*
+X-KDE-FormFactors=tablet,handset,desktop

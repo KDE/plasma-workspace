@@ -95,3 +95,4 @@ X-KDE-Library=plasma_applet_appmenu
 
 X-Plasma-MainScript=ui/main.qml
 X-KDE-PluginInfo-Category=Windows and Tasks
+X-KDE-FormFactors=desktop

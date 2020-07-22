@@ -170,3 +170,5 @@ X-Plasma-NotificationArea=true
 X-Plasma-NotificationAreaCategory=ApplicationStatus
 # FIXME doesn't work with multi-page KCMs
 #X-Plasma-ConfigPlugins=kcm_notifications
+#It's used also in other formfactors, but only on desktop is available trough widget explorer
+X-KDE-FormFactors=desktop

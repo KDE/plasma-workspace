@@ -194,3 +194,4 @@ X-KDE-PluginInfo-Website=https://vizzzion.org
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-EnabledByDefault=true
 X-Plasma-DBusActivationService=org.kde.Solid.PowerManagement
+X-KDE-FormFactors=desktop

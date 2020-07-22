@@ -133,3 +133,4 @@ X-Plasma-StandAloneApp=true
 
 X-Plasma-MainScript=ui/main.qml
 X-KDE-PluginInfo-Category=Date and Time
+X-KDE-FormFactors=tablet,handset,desktop

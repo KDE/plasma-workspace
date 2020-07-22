@@ -149,5 +149,5 @@ X-KDE-ServiceTypes=Plasma/Applet
 X-Plasma-API=declarativeappletscript
 X-KDE-PluginInfo-Category=Date and Time
 X-Plasma-Provides=org.kde.plasma.time,org.kde.plasma.date
-
+X-KDE-FormFactors=tablet,handset,desktop
 X-Plasma-MainScript=ui/main.qml
