@@ -2,6 +2,7 @@
 Name=Total CPU Use
 Name[ca]=Ús total de CPU
 Name[cs]=Celkové použití CPU
+Name[da]=Samlet CPU-brug
 Name[en_GB]=Total CPU Use
 Name[es]=Uso total de CPU
 Name[et]=Protsessori kogukasutus
@@ -23,6 +24,7 @@ Name[zh_CN]=总 CPU 使用
 Name[zh_TW]=總 CPU 用量
 Comment=System monitor Widget that shows the total CPU usage
 Comment[ca]=Estri del monitor del sistema que mostra l'ús total de la CPU
+Comment[da]=Systemovervågning-widget som viser den samlede CPU-brug
 Comment[en_GB]=System monitor Widget that shows the total CPU usage
 Comment[es]=Elemento gráfico del monitor del sistema que muestra el uso total de CPU
 Comment[et]=Süsteemi jälgija vidin, mis näitab protsessori kogukasutust
