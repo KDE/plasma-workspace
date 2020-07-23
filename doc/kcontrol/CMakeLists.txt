@@ -1,2 +1,4 @@
+ecm_optional_add_subdirectory(desktopthemedetails)
+ecm_optional_add_subdirectory(icons)
 ecm_optional_add_subdirectory(screenlocker)
 ecm_optional_add_subdirectory(translations)
