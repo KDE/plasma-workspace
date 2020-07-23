@@ -52,6 +52,8 @@
 #include "historystringitem.h"
 #include "klipperpopup.h"
 
+#include "systemclipboard.h"
+
 #ifdef HAVE_PRISON
 #include <prison/Prison>
 #endif
@@ -102,10 +104,9 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/klipper"), this, QDBusConnection::ExportScriptableSlots);
 
     updateTimestamp(); // read initial X user time
-    m_clip = qApp->clipboard();
+    m_clip = SystemClipboard::instance();
 
-    connect( m_clip, &QClipboard::changed,
-             this, &Klipper::newClipData );
+    connect( m_clip, &SystemClipboard::changed, this, &Klipper::newClipData );
 
     connect( &m_overflowClearTimer, &QTimer::timeout, this, &Klipper::slotClearOverflow);
 
@@ -717,17 +718,18 @@ void Klipper::checkClipData( bool selectionMode )
     qCDebug(KLIPPER_LOG) << "Checking clip data";
 
     const QMimeData* data = m_clip->mimeData( selectionMode ? QClipboard::Selection : QClipboard::Clipboard );
-    if ( !data ) {
-        qCWarning(KLIPPER_LOG) << "No data in clipboard. This not not supposed to happen.";
-        return;
-    }
 
+    bool clipEmpty = false;
     bool changed = true; // ### FIXME (only relevant under polling, might be better to simply remove polling and rely on XFixes)
-    bool clipEmpty = data->formats().isEmpty();
-    if (clipEmpty) {
-        // Might be a timeout. Try again
+    if ( !data ) {
+        clipEmpty = true;
+    } else {
         clipEmpty = data->formats().isEmpty();
-        qCDebug(KLIPPER_LOG) << "was empty. Retried, now " << (clipEmpty?" still empty":" no longer empty");
+        if (clipEmpty) {
+            // Might be a timeout. Try again
+            clipEmpty = data->formats().isEmpty();
+            qCDebug(KLIPPER_LOG) << "was empty. Retried, now " << (clipEmpty?" still empty":" no longer empty");
+        }
     }
 
     if ( changed && clipEmpty && m_bNoNullClipboard ) {

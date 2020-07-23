@@ -41,6 +41,7 @@ class QMenu;
 class QMimeData;
 class HistoryItem;
 class KNotification;
+class SystemClipboard;
 
 enum class KlipperMode {
     Standalone,
@@ -159,7 +160,7 @@ private:
 
     static void updateTimestamp();
 
-    QClipboard* m_clip;
+    SystemClipboard* m_clip;
 
     QElapsedTimer m_showTimer;
 

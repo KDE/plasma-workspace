@@ -3,6 +3,9 @@ add_definitions(-DTRANSLATION_DOMAIN=\"klipper\")
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
+
+add_subdirectory(systemclipboard)
+
 set(libklipper_common_SRCS
     klipper.cpp
     urlgrabber.cpp
@@ -37,7 +40,6 @@ kconfig_add_kcfg_files(libklipper_common_SRCS klippersettings.kcfgc)
 
 set(klipper_KDEINIT_SRCS ${libklipper_common_SRCS} main.cpp tray.cpp)
 
-
 kf5_add_kdeinit_executable(klipper ${klipper_KDEINIT_SRCS})
 
 target_link_libraries(kdeinit_klipper
@@ -54,6 +56,7 @@ target_link_libraries(kdeinit_klipper
     KF5::WidgetsAddons
     KF5::XmlGui
     ${ZLIB_LIBRARY}
+    systemclipboard
 )
 if (X11_FOUND)
   target_link_libraries(kdeinit_klipper XCB::XCB Qt5::X11Extras)
@@ -88,6 +91,7 @@ target_link_libraries(plasma_engine_clipboard
     KF5::WindowSystem
     KF5::XmlGui        # KActionCollection
     ${ZLIB_LIBRARY}
+    systemclipboard
 )
 if (X11_FOUND)
   target_link_libraries(plasma_engine_clipboard XCB::XCB Qt5::X11Extras)
