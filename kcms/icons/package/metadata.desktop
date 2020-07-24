@@ -1,6 +1,14 @@
 [Desktop Entry]
 Name=Icons
+Name[pt]=Ícones
+Name[pt_BR]=Ícones
+Name[uk]=Піктограми
+Name[x-test]=xxIconsxx
 Comment=Choose icon theme
+Comment[pt]=Escolher o tema de ícones
+Comment[pt_BR]=Escolha o tema de ícones
+Comment[uk]=Вибір теми піктограм
+Comment[x-test]=xxChoose icon themexx
 
 Icon=preferences-desktop-icons
 Type=Service

@@ -1,5 +1,9 @@
 [KNewStuff3]
 Name=Plasma Styles
+Name[pt]=Estilos do Plasma
+Name[pt_BR]=Estilos do Plasma
+Name[uk]=Стилі Плазми
+Name[x-test]=xxPlasma Stylesxx
 
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=Plasma Theme

@@ -12,9 +12,21 @@ X-KDE-System-Settings-Parent-Category=appearance
 X-KDE-Weight=60
 
 Name=Icons
+Name[pt]=Ícones
+Name[pt_BR]=Ícones
+Name[uk]=Піктограми
+Name[x-test]=xxIconsxx
 
 Comment=Choose icon theme
+Comment[pt]=Escolher o tema de ícones
+Comment[pt_BR]=Escolha o tema de ícones
+Comment[uk]=Вибір теми піктограм
+Comment[x-test]=xxChoose icon themexx
 
 X-KDE-Keywords=icons,effects,size,hicolor,locolor
+X-KDE-Keywords[pt]=ícones,efeitos,tamanho,muitas cores,poucas cores
+X-KDE-Keywords[pt_BR]=ícones,efeitos,tamanho,muitas cores,poucas cores,hicolor
+X-KDE-Keywords[uk]=icons,effects,size,hicolor,locolor,піктограми,значки,іконки,ефект,ефекти,розмір,колір
+X-KDE-Keywords[x-test]=xxiconsxx,xxeffectsxx,xxsizexx,xxhicolorxx,xxlocolorxx
 
 Categories=Qt;KDE;X-KDE-settings-looknfeel;

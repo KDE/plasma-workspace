@@ -11,5 +11,17 @@ X-KDE-Weight=20
 X-DocPath=kcontrol/desktopthemedetails/index.html
 
 Name=Plasma Style
+Name[pt]=Estilo do Plasma
+Name[pt_BR]=Estilo do Plasma
+Name[uk]=Стиль Плазми
+Name[x-test]=xxPlasma Stylexx
 Comment=Choose Plasma style
+Comment[pt]=Escolher o estilo do Plasma
+Comment[pt_BR]=Escolha o estilo do Plasma
+Comment[uk]=Вибір стилю Плазми
+Comment[x-test]=xxChoose Plasma stylexx
 X-KDE-Keywords=Desktop Theme,Plasma Theme
+X-KDE-Keywords[pt]=Tema do Ecrã,Tema do Plasma
+X-KDE-Keywords[pt_BR]=Tema da área de trabalho,tema do Plasma
+X-KDE-Keywords[uk]=Desktop Theme,Plasma Theme,тема,стільниця,плазма
+X-KDE-Keywords[x-test]=xxDesktop Themexx,xxPlasma Themexx

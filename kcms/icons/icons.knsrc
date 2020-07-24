@@ -1,5 +1,9 @@
 [KNewStuff3]
 Name=Icons
+Name[pt]=Ícones
+Name[pt_BR]=Ícones
+Name[uk]=Піктограми
+Name[x-test]=xxIconsxx
 
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=KDE Icon Theme

@@ -1,6 +1,14 @@
 [Desktop Entry]
 Name=Plasma Style
+Name[pt]=Estilo do Plasma
+Name[pt_BR]=Estilo do Plasma
+Name[uk]=Стиль Плазми
+Name[x-test]=xxPlasma Stylexx
 Comment=Choose Plasma theme
+Comment[pt]=Escolher o tema do Plasma
+Comment[pt_BR]=Escolha o tema do Plasma
+Comment[uk]=Вибір теми Плазми
+Comment[x-test]=xxChoose Plasma themexx
 Icon=preferences-desktop-theme
 Keywords=
 Type=Service
