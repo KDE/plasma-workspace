@@ -101,7 +101,6 @@ protected Q_SLOTS:
     void showPreview(const KFileItem &item, const QPixmap &preview);
     void previewFailed(const KFileItem &item);
     void sizeFound(const QString &path, const QSize &s);
-    void backgroundsFound(const QStringList &paths, const QString &token);
     void processPaths(const QStringList &paths);
 
 protected:

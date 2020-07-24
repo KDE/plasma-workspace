@@ -114,46 +114,37 @@ void BackgroundListModel::reload()
 
 void BackgroundListModel::reload(const QStringList &selected)
 {
-    if (!m_packages.isEmpty()) {
+    if (!m_wallpaper) {
         beginRemoveRows(QModelIndex(), 0, m_packages.count() - 1);
         m_packages.clear();
         endRemoveRows();
         emit countChanged();
-    }
-
-    if (!m_wallpaper) {
         return;
     }
 
-    if (!selected.isEmpty()) {
-        qCDebug(IMAGEWALLPAPER) << "selected" << selected;
-        processPaths(selected);
-    }
-
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/"), QStandardPaths::LocateDirectory);
-    qCDebug(IMAGEWALLPAPER) << "Looking into" << dirs << "for wallpapers";
 
     BackgroundFinder *finder = new BackgroundFinder(m_wallpaper.data(), dirs);
-    connect(finder, &BackgroundFinder::backgroundsFound, this, &BackgroundListModel::backgroundsFound);
-    m_findToken = finder->token();
-    finder->start();
-    m_removableWallpapers = QSet<QString>::fromList(selected);
-}
+    const auto token = finder->token();
+    connect(finder, &BackgroundFinder::backgroundsFound, this, [this, selected, token] (const QStringList &wallpapersFound) {
+        if (token != m_findToken || !m_wallpaper) {
+            return;
+        }
 
-void BackgroundListModel::backgroundsFound(const QStringList &paths, const QString &token)
-{
-    if (token == m_findToken) {
-        processPaths(paths);
-    }
+        processPaths(selected + wallpapersFound);
+        m_removableWallpapers = QSet<QString>(selected.constBegin(), selected.constEnd());
+    });
+    m_findToken = token;
+    finder->start();
 }
 
 void BackgroundListModel::processPaths(const QStringList &paths)
 {
-    if (!m_wallpaper) {
-        return;
-    }
+    beginResetModel();
+    m_packages.clear();
 
     QList<KPackage::Package> newPackages;
+    newPackages.reserve(paths.count());
     Q_FOREACH (QString file, paths) {
         // check if the path is a symlink and if it is,
         // work with the target rather than the symlink
@@ -204,11 +195,10 @@ void BackgroundListModel::processPaths(const QStringList &paths)
 
     if (!newPackages.isEmpty()) {
         const int start = rowCount();
-        beginInsertRows(QModelIndex(), start, start + newPackages.size() - 1);
         m_packages.append(newPackages);
-        endInsertRows();
-        emit countChanged();
     }
+    endResetModel();
+    emit countChanged();
     //qCDebug(IMAGEWALLPAPER) << t.elapsed();
 }
 
@@ -236,7 +226,7 @@ int BackgroundListModel::indexOf(const QString &path) const
     for (int i = 0; i < m_packages.size(); i++) {
         // packages will end with a '/', but the path passed in may not
         QString package = m_packages[i].path();
-        if (package.at(package.length() - 1) == QChar::fromLatin1('/')) {
+        if (package.endsWith(QChar::fromLatin1('/'))) {
             package.chop(1);
         }
         //remove eventual file:///
@@ -273,9 +263,9 @@ bool BackgroundListModel::contains(const QString &path) const
     return indexOf(path) >= 0;
 }
 
-int BackgroundListModel::rowCount(const QModelIndex &) const
+int BackgroundListModel::rowCount(const QModelIndex &parent) const
 {
-    return m_packages.size();
+    return parent.isValid() ? 0 : m_packages.size();
 }
 
 QSize BackgroundListModel::bestSize(const KPackage::Package &package) const

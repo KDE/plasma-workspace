@@ -52,6 +52,7 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
         buildRandomOrder();
     }
     if(sourceModel) {
+        connect(sourceModel, &QAbstractItemModel::modelReset, this, &SlideFilterModel::buildRandomOrder);
         connect(sourceModel, &QAbstractItemModel::rowsInserted, this, [this] {
             if (m_SortingMode !=  Image::Random || m_usedInConfig) {
                 return;
