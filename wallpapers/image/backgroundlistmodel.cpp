@@ -194,7 +194,6 @@ void BackgroundListModel::processPaths(const QStringList &paths)
     }
 
     if (!newPackages.isEmpty()) {
-        const int start = rowCount();
         m_packages.append(newPackages);
     }
     endResetModel();
