@@ -360,18 +360,7 @@ ColumnLayout {
             function resetCurrentIndex() {
                 //that min is needed as the module will be populated in an async way
                 //and only on demand so we can't ensure it already exists
-                view.currentIndex = Math.min(imageModel.indexOf(cfg_Image), imageModel.rowCount()-1)
-            }
-
-            Connections {
-                target: imageModel
-                onRowsInserted: resetCurrentIndex()
-                onRowsRemoved: resetCurrentIndex()
-            }
-
-            Connections {
-                target: root
-                onCfg_ImageChanged: resetCurrentIndex()
+                view.currentIndex = Qt.binding(function() { return Math.min(imageModel.indexOf(cfg_Image), imageModel.count - 1) });
             }
 
             //kill the space for label under thumbnails
