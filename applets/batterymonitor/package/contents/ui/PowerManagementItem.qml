@@ -42,21 +42,21 @@ ColumnLayout {
 
         PlasmaComponents3.ToolButton {
             icon.name: "documentinfo"
-            onClicked: batterymonitor.action_energyinformationkcm()
+            onClicked: plasmoid.action("energyinformationkcm").trigger()
             visible: batterymonitor.kcmEnergyInformationAuthorized
 
             PlasmaComponents3.ToolTip {
-                text: i18n("Show detailed energy information")
+                text: plasmoid.action("energyinformationkcm").text
             }
         }
 
         PlasmaComponents3.ToolButton {
             icon.name: "configure"
-            onClicked: batterymonitor.action_powerdevilkcm()
+            onClicked: plasmoid.action("powerdevilkcm").trigger()
             visible: batterymonitor.kcmsAuthorized
 
             PlasmaComponents3.ToolTip {
-                text: i18n("Configure Power Saving...")
+                text: plasmoid.action("powerdevilkcm").text
             }
         }
     }
