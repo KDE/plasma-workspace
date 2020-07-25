@@ -41,6 +41,16 @@ ColumnLayout {
         }
 
         PlasmaComponents3.ToolButton {
+            icon.name: "documentinfo"
+            onClicked: batterymonitor.action_energyinformationkcm()
+            visible: batterymonitor.kcmEnergyInformationAuthorized
+
+            PlasmaComponents3.ToolTip {
+                text: i18n("Show detailed energy information")
+            }
+        }
+
+        PlasmaComponents3.ToolButton {
             icon.name: "configure"
             onClicked: batterymonitor.action_powerdevilkcm()
             visible: batterymonitor.kcmsAuthorized
