@@ -1,7 +1,11 @@
 [KNewStuff3]
 Name=Icons
+Name[az]=Nişanlar
+Name[ca]=Icones
+Name[nl]=Pictogrammen
 Name[pt]=Ícones
 Name[pt_BR]=Ícones
+Name[sv]=Ikoner
 Name[uk]=Піктограми
 Name[x-test]=xxIconsxx
 

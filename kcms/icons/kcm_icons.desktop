@@ -12,20 +12,32 @@ X-KDE-System-Settings-Parent-Category=appearance
 X-KDE-Weight=60
 
 Name=Icons
+Name[az]=Nişanlar
+Name[ca]=Icones
+Name[nl]=Pictogrammen
 Name[pt]=Ícones
 Name[pt_BR]=Ícones
+Name[sv]=Ikoner
 Name[uk]=Піктограми
 Name[x-test]=xxIconsxx
 
 Comment=Choose icon theme
+Comment[az]=İkon mövzusunu seçin
+Comment[ca]=Trieu el tema d'icones
+Comment[nl]=Pictogramthema kiezen
 Comment[pt]=Escolher o tema de ícones
 Comment[pt_BR]=Escolha o tema de ícones
+Comment[sv]=Välj ikontema
 Comment[uk]=Вибір теми піктограм
 Comment[x-test]=xxChoose icon themexx
 
 X-KDE-Keywords=icons,effects,size,hicolor,locolor
+X-KDE-Keywords[az]=ikonlar,effektlər,tünd rənglər,açıq rənglər,icons,effects,size,hicolor,locolor
+X-KDE-Keywords[ca]=icones,efectes,mida,color alt,color baix
+X-KDE-Keywords[nl]=pictoogrammen,effecten,grootte,hi-kleur,lo-kleur
 X-KDE-Keywords[pt]=ícones,efeitos,tamanho,muitas cores,poucas cores
 X-KDE-Keywords[pt_BR]=ícones,efeitos,tamanho,muitas cores,poucas cores,hicolor
+X-KDE-Keywords[sv]=ikoner,effekter,storlek,hicolor,locolor
 X-KDE-Keywords[uk]=icons,effects,size,hicolor,locolor,піктограми,значки,іконки,ефект,ефекти,розмір,колір
 X-KDE-Keywords[x-test]=xxiconsxx,xxeffectsxx,xxsizexx,xxhicolorxx,xxlocolorxx
 

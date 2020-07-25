@@ -1,12 +1,20 @@
 [Desktop Entry]
 Name=Icons
+Name[az]=Nişanlar
+Name[ca]=Icones
+Name[nl]=Pictogrammen
 Name[pt]=Ícones
 Name[pt_BR]=Ícones
+Name[sv]=Ikoner
 Name[uk]=Піктограми
 Name[x-test]=xxIconsxx
 Comment=Choose icon theme
+Comment[az]=İkon mövzusunu seçin
+Comment[ca]=Trieu el tema d'icones
+Comment[nl]=Pictogramthema kiezen
 Comment[pt]=Escolher o tema de ícones
 Comment[pt_BR]=Escolha o tema de ícones
+Comment[sv]=Välj ikontema
 Comment[uk]=Вибір теми піктограм
 Comment[x-test]=xxChoose icon themexx
 
