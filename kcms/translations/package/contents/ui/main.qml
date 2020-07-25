@@ -170,7 +170,7 @@ ScrollViewKCM {
 
             visible: languagesList.count
 
-            text: i18n("The language at the top of this list is the one you want to see and use most often.\nPlease report missing or incorrect translations to the <a href='https://bugs.kde.org/enter_bug.cgi?product=i18n'>KDE Bugtracker</a>.")
+            text: i18n("The language at the top of this list is the one you want to see and use most often.")
             wrapMode: Text.WordWrap
         }
     }
