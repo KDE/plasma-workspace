@@ -55,6 +55,7 @@ MouseArea {
 
                 height: root.itemSize
                 width: root.width/view.count
+                rotation: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? -90 : 0
 
                 property real iconSize: Math.min(width, height)
 
