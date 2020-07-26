@@ -124,7 +124,6 @@ MouseArea {
             anchors.right: parent.right
             icon.name: "media-eject"
             text: i18n("Remove all")
-            implicitWidth: minimumWidth
 
             PlasmaComponents3.ToolTip {
                 text: i18n("Click to safely remove all devices")

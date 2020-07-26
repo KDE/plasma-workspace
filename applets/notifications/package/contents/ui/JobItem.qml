@@ -222,7 +222,6 @@ ColumnLayout {
                     ? i18nd("plasma_applet_org.kde.plasma.notifications", "Open Containing Folder")
                     : i18nd("plasma_applet_org.kde.plasma.notifications", "Open")
             onClicked: jobItem.openUrl(jobItem.url)
-            width: minimumWidth
         }
     }
 

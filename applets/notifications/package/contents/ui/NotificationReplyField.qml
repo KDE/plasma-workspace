@@ -64,7 +64,6 @@ RowLayout {
 
     PlasmaComponents3.Button {
         id: replyButton
-        Layout.preferredWidth: minimumWidth
         icon.name: replyRow.buttonIconName || "document-send"
         text: replyRow.buttonText
               || i18ndc("plasma_applet_org.kde.plasma.notifications", "@action:button", "Send")

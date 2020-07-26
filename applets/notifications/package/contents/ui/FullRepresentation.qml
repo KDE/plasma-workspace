@@ -566,7 +566,6 @@ PlasmaComponents3.Page {
                                 }
 
                                 PlasmaComponents3.ToolButton {
-                                    Layout.preferredWidth: minimumWidth
                                     icon.name: model.isGroupExpanded ? "arrow-up" : "arrow-down"
                                     text: model.isGroupExpanded ? i18n("Show Fewer")
                                                                 : i18nc("Expand to show n more notifications",

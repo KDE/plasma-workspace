@@ -104,7 +104,6 @@ Item {
             id: noMenuPlaceholder
             visible: buttonRepeater.count == 0
             text: plasmoid.title
-            Layout.preferredWidth: minimumWidth
             Layout.fillWidth: root.vertical
             Layout.fillHeight: !root.vertical
         }
@@ -116,7 +115,6 @@ Item {
             PlasmaComponents3.ToolButton {
                 readonly property int buttonIndex: index
 
-                Layout.preferredWidth: minimumWidth
                 Layout.fillWidth: root.vertical
                 Layout.fillHeight: !root.vertical
                 text: {
