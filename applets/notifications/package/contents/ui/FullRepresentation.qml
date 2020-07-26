@@ -177,11 +177,8 @@ PlasmaComponents3.Page {
                     visible: plasmoid.action("openKcm").enabled
                     onClicked: plasmoid.action("openKcm").trigger()
 
-                    // remove mnemonics
                     PlasmaComponents3.ToolTip {
-                        text: plasmoid.action("openKcm").text.replace(/([^&]*)&(.)([^&]*)/g, function (match, p1, p2, p3) {
-                            return p1.concat(p2, p3);
-                        });
+                        text: plasmoid.action("openKcm").text
                     }
                 }
 
