@@ -19,7 +19,6 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
-import org.kde.plasma.components 2.0 as PlasmaComponents // For ListItem
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -252,7 +251,7 @@ PlasmaComponents3.Page {
                     ListView {
                         id: holidaysList
 
-                        delegate: PlasmaComponents.ListItem {
+                        delegate: PlasmaExtras.ListItem {
                             id: eventItem
                             property bool hasTime: {
                                 // Explicitly all-day event
@@ -452,7 +451,7 @@ PlasmaComponents3.Page {
                         return timezones;
                     }
 
-                    delegate: PlasmaComponents.ListItem {
+                    delegate: PlasmaExtras.ListItem {
                         id: listItem
                         readonly property bool isCurrentTimeZone: modelData === plasmoid.configuration.lastSelectedTimezone
                         separatorVisible: false
