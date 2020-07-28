@@ -746,11 +746,12 @@ void PanelView::setAutoHideEnabled(bool enabled)
         KWindowEffects::slideWindow(winId(), slideLocation, -1);
     }
 #endif
-    if (m_shellSurface && m_visibilityMode == PanelView::AutoHide) {
+    if (m_shellSurface && (m_visibilityMode == PanelView::AutoHide || m_visibilityMode == PanelView::LetWindowsCover)) {
         if (enabled) {
             m_shellSurface->requestHideAutoHidingPanel();
         } else {
-            m_shellSurface->requestShowAutoHidingPanel();
+            if (m_visibilityMode == PanelView::AutoHide)
+                m_shellSurface->requestShowAutoHidingPanel();
         }
     }
 }
