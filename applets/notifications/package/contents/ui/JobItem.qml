@@ -162,7 +162,7 @@ ColumnLayout {
                 enabled: jobItem.jobDetails && jobItem.jobDetails.hasDetails
 
                 PlasmaComponents3.ToolTip {
-                    text: checked ? i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; hides item details", "Hide Details")
+                    text: expandButton.checked ? i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; hides item details", "Hide Details")
                                   : i18ndc("plasma_applet_org.kde.plasma.notifications", "A button tooltip; expands the item to show details", "Show Details")
                 }
             }
