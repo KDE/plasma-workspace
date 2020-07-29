@@ -2,6 +2,7 @@
 Name=Recent Files
 Name[az]=Sonuncu fayllar
 Name[ca]=Fitxers recents
+Name[cs]=Nedávné soubory
 Name[es]=Archivos recientes
 Name[eu]=Azken aldiko fitxategiak
 Name[fi]=Viimeisimmät tiedostot
@@ -10,6 +11,7 @@ Name[it]=File recenti
 Name[nl]=Recente bestanden
 Name[pt]=Ficheiros Recentes
 Name[pt_BR]=Arquivos recentes
+Name[sk]=Nedávne súbory
 Name[sl]=Zadnje datoteke
 Name[sv]=Senaste filer
 Name[uk]=Нещодавні файли

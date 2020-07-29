@@ -2,6 +2,7 @@
 Name=Icons
 Name[az]=Nişanlar
 Name[ca]=Icones
+Name[cs]=Ikony
 Name[es]=Iconos
 Name[eu]=Ikonoak
 Name[fr]=Icônes
@@ -9,6 +10,8 @@ Name[it]=Icone
 Name[nl]=Pictogrammen
 Name[pt]=Ícones
 Name[pt_BR]=Ícones
+Name[sk]=Ikony
+Name[sl]=Ikone
 Name[sv]=Ikoner
 Name[uk]=Піктограми
 Name[x-test]=xxIconsxx
