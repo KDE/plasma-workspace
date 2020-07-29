@@ -161,6 +161,7 @@ MouseArea {
                 }
             }
             readonly property int autoSizeCellLength: thickness / rowsOrColumns
+            readonly property int smallSizeCellLength: root.smallIconSize + units.smallSpacing
             readonly property int totalLength: root.vertical ? cellHeight * Math.round(count / rowsOrColumns)
                                                              : cellWidth * Math.round(count / rowsOrColumns)
 
@@ -172,8 +173,8 @@ MouseArea {
             implicitHeight: root.vertical ? totalLength : root.height
             implicitWidth: !root.vertical ? totalLength : root.width
 
-            cellHeight: root.vertical && !root.autoSize ? root.smallIconSize + units.smallSpacing : autoSizeCellLength
-            cellWidth:  !root.vertical && !root.autoSize ? root.smallIconSize + units.smallSpacing : autoSizeCellLength
+            cellHeight: root.vertical && !root.autoSize ? smallSizeCellLength : autoSizeCellLength
+            cellWidth:  !root.vertical && !root.autoSize ? smallSizeCellLength : autoSizeCellLength
 
             model: PlasmaCore.SortFilterModel {
                 sourceModel: plasmoid.nativeInterface.systemTrayModel
