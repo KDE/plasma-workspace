@@ -161,7 +161,7 @@ MouseArea {
                 }
             }
             readonly property int autoSizeCellLength: thickness / rowsOrColumns
-            readonly property int smallSizeCellLength: root.smallIconSize + units.smallSpacing
+            readonly property int smallSizeCellLength: root.smallIconSize + units.smallSpacing * 2
             readonly property int totalLength: root.vertical ? cellHeight * Math.round(count / rowsOrColumns)
                                                              : cellWidth * Math.round(count / rowsOrColumns)
 
