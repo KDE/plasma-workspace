@@ -303,9 +303,7 @@ KDisplayManager::KDisplayManager() : d(new Private)
     qDBusRegisterMetaType<NumberedDBusObjectPath>();
 
     if (DMType == Dunno) {
-        if (!(dpy = ::getenv("DISPLAY")))
-            DMType = NoDM;
-        else if ((ctl = ::getenv("DM_CONTROL")))
+        if ((ctl = ::getenv("DM_CONTROL")))
             DMType = NewKDM;
         else if ((ctl = ::getenv("XDM_MANAGED")) && ctl[0] == '/')
             DMType = OldKDM;
@@ -700,7 +698,7 @@ KDisplayManager::localSessions(SessList &list)
                              * doesn't seem exactly... right to me --mbriza
                              */
                             se.session = QStringLiteral("<unknown>");
-                            se.self = lsess.property("Display").toString() == ::getenv("DISPLAY"); /* Bleh once again */
+                            se.self = sp == currentSession;
                             se.tty = !lsess.property("TTY").toString().isEmpty();
                         }
                         list.append(se);
