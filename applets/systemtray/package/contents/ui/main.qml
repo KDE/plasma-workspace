@@ -41,17 +41,27 @@ MouseArea {
     // The icon size to display when not using the default auto-scaling setting
     readonly property int smallIconSize: units.iconSizes.smallMedium
 
-    readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
-
-    readonly property bool autoSize: plasmoid.configuration.automaticRowsOrColumns
-
     // Used only by AbstractItem, but it's easiest to keep it here since it
     // uses dimensions from this item to calculate the final value
     readonly property int itemSize: autoSize ? units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes.enormous)) : smallIconSize
 
+    // The rest are derived properties; do not modify
+    readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    readonly property bool autoSize: plasmoid.configuration.automaticRowsOrColumns
+    readonly property int cellThickness: root.vertical ? root.width : root.height
+    readonly property int rowsOrColumns: {
+        if (autoSize) {
+            if (cellThickness <= smallIconSize * 2) {
+                return 1
+            } else {
+                return 2
+            }
+        } else {
+            return plasmoid.configuration.rowsOrColumns
+        }
+    }
     property alias expanded: dialog.visible
     property Item activeApplet
-
     property alias visibleLayout: tasksGrid
     property alias hiddenLayout: expandedRepresentation.hiddenLayout
 
@@ -148,22 +158,10 @@ MouseArea {
         GridView {
             id: tasksGrid
 
-            readonly property int thickness: root.vertical ? root.width : root.height
-            readonly property int rowsOrColumns: {
-                if (root.autoSize) {
-                    if (thickness <= units.iconSizes.smallMedium * 2) {
-                        return 1
-                    } else {
-                        return 2
-                    }
-                } else {
-                    return plasmoid.configuration.rowsOrColumns
-                }
-            }
-            readonly property int autoSizeCellLength: thickness / rowsOrColumns
+            readonly property int autoSizeCellLength: root.cellThickness / root.rowsOrColumns
             readonly property int smallSizeCellLength: root.smallIconSize + units.smallSpacing * 2
-            readonly property int totalLength: root.vertical ? cellHeight * Math.round(count / rowsOrColumns)
-                                                             : cellWidth * Math.round(count / rowsOrColumns)
+            readonly property int totalLength: root.vertical ? cellHeight * Math.round(count / root.rowsOrColumns)
+                                                             : cellWidth * Math.round(count / root.rowsOrColumns)
 
             Layout.alignment: Qt.AlignCenter
 
