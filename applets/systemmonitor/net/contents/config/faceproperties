@@ -1,6 +1,6 @@
 [Config]
 chartFace=org.kde.ksysguard.linechart
-highPrioritySensorIds=["network/all/receivedDataRate","network/all/sentDataRate"]
+highPrioritySensorIds=["network/all/download","network/all/upload"]
 
 [FaceConfig]
 lineChartSmooth=true
