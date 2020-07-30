@@ -43,7 +43,7 @@ MouseArea {
 
     // Used only by AbstractItem, but it's easiest to keep it here since it
     // uses dimensions from this item to calculate the final value
-    readonly property int itemSize: autoSize ? units.roundToIconSize(Math.min(Math.min(width, height), units.iconSizes.enormous)) : smallIconSize
+    readonly property int itemSize: autoSize ? units.roundToIconSize(Math.min(Math.min(width / rowsOrColumns, height / rowsOrColumns), units.iconSizes.enormous)) : smallIconSize
 
     // The rest are derived properties; do not modify
     readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
