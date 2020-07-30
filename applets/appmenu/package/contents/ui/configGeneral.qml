@@ -30,17 +30,14 @@ Kirigami.FormLayout {
     anchors.right: parent.right
     
     property alias cfg_compactView: compactViewRadioButton.checked
-    property bool disableSetting: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     RadioButton {
         id: compactViewRadioButton
-        enabled: !disableSetting
         text: i18n("Use single button for application menu")
     }
 
     RadioButton {
         id: fullViewRadioButton
-        enabled: !disableSetting
         checked: !compactViewRadioButton.checked
         text: i18n("Show full application menu")
     }

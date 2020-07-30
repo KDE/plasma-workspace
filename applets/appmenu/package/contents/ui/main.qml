@@ -39,7 +39,7 @@ Item {
         plasmoid.nativeInterface.view = view
     }
 
-    Plasmoid.preferredRepresentation: (plasmoid.configuration.compactView || vertical) ? Plasmoid.compactRepresentation : Plasmoid.fullRepresentation
+    Plasmoid.preferredRepresentation: (plasmoid.configuration.compactView) ? Plasmoid.compactRepresentation : Plasmoid.fullRepresentation
 
     Plasmoid.compactRepresentation: PlasmaComponents3.ToolButton {
         readonly property int fakeIndex: 0
