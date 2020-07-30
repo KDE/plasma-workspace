@@ -30,6 +30,7 @@ Kirigami.FormLayout {
     anchors.right: parent.right
     
     property alias cfg_compactView: compactViewRadioButton.checked
+    property alias cfg_displayTitle: showWindowTitle.checked
     property bool disableSetting: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     RadioButton {
@@ -43,5 +44,11 @@ Kirigami.FormLayout {
         enabled: !disableSetting
         checked: !compactViewRadioButton.checked
         text: i18n("Show full application menu")
+    }
+
+    CheckBox {
+        enabled: fullViewRadioButton.checked
+        id: showWindowTitle
+        text: i18n("Show window title")
     }
 }

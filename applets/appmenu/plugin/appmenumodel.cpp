@@ -146,6 +146,8 @@ void AppMenuModel::onActiveWindowChanged()
     const QString objectPath = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::ApplicationMenuObjectPath).toString();
     const QString serviceName = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::ApplicationMenuServiceName).toString();
 
+    emit currentTitleChanged();
+
     if (!objectPath.isEmpty() && !serviceName.isEmpty()) {
         setMenuAvailable(true);
         updateApplicationMenu(serviceName, objectPath);
@@ -155,6 +157,12 @@ void AppMenuModel::onActiveWindowChanged()
         setMenuAvailable(false);
         setVisible(false);
     }
+}
+
+QVariant AppMenuModel::currentTitle() const
+{
+    const QModelIndex activeTaskIndex = m_tasksModel->activeTask();
+    return m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::AppName);
 }
 
 QHash<int, QByteArray> AppMenuModel::roleNames() const

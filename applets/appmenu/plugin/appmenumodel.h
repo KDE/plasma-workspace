@@ -40,6 +40,7 @@ class AppMenuModel : public QAbstractListModel
 
     Q_PROPERTY(bool menuAvailable READ menuAvailable WRITE setMenuAvailable NOTIFY menuAvailableChanged)
     Q_PROPERTY(bool visible READ visible NOTIFY visibleChanged)
+    Q_PROPERTY(QVariant currentTitle READ currentTitle NOTIFY currentTitleChanged)
 
     Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
 
@@ -61,6 +62,7 @@ public:
     bool menuAvailable() const;
     void setMenuAvailable(bool set);
 
+    QVariant currentTitle() const;
     bool visible() const;
 
     QRect screenGeometry() const;
@@ -68,6 +70,7 @@ public:
 
 signals:
     void requestActivateIndex(int index);
+    void currentTitleChanged();
 
 private Q_SLOTS:
     void onActiveWindowChanged();

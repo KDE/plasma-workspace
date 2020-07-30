@@ -10,6 +10,10 @@
       <label>If true it only shows a button for the application menu.</label>
       <default>false</default>
     </entry>
+    <entry name="displayTitle" type="Bool">
+      <label>Whether or not to display the window title.</label>
+      <default>false</default>
+    </entry>
   </group>
 
 </kcfg>

@@ -108,6 +108,16 @@ Item {
             Layout.fillHeight: !root.vertical
         }
 
+        Label {
+            text: appMenuModel.currentTitle
+            wrapMode: root.vertical ? Text.Wrap : Text.NoWrap
+            font.weight: Font.Bold
+            visible: plasmoid.configuration.displayTitle
+
+            Layout.preferredHeight: root.vertical ? noMenuPlaceholder.height : -1
+            Layout.alignment: root.vertical ? Qt.AlignHCenter : 0
+        }
+
         Repeater {
             id: buttonRepeater
             model: appMenuModel.visible ? appMenuModel : null
