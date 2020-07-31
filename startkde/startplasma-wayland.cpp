@@ -76,6 +76,9 @@ int main(int argc, char** argv)
         return 1;
     }
     setupPlasmaEnvironment();
+    runStartupConfig();
+    qputenv("PLASMA_USE_QT_SCALING", "1");
+
     qputenv("XDG_SESSION_TYPE", "wayland");
 
     if (!syncDBusEnvironment()) {

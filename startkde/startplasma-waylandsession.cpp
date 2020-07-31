@@ -37,12 +37,9 @@ int main(int argc, char** argv)
     //
     // * Then ksmserver is started which takes control of the rest of the startup sequence
 
-    runStartupConfig();
-
     setupFontDpi();
 
     QScopedPointer<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
-    qputenv("PLASMA_USE_QT_SCALING", "1");
 
     out << "startplasma-waylandsession: Starting up...";
 
