@@ -51,7 +51,6 @@ int main(int argc, char** argv)
     } else {
         qWarning() << "running kwin without Xwayland support";
     }
-    setupGSLib();
 
     if (!syncDBusEnvironment()) {
         out << "Could not sync environment to dbus.\n";

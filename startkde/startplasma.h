@@ -41,7 +41,6 @@ void cleanupX11();
 bool syncDBusEnvironment();
 void setupFontDpi();
 QProcess* setupKSplash();
-void setupGSLib();
 void setupX11();
 
 bool startKDEInit();

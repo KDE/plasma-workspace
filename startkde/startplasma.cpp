@@ -334,17 +334,6 @@ QProcess* setupKSplash()
     return p;
 }
 
-void setupGSLib()
-// Get Ghostscript to look into user's KDE fonts dir for additional Fontmap
-{
-    const QByteArray usr_fdir = QFile::encodeName(QDir::home().absoluteFilePath(QStringLiteral(".fonts")));
-    if (qEnvironmentVariableIsSet("GS_LIB")) {
-        qputenv("GS_LIB", usr_fdir + ':' + qgetenv("GS_LIB"));
-    } else {
-        qputenv("GS_LIB", usr_fdir);
-    }
-}
-
 bool startPlasmaSession(bool wayland)
 {
     OrgKdeKSplashInterface iface(QStringLiteral("org.kde.KSplash"), QStringLiteral("/KSplash"), QDBusConnection::sessionBus());
