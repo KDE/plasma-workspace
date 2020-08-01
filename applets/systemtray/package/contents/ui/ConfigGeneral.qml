@@ -30,11 +30,6 @@ ColumnLayout {
     property alias cfg_automaticRowsOrColumns: automaticRadioButton.checked
     property int cfg_rowsOrColumns
 
-    Component.onCompleted: {
-        console.warn("Plasmoid width is " + plasmoid.width)
-        console.warn("Plasmoid height is " + plasmoid.height)
-    }
-
     Kirigami.InlineMessage {
         readonly property int minimumSize: units.iconSizes.small * 2
 
