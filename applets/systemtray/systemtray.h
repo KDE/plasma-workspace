@@ -27,7 +27,7 @@
 #include <Plasma/Containment>
 
 class QDBusPendingCallWatcher;
-class QDBusConnection;
+class QDBusServiceWatcher;
 class QQuickItem;
 namespace Plasma {
     class Service;
@@ -95,7 +95,6 @@ public:
 
 private Q_SLOTS:
     void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher);
-    void serviceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner);
 
 private:
     void serviceRegistered(const QString &service);
@@ -119,6 +118,9 @@ private:
     SortedSystemTrayModel *m_sortedSystemTrayModel;
     SortedSystemTrayModel *m_configSystemTrayModel;
     QHash<QString, int> m_knownPlugins;
+
+    QDBusServiceWatcher *m_sessionServiceWatcher;
+    QDBusServiceWatcher *m_systemServiceWatcher;
     QHash<QString, int> m_dbusServiceCounts;
     bool m_dbusSessionServiceNamesFetched = false;
     bool m_dbusSystemServiceNamesFetched = false;
