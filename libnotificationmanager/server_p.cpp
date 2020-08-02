@@ -362,16 +362,8 @@ uint ServerPrivate::add(const Notification &notification)
 
 void ServerPrivate::sendReplyText(const QString &dbusService, uint notificationId, const QString &text)
 {
-    if (dbusService.isEmpty()) {
-        qCWarning(NOTIFICATIONMANAGER) << "Sending notification reply text for notification" << notificationId << "untargeted";
-    }
-
-    QDBusMessage msg = QDBusMessage::createTargetedSignal(dbusService,
-                                                          notificationServicePath(),
-                                                          notificationServiceName(),
-                                                          QStringLiteral("NotificationReplied"));
-    msg.setArguments({notificationId, text});
-    QDBusConnection::sessionBus().send(msg);
+    Q_UNUSED(dbusService)
+    emit NotificationReplied(notificationId, text);
 }
 
 uint ServerPrivate::Inhibit(const QString &desktop_entry, const QString &reason, const QVariantMap &hints)
