@@ -39,17 +39,6 @@ MouseArea {
     Layout.minimumWidth: units.gridUnit * 12
     Layout.minimumHeight: units.gridUnit * 12
 
-    PlasmaExtras.Heading {
-        anchors.fill: parent
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
-        wrapMode: Text.WordWrap
-        level: 3
-        text: i18n("No devices available")
-        visible: notifierDialog.count === 0 && !devicenotifier.pendingDelegateRemoval
-        enabled: false
-    }
-
     PlasmaCore.DataSource {
         id: userActivitySource
         engine: "powermanagement"
@@ -163,6 +152,13 @@ MouseArea {
                             text: section
                         }
                     }
+                }
+
+                PlasmaExtras.PlaceholderMessage {
+                    anchors.centerIn: parent
+                    width: parent.width - (units.largeSpacing * 4)
+                    text: i18n("No devices available")
+                    visible: notifierDialog.count === 0 && !devicenotifier.pendingDelegateRemoval
                 }
             }
         }
