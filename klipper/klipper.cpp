@@ -740,6 +740,8 @@ void Klipper::checkClipData( bool selectionMode )
             setClipboard( *top, selectionMode ? Selection : Clipboard );
         }
         return;
+    } else if (clipEmpty) {
+        return;
     }
 
     // this must be below the "bNoNullClipboard" handling code!
