@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Device Notifier
+Name=Disks & Devices
 Name[ar]=مُخطِر الأجهزة
 Name[ast]=Avisador de preseos
 Name[az]=Cihaz qoşulmaları bildirişləri
@@ -76,7 +76,7 @@ Name[wa]=Notifiaedje d' éndjin
 Name[x-test]=xxDevice Notifierxx
 Name[zh_CN]=设备通知器
 Name[zh_TW]=裝置通知
-Comment=Notifications and access for new devices
+Comment=Notifications and access for devices
 Comment[ar]=إخطارات ووصول الأجهزة الجديدة
 Comment[az]=Yeni qoşulan cihaz bildirişləri və onlara giriş
 Comment[be@latin]=Infarmavańnie j dostup da novych pryładaŭ

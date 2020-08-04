@@ -31,13 +31,94 @@ import org.kde.plasma.components 2.0 as PlasmaComponents // For Highlight
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-MouseArea {
+PlasmaComponents3.Page {
     id: fullRep
     property bool spontaneousOpen: false
 
-    hoverEnabled: true
     Layout.minimumWidth: units.gridUnit * 12
     Layout.minimumHeight: units.gridUnit * 12
+
+    header: PlasmaExtras.PlasmoidHeading {
+        id: headerToolbarContainer
+
+        RowLayout {
+            width: parent.width
+
+            PlasmaComponents3.Label {
+                text: i18n("Show:")
+            }
+
+            PlasmaComponents3.ComboBox {
+                Layout.preferredWidth: units.gridUnit * 11
+                model: ["Removable devices",
+                        "Non-removable devices",
+                        "All devices"
+                       ]
+                currentIndex: {
+                    if (plasmoid.configuration.removableDevices) {
+                        return 0
+                    } else if (plasmoid.configuration.nonRemovableDevices) {
+                        return 1
+                    } else {
+                        return 2
+                    }
+                }
+                onActivated: {
+                    switch (currentIndex) {
+                        case 0:
+                            plasmoid.configuration.removableDevices = true;
+                            plasmoid.configuration.nonRemovableDevices = false;
+                            plasmoid.configuration.allDevices = false;
+                            break;
+                        case 1:
+                            plasmoid.configuration.removableDevices = false;
+                            plasmoid.configuration.nonRemovableDevices = true;
+                            plasmoid.configuration.allDevices = false;
+                            break;
+                        case 2:
+                            plasmoid.configuration.removableDevices = false;
+                            plasmoid.configuration.nonRemovableDevices = false;
+                            plasmoid.configuration.allDevices = true;
+                            break
+                    }
+                }
+            }
+
+            Item {
+                Layout.fillWidth: true
+            }
+
+            PlasmaComponents3.ToolButton {
+                id: unmountAll
+                visible: devicenotifier.mountedRemovables > 1;
+
+                icon.name: "media-eject"
+                text: i18n("Remove All")
+
+                PlasmaComponents3.ToolTip {
+                    text: i18n("Click to safely remove all devices")
+                }
+            }
+
+            // TODO: Once the automounter KCM is ported to QML, embed it in the
+            // config window and change the action to open the config window
+            PlasmaComponents3.ToolButton {
+                icon.name: "configure"
+                onClicked: plasmoid.action("openAutomounterKcm").trigger()
+                visible: devicenotifier.openAutomounterKcmAuthorized
+
+                Accessible.name: plasmoid.action("openAutomounterKcm").text
+
+                PlasmaComponents3.ToolTip {
+                    text: plasmoid.action("openAutomounterKcm").text
+                }
+            }
+        }
+    }
+    MouseArea {
+        id: fullRepMouseArea
+        hoverEnabled: true
+    }
 
     PlasmaCore.DataSource {
         id: userActivitySource
@@ -45,7 +126,7 @@ MouseArea {
         connectedSources: "UserActivity"
         property int polls: 0
         //poll only on plasmoid expanded
-        interval: !fullRep.containsMouse && !fullRep.Window.active && spontaneousOpen && plasmoid.expanded ? 3000 : 0
+        interval: !fullRepMouseArea.containsMouse && !fullRep.Window.active && spontaneousOpen && plasmoid.expanded ? 3000 : 0
         onIntervalChanged: polls = 0;
         onDataChanged: {
             //only do when polling
@@ -104,63 +185,59 @@ MouseArea {
         }
     }
 
-    Item {
+    PlasmaExtras.ScrollArea {
         anchors.fill: parent
 
-        PlasmaComponents3.ToolButton {
-            id: unmountAll
-            visible: devicenotifier.mountedRemovables > 1;
-            anchors.right: parent.right
-            icon.name: "media-eject"
-            text: i18n("Remove all")
+        ListView {
+            id: notifierDialog
+            focus: true
+            boundsBehavior: Flickable.StopAtBounds
 
-            PlasmaComponents3.ToolTip {
-                text: i18n("Click to safely remove all devices")
+            model: filterModel
+
+            delegate: DeviceItem {
+                udi: DataEngineSource
             }
-        }
+            highlight: PlasmaComponents.Highlight { }
 
-        PlasmaExtras.ScrollArea {
-            anchors.fill: parent
-            anchors.top: unmountAll.top
+            currentIndex: devicenotifier.currentIndex
 
-            ListView {
-                id: notifierDialog
-                focus: true
-                boundsBehavior: Flickable.StopAtBounds
+            //this is needed to make SectionScroller actually work
+            //acceptable since one doesn't have a billion of devices
+            cacheBuffer: 1000
 
-                model: filterModel
-
-                delegate: DeviceItem {
-                    udi: DataEngineSource
-                }
-                highlight: PlasmaComponents.Highlight { }
-
-                currentIndex: devicenotifier.currentIndex
-
-                //this is needed to make SectionScroller actually work
-                //acceptable since one doesn't have a billion of devices
-                cacheBuffer: 1000
-
-                section {
-                    property: "Type Description"
-                    delegate: Item {
-                        height: childrenRect.height
-                        width: notifierDialog.width
-                        PlasmaExtras.Heading {
-                            level: 3
-                            opacity: 0.6
-                            text: section
-                        }
+            section {
+                property: "Type Description"
+                delegate: Item {
+                    height: childrenRect.height
+                    width: notifierDialog.width
+                    PlasmaExtras.Heading {
+                        level: 3
+                        opacity: 0.6
+                        text: section
                     }
                 }
-
-                PlasmaExtras.PlaceholderMessage {
-                    anchors.centerIn: parent
-                    width: parent.width - (units.largeSpacing * 4)
-                    text: i18n("No devices available")
-                    visible: notifierDialog.count === 0 && !devicenotifier.pendingDelegateRemoval
-                }
             }
+
+            PlasmaExtras.PlaceholderMessage {
+                anchors.centerIn: parent
+                width: parent.width - (units.largeSpacing * 4)
+                text: i18n("No devices available")
+                visible: notifierDialog.count === 0 && !devicenotifier.pendingDelegateRemoval
+            }
+        }
+    }
+
+    footer: PlasmaExtras.PlasmoidHeading {
+        id: footerToolbarContainer
+
+        location: PlasmaExtras.PlasmoidHeading.Location.Footer
+
+        PlasmaComponents3.CheckBox {
+            anchors.fill: parent
+            text: i18n("Open when new device is plugged in")
+            checked: plasmoid.configuration.popupOnNewDevice
+            onToggled: plasmoid.configuration.popupOnNewDevice = checked
         }
     }
 }

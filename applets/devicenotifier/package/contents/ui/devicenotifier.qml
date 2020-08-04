@@ -31,7 +31,7 @@ import org.kde.kquickcontrolsaddons 2.0
 Item {
     id: devicenotifier
 
-    readonly property string automounterKcmName: "device_automounter_kcm"
+    readonly property bool openAutomounterKcmAuthorized: KCMShell.authorize("device_automounter_kcm.desktop").length > 0
 
     property string devicesType: {
         if (plasmoid.configuration.allDevices) {
@@ -230,13 +230,13 @@ Item {
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
         }
 
-        if (KCMShell.authorize(devicenotifier.automounterKcmName + ".desktop").length > 0) {
+        if (devicenotifier.openAutomounterKcmAuthorized) {
             plasmoid.setAction("openAutomounterKcm", i18nc("Open auto mounter kcm", "Configure Removable Devices"), "drive-removable-media")
         }
     }
 
     function action_openAutomounterKcm() {
-        KCMShell.openSystemSettings(devicenotifier.automounterKcmName)
+        KCMShell.openSystemSettings("device_automounter_kcm")
     }
 
     Plasmoid.onExpandedChanged: {
