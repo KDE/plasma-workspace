@@ -225,10 +225,10 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
         it.value().append(match);
     }
 
-    // Sort matches for all runners in descending order. This allows the best
+    // Sort matches for all runners in descending order, note the reverse iterators. This allows the best
     // match to win whilest preserving order between runners.
     for (auto &list : matchesForRunner) {
-        std::sort(list.begin(), list.end(), qGreater<Plasma::QueryMatch>());
+        std::sort(list.rbegin(), list.rend());
     }
 
     if (m_mergeResults) {
