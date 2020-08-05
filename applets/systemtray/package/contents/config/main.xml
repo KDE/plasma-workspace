@@ -27,7 +27,7 @@
     </entry>
     <entry name="automaticRowsOrColumns" type="bool">
       <label>Whether to automatically increase the number of rows or columns of icons in response to Panel thickness.</label>
-      <default>true</default>
+      <default>false</default>
     </entry>
     <entry name="rowsOrColumns" type="Int">
       <label>Number of rows or columns of small icons to show in the panel view (depending on whether the panel is horizontal or vertical, respectively) when not using automatic row/column determination.</label>
