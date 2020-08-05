@@ -123,7 +123,7 @@ void KSolidNotify::connectSignals(Solid::Device *device)
 void KSolidNotify::queryBlockingApps(const QString &devicePath)
 {
     QProcess *p = new QProcess;
-    connect(p, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error), [=](QProcess::ProcessError) {
+    connect(p, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::errorOccurred), [=](QProcess::ProcessError) {
                 emit blockingAppsReady({});
                 p->deleteLater();
             });

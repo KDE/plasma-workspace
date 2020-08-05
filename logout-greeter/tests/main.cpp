@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
     arguments << QString::number(pipeFds[1]);
     p.setArguments(arguments);
 
-    QObject::connect(&p, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::error), &app,
+    QObject::connect(&p, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::errorOccurred), &app,
         [] {
             QCoreApplication::exit(1);
         }

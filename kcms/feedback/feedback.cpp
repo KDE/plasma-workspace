@@ -66,7 +66,7 @@ Feedback::Feedback(QObject *parent, const QVariantList &args)
         p->setProgram(exec);
         p->setArguments({QStringLiteral("--feedback")});
         p->start();
-        connect(p, QOverload<int>::of(&QProcess::finished), this, &Feedback::programFinished);
+        connect(p, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &Feedback::programFinished);
         processes << p;
     }
 }

@@ -361,7 +361,7 @@ void StartupPhase2::runUserAutostart()
             auto p = new KProcess; //deleted in onFinished lambda
             p->setProgram(fullPath);
             p->start();
-            connect(p, static_cast<void (QProcess::*)(int)>(&QProcess::finished), [p](int exitCode) {
+            connect(p, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [p](int exitCode) {
                 qCInfo(PLASMA_SESSION) << "autostart script" << p->program() << "finished with exit code " << exitCode;
                 p->deleteLater();
             });
@@ -486,7 +486,7 @@ StartProcessJob::StartProcessJob(const QString &process, const QStringList &args
     env.insert(additionalEnv);
     m_process->setProcessEnvironment(env);
 
-    connect(m_process, static_cast<void (QProcess::*)(int)>(&QProcess::finished), [this](int exitCode) {
+    connect(m_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [this](int exitCode) {
         qCInfo(PLASMA_SESSION) << "process job " << m_process->program() << "finished with exit code " << exitCode;
         emitResult();
     });
