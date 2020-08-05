@@ -21,5 +21,6 @@ ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=KDE Icon Theme
 TargetDir=icons
 Uncompress=true
+RemoveDeadEntries=true
 
 AdoptionCommand=@CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-changeicons %d
