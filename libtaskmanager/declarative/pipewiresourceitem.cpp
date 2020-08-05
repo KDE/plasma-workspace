@@ -243,6 +243,11 @@ static EGLImage createImage(EGLDisplay display, const QVector<DmaBufPlane> &plan
 
 void PipeWireSourceItem::updateTextureDmaBuf(const QVector<DmaBufPlane>& planes, uint32_t format)
 {
+    static auto s_glEGLImageTargetTexture2DOES = (PFNGLEGLIMAGETARGETTEXTURE2DOESPROC) eglGetProcAddress("glEGLImageTargetTexture2DOES");
+    if (!s_glEGLImageTargetTexture2DOES) {
+        qWarning() << "glEGLImageTargetTexture2DOES is not available" << window();
+        return;
+    }
     if (!window() || !window()->openglContext() || !m_stream) {
         qWarning() << "need a window and a context" << window();
         return;
@@ -271,7 +276,8 @@ void PipeWireSourceItem::updateTextureDmaBuf(const QVector<DmaBufPlane>& planes,
         }
 
         m_texture->bind();
-        glEGLImageTargetTexture2DOES(GL_TEXTURE_2D, (GLeglImageOES) m_image);
+
+        s_glEGLImageTargetTexture2DOES(GL_TEXTURE_2D, (GLeglImageOES) m_image);
 
         m_texture->setWrapMode(QOpenGLTexture::ClampToEdge);
         m_texture->setMinMagFilters(QOpenGLTexture::Linear, QOpenGLTexture::Linear);
