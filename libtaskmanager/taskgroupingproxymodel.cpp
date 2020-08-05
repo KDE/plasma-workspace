@@ -851,7 +851,7 @@ QStringList TaskGroupingProxyModel::blacklistedAppIds() const
 
 void TaskGroupingProxyModel::setBlacklistedAppIds(const QStringList &list)
 {
-    const QSet<QString> &set = QSet<QString>::fromList(list);
+    const QSet<QString> &set = QSet<QString>(list.cbegin(), list.cend());
 
     if (d->blacklistedAppIds != set) {
         d->blacklistedAppIds = set;
@@ -882,7 +882,7 @@ QStringList TaskGroupingProxyModel::blacklistedLauncherUrls() const
 
 void TaskGroupingProxyModel::setBlacklistedLauncherUrls(const QStringList &list)
 {
-    const QSet<QString> &set = QSet<QString>::fromList(list);
+    const QSet<QString> &set = QSet<QString>(list.cbegin(), list.cend());
 
     if (d->blacklistedLauncherUrls != set) {
         d->blacklistedLauncherUrls = set;

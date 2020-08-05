@@ -274,7 +274,7 @@ void AvailableTranslationsModel::setSelectedLanguages(const QStringList &languag
 {
     beginResetModel();
 
-    m_availableLanguages = (m_installedLanguages - QSet<QString>::fromList(languages)).values();
+    m_availableLanguages = (m_installedLanguages - QSet<QString>(languages.cbegin(), languages.cend())).values();
 
     QCollator c;
     c.setCaseSensitivity(Qt::CaseInsensitive);

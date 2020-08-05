@@ -167,7 +167,7 @@ QStringList RunnerModel::runners() const
 
 void RunnerModel::setRunners(const QStringList &runners)
 {
-    if (m_runners.toSet() != runners.toSet()) {
+    if (std::is_permutation(runners.cbegin(), runners.cend(), m_runners.cbegin(), m_runners.cend())) {
         m_runners = runners;
 
         if (m_runnerManager) {

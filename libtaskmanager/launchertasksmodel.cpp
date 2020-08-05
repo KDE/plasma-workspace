@@ -150,7 +150,7 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
         return false;
     }
 
-    const auto activities = ActivitiesSet::fromList(_activities);
+    const auto activities = ActivitiesSet(_activities.cbegin(), _activities.cend());
 
     if (url.isLocalFile() && KDesktopFile::isDesktopFile(url.toLocalFile())) {
         KDesktopFile f(url.toLocalFile());
@@ -406,7 +406,7 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
         std::tie(url, _activities) =
             deserializeLauncher(serializedLauncher);
 
-        auto activities = ActivitiesSet::fromList(_activities);
+        auto activities = ActivitiesSet(_activities.cbegin(), _activities.cend());
 
         // Is url is not valid, ignore it
         if (!isValidLauncherUrl(url)) {
