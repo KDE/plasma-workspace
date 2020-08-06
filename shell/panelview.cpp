@@ -66,6 +66,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
        m_alignment(Qt::AlignLeft),
        m_corona(corona),
        m_visibilityMode(NormalPanel),
+       m_opacityMode(Adaptive),
        m_backgroundHints(Plasma::Types::StandardBackground),
        m_shellSurface(nullptr)
 {
@@ -411,6 +412,23 @@ PanelView::VisibilityMode PanelView::visibilityMode() const
     return m_visibilityMode;
 }
 
+PanelView::OpacityMode PanelView::opacityMode() const
+{
+    return m_opacityMode;
+}
+
+void PanelView::setOpacityMode(PanelView::OpacityMode mode)
+{
+    if (m_opacityMode != mode) {
+        m_opacityMode = mode;
+        if (config().isValid() && config().parent().isValid()) {
+            config().parent().writeEntry("panelOpacity", (int)mode);
+            m_corona->requestApplicationConfigSync();
+        }
+        emit opacityModeChanged();
+    }
+}
+
 void PanelView::positionPanel()
 {
     if (!containment()) {
@@ -601,6 +619,7 @@ void PanelView::restore()
     //the place for this config key is changed in Plasma 5.9
     //Do NOT use readConfigValueWithFallBack
     setVisibilityMode((VisibilityMode)config().parent().readEntry<int>("panelVisibility", config().readEntry<int>("panelVisibility", (int)NormalPanel)));
+    setOpacityMode((OpacityMode)config().parent().readEntry<int>("panelOpacity", config().readEntry<int>("panelOpacity", (int)Adaptive)));
     m_initCompleted = true;
     resizePanel();
     positionPanel();
