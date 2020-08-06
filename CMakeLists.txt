@@ -93,6 +93,7 @@ set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                         TYPE OPTIONAL
                         PURPOSE "Required for building the X11 based workspace")
 
+find_package(PkgConfig REQUIRED)
 pkg_check_modules(PipeWire IMPORTED_TARGET libpipewire-0.3)
 add_feature_info(PipeWire PipeWire_FOUND "Required for Wayland screencasting")
 
