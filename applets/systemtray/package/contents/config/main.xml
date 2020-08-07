@@ -25,13 +25,9 @@
     <entry name="knownItems" type="StringList" hidden="true">
       <default></default>
     </entry>
-    <entry name="automaticRowsOrColumns" type="bool">
-      <label>Whether to automatically increase the number of rows or columns of icons in response to Panel thickness.</label>
+    <entry name="scaleIconsToFit" type="bool">
+      <label>Whether to automatically scale System Tray icons to fix the available thickness of the panel. If false, tray icons will be capped at the smallMedium size (22px) and become a two-row/column layout when the panel is thick.</label>
       <default>false</default>
-    </entry>
-    <entry name="rowsOrColumns" type="Int">
-      <label>Number of rows or columns of small icons to show in the panel view (depending on whether the panel is horizontal or vertical, respectively) when not using automatic row/column determination.</label>
-      <default>1</default>
     </entry>
     <entry name="pin" type="Bool">
       <label>Whether the popup should remain open when another window is activated</label>

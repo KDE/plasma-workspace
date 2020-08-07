@@ -38,7 +38,7 @@ MouseArea {
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    // The icon size to display when not using the default auto-scaling setting
+    // The icon size to display when not using the auto-scaling setting
     readonly property int smallIconSize: units.iconSizes.smallMedium
 
     // Used only by AbstractItem, but it's easiest to keep it here since it
@@ -47,19 +47,9 @@ MouseArea {
 
     // The rest are derived properties; do not modify
     readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
-    readonly property bool autoSize: plasmoid.configuration.automaticRowsOrColumns
+    readonly property bool autoSize: plasmoid.configuration.scaleIconsToFit
     readonly property int cellThickness: root.vertical ? root.width : root.height
-    readonly property int rowsOrColumns: {
-        if (autoSize) {
-            if (cellThickness <= smallIconSize * 2) {
-                return 1
-            } else {
-                return 2
-            }
-        } else {
-            return plasmoid.configuration.rowsOrColumns
-        }
-    }
+    readonly property int rowsOrColumns: autoSize || cellThickness <= smallIconSize * 2 ? 1 : 2
     property alias expanded: dialog.visible
     property Item activeApplet
     property alias visibleLayout: tasksGrid
@@ -158,8 +148,8 @@ MouseArea {
         GridView {
             id: tasksGrid
 
-            readonly property int autoSizeCellLength: root.cellThickness / root.rowsOrColumns
             readonly property int smallSizeCellLength: root.smallIconSize + units.smallSpacing * 2
+            readonly property int autoSizeCellLength: root.cellThickness / root.rowsOrColumns
             readonly property int totalLength: root.vertical ? cellHeight * Math.round(count / root.rowsOrColumns)
                                                              : cellWidth * Math.round(count / root.rowsOrColumns)
 
