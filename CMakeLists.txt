@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.6)
 
 project(plasma-workspace)
 set(PROJECT_VERSION "5.19.80")
