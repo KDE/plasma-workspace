@@ -72,6 +72,7 @@ ColumnLayout {
 
             clearButtonShown: true
             Layout.minimumWidth: units.gridUnit * 25
+            Layout.maximumWidth: units.gridUnit * 25
 
             activeFocusOnPress: true
             placeholderText: results.runnerName ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
