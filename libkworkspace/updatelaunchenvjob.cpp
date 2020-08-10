@@ -101,6 +101,13 @@ void UpdateLaunchEnvJob::start()
         dbusActivationEnv.insert(varName, value);
 
         // _user_ systemd env
+        // Systemd has stricter parsing of valid environment variables
+        // https://github.com/systemd/systemd/issues/16704
+        // validate here
+        if (value.contains(QLatin1Char('\033'))) {
+            qWarning() << "Skipping syncing of environment variable " << varName << "as value contains unsupported character \\003";
+            continue;
+        }
         const QString updateString = varName + QStringLiteral("=") + value;
         systemdUpdates.append(updateString);
     }
