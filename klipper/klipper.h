@@ -101,6 +101,10 @@ protected:
      * a boolean true as a mode.
      */
     enum SelectionMode { Clipboard = 2, Selection = 4 };
+    enum class ClipboardUpdateReason {
+        UpdateClipboard,
+        PreventEmptyClipboard
+    };
 
     /**
      * Loads history from disk.
@@ -124,7 +128,7 @@ protected:
      */
     QSharedPointer<HistoryItem> applyClipChanges( const QMimeData* data );
 
-    void setClipboard( const HistoryItem& item, int mode );
+    void setClipboard( const HistoryItem& item, int mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
     bool ignoreClipboardChanges() const;
 
     KSharedConfigPtr config() const { return m_config; }
