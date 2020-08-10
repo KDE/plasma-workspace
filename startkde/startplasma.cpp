@@ -33,6 +33,8 @@
 
 #include <unistd.h>
 
+#include <updatelaunchenvjob.h>
+
 #include "startplasma.h"
 
 QTextStream out(stderr);
@@ -284,14 +286,9 @@ void cleanupPlasmaEnvironment()
 // In that case, the update in startplasma might be too late.
 bool syncDBusEnvironment()
 {
-    int exitCode;
     // At this point all environment variables are set, let's send it to the DBus session server to update the activation environment
-    if (!QStandardPaths::findExecutable(QStringLiteral("dbus-update-activation-environment")).isEmpty()) {
-        exitCode = runSync(QStringLiteral("dbus-update-activation-environment"), { QStringLiteral("--systemd"), QStringLiteral("--all") });
-    } else {
-        exitCode = runSync(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/ksyncdbusenv"), {});
-    }
-    return exitCode == 0;
+    auto job =  new UpdateLaunchEnvJob(QProcessEnvironment::systemEnvironment());
+    return job->exec();
 }
 
 void setupFontDpi()

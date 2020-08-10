@@ -1,5 +1,4 @@
 add_subdirectory(kcminit)
-add_subdirectory(ksyncdbusenv)
 add_subdirectory(waitforname)
 
 add_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
@@ -18,11 +17,11 @@ add_executable(startplasma-waylandsession startplasma.cpp startplasma-waylandses
 add_executable(kde-systemd-start-condition kde-systemd-start-condition.cpp)
 
 target_include_directories(startplasma-x11 PRIVATE ${X11_X11_INCLUDE_PATH})
-target_link_libraries(startplasma-x11 PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore
+target_link_libraries(startplasma-x11 PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore PW::KWorkspace
     ${X11_X11_LIB} # for kcheckrunning
 )
-target_link_libraries(startplasma-wayland PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore)
-target_link_libraries(startplasma-waylandsession PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore)
+target_link_libraries(startplasma-wayland PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore PW::KWorkspace)
+target_link_libraries(startplasma-waylandsession PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore PW::KWorkspace)
 target_link_libraries(kde-systemd-start-condition PUBLIC KF5::ConfigCore KF5::Service)
 add_subdirectory(plasma-session)
 add_subdirectory(plasma-shutdown)
