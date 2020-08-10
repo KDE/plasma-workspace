@@ -5,9 +5,9 @@ set(plasma_waitforname_SRCS
    )
 
 ecm_qt_declare_logging_category(plasma_waitforname_SRCS HEADER debug_p.h IDENTIFIER LOG_PLASMA CATEGORY_NAME org.kde.knotifications)
-ecm_mark_nongui_executable(ksyncdbusenv)
 
 add_executable(plasma_waitforname ${plasma_waitforname_SRCS})
+ecm_mark_nongui_executable(plasma_waitforname)
 
 target_link_libraries(plasma_waitforname
     Qt5::DBus
