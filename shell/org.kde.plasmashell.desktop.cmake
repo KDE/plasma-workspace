@@ -56,7 +56,7 @@ X-KDE-StartupNotify=false
 X-DBUS-ServiceName=org.kde.plasmashell
 OnlyShowIn=KDE;
 X-KDE-autostart-phase=0
-Icon=plasma
+Icon=plasmashell
 NoDisplay=true
 
 X-KDE-Wayland-Interfaces=org_kde_plasma_window_management,org_kde_kwin_keystate,zkde_screencast_unstable_v1
