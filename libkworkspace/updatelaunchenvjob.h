@@ -22,6 +22,7 @@
 #include "kworkspace_export.h"
 
 #include <KJob>
+#include <QProcessEnvironment>
 
 class QString;
 
@@ -43,6 +44,7 @@ class KWORKSPACE_EXPORT UpdateLaunchEnvJob : public KJob
 
 public:
     explicit UpdateLaunchEnvJob(const QString &varName, const QString &value);
+    explicit UpdateLaunchEnvJob(const QProcessEnvironment &environment);
     ~UpdateLaunchEnvJob() override;
 
     void start() override;
