@@ -23,6 +23,9 @@
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KToolInvocation>
+#include <KShell>
+#include <QRegularExpression>
+#include <QStandardPaths>
 
 #include <KIO/CommandLauncherJob>
 
@@ -36,9 +39,6 @@ ShellRunner::ShellRunner(QObject *parent, const QVariantList &args)
     // If the runner is not authorized we can suspend it
     bool enabled = KAuthorized::authorize(QStringLiteral("run_command")) && KAuthorized::authorize(QStringLiteral("shell_access"));
     suspendMatching(!enabled);
-    setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File |
-                    Plasma::RunnerContext::NetworkLocation | Plasma::RunnerContext::UnknownType |
-                    Plasma::RunnerContext::Help);
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds commands that match :q:, using common shell syntax")));
     m_actionList = {addAction(QStringLiteral("runInTerminal"),
@@ -53,20 +53,33 @@ ShellRunner::~ShellRunner()
 
 void ShellRunner::match(Plasma::RunnerContext &context)
 {
-    const QString term = context.query();
-    Plasma::QueryMatch match(this);
-    match.setId(term);
-    match.setType(Plasma::QueryMatch::ExactMatch);
-    match.setIcon(m_matchIcon);
-    match.setText(i18n("Run %1", term));
-    match.setRelevance(0.7);
-    context.addMatch(match);
+    bool isShellCommand = context.type() == Plasma::RunnerContext::ShellCommand;
+    QStringList envs;
+    QString command;
+    // If it is not a shell command we check if we use ENV variables, FEATURE: 409107
+    // This is not recognized when setting the context type and we can't change it, because
+    // other runners depend on the current pattern
+    if (!isShellCommand) {
+        isShellCommand = parseENVVariables(context.query(), envs, command);
+    }
+    if (isShellCommand) {
+        const QString term = context.query();
+        Plasma::QueryMatch match(this);
+        match.setId(term);
+        match.setType(Plasma::QueryMatch::ExactMatch);
+        match.setIcon(m_matchIcon);
+        match.setText(i18n("Run %1", term));
+        match.setData(QVariantList({command, envs}));
+        match.setRelevance(0.7);
+        context.addMatch(match);
+    }
 }
 
 void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     if (match.selectedAction()) {
-        KToolInvocation::invokeTerminal(context.query());
+        const QVariantList data = match.data().toList();
+        KToolInvocation::invokeTerminal(data.at(0).toString(), data.at(1).toStringList());
         return;
     }
 
@@ -80,6 +93,23 @@ QList<QAction *> ShellRunner::actionsForMatch(const Plasma::QueryMatch &match)
     Q_UNUSED(match)
 
     return m_actionList;
+}
+
+bool ShellRunner::parseENVVariables(const QString &query, QStringList &envs, QString &command)
+{
+    const static QRegularExpression envRegex = QRegularExpression(QStringLiteral("^.+=.+$"));
+    const QStringList split = KShell::splitArgs(query);
+    for (const auto &entry : split) {
+        if (!QStandardPaths::findExecutable(entry).isEmpty()) {
+            command = KShell::joinArgs(split.mid(split.indexOf(entry)));
+            return true;
+        } else if (envRegex.match(entry).hasMatch()) {
+            envs.append(entry);
+        } else {
+            return false;
+        }
+    }
+    return false;
 }
 
 #include "shellrunner.moc"
