@@ -20,41 +20,34 @@
 
 #pragma once
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
 
 #include <KSharedConfig>
 
-class Feedback : public KQuickAddons::ConfigModule
+class FeedbackSettings;
+
+class Feedback : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
 
     Q_PROPERTY(QJsonArray feedbackSources MEMBER m_feedbackSources NOTIFY feedbackSourcesChanged)
     Q_PROPERTY(bool feedbackEnabled READ feedbackEnabled CONSTANT)
-    Q_PROPERTY(int plasmaFeedbackLevel READ plasmaFeedbackLevel WRITE setPlasmaFeedbackLevel NOTIFY plasmaFeedbackLevelChanged)
+    Q_PROPERTY(FeedbackSettings *feedbackSettings READ feedbackSettings CONSTANT)
 
     public:
-        explicit Feedback(QObject* parent = nullptr, const QVariantList &list = QVariantList());
+        explicit Feedback(QObject *parent = nullptr, const QVariantList &list = QVariantList());
         ~Feedback() override;
 
         bool feedbackEnabled() const;
-        int plasmaFeedbackLevel() const { return m_plasmaFeedbackLevel; }
-
-        void setPlasmaFeedbackLevel(int plasmaFeedbackLevel);
+        FeedbackSettings *feedbackSettings() const;
 
         void programFinished(int exitCode);
 
-    public Q_SLOTS:
-        void load() override;
-        void save() override;
-        void defaults() override;
-
     Q_SIGNALS:
         void feedbackSourcesChanged();
-        void plasmaFeedbackLevelChanged(bool plasmaFeedbackLevel);
 
     private:
-        KSharedConfig::Ptr m_plasmaConfig;
-        int m_plasmaFeedbackLevel = 0;
         QHash<int, QHash<QString, QJsonArray>> m_uses;
         QJsonArray m_feedbackSources;
+        FeedbackSettings *m_feedbackSettings;
 };

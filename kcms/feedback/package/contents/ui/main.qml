@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QQC2
 import org.kde.kirigami 2.6 as Kirigami
 import org.kde.userfeedback 1.0 as UserFeedback
-import org.kde.kcm 1.2
+import org.kde.kcm 1.3
 
 SimpleKCM {
     id: root
@@ -72,7 +72,6 @@ SimpleKCM {
                 id: statisticsModeSlider
                 Kirigami.FormData.label: i18n("Plasma:")
                 readonly property var currentMode: modeOptions[value]
-                enabled: kcm.feedbackEnabled
                 Layout.fillWidth: true
                 Layout.minimumWidth: Kirigami.Units.gridUnit * 21
 
@@ -91,10 +90,16 @@ SimpleKCM {
                     return defaultValue;
                 }
 
-                value: findIndex(modeOptions, kcm.plasmaFeedbackLevel, 0)
+                value: findIndex(modeOptions, kcm.feedbackSettings.feedbackLevel, 0)
 
                 onMoved: {
-                    kcm.plasmaFeedbackLevel = modeOptions[value]
+                    kcm.feedbackSettings.feedbackLevel = modeOptions[value]
+                }
+
+                SettingStateBinding {
+                    configObject: kcm.feedbackSettings
+                    settingName: "feedbackLevel"
+                    extraEnabledConditions: kcm.feedbackEnabled
                 }
             }
 

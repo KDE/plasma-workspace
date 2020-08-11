@@ -30,6 +30,8 @@
 #include <KUserFeedback/Provider>
 #include <KUserFeedback/FeedbackConfigUiController>
 
+#include "feedbacksettings.h"
+
 K_PLUGIN_CLASS_WITH_JSON(Feedback, "kcm_feedback.json");
 
 //Program to icon hash
@@ -46,19 +48,17 @@ inline void swap(QJsonValueRef v1, QJsonValueRef v2)
 }
 
 Feedback::Feedback(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent)
+    : KQuickAddons::ManagedConfigModule(parent)
     //UserFeedback.conf is used by KUserFeedback which uses QSettings and won't go through globals
-    , m_plasmaConfig(KSharedConfig::openConfig(QStringLiteral("PlasmaUserFeedback")))
+    , m_feedbackSettings(new FeedbackSettings(this))
 {
     Q_UNUSED(args)
+
+    qmlRegisterType<FeedbackSettings>();
+
     setAboutData(new KAboutData(QStringLiteral("kcm_feedback"),
                                        i18n("User Feedback"),
                                        QStringLiteral("1.0"), i18n("Configure user feedback settings"), KAboutLicense::LGPL));
-
-    connect(this, &Feedback::plasmaFeedbackLevelChanged, this, [this](){
-        auto current = m_plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::NoTelemetry));
-        setNeedsSave(current != m_plasmaFeedbackLevel);
-    });
 
     QVector<QProcess*> processes;
     for (const auto exec: s_programs.keys()) {
@@ -132,30 +132,9 @@ bool Feedback::feedbackEnabled() const
     return p.isEnabled();
 }
 
-void Feedback::load()
+FeedbackSettings *Feedback::feedbackSettings() const
 {
-    //We only operate if the kill switch is off, all KDE components should default to KUserFeedback::Provider::NoTelemetry
-    setPlasmaFeedbackLevel(m_plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::NoTelemetry)));
-    setNeedsSave(false);
-}
-
-void Feedback::save()
-{
-    m_plasmaConfig->group("Global").writeEntry("FeedbackLevel", m_plasmaFeedbackLevel);
-    m_plasmaConfig->sync();
-}
-
-void Feedback::defaults()
-{
-    setPlasmaFeedbackLevel(KUserFeedback::Provider::NoTelemetry);
-}
-
-void Feedback::setPlasmaFeedbackLevel(int plasmaFeedbackLevel) {
-    if (plasmaFeedbackLevel != m_plasmaFeedbackLevel) {
-        m_plasmaFeedbackLevel = plasmaFeedbackLevel;
-        Q_EMIT plasmaFeedbackLevelChanged(plasmaFeedbackLevel);
-    }
-    setRepresentsDefaults(plasmaFeedbackLevel == KUserFeedback::Provider::NoTelemetry);
+    return m_feedbackSettings;
 }
 
 #include "feedback.moc"
