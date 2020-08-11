@@ -23,7 +23,7 @@
 #include <KLocalizedString>
 #include <KUriFilter>
 #include <KSharedConfig>
-#include <KMimeTypeTrader>
+#include <KApplicationTrader>
 #include <KIO/CommandLauncherJob>
 #include <KSycoca>
 #include <KShell>
@@ -82,7 +82,7 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
         service = KService::serviceByStorageId(browserFile);
     }
     if (!service) {
-        service = KMimeTypeTrader::self()->preferredService(QStringLiteral("text/html"));
+        service = KApplicationTrader::preferredService(QStringLiteral("text/html"));
     }
     if (!service) {
         return;

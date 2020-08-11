@@ -35,7 +35,7 @@
 #include <KNotificationJobUiDelegate>
 #include <KService>
 #include <KStringHandler>
-#include <KMimeTypeTrader>
+#include <KApplicationTrader>
 #include <KWindowSystem>
 
 #include "klippersettings.h"
@@ -146,7 +146,7 @@ void URLGrabber::matchingMimeActions(const QString& clipData)
     }
 
     if ( !mimetype.isDefault() ) {
-        KService::List lst = KMimeTypeTrader::self()->query( mimetype.name(), QStringLiteral("Application") );
+        KService::List lst = KApplicationTrader::queryByMimeType(mimetype.name());
         if ( !lst.isEmpty() ) {
             ClipAction* action = new ClipAction( QString(), mimetype.comment() );
             foreach( const KService::Ptr &service, lst ) {

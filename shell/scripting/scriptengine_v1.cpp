@@ -29,7 +29,7 @@
 
 #include <QDebug>
 #include <klocalizedstring.h>
-#include <kmimetypetrader.h>
+#include <KApplicationTrader>
 #include <kservicetypetrader.h>
 #include <kshell.h>
 
@@ -643,7 +643,7 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
             = config.readPathEntry("BrowserApplication", QString());
         if (browserApp.isEmpty()) {
             const KService::Ptr htmlApp
-                = KMimeTypeTrader::self()->preferredService(QStringLiteral("text/html"));
+                = KApplicationTrader::preferredService(QStringLiteral("text/html"));
             if (htmlApp) {
                 browserApp = storageId ? htmlApp->storageId() : htmlApp->exec();
             }
@@ -659,7 +659,7 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
                                                 QStringLiteral("konsole")));
 
     } else if (matches(application, QLatin1String("filemanager"))) {
-        KService::Ptr service = KMimeTypeTrader::self()->preferredService(
+        KService::Ptr service = KApplicationTrader::preferredService(
             QStringLiteral("inode/directory"));
         if (service) {
             return storageId ? service->storageId() : onlyExec(service->exec());
@@ -671,7 +671,7 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
         return onlyExec(
             confGroup.readEntry("windowManager", QStringLiteral("kwin")));
 
-    } else if (KService::Ptr service = KMimeTypeTrader::self()->preferredService(application)) {
+    } else if (KService::Ptr service = KApplicationTrader::preferredService(application)) {
         return storageId ? service->storageId() : onlyExec(service->exec());
 
     } else {

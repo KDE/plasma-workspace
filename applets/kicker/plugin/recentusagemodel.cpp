@@ -39,7 +39,6 @@
 #include <KFileItem>
 #include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
-#include <KMimeTypeTrader>
 #include <KNotificationJobUiDelegate>
 #include <KRun>
 #include <KService>

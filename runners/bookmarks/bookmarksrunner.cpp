@@ -29,7 +29,7 @@
 #include <QDesktopServices>
 
 #include <KLocalizedString>
-#include <KMimeTypeTrader>
+#include <KApplicationTrader>
 #include <KSharedConfig>
 
 #include "bookmarkmatch.h"
@@ -88,7 +88,7 @@ QString BookmarksRunner::findBrowserName()
     QString exec = config.readPathEntry(QStringLiteral("BrowserApplication"), QString());
     //qDebug() << "Found exec string: " << exec;
     if (exec.isEmpty()) {
-        KService::Ptr service = KMimeTypeTrader::self()->preferredService(QStringLiteral("text/html"));
+        KService::Ptr service = KApplicationTrader::preferredService(QStringLiteral("text/html"));
         if (service) {
             exec = service->exec();
         }

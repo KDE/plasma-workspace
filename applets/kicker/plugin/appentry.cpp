@@ -38,7 +38,7 @@
 #include <KJob>
 #include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
-#include <KMimeTypeTrader>
+#include <KApplicationTrader>
 #include <KNotificationJobUiDelegate>
 #include <KRun>
 #include <KSycoca>
@@ -273,7 +273,7 @@ KService::Ptr AppEntry::defaultAppByName(const QString& name)
         QString browser = config.readPathEntry("BrowserApplication", QString());
 
         if (browser.isEmpty()) {
-            return KMimeTypeTrader::self()->preferredService(QLatin1String("text/html"));
+            return KApplicationTrader::preferredService(QLatin1String("text/html"));
         } else if (browser.startsWith(QLatin1Char('!'))) {
             browser.remove(0, 1);
         }
