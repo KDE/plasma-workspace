@@ -227,17 +227,4 @@ PlasmaComponents3.Page {
             }
         }
     }
-
-    footer: PlasmaExtras.PlasmoidHeading {
-        id: footerToolbarContainer
-
-        location: PlasmaExtras.PlasmoidHeading.Location.Footer
-
-        PlasmaComponents3.CheckBox {
-            anchors.fill: parent
-            text: i18n("Open when new device is plugged in")
-            checked: plasmoid.configuration.popupOnNewDevice
-            onToggled: plasmoid.configuration.popupOnNewDevice = checked
-        }
-    }
 }

@@ -275,6 +275,10 @@ Item {
         id: expandTimer
         interval: 250
         onTriggered: {
+            // We don't show a UI for it, but there is a hidden option to not
+            // show the popup on new device attachment if the user has added
+            // the text "popupOnNewDevice=false" to their
+            // plasma-org.kde.plasma.desktop-appletsrc file.
             if (plasmoid.configuration.popupOnNewDevice) { // Bug 351592
                 plasmoid.expanded = true;
                 plasmoid.fullRepresentationItem.spontaneousOpen = true;
