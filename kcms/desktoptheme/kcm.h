@@ -38,6 +38,7 @@ class FileCopyJob;
 
 class QQuickItem;
 class DesktopThemeSettings;
+class DesktopThemeData;
 class FilterProxyModel;
 class ThemesModel;
 
@@ -88,7 +89,7 @@ private:
 
     void installTheme(const QString &path);
 
-    DesktopThemeSettings *m_settings;
+    DesktopThemeData *m_data;
 
     ThemesModel *m_model;
     FilterProxyModel *m_filteredModel;

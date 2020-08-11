@@ -57,17 +57,18 @@
 #include <unistd.h> // for unlink
 
 #include "iconssettings.h"
+#include "iconsdata.h"
 #include "iconsmodel.h"
 #include "iconsizecategorymodel.h"
 
 #include "config.h" // for CMAKE_INSTALL_FULL_LIBEXECDIR
 
-K_PLUGIN_FACTORY_WITH_JSON(IconsFactory, "kcm_icons.json", registerPlugin<IconModule>();)
+K_PLUGIN_FACTORY_WITH_JSON(IconsFactory, "kcm_icons.json", registerPlugin<IconModule>();registerPlugin<IconsData>();)
 
 IconModule::IconModule(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
-    , m_settings(new IconsSettings(this))
-    , m_model(new IconsModel(m_settings, this))
+    , m_data(new IconsData(this))
+    , m_model(new IconsModel(m_data->settings(), this))
     , m_iconSizeCategoryModel(new IconSizeCategoryModel(this))
 {
     qmlRegisterType<IconsSettings>();
@@ -101,7 +102,7 @@ IconModule::~IconModule()
 
 IconsSettings *IconModule::iconsSettings() const
 {
-    return m_settings;
+    return m_data->settings();
 }
 
 IconsModel *IconModule::iconsModel() const
@@ -121,8 +122,8 @@ bool IconModule::downloadingFile() const
 
 QList<int> IconModule::availableIconSizes(int group) const
 {
-    const auto themeName = m_settings->theme();
-    if (!m_kiconThemeCache.contains(m_settings->theme())) {
+    const auto themeName = iconsSettings()->theme();
+    if (!m_kiconThemeCache.contains(iconsSettings()->theme())) {
         m_kiconThemeCache.insert(themeName, new KIconTheme(themeName));
     }
     return m_kiconThemeCache[themeName]->querySizes(static_cast<KIconLoader::Group>(group));
@@ -133,19 +134,19 @@ void IconModule::load()
     ManagedConfigModule::load();
     m_model->load();
     // Model has been cleared so pretend the theme name changed to force view update
-    emit m_settings->ThemeChanged();
+    emit iconsSettings()->ThemeChanged();
 }
 
 void IconModule::save()
 {
-    bool needToExportToKDE4 = m_settings->isSaveNeeded();
+    bool needToExportToKDE4 = iconsSettings()->isSaveNeeded();
 
     // keep track of Group of icons size that has changed
     QList<int> notifyList;
     for (int i = 0; i < m_iconSizeCategoryModel->rowCount(); ++i) {
         const QModelIndex index = m_iconSizeCategoryModel->index(i, 0);
         const QString key = index.data(IconSizeCategoryModel::ConfigKeyRole).toString();
-        if (m_settings->findItem(key)->isSaveNeeded()) {
+        if (iconsSettings()->findItem(key)->isSaveNeeded()) {
             notifyList << index.data(IconSizeCategoryModel::KIconLoaderGroupRole).toInt();
         }
     }
@@ -174,7 +175,7 @@ void IconModule::processPendingDeletions()
     const QStringList pendingDeletions = m_model->pendingDeletions();
 
     for (const QString &themeName : pendingDeletions) {
-        Q_ASSERT(themeName != m_settings->theme());
+        Q_ASSERT(themeName != iconsSettings()->theme());
 
         KIconTheme theme(themeName);
         auto *job = KIO::del(QUrl::fromLocalFile(theme.dir()), KIO::HideProgressInfo);
@@ -266,7 +267,7 @@ void IconModule::exportToKDE4()
     KConfig kde4config(configFilePath, KConfig::SimpleConfig);
 
     KConfigGroup kde4IconGroup(&kde4config, "Icons");
-    kde4IconGroup.writeEntry("Theme", m_settings->theme());
+    kde4IconGroup.writeEntry("Theme", iconsSettings()->theme());
 
     //Synchronize icon effects
     for (int row = 0; row < m_iconSizeCategoryModel->rowCount(); row++) {

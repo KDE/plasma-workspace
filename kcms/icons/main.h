@@ -33,6 +33,7 @@
 
 class KIconTheme;
 class IconsSettings;
+class IconsData;
 
 class QQuickItem;
 class QTemporaryFile;
@@ -105,7 +106,7 @@ private:
 
     static QPixmap getBestIcon(KIconTheme &theme, const QStringList &iconNames, int size, qreal dpr);
 
-    IconsSettings *m_settings;
+    IconsData *m_data;
     IconsModel *m_model;
     IconSizeCategoryModel *m_iconSizeCategoryModel;
 

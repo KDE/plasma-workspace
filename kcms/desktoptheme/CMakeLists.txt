@@ -3,6 +3,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_desktoptheme\")
 
 set(kcm_desktoptheme_SRCS
   kcm.cpp
+  desktopthemedata.cpp
   themesmodel.cpp
   filterproxymodel.cpp
 )

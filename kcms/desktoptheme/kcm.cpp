@@ -41,16 +41,17 @@
 #include <QTemporaryFile>
 
 #include "desktopthemesettings.h"
+#include "desktopthemedata.h"
 #include "filterproxymodel.h"
 #include "themesmodel.h"
 
 Q_LOGGING_CATEGORY(KCM_DESKTOP_THEME, "kcm_desktoptheme")
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "kcm_desktoptheme.json", registerPlugin<KCMDesktopTheme>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "kcm_desktoptheme.json", registerPlugin<KCMDesktopTheme>();registerPlugin<DesktopThemeData>();)
 
 KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
-    , m_settings(new DesktopThemeSettings(this))
+    , m_data(new DesktopThemeData(this))
     , m_model(new ThemesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
     , m_haveThemeExplorerInstalled(false)
@@ -70,11 +71,11 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     connect(m_model, &ThemesModel::pendingDeletionsChanged, this, &KCMDesktopTheme::settingsChanged);
 
     connect(m_model, &ThemesModel::selectedThemeChanged, this, [this](const QString &pluginName) {
-        m_settings->setName(pluginName);
+        desktopThemeSettings()->setName(pluginName);
     });
 
-    connect(m_settings, &DesktopThemeSettings::nameChanged, this, [this] {
-        m_model->setSelectedTheme(m_settings->name());
+    connect(desktopThemeSettings(), &DesktopThemeSettings::nameChanged, this, [this] {
+        m_model->setSelectedTheme(desktopThemeSettings()->name());
     });
 
     connect(m_model, &ThemesModel::selectedThemeChanged, m_filteredModel, &FilterProxyModel::setSelectedTheme);
@@ -88,7 +89,7 @@ KCMDesktopTheme::~KCMDesktopTheme()
 
 DesktopThemeSettings *KCMDesktopTheme::desktopThemeSettings() const
 {
-    return m_settings;
+    return m_data->settings();
 }
 
 ThemesModel *KCMDesktopTheme::desktopThemeModel() const
@@ -193,13 +194,13 @@ void KCMDesktopTheme::load()
 {
     ManagedConfigModule::load();
     m_model->load();
-    m_model->setSelectedTheme(m_settings->name());
+    m_model->setSelectedTheme(desktopThemeSettings()->name());
 }
 
 void KCMDesktopTheme::save()
 {
     ManagedConfigModule::save();
-    Plasma::Theme().setThemeName(m_settings->name());
+    Plasma::Theme().setThemeName(desktopThemeSettings()->name());
     processPendingDeletions();
 }
 
@@ -245,7 +246,7 @@ void KCMDesktopTheme::processPendingDeletions()
         const QString pluginName = idx.data(ThemesModel::PluginNameRole).toString();
         const QString displayName = idx.data(Qt::DisplayRole).toString();
 
-        Q_ASSERT(pluginName != m_settings->name());
+        Q_ASSERT(pluginName != desktopThemeSettings()->name());
 
         const QStringList arguments = {QStringLiteral("-t"), QStringLiteral("theme"), QStringLiteral("-r"), pluginName};
 
