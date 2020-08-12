@@ -247,12 +247,14 @@ PlasmaCore.ColorScope {
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
             PlasmaComponents.Button {
+                implicitWidth: units.gridUnit * 6
                 font.pointSize: theme.defaultFont.pointSize + 1
                 enabled: root.currentAction !== null
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "OK")
                 onClicked: root.currentAction()
             }
             PlasmaComponents.Button {
+                implicitWidth: units.gridUnit * 6
                 font.pointSize: theme.defaultFont.pointSize + 1
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Cancel")
                 onClicked: root.cancelRequested()
