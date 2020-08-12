@@ -30,7 +30,6 @@
 
 #include <KLocalizedString>
 #include <KMimeTypeTrader>
-#include <KToolInvocation>
 #include <KSharedConfig>
 
 #include "bookmarkmatch.h"
