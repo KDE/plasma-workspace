@@ -32,15 +32,15 @@
 
 Firefox::Firefox(QObject *parent) :
     QObject(parent),
-    m_favicon(new FallbackFavicon(this)),
+    m_favicon(nullptr),
     m_fetchsqlite(nullptr),
     m_fetchsqlite_fav(nullptr)
 {
-    reloadConfiguration();
     m_dbCacheFile = QStandardPaths::writableLocation(QStandardPaths::CacheLocation)
         + QStringLiteral("/bookmarkrunnerfirefoxdbfile.sqlite");
     m_dbCacheFile_fav = QStandardPaths::writableLocation(QStandardPaths::CacheLocation)
         + QStringLiteral("/bookmarkrunnerfirefoxfavdbfile.sqlite");
+    reloadConfiguration();
 }
 
 Firefox::~Firefox()
@@ -66,15 +66,8 @@ void Firefox::prepare()
         m_fetchsqlite = new FetchSqlite(m_dbCacheFile);
         m_fetchsqlite->prepare();
     }
-    if (updateCacheFile(m_dbFile_fav, m_dbCacheFile_fav) != Error) {
-        m_fetchsqlite_fav = new FetchSqlite(m_dbCacheFile_fav);
-        m_fetchsqlite_fav->prepare();
-
-        delete m_favicon;
-        m_favicon = nullptr;
-
-        m_favicon = FaviconFromBlob::firefox(m_fetchsqlite_fav, this);
-    }
+    updateCacheFile(m_dbFile_fav, m_dbCacheFile_fav);
+    m_favicon->prepare();
 }
 
 QList< BookmarkMatch > Firefox::match(const QString& term, bool addEverything)
@@ -152,13 +145,7 @@ void Firefox::teardown()
         delete m_fetchsqlite;
         m_fetchsqlite = nullptr;
     }
-    if (m_fetchsqlite_fav) {
-        m_fetchsqlite_fav->teardown();
-        delete m_fetchsqlite_fav;
-        m_fetchsqlite_fav = nullptr;
-        delete m_favicon;
-        m_favicon = nullptr;
-    }
+    m_fetchsqlite_fav->teardown();
 }
 
 void Firefox::reloadConfiguration()
@@ -214,4 +201,9 @@ void Firefox::reloadConfiguration()
             m_dbFile_fav = profilePath + "/favicons.sqlite";
         }
     }
+    // We can reuse the favicon instance over the lifetime of the plugin consequently the
+    // icons that are already written to disk can be reused in multiple match sessions
+    updateCacheFile(m_dbFile_fav, m_dbCacheFile_fav);
+    m_fetchsqlite_fav = new FetchSqlite(m_dbCacheFile_fav);
+    m_favicon = FaviconFromBlob::firefox(m_fetchsqlite_fav, this);
 }
