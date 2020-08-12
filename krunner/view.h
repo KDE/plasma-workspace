@@ -49,6 +49,7 @@ class View : public PlasmaQuick::Dialog
 
     Q_PROPERTY(bool canConfigure READ canConfigure CONSTANT)
     Q_PROPERTY(QStringList history READ history NOTIFY historyChanged)
+    Q_PROPERTY(bool retainPriorSearch READ retainPriorSearch  NOTIFY retainPriorSearchChanged)
 
 public:
     explicit View(QWindow *parent = nullptr);
@@ -65,8 +66,11 @@ public:
     Q_INVOKABLE void addToHistory(const QString &item);
     Q_INVOKABLE void removeFromHistory(int index);
 
+    bool retainPriorSearch() const;
+
 Q_SIGNALS:
     void historyChanged();
+    void retainPriorSearchChanged();
 
 protected:
     bool event(QEvent* event) override;
@@ -101,6 +105,7 @@ private:
     bool m_floating : 1;
     bool m_requestedVisible = false;
     QStringList m_history;
+    bool m_retainPriorSearch;
 };
 
 

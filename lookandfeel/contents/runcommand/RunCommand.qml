@@ -29,6 +29,7 @@ ColumnLayout {
     property string query
     property string runner
     property bool showHistory: false
+    property string priorSearch
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -44,8 +45,13 @@ ColumnLayout {
                 queryField.forceActiveFocus();
                 listView.currentIndex = -1
             } else {
-                root.query = "";
                 root.runner = ""
+                if (runnerWindow.retainPriorSearch) {
+                    root.query = priorSearch
+                    queryField.select(priorSearch.length, 0)
+                } else {
+                    root.query = ""
+                }
                 root.showHistory = false
             }
         }
@@ -57,6 +63,7 @@ ColumnLayout {
             icon.name: "configure"
             onClicked: {
                 runnerWindow.visible = false
+                priorSearch = queryField.text
                 runnerWindow.displayConfiguration()
             }
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure")
@@ -165,6 +172,7 @@ ColumnLayout {
             Keys.onReturnPressed: results.runCurrentIndex(event)
 
             Keys.onEscapePressed: {
+                priorSearch = queryField.text
                 runnerWindow.visible = false
             }
 
@@ -199,7 +207,10 @@ ColumnLayout {
         }
         PlasmaComponents3.ToolButton {
             icon.name: "window-close"
-            onClicked: runnerWindow.visible = false
+            onClicked: {
+                priorSearch = queryField.text
+                runnerWindow.visible = false
+            }
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close")
             Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close Search")
             PlasmaComponents3.ToolTip {
@@ -237,11 +248,13 @@ ColumnLayout {
 
             onActivated: {
                 runnerWindow.addToHistory(queryString)
+                priorSearch = queryString
                 runnerWindow.visible = false
             }
 
             onUpdateQueryString: {
                 queryField.text = text
+                priorSearch = text
                 queryField.cursorPosition = cursorPosition
             }
         }

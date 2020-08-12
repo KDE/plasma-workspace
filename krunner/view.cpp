@@ -51,9 +51,10 @@
 View::View(QWindow *)
     : PlasmaQuick::Dialog(),
       m_offset(.5),
-      m_floating(false)
+      m_floating(false),
+      m_retainPriorSearch(false)
 {
-    setClearBeforeRendering(true);
+setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
 
@@ -162,6 +163,11 @@ void View::loadConfig()
     if (m_history != history) {
         m_history = history;
         emit historyChanged();
+    }
+    bool retainPriorSearch = m_config.readEntry("RetainPriorSearch", false);
+    if (retainPriorSearch != m_retainPriorSearch) {
+        m_retainPriorSearch = retainPriorSearch;
+        Q_EMIT retainPriorSearchChanged();
     }
 }
 
@@ -431,4 +437,8 @@ void View::setVisible(bool visible)
     } else {
         PlasmaQuick::Dialog::setVisible(visible);
     }
+}
+
+bool View::retainPriorSearch() const {
+    return m_retainPriorSearch;
 }
