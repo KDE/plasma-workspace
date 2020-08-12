@@ -159,7 +159,11 @@ void View::loadConfig()
 {
     setFreeFloating(m_config.readEntry("FreeFloating", false));
 
-    const QStringList history = m_config.readEntry("history", QStringList());
+    m_historyEnabled = m_config.readEntry("HistoryEnabled", true);
+    QStringList history;
+    if (m_historyEnabled) {
+        history = m_config.readEntry("history", QStringList());
+    }
     if (m_history != history) {
         m_history = history;
         emit historyChanged();
@@ -377,6 +381,9 @@ QStringList View::history() const
 
 void View::addToHistory(const QString &item)
 {
+    if (!m_historyEnabled) {
+        return;
+    }
     if (item.isEmpty()) {
         return;
     }
@@ -425,6 +432,9 @@ void View::removeFromHistory(int index)
 
 void View::writeHistory()
 {
+    if (!m_historyEnabled) {
+        return;
+    }
     m_config.writeEntry("history", m_history);
 }
 

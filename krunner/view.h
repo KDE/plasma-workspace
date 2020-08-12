@@ -106,6 +106,7 @@ private:
     bool m_requestedVisible = false;
     QStringList m_history;
     bool m_retainPriorSearch;
+    bool m_historyEnabled;
 };
 
 

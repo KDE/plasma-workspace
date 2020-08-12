@@ -190,7 +190,7 @@ ColumnLayout {
                     colorGroup: PlasmaCore.Theme.ButtonColorGroup
                 }
                 elementId: "down-arrow"
-                visible: queryField.length === 0
+                visible: queryField.length === 0 && runnerWindow.history.length > 0
 
                 MouseArea {
                     anchors.fill: parent
