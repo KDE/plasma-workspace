@@ -314,6 +314,11 @@ int main(int argc, char* argv[])
     KConfigGroup config(KSharedConfig::openConfig(), "General");
 
     QString loginMode = config.readEntry( "loginMode", "restorePreviousLogout" );
+    
+    // On mobile we do not want to have session restore
+    if (!qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_MOBILE")) {
+        loginMode = QStringLiteral("emptySession");
+    }
 
     if ( parser.isSet( restoreOption ))
         server->restoreSession( QStringLiteral( SESSION_BY_USER ) );
