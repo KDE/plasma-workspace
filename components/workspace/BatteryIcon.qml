@@ -39,7 +39,7 @@ Item {
     PlasmaCore.SvgItem {
         id: batterySvg
         anchors.centerIn: parent
-        width: units.roundToIconSize(Math.min(parent.width, parent.height))
+        width: PlasmaCore.Units.roundToIconSize(Math.min(parent.width, parent.height))
         height: width
         svg: svg
         elementId: "Battery"

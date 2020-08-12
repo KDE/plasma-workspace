@@ -29,6 +29,11 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import "components"
 
+// TODO: Once SDDM 0.19 is released and we are setting the font size using the
+// SDDM KCM's syncing feature, remove the `config.fontSize` overrides here and
+// the fontSize properties in various components, because the theme's default
+// font size will be correctly propagated to the login screen
+
 PlasmaCore.ColorScope {
     id: root
 
@@ -203,6 +208,7 @@ PlasmaCore.ColorScope {
                     ActionButton {
                         iconSource: "system-suspend"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Suspend to RAM","Sleep")
+                        fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
                         visible: !inputPanel.keyboardActive
@@ -210,6 +216,7 @@ PlasmaCore.ColorScope {
                     ActionButton {
                         iconSource: "system-reboot"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
+                        fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
                         visible: !inputPanel.keyboardActive
@@ -217,6 +224,7 @@ PlasmaCore.ColorScope {
                     ActionButton {
                         iconSource: "system-shutdown"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shut Down")
+                        fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
                         visible: !inputPanel.keyboardActive
@@ -224,6 +232,7 @@ PlasmaCore.ColorScope {
                     ActionButton {
                         iconSource: "system-user-prompt"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "For switching to a username and password prompt", "Other...")
+                        fontSize: parseInt(config.fontSize) + 1
                         onClicked: mainStack.push(userPromptComponent)
                         enabled: true
                         visible: !userListComponent.showUsernamePrompt && !inputPanel.keyboardActive
@@ -361,6 +370,7 @@ PlasmaCore.ColorScope {
                 showUsernamePrompt: true
                 notificationMessage: root.notificationMessage
                 loginScreenUiVisible: loginScreenRoot.uiVisible
+                fontSize: parseInt(config.fontSize) + 2
 
                 // using a model rather than a QObject list to avoid QTBUG-75900
                 userListModel: ListModel {
@@ -383,6 +393,7 @@ PlasmaCore.ColorScope {
                     ActionButton {
                         iconSource: "system-suspend"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Suspend to RAM","Sleep")
+                        fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
                         visible: !inputPanel.keyboardActive
@@ -390,6 +401,7 @@ PlasmaCore.ColorScope {
                     ActionButton {
                         iconSource: "system-reboot"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
+                        fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
                         visible: !inputPanel.keyboardActive
@@ -397,6 +409,7 @@ PlasmaCore.ColorScope {
                     ActionButton {
                         iconSource: "system-shutdown"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shut Down")
+                        fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
                         visible: !inputPanel.keyboardActive
@@ -404,6 +417,7 @@ PlasmaCore.ColorScope {
                     ActionButton {
                         iconSource: "system-user-list"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","List Users")
+                        fontSize: parseInt(config.fontSize) + 1
                         onClicked: mainStack.pop()
                         visible: !inputPanel.keyboardActive
                     }
@@ -460,7 +474,7 @@ PlasmaCore.ColorScope {
                 bottom: parent.bottom
                 left: parent.left
                 right: parent.right
-                margins: units.smallSpacing
+                margins: PlasmaCore.Units.smallSpacing
             }
 
             Behavior on opacity {
@@ -478,17 +492,21 @@ PlasmaCore.ColorScope {
             }
 
             KeyboardButton {
+                font.pointSize: config.fontSize
             }
 
             SessionButton {
                 id: sessionButton
+                font.pointSize: config.fontSize
             }
 
             Item {
                 Layout.fillWidth: true
             }
 
-            Battery { }
+            Battery {
+                fontSize: config.fontSize
+            }
         }
     }
 

@@ -52,7 +52,7 @@ Item {
     Connections {
         id:loaderConnection
         target: org_kde_plasma_screenlocker_greeter_view
-        onFrameSwapped: {
+        function onFrameSwapped() {
             mainLoader.source = "LockScreenUi.qml";
             loaderConnection.target = null;
         }

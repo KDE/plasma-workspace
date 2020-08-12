@@ -18,12 +18,14 @@
  */
 
 import QtQuick 2.2
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 ListView {
     id: view
     readonly property string selectedUser: currentItem ? currentItem.userName : ""
     readonly property int userItemWidth: units.gridUnit * 8
     readonly property int userItemHeight: units.gridUnit * 8
+    property int fontSize: PlasmaCore.Theme.defaultFont.pointSize + 2
 
     implicitHeight: userItemHeight
 
@@ -47,6 +49,7 @@ ListView {
     delegate: UserDelegate {
         avatarPath: model.icon || ""
         iconSource: model.iconName || "user-identity"
+        fontSize: view.fontSize
 
         name: {
             var displayName = model.realName || model.name

@@ -87,7 +87,7 @@ SessionManagementScreen {
 
             Connections {
                 target: root
-                onClearPassword: {
+                function onClearPassword() {
                     passwordBox.forceActiveFocus()
                     passwordBox.text = "";
                 }
