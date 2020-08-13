@@ -234,7 +234,7 @@ bool AppEntry::run(const QString& actionId, const QVariant &argument)
     QObject *appletInterface = m_owner->rootModel()->property("appletInterface").value<QObject *>();
 
     if (Kicker::handleAddLauncherAction(actionId, appletInterface, m_service)) {
-        return true;
+        return false; // We don't want to close Kicker, BUG: 390585
     } else if (Kicker::handleEditApplicationAction(actionId, m_service)) {
         return true;
     } else if (Kicker::handleAppstreamActions(actionId, argument)) {

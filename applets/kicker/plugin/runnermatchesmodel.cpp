@@ -188,7 +188,7 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
     const KService::Ptr service = KService::serviceByStorageId(match.data().toUrl().toString(QUrl::RemoveScheme));
 
     if (Kicker::handleAddLauncherAction(actionId, appletInterface, service)) {
-        return true;
+        return false; // We don't want to close Kicker, BUG: 390585
     } else if (Kicker::handleEditApplicationAction(actionId, service)) {
         return true;
     } else if (Kicker::handleAppstreamActions(actionId, argument)) {
