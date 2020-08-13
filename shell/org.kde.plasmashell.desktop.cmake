@@ -60,3 +60,4 @@ Icon=plasmashell
 NoDisplay=true
 
 X-KDE-Wayland-Interfaces=org_kde_plasma_window_management,org_kde_kwin_keystate,zkde_screencast_unstable_v1
+X-KDE-DBUS-Restricted-Interfaces=org.kde.kwin.Screenshot
