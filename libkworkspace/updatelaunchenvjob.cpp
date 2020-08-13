@@ -105,7 +105,7 @@ void UpdateLaunchEnvJob::start()
         // https://github.com/systemd/systemd/issues/16704
         // validate here
         if (value.contains(QLatin1Char('\033'))) {
-            qWarning() << "Skipping syncing of environment variable " << varName << "as value contains unsupported character \\003";
+            qWarning() << "Skipping syncing of environment variable " << varName << "as value contains unsupported character \\033";
             continue;
         }
         const QString updateString = varName + QStringLiteral("=") + value;
