@@ -182,7 +182,6 @@ Icon=klipper
 Type=Application
 X-DocPath=klipper/index.html
 Terminal=false
-X-KDE-autostart-after=panel
 X-KDE-StartupNotify=false
 X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.klipper
