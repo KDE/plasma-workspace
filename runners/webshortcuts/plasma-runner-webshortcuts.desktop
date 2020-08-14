@@ -1,6 +1,6 @@
 [Desktop Entry]
 # ctxt: plasma runner
-Name=Web Shortcuts
+Name=Web Search Keywords
 Name[ar]=اختصارات الوِب
 Name[ast]=Atayos web
 Name[az]=Veb Qısayolları
@@ -70,7 +70,7 @@ Name[wa]=Rascourtis waibe
 Name[x-test]=xxWeb Shortcutsxx
 Name[zh_CN]=网页快捷方式
 Name[zh_TW]=網頁捷徑
-Comment=Allows user to use Konqueror's web shortcuts
+Comment=Search the web using keywords
 Comment[ar]=يسمح للمستخدِم باستخدام اختصارات كنكر للوِب
 Comment[ast]=Permite al usuariu qu'use los atayos web de Konqueror
 Comment[az]=İstifadəçiyə Konqueror-in veb qısayollarını istifadə etməyə imkan verir
