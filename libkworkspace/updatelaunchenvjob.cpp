@@ -28,6 +28,8 @@ public:
     explicit Private(UpdateLaunchEnvJob *q);
     void monitorReply(const QDBusPendingReply<> &reply);
 
+    static bool isSystemdApprovedValue(const QString &value);
+
     UpdateLaunchEnvJob *q;
     QProcessEnvironment environment;
     int pendingReplies = 0;
@@ -104,8 +106,8 @@ void UpdateLaunchEnvJob::start()
         // Systemd has stricter parsing of valid environment variables
         // https://github.com/systemd/systemd/issues/16704
         // validate here
-        if (value.contains(QLatin1Char('\033'))) {
-            qWarning() << "Skipping syncing of environment variable " << varName << "as value contains unsupported character \\033";
+        if (!Private::isSystemdApprovedValue(value)) {
+            qWarning() << "Skipping syncing of environment variable " << varName << "as value contains unsupported characters";
             continue;
         }
         const QString updateString = varName + QStringLiteral("=") + value;
@@ -134,3 +136,20 @@ void UpdateLaunchEnvJob::start()
     d->monitorReply(systemdActivationReply);
 }
 
+bool UpdateLaunchEnvJob::Private::isSystemdApprovedValue(const QString &value)
+{
+    // systemd code checks that a value contains no control characters except \n \t
+    // effectively copied from systemd's string_has_cc
+    for (const char &it : value.toLatin1()) {
+        if (it == QLatin1Char('\n') || it == QLatin1Char('\t')) {
+            continue;
+        }
+        if (it > 0 && it < ' ') {
+            return false;
+        }
+        if (it == 127) {
+            return false;
+        }
+    }
+    return true;
+}
