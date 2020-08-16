@@ -186,7 +186,7 @@ QtObject {
     property int popupSpacing: (popupLocation & Qt.AlignHCenter) && !Kirigami.Settings.isMobile ? units.smallSpacing : units.largeSpacing
 
     // How much vertical screen real estate the notification popups may consume
-    readonly property real popupMaximumScreenFill: 0.75
+    readonly property real popupMaximumScreenFill: 0.8
 
     onPopupLocationChanged: Qt.callLater(positionPopups)
 
