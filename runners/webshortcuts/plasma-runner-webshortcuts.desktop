@@ -1,7 +1,21 @@
 [Desktop Entry]
 # ctxt: plasma runner
 Name=Web Search Keywords
+Name[ca]=Paraules clau de cerca a la web
+Name[es]=Palabras clave de búsqueda web
+Name[nl]=Webzoektrefwoorden
+Name[pt]=Palavras-Chave da Pesquisa Web
+Name[sv]=Webbsökningsnyckelord
+Name[uk]=Ключові слова пошуку в інтернеті
+Name[x-test]=xxWeb Search Keywordsxx
 Comment=Search the web using keywords
+Comment[ca]=Cerca a la web usant paraules clau
+Comment[es]=Buscar la web usando palabras clave
+Comment[nl]=Op het web zoeken met trefwoorden
+Comment[pt]=Pesquisar na Web com palavras-chave
+Comment[sv]=Sök på webben med nyckelord
+Comment[uk]=Пошук в інтернеті за допомогою ключових слів
+Comment[x-test]=xxSearch the web using keywordsxx
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=internet-web-browser
