@@ -89,7 +89,10 @@ ColumnLayout {
             }
             PlasmaComponents3.ToolButton {
                 icon.name: "edit-clear-history"
-                onClicked: clipboardSource.service("", "clearHistory")
+                onClicked: {
+                    clipboardSource.service("", "clearHistory")
+                    filter.clear()
+                }
 
                 PlasmaComponents3.ToolTip {
                     text: i18n("Clear history")
