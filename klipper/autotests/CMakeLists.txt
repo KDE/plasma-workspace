@@ -31,7 +31,6 @@ ecm_mark_as_test(testHistory)
 ########################################################
 set(testHistoryModel_SRCS
     historymodeltest.cpp
-    modeltest.cpp
     ../historymodel.cpp
     ../historyimageitem.cpp
     ../historyitem.cpp

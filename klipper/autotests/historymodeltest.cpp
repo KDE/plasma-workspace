@@ -16,12 +16,12 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#include "modeltest.h"
 #include "../historymodel.h"
 #include "../historyimageitem.h"
 #include "../historystringitem.h"
 #include "../historyurlitem.h"
 
+#include <QAbstractItemModelTester>
 #include <QtTest>
 
 class HistoryModelTest : public QObject
@@ -39,7 +39,7 @@ private Q_SLOTS:
 void HistoryModelTest::testSetMaxSize()
 {
     QScopedPointer<HistoryModel> history(new HistoryModel(nullptr));
-    QScopedPointer<ModelTest> modelTest(new ModelTest(history.data()));
+    QScopedPointer<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.data()));
 
     QCOMPARE(history->rowCount(), 0);
     QCOMPARE(history->maxSize(), 0);
@@ -77,7 +77,7 @@ void HistoryModelTest::testSetMaxSize()
 void HistoryModelTest::testInsertRemove()
 {
     QScopedPointer<HistoryModel> history(new HistoryModel(nullptr));
-    QScopedPointer<ModelTest> modelTest(new ModelTest(history.data()));
+    QScopedPointer<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.data()));
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
 
@@ -178,7 +178,7 @@ void HistoryModelTest::testInsertRemove()
 void HistoryModelTest::testClear()
 {
     QScopedPointer<HistoryModel> history(new HistoryModel(nullptr));
-    QScopedPointer<ModelTest> modelTest(new ModelTest(history.data()));
+    QScopedPointer<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.data()));
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
 
@@ -200,7 +200,7 @@ void HistoryModelTest::testClear()
 void HistoryModelTest::testIndexOf()
 {
     QScopedPointer<HistoryModel> history(new HistoryModel(nullptr));
-    QScopedPointer<ModelTest> modelTest(new ModelTest(history.data()));
+    QScopedPointer<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.data()));
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
     QVERIFY(!history->indexOf(QByteArrayLiteral("whatever")).isValid());
@@ -234,7 +234,7 @@ void HistoryModelTest::testType_data()
 void HistoryModelTest::testType()
 {
     QScopedPointer<HistoryModel> history(new HistoryModel(nullptr));
-    QScopedPointer<ModelTest> modelTest(new ModelTest(history.data()));
+    QScopedPointer<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.data()));
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
 
