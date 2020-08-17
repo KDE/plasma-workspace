@@ -28,8 +28,13 @@ if(TARGET PkgConfig::PipeWire)
     target_compile_definitions(taskmanagerplugin PRIVATE -DWITH_PIPEWIRE)
     target_sources(taskmanagerplugin PUBLIC pipewirecore.cpp pipewiresourceitem.cpp pipewiresourcestream.cpp screencasting.cpp screencastingrequest.cpp ${SRCS})
     target_link_libraries(taskmanagerplugin PkgConfig::PipeWire
-                                            Qt5::Qml Qt5::Gui_EGL Qt5::Gui_GL Qt5::GuiPrivate
+                                            Qt5::Qml Qt5::Gui_EGL Qt5::GuiPrivate
                                             KF5::I18n
                                             KF5::WaylandClient
                                             Wayland::Client)
+    if (${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL "GLESv2")
+        target_link_libraries(taskmanagerplugin Qt5::Gui_GLESv2)
+    else()
+        target_link_libraries(taskmanagerplugin Qt5::Gui_GL)
+    endif()
 endif()
