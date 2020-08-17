@@ -79,7 +79,7 @@ ColumnLayout {
     property var header: PlasmaExtras.PlasmoidHeading {
         RowLayout {
             anchors.fill: parent
-            enabled: clipboardMenu.model.count > 0
+            enabled: clipboardMenu.model.count > 0 || filter.text.length > 0
 
             PlasmaComponents3.TextField {
                 id: filter
