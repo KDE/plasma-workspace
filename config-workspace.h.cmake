@@ -155,3 +155,5 @@
 
 /** place where plasma-frameworks things are installed */
 #define PLASMA_RELATIVE_DATA_INSTALL_DIR "@PLASMA_RELATIVE_DATA_INSTALL_DIR@"
+
+#define WORKSPACE_VERSION_STRING "${PROJECT_VERSION}"

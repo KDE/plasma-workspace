@@ -25,6 +25,7 @@ include(FeatureSummary)
 include(ECMOptionalAddSubdirectory)
 include(ECMQtDeclareLoggingCategory)
 include(ECMQueryQmake)
+include(ECMInstallIcons)
 include(KDEPackageAppTemplates)
 include(KDEClangFormat)
 
@@ -87,6 +88,14 @@ set_package_properties(ZLIB PROPERTIES DESCRIPTION "Support for gzip compressed 
                        TYPE REQUIRED
                       )
 
+find_package(Fontconfig)
+set_package_properties(Fontconfig PROPERTIES DESCRIPTION "Font access configuration library"
+                       URL "https://www.freedesktop.org/wiki/Software/fontconfig"
+                       TYPE OPTIONAL
+                       PURPOSE "Needed to build font configuration and installation tools"
+                      )
+
+
 find_package(X11)
 set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                         URL "https://www.x.org"
@@ -102,7 +111,7 @@ find_package(PlasmaWaylandProtocols REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client)
 
 if(X11_FOUND)
-  find_package(XCB MODULE REQUIRED COMPONENTS XCB RANDR)
+  find_package(XCB MODULE REQUIRED COMPONENTS XCB RANDR IMAGE)
   set_package_properties(XCB PROPERTIES TYPE REQUIRED)
   if(NOT X11_SM_FOUND)
     message(FATAL_ERROR "\nThe X11 Session Management (SM) development package could not be found.\nPlease install libSM.\n")
