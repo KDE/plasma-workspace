@@ -29,6 +29,8 @@
 #include <QHash>
 #include <QPair>
 
+class SessionManagement;
+
 using InhibitionInfo = QPair<QString, QString>;
 
 
@@ -81,6 +83,8 @@ private:
 
     QHash<QString, QString> m_batterySources;  // <udi, Battery0>
     QHash<QString, QPair<QString, QString>> m_applicationInfo; // <appname, <pretty name, icon>>
+
+    SessionManagement *m_session;
 };
 
 

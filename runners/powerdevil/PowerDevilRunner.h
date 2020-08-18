@@ -23,6 +23,8 @@
 #include <KRunner/AbstractRunner>
 #include <QDBusConnection>
 
+class SessionManagement;
+
 class PowerDevilRunner : public Plasma::AbstractRunner
 {
     Q_OBJECT
@@ -41,6 +43,8 @@ class PowerDevilRunner : public Plasma::AbstractRunner
         void updateSyntaxes();
         void addSuspendMatch(int value, QList<Plasma::QueryMatch> &matches);
         bool parseQuery(const QString& query, const QList<QRegExp>& rxList, QString& parameter) const;
+
+        SessionManagement *m_session;
 };
 
 #endif

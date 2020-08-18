@@ -21,11 +21,13 @@
 
 #include "powermanagementengine.h"
 
+// kde-workspace/libs
+#include <sessionmanagement.h>
+
 //solid specific includes
 #include <solid/devicenotifier.h>
 #include <solid/device.h>
 #include <solid/deviceinterface.h>
-#include <solid/powermanagement.h>
 
 #include <klocalizedstring.h>
 #include <KAuthorized>
@@ -51,6 +53,7 @@ Q_DECLARE_METATYPE(InhibitionInfo)
 PowermanagementEngine::PowermanagementEngine(QObject* parent, const QVariantList& args)
         : Plasma::DataEngine(parent, args)
         , m_sources(basicSourceNames())
+        , m_session(new SessionManagement(this))
 {
     Q_UNUSED(args)
     qDBusRegisterMetaType<QList<InhibitionInfo>>();
@@ -229,17 +232,25 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
 
         m_sources = basicSourceNames() + batterySources;
     } else if (name == QLatin1String("AC Adapter")) {
-        connect(Solid::PowerManagement::notifier(), &Solid::PowerManagement::Notifier::appShouldConserveResourcesChanged,
-                this, &PowermanagementEngine::updateAcPlugState);
-        updateAcPlugState(Solid::PowerManagement::appShouldConserveResources());
+        QDBusConnection::sessionBus().connect(QStringLiteral("org.freedesktop.PowerManagement"),
+                                              QStringLiteral("/org/freedesktop/PowerManagement"),
+                                              QStringLiteral("org.freedesktop.PowerManagement"),
+                                              QStringLiteral("PowerSaveStatusChanged"),
+                                              this, SLOT(updateAcPlugState(bool)));
+
+        QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PowerManagement"),
+                                                          QStringLiteral("/org/freedesktop/PowerManagement"),
+                                                          QStringLiteral("org.freedesktop.PowerManagement"),
+                                                          QStringLiteral("GetPowerSaveStatus"));
+        QDBusReply<bool> reply = QDBusConnection::sessionBus().call(msg);
+        updateAcPlugState(reply.isValid() ? reply.value() : false);
     } else if (name == QLatin1String("Sleep States")) {
-        const QSet<Solid::PowerManagement::SleepState> sleepstates = Solid::PowerManagement::supportedSleepStates();
-        setData(QStringLiteral("Sleep States"), QStringLiteral("Standby"), sleepstates.contains(Solid::PowerManagement::StandbyState));
-        setData(QStringLiteral("Sleep States"), QStringLiteral("Suspend"), sleepstates.contains(Solid::PowerManagement::SuspendState));
-        setData(QStringLiteral("Sleep States"), QStringLiteral("Hibernate"), sleepstates.contains(Solid::PowerManagement::HibernateState));
-        setData(QStringLiteral("Sleep States"), QStringLiteral("HybridSuspend"), sleepstates.contains(Solid::PowerManagement::HybridSuspendState));
-        setData(QStringLiteral("Sleep States"), QStringLiteral("LockScreen"), KAuthorized::authorizeAction(QStringLiteral("lock_screen")));
-        setData(QStringLiteral("Sleep States"), QStringLiteral("Logout"), KAuthorized::authorize(QStringLiteral("logout")));
+        setData(QStringLiteral("Sleep States"), QStringLiteral("Standby"), m_session->canSuspend());
+        setData(QStringLiteral("Sleep States"), QStringLiteral("Suspend"), m_session->canSuspend());
+        setData(QStringLiteral("Sleep States"), QStringLiteral("Hibernate"), m_session->canHibernate());
+        setData(QStringLiteral("Sleep States"), QStringLiteral("HybridSuspend"), m_session->canHybridSuspend());
+        setData(QStringLiteral("Sleep States"), QStringLiteral("LockScreen"), m_session->canLock());
+        setData(QStringLiteral("Sleep States"), QStringLiteral("Logout"), m_session->canLogout());
     } else if (name == QLatin1String("PowerDevil")) {
         QDBusMessage screenMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
                                                               QStringLiteral("/org/kde/Solid/PowerManagement/Actions/BrightnessControl"),

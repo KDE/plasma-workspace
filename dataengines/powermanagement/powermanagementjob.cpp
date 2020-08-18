@@ -30,8 +30,6 @@
 
 #include "powermanagementjob.h"
 
-#include <Solid/PowerManagement>
-
 PowerManagementJob::PowerManagementJob(const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent)
     : ServiceJob(parent->objectName(), operation, parameters, parent)
     , m_session(new SessionManagement(this))
@@ -106,16 +104,40 @@ void PowerManagementJob::start()
         setResult(false);
         return;
     } else if (operation == QLatin1String("beginSuppressingSleep")) {
-        setResult(Solid::PowerManagement::beginSuppressingSleep(parameters().value(QStringLiteral("reason")).toString()));
+        QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
+                                                          QStringLiteral("/org/freedesktop/PowerManagement/Inhibit"),
+                                                          QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
+                                                          QStringLiteral("Inhibit"));
+        msg << QCoreApplication::applicationName() << parameters().value(QStringLiteral("reason")).toString();
+        QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
+        setResult(reply.isValid() ? reply.value() : -1);
         return;
     } else if (operation == QLatin1String("stopSuppressingSleep")) {
-        setResult(Solid::PowerManagement::stopSuppressingSleep(parameters().value(QStringLiteral("cookie")).toInt()));
+        QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
+                                                          QStringLiteral("/org/freedesktop/PowerManagement/Inhibit"),
+                                                          QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
+                                                          QStringLiteral("UnInhibit"));
+        msg << parameters().value(QStringLiteral("cookie")).toInt();
+        QDBusReply<void> reply = QDBusConnection::sessionBus().call(msg);
+        setResult(reply.isValid());
         return;
     } else if (operation == QLatin1String("beginSuppressingScreenPowerManagement")) {
-        setResult(Solid::PowerManagement::beginSuppressingScreenPowerManagement(parameters().value(QStringLiteral("reason")).toString()));
+        QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.ScreenSaver"),
+                                                          QStringLiteral("/ScreenSaver"),
+                                                          QStringLiteral("org.freedesktop.ScreenSaver"),
+                                                          QStringLiteral("Inhibit"));
+        msg << QCoreApplication::applicationName() << parameters().value(QStringLiteral("reason")).toString();
+        QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
+        setResult(reply.isValid() ? reply.value() : -1);
         return;
     } else if (operation == QLatin1String("stopSuppressingScreenPowerManagement")) {
-        setResult(Solid::PowerManagement::stopSuppressingScreenPowerManagement(parameters().value(QStringLiteral("cookie")).toInt()));
+        QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.ScreenSaver"),
+                                                          QStringLiteral("/ScreenSaver"),
+                                                          QStringLiteral("org.freedesktop.ScreenSaver"),
+                                                          QStringLiteral("UnInhibit"));
+        msg << parameters().value(QStringLiteral("cookie")).toInt();
+        QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
+        setResult(reply.isValid());
         return;
     } else if (operation == QLatin1String("setBrightness")) {
         auto pending = setScreenBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
