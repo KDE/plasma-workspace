@@ -32,7 +32,7 @@
 
 Firefox::Firefox(QObject *parent) :
     QObject(parent),
-    m_favicon(nullptr),
+    m_favicon(new FallbackFavicon(this)),
     m_fetchsqlite(nullptr),
     m_fetchsqlite_fav(nullptr)
 {
@@ -145,7 +145,7 @@ void Firefox::teardown()
         delete m_fetchsqlite;
         m_fetchsqlite = nullptr;
     }
-    m_fetchsqlite_fav->teardown();
+    m_favicon->teardown();
 }
 
 void Firefox::reloadConfiguration()
@@ -204,6 +204,7 @@ void Firefox::reloadConfiguration()
     // We can reuse the favicon instance over the lifetime of the plugin consequently the
     // icons that are already written to disk can be reused in multiple match sessions
     updateCacheFile(m_dbFile_fav, m_dbCacheFile_fav);
-    m_fetchsqlite_fav = new FetchSqlite(m_dbCacheFile_fav);
+    m_fetchsqlite_fav = new FetchSqlite(m_dbCacheFile_fav, this);
+    delete m_favicon;
     m_favicon = FaviconFromBlob::firefox(m_fetchsqlite_fav, this);
 }
