@@ -191,10 +191,10 @@ QStringList AppInterface::knownWidgetTypes() const
 {
     if (m_knownWidgets.isEmpty()) {
         QStringList widgets;
-        KPluginInfo::List infoLs = Plasma::PluginLoader::self()->listAppletInfo(QString());
+        const QList<KPluginMetaData> plugins = Plasma::PluginLoader::self()->listAppletMetaData(QString());
 
-        foreach (const KPluginInfo &info, infoLs) {
-            widgets.append(info.pluginName());
+        for (const auto &plugin : plugins) {
+            widgets.append(plugin.pluginId());
         }
 
         const_cast<AppInterface *>(this)->m_knownWidgets = widgets;

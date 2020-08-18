@@ -235,7 +235,7 @@ QString Applet::version() const
         return QString();
     }
 
-    return app->pluginInfo().version();
+    return app->pluginMetaData().version();
 }
 
 void Applet::setLocked(bool locked)

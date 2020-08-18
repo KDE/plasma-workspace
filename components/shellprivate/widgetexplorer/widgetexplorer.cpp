@@ -141,18 +141,18 @@ void WidgetExplorerPrivate::initFilters()
     QSet<QString> existingCategories = itemModel.categories();
     //foreach (const QString &category, Plasma::Applet::listCategories(application)) {
     QStringList cats;
-    const QList<KPluginInfo> list = PluginLoader::self()->listAppletInfo(QString());
+    const QList<KPluginMetaData> list = PluginLoader::self()->listAppletMetaData(QString());
 
-    for (auto& info : list) {
-        if (!info.isValid()) {
+    for (auto& plugin : list) {
+        if (!plugin.isValid()) {
             continue;
         }
-        if (info.property(QStringLiteral("NoDisplay")).toBool() || info.category() == QLatin1String("Containments") ||
-            info.category().isEmpty()) {
+        if (plugin.rawData().value("NoDisplay").toBool() || plugin.category() == QLatin1String("Containments") ||
+            plugin.category().isEmpty()) {
             // we don't want to show the hidden category
             continue;
         }
-        const QString c = info.category();
+        const QString c = plugin.category();
         if (-1 == cats.indexOf(c)) {
             cats << c;
         }

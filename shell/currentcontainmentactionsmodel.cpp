@@ -29,8 +29,7 @@
 #include <QQuickWindow>
 #include <QWindow>
 
-#include <kaboutdata.h>
-#include <kaboutapplicationdialog.h>
+#include <KAboutPluginDialog>
 #include <klocalizedstring.h>
 
 #include <Plasma/Corona>
@@ -55,13 +54,13 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
 
         QStandardItem *item = new QStandardItem();
         item->setData(i.key(), ActionRole);
-        item->setData(i.value()->pluginInfo().pluginName(), PluginNameRole);
+        item->setData(i.value()->metadata().pluginId(), PluginNameRole);
 
-        m_plugins[i.key()] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, i.value()->pluginInfo().pluginName());
+        m_plugins[i.key()] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, i.value()->metadata().pluginId());
         m_plugins[i.key()]->setContainment(m_containment);
         KConfigGroup cfg(&m_baseCfg, i.key());
         m_plugins[i.key()]->restore(cfg);
-        item->setData(m_plugins[i.key()]->pluginInfo().property(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
+        item->setData(m_plugins[i.key()]->metadata().rawData().value(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
 
         appendRow(item);
     }
@@ -128,7 +127,7 @@ bool CurrentContainmentActionsModel::append(const QString &action, const QString
     //empty config: the new one will ne in default state
     KConfigGroup tempConfig(&m_tempConfigParent, "test");
     m_plugins[action]->restore(tempConfig);
-    item->setData(m_plugins[action]->pluginInfo().property(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
+    item->setData(m_plugins[action]->metadata().rawData().value(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
     m_removedTriggers.removeAll(action);
 
     appendRow(item);
@@ -166,7 +165,7 @@ void CurrentContainmentActionsModel::update(int row, const QString &action, cons
             //empty config: the new one will ne in default state
             KConfigGroup tempConfig(&m_tempConfigParent, "test");
             m_plugins[action]->restore(tempConfig);
-            setData(idx, m_plugins[action]->pluginInfo().property(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
+            setData(idx, m_plugins[action]->metadata().rawData().value(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
         }
 
         emit configurationChanged();
@@ -242,21 +241,10 @@ void CurrentContainmentActionsModel::showAbout(int row, QQuickItem *ctx)
         return;
     }
 
-    KPluginInfo info = m_plugins[action]->pluginInfo();
+    KPluginMetaData info = m_plugins[action]->metadata();
 
-    KAboutData aboutData(info.name(),
-            ki18n(info.name().toUtf8()).toString(),
-            info.version(),
-            ki18n(info.comment().toUtf8()).toString(),
-            KAboutLicense::byKeyword(info.license()).key(),
-            QString(),
-            QString(), info.website(),
-            info.email());
-
-    aboutData.addAuthor(ki18n(info.author().toUtf8()).toString(), QString(), info.email());
-
-    KAboutApplicationDialog *aboutDialog = new KAboutApplicationDialog(aboutData, qobject_cast<QWidget*>(parent()));
-    aboutDialog->setWindowIcon(QIcon::fromTheme(info.icon()));
+    auto aboutDialog = new KAboutPluginDialog(info, qobject_cast<QWidget*>(parent()));
+    aboutDialog->setWindowIcon(QIcon::fromTheme(info.iconName()));
     aboutDialog->setAttribute(Qt::WA_DeleteOnClose);
 
     if (ctx && ctx->window()) {
@@ -282,7 +270,7 @@ void CurrentContainmentActionsModel::save()
         KConfigGroup cfg(&m_baseCfg, i.key());
         i.value()->save(cfg);
 
-        m_containment->setContainmentActions(i.key(), i.value()->pluginInfo().pluginName());
+        m_containment->setContainmentActions(i.key(), i.value()->metadata().pluginId());
     }
 }
 
