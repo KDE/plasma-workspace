@@ -1,6 +1,20 @@
 [Desktop Entry]
 Name=Disks & Devices
+Name[ca]=Discs i dispositius
+Name[es]=Discos y dispositivos
+Name[nl]=Schijven & apparaten
+Name[pt]=Discos & Dispositivos
+Name[sv]=Diskar och enheter
+Name[uk]=Диски і пристрої
+Name[x-test]=xxDisks & Devicesxx
 Comment=Notifications and access for devices
+Comment[ca]=Notificacions i accés als dispositius
+Comment[es]=Notificaciones y accesos de dispositivos
+Comment[nl]=Meldingen en toegang voor apparaten
+Comment[pt]=Notificações e acesso aos dispositivos
+Comment[sv]=Underrättelser och åtkomst av enheter
+Comment[uk]=Сповіщення і доступ до пристроїв
+Comment[x-test]=xxNotifications and access for devicesxx
 
 Icon=device-notifier
 Type=Service
