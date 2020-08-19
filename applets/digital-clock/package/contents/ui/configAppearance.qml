@@ -26,6 +26,7 @@ import QtQuick.Layouts 1.0 as QtLayouts
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 import org.kde.kirigami 2.5 as Kirigami
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 QtLayouts.ColumnLayout {
     id: appearancePage
@@ -143,7 +144,8 @@ QtLayouts.ColumnLayout {
 
         QtLayouts.RowLayout {
             Kirigami.FormData.label: i18n("Date format:")
-            enabled: showDate.checked
+
+            enabled: showDate.checked && !(plasmoid.formFactor === PlasmaCore.Types.Vertical && plasmoid.width < PlasmaCore.Units.gridUnit * 3)
 
             QtControls.ComboBox {
                 id: dateFormat
@@ -172,6 +174,9 @@ QtLayouts.ColumnLayout {
                 onCurrentIndexChanged: cfg_dateFormat = model[currentIndex]["name"]
 
                 Component.onCompleted: {
+                    if ((plasmoid.formFactor === PlasmaCore.Types.Vertical && plasmoid.width < PlasmaCore.Units.gridUnit * 3)) {
+                        dateFormat.currentIndex = 1;
+                    }
                     for (var i = 0; i < model.length; i++) {
                         if (model[i]["name"] === plasmoid.configuration.dateFormat) {
                             dateFormat.currentIndex = i;
@@ -186,6 +191,13 @@ QtLayouts.ColumnLayout {
                 text: Qt.formatDate(new Date(), cfg_dateFormat === "custom" ? customDateFormat.text
                                                                             : dateFormat.model[dateFormat.currentIndex].format)
             }
+        }
+
+        Kirigami.InlineMessage {
+            visible: (plasmoid.formFactor === PlasmaCore.Types.Vertical && plasmoid.width < PlasmaCore.Units.gridUnit * 3)
+            text: i18n("The clock's panel is only thick enough to display a short date format. Widen the panel to accommodate long or custom date formats.")
+
+            QtLayouts.Layout.fillWidth: true
         }
 
         QtControls.TextField {

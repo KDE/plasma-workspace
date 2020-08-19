@@ -50,11 +50,6 @@ Item {
     }
 
     function timeForZone(zone) {
-        var compactRepresentationItem = plasmoid.compactRepresentationItem;
-        if (!compactRepresentationItem) {
-            return "";
-        }
-
         // get the time for the given timezone from the dataengine
         var now = dataSource.data[zone]["DateTime"];
         // get current UTC time
@@ -62,10 +57,10 @@ Item {
         // add the dataengine TZ offset to it
         var dateTime = new Date(msUTC + (dataSource.data[zone]["Offset"] * 1000));
 
-        var formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormat);
+        var formattedTime = Qt.formatTime(dateTime, digitalClock.timeFormat);
 
         if (dateTime.getDay() !== dataSource.data["Local"]["DateTime"].getDay()) {
-            formattedTime += " (" + Qt.formatDate(dateTime, compactRepresentationItem.dateFormat) + ")";
+            formattedTime += " (" + Qt.formatDate(dateTime, digitalClock.dateFormat) + ")";
         }
 
         return formattedTime;
@@ -79,8 +74,10 @@ Item {
         return timezoneString;
     }
 
+    DigitalClock { id: digitalClock }
+
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
-    Plasmoid.compactRepresentation: DigitalClock { }
+    Plasmoid.compactRepresentation: digitalClock.item
     Plasmoid.fullRepresentation: CalendarView { }
 
     Plasmoid.toolTipItem: Loader {
