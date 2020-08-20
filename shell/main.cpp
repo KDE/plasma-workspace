@@ -31,8 +31,9 @@
 
 #include <KAboutData>
 #include <KQuickAddons/QtQuickSettings>
+
 #ifdef WITH_KUSERFEEDBACKCORE
-#include <KUserFeedback/Provider>
+#include "userfeedback.h"
 #endif
 
 #include <kdbusservice.h>
@@ -165,8 +166,9 @@ int main(int argc, char *argv[])
     corona->setShell(cliOptions.value(shellPluginOption));
 
 #ifdef WITH_KUSERFEEDBACKCORE
+    auto userFeedback = new UserFeedback(corona, &app);
     if (cliOptions.isSet(feedbackOption)) {
-        QTextStream(stdout) << corona->feedbackProvider()->describeDataSources();
+        QTextStream(stdout) << userFeedback->describeDataSources();
         return 0;
     }
 #endif

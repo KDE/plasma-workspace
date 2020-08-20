@@ -43,8 +43,16 @@ set (plasma_shell_SRCS
     ${scripting_SRC}
 )
 
+if (TARGET KUserFeedbackCore)
+    set(plasma_shell_SRCS
+        ${plasma_shell_SRCS}
+        userfeedback.cpp
+    )
+endif()
+
 set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)
 qt5_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
+
 
 add_executable(plasmashell
     ${plasma_shell_SRCS}
