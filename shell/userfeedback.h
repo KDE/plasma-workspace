@@ -1,5 +1,6 @@
 /*
  *   Copyright 2019 Aleix Pol Gonzalez <aleixpol@kde.org>
+ *   Copyright 2020 David Edmundson <davidedmundson@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
@@ -17,29 +18,24 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef PANELCOUNTSOURCE_H
-#define PANELCOUNTSOURCE_H
+#pragma once
 
-#include "shellcorona.h"
-#include <KLocalizedString>
-#include <KUserFeedback/AbstractDataSource>
+#include <QObject>
 
-class PanelCountSource : public KUserFeedback::AbstractDataSource
+class ShellCorona;
+
+namespace KUserFeedback
 {
+    class Provider;
+}
+
+class UserFeedback : public QObject
+{
+    Q_OBJECT
 public:
-    /*! Create a new start count data source. */
-    PanelCountSource(ShellCorona* corona)
-        : AbstractDataSource(QStringLiteral("panelCount"), KUserFeedback::Provider::DetailedSystemInformation)
-        , corona(corona)
-    {}
-
-    QString name() const override { return i18n("Panel Count"); }
-    QString description() const override { return i18n("Counts the panels"); }
-
-    QVariant data() override { return QVariantMap{ { QStringLiteral("panelCount"), corona->panelCount() } } ; }
-
+    UserFeedback(ShellCorona *corona, QObject *parent);
+    ~UserFeedback() override = default;
+    QString describeDataSources() const;
 private:
-    ShellCorona* const corona;
+    KUserFeedback::Provider *m_provider;
 };
-
-#endif

@@ -66,10 +66,6 @@ namespace KWayland
         class PlasmaShell;
     }
 }
-namespace KUserFeedback
-{
-    class Provider;
-};
 
 class ShellCorona : public Plasma::Corona, QDBusContext
 {
@@ -122,8 +118,6 @@ public:
     QList<int> screenIds() const;
 
     QString defaultContainmentPlugin() const;
-
-    KUserFeedback::Provider* feedbackProvider() const { return m_feedbackProvider; }
 
 Q_SIGNALS:
     void glInitializationFailed();
@@ -269,7 +263,6 @@ private:
     QString m_testModeLayout;
 
     StrutManager *m_strutManager;
-    KUserFeedback::Provider *m_feedbackProvider = nullptr;
 };
 
 #endif // SHELLCORONA_H
