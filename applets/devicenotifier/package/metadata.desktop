@@ -1,17 +1,23 @@
 [Desktop Entry]
 Name=Disks & Devices
 Name[ca]=Discs i dispositius
+Name[de]=Datenträger & Geräte
 Name[es]=Discos y dispositivos
 Name[nl]=Schijven & apparaten
 Name[pt]=Discos & Dispositivos
+Name[pt_BR]=Discos e dispositivos
+Name[sl]=Diski in naprave
 Name[sv]=Diskar och enheter
 Name[uk]=Диски і пристрої
 Name[x-test]=xxDisks & Devicesxx
 Comment=Notifications and access for devices
 Comment[ca]=Notificacions i accés als dispositius
+Comment[de]=Benachrichtigungen und Zugriff für Geräte
 Comment[es]=Notificaciones y accesos de dispositivos
 Comment[nl]=Meldingen en toegang voor apparaten
 Comment[pt]=Notificações e acesso aos dispositivos
+Comment[pt_BR]=Notificações e acesso aos dispositivos
+Comment[sl]=Obvestila in dostop do naprav
 Comment[sv]=Underrättelser och åtkomst av enheter
 Comment[uk]=Сповіщення і доступ до пристроїв
 Comment[x-test]=xxNotifications and access for devicesxx
