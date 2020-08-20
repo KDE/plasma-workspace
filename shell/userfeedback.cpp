@@ -29,9 +29,15 @@
 #include <KUserFeedback/OpenGLInfoSource>
 #include <KUserFeedback/ScreenInfoSource>
 
+#include <KSharedConfig>
+#include <KConfigGroup>
+
 #include <KLocalizedString>
 
 #include "shellcorona.h"
+
+// Contains a collection of all sources for Plasma related things
+// When updating code here be sure to update the schema on the server
 
 class PanelCountSource : public KUserFeedback::AbstractDataSource
 {
@@ -49,6 +55,27 @@ public:
 
 private:
     ShellCorona* const corona;
+};
+
+class ThemeSettingsSource: public KUserFeedback::AbstractDataSource
+{
+public:
+    ThemeSettingsSource()
+        : AbstractDataSource(QStringLiteral("themeSettings"), KUserFeedback::Provider::DetailedSystemInformation)
+    {}
+
+    QString name() const override { return i18n("Theme Settings"); }
+    QString description() const override { return i18n("Theme settings used on the Plasma desktop"); }
+    QVariant data() override {
+        QVariantMap data;
+        KConfigGroup kdeSettings = KSharedConfig::openConfig()->group("KDE");
+        data["singleClick"] = kdeSettings.readEntry("SingleClick", true);
+        data["lookAndFeelPackage"] = kdeSettings.readEntry("LookAndFeelPackage", QString());
+        data["widgetStyle"] = kdeSettings.readEntry("widgetStyle", QString());
+        data["iconTheme"] = KSharedConfig::openConfig()->group("Icons").readEntry("Theme", QString());
+        data["colorScheme"] = KSharedConfig::openConfig()->group("General").readEntry("ColorScheme", QString());
+        return data;
+    }
 };
 
 
@@ -69,6 +96,7 @@ UserFeedback::UserFeedback(ShellCorona *corona, QObject *parent)
     m_provider->addDataSource(new KUserFeedback::OpenGLInfoSource);
     m_provider->addDataSource(new KUserFeedback::ScreenInfoSource);
     m_provider->addDataSource(new PanelCountSource(corona));
+    m_provider->addDataSource(new ThemeSettingsSource);
 
     auto plasmaConfig = KSharedConfig::openConfig(QStringLiteral("PlasmaUserFeedback"));
     m_provider->setTelemetryMode(KUserFeedback::Provider::TelemetryMode(plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::NoTelemetry))));
