@@ -78,6 +78,36 @@ public:
     }
 };
 
+class AppletListSource: public KUserFeedback::AbstractDataSource
+{
+public:
+    AppletListSource(ShellCorona *corona)
+        : AbstractDataSource(QStringLiteral("applets"), KUserFeedback::Provider::DetailedSystemInformation)
+        , corona(corona)
+    {}
+    QString name() const override { return i18n("Applets"); }
+    QString description() const override { return i18n("List of running applets"); }
+
+    QVariant data() override {
+        QStringList applets;
+        for(auto c: corona->containments()) {
+            for (auto applet: c->applets()) {
+                QString appletName = applet->pluginMetaData().pluginId();
+                if (!appletName.startsWith("org.kde.")) {
+                    // if it's not from us, it's probably in the form "net.davidedmundson.superawesomesecretapplet"
+                    // at which point including it could leak a probable identifier
+                   // by taking a hash, we can hide that but still see how popular net.some.random.store.thing is if we know to search for that
+                    appletName = QCryptographicHash::hash(appletName.toLatin1(), QCryptographicHash::Md5);
+                }
+                applets << appletName;
+            }
+        }
+        return applets;
+    }
+private:
+    ShellCorona* const corona;
+};
+
 
 UserFeedback::UserFeedback(ShellCorona *corona, QObject *parent)
     : QObject(parent)
@@ -97,6 +127,7 @@ UserFeedback::UserFeedback(ShellCorona *corona, QObject *parent)
     m_provider->addDataSource(new KUserFeedback::ScreenInfoSource);
     m_provider->addDataSource(new PanelCountSource(corona));
     m_provider->addDataSource(new ThemeSettingsSource);
+    m_provider->addDataSource(new AppletListSource(corona));
 
     auto plasmaConfig = KSharedConfig::openConfig(QStringLiteral("PlasmaUserFeedback"));
     m_provider->setTelemetryMode(KUserFeedback::Provider::TelemetryMode(plasmaConfig->group("Global").readEntry("FeedbackLevel", int(KUserFeedback::Provider::NoTelemetry))));
