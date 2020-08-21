@@ -11,12 +11,11 @@ Kirigami.FormLayout {
 
     QQC2.CheckBox {
         id: alwaysClock
-        Kirigami.FormData.label: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Clock:")
-        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "verb, to show something", "Show always")
+        Kirigami.FormData.label: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "verb, to show something", "Show:")
+        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Clock")
     }
     QQC2.CheckBox {
         id: showMediaControls
-        Kirigami.FormData.label: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Media controls:")
-        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "verb, to show something", "Show")
+        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Media Controls")
     }
 }
