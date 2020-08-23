@@ -50,9 +50,9 @@ PlasmaComponents3.Page {
 
             PlasmaComponents3.ComboBox {
                 Layout.preferredWidth: units.gridUnit * 11
-                model: ["Removable devices",
-                        "Non-removable devices",
-                        "All devices"
+                model: [i18n("Removable devices"),
+                        i18n("Non-removable devices"),
+                        i18n("All devices")
                        ]
                 currentIndex: {
                     if (plasmoid.configuration.removableDevices) {
