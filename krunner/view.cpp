@@ -164,7 +164,7 @@ void View::loadConfig()
         m_history = history;
         emit historyChanged();
     }
-    bool retainPriorSearch = m_config.readEntry("RetainPriorSearch", false);
+    bool retainPriorSearch = m_config.readEntry("RetainPriorSearch", true);
     if (retainPriorSearch != m_retainPriorSearch) {
         m_retainPriorSearch = retainPriorSearch;
         Q_EMIT retainPriorSearchChanged();
