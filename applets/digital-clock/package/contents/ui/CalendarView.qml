@@ -67,6 +67,16 @@ PlasmaComponents3.Page {
 
                 text: monthView.currentDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
             }
+
+            PlasmaComponents3.ToolButton {
+                visible: plasmoid.action("configure").enabled
+                icon.name: "configure"
+                onClicked: plasmoid.action("configure").trigger()
+                PlasmaComponents3.ToolTip {
+                    text: plasmoid.action("configure").text
+                }
+            }
+
             // Allows the user to keep the calendar open for reference
             PlasmaComponents3.ToolButton {
                 checkable: true
