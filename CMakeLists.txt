@@ -14,6 +14,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Test Network)
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH})
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -109,6 +110,9 @@ set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(PipeWire IMPORTED_TARGET libpipewire-0.3)
 add_feature_info(PipeWire PipeWire_FOUND "Required for Wayland screencasting")
+
+find_package(Libdrm REQUIRED)
+pkg_check_modules(gbm REQUIRED)
 
 find_package(QtWaylandScanner REQUIRED)
 find_package(PlasmaWaylandProtocols REQUIRED)
