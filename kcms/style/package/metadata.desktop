@@ -1,6 +1,20 @@
 [Desktop Entry]
 Name=Application Style
+Name[ca]=Estil de l'aplicació
+Name[es]=Estilo de las aplicaciones
+Name[nl]=Stijl van toepassing
+Name[pt]=Estilo das Aplicações
+Name[sv]=Programstil
+Name[uk]=Стиль вікон програм
+Name[x-test]=xxApplication Stylexx
 Comment=Configure application style and behavior
+Comment[ca]=Configura l'estil i el comportament de les aplicacions
+Comment[es]=Configurar el estilo y el comportamiento de las aplicaciones
+Comment[nl]=Toepassingstijl en gedrag configureren
+Comment[pt]=Configurar o estilo e comportamento das aplicações
+Comment[sv]=Anpassa programstil och beteende
+Comment[uk]=Налаштовування стилю і поведінки вікон програм
+Comment[x-test]=xxConfigure application style and behaviorxx
 
 Icon=preferences-desktop-theme-applications
 Type=Service

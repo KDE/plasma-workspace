@@ -1,5 +1,12 @@
 [KNewStuff3]
 Name=Fonts
+Name[ca]=Tipus de lletra
+Name[es]=Tipos de letra
+Name[nl]=Lettertypen
+Name[pt]=Tipos de Letra
+Name[sv]=Teckensnitt
+Name[uk]=Шрифти
+Name[x-test]=xxFontsxx
 
 ProvidersUrl=https://distribute.kde.org/khotnewstuff/fonts-providers.xml
 Categories=KDE-Look.org Fonts

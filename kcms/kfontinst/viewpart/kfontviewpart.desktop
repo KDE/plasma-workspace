@@ -1,5 +1,12 @@
 [Desktop Entry]
 Name=Font Viewer
+Name[ca]=Visor de tipus de lletra
+Name[es]=Visor de tipos de letra
+Name[nl]=Lettertypeweergave
+Name[pt]=Visualizador de Tipos de Letra
+Name[sv]=Teckensnittsvisning
+Name[uk]=Переглядач шрифтів
+Name[x-test]=xxFont Viewerxx
 MimeType=application/x-font-ttf;application/x-font-type1;application/x-font-otf;application/x-font-pcf;application/x-font-bdf;fonts/package;
 X-KDE-ServiceTypes=KParts/ReadOnlyPart,Browser/View
 X-KDE-Library=kfontviewpart

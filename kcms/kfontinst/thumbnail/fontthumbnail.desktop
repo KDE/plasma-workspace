@@ -1,6 +1,13 @@
 [Desktop Entry]
 Type=Service
 Name=Font Files
+Name[ca]=Fitxers de tipus de lletra
+Name[es]=Archivos de tipos de letra
+Name[nl]=Lettertypebestanden
+Name[pt]=Ficheiros de Tipos de Letra
+Name[sv]=Teckensnittsfiler
+Name[uk]=Файли шрифтів
+Name[x-test]=xxFont Filesxx
 X-KDE-ServiceTypes=ThumbCreator
 MimeType=application/x-font-ttf;application/x-font-type1;application/x-font-bdf;application/x-font-pcf;application/x-font-otf;fonts/package;font/ttf;font/otf;
 X-KDE-Library=fontthumbnail

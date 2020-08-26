@@ -1,7 +1,21 @@
 [Desktop Entry]
 Name=Fonts
+Name[ca]=Tipus de lletra
+Name[es]=Tipos de letra
+Name[nl]=Lettertypen
+Name[pt]=Tipos de Letra
+Name[sv]=Teckensnitt
+Name[uk]=Шрифти
+Name[x-test]=xxFontsxx
 
 Comment=Configure user interface fonts
+Comment[ca]=Configura els tipus de lletra de la interfície d'usuari
+Comment[es]=Configurar los tipos de letra de la interfaz de usuario
+Comment[nl]=Lettertypen van gebruikersinterface configureren
+Comment[pt]=Configurar os tipos de letra da interface do utilizador
+Comment[sv]=Anpassa teckensnitt för användargränssnitt
+Comment[uk]=Налаштовування шрифтів у інтерфейсі користувача
+Comment[x-test]=xxConfigure user interface fontsxx
 
 Icon=preferences-desktop-font
 Keywords=

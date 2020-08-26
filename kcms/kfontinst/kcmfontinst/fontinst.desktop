@@ -12,9 +12,30 @@ Categories=Qt;KDE;X-KDE-settings-system;
 X-KDE-System-Settings-Parent-Category=font
 
 Name=Font Management
+Name[ca]=Gestió dels tipus de lletra
+Name[es]=Gestión de tipos de letra
+Name[nl]=Lettertypenbeheer
+Name[pt]=Gestão dos Tipos de Letra
+Name[sv]=Teckensnittshantering
+Name[uk]=Керування шрифтами
+Name[x-test]=xxFont Managementxx
 
 Comment=Install, manage and preview fonts
+Comment[ca]=Instal·la, gestiona i previsualitza els tipus de lletra
+Comment[es]=Instalación, gestión y vista previa de tipos de letra
+Comment[nl]=Lettertypen installeren, beheren en bekijken
+Comment[pt]=Instala, gere e antevê os tipos de letra
+Comment[sv]=Installera, hantera och förhandsgranska teckensnitt
+Comment[uk]=Встановлення, керування та попередній перегляд шрифтів
+Comment[x-test]=xxInstall, manage and preview fontsxx
 
 X-KDE-Keywords=font,fonts,installer,truetype,type1,bitmap
+X-KDE-Keywords[ca]=tipus de lletra,tipus de lletres,instal·lador,truetype,type1,mapa de bits
+X-KDE-Keywords[es]=tipo de letra,tipos de letra,instalador,truetype,type1,bitmap,mapa de bits
+X-KDE-Keywords[nl]=lettertype,lettertypen,installatieprogramma,truetype,type1,bitmap
+X-KDE-Keywords[pt]=tipo de letra,tipos de letra,instalador,truetype,type1,imagem
+X-KDE-Keywords[sv]=teckensnitt,installation,truetype,type1,bitavbildning
+X-KDE-Keywords[uk]=font,fonts,installer,truetype,type1,bitmap,шрифт,шрифти,встановлювач,растрові
+X-KDE-Keywords[x-test]=xxfontxx,xxfontsxx,xxinstallerxx,xxtruetypexx,xxtype1xx,xxbitmapxx
 
 

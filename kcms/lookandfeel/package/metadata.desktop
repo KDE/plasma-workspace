@@ -1,6 +1,20 @@
 [Desktop Entry]
 Name=Global Theme
+Name[ca]=Tema global
+Name[es]=Tema global
+Name[nl]=Globaal thema
+Name[pt]=Tema Global
+Name[sv]=Globalt tema
+Name[uk]=Загальна тема
+Name[x-test]=xxGlobal Themexx
 Comment=Choose global look and feel
+Comment[ca]=Trieu l'aspecte i comportament global
+Comment[es]=Escoger el aspecto visual global
+Comment[nl]=Globaal uiterlijk en gedrag kiezen
+Comment[pt]=Escolher a aparência e comportamento global
+Comment[sv]=Välj global utseende och känsla
+Comment[uk]=Вибір загального вигляду і поведінки
+Comment[x-test]=xxChoose global look and feelxx
 Icon=preferences-desktop-theme-style
 Keywords=
 Type=Service

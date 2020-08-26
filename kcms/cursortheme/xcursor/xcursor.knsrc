@@ -1,5 +1,12 @@
 [KNewStuff3]
 Name=Cursors
+Name[ca]=Cursors
+Name[es]=Cursores
+Name[nl]=Cursors
+Name[pt]=Cursores
+Name[sv]=Pekare
+Name[uk]=Вказівники
+Name[x-test]=xxCursorsxx
 
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=X11 Mouse Theme
