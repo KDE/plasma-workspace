@@ -30,7 +30,6 @@
 #include <libdrm/drm_fourcc.h>
 #include <spa/utils/result.h>
 #include <unistd.h>
-#include <gbm.h>
 
 #include <QOpenGLTexture>
 #include <QSocketNotifier>
