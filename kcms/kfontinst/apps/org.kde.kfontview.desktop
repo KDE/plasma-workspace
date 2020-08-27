@@ -1,9 +1,11 @@
 [Desktop Entry]
 Name=KFontView
+Name[az]=KFontView
 Name[ca]=KFontView
 Name[es]=KFontView
 Name[nl]=KFontView
 Name[pt]=KFontView
+Name[sl]=KFontView
 Name[sv]=Kfontview
 Name[uk]=KFontView
 Name[x-test]=xxKFontViewxx
@@ -13,10 +15,12 @@ X-KDE-StartupNotify=true
 Type=Application
 MimeType=application/x-font-ttf;application/x-font-type1;application/x-font-otf;application/x-font-pcf;application/x-font-bdf;application/vnd.kde.fontspackage;font/otf;font/ttf;
 GenericName=Font Viewer
+GenericName[az]=Şriftə baxış vasitəsi
 GenericName[ca]=Visor de tipus de lletra
 GenericName[es]=Visor de tipos de letra
 GenericName[nl]=Lettertypeweergave
 GenericName[pt]=Visualizador de Tipos de Letra
+GenericName[sl]=Prikazovalnik pisav
 GenericName[sv]=Teckensnittsvisning
 GenericName[uk]=Переглядач шрифтів
 GenericName[x-test]=xxFont Viewerxx

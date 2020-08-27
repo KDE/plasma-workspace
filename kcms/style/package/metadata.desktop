@@ -1,17 +1,21 @@
 [Desktop Entry]
 Name=Application Style
+Name[az]=Tətbiq Üslubu
 Name[ca]=Estil de l'aplicació
 Name[es]=Estilo de las aplicaciones
 Name[nl]=Stijl van toepassing
 Name[pt]=Estilo das Aplicações
+Name[sl]=Slog aplikacije
 Name[sv]=Programstil
 Name[uk]=Стиль вікон програм
 Name[x-test]=xxApplication Stylexx
 Comment=Configure application style and behavior
+Comment[az]=Tətbiq üslubu və davranışlarını tənzimləmək
 Comment[ca]=Configura l'estil i el comportament de les aplicacions
 Comment[es]=Configurar el estilo y el comportamiento de las aplicaciones
 Comment[nl]=Toepassingstijl en gedrag configureren
 Comment[pt]=Configurar o estilo e comportamento das aplicações
+Comment[sl]=Nastavi slog aplikacije in obnašanje
 Comment[sv]=Anpassa programstil och beteende
 Comment[uk]=Налаштовування стилю і поведінки вікон програм
 Comment[x-test]=xxConfigure application style and behaviorxx

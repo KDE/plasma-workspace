@@ -12,29 +12,35 @@ X-KDE-System-Settings-Parent-Category=appearance
 X-KDE-Weight=40
 
 Name=Colors
+Name[az]=Rənglər
 Name[ca]=Colors
 Name[es]=Colores
 Name[nl]=Kleuren
 Name[pt]=Cores
+Name[sl]=Barve
 Name[sv]=Färger
 Name[uk]=Кольори
 Name[x-test]=xxColorsxx
 
 Comment=Choose color scheme
+Comment[az]=Rəng sxemini seçmək
 Comment[ca]=Trieu l'esquema de color
 Comment[es]=Escoger un esquema de color
 Comment[nl]=Kleurenschema kiezen
 Comment[pt]=Escolher o esquema de cores
+Comment[sl]=Izberite barvno shemo
 Comment[sv]=Välj färgschema
 Comment[uk]=Вибір схеми кольорів
 Comment[x-test]=xxChoose color schemexx
 
 
 X-KDE-Keywords=colors,colours,scheme,contrast,Widget colors,Color Scheme,color style,color theme
+X-KDE-Keywords[az]=colors,colours,scheme,contrast,Widget colors,Color Scheme,color style,color theme rənglər, rənglər, sxem, kontrast, Widget rəngləri, Rəng sxemi, rəng tərzi, rəng mövzusu
 X-KDE-Keywords[ca]=colors,esquema,contrast,colors d'estris,esquema de color,estil de color, tema de color
 X-KDE-Keywords[es]=colores,esquema,contraste,colores de los widgets,colores de los elementos gráficos,esquema de color,estilo de color,tema de color
 X-KDE-Keywords[nl]=colors,colours, kleuren,scheme,schema,contrast,Widget colors,Widgetkleuren,Color Scheme,kleurschema,kleurstijl,kleurthema
 X-KDE-Keywords[pt]=cores,esquema,contraste,cores do elemento gráfico,esquema de cores,estilo de cores,tema de cores
+X-KDE-Keywords[sl]=barve,sheme,kontrast,gradnik,barve gradnikov,barvne sheme,barvni slog,barvna tema
 X-KDE-Keywords[sv]=färger,schema,kontrast,Komponentfärger,Färgschema,färgstil,färgtema
 X-KDE-Keywords[uk]=кольори,кольори,схема,контраст,кольори віджетів,схема кольорів,стиль кольорів,тема кольорів,colors,colours,scheme,contrast,Widget colors,Color Scheme,color style,color theme
 X-KDE-Keywords[x-test]=xxcolorsxx,xxcoloursxx,xxschemexx,xxcontrastxx,xxWidget colorsxx,xxColor Schemexx,xxcolor stylexx,xxcolor themexx

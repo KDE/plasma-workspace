@@ -1,9 +1,11 @@
 [KNewStuff3]
 Name=Fonts
+Name[az]=Şriftlər
 Name[ca]=Tipus de lletra
 Name[es]=Tipos de letra
 Name[nl]=Lettertypen
 Name[pt]=Tipos de Letra
+Name[sl]=Pisave
 Name[sv]=Teckensnitt
 Name[uk]=Шрифти
 Name[x-test]=xxFontsxx

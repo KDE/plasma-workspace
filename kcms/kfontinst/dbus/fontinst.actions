@@ -1,27 +1,33 @@
 [Domain]
 Name=Font Installer
+Name[az]=Şrift quraşdırıcı
 Name[ca]=Instal·lador de tipus de lletra
 Name[es]=Instalador de tipos de letra
 Name[nl]=Lettertype-installatie
 Name[pt]=Instalador de Tipos de Letra
+Name[sl]=Namestilnik pisav
 Name[sv]=Installation av teckensnitt
 Name[uk]=Встановлення шрифтів
 Name[x-test]=xxFont Installerxx
 Icon=preferences-desktop-font-installer
 [org.kde.fontinst.manage]
 Name=Manage system-wide fonts.
+Name[az]=Sistem şriftlərinin idarəsi.
 Name[ca]=Gestiona els tipus de lletra del sistema.
 Name[es]=Gestión de tipos de letra del sistema.
 Name[nl]=Beheer van systeembrede lettertypen.
 Name[pt]=Faz a gestão dos tipos de letra a nível do sistema.
+Name[sl]=Upravljaj pisave celotnega sistema.
 Name[sv]=Hantera systemteckensnitt.
 Name[uk]=Керування загальносистемними шрифтами.
 Name[x-test]=xxManage system-wide fonts.xx
 Description=Modifying the system-wide font configuration requires privileges.
+Description[az]=Sistem şriftləri ayarlarını dəyişmək üçün imtiyazlar tələb olunur.
 Description[ca]=La modificació de la configuració dels tipus de lletra del sistema requereix privilegis.
 Description[es]=La modificación de la configuración de los tipos de letra del sistema necesita privilegios.
 Description[nl]=Wijzigen van de systeembrede lettertypen vereist rechten.
 Description[pt]=A modificação da configuração de tipos de letra do sistema necessita de privilégios.
+Description[sl]=Za spremembe nastavitev pisav na celotnem sistemu potrebujete dovoljenja.
 Description[sv]=Ändring av systemteckensnittens inställning kräver rättigheter.
 Description[uk]=Для зміни параметрів загальносистемних шрифтів потрібні відповідні права доступу.
 Description[x-test]=xxModifying the system-wide font configuration requires privileges.xx

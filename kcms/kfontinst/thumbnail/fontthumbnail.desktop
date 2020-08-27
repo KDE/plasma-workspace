@@ -1,10 +1,12 @@
 [Desktop Entry]
 Type=Service
 Name=Font Files
+Name[az]=Şrift faylları
 Name[ca]=Fitxers de tipus de lletra
 Name[es]=Archivos de tipos de letra
 Name[nl]=Lettertypebestanden
 Name[pt]=Ficheiros de Tipos de Letra
+Name[sl]=Datoteke pisav
 Name[sv]=Teckensnittsfiler
 Name[uk]=Файли шрифтів
 Name[x-test]=xxFont Filesxx
