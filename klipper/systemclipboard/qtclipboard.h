@@ -24,7 +24,7 @@ class QtClipboard : public SystemClipboard
 {
 public:
     explicit QtClipboard(QObject *parent);
-    void setMimeData(QMimeData *mime, QClipboard::Mode mode) override;
+    void setMimeData(QMimeData *mime, QClipboard::Mode mode, ClipboardUpdateReason) override;
     void clear(QClipboard::Mode mode) override;
     const QMimeData *mimeData(QClipboard::Mode mode) const override;
 };

@@ -737,7 +737,7 @@ void Klipper::checkClipData( bool selectionMode )
         if ( top ) {
             // keep old clipboard after someone set it to null
             qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
-            setClipboard( *top, selectionMode ? Selection : Clipboard, ClipboardUpdateReason::PreventEmptyClipboard);
+            setClipboard( *top, selectionMode ? Selection : Clipboard, SystemClipboard::ClipboardUpdateReason::PreventEmptyClipboard);
         }
         return;
     } else if (clipEmpty) {
@@ -791,7 +791,7 @@ void Klipper::checkClipData( bool selectionMode )
     }
 }
 
-void Klipper::setClipboard( const HistoryItem& item, int mode , ClipboardUpdateReason updateReason)
+void Klipper::setClipboard( const HistoryItem& item, int mode , SystemClipboard::ClipboardUpdateReason updateReason)
 {
     Ignore lock( m_locklevel );
 
@@ -800,18 +800,12 @@ void Klipper::setClipboard( const HistoryItem& item, int mode , ClipboardUpdateR
     if ( mode & Selection ) {
         qCDebug(KLIPPER_LOG) << "Setting selection to <" << item.text() << ">";
         QMimeData *mimeData = item.mimeData();
-        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
-            mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
-        }
-        m_clip->setMimeData( mimeData, QClipboard::Selection );
+        m_clip->setMimeData( mimeData, QClipboard::Selection, updateReason);
     }
     if ( mode & Clipboard ) {
         qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << item.text() << ">";
         QMimeData *mimeData = item.mimeData();
-        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
-            mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
-        }
-        m_clip->setMimeData( mimeData, QClipboard::Clipboard );
+        m_clip->setMimeData( mimeData, QClipboard::Clipboard, updateReason);
     }
 
 }

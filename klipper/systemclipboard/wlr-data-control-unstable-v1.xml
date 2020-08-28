@@ -41,7 +41,7 @@
     interface version number is reset.
   </description>
 
-  <interface name="zwlr_data_control_manager_v1" version="2">
+  <interface name="zwlr_data_control_manager_v1" version="3">
     <description summary="manager to control data devices">
       This interface is a manager that allows creating per-seat data device
       controls.
@@ -71,7 +71,7 @@
     </request>
   </interface>
 
-  <interface name="zwlr_data_control_device_v1" version="2">
+  <interface name="zwlr_data_control_device_v1" version="3">
     <description summary="manage a data device for a seat">
       This interface allows a client to manage a seat's selection.
 
@@ -141,7 +141,7 @@
 
     <!-- Version 2 additions -->
 
-    <event name="primary_selection" since="2">
+    <event name="primary_selection" since="3">
       <description summary="advertise new primary selection">
         The primary_selection event is sent out to notify the client of a new
         wlr_data_control_offer for the primary selection for this device. The
@@ -183,9 +183,85 @@
       <entry name="used_source" value="1"
         summary="source given to set_selection or set_primary_selection was already used before"/>
     </enum>
+
+    <!-- Version 3 additions -->
+
+    <event name="selection_serial" since="3">
+      <description summary="copy data to the selection">
+        This should be sent by compositors before a selection event
+        with an increasing serial number.
+
+        This can be used by the client in partnership to
+        set_selection_response to indicate pairing of a selection event
+        to a reply.
+      </description>
+
+      <arg name="serial" type="uint"/>
+    </event>
+
+    <request name="set_selection_response" since="3">
+      <description summary="copy data to the selection">
+        This request asks the compositor to set the selection to the
+         data from the source on behalf of the client.
+
+        The given source may not be used in any further set_selection or
+        set_primary_selection requests. Attempting to use a previously
+        used source is a protocol error.
+
+        Unlike set_selection set_selection_response should be used when
+        the client is setting the selection in response to a previous
+        event. A serial of the selection this is in response to is passed
+        as an argument. The compositor should cancel this selecton if
+        there have been other selection changes since the initial serial
+        was sent.
+
+        To unset the selection, set the source to NULL.
+      </description>
+      <arg name="source" type="object" interface="zwlr_data_control_source_v1"
+        allow-null="true"/>
+      <arg name="serial" type="uint"/>
+    </request>
+
+    <event name="primary_selection_serial" since="3">
+      <description summary="copy data to the selection">
+        This should be sent by compositors before a primary_selection
+        event with an increasing serial number.
+
+        This can be used by the client in partnership to
+        set_selection_response to indicate pairing of a selection event
+        to a reply.
+
+      </description>
+      <arg name="serial" type="uint"/>
+    </event>
+
+    <request name="set_primary_selection_response" since="3">
+      <description summary="copy data to the selection">
+        This request asks the compositor to set the primary selection
+        to the data from
+        the source on behalf of the client.
+
+        The given source may not be used in any further set_selection or
+        set_primary_selection requests. Attempting to use a previously
+        used source is a protocol error.
+
+        Unlike set_primary_selection set_primary_selection_response
+        should be used when the client is changing the selection in
+        response to a previous event.  A serial of the selection this
+        is in response to is passed as an argument.
+
+        The compositor should cancel this selecton if there have been
+        other selection changes since the initial serial was sent.
+
+        To unset the selection, set the source to NULL.
+      </description>
+      <arg name="source" type="object" interface="zwlr_data_control_source_v1"
+        allow-null="true"/>
+      <arg name="serial" type="uint"/>
+    </request>
   </interface>
 
-  <interface name="zwlr_data_control_source_v1" version="1">
+  <interface name="zwlr_data_control_source_v1" version="3">
     <description summary="offer to transfer data">
       The wlr_data_control_source object is the source side of a
       wlr_data_control_offer. It is created by the source client in a data
@@ -235,7 +311,7 @@
     </event>
   </interface>
 
-  <interface name="zwlr_data_control_offer_v1" version="1">
+  <interface name="zwlr_data_control_offer_v1" version="3">
     <description summary="offer to transfer data">
       A wlr_data_control_offer represents a piece of data offered for transfer
       by another client (the source client). The offer describes the different

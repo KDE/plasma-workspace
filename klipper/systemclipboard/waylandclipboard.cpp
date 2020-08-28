@@ -39,7 +39,7 @@ class DataControlDeviceManager : public QWaylandClientExtensionTemplate<DataCont
     Q_OBJECT
 public:
     DataControlDeviceManager()
-        : QWaylandClientExtensionTemplate<DataControlDeviceManager>(1)
+        : QWaylandClientExtensionTemplate<DataControlDeviceManager>(3)
     {
     }
 
@@ -215,7 +215,7 @@ public:
         destroy();
     }
 
-    void setSelection(std::unique_ptr<DataControlSource> selection);
+    void setSelection(std::unique_ptr<DataControlSource> selection, SystemClipboard::ClipboardUpdateReason reason);
     QMimeData *receivedSelection() {
         return m_receivedSelection.get();
     }
@@ -243,21 +243,30 @@ protected:
         }
         emit receivedSelectionChanged();
     }
+    void zwlr_data_control_device_v1_selection_serial(uint32_t serial) override {
+        m_lastSerial = serial;
+    }
 
 private:
+    uint32_t m_lastSerial = 0;
     std::unique_ptr<DataControlSource> m_selection; // selection set locally
     std::unique_ptr<DataControlOffer> m_receivedSelection; // latest selection set from externally to here
 };
 
 
-void DataControlDevice::setSelection(std::unique_ptr<DataControlSource> selection)
+void DataControlDevice::setSelection(std::unique_ptr<DataControlSource> selection, SystemClipboard::ClipboardUpdateReason reason)
 {
     m_selection = std::move(selection);
     connect(m_selection.get(), &DataControlSource::cancelled, this, [this]() {
         m_selection.reset();
         Q_EMIT selectionChanged();
     });
-    set_selection(m_selection->object());
+    if (zwlr_data_control_device_v1_get_version(object()) >= ZWLR_DATA_CONTROL_DEVICE_V1_SELECTION_SERIAL_SINCE_VERSION &&
+            reason == SystemClipboard::ClipboardUpdateReason::PreventEmptyClipboard) {
+        set_selection_response(m_selection->object(), m_lastSerial);
+    } else {
+        set_selection(m_selection->object());
+    }
     Q_EMIT selectionChanged();
 }
 
@@ -291,14 +300,14 @@ WaylandClipboard::WaylandClipboard(QObject *parent)
     });
 }
 
-void WaylandClipboard::setMimeData(QMimeData *mime, QClipboard::Mode mode)
+void WaylandClipboard::setMimeData(QMimeData *mime, QClipboard::Mode mode, ClipboardUpdateReason reason)
 {
     if (!m_device) {
         return;
     }
     auto source = std::make_unique<DataControlSource>(m_manager->create_data_source(), mime);
     if (mode == QClipboard::Clipboard) {
-        m_device->setSelection(std::move(source));
+        m_device->setSelection(std::move(source), reason);
     }
 }
 

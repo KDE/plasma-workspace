@@ -28,6 +28,7 @@
 #include <QClipboard>
 #include <QPointer>
 
+#include "systemclipboard.h"
 #include "urlgrabber.h"
 
 class KToggleAction;
@@ -41,7 +42,6 @@ class QMenu;
 class QMimeData;
 class HistoryItem;
 class KNotification;
-class SystemClipboard;
 
 enum class KlipperMode {
     Standalone,
@@ -101,10 +101,6 @@ protected:
      * a boolean true as a mode.
      */
     enum SelectionMode { Clipboard = 2, Selection = 4 };
-    enum class ClipboardUpdateReason {
-        UpdateClipboard,
-        PreventEmptyClipboard
-    };
 
     /**
      * Loads history from disk.
@@ -128,7 +124,7 @@ protected:
      */
     QSharedPointer<HistoryItem> applyClipChanges( const QMimeData* data );
 
-    void setClipboard( const HistoryItem& item, int mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
+    void setClipboard( const HistoryItem& item, int mode, SystemClipboard::ClipboardUpdateReason updateReason = SystemClipboard::ClipboardUpdateReason::UpdateClipboard);
     bool ignoreClipboardChanges() const;
 
     KSharedConfigPtr config() const { return m_config; }

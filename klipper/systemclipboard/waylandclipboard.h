@@ -28,7 +28,7 @@ class WaylandClipboard : public SystemClipboard
 {
 public:
     WaylandClipboard(QObject *parent);
-    void setMimeData(QMimeData *mime, QClipboard::Mode mode) override;
+    void setMimeData(QMimeData *mime, QClipboard::Mode mode, ClipboardUpdateReason reason) override;
     void clear(QClipboard::Mode mode) override;
     const QMimeData *mimeData(QClipboard::Mode mode) const override;
 private:

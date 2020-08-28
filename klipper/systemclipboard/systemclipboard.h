@@ -34,6 +34,16 @@ class SystemClipboard : public QObject
     Q_OBJECT
 public:
     /**
+     * @brief Returns the reason we're perform the update
+     * OnX11 this does nothing,
+     * OnWayland PreventEmptyClipboard will tag it as being a response to a previous clipboard event
+     */
+    enum class ClipboardUpdateReason {
+        UpdateClipboard,
+        PreventEmptyClipboard
+    };
+
+    /**
      * Returns a shared global SystemClipboard instance
      */
     static SystemClipboard *instance();
@@ -43,7 +53,7 @@ public:
      * The clpboard takes ownership of mime
      */
     //maybe I should unique_ptr it to be expressive, but then I don't match QClipboard?
-    virtual void setMimeData(QMimeData *mime, QClipboard::Mode mode) = 0;
+    virtual void setMimeData(QMimeData *mime, QClipboard::Mode mode, ClipboardUpdateReason reason = ClipboardUpdateReason::UpdateClipboard) = 0;
     /**
      * Clears the current clipboard
      */

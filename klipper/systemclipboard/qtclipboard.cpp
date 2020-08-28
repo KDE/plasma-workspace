@@ -28,7 +28,7 @@ QtClipboard::QtClipboard(QObject *parent)
     connect(qApp->clipboard(), &QClipboard::changed, this, &QtClipboard::changed);
 }
 
-void QtClipboard::setMimeData(QMimeData *mime, QClipboard::Mode mode)
+void QtClipboard::setMimeData(QMimeData *mime, QClipboard::Mode mode, ClipboardUpdateReason)
 {
     qApp->clipboard()->setMimeData(mime, mode);
 }
