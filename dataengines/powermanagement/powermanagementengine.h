@@ -69,6 +69,7 @@ private Q_SLOTS:
     void maximumKeyboardBrightnessChanged(int maximumBrightness);
     void triggersLidActionChanged(bool triggers);
     void inhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed);
+    void chargeStopThresholdChanged(int threshold);
 
 private:
     void populateApplicationData(const QString &name, QString *prettyName, QString *icon);

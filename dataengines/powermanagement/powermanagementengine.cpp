@@ -125,6 +125,14 @@ void PowermanagementEngine::init()
                                                    SLOT(batteryRemainingTimeChanged(qulonglong)))) {
             qDebug() << "error connecting to remaining time changes";
         }
+
+        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                                   QStringLiteral("/org/kde/Solid/PowerManagement"),
+                                                   SOLID_POWERMANAGEMENT_SERVICE,
+                                                   QStringLiteral("chargeStopThresholdChanged"), this,
+                                                   SLOT(chargeStopThresholdChanged(int)))) {
+            qDebug() << "error connecting to charge stop threshold changes via dbus";
+        }
     }
 }
 
@@ -205,6 +213,20 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
                 watcher->deleteLater();
             });
         }
+
+        QDBusMessage msg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                          QStringLiteral("/org/kde/Solid/PowerManagement"),
+                                                          SOLID_POWERMANAGEMENT_SERVICE,
+                                                          QStringLiteral("chargeStopThreshold"));
+        QDBusPendingReply<int> reply = QDBusConnection::sessionBus().asyncCall(msg);
+        QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+        QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+            QDBusPendingReply<int> reply = *watcher;
+            if (!reply.isError()) {
+                chargeStopThresholdChanged(reply.value());
+            }
+            watcher->deleteLater();
+        });
 
         m_sources = basicSourceNames() + batterySources;
     } else if (name == QLatin1String("AC Adapter")) {
@@ -674,6 +696,11 @@ void PowermanagementEngine::populateApplicationData(const QString &name, QString
             *icon = name.section(QLatin1Char('/'), -1).toLower();
         }
     }
+}
+
+void PowermanagementEngine::chargeStopThresholdChanged(int threshold)
+{
+    setData(QStringLiteral("Battery"), QStringLiteral("Charge Stop Threshold"), threshold);
 }
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(powermanagement, PowermanagementEngine, "plasma-dataengine-powermanagement.json")

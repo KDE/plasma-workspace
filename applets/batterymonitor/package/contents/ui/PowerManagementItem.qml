@@ -68,6 +68,14 @@ ColumnLayout {
 
         InhibitionHint {
             Layout.fillWidth: true
+            readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
+            visible: powerManagementHeadingColumn.pluggedIn && typeof chargeStopThreshold === "number" && chargeStopThreshold < 100
+            iconSource: "kt-speed-limits" // FIXME good icon
+            text: i18n("Your battery is configured to only charge up to %1%.", chargeStopThreshold || 0)
+        }
+
+        InhibitionHint {
+            Layout.fillWidth: true
             visible: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] && !pmSource.data["PowerDevil"]["Triggers Lid Action"] ? true : false
             iconSource: "computer-laptop"
             text: i18nc("Minimize the length of this string as much as possible", "Your notebook is configured not to sleep when closing the lid while an external monitor is connected.")
