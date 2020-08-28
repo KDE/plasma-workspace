@@ -38,5 +38,5 @@ Name[zh_TW]=桌布外掛程式
 ProvidersUrl=https://download.kde.org/ocs/providers.xml
 Categories=Plasma Wallpaper Plugin
 StandardResource=tmp
-InstallationCommand=kpackagetool5 --type Plasma/Wallpaper --install %f
-UninstallCommand=kpackagetool5 --type Plasma/Wallpaper --remove %f
+Uncompress=kpackage
+KPackageType=Plasma/Wallpaper
