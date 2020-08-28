@@ -24,6 +24,7 @@ if(TARGET PkgConfig::PipeWire)
         PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/screencast.xml
         BASENAME zkde-screencast-unstable-v1
     )
+    target_include_directories(taskmanagerplugin ${Libdrm_INCLUDE_DIR})
 
     target_compile_definitions(taskmanagerplugin PRIVATE -DWITH_PIPEWIRE)
     target_sources(taskmanagerplugin PUBLIC pipewirecore.cpp pipewiresourceitem.cpp pipewiresourcestream.cpp screencasting.cpp screencastingrequest.cpp ${SRCS})
