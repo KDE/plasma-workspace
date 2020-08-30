@@ -29,6 +29,7 @@ ColumnLayout {
     property string query
     property string runner
     property bool showHistory: false
+    property string priorSearch
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -44,8 +45,13 @@ ColumnLayout {
                 queryField.forceActiveFocus();
                 listView.currentIndex = -1
             } else {
-                root.query = "";
                 root.runner = ""
+                if (runnerWindow.retainPriorSearch) {
+                    root.query = priorSearch
+                    queryField.select(priorSearch.length, 0)
+                } else {
+                    root.query = ""
+                }
                 root.showHistory = false
             }
         }
@@ -56,6 +62,7 @@ ColumnLayout {
         PlasmaComponents3.ToolButton {
             icon.name: "configure"
             onClicked: {
+                priorSearch = query
                 runnerWindow.visible = false
                 runnerWindow.displayConfiguration()
             }
@@ -165,6 +172,7 @@ ColumnLayout {
             Keys.onReturnPressed: results.runCurrentIndex(event)
 
             Keys.onEscapePressed: {
+                priorSearch = query
                 runnerWindow.visible = false
             }
 
@@ -199,7 +207,10 @@ ColumnLayout {
         }
         PlasmaComponents3.ToolButton {
             icon.name: "window-close"
-            onClicked: runnerWindow.visible = false
+            onClicked: {
+                priorSearch = query
+                runnerWindow.visible = false
+            }
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close")
             Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close Search")
             PlasmaComponents3.ToolTip {
@@ -237,6 +248,7 @@ ColumnLayout {
 
             onActivated: {
                 runnerWindow.addToHistory(queryString)
+                priorSearch = query
                 runnerWindow.visible = false
             }
 
