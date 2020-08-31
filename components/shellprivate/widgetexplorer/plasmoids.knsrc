@@ -50,5 +50,5 @@ Name[zh_TW]=Plasma 元件
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=Plasma 5 Plasmoid
 StandardResource=tmp
-InstallationCommand=kpackagetool5 --install %f --type Plasma/Applet
-UninstallCommand=kpackagetool5 --remove %f --type Plasma/Applet
+Uncompress=kpackage
+KPackageType=Plasma/Applet
