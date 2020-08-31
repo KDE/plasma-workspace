@@ -183,7 +183,14 @@ void CalculatorRunner::hexSubstitutions(QString& cmd)
 
 void CalculatorRunner::userFriendlySubstitutions(QString& cmd)
 {
-    cmd.replace(QLocale().decimalPoint(), QLatin1Char('.'), Qt::CaseInsensitive);
+    if (QLocale().decimalPoint() != QLatin1Char('.')) {
+        cmd.replace(QLocale().decimalPoint(), QLatin1Char('.'), Qt::CaseInsensitive);
+    } else if (!cmd.contains(QLatin1Char('[')) && !cmd.contains(QLatin1Char(']'))) {
+        // If we are sure that the user does not want to use vectors we can replace this char
+        // Especially when switching between locales that use a different decimal separator
+        // this ensures that the results are valid, see BUG: 406388
+        cmd.replace(QLatin1Char(','), QLatin1Char('.'), Qt::CaseInsensitive);
+    }
 
     // the following substitutions are not needed with libqalculate
 #ifndef ENABLE_QALCULATE
