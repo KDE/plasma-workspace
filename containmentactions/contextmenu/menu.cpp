@@ -67,13 +67,29 @@ void ContextMenu::restore(const KConfigGroup &config)
 
     if (c->containmentType() == Plasma::Types::PanelContainment ||
         c->containmentType() == Plasma::Types::CustomPanelContainment) {
-        m_actionOrder << QStringLiteral("add widgets") << QStringLiteral("_add panel") << QStringLiteral("_context") << QStringLiteral("configure") << QStringLiteral("remove");
+        m_actionOrder   << QStringLiteral("add widgets")
+                        << QStringLiteral("_add panel")
+                        << QStringLiteral("_context")
+                        << QStringLiteral("configure")
+                        << QStringLiteral("remove");
     } else {
         actions.insert(QStringLiteral("configure shortcuts"), false);
-        m_actionOrder << QStringLiteral("_context") << QStringLiteral("_run_command") << QStringLiteral("add widgets") << QStringLiteral("_add panel")
-                      << QStringLiteral("manage activities") << QStringLiteral("remove") << QStringLiteral("edit mode") << QStringLiteral("_sep1")
-                      <<QStringLiteral("_lock_screen") << QStringLiteral("_logout") << QStringLiteral("_sep2") << QStringLiteral("run associated application") << QStringLiteral("configure")
-                      << QStringLiteral("configure shortcuts") << QStringLiteral("_sep3") << QStringLiteral("_wallpaper");
+        m_actionOrder << QStringLiteral("_context")
+                      << QStringLiteral("_run_command")
+                      << QStringLiteral("add widgets")
+                      << QStringLiteral("_add panel")
+                      << QStringLiteral("manage activities")
+                      << QStringLiteral("remove")
+                      << QStringLiteral("edit mode")
+                      << QStringLiteral("_sep1")
+                      << QStringLiteral("_lock_screen")
+                      << QStringLiteral("_logout")
+                      << QStringLiteral("_sep2")
+                      << QStringLiteral("run associated application")
+                      << QStringLiteral("configure")
+                      << QStringLiteral("configure shortcuts")
+                      << QStringLiteral("_sep3")
+                      << QStringLiteral("_wallpaper");
         disabled.insert(QStringLiteral("configure shortcuts"));
     }
 
