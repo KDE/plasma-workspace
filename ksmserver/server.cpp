@@ -97,6 +97,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "kscreenlocker_interface.h"
 #include "kwinsession_interface.h"
 
+#include <updatelaunchenvjob.h>
+
 KSMServer* the_server = nullptr;
 
 KSMServer* KSMServer::self()
@@ -661,12 +663,8 @@ KSMServer::KSMServer(InitFlags flags)
         fclose(f);
         setenv( "SESSION_MANAGER", session_manager, true  );
 
-        // Pass env. var to kdeinit.
-        org::kde::KLauncher klauncher( QStringLiteral( "org.kde.klauncher5" ), QStringLiteral( "/KLauncher" ), QDBusConnection::sessionBus());
-        klauncher.setLaunchEnv( QStringLiteral( "SESSION_MANAGER" ), QString::fromLocal8Bit( (const char*) session_manager ) );
-
-        org::kde::Startup startup(QStringLiteral("org.kde.Startup"), QStringLiteral("/Startup"), QDBusConnection::sessionBus());
-        startup.updateLaunchEnv( QStringLiteral( "SESSION_MANAGER" ), QString::fromLocal8Bit( (const char*) session_manager ) );
+        auto updateEnvJob = new UpdateLaunchEnvJob(QStringLiteral("SESSION_MANAGER"), QString::fromLatin1(session_manager));
+        updateEnvJob->start();
 
         free(session_manager);
     }
