@@ -37,6 +37,7 @@ Name[pa]=ਪਲਾਜ਼ਮਾ ਡੈਸਕਟਾਪ ਵਰਕਸਪੇਸ
 Name[pl]=Przestrzeń Pracy Pulpitu Plazmy
 Name[pt]=Área de Trabalho do Plasma
 Name[pt_BR]=Espaço de Trabalho Plasma
+Name[ro]=Spațiu de lucru al biroului Plasma
 Name[ru]=Рабочая среда Plasma
 Name[sk]=Pracovná plocha Plasma
 Name[sl]=Delovni prostor Plasma Desktop
