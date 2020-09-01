@@ -171,7 +171,6 @@ X-KDE-PluginInfo-Name=org.kde.plasma.systemtray
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=https://www.kde.org/plasma-desktop
 X-KDE-PluginInfo-Category=Windows and Tasks
-X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL-2.0+
 X-KDE-PluginInfo-EnabledByDefault=true
 X-Plasma-ContainmentType=Panel

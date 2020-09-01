@@ -192,7 +192,6 @@ X-KDE-PluginInfo-License=GPL-2.0+
 X-KDE-PluginInfo-Name=org.kde.plasma.battery
 X-KDE-PluginInfo-Version=3.0
 X-KDE-PluginInfo-Website=https://vizzzion.org
-X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-EnabledByDefault=true
 X-Plasma-DBusActivationService=org.kde.Solid.PowerManagement
 X-KDE-FormFactors=desktop

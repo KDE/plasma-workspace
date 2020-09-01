@@ -168,7 +168,6 @@ X-KDE-PluginInfo-Name=org.kde.plasma.analogclock
 X-KDE-PluginInfo-Version=3.0
 X-KDE-PluginInfo-Website=https://userbase.kde.org/Plasma/Clocks
 X-KDE-PluginInfo-Category=Date and Time
-X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL-2.0+
 X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-FormFactors=tablet,handset,desktop

@@ -160,6 +160,5 @@ X-KDE-PluginInfo-Name=time
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=https://www.kde.org/plasma-desktop
 X-KDE-PluginInfo-Category=Date and Time
-X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=LGPL
 X-KDE-PluginInfo-EnabledByDefault=true
