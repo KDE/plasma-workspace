@@ -28,7 +28,6 @@
 #include <stdlib.h>
 #include <sys/stat.h>
 
-#include <QRegExp>
 #include <QFile>
 #include <QFileInfo>
 #include <QDir>
@@ -61,21 +60,17 @@ static bool equal(double d1, double d2)
 
 static QString dirSyntax(const QString &d)
 {
-    if (!d.isNull()) {
-        QString ds(d);
-
-        ds.replace("//", "/");
-
-        int slashPos = ds.lastIndexOf('/');
-
-        if (slashPos != (((int)ds.length()) - 1)) {
-            ds.append('/');
-        }
-
-        return ds;
+    if (d.isNull()) {
+        return d;
     }
 
-    return d;
+    QString ds(d);
+    ds.replace(QLatin1String("//"), QLatin1String("/"));
+    if (!ds.endsWith(QLatin1Char('/'))) {
+        ds += QLatin1Char('/');
+    }
+
+    return ds;
 }
 
 inline bool fExists(const QString &p)
@@ -89,17 +84,16 @@ inline bool dWritable(const QString &p)
     return info.isDir() && info.isWritable();
 }
 
-static QString getDir(const QString &f)
+static QString getDir(const QString &path)
 {
-    QString d(f);
+    QString str(path);
 
-    int slashPos = d.lastIndexOf('/');
-
-    if (-1 != slashPos) {
-        d.remove(slashPos + 1, d.length());
+    const int slashPos = str.lastIndexOf(QLatin1Char('/'));
+    if (slashPos != -1) {
+        str.truncate(slashPos + 1);
     }
 
-    return dirSyntax(d);
+    return dirSyntax(str);
 }
 
 static QDateTime getTimeStamp(const QString &item)
@@ -210,14 +204,13 @@ QString KXftConfig::getConfigFile()
 
     //
     // Go through list of localFiles, looking for the preferred one...
-    if (localFiles.count()) {
-        QStringList::const_iterator it(localFiles.begin()),
-                    end(localFiles.end());
-
-        for (; it != end; ++it)
-            if (-1 != (*it).indexOf(QRegExp("/\\.?fonts\\.conf$"))) {
-                return *it;
+    if (!localFiles.isEmpty()) {
+        for (const QString &file : qAsConst(localFiles)) {
+            if (file.endsWith(QLatin1String("/fonts.conf"))
+                || file.endsWith(QLatin1String("/.fonts.conf"))) {
+                return file;
             }
+        }
         return localFiles.front();  // Just return the 1st one...
     } else { // Hmmm... no known localFiles?
         if (FcGetVersion() >= 21000) {
@@ -235,8 +228,6 @@ QString KXftConfig::getConfigFile()
 
 bool KXftConfig::reset()
 {
-    bool ok = false;
-
     m_madeChanges = false;
     m_hint.reset();
     m_hinting.reset();
@@ -248,11 +239,9 @@ bool KXftConfig::reset()
     m_subPixelHasLocalConfig = false;
     m_hintHasLocalConfig = false;
 
-    QStringList::const_iterator it(m_globalFiles.begin()),
-                    end(m_globalFiles.end());
-    for (; it != end; ++it) {
-        ok |= parseConfigFile(*it);
-    }
+    bool ok = false;
+    std::for_each(m_globalFiles.cbegin(), m_globalFiles.cend(),
+                  [this, &ok](const QString &file) { ok |= parseConfigFile(file); });
 
     AntiAliasing globalAntialiasing;
     globalAntialiasing.state = m_antiAliasing.state;
