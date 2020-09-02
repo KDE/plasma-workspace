@@ -34,10 +34,9 @@
 #include <QX11Info>
 #include <QByteArray>
 #include <QDebug>
+#include <QStandardPaths>
 
 #include <KLocalizedString>
-#include <KGlobal>
-#include <KStandardDirs>
 
 #include <fontconfig/fontconfig.h>
 
@@ -214,14 +213,15 @@ QString KXftConfig::getConfigFile()
         return localFiles.front();  // Just return the 1st one...
     } else { // Hmmm... no known localFiles?
         if (FcGetVersion() >= 21000) {
-            QString targetPath(KGlobal::dirs()->localxdgconfdir() + "fontconfig");
+            const QString targetPath(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation)
+                                     + QLatin1Char('/') + QLatin1String("fontconfig"));
             QDir target(targetPath);
             if (!target.exists()) {
                 target.mkpath(targetPath);
             }
-            return targetPath + "/fonts.conf";
+            return targetPath + QLatin1String("/fonts.conf");
         } else {
-            return home + "/.fonts.conf";
+            return home + QLatin1String("/.fonts.conf");
         }
     }
 }
