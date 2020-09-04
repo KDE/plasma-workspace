@@ -34,6 +34,7 @@ Name[ru]=Plasma (Wayland)
 Name[sk]=Plasma (Wayland)
 Name[sl]=Plasma (Wayland)
 Name[sv]=Plasma (Wayland)
+Name[tg]=Плазма (Вэйленд)
 Name[uk]=Плазма (Wayland)
 Name[x-test]=xxPlasma (Wayland)xx
 Name[zh_CN]=Plasma (Wayland)
