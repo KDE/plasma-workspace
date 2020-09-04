@@ -303,9 +303,10 @@ KDisplayManager::KDisplayManager() : d(new Private)
     qDBusRegisterMetaType<NumberedDBusObjectPath>();
 
     if (DMType == Dunno) {
-        if ((ctl = ::getenv("DM_CONTROL")))
+        dpy = ::getenv("DISPLAY");
+        if (dpy && (ctl = ::getenv("DM_CONTROL")))
             DMType = NewKDM;
-        else if ((ctl = ::getenv("XDM_MANAGED")) && ctl[0] == '/')
+        else if (dpy && (ctl = ::getenv("XDM_MANAGED")) && ctl[0] == '/')
             DMType = OldKDM;
         else if (::getenv("XDG_SEAT_PATH") && LightDMDBus().isValid())
             DMType = LightDM;
