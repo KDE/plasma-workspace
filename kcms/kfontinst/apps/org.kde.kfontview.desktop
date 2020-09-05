@@ -2,6 +2,7 @@
 Name=KFontView
 Name[az]=KFontView
 Name[ca]=KFontView
+Name[cs]=Prohlížeč písem
 Name[de]=KFontView
 Name[es]=KFontView
 Name[eu]=KFontView
@@ -26,6 +27,7 @@ MimeType=application/x-font-ttf;application/x-font-type1;application/x-font-otf;
 GenericName=Font Viewer
 GenericName[az]=Şriftə baxış vasitəsi
 GenericName[ca]=Visor de tipus de lletra
+GenericName[cs]=Prohlížeč písem
 GenericName[de]=Schriftartenbetrachter
 GenericName[es]=Visor de tipos de letra
 GenericName[eu]=Letra-tipoak ikustekoa
