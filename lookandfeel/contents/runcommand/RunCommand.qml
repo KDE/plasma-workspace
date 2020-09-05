@@ -29,7 +29,6 @@ ColumnLayout {
     property string query
     property string runner
     property bool showHistory: false
-    property string priorSearch
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -47,8 +46,7 @@ ColumnLayout {
             } else {
                 root.runner = ""
                 if (runnerWindow.retainPriorSearch) {
-                    root.query = priorSearch
-                    queryField.select(priorSearch.length, 0)
+                    queryField.select(root.query.length, 0)
                 } else {
                     root.query = ""
                 }
@@ -62,7 +60,6 @@ ColumnLayout {
         PlasmaComponents3.ToolButton {
             icon.name: "configure"
             onClicked: {
-                priorSearch = query
                 runnerWindow.visible = false
                 runnerWindow.displayConfiguration()
             }
@@ -172,7 +169,6 @@ ColumnLayout {
             Keys.onReturnPressed: results.runCurrentIndex(event)
 
             Keys.onEscapePressed: {
-                priorSearch = query
                 runnerWindow.visible = false
             }
 
@@ -208,7 +204,6 @@ ColumnLayout {
         PlasmaComponents3.ToolButton {
             icon.name: "window-close"
             onClicked: {
-                priorSearch = query
                 runnerWindow.visible = false
             }
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close")
@@ -248,7 +243,6 @@ ColumnLayout {
 
             onActivated: {
                 runnerWindow.addToHistory(queryString)
-                priorSearch = query
                 runnerWindow.visible = false
             }
 
