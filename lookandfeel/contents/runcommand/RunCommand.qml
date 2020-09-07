@@ -94,22 +94,20 @@ ColumnLayout {
                     rightMargin: height
                 }
 
-                Behavior on opacity {
-                    OpacityAnimator {
-                        duration: units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                }
-
                 Timer {
                     id: queryTimer
-                    running: results.querying
+                    property bool queryDisplay: false
+                    running: results.querying || queryDisplay
+                    onRunningChanged: if (running) {
+                        queryDisplay = true
+                    }
+                    onTriggered: if (!results.querying) {
+                        queryDisplay = false
+                    }
                     interval: 500
                 }
 
-                opacity: !queryTimer.running && results.querying ? 1 : 0
-                visible: opacity > 0
-                running: visible
+                running: queryTimer.queryDisplay
             }
             function move_up() {
                 if (length === 0) {
