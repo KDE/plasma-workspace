@@ -361,6 +361,13 @@ void KCMColors::save()
     processPendingDeletions();
 }
 
+static void copyEntry(KConfigGroup& from, KConfigGroup& to, const QString& entry)
+{
+    if (from.hasKey(entry)) {
+        to.writeEntry(entry, from.readEntry(entry));
+    }
+}
+
 void KCMColors::saveColors()
 {
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
@@ -380,30 +387,39 @@ void KCMColors::saveColors()
         QStringLiteral("Colors:Header")
     };
 
-    const QList<KColorScheme> colorSchemes{
-        KColorScheme(QPalette::Active, KColorScheme::View, config),
-        KColorScheme(QPalette::Active, KColorScheme::Window, config),
-        KColorScheme(QPalette::Active, KColorScheme::Button, config),
-        KColorScheme(QPalette::Active, KColorScheme::Selection, config),
-        KColorScheme(QPalette::Active, KColorScheme::Tooltip, config),
-        KColorScheme(QPalette::Active, KColorScheme::Complementary, config),
-        KColorScheme(QPalette::Active, KColorScheme::Header, config)
+    const QStringList colorSetKeyList{
+        QStringLiteral("BackgroundNormal"),
+        QStringLiteral("BackgroundAlternate"),
+        QStringLiteral("ForegroundNormal"),
+        QStringLiteral("ForegroundInactive"),
+        QStringLiteral("ForegroundActive"),
+        QStringLiteral("ForegroundLink"),
+        QStringLiteral("ForegroundVisited"),
+        QStringLiteral("ForegroundNegative"),
+        QStringLiteral("ForegroundNeutral"),
+        QStringLiteral("ForegroundPositive"),
+        QStringLiteral("DecorationFocus"),
+        QStringLiteral("DecorationHover")
     };
 
-    for (int i = 0; i < colorSchemes.length(); ++i) {
-        KConfigGroup group(m_config, colorSetGroupList.value(i));
-        group.writeEntry("BackgroundNormal", colorSchemes[i].background(KColorScheme::NormalBackground).color());
-        group.writeEntry("BackgroundAlternate", colorSchemes[i].background(KColorScheme::AlternateBackground).color());
-        group.writeEntry("ForegroundNormal", colorSchemes[i].foreground(KColorScheme::NormalText).color());
-        group.writeEntry("ForegroundInactive", colorSchemes[i].foreground(KColorScheme::InactiveText).color());
-        group.writeEntry("ForegroundActive", colorSchemes[i].foreground(KColorScheme::ActiveText).color());
-        group.writeEntry("ForegroundLink", colorSchemes[i].foreground(KColorScheme::LinkText).color());
-        group.writeEntry("ForegroundVisited", colorSchemes[i].foreground(KColorScheme::VisitedText).color());
-        group.writeEntry("ForegroundNegative", colorSchemes[i].foreground(KColorScheme::NegativeText).color());
-        group.writeEntry("ForegroundNeutral", colorSchemes[i].foreground(KColorScheme::NeutralText).color());
-        group.writeEntry("ForegroundPositive", colorSchemes[i].foreground(KColorScheme::PositiveText).color());
-        group.writeEntry("DecorationFocus", colorSchemes[i].decoration(KColorScheme::FocusColor).color());
-        group.writeEntry("DecorationHover", colorSchemes[i].decoration(KColorScheme::HoverColor).color());
+    for (auto item : colorSetGroupList) {
+        m_config->deleteGroup(item);
+
+        KConfigGroup sourceGroup(config, item);
+        KConfigGroup targetGroup(m_config, item);
+
+        for (auto entry : colorSetKeyList) {
+            copyEntry(sourceGroup, targetGroup, entry);
+        }
+
+        if (sourceGroup.hasGroup("Inactive")) {
+            sourceGroup = sourceGroup.group("Inactive");
+            targetGroup = targetGroup.group("Inactive");
+
+            for (auto entry : colorSetKeyList) {
+                copyEntry(sourceGroup, targetGroup, entry);
+            }
+        }
     }
 
     KConfigGroup groupWMTheme(config, "WM");
@@ -420,11 +436,11 @@ void KCMColors::saveColors()
     };
 
     const QVector<QColor> defaultWMColors{
-        colorSchemes[KColorScheme::Header].background().color(),
-        colorSchemes[KColorScheme::Header].foreground().color(),
+        KColorScheme(QPalette::Normal, KColorScheme::Header, config).background().color(),
+        KColorScheme(QPalette::Normal, KColorScheme::Header, config).foreground().color(),
         inactiveHeaderColorScheme.background().color(),
         inactiveHeaderColorScheme.foreground().color(),
-        colorSchemes[KColorScheme::Header].background().color(),
+        KColorScheme(QPalette::Normal, KColorScheme::Header, config).background().color(),
         inactiveHeaderColorScheme.background().color()
     };
 
