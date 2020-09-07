@@ -88,8 +88,8 @@ View::View(QWindow *)
         package.setPath(packageName);
     }
 
-    m_qmlObj->setSource(package.fileUrl("runcommandmainscript"));
     m_qmlObj->engine()->rootContext()->setContextProperty(QStringLiteral("runnerWindow"), this);
+    m_qmlObj->setSource(package.fileUrl("runcommandmainscript"));
     m_qmlObj->completeInitialization();
 
     auto screenRemoved = [this](QScreen* screen) {
