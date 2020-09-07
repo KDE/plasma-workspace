@@ -190,7 +190,7 @@ ShellCorona::ShellCorona(QObject *parent)
     QAction *activityAction = actions()->addAction(QStringLiteral("manage activities"));
     connect(activityAction, &QAction::triggered,
             this, &ShellCorona::toggleActivityManager);
-    activityAction->setText(i18n("Activities..."));
+    activityAction->setText(i18n("Show Activity Switcher"));
     activityAction->setIcon(QIcon::fromTheme(QStringLiteral("activities")));
     activityAction->setData(Plasma::Types::ConfigureAction);
     activityAction->setShortcut(QKeySequence(QStringLiteral("alt+d, alt+a")));
