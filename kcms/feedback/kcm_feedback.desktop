@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=kcmshell5 feedback
+Exec=systemsettings5 feedback
 Icon=preferences-desktop-locale
 Type=Service
 X-KDE-ServiceTypes=KCModule
