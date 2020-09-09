@@ -33,6 +33,7 @@ Name[sl]=Ikone
 Name[sv]=Ikoner
 Name[tg]=Нишонаҳо
 Name[uk]=Піктограми
+Name[vi]=Biểu tượng
 Name[x-test]=xxIconsxx
 
 Comment=Choose icon theme
@@ -56,6 +57,7 @@ Comment[sk]=Vybrať veľkosť ikon
 Comment[sl]=Izberite temo ikon
 Comment[sv]=Välj ikontema
 Comment[uk]=Вибір теми піктограм
+Comment[vi]=Chọn sắc thái biểu tượng
 Comment[x-test]=xxChoose icon themexx
 
 X-KDE-Keywords=icons,effects,size,hicolor,locolor
@@ -79,6 +81,7 @@ X-KDE-Keywords[sk]=ikony,efekty,veľkosť,hicolor,locolor
 X-KDE-Keywords[sl]=ikone,učinki,velikost,barva
 X-KDE-Keywords[sv]=ikoner,effekter,storlek,hicolor,locolor
 X-KDE-Keywords[uk]=icons,effects,size,hicolor,locolor,піктограми,значки,іконки,ефект,ефекти,розмір,колір
+X-KDE-Keywords[vi]=icons,biểu tượng,effects,hiệu ứng,size,cỡ,hicolor,màu cao,locolor,màu thấp
 X-KDE-Keywords[x-test]=xxiconsxx,xxeffectsxx,xxsizexx,xxhicolorxx,xxlocolorxx
 
 Categories=Qt;KDE;X-KDE-settings-looknfeel;

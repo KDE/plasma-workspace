@@ -32,6 +32,7 @@ Name[sl]=Pisave
 Name[sv]=Teckensnitt
 Name[tg]=Ҳуруф
 Name[uk]=Шрифти
+Name[vi]=Phông chữ
 Name[x-test]=xxFontsxx
 
 Comment=Configure user interface fonts
@@ -54,6 +55,7 @@ Comment[sk]=Nakonfigurujte písma používateľského rozhrania
 Comment[sl]=Nastavi pisave uporabniškega vmesnika
 Comment[sv]=Anpassa teckensnitt för användargränssnitt
 Comment[uk]=Налаштовування шрифтів у інтерфейсі користувача
+Comment[vi]=Cấu hình phông chữ trong giao diện người dùng
 Comment[x-test]=xxConfigure user interface fontsxx
 
 X-KDE-Keywords=fonts,font size,styles,charsets,character sets,panel,control panel,desktops,FileManager,Toolbars,Menu,Window Title,Title,DPI,anti-aliasing,desktop fonts,toolbar fonts,character,general fonts
@@ -75,6 +77,7 @@ X-KDE-Keywords[sk]=písma,veľkosť písma,štýly,znaky,znakové sady,panel,ovl
 X-KDE-Keywords[sl]=pisave,velikosti pisav,znaki,kodne tabele,paneli,nadzorne plošče,namizja,upravljalnik datotek,meni,okno,naslov okna,DPI,glajenje pisav,pisave namizja,pisave orodnih vrstic, znak,splošne pisave
 X-KDE-Keywords[sv]=teckensnitt,teckenstorlek,stil,teckenuppsättningar,panel,kontrollpanel,skrivbord,Filhanterare,Verktygsrader,Meny,Fönsternamn,Namn,Punkter/tum,kantutjämning,skrivbordsteckensnitt,verktygsradsteckensnitt,tecken,allmänna teckensnitt
 X-KDE-Keywords[uk]=fonts,font size,styles,charsets,character sets,panel,control panel,desktops,FileManager,Toolbars,Menu,Window Title,Title,DPI,anti-aliasing,desktop fonts,toolbar fonts,character,general fonts,шрифт,шрифти,розмір,розмір шрифту,стиль,стилі,гарнітура,гарнітури,кодування,набір,символ,символи,набір символів,панель,панель керування,стільниця,стільниці,файл,керування,керування файлами,менеджер,панель інструментів,меню,заголовок,заголовок вікна,роздільність,згладжування,шрифти стільниці,шрифти панелі,символ,загальні шрифти
+X-KDE-Keywords[vi]=fonts,phông chữ,font size,cỡ phông chữ,styles,kiểu cách,charsets,bộ chữ,character sets,bộ kí tự,panel,bảng,control panel,bảng điều khiển,desktops,FileManager,trình quản lí tệp,Toolbars,thanh công cụ,Menu,trình đơn,Window Title,tiêu đề cửa sổ,Title,tiêu đề,DPI,anti-aliasing,khử răng cưa,desktop fonts,phông desktop,toolbar fonts,phông chữ thanh công cụ,character,chữ,general fonts,phông chữ chung
 X-KDE-Keywords[x-test]=xxfontsxx,xxfont sizexx,xxstylesxx,xxcharsetsxx,xxcharacter setsxx,xxpanelxx,xxcontrol panelxx,xxdesktopsxx,xxFileManagerxx,xxToolbarsxx,xxMenuxx,xxWindow Titlexx,xxTitlexx,xxDPIxx,xxanti-aliasingxx,xxdesktop fontsxx,xxtoolbar fontsxx,xxcharacterxx,xxgeneral fontsxx
 
 Categories=Qt;KDE;X-KDE-settings-looknfeel;

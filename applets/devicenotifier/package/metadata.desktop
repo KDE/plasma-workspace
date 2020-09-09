@@ -19,6 +19,7 @@ Name[sl]=Diski in naprave
 Name[sv]=Diskar och enheter
 Name[tg]=Дискҳо ва дастгоҳҳо
 Name[uk]=Диски і пристрої
+Name[vi]=Đĩa & Thiết bị
 Name[x-test]=xxDisks & Devicesxx
 Comment=Notifications and access for devices
 Comment[az]=Cihazlar üçün bildirişlər və onlara giriş
@@ -39,6 +40,7 @@ Comment[sk]=Upozornenia a prístup k zariadeniam
 Comment[sl]=Obvestila in dostop do naprav
 Comment[sv]=Underrättelser och åtkomst av enheter
 Comment[uk]=Сповіщення і доступ до пристроїв
+Comment[vi]=Thông báo và cách truy cập cho các thiết bị
 Comment[x-test]=xxNotifications and access for devicesxx
 
 Icon=device-notifier

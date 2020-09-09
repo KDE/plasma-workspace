@@ -20,6 +20,7 @@ Name[sl]=Barve
 Name[sv]=Färger
 Name[tg]=Рангҳо
 Name[uk]=Кольори
+Name[vi]=Màu
 Name[x-test]=xxColorsxx
 Comment=Choose color scheme
 Comment[az]=Rəng sxemini seçmək
@@ -41,6 +42,7 @@ Comment[sk]=Vybrať farebnú schému
 Comment[sl]=Izberite barvno shemo
 Comment[sv]=Välj färgschema
 Comment[uk]=Вибір схеми кольорів
+Comment[vi]=Chọn bộ phối hợp màu
 Comment[x-test]=xxChoose color schemexx
 
 Icon=preferences-desktop-color

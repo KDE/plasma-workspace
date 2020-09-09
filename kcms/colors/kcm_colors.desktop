@@ -32,6 +32,7 @@ Name[sl]=Barve
 Name[sv]=Färger
 Name[tg]=Рангҳо
 Name[uk]=Кольори
+Name[vi]=Màu
 Name[x-test]=xxColorsxx
 
 Comment=Choose color scheme
@@ -54,6 +55,7 @@ Comment[sk]=Vybrať farebnú schému
 Comment[sl]=Izberite barvno shemo
 Comment[sv]=Välj färgschema
 Comment[uk]=Вибір схеми кольорів
+Comment[vi]=Chọn bộ phối hợp màu
 Comment[x-test]=xxChoose color schemexx
 
 
@@ -76,6 +78,7 @@ X-KDE-Keywords[sk]=farba,farby,schéma,kontrast,farby widgetov,farebná schéma,
 X-KDE-Keywords[sl]=barve,sheme,kontrast,gradnik,barve gradnikov,barvne sheme,barvni slog,barvna tema
 X-KDE-Keywords[sv]=färger,schema,kontrast,Komponentfärger,Färgschema,färgstil,färgtema
 X-KDE-Keywords[uk]=кольори,кольори,схема,контраст,кольори віджетів,схема кольорів,стиль кольорів,тема кольорів,colors,colours,scheme,contrast,Widget colors,Color Scheme,color style,color theme
+X-KDE-Keywords[vi]=color,colours,màu,sắc,scheme,bộ phối hợp,contrast,tương phản,Widget colors,màu phụ kiện,Color Scheme,bộ phối hợp màu,color style,kiểu cách màu,color theme,sắc thái màu
 X-KDE-Keywords[x-test]=xxcolorsxx,xxcoloursxx,xxschemexx,xxcontrastxx,xxWidget colorsxx,xxColor Schemexx,xxcolor stylexx,xxcolor themexx
 
 Categories=Qt;KDE;X-KDE-settings-looknfeel;
