@@ -517,6 +517,8 @@ void Klipper::slotConfigure()
     }
 
     ConfigDialog *dlg = new ConfigDialog( nullptr, KlipperSettings::self(), this, m_collection );
+    QMetaObject::invokeMethod(dlg, "setHelp", Qt::DirectConnection, Q_ARG(QString, ""), Q_ARG(QString, "klipper"));
+
     connect(dlg, &KConfigDialog::settingsChanged, this, &Klipper::loadSettings);
 
     dlg->show();
