@@ -1,0 +1,14 @@
+[Desktop Entry]
+Exec=virtthings
+Icon=preferences-system
+Type=Application
+X-DocPath=systemsettings/index.html
+X-KDE-StartupNotify=true
+OnlyShowIn=KDE;
+
+GenericName=VirtThings ServiceRunnerTest
+
+Name=VirtThings ServiceRunnerTest
+
+X-DBUS-StartupType=Unique
+Categories=Qt;KDE;Settings;

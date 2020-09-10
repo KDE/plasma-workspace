@@ -286,20 +286,26 @@ private:
                 }
             }
 
-            if (service->categories().contains(QLatin1String("KDE")) || service->serviceTypes().contains(QLatin1String("KCModule"))) {
+            const bool isKCM = service->serviceTypes().contains(QLatin1String("KCModule"));
+            if (!isKCM && (service->categories().contains(QLatin1String("KDE")) || service->serviceTypes().contains(QLatin1String("KCModule")))) {
                 qCDebug(RUNNER_SERVICES) << "found a kde thing" << id << match.subtext() << relevance;
                 relevance += .09;
             }
 
-            qCDebug(RUNNER_SERVICES) << service->name() << "is this relevant:" << relevance;
-            match.setRelevance(relevance);
-            if (service->serviceTypes().contains(QLatin1String("KCModule"))) {
+            if (isKCM) {
                 if (service->parentApp() == QStringLiteral("kinfocenter")) {
                     match.setMatchCategory(i18n("System Information"));
                 } else {
                     match.setMatchCategory(i18n("System Settings"));
                 }
+                // KCMs are, on the balance, less relevant. Drop it ever so much. So they may get outscored
+                // by an otherwise equally applicable match.
+                relevance -= .001;
             }
+
+            qCDebug(RUNNER_SERVICES) << service->name() << "is this relevant:" << relevance;
+            match.setRelevance(relevance);
+
             matches << match;
         }
     }

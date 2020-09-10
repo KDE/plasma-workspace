@@ -30,6 +30,7 @@
 #include "../servicerunner.h"
 
 #include <clocale>
+#include <optional>
 
 class ServiceRunnerTest : public QObject
 {
@@ -41,6 +42,7 @@ private Q_SLOTS:
     void testChromeAppsRelevance();
     void testKonsoleVsYakuakeComment();
     void testSystemSettings();
+    void testForeignAppsOutscoreKCMs();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -161,6 +163,45 @@ void ServiceRunnerTest::testSystemSettings()
     }
     QVERIFY(systemSettingsFound);
     QVERIFY(!foreignSystemSettingsFound);
+}
+
+void ServiceRunnerTest::testForeignAppsOutscoreKCMs()
+{
+    // Our software outscores other things, but foreign applications should still
+    // outscore our KCMs.
+    ServiceRunner runner(this, QVariantList());
+    Plasma::RunnerContext context;
+    context.setQuery(QStringLiteral("virt"));
+
+    runner.match(context);
+
+    std::optional<qreal> virtManRelevance;
+    std::optional<qreal> virtThingsRelevance;
+    std::optional<qreal> kcmRelevance;
+    const auto matches = context.matches();
+    for (const auto &match : matches) {
+        const QUrl url = match.data().toUrl();
+        if (url == QUrl(QStringLiteral("applications:virt-manager.desktop"))) {
+            virtManRelevance = match.relevance();
+        } else if (url == QUrl(QStringLiteral("applications:kcm_kwin_virtualdesktops.desktop"))) {
+            kcmRelevance = match.relevance();
+        } else if (url == QUrl(QStringLiteral("applications:org.kde.virtthings.desktop"))) {
+            virtThingsRelevance = match.relevance();
+        }
+    }
+    QVERIFY(virtManRelevance.has_value());
+    QVERIFY(virtThingsRelevance.has_value());
+    QVERIFY(kcmRelevance.has_value());
+
+    // KDE app should be >= non-KDE app
+    QVERIFY2(virtThingsRelevance >= virtManRelevance,
+             qPrintable(QStringLiteral("%1 >= %2").arg(virtThingsRelevance.value()).arg(virtManRelevance.value())));
+    // KDE app strictly greater KDE kcm
+    QVERIFY2(virtThingsRelevance > kcmRelevance,
+             qPrintable(QStringLiteral("%1 > %2").arg(virtThingsRelevance.value()).arg(kcmRelevance.value())));
+    // non-KDE app also strictly greater (because it is an app)
+    QVERIFY2(virtManRelevance > kcmRelevance,
+             qPrintable(QStringLiteral("%1 > %2").arg(virtManRelevance.value()).arg(kcmRelevance.value())));
 }
 
 QTEST_MAIN(ServiceRunnerTest)
