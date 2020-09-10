@@ -20,14 +20,15 @@
 
 #include "userfeedback.h"
 
-#include <KUserFeedback/Provider>
 #include <KUserFeedback/ApplicationVersionSource>
 #include <KUserFeedback/CompilerInfoSource>
-#include <KUserFeedback/PlatformInfoSource>
-#include <KUserFeedback/QtVersionSource>
-#include <KUserFeedback/UsageTimeSource>
 #include <KUserFeedback/OpenGLInfoSource>
+#include <KUserFeedback/PlatformInfoSource>
+#include <KUserFeedback/Provider>
+#include <KUserFeedback/QPAInfoSource>
+#include <KUserFeedback/QtVersionSource>
 #include <KUserFeedback/ScreenInfoSource>
+#include <KUserFeedback/UsageTimeSource>
 
 #include <KLocalizedString>
 
@@ -68,6 +69,7 @@ UserFeedback::UserFeedback(ShellCorona *corona, QObject *parent)
     m_provider->addDataSource(new KUserFeedback::UsageTimeSource);
     m_provider->addDataSource(new KUserFeedback::OpenGLInfoSource);
     m_provider->addDataSource(new KUserFeedback::ScreenInfoSource);
+    m_provider->addDataSource(new KUserFeedback::QPAInfoSource);
     m_provider->addDataSource(new PanelCountSource(corona));
 
     auto plasmaConfig = KSharedConfig::openConfig(QStringLiteral("PlasmaUserFeedback"));
