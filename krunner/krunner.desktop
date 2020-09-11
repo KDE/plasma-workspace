@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=@CMAKE_INSTALL_PREFIX@/bin/krunner
+Exec=dbus-send --type=method_call --dest=org.kde.krunner /App org.kde.krunner.App.display
 Name=KRunner
 Name[ar]=مشغّل.ك
 Name[ast]=KRunner
@@ -59,7 +59,7 @@ Actions=RunClipboard
 X-KDE-Wayland-Interfaces=org_kde_plasma_window_management
 
 [Desktop Action RunClipboard]
-Exec=krunner -c
+Exec=dbus-send --type=method_call --dest=org.kde.krunner /App org.kde.krunner.App.displayWithClipboardContents
 Name=Run command on clipboard contents
 Name[az]=Əmri, mübadilə buferindən başlatmaq
 Name[ca]=Executa una ordre al contingut del porta-retalls
