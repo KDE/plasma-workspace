@@ -1603,13 +1603,6 @@ void EnvCanadaIon::updateWeather(const QString& source)
                                    tempHigh,
                                    tempLow,
                                    popPrecent));
-        //qCDebug(IONENGINE_ENVCAN) << "i18n summary string: " << qPrintable(i18n(forecastInfo->shortForecast.toUtf8()));
-
-        /*
-                data.insert(QString("Long Forecast Day %1").arg(i), QString("%1|%2|%3|%4|%5|%6|%7|%8") \
-                        .arg(fieldList[0]).arg(fieldList[2]).arg(fieldList[3]).arg(fieldList[4]).arg(fieldList[6]) \
-                        .arg(fieldList[7]).arg(fieldList[8]).arg(fieldList[9]));
-        */
         ++i;
     }
 
