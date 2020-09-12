@@ -171,6 +171,9 @@ void View::loadConfig()
     bool retainPriorSearch = m_config.readEntry("RetainPriorSearch", true);
     if (retainPriorSearch != m_retainPriorSearch) {
         m_retainPriorSearch = retainPriorSearch;
+        if (!m_retainPriorSearch) {
+            m_qmlObj->rootObject()->setProperty("query", QString());
+        }
         Q_EMIT retainPriorSearchChanged();
     }
 }
