@@ -210,7 +210,7 @@ void runEnvironmentScripts()
             continue;
         }
         const auto dirScripts = dir.entryInfoList({QStringLiteral("*.sh")}, QDir::Files, QDir::Name);
-        for (const auto script : dirScripts) {
+        for (const auto &script : dirScripts) {
             scripts << script.absoluteFilePath();
         }
     }

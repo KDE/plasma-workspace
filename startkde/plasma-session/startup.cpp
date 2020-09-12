@@ -210,7 +210,7 @@ Startup::Startup(QObject *parent):
     upAndRunning(QStringLiteral("ksmserver"));
     const AutoStart autostart;
 
-    QProcess::execute(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF5 "/start_kdeinit_wrapper"));
+    QProcess::execute(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF5 "/start_kdeinit_wrapper"), QStringList());
 
     KJob* phase1;
     QProcessEnvironment kdedProcessEnv;
