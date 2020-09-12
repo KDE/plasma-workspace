@@ -43,10 +43,19 @@ ColumnLayout {
             if (runnerWindow.visible) {
                 queryField.forceActiveFocus();
                 listView.currentIndex = -1
+                if (runnerWindow.retainPriorSearch) {
+                    // Hack: We want to retain the prior seach, but are in a different match session
+                    // This way we ensure that the prior search gets executed as a new query
+                    const priorSearch = root.query
+                    queryField.text = ""
+                    queryField.text = priorSearch
+                }
+                queryField.select(root.query.length, 0)
             } else {
                 root.runner = ""
                 if (runnerWindow.retainPriorSearch) {
-                    queryField.select(root.query.length, 0)
+                    // Same effect as setting empty string, but we want to retain this string for the next session
+                    results.model.clear()
                 } else {
                     root.query = ""
                 }
