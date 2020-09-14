@@ -143,6 +143,15 @@ if(${AppStreamQt_FOUND})
     set(HAVE_APPSTREAMQT true)
 endif()
 
+# Fonts kcm and kfontinst
+find_package(Freetype)
+set_package_properties(Freetype PROPERTIES DESCRIPTION "A font rendering engine"
+                       URL "https://www.freetype.org"
+                       TYPE OPTIONAL
+                       PURPOSE "Needed to build kfontinst, a simple font installer."
+                      )
+
+
 include(ConfigureChecks.cmake)
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
