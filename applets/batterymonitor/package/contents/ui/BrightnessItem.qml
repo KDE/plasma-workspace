@@ -31,6 +31,7 @@ RowLayout {
     property alias value: brightnessSlider.value
     property alias maximumValue: brightnessSlider.to
     property alias stepSize: brightnessSlider.stepSize
+    property alias showPercentage: brightnessPercent.visible
     signal moved()
 
     spacing: units.gridUnit
@@ -48,9 +49,25 @@ RowLayout {
         Layout.alignment: Qt.AlignTop
         spacing: 0
 
-        PlasmaComponents3.Label {
-            id: brightnessLabel
+        RowLayout {
+            id: infoRow
             width: parent.width
+            spacing: units.smallSpacing
+
+            function percentage(from, to, value) {
+                return Math.floor(100 * (value - from) / (to - from));
+            }
+
+            PlasmaComponents3.Label {
+                id: brightnessLabel
+                Layout.fillWidth: true
+            }
+
+            PlasmaComponents3.Label {
+                id: brightnessPercent
+                horizontalAlignment: Text.AlignRight
+                text: i18nc("Placeholder is brightness percentage", "%1%", infoRow.percentage(0, brightnessSlider.to, brightnessSlider.value))
+            }
         }
 
         PlasmaComponents3.Slider {

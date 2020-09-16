@@ -87,6 +87,7 @@ PlasmaComponents3.Page {
 
                 icon: "input-keyboard-brightness"
                 label: i18n("Keyboard Brightness")
+                showPercentage: false
                 value: batterymonitor.keyboardBrightness
                 maximumValue: batterymonitor.maximumKeyboardBrightness
                 visible: isKeyboardBrightnessAvailable
