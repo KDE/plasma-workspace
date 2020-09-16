@@ -1,7 +1,7 @@
 /*
  *   Copyright (C) 2006 Aaron Seigo <aseigo@kde.org>
  *   Copyright (C) 2014 Vishesh Handa <vhanda@kde.org>
- *   Copyright (C) 2016 Harald Sitter <sitter@kde.org>
+ *   Copyright (C) 2016-2020 Harald Sitter <sitter@kde.org>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License version 2 as
@@ -37,6 +37,7 @@
 #include <KServiceAction>
 #include <KServiceTypeTrader>
 #include <KStringHandler>
+#include <KSycoca>
 
 #include <KIO/ApplicationLauncherJob>
 
@@ -66,6 +67,8 @@ public:
         if (!context.isValid()) {
             return;
         }
+
+        KSycoca::disableAutoRebuild();
 
         term = context.query();
         weightedTermLength = weightedLength(term);
@@ -465,7 +468,7 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
     if (actionName.isEmpty()) {
         // We want to load kcms directly with systemsettings,
         // but we can't completely replace kcmshell with systemsettings
-        // as we need to be able to load kcms without plasma and we can't 
+        // as we need to be able to load kcms without plasma and we can't
         // implement all kcmshell features into systemsettings
         if (service->serviceTypes().contains(QLatin1String("KCModule"))) {
             if (service->parentApp() == QStringLiteral("kinfocenter")) {

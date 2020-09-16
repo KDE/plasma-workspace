@@ -1,5 +1,5 @@
 /*
- *   Copyright (C) 2016 Harald Sitter <sitter@kde.org>
+ *   Copyright (C) 2016-2020 Harald Sitter <sitter@kde.org>
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Lesser General Public
@@ -24,6 +24,7 @@
 #include <QObject>
 #include <QStandardPaths>
 #include <QTest>
+#include <QThread>
 
 #include <KSycoca>
 
@@ -31,6 +32,8 @@
 
 #include <clocale>
 #include <optional>
+#include <sys/types.h>
+#include <unistd.h>
 
 class ServiceRunnerTest : public QObject
 {
@@ -43,6 +46,7 @@ private Q_SLOTS:
     void testKonsoleVsYakuakeComment();
     void testSystemSettings();
     void testForeignAppsOutscoreKCMs();
+    void testINotifyUsage();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -202,6 +206,41 @@ void ServiceRunnerTest::testForeignAppsOutscoreKCMs()
     // non-KDE app also strictly greater (because it is an app)
     QVERIFY2(virtManRelevance > kcmRelevance,
              qPrintable(QStringLiteral("%1 > %2").arg(virtManRelevance.value()).arg(kcmRelevance.value())));
+}
+
+void ServiceRunnerTest::testINotifyUsage()
+{
+    auto inotifyCount = []() -> uint {
+        uint count = 0;
+        const QDir procDir(QStringLiteral("/proc/%1/fd").arg(getpid()));
+        for (const auto &fileInfo : procDir.entryInfoList()) {
+            if (fileInfo.symLinkTarget().endsWith(QStringLiteral("anon_inode:inotify"))) {
+                ++count;
+            }
+        }
+        return count;
+    };
+
+    const uint originalCount = inotifyCount();
+
+    // We'll run this in a new thread so KDirWatch would be led to create a new thread-local watch instance.
+    // The expectation here is that this KDW instance is not persistently claiming an inotify instance.
+    bool inotifyCountCool = false;
+    auto thread = QThread::create([&] {
+        ServiceRunner runner(nullptr, QVariantList());
+        Plasma::RunnerContext context;
+        context.setQuery(QStringLiteral("settings"));
+
+        runner.match(context);
+
+        QCOMPARE(inotifyCount(), originalCount);
+        inotifyCountCool = true;
+    });
+    thread->start();
+    thread->wait();
+    thread->deleteLater();
+
+    QVERIFY(inotifyCountCool);
 }
 
 QTEST_MAIN(ServiceRunnerTest)
