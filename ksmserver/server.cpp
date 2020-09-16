@@ -694,6 +694,11 @@ KSMServer::KSMServer(InitFlags flags)
 
     connect(&protectionTimer, &QTimer::timeout, this, &KSMServer::protectionTimeout);
     connect(&restoreTimer, &QTimer::timeout, this, &KSMServer::tryRestoreNext);
+    connect(this, &KSMServer::sessionRestored, this, [this]() {
+        auto reply = m_restoreSessionCall.createReply();
+        QDBusConnection::sessionBus().send(reply);
+        m_restoreSessionCall = QDBusMessage();
+    });
     connect(qApp, &QApplication::aboutToQuit, this, &KSMServer::cleanUp);
 
     setupXIOErrorHandler();
@@ -1029,11 +1034,6 @@ void KSMServer::restoreSession()
    lastAppStarted = 0;
    lastIdStarted.clear();
    state = KSMServer::Restoring;
-   connect(this, &KSMServer::sessionRestored, this, [this]() {
-        auto reply = m_restoreSessionCall.createReply();
-        QDBusConnection::sessionBus().send(reply);
-        m_restoreSessionCall = QDBusMessage();
-   });
    tryRestoreNext();
 }
 
