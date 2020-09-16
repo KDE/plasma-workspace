@@ -61,8 +61,8 @@ Item {
         Layout.minimumHeight: implicitHeight
 
         flow: root.vertical ? GridLayout.TopToBottom : GridLayout.LeftToRight
-        rowSpacing: PlasmaCore.Units.smallSpacing
-        columnSpacing: PlasmaCore.Units.smallSpacing
+        rowSpacing: 0
+        columnSpacing: 0
 
         Component.onCompleted: {
             plasmoid.nativeInterface.buttonGrid = buttonGrid
@@ -103,7 +103,7 @@ Item {
             id: buttonRepeater
             model: appMenuModel.visible ? appMenuModel : null
 
-            PlasmaComponents3.ToolButton {
+            MenuDelegate {
                 readonly property int buttonIndex: index
 
                 Layout.fillWidth: root.vertical
@@ -113,6 +113,7 @@ Item {
                 // fake highlighted
                 checkable: plasmoid.nativeInterface.currentIndex === index
                 checked: checkable
+
                 visible: text !== ""
                 onClicked: {
                     plasmoid.nativeInterface.trigger(this, index)
