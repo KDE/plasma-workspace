@@ -1,0 +1,6 @@
+[Unit]
+Description=KDE Plasma Workspace
+Requires=plasma-core@%i.target plasma-ksplash-ready.service
+BindsTo=graphical-session.target
+Wants=xdg-desktop-autostart.target plasma-xembedsniproxy.service plasma-gmenudbusmenuproxy.service
+After=plasma-core.target

@@ -71,3 +71,5 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/KSMServerDBusInterfaceConfig.cmake
 ########### install files ###############
 
 install( FILES org.kde.KSMServerInterface.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR})
+
+ecm_install_configured_files(INPUT plasma-ksmserver.service.in DESTINATION ${SYSTEMD_USER_UNIT_INSTALL_DIR})

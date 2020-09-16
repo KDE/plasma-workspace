@@ -1,0 +1,11 @@
+[Unit]
+Description=KDE Config Module Initialization
+
+[Service]
+ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/kcminit_startup
+Restart=no
+Type=forking
+Slice=session.slice
+
+[Install]
+Alias=plasma-workspace.service

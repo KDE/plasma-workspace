@@ -5,11 +5,10 @@ set(krunner_SRCS
 
 set(krunner_dbusAppXML dbus/org.kde.krunner.App.xml)
 qt5_add_dbus_adaptor(krunner_SRCS ${krunner_dbusAppXML} view.h View)
-configure_file(dbus/org.kde.krunner.service.in
-               ${CMAKE_CURRENT_BINARY_DIR}/org.kde.krunner.service)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.krunner.service
-        DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})
-
+ecm_generate_dbus_service_file(NAME org.kde.krunner
+                                                           EXECUTABLE ${KDE_INSTALL_FULL_BINDIR}/krunner
+                                                           SYSTEMD_SERVICE plasma-krunner.service
+                                                           DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})
 
 add_executable(krunner ${krunner_SRCS})
 
@@ -40,5 +39,8 @@ configure_package_config_file(KRunnerAppDBusInterfaceConfig.cmake.in
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/KRunnerAppDBusInterfaceConfig.cmake
     DESTINATION ${CMAKECONFIG_INSTALL_DIR})
+
+ecm_install_configured_files(INPUT plasma-krunner.service.in @ONLY DESTINATION
+        ${SYSTEMD_USER_UNIT_INSTALL_DIR})
 
 add_subdirectory(update)

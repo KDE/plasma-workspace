@@ -30,12 +30,16 @@
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
 #include <unistd.h>
 
 #include <updatelaunchenvjob.h>
 
 #include "startplasma.h"
+
+#include "../config-workspace.h"
+#include "debug.h"
 
 QTextStream out(stderr);
 
@@ -76,7 +80,7 @@ int runSync(const QString& program, const QStringList &args, const QStringList &
         p.setEnvironment(QProcess::systemEnvironment() << env);
     p.setProcessChannelMode(QProcess::ForwardedChannels);
     p.start(program, args);
-//     qDebug() << "started..." << program << args;
+//     qCDebug(PLASMA_STARTUP) << "started..." << program << args;
     p.waitForFinished(-1);
     if (p.exitCode()) {
         qWarning() << program << args << "exited with code" << p.exitCode();
@@ -110,7 +114,7 @@ void sourceFiles(const QStringList &files)
             continue;
 
         if (qgetenv(env.left(idx)) != env.mid(idx+1)) {
-//             qDebug() << "setting..." << env.left(idx) << env.mid(idx+1) << "was" << qgetenv(env.left(idx));
+//             qCDebug(PLASMA_STARTUP) << "setting..." << env.left(idx) << env.mid(idx+1) << "was" << qgetenv(env.left(idx));
             qputenv(env.left(idx), env.mid(idx+1));
         }
     }
@@ -331,6 +335,45 @@ QProcess* setupKSplash()
     return p;
 }
 
+bool hasSystemdService(const QString &serviceName)
+{
+    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                                                    QStringLiteral("/org/freedesktop/systemd1"),
+                                                                    QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                                                    QStringLiteral("ListUnitsByNames"));
+    msg << QStringList({serviceName});
+    auto reply = QDBusConnection::sessionBus().call(msg);
+    if (reply.type() == QDBusMessage::ErrorMessage) {
+        return false;
+    }
+    // if we have a service returned then it must have found it
+    return !reply.arguments().isEmpty();
+}
+
+bool useSystemdBoot()
+{
+    auto config = KSharedConfig::openConfig(QStringLiteral("startkderc"), KConfig::NoGlobals);
+    const QString configValue = config->group(QStringLiteral("General")).readEntry("systemdBoot", QStringLiteral("false")).toLower();
+
+    if (configValue == QLatin1String("false")) {
+        return false;
+    }
+
+    if (!hasSystemdService(QStringLiteral("plasma-workspace@ANY.target"))) {
+        qWarning() << "Systemd boot requested, but plasma services were not found";
+        return false;
+    }
+
+    if (configValue == QLatin1String("force")) {
+        return true;
+    }
+
+    // xdg-desktop.target is shipped with an upcoming systemd and shows we have a generator
+    // for creating units out of autostart files
+    // only enable if that also exists, unless we're forced above
+    return hasSystemdService(QStringLiteral("xdg-desktop.target"));
+}
+
 bool startPlasmaSession(bool wayland)
 {
     OrgKdeKSplashInterface iface(QStringLiteral("org.kde.KSplash"), QStringLiteral("/KSplash"), QDBusConnection::sessionBus());
@@ -348,21 +391,8 @@ bool startPlasmaSession(bool wayland)
     // If the session should be locked from the start (locked autologin),
     // lock now and do the rest of the KDE startup underneath the locker.
 
-
-    QStringList plasmaSessionOptions;
-    if (wayland) {
-        plasmaSessionOptions << QStringLiteral("--no-lockscreen");
-    } else {
-        if (desktopLockedAtStart) {
-            plasmaSessionOptions << QStringLiteral("--lockscreen");
-        }
-    }
-
     bool rc = true;
     QEventLoop e;
-
-    QProcess startPlasmaSession;
-    startPlasmaSession.setProcessChannelMode(QProcess::ForwardedChannels);
 
     QDBusServiceWatcher serviceWatcher;
     serviceWatcher.setConnection(QDBusConnection::sessionBus());
@@ -372,15 +402,6 @@ bool startPlasmaSession(bool wayland)
     serviceWatcher.addWatchedService(QStringLiteral("org.kde.ksmserver"));
     serviceWatcher.addWatchedService(QStringLiteral("org.kde.Shutdown"));
     serviceWatcher.setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
-
-    QObject::connect(&startPlasmaSession, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [&rc, &e](int exitCode, QProcess::ExitStatus) {
-        if (exitCode == 255) {
-            // Startup error
-            messageBox(QStringLiteral("startkde: Could not start ksmserver. Check your installation.\n"));
-            rc = false;
-            e.quit();
-        }
-    });
 
     QObject::connect(&serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, [&]() {
         const QStringList watchedServices = serviceWatcher.watchedServices();
@@ -392,8 +413,49 @@ bool startPlasmaSession(bool wayland)
         }
     });
 
-    startPlasmaSession.start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
-    e.exec();
+    if (!useSystemdBoot()) {
+        qCDebug(PLASMA_STARTUP) << "Using classic boot";
+        QProcess startPlasmaSession;
+
+        QStringList plasmaSessionOptions;
+        if (wayland) {
+            plasmaSessionOptions << QStringLiteral("--no-lockscreen");
+        } else {
+            if (desktopLockedAtStart) {
+                plasmaSessionOptions << QStringLiteral("--lockscreen");
+            }
+        }
+
+        startPlasmaSession.setProcessChannelMode(QProcess::ForwardedChannels);
+        QObject::connect(&startPlasmaSession, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [&rc, &e](int exitCode, QProcess::ExitStatus) {
+            if (exitCode == 255) {
+                // Startup error
+                messageBox(QStringLiteral("startkde: Could not start ksmserver. Check your installation.\n"));
+                rc = false;
+                e.quit();
+            }
+        });
+
+        startPlasmaSession.start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
+        rc = startPlasmaSession.waitForStarted();
+    } else {
+        qCDebug(PLASMA_STARTUP) << "Using systemd boot";
+        const QString platform = wayland ? QStringLiteral("wayland") : QStringLiteral("x11");
+
+        auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                                                       QStringLiteral("/org/freedesktop/systemd1"),
+                                                                        QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                                                        QStringLiteral("StartUnit"));
+        msg << QStringLiteral("plasma-workspace@%1.target").arg(platform) << QStringLiteral("fail");
+        auto reply = QDBusConnection::sessionBus().call(msg);
+        if (reply.type() == QDBusMessage::ErrorMessage) {
+            messageBox(QStringLiteral("startkde: Could not start Plasma session.\n"));
+            rc = false;
+        }
+    }
+    if (rc) {
+        e.exec();
+    }
     return rc;
 }
 

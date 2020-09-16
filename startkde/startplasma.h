@@ -48,6 +48,9 @@ bool startPlasmaSession(bool wayland);
 
 void waitForKonqi();
 
+static bool hasSystemdService(const QString &serviceName);
+static bool useSystemdBoot();
+
 struct KillBeforeDeleter
 {
     static inline void cleanup(QProcess *pointer)

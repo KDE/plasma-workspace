@@ -1,0 +1,14 @@
+[Unit]
+Description=KDE Plasma Workspace
+Wants=plasma-ksmserver.service plasma-kcminit.service
+
+[Service]
+ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/plasmashell --no-respawn
+Restart=on-failure
+Type=dbus
+BusName=org.kde.plasmashell
+Slice=session.slice
+TimeoutSec=40sec
+
+[Install]
+WantedBy=plasma-core.target

@@ -40,3 +40,4 @@ Type=Application
 X-KDE-StartupNotify=false
 OnlyShowIn=KDE;
 X-KDE-autostart-phase=1
+X-systemd-skip=true

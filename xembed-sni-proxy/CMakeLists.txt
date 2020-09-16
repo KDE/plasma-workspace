@@ -64,3 +64,4 @@ target_link_libraries(xembedsniproxy
 install(TARGETS xembedsniproxy ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES xembedsniproxy.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 
+ecm_install_configured_files(INPUT plasma-xembedsniproxy.service.in @ONLY DESTINATION  ${SYSTEMD_USER_UNIT_INSTALL_DIR})

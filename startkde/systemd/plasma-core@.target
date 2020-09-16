@@ -1,0 +1,6 @@
+[Unit]
+Description=KDE Plasma Workspace Core
+Wants=plasma-plasmashell.service plasma-kwin_%i.service plasma-kcminit.service plasma-kded.service plasma-kcminit-phase1.service graphical-session-pre.target
+Requires=plasma-ksmserver.service
+BindsTo=plasma-ksmserver.service
+After=graphical-session-pre.target
