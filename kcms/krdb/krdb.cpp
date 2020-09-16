@@ -493,11 +493,11 @@ void runRdb( uint flags )
   tmpFile.flush();
 
   KProcess proc;
-#ifndef NDEBUG
-  proc << QStringLiteral("xrdb") << QStringLiteral("-merge") << tmpFile.fileName();
-#else
-  proc << "xrdb" << "-quiet" << "-merge" << tmpFile.fileName();
+  proc << QStringLiteral("xrdb") << QStringLiteral("-nocpp")
+#ifdef NDEBUG
+    << QStringLiteral("-quiet")
 #endif
+    << QStringLiteral("-merge") << tmpFile.fileName();
   proc.execute();
 
   applyGtkStyles(exportColors, 1);
