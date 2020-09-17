@@ -42,12 +42,13 @@ ColumnLayout {
         onVisibleChanged: {
             if (runnerWindow.visible) {
                 queryField.forceActiveFocus();
+                if (runnerWindow.retainPriorSearch) {
+                    queryField.select(root.query.length, 0)
+                }
                 listView.currentIndex = -1
             } else {
                 root.runner = ""
-                if (runnerWindow.retainPriorSearch) {
-                    queryField.select(root.query.length, 0)
-                } else {
+                if (!runnerWindow.retainPriorSearch) {
                     root.query = ""
                 }
                 root.showHistory = false
