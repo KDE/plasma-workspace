@@ -54,10 +54,10 @@ AbstractItem {
 
     onClicked: {
         var pos = plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y);
+        var service = model.Service;
 
         switch (mouse.button) {
         case Qt.LeftButton:
-            var service = plasmoid.nativeInterface.serviceForSource(model.DataEngineSource);
             var operation = service.operationDescription("Activate");
             operation.x = pos.x;
             operation.y = pos.y;
@@ -76,7 +76,6 @@ AbstractItem {
             break;
 
         case Qt.MiddleButton:
-            var service = plasmoid.nativeInterface.serviceForSource(model.DataEngineSource);
             var operation = service.operationDescription("SecondaryActivate");
             operation.x = pos.x;
 
@@ -88,7 +87,7 @@ AbstractItem {
     }
 
     function openContextMenu(pos) {
-        var service = plasmoid.nativeInterface.serviceForSource(model.DataEngineSource);
+        var service = model.Service;
         var operation = service.operationDescription("ContextMenu");
         operation.x = pos.x;
         operation.y = pos.y;
@@ -102,14 +101,14 @@ AbstractItem {
     onWheel: {
         //don't send activateVertScroll with a delta of 0, some clients seem to break (kmix)
         if (wheel.angleDelta.y !== 0) {
-            var service = plasmoid.nativeInterface.serviceForSource(model.DataEngineSource);
+            var service = model.Service;
             var operation = service.operationDescription("Scroll");
             operation.delta =wheel.angleDelta.y;
             operation.direction = "Vertical";
             service.startOperationCall(operation);
         }
         if (wheel.angleDelta.x !== 0) {
-            var service = plasmoid.nativeInterface.serviceForSource(model.DataEngineSource);
+            var service = model.Service;
             var operation = service.operationDescription("Scroll");
             operation.delta =wheel.angleDelta.x;
             operation.direction = "Horizontal";

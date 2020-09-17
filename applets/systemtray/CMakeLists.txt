@@ -30,5 +30,6 @@ install(TARGETS org.kde.plasma.private.systemtray DESTINATION ${KDE_INSTALL_PLUG
 
 add_subdirectory(container)
 if(BUILD_TESTING)
+  add_subdirectory(autotests)
   add_subdirectory(tests)
 endif()

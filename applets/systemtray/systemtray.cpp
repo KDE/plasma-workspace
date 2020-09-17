@@ -303,11 +303,6 @@ bool SystemTray::isSystemTrayApplet(const QString &appletId)
     return m_systrayApplets.contains(appletId);
 }
 
-Plasma::Service *SystemTray::serviceForSource(const QString &source)
-{
-    return m_statusNotifierModel->serviceForSource(source);
-}
-
 void SystemTray::restoreContents(KConfigGroup &group)
 {
     QStringList newKnownItems;
@@ -436,6 +431,7 @@ SystemTrayModel *SystemTray::systemTrayModel()
         m_systemTrayModel = new SystemTrayModel(this);
 
         PlasmoidModel *currentPlasmoidsModel = new PlasmoidModel(m_systemTrayModel);
+        currentPlasmoidsModel->init(Plasma::PluginLoader::self()->listAppletMetaData(QString()));
         connect(this, &SystemTray::appletAdded, currentPlasmoidsModel, &PlasmoidModel::addApplet);
         connect(this, &SystemTray::appletRemoved, currentPlasmoidsModel, &PlasmoidModel::removeApplet);
         connect(this, &SystemTray::configurationChanged, currentPlasmoidsModel, &PlasmoidModel::onConfigurationChanged);

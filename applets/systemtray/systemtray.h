@@ -87,12 +87,6 @@ public:
 
     Q_INVOKABLE bool isSystemTrayApplet(const QString &appletId);
 
-    /**
-     * @returns a Plasma::Service given a source name
-     * @param source source name we want a service of
-     */
-    Q_INVOKABLE Plasma::Service *serviceForSource(const QString &source);
-
 private Q_SLOTS:
     void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher);
 
