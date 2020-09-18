@@ -437,7 +437,8 @@ bool startPlasmaSession(bool wayland)
         });
 
         startPlasmaSession.start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
-        rc = startPlasmaSession.waitForStarted();
+        // plasma-session starts everything else up then quits
+        rc = startPlasmaSession.waitForFinished(120 * 1000);
     } else {
         qCDebug(PLASMA_STARTUP) << "Using systemd boot";
         const QString platform = wayland ? QStringLiteral("wayland") : QStringLiteral("x11");
