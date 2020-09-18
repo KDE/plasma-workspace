@@ -33,6 +33,8 @@
 
 #include "qwayland-wlr-data-control-unstable-v1.h"
 
+#include <sys/select.h>
+
 class DataControlDeviceManager : public QWaylandClientExtensionTemplate<DataControlDeviceManager>
         , public QtWayland::zwlr_data_control_manager_v1
 {
