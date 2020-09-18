@@ -44,8 +44,6 @@ KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
     m_processList.setScriptingEnabled(true);
     setSizeGripEnabled(true);
 
-    layout()->setContentsMargins(0,0,0,0);
-
     // Since we kinda act like an application more than just a Window, map the usual ctrl+Q shortcut to close as well
     QAction *closeWindow = new QAction(this);
     closeWindow->setShortcut(QKeySequence::Quit);
