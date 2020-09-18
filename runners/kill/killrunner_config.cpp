@@ -76,6 +76,7 @@ void KillRunnerConfig::save()
     grp.writeEntry(CONFIG_USE_TRIGGERWORD, m_ui->useTriggerWord->isChecked());
     grp.writeEntry(CONFIG_TRIGGERWORD, m_ui->triggerWord->text());
     grp.writeEntry(CONFIG_SORTING, m_ui->sorting->itemData(m_ui->sorting->currentIndex()));
+    grp.sync();
 
     emit changed(false);
 }
