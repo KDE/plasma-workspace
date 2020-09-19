@@ -312,7 +312,10 @@ void WaylandClipboard::clear(QClipboard::Mode mode)
     if (mode == QClipboard::Clipboard) {
         m_device->set_selection(nullptr);
     } else if (mode == QClipboard::Selection) {
-        m_device->set_primary_selection(nullptr);
+        if (zwlr_data_control_device_v1_get_version(m_device->object()) >=
+                ZWLR_DATA_CONTROL_DEVICE_V1_SET_PRIMARY_SELECTION_SINCE_VERSION) {
+            m_device->set_primary_selection(nullptr);
+        }
     }
 }
 
