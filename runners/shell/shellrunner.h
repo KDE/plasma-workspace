@@ -35,7 +35,6 @@ class ShellRunner : public Plasma::AbstractRunner
 
         void match(Plasma::RunnerContext &context) override;
         void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
-        QList<QAction *> actionsForMatch(const Plasma::QueryMatch &match) override;
 
     private:
         bool parseENVVariables(const QString &query, QStringList &envs, QString &command);

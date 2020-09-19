@@ -134,6 +134,7 @@ void KillRunner::match(Plasma::RunnerContext &context)
         match.setIconName(QStringLiteral("application-exit"));
         match.setData(pid);
         match.setId(name);
+        match.setActions(m_actionList);
 
         // Set the relevance
         switch (m_sorting) {
@@ -179,13 +180,6 @@ void KillRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMa
     killAction.addArgument(QStringLiteral("pidcount"), 1);
     killAction.addArgument(QStringLiteral("signal"), signal);
     killAction.execute();
-}
-
-QList<QAction*> KillRunner::actionsForMatch(const Plasma::QueryMatch &match)
-{
-    Q_UNUSED(match)
-
-    return m_actionList;
 }
 
 #include "killrunner.moc"

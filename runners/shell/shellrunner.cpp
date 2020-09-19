@@ -71,6 +71,7 @@ void ShellRunner::match(Plasma::RunnerContext &context)
         match.setText(i18n("Run %1", term));
         match.setData(QVariantList({command, envs}));
         match.setRelevance(0.7);
+        match.setActions(m_actionList);
         context.addMatch(match);
     }
 }
@@ -86,13 +87,6 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
     auto *job = new KIO::CommandLauncherJob(context.query());
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
     job->start();
-}
-
-QList<QAction *> ShellRunner::actionsForMatch(const Plasma::QueryMatch &match)
-{
-    Q_UNUSED(match)
-
-    return m_actionList;
 }
 
 bool ShellRunner::parseENVVariables(const QString &query, QStringList &envs, QString &command)

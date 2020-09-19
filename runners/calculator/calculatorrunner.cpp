@@ -284,6 +284,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
         }
         match.setData(result);
         match.setId(term);
+        match.setActions(actions().values());
         context.addMatch(match);
     }
 }
@@ -341,13 +342,6 @@ void CalculatorRunner::run(const Plasma::RunnerContext &context, const Plasma::Q
         QGuiApplication::clipboard()->setText(match.text());
 #endif
     }
-}
-
-QList<QAction *> CalculatorRunner::actionsForMatch(const Plasma::QueryMatch &match)
-{
-    Q_UNUSED(match)
-
-    return actions().values();
 }
 
 QMimeData * CalculatorRunner::mimeDataForMatch(const Plasma::QueryMatch &match)

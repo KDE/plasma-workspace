@@ -96,6 +96,9 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         match.setIconName(KIO::iconNameForUrl(url));
         match.setRelevance(relevance);
         match.setData(QVariant(url));
+        if (url.isLocalFile()) {
+            match.setActions(actions().values());
+        }
         match.setText(name);
 
         QString destUrlString = KShell::tildeCollapse(url.adjusted(QUrl::RemoveFilename).path());
@@ -118,16 +121,6 @@ void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::Qu
 
     auto run = new KRun(url, nullptr);
     run->setRunExecutables(false);
-}
-
-QList<QAction *> RecentDocuments::actionsForMatch(const Plasma::QueryMatch &match)
-{
-    const QUrl url = match.data().toUrl();
-    if (url.isLocalFile()) {
-        return actions().values();
-    }
-
-    return {};
 }
 
 QMimeData * RecentDocuments::mimeDataForMatch(const Plasma::QueryMatch& match)

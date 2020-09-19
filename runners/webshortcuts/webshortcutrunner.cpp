@@ -95,7 +95,7 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
             m_privateAction = action;
             const QString actionText = containsPrivate ? i18n("Search in private window") : i18n("Search in incognito window");
             const QIcon icon = QIcon::fromTheme(QStringLiteral("view-private"), QIcon::fromTheme(QStringLiteral("view-hidden")));
-            addAction(QStringLiteral("privateSearch"), icon, actionText);
+            m_match.setActions({addAction(QStringLiteral("privateSearch"), icon, actionText)});
             return;
         }
     }
@@ -144,12 +144,6 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
     m_match.setText(i18n("Search %1 for %2", m_lastProvider, filterData.searchTerm()));
     m_match.setData(filterData.uri());
     context.addMatch(m_match);
-}
-
-QList<QAction *> WebshortcutRunner::actionsForMatch(const Plasma::QueryMatch &match)
-{
-    Q_UNUSED(match)
-    return actions().values();
 }
 
 void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
