@@ -127,10 +127,11 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
     if (!m_wallpaperConfigModel) {
         m_wallpaperConfigModel = new WallpaperConfigModel(this);
         QDBusConnection::sessionBus().connect(QString(), QStringLiteral("/KPackage/Plasma/Wallpaper"), QStringLiteral("org.kde.plasma.kpackage"), QStringLiteral("packageInstalled"),
-            m_wallpaperConfigModel, SLOT(repopulate())) ;
+            m_wallpaperConfigModel, SLOT(repopulate()));
+        QDBusConnection::sessionBus().connect(QString(), QStringLiteral("/KPackage/Plasma/Wallpaper"), QStringLiteral("org.kde.plasma.kpackage"), QStringLiteral("packageUpdated"),
+            m_wallpaperConfigModel, SLOT(repopulate()));
         QDBusConnection::sessionBus().connect(QString(), QStringLiteral("/KPackage/Plasma/Wallpaper"), QStringLiteral("org.kde.plasma.kpackage"), QStringLiteral("packageUninstalled"),
             m_wallpaperConfigModel, SLOT(repopulate()));
-
     }
     return m_wallpaperConfigModel;
 }
