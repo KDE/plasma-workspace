@@ -59,6 +59,7 @@ public:
 
     bool freeFloating() const;
     void setFreeFloating(bool floating);
+    void moveEvent(QMoveEvent *e) override;
 
     bool canConfigure() const;
     QStringList history() const;
@@ -107,6 +108,8 @@ private:
     QStringList m_history;
     bool m_retainPriorSearch;
     bool m_historyEnabled;
+    int m_lastX = 0;
+    int m_lastY = 0;
 };
 
 

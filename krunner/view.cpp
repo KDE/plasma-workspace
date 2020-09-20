@@ -159,6 +159,12 @@ void View::loadConfig()
 {
     setFreeFloating(m_config.readEntry("FreeFloating", false));
 
+    if (m_config.hasKey("LastXPosition") && m_config.hasKey("LastYPosition")) {
+        m_customPos = QPoint(m_config.readEntry("LastXPosition").toInt(), m_config.readEntry("LastYPosition").toInt());
+    } else {
+        m_customPos = QPoint();
+    }
+
     m_historyEnabled = m_config.readEntry("HistoryEnabled", true);
     QStringList history;
     if (m_historyEnabled) {
@@ -281,6 +287,8 @@ void View::positionOnScreen()
 
         x = qBound(r.left(), x, r.right() - width());
         y = qBound(r.top(), y, r.bottom() - height());
+        m_lastX = x;
+        m_lastY = y;
 
         setPosition(x, y);
         PlasmaQuick::Dialog::setVisible(true);
@@ -298,6 +306,17 @@ void View::positionOnScreen()
         KWindowSystem::forceActiveWindow(winId());
 
     });
+}
+void View::moveEvent(QMoveEvent *e)
+{
+    PlasmaQuick::Dialog::moveEvent(e);
+    // If the position differs from the one we have last set the user manually moved KRunner
+    if (m_floating && (m_lastX != position().x() || m_lastY != position().y())) {
+        m_customPos = position();
+        m_config.writeEntry("LastXPosition", m_customPos.x());
+        m_config.writeEntry("LastYPosition", m_customPos.y());
+        m_config.sync();
+    }
 }
 
 void View::displayOrHide()
