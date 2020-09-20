@@ -136,6 +136,28 @@ void MultiplexedService::enableGlobalShortcuts()
         }
     );
 
+    QAction *pauseAction = m_actionCollection->addAction(QStringLiteral("pausemedia"));
+    pauseAction->setText(i18n("Pause media playback"));
+    KGlobalAccel::setGlobalShortcut(pauseAction, Qt::Key_MediaPause);
+    connect(pauseAction, &QAction::triggered, this,
+        [this] {
+            if (m_control && m_control->capabilities() & PlayerContainer::CanPause) {
+                m_control->playerInterface()->Pause();
+            }
+        }
+    );
+
+    QAction *playAction = m_actionCollection->addAction(QStringLiteral("playmedia"));
+    playAction->setText(i18n("Play media playback"));
+    KGlobalAccel::setGlobalShortcut(playAction, QKeySequence());
+    connect(playAction, &QAction::triggered, this,
+        [this] {
+            if (m_control && m_control->capabilities() & PlayerContainer::CanPlay) {
+                m_control->playerInterface()->Play();
+            }
+        }
+    );
+
     QAction *volumeupAction = m_actionCollection->addAction(QStringLiteral("mediavolumeup"));
     volumeupAction->setText(i18n("Media volume up"));
     KGlobalAccel::setGlobalShortcut(volumeupAction, QKeySequence());
