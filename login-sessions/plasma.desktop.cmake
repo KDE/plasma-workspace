@@ -99,6 +99,7 @@ Comment[sr@ijekavian]=Плазма од КДЕ‑а
 Comment[sr@ijekavianlatin]=Plasma od KDE‑a
 Comment[sr@latin]=Plasma od KDE‑a
 Comment[sv]=Plasma av KDE
+Comment[tg]=Plasma аз ҷониби KDE
 Comment[tr]=KDE Plasma
 Comment[uk]=Плазма KDE
 Comment[vi]=Plasma, do KDE
