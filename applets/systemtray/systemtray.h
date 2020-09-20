@@ -32,7 +32,9 @@ class QQuickItem;
 namespace Plasma {
     class Service;
 }
+class PlasmoidRegistry;
 class PlasmoidModel;
+class SystemTraySettings;
 class StatusNotifierModel;
 class SystemTrayModel;
 class SortedSystemTrayModel;
@@ -42,7 +44,6 @@ class SystemTray : public Plasma::Containment
     Q_OBJECT
     Q_PROPERTY(QAbstractItemModel* systemTrayModel READ sortedSystemTrayModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel* configSystemTrayModel READ configSystemTrayModel CONSTANT)
-    Q_PROPERTY(QStringList allowedPlasmoids READ allowedPlasmoids WRITE setAllowedPlasmoids NOTIFY allowedPlasmoidsChanged)
 
 public:
     SystemTray( QObject *parent, const QVariantList &args );
@@ -51,22 +52,10 @@ public:
     void init() override;
 
     void restoreContents(KConfigGroup &group) override;
-    void restorePlasmoids();
-
-    void configChanged() override;
 
     QAbstractItemModel *sortedSystemTrayModel();
 
     QAbstractItemModel *configSystemTrayModel();
-
-    QStringList allowedPlasmoids() const;
-    void setAllowedPlasmoids(const QStringList &allowed);
-
-    //Creates an applet *if not already existing*
-    void newTask(const QString &task);
-
-    //cleans all instances of a given applet
-    void cleanupTask(const QString &task);
 
     //Invokable utilities
     /**
@@ -85,39 +74,34 @@ public:
      */
     Q_INVOKABLE QPointF popupPosition(QQuickItem* visualParent, int x, int y);
 
+    /**
+     * @brief isSystemTrayApplet checks if applet is allowed in the System Tray
+     * @param appletId also known as plugin Id
+     * @return true if it is a system tray applet, otherwise false
+     */
     Q_INVOKABLE bool isSystemTrayApplet(const QString &appletId);
 
 private Q_SLOTS:
-    void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher);
+    //synchronizes with configuration and deletes not allowed applets
+    void onEnabledAppletsChanged();
+    //creates an applet *if not already existing*
+    void startApplet(const QString &pluginId);
+    //deletes/stops all instances of a given applet
+    void stopApplet(const QString &pluginId);
 
 private:
-    void serviceRegistered(const QString &service);
-    void serviceUnregistered(const QString &service);
-
-Q_SIGNALS:
-    void allowedPlasmoidsChanged();
-    void configurationChanged(const KConfigGroup &config);
-
-private:
-    void initDBusActivatables();
     SystemTrayModel *systemTrayModel();
 
-    QStringList m_defaultPlasmoids;
-    QHash<QString /*plugin name*/, KPluginMetaData> m_systrayApplets;
-    QHash<QString /*plugin name*/, QRegExp /*DBus Service*/> m_dbusActivatableTasks;
+    QPointer<SystemTraySettings> m_settings;
+    QPointer<PlasmoidRegistry> m_plasmoidRegistry;
 
-    QStringList m_allowedPlasmoids;
+    PlasmoidModel *m_plasmoidModel;
     StatusNotifierModel *m_statusNotifierModel;
     SystemTrayModel *m_systemTrayModel;
     SortedSystemTrayModel *m_sortedSystemTrayModel;
     SortedSystemTrayModel *m_configSystemTrayModel;
-    QHash<QString, int> m_knownPlugins;
 
-    QDBusServiceWatcher *m_sessionServiceWatcher;
-    QDBusServiceWatcher *m_systemServiceWatcher;
-    QHash<QString, int> m_dbusServiceCounts;
-    bool m_dbusSessionServiceNamesFetched = false;
-    bool m_dbusSystemServiceNamesFetched = false;
+    QHash<QString /*plugin id*/, int /*config group*/> m_configGroupIds;
 };
 
 #endif

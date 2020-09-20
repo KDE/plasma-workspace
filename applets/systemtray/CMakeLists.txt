@@ -3,6 +3,9 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.private.syst
 plasma_install_package(package org.kde.plasma.private.systemtray)
 
 set(systemtray_SRCS
+    dbusserviceobserver.cpp
+    plasmoidregistry.cpp
+    systemtraysettings.cpp
     systemtraymodel.cpp
     sortedsystemtraymodel.cpp
     systemtray.cpp

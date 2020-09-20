@@ -81,14 +81,6 @@ MouseArea {
         }
     }
 
-    Connections {
-        target: plasmoid.configuration
-
-        function onExtraItemsChanged() {
-            plasmoid.nativeInterface.allowedPlasmoids = plasmoid.configuration.extraItems
-        }
-    }
-
     CurrentItemHighLight {
         property alias activeApplet: root.activeApplet
         property alias dialogVisible: dialog.visible

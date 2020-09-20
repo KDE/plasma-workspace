@@ -1,6 +1,9 @@
 include(ECMAddTests)
 
 set(systemtraymodel_test_SRCS
+    ../dbusserviceobserver.cpp
+    ../plasmoidregistry.cpp
+    ../systemtraysettings.cpp
     ../systemtraymodel.cpp
     ../sortedsystemtraymodel.cpp
 )
@@ -14,11 +17,13 @@ add_library(systemtraymodel_test STATIC ${systemtraymodel_test_SRCS})
 
 target_link_libraries(systemtraymodel_test
     Qt5::Core
+    Qt5::DBus
     Qt5::Quick
-    KF5::Plasma
+    KF5::CoreAddons
     KF5::I18n
     KF5::ItemModels
-    KF5::CoreAddons
+    KF5::Plasma
+    KF5::XmlGui
 )
 
 ecm_add_tests(systemtraymodeltest.cpp

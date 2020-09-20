@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2019 Konrad Materka <materka@gmail.com>                 *
+ *   Copyright (C) 2020 Konrad Materka <materka@gmail.com>                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -33,6 +33,13 @@ namespace Plasma {
     class PluginLoader;
 }
 
+class PlasmoidRegistry;
+class SystemTraySettings;
+
+/**
+ * @brief Base class for models used in System Tray.
+ *
+ */
 class BaseModel: public QAbstractListModel
 {
     Q_OBJECT
@@ -47,22 +54,27 @@ public:
         LastBaseRole
     };
 
-    explicit BaseModel(QObject *parent = nullptr);
+    explicit BaseModel(QPointer<SystemTraySettings> settings, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
 
-public slots:
-    void onConfigurationChanged(const KConfigGroup &config);
+private Q_SLOTS:
+    void onConfigurationChanged();
 
 protected:
     Plasma::Types::ItemStatus calculateEffectiveStatus(bool canRender, Plasma::Types::ItemStatus status, QString itemId) const;
 
 private:
+    QPointer<SystemTraySettings> m_settings;
+
     bool m_showAllItems;
     QStringList m_shownItems;
     QStringList m_hiddenItems;
 };
 
+/**
+ * @brief Data model for plasmoids/applets.
+ */
 class PlasmoidModel: public BaseModel
 {
     Q_OBJECT
@@ -72,17 +84,19 @@ public:
         HasApplet
     };
 
-    explicit PlasmoidModel(QObject *parent = nullptr);
-
-    void init(const QList<KPluginMetaData> appletMetaDataList);
+    explicit PlasmoidModel(QPointer<SystemTraySettings> settings, QPointer<PlasmoidRegistry> plasmoidRegistry, QObject *parent = nullptr);
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-public slots:
+public Q_SLOTS:
     void addApplet(Plasma::Applet *applet);
     void removeApplet(Plasma::Applet *applet);
+
+private Q_SLOTS:
+    void appendRow(const KPluginMetaData &pluginMetaData);
+    void removeRow(const QString &pluginId);
 
 private:
     struct Item {
@@ -90,12 +104,16 @@ private:
         Plasma::Applet *applet = nullptr;
     };
 
-    void appendRow(const KPluginMetaData &pluginMetaData);
     int indexOfPluginId(const QString &pluginId) const;
+
+    QPointer<PlasmoidRegistry> m_plasmoidRegistry;
 
     QVector<Item> m_items;
 };
 
+/**
+ * @brief Data model for Status Notifier Items (SNI).
+ */
 class StatusNotifierModel : public BaseModel, public Plasma::DataEngineConsumer {
     Q_OBJECT
 public:
@@ -119,13 +137,13 @@ public:
         WindowId
     };
 
-    StatusNotifierModel(QObject* parent = nullptr);
+    StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject* parent = nullptr);
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-public slots:
+public Q_SLOTS:
     void addSource(const QString &source);
     void removeSource(const QString &source);
     void dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data);
@@ -142,6 +160,9 @@ private:
     QVector<Item> m_items;
 };
 
+/**
+ * @brief Cantenating model for system tray, that can expose multiple data models as one.
+ */
 class SystemTrayModel : public KConcatenateRowsProxyModel
 {
     Q_OBJECT

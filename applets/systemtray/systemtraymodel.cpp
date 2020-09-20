@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) 2019 Konrad Materka <materka@gmail.com>                 *
+ *   Copyright (C) 2020 Konrad Materka <materka@gmail.com>                 *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -20,20 +20,26 @@
 #include "systemtraymodel.h"
 #include "debug.h"
 
-#include <QIcon>
-#include <QQuickItem>
+#include "plasmoidregistry.h"
+#include "systemtraysettings.h"
 
+#include <KLocalizedString>
 #include <Plasma/Applet>
 #include <Plasma/DataContainer>
 #include <Plasma/Service>
 #include <PluginLoader>
 
-#include <KLocalizedString>
+#include <QIcon>
+#include <QQuickItem>
 
-BaseModel::BaseModel(QObject *parent)
-    : QAbstractListModel(parent),
-      m_showAllItems(false)
+BaseModel::BaseModel(QPointer<SystemTraySettings> settings, QObject *parent) :
+    QAbstractListModel(parent),
+    m_settings(settings),
+    m_showAllItems(m_settings->isShowAllItems()),
+    m_shownItems(m_settings->shownItems()),
+    m_hiddenItems(m_settings->hiddenItems())
 {
+    connect(m_settings, &SystemTraySettings::configurationChanged, this, &BaseModel::onConfigurationChanged);
 }
 
 QHash<int, QByteArray> BaseModel::roleNames() const
@@ -50,17 +56,11 @@ QHash<int, QByteArray> BaseModel::roleNames() const
     };
 }
 
-void BaseModel::onConfigurationChanged(const KConfigGroup &config)
+void BaseModel::onConfigurationChanged()
 {
-    if (!config.isValid()) {
-        return;
-    }
-
-    const KConfigGroup generalGroup = config.group("General");
-
-    m_showAllItems = generalGroup.readEntry("showAllItems", false);
-    m_shownItems = generalGroup.readEntry("shownItems", QStringList());
-    m_hiddenItems = generalGroup.readEntry("hiddenItems", QStringList());
+    m_showAllItems = m_settings->isShowAllItems();
+    m_shownItems = m_settings->shownItems();
+    m_hiddenItems = m_settings->hiddenItems();
 
     for (int i = 0; i < rowCount(); i++) {
         dataChanged(index(i, 0), index(i, 0), {static_cast<int>(BaseModel::BaseRole::EffectiveStatus)});
@@ -102,12 +102,14 @@ static QString plasmoidCategoryForMetadata(const KPluginMetaData &metadata)
     return category;
 }
 
-PlasmoidModel::PlasmoidModel(QObject *parent) : BaseModel(parent)
+PlasmoidModel::PlasmoidModel(QPointer<SystemTraySettings> settings, QPointer<PlasmoidRegistry> plasmoidRegistry, QObject *parent) :
+    BaseModel(settings, parent),
+    m_plasmoidRegistry(plasmoidRegistry)
 {
-}
+    connect(m_plasmoidRegistry, &PlasmoidRegistry::pluginRegistered, this, &PlasmoidModel::appendRow);
+    connect(m_plasmoidRegistry, &PlasmoidRegistry::pluginUnregistered, this, &PlasmoidModel::removeRow);
 
-void PlasmoidModel::init(const QList<KPluginMetaData> appletMetaDataList)
-{
+    const auto appletMetaDataList = m_plasmoidRegistry->systemTrayApplets();
     for (const auto &info : appletMetaDataList) {
         if (!info.isValid() || info.value(QStringLiteral("X-Plasma-NotificationArea")) != "true") {
             continue;
@@ -210,9 +212,9 @@ void PlasmoidModel::removeApplet(Plasma::Applet *applet)
 {
     int idx = indexOfPluginId(applet->pluginMetaData().pluginId());
     if (idx > 0) {
-        applet->disconnect(this);
         m_items[idx].applet = nullptr;
         dataChanged(index(idx, 0), index(idx, 0));
+        applet->disconnect(this);
     }
 }
 
@@ -228,6 +230,14 @@ void PlasmoidModel::appendRow(const KPluginMetaData &pluginMetaData)
     endInsertRows();
 }
 
+void PlasmoidModel::removeRow(const QString &pluginId)
+{
+    int idx = indexOfPluginId(pluginId);
+    beginRemoveRows(QModelIndex(), idx, idx);
+    m_items.removeAt(idx);
+    endRemoveRows();
+}
+
 int PlasmoidModel::indexOfPluginId(const QString &pluginId) const {
     for (int i = 0; i < rowCount(); i++) {
         if (m_items[i].pluginMetaData.pluginId() == pluginId) {
@@ -238,7 +248,7 @@ int PlasmoidModel::indexOfPluginId(const QString &pluginId) const {
 }
 
 
-StatusNotifierModel::StatusNotifierModel(QObject *parent) : BaseModel(parent)
+StatusNotifierModel::StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject *parent) : BaseModel(settings, parent)
 {
     m_dataEngine = dataEngine(QStringLiteral("statusnotifieritem"));
 
