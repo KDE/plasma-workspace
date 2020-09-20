@@ -130,7 +130,7 @@ void MultiplexedService::enableGlobalShortcuts()
     KGlobalAccel::setGlobalShortcut(stopAction, Qt::Key_MediaStop);
     connect(stopAction, &QAction::triggered, this,
         [this] {
-            if (m_control && m_control->capabilities() & PlayerContainer::CanControl) {
+            if (m_control && m_control->capabilities() & PlayerContainer::CanStop) {
                 m_control->playerInterface()->Stop();
             }
         }
