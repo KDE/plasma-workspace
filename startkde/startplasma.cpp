@@ -368,10 +368,10 @@ bool useSystemdBoot()
         return true;
     }
 
-    // xdg-desktop.target is shipped with an upcoming systemd and shows we have a generator
-    // for creating units out of autostart files
-    // only enable if that also exists, unless we're forced above
-    return hasSystemdService(QStringLiteral("xdg-desktop.target"));
+    // xdg-desktop-autostart.target is shipped with an systemd 246 and provides a generator
+    // for creating units out of existing autostart files
+    // only enable our systemd boot if that exists, unless the user has forced the systemd boot above
+    return hasSystemdService(QStringLiteral("xdg-desktop-autostart.target"));
 }
 
 bool startPlasmaSession(bool wayland)
