@@ -84,7 +84,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kprocess.h>
 #include <kshell.h>
 
+#include <KApplicationTrader>
 #include <KIO/CommandLauncherJob>
+#include <KIO/DesktopExecParser>
+#include <KService>
 
 #include <KScreenLocker/KsldApp>
 
@@ -132,6 +135,13 @@ void KSMServer::startApplication( const QStringList& cmd, const QString& clientM
     const QString app = command.takeFirst();
     const QStringList argList = command;
     auto *job = new KIO::CommandLauncherJob(app, argList);
+    auto apps = KApplicationTrader::query([&app] (const KService::Ptr service) {
+        const QString binary = KIO::DesktopExecParser::executablePath(service->exec());
+        return !binary.isEmpty() && app.endsWith(binary);
+    });
+    if (!apps.empty()) {
+        job->setDesktopName(apps[0]->desktopEntryName());
+    }
     job->start();
 }
 
