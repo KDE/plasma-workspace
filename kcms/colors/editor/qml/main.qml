@@ -34,6 +34,8 @@ Kirigami.AbstractApplicationWindow {
     height: Kirigami.Units.gridUnit * 48
 
     header: QQC2.ToolBar {
+        Kirigami.Theme.colorSet: Kirigami.Theme.Header
+        Kirigami.Theme.inherit: false
         contentItem: RowLayout {
             // For some reason, accessing the spacing property doesn't work if you use contentItem.spacing
             id: toolBarLayout
@@ -54,39 +56,37 @@ Kirigami.AbstractApplicationWindow {
                 actions: [
                     Kirigami.Action {
                         iconName: "color-picker"
-                        text: i18n("Locate Color Role")
+                        text: "Locate Color Role"
                         shortcut: "Ctrl+L"
                     },
                     Kirigami.Action {
                         iconName: "document-save"
-                        text: i18n("Save")
+                        text: "Save"
                         shortcut: "Ctrl+S"
                     },
                     Kirigami.Action {
                         iconName: "document-save-as"
-                        text: i18n("Save As...")
+                        text: "Save As..."
                         shortcut: "Ctrl+Shift+S"
                     },
                     Kirigami.Action {
                         iconName: "edit-undo"
-                        text: i18n("Undo")
+                        text: "Undo"
                         shortcut: "Ctrl+Z"
                     },
                     Kirigami.Action {
                         iconName: "edit-redo"
-                        text: i18n("Redo")
+                        text: "Redo"
                         shortcut: "Ctrl+Shift+Z"
                     },
                     Kirigami.Action {
                         iconName: "edit-reset"
-                        text: i18n("Reset All")
+                        text: "Reset All"
                     }
                     // Upload button from old kcolorscheme UI isn't available for QML
                 ]
             }
         }
-        
-        
     }
 
     RowLayout {

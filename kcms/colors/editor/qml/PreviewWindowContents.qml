@@ -10,8 +10,8 @@ import "qrc:/qml/previewwindowcontentscomponents"
 
 Kirigami.ApplicationItem {
     id: root
-    clip: true
     Kirigami.Theme.inherit: false
+    clip: true
     
     /*header: QQC2.ToolBar {
         anchors {
@@ -43,7 +43,7 @@ Kirigami.ApplicationItem {
         }
     }*/
     
-    readonly property string fakeControlToolTip: i18n("This control does nothing.")
+    readonly property string fakeControlToolTip: "This control does nothing."
     pageStack.defaultColumnWidth: Kirigami.Units.gridUnit * 7
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Auto
 //    pageStack.globalToolBar.toolbarActionAlignment: Qt.AlignLeft

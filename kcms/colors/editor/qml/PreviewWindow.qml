@@ -23,7 +23,6 @@ import org.kde.kirigami 2.12 as Kirigami
 
 Kirigami.ShadowedRectangle {
     id: root
-    
     implicitWidth: titleBar.implicitWidth
     implicitHeight: root.implicitWidth
     

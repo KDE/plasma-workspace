@@ -9,26 +9,26 @@ import org.kde.kirigami 2.13 as Kirigami
 
 Kirigami.Page {
     id: root
-    background: Rectangle {color: "transparent"}
+//     background: undefined
     //TODO: use real colorscheme name
-    title: i18n("Breeze Dark")
+    title: "Breeze Dark"
     
     actions {
         main: Kirigami.Action {
             iconName: "document-save"
-            text: i18n("Action 1")
+            text: "Action 1"
             shortcut: "Ctrl+S"
 //             tooltip: 
         }
         left: Kirigami.Action {
             iconName: "edit-undo"
-            text: i18n("Action 2")
+            text: "Action 2"
             shortcut: "Ctrl+Z"
 //             tooltip: root.fakeControlToolTip
         }
         right: Kirigami.Action {
             iconName: "edit-redo"
-            text: i18n("Action 3")
+            text: "Action 3"
             shortcut: "Ctrl+Shift+Z"
 //             tooltip: root.fakeControlToolTip
         }
