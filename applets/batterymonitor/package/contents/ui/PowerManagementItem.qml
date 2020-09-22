@@ -25,7 +25,9 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0
 
 ColumnLayout {
+    id: powerManagementHeadingColumn
     property alias enabled: pmCheckBox.checked
+    property bool pluggedIn
 
     spacing: 0
 
@@ -69,7 +71,7 @@ ColumnLayout {
         InhibitionHint {
             Layout.fillWidth: true
             readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
-            visible: powerManagementHeadingColumn.pluggedIn && typeof chargeStopThreshold === "number" && chargeStopThreshold < 100
+            visible: powerManagementHeadingColumn.pluggedIn && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100
             iconSource: "kt-speed-limits" // FIXME good icon
             text: i18n("Your battery is configured to only charge up to %1%.", chargeStopThreshold || 0)
         }
