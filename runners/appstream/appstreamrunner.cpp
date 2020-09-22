@@ -29,6 +29,7 @@
 
 #include <KLocalizedString>
 #include <KApplicationTrader>
+#include <KSycoca>
 
 #include "debug.h"
 
@@ -86,6 +87,10 @@ void InstallerRunner::match(Plasma::RunnerContext &context)
         if (component.kind() != AppStream::Component::KindDesktopApp)
             continue;
 
+        // KApplicationTrader uses KService which uses KSycoca which holds
+        // KDirWatch instances to monitor changes. We don't need this on
+        // our runner threads - let's not needlessly allocate inotify instances.
+        KSycoca::disableAutoRebuild();
         const QString componentId = component.id();
         const auto servicesFound = KApplicationTrader::query([&componentId] (const KService::Ptr &service) {
             if (service->exec().isEmpty())
