@@ -35,5 +35,3 @@ ColorsSettings *ColorsData::settings() const
 {
     return m_settings;
 }
-
-#include "colorsdata.moc"
