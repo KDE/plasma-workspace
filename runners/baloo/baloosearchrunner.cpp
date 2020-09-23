@@ -49,6 +49,7 @@ int main (int argc, char **argv)
     if (!config.fileIndexingEnabled()) {
         return -1;
     }
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     QApplication::setQuitOnLastWindowClosed(false);
     QApplication app(argc, argv); //KRun needs widgets for error message boxes
     SearchRunner r;
