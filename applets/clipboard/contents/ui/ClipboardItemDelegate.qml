@@ -21,6 +21,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
@@ -28,7 +29,7 @@ PlasmaExtras.ListItem {
     id: menuItem
 
     property bool supportsBarcodes
-    property int maximumNumberOfPreviews: Math.floor(width / (units.gridUnit * 4 + units.smallSpacing))
+    property int maximumNumberOfPreviews: Math.floor(width / (PlasmaCore.Units.gridUnit * 4 + PlasmaCore.Units.smallSpacing))
     readonly property real gradientThreshold: (label.width - toolButtonsLoader.width) / label.width
 
     signal itemSelected(string uuid)
@@ -38,7 +39,7 @@ PlasmaExtras.ListItem {
     signal action(string uuid)
 
     // the 1.6 comes from ToolButton's default height
-    height: Math.max(label.height, Math.round(units.gridUnit * 1.6)) + 2 * units.smallSpacing
+    height: Math.max(label.height, Math.round(PlasmaCore.Units.gridUnit * 1.6)) + 2 * PlasmaCore.Units.smallSpacing
 
     enabled: true
 
@@ -96,7 +97,7 @@ PlasmaExtras.ListItem {
         visible: !menuItem.ListView.isCurrentItem
         anchors {
             left: parent.left
-            leftMargin: units.gridUnit / 2 - listMargins.left
+            leftMargin: PlasmaCore.Units.gridUnit / 2 - listMargins.left
             right: parent.right
             verticalCenter: parent.verticalCenter
         }

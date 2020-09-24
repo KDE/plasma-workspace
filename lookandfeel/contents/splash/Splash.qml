@@ -19,6 +19,7 @@
 
 import QtQuick 2.5
 import QtQuick.Window 2.2
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 Rectangle {
     id: root
@@ -45,14 +46,14 @@ Rectangle {
             id: units
             text: "M"
             property int gridUnit: boundingRect.height
-            property int largeSpacing: units.gridUnit
+            property int largeSpacing: PlasmaCore.Units.gridUnit
             property int smallSpacing: Math.max(2, gridUnit/4)
         }
 
         Image {
             id: logo
             //match SDDM/lockscreen avatar positioning
-            property real size: units.gridUnit * 8
+            property real size: PlasmaCore.Units.gridUnit * 8
 
             anchors.centerIn: parent
 
@@ -68,8 +69,8 @@ Rectangle {
             y: parent.height - (parent.height - logo.y) / 2 - height/2
             anchors.horizontalCenter: parent.horizontalCenter
             source: "images/busywidget.svgz"
-            sourceSize.height: units.gridUnit * 2
-            sourceSize.width: units.gridUnit * 2
+            sourceSize.height: PlasmaCore.Units.gridUnit * 2
+            sourceSize.width: PlasmaCore.Units.gridUnit * 2
             RotationAnimator on rotation {
                 id: rotationAnimator
                 from: 0
@@ -79,11 +80,11 @@ Rectangle {
             }
         }
         Row {
-            spacing: units.smallSpacing*2
+            spacing: PlasmaCore.Units.smallSpacing*2
             anchors {
                 bottom: parent.bottom
                 right: parent.right
-                margins: units.gridUnit
+                margins: PlasmaCore.Units.gridUnit
             }
             Text {
                 color: "#eff0f1"
@@ -95,8 +96,8 @@ Rectangle {
             }
             Image {
                 source: "images/kde.svgz"
-                sourceSize.height: units.gridUnit * 2
-                sourceSize.width: units.gridUnit * 2
+                sourceSize.height: PlasmaCore.Units.gridUnit * 2
+                sourceSize.width: PlasmaCore.Units.gridUnit * 2
             }
         }
     }

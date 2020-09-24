@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 import QtQuick 2.0
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents // For Highlight
 
 import org.kde.kirigami 2.12 as Kirigami
@@ -59,7 +60,7 @@ PlasmaExtras.ScrollArea {
             id: emptyHint
 
             anchors.centerIn: parent
-            width: parent.width - (units.largeSpacing * 4)
+            width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
 
             visible: menuListView.count === 0
             text: i18n("Clipboard is empty")

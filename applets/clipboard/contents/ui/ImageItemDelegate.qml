@@ -21,11 +21,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import QtQuick 2.0
 
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 KQuickControlsAddons.QPixmapItem {
     id: previewPixmap
     width: Math.min(nativeWidth, width)
-    height: Math.min(nativeHeight, Math.round(width * (nativeHeight/nativeWidth) + units.smallSpacing * 2))
+    height: Math.min(nativeHeight, Math.round(width * (nativeHeight/nativeWidth) + PlasmaCore.Units.smallSpacing * 2))
     pixmap: DecorationRole
     fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
 }

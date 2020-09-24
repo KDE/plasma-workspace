@@ -20,14 +20,14 @@
 import QtQuick 2.12
 
 import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager 
-
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 ContainmentLayoutManager.ResizeHandle {
-    width: overlay.touchInteraction ? units.gridUnit * 2 : units.gridUnit
+    width: overlay.touchInteraction ? PlasmaCore.Units.gridUnit * 2 : PlasmaCore.Units.gridUnit
     height: width
     z: 999
     Rectangle {
-        color: resizeBlocked ? theme.negativeTextColor : theme.backgroundColor
+        color: resizeBlocked ? PlasmaCore.Theme.negativeTextColor : PlasmaCore.Theme.backgroundColor
         anchors.fill: parent
         radius: width
         opacity: 0.6
@@ -35,7 +35,7 @@ ContainmentLayoutManager.ResizeHandle {
     scale: overlay.open ? 1 : 0
     Behavior on scale {
         NumberAnimation {
-            duration: units.longDuration
+            duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutQuad
         }
     }

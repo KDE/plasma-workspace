@@ -20,21 +20,22 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import QtQuick 2.0
 
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 Item {
     id: previewItem
-    height: units.gridUnit * 4 + units.smallSpacing * 2
+    height: PlasmaCore.Units.gridUnit * 4 + PlasmaCore.Units.smallSpacing * 2
 
     ListView {
         id: previewList
         model: DisplayRole.split(" ", maximumNumberOfPreviews)
-        property int itemWidth: units.gridUnit * 4
-        property int itemHeight: units.gridUnit * 4
+        property int itemWidth: PlasmaCore.Units.gridUnit * 4
+        property int itemHeight: PlasmaCore.Units.gridUnit * 4
         interactive: false
 
-        spacing: units.smallSpacing
+        spacing: PlasmaCore.Units.smallSpacing
         orientation: Qt.Horizontal
         width: (itemWidth + spacing) * model.length
         anchors {
@@ -77,7 +78,7 @@ Item {
                 id: overlay
                 color: theme.textColor
                 opacity: 0.6
-                height: units.gridUnit
+                height: PlasmaCore.Units.gridUnit
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -92,8 +93,8 @@ Item {
                     verticalCenter: overlay.verticalCenter
                     left: overlay.left
                     right: overlay.right
-                    leftMargin: units.smallSpacing
-                    rightMargin: units.smallSpacing
+                    leftMargin: PlasmaCore.Units.smallSpacing
+                    rightMargin: PlasmaCore.Units.smallSpacing
                 }
                 elide: Text.ElideRight
                 horizontalAlignment: Text.AlignHCenter
@@ -113,7 +114,7 @@ Item {
             left: previewList.right
             right: parent.right
             bottom: parent.bottom
-            margins: units.smallSpacing
+            margins: PlasmaCore.Units.smallSpacing
 
         }
         verticalAlignment: Text.AlignBottom

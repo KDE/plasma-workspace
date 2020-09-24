@@ -20,6 +20,7 @@
 import QtQuick 2.0
 import QtQuick.Controls.Private 1.0
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 MouseArea {
@@ -40,18 +41,18 @@ MouseArea {
         color: "white"
         anchors {
             fill: parent
-            margins: units.smallSpacing
+            margins: PlasmaCore.Units.smallSpacing
         }
         opacity: 0.8
         Rectangle {
             color: cfg_Color
             anchors {
                 fill: parent
-                margins: units.smallSpacing * 2
+                margins: PlasmaCore.Units.smallSpacing * 2
             }
             QIconItem {
                 anchors.centerIn: parent
-                width: units.iconSizes.large
+                width: PlasmaCore.Units.iconSizes.large
                 height: width
                 icon: "view-preview"
                 visible: !walliePreview.visible
@@ -83,7 +84,7 @@ MouseArea {
                 anchors {
                     top: parent.top
                     right: parent.right
-                    margins: units.smallSpacing
+                    margins: PlasmaCore.Units.smallSpacing
                 }
                 icon.name: "list-remove"
                 flat: false
@@ -100,12 +101,12 @@ MouseArea {
     Rectangle {
         opacity: selected ? 1.0 : 0
         anchors.fill: background
-        border.width: units.smallSpacing * 2
+        border.width: PlasmaCore.Units.smallSpacing * 2
         border.color: syspal.highlight
         color: "transparent"
         Behavior on opacity {
             PropertyAnimation {
-                duration: units.longDuration
+                duration: PlasmaCore.Units.longDuration
                 easing.type: Easing.OutQuad
             }
         }

@@ -201,7 +201,7 @@ QtLayouts.ColumnLayout {
             visible: cfg_dateFormat == "custom"
             wrapMode: Text.Wrap
             QtLayouts.Layout.preferredWidth: QtLayouts.Layout.maximumWidth
-            QtLayouts.Layout.maximumWidth: units.gridUnit * 16
+            QtLayouts.Layout.maximumWidth: Kirigami.Units.gridUnit * 16
 
             onLinkActivated: Qt.openUrlExternally(link)
             MouseArea {
@@ -225,7 +225,7 @@ QtLayouts.ColumnLayout {
                 QtLayouts.Layout.fillWidth: true
                 currentIndex: 0
                 // ComboBox's sizing is just utterly broken
-                QtLayouts.Layout.minimumWidth: units.gridUnit * 10
+                QtLayouts.Layout.minimumWidth: Kirigami.Units.gridUnit * 10
                 model: fontsModel
                 // doesn't autodeduce from model because we manually populate it
                 textRole: "text"

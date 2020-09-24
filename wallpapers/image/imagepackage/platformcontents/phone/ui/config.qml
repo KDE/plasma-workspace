@@ -19,7 +19,7 @@
 import QtQuick 2.0
 
 //We need units from it
-import org.kde.plasma.core 2.0 as Plasmacore
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrolsaddons 2.0
 import QtQuick.Controls 2.8 as QQC2
@@ -51,7 +51,7 @@ Item {
             model: imageWallpaper.wallpaperModel
             currentIndex: -1
 
-            cellWidth: Math.floor(wallpapersGrid.width / Math.max(Math.floor(wallpapersGrid.width / (units.gridUnit*12)), 3))
+            cellWidth: Math.floor(wallpapersGrid.width / Math.max(Math.floor(wallpapersGrid.width / (PlasmaCore.Units.gridUnit*12)), 3))
             cellHeight: cellWidth / (plasmoid.width / plasmoid.height)
 
             anchors.margins: 4

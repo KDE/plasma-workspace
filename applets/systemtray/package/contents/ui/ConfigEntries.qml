@@ -72,8 +72,8 @@ ColumnLayout {
         ListView {
             id: itemsList
 
-            property var visibilityColumnWidth: units.gridUnit
-            property var keySequenceColumnWidth: units.gridUnit
+            property var visibilityColumnWidth: PlasmaCore.Units.gridUnit
+            property var keySequenceColumnWidth: PlasmaCore.Units.gridUnit
 
             clip: true
 
@@ -123,7 +123,7 @@ ColumnLayout {
                         Layout.fillWidth: true
 
                         Kirigami.Icon {
-                            width: units.iconSizes.small
+                            width: PlasmaCore.Units.iconSizes.small
                             height: width
                             source: model.decoration
                         }

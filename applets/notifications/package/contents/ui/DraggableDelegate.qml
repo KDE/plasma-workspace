@@ -50,6 +50,6 @@ MouseArea {
         target: delegate
         property:"x"
         to: 0
-        duration: units.longDuration
+        duration: PlasmaCore.Units.longDuration
     }
 }

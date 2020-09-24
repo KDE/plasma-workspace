@@ -22,6 +22,7 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as Plasmacore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.mobilecomponents 0.2 as MobileComponets
 
 Item {
@@ -58,7 +59,7 @@ Item {
             right: parent.right
         }
 
-        delegateWidth: Math.floor(wallpapersGrid.width / Math.max(Math.floor(wallpapersGrid.width / (units.gridUnit*12)), 3))
+        delegateWidth: Math.floor(wallpapersGrid.width / Math.max(Math.floor(wallpapersGrid.width / (PlasmaCore.Units.gridUnit*12)), 3))
         delegateHeight: delegateWidth / 1.6
 
         delegate: WallpaperDelegate {}

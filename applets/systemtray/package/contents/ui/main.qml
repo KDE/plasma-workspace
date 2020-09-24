@@ -30,20 +30,20 @@ import "items"
 MouseArea {
     id: root
 
-    Layout.minimumWidth: vertical ? units.iconSizes.small : tasksGrid.implicitWidth + (expander.visible ? expander.implicitWidth : 0) + units.smallSpacing
+    Layout.minimumWidth: vertical ? PlasmaCore.Units.iconSizes.small : tasksGrid.implicitWidth + (expander.visible ? expander.implicitWidth : 0) + PlasmaCore.Units.smallSpacing
 
-    Layout.minimumHeight: vertical ? tasksGrid.implicitHeight + (expander.visible ? expander.implicitHeight : 0) + units.smallSpacing : units.smallSpacing
+    Layout.minimumHeight: vertical ? tasksGrid.implicitHeight + (expander.visible ? expander.implicitHeight : 0) + PlasmaCore.Units.smallSpacing : PlasmaCore.Units.smallSpacing
 
     Layout.preferredHeight: Layout.minimumHeight
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
     // The icon size to display when not using the auto-scaling setting
-    readonly property int smallIconSize: units.iconSizes.smallMedium
+    readonly property int smallIconSize: PlasmaCore.Units.iconSizes.smallMedium
 
     // Used only by AbstractItem, but it's easiest to keep it here since it
     // uses dimensions from this item to calculate the final value
-    readonly property int itemSize: autoSize ? units.roundToIconSize(Math.min(Math.min(width / rowsOrColumns, height / rowsOrColumns), units.iconSizes.enormous)) : smallIconSize
+    readonly property int itemSize: autoSize ? PlasmaCore.Units.roundToIconSize(Math.min(Math.min(width / rowsOrColumns, height / rowsOrColumns), PlasmaCore.Units.iconSizes.enormous)) : smallIconSize
 
     // The rest are derived properties; do not modify
     readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
@@ -147,7 +147,7 @@ MouseArea {
 
         GridView {
             id: tasksGrid
-            readonly property int smallSizeCellLength: root.cellThickness > root.smallIconSize ? root.smallIconSize + units.smallSpacing * 2
+            readonly property int smallSizeCellLength: root.cellThickness > root.smallIconSize ? root.smallIconSize + PlasmaCore.Units.smallSpacing * 2
                                                                                                : root.smallIconSize
             readonly property int autoSizeCellLength: root.cellThickness / root.rowsOrColumns
             readonly property int totalLength: root.vertical ? cellHeight * Math.round(count / root.rowsOrColumns)
@@ -182,7 +182,7 @@ MouseArea {
                     from: 0
                     to: 1
                     easing.type: Easing.InOutQuad
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                 }
             }
 
@@ -193,7 +193,7 @@ MouseArea {
                     property: "scale"
                     to: 1
                     easing.type: Easing.InOutQuad
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                 }
             }
 
@@ -201,7 +201,7 @@ MouseArea {
                 NumberAnimation {
                     properties: "x,y"
                     easing.type: Easing.InOutQuad
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                 }
             }
         }

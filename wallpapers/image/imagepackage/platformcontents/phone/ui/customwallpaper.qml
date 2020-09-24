@@ -19,7 +19,7 @@
 import QtQuick 2.0
 import Qt.labs.folderlistmodel 2.1
 //We need units from it
-import org.kde.plasma.core 2.0 as Plasmacore
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrolsaddons 2.0
 import QtQuick.Controls 2.8 as QQC2
@@ -45,7 +45,7 @@ Rectangle {
             }
             currentIndex: -1
 
-            cellWidth: Math.floor(customGrid.width / Math.max(Math.floor(customGrid.width / (units.gridUnit*12)), 3))
+            cellWidth: Math.floor(customGrid.width / Math.max(Math.floor(customGrid.width / (PlasmaCore.Units.gridUnit*12)), 3))
             cellHeight: cellWidth / (imageWallpaper.width / imageWallpaper.height)
 
             anchors.margins: 4
@@ -63,12 +63,12 @@ Rectangle {
                     color: "white"
                     anchors {
                         fill: parent
-                        margins: units.smallSpacing
+                        margins: PlasmaCore.Units.smallSpacing
                     }
                     Image {
                         anchors {
                             fill: parent
-                            margins: units.smallSpacing * 2
+                            margins: PlasmaCore.Units.smallSpacing * 2
                         }
                         source: model.fileURL
                     }

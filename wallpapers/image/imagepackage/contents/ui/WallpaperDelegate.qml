@@ -69,7 +69,7 @@ KCM.GridDelegate {
 
         QIconItem {
             anchors.centerIn: parent
-            width: units.iconSizes.large
+            width: PlasmaCore.Units.iconSizes.large
             height: width
             icon: "view-preview"
             visible: !walliePreview.visible
