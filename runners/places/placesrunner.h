@@ -24,24 +24,6 @@
 #include <krunner/abstractrunner.h>
 #include <kfileplacesmodel.h>
 
-class PlacesRunner;
-
-class PlacesRunnerHelper : public QObject
-{
-    Q_OBJECT
-
-public:
-    explicit PlacesRunnerHelper(PlacesRunner *runner);
-
-public Q_SLOTS:
-    void match(Plasma::RunnerContext *context);
-    void openDevice(const QString &udi);
-
-private:
-    KFilePlacesModel m_places;
-    QString m_pendingUdi;
-};
-
 class PlacesRunner : public Plasma::AbstractRunner
 {
     Q_OBJECT
@@ -58,7 +40,9 @@ Q_SIGNALS:
     void doMatch(Plasma::RunnerContext *context);
 
 private:
-    PlacesRunnerHelper *m_helper;
+    void openDevice(const QString &udi);
+    KFilePlacesModel m_places;
+    QString m_pendingUdi;
 };
 
 

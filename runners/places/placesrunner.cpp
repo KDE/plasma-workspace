@@ -32,7 +32,6 @@
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(PlacesRunner, "plasma-runner-places.json")
 
-//Q_DECLARE_METATYPE(Plasma::RunnerContext)
 PlacesRunner::PlacesRunner(QObject* parent, const QVariantList &args)
         : Plasma::AbstractRunner(parent, args)
 {
@@ -42,9 +41,12 @@ PlacesRunner::PlacesRunner(QObject* parent, const QVariantList &args)
     addSyntax(defaultSyntax);
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds file manager locations that match :q:")));
 
-    // ensure the bookmarkmanager, etc. in the places model gets creates created in the main thread
-    // otherwise crashes ensue
-    m_helper = new PlacesRunnerHelper(this);
+    connect(&m_places, &KFilePlacesModel::setupDone, this, [this](const QModelIndex &index, bool success) {
+    if (success && m_pendingUdi == m_places.deviceForIndex(index).udi()) {
+        new KRun(m_places.url(index), nullptr);
+    }
+        m_pendingUdi.clear();
+    });
 }
 
 PlacesRunner::~PlacesRunner()
@@ -53,37 +55,6 @@ PlacesRunner::~PlacesRunner()
 
 void PlacesRunner::match(Plasma::RunnerContext &context)
 {
-    if (QThread::currentThread() == QCoreApplication::instance()->thread()) {
-        // from the main thread
-        //qDebug() << "calling";
-        m_helper->match(&context);
-    } else {
-        // from the non-gui thread
-        //qDebug() << "emitting";
-        emit doMatch(&context);
-    }
-    //m_helper->match(c);
-}
-
-PlacesRunnerHelper::PlacesRunnerHelper(PlacesRunner *runner)
-    : QObject(runner)
-{
-    Q_ASSERT(QThread::currentThread() == QCoreApplication::instance()->thread());
-    connect(runner, &PlacesRunner::doMatch,
-            this, &PlacesRunnerHelper::match,
-            Qt::BlockingQueuedConnection);
-
-    connect(&m_places, &KFilePlacesModel::setupDone, this, [this](const QModelIndex &index, bool success) {
-        if (success && m_pendingUdi == m_places.deviceForIndex(index).udi()) {
-            new KRun(m_places.url(index), nullptr);
-        }
-        m_pendingUdi.clear();
-    });
-}
-
-void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
-{
-    Plasma::RunnerContext &context = *c;
     if (!context.isValid()) {
         return;
     }
@@ -111,7 +82,7 @@ void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
         }
 
         if (type != Plasma::QueryMatch::NoMatch) {
-            Plasma::QueryMatch match(static_cast<PlacesRunner *>(parent()));
+            Plasma::QueryMatch match(this);
             match.setType(type);
             match.setRelevance(relevance);
             match.setIcon(m_places.icon(current_index));
@@ -120,7 +91,7 @@ void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
             // Add category as subtext so one can tell "Pictures" folder from "Search for Pictures"
             // Don't add it if it would match the category ("Places") of the runner to avoid "Places: Pictures (Places)"
             const QString groupName = m_places.data(current_index, KFilePlacesModel::GroupRole).toString();
-            if (!groupName.isEmpty() && !static_cast<PlacesRunner *>(parent())->categories().contains(groupName)) {
+            if (!groupName.isEmpty() && !categories().contains(groupName)) {
                 match.setSubtext(groupName);
             }
 
@@ -142,7 +113,7 @@ void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
     context.addMatches(matches);
 }
 
-void PlacesRunnerHelper::openDevice(const QString &udi)
+void PlacesRunner::openDevice(const QString &udi)
 {
     m_pendingUdi.clear();
 
@@ -163,7 +134,7 @@ void PlacesRunner::run(const Plasma::RunnerContext &context, const Plasma::Query
     if (action.data().type() == QVariant::Url) {
         new KRun(action.data().toUrl(), nullptr);
     } else if (action.data().canConvert<QString>()) {
-        m_helper->openDevice(action.data().toString());
+        openDevice(action.data().toString());
     }
 }
 
