@@ -33,6 +33,9 @@ Item {
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
+    
+    implicitWidth: 800
+    implicitHeight: 600
 
     Loader {
         id: mainLoader
