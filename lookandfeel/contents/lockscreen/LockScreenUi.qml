@@ -283,6 +283,7 @@ PlasmaCore.ColorScope {
                 ]
 
                 Loader {
+                    Layout.topMargin: PlasmaCore.Units.smallSpacing // some distance to the password field
                     Layout.fillWidth: true
                     Layout.preferredHeight: item ? item.implicitHeight : 0
                     active: config.showMediaControls

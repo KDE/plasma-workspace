@@ -26,14 +26,12 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 Item {
     visible: mpris2Source.hasPlayer
-    implicitHeight: controlsRow.height + controlsRow.y
+    implicitHeight: PlasmaCore.Units.gridUnit * 3
+    implicitWidth: PlasmaCore.Units.gridUnit * 16
 
     RowLayout {
         id: controlsRow
-        anchors.bottom: parent.bottom
-        y: units.smallSpacing // some distance to the password field
-        width: parent.width
-        height: units.gridUnit * 3
+        anchors.fill: parent
         spacing: 0
 
         enabled: mpris2Source.canControl
@@ -137,6 +135,8 @@ Item {
 
         PlasmaComponents3.ToolButton {
             enabled: mpris2Source.canGoBack
+            Layout.preferredHeight: PlasmaCore.Units.gridUnit*2
+            Layout.preferredWidth: Layout.preferredHeight
             icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
             onClicked: {
                 fadeoutTimer.running = false
@@ -159,6 +159,8 @@ Item {
 
         PlasmaComponents3.ToolButton {
             enabled: mpris2Source.canGoNext
+            Layout.preferredHeight: PlasmaCore.Units.gridUnit*2
+            Layout.preferredWidth: Layout.preferredHeight
             icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
             onClicked: {
                 fadeoutTimer.running = false
