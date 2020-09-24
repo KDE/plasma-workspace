@@ -18,11 +18,11 @@ Name[ro]=Fișiere recente
 Name[ru]=Последние файлы
 Name[sk]=Nedávne súbory
 Name[sl]=Zadnje datoteke
-Name[sv]=Senaste filer
 Name[tg]=Файлҳои охирон
 Name[uk]=Нещодавні файли
 Name[vi]=Tệp gần đây
 Name[x-test]=xxRecent Filesxx
+Name[zh_CN]=最近的文件
 Icon=document-open-recent
 
 X-KDE-ServiceTypes=Plasma/Runner

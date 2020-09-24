@@ -45,7 +45,6 @@ Name[sr]=Плазма, радни простор површи
 Name[sr@ijekavian]=Плазма, радни простор површи
 Name[sr@ijekavianlatin]=Plasma, radni prostor površi
 Name[sr@latin]=Plasma, radni prostor površi
-Name[sv]=Plasma arbetsområde för skrivbordet
 Name[tg]=Фазои мизи кории Плазма
 Name[tr]=Plasma Masaüstü Çalışma Alanı
 Name[uk]=Робочий простір Плазми для комп’ютерів
