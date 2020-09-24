@@ -58,6 +58,7 @@ CalculatorRunner::CalculatorRunner(QObject *parent, const QVariantList &args)
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:="), description));
 
     addAction(QStringLiteral("copyToClipboard"), QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard"));
+    setMinLetterCount(3);
 }
 
 CalculatorRunner::~CalculatorRunner()

@@ -40,6 +40,7 @@ ActivityRunner::ActivityRunner(QObject *parent, const QVariantList &args)
     qRegisterMetaType<KActivities::Consumer::ServiceStatus>();
     connect(m_consumer, &KActivities::Consumer::serviceStatusChanged, this, &ActivityRunner::serviceStatusChanged);
     serviceStatusChanged(m_activities->serviceStatus());
+    setTriggerWords({m_keyword, m_keywordi18n});
 }
 
 void ActivityRunner::serviceStatusChanged(KActivities::Consumer::ServiceStatus status)

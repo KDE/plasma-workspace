@@ -45,6 +45,7 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
     loadSyntaxes();
     configurePrivateBrowsingActions();
     connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, &WebshortcutRunner::configurePrivateBrowsingActions);
+    setMinLetterCount(3);
 }
 
 WebshortcutRunner::~WebshortcutRunner()
@@ -104,11 +105,6 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
 void WebshortcutRunner::match(Plasma::RunnerContext &context)
 {
     const QString term = context.query();
-
-    if (term.length() < 3 || !context.isValid()){
-        return;
-    }
-
     const int delimIndex = term.indexOf(m_delimiter);
     if (delimIndex == -1 || delimIndex == term.length() - 1) {
         return;

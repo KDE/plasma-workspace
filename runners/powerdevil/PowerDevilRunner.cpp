@@ -35,8 +35,7 @@
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(PowerDevilRunner, "plasma-runner-powerdevil.json")
 
 PowerDevilRunner::PowerDevilRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args),
-      m_shortestCommand(1000)
+    : Plasma::AbstractRunner(parent, args)
 {
     qDBusRegisterMetaType< StringStringMap >();
 
@@ -58,12 +57,7 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const QVariantList &args)
              << i18nc("Note this is a KRunner keyword", "to ram")
              << i18nc("Note this is a KRunner keyword", "screen brightness")
              << i18nc("Note this is a KRunner keyword", "dim screen");
-
-    for (const QString &command : qAsConst(commands)) {
-        if (command.length() < m_shortestCommand) {
-            m_shortestCommand = command.length();
-        }
-    }
+    setTriggerWords(commands);
 }
 
 void PowerDevilRunner::updateSyntaxes()
@@ -135,10 +129,6 @@ bool PowerDevilRunner::parseQuery(const QString& query, const QList<QRegExp>& rx
 void PowerDevilRunner::match(Plasma::RunnerContext &context)
 {
     const QString term = context.query();
-    if (term.length() < m_shortestCommand) {
-        return;
-    }
-
     QList<Plasma::QueryMatch> matches;
 
     QString parameter;

@@ -44,6 +44,7 @@ PlacesRunner::PlacesRunner(QObject* parent, const QVariantList &args)
     // ensure the bookmarkmanager, etc. in the places model gets creates created in the main thread
     // otherwise crashes ensue
     m_helper = new PlacesRunnerHelper(this);
+    setMinLetterCount(3);
 }
 
 PlacesRunner::~PlacesRunner()
@@ -88,11 +89,6 @@ void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
     }
 
     const QString term = context.query();
-
-    if (term.length() < 3) {
-        return;
-    }
-
     QList<Plasma::QueryMatch> matches;
     const bool all = term.compare(i18n("places"), Qt::CaseInsensitive) == 0;
     for (int i = 0; i <= m_places.rowCount(); i++) {

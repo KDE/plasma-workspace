@@ -41,6 +41,7 @@ WindowedWidgetsRunner::WindowedWidgetsRunner(QObject *parent, const QVariantList
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds Plasma widgets whose name or description match :q:")));
     addSyntax(Plasma::RunnerSyntax(i18nc("Note this is a KRunner keyword", "mobile applications"), i18n("list all Plasma widgets that can run as standalone applications")));
+    setMinLetterCount(3);
 }
 
 WindowedWidgetsRunner::~WindowedWidgetsRunner()
@@ -50,11 +51,6 @@ WindowedWidgetsRunner::~WindowedWidgetsRunner()
 void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
 {
     const QString term = context.query();
-
-    if (!context.singleRunnerQueryMode() && term.length() <  3) {
-        return;
-    }
-
     QList<Plasma::QueryMatch> matches;
 
     const auto &listMetadata =  Plasma::PluginLoader::self()->listAppletMetaData(QString());

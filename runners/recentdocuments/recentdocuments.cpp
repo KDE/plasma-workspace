@@ -46,6 +46,7 @@ RecentDocuments::RecentDocuments(QObject *parent, const QVariantList &args)
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:.")));
 
     addAction(QStringLiteral("openParentDir"), QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"));
+    setMinLetterCount(3);
 }
 
 RecentDocuments::~RecentDocuments()
@@ -59,10 +60,6 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
     }
 
     const QString term = context.query();
-    if (term.length() < 3) {
-        return;
-    }
-
     auto query = UsedResources
             | Activity::current()
             | Order::RecentlyUsedFirst

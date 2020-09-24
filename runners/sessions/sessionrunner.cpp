@@ -66,7 +66,7 @@ SessionRunner::SessionRunner(QObject *parent, const QVariantList &args)
 
     //"SESSIONS" should not be translated; it's used programmaticaly
     addSyntax(Plasma::RunnerSyntax(QStringLiteral("SESSIONS"), i18n("Lists all sessions")));
-
+    setMinLetterCount(3);
 }
 
 SessionRunner::~SessionRunner()
@@ -126,10 +126,6 @@ void SessionRunner::match(Plasma::RunnerContext &context)
     bool matchUser = false;
 
     QList<Plasma::QueryMatch> matches;
-
-    if (term.size() < 3) {
-        return;
-    }
 
     // first compare with SESSIONS. this must *NOT* be translated (i18n)
     // as it is used as an internal command trigger (e.g. via d-bus),

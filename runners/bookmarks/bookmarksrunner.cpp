@@ -48,6 +48,7 @@ BookmarksRunner::BookmarksRunner( QObject* parent, const QVariantList &args )
                                    i18n("List all web browser bookmarks")));
 
     connect(this, &Plasma::AbstractRunner::prepare, this, &BookmarksRunner::prep);
+    setMinLetterCount(3);
 }
 
 BookmarksRunner::~BookmarksRunner() = default;
@@ -66,10 +67,6 @@ void BookmarksRunner::prep()
 void BookmarksRunner::match(Plasma::RunnerContext &context)
 {
     const QString term = context.query();
-    if ((term.length() < 3) && (!context.singleRunnerQueryMode())) {
-        return;
-    }
-
     bool allBookmarks = term.compare(i18nc("list of all konqueror bookmarks", "bookmarks"),
                                      Qt::CaseInsensitive) == 0;
                                      

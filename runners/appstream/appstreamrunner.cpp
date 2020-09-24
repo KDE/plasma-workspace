@@ -42,6 +42,7 @@ InstallerRunner::InstallerRunner(QObject *parent, const QVariantList &args)
     setPriority(AbstractRunner::HighestPriority);
 
     addSyntax(Plasma::RunnerSyntax(":q:", i18n("Looks for non-installed components according to :q:")));
+    setMinLetterCount(3);
 }
 
 InstallerRunner::~InstallerRunner()
@@ -78,9 +79,6 @@ static QIcon componentIcon(const AppStream::Component &comp)
 
 void InstallerRunner::match(Plasma::RunnerContext &context)
 {
-    if(context.query().size() <= 2)
-        return;
-
     const auto components = findComponentsByString(context.query()).mid(0, 3);
 
     for (const AppStream::Component &component : components) {
