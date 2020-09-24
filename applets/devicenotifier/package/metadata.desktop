@@ -21,6 +21,7 @@ Name[tg]=Дискҳо ва дастгоҳҳо
 Name[uk]=Диски і пристрої
 Name[vi]=Đĩa & Thiết bị
 Name[x-test]=xxDisks & Devicesxx
+Name[zh_CN]=磁盘和设备
 Comment=Notifications and access for devices
 Comment[az]=Cihazlar üçün bildirişlər və onlara giriş
 Comment[ca]=Notificacions i accés als dispositius
@@ -42,6 +43,7 @@ Comment[sv]=Underrättelser och åtkomst av enheter
 Comment[uk]=Сповіщення і доступ до пристроїв
 Comment[vi]=Thông báo và cách truy cập cho các thiết bị
 Comment[x-test]=xxNotifications and access for devicesxx
+Comment[zh_CN]=设备的通知和访问
 
 Icon=device-notifier
 Type=Service

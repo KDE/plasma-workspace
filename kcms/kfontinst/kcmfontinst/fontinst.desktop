@@ -34,6 +34,7 @@ Name[tg]=Мудири ҳарфҳо
 Name[uk]=Керування шрифтами
 Name[vi]=Bộ quản lí phông chữ
 Name[x-test]=xxFont Managementxx
+Name[zh_CN]=字体管理
 
 Comment=Install, manage and preview fonts
 Comment[az]=Şriftləri quraşdırmaq, idarə etmək və onlara baxış
@@ -57,6 +58,7 @@ Comment[sv]=Installera, hantera och förhandsgranska teckensnitt
 Comment[uk]=Встановлення, керування та попередній перегляд шрифтів
 Comment[vi]=Cài đặt, quản lí và xem thử phông chữ
 Comment[x-test]=xxInstall, manage and preview fontsxx
+Comment[zh_CN]=安装、管理和预览字体
 
 X-KDE-Keywords=font,fonts,installer,truetype,type1,bitmap
 X-KDE-Keywords[az]=font,fonts,installer,truetype,type1,bitmap,şrift,şriftlər,
@@ -80,5 +82,6 @@ X-KDE-Keywords[sv]=teckensnitt,installation,truetype,type1,bitavbildning
 X-KDE-Keywords[uk]=font,fonts,installer,truetype,type1,bitmap,шрифт,шрифти,встановлювач,растрові
 X-KDE-Keywords[vi]=font,fonts,phông chữ,installer,trình cài đặt,truetype,type1,bitmap
 X-KDE-Keywords[x-test]=xxfontxx,xxfontsxx,xxinstallerxx,xxtruetypexx,xxtype1xx,xxbitmapxx
+X-KDE-Keywords[zh_CN]=font,fonts,installer,truetype,type1,bitmap,字体,安装器,点阵
 
 

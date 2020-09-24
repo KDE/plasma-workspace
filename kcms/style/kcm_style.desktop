@@ -36,6 +36,7 @@ Name[tg]=Услуби барномавӣ
 Name[uk]=Стиль вікон програм
 Name[vi]=Kiểu cách ứng dụng
 Name[x-test]=xxApplication Stylexx
+Name[zh_CN]=应用程序风格
 Comment=Configure application style and behavior
 Comment[az]=Tətbiq üslubu və davranışlarını tənzimləmək
 Comment[ca]=Configura l'estil i el comportament de les aplicacions
@@ -58,6 +59,7 @@ Comment[sv]=Anpassa programstil och beteende
 Comment[uk]=Налаштовування стилю і поведінки вікон програм
 Comment[vi]=Cấu hình kiểu cách và hành vi của ứng dụng
 Comment[x-test]=xxConfigure application style and behaviorxx
+Comment[zh_CN]=配置应用程序样式和行为
 
 X-KDE-Keywords=style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu
 X-KDE-Keywords[az]=üslub,növ,baxmaq,vidjet,ikonlar,alətlər çubuğu,mətn,işıqlanan,tətbiqlər,KDE tətbiqləri,mövzu,menyu,qlobal menyu,style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu
@@ -80,5 +82,6 @@ X-KDE-Keywords[sv]=stil,stilar,utseende,grafisk komponent,ikoner,verktygsrader,t
 X-KDE-Keywords[uk]=style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu,стиль,стилі,вигляд,віджет,піктограма,піктограми,значок,значки,іконки,панель,панель інструментів,текст,підсвічування,позначення,програма,програми,тема,плазма,меню,загальне меню
 X-KDE-Keywords[vi]=style,styles,kiểu cách,look,nhìn,widget,phụ kiện,icons,biểu tượng,toolbars,thanh công cụ,text,chữ,văn bản,highlight,tô bật,apps,ứng dụng,KDE applications,ứng dụng KDE,theme,chủ đề,plasma,menu,trình đơn,global menu,trình đơn chung
 X-KDE-Keywords[x-test]=xxstylexx,xxstylesxx,xxlookxx,xxwidgetxx,xxiconsxx,xxtoolbarsxx,xxtextxx,xxhighlightxx,xxappsxx,xxKDE applicationsxx,xxthemexx,xxplasmaxx,xxmenuxx,xxglobal menuxx
+X-KDE-Keywords[zh_CN]=style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,风格,外观,部件,图标,工具栏,文本,突出显示,程序,KDE 应用程序,主题
 
 Categories=Qt;KDE;X-KDE-settings-looknfeel;

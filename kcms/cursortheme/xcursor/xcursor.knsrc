@@ -22,6 +22,7 @@ Name[tg]=Курсорҳои муш
 Name[uk]=Вказівники
 Name[vi]=Con trỏ
 Name[x-test]=xxCursorsxx
+Name[zh_CN]=光标
 
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=X11 Mouse Theme

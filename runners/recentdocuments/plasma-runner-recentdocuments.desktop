@@ -23,6 +23,7 @@ Name[tg]=Файлҳои охирон
 Name[uk]=Нещодавні файли
 Name[vi]=Tệp gần đây
 Name[x-test]=xxRecent Filesxx
+Name[zh_CN]=最近的文件
 Icon=document-open-recent
 
 X-KDE-ServiceTypes=Plasma/Runner

@@ -21,6 +21,7 @@ Name[tg]=Услубҳои барномавии GNOME/GTK
 Name[uk]=Стилі вікон програм GNOME/GTK
 Name[vi]=Kiểu cách ứng dụng GNOME/GTK
 Name[x-test]=xxGNOME/GTK Application Stylesxx
+Name[zh_CN]=GNOME/GTK 应用程序风格
 
 Categories=GTK 3.x Theme/Style
 Uncompress=always

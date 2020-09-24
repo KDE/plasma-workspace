@@ -22,6 +22,7 @@ Name[tg]=Ҳуруф
 Name[uk]=Шрифти
 Name[vi]=Phông chữ
 Name[x-test]=xxFontsxx
+Name[zh_CN]=字体
 
 ProvidersUrl=https://distribute.kde.org/khotnewstuff/fonts-providers.xml
 Categories=KDE-Look.org Fonts

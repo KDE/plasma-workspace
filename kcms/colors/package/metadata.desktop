@@ -22,6 +22,7 @@ Name[tg]=Рангҳо
 Name[uk]=Кольори
 Name[vi]=Màu
 Name[x-test]=xxColorsxx
+Name[zh_CN]=颜色
 Comment=Choose color scheme
 Comment[az]=Rəng sxemini seçmək
 Comment[ca]=Trieu l'esquema de color
@@ -44,6 +45,7 @@ Comment[sv]=Välj färgschema
 Comment[uk]=Вибір схеми кольорів
 Comment[vi]=Chọn quy hoạch màu
 Comment[x-test]=xxChoose color schemexx
+Comment[zh_CN]=选择配色方案
 
 Icon=preferences-desktop-color
 Type=Service

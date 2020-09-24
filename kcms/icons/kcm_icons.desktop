@@ -35,6 +35,7 @@ Name[tg]=Нишонаҳо
 Name[uk]=Піктограми
 Name[vi]=Biểu tượng
 Name[x-test]=xxIconsxx
+Name[zh_CN]=图标
 
 Comment=Choose icon theme
 Comment[az]=İkon mövzusunu seçin
@@ -59,6 +60,7 @@ Comment[sv]=Välj ikontema
 Comment[uk]=Вибір теми піктограм
 Comment[vi]=Chọn chủ đề của biểu tượng
 Comment[x-test]=xxChoose icon themexx
+Comment[zh_CN]=选择图标主题
 
 X-KDE-Keywords=icons,effects,size,hicolor,locolor
 X-KDE-Keywords[az]=ikonlar,effektlər,tünd rənglər,açıq rənglər,icons,effects,size,hicolor,locolor
@@ -83,5 +85,6 @@ X-KDE-Keywords[sv]=ikoner,effekter,storlek,hicolor,locolor
 X-KDE-Keywords[uk]=icons,effects,size,hicolor,locolor,піктограми,значки,іконки,ефект,ефекти,розмір,колір
 X-KDE-Keywords[vi]=icons,biểu tượng,effects,hiệu ứng,size,cỡ,hicolor,màu cao,locolor,màu thấp
 X-KDE-Keywords[x-test]=xxiconsxx,xxeffectsxx,xxsizexx,xxhicolorxx,xxlocolorxx
+X-KDE-Keywords[zh_CN]=icons,effects,size,hicolor,locolor,图标,效果,特效,大小,颜色
 
 Categories=Qt;KDE;X-KDE-settings-looknfeel;

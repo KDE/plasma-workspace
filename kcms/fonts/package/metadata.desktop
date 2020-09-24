@@ -22,6 +22,7 @@ Name[tg]=Ҳуруф
 Name[uk]=Шрифти
 Name[vi]=Phông chữ
 Name[x-test]=xxFontsxx
+Name[zh_CN]=字体
 
 Comment=Configure user interface fonts
 Comment[az]=İstifaadəçi interfeysi şriftlərini tənzimləmək
@@ -45,6 +46,7 @@ Comment[sv]=Anpassa teckensnitt för användargränssnitt
 Comment[uk]=Налаштовування шрифтів у інтерфейсі користувача
 Comment[vi]=Cấu hình phông chữ trong giao diện người dùng
 Comment[x-test]=xxConfigure user interface fontsxx
+Comment[zh_CN]=配置用户界面字体
 
 Icon=preferences-desktop-font
 Keywords=
