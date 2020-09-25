@@ -1230,6 +1230,21 @@ void ShellCorona::reconsiderOutputs()
 void ShellCorona::addOutput(QScreen* screen)
 {
     Q_ASSERT(screen);
+
+    // In Qt5.15.1 geometryChanged signals are not emitted if XCB_RANDR_SCREEN_CHANGE_NOTIFY and XCB_RANDR_NOTIFY arrive together
+    // The geometry property is still updated however
+
+    // See bug QtBug - 86604
+    // This hack emits the missing signals from what is emitted
+    // It will result in a bit more noise, but most implementations should just no-op
+
+    // It is still horrible and should be deleted when possible
+    if (QLibraryInfo::version() >= QVersionNumber(5, 15, 1)) {
+        connect(screen, &QScreen::availableGeometryChanged,
+            screen, &QScreen::geometryChanged);
+    }
+    //end hack
+
     connect(screen, &QScreen::geometryChanged,
             &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start),
             Qt::UniqueConnection);
