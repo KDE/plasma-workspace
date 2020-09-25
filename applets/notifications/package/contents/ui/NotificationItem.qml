@@ -119,6 +119,9 @@ ColumnLayout {
         Layout.preferredWidth: notificationHeading.implicitWidth
         Layout.bottomMargin: -parent.spacing
 
+        PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.HeaderColorGroup
+        PlasmaCore.ColorScope.inherit: false
+
         PlasmaCore.FrameSvgItem {
             imagePath: "widgets/plasmoidheading"
             prefix: "header"
@@ -128,6 +131,8 @@ ColumnLayout {
                 rightMargin: -margins.right
             }
             visible: !notificationItem.inHistory && fromCurrentTheme
+            colorGroup: parent.PlasmaCore.ColorScope.colorGroup
+            PlasmaCore.ColorScope.inherit: false
         }
 
         NotificationHeader {
@@ -137,6 +142,9 @@ ColumnLayout {
                 leftMargin: notificationItem.headingLeftPadding
                 rightMargin: notificationItem.headingRightPadding
             }
+
+            PlasmaCore.ColorScope.colorGroup: parent.PlasmaCore.ColorScope.colorGroup
+            PlasmaCore.ColorScope.inherit: false
 
             inGroup: notificationItem.inGroup
 
