@@ -38,7 +38,6 @@ PlacesRunner::PlacesRunner(QObject* parent, const QVariantList &args)
 {
     setObjectName(QStringLiteral("Places"));
     Plasma::RunnerSyntax defaultSyntax(i18n("places"), i18n("Lists all file manager locations"));
-    setDefaultSyntax(defaultSyntax);
     addSyntax(defaultSyntax);
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds file manager locations that match :q:")));
 
@@ -120,7 +119,7 @@ void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
             // Add category as subtext so one can tell "Pictures" folder from "Search for Pictures"
             // Don't add it if it would match the category ("Places") of the runner to avoid "Places: Pictures (Places)"
             const QString groupName = m_places.data(current_index, KFilePlacesModel::GroupRole).toString();
-            if (!groupName.isEmpty() && !static_cast<PlacesRunner *>(parent())->categories().contains(groupName)) {
+            if (!groupName.isEmpty() && static_cast<PlacesRunner *>(parent())->name() != groupName) {
                 match.setSubtext(groupName);
             }
 

@@ -42,8 +42,6 @@ class ServiceRunner : public Plasma::AbstractRunner
 
         void match(Plasma::RunnerContext &context) override;
         void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
-        QStringList categories() const override;
-        QIcon categoryIcon(const QString& category) const override;
 
     protected Q_SLOTS:
         QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;

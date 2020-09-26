@@ -421,23 +421,6 @@ ServiceRunner::ServiceRunner(QObject *parent, const QVariantList &args)
 
 ServiceRunner::~ServiceRunner() = default;
 
-QStringList ServiceRunner::categories() const
-{
-    return {i18n("Applications"), i18n("System Settings")};
-}
-
-QIcon ServiceRunner::categoryIcon(const QString& category) const
-{
-    if (category == i18n("Applications")) {
-        return QIcon::fromTheme(QStringLiteral("applications-other"));
-    } else if (category == i18n("System Settings")) {
-        return QIcon::fromTheme(QStringLiteral("preferences-system"));
-    }
-
-    return Plasma::AbstractRunner::categoryIcon(category);
-}
-
-
 void ServiceRunner::match(Plasma::RunnerContext &context)
 {
     // This helper class aids in keeping state across numerous

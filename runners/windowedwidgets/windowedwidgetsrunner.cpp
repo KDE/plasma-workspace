@@ -40,7 +40,7 @@ WindowedWidgetsRunner::WindowedWidgetsRunner(QObject *parent, const QVariantList
     setPriority(AbstractRunner::HighestPriority);
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds Plasma widgets whose name or description match :q:")));
-    setDefaultSyntax(Plasma::RunnerSyntax(i18nc("Note this is a KRunner keyword", "mobile applications"), i18n("list all Plasma widgets that can run as standalone applications")));
+    addSyntax(Plasma::RunnerSyntax(i18nc("Note this is a KRunner keyword", "mobile applications"), i18n("list all Plasma widgets that can run as standalone applications")));
 }
 
 WindowedWidgetsRunner::~WindowedWidgetsRunner()

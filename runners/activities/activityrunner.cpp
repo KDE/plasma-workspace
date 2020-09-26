@@ -34,7 +34,7 @@ ActivityRunner::ActivityRunner(QObject *parent, const QVariantList &args)
     setObjectName(QStringLiteral("Activities"));
     setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File |
                     Plasma::RunnerContext::NetworkLocation | Plasma::RunnerContext::Help);
-    setDefaultSyntax(Plasma::RunnerSyntax(m_keywordi18n, i18n("Lists all activities currently available to be run.")));
+    addSyntax(Plasma::RunnerSyntax(m_keywordi18n, i18n("Lists all activities currently available to be run.")));
     addSyntax(Plasma::RunnerSyntax(i18nc("KRunner keyword", "activity :q:"), i18n("Switches to activity :q:.")));
 
     qRegisterMetaType<KActivities::Consumer::ServiceStatus>();

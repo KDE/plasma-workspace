@@ -65,7 +65,7 @@ SessionRunner::SessionRunner(QObject *parent, const QVariantList &args)
     addSyntax(fastUserSwitchSyntax);
 
     //"SESSIONS" should not be translated; it's used programmaticaly
-    setDefaultSyntax(Plasma::RunnerSyntax(QStringLiteral("SESSIONS"), i18n("Lists all sessions")));
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral("SESSIONS"), i18n("Lists all sessions")));
 
 }
 
