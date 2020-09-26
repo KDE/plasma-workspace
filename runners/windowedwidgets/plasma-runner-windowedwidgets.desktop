@@ -129,7 +129,6 @@ Comment[zh_TW]=尋找可以以獨立視窗執行的 Plasma 元件
 X-KDE-ServiceTypes=Plasma/Runner
 Type=Service
 Icon=plasma
-X-Plasma-RunnerPhase=first
 X-KDE-PluginInfo-Author=Plasma Team
 X-KDE-PluginInfo-Email=plasma-devel@kde.org
 X-KDE-PluginInfo-Name=org.kde.windowedwidgets
