@@ -17,7 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.1
+import QtQuick 2.12
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -25,10 +25,22 @@ PlasmaCore.FrameSvgItem {
     id: expandedItem
 
     property int location
+    property bool animationEnabled: true
 
     z: -1 // always draw behind icons
     width: parent.width
     height: parent.height
+    opacity: parent && dialog.visible ? 1 : 0
+
+    function changeHighlightedItem(nextItem) {
+        parent = nextItem;
+    }
+
+    function changeHighlightedItemNoAnimation(nextItem) {
+        animationEnabled = false;
+        parent = nextItem;
+        animationEnabled = true;
+    }
 
     imagePath: "widgets/tabbar"
     prefix: {
@@ -50,40 +62,44 @@ PlasmaCore.FrameSvgItem {
                 prefix = "active-tab";
             }
             return prefix;
-        }
-    opacity: parent && dialog.visible ? 1 : 0
+    }
+
     Behavior on opacity {
         NumberAnimation {
             duration: units.longDuration
-            easing.type: Easing.InOutQuad
+            easing.type: parent && dialog.visible ? Easing.OutCubic : Easing.InCubic
         }
     }
     Behavior on x {
-        enabled: parent && expandedItem.opacity == 1
+        id: xAnim
+        enabled: parent && animationEnabled
         NumberAnimation {
             duration: units.longDuration
-            easing.type: Easing.InOutQuad
+            easing.type: Easing.InOutCubic
         }
     }
     Behavior on y {
-        enabled: parent && expandedItem.opacity == 1
+        id: yAnim
+        enabled: parent && animationEnabled
         NumberAnimation {
             duration: units.longDuration
-            easing.type: Easing.InOutQuad
+            easing.type: Easing.InOutCubic
         }
     }
     Behavior on width {
-        enabled: parent && expandedItem.opacity == 1
+        id: widthAnim
+        enabled: parent && animationEnabled
         NumberAnimation {
             duration: units.longDuration
-            easing.type: Easing.InOutQuad
+            easing.type: Easing.InOutCubic
         }
     }
     Behavior on height {
-        enabled: parent && expandedItem.opacity == 1
+        id: heightAnim
+        enabled: parent && animationEnabled
         NumberAnimation {
             duration: units.longDuration
-            easing.type: Easing.InOutQuad
+            easing.type: Easing.InOutCubic
         }
     }
 }

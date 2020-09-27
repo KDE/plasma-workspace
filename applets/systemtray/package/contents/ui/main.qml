@@ -90,8 +90,26 @@ MouseArea {
     }
 
     CurrentItemHighLight {
-        readonly property bool visibleAppletActivated: root.activeApplet && root.activeApplet.parent && root.activeApplet.parent.inVisibleLayout
-        parent: visibleAppletActivated ? root.activeApplet.parent : root
+        property alias activeApplet: root.activeApplet
+        property alias dialogVisible: dialog.visible
+
+        // Not only is an applet active, but also it's an applet from the visible part of the tray, not the hidden part.
+        readonly property bool visibleAppletActivated: activeApplet && activeApplet.parent && activeApplet.parent.inVisibleLayout
+
+        onActiveAppletChanged: {
+            if (activeApplet && activeApplet.parent.inVisibleLayout) {
+                changeHighlightedItem(activeApplet.parent);
+            } else if (dialog.visible) {
+                changeHighlightedItem(root);
+            }
+        }
+
+        onDialogVisibleChanged: {
+            if (dialogVisible && !activeApplet) {
+                changeHighlightedItemNoAnimation(root);
+            }
+        }
+
         location: plasmoid.location
     }
 
