@@ -20,6 +20,7 @@
  */
 
 #include "translations.h"
+#include "translationsdata.h"
 #include "translationsmodel.h"
 #include "translationssettings.h"
 
@@ -28,11 +29,11 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 
-K_PLUGIN_CLASS_WITH_JSON(Translations, "kcm_translations.json")
+K_PLUGIN_FACTORY_WITH_JSON(TranslationsFactory, "kcm_translations.json", registerPlugin<Translations>();registerPlugin<TranslationsData>();)
 
 Translations::Translations(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
-    , m_settings(new TranslationsSettings(this))
+    , m_data(new TranslationsData(this))
     , m_translationsModel(new TranslationsModel(this))
     , m_selectedTranslationsModel(new SelectedTranslationsModel(this))
     , m_availableTranslationsModel(new AvailableTranslationsModel(this))
@@ -78,8 +79,8 @@ bool Translations::everSaved() const
 void Translations::load()
 {
     KQuickAddons::ManagedConfigModule::load();
-    m_availableTranslationsModel->setSelectedLanguages(m_settings->configuredLanguages());
-    m_selectedTranslationsModel->setSelectedLanguages(m_settings->configuredLanguages());
+    m_availableTranslationsModel->setSelectedLanguages(settings()->configuredLanguages());
+    m_selectedTranslationsModel->setSelectedLanguages(settings()->configuredLanguages());
 }
 
 void Translations::save()
@@ -92,8 +93,8 @@ void Translations::save()
 void Translations::defaults()
 {
     KQuickAddons::ManagedConfigModule::defaults();
-    m_availableTranslationsModel->setSelectedLanguages(m_settings->configuredLanguages());
-    m_selectedTranslationsModel->setSelectedLanguages(m_settings->configuredLanguages());
+    m_availableTranslationsModel->setSelectedLanguages(settings()->configuredLanguages());
+    m_selectedTranslationsModel->setSelectedLanguages(settings()->configuredLanguages());
 }
 
 void Translations::selectedLanguagesChanged()
@@ -105,8 +106,13 @@ void Translations::selectedLanguagesChanged()
         configuredLanguages.removeOne(lang);
     }
 
-    m_settings->setConfiguredLanguages(configuredLanguages);
+    settings()->setConfiguredLanguages(configuredLanguages);
     m_selectedTranslationsModel->setSelectedLanguages(configuredLanguages);
+}
+
+TranslationsSettings *Translations::settings() const
+{
+    return m_data->settings();
 }
 
 bool Translations::isSaveNeeded() const

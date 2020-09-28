@@ -28,6 +28,7 @@ class AvailableTranslationsModel;
 class SelectedTranslationsModel;
 class TranslationsModel;
 class TranslationsSettings;
+class TranslationsData;
 
 class Translations : public KQuickAddons::ManagedConfigModule
 {
@@ -47,6 +48,7 @@ class Translations : public KQuickAddons::ManagedConfigModule
         QAbstractItemModel* availableTranslationsModel() const;
 
         bool everSaved() const;
+        TranslationsSettings *settings() const;
 
     public Q_SLOTS:
         void load() override;
@@ -62,7 +64,7 @@ class Translations : public KQuickAddons::ManagedConfigModule
     private:
         bool isSaveNeeded() const override;
 
-        TranslationsSettings *m_settings;
+        TranslationsData *m_data;
         TranslationsModel *m_translationsModel;
         SelectedTranslationsModel *m_selectedTranslationsModel;
         AvailableTranslationsModel *m_availableTranslationsModel;
