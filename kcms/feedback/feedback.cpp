@@ -30,9 +30,10 @@
 #include <KUserFeedback/Provider>
 #include <KUserFeedback/FeedbackConfigUiController>
 
+#include "feedbackdata.h"
 #include "feedbacksettings.h"
 
-K_PLUGIN_CLASS_WITH_JSON(Feedback, "kcm_feedback.json");
+K_PLUGIN_FACTORY_WITH_JSON(FeedbackFactory, "kcm_feedback.json", registerPlugin<Feedback>();registerPlugin<FeedbackData>();)
 
 //Program to icon hash
 static QHash<QString, QString> s_programs = {
@@ -50,7 +51,7 @@ inline void swap(QJsonValueRef v1, QJsonValueRef v2)
 Feedback::Feedback(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent)
     //UserFeedback.conf is used by KUserFeedback which uses QSettings and won't go through globals
-    , m_feedbackSettings(new FeedbackSettings(this))
+    , m_data(new FeedbackData(this))
 {
     Q_UNUSED(args)
 
@@ -134,7 +135,7 @@ bool Feedback::feedbackEnabled() const
 
 FeedbackSettings *Feedback::feedbackSettings() const
 {
-    return m_feedbackSettings;
+    return m_data->settings();
 }
 
 #include "feedback.moc"

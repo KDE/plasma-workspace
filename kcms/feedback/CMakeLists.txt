@@ -2,6 +2,14 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_feedback\")
 
 set(kcm_feedback_PART_SRCS feedback.cpp)
 
+kcmutils_generate_module_data(
+    kcm_feedback_PART_SRCS
+    MODULE_DATA_HEADER feedbackdata.h
+    MODULE_DATA_CLASS_NAME FeedbackData
+    SETTINGS_HEADERS feedbacksettings.h
+    SETTINGS_CLASSES FeedbackSettings
+)
+
 kconfig_add_kcfg_files(kcm_feedback_PART_SRCS feedbacksettings.kcfgc GENERATE_MOC)
 add_library(kcm_feedback MODULE ${kcm_feedback_PART_SRCS})
 

@@ -25,6 +25,7 @@
 #include <KSharedConfig>
 
 class FeedbackSettings;
+class FeedbackData;
 
 class Feedback : public KQuickAddons::ManagedConfigModule
 {
@@ -49,5 +50,5 @@ class Feedback : public KQuickAddons::ManagedConfigModule
     private:
         QHash<int, QHash<QString, QJsonArray>> m_uses;
         QJsonArray m_feedbackSources;
-        FeedbackSettings *m_feedbackSettings;
+        FeedbackData *m_data;
 };
