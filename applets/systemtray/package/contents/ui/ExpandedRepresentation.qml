@@ -69,7 +69,7 @@ Item {
 
             PlasmaComponents.ToolButton {
                 id: backButton
-                visible: activeApplet
+                visible: activeApplet && activeApplet.expanded && (hiddenItemsView.itemCount > 0)
                 icon.name: "go-previous"
                 onClicked: {
                     if (activeApplet) {
@@ -93,7 +93,7 @@ Item {
                 // that it triggers the config action for whatever applet is
                 // being viewed, and then hide the applet's own config button
                 // if both would be shown at the same time
-                visible: !backButton.visible && plasmoid.action("configure").enabled
+                visible: !activeApplet && plasmoid.action("configure").enabled
                 icon.name: "configure"
                 onClicked: plasmoid.action("configure").trigger()
                 PlasmaComponents.ToolTip {
@@ -128,6 +128,7 @@ Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
             visible: activeApplet
+
             // We need to add our own margins on the top and left (when the
             // hidden items view is visible, at least) so it matches the
             //  dialog's own margins and content is centered correctly
