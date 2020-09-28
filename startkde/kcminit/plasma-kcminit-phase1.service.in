@@ -2,6 +2,7 @@
 Description=KDE Configuration Module Initialization (Phase 1)
 Requires=plasma-kcminit.service
 After=plasma-kcminit.service plasma-kded.service
+PartOf=graphical-session.target
 
 [Service]
 Type=oneshot

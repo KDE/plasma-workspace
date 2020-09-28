@@ -2,6 +2,7 @@
 Description=KSplash "ready" Stage
 Wants=plasma-core.target
 After=plasma-core.target
+PartOf=graphical-session.target
 
 [Service]
 Type=oneshot

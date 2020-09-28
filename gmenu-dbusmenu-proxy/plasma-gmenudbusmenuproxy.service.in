@@ -1,5 +1,6 @@
 [Unit]
 Description=Proxies GTK DBus menus to a Plasma readable format
+PartOf=graphical-session.target
 
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/gmenudbusmenuproxy

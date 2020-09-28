@@ -1,6 +1,7 @@
 [Unit]
 Description=KDE Plasma Workspace
 Wants=plasma-ksmserver.service plasma-kcminit.service
+PartOf=graphical-session.target
 
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/plasmashell --no-respawn
