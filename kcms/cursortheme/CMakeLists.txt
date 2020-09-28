@@ -15,7 +15,16 @@ include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ )
 
 ########### next target ###############
 
-set(kcm_cursortheme_PART_SRCS kcmcursortheme.cpp cursorthemedata.cpp ${libnoinst_SRCS})
+set(kcm_cursortheme_PART_SRCS kcmcursortheme.cpp ${libnoinst_SRCS})
+
+kcmutils_generate_module_data(
+    kcm_cursortheme_PART_SRCS
+    MODULE_DATA_HEADER cursorthemedata.h
+    MODULE_DATA_CLASS_NAME CursorThemeData
+    SETTINGS_HEADERS cursorthemesettings.h
+    SETTINGS_CLASSES CursorThemeSettings
+)
+
 
 kconfig_add_kcfg_files(kcm_cursortheme_PART_SRCS cursorthemesettings.kcfgc GENERATE_MOC)
 add_library(kcm_cursortheme MODULE ${kcm_cursortheme_PART_SRCS})

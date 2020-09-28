@@ -93,12 +93,12 @@ KFonts::~KFonts()
 
 FontsSettings *KFonts::fontsSettings() const
 {
-    return m_data->settings();
+    return m_data->fontsSettings();
 }
 
 FontsAASettings *KFonts::fontsAASettings() const
 {
-    return m_data->settingsAA();
+    return m_data->fontsAASettings();
 }
 
 QAbstractItemModel *KFonts::subPixelOptionsModel() const

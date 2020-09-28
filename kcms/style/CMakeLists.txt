@@ -14,6 +14,14 @@ set(kcm_style_PART_SRCS
     styledata.cpp
 )
 
+kcmutils_generate_module_data(
+    kcm_style_PART_SRCS
+    MODULE_DATA_HEADER styledata.h
+    MODULE_DATA_CLASS_NAME StyleData
+    SETTINGS_HEADERS stylesettings.h
+    SETTINGS_CLASSES StyleSettings
+)
+
 ki18n_wrap_ui(kcm_style_PART_SRCS stylepreview.ui)
 
 kconfig_add_kcfg_files(kcm_style_PART_SRCS stylesettings.kcfgc GENERATE_MOC)

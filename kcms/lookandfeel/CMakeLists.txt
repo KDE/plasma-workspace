@@ -9,7 +9,6 @@ configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 set(kcm_lookandfeel_SRCS
     kcmmain.cpp
     kcm.cpp
-    lookandfeeldata.cpp
     ../krdb/krdb.cpp
 )
 
@@ -20,6 +19,14 @@ if (X11_Xcursor_FOUND)
         ../cursortheme/xcursor/xcursortheme.cpp
     )
 endif ()
+
+kcmutils_generate_module_data(
+    kcm_lookandfeel_SRCS
+    MODULE_DATA_HEADER lookandfeeldata.h
+    MODULE_DATA_CLASS_NAME LookAndFeelData
+    SETTINGS_HEADERS lookandfeelsettings.h
+    SETTINGS_CLASSES LookAndFeelSettings
+)
 
 kconfig_add_kcfg_files(kcm_lookandfeel_SRCS lookandfeelsettings.kcfgc GENERATE_MOC)
 
