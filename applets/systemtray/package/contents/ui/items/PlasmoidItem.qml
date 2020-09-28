@@ -85,10 +85,7 @@ AbstractItem {
                 plasmoidContainer.activated()
 
             } else if (root.activeApplet === applet) {
-                if (!inHiddenLayout) {
-                    dialog.visible = false;
-                }
-                //if not expanded we don't have an active applet anymore
+                // if not expanded we don't have an active applet anymore
                 root.activeApplet = null;
             }
         }

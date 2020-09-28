@@ -31,6 +31,7 @@ MouseArea {
     id: hiddenTasksView
 
     property alias layout: hiddenTasks
+    readonly property alias itemCount: hiddenTasks.itemCount
 
     hoverEnabled: true
     onExited: hiddenTasks.currentIndex = -1
