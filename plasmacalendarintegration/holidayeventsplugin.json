@@ -1,7 +1,7 @@
 {
     "Name": "Holidays",
     "Description": "Calendar plugin for displaying public holidays",
-    "Icon": "view-calendar",
+    "Icon": "view-calendar-holiday",
     "ConfigUi": "holidays/HolidaysConfig.qml",
     "Authors": { "Name": "Martin Klapetek", "Email": "mklapetek@kde.org" }
 }
