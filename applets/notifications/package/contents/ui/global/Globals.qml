@@ -179,11 +179,11 @@ QtObject {
     // Make it wider when on the top or the bottom center, since there's more horizontal
     // space available without looking weird
     // On mobile however we don't really want to have larger notifications
-    property int popupWidth: (popupLocation & Qt.AlignHCenter) && !Kirigami.Settings.isMobile ? units.gridUnit * 22 : units.gridUnit * 18
-    property int popupEdgeDistance: units.largeSpacing * 2
+    property int popupWidth: (popupLocation & Qt.AlignHCenter) && !Kirigami.Settings.isMobile ? PlasmaCore.Units.gridUnit * 22 : PlasmaCore.Units.gridUnit * 18
+    property int popupEdgeDistance: PlasmaCore.Units.largeSpacing * 2
     // Reduce spacing between popups when centered so the stack doesn't intrude into the
     // view as much
-    property int popupSpacing: (popupLocation & Qt.AlignHCenter) && !Kirigami.Settings.isMobile ? units.smallSpacing : units.largeSpacing
+    property int popupSpacing: (popupLocation & Qt.AlignHCenter) && !Kirigami.Settings.isMobile ? PlasmaCore.Units.smallSpacing : PlasmaCore.Units.largeSpacing
 
     // How much vertical screen real estate the notification popups may consume
     readonly property real popupMaximumScreenFill: 0.8
