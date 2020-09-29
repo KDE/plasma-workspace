@@ -64,6 +64,7 @@ private Q_SLOTS:
     void requestCurrentLayoutDisplayName();
     void requestLayoutsList();
 
+    bool onCurrentLayoutChanged(const QString &newLayout);
     void onCurrentLayoutReceived(QDBusPendingCallWatcher *watcher);
     void onCurrentLayoutDisplayNameReceived(QDBusPendingCallWatcher *watcher);
     void onLayoutsListReceived(QDBusPendingCallWatcher *watcher);

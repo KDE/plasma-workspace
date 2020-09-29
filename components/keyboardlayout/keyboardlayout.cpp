@@ -43,7 +43,7 @@ KeyboardLayout::KeyboardLayout(QObject* parent)
     }
 
     connect(mIface, &OrgKdeKeyboardLayoutsInterface::currentLayoutChanged,
-            this, &KeyboardLayout::setCurrentLayout);
+            this, &KeyboardLayout::onCurrentLayoutChanged);
     connect(mIface, &OrgKdeKeyboardLayoutsInterface::layoutListChanged,
             this, &KeyboardLayout::requestLayoutsList);
 
@@ -136,24 +136,32 @@ QString KeyboardLayout::currentLayout() const
     return mCurrentLayout;
 }
 
-void KeyboardLayout::setCurrentLayout(const QString &layout)
+bool KeyboardLayout::onCurrentLayoutChanged(const QString &layout)
 {
     if (!mIface) {
-        return;
+        return false;
     }
     if (mCurrentLayout == layout) {
-        return;
+        return false;
     }
 
     if (!mLayouts.contains(layout)) {
         qCWarning(KEYBOARD_LAYOUT) << "No such layout" << layout;
-        return;
+        return false;
     }
 
     mCurrentLayout = layout;
     requestCurrentLayoutDisplayName();
-    mIface->setLayout(layout);
     Q_EMIT currentLayoutChanged(layout);
+
+    return true;
+}
+
+void KeyboardLayout::setCurrentLayout(const QString &layout)
+{
+    if (onCurrentLayoutChanged(layout)) {
+        mIface->setLayout(layout);
+    }
 }
 
 
