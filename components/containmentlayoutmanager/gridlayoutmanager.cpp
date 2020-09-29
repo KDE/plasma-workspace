@@ -321,6 +321,7 @@ void GridLayoutManager::adjustToItemSizeHints(ItemContainer *item)
     if (changed && itemIsManaged(item)) {
         releaseSpace(item);
         positionItem(item);
+        assignSpace(item);
     }
 }
 
