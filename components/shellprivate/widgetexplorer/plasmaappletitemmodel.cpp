@@ -28,7 +28,6 @@
 #include <ksycoca.h>
 #include <kconfig.h>
 #include "config-workspace.h"
-#include <KPluginTrader>
 #include <KPackage/PackageLoader>
 #include <KDeclarative/KDeclarative>
 
@@ -262,44 +261,40 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
     //qDebug() << "number of applets is"
     //         <<  Plasma::Applet::listAppletInfo(QString(), m_application).count();
 
-    QString constraint;
-    bool first = true;
-    foreach (const QString prov, m_provides) {
-        if (!first) {
-            constraint += QLatin1String(" or ");
+    auto filter = [this](const KPluginMetaData &plugin) -> bool {
+
+        const QString provides = plugin.value(QStringLiteral("X-Plasma-Provides"));
+
+        if (!m_provides.isEmpty() && !m_provides.contains(provides)) {
+            return false;
         }
 
-        first = false;
-        constraint += "'" + prov + "' in [X-Plasma-Provides]";
-    }
-
-    KPluginInfo::List list = KPluginInfo::fromMetaData(KPackage::PackageLoader::self()->listPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids")).toVector());
-
-    KPluginTrader::applyConstraints(list, constraint);
-
-    for (auto info : list) {
-        //qDebug() << info.pluginName() << "NoDisplay" << info.property("NoDisplay").toBool();
-        if (!info.isValid() || info.property(QStringLiteral("NoDisplay")).toBool() || info.category() == QLatin1String("Containments")) {
+        if (!plugin.isValid() || plugin.rawData().value(QStringLiteral("NoDisplay")).toBool() || plugin.category() == QLatin1String("Containments")) {
             // we don't want to show the hidden category
-            continue;
+            return false;
         }
 
         bool inFormFactor = true;
 
-        foreach (const QString &formFactor, KDeclarative::KDeclarative::runtimePlatform()) {
-            if (!info.formFactors().isEmpty() &&
-                !info.formFactors().contains(formFactor)) {
+        static const auto formFactors = KDeclarative::KDeclarative::runtimePlatform();
+        for (const QString &formFactor : formFactors) {
+            if (!plugin.formFactors().isEmpty() &&
+                !plugin.formFactors().contains(formFactor)) {
                 inFormFactor = false;
             }
         }
+
         if (!inFormFactor) {
-            continue;
+            return false;
         }
 
-        //qDebug() << info.pluginName() << " is the name of the plugin at" << info.entryPath();
-        //qDebug() << info.name() << info.property("X-Plasma-Thumbnail");
+        return true;
+    };
 
-        appendRow(new PlasmaAppletItem(info));
+    const QList<KPluginMetaData> packages = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids"), filter);
+
+    for (const KPluginMetaData &plugin : packages) {
+        appendRow(new PlasmaAppletItem(KPluginInfo(plugin)));
     }
 
     emit modelPopulated();
