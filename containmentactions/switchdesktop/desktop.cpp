@@ -85,6 +85,10 @@ void SwitchDesktop::switchTo()
 void SwitchDesktop::performNextAction()
 {
     const QVariantList &desktopIds = m_virtualDesktopInfo->desktopIds();
+    if (desktopIds.isEmpty()) {
+        return;
+    }
+
     const QVariant &currentDesktop = m_virtualDesktopInfo->currentDesktop();
     const int currentDesktopIndex = desktopIds.indexOf(currentDesktop);
 
@@ -100,6 +104,9 @@ void SwitchDesktop::performNextAction()
 void SwitchDesktop::performPreviousAction()
 {
     const QVariantList &desktopIds = m_virtualDesktopInfo->desktopIds();
+    if (desktopIds.isEmpty()) {
+        return;
+    }
     const QVariant &currentDesktop = m_virtualDesktopInfo->currentDesktop();
     const int currentDesktopIndex = desktopIds.indexOf(currentDesktop);
 
