@@ -9,5 +9,8 @@
       <label>Color scheme name</label>
       <default>BreezeLight</default>
     </entry>
+    <entry name="accentColor" key="AccentColor" type="Color">
+      <label>Accent color</label>
+    </entry>
   </group>
 </kcfg>

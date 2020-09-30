@@ -11,6 +11,11 @@
 #include <KColorScheme>
 #include <KConfigGroup>
 
+#include <QDBusConnection>
+#include <QDBusMessage>
+
+#include "colorsapplicator.h"
+
 static void copyEntry(KConfigGroup &from, KConfigGroup &to, const QString &entry, KConfig::WriteConfigFlags writeConfigFlag = KConfig::Normal)
 {
     if (from.hasKey(entry)) {
@@ -20,6 +25,16 @@ static void copyEntry(KConfigGroup &from, KConfigGroup &to, const QString &entry
 
 void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig::WriteConfigFlags writeConfigFlag)
 {
+    KSharedConfigPtr globalConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
+    globalConfig->sync();
+
+    const auto hasAccent = [globalConfig]() {
+        return globalConfig->group("General").hasKey("AccentColor");
+    };
+    const auto getAccent = [globalConfig]() {
+        return globalConfig->group("General").readEntry<QColor>("AccentColor", QColor());
+    };
+
     // Using KConfig::SimpleConfig because otherwise Header colors won't be
     // rewritten when a new color scheme is loaded.
     KSharedConfigPtr config = KSharedConfig::openConfig(colorSchemePath, KConfig::SimpleConfig);
@@ -45,14 +60,29 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
                                       QStringLiteral("DecorationFocus"),
                                       QStringLiteral("DecorationHover")};
 
-    for (const auto &item : colorSetGroupList) {
+    const QStringList accentList{QStringLiteral("ForegroundActive"),
+                                 QStringLiteral("ForegroundLink"),
+                                 QStringLiteral("DecorationFocus"),
+                                 QStringLiteral("DecorationHover")};
+
+    for (auto item : colorSetGroupList) {
         configOutput->deleteGroup(item);
 
         KConfigGroup sourceGroup(config, item);
         KConfigGroup targetGroup(configOutput, item);
 
         for (const auto &entry : colorSetKeyList) {
-            copyEntry(sourceGroup, targetGroup, entry, writeConfigFlag);
+            if (hasAccent() && accentList.contains(entry)) {
+                targetGroup.writeEntry(entry, getAccent());
+            } else {
+                copyEntry(sourceGroup, targetGroup, entry);
+            }
+        }
+
+        if (item == QStringLiteral("Colors:Selection") && hasAccent()) {
+            for (const auto& entry : {QStringLiteral("BackgroundNormal"), QStringLiteral("BackgroundAlternate")}) {
+                targetGroup.writeEntry(entry, accentBackground(getAccent(), config->group("Colors:View").readEntry<QColor>("BackgroundNormal", QColor())));
+            }
         }
 
         if (sourceGroup.hasGroup("Inactive")) {

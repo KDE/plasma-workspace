@@ -45,6 +45,7 @@ target_link_libraries(kcm_lookandfeel_static
     KF5::JobWidgets
     KF5::Service
     KF5::QuickAddons
+    KF5::GuiAddons
     KF5::KIOWidgets
     KF5::Declarative
     KF5::NewStuff

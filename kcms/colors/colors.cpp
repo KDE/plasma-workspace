@@ -10,6 +10,7 @@
 
 #include "colors.h"
 
+#include <QColor>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QFileInfo>
@@ -60,6 +61,9 @@ KCMColors::KCMColors(QObject *parent, const QVariantList &args)
     qmlRegisterType<ColorsSettings>();
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_colors"), i18n("Colors"), QStringLiteral("2.0"), QString(), KAboutLicense::GPL);
+
+    m_accentColor = savedAccentColor();
+
     about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@privat.broulik.de"));
     setAboutData(about);
 
@@ -96,6 +100,33 @@ FilterProxyModel *KCMColors::filteredModel() const
 ColorsSettings *KCMColors::colorsSettings() const
 {
     return m_data->settings();
+}
+
+std::optional<QColor> KCMColors::savedAccentColor() const
+{
+    if (!colorsSettings()->config()->group("General").hasKey("AccentColor")) {
+        return {};
+    }
+    return colorsSettings()->accentColor();
+}
+
+QColor KCMColors::accentColor() const
+{
+    return m_accentColor.value_or(Qt::transparent);
+}
+
+void KCMColors::setAccentColor(const QColor &accentColor)
+{
+    m_accentColor = accentColor;
+    Q_EMIT accentColorChanged();
+    Q_EMIT settingsChanged();
+}
+
+void KCMColors::resetAccentColor()
+{
+    m_accentColor.reset();
+    Q_EMIT accentColorChanged();
+    Q_EMIT settingsChanged();
 }
 
 bool KCMColors::downloadingFile() const
@@ -300,7 +331,9 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
 
 bool KCMColors::isSaveNeeded() const
 {
-    return m_activeSchemeEdited || !m_model->match(m_model->index(0, 0), ColorsModel::PendingDeletionRole, true).isEmpty();
+    return m_activeSchemeEdited || 
+           !m_model->match(m_model->index(0, 0), ColorsModel::PendingDeletionRole, true).isEmpty() ||
+           savedAccentColor() != m_accentColor;
 }
 
 void KCMColors::load()
@@ -331,7 +364,7 @@ void KCMColors::save()
     // We need to save the colors change first, to avoid a situation,
     // when we announced that the color scheme has changed, but
     // the colors themselves in the color scheme have not yet
-    if (m_selectedSchemeDirty || m_activeSchemeEdited) {
+    if (m_selectedSchemeDirty || m_activeSchemeEdited || m_accentColor != savedAccentColor()) {
         saveColors();
     }
     ManagedConfigModule::save();
@@ -343,8 +376,36 @@ void KCMColors::save()
 void KCMColors::saveColors()
 {
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(m_model->selectedScheme()));
+    // hard to figure out why mutating from the colours settings
+    // doesn't affect the applicator's view on config, but operating on the
+    // globalConfig directly works.
+    // code already a mess, so might as well just do what works.
+    KSharedConfigPtr globalConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
+
+    auto set = [=]() {
+        globalConfig->group("General").writeEntry("AccentColor", QColor());
+
+        if (m_accentColor.has_value()) {
+            colorsSettings()->setAccentColor(*m_accentColor);
+            globalConfig->group("General").writeEntry("AccentColor", *m_accentColor, KConfig::Notify);
+        } else {
+            auto g = colorsSettings()->config()->group("General");
+            g.deleteEntry("AccentColor");
+            globalConfig->group("General").deleteEntry("AccentColor", KConfig::Notify);
+        }
+    };
+
+    set();
+
     applyScheme(path, colorsSettings()->config());
     m_selectedSchemeDirty = false;
+
+    set();
+}
+
+QColor KCMColors::accentBackground(const QColor& accent, const QColor& background)
+{
+    return ::accentBackground(accent, background);
 }
 
 void KCMColors::processPendingDeletions()
