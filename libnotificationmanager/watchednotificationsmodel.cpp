@@ -52,8 +52,8 @@ private:
 };
 
 WatchedNotificationsModel::Private::Private(WatchedNotificationsModel* q, QObject *parent)
-    : q(q)
-    , QObject(parent)
+    : QObject(parent)
+    , q(q)
 {
     QDBusConnection dbus = QDBusConnection::sessionBus();
     fdoNotificationsInterface = new OrgFreedesktopNotificationsInterface(QStringLiteral("org.freedesktop.Notifications"),
