@@ -27,6 +27,8 @@
 #include <QObject>
 #include <QQmlParserStatus>
 
+#include <Plasma>
+
 #include "plasmaappletitemmodel_p.h"
 
 namespace Plasma {
