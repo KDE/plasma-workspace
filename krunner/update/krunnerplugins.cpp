@@ -18,16 +18,10 @@
  ***************************************************************************/
 
 #include <QCoreApplication>
-#include <QStandardPaths>
-#include <QDebug>
-#include <QFile>
-#include <QDir>
 
 #include <KSharedConfig>
 #include <KConfigGroup>
-#include <kconfig.h>
-#include <KPluginInfo>
-#include <krunner/runnermanager.h>
+#include <KRunner/RunnerManager>
 
 void migrateEnabledPlugins()
 {

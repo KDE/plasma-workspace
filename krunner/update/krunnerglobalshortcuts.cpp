@@ -25,7 +25,7 @@
 #include <KDesktopFile>
 #include <KSharedConfig>
 #include <KConfigGroup>
-#include <kconfig.h>
+#include <KConfig>
 #include <KGlobalAccel>
 
 int main(int argc, char **argv)
