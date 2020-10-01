@@ -2033,6 +2033,99 @@ void ShellCorona::insertContainment(const QString &activity, int screenNum, Plas
     }
 }
 
+/**
+ * @internal
+ *
+ * The DismissPopupEventFilter class monitors mouse button press events and
+ * when needed dismisses the active popup widget.
+ *
+ * plasmashell uses both QtQuick and QtWidgets under a single roof, QtQuick is
+ * used for most of things, while QtWidgets is used for things such as context
+ * menus, etc.
+ *
+ * If user clicks outside a popup window, it's expected that the popup window
+ * will be closed.  On X11, it's achieved by establishing both a keyboard grab
+ * and a pointer grab. But on Wayland, you can't grab keyboard or pointer. If
+ * user clicks a surface of another app, the compositor will dismiss the popup
+ * surface.  However, if user clicks some surface of the same application, the
+ * popup surface won't be dismissed, it's up to the application to decide
+ * whether the popup must be closed. In 99% cases, it must.
+ *
+ * Qt has some code that dismisses the active popup widget if another window
+ * of the same app has been clicked. But, that code works only if the
+ * application uses solely Qt widgets. See QTBUG-83972. For plasma it doesn't
+ * work, because as we said previously, it uses both Qt Quick and Qt Widgets.
+ *
+ * Ideally, this bug needs to be fixed upstream, but given that it'll involve
+ * major changes in Qt, the chances of it being fixed any time soon are slim.
+ *
+ * In order to work around the popup dismissal bug, we install an event filter
+ * that monitors Qt::MouseButtonPress events. If it happens that user has
+ * clicked outside an active popup widget, that popup will be closed. This
+ * event filter is not needed on X11!
+ */
+class DismissPopupEventFilter : public QObject
+{
+    Q_OBJECT
+
+public:
+    explicit DismissPopupEventFilter(QObject *parent = nullptr);
+
+protected:
+    bool eventFilter(QObject *watched, QEvent *event) override;
+
+private:
+    bool m_filterMouseEvents = false;
+};
+
+DismissPopupEventFilter::DismissPopupEventFilter(QObject *parent)
+    : QObject(parent)
+{
+}
+
+bool DismissPopupEventFilter::eventFilter(QObject *watched, QEvent *event)
+{
+    if (event->type() == QEvent::MouseButtonPress) {
+        if (m_filterMouseEvents) {
+            // Eat events until all mouse buttons are released.
+            return true;
+        }
+
+        QWidget *popup = QApplication::activePopupWidget();
+        if (!popup) {
+            return false;
+        }
+
+        QWindow *window = qobject_cast<QWindow *>(watched);
+        if (popup->windowHandle() == window) {
+            // The popup window handles mouse events before the widget.
+            return false;
+        }
+
+        QWidget *widget = qobject_cast<QWidget *>(watched);
+        if (widget) {
+            // Let the popup widget handle the mouse press event.
+            return false;
+        }
+
+        popup->close();
+        m_filterMouseEvents = true;
+        return true;
+
+    } else if (event->type() == QEvent::MouseButtonRelease) {
+        if (m_filterMouseEvents) {
+            // Eat events until all mouse buttons are released.
+            QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
+            if (mouseEvent->buttons() == Qt::NoButton) {
+                m_filterMouseEvents = false;
+            }
+            return true;
+        }
+    }
+
+    return false;
+}
+
 void ShellCorona::setupWaylandIntegration()
 {
     if (!KWindowSystem::isPlatformWayland()) {
@@ -2052,6 +2145,7 @@ void ShellCorona::setupWaylandIntegration()
     );
     registry->setup();
     connection->roundtrip();
+    qApp->installEventFilter(new DismissPopupEventFilter(this));
 }
 
 KWayland::Client::PlasmaShell *ShellCorona::waylandPlasmaShellInterface() const
@@ -2169,4 +2263,5 @@ void ShellCorona::activateTaskManagerEntry(int index)
 
 
 #include "moc_shellcorona.cpp"
+#include "shellcorona.moc"
 
