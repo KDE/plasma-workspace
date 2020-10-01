@@ -20,8 +20,8 @@
 #ifndef PLASMA_PLASMAAPPLETITEMMODEL_P_H
 #define PLASMA_PLASMAAPPLETITEMMODEL_P_H
 
-#include <KPluginInfo>
-#include <Plasma/Applet>
+#include <KPluginMetaData>
+#include <KConfigGroup>
 #include "kcategorizeditemsviewmodels_p.h"
 
 class PlasmaAppletItemModel;
@@ -32,7 +32,7 @@ class PlasmaAppletItemModel;
 class PlasmaAppletItem : public KCategorizedItemsViewModels::AbstractItem
 {
 public:
-    explicit PlasmaAppletItem(const KPluginInfo& info);
+    explicit PlasmaAppletItem(const KPluginMetaData& info);
 
     QString pluginName() const;
     QString name() const override;
@@ -56,7 +56,7 @@ public:
     QStringList mimeTypes() const;
 
 private:
-    KPluginInfo m_info;
+    KPluginMetaData m_info;
     QString m_screenshot;
     QString m_icon;
     int m_runningCount;
