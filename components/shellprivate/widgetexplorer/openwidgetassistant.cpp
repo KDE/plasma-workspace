@@ -25,7 +25,7 @@
 
 #include <QDebug>
 #include <QUrl>
-#include <kfilewidget.h>
+#include <KFileWidget>
 #include <KMessageBox>
 #include <KService>
 #include <KServiceTypeTrader>

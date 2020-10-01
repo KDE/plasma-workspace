@@ -27,7 +27,7 @@
 #include <QQmlProperty>
 
 #include <KAuthorized>
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 #include <KNewStuff3/KNS3/DownloadDialog>
 #include <KWindowSystem>
 
@@ -35,7 +35,7 @@
 #include <Plasma/Corona>
 #include <Plasma/Containment>
 #include <Plasma/PluginLoader>
-#include <qstandardpaths.h>
+#include <QStandardPaths>
 
 #include <KActivities/Consumer>
 

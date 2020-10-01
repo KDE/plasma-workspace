@@ -21,7 +21,6 @@
 #define PLASMA_OPENWIDGETASSISTANT_P_H
 
 #include <KAssistantDialog>
-#include <KService>
 
 class KFileWidget;
 class QListWidget;

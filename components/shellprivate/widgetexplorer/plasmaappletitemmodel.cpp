@@ -23,10 +23,10 @@
 #include <QFileInfo>
 #include <QMimeData>
 
-#include <klocalizedstring.h>
-#include <kservicetypetrader.h>
-#include <ksycoca.h>
-#include <kconfig.h>
+#include <KLocalizedString>
+#include <KServiceTypeTrader>
+#include <KSycoca>
+#include <KConfig>
 #include "config-workspace.h"
 #include <KPackage/PackageLoader>
 #include <KDeclarative/KDeclarative>

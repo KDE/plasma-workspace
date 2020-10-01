@@ -27,7 +27,7 @@
 
 #include "wallpaperplugin/wallpaperplugin.h"
 #include "widgetexplorer/widgetexplorer.h"
-#include <plasma/containment.h>
+#include <Plasma/Containment>
 
 #if KF5TextEditor_FOUND
 #include "interactiveconsole/interactiveconsole.h"
