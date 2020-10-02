@@ -1,4 +1,0 @@
-[D-BUS Service]
-Name=org.kde.runners.baloo
-Exec=@CMAKE_INSTALL_FULL_LIBEXECDIR@/baloorunner
-PartOf=graphical-session.target

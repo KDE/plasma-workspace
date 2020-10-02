@@ -1,0 +1,11 @@
+[Unit]
+Description=KRunner provider for baloo file indexer
+PartOf=graphical-session.target
+
+[Service]
+ExecStart=@CMAKE_INSTALL_FULL_LIBEXECDIR@/baloorunner
+Type=dbus
+BusName=org.kde.runners.baloo
+TimeoutSec=5sec
+Slice=background.slice
+Restart=no #as we're dbus activated anyway

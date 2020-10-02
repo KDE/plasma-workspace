@@ -15,10 +15,6 @@ target_link_libraries(baloorunner
   Qt5::DBus
 )
 
-configure_file(org.kde.baloorunner.service.in
-               ${CMAKE_CURRENT_BINARY_DIR}/org.kde.baloorunner.service)
-
-
 install(
   TARGETS baloorunner
   DESTINATION ${KDE_INSTALL_LIBEXECDIR}
@@ -29,5 +25,10 @@ install(
   DESTINATION "${KDE_INSTALL_DATAROOTDIR}/krunner/dbusplugins"
 )
 
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.baloorunner.service
-        DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})
+ecm_generate_dbus_service_file(NAME org.kde.runners.baloo
+                                                           EXECUTABLE ${KDE_INSTALL_FULL_LIBEXECDIR}/baloorunner
+                                                           SYSTEMD_SERVICE plasma-baloorunner.service
+                                                           DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR})
+
+ecm_install_configured_files(INPUT plasma-baloorunner.service.in @ONLY DESTINATION
+        ${SYSTEMD_USER_UNIT_INSTALL_DIR})
