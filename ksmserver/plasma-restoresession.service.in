@@ -1,0 +1,9 @@
+[Unit]
+Description=KDE Session Management Server
+After=plasma-ksmserver.service plasma-xembedsniproxy.service plasma-gmenudbusmenuproxy.service
+
+[Service]
+Type=oneshot
+ExecStart=-@QtBinariesDir@/qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.restoreSession
+Slice=session.slice
+RefuseManualStart=yes
