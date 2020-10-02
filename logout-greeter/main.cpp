@@ -32,6 +32,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "greeter.h"
 
+#include <sessionmanagement.h>
+
 int main(int argc, char *argv[])
 {
     qunsetenv("SESSION_MANAGER");
@@ -44,19 +46,28 @@ int main(int argc, char *argv[])
 
     OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
     QDBusPendingReply<bool> isShuttingDownPending = ksmserver.isShuttingDown();
-    QDBusPendingReply<bool> canShutdownPending = ksmserver.canShutdown();
 
     isShuttingDownPending.waitForFinished();
-    canShutdownPending.waitForFinished();
 
     //if ksmserver is shutting us down already, we don't want another prompt
     if (isShuttingDownPending.value()) {
         return 0;
     }
 
-    bool shutdownAllowed = canShutdownPending.value();
+    // because we export stuff as horrific contextProperties we need to know "maysd" may shutdown, at the time of initial creation and can't update
+    // later.
+    // Force the backend to load everything now, then the shared backend will be cached when a new object is created later
 
-    Greeter greeter(shutdownAllowed);
+    // TODO Plasma 6, just have the greeter QML import and use the SessionManagement object directly
+    // We don't need any special slot handling in ShutdownDlg
+    SessionManagement m_session;
+    if (m_session.state() == SessionManagement::State::Loading) {
+        QEventLoop e;
+        QObject::connect(&m_session, &SessionManagement::stateChanged, &e, &QEventLoop::quit);
+        e.exec();
+    }
+
+    Greeter greeter;
 
     if (argc > 1) {
         //special case, invoked from ksmserver from a former release which had a tonne of args

@@ -41,9 +41,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KWayland/Client/registry.h>
 #include <KWayland/Client/plasmashell.h>
 
-Greeter::Greeter(bool shutdownAllowed)
+Greeter::Greeter()
     : QObject()
-    , m_shutdownAllowed(shutdownAllowed)
     , m_waylandPlasmaShell(nullptr)
 {
     new LogoutPromptAdaptor(this);
@@ -91,7 +90,7 @@ void Greeter::init()
 void Greeter::adoptScreen(QScreen* screen)
 {
     // TODO: last argument is the theme, maybe add command line option for it?
-    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownAllowed, m_shutdownType, m_waylandPlasmaShell);
+    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownType, m_waylandPlasmaShell);
     w->installEventFilter(this);
     m_dialogs << w;
 
@@ -100,9 +99,7 @@ void Greeter::adoptScreen(QScreen* screen)
         w->deleteLater();
     });
     connect(w, &KSMShutdownDlg::rejected, this, &Greeter::rejected);
-    connect(w, &KSMShutdownDlg::accepted, this, [w]() {
-        OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-        ksmserver.logout(KWorkSpace::ShutdownConfirmNo, w->shutdownType(), KWorkSpace::ShutdownModeDefault);
+    connect(w, &KSMShutdownDlg::accepted, this, []() {
         QApplication::exit(1);
     });
     w->setScreen(screen);

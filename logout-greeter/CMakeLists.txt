@@ -14,12 +14,13 @@ target_link_libraries(ksmserver-logout-greeter
     Qt5::Widgets
     Qt5::Quick
     Qt5::X11Extras
+    Qt5::DBus
     KF5::Declarative
     KF5::I18n
     KF5::Package
     KF5::QuickAddons
-    KF5::KDELibs4Support # Solid/PowerManagement
     KF5::WaylandClient
+    KF5::WindowSystem
     ${X11_LIBRARIES}
 )
 install(TARGETS ksmserver-logout-greeter DESTINATION ${KDE_INSTALL_LIBEXECDIR})

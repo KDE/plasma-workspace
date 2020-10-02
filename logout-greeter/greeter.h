@@ -43,7 +43,7 @@ class Greeter : public QObject
 {
     Q_OBJECT
 public:
-    Greeter(bool shutdownAllowed);
+    Greeter();
     ~Greeter() override;
 
     void init();
@@ -60,7 +60,6 @@ private:
     void rejected();
     void setupWaylandIntegration();
 
-    bool m_shutdownAllowed;
     bool m_running = false;
 
     KWorkSpace::ShutdownType m_shutdownType = KWorkSpace::ShutdownTypeHalt;

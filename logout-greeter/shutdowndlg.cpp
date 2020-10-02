@@ -48,7 +48,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KAuthorized>
 #include <KLocalizedString>
 #include <KUser>
-#include <Solid/PowerManagement>
 #include <KWindowEffects>
 #include <KWindowSystem>
 #include <KDeclarative/KDeclarative>
@@ -74,10 +73,8 @@ static const QString s_dbusPropertiesInterface = QStringLiteral("org.freedesktop
 static const QString s_login1ManagerInterface = QStringLiteral("org.freedesktop.login1.Manager");
 static const QString s_login1RebootToFirmwareSetup = QStringLiteral("RebootToFirmwareSetup");
 
-Q_DECLARE_METATYPE(Solid::PowerManagement::SleepState)
-
 KSMShutdownDlg::KSMShutdownDlg(QWindow* parent,
-                                bool maysd, KWorkSpace::ShutdownType sdtype,
+                                KWorkSpace::ShutdownType sdtype,
                                 KWayland::Client::PlasmaShell *plasmaShell)
   : QuickViewSharedEngine(parent),
     m_result(false),
@@ -107,7 +104,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow* parent,
     //QQuickView *windowContainer = QQuickView::createWindowContainer(m_view, this);
     //windowContainer->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     QQmlContext *context = rootContext();
-    context->setContextProperty(QStringLiteral("maysd"), maysd);
+    context->setContextProperty(QStringLiteral("maysd"), m_session.canShutdown());
     context->setContextProperty(QStringLiteral("sdtype"), sdtype);
 
     QQmlPropertyMap *mapShutdownType = new QQmlPropertyMap(this);
@@ -119,12 +116,11 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow* parent,
     context->setContextProperty(QStringLiteral("ShutdownType"), mapShutdownType);
 
     QQmlPropertyMap *mapSpdMethods = new QQmlPropertyMap(this);
-    QSet<Solid::PowerManagement::SleepState> spdMethods = Solid::PowerManagement::supportedSleepStates();
-    mapSpdMethods->insert(QStringLiteral("StandbyState"), QVariant::fromValue(spdMethods.contains(Solid::PowerManagement::StandbyState)));
-    mapSpdMethods->insert(QStringLiteral("SuspendState"), QVariant::fromValue(spdMethods.contains(Solid::PowerManagement::SuspendState)));
-    mapSpdMethods->insert(QStringLiteral("HibernateState"), QVariant::fromValue(spdMethods.contains(Solid::PowerManagement::HibernateState)));
+    mapSpdMethods->insert(QStringLiteral("StandbyState"), m_session.canSuspend());
+    mapSpdMethods->insert(QStringLiteral("SuspendState"), m_session.canSuspend());
+    mapSpdMethods->insert(QStringLiteral("HibernateState"), m_session.canHibernate());
     context->setContextProperty(QStringLiteral("spdMethods"), mapSpdMethods);
-    context->setContextProperty(QStringLiteral("canLogout"), KAuthorized::authorize(QStringLiteral("logout")));
+    context->setContextProperty(QStringLiteral("canLogout"), m_session.canLogout());
 
     // Trying to access a non-existent context property throws an error, always create the property and then update it later
     context->setContextProperty("rebootToFirmwareSetup", false);
@@ -273,7 +269,7 @@ void KSMShutdownDlg::setupWaylandIntegration()
 
 void KSMShutdownDlg::slotLogout()
 {
-    m_shutdownType = KWorkSpace::ShutdownTypeNone;
+    m_session.requestLogout();
     accept();
 }
 
@@ -281,7 +277,7 @@ void KSMShutdownDlg::slotReboot()
 {
     // no boot option selected -> current
     m_bootOption.clear();
-    m_shutdownType = KWorkSpace::ShutdownTypeReboot;
+    m_session.requestReboot();
     accept();
 }
 
@@ -289,7 +285,7 @@ void KSMShutdownDlg::slotReboot(int opt)
 {
     if (int(rebootOptions.size()) > opt)
         m_bootOption = rebootOptions[opt];
-    m_shutdownType = KWorkSpace::ShutdownTypeReboot;
+    m_session.requestReboot();
     accept();
 }
 
@@ -297,11 +293,7 @@ void KSMShutdownDlg::slotReboot(int opt)
 void KSMShutdownDlg::slotLockScreen()
 {
     m_bootOption.clear();
-    QDBusMessage call = QDBusMessage::createMethodCall(QStringLiteral("org.kde.screensaver"),
-                                                       QStringLiteral("/ScreenSaver"),
-                                                       QStringLiteral("org.freedesktop.ScreenSaver"),
-                                                       QStringLiteral("Lock"));
-    QDBusConnection::sessionBus().asyncCall(call);
+    m_session.lock();
     reject();
 }
 
@@ -316,12 +308,11 @@ void KSMShutdownDlg::slotSuspend(int spdMethod)
 {
     m_bootOption.clear();
     switch (spdMethod) {
-        case Solid::PowerManagement::StandbyState:
-        case Solid::PowerManagement::SuspendState:
-            Solid::PowerManagement::requestSleep(Solid::PowerManagement::SuspendState, nullptr, nullptr);
-            break;
-        case Solid::PowerManagement::HibernateState:
-            Solid::PowerManagement::requestSleep(Solid::PowerManagement::HibernateState, nullptr, nullptr);
+        case 0: //Solid::PowerManagement::StandbyState:
+        case 1: //Solid::PowerManagement::SuspendState:
+            m_session.suspend();
+        case 2:// Solid::PowerManagement::HibernateState:
+            m_session.hibernate();
             break;
     }
     reject();
