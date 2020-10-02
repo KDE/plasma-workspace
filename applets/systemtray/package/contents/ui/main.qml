@@ -49,7 +49,7 @@ MouseArea {
     readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
     readonly property bool autoSize: plasmoid.configuration.scaleIconsToFit
     readonly property int cellThickness: root.vertical ? root.width : root.height
-    readonly property int rowsOrColumns: autoSize || cellThickness <= smallIconSize * 2 ? 1 : 2
+    readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.floor(cellThickness / smallIconSize))
     property alias expanded: dialog.visible
     property Item activeApplet
     property alias visibleLayout: tasksGrid
