@@ -121,7 +121,7 @@ void StandaloneAppCorona::load()
 
 void StandaloneAppCorona::loadDefaultLayout()
 {
-    const QString script = package().filePath("defaultlayout");
+    const QString script = kPackage().filePath("defaultlayout");
     QFile file(script);
     if (file.open(QIODevice::ReadOnly | QIODevice::Text) ) {
         QString code = file.readAll();

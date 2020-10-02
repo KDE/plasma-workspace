@@ -130,7 +130,7 @@ ShellCorona::ShellCorona(QObject *parent)
     m_reconsiderOutputsTimer.setInterval(1000);
     connect(&m_reconsiderOutputsTimer, &QTimer::timeout, this, &ShellCorona::reconsiderOutputs);
 
-    m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package().filePath("defaults")), "Desktop");
+    m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(kPackage().filePath("defaults")), "Desktop");
     m_lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(m_lookAndFeelPackage.filePath("defaults")), "Desktop");
     m_lnfDefaultsConfig = KConfigGroup(&m_lnfDefaultsConfig, QStringLiteral("org.kde.plasma.desktop"));
 
@@ -949,7 +949,7 @@ void ShellCorona::loadDefaultLayout()
         script = m_lookAndFeelPackage.filePath("layouts", QString(shell() + "-layout.js").toLatin1());
     }
     if (script.isEmpty()) {
-        script = package().filePath("defaultlayout");
+        script = kPackage().filePath("defaultlayout");
     }
 
     QFile file(script);

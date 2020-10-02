@@ -285,12 +285,12 @@ void ScriptEngine::exception(const QJSValue &value)
 
 QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
 {
-    if (!corona->package().metadata().isValid()) {
+    if (!corona->kPackage().isValid()) {
         qWarning() << "Warning: corona package invalid";
         return QStringList();
     }
 
-    const QString appName = corona->package().metadata().pluginName();
+    const QString appName = corona->kPackage().metadata().pluginId();
     QStringList scripts;
 
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, "plasma/shells/" + appName + QStringLiteral("/contents/updates"), QStandardPaths::LocateDirectory);

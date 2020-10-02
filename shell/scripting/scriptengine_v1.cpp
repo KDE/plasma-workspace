@@ -199,7 +199,8 @@ QJSValue ScriptEngine::V1::desktopForScreen(const QJSValue &param) const
     }
 
     const uint screen = param.toInt();
-    return m_engine->wrap(m_engine->m_corona->containmentForScreen(screen));
+    const auto containments = m_engine->m_corona->containmentsForScreen(screen);
+    return m_engine->wrap(containments.empty() ? nullptr : containments[0]);
 }
 
 QJSValue ScriptEngine::V1::createActivity(const QJSValue &nameParam, const QString &pluginParam)
@@ -231,7 +232,7 @@ QJSValue ScriptEngine::V1::createActivity(const QJSValue &nameParam, const QStri
         sc->insertActivity(id, plugin);
     } else if (ac) {
         if (plugin.isEmpty() || plugin == QLatin1String("undefined")) {
-            KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(m_engine->m_corona->package().filePath("defaults")), "Desktop");
+            KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(m_engine->m_corona->kPackage().filePath("defaults")), "Desktop");
             plugin = shellCfg.readEntry("Containment", "org.kde.desktopcontainment");
         }
         ac->insertActivity(id, plugin);
