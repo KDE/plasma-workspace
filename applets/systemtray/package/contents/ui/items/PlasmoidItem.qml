@@ -87,6 +87,7 @@ AbstractItem {
             } else if (root.activeApplet === applet) {
                 // if not expanded we don't have an active applet anymore
                 root.activeApplet = null;
+                dialog.visible = false;
             }
         }
 
