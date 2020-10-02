@@ -122,9 +122,6 @@ Item {
             if (data[source].Removable) {
                 devicenotifier.connectedRemovables.push(source);
                 devicenotifier.connectedRemovables = devicenotifier.connectedRemovables;
-                devicenotifier.popupIcon = "preferences-desktop-notification";
-                expandTimer.restart();
-                popupIconTimer.restart()
             }
         }
 
@@ -171,7 +168,10 @@ Item {
 
         function processLastDevice(expand) {
             if (last) {
-                if (isViableDevice(last)) {
+                if (isViableDevice(last) && hpSource.data[last].added) {
+                    devicenotifier.popupIcon = "preferences-desktop-notification";
+                    expandTimer.restart();
+                    popupIconTimer.restart()
                     last = "";
                 }
             }
