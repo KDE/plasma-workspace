@@ -109,16 +109,18 @@ void DesktopProtocol::checkLocalInstall()
 
 bool DesktopProtocol::rewriteUrl(const QUrl &url, QUrl &newUrl)
 {
+    QString oldPath = url.path();
+    // So that creating a new folder while at "desktop:" (without a '/' after ':')
+    // doesn't create "/home/user/DesktopNew Folder" instead of "/home/user/Desktop/New Folder".
+    if (oldPath.isEmpty() || !oldPath.startsWith(QLatin1Char('/'))) {
+        oldPath.prepend(QLatin1Char('/'));
+    }
+
     newUrl.setScheme(QStringLiteral("file"));
-    QString desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
-    if (desktopPath.endsWith('/')) {
-        desktopPath.chop(1);
-    }
-    QString filePath = desktopPath + url.path();
-    if (filePath.endsWith('/')) {
-        filePath.chop(1); // ForwardingSlaveBase always appends a '/'
-    }
-    newUrl.setPath(filePath);
+    const QString desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
+    newUrl.setPath(desktopPath + oldPath);
+    newUrl = newUrl.adjusted(QUrl::StripTrailingSlash);
+
     return true;
 }
 
@@ -240,6 +242,8 @@ void DesktopProtocol::virtual_hook(int id, void *data)
 
 void DesktopProtocol::fileSystemFreeSpace(const QUrl &url)
 {
+    Q_UNUSED(url)
+
     const QString desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
     const KDiskFreeSpaceInfo spaceInfo = KDiskFreeSpaceInfo::freeSpaceInfo(desktopPath);
     if (spaceInfo.isValid()) {
