@@ -22,7 +22,6 @@ import QtQuick 2.5
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 
-import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.kquickcontrols 2.0 as KQC
 import org.kde.kirigami 2.10 as Kirigami
 
@@ -72,8 +71,8 @@ ColumnLayout {
         ListView {
             id: itemsList
 
-            property var visibilityColumnWidth: units.gridUnit
-            property var keySequenceColumnWidth: units.gridUnit
+            property var visibilityColumnWidth: Kirigami.Units.gridUnit
+            property var keySequenceColumnWidth: Kirigami.Units.gridUnit
 
             clip: true
 
@@ -123,8 +122,8 @@ ColumnLayout {
                         Layout.fillWidth: true
 
                         Kirigami.Icon {
-                            width: units.iconSizes.small
-                            height: width
+                            implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                            implicitHeight: Kirigami.Units.iconSizes.smallMedium
                             source: model.decoration
                         }
                         QQC2.Label {
