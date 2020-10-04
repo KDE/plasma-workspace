@@ -167,8 +167,7 @@ private Q_SLOTS:
         QTRY_COMPARE(spyFileRenamed.count(), 1);
         QTRY_COMPARE(spyFileRenamedWithLocalPath.count(), 1);
         // and then desktopnotifier notices something changed and emits KDirNotify::FilesAdded
-        QTest::qWait(250); // larger than KCoreDirLister::pendingUpdateTimer
-        QVERIFY(spyFilesAdded.count() >= 1); // can be 3, depending on kdirwatch's behaviour in desktopnotifier
+        QTRY_VERIFY(spyFilesAdded.count() >= 1); // can be 3, depending on kdirwatch's behaviour in desktopnotifier
 
         // check that KDirLister now has the correct item (#382341)
         if (lister) {
