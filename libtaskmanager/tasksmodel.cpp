@@ -1773,7 +1773,17 @@ void TasksModel::syncLaunchers()
         for (int i = 0; i < rowCount(); ++i) {
             const QUrl &rowLauncherUrl = index(i, 0).data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
 
-            if (launcherUrlsMatch(launcherUrl, rowLauncherUrl, IgnoreQueryItems)) {
+            // `LauncherTasksModel::launcherList()` returns data in a format suitable for writing
+            // to persistent configuration storage, e.g. `preferred://browser`. We mean to compare
+            // this last "save state" to a higher, resolved URL representation to compute the delta
+            // so we need to move the unresolved URLs through `TaskTools::appDataFromUrl()` first.
+            // TODO: This bypasses an existing lookup cache for the resolved app data that exists
+            // in LauncherTasksModel. It's likely a good idea to eventually move these caches out
+            // of the various models and share them among users of `TaskTools::appDataFromUrl()`,
+            // and then also do resolution implicitly in `TaskTools::launcherUrlsMatch`, to speed
+            // things up slightly and make the models simpler (central cache eviction, ...).
+            if (launcherUrlsMatch(appDataFromUrl(launcherUrl).url,
+                rowLauncherUrl, IgnoreQueryItems)) {
                 row = i;
                 break;
             }
