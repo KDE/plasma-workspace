@@ -1,6 +1,7 @@
 [Unit]
 Description=Handle legacy xembed system tray icons
 PartOf=graphical-session.target
+After=plasma-core.target
 
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/xembedsniproxy
