@@ -29,6 +29,7 @@ ColumnLayout {
     property string query
     property string runner
     property bool showHistory: false
+    property string priorSearch
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -44,21 +45,18 @@ ColumnLayout {
                 queryField.forceActiveFocus();
                 listView.currentIndex = -1
                 if (runnerWindow.retainPriorSearch) {
-                    // Hack: We want to retain the prior seach, but are in a different match session
-                    // This way we ensure that the prior search gets executed as a new query
-                    const priorSearch = root.query
-                    queryField.text = ""
-                    queryField.text = priorSearch
+                    // If we manually specified a query(D-Bus invocation) we don't want to retain the prior search
+                    if (!query) {
+                        queryField.text = priorSearch
+                        queryField.select(root.query.length, 0)
+                    }
                 }
-                queryField.select(root.query.length, 0)
             } else {
-                root.runner = ""
                 if (runnerWindow.retainPriorSearch) {
-                    // Same effect as setting empty string, but we want to retain this string for the next session
-                    results.model.clear()
-                } else {
-                    root.query = ""
+                    priorSearch = root.query
                 }
+                root.runner = ""
+                root.query = ""
                 root.showHistory = false
             }
         }
