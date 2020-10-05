@@ -1239,7 +1239,7 @@ void ShellCorona::addOutput(QScreen* screen)
     // It will result in a bit more noise, but most implementations should just no-op
 
     // It is still horrible and should be deleted when possible
-    if (QLibraryInfo::version() >= QVersionNumber(5, 15, 1)) {
+    if (QLibraryInfo::version() == QVersionNumber(5, 15, 1)) {
         connect(screen, &QScreen::availableGeometryChanged,
             screen, &QScreen::geometryChanged);
     }
