@@ -49,6 +49,8 @@ PlasmaComponents3.Page {
             }
 
             PlasmaComponents3.ComboBox {
+                id: displayModeCombobox
+
                 Layout.preferredWidth: units.gridUnit * 11
                 model: [i18n("Removable devices"),
                         i18n("Non-removable devices"),
@@ -90,7 +92,8 @@ PlasmaComponents3.Page {
 
             PlasmaComponents3.ToolButton {
                 id: unmountAll
-                visible: devicenotifier.mountedRemovables > 1;
+                visible: devicenotifier.mountedRemovables > 1
+                && displayModeCombobox.currentIndex === 0 /* removables only */
 
                 icon.name: "media-eject"
                 text: i18n("Remove All")
