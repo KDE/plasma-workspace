@@ -293,7 +293,7 @@ Item {
 
             model.push({
                 'text': mpris2Source.data[source]["Identity"],
-                'icon': mpris2Source.data[source]["Desktop Icon Name"] || mpris2Source.data[source]["Desktop Entry"] || source,
+                'icon': mpris2Source.data[source]["Desktop Icon Name"] || mpris2Source.data[source]["DesktopEntry"] || "emblem-music-symbolic",
                 'source': source
             });
         }

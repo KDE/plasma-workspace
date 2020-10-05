@@ -464,31 +464,36 @@ PlasmaComponents3.Page {
         RowLayout {
             anchors.fill: parent
 
-            PlasmaComponents3.ComboBox {
+            PlasmaComponents3.TabBar {
+                id: playerSelector
+                position: PlasmaComponents3.TabBar.Footer
+
                 Layout.fillWidth: true
-                Layout.leftMargin: units.gridUnit*2
-                Layout.rightMargin: units.gridUnit*2
+                implicitHeight: contentHeight
 
-                id: playerCombo
-                textRole: "text"
-                visible: model.length > 2 // more than one player, @multiplex is always there
-                model: root.mprisSourcesModel
+                Repeater {
+                    id: playerList
+                    model: root.mprisSourcesModel
 
-                onModelChanged: {
-                    // if model changes, ComboBox resets, so we try to find the current player again...
-                    for (var i = 0, length = model.length; i < length; ++i) {
-                        if (model[i].source === mpris2Source.current) {
-                            currentIndex = i
-                            break
+                    delegate: PlasmaComponents3.TabButton {
+                        icon.name: modelData["icon"]
+                        icon.height: PlasmaCore.Units.iconSizes.smallMedium
+                        Accessible.name: modelData["text"]
+                        PlasmaComponents3.ToolTip {
+                            text: modelData["text"]
+                        }
+                        onClicked: {
+                            disablePositionUpdate = true
+                            mpris2Source.current = modelData["source"];
+                            disablePositionUpdate = false
                         }
                     }
-                }
 
-                onActivated: {
-                    disablePositionUpdate = true
-                    // ComboBox has currentIndex and currentText, why doesn't it have currentItem/currentModelValue?
-                    mpris2Source.current = model[index].source
-                    disablePositionUpdate = false
+                    onModelChanged: {
+                        playerSelector.currentIndex = model.findIndex(
+                            (data) => { return data.source === mpris2Source.current }
+                        )
+                    }
                 }
             }
         }
