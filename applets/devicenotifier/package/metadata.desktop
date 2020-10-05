@@ -2,6 +2,7 @@
 Name=Disks & Devices
 Name[az]=Disklər və Qurğular
 Name[ca]=Discs i dispositius
+Name[da]=Diske og enheder
 Name[de]=Datenträger & Geräte
 Name[en_GB]=Disks & Devices
 Name[es]=Discos y dispositivos
@@ -27,6 +28,7 @@ Name[zh_CN]=磁盘和设备
 Comment=Notifications and access for devices
 Comment[az]=Cihazlar üçün bildirişlər və onlara giriş
 Comment[ca]=Notificacions i accés als dispositius
+Comment[da]=Bekendtgørelser og adgang til enheder
 Comment[de]=Benachrichtigungen und Zugriff für Geräte
 Comment[en_GB]=Notifications and access for devices
 Comment[es]=Notificaciones y accesos de dispositivos
