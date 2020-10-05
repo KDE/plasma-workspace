@@ -263,6 +263,7 @@ PlasmaComponents3.Page {
 
                         delegate: PlasmaExtras.ListItem {
                             id: eventItem
+                            implicitHeight: eventGrid.height + PlasmaCore.Units.smallSpacing * 2
                             property bool hasTime: {
                                 // Explicitly all-day event
                                 if (modelData.isAllDay) {
