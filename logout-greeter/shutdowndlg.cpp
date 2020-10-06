@@ -269,7 +269,7 @@ void KSMShutdownDlg::setupWaylandIntegration()
 
 void KSMShutdownDlg::slotLogout()
 {
-    m_session.requestLogout();
+    m_session.requestLogout(SessionManagement::ConfirmationMode::Skip);
     accept();
 }
 
@@ -277,7 +277,7 @@ void KSMShutdownDlg::slotReboot()
 {
     // no boot option selected -> current
     m_bootOption.clear();
-    m_session.requestReboot();
+    m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
     accept();
 }
 
@@ -285,7 +285,7 @@ void KSMShutdownDlg::slotReboot(int opt)
 {
     if (int(rebootOptions.size()) > opt)
         m_bootOption = rebootOptions[opt];
-    m_session.requestReboot();
+    m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
     accept();
 }
 
