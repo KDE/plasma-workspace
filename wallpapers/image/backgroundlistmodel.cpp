@@ -189,7 +189,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
     // add new files to dirwatch
     Q_FOREACH (const KPackage::Package &b, newPackages) {
         if (!m_dirwatch.contains(b.path())) {
-            m_dirwatch.addFile(b.path());
+            m_dirwatch.addDir(b.path());
         }
     }
 
