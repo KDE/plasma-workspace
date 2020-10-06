@@ -55,12 +55,6 @@ MouseArea {
     property alias visibleLayout: tasksGrid
     property alias hiddenLayout: expandedRepresentation.hiddenLayout
 
-    Plasmoid.onExpandedChanged: {
-        if (!plasmoid.expanded) {
-            dialog.visible = plasmoid.expanded;
-        }
-    }
-
     onWheel: {
         // Don't propagate unhandled wheel events
         wheel.accepted = true;
