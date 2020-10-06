@@ -133,5 +133,5 @@ X-KDE-PluginInfo-Name=org.kde.image
 X-KDE-PluginInfo-Version=
 X-KDE-PluginInfo-Website=https://kde.org/plasma-desktop
 
-MimeType=image/jpeg;image/png;image/svg+xml;image/svg+xml-compressed;image/bmp;
-X-Plasma-DropMimeTypes=image/jpeg,image/png,image/svg+xml,image/svg+xml-compressed,image/bmp
+MimeType=image/jpeg;image/png;image/svg+xml;image/svg+xml-compressed;image/bmp;image/webp;image/tiff;
+X-Plasma-DropMimeTypes=image/jpeg,image/png,image/svg+xml,image/svg+xml-compressed,image/bmp,image/webp,image/tiff
