@@ -252,11 +252,10 @@ ShellCorona::ShellCorona(QObject *parent)
 ShellCorona::~ShellCorona()
 {
     while (!containments().isEmpty()) {
-        //deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
+        // Deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
+        // Deleting a containment in turn also kills any panel views
         delete containments().first();
     }
-    qDeleteAll(m_panelViews);
-    m_panelViews.clear();
 }
 
 KPackage::Package ShellCorona::lookAndFeelPackage()
@@ -1381,7 +1380,7 @@ void ShellCorona::createWaitingPanels()
 void ShellCorona::panelContainmentDestroyed(QObject *cont)
 {
     auto view = m_panelViews.take(static_cast<Plasma::Containment*>(cont));
-    view->deleteLater();
+    delete view;
     //don't make things relayout when the application is quitting
     //NOTE: qApp->closingDown() is still false here
     if (!m_closingDown) {
