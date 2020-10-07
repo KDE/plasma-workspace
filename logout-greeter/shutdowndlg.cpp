@@ -300,7 +300,7 @@ void KSMShutdownDlg::slotLockScreen()
 void KSMShutdownDlg::slotHalt()
 {
     m_bootOption.clear();
-    m_shutdownType = KWorkSpace::ShutdownTypeHalt;
+    m_session.requestShutdown(SessionManagement::ConfirmationMode::Skip);
     accept();
 }
 

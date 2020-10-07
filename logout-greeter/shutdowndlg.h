@@ -69,7 +69,6 @@ protected:
 
 private:
     void setupWaylandIntegration();
-    KWorkSpace::ShutdownType m_shutdownType;
     QString m_bootOption;
     QStringList rebootOptions;
     bool m_result : 1;
