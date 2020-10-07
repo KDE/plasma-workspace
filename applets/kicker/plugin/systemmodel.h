@@ -43,7 +43,9 @@ class SystemModel : public AbstractModel
         void refresh() override;
 
     private:
-        QHash<SystemEntry::Action, SystemEntry *> m_entries;
+        void populate();
+
+        QVector<SystemEntry *> m_entries;
 };
 
 #endif
