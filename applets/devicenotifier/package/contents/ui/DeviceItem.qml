@@ -188,10 +188,10 @@ PlasmaExtras.ExpandableListItem {
     subtitleColor: {
         if (freeSpaceKnown) {
             if (freeSpace / totalSpace <= 0.05) {
-                return theme.negativeTextColor
+                return PlasmaCore.Theme.negativeTextColor
             }
         }
-        return theme.textColor
+        return PlasmaCore.Theme.textColor
     }
 
     defaultActionButtonAction: QQC2.Action {
