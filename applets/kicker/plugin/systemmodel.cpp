@@ -28,27 +28,7 @@
 
 SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
 {
-    m_favoritesModel = new SimpleFavoritesModel(this);
-
-    m_entries[SystemEntry::LockSession] = new SystemEntry(this, SystemEntry::LockSession);
-    m_entries[SystemEntry::LogoutSession] = new SystemEntry(this, SystemEntry::LogoutSession);
-    m_entries[SystemEntry::SaveSession] = new SystemEntry(this, SystemEntry::SaveSession);
-    m_entries[SystemEntry::SwitchUser] = new SystemEntry(this, SystemEntry::SwitchUser);
-    m_entries[SystemEntry::Suspend] = new SystemEntry(this, SystemEntry::Suspend);
-    m_entries[SystemEntry::Hibernate] = new SystemEntry(this, SystemEntry::Hibernate);
-    m_entries[SystemEntry::Reboot] = new SystemEntry(this, SystemEntry::Reboot);
-    m_entries[SystemEntry::Shutdown] = new SystemEntry(this, SystemEntry::Shutdown);
-
-    for (SystemEntry *entry : m_entries.values()) {
-        QObject::connect(entry, &SystemEntry::isValidChanged, this,
-            [this, entry]() {
-                const QModelIndex &idx = index(entry->action(), 0);
-                emit dataChanged(idx, idx, QVector<int>{Kicker::DisabledRole});
-            }
-        );
-
-        QObject::connect(entry, &SystemEntry::isValidChanged, m_favoritesModel, &AbstractModel::refresh);
-    }
+    populate();
 }
 
 SystemModel::~SystemModel()
@@ -67,7 +47,7 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    const SystemEntry *entry = m_entries.value(static_cast<SystemEntry::Action>(index.row() + 1));
+    const SystemEntry *entry = m_entries.value(index.row());
 
     if (role == Qt::DisplayRole) {
         return entry->name();
@@ -98,7 +78,7 @@ int SystemModel::rowCount(const QModelIndex &parent) const
 bool SystemModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
     if (row >= 0 && row < m_entries.count()) {
-        m_entries.value(static_cast<SystemEntry::Action>(row + 1))->run(actionId, argument);
+        m_entries.at(row)->run(actionId, argument);
 
         return true;
     }
@@ -108,5 +88,34 @@ bool SystemModel::trigger(int row, const QString &actionId, const QVariant &argu
 
 void SystemModel::refresh()
 {
+    beginResetModel();
+    populate();
+    endResetModel();
+
     m_favoritesModel->refresh();
+}
+
+void SystemModel::populate()
+{
+    qDeleteAll(m_entries);
+    m_entries.clear();
+
+    auto addIfValid = [=](const SystemEntry::Action action) {
+        SystemEntry *entry = new SystemEntry(this, action);
+
+        if (entry->isValid()) {
+            m_entries << entry;
+            QObject::connect(entry, &SystemEntry::isValidChanged, this,
+                &AbstractModel::refresh, Qt::UniqueConnection);
+        }
+    };
+
+    addIfValid(SystemEntry::LockSession);
+    addIfValid(SystemEntry::LogoutSession);
+    addIfValid(SystemEntry::SaveSession);
+    addIfValid(SystemEntry::SwitchUser);
+    addIfValid(SystemEntry::Suspend);
+    addIfValid(SystemEntry::Hibernate);
+    addIfValid(SystemEntry::Reboot);
+    addIfValid(SystemEntry::Shutdown);
 }
