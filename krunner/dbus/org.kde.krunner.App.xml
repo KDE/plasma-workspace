@@ -3,6 +3,8 @@
   <interface name="org.kde.krunner.App">
     <method name="display">
     </method>
+    <method name="toggleDisplay">
+    </method>
     <method name="displaySingleRunner">
       <arg name="runnerName" type="s" direction="in"/>
     </method>

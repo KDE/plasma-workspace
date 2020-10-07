@@ -80,6 +80,7 @@ protected:
 public Q_SLOTS:
     void setVisible(bool visible);
     void display();
+    void toggleDisplay();
     void displaySingleRunner(const QString &runnerName);
     void displayWithClipboardContents();
     void query(const QString &term);
@@ -90,7 +91,6 @@ public Q_SLOTS:
 protected Q_SLOTS:
     void screenGeometryChanged();
     void resetScreenPos();
-    void displayOrHide();
     void loadConfig();
     void objectIncubated();
     void slotFocusWindowChanged();

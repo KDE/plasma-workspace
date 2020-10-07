@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=dbus-send --type=method_call --dest=org.kde.krunner /App org.kde.krunner.App.display
+Exec=dbus-send --type=method_call --dest=org.kde.krunner /App org.kde.krunner.App.toggleDisplay
 Name=KRunner
 Name[ar]=مشغّل.ك
 Name[ast]=KRunner

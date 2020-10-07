@@ -300,7 +300,7 @@ void View::positionOnScreen()
     });
 }
 
-void View::displayOrHide()
+void View::toggleDisplay()
 {
     if (isVisible() && !QGuiApplication::focusWindow())  {
         KWindowSystem::forceActiveWindow(winId());
