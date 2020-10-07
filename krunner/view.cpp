@@ -129,7 +129,7 @@ void View::objectIncubated()
 
 void View::slotFocusWindowChanged()
 {
-    if (!QGuiApplication::focusWindow()) {
+    if (!QGuiApplication::focusWindow() && !m_pinned) {
         setVisible(false);
     }
 }
@@ -455,3 +455,18 @@ void View::setVisible(bool visible)
 bool View::retainPriorSearch() const {
     return m_retainPriorSearch;
 }
+
+bool View::pinned() const
+{
+    return m_pinned;
+}
+
+void View::setPinned(bool pinned)
+{
+    if (m_pinned != pinned) {
+        m_pinned = pinned;
+        m_config.writeEntry("Pinned", pinned);
+        Q_EMIT pinnedChanged();
+    }
+}
+

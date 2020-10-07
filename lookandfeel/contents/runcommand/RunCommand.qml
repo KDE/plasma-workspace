@@ -207,14 +207,14 @@ ColumnLayout {
             }
         }
         PlasmaComponents3.ToolButton {
-            icon.name: "window-close"
-            onClicked: {
-                runnerWindow.visible = false
-            }
-            Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close")
-            Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close Search")
+            checkable: true
+            checked: runnerWindow.pinned
+            onToggled: runnerWindow.pinned = checked
+            icon.name: "window-pin"
+            Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Pin")
+            Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Pin Search")
             PlasmaComponents3.ToolTip {
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Close")
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keep Open")
             }
         }
     }

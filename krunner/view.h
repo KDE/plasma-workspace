@@ -50,6 +50,7 @@ class View : public PlasmaQuick::Dialog
     Q_PROPERTY(bool canConfigure READ canConfigure CONSTANT)
     Q_PROPERTY(QStringList history READ history NOTIFY historyChanged)
     Q_PROPERTY(bool retainPriorSearch READ retainPriorSearch NOTIFY retainPriorSearchChanged)
+    Q_PROPERTY(bool pinned READ pinned WRITE setPinned NOTIFY pinnedChanged)
 
 public:
     explicit View(QWindow *parent = nullptr);
@@ -68,9 +69,13 @@ public:
 
     bool retainPriorSearch() const;
 
+    bool pinned() const;
+    void setPinned(bool pinned);
+
 Q_SIGNALS:
     void historyChanged();
     void retainPriorSearchChanged();
+    void pinnedChanged();
 
 protected:
     bool event(QEvent* event) override;
@@ -107,6 +112,7 @@ private:
     QStringList m_history;
     bool m_retainPriorSearch;
     bool m_historyEnabled;
+    bool m_pinned = false;
 };
 
 
