@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.6)
 
 project(plasma-workspace)
-set(PROJECT_VERSION "5.19.90")
+set(PROJECT_VERSION "5.20.0")
 set(PROJECT_VERSION_MAJOR 5)
 
 set(QT_MIN_VERSION "5.15.0")
