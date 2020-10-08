@@ -22,6 +22,7 @@
 
 
 #include <KService>
+#include <QMutex>
 
 #include <krunner/abstractrunner.h>
 
@@ -45,10 +46,10 @@ public:
 
 protected Q_SLOTS:
     QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;
-
-
-protected:
-    void setupMatch(const KPluginMetaData &md, Plasma::QueryMatch &action);
+private:
+    void loadMetadataList();
+    QList<KPluginMetaData> m_applets;
+    QMutex m_mutex;
 };
 
 #endif
