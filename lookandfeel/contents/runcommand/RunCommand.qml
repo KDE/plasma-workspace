@@ -104,12 +104,13 @@ ColumnLayout {
                 Timer {
                     id: queryTimer
                     property bool queryDisplay: false
-                    running: results.querying || queryDisplay
-                    onRunningChanged: if (running) {
-                        queryDisplay = true
-                    }
-                    onTriggered: if (!results.querying) {
+                    running: results.querying
+                    repeat: true
+                    onRunningChanged: if (queryDisplay && !running) {
                         queryDisplay = false
+                    }
+                    onTriggered: if (!queryDisplay) {
+                        queryDisplay = true
                     }
                     interval: 500
                 }
