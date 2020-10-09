@@ -94,11 +94,13 @@ void KcmTest::cleanupTestCase()
 
 void KcmTest::testWidgetStyle()
 {
-    m_KCMLookandFeel->setWidgetStyle(QStringLiteral("customTestValue"));
+    m_KCMLookandFeel->setWidgetStyle(QStringLiteral("Fusion"));
 
     KConfig config(QStringLiteral("kdeglobals"));
     KConfigGroup cg(&config, "KDE");
-    QCOMPARE(cg.readEntry("widgetStyle", QString()), QString("customTestValue"));
+    // We have to use an actual theme name here because setWidgetStyle checks
+    // if the theme can actually be used before it changes the config
+    QCOMPARE(cg.readEntry("widgetStyle", QString()), QString("Fusion"));
 }
 
 void KcmTest::testColors()
@@ -182,7 +184,8 @@ void KcmTest::testKCMSave()
 
     KConfig config(QStringLiteral("kdeglobals"));
     KConfigGroup cg(&config, "KDE");
-    QCOMPARE(cg.readEntry("widgetStyle", QString()), QString("testValue"));
+    // See comment in testWidgetStyle
+    QCOMPARE(cg.readEntry("widgetStyle", QString()), QString("Fusion"));
 
     cg = KConfigGroup(&config, "General");
     //save() capitalizes the ColorScheme
@@ -201,7 +204,7 @@ void KcmTest::testKCMSave()
 
     KConfig splashConfig(QStringLiteral("ksplashrc"));
     cg = KConfigGroup(&splashConfig, "KSplash");
-    QCOMPARE(cg.readEntry("Theme", QString()), QString("org.kde.test"));
+    QCOMPARE(cg.readEntry("Theme", QString()), QString("customTestValue"));
     QCOMPARE(cg.readEntry("Engine", QString()), QString("KSplashQML"));
 
     KConfig lockerConfig(QStringLiteral("kscreenlockerrc"));
