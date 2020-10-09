@@ -113,6 +113,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     qmlRegisterType<QScreen>();
     rootContext()->setContextProperty(QStringLiteral("panel"), this);
     setSource(m_corona->kPackage().fileUrl("views", QStringLiteral("Panel.qml")));
+    updatePadding();
 }
 
 PanelView::~PanelView()
@@ -986,7 +987,10 @@ bool PanelView::containmentContainsPosition(const QPointF &point) const
         return false;
     }
 
-    return QRectF(containmentItem->mapToScene(QPoint(0,0)), QSizeF(containmentItem->width(), containmentItem->height())).contains(point);
+    return QRectF(
+        containmentItem->mapToScene(QPoint(m_leftPadding,m_topPadding)),
+        QSizeF(containmentItem->width()-m_leftPadding-m_rightPadding, 
+               containmentItem->height()-m_topPadding-m_bottomPadding)).contains(point);
 }
 
 QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
@@ -998,9 +1002,9 @@ QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
     }
 
     QRectF containmentRect(containmentItem->mapToScene(QPoint(0,0)), QSizeF(containmentItem->width(), containmentItem->height()));
-
-    return QPointF(qBound(containmentRect.left() + 2, point.x(), containmentRect.right() - 2),
-                   qBound(containmentRect.top() + 2, point.y(), containmentRect.bottom() - 2));
+	
+	return QPointF(qBound(containmentRect.left() + m_leftPadding, point.x(), containmentRect.right() - m_rightPadding),
+                   qBound(containmentRect.top() + m_topPadding, point.y(), containmentRect.bottom() - m_bottomPadding));
 }
 
 void PanelView::updateMask()
@@ -1216,6 +1220,12 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
         disconnect(this, &QuickViewSharedEngine::statusChanged,
                    this, &PanelView::handleQmlStatusChange);
 
+        updatePadding();
+        connect(rootObject, SIGNAL(bottomPaddingChanged()), this, SLOT(PanelView::updatePadding));
+        connect(rootObject, SIGNAL(topPaddingChanged()), this, SLOT(PanelView::updatePadding));
+        connect(rootObject, SIGNAL(rightPaddingChanged()), this, SLOT(PanelView::updatePadding));
+        connect(rootObject, SIGNAL(leftPaddingChanged()), this, SLOT(PanelView::updatePadding));
+
         const QVariant maskProperty = rootObject->property("panelMask");
         if (static_cast<QMetaType::Type>(maskProperty.type()) == QMetaType::QRegion) {
             connect(rootObject, SIGNAL(panelMaskChanged()),
@@ -1331,5 +1341,13 @@ void PanelView::updateEnabledBorders()
     }
 }
 
+void PanelView::updatePadding()
+{
+    if (!rootObject()) return;
+    m_leftPadding = rootObject()->property("leftPadding").toInt();
+    m_rightPadding = rootObject()->property("rightPadding").toInt();
+    m_topPadding = rootObject()->property("topPadding").toInt();
+    m_bottomPadding = rootObject()->property("bottomPadding").toInt();
+}
 
 #include "moc_panelview.cpp"
