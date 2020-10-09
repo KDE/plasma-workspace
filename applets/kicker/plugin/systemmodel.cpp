@@ -28,6 +28,8 @@
 
 SystemModel::SystemModel(QObject *parent) : AbstractModel(parent)
 {
+    m_favoritesModel = new SimpleFavoritesModel(this);
+
     populate();
 }
 
