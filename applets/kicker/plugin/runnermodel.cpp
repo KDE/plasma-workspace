@@ -247,9 +247,32 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
         }
 
         QList<Plasma::QueryMatch> matches;
-
-        foreach (const QString &runnerId, m_runners) {
-            matches.append(matchesForRunner.take(runnerId));
+        // To preserve the old behavior when allowing all runners we use static sorting
+        const static QStringList runnerIds = {QStringLiteral("desktopsessions"),
+                                            QStringLiteral("services"),
+                                            QStringLiteral("places"),
+                                            QStringLiteral("PowerDevil"),
+                                            QStringLiteral("calculator"),
+                                            QStringLiteral("unitconverter"),
+                                            QStringLiteral("shell"),
+                                            QStringLiteral("bookmarks"),
+                                            QStringLiteral("recentdocuments"),
+                                            QStringLiteral("locations")};
+        if (m_runners.isEmpty()) {
+            const auto baloo = matchesForRunner.take(QStringLiteral("baloosearch"));
+            const auto appstream = matchesForRunner.take(QStringLiteral("krunner_appstream"));
+            for (const QString &runnerId : runnerIds) {
+                matches.append(matchesForRunner.take(runnerId));
+            }
+            for (const auto &match : matchesForRunner) {
+                matches.append(match);
+            }
+            matches.append(baloo);
+            matches.append(appstream);
+        } else {
+            for (const QString &runnerId : qAsConst(m_runners)) {
+                matches.append(matchesForRunner.take(runnerId));
+            }
         }
 
         matchesModel->setMatches(matches);
@@ -309,8 +332,12 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
 void RunnerModel::createManager()
 {
     if (!m_runnerManager) {
-        m_runnerManager = new Plasma::RunnerManager(this); // FIXME: Which KConfigGroup is this using now?
-        m_runnerManager->setAllowedRunners(m_runners);
+        m_runnerManager = new Plasma::RunnerManager(QStringLiteral("krunnerrc"), this);
+        if (m_runners.isEmpty()) {
+            m_runnerManager->enableKNotifyPluginWatcher();
+        } else {
+            m_runnerManager->setAllowedRunners(m_runners);
+        }
         connect(m_runnerManager, &Plasma::RunnerManager::matchesChanged,
                 this, &RunnerModel::matchesChanged);
     }
