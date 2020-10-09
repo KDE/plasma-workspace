@@ -158,6 +158,7 @@ void View::setFreeFloating(bool floating)
 void View::loadConfig()
 {
     setFreeFloating(m_config.readEntry("FreeFloating", false));
+    setPinned(m_config.readEntry("Pinned", false));
 
     m_historyEnabled = m_config.readEntry("HistoryEnabled", true);
     QStringList history;
