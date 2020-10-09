@@ -47,10 +47,7 @@
 #include <KIO/DeleteJob>
 #include <KIO/JobUiDelegate>
 
-#include <knewstuffcore_version.h>
-#if KNEWSTUFFCORE_VERSION_MAJOR==5 && KNEWSTUFFCORE_VERSION_MINOR>=68
 #include <KNSCore/EntryWrapper>
-#endif
 
 #include <algorithm>
 
@@ -124,7 +121,6 @@ void KCMColors::reloadModel(const QQmlListReference &changedEntries)
 {
     m_model->load();
 
-#if KNEWSTUFFCORE_VERSION_MAJOR==5 && KNEWSTUFFCORE_VERSION_MINOR>=68
     // If a new theme was installed, select the first color file in it
     if (changedEntries.count() > 0) {
         QStringList installedThemes;
@@ -157,7 +153,6 @@ void KCMColors::reloadModel(const QQmlListReference &changedEntries)
             }
         }
     }
-#endif
 }
 
 void KCMColors::installSchemeFromFile(const QUrl &url)

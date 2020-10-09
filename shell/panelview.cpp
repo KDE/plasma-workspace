@@ -38,7 +38,6 @@
 #include <kwindowsystem.h>
 #include <kwindoweffects.h>
 
-#include <plasma_version.h>
 #include <Plasma/Containment>
 #include <Plasma/Package>
 
@@ -770,10 +769,6 @@ void PanelView::resizeEvent(QResizeEvent *ev)
     emit m_corona->availableScreenRegionChanged();
 
     PlasmaQuick::ContainmentView::resizeEvent(ev);
-
-#if PLASMA_VERSION < QT_VERSION_CHECK(5,59,0)
-    updateMask();
-#endif
 }
 
 void PanelView::moveEvent(QMoveEvent *ev)
@@ -781,9 +776,6 @@ void PanelView::moveEvent(QMoveEvent *ev)
     updateEnabledBorders();
     m_strutsTimer.start(STRUTSTIMERDELAY);
     PlasmaQuick::ContainmentView::moveEvent(ev);
-#if PLASMA_VERSION < QT_VERSION_CHECK(5,59,0)
-    updateMask();
-#endif
 }
 
 void PanelView::integrateScreen()

@@ -40,10 +40,7 @@
 #include <KTar>
 #include <KGlobalSettings>
 
-#include <knewstuffcore_version.h>
-#if KNEWSTUFFCORE_VERSION_MAJOR==5 && KNEWSTUFFCORE_VERSION_MINOR>=68
 #include <KNSCore/EntryWrapper>
-#endif
 
 #include <QQmlListReference>
 #include <QX11Info>
@@ -415,7 +412,6 @@ bool CursorThemeConfig::isSaveNeeded() const
 
 void CursorThemeConfig::ghnsEntriesChanged(const QQmlListReference &changedEntries)
 {
-#if KNEWSTUFFCORE_VERSION_MAJOR==5 && KNEWSTUFFCORE_VERSION_MINOR>=68
     for (int i = 0; i < changedEntries.count(); ++i) {
         KNSCore::EntryWrapper* entry = qobject_cast<KNSCore::EntryWrapper*>(changedEntries.at(i));
         if (entry) {
@@ -448,7 +444,6 @@ void CursorThemeConfig::ghnsEntriesChanged(const QQmlListReference &changedEntri
             }
         }
     }
-#endif
 }
 
 void CursorThemeConfig::installThemeFromFile(const QUrl &url)
