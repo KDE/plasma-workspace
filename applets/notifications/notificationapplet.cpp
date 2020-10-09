@@ -139,7 +139,16 @@ void NotificationApplet::doDrag(QQuickItem *item, const QUrl &url, const QPixmap
 
 QWindow *NotificationApplet::focussedPlasmaDialog() const
 {
-    return qobject_cast<PlasmaQuick::Dialog *>(qApp->focusWindow());
+    auto *focusWindow = qApp->focusWindow();
+    if (qobject_cast<PlasmaQuick::Dialog *>(focusWindow)) {
+        return focusWindow;
+    }
+
+    if (focusWindow) {
+        return qobject_cast<PlasmaQuick::Dialog *>(focusWindow->transientParent());
+    }
+
+    return nullptr;
 }
 
 QQuickItem *NotificationApplet::systemTrayRepresentation() const
