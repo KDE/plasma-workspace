@@ -108,11 +108,11 @@ void LauncherTasksModel::Private::init()
             appDataCache.clear();
 
             // Emit changes of all roles satisfied from app data cache.
-            q->dataChanged(q->index(0, 0),  q->index(launchersOrder.count() - 1, 0),
-                QVector<int>{Qt::DisplayRole, Qt::DecorationRole,
-                AbstractTasksModel::AppId, AbstractTasksModel::AppName,
-                AbstractTasksModel::GenericName, AbstractTasksModel::LauncherUrl,
-                AbstractTasksModel::LauncherUrlWithoutIcon});
+            Q_EMIT q->dataChanged(q->index(0, 0),  q->index(launchersOrder.count() - 1, 0),
+                    QVector<int>{Qt::DisplayRole, Qt::DecorationRole,
+                    AbstractTasksModel::AppId, AbstractTasksModel::AppName,
+                    AbstractTasksModel::GenericName, AbstractTasksModel::LauncherUrl,
+                    AbstractTasksModel::LauncherUrlWithoutIcon});
         }
     );
 
@@ -252,7 +252,8 @@ bool LauncherTasksModel::Private::requestRemoveLauncherFromActivities(const QUrl
                     remove = true;
 
                 } else {
-                    for (const auto& activity: activitiesConsumer.activities()) {
+                    const auto _activities = activitiesConsumer.activities();
+                    for (const auto& activity: _activities) {
                         if (!activities.contains(activity)) {
                             newActivities << activity;
                         } else {
@@ -372,7 +373,7 @@ QStringList LauncherTasksModel::launcherList() const
     // Serializing the launchers
     QStringList result;
 
-    for (const auto &launcher: d->launchersOrder) {
+    for (const auto &launcher: qAsConst(d->launchersOrder)) {
         const auto &activities = d->activitiesForLauncher[launcher];
 
         QString serializedLauncher;
@@ -398,7 +399,6 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
     QHash<QUrl, ActivitiesSet> newActivitiesForLauncher;
 
     // Loading the activity to launchers map
-    QHash<QString, QList<QUrl>> launchersForActivitiesCandidates;
     for (const auto& serializedLauncher: serializedLaunchers) {
         QStringList _activities;
         QUrl url;
@@ -422,7 +422,7 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
             // Filter out invalid activities
             const auto allActivities = d->activitiesConsumer.activities();
             ActivitiesSet validActivities;
-            for (const auto& activity: activities) {
+            for (const auto& activity: qAsConst(activities)) {
                 if (allActivities.contains(activity)) {
                     validActivities << activity;
                 }

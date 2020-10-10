@@ -244,7 +244,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid,
             return;
         }
 
-        for (const auto service : services) {
+        for (const auto &service : services) {
             if (service->menuId().startsWith(key, Qt::CaseInsensitive)) {
                 services.prepend(service);
                 return;

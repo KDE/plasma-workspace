@@ -376,7 +376,7 @@ void TasksModel::Private::initModels()
                         }
 
                         if (appsMatch(sourceIndex, filterIndex)) {
-                            filterProxyModel->dataChanged(filterIndex, filterIndex);
+                            Q_EMIT filterProxyModel->dataChanged(filterIndex, filterIndex);
                         }
                     }
                 }
@@ -432,7 +432,7 @@ void TasksModel::Private::initModels()
                     const QModelIndex &idx = filterProxyModel->index(i, 0);
 
                     if (idx.data(AbstractTasksModel::IsLauncher).toBool()) {
-                        filterProxyModel->dataChanged(idx, idx);
+                        Q_EMIT filterProxyModel->dataChanged(idx, idx);
                     }
                 }
 
@@ -477,7 +477,7 @@ void TasksModel::Private::initModels()
                             }
 
                             if (appsMatch(sourceIndex, filterIndex)) {
-                                filterProxyModel->dataChanged(filterIndex, filterIndex);
+                                Q_EMIT filterProxyModel->dataChanged(filterIndex, filterIndex);
                             }
                         }
                     }
@@ -528,8 +528,8 @@ void TasksModel::Private::initLauncherTasksModel()
     // to-be-removed launcherTasksModel rows using TaskTools::appsMatch().
     QObject::connect(launcherTasksModel, &LauncherTasksModel::launcherListChanged,
         q, [this]() {
-            q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0),
-                QVector<int>{AbstractTasksModel::HasLauncher});
+            Q_EMIT q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0),
+                        QVector<int>{AbstractTasksModel::HasLauncher});
         }
     );
 
@@ -542,7 +542,7 @@ void TasksModel::Private::initLauncherTasksModel()
                     const QModelIndex &index = q->index(i, 0);
 
                     if (!index.data(AbstractTasksModel::IsLauncher).toBool()) {
-                        q->dataChanged(index, index, QVector<int>{AbstractTasksModel::HasLauncher});
+                        Q_EMIT q->dataChanged(index, index, QVector<int>{AbstractTasksModel::HasLauncher});
                     }
                 }
             }

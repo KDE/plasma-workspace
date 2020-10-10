@@ -170,7 +170,7 @@ void TaskGroupingProxyModel::Private::sourceRowsAboutToBeRemoved(const QModelInd
                     q->endRemoveRows();
 
                     // We're no longer a group parent.
-                    q->dataChanged(parent, parent);
+                    Q_EMIT q->dataChanged(parent, parent);
                 // Remove group member.
                 } else {
                     const QModelIndex parent = q->index(j, 0);
@@ -180,7 +180,7 @@ void TaskGroupingProxyModel::Private::sourceRowsAboutToBeRemoved(const QModelInd
 
                     // Various roles of the parent evaluate child data, and the
                     // child list has changed.
-                    q->dataChanged(parent, parent);
+                    Q_EMIT q->dataChanged(parent, parent);
                 }
 
                 break;
@@ -230,7 +230,7 @@ void TaskGroupingProxyModel::Private::sourceDataChanged(QModelIndex topLeft, QMo
         // TODO: Some roles do not need to bubble up as they fall through to the first
         // child in data(); it _might_ be worth adding constraints here later.
         if (parent.isValid()) {
-            q->dataChanged(parent, parent, roles);
+            Q_EMIT q->dataChanged(parent, parent, roles);
         }
 
         // When Private::groupDemandingAttention is false, tryToGroup() exempts tasks
@@ -245,10 +245,10 @@ void TaskGroupingProxyModel::Private::sourceDataChanged(QModelIndex topLeft, QMo
                 delete rowMap.takeAt(proxyIndex.row());
                 q->endRemoveRows();
             } else {
-                q->dataChanged(proxyIndex, proxyIndex, roles);
+                Q_EMIT q->dataChanged(proxyIndex, proxyIndex, roles);
             }
         } else {
-            q->dataChanged(proxyIndex, proxyIndex, roles);
+            Q_EMIT q->dataChanged(proxyIndex, proxyIndex, roles);
         }
     }
 }
@@ -412,7 +412,7 @@ bool TaskGroupingProxyModel::Private::tryToGroup(const QModelIndex &sourceIndex,
             if (!silent) {
                 q->endInsertRows();
 
-                q->dataChanged(parent, parent);
+                Q_EMIT q->dataChanged(parent, parent);
             }
 
             return true;
@@ -474,7 +474,7 @@ void TaskGroupingProxyModel::Private::breakGroupFor(const QModelIndex &index, bo
         q->endRemoveRows();
 
         // We're no longer a group parent.
-        q->dataChanged(index, index);
+        Q_EMIT q->dataChanged(index, index);
 
         q->beginInsertRows(QModelIndex(), rowMap.count(),
             rowMap.count() + (extraChildren.count() - 1));
@@ -1028,7 +1028,7 @@ void TaskGroupingProxyModel::requestToggleMaximized(const QModelIndex &index)
             }
         );
 
-        for (const QModelIndex &sourceChild : inStackingOrder) {
+        for (const QModelIndex &sourceChild : qAsConst(inStackingOrder)) {
             d->abstractTasksSourceModel->requestToggleMaximized(sourceChild);
         }
     }
@@ -1242,7 +1242,7 @@ void TaskGroupingProxyModel::requestToggleGrouping(const QModelIndex &index)
             if (idx.data(AbstractTasksModel::AppId).toString() == appId
                 || launcherUrlsMatch(idx.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl(), launcherUrl,
                 IgnoreQueryItems)) {
-                dataChanged(idx, idx, QVector<int>{AbstractTasksModel::IsGroupable});
+                Q_EMIT dataChanged(idx, idx, QVector<int>{AbstractTasksModel::IsGroupable});
             }
         }
     }

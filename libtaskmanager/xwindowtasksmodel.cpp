@@ -114,12 +114,12 @@ void XWindowTasksModel::Private::init()
         appDataCache.clear();
 
         // Emit changes of all roles satisfied from app data cache.
-        q->dataChanged(q->index(0, 0),  q->index(windows.count() - 1, 0),
-            QVector<int>{Qt::DecorationRole, AbstractTasksModel::AppId,
-            AbstractTasksModel::AppName, AbstractTasksModel::GenericName,
-            AbstractTasksModel::LauncherUrl,
-            AbstractTasksModel::LauncherUrlWithoutIcon,
-            AbstractTasksModel::SkipTaskbar});
+        Q_EMIT q->dataChanged(q->index(0, 0),  q->index(windows.count() - 1, 0),
+                QVector<int>{Qt::DecorationRole, AbstractTasksModel::AppId,
+                AbstractTasksModel::AppName, AbstractTasksModel::GenericName,
+                AbstractTasksModel::LauncherUrl,
+                AbstractTasksModel::LauncherUrlWithoutIcon,
+                AbstractTasksModel::SkipTaskbar});
     };
 
     cachedStackingOrder = KWindowSystem::stackingOrder();
@@ -200,8 +200,8 @@ void XWindowTasksModel::Private::init()
     QObject::connect(KWindowSystem::self(), &KWindowSystem::stackingOrderChanged, q,
         [this]() {
             cachedStackingOrder = KWindowSystem::stackingOrder();
-            q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0),
-                QVector<int>{StackingOrder});
+            Q_EMIT q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0),
+                    QVector<int>{StackingOrder});
         }
     );
 
