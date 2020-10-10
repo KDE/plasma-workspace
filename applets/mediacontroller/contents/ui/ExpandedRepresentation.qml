@@ -29,7 +29,7 @@ import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.kirigami 2.4 as Kirigami
 import QtGraphicalEffects 1.0
 
-Item {
+PlasmaComponents3.Page {
     id: expandedRepresentation
 
     Layout.minimumWidth: units.gridUnit * 14
@@ -455,32 +455,41 @@ Item {
                 }
             }
         }
+    }
 
-        PlasmaComponents3.ComboBox {
-            Layout.fillWidth: true
-            Layout.leftMargin: units.gridUnit*2
-            Layout.rightMargin: units.gridUnit*2
+    footer: PlasmaExtras.PlasmoidHeading {
+        location: PlasmaExtras.PlasmoidHeading.Location.Footer
+        visible: playerList.model.length > 2 // more than one player, @multiplex is always there
 
-            id: playerCombo
-            textRole: "text"
-            visible: model.length > 2 // more than one player, @multiplex is always there
-            model: root.mprisSourcesModel
+        RowLayout {
+            anchors.fill: parent
 
-            onModelChanged: {
-                // if model changes, ComboBox resets, so we try to find the current player again...
-                for (var i = 0, length = model.length; i < length; ++i) {
-                    if (model[i].source === mpris2Source.current) {
-                        currentIndex = i
-                        break
+            PlasmaComponents3.ComboBox {
+                Layout.fillWidth: true
+                Layout.leftMargin: units.gridUnit*2
+                Layout.rightMargin: units.gridUnit*2
+
+                id: playerCombo
+                textRole: "text"
+                visible: model.length > 2 // more than one player, @multiplex is always there
+                model: root.mprisSourcesModel
+
+                onModelChanged: {
+                    // if model changes, ComboBox resets, so we try to find the current player again...
+                    for (var i = 0, length = model.length; i < length; ++i) {
+                        if (model[i].source === mpris2Source.current) {
+                            currentIndex = i
+                            break
+                        }
                     }
                 }
-            }
 
-            onActivated: {
-                disablePositionUpdate = true
-                // ComboBox has currentIndex and currentText, why doesn't it have currentItem/currentModelValue?
-                mpris2Source.current = model[index].source
-                disablePositionUpdate = false
+                onActivated: {
+                    disablePositionUpdate = true
+                    // ComboBox has currentIndex and currentText, why doesn't it have currentItem/currentModelValue?
+                    mpris2Source.current = model[index].source
+                    disablePositionUpdate = false
+                }
             }
         }
     }
