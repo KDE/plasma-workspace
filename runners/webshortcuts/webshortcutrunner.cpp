@@ -105,13 +105,23 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
 void WebshortcutRunner::match(Plasma::RunnerContext &context)
 {
     const QString term = context.query();
-    const int delimIndex = term.indexOf(m_delimiter);
-    if (delimIndex == -1 || delimIndex == term.length() - 1) {
-        return;
-    }
+    const static QRegularExpression bangRegex(QStringLiteral("!([^ ]+).*"));
+    const static QRegularExpression normalRegex(QStringLiteral("^([^ ]+)%1").arg(QRegularExpression::escape(m_delimiter)));
+    const auto bangMatch = bangRegex.match(term);
+    QString key;
+    QString rawQuery = term;
 
-    const QString key = term.left(delimIndex);
-    if (key == m_lastFailedKey) {
+    if (bangMatch.hasMatch()) {
+        key = bangMatch.captured(1);
+        rawQuery = rawQuery.remove(rawQuery.indexOf(key) - 1, key.size() + 1);
+    } else {
+        const auto normalMatch = normalRegex.match(term);
+        if (normalMatch.hasMatch()) {
+            key = normalMatch.captured(0);
+            rawQuery = rawQuery.mid(key.length());
+        }
+    }
+    if (key.isEmpty() || key == m_lastFailedKey) {
         return;    // we already know it's going to suck ;)
     }
 
@@ -120,7 +130,7 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
     // filtering
     if (m_lastKey == key) {
         m_filterBeforeRun = true;
-        m_match.setText(i18n("Search %1 for %2", m_lastProvider, term.mid(delimIndex + 1)));
+        m_match.setText(i18n("Search %1 for %2", m_lastProvider, rawQuery));
         context.addMatch(m_match);
         return;
     }

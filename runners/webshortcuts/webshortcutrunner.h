@@ -44,6 +44,7 @@ class WebshortcutRunner : public Plasma::AbstractRunner
         QString m_lastFailedKey;
         QString m_lastKey;
         QString m_lastProvider;
+        QRegularExpression m_regex;
         
         KServiceAction m_privateAction;
 };
