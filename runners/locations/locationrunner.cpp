@@ -29,6 +29,7 @@
 #include <KProtocolInfo>
 #include <KUriFilter>
 #include <KIO/Global>
+#include <KShell>
 
 #include <kservicetypetrader.h>
 
@@ -54,7 +55,8 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
     QString term = context.query();
     Plasma::RunnerContext::Type type = context.type();
 
-    if (type == Plasma::RunnerContext::Directory || type == Plasma::RunnerContext::File) {
+    QFileInfo fileInfo(KShell::tildeExpand(term));
+    if (fileInfo.exists()) {
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setText(i18n("Open %1", term));
@@ -69,7 +71,7 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
         match.setData(term);
         match.setType(Plasma::QueryMatch::ExactMatch);
 
-        if (type == Plasma::RunnerContext::Directory) {
+        if (fileInfo.isDir()) {
             match.setId(QStringLiteral("opendir"));
         } else {
             match.setId(QStringLiteral("openfile"));
