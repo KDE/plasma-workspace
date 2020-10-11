@@ -211,7 +211,7 @@ void PlasmoidModel::addApplet(Plasma::Applet *applet)
 void PlasmoidModel::removeApplet(Plasma::Applet *applet)
 {
     int idx = indexOfPluginId(applet->pluginMetaData().pluginId());
-    if (idx > 0) {
+    if (idx >= 0) {
         m_items[idx].applet = nullptr;
         dataChanged(index(idx, 0), index(idx, 0));
         applet->disconnect(this);
