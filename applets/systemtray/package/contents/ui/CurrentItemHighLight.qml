@@ -30,7 +30,7 @@ PlasmaCore.FrameSvgItem {
     z: -1 // always draw behind icons
     width: parent.width
     height: parent.height
-    opacity: parent && dialog.visible ? 1 : 0
+    opacity: parent && systemTrayState.expanded ? 1 : 0
 
     function changeHighlightedItem(nextItem) {
         parent = nextItem;
@@ -64,10 +64,28 @@ PlasmaCore.FrameSvgItem {
             return prefix;
     }
 
+    Connections {
+        target: systemTrayState
+
+        function onActiveAppletChanged() {
+            if (systemTrayState.activeApplet && systemTrayState.activeApplet.parent.inVisibleLayout) {
+                changeHighlightedItem(systemTrayState.activeApplet.parent.container)
+            } else if (systemTrayState.expanded) {
+                changeHighlightedItem(root)
+            }
+        }
+
+        function onExpandedChanged() {
+            if (systemTrayState.expanded && !systemTrayState.activeApplet) {
+                changeHighlightedItemNoAnimation(root)
+            }
+        }
+    }
+
     Behavior on opacity {
         NumberAnimation {
             duration: units.longDuration
-            easing.type: parent && dialog.visible ? Easing.OutCubic : Easing.InCubic
+            easing.type: parent && systemTrayState.expanded ? Easing.OutCubic : Easing.InCubic
         }
     }
     Behavior on x {

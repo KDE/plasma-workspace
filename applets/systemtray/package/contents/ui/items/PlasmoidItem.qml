@@ -31,7 +31,7 @@ AbstractItem {
     subText: applet ? applet.toolTipSubText : ""
     mainItem: applet && applet.toolTipItem ? applet.toolTipItem : null
     textFormat: applet ? applet.toolTipTextFormat : ""
-    active: root.activeApplet !== applet
+    active: systemTrayState.activeApplet !== applet
 
     onClicked: {
         if (applet && mouse.button === Qt.LeftButton) {
@@ -70,24 +70,16 @@ AbstractItem {
 
     Connections {
         target: applet
+
+        //activation using global keyboard shortcut
         function onActivated() {
             plasmoidContainer.activated()
         }
 
         function onExpandedChanged(expanded) {
             if (expanded) {
-                var oldApplet = root.activeApplet;
-                root.activeApplet = applet;
-                if (oldApplet && oldApplet !== applet) {
-                    oldApplet.expanded = false;
-                }
-                dialog.visible = true;
+                systemTrayState.setActiveApplet(applet)
                 plasmoidContainer.activated()
-
-            } else if (root.activeApplet === applet) {
-                // if not expanded we don't have an active applet anymore
-                root.activeApplet = null;
-                dialog.visible = false;
             }
         }
 

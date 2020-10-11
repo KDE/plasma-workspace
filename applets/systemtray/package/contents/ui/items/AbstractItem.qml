@@ -151,7 +151,7 @@ PlasmaCore.ToolTipArea {
             Layout.rightMargin: abstractItem.inHiddenLayout ? units.smallSpacing : 0
             Layout.bottomMargin: abstractItem.inHiddenLayout ? units.smallSpacing : 0
 
-            visible: abstractItem.inHiddenLayout && !root.activeApplet
+            visible: abstractItem.inHiddenLayout
 
             verticalAlignment: Text.AlignTop
             horizontalAlignment: Text.AlignHCenter

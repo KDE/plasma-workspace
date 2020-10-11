@@ -44,7 +44,6 @@ Item {
     Layout.preferredHeight: defaultHeight
     Layout.maximumHeight: defaultHeight
 
-    property alias activeApplet: container.activeApplet
     property alias hiddenLayout: hiddenItemsView.layout
 
     // Header
@@ -72,29 +71,24 @@ Item {
 
             PlasmaComponents.ToolButton {
                 id: backButton
-                visible: activeApplet && activeApplet.expanded && (hiddenItemsView.itemCount > 0)
+                visible: systemTrayState.activeApplet && systemTrayState.activeApplet.expanded && (hiddenItemsView.itemCount > 0)
                 icon.name: "go-previous"
-                onClicked: {
-                    if (activeApplet) {
-                        activeApplet.expanded = false;
-                        dialog.visible = true;
-                    }
-                }
+                onClicked: systemTrayState.setActiveApplet(null)
             }
 
             PlasmaExtras.Heading {
                 Layout.fillWidth: true
-                leftPadding: activeApplet ? 0 : units.smallSpacing * 2
+                leftPadding: systemTrayState.activeApplet ? 0 : units.smallSpacing * 2
 
                 level: 1
-                text: activeApplet ? activeApplet.title : i18n("Status and Notifications")
+                text: systemTrayState.activeApplet ? systemTrayState.activeApplet.title : i18n("Status and Notifications")
             }
 
             PlasmaComponents.ToolButton {
                 id: actionsButton
                 visible: visibleActions > 0
                 checked: configMenu.status !== PC2.DialogStatus.Closed
-                property QtObject applet: activeApplet || plasmoid
+                property QtObject applet: systemTrayState.activeApplet || plasmoid
                 onAppletChanged: {
                     configMenu.clearMenuItems();
                     updateVisibleActions();
@@ -197,7 +191,7 @@ Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.topMargin: units.smallSpacing
-            visible: !activeApplet
+            visible: !systemTrayState.activeApplet
         }
 
         // Container for currently visible item
@@ -205,14 +199,10 @@ Item {
             id: container
             Layout.fillWidth: true
             Layout.fillHeight: true
-            visible: activeApplet
+            visible: systemTrayState.activeApplet
 
-            // We need to add our own margins on the top and left (when the
-            // hidden items view is visible, at least) so it matches the
-            //  dialog's own margins and content is centered correctly
+            // We need to add margin on the top so it matches the dialog's own margin
             Layout.topMargin: mergeHeadings ? 0 : dialog.margins.top
-            Layout.leftMargin: hiddenItemsView.visible && activeApplet && !LayoutMirroring.enabled ? dialog.margins.left : 0
-            Layout.rightMargin: hiddenItemsView.visible && activeApplet && LayoutMirroring.enabled ? dialog.margins.right : 0
         }
     }
 

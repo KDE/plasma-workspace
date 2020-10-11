@@ -42,7 +42,7 @@ MouseArea {
         frameVisible: false
 
         horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
-        verticalScrollBarPolicy: root.activeApplet ? Qt.ScrollBarAlwaysOff : Qt.ScrollBarAsNeeded
+        verticalScrollBarPolicy: systemTrayState.activeApplet ? Qt.ScrollBarAlwaysOff : Qt.ScrollBarAsNeeded
 
         GridView {
             id: hiddenTasks

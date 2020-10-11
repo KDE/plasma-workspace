@@ -38,22 +38,18 @@ MouseArea {
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
+    readonly property alias systemTrayState: systemTrayState
     readonly property alias itemSize: tasksGrid.itemSize
-
-    property alias expanded: dialog.visible
-    property Item activeApplet
-    property alias visibleLayout: tasksGrid
-    property alias hiddenLayout: expandedRepresentation.hiddenLayout
-
-    Plasmoid.onExpandedChanged: {
-        if (!plasmoid.expanded) {
-            dialog.visible = plasmoid.expanded;
-        }
-    }
+    readonly property alias visibleLayout: tasksGrid
+    readonly property alias hiddenLayout: expandedRepresentation.hiddenLayout
 
     onWheel: {
         // Don't propagate unhandled wheel events
         wheel.accepted = true;
+    }
+
+    SystemTrayState {
+        id: systemTrayState
     }
 
     //being there forces the items to fully load, and they will be reparented in the popup one by one, this item is *never* visible
@@ -62,36 +58,7 @@ MouseArea {
         visible: false
     }
 
-    Connections {
-        target: plasmoid
-        function onUserConfiguringChanged() {
-            if (plasmoid.userConfiguring) {
-                dialog.visible = false
-            }
-        }
-    }
-
     CurrentItemHighLight {
-        property alias activeApplet: root.activeApplet
-        property alias dialogVisible: dialog.visible
-
-        // Not only is an applet active, but also it's an applet from the visible part of the tray, not the hidden part.
-        readonly property bool visibleAppletActivated: activeApplet && activeApplet.parent && activeApplet.parent.inVisibleLayout
-
-        onActiveAppletChanged: {
-            if (activeApplet && activeApplet.parent.inVisibleLayout) {
-                changeHighlightedItem(activeApplet.parent.container);
-            } else if (dialog.visible) {
-                changeHighlightedItem(root);
-            }
-        }
-
-        onDialogVisibleChanged: {
-            if (dialogVisible && !activeApplet) {
-                changeHighlightedItemNoAnimation(root);
-            }
-        }
-
         location: plasmoid.location
     }
 
@@ -239,6 +206,7 @@ MouseArea {
             id: expander
             Layout.fillWidth: vertical
             Layout.fillHeight: !vertical
+            visible: root.hiddenLayout.itemCount > 0
         }
     }
 
@@ -249,26 +217,17 @@ MouseArea {
         flags: Qt.WindowStaysOnTopHint
         location: plasmoid.location
         hideOnWindowDeactivate: !plasmoid.configuration.pin
+        visible: systemTrayState.expanded
 
         onVisibleChanged: {
-            if (!visible) {
-                plasmoid.status = PlasmaCore.Types.PassiveStatus;
-                if (root.activeApplet) {
-                    root.activeApplet.expanded = false;
-                }
-            } else {
-                plasmoid.status = PlasmaCore.Types.RequiresAttentionStatus;
-            }
-            plasmoid.expanded = visible;
+            systemTrayState.expanded = visible
         }
         mainItem: ExpandedRepresentation {
             id: expandedRepresentation
 
             Keys.onEscapePressed: {
-                root.expanded = false;
+                systemTrayState.expanded = false
             }
-
-            activeApplet: root.activeApplet
 
             LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
             LayoutMirroring.childrenInherit: true

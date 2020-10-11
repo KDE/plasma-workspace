@@ -35,10 +35,9 @@ Item {
     Plasmoid.status: internalSystray ? internalSystray.status : PlasmaCore.Types.UnknownStatus
 
     //synchronize state between SystemTray and wrapping Applet
-    //the "expanded" property is not really used now, but let's keep it in sync for consistency
     Plasmoid.onExpandedChanged: {
-        if (internalSystray && !plasmoid.expanded) {
-            internalSystray.expanded = false;
+        if (internalSystray) {
+            internalSystray.expanded = plasmoid.expanded
         }
     }
     Connections {

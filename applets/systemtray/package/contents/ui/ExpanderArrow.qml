@@ -28,14 +28,13 @@ PlasmaCore.ToolTipArea {
     property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
     implicitWidth: units.iconSizes.smallMedium
     implicitHeight: implicitWidth
-    visible: root.hiddenLayout.itemCount > 0
 
-    subText: root.expanded ? i18n("Close popup") : i18n("Show hidden icons")
+    subText: systemTrayState.expanded ? i18n("Close popup") : i18n("Show hidden icons")
 
     MouseArea {
         id: arrowMouseArea
         anchors.fill: parent
-        onClicked: root.expanded = !root.expanded
+        onClicked: systemTrayState.expanded = !systemTrayState.expanded
 
         readonly property int arrowAnimationDuration: units.shortDuration
 
@@ -51,13 +50,13 @@ PlasmaCore.ToolTipArea {
             width: Math.min(parent.width, parent.height)
             height: width
 
-            rotation: root.expanded ? 180 : 0
+            rotation: systemTrayState.expanded ? 180 : 0
             Behavior on rotation {
                 RotationAnimation {
                     duration: arrowMouseArea.arrowAnimationDuration
                 }
             }
-            opacity: root.expanded ? 0 : 1
+            opacity: systemTrayState.expanded ? 0 : 1
             Behavior on opacity {
                 NumberAnimation {
                     duration: arrowMouseArea.arrowAnimationDuration
@@ -83,13 +82,13 @@ PlasmaCore.ToolTipArea {
             width: arrow.width
             height: arrow.height
 
-            rotation: root.expanded ? 0 : -180
+            rotation: systemTrayState.expanded ? 0 : -180
             Behavior on rotation {
                 RotationAnimation {
                     duration: arrowMouseArea.arrowAnimationDuration
                 }
             }
-            opacity: root.expanded ? 1 : 0
+            opacity: systemTrayState.expanded ? 1 : 0
             Behavior on opacity {
                 NumberAnimation {
                     duration: arrowMouseArea.arrowAnimationDuration
