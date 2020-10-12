@@ -517,11 +517,7 @@ void KSMServer::completeKilling()
     qCDebug(KSMSERVER) << "KSMServer::completeKilling clients.count()=" <<
         clients.count() << endl;
     if( state == Killing ) {
-        bool wait = false;
-        foreach( KSMClient* c, clients ) {
-            wait = true; // still waiting for clients to go away
-        }
-        if( wait )
+        if (!clients.isEmpty()) // still waiting for clients to go away
             return;
         killingCompleted();
     }
