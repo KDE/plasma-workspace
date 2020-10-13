@@ -52,24 +52,55 @@ Item {
     }
 
     Kirigami.Avatar {
+        id: avatar
+
         source: wrapper.avatarPath
         name: wrapper.name
 
-        width: isCurrent ? faceSize : faceSize - units.largeSpacing
-        height: width
+        width: faceSize - PlasmaCore.Units.largeSpacing
+        height: faceSize - PlasmaCore.Units.largeSpacing
 
         anchors {
             bottom: usernameDelegate.top
-            bottomMargin: units.largeSpacing
+            bottomMargin: PlasmaCore.Units.largeSpacing
             horizontalCenter: parent.horizontalCenter
         }
 
-        Behavior on width {
-            PropertyAnimation {
-                from: faceSize
-                duration: units.longDuration;
+        transitions: [
+            Transition {
+                from: "normal"
+                to: "current"
+                NumberAnimation {
+                    properties: "width,height"
+                    duration: PlasmaCore.Units.longDuration
+                }
+            },
+            Transition {
+                from: "current"
+                to: "normal"
+                NumberAnimation {
+                    properties: "width,height"
+                    duration: PlasmaCore.Units.shortDuration
+                }
             }
-        }
+        ]
+
+        states: [
+            State {
+                name: "current"
+                when: wrapper.isCurrent
+
+                PropertyChanges {
+                    target: avatar
+                    width: faceSize
+                    height: faceSize
+                }
+            },
+            State {
+                name: "normal"
+                when: true
+            }
+        ]
     }
 
     PlasmaComponents3.Label {
