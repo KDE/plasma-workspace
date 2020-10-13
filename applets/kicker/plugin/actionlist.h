@@ -57,6 +57,7 @@ QVariantList createAddLauncherActionList(QObject *appletInterface, const KServic
 bool handleAddLauncherAction(const QString &actionId, QObject *appletInterface, const KService::Ptr &service);
 
 QVariantList jumpListActions(KService::Ptr service);
+QVariantList systemSettingsActions();
 
 QVariantList recentDocumentActions(KService::Ptr service);
 bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, const QVariant &argument);

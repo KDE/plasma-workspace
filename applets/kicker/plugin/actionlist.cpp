@@ -215,6 +215,15 @@ QVariantList jumpListActions(KService::Ptr service)
         return list;
     }
 
+    // Add frequently used settings modules similar to SystemSetting's overview page.
+    if (service->storageId() == QLatin1String("systemsettings.desktop")) {
+        list = systemSettingsActions();
+
+        if (!list.isEmpty()) {
+            return list;
+        }
+    }
+
     const auto &actions = service->actions();
     foreach (const KServiceAction &action, actions) {
         if (action.text().isEmpty() || action.exec().isEmpty()) {
@@ -224,6 +233,39 @@ QVariantList jumpListActions(KService::Ptr service)
         QVariantMap item = createActionItem(action.text(), action.icon(), QStringLiteral("_kicker_jumpListAction"), action.exec());
 
         list << item;
+    }
+
+    return list;
+}
+
+QVariantList systemSettingsActions()
+{
+    QVariantList list;
+
+    auto query = AllResources
+        | Agent(QStringLiteral("org.kde.systemsettings"))
+        | HighScoredFirst
+        | Limit(5);
+
+    ResultSet results(query);
+
+    QStringList ids;
+    for (const ResultSet::Result &result : results) {
+        ids << QUrl(result.resource()).path();
+    }
+
+    if (ids.count() < 5) {
+        // We'll load the default set of settings from its jump list actions.
+        return list;
+    }
+
+    for (const QString &id : ids) {
+        KService::Ptr service = KService::serviceByStorageId(id);
+        if (!service || !service->isValid()) {
+            continue;
+        }
+
+        list << createActionItem(service->name(), service->icon(), QStringLiteral("_kicker_jumpListAction"), service->exec());
     }
 
     return list;
