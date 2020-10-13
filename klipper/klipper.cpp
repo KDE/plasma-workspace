@@ -54,9 +54,7 @@
 
 #include "systemclipboard.h"
 
-#ifdef HAVE_PRISON
 #include <prison/Prison>
-#endif
 
 #include <config-X11.h>
 #if HAVE_X11
@@ -183,7 +181,6 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
         }
     );
 
-#ifdef HAVE_PRISON
     // add barcode for mobile phones
     m_showBarcodeAction = m_collection->addAction(QStringLiteral("show-barcode"));
     m_showBarcodeAction->setText(i18n("&Show Barcode..."));
@@ -193,7 +190,6 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
             showBarcode(m_history->first());
         }
     );
-#endif
 
     // Cycle through history
     m_cycleNextAction = m_collection->addAction(QStringLiteral("cycleNextAction"));
@@ -220,9 +216,7 @@ Klipper::Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mo
         m_popup->plugAction( m_configureAction );
         m_popup->plugAction( m_repeatAction );
         m_popup->plugAction( m_editAction );
-#ifdef HAVE_PRISON
         m_popup->plugAction( m_showBarcodeAction );
-#endif
         m_popup->plugAction( m_quitAction );
     }
 
@@ -936,7 +930,6 @@ void Klipper::editData(const QSharedPointer< const HistoryItem > &item)
     }
 }
 
-#ifdef HAVE_PRISON
 class BarcodeLabel : public QLabel
 {
 public:
@@ -1003,7 +996,6 @@ void Klipper::showBarcode(const QSharedPointer< const HistoryItem > &item)
         dlg->open();
     }
 }
-#endif //HAVE_PRISON
 
 void Klipper::slotAskClearHistory()
 {

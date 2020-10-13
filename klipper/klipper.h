@@ -82,9 +82,7 @@ public:
     }
 
     void editData(const QSharedPointer<const HistoryItem> &item);
-#ifdef HAVE_PRISON
     void showBarcode(const QSharedPointer<const HistoryItem> &item);
-#endif
 
 public Q_SLOTS:
     void saveSession();
@@ -176,9 +174,7 @@ private:
     QAction* m_clearHistoryAction;
     QAction* m_repeatAction;
     QAction* m_editAction;
-#ifdef HAVE_PRISON
     QAction* m_showBarcodeAction;
-#endif
     QAction* m_configureAction;
     QAction* m_quitAction;
     QAction* m_cycleNextAction;
