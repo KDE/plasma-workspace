@@ -33,11 +33,12 @@ include(ECMQueryQmake)
 include(ECMInstallIcons)
 include(KDEPackageAppTemplates)
 include(KDEClangFormat)
+include(ECMQMLModules)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner Notifications NotifyConfig Su NewStuff Wallet
                     IdleTime Declarative I18n KCMUtils TextWidgets KDELibs4Support Crash GlobalAccel
-                    DBusAddons Wayland CoreAddons People ActivitiesStats Activities KIO)
+                    DBusAddons Wayland CoreAddons People ActivitiesStats Activities KIO Prison)
 find_package(KDED CONFIG REQUIRED)
 
 find_package(KF5NetworkManagerQt ${KF5_MIN_VERSION})
@@ -151,6 +152,8 @@ set_package_properties(Freetype PROPERTIES DESCRIPTION "A font rendering engine"
                        PURPOSE "Needed to build kfontinst, a simple font installer."
                       )
 
+# Clipboard applet
+ecm_find_qmlmodule(org.kde.prison 1.0)
 
 include(ConfigureChecks.cmake)
 

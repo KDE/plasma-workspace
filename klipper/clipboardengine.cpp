@@ -32,11 +32,7 @@ ClipboardEngine::ClipboardEngine(QObject *parent, const QVariantList &args)
 {
     // TODO: use a filterproxymodel
     setModel(s_clipboardSourceName, m_klipper->history()->model());
-#ifdef HAVE_PRISON
     setData(s_clipboardSourceName, s_barcodeKey, true);
-#else
-    setData(s_clipboardSourceName, s_barcodeKey, false);
-#endif
     auto updateCurrent = [this]() {
         setData(s_clipboardSourceName,
                 QStringLiteral("current"),

@@ -27,9 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "klipper_debug.h"
 #include <QIcon>
 
-#ifdef HAVE_PRISON
 #include <prison/Prison>
-#endif
 
 const static QString s_iconKey = QStringLiteral("icon");
 const static QString s_previewKey = QStringLiteral("preview");
@@ -82,7 +80,6 @@ void ClipboardJob::start()
         m_klipper->editData(item);
         return;
     } else if (operation == QLatin1String("barcode")) {
-#ifdef HAVE_PRISON
         int pixelWidth = parameters().value(QStringLiteral("width")).toInt();
         int pixelHeight = parameters().value(QStringLiteral("height")).toInt();
         Prison::AbstractBarcode *code = nullptr;
@@ -131,9 +128,6 @@ void ClipboardJob::start()
         } else {
             setResult(false);
         }
-#else
-        setResult(false);
-#endif
     } else if (operation == QLatin1String("action")) {
         m_klipper->urlGrabber()->invokeAction(item);
         setResult(true);
