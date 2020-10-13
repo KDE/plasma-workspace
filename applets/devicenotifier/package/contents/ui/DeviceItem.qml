@@ -36,10 +36,6 @@ PlasmaExtras.ExpandableListItem {
     readonly property int state: sdSource.data[udi] ? sdSource.data[udi].State : 0
     readonly property int operationResult: (model["Operation result"])
 
-    // don't show unmount actions for root and media players; instead, show an
-    // "Open in file manager" button instead, so the user can do something useful
-    readonly property bool unmountable: sdSource.data[udi]["File Path"] !== "/"
-                                        && model["Device Types"].indexOf("Portable Media Player") == -1
     readonly property bool isMounted: devicenotifier.isMounted(udi)
     readonly property bool hasMessage: statusSource.lastUdi == udi && statusSource.data[statusSource.last] ? true : false
     readonly property var message: hasMessage ? statusSource.data[statusSource.last] || ({}) : ({})
@@ -124,7 +120,7 @@ PlasmaExtras.ExpandableListItem {
         var service
         var operationName
         var operation
-        if (!deviceItem.unmountable) {
+        if (!sdSource.data[udi].Removable) {
             service = hpSource.serviceForSource(udi);
             operation = service.operationDescription('invokeAction');
             operation.predicate = "test-predicate-openinwindow.desktop";
@@ -196,14 +192,14 @@ PlasmaExtras.ExpandableListItem {
 
     defaultActionButtonAction: QQC2.Action {
         icon.name: {
-            if (!deviceItem.unmountable) {
+            if (!sdSource.data[udi].Removable) {
                 return "document-open-folder"
             } else {
                 return isMounted ? "media-eject" : "media-mount"
             }
         }
         text: {
-            if (!deviceItem.unmountable) {
+            if (!sdSource.data[udi].Removable) {
                 return i18n("Open in File Manager")
             } else {
                 var types = model["Device Types"];
