@@ -41,13 +41,13 @@ Item {
     property int fontSize: PlasmaCore.Theme.defaultFont.pointSize + 2
     signal clicked()
 
-    property real faceSize: units.gridUnit * 7
+    property real faceSize: PlasmaCore.Units.gridUnit * 7
 
     opacity: isCurrent ? 1.0 : 0.5
 
     Behavior on opacity {
         OpacityAnimator {
-            duration: units.longDuration
+            duration: PlasmaCore.Units.longDuration
         }
     }
 
