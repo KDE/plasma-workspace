@@ -462,10 +462,10 @@ PlasmaComponents3.Page {
     footer: PlasmaExtras.PlasmoidHeading {
         id: footerItem
         location: PlasmaExtras.PlasmoidHeading.Location.Footer
-        visible: playerList.model.length > 2 // more than one player, @multiplex is always there
 
         RowLayout {
             anchors.fill: parent
+            spacing: PlasmaCore.Units.smallSpacing
 
             PlasmaComponents3.TabBar {
                 id: playerSelector
@@ -476,6 +476,7 @@ PlasmaComponents3.Page {
                 topPadding: -footerItem.topPadding
 
                 implicitHeight: contentHeight
+                visible: playerList.count > 2 // more than one player, @multiplex is always there
 
                 Repeater {
                     id: playerList
@@ -503,6 +504,67 @@ PlasmaComponents3.Page {
                             (data) => { return data.source === mpris2Source.current }
                         )
                     }
+                }
+            }
+
+            PlasmaComponents3.Label {
+                Layout.fillWidth: true
+                textFormat: Text.PlainText
+                text: root.identity
+                visible: playerList.count <= 2
+            }
+
+            PlasmaCore.SvgItem {
+                Layout.preferredWidth: naturalSize.width
+                Layout.fillHeight: true
+                elementId: "vertical-line"
+                visible: root.canControl && (root.shuffle !== undefined || root.loopStatus !== undefined)
+                svg: PlasmaCore.Svg {
+                    id: lineSvg
+                    imagePath: "widgets/line"
+                }
+            }
+
+            PlasmaComponents3.ToolButton {
+                icon.name: "media-playlist-shuffle"
+                checked: root.shuffle === true
+                enabled: root.canControl && root.shuffle !== undefined
+                Accessible.name: i18n("Shuffle")
+                onClicked: {
+                    const service = mpris2Source.serviceForSource(mpris2Source.current);
+                    let operation = service.operationDescription("SetShuffle");
+                    operation.on = !root.shuffle;
+                    service.startOperationCall(operation);
+                }
+
+                PlasmaComponents3.ToolTip {
+                    text: parent.Accessible.name
+                }
+            }
+
+            PlasmaComponents3.ToolButton {
+                icon.name: root.loopStatus === "Track" ? "media-playlist-repeat-song" : "media-playlist-repeat"
+                checked: root.loopStatus !== undefined && root.loopStatus !== "None"
+                enabled: root.canControl && root.loopStatus !== undefined
+                Accessible.name: root.loopStatus === "Track" ? i18n("Repeat Track") : i18n("Repeat")
+                onClicked: {
+                    const service = mpris2Source.serviceForSource(mpris2Source.current);
+                    let operation = service.operationDescription("SetLoopStatus");
+                    switch (root.loopStatus) {
+                    case "Playlist":
+                        operation.status = "Track";
+                        break;
+                    case "Track":
+                        operation.status = "None";
+                        break;
+                    default:
+                        operation.status = "Playlist";
+                    }
+                    service.startOperationCall(operation);
+                }
+
+                PlasmaComponents3.ToolTip {
+                    text: parent.Accessible.name
                 }
             }
         }
