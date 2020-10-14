@@ -28,17 +28,19 @@ int main(int argc, char **argv)
     QCommandLineParser parser;
     parser.setApplicationDescription(QStringLiteral("Checks start condition for a KDE systemd service"));
     parser.addHelpOption();
-    parser.addPositionalArgument(QStringLiteral("condition"),
-                                 QStringLiteral("start condition, in the format 'rcfile:group:entry:default'"));
+    QCommandLineOption option{QStringLiteral("condition"),
+        QStringLiteral("start condition, in the format 'rcfile:group:entry:default'."),
+        QStringLiteral("condition")};
+    parser.addOption(option);
     parser.process(app);
 
-    if (!parser.positionalArguments().count()) {
-        parser.showHelp(0);
+    if (!parser.isSet(option)) {
+        parser.showHelp(255);
     }
 
-    if (KAutostart::isStartConditionMet(parser.positionalArguments().at(0))) {
+    if (KAutostart::isStartConditionMet(parser.value(option))) {
         return 0;
     } else {
-        return 255;
+        return 1;
     }
 }
