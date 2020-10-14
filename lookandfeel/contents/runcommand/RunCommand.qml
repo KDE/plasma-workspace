@@ -171,8 +171,16 @@ ColumnLayout {
             }
             Keys.onUpPressed: move_up()
             Keys.onDownPressed: move_down()
-            Keys.onEnterPressed: results.runCurrentIndex(event)
-            Keys.onReturnPressed: results.runCurrentIndex(event)
+            function closeOrRun(event) {
+                // Close KRunner if no text was typed and enter was pressed, FEATURE: 211225
+                if (!root.query) {
+                    runnerWindow.visible = false
+                } else {
+                    results.runCurrentIndex(event)
+                }
+            }
+            Keys.onEnterPressed: closeOrRun(event)
+            Keys.onReturnPressed: closeOrRun(event)
 
             Keys.onEscapePressed: {
                 runnerWindow.visible = false
