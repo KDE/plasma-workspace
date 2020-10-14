@@ -294,7 +294,7 @@ void IconApplet::setUrl(const QUrl &url)
 {
     if (m_url != url) {
         m_url = url;
-        urlChanged(url);
+        Q_EMIT urlChanged(url);
 
         config().writeEntry(QStringLiteral("url"), url);
 
@@ -349,7 +349,7 @@ QList<QAction *> IconApplet::contextualActions()
                 action->setSeparator(true);
             }
 
-            connect(action, &QAction::triggered, this, [this, serviceAction]() {
+            connect(action, &QAction::triggered, this, [serviceAction]() {
                 auto *job = new KIO::ApplicationLauncherJob(serviceAction);
                 auto *delegate = new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled);
                 job->setUiDelegate(delegate);

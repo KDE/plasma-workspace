@@ -254,8 +254,8 @@ int PlaceholderModel::separatorCount() const
 
 void PlaceholderModel::reset()
 {
-    emit beginResetModel();
-    emit endResetModel();
+    beginResetModel();
+    endResetModel();
     emit countChanged();
     emit separatorCountChanged();
 }

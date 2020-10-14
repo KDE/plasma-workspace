@@ -444,7 +444,7 @@ void Image::removeSlidePath(const QString &path)
         if (m_slideshowModel) {
             bool haveParent = false;
             QStringList children;
-            for (const QString& slidePath : m_slidePaths) {
+            for (const QString& slidePath : qAsConst(m_slidePaths)) {
                 if (path.startsWith(slidePath)) {
                     haveParent = true;
                 }
@@ -736,7 +736,8 @@ void Image::wallpaperBrowseCompleted()
 {
     Q_ASSERT(m_model);
     if (m_dialog && m_dialog->selectedFiles().count() > 0) {
-        for (const QString image : m_dialog->selectedFiles()) {
+        const QStringList selectedFiles = m_dialog->selectedFiles();
+        for (const QString &image : selectedFiles) {
             addUsersWallpaper(image);
         }
         emit customWallpaperPicked(m_dialog->selectedFiles().first());

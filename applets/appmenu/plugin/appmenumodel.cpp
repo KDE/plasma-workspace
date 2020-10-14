@@ -221,7 +221,8 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
         }
 
         //cache first layer of sub menus, which we'll be popping up
-        for(QAction *a: m_menu->actions()) {
+        const auto actions =  m_menu->actions();
+        for(QAction *a: actions) {
             // signal dataChanged when the action changes
             connect(a, &QAction::changed, this, [this, a] {
                 if (m_menuAvailable && m_menu) {
@@ -253,7 +254,7 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
         const auto actions = m_menu->actions();
         auto it = std::find(actions.begin(), actions.end(), action);
         if (it != actions.end()) {
-            requestActivateIndex(it - actions.begin());
+            Q_EMIT requestActivateIndex(it - actions.begin());
         }
     });
 }

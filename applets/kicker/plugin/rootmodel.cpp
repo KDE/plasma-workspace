@@ -306,7 +306,7 @@ void RootModel::refresh()
             }
         };
 
-        for (AbstractEntry *entry : m_entryList) {
+        for (AbstractEntry *entry : qAsConst(m_entryList)) {
             processEntry(entry);
         }
 
