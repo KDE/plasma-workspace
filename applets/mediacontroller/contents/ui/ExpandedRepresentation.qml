@@ -414,19 +414,20 @@ PlasmaComponents3.Page {
             }
         }
 
-        Row { // Player Controls
+        RowLayout { // Player Controls
             id: playerControls
 
             property bool enabled: root.canControl
             property int controlsSize: theme.mSize(theme.defaultFont).height * 3
 
             Layout.alignment: Qt.AlignHCenter
-            spacing: units.largeSpacing
+            Layout.bottomMargin: PlasmaCore.Units.largeSpacing
+            spacing: units.smallSpacing
 
             PlasmaComponents3.ToolButton { // Previous
-                anchors.verticalCenter: parent.verticalCenter
-                width: expandedRepresentation.controlSize
-                height: width
+                Layout.alignment: Qt.AlignVCenter
+                implicitWidth: expandedRepresentation.controlSize
+                implicitHeight: implicitWidth
                 enabled: playerControls.enabled && root.canGoPrevious
                 icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
                 onClicked: {
@@ -436,17 +437,18 @@ PlasmaComponents3.Page {
             }
 
             PlasmaComponents3.ToolButton { // Pause/Play
-                width: Math.round(expandedRepresentation.controlSize * 1.5)
-                height: width
+                Layout.alignment: Qt.AlignVCenter
+                implicitWidth: Math.round(expandedRepresentation.controlSize * 1.5)
+                implicitHeight: implicitWidth
                 enabled: root.state == "playing" ? root.canPause : root.canPlay
                 icon.name: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
                 onClicked: root.togglePlaying()
             }
 
             PlasmaComponents3.ToolButton { // Next
-                anchors.verticalCenter: parent.verticalCenter
-                width: expandedRepresentation.controlSize
-                height: width
+                Layout.alignment: Qt.AlignVCenter
+                implicitWidth: expandedRepresentation.controlSize
+                implicitHeight: implicitWidth
                 enabled: playerControls.enabled && root.canGoNext
                 icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
                 onClicked: {
