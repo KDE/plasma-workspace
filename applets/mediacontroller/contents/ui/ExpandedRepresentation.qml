@@ -460,8 +460,7 @@ PlasmaComponents3.Page {
     }
 
     footer: PlasmaExtras.PlasmoidHeading {
-        //this removes top padding to allow tabbar to touch the edge 
-        topPadding: -topInset
+        id: footerItem
         location: PlasmaExtras.PlasmoidHeading.Location.Footer
         visible: playerList.model.length > 2 // more than one player, @multiplex is always there
 
@@ -473,6 +472,9 @@ PlasmaComponents3.Page {
                 position: PlasmaComponents3.TabBar.Footer
 
                 Layout.fillWidth: true
+                //this removes top padding to allow tabbar to touch the edge
+                topPadding: -footerItem.topPadding
+
                 implicitHeight: contentHeight
 
                 Repeater {
@@ -486,6 +488,9 @@ PlasmaComponents3.Page {
                         PlasmaComponents3.ToolTip {
                             text: modelData["text"]
                         }
+                        // Keep the delegate centered by offsetting the padding removed in the parent
+                        topPadding: verticalPadding + footerItem.topPadding
+                        bottomPadding: verticalPadding - footerItem.topPadding
                         onClicked: {
                             disablePositionUpdate = true
                             mpris2Source.current = modelData["source"];
