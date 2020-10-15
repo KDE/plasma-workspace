@@ -460,6 +460,8 @@ PlasmaComponents3.Page {
     }
 
     footer: PlasmaExtras.PlasmoidHeading {
+        //this removes top padding to allow tabbar to touch the edge 
+        topPadding: -topInset
         location: PlasmaExtras.PlasmoidHeading.Location.Footer
         visible: playerList.model.length > 2 // more than one player, @multiplex is always there
 
