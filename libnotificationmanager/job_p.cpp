@@ -81,9 +81,6 @@ QUrl JobPrivate::localFileOrUrl(const QString &urlString)
 }
 
 // Tries to return a more user-friendly displayed destination
-// - if it is a place, show the name, e.g. "Downloads"
-// - if it is inside home, abbreviate that to tilde ~/foo
-// - otherwise print URL (without password)
 QString JobPrivate::prettyDestUrl() const
 {
     QUrl url = m_destUrl;
@@ -100,27 +97,26 @@ QString JobPrivate::prettyDestUrl() const
         m_placesModel = createPlacesModel();
     }
 
-    // If we copy into a "place", show its pretty name instead of a URL/path
-    for (int row = 0; row < m_placesModel->rowCount(); ++row) {
-        const QModelIndex idx = m_placesModel->index(row, 0);
-        if (m_placesModel->isHidden(idx)) {
-            continue;
+    // Mimic KUrlNavigator and show a pretty place name,
+    // for example Documents/foo/bar rather than /home/user/Documents/foo/bar
+    const QModelIndex closestIdx = m_placesModel->closestItem(url);
+    if (closestIdx.isValid()) {
+        const QUrl placeUrl = m_placesModel->url(closestIdx);
+
+        QString text = m_placesModel->text(closestIdx);
+
+        QString pathInsidePlace = url.path().mid(placeUrl.path().length());
+
+        if (!pathInsidePlace.isEmpty()
+                && !pathInsidePlace.startsWith(QLatin1Char('/'))) {
+            pathInsidePlace.prepend(QLatin1Char('/'));
         }
 
-        if (m_placesModel->url(idx).matches(url, QUrl::StripTrailingSlash)) {
-            return m_placesModel->text(idx);
-        }
-    }
-
-    if (url.isLocalFile()) {
-        QString destUrlString = url.toLocalFile();
-
-        const QString homePath = QDir::homePath();
-        if (destUrlString.startsWith(homePath)) {
-            destUrlString = QLatin1String("~") + destUrlString.mid(homePath.length());
+        if (pathInsidePlace != QLatin1Char('/')) {
+            text.append(pathInsidePlace);
         }
 
-        return destUrlString;
+        return text;
     }
 
     return url.toDisplayString(QUrl::RemoveUserInfo);
