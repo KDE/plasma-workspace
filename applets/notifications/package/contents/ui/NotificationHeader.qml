@@ -225,7 +225,7 @@ RowLayout {
             Charts.PieChart {
                 id: chart
                 anchors.fill: parent
-                anchors.margins: Math.round(units.devicePixelRatio * units.smallSpacing)
+                anchors.margins: units.smallSpacing + Math.floor(units.devicePixelRatio)
 
                 opacity: (notificationHeading.remainingTime > 0 && notificationHeading.remainingTime < notificationHeading.timeout) ? 1 : 0
                 Behavior on opacity {
@@ -237,7 +237,7 @@ RowLayout {
                 valueSources: Charts.SingleValueSource { value: notificationHeading.remainingTime }
                 colorSource: Charts.SingleValueSource { value: theme.highlightColor }
 
-                thickness: Math.round(units.devicePixelRatio) * 5
+                thickness: Math.floor(units.devicePixelRatio) * 5
 
                 transform: Scale { origin.x: chart.width / 2; xScale: -1 }
             }
