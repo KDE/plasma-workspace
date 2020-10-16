@@ -157,7 +157,7 @@ MouseArea {
 
         GridView {
             id: tasksGrid
-            readonly property int smallSizeCellLength: root.cellThickness > root.smallIconSize ? root.smallIconSize + PlasmaCore.Units.smallSpacing * 2
+            readonly property int smallSizeCellLength: root.cellThickness >= root.smallIconSize ? root.smallIconSize + PlasmaCore.Units.smallSpacing * 2
                                                                                                : root.smallIconSize
             readonly property int autoSizeCellLength: root.cellThickness / root.rowsOrColumns
             readonly property int totalLength: root.vertical ? cellHeight * Math.round(count / root.rowsOrColumns)
