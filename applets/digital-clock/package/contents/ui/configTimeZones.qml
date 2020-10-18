@@ -81,7 +81,7 @@ ColumnLayout {
                 delegate: QQC2.CheckDelegate {
                     id: checkbox
                     focus: true // keyboard navigation
-                    width: parent.width
+                    width: listView.width
                     text: !city || city.indexOf("UTC") === 0 ? comment : comment ? i18n("%1, %2 (%3)", city, region, comment) : i18n("%1, %2", city, region)
                     checked: model.checked
                     onToggled: {
