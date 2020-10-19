@@ -34,8 +34,6 @@ SessionRunner::SessionRunner(QObject *parent, const QVariantList &args)
 {
     setObjectName(QStringLiteral("Sessions"));
     setPriority(LowPriority);
-    setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File | 
-                    Plasma::RunnerContext::NetworkLocation);
 
     m_canLogout = KAuthorized::authorizeAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
     if (m_canLogout) {

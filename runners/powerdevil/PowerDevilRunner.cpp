@@ -40,8 +40,6 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const QVariantList &args)
     qDBusRegisterMetaType< StringStringMap >();
 
     setObjectName(QStringLiteral("PowerDevil"));
-    setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File |
-                    Plasma::RunnerContext::NetworkLocation | Plasma::RunnerContext::Help);
     updateStatus();
     initUpdateTriggers();
 

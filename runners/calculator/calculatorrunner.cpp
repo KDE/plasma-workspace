@@ -47,9 +47,6 @@ CalculatorRunner::CalculatorRunner(QObject *parent, const QVariantList &args)
     #endif
 
     setObjectName(QStringLiteral("Calculator"));
-    setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File |
-                         Plasma::RunnerContext::NetworkLocation | Plasma::RunnerContext::Executable |
-                         Plasma::RunnerContext::ShellCommand);
 
     QString description = i18n("Calculates the value of :q: when :q: is made up of numbers and "
                                "mathematical symbols such as +, -, /, * and ^.");

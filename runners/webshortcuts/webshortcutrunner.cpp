@@ -33,8 +33,6 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
       m_match(this), m_filterBeforeRun(false)
 {
     setObjectName(QStringLiteral("Web Shortcut"));
-    setIgnoredTypes(Plasma::RunnerContext::Directory | Plasma::RunnerContext::File | Plasma::RunnerContext::Executable);
-
     m_match.setType(Plasma::QueryMatch::ExactMatch);
     m_match.setRelevance(0.9);
 
