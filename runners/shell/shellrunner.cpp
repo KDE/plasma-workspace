@@ -53,7 +53,7 @@ ShellRunner::~ShellRunner()
 
 void ShellRunner::match(Plasma::RunnerContext &context)
 {
-    bool isShellCommand = context.type() == Plasma::RunnerContext::ShellCommand;
+    bool isShellCommand = context.type() == Plasma::RunnerContext::ShellCommand || context.type() == Plasma::RunnerContext::Executable;
     QStringList envs;
     QString command;
     // If it is not a shell command we check if we use ENV variables, FEATURE: 409107
