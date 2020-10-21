@@ -26,6 +26,11 @@
 
 class QQuickItem;
 
+/**
+ * @brief Thin wrapping 'Plasma::Applet' for SystemTray.
+ *
+ * SystemTray is of 'Plasma::Containment' type. To have it presented as a widget in Plasma we need a wrapping applet.
+ */
 class SystemTrayContainer : public Plasma::Applet
 {
     Q_OBJECT
