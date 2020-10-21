@@ -74,9 +74,9 @@ MouseArea {
         target: hiddenTasks.model
         // hiddenTasks.count is not updated when ListView is hidden and is not rendered
         // manually update itemCount so that expander arrow hides/shows itself correctly
-        onModelReset: hiddenTasks.itemCount = hiddenTasks.model.rowCount()
-        onRowsInserted: hiddenTasks.itemCount = hiddenTasks.model.rowCount()
-        onRowsRemoved: hiddenTasks.itemCount = hiddenTasks.model.rowCount()
-        onLayoutChanged: hiddenTasks.itemCount = hiddenTasks.model.rowCount()
+        function onModelReset() {hiddenTasks.itemCount = hiddenTasks.model.rowCount()}
+        function onRowsInserted() {hiddenTasks.itemCount = hiddenTasks.model.rowCount()}
+        function onRowsRemoved() {hiddenTasks.itemCount = hiddenTasks.model.rowCount()}
+        function onLayoutChanged() {hiddenTasks.itemCount = hiddenTasks.model.rowCount()}
     }
 }

@@ -42,7 +42,9 @@ Item {
     }
     Connections {
         target: internalSystray
-        onExpandedChanged: plasmoid.expanded = internalSystray.expanded
+        function onExpandedChanged() {
+            plasmoid.expanded = internalSystray.expanded
+        }
     }
 
     property Item internalSystray
@@ -59,7 +61,7 @@ Item {
 
     Connections {
         target: plasmoid.nativeInterface
-        onInternalSystrayChanged: {
+        function onInternalSystrayChanged() {
             root.internalSystray = plasmoid.nativeInterface.internalSystray;
             root.internalSystray.parent = root;
             root.internalSystray.anchors.fill = root;
