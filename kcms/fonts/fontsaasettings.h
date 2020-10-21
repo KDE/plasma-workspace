@@ -54,9 +54,9 @@ public:
     void setExclude(bool exclude);
     void setExcludeFrom(int excludeFrom);
     void setExcludeTo(int excludeTo);
-    void setAntiAliasing(bool antiAliasing);
+    void setAntiAliasing(bool enabled);
     void setDpi(int dpi);
-    void setSubPixel(KXftConfig::SubPixel::Type subPixel);
+    void setSubPixel(KXftConfig::SubPixel::Type type);
     void setHinting(KXftConfig::Hint::Style hinting);
 
 signals:

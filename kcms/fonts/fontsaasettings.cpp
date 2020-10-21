@@ -43,12 +43,12 @@ bool defaultAntiAliasing()
     return true;
 }
 
-int defaultSubPixel()
+KXftConfig::SubPixel::Type defaultSubPixel()
 {
     return KXftConfig::SubPixel::Rgb;
 }
 
-int defaultHinting()
+ KXftConfig::Hint::Style defaultHinting()
 {
     return KXftConfig::Hint::Slight;
 }
@@ -77,7 +77,9 @@ public:
 
     void setExclude(bool exclude)
     {
-        m_exclude = exclude;
+        if (m_exclude != exclude) {
+            m_exclude = exclude;
+        }
     }
 
     int excludeFrom() const
@@ -87,7 +89,9 @@ public:
 
     void setExcludeFrom(int excludeFrom)
     {
-        m_excludeFrom = excludeFrom;
+        if (m_excludeFrom != excludeFrom) {
+            m_excludeFrom = excludeFrom;
+        }
     }
 
     int excludeTo() const
@@ -97,7 +101,9 @@ public:
 
     void setExcludeTo(int excludeTo)
     {
-        m_excludeTo = excludeTo;
+        if (m_excludeTo != excludeTo) {
+            m_excludeTo = excludeTo;
+        }
     }
 
     bool isImmutable() const
@@ -114,8 +120,8 @@ public:
     {
         if (antiAliasing != m_antiAliasing) {
             m_antiAliasingChanged = true;
+            m_antiAliasing = antiAliasing;
         }
-        m_antiAliasing = antiAliasing;
     }
 
     KXftConfig::SubPixel::Type subPixel() const
@@ -125,7 +131,10 @@ public:
 
     void setSubPixel(KXftConfig::SubPixel::Type subPixel)
     {
-        m_subPixel = subPixel;
+        if (m_subPixel != subPixel) {
+            m_subPixelChanged = true;
+            m_subPixel = subPixel;
+        }
     }
 
     KXftConfig::Hint::Style hinting() const
@@ -135,7 +144,10 @@ public:
 
     void setHinting(KXftConfig::Hint::Style hinting)
     {
-        m_hinting = hinting;
+        if (m_hinting != hinting) {
+            m_hintingChanged = true;
+            m_hinting = hinting;
+        }
     }
 
     void save()
@@ -153,16 +165,14 @@ public:
             xft.setExcludeRange(0, 0);
         }
 
-        KXftConfig::SubPixel::Type spType = static_cast<KXftConfig::SubPixel::Type>(m_subPixel);
         if (m_subPixelChanged || xft.subPixelTypeHasLocalConfig()) {
-            xft.setSubPixelType(spType);
+            xft.setSubPixelType(m_subPixel);
         } else {
             xft.setSubPixelType(KXftConfig::SubPixel::NotSet);
         }
 
-        KXftConfig::Hint::Style hStyle = static_cast<KXftConfig::Hint::Style>(m_hinting);
         if (m_hintingChanged || xft.hintStyleHasLocalConfig()) {
-            xft.setHintStyle(hStyle);
+            xft.setHintStyle(m_hinting);
         } else {
             xft.setHintStyle(KXftConfig::Hint::NotSet);
         }
@@ -171,7 +181,7 @@ public:
         KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
         KConfigGroup grp(config, "General");
 
-        grp.writeEntry("XftSubPixel", KXftConfig::toStr(spType));
+        grp.writeEntry("XftSubPixel", KXftConfig::toStr(m_subPixel));
 
         if (aaState == KXftConfig::AntiAliasing::NotSet) {
             grp.revertToDefault("XftAntialias");
@@ -179,9 +189,9 @@ public:
             grp.writeEntry("XftAntialias", aaState == KXftConfig::AntiAliasing::Enabled);
         }
 
-        QString hs(KXftConfig::toStr(hStyle));
+        QString hs(KXftConfig::toStr(m_hinting));
         if (hs != grp.readEntry("XftHintStyle")) {
-            if (KXftConfig::Hint::NotSet == hStyle) {
+            if (KXftConfig::Hint::NotSet == m_hinting) {
                 grp.revertToDefault("XftHintStyle");
             } else {
                 grp.writeEntry("XftHintStyle", hs);
@@ -312,9 +322,18 @@ bool FontsAASettings::antiAliasing() const
     return findItem("antiAliasing")->property().toBool();
 }
 
-void FontsAASettings::setAntiAliasing(bool antiAliasing)
+void FontsAASettings::setAntiAliasing(bool enabled)
 {
-    findItem("antiAliasing")->setProperty(antiAliasing);
+    if (antiAliasing() == enabled) {
+        return;
+    }
+
+    findItem("antiAliasing")->setProperty(enabled);
+    if (!enabled) {
+        setSubPixel(KXftConfig::SubPixel::None);
+    } else if (subPixel() == KXftConfig::SubPixel::None) {
+        setSubPixel(defaultSubPixel());
+    }
 }
 
 int FontsAASettings::dpi() const
@@ -338,9 +357,13 @@ KXftConfig::SubPixel::Type FontsAASettings::subPixel() const
     return findItem("subPixel")->property().value<KXftConfig::SubPixel::Type>();
 }
 
-void FontsAASettings::setSubPixel(KXftConfig::SubPixel::Type subPixel)
+void FontsAASettings::setSubPixel(KXftConfig::SubPixel::Type type)
 {
-    findItem("subPixel")->setProperty(subPixel);
+    if (subPixel() == type) {
+        return;
+    }
+
+    findItem("subPixel")->setProperty(type);
 }
 
 KXftConfig::Hint::Style FontsAASettings::hinting() const
