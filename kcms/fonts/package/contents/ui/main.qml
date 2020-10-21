@@ -105,6 +105,7 @@ KCM.SimpleKCM {
             FontWidget {
                 id: generalFontWidget
                 label: i18n("General:")
+                tooltipText: i18n("Select general font")
                 category: "font"
                 font: kcm.fontsSettings.font
 
@@ -116,6 +117,7 @@ KCM.SimpleKCM {
             FontWidget {
                 id: fixedWidthFontWidget
                 label: i18n("Fixed width:")
+                tooltipText: i18n("Select fixed width font")
                 category: "fixed"
                 font: kcm.fontsSettings.fixed
 
@@ -127,6 +129,7 @@ KCM.SimpleKCM {
             FontWidget {
                 id: smallFontWidget
                 label: i18n("Small:")
+                tooltipText: i18n("Select small font")
                 category: "smallestReadableFont"
                 font: kcm.fontsSettings.smallestReadableFont
 
@@ -138,6 +141,7 @@ KCM.SimpleKCM {
             FontWidget {
                 id: toolbarFontWidget
                 label: i18n("Toolbar:")
+                tooltipText: i18n("Select toolbar font")
                 category: "toolBarFont"
                 font: kcm.fontsSettings.toolBarFont
 
@@ -149,6 +153,7 @@ KCM.SimpleKCM {
             FontWidget {
                 id: menuFontWidget
                 label: i18n("Menu:")
+                tooltipText: i18n("Select menu font")
                 category: "menuFont"
                 font: kcm.fontsSettings.menuFont
 
@@ -159,6 +164,7 @@ KCM.SimpleKCM {
             }
             FontWidget {
                 label: i18n("Window title:")
+                tooltipText: i18n("Select window title font")
                 category: "activeFont"
                 font: kcm.fontsSettings.activeFont
 

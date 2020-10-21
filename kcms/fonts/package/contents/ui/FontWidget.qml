@@ -28,6 +28,7 @@ import org.kde.kcm 1.0
 FocusScope {
     id: root
     property string label
+    property alias tooltipText: tooltip.text
     property string category
     property font font
     Kirigami.FormData.label: root.label
@@ -61,9 +62,7 @@ FocusScope {
                 kcm.adjustFont(root.font, root.category)
             }
             QtControls.ToolTip {
-                visible: parent.hovered
-                text: i18n("Select %1 Font...", label.replace(':', ''))
-                font.capitalization: Font.Capitalize
+                id: tooltip
             }
         }
     }
