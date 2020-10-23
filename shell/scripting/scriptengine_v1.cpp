@@ -48,7 +48,6 @@
 #include "configgroup.h"
 #include "panel.h"
 #include "widget.h"
-#include "../shellcorona.h"
 #include "../standaloneappcorona.h"
 #include "../screenpool.h"
 

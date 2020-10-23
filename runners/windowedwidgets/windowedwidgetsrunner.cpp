@@ -26,7 +26,6 @@
 
 #include <QDebug>
 #include <KLocalizedString>
-#include <KService>
 
 #include <Plasma/Applet>
 #include <Plasma/PluginLoader>

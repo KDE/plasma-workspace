@@ -18,7 +18,6 @@
  */
 
 #include "hotplugjob.h"
-#include "hotplugengine.h"
 
 #include "deviceserviceaction.h"
 

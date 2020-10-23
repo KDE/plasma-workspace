@@ -20,7 +20,6 @@
 #include <KLocalizedString>
 #include <KConfig>
 #include <KConfigGroup>
-#include <QStringList>
 #include <QDir>
 #include <QX11Info>
 

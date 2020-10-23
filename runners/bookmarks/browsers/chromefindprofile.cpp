@@ -20,7 +20,6 @@
 
 
 #include "chromefindprofile.h"
-#include <QDir>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QVariantMap>

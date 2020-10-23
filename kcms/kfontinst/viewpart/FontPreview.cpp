@@ -22,10 +22,8 @@
  */
 
 #include "FontPreview.h"
-#include "FcEngine.h"
 #include "CharTip.h"
 #include <QPainter>
-#include <QPaintEvent>
 #include <QMouseEvent>
 #include <QWheelEvent>
 #include <stdlib.h>

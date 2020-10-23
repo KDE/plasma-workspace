@@ -17,7 +17,6 @@
  */
 
 #include "jobaction.h"
-#include "kuiserverengine.h"
 
 #include <kio/global.h>
 #include <klocalizedstring.h>

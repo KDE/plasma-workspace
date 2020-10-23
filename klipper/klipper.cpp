@@ -30,7 +30,6 @@
 #include <QDialog>
 #include <QMenu>
 #include <QMessageBox>
-#include <QPointer>
 #include <QDBusConnection>
 #include <QSaveFile>
 #include <QtConcurrent>
@@ -45,7 +44,6 @@
 
 #include "configdialog.h"
 #include "klippersettings.h"
-#include "urlgrabber.h"
 #include "history.h"
 #include "historyitem.h"
 #include "historymodel.h"

@@ -34,7 +34,6 @@
 #include <QDBusPendingReply>
 #include <QVariantMap>
 #include <QImage>
-#include <QMenu>
 #include <QPixmap>
 #include <QSysInfo>
 

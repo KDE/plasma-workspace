@@ -20,14 +20,12 @@
 
 #include "weatherengine.h"
 
-#include <QTimer>
 
 #include <KSycoca>
 
 #include <Plasma/DataContainer>
 #include <Plasma/PluginLoader>
 
-#include "ions/ion.h"
 #include "weatherenginedebug.h"
 
 // Constructor

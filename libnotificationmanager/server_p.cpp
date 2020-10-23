@@ -25,7 +25,6 @@
 #include "notificationsadaptor.h"
 #include "notificationmanageradaptor.h"
 
-#include "notification.h"
 #include "notification_p.h"
 
 #include "server.h"

@@ -28,7 +28,6 @@
 #include <QCoreApplication>
 #include <QKeyEvent>
 #include <QEvent>
-#include <QMenu>
 #include <QMouseEvent>
 
 VerticalMenu::VerticalMenu(QWidget* parent) : QMenu(parent)

@@ -20,7 +20,6 @@
 
 #include "kdebrowser.h"
 #include "bookmarkmatch.h"
-#include "favicon.h"
 
 #include <QStack>
 #include <QIcon>

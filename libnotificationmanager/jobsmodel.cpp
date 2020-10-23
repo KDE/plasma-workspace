@@ -21,11 +21,9 @@
 #include "jobsmodel.h"
 #include "jobsmodel_p.h"
 
-#include "notifications.h"
 #include "utils_p.h"
 
 #include <QDebug>
-#include <QScopedPointer>
 
 #include <KJob>
 

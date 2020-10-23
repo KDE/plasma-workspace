@@ -25,7 +25,6 @@
 #include <solid/devicenotifier.h>
 #include <solid/device.h>
 #include <solid/deviceinterface.h>
-#include <solid/battery.h>
 #include <solid/powermanagement.h>
 
 #include <klocalizedstring.h>

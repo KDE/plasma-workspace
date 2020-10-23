@@ -19,7 +19,6 @@
 
 #include "activityengine.h"
 #include "activityservice.h"
-#include "ActivityRankingInterface.h"
 
 #include <kactivities/controller.h>
 #include <kactivities/info.h>

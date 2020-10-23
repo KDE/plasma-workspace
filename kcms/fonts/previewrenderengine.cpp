@@ -19,7 +19,6 @@
 
 
 
-#include "kxftconfig.h"
 #include "previewrenderengine.h"
 #include "Fc.h"
 

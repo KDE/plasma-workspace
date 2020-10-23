@@ -22,12 +22,9 @@
 #include "abstractnotificationsmodel_p.h"
 #include "debug.h"
 
-#include "server.h"
 #include "utils_p.h"
 
-#include "notifications.h"
 
-#include "notification.h"
 #include "notification_p.h"
 
 #include <QDebug>

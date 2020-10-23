@@ -19,7 +19,6 @@
 
 #include "containmentlayoutmanagerplugin.h"
 
-#include <QQmlEngine>
 #include <QQmlContext>
 #include <QQuickItem>
 

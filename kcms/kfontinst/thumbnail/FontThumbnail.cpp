@@ -23,7 +23,6 @@
 
 #include "FontThumbnail.h"
 #include "KfiConstants.h"
-#include "FcEngine.h"
 #include <QImage>
 #include <QApplication>
 #include <QPalette>

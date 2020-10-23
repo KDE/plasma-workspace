@@ -19,7 +19,6 @@
  */
 
 #include "job_p.h"
-#include "job.h"
 
 #include "debug.h"
 
@@ -33,7 +32,6 @@
 
 #include <kio/global.h>
 
-#include "notifications.h"
 
 #include "jobviewv2adaptor.h"
 #include "jobviewv3adaptor.h"

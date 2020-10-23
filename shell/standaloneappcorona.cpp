@@ -20,7 +20,6 @@
  */
 
 #include "standaloneappcorona.h"
-#include "desktopview.h"
 #include "panelview.h"
 
 #include <QDebug>

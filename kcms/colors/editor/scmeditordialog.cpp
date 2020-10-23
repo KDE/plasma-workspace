@@ -29,7 +29,6 @@
 #include <QUrl>
 
 #include <KConfigGroup>
-#include <KColorScheme>
 #include <KMessageBox>
 #include <KStandardGuiItem>
 #include <KWindowSystem>

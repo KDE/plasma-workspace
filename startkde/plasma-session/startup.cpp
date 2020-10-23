@@ -42,7 +42,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KCompositeJob>
 #include <Kdelibs4Migration>
 #include <KIO/DesktopExecParser>
-#include <KJob>
 #include <KNotifyConfig>
 #include <KProcess>
 #include <KService>

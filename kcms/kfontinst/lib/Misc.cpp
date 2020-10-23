@@ -27,7 +27,6 @@
 #include <QMap>
 #include <QVector>
 #include <QDir>
-#include <QFile>
 #include <QByteArray>
 #include <QTextCodec>
 #include <QTextStream>
@@ -35,7 +34,6 @@
 #include <QTemporaryFile>
 #include <QStandardPaths>
 #include <QUrlQuery>
-#include <unistd.h>
 #include <ctype.h>
 
 namespace KFI

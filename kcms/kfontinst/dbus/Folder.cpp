@@ -36,11 +36,8 @@
 #include <fontconfig/fontconfig.h>
 #include "Folder.h"
 #include "FcConfig.h"
-#include "Misc.h"
 #include "KfiConstants.h"
 #include "XmlStrings.h"
-#include "Style.h"
-#include "File.h"
 #include "config-fontinst.h"
 
 #define DISABLED_FONTS "disabledfonts"

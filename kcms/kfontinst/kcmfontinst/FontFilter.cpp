@@ -34,10 +34,8 @@
 #include <QStyleOption>
 #include <QSet>
 #include <QString>
-#include <QMenu>
 #include <QMouseEvent>
 #include <QApplication>
-#include <QActionGroup>
 
 namespace KFI
 {

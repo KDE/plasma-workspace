@@ -44,7 +44,6 @@
 #include <KPackage/PackageLoader>
 
 #include "kcategorizeditemsviewmodels_p.h"
-#include "plasmaappletitemmodel_p.h"
 #include "openwidgetassistant_p.h"
 #include "config-workspace.h"
 

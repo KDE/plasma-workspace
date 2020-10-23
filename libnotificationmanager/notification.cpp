@@ -23,12 +23,9 @@
 #include "notification.h"
 #include "notification_p.h"
 
-#include "notifications.h"
 
 #include <QDBusArgument>
-#include <QDateTime>
 #include <QDebug>
-#include <QImage>
 #include <QImageReader>
 #include <QRegularExpression>
 #include <QXmlStreamReader>

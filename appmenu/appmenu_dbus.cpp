@@ -29,7 +29,6 @@
 
 #include <QApplication>
 #include <QDBusMessage>
-#include <QDBusObjectPath>
 #include <QDBusServiceWatcher>
 
 static const char* DBUS_SERVICE = "org.kde.kappmenu";

@@ -32,7 +32,6 @@
 #include <QQmlContext>
 #include <QGuiApplication>
 #include <QRegularExpression>
-#include <QTimer>
 
 #include <kactioncollection.h>
 #include <kwindowsystem.h>

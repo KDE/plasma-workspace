@@ -29,7 +29,6 @@
 #include "dbusmenutypes_p.h"
 
 #include <QDBusMessage>
-#include <QDBusObjectPath>
 #include <QDBusServiceWatcher>
 
 #include <KWindowSystem>

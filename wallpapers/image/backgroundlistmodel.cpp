@@ -33,7 +33,6 @@
 #include <QImageReader>
 #include <QMimeDatabase>
 #include <QMimeType>
-#include <QMutex>
 #include <QMutexLocker>
 #include <QElapsedTimer>
 
@@ -43,12 +42,10 @@
 #include <kaboutdata.h>
 
 #include <KPackage/Package>
-#include <KPackage/PackageStructure>
 #include <KPackage/PackageLoader>
 
 #include <KIO/OpenFileManagerWindowJob>
 
-#include "image.h"
 
 QStringList BackgroundFinder::s_suffixes;
 QMutex BackgroundFinder::s_suffixMutex;

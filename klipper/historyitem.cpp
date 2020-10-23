@@ -20,7 +20,6 @@
 
 #include "klipper_debug.h"
 #include <QMap>
-#include <QPixmap>
 
 #include <kurlmimedata.h>
 

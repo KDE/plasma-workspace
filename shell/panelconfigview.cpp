@@ -18,7 +18,6 @@
  */
 
 #include "panelconfigview.h"
-#include "panelview.h"
 #include "panelshadows_p.h"
 #include "shellcorona.h"
 

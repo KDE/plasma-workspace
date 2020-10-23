@@ -41,7 +41,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <time.h>
 
 #include <krandom.h>
-#include "server.h"
 
 extern KSMServer* the_server;
 

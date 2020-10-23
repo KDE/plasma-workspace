@@ -25,10 +25,8 @@
 #include <KFormat>
 #include <KLocalizedString>
 
-#include <Plasma/DataEngine>
 
 #include "notifications.h"
-#include "jobsmodel.h"
 
 #include <algorithm>
 

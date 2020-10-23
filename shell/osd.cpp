@@ -23,7 +23,6 @@
 #include <QTimer>
 #include <QWindow>
 #include <QDebug>
-#include <QUrl>
 
 #include <Plasma/Package>
 #include <KDeclarative/QmlObjectSharedEngine>

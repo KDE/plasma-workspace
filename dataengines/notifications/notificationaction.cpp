@@ -17,7 +17,6 @@
  */
 
 #include "notificationaction.h"
-#include "notificationsengine.h"
 
 #include "server.h"
 

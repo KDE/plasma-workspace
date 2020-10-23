@@ -25,7 +25,6 @@
 #include <KLocalizedString>
 
 #include "historyitem.h"
-#include "history.h"
 #include "klipperpopup.h"
 
 PopupProxy::PopupProxy( KlipperPopup* parent, int menu_height, int menu_width )

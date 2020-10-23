@@ -25,7 +25,6 @@
 #include <QIcon>
 #include <QDir>
 #include <KRun>
-#include <KRunner/QueryMatch>
 #include <KLocalizedString>
 #include <QMimeDatabase>
 #include <QTimer>
@@ -38,7 +37,6 @@
 
 #include <KIO/OpenFileManagerWindowJob>
 
-#include "dbusutils_p.h"
 #include "krunner1adaptor.h"
 
 static const QString s_openParentDirId = QStringLiteral("openParentDir");

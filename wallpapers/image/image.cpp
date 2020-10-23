@@ -35,7 +35,6 @@
 #include <QFile>
 #include <QEasingCurve>
 #include <QPropertyAnimation>
-#include <QTimer>
 #include <QMimeDatabase>
 #include <QImageReader>
 #include <QQuickItem>

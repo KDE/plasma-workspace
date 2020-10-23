@@ -22,7 +22,6 @@
  */
 
 #include "GroupList.h"
-#include "FontList.h"
 #include <KIconLoader>
 #include <KMessageBox>
 #include <QSaveFile>

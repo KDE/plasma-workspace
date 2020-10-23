@@ -27,7 +27,6 @@
 #include <QApplication>
 #include <QDebug>
 #include <KFormat>
-#include <KIO/FileSystemFreeSpaceJob>
 #include <KNotification>
 
 #include <Plasma/DataContainer>

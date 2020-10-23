@@ -21,7 +21,6 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QDBusConnection>
 #include <QTimer>
 #include <QDebug>
 #include <KAuth>
@@ -36,7 +35,6 @@
 #include "Fc.h"
 #include "WritingSystems.h"
 #include "Utils.h"
-#include "FontinstIface.h"
 
 #define KFI_DBUG qDebug() << time(nullptr)
 

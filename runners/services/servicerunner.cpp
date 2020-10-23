@@ -33,7 +33,6 @@
 #include <KActivities/ResourceInstance>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
-#include <KService>
 #include <KServiceAction>
 #include <KServiceTypeTrader>
 #include <KStringHandler>

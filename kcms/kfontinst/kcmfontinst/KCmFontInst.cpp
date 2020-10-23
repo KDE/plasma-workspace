@@ -54,7 +54,6 @@
 #include <KAboutData>
 #include <KToolBar>
 #include <KMessageBox>
-#include <KIO/Job>
 #include <KIO/StatJob>
 #include <KJobWidgets>
 #include <KGuiItem>

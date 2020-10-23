@@ -20,7 +20,6 @@
 #include "windowsystem.h"
 
 #include <QQuickItem>
-#include <QQuickWindow>
 
 #include <KWindowSystem>
 

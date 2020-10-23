@@ -28,7 +28,6 @@
 #include <QPainter>
 #include <QDir>
 #include "bookmarksrunner_defs.h"
-#include "fetchsqlite.h"
 
 #include <QSqlDatabase>
 #include <QSqlQuery>

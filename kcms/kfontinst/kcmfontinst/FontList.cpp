@@ -48,9 +48,6 @@
 #include "GroupList.h"
 #include "FontInstInterface.h"
 #include "XmlStrings.h"
-#include "Family.h"
-#include "Style.h"
-#include "File.h"
 
 namespace KFI
 {

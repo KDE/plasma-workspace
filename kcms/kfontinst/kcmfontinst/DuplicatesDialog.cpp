@@ -23,11 +23,9 @@
 
 #include "DuplicatesDialog.h"
 #include "ActionLabel.h"
-#include "Misc.h"
 #include "Fc.h"
 #include "FcEngine.h"
 #include "FontList.h"
-#include "JobRunner.h"
 #include <KIconLoader>
 #include <KMessageBox>
 #include <KFileItem>

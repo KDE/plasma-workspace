@@ -18,7 +18,6 @@
 
 #include "executable.h"
 #include <QDebug>
-#include <KProcess>
 ExecutableContainer::ExecutableContainer(const QString& command, QObject* parent)
     : Plasma::DataContainer(parent), m_process(nullptr)
 {

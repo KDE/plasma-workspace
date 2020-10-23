@@ -20,10 +20,8 @@
 
 #include "freespacenotifier.h"
 
-#include <KLocalizedString>
 #include <KNotification>
 #include <KNotificationJobUiDelegate>
-#include <KService>
 
 #include <KIO/ApplicationLauncherJob>
 #include <KIO/FileSystemFreeSpaceJob>

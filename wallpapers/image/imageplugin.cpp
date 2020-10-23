@@ -20,7 +20,6 @@
 #include "imageplugin.h"
 #include "image.h"
 #include <QQmlContext>
-#include <QQmlEngine>
 
 
 void ImagePlugin::registerTypes(const char *uri)

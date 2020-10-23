@@ -20,7 +20,6 @@
 
 #include "feedback.h"
 
-#include <KSharedConfig>
 #include <KConfigGroup>
 #include <KPluginFactory>
 #include <KAboutData>

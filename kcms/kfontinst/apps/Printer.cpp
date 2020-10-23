@@ -29,7 +29,6 @@
 #include <QTextStream>
 #include <QFile>
 #include <QPainter>
-#include <QFont>
 #include <QFontDatabase>
 #include <QFontMetrics>
 #include <QWidget>

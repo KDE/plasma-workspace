@@ -19,7 +19,6 @@
  */
 
 #include "abstractlayoutmanager.h"
-#include "appletslayout.h"
 #include "itemcontainer.h"
 
 #include <cmath>

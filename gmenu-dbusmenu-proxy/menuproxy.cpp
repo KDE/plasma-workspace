@@ -23,14 +23,12 @@
 
 #include "debug.h"
 
-#include <QByteArray>
 #include <QCoreApplication>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>
 #include <QDir>
 #include <QFileInfo>
-#include <QHash>
 #include <QStandardPaths>
 #include <QTimer>
 
@@ -41,7 +39,6 @@
 
 #include <QX11Info>
 #include <xcb/xcb.h>
-#include <xcb/xcb_atom.h>
 
 #include "window.h"
 

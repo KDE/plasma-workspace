@@ -20,7 +20,6 @@
 
 #include <QDir>
 #include <QUrl>
-#include <QDBusInterface>
 #include <QDBusReply>
 #include <QStandardPaths>
 
@@ -29,7 +28,6 @@
 #include <KNS3/DownloadDialog>
 
 #include "gtkpage.h"
-#include "gtkthemesmodel.h"
 
 GtkPage::GtkPage(QObject *parent)
     : QObject(parent)

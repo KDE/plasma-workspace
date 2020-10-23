@@ -20,7 +20,6 @@
 #include "playercontrol.h"
 
 #include "playeractionjob.h"
-#include "playercontainer.h"
 
 #include <dbusproperties.h>
 #include <mprisplayer.h>

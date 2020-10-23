@@ -5,7 +5,6 @@
 */
 
 #include "screencastingrequest.h"
-#include "screencasting.h"
 #include <functional>
 #include <QCoreApplication>
 #include <QPointer>

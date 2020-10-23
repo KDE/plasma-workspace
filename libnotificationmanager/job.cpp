@@ -25,7 +25,6 @@
 
 #include <KService>
 
-#include "notifications.h"
 
 using namespace NotificationManager;
 

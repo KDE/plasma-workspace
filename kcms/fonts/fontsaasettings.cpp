@@ -21,7 +21,6 @@
 #include <QDebug>
 #include <KWindowSystem>
 
-#include "kxftconfig.h"
 
 namespace {
     bool defaultExclude()

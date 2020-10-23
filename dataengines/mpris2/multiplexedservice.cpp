@@ -20,7 +20,6 @@
 #include "multiplexedservice.h"
 
 #include "multiplexer.h"
-#include "playercontrol.h"
 #include <mprisplayer.h>
 
 #include <KLocalizedString>

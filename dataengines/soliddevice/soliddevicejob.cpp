@@ -17,7 +17,6 @@
  */
 
 #include "soliddevicejob.h"
-#include "soliddeviceengine.h"
 
 #include <solid/device.h>
 #include <solid/opticaldisc.h>

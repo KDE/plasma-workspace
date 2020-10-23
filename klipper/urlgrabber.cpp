@@ -22,7 +22,6 @@
 
 #include "klipper_debug.h"
 #include <QMimeDatabase>
-#include <QHash>
 #include <QIcon>
 #include <QTimer>
 #include <QUuid>

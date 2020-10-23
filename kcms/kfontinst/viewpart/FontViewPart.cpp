@@ -22,8 +22,6 @@
  */
 
 #include "FontViewPart.h"
-#include "Misc.h"
-#include "KfiConstants.h"
 #include "FcEngine.h"
 #include "PreviewSelectAction.h"
 #include "FontInstInterface.h"
@@ -32,7 +30,6 @@
 #include <QGuiApplication>
 #include <QBoxLayout>
 #include <QPushButton>
-#include <QFrame>
 #include <QFile>
 #include <QLabel>
 #include <QRegExp>

@@ -22,7 +22,6 @@
 #include "actionlist.h"
 #include "debug.h"
 
-#include <QTimer>
 
 PlaceholderModel::PlaceholderModel(QObject *parent)
     : AbstractModel(parent)

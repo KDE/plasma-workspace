@@ -35,7 +35,6 @@
 #include <KSharedConfig>
 
 #include <algorithm>
-#include <memory>
 
 ThemesModel::ThemesModel(QObject *parent) : QAbstractListModel(parent)
 {

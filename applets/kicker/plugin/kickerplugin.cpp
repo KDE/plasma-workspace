@@ -37,7 +37,6 @@
 #include "wheelinterceptor.h"
 #include "windowsystem.h"
 
-#include <QQmlEngine>
 
 void KickerPlugin::registerTypes(const char *uri)
 {

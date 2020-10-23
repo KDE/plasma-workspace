@@ -23,7 +23,6 @@
 
 #include "ActionLabel.h"
 #include <KIconLoader>
-#include <QLabel>
 #include <QTimer>
 #include <QPixmap>
 #include <QMatrix>
