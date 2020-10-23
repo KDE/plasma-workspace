@@ -132,6 +132,7 @@ PlasmaCore.ToolTipArea {
         Item {
             id: iconContainer
 
+            property alias container: abstractItem
             property alias inVisibleLayout: abstractItem.inVisibleLayout
             readonly property int size: abstractItem.inVisibleLayout ? root.itemSize : units.iconSizes.medium
 

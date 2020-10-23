@@ -90,7 +90,7 @@ MouseArea {
 
         onActiveAppletChanged: {
             if (activeApplet && activeApplet.parent.inVisibleLayout) {
-                changeHighlightedItem(activeApplet.parent);
+                changeHighlightedItem(activeApplet.parent.container);
             } else if (dialog.visible) {
                 changeHighlightedItem(root);
             }
