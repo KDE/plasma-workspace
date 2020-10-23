@@ -1,5 +1,4 @@
 [Desktop Entry]
-Exec=kcmshell5 fontinst
 Icon=preferences-desktop-font-installer
 Type=Service
 X-KDE-ServiceTypes=KCModule
