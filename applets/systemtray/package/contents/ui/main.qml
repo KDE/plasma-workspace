@@ -30,26 +30,16 @@ import "items"
 MouseArea {
     id: root
 
+    readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+
     Layout.minimumWidth: vertical ? PlasmaCore.Units.iconSizes.small : mainLayout.implicitWidth + PlasmaCore.Units.smallSpacing
+    Layout.minimumHeight: vertical ? mainLayout.implicitHeight + PlasmaCore.Units.smallSpacing : PlasmaCore.Units.iconSizes.small
 
-    Layout.minimumHeight: vertical ? mainLayout.implicitHeight + PlasmaCore.Units.smallSpacing : PlasmaCore.Units.smallSpacing
-
-    Layout.preferredHeight: Layout.minimumHeight
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    // The icon size to display when not using the auto-scaling setting
-    readonly property int smallIconSize: PlasmaCore.Units.iconSizes.smallMedium
+    readonly property alias itemSize: tasksGrid.itemSize
 
-    // Used only by AbstractItem, but it's easiest to keep it here since it
-    // uses dimensions from this item to calculate the final value
-    readonly property int itemSize: autoSize ? PlasmaCore.Units.roundToIconSize(Math.min(Math.min(tasksGrid.implicitWidth / rowsOrColumns, tasksGrid.implicitHeight / rowsOrColumns), PlasmaCore.Units.iconSizes.enormous)) : smallIconSize
-
-    // The rest are derived properties; do not modify
-    readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
-    readonly property bool autoSize: plasmoid.configuration.scaleIconsToFit
-    readonly property int cellThickness: root.vertical ? root.width : root.height
-    readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(tasksGrid.count, Math.floor(cellThickness / (smallIconSize + PlasmaCore.Units.smallSpacing))))
     property alias expanded: dialog.visible
     property Item activeApplet
     property alias visibleLayout: tasksGrid
@@ -157,31 +147,49 @@ MouseArea {
 
         GridView {
             id: tasksGrid
-            readonly property int smallSizeCellLength: root.cellThickness >= root.smallIconSize ? root.smallIconSize + PlasmaCore.Units.smallSpacing * 2
-                                                                                               : root.smallIconSize
-            readonly property int totalLength: root.vertical ? cellHeight * Math.ceil(count / root.rowsOrColumns)
-                                                             : cellWidth * Math.ceil(count / root.rowsOrColumns)
 
             Layout.alignment: Qt.AlignCenter
 
             interactive: false //disable features we don't need
             flow: vertical ? GridView.LeftToRight : GridView.TopToBottom
 
-            implicitHeight: root.vertical ? totalLength : root.height
-            implicitWidth: !root.vertical ? totalLength : root.width
+            // The icon size to display when not using the auto-scaling setting
+            readonly property int smallIconSize: PlasmaCore.Units.iconSizes.smallMedium
+            readonly property bool autoSize: plasmoid.configuration.scaleIconsToFit
 
+            readonly property int gridThickness: root.vertical ? root.width : root.height
+            // Should change to 2 rows/columns on a 56px panel (in standard DPI)
+            readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(count, Math.floor(gridThickness / (smallIconSize + PlasmaCore.Units.smallSpacing))))
+
+            // Add margins only if the panel is larger than a small icon (to avoid large gaps between tiny icons)
+            readonly property int smallSizeCellLength: gridThickness < smallIconSize ? smallIconSize : smallIconSize + PlasmaCore.Units.smallSpacing * 2
             cellHeight: {
                 if (root.vertical) {
-                    return root.autoSize ? root.width : smallSizeCellLength
+                    return autoSize ? root.width : smallSizeCellLength
                 } else {
-                    return root.autoSize ? root.height : Math.floor(root.height / root.rowsOrColumns)
+                    return autoSize ? root.height : Math.floor(root.height / rowsOrColumns)
                 }
             }
             cellWidth: {
                 if (root.vertical) {
-                    return root.autoSize ? root.width : Math.floor(root.width / root.rowsOrColumns)
+                    return autoSize ? root.width : Math.floor(root.width / rowsOrColumns)
                 } else {
-                    return root.autoSize ? root.height : smallSizeCellLength
+                    return autoSize ? root.height : smallSizeCellLength
+                }
+            }
+
+            //depending on the form factor, we are calculating only one dimention, second is always the same as root/parent
+            implicitHeight: root.vertical ? cellHeight * Math.ceil(count / rowsOrColumns) : root.height
+            implicitWidth: !root.vertical ? cellWidth * Math.ceil(count / rowsOrColumns) : root.width
+
+            // Used only by AbstractItem, but it's easiest to keep it here since it
+            // uses dimensions from this item to calculate the final value
+            readonly property int itemSize: {
+                if (autoSize) {
+                    const size = Math.min(implicitWidth / rowsOrColumns, implicitHeight / rowsOrColumns)
+                    return PlasmaCore.Units.roundToIconSize(Math.min(size, PlasmaCore.Units.iconSizes.enormous))
+                } else {
+                    return smallIconSize
                 }
             }
 
@@ -196,7 +204,7 @@ MouseArea {
             delegate: ItemLoader {}
 
             add: Transition {
-                enabled: root.itemSize > 0
+                enabled: itemSize > 0
 
                 NumberAnimation {
                     property: "scale"
