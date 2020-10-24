@@ -30,9 +30,9 @@ import "items"
 MouseArea {
     id: root
 
-    Layout.minimumWidth: vertical ? PlasmaCore.Units.iconSizes.small : tasksGrid.implicitWidth + (expander.visible ? expander.implicitWidth : 0) + PlasmaCore.Units.smallSpacing
+    Layout.minimumWidth: vertical ? PlasmaCore.Units.iconSizes.small : mainLayout.implicitWidth + PlasmaCore.Units.smallSpacing
 
-    Layout.minimumHeight: vertical ? tasksGrid.implicitHeight + (expander.visible ? expander.implicitHeight : 0) + PlasmaCore.Units.smallSpacing : PlasmaCore.Units.smallSpacing
+    Layout.minimumHeight: vertical ? mainLayout.implicitHeight + PlasmaCore.Units.smallSpacing : PlasmaCore.Units.smallSpacing
 
     Layout.preferredHeight: Layout.minimumHeight
     LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
@@ -43,13 +43,13 @@ MouseArea {
 
     // Used only by AbstractItem, but it's easiest to keep it here since it
     // uses dimensions from this item to calculate the final value
-    readonly property int itemSize: autoSize ? PlasmaCore.Units.roundToIconSize(Math.min(Math.min(width / rowsOrColumns, height / rowsOrColumns), PlasmaCore.Units.iconSizes.enormous)) : smallIconSize
+    readonly property int itemSize: autoSize ? PlasmaCore.Units.roundToIconSize(Math.min(Math.min(tasksGrid.implicitWidth / rowsOrColumns, tasksGrid.implicitHeight / rowsOrColumns), PlasmaCore.Units.iconSizes.enormous)) : smallIconSize
 
     // The rest are derived properties; do not modify
     readonly property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
     readonly property bool autoSize: plasmoid.configuration.scaleIconsToFit
     readonly property int cellThickness: root.vertical ? root.width : root.height
-    readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.floor(cellThickness / (smallIconSize + PlasmaCore.Units.smallSpacing)))
+    readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(tasksGrid.count, Math.floor(cellThickness / (smallIconSize + PlasmaCore.Units.smallSpacing))))
     property alias expanded: dialog.visible
     property Item activeApplet
     property alias visibleLayout: tasksGrid
@@ -159,9 +159,8 @@ MouseArea {
             id: tasksGrid
             readonly property int smallSizeCellLength: root.cellThickness >= root.smallIconSize ? root.smallIconSize + PlasmaCore.Units.smallSpacing * 2
                                                                                                : root.smallIconSize
-            readonly property int autoSizeCellLength: root.cellThickness / root.rowsOrColumns
-            readonly property int totalLength: root.vertical ? cellHeight * Math.round(count / root.rowsOrColumns)
-                                                             : cellWidth * Math.round(count / root.rowsOrColumns)
+            readonly property int totalLength: root.vertical ? cellHeight * Math.ceil(count / root.rowsOrColumns)
+                                                             : cellWidth * Math.ceil(count / root.rowsOrColumns)
 
             Layout.alignment: Qt.AlignCenter
 
@@ -171,8 +170,20 @@ MouseArea {
             implicitHeight: root.vertical ? totalLength : root.height
             implicitWidth: !root.vertical ? totalLength : root.width
 
-            cellHeight: root.vertical && !root.autoSize ? smallSizeCellLength : autoSizeCellLength
-            cellWidth:  !root.vertical && !root.autoSize ? smallSizeCellLength : autoSizeCellLength
+            cellHeight: {
+                if (root.vertical) {
+                    return root.autoSize ? root.width : smallSizeCellLength
+                } else {
+                    return root.autoSize ? root.height : Math.floor(root.height / root.rowsOrColumns)
+                }
+            }
+            cellWidth: {
+                if (root.vertical) {
+                    return root.autoSize ? root.width : Math.floor(root.width / root.rowsOrColumns)
+                } else {
+                    return root.autoSize ? root.height : smallSizeCellLength
+                }
+            }
 
             model: PlasmaCore.SortFilterModel {
                 sourceModel: plasmoid.nativeInterface.systemTrayModel
