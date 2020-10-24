@@ -141,7 +141,7 @@ bool PlasmaAppletItem::matches(const QString &pattern) const
     const QString keywordsList = KPluginMetaData::readTranslatedString(m_info.rawData(), QStringLiteral("Keywords"));
     const auto keywords = keywordsList.splitRef(QLatin1Char(';'), Qt::SkipEmptyParts);
 
-    for (const auto keyword : keywords) {
+    for (const auto &keyword : keywords) {
         if (keyword.startsWith(pattern, Qt::CaseInsensitive)) {
             return true;
         }

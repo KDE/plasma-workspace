@@ -416,7 +416,7 @@ public:
     {
         QStringList ids;
 
-        for (const auto& item: m_items) {
+        for (const auto& item: qAsConst(m_items)) {
             ids << item.value();
         }
 

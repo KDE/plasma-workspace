@@ -32,7 +32,7 @@ int main(int argc, char** argv)
         asN.setPhase(phase);
         cout << "phase: " << phase << '\n';
         bool foundThings = true;
-        for (auto asi : asN.startList()) {
+        for (const auto &asi : asN.startList()) {
             foundThings = false;
             cout << "- " << asi.name << ' ' << asi.service;
             if (!asi.startAfter.isEmpty())

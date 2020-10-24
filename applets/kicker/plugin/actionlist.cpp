@@ -259,7 +259,7 @@ QVariantList systemSettingsActions()
         return list;
     }
 
-    for (const QString &id : ids) {
+    for (const QString &id : qAsConst(ids)) {
         KService::Ptr service = KService::serviceByStorageId(id);
         if (!service || !service->isValid()) {
             continue;

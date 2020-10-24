@@ -481,7 +481,7 @@ void AppletsLayout::componentComplete()
         m_layoutManager->parseLayout(m_containment->config().readEntry(m_configKey, ""));
     }
 
-    QList <QObject*> appletObjects = m_containmentItem->property("applets").value<QList <QObject*> >();
+    const QList <QObject*> appletObjects = m_containmentItem->property("applets").value<QList <QObject*> >();
 
     for (auto *obj : appletObjects) {
         PlasmaQuick::AppletQuickItem *appletItem = qobject_cast<PlasmaQuick::AppletQuickItem *>(obj);

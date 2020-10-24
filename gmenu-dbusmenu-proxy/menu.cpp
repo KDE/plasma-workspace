@@ -90,7 +90,7 @@ void Menu::start(uint id)
             const bool hadMenu = !m_menus.isEmpty();
 
             const auto menus = reply.value();
-            for (auto menu : menus) {
+            for (const auto &menu : menus) {
                 m_menus[menu.id].append(menus);
             }
 

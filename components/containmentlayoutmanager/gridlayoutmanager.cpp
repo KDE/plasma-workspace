@@ -53,7 +53,7 @@ QString GridLayoutManager::serializeLayout() const
 void GridLayoutManager::parseLayout(const QString &savedLayout)
 {
     m_parsedConfig.clear();
-    QStringList itemsConfigs = savedLayout.split(QLatin1Char(';'));
+    const QStringList itemsConfigs = savedLayout.split(QLatin1Char(';'));
 
     for (const auto &itemString : itemsConfigs) {
         QStringList itemConfig = itemString.split(QLatin1Char(':'));
@@ -153,7 +153,7 @@ void GridLayoutManager::resetLayoutFromConfig()
         }
     }
 
-    for (auto *item : missingItems) {
+    for (auto *item : qAsConst(missingItems)) {
         // NOTE: do not use positionItemAndAssign here, because we do not want to emit layoutNeedsSaving, to not save after resize
         positionItem(item);
         assignSpaceImpl(item);

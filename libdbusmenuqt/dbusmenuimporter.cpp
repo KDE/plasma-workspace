@@ -404,7 +404,7 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
     //remove outdated actions
     QSet<int> newDBusMenuItemIds;
     newDBusMenuItemIds.reserve(rootItem.children.count());
-    for (const DBusMenuLayoutItem &item: rootItem.children) {
+    for (const DBusMenuLayoutItem &item: qAsConst(rootItem.children)) {
         newDBusMenuItemIds << item.id;
     }
     for (QAction *action: menu->actions()) {
@@ -422,7 +422,7 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
     }
 
     //insert or update new actions into our menu
-    for (const DBusMenuLayoutItem &dbusMenuItem: rootItem.children) {
+    for (const DBusMenuLayoutItem &dbusMenuItem: qAsConst(rootItem.children)) {
         DBusMenuImporterPrivate::ActionForId::Iterator it = d->m_actionForId.find(dbusMenuItem.id);
         QAction *action = nullptr;
         if (it == d->m_actionForId.end()) {
