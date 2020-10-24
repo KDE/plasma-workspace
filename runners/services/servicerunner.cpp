@@ -453,18 +453,6 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
 
     const QString actionName = QUrlQuery(dataUrl).queryItemValue(QStringLiteral("action"));
     if (actionName.isEmpty()) {
-        // We want to load kcms directly with systemsettings,
-        // but we can't completely replace kcmshell with systemsettings
-        // as we need to be able to load kcms without plasma and we can't
-        // implement all kcmshell features into systemsettings
-        if (service->serviceTypes().contains(QLatin1String("KCModule"))) {
-            if (service->parentApp() == QStringLiteral("kinfocenter")) {
-                service->setExec(QStringLiteral("kinfocenter ") + service->desktopEntryName());
-            // We can't display a KCM in systemsettings if it has no parent, BUG: 423612
-            } else if (!service->property("X-KDE-System-Settings-Parent-Category").toString().isEmpty()) {
-                service->setExec(QStringLiteral("systemsettings5 ") + service->desktopEntryName());
-            }
-        }
         job = new KIO::ApplicationLauncherJob(service);
     } else {
         const auto actions = service->actions();
