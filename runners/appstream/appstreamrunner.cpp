@@ -118,6 +118,7 @@ void InstallerRunner::match(Plasma::RunnerContext &context)
         match.setText(i18n("Get %1...", component.name()));
         match.setSubtext(component.summary());
         match.setData(QUrl("appstream://" + componentId));
+        match.setRelevance(component.name().compare(context.query(), Qt::CaseInsensitive) == 0 ? 1. : 0.7);
         context.addMatch(match);
     }
 }
