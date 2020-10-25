@@ -24,6 +24,7 @@ import QtGraphicalEffects 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.workspace.components 2.0 as PW
 
 import org.kde.plasma.private.sessions 2.0
 import "../components"
@@ -517,7 +518,7 @@ PlasmaCore.ColorScope {
                 visible: inputPanel.status == Loader.Ready
             }
 
-            KeyboardLayoutButton {
+            PW.KeyboardLayoutButton {
             }
 
             Item {
