@@ -23,7 +23,6 @@
 #include <QDBusInterface>
 #include <QDBusReply>
 #include <QDBusConnectionInterface>
-#include <QDBusMetaType>
 #include <QIcon>
 #include <QDebug>
 

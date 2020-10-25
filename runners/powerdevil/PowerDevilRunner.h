@@ -43,6 +43,4 @@ class PowerDevilRunner : public Plasma::AbstractRunner
         bool parseQuery(const QString& query, const QList<QRegExp>& rxList, QString& parameter) const;
 };
 
-Q_DECLARE_METATYPE(StringStringMap)
-
 #endif
