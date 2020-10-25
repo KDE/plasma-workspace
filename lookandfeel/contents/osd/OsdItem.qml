@@ -24,7 +24,18 @@ import org.kde.plasma.extras 2.0 as PlasmaExtra
 import QtQuick.Window 2.2
 
 RowLayout {
-    property QtObject rootItem
+    // OSD Timeout in msecs - how long it will stay on the screen
+    property int timeout: 1800
+    // This is either a text or a number, if showingProgress is set to true,
+    // the number will be used as a value for the progress bar
+    property var osdValue
+    // Maximum percent value
+    property int osdMaxValue: 100
+    // Icon name to display
+    property string icon
+    // Set to true if the value is meant for progress bar,
+    // false for displaying the value as normal text
+    property bool showingProgress: false
 
     spacing: units.smallSpacing
 
@@ -35,7 +46,7 @@ RowLayout {
         Layout.leftMargin: units.smallSpacing
         Layout.preferredWidth: units.iconSizes.medium
         Layout.preferredHeight: units.iconSizes.medium
-        source: rootItem.icon
+        source: icon
         visible: valid
     }
 
@@ -45,10 +56,10 @@ RowLayout {
         // So it never exceeds the minimum popup size
         Layout.preferredWidth: 1
         Layout.rightMargin: units.smallSpacing
-        visible: rootItem.showingProgress
+        visible: showingProgress
         from: 0
-        to: rootItem.osdMaxValue
-        value: Number(rootItem.osdValue)
+        to: osdMaxValue
+        value: Number(osdValue)
     }
 
     // Get the width of a three-digit number so we can size the label
@@ -69,7 +80,7 @@ RowLayout {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         text: i18nc("Percentage value", "%1%", progressBar.value)
-        visible: rootItem.showingProgress
+        visible: showingProgress
         // Display a subtle visual indication that the volume might be
         // dangerously high
         // ------------------------------------------------
@@ -97,7 +108,7 @@ RowLayout {
         textFormat: Text.PlainText
         wrapMode: Text.NoWrap
         elide: Text.ElideRight
-        text: !rootItem.showingProgress && rootItem.osdValue ? rootItem.osdValue : ""
-        visible: !rootItem.showingProgress
+        text: !showingProgress && osdValue ? osdValue : ""
+        visible: !showingProgress
     }
 }
