@@ -178,8 +178,8 @@ if (INSTALL_SDDM_THEME)
     install(DIRECTORY sddm-theme/ DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze PATTERN "README.txt" EXCLUDE PATTERN "components" EXCLUDE PATTERN "dummydata" EXCLUDE
     PATTERN "theme.conf.cmake" EXCLUDE)
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/sddm-theme/theme.conf DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze)
-    install(DIRECTORY lookandfeel/contents/components DESTINATION ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze PATTERN "README.txt" EXCLUDE)
-
+    file(RELATIVE_PATH relpath ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze ${KDE_INSTALL_FULL_DATADIR}/plasma/look-and-feel/org.kde.breeze.desktop/contents/components)
+    file(CREATE_LINK ${relpath} ${KDE_INSTALL_FULL_DATADIR}/sddm/themes/breeze/components SYMBOLIC)
 endif()
 
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
