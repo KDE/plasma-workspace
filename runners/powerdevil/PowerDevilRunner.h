@@ -23,18 +23,15 @@
 #include <KRunner/AbstractRunner>
 #include <QDBusConnection>
 
-typedef QMap< QString, QString > StringStringMap;
-
 class PowerDevilRunner : public Plasma::AbstractRunner
 {
-        Q_OBJECT
-
+    Q_OBJECT
     public:
         PowerDevilRunner( QObject *parent, const QVariantList &args );
         ~PowerDevilRunner() override;
 
-        void match( Plasma::RunnerContext &context ) override;
-        void run( const Plasma::RunnerContext &context, const Plasma::QueryMatch &action ) override;
+        void match(Plasma::RunnerContext &context) override;
+        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
     private Q_SLOTS:
         void updateStatus();

@@ -37,15 +37,9 @@ K_EXPORT_PLASMA_RUNNER_WITH_JSON(PowerDevilRunner, "plasma-runner-powerdevil.jso
 PowerDevilRunner::PowerDevilRunner(QObject *parent, const QVariantList &args)
     : Plasma::AbstractRunner(parent, args)
 {
-    qDBusRegisterMetaType< StringStringMap >();
-
     setObjectName(QStringLiteral("PowerDevil"));
     updateStatus();
     initUpdateTriggers();
-
-    /* Let's define all the words here. m_words contains all the words that
-     * will eventually trigger a match in the runner.
-     */
 
     QStringList commands;
     commands << i18nc("Note this is a KRunner keyword", "suspend")
@@ -186,9 +180,7 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
         addSuspendMatch(Solid::PowerManagement::HibernateState, matches);
     }
 
-    if (!matches.isEmpty()) {
-        context.addMatches(matches);
-    }
+    context.addMatches(matches);
 }
 
 void PowerDevilRunner::addSuspendMatch(int value, QList<Plasma::QueryMatch> &matches)
