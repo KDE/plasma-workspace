@@ -308,10 +308,11 @@ void KSMShutdownDlg::slotSuspend(int spdMethod)
 {
     m_bootOption.clear();
     switch (spdMethod) {
-        case 0: //Solid::PowerManagement::StandbyState:
-        case 1: //Solid::PowerManagement::SuspendState:
+        case 1: //Solid::PowerManagement::StandbyState:
+        case 2: //Solid::PowerManagement::SuspendState:
             m_session.suspend();
-        case 2:// Solid::PowerManagement::HibernateState:
+            break;
+        case 4:// Solid::PowerManagement::HibernateState:
             m_session.hibernate();
             break;
     }
