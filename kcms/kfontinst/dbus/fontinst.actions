@@ -66,6 +66,7 @@ Description[es]=La modificación de la configuración de los tipos de letra del 
 Description[et]=Süsteemsete fontide seadistuste muutmine nõuab vastavaid õigusi.
 Description[eu]=Sistema osorako letra-tipoen konfigurazioa aldatzeko pribilegioak behar dira.
 Description[fr]=La modification de la configuration des polices pour tout le système nécessite des privilèges.
+Description[ia]=Le modification de le configuration de tote le systema exige privilegios
 Description[it]=La modifica della configurazione dei caratteri di sistema richiede dei privilegi.
 Description[ko]=시스템 전역 글꼴 설정을 수정하려면 권한이 필요합니다.
 Description[nl]=Wijzigen van de systeembrede lettertypen vereist rechten.
