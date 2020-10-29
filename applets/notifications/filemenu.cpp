@@ -27,13 +27,20 @@
 #include <QTimer>
 #include <QQuickWindow>
 
+#include <KConfigGroup>
 #include <KFileItemActions>
 #include <KFileItemListProperties>
 #include <KLocalizedString>
 #include <KProtocolManager>
 #include <KPropertiesDialog>
+#include <KSharedConfig>
+#include <KStandardAction>
 #include <KUrlMimeData>
 
+#include <KIO/CopyJob> // for KIO::trash
+#include <KIO/DeleteJob>
+#include <KIO/FileUndoManager>
+#include <KIO/JobUiDelegate>
 #include <KIO/OpenFileManagerWindowJob>
 
 FileMenu::FileMenu(QObject *parent) : QObject(parent)
@@ -137,6 +144,44 @@ void FileMenu::open(int x, int y)
         KUrlMimeData::setUrls({fileItem.url()}, {fileItem.mostLocalUrl()}, data);
         QApplication::clipboard()->setMimeData(data);
     });
+
+    menu->addSeparator();
+
+    const bool canTrash = itemProperties.isLocal() && itemProperties.supportsMoving();
+    if (canTrash) {
+        QAction *moveToTrashAction = KStandardAction::moveToTrash(this, [this] {
+            const QList<QUrl> urls{m_url};
+
+            KIO::JobUiDelegate uiDelegate;
+            if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Trash, KIO::JobUiDelegate::DefaultConfirmation)) {
+                auto *job = KIO::trash(urls);
+                job->uiDelegate()->setAutoErrorHandlingEnabled(true);
+                KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Trash, urls,
+                                                        QUrl(QStringLiteral("trash:/")), job);
+            }
+        }, menu);
+        moveToTrashAction->setShortcut({}); // Can't focus notification to press Delete
+        menu->addAction(moveToTrashAction);
+    }
+
+    KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
+    const bool showDeleteCommand = cg.readEntry("ShowDeleteCommand", false);
+
+    if (itemProperties.supportsDeleting() && (!canTrash || showDeleteCommand)) {
+        QAction *deleteAction = KStandardAction::deleteFile(this, [this] {
+            const QList<QUrl> urls{m_url};
+
+            KIO::JobUiDelegate uiDelegate;
+            if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Delete, KIO::JobUiDelegate::DefaultConfirmation)) {
+                auto *job = KIO::del(urls);
+                job->uiDelegate()->setAutoErrorHandlingEnabled(true);
+            }
+        }, menu);
+        deleteAction->setShortcut({});
+        menu->addAction(deleteAction);
+    }
+
+    menu->addSeparator();
 
     actions->addServiceActionsTo(menu);
     actions->addPluginActionsTo(menu);
