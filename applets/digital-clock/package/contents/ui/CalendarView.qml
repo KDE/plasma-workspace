@@ -117,6 +117,9 @@ PlasmaComponents3.Page {
                 id: monthView
                 borderOpacity: 0.25
                 today: root.tzDate
+                firstDayOfWeek: plasmoid.configuration.firstDayOfWeek > -1
+                    ? plasmoid.configuration.firstDayOfWeek
+                    : Qt.locale().firstDayOfWeek
                 showWeekNumbers: plasmoid.configuration.showWeekNumbers
             }
         }

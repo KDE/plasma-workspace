@@ -32,6 +32,7 @@ Item {
     signal configurationChanged
 
     property alias cfg_showWeekNumbers: showWeekNumbers.checked
+    property int cfg_firstDayOfWeek
 
     function saveConfig()
     {
@@ -48,6 +49,26 @@ Item {
             id: showWeekNumbers
             Kirigami.FormData.label: i18n("General:")
             text: i18n("Show week numbers")
+        }
+
+        QtLayouts.RowLayout {
+            QtLayouts.Layout.fillWidth: true
+            Kirigami.FormData.label: i18n("First day of week:")
+
+            QtControls.ComboBox {
+                id: firstDayOfWeekCombo
+                textRole: "text"
+                model: [-1, 0, 1, 5, 6].map((day) => {
+                    return {
+                        day,
+                        text: day === -1 ? i18n("Use Region Defaults") : Qt.locale().dayName(day)
+                    };
+                })
+                onActivated: cfg_firstDayOfWeek = model[index].day
+                currentIndex: model.findIndex((item) => {
+                    return item.day === cfg_firstDayOfWeek;
+                })
+            }
         }
 
         Item {
