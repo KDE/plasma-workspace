@@ -223,6 +223,7 @@ void FileMenu::open(int x, int y)
         pos = m_visualParent->mapToGlobal(QPointF(x, y)).toPoint();
     }
 
+    menu->setAttribute(Qt::WA_TranslucentBackground);
     menu->winId();
     menu->windowHandle()->setTransientParent(m_visualParent->window());
     menu->popup(pos);
