@@ -591,11 +591,7 @@ KDisplayManager::bootOptions(QStringList &opts, int &defopt, int &current)
     if (!exec("listbootoptions\n", re))
         return false;
 
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    opts = QString::fromLocal8Bit(re.data()).split('\t', QString::SkipEmptyParts);
-#else
     opts = QString::fromLocal8Bit(re.data()).split('\t', Qt::SkipEmptyParts);
-#endif
     if (opts.size() < 4)
         return false;
 
@@ -607,11 +603,7 @@ KDisplayManager::bootOptions(QStringList &opts, int &defopt, int &current)
     if (!ok)
         return false;
 
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    opts = opts[1].split(' ', QString::SkipEmptyParts);
-#else
     opts = opts[1].split(' ', Qt::SkipEmptyParts);
-#endif
     for (QStringList::Iterator it = opts.begin(); it != opts.end(); ++it)
         (*it).replace(QLatin1String("\\s"), QLatin1String(" "));
 
@@ -755,11 +747,7 @@ KDisplayManager::localSessions(SessList &list)
     if (DMType == OldGDM) {
         if (!exec("CONSOLE_SERVERS\n", re))
             return false;
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-        const QStringList sess = QString(re.data() +3).split(QChar(';'), QString::SkipEmptyParts);
-#else
         const QStringList sess = QString(re.data() +3).split(QChar(';'), Qt::SkipEmptyParts);
-#endif
         for (QStringList::ConstIterator it = sess.constBegin(); it != sess.constEnd(); ++it) {
             QStringList ts = (*it).split(QChar(','));
             SessEnt se;
@@ -774,11 +762,7 @@ KDisplayManager::localSessions(SessList &list)
     } else {
         if (!exec("list\talllocal\n", re))
             return false;
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-        const QStringList sess = QString(re.data() + 3).split(QChar('\t'), QString::SkipEmptyParts);
-#else
         const QStringList sess = QString(re.data() + 3).split(QChar('\t'), Qt::SkipEmptyParts);
-#endif
         for (QStringList::ConstIterator it = sess.constBegin(); it != sess.constEnd(); ++it) {
             QStringList ts = (*it).split(QChar(','));
             SessEnt se;
