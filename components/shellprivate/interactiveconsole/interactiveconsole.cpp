@@ -191,7 +191,7 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
     connect(m_executeAction, &QAction::triggered, this, &InteractiveConsole::evaluateScript);
     m_executeAction->setShortcut(Qt::CTRL + Qt::Key_E);
 
-    const QString autosave = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + s_autosaveFileName;
+    const QString autosave = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/" + s_autosaveFileName;
     if (QFile::exists(autosave)) {
         loadScript(autosave);
     }
@@ -287,7 +287,7 @@ void InteractiveConsole::showEvent(QShowEvent *)
 void InteractiveConsole::closeEvent(QCloseEvent *event)
 {
     // need to save first!
-    const QString path = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + s_autosaveFileName;
+    const QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/" + s_autosaveFileName;
     m_closeWhenCompleted = true;
     saveScript(QUrl::fromLocalFile(path));
     QDialog::closeEvent(event);
@@ -511,7 +511,7 @@ void InteractiveConsole::reenableEditor(KJob* job)
 void InteractiveConsole::evaluateScript()
 {
     //qDebug() << "evaluating" << m_editor->toPlainText();
-    const QString path = QStandardPaths::writableLocation(QStandardPaths::DataLocation) + "/" + s_autosaveFileName;
+    const QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/" + s_autosaveFileName;
     saveScript(QUrl::fromLocalFile(path));
 
     m_output->moveCursor(QTextCursor::End);
