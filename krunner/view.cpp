@@ -50,8 +50,7 @@
 View::View(QWindow *)
     : PlasmaQuick::Dialog(),
       m_offset(.5),
-      m_floating(false),
-      m_retainPriorSearch(false)
+      m_floating(false)
 {
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
@@ -158,24 +157,6 @@ void View::loadConfig()
 {
     setFreeFloating(m_config.readEntry("FreeFloating", false));
     setPinned(m_config.readEntry("Pinned", false));
-
-    m_historyEnabled = m_config.readEntry("HistoryEnabled", true);
-    QStringList history;
-    if (m_historyEnabled) {
-        history = m_config.readEntry("history", QStringList());
-    }
-    if (m_history != history) {
-        m_history = history;
-        emit historyChanged();
-    }
-    bool retainPriorSearch = m_config.readEntry("RetainPriorSearch", true);
-    if (retainPriorSearch != m_retainPriorSearch) {
-        m_retainPriorSearch = retainPriorSearch;
-        if (!m_retainPriorSearch) {
-            m_qmlObj->rootObject()->setProperty("query", QString());
-        }
-        Q_EMIT retainPriorSearchChanged();
-    }
 }
 
 bool View::event(QEvent *event)
@@ -377,70 +358,6 @@ bool View::canConfigure() const
     return KAuthorized::authorizeControlModule(QStringLiteral("kcm_plasmasearch.desktop"));
 }
 
-QStringList View::history() const
-{
-    return m_history;
-}
-
-void View::addToHistory(const QString &item)
-{
-    if (!m_historyEnabled) {
-        return;
-    }
-    if (item.isEmpty()) {
-        return;
-    }
-
-    if (item == QLatin1String("SESSIONS")) {
-        return;
-    }
-
-    // Mimic shell behavior of not storing lines starting with a space
-    if (item.at(0).isSpace()) {
-        return;
-    }
-
-    // Avoid removing the same item from the front and prepending it again
-    if (!m_history.isEmpty() && m_history.constFirst() == item) {
-        return;
-    }
-
-    if (!KAuthorized::authorize(QStringLiteral("lineedit_text_completion"))) {
-        return;
-    }
-
-    m_history.removeOne(item);
-    m_history.prepend(item);
-
-    while (m_history.count() > 50) { // make configurable?
-        m_history.removeLast();
-    }
-
-    emit historyChanged();
-    writeHistory();
-    m_config.sync();
-}
-
-void View::removeFromHistory(int index)
-{
-    if (index < 0 || index >= m_history.count()) {
-        return;
-    }
-
-    m_history.removeAt(index);
-    emit historyChanged();
-
-    writeHistory();
-}
-
-void View::writeHistory()
-{
-    if (!m_historyEnabled) {
-        return;
-    }
-    m_config.writeEntry("history", m_history);
-}
-
 void View::setVisible(bool visible)
 {
     m_requestedVisible = visible;
@@ -450,10 +367,6 @@ void View::setVisible(bool visible)
     } else {
         PlasmaQuick::Dialog::setVisible(visible);
     }
-}
-
-bool View::retainPriorSearch() const {
-    return m_retainPriorSearch;
 }
 
 bool View::pinned() const

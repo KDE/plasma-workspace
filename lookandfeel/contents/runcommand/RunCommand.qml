@@ -29,7 +29,7 @@ ColumnLayout {
     property string query
     property string runner
     property bool showHistory: false
-    property string priorSearch
+    property alias runnerManager: results.runnerManager
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -44,20 +44,32 @@ ColumnLayout {
             if (runnerWindow.visible) {
                 queryField.forceActiveFocus();
                 listView.currentIndex = -1
-                if (runnerWindow.retainPriorSearch) {
+                if (runnerManager.retainPriorSearch) {
                     // If we manually specified a query(D-Bus invocation) we don't want to retain the prior search
                     if (!query) {
-                        queryField.text = priorSearch
+                        queryField.text = runnerManager.priorSearch
                         queryField.select(root.query.length, 0)
                     }
                 }
             } else {
-                if (runnerWindow.retainPriorSearch) {
-                    priorSearch = root.query
+                if (runnerManager.retainPriorSearch) {
+                    runnerManager.priorSearch = root.query
                 }
                 root.runner = ""
                 root.query = ""
                 root.showHistory = false
+            }
+        }
+    }
+
+    Connections {
+        target: root
+        function onShowHistoryChanged() {
+            if (showHistory) {
+                // we store 50 entries in the history but only show 20 in the UI so it doesn't get too huge
+                listView.model = runnerManager.history.slice(0, 20)
+            } else {
+                listView.model = []
             }
         }
     }
@@ -139,20 +151,12 @@ ColumnLayout {
 
             onTextChanged: {
                 root.query = queryField.text
-                if (allowCompletion && length > 0) {
-                    var history = runnerWindow.history
-
-                    // search the first item in the history rather than the shortest matching one
-                    // this way more recently used entries take precedence over older ones (Bug 358985)
-                    for (var i = 0, j = history.length; i < j; ++i) {
-                        var item = history[i]
-
-                        if (item.toLowerCase().indexOf(text.toLowerCase()) === 0) {
-                            var oldText = text
-                            text = text + item.substr(oldText.length)
-                            select(text.length, oldText.length)
-                            break
-                        }
+                if (allowCompletion && length > 0 && runnerManager.historyEnabled) {
+                    var oldText = text
+                    var suggestedText = runnerManager.getHistorySuggestion(text);
+                    if (suggestedText.length > 0) {
+                        text = suggestedText
+                        select(text.length, oldText.length)
                     }
                 }
             }
@@ -200,7 +204,7 @@ ColumnLayout {
                     colorGroup: PlasmaCore.Theme.ButtonColorGroup
                 }
                 elementId: "down-arrow"
-                visible: queryField.length === 0 && runnerWindow.history.length > 0
+                visible: queryField.length === 0 && runnerManager.historyEnabled
 
                 MouseArea {
                     anchors.fill: parent
@@ -256,7 +260,6 @@ ColumnLayout {
             }
 
             onActivated: {
-                runnerWindow.addToHistory(queryString)
                 runnerWindow.visible = false
             }
 
@@ -281,8 +284,7 @@ ColumnLayout {
             highlight: PlasmaComponents.Highlight {}
             highlightMoveDuration: 0
             activeFocusOnTab: true
-            // we store 50 entries in the history but only show 20 in the UI so it doesn't get too huge
-            model: root.showHistory ? runnerWindow.history.slice(0, 20) : []
+            model: []
             delegate: Milou.ResultDelegate {
                 id: resultDelegate
                 width: listView.width
@@ -332,7 +334,7 @@ ColumnLayout {
             Keys.onDownPressed: incrementCurrentIndex()
 
             function runCurrentIndex(event) {
-                var entry = runnerWindow.history[currentIndex]
+                var entry = runnerManager.history[currentIndex]
                 if (entry) {
                     // If user presses Shift+Return to invoke an action, invoke the first runner action
                     if (event && event.modifiers === Qt.ShiftModifier
@@ -350,7 +352,8 @@ ColumnLayout {
                 if (actionIndex === 0) {
                     // QStringList changes just reset the model, so we'll remember the index and set it again
                     var currentIndex = listView.currentIndex
-                    runnerWindow.removeFromHistory(currentIndex)
+                    runnerManager.removeFromHistory(currentIndex)
+                    model = runnerManager.history
                     listView.currentIndex = currentIndex
                 }
             }
