@@ -194,6 +194,15 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
         if (!desktopEntry.isEmpty()) {
             qCDebug(NOTIFICATIONMANAGER) << "Resolved notification to be from desktop entry" << desktopEntry;
             notification.setDesktopEntry(desktopEntry);
+
+            // No application name? Set it to the service name, which is nicer than the process name fallback below
+            // Also if the title looks like it's just the desktop entry, use the nicer service name
+            if (notification.applicationName().isEmpty() || notification.applicationName() == desktopEntry) {
+                KService::Ptr service = KService::serviceByDesktopName(desktopEntry);
+                if (service) {
+                    notification.setApplicationName(service->name());
+                }
+            }
         }
     }
 
