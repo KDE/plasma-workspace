@@ -432,7 +432,7 @@ static bool getCurrentSeat(QDBusObjectPath *currentSession, QDBusObjectPath *cur
     if (man.isValid()) {
         *currentSeat = QDBusObjectPath(_SYSTEMD_SEAT_BASE_PATH "/auto");
         SystemdSeat seat(*currentSeat);
-        if (seat.isValid()) {
+        if (seat.property("Id").isValid()) { //query an arbitrary property to confirm the path is valid
             return true;
         }
 
