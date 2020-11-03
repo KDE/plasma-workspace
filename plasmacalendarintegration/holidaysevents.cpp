@@ -61,8 +61,8 @@ void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const 
 
         Q_FOREACH (const KHolidays::Holiday &holiday, holidays) {
             CalendarEvents::EventData eventData;
-            eventData.setStartDateTime(QDateTime(holiday.observedStartDate()));
-            eventData.setEndDateTime(QDateTime(holiday.observedEndDate()));
+            eventData.setStartDateTime(holiday.observedStartDate().startOfDay());
+            eventData.setEndDateTime(holiday.observedEndDate().endOfDay());
             eventData.setIsAllDay(true);
             eventData.setTitle(holiday.name());
             eventData.setEventType(CalendarEvents::EventData::Holiday);
