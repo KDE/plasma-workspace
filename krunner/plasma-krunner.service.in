@@ -8,4 +8,5 @@ Type=dbus
 BusName=org.kde.krunner
 TimeoutSec=5sec
 Slice=background.slice
-Restart=no #as we're dbus activated anyway
+# Disable restart as we're dbus activated anyway
+Restart=no
