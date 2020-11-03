@@ -388,14 +388,6 @@ void StatusNotifierItemSource::contextMenuReady()
 
 QPixmap StatusNotifierItemSource::KDbusImageStructToPixmap(const KDbusImageStruct &image) const
 {
-    //swap from network byte order if we are little endian
-    if (QSysInfo::ByteOrder == QSysInfo::LittleEndian) {
-        uint *uintBuf = (uint *) image.data.data();
-        for (uint i = 0; i < image.data.size()/sizeof(uint); ++i) {
-            *uintBuf = ntohl(*uintBuf);
-            ++uintBuf;
-        }
-    }
     if (image.width == 0 || image.height == 0) {
         return QPixmap();
     }
