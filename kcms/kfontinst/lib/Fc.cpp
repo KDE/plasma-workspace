@@ -347,12 +347,7 @@ quint32 createStyleVal(const QString &name)
 
 QString styleValToStr(quint32 style)
 {
-    QString str;
-    int     weight, width, slant;
-
-    decomposeStyleVal(style, weight, width, slant);
-    str.sprintf("0X%02X%02X%02X\n", weight, width, slant);
-    return str;
+    return QStringLiteral("0X%1\n").arg(style, 6, 16, QLatin1Char('0')).toUpper();
 }
 
 void decomposeStyleVal(quint32 styleInfo, int &weight, int &width, int &slant)

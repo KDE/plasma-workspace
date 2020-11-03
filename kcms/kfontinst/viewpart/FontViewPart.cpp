@@ -413,7 +413,7 @@ void CFontViewPart::install()
         if (title.isEmpty())
             title = QCoreApplication::applicationName();
 
-        args << "--embed" <<  QString().sprintf("0x%x", (unsigned int)(itsFrame->window()->winId()))
+        args << "--embed" <<   QStringLiteral("0x%1").arg((unsigned int)itsFrame->window()->winId(), 0, 16)
              << "--qwindowtitle" << title
              << "--qwindowicon" << "kfontview"
              << url().toDisplayString();
@@ -468,7 +468,7 @@ void CFontViewPart::print()
 
     if(!itsFontDetails.family.isEmpty())
     {
-        args << "--embed" << QString().sprintf("0x%x", (unsigned int)(itsFrame->window()->winId()))
+        args << "--embed" << QStringLiteral("0x%1").arg((unsigned int)itsFrame->window()->winId(), 0, 16)
              << "--qwindowtitle" << title
              << "--qwindowicon" << "kfontview"
              << "--size" << "0"
@@ -476,7 +476,7 @@ void CFontViewPart::print()
     }
 #ifdef KFI_PRINT_APP_FONTS
     else
-        args << "--embed" << QString().sprintf("0x%x", (unsigned int)(itsFrame->window()->winId()))
+        args << "--embed" << QStringLiteral("0x%1").arg((unsigned int)itsFrame->window()->winId(), 0, 16)
              << "--qwindowtitle" << title
              << "--qwindowicon" << "kfontview"
              << "--size " << "0"

@@ -172,7 +172,7 @@ void CCharTip::showTip()
     details+="<tr><td align=\"right\"><b>"+i18n("Category")+"&nbsp;</b></td><td>"+
              toStr(cat)+"</td></tr>";
     details+="<tr><td align=\"right\"><b>"+i18n("UCS-4")+"&nbsp;</b></td><td>"+
-             QString().sprintf("U+%4.4X", itsItem.ucs4)+"&nbsp;</td></tr>";
+             "U+"+QStringLiteral("%1").arg(itsItem.ucs4, 4, 16)+"&nbsp;</td></tr>";
 
     QString str(QString::fromUcs4(&(itsItem.ucs4), 1));
     details+="<tr><td align=\"right\"><b>"+i18n("UTF-16")+"&nbsp;</b></td><td>";
@@ -183,7 +183,7 @@ void CCharTip::showTip()
     {
         if(i)
             details+=' ';
-        details+=QString().sprintf("0x%4.4X",  utf16[i]);
+        details+=QStringLiteral("0x%1").arg(utf16[i], 4, 16);
     }
     details+="</td></tr>";
     details+="<tr><td align=\"right\"><b>"+i18n("UTF-8")+"&nbsp;</b></td><td>";
@@ -194,7 +194,7 @@ void CCharTip::showTip()
     {
         if(i)
             details+=' ';
-        details+=QString().sprintf("0x%2.2X", (unsigned char)(utf8.constData()[i]));
+        details+=QStringLiteral("0x%1").arg((unsigned char)(utf8.constData()[i]), 2, 16);
     }
     details+="</td></tr>";
 
@@ -204,7 +204,7 @@ void CCharTip::showTip()
         (0xE000 <= itsItem.ucs4 && itsItem.ucs4 <= 0xFFFD) ||
         (0x10000 <= itsItem.ucs4 && itsItem.ucs4 <= 0x10FFFF))
         details+="<tr><td align=\"right\"><b>"+i18n("XML Decimal Entity")+"&nbsp;</b></td><td>"+
-                 QString().sprintf("&#<b></b>%d;", itsItem.ucs4)+"</td></tr>";
+                "&#<b></b>"+QString::number(itsItem.ucs4)+";</td></tr>";
 
     details+="</table>";
     itsLabel->setText(details);
