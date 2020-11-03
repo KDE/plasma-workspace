@@ -49,13 +49,16 @@ namespace FC
 QUrl encode(const QString &name, quint32 style, const QString &file, int index)
 {
     QUrl url(QUrl::fromLocalFile(name));
+    QUrlQuery query;
 
     url.setScheme(FC_PROTOCOL);
-    url.addQueryItem(FC_STYLE_QUERY, QString::number(style));
+    query.addQueryItem(FC_STYLE_QUERY, QString::number(style));
     if(!file.isEmpty())
-        url.addQueryItem(FC_FILE_QUERY, file);
+        query.addQueryItem(FC_FILE_QUERY, file);
     if(index>0)
-        url.addQueryItem(FC_INDEX_QUERY, QString::number(index));
+        query.addQueryItem(FC_INDEX_QUERY, QString::number(index));
+
+    url.setQuery(query);
     return url;
 }
 
