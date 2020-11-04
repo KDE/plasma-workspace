@@ -1946,7 +1946,7 @@ void CFontListView::startDrag(Qt::DropActions supportedActions)
         }
 
         QPoint  hotspot;
-        QPixmap pix(DesktopIcon(icon, KIconLoader::SizeMedium));
+        QPixmap pix = QIcon::fromTheme(icon).pixmap(KIconLoader::SizeMedium);
 
         hotspot.setX(0); // pix.width()/2);
         hotspot.setY(0); // pix.height()/2);

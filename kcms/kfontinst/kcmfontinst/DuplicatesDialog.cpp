@@ -168,7 +168,7 @@ void CDuplicatesDialog::scanFinished()
                         tt++;
                 }
                 top->setData(COL_FILE, Qt::DecorationRole,
-                             QVariant(SmallIcon(t1>tt ? "application-x-font-type1" : "application-x-font-ttf")));
+                             QIcon::fromTheme(t1>tt ? "application-x-font-type1" : "application-x-font-ttf"));
                 top->setFont(COL_FILE, boldFont);
             }
 
@@ -395,7 +395,7 @@ void CFontFileList::fileDuplicates(const QString &folder, const QSet<TFile> &fil
 
 inline void markItem(QTreeWidgetItem *item)
 {
-    item->setData(COL_TRASH, Qt::DecorationRole, QVariant(SmallIcon("list-remove")));
+    item->setData(COL_TRASH, Qt::DecorationRole, QIcon::fromTheme("list-remove"));
 }
 
 inline void unmarkItem(QTreeWidgetItem *item)
@@ -418,7 +418,7 @@ CFontFileListView::CFontFileListView(QWidget *parent)
     headers.append(i18n("Date"));
     headers.append(i18n("Links To"));
     setHeaderLabels(headers);
-    headerItem()->setData(COL_TRASH, Qt::DecorationRole, QVariant(SmallIcon("user-trash")));
+    headerItem()->setData(COL_TRASH, Qt::DecorationRole, QIcon::fromTheme("user-trash"));
     setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
     setSelectionMode(ExtendedSelection);
     sortByColumn(COL_FILE, Qt::AscendingOrder);
