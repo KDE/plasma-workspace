@@ -30,6 +30,8 @@ Item {
 
     property bool isClipboardEmpty: clipboardSource.data["clipboard"]["empty"]
 
+    signal clearSearchField
+
     Plasmoid.switchWidth: units.gridUnit * 5
     Plasmoid.switchHeight: units.gridUnit * 5
     Plasmoid.status: isClipboardEmpty ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
@@ -40,6 +42,11 @@ Item {
 
     function action_configure() {
         clipboardSource.service("", "configureKlipper");
+    }
+
+    function action_clearHistory() {
+        clipboardSource.service("", "clearHistory")
+        clearSearchField()
     }
 
     onIsClipboardEmptyChanged: {
@@ -54,9 +61,12 @@ Item {
         }
     }
 
+
     Component.onCompleted: {
         plasmoid.removeAction("configure");
         plasmoid.setAction("configure", i18n("Configure Clipboard..."), "configure", "alt+d, s");
+
+        plasmoid.setAction("clearHistory", i18n("Clear History"), "edit-clear-history");
     }
 
     PlasmaCore.DataSource {

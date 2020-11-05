@@ -86,8 +86,17 @@ ColumnLayout {
                 placeholderText: i18n("Search...")
                 clearButtonShown: true
                 Layout.fillWidth: true
+
+                Connections {
+                    target: main
+                    function onClearSearchField() {
+                        filter.clear()
+                    }
+                }
             }
             PlasmaComponents3.ToolButton {
+                visible: plasmoid.containmentType !== PlasmaCore.Types.CustomEmbeddedContainment
+
                 icon.name: "edit-clear-history"
                 onClicked: {
                     clipboardSource.service("", "clearHistory")
