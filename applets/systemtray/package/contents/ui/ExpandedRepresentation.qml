@@ -84,6 +84,7 @@ Item {
 
             PlasmaExtras.Heading {
                 Layout.fillWidth: true
+                leftPadding: activeApplet ? 0 : units.smallSpacing * 2
 
                 level: 1
                 text: activeApplet ? activeApplet.title : i18n("Status and Notifications")
