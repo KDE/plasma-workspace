@@ -89,12 +89,16 @@ void SystemTrayContainer::ensureSystrayExists()
 
     m_innerContainment->setParent(this);
     connect(containment(), &Plasma::Containment::screenChanged, m_innerContainment.data(), &Plasma::Containment::reactToScreenChange);
+
     if (formFactor() == Plasma::Types::Horizontal || formFactor() == Plasma::Types::Vertical) {
         m_innerContainment->setFormFactor(formFactor());
     } else {
         m_innerContainment->setFormFactor(Plasma::Types::Horizontal);
     }
-    m_innerContainment->setLocation(location());
+
+    if (m_innerContainment) {
+        m_innerContainment->setLocation(location());
+    }
 
     m_internalSystray = m_innerContainment->property("_plasma_graphicObject").value<QQuickItem *>();
     emit internalSystrayChanged();
@@ -122,6 +126,7 @@ void SystemTrayContainer::constraintsEvent(Plasma::Types::Constraints constraint
             m_innerContainment->setLocation(location());
         }
     }
+
     if (constraints & Plasma::Types::FormFactorConstraint) {
         if (m_innerContainment) {
             if (formFactor() == Plasma::Types::Horizontal || formFactor() == Plasma::Types::Vertical) {

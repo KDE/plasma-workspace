@@ -225,18 +225,60 @@ Item {
         }
     }
 
+    property var showRemovableDevicesAction
+    property var showNonRemovableDevicesAction
+    property var showAllDevicesAction
+
     Component.onCompleted: {
         if (sdSource.connectedSources.count === 0) {
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
         }
 
+        plasmoid.setAction("showRemovableDevices", i18n("Removable Devices"), "drive-removable-media");
+        devicenotifier.showRemovableDevicesAction = plasmoid.action("showRemovableDevices");
+        devicenotifier.showRemovableDevicesAction.checkable = true;
+        devicenotifier.showRemovableDevicesAction.checked = Qt.binding(() => {return plasmoid.configuration.removableDevices;});
+        plasmoid.setActionGroup("showRemovableDevices", "devicesShown");
+
+        plasmoid.setAction("showNonRemovableDevices", i18n("Non Removable Devices"), "drive-harddisk");
+        devicenotifier.showNonRemovableDevicesAction = plasmoid.action("showNonRemovableDevices");
+        devicenotifier.showNonRemovableDevicesAction.checkable = true;
+        devicenotifier.showNonRemovableDevicesAction.checked = Qt.binding(() => {return plasmoid.configuration.nonRemovableDevices;});
+        plasmoid.setActionGroup("showNonRemovableDevices", "devicesShown");
+
+        plasmoid.setAction("showAllDevices", i18n("All Devices"));
+        devicenotifier.showAllDevicesAction = plasmoid.action("showAllDevices");
+        devicenotifier.showAllDevicesAction.checkable = true;
+        devicenotifier.showAllDevicesAction.checked = Qt.binding(() => {return plasmoid.configuration.allDevices;});
+        plasmoid.setActionGroup("showAllDevices", "devicesShown");
+
+        plasmoid.setActionSeparator("sep");
+
         if (devicenotifier.openAutomounterKcmAuthorized) {
-            plasmoid.setAction("openAutomounterKcm", i18nc("Open auto mounter kcm", "Configure Removable Devices"), "drive-removable-media")
+            plasmoid.setAction("openAutomounterKcm", i18nc("Open auto mounter kcm", "Configure Removable Devices..."), "configure")
         }
     }
 
     function action_openAutomounterKcm() {
         KCMShell.openSystemSettings("device_automounter_kcm")
+    }
+
+    function action_showRemovableDevices() {
+        plasmoid.configuration.removableDevices = true;
+        plasmoid.configuration.nonRemovableDevices = false;
+        plasmoid.configuration.allDevices = false;
+    }
+
+    function action_showNonRemovableDevices() {
+        plasmoid.configuration.removableDevices = false;
+        plasmoid.configuration.nonRemovableDevices = true;
+        plasmoid.configuration.allDevices = false;
+    }
+
+    function action_showAllDevices() {
+        plasmoid.configuration.removableDevices = false;
+        plasmoid.configuration.nonRemovableDevices = false;
+        plasmoid.configuration.allDevices = true;
     }
 
     Plasmoid.onExpandedChanged: {

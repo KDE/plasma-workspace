@@ -98,16 +98,6 @@ ColumnLayout {
                     text: i18n("Clear history")
                 }
             }
-            PlasmaComponents3.ToolButton {
-                visible: plasmoid.action("configure").enabled
-                icon.name: "configure"
-                onClicked: plasmoid.action("configure").trigger()
-
-                PlasmaComponents3.ToolTip {
-                    text: plasmoid.action("configure").text
-                }
-                Accessible.name: plasmoid.action("configure").text
-            }
         }
     }
 

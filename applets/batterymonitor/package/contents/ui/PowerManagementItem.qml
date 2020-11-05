@@ -41,26 +41,6 @@ ColumnLayout {
             text: i18nc("Minimize the length of this string as much as possible", "Allow automatic sleep and screen locking")
             checked: true
         }
-
-        PlasmaComponents3.ToolButton {
-            icon.name: "documentinfo"
-            onClicked: plasmoid.action("energyinformationkcm").trigger()
-            visible: batterymonitor.kcmEnergyInformationAuthorized
-
-            PlasmaComponents3.ToolTip {
-                text: plasmoid.action("energyinformationkcm").text
-            }
-        }
-
-        PlasmaComponents3.ToolButton {
-            icon.name: "configure"
-            onClicked: plasmoid.action("powerdevilkcm").trigger()
-            visible: batterymonitor.kcmsAuthorized
-
-            PlasmaComponents3.ToolTip {
-                text: plasmoid.action("powerdevilkcm").text
-            }
-        }
     }
 
     ColumnLayout {

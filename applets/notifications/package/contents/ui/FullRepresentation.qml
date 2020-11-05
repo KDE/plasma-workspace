@@ -173,16 +173,6 @@ PlasmaComponents3.Page {
                 }
 
                 PlasmaComponents3.ToolButton {
-                    icon.name: "configure"
-                    visible: plasmoid.action("openKcm").enabled
-                    onClicked: plasmoid.action("openKcm").trigger()
-
-                    PlasmaComponents3.ToolTip {
-                        text: plasmoid.action("openKcm").text
-                    }
-                }
-
-                PlasmaComponents3.ToolButton {
                     icon.name: "edit-clear-history"
                     enabled: plasmoid.action("clearHistory").visible
                     onClicked: action_clearHistory()

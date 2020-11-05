@@ -22,6 +22,9 @@ import QtQuick 2.12
 import QtQuick.Layouts 1.12
 
 import org.kde.plasma.core 2.0 as PlasmaCore
+// We still need PC2 here for that version of Menu, as PC2 Menu is still very problematic with QActions
+// Not being a proper popup window, makes it a showstopper to be used in Plasma
+import org.kde.plasma.components 2.0 as PC2
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -87,18 +90,92 @@ Item {
             }
 
             PlasmaComponents.ToolButton {
-                // Don't show when displaying an applet's own view since then
-                // there would be two configure buttons and that would be weird
-                // TODO: in the future make this button context-sensitive so
-                // that it triggers the config action for whatever applet is
-                // being viewed, and then hide the applet's own config button
-                // if both would be shown at the same time
-                visible: !activeApplet && plasmoid.action("configure").enabled
-                icon.name: "configure"
-                onClicked: plasmoid.action("configure").trigger()
-                PlasmaComponents.ToolTip {
-                    text: plasmoid.action("configure").text
+                id: actionsButton
+                visible: visibleActions > 0
+                checked: configMenu.status !== PC2.DialogStatus.Closed
+                property QtObject applet: activeApplet || plasmoid
+                onAppletChanged: {
+                    configMenu.clearMenuItems();
+                    updateVisibleActions();
                 }
+                property int visibleActions: 0
+                property QtObject singleAction
+
+                function updateVisibleActions() {
+                    let newSingleAction = null;
+                    let newVisibleActions = 0;
+                    for (let i in applet.contextualActions) {
+                        let action = applet.contextualActions[i];
+                        if (action.visible && action !== actionsButton.applet.action("configure")) {
+                            newVisibleActions++;
+                            newSingleAction = action;
+                            action.changed.connect(() => {updateVisibleActions()});
+                        }
+                    }
+                    if (newVisibleActions > 1) {
+                        newSingleAction = null;
+                    }
+                    visibleActions = newVisibleActions;
+                    singleAction = newSingleAction;
+                }
+                Connections {
+                    target: actionsButton.applet
+                    function onContextualActionsChanged() {updateVisibleActions();}
+                }
+                icon.name: "application-menu"
+                checkable: visibleActions > 1
+                contentItem.opacity: visibleActions > 1
+                // NOTE: it needs an IconItem because QtQuickControls2 buttons cannot load QIcons as their icon
+                PlasmaCore.IconItem {
+                    parent: actionsButton
+                    anchors.centerIn: parent
+                    active: actionsButton.hovered
+                    implicitWidth: PlasmaCore.Units.iconSizes.smallMedium
+                    implicitHeight: implicitWidth
+                    source: actionsButton.singleAction !== null ? actionsButton.singleAction.icon : ""
+                    visible: actionsButton.singleAction
+                }
+                onToggled: {
+                    if (checked) {
+                        configMenu.openRelative();
+                    } else {
+                        configMenu.close();
+                    }
+                }
+                onClicked: {
+                    if (singleAction) {
+                        singleAction.trigger();
+                    }
+                }
+                PlasmaComponents.ToolTip {
+                    text: actionsButton.singleAction ? actionsButton.singleAction.text : i18n("More actions")
+                }
+                PC2.Menu {
+                    id: configMenu
+                    visualParent: actionsButton
+                    placement: PlasmaCore.Types.BottomPosedLeftAlignedPopup
+                }
+
+                Instantiator {
+                    model: actionsButton.applet.contextualActions
+                    delegate: PC2.MenuItem {
+                        id: menuItem
+                        action: modelData
+                    }
+                    onObjectAdded: {
+                        if (object !== actionsButton.applet.action("configure")) {
+                            configMenu.addMenuItem(object);
+                        }
+                    }
+                }
+            }
+            PlasmaComponents.ToolButton {
+                icon.name: "configure"
+                visible: actionsButton.applet && actionsButton.applet.action("configure")
+                PlasmaComponents.ToolTip {
+                    text: parent.visible ? actionsButton.applet.action("configure").text : ""
+                }
+                onClicked: actionsButton.applet.action("configure").trigger();
             }
 
             PlasmaComponents.ToolButton {
