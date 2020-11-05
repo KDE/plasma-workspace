@@ -50,6 +50,7 @@ using namespace KAStats::Terms;
 
 QString agentForUrl(const QString &url)
 {
+// clang-format off
     return url.startsWith(QLatin1String("ktp:"))
                 ? AGENT_CONTACTS
          : url.startsWith(QLatin1String("preferred:"))
@@ -62,6 +63,7 @@ QString agentForUrl(const QString &url)
                 ? AGENT_DOCUMENTS
          // use applications as the default
                 : AGENT_APPLICATIONS;
+// clang-format on
 }
 
 class KAStatsFavoritesModel::Private: public QAbstractListModel {
@@ -244,7 +246,7 @@ public:
                 [&] (const NormalizedId &left, const NormalizedId &right) {
                     auto leftIndex = ordering.indexOf(left.value());
                     auto rightIndex = ordering.indexOf(right.value());
-
+// clang-format off
                     return (leftIndex == -1 && rightIndex == -1) ?
                                left.value() < right.value() :
 
@@ -256,6 +258,7 @@ public:
 
                            // otherwise
                                leftIndex < rightIndex;
+// clang-format on
                 });
 
         // Debugging:
@@ -360,7 +363,7 @@ public:
         const auto index = item.row();
 
         const auto entry = m_itemEntries[m_items[index].value()];
-
+// clang-format off
         return entry == nullptr ? QVariant()
              : role == Qt::DisplayRole ? entry->name()
              : role == Qt::DecorationRole ? entry->icon()
@@ -370,6 +373,7 @@ public:
              : role == Kicker::HasActionListRole ? entry->hasActions()
              : role == Kicker::ActionListRole ? entry->actions()
              : QVariant();
+// clang-format on
     }
 
     bool trigger(int row, const QString &actionId, const QVariant &argument)

@@ -1179,6 +1179,7 @@ void CKCmFontInst::toggleFonts(CJobRunner::ItemList &urls, const QStringList &fo
         case 0:
             break;
         case 1:
+// clang-format off
             doIt = KMessageBox::Continue==KMessageBox::warningContinueCancel(this,
                        grp.isEmpty()
                             ? enable ? i18n("<p>Do you really want to "
@@ -1220,6 +1221,7 @@ void CKCmFontInst::toggleFonts(CJobRunner::ItemList &urls, const QStringList &fo
                        enable ? i18n("Enable Fonts") : i18n("Disable Fonts"),
                        enable ? KGuiItem(i18n("Enable"), "font-enable", i18n("Enable Fonts"))
                               : KGuiItem(i18n("Disable"), "font-disable", i18n("Disable Fonts")));
+// clang-format on
     }
 
     if(doIt)

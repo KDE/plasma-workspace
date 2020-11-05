@@ -83,7 +83,7 @@ bool Moon::calcPerturbations(double *lo, double *la, double *r)
     double Ms = m_sun->meanAnomaly();
     double D = L - m_sun->meanLongitude();
     double F = L - N;
-
+// clang-format off
     *lo +=  -1.274 * sind(M - 2 * D)
             +0.658 * sind(2 * D)
             -0.186 * sind(Ms)
@@ -103,6 +103,7 @@ bool Moon::calcPerturbations(double *lo, double *la, double *r)
             +0.017 * sind(2 * M + F);
     *r +=   -0.58 * cosd(M - 2 * D)
             -0.46 * cosd(2 * D);
+// clang-format on
     return true;
 }
 

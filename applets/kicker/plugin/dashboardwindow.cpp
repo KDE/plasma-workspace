@@ -168,6 +168,7 @@ void DashboardWindow::keyPressEvent(QKeyEvent *e)
         emit keyEscapePressed();
 
         return;
+// clang-format off
     } else if (m_keyEventProxy && !m_keyEventProxy->hasActiveFocus()
         && !(e->key() == Qt::Key_Home)
         && !(e->key() == Qt::Key_End)
@@ -182,7 +183,7 @@ void DashboardWindow::keyPressEvent(QKeyEvent *e)
         && !(e->key() == Qt::Key_Menu)
         && !(e->key() == Qt::Key_Tab)
         && !(e->key() == Qt::Key_Backtab)) {
-
+// clang-format on
         QPointer<QQuickItem> previousFocusItem = activeFocusItem();
 
         m_keyEventProxy->forceActiveFocus();
