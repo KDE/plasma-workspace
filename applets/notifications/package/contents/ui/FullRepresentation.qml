@@ -161,7 +161,7 @@ PlasmaComponents3.Page {
                             d = dndMenu.date;
                             // Just set it to one year in the future so we don't need yet another "do not disturb enabled" property
                             d.setFullYear(d.getFullYear() + 1);
-                            model.push({date: d, text: i18n("Until turned off")});
+                            model.push({date: d, text: i18n("Until manually disabled")});
 
                             return model;
                         }
