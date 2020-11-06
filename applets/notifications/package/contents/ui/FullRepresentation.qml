@@ -173,6 +173,8 @@ PlasmaComponents3.Page {
                 }
 
                 PlasmaComponents3.ToolButton {
+                    visible: plasmoid.containmentType !== PlasmaCore.Types.CustomEmbeddedContainment
+
                     icon.name: "edit-clear-history"
                     enabled: plasmoid.action("clearHistory").visible
                     onClicked: action_clearHistory()
