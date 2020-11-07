@@ -188,7 +188,7 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
 
     QMenu *menu = qobject_cast<QMenu *>(sjob->result().value<QObject *>());
 
-    if (menu) {
+    if (menu && !menu->isEmpty()) {
         menu->adjustSize();
         const auto parameters = sjob->parameters();
         int x = parameters[QStringLiteral("x")].toInt();
