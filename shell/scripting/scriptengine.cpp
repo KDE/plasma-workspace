@@ -97,7 +97,7 @@ int ScriptEngine::defaultPanelScreen() const
 
 QJSValue ScriptEngine::newError(const QString &message)
 {
-    return evaluate(QString("new Error('%1');").arg(message));
+    return evaluate(QStringLiteral("new Error('%1');").arg(message));
 }
 
 QString ScriptEngine::onlyExec(const QString &commandLine)

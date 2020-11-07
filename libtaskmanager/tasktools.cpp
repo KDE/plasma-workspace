@@ -700,7 +700,7 @@ QString defaultApplication(const QUrl &url)
         }
     }
 
-    return QString("");
+    return QLatin1String("");
 }
 
 bool launcherUrlsMatch(const QUrl &a, const QUrl &b, UrlComparisonMode mode)

@@ -26,7 +26,7 @@ QString formatResolution(const QString &str)
 {
     QSize size = resSize(str);
     float aspectRatio = (size.height() > 0 ) ? size.width() / (float)size.height() : 0;
-    return QString("%1 (%2)").arg(str, 9).arg(aspectRatio, 7);
+    return QStringLiteral("%1 (%2)").arg(str, 9).arg(aspectRatio, 7);
 }
 
 class TestResolutions: public QObject

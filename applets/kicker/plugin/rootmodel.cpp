@@ -411,7 +411,7 @@ void RootModel::refresh()
     int separatorPosition = 0;
 
     if (allModel) {
-        m_entryList.prepend(new GroupEntry(this, i18n("All Applications"), QString("applications-all"), allModel));
+        m_entryList.prepend(new GroupEntry(this, i18n("All Applications"), QStringLiteral("applications-all"), allModel));
         ++separatorPosition;
     }
 
@@ -432,7 +432,7 @@ void RootModel::refresh()
 
     if (m_showRecentContacts) {
         m_recentContactsModel = new RecentContactsModel(this);
-        m_entryList.prepend(new GroupEntry(this, i18n("Recent Contacts"), QString("view-history"), m_recentContactsModel));
+        m_entryList.prepend(new GroupEntry(this, i18n("Recent Contacts"), QStringLiteral("view-history"), m_recentContactsModel));
         ++separatorPosition;
     }
 
@@ -443,8 +443,8 @@ void RootModel::refresh()
                         ? i18n("Recent Files")
                         : i18n("Often Used Files"),
                     m_recentOrdering == RecentUsageModel::Recent
-                        ? QString("view-history")
-                        : QString("office-chart-pie"),
+                        ? QStringLiteral("view-history")
+                        : QStringLiteral("office-chart-pie"),
                     m_recentDocsModel));
         ++separatorPosition;
     }
@@ -456,8 +456,8 @@ void RootModel::refresh()
                         ? i18n("Recent Applications")
                         : i18n("Often Used Applications"),
                     m_recentOrdering == RecentUsageModel::Recent
-                        ? QString("view-history")
-                        : QString("office-chart-pie"),
+                        ? QStringLiteral("view-history")
+                        : QStringLiteral("office-chart-pie"),
                     m_recentAppsModel));
         ++separatorPosition;
     }
@@ -470,7 +470,7 @@ void RootModel::refresh()
     m_systemModel = new SystemModel(this);
 
     if (m_showPowerSession) {
-        m_entryList << new GroupEntry(this, i18n("Power / Session"), QString("system-log-out"), m_systemModel);
+        m_entryList << new GroupEntry(this, i18n("Power / Session"), QStringLiteral("system-log-out"), m_systemModel);
     }
 
     endResetModel();

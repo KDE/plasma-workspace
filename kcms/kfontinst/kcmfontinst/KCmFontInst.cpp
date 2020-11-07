@@ -964,10 +964,10 @@ void CKCmFontInst::setStatusBar()
 
         if(disabled||partial)
         {
-            text+=QString(" (<img src=\"%1\" />%2").arg(KIconLoader::global()->iconPath("dialog-ok", -KIconLoader::SizeSmall)).arg(enabled)
-                 +QString(" <img src=\"%1\" />%2").arg(KIconLoader::global()->iconPath("dialog-cancel", -KIconLoader::SizeSmall)).arg(disabled);
+            text+=QLatin1String(" (<img src=\"%1\" />%2").arg(KIconLoader::global()->iconPath("dialog-ok", -KIconLoader::SizeSmall)).arg(enabled)
+                 +QLatin1String(" <img src=\"%1\" />%2").arg(KIconLoader::global()->iconPath("dialog-cancel", -KIconLoader::SizeSmall)).arg(disabled);
             if(partial)
-                text+=QString(" <img src=\"%1\" />%2").arg(partialIcon()).arg(partial);
+                text+=QLatin1String(" <img src=\"%1\" />%2").arg(partialIcon()).arg(partial);
             text+=QLatin1Char(')');
             itsStatusLabel->setToolTip(partial
                                         ? i18n("<table>"

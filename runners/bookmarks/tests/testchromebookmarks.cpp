@@ -35,7 +35,7 @@ void TestChromeBookmarks::initTestCase()
 void TestChromeBookmarks::bookmarkFinderShouldFindEachProfileDirectory()
 {
     FindChromeProfile findChrome("chromium", "./chrome-config-home");
-    QString profileTemplate = QString("./chrome-config-home/.config/%1/%2/Bookmarks");
+    QString profileTemplate = QStringLiteral("./chrome-config-home/.config/%1/%2/Bookmarks");
 
     QList<Profile> profiles = findChrome.find();
     QCOMPARE(profiles.size(), 2);

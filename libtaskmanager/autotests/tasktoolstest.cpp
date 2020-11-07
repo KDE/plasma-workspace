@@ -159,11 +159,11 @@ void TaskToolsTest::createAppLink()
 {
     KDesktopFile file(appLinkPath());
     KConfigGroup group = file.desktopGroup();
-    group.writeEntry(QLatin1String("Type"), QString("Application"));
+    group.writeEntry(QLatin1String("Type"), QStringLiteral("Application"));
     group.writeEntry(QLatin1String("Name"), m_referenceAppData.name);
     group.writeEntry(QLatin1String("GenericName"), m_referenceAppData.genericName);
-    group.writeEntry(QLatin1String("Icon"), QString("konversation"));
-    group.writeEntry(QLatin1String("Exec"), QString("konversation"));
+    group.writeEntry(QLatin1String("Icon"), QStringLiteral("konversation"));
+    group.writeEntry(QLatin1String("Exec"), QStringLiteral("konversation"));
     file.sync();
 
     QVERIFY(file.hasApplicationType());
@@ -192,7 +192,7 @@ void TaskToolsTest::createIcon()
     KConfig config(themeFile);
     KConfigGroup group(config.group(QLatin1String("Icon Theme")));
     group.writeEntry(QLatin1String("Name"), KIconTheme::defaultThemeName());
-    group.writeEntry(QLatin1String("Inherits"), QString("hicolor"));
+    group.writeEntry(QLatin1String("Inherits"), QStringLiteral("hicolor"));
     config.sync();
 
     QVERIFY(QFile::exists(themeFile));

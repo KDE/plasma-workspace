@@ -100,7 +100,7 @@ void KcmTest::testWidgetStyle()
     KConfigGroup cg(&config, "KDE");
     // We have to use an actual theme name here because setWidgetStyle checks
     // if the theme can actually be used before it changes the config
-    QCOMPARE(cg.readEntry("widgetStyle", QString()), QString("Fusion"));
+    QCOMPARE(cg.readEntry("widgetStyle", QString()), QStringLiteral("Fusion"));
 }
 
 void KcmTest::testColors()
@@ -110,7 +110,7 @@ void KcmTest::testColors()
 
     KConfig config(QStringLiteral("kdeglobals"));
     KConfigGroup cg(&config, "General");
-    QCOMPARE(cg.readEntry("ColorScheme", QString()), QString("customTestValue"));
+    QCOMPARE(cg.readEntry("ColorScheme", QString()), QStringLiteral("customTestValue"));
 }
 
 void KcmTest::testIcons()
@@ -119,7 +119,7 @@ void KcmTest::testIcons()
 
     KConfig config(QStringLiteral("kdeglobals"));
     KConfigGroup cg(&config, "Icons");
-    QCOMPARE(cg.readEntry("Theme", QString()), QString("customTestValue"));
+    QCOMPARE(cg.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
 }
 
 void KcmTest::testPlasmaTheme()
@@ -128,7 +128,7 @@ void KcmTest::testPlasmaTheme()
 
     KConfig config(QStringLiteral("plasmarc"));
     KConfigGroup cg(&config, "Theme");
-    QCOMPARE(cg.readEntry("name", QString()), QString("customTestValue"));
+    QCOMPARE(cg.readEntry("name", QString()), QStringLiteral("customTestValue"));
 }
 
 void KcmTest::testCursorTheme()
@@ -137,7 +137,7 @@ void KcmTest::testCursorTheme()
 
     KConfig config(QStringLiteral("kcminputrc"));
     KConfigGroup cg(&config, "Mouse");
-    QCOMPARE(cg.readEntry("cursorTheme", QString()), QString("customTestValue"));
+    QCOMPARE(cg.readEntry("cursorTheme", QString()), QStringLiteral("customTestValue"));
 }
 
 void KcmTest::testSplashScreen()
@@ -146,8 +146,8 @@ void KcmTest::testSplashScreen()
 
     KConfig config(QStringLiteral("ksplashrc"));
     KConfigGroup cg(&config, "KSplash");
-    QCOMPARE(cg.readEntry("Theme", QString()), QString("customTestValue"));
-    QCOMPARE(cg.readEntry("Engine", QString()), QString("KSplashQML"));
+    QCOMPARE(cg.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cg.readEntry("Engine", QString()), QStringLiteral("KSplashQML"));
 }
 
 void KcmTest::testLockScreen()
@@ -156,7 +156,7 @@ void KcmTest::testLockScreen()
 
     KConfig config(QStringLiteral("kscreenlockerrc"));
     KConfigGroup cg(&config, "Greeter");
-    QCOMPARE(cg.readEntry("Theme", QString()), QString("customTestValue"));
+    QCOMPARE(cg.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
 }
 
 void KcmTest::testWindowSwitcher()
@@ -185,31 +185,31 @@ void KcmTest::testKCMSave()
     KConfig config(QStringLiteral("kdeglobals"));
     KConfigGroup cg(&config, "KDE");
     // See comment in testWidgetStyle
-    QCOMPARE(cg.readEntry("widgetStyle", QString()), QString("Fusion"));
+    QCOMPARE(cg.readEntry("widgetStyle", QString()), QStringLiteral("Fusion"));
 
     cg = KConfigGroup(&config, "General");
     //save() capitalizes the ColorScheme
-    QCOMPARE(cg.readEntry("ColorScheme", QString()), QString("TestValue"));
+    QCOMPARE(cg.readEntry("ColorScheme", QString()), QStringLiteral("TestValue"));
 
     cg = KConfigGroup(&config, "Icons");
-    QCOMPARE(cg.readEntry("Theme", QString()), QString("testValue"));
+    QCOMPARE(cg.readEntry("Theme", QString()), QStringLiteral("testValue"));
 
     KConfig plasmaConfig(QStringLiteral("plasmarc"));
     cg = KConfigGroup(&plasmaConfig, "Theme");
-    QCOMPARE(cg.readEntry("name", QString()), QString("testValue"));
+    QCOMPARE(cg.readEntry("name", QString()), QStringLiteral("testValue"));
 
     KConfig inputConfig(QStringLiteral("kcminputrc"));
     cg = KConfigGroup(&inputConfig, "Mouse");
-    QCOMPARE(cg.readEntry("cursorTheme", QString()), QString("testValue"));
+    QCOMPARE(cg.readEntry("cursorTheme", QString()), QStringLiteral("testValue"));
 
     KConfig splashConfig(QStringLiteral("ksplashrc"));
     cg = KConfigGroup(&splashConfig, "KSplash");
-    QCOMPARE(cg.readEntry("Theme", QString()), QString("customTestValue"));
-    QCOMPARE(cg.readEntry("Engine", QString()), QString("KSplashQML"));
+    QCOMPARE(cg.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cg.readEntry("Engine", QString()), QStringLiteral("KSplashQML"));
 
     KConfig lockerConfig(QStringLiteral("kscreenlockerrc"));
     cg = KConfigGroup(&lockerConfig, "Greeter");
-    QCOMPARE(cg.readEntry("Theme", QString()), QString("org.kde.test"));
+    QCOMPARE(cg.readEntry("Theme", QString()), QStringLiteral("org.kde.test"));
 
     KConfig kwinConfig(QStringLiteral("kwinrc"));
     cg = KConfigGroup(&kwinConfig, "TabBox");
