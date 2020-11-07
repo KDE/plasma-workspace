@@ -18,8 +18,8 @@
  *
  */
 
-#include <X11/extensions/XTest.h>
 #include "xtestsender.h"
+#include <X11/extensions/XTest.h>
 
 void sendXTestPressed(Display *display, int button)
 {

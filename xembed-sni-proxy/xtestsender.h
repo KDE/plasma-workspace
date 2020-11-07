@@ -20,7 +20,7 @@
 #ifndef XTEST_SENDER_H
 #define XTEST_SENDER_H
 
-typedef _XDisplay Display;
+typedef struct _XDisplay Display;
 
 void sendXTestPressed(Display *display, int button);
 void sendXTestReleased(Display *display, int button);
