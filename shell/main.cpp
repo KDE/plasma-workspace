@@ -21,6 +21,7 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QQuickWindow>
+#include <QSessionManager>
 #include <QDebug>
 #include <QProcess>
 #include <QMessageBox>
@@ -83,7 +84,6 @@ int main(int argc, char *argv[])
     } else {
         QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     }
-    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
 
     QQuickWindow::setDefaultAlphaBuffer(true);
 
@@ -161,6 +161,14 @@ int main(int argc, char *argv[])
     aboutData.setupCommandLine(&cliOptions);
     cliOptions.process(app);
     aboutData.processCommandLine(&cliOptions);
+
+    QGuiApplication::setFallbackSessionManagementEnabled(false);
+
+    auto disableSessionManagement = [](QSessionManager &sm) {
+        sm.setRestartHint(QSessionManager::RestartNever);
+    };
+    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     ShellCorona* corona = new ShellCorona(&app);
     corona->setShell(cliOptions.value(shellPluginOption));
