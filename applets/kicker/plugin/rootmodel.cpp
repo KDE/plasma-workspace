@@ -72,6 +72,7 @@ RootModel::RootModel(QObject *parent) : AppsModel(QString(), parent)
 , m_showRecentContacts(false)
 , m_recentOrdering(RecentUsageModel::Recent)
 , m_showPowerSession(true)
+, m_showFavoritesPlaceholder(false)
 , m_recentAppsModel(nullptr)
 , m_recentDocsModel(nullptr)
 , m_recentContactsModel(nullptr)
@@ -256,6 +257,22 @@ void RootModel::setShowPowerSession(bool show)
     }
 }
 
+bool RootModel::showFavoritesPlaceholder() const
+{
+    return m_showFavoritesPlaceholder;
+}
+
+void RootModel::setShowFavoritesPlaceholder(bool show)
+{
+    if (show != m_showFavoritesPlaceholder) {
+        m_showFavoritesPlaceholder = show;
+
+        refresh();
+
+        emit showFavoritesPlaceholderChanged();
+    }
+}
+
 AbstractModel* RootModel::favoritesModel()
 {
     return m_favorites;
@@ -395,6 +412,21 @@ void RootModel::refresh()
 
     if (allModel) {
         m_entryList.prepend(new GroupEntry(this, i18n("All Applications"), QString("applications-all"), allModel));
+        ++separatorPosition;
+    }
+
+    if(m_showFavoritesPlaceholder) {
+        //This entry is a placeholder and shouldn't ever be visible
+        QList<AbstractEntry *> placeholderList;
+        AppsModel *placeholderModel = new AppsModel(placeholderList, false, this);
+
+        //Favorites group containing a placeholder entry, so it would be considered as a group, not an entry
+        QList<AbstractEntry *> placeholderEntry;
+        placeholderEntry.append(new GroupEntry(this, i18n("This shouldn't be visible! Use KICKER_FAVORITES_MODEL"), QStringLiteral("dialog-warning"), placeholderModel));
+        AppsModel *favoritesPlaceholderModel = new AppsModel(placeholderEntry, false, this);
+
+        favoritesPlaceholderModel->setDescription(QStringLiteral("KICKER_FAVORITES_MODEL")); // Intentionally no i18n.
+        m_entryList.prepend(new GroupEntry(this, i18n("Favorites"), QStringLiteral("bookmarks"), favoritesPlaceholderModel));
         ++separatorPosition;
     }
 

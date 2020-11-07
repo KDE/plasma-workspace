@@ -59,6 +59,7 @@ class RootModel : public AppsModel
     Q_PROPERTY(bool showRecentContacts READ showRecentContacts WRITE setShowRecentContacts NOTIFY showRecentContactsChanged)
     Q_PROPERTY(int recentOrdering READ recentOrdering WRITE setRecentOrdering NOTIFY recentOrderingChanged)
     Q_PROPERTY(bool showPowerSession READ showPowerSession WRITE setShowPowerSession NOTIFY showPowerSessionChanged)
+    Q_PROPERTY(bool showFavoritesPlaceholder READ showFavoritesPlaceholder WRITE setShowFavoritesPlaceholder NOTIFY showFavoritesPlaceholderChanged)
 
     public:
         explicit RootModel(QObject *parent = nullptr);
@@ -89,6 +90,9 @@ class RootModel : public AppsModel
         bool showPowerSession() const;
         void setShowPowerSession(bool show);
 
+        bool showFavoritesPlaceholder() const;
+        void setShowFavoritesPlaceholder(bool show);
+
         AbstractModel* favoritesModel() override;
         AbstractModel* systemFavoritesModel();
 
@@ -103,6 +107,7 @@ class RootModel : public AppsModel
         void showPowerSessionChanged() const;
         void recentOrderingChanged() const;
         void recentAppsModelChanged() const;
+        void showFavoritesPlaceholderChanged() const;
 
     protected Q_SLOTS:
         void refresh() override;
@@ -118,6 +123,7 @@ class RootModel : public AppsModel
         bool m_showRecentContacts;
         int  m_recentOrdering;
         bool m_showPowerSession;
+        bool m_showFavoritesPlaceholder;
 
         RecentUsageModel *m_recentAppsModel;
         RecentUsageModel *m_recentDocsModel;
