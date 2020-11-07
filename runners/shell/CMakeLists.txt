@@ -16,3 +16,7 @@ target_link_libraries(krunner_shell
 
 install(TARGETS krunner_shell DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner")
 
+if(BUILD_TESTING)
+add_subdirectory(autotests)
+endif()
+
