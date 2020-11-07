@@ -31,6 +31,7 @@ GenericName[vi]=Trình biên tập quy hoạch màu
 GenericName[x-test]=xxColor scheme editorxx
 GenericName[zh_CN]=配色编辑器
 Name=KColorSchemeEditor
+Name[ast]=KColorSchemeEditor
 Name[az]=KColorSchemeEditor
 Name[ca]=KColorSchemeEditor
 Name[cs]=KColorSchemeEditor

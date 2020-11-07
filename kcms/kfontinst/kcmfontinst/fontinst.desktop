@@ -11,6 +11,7 @@ Categories=Qt;KDE;X-KDE-settings-system;
 X-KDE-System-Settings-Parent-Category=font
 
 Name=Font Management
+Name[ast]=Xestión de fontes
 Name[az]=Şrift İdarəeetməsi
 Name[ca]=Gestió dels tipus de lletra
 Name[cs]=Správa písem
