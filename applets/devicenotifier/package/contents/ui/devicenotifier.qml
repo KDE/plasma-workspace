@@ -167,13 +167,13 @@ Item {
         }
 
         function processLastDevice(expand) {
-            if (last) {
-                if (isViableDevice(last) && hpSource.data[last].added) {
+            if (last && isViableDevice(last)) {
+                if (expand && hpSource.data[last] && hpSource.data[last].added) {
                     devicenotifier.popupIcon = "preferences-desktop-notification";
                     expandTimer.restart();
-                    popupIconTimer.restart()
-                    last = "";
+                    popupIconTimer.restart();
                 }
+                last = "";
             }
         }
     }
