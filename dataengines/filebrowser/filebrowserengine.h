@@ -45,8 +45,17 @@ protected Q_SLOTS:
     void dirDeleted(const QString &path);
 
 private:
-    enum EventType {INIT, DIRTY, CREATED, DELETED};
-    enum ObjectType {NOTHING, FILE, DIRECTORY};
+    enum EventType {
+        INIT,
+        DIRTY,
+        CREATED,
+        DELETED,
+    };
+    enum ObjectType {
+        NOTHING,
+        FILE,
+        DIRECTORY,
+    };
 
     KDirWatch * m_dirWatch;
     void updateData(const QString &path, EventType event);

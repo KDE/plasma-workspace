@@ -98,7 +98,10 @@ protected:
      * Don't use 1, as I use that as a guard against passing
      * a boolean true as a mode.
      */
-    enum SelectionMode { Clipboard = 2, Selection = 4 };
+    enum SelectionMode {
+        Clipboard = 2,
+        Selection = 4,
+    };
     enum class ClipboardUpdateReason {
         UpdateClipboard,
         PreventEmptyClipboard

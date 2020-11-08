@@ -119,15 +119,62 @@ class ION_EXPORT IonInterface : public Plasma::DataEngine
 
 public:
 
-    enum ConditionIcons { ClearDay = 1, ClearWindyDay, FewCloudsDay, FewCloudsWindyDay, PartlyCloudyDay, PartlyCloudyWindyDay, Overcast, OvercastWindy,
-                          Rain, LightRain, Showers, ChanceShowersDay, Thunderstorm, Hail,
-                          Snow, LightSnow, Flurries, FewCloudsNight, FewCloudsWindyNight,  ChanceShowersNight,
-                          PartlyCloudyNight, PartlyCloudyWindyNight, ClearNight, ClearWindyNight, Mist, Haze, FreezingRain,
-                          RainSnow, FreezingDrizzle, ChanceThunderstormDay, ChanceThunderstormNight,
-                          ChanceSnowDay, ChanceSnowNight, NotAvailable
-                        };
+    enum ConditionIcons {
+        ClearDay = 1,
+        ClearWindyDay,
+        FewCloudsDay,
+        FewCloudsWindyDay,
+        PartlyCloudyDay,
+        PartlyCloudyWindyDay,
+        Overcast,
+        OvercastWindy,
+        Rain,
+        LightRain,
+        Showers,
+        ChanceShowersDay,
+        Thunderstorm,
+        Hail,
+        Snow,
+        LightSnow,
+        Flurries,
+        FewCloudsNight,
+        FewCloudsWindyNight,
+        ChanceShowersNight,
+        PartlyCloudyNight,
+        PartlyCloudyWindyNight,
+        ClearNight,
+        ClearWindyNight,
+        Mist,
+        Haze,
+        FreezingRain,
+        RainSnow,
+        FreezingDrizzle,
+        ChanceThunderstormDay,
+        ChanceThunderstormNight,
+        ChanceSnowDay,
+        ChanceSnowNight,
+        NotAvailable,
+    };
 
-    enum WindDirections { N, NNE, NE, ENE, E, SSE, SE, ESE, S, NNW, NW, WNW, W, SSW, SW, WSW, VR };
+    enum WindDirections {
+        N,
+        NNE,
+        NE,
+        ENE,
+        E,
+        SSE,
+        SE,
+        ESE,
+        S,
+        NNW,
+        NW,
+        WNW,
+        W,
+        SSW,
+        SW,
+        WSW,
+        VR,
+    };
 
     /**
      * Constructor for the ion

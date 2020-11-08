@@ -64,7 +64,11 @@ class KSMClient;
 
 class OrgKdeKWinSessionInterface;
 
-enum SMType { SM_ERROR, SM_WMCOMMAND, SM_WMSAVEYOURSELF };
+enum SMType {
+    SM_ERROR,
+    SM_WMCOMMAND,
+    SM_WMSAVEYOURSELF,
+};
 struct SMData
     {
     SMType type;

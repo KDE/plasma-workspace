@@ -76,7 +76,10 @@ class RecentUsageModel : public ForwardingModel, public QQmlParserStatus
         };
         Q_ENUM(IncludeUsage)
 
-        enum Ordering { Recent, Popular };
+        enum Ordering {
+            Recent,
+            Popular,
+        };
 
         explicit RecentUsageModel(
                 QObject *parent = nullptr,

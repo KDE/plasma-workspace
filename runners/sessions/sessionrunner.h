@@ -39,7 +39,12 @@ class SessionRunner : public Plasma::AbstractRunner
         void match(Plasma::RunnerContext &context) override;
         void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
-        enum { LogoutAction = 1, ShutdownAction, RestartAction, LockAction };
+        enum {
+            LogoutAction = 1,
+            ShutdownAction,
+            RestartAction,
+            LockAction,
+        };
 
     private:
         void matchCommands(QList<Plasma::QueryMatch> &matches, const QString& term);

@@ -27,6 +27,10 @@ static const char CONFIG_TRIGGERWORD[] = "triggerWord";
 static const char CONFIG_SORTING[] = "sorting";
 
 /** Possibilities to sort */
-enum Sort {NONE = 0, CPU, CPUI};
+enum Sort {
+    NONE = 0,
+    CPU,
+    CPUI,
+};
 
 #endif

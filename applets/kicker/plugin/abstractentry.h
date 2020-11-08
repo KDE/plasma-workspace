@@ -32,7 +32,11 @@ class AbstractEntry
         explicit AbstractEntry(AbstractModel *owner);
         virtual ~AbstractEntry();
 
-        enum EntryType { RunnableType, GroupType, SeparatorType };
+        enum EntryType {
+            RunnableType,
+            GroupType,
+            SeparatorType,
+        };
 
         virtual EntryType type() const = 0;
 

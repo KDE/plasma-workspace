@@ -30,7 +30,10 @@
 class ApplicationsProtocol : public KIO::SlaveBase
 {
 public:
-    enum RunMode { ProgramsMode, ApplicationsMode };
+    enum RunMode {
+        ProgramsMode,
+        ApplicationsMode,
+    };
     ApplicationsProtocol(const QByteArray &protocol, const QByteArray &pool, const QByteArray &app);
     ~ApplicationsProtocol() override;
     void get( const QUrl& url ) override;

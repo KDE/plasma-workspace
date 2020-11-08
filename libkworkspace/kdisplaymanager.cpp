@@ -278,7 +278,15 @@ public:
                 QDBusConnection::systemBus()) {}
 };
 
-static enum { Dunno, NoDM, NewKDM, OldKDM, NewGDM, OldGDM, LightDM } DMType = Dunno;
+static enum {
+    Dunno,
+    NoDM,
+    NewKDM,
+    OldKDM,
+    NewGDM,
+    OldGDM,
+    LightDM,
+} DMType = Dunno;
 static const char *ctl, *dpy;
 
 class KDisplayManager::Private

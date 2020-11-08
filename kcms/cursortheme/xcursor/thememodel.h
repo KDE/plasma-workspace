@@ -27,7 +27,10 @@ class QDir;
 class CursorTheme;
 
 // The two TableView/TreeView columns provided by the model
-enum Columns { NameColumn = 0, DescColumn };
+enum Columns {
+    NameColumn = 0,
+    DescColumn,
+};
 
 
 /**

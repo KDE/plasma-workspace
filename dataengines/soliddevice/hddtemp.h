@@ -33,7 +33,10 @@ class HddTemp : public QObject
     Q_OBJECT
 
     public:
-        enum DataType {Temperature=0, Unit};
+        enum DataType {
+            Temperature=0,
+            Unit,
+        };
         
         explicit HddTemp(QObject *parent = nullptr);
         ~HddTemp() override;

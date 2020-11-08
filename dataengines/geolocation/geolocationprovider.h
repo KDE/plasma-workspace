@@ -33,7 +33,11 @@ class GEOLOCATION_EXPORT GeolocationProvider : public QObject
     Q_OBJECT
 
 public:
-    enum UpdateTrigger { ForcedUpdate = 0, SourceEvent = 1, NetworkConnected = 2 };
+    enum UpdateTrigger {
+        ForcedUpdate = 0,
+        SourceEvent = 1,
+        NetworkConnected = 2,
+    };
     Q_DECLARE_FLAGS(UpdateTriggers, UpdateTrigger)
 
     explicit GeolocationProvider(QObject *parent = nullptr, const QVariantList &args = QVariantList());
