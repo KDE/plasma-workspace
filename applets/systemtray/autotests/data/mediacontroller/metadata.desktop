@@ -9,7 +9,6 @@ Type=Service
 X-KDE-ServiceTypes=Plasma/Applet
 X-KDE-PluginInfo-Author=Sebastian Kügler
 X-KDE-PluginInfo-Category=Multimedia
-X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-Email=sebas@kde.org
 X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-PluginInfo-License=GPL-2.0+
