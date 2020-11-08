@@ -56,7 +56,7 @@ enum EDialogColumns
     COL_TRASH,
     COL_SIZE,
     COL_DATE,
-    COL_LINK
+    COL_LINK,
 };
 
 CDuplicatesDialog::CDuplicatesDialog(QWidget *parent, CFontList *fl)
@@ -205,7 +205,7 @@ enum EStatus
     STATUS_NO_FILES,
     STATUS_ALL_REMOVED,
     STATUS_ERROR,
-    STATUS_USER_CANCELLED
+    STATUS_USER_CANCELLED,
 };
 
 void CDuplicatesDialog::slotButtonClicked(QAbstractButton *button)

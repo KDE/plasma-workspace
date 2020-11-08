@@ -82,7 +82,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 enum KWinSessionState {
     Normal = 0,
     Saving = 1,
-    Quitting = 2
+    Quitting = 2,
 };
 
 void KSMServer::logout( int confirm, int sdtype, int sdmode )

@@ -39,7 +39,7 @@ public:
         Right,
         BottomRight,
         Bottom,
-        BottomLeft        
+        BottomLeft,
     };
     Q_ENUMS(Corner)
 

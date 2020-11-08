@@ -56,7 +56,7 @@ public:
         HasPlasmaThemeRole,
         HasCursorsRole,
         HasWindowSwitcherRole,
-        HasDesktopSwitcherRole
+        HasDesktopSwitcherRole,
     };
 
     KCMLookandFeel(QObject* parent, const QVariantList& args);

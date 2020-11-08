@@ -35,7 +35,7 @@ class AppEntry : public AbstractEntry
             NameOnly = 0,
             GenericNameOnly,
             NameAndGenericName,
-            GenericNameAndName
+            GenericNameAndName,
         };
 
         explicit AppEntry(AbstractModel *owner, KService::Ptr service, NameFormat nameFormat);

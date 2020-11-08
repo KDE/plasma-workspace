@@ -43,7 +43,7 @@ class AppMenuApplet : public Plasma::Applet
 public:
     enum ViewType {
         FullView,
-        CompactView
+        CompactView,
     };
 
     explicit AppMenuApplet(QObject *parent, const QVariantList &data);

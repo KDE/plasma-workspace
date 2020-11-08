@@ -56,7 +56,7 @@ class KFONTINST_EXPORT FontInst : public QObject
         STATUS_ALREADY_INSTALLED,
         STATUS_NOT_FONT_FILE,
         STATUS_PARTIAL_DELETE,
-        STATUS_NO_SYS_CONNECTION
+        STATUS_NO_SYS_CONNECTION,
     };
     
     enum EFolder
@@ -64,13 +64,13 @@ class KFONTINST_EXPORT FontInst : public QObject
         FOLDER_SYS,
         FOLDER_USER,
 
-        FOLDER_COUNT
+        FOLDER_COUNT,
     };
 
     enum
     {
         SYS_MASK=0x01,
-        USR_MASK=0x02
+        USR_MASK=0x02,
     };
 
     static void registerTypes()

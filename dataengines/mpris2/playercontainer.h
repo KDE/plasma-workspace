@@ -53,14 +53,14 @@ public:
         CanGoPrevious    = 1 << 8,
         // CanStop is not directly provided by the spec,
         // but we infer it from PlaybackStatus and CanControl
-        CanStop          = 1 << 9
+        CanStop          = 1 << 9,
     };
     Q_DECLARE_FLAGS(Caps, Cap)
     Caps capabilities() const { return m_caps; }
 
     enum UpdateType {
         FetchAll,
-        UpdatedSignal
+        UpdatedSignal,
     };
 
     void refresh();

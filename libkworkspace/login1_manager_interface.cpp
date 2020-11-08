@@ -26,7 +26,7 @@ enum LogindProvider {
     Unknown,
     None,
     ConsoleKit2,
-    Logind1
+    Logind1,
 };
 static LogindProvider s_mode = Unknown;
 

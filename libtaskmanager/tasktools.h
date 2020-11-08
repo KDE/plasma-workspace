@@ -45,7 +45,7 @@ struct AppData
 
 enum UrlComparisonMode {
      Strict = 0,
-     IgnoreQueryItems
+     IgnoreQueryItems,
 };
 
 /**

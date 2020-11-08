@@ -55,7 +55,7 @@ class CJobRunner : public QDialog
             TYPE1_FONT,
             TYPE1_AFM,
             TYPE1_PFM,
-            OTHER_FONT
+            OTHER_FONT,
         };
 
         Item(const QUrl &u=QUrl(), const QString &n=QString(), bool dis=false);
@@ -79,7 +79,7 @@ class CJobRunner : public QDialog
         CMD_DISABLE,
         CMD_UPDATE,
         CMD_MOVE,
-        CMD_REMOVE_FILE
+        CMD_REMOVE_FILE,
     };
 
     explicit CJobRunner(QWidget *parent, int xid=0);

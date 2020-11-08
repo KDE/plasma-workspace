@@ -146,7 +146,7 @@ Q_SIGNALS:
 private:
     enum InjectMode {
         Direct,
-        XTest
+        XTest,
     };
 
     QSize calculateClientWindowSize() const;

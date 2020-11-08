@@ -45,7 +45,7 @@ namespace Misc
     enum EConstants
     {
         FILE_PERMS = 0644,
-        DIR_PERMS  = 0755
+        DIR_PERMS  = 0755,
     };
 
     struct TFont

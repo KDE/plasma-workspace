@@ -34,7 +34,7 @@ public:
         PathRole,
         SizeRole,
         UsedRole,
-        AvailableRole
+        AvailableRole,
     };
 
     PlacesProxyModel(QObject* parent, KFilePlacesModel* model);

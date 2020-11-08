@@ -40,7 +40,7 @@ namespace KWorkSpace
     /**
      * Always confirm, ask even if the user turned it off.
      */
-    ShutdownConfirmYes = 1
+    ShutdownConfirmYes = 1,
   };
 
   /**
@@ -67,7 +67,7 @@ namespace KWorkSpace
      * Temporary brain damage. Don't use. Same as ShutdownTypeNone
      */
     // KDE5: kill this
-    ShutdownTypeLogout = 3
+    ShutdownTypeLogout = 3,
   };
 
   /**
@@ -95,7 +95,7 @@ namespace KWorkSpace
     /**
      * Pop up a dialog asking the user what to do if sessions are still active.
      */
-    ShutdownModeInteractive = 3
+    ShutdownModeInteractive = 3,
   };
 
   /**

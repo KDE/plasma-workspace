@@ -59,7 +59,7 @@ class SwitchWindow : public Plasma::ContainmentActions
         enum MenuMode {
             AllFlat = 0,
             DesktopSubmenus,
-            CurrentDesktop
+            CurrentDesktop,
         };
 
         QList<QAction *> m_actions;

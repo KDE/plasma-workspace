@@ -113,14 +113,14 @@ enum EPages
     PAGE_SKIP,
     PAGE_ERROR,
     PAGE_CANCEL,
-    PAGE_COMPLETE
+    PAGE_COMPLETE,
 };
 
 enum Response
 {
     RESP_CONTINUE,
     RESP_AUTO,
-    RESP_CANCEL
+    RESP_CANCEL,
 };
 
 static void addIcon(QGridLayout *layout, QFrame *page, const char *iconName, int iconSize)

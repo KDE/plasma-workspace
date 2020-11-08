@@ -36,7 +36,7 @@ public:
 
     enum Roles {
         ThemeNameRole = Qt::UserRole + 1,
-        ThemePathRole
+        ThemePathRole,
     };
 
     void load();

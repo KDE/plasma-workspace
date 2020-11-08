@@ -35,7 +35,7 @@ class ContainmentInterface : public QObject
         enum Target {
             Desktop = 0,
             Panel,
-            TaskManager
+            TaskManager,
         };
 
         Q_ENUM(Target)

@@ -57,7 +57,7 @@ public:
     enum class Status {
         Unknown = -1,
         NotRunning,
-        Running
+        Running,
     };
     Q_ENUM(Status)
 

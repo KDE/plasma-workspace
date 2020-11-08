@@ -28,7 +28,7 @@ enum class HistoryItemType
 {
     Text,
     Image,
-    Url
+    Url,
 };
 
 class HistoryModel : public QAbstractListModel

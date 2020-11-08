@@ -51,7 +51,7 @@ public:
         ThemeNameRole = Qt::UserRole + 1,
         DescriptionRole,
         RemovableRole,
-        PendingDeletionRole
+        PendingDeletionRole,
     };
 
     int rowCount(const QModelIndex &parent) const override;

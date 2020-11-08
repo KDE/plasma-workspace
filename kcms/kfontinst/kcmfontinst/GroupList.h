@@ -54,7 +54,7 @@ class CGroupListItem
         PERSONAL,
         SYSTEM,
         UNCLASSIFIED,
-        CUSTOM
+        CUSTOM,
     };
 
     union Data

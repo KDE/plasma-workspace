@@ -46,7 +46,7 @@ class CKioFonts : public KIO::SlaveBase
         FOLDER_USER,
         FOLDER_SYS,
         FOLDER_ROOT,
-        FOLDER_UNKNOWN
+        FOLDER_UNKNOWN,
     };
 
     CKioFonts(const QByteArray &pool, const QByteArray &app);

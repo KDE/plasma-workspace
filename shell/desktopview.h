@@ -48,13 +48,13 @@ public:
         Window, /** The window is a normal resizable window with titlebar and appears in the taskbar */
         FullScreen, /** The window is fullscreen and goes over all the other windows */
         Desktop, /** The window is the desktop layer, under everything else, doesn't appear in the taskbar */
-        WindowedDesktop /** full screen and borderless as Desktop, but can be brought in front and appears in the taskbar */
+        WindowedDesktop, /** full screen and borderless as Desktop, but can be brought in front and appears in the taskbar */
     };
     Q_ENUM(WindowType)
 
     enum SessionType {
         ApplicationSession, /** our session is a normal application */
-        ShellSession /** We are running as the primary user interface of this machine */
+        ShellSession, /** We are running as the primary user interface of this machine */
     };
     Q_ENUM(SessionType)
 

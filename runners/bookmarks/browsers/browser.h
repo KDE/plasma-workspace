@@ -41,7 +41,7 @@ public:
     enum CacheResult{
         Error,
         Copied,
-        Unchanged
+        Unchanged,
     };
 
 public Q_SLOTS:

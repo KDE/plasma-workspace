@@ -27,7 +27,7 @@ class SortedSystemTrayModel : public QSortFilterProxyModel {
 public:
     enum class SortingType {
         ConfigurationPage,
-        SystemTray
+        SystemTray,
     };
 
     explicit SortedSystemTrayModel(SortingType sorting, QObject *parent = nullptr);

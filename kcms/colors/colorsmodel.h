@@ -58,7 +58,7 @@ public:
         ActiveTitleBarBackgroundRole,
         ActiveTitleBarForegroundRole,
         RemovableRole,
-        PendingDeletionRole
+        PendingDeletionRole,
     };
 
     int rowCount(const QModelIndex &parent) const override;

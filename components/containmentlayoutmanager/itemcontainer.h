@@ -79,7 +79,7 @@ public:
         Manual = AppletsLayout::EditModeCondition::Manual,
         AfterPressAndHold = AppletsLayout::EditModeCondition::AfterPressAndHold,
         AfterPress,
-        AfterMouseOver
+        AfterMouseOver,
     };
     Q_ENUMS(EditModeCondition)
 

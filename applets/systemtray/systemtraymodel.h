@@ -51,7 +51,7 @@ public:
         Category,
         Status,
         EffectiveStatus,
-        LastBaseRole
+        LastBaseRole,
     };
 
     explicit BaseModel(QPointer<SystemTraySettings> settings, QObject *parent = nullptr);
@@ -81,7 +81,7 @@ class PlasmoidModel: public BaseModel
 public:
     enum class Role {
         Applet = static_cast<int>(BaseModel::BaseRole::LastBaseRole) + 1,
-        HasApplet
+        HasApplet,
     };
 
     explicit PlasmoidModel(QPointer<SystemTraySettings> settings, QPointer<PlasmoidRegistry> plasmoidRegistry, QObject *parent = nullptr);
@@ -134,7 +134,7 @@ public:
         Title,
         ToolTipSubTitle,
         ToolTipTitle,
-        WindowId
+        WindowId,
     };
 
     StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject* parent = nullptr);

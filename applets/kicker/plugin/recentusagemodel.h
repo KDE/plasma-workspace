@@ -72,7 +72,7 @@ class RecentUsageModel : public ForwardingModel, public QQmlParserStatus
         enum IncludeUsage {
             AppsAndDocs,
             OnlyApps,
-            OnlyDocs
+            OnlyDocs,
         };
         Q_ENUM(IncludeUsage)
 

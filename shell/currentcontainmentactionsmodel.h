@@ -42,7 +42,7 @@ public:
     enum Roles {
         ActionRole = Qt::UserRole+1,
         PluginNameRole,
-        HasConfigurationInterfaceRole
+        HasConfigurationInterfaceRole,
     };
 
     explicit CurrentContainmentActionsModel(Plasma::Containment *containment, QObject *parent = nullptr);

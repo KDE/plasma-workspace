@@ -34,7 +34,7 @@ class TranslationsModel : public QAbstractListModel
     public:
         enum AdditionalRoles {
             LanguageCode = Qt::UserRole + 1,
-            IsMissing
+            IsMissing,
         };
         Q_ENUM(AdditionalRoles)
 

@@ -57,7 +57,7 @@ public:
 
     enum ConsoleMode {
         PlasmaConsole,
-        KWinConsole
+        KWinConsole,
     };
 
     void setMode(const QString &mode);

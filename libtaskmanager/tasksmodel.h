@@ -95,13 +95,13 @@ public:
         SortManual,         /**< Tasks can be moved with move() and syncLaunchers(). */
         SortAlpha,          /**< Tasks are sorted alphabetically, by AbstractTasksModel::AppName and Qt::DisplayRole. */
         SortVirtualDesktop, /**< Tasks are sorted by the virtual desktop they are on. */
-        SortActivity        /**< Tasks are sorted by the number of tasks on the activities they're on. */
+        SortActivity,        /**< Tasks are sorted by the number of tasks on the activities they're on. */
     };
     Q_ENUM(SortMode)
 
     enum GroupMode {
         GroupDisabled = 0, /**< No grouping is done. */
-        GroupApplications  /**< Tasks are grouped by the application backing them. */
+        GroupApplications,  /**< Tasks are grouped by the application backing them. */
     };
     Q_ENUM(GroupMode)
 

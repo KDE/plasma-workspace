@@ -107,7 +107,7 @@ struct ClipCommand
     enum Output {
         IGNORE, // Discard output
         REPLACE, // Replace clipboard entry with output
-        ADD // Add output as new clipboard element
+        ADD, // Add output as new clipboard element
     };
 
     ClipCommand( const QString& _command,

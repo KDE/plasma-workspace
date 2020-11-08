@@ -78,7 +78,7 @@ namespace KFI
 enum ESpecial
 {
     SPECIAL_RESCAN = 0,
-    SPECIAL_CONFIGURE
+    SPECIAL_CONFIGURE,
 };
 
 // UDS_EXTRA entries...
@@ -86,7 +86,7 @@ enum EUdsExtraEntries
 {
     UDS_EXTRA_FC_STYLE        = (((KIO::UDSEntry::UDS_EXTRA|KIO::UDSEntry::UDS_STRING)^KIO::UDSEntry::UDS_STRING)|KIO::UDSEntry::UDS_NUMBER)+1,
     UDS_EXTRA_FILE_NAME       = KIO::UDSEntry::UDS_EXTRA+2,
-    UDS_EXTRA_FILE_FACE       = KIO::UDSEntry::UDS_EXTRA+3
+    UDS_EXTRA_FILE_FACE       = KIO::UDSEntry::UDS_EXTRA+3,
 };
 
 }

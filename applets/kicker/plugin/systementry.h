@@ -41,7 +41,7 @@ class SystemEntry : public QObject, public AbstractEntry
             Suspend,
             Hibernate,
             Reboot,
-            Shutdown
+            Shutdown,
         };
 
         explicit SystemEntry(AbstractModel *owner, Action action);

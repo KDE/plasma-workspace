@@ -40,7 +40,7 @@ class CPreviewSelectAction : public KSelectAction
     {
         Basic,
         BlocksAndScripts,
-        ScriptsOnly
+        ScriptsOnly,
     };
 
     explicit CPreviewSelectAction(QObject *parent, Mode mode=Basic);

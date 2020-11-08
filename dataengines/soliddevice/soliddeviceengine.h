@@ -40,13 +40,13 @@
 enum State {
     Idle = 0,
     Mounting = 1,
-    Unmounting = 2
+    Unmounting = 2,
 };
 
 enum OperationResult {
     Working = 0,
     Successful = 1,
-    Unsuccessful =2
+    Unsuccessful =2,
 };
 
 /**

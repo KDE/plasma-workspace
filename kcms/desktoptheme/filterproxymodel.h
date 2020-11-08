@@ -35,7 +35,7 @@ public:
         AllThemes,
         LightThemes,
         DarkThemes,
-        ThemesFollowingColors
+        ThemesFollowingColors,
     };
     Q_ENUM(ThemeFilter)
 

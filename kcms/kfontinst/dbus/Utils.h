@@ -38,7 +38,7 @@ enum EFileType
     FILE_BITMAP,
     FILE_SCALABLE,
     FILE_AFM,
-    FILE_PFM
+    FILE_PFM,
 };
 
 extern bool isAAfm(const QString &fname);

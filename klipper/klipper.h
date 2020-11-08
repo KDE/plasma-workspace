@@ -45,7 +45,7 @@ class SystemClipboard;
 
 enum class KlipperMode {
     Standalone,
-    DataEngine
+    DataEngine,
 };
 
 class Klipper : public QObject
@@ -104,7 +104,7 @@ protected:
     };
     enum class ClipboardUpdateReason {
         UpdateClipboard,
-        PreventEmptyClipboard
+        PreventEmptyClipboard,
     };
 
     /**

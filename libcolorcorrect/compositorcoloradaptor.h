@@ -90,7 +90,7 @@ public:
         // couldn't establish connection to compositor
         ErrorCodeConnectionFailed,
         // rendering backend doesn't support hardware color correction
-        ErrorCodeBackendNoSupport
+        ErrorCodeBackendNoSupport,
     };
     Q_ENUMS(ErrorCode)
 

@@ -55,7 +55,7 @@ public:
         /**
          * The operation name is unknown
          */
-        UnknownOperation
+        UnknownOperation,
     };
 
     void start() override;

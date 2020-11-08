@@ -51,13 +51,13 @@ public:
         FollowsSystemColorsRole,
         ColorTypeRole,
         IsLocalRole,
-        PendingDeletionRole
+        PendingDeletionRole,
     };
     Q_ENUM(Roles)
     enum ColorType {
         LightTheme,
         DarkTheme,
-        FollowsColorTheme
+        FollowsColorTheme,
     };
     Q_ENUM(ColorType)
 

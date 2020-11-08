@@ -73,7 +73,7 @@ class Image : public QObject, public QQmlParserStatus
 
         enum RenderingMode {
             SingleImage,
-            SlideShow
+            SlideShow,
         };
         Q_ENUM(RenderingMode)
 
@@ -82,7 +82,7 @@ class Image : public QObject, public QQmlParserStatus
             Alphabetical,
             AlphabeticalReversed,
             Modified,
-            ModifiedReversed
+            ModifiedReversed,
         };
         Q_ENUM(SlideshowMode)
 

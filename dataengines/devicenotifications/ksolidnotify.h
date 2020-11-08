@@ -58,7 +58,7 @@ private:
     enum class SolidReplyType {
         Setup,
         Teardown,
-        Eject
+        Eject,
     };
 
     void onSolidReply(SolidReplyType type, Solid::ErrorType error, const QVariant &errorData, const QString &udi);

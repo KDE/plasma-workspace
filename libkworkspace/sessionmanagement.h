@@ -51,7 +51,7 @@ public:
         /**
          * Error creating a suitable backend, no actions will be available
          */
-        Error
+        Error,
     };
     Q_ENUM(State)
 
@@ -67,7 +67,7 @@ public:
         /**
         * Always confirm, ask even if the user turned it off.
         */
-        ForcePrompt = 1
+        ForcePrompt = 1,
     };
     Q_ENUM(ConfirmationMode)
 

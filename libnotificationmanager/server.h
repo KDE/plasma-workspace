@@ -78,7 +78,7 @@ public:
     enum class CloseReason {
         Expired = 1, ///< The notification timed out
         DismissedByUser = 2, ///< The user explicitly closed or acknowledged the notification
-        Revoked = 3 ///< The notification was revoked by the issuing app because it is no longer relevant
+        Revoked = 3, ///< The notification was revoked by the issuing app because it is no longer relevant
     };
     Q_ENUM(CloseReason)
 

@@ -57,7 +57,7 @@ enum EGroupColumns
 {
     COL_GROUP_NAME,
 
-    NUM_GROUP_COLS
+    NUM_GROUP_COLS,
 };
 
 CGroupListItem::CGroupListItem(const QString &name)

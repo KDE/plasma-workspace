@@ -240,7 +240,7 @@ public:
         TopRight,
         BottomLeft,
         BottomCenter,
-        BottomRight
+        BottomRight,
     };
     Q_ENUM(PopupPosition)
 
@@ -248,7 +248,7 @@ public:
         ShowPopups = 1 << 1,
         ShowPopupsInDoNotDisturbMode = 1 << 2,
         ShowInHistory = 1 << 3,
-        ShowBadges = 1 << 4
+        ShowBadges = 1 << 4,
     };
     Q_ENUM(NotificationBehavior)
     Q_DECLARE_FLAGS(NotificationBehaviors, NotificationBehavior)

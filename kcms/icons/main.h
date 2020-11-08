@@ -62,7 +62,7 @@ public:
         ThemeNameRole = Qt::UserRole + 1,
         DescriptionRole,
         RemovableRole,
-        PendingDeletionRole
+        PendingDeletionRole,
     };
 
     IconsSettings *iconsSettings() const;

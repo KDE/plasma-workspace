@@ -47,7 +47,7 @@ public:
     enum Roles {
         StyleNameRole = Qt::UserRole + 1,
         DescriptionRole,
-        ConfigurableRole
+        ConfigurableRole,
     };
 
     int rowCount(const QModelIndex &parent) const override;

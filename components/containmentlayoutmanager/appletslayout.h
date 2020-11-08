@@ -82,7 +82,7 @@ public:
         LeftToRight,
         RightToLeft,
         TopToBottom,
-        BottomToTop
+        BottomToTop,
     };
     Q_ENUM(PreferredLayoutDirection)
 

@@ -72,7 +72,7 @@ public:
         VtNumber,
         Session,
         IsTty,
-        IconName //name of an icon
+        IconName, //name of an icon
     };
 
     bool canSwitchUser() const;

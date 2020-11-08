@@ -41,7 +41,7 @@ enum EUnicodeCategory
     UNICODE_MODIFIER_SYMBOL,
     UNICODE_OTHER_SYMBOL,
 
-    UNICODE_INVALID
+    UNICODE_INVALID,
 };
 
 struct TUnicodeCategory

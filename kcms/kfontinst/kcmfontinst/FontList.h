@@ -65,7 +65,7 @@ enum EColumns
     COL_FONT,
     COL_STATUS,
 
-    NUM_COLS
+    NUM_COLS,
 };
 
 typedef QList<CFamilyItem *> CFamilyItemCont;
@@ -83,7 +83,7 @@ class CFontList : public QAbstractItemModel
         MSG_ADD,
         MSG_DEL,
 
-        NUM_MSGS_TYPES
+        NUM_MSGS_TYPES,
     };
 
     public:
@@ -188,7 +188,7 @@ class CFamilyItem : public CFontModelItem
     {
         ENABLED,
         PARTIAL,
-        DISABLED
+        DISABLED,
     };
 
     CFamilyItem(CFontList &p, const Family &f, bool sys);

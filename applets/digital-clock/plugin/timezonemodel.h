@@ -68,7 +68,7 @@ public:
         CityRole,
         CommentRole,
         CheckedRole,
-        IsLocalTimeZoneRole
+        IsLocalTimeZoneRole,
     };
 
     int rowCount(const QModelIndex &parent) const override;

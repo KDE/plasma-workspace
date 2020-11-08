@@ -59,7 +59,7 @@ public:
             Rgb,
             Bgr,
             Vrgb,
-            Vbgr
+            Vbgr,
         };
 
         SubPixel(Type t, QDomNode &n) : Item(n), type(t) {}
@@ -94,7 +94,7 @@ public:
             None,
             Slight,
             Medium,
-            Full
+            Full,
         };
 
         Hint(Style s, QDomNode &n) : Item(n), style(s) {}
@@ -126,7 +126,7 @@ public:
         enum State {
             NotSet,
             Enabled,
-            Disabled
+            Disabled,
         };
 
         AntiAliasing(State s, QDomNode &n) : Item(n), state(s) {}

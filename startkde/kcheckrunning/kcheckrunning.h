@@ -23,7 +23,7 @@
 enum CheckRunningState {
     PlasmaRunning,
     NoPlasmaRunning,
-    NoX11
+    NoX11,
 };
 
 CheckRunningState kCheckRunning();

@@ -53,7 +53,7 @@ class CFontFilter : public QWidget
         CRIT_LOCATION,
         CRIT_WS,
 
-        NUM_CRIT
+        NUM_CRIT,
     };
 
     CFontFilter(QWidget *parent);

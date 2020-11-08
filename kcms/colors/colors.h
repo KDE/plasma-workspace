@@ -59,7 +59,7 @@ public:
     enum SchemeFilter {
         AllSchemes,
         LightSchemes,
-        DarkSchemes
+        DarkSchemes,
     };
     Q_ENUM(SchemeFilter)
 

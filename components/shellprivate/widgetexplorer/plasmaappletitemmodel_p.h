@@ -80,7 +80,7 @@ public:
         EmailRole = Qt::UserRole+9,
         RunningRole = Qt::UserRole+10,
         LocalRole = Qt::UserRole+11,
-        ScreenshotRole = Qt::UserRole+12
+        ScreenshotRole = Qt::UserRole+12,
     };
 
     explicit PlasmaAppletItemModel(QObject * parent = nullptr);
