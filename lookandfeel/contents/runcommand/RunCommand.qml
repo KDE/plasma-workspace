@@ -29,7 +29,7 @@ ColumnLayout {
     property string query
     property string runner
     property bool showHistory: false
-    property string priorSearch
+    property alias runnerManager: results.runnerManager
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -47,18 +47,22 @@ ColumnLayout {
                 if (runnerWindow.retainPriorSearch) {
                     // If we manually specified a query(D-Bus invocation) we don't want to retain the prior search
                     if (!query) {
-                        queryField.text = priorSearch
-                        queryField.select(root.query.length, 0)
+                        queryField.text = runnerManager.priorSearch
+                        queryField.select(runnerManager.priorSearch.length, 0)
                     }
                 }
             } else {
-                if (runnerWindow.retainPriorSearch) {
-                    priorSearch = root.query
-                }
+                runnerManager.priorSearch = root.query
                 root.runner = ""
                 root.query = ""
                 root.showHistory = false
             }
+        }
+    }
+    Connections {
+        target: root
+        function onShowHistoryChanged() {
+            listView.model = showHistory ? runnerManager.history.slice(0, 20) : []
         }
     }
 
@@ -140,19 +144,11 @@ ColumnLayout {
             onTextChanged: {
                 root.query = queryField.text
                 if (allowCompletion && length > 0) {
-                    var history = runnerWindow.history
-
-                    // search the first item in the history rather than the shortest matching one
-                    // this way more recently used entries take precedence over older ones (Bug 358985)
-                    for (var i = 0, j = history.length; i < j; ++i) {
-                        var item = history[i]
-
-                        if (item.toLowerCase().indexOf(text.toLowerCase()) === 0) {
-                            var oldText = text
-                            text = text + item.substr(oldText.length)
-                            select(text.length, oldText.length)
-                            break
-                        }
+                    var oldTextLen = length
+                    const suggestion = runnerManager.getHistorySuggestion(root.query);
+                    if (suggestion.length > 0) {
+                        text = suggestion;
+                        select(text.length, oldTextLen);
                     }
                 }
             }
@@ -200,7 +196,7 @@ ColumnLayout {
                     colorGroup: PlasmaCore.Theme.ButtonColorGroup
                 }
                 elementId: "down-arrow"
-                visible: queryField.length === 0 && runnerWindow.history.length > 0
+                visible: queryField.length === 0 && runnerManager.historyEnabled
 
                 MouseArea {
                     anchors.fill: parent
@@ -255,10 +251,7 @@ ColumnLayout {
                 }
             }
 
-            onActivated: {
-                runnerWindow.addToHistory(queryString)
-                runnerWindow.visible = false
-            }
+            onActivated: runnerWindow.visible = false
 
             onUpdateQueryString: {
                 queryField.text = text
@@ -281,8 +274,7 @@ ColumnLayout {
             highlight: PlasmaComponents.Highlight {}
             highlightMoveDuration: 0
             activeFocusOnTab: true
-            // we store 50 entries in the history but only show 20 in the UI so it doesn't get too huge
-            model: root.showHistory ? runnerWindow.history.slice(0, 20) : []
+            model: [] // Gets modified in the onShowHistoryChanged connection
             delegate: Milou.ResultDelegate {
                 id: resultDelegate
                 width: listView.width
@@ -348,9 +340,13 @@ ColumnLayout {
 
             function runAction(actionIndex) {
                 if (actionIndex === 0) {
-                    // QStringList changes just reset the model, so we'll remember the index and set it again
                     var currentIndex = listView.currentIndex
-                    runnerWindow.removeFromHistory(currentIndex)
+                    runnerManager.removeFromHistory(currentIndex)
+                    // we need to reset the history items
+                    listView.model = runnerManager.history.slice(0, 20)
+                    if (currentIndex === listView.model.length) {
+                        currentIndex-- // If the last item was focused and gets deleted
+                    }
                     listView.currentIndex = currentIndex
                 }
             }

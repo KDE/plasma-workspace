@@ -48,7 +48,6 @@ class View : public PlasmaQuick::Dialog
     Q_CLASSINFO("D-Bus Interface", "org.kde.krunner.App")
 
     Q_PROPERTY(bool canConfigure READ canConfigure CONSTANT)
-    Q_PROPERTY(QStringList history READ history NOTIFY historyChanged)
     Q_PROPERTY(bool retainPriorSearch READ retainPriorSearch NOTIFY retainPriorSearchChanged)
     Q_PROPERTY(bool pinned READ pinned WRITE setPinned NOTIFY pinnedChanged)
 
@@ -62,18 +61,11 @@ public:
     void setFreeFloating(bool floating);
 
     bool canConfigure() const;
-    QStringList history() const;
-
-    Q_INVOKABLE void addToHistory(const QString &item);
-    Q_INVOKABLE void removeFromHistory(int index);
-
     bool retainPriorSearch() const;
-
     bool pinned() const;
     void setPinned(bool pinned);
 
 Q_SIGNALS:
-    void historyChanged();
     void retainPriorSearchChanged();
     void pinnedChanged();
 
@@ -109,9 +101,7 @@ private:
     qreal m_offset;
     bool m_floating : 1;
     bool m_requestedVisible = false;
-    QStringList m_history;
     bool m_retainPriorSearch;
-    bool m_historyEnabled;
     bool m_pinned = false;
 };
 
