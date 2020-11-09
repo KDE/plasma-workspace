@@ -48,6 +48,7 @@ SystemTray::SystemTray(QObject *parent, const QVariantList &args) :
 {
     setHasConfigurationInterface(true);
     setContainmentType(Plasma::Types::CustomEmbeddedContainment);
+    setContainmentDisplayHints(Plasma::Types::ContainmentDrawsPlasmoidHeading | Plasma::Types::ContainmentForcesSquarePlasmoids);
 }
 
 SystemTray::~SystemTray()
