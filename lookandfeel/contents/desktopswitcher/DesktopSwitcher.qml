@@ -153,7 +153,7 @@ KWin.Switcher {
                 boundsBehavior: Flickable.StopAtBounds
                 Connections {
                     target: tabBox
-                    onCurrentIndexChanged: {listView.currentIndex = tabBox.currentIndex;}
+                    function onCurrentIndexChanged() {listView.currentIndex = tabBox.currentIndex;}
                 }
             }
             Component {

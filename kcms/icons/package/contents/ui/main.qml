@@ -187,12 +187,12 @@ KCM.GridViewKCM {
 
             Connections {
                 target: kcm
-                onShowSuccessMessage: {
+                function onShowSuccessMessage(message) {
                     infoLabel.type = Kirigami.MessageType.Positive;
                     infoLabel.text = message;
                     infoLabel.visible = true;
                 }
-                onShowErrorMessage: {
+                function onShowErrorMessage(message) {
                     infoLabel.type = Kirigami.MessageType.Error;
                     infoLabel.text = message;
                     infoLabel.visible = true;

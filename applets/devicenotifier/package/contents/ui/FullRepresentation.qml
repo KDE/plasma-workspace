@@ -96,7 +96,7 @@ PlasmaComponents3.Page {
 
         Connections {
             target: statusSource
-            onLastChanged: {
+            function onLastChanged() {
                 if (!statusSource.last) {
                     messageHighlightAnimator.stop()
                     messageHighlight.visible = false
@@ -116,7 +116,7 @@ PlasmaComponents3.Page {
 
     Connections {
         target: plasmoid
-        onExpandedChanged: {
+        function onExpandedChanged(expanded) {
             if (!plasmoid.expanded) {
                 statusSource.clearMessage();
             }

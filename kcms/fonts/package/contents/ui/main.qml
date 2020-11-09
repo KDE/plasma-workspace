@@ -50,7 +50,9 @@ KCM.SimpleKCM {
 
             Connections {
                 target: kcm
-                onAliasingChangeApplied: antiAliasingMessage.visible = true
+                function onAliasingChangeApplied() {
+                    antiAliasingMessage.visible = true
+                }
             }
         }
 
@@ -62,7 +64,7 @@ KCM.SimpleKCM {
 
             Connections {
                 target: kcm
-                onFontsHaveChanged: {
+                function onFontsHaveChanged() {
                     hugeFontsMessage.visible = generalFontWidget.font.pointSize > 14
                     || fixedWidthFontWidget.font.pointSize > 14
                     || smallFontWidget.font.pointSize > 14
@@ -256,8 +258,12 @@ KCM.SimpleKCM {
                 }
                 Connections {
                     target: kcm.fontsAASettings
-                    onExcludeFromChanged: excludeFromSpinBox.value = kcm.fontsAASettings.excludeFrom;
-                    onExcludeToChanged: excludeToSpinBox.value = kcm.fontsAASettings.excludeTo;
+                    function onExcludeFromChanged() {
+                        excludeFromSpinBox.value = kcm.fontsAASettings.excludeFrom;
+                    }
+                    function onExcludeToChanged() {
+                        excludeToSpinBox.value = kcm.fontsAASettings.excludeTo;
+                    }
                 }
             }
 

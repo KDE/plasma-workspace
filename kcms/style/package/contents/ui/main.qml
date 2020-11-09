@@ -59,7 +59,7 @@ KCM.GridViewKCM {
 
             Connections {
                 target: kcm
-                onShowErrorMessage: {
+                function onShowErrorMessage(message) {
                     infoLabel.type = Kirigami.MessageType.Error;
                     infoLabel.text = message;
                     infoLabel.visible = true;
@@ -96,7 +96,7 @@ KCM.GridViewKCM {
 
             Connections {
                 target: kcm
-                onStyleReconfigured: {
+                function onStyleReconfigured(message) {
                     if (styleName === model.styleName) {
                         thumbnailItem.reload();
                     }

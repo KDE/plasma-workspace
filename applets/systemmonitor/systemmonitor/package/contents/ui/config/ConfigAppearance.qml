@@ -45,6 +45,8 @@ QQC2.Control {
     
     Connections {
         target: contentItem
-        onConfigurationChanged: root.configurationChanged()
+        function onConfigurationChanged() {
+            root.configurationChanged()
+        }
     }
 }

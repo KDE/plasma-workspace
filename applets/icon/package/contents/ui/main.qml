@@ -79,7 +79,9 @@ MouseArea {
 
     Connections {
         target: plasmoid
-        onExternalData: plasmoid.nativeInterface.url = data
+        function onExternalData(mimetype, data) {
+            plasmoid.nativeInterface.url = data
+        }
     }
 
     DragDrop.DropArea {

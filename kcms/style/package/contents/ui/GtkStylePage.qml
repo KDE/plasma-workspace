@@ -43,7 +43,7 @@ Kirigami.Page {
 
             Connections {
                 target: kcm.gtkPage
-                onShowErrorMessage: {
+                function onShowErrorMessage(message) {
                     infoLabel.type = Kirigami.MessageType.Error;
                     infoLabel.text = message;
                     infoLabel.visible = true;
@@ -73,7 +73,7 @@ Kirigami.Page {
 
                         Connections {
                             target: kcm.gtkPage
-                            onSelectGtkThemeInCombobox: function(themeName) {
+                            function onSelectGtkThemeInCombobox(themeName) {
                                 gtkThemeCombo.currentIndex = gtkThemeCombo.model.findThemeIndex(themeName)
                             }
                         }

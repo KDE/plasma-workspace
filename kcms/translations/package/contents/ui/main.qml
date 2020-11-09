@@ -66,7 +66,9 @@ ScrollViewKCM {
             data: [Connections {
                 target: addLanguagesSheet
 
-                onSheetOpenChanged: languageItem.checked = false
+                function onSheetOpenChanged() {
+                    languageItem.checked = false
+                }
             }]
         }
     }

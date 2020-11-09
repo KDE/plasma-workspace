@@ -40,7 +40,7 @@ ColumnLayout {
 
     Connections {
         target: runnerWindow
-        onVisibleChanged: {
+        function onVisibleChanged() {
             if (runnerWindow.visible) {
                 queryField.forceActiveFocus();
                 listView.currentIndex = -1

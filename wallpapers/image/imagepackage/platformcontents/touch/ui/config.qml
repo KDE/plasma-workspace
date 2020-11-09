@@ -71,7 +71,9 @@ Item {
 
         Connections {
             target: imageWallpaper
-            onCustomWallpaperPicked: wallpapersGrid.currentIndex = 0
+            function onCustomWallpaperPicked() {
+                wallpapersGrid.currentIndex = 0
+            }
         }
     }
 }

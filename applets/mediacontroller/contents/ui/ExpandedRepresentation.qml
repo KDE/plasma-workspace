@@ -59,7 +59,7 @@ PlasmaComponents3.Page {
 
     Connections {
         target: plasmoid
-        onExpandedChanged: {
+        function onExpandedChanged(expanded) {
             if (plasmoid.expanded) {
                 retrievePosition();
             }

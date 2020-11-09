@@ -209,7 +209,7 @@ PlasmaComponents3.Page {
                 Connections {
                     target: monthView
 
-                    onCurrentDateChanged: {
+                    function onCurrentDateChanged() {
                         // Apparently this is needed because this is a simple QList being
                         // returned and if the list for the current day has 1 event and the
                         // user clicks some other date which also has 1 event, QML sees the
@@ -224,7 +224,7 @@ PlasmaComponents3.Page {
                 Connections {
                     target: monthView.daysModel
 
-                    onAgendaUpdated: {
+                    function onAgendaUpdated(updatedDate) {
                         if (agenda.dateEquals(updatedDate, monthView.currentDate)) {
                             holidaysList.model = null;
                             holidaysList.model = monthView.daysModel.eventsForDate(monthView.currentDate);

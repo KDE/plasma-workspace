@@ -84,7 +84,7 @@ KCM.GridViewKCM {
 
             Connections {
                 target: kcm
-                onShowSchemeNotInstalledWarning: {
+                function onShowSchemeNotInstalledWarning(schemeName) {
                     notInstalledWarning.text = i18n("The color scheme '%1' is not installed. Selecting the default theme instead.", schemeName)
                     notInstalledWarning.visible = true;
                 }
@@ -295,14 +295,14 @@ KCM.GridViewKCM {
 
             Connections {
                 target: kcm
-                onShowSuccessMessage: {
+                function onShowSuccessMessage(message) {
                     infoLabel.type = Kirigami.MessageType.Positive;
                     infoLabel.text = message;
                     infoLabel.visible = true;
                     // Avoid dual message widgets
                     notInstalledWarning.visible = false;
                 }
-                onShowErrorMessage: {
+                function onShowErrorMessage(message) {
                     infoLabel.type = Kirigami.MessageType.Error;
                     infoLabel.text = message;
                     infoLabel.visible = true;

@@ -78,7 +78,9 @@ PlasmaComponents3.Page {
                 // Manually dragging the slider around breaks the binding
                 Connections {
                     target: batterymonitor
-                    onScreenBrightnessChanged: brightnessSlider.value = batterymonitor.screenBrightness
+                    function onScreenBrightnessChanged() {
+                        brightnessSlider.value = batterymonitor.screenBrightness
+                    }
                 }
             }
 
@@ -100,7 +102,9 @@ PlasmaComponents3.Page {
                 // Manually dragging the slider around breaks the binding
                 Connections {
                     target: batterymonitor
-                    onKeyboardBrightnessChanged: keyboardBrightnessSlider.value = batterymonitor.keyboardBrightness
+                    function onKeyboardBrightnessChanged() {
+                        keyboardBrightnessSlider.value = batterymonitor.keyboardBrightness
+                    }
                 }
             }
         }

@@ -78,7 +78,9 @@ RowLayout {
     Connections {
         target: Globals
         // clock time changed
-        onTimeChanged: notificationHeading.updateAgoText()
+        function onTimeChanged() {
+            notificationHeading.updateAgoText()
+        }
     }
 
     PlasmaCore.IconItem {

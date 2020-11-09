@@ -61,7 +61,7 @@ KWin.Switcher {
 
                 Connections {
                     target: tabBox
-                    onCurrentIndexChanged: {
+                    function onCurrentIndexChanged() {
                         thumbnailListView.currentIndex = tabBox.currentIndex;
                         thumbnailListView.positionViewAtIndex(thumbnailListView.currentIndex, ListView.Contain)
                     }

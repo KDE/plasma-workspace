@@ -55,7 +55,7 @@ KCM.GridDelegate {
 
     Connections {
         target: kcm
-        onThemeApplied: {
+        function onThemeApplied() {
             previewWidget.refresh();
         }
     }

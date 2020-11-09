@@ -64,7 +64,7 @@ PlasmaExtras.ExpandableListItem {
 
     Connections {
         target: unmountAll
-        onClicked: {
+        function onClicked() {
             if (model["Removable"] && isMounted) {
                 actionTriggered();
             }

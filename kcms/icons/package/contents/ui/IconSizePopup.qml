@@ -44,7 +44,7 @@ QtControls.Popup {
 
     Connections {
         target: iconTypeList
-        onCurrentIndexChanged: {
+        function onCurrentIndexChanged() {
             iconSizeSlider.sizes = kcm.availableIconSizes(iconTypeList.currentIndex);
         }
     }
