@@ -46,6 +46,7 @@ RowLayout {
         Layout.leftMargin: units.smallSpacing
         Layout.preferredWidth: units.iconSizes.medium
         Layout.preferredHeight: units.iconSizes.medium
+        Layout.alignment: Qt.AlignVCenter
         source: icon
         visible: valid
     }
@@ -53,6 +54,7 @@ RowLayout {
     PlasmaComponents3.ProgressBar {
         id: progressBar
         Layout.fillWidth: true
+        Layout.alignment: Qt.AlignVCenter
         // So it never exceeds the minimum popup size
         Layout.preferredWidth: 1
         Layout.rightMargin: units.smallSpacing
@@ -76,6 +78,7 @@ RowLayout {
         Layout.fillHeight: true
         Layout.preferredWidth: widestLabelSize.width
         Layout.rightMargin: units.smallSpacing
+        Layout.alignment: Qt.AlignVCenter
         level: 3
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
@@ -102,6 +105,7 @@ RowLayout {
         Layout.fillWidth: true
         Layout.fillHeight: true
         Layout.rightMargin: units.smallSpacing
+        Layout.alignment: Qt.AlignVCenter
         level: 3
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
