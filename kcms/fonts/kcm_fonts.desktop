@@ -7,7 +7,7 @@ X-DocPath=kcontrol/fonts/index.html
 X-KDE-Library=kcm_fonts
 X-KDE-ParentApp=kcontrol
 
-X-KDE-System-Settings-Parent-Category=font
+X-KDE-System-Settings-Parent-Category=appearance
 X-KDE-Weight=50
 
 Name=Fonts

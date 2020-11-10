@@ -8,7 +8,7 @@ X-KDE-Library=kcm_fontinst
 X-KDE-ParentApp=kcontrol
 X-KDE-OnlyShowOnQtPlatforms=xcb;
 Categories=Qt;KDE;X-KDE-settings-system;
-X-KDE-System-Settings-Parent-Category=font
+X-KDE-System-Settings-Parent-Category=appearance
 
 Name=Font Management
 Name[ast]=Xestión de fontes

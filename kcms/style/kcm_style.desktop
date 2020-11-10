@@ -9,7 +9,7 @@ X-KDE-Init-Symbol=kcminit_style
 X-KDE-Init-Phase=0
 X-KDE-ParentApp=kcontrol
 
-X-KDE-System-Settings-Parent-Category=applicationstyle
+X-KDE-System-Settings-Parent-Category=appearance
 X-KDE-Weight=0
 
 Name=Application Style
