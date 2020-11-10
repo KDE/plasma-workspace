@@ -589,6 +589,14 @@ QImage CFcEngine::Xft::toImage(int w, int h) const
     if (!xImage) {
         return QImage();
     }
+    if (imageFormat == QImage::Format_RGB32) {
+        // the RGB32 format requires data format 0xffRRGGBB, ensure that this fourth byte really is 0xff
+        // (i.e. when using NVidia proprietary driver)
+        auto lData = reinterpret_cast<quint32 *>(xImage->data);
+        for (size_t iIter = 0; iIter < (xImage->stride / 4) * xImage->height; iIter++) {
+            lData[iIter] |= 0xff000000;
+        }
+    }
     return QImage(xImage->data, xImage->width, xImage->height, xImage->stride, imageFormat, &cleanupXImage, xImage);
 }
     
