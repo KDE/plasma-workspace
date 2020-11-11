@@ -28,7 +28,7 @@ IconSizeCategoryModel::IconSizeCategoryModel(QObject *parent)
         {QStringLiteral("mainToolbarSize"), I18N_NOOP("Main Toolbar"), QStringLiteral("MainToolbar"), KIconLoader::MainToolbar},
         {QStringLiteral("smallSize"), I18N_NOOP("Small Icons"), QStringLiteral("Small"), KIconLoader::Small},
         {QStringLiteral("panelSize"), I18N_NOOP("Panel"), QStringLiteral("Panel"), KIconLoader::Panel},
-        {QStringLiteral("dialogSize"), I18N_NOOP("Dialogs"), QStringLiteral("Dialog"), KIconLoader::Dialog}
+        {QStringLiteral("dialogSize"), I18N_NOOP("Dialogs"), QStringLiteral("Dialog"), KIconLoader::Dialog},
     })
 {
 }

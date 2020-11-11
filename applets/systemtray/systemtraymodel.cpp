@@ -52,7 +52,7 @@ QHash<int, QByteArray> BaseModel::roleNames() const
         {static_cast<int>(BaseRole::CanRender), QByteArrayLiteral("canRender")},
         {static_cast<int>(BaseRole::Category), QByteArrayLiteral("category")},
         {static_cast<int>(BaseRole::Status), QByteArrayLiteral("status")},
-        {static_cast<int>(BaseRole::EffectiveStatus), QByteArrayLiteral("effectiveStatus")}
+        {static_cast<int>(BaseRole::EffectiveStatus), QByteArrayLiteral("effectiveStatus")},
     };
 }
 

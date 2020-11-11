@@ -292,6 +292,6 @@ QHash<int, QByteArray> SessionsModel::roleNames() const
         {static_cast<int>(Role::DisplayNumber), QByteArrayLiteral("displayNumber")},
         {static_cast<int>(Role::VtNumber), QByteArrayLiteral("vtNumber")},
         {static_cast<int>(Role::Session), QByteArrayLiteral("session")},
-        {static_cast<int>(Role::IsTty), QByteArrayLiteral("isTty")}
+        {static_cast<int>(Role::IsTty), QByteArrayLiteral("isTty")},
     };
 }

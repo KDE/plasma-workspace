@@ -103,7 +103,7 @@ QHash<int, QByteArray> IconsModel::roleNames() const
         {DescriptionRole, QByteArrayLiteral("description")},
         {ThemeNameRole, QByteArrayLiteral("themeName")},
         {RemovableRole, QByteArrayLiteral("removable")},
-        {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")}
+        {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")},
     };
 }
 

@@ -238,7 +238,7 @@ QHash<int, QByteArray> TimeZoneModel::roleNames() const
         {CityRole, "city"},
         {CommentRole, "comment"},
         {CheckedRole, "checked"},
-        {IsLocalTimeZoneRole, "isLocalTimeZone"}
+        {IsLocalTimeZoneRole, "isLocalTimeZone"},
     });
 }
 

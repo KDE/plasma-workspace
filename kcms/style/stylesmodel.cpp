@@ -74,7 +74,7 @@ QHash<int, QByteArray> StylesModel::roleNames() const
         {Qt::DisplayRole, QByteArrayLiteral("display")},
         {StyleNameRole, QByteArrayLiteral("styleName")},
         {DescriptionRole, QByteArrayLiteral("description")},
-        {ConfigurableRole, QByteArrayLiteral("configurable")}
+        {ConfigurableRole, QByteArrayLiteral("configurable")},
     };
 }
 

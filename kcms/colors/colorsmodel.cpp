@@ -110,7 +110,7 @@ QHash<int, QByteArray> ColorsModel::roleNames() const
         {ActiveTitleBarBackgroundRole, QByteArrayLiteral("activeTitleBarBackground")},
         {ActiveTitleBarForegroundRole, QByteArrayLiteral("activeTitleBarForeground")},
         {RemovableRole, QByteArrayLiteral("removable")},
-        {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")}
+        {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")},
     };
 }
 
