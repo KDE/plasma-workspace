@@ -156,6 +156,9 @@ ColumnLayout {
         onSheetOpenChanged: {
             filter.text = "";
             messageWidget.visible = false;
+            if (sheetOpen) {
+                filter.forceActiveFocus()
+            }
         }
 
         // Need to manually set the parent when using this in a Plasma config dialog
