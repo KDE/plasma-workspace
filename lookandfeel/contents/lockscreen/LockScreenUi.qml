@@ -49,10 +49,10 @@ PlasmaCore.ColorScope {
                 root.clearPassword();
             }
         }
-        function onMessage() {
+        function onMessage(msg) {
             root.notification = msg;
         }
-        function onError() {
+        function onError(err) {
             root.notification = err;
         }
     }
