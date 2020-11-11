@@ -116,7 +116,7 @@ PlasmaComponents3.Page {
 
     Connections {
         target: plasmoid
-        function onExpandedChanged(expanded) {
+        function onExpandedChanged() {
             if (!plasmoid.expanded) {
                 statusSource.clearMessage();
             }
