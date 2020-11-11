@@ -568,6 +568,9 @@ void cleanupXImage(void *data)
 
 QImage CFcEngine::Xft::toImage(int w, int h) const
 {
+    Q_UNUSED(w)
+    Q_UNUSED(h)
+
     if (!XftDrawPicture(itsDraw)) {
         return QImage();
     }

@@ -164,7 +164,6 @@ void KSMShutdownDlg::init()
     rootContext()->setContextProperty(QStringLiteral("screenGeometry"), screen()->geometry());
 
     QString fileName;
-    QString fileUrl;
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());

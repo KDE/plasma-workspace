@@ -590,7 +590,7 @@ extern "C" int _IceTransNoListen(const char * protocol);
 #endif
 
 KSMServer::KSMServer(InitFlags flags)
-  : sessionGroup( QStringLiteral( "" ) )
+  : sessionGroup(QLatin1String(""))
   , m_kwinInterface(new OrgKdeKWinSessionInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/Session"), QDBusConnection::sessionBus(), this))
   , sockets{ -1, -1 }
 {
@@ -847,7 +847,7 @@ QString KSMServer::currentSession()
 {
     if ( sessionGroup.startsWith( QLatin1String( "Session: " ) ) )
         return sessionGroup.mid( 9 );
-    return QStringLiteral( "" ); // empty, not null, since used for KConfig::setGroup // TODO does this comment make any sense?
+    return QLatin1String(""); // empty, not null, since used for KConfig::setGroup // TODO does this comment make any sense?
 }
 
 void KSMServer::discardSession()

@@ -54,7 +54,7 @@ Chrome::Chrome( FindProfile* findProfile, QObject* parent )
         m_profileBookmarks << new ProfileBookmarks(profile);
         m_watcher->addFile(profile.path());
     }
-    connect(m_watcher, &KDirWatch::created, [=] { m_dirty = true; });
+    connect(m_watcher, &KDirWatch::created, this, [this] { m_dirty = true; });
 }
 
 Chrome::~Chrome()

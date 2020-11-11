@@ -40,7 +40,7 @@ SystemMonitor::SystemMonitor(QObject *parent, const QVariantList &args)
 
     //Don't set the preset right now as we can't write on the config here because we don't have a Corona yet
     if (args.count() > 2 && args.mid(3).length() > 0) {
-        const QString preset = args.mid(3).first().toString();
+        const QString preset = args.mid(3).constFirst().toString();
         if (preset.length() > 0) {
             m_pendingStartupPreset = preset;
         }

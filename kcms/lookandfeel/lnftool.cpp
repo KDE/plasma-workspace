@@ -71,7 +71,7 @@ int main(int argc, char **argv)
     }
     
     if (parser.isSet(_list)) {
-        QList<KPluginMetaData> pkgs = KPackage::PackageLoader::self()->listPackages("Plasma/LookAndFeel");
+        const QList<KPluginMetaData> pkgs = KPackage::PackageLoader::self()->listPackages("Plasma/LookAndFeel");
 
         for (const KPluginMetaData &data : pkgs) {
             std::cout << data.pluginId().toStdString() << std::endl;

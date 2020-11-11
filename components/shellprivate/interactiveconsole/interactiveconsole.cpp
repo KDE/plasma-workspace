@@ -275,7 +275,7 @@ void InteractiveConsole::loadScript(const QString &script)
 void InteractiveConsole::showEvent(QShowEvent *)
 {
     if (m_editorPart) {
-        m_editorPart->views().first()->setFocus();
+        m_editorPart->views().constFirst()->setFocus();
     } else {
         m_editor->setFocus();
     }
@@ -336,7 +336,7 @@ void InteractiveConsole::openScriptUrlSelected(int result)
     }
 
     if (result == QDialog::Accepted) {
-        const QUrl url = m_fileDialog->selectedUrls().first();
+        const QUrl url = m_fileDialog->selectedUrls().constFirst();
         if (!url.isEmpty()) {
             loadScriptFromUrl(url);
         }
@@ -452,7 +452,7 @@ void InteractiveConsole::saveScriptUrlSelected(int result)
     }
 
     if (result == QDialog::Accepted) {
-        const QUrl url = m_fileDialog->selectedUrls().first();
+        const QUrl url = m_fileDialog->selectedUrls().constFirst();
         if (!url.isEmpty()) {
             saveScript(url);
         }
@@ -551,7 +551,7 @@ void InteractiveConsole::evaluateScript()
         if (reply.type() == QDBusMessage::ErrorMessage) {
             print(reply.errorMessage());
         } else {
-            const int id = reply.arguments().first().toInt();
+            const int id = reply.arguments().constFirst().toInt();
             QDBusConnection::sessionBus().connect(s_kwinService, "/" + QString::number(id), QString(), QStringLiteral("print"), this, SLOT(print(QString)));
             QDBusConnection::sessionBus().connect(s_kwinService, "/" + QString::number(id), QString(), QStringLiteral("printError"), this, SLOT(print(QString)));
             message = QDBusMessage::createMethodCall(s_kwinService, "/" + QString::number(id), QString(), QStringLiteral("run"));

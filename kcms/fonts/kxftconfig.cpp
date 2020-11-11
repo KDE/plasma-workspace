@@ -648,7 +648,6 @@ void KXftConfig::readContents()
                         while (en.isComment()) {
                             en = en.nextSibling();
                         }
-                        QString  family;
                         double   from = -1.0,
                                  to = -1.0,
                                  pixelFrom = -1.0,

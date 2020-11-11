@@ -209,7 +209,6 @@ void CursorThemeConfig::updateSizeComboBox()
     if (selected.isValid()) {
         const CursorTheme *theme = m_themeProxyModel->theme(selected);
         const QList<int> sizes = theme->availableSizes();
-        QIcon m_icon;
         // only refill the combobox if there is more that 1 size
         if (sizes.size() > 1) {
             int i;
@@ -384,8 +383,6 @@ void CursorThemeConfig::load()
 {
     ManagedConfigModule::load();
     setPreferredSize(cursorThemeSettings()->cursorSize());
-    // Get the name of the theme KDE is configured to use
-    QString currentTheme = cursorThemeSettings()->cursorTheme();
 
     // Disable the listview and the buttons if we're in kiosk mode
     if (cursorThemeSettings()->isImmutable( QStringLiteral( "cursorTheme" ))) {

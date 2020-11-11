@@ -112,7 +112,7 @@ QString PlasmaAppletItem::author() const
         return QString();
     }
 
-    return m_info.authors().first().name();
+    return m_info.authors().constFirst().name();
 }
 
 QString PlasmaAppletItem::email() const
@@ -121,7 +121,7 @@ QString PlasmaAppletItem::email() const
         return QString();
     }
 
-    return m_info.authors().first().emailAddress();
+    return m_info.authors().constFirst().emailAddress();
 }
 
 int PlasmaAppletItem::running() const

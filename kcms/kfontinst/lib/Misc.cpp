@@ -419,8 +419,7 @@ QMap<QString, QString> getFontFileMap(const QSet<QString> &files)
         {
             QVector<QString>             orig(fIt.value().count()),
                                          modified(fIt.value().count());
-            QSet<QString>::ConstIterator oIt(fIt.value().constBegin()),
-                                         oEnd(fIt.value().constEnd());
+            QSet<QString>::ConstIterator oIt(fIt.value().constBegin());
             bool                         good=true;
             int                          count=fIt.value().count();
 

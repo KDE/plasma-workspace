@@ -387,7 +387,6 @@ QString getFcString(FcPattern *pat, const char *val, int index)
 // ...so if possible, use that. Else, use the first non "xx" lang.
 QString getFcLangString(FcPattern *pat, const char *val, const char *valLang)
 {
-    QString rv;
     int     langIndex=-1;
 
     for(int i=0; true; ++i)
