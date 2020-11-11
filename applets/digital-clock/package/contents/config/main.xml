@@ -42,16 +42,12 @@
       <default>default</default>
     </entry>
     <entry name="selectedTimeZones" type="StringList">
-      <label>A list of the time zones available on mouse wheel. Requires wheelChangesTimezone to be true. Format is "Europe/London". Special entry "Local" indicates system time zone.</label>
+      <label>A list of the configured time zones. Format is "Europe/London". Special entry "Local" indicates system time zone.</label>
       <default>Local</default>
     </entry>
     <entry name="lastSelectedTimezone" type="String">
-      <label>When multiple time zones are configured, this is the one shown on widget restore.</label>
+      <label>When multiple time zones are configured, this is the one shown on widget restore. Typically the system's current timezone.</label>
       <default>Local</default>
-    </entry>
-    <entry name="wheelChangesTimezone" type="Bool">
-      <label>Whether the mouse wheel switches between the timezones configured in selectedTimeZones.</label>
-      <default>false</default>
     </entry>
     <entry name="displayTimezoneAsCode" type="Bool">
       <label>Whether the timezone is displayed as a code i.e. "GMT" or full text i.e. "London".</label>

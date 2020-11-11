@@ -17,6 +17,8 @@
  */
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
+
+import org.kde.kquickcontrolsaddons 2.0 // For kcmshell
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -429,17 +431,31 @@ PlasmaComponents3.Page {
 
             // Clocks stuff
             // ------------
-            // Header text
-            PlasmaExtras.Heading {
+            // Header text + button to change time & timezone
+            RowLayout {
+                Layout.fillWidth: true
                 visible: worldClocks.visible
 
-                Layout.fillWidth: true
+                PlasmaExtras.Heading {
+                    Layout.fillWidth: true
 
-                level: 2
+                    level: 2
 
-                text: i18n("Time Zones")
-                maximumLineCount: 1
-                elide: Text.ElideRight
+                    text: i18n("Time Zones")
+                    maximumLineCount: 1
+                    elide: Text.ElideRight
+                }
+
+                PlasmaComponents3.ToolButton {
+                    visible: KCMShell.authorize("clock.desktop").length > 0
+                    text: i18n("Switch...")
+                    icon.name: "preferences-system-time"
+                    onClicked: KCMShell.openSystemSettings("clock")
+
+                    PlasmaComponents3.ToolTip {
+                        text: i18n("Switch to another timezone")
+                    }
+                }
             }
 
             // Clocks view itself
@@ -472,12 +488,6 @@ PlasmaComponents3.Page {
 
                         width: clocksList.width
                         height: units.gridUnit + units.smallSpacing
-
-                        MouseArea {
-                            anchors.fill: parent
-                            cursorShape: Qt.PointingHandCursor
-                            onClicked: plasmoid.configuration.lastSelectedTimezone = modelData
-                        }
 
                         RowLayout {
                             anchors.fill: parent

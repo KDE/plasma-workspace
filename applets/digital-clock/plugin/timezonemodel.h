@@ -32,18 +32,22 @@ class TimeZoneFilterProxy : public QSortFilterProxyModel
 {
     Q_OBJECT
     Q_PROPERTY(QString filterString WRITE setFilterString MEMBER m_filterString NOTIFY filterStringChanged)
+    Q_PROPERTY(bool onlyShowChecked WRITE setOnlyShowChecked MEMBER m_onlyShowChecked NOTIFY onlyShowCheckedChanged)
 
 public:
     explicit TimeZoneFilterProxy(QObject *parent = nullptr);
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
     void setFilterString(const QString &filterString);
+    void setOnlyShowChecked(const bool show);
 
 Q_SIGNALS:
     void filterStringChanged();
+    void onlyShowCheckedChanged();
 
 private:
     QString m_filterString;
+    bool m_onlyShowChecked;
     QStringMatcher m_stringMatcher;
 };
 
@@ -63,7 +67,8 @@ public:
         RegionRole,
         CityRole,
         CommentRole,
-        CheckedRole
+        CheckedRole,
+        IsLocalTimeZoneRole
     };
 
     int rowCount(const QModelIndex &parent) const override;
