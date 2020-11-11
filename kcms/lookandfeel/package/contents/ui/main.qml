@@ -88,36 +88,6 @@ KCM.GridViewKCM {
             Item {
                 Layout.fillWidth: true
             }
-            QtControls.Button {
-                icon.name: "configure"
-                text: i18n("Customize...")
-                onClicked: customizeButton.open()
-                QtControls.Menu {
-                    id: customizeButton
-                    x: 0
-                    y: -height
-                    QtControls.MenuItem {
-                        icon.name: "preferences-desktop-color"
-                        text: i18n("Colors")
-                        onClicked: kcm.pushModule("kcm_colors")
-                    }
-                    QtControls.MenuItem {
-                        icon.name: "preferences-desktop-icons"
-                        text: i18n("Icons")
-                        onClicked: kcm.pushModule("kcm_icons")
-                    }
-                    QtControls.MenuItem {
-                        icon.name: "preferences-desktop-font"
-                        text: i18n("Fonts")
-                        onClicked: kcm.pushModule("kcm_fonts")
-                    }
-                    QtControls.MenuItem {
-                        icon.name: "preferences-desktop-cursors"
-                        text: i18n("Cursors")
-                        onClicked: kcm.pushModule("kcm_cursortheme")
-                    }
-                }
-            }
             NewStuff.Button {
                 text: i18n("Get New Global Themes...")
                 configFile: "lookandfeel.knsrc"
