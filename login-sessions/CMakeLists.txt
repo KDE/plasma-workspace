@@ -1,8 +1,8 @@
 ## For Plasma end users
 
-configure_file(plasma.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasma.desktop)
+configure_file(plasmax11.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasmax11.desktop)
 install(FILES
-        ${CMAKE_CURRENT_BINARY_DIR}/plasma.desktop
+        ${CMAKE_CURRENT_BINARY_DIR}/plasmax11.desktop
         DESTINATION ${KDE_INSTALL_DATADIR}/xsessions
 )
 
