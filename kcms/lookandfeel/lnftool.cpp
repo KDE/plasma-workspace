@@ -91,6 +91,8 @@ int main(int argc, char **argv)
         kcm->load();
         kcm->setResetDefaultLayout(parser.isSet(_resetLayout));
         kcm->lookAndFeelSettings()->setLookAndFeelPackage(parser.value(_apply));
+        // Save manually as we aren't in an event loop
+        kcm->lookAndFeelSettings()->save();
         kcm->save();
         delete kcm;
     }
