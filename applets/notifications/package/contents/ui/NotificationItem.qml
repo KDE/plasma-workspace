@@ -66,7 +66,6 @@ ColumnLayout {
     property bool killable
 
     property QtObject jobDetails
-    property bool showDetails
 
     property alias configureActionLabel: notificationHeading.configureActionLabel
     property var actionNames: []
@@ -310,7 +309,6 @@ ColumnLayout {
             killable: notificationItem.killable
 
             jobDetails: notificationItem.jobDetails
-            showDetails: notificationItem.showDetails
 
             onSuspendJobClicked: notificationItem.suspendJobClicked()
             onResumeJobClicked: notificationItem.resumeJobClicked()

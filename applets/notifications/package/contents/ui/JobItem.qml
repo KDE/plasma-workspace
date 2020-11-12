@@ -41,8 +41,6 @@ ColumnLayout {
 
     property bool hovered
     property QtObject jobDetails
-    // TOOD make an alias on visible if we're not doing an animation
-    property bool showDetails
 
     readonly property int totalFiles: jobItem.jobDetails && jobItem.jobDetails.totalFiles || 0
     readonly property var url: {
