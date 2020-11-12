@@ -20,6 +20,8 @@ Q_OBJECT
 private:
     RunnerManager *manager = nullptr;
 
+    QFileInfo createExecutableFile(const QString &fileName);
+
 private Q_SLOTS:
     void initTestCase();
     void testShellrunnerQueries_data();
@@ -87,20 +89,37 @@ void ShellRunnerTest::testShellrunnerQueries_data()
         << 0 << "LC_ALL=C /bin/trueeeeeeeeeeee" << "" << QStringList{};
 
     // Some file we can access with a ~
-    const QString tmpPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
-    QDir(tmpPath).mkpath(".");
-    QFile testFile(tmpPath + "/test.sh");
-    testFile.open(QIODevice::WriteOnly);
-    testFile.setPermissions(QFile::ExeOwner);
-    const QString absoluteFilePath = testFile.fileName();
-    const QString tildePath = KShell::tildeCollapse(absoluteFilePath);
+    const QFileInfo testFile = createExecutableFile("test.sh");
+    const QString tildePath = KShell::tildeCollapse(testFile.absoluteFilePath());
 
     QTest::newRow("Should show result for full path with tilde")
-        << 1 << tildePath << tildePath << QStringList{};
+        << 1 << tildePath << KShell::quoteArg(tildePath) << QStringList{};
     QTest::newRow("Should show result for full path with tilde and envs")
         << 1 << "LC_ALL=C " + tildePath << KShell::quoteArg(tildePath) << QStringList{"LC_ALL=C"};
     QTest::newRow("Should show result for full path with tilde + args and envs")
         << 1 << "LC_ALL=C " + tildePath + " --help" << KShell::quoteArg(tildePath) + " --help" << QStringList{"LC_ALL=C"};
+
+    // Some file we can access with a ~ and which has a space in its filename
+    const QFileInfo testSpaceFile = createExecutableFile("test space.sh");
+    const QString tildeSpacePath = KShell::tildeCollapse(testSpaceFile.absoluteFilePath());
+
+    QTest::newRow("Should show no result for full path with tilde and unquoted space")
+            << 0 << tildeSpacePath << QString() << QStringList{};
+    QTest::newRow("Should show result for full path with tilde and quoted space")
+            << 1 << KShell::quoteArg(tildeSpacePath) << KShell::quoteArg(tildeSpacePath) << QStringList{};
+    QTest::newRow("Should show result for full path with tilde, quoted space and args")
+            << 1 << KShell::quoteArg(tildeSpacePath) + " --help"
+            << KShell::joinArgs({tildeSpacePath, "--help"}) << QStringList{};
+}
+
+QFileInfo ShellRunnerTest::createExecutableFile(const QString &fileName)
+{
+    const QString tmpPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    QDir(tmpPath).mkpath(".");
+    QFile testFile(tmpPath + "/" + fileName);
+    testFile.open(QIODevice::WriteOnly);
+    testFile.setPermissions(QFile::ExeOwner);
+    return QFileInfo(testFile);
 }
 
 QTEST_MAIN(ShellRunnerTest)

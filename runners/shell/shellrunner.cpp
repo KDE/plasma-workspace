@@ -53,16 +53,9 @@ ShellRunner::~ShellRunner()
 
 void ShellRunner::match(Plasma::RunnerContext &context)
 {
-    bool isShellCommand = context.type() == Plasma::RunnerContext::ShellCommand || context.type() == Plasma::RunnerContext::Executable;
     QStringList envs;
     QString command = context.query();
-    // If it is not a shell command we check if we use ENV variables, FEATURE: 409107
-    // This is not recognized when setting the context type and we can't change it, because
-    // other runners depend on the current pattern
-    if (!isShellCommand) {
-        isShellCommand = parseENVVariables(context.query(), envs, command);
-    }
-    if (isShellCommand) {
+    if (parseShellCommand(context.query(), envs, command)) {
         const QString term = context.query();
         Plasma::QueryMatch match(this);
         match.setId(term);
@@ -89,7 +82,7 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
     job->start();
 }
 
-bool ShellRunner::parseENVVariables(const QString &query, QStringList &envs, QString &command)
+bool ShellRunner::parseShellCommand(const QString &query, QStringList &envs, QString &command)
 {
     const static QRegularExpression envRegex = QRegularExpression(QStringLiteral("^.+=.+$"));
     const QStringList split = KShell::splitArgs(query);
