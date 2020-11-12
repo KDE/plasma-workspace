@@ -9,6 +9,8 @@
 #include <KRunner/RunnerManager>
 #include <QSignalSpy>
 
+#include <clocale>
+
 using namespace Plasma;
 
 class ShellRunnerTest : public QObject
