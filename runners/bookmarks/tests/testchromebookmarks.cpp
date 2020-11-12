@@ -39,8 +39,8 @@ void TestChromeBookmarks::bookmarkFinderShouldFindEachProfileDirectory()
 
     QList<Profile> profiles = findChrome.find();
     QCOMPARE(profiles.size(), 2);
-    QCOMPARE(profiles[0].path(), profileTemplate.arg("chromium").arg("Default"));
-    QCOMPARE(profiles[1].path(), profileTemplate.arg("chromium").arg("Profile 1"));
+    QCOMPARE(profiles[0].path(), profileTemplate.arg("chromium", "Default"));
+    QCOMPARE(profiles[1].path(), profileTemplate.arg("chromium", "Profile 1"));
 }
 
 void TestChromeBookmarks::bookmarkFinderShouldReportNoProfilesOnErrors()

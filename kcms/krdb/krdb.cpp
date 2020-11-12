@@ -296,7 +296,7 @@ static void createGtkrc( const QPalette& cg, bool exportGtkTheme, const QString&
         if (!exist_gtkrc)
         {
             QString gtk2ThemeFilename;
-            gtk2ThemeFilename = QStringLiteral("%1/.themes/%2/gtk-2.0/gtkrc").arg(QDir::homePath()).arg(gtkStyle);
+            gtk2ThemeFilename = QStringLiteral("%1/.themes/%2/gtk-2.0/gtkrc").arg(QDir::homePath(), gtkStyle);
             if (!QFile::exists(gtk2ThemeFilename)) {
                 QStringList gtk2ThemePath;
                 gtk2ThemeFilename.clear();
@@ -306,7 +306,7 @@ static void createGtkrc( const QPalette& cg, bool exportGtkTheme, const QString&
                 gtk2ThemePath.removeDuplicates();
                 for (int i = 0; i < gtk2ThemePath.size(); ++i)
                 {
-                    gtk2ThemeFilename = QStringLiteral("%1/themes/%2/gtk-2.0/gtkrc").arg(gtk2ThemePath.at(i)).arg(gtkStyle);
+                    gtk2ThemeFilename = QStringLiteral("%1/themes/%2/gtk-2.0/gtkrc").arg(gtk2ThemePath.at(i), gtkStyle);
                     if (QFile::exists(gtk2ThemeFilename))
                         break;
                     else

@@ -199,13 +199,13 @@ void ServiceRunnerTest::testForeignAppsOutscoreKCMs()
 
     // KDE app should be >= non-KDE app
     QVERIFY2(virtThingsRelevance >= virtManRelevance,
-             qPrintable(QStringLiteral("%1 >= %2").arg(virtThingsRelevance.value()).arg(virtManRelevance.value())));
+             qPrintable(QStringLiteral("%1 >= %2").arg(virtThingsRelevance.value(), virtManRelevance.value())));
     // KDE app strictly greater KDE kcm
     QVERIFY2(virtThingsRelevance > kcmRelevance,
-             qPrintable(QStringLiteral("%1 > %2").arg(virtThingsRelevance.value()).arg(kcmRelevance.value())));
+             qPrintable(QStringLiteral("%1 > %2").arg(virtThingsRelevance.value(), kcmRelevance.value())));
     // non-KDE app also strictly greater (because it is an app)
     QVERIFY2(virtManRelevance > kcmRelevance,
-             qPrintable(QStringLiteral("%1 > %2").arg(virtManRelevance.value()).arg(kcmRelevance.value())));
+             qPrintable(QStringLiteral("%1 > %2").arg(virtManRelevance.value(), kcmRelevance.value())));
 }
 
 void ServiceRunnerTest::testINotifyUsage()
