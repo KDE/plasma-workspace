@@ -132,8 +132,8 @@ KCM.GridViewKCM {
                             Kirigami.Icon {
                                 source: model.decoration
                                 smooth: true
-                                width: sizeComboDelegate.size / Screen.devicePixelRatio
-                                height: sizeComboDelegate.size / Screen.devicePixelRatio
+                                Layout.preferredWidth: sizeComboDelegate.size / Screen.devicePixelRatio
+                                Layout.preferredHeight: sizeComboDelegate.size / Screen.devicePixelRatio
                                 visible: valid && sizeComboDelegate.size > 0
                             }
 
