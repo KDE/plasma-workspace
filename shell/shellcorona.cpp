@@ -155,7 +155,7 @@ ShellCorona::ShellCorona(QObject *parent)
     QObject::connect(dashboardAction, &QAction::triggered,
                      this, &ShellCorona::setDashboardShown);
     dashboardAction->setText(i18n("Show Desktop"));
-    connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, [dashboardAction](bool showing) {
+    connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, dashboardAction, [dashboardAction](bool showing) {
         dashboardAction->setText(showing ? i18n("Hide Desktop") : i18n("Show Desktop"));
         dashboardAction->setChecked(showing);
     });
@@ -254,7 +254,7 @@ ShellCorona::~ShellCorona()
     while (!containments().isEmpty()) {
         // Deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
         // Deleting a containment in turn also kills any panel views
-        delete containments().first();
+        delete containments().constFirst();
     }
 }
 
@@ -647,7 +647,8 @@ void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)
     m_lookAndFeelPackage.setPath(packageName);
 
     //get rid of old config
-    for (const QString &group : conf->groupList()) {
+    const QStringList groupList = conf->groupList();
+    for (const QString &group : groupList) {
         conf->deleteGroup(group);
     }
     conf->sync();
@@ -723,7 +724,8 @@ void ShellCorona::load()
     //NOTE: this is needed in case loadLayout() did *not* call loadDefaultLayout()
     //it needs to be after of loadLayout() as it would always create new
     //containments on each startup otherwise
-    for (QScreen* screen : qGuiApp->screens()) {
+    const auto screens = qGuiApp->screens();
+    for (QScreen* screen : screens) {
         //the containments may have been created already by the startup script
         //check their existence in order to not have duplicated desktopviews
         if (!m_desktopViewforId.contains(m_screenPool->id(screen->name()))) {
@@ -801,10 +803,11 @@ void ShellCorona::primaryOutputChanged()
 #ifndef NDEBUG
 void ShellCorona::screenInvariants() const
 {
-    Q_ASSERT(m_desktopViewforId.keys().count() <= QGuiApplication::screens().count());
+    const QList<int> keys = m_desktopViewforId.keys();
+    Q_ASSERT(keys.count() <= QGuiApplication::screens().count());
 
     QSet<QScreen*> screens;
-    foreach (const int id, m_desktopViewforId.keys()) {
+    for (const int id : keys) {
         const DesktopView *view = m_desktopViewforId.value(id);
         QScreen *screen = view->screenToFollow();
         Q_ASSERT(!screens.contains(screen));
@@ -895,7 +898,7 @@ void ShellCorona::unload()
         // deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
         // this form doesn't crash, while qDeleteAll(containments()) does
         // And is more correct anyways to use destroy()
-        containments().first()->destroy();
+        containments().constFirst()->destroy();
     }
 }
 
@@ -938,7 +941,8 @@ void ShellCorona::loadDefaultLayout()
     //NOTE: Is important the containments already exist for each screen
     // at the moment of the script execution,the same loop in :load()
     // is executed too late
-    for (QScreen* screen : qGuiApp->screens()) {
+    const auto screens = qGuiApp->screens();
+    for (QScreen* screen : screens) {
         addOutput(screen);
     }
 
@@ -1310,7 +1314,8 @@ void ShellCorona::checkAllDesktopsUiReady(bool ready)
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString& activity, int screenNum)
 {
-    for (Plasma::Containment *cont : containmentsForActivity(activity)) {
+    const auto containments = containmentsForActivity(activity);
+    for (Plasma::Containment *cont : containments) {
         //in the case of a corrupt config file
         //with multiple containments with same lastScreen
         //it can happen two insertContainment happen for
@@ -1638,7 +1643,8 @@ void ShellCorona::activityAdded(const QString &id)
 void ShellCorona::activityRemoved(const QString &id)
 {
     m_activityContainmentPlugins.remove(id);
-    for (auto cont : containmentsForActivity(id)) {
+    const QList<Plasma::Containment *> containments = containmentsForActivity(id);
+    for (auto cont : containments) {
         cont->destroy();
     }
 }
@@ -1646,8 +1652,6 @@ void ShellCorona::activityRemoved(const QString &id)
 void ShellCorona::insertActivity(const QString &id, const QString &plugin)
 {
     activityAdded(id);
-
-    const QString currentActivityReally = m_activityController->currentActivity();
 
     // TODO: This needs to go away!
     // The containment creation API does not know when we have a
@@ -1831,7 +1835,7 @@ void ShellCorona::populateAddPanelsMenu()
         return md.value(QStringLiteral("NoDisplay")) != QLatin1String("true") && KPluginMetaData::readStringList(md.rawData(), QStringLiteral("X-Plasma-ContainmentCategories")).contains(QLatin1String("panel"));
     };
     const QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
-    for (auto tpl : templates) {
+    for (const auto &tpl : templates) {
         sorted.insert(tpl.name(), qMakePair(emptyInfo, tpl));
     }
 
@@ -1975,7 +1979,8 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
     //won't be associated to a screen
 //     qDebug() << "ShellCorona screenForContainment: " << containment << " Last screen is " << containment->lastScreen();
 
-    for (auto screen : qGuiApp->screens()) {
+    const auto screens = qGuiApp->screens();
+    for (auto screen : screens) {
         // containment->lastScreen() == m_screenPool->id(screen->name()) to check if the lastScreen refers to a screen that exists/it's known
         if (containment->lastScreen() == m_screenPool->id(screen->name()) &&
             (containment->activity() == m_activityController->currentActivity() ||
@@ -2010,7 +2015,7 @@ void ShellCorona::stopCurrentActivity()
 void ShellCorona::insertContainment(const QString &activity, int screenNum, Plasma::Containment *containment)
 {
     Plasma::Containment *cont = nullptr;
-    auto candidates = containmentsForActivity(activity);
+    const auto candidates = containmentsForActivity(activity);
     for (Plasma::Containment *c : candidates) {
         //using lastScreen() instead of screen() catches also containments of activities that aren't the current one, so not assigned to a screen right now
         if (c->lastScreen() == screenNum) {
