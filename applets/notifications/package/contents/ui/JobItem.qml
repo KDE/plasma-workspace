@@ -229,7 +229,7 @@ ColumnLayout {
             PropertyChanges {
                 target: suspendButton
                 tooltip: i18ndc("plasma_applet_org.kde.plasma.notifications", "Resume paused job", "Resume")
-                iconSource: "media-playback-start"
+                checked: true
             }
             PropertyChanges {
                 target: progressBar
