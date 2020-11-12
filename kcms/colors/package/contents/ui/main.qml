@@ -154,11 +154,6 @@ KCM.GridViewKCM {
                 id: windowTitleBar
                 width: parent.width
                 height: Math.round(Kirigami.Units.gridUnit * 1.5)
-                gradient: Gradient {
-                    // from Breeze Decoration::paintTitleBar
-                    GradientStop { position: 0.0; color: Qt.lighter(model.activeTitleBarBackground, 1.2) }
-                    GradientStop { position: 0.8; color: model.activeTitleBarBackground }
-                }
 
                 color: model.activeTitleBarBackground
 

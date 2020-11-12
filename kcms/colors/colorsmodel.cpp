@@ -185,10 +185,16 @@ void ColorsModel::load()
 
         const QPalette palette = KColorScheme::createApplicationPalette(config);
 
-        KColorScheme headerColorScheme(QPalette::Active, KColorScheme::Header, config);
-        KConfigGroup wmConfig(config, QStringLiteral("WM"));
-        const QColor activeTitleBarBackground = wmConfig.readEntry("activeBackground", headerColorScheme.background().color());
-        const QColor activeTitleBarForeground = wmConfig.readEntry("activeForeground", headerColorScheme.foreground().color());
+        QColor activeTitleBarBackground, activeTitleBarForeground;
+         if (KColorScheme::isColorSetSupported(config, KColorScheme::Header)) {
+            KColorScheme headerColorScheme(QPalette::Active, KColorScheme::Header, config);
+            activeTitleBarBackground = headerColorScheme.background().color();
+            activeTitleBarForeground = headerColorScheme.foreground().color();
+        } else {
+            KConfigGroup wmConfig(config, QStringLiteral("WM"));
+            activeTitleBarBackground = wmConfig.readEntry("activeBackground", palette.color(QPalette::Active, QPalette::Highlight));
+            activeTitleBarForeground = wmConfig.readEntry("activeForeground", palette.color(QPalette::Active, QPalette::HighlightedText));
+        }
 
         ColorsModelData item{
             name,
