@@ -1,27 +1,31 @@
 /*
- * Copyright (C) 2014  Daniel Vratil <dvratil@redhat.com>
- * Copyright (C) 2019  David Edmundson <davidedmundson@kde.org>
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
+ * SPDX-FileCopyrightText: 2014 Daniel Vrátil <dvratil@redhat.com>
+ * SPDX-FileCopyrightText: 2019 David Edmundson <davidedmundson@kde.org>
+ * SPDX-FileCopyrightText: 2020 Andrey Butirsky <butirsky@gmail.com>
+ * SPDX-License-Identifier: LGPL-2.1-or-later
  */
 
 #include "keyboardlayout.h"
 #include "keyboard_layout_interface.h"
 
 #include <QDBusInterface>
+
+template<>
+void KeyboardLayout::requestDBusData<KeyboardLayout::CurrentLayout>()
+{ if (mIface) requestDBusData(mIface->getCurrentLayout(), mCurrentLayout, &KeyboardLayout::currentLayoutChanged); }
+
+template<>
+void KeyboardLayout::requestDBusData<KeyboardLayout::CurrentLayoutDisplayName>()
+{ if (mIface) requestDBusData(mIface->getLayoutDisplayName(mCurrentLayout), mCurrentLayoutDisplayName, &KeyboardLayout::currentLayoutDisplayNameChanged); }
+
+template<>
+void KeyboardLayout::requestDBusData<KeyboardLayout::CurrentLayoutShortName>()
+{ if (mIface) requestDBusData(mIface->getCurrentLayoutShortName(), mCurrentLayoutShortName, &KeyboardLayout::currentLayoutShortNameChanged); }
+
+template<>
+void KeyboardLayout::requestDBusData<KeyboardLayout::Layouts>()
+{ if (mIface) requestDBusData(mIface->getLayoutsList(), mLayouts, &KeyboardLayout::layoutsChanged); }
+
 
 KeyboardLayout::KeyboardLayout(QObject* parent)
     : QObject(parent)
@@ -41,9 +45,12 @@ KeyboardLayout::KeyboardLayout(QObject* parent)
             this, &KeyboardLayout::onCurrentLayoutChanged);
     connect(mIface, &OrgKdeKeyboardLayoutsInterface::layoutListChanged,
             this, &KeyboardLayout::onLayoutListChanged);
+    connect(this, &KeyboardLayout::currentLayoutChanged,
+            this, &KeyboardLayout::requestDBusData<CurrentLayoutDisplayName>);
 
-    mCurrentLayout = callDBus(mIface->getCurrentLayout());
-    mLayouts = callDBus(mIface->getLayoutsList());
+    requestDBusData<CurrentLayout>();
+    requestDBusData<CurrentLayoutShortName>();
+    requestDBusData<Layouts>();
 }
 
 KeyboardLayout::~KeyboardLayout()
@@ -53,30 +60,19 @@ KeyboardLayout::~KeyboardLayout()
 void KeyboardLayout::onCurrentLayoutChanged(const QString &newLayout)
 {
     mCurrentLayout = newLayout;
-    Q_EMIT currentLayoutChanged();
+
+    requestDBusData<CurrentLayoutShortName>();
+    requestDBusData<CurrentLayoutDisplayName>();
 }
 
 void KeyboardLayout::onLayoutListChanged()
 {
-    if (mIface) {
-        mLayouts = callDBus(mIface->getLayoutsList());
-        Q_EMIT layoutsChanged();
-    }
-}
-
-QString KeyboardLayout::currentLayoutShortName() const
-{
-    return mIface ? callDBus(mIface->getCurrentLayoutShortName()) : QString();
-}
-
-QString KeyboardLayout::currentLayoutDisplayName() const
-{
-    return mIface ? callDBus(mIface->getLayoutDisplayName(mCurrentLayout)) : QString();
+    requestDBusData<CurrentLayout>();
+    requestDBusData<CurrentLayoutShortName>();
+    requestDBusData<Layouts>();
 }
 
 void KeyboardLayout::setCurrentLayout(const QString &layout)
 {
-    if (mIface) {
-        mIface->setLayout(layout);
-    }
+    if (mIface) mIface->setLayout(layout);
 }

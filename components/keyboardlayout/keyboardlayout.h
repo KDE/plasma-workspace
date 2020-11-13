@@ -20,15 +20,16 @@ class KeyboardLayout : public QObject
 
     Q_PROPERTY(QString currentLayout
                MEMBER mCurrentLayout
-               WRITE setCurrentLayout)
+               WRITE setCurrentLayout
+               NOTIFY currentLayoutChanged)
 
     Q_PROPERTY(QString currentLayoutDisplayName
-               READ currentLayoutDisplayName
-               NOTIFY currentLayoutChanged)
+               MEMBER mCurrentLayoutDisplayName
+               NOTIFY currentLayoutDisplayNameChanged)
 
     Q_PROPERTY(QString currentLayoutShortName
-               READ currentLayoutShortName
-               NOTIFY currentLayoutChanged)
+               MEMBER mCurrentLayoutShortName
+               NOTIFY currentLayoutShortNameChanged)
 
     Q_PROPERTY(QStringList layouts
                MEMBER mLayouts
@@ -40,34 +41,47 @@ public:
 
 Q_SIGNALS:
     void currentLayoutChanged();
+    void currentLayoutDisplayNameChanged();
+    void currentLayoutShortNameChanged();
     void layoutsChanged();
 
 private:
+    void setCurrentLayout(const QString &layout);
+
+    enum DBusData {CurrentLayout, CurrentLayoutDisplayName, CurrentLayoutShortName, Layouts};
+
+    template<class T>
+    void requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)());
+    template<DBusData>
+    inline void requestDBusData();
+
     void onCurrentLayoutChanged(const QString &newLayout);
     void onLayoutListChanged();
 
-    QString currentLayoutShortName() const;
-    QString currentLayoutDisplayName() const;
-    void setCurrentLayout(const QString &layout);
-
-    template<class T>
-    static T callDBus(QDBusPendingReply<T> pendingReply);
-
     QStringList mLayouts;
     QString mCurrentLayout;
+    QString mCurrentLayoutDisplayName;
+    QString mCurrentLayoutShortName;
     OrgKdeKeyboardLayoutsInterface *mIface;
 };
 
 template<class T>
-T KeyboardLayout::callDBus(QDBusPendingReply<T> pendingReply)
+void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)())
 {
-    pendingReply.waitForFinished();
-    if (pendingReply.isError()) {
-        qCWarning(KEYBOARD_LAYOUT) << pendingReply.error().message();
-        return {};
-    } else {
-        return pendingReply.value();
-    }
+    const QDBusPendingCallWatcher * const watcher = new QDBusPendingCallWatcher(pendingReply, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this,
+        [this, &out, notify](QDBusPendingCallWatcher *watcher)
+        {
+            QDBusPendingReply<T> reply = *watcher;
+            if (reply.isError()) {
+                qCWarning(KEYBOARD_LAYOUT) << reply.error().message();
+            } else {
+                out = reply.value();
+                emit (this->*notify)();
+            }
+            watcher->deleteLater();
+        }
+    );
 }
 
 #endif // KEYBOARDLAYOUT_H
