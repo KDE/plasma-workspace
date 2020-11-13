@@ -9,6 +9,7 @@
 
 #include "sessionmanagementbackend.h"
 #include "ksmserver_interface.h"
+#include "kwin_interface.h"
 #include "debug.h"
 
 
@@ -66,6 +67,12 @@ void Shutdown::logoutCancelled()
 
 void Shutdown::logoutComplete() {
     runShutdownScripts();
+
+    // technically this isn't needed in the systemd managed mode, but it seems harmless for now. Guard if it becomes an issue
+    OrgKdeKWinSessionInterface kwinInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/Session"), QDBusConnection::sessionBus());
+    QDBusPendingReply<> reply = kwinInterface.quit();
+    reply.waitForFinished();
+
     if (m_shutdownType == KWorkSpace::ShutdownTypeHalt) {
             SessionBackend::self()->shutdown();
     } else if (m_shutdownType == KWorkSpace::ShutdownTypeReboot) {
