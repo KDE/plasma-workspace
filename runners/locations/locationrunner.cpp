@@ -24,10 +24,12 @@
 #include <QDir>
 
 #include <QDebug>
+#include <KApplicationTrader>
 #include <KRun>
 #include <KLocalizedString>
 #include <KProtocolInfo>
 #include <KUriFilter>
+#include <KIO/DesktopExecParser>
 #include <KIO/Global>
 #include <KShell>
 
@@ -85,24 +87,35 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
 
         QUrl url(term);
 
-        if (url.isEmpty() || !KProtocolInfo::isKnownProtocol(url.scheme())) {
+        if (url.isEmpty()) {
             return;
         }
 
         Plasma::QueryMatch match(this);
-        match.setIconName(KProtocolInfo::icon(url.scheme()));
         match.setData(url.url());
 
-        if (KProtocolInfo::isHelperProtocol(url.scheme())) {
-            //qDebug() << "helper protocol" << url.protocol() <<"call external application" ;
-            if (url.scheme() == QLatin1String("mailto")) {
-                match.setText(i18n("Send email to %1",url.path()));
+        const QString protocol = url.scheme();
+
+        if (!KProtocolInfo::isKnownProtocol(protocol) || KProtocolInfo::isHelperProtocol(protocol)) {
+            const KService::Ptr service = KApplicationTrader::preferredService(QLatin1String("x-scheme-handler/") + protocol);
+            if (service) {
+                match.setIconName(service->icon());
+                match.setText(i18n("Launch with %1", service->name()));
+            } else if (KProtocolInfo::isKnownProtocol(protocol)) {
+                Q_ASSERT(KProtocolInfo::isHelperProtocol(protocol));
+                match.setIconName(KProtocolInfo::icon(protocol));
+                match.setText(i18n("Launch with %1", KIO::DesktopExecParser::executableName(
+                                       KProtocolInfo::exec(protocol))));
             } else {
-                match.setText(i18n("Launch with %1", KProtocolInfo::exec(url.scheme())));
+                return;
             }
         } else {
-            //qDebug() << "protocol managed by browser" << url.protocol();
-            match.setText(i18n("Go to %1", url.toDisplayString()));
+            match.setIconName(KProtocolInfo::icon(protocol));
+            match.setText(i18n("Go to %1", url.toDisplayString(QUrl::PreferLocalFile)));
+        }
+
+        if (url.scheme() == QLatin1String("mailto")) {
+            match.setText(i18n("Send email to %1", url.path()));
         }
 
         if (type == Plasma::RunnerContext::UnknownType) {
