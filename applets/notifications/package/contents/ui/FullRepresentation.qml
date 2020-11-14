@@ -175,13 +175,13 @@ PlasmaComponents3.Page {
                 PlasmaComponents3.ToolButton {
                     visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading)
 
-
+                    Accessible.name: plasmoid.action("clearHistory").text
                     icon.name: "edit-clear-history"
                     enabled: plasmoid.action("clearHistory").visible
                     onClicked: action_clearHistory()
 
                     PlasmaComponents3.ToolTip {
-                        text: i18n("Clear History")
+                        text: parent.Accessible.name
                     }
                 }
             }
