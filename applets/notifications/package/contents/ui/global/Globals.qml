@@ -22,6 +22,7 @@ pragma Singleton
 import QtQuick 2.8
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.1
+import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -647,6 +648,7 @@ QtObject {
         target: NotificationManager.Server
         property: "inhibited"
         value: globals.inhibited
+        restoreMode: Binding.RestoreBinding
     }
 
     function toggleDoNotDisturbMode() {

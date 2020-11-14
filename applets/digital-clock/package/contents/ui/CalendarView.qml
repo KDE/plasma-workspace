@@ -17,6 +17,7 @@
  */
 import QtQuick 2.4
 import QtQuick.Layouts 1.1
+import QtQml 2.15
 
 import org.kde.kquickcontrolsaddons 2.0 // For kcmshell
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -246,6 +247,7 @@ PlasmaComponents3.Page {
                     target: plasmoid
                     property: "hideOnWindowDeactivate"
                     value: !plasmoid.configuration.pin
+                    restoreMode: Binding.RestoreBinding
                 }
 
                 TextMetrics {

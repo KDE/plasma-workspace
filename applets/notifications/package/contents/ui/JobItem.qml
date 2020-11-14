@@ -21,6 +21,7 @@
 import QtQuick 2.8
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
+import QtQml 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -88,6 +89,7 @@ ColumnLayout {
             property: "visible"
             value: true
             when: jobDragIcon.valid
+            restoreMode: Binding.RestoreBinding
         }
 
         DraggableFileArea {

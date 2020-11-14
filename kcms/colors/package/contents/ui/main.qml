@@ -23,6 +23,8 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
+import QtQml 2.15
+
 import org.kde.kirigami 2.8 as Kirigami
 import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kcm 1.3 as KCM
@@ -39,12 +41,14 @@ KCM.GridViewKCM {
         target: kcm.filteredModel
         property: "query"
         value: searchField.text
+        restoreMode: Binding.RestoreBinding
     }
 
     Binding {
         target: kcm.filteredModel
         property: "filter"
         value:  filterCombo.model[filterCombo.currentIndex].filter
+        restoreMode: Binding.RestoreBinding
     }
 
     KCM.SettingStateBinding {

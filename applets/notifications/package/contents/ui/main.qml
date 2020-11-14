@@ -19,6 +19,7 @@
  */
 
 import QtQuick 2.8
+import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -148,6 +149,7 @@ Item {
         target: plasmoid.nativeInterface
         property: "dragPixmapSize"
         value: units.iconSizes.large
+        restoreMode: Binding.RestoreBinding
     }
 
     function closePassivePlasmoid() {

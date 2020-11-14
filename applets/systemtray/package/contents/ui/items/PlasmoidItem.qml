@@ -18,6 +18,8 @@
  */
 
 import QtQuick 2.1
+import QtQml 2.15
+
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 AbstractItem {
@@ -93,5 +95,6 @@ AbstractItem {
         value: !plasmoid.configuration.pin
         target: plasmoidContainer.applet
         when: null !== plasmoidContainer.applet
+        restoreMode: Binding.RestoreBinding
     }
 }
