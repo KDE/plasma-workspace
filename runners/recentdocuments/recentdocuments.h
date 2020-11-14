@@ -28,7 +28,7 @@ class RecentDocuments : public Plasma::AbstractRunner {
     Q_OBJECT
 
     public:
-        RecentDocuments( QObject *parent, const QVariantList& args );
+        RecentDocuments( QObject *parent, const KPluginMetaData &metaData, const QVariantList& args );
         ~RecentDocuments() override;
 
         void match(Plasma::RunnerContext &context) override;

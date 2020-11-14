@@ -24,8 +24,8 @@
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(ActivityRunner, "plasma-runner-activityrunner.json")
 
-ActivityRunner::ActivityRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args),
+ActivityRunner::ActivityRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args),
       m_activities(new KActivities::Controller(this)),
       m_consumer(new KActivities::Consumer(this)),
       m_keywordi18n(i18nc("KRunner keyword", "activity")),

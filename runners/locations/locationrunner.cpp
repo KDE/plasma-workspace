@@ -36,8 +36,8 @@
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(LocationsRunner, "plasma-runner-locations.json")
 
 
-LocationsRunner::LocationsRunner(QObject *parent, const QVariantList& args)
-    : Plasma::AbstractRunner(parent, args)
+LocationsRunner::LocationsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList& args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     // set the name shown after the result in krunner window
     setObjectName(QStringLiteral("Locations"));

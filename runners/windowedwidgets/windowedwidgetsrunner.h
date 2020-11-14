@@ -38,7 +38,7 @@ class WindowedWidgetsRunner : public Plasma::AbstractRunner
     Q_OBJECT
 
 public:
-    WindowedWidgetsRunner(QObject *parent, const QVariantList &args);
+    WindowedWidgetsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~WindowedWidgetsRunner() override;
 
     void match(Plasma::RunnerContext &context) override;

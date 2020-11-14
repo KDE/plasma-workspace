@@ -34,7 +34,7 @@ class BookmarksRunner : public Plasma::AbstractRunner
     Q_OBJECT
 
     public:
-        BookmarksRunner(QObject* parent, const QVariantList &args);
+        BookmarksRunner(QObject* parent, const KPluginMetaData &metaData, const QVariantList &args);
         ~BookmarksRunner() override;
 
         void match(Plasma::RunnerContext &context) override;

@@ -30,7 +30,7 @@ class ActivityRunner : public Plasma::AbstractRunner
     Q_OBJECT
 
     public:
-        ActivityRunner(QObject *parent, const QVariantList &args);
+        ActivityRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
         ~ActivityRunner() override;
 
         void match(Plasma::RunnerContext &context) override;

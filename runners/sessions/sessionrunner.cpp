@@ -29,8 +29,8 @@
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(SessionRunner, "plasma-runner-sessions.json")
 
-SessionRunner::SessionRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args)
+SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Sessions"));
     setPriority(LowPriority);

@@ -38,8 +38,8 @@
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(CalculatorRunner, "plasma-runner-calculator.json")
 
-CalculatorRunner::CalculatorRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args)
+CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     #ifdef ENABLE_QALCULATE
     m_engine = new QalculateEngine;

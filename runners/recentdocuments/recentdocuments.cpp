@@ -38,8 +38,8 @@ using namespace KActivities::Stats::Terms;
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(RecentDocuments, "plasma-runner-recentdocuments.json")
 
-RecentDocuments::RecentDocuments(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args)
+RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Recent Documents"));
 

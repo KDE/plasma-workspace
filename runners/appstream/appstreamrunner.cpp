@@ -35,8 +35,8 @@
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(InstallerRunner, "plasma-runner-appstream.json")
 
-InstallerRunner::InstallerRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args)
+InstallerRunner::InstallerRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Installation Suggestions"));
     setPriority(AbstractRunner::HighestPriority);

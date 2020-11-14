@@ -37,7 +37,7 @@ class ServiceRunner : public Plasma::AbstractRunner
     Q_OBJECT
 
     public:
-        ServiceRunner(QObject *parent, const QVariantList &args);
+        ServiceRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
         ~ServiceRunner() override;
 
         void match(Plasma::RunnerContext &context) override;

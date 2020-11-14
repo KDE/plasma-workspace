@@ -81,7 +81,7 @@ void ServiceRunnerTest::cleanupTestCase()
 
 void ServiceRunnerTest::testChromeAppsRelevance()
 {
-    ServiceRunner runner(this, QVariantList());
+    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
     Plasma::RunnerContext context;
     context.setQuery(QStringLiteral("chrome"));
 
@@ -112,7 +112,7 @@ void ServiceRunnerTest::testChromeAppsRelevance()
 void ServiceRunnerTest::testKonsoleVsYakuakeComment()
 {
     // Yakuake has konsole mentioned in comment, should be rated lower.
-    ServiceRunner runner(this, QVariantList());
+    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
     Plasma::RunnerContext context;
     context.setQuery(QStringLiteral("kons"));
 
@@ -147,7 +147,7 @@ void ServiceRunnerTest::testSystemSettings()
     // first it will be added to the seen cache, however disqualification of already seen items
     // may then also disqualify the KDE version of system settings on account of having already
     // seen it. This test makes sure we find the right version.
-    ServiceRunner runner(this, QVariantList());
+    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
     Plasma::RunnerContext context;
     context.setQuery(QStringLiteral("settings"));
 
@@ -173,7 +173,7 @@ void ServiceRunnerTest::testForeignAppsOutscoreKCMs()
 {
     // Our software outscores other things, but foreign applications should still
     // outscore our KCMs.
-    ServiceRunner runner(this, QVariantList());
+    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
     Plasma::RunnerContext context;
     context.setQuery(QStringLiteral("virt"));
 
@@ -227,7 +227,7 @@ void ServiceRunnerTest::testINotifyUsage()
     // The expectation here is that this KDW instance is not persistently claiming an inotify instance.
     bool inotifyCountCool = false;
     auto thread = QThread::create([&] {
-        ServiceRunner runner(nullptr, QVariantList());
+        ServiceRunner runner(nullptr, KPluginMetaData(), QVariantList());
         Plasma::RunnerContext context;
         context.setQuery(QStringLiteral("settings"));
 

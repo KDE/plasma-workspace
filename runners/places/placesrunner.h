@@ -47,7 +47,7 @@ class PlacesRunner : public Plasma::AbstractRunner
     Q_OBJECT
 
 public:
-    PlacesRunner(QObject* parent, const QVariantList &args);
+    PlacesRunner(QObject* parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~PlacesRunner() override;
 
     void match(Plasma::RunnerContext &context) override;

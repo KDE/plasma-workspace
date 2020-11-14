@@ -26,7 +26,7 @@ class LocationsRunner : public Plasma::AbstractRunner
     Q_OBJECT
 
     public:
-        LocationsRunner(QObject *parent, const QVariantList& args);
+        LocationsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList& args);
         ~LocationsRunner() override;
 
         void match(Plasma::RunnerContext &context) override;

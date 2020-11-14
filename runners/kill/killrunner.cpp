@@ -33,8 +33,9 @@
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(KillRunner, "plasma-runner-kill.json")
 
-KillRunner::KillRunner(QObject *parent, const QVariantList &args)
-        : Plasma::AbstractRunner(parent, args), m_processes(nullptr)
+KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args)
+    , m_processes(nullptr)
 {
     setObjectName(QStringLiteral("Kill Runner"));
 

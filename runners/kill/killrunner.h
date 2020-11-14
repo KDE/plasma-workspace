@@ -40,7 +40,7 @@ class KillRunner : public Plasma::AbstractRunner
     Q_OBJECT
 
 public:
-    KillRunner(QObject *parent, const QVariantList &args);
+    KillRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~KillRunner() override;
 
     void match(Plasma::RunnerContext &context) override;

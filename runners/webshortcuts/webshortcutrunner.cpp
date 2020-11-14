@@ -28,8 +28,8 @@
 #include <KSycoca>
 #include <KShell>
 
-WebshortcutRunner::WebshortcutRunner(QObject *parent, const QVariantList& args)
-    : Plasma::AbstractRunner(parent, args),
+WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args),
       m_match(this), m_filterBeforeRun(false)
 {
     setObjectName(QStringLiteral("Web Shortcut"));

@@ -30,7 +30,7 @@ class InstallerRunner : public Plasma::AbstractRunner
 Q_OBJECT
 
 public:
-    InstallerRunner(QObject *parent, const QVariantList &args);
+    InstallerRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~InstallerRunner() override;
 
     void match(Plasma::RunnerContext &context) override;

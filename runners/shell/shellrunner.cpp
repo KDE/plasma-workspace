@@ -31,8 +31,8 @@
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(ShellRunner, "plasma-runner-shell.json")
 
-ShellRunner::ShellRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args)
+ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Command"));
     setPriority(AbstractRunner::HighestPriority);

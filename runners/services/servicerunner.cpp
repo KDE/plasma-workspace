@@ -414,8 +414,8 @@ private:
     int weightedTermLength = -1;
 };
 
-ServiceRunner::ServiceRunner(QObject *parent, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, args)
+ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Application"));
     setPriority(AbstractRunner::HighestPriority);

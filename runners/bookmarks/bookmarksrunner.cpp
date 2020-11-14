@@ -39,8 +39,10 @@
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(BookmarksRunner, "plasma-runner-bookmarks.json")
 
 
-BookmarksRunner::BookmarksRunner( QObject* parent, const QVariantList &args )
-    : Plasma::AbstractRunner(parent, args), m_browser(nullptr), m_browserFactory(new BrowserFactory(this))
+BookmarksRunner::BookmarksRunner(QObject* parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::AbstractRunner(parent, metaData, args)
+    , m_browser(nullptr)
+    , m_browserFactory(new BrowserFactory(this))
 {
     setObjectName(QStringLiteral("Bookmarks"));
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds web browser bookmarks matching :q:.")));

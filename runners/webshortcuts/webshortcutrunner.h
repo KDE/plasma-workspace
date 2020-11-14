@@ -26,7 +26,7 @@ class WebshortcutRunner : public Plasma::AbstractRunner
     Q_OBJECT
 
     public:
-        WebshortcutRunner(QObject *parent, const QVariantList& args);
+        WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
         ~WebshortcutRunner() override;
 
         void match(Plasma::RunnerContext &context) override;

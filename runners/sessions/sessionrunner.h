@@ -33,7 +33,7 @@ class SessionRunner : public Plasma::AbstractRunner
     Q_OBJECT
 
     public:
-        SessionRunner(QObject *parent, const QVariantList &args);
+        SessionRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
         ~SessionRunner() override;
 
         void match(Plasma::RunnerContext &context) override;
