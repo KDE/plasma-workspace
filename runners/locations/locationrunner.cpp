@@ -76,16 +76,6 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
             match.setId(QStringLiteral("openfile"));
         }
         context.addMatch(match);
-    } else if (type == Plasma::RunnerContext::Help) {
-        //qDebug() << "Locations matching because of" << type;
-        Plasma::QueryMatch match(this);
-        match.setType(Plasma::QueryMatch::ExactMatch);
-        match.setText(i18n("Open %1", term));
-        match.setIconName(QStringLiteral("system-help"));
-        match.setRelevance(1);
-        match.setType(Plasma::QueryMatch::ExactMatch);
-        match.setId(QStringLiteral("help"));
-        context.addMatch(match);
     } else if (type == Plasma::RunnerContext::NetworkLocation || type == Plasma::RunnerContext::UnknownType) {
         const bool filtered = KUriFilter::self()->filterUri(term, QStringList() << QStringLiteral("kshorturifilter"));
 
