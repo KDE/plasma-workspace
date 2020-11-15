@@ -18,6 +18,7 @@
  */
 
 #include <QApplication>
+#include <KLocalizedString>
 #include "iconssettings.h"
 
 int main(int argc, char** argv)
@@ -36,7 +37,12 @@ int main(int argc, char** argv)
     }
 
     IconsSettings settings;
-    settings.setTheme(themeName);
-    settings.save();
+    if (settings.theme() == themeName) {
+        // In KNS this will be displayed as a warning in the UI
+        qWarning().noquote() << i18n("Icon theme is already used");
+    } else {
+        settings.setTheme(themeName);
+        settings.save();
+    }
     return 0;
 }

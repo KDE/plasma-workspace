@@ -33,7 +33,7 @@ set(changeicons_SRCS changeicons.cpp iconssettings.cpp)
 kconfig_add_kcfg_files(changeicons_SRCS iconssettingsbase.kcfgc GENERATE_MOC)
 
 add_executable(plasma-changeicons ${changeicons_SRCS})
-target_link_libraries(plasma-changeicons PRIVATE Qt5::Core KF5::KIOWidgets KF5::KCMUtils KF5::IconThemes)
+target_link_libraries(plasma-changeicons PRIVATE Qt5::Core KF5::KIOWidgets KF5::KCMUtils KF5::IconThemes KF5::I18n)
 
 kcoreaddons_desktop_to_json(kcm_icons "kcm_icons.desktop")
 
