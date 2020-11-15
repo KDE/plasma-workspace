@@ -32,12 +32,12 @@ import QtGraphicalEffects 1.0
 PlasmaComponents3.Page {
     id: expandedRepresentation
 
-    Layout.minimumWidth: units.gridUnit * 14
-    Layout.minimumHeight: units.gridUnit * 14
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 14
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 14
     Layout.preferredWidth: Layout.minimumWidth * 1.5
     Layout.preferredHeight: Layout.minimumHeight * 1.5
 
-    readonly property int controlSize: units.iconSizes.medium
+    readonly property int controlSize: PlasmaCore.Units.iconSizes.medium
 
     property double position: mpris2Source.currentData.Position || 0
     readonly property real rate: mpris2Source.currentData.Rate || 1
@@ -172,11 +172,11 @@ PlasmaComponents3.Page {
 
             anchors {
                 fill: parent
-                leftMargin: units.largeSpacing
-                rightMargin: units.largeSpacing
+                leftMargin: PlasmaCore.Units.largeSpacing
+                rightMargin: PlasmaCore.Units.largeSpacing
             }
 
-            spacing: units.largeSpacing
+            spacing: PlasmaCore.Units.largeSpacing
 
             Item {
                 Layout.fillWidth: true
@@ -209,7 +209,7 @@ PlasmaComponents3.Page {
 
                     anchors {
                         fill: parent
-                        margins: units.largeSpacing*2
+                        margins: PlasmaCore.Units.largeSpacing*2
                     }
                 }
             }
@@ -239,7 +239,7 @@ PlasmaComponents3.Page {
                     text: root.track || i18n("No media playing")
 
                     Layout.fillWidth: true
-                    Layout.maximumHeight: units.gridUnit*5
+                    Layout.maximumHeight: PlasmaCore.Units.gridUnit*5
                 }
                 Kirigami.Heading { // Song Artist
                     id: songArtist
@@ -255,7 +255,7 @@ PlasmaComponents3.Page {
 
                     text: root.artist
                     Layout.fillWidth: true
-                    Layout.maximumHeight: units.gridUnit*2
+                    Layout.maximumHeight: PlasmaCore.Units.gridUnit*2
                 }
                 Kirigami.Heading { // Song Album
                     color: (softwareRendering || !albumArt.visible) ? PlasmaCore.ColorScope.textColor : "white"
@@ -302,7 +302,7 @@ PlasmaComponents3.Page {
                         return ""
                     }
                     Layout.fillWidth: true
-                    Layout.maximumHeight: units.gridUnit*2
+                    Layout.maximumHeight: PlasmaCore.Units.gridUnit*2
                 }
             }
         }
@@ -314,18 +314,18 @@ PlasmaComponents3.Page {
         ColumnLayout { // Main Column Layout
             anchors.fill: parent
             RowLayout { // Seek Bar
-                spacing: units.smallSpacing
+                spacing: PlasmaCore.Units.smallSpacing
 
                 // if there's no "mpris:length" in the metadata, we cannot seek, so hide it in that case
                 enabled: !root.noPlayer && root.track && expandedRepresentation.length > 0 ? true : false
                 opacity: enabled ? 1 : 0
                 Behavior on opacity {
-                    NumberAnimation { duration: units.longDuration }
+                    NumberAnimation { duration: PlasmaCore.Units.longDuration }
                 }
 
                 Layout.alignment: Qt.AlignHCenter
                 Layout.fillWidth: true
-                Layout.maximumWidth: Math.min(units.gridUnit*45, Math.round(expandedRepresentation.width*(7/10)))
+                Layout.maximumWidth: Math.min(PlasmaCore.Units.gridUnit*45, Math.round(expandedRepresentation.width*(7/10)))
 
                 // ensure the layout doesn't shift as the numbers change and measure roughly the longest text that could occur with the current song
                 TextMetrics {
@@ -417,7 +417,28 @@ PlasmaComponents3.Page {
 
                 Layout.alignment: Qt.AlignHCenter
                 Layout.bottomMargin: PlasmaCore.Units.smallSpacing
-                spacing: units.smallSpacing
+                spacing: PlasmaCore.Units.smallSpacing
+
+                PlasmaComponents3.ToolButton {
+                    Layout.rightMargin: LayoutMirroring.enabled ? 0 : PlasmaCore.Units.largeSpacing - playerControls.spacing
+                    Layout.leftMargin: LayoutMirroring.enabled ? PlasmaCore.Units.largeSpacing - playerControls.spacing : 0
+                    icon.name: "media-playlist-shuffle"
+                    icon.width: expandedRepresentation.controlSize
+                    icon.height: icon.width
+                    checked: root.shuffle === true
+                    enabled: root.canControl && root.shuffle !== undefined
+                    Accessible.name: i18n("Shuffle")
+                    onClicked: {
+                        const service = mpris2Source.serviceForSource(mpris2Source.current);
+                        let operation = service.operationDescription("SetShuffle");
+                        operation.on = !root.shuffle;
+                        service.startOperationCall(operation);
+                    }
+
+                    PlasmaComponents3.ToolTip {
+                        text: parent.Accessible.name
+                    }
+                }
 
                 PlasmaComponents3.ToolButton { // Previous
                     icon.width: expandedRepresentation.controlSize
@@ -451,6 +472,36 @@ PlasmaComponents3.Page {
                         root.action_next()
                     }
                 }
+
+                PlasmaComponents3.ToolButton {
+                    Layout.leftMargin: LayoutMirroring.enabled ? 0 : PlasmaCore.Units.largeSpacing - playerControls.spacing
+                    Layout.rightMargin: LayoutMirroring.enabled ? PlasmaCore.Units.largeSpacing - playerControls.spacing : 0
+                    icon.name: root.loopStatus === "Track" ? "media-playlist-repeat-song" : "media-playlist-repeat"
+                    icon.width: expandedRepresentation.controlSize
+                    icon.height: icon.width
+                    checked: root.loopStatus !== undefined && root.loopStatus !== "None"
+                    enabled: root.canControl && root.loopStatus !== undefined
+                    Accessible.name: root.loopStatus === "Track" ? i18n("Repeat Track") : i18n("Repeat")
+                    onClicked: {
+                        const service = mpris2Source.serviceForSource(mpris2Source.current);
+                        let operation = service.operationDescription("SetLoopStatus");
+                        switch (root.loopStatus) {
+                        case "Playlist":
+                            operation.status = "Track";
+                            break;
+                        case "Track":
+                            operation.status = "None";
+                            break;
+                        default:
+                            operation.status = "Playlist";
+                        }
+                        service.startOperationCall(operation);
+                    }
+
+                    PlasmaComponents3.ToolTip {
+                        text: parent.Accessible.name
+                    }
+                }
             }
         }
     }
@@ -458,13 +509,27 @@ PlasmaComponents3.Page {
     header: PlasmaExtras.PlasmoidHeading {
         id: headerItem
         location: PlasmaExtras.PlasmoidHeading.Location.Header
-        visible: playerList.model.length > 2 // more than one player, @multiplex is always there
+        visible: playerList.model.length > 1
         //this removes top padding to allow tabbar to touch the edge
         topPadding: topInset
         bottomPadding: -bottomInset
         implicitHeight: PlasmaCore.Units.gridUnit * 2
+        PlasmaExtras.Heading { // Song Title
+            anchors.fill: parent
+            anchors.leftMargin: PlasmaCore.Units.smallSpacing
+            level: 2
+
+            textFormat: Text.PlainText
+            fontSizeMode: Text.VerticalFit
+            elide: Text.ElideRight
+
+            text: root.identity
+
+            visible: playerList.count <= 2
+        }
         PlasmaComponents3.TabBar {
             id: playerSelector
+            visible: playerList.model.length > 2 // more than one player, @multiplex is always there
             position: PlasmaComponents3.TabBar.Header
 
             anchors.fill: parent

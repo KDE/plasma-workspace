@@ -78,8 +78,14 @@ Item {
     readonly property bool canPlay: (canControl && mpris2Source.currentData.CanPlay) || false
     readonly property bool canPause: (canControl && mpris2Source.currentData.CanPause) || false
 
-    Plasmoid.switchWidth: units.gridUnit * 14
-    Plasmoid.switchHeight: units.gridUnit * 10
+    // var instead of bool so we can use "undefined" for "shuffle not supported"
+    readonly property var shuffle: !root.noPlayer && typeof mpris2Source.currentData.Shuffle === "boolean"
+                                   ? mpris2Source.currentData.Shuffle : undefined
+    readonly property var loopStatus: !root.noPlayer && typeof mpris2Source.currentData.LoopStatus === "string"
+                                      ? mpris2Source.currentData.LoopStatus : undefined
+
+    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 14
+    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 10
     Plasmoid.icon: "media-playback-playing"
     Plasmoid.toolTipMainText: i18n("No media playing")
     Plasmoid.toolTipSubText: identity
