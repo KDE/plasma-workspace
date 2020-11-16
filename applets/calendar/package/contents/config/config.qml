@@ -28,9 +28,4 @@ ConfigModel {
          icon: "preferences-desktop-plasma"
          source: "configGeneral.qml"
     }
-//     ConfigCategory {
-//          name: i18n("Agenda")
-//          icon: "view-calendar-agenda"
-//          source: "configAgenda.qml"
-//     }
 }
