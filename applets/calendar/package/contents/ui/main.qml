@@ -67,6 +67,7 @@ Item {
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 1000
+                color: "black"
                 minimumPointSize: theme.smallestFont.pointSize
                 text: {
                     var d = new Date(dataSource.data.Local.DateTime)
