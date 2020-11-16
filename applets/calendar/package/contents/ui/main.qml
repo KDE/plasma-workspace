@@ -57,18 +57,44 @@ Item {
 
         PlasmaCore.IconItem {
             anchors.fill: parent
+
             source: Qt.resolvedUrl("../images/mini-calendar.svgz")
 
             PlasmaComponents3.Label {
-                anchors {
-                    fill: parent
-                    margins: Math.round(parent.width * 0.1)
-                }
+                id: monthLabel
+                y: parent.y + parent.height * 0.05;
+                x: 0
+                width: parent.width
+                height: parent.height * 0.2
+
                 horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-                font.pixelSize: 1000
+                verticalAlignment: Text.AlignBottom
+                fontSizeMode: Text.Fit
+                minimumPointSize: 1
                 color: "black"
-                minimumPointSize: theme.smallestFont.pointSize
+
+                text: {
+                    var d = new Date(dataSource.data.Local.DateTime);
+                    return plasmoid.nativeInterface.monthName(d);
+                }
+                visible: parent.width > 50
+            }
+
+            PlasmaComponents3.Label {
+                id: dayLabel
+
+                y: monthLabel.y + monthLabel.height
+                x: 0
+                width: parent.width
+                height: parent.height * 0.6
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignTop
+                minimumPointSize: 1
+                font.pixelSize: 1000
+
+                fontSizeMode: Text.Fit
+
+                color: "black"
                 text: {
                     var d = new Date(dataSource.data.Local.DateTime)
                     var format = plasmoid.configuration.compactDisplay
@@ -79,9 +105,10 @@ Item {
 
                     return Qt.formatDate(d, format)
                 }
-                fontSizeMode: Text.Fit
             }
         }
+
+
     }
 
     Plasmoid.fullRepresentation: Item {
