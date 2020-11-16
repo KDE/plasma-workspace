@@ -34,10 +34,6 @@ FocusScope {
     Kirigami.FormData.label: root.label
     activeFocusOnTab: true
 
-    Layout.minimumWidth: layout.Layout.minimumWidth
-    Layout.preferredWidth: layout.Layout.preferredWidth
-    Layout.minimumHeight: layout.Layout.minimumHeight
-    Layout.preferredHeight: layout.Layout.preferredHeight
     implicitWidth: layout.implicitWidth
     implicitHeight: layout.implicitHeight
 
@@ -49,7 +45,6 @@ FocusScope {
             Kirigami.Theme.inherit: true
             text: root.font.family + " " + root.font.pointSize + "pt"
             font: root.font
-            Layout.fillHeight: true
         }
 
         QtControls.Button {
