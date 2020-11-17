@@ -27,9 +27,9 @@ class KeyboardLayout : public QObject
                MEMBER mCurrentLayoutDisplayName
                NOTIFY currentLayoutDisplayNameChanged)
 
-    Q_PROPERTY(QString currentLayoutShortName
-               MEMBER mCurrentLayoutShortName
-               NOTIFY currentLayoutShortNameChanged)
+    Q_PROPERTY(QString currentLayoutLongName
+               MEMBER mCurrentLayoutLongName
+               NOTIFY currentLayoutLongNameChanged)
 
     Q_PROPERTY(QStringList layouts
                MEMBER mLayouts
@@ -42,46 +42,24 @@ public:
 Q_SIGNALS:
     void currentLayoutChanged();
     void currentLayoutDisplayNameChanged();
-    void currentLayoutShortNameChanged();
+    void currentLayoutLongNameChanged();
     void layoutsChanged();
 
 private:
     void setCurrentLayout(const QString &layout);
 
-    enum DBusData {CurrentLayout, CurrentLayoutDisplayName, CurrentLayoutShortName, Layouts};
+    enum DBusData {CurrentLayout, CurrentLayoutDisplayName, CurrentLayoutLongName, Layouts};
 
     template<class T>
     void requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)());
     template<DBusData>
     inline void requestDBusData();
 
-    void onCurrentLayoutChanged(const QString &newLayout);
-    void onLayoutListChanged();
-
-    QStringList mLayouts;
     QString mCurrentLayout;
     QString mCurrentLayoutDisplayName;
-    QString mCurrentLayoutShortName;
+    QString mCurrentLayoutLongName;
+    QStringList mLayouts;
     OrgKdeKeyboardLayoutsInterface *mIface;
 };
-
-template<class T>
-void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)())
-{
-    const QDBusPendingCallWatcher * const watcher = new QDBusPendingCallWatcher(pendingReply, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished, this,
-        [this, &out, notify](QDBusPendingCallWatcher *watcher)
-        {
-            QDBusPendingReply<T> reply = *watcher;
-            if (reply.isError()) {
-                qCWarning(KEYBOARD_LAYOUT) << reply.error().message();
-            } else {
-                out = reply.value();
-                emit (this->*notify)();
-            }
-            watcher->deleteLater();
-        }
-    );
-}
 
 #endif // KEYBOARDLAYOUT_H

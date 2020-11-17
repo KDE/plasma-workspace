@@ -19,8 +19,8 @@ void KeyboardLayout::requestDBusData<KeyboardLayout::CurrentLayoutDisplayName>()
 { if (mIface) requestDBusData(mIface->getLayoutDisplayName(mCurrentLayout), mCurrentLayoutDisplayName, &KeyboardLayout::currentLayoutDisplayNameChanged); }
 
 template<>
-void KeyboardLayout::requestDBusData<KeyboardLayout::CurrentLayoutShortName>()
-{ if (mIface) requestDBusData(mIface->getCurrentLayoutShortName(), mCurrentLayoutShortName, &KeyboardLayout::currentLayoutShortNameChanged); }
+void KeyboardLayout::requestDBusData<KeyboardLayout::CurrentLayoutLongName>()
+{ if (mIface) requestDBusData(mIface->getCurrentLayoutLongName(), mCurrentLayoutLongName, &KeyboardLayout::currentLayoutLongNameChanged); }
 
 template<>
 void KeyboardLayout::requestDBusData<KeyboardLayout::Layouts>()
@@ -42,37 +42,50 @@ KeyboardLayout::KeyboardLayout(QObject* parent)
     }
 
     connect(mIface, &OrgKdeKeyboardLayoutsInterface::currentLayoutChanged,
-            this, &KeyboardLayout::onCurrentLayoutChanged);
+            this, [this](const QString &newLayout)
+                    {
+                        mCurrentLayout = newLayout;
+
+                        requestDBusData<CurrentLayoutDisplayName>();
+                        requestDBusData<CurrentLayoutLongName>();
+                    });
     connect(mIface, &OrgKdeKeyboardLayoutsInterface::layoutListChanged,
-            this, &KeyboardLayout::onLayoutListChanged);
+            this, [this]()
+                    {
+                        requestDBusData<CurrentLayout>();
+                        requestDBusData<CurrentLayoutLongName>();
+                        requestDBusData<Layouts>();
+                    });
     connect(this, &KeyboardLayout::currentLayoutChanged,
             this, &KeyboardLayout::requestDBusData<CurrentLayoutDisplayName>);
 
-    requestDBusData<CurrentLayout>();
-    requestDBusData<CurrentLayoutShortName>();
-    requestDBusData<Layouts>();
+    emit mIface->OrgKdeKeyboardLayoutsInterface::layoutListChanged();
 }
 
 KeyboardLayout::~KeyboardLayout()
 {
 }
 
-void KeyboardLayout::onCurrentLayoutChanged(const QString &newLayout)
-{
-    mCurrentLayout = newLayout;
-
-    requestDBusData<CurrentLayoutShortName>();
-    requestDBusData<CurrentLayoutDisplayName>();
-}
-
-void KeyboardLayout::onLayoutListChanged()
-{
-    requestDBusData<CurrentLayout>();
-    requestDBusData<CurrentLayoutShortName>();
-    requestDBusData<Layouts>();
-}
-
 void KeyboardLayout::setCurrentLayout(const QString &layout)
 {
     if (mIface) mIface->setLayout(layout);
+}
+
+template<class T>
+void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)())
+{
+    const QDBusPendingCallWatcher * const watcher = new QDBusPendingCallWatcher(pendingReply, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this,
+        [this, &out, notify](QDBusPendingCallWatcher *watcher)
+        {
+            QDBusPendingReply<T> reply = *watcher;
+            if (reply.isError()) {
+                qCWarning(KEYBOARD_LAYOUT) << reply.error().message();
+            } else {
+                out = reply.value();
+                emit (this->*notify)();
+            }
+            watcher->deleteLater();
+        }
+    );
 }

@@ -14,7 +14,7 @@
     <method name="getCurrentLayout">
       <arg type="s" direction="out"/>
     </method>
-    <method name="getCurrentLayoutShortName">
+    <method name="getCurrentLayoutLongName">
       <arg type="s" direction="out"/>
     </method>
     <method name="getLayoutsList">
