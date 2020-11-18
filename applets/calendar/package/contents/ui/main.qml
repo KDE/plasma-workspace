@@ -75,7 +75,7 @@ Item {
 
                 text: {
                     var d = new Date(dataSource.data.Local.DateTime);
-                    return plasmoid.nativeInterface.monthName(d);
+                    return Qt.formatDate(d, "MMM");
                 }
                 visible: parent.width > 50
             }
