@@ -258,7 +258,7 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
             // we pass raw body data since this data goes through another sanitization
             // in WatchedNotificationsModel when notification object is created.
             notification.rawBody(),
-            notification.actionNames(),
+            actions,
             hints,
             notification.timeout()
         });

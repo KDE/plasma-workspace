@@ -37,12 +37,12 @@ public:
     explicit WatchedNotificationsModel();
     ~WatchedNotificationsModel();
     
-    void expire(uint notificationId) override;
-    void close(uint notificationId) override;
+    Q_INVOKABLE void expire(uint notificationId) override;
+    Q_INVOKABLE void close(uint notificationId) override;
 
-    void invokeDefaultAction(uint notificationId) override;
-    void invokeAction(uint notificationId, const QString &actionName) override;
-    void reply(uint notificationId, const QString &text) override;
+    Q_INVOKABLE void invokeDefaultAction(uint notificationId) override;
+    Q_INVOKABLE void invokeAction(uint notificationId, const QString &actionName) override;
+    Q_INVOKABLE void reply(uint notificationId, const QString &text) override;
     bool valid();
 
 signals:
