@@ -71,6 +71,8 @@ Item {
                 verticalAlignment: Text.AlignBottom
                 fontSizeMode: Text.Fit
                 minimumPointSize: 1
+
+                /* color must be black because it's set on top of a white icon */
                 color: "black"
 
                 text: {
@@ -94,6 +96,7 @@ Item {
 
                 fontSizeMode: Text.Fit
 
+                /* color must be black because it's set on top of a white icon */
                 color: "black"
                 text: {
                     var d = new Date(dataSource.data.Local.DateTime)
