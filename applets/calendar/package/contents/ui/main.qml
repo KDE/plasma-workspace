@@ -79,13 +79,11 @@ Item {
                     var d = new Date(dataSource.data.Local.DateTime);
                     return Qt.formatDate(d, "MMM");
                 }
-                visible: parent.width > 50
+                visible: parent.width > PlasmaCore.Units.gridUnit * 3
             }
 
             PlasmaComponents3.Label {
-                id: dayLabel
-
-                y: monthLabel.y + monthLabel.height
+                anchors.top: monthLabel.bottom
                 x: 0
                 width: parent.width
                 height: parent.height * 0.6
