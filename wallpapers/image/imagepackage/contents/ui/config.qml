@@ -313,16 +313,11 @@ ColumnLayout {
                             ]
                         }
 
-                        Kirigami.Heading {
-                            anchors.fill: parent
-                            anchors.margins: Kirigami.Units.largeSpacing
-                            horizontalAlignment: Text.AlignHCenter
-                            verticalAlignment: Text.AlignVCenter
-                            wrapMode: Text.WordWrap
+                        Kirigami.PlaceholderMessage {
+                            anchors.centerIn: parent
+                            width: parent.width - (Kirigami.Units.largeSpacing * 4)
                             visible: slidePathsView.count === 0
-                            level: 2
                             text: i18nd("plasma_wallpaper_org.kde.image", "There are no wallpaper locations configured")
-                            opacity: 0.3
                         }
                     }
                 }
@@ -353,7 +348,6 @@ ColumnLayout {
         id: thumbnailsComponent
         KCM.GridView {
             id: wallpapersGrid
-            anchors.fill: parent
             property var imageModel: (configDialog.currentWallpaper == "org.kde.image")? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
 
             function resetCurrentIndex() {
@@ -372,18 +366,13 @@ ColumnLayout {
                 color: cfg_Color
             }
 
-            Kirigami.Heading {
+            Kirigami.PlaceholderMessage {
                 anchors.fill: parent
-                anchors.margins: Kirigami.Units.largeSpacing
+                anchors.margins: Kirigami.Units.largeSpacing * 2
                 // FIXME: this is needed to vertically center it in the grid for some reason
-                anchors.topMargin: wallpapersGrid.height
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-                wrapMode: Text.WordWrap
+                anchors.topMargin: wallpapersGrid.height / 2
                 visible: wallpapersGrid.view.count === 0
-                level: 2
                 text: i18nd("plasma_wallpaper_org.kde.image", "There are no wallpapers in this slideshow")
-                opacity: 0.3
             }
         }
     }
