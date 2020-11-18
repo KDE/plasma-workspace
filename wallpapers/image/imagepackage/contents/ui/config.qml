@@ -270,7 +270,6 @@ ColumnLayout {
                     Component.onCompleted: foldersScroll.background.visible = true;
                     ListView {
                         id: slidePathsView
-                        anchors.margins: 4
                         model: imageWallpaper.slidePaths
                         delegate: Kirigami.SwipeListItem {
                             id: folderDelegate
