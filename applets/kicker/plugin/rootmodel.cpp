@@ -415,7 +415,7 @@ void RootModel::refresh()
         ++separatorPosition;
     }
 
-    if(m_showFavoritesPlaceholder) {
+    if (m_showFavoritesPlaceholder) {
         //This entry is a placeholder and shouldn't ever be visible
         QList<AbstractEntry *> placeholderList;
         AppsModel *placeholderModel = new AppsModel(placeholderList, false, this);
