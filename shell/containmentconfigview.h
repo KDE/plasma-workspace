@@ -20,9 +20,7 @@
 #ifndef CONTAINMENTCONFIGVIEW_H
 #define CONTAINMENTCONFIGVIEW_H
 
-
-#include "plasmaquick/configview.h"
-
+#include <PlasmaQuick/ConfigView>
 
 namespace Plasma {
     class Containment;

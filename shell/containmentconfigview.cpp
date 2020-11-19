@@ -19,31 +19,27 @@
 
 #include "currentcontainmentactionsmodel.h"
 #include "containmentconfigview.h"
-#include "plasmaquick/configmodel.h"
 #include "shellcorona.h"
 #include "config-workspace.h"
 
-#include <KDeclarative/KDeclarative>
-
-#include <kdeclarative/configpropertymap.h>
-#include <kconfigloader.h>
-
+#include <QDBusConnection>
 #include <QDebug>
 #include <QDir>
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QQmlComponent>
-#include <QDBusConnection>
+#include <QStandardPaths>
 
-#include <klocalizedstring.h>
-
+#include <KConfigLoader>
+#include <KDeclarative/KDeclarative>
+#include <KDeclarative/ConfigPropertyMap>
+#include <KLocalizedString>
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
 #include <Plasma/Corona>
 #include <Plasma/PluginLoader>
 #include <Plasma/ContainmentActions>
-#include <qstandardpaths.h>
-
-#include <KPackage/Package>
-#include <KPackage/PackageLoader>
+#include <PlasmaQuick/ConfigModel>
 
 class WallpaperConfigModel: public PlasmaQuick::ConfigModel
 {
