@@ -240,6 +240,11 @@ CFcEngine::Xft::~Xft()
 
 bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
 {
+    // FIXME: no Xft on Wayland
+    if( !QX11Info::isPlatformX11() ) {
+        return false;
+    }
+
     if(itsDraw &&
        (txt.red()<<8 != itsTxtColor.color.red ||
         txt.green()<<8 != itsTxtColor.color.green ||
@@ -321,6 +326,11 @@ bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
 
 void CFcEngine::Xft::freeColors()
 {
+    // FIXME: no Xft on Wayland
+    if( !QX11Info::isPlatformX11() ) {
+        return;
+    }
+
     XftColorFree(QX11Info::display(), DefaultVisual(QX11Info::display(), 0),
                  DefaultColormap(QX11Info::display(), 0), &itsTxtColor);
     XftColorFree(QX11Info::display(), DefaultVisual(QX11Info::display(), 0),
@@ -1265,8 +1275,9 @@ XftFont * CFcEngine::getFont(int size)
     qDebug() << itsName << ' ' << itsStyle << ' ' << size;
 #endif
 
-    if(itsInstalled)
-    {
+    if ( !QX11Info::isPlatformX11() ) {
+        // FIXME: no Xft on Wayland
+    } else if (itsInstalled) {
         int weight,
             width,
             slant;
