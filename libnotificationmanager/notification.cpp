@@ -390,6 +390,8 @@ void Notification::Private::processHints(const QVariantMap &hints)
     replySubmitButtonText = hints.value(QStringLiteral("x-kde-reply-submit-button-text")).toString();
     replySubmitButtonIconName = hints.value(QStringLiteral("x-kde-reply-submit-button-icon-name")).toString();
 
+    category = hints.value(QStringLiteral("category")).toString();
+
     // Underscored hints was in use in version 1.1 of the spec but has been
     // replaced by dashed hints in version 1.2. We need to support it for
     // users of the 1.2 version of the spec.
@@ -731,6 +733,11 @@ QString Notification::replySubmitButtonText() const
 QString Notification::replySubmitButtonIconName() const
 {
     return d->replySubmitButtonIconName;
+}
+
+QString Notification::category() const
+{
+    return d->category;
 }
 
 bool Notification::expired() const

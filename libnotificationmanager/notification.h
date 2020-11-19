@@ -123,6 +123,8 @@ public:
     QString replySubmitButtonText() const;
     QString replySubmitButtonIconName() const;
 
+    QString category() const;
+
     bool expired() const;
     void setExpired(bool expired);
 

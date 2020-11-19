@@ -249,6 +249,8 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
     case Notifications::ConfigurableRole: return notification.configurable();
     case Notifications::ConfigureActionLabelRole: return notification.configureActionLabel();
 
+    case Notifications::CategoryRole: return notification.category();
+
     case Notifications::ExpiredRole: return notification.expired();
     case Notifications::ReadRole: return notification.read();
 

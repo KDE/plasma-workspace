@@ -98,6 +98,8 @@ public:
     QString replySubmitButtonText;
     QString replySubmitButtonIconName;
 
+    QString category;
+
     QList<QUrl> urls;
     QVariantMap hints = QVariantMap();
 

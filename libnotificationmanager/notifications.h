@@ -280,6 +280,7 @@ public:
         ReplyPlaceholderTextRole, ///< A custom placeholder text for the reply action, e.g. "Reply to Max...". @since 5.18
         ReplySubmitButtonTextRole, ///< A custom text for the reply submit button, e.g. "Submit Comment". @since 5.18
         ReplySubmitButtonIconNameRole, ///< A custom icon name for the reply submit button. @since 5.18
+        CategoryRole, ///< The (optional) category of the notification. Notifications can optionally have a type indicator. Although neither client or nor server must support this, some may choose to. Those servers implementing categories may use them to intelligently display the notification in a certain way, or group notifications of similar types.  @since 5.21
     };
     Q_ENUM(Roles)
 
