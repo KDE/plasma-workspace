@@ -4,6 +4,17 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_lookandfeel\")
 if(X11_Xcursor_FOUND)
     set(HAVE_XCURSOR TRUE)
 endif()
+
+if(${Breeze_FOUND})
+    if(${BREEZE_WITH_KDECORATION})
+        set(HAVE_BREEZE_DECO true)
+    else()
+        set(HAVE_BREEZE_DECO FALSE)
+    endif()
+else()
+    set(HAVE_BREEZE_DECO FALSE)
+endif()
+
 configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 
 set(kcm_lookandfeel_SRCS
