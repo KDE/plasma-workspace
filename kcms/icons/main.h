@@ -74,7 +74,7 @@ public:
     void load() override;
     void save() override;
 
-    Q_INVOKABLE void ghnsEntriesChanged(const QQmlListReference &changedEntries);
+    Q_INVOKABLE void ghnsEntriesChanged();
     Q_INVOKABLE void installThemeFromFile(const QUrl &url);
 
     Q_INVOKABLE QList<int> availableIconSizes(int group) const;

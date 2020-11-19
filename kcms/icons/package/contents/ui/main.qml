@@ -262,7 +262,12 @@ KCM.GridViewKCM {
                 text: i18n("Get New Icons...")
                 configFile: "icons.knsrc"
                 viewMode: NewStuff.Page.ViewMode.Preview
-                onChangedEntriesChanged: kcm.ghnsEntriesChanged(newStuffButton.changedEntries);
+                Connections {
+                    target: newStuffButton.engine.engine
+                    function onSignalEntryEvent(entry, event) {
+                        kcm.ghnsEntriesChanged();
+                    }
+                }
             }
         }
     }

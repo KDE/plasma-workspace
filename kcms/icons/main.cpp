@@ -186,15 +186,12 @@ void IconModule::processPendingDeletions()
     m_model->removeItemsPendingDeletion();
 }
 
-void IconModule::ghnsEntriesChanged(const QQmlListReference &changedEntries)
+void IconModule::ghnsEntriesChanged()
 {
-    if (changedEntries.count() == 0) {
-        return;
-    }
-
     // reload the display icontheme items
+    KIconTheme::reconfigure();
     KIconLoader::global()->newIconLoader();
-    m_model->load();
+    load();
     QPixmapCache::clear();
 }
 
