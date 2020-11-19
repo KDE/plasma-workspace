@@ -4,6 +4,7 @@ PartOf=graphical-session.target
 
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_LIBEXECDIR@/baloorunner
+ExecCondition=@KDE_INSTALL_FULL_BINDIR@/kde-systemd-start-condition --condition "baloofilerc:Basic Settings:Indexing-Enabled:true"
 Type=dbus
 BusName=org.kde.runners.baloo
 TimeoutSec=5sec
