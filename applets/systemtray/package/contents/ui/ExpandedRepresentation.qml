@@ -61,6 +61,7 @@ Item {
     ColumnLayout {
         id: expandedRepresentation
         anchors.fill: parent
+
         // TODO: remove this so the scrollview fully touches the header;
         // add top padding internally
         spacing: plasmoidHeading.bottomPadding
@@ -197,6 +198,8 @@ Item {
         // Container for currently visible item
         PlasmoidPopupsContainer {
             id: container
+            Layout.leftMargin: -popup.x;
+            Layout.rightMargin: -popup.x;
             Layout.fillWidth: true
             Layout.fillHeight: true
             visible: systemTrayState.activeApplet

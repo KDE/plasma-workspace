@@ -60,10 +60,14 @@ StackView {
                 if (activeApplet.fullRepresentationItem.header && activeApplet.fullRepresentationItem.header instanceof PlasmaExtras.PlasmoidHeading) {
                     mainStack.appletHasHeading = true
                     activeApplet.fullRepresentationItem.header.background.visible = false
+                    activeApplet.fullRepresentationItem.header.leftPadding = -mainStack.Layout.leftMargin
+                    activeApplet.fullRepresentationItem.header.rightPadding = -mainStack.Layout.rightMargin
                 }
                 if (activeApplet.fullRepresentationItem.footer && activeApplet.fullRepresentationItem.footer instanceof PlasmaExtras.PlasmoidHeading) {
                     mainStack.appletHasFooter = true
                     activeApplet.fullRepresentationItem.footer.background.visible = false
+                    activeApplet.fullRepresentationItem.footer.leftPadding = -mainStack.Layout.leftMargin
+                    activeApplet.fullRepresentationItem.footer.rightPadding = -mainStack.Layout.rightMargin
                 }
             }
 
