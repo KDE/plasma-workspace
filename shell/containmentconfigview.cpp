@@ -82,11 +82,11 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::containmentActionConfigModel()
     if (!m_containmentActionConfigModel) {
         m_containmentActionConfigModel = new PlasmaQuick::ConfigModel(this);
 
-        KPluginInfo::List actions = Plasma::PluginLoader::self()->listContainmentActionsInfo(QString());
+        const KPluginInfo::List actions = Plasma::PluginLoader::self()->listContainmentActionsInfo(QString());
 
         KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Generic"));
 
-        foreach (const KPluginInfo &info, actions) {
+        for (const KPluginInfo &info : actions) {
             pkg.setDefaultPackageRoot(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR "/containmentactions"), QStandardPaths::LocateDirectory));
             m_containmentActionConfigModel->appendCategory(info.icon(), info.name(), pkg.filePath("ui", QStringLiteral("config.qml")), info.pluginName());
         }
