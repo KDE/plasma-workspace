@@ -167,8 +167,7 @@ QVariantList AppEntry::actions() const
 
     const QVariantList &addLauncherActions = Kicker::createAddLauncherActionList(appletInterface, m_service);
     if (!systemImmutable && !addLauncherActions.isEmpty()) {
-        actionList << addLauncherActions
-                   << Kicker::createSeparatorActionItem();
+        actionList << addLauncherActions;
     }
 
     const QVariantList &recentDocuments = Kicker::recentDocumentActions(m_service);
