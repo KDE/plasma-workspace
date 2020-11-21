@@ -22,6 +22,7 @@
 
 
 #include <KSycoca>
+#include <KPluginMetaData>
 
 #include <Plasma/DataContainer>
 #include <Plasma/PluginLoader>
@@ -59,10 +60,10 @@ void WeatherEngine::updateIonList(const QStringList &changedResources)
 {
     if (changedResources.isEmpty() || changedResources.contains(QLatin1String("services"))) {
         removeAllData(QStringLiteral("ions"));
-        const auto infos = Plasma::PluginLoader::self()->listEngineInfo(QStringLiteral("weatherengine"));
-        for (const KPluginInfo& info : infos) {
-            const QString data = info.name() + QLatin1Char('|') + info.pluginName();
-            setData(QStringLiteral("ions"), info.pluginName(), data);
+        const auto infos = Plasma::PluginLoader::self()->listDataEngineMetaData(QStringLiteral("weatherengine"));
+        for (const KPluginMetaData& info : infos) {
+            const QString data = info.name() + QLatin1Char('|') + info.pluginId();
+            setData(QStringLiteral("ions"), info.pluginId(), data);
         }
     }
 }
