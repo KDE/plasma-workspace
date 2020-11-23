@@ -66,6 +66,11 @@ KeyboardLayout::~KeyboardLayout()
 {
 }
 
+void KeyboardLayout::switchToNextLayout()
+{
+    if (mIface) mIface->switchToNextLayout();
+}
+
 void KeyboardLayout::setCurrentLayout(const QString &layout)
 {
     if (mIface) mIface->setLayout(layout);

@@ -21,14 +21,9 @@ PlasmaComponents3.ToolButton {
     Accessible.name: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to change keyboard layout", "Switch layout")
     icon.name: "input-keyboard"
 
-    onClicked: layout.nextLayout()
+    onClicked: layout.switchToNextLayout()
 
     KeyboardLayout {
         id: layout
-        function nextLayout() {
-            var layouts = layout.layouts;
-            var index = (layouts.indexOf(layout.currentLayout)+1) % layouts.length;
-            layout.currentLayout = layouts[index];
-        }
     }
 }

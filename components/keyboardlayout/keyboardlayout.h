@@ -45,6 +45,9 @@ Q_SIGNALS:
     void currentLayoutLongNameChanged();
     void layoutsChanged();
 
+protected Q_SLOTS:
+    void switchToNextLayout();
+
 private:
     void setCurrentLayout(const QString &layout);
 
