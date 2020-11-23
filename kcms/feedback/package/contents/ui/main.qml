@@ -74,6 +74,7 @@ SimpleKCM {
                 readonly property var currentMode: modeOptions[value]
                 Layout.fillWidth: true
                 Layout.minimumWidth: Kirigami.Units.gridUnit * 21
+                Layout.maximumWidth: Kirigami.Units.gridUnit * 21
 
                 readonly property var modeOptions: [UserFeedback.Provider.NoTelemetry, UserFeedback.Provider.BasicSystemInformation, UserFeedback.Provider.BasicUsageStatistics,
                                                     UserFeedback.Provider.DetailedSystemInformation, UserFeedback.Provider.DetailedUsageStatistics]
@@ -110,7 +111,7 @@ SimpleKCM {
 
             Kirigami.Heading {
                 Layout.alignment: Qt.AlignHCenter
-                Layout.maximumWidth: statisticsModeSlider.width
+                Layout.maximumWidth: Kirigami.Units.gridUnit * 21
                 wrapMode: Text.WordWrap
                 level: 3
                 text: feedbackController.telemetryName(statisticsModeSlider.currentMode)
@@ -120,7 +121,7 @@ SimpleKCM {
             }
             QQC2.Label {
                 Layout.alignment: Qt.AlignHCenter
-                Layout.maximumWidth: statisticsModeSlider.width
+                Layout.maximumWidth: Kirigami.Units.gridUnit * 21
                 wrapMode: Text.WordWrap
 
                 text: i18n("The following information will be sent:")
