@@ -11,16 +11,12 @@
 #include <QDBusInterface>
 
 template<>
-void KeyboardLayout::requestDBusData<KeyboardLayout::CurrentLayout>()
-{ if (mIface) requestDBusData(mIface->getCurrentLayout(), mCurrentLayout, &KeyboardLayout::currentLayoutChanged); }
+void KeyboardLayout::requestDBusData<KeyboardLayout::LayoutDisplayName>()
+{ if (mIface) requestDBusData(mIface->getLayoutDisplayName(), mLayoutDisplayName, &KeyboardLayout::layoutDisplayNameChanged); }
 
 template<>
-void KeyboardLayout::requestDBusData<KeyboardLayout::CurrentLayoutDisplayName>()
-{ if (mIface) requestDBusData(mIface->getLayoutDisplayName(mCurrentLayout), mCurrentLayoutDisplayName, &KeyboardLayout::currentLayoutDisplayNameChanged); }
-
-template<>
-void KeyboardLayout::requestDBusData<KeyboardLayout::CurrentLayoutLongName>()
-{ if (mIface) requestDBusData(mIface->getCurrentLayoutLongName(), mCurrentLayoutLongName, &KeyboardLayout::currentLayoutLongNameChanged); }
+void KeyboardLayout::requestDBusData<KeyboardLayout::LayoutLongName>()
+{ if (mIface) requestDBusData(mIface->getLayoutLongName(), mLayoutLongName, &KeyboardLayout::layoutLongNameChanged); }
 
 template<>
 void KeyboardLayout::requestDBusData<KeyboardLayout::Layouts>()
@@ -41,23 +37,19 @@ KeyboardLayout::KeyboardLayout(QObject* parent)
           return;
     }
 
-    connect(mIface, &OrgKdeKeyboardLayoutsInterface::currentLayoutChanged,
-            this, [this](const QString &newLayout)
+    connect(mIface, &OrgKdeKeyboardLayoutsInterface::layoutChanged,
+            this, [this]()
                     {
-                        mCurrentLayout = newLayout;
-
-                        requestDBusData<CurrentLayoutDisplayName>();
-                        requestDBusData<CurrentLayoutLongName>();
+                        requestDBusData<LayoutDisplayName>();
+                        requestDBusData<LayoutLongName>();
                     });
     connect(mIface, &OrgKdeKeyboardLayoutsInterface::layoutListChanged,
             this, [this]()
                     {
-                        requestDBusData<CurrentLayout>();
-                        requestDBusData<CurrentLayoutLongName>();
+                        requestDBusData<LayoutDisplayName>();
+                        requestDBusData<LayoutLongName>();
                         requestDBusData<Layouts>();
                     });
-    connect(this, &KeyboardLayout::currentLayoutChanged,
-            this, &KeyboardLayout::requestDBusData<CurrentLayoutDisplayName>);
 
     emit mIface->OrgKdeKeyboardLayoutsInterface::layoutListChanged();
 }
@@ -69,11 +61,6 @@ KeyboardLayout::~KeyboardLayout()
 void KeyboardLayout::switchToNextLayout()
 {
     if (mIface) mIface->switchToNextLayout();
-}
-
-void KeyboardLayout::setCurrentLayout(const QString &layout)
-{
-    if (mIface) mIface->setLayout(layout);
 }
 
 template<class T>

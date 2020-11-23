@@ -11,8 +11,8 @@ import org.kde.plasma.workspace.keyboardlayout 1.0
 PlasmaComponents3.ToolButton {
     id: kbLayoutButton
 
-    property alias layoutShortName: layout.currentLayoutDisplayName
-    property alias layoutLongName: layout.currentLayoutLongName
+    property alias layoutShortName: layout.layoutDisplayName
+    property alias layoutLongName: layout.layoutLongName
     readonly property bool hasMultipleKeyboardLayouts: layout.layouts.length > 1
 
     text: layoutLongName

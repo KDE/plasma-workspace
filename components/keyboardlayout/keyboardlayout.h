@@ -18,18 +18,13 @@ class KeyboardLayout : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QString currentLayout
-               MEMBER mCurrentLayout
-               WRITE setCurrentLayout
-               NOTIFY currentLayoutChanged)
+    Q_PROPERTY(QString layoutDisplayName
+               MEMBER mLayoutDisplayName
+               NOTIFY layoutDisplayNameChanged)
 
-    Q_PROPERTY(QString currentLayoutDisplayName
-               MEMBER mCurrentLayoutDisplayName
-               NOTIFY currentLayoutDisplayNameChanged)
-
-    Q_PROPERTY(QString currentLayoutLongName
-               MEMBER mCurrentLayoutLongName
-               NOTIFY currentLayoutLongNameChanged)
+    Q_PROPERTY(QString layoutLongName
+               MEMBER mLayoutLongName
+               NOTIFY layoutLongNameChanged)
 
     Q_PROPERTY(QStringList layouts
                MEMBER mLayouts
@@ -40,27 +35,23 @@ public:
     ~KeyboardLayout() override;
 
 Q_SIGNALS:
-    void currentLayoutChanged();
-    void currentLayoutDisplayNameChanged();
-    void currentLayoutLongNameChanged();
+    void layoutDisplayNameChanged();
+    void layoutLongNameChanged();
     void layoutsChanged();
 
 protected Q_SLOTS:
     void switchToNextLayout();
 
 private:
-    void setCurrentLayout(const QString &layout);
-
-    enum DBusData {CurrentLayout, CurrentLayoutDisplayName, CurrentLayoutLongName, Layouts};
+    enum DBusData {LayoutDisplayName, LayoutLongName, Layouts};
 
     template<class T>
     void requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)());
     template<DBusData>
     inline void requestDBusData();
 
-    QString mCurrentLayout;
-    QString mCurrentLayoutDisplayName;
-    QString mCurrentLayoutLongName;
+    QString mLayoutDisplayName;
+    QString mLayoutLongName;
     QStringList mLayouts;
     OrgKdeKeyboardLayoutsInterface *mIface;
 };

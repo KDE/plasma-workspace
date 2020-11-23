@@ -2,7 +2,7 @@
 "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
 <node>
   <interface name="org.kde.KeyboardLayouts">
-    <signal name="currentLayoutChanged">
+    <signal name="layoutChanged">
       <arg name="layout" type="s" direction="out"/>
     </signal>
     <signal name="layoutListChanged">
@@ -13,18 +13,17 @@
       <arg type="b" direction="out"/>
       <arg name="layout" type="s" direction="in"/>
     </method>
-    <method name="getCurrentLayout">
+    <method name="getLayout">
       <arg type="s" direction="out"/>
     </method>
-    <method name="getCurrentLayoutLongName">
+    <method name="getLayoutDisplayName">
+      <arg type="s" direction="out"/>
+    </method>
+    <method name="getLayoutLongName">
       <arg type="s" direction="out"/>
     </method>
     <method name="getLayoutsList">
       <arg type="as" direction="out"/>
-    </method>
-    <method name="getLayoutDisplayName">
-      <arg type="s" direction="out"/>
-      <arg name="layout" type="s" direction="in"/>
     </method>
   </interface>
 </node>
