@@ -113,7 +113,7 @@ RowLayout {
         property string agoText: ""
         visible: text !== ""
         text: generateRemainingText() || agoText
-        Layout.rightMargin: -notificationHeading.spacing // the ToolButton's margins are enough
+        Layout.rightMargin: Math.round(-notificationHeading.spacing / 2)
 
         function generateAgoText() {
             if (!time || isNaN(time.getTime()) || notificationHeading.jobState === NotificationManager.Notifications.JobStateRunning) {
