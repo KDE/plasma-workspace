@@ -77,5 +77,14 @@ Comment[x-test]=xxConfigure application style and behaviorxx
 Comment[zh_CN]=配置应用程序样式和行为
 
 X-KDE-Keywords=style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu,GTK,GNOME
+X-KDE-Keywords[ca]=estil,estils,aspecte,estri,icones,barres d'eines,text,ressaltat,aplicacions,aplicacions del KDE,tema,plasma,menu,menu global,GTK,GNOME
+X-KDE-Keywords[es]=estilo,estilos,apariencia,controles,iconos,barras de herramientas,texto,resaltado,aplicaciones,aplicaciones de KDE,tema,plasma,menú,menú global,GTK,GNOME
+X-KDE-Keywords[hu]=stílus,stílusok,megjelenés,widget,ikonok,eszköztáratk,szöveg,kiemelés,alkalmazások,KDE alkalmazások,téma,plasma,menü,globális menü,GTK,GNOME
+X-KDE-Keywords[nl]=stijl,stijlen,uiterlijk,widget,pictogrammen,werkbalk,tekst,accentuering,apps,KDE-toepassingen,thema,plasma, menu,globaal menu,GTK,GNOME
+X-KDE-Keywords[nn]=stil,stilar,utsjånad,skjermelement,ikon,verktøylinjer,tekst,framheva,program,KDE-program,tema,plasma,meny,global meny,GTK,GNOME
+X-KDE-Keywords[pt]=estilo,estilos,aparência,elemento,ícones,barras de ferramentas,texto,realce,aplicações,aplicações do KDE,tema,plasma,menu,menu global,GTK,GNOME
+X-KDE-Keywords[sv]=stil,stilar,utseende,grafisk komponent,ikoner,verktygsrader,text,markering,program,KDE-program,tema,plasma,meny,global meny,GTK,GNOME
+X-KDE-Keywords[uk]=style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu,GTK,GNOME,стиль,стилі,вигляд,віджет,піктограма,піктограми,значок,значки,іконки,панель,панель інструментів,текст,підсвічування,позначення,програма,програми,тема,плазма,меню,загальне меню,жтк,жетека,гном,гноме
+X-KDE-Keywords[x-test]=xxstylexx,xxstylesxx,xxlookxx,xxwidgetxx,xxiconsxx,xxtoolbarsxx,xxtextxx,xxhighlightxx,xxappsxx,xxKDE applicationsxx,xxthemexx,xxplasmaxx,xxmenuxx,xxglobal menuxx,xxGTKxx,xxGNOMExx
 
 Categories=Qt;KDE;X-KDE-settings-looknfeel;
