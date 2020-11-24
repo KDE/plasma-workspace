@@ -38,8 +38,11 @@ int main(int argc, char** argv)
     // * Then ksmserver is started which takes control of the rest of the startup sequence
 
     setupFontDpi();
+    QScopedPointer<QProcess, KillBeforeDeleter> ksplash;
 
-    QScopedPointer<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
+    if (!qEnvironmentVariableIsSet("KWIN_RESTART_COUNT")) {
+        ksplash.reset(setupKSplash());
+    }
 
     out << "startplasma-waylandsession: Starting up...";
 

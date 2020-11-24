@@ -90,9 +90,9 @@ int main(int argc, char** argv)
             args << QString::fromLocal8Bit(argv[i]);
         }
     } else {
-        args = QStringList { QStringLiteral("--xwayland"), QStringLiteral("--exit-with-session=" CMAKE_INSTALL_FULL_LIBEXECDIR "/startplasma-waylandsession") };
+        args = QStringList {QStringLiteral("--xwayland"), QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/startplasma-waylandsession") };
     }
-    runSync(QStringLiteral(KWIN_WAYLAND_BIN_PATH), args);
+    runSync(QStringLiteral("kwin_wayland_wrapper"), args);
 
     out << "startplasmacompositor: Shutting down...\n";
     cleanupPlasmaEnvironment();
