@@ -108,8 +108,6 @@ Item {
                 }
             }
         }
-
-
     }
 
     Plasmoid.fullRepresentation: Item {
