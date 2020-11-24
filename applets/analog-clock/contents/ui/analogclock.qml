@@ -43,7 +43,7 @@ Item {
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
 
     Plasmoid.toolTipMainText: Qt.formatDate(dataSource.data["Local"]["DateTime"],"dddd")
-    Plasmoid.toolTipSubText: Qt.formatTime(dataSource.data["Local"]["DateTime"], "hh:mm") + "\n" +
+    Plasmoid.toolTipSubText: Qt.formatTime(dataSource.data["Local"]["DateTime"],  Qt.locale().timeFormat(Locale.LongFormat)) + "\n" +
         Qt.formatDate(dataSource.data["Local"]["DateTime"], Qt.locale().dateFormat(Locale.LongFormat).replace(/(^dddd.?\s)|(,?\sdddd$)/, ""))
 
     PlasmaCore.DataSource {
