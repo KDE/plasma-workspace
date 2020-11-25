@@ -54,7 +54,7 @@ void GlobalShortcuts::showDoNotDisturbOsd(bool doNotDisturb) const
     );
 
     const QString iconName = doNotDisturb ? QStringLiteral("notifications-disabled") : QStringLiteral("notifications");
-    const QString text = doNotDisturb ? i18nc("OSD popup, keep short", "Notifications Off")
+    const QString text = doNotDisturb ? i18nc("OSD popup, keep short", "Notifications Off") //
                                       : i18nc("OSD popup, keep short", "Notifications On");
 
     msg.setArguments({iconName, text});
