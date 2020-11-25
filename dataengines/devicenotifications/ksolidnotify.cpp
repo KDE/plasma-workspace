@@ -32,6 +32,7 @@
 #include <Solid/StorageVolume>
 
 #include <KLocalizedString>
+#include <KNotification>
 #include <processcore/process.h>
 #include <processcore/processes.h>
 
@@ -158,6 +159,7 @@ void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, con
     switch (error) {
     case Solid::ErrorType::NoError:
         if (type != SolidReplyType::Setup && isSafelyRemovable(udi)) {
+            KNotification::event(QStringLiteral("safelyRemovable"), i18n("Device Status"), i18n("A device can now be safely removed"));
             errorMsg = i18n("This device can now be safely removed.");
         }
         break;

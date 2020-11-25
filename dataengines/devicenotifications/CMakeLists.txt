@@ -13,9 +13,11 @@ target_link_libraries(plasma_engine_devicenotifications
     KF5::Solid
     KF5::I18n
     KSysGuard::ProcessCore
+    KF5::Notifications
 ) # todo: add kworkspace once ported
 
 kcoreaddons_desktop_to_json(plasma_engine_devicenotifications plasma-dataengine-devicenotifications.desktop)
 
 install(TARGETS plasma_engine_devicenotifications DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-devicenotifications.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
+install(FILES devicenotifications.notifyrc DESTINATION ${KNOTIFYRC_INSTALL_DIR})
