@@ -25,12 +25,13 @@ int main(int argc, char** argv)
 {
     QApplication app(argc, argv);
 
-    if (app.arguments().count() != 2) {
+    if (argc != 2) {
         return 1;
     }
 
-    //KNS will give us a path
-    QString themeName = app.arguments().last();
+    // KNS will give us a path
+    const QStringList args = app.arguments();
+    QString themeName = args.last();
     int idx = themeName.lastIndexOf('/');
     if (idx>=0) {
         themeName = themeName.mid(idx + 1);
