@@ -63,6 +63,11 @@ void KeyboardLayout::switchToNextLayout()
     if (mIface) mIface->switchToNextLayout();
 }
 
+void KeyboardLayout::switchToPreviousLayout()
+{
+    if (mIface) mIface->switchToPreviousLayout();
+}
+
 template<class T>
 void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)())
 {

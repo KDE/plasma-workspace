@@ -41,6 +41,7 @@ Q_SIGNALS:
 
 protected Q_SLOTS:
     void switchToNextLayout();
+    void switchToPreviousLayout();
 
 private:
     enum DBusData {LayoutDisplayName, LayoutLongName, Layouts};
