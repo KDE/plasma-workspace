@@ -83,8 +83,10 @@ X-KDE-Keywords[hu]=stílus,stílusok,megjelenés,widget,ikonok,eszköztáratk,sz
 X-KDE-Keywords[nl]=stijl,stijlen,uiterlijk,widget,pictogrammen,werkbalk,tekst,accentuering,apps,KDE-toepassingen,thema,plasma, menu,globaal menu,GTK,GNOME
 X-KDE-Keywords[nn]=stil,stilar,utsjånad,skjermelement,ikon,verktøylinjer,tekst,framheva,program,KDE-program,tema,plasma,meny,global meny,GTK,GNOME
 X-KDE-Keywords[pt]=estilo,estilos,aparência,elemento,ícones,barras de ferramentas,texto,realce,aplicações,aplicações do KDE,tema,plasma,menu,menu global,GTK,GNOME
+X-KDE-Keywords[sl]=slog,slogi,videz,gradnik,ikone,orodne vrstice,besedilo,osvetljevanje,aplikacije,aplikacije KDE,tema,plasma,meni,globalni meni,GTK,GNOME
 X-KDE-Keywords[sv]=stil,stilar,utseende,grafisk komponent,ikoner,verktygsrader,text,markering,program,KDE-program,tema,plasma,meny,global meny,GTK,GNOME
 X-KDE-Keywords[uk]=style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu,GTK,GNOME,стиль,стилі,вигляд,віджет,піктограма,піктограми,значок,значки,іконки,панель,панель інструментів,текст,підсвічування,позначення,програма,програми,тема,плазма,меню,загальне меню,жтк,жетека,гном,гноме
+X-KDE-Keywords[vi]=style,styles,kiểu cách,look,nhìn,widget,phụ kiện,icons,biểu tượng,toolbars,thanh công cụ,text,chữ,văn bản,highlight,tô sáng,apps,ứng dụng,KDE applications,ứng dụng KDE,theme,chủ đề,plasma,menu,trình đơn,global menu,trình đơn toàn cục,GTK,GNOME
 X-KDE-Keywords[x-test]=xxstylexx,xxstylesxx,xxlookxx,xxwidgetxx,xxiconsxx,xxtoolbarsxx,xxtextxx,xxhighlightxx,xxappsxx,xxKDE applicationsxx,xxthemexx,xxplasmaxx,xxmenuxx,xxglobal menuxx,xxGTKxx,xxGNOMExx
 
 Categories=Qt;KDE;X-KDE-settings-looknfeel;
