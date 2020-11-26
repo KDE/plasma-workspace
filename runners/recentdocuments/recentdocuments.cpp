@@ -59,6 +59,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         return;
     }
 
+    // clang-format off
     const QString term = context.query();
     auto query = UsedResources
             | Activity::current()
@@ -67,6 +68,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
             // we search only on file name, as KActivity does not support better options
             | Url("/*/" + term + "*")
             | Limit(20);
+    // clang-format on
 
     const auto result = new ResultModel(query);
 

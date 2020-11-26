@@ -513,11 +513,13 @@ void RecentUsageModel::refresh()
     setSourceModel(nullptr);
     delete oldModel;
 
+    // clang-format off
     auto query = UsedResources
                     | (m_ordering == Recent ? RecentlyUsedFirst : HighScoredFirst)
                     | Agent::any()
                     | (m_usage == OnlyDocs ? Type::files() : Type::any())
                     | Activity::current();
+    // clang-format on
 
     switch (m_usage) {
         case AppsAndDocs:

@@ -149,7 +149,7 @@ void FileMenu::open(int x, int y)
 
     const bool canTrash = itemProperties.isLocal() && itemProperties.supportsMoving();
     if (canTrash) {
-        QAction *moveToTrashAction = KStandardAction::moveToTrash(this, [this] {
+        auto moveToTrashLambda = [this] {
             const QList<QUrl> urls{m_url};
 
             KIO::JobUiDelegate uiDelegate;
@@ -159,7 +159,8 @@ void FileMenu::open(int x, int y)
                 KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Trash, urls,
                                                         QUrl(QStringLiteral("trash:/")), job);
             }
-        }, menu);
+        };
+        QAction *moveToTrashAction = KStandardAction::moveToTrash(this, moveToTrashLambda, menu);
         moveToTrashAction->setShortcut({}); // Can't focus notification to press Delete
         menu->addAction(moveToTrashAction);
     }
@@ -168,7 +169,7 @@ void FileMenu::open(int x, int y)
     const bool showDeleteCommand = cg.readEntry("ShowDeleteCommand", false);
 
     if (itemProperties.supportsDeleting() && (!canTrash || showDeleteCommand)) {
-        QAction *deleteAction = KStandardAction::deleteFile(this, [this] {
+        auto deleteLambda = [this] {
             const QList<QUrl> urls{m_url};
 
             KIO::JobUiDelegate uiDelegate;
@@ -176,7 +177,8 @@ void FileMenu::open(int x, int y)
                 auto *job = KIO::del(urls);
                 job->uiDelegate()->setAutoErrorHandlingEnabled(true);
             }
-        }, menu);
+        };
+        QAction *deleteAction = KStandardAction::deleteFile(this, deleteLambda, menu);
         deleteAction->setShortcut({});
         menu->addAction(deleteAction);
     }

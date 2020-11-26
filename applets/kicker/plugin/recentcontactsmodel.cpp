@@ -172,6 +172,7 @@ void RecentContactsModel::refresh()
 {
     QObject *oldModel = sourceModel();
 
+    // clang-format off
     auto query = UsedResources
                     | RecentlyUsedFirst
                     | Agent(QStringLiteral("KTp"))
@@ -179,6 +180,7 @@ void RecentContactsModel::refresh()
                     | Activity::current()
                     | Url::startsWith(QStringLiteral("ktp"))
                     | Limit(15);
+    // clang-format on
 
     ResultModel *model = new ResultModel(query);
 

@@ -122,6 +122,7 @@ QString JobPrivate::prettyDestUrl() const
 
 void JobPrivate::updateHasDetails()
 {
+    // clang-format off
     const bool hasDetails = m_totalBytes > 0
         || m_totalFiles > 0
         || m_totalDirectories > 0
@@ -133,6 +134,7 @@ void JobPrivate::updateHasDetails()
         || !m_descriptionValue1.isEmpty()
         || !m_descriptionValue2.isEmpty()
         || m_speed > 0;
+    // clang-format on
 
     if (m_hasDetails != hasDetails) {
         m_hasDetails = hasDetails;

@@ -285,12 +285,14 @@ QVariantList recentDocumentActions(KService::Ptr service)
         return list;
     }
 
+    // clang-format off
     auto query = UsedResources
         | RecentlyUsedFirst
         | Agent(storageId)
         | Type::any()
         | Activity::current()
         | Url::file();
+    // clang-format on
 
     ResultSet results(query);
 
@@ -343,11 +345,13 @@ bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, 
             return false;
         }
 
+        // clang-format off
         auto query = UsedResources
             | Agent(storageId)
             | Type::any()
             | Activity::current()
             | Url::file();
+        // clang-format on
 
         KAStats::forgetResources(query);
 
