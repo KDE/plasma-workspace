@@ -1,46 +1,22 @@
-
-#include <QStandardPaths>
-#include <QTemporaryFile>
-#include <QTest>
-
 #include <KShell>
-#include <KPluginMetaData>
-#include <KRunner/RunnerManager>
-#include <QSignalSpy>
+#include <QTemporaryFile>
 
-#include <clocale>
+#include "abstractrunnertest.h"
 
 using namespace Plasma;
 
-class ShellRunnerTest : public QObject
+class ShellRunnerTest : public AbstractRunnerTest
 {
 Q_OBJECT
 
 private:
-    RunnerManager *manager = nullptr;
-
     QFileInfo createExecutableFile(const QString &fileName);
 
 private Q_SLOTS:
-    void initTestCase();
+    void initTestCase() { initProperties(); }
     void testShellrunnerQueries_data();
     void testShellrunnerQueries();
 };
-
-void ShellRunnerTest::initTestCase()
-{
-    QStandardPaths::setTestModeEnabled(true);
-    setlocale(LC_ALL, "C.utf8");
-
-    auto pluginMetaDatas = KPluginLoader::findPluginsById(QStringLiteral(PLUGIN_BUILD_DIR), QStringLiteral(RUNNER_NAME));
-    QCOMPARE(pluginMetaDatas.count(), 1);
-    KPluginMetaData runnerMetadata = pluginMetaDatas.first();
-    delete manager;
-    manager = new RunnerManager();
-    manager->setAllowedRunners({QStringLiteral(RUNNER_NAME)});
-    manager->loadRunner(runnerMetadata);
-    QCOMPARE(manager->runners().count(), 1);
-}
 
 void ShellRunnerTest::testShellrunnerQueries()
 {
@@ -49,9 +25,7 @@ void ShellRunnerTest::testShellrunnerQueries()
     QFETCH(QString, expectedCommand);
     QFETCH(QStringList, expectedENVs);
 
-    QSignalSpy spy(manager, &RunnerManager::queryFinished);
-    manager->launchQuery(query);
-    QVERIFY(spy.wait());
+    doQuery(query);
     QCOMPARE(manager->matches().count(), matchCount);
     if (matchCount == 1) {
         const QVariantList matchData = manager->matches().constFirst().data().toList();

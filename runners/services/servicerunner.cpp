@@ -42,6 +42,8 @@
 
 #include "debug.h"
 
+K_EXPORT_PLASMA_RUNNER_WITH_JSON(ServiceRunner, "plasma-runner-services.json")
+
 namespace {
 
 int weightedLength(const QString &query) {
@@ -497,3 +499,5 @@ QMimeData * ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
     data->setUrls(QList<QUrl>{QUrl::fromLocalFile(path)});
     return data;
 }
+
+#include "servicerunner.moc"

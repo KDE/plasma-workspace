@@ -6,6 +6,6 @@ remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 find_package(Threads REQUIRED)
 include(ECMAddTests)
 
-ecm_add_test(servicerunnertest.cpp TEST_NAME servicerunnertest
-    LINK_LIBRARIES Qt5::Test krunner_services_static Threads::Threads)
+krunner_generate_runner_test(services)
+ecm_add_test(servicerunnertest.cpp TEST_NAME servicerunnertest LINK_LIBRARIES Qt5::Test Threads::Threads KF5::Runner)
 set_target_properties(servicerunnertest PROPERTIES CXX_STANDARD 17) # std::optional

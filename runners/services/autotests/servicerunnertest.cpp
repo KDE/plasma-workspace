@@ -18,29 +18,21 @@
  *   License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include "abstractrunnertest.h"
+
 #include <QDebug>
 #include <QDir>
 #include <QFile>
-#include <QObject>
-#include <QStandardPaths>
-#include <QTest>
-#include <QThread>
-
 #include <KSycoca>
-
-#include "../servicerunner.h"
-
-#include <clocale>
 #include <optional>
 #include <sys/types.h>
 #include <unistd.h>
 
-class ServiceRunnerTest : public QObject
+class ServiceRunnerTest : public AbstractRunnerTest
 {
     Q_OBJECT
 private Q_SLOTS:
     void initTestCase();
-    void cleanupTestCase();
 
     void testChromeAppsRelevance();
     void testKonsoleVsYakuakeComment();
@@ -51,8 +43,7 @@ private Q_SLOTS:
 
 void ServiceRunnerTest::initTestCase()
 {
-    QStandardPaths::setTestModeEnabled(true);
-
+    initProperties();
     auto appsPath = QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation);
     QDir(appsPath).removeRecursively();
     QVERIFY(QDir().mkpath(appsPath));
@@ -65,8 +56,6 @@ void ServiceRunnerTest::initTestCase()
                  qPrintable(QStringLiteral("can't copy %1 => %2").arg(source, target)));
     }
 
-    setlocale(LC_ALL, "C.utf8");
-
     KSycoca::self()->ensureCacheValid();
 
     // Make sure noDisplay behaves consistently WRT OnlyShowIn etc.
@@ -75,21 +64,13 @@ void ServiceRunnerTest::initTestCase()
     //       and not currently under testing anyway.
 }
 
-void ServiceRunnerTest::cleanupTestCase()
-{
-}
-
 void ServiceRunnerTest::testChromeAppsRelevance()
 {
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
-    context.setQuery(QStringLiteral("chrome"));
-
-    runner.match(context);
+    doQuery(QStringLiteral("chrome"));
 
     bool chromeFound = false;
     bool signalFound = false;
-    const auto matches = context.matches();
+    const auto matches = manager->matches();
     for (const auto &match : matches) {
         qDebug() << "matched" << match.text();
         if (!match.text().contains(QLatin1String("ServiceRunnerTest"))) {
@@ -112,15 +93,11 @@ void ServiceRunnerTest::testChromeAppsRelevance()
 void ServiceRunnerTest::testKonsoleVsYakuakeComment()
 {
     // Yakuake has konsole mentioned in comment, should be rated lower.
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
-    context.setQuery(QStringLiteral("kons"));
-
-    runner.match(context);
+    doQuery(QStringLiteral("kons"));
 
     bool konsoleFound = false;
     bool yakuakeFound = false;
-    const auto matches = context.matches();
+    const auto matches = manager->matches();
     for (const auto &match : matches) {
         qDebug() << "matched" << match.text();
         if (!match.text().contains(QLatin1String("ServiceRunnerTest"))) {
@@ -147,15 +124,11 @@ void ServiceRunnerTest::testSystemSettings()
     // first it will be added to the seen cache, however disqualification of already seen items
     // may then also disqualify the KDE version of system settings on account of having already
     // seen it. This test makes sure we find the right version.
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
-    context.setQuery(QStringLiteral("settings"));
-
-    runner.match(context);
+    doQuery(QStringLiteral("settings"));
 
     bool systemSettingsFound = false;
     bool foreignSystemSettingsFound = false;
-    const auto matches = context.matches();
+    const auto matches = manager->matches();
     for (const auto &match : matches) {
         qDebug() << "matched" << match.text();
         if (match.text() == QLatin1String("System Settings ServiceRunnerTest")) {
@@ -173,16 +146,12 @@ void ServiceRunnerTest::testForeignAppsOutscoreKCMs()
 {
     // Our software outscores other things, but foreign applications should still
     // outscore our KCMs.
-    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
-    context.setQuery(QStringLiteral("virt"));
-
-    runner.match(context);
+    doQuery(QStringLiteral("virt"));
 
     std::optional<qreal> virtManRelevance;
     std::optional<qreal> virtThingsRelevance;
     std::optional<qreal> kcmRelevance;
-    const auto matches = context.matches();
+    const auto matches = manager->matches();
     for (const auto &match : matches) {
         const QUrl url = match.data().toUrl();
         if (url == QUrl(QStringLiteral("applications:virt-manager.desktop"))) {
@@ -223,22 +192,12 @@ void ServiceRunnerTest::testINotifyUsage()
 
     const uint originalCount = inotifyCount();
 
-    // We'll run this in a new thread so KDirWatch would be led to create a new thread-local watch instance.
+    // The RunnerManager will run this in a new thread so KDirWatch would be led to create a new thread-local watch instance.
     // The expectation here is that this KDW instance is not persistently claiming an inotify instance.
     bool inotifyCountCool = false;
-    auto thread = QThread::create([&] {
-        ServiceRunner runner(nullptr, KPluginMetaData(), QVariantList());
-        Plasma::RunnerContext context;
-        context.setQuery(QStringLiteral("settings"));
-
-        runner.match(context);
-
-        QCOMPARE(inotifyCount(), originalCount);
-        inotifyCountCool = true;
-    });
-    thread->start();
-    thread->wait();
-    thread->deleteLater();
+    doQuery(QStringLiteral("settings"));
+    QCOMPARE(inotifyCount(), originalCount);
+    inotifyCountCool = true;
 
     QVERIFY(inotifyCountCool);
 }
