@@ -24,6 +24,7 @@ import QtGraphicalEffects 1.0
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager
 import org.kde.kirigami 2.11 as Kirigami
 
@@ -83,15 +84,17 @@ ContainmentLayoutManager.AppletContainer {
     Layout.maximumWidth: applet.Layout.maximumWidth
     Layout.maximumHeight: applet.Layout.maximumHeight
 
-    leftPadding: background.margins.left
-    topPadding: background.margins.top
-    rightPadding: background.margins.right
-    bottomPadding: background.margins.bottom
+    leftPadding: background.usesRepresentationComponent ? background.margins.left - background.inset.left : background.margins.left
+    topPadding: background.usesRepresentationComponent ? background.margins.top - background.inset.top : background.margins.top
+    rightPadding: background.usesRepresentationComponent ? background.margins.right - background.inset.right : background.margins.right
+    bottomPadding: background.usesRepresentationComponent ? background.margins.bottom - background.inset.bottom : background.margins.bottom
 
     initialSize.width: applet.switchWidth + leftPadding + rightPadding
     initialSize.height: applet.switchHeight + topPadding + bottomPadding
 
     background: PlasmaCore.FrameSvgItem {
+        readonly property bool usesRepresentationComponent: contentItem.currentRepresentationItem instanceof PlasmaExtras.Representation
+
         imagePath: {
             if (!contentItem) {
                 return "";

@@ -199,10 +199,17 @@ Item {
             id: container
             Layout.fillWidth: true
             Layout.fillHeight: true
+            readonly property bool collapseBorders: currentItem instanceof PlasmaExtras.Representation && dialog.inset.left >= 0
+
+            Layout.leftMargin: collapseBorders ? -dialog.margins.left + dialog.inset.left : 0
+            Layout.rightMargin: collapseBorders ? -dialog.margins.right + dialog.inset.right : 0
+            Layout.topMargin: collapseBorders ? -dialog.margins.top + dialog.inset.top : 0
+            Layout.bottomMargin: collapseBorders ? -dialog.margins.bottom + dialog.inset.bottom : 0
+
             visible: systemTrayState.activeApplet
 
             // We need to add margin on the top so it matches the dialog's own margin
-            Layout.topMargin: mergeHeadings ? 0 : dialog.margins.top
+           // Layout.topMargin: mergeHeadings ? 0 : dialog.margins.top
         }
     }
 
