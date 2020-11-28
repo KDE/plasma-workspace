@@ -43,7 +43,7 @@ Name[zh_TW]=桌布
 
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=KDE Wallpaper 800x600,KDE Wallpaper 1024x768,KDE Wallpaper 1280x1024,KDE Wallpaper 1440x900,KDE Wallpaper 1600x1200,KDE Wallpaper (other)
-StandardResource=wallpaper
-Uncompress=archive
+TargetDir=wallpapers
+Uncompress=subdir-archive
 
 AdoptionCommand=@QtBinariesDir@/qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'for (var i in desktops()) { d = desktops()[i]; d.wallpaperPlugin = "org.kde.image"; d.currentConfigGroup = ["Wallpaper", "org.kde.image", "General"]; d.writeConfig("Image", "%f") }'
