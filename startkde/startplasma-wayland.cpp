@@ -86,6 +86,11 @@ int main(int argc, char** argv)
         return 1;
     }
 
+    // We import systemd environment after we sync the dbus environment here.
+    // Otherwise it may leads to some unwanted order of applying environment
+    // variables (e.g. LANG and LC_*)
+    importSystemdEnvrionment();
+
     QStringList args;
     if (argc > 1) {
         args.reserve(argc);

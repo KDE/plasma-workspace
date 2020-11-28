@@ -88,6 +88,23 @@ int runSync(const QString& program, const QStringList &args, const QStringList &
     return p.exitCode();
 }
 
+// A helper function to set an environment string in the form of VAR=VALUE.
+void setEnvironmentVariable(const QByteArray &env) {
+    if (env.startsWith("_=") || env.startsWith("SHLVL")) {
+        return;
+    }
+
+    const int idx = env.indexOf('=');
+    if (Q_UNLIKELY(idx <= 0)) {
+        return;
+    }
+
+    if (qgetenv(env.left(idx)) != env.mid(idx+1)) {
+//        qCDebug(PLASMA_STARTUP) << "setting..." << env.left(idx) << env.mid(idx+1) << "was" << qgetenv(env.left(idx));
+        qputenv(env.left(idx), env.mid(idx+1));
+    }
+}
+
 void sourceFiles(const QStringList &files)
 {
     QStringList filteredFiles;
@@ -106,17 +123,7 @@ void sourceFiles(const QStringList &files)
     auto envs = fullEnv.split('\0');
 
     for (auto &env: envs) {
-        if (env.startsWith("_=") || env.startsWith("SHLVL"))
-            continue;
-
-        const int idx = env.indexOf('=');
-        if (Q_UNLIKELY(idx <= 0))
-            continue;
-
-        if (qgetenv(env.left(idx)) != env.mid(idx+1)) {
-//             qCDebug(PLASMA_STARTUP) << "setting..." << env.left(idx) << env.mid(idx+1) << "was" << qgetenv(env.left(idx));
-            qputenv(env.left(idx), env.mid(idx+1));
-        }
+        setEnvironmentVariable(env);
     }
 }
 
@@ -179,6 +186,37 @@ void setupCursor(bool wayland)
         qputenv("XCURSOR_THEME", kcminputrc_mouse_cursortheme.toUtf8());
     }
     qputenv("XCURSOR_SIZE", QByteArray::number(kcminputrc_mouse_cursorsize));
+}
+
+// Import systemd user environment.
+//
+// Systemd read ~/.config/environment.d which applies to all systemd user unit.
+// But it won't work if plasma is not started by systemd.
+void importSystemdEnvrionment() {
+
+    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                              QStringLiteral("/org/freedesktop/systemd1"),
+                                              QStringLiteral("org.freedesktop.DBus.Properties"),
+                                              QStringLiteral("Get"));
+    msg << QStringLiteral("org.freedesktop.systemd1.Manager") << QStringLiteral("Environment");
+    auto reply = QDBusConnection::sessionBus().call(msg);
+    if (reply.type() == QDBusMessage::ErrorMessage) {
+        return;
+    }
+
+    // Make sure the returned type is correct.
+    auto arguments = reply.arguments();
+    if (arguments.isEmpty() || arguments[0].userType() != qMetaTypeId<QDBusVariant>()) {
+        return;
+    }
+    auto variant = qdbus_cast<QVariant>(arguments[0]);
+    if (variant.type() != QVariant::StringList) {
+        return;
+    }
+
+    for (auto &envString : variant.toStringList()) {
+        setEnvironmentVariable(envString.toLocal8Bit());
+    }
 }
 
 // Source scripts found in <config locations>/plasma-workspace/env/*.sh
