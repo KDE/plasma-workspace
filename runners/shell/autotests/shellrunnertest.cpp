@@ -4,7 +4,6 @@
 #include <QTest>
 
 #include <KShell>
-#include <KPluginLoader>
 #include <KPluginMetaData>
 #include <KRunner/RunnerManager>
 #include <QSignalSpy>

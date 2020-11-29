@@ -21,7 +21,6 @@
 #include <KDesktopFile>
 #include <KDirWatch>
 #include <KPluginFactory>
-#include <KPluginLoader>
 
 #include <kdirnotify.h>
 

@@ -17,7 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "locationupdater.h"
 
 #include <KPluginFactory>
-#include <KPluginLoader>
 
 #include "../compositorcoloradaptor.h"
 #include "../geolocator.h"

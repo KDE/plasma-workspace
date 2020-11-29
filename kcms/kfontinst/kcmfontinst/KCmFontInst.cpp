@@ -61,7 +61,6 @@
 #include <QIcon>
 #include <KActionMenu>
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KStandardAction>
 #include <KZip>
 #include <KNewStuff3/KNS3/DownloadDialog>

@@ -24,7 +24,6 @@
 #include <QStandardPaths>
 #include <QProcess>
 
-#include <KPluginLoader>
 #include <KPluginFactory>
 #include <KLocalizedString>
 

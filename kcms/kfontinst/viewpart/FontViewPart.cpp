@@ -51,7 +51,6 @@
 #include <KZip>
 #include <QTemporaryDir>
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KStandardAction>
 #include "config-fontinst.h"
 
