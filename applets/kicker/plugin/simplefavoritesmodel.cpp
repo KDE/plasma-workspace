@@ -68,7 +68,8 @@ QVariant SimpleFavoritesModel::data(const QModelIndex& index, int role) const
     if (role == Qt::DisplayRole) {
         return entry->name();
     } else if (role == Qt::DecorationRole) {
-        return entry->icon();
+        if(entry->icon().name() != "") return entry->icon().name();
+        else return entry->icon();
     } else if (role == Kicker::DescriptionRole) {
         return entry->description();
     } else if (role == Kicker::FavoriteIdRole) {
