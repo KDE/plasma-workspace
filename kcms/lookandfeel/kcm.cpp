@@ -351,11 +351,7 @@ void KCMLookandFeel::save()
         if (m_applyWindowDecoration) {
             cg = KConfigGroup(conf, "kwinrc");
             cg = KConfigGroup(&cg, "org.kde.kdecoration2");
-#ifdef HAVE_BREEZE_DECO
-            setWindowDecoration(cg.readEntry("library", QStringLiteral(BREEZE_KDECORATION_PLUGIN_ID)), cg.readEntry("theme", QStringLiteral("Breeze")));
-#else
-            setWindowDecoration(cg.readEntry("library", QStringLiteral("org.kde.kwin.aurorae")), cg.readEntry("theme", QStringLiteral("kwin4_decoration_qml_plastik")));
-#endif
+            setWindowDecoration(cg.readEntry("library"), cg.readEntry("theme"));
         }
 
         // Reload KWin if something changed, but only once.
