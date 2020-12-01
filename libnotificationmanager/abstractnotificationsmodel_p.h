@@ -25,6 +25,9 @@
 #include "server.h"
 
 #include <QDateTime>
+#include <QTimer>
+
+class QTimer;
 
 namespace NotificationManager
 {
@@ -41,6 +44,8 @@ public:
 
     void setupNotificationTimeout(const Notification &notification);
 
+    void removeRows(const QVector<int> &rows);
+
     AbstractNotificationsModel *q;
 
     QVector<Notification> notifications;
@@ -48,6 +53,9 @@ public:
     // otherwise when it isn't shown to the user and doesn't expire
     // an app might wait indefinitely for the notification to do so
     QHash<uint /*notificationId*/, QTimer*> notificationTimeouts;
+
+    QVector<uint /*notificationId*/> pendingRemovals;
+    QTimer pendingRemovalTimer;
 
     QDateTime lastRead;
 

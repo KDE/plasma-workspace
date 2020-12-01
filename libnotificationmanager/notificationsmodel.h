@@ -25,7 +25,7 @@
 
 namespace NotificationManager {
 
-class NotificationsModel : public AbstractNotificationsModel
+class Q_DECL_EXPORT NotificationsModel : public AbstractNotificationsModel
 {
 public:
     using Ptr = QSharedPointer<NotificationsModel>;

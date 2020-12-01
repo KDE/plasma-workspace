@@ -29,7 +29,6 @@
 
 #include <QDebug>
 #include <QProcess>
-#include <QTimer>
 
 #include <KShell>
 
@@ -44,7 +43,21 @@ AbstractNotificationsModel::Private::Private(AbstractNotificationsModel *q)
     : q(q)
     , lastRead(QDateTime::currentDateTimeUtc())
 {
+    pendingRemovalTimer.setSingleShot(true);
+    pendingRemovalTimer.setInterval(50);
+    connect(&pendingRemovalTimer, &QTimer::timeout, q, [this, q] {
+        QVector<int> rowsToBeRemoved;
+        rowsToBeRemoved.reserve(pendingRemovals.count());
+        for (uint id : qAsConst(pendingRemovals)) {
+            int row = q->rowOfNotification(id); // oh the complexity...
+            if (row == -1) {
+                continue;
+            }
+            rowsToBeRemoved.append(row);
+        }
 
+        removeRows(rowsToBeRemoved);
+    });
 }
 
 AbstractNotificationsModel::Private::~Private()
@@ -125,11 +138,15 @@ void AbstractNotificationsModel::Private::onNotificationRemoved(uint removedId, 
         return;
     }
 
-    // Otherwise if explicitly closed by either user or app, remove it
+    // Otherwise if explicitly closed by either user or app, mark it for removal
+    // some apps are notorious for closing a bunch of notifications at once
+    // causing newer notifications to move up and have a dialogs created for them
+    // just to then be discarded causing excess CPU usage
+    pendingRemovals.append(removedId);
 
-    q->beginRemoveRows(QModelIndex(), row, row);
-    notifications.removeAt(row);
-    q->endRemoveRows();
+    if (!pendingRemovalTimer.isActive()) {
+        pendingRemovalTimer.start();
+    }
 }
 
 void AbstractNotificationsModel::Private::setupNotificationTimeout(const Notification &notification)
@@ -156,6 +173,50 @@ void AbstractNotificationsModel::Private::setupNotificationTimeout(const Notific
     timer->setProperty("notificationId", notification.id());
     timer->setInterval(60000 /*1min*/ + (notification.timeout() == -1 ? 120000 /*2min, max configurable default timeout*/ : notification.timeout()));
     timer->start();
+}
+
+void AbstractNotificationsModel::Private::removeRows(const QVector<int> &rows)
+{
+    if (rows.isEmpty()) {
+        return;
+    }
+
+    QVector<int> rowsToBeRemoved(rows);
+    std::sort(rowsToBeRemoved.begin(), rowsToBeRemoved.end());
+
+    QVector<QPair<int, int>> clearQueue;
+
+    QPair<int, int> clearRange{rowsToBeRemoved.first(), rowsToBeRemoved.first()};
+
+    for (int row : rowsToBeRemoved) {
+        if (row > clearRange.second + 1) {
+            clearQueue.append(clearRange);
+            clearRange.first = row;
+        }
+
+        clearRange.second = row;
+    }
+
+    if (clearQueue.isEmpty() || clearQueue.last() != clearRange) {
+        clearQueue.append(clearRange);
+    }
+
+    int rowsRemoved = 0;
+
+    for (int i = clearQueue.count() - 1; i >= 0; --i) {
+        const auto &range = clearQueue.at(i);
+
+        q->beginRemoveRows(QModelIndex(), range.first, range.second);
+        for (int j = range.second; j >= range.first; --j) {
+            notifications.removeAt(j);
+            ++rowsRemoved;
+        }
+        q->endRemoveRows();
+    }
+
+    Q_ASSERT(rowsRemoved == rowsToBeRemoved.count());
+
+    pendingRemovals.clear();
 }
 
 int AbstractNotificationsModel::rowOfNotification(uint id) const
@@ -325,45 +386,17 @@ void AbstractNotificationsModel::clear(Notifications::ClearFlags flags)
         return;
     }
 
-    // Tries to remove a contiguous group if possible as the likely case is
-    // you have n unread notifications at the end of the list, we don't want to
-    // remove and signal each item individually
-    QVector<QPair<int, int>> clearQueue;
+    QVector<int> rowsToRemove;
 
-    QPair<int, int> clearRange{-1, -1};
-
-    for (int i = d->notifications.count() - 1; i >= 0; --i) {
+    for (int i = 0; i < d->notifications.count(); ++i) {
         const Notification &notification = d->notifications.at(i);
 
-        bool clear = (flags.testFlag(Notifications::ClearExpired) && notification.expired());
-
-        if (clear) {
-            if (clearRange.second == -1) {
-                clearRange.second = i;
-            }
-            clearRange.first = i;
-        } else {
-            if (clearRange.first != -1) {
-                clearQueue.append(clearRange);
-                clearRange.first = -1;
-                clearRange.second = -1;
-            }
+        if (flags.testFlag(Notifications::ClearExpired) && notification.expired()) {
+            rowsToRemove.append(i);
         }
     }
 
-    if (clearRange.first != -1) {
-        clearQueue.append(clearRange);
-        clearRange.first = -1;
-        clearRange.second = -1;
-    }
-
-    for (const auto &range : clearQueue) {
-        beginRemoveRows(QModelIndex(), range.first, range.second);
-        for (int i = range.second; i >= range.first; --i) {
-            d->notifications.removeAt(i);
-        }
-        endRemoveRows();
-    }
+    d->removeRows(rowsToRemove);
 }
 
 void AbstractNotificationsModel::onNotificationAdded(const Notification &notification)

@@ -78,6 +78,8 @@ protected:
 
 
 private:
+    friend class NotificationTest;
+
     class Private;
     QScopedPointer<Private> d;
 
