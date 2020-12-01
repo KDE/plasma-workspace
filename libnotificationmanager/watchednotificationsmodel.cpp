@@ -104,6 +104,8 @@ void WatchedNotificationsModel::Private::Notify(uint id, const QString &app_name
     notification.setTimeout(timeout);
     notification.setHints(hints);
     notification.setIcon(app_icon);
+    notification.processHints(hints);
+
     if(wasReplaced) {
         q->onNotificationReplaced(replaces_id, notification);
     } else {
