@@ -40,12 +40,13 @@ PlasmaExtras.ScrollArea {
 
         boundsBehavior: Flickable.StopAtBounds
         interactive: contentHeight > height
-        highlight: PlasmaComponents.Highlight { }
+        //highlight: PlasmaComponents.Highlight { }
         highlightMoveDuration: 0
         highlightResizeDuration: 0
         currentIndex: -1
 
         delegate: ClipboardItemDelegate {
+            hoverEnabled: true
             width: menuListView.width
             supportsBarcodes: menu.supportsBarcodes
 

@@ -129,7 +129,6 @@ ColumnLayout {
         }
         Layout.fillWidth: true
         Layout.fillHeight: true
-        Layout.topMargin: units.smallSpacing
         onItemSelected: clipboardSource.service(uuid, "select")
         onRemove: clipboardSource.service(uuid, "remove")
         onEdit: clipboardSource.edit(uuid)

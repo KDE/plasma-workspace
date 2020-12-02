@@ -88,7 +88,7 @@ Item {
         }
     }
 
-    Plasmoid.fullRepresentation: PlasmaComponents3.Page {
+    Plasmoid.fullRepresentation: PlasmaExtras.Representation {
         id: dialogItem
         Layout.minimumWidth: units.gridUnit * 5
         Layout.minimumHeight: units.gridUnit * 5
@@ -96,6 +96,8 @@ Item {
         focus: true
 
         header: stack.currentPage.header
+
+        collapseMarginsHint: true
 
         property alias listMargins: listItemSvg.margins
 
@@ -108,9 +110,8 @@ Item {
 
         Keys.forwardTo: [stack.currentPage]
 
-        PlasmaComponents.PageStack {
+        contentItem: PlasmaComponents.PageStack {
             id: stack
-            anchors.fill: parent
             initialPage: ClipboardPage {
                 anchors.fill: parent
             }
