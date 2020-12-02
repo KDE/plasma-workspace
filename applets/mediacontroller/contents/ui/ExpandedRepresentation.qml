@@ -29,13 +29,15 @@ import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.kirigami 2.4 as Kirigami
 import QtGraphicalEffects 1.0
 
-PlasmaComponents3.Page {
+PlasmaExtras.Representation {
     id: expandedRepresentation
 
     Layout.minimumWidth: PlasmaCore.Units.gridUnit * 14
     Layout.minimumHeight: PlasmaCore.Units.gridUnit * 14
     Layout.preferredWidth: Layout.minimumWidth * 1.5
     Layout.preferredHeight: Layout.minimumHeight * 1.5
+
+    collapseMarginsHint: true
 
     readonly property int controlSize: PlasmaCore.Units.iconSizes.medium
 
