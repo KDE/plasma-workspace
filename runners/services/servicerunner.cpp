@@ -157,12 +157,12 @@ private:
         for (const QStringRef &str : strList)
         {
             keywordTemplate += QStringLiteral(" and '%1' ~subin Keywords").arg(str.toString());
-            genericNameTemplate += QStringLiteral(" and '%1' ~~ GenericName").arg(str.toString());
-            nameTemplate += QStringLiteral(" and '%1' ~~ Name").arg(str.toString());
-            commentTemplate += QStringLiteral(" and '%1' ~~ Comment").arg(str.toString());
+            genericNameTemplate += QStringLiteral(" and '%1' ~subseq GenericName").arg(str.toString());
+            nameTemplate += QStringLiteral(" and '%1' ~subseq Name").arg(str.toString());
+            commentTemplate += QStringLiteral(" and '%1' ~subseq Comment").arg(str.toString());
         }
 
-        QString finalQuery = QStringLiteral("exist Exec and ( (%1) or (%2) or (%3) or ('%4' ~~ Exec) or (%5) )")
+        QString finalQuery = QStringLiteral("exist Exec and ( (%1) or (%2) or (%3) or ('%4' ~subseq Exec) or (%5) )")
             .arg(keywordTemplate, genericNameTemplate, nameTemplate, strList[0].toString(), commentTemplate);
 
         qCDebug(RUNNER_SERVICES) << "Final query : " << finalQuery;
@@ -226,7 +226,7 @@ private:
 
         // If the term length is < 3, no real point searching the Keywords and GenericName
         if (weightedTermLength < 3) {
-            query = QStringLiteral("exist Exec and ( (exist Name and '%1' ~~ Name) or ('%1' ~~ Exec) )").arg(term);
+            query = QStringLiteral("exist Exec and ( (exist Name and '%1' ~subseq Name) or ('%1' ~subseq Exec) )").arg(term);
         } else {
             //Match using subsequences (Bug: 262837)
             query = generateQuery(queryList);
