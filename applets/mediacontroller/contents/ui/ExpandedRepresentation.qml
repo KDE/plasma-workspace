@@ -511,27 +511,13 @@ PlasmaExtras.Representation {
     header: PlasmaExtras.PlasmoidHeading {
         id: headerItem
         location: PlasmaExtras.PlasmoidHeading.Location.Header
-        visible: playerList.model.length > 1
+        visible: playerList.model.length > 2 // more than one player, @multiplex is always there
         //this removes top padding to allow tabbar to touch the edge
         topPadding: topInset
         bottomPadding: -bottomInset
         implicitHeight: PlasmaCore.Units.gridUnit * 2
-        PlasmaExtras.Heading { // Song Title
-            anchors.fill: parent
-            anchors.leftMargin: PlasmaCore.Units.smallSpacing
-            level: 2
-
-            textFormat: Text.PlainText
-            fontSizeMode: Text.VerticalFit
-            elide: Text.ElideRight
-
-            text: root.identity
-
-            visible: playerList.count <= 2
-        }
         PlasmaComponents3.TabBar {
             id: playerSelector
-            visible: playerList.model.length > 2 // more than one player, @multiplex is always there
             position: PlasmaComponents3.TabBar.Header
 
             anchors.fill: parent
