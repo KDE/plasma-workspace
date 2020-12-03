@@ -46,6 +46,7 @@ Name[zh_CN]=XembedSniProxy
 Name[zh_TW]=XembedSniProxy
 Type=Application
 X-KDE-StartupNotify=false
+NoDisplay=true
 OnlyShowIn=KDE;
 X-KDE-autostart-phase=0
 X-systemd-skip=true
