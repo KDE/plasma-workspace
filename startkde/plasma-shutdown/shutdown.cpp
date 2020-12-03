@@ -43,6 +43,8 @@ void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
     m_shutdownType = shutdownType;
 
     OrgKdeKSMServerInterfaceInterface ksmserverIface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
+    ksmserverIface.setTimeout(INT32_MAX); // KSMServer closeSession can take a long time to reply, as apps may have prompts.  Value corresponds to DBUS_TIMEOUT_INFINITE
+
     auto closeSessionReply = ksmserverIface.closeSession();
     auto watcher = new QDBusPendingCallWatcher(closeSessionReply, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [closeSessionReply, watcher, this]() {
