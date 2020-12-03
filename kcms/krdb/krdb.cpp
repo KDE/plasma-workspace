@@ -225,6 +225,7 @@ static void addColorDef(QString& s, const char* n, const QColor& col)
 {
   s += QStringLiteral("#define %1 ").arg(QString::fromUtf8(n));
   s += col.name().toLower();
+  s += QLatin1Char('\n');
 }
 
 // -----------------------------------------------------------------------------
