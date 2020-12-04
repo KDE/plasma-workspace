@@ -154,6 +154,15 @@ void runStartupConfig()
         formatsConfig.writeEntry("LANG", qgetenv("LANG"));
         formatsConfig.sync();
     }
+
+    if (qEnvironmentVariableIsEmpty("QT_IM_MODULE")) {
+        qputenv("QT_IM_MODULE", "plasmaim");
+    }
+    if (qEnvironmentVariableIsEmpty("GTK_IM_MODULE")) {
+        qputenv("GTK_IM_MODULE", "plasma-nothing");
+    } else {
+        qputenv("GTK_IM_MODULE", QByteArrayLiteral("plasma-")+qgetenv("GTK_IM_MODULE"));
+    }
 }
 
 void setupCursor(bool wayland)
