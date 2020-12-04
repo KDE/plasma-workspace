@@ -18,7 +18,6 @@
       <label>If true it lists all kind of devices. Only one between removableDevices, nonRemovableDevices and allDevices should be set.</label>
       <default>false</default>
     </entry>
-    <!-- This option has no visible UI and is only accessible by adding "popupOnNewDevice=false" to the plasma-org.kde.plasma.desktop-appletsrc file-->
     <entry name="popupOnNewDevice" type="Bool">
       <label>If true it tries to open the plasmoid when a new device is inserted, as a kind of notification.</label>
       <default>true</default>

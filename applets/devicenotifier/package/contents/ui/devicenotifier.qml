@@ -228,6 +228,7 @@ Item {
     property var showRemovableDevicesAction
     property var showNonRemovableDevicesAction
     property var showAllDevicesAction
+    property var openAutomaticallyAction
 
     Component.onCompleted: {
         if (sdSource.connectedSources.count === 0) {
@@ -254,6 +255,13 @@ Item {
 
         plasmoid.setActionSeparator("sep");
 
+        plasmoid.setAction("openAutomatically", i18n("Show popup when new device is plugged in"));
+        devicenotifier.openAutomaticallyAction = plasmoid.action("openAutomatically");
+        devicenotifier.openAutomaticallyAction.checkable = true;
+        devicenotifier.openAutomaticallyAction.checked = Qt.binding(() => {return plasmoid.configuration.popupOnNewDevice;});
+
+        plasmoid.setActionSeparator("sep2");
+
         if (devicenotifier.openAutomounterKcmAuthorized) {
             plasmoid.setAction("openAutomounterKcm", i18nc("Open auto mounter kcm", "Configure Removable Devices..."), "configure")
         }
@@ -279,6 +287,10 @@ Item {
         plasmoid.configuration.removableDevices = false;
         plasmoid.configuration.nonRemovableDevices = false;
         plasmoid.configuration.allDevices = true;
+    }
+
+    function action_openAutomatically() {
+        plasmoid.configuration.popupOnNewDevice = !plasmoid.configuration.popupOnNewDevice;
     }
 
     Plasmoid.onExpandedChanged: {
