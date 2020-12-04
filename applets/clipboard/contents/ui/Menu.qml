@@ -40,7 +40,6 @@ PlasmaExtras.ScrollArea {
 
         boundsBehavior: Flickable.StopAtBounds
         interactive: contentHeight > height
-        //highlight: PlasmaComponents.Highlight { }
         highlightMoveDuration: 0
         highlightResizeDuration: 0
         currentIndex: -1
