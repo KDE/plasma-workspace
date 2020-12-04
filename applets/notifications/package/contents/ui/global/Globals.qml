@@ -338,6 +338,10 @@ QtObject {
 
         for (var i = 0; i < popupInstantiator.count; ++i) {
             let popup = popupInstantiator.objectAt(i);
+            if (!popup) {
+                continue;
+            }
+
             // Popup width is fixed, so don't rely on the actual window size
             var popupEffectiveWidth = popupWidth + popup.margins.left + popup.margins.right;
 
