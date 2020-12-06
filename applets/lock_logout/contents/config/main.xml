@@ -10,6 +10,14 @@
       <label>Show an option to shut down the system.</label>
       <default>true</default>
     </entry>
+    <entry name="show_requestReboot" type="Bool">
+      <label>Show an option to reboot the system.</label>
+      <default>false</default>
+    </entry>
+    <entry name="show_requestLogout" type="Bool">
+      <label>Show an option to logout.</label>
+      <default>false</default>
+    </entry>
     <entry name="show_lockScreen" type="Bool">
       <label>Show an option to lock the system.</label>
       <default>true</default>

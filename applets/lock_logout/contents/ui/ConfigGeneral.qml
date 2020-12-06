@@ -28,9 +28,12 @@ Kirigami.FormLayout {
     anchors.left: parent.left
     anchors.right: parent.right
 
-    readonly property int checkedOptions: leave.checked + lock.checked + switchUser.checked + hibernate.checked + sleep.checked
+    readonly property int checkedOptions: logout.checked + shutdown.checked + reboot.checked + lock.checked + switchUser.checked + hibernate.checked + sleep.checked
 
-    property alias cfg_show_requestShutDown: leave.checked
+    property alias cfg_show_requestLogout: logout.checked
+    property alias cfg_show_requestShutDown: shutdown.checked
+    property alias cfg_show_requestReboot: reboot.checked
+
     property alias cfg_show_lockScreen: lock.checked
     property alias cfg_show_switchUser: switchUser.checked
     property alias cfg_show_suspendToDisk: hibernate.checked
@@ -41,11 +44,21 @@ Kirigami.FormLayout {
     }
 
     QtControls.CheckBox {
-        id: leave
+        id: logout
         Kirigami.FormData.label: i18nc("Heading for a list of actions (leave, lock, switch user, hibernate, suspend)", "Show actions:")
-        text: i18n("Leave")
+        text: i18n("Logout")
         // ensure user cannot have all options unchecked
-        enabled: checkedOptions > 1 || !checked
+        enabled: session.canLogout && (checkedOptions > 1 || !checked)
+    }
+    QtControls.CheckBox {
+        id: shutdown
+        text: i18n("Shutdown")
+        enabled: session.canShutdown && (checkedOptions > 1 || !checked)
+    }
+    QtControls.CheckBox {
+        id: reboot
+        text: i18n("Reboot")
+        enabled: session.canReboot && (checkedOptions > 1 || !checked)
     }
     QtControls.CheckBox {
         id: lock
