@@ -20,6 +20,8 @@
 #define SHELLRUNNER_H
 
 #include <KRunner/AbstractRunner>
+#include <QSet>
+#include <QMutex>
 
 /**
  * This class runs programs using the literal name of the binary, much as one
@@ -38,8 +40,13 @@ class ShellRunner : public Plasma::AbstractRunner
 
     private:
         bool parseShellCommand(const QString &query, QStringList &envs, QString &command);
+
+        void fetchBashAliasesAndFunctions();
+        QSet<QString> m_bashCompatibleStrings;
         QList<QAction *> m_actionList;
         QIcon m_matchIcon;
+        bool m_initialized;
+        QMutex m_mutex;
 };
 
 

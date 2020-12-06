@@ -28,11 +28,15 @@
 #include <QStandardPaths>
 
 #include <KIO/CommandLauncherJob>
+#include <QProcess>
+#include <QFileInfo>
+#include <QDebug>
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(ShellRunner, "plasma-runner-shell.json")
 
 ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : Plasma::AbstractRunner(parent, metaData, args),
+    m_bashCompatibleStrings({})
 {
     setObjectName(QStringLiteral("Command"));
     setPriority(AbstractRunner::HighestPriority);
@@ -45,6 +49,12 @@ ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData, const
                             QIcon::fromTheme(QStringLiteral("utilities-terminal")),
                             i18n("Run in Terminal Window"))};
     m_matchIcon = QIcon::fromTheme(QStringLiteral("system-run"));
+    // We only want to read the bash aliases/functions if the configured shell is bash
+    if (QFileInfo(qEnvironmentVariable("SHELL")).fileName() == QLatin1String("bash")) {
+        suspendMatching(true);
+        fetchBashAliasesAndFunctions();
+        qWarning() << Q_FUNC_INFO;
+    }
 }
 
 ShellRunner::~ShellRunner()
@@ -53,6 +63,7 @@ ShellRunner::~ShellRunner()
 
 void ShellRunner::match(Plasma::RunnerContext &context)
 {
+    qWarning() << Q_FUNC_INFO;
     QStringList envs;
     QString command = context.query();
     if (parseShellCommand(context.query(), envs, command)) {
@@ -90,6 +101,8 @@ bool ShellRunner::parseShellCommand(const QString &query, QStringList &envs, QSt
         if (!QStandardPaths::findExecutable(KShell::tildeExpand(entry)).isEmpty()) {
             command = KShell::joinArgs(split.mid(split.indexOf(entry)));
             return true;
+        } else if (m_bashCompatibleStrings.contains(entry)) {
+            command = QStringLiteral("bash -i -c %1").arg(KShell::joinArgs(split.mid(split.indexOf(entry))));
         } else if (envRegex.match(entry).hasMatch()) {
             envs.append(entry);
         } else {
@@ -97,6 +110,44 @@ bool ShellRunner::parseShellCommand(const QString &query, QStringList &envs, QSt
         }
     }
     return false;
+}
+
+void ShellRunner::fetchBashAliasesAndFunctions()
+{
+    QProcess *aliasesProcess = new QProcess();
+    QProcess *functionProcess = new QProcess();
+    int finishedProcesses = 0;
+    auto processDone = [this, aliasesProcess, functionProcess, &finishedProcesses] () {
+        ++finishedProcesses;
+        if (finishedProcesses == 2) {
+            suspendMatching(false);
+            aliasesProcess->deleteLater();
+            functionProcess->deleteLater();
+        }
+    };
+
+    // Bash aliases
+    aliasesProcess->start(QStringLiteral("bash"), QStringList{"-c", "-i", "alias"});
+    connect(aliasesProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished),
+        [this, aliasesProcess, processDone](int, QProcess::ExitStatus) {
+        const QStringList aliasOutputLines = QString(aliasesProcess->readAll()).split('\n');
+        for (const auto &alias : aliasOutputLines) {
+            QString prefixRemoved = QString(alias).remove(0, strlen("alias "));
+            m_bashCompatibleStrings << prefixRemoved.left(prefixRemoved.indexOf('='));
+        }
+        processDone();
+    });
+
+    // Bash functions
+    functionProcess->start(QStringLiteral("bash"), QStringList{"-c", "-i", "declare -F"});
+    connect(functionProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished),
+        [this, functionProcess, processDone](int, QProcess::ExitStatus) {
+        const QStringList functionOutputLines = QString(functionProcess->readAll()).split('\n');
+        for (const auto &function : functionOutputLines) {
+            m_bashCompatibleStrings << QString(function).remove(0, strlen("declare -f "));
+        }
+        processDone();
+    });
 }
 
 #include "shellrunner.moc"
