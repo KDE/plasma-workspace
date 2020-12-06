@@ -1,9 +1,9 @@
 var data = [{
     icon: "system-lock-screen",
-    operation: "lockScreen",
+    operation: "lock",
     tooltip_mainText: i18n("Lock"),
     tooltip_subText: i18n("Lock the screen"),
-    requires: "LockScreen"
+    requires: "Lock"
 }, {
     icon: "system-switch-user",
     operation: "switchUser",
@@ -11,18 +11,19 @@ var data = [{
     tooltip_subText: i18n("Start a parallel session as a different user")
 }, {
     icon: "system-shutdown",
-    operation: "requestShutDown",
+    operation: "requestShutdown",
     tooltip_mainText: i18n("Leave..."),
-    tooltip_subText: i18n("Log out, turn off or restart the computer")
+    tooltip_subText: i18n("Log out, turn off or restart the computer"),
+    requires: "Shutdown"
 }, {
     icon: "system-suspend",
-    operation: "suspendToRam",
+    operation: "suspend",
     tooltip_mainText: i18nc("Suspend to RAM", "Sleep"),
     tooltip_subText: i18n("Sleep (suspend to RAM)"),
     requires: "Suspend"
 }, {
     icon: "system-suspend-hibernate",
-    operation: "suspendToDisk",
+    operation: "hibernate",
     tooltip_mainText: i18n("Hibernate"),
     tooltip_subText: i18n("Hibernate (suspend to disk)"),
     requires: "Hibernate"
