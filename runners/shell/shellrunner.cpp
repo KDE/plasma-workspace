@@ -28,6 +28,9 @@
 #include <QStandardPaths>
 
 #include <KIO/CommandLauncherJob>
+#include <QProcess>
+#include <QFileInfo>
+#include <QDebug>
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(ShellRunner, "plasma-runner-shell.json")
 
@@ -45,6 +48,11 @@ ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData, const
                             QIcon::fromTheme(QStringLiteral("utilities-terminal")),
                             i18n("Run in Terminal Window"))};
     m_matchIcon = QIcon::fromTheme(QStringLiteral("system-run"));
+    // We only want to read the bash aliases/functions if the configured shell is bash
+    if (QFileInfo(qEnvironmentVariable("SHELL")).fileName() == QLatin1String("bash")) {
+        suspendMatching(true);
+        fetchBashAliasesAndFunctions();
+    }
 }
 
 ShellRunner::~ShellRunner()
@@ -71,13 +79,22 @@ void ShellRunner::match(Plasma::RunnerContext &context)
 
 void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
+    Q_UNUSED(context)
+
+    const QVariantList data = match.data().toList();
     if (match.selectedAction()) {
-        const QVariantList data = match.data().toList();
         KToolInvocation::invokeTerminal(data.at(0).toString(), data.at(1).toStringList());
         return;
     }
 
-    auto *job = new KIO::CommandLauncherJob(context.query()); // The job can handle the env parameters
+
+    QString command;
+    if (data.size() == 2) {
+        command += KShell::joinArgs(data.at(1).toStringList());
+        command += QLatin1Char(' ');
+    }
+    command += data.at(0).toString();
+    auto *job = new KIO::CommandLauncherJob(command, this); // The job can handle the env parameters
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
     job->start();
 }
@@ -90,6 +107,10 @@ bool ShellRunner::parseShellCommand(const QString &query, QStringList &envs, QSt
         if (!QStandardPaths::findExecutable(KShell::tildeExpand(entry)).isEmpty()) {
             command = KShell::joinArgs(split.mid(split.indexOf(entry)));
             return true;
+        } else if (m_bashCompatibleStrings.contains(entry)) {
+            const QString joined = KShell::joinArgs(split.mid(split.indexOf(entry)));
+            command = QStringLiteral("bash -i -c %1").arg(KShell::quoteArg(joined));
+            return true;
         } else if (envRegex.match(entry).hasMatch()) {
             envs.append(entry);
         } else {
@@ -97,6 +118,39 @@ bool ShellRunner::parseShellCommand(const QString &query, QStringList &envs, QSt
         }
     }
     return false;
+}
+
+void ShellRunner::fetchBashAliasesAndFunctions()
+{
+    // This gets executed once the aliases are fetched
+    auto fetchBashFunctions = [this] () {
+        // Bash functions
+        QProcess *functionProcess = new QProcess();
+        functionProcess->start(QStringLiteral("bash"), QStringList{"-c", "-i", "declare -F"});
+        connect(functionProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished),
+                this, [this, functionProcess](int, QProcess::ExitStatus) {
+                    const QStringList functionOutputLines = QString(functionProcess->readAll()).split('\n');
+                    for (const auto &function : functionOutputLines) {
+                        m_bashCompatibleStrings << QString(function).remove(0, strlen("declare -f "));
+                    }
+                    suspendMatching(false);
+                    delete functionProcess;
+                });
+    };
+
+    // Bash aliases
+    QProcess *aliasesProcess = new QProcess();
+    aliasesProcess->start(QStringLiteral("bash"), QStringList{"-c", "-i", "alias"});
+    connect(aliasesProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished),
+        this, [this, aliasesProcess, fetchBashFunctions](int, QProcess::ExitStatus) {
+        const QStringList aliasOutputLines = QString(aliasesProcess->readAll()).split('\n');
+        for (const auto &alias : aliasOutputLines) {
+            QString prefixRemoved = QString(alias).remove(0, strlen("alias "));
+            m_bashCompatibleStrings << prefixRemoved.left(prefixRemoved.indexOf('='));
+        }
+        delete aliasesProcess;
+        fetchBashFunctions();
+    });
 }
 
 #include "shellrunner.moc"

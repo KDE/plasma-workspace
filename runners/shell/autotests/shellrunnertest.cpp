@@ -31,6 +31,10 @@ void ShellRunnerTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
     setlocale(LC_ALL, "C.utf8");
+    // The bash command integration uses the suspend method of the runner to wait for the processes being finished
+    // this means that the queryFinished signal gets emitted, but the runner gets queried afterwards
+    // to avoid this we set a different SHELL variable than bash
+    qputenv("SHELL", "/bin/true");
 
     auto pluginMetaDatas = KPluginLoader::findPluginsById(QStringLiteral(PLUGIN_BUILD_DIR), QStringLiteral(RUNNER_NAME));
     QCOMPARE(pluginMetaDatas.count(), 1);
