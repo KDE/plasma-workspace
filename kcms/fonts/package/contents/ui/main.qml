@@ -18,13 +18,13 @@
    Boston, MA 02110-1301, USA.
 */
 
-import QtQuick 2.1
+import QtQuick 2.5
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.0 as QtControls
+import QtQuick.Controls 2.7 as QtControls
 import QtQuick.Dialogs 1.2 as QtDialogs
 
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kcm 1.3 as KCM
 
 KCM.SimpleKCM {
@@ -40,7 +40,35 @@ KCM.SimpleKCM {
         onTriggered: KCMShell.open("kcm_kscreen.desktop")
     }
 
+    // use fontmetrics directly to make the spacing based off of the gridunit
+    // as it would be if calculated by currently selected font in KCM
+    FontMetrics {
+        id: fontMetrics
+        font: kcm.fontsSettings.font
+
+        property real gridUnit: fontMetrics.height
+        property int smallSpacing: Math.floor(gridUnit / 4)
+        property int largeSpacing: smallSpacing * 2
+    }
+
     ColumnLayout {
+        spacing: Kirigami.Units.largeSpacing
+
+        QtControls.Control {
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+
+            Layout.maximumWidth: 45 * fontMetrics.height
+            Layout.preferredHeight: 15 * fontMetrics.height
+
+            background: Image {
+                source: kcm.wallpaperLocation
+                fillMode: Image.PreserveAspectCrop
+                mipmap: true
+            }
+
+            PreviewWindow {}
+        }
 
         Kirigami.InlineMessage {
             id: antiAliasingMessage
@@ -85,27 +113,9 @@ KCM.SimpleKCM {
         }
 
         Kirigami.FormLayout {
-            id: formLayout
-            readonly property int maxImplicitWidth: Math.max(adjustAllFontsButton.implicitWidth, excludeField.implicitWidth, subPixelCombo.implicitWidth, hintingCombo.implicitWidth)
-
-            QtControls.Button {
-                id: adjustAllFontsButton
-                Layout.preferredWidth: formLayout.maxImplicitWidth
-                icon.name: "font-select-symbolic"
-                text: i18n("&Adjust All Fonts...")
-
-                onClicked: kcm.adjustAllFonts();
-                enabled: !kcm.fontsSettings.isImmutable("font")
-                        || !kcm.fontsSettings.isImmutable("fixed")
-                        || !kcm.fontsSettings.isImmutable("smallestReadableFont")
-                        || !kcm.fontsSettings.isImmutable("toolBarFont")
-                        || !kcm.fontsSettings.isImmutable("menuFont")
-                        || !kcm.fontsSettings.isImmutable("activeFont")
-            }
-
             FontWidget {
                 id: generalFontWidget
-                label: i18n("General:")
+                Kirigami.FormData.label: i18n("General:")
                 tooltipText: i18n("Select general font")
                 category: "font"
                 font: kcm.fontsSettings.font
@@ -117,7 +127,7 @@ KCM.SimpleKCM {
             }
             FontWidget {
                 id: fixedWidthFontWidget
-                label: i18n("Fixed width:")
+                Kirigami.FormData.label: i18n("Fixed width:")
                 tooltipText: i18n("Select fixed width font")
                 category: "fixed"
                 font: kcm.fontsSettings.fixed
@@ -129,7 +139,7 @@ KCM.SimpleKCM {
             }
             FontWidget {
                 id: smallFontWidget
-                label: i18n("Small:")
+                Kirigami.FormData.label: i18n("Small:")
                 tooltipText: i18n("Select small font")
                 category: "smallestReadableFont"
                 font: kcm.fontsSettings.smallestReadableFont
@@ -141,7 +151,7 @@ KCM.SimpleKCM {
             }
             FontWidget {
                 id: toolbarFontWidget
-                label: i18n("Toolbar:")
+                Kirigami.FormData.label: i18n("Toolbar:")
                 tooltipText: i18n("Select toolbar font")
                 category: "toolBarFont"
                 font: kcm.fontsSettings.toolBarFont
@@ -153,7 +163,7 @@ KCM.SimpleKCM {
             }
             FontWidget {
                 id: menuFontWidget
-                label: i18n("Menu:")
+                Kirigami.FormData.label: i18n("Menu:")
                 tooltipText: i18n("Select menu font")
                 category: "menuFont"
                 font: kcm.fontsSettings.menuFont
@@ -164,7 +174,7 @@ KCM.SimpleKCM {
                 }
             }
             FontWidget {
-                label: i18n("Window title:")
+                Kirigami.FormData.label: i18n("Window title:")
                 tooltipText: i18n("Select window title font")
                 category: "activeFont"
                 font: kcm.fontsSettings.activeFont
@@ -175,9 +185,33 @@ KCM.SimpleKCM {
                 }
             }
 
-            Kirigami.Separator {
-                Kirigami.FormData.isSection: true
+            QtControls.Button {
+                id: adjustAllFontsButton
+                icon.name: "font-select-symbolic"
+                text: i18n("&Adjust All Fonts...")
+
+                onClicked: kcm.adjustAllFonts();
+                enabled: !kcm.fontsSettings.isImmutable("font")
+                        || !kcm.fontsSettings.isImmutable("fixed")
+                        || !kcm.fontsSettings.isImmutable("smallestReadableFont")
+                        || !kcm.fontsSettings.isImmutable("toolBarFont")
+                        || !kcm.fontsSettings.isImmutable("menuFont")
+                        || !kcm.fontsSettings.isImmutable("activeFont")
+
+                Layout.alignment: Qt.AlignHCenter
+                Layout.columnSpan: 2
             }
+        }
+
+        Kirigami.Separator {
+            Layout.fillWidth: true
+            Layout.leftMargin: Kirigami.Units.gridUnit * 4
+            Layout.rightMargin: Kirigami.Units.gridUnit * 4
+        }
+
+        Kirigami.FormLayout {
+            id: formLayout
+            readonly property int maxImplicitWidth: Math.max(adjustAllFontsButton.implicitWidth, excludeField.implicitWidth, subPixelCombo.implicitWidth, hintingCombo.implicitWidth)
 
             RowLayout {
                 Kirigami.FormData.label: i18n("Anti-Aliasing:")

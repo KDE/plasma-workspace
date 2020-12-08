@@ -12,6 +12,10 @@ include_directories(../kfontinst/lib)
 
 set(kcm_fonts_PART_SRCS ../krdb/krdb.cpp previewrenderengine.cpp previewimageprovider.cpp fonts.cpp fontsaasettings.cpp ../kfontinst/lib/FcEngine.cpp)
 
+set(kcm_fonts_WALLPAPER_LOCATION ${KDE_INSTALL_FULL_WALLPAPERDIR}/Next/contents/images/5120x2880.jpg)
+
+configure_file(config.h.in config.h)
+
 if(X11_FOUND)
     set(kcm_fonts_PART_SRCS ${kcm_fonts_PART_SRCS} ${libkxftconfig_SRCS})
 endif()

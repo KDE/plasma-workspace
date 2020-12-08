@@ -49,6 +49,7 @@ Q_OBJECT
     Q_PROPERTY(int subPixelCurrentIndex READ subPixelCurrentIndex WRITE setSubPixelCurrentIndex NOTIFY subPixelCurrentIndexChanged)
     Q_PROPERTY(QAbstractItemModel *hintingOptionsModel READ hintingOptionsModel CONSTANT)
     Q_PROPERTY(int hintingCurrentIndex READ hintingCurrentIndex WRITE setHintingCurrentIndex NOTIFY hintingCurrentIndexChanged)
+    Q_PROPERTY(QString wallpaperLocation READ wallpaperLocation CONSTANT)
 
 public:
     KFonts(QObject *parent, const QVariantList &);
@@ -57,6 +58,7 @@ public:
     FontsSettings *fontsSettings() const;
     FontsAASettings *fontsAASettings() const;
 
+    QString wallpaperLocation() const;
     int subPixelCurrentIndex() const;
     void setHintingCurrentIndex(int idx);
     int hintingCurrentIndex() const;

@@ -27,11 +27,9 @@ import org.kde.kcm 1.0
 
 FocusScope {
     id: root
-    property string label
     property alias tooltipText: tooltip.text
     property string category
     property font font
-    Kirigami.FormData.label: root.label
     activeFocusOnTab: true
 
     implicitWidth: layout.implicitWidth
@@ -41,8 +39,9 @@ FocusScope {
         id: layout
 
         QtControls.TextField {
-            readOnly: true
+            Layout.fillHeight: true
             Kirigami.Theme.inherit: true
+            readOnly: true
             text: root.font.family + " " + root.font.pointSize + "pt"
             font: root.font
         }
@@ -58,6 +57,8 @@ FocusScope {
             }
             QtControls.ToolTip {
                 id: tooltip
+                visible: parent.hovered
+                font.capitalization: Font.Capitalize
             }
         }
     }

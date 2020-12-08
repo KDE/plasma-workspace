@@ -1,0 +1,3 @@
+#pragma once
+
+#define WALLPAPER "${kcm_fonts_WALLPAPER_LOCATION}"

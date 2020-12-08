@@ -26,6 +26,7 @@
 
 
 #include "fonts.h"
+#include "config.h"
 
 #include <QQuickItem>
 #include <QWindow>
@@ -254,6 +255,11 @@ int KFonts::hintingCurrentIndex() const
 void KFonts::setHintingCurrentIndex(int idx)
 {
     fontsAASettings()->setHinting(static_cast<KXftConfig::Hint::Style>(KXftConfig::Hint::None + idx));
+}
+
+QString KFonts::wallpaperLocation() const
+{
+    return QString::fromLocal8Bit(WALLPAPER);
 }
 
 #include "fonts.moc"
