@@ -27,6 +27,11 @@
 #ifndef APPMENUMODULE_H
 #define APPMENUMODULE_H
 
+#include <config-X11.h>
+#ifdef HAVE_X11
+#include <xcb/xcb.h>
+#endif
+
 #include <kdedmodule.h>
 
 #include <QPointer>
@@ -92,6 +97,10 @@ private:
     AppmenuDBus *m_appmenuDBus;
     QDBusServiceWatcher *m_menuViewWatcher;
     QPointer<VerticalMenu> m_menu;
+
+#ifdef HAVE_X11
+    xcb_connection_t *m_xcbConn = nullptr;
+#endif
 };
 
 #endif

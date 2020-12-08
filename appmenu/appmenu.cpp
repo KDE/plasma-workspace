@@ -42,7 +42,6 @@
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
 #include <KSharedConfig>
-#include <KWindowSystem>
 
 #if HAVE_X11
 #include <QX11Info>
@@ -100,16 +99,32 @@ AppMenuModule::AppMenuModule(QObject* parent, const QList<QVariant>&)
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.kappmenuview"))) {
         setupMenuImporter();
     }
+
+#if HAVE_X11
+    if (!QX11Info::connection()) {
+        m_xcbConn = xcb_connect(nullptr, nullptr);
+    }
+#endif
 }
 
-AppMenuModule::~AppMenuModule() = default;
+AppMenuModule::~AppMenuModule()
+{
+#if HAVE_X11
+    if (m_xcbConn) {
+        xcb_disconnect(m_xcbConn);
+    }
+#endif
+}
 
 void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, const QDBusObjectPath &menuObjectPath)
 {
 #if HAVE_X11
-    if (KWindowSystem::isPlatformX11()) {
-        auto *c = QX11Info::connection();
+    auto *c = QX11Info::connection();
+    if (!c) {
+        c = m_xcbConn;
+    }
 
+    if(c) {
         static xcb_atom_t s_serviceNameAtom = XCB_ATOM_NONE;
         static xcb_atom_t s_objectPathAtom = XCB_ATOM_NONE;
 
@@ -126,8 +141,14 @@ void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, con
                 }
             }
 
-            xcb_change_property(c, XCB_PROP_MODE_REPLACE, id, atom, XCB_ATOM_STRING,
+            auto cookie = xcb_change_property_checked(c, XCB_PROP_MODE_REPLACE, id, atom, XCB_ATOM_STRING,
                                     8, value.length(), value.constData());
+            xcb_generic_error_t *error;
+            if ((error = xcb_request_check(c, cookie))) {
+                qWarning() << "Got an error";
+                free(error);
+                return;
+            }
         };
 
         // TODO only set the property if it doesn't already exist
