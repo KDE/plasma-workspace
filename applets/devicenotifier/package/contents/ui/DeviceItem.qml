@@ -120,14 +120,14 @@ PlasmaExtras.ExpandableListItem {
         var service
         var operationName
         var operation
-        if (!sdSource.data[udi].Removable) {
+        var wasMounted = isMounted;
+        if (!sdSource.data[udi].Removable || !isMounted) {
             service = hpSource.serviceForSource(udi);
             operation = service.operationDescription('invokeAction');
             operation.predicate = "test-predicate-openinwindow.desktop";
         } else {
-            var wasMounted = isMounted;
             service = sdSource.serviceForSource(udi);
-            operation = service.operationDescription(wasMounted ? "unmount" : "mount");
+            operation = service.operationDescription("unmount");
         }
         service.startOperationCall(operation);
         if (wasMounted) {
@@ -195,7 +195,7 @@ PlasmaExtras.ExpandableListItem {
             if (!sdSource.data[udi].Removable) {
                 return "document-open-folder"
             } else {
-                return isMounted ? "media-eject" : "media-mount"
+                return isMounted ? "media-eject" : "document-open-folder"
             }
         }
         text: {
@@ -204,7 +204,7 @@ PlasmaExtras.ExpandableListItem {
             } else {
                 var types = model["Device Types"];
                 if (!isMounted) {
-                    return i18n("Mount")
+                    return i18n("Mount and Open")
                 } else if (types && types.indexOf("OpticalDisc") !== -1) {
                     return i18n("Eject")
                 } else {
@@ -224,6 +224,15 @@ PlasmaExtras.ExpandableListItem {
         delegate: QQC2.Action {
             text: modelData.text
             icon.name: modelData.icon
+            // We only want to show the "Show in file manager" action for
+            // mounted removable disks (for everything else, this action is
+            // already the primary one shown on the list item)
+            enabled: {
+                if (modelData.predicate != "test-predicate-openinwindow.desktop") {
+                    return true;
+                }
+                return sdSource.data[udi].Removable && deviceItem.isMounted;
+            }
             onTriggered: {
                 var service = hpSource.serviceForSource(udi);
                 var operation = service.operationDescription('invokeAction');
@@ -233,5 +242,26 @@ PlasmaExtras.ExpandableListItem {
             }
         }
         onObjectAdded: contextualActionsModel.push(object)
+    }
+
+    // "Mount" action that does not open it in the file manager
+    QQC2.Action {
+        id: mountWithoutOpeningAction
+
+        text: i18n("Mount")
+        icon.name: "media-mount"
+
+        // Only show for unmounted removable devices
+        enabled: sdSource.data[udi].Removable && !deviceItem.isMounted
+
+        onTriggered: {
+            var service = sdSource.serviceForSource(udi);
+            var operation = service.operationDescription("mount");
+            service.startOperationCall(operation);
+        }
+    }
+
+    Component.onCompleted: {
+        contextualActionsModel.push(mountWithoutOpeningAction);
     }
 }
