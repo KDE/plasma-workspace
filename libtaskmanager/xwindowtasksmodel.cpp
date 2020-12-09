@@ -57,7 +57,7 @@ public:
     ~Private();
 
     QVector<WId> windows;
-    QSet<WId> transients;
+    QMultiHash<WId, WId> transients;
     QMultiHash<WId, WId> transientsDemandingAttention;
     QHash<WId, KWindowInfo*> windowInfoCache;
     QHash<WId, AppData> appDataCache;
@@ -233,8 +233,8 @@ void XWindowTasksModel::Private::addWindow(WId window)
 
     // Handle transient.
     if (leader > 0 && leader != window && leader != QX11Info::appRootWindow()
-        && !transients.contains(window) && windows.contains(leader)) {
-        transients.insert(window);
+        && !transients.values().contains(window) && windows.contains(leader)) {
+        transients.insert(leader, window);
 
         // Update demands attention state for leader.
         if (info.hasState(NET::DemandsAttention) && windows.contains(leader)) {
@@ -274,8 +274,10 @@ void XWindowTasksModel::Private::removeWindow(WId window)
         q->endRemoveRows();
     } else { // Could be a transient.
         // Removing a transient might change the demands attention state of the leader.
-        if (transients.remove(window)) {
-            const WId leader = transientsDemandingAttention.key(window, XCB_WINDOW_NONE);
+        WId leader = transients.key(window, XCB_WINDOW_NONE);
+        if (leader != XCB_WINDOW_NONE) {
+            transients.remove(leader, window);
+            leader = transientsDemandingAttention.key(window, XCB_WINDOW_NONE);
 
             if (leader != XCB_WINDOW_NONE) {
                 transientsDemandingAttention.remove(leader, window);
@@ -331,7 +333,7 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
 
 void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties properties, NET::Properties2 properties2)
 {
-    if (transients.contains(window)) {
+    if (transients.uniqueKeys().contains(window)) {
         transientChanged(window, properties, properties2);
 
         return;
@@ -643,7 +645,16 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsWindow) {
         return true;
     } else if (role == IsActive) {
-        return (window == d->activeWindow);
+        if (window == d->activeWindow) {
+            return true;
+        }
+        const auto children = d->transients.values(window);
+        for (int i = 0; i < children.size(); ++i) {
+            if (children.at(i) == d->activeWindow) {
+                return true;
+            }
+        }
+        return false;
     } else if (role == IsClosable) {
         return d->windowInfo(window)->actionSupported(NET::ActionClose);
     } else if (role == IsMovable) {
@@ -735,7 +746,7 @@ void XWindowTasksModel::requestActivate(const QModelIndex &index)
         // dialog and trying to bring the window forward by clicking on it in a tasks widget
         // TODO: do we need to check all the transients for shaded?"
         } else if (!d->transients.isEmpty()) {
-            foreach (const WId transient, d->transients) {
+            foreach (const WId transient, d->transients.values()) {
                 KWindowInfo info(transient, NET::WMState, NET::WM2TransientFor);
 
                 if (info.valid(true) && info.hasState(NET::Shaded) && info.transientFor() == window) {
