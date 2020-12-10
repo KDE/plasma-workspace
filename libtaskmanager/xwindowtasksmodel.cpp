@@ -333,7 +333,7 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
 
 void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties properties, NET::Properties2 properties2)
 {
-    if (transients.uniqueKeys().contains(window)) {
+    if (transients.contains(window)) {
         transientChanged(window, properties, properties2);
 
         return;
@@ -648,9 +648,8 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         if (window == d->activeWindow) {
             return true;
         }
-        const auto children = d->transients.values(window);
-        for (int i = 0; i < children.size(); ++i) {
-            if (children.at(i) == d->activeWindow) {
+        for (const WId transient : d->transients.values(window)) {
+            if (transient == d->activeWindow) {
                 return true;
             }
         }
@@ -746,7 +745,7 @@ void XWindowTasksModel::requestActivate(const QModelIndex &index)
         // dialog and trying to bring the window forward by clicking on it in a tasks widget
         // TODO: do we need to check all the transients for shaded?"
         } else if (!d->transients.isEmpty()) {
-            foreach (const WId transient, d->transients.values()) {
+            foreach (const WId transient, d->transients) {
                 KWindowInfo info(transient, NET::WMState, NET::WM2TransientFor);
 
                 if (info.valid(true) && info.hasState(NET::Shaded) && info.transientFor() == window) {
