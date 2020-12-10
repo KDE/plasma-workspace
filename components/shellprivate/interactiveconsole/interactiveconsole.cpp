@@ -189,7 +189,7 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
     scriptTextChanged();
 
     connect(m_executeAction, &QAction::triggered, this, &InteractiveConsole::evaluateScript);
-    m_executeAction->setShortcut(Qt::CTRL + Qt::Key_E);
+    m_executeAction->setShortcut(Qt::CTRL | Qt::Key_E);
 
     const QString autosave = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/" + s_autosaveFileName;
     if (QFile::exists(autosave)) {

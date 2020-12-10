@@ -164,7 +164,7 @@ ShellCorona::ShellCorona(QObject *parent)
     dashboardAction->setCheckable(true);
     dashboardAction->setIcon(QIcon::fromTheme(QStringLiteral("dashboard-show")));
     dashboardAction->setData(Plasma::Types::ControlAction);
-    KGlobalAccel::self()->setGlobalShortcut(dashboardAction, Qt::CTRL + Qt::Key_F12);
+    KGlobalAccel::self()->setGlobalShortcut(dashboardAction, Qt::CTRL | Qt::Key_F12);
 
     checkAddPanelAction();
     connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(checkAddPanelAction(QStringList)));
@@ -180,7 +180,7 @@ ShellCorona::ShellCorona(QObject *parent)
     activityAction->setShortcut(QKeySequence(QStringLiteral("alt+d, alt+a")));
     activityAction->setShortcutContext(Qt::ApplicationShortcut);
 
-    KGlobalAccel::self()->setGlobalShortcut(activityAction, Qt::META + Qt::Key_Q);
+    KGlobalAccel::self()->setGlobalShortcut(activityAction, Qt::META | Qt::Key_Q);
 
     QAction *stopActivityAction = actions()->addAction(QStringLiteral("stop current activity"));
     QObject::connect(stopActivityAction, &QAction::triggered,
@@ -190,7 +190,7 @@ ShellCorona::ShellCorona(QObject *parent)
     stopActivityAction->setData(Plasma::Types::ControlAction);
     stopActivityAction->setVisible(false);
 
-    KGlobalAccel::self()->setGlobalShortcut(stopActivityAction, Qt::META + Qt::Key_S);
+    KGlobalAccel::self()->setGlobalShortcut(stopActivityAction, Qt::META | Qt::Key_S);
 
     QAction *previousActivityAction = actions()->addAction(QStringLiteral("switch to previous activity"));
     connect(previousActivityAction, &QAction::triggered,
