@@ -49,13 +49,13 @@ CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaD
     setObjectName(QStringLiteral("Calculator"));
 
     QString description = i18n("Calculates the value of :q: when :q: is made up of numbers and "
-                               "mathematical symbols such as +, -, /, * and ^.");
+                               "mathematical symbols such as +, -, /, *, ! and ^.");
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), description));
     addSyntax(Plasma::RunnerSyntax(QStringLiteral("=:q:"), description));
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:="), description));
 
     addAction(QStringLiteral("copyToClipboard"), QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard"));
-    setMinLetterCount(3);
+    setMinLetterCount(2);
 }
 
 CalculatorRunner::~CalculatorRunner()
@@ -215,7 +215,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     //no meanless space between friendly guys: helps simplify code
     cmd = cmd.trimmed().remove(QLatin1Char(' '));
 
-    if (cmd.length() < 3) {
+    if (cmd.length() < 2) {
         return;
     }
 
@@ -243,7 +243,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
         bool foundDigit = false;
         for (int i = 0; i < cmd.length(); ++i) {
             QChar c = cmd.at(i);
-            if (c.isLetter()) {
+            if (c.isLetter() && c != QLatin1Char('!')) {
                 // not just numbers and symbols, so we return
                 return;
             }
