@@ -53,47 +53,32 @@ LocationsRunner::~LocationsRunner()
 void LocationsRunner::match(Plasma::RunnerContext &context)
 {
     QString term = context.query();
-    Plasma::RunnerContext::Type type = context.type();
+    QUrl url(term);
+    const bool isLocalFile = url.isLocalFile();
+    const QFileInfo fileInfo = QFileInfo(isLocalFile ? url.toLocalFile() : KShell::tildeExpand(term));
 
-    QFileInfo fileInfo(KShell::tildeExpand(term));
     if (fileInfo.exists()) {
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setText(i18n("Open %1", term));
-
-        if (type == Plasma::RunnerContext::File) {
-            match.setIconName(KIO::iconNameForUrl(QUrl(term)));
-        } else {
-            match.setIconName(QStringLiteral("system-file-manager"));
-        }
+        match.setIconName(fileInfo.isFile() ? KIO::iconNameForUrl(url) : QStringLiteral("system-file-manager"));
 
         match.setRelevance(1);
-        match.setData(term);
+        match.setData(isLocalFile ? url : QUrl::fromLocalFile(fileInfo.absoluteFilePath()));
         match.setType(Plasma::QueryMatch::ExactMatch);
-
-        if (fileInfo.isDir()) {
-            match.setId(QStringLiteral("opendir"));
-        } else {
-            match.setId(QStringLiteral("openfile"));
-        }
         context.addMatch(match);
-    } else if (type == Plasma::RunnerContext::NetworkLocation || type == Plasma::RunnerContext::UnknownType) {
-        const bool filtered = KUriFilter::self()->filterUri(term, QStringList() << QStringLiteral("kshorturifilter"));
-
-        if (!filtered) {
+    } else if (!isLocalFile && !url.isEmpty()) {
+        if (!KUriFilter::self()->filterUri(term, {QStringLiteral("kshorturifilter")})) {
             return;
         }
 
-        QUrl url(term);
-
-        if (url.isEmpty()) {
+        url = QUrl(term); // The KUriFilter changed the term
+        if (url.scheme().isEmpty() || url.isLocalFile()) { // We handled existend files above
             return;
         }
-
-        Plasma::QueryMatch match(this);
-        match.setData(url.url());
-
         const QString protocol = url.scheme();
+        Plasma::QueryMatch match(this);
+        match.setData(url);
 
         if (!KProtocolInfo::isKnownProtocol(protocol) || KProtocolInfo::isHelperProtocol(protocol)) {
             const KService::Ptr service = KApplicationTrader::preferredService(QLatin1String("x-scheme-handler/") + protocol);
@@ -116,94 +101,25 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
         if (url.scheme() == QLatin1String("mailto")) {
             match.setText(i18n("Send email to %1", url.path()));
         }
-
-        if (type == Plasma::RunnerContext::UnknownType) {
-            match.setId(QStringLiteral("openunknown"));
-            match.setRelevance(0.5);
-            match.setType(Plasma::QueryMatch::PossibleMatch);
-        } else {
-            match.setId(QStringLiteral("opennetwork"));
-            match.setRelevance(0.7);
-            match.setType(Plasma::QueryMatch::ExactMatch);
-        }
-
         context.addMatch(match);
     }
 }
 
-static QString convertCaseInsensitivePath(const QString &path)
-{
-    // Split the string on /
-    const auto dirNames = path.splitRef(QDir::separator(), QString::SkipEmptyParts);
-
-    // if split result is empty, path string can only contain separator.
-    if (dirNames.empty()) {
-        return QStringLiteral("/");
-    }
-
-    // Match folders
-    QDir dir(QStringLiteral("/"));
-    for (int i = 0; i < dirNames.size() - 1; ++i) {
-        const QStringRef dirName = dirNames.at(i);
-
-        bool foundMatch = false;
-        const QStringList entries = dir.entryList(QDir::Dirs);
-        for (const QString &entry : entries) {
-            if (entry.compare(dirName, Qt::CaseInsensitive) == 0) {
-                foundMatch = dir.cd(entry);
-                if (foundMatch) {
-                    break;
-                }
-            }
-        }
-
-        if (!foundMatch) {
-            return path;
-        }
-    }
-
-    const QStringRef finalName = dirNames.last();
-    const QStringList entries = dir.entryList();
-    for (const QString &entry : entries) {
-        if (entry.compare(finalName, Qt::CaseInsensitive) == 0) {
-            return dir.absoluteFilePath(entry);
-        }
-    }
-
-    return path;
-}
-
 void LocationsRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
-    Q_UNUSED(match)
+    Q_UNUSED(context)
 
-    QString location = context.query();
-
-    if (location.isEmpty()) {
-        return;
-    }
-
-    location = convertCaseInsensitivePath(location);
-
-    const QUrl urlToRun(KUriFilter::self()->filteredUri(location, {QStringLiteral("kshorturifilter")}));
-
-    auto *job = new KIO::OpenUrlJob(urlToRun);
+    auto *job = new KIO::OpenUrlJob(match.data().toUrl());
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
     job->setRunExecutables(false);
     job->start();
-
 }
 
 QMimeData * LocationsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
-    const QString data = match.data().toString();
-    if (!data.isEmpty()) {
-        QMimeData *result = new QMimeData();
-        result->setUrls({QUrl(data)});
-        return result;
-    }
-
-    return nullptr;
+    QMimeData *result = new QMimeData();
+    result->setUrls({match.data().toUrl()});
+    return result;
 }
 
 
