@@ -53,29 +53,23 @@ LocationsRunner::~LocationsRunner()
 void LocationsRunner::match(Plasma::RunnerContext &context)
 {
     QString term = context.query();
-    QUrl url(term);
-    const bool isLocalFile = url.isLocalFile();
-    const QFileInfo fileInfo = QFileInfo(isLocalFile ? url.toLocalFile() : KShell::tildeExpand(term));
+    // We want to expand ENV variables like $HOME to get the actual path, BUG: 358221
+    KUriFilter::self()->filterUri(term, {QStringLiteral("kshorturifilter")});
+    const QUrl url(term);
+    // The uri filter takes care of the shell expansion
+    const QFileInfo fileInfo = QFileInfo(url.toLocalFile());
 
     if (fileInfo.exists()) {
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::ExactMatch);
-        match.setText(i18n("Open %1", term));
+        match.setText(i18n("Open %1", context.query()));
         match.setIconName(fileInfo.isFile() ? KIO::iconNameForUrl(url) : QStringLiteral("system-file-manager"));
 
         match.setRelevance(1);
-        match.setData(isLocalFile ? url : QUrl::fromLocalFile(fileInfo.absoluteFilePath()));
+        match.setData(url);
         match.setType(Plasma::QueryMatch::ExactMatch);
         context.addMatch(match);
-    } else if (!isLocalFile && !url.isEmpty()) {
-        if (!KUriFilter::self()->filterUri(term, {QStringLiteral("kshorturifilter")})) {
-            return;
-        }
-
-        url = QUrl(term); // The KUriFilter changed the term
-        if (url.scheme().isEmpty() || url.isLocalFile()) { // We handled existend files above
-            return;
-        }
+    } else if (!url.isLocalFile() && !url.isEmpty() && !url.scheme().isEmpty()) {
         const QString protocol = url.scheme();
         Plasma::QueryMatch match(this);
         match.setData(url);
