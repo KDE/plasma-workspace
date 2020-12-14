@@ -49,6 +49,8 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
         setGeometry(targetScreen->geometry());
     }
 
+    setColor(Qt::black);
+
     setFlags(Qt::Window | Qt::FramelessWindowHint);
     setTitle(corona->kPackage().metadata().name());
     rootContext()->setContextProperty(QStringLiteral("desktop"), this);
