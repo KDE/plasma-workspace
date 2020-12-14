@@ -28,13 +28,13 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <KFileItem>
 #include <KApplicationTrader>
 #include <KNotificationJobUiDelegate>
-#include <KRun>
 #include <KServiceTypeTrader>
 #include <KStartupInfo>
 #include <KWindowSystem>
 #include <KProcessList>
 
 #include <KIO/ApplicationLauncherJob>
+#include <KIO/OpenUrlJob>
 
 #include <config-X11.h>
 
@@ -824,7 +824,10 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
             KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
                 QStringLiteral("org.kde.libtaskmanager"));
         } else {
-            new KRun(appData.url, nullptr, false, KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+            auto *job = new KIO::OpenUrlJob(appData.url);
+            job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
+            job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+            job->start();
 
             if (!appData.id.isEmpty()) {
                 KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + appData.id),
