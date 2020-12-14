@@ -80,7 +80,7 @@ void PipeWireSourceItem::itemChange(QQuickItem::ItemChange change, const QQuickI
     switch (change) {
         case ItemVisibleHasChanged:
             if (m_stream)
-                m_stream->setActive(data.boolValue && isComponentComplete());
+                m_stream->setActive(isVisible() && data.boolValue && isComponentComplete());
             break;
         case ItemSceneChange:
             m_needsRecreateTexture = true;
