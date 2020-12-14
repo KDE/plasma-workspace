@@ -12,6 +12,7 @@ target_link_libraries(krunner_recentdocuments
     KF5::I18n
     KF5::ActivitiesStats
     KF5::Runner
+    KF5::Notifications
 )
 
 install(TARGETS krunner_recentdocuments DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner" )

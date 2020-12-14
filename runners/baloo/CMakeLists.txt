@@ -12,6 +12,7 @@ target_link_libraries(baloorunner
   KF5::KIOWidgets
   KF5::I18n
   KF5::Baloo
+  KF5::Notifications
   Qt5::DBus
 )
 

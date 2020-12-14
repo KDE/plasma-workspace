@@ -27,8 +27,10 @@
 #include <QIcon>
 #include <QMimeData>
 #include <QUrl>
-#include <KRun>
+
 #include <KLocalizedString>
+#include <KIO/OpenUrlJob>
+#include <KNotificationJobUiDelegate>
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(PlacesRunner, "plasma-runner-places.json")
 
@@ -75,7 +77,10 @@ PlacesRunnerHelper::PlacesRunnerHelper(PlacesRunner *runner)
 
     connect(&m_places, &KFilePlacesModel::setupDone, this, [this](const QModelIndex &index, bool success) {
         if (success && m_pendingUdi == m_places.deviceForIndex(index).udi()) {
-            new KRun(m_places.url(index), nullptr);
+            auto *job = new KIO::OpenUrlJob(m_places.url(index));
+            job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
+            job->setRunExecutables(false);
+            job->start();
         }
         m_pendingUdi.clear();
     });
@@ -156,7 +161,10 @@ void PlacesRunner::run(const Plasma::RunnerContext &context, const Plasma::Query
     Q_UNUSED(context);
     //I don't just pass the model index because the list could change before the user clicks on it, which would make everything go wrong. Ideally we don't want things to go wrong.
     if (action.data().type() == QVariant::Url) {
-        new KRun(action.data().toUrl(), nullptr);
+        auto *job = new KIO::OpenUrlJob(action.data().toUrl());
+        job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
+        job->setRunExecutables(false);
+        job->start();
     } else if (action.data().canConvert<QString>()) {
         m_helper->openDevice(action.data().toString());
     }

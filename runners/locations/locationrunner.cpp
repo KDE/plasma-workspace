@@ -25,15 +25,14 @@
 
 #include <QDebug>
 #include <KApplicationTrader>
-#include <KRun>
 #include <KLocalizedString>
 #include <KProtocolInfo>
 #include <KUriFilter>
 #include <KIO/DesktopExecParser>
 #include <KIO/Global>
 #include <KShell>
-
-#include <kservicetypetrader.h>
+#include <KIO/OpenUrlJob>
+#include <KNotificationJobUiDelegate>
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(LocationsRunner, "plasma-runner-locations.json")
 
@@ -186,9 +185,13 @@ void LocationsRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
 
     location = convertCaseInsensitivePath(location);
 
-    QUrl urlToRun(KUriFilter::self()->filteredUri(location, {QStringLiteral("kshorturifilter")}));
+    const QUrl urlToRun(KUriFilter::self()->filteredUri(location, {QStringLiteral("kshorturifilter")}));
 
-    new KRun(urlToRun, nullptr);
+    auto *job = new KIO::OpenUrlJob(urlToRun);
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
+    job->setRunExecutables(false);
+    job->start();
+
 }
 
 QMimeData * LocationsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)

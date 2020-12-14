@@ -11,6 +11,7 @@ target_link_libraries(krunner_locations
     KF5::KIOWidgets
     KF5::I18n
     KF5::Runner
+    KF5::Notifications
 )
 
 install(TARGETS krunner_locations DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner" )

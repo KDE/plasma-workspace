@@ -24,7 +24,6 @@
 #include <QAction>
 #include <QIcon>
 #include <QDir>
-#include <KRun>
 #include <KLocalizedString>
 #include <QMimeDatabase>
 #include <QTimer>
@@ -36,6 +35,8 @@
 #include <Baloo/IndexerConfig>
 
 #include <KIO/OpenFileManagerWindowJob>
+#include <KIO/OpenUrlJob>
+#include <KNotificationJobUiDelegate>
 
 #include "krunner1adaptor.h"
 
@@ -202,5 +203,8 @@ void SearchRunner::Run(const QString& id, const QString& actionId)
         return;
     }
 
-    new KRun(url, nullptr);
+    auto *job = new KIO::OpenUrlJob(url);
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
+    job->setRunExecutables(false);
+    job->start();
 }
