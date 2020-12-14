@@ -5,7 +5,7 @@ set(kde_PART_SRCS
 )
 
 add_library(kde MODULE ${kde_PART_SRCS})
-target_link_libraries(kde ${PHONON_LIBRARY} KF5::I18n KF5::KIOWidgets KF5::Notifications)
+target_link_libraries(kde ${PHONON_LIBRARY} KF5::CoreAddons KF5::WidgetsAddons KF5::I18n KF5::KIOCore KF5::Notifications)
 
 kcoreaddons_desktop_to_json(kde phononbackend.desktop)
 

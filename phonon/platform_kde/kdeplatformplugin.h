@@ -23,7 +23,6 @@
 #include <phonon/platformplugin.h>
 #include <phonon/objectdescription.h>
 #include <QObject>
-#include <kservice.h>
 
 namespace Phonon {
 

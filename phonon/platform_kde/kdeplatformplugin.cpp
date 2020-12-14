@@ -29,8 +29,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KNotification>
-#include <KService>
-#include <KServiceTypeTrader>
 #include <KSharedConfig>
 
 #include "debug.h"

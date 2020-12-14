@@ -21,7 +21,10 @@
 #define KIOMEDIASTREAM_P_H
 
 #include "kiomediastream.h"
-#include <kio/jobclasses.h>
+
+#include <QUrl>
+
+#include <KIO/Job>
 
 namespace Phonon {
 

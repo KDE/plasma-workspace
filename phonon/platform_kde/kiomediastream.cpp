@@ -19,10 +19,10 @@
 
 #include "kiomediastream.h"
 #include "kiomediastream_p.h"
-#include <kprotocolmanager.h>
-#include <kio/filejob.h>
-#include <kio/job.h>
+
+#include <KIO/FileJob>
 #include <KLocalizedString>
+#include <KProtocolManager>
 
 #include "debug.h"
 
