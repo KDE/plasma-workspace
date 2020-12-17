@@ -11,11 +11,10 @@ import org.kde.plasma.workspace.keyboardlayout 1.0
 PlasmaComponents3.ToolButton {
     id: kbLayoutButton
 
-    property alias layoutShortName: layout.layoutDisplayName
-    property alias layoutLongName: layout.layoutLongName
+    property alias layout: layout
     readonly property bool hasMultipleKeyboardLayouts: layout.layouts.length > 1
 
-    text: layoutLongName
+    text: layout.layoutLongName
     visible: hasMultipleKeyboardLayouts
 
     Accessible.name: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to change keyboard layout", "Switch layout")

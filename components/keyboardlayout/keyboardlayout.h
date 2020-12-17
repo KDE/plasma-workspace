@@ -18,6 +18,9 @@ class KeyboardLayout : public QObject
 {
     Q_OBJECT
 
+    Q_PROPERTY(QString layout
+               WRITE setLayout)
+
     Q_PROPERTY(QString layoutDisplayName
                MEMBER mLayoutDisplayName
                NOTIFY layoutDisplayNameChanged)
@@ -44,6 +47,8 @@ protected Q_SLOTS:
     void switchToPreviousLayout();
 
 private:
+    void setLayout(const QString &layout);
+
     enum DBusData {LayoutDisplayName, LayoutLongName, Layouts};
 
     template<class T>
