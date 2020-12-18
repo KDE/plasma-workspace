@@ -39,7 +39,7 @@ QtControls.Button {
     Layout.maximumHeight: parent.height
     QtControls.ToolTip {
         id: toolTip
-        implicitWidth: Math.min(21 * Kirigami.Units.gridUnit, root.width) // Wikipedia says anything between 45 and 75 characters per line is acceptable. 21 * Kirigami.Units.gridUnit feels right.
+        implicitWidth: Math.min(21 * Kirigami.Units.gridUnit, aapage.width) // Wikipedia says anything between 45 and 75 characters per line is acceptable. 21 * Kirigami.Units.gridUnit feels right.
         visible: parent.hovered || parent.toolTipVisible
         onVisibleChanged: {
             if (!visible && parent.toolTipVisible) {
