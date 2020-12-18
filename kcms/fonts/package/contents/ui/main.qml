@@ -22,6 +22,7 @@ import QtQuick 2.5
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.7 as QtControls
 import QtQuick.Dialogs 1.2 as QtDialogs
+import QtGraphicalEffects 1.12
 
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 import org.kde.kirigami 2.12 as Kirigami
@@ -54,20 +55,36 @@ KCM.SimpleKCM {
     ColumnLayout {
         spacing: Kirigami.Units.largeSpacing
 
-        QtControls.Control {
+        Item {
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
 
             Layout.maximumWidth: 45 * fontMetrics.height
             Layout.preferredHeight: 15 * fontMetrics.height
 
-            background: Image {
+            Image {
+                id: backgroundImage
+                anchors.fill: parent
+
                 source: kcm.wallpaperLocation
                 fillMode: Image.PreserveAspectCrop
                 mipmap: true
+
+                PreviewWindow {}
             }
 
-            PreviewWindow {}
+            InnerShadow {
+                anchors.fill: backgroundImage
+                cached: true
+                horizontalOffset: 1
+                verticalOffset: 1
+                radius: 24
+                samples: 24
+                color: "black"
+                smooth: true
+                source: backgroundImage
+            }
+
         }
 
         Kirigami.InlineMessage {
