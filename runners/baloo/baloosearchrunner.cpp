@@ -37,6 +37,7 @@
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/OpenUrlJob>
 #include <KNotificationJobUiDelegate>
+#include <KShell>
 
 #include "krunner1adaptor.h"
 
@@ -124,6 +125,11 @@ void SearchRunner::performMatch()
 {
     // Filter out duplicates
     QSet<QUrl> foundUrls;
+    // The location runner handles file paths, otherwise we would end up with duplicate entries
+    QFileInfo fileInfo(KShell::tildeExpand(m_searchTerm));
+    if (fileInfo.exists()) {
+        foundUrls << QUrl::fromLocalFile(fileInfo.absoluteFilePath());
+    }
 
     RemoteMatches matches;
     matches << matchInternal(m_searchTerm, QStringLiteral("Audio"), i18n("Audio"), foundUrls);
