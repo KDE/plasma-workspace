@@ -59,6 +59,10 @@ MouseArea {
 
             property int itemCount: model.rowCount()
 
+            Component.onCompleted: {
+                itemCount = model.rowCount()
+            }
+
             model: PlasmaCore.SortFilterModel {
                 sourceModel: plasmoid.nativeInterface.systemTrayModel
                 filterRole: "effectiveStatus"
