@@ -87,7 +87,7 @@ Flow {
 
         delegate: Item {
             id: iconDelegate
-            visible: plasmoid.configuration["show_" + modelData.operation] && (!modelData.hasOwnProperty("requires") || session["can" + modelData.requires])
+            visible: plasmoid.configuration["show_" + modelData.configKey] && (!modelData.hasOwnProperty("requires") || session["can" + modelData.requires])
             width: items.itemWidth
             height: items.itemHeight
 
