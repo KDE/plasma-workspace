@@ -160,7 +160,7 @@ PlasmaComponents3.Page {
             PlasmaExtras.PlaceholderMessage {
                 anchors.centerIn: parent
                 width: parent.width - (units.largeSpacing * 4)
-                text: i18n("No devices available")
+                text: plasmoid.configuration.removableDevices ? i18n("No removable devices attached") : i18n("No disks available")
                 visible: notifierDialog.count === 0 && !devicenotifier.pendingDelegateRemoval
             }
         }
