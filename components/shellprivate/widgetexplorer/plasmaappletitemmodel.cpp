@@ -46,7 +46,6 @@ PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData& info):
         m_local = dir.exists() && dir.isWritable();
     }
 
-    //attrs.insert("recommended", flags & Recommended ? true : false);
     setText(m_info.name() + " - "+ m_info.category().toLower());
 
     if (QIcon::hasThemeIcon(info.pluginId())) {
@@ -264,10 +263,6 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
     }
 
     clear();
-    //qDebug() << "populating model, our application is" << m_application;
-
-    //qDebug() << "number of applets is"
-    //         <<  Plasma::Applet::listAppletInfo(QString(), m_application).count();
 
     auto filter = [this](const KPluginMetaData &plugin) -> bool {
 
@@ -362,7 +357,6 @@ QSet<QString> PlasmaAppletItemModel::categories() const
 
 QMimeData *PlasmaAppletItemModel::mimeData(const QModelIndexList &indexes) const
 {
-    //qDebug() << "GETTING MIME DATA\n";
     if (indexes.count() <= 0) {
         return nullptr;
     }

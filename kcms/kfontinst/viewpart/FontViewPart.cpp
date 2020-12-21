@@ -82,7 +82,6 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
 
     QFrame    *previewFrame=new QFrame(itsFrame);
     QWidget   *controls=new QWidget(itsFrame);
-//     QGroupBox *metaBox=new QGroupBox(i18n("Information:"), controls);
 
     itsFaceWidget=new QWidget(controls);
 
@@ -91,11 +90,6 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
     QBoxLayout *previewLayout=new QBoxLayout(QBoxLayout::LeftToRight, previewFrame),
                *controlsLayout=new QBoxLayout(QBoxLayout::LeftToRight, controls),
                *faceLayout=new QBoxLayout(QBoxLayout::LeftToRight, itsFaceWidget);
-//    QBoxLayout *metaLayout=new QBoxLayout(QBoxLayout::LeftToRight, metaBox);
-
-//     itsMetaLabel=new QLabel(metaBox);
-//     itsMetaLabel->setAlignment(Qt::AlignTop);
-//     metaLayout->addWidget(itsMetaLabel);
     previewLayout->setContentsMargins(0, 0, 0, 0);
     previewLayout->setSpacing(0);
     faceLayout->setContentsMargins(0, 0, 0, 0);
@@ -124,8 +118,6 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
 
     itsPreview->engine()->readConfig(*itsConfig);
 
-    //controlsLayout->addWidget(metaBox);
-    //controlsLayout->addStretch(2);
     controlsLayout->addWidget(itsFaceWidget);
     controlsLayout->addStretch(1);
     controlsLayout->addWidget(itsInstallButton);
@@ -181,9 +173,6 @@ bool CFontViewPart::openUrl(const QUrl &url)
     if (!url.isValid() || !closeUrl())
         return false;
 
-//     itsMetaLabel->setText(QString());
-//     itsMetaInfo.clear();
-
     itsFontDetails=FC::decode(url);
     if(!itsFontDetails.family.isEmpty() ||
        KFI_KIO_FONTS_PROTOCOL==url.scheme() || mostLocalUrl(url, itsFrame).isLocalFile())
@@ -230,7 +219,6 @@ void CFontViewPart::timeout()
     int     fileIndex(-1);
     QString fontFile;
 
-//    itsMetaUrl=url();
     delete itsTempDir;
     itsTempDir=nullptr;
 
@@ -318,8 +306,6 @@ void CFontViewPart::timeout()
                                    mime=="application/x-font-otf" || mime=="application/x-font-type1")
                                 {
                                     fontFile=itsTempDir->filePath(entry->name());
-                                    //setLocalFilePath(itsTempDir->path()+QLatin1Char('/')+entry->name());
-//                                    itsMetaUrl=QUrl::fromLocalFile(localFilePath());
                                     break;
                                 }
                                 else
@@ -389,10 +375,6 @@ void CFontViewPart::previewStatus(bool st)
     }
     itsChangeTextAction->setEnabled(st);
 
-//     if(st)
-//         getMetaInfo(itsFaceSelector->isVisible() && itsFaceSelector->value()>0
-//                                           ? itsFaceSelector->value()-1 : 0);
-//     else
     if(!st)
         KMessageBox::error(itsFrame, i18n("Could not read font."));
 }
@@ -508,47 +490,6 @@ void CFontViewPart::checkInstallable()
         itsInterface->statFont(itsPreview->engine()->descriptiveName(), FontInst::SYS_MASK|FontInst::USR_MASK, getpid());
     }
 }
-
-#if 0
-void CFontViewPart::getMetaInfo(int face)
-{
-    if(itsMetaInfo[face].isEmpty())
-    {
-        // Pass as much inofmration as possible to analyzer...
-        if(KFI_KIO_FONTS_PROTOCOL!=itsMetaUrl.protocol())
-        {
-            itsMetaUrl.removeQueryItem(KFI_KIO_FACE);
-            if(face>0)
-                itsMetaUrl.addQueryItem(KFI_KIO_FACE, QString().setNum(face));
-        }
-
-        KFileMetaInfo meta(itsMetaUrl);
-
-        if(meta.isValid() && meta.keys().count())
-        {
-            QStringList           keys(meta.keys());
-            QStringList::const_iterator it(keys.begin()),
-                                  end(keys.end());
-
-            itsMetaInfo[face]="<table>";
-            for(; it!=end; ++it)
-            {
-                KFileMetaInfoItem mi(meta.item(*it));
-
-                itsMetaInfo[face]+="<tr><td><b>"+mi.name()+"</b></td></tr><tr><td>"+
-                                   mi.value().toString()+"</td></tr>";
-            }
-
-            itsMetaInfo[face]+="</table>";
-            itsMetaLabel->setText(itsMetaInfo[face]);
-        }
-        else
-            itsMetaLabel->setText(i18n("<p>No information</p>"));
-    }
-    else
-        itsMetaLabel->setText(itsMetaInfo[face]);
-}
-#endif
 
 BrowserExtension::BrowserExtension(CFontViewPart *parent)
                 : KParts::BrowserExtension(parent)

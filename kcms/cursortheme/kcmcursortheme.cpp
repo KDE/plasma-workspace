@@ -104,7 +104,6 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
 
 CursorThemeConfig::~CursorThemeConfig()
 {
-    /* */
 }
 
 CursorThemeSettings *CursorThemeConfig::cursorThemeSettings() const

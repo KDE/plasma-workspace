@@ -54,24 +54,6 @@ URLGrabber::URLGrabber(History* history):
 {
     m_myPopupKillTimer->setSingleShot( true );
     connect(m_myPopupKillTimer, &QTimer::timeout, this, &URLGrabber::slotKillPopupMenu);
-
-    // testing
-    /*
-    ClipAction *action;
-    action = new ClipAction( "^http:\\/\\/", "Web-URL" );
-    action->addCommand("kfmclient exec %s", "Open with Konqi", true);
-    action->addCommand("netscape -no-about-splash -remote \"openURL(%s, new-window)\"", "Open with Netscape", true);
-    m_myActions->append( action );
-
-    action = new ClipAction( "^mailto:", "Mail-URL" );
-    action->addCommand("kmail --composer %s", "Launch kmail", true);
-    m_myActions->append( action );
-
-    action = new ClipAction( "^\\/.+\\.jpg$", "Jpeg-Image" );
-    action->addCommand("kuickshow %s", "Launch KuickShow", true);
-    action->addCommand("kview %s", "Launch KView", true);
-    m_myActions->append( action );
-    */
 }
 
 
@@ -104,24 +86,19 @@ void URLGrabber::matchingMimeActions(const QString& clipData)
 {
     QUrl url(clipData);
     if(!KlipperSettings::enableMagicMimeActions()) {
-        //qCDebug(KLIPPER_LOG) << "skipping mime magic due to configuration";
         return;
     }
     if(!url.isValid()) {
-        //qCDebug(KLIPPER_LOG) << "skipping mime magic due to invalid url";
         return;
     }
     if(url.isRelative()) {  //openinng a relative path will just not work. what path should be used?
-        //qCDebug(KLIPPER_LOG) << "skipping mime magic due to relative url";
         return;
     }
     if(url.isLocalFile()) {
         if ( clipData == QLatin1String("//")) {
-            //qCDebug(KLIPPER_LOG) << "skipping mime magic due to C++ comment //";
             return;
         }
         if(!QFile::exists(url.toLocalFile())) {
-            //qCDebug(KLIPPER_LOG) << "skipping mime magic due to nonexistent localfile";
             return;
         }
     }
@@ -180,7 +157,6 @@ const ActionList& URLGrabber::matchingActions( const QString& clipData, bool aut
 
 void URLGrabber::checkNewData( HistoryItemConstPtr item )
 {
-    // qCDebug(KLIPPER_LOG) << "** checking new data: " << clipData;
     actionMenu( item, true ); // also creates m_myMatches
 }
 

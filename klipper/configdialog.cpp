@@ -72,14 +72,6 @@ ActionsWidget::ActionsWidget(QWidget* parent)
         m_ui.kcfg_ActionList->header()->resizeSection(0, 250);
     }
 
-#if 0
-    if ( /*KServiceTypeTrader::self()->query("KRegExpEditor/KRegExpEditor").isEmpty()*/ true) // see notice in configdialog.cpp about KRegExpEditor
-    {
-        cbUseGUIRegExpEditor->hide();
-        cbUseGUIRegExpEditor->setChecked( false );
-    }
-#endif
-
     connect(m_ui.kcfg_ActionList, &ActionsTreeWidget::itemSelectionChanged, this, &ActionsWidget::onSelectionChanged);
     connect(m_ui.kcfg_ActionList, &ActionsTreeWidget::itemDoubleClicked, this, &ActionsWidget::onEditAction);
 

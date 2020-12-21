@@ -336,12 +336,6 @@ void UKMETIon::findPlace(const QString& place, const QString& source)
             this, &UKMETIon::setup_slotDataArrived);
     connect(getJob, &KJob::result,
             this, &UKMETIon::setup_slotJobFinished);
-
-/*
-    // Handle redirects for direct hit places.
-    connect(getJob, SIGNAL(redirection(KIO::Job*,KUrl)),
-            this, SLOT(setup_slotRedirected(KIO::Job*,KUrl)));
-*/
 }
 
 void UKMETIon::getFiveDayForecast(const QString& source)

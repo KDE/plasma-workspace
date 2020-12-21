@@ -40,12 +40,6 @@ HistoryItem::~HistoryItem() {
 
 HistoryItemPtr HistoryItem::create( const QMimeData* data )
 {
-#if 0
-    int i=0;
-    foreach ( QString format, data->formats() ) {
-        qCDebug(KLIPPER_LOG) << "format(" << i++ <<"): " << format;
-    }
-#endif
     if (data->hasUrls())
     {
         KUrlMimeData::MetaDataMap metaData;

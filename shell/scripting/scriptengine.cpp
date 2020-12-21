@@ -35,9 +35,6 @@
 #include <kshell.h>
 #include <KLocalizedContext>
 
-// KIO
-//#include <kemailsettings.h> // no camelcase include
-
 #include <Plasma/Applet>
 #include <Plasma/PluginLoader>
 #include <Plasma/Containment>
@@ -262,7 +259,6 @@ bool ScriptEngine::evaluateScript(const QString &script, const QString &path)
     
     QJSValue result = evaluate(script, path);
     if (result.isError()) {
-        //qDebug() << "catch the exception!";
         QString error = i18n("Error: %1 at line %2\n\nBacktrace:\n%3",
                              result.toString(),
                              result.property("lineNumber").toInt(),
@@ -278,7 +274,6 @@ bool ScriptEngine::evaluateScript(const QString &script, const QString &path)
 
 void ScriptEngine::exception(const QJSValue &value)
 {
-    //qDebug() << "exception caught!" << value.toVariant();
     emit printError(value.toVariant().toString());
 }
 
@@ -302,7 +297,6 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
     QStringList scriptPaths;
 
     if (scripts.isEmpty()) {
-        //qDebug() << "no update scripts";
         return scriptPaths;
     }
 
@@ -316,7 +310,6 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
         }
 
         if (script.startsWith(localXdgDir)) {
-            // qDebug() << "skipping user local script: " << script;
             continue;
         }
 

@@ -79,24 +79,20 @@ class CFontViewPart : public KParts::ReadOnlyPart
     private:
 
     void checkInstallable();
-//    void getMetaInfo(int face);
 
     private:
 
-//    QMap<int, QString> itsMetaInfo;
     CFontPreview       *itsPreview;
     QPushButton        *itsInstallButton;
     QWidget            *itsFaceWidget;
     QFrame             *itsFrame;
     QLabel             *itsFaceLabel;
-//                       *itsMetaLabel;
     QSpinBox           *itsFaceSelector;
     QAction            *itsChangeTextAction;
     int                itsFace;
     KSharedConfigPtr   itsConfig;
     BrowserExtension   *itsExtension;
     QProcess           *itsProc;
-//    KUrl               itsMetaUrl;
     QTemporaryDir      *itsTempDir;
     Misc::TFont        itsFontDetails;
     FontInstInterface  *itsInterface;

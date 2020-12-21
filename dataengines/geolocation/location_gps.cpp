@@ -58,19 +58,16 @@ void Gpsd::run()
 #else
         if (gps_poll(m_gpsdata) != -1) {
 #endif
-            //qDebug() << "poll ok";
 #if GPSD_API_MAJOR_VERSION >= 9
             if (m_gpsdata->online.tv_sec || m_gpsdata->online.tv_nsec) {
 #else
             if (m_gpsdata->online) {
 #endif
-                //qDebug() << "online";
 #if GPSD_API_MAJOR_VERSION >= 10
                 if (m_gpsdata->fix.status != STATUS_NO_FIX) {
 #else
                 if (m_gpsdata->status != STATUS_NO_FIX) {
 #endif
-                    //qDebug() << "fix";
                     d["accuracy"] = 30;
                     d["latitude"] = QString::number(m_gpsdata->fix.latitude);
                     d["longitude"] = QString::number(m_gpsdata->fix.longitude);

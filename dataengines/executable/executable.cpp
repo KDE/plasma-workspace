@@ -36,7 +36,6 @@ ExecutableContainer::~ExecutableContainer()
 
 void ExecutableContainer::finished(int exitCode, QProcess::ExitStatus exitStatus)
 {
-    //qDebug() << objectName();
     setData(QStringLiteral("exit code"), exitCode);
     setData(QStringLiteral("exit status"), exitStatus);
     setData(QStringLiteral("stdout"), QString::fromLocal8Bit(m_process->readAllStandardOutput()));
@@ -46,7 +45,6 @@ void ExecutableContainer::finished(int exitCode, QProcess::ExitStatus exitStatus
 
 void ExecutableContainer::exec()
 {
-    //qDebug() << objectName();
     if (!m_process) {
         m_process = new KProcess();
         connect(m_process, SIGNAL(finished(int,QProcess::ExitStatus)),
@@ -71,7 +69,6 @@ ExecutableEngine::ExecutableEngine(QObject* parent, const QVariantList& args)
 
 bool ExecutableEngine::sourceRequestEvent(const QString& source)
 {
-    //qDebug() << source;
     addSource(new ExecutableContainer(source, this));
     return true;
 }
