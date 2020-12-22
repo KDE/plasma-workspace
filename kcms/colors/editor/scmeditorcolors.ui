@@ -42,32 +42,37 @@
      </item>
      <item>
       <property name="text">
-       <string comment="color-sets" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">View</string>
+       <string comment="color-sets" extracomment="see plasma-workspace/kcms/colors/README.i18n">View</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string comment="color-sets" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Window</string>
+       <string comment="color-sets" extracomment="see plasma-workspace/kcms/colors/README.i18n">Window</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string comment="color-sets" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Button</string>
+       <string comment="color-sets" extracomment="see plasma-workspace/kcms/colors/README.i18n">Button</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string comment="color-sets" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Selection</string>
+       <string comment="color-sets" extracomment="see plasma-workspace/kcms/colors/README.i18n">Selection</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string comment="color-sets" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Tooltip</string>
+       <string comment="color-sets" extracomment="see plasma-workspace/kcms/colors/README.i18n">Tooltip</string>
       </property>
      </item>
      <item>
       <property name="text">
-       <string comment="color-sets" extracomment="see kdebase/workspace/kcontrol/colors/README.i18n">Complementary</string>
+       <string comment="color-sets" extracomment="see plasma-workspace/kcms/colors/README.i18n">Complementary</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string comment="color-sets" extracomment="see plasma-workspace/kcms/colors/README.i18n">Header</string>
       </property>
      </item>
     </widget>

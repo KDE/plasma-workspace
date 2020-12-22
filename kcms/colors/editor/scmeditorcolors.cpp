@@ -357,6 +357,9 @@ QString SchemeEditorColors::colorSetGroupKey(int colorSet)
         case KColorScheme::Complementary:
             group = QStringLiteral("Colors:Complementary");
             break;
+        case KColorScheme::Header:
+            group = QStringLiteral("Colors:Header");
+            break;
         default:
             group = QStringLiteral("Colors:View");
     }
@@ -373,6 +376,7 @@ void SchemeEditorColors::updateColorSchemes()
     m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Selection, m_config));
     m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Tooltip, m_config));
     m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Complementary, m_config));
+    m_colorSchemes.append(KColorScheme(QPalette::Active, KColorScheme::Header, m_config));
 
     m_wmColors.load(m_config);
 }
