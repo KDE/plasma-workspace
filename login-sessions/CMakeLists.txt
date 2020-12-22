@@ -1,22 +1,14 @@
 ## For Plasma end users
 
-if(PLASMA_WAYLAND_DEFAULT_SESSION)
-   set(PLASMA_X11_DESKTOP_FILENAME plasmax11.desktop CACHE INTERNAL)
-   set(PLASMA_WAYLAND_DESKTOP_FILENAME plasma.desktop CACHE INTERNAL)
-else()
-   set(PLASMA_X11_DESKTOP_FILENAME plasma.desktop CACHE INTERNAL)
-   set(PLASMA_WAYLAND_DESKTOP_FILENAME plasmawayland.desktop CACHE INTERNAL)
-endif()
-
-configure_file(plasmax11.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/${PLASMA_X11_DESKTOP_FILENAME})
+configure_file(plasmax11.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasmax11.desktop)
 install(FILES
-        ${CMAKE_CURRENT_BINARY_DIR}/${PLASMA_X11_DESKTOP_FILENAME}
+        ${CMAKE_CURRENT_BINARY_DIR}/plasmax11.desktop
         DESTINATION ${KDE_INSTALL_DATADIR}/xsessions
 )
 
-configure_file(plasmawayland.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/${PLASMA_WAYLAND_DESKTOP_FILENAME})
+configure_file(plasmawayland.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasmawayland.desktop)
 install(FILES
-        ${CMAKE_CURRENT_BINARY_DIR}/${PLASMA_WAYLAND_DESKTOP_FILENAME}
+        ${CMAKE_CURRENT_BINARY_DIR}/plasmawayland.desktop
         DESTINATION ${KDE_INSTALL_DATADIR}/wayland-sessions
 )
 
