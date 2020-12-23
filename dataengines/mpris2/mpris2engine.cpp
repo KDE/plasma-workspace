@@ -22,6 +22,7 @@
 #include <QDBusConnectionInterface>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
+#include <QDBusServiceWatcher>
 #include <QStringList>
 
 #include "debug.h"
@@ -34,9 +35,11 @@ Mpris2Engine::Mpris2Engine(QObject* parent,
                                    const QVariantList& args)
     : Plasma::DataEngine(parent, args)
 {
-
-    connect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceOwnerChanged,
-            this,           &Mpris2Engine::serviceOwnerChanged);
+    auto watcher = new QDBusServiceWatcher(QStringLiteral("org.mpris.MediaPlayer2*"),
+                                       QDBusConnection::sessionBus(),
+                                       QDBusServiceWatcher::WatchForOwnerChange,
+                                       this);
+    connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &Mpris2Engine::serviceOwnerChanged);
 
     QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall(QStringLiteral("ListNames"));
     QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(async, this);
