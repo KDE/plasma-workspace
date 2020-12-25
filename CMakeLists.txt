@@ -193,6 +193,7 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 query_qmake(QtBinariesDir QT_INSTALL_BINS)
 
 option(PLASMA_SYSTEMD_BOOT "Use systemd units for startup of plasma (WIP)" FALSE)
+option(PLASMA_WAYLAND_DEFAULT_SESSION "Use Wayland session by default for Plasma" FALSE)
 
 add_subdirectory(doc)
 add_subdirectory(libkworkspace)
