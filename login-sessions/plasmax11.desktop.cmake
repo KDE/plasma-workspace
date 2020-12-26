@@ -14,6 +14,7 @@ Name[pt]=Plasma (X11)
 Name[sl]=Plasma (X11)
 Name[sv]=Plasma (X11)
 Name[uk]=Плазма (X11)
+Name[vi]=Plasma (X11)
 Name[x-test]=xxPlasma (X11)xx
 Comment=Plasma by KDE
 Comment[ar]=بلازما كدي
