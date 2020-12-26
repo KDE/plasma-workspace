@@ -31,7 +31,6 @@ MouseArea {
     id: hiddenTasksView
 
     property alias layout: hiddenTasks
-    readonly property alias itemCount: hiddenTasks.itemCount
 
     hoverEnabled: true
     onExited: hiddenTasks.currentIndex = -1
@@ -57,11 +56,7 @@ MouseArea {
             highlight: PlasmaComponents.Highlight {}
             highlightMoveDuration: 0
 
-            property int itemCount: model.rowCount()
-
-            Component.onCompleted: {
-                itemCount = model.rowCount()
-            }
+            readonly property int itemCount: model.count
 
             model: PlasmaCore.SortFilterModel {
                 sourceModel: plasmoid.nativeInterface.systemTrayModel
@@ -72,15 +67,5 @@ MouseArea {
             }
             delegate: ItemLoader {}
         }
-    }
-
-    Connections {
-        target: hiddenTasks.model
-        // hiddenTasks.count is not updated when ListView is hidden and is not rendered
-        // manually update itemCount so that expander arrow hides/shows itself correctly
-        function onModelReset() {hiddenTasks.itemCount = hiddenTasks.model.rowCount()}
-        function onRowsInserted() {hiddenTasks.itemCount = hiddenTasks.model.rowCount()}
-        function onRowsRemoved() {hiddenTasks.itemCount = hiddenTasks.model.rowCount()}
-        function onLayoutChanged() {hiddenTasks.itemCount = hiddenTasks.model.rowCount()}
     }
 }
