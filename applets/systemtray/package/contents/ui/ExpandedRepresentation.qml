@@ -87,7 +87,7 @@ Item {
             PlasmaComponents.ToolButton {
                 id: actionsButton
                 visible: visibleActions > 0
-                checked: configMenu.status !== PC2.DialogStatus.Closed
+                checked: visibleActions > 1 ? configMenu.status !== PC2.DialogStatus.Closed : singleAction && singleAction.checked
                 property QtObject applet: systemTrayState.activeApplet || plasmoid
                 onAppletChanged: {
                     configMenu.clearMenuItems();
@@ -118,7 +118,7 @@ Item {
                     function onContextualActionsChanged() {updateVisibleActions();}
                 }
                 icon.name: "application-menu"
-                checkable: visibleActions > 1
+                checkable: visibleActions > 1 || (singleAction && singleAction.checkable)
                 contentItem.opacity: visibleActions > 1
                 // NOTE: it needs an IconItem because QtQuickControls2 buttons cannot load QIcons as their icon
                 PlasmaCore.IconItem {
@@ -131,10 +131,12 @@ Item {
                     visible: actionsButton.singleAction
                 }
                 onToggled: {
-                    if (checked) {
-                        configMenu.openRelative();
-                    } else {
-                        configMenu.close();
+                    if (visibleActions > 1) {
+                        if (checked) {
+                            configMenu.openRelative();
+                        } else {
+                            configMenu.close();
+                        }
                     }
                 }
                 onClicked: {
