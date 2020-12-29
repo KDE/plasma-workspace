@@ -63,7 +63,7 @@
 #include <KPluginFactory>
 #include <KStandardAction>
 #include <KZip>
-#include <KNewStuff3/KNS3/DownloadDialog>
+#include <KNewStuff3/KNS3/QtQuickDialogWrapper>
 #include <KConfigGroup>
 #include <QStandardPaths>
 
@@ -851,10 +851,8 @@ void CKCmFontInst::duplicateFonts()
 
 void CKCmFontInst::downloadFonts()
 {
-    KNS3::DownloadDialog *newStuff = new KNS3::DownloadDialog("kfontinst.knsrc", this);
-    newStuff->exec();
-
-    if(!newStuff->changedEntries().isEmpty())  // We have new fonts, so need to reconfigure fontconfig...
+    KNS3::QtQuickDialogWrapper newStuff(QStringLiteral("kfontinst.knsrc"));
+    if(!newStuff.exec().isEmpty())  // We have new fonts, so need to reconfigure fontconfig...
     {
         // Ask dbus helper for the current fonts folder name...
         // We then sym-link our knewstuff3 download folder into the fonts folder...
@@ -869,8 +867,6 @@ void CKCmFontInst::downloadFonts()
 
         doCmd(CJobRunner::CMD_UPDATE, CJobRunner::ItemList());
     }
-
-    delete newStuff;
 }
 
 void CKCmFontInst::print()
