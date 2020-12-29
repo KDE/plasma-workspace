@@ -28,7 +28,7 @@
 
 #include <KAuthorized>
 #include <KLocalizedString>
-#include <KNewStuff3/KNS3/DownloadDialog>
+#include <KNewStuff3/KNS3/QtQuickDialogWrapper>
 #include <KWindowSystem>
 
 #include <Plasma/Applet>
@@ -110,7 +110,7 @@ public:
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
     bool showSpecialFilters = true;
     DefaultItemFilterProxyModel filterItemModel;
-    QPointer<KNS3::DownloadDialog> newStuffDialog;
+    QPointer<KNS3::QtQuickDialogWrapper> newStuffDialog;
 
     QScopedPointer<KActivities::Consumer> activitiesConsumer;
 };
@@ -475,11 +475,9 @@ void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 void WidgetExplorer::downloadWidgets()
 {
     if (!d->newStuffDialog) {
-        d->newStuffDialog = new KNS3::DownloadDialog(QLatin1String("plasmoids.knsrc"));
-        d->newStuffDialog.data()->setWindowTitle(i18n("Download New Plasma Widgets"));
-        d->newStuffDialog.data()->setAttribute(Qt::WA_DeleteOnClose);
+        d->newStuffDialog = new KNS3::QtQuickDialogWrapper(QLatin1String("plasmoids.knsrc"));
     }
-    d->newStuffDialog.data()->show();
+    d->newStuffDialog->open();
 
     emit shouldClose();
 }
