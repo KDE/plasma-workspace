@@ -43,11 +43,6 @@ class QQuickItem;
 
 class KDirWatch;
 class KJob;
-
-namespace KNS3 {
-    class DownloadDialog;
-}
-
 class BackgroundListModel;
 class SlideModel;
 class SlideFilterModel;
@@ -209,7 +204,6 @@ class Image : public QObject, public QQmlParserStatus
         QFileDialog *m_dialog;
         QString m_img;
         QDateTime m_previousModified;
-        QPointer<KNS3::DownloadDialog> m_newStuffDialog;
         QString m_findToken;
 };
 
