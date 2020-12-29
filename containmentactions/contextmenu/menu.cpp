@@ -93,7 +93,7 @@ void ContextMenu::restore(const KConfigGroup &config)
         disabled.insert(QStringLiteral("configure shortcuts"));
     }
 
-    foreach (const QString &name, m_actionOrder) {
+    for (const QString &name : qAsConst(m_actionOrder)) {
         actions.insert(name, !disabled.contains(name));
     }
 

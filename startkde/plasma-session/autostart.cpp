@@ -68,11 +68,11 @@ AutoStart::loadAutoStartList()
 
     // Make unique list of relative paths
     QHash<QString, QString> files;
-    QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("autostart"), QStandardPaths::LocateDirectory);
-    Q_FOREACH (const QString &dir, dirs) {
+    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("autostart"), QStandardPaths::LocateDirectory);
+    for (const QString &dir : dirs) {
         const QDir d(dir);
         const QStringList fileNames = d.entryList(QStringList() << QStringLiteral("*.desktop"));
-        Q_FOREACH (const QString &file, fileNames) {
+        for (const QString &file : fileNames) {
             if (!files.contains(file)) {
                 files.insert(file, d.absoluteFilePath(file));
             }

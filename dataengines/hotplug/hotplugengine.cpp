@@ -48,7 +48,7 @@ HotplugEngine::HotplugEngine(QObject* parent, const QVariantList& args)
 {
     const QStringList folders = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("solid/actions"), QStandardPaths::LocateDirectory);
 
-    foreach (const QString &folder, folders) {
+    for (const QString &folder : folders) {
         m_dirWatch->addDir(folder, KDirWatch::WatchFiles);
     }
     connect(m_dirWatch, &KDirWatch::created, this, &HotplugEngine::updatePredicates);
@@ -73,8 +73,8 @@ void HotplugEngine::init()
     p |= Solid::Predicate(Solid::DeviceInterface::OpticalDisc);
     p |= Solid::Predicate(Solid::DeviceInterface::PortableMediaPlayer);
     p |= Solid::Predicate(Solid::DeviceInterface::Camera);
-    QList<Solid::Device> devices = Solid::Device::listFromQuery(p);
-    foreach (const Solid::Device &dev, devices) {
+    const QList<Solid::Device> devices = Solid::Device::listFromQuery(p);
+    for (const Solid::Device &dev : devices) {
         m_startList.insert(dev.udi(), dev);
     }
 
@@ -114,14 +114,14 @@ void HotplugEngine::findPredicates()
     m_predicates.clear();
     QStringList files;
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("solid/actions"), QStandardPaths::LocateDirectory);
-    Q_FOREACH (const QString& dir, dirs) {
+    for (const QString& dir : dirs) {
         QDirIterator it(dir, QStringList() << QStringLiteral("*.desktop"));
         while (it.hasNext()) {
             files.prepend(it.next());
         }
     }
     //qDebug() << files;
-    foreach (const QString &path, files) {
+    for (const QString &path : qAsConst(files)) {
         KDesktopFile cfg(path);
         const QString string_predicate = cfg.desktopGroup().readEntry("X-KDE-Solid-Predicate");
         //qDebug() << path << string_predicate;

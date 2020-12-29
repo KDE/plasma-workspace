@@ -93,8 +93,8 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         return match.runner()->id() == QLatin1String("services") || !runner->actions().isEmpty();
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
-
-        foreach (QAction *action, m_runnerManager->actionsForMatch(match)) {
+        const QList<QAction *> actions = m_runnerManager->actionsForMatch(match);
+        for (QAction *action : actions) {
             QVariantMap item = Kicker::createActionItem(action->text(), action->icon().name(), QStringLiteral("runnerAction"),
                 QVariant::fromValue<QObject *>(action));
 

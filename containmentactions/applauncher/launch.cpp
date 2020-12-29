@@ -49,7 +49,8 @@ QList<QAction*> AppLauncher::contextualActions()
 
 void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr group)
 {
-    foreach (KSycocaEntry::Ptr p, group->entries(true, true, true)) {
+    const auto entries = group->entries(true, true, true);
+    for (const KSycocaEntry::Ptr &p : entries ) {
         if (p->isType(KST_KService)) {
             const KService::Ptr service(static_cast<KService*>(p.data()));
 

@@ -311,7 +311,7 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
 
 void PlasmaAppletItemModel::setRunningApplets(const QHash<QString, int> &apps)
 {
-    //foreach item, find that string and set the count
+    //for each item, find that string and set the count
     for (int r = 0; r < rowCount(); ++r) {
         QStandardItem *i = item(r);
         PlasmaAppletItem *p = dynamic_cast<PlasmaAppletItem *>(i);
@@ -373,7 +373,7 @@ QMimeData *PlasmaAppletItemModel::mimeData(const QModelIndexList &indexes) const
 
     QByteArray appletNames;
     int lastRow = -1;
-    foreach (const QModelIndex &index, indexes) {
+    for (const QModelIndex &index : indexes) {
         if (index.row() == lastRow) {
             continue;
         }

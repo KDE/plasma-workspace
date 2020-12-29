@@ -641,14 +641,15 @@ void WaylandTasksModel::requestVirtualDesktops(const QModelIndex &index, const Q
     KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
 
     if (desktops.isEmpty()) {
-        foreach (const QVariant &desktop, window->plasmaVirtualDesktops()) {
-            window->requestLeaveVirtualDesktop(desktop.toString());
+        const QStringList virtualDesktops = window->plasmaVirtualDesktops();
+        for (const QString &desktop : virtualDesktops) {
+            window->requestLeaveVirtualDesktop(desktop);
         }
     } else {
         const QStringList &now = window->plasmaVirtualDesktops();
         QStringList next;
 
-        foreach (const QVariant &desktop, desktops) {
+        for (const QVariant &desktop : desktops) {
             const QString &desktopId = desktop.toString();
 
             if (!desktopId.isEmpty()) {
@@ -660,7 +661,7 @@ void WaylandTasksModel::requestVirtualDesktops(const QModelIndex &index, const Q
             }
         }
 
-        foreach (const QString &desktop, now) {
+        for (const QString &desktop : now) {
             if (!next.contains(desktop)) {
                 window->requestLeaveVirtualDesktop(desktop);
             }

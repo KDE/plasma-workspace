@@ -75,7 +75,7 @@ void Applet::setCurrentConfigGroup(const QStringList &groupNames)
     d->configGroup = app->config();
     d->configGroupPath = groupNames;
 
-    foreach (const QString &groupName, groupNames) {
+    for (const QString &groupName : groupNames) {
         d->configGroup = KConfigGroup(&d->configGroup, groupName);
     }
 
@@ -156,7 +156,7 @@ void Applet::setCurrentGlobalConfigGroup(const QStringList &groupNames)
     d->globalConfigGroup = app->globalConfig();
     d->globalConfigGroupPath = groupNames;
 
-    foreach (const QString &groupName, groupNames) {
+    for (const QString &groupName : groupNames) {
         d->globalConfigGroup = KConfigGroup(&d->globalConfigGroup, groupName);
     }
 }

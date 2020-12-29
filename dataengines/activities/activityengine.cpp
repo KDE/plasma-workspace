@@ -44,9 +44,9 @@ void ActivityEngine::init()
     } else {
         m_activityController = new KActivities::Controller(this);
         m_currentActivity = m_activityController->currentActivity();
-        QStringList activities = m_activityController->activities();
+        const QStringList activities = m_activityController->activities();
         //setData("allActivities", activities);
-        foreach (const QString &id, activities) {
+        for (const QString &id : activities) {
             insertActivity(id);
         }
 
@@ -160,7 +160,7 @@ void ActivityEngine::setActivityScores(const ActivityDataList &activities)
     QSet<QString> presentActivities;
     m_activityScores.clear();
 
-    foreach (const ActivityData &activity, activities) {
+    for (const ActivityData &activity : activities) {
         if (m_activities.contains(activity.id)) {
             setData(activity.id, QStringLiteral("Score"), activity.score);
         }
@@ -168,7 +168,8 @@ void ActivityEngine::setActivityScores(const ActivityDataList &activities)
         m_activityScores[activity.id] = activity.score;
     }
 
-    foreach (const QString &activityId, m_activityController->activities()) {
+    const auto controllerActivities =  m_activityController->activities();
+    for (const QString &activityId : controllerActivities) {
         if (!presentActivities.contains(activityId) && m_activities.contains(activityId)) {
             setData(activityId, QStringLiteral("Score"), 0);
         }

@@ -142,7 +142,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
 
     QList<KPackage::Package> newPackages;
     newPackages.reserve(paths.count());
-    Q_FOREACH (QString file, paths) {
+    for (QString file : paths) {
         // check if the path is a symlink and if it is,
         // work with the target rather than the symlink
         QFileInfo info(file);
@@ -184,7 +184,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
     }
 
     // add new files to dirwatch
-    Q_FOREACH (const KPackage::Package &b, newPackages) {
+    for (const KPackage::Package &b : qAsConst(newPackages)) {
         if (!m_dirwatch.contains(b.path())) {
             m_dirwatch.addDir(b.path());
         }
@@ -498,9 +498,11 @@ QStringList BackgroundFinder::suffixes()
         QSet<QString> suffixes;
 
         QMimeDatabase db;
-        Q_FOREACH (const QByteArray &mimeType, QImageReader::supportedMimeTypes()) {
+        const auto supportedMimeTypes = QImageReader::supportedMimeTypes();
+        for (const QByteArray &mimeType : supportedMimeTypes) {
             QMimeType mime(db.mimeTypeForName(mimeType));
-            Q_FOREACH (const QString &pattern, mime.globPatterns()) {
+            const QStringList globPatterns = mime.globPatterns();
+            for (const QString &pattern : globPatterns) {
                 suffixes.insert(pattern);
             }
         }
@@ -536,7 +538,7 @@ void BackgroundFinder::run()
         const QString path = m_paths.at(i);
         dir.setPath(path);
         const QFileInfoList files = dir.entryInfoList();
-        Q_FOREACH (const QFileInfo &wp, files) {
+        for (const QFileInfo &wp : files) {
             if (wp.isDir()) {
                 //qCDebug(IMAGEWALLPAPER) << "scanning directory" << wp.fileName();
 

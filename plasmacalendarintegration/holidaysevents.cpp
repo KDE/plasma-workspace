@@ -36,7 +36,7 @@ HolidaysEventsPlugin::HolidaysEventsPlugin(QObject *parent)
         regionCodes << KHolidays::HolidayRegion::defaultRegionCode();
     }
 
-    Q_FOREACH (const QString &region, regionCodes) {
+    for (const QString &region : qAsConst(regionCodes)) {
         m_regions << new KHolidays::HolidayRegion(region);
     }
 }
@@ -56,10 +56,10 @@ void HolidaysEventsPlugin::loadEventsForDateRange(const QDate &startDate, const 
     m_lastData.clear();
     QMultiHash<QDate, CalendarEvents::EventData> data;
 
-    Q_FOREACH (KHolidays::HolidayRegion *region, m_regions) {
-        KHolidays::Holiday::List holidays = region->holidays(startDate, endDate);
+    for (KHolidays::HolidayRegion *region : qAsConst(m_regions)) {
+        const KHolidays::Holiday::List holidays = region->holidays(startDate, endDate);
 
-        Q_FOREACH (const KHolidays::Holiday &holiday, holidays) {
+        for (const KHolidays::Holiday &holiday : holidays) {
             CalendarEvents::EventData eventData;
             eventData.setStartDateTime(holiday.observedStartDate().startOfDay());
             eventData.setEndDateTime(holiday.observedEndDate().endOfDay());

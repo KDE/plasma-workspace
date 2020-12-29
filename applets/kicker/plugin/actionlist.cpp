@@ -91,12 +91,12 @@ QVariantList createActionListForFileItem(const KFileItem &fileItem)
 {
     QVariantList list;
 
-    KService::List services = KApplicationTrader::queryByMimeType(fileItem.mimetype());
+    const KService::List services = KApplicationTrader::queryByMimeType(fileItem.mimetype());
 
     if (!services.isEmpty()) {
         list << createTitleActionItem(i18n("Open with:"));
 
-        foreach (const KService::Ptr service, services) {
+        for (const KService::Ptr service : services) {
             const QString text = service->name().replace(QLatin1Char('&'), QStringLiteral("&&"));
             QVariantMap item = createActionItem(text, service->icon(), QStringLiteral("_kicker_fileItem_openWith"), service->entryPath());
 
@@ -225,7 +225,7 @@ QVariantList jumpListActions(KService::Ptr service)
     }
 
     const auto &actions = service->actions();
-    foreach (const KServiceAction &action, actions) {
+    for (const KServiceAction &action : actions) {
         if (action.text().isEmpty() || action.exec().isEmpty()) {
             continue;
         }

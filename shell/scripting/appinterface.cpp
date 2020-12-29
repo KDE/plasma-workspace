@@ -219,7 +219,7 @@ QStringList AppInterface::knownContainmentTypes(const QString &type) const
     const KPluginInfo::List infoLs = Plasma::PluginLoader::listContainmentsOfType(type);
 
     containments.reserve(infoLs.count());
-    foreach (const KPluginInfo &info, infoLs) {
+    for (const KPluginInfo &info : infoLs) {
         containments.append(info.pluginName());
     }
 

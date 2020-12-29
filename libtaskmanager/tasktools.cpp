@@ -671,16 +671,17 @@ QString defaultApplication(const QUrl &url)
         return service->storageId();
     } else {
         // Try the files in share/apps/kcm_componentchooser/*.desktop.
-        QStringList directories = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kcm_componentchooser"), QStandardPaths::LocateDirectory);
+        const QStringList directories = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kcm_componentchooser"), QStandardPaths::LocateDirectory);
         QStringList services;
 
-        foreach(const QString& directory, directories) {
+        for (const QString& directory : directories) {
             QDir dir(directory);
-            foreach(const QString& f, dir.entryList(QStringList("*.desktop")))
+            const QStringList desktopFiles = dir.entryList(QStringList("*.desktop"));
+            for (const QString& f : desktopFiles)
                 services += dir.absoluteFilePath(f);
         }
 
-        foreach (const QString & service, services) {
+        for (const QString &service : qAsConst(services)) {
             KConfig config(service, KConfig::SimpleConfig);
             KConfigGroup cg = config.group(QByteArray());
             const QString type = cg.readEntry("valueName", QString());

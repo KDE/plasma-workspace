@@ -217,7 +217,7 @@ QString Image::findPreferedImage(const QStringList &images)
     float best = FLT_MAX;
 
     QString bestImage;
-    foreach (const QString &entry, images) {
+    for (const QString &entry : images) {
         QSize candidate = resSize(QFileInfo(entry).baseName());
         if (candidate == QSize()) {
             continue;
@@ -557,7 +557,7 @@ void Image::setSingleImage()
 void Image::addUrls(const QList<QUrl> &urls)
 {
     bool first = true;
-    Q_FOREACH (const QUrl &url, urls) {
+    for (const QUrl &url : urls) {
         // set the first drop as the current paper, just add the rest to the roll
         addUrl(url, first);
         first = false;

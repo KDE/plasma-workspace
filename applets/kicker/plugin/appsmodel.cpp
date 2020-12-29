@@ -77,7 +77,7 @@ AppsModel::AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesO
     foreach(AbstractEntry *suggestedEntry, entryList) {
         bool found = false;
 
-        foreach (const AbstractEntry *entry, m_entryList) {
+        for (const AbstractEntry *entry : qAsConst(m_entryList)) {
             if (entry->type() == AbstractEntry::RunnableType
                 && static_cast<const AppEntry *>(entry)->service()->storageId()
                 == static_cast<const AppEntry *>(suggestedEntry)->service()->storageId()) {
@@ -520,7 +520,7 @@ void AppsModel::refreshInternal()
 
                 bool found = false;
 
-                foreach (const AbstractEntry *entry, m_entryList) {
+                for (const AbstractEntry *entry : qAsConst(m_entryList)) {
                     if (entry->type() == AbstractEntry::RunnableType
                         && static_cast<const AppEntry *>(entry)->service()->storageId() == service->storageId()) {
                         found = true;
@@ -658,7 +658,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
 
             bool found = false;
 
-            foreach (const AbstractEntry *entry, m_entryList) {
+            for (const AbstractEntry *entry : qAsConst(m_entryList)) {
                 if (entry->type() == AbstractEntry::RunnableType
                     && static_cast<const AppEntry *>(entry)->service()->storageId() == service->storageId()) {
                     found = true;

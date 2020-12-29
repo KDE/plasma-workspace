@@ -138,7 +138,6 @@ void WidgetExplorerPrivate::initFilters()
     typedef QPair<QString, QString> catPair;
     QMap<QString, catPair > categories;
     QSet<QString> existingCategories = itemModel.categories();
-    //foreach (const QString &category, Plasma::Applet::listCategories(application)) {
     QStringList cats;
     const QList<KPluginMetaData> list = PluginLoader::self()->listAppletMetaData(QString());
 
@@ -157,7 +156,7 @@ void WidgetExplorerPrivate::initFilters()
         }
     }
     qWarning() << "TODO: port listCategories()";
-    foreach (const QString &category, cats) {
+    for (const QString &category : qAsConst(cats)) {
         const QString lowerCaseCat = category.toLower();
         if (existingCategories.contains(lowerCaseCat)) {
             const QString trans = i18nd("libplasma5", category.toLocal8Bit());
@@ -165,7 +164,7 @@ void WidgetExplorerPrivate::initFilters()
         }
     }
 
-    foreach (const catPair &category, categories) {
+    for (const catPair &category : qAsConst(categories)) {
         filterModel.addFilter(category.first,
                               KCategorizedItemsViewModels::Filter(QStringLiteral("category"), category.second));
     }
@@ -525,10 +524,10 @@ void WidgetExplorer::uninstall(const QString &pluginName)
     if (corona()) {
         const auto &containments = corona()->containments();
 
-        foreach (Containment *c, containments) {
+        for(Containment *c : containments) {
             const auto &applets = c->applets();
 
-            foreach (Applet *applet, applets) {
+            for (Applet *applet : applets) {
                 const auto &appletInfo = applet->pluginMetaData();
 
                 if (appletInfo.isValid() && appletInfo.pluginId() == pluginName) {

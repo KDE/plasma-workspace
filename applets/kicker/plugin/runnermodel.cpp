@@ -215,7 +215,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
     // We do not use a QMultiHash here because it keeps values in LIFO order, while we want FIFO.
     QHash<QString, QList<Plasma::QueryMatch> > matchesForRunner;
 
-    foreach (const Plasma::QueryMatch &match, matches) {
+    for (const Plasma::QueryMatch &match : matches) {
         auto it = matchesForRunner.find(match.runner()->id());
 
         if (it == matchesForRunner.end()) {

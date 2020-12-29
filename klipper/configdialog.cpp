@@ -88,7 +88,7 @@ void ActionsWidget::setActionList(const ActionList& list)
     qDeleteAll( m_actionList );
     m_actionList.clear();
 
-    foreach (ClipAction* action, list) {
+    for (ClipAction* action : list) {
         if (!action) {
             qCDebug(KLIPPER_LOG) << "action is null!";
             continue;

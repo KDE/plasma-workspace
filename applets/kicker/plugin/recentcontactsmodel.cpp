@@ -114,7 +114,7 @@ bool RecentContactsModel::trigger(int row, const QString &actionId, const QVaria
         if (!actionList.isEmpty()) {
             QAction *chat = nullptr;
 
-            foreach (QAction *action, actionList) {
+            for (QAction *action : actionList) {
                 const QVariant &actionType = action->property("actionType");
 
                 if (!actionType.isNull() && actionType.toInt() == KPeople::ActionType::TextChatAction) {

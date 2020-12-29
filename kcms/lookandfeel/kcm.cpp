@@ -581,8 +581,8 @@ QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)
 
         // Recurse through the list of inherited themes, to check if one of them
         // is a cursor theme.
-        QStringList inherits = cg.readEntry("Inherits", QStringList());
-        foreach (const QString &inherit, inherits) {
+        const QStringList inherits = cg.readEntry("Inherits", QStringList());
+        for(const QString &inherit : inherits) {
             // Avoid possible DoS
             if (inherit == theme) {
                 continue;

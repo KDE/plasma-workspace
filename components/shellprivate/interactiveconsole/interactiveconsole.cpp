@@ -129,7 +129,7 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
     editorLayout->addWidget(toolBar);
 
     const KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("KTextEditor/Document"));
-    foreach (const KService::Ptr &service, offers) {
+    for (const KService::Ptr &service : offers) {
         m_editorPart = service->createInstance<KTextEditor::Document>(widget);
         if (m_editorPart) {
             m_editorPart->setHighlightingMode(QStringLiteral("JavaScript/PlasmaDesktop"));

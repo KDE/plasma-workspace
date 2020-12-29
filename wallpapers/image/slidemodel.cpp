@@ -57,7 +57,7 @@ void SlideModel::removeDir(const QString &path)
 
 void SlideModel::removeBackgrounds(const QStringList &paths, const QString &token)
 {
-    Q_FOREACH (const QString &file, paths) {
+    for (const QString &file : paths) {
         removeBackground(file);
     }
 }

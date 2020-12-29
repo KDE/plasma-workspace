@@ -137,9 +137,8 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::containmentPluginsConfigModel()
     if (!m_containmentPluginsConfigModel) {
         m_containmentPluginsConfigModel = new PlasmaQuick::ConfigModel(this);
 
-        KPluginInfo::List actions = Plasma::PluginLoader::self()->listContainmentsOfType(QStringLiteral("Desktop"));
-
-        foreach (const KPluginInfo &info, actions) {
+        const KPluginInfo::List actions = Plasma::PluginLoader::self()->listContainmentsOfType(QStringLiteral("Desktop"));
+        for (const KPluginInfo &info : actions) {
             m_containmentPluginsConfigModel->appendCategory(info.icon(), info.name(), QString(), info.pluginName());
         }
 

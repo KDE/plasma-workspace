@@ -30,7 +30,7 @@ SolidAutoEject::SolidAutoEject(QObject* parent, const QList<QVariant>&)
     : KDEDModule(parent)
 {
     const QList<Solid::Device> drives = Solid::Device::listFromType(Solid::DeviceInterface::OpticalDrive);
-    foreach (const Solid::Device &drive, drives) {
+    for (const Solid::Device &drive : drives) {
         connectDevice(drive);
     }
 

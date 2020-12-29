@@ -64,9 +64,8 @@ SetPreviewWidget::SetPreviewWidget(QWidget *parent) : QFrame(parent)
     labelSelection7->setBackgroundRole(QPalette::Highlight);
 */
 
-    QList<QWidget*> widgets = findChildren<QWidget*>();
-    foreach (QWidget* widget, widgets)
-    {
+    const QList<QWidget*> widgets = findChildren<QWidget*>();
+    for (QWidget* widget : widgets) {
         widget->installEventFilter(this);
         widget->setFocusPolicy(Qt::NoFocus);
     }
