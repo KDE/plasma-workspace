@@ -130,10 +130,9 @@ void KFonts::load()
 void KFonts::save()
 {
     auto dpiItem = fontsAASettings()->findItem("forceFontDPI");
-    auto dpiWaylandItem = fontsAASettings()->findItem("forceFontDPIWayland");
     auto antiAliasingItem = fontsAASettings()->findItem("antiAliasing");
-    Q_ASSERT(dpiItem && dpiWaylandItem && antiAliasingItem);
-    if (dpiItem->isSaveNeeded() || dpiWaylandItem->isSaveNeeded() || antiAliasingItem->isSaveNeeded()) {
+    Q_ASSERT(dpiItem && antiAliasingItem);
+    if (dpiItem->isSaveNeeded() || antiAliasingItem->isSaveNeeded()) {
         emit aliasingChangeApplied();
     }
 

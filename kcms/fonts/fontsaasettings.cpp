@@ -265,7 +265,6 @@ FontsAASettings::FontsAASettings(QObject *parent)
     addItemInternal("subPixel", defaultSubPixel(), &FontsAASettings::subPixelChanged);
     addItemInternal("hinting", defaultHinting(), &FontsAASettings::hintingChanged);
 
-    connect(this, &FontsAASettings::forceFontDPIWaylandChanged, this, &FontsAASettings::dpiChanged);
     connect(this, &FontsAASettings::forceFontDPIChanged, this, &FontsAASettings::dpiChanged);
 }
 
@@ -318,11 +317,7 @@ void FontsAASettings::setAntiAliasing(bool antiAliasing)
 
 int FontsAASettings::dpi() const
 {
-    if (KWindowSystem::isPlatformWayland()) {
-        return forceFontDPIWayland();
-    } else {
-        return forceFontDPI();
-    }
+    return forceFontDPI();
 }
 
 void FontsAASettings::setDpi(int newDPI)
@@ -330,11 +325,9 @@ void FontsAASettings::setDpi(int newDPI)
     if (dpi() == newDPI) {
         return;
     }
-    if (KWindowSystem::isPlatformWayland()) {
-        setForceFontDPIWayland(newDPI);
-    } else {
-        setForceFontDPI(newDPI);
-    }
+
+    setForceFontDPI(newDPI);
+
     emit dpiChanged();
 }
 
