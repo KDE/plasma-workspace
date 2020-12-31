@@ -23,7 +23,7 @@ set(libklipper_common_SRCS
     clipcommandprocess.cpp
 )
 
-ecm_qt_declare_logging_category(libklipper_common_SRCS HEADER klipper_debug.h IDENTIFIER KLIPPER_LOG CATEGORY_NAME org.kde.klipper)
+ecm_qt_declare_logging_category(libklipper_common_SRCS HEADER klipper_debug.h IDENTIFIER KLIPPER_LOG CATEGORY_NAME org.kde.klipper DESCRIPTION "klipper" EXPORT KLIPPER)
 
 configure_file(config-klipper.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-klipper.h )
 
@@ -94,5 +94,5 @@ if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
 
-install( FILES klipper.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR} )
+ecm_qt_install_logging_categories(EXPORT KLIPPER FILE klipper.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
