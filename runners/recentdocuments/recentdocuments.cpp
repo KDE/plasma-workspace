@@ -98,7 +98,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         match.setData(QVariant(url));
         match.setText(name);
 
-        QString destUrlString = KShell::tildeCollapse(url.adjusted(QUrl::RemoveFilename).path());
+        QString destUrlString = KShell::tildeCollapse(url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).path());
         match.setSubtext(destUrlString);
 
         context.addMatch(match);
