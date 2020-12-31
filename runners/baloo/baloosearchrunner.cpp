@@ -184,9 +184,7 @@ RemoteMatches SearchRunner::matchInternal(const QString& searchTerm, const QStri
         QVariantMap properties;
 
         QString folderPath = url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).toLocalFile();
-        if (folderPath.startsWith(QDir::homePath())) {
-            folderPath.replace(0, QDir::homePath().length(), QStringLiteral("~"));
-        }
+        folderPath = KShell::tildeCollapse(folderPath);
 
         properties[QStringLiteral("urls")] = QStringList({QString::fromLocal8Bit(url.toEncoded())});
         properties[QStringLiteral("subtext")] = folderPath;
