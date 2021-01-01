@@ -815,6 +815,16 @@ void PanelView::setScreenToFollow(QScreen *screen)
         return;
     }
 
+    if (!m_screenToFollow.isNull()) {
+        // disconnect from old screen
+        disconnect(m_screenToFollow, &QScreen::virtualGeometryChanged,
+                this, &PanelView::updateStruts);
+    }
+
+    connect(screen, &QScreen::virtualGeometryChanged,
+            this, &PanelView::updateStruts,
+            Qt::UniqueConnection);
+
     /*connect(screen, &QObject::destroyed, this, [this]() {
         if (PanelView::screen()) {
             m_screenToFollow = PanelView::screen();
