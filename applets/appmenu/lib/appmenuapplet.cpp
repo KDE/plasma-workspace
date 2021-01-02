@@ -198,6 +198,7 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
 
         QPoint pos = ctx->window()->mapToGlobal(ctx->mapToScene(QPointF()).toPoint());
         if (location() == Plasma::Types::TopEdge) {
+            actionMenu->setProperty("_breeze_menu_is_top", true);
             pos.setY(pos.y() + ctx->height());
         }
 
