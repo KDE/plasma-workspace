@@ -165,12 +165,19 @@ QString JobPrivate::text() const
         } else if (m_processedFiles > 0) {
             return i18ncp("Copying n files", "%1 file", "%1 files", m_processedFiles);
         }
-    } else if (m_totalFiles == 1 && !currentFileName.isEmpty()) {
+    } else if (m_totalFiles == 1) {
         if (!destUrlString.isEmpty()) {
-            return i18nc("Copying file to location", "%1 to %2", currentFileName, destUrlString);
+            if (!currentFileName.isEmpty()) {
+                return i18nc("Copying file to location", "%1 to %2", currentFileName, destUrlString);
+            } else {
+                return i18ncp("Copying n files to location", "%1 file to %2", "%1 files to %2",
+                              m_totalFiles, destUrlString);
+            }
+        } else if (!currentFileName.isEmpty()) {
+            return currentFileName;
+        } else {
+            return i18ncp("Copying n files", "%1 file", "%1 files", m_totalFiles);
         }
-
-        return currentFileName;
     } else if (m_totalFiles > 1) {
         if (!destUrlString.isEmpty()) {
             if (m_processedFiles > 0 && m_processedFiles <= m_totalFiles) {
