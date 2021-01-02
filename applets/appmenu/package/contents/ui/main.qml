@@ -39,6 +39,7 @@ Item {
         plasmoid.nativeInterface.view = view
     }
 
+    Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
     Plasmoid.preferredRepresentation: (plasmoid.configuration.compactView) ? Plasmoid.compactRepresentation : Plasmoid.fullRepresentation
 
     Plasmoid.compactRepresentation: PlasmaComponents3.ToolButton {
