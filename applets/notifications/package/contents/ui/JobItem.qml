@@ -185,7 +185,7 @@ ColumnLayout {
         // We want the actions to be right-aligned but Flow also reverses
         // the order of items, so we put them in reverse order
         layoutDirection: Qt.RightToLeft
-        visible: url && url.toString() !== ""
+        visible: jobItem.url && jobItem.url.toString() !== ""
 
         PlasmaComponents3.Button {
             id: otherFileActionsButton
