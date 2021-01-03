@@ -52,12 +52,16 @@ ColumnLayout {
        }
 
        // For a single file show actions for it
-       if (totalFiles === 1) {
-           return jobItem.jobDetails.descriptionUrl;
        // Otherwise the destination folder all of them were copied into
-       } else {
-           return jobItem.jobDetails.destUrl;
+       const url = totalFiles === 1 ? jobItem.jobDetails.descriptionUrl
+                                    : jobItem.jobDetails.destUrl;
+
+       // Don't offer opening files in Trash
+       if (url && url.toString().startsWith("trash:")) {
+           return null;
        }
+
+       return url;
    }
 
     property alias iconContainerItem: jobDragIcon.parent
