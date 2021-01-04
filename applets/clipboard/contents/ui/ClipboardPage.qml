@@ -45,6 +45,9 @@ ColumnLayout {
                     if (uuid) {
                         clipboardSource.service(uuid, "select")
                         clipboardMenu.view.currentIndex = 0
+                        if (plasmoid.hideOnWindowDeactivate) {
+                            plasmoid.expanded = false;
+                        }
                     }
                 }
                 break;
