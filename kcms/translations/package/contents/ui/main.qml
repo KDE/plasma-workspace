@@ -30,6 +30,9 @@ ScrollViewKCM {
 
     ConfigModule.quickHelp: i18n("Language")
 
+    implicitWidth: Kirigami.Units.gridUnit * 25
+    implicitHeight: Kirigami.Units.gridUnit * 25
+
     Component {
         id: addLanguageItemComponent
 
