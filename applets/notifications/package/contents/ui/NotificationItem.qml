@@ -298,6 +298,7 @@ ColumnLayout {
         id: jobLoader
         Layout.fillWidth: true
         active: notificationItem.notificationType === NotificationManager.Notifications.JobType
+        height: item ? item.implicitHeight : 0
         visible: active
         sourceComponent: JobItem {
             iconContainerItem: iconContainer
