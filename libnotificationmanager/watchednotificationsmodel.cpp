@@ -93,8 +93,6 @@ void WatchedNotificationsModel::Private::Notify(uint id, const QString &app_name
 {
     const bool wasReplaced = replaces_id > 0;
 
-    qDebug() << summary;
-    qDebug() << body;
     Notification notification(id);
     notification.setSummary(summary);
     notification.setBody(body);
