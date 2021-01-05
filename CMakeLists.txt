@@ -172,7 +172,7 @@ configure_file(config-X11.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-X11.h)
 configure_file(config-appstream.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-appstream.h )
 add_subdirectory(login-sessions)
 
-plasma_install_package(lookandfeel org.kde.breeze.desktop look-and-feel lookandfeel)
+plasma_install_package(lookandfeel org.kde.breezetwilight.desktop look-and-feel lookandfeel)
 
 if (INSTALL_SDDM_THEME)
     configure_file(sddm-theme/theme.conf.cmake ${CMAKE_CURRENT_BINARY_DIR}/sddm-theme/theme.conf)

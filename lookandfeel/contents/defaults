@@ -8,10 +8,7 @@ ColorScheme=BreezeLight
 Theme=breeze
 
 [plasmarc][Theme]
-name=default
-
-[Wallpaper]
-Image=Next
+name=breeze-dark
 
 [kcminputrc][Mouse]
 cursorTheme=breeze_cursors
