@@ -561,7 +561,8 @@ void PanelView::resizePanel()
 
 void PanelView::restore()
 {
-    if (!containment()) {
+    KConfigGroup panelConfig = config();
+    if (!panelConfig.isValid()) {
         return;
     }
 
@@ -572,7 +573,7 @@ void PanelView::restore()
     //but if fails read it from the resolution dependent one as
     //the place for this config key is changed in Plasma 5.9
     //Do NOT use readConfigValueWithFallBack
-    setAlignment((Qt::Alignment)config().parent().readEntry<int>("alignment", config().readEntry<int>("alignment", m_alignment)));
+    setAlignment((Qt::Alignment)panelConfig.parent().readEntry<int>("alignment", panelConfig.readEntry<int>("alignment", m_alignment)));
 
     // All the other values are read from screen independent values,
     // but fallback on the screen independent section, as is the only place
@@ -599,7 +600,7 @@ void PanelView::restore()
     //but if fails read it from the resolution dependent one as
     //the place for this config key is changed in Plasma 5.9
     //Do NOT use readConfigValueWithFallBack
-    setVisibilityMode((VisibilityMode)config().parent().readEntry<int>("panelVisibility", config().readEntry<int>("panelVisibility", (int)NormalPanel)));
+    setVisibilityMode((VisibilityMode)panelConfig.parent().readEntry<int>("panelVisibility", panelConfig.readEntry<int>("panelVisibility", (int)NormalPanel)));
     m_initCompleted = true;
     resizePanel();
     positionPanel();
