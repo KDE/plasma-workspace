@@ -225,13 +225,15 @@ ScrollViewKCM {
             actions: [
                 Kirigami.Action {
                     enabled: !model.IsMissing && index > 0
+                    visible: languagesList.count > 1
                     iconName: "go-top"
                     tooltip: i18nc("@info:tooltip", "Promote to default")
                     onTriggered: kcm.selectedTranslationsModel.move(index, 0)
                 },
                 Kirigami.Action {
                     property bool removing: false
-                    enabled: removing || !model.IsMissing && languagesList.count > 1
+                    enabled: removing || !model.IsMissing
+                    visible: languagesList.count > 1
                     iconName: "list-remove"
                     tooltip: i18nc("@info:tooltip", "Remove")
                     onTriggered: {
