@@ -4,6 +4,7 @@ Exec=${CMAKE_INSTALL_FULL_BINDIR}/startplasma-x11
 TryExec=${CMAKE_INSTALL_FULL_BINDIR}/startplasma-x11
 DesktopNames=KDE
 Name=Plasma (X11)
+Name[az]=Plasma (X11)
 Name[ca]=Plasma (X11)
 Name[es]=Plasma (X11)
 Name[eu]=Plasma (X11)
