@@ -9,32 +9,45 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.workspace.keyboardlayout 1.0
 
 PlasmaComponents3.ToolButton {
-    id: kbLayoutButton
+    property alias keyboardLayout: keyboardLayout
+    property alias connections: connections
+    property bool hasMultipleKeyboardLayouts
 
-    property alias layout: layout
-    readonly property bool hasMultipleKeyboardLayouts: layout.layouts.length > 1
-
-    text: layout.layoutLongName
     visible: hasMultipleKeyboardLayouts
 
     Accessible.name: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to change keyboard layout", "Switch layout")
     icon.name: "input-keyboard"
 
-    onClicked: layout.switchToNextLayout()
+    onClicked: keyboardLayout.switchToNextLayout()
 
     MouseArea {
         anchors.fill: parent
         acceptedButtons: Qt.NoButton
         onWheel: {
             if (wheel.angleDelta.y > 0) {
-                layout.switchToNextLayout()
+                keyboardLayout.switchToNextLayout()
             } else {
-                layout.switchToPreviousLayout()
+                keyboardLayout.switchToPreviousLayout()
             }
         }
     }
 
     KeyboardLayout {
-        id: layout
+        id: keyboardLayout
+
+        onLayoutsChanged: hasMultipleKeyboardLayouts = layouts.length > 1
+    }
+
+    Connections {
+        id: connections
+        target: keyboardLayout
+
+        function onLayoutChanged() {
+            keyboardLayout.requestLayoutLongName()
+        }
+
+        function onLayoutLongNameChanged(longName) {
+            text = longName
+        }
     }
 }

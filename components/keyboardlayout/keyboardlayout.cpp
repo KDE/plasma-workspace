@@ -11,22 +11,29 @@
 #include <QDBusInterface>
 
 template<>
-void KeyboardLayout::requestDBusData<KeyboardLayout::LayoutDisplayName>()
-{ if (mIface) requestDBusData(mIface->getLayoutDisplayName(), mLayoutDisplayName, &KeyboardLayout::layoutDisplayNameChanged); }
+inline void KeyboardLayout::requestDBusData<KeyboardLayout::Layout>()
+{ if (mIface) requestDBusData(mIface->getLayout(), &KeyboardLayout::layoutChanged); }
 
 template<>
-void KeyboardLayout::requestDBusData<KeyboardLayout::LayoutLongName>()
-{ if (mIface) requestDBusData(mIface->getLayoutLongName(), mLayoutLongName, &KeyboardLayout::layoutLongNameChanged); }
+inline void KeyboardLayout::requestDBusData<KeyboardLayout::Layouts>()
+{ if (mIface) requestDBusData(mIface->getLayoutsList(), &KeyboardLayout::layoutsChanged); }
 
 template<>
-void KeyboardLayout::requestDBusData<KeyboardLayout::Layouts>()
-{ if (mIface) requestDBusData(mIface->getLayoutsList(), mLayouts, &KeyboardLayout::layoutsChanged); }
+inline void KeyboardLayout::requestDBusData<KeyboardLayout::LayoutLongName>()
+{ if (mIface) requestDBusData(mIface->getLayoutLongName(), &KeyboardLayout::layoutLongNameChanged); }
+
+void KeyboardLayout::requestLayoutLongName()
+{
+    requestDBusData<LayoutLongName>();
+}
 
 
 KeyboardLayout::KeyboardLayout(QObject* parent)
     : QObject(parent)
     , mIface(nullptr)
 {
+    LayoutNames::registerMetaType();
+
     mIface = new OrgKdeKeyboardLayoutsInterface(QStringLiteral("org.kde.keyboard"),
                                 QStringLiteral("/Layouts"),
                                 QDBusConnection::sessionBus(),
@@ -38,17 +45,13 @@ KeyboardLayout::KeyboardLayout(QObject* parent)
     }
 
     connect(mIface, &OrgKdeKeyboardLayoutsInterface::layoutChanged,
-            this, [this]()
-                    {
-                        requestDBusData<LayoutDisplayName>();
-                        requestDBusData<LayoutLongName>();
-                    });
+            this, &KeyboardLayout::layoutChanged);
+
     connect(mIface, &OrgKdeKeyboardLayoutsInterface::layoutListChanged,
             this, [this]()
                     {
-                        requestDBusData<LayoutDisplayName>();
-                        requestDBusData<LayoutLongName>();
                         requestDBusData<Layouts>();
+                        requestDBusData<Layout>();
                     });
 
     emit mIface->OrgKdeKeyboardLayoutsInterface::layoutListChanged();
@@ -74,18 +77,17 @@ void KeyboardLayout::setLayout(const QString &layout)
 }
 
 template<class T>
-void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)())
+void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, void (KeyboardLayout::*notify)(const T &))
 {
     const QDBusPendingCallWatcher * const watcher = new QDBusPendingCallWatcher(pendingReply, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this,
-        [this, &out, notify](QDBusPendingCallWatcher *watcher)
+        [this, notify](QDBusPendingCallWatcher *watcher)
         {
             QDBusPendingReply<T> reply = *watcher;
             if (reply.isError()) {
                 qCWarning(KEYBOARD_LAYOUT) << reply.error().message();
             } else {
-                out = reply.value();
-                emit (this->*notify)();
+                emit (this->*notify)(reply.value());
             }
             watcher->deleteLater();
         }

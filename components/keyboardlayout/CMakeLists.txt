@@ -1,12 +1,17 @@
 set(keyboardlayoutplugin_SRCS
     keyboardlayout.cpp
-    keyboardlayoutplugin.cpp)
-
+    keyboardlayoutplugin.cpp
+    layoutnames.cpp
+    layoutnames.h
+    )
 
 ecm_qt_declare_logging_category(keyboardlayoutplugin_SRCS HEADER debug.h
     IDENTIFIER KEYBOARD_LAYOUT
     CATEGORY_NAME kde.keyboardlayout
     DEFAULT_SEVERITY Info)
+
+set_source_files_properties(org.kde.KeyboardLayouts.xml
+        PROPERTIES INCLUDE layoutnames.h)
 
 qt5_add_dbus_interface(keyboardlayoutplugin_SRCS "org.kde.KeyboardLayouts.xml" keyboard_layout_interface)
 

@@ -12,53 +12,37 @@
 #include "debug.h"
 
 class OrgKdeKeyboardLayoutsInterface;
-class QDBusPendingCallWatcher;
+class LayoutNames;
 
 class KeyboardLayout : public QObject
 {
     Q_OBJECT
-
-    Q_PROPERTY(QString layout
-               WRITE setLayout)
-
-    Q_PROPERTY(QString layoutDisplayName
-               MEMBER mLayoutDisplayName
-               NOTIFY layoutDisplayNameChanged)
-
-    Q_PROPERTY(QString layoutLongName
-               MEMBER mLayoutLongName
-               NOTIFY layoutLongNameChanged)
-
-    Q_PROPERTY(QStringList layouts
-               MEMBER mLayouts
-               NOTIFY layoutsChanged)
 
 public:
     explicit KeyboardLayout(QObject *parent = nullptr);
     ~KeyboardLayout() override;
 
 Q_SIGNALS:
-    void layoutDisplayNameChanged();
-    void layoutLongNameChanged();
-    void layoutsChanged();
+    void layoutChanged(const QString &idName);
+    void layoutsChanged(const QVector<LayoutNames> &layouts);
 
-protected Q_SLOTS:
-    void switchToNextLayout();
-    void switchToPreviousLayout();
+    void layoutLongNameChanged(const QString &longName);
+
+protected:
+    Q_INVOKABLE void switchToNextLayout();
+    Q_INVOKABLE void switchToPreviousLayout();
+    Q_INVOKABLE void setLayout(const QString &layout);
+
+    Q_INVOKABLE void requestLayoutLongName();
 
 private:
-    void setLayout(const QString &layout);
-
-    enum DBusData {LayoutDisplayName, LayoutLongName, Layouts};
+    enum DBusData {Layout, LayoutLongName, Layouts};
 
     template<class T>
-    void requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)());
+    void requestDBusData(QDBusPendingReply<T> pendingReply, void (KeyboardLayout::*notify)(const T &));
     template<DBusData>
-    inline void requestDBusData();
+    void requestDBusData();
 
-    QString mLayoutDisplayName;
-    QString mLayoutLongName;
-    QStringList mLayouts;
     OrgKdeKeyboardLayoutsInterface *mIface;
 };
 

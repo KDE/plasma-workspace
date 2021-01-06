@@ -18,15 +18,12 @@
     <method name="getLayout">
       <arg type="s" direction="out"/>
     </method>
-    <method name="getLayoutDisplayName">
-      <arg type="s" direction="out"/>
-    </method>
     <method name="getLayoutLongName">
       <arg type="s" direction="out"/>
     </method>
     <method name="getLayoutsList">
-      <arg type="as" direction="out"/>
+      <arg type="a(sss)" direction="out"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QVector&lt;LayoutNames&gt;" />
     </method>
   </interface>
 </node>
-
