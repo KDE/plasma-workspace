@@ -155,7 +155,7 @@ ColumnLayout {
                     var oldText = text
                     var suggestedText = runnerManager.getHistorySuggestion(text);
                     if (suggestedText.length > 0) {
-                        text = suggestedText
+                        text = text + suggestedText.substr(oldText.length)
                         select(text.length, oldText.length)
                     }
                 }
