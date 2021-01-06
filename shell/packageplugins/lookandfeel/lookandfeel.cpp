@@ -23,7 +23,7 @@
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 
-#define DEFAULT_LOOKANDFEEL "org.kde.breeze.desktop"
+#define DEFAULT_LOOKANDFEEL "org.kde.breezetwilight.desktop"
 
 void LookAndFeelPackage::initPackage(KPackage::Package *package)
 {

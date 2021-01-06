@@ -7,7 +7,7 @@
   <group name="KDE">
     <entry name="lookAndFeelPackage" key="LookAndFeelPackage" type="String">
       <label>Global look and feel</label>
-      <default>org.kde.breeze.desktop</default>
+      <default>org.kde.breezetwilight.desktop</default>
     </entry>
   </group>
 </kcfg>
