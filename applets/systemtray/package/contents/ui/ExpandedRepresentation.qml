@@ -115,7 +115,9 @@ Item {
                 }
                 Connections {
                     target: actionsButton.applet
-                    function onContextualActionsChanged() {updateVisibleActions();}
+                    function onContextualActionsChanged() {
+                        Qt.callLater(actionsButton.updateVisibleActions);
+                    }
                 }
                 icon.name: "application-menu"
                 checkable: visibleActions > 1 || (singleAction && singleAction.checkable)
