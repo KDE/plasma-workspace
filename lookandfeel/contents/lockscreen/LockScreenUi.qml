@@ -328,6 +328,9 @@ PlasmaCore.ColorScope {
             onKeyboardActiveChanged: {
                 if (keyboardActive) {
                     state = "visible";
+                    // Otherwise the password field loses focus and virtual keyboard
+                    // keystrokes get eaten
+                    mainBlock.mainPasswordBox.forceActiveFocus();
                 } else {
                     state = "hidden";
                 }
