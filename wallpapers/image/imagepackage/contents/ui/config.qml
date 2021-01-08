@@ -316,12 +316,11 @@ ColumnLayout {
                             width: slidePathsView.width
                             // content item includes its own padding
                             padding: 0
-                            // Don't need a highlight
-                            activeBackgroundColor: "transparent"
+                            // Don't need a highlight or hover effects
+                            hoverEnabled: false
                             contentItem: Kirigami.BasicListItem {
-                                // Don't need a highlight
-                                activeBackgroundColor: "transparent"
-                                activeTextColor: "black"
+                                // Don't need a highlight or hover effects
+                                hoverEnabled: false
                                 separatorVisible: false
 
                                 // Header: the folder
