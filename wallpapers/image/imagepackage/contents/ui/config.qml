@@ -314,6 +314,8 @@ ColumnLayout {
                         model: imageWallpaper.slidePaths
                         delegate: Kirigami.SwipeListItem {
                             width: slidePathsView.width
+                            // content item includes its own padding
+                            padding: 0
                             // Don't need a highlight
                             activeBackgroundColor: "transparent"
                             contentItem: Kirigami.BasicListItem {
