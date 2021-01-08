@@ -306,22 +306,21 @@ ColumnLayout {
                 QtControls2.ScrollView {
                     id: foldersScroll
                     Layout.fillHeight: true
-                    Layout.preferredWidth: 0.25 * parent.width
+                    Layout.preferredWidth: 0.35 * parent.width
+                    Layout.maximumWidth: Kirigami.Units.gridUnit * 16
                     Component.onCompleted: foldersScroll.background.visible = true;
                     ListView {
                         id: slidePathsView
                         model: imageWallpaper.slidePaths
                         delegate: Kirigami.SwipeListItem {
-                            id: folderDelegate
                             width: slidePathsView.width
+                            // Don't need a highlight
+                            activeBackgroundColor: "transparent"
                             contentItem: Kirigami.BasicListItem {
-                                // The parent item already has a highlight
+                                // Don't need a highlight
                                 activeBackgroundColor: "transparent"
-                                // Otherwise there are unnecessary margins
-                                anchors.top: parent.top
-                                anchors.bottom: parent.bottom
-                                anchors.left: parent.left
-                                // No right anchor so text can be elided by actions
+                                activeTextColor: "black"
+                                separatorVisible: false
 
                                 // Header: the folder
                                 label: {
