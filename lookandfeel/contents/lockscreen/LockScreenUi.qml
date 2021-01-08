@@ -230,9 +230,6 @@ PlasmaCore.ColorScope {
 
             // this isn't implicit, otherwise items still get processed for the scenegraph
             visible: opacity > 0
-            // changing enabled will toggle if an item can have activeFocus, which otherwise
-            //keeps the text cursor blinking even when invisble
-            enabled: visible
 
             initialItem: MainBlock {
                 id: mainBlock

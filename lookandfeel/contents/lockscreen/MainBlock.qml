@@ -66,6 +66,12 @@ SessionManagementScreen {
             enabled: !authenticator.graceLocked
             revealPasswordButtonShown: true
 
+            // In Qt this is implicitly active based on focus rather than visibility
+            // in any other application having a focussed invisible object would be weird
+            // but here we are using to wake out of screensaver mode
+            // We need to explicitly disable cursor flashing to avoid unnecessary renders
+            cursorVisible: visible
+
             onAccepted: {
                 if (lockScreenUiVisible) {
                     startLogin();
