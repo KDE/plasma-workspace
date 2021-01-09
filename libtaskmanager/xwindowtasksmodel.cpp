@@ -398,6 +398,14 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
         changedRoles << Activities;
     }
 
+    if (properties2 & NET::WM2AppMenuServiceName) {
+        changedRoles << ApplicationMenuServiceName;
+    }
+
+    if (properties2 & NET::WM2AppMenuObjectPath) {
+        changedRoles << ApplicationMenuObjectPath;
+    }
+
     if (wipeInfoCache) {
         delete windowInfoCache.take(window);
     }
