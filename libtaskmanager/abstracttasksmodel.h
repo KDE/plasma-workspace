@@ -98,6 +98,8 @@ public:
                                          May be empty. @since 5.19 */
         ApplicationMenuObjectPath, /**< The DBus object path for the application's menu.
                                         May be empty. @since 5.19 */
+        IsHidden, /**< Task (i.e window) is hidden on screen. A minimzed
+                       window is not necessarily hidden. */
     };
     Q_ENUM(AdditionalRoles)
 

@@ -434,7 +434,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->isMaximized();
     } else if (role == IsMinimizable) {
         return window->isMinimizeable();
-    } else if (role == IsMinimized) {
+    } else if (role == IsMinimized || role == IsHidden) {
         return window->isMinimized();
     } else if (role == IsKeepAbove) {
         return window->isKeepAbove();

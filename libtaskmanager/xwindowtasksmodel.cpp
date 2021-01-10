@@ -653,6 +653,8 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return d->windowInfo(window)->actionSupported(NET::ActionMinimize);
     } else if (role == IsMinimized) {
         return d->windowInfo(window)->isMinimized();
+    } else if (role == IsHidden) {
+        return d->windowInfo(window)->hasState(NET::Hidden);
     } else if (role == IsKeepAbove) {
         return d->windowInfo(window)->hasState(NET::KeepAbove);
     } else if (role == IsKeepBelow) {
