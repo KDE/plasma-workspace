@@ -7,7 +7,7 @@
   <group name="General">
     <entry name="colorScheme" key="ColorScheme" type="String">
       <label>Color scheme name</label>
-      <default>Breeze</default>
+      <default>BreezeLight</default>
     </entry>
   </group>
 </kcfg>
