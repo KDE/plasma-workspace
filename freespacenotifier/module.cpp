@@ -74,7 +74,7 @@ void FreeSpaceNotifierModule::showConfiguration()
                     i18nc("The settings dialog main page name, as in 'general settings'", "General"),
                     QStringLiteral("system-run"));
 
-    connect(dialog, &KConfigDialog::finished, this, [this] {
+    connect(dialog, &KConfigDialog::finished, this, [] {
         if (!FreeSpaceNotifierSettings::enableNotification()) {
             // The idea here is to disable ourselves by telling kded to stop autostarting us, and
             // to kill the current running instance.
