@@ -151,7 +151,7 @@ PlasmaComponents3.Page {
         ColumnLayout {
             id: rightColumn
 
-            visible: agenda.visible || worldClocks.visible
+            visible: calendar.showAgenda || calendar.showClocks
 
             Layout.minimumWidth: units.gridUnit * 14
 
