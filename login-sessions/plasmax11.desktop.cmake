@@ -6,6 +6,7 @@ DesktopNames=KDE
 Name=Plasma (X11)
 Name[az]=Plasma (X11)
 Name[ca]=Plasma (X11)
+Name[en_GB]=Plasma (X11)
 Name[es]=Plasma (X11)
 Name[eu]=Plasma (X11)
 Name[fr]=Plasma (X11)
