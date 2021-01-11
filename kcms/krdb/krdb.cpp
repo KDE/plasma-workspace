@@ -545,7 +545,7 @@ void runRdb( uint flags )
   KConfigGroup generalGroup(kglobalcfg, "General");
   KConfigGroup iconsGroup(kglobalcfg, "Icons");
 
-  const QString colorSchemeName = generalGroup.readEntry("ColorScheme", QStringLiteral("Breeze"));
+  const QString colorSchemeName = generalGroup.readEntry("ColorScheme", QStringLiteral("BreezeLight"));
 
   QString colorSchemeSrcFile;
   if (colorSchemeName != QLatin1String("Default")) {
