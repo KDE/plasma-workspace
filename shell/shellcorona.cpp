@@ -1902,11 +1902,16 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
         return nullptr;
     }
 
+    // find out what screen this panel should go on
+    QScreen *wantedScreen = QGuiApplication::screenAt(QCursor::pos());
+
     QList<Plasma::Types::Location> availableLocations;
     availableLocations << Plasma::Types::LeftEdge << Plasma::Types::TopEdge << Plasma::Types::RightEdge << Plasma::Types::BottomEdge;
 
     for (auto it = m_panelViews.constBegin(); it != m_panelViews.constEnd(); ++it) {
-        availableLocations.removeAll((*it)->location());
+        if ((*it)->screenToFollow() == wantedScreen) {
+            availableLocations.removeAll((*it)->location());
+        }
     }
 
     Plasma::Types::Location loc;
@@ -1929,22 +1934,11 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
 
     Q_ASSERT(panel);
     m_waitingPanels << panel;
-    //not creating the panel view yet in order to have the same code path
-    //between the first and subsequent plasma starts. we want to have the panel appearing only when its layout is completed, to not have
-    //many visible relayouts. otherwise we had even panel resizes at startup that
-    //made al lthe full representations be loaded.
-    m_waitingPanelsTimer.start();
+    // immediately create the panel here so that we have access to the panel view
+    createWaitingPanels();
 
-    const QPoint cursorPos(QCursor::pos());
-    const auto screens = QGuiApplication::screens();
-    for (QScreen *screen : screens) {
-        //m_panelViews.contains(panel) == false iff addPanel is executed in a startup script
-        auto panelView = m_panelViews.value(panel);
-        if (panelView && screen->geometry().contains(cursorPos)) {
-            panelView->setScreenToFollow(screen);
-            break;
-        }
-    }
+    m_panelViews.value(panel)->setScreenToFollow(wantedScreen);
+
     return panel;
 }
 
