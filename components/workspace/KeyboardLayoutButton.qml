@@ -25,9 +25,9 @@ PlasmaComponents3.ToolButton {
         acceptedButtons: Qt.NoButton
         onWheel: {
             if (wheel.angleDelta.y > 0) {
-                keyboardLayout.switchToNextLayout()
-            } else {
                 keyboardLayout.switchToPreviousLayout()
+            } else {
+                keyboardLayout.switchToNextLayout()
             }
         }
     }
