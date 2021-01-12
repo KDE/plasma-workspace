@@ -86,7 +86,7 @@ ColumnLayout {
                         QQC2.Label {
                             Layout.fillWidth: true
                             Layout.alignment: Qt.AlignTop
-                            text: plasmoid.configuration.lastSelectedTimezone === model.timeZoneId && configuredTimezoneList.count > 1 ? "Clock is currently using this time zone" : ""
+                            text: plasmoid.configuration.lastSelectedTimezone === model.timeZoneId && configuredTimezoneList.count > 1 ? i18n("Clock is currently using this time zone") : ""
                             elide: Text.ElideRight
                             font: Kirigami.Theme.smallFont
                             opacity: 0.7
