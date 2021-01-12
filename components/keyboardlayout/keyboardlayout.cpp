@@ -71,13 +71,13 @@ void KeyboardLayout::switchToPreviousLayout()
     if (mIface) mIface->switchToPreviousLayout();
 }
 
-void KeyboardLayout::setLayout(const QString &layout)
+void KeyboardLayout::setLayout(uint index)
 {
-    if (mIface) mIface->setLayout(layout);
+    if (mIface) mIface->setLayout(index);
 }
 
 template<class T>
-void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, void (KeyboardLayout::*notify)(const T &))
+void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, void (KeyboardLayout::*notify)(T))
 {
     const QDBusPendingCallWatcher * const watcher = new QDBusPendingCallWatcher(pendingReply, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this,

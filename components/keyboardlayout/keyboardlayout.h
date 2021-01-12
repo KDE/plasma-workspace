@@ -23,15 +23,15 @@ public:
     ~KeyboardLayout() override;
 
 Q_SIGNALS:
-    void layoutChanged(const QString &idName);
-    void layoutsChanged(const QVector<LayoutNames> &layouts);
+    void layoutChanged(uint index);
+    void layoutsChanged(QVector<LayoutNames> layouts);
 
-    void layoutLongNameChanged(const QString &longName);
+    void layoutLongNameChanged(QString longName);
 
 protected:
     Q_INVOKABLE void switchToNextLayout();
     Q_INVOKABLE void switchToPreviousLayout();
-    Q_INVOKABLE void setLayout(const QString &layout);
+    Q_INVOKABLE void setLayout(uint index);
 
     Q_INVOKABLE void requestLayoutLongName();
 
@@ -39,7 +39,7 @@ private:
     enum DBusData {Layout, LayoutLongName, Layouts};
 
     template<class T>
-    void requestDBusData(QDBusPendingReply<T> pendingReply, void (KeyboardLayout::*notify)(const T &));
+    void requestDBusData(QDBusPendingReply<T> pendingReply, void (KeyboardLayout::*notify)(T));
     template<DBusData>
     void requestDBusData();
 

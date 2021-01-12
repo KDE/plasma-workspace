@@ -9,7 +9,6 @@ class LayoutNames
 {
     Q_GADGET
 
-    Q_PROPERTY(QString id MEMBER id)
     Q_PROPERTY(QString shortName MEMBER shortName)
     Q_PROPERTY(QString displayName MEMBER displayName)
     Q_PROPERTY(QString longName MEMBER longName)
@@ -17,7 +16,6 @@ class LayoutNames
 public:
     static void registerMetaType();
 
-    QString id;
     QString shortName;
     QString displayName;
     QString longName;
