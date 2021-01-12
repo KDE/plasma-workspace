@@ -780,7 +780,6 @@ void PanelView::moveEvent(QMoveEvent *ev)
 
 void PanelView::integrateScreen()
 {
-    connect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &PanelView::restore);
     updateMask();
     KWindowSystem::setOnAllDesktops(winId(), true);
     KWindowSystem::setType(winId(), NET::Dock);
@@ -819,10 +818,15 @@ void PanelView::setScreenToFollow(QScreen *screen)
         // disconnect from old screen
         disconnect(m_screenToFollow, &QScreen::virtualGeometryChanged,
                 this, &PanelView::updateStruts);
+        disconnect(m_screenToFollow, &QScreen::geometryChanged,
+                this, &PanelView::restore);
     }
 
     connect(screen, &QScreen::virtualGeometryChanged,
             this, &PanelView::updateStruts,
+            Qt::UniqueConnection);
+    connect(screen, &QScreen::geometryChanged,
+            this, &PanelView::restore,
             Qt::UniqueConnection);
 
     /*connect(screen, &QObject::destroyed, this, [this]() {
