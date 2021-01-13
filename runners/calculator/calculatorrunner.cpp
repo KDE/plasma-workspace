@@ -232,14 +232,17 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
 
     bool toHex = cmd.startsWith(QLatin1String("hex="));
     bool startsWithEquals = !toHex && cmd[0] == QLatin1Char('=');
-
-    userFriendlyMultiplication(cmd);
+    const static QRegularExpression hexRegex(QStringLiteral("^=?0x.+"), QRegularExpression::CaseInsensitiveOption);
+    const bool parseHex = cmd.contains(hexRegex);
+    if (!parseHex) {
+        userFriendlyMultiplication(cmd);
+    }
 
     if (toHex || startsWithEquals) {
         cmd.remove(0, cmd.indexOf(QLatin1Char('=')) + 1);
     } else if (cmd.endsWith(QLatin1Char('='))) {
         cmd.chop(1);
-    } else {
+    } else if (!parseHex) {
         bool foundDigit = false;
         for (int i = 0; i < cmd.length(); ++i) {
             QChar c = cmd.at(i);
@@ -268,7 +271,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
 
     bool isApproximate = false;
     QString result = calculate(cmd, &isApproximate);
-    if (!result.isEmpty() && result != cmd) {
+    if (!result.isEmpty() && (result != cmd || toHex)) {
         if (toHex) {
             result = QLatin1String("0x") + QString::number(result.toInt(), 16).toUpper();
         }
