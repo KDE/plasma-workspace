@@ -28,6 +28,7 @@ public:
     explicit Private(UpdateLaunchEnvJob *q);
     void monitorReply(const QDBusPendingReply<> &reply);
 
+    static bool isPosixName(const QString &name);
     static bool isSystemdApprovedValue(const QString &value);
 
     UpdateLaunchEnvJob *q;
@@ -82,6 +83,10 @@ void UpdateLaunchEnvJob::start()
     QStringList systemdUpdates;
 
     for (const auto &varName : d->environment.keys()) {
+        if (!Private::isPosixName(varName)){
+            qWarning() << "Skipping syncing of environment variable " << varName << "as name contains unsupported characters";
+            continue;
+        }
         const QString value = d->environment.value(varName);
 
         // KLauncher
@@ -134,6 +139,25 @@ void UpdateLaunchEnvJob::start()
 
     auto systemdActivationReply = QDBusConnection::sessionBus().asyncCall(systemdActivationMsg);
     d->monitorReply(systemdActivationReply);
+}
+
+bool UpdateLaunchEnvJob::Private::isPosixName(const QString &name)
+{
+    // Posix says characters like % should be 'tolerated', but it gives issues in practice.
+    // https://bugzilla.redhat.com/show_bug.cgi?id=1754395
+    // https://bugzilla.redhat.com/show_bug.cgi?id=1879216
+    // Ensure systemd compat by only allowing alphanumerics and _ in names.
+    bool first = true;
+    for (const QChar c : name) {
+        if (first && !c.isLetter() && c != QChar('_')) {
+            return false;
+        } else if (first) {
+            first = false;
+        } else if (!c.isLetterOrNumber() && c != QChar('_')) {
+            return false;
+        }
+    }
+    return !first;
 }
 
 bool UpdateLaunchEnvJob::Private::isSystemdApprovedValue(const QString &value)
