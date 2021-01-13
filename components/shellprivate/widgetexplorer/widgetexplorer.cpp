@@ -110,10 +110,12 @@ public:
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
     bool showSpecialFilters = true;
     DefaultItemFilterProxyModel filterItemModel;
-    QPointer<KNS3::QtQuickDialogWrapper> newStuffDialog;
+    static QPointer<KNS3::QtQuickDialogWrapper> newStuffDialog;
 
     QScopedPointer<KActivities::Consumer> activitiesConsumer;
 };
+
+QPointer<KNS3::QtQuickDialogWrapper> WidgetExplorerPrivate::newStuffDialog;
 
 void WidgetExplorerPrivate::initFilters()
 {
