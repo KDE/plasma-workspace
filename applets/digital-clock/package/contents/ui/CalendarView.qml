@@ -474,6 +474,10 @@ PlasmaComponents3.Page {
 
                     width: parent.width
 
+                    // We don't want any highlight effect at all as there is no
+                    // concept of items being selected here
+                    highlight: Item {}
+
                     model: {
                         var timezones = [];
                         for (var i = 0; i < plasmoid.configuration.selectedTimeZones.length; i++) {
