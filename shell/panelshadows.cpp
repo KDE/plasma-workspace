@@ -90,6 +90,7 @@ void PanelShadows::addWindow(QWindow *window, Plasma::FrameSvg::EnabledBorders e
     d->updateShadow(window, enabledBorders);
     connect(window, &QObject::destroyed, this, [this, window]() {
         d->m_windows.remove(window);
+        d->clearShadow(window);
         if (d->m_windows.isEmpty()) {
             d->clearTiles();
         }
