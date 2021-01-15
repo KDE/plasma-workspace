@@ -39,6 +39,7 @@
 #include <Plasma/Containment>
 #include <PlasmaQuick/Dialog>
 
+#include "fileinfo.h"
 #include "filemenu.h"
 #include "globalshortcuts.h"
 #include "texteditclickhandler.h"
@@ -50,6 +51,7 @@ NotificationApplet::NotificationApplet(QObject *parent, const QVariantList &data
     static bool s_typesRegistered = false;
     if (!s_typesRegistered) {
         const char uri[] = "org.kde.plasma.private.notifications";
+        qmlRegisterType<FileInfo>(uri, 2, 0, "FileInfo");
         qmlRegisterType<FileMenu>(uri, 2, 0, "FileMenu");
         qmlRegisterType<GlobalShortcuts>(uri, 2, 0, "GlobalShortcuts");
         qmlRegisterType<TextEditClickHandler>(uri, 2, 0, "TextEditClickHandler");
@@ -180,16 +182,6 @@ bool NotificationApplet::isPrimaryScreen(const QRect &rect) const
 
     // HACK
     return rect == screen->geometry();
-}
-
-QString NotificationApplet::iconNameForUrl(const QUrl &url) const
-{
-    QMimeType mime = QMimeDatabase().mimeTypeForUrl(url);
-    if (mime.isDefault()) {
-        return QString();
-    }
-
-    return mime.iconName();
 }
 
 void NotificationApplet::forceActivateWindow(QWindow *window)
