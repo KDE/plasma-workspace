@@ -22,6 +22,7 @@
 #define SYSTEMTRAYTYPEDEFS_H
 
 #include <QByteArray>
+#include <QMetaType>
 #include <QString>
 #include <QVector>
 

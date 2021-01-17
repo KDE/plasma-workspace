@@ -33,8 +33,10 @@
 #include <KMessageBox>
 #include <KIO/StatJob>
 #include "JobRunner.h"
-#include "CreateParent.h"
 #include "config-workspace.h"
+
+// This include must be at the end
+#include "CreateParent.h"
 
 namespace KFI
 {

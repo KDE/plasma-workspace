@@ -24,9 +24,10 @@
  * Boston, MA 02110-1301, USA.
  */
 
+#include "kfontinst_export.h"
 #include <QMap>
 #include <QStringList>
-#include "kfontinst_export.h"
+#include <fontconfig/fontconfig.h>
 
 namespace KFI
 {

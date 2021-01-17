@@ -23,7 +23,6 @@
 
 #include <QGlobalStatic>
 #include <QFontDatabase>
-#include <fontconfig/fontconfig.h>
 #include "WritingSystems.h"
 
 namespace KFI
