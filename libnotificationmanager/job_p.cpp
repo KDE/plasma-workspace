@@ -91,6 +91,10 @@ QString JobPrivate::prettyDestUrl() const
         return QString();
     }
 
+    if (url.path().endsWith(QLatin1String("/."))) {
+        url.setPath(url.path().chopped(2));
+    }
+
     if (!m_placesModel) {
         m_placesModel = createPlacesModel();
     }
