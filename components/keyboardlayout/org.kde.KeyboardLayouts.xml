@@ -18,9 +18,6 @@
     <method name="getLayout">
       <arg type="u" direction="out"/>
     </method>
-    <method name="getLayoutLongName">
-      <arg type="s" direction="out"/>
-    </method>
     <method name="getLayoutsList">
       <arg type="a(sss)" direction="out"/>
       <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QVector&lt;LayoutNames&gt;" />

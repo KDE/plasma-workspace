@@ -18,31 +18,40 @@ class KeyboardLayout : public QObject
 {
     Q_OBJECT
 
+    Q_PROPERTY(uint layout
+               MEMBER mLayout
+               WRITE setLayout
+               NOTIFY layoutChanged)
+
+    Q_PROPERTY(const QVector<LayoutNames>& layoutsList
+               READ getLayoutsList
+               NOTIFY layoutsListChanged)
+
 public:
     explicit KeyboardLayout(QObject *parent = nullptr);
     ~KeyboardLayout() override;
 
 Q_SIGNALS:
-    void layoutChanged(uint index);
-    void layoutsChanged(QVector<LayoutNames> layouts);
-
-    void layoutLongNameChanged(QString longName);
+    void layoutChanged();
+    void layoutsListChanged();
 
 protected:
     Q_INVOKABLE void switchToNextLayout();
     Q_INVOKABLE void switchToPreviousLayout();
-    Q_INVOKABLE void setLayout(uint index);
-
-    Q_INVOKABLE void requestLayoutLongName();
 
 private:
-    enum DBusData {Layout, LayoutLongName, Layouts};
+    void setLayout(uint index);
+    const QVector<LayoutNames> &getLayoutsList() const { return mLayoutsList; }
+
+    enum DBusData {Layout, LayoutsList};
 
     template<class T>
-    void requestDBusData(QDBusPendingReply<T> pendingReply, void (KeyboardLayout::*notify)(T));
+    void requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)());
     template<DBusData>
     void requestDBusData();
 
+    uint mLayout;
+    QVector<LayoutNames> mLayoutsList;
     OrgKdeKeyboardLayoutsInterface *mIface;
 };
 

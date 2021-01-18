@@ -10,9 +10,10 @@ import org.kde.plasma.workspace.keyboardlayout 1.0
 
 PlasmaComponents3.ToolButton {
     property alias keyboardLayout: keyboardLayout
-    property alias connections: connections
-    property bool hasMultipleKeyboardLayouts
+    readonly property bool hasMultipleKeyboardLayouts: keyboardLayout.layoutsList.length > 1
+    readonly property var layoutNames: keyboardLayout.layoutsList[keyboardLayout.layout]
 
+    text: layoutNames.longName
     visible: hasMultipleKeyboardLayouts
 
     Accessible.name: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to change keyboard layout", "Switch layout")
@@ -34,20 +35,5 @@ PlasmaComponents3.ToolButton {
 
     KeyboardLayout {
         id: keyboardLayout
-
-        onLayoutsChanged: hasMultipleKeyboardLayouts = layouts.length > 1
-    }
-
-    Connections {
-        id: connections
-        target: keyboardLayout
-
-        function onLayoutChanged() {
-            keyboardLayout.requestLayoutLongName()
-        }
-
-        function onLayoutLongNameChanged(longName) {
-            text = longName
-        }
     }
 }

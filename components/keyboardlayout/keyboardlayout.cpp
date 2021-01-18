@@ -12,20 +12,11 @@
 
 template<>
 inline void KeyboardLayout::requestDBusData<KeyboardLayout::Layout>()
-{ if (mIface) requestDBusData(mIface->getLayout(), &KeyboardLayout::layoutChanged); }
+{ if (mIface) requestDBusData(mIface->getLayout(), mLayout, &KeyboardLayout::layoutChanged); }
 
 template<>
-inline void KeyboardLayout::requestDBusData<KeyboardLayout::Layouts>()
-{ if (mIface) requestDBusData(mIface->getLayoutsList(), &KeyboardLayout::layoutsChanged); }
-
-template<>
-inline void KeyboardLayout::requestDBusData<KeyboardLayout::LayoutLongName>()
-{ if (mIface) requestDBusData(mIface->getLayoutLongName(), &KeyboardLayout::layoutLongNameChanged); }
-
-void KeyboardLayout::requestLayoutLongName()
-{
-    requestDBusData<LayoutLongName>();
-}
+inline void KeyboardLayout::requestDBusData<KeyboardLayout::LayoutsList>()
+{ if (mIface) requestDBusData(mIface->getLayoutsList(), mLayoutsList, &KeyboardLayout::layoutsListChanged); }
 
 
 KeyboardLayout::KeyboardLayout(QObject* parent)
@@ -45,12 +36,16 @@ KeyboardLayout::KeyboardLayout(QObject* parent)
     }
 
     connect(mIface, &OrgKdeKeyboardLayoutsInterface::layoutChanged,
-            this, &KeyboardLayout::layoutChanged);
+            this, [this](uint index)
+                    {
+                        mLayout = index;
+                        emit layoutChanged();
+                    });
 
     connect(mIface, &OrgKdeKeyboardLayoutsInterface::layoutListChanged,
             this, [this]()
                     {
-                        requestDBusData<Layouts>();
+                        requestDBusData<LayoutsList>();
                         requestDBusData<Layout>();
                     });
 
@@ -77,18 +72,18 @@ void KeyboardLayout::setLayout(uint index)
 }
 
 template<class T>
-void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, void (KeyboardLayout::*notify)(T))
+void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)())
 {
-    const QDBusPendingCallWatcher * const watcher = new QDBusPendingCallWatcher(pendingReply, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished, this,
-        [this, notify](QDBusPendingCallWatcher *watcher)
+    connect(new QDBusPendingCallWatcher(pendingReply, this), &QDBusPendingCallWatcher::finished, this,
+        [this, &out, notify](QDBusPendingCallWatcher *watcher)
         {
             QDBusPendingReply<T> reply = *watcher;
             if (reply.isError()) {
                 qCWarning(KEYBOARD_LAYOUT) << reply.error().message();
-            } else {
-                emit (this->*notify)(reply.value());
             }
+            out = reply.value();
+            emit (this->*notify)();
+
             watcher->deleteLater();
         }
     );
