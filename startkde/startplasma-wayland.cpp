@@ -60,10 +60,10 @@ int main(int argc, char** argv)
                     qputenv(var, r.toUtf8());
             };
 
-            queryAndSet("X11MODEL", QStringLiteral("X11Model"));
-            queryAndSet("X11LAYOUT", QStringLiteral("X11Layout"));
-            queryAndSet("X11VARIANT", QStringLiteral("X11Variant"));
-            queryAndSet("X11OPTIONS", QStringLiteral("X11Options"));
+            queryAndSet("XKB_DEFAULT_MODEL", QStringLiteral("X11Model"));
+            queryAndSet("XKB_DEFAULT_LAYOUT", QStringLiteral("X11Layout"));
+            queryAndSet("XKB_DEFAULT_VARIANT", QStringLiteral("X11Variant"));
+            queryAndSet("XKB_DEFAULT_OPTIONS", QStringLiteral("X11Options"));
         } else {
             qWarning() << "not a reply org.freedesktop.locale1" << resultMessage;
         }
