@@ -34,7 +34,6 @@ void messageBox(const QString &text);
 void createConfigDirectory();
 void runStartupConfig();
 void setupCursor(bool wayland);
-void importSystemdEnvrionment();
 void runEnvironmentScripts();
 void setupPlasmaEnvironment();
 void cleanupPlasmaEnvironment();
