@@ -28,10 +28,10 @@
 
 #include <KFilePlacesModel>
 #include <KService>
+#include <KShell>
 #include <KLocalizedString>
 
 #include <kio/global.h>
-
 
 #include "jobviewv2adaptor.h"
 #include "jobviewv3adaptor.h"
@@ -119,6 +119,10 @@ QString JobPrivate::prettyDestUrl() const
         }
 
         return text;
+    }
+
+    if (url.isLocalFile()) {
+        return KShell::tildeCollapse(url.toLocalFile());
     }
 
     return url.toDisplayString(QUrl::RemoveUserInfo);
