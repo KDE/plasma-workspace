@@ -95,11 +95,17 @@ int main(int argc, char **argv)
     setupPlasmaEnvironment();
     setupX11();
 
+    auto oldSystemdEnvironment = getSystemdEnvironment();
     if (!syncDBusEnvironment()) {
         // Startup error
         messageBox(QStringLiteral("Could not sync environment to dbus.\n"));
         return 1;
     }
+
+    // We import systemd environment after we sync the dbus environment here.
+    // Otherwise it may leads to some unwanted order of applying environment
+    // variables (e.g. LANG and LC_*)
+    importSystemdEnvrionment();
 
     if (!startPlasmaSession(false))
         return 1;
@@ -112,7 +118,7 @@ int main(int argc, char **argv)
 
     runSync(QStringLiteral("kdeinit5_shutdown"), {});
 
-    cleanupPlasmaEnvironment();
+    cleanupPlasmaEnvironment(oldSystemdEnvironment);
     cleanupX11();
 
     out << "startkde: Done.\n";

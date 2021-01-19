@@ -26,6 +26,7 @@
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
+
     createConfigDirectory();
     setupCursor(true);
 
@@ -71,10 +72,16 @@ int main(int argc, char **argv)
 
     qputenv("XDG_SESSION_TYPE", "wayland");
 
+    auto oldSystemdEnvironment = getSystemdEnvironment();
     if (!syncDBusEnvironment()) {
         out << "Could not sync environment to dbus.\n";
         return 1;
     }
+
+    // We import systemd environment after we sync the dbus environment here.
+    // Otherwise it may leads to some unwanted order of applying environment
+    // variables (e.g. LANG and LC_*)
+    importSystemdEnvrionment();
 
     QStringList args;
     if (argc > 1) {
@@ -88,7 +95,7 @@ int main(int argc, char **argv)
     runSync(QStringLiteral("kwin_wayland_wrapper"), args);
 
     out << "startplasmacompositor: Shutting down...\n";
-    cleanupPlasmaEnvironment();
+    cleanupPlasmaEnvironment(oldSystemdEnvironment);
     out << "startplasmacompositor: Done.\n";
 
     return 0;

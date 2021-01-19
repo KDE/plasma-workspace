@@ -88,6 +88,24 @@ int runSync(const QString &program, const QStringList &args, const QStringList &
     return p.exitCode();
 }
 
+bool isShellVariable(const QByteArray &name) {
+    return name == "_" || name.startsWith("SHLVL");
+}
+
+bool isSessionVariable(const QByteArray &name) {
+    // Check is variable is specific to session.
+    return name == "DISPLAY" || name == "XAUTHORITY" ||
+           name == "WAYLAND_DISPLAY" || name == "WAYLAND_SOCKET" ||
+           name.startsWith("XDG_");
+}
+
+void setEnvironmentVariable(const QByteArray &name, const QByteArray &value) {
+    if (qgetenv(name) != value) {
+        //        qCDebug(PLASMA_STARTUP) << "setting..." << env.left(idx) << env.mid(idx+1) << "was" << qgetenv(env.left(idx));
+        qputenv(name, value);
+    }
+}
+
 void sourceFiles(const QStringList &files)
 {
     QStringList filteredFiles;
@@ -108,17 +126,16 @@ void sourceFiles(const QStringList &files)
     auto envs = fullEnv.split('\0');
 
     for (auto &env : envs) {
-        if (env.startsWith("_=") || env.startsWith("SHLVL"))
-            continue;
-
         const int idx = env.indexOf('=');
-        if (Q_UNLIKELY(idx <= 0))
+        if (Q_UNLIKELY(idx <= 0)) {
             continue;
-
-        if (qgetenv(env.left(idx)) != env.mid(idx + 1)) {
-            //             qCDebug(PLASMA_STARTUP) << "setting..." << env.left(idx) << env.mid(idx+1) << "was" << qgetenv(env.left(idx));
-            qputenv(env.left(idx), env.mid(idx + 1));
         }
+
+        const auto name = env.left(idx);
+        if (isShellVariable(name)) {
+            continue;
+        }
+        setEnvironmentVariable(name, env.mid(idx + 1));
     }
 }
 
@@ -180,6 +197,56 @@ void setupCursor(bool wayland)
         qputenv("XCURSOR_THEME", kcminputrc_mouse_cursortheme.toUtf8());
     }
     qputenv("XCURSOR_SIZE", QByteArray::number(kcminputrc_mouse_cursorsize));
+}
+
+std::optional<QStringList> getSystemdEnvironment() {
+    QStringList list;
+    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                              QStringLiteral("/org/freedesktop/systemd1"),
+                                              QStringLiteral("org.freedesktop.DBus.Properties"),
+                                              QStringLiteral("Get"));
+    msg << QStringLiteral("org.freedesktop.systemd1.Manager") << QStringLiteral("Environment");
+    auto reply = QDBusConnection::sessionBus().call(msg);
+    if (reply.type() == QDBusMessage::ErrorMessage) {
+        return std::nullopt;
+    }
+
+    // Make sure the returned type is correct.
+    auto arguments = reply.arguments();
+    if (arguments.isEmpty() || arguments[0].userType() != qMetaTypeId<QDBusVariant>()) {
+        return std::nullopt;
+    }
+    auto variant = qdbus_cast<QVariant>(arguments[0]);
+    if (variant.type() != QVariant::StringList) {
+        return std::nullopt;
+    }
+
+    return variant.toStringList();
+}
+
+// Import systemd user environment.
+//
+// Systemd read ~/.config/environment.d which applies to all systemd user unit.
+// But it won't work if plasma is not started by systemd.
+void importSystemdEnvrionment() {
+    auto environment = getSystemdEnvironment();
+    if (!environment) {
+        return;
+    }
+
+    for (auto &envString : environment.value()) {
+        const auto env = envString.toLocal8Bit();
+        const int idx = env.indexOf('=');
+        if (Q_UNLIKELY(idx <= 0)) {
+            continue;
+        }
+
+        const auto name = env.left(idx);
+        if (isShellVariable(name) || isSessionVariable(name)) {
+            continue;
+        }
+        setEnvironmentVariable(name, env.mid(idx + 1));
+    }
 }
 
 // Source scripts found in <config locations>/plasma-workspace/env/*.sh
@@ -292,12 +359,43 @@ void cleanupX11()
     runSync(QStringLiteral("xprop"), {QStringLiteral("-root"), QStringLiteral("-remove"), QStringLiteral("KDE_SESSION_VERSION")});
 }
 
-// TODO: Check if Necessary
-void cleanupPlasmaEnvironment()
+void cleanupPlasmaEnvironment(const std::optional<QStringList> &oldSystemdEnvironment)
 {
     qunsetenv("KDE_FULL_SESSION");
     qunsetenv("KDE_SESSION_VERSION");
     qunsetenv("KDE_SESSION_UID");
+
+    if (!oldSystemdEnvironment) {
+        return;
+    }
+
+    auto currentEnv = getSystemdEnvironment();
+    if (!currentEnv) {
+        return;
+    }
+
+    QStringList vars;
+    for (auto &env : currentEnv.value()) {
+        const int idx = env.indexOf(QLatin1Char('='));
+        if (Q_UNLIKELY(idx <= 0)) {
+            continue;
+        }
+
+        vars.append(env.left(idx));
+    }
+
+    // According to systemd documentation:
+    // If a variable is listed in both, the variable is set after this method returns, i.e. the set list overrides the unset list.
+    // So this will effectively restore the state to the values in oldSystemdEnvironment.
+    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                                          QStringLiteral("/org/freedesktop/systemd1"),
+                                                          QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                                          QStringLiteral("UnsetAndSetEnvironment"));
+    message.setArguments({vars, oldSystemdEnvironment.value()});
+
+    // The session program gonna quit soon, ensure the message is flushed.
+    auto reply = QDBusConnection::sessionBus().asyncCall(message);
+    reply.waitForFinished();
 }
 
 // kwin_wayland can possibly also start dbus-activated services which need env variables.
