@@ -34,7 +34,21 @@ QtObject {
     //this is to suppress expanded state change during Plasma startup
     property bool acceptExpandedChange: false
 
-    function setActiveApplet(applet) {
+    // These properties allow us to keep track of where the expanded applet
+    // was and is on the panel, allowing PlasmoidPopupContainer.qml to animate
+    // depending on their locations.
+    property int oldVisualIndex: -1
+    property int newVisualIndex: -1
+
+    function setActiveApplet(applet, visualIndex) {
+        if (visualIndex === undefined) {
+            oldVisualIndex = -1
+            newVisualIndex = -1
+        } else {
+            oldVisualIndex = newVisualIndex
+            newVisualIndex = visualIndex
+        }
+
         const oldApplet = activeApplet
         activeApplet = applet
         if (oldApplet && oldApplet !== applet) {

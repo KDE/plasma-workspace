@@ -121,7 +121,7 @@ AbstractItem {
 
         function onExpandedChanged(expanded) {
             if (expanded) {
-                systemTrayState.setActiveApplet(applet)
+                systemTrayState.setActiveApplet(applet, model.row)
                 plasmoidContainer.activated()
             }
         }

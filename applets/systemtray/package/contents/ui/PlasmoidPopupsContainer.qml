@@ -85,15 +85,25 @@ StackView {
     }
 
     delegate: StackViewDelegate {
+        id: transitioner
         function transitionFinished(properties) {
             properties.exitItem.opacity = 1
+        }
+        property bool goingLeft: {
+            const unFlipped = systemTrayState.oldVisualIndex < systemTrayState.newVisualIndex
+
+            if (Qt.application.layoutDirection == Qt.LeftToRight) {
+                return unFlipped
+            } else {
+                return !unFlipped
+            }
         }
         replaceTransition: StackViewTransition {
             ParallelAnimation {
                 PropertyAnimation {
                     target: enterItem
                     property: "x"
-                    from: enterItem.width
+                    from: transitioner.goingLeft ? enterItem.width : -enterItem.width
                     to: 0
                     easing.type: Easing.InOutQuad
                     duration: PlasmaCore.Units.shortDuration
@@ -112,9 +122,9 @@ StackView {
                     target: exitItem
                     property: "x"
                     from: 0
-                    to: -exitItem.width
+                    to: transitioner.goingLeft ? -exitItem.width : exitItem.width
                     easing.type: Easing.InOutQuad
-                    duration: PlasmaCore.Units.shortDuration
+                    duration: units.longDuration
                 }
                 PropertyAnimation {
                     target: exitItem
