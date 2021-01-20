@@ -95,14 +95,16 @@ StackView {
                     property: "x"
                     from: enterItem.width
                     to: 0
-                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                    duration: PlasmaCore.Units.shortDuration
                 }
                 PropertyAnimation {
                     target: enterItem
                     property: "opacity"
                     from: 0
                     to: 1
-                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                    duration: PlasmaCore.Units.shortDuration
                 }
             }
             ParallelAnimation {
@@ -111,14 +113,16 @@ StackView {
                     property: "x"
                     from: 0
                     to: -exitItem.width
-                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                    duration: PlasmaCore.Units.shortDuration
                 }
                 PropertyAnimation {
                     target: exitItem
                     property: "opacity"
                     from: 1
                     to: 0
-                    duration: units.longDuration
+                    easing.type: Easing.InOutQuad
+                    duration: PlasmaCore.Units.shortDuration
                 }
             }
         }
