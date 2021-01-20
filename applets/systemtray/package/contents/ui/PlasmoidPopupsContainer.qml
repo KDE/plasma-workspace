@@ -28,6 +28,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 StackView {
     id: mainStack
     focus: true
+    clip: true
 
     Layout.minimumWidth: units.gridUnit * 12
     Layout.minimumHeight: units.gridUnit * 12
@@ -103,18 +104,28 @@ StackView {
                 PropertyAnimation {
                     target: enterItem
                     property: "x"
-                    from: transitioner.goingLeft ? enterItem.width : -enterItem.width
+                    from: root.vertical ? 0 : (transitioner.goingLeft ? enterItem.width : -enterItem.width)
                     to: 0
                     easing.type: Easing.InOutQuad
                     duration: PlasmaCore.Units.shortDuration
                 }
-                PropertyAnimation {
-                    target: enterItem
-                    property: "opacity"
-                    from: 0
-                    to: 1
-                    easing.type: Easing.InOutQuad
-                    duration: PlasmaCore.Units.shortDuration
+                SequentialAnimation {
+                    PropertyAction {
+                        target: enterItem
+                        property: "opacity"
+                        value: 0
+                    }
+                    PauseAnimation {
+                        duration: root.vertical ? (PlasmaCore.Units.shortDuration/2) : 0
+                    }
+                    PropertyAnimation {
+                        target: enterItem
+                        property: "opacity"
+                        from: 0
+                        to: 1
+                        easing.type: Easing.InOutQuad
+                        duration: (PlasmaCore.Units.shortDuration/2)
+                    }
                 }
             }
             ParallelAnimation {
@@ -122,9 +133,9 @@ StackView {
                     target: exitItem
                     property: "x"
                     from: 0
-                    to: transitioner.goingLeft ? -exitItem.width : exitItem.width
+                    to: root.vertical ? 0 : (transitioner.goingLeft ? -exitItem.width : exitItem.width)
                     easing.type: Easing.InOutQuad
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.shortDuration
                 }
                 PropertyAnimation {
                     target: exitItem
@@ -132,7 +143,7 @@ StackView {
                     from: 1
                     to: 0
                     easing.type: Easing.InOutQuad
-                    duration: PlasmaCore.Units.shortDuration
+                    duration: PlasmaCore.Units.shortDuration/2
                 }
             }
         }
