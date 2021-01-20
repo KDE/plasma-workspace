@@ -142,7 +142,9 @@ void AbstractNotificationsModel::Private::onNotificationRemoved(uint removedId, 
     // some apps are notorious for closing a bunch of notifications at once
     // causing newer notifications to move up and have a dialogs created for them
     // just to then be discarded causing excess CPU usage
-    pendingRemovals.append(removedId);
+    if (!pendingRemovals.contains(removedId)) {
+        pendingRemovals.append(removedId);
+    }
 
     if (!pendingRemovalTimer.isActive()) {
         pendingRemovalTimer.start();
