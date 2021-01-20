@@ -88,6 +88,11 @@ ContainmentLayoutManager.AppletContainer {
     rightPadding: background.margins.right
     bottomPadding: background.margins.bottom
 
+    // render via a layer if we're at an angle
+    // resize handles are rendered outside this item, so also disable when they're showing to avoid clipping
+    layer.enabled: (rotation % 90 != 0) && !(configOverlayItem && configOverlayItem.visible)
+    layer.smooth: true
+
     initialSize.width: applet.switchWidth + leftPadding + rightPadding
     initialSize.height: applet.switchHeight + topPadding + bottomPadding
 
