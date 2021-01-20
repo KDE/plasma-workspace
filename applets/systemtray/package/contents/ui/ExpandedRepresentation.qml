@@ -72,7 +72,7 @@ Item {
             PlasmaComponents.ToolButton {
                 id: backButton
                 visible: systemTrayState.activeApplet && systemTrayState.activeApplet.expanded && (hiddenItemsView.itemCount > 0)
-                icon.name: "go-previous"
+                icon.name: LayoutMirroring.enabled ? "go-previous-symbolic-rtl" : "go-previous-symbolic"
                 onClicked: systemTrayState.setActiveApplet(null)
             }
 
