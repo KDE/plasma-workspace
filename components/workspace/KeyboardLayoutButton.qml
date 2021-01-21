@@ -24,11 +24,21 @@ PlasmaComponents3.ToolButton {
     MouseArea {
         anchors.fill: parent
         acceptedButtons: Qt.NoButton
+
+        property int wheelDelta: 0
+
         onWheel: {
-            if (wheel.angleDelta.y > 0) {
-                keyboardLayout.switchToPreviousLayout()
-            } else {
-                keyboardLayout.switchToNextLayout()
+            // Magic number 120 for common "one click"
+            // See: https://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
+            var delta = wheel.angleDelta.y || wheel.angleDelta.x;
+            wheelDelta += delta;
+            while (wheelDelta >= 120) {
+                wheelDelta -= 120;
+                keyboardLayout.switchToPreviousLayout();
+            }
+            while (wheelDelta <= -120) {
+                wheelDelta += 120;
+                keyboardLayout.switchToNextLayout();
             }
         }
     }
