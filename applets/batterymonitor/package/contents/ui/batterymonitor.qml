@@ -179,13 +179,15 @@ Item {
         onExited: wheelDelta = 0
         onWheel: {
             var delta = wheel.angleDelta.y || wheel.angleDelta.x
+            wheelDelta += delta
 
             var maximumBrightness = batterymonitor.maximumScreenBrightness
             // Don't allow the UI to turn off the screen
             // Please see https://git.reviewboard.kde.org/r/122505/ for more information
             var minimumBrightness = (maximumBrightness > 100 ? 1 : 0)
             var steps = Math.max(1, Math.round(maximumBrightness / 20))
-            var deltaSteps = delta / 120;
+            var deltaSteps = Math.floor(wheelDelta / 120);
+            wheelDelta -= deltaSteps * 120
             batterymonitor.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, batterymonitor.screenBrightness + deltaSteps * steps));
         }
     }
