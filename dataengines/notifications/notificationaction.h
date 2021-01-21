@@ -27,21 +27,21 @@ class NotificationAction : public Plasma::ServiceJob
 {
     Q_OBJECT
 
-    public:
-        NotificationAction(NotificationsEngine* engine,
-                           const QString& destination,
-                           const QString& operation,
-                           QMap<QString,QVariant>& parameters,
-                           QObject* parent = nullptr)
-        : ServiceJob(destination, operation, parameters, parent),
-          m_engine(engine)
-        {
-        }
+public:
+    NotificationAction(NotificationsEngine *engine,
+                       const QString &destination,
+                       const QString &operation,
+                       QMap<QString, QVariant> &parameters,
+                       QObject *parent = nullptr)
+        : ServiceJob(destination, operation, parameters, parent)
+        , m_engine(engine)
+    {
+    }
 
-        void start() override;
+    void start() override;
 
-    private:
-        NotificationsEngine* m_engine;
+private:
+    NotificationsEngine *m_engine;
 };
 
-#endif //NOTIFICATIONACTION_H
+#endif // NOTIFICATIONACTION_H

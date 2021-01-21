@@ -21,55 +21,51 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include "config-workspace.h"
 #include "Viewer.h"
 #include "KfiConstants.h"
+#include "config-workspace.h"
 #include <KAboutData>
-#include <KDBusService>
-#include <KPluginLoader>
-#include <KPluginFactory>
-#include <KStandardAction>
 #include <KActionCollection>
-#include <KShortcutsDialog>
 #include <KConfigGroup>
-#include <KSharedConfig>
+#include <KDBusService>
 #include <KParts/BrowserExtension>
+#include <KPluginFactory>
+#include <KPluginLoader>
+#include <KSharedConfig>
+#include <KShortcutsDialog>
+#include <KStandardAction>
+#include <QAction>
 #include <QApplication>
+#include <QCommandLineOption>
+#include <QCommandLineParser>
 #include <QFileDialog>
 #include <QUrl>
-#include <QAction>
-#include <QCommandLineParser>
-#include <QCommandLineOption>
 
 namespace KFI
 {
-
 CViewer::CViewer()
 {
-    KPluginFactory *factory=KPluginLoader("kfontviewpart").factory();
+    KPluginFactory *factory = KPluginLoader("kfontviewpart").factory();
 
-    if(factory)
-    {
-        itsPreview=factory->create<KParts::ReadOnlyPart>(this);
+    if (factory) {
+        itsPreview = factory->create<KParts::ReadOnlyPart>(this);
 
         actionCollection()->addAction(KStandardAction::Open, this, SLOT(fileOpen()));
         actionCollection()->addAction(KStandardAction::Quit, this, SLOT(close()));
         actionCollection()->addAction(KStandardAction::KeyBindings, this, SLOT(configureKeys()));
-        itsPrintAct=actionCollection()->addAction(KStandardAction::Print, itsPreview, SLOT(print()));
+        itsPrintAct = actionCollection()->addAction(KStandardAction::Print, itsPreview, SLOT(print()));
 
         itsPrintAct->setEnabled(false);
 
-        if(itsPreview->browserExtension())
-            connect(itsPreview->browserExtension(), &KParts::BrowserExtension::enableAction,
-                    this, &CViewer::enableAction);
+        if (itsPreview->browserExtension())
+            connect(itsPreview->browserExtension(), &KParts::BrowserExtension::enableAction, this, &CViewer::enableAction);
 
         setCentralWidget(itsPreview->widget());
         createGUI(itsPreview);
 
         setAutoSaveSettings();
         applyMainWindowSettings(KSharedConfig::openConfig()->group("MainWindow"));
-    }
-    else
+    } else
         exit(0);
 }
 
@@ -91,7 +87,7 @@ void CViewer::fileOpen()
 
 void CViewer::showUrl(const QUrl &url)
 {
-    if(url.isValid())
+    if (url.isValid())
         itsPreview->openUrl(url);
 }
 
@@ -105,12 +101,9 @@ void CViewer::configureKeys()
 
 void CViewer::enableAction(const char *name, bool enable)
 {
-    if(0==qstrcmp("print", name))
+    if (0 == qstrcmp("print", name))
         itsPrintAct->setEnabled(enable);
 }
-
-
-
 
 class ViewerApplication : public QApplication
 {
@@ -121,12 +114,15 @@ public:
         cmdParser.addPositionalArgument(QLatin1String("[URL]"), i18n("URL to open"));
     }
 
-    QCommandLineParser *parser() { return &cmdParser; }
+    QCommandLineParser *parser()
+    {
+        return &cmdParser;
+    }
 
 public Q_SLOTS:
     void activate(const QStringList &args, const QString &workingDirectory)
     {
-        KFI::CViewer *viewer=new KFI::CViewer;
+        KFI::CViewer *viewer = new KFI::CViewer;
         viewer->show();
 
         if (!args.isEmpty()) {
@@ -136,7 +132,7 @@ public Q_SLOTS:
                 QUrl url(QUrl::fromUserInput(arg, workingDirectory));
 
                 if (!first) {
-                    viewer=new KFI::CViewer;
+                    viewer = new KFI::CViewer;
                     viewer->show();
                 }
                 viewer->showUrl(url);
@@ -157,8 +153,12 @@ int main(int argc, char **argv)
     KFI::ViewerApplication app(argc, argv);
 
     KLocalizedString::setApplicationDomain(KFI_CATALOGUE);
-    KAboutData aboutData("kfontview", i18n("Font Viewer"), WORKSPACE_VERSION_STRING, i18n("Simple font viewer"),
-                         KAboutLicense::GPL, i18n("(C) Craig Drummond, 2004-2007"));
+    KAboutData aboutData("kfontview",
+                         i18n("Font Viewer"),
+                         WORKSPACE_VERSION_STRING,
+                         i18n("Simple font viewer"),
+                         KAboutLicense::GPL,
+                         i18n("(C) Craig Drummond, 2004-2007"));
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser *parser = app.parser();
@@ -173,4 +173,3 @@ int main(int argc, char **argv)
 
     return app.exec();
 }
-

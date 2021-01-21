@@ -27,7 +27,6 @@
 
 namespace NotificationManager
 {
-
 /**
  * @short Tracks whether there are any mirrored screens
  *
@@ -61,7 +60,6 @@ private:
 
     KScreen::ConfigPtr m_screenConfiguration;
     bool m_screensMirrored = false;
-
 };
 
 } // namespace NotificationManager

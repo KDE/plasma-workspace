@@ -26,28 +26,31 @@ class KFileItem;
 
 class FileEntry : public AbstractEntry
 {
-    public:
-        explicit FileEntry(AbstractModel *owner, const QUrl &url);
-        ~FileEntry() override;
+public:
+    explicit FileEntry(AbstractModel *owner, const QUrl &url);
+    ~FileEntry() override;
 
-        EntryType type() const override { return RunnableType; }
+    EntryType type() const override
+    {
+        return RunnableType;
+    }
 
-        bool isValid() const override;
+    bool isValid() const override;
 
-        QIcon icon() const override;
-        QString name() const override;
-        QString description() const override;
+    QIcon icon() const override;
+    QString name() const override;
+    QString description() const override;
 
-        QString id() const override;
-        QUrl url() const override;
+    QString id() const override;
+    QUrl url() const override;
 
-        bool hasActions() const override;
-        QVariantList actions() const override;
+    bool hasActions() const override;
+    QVariantList actions() const override;
 
-        bool run(const QString& actionId = QString(), const QVariant &argument = QVariant()) override;
+    bool run(const QString &actionId = QString(), const QVariant &argument = QVariant()) override;
 
-    private:
-        KFileItem *m_fileItem;
+private:
+    KFileItem *m_fileItem;
 };
 
 #endif

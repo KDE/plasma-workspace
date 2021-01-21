@@ -52,9 +52,9 @@ private:
     PlayerContainer *firstPlayerFromHash(const QHash<QString, PlayerContainer *> &hash, PlayerContainer **proxyCandidate) const;
 
     QString m_activeName;
-    QHash<QString,PlayerContainer*> m_playing;
-    QHash<QString,PlayerContainer*> m_paused;
-    QHash<QString,PlayerContainer*> m_stopped;
+    QHash<QString, PlayerContainer *> m_playing;
+    QHash<QString, PlayerContainer *> m_paused;
+    QHash<QString, PlayerContainer *> m_stopped;
 
     QHash<qlonglong, PlayerContainer *> m_proxies;
 };

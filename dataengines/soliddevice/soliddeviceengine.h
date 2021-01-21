@@ -19,23 +19,23 @@
 #ifndef SOLIDDEVICEENGINE_H
 #define SOLIDDEVICEENGINE_H
 
-#include <QObject>
-#include <QString>
 #include <QList>
 #include <QMap>
+#include <QObject>
 #include <QPair>
+#include <QString>
 
-#include <solid/devicenotifier.h>
 #include <solid/device.h>
 #include <solid/deviceinterface.h>
+#include <solid/devicenotifier.h>
 #include <solid/predicate.h>
 
-#include <Plasma/Service>
-#include <Plasma/DataEngine>
 #include "devicesignalmapmanager.h"
 #include "devicesignalmapper.h"
 #include "hddtemp.h"
 #include <KIO/FileSystemFreeSpaceJob>
+#include <Plasma/DataEngine>
+#include <Plasma/Service>
 
 enum State {
     Idle = 0,
@@ -46,7 +46,7 @@ enum State {
 enum OperationResult {
     Working = 0,
     Successful = 1,
-    Unsuccessful =2,
+    Unsuccessful = 2,
 };
 
 /**
@@ -58,13 +58,13 @@ class SolidDeviceEngine : public Plasma::DataEngine
     friend class SolidDeviceService;
 
 public:
-    SolidDeviceEngine( QObject* parent, const QVariantList& args);
+    SolidDeviceEngine(QObject *parent, const QVariantList &args);
     ~SolidDeviceEngine() override;
-    Plasma::Service *serviceForSource (const QString& source) override;
+    Plasma::Service *serviceForSource(const QString &source) override;
 
 protected:
     bool sourceRequestEvent(const QString &name) override;
-    bool updateSourceEvent(const QString& source) override;
+    bool updateSourceEvent(const QString &source) override;
 
 private:
     bool populateDeviceData(const QString &name);
@@ -75,13 +75,13 @@ private:
     bool forceUpdateAccessibility(const QString &udi);
     void listenForNewDevices();
 
-    //predicate in string form, list of devices by udi
+    // predicate in string form, list of devices by udi
     QMap<QString, QStringList> m_predicatemap;
-    //udi, corresponding device
+    // udi, corresponding device
     QMap<QString, Solid::Device> m_devicemap;
-    //udi, corresponding encrypted container udi;
+    // udi, corresponding encrypted container udi;
     QMap<QString, QString> m_encryptedContainerMap;
-    //path, for pending file system free space jobs
+    // path, for pending file system free space jobs
     QSet<QString> m_paths;
     DeviceSignalMapManager *m_signalmanager;
 
@@ -91,12 +91,12 @@ private:
 private Q_SLOTS:
     void deviceAdded(const QString &udi);
     void deviceRemoved(const QString &udi);
-    void deviceChanged(const QString& udi, const QString &property, const QVariant &value);
+    void deviceChanged(const QString &udi, const QString &property, const QVariant &value);
     void sourceWasRemoved(const QString &source);
     void setMountingState(const QString &udi);
     void setUnmountingState(const QString &udi);
     void setIdleState(Solid::ErrorType error, QVariant errorData, const QString &udi);
-    void deviceChanged(const QMap<QString,int> & props);
+    void deviceChanged(const QMap<QString, int> &props);
 };
 
 #endif

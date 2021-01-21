@@ -19,19 +19,20 @@
  */
 
 #include "fetchsqlite.h"
-#include <QFile>
-#include <QDebug>
 #include "bookmarks_debug.h"
 #include "bookmarksrunner_defs.h"
-#include <QSqlQuery>
-#include <QSqlError>
-#include <QSqlRecord>
+#include <QDebug>
+#include <QFile>
 #include <QMutexLocker>
-#include <thread>
+#include <QSqlError>
+#include <QSqlQuery>
+#include <QSqlRecord>
 #include <sstream>
+#include <thread>
 
-FetchSqlite::FetchSqlite(const QString &databaseFile, QObject *parent) :
-    QObject(parent), m_databaseFile(databaseFile)
+FetchSqlite::FetchSqlite(const QString &databaseFile, QObject *parent)
+    : QObject(parent)
+    , m_databaseFile(databaseFile)
 {
 }
 
@@ -55,7 +56,8 @@ void FetchSqlite::teardown()
     }
 }
 
-static QSqlDatabase openDbConnection(const QString& databaseFile) {
+static QSqlDatabase openDbConnection(const QString &databaseFile)
+{
     // create a thread unique connection name based on the DB filename and thread id
     auto connection = databaseFile + "-";
     std::stringstream s;
@@ -84,31 +86,31 @@ QList<QVariantMap> FetchSqlite::query(const QString &sql, QMap<QString, QVariant
     QMutexLocker lock(&m_mutex);
 
     auto db = openDbConnection(m_databaseFile);
-    if  (!db.isValid()) {
+    if (!db.isValid()) {
         return QList<QVariantMap>();
     }
 
-    //qDebug() << "query: " << sql;
+    // qDebug() << "query: " << sql;
     QSqlQuery query(db);
     query.prepare(sql);
     for (auto entry = bindObjects.constKeyValueBegin(); entry != bindObjects.constKeyValueEnd(); ++entry) {
         query.bindValue((*entry).first, (*entry).second);
-        //qDebug() << "* Bound " << variableName << " to " << query.boundValue(variableName);
+        // qDebug() << "* Bound " << variableName << " to " << query.boundValue(variableName);
     }
 
-    if(!query.exec()) {
+    if (!query.exec()) {
         QSqlError error = db.lastError();
-        //qDebug() << "query failed: " << error.text() << " (" << error.type() << ", " << error.number() << ")";
-        //qDebug() << query.lastQuery();
+        // qDebug() << "query failed: " << error.text() << " (" << error.type() << ", " << error.number() << ")";
+        // qDebug() << query.lastQuery();
     }
 
     QList<QVariantMap> result;
-    while(query.next()) {
+    while (query.next()) {
         QVariantMap recordValues;
         QSqlRecord record = query.record();
-        for(int field=0; field<record.count(); field++) {
+        for (int field = 0; field < record.count(); field++) {
             QVariant value = record.value(field);
-            recordValues.insert(record.fieldName(field), value  );
+            recordValues.insert(record.fieldName(field), value);
         }
         result << recordValues;
     }

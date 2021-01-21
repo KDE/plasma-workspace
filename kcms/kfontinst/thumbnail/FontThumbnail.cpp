@@ -23,82 +23,71 @@
 
 #include "FontThumbnail.h"
 #include "KfiConstants.h"
-#include <QImage>
-#include <QApplication>
-#include <QPalette>
-#include <QFile>
 #include <KZip>
-#include <QTemporaryDir>
-#include <QMimeDatabase>
+#include <QApplication>
 #include <QDebug>
 #include <QDir>
+#include <QFile>
+#include <QImage>
+#include <QMimeDatabase>
+#include <QPalette>
+#include <QTemporaryDir>
 
 #include "debug.h"
 
 #define KFI_DBUG qCDebug(KCM_KFONTINST_THUMBNAIL)
 
-extern "C"
+extern "C" {
+Q_DECL_EXPORT ThumbCreator *new_creator()
 {
-    Q_DECL_EXPORT ThumbCreator *new_creator()
-    {
-        return new KFI::CFontThumbnail;
-    }
+    return new KFI::CFontThumbnail;
+}
 }
 
 namespace KFI
 {
-
 CFontThumbnail::CFontThumbnail()
 {
 }
 
 bool CFontThumbnail::create(const QString &path, int width, int height, QImage &img)
 {
-    QString  realPath(path);
+    QString realPath(path);
     QTemporaryDir *tempDir = nullptr;
 
     KFI_DBUG << "Create font thumbnail for:" << path << Qt::endl;
 
     // Is this a appliaction/vnd.kde.fontspackage file? If so, extract 1 scalable font...
     QMimeDatabase db;
-    if (Misc::isPackage(path) || "application/zip" == db.mimeTypeForFile(path, QMimeDatabase::MatchContent).name())
-    {
+    if (Misc::isPackage(path) || "application/zip" == db.mimeTypeForFile(path, QMimeDatabase::MatchContent).name()) {
         KZip zip(path);
 
-        if(zip.open(QIODevice::ReadOnly))
-        {
-            const KArchiveDirectory *zipDir=zip.directory();
+        if (zip.open(QIODevice::ReadOnly)) {
+            const KArchiveDirectory *zipDir = zip.directory();
 
-            if(zipDir)
-            {
+            if (zipDir) {
                 QStringList fonts(zipDir->entries());
 
-                if(!fonts.isEmpty())
-                {
-                    QStringList::ConstIterator it(fonts.begin()),
-                                               end(fonts.end());
+                if (!fonts.isEmpty()) {
+                    QStringList::ConstIterator it(fonts.begin()), end(fonts.end());
 
-                    for(; it!=end; ++it)
-                    {
-                        const KArchiveEntry *entry=zipDir->entry(*it);
+                    for (; it != end; ++it) {
+                        const KArchiveEntry *entry = zipDir->entry(*it);
 
-                        if(entry && entry->isFile())
-                        {
+                        if (entry && entry->isFile()) {
                             delete tempDir;
-                            tempDir=new QTemporaryDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
+                            tempDir = new QTemporaryDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
                             tempDir->setAutoRemove(true);
 
                             ((KArchiveFile *)entry)->copyTo(tempDir->path());
 
                             QString mime(db.mimeTypeForFile(tempDir->filePath(entry->name())).name());
 
-                            if(mime=="font/ttf" || mime=="font/otf" || mime=="application/x-font-ttf" ||
-                               mime=="application/x-font-otf" || mime=="application/x-font-type1")
-                            {
-                                realPath=tempDir->filePath(entry->name());
+                            if (mime == "font/ttf" || mime == "font/otf" || mime == "application/x-font-ttf" || mime == "application/x-font-otf"
+                                || mime == "application/x-font-type1") {
+                                realPath = tempDir->filePath(entry->name());
                                 break;
-                            }
-                            else
+                            } else
                                 ::unlink(QFile::encodeName(tempDir->filePath(entry->name())).data());
                         }
                     }
@@ -110,7 +99,7 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
     QColor bgnd(Qt::black);
 
     bgnd.setAlpha(0);
-    img=itsEngine.draw(realPath, KFI_NO_STYLE_INFO, 0, QApplication::palette().text().color(), bgnd, width, height, true);
+    img = itsEngine.draw(realPath, KFI_NO_STYLE_INFO, 0, QApplication::palette().text().color(), bgnd, width, height, true);
 
     delete tempDir;
     return !img.isNull();

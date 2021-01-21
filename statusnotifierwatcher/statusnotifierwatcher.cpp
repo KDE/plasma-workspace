@@ -25,13 +25,13 @@
 
 #include <kpluginfactory.h>
 
-#include "statusnotifierwatcheradaptor.h"
 #include "statusnotifieritem_interface.h"
+#include "statusnotifierwatcheradaptor.h"
 
 K_PLUGIN_CLASS_WITH_JSON(StatusNotifierWatcher, "statusnotifierwatcher.json")
 
-StatusNotifierWatcher::StatusNotifierWatcher(QObject *parent, const QList<QVariant>&)
-      : KDEDModule(parent)
+StatusNotifierWatcher::StatusNotifierWatcher(QObject *parent, const QList<QVariant> &)
+    : KDEDModule(parent)
 {
     setModuleName(QStringLiteral("StatusNotifierWatcher"));
     new StatusNotifierWatcherAdaptor(this);
@@ -52,7 +52,6 @@ StatusNotifierWatcher::~StatusNotifierWatcher()
     dbus.unregisterService(QStringLiteral("org.kde.StatusNotifierWatcher"));
 }
 
-
 void StatusNotifierWatcher::RegisterStatusNotifierItem(const QString &serviceOrPath)
 {
     QString service;
@@ -70,7 +69,7 @@ void StatusNotifierWatcher::RegisterStatusNotifierItem(const QString &serviceOrP
     }
     m_serviceWatcher->addWatchedService(service);
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(service).value()) {
-        //check if the service has registered a SystemTray object
+        // check if the service has registered a SystemTray object
         org::kde::StatusNotifierItem trayclient(service, path, QDBusConnection::sessionBus());
         if (trayclient.isValid()) {
             qDebug() << "Registering" << notifierItemId << "to system tray";
@@ -89,10 +88,9 @@ QStringList StatusNotifierWatcher::RegisteredStatusNotifierItems() const
     return m_registeredServices;
 }
 
-
-void StatusNotifierWatcher::serviceUnregistered(const QString& name)
+void StatusNotifierWatcher::serviceUnregistered(const QString &name)
 {
-    qDebug()<<"Service "<< name << "unregistered";
+    qDebug() << "Service " << name << "unregistered";
     m_serviceWatcher->removeWatchedService(name);
 
     QString match = name + QLatin1Char('/');
@@ -115,10 +113,9 @@ void StatusNotifierWatcher::serviceUnregistered(const QString& name)
 
 void StatusNotifierWatcher::RegisterStatusNotifierHost(const QString &service)
 {
-    if (service.contains(QLatin1String("org.kde.StatusNotifierHost-")) &&
-        QDBusConnection::sessionBus().interface()->isServiceRegistered(service).value() &&
-        !m_statusNotifierHostServices.contains(service)) {
-        qDebug()<<"Registering"<<service<<"as system tray";
+    if (service.contains(QLatin1String("org.kde.StatusNotifierHost-")) && QDBusConnection::sessionBus().interface()->isServiceRegistered(service).value()
+        && !m_statusNotifierHostServices.contains(service)) {
+        qDebug() << "Registering" << service << "as system tray";
 
         m_statusNotifierHostServices.insert(service);
         m_serviceWatcher->addWatchedService(service);

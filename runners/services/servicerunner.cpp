@@ -42,13 +42,14 @@
 
 #include "debug.h"
 
-namespace {
-
-int weightedLength(const QString &query) {
+namespace
+{
+int weightedLength(const QString &query)
+{
     return KStringHandler::logicalLength(query);
 }
 
-}  // namespace
+} // namespace
 
 /**
  * @brief Finds all KServices for a given runner query
@@ -57,9 +58,9 @@ class ServiceFinder
 {
 public:
     ServiceFinder(ServiceRunner *runner)
-         : m_runner(runner)
-    {}
-
+        : m_runner(runner)
+    {
+    }
 
     void match(Plasma::RunnerContext &context)
     {
@@ -81,7 +82,6 @@ public:
     }
 
 private:
-
     void seen(const KService::Ptr &service)
     {
         m_seen.insert(service->storageId());
@@ -95,8 +95,7 @@ private:
 
     bool hasSeen(const KService::Ptr &service)
     {
-        return m_seen.contains(service->storageId()) &&
-               m_seen.contains(service->exec());
+        return m_seen.contains(service->storageId()) && m_seen.contains(service->exec());
     }
 
     bool hasSeen(const KServiceAction &action)
@@ -114,10 +113,10 @@ private:
 
     qreal increaseMatchRelavance(const KService::Ptr &service, const QVector<QStringRef> &strList, const QString &category)
     {
-        //Increment the relevance based on all the words (other than the first) of the query list
+        // Increment the relevance based on all the words (other than the first) of the query list
         qreal relevanceIncrement = 0;
 
-        for(int i = 1; i < strList.size(); ++i) {
+        for (int i = 1; i < strList.size(); ++i) {
             const auto &str = strList.at(i);
             if (category == QLatin1String("Name")) {
                 if (service->name().contains(str, Qt::CaseInsensitive)) {
@@ -154,8 +153,7 @@ private:
         // * a substring of the Name field
         // Note that before asking for the content of e.g. Keywords and GenericName we need to ask if
         // they exist to prevent a tree evaluation error if they are not defined.
-        for (const QStringRef &str : strList)
-        {
+        for (const QStringRef &str : strList) {
             keywordTemplate += QStringLiteral(" and '%1' ~subin Keywords").arg(str.toString());
             genericNameTemplate += QStringLiteral(" and '%1' ~subseq GenericName").arg(str.toString());
             nameTemplate += QStringLiteral(" and '%1' ~subseq Name").arg(str.toString());
@@ -163,7 +161,7 @@ private:
         }
 
         QString finalQuery = QStringLiteral("exist Exec and ( (%1) or (%2) or (%3) or ('%4' ~subseq Exec) or (%5) )")
-            .arg(keywordTemplate, genericNameTemplate, nameTemplate, strList[0].toString(), commentTemplate);
+                                 .arg(keywordTemplate, genericNameTemplate, nameTemplate, strList[0].toString(), commentTemplate);
 
         qCDebug(RUNNER_SERVICES) << "Final query : " << finalQuery;
         return finalQuery;
@@ -221,14 +219,14 @@ private:
 
     void matchNameKeywordAndGenericName()
     {
-        //Splitting the query term to match using subsequences
+        // Splitting the query term to match using subsequences
         QVector<QStringRef> queryList = term.splitRef(QLatin1Char(' '));
 
         // If the term length is < 3, no real point searching the Keywords and GenericName
         if (weightedTermLength < 3) {
             query = QStringLiteral("exist Exec and ( (exist Name and '%1' ~subseq Name) or ('%1' ~subseq Exec) )").arg(term);
         } else {
-            //Match using subsequences (Bug: 262837)
+            // Match using subsequences (Bug: 262837)
             query = generateQuery(queryList);
         }
 
@@ -314,7 +312,7 @@ private:
 
     void matchCategories()
     {
-        //search for applications whose categories contains the query
+        // search for applications whose categories contains the query
         query = QStringLiteral("exist Exec and (exist Categories and '%1' ~subin Categories)").arg(term);
         const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
 
@@ -329,8 +327,7 @@ private:
             setupMatch(service, match);
 
             qreal relevance = 0.6;
-            if (service->categories().contains(QLatin1String("X-KDE-More")) ||
-                    !service->showInCurrentDesktop()) {
+            if (service->categories().contains(QLatin1String("X-KDE-More")) || !service->showInCurrentDesktop()) {
                 relevance = 0.5;
             }
 
@@ -350,7 +347,7 @@ private:
         }
 
         query = QStringLiteral("exist Actions"); // doesn't work
-        const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"));//, query);
+        const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application")); //, query);
 
         for (const KService::Ptr &service : services) {
             if (service->noDisplay()) {
@@ -382,7 +379,9 @@ private:
                     match.setIconName(service->icon());
                 }
                 match.setText(i18nc("Jump list search result, %1 is action (eg. open new tab), %2 is application (eg. browser)",
-                                    "%1 - %2", action.text(), service->name()));
+                                    "%1 - %2",
+                                    action.text(),
+                                    service->name()));
 
                 QUrl url(service->storageId());
                 url.setScheme(QStringLiteral("applications"));
@@ -444,10 +443,7 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
         return;
     }
 
-    KActivities::ResourceInstance::notifyAccessed(
-        QUrl(QStringLiteral("applications:") + service->storageId()),
-        QStringLiteral("org.kde.krunner")
-    );
+    KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()), QStringLiteral("org.kde.krunner"));
 
     KIO::ApplicationLauncherJob *job = nullptr;
 
@@ -470,7 +466,7 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
     job->start();
 }
 
-QMimeData * ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
+QMimeData *ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     const QUrl dataUrl = match.data().toUrl();
 

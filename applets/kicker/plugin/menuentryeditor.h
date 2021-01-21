@@ -26,14 +26,14 @@ class MenuEntryEditor : public QObject
 {
     Q_OBJECT
 
-    public:
-        explicit MenuEntryEditor(QObject *parent = nullptr);
-        ~MenuEntryEditor() override;
+public:
+    explicit MenuEntryEditor(QObject *parent = nullptr);
+    ~MenuEntryEditor() override;
 
     bool canEdit(const QString &entryPath) const;
 
-    public Q_SLOTS:
-        void edit(const QString &entryPath, const QString &menuId);
+public Q_SLOTS:
+    void edit(const QString &entryPath, const QString &menuId);
 };
 
 #endif

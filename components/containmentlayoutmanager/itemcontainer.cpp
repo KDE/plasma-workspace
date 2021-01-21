@@ -21,13 +21,13 @@
 #include "itemcontainer.h"
 #include "configoverlay.h"
 
-#include <cmath>
-#include <QQmlEngine>
-#include <QQmlContext>
-#include <QQuickWindow>
-#include <QTimer>
 #include <QGuiApplication>
+#include <QQmlContext>
+#include <QQmlEngine>
+#include <QQuickWindow>
 #include <QStyleHints>
+#include <QTimer>
+#include <cmath>
 
 #include <PlasmaQuick/AppletQuickItem>
 
@@ -51,7 +51,6 @@ ItemContainer::ItemContainer(QQuickItem *parent)
     connect(m_editModeTimer, &QTimer::timeout, this, [this]() {
         setEditMode(true);
     });
-
 
     setKeepMouseGrab(true);
     m_sizeHintAdjustTimer = new QTimer(this);
@@ -189,8 +188,8 @@ void ItemContainer::setLayout(AppletsLayout *layout)
     }
 
     if (m_layout) {
-        disconnect(m_layout, &AppletsLayout::editModeConditionChanged, this,  nullptr);
-        disconnect(m_layout, &AppletsLayout::editModeChanged, this,  nullptr);
+        disconnect(m_layout, &AppletsLayout::editModeConditionChanged, this, nullptr);
+        disconnect(m_layout, &AppletsLayout::editModeChanged, this, nullptr);
 
         if (m_editMode) {
             m_layout->hidePlaceHolder();
@@ -212,8 +211,7 @@ void ItemContainer::setLayout(AppletsLayout *layout)
         if (m_layout->editModeCondition() == AppletsLayout::Locked) {
             setEditMode(false);
         }
-        if ((m_layout->editModeCondition() == AppletsLayout::Locked) !=
-            (m_editModeCondition == ItemContainer::Locked)) {
+        if ((m_layout->editModeCondition() == AppletsLayout::Locked) != (m_editModeCondition == ItemContainer::Locked)) {
             emit editModeConditionChanged();
         }
     });
@@ -233,8 +231,7 @@ void ItemContainer::syncChildItemsGeometry(const QSizeF &size)
     if (m_contentItem) {
         m_contentItem->setPosition(QPointF(m_leftPadding, m_topPadding));
 
-        m_contentItem->setSize(QSizeF(size.width() - m_leftPadding - m_rightPadding,
-                size.height() - m_topPadding - m_bottomPadding));
+        m_contentItem->setSize(QSizeF(size.width() - m_leftPadding - m_rightPadding, size.height() - m_topPadding - m_bottomPadding));
     }
 
     if (m_backgroundItem) {
@@ -347,7 +344,7 @@ void ItemContainer::contentData_append(QQmlListProperty<QObject> *prop, QObject 
         return;
     }
 
-//    QQuickItem *item = qobject_cast<QQuickItem *>(object);
+    //    QQuickItem *item = qobject_cast<QQuickItem *>(object);
     container->m_contentData.append(object);
 }
 
@@ -386,11 +383,7 @@ void ItemContainer::contentData_clear(QQmlListProperty<QObject> *prop)
 
 QQmlListProperty<QObject> ItemContainer::contentData()
 {
-    return QQmlListProperty<QObject>(this, nullptr,
-                                     contentData_append,
-                                     contentData_count,
-                                     contentData_at,
-                                     contentData_clear);
+    return QQmlListProperty<QObject>(this, nullptr, contentData_append, contentData_count, contentData_at, contentData_clear);
 }
 
 void ItemContainer::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
@@ -404,7 +397,7 @@ void ItemContainer::geometryChanged(const QRectF &newGeometry, const QRectF &old
 void ItemContainer::componentComplete()
 {
     if (!m_contentItem) {
-        //qWarning()<<"Creating default contentItem";
+        // qWarning()<<"Creating default contentItem";
         m_contentItem = new QQuickItem(this);
         syncChildItemsGeometry(size());
     }
@@ -426,10 +419,10 @@ void ItemContainer::componentComplete()
     }
 
     if (m_layoutAttached) {
-        //NOTE: new syntax cannot be used because we don't have access to the QQuickLayoutAttached class
+        // NOTE: new syntax cannot be used because we don't have access to the QQuickLayoutAttached class
         connect(m_layoutAttached, SIGNAL(minimumHeightChanged()), m_sizeHintAdjustTimer, SLOT(start()));
         connect(m_layoutAttached, SIGNAL(minimumWidthChanged()), m_sizeHintAdjustTimer, SLOT(start()));
-    
+
         connect(m_layoutAttached, SIGNAL(preferredHeightChanged()), m_sizeHintAdjustTimer, SLOT(start()));
         connect(m_layoutAttached, SIGNAL(preferredWidthChanged()), m_sizeHintAdjustTimer, SLOT(start()));
 
@@ -457,13 +450,11 @@ void ItemContainer::sendUngrabRecursive(QQuickItem *item)
 bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
 {
     // Don't filter the configoverlay
-    if (item == m_configOverlay
-        || (m_configOverlay && m_configOverlay->isAncestorOf(item))
-        || (!m_editMode && m_editModeCondition == Manual)) {
+    if (item == m_configOverlay || (m_configOverlay && m_configOverlay->isAncestorOf(item)) || (!m_editMode && m_editModeCondition == Manual)) {
         return QQuickItem::childMouseEventFilter(item, event);
     }
 
-    //give more time before closing
+    // give more time before closing
     if (m_closeEditModeTimer && m_closeEditModeTimer->isActive()) {
         m_closeEditModeTimer->start();
     }
@@ -496,8 +487,7 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
     } else if (event->type() == QEvent::MouseMove) {
         QMouseEvent *me = static_cast<QMouseEvent *>(event);
 
-        if (!m_editMode
-        && QPointF(me->windowPos() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
+        if (!m_editMode && QPointF(me->windowPos() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
             m_editModeTimer->stop();
         } else if (m_editMode) {
             event->accept();
@@ -554,8 +544,7 @@ void ItemContainer::mouseReleaseEvent(QMouseEvent *event)
 {
     Q_UNUSED(event);
 
-    if (!m_layout
-        || (!m_editMode && m_editModeCondition == Manual)) {
+    if (!m_layout || (!m_editMode && m_editModeCondition == Manual)) {
         return;
     }
 
@@ -579,13 +568,11 @@ void ItemContainer::mouseReleaseEvent(QMouseEvent *event)
 
 void ItemContainer::mouseMoveEvent(QMouseEvent *event)
 {
-    if ((event->button() == Qt::NoButton && event->buttons() == Qt::NoButton)
-        || (!m_editMode && m_editModeCondition == Manual)) {
+    if ((event->button() == Qt::NoButton && event->buttons() == Qt::NoButton) || (!m_editMode && m_editModeCondition == Manual)) {
         return;
     }
 
-    if (!m_editMode
-        && QPointF(event->windowPos() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
+    if (!m_editMode && QPointF(event->windowPos() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
         if (m_editModeCondition == AfterPress) {
             setEditMode(true);
         } else {
@@ -604,13 +591,12 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
         emit dragActiveChanged();
 
     } else {
-        setPosition(QPointF(x() + event->windowPos().x() - m_lastMousePosition.x(),
-                            y() + event->windowPos().y() - m_lastMousePosition.y()));
+        setPosition(QPointF(x() + event->windowPos().x() - m_lastMousePosition.x(), y() + event->windowPos().y() - m_lastMousePosition.y()));
 
         if (m_layout) {
             m_layout->showPlaceHolderForItem(this);
         }
-        
+
         emit userDrag(QPointF(x(), y()), event->pos());
     }
     m_lastMousePosition = event->windowPos();
@@ -668,7 +654,7 @@ void ItemContainer::hoverLeaveEvent(QHoverEvent *event)
         m_closeEditModeTimer = new QTimer(this);
         m_closeEditModeTimer->setSingleShot(true);
         m_closeEditModeTimer->setInterval(500);
-        connect(m_closeEditModeTimer, &QTimer::timeout, this, [this] () {
+        connect(m_closeEditModeTimer, &QTimer::timeout, this, [this]() {
             setEditMode(false);
         });
     }
@@ -690,8 +676,7 @@ void ItemContainer::setContentItem(QQuickItem *item)
     item->setParentItem(this);
     m_contentItem->setPosition(QPointF(m_leftPadding, m_topPadding));
 
-    m_contentItem->setSize(QSizeF(width() - m_leftPadding - m_rightPadding,
-            height() - m_topPadding - m_bottomPadding));
+    m_contentItem->setSize(QSizeF(width() - m_leftPadding - m_rightPadding, height() - m_topPadding - m_bottomPadding));
 
     emit contentItemChanged();
 }
@@ -732,7 +717,6 @@ void ItemContainer::setLeftPadding(int padding)
     emit contentWidthChanged();
 }
 
-
 int ItemContainer::topPadding() const
 {
     return m_topPadding;
@@ -750,7 +734,6 @@ void ItemContainer::setTopPadding(int padding)
     emit contentHeightChanged();
 }
 
-
 int ItemContainer::rightPadding() const
 {
     return m_rightPadding;
@@ -767,7 +750,6 @@ void ItemContainer::setRightPadding(int padding)
     emit rightPaddingChanged();
     emit contentWidthChanged();
 }
-
 
 int ItemContainer::bottomPadding() const
 {

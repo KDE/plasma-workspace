@@ -28,56 +28,62 @@
 
 class AbstractEntry
 {
-    public:
-        explicit AbstractEntry(AbstractModel *owner);
-        virtual ~AbstractEntry();
+public:
+    explicit AbstractEntry(AbstractModel *owner);
+    virtual ~AbstractEntry();
 
-        enum EntryType {
-            RunnableType,
-            GroupType,
-            SeparatorType,
-        };
+    enum EntryType {
+        RunnableType,
+        GroupType,
+        SeparatorType,
+    };
 
-        virtual EntryType type() const = 0;
+    virtual EntryType type() const = 0;
 
-        AbstractModel *owner() const;
+    AbstractModel *owner() const;
 
-        virtual bool isValid() const;
+    virtual bool isValid() const;
 
-        virtual QIcon icon() const;
-        virtual QString name() const;
-        virtual QString group() const;
-        virtual QString description() const;
+    virtual QIcon icon() const;
+    virtual QString name() const;
+    virtual QString group() const;
+    virtual QString description() const;
 
-        virtual QString id() const;
-        virtual QUrl url() const;
+    virtual QString id() const;
+    virtual QUrl url() const;
 
-        virtual bool hasChildren() const;
-        virtual AbstractModel *childModel() const;
+    virtual bool hasChildren() const;
+    virtual AbstractModel *childModel() const;
 
-        virtual bool hasActions() const;
-        virtual QVariantList actions() const;
+    virtual bool hasActions() const;
+    virtual QVariantList actions() const;
 
-        virtual bool run(const QString& actionId = QString(), const QVariant &argument = QVariant());
+    virtual bool run(const QString &actionId = QString(), const QVariant &argument = QVariant());
 
-    protected:
-        AbstractModel* m_owner;
+protected:
+    AbstractModel *m_owner;
 };
 
 class AbstractGroupEntry : public AbstractEntry
 {
-    public:
-        explicit AbstractGroupEntry(AbstractModel *owner);
+public:
+    explicit AbstractGroupEntry(AbstractModel *owner);
 
-        EntryType type() const override { return GroupType; }
+    EntryType type() const override
+    {
+        return GroupType;
+    }
 };
 
 class SeparatorEntry : public AbstractEntry
 {
-    public:
-        explicit SeparatorEntry(AbstractModel *owner);
+public:
+    explicit SeparatorEntry(AbstractModel *owner);
 
-        EntryType type() const override { return SeparatorType; }
+    EntryType type() const override
+    {
+        return SeparatorType;
+    }
 };
 
 #endif

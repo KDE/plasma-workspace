@@ -33,15 +33,16 @@ using namespace NotificationManager;
 MirroredScreensTracker::MirroredScreensTracker()
     : QObject(nullptr)
 {
-    connect(new KScreen::GetConfigOperation(KScreen::GetConfigOperation::NoEDID), &KScreen::ConfigOperation::finished, this,
-        [this](KScreen::ConfigOperation *op) {
-            m_screenConfiguration = qobject_cast<KScreen::GetConfigOperation *>(op)->config();
-            checkScreensMirrored();
+    connect(new KScreen::GetConfigOperation(KScreen::GetConfigOperation::NoEDID),
+            &KScreen::ConfigOperation::finished,
+            this,
+            [this](KScreen::ConfigOperation *op) {
+                m_screenConfiguration = qobject_cast<KScreen::GetConfigOperation *>(op)->config();
+                checkScreensMirrored();
 
-            KScreen::ConfigMonitor::instance()->addConfig(m_screenConfiguration);
-            connect(KScreen::ConfigMonitor::instance(), &KScreen::ConfigMonitor::configurationChanged,
-                    this, &MirroredScreensTracker::checkScreensMirrored);
-    });
+                KScreen::ConfigMonitor::instance()->addConfig(m_screenConfiguration);
+                connect(KScreen::ConfigMonitor::instance(), &KScreen::ConfigMonitor::configurationChanged, this, &MirroredScreensTracker::checkScreensMirrored);
+            });
 }
 
 MirroredScreensTracker::~MirroredScreensTracker() = default;
@@ -89,7 +90,8 @@ void MirroredScreensTracker::checkScreensMirrored()
             }
 
             if (output->geometry().intersects(checkOutput->geometry())) {
-                qCDebug(NOTIFICATIONMANAGER) << "Screen geometry" << checkOutput->geometry() << "intersects" << output->geometry() << "- considering them to be mirrored";
+                qCDebug(NOTIFICATIONMANAGER) << "Screen geometry" << checkOutput->geometry() << "intersects" << output->geometry()
+                                             << "- considering them to be mirrored";
                 setScreensMirrored(true);
                 return;
             }

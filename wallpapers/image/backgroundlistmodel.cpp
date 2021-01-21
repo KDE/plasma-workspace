@@ -20,25 +20,25 @@
 #ifndef BACKGROUNDLISTMODEL_CPP
 #define BACKGROUNDLISTMODEL_CPP
 
-#include "debug.h"
 #include "backgroundlistmodel.h"
+#include "debug.h"
 
-#include <QFile>
 #include <QDir>
-#include <QStandardPaths>
-#include <QThreadPool>
-#include <QUuid>
-#include <QGuiApplication>
+#include <QElapsedTimer>
+#include <QFile>
 #include <QFontMetrics>
+#include <QGuiApplication>
 #include <QImageReader>
 #include <QMimeDatabase>
 #include <QMimeType>
 #include <QMutexLocker>
-#include <QElapsedTimer>
+#include <QStandardPaths>
+#include <QThreadPool>
+#include <QUuid>
 
-#include <QDebug>
 #include <KIO/PreviewJob>
 #include <KLocalizedString>
+#include <QDebug>
 #include <kaboutdata.h>
 
 #include <KPackage/Package>
@@ -46,13 +46,12 @@
 
 #include <KIO/OpenFileManagerWindowJob>
 
-
 QStringList BackgroundFinder::s_suffixes;
 QMutex BackgroundFinder::s_suffixMutex;
 
 ImageSizeFinder::ImageSizeFinder(const QString &path, QObject *parent)
-    : QObject(parent),
-      m_path(path)
+    : QObject(parent)
+    , m_path(path)
 {
 }
 
@@ -62,16 +61,15 @@ void ImageSizeFinder::run()
     Q_EMIT sizeFound(m_path, reader.size());
 }
 
-
 BackgroundListModel::BackgroundListModel(Image *wallpaper, QObject *parent)
-    : QAbstractListModel(parent),
-      m_wallpaper(wallpaper)
+    : QAbstractListModel(parent)
+    , m_wallpaper(wallpaper)
 {
     m_imageCache.setMaxCost(10 * 1024 * 1024); // 10 MiB
 
     connect(&m_dirwatch, &KDirWatch::deleted, this, &BackgroundListModel::removeBackground);
 
-    //TODO: on Qt 4.4 use the ui scale factor
+    // TODO: on Qt 4.4 use the ui scale factor
     QFontMetrics fm(QGuiApplication::font());
     m_screenshotSize = fm.horizontalAdvance('M') * 15;
 }
@@ -81,15 +79,15 @@ BackgroundListModel::~BackgroundListModel() = default;
 QHash<int, QByteArray> BackgroundListModel::BackgroundListModel::roleNames() const
 {
     return {
-    { Qt::DisplayRole, "display" },
-    { Qt::DecorationRole, "decoration" },
-    { AuthorRole, "author" },
-    { ScreenshotRole, "screenshot" },
-    { ResolutionRole, "resolution" },
-    { PathRole, "path" },
-    { PackageNameRole, "packageName" },
-    { RemovableRole, "removable" },
-    { PendingDeletionRole, "pendingDeletion" },
+        {Qt::DisplayRole, "display"},
+        {Qt::DecorationRole, "decoration"},
+        {AuthorRole, "author"},
+        {ScreenshotRole, "screenshot"},
+        {ResolutionRole, "resolution"},
+        {PathRole, "path"},
+        {PackageNameRole, "packageName"},
+        {RemovableRole, "removable"},
+        {PendingDeletionRole, "pendingDeletion"},
     };
 }
 
@@ -123,7 +121,7 @@ void BackgroundListModel::reload(const QStringList &selected)
 
     BackgroundFinder *finder = new BackgroundFinder(m_wallpaper.data(), dirs);
     const auto token = finder->token();
-    connect(finder, &BackgroundFinder::backgroundsFound, this, [this, selected, token] (const QStringList &wallpapersFound) {
+    connect(finder, &BackgroundFinder::backgroundsFound, this, [this, selected, token](const QStringList &wallpapersFound) {
         if (token != m_findToken || !m_wallpaper) {
             return;
         }
@@ -195,10 +193,10 @@ void BackgroundListModel::processPaths(const QStringList &paths)
     }
     endResetModel();
     emit countChanged();
-    //qCDebug(IMAGEWALLPAPER) << t.elapsed();
+    // qCDebug(IMAGEWALLPAPER) << t.elapsed();
 }
 
-void BackgroundListModel::addBackground(const QString& path)
+void BackgroundListModel::addBackground(const QString &path)
 {
     if (!m_wallpaper || !contains(path)) {
         if (!m_dirwatch.contains(path)) {
@@ -225,7 +223,7 @@ int BackgroundListModel::indexOf(const QString &path) const
         if (package.endsWith(QChar::fromLatin1('/'))) {
             package.chop(1);
         }
-        //remove eventual file:///
+        // remove eventual file:///
         const QString filteredPath = QUrl(path).path();
 
         if (filteredPath.startsWith(package)) {
@@ -238,13 +236,13 @@ int BackgroundListModel::indexOf(const QString &path) const
                 prefixempty = ps[0].isEmpty();
             }
 
-            //For local files (user wallpapers) filteredPath == m_packages[i].filePath("preferred")
-            //E.X. filteredPath = "/home/kde/next.png"
-            //m_packages[i].filePath("preferred") = "/home/kde/next.png"
+            // For local files (user wallpapers) filteredPath == m_packages[i].filePath("preferred")
+            // E.X. filteredPath = "/home/kde/next.png"
+            // m_packages[i].filePath("preferred") = "/home/kde/next.png"
             //
-            //But for the system wallpapers this is not the case. filteredPath != m_packages[i].filePath("preferred")
-            //E.X. filteredPath = /usr/share/wallpapers/Next/"
-            //m_packages[i].filePath("preferred") = "/usr/share/wallpapers/Next/contents/images/1920x1080.png"
+            // But for the system wallpapers this is not the case. filteredPath != m_packages[i].filePath("preferred")
+            // E.X. filteredPath = /usr/share/wallpapers/Next/"
+            // m_packages[i].filePath("preferred") = "/usr/share/wallpapers/Next/contents/images/1920x1080.png"
             if ((filteredPath == m_packages[i].filePath("preferred")) || m_packages[i].filePath("preferred").contains(filteredPath)) {
                 return i;
             }
@@ -255,7 +253,7 @@ int BackgroundListModel::indexOf(const QString &path) const
 
 bool BackgroundListModel::contains(const QString &path) const
 {
-    //qCDebug(IMAGEWALLPAPER) << "WP contains: " << path << indexOf(path).isValid();
+    // qCDebug(IMAGEWALLPAPER) << "WP contains: " << path << indexOf(path).isValid();
     return indexOf(path) >= 0;
 }
 
@@ -276,8 +274,7 @@ QSize BackgroundListModel::bestSize(const KPackage::Package &package) const
     }
 
     ImageSizeFinder *finder = new ImageSizeFinder(image);
-    connect(finder, &ImageSizeFinder::sizeFound, this,
-            &BackgroundListModel::sizeFound);
+    connect(finder, &ImageSizeFinder::sizeFound, this, &BackgroundListModel::sizeFound);
     QThreadPool::globalInstance()->start(finder);
 
     QSize size(-1, -1);
@@ -339,14 +336,10 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
             KFileItemList list;
             list.append(KFileItem(url, QString(), 0));
             QStringList availablePlugins = KIO::PreviewJob::availablePlugins();
-            KIO::PreviewJob* job = KIO::filePreview(list,
-                                                    QSize(m_screenshotSize*1.6,
-                                                    m_screenshotSize),  &availablePlugins);
+            KIO::PreviewJob *job = KIO::filePreview(list, QSize(m_screenshotSize * 1.6, m_screenshotSize), &availablePlugins);
             job->setIgnoreMaximumSize(true);
-            connect(job, &KIO::PreviewJob::gotPreview,
-                    this, &BackgroundListModel::showPreview);
-            connect(job, &KIO::PreviewJob::failed,
-                    this, &BackgroundListModel::previewFailed);
+            connect(job, &KIO::PreviewJob::gotPreview, this, &BackgroundListModel::showPreview);
+            connect(job, &KIO::PreviewJob::failed, this, &BackgroundListModel::previewFailed);
             const_cast<BackgroundListModel *>(this)->m_previewJobsUrls.insert(persistentIndex, url);
         }
 
@@ -360,7 +353,7 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
             return QString();
         }
 
-    case ResolutionRole:{
+    case ResolutionRole: {
         QSize size = bestSize(b);
 
         if (size.isValid()) {
@@ -437,7 +430,7 @@ void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &prev
     const int cost = preview.width() * preview.height() * preview.depth() / 8;
     m_imageCache.insert(b.filePath("preferred"), new QPixmap(preview), cost);
 
-    //qCDebug(IMAGEWALLPAPER) << "WP preview size:" << preview.size();
+    // qCDebug(IMAGEWALLPAPER) << "WP preview size:" << preview.size();
     emit dataChanged(index, index);
 }
 
@@ -475,9 +468,9 @@ const QStringList BackgroundListModel::wallpapersAwaitingDeletion()
 }
 
 BackgroundFinder::BackgroundFinder(Image *wallpaper, const QStringList &paths)
-    : QThread(wallpaper),
-      m_paths(paths),
-      m_token(QUuid::createUuid().toString())
+    : QThread(wallpaper)
+    , m_paths(paths)
+    , m_token(QUuid::createUuid().toString())
 {
 }
 
@@ -540,7 +533,7 @@ void BackgroundFinder::run()
         const QFileInfoList files = dir.entryInfoList();
         for (const QFileInfo &wp : files) {
             if (wp.isDir()) {
-                //qCDebug(IMAGEWALLPAPER) << "scanning directory" << wp.fileName();
+                // qCDebug(IMAGEWALLPAPER) << "scanning directory" << wp.fileName();
 
                 const QString name = wp.fileName();
                 if (name == QString::fromLatin1(".") || name == QString::fromLatin1("..")) {
@@ -555,7 +548,7 @@ void BackgroundFinder::run()
                         if (!package.filePath("images").isEmpty()) {
                             papersFound << package.path();
                         }
-                        //qCDebug(IMAGEWALLPAPER) << "adding package" << wp.filePath();
+                        // qCDebug(IMAGEWALLPAPER) << "adding package" << wp.filePath();
                         continue;
                     }
                 }
@@ -563,17 +556,15 @@ void BackgroundFinder::run()
                 // add this to the directories we should be looking at
                 m_paths.append(filePath);
             } else {
-                //qCDebug(IMAGEWALLPAPER) << "adding image file" << wp.filePath();
+                // qCDebug(IMAGEWALLPAPER) << "adding image file" << wp.filePath();
                 papersFound << wp.filePath();
             }
         }
     }
 
-    //qCDebug(IMAGEWALLPAPER) << "WP background found!" << papersFound.size() << "in" << i << "dirs, taking" << t.elapsed() << "ms";
+    // qCDebug(IMAGEWALLPAPER) << "WP background found!" << papersFound.size() << "in" << i << "dirs, taking" << t.elapsed() << "ms";
     Q_EMIT backgroundsFound(papersFound, m_token);
     deleteLater();
 }
-
-
 
 #endif // BACKGROUNDLISTMODEL_CPP

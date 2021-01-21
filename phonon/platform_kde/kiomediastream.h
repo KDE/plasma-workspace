@@ -24,8 +24,8 @@
 
 class QUrl;
 
-namespace Phonon {
-
+namespace Phonon
+{
 class KioMediaStreamPrivate;
 
 class KioMediaStream : public AbstractMediaStream

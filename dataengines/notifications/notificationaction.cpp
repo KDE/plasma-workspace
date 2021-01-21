@@ -42,12 +42,12 @@ void NotificationAction::start()
     const QStringList dest = destination().split(' ');
 
     uint id = 0;
-    if (dest.count() >  1 && !dest[1].toInt()) {
+    if (dest.count() > 1 && !dest[1].toInt()) {
         setErrorText(i18n("Invalid destination: %1", destination()));
         setError(-2);
         emitResult();
         return;
-    } else if (dest.count() >  1) {
+    } else if (dest.count() > 1) {
         id = dest[1].toUInt();
     }
 
@@ -55,10 +55,10 @@ void NotificationAction::start()
         qCDebug(NOTIFICATIONS) << "invoking action on " << id;
         Server::self().invokeAction(id, parameters()[QStringLiteral("actionId")].toString());
     } else if (operationName() == QLatin1String("userClosed")) {
-        //userClosedNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
+        // userClosedNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
         m_engine->metaObject()->invokeMethod(m_engine, "removeNotification", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 2));
     } else if (operationName() == QLatin1String("expireNotification")) {
-        //expireNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
+        // expireNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
         m_engine->metaObject()->invokeMethod(m_engine, "removeNotification", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 1));
     } else if (operationName() == QLatin1String("createNotification")) {
         int expireTimeout = parameters().value(QStringLiteral("expireTimeout")).toInt();
@@ -79,8 +79,7 @@ void NotificationAction::start()
         setResult(rv);
         return;
     } else if (operationName() == QLatin1String("configureNotification")) {
-        m_engine->configureNotification(parameters()[QStringLiteral("appRealName")].toString(),
-                                        parameters()[QStringLiteral("eventId")].toString());
+        m_engine->configureNotification(parameters()[QStringLiteral("appRealName")].toString(), parameters()[QStringLiteral("eventId")].toString());
     } else if (operationName() == QLatin1String("inhibit")) {
         const QString hint = parameters()[QStringLiteral("hint")].toString();
         const QString value = parameters()[QStringLiteral("value")].toString();
@@ -91,6 +90,3 @@ void NotificationAction::start()
 
     emitResult();
 }
-
-
-

@@ -27,8 +27,9 @@
 
 class QTemporaryFile;
 
-namespace Plasma {
-    class Theme;
+namespace Plasma
+{
+class Theme;
 }
 
 namespace KIO
@@ -53,7 +54,6 @@ class KCMDesktopTheme : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(bool canEditThemes READ canEditThemes CONSTANT)
 
 public:
-
     KCMDesktopTheme(QObject *parent, const QVariantList &args);
     ~KCMDesktopTheme() override;
 
@@ -93,7 +93,7 @@ private:
 
     ThemesModel *m_model;
     FilterProxyModel *m_filteredModel;
-    QHash<QString, Plasma::Theme*> m_themes;
+    QHash<QString, Plasma::Theme *> m_themes;
     bool m_haveThemeExplorerInstalled;
 
     QScopedPointer<QTemporaryFile> m_tempInstallFile;

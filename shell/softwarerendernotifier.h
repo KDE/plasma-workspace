@@ -26,14 +26,15 @@
  * to allow the a user to open the KCM
  */
 
-class SoftwareRendererNotifier: public KStatusNotifierItem
+class SoftwareRendererNotifier : public KStatusNotifierItem
 {
     Q_OBJECT
 public:
-    //only exposed as void static constructor as internally it is self memory managing
+    // only exposed as void static constructor as internally it is self memory managing
     static void notifyIfRelevant();
+
 private:
-    SoftwareRendererNotifier(QObject *parent=nullptr);
+    SoftwareRendererNotifier(QObject *parent = nullptr);
     ~SoftwareRendererNotifier();
 };
 

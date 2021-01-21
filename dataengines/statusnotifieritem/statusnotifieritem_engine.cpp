@@ -20,8 +20,8 @@
  ***************************************************************************/
 
 #include "statusnotifieritem_engine.h"
-#include <QStringList>
 #include "statusnotifieritemsource.h"
+#include <QStringList>
 
 #include "dbusproperties.h"
 
@@ -30,9 +30,9 @@
 
 static const QString s_watcherServiceName(QStringLiteral("org.kde.StatusNotifierWatcher"));
 
-StatusNotifierItemEngine::StatusNotifierItemEngine(QObject *parent, const QVariantList& args)
-    : Plasma::DataEngine(parent, args),
-      m_statusNotifierWatcher(nullptr)
+StatusNotifierItemEngine::StatusNotifierItemEngine(QObject *parent, const QVariantList &args)
+    : Plasma::DataEngine(parent, args)
+    , m_statusNotifierWatcher(nullptr)
 {
     Q_UNUSED(args);
     init();
@@ -43,9 +43,9 @@ StatusNotifierItemEngine::~StatusNotifierItemEngine()
     QDBusConnection::sessionBus().unregisterService(m_serviceName);
 }
 
-Plasma::Service* StatusNotifierItemEngine::serviceForSource(const QString &name)
+Plasma::Service *StatusNotifierItemEngine::serviceForSource(const QString &name)
 {
-    StatusNotifierItemSource *source = dynamic_cast<StatusNotifierItemSource*>(containerForSource(name));
+    StatusNotifierItemSource *source = dynamic_cast<StatusNotifierItemSource *>(containerForSource(name));
     // if source does not exist, return null service
     if (!source) {
         return Plasma::DataEngine::serviceForSource(name);
@@ -62,40 +62,41 @@ void StatusNotifierItemEngine::init()
         m_serviceName = "org.kde.StatusNotifierHost-" + QString::number(QCoreApplication::applicationPid());
         QDBusConnection::sessionBus().registerService(m_serviceName);
 
-        QDBusServiceWatcher *watcher = new QDBusServiceWatcher(s_watcherServiceName, QDBusConnection::sessionBus(),
-                                                               QDBusServiceWatcher::WatchForOwnerChange, this);
-        connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged,
-                this, &StatusNotifierItemEngine::serviceChange);
+        QDBusServiceWatcher *watcher =
+            new QDBusServiceWatcher(s_watcherServiceName, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
+        connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &StatusNotifierItemEngine::serviceChange);
 
         registerWatcher(s_watcherServiceName);
     }
 }
 
-void StatusNotifierItemEngine::serviceChange(const QString& name, const QString& oldOwner, const QString& newOwner)
+void StatusNotifierItemEngine::serviceChange(const QString &name, const QString &oldOwner, const QString &newOwner)
 {
-    qCDebug(DATAENGINE_SNI)<< "Service" << name << "status change, old owner:" << oldOwner << "new:" << newOwner;
+    qCDebug(DATAENGINE_SNI) << "Service" << name << "status change, old owner:" << oldOwner << "new:" << newOwner;
 
     if (newOwner.isEmpty()) {
-        //unregistered
+        // unregistered
         unregisterWatcher(name);
     } else if (oldOwner.isEmpty()) {
-        //registered
+        // registered
         registerWatcher(name);
     }
 }
 
-void StatusNotifierItemEngine::registerWatcher(const QString& service)
+void StatusNotifierItemEngine::registerWatcher(const QString &service)
 {
-    //qCDebug(DATAENGINE_SNI)<<"service appeared"<<service;
+    // qCDebug(DATAENGINE_SNI)<<"service appeared"<<service;
     if (service == s_watcherServiceName) {
         delete m_statusNotifierWatcher;
 
-        m_statusNotifierWatcher = new org::kde::StatusNotifierWatcher(s_watcherServiceName, QStringLiteral("/StatusNotifierWatcher"),
-								      QDBusConnection::sessionBus());
+        m_statusNotifierWatcher =
+            new org::kde::StatusNotifierWatcher(s_watcherServiceName, QStringLiteral("/StatusNotifierWatcher"), QDBusConnection::sessionBus());
         if (m_statusNotifierWatcher->isValid()) {
             m_statusNotifierWatcher->call(QDBus::NoBlock, QStringLiteral("RegisterStatusNotifierHost"), m_serviceName);
 
-            OrgFreedesktopDBusPropertiesInterface  propetriesIface(m_statusNotifierWatcher->service(), m_statusNotifierWatcher->path(), m_statusNotifierWatcher->connection());
+            OrgFreedesktopDBusPropertiesInterface propetriesIface(m_statusNotifierWatcher->service(),
+                                                                  m_statusNotifierWatcher->path(),
+                                                                  m_statusNotifierWatcher->connection());
 
             QDBusPendingReply<QDBusVariant> pendingItems = propetriesIface.Get(m_statusNotifierWatcher->interface(), "RegisteredStatusNotifierItems");
 
@@ -109,24 +110,36 @@ void StatusNotifierItemEngine::registerWatcher(const QString& service)
                 }
             });
 
-            connect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemRegistered, this, &StatusNotifierItemEngine::serviceRegistered);
-            connect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemUnregistered, this, &StatusNotifierItemEngine::serviceUnregistered);
+            connect(m_statusNotifierWatcher,
+                    &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemRegistered,
+                    this,
+                    &StatusNotifierItemEngine::serviceRegistered);
+            connect(m_statusNotifierWatcher,
+                    &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemUnregistered,
+                    this,
+                    &StatusNotifierItemEngine::serviceUnregistered);
 
         } else {
             delete m_statusNotifierWatcher;
             m_statusNotifierWatcher = nullptr;
-            qCDebug(DATAENGINE_SNI)<<"System tray daemon not reachable";
+            qCDebug(DATAENGINE_SNI) << "System tray daemon not reachable";
         }
     }
 }
 
-void StatusNotifierItemEngine::unregisterWatcher(const QString& service)
+void StatusNotifierItemEngine::unregisterWatcher(const QString &service)
 {
     if (service == s_watcherServiceName) {
-        qCDebug(DATAENGINE_SNI)<< s_watcherServiceName << "disappeared";
+        qCDebug(DATAENGINE_SNI) << s_watcherServiceName << "disappeared";
 
-        disconnect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemRegistered, this, &StatusNotifierItemEngine::serviceRegistered);
-        disconnect(m_statusNotifierWatcher, &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemUnregistered, this, &StatusNotifierItemEngine::serviceUnregistered);
+        disconnect(m_statusNotifierWatcher,
+                   &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemRegistered,
+                   this,
+                   &StatusNotifierItemEngine::serviceRegistered);
+        disconnect(m_statusNotifierWatcher,
+                   &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemUnregistered,
+                   this,
+                   &StatusNotifierItemEngine::serviceUnregistered);
 
         removeAllSources();
 
@@ -137,7 +150,7 @@ void StatusNotifierItemEngine::unregisterWatcher(const QString& service)
 
 void StatusNotifierItemEngine::serviceRegistered(const QString &service)
 {
-    qCDebug(DATAENGINE_SNI) << "Registering"<<service;
+    qCDebug(DATAENGINE_SNI) << "Registering" << service;
     newItem(service);
 }
 
@@ -152,6 +165,6 @@ void StatusNotifierItemEngine::newItem(const QString &service)
     addSource(itemSource);
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(statusnotifieritem, StatusNotifierItemEngine,"plasma-dataengine-statusnotifieritem.json")
+K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(statusnotifieritem, StatusNotifierItemEngine, "plasma-dataengine-statusnotifieritem.json")
 
 #include "statusnotifieritem_engine.moc"

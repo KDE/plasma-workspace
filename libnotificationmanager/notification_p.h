@@ -22,9 +22,9 @@
 
 #include <QDBusArgument>
 #include <QDateTime>
-#include <QScopedPointer>
 #include <QImage>
 #include <QList>
+#include <QScopedPointer>
 #include <QString>
 #include <QUrl>
 
@@ -34,7 +34,6 @@
 
 namespace NotificationManager
 {
-
 class Q_DECL_HIDDEN Notification::Private
 {
 public:

@@ -27,36 +27,33 @@
 #include <KLocalizedString>
 
 #include <QCoreApplication>
-#include <QFile>
 #include <QDir>
+#include <QFile>
 #include <QStandardPaths>
 
-#include "kded_interface.h"
 #include "desktopnotifier_interface.h"
+#include "kded_interface.h"
 
-extern "C"
+extern "C" {
+int Q_DECL_EXPORT kdemain(int argc, char **argv)
 {
-    int Q_DECL_EXPORT kdemain(int argc, char **argv)
-    {
-        // necessary to use other kio slaves
-        QCoreApplication app(argc, argv);
-        app.setApplicationName("kio_desktop");
+    // necessary to use other kio slaves
+    QCoreApplication app(argc, argv);
+    app.setApplicationName("kio_desktop");
 
-        // start the slave
-        DesktopProtocol slave(argv[1], argv[2], argv[3]);
-        slave.dispatchLoop();
-        return 0;
-    }
+    // start the slave
+    DesktopProtocol slave(argv[1], argv[2], argv[3]);
+    slave.dispatchLoop();
+    return 0;
+}
 }
 
-DesktopProtocol::DesktopProtocol(const QByteArray& protocol, const QByteArray &pool, const QByteArray &app)
+DesktopProtocol::DesktopProtocol(const QByteArray &protocol, const QByteArray &pool, const QByteArray &app)
     : KIO::ForwardingSlaveBase(protocol, pool, app)
 {
     checkLocalInstall();
 
-    org::kde::kded5 kded(QStringLiteral("org.kde.kded5"),
-                        QStringLiteral("/kded"),
-                        QDBusConnection::sessionBus());
+    org::kde::kded5 kded(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
     auto pending = kded.loadModule("desktopnotifier");
     pending.waitForFinished();
 }
@@ -84,12 +81,12 @@ void DesktopProtocol::checkLocalInstall()
 
     if (desktopIsEmpty) {
         // Copy the .directory file
-        QFile::copy(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/directory.desktop")),
-                    desktopPath + "/.directory");
+        QFile::copy(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/directory.desktop")), desktopPath + "/.directory");
 
         // Copy the desktop links
         QSet<QString> links;
-        const auto dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/DesktopLinks"), QStandardPaths::LocateDirectory);
+        const auto dirs =
+            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/DesktopLinks"), QStandardPaths::LocateDirectory);
         for (const auto &dir : dirs) {
             const auto fileNames = QDir(dir).entryList({QStringLiteral("*.desktop")});
             for (const auto &file : fileNames) {
@@ -175,12 +172,11 @@ void DesktopProtocol::prepareUDSEntry(KIO::UDSEntry &entry, bool listing) const
     }
 
     // Set a descriptive display name for the root item
-    if (requestedUrl().path() == QLatin1String("/")
-        && entry.stringValue(KIO::UDSEntry::UDS_NAME) == QLatin1Char('.')) {
+    if (requestedUrl().path() == QLatin1String("/") && entry.stringValue(KIO::UDSEntry::UDS_NAME) == QLatin1Char('.')) {
         entry.replace(KIO::UDSEntry::UDS_DISPLAY_NAME, i18n("Desktop Folder"));
     }
 
-    // Set the target URL to the local path 
+    // Set the target URL to the local path
     QUrl localUrl(QUrl::fromLocalFile(entry.stringValue(KIO::UDSEntry::UDS_LOCAL_PATH)));
     entry.replace(KIO::UDSEntry::UDS_TARGET_URL, localUrl.toString());
 }
@@ -230,13 +226,13 @@ void DesktopProtocol::rename(const QUrl &_src, const QUrl &_dest, KIO::JobFlags 
 
 void DesktopProtocol::virtual_hook(int id, void *data)
 {
-    switch(id) {
-        case SlaveBase::GetFileSystemFreeSpace: {
-            QUrl *url = static_cast<QUrl *>(data);
-            fileSystemFreeSpace(*url);
-        }   break;
-        default:
-            SlaveBase::virtual_hook(id, data);
+    switch (id) {
+    case SlaveBase::GetFileSystemFreeSpace: {
+        QUrl *url = static_cast<QUrl *>(data);
+        fileSystemFreeSpace(*url);
+    } break;
+    default:
+        SlaveBase::virtual_hook(id, data);
     }
 }
 

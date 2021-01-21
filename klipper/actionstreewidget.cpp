@@ -19,15 +19,16 @@
 */
 #include "actionstreewidget.h"
 
-ActionsTreeWidget::ActionsTreeWidget(QWidget* parent)
-    : QTreeWidget(parent), m_actionsChanged(-1), m_modified(false)
+ActionsTreeWidget::ActionsTreeWidget(QWidget *parent)
+    : QTreeWidget(parent)
+    , m_actionsChanged(-1)
+    , m_modified(false)
 {
     // these signals indicate that something was changed in actions tree
 
     connect(this, &ActionsTreeWidget::itemChanged, this, &ActionsTreeWidget::onItemChanged);
     QAbstractItemModel *treeModel = model();
-    if (treeModel)
-    {
+    if (treeModel) {
         connect(treeModel, &QAbstractItemModel::rowsInserted, this, &ActionsTreeWidget::onItemChanged);
         connect(treeModel, &QAbstractItemModel::rowsRemoved, this, &ActionsTreeWidget::onItemChanged);
     }
@@ -48,8 +49,7 @@ void ActionsTreeWidget::setActionsChanged(int isChanged)
 {
     Q_UNUSED(isChanged)
 
-    if (!m_modified)
-    {
+    if (!m_modified) {
         m_actionsChanged = m_actionsChanged ? 1 : 0;
         m_modified = true;
         emit changed();
@@ -60,4 +60,3 @@ int ActionsTreeWidget::actionsChanged() const
 {
     return m_actionsChanged;
 }
-

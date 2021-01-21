@@ -17,8 +17,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
-
 #ifndef FALKON_H
 #define FALKON_H
 
@@ -28,18 +26,19 @@ class Favicon;
 
 class Falkon : public QObject, public Browser
 {
-Q_OBJECT
+    Q_OBJECT
 public:
-    explicit Falkon(QObject* parent = nullptr);
-    QList<BookmarkMatch> match(const QString& term, bool addEverything) override;
+    explicit Falkon(QObject *parent = nullptr);
+    QList<BookmarkMatch> match(const QString &term, bool addEverything) override;
 public Q_SLOTS:
     void prepare() override;
     void teardown() override;
+
 private:
     QString getStartupProfileDir();
     QJsonArray m_falkonBookmarkEntries;
     QString m_startupProfile;
-    Favicon * m_favicon;
+    Favicon *m_favicon;
 };
 
 #endif // FALKON_H

@@ -35,8 +35,8 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <QBuffer>
 #include <QDir>
-#include <QIcon>
 #include <QFile>
+#include <QIcon>
 #include <QSet>
 #include <QTimer>
 #include <QUrlQuery>
@@ -44,11 +44,10 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
-static const NET::Properties windowInfoFlags = NET::WMState | NET::XAWMState | NET::WMDesktop |
-    NET::WMVisibleName | NET::WMGeometry | NET::WMFrameExtents | NET::WMWindowType | NET::WMPid;
-static const NET::Properties2 windowInfoFlags2 = NET::WM2DesktopFileName | NET::WM2Activities |
-    NET::WM2WindowClass | NET::WM2AllowedActions | NET::WM2AppMenuObjectPath | NET::WM2AppMenuServiceName;
+static const NET::Properties windowInfoFlags =
+    NET::WMState | NET::XAWMState | NET::WMDesktop | NET::WMVisibleName | NET::WMGeometry | NET::WMFrameExtents | NET::WMWindowType | NET::WMPid;
+static const NET::Properties2 windowInfoFlags2 =
+    NET::WM2DesktopFileName | NET::WM2Activities | NET::WM2WindowClass | NET::WM2AllowedActions | NET::WM2AppMenuObjectPath | NET::WM2AppMenuServiceName;
 
 class Q_DECL_HIDDEN XWindowTasksModel::Private
 {
@@ -59,7 +58,7 @@ public:
     QVector<WId> windows;
     QMultiHash<WId, WId> transients;
     QMultiHash<WId, WId> transientsDemandingAttention;
-    QHash<WId, KWindowInfo*> windowInfoCache;
+    QHash<WId, KWindowInfo *> windowInfoCache;
     QHash<WId, AppData> appDataCache;
     QHash<WId, QRect> delegateGeometries;
     QSet<WId> usingFallbackIcon;
@@ -77,7 +76,7 @@ public:
     void transientChanged(WId window, NET::Properties properties, NET::Properties2 properties2);
     void dataChanged(WId window, const QVector<int> &roles);
 
-    KWindowInfo* windowInfo(WId window);
+    KWindowInfo *windowInfo(WId window);
     AppData appData(WId window);
     QString appMenuServiceName(WId window);
     QString appMenuObjectPath(WId window);
@@ -114,12 +113,15 @@ void XWindowTasksModel::Private::init()
         appDataCache.clear();
 
         // Emit changes of all roles satisfied from app data cache.
-        Q_EMIT q->dataChanged(q->index(0, 0),  q->index(windows.count() - 1, 0),
-                QVector<int>{Qt::DecorationRole, AbstractTasksModel::AppId,
-                AbstractTasksModel::AppName, AbstractTasksModel::GenericName,
-                AbstractTasksModel::LauncherUrl,
-                AbstractTasksModel::LauncherUrlWithoutIcon,
-                AbstractTasksModel::SkipTaskbar});
+        Q_EMIT q->dataChanged(q->index(0, 0),
+                              q->index(windows.count() - 1, 0),
+                              QVector<int>{Qt::DecorationRole,
+                                           AbstractTasksModel::AppId,
+                                           AbstractTasksModel::AppName,
+                                           AbstractTasksModel::GenericName,
+                                           AbstractTasksModel::LauncherUrl,
+                                           AbstractTasksModel::LauncherUrlWithoutIcon,
+                                           AbstractTasksModel::SkipTaskbar});
     };
 
     cachedStackingOrder = KWindowSystem::stackingOrder();
@@ -130,15 +132,12 @@ void XWindowTasksModel::Private::init()
     QObject::connect(&sycocaChangeTimer, &QTimer::timeout, q, clearCacheAndRefresh);
 
     void (KSycoca::*myDatabaseChangeSignal)(const QStringList &) = &KSycoca::databaseChanged;
-    QObject::connect(KSycoca::self(), myDatabaseChangeSignal, q,
-        [this](const QStringList &changedResources) {
-            if (changedResources.contains(QLatin1String("services"))
-                || changedResources.contains(QLatin1String("apps"))
-                || changedResources.contains(QLatin1String("xdgdata-apps"))) {
-                sycocaChangeTimer.start();
-            }
+    QObject::connect(KSycoca::self(), myDatabaseChangeSignal, q, [this](const QStringList &changedResources) {
+        if (changedResources.contains(QLatin1String("services")) || changedResources.contains(QLatin1String("apps"))
+            || changedResources.contains(QLatin1String("xdgdata-apps"))) {
+            sycocaChangeTimer.start();
         }
-    );
+    });
 
     rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
     configWatcher = new KDirWatch(q);
@@ -158,57 +157,46 @@ void XWindowTasksModel::Private::init()
 
     auto windowSystem = new XWindowSystemEventBatcher(q);
 
-    QObject::connect(windowSystem, &XWindowSystemEventBatcher::windowAdded, q,
-        [this](WId window) {
-            addWindow(window);
-        }
-    );
+    QObject::connect(windowSystem, &XWindowSystemEventBatcher::windowAdded, q, [this](WId window) {
+        addWindow(window);
+    });
 
-    QObject::connect(windowSystem, &XWindowSystemEventBatcher::windowRemoved, q,
-        [this](WId window) {
-            removeWindow(window);
-        }
-    );
+    QObject::connect(windowSystem, &XWindowSystemEventBatcher::windowRemoved, q, [this](WId window) {
+        removeWindow(window);
+    });
 
-    QObject::connect(windowSystem, &XWindowSystemEventBatcher::windowChanged, q,
-        [this](WId window, NET::Properties properties, NET::Properties2 properties2) {
-            windowChanged(window, properties, properties2);
-        }
-    );
+    QObject::connect(windowSystem, &XWindowSystemEventBatcher::windowChanged, q, [this](WId window, NET::Properties properties, NET::Properties2 properties2) {
+        windowChanged(window, properties, properties2);
+    });
 
     // Update IsActive for previously- and newly-active windows.
-    QObject::connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, q,
-        [this](WId window) {
-            const WId oldActiveWindow = activeWindow;
-            activeWindow = window;
-            lastActivated[activeWindow] = QTime::currentTime();
+    QObject::connect(KWindowSystem::self(), &KWindowSystem::activeWindowChanged, q, [this](WId window) {
+        const WId oldActiveWindow = activeWindow;
+        activeWindow = window;
+        lastActivated[activeWindow] = QTime::currentTime();
 
-            int row = windows.indexOf(oldActiveWindow);
+        int row = windows.indexOf(oldActiveWindow);
 
-            if (row != -1) {
-                dataChanged(oldActiveWindow, QVector<int>{IsActive});
-            }
-
-            row = windows.indexOf(window);
-
-            if (row != -1) {
-                dataChanged(window, QVector<int>{IsActive});
-            }
+        if (row != -1) {
+            dataChanged(oldActiveWindow, QVector<int>{IsActive});
         }
-    );
 
-    QObject::connect(KWindowSystem::self(), &KWindowSystem::stackingOrderChanged, q,
-        [this]() {
-            cachedStackingOrder = KWindowSystem::stackingOrder();
-            Q_EMIT q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0),
-                    QVector<int>{StackingOrder});
+        row = windows.indexOf(window);
+
+        if (row != -1) {
+            dataChanged(window, QVector<int>{IsActive});
         }
-    );
+    });
+
+    QObject::connect(KWindowSystem::self(), &KWindowSystem::stackingOrderChanged, q, [this]() {
+        cachedStackingOrder = KWindowSystem::stackingOrder();
+        Q_EMIT q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QVector<int>{StackingOrder});
+    });
 
     activeWindow = KWindowSystem::activeWindow();
 
     // Add existing windows.
-    foreach(const WId window, KWindowSystem::windows()) {
+    foreach (const WId window, KWindowSystem::windows()) {
         addWindow(window);
     }
 }
@@ -220,20 +208,15 @@ void XWindowTasksModel::Private::addWindow(WId window)
         return;
     }
 
-    KWindowInfo info(window,
-                     NET::WMWindowType | NET::WMState | NET::WMName | NET::WMVisibleName,
-                     NET::WM2TransientFor);
+    KWindowInfo info(window, NET::WMWindowType | NET::WMState | NET::WMName | NET::WMVisibleName, NET::WM2TransientFor);
 
-    NET::WindowType wType = info.windowType(NET::NormalMask | NET::DesktopMask | NET::DockMask |
-                                            NET::ToolbarMask | NET::MenuMask | NET::DialogMask |
-                                            NET::OverrideMask | NET::TopMenuMask |
-                                            NET::UtilityMask | NET::SplashMask);
+    NET::WindowType wType = info.windowType(NET::NormalMask | NET::DesktopMask | NET::DockMask | NET::ToolbarMask | NET::MenuMask | NET::DialogMask
+                                            | NET::OverrideMask | NET::TopMenuMask | NET::UtilityMask | NET::SplashMask);
 
     const WId leader = info.transientFor();
 
     // Handle transient.
-    if (leader > 0 && leader != window && leader != QX11Info::appRootWindow()
-        && !transients.values().contains(window) && windows.contains(leader)) {
+    if (leader > 0 && leader != window && leader != QX11Info::appRootWindow() && !transients.values().contains(window) && windows.contains(leader)) {
         transients.insert(leader, window);
 
         // Update demands attention state for leader.
@@ -246,9 +229,7 @@ void XWindowTasksModel::Private::addWindow(WId window)
     }
 
     // Ignore NET::Tool and other special window types; they are not considered tasks.
-    if (wType != NET::Normal && wType != NET::Override && wType != NET::Unknown &&
-        wType != NET::Dialog && wType != NET::Utility) {
-
+    if (wType != NET::Normal && wType != NET::Override && wType != NET::Unknown && wType != NET::Dialog && wType != NET::Utility) {
         return;
     }
 
@@ -310,7 +291,7 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
         } else if (transientsDemandingAttention.remove(window)) {
             dataChanged(leader, QVector<int>{IsDemandingAttention});
         }
-    // Leader might have changed.
+        // Leader might have changed.
     } else if (properties2 & NET::WM2TransientFor) {
         const KWindowInfo info(window, NET::WMState | NET::XAWMState, NET::WM2TransientFor);
 
@@ -343,8 +324,7 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
     bool wipeAppDataCache = false;
     QVector<int> changedRoles;
 
-    if (properties & (NET::WMPid)
-        || properties2 & (NET::WM2DesktopFileName | NET::WM2WindowClass)) {
+    if (properties & (NET::WMPid) || properties2 & (NET::WM2DesktopFileName | NET::WM2WindowClass)) {
         wipeInfoCache = true;
         wipeAppDataCache = true;
         changedRoles << Qt::DecorationRole << AppId << AppName << GenericName << LauncherUrl << AppPid << SkipTaskbar;
@@ -432,7 +412,7 @@ void XWindowTasksModel::Private::dataChanged(WId window, const QVector<int> &rol
     emit q->dataChanged(idx, idx, roles);
 }
 
-KWindowInfo* XWindowTasksModel::Private::windowInfo(WId window)
+KWindowInfo *XWindowTasksModel::Private::windowInfo(WId window)
 {
     const auto &it = windowInfoCache.constFind(window);
 
@@ -548,15 +528,12 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
         }
     }
 
-    return windowUrlFromMetadata(info->windowClassClass(),
-        info->pid(),
-        rulesConfig, info->windowClassName());
+    return windowUrlFromMetadata(info->windowClassClass(), info->pid(), rulesConfig, info->windowClassName());
 }
 
 QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon)
 {
     const AppData &data = appData(window);
-
 
     QUrl url = data.url;
     if (!encodeFallbackIcon || !data.icon.name().isEmpty()) {
@@ -604,8 +581,7 @@ QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon
 bool XWindowTasksModel::Private::demandsAttention(WId window)
 {
     if (windows.contains(window)) {
-        return ((windowInfo(window)->hasState(NET::DemandsAttention))
-        || transientsDemandingAttention.contains(window));
+        return ((windowInfo(window)->hasState(NET::DemandsAttention)) || transientsDemandingAttention.contains(window));
     }
 
     return false;
@@ -624,7 +600,7 @@ XWindowTasksModel::~XWindowTasksModel()
 
 QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid()  || index.row() >= d->windows.count()) {
+    if (!index.isValid() || index.row() >= d->windows.count()) {
         return QVariant();
     }
 
@@ -649,7 +625,7 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == MimeType) {
         return d->mimeType();
     } else if (role == MimeData) {
-        return QByteArray((char*)&window, sizeof(window));
+        return QByteArray((char *)&window, sizeof(window));
     } else if (role == IsWindow) {
         return true;
     } else if (role == IsActive) {
@@ -707,9 +683,7 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         const KWindowInfo *info = d->windowInfo(window);
         // _NET_WM_WINDOW_TYPE_UTILITY type windows should not be on task bars,
         // but they should be shown on pagers.
-        return (info->hasState(NET::SkipTaskbar)
-            || info->windowType(NET::UtilityMask) == NET::Utility
-            || d->appData(window).skipTaskbar);
+        return (info->hasState(NET::SkipTaskbar) || info->windowType(NET::UtilityMask) == NET::Utility || d->appData(window).skipTaskbar);
     } else if (role == SkipPager) {
         return d->windowInfo(window)->hasState(NET::SkipPager);
     } else if (role == AppPid) {
@@ -746,12 +720,12 @@ void XWindowTasksModel::requestActivate(const QModelIndex &index)
         // Pull forward any transient demanding attention.
         if (d->transientsDemandingAttention.contains(window)) {
             window = d->transientsDemandingAttention.value(window);
-        // Quote from legacy libtaskmanager:
-        // "this is a work around for (at least?) kwin where a shaded transient will prevent the main
-        // window from being brought forward unless the transient is actually pulled forward, most
-        // easily reproduced by opening a modal file open/save dialog on an app then shading the file
-        // dialog and trying to bring the window forward by clicking on it in a tasks widget
-        // TODO: do we need to check all the transients for shaded?"
+            // Quote from legacy libtaskmanager:
+            // "this is a work around for (at least?) kwin where a shaded transient will prevent the main
+            // window from being brought forward unless the transient is actually pulled forward, most
+            // easily reproduced by opening a modal file open/save dialog on an app then shading the file
+            // dialog and trying to bring the window forward by clicking on it in a tasks widget
+            // TODO: do we need to check all the transients for shaded?"
         } else if (!d->transients.isEmpty()) {
             foreach (const WId transient, d->transients) {
                 KWindowInfo info(transient, NET::WMState, NET::WM2TransientFor);
@@ -778,9 +752,7 @@ void XWindowTasksModel::requestNewInstance(const QModelIndex &index)
 
 void XWindowTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0
-        || index.row() >= d->windows.count()
-        || urls.isEmpty()) {
+    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count() || urls.isEmpty()) {
         return;
     }
 
@@ -1055,7 +1027,6 @@ void XWindowTasksModel::requestActivities(const QModelIndex &index, const QStrin
     KWindowSystem::setOnActivities(window, activities);
 }
 
-
 void XWindowTasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
 {
     Q_UNUSED(delegate)
@@ -1066,8 +1037,7 @@ void XWindowTasksModel::requestPublishDelegateGeometry(const QModelIndex &index,
 
     const WId window = d->windows.at(index.row());
 
-    if (d->delegateGeometries.contains(window)
-        && d->delegateGeometries.value(window) == geometry) {
+    if (d->delegateGeometries.contains(window) && d->delegateGeometries.value(window) == geometry) {
         return;
     }
 

@@ -22,8 +22,8 @@
 #include <QString>
 #include <QTimer>
 
-
-class Waiter : public QCoreApplication {
+class Waiter : public QCoreApplication
+{
     Q_OBJECT
 
 public:

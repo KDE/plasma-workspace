@@ -107,5 +107,4 @@ private:
     QPointer<KPropertiesDialog> m_configDialog;
 
     TaskManager::StartupTasksModel *m_startupTasksModel = nullptr;
-
 };

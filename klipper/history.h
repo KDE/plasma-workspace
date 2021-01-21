@@ -20,9 +20,9 @@
 #ifndef HISTORY_H
 #define HISTORY_H
 
-#include <QObject>
-#include <QHash>
 #include <QByteArray>
+#include <QHash>
+#include <QObject>
 
 class HistoryItem;
 class HistoryModel;
@@ -32,7 +32,7 @@ class History : public QObject
 {
     Q_OBJECT
 public:
-    explicit History( QObject* parent );
+    explicit History(QObject *parent);
     ~History() override;
 
     /**
@@ -54,7 +54,7 @@ public:
     /**
      * Remove (first) history item equal to item from history
      */
-    void remove( const QSharedPointer<const HistoryItem> &item  );
+    void remove(const QSharedPointer<const HistoryItem> &item);
 
     /**
      * Traversal: Get first item
@@ -64,7 +64,7 @@ public:
     /**
      * Get item identified by uuid
      */
-    QSharedPointer<const HistoryItem> find(const QByteArray& uuid) const;
+    QSharedPointer<const HistoryItem> find(const QByteArray &uuid) const;
 
     /**
      * @return next item in cycle, or null if at end
@@ -84,7 +84,7 @@ public:
     /**
      * Set maximum history size
      */
-    void setMaxSize( unsigned max_size );
+    void setMaxSize(unsigned max_size);
 
     /**
      * Get the maximum history size
@@ -94,7 +94,8 @@ public:
     /**
      * returns true if the user has selected the top item
      */
-    bool topIsUserSelected() {
+    bool topIsUserSelected()
+    {
         return m_topIsUserSelected;
     }
 
@@ -108,7 +109,8 @@ public:
      */
     void cyclePrev();
 
-    HistoryModel *model() {
+    HistoryModel *model()
+    {
         return m_model;
     }
 
@@ -116,12 +118,12 @@ public Q_SLOTS:
     /**
      * move the history in position pos to top
      */
-    void slotMoveToTop(QAction* action);
+    void slotMoveToTop(QAction *action);
 
     /**
      * move the history in position pos to top
      */
-    void slotMoveToTop(const QByteArray& uuid);
+    void slotMoveToTop(const QByteArray &uuid);
 
     /**
      * Clear history

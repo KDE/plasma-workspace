@@ -17,15 +17,15 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "clipboardjob.h"
-#include "klipper.h"
 #include "history.h"
 #include "historyitem.h"
+#include "klipper.h"
 
-#include <KIO/PreviewJob>
-#include <QtConcurrent>
-#include <QFutureWatcher>
 #include "klipper_debug.h"
+#include <KIO/PreviewJob>
+#include <QFutureWatcher>
 #include <QIcon>
+#include <QtConcurrent>
 
 #include <prison/Prison>
 
@@ -68,15 +68,13 @@ void ClipboardJob::start()
         m_klipper->history()->remove(item);
         setResult(true);
     } else if (operation == QLatin1String("edit")) {
-        connect(m_klipper, &Klipper::editFinished, this,
-            [this, item](HistoryItemConstPtr editedItem, int result) {
-                if (item != editedItem) {
-                    // not our item
-                    return;
-                }
-                setResult(result);
+        connect(m_klipper, &Klipper::editFinished, this, [this, item](HistoryItemConstPtr editedItem, int result) {
+            if (item != editedItem) {
+                // not our item
+                return;
             }
-        );
+            setResult(result);
+        });
         m_klipper->editData(item);
         return;
     } else if (operation == QLatin1String("barcode")) {
@@ -115,13 +113,11 @@ void ClipboardJob::start()
         if (code) {
             code->setData(item->text());
             QFutureWatcher<QImage> *watcher = new QFutureWatcher<QImage>(this);
-            connect(watcher, &QFutureWatcher<QImage>::finished, this,
-                [this, watcher, code] {
-                    setResult(watcher->result());
-                    watcher->deleteLater();
-                    delete code;
-                }
-            );
+            connect(watcher, &QFutureWatcher<QImage>::finished, this, [this, watcher, code] {
+                setResult(watcher->result());
+                watcher->deleteLater();
+                delete code;
+            });
             auto future = QtConcurrent::run(code, &Prison::AbstractBarcode::toImage, QSizeF(pixelWidth, pixelHeight));
             watcher->setFuture(future);
             return;
@@ -154,24 +150,20 @@ void ClipboardJob::start()
         KFileItemList urls;
         urls << item;
 
-        KIO::PreviewJob* job = KIO::filePreview(urls, QSize(pixelWidth, pixelHeight));
+        KIO::PreviewJob *job = KIO::filePreview(urls, QSize(pixelWidth, pixelHeight));
         job->setIgnoreMaximumSize(true);
-        connect(job, &KIO::PreviewJob::gotPreview, this,
-            [this](const KFileItem &item, const QPixmap &preview) {
-                QVariantMap res;
-                res.insert(s_urlKey, item.url());
-                res.insert(s_previewKey, preview);
-                res.insert(s_iconKey, false);
-                res.insert(s_previewWidthKey, preview.size().width());
-                res.insert(s_previewHeightKey, preview.size().height());
-                setResult(res);
-            }
-        );
-        connect(job, &KIO::PreviewJob::failed, this,
-            [this](const KFileItem &item) {
-                iconResult(item);
-            }
-        );
+        connect(job, &KIO::PreviewJob::gotPreview, this, [this](const KFileItem &item, const QPixmap &preview) {
+            QVariantMap res;
+            res.insert(s_urlKey, item.url());
+            res.insert(s_previewKey, preview);
+            res.insert(s_iconKey, false);
+            res.insert(s_previewWidthKey, preview.size().width());
+            res.insert(s_previewHeightKey, preview.size().height());
+            setResult(res);
+        });
+        connect(job, &KIO::PreviewJob::failed, this, [this](const KFileItem &item) {
+            iconResult(item);
+        });
 
         job->start();
 
@@ -182,7 +174,7 @@ void ClipboardJob::start()
     emitResult();
 }
 
-void ClipboardJob::iconResult(const KFileItem& item)
+void ClipboardJob::iconResult(const KFileItem &item)
 {
     QVariantMap res;
     res.insert(s_urlKey, item.url());

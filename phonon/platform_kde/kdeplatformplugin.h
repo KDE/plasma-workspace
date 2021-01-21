@@ -20,13 +20,12 @@
 #ifndef PHONON_KDEPLATFORMPLUGIN_H
 #define PHONON_KDEPLATFORMPLUGIN_H
 
-#include <phonon/platformplugin.h>
-#include <phonon/objectdescription.h>
 #include <QObject>
+#include <phonon/objectdescription.h>
+#include <phonon/platformplugin.h>
 
-namespace Phonon {
-
-
+namespace Phonon
+{
 class KdePlatformPlugin : public QObject, public PlatformPlugin
 {
     Q_PLUGIN_METADATA(IID "3PlatformPlugin.phonon.kde.org" FILE "phononbackend.json")
@@ -39,9 +38,7 @@ public:
     AbstractMediaStream *createMediaStream(const QUrl &url, QObject *parent) override;
 
     QIcon icon(const QString &name) const override;
-    void notification(const char *notificationName, const QString &text,
-                      const QStringList &actions, QObject *receiver,
-                      const char *actionSlot) const override;
+    void notification(const char *notificationName, const QString &text, const QStringList &actions, QObject *receiver, const char *actionSlot) const override;
     QString applicationName() const override;
     QObject *createBackend() override;
     QObject *createBackend(const QString &library, const QString &version) override;

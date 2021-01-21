@@ -31,8 +31,8 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <config-X11.h>
 
 #if HAVE_X11
-#include <netwm.h>
 #include <QX11Info>
+#include <netwm.h>
 #endif
 
 namespace TaskManager
@@ -43,7 +43,9 @@ class Q_DECL_HIDDEN VirtualDesktopInfo::Private : public QObject
 
 public:
     Private();
-    virtual ~Private() {}
+    virtual ~Private()
+    {
+    }
 
     uint refCount = 1;
 
@@ -97,21 +99,19 @@ VirtualDesktopInfo::XWindowPrivate::XWindowPrivate()
 
 void VirtualDesktopInfo::XWindowPrivate::init()
 {
-    connect(KWindowSystem::self(), &KWindowSystem::currentDesktopChanged,
-        this, &VirtualDesktopInfo::XWindowPrivate::currentDesktopChanged);
+    connect(KWindowSystem::self(), &KWindowSystem::currentDesktopChanged, this, &VirtualDesktopInfo::XWindowPrivate::currentDesktopChanged);
 
-    connect(KWindowSystem::self(), &KWindowSystem::numberOfDesktopsChanged,
-        this, &VirtualDesktopInfo::XWindowPrivate::numberOfDesktopsChanged);
+    connect(KWindowSystem::self(), &KWindowSystem::numberOfDesktopsChanged, this, &VirtualDesktopInfo::XWindowPrivate::numberOfDesktopsChanged);
 
-    connect(KWindowSystem::self(), &KWindowSystem::desktopNamesChanged,
-        this, &VirtualDesktopInfo::XWindowPrivate::desktopNamesChanged);
+    connect(KWindowSystem::self(), &KWindowSystem::desktopNamesChanged, this, &VirtualDesktopInfo::XWindowPrivate::desktopNamesChanged);
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.connect(QString(),
                  QStringLiteral("/VirtualDesktopManager"),
                  QStringLiteral("org.kde.KWin.VirtualDesktopManager"),
                  QStringLiteral("rowsChanged"),
-        this, SIGNAL(desktopLayoutRowsChanged()));
+                 this,
+                 SIGNAL(desktopLayoutRowsChanged()));
 }
 
 QVariant VirtualDesktopInfo::XWindowPrivate::currentDesktop() const
@@ -241,37 +241,36 @@ void VirtualDesktopInfo::WaylandPrivate::init()
     KWayland::Client::Registry *registry = new KWayland::Client::Registry(this);
     registry->create(connection);
 
-    QObject::connect(registry, &KWayland::Client::Registry::plasmaVirtualDesktopManagementAnnounced,
-        [this, registry] (quint32 name, quint32 version) {
-            virtualDesktopManagement = registry->createPlasmaVirtualDesktopManagement(name, version, this);
+    QObject::connect(registry, &KWayland::Client::Registry::plasmaVirtualDesktopManagementAnnounced, [this, registry](quint32 name, quint32 version) {
+        virtualDesktopManagement = registry->createPlasmaVirtualDesktopManagement(name, version, this);
 
-            const QList<KWayland::Client::PlasmaVirtualDesktop *> &desktops = virtualDesktopManagement->desktops();
+        const QList<KWayland::Client::PlasmaVirtualDesktop *> &desktops = virtualDesktopManagement->desktops();
 
-            QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::desktopCreated, this,
-                [this](const QString &id, quint32 position) {
-                    addDesktop(id, position);
-                }
-            );
+        QObject::connect(virtualDesktopManagement,
+                         &KWayland::Client::PlasmaVirtualDesktopManagement::desktopCreated,
+                         this,
+                         [this](const QString &id, quint32 position) {
+                             addDesktop(id, position);
+                         });
 
-            QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::desktopRemoved, this,
-                [this](const QString &id) {
-                    virtualDesktops.removeOne(id);
+        QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::desktopRemoved, this, [this](const QString &id) {
+            virtualDesktops.removeOne(id);
 
-                    emit numberOfDesktopsChanged();
-                    emit desktopIdsChanged();
-                    emit desktopNamesChanged();
+            emit numberOfDesktopsChanged();
+            emit desktopIdsChanged();
+            emit desktopNamesChanged();
 
-                    if (currentVirtualDesktop == id) {
-                        currentVirtualDesktop.clear();
-                        emit currentDesktopChanged();
-                    }
-                }
-            );
+            if (currentVirtualDesktop == id) {
+                currentVirtualDesktop.clear();
+                emit currentDesktopChanged();
+            }
+        });
 
-            QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::rowsChanged,
-                this, &VirtualDesktopInfo::WaylandPrivate::desktopLayoutRowsChanged);
-        }
-    );
+        QObject::connect(virtualDesktopManagement,
+                         &KWayland::Client::PlasmaVirtualDesktopManagement::rowsChanged,
+                         this,
+                         &VirtualDesktopInfo::WaylandPrivate::desktopLayoutRowsChanged);
+    });
 
     registry->setup();
 }
@@ -290,18 +289,14 @@ void VirtualDesktopInfo::WaylandPrivate::addDesktop(const QString &id, quint32 p
 
     const KWayland::Client::PlasmaVirtualDesktop *desktop = virtualDesktopManagement->getVirtualDesktop(id);
 
-    QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::activated, this,
-        [desktop, this]() {
-            currentVirtualDesktop = desktop->id();
-            emit currentDesktopChanged();
-        }
-    );
+    QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::activated, this, [desktop, this]() {
+        currentVirtualDesktop = desktop->id();
+        emit currentDesktopChanged();
+    });
 
-    QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::done, this,
-        [this]() {
-            emit desktopNamesChanged();
-        }
-    );
+    QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::done, this, [this]() {
+        emit desktopNamesChanged();
+    });
 
     if (desktop->isActive()) {
         currentVirtualDesktop = id;
@@ -342,7 +337,7 @@ QStringList VirtualDesktopInfo::WaylandPrivate::desktopNames() const
     }
     QStringList names;
 
-    foreach(const QString &id, virtualDesktops) {
+    foreach (const QString &id, virtualDesktops) {
         const KWayland::Client::PlasmaVirtualDesktop *desktop = virtualDesktopManagement->getVirtualDesktop(id);
 
         if (desktop) {
@@ -398,16 +393,17 @@ void VirtualDesktopInfo::WaylandPrivate::requestRemoveDesktop(quint32 position)
     virtualDesktopManagement->requestRemoveVirtualDesktop(virtualDesktops.at(position));
 }
 
-VirtualDesktopInfo::Private* VirtualDesktopInfo::d = nullptr;
+VirtualDesktopInfo::Private *VirtualDesktopInfo::d = nullptr;
 
-VirtualDesktopInfo::VirtualDesktopInfo(QObject *parent) : QObject(parent)
+VirtualDesktopInfo::VirtualDesktopInfo(QObject *parent)
+    : QObject(parent)
 {
     if (!d) {
-    #if HAVE_X11
+#if HAVE_X11
         if (KWindowSystem::isPlatformX11()) {
             d = new VirtualDesktopInfo::XWindowPrivate;
         } else
-    #endif
+#endif
         {
             d = new VirtualDesktopInfo::WaylandPrivate;
         }
@@ -415,16 +411,11 @@ VirtualDesktopInfo::VirtualDesktopInfo(QObject *parent) : QObject(parent)
         ++d->refCount;
     }
 
-    connect(d, &VirtualDesktopInfo::Private::currentDesktopChanged,
-            this, &VirtualDesktopInfo::currentDesktopChanged);
-    connect(d, &VirtualDesktopInfo::Private::numberOfDesktopsChanged,
-            this, &VirtualDesktopInfo::numberOfDesktopsChanged);
-    connect(d, &VirtualDesktopInfo::Private::desktopIdsChanged,
-            this, &VirtualDesktopInfo::desktopIdsChanged);
-    connect(d, &VirtualDesktopInfo::Private::desktopNamesChanged,
-            this, &VirtualDesktopInfo::desktopNamesChanged);
-    connect(d, &VirtualDesktopInfo::Private::desktopLayoutRowsChanged,
-            this, &VirtualDesktopInfo::desktopLayoutRowsChanged);
+    connect(d, &VirtualDesktopInfo::Private::currentDesktopChanged, this, &VirtualDesktopInfo::currentDesktopChanged);
+    connect(d, &VirtualDesktopInfo::Private::numberOfDesktopsChanged, this, &VirtualDesktopInfo::numberOfDesktopsChanged);
+    connect(d, &VirtualDesktopInfo::Private::desktopIdsChanged, this, &VirtualDesktopInfo::desktopIdsChanged);
+    connect(d, &VirtualDesktopInfo::Private::desktopNamesChanged, this, &VirtualDesktopInfo::desktopNamesChanged);
+    connect(d, &VirtualDesktopInfo::Private::desktopLayoutRowsChanged, this, &VirtualDesktopInfo::desktopLayoutRowsChanged);
 }
 
 VirtualDesktopInfo::~VirtualDesktopInfo()

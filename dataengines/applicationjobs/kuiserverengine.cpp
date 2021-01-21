@@ -21,10 +21,9 @@
 
 #include <QUrl>
 
-#include <KJob>
 #include <KFormat>
+#include <KJob>
 #include <KLocalizedString>
-
 
 #include "notifications.h"
 
@@ -32,7 +31,7 @@
 
 using namespace NotificationManager;
 
-KuiserverEngine::KuiserverEngine(QObject* parent, const QVariantList& args)
+KuiserverEngine::KuiserverEngine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)
 {
     init();
@@ -40,7 +39,6 @@ KuiserverEngine::KuiserverEngine(QObject* parent, const QVariantList& args)
 
 KuiserverEngine::~KuiserverEngine()
 {
-
 }
 
 QString KuiserverEngine::sourceName(Job *job)
@@ -53,7 +51,7 @@ uint KuiserverEngine::jobId(const QString &sourceName)
     return sourceName.midRef(4 /*length of Job + space*/).toUInt();
 }
 
-Plasma::Service* KuiserverEngine::serviceForSource(const QString& source)
+Plasma::Service *KuiserverEngine::serviceForSource(const QString &source)
 {
     const uint id = jobId(source);
     if (!id) {
@@ -94,11 +92,7 @@ void KuiserverEngine::init()
     });
 }
 
-void KuiserverEngine::updateDescriptionField(
-    Job *job,
-    int number,
-    QString (Job::*labelGetter)() const,
-    QString (Job::*valueGetter)() const)
+void KuiserverEngine::updateDescriptionField(Job *job, int number, QString (Job::*labelGetter)() const, QString (Job::*valueGetter)() const)
 {
     const QString source = sourceName(job);
     const QString labelString = QStringLiteral("label%1").arg(number);
@@ -113,21 +107,20 @@ void KuiserverEngine::updateDescriptionField(
         setData(source, labelNameString, QVariant());
         setData(source, labelFileNameString, QVariant());
     } else {
-       setData(source, labelNameString, label);
-       setData(source, labelString, value);
+        setData(source, labelNameString, label);
+        setData(source, labelString, value);
 
-       const QUrl url = QUrl::fromUserInput(value, QString(), QUrl::AssumeLocalFile);
-       setData(source, labelFileNameString, url.toString(QUrl::PreferLocalFile | QUrl::RemoveFragment | QUrl::RemoveQuery));
+        const QUrl url = QUrl::fromUserInput(value, QString(), QUrl::AssumeLocalFile);
+        setData(source, labelFileNameString, url.toString(QUrl::PreferLocalFile | QUrl::RemoveFragment | QUrl::RemoveQuery));
     }
     setData(source, labelString);
 }
 
-void KuiserverEngine::updateUnit(
-    Job *job,
-    int number,
-    const QString &unit,
-    qulonglong (NotificationManager::Job::*processedGetter)() const,
-    qulonglong (NotificationManager::Job::*totalGetter)() const)
+void KuiserverEngine::updateUnit(Job *job,
+                                 int number,
+                                 const QString &unit,
+                                 qulonglong (NotificationManager::Job::*processedGetter)() const,
+                                 qulonglong (NotificationManager::Job::*totalGetter)() const)
 {
     const QString source = sourceName(job);
 
@@ -145,7 +138,7 @@ void KuiserverEngine::registerJob(Job *job)
 
     const QString source = sourceName(job);
 
-    setData(source, QStringLiteral("appName"), job->desktopEntry());// job->applicationName());
+    setData(source, QStringLiteral("appName"), job->desktopEntry()); // job->applicationName());
     setData(source, QStringLiteral("appIconName"), job->applicationIconName());
     setData(source, QStringLiteral("suspendable"), job->suspendable());
     setData(source, QStringLiteral("killable"), job->killable());
@@ -196,8 +189,7 @@ void KuiserverEngine::registerJob(Job *job)
     } s_unitsFields[] = {
         {0, QStringLiteral("bytes"), &Job::processedBytes, &Job::processedBytesChanged, &Job::totalBytes, &Job::totalBytesChanged},
         {1, QStringLiteral("files"), &Job::processedFiles, &Job::processedFilesChanged, &Job::totalFiles, &Job::totalFilesChanged},
-        {2, QStringLiteral("dirs"), &Job::processedDirectories, &Job::processedDirectoriesChanged, &Job::totalDirectories, &Job::totalDirectoriesChanged}
-    };
+        {2, QStringLiteral("dirs"), &Job::processedDirectories, &Job::processedDirectoriesChanged, &Job::totalDirectories, &Job::totalDirectoriesChanged}};
 
     for (auto fields : s_unitsFields) {
         updateUnit(job, fields.number, fields.unit, fields.processedGetter, fields.totalGetter);

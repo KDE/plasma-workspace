@@ -22,8 +22,8 @@
 
 #include <KLocalizedString>
 
-#include <QDebug> // for Q_ASSERT
 #include <QAction>
+#include <QDebug> // for Q_ASSERT
 
 #include <algorithm>
 
@@ -33,7 +33,7 @@
 // never interfere with an actual MPRIS2 player
 const QLatin1String Multiplexer::sourceName = QLatin1String("@multiplex");
 
-Multiplexer::Multiplexer(QObject* parent)
+Multiplexer::Multiplexer(QObject *parent)
     : DataContainer(parent)
 {
     setObjectName(sourceName);
@@ -81,9 +81,7 @@ void Multiplexer::evaluatePlayer(PlayerContainer *container)
         if (m_playing.value(name) && multiplexerPlaybackStatus != QLatin1String("Playing")) {
             qCDebug(MPRIS2) << "Player" << name << "is now playing but current was not";
             makeActive = true;
-        } else if (m_paused.value(name)
-           && multiplexerPlaybackStatus != QLatin1String("Playing")
-           && multiplexerPlaybackStatus != QLatin1String("Paused")) {
+        } else if (m_paused.value(name) && multiplexerPlaybackStatus != QLatin1String("Playing") && multiplexerPlaybackStatus != QLatin1String("Paused")) {
             qCDebug(MPRIS2) << "Player" << name << "is now paused but current was stopped";
             makeActive = true;
         }
@@ -119,8 +117,7 @@ void Multiplexer::addPlayer(PlayerContainer *container)
 {
     evaluatePlayer(container);
 
-    connect(container, &Plasma::DataContainer::dataUpdated,
-            this,      &Multiplexer::playerUpdated);
+    connect(container, &Plasma::DataContainer::dataUpdated, this, &Multiplexer::playerUpdated);
 }
 
 void Multiplexer::removePlayer(const QString &name)
@@ -188,7 +185,7 @@ PlayerContainer *Multiplexer::firstPlayerFromHash(const QHash<QString, PlayerCon
                 *proxyCandidate = proxy;
             }
             return nullptr;
-            //continue;
+            // continue;
         }
         return proxy;
     }
@@ -243,4 +240,3 @@ void Multiplexer::replaceData(const Plasma::DataEngine::Data &data)
     }
     setData(QStringLiteral("Source Name"), m_activeName);
 }
-

@@ -23,7 +23,6 @@
 #include "appmenumodel.h"
 #include <QQmlEngine>
 
-
 void AppmenuPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.appmenu"));

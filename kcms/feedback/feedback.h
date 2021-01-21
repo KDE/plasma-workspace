@@ -35,20 +35,20 @@ class Feedback : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(bool feedbackEnabled READ feedbackEnabled CONSTANT)
     Q_PROPERTY(FeedbackSettings *feedbackSettings READ feedbackSettings CONSTANT)
 
-    public:
-        explicit Feedback(QObject *parent = nullptr, const QVariantList &list = QVariantList());
-        ~Feedback() override;
+public:
+    explicit Feedback(QObject *parent = nullptr, const QVariantList &list = QVariantList());
+    ~Feedback() override;
 
-        bool feedbackEnabled() const;
-        FeedbackSettings *feedbackSettings() const;
+    bool feedbackEnabled() const;
+    FeedbackSettings *feedbackSettings() const;
 
-        void programFinished(int exitCode);
+    void programFinished(int exitCode);
 
-    Q_SIGNALS:
-        void feedbackSourcesChanged();
+Q_SIGNALS:
+    void feedbackSourcesChanged();
 
-    private:
-        QHash<int, QHash<QString, QJsonArray>> m_uses;
-        QJsonArray m_feedbackSources;
-        FeedbackData *m_data;
+private:
+    QHash<int, QHash<QString, QJsonArray>> m_uses;
+    QJsonArray m_feedbackSources;
+    FeedbackData *m_data;
 };

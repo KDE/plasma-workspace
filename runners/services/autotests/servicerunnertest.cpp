@@ -61,8 +61,7 @@ void ServiceRunnerTest::initTestCase()
     for (const auto &fileInfo : infoList) {
         auto source = fileInfo.absoluteFilePath();
         auto target = appsPath + QDir::separator() + fileInfo.fileName();
-        QVERIFY2(QFile::copy(fileInfo.absoluteFilePath(), target),
-                 qPrintable(QStringLiteral("can't copy %1 => %2").arg(source, target)));
+        QVERIFY2(QFile::copy(fileInfo.absoluteFilePath(), target), qPrintable(QStringLiteral("can't copy %1 => %2").arg(source, target)));
     }
 
     setlocale(LC_ALL, "C.utf8");
@@ -198,14 +197,11 @@ void ServiceRunnerTest::testForeignAppsOutscoreKCMs()
     QVERIFY(kcmRelevance.has_value());
 
     // KDE app should be >= non-KDE app
-    QVERIFY2(virtThingsRelevance >= virtManRelevance,
-             qPrintable(QStringLiteral("%1 >= %2").arg(virtThingsRelevance.value(), virtManRelevance.value())));
+    QVERIFY2(virtThingsRelevance >= virtManRelevance, qPrintable(QStringLiteral("%1 >= %2").arg(virtThingsRelevance.value(), virtManRelevance.value())));
     // KDE app strictly greater KDE kcm
-    QVERIFY2(virtThingsRelevance > kcmRelevance,
-             qPrintable(QStringLiteral("%1 > %2").arg(virtThingsRelevance.value(), kcmRelevance.value())));
+    QVERIFY2(virtThingsRelevance > kcmRelevance, qPrintable(QStringLiteral("%1 > %2").arg(virtThingsRelevance.value(), kcmRelevance.value())));
     // non-KDE app also strictly greater (because it is an app)
-    QVERIFY2(virtManRelevance > kcmRelevance,
-             qPrintable(QStringLiteral("%1 > %2").arg(virtManRelevance.value(), kcmRelevance.value())));
+    QVERIFY2(virtManRelevance > kcmRelevance, qPrintable(QStringLiteral("%1 > %2").arg(virtManRelevance.value(), kcmRelevance.value())));
 }
 
 void ServiceRunnerTest::testINotifyUsage()

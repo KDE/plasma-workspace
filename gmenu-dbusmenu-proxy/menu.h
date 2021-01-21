@@ -23,8 +23,8 @@
 #include <QString>
 #include <QVector>
 
-#include "gdbusmenutypes_p.h"
 #include "../libdbusmenuqt/dbusmenutypes_p.h"
+#include "gdbusmenutypes_p.h"
 
 class Menu : public QObject
 {
@@ -77,5 +77,4 @@ private:
 
     QString m_serviceName;
     QString m_objectPath;
-
 };

@@ -24,12 +24,12 @@
 #include <QDebug>
 #include <QIcon>
 
-#include <KProcess>
 #include <KAuth>
 #include <KLocalizedString>
+#include <KProcess>
 
-#include <processcore/processes.h>
 #include <processcore/process.h>
+#include <processcore/processes.h>
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(KillRunner, "plasma-runner-kill.json")
 
@@ -53,7 +53,6 @@ KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData, const Q
 
 KillRunner::~KillRunner() = default;
 
-
 void KillRunner::reloadConfiguration()
 {
     KConfigGroup grp = config();
@@ -63,10 +62,9 @@ void KillRunner::reloadConfiguration()
     }
     m_hasTrigger = !m_triggerWord.isEmpty();
 
-    m_sorting = (Sort) grp.readEntry(CONFIG_SORTING, static_cast<int>(Sort::NONE));
+    m_sorting = (Sort)grp.readEntry(CONFIG_SORTING, static_cast<int>(Sort::NONE));
     QList<Plasma::RunnerSyntax> syntaxes;
-    syntaxes << Plasma::RunnerSyntax(m_triggerWord + QStringLiteral(":q:"),
-                                     i18n("Terminate running applications whose names match the query."));
+    syntaxes << Plasma::RunnerSyntax(m_triggerWord + QStringLiteral(":q:"), i18n("Terminate running applications whose names match the query."));
     setSyntaxes(syntaxes);
     if (m_hasTrigger) {
         setTriggerWords({m_triggerWord});
@@ -165,7 +163,7 @@ void KillRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMa
     if (match.selectedAction()) {
         signal = match.selectedAction()->data().toInt();
     } else {
-        signal = 9; //default: SIGKILL
+        signal = 9; // default: SIGKILL
     }
 
     const QStringList args = {QStringLiteral("-%1").arg(signal), QString::number(pid)};

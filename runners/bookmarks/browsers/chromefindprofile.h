@@ -18,20 +18,19 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef CHROMEFINDPROFILE_H
 #define CHROMEFINDPROFILE_H
 
-#include <QObject>
-#include <QDir>
 #include "browsers/findprofile.h"
+#include <QDir>
+#include <QObject>
 
 class FindChromeProfile : public QObject, public FindProfile
 {
-
 public:
-    explicit FindChromeProfile (const QString& applicationName, const QString &homeDirectory = QDir::homePath(), QObject* parent = nullptr );
+    explicit FindChromeProfile(const QString &applicationName, const QString &homeDirectory = QDir::homePath(), QObject *parent = nullptr);
     QList<Profile> find() override;
+
 private:
     QString const m_applicationName;
     QString const m_homeDirectory;

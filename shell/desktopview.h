@@ -19,17 +19,16 @@
 #ifndef DESKTOPVIEW_H
 #define DESKTOPVIEW_H
 
-
-#include <PlasmaQuick/ContainmentView>
 #include <PlasmaQuick/ConfigView>
+#include <PlasmaQuick/ContainmentView>
 #include <QPointer>
 
 namespace KWayland
 {
-    namespace Client
-    {
-        class PlasmaShellSurface;
-    }
+namespace Client
+{
+class PlasmaShellSurface;
+}
 }
 
 class DesktopView : public PlasmaQuick::ContainmentView
@@ -38,7 +37,7 @@ class DesktopView : public PlasmaQuick::ContainmentView
 
     Q_PROPERTY(WindowType windowType READ windowType WRITE setWindowType NOTIFY windowTypeChanged)
 
-    //What kind of plasma session we're in: are we in a full workspace, an application?...
+    // What kind of plasma session we're in: are we in a full workspace, an application?...
     Q_PROPERTY(SessionType sessionType READ sessionType CONSTANT)
 
     Q_PROPERTY(QVariantMap candidateContainments READ candidateContainmentsGraphicItems NOTIFY candidateContainmentsChanged)
@@ -68,7 +67,7 @@ public:
     QScreen *screenToFollow() const;
 
     void adaptToScreen();
-    void showEvent(QShowEvent*) override;
+    void showEvent(QShowEvent *) override;
 
     WindowType windowType() const;
     void setWindowType(WindowType type);

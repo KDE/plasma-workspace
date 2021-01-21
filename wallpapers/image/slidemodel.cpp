@@ -29,24 +29,22 @@ void SlideModel::reload(const QStringList &selected)
     addDirs(selected);
 }
 
-
 void SlideModel::addDirs(const QStringList &selected)
 {
     BackgroundFinder *finder = new BackgroundFinder(m_wallpaper.data(), selected);
     connect(finder, &BackgroundFinder::backgroundsFound, this, &SlideModel::backgroundsFound);
     m_findToken = finder->token();
-    finder->start(); 
+    finder->start();
 }
 
-void SlideModel::backgroundsFound(const QStringList& paths, const QString& token)
+void SlideModel::backgroundsFound(const QStringList &paths, const QString &token)
 {
-     if (token != m_findToken) {
+    if (token != m_findToken) {
         return;
     }
     processPaths(paths);
     emit done();
 }
-
 
 void SlideModel::removeDir(const QString &path)
 {
@@ -62,7 +60,7 @@ void SlideModel::removeBackgrounds(const QStringList &paths, const QString &toke
     }
 }
 
-QVariant SlideModel::data(const QModelIndex& index, int role) const
+QVariant SlideModel::data(const QModelIndex &index, int role) const
 {
     if (role == ToggleRole) {
         return !m_wallpaper.data()->uncheckedSlides().contains(data(index, PathRole).toString());
@@ -72,7 +70,7 @@ QVariant SlideModel::data(const QModelIndex& index, int role) const
 
 QHash<int, QByteArray> SlideModel::roleNames() const
 {
-   QHash<int, QByteArray> roleNames = BackgroundListModel::roleNames();
-   roleNames.insert(ToggleRole, "checked");
-   return roleNames;
+    QHash<int, QByteArray> roleNames = BackgroundListModel::roleNames();
+    roleNames.insert(ToggleRole, "checked");
+    return roleNames;
 }

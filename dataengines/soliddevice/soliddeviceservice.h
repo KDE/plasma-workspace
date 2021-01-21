@@ -28,16 +28,14 @@ class SolidDeviceService : public Plasma::Service
     Q_OBJECT
 
 public:
-    SolidDeviceService (SolidDeviceEngine* parent, const QString& source);
+    SolidDeviceService(SolidDeviceEngine *parent, const QString &source);
 
 protected:
-    Plasma::ServiceJob* createJob (const QString& operation,
-                                   QMap<QString, QVariant>& parameters) override;
+    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
-    SolidDeviceEngine* m_engine;
+    SolidDeviceEngine *m_engine;
     QString m_dest;
 };
 
 #endif // SOLIDDEVICE_SERVICE_H
-

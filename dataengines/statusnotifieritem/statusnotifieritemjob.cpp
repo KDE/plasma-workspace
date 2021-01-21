@@ -20,12 +20,12 @@
 #include "statusnotifieritemjob.h"
 #include <iostream>
 
-StatusNotifierItemJob::StatusNotifierItemJob(StatusNotifierItemSource *source, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent) :
-    ServiceJob(source->objectName(), operation, parameters, parent),
-    m_source(source)
+StatusNotifierItemJob::StatusNotifierItemJob(StatusNotifierItemSource *source, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent)
+    : ServiceJob(source->objectName(), operation, parameters, parent)
+    , m_source(source)
 {
     // Queue connection, so that all 'deleteLater' are performed before we use updated menu.
-    connect(source, SIGNAL(contextMenuReady(QMenu*)), this, SLOT(contextMenuReady(QMenu*)), Qt::QueuedConnection);
+    connect(source, SIGNAL(contextMenuReady(QMenu *)), this, SLOT(contextMenuReady(QMenu *)), Qt::QueuedConnection);
     connect(source, &StatusNotifierItemSource::activateResult, this, &StatusNotifierItemJob::activateCallback);
 }
 
@@ -58,6 +58,6 @@ void StatusNotifierItemJob::activateCallback(bool success)
 void StatusNotifierItemJob::contextMenuReady(QMenu *menu)
 {
     if (operationName() == QString::fromLatin1("ContextMenu")) {
-        setResult(QVariant::fromValue((QObject*)menu));
+        setResult(QVariant::fromValue((QObject *)menu));
     }
 }

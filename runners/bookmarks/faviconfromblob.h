@@ -21,9 +21,9 @@
 #ifndef FAVICONFROMBLOB_H
 #define FAVICONFROMBLOB_H
 
-#include <QIcon>
 #include "favicon.h"
 #include "fetchsqlite.h"
+#include <QIcon>
 
 class FaviconFromBlob : public Favicon
 {

@@ -19,11 +19,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 #include "../kcm.h"
 // Qt
-#include <QtTest>
+#include <KJob>
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
 #include <KSycoca>
-#include <KJob>
+#include <QtTest>
 
 class KcmTest : public QObject
 {
@@ -48,7 +48,6 @@ private:
     KCMLookandFeel *m_KCMLookandFeel;
 };
 
-
 void KcmTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
@@ -61,7 +60,7 @@ void KcmTest::initTestCase()
 
     QVERIFY(m_configDir.mkpath("."));
 
-    //we need an existing colorscheme file, even if empty
+    // we need an existing colorscheme file, even if empty
     QVERIFY(m_dataDir.mkpath(QStringLiteral("color-schemes")));
     QFile f(m_dataDir.path() + QStringLiteral("/color-schemes/TestValue.colors"));
     f.open(QIODevice::WriteOnly);
@@ -73,7 +72,7 @@ void KcmTest::initTestCase()
     p.setPath(packagePath);
     QVERIFY(p.isValid());
 
-    const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)+"/plasma/look-and-feel/";
+    const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/plasma/look-and-feel/";
     auto installJob = p.install(packagePath, packageRoot);
     installJob->exec();
 
@@ -91,7 +90,6 @@ void KcmTest::cleanupTestCase()
     m_dataDir.removeRecursively();
 }
 
-
 void KcmTest::testWidgetStyle()
 {
     m_KCMLookandFeel->setWidgetStyle(QStringLiteral("Fusion"));
@@ -105,7 +103,7 @@ void KcmTest::testWidgetStyle()
 
 void KcmTest::testColors()
 {
-    //TODO: test colorFile as well
+    // TODO: test colorFile as well
     m_KCMLookandFeel->setColors(QStringLiteral("customTestValue"), QString());
 
     KConfig config(QStringLiteral("kdeglobals"));
@@ -188,7 +186,7 @@ void KcmTest::testKCMSave()
     QCOMPARE(cg.readEntry("widgetStyle", QString()), QStringLiteral("Fusion"));
 
     cg = KConfigGroup(&config, "General");
-    //save() capitalizes the ColorScheme
+    // save() capitalizes the ColorScheme
     QCOMPARE(cg.readEntry("ColorScheme", QString()), QStringLiteral("TestValue"));
 
     cg = KConfigGroup(&config, "Icons");

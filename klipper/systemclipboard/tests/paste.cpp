@@ -16,12 +16,12 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QGuiApplication>
 #include <QDebug>
+#include <QGuiApplication>
 
 #include "../systemclipboard/systemclipboard.h"
 
-int main(int argc, char ** argv)
+int main(int argc, char **argv)
 {
     QGuiApplication app(argc, argv);
     auto clip = SystemClipboard::instance();

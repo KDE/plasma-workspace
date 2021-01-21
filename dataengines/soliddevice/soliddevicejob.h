@@ -28,23 +28,22 @@ class SolidDeviceJob : public Plasma::ServiceJob
     Q_OBJECT
 
 public:
-    SolidDeviceJob (SolidDeviceEngine* engine,
-                    const QString& destination,
-                    const QString& operation,
-                    QMap<QString, QVariant>& parameters,
-                    QObject* parent = nullptr)
-    : ServiceJob (destination, operation, parameters, parent),
-      m_engine (engine),
-      m_dest (destination)
-      {
-      }
+    SolidDeviceJob(SolidDeviceEngine *engine,
+                   const QString &destination,
+                   const QString &operation,
+                   QMap<QString, QVariant> &parameters,
+                   QObject *parent = nullptr)
+        : ServiceJob(destination, operation, parameters, parent)
+        , m_engine(engine)
+        , m_dest(destination)
+    {
+    }
 
     void start() override;
 
 private:
-    SolidDeviceEngine* m_engine;
+    SolidDeviceEngine *m_engine;
     QString m_dest;
 };
 
 #endif // SOLIDDEVICE_JOB_H
-

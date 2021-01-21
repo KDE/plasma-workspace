@@ -79,7 +79,10 @@ DummySessionBackend::DummySessionBackend()
 
 LogindSessionBackend::LogindSessionBackend()
 {
-    m_login1 = new OrgFreedesktopLogin1ManagerInterface(QStringLiteral("org.freedesktop.login1"), QStringLiteral("/org/freedesktop/login1"), QDBusConnection::systemBus(), this);
+    m_login1 = new OrgFreedesktopLogin1ManagerInterface(QStringLiteral("org.freedesktop.login1"),
+                                                        QStringLiteral("/org/freedesktop/login1"),
+                                                        QDBusConnection::systemBus(),
+                                                        this);
 
     auto propLoaded = [this](QDBusPendingCallWatcher *watcher, bool *argToUpdate) {
         watcher->deleteLater();
@@ -204,8 +207,14 @@ bool ConsoleKitSessionBackend::exists()
 
 ConsoleKitSessionBackend::ConsoleKitSessionBackend()
 {
-    m_ck = new OrgFreedesktopConsoleKitManagerInterface(QStringLiteral("org.freedesktop.ConsoleKit"), QStringLiteral("/org/freedesktop/ConsoleKit/Manager"), QDBusConnection::systemBus(), this);
-    m_upower = new OrgFreedesktopUPowerInterface(QStringLiteral("org.freedesktop.UPower"), QStringLiteral("/org/freedesktop/UPower"), QDBusConnection::systemBus(), this);
+    m_ck = new OrgFreedesktopConsoleKitManagerInterface(QStringLiteral("org.freedesktop.ConsoleKit"),
+                                                        QStringLiteral("/org/freedesktop/ConsoleKit/Manager"),
+                                                        QDBusConnection::systemBus(),
+                                                        this);
+    m_upower = new OrgFreedesktopUPowerInterface(QStringLiteral("org.freedesktop.UPower"),
+                                                 QStringLiteral("/org/freedesktop/UPower"),
+                                                 QDBusConnection::systemBus(),
+                                                 this);
 
     auto canStop = m_ck->CanStop();
     canStop.waitForFinished();

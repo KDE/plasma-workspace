@@ -57,7 +57,7 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
     }
 
     auto *job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(m_path));
-    connect(job, &KIO::FileSystemFreeSpaceJob::result, this, [this](KIO::Job* job, KIO::filesize_t size, KIO::filesize_t available) {
+    connect(job, &KIO::FileSystemFreeSpaceJob::result, this, [this](KIO::Job *job, KIO::filesize_t size, KIO::filesize_t available) {
         if (job->error()) {
             return;
         }
@@ -114,7 +114,7 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
             connect(m_notification, QOverload<uint>::of(&KNotification::activated), this, [this](uint actionId) {
                 if (actionId == 1) {
                     exploreDrive();
-                // TODO once we have "configure" action support in KNotification, wire it up instead of a button
+                    // TODO once we have "configure" action support in KNotification, wire it up instead of a button
                 } else if (actionId == 2) {
                     emit configureRequested();
                 }

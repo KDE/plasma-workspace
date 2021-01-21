@@ -23,8 +23,9 @@
 #include <KFileItem>
 #include <KRun>
 
-FileEntry::FileEntry(AbstractModel *owner, const QUrl &url) : AbstractEntry(owner)
-, m_fileItem(nullptr)
+FileEntry::FileEntry(AbstractModel *owner, const QUrl &url)
+    : AbstractEntry(owner)
+    , m_fileItem(nullptr)
 {
     if (url.isValid()) {
         m_fileItem = new KFileItem(url);
@@ -101,7 +102,7 @@ QVariantList FileEntry::actions() const
     return QVariantList();
 }
 
-bool FileEntry::run(const QString& actionId, const QVariant &argument)
+bool FileEntry::run(const QString &actionId, const QVariant &argument)
 {
     if (!m_fileItem) {
         return false;

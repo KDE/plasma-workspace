@@ -46,4 +46,3 @@ Q_DECLARE_METATYPE(KDbusImageVector)
 Q_DECLARE_METATYPE(KDbusToolTipStruct)
 
 #endif
-

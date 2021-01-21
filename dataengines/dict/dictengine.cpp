@@ -19,21 +19,21 @@
 #include "dictengine.h"
 #include <iostream>
 
+#include <KLocalizedString>
 #include <QDebug>
 #include <QRegularExpression>
 #include <QTcpSocket>
 #include <QUrl>
-#include <KLocalizedString>
 
 #include <Plasma/DataContainer>
 
-DictEngine::DictEngine(QObject* parent, const QVariantList& args)
+DictEngine::DictEngine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)
     , m_tcpSocket(nullptr)
 {
     Q_UNUSED(args)
-    m_serverName = QLatin1String("dict.org"); //In case we need to switch it later
-    m_dictName = QLatin1String("wn"); //Default, good dictionary
+    m_serverName = QLatin1String("dict.org"); // In case we need to switch it later
+    m_dictName = QLatin1String("wn"); // Default, good dictionary
 }
 
 DictEngine::~DictEngine()
@@ -57,12 +57,12 @@ static QString wnToHtml(const QString &word, QByteArray &text)
     def += QLatin1String("<dl>\n");
     static QRegularExpression linkRx(QStringLiteral("{(.*?)}"));
 
-    bool isFirst=true;
+    bool isFirst = true;
     while (!splitText.empty()) {
-        //150 n definitions retrieved - definitions follow
-        //151 word database name - text follows
-        //250 ok (optional timing information here)
-        //552 No match
+        // 150 n definitions retrieved - definitions follow
+        // 151 word database name - text follows
+        // 250 ok (optional timing information here)
+        // 552 No match
         QString currentLine = splitText.takeFirst();
         if (currentLine.startsWith(QLatin1String("151"))) {
             isFirst = true;
@@ -78,9 +78,7 @@ static QString wnToHtml(const QString &word, QByteArray &text)
             return i18n("No match found for %1", word);
         }
 
-        if (!(currentLine.startsWith(QLatin1String("150"))
-           || currentLine.startsWith(QLatin1String("151"))
-           || currentLine.startsWith(QLatin1String("250")))) {
+        if (!(currentLine.startsWith(QLatin1String("150")) || currentLine.startsWith(QLatin1String("151")) || currentLine.startsWith(QLatin1String("250")))) {
             // Handle links
             int offset = 0;
             QRegularExpressionMatchIterator it = linkRx.globalMatch(currentLine);
@@ -109,7 +107,6 @@ static QString wnToHtml(const QString &word, QByteArray &text)
                 continue;
             }
         }
-
     }
 
     def += QLatin1String("</dl>");
@@ -121,9 +118,8 @@ void DictEngine::getDefinition()
     m_tcpSocket->readAll();
     QByteArray ret;
 
-
     const QByteArray command = QByteArray("DEFINE ") + m_dictName.toLatin1() + " \"" + m_currentWord.toUtf8() + "\"\n";
-    //qDebug() << command;
+    // qDebug() << command;
     m_tcpSocket->write(command);
     m_tcpSocket->flush();
 
@@ -156,14 +152,13 @@ void DictEngine::getDicts()
     const QList<QByteArray> retLines = ret.split('\n');
     for (const QByteArray &curr : retLines) {
         if (curr.startsWith("554")) {
-            //TODO: What happens if no DB available?
-            //TODO: Eventually there will be functionality to change the server...
+            // TODO: What happens if no DB available?
+            // TODO: Eventually there will be functionality to change the server...
             break;
         }
 
         // ignore status code and empty lines
-        if (curr.startsWith("250") || curr.startsWith("110")
-           || curr.isEmpty()) {
+        if (curr.startsWith("250") || curr.startsWith("110") || curr.isEmpty()) {
             continue;
         }
 
@@ -184,7 +179,6 @@ void DictEngine::getDicts()
     m_tcpSocket->disconnectFromHost();
 }
 
-
 void DictEngine::socketClosed()
 {
     if (m_tcpSocket) {
@@ -198,7 +192,7 @@ bool DictEngine::sourceRequestEvent(const QString &query)
     // FIXME: this is COMPLETELY broken .. it can only look up one query at a time!
     //        a DataContainer subclass that does the look up should probably be made
     if (m_tcpSocket) {
-        m_tcpSocket->abort(); //stop if lookup is in progress and new query is requested
+        m_tcpSocket->abort(); // stop if lookup is in progress and new query is requested
         m_tcpSocket->deleteLater();
         m_tcpSocket = nullptr;
     }
@@ -211,18 +205,18 @@ bool DictEngine::sourceRequestEvent(const QString &query)
     m_currentWord = queryParts.last();
     m_currentQuery = query;
 
-    //asked for a dictionary?
+    // asked for a dictionary?
     if (queryParts.count() > 1) {
-        setDict(queryParts[queryParts.count()-2]);
-    //default to wordnet
+        setDict(queryParts[queryParts.count() - 2]);
+        // default to wordnet
     } else {
         setDict(QStringLiteral("wn"));
     }
 
-    //asked for a server?
+    // asked for a server?
     if (queryParts.count() > 2) {
-        setServer(queryParts[queryParts.count()-3]);
-    //default to wordnet
+        setServer(queryParts[queryParts.count() - 3]);
+        // default to wordnet
     } else {
         setServer(QStringLiteral("dict.org"));
     }
@@ -262,6 +256,6 @@ bool DictEngine::sourceRequestEvent(const QString &query)
     return true;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(dict, DictEngine , "plasma-dataengine-dict.json")
+K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(dict, DictEngine, "plasma-dataengine-dict.json")
 
 #include "dictengine.moc"

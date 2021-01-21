@@ -20,9 +20,9 @@
 
 #pragma once
 
-#include <QQuickItem>
-#include <QQmlParserStatus>
 #include <QPointer>
+#include <QQmlParserStatus>
+#include <QQuickItem>
 
 #include "appletslayout.h"
 
@@ -30,18 +30,19 @@ class QTimer;
 
 class ConfigOverlay;
 
-class ItemContainer: public QQuickItem
+class ItemContainer : public QQuickItem
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(AppletsLayout *layout READ layout NOTIFY layoutChanged)
-    //TODO: make it unchangeable? probably not
+    // TODO: make it unchangeable? probably not
     Q_PROPERTY(QString key READ key WRITE setKey NOTIFY keyChanged)
     Q_PROPERTY(ItemContainer::EditModeCondition editModeCondition READ editModeCondition WRITE setEditModeCondition NOTIFY editModeConditionChanged)
     Q_PROPERTY(bool editMode READ editMode WRITE setEditMode NOTIFY editModeChanged)
     Q_PROPERTY(bool dragActive READ dragActive NOTIFY dragActiveChanged)
-    Q_PROPERTY(AppletsLayout::PreferredLayoutDirection preferredLayoutDirection READ preferredLayoutDirection WRITE setPreferredLayoutDirection NOTIFY preferredLayoutDirectionChanged)
+    Q_PROPERTY(AppletsLayout::PreferredLayoutDirection preferredLayoutDirection READ preferredLayoutDirection WRITE setPreferredLayoutDirection NOTIFY
+                   preferredLayoutDirectionChanged)
 
     Q_PROPERTY(QQmlComponent *configOverlayComponent READ configOverlayComponent WRITE setConfigOverlayComponent NOTIFY configOverlayComponentChanged)
     Q_PROPERTY(bool configOverlayVisible READ configOverlayVisible WRITE setConfigOverlayVisible NOTIFY configOverlayVisibleChanged)
@@ -70,7 +71,7 @@ class ItemContainer: public QQuickItem
     Q_PROPERTY(int contentHeight READ contentHeight NOTIFY contentHeightChanged)
 
     Q_PROPERTY(QQmlListProperty<QObject> contentData READ contentData FINAL)
-   // Q_CLASSINFO("DeferredPropertyNames", "background,contentItem")
+    // Q_CLASSINFO("DeferredPropertyNames", "background,contentItem")
     Q_CLASSINFO("DefaultProperty", "contentData")
 
 public:
@@ -110,7 +111,7 @@ public:
     bool configOverlayVisible() const;
     void setConfigOverlayVisible(bool visible);
 
-    //TODO: keep this accessible?
+    // TODO: keep this accessible?
     ConfigOverlay *configOverlayItem() const;
 
     QSizeF initialSize() const;
@@ -144,12 +145,15 @@ public:
     // Not for QML
     void setLayout(AppletsLayout *layout);
 
-    QObject *layoutAttached() const {return m_layoutAttached;}
+    QObject *layoutAttached() const
+    {
+        return m_layoutAttached;
+    }
 
 protected:
     void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
 
-    //void classBegin() override;
+    // void classBegin() override;
     void componentComplete() override;
     bool childMouseEventFilter(QQuickItem *item, QEvent *event) override;
     void mousePressEvent(QMouseEvent *event) override;
@@ -176,7 +180,7 @@ Q_SIGNALS:
      */
     void sizeHintsChanged();
 
-    //QML property notifiers
+    // QML property notifiers
     void layoutChanged();
     void keyChanged();
     void editModeConditionChanged();
@@ -186,7 +190,6 @@ Q_SIGNALS:
     void configOverlayItemChanged();
     void initialSizeChanged();
     void configOverlayVisibleChanged(bool configOverlayVisile);
-
 
     void backgroundChanged();
     void contentItemChanged();
@@ -201,17 +204,16 @@ private:
     void syncChildItemsGeometry(const QSizeF &size);
     void sendUngrabRecursive(QQuickItem *item);
 
-    //internal accessorts for the contentData QProperty
+    // internal accessorts for the contentData QProperty
     static void contentData_append(QQmlListProperty<QObject> *prop, QObject *object);
     static int contentData_count(QQmlListProperty<QObject> *prop);
     static QObject *contentData_at(QQmlListProperty<QObject> *prop, int index);
     static void contentData_clear(QQmlListProperty<QObject> *prop);
 
-
     QPointer<QQuickItem> m_contentItem;
     QPointer<QQuickItem> m_backgroundItem;
 
-    //Internal implementation detail: this is used to reparent all items to contentItem
+    // Internal implementation detail: this is used to reparent all items to contentItem
     QList<QObject *> m_contentData;
 
     /**
@@ -222,10 +224,9 @@ private:
     int m_topPadding = 0;
     int m_bottomPadding = 0;
 
-
     QString m_key;
 
-    QPointer <AppletsLayout> m_layout;
+    QPointer<AppletsLayout> m_layout;
     QTimer *m_editModeTimer = nullptr;
     QTimer *m_closeEditModeTimer = nullptr;
     QTimer *m_sizeHintAdjustTimer = nullptr;
@@ -244,4 +245,3 @@ private:
     bool m_mouseSynthetizedFromTouch = false;
     bool m_dragActive = false;
 };
-

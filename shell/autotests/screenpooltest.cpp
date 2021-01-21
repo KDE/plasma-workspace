@@ -21,16 +21,16 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <QObject>
 
 #include <QDir>
+#include <QScreen>
 #include <QStandardPaths>
 #include <QTemporaryDir>
 #include <QTest>
-#include <QScreen>
 
 #include "../screenpool.h"
 
 class ScreenPoolTest : public QObject
 {
-Q_OBJECT
+    Q_OBJECT
 
 private Q_SLOTS:
     void initTestCase();

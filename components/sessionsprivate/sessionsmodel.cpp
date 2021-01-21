@@ -23,8 +23,8 @@
 #include "sessionsmodel.h"
 
 #include <KAuthorized>
-#include <KUser>
 #include <KLocalizedString>
+#include <KUser>
 
 #include "kscreensaversettings.h"
 
@@ -33,11 +33,7 @@
 SessionsModel::SessionsModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_screensaverInterface(
-        new org::freedesktop::ScreenSaver(QStringLiteral("org.freedesktop.ScreenSaver"),
-                                          QStringLiteral("/ScreenSaver"),
-                                          QDBusConnection::sessionBus(),
-                                          this)
-        )
+          new org::freedesktop::ScreenSaver(QStringLiteral("org.freedesktop.ScreenSaver"), QStringLiteral("/ScreenSaver"), QDBusConnection::sessionBus(), this))
 {
     reload();
 
@@ -205,11 +201,11 @@ void SessionsModel::reload()
     }
 }
 
-void SessionsModel::checkScreenLocked(const std::function<void (bool)> &cb)
+void SessionsModel::checkScreenLocked(const std::function<void(bool)> &cb)
 {
     auto reply = m_screensaverInterface->GetActive();
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [ cb](QDBusPendingCallWatcher *watcher) {
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [cb](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<bool> reply = *watcher;
         if (!reply.isError()) {
             cb(reply.value());
@@ -241,7 +237,6 @@ void SessionsModel::setShowNewSessionEntry(bool showNewSessionEntry)
     emit countChanged();
 }
 
-
 QVariant SessionsModel::data(const QModelIndex &index, int role) const
 {
     if (index.row() < 0 || index.row() > rowCount(QModelIndex())) {
@@ -250,30 +245,45 @@ QVariant SessionsModel::data(const QModelIndex &index, int role) const
 
     if (index.row() == m_data.count()) {
         switch (static_cast<Role>(role)) {
-        case Role::RealName: return i18n("New Session");
-        case Role::IconName: return QStringLiteral("system-switch-user");
-        case Role::Name: return i18n("New Session");
-        case Role::DisplayNumber: return 0; //NA
-        case Role::VtNumber: return -1; //an invalid VtNumber - which we'll use to indicate it's to start a new session
-        case Role::Session: return 0; //NA
-        case Role::IsTty: return false; //NA
-        default: return QVariant();
+        case Role::RealName:
+            return i18n("New Session");
+        case Role::IconName:
+            return QStringLiteral("system-switch-user");
+        case Role::Name:
+            return i18n("New Session");
+        case Role::DisplayNumber:
+            return 0; // NA
+        case Role::VtNumber:
+            return -1; // an invalid VtNumber - which we'll use to indicate it's to start a new session
+        case Role::Session:
+            return 0; // NA
+        case Role::IsTty:
+            return false; // NA
+        default:
+            return QVariant();
         }
     }
 
     const SessionEntry &item = m_data.at(index.row());
 
     switch (static_cast<Role>(role)) {
-    case Role::RealName: return item.realName;
-    case Role::Icon: return item.icon;
-    case Role::Name: return item.name;
-    case Role::DisplayNumber: return item.displayNumber;
-    case Role::VtNumber: return item.vtNumber;
-    case Role::Session: return item.session;
-    case Role::IsTty: return item.isTty;
-    default: return QVariant();
+    case Role::RealName:
+        return item.realName;
+    case Role::Icon:
+        return item.icon;
+    case Role::Name:
+        return item.name;
+    case Role::DisplayNumber:
+        return item.displayNumber;
+    case Role::VtNumber:
+        return item.vtNumber;
+    case Role::Session:
+        return item.session;
+    case Role::IsTty:
+        return item.isTty;
+    default:
+        return QVariant();
     }
-
 }
 
 int SessionsModel::rowCount(const QModelIndex &parent) const

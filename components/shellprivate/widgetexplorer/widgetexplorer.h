@@ -19,7 +19,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef WIDGETEXPLORER_H
 #define WIDGETEXPLORER_H
 
@@ -31,14 +30,15 @@
 
 #include "plasmaappletitemmodel_p.h"
 
-namespace Plasma {
-    class Corona;
-    class Containment;
-    class Applet;
+namespace Plasma
+{
+class Corona;
+class Containment;
+class Applet;
 }
 class WidgetExplorerPrivate;
 
-//We need to access the separator property that is not exported by QAction
+// We need to access the separator property that is not exported by QAction
 class WidgetAction : public QAction
 {
     Q_OBJECT
@@ -54,19 +54,18 @@ Q_SIGNALS:
 
 class WidgetExplorer : public QObject, public QQmlParserStatus
 {
-
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
 
     /**
      * Model that lists all applets
      */
-    Q_PROPERTY(QObject * widgetsModel READ widgetsModel CONSTANT)
+    Q_PROPERTY(QObject *widgetsModel READ widgetsModel CONSTANT)
 
     /**
      * Model that lists all applets filters and categories
      */
-    Q_PROPERTY(QObject * filterModel READ filterModel CONSTANT)
+    Q_PROPERTY(QObject *filterModel READ filterModel CONSTANT)
 
     /**
      * Whether to show special filters such as "Running" and "Uninstallable" in the filterModel.
@@ -131,7 +130,7 @@ public:
     bool showSpecialFilters() const;
     void setShowSpecialFilters(bool show);
 
-    QList <QObject *>  widgetsMenuActions();
+    QList<QObject *> widgetsMenuActions();
 
     /**
      * Uninstall a plasmoid with a given plugin name. only user-installed ones are uninstallable
@@ -165,13 +164,12 @@ protected Q_SLOTS:
     void immutabilityChanged(Plasma::Types::ImmutabilityType);
 
 private:
-    Q_PRIVATE_SLOT(d, void appletAdded(Plasma::Applet*))
-    Q_PRIVATE_SLOT(d, void appletRemoved(Plasma::Applet*))
+    Q_PRIVATE_SLOT(d, void appletAdded(Plasma::Applet *))
+    Q_PRIVATE_SLOT(d, void appletRemoved(Plasma::Applet *))
     Q_PRIVATE_SLOT(d, void containmentDestroyed())
 
-    WidgetExplorerPrivate * const d;
+    WidgetExplorerPrivate *const d;
     friend class WidgetExplorerPrivate;
 };
-
 
 #endif // WIDGETEXPLORER_H

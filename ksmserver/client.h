@@ -32,15 +32,17 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "server.h"
 
-
 class KSMClient
 {
 public:
-    explicit KSMClient( SmsConn );
+    explicit KSMClient(SmsConn);
     ~KSMClient();
 
-    void registerClient( const char* previousId = nullptr );
-    SmsConn connection() const { return smsConn; }
+    void registerClient(const char *previousId = nullptr);
+    SmsConn connection() const
+    {
+        return smsConn;
+    }
 
     void resetState();
     uint saveYourselfDone : 1;
@@ -48,18 +50,21 @@ public:
     uint waitForPhase2 : 1;
     uint wasPhase2 : 1;
 
-    QList<SmProp*> properties;
-    SmProp* property( const char* name ) const;
+    QList<SmProp *> properties;
+    SmProp *property(const char *name) const;
 
     QString program() const;
     QStringList restartCommand() const;
     QStringList discardCommand() const;
     int restartStyleHint() const;
     QString userId() const;
-    const char* clientId() { return id ? id : ""; }
+    const char *clientId()
+    {
+        return id ? id : "";
+    }
 
 private:
-    const char* id;
+    const char *id;
     SmsConn smsConn;
 };
 #endif

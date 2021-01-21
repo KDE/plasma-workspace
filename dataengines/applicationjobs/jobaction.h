@@ -36,20 +36,17 @@ class JobAction : public Plasma::ServiceJob
 {
     Q_OBJECT
 
-    public:
-        JobAction(NotificationManager::Job *job,
-                  const QString& operation,
-                  QMap<QString,QVariant>& parameters,
-                  QObject* parent = nullptr)
-        : ServiceJob(KuiserverEngine::sourceName(job), operation, parameters, parent),
-          m_job(job)
-        {
-        }
+public:
+    JobAction(NotificationManager::Job *job, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = nullptr)
+        : ServiceJob(KuiserverEngine::sourceName(job), operation, parameters, parent)
+        , m_job(job)
+    {
+    }
 
-        void start() override;
+    void start() override;
 
-    private:
-        QPointer<NotificationManager::Job> m_job;
+private:
+    QPointer<NotificationManager::Job> m_job;
 };
 
-#endif //JOBVIEW_H
+#endif // JOBVIEW_H

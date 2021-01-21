@@ -24,18 +24,17 @@
  * Boston, MA 02110-1301, USA.
  */
 
+#include "FcEngine.h"
+#include "KfiConstants.h"
 #include <QImage>
+#include <QPaintEvent>
 #include <QSize>
 #include <QWidget>
-#include <QPaintEvent>
-#include "KfiConstants.h"
-#include "FcEngine.h"
 
 class QWheelEvent;
 
 namespace KFI
 {
-
 class CCharTip;
 class CFcEngine;
 
@@ -43,50 +42,48 @@ class CFontPreview : public QWidget
 {
     Q_OBJECT
 
-    public:
-
+public:
     CFontPreview(QWidget *parent);
     ~CFontPreview() override;
 
-    void        paintEvent(QPaintEvent *) override;
-    void        mouseMoveEvent(QMouseEvent *event) override;
-    void        wheelEvent(QWheelEvent *e) override;
-    QSize       sizeHint() const override;
-    QSize       minimumSizeHint() const override;
+    void paintEvent(QPaintEvent *) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
+    void wheelEvent(QWheelEvent *e) override;
+    QSize sizeHint() const override;
+    QSize minimumSizeHint() const override;
 
-    void        showFont(const QString &name, // Thsi is either family name, or filename
-                         unsigned long styleInfo=KFI_NO_STYLE_INFO, int face=0);
-    void        showFont();
-    void        showFace(int face);
+    void showFont(const QString &name, // Thsi is either family name, or filename
+                  unsigned long styleInfo = KFI_NO_STYLE_INFO,
+                  int face = 0);
+    void showFont();
+    void showFace(int face);
 
+    CFcEngine *engine()
+    {
+        return itsEngine;
+    }
 
-    CFcEngine * engine() { return itsEngine; }
+public Q_SLOTS:
 
-    public Q_SLOTS:
+    void setUnicodeRange(const QList<CFcEngine::TRange> &r);
+    void zoomIn();
+    void zoomOut();
 
-    void        setUnicodeRange(const QList<CFcEngine::TRange> &r);
-    void        zoomIn();
-    void        zoomOut();
+Q_SIGNALS:
 
-    Q_SIGNALS:
+    void status(bool);
+    void atMax(bool);
+    void atMin(bool);
 
-    void        status(bool);
-    void        atMax(bool);
-    void        atMin(bool);
-
-    private:
-
-    QImage                   itsImage;
-    int                      itsCurrentFace,
-                             itsLastWidth,
-                             itsLastHeight,
-                             itsStyleInfo;
-    QString                  itsFontName;
+private:
+    QImage itsImage;
+    int itsCurrentFace, itsLastWidth, itsLastHeight, itsStyleInfo;
+    QString itsFontName;
     QList<CFcEngine::TRange> itsRange;
-    QList<CFcEngine::TChar>  itsChars;
-    CFcEngine::TChar         itsLastChar;
-    CCharTip                 *itsTip;
-    CFcEngine                *itsEngine;
+    QList<CFcEngine::TChar> itsChars;
+    CFcEngine::TChar itsLastChar;
+    CCharTip *itsTip;
+    CFcEngine *itsEngine;
 
     friend class CCharTip;
 };

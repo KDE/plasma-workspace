@@ -24,7 +24,6 @@
 
 #include "utils_p.h"
 
-
 #include "notification_p.h"
 
 #include <QDebug>
@@ -72,9 +71,10 @@ void AbstractNotificationsModel::Private::onNotificationAdded(const Notification
     // as we keep pixmaps around etc
     if (notifications.count() >= s_notificationsLimit) {
         const int cleanupCount = s_notificationsLimit / 2;
-        qCDebug(NOTIFICATIONMANAGER) << "Reached the notification limit of" << s_notificationsLimit << ", discarding the oldest" << cleanupCount << "notifications";
+        qCDebug(NOTIFICATIONMANAGER) << "Reached the notification limit of" << s_notificationsLimit << ", discarding the oldest" << cleanupCount
+                                     << "notifications";
         q->beginRemoveRows(QModelIndex(), 0, cleanupCount - 1);
-        for (int i = 0 ; i < cleanupCount; ++i) {
+        for (int i = 0; i < cleanupCount; ++i) {
             notifications.removeAt(0);
             // TODO close gracefully?
         }
@@ -93,7 +93,8 @@ void AbstractNotificationsModel::Private::onNotificationReplaced(uint replacedId
     const int row = q->rowOfNotification(replacedId);
 
     if (row == -1) {
-        qCWarning(NOTIFICATIONMANAGER) << "Trying to replace notification with id" << replacedId << "which doesn't exist, creating a new one. This is an application bug!";
+        qCWarning(NOTIFICATIONMANAGER) << "Trying to replace notification with id" << replacedId
+                                       << "which doesn't exist, creating a new one. This is an application bug!";
         onNotificationAdded(notification);
         return;
     }
@@ -125,6 +126,7 @@ void AbstractNotificationsModel::Private::onNotificationRemoved(uint removedId, 
         // unless it is "resident" which we don't support
         notification.setActions(QStringList());
 
+        // clang-format off
         emit q->dataChanged(idx, idx, {
             Notifications::ExpiredRole,
             // TODO only emit those if actually changed?
@@ -134,6 +136,7 @@ void AbstractNotificationsModel::Private::onNotificationRemoved(uint removedId, 
             Notifications::DefaultActionLabelRole,
             Notifications::ConfigurableRole
         });
+        // clang-format on
 
         return;
     }
@@ -264,8 +267,10 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
     const Notification &notification = d->notifications.at(index.row());
 
     switch (role) {
-    case Notifications::IdRole: return notification.id();
-    case Notifications::TypeRole: return Notifications::NotificationType;
+    case Notifications::IdRole:
+        return notification.id();
+    case Notifications::TypeRole:
+        return Notifications::NotificationType;
 
     case Notifications::CreatedRole:
         if (notification.created().isValid()) {
@@ -277,8 +282,10 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
             return notification.updated();
         }
         break;
-    case Notifications::SummaryRole: return notification.summary();
-    case Notifications::BodyRole: return notification.body();
+    case Notifications::SummaryRole:
+        return notification.summary();
+    case Notifications::BodyRole:
+        return notification.body();
     case Notifications::IconNameRole:
         if (notification.image().isNull()) {
             return notification.icon();
@@ -289,39 +296,63 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
             return notification.image();
         }
         break;
-    case Notifications::DesktopEntryRole: return notification.desktopEntry();
-    case Notifications::NotifyRcNameRole: return notification.notifyRcName();
+    case Notifications::DesktopEntryRole:
+        return notification.desktopEntry();
+    case Notifications::NotifyRcNameRole:
+        return notification.notifyRcName();
 
-    case Notifications::ApplicationNameRole: return notification.applicationName();
-    case Notifications::ApplicationIconNameRole: return notification.applicationIconName();
-    case Notifications::OriginNameRole: return notification.originName();
+    case Notifications::ApplicationNameRole:
+        return notification.applicationName();
+    case Notifications::ApplicationIconNameRole:
+        return notification.applicationIconName();
+    case Notifications::OriginNameRole:
+        return notification.originName();
 
-    case Notifications::ActionNamesRole: return notification.actionNames();
-    case Notifications::ActionLabelsRole: return notification.actionLabels();
-    case Notifications::HasDefaultActionRole: return notification.hasDefaultAction();
-    case Notifications::DefaultActionLabelRole: return notification.defaultActionLabel();
+    case Notifications::ActionNamesRole:
+        return notification.actionNames();
+    case Notifications::ActionLabelsRole:
+        return notification.actionLabels();
+    case Notifications::HasDefaultActionRole:
+        return notification.hasDefaultAction();
+    case Notifications::DefaultActionLabelRole:
+        return notification.defaultActionLabel();
 
-    case Notifications::UrlsRole: return QVariant::fromValue(notification.urls());
+    case Notifications::UrlsRole:
+        return QVariant::fromValue(notification.urls());
 
-    case Notifications::UrgencyRole: return static_cast<int>(notification.urgency());
-    case Notifications::UserActionFeedbackRole: return notification.userActionFeedback();
+    case Notifications::UrgencyRole:
+        return static_cast<int>(notification.urgency());
+    case Notifications::UserActionFeedbackRole:
+        return notification.userActionFeedback();
 
-    case Notifications::TimeoutRole: return notification.timeout();
+    case Notifications::TimeoutRole:
+        return notification.timeout();
 
-    case Notifications::ClosableRole: return true;
-    case Notifications::ConfigurableRole: return notification.configurable();
-    case Notifications::ConfigureActionLabelRole: return notification.configureActionLabel();
+    case Notifications::ClosableRole:
+        return true;
+    case Notifications::ConfigurableRole:
+        return notification.configurable();
+    case Notifications::ConfigureActionLabelRole:
+        return notification.configureActionLabel();
 
-    case Notifications::CategoryRole: return notification.category();
+    case Notifications::CategoryRole:
+        return notification.category();
 
-    case Notifications::ExpiredRole: return notification.expired();
-    case Notifications::ReadRole: return notification.read();
+    case Notifications::ExpiredRole:
+        return notification.expired();
+    case Notifications::ReadRole:
+        return notification.read();
 
-    case Notifications::HasReplyActionRole: return notification.hasReplyAction();
-    case Notifications::ReplyActionLabelRole: return notification.replyActionLabel();
-    case Notifications::ReplyPlaceholderTextRole: return notification.replyPlaceholderText();
-    case Notifications::ReplySubmitButtonTextRole: return notification.replySubmitButtonText();
-    case Notifications::ReplySubmitButtonIconNameRole: return notification.replySubmitButtonIconName();
+    case Notifications::HasReplyActionRole:
+        return notification.hasReplyAction();
+    case Notifications::ReplyActionLabelRole:
+        return notification.replyActionLabel();
+    case Notifications::ReplyPlaceholderTextRole:
+        return notification.replyPlaceholderText();
+    case Notifications::ReplySubmitButtonTextRole:
+        return notification.replySubmitButtonText();
+    case Notifications::ReplySubmitButtonIconNameRole:
+        return notification.replySubmitButtonIconName();
     }
 
     return QVariant();
@@ -421,7 +452,7 @@ void AbstractNotificationsModel::setupNotificationTimeout(const Notification &no
     d->setupNotificationTimeout(notification);
 }
 
-const QVector<Notification>& AbstractNotificationsModel::notifications()
+const QVector<Notification> &AbstractNotificationsModel::notifications()
 {
     return d->notifications;
 }

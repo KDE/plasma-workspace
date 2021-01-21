@@ -53,32 +53,32 @@ QHash<QString, QVariant> kwin_dbus::nightColorInfo()
 
 QHash<QString, QVariant> kwin_dbus::getData()
 {
-    return QHash<QString, QVariant> {
-        { QStringLiteral("Available"), nightColorAvailable },
+    return QHash<QString, QVariant>{
+        {QStringLiteral("Available"), nightColorAvailable},
 
-        { QStringLiteral("ActiveEnabled"), activeEnabled },
-        { QStringLiteral("Active"), active },
+        {QStringLiteral("ActiveEnabled"), activeEnabled},
+        {QStringLiteral("Active"), active},
 
-        { QStringLiteral("ModeEnabled"), modeEnabled },
-        { QStringLiteral("Mode"), mode },
+        {QStringLiteral("ModeEnabled"), modeEnabled},
+        {QStringLiteral("Mode"), mode},
 
-        { QStringLiteral("NightTemperatureEnabled"), nightTemperatureEnabled },
-        { QStringLiteral("NightTemperature"), nightTemperature },
+        {QStringLiteral("NightTemperatureEnabled"), nightTemperatureEnabled},
+        {QStringLiteral("NightTemperature"), nightTemperature},
 
-        { QStringLiteral("Running"), running },
-        { QStringLiteral("CurrentColorTemperature"), currentColorTemperature },
+        {QStringLiteral("Running"), running},
+        {QStringLiteral("CurrentColorTemperature"), currentColorTemperature},
 
-        { QStringLiteral("LatitudeAuto"), latitudeAuto },
-        { QStringLiteral("LongitudeAuto"), longitudeAuto },
+        {QStringLiteral("LatitudeAuto"), latitudeAuto},
+        {QStringLiteral("LongitudeAuto"), longitudeAuto},
 
-        { QStringLiteral("LocationEnabled"), locationEnabled },
-        { QStringLiteral("LatitudeFixed"), latitudeFixed },
-        { QStringLiteral("LongitudeFixed"), longitudeFixed },
+        {QStringLiteral("LocationEnabled"), locationEnabled},
+        {QStringLiteral("LatitudeFixed"), latitudeFixed},
+        {QStringLiteral("LongitudeFixed"), longitudeFixed},
 
-        { QStringLiteral("TimingsEnabled"), timingsEnabled },
-        { QStringLiteral("MorningBeginFixed"), morningBeginFixed.toString(Qt::ISODate) },
-        { QStringLiteral("EveningBeginFixed"), eveningBeginFixed.toString(Qt::ISODate) },
-        { QStringLiteral("TransitionTime"), transitionTime },
+        {QStringLiteral("TimingsEnabled"), timingsEnabled},
+        {QStringLiteral("MorningBeginFixed"), morningBeginFixed.toString(Qt::ISODate)},
+        {QStringLiteral("EveningBeginFixed"), eveningBeginFixed.toString(Qt::ISODate)},
+        {QStringLiteral("TransitionTime"), transitionTime},
     };
 }
 
@@ -116,8 +116,7 @@ bool kwin_dbus::setNightColorConfig(QHash<QString, QVariant> data)
         auto valMbf = QTime::fromString(data["MorningBeginFixed"].toString(), Qt::ISODate);
         auto valEbf = QTime::fromString(data["EveningBeginFixed"].toString(), Qt::ISODate);
         auto valTrT = data["TransitionTime"].toInt();
-        hasChanged |= morningBeginFixed != valMbf || eveningBeginFixed != valEbf
-                        || transitionTime != valTrT;
+        hasChanged |= morningBeginFixed != valMbf || eveningBeginFixed != valEbf || transitionTime != valTrT;
         morningBeginFixed = valMbf;
         eveningBeginFixed = valEbf;
         transitionTime = valTrT;

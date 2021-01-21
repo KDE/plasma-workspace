@@ -1,7 +1,7 @@
 /*
  * Render a PipeWire stream into a QtQuick scene as a standard Item
  * Copyright 2020 Aleix Pol Gonzalez <aleixpol@kde.org>
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
@@ -9,25 +9,25 @@
  * later version accepted by the membership of KDE e.V. (or its
  * successor approved by the membership of KDE e.V.), which shall
  * act as a proxy defined in Section 6 of version 3 of the license.
- * 
+ *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 #pragma once
 
-#include <functional>
 #include <QQuickItem>
+#include <functional>
 
 #include <pipewire/pipewire.h>
 #include <spa/param/format-utils.h>
-#include <spa/param/video/format-utils.h>
 #include <spa/param/props.h>
+#include <spa/param/video/format-utils.h>
 
 struct DmaBufPlane;
 class PipeWireSourceStream;
@@ -41,14 +41,17 @@ class PipeWireSourceItem : public QQuickItem
     /// Specify the pipewire node id that we want to play
     Q_PROPERTY(uint nodeId READ nodeId WRITE setNodeId NOTIFY nodeIdChanged)
 public:
-    PipeWireSourceItem(QQuickItem* parent = nullptr);
+    PipeWireSourceItem(QQuickItem *parent = nullptr);
     ~PipeWireSourceItem() override;
 
     QSGNode *updatePaintNode(QSGNode *node, UpdatePaintNodeData *data) override;
     Q_SCRIPTABLE QString error() const;
 
     void setNodeId(uint nodeId);
-    uint nodeId() const { return m_nodeId; }
+    uint nodeId() const
+    {
+        return m_nodeId;
+    }
 
     void componentComplete() override;
     void releaseResources() override;
@@ -63,7 +66,7 @@ private:
     void setSize(const QSize &size);
 
     uint m_nodeId = 0;
-    std::function<QSGTexture*()> m_createNextTexture;
+    std::function<QSGTexture *()> m_createNextTexture;
     QScopedPointer<PipeWireSourceStream> m_stream;
     QScopedPointer<QOpenGLTexture> m_texture;
 

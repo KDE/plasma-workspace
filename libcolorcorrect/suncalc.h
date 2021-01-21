@@ -17,17 +17,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef COLORCORRECT_SUNCALC_H
 #define COLORCORRECT_SUNCALC_H
 
-#include <QObject>
 #include <QDate>
-#include <QTime>
+#include <QObject>
 #include <QPair>
+#include <QTime>
 #include <QVariant>
 
 #include "colorcorrect_export.h"
 
 namespace ColorCorrect
 {
-
 /*
  * The purpose of this class is solely to enable workspace to present the
  * resulting timings of the current or requested configuration to the user.
@@ -51,7 +50,6 @@ public:
      **/
     Q_INVOKABLE QVariantMap getMorningTimings(double latitude, double longitude);
     Q_INVOKABLE QVariantMap getEveningTimings(double latitude, double longitude);
-
 };
 
 }

@@ -58,5 +58,4 @@ private:
     QUrl m_url;
     QPointer<QQuickItem> m_visualParent;
     bool m_visible = false;
-
 };

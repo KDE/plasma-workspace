@@ -145,8 +145,8 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
     if (desktopEntry.isEmpty()) {
         // For non-configurable notifications use the fake "@other" category.
         if (!sourceIdx.data(Notifications::ConfigurableRole).toBool()
-                // jobs are never configurable so this only applies to notifications
-                && sourceIdx.data(Notifications::TypeRole).toInt() == Notifications::NotificationType) {
+            // jobs are never configurable so this only applies to notifications
+            && sourceIdx.data(Notifications::TypeRole).toInt() == Notifications::NotificationType) {
             desktopEntry = QStringLiteral("@other");
         }
     }

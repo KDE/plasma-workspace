@@ -19,18 +19,19 @@
  */
 
 #include "opera.h"
-#include <QDebug>
 #include "bookmarksrunner_defs.h"
+#include "favicon.h"
+#include <QDebug>
 #include <QDir>
 #include <QFile>
-#include "favicon.h"
 
-
-Opera::Opera(QObject* parent): QObject(parent), m_favicon(new FallbackFavicon(this))
+Opera::Opera(QObject *parent)
+    : QObject(parent)
+    , m_favicon(new FallbackFavicon(this))
 {
 }
 
-QList<BookmarkMatch> Opera::match( const QString& term, bool addEverything )
+QList<BookmarkMatch> Opera::match(const QString &term, bool addEverything)
 {
     QList<BookmarkMatch> matches;
 
@@ -39,7 +40,7 @@ QList<BookmarkMatch> Opera::match( const QString& term, bool addEverything )
     QLatin1String descriptionStart("\tDESCRIPTION=");
 
     // search
-    for (const QString & entry : qAsConst(m_operaBookmarkEntries)) {
+    for (const QString &entry : qAsConst(m_operaBookmarkEntries)) {
         QStringList entryLines = entry.split(QStringLiteral("\n"));
         if (!entryLines.first().startsWith(QLatin1String("#URL"))) {
             continue; // skip folder entries
@@ -50,52 +51,49 @@ QList<BookmarkMatch> Opera::match( const QString& term, bool addEverything )
         QString url;
         QString description;
 
-        for (const QString & line : qAsConst(entryLines)) {
+        for (const QString &line : qAsConst(entryLines)) {
             if (line.startsWith(nameStart)) {
-                name = line.mid( QString(nameStart).length() ).simplified();
+                name = line.mid(QString(nameStart).length()).simplified();
             } else if (line.startsWith(urlStart)) {
-                url = line.mid( QString(urlStart).length() ).simplified();
+                url = line.mid(QString(urlStart).length()).simplified();
             } else if (line.startsWith(descriptionStart)) {
-                description = line.mid(QString(descriptionStart).length())
-                              .simplified();
+                description = line.mid(QString(descriptionStart).length()).simplified();
             }
         }
-        
+
         BookmarkMatch bookmarkMatch(m_favicon->iconFor(url), term, name, url, description);
         bookmarkMatch.addTo(matches, addEverything);
     }
     return matches;
 }
 
-
 void Opera::prepare()
 {
-          // open bookmarks file
-        QString operaBookmarksFilePath = QDir::homePath() + "/.opera/bookmarks.adr";
-        QFile operaBookmarksFile(operaBookmarksFilePath);
-        if (!operaBookmarksFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            //qDebug() << "Could not open Operas Bookmark File " + operaBookmarksFilePath;
-            return;
-        }
+    // open bookmarks file
+    QString operaBookmarksFilePath = QDir::homePath() + "/.opera/bookmarks.adr";
+    QFile operaBookmarksFile(operaBookmarksFilePath);
+    if (!operaBookmarksFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        // qDebug() << "Could not open Operas Bookmark File " + operaBookmarksFilePath;
+        return;
+    }
 
-        // check format
-        QString firstLine = operaBookmarksFile.readLine();
-        if (firstLine.compare(QLatin1String("Opera Hotlist version 2.0\n"))) {
-            //qDebug() << "Format of Opera Bookmarks File might have changed.";
-        }
-        operaBookmarksFile.readLine(); // skip options line ("Options: encoding = utf8, version=3")
-        operaBookmarksFile.readLine(); // skip empty line
+    // check format
+    QString firstLine = operaBookmarksFile.readLine();
+    if (firstLine.compare(QLatin1String("Opera Hotlist version 2.0\n"))) {
+        // qDebug() << "Format of Opera Bookmarks File might have changed.";
+    }
+    operaBookmarksFile.readLine(); // skip options line ("Options: encoding = utf8, version=3")
+    operaBookmarksFile.readLine(); // skip empty line
 
-        // load contents
-        QString contents = operaBookmarksFile.readAll();
-        m_operaBookmarkEntries = contents.split(QStringLiteral("\n\n"), QString::SkipEmptyParts);
+    // load contents
+    QString contents = operaBookmarksFile.readAll();
+    m_operaBookmarkEntries = contents.split(QStringLiteral("\n\n"), QString::SkipEmptyParts);
 
-        // close file
-        operaBookmarksFile.close();
+    // close file
+    operaBookmarksFile.close();
 }
 
 void Opera::teardown()
 {
-  m_operaBookmarkEntries.clear();
+    m_operaBookmarkEntries.clear();
 }
-

@@ -30,12 +30,12 @@ class KeyService : public Plasma::Service
     Q_OBJECT
 
 public:
-    KeyService(QObject* parent, KModifierKeyInfo *keyInfo, Qt::Key key);
+    KeyService(QObject *parent, KModifierKeyInfo *keyInfo, Qt::Key key);
     void lock(bool lock);
     void latch(bool lock);
 
 protected:
-    Plasma::ServiceJob* createJob(const QString& operation, QMap<QString,QVariant>& parameters) override;
+    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
     KModifierKeyInfo *m_keyInfo;

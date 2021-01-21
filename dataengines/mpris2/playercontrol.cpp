@@ -29,7 +29,7 @@
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
 
-PlayerControl::PlayerControl(PlayerContainer* container, QObject* parent)
+PlayerControl::PlayerControl(PlayerContainer *container, QObject *parent)
     : Plasma::Service(parent)
     , m_container(container)
 {
@@ -37,10 +37,8 @@ PlayerControl::PlayerControl(PlayerContainer* container, QObject* parent)
     setName(QStringLiteral("mpris2"));
     setDestination(container->objectName());
 
-    connect(container, &Plasma::DataContainer::dataUpdated,
-            this,      &PlayerControl::updateEnabledOperations);
-    connect(container, &QObject::destroyed,
-            this,      &PlayerControl::containerDestroyed);
+    connect(container, &Plasma::DataContainer::dataUpdated, this, &PlayerControl::updateEnabledOperations);
+    connect(container, &QObject::destroyed, this, &PlayerControl::containerDestroyed);
     updateEnabledOperations();
 }
 
@@ -98,8 +96,7 @@ void PlayerControl::changeVolume(double delta, bool showOSD)
     const double volume = m_container->data().value(QStringLiteral("Volume")).toDouble();
     const double newVolume = qBound(0.0, volume + delta, qMax(volume, 1.0));
 
-    QDBusPendingCall reply = propertiesInterface()->Set(m_container->playerInterface()->interface(),
-                                                        QStringLiteral("Volume"), QDBusVariant(newVolume));
+    QDBusPendingCall reply = propertiesInterface()->Set(m_container->playerInterface()->interface(), QStringLiteral("Volume"), QDBusVariant(newVolume));
 
     // Update the container value right away so when calling this method in quick succession
     // (mouse wheeling the tray icon) next call already gets the new value
@@ -115,28 +112,21 @@ void PlayerControl::changeVolume(double delta, bool showOSD)
         }
 
         if (showOSD) {
-            const auto& data = m_container->data();
+            const auto &data = m_container->data();
 
-            QDBusMessage msg = QDBusMessage::createMethodCall(
-                QStringLiteral("org.kde.plasmashell"),
-                QStringLiteral("/org/kde/osdService"),
-                QStringLiteral("org.kde.osdService"),
-                QStringLiteral("mediaPlayerVolumeChanged")
-            );
+            QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                              QStringLiteral("/org/kde/osdService"),
+                                                              QStringLiteral("org.kde.osdService"),
+                                                              QStringLiteral("mediaPlayerVolumeChanged"));
 
-            msg.setArguments({
-                qRound(data.value(QStringLiteral("Volume")).toDouble() * 100),
-                data.value("Identity", ""),
-                data.value("Desktop Icon Name", "")
-            });
+            msg.setArguments({qRound(data.value(QStringLiteral("Volume")).toDouble() * 100), data.value("Identity", ""), data.value("Desktop Icon Name", "")});
 
             QDBusConnection::sessionBus().asyncCall(msg);
         }
     });
 }
 
-Plasma::ServiceJob* PlayerControl::createJob(const QString& operation,
-                                             QMap<QString,QVariant>& parameters)
+Plasma::ServiceJob *PlayerControl::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
     if (!m_container)
         return nullptr;

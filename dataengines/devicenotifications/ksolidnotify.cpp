@@ -21,28 +21,28 @@
 
 #include "ksolidnotify.h"
 
-#include <Solid/DeviceNotifier>
 #include <Solid/DeviceInterface>
-#include <Solid/StorageDrive>
-#include <Solid/StorageVolume>
-#include <Solid/StorageAccess>
-#include <Solid/OpticalDrive>
+#include <Solid/DeviceNotifier>
 #include <Solid/OpticalDisc>
+#include <Solid/OpticalDrive>
 #include <Solid/PortableMediaPlayer>
 #include <Solid/Predicate>
+#include <Solid/StorageAccess>
+#include <Solid/StorageDrive>
+#include <Solid/StorageVolume>
 
 #include <KLocalizedString>
 #include <processcore/process.h>
 #include <processcore/processes.h>
 
-#include <QStringList>
 #include <QProcess>
 #include <QRegularExpression>
+#include <QStringList>
 #include <QStringRef>
 #include <QVector>
 
-KSolidNotify::KSolidNotify(QObject *parent):
-    QObject(parent)
+KSolidNotify::KSolidNotify(QObject *parent)
+    : QObject(parent)
 {
     Solid::Predicate p(Solid::DeviceInterface::StorageAccess);
     p |= Solid::Predicate(Solid::DeviceInterface::OpticalDrive);
@@ -53,10 +53,8 @@ KSolidNotify::KSolidNotify(QObject *parent):
         connectSignals(&m_devices[dev.udi()]);
     }
 
-    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded,
-            this, &KSolidNotify::onDeviceAdded);
-    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved,
-            this, &KSolidNotify::onDeviceRemoved);
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &KSolidNotify::onDeviceAdded);
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved, this, &KSolidNotify::onDeviceRemoved);
 }
 
 void KSolidNotify::onDeviceAdded(const QString &udi)
@@ -101,21 +99,18 @@ void KSolidNotify::connectSignals(Solid::Device *device)
 {
     Solid::StorageAccess *access = device->as<Solid::StorageAccess>();
     if (access) {
-        connect(access, &Solid::StorageAccess::teardownDone, this,
-            [=](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
-                onSolidReply(SolidReplyType::Teardown, error, errorData, udi);
+        connect(access, &Solid::StorageAccess::teardownDone, this, [=](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
+            onSolidReply(SolidReplyType::Teardown, error, errorData, udi);
         });
 
-        connect(access, &Solid::StorageAccess::setupDone, this,
-            [=](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
-                onSolidReply(SolidReplyType::Setup, error, errorData, udi);
+        connect(access, &Solid::StorageAccess::setupDone, this, [=](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
+            onSolidReply(SolidReplyType::Setup, error, errorData, udi);
         });
     }
     if (device->is<Solid::OpticalDisc>()) {
         Solid::OpticalDrive *drive = device->parent().as<Solid::OpticalDrive>();
-        connect(drive, &Solid::OpticalDrive::ejectDone, this,
-            [=](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
-                onSolidReply(SolidReplyType::Eject, error, errorData, udi);
+        connect(drive, &Solid::OpticalDrive::ejectDone, this, [=](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
+            onSolidReply(SolidReplyType::Eject, error, errorData, udi);
         });
     }
 }
@@ -124,31 +119,31 @@ void KSolidNotify::queryBlockingApps(const QString &devicePath)
 {
     QProcess *p = new QProcess;
     connect(p, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::errorOccurred), [=](QProcess::ProcessError) {
-                emit blockingAppsReady({});
-                p->deleteLater();
-            });
-    connect(p, static_cast<void (QProcess::*)(int,QProcess::ExitStatus)>(&QProcess::finished), [=](int,QProcess::ExitStatus) {
-                QStringList blockApps;
-                QString out(p->readAll());
-                const QVector<QStringRef> pidList = out.splitRef(QRegularExpression(QStringLiteral("\\s+")), QString::SkipEmptyParts);
-                KSysGuard::Processes procs;
-                for (const QStringRef &pidStr : pidList) {
-                    int pid = pidStr.toInt();
-                    if (!pid) {
-                        continue;
-                    }
-                    procs.updateOrAddProcess(pid);
-                    KSysGuard::Process *proc = procs.getProcess(pid);
-                    if (!blockApps.contains(proc->name())) {
-                        blockApps << proc->name();
-                    }
-                }
-                blockApps.removeDuplicates();
-                emit blockingAppsReady(blockApps);
-                p->deleteLater();
-            });
+        emit blockingAppsReady({});
+        p->deleteLater();
+    });
+    connect(p, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), [=](int, QProcess::ExitStatus) {
+        QStringList blockApps;
+        QString out(p->readAll());
+        const QVector<QStringRef> pidList = out.splitRef(QRegularExpression(QStringLiteral("\\s+")), QString::SkipEmptyParts);
+        KSysGuard::Processes procs;
+        for (const QStringRef &pidStr : pidList) {
+            int pid = pidStr.toInt();
+            if (!pid) {
+                continue;
+            }
+            procs.updateOrAddProcess(pid);
+            KSysGuard::Process *proc = procs.getProcess(pid);
+            if (!blockApps.contains(proc->name())) {
+                blockApps << proc->name();
+            }
+        }
+        blockApps.removeDuplicates();
+        emit blockingAppsReady(blockApps);
+        p->deleteLater();
+    });
     p->start(QStringLiteral("lsof"), {QStringLiteral("-t"), devicePath});
-//    p.start(QStringLiteral("fuser"), {QStringLiteral("-m"), devicePath});
+    //    p.start(QStringLiteral("fuser"), {QStringLiteral("-m"), devicePath});
 }
 
 void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, const QVariant &errorData, const QString &udi)
@@ -210,14 +205,15 @@ void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, con
             // Without that, our lambda function would capture an uninitialized object, resulting in UB
             // and random crashes
             QMetaObject::Connection *c = new QMetaObject::Connection();
-            *c = connect(this, &KSolidNotify::blockingAppsReady, [=] (const QStringList &blockApps) {
+            *c = connect(this, &KSolidNotify::blockingAppsReady, [=](const QStringList &blockApps) {
                 QString errorMessage;
                 if (blockApps.isEmpty()) {
                     errorMessage = i18n("One or more files on this device are open within an application.");
                 } else {
                     errorMessage = i18np("One or more files on this device are opened in application \"%2\".",
-                            "One or more files on this device are opened in following applications: %2.",
-                            blockApps.count(), blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
+                                         "One or more files on this device are opened in following applications: %2.",
+                                         blockApps.count(),
+                                         blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
                 }
                 emit notify(error, errorMessage, errorData.toString(), udi);
                 disconnect(*c);

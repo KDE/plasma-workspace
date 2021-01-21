@@ -49,7 +49,6 @@ private Q_SLOTS:
 
 private:
     StatusNotifierItemSource *m_source;
-
 };
 
 #endif // STATUSNOTIFIERITEMJOB_H

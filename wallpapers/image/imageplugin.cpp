@@ -21,7 +21,6 @@
 #include "image.h"
 #include <QQmlContext>
 
-
 void ImagePlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.wallpapers.image"));
@@ -29,6 +28,3 @@ void ImagePlugin::registerTypes(const char *uri)
     qmlRegisterType<Image>(uri, 2, 0, "Image");
     qmlRegisterType<QAbstractItemModel>();
 }
-
-
-

@@ -18,19 +18,19 @@
 
 #include "desktopview.h"
 #include "containmentconfigview.h"
-#include "shellcorona.h"
 #include "krunner_interface.h"
+#include "shellcorona.h"
 
-#include <QQmlEngine>
 #include <QQmlContext>
-#include <QScreen>
+#include <QQmlEngine>
 #include <QQuickItem>
+#include <QScreen>
 #include <qopenglshaderprogram.h>
 
-#include <kwindowsystem.h>
-#include <klocalizedstring.h>
 #include <KAuthorized>
 #include <kactivities/controller.h>
+#include <klocalizedstring.h>
+#include <kwindowsystem.h>
 
 #include <KPackage/Package>
 
@@ -38,9 +38,9 @@
 #include <KWayland/Client/surface.h>
 
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
-    : PlasmaQuick::ContainmentView(corona, nullptr),
-      m_windowType(Desktop),
-      m_shellSurface(nullptr)
+    : PlasmaQuick::ContainmentView(corona, nullptr)
+    , m_windowType(Desktop)
+    , m_shellSurface(nullptr)
 {
     QObject::setParent(corona);
     if (targetScreen) {
@@ -56,22 +56,19 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 
     connect(this, &QWindow::screenChanged, this, &DesktopView::adaptToScreen);
 
-    QObject::connect(corona, &Plasma::Corona::kPackageChanged,
-                     this, &DesktopView::coronaPackageChanged);
+    QObject::connect(corona, &Plasma::Corona::kPackageChanged, this, &DesktopView::coronaPackageChanged);
 
     KActivities::Controller *m_activityController = new KActivities::Controller(this);
-    
-    QObject::connect(m_activityController, &KActivities::Controller::activityAdded,
-                     this, &DesktopView::candidateContainmentsChanged);
-    QObject::connect(m_activityController, &KActivities::Controller::activityRemoved,
-                     this, &DesktopView::candidateContainmentsChanged);
+
+    QObject::connect(m_activityController, &KActivities::Controller::activityAdded, this, &DesktopView::candidateContainmentsChanged);
+    QObject::connect(m_activityController, &KActivities::Controller::activityRemoved, this, &DesktopView::candidateContainmentsChanged);
 }
 
 DesktopView::~DesktopView()
 {
 }
 
-void DesktopView::showEvent(QShowEvent* e)
+void DesktopView::showEvent(QShowEvent *e)
 {
     QQuickWindow::showEvent(e);
     adaptToScreen();
@@ -97,26 +94,23 @@ void DesktopView::adaptToScreen()
 {
     ensureWindowType();
 
-    //This happens sometimes, when shutting down the process
-    if (!m_screenToFollow || m_oldScreen==m_screenToFollow) {
+    // This happens sometimes, when shutting down the process
+    if (!m_screenToFollow || m_oldScreen == m_screenToFollow) {
         return;
     }
 
-    if(m_oldScreen) {
-        disconnect(m_oldScreen.data(), &QScreen::geometryChanged,
-                    this, &DesktopView::screenGeometryChanged);
+    if (m_oldScreen) {
+        disconnect(m_oldScreen.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
     }
-//     qDebug() << "adapting to screen" << m_screenToFollow->name() << this;
-    if(m_oldScreen) {
-        disconnect(m_oldScreen.data(), &QScreen::geometryChanged,
-                    this, &DesktopView::screenGeometryChanged);
+    //     qDebug() << "adapting to screen" << m_screenToFollow->name() << this;
+    if (m_oldScreen) {
+        disconnect(m_oldScreen.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
     }
 
     if (m_windowType == Desktop || m_windowType == WindowedDesktop) {
         screenGeometryChanged();
 
-        connect(m_screenToFollow.data(), &QScreen::geometryChanged,
-                this, &DesktopView::screenGeometryChanged, Qt::UniqueConnection);
+        connect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged, Qt::UniqueConnection);
     }
 
     m_oldScreen = m_screenToFollow;
@@ -142,7 +136,7 @@ void DesktopView::setWindowType(DesktopView::WindowType type)
 
 void DesktopView::ensureWindowType()
 {
-    //This happens sometimes, when shutting down the process
+    // This happens sometimes, when shutting down the process
     if (!screen()) {
         return;
     }
@@ -215,7 +209,7 @@ Q_INVOKABLE QString DesktopView::fileFromPackage(const QString &key, const QStri
 bool DesktopView::event(QEvent *e)
 {
     if (e->type() == QEvent::PlatformSurface) {
-        switch (static_cast<QPlatformSurfaceEvent*>(e)->surfaceEventType()) {
+        switch (static_cast<QPlatformSurfaceEvent *>(e)->surfaceEventType()) {
         case QPlatformSurfaceEvent::SurfaceCreated:
             setupWaylandIntegration();
             ensureWindowType();
@@ -304,8 +298,8 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 
     if (cont && cont->isContainment() && cont->containmentType() == Plasma::Types::DesktopContainment) {
         m_configView = new ContainmentConfigView(cont);
-        //if we changed containment with the config open, relaunch the config dialog but for the new containment
-        //third arg is used to disconnect when the config closes
+        // if we changed containment with the config open, relaunch the config dialog but for the new containment
+        // third arg is used to disconnect when the config closes
         connect(this, &ContainmentView::containmentChanged, m_configView.data(), [this]() {
             showConfigurationInterface(containment());
         });
@@ -320,14 +314,13 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 void DesktopView::screenGeometryChanged()
 {
     const QRect geo = m_screenToFollow->geometry();
-//     qDebug() << "newGeometry" << this << geo << geometry();
+    //     qDebug() << "newGeometry" << this << geo << geometry();
     setGeometry(geo);
     if (m_shellSurface) {
         m_shellSurface->setPosition(geo.topLeft());
     }
     emit geometryChanged();
 }
-
 
 void DesktopView::coronaPackageChanged(const KPackage::Package &package)
 {
@@ -341,7 +334,7 @@ void DesktopView::setupWaylandIntegration()
         // already setup
         return;
     }
-    if (ShellCorona *c = qobject_cast<ShellCorona*>(corona())) {
+    if (ShellCorona *c = qobject_cast<ShellCorona *>(corona())) {
         using namespace KWayland::Client;
         PlasmaShell *interface = c->waylandPlasmaShellInterface();
         if (!interface) {

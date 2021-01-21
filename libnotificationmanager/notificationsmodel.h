@@ -23,8 +23,8 @@
 
 #include "abstractnotificationsmodel.h"
 
-namespace NotificationManager {
-
+namespace NotificationManager
+{
 class Q_DECL_EXPORT NotificationsModel : public AbstractNotificationsModel
 {
 public:

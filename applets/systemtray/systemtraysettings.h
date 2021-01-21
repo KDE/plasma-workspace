@@ -21,8 +21,8 @@
 #define SYSTEMTRAYSETTINGS_H
 
 #include <QObject>
-#include <QStringList>
 #include <QPointer>
+#include <QStringList>
 
 class KConfigLoader;
 

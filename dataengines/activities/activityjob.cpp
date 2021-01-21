@@ -18,17 +18,17 @@
 
 #include "activityjob.h"
 
-#include <kactivities/controller.h>
-#include <QDebug>
 #include <KLocalizedString>
+#include <QDebug>
+#include <kactivities/controller.h>
 
 #include <QDBusConnection>
 #include <QDBusMessage>
 
-ActivityJob::ActivityJob(KActivities::Controller *controller, const QString &id, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent) :
-    ServiceJob(parent->objectName(), operation, parameters, parent),
-    m_activityController(controller),
-    m_id(id)
+ActivityJob::ActivityJob(KActivities::Controller *controller, const QString &id, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent)
+    : ServiceJob(parent->objectName(), operation, parameters, parent)
+    , m_activityController(controller)
+    , m_id(id)
 {
 }
 
@@ -40,7 +40,7 @@ void ActivityJob::start()
 {
     const QString operation = operationName();
     if (operation == QLatin1String("add")) {
-        //I wonder how well plasma will handle this...
+        // I wonder how well plasma will handle this...
         QString name = parameters()[QStringLiteral("Name")].toString();
         if (name.isEmpty()) {
             name = i18n("unnamed");
@@ -56,7 +56,7 @@ void ActivityJob::start()
         return;
     }
 
-    //m_id is needed for the rest
+    // m_id is needed for the rest
     if (m_id.isEmpty()) {
         setResult(false);
         return;
@@ -88,14 +88,12 @@ void ActivityJob::start()
     }
     if (operation == QLatin1String("toggleActivityManager")) {
         QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
-                                                          QStringLiteral("/PlasmaShell"),
-                                                          QStringLiteral("org.kde.PlasmaShell"),
-                                                          QStringLiteral("toggleActivityManager"));
+                                                              QStringLiteral("/PlasmaShell"),
+                                                              QStringLiteral("org.kde.PlasmaShell"),
+                                                              QStringLiteral("toggleActivityManager"));
         QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
         setResult(true);
         return;
     }
     setResult(false);
 }
-
-

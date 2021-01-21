@@ -23,9 +23,9 @@
 #include <KColorScheme>
 #include <KSharedConfig>
 
+#include <QDialog>
 #include <QFrame>
 #include <QPalette>
-#include <QDialog>
 
 #include "ui_scmeditordialog.h"
 
@@ -54,7 +54,7 @@ private Q_SLOTS:
 
     void on_buttonBox_clicked(QAbstractButton *button);
 
-    void updateTabs(bool byUser=false);
+    void updateTabs(bool byUser = false);
 
 private:
     void init();

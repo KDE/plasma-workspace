@@ -25,10 +25,10 @@
 
 #include <QDebug>
 
-HddTemp::HddTemp(QObject* parent)
-    : QObject(parent),
-      m_failCount(0),
-      m_cacheValid(false)
+HddTemp::HddTemp(QObject *parent)
+    : QObject(parent)
+    , m_failCount(0)
+    , m_cacheValid(false)
 {
     updateData();
 }
@@ -69,18 +69,18 @@ bool HddTemp::updateData()
                 if (data.length() > 0) {
                     break;
                 } else {
-                    //qDebug() << socket.errorString();
+                    // qDebug() << socket.errorString();
                     return false;
                 }
             }
             data += QString(socket.readAll());
         }
         socket.disconnectFromHost();
-        //on success retry fail count
+        // on success retry fail count
         m_failCount = 0;
     } else {
         m_failCount++;
-        //qDebug() << socket.errorString();
+        // qDebug() << socket.errorString();
         return false;
     }
     const QStringList list = data.split('|');
@@ -101,5 +101,3 @@ QVariant HddTemp::data(const QString source, const DataType type) const
 {
     return m_data[source][type];
 }
-
-

@@ -21,12 +21,11 @@
 
 #pragma once
 
-#include <QScopedPointer>
 #include <QPointer>
 #include <QQmlListReference>
+#include <QScopedPointer>
 
 #include <KSharedConfig>
-
 
 #include <KQuickAddons/ManagedConfigModule>
 
@@ -108,5 +107,4 @@ private:
 
     QScopedPointer<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;
-
 };

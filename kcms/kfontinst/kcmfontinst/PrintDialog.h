@@ -24,23 +24,23 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QDialog>
 #include <QComboBox>
+#include <QDialog>
 
 namespace KFI
 {
-
 class CPrintDialog : public QDialog
 {
-    public:
-
+public:
     CPrintDialog(QWidget *parent);
 
     bool exec(int size);
-    int  chosenSize() { return itsSize->currentIndex(); }
+    int chosenSize()
+    {
+        return itsSize->currentIndex();
+    }
 
-    private:
-
+private:
     QComboBox *itsSize;
 };
 

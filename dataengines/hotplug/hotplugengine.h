@@ -15,8 +15,7 @@
  * along with this library; see the file COPYING.LIB.  If not, write to
  * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
-*/
-
+ */
 
 #ifndef HOTPLUGENGINE_H
 #define HOTPLUGENGINE_H
@@ -37,32 +36,32 @@ class HotplugEngine : public Plasma::DataEngine
 {
     Q_OBJECT
 
-    public:
-        HotplugEngine( QObject* parent, const QVariantList& args);
-        ~HotplugEngine() override;
-        void init();
-        Plasma::Service* serviceForSource(const QString& source) override;
+public:
+    HotplugEngine(QObject *parent, const QVariantList &args);
+    ~HotplugEngine() override;
+    void init();
+    Plasma::Service *serviceForSource(const QString &source) override;
 
-    protected Q_SLOTS:
-        void onDeviceAdded(const QString &udi);
-        void onDeviceRemoved(const QString &udi);
+protected Q_SLOTS:
+    void onDeviceAdded(const QString &udi);
+    void onDeviceRemoved(const QString &udi);
 
-    private:
-        void handleDeviceAdded(Solid::Device &dev, bool added = true);
-        void findPredicates();
-        QStringList predicatesForDevice(Solid::Device &device) const;
-        QVariantList actionsForPredicates(const QStringList &predicates) const;
+private:
+    void handleDeviceAdded(Solid::Device &dev, bool added = true);
+    void findPredicates();
+    QStringList predicatesForDevice(Solid::Device &device) const;
+    QVariantList actionsForPredicates(const QStringList &predicates) const;
 
-    private Q_SLOTS:
-        void processNextStartupDevice();
-        void updatePredicates(const QString &path);
+private Q_SLOTS:
+    void processNextStartupDevice();
+    void updatePredicates(const QString &path);
 
-    private:
-        QHash<QString, Solid::Predicate> m_predicates;
-        QHash<QString, Solid::Device> m_startList;
-        QHash<QString, Solid::Device> m_devices;
-        Solid::Predicate m_encryptedPredicate;
-        KDirWatch *m_dirWatch;
+private:
+    QHash<QString, Solid::Predicate> m_predicates;
+    QHash<QString, Solid::Device> m_startList;
+    QHash<QString, Solid::Device> m_devices;
+    Solid::Predicate m_encryptedPredicate;
+    KDirWatch *m_dirWatch;
 };
 
 #endif

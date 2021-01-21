@@ -34,17 +34,18 @@ namespace KFI
 {
 class CInstaller
 {
-    public:
-
+public:
     CInstaller(QWidget *p)
-         : itsParent(p), itsTempDir(nullptr) { }
+        : itsParent(p)
+        , itsTempDir(nullptr)
+    {
+    }
     ~CInstaller();
 
     int install(const QSet<QUrl> &urls);
 
-    private:
-
-    QWidget  *itsParent;
+private:
+    QWidget *itsParent;
     QTemporaryDir *itsTempDir;
 };
 

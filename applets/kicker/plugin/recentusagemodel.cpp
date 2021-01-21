@@ -19,18 +19,18 @@
 
 #include "recentusagemodel.h"
 #include "actionlist.h"
-#include "appsmodel.h"
 #include "appentry.h"
+#include "appsmodel.h"
 #include "kastatsfavoritesmodel.h"
 #include <kio_version.h>
 
 #include <config-X11.h>
 
+#include <QDir>
 #include <QIcon>
 #include <QMimeDatabase>
 #include <QQmlEngine>
 #include <QTimer>
-#include <QDir>
 #if HAVE_X11
 #include <QX11Info>
 #endif
@@ -38,12 +38,12 @@
 #include <KActivities/ResourceInstance>
 #include <KFileItem>
 #include <KIO/ApplicationLauncherJob>
+#include <KIO/OpenFileManagerWindowJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KRun>
 #include <KService>
 #include <KStartupInfo>
-#include <KIO/OpenFileManagerWindowJob>
 
 #include <KActivities/Stats/Cleaning>
 #include <KActivities/Stats/ResultModel>
@@ -54,7 +54,8 @@ namespace KAStats = KActivities::Stats;
 using namespace KAStats;
 using namespace KAStats::Terms;
 
-GroupSortProxy::GroupSortProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel) : QSortFilterProxyModel(parentModel)
+GroupSortProxy::GroupSortProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel)
+    : QSortFilterProxyModel(parentModel)
 {
     sourceModel->setParent(this);
     setSourceModel(sourceModel);
@@ -65,8 +66,9 @@ GroupSortProxy::~GroupSortProxy()
 {
 }
 
-InvalidAppsFilterProxy::InvalidAppsFilterProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel) : QSortFilterProxyModel(parentModel)
-, m_parentModel(parentModel)
+InvalidAppsFilterProxy::InvalidAppsFilterProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel)
+    : QSortFilterProxyModel(parentModel)
+    , m_parentModel(parentModel)
 {
     connect(parentModel, &AbstractModel::favoritesModelChanged, this, &InvalidAppsFilterProxy::connectNewFavoritesModel);
     connectNewFavoritesModel();
@@ -81,7 +83,7 @@ InvalidAppsFilterProxy::~InvalidAppsFilterProxy()
 
 void InvalidAppsFilterProxy::connectNewFavoritesModel()
 {
-    KAStatsFavoritesModel* favoritesModel = static_cast<KAStatsFavoritesModel *>(m_parentModel->favoritesModel());
+    KAStatsFavoritesModel *favoritesModel = static_cast<KAStatsFavoritesModel *>(m_parentModel->favoritesModel());
     if (favoritesModel) {
         connect(favoritesModel, &KAStatsFavoritesModel::favoritesChanged, this, &QSortFilterProxyModel::invalidate);
     }
@@ -98,7 +100,7 @@ bool InvalidAppsFilterProxy::filterAcceptsRow(int source_row, const QModelIndex 
     if (resource.startsWith(QLatin1String("applications:"))) {
         KService::Ptr service = KService::serviceByStorageId(resource.section(QLatin1Char(':'), 1));
 
-        KAStatsFavoritesModel* favoritesModel = m_parentModel ? static_cast<KAStatsFavoritesModel *>(m_parentModel->favoritesModel()) : nullptr;
+        KAStatsFavoritesModel *favoritesModel = m_parentModel ? static_cast<KAStatsFavoritesModel *>(m_parentModel->favoritesModel()) : nullptr;
 
         return (service && (!favoritesModel || !favoritesModel->isFavorite(service->storageId())));
     }
@@ -116,11 +118,9 @@ bool GroupSortProxy::lessThan(const QModelIndex &left, const QModelIndex &right)
     const QString &lResource = sourceModel()->data(left, ResultModel::ResourceRole).toString();
     const QString &rResource = sourceModel()->data(right, ResultModel::ResourceRole).toString();
 
-    if (lResource.startsWith(QLatin1String("applications:"))
-        && !rResource.startsWith(QLatin1String("applications:"))) {
+    if (lResource.startsWith(QLatin1String("applications:")) && !rResource.startsWith(QLatin1String("applications:"))) {
         return true;
-    } else if (!lResource.startsWith(QLatin1String("applications:"))
-        && rResource.startsWith(QLatin1String("applications:"))) {
+    } else if (!lResource.startsWith(QLatin1String("applications:")) && rResource.startsWith(QLatin1String("applications:"))) {
         return false;
     }
 
@@ -128,11 +128,11 @@ bool GroupSortProxy::lessThan(const QModelIndex &left, const QModelIndex &right)
 }
 
 RecentUsageModel::RecentUsageModel(QObject *parent, IncludeUsage usage, int ordering)
-: ForwardingModel(parent)
-, m_usage(usage)
-, m_ordering((Ordering)ordering)
-, m_complete(false)
-, m_placesModel(new KFilePlacesModel(this))
+    : ForwardingModel(parent)
+    , m_usage(usage)
+    , m_ordering((Ordering)ordering)
+    , m_complete(false)
+    , m_placesModel(new KFilePlacesModel(this))
 {
     refresh();
 }
@@ -161,13 +161,13 @@ RecentUsageModel::IncludeUsage RecentUsageModel::shownItems() const
 QString RecentUsageModel::description() const
 {
     switch (m_usage) {
-        case AppsAndDocs:
-            return i18n("Recently Used");
-        case OnlyApps:
-            return i18n("Applications");
-        case OnlyDocs:
-        default:
-            return i18n("Files");
+    case AppsAndDocs:
+        return i18n("Recently Used");
+    case OnlyApps:
+        return i18n("Applications");
+    case OnlyDocs:
+    default:
+        return i18n("Files");
     }
 }
 
@@ -176,8 +176,7 @@ QString RecentUsageModel::resourceAt(int row) const
     QSortFilterProxyModel *sourceProxy = qobject_cast<QSortFilterProxyModel *>(sourceModel());
 
     if (sourceProxy) {
-        return sourceProxy->sourceModel()->data(sourceProxy->mapToSource(sourceProxy->index(row, 0)),
-            ResultModel::ResourceRole).toString();
+        return sourceProxy->sourceModel()->data(sourceProxy->mapToSource(sourceProxy->index(row, 0)), ResultModel::ResourceRole).toString();
     }
 
     return sourceModel()->data(index(row, 0), ResultModel::ResourceRole).toString();
@@ -203,19 +202,17 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
     const QString storageId = resource.section(QLatin1Char(':'), 1);
     KService::Ptr service = KService::serviceByStorageId(storageId);
 
-    QStringList allowedTypes({ QLatin1String("Service"), QLatin1String("Application") });
+    QStringList allowedTypes({QLatin1String("Service"), QLatin1String("Application")});
 
-    if (!service || !allowedTypes.contains(service->property(QLatin1String("Type")).toString())
-            || service->exec().isEmpty()) {
+    if (!service || !allowedTypes.contains(service->property(QLatin1String("Type")).toString()) || service->exec().isEmpty()) {
         return QVariant();
     }
 
     if (role == Qt::DisplayRole) {
         AppsModel *parentModel = qobject_cast<AppsModel *>(QObject::parent());
 
-        if (parentModel)  {
-            return AppEntry::nameFromService(service,
-                (AppEntry::NameFormat)qobject_cast<AppsModel *>(QObject::parent())->appNameFormat());
+        if (parentModel) {
+            return AppEntry::nameFromService(service, (AppEntry::NameFormat)qobject_cast<AppsModel *>(QObject::parent())->appNameFormat());
         } else {
             return AppEntry::nameFromService(service, AppEntry::NameOnly);
         }
@@ -254,9 +251,8 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
     return QVariant();
 }
 
-
-QModelIndex RecentUsageModel::findPlaceForKFileItem(const KFileItem &fileItem) const {
-
+QModelIndex RecentUsageModel::findPlaceForKFileItem(const KFileItem &fileItem) const
+{
     const auto index = m_placesModel->closestItem(fileItem.url());
     if (index.isValid()) {
         const auto parentUrl = m_placesModel->url(index);
@@ -275,7 +271,7 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
         url.setScheme(QStringLiteral("file"));
     }
 
-    auto getFileItem = [=] () {
+    auto getFileItem = [=]() {
         // Avoid calling QT_LSTAT and accessing recent documents
         return KFileItem(url, KFileItem::SkipMimeTypeFromContent);
     };
@@ -332,7 +328,8 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
 
         actionList << Kicker::createSeparatorActionItem();
 
-        QVariantMap openParentFolder = Kicker::createActionItem(i18n("Open Containing Folder"), QStringLiteral("folder-open"), QStringLiteral("openParentFolder"));
+        QVariantMap openParentFolder =
+            Kicker::createActionItem(i18n("Open Containing Folder"), QStringLiteral("folder-open"), QStringLiteral("openParentFolder"));
         actionList << openParentFolder;
 
         QVariantMap forgetAction = Kicker::createActionItem(i18n("Forget File"), QStringLiteral("edit-clear-history"), QStringLiteral("forget"));
@@ -385,8 +382,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
         job->start();
 
-        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + storageId),
-            QStringLiteral("org.kde.plasma.kicker"));
+        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + storageId), QStringLiteral("org.kde.plasma.kicker"));
 
         return true;
     } else if (actionId == QLatin1String("forget") && withinBounds) {
@@ -413,8 +409,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
 
         return false;
     } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
-        const QString storageId = sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole)
-                                .toString().section(QLatin1Char(':'), 1);
+        const QString storageId = sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString().section(QLatin1Char(':'), 1);
         KService::Ptr service = KService::serviceByStorageId(storageId);
         service->setExec(argument.toString());
         KIO::ApplicationLauncherJob *job = new KIO::ApplicationLauncherJob(service);
@@ -424,8 +419,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         const QString &resource = resourceAt(row);
 
         if (resource.startsWith(QLatin1String("applications:"))) {
-            const QString storageId = sourceModel()->data(sourceModel()->index(row, 0),
-                ResultModel::ResourceRole).toString().section(QLatin1Char(':'), 1);
+            const QString storageId = sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString().section(QLatin1Char(':'), 1);
             KService::Ptr service = KService::serviceByStorageId(storageId);
 
             if (service) {
@@ -466,19 +460,20 @@ QVariantList RecentUsageModel::actions() const
 QString RecentUsageModel::forgetAllActionName() const
 {
     switch (m_usage) {
-        case AppsAndDocs:
-            return i18n("Forget All");
-        case OnlyApps:
-            return i18n("Forget All Applications");
-        case OnlyDocs:
-        default:
-            return i18n("Forget All Files");
+    case AppsAndDocs:
+        return i18n("Forget All");
+    case OnlyApps:
+        return i18n("Forget All Applications");
+    case OnlyDocs:
+    default:
+        return i18n("Forget All Files");
     }
 }
 
 void RecentUsageModel::setOrdering(int ordering)
 {
-    if (ordering == m_ordering) return;
+    if (ordering == m_ordering)
+        return;
 
     m_ordering = (Ordering)ordering;
     refresh();
@@ -522,21 +517,18 @@ void RecentUsageModel::refresh()
     // clang-format on
 
     switch (m_usage) {
-        case AppsAndDocs:
-        {
-            query = query | Url::startsWith(QStringLiteral("applications:")) | Url::file() | Limit(30);
-            break;
-        }
-        case OnlyApps:
-        {
-            query = query | Url::startsWith(QStringLiteral("applications:")) | Limit(15);
-            break;
-        }
-        case OnlyDocs:
-        default:
-        {
-            query = query | Url::file() | Limit(15);
-        }
+    case AppsAndDocs: {
+        query = query | Url::startsWith(QStringLiteral("applications:")) | Url::file() | Limit(30);
+        break;
+    }
+    case OnlyApps: {
+        query = query | Url::startsWith(QStringLiteral("applications:")) | Limit(15);
+        break;
+    }
+    case OnlyDocs:
+    default: {
+        query = query | Url::file() | Limit(15);
+    }
     }
 
     m_activitiesModel = new ResultModel(query);

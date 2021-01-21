@@ -32,12 +32,12 @@
 #include <QIcon>
 #include <QQuickItem>
 
-BaseModel::BaseModel(QPointer<SystemTraySettings> settings, QObject *parent) :
-    QAbstractListModel(parent),
-    m_settings(settings),
-    m_showAllItems(m_settings->isShowAllItems()),
-    m_shownItems(m_settings->shownItems()),
-    m_hiddenItems(m_settings->hiddenItems())
+BaseModel::BaseModel(QPointer<SystemTraySettings> settings, QObject *parent)
+    : QAbstractListModel(parent)
+    , m_settings(settings)
+    , m_showAllItems(m_settings->isShowAllItems())
+    , m_shownItems(m_settings->shownItems())
+    , m_hiddenItems(m_settings->hiddenItems())
 {
     connect(m_settings, &SystemTraySettings::configurationChanged, this, &BaseModel::onConfigurationChanged);
 }
@@ -87,7 +87,6 @@ Plasma::Types::ItemStatus BaseModel::calculateEffectiveStatus(bool canRender, Pl
     }
 }
 
-
 static QString plasmoidCategoryForMetadata(const KPluginMetaData &metadata)
 {
     QString category = QStringLiteral("UnknownCategory");
@@ -102,9 +101,9 @@ static QString plasmoidCategoryForMetadata(const KPluginMetaData &metadata)
     return category;
 }
 
-PlasmoidModel::PlasmoidModel(QPointer<SystemTraySettings> settings, QPointer<PlasmoidRegistry> plasmoidRegistry, QObject *parent) :
-    BaseModel(settings, parent),
-    m_plasmoidRegistry(plasmoidRegistry)
+PlasmoidModel::PlasmoidModel(QPointer<SystemTraySettings> settings, QPointer<PlasmoidRegistry> plasmoidRegistry, QObject *parent)
+    : BaseModel(settings, parent)
+    , m_plasmoidRegistry(plasmoidRegistry)
 {
     connect(m_plasmoidRegistry, &PlasmoidRegistry::pluginRegistered, this, &PlasmoidModel::appendRow);
     connect(m_plasmoidRegistry, &PlasmoidRegistry::pluginUnregistered, this, &PlasmoidModel::removeRow);
@@ -135,8 +134,7 @@ QVariant PlasmoidModel::data(const QModelIndex &index, int role) const
             if (dbusactivation.isEmpty()) {
                 return pluginMetaData.name();
             } else {
-                return i18nc("Suffix added to the applet name if the applet is autoloaded via DBus activation",
-                             "%1 (Automatic load)", pluginMetaData.name());
+                return i18nc("Suffix added to the applet name if the applet is autoloaded via DBus activation", "%1 (Automatic load)", pluginMetaData.name());
             }
         }
         case Qt::DecorationRole: {
@@ -155,20 +153,30 @@ QVariant PlasmoidModel::data(const QModelIndex &index, int role) const
         }
 
         switch (static_cast<BaseRole>(role)) {
-        case BaseRole::ItemType: return QStringLiteral("Plasmoid");
-        case BaseRole::ItemId: return pluginMetaData.pluginId();
-        case BaseRole::CanRender: return applet != nullptr;
-        case BaseRole::Category: return plasmoidCategoryForMetadata(pluginMetaData);
-        case BaseRole::Status: return status;
-        case BaseRole::EffectiveStatus: return calculateEffectiveStatus(applet != nullptr, status, pluginMetaData.pluginId());
-        default: return QVariant();
+        case BaseRole::ItemType:
+            return QStringLiteral("Plasmoid");
+        case BaseRole::ItemId:
+            return pluginMetaData.pluginId();
+        case BaseRole::CanRender:
+            return applet != nullptr;
+        case BaseRole::Category:
+            return plasmoidCategoryForMetadata(pluginMetaData);
+        case BaseRole::Status:
+            return status;
+        case BaseRole::EffectiveStatus:
+            return calculateEffectiveStatus(applet != nullptr, status, pluginMetaData.pluginId());
+        default:
+            return QVariant();
         }
     }
 
     switch (static_cast<Role>(role)) {
-    case Role::Applet: return applet ? applet->property("_plasma_graphicObject") : QVariant();
-    case Role::HasApplet: return applet != nullptr;
-    default: return QVariant();
+    case Role::Applet:
+        return applet ? applet->property("_plasma_graphicObject") : QVariant();
+    case Role::HasApplet:
+        return applet != nullptr;
+    default:
+        return QVariant();
     }
 }
 
@@ -199,7 +207,7 @@ void PlasmoidModel::addApplet(Plasma::Applet *applet)
     }
 
     m_items[idx].applet = applet;
-    connect(applet, &Plasma::Applet::statusChanged, this, [this, applet] (Plasma::Types::ItemStatus status) {
+    connect(applet, &Plasma::Applet::statusChanged, this, [this, applet](Plasma::Types::ItemStatus status) {
         Q_UNUSED(status)
         int idx = indexOfPluginId(applet->pluginMetaData().pluginId());
         dataChanged(index(idx, 0), index(idx, 0), {static_cast<int>(BaseRole::Status)});
@@ -238,7 +246,8 @@ void PlasmoidModel::removeRow(const QString &pluginId)
     endRemoveRows();
 }
 
-int PlasmoidModel::indexOfPluginId(const QString &pluginId) const {
+int PlasmoidModel::indexOfPluginId(const QString &pluginId) const
+{
     for (int i = 0; i < rowCount(); i++) {
         if (m_items[i].pluginMetaData.pluginId() == pluginId) {
             return i;
@@ -247,8 +256,8 @@ int PlasmoidModel::indexOfPluginId(const QString &pluginId) const {
     return -1;
 }
 
-
-StatusNotifierModel::StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject *parent) : BaseModel(settings, parent)
+StatusNotifierModel::StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject *parent)
+    : BaseModel(settings, parent)
 {
     m_dataEngine = dataEngine(QStringLiteral("statusnotifieritem"));
 
@@ -294,8 +303,10 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
 
     if (role <= Qt::UserRole) {
         switch (role) {
-        case Qt::DisplayRole: return sniData.value(QStringLiteral("Title"));
-        case Qt::DecorationRole: return extractIcon(sniData, QStringLiteral("Icon"), sniData.value(QStringLiteral("IconName")));
+        case Qt::DisplayRole:
+            return sniData.value(QStringLiteral("Title"));
+        case Qt::DecorationRole:
+            return extractIcon(sniData, QStringLiteral("Icon"), sniData.value(QStringLiteral("IconName")));
         default:
             return QVariant();
         }
@@ -303,38 +314,62 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
 
     if (role < static_cast<int>(Role::DataEngineSource)) {
         switch (static_cast<BaseRole>(role)) {
-        case BaseRole::ItemType: return QStringLiteral("StatusNotifier");
-        case BaseRole::ItemId: return sniData.value(QStringLiteral("Id"));
-        case BaseRole::CanRender: return true;
+        case BaseRole::ItemType:
+            return QStringLiteral("StatusNotifier");
+        case BaseRole::ItemId:
+            return sniData.value(QStringLiteral("Id"));
+        case BaseRole::CanRender:
+            return true;
         case BaseRole::Category: {
             QVariant category = sniData.value(QStringLiteral("Category"));
-            return  category.isNull() ? QStringLiteral("UnknownCategory") : sniData.value(QStringLiteral("Category"));
+            return category.isNull() ? QStringLiteral("UnknownCategory") : sniData.value(QStringLiteral("Category"));
         }
-        case BaseRole::Status: return extractStatus(sniData);
-        case BaseRole::EffectiveStatus: return calculateEffectiveStatus(true, extractStatus(sniData), sniData.value(QStringLiteral("Id")).toString());
-        default: return QVariant();
+        case BaseRole::Status:
+            return extractStatus(sniData);
+        case BaseRole::EffectiveStatus:
+            return calculateEffectiveStatus(true, extractStatus(sniData), sniData.value(QStringLiteral("Id")).toString());
+        default:
+            return QVariant();
         }
     }
 
     switch (static_cast<Role>(role)) {
-    case Role::DataEngineSource: return item.source;
-    case Role::Service: return QVariant::fromValue(item.service);
-    case Role::AttentionIcon: return extractIcon(sniData, QStringLiteral("AttentionIcon"));
-    case Role::AttentionIconName: return sniData.value(QStringLiteral("AttentionIconName"));
-    case Role::AttentionMovieName: return sniData.value(QStringLiteral("AttentionMovieName"));
-    case Role::Category: return sniData.value(QStringLiteral("Category"));
-    case Role::Icon: return extractIcon(sniData, QStringLiteral("Icon"));
-    case Role::IconName: return sniData.value(QStringLiteral("IconName"));
-    case Role::IconThemePath: return sniData.value(QStringLiteral("IconThemePath"));
-    case Role::Id: return sniData.value(QStringLiteral("Id"));
-    case Role::ItemIsMenu: return sniData.value(QStringLiteral("ItemIsMenu"));
-    case Role::OverlayIconName: return sniData.value(QStringLiteral("OverlayIconName"));
-    case Role::Status: return extractStatus(sniData);
-    case Role::Title: return sniData.value(QStringLiteral("Title"));
-    case Role::ToolTipSubTitle: return sniData.value(QStringLiteral("ToolTipSubTitle"));
-    case Role::ToolTipTitle: return sniData.value(QStringLiteral("ToolTipTitle"));
-    case Role::WindowId: return sniData.value(QStringLiteral("WindowId"));
-    default: return QVariant();
+    case Role::DataEngineSource:
+        return item.source;
+    case Role::Service:
+        return QVariant::fromValue(item.service);
+    case Role::AttentionIcon:
+        return extractIcon(sniData, QStringLiteral("AttentionIcon"));
+    case Role::AttentionIconName:
+        return sniData.value(QStringLiteral("AttentionIconName"));
+    case Role::AttentionMovieName:
+        return sniData.value(QStringLiteral("AttentionMovieName"));
+    case Role::Category:
+        return sniData.value(QStringLiteral("Category"));
+    case Role::Icon:
+        return extractIcon(sniData, QStringLiteral("Icon"));
+    case Role::IconName:
+        return sniData.value(QStringLiteral("IconName"));
+    case Role::IconThemePath:
+        return sniData.value(QStringLiteral("IconThemePath"));
+    case Role::Id:
+        return sniData.value(QStringLiteral("Id"));
+    case Role::ItemIsMenu:
+        return sniData.value(QStringLiteral("ItemIsMenu"));
+    case Role::OverlayIconName:
+        return sniData.value(QStringLiteral("OverlayIconName"));
+    case Role::Status:
+        return extractStatus(sniData);
+    case Role::Title:
+        return sniData.value(QStringLiteral("Title"));
+    case Role::ToolTipSubTitle:
+        return sniData.value(QStringLiteral("ToolTipSubTitle"));
+    case Role::ToolTipTitle:
+        return sniData.value(QStringLiteral("ToolTipTitle"));
+    case Role::WindowId:
+        return sniData.value(QStringLiteral("WindowId"));
+    default:
+        return QVariant();
     }
 }
 
@@ -418,8 +453,8 @@ int StatusNotifierModel::indexOfSource(const QString &source) const
     return -1;
 }
 
-
-SystemTrayModel::SystemTrayModel(QObject *parent) : KConcatenateRowsProxyModel(parent)
+SystemTrayModel::SystemTrayModel(QObject *parent)
+    : KConcatenateRowsProxyModel(parent)
 {
     m_roleNames = KConcatenateRowsProxyModel::roleNames();
 }

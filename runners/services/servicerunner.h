@@ -19,7 +19,6 @@
 #ifndef SERVICERUNNER_H
 #define SERVICERUNNER_H
 
-
 #include <KService>
 
 //#include <KRunner/AbstractRunner>
@@ -36,20 +35,18 @@ class ServiceRunner : public Plasma::AbstractRunner
 {
     Q_OBJECT
 
-    public:
-        ServiceRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
-        ~ServiceRunner() override;
+public:
+    ServiceRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    ~ServiceRunner() override;
 
-        void match(Plasma::RunnerContext &context) override;
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
+    void match(Plasma::RunnerContext &context) override;
+    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
 
-    protected Q_SLOTS:
-        QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;
+protected Q_SLOTS:
+    QMimeData *mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
-    protected:
-        void setupMatch(const KService::Ptr &service, Plasma::QueryMatch &action);
+protected:
+    void setupMatch(const KService::Ptr &service, Plasma::QueryMatch &action);
 };
 
-
 #endif
-

@@ -21,33 +21,33 @@
 
 #include <QAction>
 #include <QCheckBox>
-#include <QVBoxLayout>
 #include <QDBusPendingReply>
+#include <QVBoxLayout>
 
 #include <KActionCollection>
 #include <KAuthorized>
-#include <QDebug>
-#include <QIcon>
 #include <KGlobalAccel>
 #include <KLocalizedString>
+#include <QDebug>
+#include <QIcon>
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 
+#include "krunner_interface.h"
 #include "kworkspace.h"
 #include <sessionmanagement.h>
-#include "krunner_interface.h"
 
 ContextMenu::ContextMenu(QObject *parent, const QVariantList &args)
-    : Plasma::ContainmentActions(parent, args),
-      m_runCommandAction(nullptr),
-      m_lockScreenAction(nullptr),
-      m_logoutAction(nullptr),
-      m_separator1(nullptr),
-      m_separator2(nullptr),
-      m_separator3(nullptr),
-      m_buttons(nullptr),
-      m_session(new SessionManagement(this))
+    : Plasma::ContainmentActions(parent, args)
+    , m_runCommandAction(nullptr)
+    , m_lockScreenAction(nullptr)
+    , m_logoutAction(nullptr)
+    , m_separator1(nullptr)
+    , m_separator2(nullptr)
+    , m_separator3(nullptr)
+    , m_buttons(nullptr)
+    , m_session(new SessionManagement(this))
 {
 }
 
@@ -65,30 +65,15 @@ void ContextMenu::restore(const KConfigGroup &config)
     QHash<QString, bool> actions;
     QSet<QString> disabled;
 
-    if (c->containmentType() == Plasma::Types::PanelContainment ||
-        c->containmentType() == Plasma::Types::CustomPanelContainment) {
-        m_actionOrder   << QStringLiteral("add widgets")
-                        << QStringLiteral("_add panel")
-                        << QStringLiteral("_context")
-                        << QStringLiteral("configure")
-                        << QStringLiteral("remove");
+    if (c->containmentType() == Plasma::Types::PanelContainment || c->containmentType() == Plasma::Types::CustomPanelContainment) {
+        m_actionOrder << QStringLiteral("add widgets") << QStringLiteral("_add panel") << QStringLiteral("_context") << QStringLiteral("configure")
+                      << QStringLiteral("remove");
     } else {
         actions.insert(QStringLiteral("configure shortcuts"), false);
-        m_actionOrder << QStringLiteral("configure")
-                      << QStringLiteral("run associated application")
-                      << QStringLiteral("configure shortcuts")
-                      << QStringLiteral("_sep1")
-                      << QStringLiteral("_context")
-                      << QStringLiteral("_run_command")
-                      << QStringLiteral("add widgets")
-                      << QStringLiteral("_add panel")
-                      << QStringLiteral("manage activities")
-                      << QStringLiteral("remove")
-                      << QStringLiteral("edit mode")
-                      << QStringLiteral("_sep2")
-                      << QStringLiteral("_lock_screen")
-                      << QStringLiteral("_logout")
-                      << QStringLiteral("_sep3")
+        m_actionOrder << QStringLiteral("configure") << QStringLiteral("run associated application") << QStringLiteral("configure shortcuts")
+                      << QStringLiteral("_sep1") << QStringLiteral("_context") << QStringLiteral("_run_command") << QStringLiteral("add widgets")
+                      << QStringLiteral("_add panel") << QStringLiteral("manage activities") << QStringLiteral("remove") << QStringLiteral("edit mode")
+                      << QStringLiteral("_sep2") << QStringLiteral("_lock_screen") << QStringLiteral("_logout") << QStringLiteral("_sep3")
                       << QStringLiteral("_wallpaper");
         disabled.insert(QStringLiteral("configure shortcuts"));
     }
@@ -119,13 +104,12 @@ void ContextMenu::restore(const KConfigGroup &config)
         });
         connect(m_lockScreenAction, &QAction::triggered, m_session, &SessionManagement::lock);
 
-
         m_logoutAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Leave..."), this);
         m_logoutAction->setIcon(QIcon::fromTheme(QStringLiteral("system-log-out")));
         m_logoutAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("ksmserver"), QStringLiteral("Log Out")).value(0));
         m_logoutAction->setEnabled(m_session->canLogout());
         connect(m_session, &SessionManagement::canLogoutChanged, this, [this]() {
-                m_logoutAction->setEnabled(m_session->canLogout());
+            m_logoutAction->setEnabled(m_session->canLogout());
         });
         connect(m_logoutAction, &QAction::triggered, this, &ContextMenu::startLogout);
 
@@ -138,11 +122,11 @@ void ContextMenu::restore(const KConfigGroup &config)
     }
 }
 
-QList<QAction*> ContextMenu::contextualActions()
+QList<QAction *> ContextMenu::contextualActions()
 {
     Plasma::Containment *c = containment();
     Q_ASSERT(c);
-    QList<QAction*> actions;
+    QList<QAction *> actions;
     foreach (const QString &name, m_actionOrder) {
         if (!m_actions.value(name)) {
             continue;
@@ -150,20 +134,20 @@ QList<QAction*> ContextMenu::contextualActions()
 
         if (name == QLatin1String("_context")) {
             actions << c->contextualActions();
-        } if (name == QLatin1String("_wallpaper")) {
+        }
+        if (name == QLatin1String("_wallpaper")) {
             if (!c->wallpaper().isEmpty()) {
                 QObject *wallpaperGraphicsObject = c->property("wallpaperGraphicsObject").value<QObject *>();
                 if (wallpaperGraphicsObject) {
-                    actions << wallpaperGraphicsObject->property("contextualActions").value<QList<QAction *> >();
+                    actions << wallpaperGraphicsObject->property("contextualActions").value<QList<QAction *>>();
                 }
             }
         } else if (QAction *a = action(name)) {
             // Bug 364292: show "Remove this Panel" option only when panelcontroller is opened
-            if (name != QLatin1String("remove") || c->isUserConfiguring() ||
-                (c->containmentType() != Plasma::Types::PanelContainment
-                 && c->containmentType() != Plasma::Types::CustomPanelContainment
-                 && c->corona()->immutability() != Plasma::Types::Mutable)) {
-                    actions << a;
+            if (name != QLatin1String("remove") || c->isUserConfiguring()
+                || (c->containmentType() != Plasma::Types::PanelContainment && c->containmentType() != Plasma::Types::CustomPanelContainment
+                    && c->corona()->immutability() != Plasma::Types::Mutable)) {
+                actions << a;
             }
         }
     }
@@ -206,7 +190,7 @@ QAction *ContextMenu::action(const QString &name)
             return c->corona()->actions()->action(QStringLiteral("manage activities"));
         }
     } else {
-        //FIXME: remove action: make removal of current activity possible
+        // FIXME: remove action: make removal of current activity possible
         return c->actions()->action(name);
     }
     return nullptr;
@@ -228,19 +212,19 @@ void ContextMenu::startLogout()
     KConfig config(QStringLiteral("ksmserverrc"));
     const auto group = config.group("General");
     switch (group.readEntry("shutdownType", int(KWorkSpace::ShutdownTypeNone))) {
-        case int(KWorkSpace::ShutdownTypeHalt):
-            m_session->requestShutdown();
-            break;
-        case int(KWorkSpace::ShutdownTypeReboot):
-            m_session->requestReboot();
-            break;
-        default:
-            m_session->requestLogout();
-            break;
+    case int(KWorkSpace::ShutdownTypeHalt):
+        m_session->requestShutdown();
+        break;
+    case int(KWorkSpace::ShutdownTypeReboot):
+        m_session->requestReboot();
+        break;
+    default:
+        m_session->requestLogout();
+        break;
     }
 }
 
-QWidget* ContextMenu::createConfigurationInterface(QWidget* parent)
+QWidget *ContextMenu::createConfigurationInterface(QWidget *parent)
 {
     QWidget *widget = new QWidget(parent);
     QVBoxLayout *lay = new QVBoxLayout();
@@ -254,13 +238,13 @@ QWidget* ContextMenu::createConfigurationInterface(QWidget* parent)
 
         if (name == QLatin1String("_context")) {
             item = new QCheckBox(widget);
-            //FIXME better text
+            // FIXME better text
             item->setText(i18nc("plasma_containmentactions_contextmenu", "[Other Actions]"));
         } else if (name == QLatin1String("_wallpaper")) {
             item = new QCheckBox(widget);
             item->setText(i18nc("plasma_containmentactions_contextmenu", "Wallpaper Actions"));
             item->setIcon(QIcon::fromTheme(QStringLiteral("user-desktop")));
-        } else if (name == QLatin1String("_sep1") || name ==QLatin1String("_sep2") || name == QLatin1String("_sep3")) {
+        } else if (name == QLatin1String("_sep1") || name == QLatin1String("_sep2") || name == QLatin1String("_sep3")) {
             item = new QCheckBox(widget);
             item->setText(i18nc("plasma_containmentactions_contextmenu", "[Separator]"));
         } else {

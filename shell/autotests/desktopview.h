@@ -19,12 +19,11 @@
 #ifndef DESKTOPVIEW_H
 #define DESKTOPVIEW_H
 
-#include <QWindow>
-#include <QPointer>
 #include <Plasma/Corona>
+#include <QPointer>
+#include <QWindow>
 
 class QScreen;
-
 
 class DesktopView : public QWindow
 {

@@ -17,12 +17,12 @@
    Boston, MA 02110-1301, USA.
 */
 
+#include <KLocalizedString>
 #include <kio/slavebase.h>
-#include <sys/stat.h>
-#include <time.h>
 #include <kservice.h>
 #include <kservicegroup.h>
-#include <KLocalizedString>
+#include <sys/stat.h>
+#include <time.h>
 
 #include <QStandardPaths>
 #include <QUrl>
@@ -36,28 +36,27 @@ public:
     };
     ApplicationsProtocol(const QByteArray &protocol, const QByteArray &pool, const QByteArray &app);
     ~ApplicationsProtocol() override;
-    void get( const QUrl& url ) override;
-    void stat(const QUrl& url) override;
-    void listDir(const QUrl& url) override;
+    void get(const QUrl &url) override;
+    void stat(const QUrl &url) override;
+    void listDir(const QUrl &url) override;
 
 private:
     RunMode m_runMode;
 };
 
 extern "C" {
-    Q_DECL_EXPORT int kdemain( int argc, char **argv )
-    {
-        QCoreApplication app(argc, argv);
-        app.setApplicationName( "kio_applications" );
+Q_DECL_EXPORT int kdemain(int argc, char **argv)
+{
+    QCoreApplication app(argc, argv);
+    app.setApplicationName("kio_applications");
 
-        ApplicationsProtocol slave(argv[1], argv[2], argv[3]);
-        slave.dispatchLoop();
-        return 0;
-    }
+    ApplicationsProtocol slave(argv[1], argv[2], argv[3]);
+    slave.dispatchLoop();
+    return 0;
+}
 }
 
-
-static void createFileEntry(KIO::UDSEntry& entry, const KService::Ptr& service, const QUrl& parentUrl)
+static void createFileEntry(KIO::UDSEntry &entry, const KService::Ptr &service, const QUrl &parentUrl)
 {
     entry.clear();
     entry.fastInsert(KIO::UDSEntry::UDS_NAME, KIO::encodeFileName(service->name()));
@@ -73,23 +72,23 @@ static void createFileEntry(KIO::UDSEntry& entry, const KService::Ptr& service, 
     entry.fastInsert(KIO::UDSEntry::UDS_ICON_NAME, service->icon());
 }
 
-static void createDirEntry(KIO::UDSEntry& entry, const QString& name, const QString& url, const QString& mime, const QString& iconName)
+static void createDirEntry(KIO::UDSEntry &entry, const QString &name, const QString &url, const QString &mime, const QString &iconName)
 {
     entry.clear();
-    entry.fastInsert( KIO::UDSEntry::UDS_NAME, name );
-    entry.fastInsert( KIO::UDSEntry::UDS_FILE_TYPE, S_IFDIR );
-    entry.fastInsert( KIO::UDSEntry::UDS_ACCESS, 0500 );
-    entry.fastInsert( KIO::UDSEntry::UDS_MIME_TYPE, mime );
+    entry.fastInsert(KIO::UDSEntry::UDS_NAME, name);
+    entry.fastInsert(KIO::UDSEntry::UDS_FILE_TYPE, S_IFDIR);
+    entry.fastInsert(KIO::UDSEntry::UDS_ACCESS, 0500);
+    entry.fastInsert(KIO::UDSEntry::UDS_MIME_TYPE, mime);
     if (!url.isEmpty())
-        entry.fastInsert( KIO::UDSEntry::UDS_URL, url );
-    entry.fastInsert( KIO::UDSEntry::UDS_ICON_NAME, iconName );
+        entry.fastInsert(KIO::UDSEntry::UDS_URL, url);
+    entry.fastInsert(KIO::UDSEntry::UDS_ICON_NAME, iconName);
 }
 
-ApplicationsProtocol::ApplicationsProtocol( const QByteArray &protocol, const QByteArray &pool, const QByteArray &app)
-    : SlaveBase( protocol, pool, app )
+ApplicationsProtocol::ApplicationsProtocol(const QByteArray &protocol, const QByteArray &pool, const QByteArray &app)
+    : SlaveBase(protocol, pool, app)
 {
     // Adjusts which part of the K Menu to virtualize.
-    if ( protocol == "programs" )
+    if (protocol == "programs")
         m_runMode = ProgramsMode;
     else // if (protocol == "applications")
         m_runMode = ApplicationsMode;
@@ -99,7 +98,7 @@ ApplicationsProtocol::~ApplicationsProtocol()
 {
 }
 
-void ApplicationsProtocol::get( const QUrl & url )
+void ApplicationsProtocol::get(const QUrl &url)
 {
     KService::Ptr service = KService::serviceByDesktopName(url.fileName());
     if (service && service->isValid()) {
@@ -108,29 +107,31 @@ void ApplicationsProtocol::get( const QUrl & url )
         redirection(redirUrl);
         finished();
     } else {
-        error( KIO::ERR_IS_DIRECTORY, url.toDisplayString() );
+        error(KIO::ERR_IS_DIRECTORY, url.toDisplayString());
     }
 }
 
-
-void ApplicationsProtocol::stat(const QUrl& url)
+void ApplicationsProtocol::stat(const QUrl &url)
 {
     KIO::UDSEntry entry;
 
-    QString servicePath( url.path() );
-    if(!servicePath.endsWith('/'))
+    QString servicePath(url.path());
+    if (!servicePath.endsWith('/'))
         servicePath.append('/');
     servicePath.remove(0, 1); // remove starting '/'
 
     KServiceGroup::Ptr grp = KServiceGroup::group(servicePath);
 
     if (grp && grp->isValid()) {
-        createDirEntry(entry, ((m_runMode==ApplicationsMode) ? i18n("Applications") : i18n("Programs")),
-                       url.url(), QStringLiteral("inode/directory"), grp->icon() );
+        createDirEntry(entry,
+                       ((m_runMode == ApplicationsMode) ? i18n("Applications") : i18n("Programs")),
+                       url.url(),
+                       QStringLiteral("inode/directory"),
+                       grp->icon());
     } else {
-        KService::Ptr service = KService::serviceByDesktopName( url.fileName() );
+        KService::Ptr service = KService::serviceByDesktopName(url.fileName());
         if (service && service->isValid()) {
-            createFileEntry(entry, service, url );
+            createFileEntry(entry, service, url);
         } else {
             error(KIO::ERR_SLAVE_DEFINED, i18n("Unknown application folder"));
             return;
@@ -141,11 +142,10 @@ void ApplicationsProtocol::stat(const QUrl& url)
     finished();
 }
 
-
-void ApplicationsProtocol::listDir(const QUrl& url)
+void ApplicationsProtocol::listDir(const QUrl &url)
 {
     QString groupPath = url.path();
-    if(!groupPath.endsWith('/'))
+    if (!groupPath.endsWith('/'))
         groupPath.append('/');
     groupPath.remove(0, 1); // remove starting '/'
 
@@ -161,9 +161,9 @@ void ApplicationsProtocol::listDir(const QUrl& url)
 
     foreach (const KSycocaEntry::Ptr &e, grp->entries(true, true)) {
         if (e->isType(KST_KServiceGroup)) {
-            KServiceGroup::Ptr g(static_cast<KServiceGroup*>(e.data()));
+            KServiceGroup::Ptr g(static_cast<KServiceGroup *>(e.data()));
 
-            //qDebug() << "ADDING SERVICE GROUP WITH PATH " << g->relPath();
+            // qDebug() << "ADDING SERVICE GROUP WITH PATH " << g->relPath();
 
             // Avoid adding empty groups.
             KServiceGroup::Ptr subMenuRoot = KServiceGroup::group(g->relPath());
@@ -178,12 +178,12 @@ void ApplicationsProtocol::listDir(const QUrl& url)
             QUrl dirUrl = url; // preserve protocol, whether that's programs:/ or applications:/
             dirUrl.setPath('/' + relPath);
             dirUrl = dirUrl.adjusted(QUrl::StripTrailingSlash);
-            //qDebug() << "ApplicationsProtocol: adding entry" << dirUrl;
+            // qDebug() << "ApplicationsProtocol: adding entry" << dirUrl;
             createDirEntry(entry, g->caption(), dirUrl.url(), QStringLiteral("inode/directory"), g->icon());
         } else {
-            KService::Ptr service(static_cast<KService*>(e.data()));
+            KService::Ptr service(static_cast<KService *>(e.data()));
 
-            //qDebug() << "the entry name is" << service->desktopEntryName()
+            // qDebug() << "the entry name is" << service->desktopEntryName()
             //         << "with path" << service->entryPath();
 
             if (!service->isApplication()) // how could this happen?

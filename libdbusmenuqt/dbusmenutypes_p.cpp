@@ -67,7 +67,7 @@ QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuLayoutItem &obj
     argument.beginStructure();
     argument << obj.id << obj.properties;
     argument.beginArray(qMetaTypeId<QDBusVariant>());
-    Q_FOREACH(const DBusMenuLayoutItem& child, obj.children) {
+    Q_FOREACH (const DBusMenuLayoutItem &child, obj.children) {
         argument << QDBusVariant(QVariant::fromValue<DBusMenuLayoutItem>(child));
     }
     argument.endArray();
@@ -100,7 +100,7 @@ QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuShortcut &obj)
     argument.beginArray(qMetaTypeId<QStringList>());
     typename QList<QStringList>::ConstIterator it = obj.constBegin();
     typename QList<QStringList>::ConstIterator end = obj.constEnd();
-    for ( ; it != end; ++it)
+    for (; it != end; ++it)
         argument << *it;
     argument.endArray();
     return argument;

@@ -26,8 +26,8 @@
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
-#include <Plasma/ServiceJob>
 #include <Plasma/DataEngine>
+#include <Plasma/ServiceJob>
 
 Q_DECLARE_METATYPE(QWeakPointer<Plasma::Containment>)
 
@@ -39,7 +39,6 @@ SwitchActivity::SwitchActivity(QObject *parent, const QVariantList &args)
 SwitchActivity::~SwitchActivity()
 {
 }
-
 
 void SwitchActivity::makeMenu()
 {
@@ -64,9 +63,7 @@ void SwitchActivity::makeMenu()
     }
 }
 
-
-
-QList<QAction*> SwitchActivity::contextualActions()
+QList<QAction *> SwitchActivity::contextualActions()
 {
     makeMenu();
 
@@ -103,6 +100,5 @@ void SwitchActivity::performPreviousAction()
 }
 
 K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(switchactivity, SwitchActivity, "plasma-containmentactions-switchactivity.json")
-
 
 #include "switch.moc"

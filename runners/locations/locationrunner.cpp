@@ -18,32 +18,31 @@
 
 #include "locationrunner.h"
 
-#include <QMimeData>
-#include <QIcon>
-#include <QUrl>
 #include <QDir>
+#include <QIcon>
+#include <QMimeData>
+#include <QUrl>
 
-#include <QDebug>
 #include <KApplicationTrader>
-#include <KLocalizedString>
-#include <KProtocolInfo>
-#include <KUriFilter>
 #include <KIO/DesktopExecParser>
 #include <KIO/Global>
-#include <KShell>
 #include <KIO/OpenUrlJob>
+#include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
+#include <KProtocolInfo>
+#include <KShell>
+#include <KUriFilter>
+#include <QDebug>
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(LocationsRunner, "plasma-runner-locations.json")
 
-
-LocationsRunner::LocationsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList& args)
+LocationsRunner::LocationsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
     : Plasma::AbstractRunner(parent, metaData, args)
 {
     // set the name shown after the result in krunner window
     setObjectName(QStringLiteral("Locations"));
-    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"),
-              i18n("Finds local directories and files, network locations and Internet sites with paths matching :q:.")));
+    addSyntax(
+        Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds local directories and files, network locations and Internet sites with paths matching :q:.")));
 }
 
 LocationsRunner::~LocationsRunner()
@@ -85,8 +84,7 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
             } else if (KProtocolInfo::isKnownProtocol(protocol)) {
                 Q_ASSERT(KProtocolInfo::isHelperProtocol(protocol));
                 match.setIconName(KProtocolInfo::icon(protocol));
-                match.setText(i18n("Launch with %1", KIO::DesktopExecParser::executableName(
-                                       KProtocolInfo::exec(protocol))));
+                match.setText(i18n("Launch with %1", KIO::DesktopExecParser::executableName(KProtocolInfo::exec(protocol))));
             } else {
                 return;
             }
@@ -112,12 +110,11 @@ void LocationsRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
     job->start();
 }
 
-QMimeData * LocationsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
+QMimeData *LocationsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     QMimeData *result = new QMimeData();
     result->setUrls({match.data().toUrl()});
     return result;
 }
-
 
 #include "locationrunner.moc"

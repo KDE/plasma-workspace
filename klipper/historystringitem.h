@@ -29,26 +29,32 @@
 class HistoryStringItem : public HistoryItem
 {
 public:
-    explicit HistoryStringItem( const QString& data );
-    ~HistoryStringItem() override {}
+    explicit HistoryStringItem(const QString &data);
+    ~HistoryStringItem() override
+    {
+    }
     QString text() const override;
-    bool operator==( const HistoryItem& rhs) const override {
-        if ( const HistoryStringItem* casted_rhs = dynamic_cast<const HistoryStringItem*>( &rhs ) ) {
+    bool operator==(const HistoryItem &rhs) const override
+    {
+        if (const HistoryStringItem *casted_rhs = dynamic_cast<const HistoryStringItem *>(&rhs)) {
             return casted_rhs->m_data == m_data;
         }
         return false;
     }
-    QMimeData* mimeData() const override;
+    QMimeData *mimeData() const override;
 
     /**
      * Write object on datastream
      */
-    void write( QDataStream& stream ) const override;
+    void write(QDataStream &stream) const override;
 
 private:
     QString m_data;
 };
 
-inline QString HistoryStringItem::text() const { return m_data; }
+inline QString HistoryStringItem::text() const
+{
+    return m_data;
+}
 
 #endif

@@ -32,28 +32,27 @@ class SessionRunner : public Plasma::AbstractRunner
 {
     Q_OBJECT
 
-    public:
-        SessionRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
-        ~SessionRunner() override;
+public:
+    SessionRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    ~SessionRunner() override;
 
-        void match(Plasma::RunnerContext &context) override;
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+    void match(Plasma::RunnerContext &context) override;
+    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
-        enum {
-            LogoutAction = 1,
-            ShutdownAction,
-            RestartAction,
-            LockAction,
-        };
+    enum {
+        LogoutAction = 1,
+        ShutdownAction,
+        RestartAction,
+        LockAction,
+    };
 
-    private:
-        void matchCommands(QList<Plasma::QueryMatch> &matches, const QString& term);
+private:
+    void matchCommands(QList<Plasma::QueryMatch> &matches, const QString &term);
 
-        QString m_triggerWord;
-        KDisplayManager dm;
-        SessionManagement m_session;
-        bool m_canLogout;
+    QString m_triggerWord;
+    KDisplayManager dm;
+    SessionManagement m_session;
+    bool m_canLogout;
 };
 
 #endif
-

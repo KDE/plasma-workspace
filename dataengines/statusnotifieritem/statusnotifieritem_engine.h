@@ -28,25 +28,24 @@
 #include <QDBusConnection>
 
 // Define our plasma Runner
-class StatusNotifierItemEngine : public Plasma::DataEngine {
+class StatusNotifierItemEngine : public Plasma::DataEngine
+{
     Q_OBJECT
 
 public:
     // Basic Create/Destroy
-    StatusNotifierItemEngine( QObject *parent, const QVariantList& args );
+    StatusNotifierItemEngine(QObject *parent, const QVariantList &args);
     ~StatusNotifierItemEngine() override;
     Plasma::Service *serviceForSource(const QString &name) override;
-protected:
 
+protected:
     virtual void init();
     void newItem(const QString &service);
 
 protected Q_SLOTS:
-    void serviceChange(const QString& name,
-                       const QString& oldOwner,
-                       const QString& newOwner);
-    void registerWatcher(const QString& service);
-    void unregisterWatcher(const QString& service);
+    void serviceChange(const QString &name, const QString &oldOwner, const QString &newOwner);
+    void registerWatcher(const QString &service);
+    void unregisterWatcher(const QString &service);
     void serviceRegistered(const QString &service);
     void serviceUnregistered(const QString &service);
 

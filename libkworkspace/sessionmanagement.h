@@ -57,16 +57,16 @@ public:
 
     enum class ConfirmationMode {
         /**
-        * Obey the user's confirmation setting.
-        */
+         * Obey the user's confirmation setting.
+         */
         Default = -1,
         /**
-        * Don't confirm, shutdown without asking.
-        */
+         * Don't confirm, shutdown without asking.
+         */
         Skip = 0,
         /**
-        * Always confirm, ask even if the user turned it off.
-        */
+         * Always confirm, ask even if the user turned it off.
+         */
         ForcePrompt = 1,
     };
     Q_ENUM(ConfirmationMode)
@@ -120,5 +120,5 @@ Q_SIGNALS:
     void resumingFromSuspend();
 
 private:
-    void *d; //unused, just reserving the space in case we go ABI stable
+    void *d; // unused, just reserving the space in case we go ABI stable
 };

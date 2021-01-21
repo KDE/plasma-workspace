@@ -25,7 +25,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 AbstractWindowTasksModel::AbstractWindowTasksModel(QObject *parent)
     : AbstractTasksModel(parent)
 {
@@ -39,16 +38,14 @@ AbstractWindowTasksModel::AbstractWindowTasksModel(QObject *parent)
     // time. That assessment may change in the future.
 
     auto screenAdded = [this](const QScreen *screen) {
-        connect(screen, &QScreen::geometryChanged, this,
-            [this]() {
-                Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), QVector<int>{ScreenGeometry});
-            }
-        );
+        connect(screen, &QScreen::geometryChanged, this, [this]() {
+            Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), QVector<int>{ScreenGeometry});
+        });
     };
 
     connect(qGuiApp, &QGuiApplication::screenAdded, this, screenAdded);
 
-    foreach(const QScreen *screen, QGuiApplication::screens()) {
+    foreach (const QScreen *screen, QGuiApplication::screens()) {
         screenAdded(screen);
     }
 }

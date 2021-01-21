@@ -1,29 +1,29 @@
 /******************************************************************************
-*   Copyright 2013 Sebastian Kügler <sebas@kde.org>                           *
-*                                                                             *
-*   This library is free software; you can redistribute it and/or             *
-*   modify it under the terms of the GNU Library General Public               *
-*   License as published by the Free Software Foundation; either              *
-*   version 2 of the License, or (at your option) any later version.          *
-*                                                                             *
-*   This library is distributed in the hope that it will be useful,           *
-*   but WITHOUT ANY WARRANTY; without even the implied warranty of            *
-*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU          *
-*   Library General Public License for more details.                          *
-*                                                                             *
-*   You should have received a copy of the GNU Library General Public License *
-*   along with this library; see the file COPYING.LIB.  If not, write to      *
-*   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,      *
-*   Boston, MA 02110-1301, USA.                                               *
-*******************************************************************************/
+ *   Copyright 2013 Sebastian Kügler <sebas@kde.org>                           *
+ *                                                                             *
+ *   This library is free software; you can redistribute it and/or             *
+ *   modify it under the terms of the GNU Library General Public               *
+ *   License as published by the Free Software Foundation; either              *
+ *   version 2 of the License, or (at your option) any later version.          *
+ *                                                                             *
+ *   This library is distributed in the hope that it will be useful,           *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of            *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU          *
+ *   Library General Public License for more details.                          *
+ *                                                                             *
+ *   You should have received a copy of the GNU Library General Public License *
+ *   along with this library; see the file COPYING.LIB.  If not, write to      *
+ *   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,      *
+ *   Boston, MA 02110-1301, USA.                                               *
+ *******************************************************************************/
 
 #include "statusnotifiertest.h"
 #include "pumpjob.h"
 
 #include <QDebug>
-#include <kservice.h>
 #include <kplugininfo.h>
 #include <kplugintrader.h>
+#include <kservice.h>
 
 #include <qcommandlineparser.h>
 
@@ -33,26 +33,25 @@
 #include <QStringList>
 #include <QTimer>
 
-#include <QPushButton>
 #include <QMenu>
-
+#include <QPushButton>
 
 static QTextStream cout(stdout);
 
-class StatusNotifierTestPrivate {
+class StatusNotifierTestPrivate
+{
 public:
     QString pluginName;
-    QTimer* timer;
+    QTimer *timer;
     int interval = 1500;
     QStringList loglines;
 
-    KStatusNotifierItem* systemNotifier;
+    KStatusNotifierItem *systemNotifier;
     PumpJob *job;
-
 };
 
-StatusNotifierTest::StatusNotifierTest(QWidget* parent) :
-    QDialog(parent)
+StatusNotifierTest::StatusNotifierTest(QWidget *parent)
+    : QDialog(parent)
 {
     d = new StatusNotifierTestPrivate;
     d->job = nullptr;
@@ -72,8 +71,8 @@ StatusNotifierTest::StatusNotifierTest(QWidget* parent) :
 void StatusNotifierTest::init()
 {
     d->systemNotifier = new KStatusNotifierItem(this);
-    //d->systemNotifier->setCategory(KStatusNotifierItem::SystemServices);
-    //d->systemNotifier->setCategory(KStatusNotifierItem::Hardware);
+    // d->systemNotifier->setCategory(KStatusNotifierItem::SystemServices);
+    // d->systemNotifier->setCategory(KStatusNotifierItem::Hardware);
     d->systemNotifier->setCategory(KStatusNotifierItem::Communications);
     d->systemNotifier->setIconByName(QStringLiteral("plasma"));
     d->systemNotifier->setStatus(KStatusNotifierItem::Active);
@@ -81,12 +80,9 @@ void StatusNotifierTest::init()
     d->systemNotifier->setTitle(i18nc("title", "StatusNotifierTest"));
     d->systemNotifier->setToolTipSubTitle(i18nc("tooltip subtitle", "Some explanation from the beach."));
 
-    connect(d->systemNotifier, &KStatusNotifierItem::activateRequested,
-            this, &StatusNotifierTest::activateRequested);
-    connect(d->systemNotifier, &KStatusNotifierItem::secondaryActivateRequested,
-            this, &StatusNotifierTest::secondaryActivateRequested);
-    connect(d->systemNotifier, &KStatusNotifierItem::scrollRequested,
-            this, &StatusNotifierTest::scrollRequested);
+    connect(d->systemNotifier, &KStatusNotifierItem::activateRequested, this, &StatusNotifierTest::activateRequested);
+    connect(d->systemNotifier, &KStatusNotifierItem::secondaryActivateRequested, this, &StatusNotifierTest::secondaryActivateRequested);
+    connect(d->systemNotifier, &KStatusNotifierItem::scrollRequested, this, &StatusNotifierTest::scrollRequested);
 
     auto menu = new QMenu(this);
     menu->addAction(QIcon::fromTheme(QStringLiteral("document-edit")), QStringLiteral("action 1"));
@@ -105,11 +101,10 @@ StatusNotifierTest::~StatusNotifierTest()
     delete d;
 }
 
-void StatusNotifierTest::log(const QString& msg)
+void StatusNotifierTest::log(const QString &msg)
 {
     qDebug() << "msg: " << msg;
     d->loglines.prepend(msg);
-
 
     logEdit->setText(d->loglines.join('\n'));
 }
@@ -129,12 +124,11 @@ void StatusNotifierTest::updateUi()
 
     tooltipText->setText(d->systemNotifier->toolTipTitle());
     tooltipSubtext->setText(d->systemNotifier->toolTipSubTitle());
-
 }
 
 void StatusNotifierTest::updateNotifier()
 {
-    //log("update");
+    // log("update");
     if (!enabledCheck->isChecked()) {
         delete d->systemNotifier;
         d->systemNotifier = nullptr;
@@ -144,7 +138,6 @@ void StatusNotifierTest::updateNotifier()
             init();
         }
     }
-
 
     if (!d->systemNotifier) {
         return;
@@ -164,25 +157,23 @@ void StatusNotifierTest::updateNotifier()
     d->systemNotifier->setStatus(s);
 
     iconPixmapCheckbox->isChecked() ? d->systemNotifier->setIconByPixmap(QIcon::fromTheme(iconName->text()))
-        : d->systemNotifier->setIconByName(iconName->text());
-    overlayIconPixmapCheckbox->isChecked() ?  d->systemNotifier->setOverlayIconByPixmap(QIcon::fromTheme(overlayIconName->text()))
-        : d->systemNotifier->setOverlayIconByName(overlayIconName->text());
+                                    : d->systemNotifier->setIconByName(iconName->text());
+    overlayIconPixmapCheckbox->isChecked() ? d->systemNotifier->setOverlayIconByPixmap(QIcon::fromTheme(overlayIconName->text()))
+                                           : d->systemNotifier->setOverlayIconByName(overlayIconName->text());
     attentionIconPixmapCheckbox->isChecked() ? d->systemNotifier->setAttentionIconByPixmap(QIcon::fromTheme(attentionIconName->text()))
-        :  d->systemNotifier->setAttentionIconByName(attentionIconName->text());
+                                             : d->systemNotifier->setAttentionIconByName(attentionIconName->text());
 
     d->systemNotifier->setToolTip(iconName->text(), tooltipText->text(), tooltipSubtext->text());
 
     updateUi();
 }
 
-
-
 int StatusNotifierTest::runMain()
 {
     d->timer = new QTimer(this);
     connect(d->timer, &QTimer::timeout, this, &StatusNotifierTest::timeout);
     d->timer->setInterval(d->interval);
-    //d->timer->start();
+    // d->timer->start();
     return 0;
 }
 
@@ -205,19 +196,18 @@ void StatusNotifierTest::timeout()
     updateUi();
 }
 
-void StatusNotifierTest::activateRequested(bool active, const QPoint& pos)
+void StatusNotifierTest::activateRequested(bool active, const QPoint &pos)
 {
     Q_UNUSED(active);
     Q_UNUSED(pos);
     log(QStringLiteral("Activated"));
 }
 
-void StatusNotifierTest::secondaryActivateRequested(const QPoint& pos)
+void StatusNotifierTest::secondaryActivateRequested(const QPoint &pos)
 {
     Q_UNUSED(pos);
     log(QStringLiteral("secondaryActivateRequested"));
 }
-
 
 void StatusNotifierTest::scrollRequested(int delta, Qt::Orientation orientation)
 {
@@ -227,7 +217,6 @@ void StatusNotifierTest::scrollRequested(int delta, Qt::Orientation orientation)
     log(msg);
 }
 
-
 // Jobs
 
 void StatusNotifierTest::enableJob(bool enable)
@@ -235,7 +224,7 @@ void StatusNotifierTest::enableJob(bool enable)
     qDebug() << "Job enabled." << enable;
     if (enable) {
         d->job = new PumpJob(speedSlider->value());
-        QObject::connect(d->job, SIGNAL(percent(KJob*, unsigned long)), this, SLOT(setJobProgress(KJob*, unsigned long)));
+        QObject::connect(d->job, SIGNAL(percent(KJob *, unsigned long)), this, SLOT(setJobProgress(KJob *, unsigned long)));
         QObject::connect(d->job, &KJob::result, this, &StatusNotifierTest::result);
     } else {
         if (d->job) {
@@ -252,7 +241,7 @@ void StatusNotifierTest::setJobProgress(KJob *j, unsigned long v)
     jobProgressBar->setValue(v);
 }
 
-void StatusNotifierTest::result(KJob* job)
+void StatusNotifierTest::result(KJob *job)
 {
     if (job->error()) {
         qDebug() << "Job Error:" << job->errorText() << job->errorString();
@@ -262,6 +251,4 @@ void StatusNotifierTest::result(KJob* job)
     jobEnabledCheck->setCheckState(Qt::Unchecked);
 }
 
-
 #include "moc_statusnotifiertest.cpp"
-

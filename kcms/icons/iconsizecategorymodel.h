@@ -22,8 +22,7 @@
 #include <QString>
 #include <QVector>
 
-struct IconSizeCategoryModelData
-{
+struct IconSizeCategoryModelData {
     QString configKey;
     QString display;
     QString configSection;

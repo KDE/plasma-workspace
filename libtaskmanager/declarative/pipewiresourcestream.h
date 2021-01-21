@@ -22,31 +22,32 @@
 
 #pragma once
 
-#include <QObject>
-#include <QSize>
 #include <QHash>
+#include <QObject>
 #include <QSharedPointer>
+#include <QSize>
 
 #include <pipewire/pipewire.h>
 #include <spa/param/format-utils.h>
-#include <spa/param/video/format-utils.h>
 #include <spa/param/props.h>
+#include <spa/param/video/format-utils.h>
 
 #undef Status
 
-namespace KWin {
-    class AbstractEglBackend;
-    class GLTexture;
+namespace KWin
+{
+class AbstractEglBackend;
+class GLTexture;
 }
 class PipeWireCore;
 
 typedef void *EGLDisplay;
 
 struct DmaBufPlane {
-    int fd;             /// The dmabuf file descriptor
-    uint32_t offset;    /// The offset from the start of buffer
-    uint32_t stride;    /// The distance from the start of a row to the next row in bytes
-    uint64_t modifier = 0;  /// The layout modifier
+    int fd; /// The dmabuf file descriptor
+    uint32_t offset; /// The offset from the start of buffer
+    uint32_t stride; /// The distance from the start of a row to the next row in bytes
+    uint64_t modifier = 0; /// The layout modifier
 };
 
 class PipeWireSourceStream : public QObject
@@ -61,18 +62,20 @@ public:
 
     uint framerate();
     uint nodeId();
-    QString error() const {
+    QString error() const
+    {
         return m_error;
     }
 
-    QSize size() const {
+    QSize size() const
+    {
         return QSize(videoFormat.size.width, videoFormat.size.height);
     }
     bool createStream(uint nodeid);
     void stop();
     void setActive(bool active);
 
-    void handleFrame(struct pw_buffer* buffer);
+    void handleFrame(struct pw_buffer *buffer);
     void process();
 
 Q_SIGNALS:

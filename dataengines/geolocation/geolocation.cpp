@@ -19,14 +19,14 @@
 
 #include <limits.h>
 
-#include <QDebug>
-#include <QNetworkConfigurationManager>
 #include <KServiceTypeTrader>
 #include <NetworkManagerQt/Manager>
+#include <QDebug>
+#include <QNetworkConfigurationManager>
 
 static const char SOURCE[] = "location";
 
-Geolocation::Geolocation(QObject* parent, const QVariantList& args)
+Geolocation::Geolocation(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)
 {
     Q_UNUSED(args)
@@ -38,17 +38,15 @@ Geolocation::Geolocation(QObject* parent, const QVariantList& args)
     connect(&m_updateTimer, &QTimer::timeout, this, &Geolocation::actuallySetData);
     m_networkChangedTimer.setInterval(100);
     m_networkChangedTimer.setSingleShot(true);
-    connect(&m_networkChangedTimer, &QTimer::timeout, this,
-        [this] {
-            updatePlugins(GeolocationProvider::NetworkConnected);
-        }
-    );
+    connect(&m_networkChangedTimer, &QTimer::timeout, this, [this] {
+        updatePlugins(GeolocationProvider::NetworkConnected);
+    });
     init();
 }
 
 void Geolocation::init()
 {
-    //TODO: should this be delayed even further, e.g. when the source is requested?
+    // TODO: should this be delayed even further, e.g. when the source is requested?
     const KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("Plasma/GeolocationProvider"));
     QVariantList args;
 
@@ -59,8 +57,7 @@ void Geolocation::init()
             m_plugins << plugin;
             plugin->init(&m_data, &m_accuracy);
             connect(plugin, &GeolocationProvider::updated, this, &Geolocation::pluginUpdated);
-            connect(plugin, &GeolocationProvider::availabilityChanged,
-                    this, &Geolocation::pluginAvailabilityChanged);
+            connect(plugin, &GeolocationProvider::availabilityChanged, this, &Geolocation::pluginAvailabilityChanged);
         } else {
             qDebug() << "Failed to load GeolocationProvider:" << error;
         }
@@ -79,7 +76,7 @@ QStringList Geolocation::sources() const
 
 bool Geolocation::updateSourceEvent(const QString &name)
 {
-    //qDebug() << name;
+    // qDebug() << name;
     if (name == SOURCE) {
         return updatePlugins(GeolocationProvider::SourceEvent);
     }

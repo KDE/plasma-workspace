@@ -39,10 +39,7 @@ public:
     ~Private();
 
     void setStatus(ServerInfo::Status status);
-    void setServerInformation(const QString &vendor,
-                              const QString &name,
-                              const QString &version,
-                              const QString &specVersion);
+    void setServerInformation(const QString &vendor, const QString &name, const QString &version, const QString &specVersion);
 
     void updateServerInformation();
 
@@ -59,7 +56,6 @@ public:
 ServerInfo::Private::Private(ServerInfo *q)
     : q(q)
 {
-
 }
 
 ServerInfo::Private::~Private() = default;
@@ -72,10 +68,7 @@ void ServerInfo::Private::setStatus(ServerInfo::Status status)
     }
 }
 
-void ServerInfo::Private::setServerInformation(const QString &vendor,
-                                               const QString &name,
-                                               const QString &version,
-                                               const QString &specVersion)
+void ServerInfo::Private::setServerInformation(const QString &vendor, const QString &name, const QString &version, const QString &specVersion)
 {
     if (this->vendor != vendor) {
         this->vendor = vendor;
@@ -96,7 +89,7 @@ void ServerInfo::Private::setServerInformation(const QString &vendor,
 }
 
 void ServerInfo::Private::updateServerInformation()
-{   
+{
     // Check whether the service is running to avoid DBus-activating plasma_waitforname and getting stuck there.
     if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(ServerPrivate::notificationServiceName())) {
         setStatus(ServerInfo::Status::NotRunning);
@@ -138,9 +131,8 @@ ServerInfo::ServerInfo(QObject *parent)
     : QObject(parent)
     , d(new Private(this))
 {
-    auto *watcher = new QDBusServiceWatcher(ServerPrivate::notificationServiceName(),
-                                            QDBusConnection::sessionBus(),
-                                            QDBusServiceWatcher::WatchForOwnerChange, this);
+    auto *watcher =
+        new QDBusServiceWatcher(ServerPrivate::notificationServiceName(), QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
     connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, [this]() {
         d->updateServerInformation();
     });

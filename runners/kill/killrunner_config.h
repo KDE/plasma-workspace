@@ -21,11 +21,11 @@
 #ifndef KILLRUNNERCONFIG_H
 #define KILLRUNNERCONFIG_H
 
-//Project-Includes
+// Project-Includes
 #include "ui_killrunner_config.h"
-//KDE-Includes
+// KDE-Includes
 #include <KCModule>
-//Qt
+// Qt
 
 class KillRunnerConfigForm : public QWidget, public Ui::KillRunnerConfigUi
 {

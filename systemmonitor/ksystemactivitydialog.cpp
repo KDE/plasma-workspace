@@ -20,25 +20,26 @@
 
 #include "ksystemactivitydialog.h"
 
-#include <QCloseEvent>
-#include <QString>
 #include <QAction>
-#include <QIcon>
+#include <QCloseEvent>
 #include <QDBusConnection>
-#include <QVBoxLayout>
+#include <QIcon>
 #include <QLineEdit>
+#include <QString>
+#include <QVBoxLayout>
 
-#include <KSharedConfig>
 #include <KConfigGroup>
-#include <KWindowSystem>
 #include <KLocalizedString>
+#include <KSharedConfig>
+#include <KWindowSystem>
 #include <QDebug>
 
 KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
-    : QDialog(parent), m_processList(nullptr)
+    : QDialog(parent)
+    , m_processList(nullptr)
 {
     setWindowTitle(i18n("System Activity"));
-    setWindowIcon(QIcon::fromTheme(QStringLiteral( "utilities-system-monitor" )));
+    setWindowIcon(QIcon::fromTheme(QStringLiteral("utilities-system-monitor")));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(&m_processList);
     m_processList.setScriptingEnabled(true);

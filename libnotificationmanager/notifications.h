@@ -20,8 +20,8 @@
 
 #pragma once
 
-#include <QSortFilterProxyModel>
 #include <QQmlParserStatus>
+#include <QSortFilterProxyModel>
 
 #include <QScopedPointer>
 
@@ -29,7 +29,6 @@
 
 namespace NotificationManager
 {
-
 /**
  * @brief A model with notifications and jobs
  *
@@ -238,14 +237,16 @@ public:
         UpdatedRole, ///< When the notification was last updated, invalid when it hasn't been updated.
 
         BodyRole, ///< The notification body text.
-        IconNameRole, ///< The notification main icon name, which is not the application icon. Only valid for icon names, if a URL supplied, it is loaded and exposed as ImageRole instead.
+        IconNameRole, ///< The notification main icon name, which is not the application icon. Only valid for icon names, if a URL supplied, it is loaded and
+                      ///< exposed as ImageRole instead.
 
         DesktopEntryRole, ///< The desktop entry (without .desktop suffix, e.g. org.kde.spectacle) of the application that sent the notification.
         NotifyRcNameRole, ///< The notifyrc name (e.g. spectaclerc) of the application that sent the notification.
 
         ApplicationNameRole, ///< The user-visible name of the application (e.g. Spectacle)
         ApplicationIconNameRole, ///< The icon name of the application
-        OriginNameRole, ///< The name of the device or account the notification originally came from, e.g. "My Phone" (in case of device sync) or "foo@example.com" (in case of an email notification)
+        OriginNameRole, ///< The name of the device or account the notification originally came from, e.g. "My Phone" (in case of device sync) or
+                        ///< "foo@example.com" (in case of an email notification)
 
         // Jobs
         JobStateRole, ///< The state of the job, either JobStateJopped, JobStateSuspended, or JobStateRunning.
@@ -263,15 +264,18 @@ public:
         UrlsRole, ///< A list of URLs associated with the notification, e.g. a path to a screenshot that was just taken or image received
 
         UrgencyRole, ///< The notification urgency, either LowUrgency, NormalUrgency, or CriticalUrgency. Jobs do not have an urgency.
-        TimeoutRole, ///< The timeout for the notification in milliseconds. 0 means the notification should not timeout, -1 means a sensible default should be applied.
+        TimeoutRole, ///< The timeout for the notification in milliseconds. 0 means the notification should not timeout, -1 means a sensible default should be
+                     ///< applied.
 
-        ConfigurableRole, ///< Whether the notification can be configured because a desktopEntry or notifyRcName is known, or the notification has a setting action. @sa configure
+        ConfigurableRole, ///< Whether the notification can be configured because a desktopEntry or notifyRcName is known, or the notification has a setting
+                          ///< action. @sa configure
         ConfigureActionLabelRole, ///< The user-visible label for the settings action
         ClosableRole, ///< Whether the item can be closed. Notifications are always closable, jobs are only when in JobStateStopped.
 
         ExpiredRole, ///< The notification timed out and closed. Actions on it cannot be invoked anymore.
         DismissedRole, ///< The notification got temporarily hidden by the user but could still be interacted with.
-        ReadRole, ///< Whether the notification got read by the user. If true, the notification isn't considered unread even if created after lastRead. @since 5.17
+        ReadRole, ///< Whether the notification got read by the user. If true, the notification isn't considered unread even if created after lastRead.
+                  ///< @since 5.17
 
         UserActionFeedbackRole, ///< Whether this notification is a response/confirmation to an explicit user action. @since 5.18
 
@@ -280,7 +284,9 @@ public:
         ReplyPlaceholderTextRole, ///< A custom placeholder text for the reply action, e.g. "Reply to Max...". @since 5.18
         ReplySubmitButtonTextRole, ///< A custom text for the reply submit button, e.g. "Submit Comment". @since 5.18
         ReplySubmitButtonIconNameRole, ///< A custom icon name for the reply submit button. @since 5.18
-        CategoryRole, ///< The (optional) category of the notification. Notifications can optionally have a type indicator. Although neither client or nor server must support this, some may choose to. Those servers implementing categories may use them to intelligently display the notification in a certain way, or group notifications of similar types.  @since 5.21
+        CategoryRole, ///< The (optional) category of the notification. Notifications can optionally have a type indicator. Although neither client or nor
+                      ///< server must support this, some may choose to. Those servers implementing categories may use them to intelligently display the
+                      ///< notification in a certain way, or group notifications of similar types.  @since 5.21
     };
     Q_ENUM(Roles)
 
@@ -345,7 +351,7 @@ public:
      */
     enum GroupMode {
         GroupDisabled = 0,
-        //GroupApplicationsTree, // TODO make actual tree
+        // GroupApplicationsTree, // TODO make actual tree
         GroupApplicationsFlat,
     };
     Q_ENUM(GroupMode)
@@ -553,7 +559,6 @@ protected:
 private:
     class Private;
     QScopedPointer<Private> d;
-
 };
 
 } // namespace NotificationManager

@@ -16,26 +16,23 @@
  * Boston, MA 02110-1301, USA.
  */
 
-
-#include <KLocalizedString>
 #include <KConfig>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <QDir>
 #include <QX11Info>
 
 #include "thememodel.h"
 #include "xcursortheme.h"
 
-#include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
+#include <X11/Xlib.h>
 
 // Check for older version
 #if !defined(XCURSOR_LIB_MAJOR) && defined(XCURSOR_MAJOR)
-#  define XCURSOR_LIB_MAJOR XCURSOR_MAJOR
-#  define XCURSOR_LIB_MINOR XCURSOR_MINOR
+#define XCURSOR_LIB_MAJOR XCURSOR_MAJOR
+#define XCURSOR_LIB_MINOR XCURSOR_MINOR
 #endif
-
-
 
 CursorThemeModel::CursorThemeModel(QObject *parent)
     : QAbstractTableModel(parent)
@@ -45,8 +42,8 @@ CursorThemeModel::CursorThemeModel(QObject *parent)
 
 CursorThemeModel::~CursorThemeModel()
 {
-   qDeleteAll(list);
-   list.clear();
+    qDeleteAll(list);
+    list.clear();
 }
 
 QHash<int, QByteArray> CursorThemeModel::roleNames() const
@@ -76,17 +73,16 @@ QVariant CursorThemeModel::headerData(int section, Qt::Orientation orientation, 
         return QVariant();
 
     // Horizontal header labels
-    if (orientation == Qt::Horizontal)
-    {
-        switch (section)
-        {
-            case NameColumn:
-                return i18n("Name");
+    if (orientation == Qt::Horizontal) {
+        switch (section) {
+        case NameColumn:
+            return i18n("Name");
 
-            case DescColumn:
-                return i18n("Description");
+        case DescColumn:
+            return i18n("Description");
 
-            default: return QVariant();
+        default:
+            return QVariant();
         }
     }
 
@@ -94,26 +90,24 @@ QVariant CursorThemeModel::headerData(int section, Qt::Orientation orientation, 
     return QString(section);
 }
 
-
 QVariant CursorThemeModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() < 0 || index.row() >= list.count())
         return QVariant();
 
-    CursorTheme * theme = list.at(index.row());
+    CursorTheme *theme = list.at(index.row());
 
     // Text label
-    if (role == Qt::DisplayRole)
-    {
-        switch (index.column())
-        {
-            case NameColumn:
-                return theme->title();
+    if (role == Qt::DisplayRole) {
+        switch (index.column()) {
+        case NameColumn:
+            return theme->title();
 
-            case DescColumn:
-                return theme->description();
+        case DescColumn:
+            return theme->description();
 
-            default: return QVariant();
+        default:
+            return QVariant();
         }
     }
 
@@ -163,7 +157,6 @@ void CursorThemeModel::sort(int column, Qt::SortOrder order)
     // a sorting proxy model.
 }
 
-
 const CursorTheme *CursorThemeModel::theme(const QModelIndex &index)
 {
     if (!index.isValid())
@@ -175,13 +168,11 @@ const CursorTheme *CursorThemeModel::theme(const QModelIndex &index)
     return list.at(index.row());
 }
 
-
 QModelIndex CursorThemeModel::findIndex(const QString &name)
 {
     uint hash = qHash(name);
 
-    for (int i = 0; i < list.count(); i++)
-    {
+    for (int i = 0; i < list.count(); i++) {
         const CursorTheme *theme = list.at(i);
         if (theme->hash() == hash)
             return index(i, 0);
@@ -190,12 +181,10 @@ QModelIndex CursorThemeModel::findIndex(const QString &name)
     return QModelIndex();
 }
 
-
 QModelIndex CursorThemeModel::defaultIndex()
 {
     return findIndex(defaultName);
 }
-
 
 const QStringList CursorThemeModel::searchPaths()
 {
@@ -220,8 +209,7 @@ const QStringList CursorThemeModel::searchPaths()
 
     // Remove duplicates
     QMutableStringListIterator i(baseDirs);
-    while (i.hasNext())
-    {
+    while (i.hasNext()) {
         const QString path = i.next();
         QMutableStringListIterator j(i);
         while (j.hasNext())
@@ -234,7 +222,6 @@ const QStringList CursorThemeModel::searchPaths()
     return baseDirs;
 }
 
-
 bool CursorThemeModel::hasTheme(const QString &name) const
 {
     const uint hash = qHash(name);
@@ -246,7 +233,6 @@ bool CursorThemeModel::hasTheme(const QString &name) const
     return false;
 }
 
-
 bool CursorThemeModel::isCursorTheme(const QString &theme, const int depth)
 {
     // Prevent infinite recursion
@@ -254,8 +240,7 @@ bool CursorThemeModel::isCursorTheme(const QString &theme, const int depth)
         return false;
 
     // Search each icon theme directory for 'theme'
-    foreach (const QString &baseDir, searchPaths())
-    {
+    foreach (const QString &baseDir, searchPaths()) {
         QDir dir(baseDir);
         if (!dir.exists() || !dir.cd(theme))
             continue;
@@ -275,8 +260,7 @@ bool CursorThemeModel::isCursorTheme(const QString &theme, const int depth)
         // Recurse through the list of inherited themes, to check if one of them
         // is a cursor theme.
         const QStringList inherits = cg.readEntry("Inherits", QStringList());
-        for (const QString &inherit : inherits)
-        {
+        for (const QString &inherit : inherits) {
             // Avoid possible DoS
             if (inherit == theme)
                 continue;
@@ -289,14 +273,12 @@ bool CursorThemeModel::isCursorTheme(const QString &theme, const int depth)
     return false;
 }
 
-
 bool CursorThemeModel::handleDefault(const QDir &themeDir)
 {
     QFileInfo info(themeDir.path());
 
     // If "default" is a symlink
-    if (info.isSymLink())
-    {
+    if (info.isSymLink()) {
         QFileInfo target(info.symLinkTarget());
         if (target.exists() && (target.isDir() || target.isSymLink()))
             defaultName = target.fileName();
@@ -305,11 +287,8 @@ bool CursorThemeModel::handleDefault(const QDir &themeDir)
     }
 
     // If there's no cursors subdir, or if it's empty
-    if (!themeDir.exists(QStringLiteral("cursors")) || QDir(themeDir.path() + "/cursors")
-          .entryList(QDir::Files | QDir::NoDotAndDotDot ).isEmpty())
-    {
-        if (themeDir.exists(QStringLiteral("index.theme")))
-        {
+    if (!themeDir.exists(QStringLiteral("cursors")) || QDir(themeDir.path() + "/cursors").entryList(QDir::Files | QDir::NoDotAndDotDot).isEmpty()) {
+        if (themeDir.exists(QStringLiteral("index.theme"))) {
             XCursorTheme theme(themeDir);
             if (!theme.inherits().isEmpty())
                 defaultName = theme.inherits().at(0);
@@ -321,7 +300,6 @@ bool CursorThemeModel::handleDefault(const QDir &themeDir)
     return false;
 }
 
-
 void CursorThemeModel::processThemeDir(const QDir &themeDir)
 {
     bool haveCursors = themeDir.exists(QStringLiteral("cursors"));
@@ -329,8 +307,7 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
     // Special case handling of "default", since it's usually either a
     // symlink to another theme, or an empty theme that inherits another
     // theme.
-    if (defaultName.isNull() && themeDir.dirName() == QLatin1String("default"))
-    {
+    if (defaultName.isNull() && themeDir.dirName() == QLatin1String("default")) {
         if (handleDefault(themeDir))
             return;
     }
@@ -351,8 +328,7 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
 
     // If there's no cursors subdirectory we'll do a recursive scan
     // to check if the theme inherits a theme with one.
-    if (!haveCursors)
-    {
+    if (!haveCursors) {
         bool foundCursorTheme = false;
 
         foreach (const QString &name, theme->inherits())
@@ -371,19 +347,16 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
     endInsertRows();
 }
 
-
 void CursorThemeModel::insertThemes()
 {
     // Scan each base dir for Xcursor themes and add them to the list.
-    foreach (const QString &baseDir, searchPaths())
-    {
+    foreach (const QString &baseDir, searchPaths()) {
         QDir dir(baseDir);
         if (!dir.exists())
             continue;
 
         // Process each subdir in the directory
-        foreach (const QString &name, dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot))
-        {
+        foreach (const QString &name, dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot)) {
             // Don't process the theme if a theme with the same name already exists
             // in the list. Xcursor will pick the first one it finds in that case,
             // and since we use the same search order, the one Xcursor picks should
@@ -400,7 +373,6 @@ void CursorThemeModel::insertThemes()
     if (defaultName.isNull() || !hasTheme(defaultName))
         defaultName = QStringLiteral("KDE_Classic");
 }
-
 
 bool CursorThemeModel::addTheme(const QDir &dir)
 {
@@ -419,8 +391,7 @@ bool CursorThemeModel::addTheme(const QDir &dir)
 
     // If an item with the same name already exists in the list,
     // we'll remove it before inserting the new one.
-    for (int i = 0; i < list.count(); i++)
-    {
+    for (int i = 0; i < list.count(); i++) {
         if (list.at(i)->hash() == theme->hash()) {
             removeTheme(index(i, 0));
             break;
@@ -435,7 +406,6 @@ bool CursorThemeModel::addTheme(const QDir &dir)
     return true;
 }
 
-
 void CursorThemeModel::removeTheme(const QModelIndex &index)
 {
     if (!index.isValid())
@@ -446,4 +416,3 @@ void CursorThemeModel::removeTheme(const QModelIndex &index)
     delete list.takeAt(index.row());
     endRemoveRows();
 }
-

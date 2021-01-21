@@ -35,94 +35,116 @@
 
 class SolarSystemObject
 {
-    public:
-        SolarSystemObject();
-        virtual ~SolarSystemObject();
+public:
+    SolarSystemObject();
+    virtual ~SolarSystemObject();
 
-        double meanLongitude() const { return L; };
-        double meanAnomaly() const { return M; };
-        double siderealTime();
-        double altitude() const { return m_altitude; };
-        double azimuth() const { return m_azimuth; };
-        double calcElevation();
-        QDateTime dateTime() const { return m_local; };
-        double lambda() const { return m_lambda; };
-        double eclipticLongitude() const { return m_eclipticLongitude; };
-        void setPosition(double latitude, double longitude);
+    double meanLongitude() const
+    {
+        return L;
+    };
+    double meanAnomaly() const
+    {
+        return M;
+    };
+    double siderealTime();
+    double altitude() const
+    {
+        return m_altitude;
+    };
+    double azimuth() const
+    {
+        return m_azimuth;
+    };
+    double calcElevation();
+    QDateTime dateTime() const
+    {
+        return m_local;
+    };
+    double lambda() const
+    {
+        return m_lambda;
+    };
+    double eclipticLongitude() const
+    {
+        return m_eclipticLongitude;
+    };
+    void setPosition(double latitude, double longitude);
 
-        virtual void calcForDateTime(const QDateTime& local, int offset);
-        QList< QPair<QDateTime, QDateTime> > timesForAngles(const QList<double>& angles,
-                                                            const QDateTime& dt,
-                                                            int offset);
+    virtual void calcForDateTime(const QDateTime &local, int offset);
+    QList<QPair<QDateTime, QDateTime>> timesForAngles(const QList<double> &angles, const QDateTime &dt, int offset);
 
-    protected:
-        void calc();
-        virtual bool calcPerturbations(double*, double*, double*) { return false; };
-        virtual void rotate(double*, double*) { };
-        virtual void topocentricCorrection(double*, double*) { };
+protected:
+    void calc();
+    virtual bool calcPerturbations(double *, double *, double *)
+    {
+        return false;
+    };
+    virtual void rotate(double *, double *){};
+    virtual void topocentricCorrection(double *, double *){};
 
-        inline double rev(double x);
-        inline double asind(double x);
-        inline double sind(double x);
-        inline double cosd(double x);
-        inline double atand(double x);
-        inline double tand(double x);
-        inline double atan2d(double y, double x);
-        void toRectangular(double lo, double la, double r, double *x, double *y, double *z);
-        void toSpherical(double x, double y, double z, double *lo, double *la, double *r);
-        QPair<double, double> zeroPoints(QPointF p1, QPointF p2, QPointF p3);
+    inline double rev(double x);
+    inline double asind(double x);
+    inline double sind(double x);
+    inline double cosd(double x);
+    inline double atand(double x);
+    inline double tand(double x);
+    inline double atan2d(double y, double x);
+    void toRectangular(double lo, double la, double r, double *x, double *y, double *z);
+    void toSpherical(double x, double y, double z, double *lo, double *la, double *r);
+    QPair<double, double> zeroPoints(QPointF p1, QPointF p2, QPointF p3);
 
-        double N;
-        double i;
-        double w;
-        double a;
-        double e;
-        double M;
-        double m_obliquity;
+    double N;
+    double i;
+    double w;
+    double a;
+    double e;
+    double M;
+    double m_obliquity;
 
-        QDateTime m_utc;
-        QDateTime m_local;
-        double m_day;
-        double m_latitude;
-        double m_longitude;
+    QDateTime m_utc;
+    QDateTime m_local;
+    double m_day;
+    double m_latitude;
+    double m_longitude;
 
-        double L;
-        double rad;
-        double RA;
-        double dec;
-        double HA;
-        double m_altitude;
-        double m_azimuth;
-        double m_eclipticLongitude;
-        double m_lambda;
+    double L;
+    double rad;
+    double RA;
+    double dec;
+    double HA;
+    double m_altitude;
+    double m_azimuth;
+    double m_eclipticLongitude;
+    double m_lambda;
 };
 
 class Sun : public SolarSystemObject
 {
-    public:
-        Sun();
-        void calcForDateTime(const QDateTime& local, int offset) override;
+public:
+    Sun();
+    void calcForDateTime(const QDateTime &local, int offset) override;
 
-    protected:
-        void rotate(double*, double*) override;
+protected:
+    void rotate(double *, double *) override;
 };
 
 class Moon : public SolarSystemObject
 {
-    public:
-        explicit Moon(Sun *sun);
-        ~Moon() override {}; // to not delete the Sun
+public:
+    explicit Moon(Sun *sun);
+    ~Moon() override{}; // to not delete the Sun
 
-        void calcForDateTime(const QDateTime& local, int offset) override;
-        double phase();
+    void calcForDateTime(const QDateTime &local, int offset) override;
+    double phase();
 
-    protected:
-        bool calcPerturbations(double *RA, double *dec, double *r) override;
-        void rotate(double*, double*) override;
-        void topocentricCorrection(double*, double*) override;
+protected:
+    bool calcPerturbations(double *RA, double *dec, double *r) override;
+    void rotate(double *, double *) override;
+    void topocentricCorrection(double *, double *) override;
 
-    private:
-        Sun *m_sun;
+private:
+    Sun *m_sun;
 };
 
 #endif

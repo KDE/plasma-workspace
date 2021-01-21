@@ -19,13 +19,14 @@
 
 #include "autostart.h"
 
-#include <kautostart.h>
-#include <QStandardPaths>
 #include <QDir>
 #include <QHash>
+#include <QStandardPaths>
+#include <kautostart.h>
 
 AutoStart::AutoStart()
-    : m_phase(-1), m_phasedone(false)
+    : m_phase(-1)
+    , m_phasedone(false)
 {
     loadAutoStartList();
 }
@@ -34,8 +35,7 @@ AutoStart::~AutoStart()
 {
 }
 
-void
-AutoStart::setPhase(int phase)
+void AutoStart::setPhase(int phase)
 {
     if (phase > m_phase) {
         m_phase = phase;
@@ -61,8 +61,7 @@ static QString extractName(QString path) // krazy:exclude=passbyvalue
     return path;
 }
 
-void
-AutoStart::loadAutoStartList()
+void AutoStart::loadAutoStartList()
 {
     // XDG autostart dirs
 
@@ -94,22 +93,19 @@ AutoStart::loadAutoStartList()
     }
 }
 
-QString
-AutoStart::startService()
+QString AutoStart::startService()
 {
     if (m_startList.isEmpty()) {
         return QString();
     }
 
     while (!m_started.isEmpty()) {
-
         // Check for items that depend on previously started items
         QString lastItem = m_started[0];
         QMutableVectorIterator<AutoStartItem> it(m_startList);
         while (it.hasNext()) {
             const auto &item = it.next();
-            if (item.phase == m_phase
-                    &&  item.startAfter == lastItem) {
+            if (item.phase == m_phase && item.startAfter == lastItem) {
                 m_started.prepend(item.name);
                 QString service = item.service;
                 it.remove();
@@ -123,8 +119,7 @@ AutoStart::startService()
     QMutableVectorIterator<AutoStartItem> it(m_startList);
     while (it.hasNext()) {
         const auto &item = it.next();
-        if (item.phase == m_phase
-                &&  item.startAfter.isEmpty()) {
+        if (item.phase == m_phase && item.startAfter.isEmpty()) {
             m_started.prepend(item.name);
             QString service = item.service;
             it.remove();

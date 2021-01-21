@@ -20,8 +20,8 @@
 #include <config-workspace.h>
 #include <config-xcb.h>
 
-#include "main.h"
 #include "klauncher_iface.h"
+#include "main.h"
 
 #ifdef XCB_FOUND
 #include <xcb/xcb.h>
@@ -29,12 +29,12 @@
 
 #include <unistd.h>
 
-#include <QFile>
-#include <QTimer>
-#include <QLibrary>
 #include <QDBusConnection>
-#include <QGuiApplication>
 #include <QDebug>
+#include <QFile>
+#include <QGuiApplication>
+#include <QLibrary>
+#include <QTimer>
 
 #include <kaboutdata.h>
 #include <kconfig.h>
@@ -43,39 +43,37 @@
 #include <kservicetypetrader.h>
 #include <kworkspace.h>
 
-static int ready[ 2 ];
+static int ready[2];
 static bool startup = false;
 
 static void sendReady()
 {
-  if( ready[ 1 ] == -1 )
-    return;
-  char c = 0;
-  write( ready[ 1 ], &c, 1 );
-  close( ready[ 1 ] );
-  ready[ 1 ] = -1;
+    if (ready[1] == -1)
+        return;
+    char c = 0;
+    write(ready[1], &c, 1);
+    close(ready[1]);
+    ready[1] = -1;
 }
 
 static void waitForReady()
 {
-  char c = 1;
-  close( ready[ 1 ] );
-  read( ready[ 0 ], &c, 1 );
-  close( ready[ 0 ] );
+    char c = 1;
+    close(ready[1]);
+    read(ready[0], &c, 1);
+    close(ready[0]);
 }
 
 bool KCMInit::runModule(const QString &libName, KService::Ptr service)
 {
-    QString KCMINIT_PREFIX=QStringLiteral("kcminit_");
+    QString KCMINIT_PREFIX = QStringLiteral("kcminit_");
     const QVariant tmp = service->property(QStringLiteral("X-KDE-Init-Symbol"), QVariant::String);
     QString kcminit;
-    if( tmp.isValid() )
-    {
+    if (tmp.isValid()) {
         kcminit = tmp.toString();
-        if( !kcminit.startsWith( KCMINIT_PREFIX ) )
+        if (!kcminit.startsWith(KCMINIT_PREFIX))
             kcminit = KCMINIT_PREFIX + kcminit;
-    }
-    else
+    } else
         kcminit = KCMINIT_PREFIX + libName;
 
     QString path = KPluginLoader::findPlugin(libName);
@@ -101,151 +99,148 @@ bool KCMInit::runModule(const QString &libName, KService::Ptr service)
     return true;
 }
 
-void KCMInit::runModules( int phase )
+void KCMInit::runModules(int phase)
 {
-    QString KCMINIT_PREFIX=QStringLiteral("kcminit_");
-    for (const KService::Ptr & service : qAsConst(m_list)) {
-      const QVariant tmp = service->property(QStringLiteral("X-KDE-Init-Library"), QVariant::String);
-      QString library;
-      if( tmp.isValid() )
-      {
-          library = tmp.toString();
-          if( !library.startsWith( KCMINIT_PREFIX ) )
-              library = KCMINIT_PREFIX + library;
-      }
-      else
-      {
-          library = service->library();
-      }
+    QString KCMINIT_PREFIX = QStringLiteral("kcminit_");
+    for (const KService::Ptr &service : qAsConst(m_list)) {
+        const QVariant tmp = service->property(QStringLiteral("X-KDE-Init-Library"), QVariant::String);
+        QString library;
+        if (tmp.isValid()) {
+            library = tmp.toString();
+            if (!library.startsWith(KCMINIT_PREFIX))
+                library = KCMINIT_PREFIX + library;
+        } else {
+            library = service->library();
+        }
 
-      if (library.isEmpty()) {
-          qWarning() << Q_FUNC_INFO << "library is empty, skipping";
-          continue; // Skip
-      }
+        if (library.isEmpty()) {
+            qWarning() << Q_FUNC_INFO << "library is empty, skipping";
+            continue; // Skip
+        }
 
-      // see ksmserver's README for the description of the phases
-      const QVariant vphase = service->property(QStringLiteral("X-KDE-Init-Phase"), QVariant::Int );
+        // see ksmserver's README for the description of the phases
+        const QVariant vphase = service->property(QStringLiteral("X-KDE-Init-Phase"), QVariant::Int);
 
-      int libphase = 1;
-      if( vphase.isValid() )
-          libphase = vphase.toInt();
+        int libphase = 1;
+        if (vphase.isValid())
+            libphase = vphase.toInt();
 
-      if (libphase > 1) {
-          libphase = 1;
-      }
+        if (libphase > 1) {
+            libphase = 1;
+        }
 
-      if( phase != -1 && libphase != phase )
-          continue;
+        if (phase != -1 && libphase != phase)
+            continue;
 
-      // try to load the library
-      if (!m_alreadyInitialized.contains(library)) {
-          runModule(library, service);
-          m_alreadyInitialized.insert(library);
-      }
-  }
+        // try to load the library
+        if (!m_alreadyInitialized.contains(library)) {
+            runModule(library, service);
+            m_alreadyInitialized.insert(library);
+        }
+    }
 }
 
-KCMInit::KCMInit( const QCommandLineParser& args )
+KCMInit::KCMInit(const QCommandLineParser &args)
 {
-  QString arg;
-  if (args.positionalArguments().size() == 1) {
-    arg = args.positionalArguments().first();
-  }
-
-  if (args.isSet(QStringLiteral("list"))) {
-    m_list = KServiceTypeTrader::self()->query( QStringLiteral("KCModuleInit") );
-
-    for (const KService::Ptr &service : qAsConst(m_list)) {
-      if (service->library().isEmpty())
-        continue; // Skip
-      printf("%s\n", QFile::encodeName(service->desktopEntryName()).data());
+    QString arg;
+    if (args.positionalArguments().size() == 1) {
+        arg = args.positionalArguments().first();
     }
-    return;
-  }
 
-  if (!arg.isEmpty()) {
-    QString module = arg;
-    if (!module.endsWith(QLatin1String(".desktop")))
-       module += QLatin1String(".desktop");
+    if (args.isSet(QStringLiteral("list"))) {
+        m_list = KServiceTypeTrader::self()->query(QStringLiteral("KCModuleInit"));
 
-    KService::Ptr serv = KService::serviceByStorageId( module );
-    if ( !serv || serv->library().isEmpty() ) {
-      qCritical() << i18n("Module %1 not found", module);
-      return;
+        for (const KService::Ptr &service : qAsConst(m_list)) {
+            if (service->library().isEmpty())
+                continue; // Skip
+            printf("%s\n", QFile::encodeName(service->desktopEntryName()).data());
+        }
+        return;
+    }
+
+    if (!arg.isEmpty()) {
+        QString module = arg;
+        if (!module.endsWith(QLatin1String(".desktop")))
+            module += QLatin1String(".desktop");
+
+        KService::Ptr serv = KService::serviceByStorageId(module);
+        if (!serv || serv->library().isEmpty()) {
+            qCritical() << i18n("Module %1 not found", module);
+            return;
+        } else {
+            m_list.append(serv);
+        }
     } else {
-      m_list.append(serv);
+        // locate the desktop files
+        m_list = KServiceTypeTrader::self()->query(QStringLiteral("KCModuleInit"));
     }
-  } else {
-    // locate the desktop files
-    m_list = KServiceTypeTrader::self()->query( QStringLiteral("KCModuleInit") );
-  }
 
-  if( startup ) {
-     runModules( 0 );
-     // Tell KSplash that KCMInit has started
-     QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
-                                                                          QStringLiteral("/KSplash"),
-                                                                          QStringLiteral("org.kde.KSplash"),
-                                                                          QStringLiteral("setStage"));
-     ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("kcminit"));
-     QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
+    if (startup) {
+        runModules(0);
+        // Tell KSplash that KCMInit has started
+        QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
+                                                                             QStringLiteral("/KSplash"),
+                                                                             QStringLiteral("org.kde.KSplash"),
+                                                                             QStringLiteral("setStage"));
+        ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("kcminit"));
+        QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
 
-     sendReady();
-     QTimer::singleShot( 300 * 1000, qApp, &QCoreApplication::quit); // just in case
+        sendReady();
+        QTimer::singleShot(300 * 1000, qApp, &QCoreApplication::quit); // just in case
 
-     QDBusConnection::sessionBus().registerObject(QStringLiteral("/kcminit"), this, QDBusConnection::ExportScriptableContents);
-     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.kcminit"));
+        QDBusConnection::sessionBus().registerObject(QStringLiteral("/kcminit"), this, QDBusConnection::ExportScriptableContents);
+        QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.kcminit"));
 
-     qApp->exec(); // wait for runPhase1()
-  }
-  else
-     runModules( -1 ); // all phases
+        qApp->exec(); // wait for runPhase1()
+    } else
+        runModules(-1); // all phases
 }
 
 KCMInit::~KCMInit()
 {
-  sendReady();
+    sendReady();
 }
 
 void KCMInit::runPhase1()
 {
-  runModules( 1 );
-  qApp->exit(0);
+    runModules(1);
+    qApp->exit(0);
 }
 
 extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])
 {
-  // kdeinit waits for kcminit to finish, but during KDE startup
-  // only important kcm's are started very early in the login process,
-  // the rest is delayed, so fork and make parent return after the initial phase
-  pipe( ready );
-  if( fork() != 0 )
-  {
-      waitForReady();
-      return 0;
-  }
-  close( ready[ 0 ] );
+    // kdeinit waits for kcminit to finish, but during KDE startup
+    // only important kcm's are started very early in the login process,
+    // the rest is delayed, so fork and make parent return after the initial phase
+    pipe(ready);
+    if (fork() != 0) {
+        waitForReady();
+        return 0;
+    }
+    close(ready[0]);
 
-  const QString executableName = QString::fromUtf8(argv[0]);
-  startup = executableName.endsWith(QLatin1String("kcminit_startup" )); // started from startkde?
+    const QString executableName = QString::fromUtf8(argv[0]);
+    startup = executableName.endsWith(QLatin1String("kcminit_startup")); // started from startkde?
 
-  KWorkSpace::detectPlatform(argc, argv);
-  QGuiApplication::setDesktopSettingsAware(false);
-  QGuiApplication app(argc, argv); //gui is needed for several modules
-  KLocalizedString::setApplicationDomain("kcminit");
-  KAboutData about(QStringLiteral("kcminit"), i18n("KCMInit"), QString(),
-                   i18n("KCMInit - runs startup initialization for Control Modules."), KAboutLicense::GPL);
-  KAboutData::setApplicationData(about);
+    KWorkSpace::detectPlatform(argc, argv);
+    QGuiApplication::setDesktopSettingsAware(false);
+    QGuiApplication app(argc, argv); // gui is needed for several modules
+    KLocalizedString::setApplicationDomain("kcminit");
+    KAboutData about(QStringLiteral("kcminit"),
+                     i18n("KCMInit"),
+                     QString(),
+                     i18n("KCMInit - runs startup initialization for Control Modules."),
+                     KAboutLicense::GPL);
+    KAboutData::setApplicationData(about);
 
-  QCommandLineParser parser;
-  about.setupCommandLine(&parser);
-  parser.addOption(QCommandLineOption(QStringList() <<  QStringLiteral("list"), i18n("List modules that are run at startup")));
-  parser.addPositionalArgument(QStringLiteral("module"), i18n("Configuration module to run"));
+    QCommandLineParser parser;
+    about.setupCommandLine(&parser);
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("list"), i18n("List modules that are run at startup")));
+    parser.addPositionalArgument(QStringLiteral("module"), i18n("Configuration module to run"));
 
-  parser.process(app);
-  about.processCommandLine(&parser);
+    parser.process(app);
+    about.processCommandLine(&parser);
 
-  KCMInit kcminit( parser );
-  return 0;
+    KCMInit kcminit(parser);
+    return 0;
 }
-

@@ -26,11 +26,12 @@
 
 #include <KWindowSystem>
 
-SubMenu::SubMenu(QQuickItem *parent) : PlasmaQuick::Dialog(parent)
-, m_offset(0)
-, m_facingLeft(false)
+SubMenu::SubMenu(QQuickItem *parent)
+    : PlasmaQuick::Dialog(parent)
+    , m_offset(0)
+    , m_facingLeft(false)
 {
-   KWindowSystem::setType(winId(), NET::Menu);
+    KWindowSystem::setType(winId(), NET::Menu);
 }
 
 SubMenu::~SubMenu()
@@ -51,7 +52,7 @@ void SubMenu::setOffset(int offset)
     }
 }
 
-QPoint SubMenu::popupPosition(QQuickItem* item, const QSize& size)
+QPoint SubMenu::popupPosition(QQuickItem *item, const QSize &size)
 {
     if (!item || !item->window()) {
         return QPoint(0, 0);
@@ -74,7 +75,7 @@ QPoint SubMenu::popupPosition(QQuickItem* item, const QSize& size)
     pos.setY(pos.y() - margins()->property("top").toInt());
 
     if (pos.y() + size.height() > avail.bottom()) {
-       int overshoot = std::ceil(((avail.bottom() - (pos.y() + size.height())) * -1) / item->height()) * item->height();
+        int overshoot = std::ceil(((avail.bottom() - (pos.y() + size.height())) * -1) / item->height()) * item->height();
 
         pos.setY(pos.y() - overshoot);
     }
@@ -88,7 +89,7 @@ QRect SubMenu::availableScreenRectForItem(QQuickItem *item) const
 
     const QPoint globalPosition = item->window()->mapToGlobal(item->position().toPoint());
 
-    foreach(QScreen *s, QGuiApplication::screens()) {
+    foreach (QScreen *s, QGuiApplication::screens()) {
         if (s->geometry().contains(globalPosition)) {
             screen = s;
         }

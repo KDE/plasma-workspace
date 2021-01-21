@@ -30,19 +30,18 @@
 
 namespace KFI
 {
-
 class CFontThumbnail : public ThumbCreator
 {
-    public:
-
+public:
     CFontThumbnail();
-    ~CFontThumbnail() override {}
+    ~CFontThumbnail() override
+    {
+    }
 
-    bool  create(const QString &path, int width, int height, QImage &img) override;
+    bool create(const QString &path, int width, int height, QImage &img) override;
     Flags flags() const override;
 
-    private:
-
+private:
     CFcEngine itsEngine;
 };
 

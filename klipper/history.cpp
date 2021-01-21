@@ -24,8 +24,8 @@
 #include <QAction>
 
 #include "historyitem.h"
-#include "historystringitem.h"
 #include "historymodel.h"
+#include "historystringitem.h"
 
 class CycleBlocker
 {
@@ -34,6 +34,7 @@ public:
     ~CycleBlocker();
 
     static bool isBlocked();
+
 private:
     static int s_blocker;
 };
@@ -54,84 +55,82 @@ bool CycleBlocker::isBlocked()
     return s_blocker;
 }
 
-History::History( QObject* parent )
-    : QObject( parent ),
-      m_topIsUserSelected( false ),
-      m_model(new HistoryModel(this))
+History::History(QObject *parent)
+    : QObject(parent)
+    , m_topIsUserSelected(false)
+    , m_model(new HistoryModel(this))
 {
-    connect(m_model, &HistoryModel::rowsInserted, this,
-        [this](const QModelIndex &parent, int start) {
-            Q_UNUSED(parent)
-            if (start == 0) {
-                emit topChanged();
-            }
-            emit changed();
+    connect(m_model, &HistoryModel::rowsInserted, this, [this](const QModelIndex &parent, int start) {
+        Q_UNUSED(parent)
+        if (start == 0) {
+            emit topChanged();
         }
-    );
-    connect(m_model, &HistoryModel::rowsMoved, this,
-        [this](const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow) {
-            Q_UNUSED(sourceParent)
-            Q_UNUSED(sourceEnd)
-            Q_UNUSED(destinationParent)
-            if (sourceStart == 0 || destinationRow == 0) {
-                emit topChanged();
-            }
-            emit changed();
+        emit changed();
+    });
+    connect(m_model,
+            &HistoryModel::rowsMoved,
+            this,
+            [this](const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow) {
+                Q_UNUSED(sourceParent)
+                Q_UNUSED(sourceEnd)
+                Q_UNUSED(destinationParent)
+                if (sourceStart == 0 || destinationRow == 0) {
+                    emit topChanged();
+                }
+                emit changed();
+            });
+    connect(m_model, &HistoryModel::rowsRemoved, this, [this](const QModelIndex &parent, int start) {
+        Q_UNUSED(parent)
+        if (start == 0) {
+            emit topChanged();
         }
-    );
-    connect(m_model, &HistoryModel::rowsRemoved, this,
-        [this](const QModelIndex &parent, int start) {
-            Q_UNUSED(parent)
-            if (start == 0) {
-                emit topChanged();
-            }
-            emit changed();
-        }
-    );
+        emit changed();
+    });
     connect(m_model, &HistoryModel::modelReset, this, &History::changed);
     connect(m_model, &HistoryModel::modelReset, this, &History::topChanged);
-    connect(this, &History::topChanged,
-        [this]() {
-            m_topIsUserSelected = false;
-            if (!CycleBlocker::isBlocked()) {
-                m_cycleStartUuid = QByteArray();
-            }
+    connect(this, &History::topChanged, [this]() {
+        m_topIsUserSelected = false;
+        if (!CycleBlocker::isBlocked()) {
+            m_cycleStartUuid = QByteArray();
         }
-    );
+    });
 }
 
-
-History::~History() {
+History::~History()
+{
 }
 
-void History::insert(HistoryItemPtr item) {
-    if ( !item )
+void History::insert(HistoryItemPtr item)
+{
+    if (!item)
         return;
 
     m_model->insert(item);
-
 }
 
-void History::forceInsert(HistoryItemPtr item) {
-    if ( !item )
+void History::forceInsert(HistoryItemPtr item)
+{
+    if (!item)
         return;
     // TODO: do we need a force insert in HistoryModel
     m_model->insert(item);
 }
 
-void History::remove( const HistoryItemConstPtr &newItem ) {
-    if ( !newItem )
+void History::remove(const HistoryItemConstPtr &newItem)
+{
+    if (!newItem)
         return;
 
     m_model->remove(newItem->uuid());
 }
 
-
-void History::slotClear() {
+void History::slotClear()
+{
     m_model->clear();
 }
 
-void History::slotMoveToTop(QAction* action) {
+void History::slotMoveToTop(QAction *action)
+{
     QByteArray uuid = action->data().toByteArray();
     if (uuid.isNull()) // not an action from popupproxy
         return;
@@ -139,7 +138,8 @@ void History::slotMoveToTop(QAction* action) {
     slotMoveToTop(uuid);
 }
 
-void History::slotMoveToTop(const QByteArray& uuid) {
+void History::slotMoveToTop(const QByteArray &uuid)
+{
     const QModelIndex item = m_model->indexOf(uuid);
     if (item.isValid() && item.row() == 0) {
         // The item is already at the top, but it still may be not be set as the actual clipboard
@@ -155,18 +155,20 @@ void History::slotMoveToTop(const QByteArray& uuid) {
     emit topIsUserSelectedSet();
 }
 
-void History::setMaxSize( unsigned max_size ) {
+void History::setMaxSize(unsigned max_size)
+{
     m_model->setMaxSize(max_size);
 }
 
-void History::cycleNext() {
+void History::cycleNext()
+{
     if (m_model->rowCount() < 2) {
         return;
     }
 
     if (m_cycleStartUuid.isEmpty()) {
-        m_cycleStartUuid = m_model->index(0).data(Qt::UserRole+1).toByteArray();
-    } else if (m_cycleStartUuid == m_model->index(1).data(Qt::UserRole+1).toByteArray()) {
+        m_cycleStartUuid = m_model->index(0).data(Qt::UserRole + 1).toByteArray();
+    } else if (m_cycleStartUuid == m_model->index(1).data(Qt::UserRole + 1).toByteArray()) {
         // end of cycle
         return;
     }
@@ -174,31 +176,30 @@ void History::cycleNext() {
     m_model->moveTopToBack();
 }
 
-void History::cyclePrev() {
+void History::cyclePrev()
+{
     if (m_cycleStartUuid.isEmpty()) {
         return;
     }
     CycleBlocker blocker;
     m_model->moveBackToTop();
-    if (m_cycleStartUuid == m_model->index(0).data(Qt::UserRole+1).toByteArray()) {
+    if (m_cycleStartUuid == m_model->index(0).data(Qt::UserRole + 1).toByteArray()) {
         m_cycleStartUuid = QByteArray();
     }
 }
-
 
 HistoryItemConstPtr History::nextInCycle() const
 {
     if (m_model->hasIndex(1, 0)) {
         if (!m_cycleStartUuid.isEmpty()) {
             // check whether we are not at the end
-            if (m_cycleStartUuid == m_model->index(1).data(Qt::UserRole+1).toByteArray()) {
+            if (m_cycleStartUuid == m_model->index(1).data(Qt::UserRole + 1).toByteArray()) {
                 return HistoryItemConstPtr();
             }
         }
         return m_model->index(1).data(Qt::UserRole).value<HistoryItemConstPtr>();
     }
     return HistoryItemConstPtr();
-
 }
 
 HistoryItemConstPtr History::prevInCycle() const
@@ -209,7 +210,7 @@ HistoryItemConstPtr History::prevInCycle() const
     return m_model->index(m_model->rowCount() - 1).data(Qt::UserRole).value<HistoryItemConstPtr>();
 }
 
-HistoryItemConstPtr History::find(const QByteArray& uuid) const
+HistoryItemConstPtr History::find(const QByteArray &uuid) const
 {
     const QModelIndex index = m_model->indexOf(uuid);
     if (!index.isValid()) {
@@ -236,5 +237,3 @@ HistoryItemConstPtr History::first() const
     }
     return index.data(Qt::UserRole).value<HistoryItemConstPtr>();
 }
-
-

@@ -18,25 +18,27 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #include "bookmarkmatch.h"
 #include <QVariant>
 
 // TODO: test
 
-BookmarkMatch::BookmarkMatch(const QIcon &icon, const QString& searchTerm, const QString& bookmarkTitle, const QString& bookmarkURL, const QString& description )
-    : m_icon(icon), m_searchTerm(searchTerm), m_bookmarkTitle(bookmarkTitle), m_bookmarkURL(bookmarkURL), m_description(description)
+BookmarkMatch::BookmarkMatch(const QIcon &icon, const QString &searchTerm, const QString &bookmarkTitle, const QString &bookmarkURL, const QString &description)
+    : m_icon(icon)
+    , m_searchTerm(searchTerm)
+    , m_bookmarkTitle(bookmarkTitle)
+    , m_bookmarkURL(bookmarkURL)
+    , m_description(description)
 {
 }
 
-Plasma::QueryMatch BookmarkMatch::asQueryMatch( Plasma::AbstractRunner* runner )
+Plasma::QueryMatch BookmarkMatch::asQueryMatch(Plasma::AbstractRunner *runner)
 {
     Plasma::QueryMatch::Type type;
     qreal relevance = 0;
 
-    if (m_bookmarkTitle.compare(m_searchTerm, Qt::CaseInsensitive) == 0 ||
-          (!m_description.isEmpty() && m_description.compare(m_searchTerm, Qt::CaseInsensitive) == 0)
-    ) {
+    if (m_bookmarkTitle.compare(m_searchTerm, Qt::CaseInsensitive) == 0
+        || (!m_description.isEmpty() && m_description.compare(m_searchTerm, Qt::CaseInsensitive) == 0)) {
         type = Plasma::QueryMatch::ExactMatch;
         relevance = 1.0;
     } else if (m_bookmarkTitle.contains(m_searchTerm, Qt::CaseInsensitive)) {
@@ -52,7 +54,7 @@ Plasma::QueryMatch BookmarkMatch::asQueryMatch( Plasma::AbstractRunner* runner )
         type = Plasma::QueryMatch::PossibleMatch;
         relevance = 0.18;
     }
-    
+
     bool isNameEmpty = m_bookmarkTitle.isEmpty();
     bool isDescriptionEmpty = m_description.isEmpty();
 
@@ -63,31 +65,21 @@ Plasma::QueryMatch BookmarkMatch::asQueryMatch( Plasma::AbstractRunner* runner )
     match.setSubtext(m_bookmarkURL);
 
     // Try to set the following as text in this order: name, description, url
-    match.setText( isNameEmpty
-                    ?
-                    (!isDescriptionEmpty ? m_description : m_bookmarkURL)
-                    :
-                    m_bookmarkTitle );
+    match.setText(isNameEmpty ? (!isDescriptionEmpty ? m_description : m_bookmarkURL) : m_bookmarkTitle);
 
     match.setData(m_bookmarkURL);
     return match;
 }
 
-void BookmarkMatch::addTo(QList< BookmarkMatch >& listOfResults, bool addEvenOnNoMatch)
+void BookmarkMatch::addTo(QList<BookmarkMatch> &listOfResults, bool addEvenOnNoMatch)
 {
-  if(!addEvenOnNoMatch && ! (
-    matches(m_searchTerm, m_bookmarkTitle) ||
-    matches(m_searchTerm, m_description) ||
-    matches(m_searchTerm, m_bookmarkURL)
-  ))  {
-    return;
-  }
-  listOfResults << *this;
+    if (!addEvenOnNoMatch && !(matches(m_searchTerm, m_bookmarkTitle) || matches(m_searchTerm, m_description) || matches(m_searchTerm, m_bookmarkURL))) {
+        return;
+    }
+    listOfResults << *this;
 }
 
 bool BookmarkMatch::matches(const QString &search, const QString &matchingField)
 {
-  return !matchingField.simplified().isEmpty() && matchingField.contains(search, Qt::CaseInsensitive);
+    return !matchingField.simplified().isEmpty() && matchingField.contains(search, Qt::CaseInsensitive);
 }
-
-

@@ -28,23 +28,18 @@ class HotplugJob : public Plasma::ServiceJob
     Q_OBJECT
 
 public:
-    HotplugJob (HotplugEngine* engine,
-                const QString& destination,
-                const QString& operation,
-                QMap<QString, QVariant>& parameters,
-                QObject* parent = nullptr)
-    : ServiceJob (destination, operation, parameters, parent),
-      m_engine (engine),
-      m_dest (destination)
-      {
-      }
+    HotplugJob(HotplugEngine *engine, const QString &destination, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = nullptr)
+        : ServiceJob(destination, operation, parameters, parent)
+        , m_engine(engine)
+        , m_dest(destination)
+    {
+    }
 
     void start() override;
 
 private:
-    HotplugEngine* m_engine;
+    HotplugEngine *m_engine;
     QString m_dest;
 };
 
 #endif // HOTPLUG_JOB_H
-

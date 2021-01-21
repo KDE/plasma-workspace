@@ -32,8 +32,7 @@ class QDBusArgument;
 /**
  * Internal struct used to communicate on DBus
  */
-struct DBusMenuItem
-{
+struct DBusMenuItem {
     int id;
     QVariantMap properties;
 };
@@ -47,13 +46,11 @@ typedef QList<DBusMenuItem> DBusMenuItemList;
 
 Q_DECLARE_METATYPE(DBusMenuItemList)
 
-
 //// DBusMenuItemKeys
 /**
  * Represents a list of keys for a menu item
  */
-struct DBusMenuItemKeys
-{
+struct DBusMenuItemKeys {
     int id;
     QStringList properties;
 };
@@ -73,8 +70,7 @@ Q_DECLARE_METATYPE(DBusMenuItemKeysList)
  * DBusMenuLayoutItemList.
  */
 struct DBusMenuLayoutItem;
-struct DBusMenuLayoutItem
-{
+struct DBusMenuLayoutItem {
     int id;
     QVariantMap properties;
     QList<DBusMenuLayoutItem> children;

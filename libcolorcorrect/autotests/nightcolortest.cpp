@@ -35,8 +35,10 @@ private Q_SLOTS:
     void testStageData_data();
     void testStageData();
     void testAutoLocationUpdate();
+
 private:
-    void setCompBackToDefault() {
+    void setCompBackToDefault()
+    {
         m_comp->nightColorAvailable = true;
 
         m_comp->activeEnabled = true;
@@ -59,8 +61,8 @@ private:
         m_comp->longitudeFixed = 0;
 
         m_comp->timingsEnabled = true;
-        m_comp->morningBeginFixed = QTime(6,0,0);
-        m_comp->eveningBeginFixed = QTime(18,0,0);
+        m_comp->morningBeginFixed = QTime(6, 0, 0);
+        m_comp->eveningBeginFixed = QTime(18, 0, 0);
         m_comp->transitionTime = FALLBACK_SLOW_UPDATE_TIME;
     }
 
@@ -106,6 +108,7 @@ void TestNightColor::testStageData_data()
     QTest::addColumn<bool>("isChangeAll");
     QTest::addColumn<bool>("expectChangeSuccess");
 
+    // clang-format off
     QTest::newRow("noChange") << true << 0 << DEFAULT_NIGHT_TEMPERATURE << 0. << 0. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << false << false << false;
     QTest::newRow("wrongChange") << true << 0 << 9001 << 0. << 0. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << true << true << false;
     QTest::newRow("temperature") << true << 0 << 1000 << 0. << 0. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << true << true << true;
@@ -114,6 +117,7 @@ void TestNightColor::testStageData_data()
     QTest::newRow("time+defaultMode") << true << 0 << DEFAULT_NIGHT_TEMPERATURE << 0. << 0. << QTime(10,0,0) << QTime(20,0,0) << 1 << false << true << true;
     QTest::newRow("location+mode") << true << 1 << DEFAULT_NIGHT_TEMPERATURE << 50. << -20. << QTime(6,0,0) << QTime(18,0,0) << FALLBACK_SLOW_UPDATE_TIME << true << true << true;
     QTest::newRow("time+mode") << false << 0 << DEFAULT_NIGHT_TEMPERATURE << 0. << 0. << QTime(10,0,0) << QTime(20,0,0) << 1 << true << true << true;
+    // clang-format on
 }
 
 void TestNightColor::testStageData()
@@ -138,19 +142,17 @@ void TestNightColor::testStageData()
     QVERIFY(!aptr->checkStaged());
     QVERIFY(!aptr->checkStagedAll());
 
-    auto setAdaptorStaged = [&aptr,
-            &active, &mode, &nightTemperature,
-            &latitudeFixed, &longitudeFixed,
-            &morningBeginFixed, &eveningBeginFixed, &transitionTime]() {
-        aptr->setActiveStaged(active);
-        aptr->setModeStaged(mode);
-        aptr->setNightTemperatureStaged(nightTemperature);
-        aptr->setLatitudeFixedStaged(latitudeFixed);
-        aptr->setLongitudeFixedStaged(longitudeFixed);
-        aptr->setMorningBeginFixedStaged(morningBeginFixed);
-        aptr->setEveningBeginFixedStaged(eveningBeginFixed);
-        aptr->setTransitionTimeStaged(transitionTime);
-    };
+    auto setAdaptorStaged =
+        [&aptr, &active, &mode, &nightTemperature, &latitudeFixed, &longitudeFixed, &morningBeginFixed, &eveningBeginFixed, &transitionTime]() {
+            aptr->setActiveStaged(active);
+            aptr->setModeStaged(mode);
+            aptr->setNightTemperatureStaged(nightTemperature);
+            aptr->setLatitudeFixedStaged(latitudeFixed);
+            aptr->setLongitudeFixedStaged(longitudeFixed);
+            aptr->setMorningBeginFixedStaged(morningBeginFixed);
+            aptr->setEveningBeginFixedStaged(eveningBeginFixed);
+            aptr->setTransitionTimeStaged(transitionTime);
+        };
     setAdaptorStaged();
     QCOMPARE(aptr->checkStaged(), isChange);
     QCOMPARE(aptr->checkStagedAll(), isChangeAll);

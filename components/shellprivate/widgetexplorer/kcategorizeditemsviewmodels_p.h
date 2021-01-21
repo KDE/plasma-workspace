@@ -22,11 +22,11 @@
 
 #include <QIcon>
 #include <QPair>
-#include <QStandardItem>
 #include <QSortFilterProxyModel>
+#include <QStandardItem>
 
-namespace KCategorizedItemsViewModels {
-
+namespace KCategorizedItemsViewModels
+{
 typedef QPair<QString, QVariant> Filter;
 
 /**
@@ -78,6 +78,7 @@ public:
      * Returns if the item passes the filter specified
      */
     virtual bool passesFiltering(const Filter &filter) const = 0;
+
 private:
 };
 
@@ -90,9 +91,9 @@ class DefaultFilterModel : public QStandardItemModel
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 public:
     enum Roles {
-        FilterTypeRole = Qt::UserRole+1,
-        FilterDataRole = Qt::UserRole+2,
-        SeparatorRole = Qt::UserRole+3,
+        FilterTypeRole = Qt::UserRole + 1,
+        FilterDataRole = Qt::UserRole + 2,
+        SeparatorRole = Qt::UserRole + 3,
     };
     explicit DefaultFilterModel(QObject *parent = nullptr);
 
@@ -112,7 +113,10 @@ public:
      */
     void addSeparator(const QString &caption);
 
-    int count() {return rowCount(QModelIndex());}
+    int count()
+    {
+        return rowCount(QModelIndex());
+    }
 
     Q_INVOKABLE QVariantHash get(int i) const;
 
@@ -156,7 +160,10 @@ public:
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-    int count() {return rowCount(QModelIndex());}
+    int count()
+    {
+        return rowCount(QModelIndex());
+    }
 
     Q_INVOKABLE QVariantHash get(int i) const;
 
@@ -170,7 +177,7 @@ private:
     QString m_searchPattern;
 };
 
-} //end of namespace
+} // end of namespace
 
 Q_DECLARE_METATYPE(KCategorizedItemsViewModels::Filter)
 

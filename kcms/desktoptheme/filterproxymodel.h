@@ -30,7 +30,6 @@ class FilterProxyModel : public QSortFilterProxyModel
     Q_OBJECT
 
 public:
-
     enum ThemeFilter {
         AllThemes,
         LightThemes,

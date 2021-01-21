@@ -21,18 +21,18 @@
 #include <QApplication>
 #include <QClipboard>
 #include <QIcon>
-#include <QMimeData>
 #include <QMenu>
+#include <QMimeData>
 #include <QQuickItem>
-#include <QTimer>
 #include <QQuickWindow>
+#include <QTimer>
 
 #include <KConfigGroup>
 #include <KFileItemActions>
 #include <KFileItemListProperties>
 #include <KLocalizedString>
-#include <KProtocolManager>
 #include <KPropertiesDialog>
+#include <KProtocolManager>
 #include <KSharedConfig>
 #include <KStandardAction>
 #include <KUrlMimeData>
@@ -43,9 +43,9 @@
 #include <KIO/JobUiDelegate>
 #include <KIO/OpenFileManagerWindowJob>
 
-FileMenu::FileMenu(QObject *parent) : QObject(parent)
+FileMenu::FileMenu(QObject *parent)
+    : QObject(parent)
 {
-
 }
 
 FileMenu::~FileMenu() = default;
@@ -156,8 +156,7 @@ void FileMenu::open(int x, int y)
             if (uiDelegate.askDeleteConfirmation(urls, KIO::JobUiDelegate::Trash, KIO::JobUiDelegate::DefaultConfirmation)) {
                 auto *job = KIO::trash(urls);
                 job->uiDelegate()->setAutoErrorHandlingEnabled(true);
-                KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Trash, urls,
-                                                        QUrl(QStringLiteral("trash:/")), job);
+                KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Trash, urls, QUrl(QStringLiteral("trash:/")), job);
             }
         };
         QAction *moveToTrashAction = KStandardAction::moveToTrash(this, moveToTrashLambda, menu);
@@ -195,13 +194,13 @@ void FileMenu::open(int x, int y)
         dialog->show();
     });
 
-    //this is a workaround where Qt will fail to realize a mouse has been released
+    // this is a workaround where Qt will fail to realize a mouse has been released
     // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
     // whilst the mouse is depressed
     // https://bugreports.qt.io/browse/QTBUG-59044
     // this causes the next click to go missing
 
-    //by releasing manually we avoid that situation
+    // by releasing manually we avoid that situation
     auto ungrabMouseHack = [this]() {
         if (m_visualParent && m_visualParent->window() && m_visualParent->window()->mouseGrabberItem()) {
             m_visualParent->window()->mouseGrabberItem()->ungrabMouse();
@@ -209,7 +208,7 @@ void FileMenu::open(int x, int y)
     };
 
     QTimer::singleShot(0, m_visualParent, ungrabMouseHack);
-    //end workaround
+    // end workaround
 
     QPoint pos;
     if (x == -1 && y == -1) { // align "bottom left of visualParent"

@@ -25,29 +25,29 @@
 
 class QAction;
 
-namespace TaskManager {
-    class VirtualDesktopInfo;
+namespace TaskManager
+{
+class VirtualDesktopInfo;
 }
 
 class SwitchDesktop : public Plasma::ContainmentActions
 {
     Q_OBJECT
-    public:
-        SwitchDesktop(QObject* parent, const QVariantList& args);
-        ~SwitchDesktop() override;
+public:
+    SwitchDesktop(QObject *parent, const QVariantList &args);
+    ~SwitchDesktop() override;
 
-        QList<QAction*> contextualActions() override;
+    QList<QAction *> contextualActions() override;
 
-        void performNextAction() override;
-        void performPreviousAction() override;
+    void performNextAction() override;
+    void performPreviousAction() override;
 
-    private Q_SLOTS:
-        void switchTo();
+private Q_SLOTS:
+    void switchTo();
 
-    private:
-        QHash<int, QAction *> m_actions;
-        TaskManager::VirtualDesktopInfo* m_virtualDesktopInfo;
+private:
+    QHash<int, QAction *> m_actions;
+    TaskManager::VirtualDesktopInfo *m_virtualDesktopInfo;
 };
-
 
 #endif

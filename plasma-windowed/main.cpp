@@ -20,15 +20,15 @@
  */
 
 #include <QApplication>
-#include <qcommandlineparser.h>
 #include <qcommandlineoption.h>
+#include <qcommandlineparser.h>
 
-#include <KQuickAddons/QtQuickSettings>
 #include <KDBusService>
 #include <KLocalizedString>
+#include <KQuickAddons/QtQuickSettings>
 
-#include "plasmawindowedview.h"
 #include "plasmawindowedcorona.h"
+#include "plasmawindowedview.h"
 
 static const char version[] = "1.0";
 
@@ -46,7 +46,8 @@ int main(int argc, char **argv)
 
     QCommandLineParser parser;
     parser.setApplicationDescription(i18n("Plasma Windowed"));
-    parser.addOption(QCommandLineOption(QStringLiteral("statusnotifier"), i18n("Makes the plasmoid stay alive in the Notification Area, even when the window is closed.")));
+    parser.addOption(
+        QCommandLineOption(QStringLiteral("statusnotifier"), i18n("Makes the plasmoid stay alive in the Notification Area, even when the window is closed.")));
     parser.addPositionalArgument(QStringLiteral("applet"), i18n("The applet to open."));
     parser.addPositionalArgument(QStringLiteral("args"), i18n("Arguments to pass to the plasmoid."), QStringLiteral("[args...]"));
     parser.addVersionOption();
@@ -62,8 +63,7 @@ int main(int argc, char **argv)
     const QStringList arguments = parser.positionalArguments();
     QVariantList args;
     QStringList::const_iterator constIterator = arguments.constBegin() + 1;
-    for (; constIterator != arguments.constEnd();
-           ++constIterator) {
+    for (; constIterator != arguments.constEnd(); ++constIterator) {
         args << (*constIterator);
     }
     corona->setHasStatusNotifier(parser.isSet(QStringLiteral("statusnotifier")));

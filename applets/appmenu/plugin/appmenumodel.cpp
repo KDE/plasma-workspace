@@ -24,23 +24,21 @@
 #include "appmenumodel.h"
 
 #include <QAction>
-#include <QMenu>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>
 #include <QGuiApplication>
+#include <QMenu>
 
-#include <dbusmenuimporter.h>
 #include <abstracttasksmodel.h>
+#include <dbusmenuimporter.h>
 
 class KDBusMenuImporter : public DBusMenuImporter
 {
-
 public:
     KDBusMenuImporter(const QString &service, const QString &path, QObject *parent)
         : DBusMenuImporter(service, path, parent)
     {
-
     }
 
 protected:
@@ -48,23 +46,25 @@ protected:
     {
         return QIcon::fromTheme(name);
     }
-
 };
 
 AppMenuModel::AppMenuModel(QObject *parent)
-            : QAbstractListModel(parent),
-              m_serviceWatcher(new QDBusServiceWatcher(this)),
-              m_tasksModel(new TaskManager::TasksModel(this))
+    : QAbstractListModel(parent)
+    , m_serviceWatcher(new QDBusServiceWatcher(this))
+    , m_tasksModel(new TaskManager::TasksModel(this))
 {
     m_tasksModel->setFilterByScreen(true);
     connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, this, &AppMenuModel::onActiveWindowChanged);
-    connect(m_tasksModel, &TaskManager::TasksModel::dataChanged, [=](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles = QVector<int>()) {
-        Q_UNUSED(topLeft)
-        Q_UNUSED(bottomRight)
-        if (roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuObjectPath) || roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuServiceName) || roles.isEmpty()) {
-            onActiveWindowChanged();
-        }
-    });
+    connect(m_tasksModel,
+            &TaskManager::TasksModel::dataChanged,
+            [=](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles = QVector<int>()) {
+                Q_UNUSED(topLeft)
+                Q_UNUSED(bottomRight)
+                if (roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuObjectPath)
+                    || roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuServiceName) || roles.isEmpty()) {
+                    onActiveWindowChanged();
+                }
+            });
     connect(m_tasksModel, &TaskManager::TasksModel::activityChanged, this, &AppMenuModel::onActiveWindowChanged);
     connect(m_tasksModel, &TaskManager::TasksModel::virtualDesktopChanged, this, &AppMenuModel::onActiveWindowChanged);
     connect(m_tasksModel, &TaskManager::TasksModel::countChanged, this, &AppMenuModel::onActiveWindowChanged);
@@ -80,10 +80,9 @@ AppMenuModel::AppMenuModel(QObject *parent)
     onActiveWindowChanged();
 
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
-    //if our current DBus connection gets lost, close the menu
-    //we'll select the new menu when the focus changes
-    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &serviceName)
-    {
+    // if our current DBus connection gets lost, close the menu
+    // we'll select the new menu when the focus changes
+    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &serviceName) {
         if (serviceName == m_serviceName) {
             setMenuAvailable(false);
             emit modelNeedsUpdate();
@@ -187,7 +186,7 @@ QVariant AppMenuModel::data(const QModelIndex &index, int role) const
     if (role == MenuRole) { // TODO this should be Qt::DisplayRole
         return actions.at(row)->text();
     } else if (role == ActionRole) {
-        return QVariant::fromValue((void *) actions.at(row));
+        return QVariant::fromValue((void *)actions.at(row));
     }
 
     return QVariant();
@@ -220,9 +219,9 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
             return;
         }
 
-        //cache first layer of sub menus, which we'll be popping up
-        const auto actions =  m_menu->actions();
-        for(QAction *a: actions) {
+        // cache first layer of sub menus, which we'll be popping up
+        const auto actions = m_menu->actions();
+        for (QAction *a : actions) {
             // signal dataChanged when the action changes
             connect(a, &QAction::changed, this, [this, a] {
                 if (m_menuAvailable && m_menu) {

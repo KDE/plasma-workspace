@@ -42,9 +42,9 @@ class KlipperPopup : public QMenu
     Q_OBJECT
 
 public:
-    explicit KlipperPopup( History* history );
+    explicit KlipperPopup(History *history);
     ~KlipperPopup() override;
-    void plugAction( QAction* action );
+    void plugAction(QAction *action);
 
     /**
      * Normally, the popupmenu is only rebuilt just before showing.
@@ -53,14 +53,24 @@ public:
      */
     void ensureClean();
 
-    History* history() { return m_history; }
-    const History* history() const { return m_history; }
+    History *history()
+    {
+        return m_history;
+    }
+    const History *history() const
+    {
+        return m_history;
+    }
 
-    void setShowHelp(bool show) {
+    void setShowHelp(bool show)
+    {
         m_showHelp = show;
     }
 public Q_SLOTS:
-    void slotHistoryChanged() { m_dirty = true; }
+    void slotHistoryChanged()
+    {
+        m_dirty = true;
+    }
     void slotTopIsUserSelectedSet();
     void slotAboutToShow();
     /**
@@ -69,11 +79,11 @@ public Q_SLOTS:
     void slotSetTopActive();
 
 private:
-    void rebuild( const QString& filter = QString() );
+    void rebuild(const QString &filter = QString());
     void buildFromScratch();
 
 protected:
-     void keyPressEvent( QKeyEvent* e ) override;
+    void keyPressEvent(QKeyEvent *e) override;
 
 private:
     bool m_dirty : 1; // true if menu contents needs to be rebuild.
@@ -92,32 +102,32 @@ private:
     /**
      * The "document" (clipboard history)
      */
-    History* m_history;
+    History *m_history;
 
     /**
      * The help menu
      */
-    KHelpMenu* m_helpMenu;
+    KHelpMenu *m_helpMenu;
 
     /**
      * (unowned) actions to plug into the primary popup menu
      */
-    QList<QAction*> m_actions;
+    QList<QAction *> m_actions;
 
     /**
      * Proxy helper object used to track history items
      */
-    PopupProxy* m_popupProxy;
+    PopupProxy *m_popupProxy;
 
     /**
      * search filter widget
      */
-    KLineEdit* m_filterWidget;
+    KLineEdit *m_filterWidget;
 
     /**
      * Action of search widget
      */
-    QWidgetAction* m_filterWidgetAction;
+    QWidgetAction *m_filterWidgetAction;
 
     /**
      * The current number of history items in the clipboard
@@ -129,8 +139,7 @@ private:
     /**
      * The last event which was received. Used to avoid an infinite event loop
      */
-    QKeyEvent* m_lastEvent;
-
+    QKeyEvent *m_lastEvent;
 };
 
 #endif

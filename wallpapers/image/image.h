@@ -21,22 +21,19 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-
 #ifndef IMAGE_HEADER
 #define IMAGE_HEADER
 
-
-#include <QTimer>
-#include <QPixmap>
-#include <QStringList>
+#include <QDateTime>
 #include <QObject>
 #include <QPersistentModelIndex>
-#include <QDateTime>
+#include <QPixmap>
 #include <QPointer>
 #include <QQmlParserStatus>
+#include <QStringList>
+#include <QTimer>
 
 #include <KPackage/Package>
-
 
 class QFileDialog;
 class QQuickItem;
@@ -64,147 +61,146 @@ class Image : public QObject, public QQmlParserStatus
     Q_PROPERTY(QString photosPath READ photosPath CONSTANT)
     Q_PROPERTY(QStringList uncheckedSlides READ uncheckedSlides WRITE setUncheckedSlides NOTIFY uncheckedSlidesChanged)
 
-    public:
+public:
+    enum RenderingMode {
+        SingleImage,
+        SlideShow,
+    };
+    Q_ENUM(RenderingMode)
 
-        enum RenderingMode {
-            SingleImage,
-            SlideShow,
-        };
-        Q_ENUM(RenderingMode)
+    enum SlideshowMode {
+        Random,
+        Alphabetical,
+        AlphabeticalReversed,
+        Modified,
+        ModifiedReversed,
+    };
+    Q_ENUM(SlideshowMode)
 
-        enum SlideshowMode {
-            Random,
-            Alphabetical,
-            AlphabeticalReversed,
-            Modified,
-            ModifiedReversed,
-        };
-        Q_ENUM(SlideshowMode)
+    explicit Image(QObject *parent = nullptr);
+    ~Image() override;
 
-        explicit Image(QObject* parent = nullptr);
-        ~Image() override;
+    QUrl wallpaperPath() const;
 
-        QUrl wallpaperPath() const;
+    // this is for QML use
+    Q_INVOKABLE void addUrl(const QString &url);
+    Q_INVOKABLE void addUrls(const QStringList &urls);
 
-        //this is for QML use
-        Q_INVOKABLE void addUrl(const QString &url);
-        Q_INVOKABLE void addUrls(const QStringList &urls);
+    Q_INVOKABLE void addSlidePath(const QString &path);
+    Q_INVOKABLE void removeSlidePath(const QString &path);
+    Q_INVOKABLE void openFolder(const QString &path);
 
-        Q_INVOKABLE void addSlidePath(const QString &path);
-        Q_INVOKABLE void removeSlidePath(const QString &path);
-        Q_INVOKABLE void openFolder(const QString& path);
+    Q_INVOKABLE void showFileDialog();
 
-        Q_INVOKABLE void showFileDialog();
+    Q_INVOKABLE void addUsersWallpaper(const QString &file);
+    Q_INVOKABLE void commitDeletion();
 
-        Q_INVOKABLE void addUsersWallpaper(const QString &file);
-        Q_INVOKABLE void commitDeletion();
+    Q_INVOKABLE void toggleSlide(const QString &path, bool checked);
 
-        Q_INVOKABLE void toggleSlide(const QString &path, bool checked);
+    RenderingMode renderingMode() const;
+    void setRenderingMode(RenderingMode mode);
 
-        RenderingMode renderingMode() const;
-        void setRenderingMode(RenderingMode mode);
+    SlideshowMode slideshowMode() const;
+    void setSlideshowMode(SlideshowMode mode);
 
-        SlideshowMode slideshowMode() const;
-        void setSlideshowMode(SlideshowMode mode);
+    QSize targetSize() const;
+    void setTargetSize(const QSize &size);
 
-        QSize targetSize() const;
-        void setTargetSize(const QSize &size);
+    KPackage::Package *package();
 
-        KPackage::Package *package();
+    QAbstractItemModel *wallpaperModel();
+    QAbstractItemModel *slideFilterModel();
 
-        QAbstractItemModel* wallpaperModel();
-        QAbstractItemModel* slideFilterModel();
+    int slideTimer() const;
+    void setSlideTimer(int time);
 
-        int slideTimer() const;
-        void setSlideTimer(int time);
+    QStringList usersWallpapers() const;
+    void setUsersWallpapers(const QStringList &usersWallpapers);
 
-        QStringList usersWallpapers() const;
-        void setUsersWallpapers(const QStringList &usersWallpapers);
+    QStringList slidePaths() const;
+    void setSlidePaths(const QStringList &slidePaths);
 
-        QStringList slidePaths() const;
-        void setSlidePaths(const QStringList &slidePaths);
+    void findPreferedImageInPackage(KPackage::Package &package);
+    QString findPreferedImage(const QStringList &images);
 
-        void findPreferedImageInPackage(KPackage::Package &package);
-        QString findPreferedImage(const QStringList &images);
+    void classBegin() override;
+    void componentComplete() override;
 
-        void classBegin() override;
-        void componentComplete() override;
+    QString photosPath() const;
 
-        QString photosPath() const;
+    QStringList uncheckedSlides() const;
+    void setUncheckedSlides(const QStringList &uncheckedSlides);
 
-        QStringList uncheckedSlides() const;
-        void setUncheckedSlides(const QStringList &uncheckedSlides);
+public Q_SLOTS:
+    void nextSlide();
+    void removeWallpaper(QString name);
 
-        public Q_SLOTS:
-        void nextSlide();
-        void removeWallpaper(QString name);
+Q_SIGNALS:
+    void settingsChanged(bool);
+    void wallpaperPathChanged();
+    void renderingModeChanged();
+    void slideshowModeChanged();
+    void targetSizeChanged();
+    void slideTimerChanged();
+    void usersWallpapersChanged();
+    void slidePathsChanged();
+    void resizeMethodChanged();
+    void customWallpaperPicked(const QString &path);
+    void uncheckedSlidesChanged();
 
-    Q_SIGNALS:
-        void settingsChanged(bool);
-        void wallpaperPathChanged();
-        void renderingModeChanged();
-        void slideshowModeChanged();
-        void targetSizeChanged();
-        void slideTimerChanged();
-        void usersWallpapersChanged();
-        void slidePathsChanged();
-        void resizeMethodChanged();
-        void customWallpaperPicked(const QString &path);
-        void uncheckedSlidesChanged();
+protected Q_SLOTS:
+    void showAddSlidePathsDialog();
+    void wallpaperBrowseCompleted();
+    /**
+     * Open the current slide in the default image application
+     */
+    void openSlide();
+    void startSlideshow();
+    void fileDialogFinished();
+    void addUrl(const QUrl &url, bool setAsCurrent);
+    void addUrls(const QList<QUrl> &urls);
+    void setWallpaper(const QString &path);
+    void setWallpaperRetrieved(KJob *job);
+    void addWallpaperRetrieved(KJob *job);
+    void newStuffFinished();
+    void updateDirWatch(const QStringList &newDirs);
+    void addDirFromSelectionDialog();
+    void pathCreated(const QString &path);
+    void pathDeleted(const QString &path);
+    void pathDirty(const QString &path);
+    void backgroundsFound();
 
-    protected Q_SLOTS:
-        void showAddSlidePathsDialog();
-        void wallpaperBrowseCompleted();
-        /**
-         * Open the current slide in the default image application
-         */
-        void openSlide();
-        void startSlideshow();
-        void fileDialogFinished();
-        void addUrl(const QUrl &url, bool setAsCurrent);
-        void addUrls(const QList<QUrl> &urls);
-        void setWallpaper(const QString &path);
-        void setWallpaperRetrieved(KJob *job);
-        void addWallpaperRetrieved(KJob *job);
-        void newStuffFinished();
-        void updateDirWatch(const QStringList &newDirs);
-        void addDirFromSelectionDialog();
-        void pathCreated(const QString &path);
-        void pathDeleted(const QString &path);
-        void pathDirty(const QString &path);
-        void backgroundsFound();
+protected:
+    void syncWallpaperPackage();
+    void setSingleImage();
+    void useSingleImageDefaults();
 
-    protected:
-        void syncWallpaperPackage();
-        void setSingleImage();
-        void useSingleImageDefaults();
+private:
+    bool m_ready;
+    int m_delay;
+    QStringList m_dirs;
+    QString m_wallpaper;
+    QString m_wallpaperPath;
+    QStringList m_usersWallpapers;
+    KDirWatch *m_dirWatch;
+    bool m_scanDirty;
+    QSize m_targetSize;
 
-    private:
-        bool m_ready;
-        int m_delay;
-        QStringList m_dirs;
-        QString m_wallpaper;
-        QString m_wallpaperPath;
-        QStringList m_usersWallpapers;
-        KDirWatch *m_dirWatch;
-        bool m_scanDirty;
-        QSize m_targetSize;
+    RenderingMode m_mode;
+    SlideshowMode m_slideshowMode;
 
-        RenderingMode m_mode;
-        SlideshowMode m_slideshowMode;
-
-        KPackage::Package m_wallpaperPackage;
-        QStringList m_slidePaths;
-        QStringList m_uncheckedSlides;
-        QTimer m_timer;
-        int m_currentSlide;
-        BackgroundListModel *m_model;
-        SlideModel* m_slideshowModel;
-        SlideFilterModel* m_slideFilterModel;
-        QFileDialog *m_dialog;
-        QString m_img;
-        QDateTime m_previousModified;
-        QString m_findToken;
+    KPackage::Package m_wallpaperPackage;
+    QStringList m_slidePaths;
+    QStringList m_uncheckedSlides;
+    QTimer m_timer;
+    int m_currentSlide;
+    BackgroundListModel *m_model;
+    SlideModel *m_slideshowModel;
+    SlideFilterModel *m_slideFilterModel;
+    QFileDialog *m_dialog;
+    QString m_img;
+    QDateTime m_previousModified;
+    QString m_findToken;
 };
 
 #endif

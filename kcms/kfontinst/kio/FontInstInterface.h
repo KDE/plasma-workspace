@@ -24,49 +24,45 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QObject>
-#include <QEventLoop>
 #include "Family.h"
+#include <QEventLoop>
+#include <QObject>
 
 class OrgKdeFontinstInterface;
 
 namespace KFI
 {
-
 class FontInstInterface : public QObject
 {
     Q_OBJECT
 
-    public:
-
+public:
     FontInstInterface();
     ~FontInstInterface() override;
 
-    int      install(const QString &file, bool toSystem);
-    int      uninstall(const QString &name, bool fromSystem);
-    int      reconfigure();
+    int install(const QString &file, bool toSystem);
+    int uninstall(const QString &name, bool fromSystem);
+    int reconfigure();
     Families list(bool system);
-    Family   statFont(const QString &file, bool system);
-    QString  folderName(bool sys);
+    Family statFont(const QString &file, bool system);
+    QString folderName(bool sys);
 
-    private:
-
+private:
     int waitForResponse();
 
-    private Q_SLOTS:
+private Q_SLOTS:
 
     void dbusServiceOwnerChanged(const QString &name, const QString &from, const QString &to);
     void status(int pid, int value);
     void fontList(int pid, const QList<KFI::Families> &families);
     void fontStat(int pid, const KFI::Family &font);
 
-    private:
-
+private:
     OrgKdeFontinstInterface *itsInterface;
-    bool                    itsActive;
-    int                     itsStatus;
-    Families                itsFamilies;
-    QEventLoop              itsEventLoop;
+    bool itsActive;
+    int itsStatus;
+    Families itsFamilies;
+    QEventLoop itsEventLoop;
 };
 
 }

@@ -17,21 +17,20 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include <kdirlister.h>
+#include <KIO/FileUndoManager>
 #include <QDesktopServices>
-#include <QStandardPaths>
 #include <QSignalSpy>
+#include <QStandardPaths>
 #include <QTemporaryFile>
 #include <QTest>
-#include <kio/job.h>
+#include <kdirlister.h>
 #include <kio/copyjob.h>
-#include <KIO/FileUndoManager>
+#include <kio/job.h>
 
 static void doUndo() // see FileUndoManagerTest::doUndo()
 {
     QEventLoop eventLoop;
-    QObject::connect(KIO::FileUndoManager::self(), &KIO::FileUndoManager::undoJobFinished,
-            &eventLoop, &QEventLoop::quit);
+    QObject::connect(KIO::FileUndoManager::self(), &KIO::FileUndoManager::undoJobFinished, &eventLoop, &QEventLoop::quit);
     KIO::FileUndoManager::self()->undo();
     eventLoop.exec(QEventLoop::ExcludeUserInputEvents); // wait for undo job to finish
 }
@@ -41,14 +40,16 @@ class TestDesktop : public QObject
     Q_OBJECT
 
 public:
-    TestDesktop() {}
+    TestDesktop()
+    {
+    }
 
 private Q_SLOTS:
     void initTestCase()
     {
-        setenv( "KDE_FORK_SLAVES", "yes", true );
+        setenv("KDE_FORK_SLAVES", "yes", true);
 
-        //make KIOs use test mode too
+        // make KIOs use test mode too
         setenv("KIOSLAVE_ENABLE_TESTMODE", "1", 1);
         QStandardPaths::setTestModeEnabled(true);
 
@@ -69,10 +70,10 @@ private Q_SLOTS:
     {
         QTemporaryFile tempFile;
         QVERIFY(tempFile.open());
-        tempFile.write( "Hello world\n", 12 );
+        tempFile.write("Hello world\n", 12);
         QString fileName = tempFile.fileName();
         tempFile.close();
-        KIO::Job* job = KIO::file_copy(QUrl::fromLocalFile(fileName), QUrl("desktop:/" + m_testFileName), -1, KIO::HideProgressInfo);
+        KIO::Job *job = KIO::file_copy(QUrl::fromLocalFile(fileName), QUrl("desktop:/" + m_testFileName), -1, KIO::HideProgressInfo);
         job->setUiDelegate(nullptr);
         QVERIFY(job->exec());
         QVERIFY(QFile::exists(m_desktopPath + '/' + m_testFileName));
@@ -82,7 +83,7 @@ private Q_SLOTS:
     {
         const QUrl desktopUrl("desktop:/" + m_testFileName);
         const QString filePath(m_desktopPath + '/' + m_testFileName);
-        KIO::StatJob* job = KIO::mostLocalUrl(desktopUrl, KIO::HideProgressInfo);
+        KIO::StatJob *job = KIO::mostLocalUrl(desktopUrl, KIO::HideProgressInfo);
         QVERIFY(job);
         bool ok = job->exec();
         QVERIFY(ok);
@@ -97,7 +98,7 @@ private Q_SLOTS:
         const QString localLink = source + "_link";
 
         // Create a symlink using kio_desktop
-        KIO::Job* linkJob = KIO::symlink(m_testFileName, desktopLink, KIO::HideProgressInfo);
+        KIO::Job *linkJob = KIO::symlink(m_testFileName, desktopLink, KIO::HideProgressInfo);
         QVERIFY(linkJob->exec());
         QVERIFY(QFileInfo(localLink).isSymLink());
         QCOMPARE(QFileInfo(localLink).symLinkTarget(), source);
@@ -155,7 +156,7 @@ private Q_SLOTS:
         const QString destFilePath(m_desktopPath + destUrl.path());
         QVERIFY(!QFile::exists(destFilePath));
 
-        KIO::Job* job = KIO::rename(srcUrl, destUrl, KIO::HideProgressInfo);
+        KIO::Job *job = KIO::rename(srcUrl, destUrl, KIO::HideProgressInfo);
         job->setUiDelegate(nullptr);
         QVERIFY(job);
         bool ok = job->exec();

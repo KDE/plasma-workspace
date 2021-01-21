@@ -24,9 +24,9 @@
 // akin to dbus-update-activation-environment
 // it can then be compared with "systemd-run --user -P env" or watched with dbus-monitor
 
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
-    auto job =  new UpdateLaunchEnvJob(QProcessEnvironment::systemEnvironment());
+    auto job = new UpdateLaunchEnvJob(QProcessEnvironment::systemEnvironment());
     return job->exec();
 }

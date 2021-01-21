@@ -18,10 +18,10 @@
 #ifndef GPS_H
 #define GPS_H
 
-#include <gps.h>
-#include <QThread>
 #include <QMutex>
+#include <QThread>
 #include <QWaitCondition>
+#include <gps.h>
 
 #include "geolocationprovider.h"
 
@@ -29,19 +29,19 @@ class Gpsd : public QThread
 {
     Q_OBJECT
 public:
-    explicit Gpsd(gps_data_t* gpsdata);
+    explicit Gpsd(gps_data_t *gpsdata);
     ~Gpsd() override;
 
     void update();
 
 Q_SIGNALS:
-    void dataReady(const Plasma::DataEngine::Data& data);
+    void dataReady(const Plasma::DataEngine::Data &data);
 
 protected:
     void run() override;
 
 private:
-    gps_data_t* m_gpsdata;
+    gps_data_t *m_gpsdata;
     QMutex m_mutex;
     QWaitCondition m_condition;
     bool m_abort;
@@ -57,9 +57,9 @@ public:
     void update() override;
 
 private:
-    Gpsd* m_gpsd;
+    Gpsd *m_gpsd;
 #if GPSD_API_MAJOR_VERSION >= 5
-    gps_data_t* m_gpsdata;
+    gps_data_t *m_gpsdata;
 #endif
 };
 

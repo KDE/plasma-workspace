@@ -19,8 +19,8 @@
 
 #include "paste.h"
 
-#include <QGuiApplication>
 #include <QClipboard>
+#include <QGuiApplication>
 #include <QMimeData>
 
 #include <Plasma/Containment>
@@ -35,9 +35,9 @@ Paste::Paste(QObject *parent, const QVariantList &args)
     QObject::connect(m_action, &QAction::triggered, this, &Paste::doPaste);
 }
 
-QList<QAction*> Paste::contextualActions()
+QList<QAction *> Paste::contextualActions()
 {
-    QList<QAction*> actions;
+    QList<QAction *> actions;
     actions << m_action;
 
     return actions;
@@ -55,18 +55,19 @@ void Paste::doPaste()
     Plasma::Containment *c = containment();
     Q_ASSERT(c);
 
-    //get the actual graphic object of the containment
+    // get the actual graphic object of the containment
     QObject *graphicObject = c->property("_plasma_graphicObject").value<QObject *>();
     if (!graphicObject) {
         return;
     }
 
     QClipboard *clipboard = QGuiApplication::clipboard();
-    //FIXME: can be the const_cast avoided?
+    // FIXME: can be the const_cast avoided?
     QMimeData *mimeData = const_cast<QMimeData *>(clipboard->mimeData(QClipboard::Selection));
-    //TODO if that's not supported (ie non-linux) should we try clipboard instead of selection?
+    // TODO if that's not supported (ie non-linux) should we try clipboard instead of selection?
 
-    graphicObject->metaObject()->invokeMethod(graphicObject, "processMimeData", Qt::DirectConnection, Q_ARG( QMimeData *, mimeData), Q_ARG(int, pos.x()), Q_ARG(int, pos.y()));
+    graphicObject->metaObject()
+        ->invokeMethod(graphicObject, "processMimeData", Qt::DirectConnection, Q_ARG(QMimeData *, mimeData), Q_ARG(int, pos.x()), Q_ARG(int, pos.y()));
 }
 
 K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(paste, Paste, "plasma-containmentactions-paste.json")

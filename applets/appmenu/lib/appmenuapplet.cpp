@@ -23,30 +23,34 @@
 #include "../plugin/appmenumodel.h"
 
 #include <QAction>
+#include <QDBusConnection>
+#include <QDBusConnectionInterface>
 #include <QKeyEvent>
 #include <QMenu>
 #include <QMouseEvent>
 #include <QQuickItem>
-#include <QDBusConnection>
-#include <QDBusConnectionInterface>
-#include <QTimer>
 #include <QQuickWindow>
 #include <QScreen>
+#include <QTimer>
 
 int AppMenuApplet::s_refs = 0;
-namespace {
-QString viewService() { return QStringLiteral("org.kde.kappmenuview"); }
+namespace
+{
+QString viewService()
+{
+    return QStringLiteral("org.kde.kappmenuview");
+}
 }
 
 AppMenuApplet::AppMenuApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
 {
     ++s_refs;
-    //if we're the first, register the service
+    // if we're the first, register the service
     if (s_refs == 1) {
         QDBusConnection::sessionBus().interface()->registerService(viewService(),
-                QDBusConnectionInterface::QueueService,
-                QDBusConnectionInterface::DontAllowReplacement);
+                                                                   QDBusConnectionInterface::QueueService,
+                                                                   QDBusConnectionInterface::DontAllowReplacement);
     }
     /*it registers or unregisters the service when the destroyed value of the applet change,
       and not in the dtor, because:
@@ -57,16 +61,16 @@ AppMenuApplet::AppMenuApplet(QObject *parent, const QVariantList &data)
       will have to be registered again*/
     connect(this, &Applet::destroyedChanged, this, [](bool destroyed) {
         if (destroyed) {
-            //if we were the last, unregister
+            // if we were the last, unregister
             if (--s_refs == 0) {
                 QDBusConnection::sessionBus().interface()->unregisterService(viewService());
             }
         } else {
-            //if we're the first, register the service
+            // if we're the first, register the service
             if (++s_refs == 1) {
                 QDBusConnection::sessionBus().interface()->registerService(viewService(),
-                    QDBusConnectionInterface::QueueService,
-                    QDBusConnectionInterface::DontAllowReplacement);
+                                                                           QDBusConnectionInterface::QueueService,
+                                                                           QDBusConnectionInterface::DontAllowReplacement);
             }
         }
     });
@@ -114,7 +118,7 @@ void AppMenuApplet::setCurrentIndex(int currentIndex)
     if (m_currentIndex != currentIndex) {
         m_currentIndex = currentIndex;
         emit currentIndexChanged();
-   }
+    }
 }
 
 QQuickItem *AppMenuApplet::buttonGrid() const
@@ -136,20 +140,20 @@ QMenu *AppMenuApplet::createMenu(int idx) const
     QAction *action = nullptr;
 
     if (view() == CompactView) {
-       menu = new QMenu();
-       for (int i=0; i<m_model->rowCount(); i++) {
-           const QModelIndex index = m_model->index(i, 0);
-           const QVariant data = m_model->data(index, AppMenuModel::ActionRole);
-           action = (QAction *)data.value<void *>();
-           menu->addAction(action);
-       }
-       menu->setAttribute(Qt::WA_DeleteOnClose);
-   } else if (view() == FullView) {
+        menu = new QMenu();
+        for (int i = 0; i < m_model->rowCount(); i++) {
+            const QModelIndex index = m_model->index(i, 0);
+            const QVariant data = m_model->data(index, AppMenuModel::ActionRole);
+            action = (QAction *)data.value<void *>();
+            menu->addAction(action);
+        }
+        menu->setAttribute(Qt::WA_DeleteOnClose);
+    } else if (view() == FullView) {
         const QModelIndex index = m_model->index(idx, 0);
         const QVariant data = m_model->data(index, AppMenuModel::ActionRole);
         action = (QAction *)data.value<void *>();
         if (action) {
-           menu = action->menu();
+            menu = action->menu();
         }
     }
 
@@ -173,14 +177,13 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
 
     QMenu *actionMenu = createMenu(idx);
     if (actionMenu) {
-
-        //this is a workaround where Qt will fail to realize a mouse has been released
+        // this is a workaround where Qt will fail to realize a mouse has been released
         // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
         // whilst the mouse is depressed
         // https://bugreports.qt.io/browse/QTBUG-59044
         // this causes the next click to go missing
 
-        //by releasing manually we avoid that situation
+        // by releasing manually we avoid that situation
         auto ungrabMouseHack = [ctx]() {
             if (ctx && ctx->window() && ctx->window()->mouseGrabberItem()) {
                 // FIXME event forge thing enters press and hold move mode :/
@@ -189,7 +192,7 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
         };
 
         QTimer::singleShot(0, ctx, ungrabMouseHack);
-        //end workaround
+        // end workaround
 
         const auto &geo = ctx->window()->screen()->availableVirtualGeometry();
 
@@ -201,13 +204,13 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
         actionMenu->adjustSize();
 
         pos = QPoint(qBound(geo.x(), pos.x(), geo.x() + geo.width() - actionMenu->width()),
-                             qBound(geo.y(), pos.y(), geo.y() + geo.height() - actionMenu->height()));
+                     qBound(geo.y(), pos.y(), geo.y() + geo.height() - actionMenu->height()));
 
         if (view() == FullView) {
             actionMenu->installEventFilter(this);
         }
 
-        actionMenu->winId();//create window handle
+        actionMenu->winId(); // create window handle
         actionMenu->windowHandle()->setTransientParent(ctx->window());
 
         // hide the old menu only after showing the new one to avoid brief focus flickering on X11.
@@ -221,7 +224,7 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
             QMenu *oldMenu = m_currentMenu;
             m_currentMenu = actionMenu;
             if (oldMenu && oldMenu != actionMenu) {
-                //don't initialize the currentIndex when another menu is already shown
+                // don't initialize the currentIndex when another menu is already shown
                 disconnect(oldMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide);
                 oldMenu->hide();
             }

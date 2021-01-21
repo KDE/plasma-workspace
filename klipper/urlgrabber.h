@@ -20,8 +20,8 @@
 #define URLGRABBER_H
 
 #include <QHash>
-#include <QStringList>
 #include <QSharedPointer>
+#include <QStringList>
 
 #include <KSharedConfig>
 
@@ -35,72 +35,90 @@ class QAction;
 
 class ClipAction;
 struct ClipCommand;
-typedef QList<ClipAction*> ActionList;
+typedef QList<ClipAction *> ActionList;
 
 class URLGrabber : public QObject
 {
-  Q_OBJECT
+    Q_OBJECT
 
 public:
-  explicit URLGrabber(History* history);
-  ~URLGrabber() override;
+    explicit URLGrabber(History *history);
+    ~URLGrabber() override;
 
-  /**
-   * Checks a given string whether it matches any of the user-defined criteria.
-   * If it does, the configured action will be executed.
-   */
-  void checkNewData( QSharedPointer<const HistoryItem> item );
-  void invokeAction( QSharedPointer<const HistoryItem> item );
+    /**
+     * Checks a given string whether it matches any of the user-defined criteria.
+     * If it does, the configured action will be executed.
+     */
+    void checkNewData(QSharedPointer<const HistoryItem> item);
+    void invokeAction(QSharedPointer<const HistoryItem> item);
 
-  ActionList actionList() const { return m_myActions; }
-  void setActionList( const ActionList& );
+    ActionList actionList() const
+    {
+        return m_myActions;
+    }
+    void setActionList(const ActionList &);
 
-  void loadSettings();
-  void saveSettings() const;
+    void loadSettings();
+    void saveSettings() const;
 
-  int popupTimeout() const { return m_myPopupKillTimeout; }
-  void setPopupTimeout( int timeout ) { m_myPopupKillTimeout = timeout; }
+    int popupTimeout() const
+    {
+        return m_myPopupKillTimeout;
+    }
+    void setPopupTimeout(int timeout)
+    {
+        m_myPopupKillTimeout = timeout;
+    }
 
-  QStringList excludedWMClasses() const { return m_myAvoidWindows; }
-  void setExcludedWMClasses( const QStringList& list ) { m_myAvoidWindows = list; }
+    QStringList excludedWMClasses() const
+    {
+        return m_myAvoidWindows;
+    }
+    void setExcludedWMClasses(const QStringList &list)
+    {
+        m_myAvoidWindows = list;
+    }
 
-  bool stripWhiteSpace() const { return m_stripWhiteSpace; }
-  void setStripWhiteSpace( bool enable ) { m_stripWhiteSpace = enable; }
+    bool stripWhiteSpace() const
+    {
+        return m_stripWhiteSpace;
+    }
+    void setStripWhiteSpace(bool enable)
+    {
+        m_stripWhiteSpace = enable;
+    }
 
 private:
-  const ActionList& matchingActions( const QString&, bool automatically_invoked );
-  void execute( const ClipAction *action, int commandIdx ) const;
-  bool isAvoidedWindow() const;
-  void actionMenu( QSharedPointer<const HistoryItem> item, bool automatically_invoked );
-  void matchingMimeActions(const QString& clipData);
+    const ActionList &matchingActions(const QString &, bool automatically_invoked);
+    void execute(const ClipAction *action, int commandIdx) const;
+    bool isAvoidedWindow() const;
+    void actionMenu(QSharedPointer<const HistoryItem> item, bool automatically_invoked);
+    void matchingMimeActions(const QString &clipData);
 
-  ActionList m_myActions;
-  ActionList m_myMatches;
-  QStringList m_myAvoidWindows;
-  QSharedPointer<const HistoryItem> m_myClipItem;
-  ClipAction* m_myCurrentAction;
+    ActionList m_myActions;
+    ActionList m_myMatches;
+    QStringList m_myAvoidWindows;
+    QSharedPointer<const HistoryItem> m_myClipItem;
+    ClipAction *m_myCurrentAction;
 
-  // holds mappings of menu action IDs to action commands (action+cmd index in it)
-  QHash<QString, QPair<ClipAction*, int> > m_myCommandMapper;
-  QMenu* m_myMenu;
-  QTimer* m_myPopupKillTimer;
-  int m_myPopupKillTimeout;
-  bool m_stripWhiteSpace;
-  History* m_history;
+    // holds mappings of menu action IDs to action commands (action+cmd index in it)
+    QHash<QString, QPair<ClipAction *, int>> m_myCommandMapper;
+    QMenu *m_myMenu;
+    QTimer *m_myPopupKillTimer;
+    int m_myPopupKillTimeout;
+    bool m_stripWhiteSpace;
+    History *m_history;
 
 private Q_SLOTS:
-  void slotItemSelected(QAction* action);
-  void slotKillPopupMenu();
+    void slotItemSelected(QAction *action);
+    void slotKillPopupMenu();
 
 Q_SIGNALS:
-    void sigPopup( QMenu * );
+    void sigPopup(QMenu *);
     void sigDisablePopup();
-
 };
 
-
-struct ClipCommand
-{
+struct ClipCommand {
     /**
      * What to do with output of command
      */
@@ -110,12 +128,12 @@ struct ClipCommand
         ADD, // Add output as new clipboard element
     };
 
-    ClipCommand( const QString& _command,
-                 const QString& _description,
-                 bool enabled=true,
-                 const QString& _icon=QString(),
-                 Output _output=IGNORE,
-                 const QString& serviceStorageId = QString());
+    ClipCommand(const QString &_command,
+                const QString &_description,
+                bool enabled = true,
+                const QString &_icon = QString(),
+                Output _output = IGNORE,
+                const QString &serviceStorageId = QString());
 
     QString command;
     QString description;
@@ -137,58 +155,86 @@ Q_DECLARE_METATYPE(ClipCommand::Output)
 class ClipAction
 {
 public:
-  explicit ClipAction( const QString& regExp = QString(),
-                       const QString& description = QString(),
-                       bool automagic = true);
+    explicit ClipAction(const QString &regExp = QString(), const QString &description = QString(), bool automagic = true);
 
-  ClipAction( KSharedConfigPtr kc, const QString& );
-  ~ClipAction();
+    ClipAction(KSharedConfigPtr kc, const QString &);
+    ~ClipAction();
 
-  QString actionRegexPattern() const { return m_regexPattern; }
-  void  setActionRegexPattern(const QString &pattern) { m_regexPattern = pattern; }
+    QString actionRegexPattern() const
+    {
+        return m_regexPattern;
+    }
+    void setActionRegexPattern(const QString &pattern)
+    {
+        m_regexPattern = pattern;
+    }
 
-  QStringList actionCapturedTexts() const { return m_regexCapturedTexts; }
-  void setActionCapturedTexts(const QStringList &captured) { m_regexCapturedTexts = captured; }
+    QStringList actionCapturedTexts() const
+    {
+        return m_regexCapturedTexts;
+    }
+    void setActionCapturedTexts(const QStringList &captured)
+    {
+        m_regexCapturedTexts = captured;
+    }
 
-  void setDescription( const QString& d) { m_myDescription = d; }
-  QString description() const            { return m_myDescription; }
+    void setDescription(const QString &d)
+    {
+        m_myDescription = d;
+    }
+    QString description() const
+    {
+        return m_myDescription;
+    }
 
-  void setAutomatic( bool automatic ) { m_automatic = automatic; }
-  bool automatic() const { return m_automatic; }
+    void setAutomatic(bool automatic)
+    {
+        m_automatic = automatic;
+    }
+    bool automatic() const
+    {
+        return m_automatic;
+    }
 
-  /**
-   * Removes all ClipCommands associated with this ClipAction.
-   */
-  void clearCommands() { m_myCommands.clear(); }
+    /**
+     * Removes all ClipCommands associated with this ClipAction.
+     */
+    void clearCommands()
+    {
+        m_myCommands.clear();
+    }
 
-  void  addCommand(const ClipCommand& cmd);
+    void addCommand(const ClipCommand &cmd);
 
-  /**
-   * Replaces command at index @p idx with command @p newCmd
-   */
-  void replaceCommand( int idx, const ClipCommand& newCmd );
+    /**
+     * Replaces command at index @p idx with command @p newCmd
+     */
+    void replaceCommand(int idx, const ClipCommand &newCmd);
 
-  /**
-   * Returns command by its index in command list
-   */
-  ClipCommand command(int idx) const { return m_myCommands.at(idx); }
+    /**
+     * Returns command by its index in command list
+     */
+    ClipCommand command(int idx) const
+    {
+        return m_myCommands.at(idx);
+    }
 
-  QList<ClipCommand> commands() const { return m_myCommands; }
+    QList<ClipCommand> commands() const
+    {
+        return m_myCommands;
+    }
 
-  /**
-   * Saves this action to a a given KConfig object
-   */
-  void save( KSharedConfigPtr, const QString& ) const;
-
+    /**
+     * Saves this action to a a given KConfig object
+     */
+    void save(KSharedConfigPtr, const QString &) const;
 
 private:
-  QString m_regexPattern;
-  QStringList m_regexCapturedTexts;
-  QString m_myDescription;
-  QList<ClipCommand> m_myCommands;
-  bool m_automatic;
-
+    QString m_regexPattern;
+    QStringList m_regexCapturedTexts;
+    QString m_myDescription;
+    QList<ClipCommand> m_myCommands;
+    bool m_automatic;
 };
-
 
 #endif // URLGRABBER_H

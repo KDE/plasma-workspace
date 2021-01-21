@@ -42,7 +42,7 @@ class KCMLookandFeel : public KQuickAddons::ManagedConfigModule
 
 public:
     enum Roles {
-        PluginNameRole = Qt::UserRole +1,
+        PluginNameRole = Qt::UserRole + 1,
         ScreenshotRole,
         FullScreenPreviewRole,
         DescriptionRole,
@@ -59,7 +59,7 @@ public:
         HasDesktopSwitcherRole,
     };
 
-    KCMLookandFeel(QObject* parent, const QVariantList& args);
+    KCMLookandFeel(QObject *parent, const QVariantList &args);
     ~KCMLookandFeel() override;
 
     LookAndFeelSettings *lookAndFeelSettings() const;
@@ -70,7 +70,7 @@ public:
     bool resetDefaultLayout() const;
     void setResetDefaultLayout(bool reset);
 
-    //Setters of the various theme pieces
+    // Setters of the various theme pieces
     void setWidgetStyle(const QString &style);
     void setColors(const QString &scheme, const QString &colorFile);
     void setIcons(const QString &theme);
@@ -92,7 +92,7 @@ Q_SIGNALS:
     void resetDefaultLayoutChanged();
 
 private:
-    //List only packages which provide at least one of the components
+    // List only packages which provide at least one of the components
     QList<KPackage::Package> availablePackages(const QStringList &components);
     void loadModel();
     QDir cursorThemeDir(const QString &theme, const int depth);

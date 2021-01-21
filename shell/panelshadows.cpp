@@ -1,23 +1,23 @@
 /*
-*   Copyright 2011 by Aaron Seigo <aseigo@kde.org>
-*
-*   This program is free software; you can redistribute it and/or modify
-*   it under the terms of the GNU Library General Public License version 2, 
-*   or (at your option) any later version.
-*
-*   This program is distributed in the hope that it will be useful,
-*   but WITHOUT ANY WARRANTY; without even the implied warranty of
-*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-*   GNU General Public License for more details
-*
-*   You should have received a copy of the GNU Library General Public
-*   License along with this program; if not, write to the
-*   Free Software Foundation, Inc.,
-*   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-*/
+ *   Copyright 2011 by Aaron Seigo <aseigo@kde.org>
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU Library General Public License version 2,
+ *   or (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details
+ *
+ *   You should have received a copy of the GNU Library General Public
+ *   License along with this program; if not, write to the
+ *   Free Software Foundation, Inc.,
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
 
-#include "panelshadows_p.h"
 #include "debug.h"
+#include "panelshadows_p.h"
 
 #include <KWindowShadow>
 
@@ -55,14 +55,14 @@ public:
     {
     }
 
-   PanelShadows self;
+    PanelShadows self;
 };
 
 Q_GLOBAL_STATIC(PanelShadowsSingleton, privatePanelShadowsSelf)
 
 PanelShadows::PanelShadows(QObject *parent, const QString &prefix)
-    : Plasma::Svg(parent),
-      d(new Private(this))
+    : Plasma::Svg(parent)
+    , d(new Private(this))
 {
     setImagePath(prefix);
     connect(this, &Plasma::Svg::repaintNeeded, this, [this]() {
@@ -199,8 +199,7 @@ void PanelShadows::Private::updateShadow(QWindow *window, Plasma::FrameSvg::Enab
         shadow->setTopTile(nullptr);
     }
 
-    if (enabledBorders & Plasma::FrameSvg::TopBorder &&
-        enabledBorders & Plasma::FrameSvg::RightBorder) {
+    if (enabledBorders & Plasma::FrameSvg::TopBorder && enabledBorders & Plasma::FrameSvg::RightBorder) {
         shadow->setTopRightTile(m_tiles.at(1));
     } else {
         shadow->setTopRightTile(nullptr);
@@ -212,8 +211,7 @@ void PanelShadows::Private::updateShadow(QWindow *window, Plasma::FrameSvg::Enab
         shadow->setRightTile(nullptr);
     }
 
-    if (enabledBorders & Plasma::FrameSvg::BottomBorder &&
-        enabledBorders & Plasma::FrameSvg::RightBorder) {
+    if (enabledBorders & Plasma::FrameSvg::BottomBorder && enabledBorders & Plasma::FrameSvg::RightBorder) {
         shadow->setBottomRightTile(m_tiles.at(3));
     } else {
         shadow->setBottomRightTile(nullptr);
@@ -225,8 +223,7 @@ void PanelShadows::Private::updateShadow(QWindow *window, Plasma::FrameSvg::Enab
         shadow->setBottomTile(nullptr);
     }
 
-    if (enabledBorders & Plasma::FrameSvg::BottomBorder &&
-        enabledBorders & Plasma::FrameSvg::LeftBorder) {
+    if (enabledBorders & Plasma::FrameSvg::BottomBorder && enabledBorders & Plasma::FrameSvg::LeftBorder) {
         shadow->setBottomLeftTile(m_tiles.at(5));
     } else {
         shadow->setBottomLeftTile(nullptr);
@@ -238,8 +235,7 @@ void PanelShadows::Private::updateShadow(QWindow *window, Plasma::FrameSvg::Enab
         shadow->setLeftTile(nullptr);
     }
 
-    if (enabledBorders & Plasma::FrameSvg::TopBorder &&
-        enabledBorders & Plasma::FrameSvg::LeftBorder) {
+    if (enabledBorders & Plasma::FrameSvg::TopBorder && enabledBorders & Plasma::FrameSvg::LeftBorder) {
         shadow->setTopLeftTile(m_tiles.at(7));
     } else {
         shadow->setTopLeftTile(nullptr);
@@ -298,8 +294,7 @@ void PanelShadows::Private::clearShadow(QWindow *window)
 
 bool PanelShadows::Private::hasShadows() const
 {
-     return q->hasElement(QStringLiteral("shadow-left"));
+    return q->hasElement(QStringLiteral("shadow-left"));
 }
 
 #include "moc_panelshadows_p.cpp"
-

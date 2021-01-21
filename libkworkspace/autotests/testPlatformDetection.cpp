@@ -16,7 +16,7 @@
  *
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 #include <QtTest>
 
@@ -59,10 +59,8 @@ void TestPlatformDetection::testPlatformSelection()
     QFETCH(QByteArray, xdgSessionType);
     qputenv("XDG_SESSION_TYPE", xdgSessionType);
 
-    std::vector<QByteArray> cppArgv{
-        QByteArrayLiteral("testPlatformDetction")
-    };
-    std::vector<char*> argv;
+    std::vector<QByteArray> cppArgv{QByteArrayLiteral("testPlatformDetction")};
+    std::vector<char *> argv;
     for (QByteArray &arg : cppArgv) {
         argv.push_back(arg.data());
     }
@@ -86,12 +84,8 @@ void TestPlatformDetection::testArguments()
     qputenv("XDG_SESSION_TYPE", "wayland");
 
     QFETCH(QByteArray, arg);
-    std::vector<QByteArray> cppArgv{
-        QByteArrayLiteral("testPlatformDetction"),
-        arg,
-        QByteArrayLiteral("wayland")
-    };
-    std::vector<char*> argv;
+    std::vector<QByteArray> cppArgv{QByteArrayLiteral("testPlatformDetction"), arg, QByteArrayLiteral("wayland")};
+    std::vector<char *> argv;
     for (QByteArray &arg : cppArgv) {
         argv.push_back(arg.data());
     }

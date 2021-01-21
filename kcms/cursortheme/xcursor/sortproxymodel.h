@@ -3,7 +3,7 @@
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License version 2 or at your option version 3 as published 
+ * License version 2 or at your option version 3 as published
  * by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
@@ -35,44 +35,48 @@
 class SortProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
-    public:
-        explicit SortProxyModel(QObject *parent = nullptr) : QSortFilterProxyModel(parent) {}
-        ~SortProxyModel() override {}
-        QHash<int, QByteArray> roleNames() const override;
-        inline const CursorTheme *theme(const QModelIndex &index) const;
-        inline QModelIndex findIndex(const QString &name) const;
-        inline QModelIndex defaultIndex() const;
-        inline void removeTheme(const QModelIndex &index);
+public:
+    explicit SortProxyModel(QObject *parent = nullptr)
+        : QSortFilterProxyModel(parent)
+    {
+    }
+    ~SortProxyModel() override
+    {
+    }
+    QHash<int, QByteArray> roleNames() const override;
+    inline const CursorTheme *theme(const QModelIndex &index) const;
+    inline QModelIndex findIndex(const QString &name) const;
+    inline QModelIndex defaultIndex() const;
+    inline void removeTheme(const QModelIndex &index);
 
-    private:
-        int compare(const QModelIndex &left, const QModelIndex &right, int role) const;
+private:
+    int compare(const QModelIndex &left, const QModelIndex &right, int role) const;
 
-    protected:
-        bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
+protected:
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 };
-
 
 const CursorTheme *SortProxyModel::theme(const QModelIndex &index) const
 {
-    CursorThemeModel *model = static_cast<CursorThemeModel*>(sourceModel());
+    CursorThemeModel *model = static_cast<CursorThemeModel *>(sourceModel());
     return model->theme(mapToSource(index));
 }
 
 QModelIndex SortProxyModel::findIndex(const QString &name) const
 {
-    CursorThemeModel *model = static_cast<CursorThemeModel*>(sourceModel());
+    CursorThemeModel *model = static_cast<CursorThemeModel *>(sourceModel());
     return mapFromSource(model->findIndex(name));
 }
 
 QModelIndex SortProxyModel::defaultIndex() const
 {
-    CursorThemeModel *model = static_cast<CursorThemeModel*>(sourceModel());
+    CursorThemeModel *model = static_cast<CursorThemeModel *>(sourceModel());
     return mapFromSource(model->defaultIndex());
 }
 
 void SortProxyModel::removeTheme(const QModelIndex &index)
 {
-    CursorThemeModel *model = static_cast<CursorThemeModel*>(sourceModel());
+    CursorThemeModel *model = static_cast<CursorThemeModel *>(sourceModel());
     model->removeTheme(mapToSource(index));
 }
 

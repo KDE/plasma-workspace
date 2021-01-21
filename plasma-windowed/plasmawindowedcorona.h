@@ -29,7 +29,7 @@ class PlasmaWindowedCorona : public Plasma::Corona
     Q_OBJECT
 
 public:
-    explicit PlasmaWindowedCorona(QObject * parent = nullptr);
+    explicit PlasmaWindowedCorona(QObject *parent = nullptr);
     QRect screenGeometry(int id) const override;
 
     void setHasStatusNotifier(bool stay);

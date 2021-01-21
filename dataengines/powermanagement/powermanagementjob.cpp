@@ -40,20 +40,19 @@ PowerManagementJob::~PowerManagementJob()
 {
 }
 
-static void callWhenFinished(const QDBusPendingCall& pending, std::function<void()> func, QObject* parent)
+static void callWhenFinished(const QDBusPendingCall &pending, std::function<void()> func, QObject *parent)
 {
-    QDBusPendingCallWatcher* watcher = new QDBusPendingCallWatcher(pending, parent);
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished,
-                    parent, [func](QDBusPendingCallWatcher* watcher) {
-                        watcher->deleteLater();
-                        func();
-                    });
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, parent);
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, parent, [func](QDBusPendingCallWatcher *watcher) {
+        watcher->deleteLater();
+        func();
+    });
 }
 
 void PowerManagementJob::start()
 {
     const QString operation = operationName();
-    //qDebug() << "starting operation  ... " << operation;
+    // qDebug() << "starting operation  ... " << operation;
 
     if (operation == QLatin1String("lockScreen")) {
         if (m_session->canLock()) {
@@ -141,11 +140,21 @@ void PowerManagementJob::start()
         return;
     } else if (operation == QLatin1String("setBrightness")) {
         auto pending = setScreenBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
-        callWhenFinished(pending, [this] { setResult(true); }, this);
+        callWhenFinished(
+            pending,
+            [this] {
+                setResult(true);
+            },
+            this);
         return;
     } else if (operation == QLatin1String("setKeyboardBrightness")) {
         auto pending = setKeyboardBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
-        callWhenFinished(pending, [this] { setResult(true); }, this);
+        callWhenFinished(
+            pending,
+            [this] {
+                setResult(true);
+            },
+            this);
         return;
     }
 

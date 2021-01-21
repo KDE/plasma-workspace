@@ -29,7 +29,6 @@
 
 #include "ui_scmeditoreffects.h"
 
-
 class SchemeEditorEffects : public QWidget, public Ui::ScmEditorEffects
 {
     Q_OBJECT
@@ -52,7 +51,7 @@ private Q_SLOTS:
 
     void on_colorSlider_valueChanged(int value);
 
-    void on_colorButton_changed(const QColor& color);
+    void on_colorButton_changed(const QColor &color);
 
     void on_contrastBox_currentIndexChanged(int index);
 
@@ -62,7 +61,6 @@ private:
     QPalette::ColorGroup m_palette;
     KSharedConfigPtr m_config;
     bool m_disableUpdates;
-
 };
 
 #endif

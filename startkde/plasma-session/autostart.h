@@ -29,7 +29,7 @@ public:
     QString name;
     QString service;
     QString startAfter;
-    int     phase;
+    int phase;
 };
 
 class AutoStart
@@ -39,13 +39,13 @@ public:
     ~AutoStart();
 
     QString startService();
-    void    setPhase(int phase);
-    void    setPhaseDone();
-    int     phase() const
+    void setPhase(int phase);
+    void setPhaseDone();
+    int phase() const
     {
         return m_phase;
     }
-    bool    phaseDone() const
+    bool phaseDone() const
     {
         return m_phasedone;
     }

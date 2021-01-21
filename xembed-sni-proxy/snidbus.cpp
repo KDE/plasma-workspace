@@ -26,7 +26,7 @@
 #include <QSysInfo>
 #include <QtEndian>
 
-//mostly copied from KStatusNotiferItemDbus.cpps from knotification
+// mostly copied from KStatusNotiferItemDbus.cpps from knotification
 
 KDbusImageStruct::KDbusImageStruct()
 {
@@ -43,9 +43,9 @@ KDbusImageStruct::KDbusImageStruct(const QImage &image)
         data = QByteArray((char *)image32.bits(), image32.byteCount());
     }
 
-    //swap to network byte order if we are little endian
+    // swap to network byte order if we are little endian
     if (QSysInfo::ByteOrder == QSysInfo::LittleEndian) {
-        quint32 *uintBuf = (quint32 *) data.data();
+        quint32 *uintBuf = (quint32 *)data.data();
         for (uint i = 0; i < data.size() / sizeof(quint32); ++i) {
             *uintBuf = qToBigEndian(*uintBuf);
             ++uintBuf;

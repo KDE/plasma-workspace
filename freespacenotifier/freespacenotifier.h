@@ -21,8 +21,8 @@
 #ifndef _FREESPACENOTIFIER_H_
 #define _FREESPACENOTIFIER_H_
 
-#include <QTimer>
 #include <QPointer>
+#include <QTimer>
 
 #include <KLocalizedString>
 #include <KService>
@@ -55,8 +55,6 @@ private:
     QTimer *m_lastAvailTimer = nullptr;
     QPointer<KNotification> m_notification;
     qint64 m_lastAvail = -1; // used to suppress repeated warnings when available space hasn't changed
-
-
 };
 
 #endif

@@ -6,8 +6,8 @@
 
 #pragma once
 
-#include <QObject>
 #include "screencasting.h"
+#include <QObject>
 
 class ScreencastingStream;
 
@@ -34,14 +34,14 @@ class ScreencastingRequest : public QObject
     /** The offered nodeId to give to a source */
     Q_PROPERTY(quint32 nodeId READ nodeId NOTIFY nodeIdChanged)
 public:
-    ScreencastingRequest(QObject* parent = nullptr);
+    ScreencastingRequest(QObject *parent = nullptr);
     ~ScreencastingRequest();
 
     void setUuid(const QString &uuid);
     QString uuid() const;
     quint32 nodeId() const;
 
-    void create(Screencasting* screencasting);
+    void create(Screencasting *screencasting);
 
 Q_SIGNALS:
     void nodeIdChanged(quint32 nodeId);
@@ -52,8 +52,8 @@ Q_SIGNALS:
 private:
     void setNodeid(uint nodeId);
 
-    ScreencastingStream* m_stream = nullptr;
+    ScreencastingStream *m_stream = nullptr;
     QString m_uuid;
-    KWayland::Client::Output* m_output = nullptr;
+    KWayland::Client::Output *m_output = nullptr;
     quint32 m_nodeId = 0;
 };

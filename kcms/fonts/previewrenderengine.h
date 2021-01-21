@@ -20,8 +20,8 @@
 #ifndef __PREVIEW_RENDER_ENGINE_H
 #define __PREVIEW_RENDER_ENGINE_H
 
-#include "kxftconfig.h"
 #include "FcEngine.h"
+#include "kxftconfig.h"
 
 #ifdef HAVE_FONTCONFIG
 
@@ -29,10 +29,10 @@
 
 class PreviewRenderEngine : public KFI::CFcEngine
 {
-public: 
-    PreviewRenderEngine(bool init=true);
+public:
+    PreviewRenderEngine(bool init = true);
     ~PreviewRenderEngine() override;
-    
+
     QImage drawAutoSize(const QFont &font, const QColor &txt, const QColor &bgnd, const QString &text);
 };
 

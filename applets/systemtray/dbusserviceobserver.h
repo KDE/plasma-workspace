@@ -21,8 +21,8 @@
 #ifndef DBUSSERVICEOBSERVER_H
 #define DBUSSERVICEOBSERVER_H
 
-#include <QObject>
 #include <QHash>
+#include <QObject>
 #include <QPointer>
 #include <QRegExp>
 
@@ -52,7 +52,7 @@ public Q_SLOTS:
     void initDBusActivatables();
 
 private:
-    void serviceNameFetchFinished(QDBusPendingCallWatcher* watcher);
+    void serviceNameFetchFinished(QDBusPendingCallWatcher *watcher);
     void serviceRegistered(const QString &service);
     void serviceUnregistered(const QString &service);
 

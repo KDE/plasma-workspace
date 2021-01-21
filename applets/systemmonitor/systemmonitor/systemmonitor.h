@@ -20,9 +20,9 @@
 
 #pragma once
 
+#include <Plasma/Applet>
 #include <QPointer>
 #include <QStandardItemModel>
-#include <Plasma/Applet>
 
 #include <KDesktopFile>
 #include <KPackage/Package>
@@ -30,13 +30,13 @@
 class ApplicationListModel;
 class QQuickItem;
 
-namespace KSysGuard {
-    class SensorFace;
-    class SensorFaceController;
+namespace KSysGuard
+{
+class SensorFace;
+class SensorFaceController;
 }
 
 class KConfigLoader;
-
 
 class SystemMonitor : public Plasma::Applet
 {
@@ -45,7 +45,7 @@ class SystemMonitor : public Plasma::Applet
     Q_PROPERTY(KSysGuard::SensorFaceController *faceController READ faceController CONSTANT)
 
 public:
-    SystemMonitor( QObject *parent, const QVariantList &args );
+    SystemMonitor(QObject *parent, const QVariantList &args);
     ~SystemMonitor() override;
 
     void init() override;
@@ -59,4 +59,3 @@ private:
     KSysGuard::SensorFaceController *m_sensorFaceController = nullptr;
     QString m_pendingStartupPreset;
 };
-

@@ -30,11 +30,11 @@
 #include <QDBusPendingReply>
 #include <QDBusServiceWatcher>
 
-DBusServiceObserver::DBusServiceObserver(QPointer<SystemTraySettings> settings, QObject *parent) :
-    QObject(parent),
-    m_settings(settings),
-    m_sessionServiceWatcher(new QDBusServiceWatcher(this)),
-    m_systemServiceWatcher(new QDBusServiceWatcher(this))
+DBusServiceObserver::DBusServiceObserver(QPointer<SystemTraySettings> settings, QObject *parent)
+    : QObject(parent)
+    , m_settings(settings)
+    , m_sessionServiceWatcher(new QDBusServiceWatcher(this))
+    , m_systemServiceWatcher(new QDBusServiceWatcher(this))
 {
     m_sessionServiceWatcher->setConnection(QDBusConnection::sessionBus());
     m_systemServiceWatcher->setConnection(QDBusConnection::systemBus());
@@ -140,7 +140,7 @@ void DBusServiceObserver::serviceNameFetchFinished(QDBusPendingCallWatcher *watc
         qCWarning(SYSTEM_TRAY) << "Could not get list of available D-Bus services";
     } else {
         const auto propsReplyValue = propsReply.value();
-        for (const QString& serviceName : propsReplyValue) {
+        for (const QString &serviceName : propsReplyValue) {
             serviceRegistered(serviceName);
         }
     }

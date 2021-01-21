@@ -18,14 +18,9 @@ class KeyboardLayout : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(uint layout
-               MEMBER mLayout
-               WRITE setLayout
-               NOTIFY layoutChanged)
+    Q_PROPERTY(uint layout MEMBER mLayout WRITE setLayout NOTIFY layoutChanged)
 
-    Q_PROPERTY(const QVector<LayoutNames>& layoutsList
-               READ getLayoutsList
-               NOTIFY layoutsListChanged)
+    Q_PROPERTY(const QVector<LayoutNames> &layoutsList READ getLayoutsList NOTIFY layoutsListChanged)
 
 public:
     explicit KeyboardLayout(QObject *parent = nullptr);
@@ -41,14 +36,15 @@ protected:
 
 private:
     void setLayout(uint index);
-    const QVector<LayoutNames> &getLayoutsList() const { return mLayoutsList; }
+    const QVector<LayoutNames> &getLayoutsList() const
+    {
+        return mLayoutsList;
+    }
 
-    enum DBusData {Layout, LayoutsList};
+    enum DBusData { Layout, LayoutsList };
 
-    template<class T>
-    void requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)());
-    template<DBusData>
-    void requestDBusData();
+    template<class T> void requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)());
+    template<DBusData> void requestDBusData();
 
     uint mLayout;
     QVector<LayoutNames> mLayoutsList;

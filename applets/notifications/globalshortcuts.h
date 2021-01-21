@@ -39,5 +39,4 @@ signals:
 
 private:
     QAction *m_toggleDoNotDisturbAction;
-
 };

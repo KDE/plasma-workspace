@@ -20,14 +20,14 @@
 #ifndef STARTPLASMA_H
 #define STARTPLASMA_H
 
+#include "config-startplasma.h"
 #include "kcheckrunning/kcheckrunning.h"
 #include <ksplashinterface.h>
-#include "config-startplasma.h"
 
 extern QTextStream out;
 
-QStringList allServices(const QLatin1String& prefix);
-int runSync(const QString& program, const QStringList &args, const QStringList &env = {});
+QStringList allServices(const QLatin1String &prefix);
+int runSync(const QString &program, const QStringList &args, const QStringList &env = {});
 void sourceFiles(const QStringList &files);
 void messageBox(const QString &text);
 
@@ -40,7 +40,7 @@ void cleanupPlasmaEnvironment();
 void cleanupX11();
 bool syncDBusEnvironment();
 void setupFontDpi();
-QProcess* setupKSplash();
+QProcess *setupKSplash();
 void setupX11();
 
 bool startKDEInit();
@@ -51,8 +51,7 @@ void waitForKonqi();
 static bool hasSystemdService(const QString &serviceName);
 static bool useSystemdBoot();
 
-struct KillBeforeDeleter
-{
+struct KillBeforeDeleter {
     static inline void cleanup(QProcess *pointer)
     {
         if (pointer)

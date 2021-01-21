@@ -24,47 +24,52 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QObject>
-#include <QByteArray>
 #include "Misc.h"
+#include <QByteArray>
+#include <QObject>
 
 class QProcess;
 
 namespace KFI
 {
-
 class CFcQuery : public QObject
 {
     Q_OBJECT
 
-    public:
-
-    CFcQuery(QObject *parent) : QObject(parent), itsProc(nullptr) { }
+public:
+    CFcQuery(QObject *parent)
+        : QObject(parent)
+        , itsProc(nullptr)
+    {
+    }
     ~CFcQuery() override;
 
     void run(const QString &query);
 
-    const QString & font() const { return itsFont; }
-    const QString & file() const { return itsFile; }
+    const QString &font() const
+    {
+        return itsFont;
+    }
+    const QString &file() const
+    {
+        return itsFile;
+    }
 
-    private Q_SLOTS:
+private Q_SLOTS:
 
     void procExited();
     void data();
 
-    Q_SIGNALS:
+Q_SIGNALS:
 
     void finished();
 
-    private:
-
-    QProcess   *itsProc;
+private:
+    QProcess *itsProc;
     QByteArray itsBuffer;
-    QString    itsFile,
-               itsFont;
+    QString itsFile, itsFont;
 };
 
 }
 
 #endif
-

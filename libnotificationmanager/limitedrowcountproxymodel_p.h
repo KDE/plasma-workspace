@@ -43,5 +43,4 @@ protected:
 
 private:
     int m_limit = 0;
-
 };

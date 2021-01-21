@@ -28,11 +28,11 @@ class PackagekitEngine : public Plasma::DataEngine
     Q_OBJECT
 
 public:
-    PackagekitEngine(QObject* parent, const QVariantList& args);
+    PackagekitEngine(QObject *parent, const QVariantList &args);
     void init();
 
 protected:
-    Plasma::Service* serviceForSource(const QString& source) override;
+    Plasma::Service *serviceForSource(const QString &source) override;
 
 private:
     bool m_pk_available;

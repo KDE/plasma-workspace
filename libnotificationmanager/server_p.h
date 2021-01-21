@@ -20,26 +20,24 @@
 
 #pragma once
 
-#include <QObject>
 #include <QDBusContext>
+#include <QObject>
 #include <QStringList>
 
 #include "notification.h"
 
 class QDBusServiceWatcher;
 
-struct Inhibition
-{
+struct Inhibition {
     QString desktopEntry;
     QString applicationName;
-    //QString applicationIconName;
+    // QString applicationIconName;
     QString reason;
     QVariantMap hints;
 };
 
 namespace NotificationManager
 {
-
 class ServerInfo;
 
 class Q_DECL_HIDDEN ServerPrivate : public QObject, protected QDBusContext
@@ -55,24 +53,27 @@ public:
     ~ServerPrivate() override;
 
     // DBus
-    uint Notify(const QString &app_name, uint replaces_id, const QString &app_icon,
-                const QString &summary, const QString &body, const QStringList &actions,
-                const QVariantMap &hints, int timeout);
+    uint Notify(const QString &app_name,
+                uint replaces_id,
+                const QString &app_icon,
+                const QString &summary,
+                const QString &body,
+                const QStringList &actions,
+                const QVariantMap &hints,
+                int timeout);
     void CloseNotification(uint id);
     QStringList GetCapabilities() const;
     QString GetServerInformation(QString &vendor, QString &version, QString &specVersion) const;
 
     // Inhibitions
-    uint Inhibit(const QString &desktop_entry,
-                 const QString &reason,
-                 const QVariantMap &hints);
+    uint Inhibit(const QString &desktop_entry, const QString &reason, const QVariantMap &hints);
     void UnInhibit(uint cookie);
     bool inhibited() const; // property getter
 
     // Notifition watcher
     void RegisterWatcher();
     void UnRegisterWatcher();
-    
+
     void InvokeAction(uint id, const QString &actionKey);
 
 Q_SIGNALS:
@@ -136,7 +137,6 @@ private:
     bool m_inhibited = false;
 
     Notification m_lastNotification;
-
 };
 
 } // namespace NotificationManager

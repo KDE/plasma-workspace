@@ -20,12 +20,10 @@
 #ifndef POWERMANAGEMENTSERVICE_H
 #define POWERMANAGEMENTSERVICE_H
 
-
 #include <Plasma/Service>
 #include <Plasma/ServiceJob>
 
 using namespace Plasma;
-
 
 class PowerManagementService : public Plasma::Service
 {

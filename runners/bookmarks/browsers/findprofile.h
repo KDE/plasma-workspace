@@ -19,24 +19,44 @@
  */
 #ifndef FIND_PROFILE_H
 #define FIND_PROFILE_H
-#include <QString>
 #include <QList>
 #include <QStandardPaths>
+#include <QString>
 
 class Favicon;
-class Profile {
+class Profile
+{
 public:
-    Profile(const QString &path, const QString &name, Favicon *favicon) : m_path(path), m_name(name), m_favicon(favicon){
+    Profile(const QString &path, const QString &name, Favicon *favicon)
+        : m_path(path)
+        , m_name(name)
+        , m_favicon(favicon)
+    {
         // Remove "Bookmarks" from end of path
         m_faviconSource = path.chopped(9) + QStringLiteral("Favicons");
-        m_faviconCache = QStringLiteral("%1/KRunner-Chrome-Favicons-%2.sqlite")
-            .arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation), name);
+        m_faviconCache = QStringLiteral("%1/KRunner-Chrome-Favicons-%2.sqlite").arg(QStandardPaths::writableLocation(QStandardPaths::CacheLocation), name);
     }
-    inline QString path() const { return m_path; }
-    inline QString name() const { return m_name; }
-    inline Favicon *favicon() const { return m_favicon; }
-    inline QString faviconSource() const { return m_faviconSource; }
-    inline QString faviconCache() const { return m_faviconCache; }
+    inline QString path() const
+    {
+        return m_path;
+    }
+    inline QString name() const
+    {
+        return m_name;
+    }
+    inline Favicon *favicon() const
+    {
+        return m_favicon;
+    }
+    inline QString faviconSource() const
+    {
+        return m_faviconSource;
+    }
+    inline QString faviconCache() const
+    {
+        return m_faviconCache;
+    }
+
 private:
     QString m_path;
     QString m_name;
@@ -45,10 +65,13 @@ private:
     QString m_faviconCache;
 };
 
-class FindProfile {
+class FindProfile
+{
 public:
-  virtual QList<Profile> find() = 0;
-  virtual ~FindProfile() {}
+    virtual QList<Profile> find() = 0;
+    virtual ~FindProfile()
+    {
+    }
 };
 
 #endif

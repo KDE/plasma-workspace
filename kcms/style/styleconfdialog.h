@@ -24,26 +24,26 @@
 #include <QDialog>
 class QHBoxLayout;
 
-class StyleConfigDialog: public QDialog
+class StyleConfigDialog : public QDialog
 {
-  Q_OBJECT
+    Q_OBJECT
 public:
-  StyleConfigDialog(QWidget* parent, const QString &styleName);
+    StyleConfigDialog(QWidget *parent, const QString &styleName);
 
-  bool isDirty() const;
+    bool isDirty() const;
 
-  void setMainWidget(QWidget *w);
+    void setMainWidget(QWidget *w);
 public Q_SLOTS:
-  void setDirty(bool dirty);
+    void setDirty(bool dirty);
 
 Q_SIGNALS:
-  void defaults();
-  void save();
+    void defaults();
+    void save();
 
 private:
-  void slotAccept();
-  bool m_dirty;
-  QHBoxLayout *mMainLayout = nullptr;
+    void slotAccept();
+    bool m_dirty;
+    QHBoxLayout *mMainLayout = nullptr;
 };
 
 #endif

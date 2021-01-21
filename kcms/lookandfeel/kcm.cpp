@@ -24,25 +24,25 @@
 #include "config-workspace.h"
 
 #include <KAboutData>
-#include <KSharedConfig>
-#include <KGlobalSettings>
-#include <KIconLoader>
-#include <KIO/ApplicationLauncherJob>
 #include <KAutostart>
 #include <KDialogJobUiDelegate>
+#include <KGlobalSettings>
+#include <KIO/ApplicationLauncherJob>
+#include <KIconLoader>
 #include <KService>
+#include <KSharedConfig>
 
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDebug>
+#include <QProcess>
 #include <QQuickItem>
 #include <QQuickWindow>
-#include <QStandardPaths>
-#include <QProcess>
 #include <QStandardItemModel>
-#include <QX11Info>
+#include <QStandardPaths>
 #include <QStyle>
 #include <QStyleFactory>
+#include <QX11Info>
 
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
@@ -51,16 +51,16 @@
 
 #include <updatelaunchenvjob.h>
 
-#include "lookandfeelsettings.h"
 #include "lookandfeeldata.h"
+#include "lookandfeelsettings.h"
 
 #ifdef HAVE_XCURSOR
-#   include "../cursortheme/xcursor/xcursortheme.h"
-#   include <X11/Xcursor/Xcursor.h>
+#include "../cursortheme/xcursor/xcursortheme.h"
+#include <X11/Xcursor/Xcursor.h>
 #endif
 
 #ifdef HAVE_XFIXES
-#  include <X11/extensions/Xfixes.h>
+#include <X11/extensions/Xfixes.h>
 #endif
 
 KCMLookandFeel::KCMLookandFeel(QObject *parent, const QVariantList &args)
@@ -82,8 +82,7 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const QVariantList &args)
     qmlRegisterType<QStandardItemModel>();
     qmlRegisterType<KCMLookandFeel>();
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_lookandfeel"), i18n("Global Theme"),
-                                       QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_lookandfeel"), i18n("Global Theme"), QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
     setAboutData(about);
     setButtons(Apply | Default);
@@ -185,7 +184,7 @@ void KCMLookandFeel::loadModel()
         row->setData(pkg.filePath("preview"), ScreenshotRole);
         row->setData(pkg.filePath("fullscreenpreview"), FullScreenPreviewRole);
 
-        //What the package provides
+        // What the package provides
         row->setData(!pkg.filePath("splashmainscript").isEmpty(), HasSplashRole);
         row->setData(!pkg.filePath("lockscreenmainscript").isEmpty(), HasLockScreenRole);
         row->setData(!pkg.filePath("runcommandmainscript").isEmpty(), HasRunCommandRole);
@@ -227,7 +226,7 @@ void KCMLookandFeel::loadModel()
     }
     m_model->sort(0 /*column*/);
 
-    //Model has been cleared so pretend the selected look and fell changed to force view update
+    // Model has been cleared so pretend the selected look and fell changed to force view update
     emit lookAndFeelSettings()->lookAndFeelPackageChanged();
 }
 
@@ -251,8 +250,10 @@ void KCMLookandFeel::save()
     ManagedConfigModule::save();
 
     if (m_resetDefaultLayout) {
-        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"), QStringLiteral("/PlasmaShell"),
-                                                   QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("loadLookAndFeelDefaultLayout"));
+        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                              QStringLiteral("/PlasmaShell"),
+                                                              QStringLiteral("org.kde.PlasmaShell"),
+                                                              QStringLiteral("loadLookAndFeelDefaultLayout"));
 
         QList<QVariant> args;
         args << lookAndFeelSettings()->lookAndFeelPackage();
@@ -295,15 +296,16 @@ void KCMLookandFeel::save()
                 }
                 colorScheme.replace(0, 1, colorScheme.at(0).toUpper());
 
-                //NOTE: why this loop trough all the scheme files?
-                //the scheme theme name is an heuristic, there is no plugin metadata whatsoever.
-                //is based on the file name stripped from weird characters or the
-                //eventual id- prefix store.kde.org puts, so we can just find a
-                //theme that ends as the specified name
+                // NOTE: why this loop trough all the scheme files?
+                // the scheme theme name is an heuristic, there is no plugin metadata whatsoever.
+                // is based on the file name stripped from weird characters or the
+                // eventual id- prefix store.kde.org puts, so we can just find a
+                // theme that ends as the specified name
                 bool schemeFound = false;
-                const QStringList schemeDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes"), QStandardPaths::LocateDirectory);
+                const QStringList schemeDirs =
+                    QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes"), QStandardPaths::LocateDirectory);
                 for (const QString &dir : schemeDirs) {
-                    const QStringList fileNames = QDir(dir).entryList(QStringList()<<QStringLiteral("*.colors"));
+                    const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.colors"));
                     for (const QString &file : fileNames) {
                         if (file.endsWith(colorScheme + QStringLiteral(".colors"))) {
                             setColors(colorScheme, dir + QLatin1Char('/') + file);
@@ -354,21 +356,20 @@ void KCMLookandFeel::save()
 #ifdef HAVE_BREEZE_DECO
             setWindowDecoration(cg.readEntry("library", QStringLiteral(BREEZE_KDECORATION_PLUGIN_ID)), cg.readEntry("theme", QStringLiteral("Breeze")));
 #else
-            setWindowDecoration(cg.readEntry("library", QStringLiteral("org.kde.kwin.aurorae")), cg.readEntry("theme", QStringLiteral("kwin4_decoration_qml_plastik")));
+            setWindowDecoration(cg.readEntry("library", QStringLiteral("org.kde.kwin.aurorae")),
+                                cg.readEntry("theme", QStringLiteral("kwin4_decoration_qml_plastik")));
 #endif
         }
 
         // Reload KWin if something changed, but only once.
         if (m_applyWindowSwitcher || m_applyDesktopSwitcher || m_applyWindowDecoration) {
-            QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"),
-                                                    QStringLiteral("org.kde.KWin"),
-                                                    QStringLiteral("reloadConfig"));
+            QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"));
             QDBusConnection::sessionBus().send(message);
         }
 
-        //autostart
+        // autostart
         if (m_resetDefaultLayout) {
-            //remove all the old package to autostart
+            // remove all the old package to autostart
             {
                 KSharedConfigPtr oldConf = KSharedConfig::openConfig(m_package.filePath("defaults"));
                 cg = KConfigGroup(oldConf, QStringLiteral("Autostart"));
@@ -379,12 +380,13 @@ void KCMLookandFeel::save()
                         KService service(serviceFile + QStringLiteral(".desktop"));
                         KAutostart as(serviceFile);
                         as.setAutostarts(false);
-                        //FIXME: quite ugly way to stop things, and what about non KDE things?
-                        QProcess::startDetached(QStringLiteral("kquitapp5"), {QStringLiteral("--service"), service.property(QStringLiteral("X-DBUS-ServiceName")).toString()});
+                        // FIXME: quite ugly way to stop things, and what about non KDE things?
+                        QProcess::startDetached(QStringLiteral("kquitapp5"),
+                                                {QStringLiteral("--service"), service.property(QStringLiteral("X-DBUS-ServiceName")).toString()});
                     }
                 }
             }
-            //Set all the stuff in the new lnf to autostart
+            // Set all the stuff in the new lnf to autostart
             {
                 cg = KConfigGroup(conf, QStringLiteral("Autostart"));
                 const QStringList autostartServices = cg.readEntry("Services", QStringList());
@@ -404,7 +406,7 @@ void KCMLookandFeel::save()
         }
     }
 
-    //TODO: option to enable/disable apply? they don't seem required by UI design
+    // TODO: option to enable/disable apply? they don't seem required by UI design
     const auto *item = m_model->item(pluginIndex(lookAndFeelSettings()->lookAndFeelPackage()));
     if (item->data(HasSplashRole).toBool()) {
         setSplashScreen(lookAndFeelSettings()->lookAndFeelPackage());
@@ -428,7 +430,7 @@ void KCMLookandFeel::setWidgetStyle(const QString &style)
     if (newStyle) {
         m_configGroup.writeEntry("widgetStyle", style, KConfig::Notify);
         m_configGroup.sync();
-        //FIXME: changing style on the fly breaks QQuickWidgets
+        // FIXME: changing style on the fly breaks QQuickWidgets
         KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
     }
 }
@@ -463,7 +465,7 @@ void KCMLookandFeel::setIcons(const QString &theme)
     cg.writeEntry("Theme", theme, KConfig::Notify);
     cg.sync();
 
-    for (int i=0; i < KIconLoader::LastGroup; i++) {
+    for (int i = 0; i < KIconLoader::LastGroup; i++) {
         KIconLoader::emitChange(KIconLoader::Group(i));
     }
 }
@@ -482,7 +484,7 @@ void KCMLookandFeel::setPlasmaTheme(const QString &theme)
 
 void KCMLookandFeel::setCursorTheme(const QString themeName)
 {
-    //TODO: use pieces of cursor kcm when moved to plasma-desktop
+    // TODO: use pieces of cursor kcm when moved to plasma-desktop
     if (themeName.isEmpty()) {
         return;
     }
@@ -523,20 +525,18 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
     QStringList names;
 
     // Qt cursors
-    names << QStringLiteral("left_ptr")       << QStringLiteral("up_arrow")      << QStringLiteral("cross")      << QStringLiteral("wait")
-          << QStringLiteral("left_ptr_watch") << QStringLiteral("ibeam")         << QStringLiteral("size_ver")   << QStringLiteral("size_hor")
-          << QStringLiteral("size_bdiag")     << QStringLiteral("size_fdiag")    << QStringLiteral("size_all")   << QStringLiteral("split_v")
-          << QStringLiteral("split_h")        << QStringLiteral("pointing_hand") << QStringLiteral("openhand")
-          << QStringLiteral("closedhand")     << QStringLiteral("forbidden")     << QStringLiteral("whats_this") << QStringLiteral("copy") << QStringLiteral("move") << QStringLiteral("link");
+    names << QStringLiteral("left_ptr") << QStringLiteral("up_arrow") << QStringLiteral("cross") << QStringLiteral("wait") << QStringLiteral("left_ptr_watch")
+          << QStringLiteral("ibeam") << QStringLiteral("size_ver") << QStringLiteral("size_hor") << QStringLiteral("size_bdiag") << QStringLiteral("size_fdiag")
+          << QStringLiteral("size_all") << QStringLiteral("split_v") << QStringLiteral("split_h") << QStringLiteral("pointing_hand")
+          << QStringLiteral("openhand") << QStringLiteral("closedhand") << QStringLiteral("forbidden") << QStringLiteral("whats_this") << QStringLiteral("copy")
+          << QStringLiteral("move") << QStringLiteral("link");
 
     // X core cursors
-    names << QStringLiteral("X_cursor")            << QStringLiteral("right_ptr")           << QStringLiteral("hand1")
-          << QStringLiteral("hand2")               << QStringLiteral("watch")               << QStringLiteral("xterm")
-          << QStringLiteral("crosshair")           << QStringLiteral("left_ptr_watch")      << QStringLiteral("center_ptr")
-          << QStringLiteral("sb_h_double_arrow")   << QStringLiteral("sb_v_double_arrow")   << QStringLiteral("fleur")
-          << QStringLiteral("top_left_corner")     << QStringLiteral("top_side")            << QStringLiteral("top_right_corner")
-          << QStringLiteral("right_side")          << QStringLiteral("bottom_right_corner") << QStringLiteral("bottom_side")
-          << QStringLiteral("bottom_left_corner")  << QStringLiteral("left_side")           << QStringLiteral("question_arrow")
+    names << QStringLiteral("X_cursor") << QStringLiteral("right_ptr") << QStringLiteral("hand1") << QStringLiteral("hand2") << QStringLiteral("watch")
+          << QStringLiteral("xterm") << QStringLiteral("crosshair") << QStringLiteral("left_ptr_watch") << QStringLiteral("center_ptr")
+          << QStringLiteral("sb_h_double_arrow") << QStringLiteral("sb_v_double_arrow") << QStringLiteral("fleur") << QStringLiteral("top_left_corner")
+          << QStringLiteral("top_side") << QStringLiteral("top_right_corner") << QStringLiteral("right_side") << QStringLiteral("bottom_right_corner")
+          << QStringLiteral("bottom_side") << QStringLiteral("bottom_left_corner") << QStringLiteral("left_side") << QStringLiteral("question_arrow")
           << QStringLiteral("pirate");
 
     foreach (const QString &name, names) {
@@ -545,8 +545,9 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
 
 #else
     KMessageBox::information(this,
-                                 i18n("You have to restart the Plasma session for these changes to take effect."),
-                                 i18n("Cursor Settings Changed"), "CursorSettingsChanged");
+                             i18n("You have to restart the Plasma session for these changes to take effect."),
+                             i18n("Cursor Settings Changed"),
+                             "CursorSettingsChanged");
 #endif
 #endif
 }
@@ -582,7 +583,7 @@ QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)
         // Recurse through the list of inherited themes, to check if one of them
         // is a cursor theme.
         const QStringList inherits = cg.readEntry("Inherits", QStringList());
-        for(const QString &inherit : inherits) {
+        for (const QString &inherit : inherits) {
             // Avoid possible DoS
             if (inherit == theme) {
                 continue;
@@ -621,8 +622,7 @@ const QStringList KCMLookandFeel::cursorSearchPaths()
 
     // Remove duplicates
     QMutableStringListIterator i(m_cursorSearchPaths);
-    while (i.hasNext())
-    {
+    while (i.hasNext()) {
         const QString path = i.next();
         QMutableStringListIterator j(i);
         while (j.hasNext())
@@ -647,7 +647,7 @@ void KCMLookandFeel::setSplashScreen(const QString &theme)
     KConfig config(QStringLiteral("ksplashrc"));
     KConfigGroup cg(&config, "KSplash");
     cg.writeEntry("Theme", theme);
-    //TODO: a way to set none as spash in the l&f
+    // TODO: a way to set none as spash in the l&f
     cg.writeEntry("Engine", "KSplashQML");
     cg.sync();
 }
@@ -702,9 +702,7 @@ void KCMLookandFeel::setWindowDecoration(const QString &library, const QString &
 
     cg.sync();
     // Reload KWin.
-    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"),
-                                                      QStringLiteral("org.kde.KWin"),
-                                                      QStringLiteral("reloadConfig"));
+    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"));
     QDBusConnection::sessionBus().send(message);
 }
 

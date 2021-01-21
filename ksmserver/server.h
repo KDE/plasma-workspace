@@ -26,13 +26,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define SERVER_H
 
 #define INT32 QINT32
+#include <X11/ICE/ICElib.h>
 #include <X11/Xlib.h>
 #include <X11/Xmd.h>
-#include <X11/ICE/ICElib.h>
 extern "C" {
-#include <X11/ICE/ICEutil.h>
 #include <X11/ICE/ICEmsg.h>
 #include <X11/ICE/ICEproto.h>
+#include <X11/ICE/ICEutil.h>
 #include <X11/SM/SM.h>
 #include <X11/SM/SMlib.h>
 }
@@ -41,20 +41,20 @@ extern "C" {
 
 // needed to avoid clash with INT8 defined in X11/Xmd.h on solaris
 #define QT_CLEAN_NAMESPACE 1
-#include <QStringList>
-#include <QObject>
 #include <QDBusContext>
 #include <QDBusMessage>
+#include <QObject>
+#include <QStringList>
 
-#include <kworkspace.h>
-#include <kmessagebox.h>
 #include <KConfigGroup>
-#include <QTimer>
-#include <QTime>
 #include <QMap>
+#include <QTime>
+#include <QTimer>
+#include <kmessagebox.h>
+#include <kworkspace.h>
 
 #define SESSION_PREVIOUS_LOGOUT "saved at previous logout"
-#define SESSION_BY_USER  "saved by user"
+#define SESSION_BY_USER "saved by user"
 
 class KProcess;
 
@@ -69,18 +69,17 @@ enum SMType {
     SM_WMCOMMAND,
     SM_WMSAVEYOURSELF,
 };
-struct SMData
-    {
+struct SMData {
     SMType type;
     QStringList wmCommand;
     QString wmClientMachine;
     QString wmclass1, wmclass2;
-    };
-typedef QMap<WId,SMData> WindowMap;
+};
+typedef QMap<WId, SMData> WindowMap;
 
 class KSMServer : public QObject, protected QDBusContext
 {
-Q_OBJECT
+    Q_OBJECT
 public:
     enum class InitFlag {
         None = 0,
@@ -90,37 +89,35 @@ public:
     };
 
     Q_DECLARE_FLAGS(InitFlags, InitFlag)
-    KSMServer(InitFlags flags );
+    KSMServer(InitFlags flags);
     ~KSMServer() override;
 
-    static KSMServer* self();
+    static KSMServer *self();
 
-    void* watchConnection( IceConn iceConn );
-    void removeConnection( KSMConnection* conn );
+    void *watchConnection(IceConn iceConn);
+    void removeConnection(KSMConnection *conn);
 
-    KSMClient* newClient( SmsConn );
-    void  deleteClient( KSMClient* client );
+    KSMClient *newClient(SmsConn);
+    void deleteClient(KSMClient *client);
 
     // callbacks
-    void saveYourselfDone( KSMClient* client, bool success );
-    void interactRequest( KSMClient* client, int dialogType );
-    void interactDone( KSMClient* client, bool cancelShutdown );
-    void phase2Request( KSMClient* client );
+    void saveYourselfDone(KSMClient *client, bool success);
+    void interactRequest(KSMClient *client, int dialogType);
+    void interactDone(KSMClient *client, bool cancelShutdown);
+    void phase2Request(KSMClient *client);
 
     // error handling
-    void ioError( IceConn iceConn );
+    void ioError(IceConn iceConn);
 
     // notification
-    void clientRegistered( const char* previousId );
+    void clientRegistered(const char *previousId);
 
     // public API
     void performLogout();
     void restoreSession();
-    void restoreSession( const QString &sessionName );
+    void restoreSession(const QString &sessionName);
     void startDefaultSession();
-    void shutdown( KWorkSpace::ShutdownConfirm confirm,
-                   KWorkSpace::ShutdownType sdtype,
-                   KWorkSpace::ShutdownMode sdmode );
+    void shutdown(KWorkSpace::ShutdownConfirm confirm, KWorkSpace::ShutdownType sdtype, KWorkSpace::ShutdownMode sdmode);
 
     void setupShortcuts();
 
@@ -132,8 +129,8 @@ public Q_SLOTS:
     void cleanUp();
 
 private Q_SLOTS:
-    void newConnection( int socket );
-    void processData( int socket );
+    void newConnection(int socket);
+    void processData(int socket);
 
     void protectionTimeout();
     void timeoutQuit();
@@ -152,7 +149,7 @@ private:
     void completeKilling();
     void completeKillingSubSession();
     void signalSubSessionClosed();
-    void cancelShutdown( KSMClient* c );
+    void cancelShutdown(KSMClient *c);
     void killingCompleted();
 
     void discardSession();
@@ -161,18 +158,16 @@ private:
     void startProtection();
     void endProtection();
 
-    void startApplication( const QStringList& command,
-        const QString& clientMachine = QString(),
-        const QString& userId = QString());
-    void executeCommand( const QStringList& command );
+    void startApplication(const QStringList &command, const QString &clientMachine = QString(), const QString &userId = QString());
+    void executeCommand(const QStringList &command);
 
     bool defaultSession() const; // empty session
     void setupXIOErrorHandler();
 
     void performLegacySessionSave();
-    void storeLegacySession( KConfig* config );
-    void restoreLegacySession( KConfig* config );
-    void restoreLegacySessionInternal( KConfigGroup* config, char sep = ',' );
+    void storeLegacySession(KConfig *config);
+    void restoreLegacySession(KConfig *config);
+    void restoreLegacySessionInternal(KConfigGroup *config, char sep = ',');
     QStringList windowWmCommand(WId w);
     QString windowWmClientMachine(WId w);
     WId windowWmClientLeader(WId w);
@@ -183,47 +178,50 @@ private:
 
     void runShutdownScripts();
 
-
     // public dcop interface
 
- public Q_SLOTS: //public dcop interface
-    void logout( int, int, int );
+public Q_SLOTS: // public dcop interface
+    void logout(int, int, int);
     bool canShutdown();
     bool isShuttingDown() const;
     QString currentSession();
     void saveCurrentSession();
-    void saveCurrentSessionAs( const QString & );
+    void saveCurrentSessionAs(const QString &);
     QStringList sessionList();
-    void saveSubSession( const QString &name, QStringList saveAndClose,
-                       QStringList saveOnly = QStringList() );
-    void restoreSubSession( const QString &name );
+    void saveSubSession(const QString &name, QStringList saveAndClose, QStringList saveOnly = QStringList());
+    void restoreSubSession(const QString &name);
 
     void openSwitchUserDialog();
     bool closeSession();
 
- Q_SIGNALS:
+Q_SIGNALS:
     void subSessionClosed();
     void subSessionCloseCanceled();
     void subSessionOpened();
     void sessionRestored();
 
- private:
-    QList<KSMListener*> listener;
-    QList<KSMClient*> clients;
+private:
+    QList<KSMListener *> listener;
+    QList<KSMClient *> clients;
 
-    enum State
-        {
+    enum State {
         Idle,
-        RestoringWMSession, Restoring,
-        Shutdown, Checkpoint, Killing, WaitingForKNotify, // shutdown
-        ClosingSubSession, KillingSubSession, RestoringSubSession,
-        };
+        RestoringWMSession,
+        Restoring,
+        Shutdown,
+        Checkpoint,
+        Killing,
+        WaitingForKNotify, // shutdown
+        ClosingSubSession,
+        KillingSubSession,
+        RestoringSubSession,
+    };
     State state;
     bool saveSession;
     int saveType;
 
     bool clean;
-    KSMClient* clientInteracting;
+    KSMClient *clientInteracting;
     QString sessionGroup;
     QTimer protectionTimer;
     QTimer restoreTimer;
@@ -240,9 +238,9 @@ private:
     QDBusMessage m_performLogoutCall;
     QDBusMessage m_restoreSessionCall;
 
-    //subSession stuff
-    QList<KSMClient*> clientsToKill;
-    QList<KSMClient*> clientsToSave;
+    // subSession stuff
+    QList<KSMClient *> clientsToKill;
+    QList<KSMClient *> clientsToSave;
 
     OrgKdeKWinSessionInterface *m_kwinInterface;
 

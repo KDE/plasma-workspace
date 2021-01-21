@@ -18,7 +18,8 @@
 
 #include "devicesignalmapper.h"
 
-DeviceSignalMapper::DeviceSignalMapper(QObject *parent) : QSignalMapper(parent)
+DeviceSignalMapper::DeviceSignalMapper(QObject *parent)
+    : QSignalMapper(parent)
 {
 }
 
@@ -26,12 +27,13 @@ DeviceSignalMapper::~DeviceSignalMapper()
 {
 }
 
-void DeviceSignalMapper::setMapping(QObject* device, const QString &udi)
+void DeviceSignalMapper::setMapping(QObject *device, const QString &udi)
 {
     signalmap[device] = udi;
 }
 
-BatterySignalMapper::BatterySignalMapper(QObject *parent) : DeviceSignalMapper(parent)
+BatterySignalMapper::BatterySignalMapper(QObject *parent)
+    : DeviceSignalMapper(parent)
 {
 }
 
@@ -56,7 +58,8 @@ void BatterySignalMapper::presentStateChanged(bool newState)
     emit(deviceChanged(signalmap[sender()], QStringLiteral("Plugged In"), newState));
 }
 
-StorageAccessSignalMapper::StorageAccessSignalMapper(QObject *parent) : DeviceSignalMapper(parent)
+StorageAccessSignalMapper::StorageAccessSignalMapper(QObject *parent)
+    : DeviceSignalMapper(parent)
 {
 }
 
@@ -68,5 +71,3 @@ void StorageAccessSignalMapper::accessibilityChanged(bool accessible)
 {
     emit(deviceChanged(signalmap[sender()], QStringLiteral("Accessible"), accessible));
 }
-
-

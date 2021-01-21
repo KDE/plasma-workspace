@@ -3,7 +3,7 @@
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License version 2 or at your option version 3 as published 
+ * License version 2 or at your option version 3 as published
  * by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
@@ -18,10 +18,10 @@
  */
 
 #include <QApplication>
-#include <QStyle>
 #include <QCursor>
-#include <QImage>
 #include <QFile>
+#include <QImage>
+#include <QStyle>
 #include <QX11Info>
 
 #include "cursortheme.h"
@@ -29,10 +29,9 @@
 #include <config-X11.h>
 
 #ifdef HAVE_XFIXES
-#  include <X11/Xlib.h>
-#  include <X11/extensions/Xfixes.h>
+#include <X11/Xlib.h>
+#include <X11/extensions/Xfixes.h>
 #endif
-
 
 CursorTheme::CursorTheme(const QString &title, const QString &description)
 {
@@ -43,7 +42,6 @@ CursorTheme::CursorTheme(const QString &title, const QString &description)
     setIsWritable(false);
 }
 
-
 QPixmap CursorTheme::icon() const
 {
     if (m_icon.isNull())
@@ -52,23 +50,23 @@ QPixmap CursorTheme::icon() const
     return m_icon;
 }
 
-
 QImage CursorTheme::autoCropImage(const QImage &image) const
 {
     // Compute an autocrop rectangle for the image
     QRect r(image.rect().bottomRight(), image.rect().topLeft());
-    const quint32 *pixels = reinterpret_cast<const quint32*>(image.bits());
+    const quint32 *pixels = reinterpret_cast<const quint32 *>(image.bits());
 
-    for (int y = 0; y < image.height(); y++)
-    {
-        for (int x = 0; x < image.width(); x++)
-        {
-            if (*(pixels++))
-            {
-                if (x < r.left())   r.setLeft(x);
-                if (x > r.right())  r.setRight(x);
-                if (y < r.top())    r.setTop(y);
-                if (y > r.bottom()) r.setBottom(y);
+    for (int y = 0; y < image.height(); y++) {
+        for (int x = 0; x < image.width(); x++) {
+            if (*(pixels++)) {
+                if (x < r.left())
+                    r.setLeft(x);
+                if (x > r.right())
+                    r.setRight(x);
+                if (y < r.top())
+                    r.setTop(y);
+                if (y > r.bottom())
+                    r.setBottom(y);
             }
         }
     }
@@ -76,7 +74,6 @@ QImage CursorTheme::autoCropImage(const QImage &image) const
     // Normalize the rectangle
     return image.copy(r.normalized());
 }
-
 
 QPixmap CursorTheme::loadPixmap(const QString &name, int size) const
 {
@@ -87,11 +84,9 @@ QPixmap CursorTheme::loadPixmap(const QString &name, int size) const
     return QPixmap::fromImage(image);
 }
 
-
 static int nominalCursorSize(int iconSize)
 {
-    for (int i = 512; i > 8; i /= 2)
-    {
+    for (int i = 512; i > 8; i /= 2) {
         if (i < iconSize)
             return i;
 
@@ -102,7 +97,6 @@ static int nominalCursorSize(int iconSize)
     return 8;
 }
 
-
 QPixmap CursorTheme::createIcon() const
 {
     int iconSize = QApplication::style()->pixelMetric(QStyle::PM_LargeIconSize);
@@ -111,8 +105,7 @@ QPixmap CursorTheme::createIcon() const
 
     QPixmap pixmap = createIcon(cursorSize);
 
-    if (!pixmap.isNull())
-    {
+    if (!pixmap.isNull()) {
         // Scale the pixmap if it's larger than the preferred icon size
         if (pixmap.width() > size.width() || pixmap.height() > size.height())
             pixmap = pixmap.scaled(size, Qt::KeepAspectRatio, Qt::SmoothTransformation);
@@ -120,7 +113,6 @@ QPixmap CursorTheme::createIcon() const
 
     return pixmap;
 }
-
 
 QPixmap CursorTheme::createIcon(int size) const
 {
@@ -130,23 +122,19 @@ QPixmap CursorTheme::createIcon(int size) const
     if (image.isNull() && sample() != QLatin1String("left_ptr"))
         image = loadImage(QStringLiteral("left_ptr"), size);
 
-    if (!image.isNull())
-    {
+    if (!image.isNull()) {
         pixmap = QPixmap::fromImage(image);
     }
 
     return pixmap;
 }
 
-
 void CursorTheme::setCursorName(qulonglong cursor, const QString &name) const
 {
 #ifdef HAVE_XFIXES
 
-    if (haveXfixes())
-    {
-        XFixesSetCursorName(QX11Info::display(), cursor,
-                            QFile::encodeName(name));
+    if (haveXfixes()) {
+        XFixesSetCursorName(QX11Info::display(), cursor, QFile::encodeName(name));
     }
 #endif
 }
@@ -160,8 +148,7 @@ bool CursorTheme::haveXfixes()
         return result;
     }
     int event_base, error_base;
-    if (XFixesQueryExtension(QX11Info::display(), &event_base, &error_base))
-    {
+    if (XFixesQueryExtension(QX11Info::display(), &event_base, &error_base)) {
         int major, minor;
         XFixesQueryVersion(QX11Info::display(), &major, &minor);
         result = (major >= 2);

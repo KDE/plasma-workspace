@@ -23,32 +23,31 @@
 
 #include <QDebug>
 #include <QDialog>
-#include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QQuickItem>
 #include <QQuickWindow>
+#include <QVBoxLayout>
 #include <QWindow>
 
 #include <KAboutPluginDialog>
 #include <klocalizedstring.h>
 
-#include <Plasma/Corona>
 #include <Plasma/Containment>
 #include <Plasma/ContainmentActions>
+#include <Plasma/Corona>
 #include <Plasma/PluginLoader>
 
-
 CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containment *containment, QObject *parent)
-    : QStandardItemModel(parent),
-      m_containment(containment),
-      m_tempConfigParent(QString(), KConfig::SimpleConfig)
+    : QStandardItemModel(parent)
+    , m_containment(containment)
+    , m_tempConfigParent(QString(), KConfig::SimpleConfig)
 {
     m_baseCfg = KConfigGroup(m_containment->corona()->config(), "ActionPlugins");
     m_baseCfg = KConfigGroup(&m_baseCfg, QString::number(m_containment->containmentType()));
 
-    QHash<QString, Plasma::ContainmentActions*> actions = containment->containmentActions();
+    QHash<QString, Plasma::ContainmentActions *> actions = containment->containmentActions();
 
-    QHashIterator<QString, Plasma::ContainmentActions*> i(actions);
+    QHashIterator<QString, Plasma::ContainmentActions *> i(actions);
     while (i.hasNext()) {
         i.next();
 
@@ -60,7 +59,8 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
         m_plugins[i.key()]->setContainment(m_containment);
         KConfigGroup cfg(&m_baseCfg, i.key());
         m_plugins[i.key()]->restore(cfg);
-        item->setData(m_plugins[i.key()]->metadata().rawData().value(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
+        item->setData(m_plugins[i.key()]->metadata().rawData().value(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(),
+                      HasConfigurationInterfaceRole);
 
         appendRow(item);
     }
@@ -73,15 +73,16 @@ CurrentContainmentActionsModel::~CurrentContainmentActionsModel()
 QHash<int, QByteArray> CurrentContainmentActionsModel::roleNames() const
 {
     return {
-        { ActionRole, "action" },
-        { PluginNameRole, "pluginName" },
-        { HasConfigurationInterfaceRole, "hasConfigurationInterface" },
+        {ActionRole, "action"},
+        {PluginNameRole, "pluginName"},
+        {HasConfigurationInterfaceRole, "hasConfigurationInterface"},
     };
 }
 
 QString CurrentContainmentActionsModel::mouseEventString(int mouseButton, int modifiers)
 {
-    QMouseEvent *mouse = new QMouseEvent(QEvent::MouseButtonRelease, QPoint(), (Qt::MouseButton)mouseButton, (Qt::MouseButton)mouseButton, (Qt::KeyboardModifiers) modifiers);
+    QMouseEvent *mouse =
+        new QMouseEvent(QEvent::MouseButtonRelease, QPoint(), (Qt::MouseButton)mouseButton, (Qt::MouseButton)mouseButton, (Qt::KeyboardModifiers)modifiers);
 
     const QString string = Plasma::ContainmentActions::eventToString(mouse);
 
@@ -92,7 +93,14 @@ QString CurrentContainmentActionsModel::mouseEventString(int mouseButton, int mo
 
 QString CurrentContainmentActionsModel::wheelEventString(const QPointF &delta, int mouseButtons, int modifiers)
 {
-    QWheelEvent *wheel = new QWheelEvent(QPointF(), QPointF(), delta.toPoint(), QPoint(), 0, qAbs(delta.x()) > qAbs(delta.y()) ? Qt::Horizontal : Qt::Vertical, (Qt::MouseButtons)mouseButtons, (Qt::KeyboardModifiers) modifiers);
+    QWheelEvent *wheel = new QWheelEvent(QPointF(),
+                                         QPointF(),
+                                         delta.toPoint(),
+                                         QPoint(),
+                                         0,
+                                         qAbs(delta.x()) > qAbs(delta.y()) ? Qt::Horizontal : Qt::Vertical,
+                                         (Qt::MouseButtons)mouseButtons,
+                                         (Qt::KeyboardModifiers)modifiers);
 
     const QString string = Plasma::ContainmentActions::eventToString(wheel);
 
@@ -124,7 +132,7 @@ bool CurrentContainmentActionsModel::append(const QString &action, const QString
 
     m_plugins[action] = actions;
     m_plugins[action]->setContainment(m_containment);
-    //empty config: the new one will ne in default state
+    // empty config: the new one will ne in default state
     KConfigGroup tempConfig(&m_tempConfigParent, "test");
     m_plugins[action]->restore(tempConfig);
     item->setData(m_plugins[action]->metadata().rawData().value(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
@@ -162,10 +170,12 @@ void CurrentContainmentActionsModel::update(int row, const QString &action, cons
             delete m_plugins[action];
             m_plugins[action] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, plugin);
             m_plugins[action]->setContainment(m_containment);
-            //empty config: the new one will ne in default state
+            // empty config: the new one will ne in default state
             KConfigGroup tempConfig(&m_tempConfigParent, "test");
             m_plugins[action]->restore(tempConfig);
-            setData(idx, m_plugins[action]->metadata().rawData().value(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
+            setData(idx,
+                    m_plugins[action]->metadata().rawData().value(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(),
+                    HasConfigurationInterfaceRole);
         }
 
         emit configurationChanged();
@@ -204,7 +214,7 @@ void CurrentContainmentActionsModel::showConfiguration(int row, QQuickItem *ctx)
     }
 
     Plasma::ContainmentActions *pluginInstance = m_plugins[action];
-    //put the config in the dialog
+    // put the config in the dialog
     QWidget *w = pluginInstance->createConfigurationInterface(configDlg);
     QString title;
     if (w) {
@@ -212,19 +222,17 @@ void CurrentContainmentActionsModel::showConfiguration(int row, QQuickItem *ctx)
         title = w->windowTitle();
     }
 
-    configDlg->setWindowTitle(title.isEmpty() ? i18n("Configure Mouse Actions Plugin") :title);
-    //put buttons below
-    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel,
-                                                        Qt::Horizontal, configDlg);
+    configDlg->setWindowTitle(title.isEmpty() ? i18n("Configure Mouse Actions Plugin") : title);
+    // put buttons below
+    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, configDlg);
     lay->addWidget(buttons);
 
     connect(buttons, &QDialogButtonBox::accepted, configDlg, &QDialog::accept);
     connect(buttons, &QDialogButtonBox::rejected, configDlg, &QDialog::reject);
 
-    QObject::connect(configDlg, &QDialog::accepted, pluginInstance,
-            [ pluginInstance] () {
-                pluginInstance->configurationAccepted();
-            });
+    QObject::connect(configDlg, &QDialog::accepted, pluginInstance, [pluginInstance]() {
+        pluginInstance->configurationAccepted();
+    });
 
     connect(configDlg, &QDialog::accepted, this, &CurrentContainmentActionsModel::configurationChanged);
 
@@ -243,7 +251,7 @@ void CurrentContainmentActionsModel::showAbout(int row, QQuickItem *ctx)
 
     KPluginMetaData info = m_plugins[action]->metadata();
 
-    auto aboutDialog = new KAboutPluginDialog(info, qobject_cast<QWidget*>(parent()));
+    auto aboutDialog = new KAboutPluginDialog(info, qobject_cast<QWidget *>(parent()));
     aboutDialog->setWindowIcon(QIcon::fromTheme(info.iconName()));
     aboutDialog->setAttribute(Qt::WA_DeleteOnClose);
 
@@ -257,13 +265,12 @@ void CurrentContainmentActionsModel::showAbout(int row, QQuickItem *ctx)
 
 void CurrentContainmentActionsModel::save()
 {
-
     foreach (const QString &removedTrigger, m_removedTriggers) {
         m_containment->setContainmentActions(removedTrigger, QString());
     }
     m_removedTriggers.clear();
 
-    QHashIterator<QString, Plasma::ContainmentActions*> i(m_plugins);
+    QHashIterator<QString, Plasma::ContainmentActions *> i(m_plugins);
     while (i.hasNext()) {
         i.next();
 

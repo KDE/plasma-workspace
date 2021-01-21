@@ -18,19 +18,20 @@
 
 #include "webshortcutrunner.h"
 
-#include <QDBusConnection>
-#include <QDesktopServices>
-#include <KLocalizedString>
-#include <KUriFilter>
-#include <KSharedConfig>
 #include <KApplicationTrader>
 #include <KIO/CommandLauncherJob>
-#include <KSycoca>
+#include <KLocalizedString>
+#include <KSharedConfig>
 #include <KShell>
+#include <KSycoca>
+#include <KUriFilter>
+#include <QDBusConnection>
+#include <QDesktopServices>
 
 WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args),
-      m_match(this), m_filterBeforeRun(false)
+    : Plasma::AbstractRunner(parent, metaData, args)
+    , m_match(this)
+    , m_filterBeforeRun(false)
 {
     setObjectName(QStringLiteral("Web Shortcut"));
     m_match.setType(Plasma::QueryMatch::ExactMatch);
@@ -38,8 +39,7 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &met
 
     // Listen for KUriFilter plugin config changes and update state...
     QDBusConnection sessionDbus = QDBusConnection::sessionBus();
-    sessionDbus.connect(QString(), QStringLiteral("/"), QStringLiteral("org.kde.KUriFilterPlugin"),
-                        QStringLiteral("configure"), this, SLOT(loadSyntaxes()));
+    sessionDbus.connect(QString(), QStringLiteral("/"), QStringLiteral("org.kde.KUriFilterPlugin"), QStringLiteral("configure"), this, SLOT(loadSyntaxes()));
     loadSyntaxes();
     configurePrivateBrowsingActions();
     connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, &WebshortcutRunner::configurePrivateBrowsingActions);
@@ -60,9 +60,9 @@ void WebshortcutRunner::loadSyntaxes()
 
     QList<Plasma::RunnerSyntax> syns;
     const QStringList providers = filterData.preferredSearchProviders();
-    for (const QString &provider: providers) {
+    for (const QString &provider : providers) {
         Plasma::RunnerSyntax s(filterData.queryForPreferredSearchProvider(provider), /*":q:",*/
-                              i18n("Opens \"%1\" in a web browser with the query :q:.", provider));
+                               i18n("Opens \"%1\" in a web browser with the query :q:.", provider));
         syns << s;
     }
 
@@ -120,7 +120,7 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
         }
     }
     if (key.isEmpty() || key == m_lastFailedKey) {
-        return;    // we already know it's going to suck ;)
+        return; // we already know it's going to suck ;)
     }
 
     // Do a fake user feedback text update if the keyword has not changed.
@@ -155,7 +155,7 @@ void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::
     QUrl location;
     if (m_filterBeforeRun) {
         m_filterBeforeRun = false;
-        KUriFilterData filterData (context.query());
+        KUriFilterData filterData(context.query());
         if (KUriFilter::self()->filterSearchUri(filterData, KUriFilter::WebShortcutFilter))
             location = filterData.uri();
     } else {

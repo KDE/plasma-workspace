@@ -22,12 +22,11 @@
 
 #include <QHash>
 
-#include <Plasma/Service>
 #include <Plasma/DataEngine>
+#include <Plasma/Service>
 
 #include "ActivityData.h"
 #include "ActivityRankingInterface.h"
-
 
 class QDBusServiceWatcher;
 
@@ -35,17 +34,16 @@ class ActivityService;
 
 namespace KActivities
 {
-    class Controller;
-    class Info;
+class Controller;
+class Info;
 }
-
 
 class ActivityEngine : public Plasma::DataEngine
 {
     Q_OBJECT
 
 public:
-    ActivityEngine(QObject* parent, const QVariantList& args);
+    ActivityEngine(QObject *parent, const QVariantList &args);
     Plasma::Service *serviceForSource(const QString &source) override;
     void init();
 

@@ -26,24 +26,21 @@ class SetupDeviceJob : public ModelJob
     Q_OBJECT
 
 public:
-    SetupDeviceJob(KFilePlacesModel* model, QModelIndex index,
-                   QObject* parent = nullptr)
+    SetupDeviceJob(KFilePlacesModel *model, QModelIndex index, QObject *parent = nullptr)
         : ModelJob(parent, model, index, QStringLiteral("Setup Device"))
     {
-        connect(model, &KFilePlacesModel::setupDone,
-                       this, &SetupDeviceJob::setupDone);
-        connect(model, &KFilePlacesModel::errorMessage,
-                       this, &SetupDeviceJob::setupError);
+        connect(model, &KFilePlacesModel::setupDone, this, &SetupDeviceJob::setupDone);
+        connect(model, &KFilePlacesModel::errorMessage, this, &SetupDeviceJob::setupError);
     }
 
-    void start()
-    override {
+    void start() override
+    {
         m_model->requestSetup(m_index);
     }
 
 private Q_SLOTS:
-    void setupDone(const QModelIndex& index, bool success);
-    void setupError(const QString& message);
+    void setupDone(const QModelIndex &index, bool success);
+    void setupError(const QString &message);
 };
 
 #endif // SETUPDEVICEJOB_H

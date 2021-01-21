@@ -26,19 +26,17 @@
 
 #include <Plasma/DataEngineConsumer>
 
-#include <QXmlStreamReader>
 #include <QDateTime>
+#include <QXmlStreamReader>
 
 class KJob;
 namespace KIO
 {
-    class Job;
+class Job;
 } // namespace KIO
-
 
 class WeatherData
 {
-
 public:
     WeatherData();
 
@@ -69,8 +67,7 @@ public:
     float windchill_C;
     float visibility;
 
-    struct Forecast
-    {
+    struct Forecast {
         QString day;
         QString summary;
         QString low;
@@ -88,7 +85,6 @@ public:
 Q_DECLARE_TYPEINFO(WeatherData::Forecast, Q_MOVABLE_TYPE);
 Q_DECLARE_TYPEINFO(WeatherData, Q_MOVABLE_TYPE);
 
-
 class Q_DECL_EXPORT NOAAIon : public IonInterface, public Plasma::DataEngineConsumer
 {
     Q_OBJECT
@@ -98,11 +94,11 @@ public:
     ~NOAAIon() override;
 
 public: // IonInterface API
-    bool updateIonSource(const QString& source) override;
+    bool updateIonSource(const QString &source) override;
 
 public Q_SLOTS:
     // for solar data pushes from the time engine
-    void dataUpdated(const QString& sourceName, const Plasma::DataEngine::Data& data);
+    void dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data);
 
 protected: // IonInterface API
     void reset() override;
@@ -118,44 +114,44 @@ private Q_SLOTS:
     void forecast_slotJobFinished(KJob *);
 
 private:
-    void updateWeather(const QString& source);
+    void updateWeather(const QString &source);
 
     /* NOAA Methods - Internal for Ion */
     QMap<QString, ConditionIcons> setupConditionIconMappings() const;
-    QMap<QString, ConditionIcons> const & conditionIcons() const;
+    QMap<QString, ConditionIcons> const &conditionIcons() const;
     QMap<QString, WindDirections> setupWindIconMappings() const;
-    QMap<QString, WindDirections> const& windIcons() const;
+    QMap<QString, WindDirections> const &windIcons() const;
 
     // Current Conditions Weather info
-    //bool night(const QString& source);
-    IonInterface::ConditionIcons getConditionIcon(const QString& weather, bool isDayTime) const;
+    // bool night(const QString& source);
+    IonInterface::ConditionIcons getConditionIcon(const QString &weather, bool isDayTime) const;
 
     // Load and Parse the place XML listing
     void getXMLSetup() const;
     bool readXMLSetup();
 
     // Load and parse the specific place(s)
-    void getXMLData(const QString& source);
-    bool readXMLData(const QString& source, QXmlStreamReader& xml);
+    void getXMLData(const QString &source);
+    bool readXMLData(const QString &source, QXmlStreamReader &xml);
 
     // Load and parse upcoming forecast for the next N days
-    void getForecast(const QString& source);
-    void readForecast(const QString& source, QXmlStreamReader& xml);
+    void getForecast(const QString &source);
+    void readForecast(const QString &source, QXmlStreamReader &xml);
 
     // Check if place specified is valid or not
-    QStringList validate(const QString& source) const;
+    QStringList validate(const QString &source) const;
 
     // Catchall for unknown XML tags
-    void parseUnknownElement(QXmlStreamReader& xml) const;
+    void parseUnknownElement(QXmlStreamReader &xml) const;
 
     // Parse weather XML data
-    void parseWeatherSite(WeatherData& data, QXmlStreamReader& xml);
+    void parseWeatherSite(WeatherData &data, QXmlStreamReader &xml);
     void parseStationID();
     void parseStationList();
 
-    void parseFloat(float& value, const QString& string);
-    void parseFloat(float& value, QXmlStreamReader& xml);
-    void parseDouble(double& value, QXmlStreamReader& xml);
+    void parseFloat(float &value, const QString &string);
+    void parseFloat(float &value, QXmlStreamReader &xml);
+    void parseDouble(double &value, QXmlStreamReader &xml);
 
 private:
     struct XMLMapInfo {
@@ -172,7 +168,7 @@ private:
     QHash<QString, WeatherData> m_weatherData;
 
     // Store KIO jobs
-    QHash<KJob *, QXmlStreamReader*> m_jobXml;
+    QHash<KJob *, QXmlStreamReader *> m_jobXml;
     QHash<KJob *, QString> m_jobList;
     QXmlStreamReader m_xmlSetup;
 

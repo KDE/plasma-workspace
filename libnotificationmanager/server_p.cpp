@@ -22,8 +22,8 @@
 
 #include "debug.h"
 
-#include "notificationsadaptor.h"
 #include "notificationmanageradaptor.h"
+#include "notificationsadaptor.h"
 
 #include "notification_p.h"
 
@@ -45,7 +45,7 @@ using namespace NotificationManager;
 ServerPrivate::ServerPrivate(QObject *parent)
     : QObject(parent)
     , m_inhibitionWatcher(new QDBusServiceWatcher(this))
-    , m_notificationWatchers (new QDBusServiceWatcher(this))
+    , m_notificationWatchers(new QDBusServiceWatcher(this))
 {
     m_inhibitionWatcher->setConnection(QDBusConnection::sessionBus());
     m_inhibitionWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
@@ -95,7 +95,7 @@ bool ServerPrivate::init()
 
     if (!m_dbusObjectValid) { // if already registered, don't fail here
         m_dbusObjectValid = QDBusConnection::sessionBus().registerObject(notificationServicePath(), this);
-     }
+    }
 
     if (!m_dbusObjectValid) {
         qCWarning(NOTIFICATIONMANAGER) << "Failed to register Notification DBus object";
@@ -114,9 +114,8 @@ bool ServerPrivate::init()
     }
 
     auto registration = dbusIface->registerService(notificationServiceName(),
-        master ? QDBusConnectionInterface::ReplaceExistingService : QDBusConnectionInterface::DontQueueService,
-        master ? QDBusConnectionInterface::DontAllowReplacement : QDBusConnectionInterface::AllowReplacement
-    );
+                                                   master ? QDBusConnectionInterface::ReplaceExistingService : QDBusConnectionInterface::DontQueueService,
+                                                   master ? QDBusConnectionInterface::DontAllowReplacement : QDBusConnectionInterface::AllowReplacement);
     if (registration.value() != QDBusConnectionInterface::ServiceRegistered) {
         qCWarning(NOTIFICATIONMANAGER) << "Failed to register Notification service on DBus";
         return false;
@@ -132,8 +131,12 @@ bool ServerPrivate::init()
     if (broadcastsEnabled) {
         qCDebug(NOTIFICATIONMANAGER) << "Notification server is configured to listen for broadcasts";
         // NOTE Keep disconnect() call in onServiceOwnershipLost in sync if you change this!
-        QDBusConnection::systemBus().connect({}, {}, QStringLiteral("org.kde.BroadcastNotifications"),
-                                             QStringLiteral("Notify"), this, SLOT(onBroadcastNotification(QMap<QString,QVariant>)));
+        QDBusConnection::systemBus().connect({},
+                                             {},
+                                             QStringLiteral("org.kde.BroadcastNotifications"),
+                                             QStringLiteral("Notify"),
+                                             this,
+                                             SLOT(onBroadcastNotification(QMap<QString, QVariant>)));
     }
 
     m_valid = true;
@@ -142,9 +145,14 @@ bool ServerPrivate::init()
     return true;
 }
 
-uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QString &app_icon,
-                           const QString &summary, const QString &body, const QStringList &actions,
-                           const QVariantMap &hints, int timeout)
+uint ServerPrivate::Notify(const QString &app_name,
+                           uint replaces_id,
+                           const QString &app_icon,
+                           const QString &summary,
+                           const QString &body,
+                           const QStringList &actions,
+                           const QVariantMap &hints,
+                           int timeout)
 {
     const bool wasReplaced = replaces_id > 0;
     uint notificationId = 0;
@@ -180,7 +188,8 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
     uint pid = 0;
     if (notification.desktopEntry().isEmpty() || notification.applicationName().isEmpty()) {
         if (notification.desktopEntry().isEmpty() && notification.applicationName().isEmpty()) {
-            qCInfo(NOTIFICATIONMANAGER) << "Notification from service" << message().service() << "didn't contain any identification information, this is an application bug!";
+            qCInfo(NOTIFICATIONMANAGER) << "Notification from service" << message().service()
+                                        << "didn't contain any identification information, this is an application bug!";
         }
         QDBusReply<uint> pidReply = connection().interface()->servicePid(message().service());
         if (pidReply.isValid()) {
@@ -216,14 +225,10 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
     }
 
     // If multiple identical notifications are sent in quick succession, refuse the request
-    if (m_lastNotification.applicationName() == notification.applicationName()
-            && m_lastNotification.summary() == notification.summary()
-            && m_lastNotification.body() == notification.body()
-            && m_lastNotification.desktopEntry() == notification.desktopEntry()
-            && m_lastNotification.eventId() == notification.eventId()
-            && m_lastNotification.actionNames() == notification.actionNames()
-            && m_lastNotification.urls() == notification.urls()
-            && m_lastNotification.created().msecsTo(notification.created()) < 1000) {
+    if (m_lastNotification.applicationName() == notification.applicationName() && m_lastNotification.summary() == notification.summary()
+        && m_lastNotification.body() == notification.body() && m_lastNotification.desktopEntry() == notification.desktopEntry()
+        && m_lastNotification.eventId() == notification.eventId() && m_lastNotification.actionNames() == notification.actionNames()
+        && m_lastNotification.urls() == notification.urls() && m_lastNotification.created().msecsTo(notification.created()) < 1000) {
         qCDebug(NOTIFICATIONMANAGER) << "Discarding excess notification creation request";
 
         sendErrorReply(QStringLiteral("org.freedesktop.Notifications.Error.ExcessNotificationGeneration"),
@@ -235,33 +240,29 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
 
     if (wasReplaced) {
         notification.resetUpdated();
-        emit static_cast<Server*>(parent())->notificationReplaced(replaces_id, notification);
+        emit static_cast<Server *>(parent())->notificationReplaced(replaces_id, notification);
     } else {
-        emit static_cast<Server*>(parent())->notificationAdded(notification);
+        emit static_cast<Server *>(parent())->notificationAdded(notification);
     }
 
     // currently we dispatch all notification, this is ugly
     // TODO: come up with proper authentication/user selection
     for (const QString &service : m_notificationWatchers->watchedServices()) {
-        QDBusMessage msg = QDBusMessage::createMethodCall(
-            service,
-            QStringLiteral("/NotificationWatcher"),
-            QStringLiteral("org.kde.NotificationWatcher"),
-            QStringLiteral("Notify")
-        );
-        msg.setArguments({
-            notificationId,
-            notification.applicationName(),
-            replaces_id,
-            notification.applicationIconName(),
-            notification.summary(),
-            // we pass raw body data since this data goes through another sanitization
-            // in WatchedNotificationsModel when notification object is created.
-            notification.rawBody(),
-            actions,
-            hints,
-            notification.timeout()
-        });
+        QDBusMessage msg = QDBusMessage::createMethodCall(service,
+                                                          QStringLiteral("/NotificationWatcher"),
+                                                          QStringLiteral("org.kde.NotificationWatcher"),
+                                                          QStringLiteral("Notify"));
+        msg.setArguments({notificationId,
+                          notification.applicationName(),
+                          replaces_id,
+                          notification.applicationIconName(),
+                          notification.summary(),
+                          // we pass raw body data since this data goes through another sanitization
+                          // in WatchedNotificationsModel when notification object is created.
+                          notification.rawBody(),
+                          actions,
+                          hints,
+                          notification.timeout()});
         QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
     }
 
@@ -271,39 +272,33 @@ uint ServerPrivate::Notify(const QString &app_name, uint replaces_id, const QStr
 void ServerPrivate::CloseNotification(uint id)
 {
     for (const QString &service : m_notificationWatchers->watchedServices()) {
-        QDBusMessage msg = QDBusMessage::createMethodCall(
-            service,
-            QStringLiteral("/NotificationWatcher"),
-            QStringLiteral("org.kde.NotificationWatcher"),
-            QStringLiteral("CloseNotification")
-        );
-        msg.setArguments({
-            id
-        });
+        QDBusMessage msg = QDBusMessage::createMethodCall(service,
+                                                          QStringLiteral("/NotificationWatcher"),
+                                                          QStringLiteral("org.kde.NotificationWatcher"),
+                                                          QStringLiteral("CloseNotification"));
+        msg.setArguments({id});
         QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
     }
     // spec says "If the notification no longer exists, an empty D-BUS Error message is sent back."
-    static_cast<Server*>(parent())->closeNotification(id, Server::CloseReason::Revoked);
+    static_cast<Server *>(parent())->closeNotification(id, Server::CloseReason::Revoked);
 }
 
 QStringList ServerPrivate::GetCapabilities() const
 {
     // should this be configurable somehow so the UI can tell what it implements?
-    return QStringList{
-        QStringLiteral("body"),
-        QStringLiteral("body-hyperlinks"),
-        QStringLiteral("body-markup"),
-        QStringLiteral("body-images"),
-        QStringLiteral("icon-static"),
-        QStringLiteral("actions"),
-        QStringLiteral("inline-reply"),
+    return QStringList{QStringLiteral("body"),
+                       QStringLiteral("body-hyperlinks"),
+                       QStringLiteral("body-markup"),
+                       QStringLiteral("body-images"),
+                       QStringLiteral("icon-static"),
+                       QStringLiteral("actions"),
+                       QStringLiteral("inline-reply"),
 
-        QStringLiteral("x-kde-urls"),
-        QStringLiteral("x-kde-origin-name"),
-        QStringLiteral("x-kde-display-appname"),
+                       QStringLiteral("x-kde-urls"),
+                       QStringLiteral("x-kde-origin-name"),
+                       QStringLiteral("x-kde-display-appname"),
 
-        QStringLiteral("inhibitions")
-    };
+                       QStringLiteral("inhibitions")};
 }
 
 QString ServerPrivate::GetServerInformation(QString &vendor, QString &version, QString &specVersion) const
@@ -341,16 +336,14 @@ void ServerPrivate::onBroadcastNotification(const QMap<QString, QVariant> &prope
         timeout = -1; // -1 = server default, 0 would be "persistent"
     }
 
-    Notify(
-        properties.value(QStringLiteral("appName")).toString(),
-        0, // replaces_id
-        properties.value(QStringLiteral("appIcon")).toString(),
-        properties.value(QStringLiteral("summary")).toString(),
-        properties.value(QStringLiteral("body")).toString(),
-        {}, // no actions
-        properties.value(QStringLiteral("hints")).toMap(),
-        timeout
-    );
+    Notify(properties.value(QStringLiteral("appName")).toString(),
+           0, // replaces_id
+           properties.value(QStringLiteral("appIcon")).toString(),
+           properties.value(QStringLiteral("summary")).toString(),
+           properties.value(QStringLiteral("body")).toString(),
+           {}, // no actions
+           properties.value(QStringLiteral("hints")).toMap(),
+           timeout);
 }
 
 uint ServerPrivate::add(const Notification &notification)
@@ -360,9 +353,9 @@ uint ServerPrivate::add(const Notification &notification)
         ++m_highestNotificationId;
         notification.d->id = m_highestNotificationId;
 
-        emit static_cast<Server*>(parent())->notificationAdded(notification);
+        emit static_cast<Server *>(parent())->notificationAdded(notification);
     } else {
-        emit static_cast<Server*>(parent())->notificationReplaced(notification.id(), notification);
+        emit static_cast<Server *>(parent())->notificationReplaced(notification.id(), notification);
     }
 
     return notification.id();
@@ -374,10 +367,8 @@ void ServerPrivate::sendReplyText(const QString &dbusService, uint notificationI
         qCWarning(NOTIFICATIONMANAGER) << "Sending notification reply text for notification" << notificationId << "untargeted";
     }
 
-    QDBusMessage msg = QDBusMessage::createTargetedSignal(dbusService,
-                                                          notificationServicePath(),
-                                                          notificationServiceName(),
-                                                          QStringLiteral("NotificationReplied"));
+    QDBusMessage msg =
+        QDBusMessage::createTargetedSignal(dbusService, notificationServicePath(), notificationServiceName(), QStringLiteral("NotificationReplied"));
     msg.setArguments({notificationId, text});
     QDBusConnection::sessionBus().send(msg);
 }
@@ -405,12 +396,7 @@ uint ServerPrivate::Inhibit(const QString &desktop_entry, const QString &reason,
 
     const bool oldExternalInhibited = externalInhibited();
 
-    m_externalInhibitions.insert(m_highestInhibitionCookie, {
-        desktop_entry,
-        applicationName,
-        reason,
-        hints
-    });
+    m_externalInhibitions.insert(m_highestInhibitionCookie, {desktop_entry, applicationName, reason, hints});
 
     m_inhibitionServices.insert(m_highestInhibitionCookie, dbusService);
 
@@ -430,12 +416,15 @@ void ServerPrivate::onServiceOwnershipLost(const QString &serviceName)
 
     qCDebug(NOTIFICATIONMANAGER) << "Lost ownership of" << serviceName << "service";
 
-    disconnect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceUnregistered,
-               this, &ServerPrivate::onServiceOwnershipLost);
+    disconnect(QDBusConnection::sessionBus().interface(), &QDBusConnectionInterface::serviceUnregistered, this, &ServerPrivate::onServiceOwnershipLost);
     disconnect(this, &ServerPrivate::inhibitedChanged, this, &ServerPrivate::onInhibitedChanged);
 
-    QDBusConnection::systemBus().disconnect({}, {}, QStringLiteral("org.kde.BroadcastNotifications"),
-                                         QStringLiteral("Notify"), this, SLOT(onBroadcastNotification(QMap<QString,QVariant>)));
+    QDBusConnection::systemBus().disconnect({},
+                                            {},
+                                            QStringLiteral("org.kde.BroadcastNotifications"),
+                                            QStringLiteral("Notify"),
+                                            this,
+                                            SLOT(onBroadcastNotification(QMap<QString, QVariant>)));
 
     m_valid = false;
 
@@ -462,15 +451,13 @@ void ServerPrivate::onInhibitionServiceUnregistered(const QString &serviceName)
 void ServerPrivate::onInhibitedChanged()
 {
     // emit DBus change signal...
-    QDBusMessage signal = QDBusMessage::createSignal(
-        notificationServicePath(),
-        QStringLiteral("org.freedesktop.DBus.Properties"),
-        QStringLiteral("PropertiesChanged")
-    );
+    QDBusMessage signal =
+        QDBusMessage::createSignal(notificationServicePath(), QStringLiteral("org.freedesktop.DBus.Properties"), QStringLiteral("PropertiesChanged"));
 
     signal.setArguments({
         notificationServiceInterface(),
-        QVariantMap{ // updated
+        QVariantMap{
+            // updated
             {QStringLiteral("Inhibited"), inhibited()},
         },
         QStringList() // invalidated
@@ -547,7 +534,7 @@ void ServerPrivate::UnRegisterWatcher()
     m_notificationWatchers->removeWatchedService(message().service());
 }
 
-void ServerPrivate::InvokeAction(uint id, const QString& actionKey)
+void ServerPrivate::InvokeAction(uint id, const QString &actionKey)
 {
     ActionInvoked(id, actionKey);
 }

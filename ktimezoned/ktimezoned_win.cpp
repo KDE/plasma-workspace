@@ -24,18 +24,18 @@
 #include <climits>
 #include <cstdlib>
 
-#include <QStringList>
-#include <QTextStream>
 #include <QDBusConnection>
 #include <QDBusMessage>
-#include <QThread>
 #include <QDebug>
+#include <QStringList>
+#include <QTextStream>
+#include <QThread>
 
+#include <kcodecs.h>
+#include <kconfiggroup.h>
+#include <kdebug.h>
 #include <kglobal.h>
 #include <klocale.h>
-#include <kcodecs.h>
-#include <kdebug.h>
-#include <kconfiggroup.h>
 
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
@@ -47,14 +47,15 @@
 K_PLUGIN_CLASS_WITH_JSON(KTimeZoned, "ktimezoned.json")
 
 // Config file entry names
-const char LOCAL_ZONE[]     = "LocalZone";     // name of local time zone
+const char LOCAL_ZONE[] = "LocalZone"; // name of local time zone
 static const TCHAR currentTimeZoneKey[] = TEXT("System\\CurrentControlSet\\Control\\TimeZoneInformation");
 
 class RegistryWatcherThread : public QThread
 {
-    public:
-    RegistryWatcherThread(KTimeZoned* parent)
-    :QThread(parent),q(parent)
+public:
+    RegistryWatcherThread(KTimeZoned *parent)
+        : QThread(parent)
+        , q(parent)
     {
     }
 
@@ -65,34 +66,32 @@ class RegistryWatcherThread : public QThread
 
     void run()
     {
-//FIXME: the timezonechange needs to be handled differently
+// FIXME: the timezonechange needs to be handled differently
 #ifndef _WIN32
-        if ( RegOpenKeyEx( HKEY_LOCAL_MACHINE, currentTimeZoneKey, 0, KEY_READ, &key ) == ERROR_SUCCESS )
-        {
-            while(true)
-            {
-                RegNotifyChangeKeyValue( key, true, REG_NOTIFY_CHANGE_LAST_SET,
-                                         NULL, false /*async, we want it to block*/ );
+        if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, currentTimeZoneKey, 0, KEY_READ, &key) == ERROR_SUCCESS) {
+            while (true) {
+                RegNotifyChangeKeyValue(key, true, REG_NOTIFY_CHANGE_LAST_SET, NULL, false /*async, we want it to block*/);
                 q->updateLocalZone();
             }
         }
 #endif
     }
-    private:
-        KTimeZoned* q;
-        HKEY key;
+
+private:
+    KTimeZoned *q;
+    HKEY key;
 };
 
-KTimeZoned::KTimeZoned(QObject* parent, const QList<QVariant>& l)
-  : KTimeZonedBase(parent, l), mRegistryWatcherThread(0)
+KTimeZoned::KTimeZoned(QObject *parent, const QList<QVariant> &l)
+    : KTimeZonedBase(parent, l)
+    , mRegistryWatcherThread(0)
 {
     init(false);
 }
 
 KTimeZoned::~KTimeZoned()
 {
-    if (mRegistryWatcherThread)
-    {
+    if (mRegistryWatcherThread) {
         mRegistryWatcherThread->quit();
         mRegistryWatcherThread->wait(100);
     }
@@ -101,8 +100,7 @@ KTimeZoned::~KTimeZoned()
 
 void KTimeZoned::init(bool restart)
 {
-    if (restart)
-    {
+    if (restart) {
         qDebug() << "KTimeZoned::init(restart)";
         delete mRegistryWatcherThread;
         mRegistryWatcherThread = 0;
@@ -115,8 +113,7 @@ void KTimeZoned::init(bool restart)
     mConfigLocalZone = group.readEntry(LOCAL_ZONE);
 
     updateLocalZone();
-    if (!mRegistryWatcherThread)
-    {
+    if (!mRegistryWatcherThread) {
         mRegistryWatcherThread = new RegistryWatcherThread(this);
         mRegistryWatcherThread->start();
     }
@@ -130,12 +127,12 @@ void KTimeZoned::updateLocalZone()
     // holds the time zone database. The TZI binary value is the TIME_ZONE_INFORMATION structure.
 
     TIME_ZONE_INFORMATION tzinfo;
-    DWORD res =  GetTimeZoneInformation(&tzinfo);
-    if (res == TIME_ZONE_ID_INVALID) return; // hm
-    mLocalZone = QString::fromUtf16( reinterpret_cast<ushort*>( tzinfo.StandardName ) );
+    DWORD res = GetTimeZoneInformation(&tzinfo);
+    if (res == TIME_ZONE_ID_INVALID)
+        return; // hm
+    mLocalZone = QString::fromUtf16(reinterpret_cast<ushort *>(tzinfo.StandardName));
 
-    if (mConfigLocalZone != mLocalZone)
-    {
+    if (mConfigLocalZone != mLocalZone) {
         qDebug() << "Local timezone is now: " << mLocalZone;
         KConfig config(QLatin1String("ktimezonedrc"));
         KConfigGroup group(&config, "TimeZones");
@@ -147,5 +144,3 @@ void KTimeZoned::updateLocalZone()
         QDBusConnection::sessionBus().send(message);
     }
 }
-
-

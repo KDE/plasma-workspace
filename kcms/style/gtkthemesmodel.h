@@ -26,7 +26,8 @@
 class QStringList;
 class QString;
 
-class GtkThemesModel : public QAbstractListModel {
+class GtkThemesModel : public QAbstractListModel
+{
     Q_OBJECT
 
     Q_PROPERTY(QString selectedTheme READ selectedTheme WRITE setSelectedTheme NOTIFY selectedThemeChanged)
@@ -69,4 +70,3 @@ private:
     QString m_selectedTheme;
     QMap<QString, QString> m_themesList;
 };
-

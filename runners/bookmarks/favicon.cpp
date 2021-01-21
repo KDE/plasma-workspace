@@ -20,7 +20,8 @@
 
 #include "favicon.h"
 
-Favicon::Favicon(QObject *parent) :
-    QObject(parent), m_default_icon(QIcon::fromTheme(QStringLiteral("bookmarks")))
-{   
+Favicon::Favicon(QObject *parent)
+    : QObject(parent)
+    , m_default_icon(QIcon::fromTheme(QStringLiteral("bookmarks")))
+{
 }

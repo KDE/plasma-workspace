@@ -29,7 +29,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 /**
  * @short A proxy tasks model for flattening a tree-structured tasks model
  * into a list-structured tasks model.
@@ -40,8 +39,7 @@ namespace TaskManager
  * @author Eike Hein <hein@kde.org>
  **/
 
-class TASKMANAGER_EXPORT FlattenTaskGroupsProxyModel : public KDescendantsProxyModel,
-    public AbstractTasksProxyModelIface
+class TASKMANAGER_EXPORT FlattenTaskGroupsProxyModel : public KDescendantsProxyModel, public AbstractTasksProxyModelIface
 {
     Q_OBJECT
 
@@ -53,6 +51,7 @@ public:
 
 protected:
     QModelIndex mapIfaceToSource(const QModelIndex &index) const override;
+
 private:
     class Private;
     QScopedPointer<Private> d;

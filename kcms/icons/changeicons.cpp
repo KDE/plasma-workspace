@@ -17,11 +17,11 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QApplication>
-#include <KLocalizedString>
 #include "iconssettings.h"
+#include <KLocalizedString>
+#include <QApplication>
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
@@ -33,7 +33,7 @@ int main(int argc, char** argv)
     const QStringList args = app.arguments();
     QString themeName = args.last();
     int idx = themeName.lastIndexOf('/');
-    if (idx>=0) {
+    if (idx >= 0) {
         themeName = themeName.mid(idx + 1);
     }
 

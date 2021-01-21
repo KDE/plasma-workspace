@@ -20,19 +20,18 @@
 #ifndef WIDGET
 #define WIDGET
 
-#include <QWeakPointer>
 #include <QJSValue>
+#include <QWeakPointer>
 
 #include "applet.h"
 
 namespace Plasma
 {
-    class Applet;
+class Applet;
 } // namespace Plasma
 
 namespace WorkspaceScripting
 {
-
 class Widget : public Applet
 {
     Q_OBJECT
@@ -44,7 +43,7 @@ class Widget : public Applet
     Q_PROPERTY(QStringList globalConfigKeys READ globalConfigKeys)
     Q_PROPERTY(QStringList globalConfigGroups READ globalConfigGroups)
     Q_PROPERTY(int index WRITE setIndex READ index)
-    //We pass our js based QRect wrapper instead of a simple QRectF
+    // We pass our js based QRect wrapper instead of a simple QRectF
     Q_PROPERTY(QJSValue geometry WRITE setGeometry READ geometry)
     Q_PROPERTY(QStringList currentConfigGroup WRITE setCurrentConfigGroup READ currentConfigGroup)
     Q_PROPERTY(QString globalShortcut WRITE setGlobalShortcut READ globalShorcut)
@@ -78,10 +77,9 @@ public Q_SLOTS:
 
 private:
     class Private;
-    Private * const d;
+    Private *const d;
 };
 
 }
 
 #endif
-

@@ -20,8 +20,8 @@
 #ifndef PLASMOIDREGISTRY_H
 #define PLASMOIDREGISTRY_H
 
-#include <QObject>
 #include <QMap>
+#include <QObject>
 #include <QPointer>
 
 class DBusServiceObserver;

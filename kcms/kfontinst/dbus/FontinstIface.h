@@ -11,29 +11,31 @@
 #ifndef FONTINSTIFACE_H_1402519768
 #define FONTINSTIFACE_H_1402519768
 
-#include <QObject>
+#include "Family.h"
 #include <QByteArray>
+#include <QDBusAbstractInterface>
+#include <QDBusConnectionInterface>
+#include <QDBusMetaType>
+#include <QDBusPendingReply>
+#include <QDBusReply>
 #include <QList>
 #include <QMap>
+#include <QObject>
 #include <QString>
 #include <QStringList>
 #include <QVariant>
-#include <QDBusAbstractInterface>
-#include <QDBusConnectionInterface>
-#include <QDBusPendingReply>
-#include <QDBusReply>
-#include <QDBusMetaType>
-#include "Family.h"
 
 /*
  * Proxy class for interface org.kde.fontinst
  */
-class OrgKdeFontinstInterface: public QDBusAbstractInterface
+class OrgKdeFontinstInterface : public QDBusAbstractInterface
 {
     Q_OBJECT
 public:
     static inline const char *staticInterfaceName()
-    { return "org.kde.fontinst"; }
+    {
+        return "org.kde.fontinst";
+    }
 
 public:
     OrgKdeFontinstInterface(const QString &service, const QString &path, const QDBusConnection &connection, QObject *parent = nullptr);
@@ -44,14 +46,16 @@ public Q_SLOTS: // METHODS
     inline Q_NOREPLY void disable(const QString &family, uint style, bool inSystem, int pid, bool checkConfig)
     {
         QList<QVariant> argumentList;
-        argumentList << QVariant::fromValue(family) << QVariant::fromValue(style) << QVariant::fromValue(inSystem) << QVariant::fromValue(pid) << QVariant::fromValue(checkConfig);
+        argumentList << QVariant::fromValue(family) << QVariant::fromValue(style) << QVariant::fromValue(inSystem) << QVariant::fromValue(pid)
+                     << QVariant::fromValue(checkConfig);
         callWithArgumentList(QDBus::NoBlock, QLatin1String("disable"), argumentList);
     }
 
     inline Q_NOREPLY void enable(const QString &family, uint style, bool inSystem, int pid, bool checkConfig)
     {
         QList<QVariant> argumentList;
-        argumentList << QVariant::fromValue(family) << QVariant::fromValue(style) << QVariant::fromValue(inSystem) << QVariant::fromValue(pid) << QVariant::fromValue(checkConfig);
+        argumentList << QVariant::fromValue(family) << QVariant::fromValue(style) << QVariant::fromValue(inSystem) << QVariant::fromValue(pid)
+                     << QVariant::fromValue(checkConfig);
         callWithArgumentList(QDBus::NoBlock, QLatin1String("enable"), argumentList);
     }
 
@@ -65,7 +69,8 @@ public Q_SLOTS: // METHODS
     inline Q_NOREPLY void install(const QString &file, bool createAfm, bool toSystem, int pid, bool checkConfig)
     {
         QList<QVariant> argumentList;
-        argumentList << QVariant::fromValue(file) << QVariant::fromValue(createAfm) << QVariant::fromValue(toSystem) << QVariant::fromValue(pid) << QVariant::fromValue(checkConfig);
+        argumentList << QVariant::fromValue(file) << QVariant::fromValue(createAfm) << QVariant::fromValue(toSystem) << QVariant::fromValue(pid)
+                     << QVariant::fromValue(checkConfig);
         callWithArgumentList(QDBus::NoBlock, QLatin1String("install"), argumentList);
     }
 
@@ -79,7 +84,8 @@ public Q_SLOTS: // METHODS
     inline Q_NOREPLY void move(const QString &family, uint style, bool toSystem, int pid, bool checkConfig)
     {
         QList<QVariant> argumentList;
-        argumentList << QVariant::fromValue(family) << QVariant::fromValue(style) << QVariant::fromValue(toSystem) << QVariant::fromValue(pid) << QVariant::fromValue(checkConfig);
+        argumentList << QVariant::fromValue(family) << QVariant::fromValue(style) << QVariant::fromValue(toSystem) << QVariant::fromValue(pid)
+                     << QVariant::fromValue(checkConfig);
         callWithArgumentList(QDBus::NoBlock, QLatin1String("move"), argumentList);
     }
 
@@ -93,7 +99,8 @@ public Q_SLOTS: // METHODS
     inline Q_NOREPLY void removeFile(const QString &family, uint style, const QString &file, bool fromSystem, int pid, bool checkConfig)
     {
         QList<QVariant> argumentList;
-        argumentList << QVariant::fromValue(family) << QVariant::fromValue(style) << QVariant::fromValue(file) << QVariant::fromValue(fromSystem) << QVariant::fromValue(pid) << QVariant::fromValue(checkConfig);
+        argumentList << QVariant::fromValue(family) << QVariant::fromValue(style) << QVariant::fromValue(file) << QVariant::fromValue(fromSystem)
+                     << QVariant::fromValue(pid) << QVariant::fromValue(checkConfig);
         callWithArgumentList(QDBus::NoBlock, QLatin1String("removeFile"), argumentList);
     }
 
@@ -120,21 +127,24 @@ public Q_SLOTS: // METHODS
     inline Q_NOREPLY void uninstall(const QString &family, uint style, bool fromSystem, int pid, bool checkConfig)
     {
         QList<QVariant> argumentList;
-        argumentList << QVariant::fromValue(family) << QVariant::fromValue(style) << QVariant::fromValue(fromSystem) << QVariant::fromValue(pid) << QVariant::fromValue(checkConfig);
+        argumentList << QVariant::fromValue(family) << QVariant::fromValue(style) << QVariant::fromValue(fromSystem) << QVariant::fromValue(pid)
+                     << QVariant::fromValue(checkConfig);
         callWithArgumentList(QDBus::NoBlock, QLatin1String("uninstall"), argumentList);
     }
 
 Q_SIGNALS: // SIGNALS
-    void fontList(int pid, const QList<KFI::Families> & families);
-    void fontStat(int pid, const KFI::Family & family);
-    void fontsAdded(const KFI::Families & families);
-    void fontsRemoved(const KFI::Families & families);
+    void fontList(int pid, const QList<KFI::Families> &families);
+    void fontStat(int pid, const KFI::Family &family);
+    void fontsAdded(const KFI::Families &families);
+    void fontsRemoved(const KFI::Families &families);
     void status(int pid, int value);
 };
 
-namespace org {
-  namespace kde {
-    typedef ::OrgKdeFontinstInterface fontinst;
-  }
+namespace org
+{
+namespace kde
+{
+typedef ::OrgKdeFontinstInterface fontinst;
+}
 }
 #endif

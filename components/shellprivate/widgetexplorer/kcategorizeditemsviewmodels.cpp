@@ -23,8 +23,8 @@
 
 #define COLUMN_COUNT 4
 
-namespace KCategorizedItemsViewModels {
-
+namespace KCategorizedItemsViewModels
+{
 // AbstractItem
 
 QString AbstractItem::name() const
@@ -60,24 +60,19 @@ int AbstractItem::running() const
 
 bool AbstractItem::matches(const QString &pattern) const
 {
-    return
-        name().contains(pattern, Qt::CaseInsensitive) ||
-        description().contains(pattern, Qt::CaseInsensitive);
+    return name().contains(pattern, Qt::CaseInsensitive) || description().contains(pattern, Qt::CaseInsensitive);
 }
 
 // DefaultFilterModel
 
-DefaultFilterModel::DefaultFilterModel(QObject *parent) :
-    QStandardItemModel(0, 1, parent)
+DefaultFilterModel::DefaultFilterModel(QObject *parent)
+    : QStandardItemModel(0, 1, parent)
 {
     setHeaderData(1, Qt::Horizontal, i18n("Filters"));
 
-    connect(this, &QAbstractItemModel::modelReset,
-            this, &DefaultFilterModel::countChanged);
-    connect(this, &QAbstractItemModel::rowsInserted,
-            this, &DefaultFilterModel::countChanged);
-    connect(this, &QAbstractItemModel::rowsRemoved,
-            this, &DefaultFilterModel::countChanged);
+    connect(this, &QAbstractItemModel::modelReset, this, &DefaultFilterModel::countChanged);
+    connect(this, &QAbstractItemModel::rowsInserted, this, &DefaultFilterModel::countChanged);
+    connect(this, &QAbstractItemModel::rowsRemoved, this, &DefaultFilterModel::countChanged);
 }
 
 QHash<int, QByteArray> DefaultFilterModel::roleNames() const
@@ -140,7 +135,7 @@ DefaultItemFilterProxyModel::DefaultItemFilterProxyModel(QObject *parent)
 
 void DefaultItemFilterProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
 {
-    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(sourceModel);
+    QStandardItemModel *model = qobject_cast<QStandardItemModel *>(sourceModel);
 
     if (!model) {
         qWarning() << "Expecting a QStandardItemModel!";
@@ -148,12 +143,9 @@ void DefaultItemFilterProxyModel::setSourceModel(QAbstractItemModel *sourceModel
     }
 
     QSortFilterProxyModel::setSourceModel(model);
-    connect(this, &QAbstractItemModel::modelReset,
-            this, &DefaultItemFilterProxyModel::countChanged);
-    connect(this, &QAbstractItemModel::rowsInserted,
-            this, &DefaultItemFilterProxyModel::countChanged);
-    connect(this, &QAbstractItemModel::rowsRemoved,
-            this, &DefaultItemFilterProxyModel::countChanged);
+    connect(this, &QAbstractItemModel::modelReset, this, &DefaultItemFilterProxyModel::countChanged);
+    connect(this, &QAbstractItemModel::rowsInserted, this, &DefaultItemFilterProxyModel::countChanged);
+    connect(this, &QAbstractItemModel::rowsRemoved, this, &DefaultItemFilterProxyModel::countChanged);
 }
 
 QAbstractItemModel *DefaultItemFilterProxyModel::sourceModel() const
@@ -172,19 +164,16 @@ QVariant DefaultItemFilterProxyModel::data(const QModelIndex &index, int role) c
     return QSortFilterProxyModel::data(index, role);
 }
 
-bool DefaultItemFilterProxyModel::filterAcceptsRow(int sourceRow,
-        const QModelIndex &sourceParent) const
+bool DefaultItemFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
-    QStandardItemModel *model = (QStandardItemModel *) sourceModel();
+    QStandardItemModel *model = (QStandardItemModel *)sourceModel();
 
     QModelIndex index = sourceModel()->index(sourceRow, 0, sourceParent);
 
-    AbstractItem *item = (AbstractItem *) model->itemFromIndex(index);
-    //qDebug() << "ITEM " << (item ? "IS NOT " : "IS") << " NULL\n";
+    AbstractItem *item = (AbstractItem *)model->itemFromIndex(index);
+    // qDebug() << "ITEM " << (item ? "IS NOT " : "IS") << " NULL\n";
 
-    return item &&
-        (m_filter.first.isEmpty() || item->passesFiltering(m_filter)) &&
-        (m_searchPattern.isEmpty() || item->matches(m_searchPattern));
+    return item && (m_filter.first.isEmpty() || item->passesFiltering(m_filter)) && (m_searchPattern.isEmpty() || item->matches(m_searchPattern));
 }
 
 QVariantHash DefaultItemFilterProxyModel::get(int row) const
@@ -200,12 +189,9 @@ QVariantHash DefaultItemFilterProxyModel::get(int row) const
     return hash;
 }
 
-bool DefaultItemFilterProxyModel::lessThan(const QModelIndex &left,
-        const QModelIndex &right) const
+bool DefaultItemFilterProxyModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
 {
-    return
-        sourceModel()->data(left).toString().localeAwareCompare(
-            sourceModel()->data(right).toString()) < 0;
+    return sourceModel()->data(left).toString().localeAwareCompare(sourceModel()->data(right).toString()) < 0;
 }
 
 void DefaultItemFilterProxyModel::setSearchTerm(const QString &pattern)

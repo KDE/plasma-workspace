@@ -19,10 +19,10 @@
 #include <sessionmanagement.h>
 
 #include <QCoreApplication>
-#include <QEventLoop>
 #include <QDebug>
+#include <QEventLoop>
 
-int main(int argc, char ** argv)
+int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
     auto session = new SessionManagement(&app);

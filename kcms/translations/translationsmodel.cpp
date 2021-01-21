@@ -82,7 +82,7 @@ int TranslationsModel::rowCount(const QModelIndex &parent) const
     return m_languages.count();
 }
 
-QString TranslationsModel::languageCodeToName(const QString& languageCode) const
+QString TranslationsModel::languageCodeToName(const QString &languageCode) const
 {
     const QLocale locale(languageCode);
     const QString &languageName = locale.nativeLanguageName();
@@ -154,7 +154,7 @@ void SelectedTranslationsModel::setSelectedLanguages(const QStringList &language
     if (m_selectedLanguages != languages) {
         QStringList missingLanguages;
 
-        for (const QString& lang : languages) {
+        for (const QString &lang : languages) {
             if (!m_installedLanguages.contains(lang)) {
                 missingLanguages << lang;
             }
@@ -279,10 +279,9 @@ void AvailableTranslationsModel::setSelectedLanguages(const QStringList &languag
     QCollator c;
     c.setCaseSensitivity(Qt::CaseInsensitive);
 
-    std::sort(m_availableLanguages.begin(), m_availableLanguages.end(),
-        [this, &c](const QString &a, const QString &b) {
-            return c.compare(languageCodeToName(a), languageCodeToName(b)) < 0;
-        });
+    std::sort(m_availableLanguages.begin(), m_availableLanguages.end(), [this, &c](const QString &a, const QString &b) {
+        return c.compare(languageCodeToName(a), languageCodeToName(b)) < 0;
+    });
 
     endResetModel();
 }

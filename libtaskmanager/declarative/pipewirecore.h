@@ -49,4 +49,3 @@ public:
 Q_SIGNALS:
     void pipewireFailed(const QString &message);
 };
-

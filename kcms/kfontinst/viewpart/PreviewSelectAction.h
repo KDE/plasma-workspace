@@ -24,41 +24,39 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <KSelectAction>
 #include "FcEngine.h"
+#include <KSelectAction>
 
 namespace KFI
 {
-
 class CPreviewSelectAction : public KSelectAction
 {
     Q_OBJECT
 
-    public:
-
-    enum Mode
-    {
+public:
+    enum Mode {
         Basic,
         BlocksAndScripts,
         ScriptsOnly,
     };
 
-    explicit CPreviewSelectAction(QObject *parent, Mode mode=Basic);
-    ~CPreviewSelectAction() override { }
+    explicit CPreviewSelectAction(QObject *parent, Mode mode = Basic);
+    ~CPreviewSelectAction() override
+    {
+    }
 
     void setStd();
     void setMode(Mode mode);
 
-    Q_SIGNALS:
+Q_SIGNALS:
 
     void range(const QList<CFcEngine::TRange> &range);
 
-    private Q_SLOTS:
+private Q_SLOTS:
 
     void selected(int index);
 
-    private:
-
+private:
     int itsNumUnicodeBlocks;
 };
 

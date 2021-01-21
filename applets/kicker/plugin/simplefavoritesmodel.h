@@ -35,57 +35,57 @@ class SimpleFavoritesModel : public AbstractModel
     Q_PROPERTY(int maxFavorites READ maxFavorites WRITE setMaxFavorites NOTIFY maxFavoritesChanged)
     Q_PROPERTY(int dropPlaceholderIndex READ dropPlaceholderIndex WRITE setDropPlaceholderIndex NOTIFY dropPlaceholderIndexChanged)
 
-    public:
-        explicit SimpleFavoritesModel(QObject *parent = nullptr);
-        ~SimpleFavoritesModel() override;
+public:
+    explicit SimpleFavoritesModel(QObject *parent = nullptr);
+    ~SimpleFavoritesModel() override;
 
-        QString description() const override;
+    QString description() const override;
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
+    Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
 
-        bool enabled() const;
-        void setEnabled(bool enable);
+    bool enabled() const;
+    void setEnabled(bool enable);
 
-        QStringList favorites() const;
-        void setFavorites(const QStringList &favorites);
+    QStringList favorites() const;
+    void setFavorites(const QStringList &favorites);
 
-        int maxFavorites() const;
-        void setMaxFavorites(int max);
+    int maxFavorites() const;
+    void setMaxFavorites(int max);
 
-        Q_INVOKABLE bool isFavorite(const QString &id) const;
-        Q_INVOKABLE void addFavorite(const QString &id, int index = -1);
-        Q_INVOKABLE void removeFavorite(const QString &id);
+    Q_INVOKABLE bool isFavorite(const QString &id) const;
+    Q_INVOKABLE void addFavorite(const QString &id, int index = -1);
+    Q_INVOKABLE void removeFavorite(const QString &id);
 
-        Q_INVOKABLE void moveRow(int from, int to);
+    Q_INVOKABLE void moveRow(int from, int to);
 
-        int dropPlaceholderIndex() const;
-        void setDropPlaceholderIndex(int index);
+    int dropPlaceholderIndex() const;
+    void setDropPlaceholderIndex(int index);
 
-        AbstractModel* favoritesModel() override;
+    AbstractModel *favoritesModel() override;
 
-    public Q_SLOTS:
-        void refresh() override;
+public Q_SLOTS:
+    void refresh() override;
 
-    Q_SIGNALS:
-        void enabledChanged() const;
-        void favoritesChanged() const;
-        void maxFavoritesChanged() const;
-        void dropPlaceholderIndexChanged();
+Q_SIGNALS:
+    void enabledChanged() const;
+    void favoritesChanged() const;
+    void maxFavoritesChanged() const;
+    void dropPlaceholderIndexChanged();
 
-    private:
-        AbstractEntry *favoriteFromId(const QString &id);
+private:
+    AbstractEntry *favoriteFromId(const QString &id);
 
-        bool m_enabled;
+    bool m_enabled;
 
-        QList<AbstractEntry *> m_entryList;
-        QStringList m_favorites;
-        int m_maxFavorites;
+    QList<AbstractEntry *> m_entryList;
+    QStringList m_favorites;
+    int m_maxFavorites;
 
-        int m_dropPlaceholderIndex;
+    int m_dropPlaceholderIndex;
 };
 
 #endif

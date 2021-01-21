@@ -34,20 +34,19 @@
 
 #include <kdedmodule.h>
 
-#include <QPointer>
 #include "menuimporter.h"
+#include <QPointer>
 
 class QDBusServiceWatcher;
 class KDBusMenuImporter;
 class AppmenuDBus;
 class VerticalMenu;
 
-class AppMenuModule : public KDEDModule,
-                      protected QDBusContext
+class AppMenuModule : public KDEDModule, protected QDBusContext
 {
     Q_OBJECT
 public:
-    AppMenuModule(QObject* parent, const QList<QVariant>& list);
+    AppMenuModule(QObject *parent, const QList<QVariant> &list);
     ~AppMenuModule() override;
 
 Q_SIGNALS:

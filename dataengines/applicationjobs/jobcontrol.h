@@ -29,16 +29,14 @@ class JobControl : public Plasma::Service
 {
     Q_OBJECT
 
-    public:
-        JobControl(QObject *parent, NotificationManager::Job *job);
+public:
+    JobControl(QObject *parent, NotificationManager::Job *job);
 
-    protected:
-        Plasma::ServiceJob* createJob(const QString& operation,
-                                      QMap<QString,QVariant>& parameters) override;
+protected:
+    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
-    private:
-        QPointer<NotificationManager::Job> m_job;
-
+private:
+    QPointer<NotificationManager::Job> m_job;
 };
 
 #endif // JOBCONTROL_H

@@ -20,11 +20,11 @@
 
 #pragma once
 
-#include <QSortFilterProxyModel>
 #include <QDateTime>
+#include <QSortFilterProxyModel>
 
-namespace NotificationManager {
-
+namespace NotificationManager
+{
 class NotificationGroupCollapsingProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
@@ -67,7 +67,6 @@ private:
     bool m_expandUnread = false;
 
     QList<QPersistentModelIndex> m_expandedGroups;
-
 };
 
 } // namespace NotificationManager

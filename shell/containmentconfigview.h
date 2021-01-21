@@ -22,18 +22,20 @@
 
 #include <PlasmaQuick/ConfigView>
 
-namespace Plasma {
-    class Containment;
+namespace Plasma
+{
+class Containment;
 }
 
 class QAbstractItemModel;
 class CurrentContainmentActionsModel;
 
-namespace KDeclarative {
-    class ConfigPropertyMap;
+namespace KDeclarative
+{
+class ConfigPropertyMap;
 }
 
-//TODO: out of the library?
+// TODO: out of the library?
 class ContainmentConfigView : public PlasmaQuick::ConfigView
 {
     Q_OBJECT

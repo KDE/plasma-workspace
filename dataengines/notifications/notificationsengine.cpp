@@ -15,20 +15,20 @@
  * along with this library; see the file COPYING.LIB.  If not, write to
  * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
-*/
+ */
 
 #include "notificationsengine.h"
 #include "notificationservice.h"
 
-#include "server.h"
 #include "notification.h"
+#include "server.h"
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <klocalizedstring.h>
-#include <KSharedConfig>
 #include <KNotifyConfigWidget>
+#include <KSharedConfig>
 #include <QGuiApplication>
+#include <klocalizedstring.h>
 
 #include <Plasma/DataContainer>
 #include <Plasma/Service>
@@ -39,15 +39,14 @@
 
 using namespace NotificationManager;
 
-NotificationsEngine::NotificationsEngine( QObject* parent, const QVariantList& args )
-    : Plasma::DataEngine( parent, args )
+NotificationsEngine::NotificationsEngine(QObject *parent, const QVariantList &args)
+    : Plasma::DataEngine(parent, args)
 {
     init();
 }
 
 NotificationsEngine::~NotificationsEngine()
 {
-
 }
 
 void NotificationsEngine::init()
@@ -89,12 +88,12 @@ void NotificationsEngine::notificationAdded(const Notification &notification)
     int timeout = notification.timeout();
 
     if (bodyFinal.isEmpty()) {
-        //some ridiculous apps will send just a title (#372112), in that case, treat it as though there's only a body
+        // some ridiculous apps will send just a title (#372112), in that case, treat it as though there's only a body
         bodyFinal = summary;
         summaryFinal = app_name;
     }
 
-    uint id = notification.id();// replaces_id ? replaces_id : m_nextId++;
+    uint id = notification.id(); // replaces_id ? replaces_id : m_nextId++;
 
     QString appname_str = app_name;
     if (appname_str.isEmpty()) {
@@ -197,13 +196,18 @@ void NotificationsEngine::removeNotification(uint id, uint closeReason)
     }
 }
 
-Plasma::Service* NotificationsEngine::serviceForSource(const QString& source)
+Plasma::Service *NotificationsEngine::serviceForSource(const QString &source)
 {
     return new NotificationService(this, source);
 }
 
-int NotificationsEngine::createNotification(const QString &appName, const QString &appIcon, const QString &summary,
-                                            const QString &body, int timeout, const QStringList &actions, const QVariantMap &hints)
+int NotificationsEngine::createNotification(const QString &appName,
+                                            const QString &appIcon,
+                                            const QString &summary,
+                                            const QString &body,
+                                            int timeout,
+                                            const QStringList &actions,
+                                            const QVariantMap &hints)
 {
     Notification notification;
     notification.setApplicationName(appName);
@@ -225,7 +229,8 @@ void NotificationsEngine::configureNotification(const QString &appName, const QS
     }
 }
 
-QSharedPointer<NotificationInhibiton> NotificationsEngine::createInhibition(const QString &hint, const QString &value) {
+QSharedPointer<NotificationInhibiton> NotificationsEngine::createInhibition(const QString &hint, const QString &value)
+{
     auto ni = new NotificationInhibiton;
     ni->hint = hint;
     ni->value = value;

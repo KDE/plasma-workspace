@@ -27,12 +27,12 @@
 #include <KConcatenateRowsProxyModel>
 #include <KDescendantsProxyModel>
 
-#include "notificationsmodel.h"
-#include "notificationfilterproxymodel_p.h"
-#include "notificationsortproxymodel_p.h"
-#include "notificationgroupingproxymodel_p.h"
-#include "notificationgroupcollapsingproxymodel_p.h"
 #include "limitedrowcountproxymodel_p.h"
+#include "notificationfilterproxymodel_p.h"
+#include "notificationgroupcollapsingproxymodel_p.h"
+#include "notificationgroupingproxymodel_p.h"
+#include "notificationsmodel.h"
+#include "notificationsortproxymodel_p.h"
 
 #include "jobsmodel.h"
 
@@ -98,12 +98,10 @@ private:
 Notifications::Private::Private(Notifications *q)
     : q(q)
 {
-
 }
 
 Notifications::Private::~Private()
 {
-
 }
 
 void Notifications::Private::initSourceModels()
@@ -191,17 +189,17 @@ void Notifications::Private::initProxyModels()
         connect(filterModel, &QAbstractItemModel::rowsRemoved, q, [this] {
             updateCount();
         });
-        connect(filterModel, &QAbstractItemModel::dataChanged, q, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
-            Q_UNUSED(topLeft);
-            Q_UNUSED(bottomRight);
-            if (roles.isEmpty()
-                    || roles.contains(Notifications::UpdatedRole)
-                    || roles.contains(Notifications::ExpiredRole)
-                    || roles.contains(Notifications::JobStateRole)
-                    || roles.contains(Notifications::PercentageRole)) {
-                updateCount();
-            }
-        });
+        connect(filterModel,
+                &QAbstractItemModel::dataChanged,
+                q,
+                [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
+                    Q_UNUSED(topLeft);
+                    Q_UNUSED(bottomRight);
+                    if (roles.isEmpty() || roles.contains(Notifications::UpdatedRole) || roles.contains(Notifications::ExpiredRole)
+                        || roles.contains(Notifications::JobStateRole) || roles.contains(Notifications::PercentageRole)) {
+                        updateCount();
+                    }
+                });
 
         filterModel->setSourceModel(notificationsAndJobsModel);
     }
@@ -397,16 +395,18 @@ Notifications::Notifications(QObject *parent)
     d->initProxyModels();
 
     // init source models when used from C++
-    QMetaObject::invokeMethod(this, [this] {
-        d->initSourceModels();
-    }, Qt::QueuedConnection);
+    QMetaObject::invokeMethod(
+        this,
+        [this] {
+            d->initSourceModels();
+        },
+        Qt::QueuedConnection);
 }
 
 Notifications::~Notifications() = default;
 
 void Notifications::classBegin()
 {
-
 }
 
 void Notifications::componentComplete()

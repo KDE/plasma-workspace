@@ -23,31 +23,30 @@
 #include <QApplication>
 #include <QClipboard>
 #include <QIcon>
-#include <QMimeData>
 #include <QMenu>
+#include <QMimeData>
 #include <QQuickItem>
-#include <QTimer>
 #include <QQuickWindow>
+#include <QTimer>
 
 #include <KFileItemActions>
 #include <KFileItemListProperties>
 #include <KLocalizedString>
-#include <KProtocolManager>
 #include <KPropertiesDialog>
+#include <KProtocolManager>
 #include <KUrlMimeData>
 
 #include <KIO/OpenFileManagerWindowJob>
 
-Thumbnailer::Thumbnailer(QObject *parent) : QObject(parent)
+Thumbnailer::Thumbnailer(QObject *parent)
+    : QObject(parent)
 {
-
 }
 
 Thumbnailer::~Thumbnailer() = default;
 
 void Thumbnailer::classBegin()
 {
-
 }
 
 void Thumbnailer::componentComplete()
@@ -127,7 +126,7 @@ void Thumbnailer::generatePreview()
     }
 
     auto maxSize = qMax(m_size.width(), m_size.height());
-    KIO::PreviewJob *job = KIO::filePreview(KFileItemList({KFileItem(m_url)}), QSize(maxSize,maxSize));
+    KIO::PreviewJob *job = KIO::filePreview(KFileItemList({KFileItem(m_url)}), QSize(maxSize, maxSize));
     job->setScaleType(KIO::PreviewJob::Scaled);
     job->setIgnoreMaximumSize(true);
 

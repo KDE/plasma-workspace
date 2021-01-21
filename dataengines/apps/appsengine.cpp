@@ -21,8 +21,8 @@
 
 #include <KSycoca>
 
-AppsEngine::AppsEngine(QObject *parent, const QVariantList &args) :
-    Plasma::DataEngine(parent, args)
+AppsEngine::AppsEngine(QObject *parent, const QVariantList &args)
+    : Plasma::DataEngine(parent, args)
 {
     Q_UNUSED(args);
     init();
@@ -48,7 +48,7 @@ void AppsEngine::sycocaChanged(const QStringList &changes)
 
 Plasma::Service *AppsEngine::serviceForSource(const QString &name)
 {
-    AppSource *source = dynamic_cast<AppSource*>(containerForSource(name));
+    AppSource *source = dynamic_cast<AppSource *>(containerForSource(name));
     // if source does not exist, return null service
     if (!source) {
         return Plasma::DataEngine::serviceForSource(name);
@@ -70,9 +70,9 @@ void AppsEngine::addGroup(KServiceGroup::Ptr group)
         return;
     }
     AppSource *appSource = new AppSource(group, this);
-    //TODO listen for changes
+    // TODO listen for changes
     addSource(appSource);
-    //do children
+    // do children
     foreach (const KServiceGroup::Ptr &subGroup, group->groupEntries(KServiceGroup::NoOptions)) {
         addGroup(subGroup);
     }
@@ -84,7 +84,7 @@ void AppsEngine::addGroup(KServiceGroup::Ptr group)
 void AppsEngine::addApp(KService::Ptr app)
 {
     AppSource *appSource = new AppSource(app, this);
-    //TODO listen for changes
+    // TODO listen for changes
     addSource(appSource);
 }
 

@@ -18,28 +18,27 @@
  */
 
 #include "falkon.h"
-#include <QDir>
-#include <QStandardPaths>
-#include <QFile>
-#include <QJsonDocument>
-#include <QJsonArray>
-#include <KSharedConfig>
-#include <KConfigGroup>
-#include "faviconfromblob.h"
 #include "favicon.h"
+#include "faviconfromblob.h"
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <QDir>
+#include <QFile>
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QStandardPaths>
 
-
-Falkon::Falkon(QObject* parent)
-: QObject(parent)
-, m_startupProfile(getStartupProfileDir())
-, m_favicon(FaviconFromBlob::falkon(m_startupProfile, this))
+Falkon::Falkon(QObject *parent)
+    : QObject(parent)
+    , m_startupProfile(getStartupProfileDir())
+    , m_favicon(FaviconFromBlob::falkon(m_startupProfile, this))
 {
 }
 
-QList<BookmarkMatch> Falkon::match(const QString& term, bool addEverything)
+QList<BookmarkMatch> Falkon::match(const QString &term, bool addEverything)
 {
     QList<BookmarkMatch> matches;
-    for(const auto &bookmark : qAsConst(m_falkonBookmarkEntries)) {
+    for (const auto &bookmark : qAsConst(m_falkonBookmarkEntries)) {
         const auto obj = bookmark.toObject();
         const QString url = obj.value(QStringLiteral("url")).toString();
         BookmarkMatch bookmarkMatch(m_favicon->iconFor(url), term, obj.value(QStringLiteral("name")).toString(), url);
@@ -61,7 +60,6 @@ void Falkon::teardown()
 QString Falkon::getStartupProfileDir()
 {
     const QString profilesIni = QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("/falkon/profiles/profiles.ini"));
-    const QString startupProfile =KSharedConfig::openConfig(profilesIni)->
-        group("Profiles").readEntry("startProfile", QStringLiteral("default"));
+    const QString startupProfile = KSharedConfig::openConfig(profilesIni)->group("Profiles").readEntry("startProfile", QStringLiteral("default"));
     return QFileInfo(profilesIni).dir().absoluteFilePath(startupProfile);
 }

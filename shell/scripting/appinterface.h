@@ -20,21 +20,20 @@
 #ifndef APPINTERFACE
 #define APPINTERFACE
 
+#include <QJSValue>
 #include <QObject>
 #include <QRectF>
 #include <QStringList>
-#include <QJSValue>
 
 namespace Plasma
 {
-    class Containment;
-    class Corona;
-    class Theme;
+class Containment;
+class Corona;
+class Theme;
 } // namespace Plasma
 
 namespace WorkspaceScripting
 {
-
 class ScriptEngine;
 
 class AppInterface : public QObject
@@ -104,4 +103,3 @@ private:
 }
 
 #endif
-

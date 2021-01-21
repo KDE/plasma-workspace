@@ -25,22 +25,22 @@
 
 #include <unistd.h>
 
-#include "waiter.h"
 #include "debug_p.h"
-
+#include "waiter.h"
 
 constexpr static const char dbusServiceName[] = "org.freedesktop.Notifications";
 
-
 Waiter::Waiter(int argc, char **argv)
     : QCoreApplication(argc, argv)
-    , mService(dbusServiceName) {
+    , mService(dbusServiceName)
+{
     setApplicationName(QStringLiteral("plasma_waitforname"));
     setApplicationVersion(QStringLiteral("1.0"));
 
     QCommandLineParser parser;
-    parser.setApplicationDescription(QStringLiteral("Waits for D-Bus registration of the Notifications service.\n"
-        "Prevents notifications from being processed before the desktop is ready."));
+    parser.setApplicationDescription(
+        QStringLiteral("Waits for D-Bus registration of the Notifications service.\n"
+                       "Prevents notifications from being processed before the desktop is ready."));
     parser.addHelpOption();
     parser.addVersionOption();
     parser.addPositionalArgument(QStringLiteral("service"),
@@ -54,7 +54,8 @@ Waiter::Waiter(int argc, char **argv)
     }
 }
 
-bool Waiter::waitForService() {
+bool Waiter::waitForService()
+{
     QDBusConnection sessionBus = QDBusConnection::sessionBus();
 
     if (sessionBus.interface()->isServiceRegistered(mService)) {
@@ -64,12 +65,11 @@ bool Waiter::waitForService() {
 
     qCDebug(LOG_PLASMA) << "WaitForName: Waiting for appearance of service" << mService << "for" << dbusTimeoutSec << "seconds";
 
-    QDBusServiceWatcher* watcher = new QDBusServiceWatcher(this);
+    QDBusServiceWatcher *watcher = new QDBusServiceWatcher(this);
     watcher->setConnection(sessionBus);
     watcher->setWatchMode(QDBusServiceWatcher::WatchForRegistration);
     watcher->addWatchedService(mService);
-    connect(watcher, &QDBusServiceWatcher::serviceRegistered,
-            this,    &Waiter::registered);
+    connect(watcher, &QDBusServiceWatcher::serviceRegistered, this, &Waiter::registered);
 
     mTimeoutTimer.setSingleShot(true);
     mTimeoutTimer.setInterval(dbusTimeoutSec * 1000);
@@ -79,13 +79,15 @@ bool Waiter::waitForService() {
     return true;
 }
 
-void Waiter::registered() {
+void Waiter::registered()
+{
     qCDebug(LOG_PLASMA) << "WaitForName: Service was registered after" << (dbusTimeoutSec - (mTimeoutTimer.remainingTime() / 1000)) << "seconds";
     mTimeoutTimer.stop();
     exit(0);
 }
 
-void Waiter::timeout() {
+void Waiter::timeout()
+{
     qCInfo(LOG_PLASMA) << "WaitForName: Service was not registered within timeout";
     exit(1);
 }

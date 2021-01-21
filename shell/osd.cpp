@@ -20,12 +20,12 @@
 #include "shellcorona.h"
 
 #include <QDBusConnection>
+#include <QDebug>
 #include <QTimer>
 #include <QWindow>
-#include <QDebug>
 
-#include <Plasma/Package>
 #include <KDeclarative/QmlObjectSharedEngine>
+#include <Plasma/Package>
 #include <klocalizedstring.h>
 
 Osd::Osd(const KSharedConfig::Ptr &config, ShellCorona *corona)
@@ -33,7 +33,9 @@ Osd::Osd(const KSharedConfig::Ptr &config, ShellCorona *corona)
     , m_osdUrl(corona->lookAndFeelPackage().fileUrl("osdmainscript"))
     , m_config(config)
 {
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/kde/osdService"), this, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/org/kde/osdService"),
+                                                 this,
+                                                 QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
 }
 
 Osd::~Osd()
@@ -107,7 +109,7 @@ void Osd::kbdLayoutChanged(const QString &layoutName)
 
 void Osd::virtualDesktopChanged(const QString &currentVirtualDesktopName)
 {
-    //FIXME: need a VD icon
+    // FIXME: need a VD icon
     showText(QString(), currentVirtualDesktopName);
 }
 
@@ -150,9 +152,11 @@ void Osd::wwanEnabledChanged(bool wwanEnabled)
 void Osd::virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled)
 {
     if (virtualKeyboardEnabled) {
-        showText(QStringLiteral("input-keyboard-virtual-on"), i18nc("on screen keyboard was enabled because physical keyboard got unplugged, keep short", "On-Screen Keyboard Activated"));
+        showText(QStringLiteral("input-keyboard-virtual-on"),
+                 i18nc("on screen keyboard was enabled because physical keyboard got unplugged, keep short", "On-Screen Keyboard Activated"));
     } else {
-        showText(QStringLiteral("input-keyboard-virtual-off"), i18nc("on screen keyboard was disabled because physical keyboard was plugged in, keep short", "On-Screen Keyboard Deactivated"));
+        showText(QStringLiteral("input-keyboard-virtual-off"),
+                 i18nc("on screen keyboard was disabled because physical keyboard was plugged in, keep short", "On-Screen Keyboard Deactivated"));
     }
 }
 

@@ -21,40 +21,35 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QFile>
-#include <QByteArray>
-#include <QTextStream>
-#include <KShell>
-#include <fontconfig/fontconfig.h>
 #include "Utils.h"
+#include "Fc.h"
 #include "FontInst.h"
 #include "Misc.h"
-#include "Fc.h"
 #include "WritingSystems.h"
+#include <KShell>
+#include <QByteArray>
+#include <QFile>
+#include <QTextStream>
+#include <fontconfig/fontconfig.h>
 
 namespace KFI
 {
-
 namespace Utils
 {
-
 bool isAAfm(const QString &fname)
 {
-    if(Misc::checkExt(QFile::encodeName(fname), "afm"))   // CPD? Is this a necessary check?
+    if (Misc::checkExt(QFile::encodeName(fname), "afm")) // CPD? Is this a necessary check?
     {
         QFile file(fname);
 
-        if(file.open(QIODevice::ReadOnly))
-        {
+        if (file.open(QIODevice::ReadOnly)) {
             QTextStream stream(&file);
-            QString     line;
+            QString line;
 
-            for(int lc=0; lc<30 && !stream.atEnd(); ++lc)
-            {
-                line=stream.readLine();
+            for (int lc = 0; lc < 30 && !stream.atEnd(); ++lc) {
+                line = stream.readLine();
 
-                if(line.contains("StartFontMetrics"))
-                {
+                if (line.contains("StartFontMetrics")) {
                     file.close();
                     return true;
                 }
@@ -69,50 +64,38 @@ bool isAAfm(const QString &fname)
 
 bool isAPfm(const QString &fname)
 {
-    bool ok=false;
+    bool ok = false;
 
     // I know extension checking is bad, but Ghostscript's pf2afm requires the pfm file to
     // have the .pfm extension...
     QByteArray name(QFile::encodeName(fname));
 
-    if(Misc::checkExt(name, "pfm"))
-    {
+    if (Misc::checkExt(name, "pfm")) {
         //
         // OK, the extension matches, so perform a little contents checking...
-        FILE *f=fopen(name.constData(), "r");
+        FILE *f = fopen(name.constData(), "r");
 
-        if(f)
-        {
-            static const unsigned long constCopyrightLen =  60;
-            static const unsigned long constTypeToExt    =  49;
-            static const unsigned long constExtToFname   =  20;
-            static const unsigned long constExtLen       =  30;
-            static const unsigned long constFontnameMin  =  75;
-            static const unsigned long constFontnameMax  = 512;
+        if (f) {
+            static const unsigned long constCopyrightLen = 60;
+            static const unsigned long constTypeToExt = 49;
+            static const unsigned long constExtToFname = 20;
+            static const unsigned long constExtLen = 30;
+            static const unsigned long constFontnameMin = 75;
+            static const unsigned long constFontnameMax = 512;
 
-            unsigned short version=0,
-                           type=0,
-                           extlen=0;
-            unsigned long  length=0,
-                           fontname=0,
-                           fLength=0;
+            unsigned short version = 0, type = 0, extlen = 0;
+            unsigned long length = 0, fontname = 0, fLength = 0;
 
             fseek(f, 0, SEEK_END);
-            fLength=ftell(f);
+            fLength = ftell(f);
             fseek(f, 0, SEEK_SET);
 
-            if(2==fread(&version, 1, 2, f) && // Read version
-               4==fread(&length, 1, 4, f) &&  // length...
-               length==fLength &&
-               0==fseek(f, constCopyrightLen, SEEK_CUR) &&   // Skip copyright notice...
-               2==fread(&type, 1, 2, f) &&
-               0==fseek(f, constTypeToExt, SEEK_CUR) &&
-               2==fread(&extlen, 1, 2, f) &&
-               extlen==constExtLen &&
-               0==fseek(f, constExtToFname, SEEK_CUR) &&
-               4==fread(&fontname, 1, 4, f) &&
-               fontname>constFontnameMin && fontname<constFontnameMax)
-                ok=true;
+            if (2 == fread(&version, 1, 2, f) && // Read version
+                4 == fread(&length, 1, 4, f) && // length...
+                length == fLength && 0 == fseek(f, constCopyrightLen, SEEK_CUR) && // Skip copyright notice...
+                2 == fread(&type, 1, 2, f) && 0 == fseek(f, constTypeToExt, SEEK_CUR) && 2 == fread(&extlen, 1, 2, f) && extlen == constExtLen
+                && 0 == fseek(f, constExtToFname, SEEK_CUR) && 4 == fread(&fontname, 1, 4, f) && fontname > constFontnameMin && fontname < constFontnameMax)
+                ok = true;
             fclose(f);
         }
     }
@@ -123,37 +106,31 @@ bool isAPfm(const QString &fname)
 // This function is *only* used for the generation of AFMs from PFMs.
 bool isAType1(const QString &fname)
 {
-    static const char         constStr[]="%!PS-AdobeFont-";
-    static const unsigned int constStrLen=15;
-    static const unsigned int constPfbOffset=6;
-    static const unsigned int constPfbLen=constStrLen+constPfbOffset;
+    static const char constStr[] = "%!PS-AdobeFont-";
+    static const unsigned int constStrLen = 15;
+    static const unsigned int constPfbOffset = 6;
+    static const unsigned int constPfbLen = constStrLen + constPfbOffset;
 
     QByteArray name(QFile::encodeName(fname));
-    char       buffer[constPfbLen];
-    bool       match=false;
+    char buffer[constPfbLen];
+    bool match = false;
 
-    if(Misc::checkExt(name, "pfa"))
-    {
-        FILE *f=fopen(name.constData(), "r");
+    if (Misc::checkExt(name, "pfa")) {
+        FILE *f = fopen(name.constData(), "r");
 
-        if(f)
-        {
-            if(constStrLen==fread(buffer, 1, constStrLen, f))
-                match=0==memcmp(buffer, constStr, constStrLen);
+        if (f) {
+            if (constStrLen == fread(buffer, 1, constStrLen, f))
+                match = 0 == memcmp(buffer, constStr, constStrLen);
             fclose(f);
         }
-    }
-    else if(Misc::checkExt(name, "pfb"))
-    {
+    } else if (Misc::checkExt(name, "pfb")) {
         static const char constPfbMarker = static_cast<char>(0x80);
 
-        FILE *f=fopen(name.constData(), "r");
+        FILE *f = fopen(name.constData(), "r");
 
-        if(f)
-        {
-            if(constPfbLen==fread(buffer, 1, constPfbLen, f))
-                match=buffer[0]==constPfbMarker && 0==memcmp(&buffer[constPfbOffset], constStr,
-                                                             constStrLen);
+        if (f) {
+            if (constPfbLen == fread(buffer, 1, constPfbLen, f))
+                match = buffer[0] == constPfbMarker && 0 == memcmp(&buffer[constPfbOffset], constStr, constStrLen);
             fclose(f);
         }
     }
@@ -170,38 +147,34 @@ static QString getMatch(const QString &file, const char *extension)
 
 void createAfm(const QString &file, EFileType type)
 {
-    bool pfm=FILE_PFM==type,
-         type1=FILE_SCALABLE==type && isAType1(file);
+    bool pfm = FILE_PFM == type, type1 = FILE_SCALABLE == type && isAType1(file);
 
-    if(type1 || pfm)
-    {
+    if (type1 || pfm) {
         // pf2afm wants files with lowercase extension, so just check for lowercase!
         // -- when a font is installed, the extension is converted to lowercase anyway...
-        QString afm=getMatch(file, "afm");
+        QString afm = getMatch(file, "afm");
 
-        if(afm.isEmpty())  // No point creating if AFM already exists!
+        if (afm.isEmpty()) // No point creating if AFM already exists!
         {
-            QString pfm,
-                    t1;
+            QString pfm, t1;
 
-            if(type1)      // Its a Type1, so look for existing PFM
+            if (type1) // Its a Type1, so look for existing PFM
             {
-                pfm=getMatch(file, "pfm");
-                t1=file;
-            }
-            else           // Its a PFM, so look for existing Type1
+                pfm = getMatch(file, "pfm");
+                t1 = file;
+            } else // Its a PFM, so look for existing Type1
             {
-                t1=getMatch(file, "pfa");
-                if(t1.isEmpty())
-                    t1=getMatch(file, "pfb");
-                pfm=file;
+                t1 = getMatch(file, "pfa");
+                if (t1.isEmpty())
+                    t1 = getMatch(file, "pfb");
+                pfm = file;
             }
 
-            if(!t1.isEmpty() && !pfm.isEmpty())         // Do we have both Type1 and PFM?
+            if (!t1.isEmpty() && !pfm.isEmpty()) // Do we have both Type1 and PFM?
             {
-                QString rootName(t1.left(t1.length()-4));
+                QString rootName(t1.left(t1.length() - 4));
                 Misc::doCmd("pf2afm", KShell::quoteArg(rootName)); // pf2afm wants name without extension...
-                Misc::setFilePerms(QFile::encodeName(rootName+".afm"));
+                Misc::setFilePerms(QFile::encodeName(rootName + ".afm"));
             }
         }
     }
@@ -209,34 +182,29 @@ void createAfm(const QString &file, EFileType type)
 
 EFileType check(const QString &file, Family &fam)
 {
-    if(isAAfm(file))
+    if (isAAfm(file))
         return FILE_AFM;
-    else if(isAPfm(file))
+    else if (isAPfm(file))
         return FILE_PFM;
-    else
-    {
+    else {
         // Check that file is a font via FreeType...
-        int       count=0;
-        FcPattern *pat=FcFreeTypeQuery((const FcChar8 *)(QFile::encodeName(file).constData()), 0, nullptr,
-                                       &count);
+        int count = 0;
+        FcPattern *pat = FcFreeTypeQuery((const FcChar8 *)(QFile::encodeName(file).constData()), 0, nullptr, &count);
 
-        if(pat)
-        {
-            FcBool     scalable;
-            QString    family,
-                       foundry;
-            quint32    style;
-            int        index;
+        if (pat) {
+            FcBool scalable;
+            QString family, foundry;
+            quint32 style;
+            int index;
             qulonglong ws;
-            EFileType  type=(FcResultMatch!=FcPatternGetBool(pat, FC_SCALABLE, 0, &scalable) || !scalable)
-                                ? FILE_BITMAP : FILE_SCALABLE;
+            EFileType type = (FcResultMatch != FcPatternGetBool(pat, FC_SCALABLE, 0, &scalable) || !scalable) ? FILE_BITMAP : FILE_SCALABLE;
 
             FC::getDetails(pat, family, style, index, foundry);
-            ws=WritingSystems::instance()->get(pat);
+            ws = WritingSystems::instance()->get(pat);
             FcPatternDestroy(pat);
             Style st(style, scalable, ws);
             st.add(File(file, foundry, index));
-            fam=Family(family);
+            fam = Family(family);
             fam.add(st);
             return type;
         }

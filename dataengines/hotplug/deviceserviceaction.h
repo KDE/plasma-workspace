@@ -25,7 +25,6 @@
 #include <kserviceaction.h>
 #include <solid/predicate.h>
 
-
 class DeviceServiceAction : public DeviceAction
 {
 public:
@@ -33,7 +32,7 @@ public:
     QString id() const override;
     void execute(Solid::Device &device) override;
 
-    void setService(const KServiceAction& service);
+    void setService(const KServiceAction &service);
     KServiceAction service() const;
 
 private:

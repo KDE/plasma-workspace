@@ -17,21 +17,21 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef ION%{APPNAMEUC}_H
-#define ION%{APPNAMEUC}_H
+#ifndef ION % {APPNAMEUC } _H
+#define ION % {APPNAMEUC} _H
 
 #include <plasma/weather/ion.h>
 
-class Q_DECL_EXPORT %{APPNAME}Ion : public IonInterface
+class Q_DECL_EXPORT % {APPNAME} Ion : public IonInterface
 {
     Q_OBJECT
 
 public:
-    %{APPNAME}Ion(QObject *parent, const QVariantList &args);
-    ~%{APPNAME}Ion();
+    % {APPNAME} Ion(QObject * parent, const QVariantList &args);
+    ~ % {APPNAME} Ion();
 
 public: // IonInterface API
-    bool updateIonSource(const QString& source) override;
+    bool updateIonSource(const QString &source) override;
     void reset() override;
 
 private:
@@ -40,7 +40,6 @@ private:
 
     void onValidateReport(const QString &source);
     void onWeatherDataReport(const QString &source);
-
 };
 
 #endif

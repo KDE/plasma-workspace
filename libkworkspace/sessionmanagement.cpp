@@ -22,8 +22,8 @@
 #include "sessionmanagementbackend.h"
 
 #include <KAuthorized>
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
 #include "kscreenlocker_interface.h"
 #include "ksmserver_interface.h"
@@ -220,8 +220,7 @@ void SessionManagement::saveSession()
     if (!canSaveSession()) {
         return;
     }
-    OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"),
-            QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
+    OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
     ksmserver.saveCurrentSession();
 }
 

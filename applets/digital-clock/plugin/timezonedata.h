@@ -24,7 +24,6 @@
 
 class TimeZoneData
 {
-
 public:
     QString id;
     QString region;
@@ -33,7 +32,6 @@ public:
     bool checked;
     bool isLocalTimeZone;
     int offsetFromUtc;
-
 };
 
 #endif // TIMEZONEDATA_H

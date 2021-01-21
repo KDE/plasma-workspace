@@ -19,9 +19,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "../history.h"
 #include "../historystringitem.h"
 // Qt
-#include <QtTest>
-#include <QSignalSpy>
 #include <QObject>
+#include <QSignalSpy>
+#include <QtTest>
 
 class HistoryTest : public QObject
 {

@@ -17,54 +17,55 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#include <config-workspace.h>
 #include "appentry.h"
 #include "actionlist.h"
 #include "appsmodel.h"
 #include "containmentinterface.h"
+#include <config-workspace.h>
 
 #include <config-X11.h>
 
+#include <QFileInfo>
 #include <QProcess>
 #include <QQmlPropertyMap>
 #include <QStandardPaths>
-#include <QFileInfo>
 #if HAVE_X11
 #include <QX11Info>
 #endif
 
 #include <KActivities/ResourceInstance>
-#include <KConfigGroup>
-#include <KJob>
-#include <KIO/ApplicationLauncherJob>
-#include <KLocalizedString>
 #include <KApplicationTrader>
+#include <KConfigGroup>
+#include <KIO/ApplicationLauncherJob>
+#include <KJob>
+#include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KRun>
-#include <KSycoca>
-#include <KShell>
 #include <KSharedConfig>
+#include <KShell>
 #include <KStartupInfo>
+#include <KSycoca>
 
 #include <Plasma/Plasma>
 
 AppEntry::AppEntry(AbstractModel *owner, KService::Ptr service, NameFormat nameFormat)
-: AbstractEntry(owner)
-, m_service(service)
+    : AbstractEntry(owner)
+    , m_service(service)
 {
     if (m_service) {
         init(nameFormat);
     }
 }
 
-AppEntry::AppEntry(AbstractModel *owner, const QString &id) : AbstractEntry(owner)
+AppEntry::AppEntry(AbstractModel *owner, const QString &id)
+    : AbstractEntry(owner)
 {
     const QUrl url(id);
 
     if (url.scheme() == QLatin1String("preferred")) {
         m_service = defaultAppByName(url.host());
         m_id = id;
-        m_con = QObject::connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), owner, [this, owner, id](){
+        m_con = QObject::connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), owner, [this, owner, id]() {
             KSharedConfig::openConfig()->reparseConfiguration();
             m_service = defaultAppByName(QUrl(id).host());
             if (m_service) {
@@ -203,7 +204,7 @@ QVariantList AppEntry::actions() const
     return actionList;
 }
 
-bool AppEntry::run(const QString& actionId, const QVariant &argument)
+bool AppEntry::run(const QString &actionId, const QVariant &argument)
 {
     if (!m_service->isValid()) {
         return false;
@@ -224,8 +225,7 @@ bool AppEntry::run(const QString& actionId, const QVariant &argument)
         job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
         job->start();
 
-        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + m_service->storageId()),
-                QStringLiteral("org.kde.plasma.kicker"));
+        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + m_service->storageId()), QStringLiteral("org.kde.plasma.kicker"));
 
         return true;
     }
@@ -265,7 +265,7 @@ QString AppEntry::nameFromService(const KService::Ptr service, NameFormat nameFo
     }
 }
 
-KService::Ptr AppEntry::defaultAppByName(const QString& name)
+KService::Ptr AppEntry::defaultAppByName(const QString &name)
 {
     if (name == QLatin1String("browser")) {
         KConfigGroup config(KSharedConfig::openConfig(), "General");
@@ -283,30 +283,41 @@ KService::Ptr AppEntry::defaultAppByName(const QString& name)
     return KService::Ptr();
 }
 
-AppEntry::~AppEntry() {
-    if (m_con){
+AppEntry::~AppEntry()
+{
+    if (m_con) {
         QObject::disconnect(m_con);
     }
 }
 
-AppGroupEntry::AppGroupEntry(AppsModel *parentModel, KServiceGroup::Ptr group,
-    bool paginate, int pageSize, bool flat, bool sorted, bool separators, int appNameFormat) : AbstractGroupEntry(parentModel),
-    m_group(group)
+AppGroupEntry::AppGroupEntry(AppsModel *parentModel,
+                             KServiceGroup::Ptr group,
+                             bool paginate,
+                             int pageSize,
+                             bool flat,
+                             bool sorted,
+                             bool separators,
+                             int appNameFormat)
+    : AbstractGroupEntry(parentModel)
+    , m_group(group)
 {
-    AppsModel* model = new AppsModel(group->entryPath(), paginate, pageSize, flat,
-        sorted, separators, parentModel);
+    AppsModel *model = new AppsModel(group->entryPath(), paginate, pageSize, flat, sorted, separators, parentModel);
     model->setAppNameFormat(appNameFormat);
     m_childModel = model;
 
     QObject::connect(parentModel, &AppsModel::cleared, model, &AppsModel::deleteLater);
 
-    QObject::connect(model, &AppsModel::countChanged,
-        [parentModel, this] { if (parentModel) { parentModel->entryChanged(this); } }
-    );
+    QObject::connect(model, &AppsModel::countChanged, [parentModel, this] {
+        if (parentModel) {
+            parentModel->entryChanged(this);
+        }
+    });
 
-    QObject::connect(model, &AppsModel::hiddenEntriesChanged,
-        [parentModel, this] { if (parentModel) { parentModel->entryChanged(this); } }
-    );
+    QObject::connect(model, &AppsModel::hiddenEntriesChanged, [parentModel, this] {
+        if (parentModel) {
+            parentModel->entryChanged(this);
+        }
+    });
 }
 
 QIcon AppGroupEntry::icon() const
@@ -327,6 +338,7 @@ bool AppGroupEntry::hasChildren() const
     return m_childModel && m_childModel->count() > 0;
 }
 
-AbstractModel *AppGroupEntry::childModel() const {
+AbstractModel *AppGroupEntry::childModel() const
+{
     return m_childModel;
 }

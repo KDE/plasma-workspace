@@ -35,28 +35,27 @@ class SystemMonitorEngine : public Plasma::DataEngine, public KSGRD::SensorClien
 {
     Q_OBJECT
 
-    public:
-        /** Inherited from Plasma::DataEngine.  Returns a list of all the sensors that ksysguardd knows about. */
-        QStringList sources() const override;
-        SystemMonitorEngine( QObject* parent, const QVariantList& args );
-        ~SystemMonitorEngine() override;
+public:
+    /** Inherited from Plasma::DataEngine.  Returns a list of all the sensors that ksysguardd knows about. */
+    QStringList sources() const override;
+    SystemMonitorEngine(QObject *parent, const QVariantList &args);
+    ~SystemMonitorEngine() override;
 
-    protected:
-        bool sourceRequestEvent(const QString &name) override;
-        /** inherited from SensorClient */
-        void answerReceived( int id, const QList<QByteArray>&answer ) override;
-        void sensorLost( int ) override;
-        bool updateSourceEvent(const QString &sensorName) override;
+protected:
+    bool sourceRequestEvent(const QString &name) override;
+    /** inherited from SensorClient */
+    void answerReceived(int id, const QList<QByteArray> &answer) override;
+    void sensorLost(int) override;
+    bool updateSourceEvent(const QString &sensorName) override;
 
-    protected Q_SLOTS:
-        void updateSensors();
-        void updateMonitorsList();
+protected Q_SLOTS:
+    void updateSensors();
+    void updateMonitorsList();
 
-    private:
-        QVector<QString> m_sensors;
-        QTimer* m_timer;
-        int m_waitingFor;
+private:
+    QVector<QString> m_sensors;
+    QTimer *m_timer;
+    int m_waitingFor;
 };
 
 #endif
-

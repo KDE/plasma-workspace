@@ -20,8 +20,8 @@
 
 #include "appletcontainer.h"
 
-#include <QQmlEngine>
 #include <QQmlContext>
+#include <QQmlEngine>
 
 #include <Plasma/Applet>
 #include <PlasmaQuick/AppletQuickItem>
@@ -83,7 +83,7 @@ void AppletContainer::connectBusyIndicator()
 {
     if (m_appletItem && !m_busyIndicatorItem) {
         Q_ASSERT(m_appletItem->applet());
-        connect(m_appletItem->applet(), &Plasma::Applet::busyChanged, this, [this] () {
+        connect(m_appletItem->applet(), &Plasma::Applet::busyChanged, this, [this]() {
             if (!m_busyIndicatorComponent || !m_appletItem->applet()->isBusy() || m_busyIndicatorItem) {
                 return;
             }
@@ -134,7 +134,7 @@ void AppletContainer::connectConfigurationRequired()
     if (m_appletItem && !m_configurationRequiredItem) {
         Q_ASSERT(m_appletItem->applet());
 
-        auto syncConfigRequired = [this] () {
+        auto syncConfigRequired = [this]() {
             if (!m_configurationRequiredComponent || !m_appletItem->applet()->configurationRequired() || m_configurationRequiredItem) {
                 return;
             }

@@ -19,10 +19,11 @@
  */
 
 #include "packagekitjob.h"
-#include <QDBusMessage>
 #include <QDBusConnection>
+#include <QDBusMessage>
 
-PackagekitJob::PackagekitJob(const QString& destination, const QString& operation, const QMap< QString, QVariant >& parameters, QObject* parent): ServiceJob(destination, operation, parameters, parent)
+PackagekitJob::PackagekitJob(const QString &destination, const QString &operation, const QMap<QString, QVariant> &parameters, QObject *parent)
+    : ServiceJob(destination, operation, parameters, parent)
 {
 }
 
@@ -37,10 +38,10 @@ void PackagekitJob::start()
     if (operation == QLatin1String("uninstallApplication")) {
         QStringList files(parameters()[QStringLiteral("Url")].toString());
         QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PackageKit"),
-            QStringLiteral("/org/freedesktop/PackageKit"),
-            QStringLiteral("org.freedesktop.PackageKit.Modify"),
-            QStringLiteral("RemovePackageByFiles"));
-        message << (uint) 0;
+                                                              QStringLiteral("/org/freedesktop/PackageKit"),
+                                                              QStringLiteral("org.freedesktop.PackageKit.Modify"),
+                                                              QStringLiteral("RemovePackageByFiles"));
+        message << (uint)0;
         message << files;
         message << QString();
 
@@ -51,6 +52,3 @@ void PackagekitJob::start()
 
     setResult(false);
 }
-
-
-

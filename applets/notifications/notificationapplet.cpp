@@ -63,12 +63,10 @@ NotificationApplet::~NotificationApplet() = default;
 
 void NotificationApplet::init()
 {
-
 }
 
 void NotificationApplet::configChanged()
 {
-
 }
 
 bool NotificationApplet::dragActive() const
@@ -104,8 +102,7 @@ void NotificationApplet::startDrag(QQuickItem *item, const QUrl &url, const QPix
     // This allows the caller to return, making sure we don't crash if
     // the caller is destroyed mid-drag
 
-    QMetaObject::invokeMethod(this, "doDrag", Qt::QueuedConnection,
-        Q_ARG(QQuickItem*, item), Q_ARG(QUrl, url), Q_ARG(QPixmap, pixmap));
+    QMetaObject::invokeMethod(this, "doDrag", Qt::QueuedConnection, Q_ARG(QQuickItem *, item), Q_ARG(QUrl, url), Q_ARG(QPixmap, pixmap));
 }
 
 void NotificationApplet::doDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap)

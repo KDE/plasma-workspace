@@ -19,8 +19,8 @@
 #ifndef DICTENGINE_H
 #define DICTENGINE_H
 #include <Plasma/DataEngine>
-#include <QMap>
 #include <QCache>
+#include <QMap>
 #include <QVariantMap>
 class QTcpSocket;
 
@@ -28,35 +28,33 @@ class QTcpSocket;
  * This class evaluates the basic expressions given in the interface.
  */
 
-
-class DictEngine: public Plasma::DataEngine
+class DictEngine : public Plasma::DataEngine
 {
     Q_OBJECT
 
-    public:
-        DictEngine( QObject* parent, const QVariantList& args );
-        ~DictEngine() override;
+public:
+    DictEngine(QObject *parent, const QVariantList &args);
+    ~DictEngine() override;
 
-    protected:
-        bool sourceRequestEvent(const QString &word) override;
+protected:
+    bool sourceRequestEvent(const QString &word) override;
 
-    private Q_SLOTS:
-        void getDefinition();
-        void socketClosed();
-        void getDicts();
+private Q_SLOTS:
+    void getDefinition();
+    void socketClosed();
+    void getDicts();
 
-    private:
-        void setDict(const QString &dict);
-        void setServer(const QString &server);
+private:
+    void setDict(const QString &dict);
+    void setServer(const QString &server);
 
-        QHash<QString, QString> m_dictNameToDictCode;
-        QTcpSocket *m_tcpSocket;
-        QString m_currentWord;
-        QString m_currentQuery;
-        QString m_dictName;
-        QString m_serverName;
-        QCache<QString, QVariantMap> m_availableDictsCache;
-
+    QHash<QString, QString> m_dictNameToDictCode;
+    QTcpSocket *m_tcpSocket;
+    QString m_currentWord;
+    QString m_currentQuery;
+    QString m_dictName;
+    QString m_serverName;
+    QCache<QString, QVariantMap> m_availableDictsCache;
 };
 
 #endif

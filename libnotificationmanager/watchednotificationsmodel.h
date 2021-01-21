@@ -27,7 +27,6 @@
 
 namespace NotificationManager
 {
-
 class NOTIFICATIONMANAGER_EXPORT WatchedNotificationsModel : public AbstractNotificationsModel
 {
     Q_OBJECT
@@ -36,7 +35,7 @@ class NOTIFICATIONMANAGER_EXPORT WatchedNotificationsModel : public AbstractNoti
 public:
     explicit WatchedNotificationsModel();
     ~WatchedNotificationsModel();
-    
+
     Q_INVOKABLE void expire(uint notificationId) override;
     Q_INVOKABLE void close(uint notificationId) override;
 
@@ -50,9 +49,8 @@ signals:
 
 private:
     class Private;
-    Private * const d;
+    Private *const d;
     Q_DISABLE_COPY(WatchedNotificationsModel)
-
 };
 
 }

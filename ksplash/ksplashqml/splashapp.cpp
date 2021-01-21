@@ -18,22 +18,22 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "splashwindow.h"
 #include "splashapp.h"
+#include "splashwindow.h"
 
-#include <QPixmap>
+#include <QCommandLineParser>
 #include <QCursor>
-#include <qscreen.h>
 #include <QDBusConnection>
 #include <QDate>
 #include <QDebug>
-#include <QCommandLineParser>
+#include <QPixmap>
+#include <qscreen.h>
 
 #include <KQuickAddons/QtQuickSettings>
-#include <KWindowSystem>
 #include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/registry.h>
 #include <KWayland/Client/plasmashell.h>
+#include <KWayland/Client/registry.h>
+#include <KWindowSystem>
 
 #define TEST_STEP_INTERVAL 2000
 
@@ -48,11 +48,11 @@
  *  - desktop
  */
 
-SplashApp::SplashApp(int &argc, char ** argv)
-    : QGuiApplication(argc, argv),
-      m_stage(0),
-      m_testing(false),
-      m_window(false)
+SplashApp::SplashApp(int &argc, char **argv)
+    : QGuiApplication(argc, argv)
+    , m_stage(0)
+    , m_testing(false)
+    , m_window(false)
 {
     KQuickAddons::QtQuickSettings::init();
 
@@ -75,7 +75,7 @@ SplashApp::SplashApp(int &argc, char ** argv)
 
     setupWaylandIntegration();
 
-    foreach(QScreen* screen, screens())
+    foreach (QScreen *screen, screens())
         adoptScreen(screen);
 
     setStage(QStringLiteral("initial"));
@@ -93,7 +93,6 @@ SplashApp::SplashApp(int &argc, char ** argv)
     }
 
     connect(this, &QGuiApplication::screenAdded, this, &SplashApp::adoptScreen);
-
 }
 
 SplashApp::~SplashApp()
@@ -101,7 +100,7 @@ SplashApp::~SplashApp()
     qDeleteAll(m_windows);
 }
 
-void SplashApp::timerEvent(QTimerEvent * event)
+void SplashApp::timerEvent(QTimerEvent *event)
 {
     if (event->timerId() == m_timer.timerId()) {
         m_timer.stop();
@@ -114,7 +113,7 @@ void SplashApp::timerEvent(QTimerEvent * event)
 
 void SplashApp::setStage(const QString &stage)
 {
-    //filter out startup events from KDED as they will be removed in a future release
+    // filter out startup events from KDED as they will be removed in a future release
     if (stage == QLatin1String("kded") || stage == QLatin1String("confupdate")) {
         return;
     }
@@ -137,7 +136,7 @@ void SplashApp::setStage(int stage)
     }
 }
 
-void SplashApp::adoptScreen(QScreen* screen)
+void SplashApp::adoptScreen(QScreen *screen)
 {
     SplashWindow *w = new SplashWindow(m_testing, m_window, m_theme);
     w->setGeometry(screen->geometry());
@@ -146,7 +145,7 @@ void SplashApp::adoptScreen(QScreen* screen)
     m_windows << w;
 
     connect(screen, &QScreen::geometryChanged, w, &SplashWindow::setGeometry);
-    connect(screen, &QObject::destroyed, w, [this, w](){
+    connect(screen, &QObject::destroyed, w, [this, w]() {
         m_windows.removeAll(w);
         w->deleteLater();
     });
@@ -164,11 +163,9 @@ void SplashApp::setupWaylandIntegration()
     }
     Registry *registry = new Registry(this);
     registry->create(connection);
-    connect(registry, &Registry::plasmaShellAnnounced, this,
-        [this, registry] (quint32 name, quint32 version) {
-            m_waylandPlasmaShell = registry->createPlasmaShell(name, version, this);
-        }
-    );
+    connect(registry, &Registry::plasmaShellAnnounced, this, [this, registry](quint32 name, quint32 version) {
+        m_waylandPlasmaShell = registry->createPlasmaShell(name, version, this);
+    });
     registry->setup();
     connection->roundtrip();
 }

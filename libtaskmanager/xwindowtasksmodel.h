@@ -32,7 +32,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 /**
  * @short A tasks model for X Window System windows.
  *
@@ -219,8 +218,7 @@ public:
      * @param geometry Visual delegate geometry in screen coordinates.
      * @param delegate The delegate. Unused in this implementation.
      **/
-    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
-        QObject *delegate = nullptr) override;
+    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate = nullptr) override;
 
     /**
      * Tries to extract a X11 window id from supplied mime data.

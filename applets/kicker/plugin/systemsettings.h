@@ -26,11 +26,11 @@ class SystemSettings : public QObject
 {
     Q_OBJECT
 
-    public:
-        explicit SystemSettings(QObject *parent = nullptr);
-        ~SystemSettings() override;
+public:
+    explicit SystemSettings(QObject *parent = nullptr);
+    ~SystemSettings() override;
 
-        Q_INVOKABLE QString picturesLocation() const;
+    Q_INVOKABLE QString picturesLocation() const;
 };
 
 #endif

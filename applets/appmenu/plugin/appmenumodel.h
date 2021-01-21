@@ -22,11 +22,11 @@
 #ifndef APPMENUMODEL_H
 #define APPMENUMODEL_H
 
-#include <QAbstractListModel>
-#include <QStringList>
 #include <KWindowSystem>
+#include <QAbstractListModel>
 #include <QPointer>
 #include <QRect>
+#include <QStringList>
 #include <tasksmodel.h>
 
 class QMenu;
@@ -48,7 +48,7 @@ public:
     ~AppMenuModel() override;
 
     enum AppMenuRole {
-        MenuRole = Qt::UserRole+1, // TODO this should be Qt::DisplayRole
+        MenuRole = Qt::UserRole + 1, // TODO this should be Qt::DisplayRole
         ActionRole,
     };
 
@@ -85,7 +85,7 @@ private:
     bool m_updatePending = false;
     bool m_visible = true;
 
-    TaskManager::TasksModel* m_tasksModel;
+    TaskManager::TasksModel *m_tasksModel;
 
     //! current active window used
     WId m_currentWindowId = 0;

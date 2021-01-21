@@ -17,8 +17,8 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <qcommandlineparser.h>
 #include <qcommandlineoption.h>
+#include <qcommandlineparser.h>
 
 #include <QApplication>
 
@@ -42,4 +42,3 @@ int main(int argc, char **argv)
     app.exec();
     return ex;
 }
-

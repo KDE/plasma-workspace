@@ -27,16 +27,16 @@ class QAction;
 class Paste : public Plasma::ContainmentActions
 {
     Q_OBJECT
-    public:
-        Paste(QObject* parent, const QVariantList& args);
+public:
+    Paste(QObject *parent, const QVariantList &args);
 
-        QList<QAction*> contextualActions() override;
+    QList<QAction *> contextualActions() override;
 
-    private Q_SLOTS:
-        void doPaste();
+private Q_SLOTS:
+    void doPaste();
 
-    private:
-        QAction *m_action;
+private:
+    QAction *m_action;
 };
 
 #endif

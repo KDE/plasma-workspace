@@ -25,7 +25,7 @@
 
 namespace Ui
 {
-    class EditActionDialog;
+class EditActionDialog;
 }
 
 class ClipAction;
@@ -35,20 +35,20 @@ class EditActionDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit EditActionDialog(QWidget* parent);
+    explicit EditActionDialog(QWidget *parent);
     ~EditActionDialog() override;
 
     /**
      * Sets the action this dialog will work with
      */
-    void setAction(ClipAction* act, int commandIdxToSelect = -1);
+    void setAction(ClipAction *act, int commandIdxToSelect = -1);
 
 private Q_SLOTS:
     void onAddCommand();
     void onRemoveCommand();
     void onSelectionChanged();
     void slotAccepted();
-//    void onItemChanged( QTreeWidgetItem*, int );
+    //    void onItemChanged( QTreeWidgetItem*, int );
 
 private:
     /**
@@ -64,9 +64,9 @@ private:
     void saveAction();
 
 private:
-    Ui::EditActionDialog* m_ui;
+    Ui::EditActionDialog *m_ui;
 
-    ClipAction* m_action;
-    ActionDetailModel* m_model;
+    ClipAction *m_action;
+    ActionDetailModel *m_model;
 };
 #endif

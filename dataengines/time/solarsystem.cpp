@@ -16,8 +16,8 @@
  */
 
 #include "solarsystem.h"
-#include <math.h>
 #include <QList>
+#include <math.h>
 
 /*
  *   Mathematics, ideas, public domain code used for these classes from:
@@ -35,7 +35,7 @@ Sun::Sun()
 {
 }
 
-void Sun::calcForDateTime(const QDateTime& local, int offset)
+void Sun::calcForDateTime(const QDateTime &local, int offset)
 {
     SolarSystemObject::calcForDateTime(local, offset);
 
@@ -49,7 +49,7 @@ void Sun::calcForDateTime(const QDateTime& local, int offset)
     calc();
 }
 
-void Sun::rotate(double* y, double* z)
+void Sun::rotate(double *y, double *z)
 {
     *y *= cosd(m_obliquity);
     *z *= sind(m_obliquity);
@@ -60,7 +60,7 @@ Moon::Moon(Sun *sun)
 {
 }
 
-void Moon::calcForDateTime(const QDateTime& local, int offset)
+void Moon::calcForDateTime(const QDateTime &local, int offset)
 {
     if (m_sun->dateTime() != local) {
         m_sun->calcForDateTime(local, offset);
@@ -83,7 +83,7 @@ bool Moon::calcPerturbations(double *lo, double *la, double *r)
     double Ms = m_sun->meanAnomaly();
     double D = L - m_sun->meanLongitude();
     double F = L - N;
-// clang-format off
+    // clang-format off
     *lo +=  -1.274 * sind(M - 2 * D)
             +0.658 * sind(2 * D)
             -0.186 * sind(Ms)
@@ -103,11 +103,11 @@ bool Moon::calcPerturbations(double *lo, double *la, double *r)
             +0.017 * sind(2 * M + F);
     *r +=   -0.58 * cosd(M - 2 * D)
             -0.46 * cosd(2 * D);
-// clang-format on
+    // clang-format on
     return true;
 }
 
-void Moon::topocentricCorrection(double* RA, double* dec)
+void Moon::topocentricCorrection(double *RA, double *dec)
 {
     double HA = rev(siderealTime() - *RA);
     double gclat = m_latitude - 0.1924 * sind(2 * m_latitude);
@@ -121,10 +121,10 @@ void Moon::topocentricCorrection(double* RA, double* dec)
 
 double Moon::phase()
 {
-   return rev(m_eclipticLongitude - m_sun->lambda());
+    return rev(m_eclipticLongitude - m_sun->lambda());
 }
 
-void Moon::rotate(double* y, double* z)
+void Moon::rotate(double *y, double *z)
 {
     double t = *y;
     *y = t * cosd(m_obliquity) - *z * sind(m_obliquity);
@@ -172,21 +172,18 @@ void SolarSystemObject::calc()
 
 double SolarSystemObject::siderealTime()
 {
-    double UT = m_utc.time().hour() + m_utc.time().minute() / 60.0 +
-                m_utc.time().second() / 3600.0;
+    double UT = m_utc.time().hour() + m_utc.time().minute() / 60.0 + m_utc.time().second() / 3600.0;
     double GMST0 = rev(282.9404 + 4.70935E-5 * m_day + 356.0470 + 0.9856002585 * m_day + 180.0);
     return GMST0 + UT * 15.0 + m_longitude;
 }
 
-void SolarSystemObject::calcForDateTime(const QDateTime& local, int offset)
+void SolarSystemObject::calcForDateTime(const QDateTime &local, int offset)
 {
     m_local = local;
     m_utc = local.addSecs(-offset);
-    m_day = 367 * m_utc.date().year() - (7 * (m_utc.date().year() +
-            ((m_utc.date().month() + 9) / 12))) / 4 +
-            (275 * m_utc.date().month()) / 9 + m_utc.date().day() - 730530;
-    m_day += m_utc.time().hour() / 24.0 + m_utc.time().minute() / (24.0 * 60.0) +
-             m_utc.time().second() / (24.0 * 60.0 * 60.0);
+    m_day = 367 * m_utc.date().year() - (7 * (m_utc.date().year() + ((m_utc.date().month() + 9) / 12))) / 4 + (275 * m_utc.date().month()) / 9
+        + m_utc.date().day() - 730530;
+    m_day += m_utc.time().hour() / 24.0 + m_utc.time().minute() / (24.0 * 60.0) + m_utc.time().second() / (24.0 * 60.0 * 60.0);
     m_obliquity = 23.4393 - 3.563E-7 * m_day;
 }
 
@@ -208,7 +205,7 @@ void SolarSystemObject::setPosition(double latitude, double longitude)
 
 double SolarSystemObject::rev(double x)
 {
-    return  x - floor(x / 360.0) * 360.0;
+    return x - floor(x / 360.0) * 360.0;
 }
 
 double SolarSystemObject::asind(double x)
@@ -257,9 +254,8 @@ void SolarSystemObject::toSpherical(double x, double y, double z, double *lo, do
 
 QPair<double, double> SolarSystemObject::zeroPoints(QPointF p1, QPointF p2, QPointF p3)
 {
-    double a = ((p2.y() - p1.y()) * (p1.x() - p3.x()) + (p3.y() - p1.y()) * (p2.x() - p1.x())) /
-               ((p1.x() - p3.x()) * (p2.x() * p2.x() - p1.x() * p1.x()) + (p2.x() - p1.x()) *
-                (p3.x() * p3.x() - p1.x() * p1.x()));
+    double a = ((p2.y() - p1.y()) * (p1.x() - p3.x()) + (p3.y() - p1.y()) * (p2.x() - p1.x()))
+        / ((p1.x() - p3.x()) * (p2.x() * p2.x() - p1.x() * p1.x()) + (p2.x() - p1.x()) * (p3.x() * p3.x() - p1.x() * p1.x()));
     double b = ((p2.y() - p1.y()) - a * (p2.x() * p2.x() - p1.x() * p1.x())) / (p2.x() - p1.x());
     double c = p1.y() - a * p1.x() * p1.x() - b * p1.x();
     double discriminant = b * b - 4.0 * a * c;
@@ -272,9 +268,7 @@ QPair<double, double> SolarSystemObject::zeroPoints(QPointF p1, QPointF p2, QPoi
     return QPair<double, double>(z1, z2);
 }
 
-QList< QPair<QDateTime, QDateTime> > SolarSystemObject::timesForAngles(const QList<double>& angles,
-                                                                       const QDateTime& dt,
-                                                                       int offset)
+QList<QPair<QDateTime, QDateTime>> SolarSystemObject::timesForAngles(const QList<double> &angles, const QDateTime &dt, int offset)
 {
     QList<double> altitudes;
     QDate d = dt.date();
@@ -284,7 +278,7 @@ QList< QPair<QDateTime, QDateTime> > SolarSystemObject::timesForAngles(const QLi
         altitudes.append(altitude());
         local = local.addSecs(60 * 60);
     }
-    QList< QPair<QDateTime, QDateTime> > result;
+    QList<QPair<QDateTime, QDateTime>> result;
     QTime rise, set;
     foreach (double angle, angles) {
         for (int j = 3; j <= 25; j += 2) {
@@ -321,12 +315,9 @@ double SolarSystemObject::calcElevation()
     } else {
         double te = tand(m_altitude);
         if (m_altitude > 5.0) {
-            refractionCorrection = 58.1 / te - 0.07 / (te * te * te) +
-                                   0.000086 / (te * te * te * te * te);
+            refractionCorrection = 58.1 / te - 0.07 / (te * te * te) + 0.000086 / (te * te * te * te * te);
         } else if (m_altitude > -0.575) {
-            refractionCorrection = 1735.0 + m_altitude *
-                (-518.2 + m_altitude * (103.4 + m_altitude *
-                (-12.79 + m_altitude * 0.711) ) );
+            refractionCorrection = 1735.0 + m_altitude * (-518.2 + m_altitude * (103.4 + m_altitude * (-12.79 + m_altitude * 0.711)));
         } else {
             refractionCorrection = -20.774 / te;
         }

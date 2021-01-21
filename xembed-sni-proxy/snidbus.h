@@ -23,13 +23,13 @@
 #ifndef SNIDBUS_H
 #define SNIDBUS_H
 
-#include <QString>
 #include <QByteArray>
 #include <QDBusArgument>
-#include <QVector>
 #include <QImage>
+#include <QString>
+#include <QVector>
 
-//Custom message type for DBus
+// Custom message type for DBus
 struct KDbusImageStruct {
     KDbusImageStruct();
     KDbusImageStruct(const QImage &image);

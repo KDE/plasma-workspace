@@ -22,8 +22,8 @@
 #include "qtclipboard.h"
 #include "waylandclipboard.h"
 
-#include <QGuiApplication>
 #include <KWindowSystem>
+#include <QGuiApplication>
 
 SystemClipboard *SystemClipboard::instance()
 {
@@ -45,4 +45,3 @@ SystemClipboard::SystemClipboard(QObject *parent)
     : QObject(parent)
 {
 }
-

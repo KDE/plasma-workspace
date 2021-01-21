@@ -21,20 +21,19 @@
 #include <QCursor>
 
 #ifdef HAVE_XFIXES
-#  include "cursornotificationhandler.h"
+#include "cursornotificationhandler.h"
 #endif
 
-
-MouseEngine::MouseEngine(QObject* parent, const QVariantList& args)
-    : Plasma::DataEngine(parent, args), timerId(0)
+MouseEngine::MouseEngine(QObject *parent, const QVariantList &args)
+    : Plasma::DataEngine(parent, args)
+    , timerId(0)
 #ifdef HAVE_XFIXES
-, handler(nullptr)
+    , handler(nullptr)
 #endif
 {
     Q_UNUSED(args)
     init();
 }
-
 
 MouseEngine::~MouseEngine()
 {
@@ -45,19 +44,17 @@ MouseEngine::~MouseEngine()
 #endif
 }
 
-
 QStringList MouseEngine::sources() const
 {
-   QStringList list;
+    QStringList list;
 
-   list << QLatin1String("Position");
+    list << QLatin1String("Position");
 #ifdef HAVE_XFIXES
-   list << QLatin1String("Name");
+    list << QLatin1String("Name");
 #endif
 
-   return list;
+    return list;
 }
-
 
 void MouseEngine::init()
 {
@@ -77,18 +74,15 @@ void MouseEngine::init()
 #endif
 }
 
-
 void MouseEngine::timerEvent(QTimerEvent *)
 {
     QPoint pos = QCursor::pos();
 
-    if (pos != lastPosition)
-    {
+    if (pos != lastPosition) {
         setData(QLatin1String("Position"), QVariant(pos));
         lastPosition = pos;
     }
 }
-
 
 void MouseEngine::updateCursorName(const QString &name)
 {

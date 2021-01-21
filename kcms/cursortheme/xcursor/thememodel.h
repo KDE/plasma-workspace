@@ -32,7 +32,6 @@ enum Columns {
     DescColumn,
 };
 
-
 /**
  * The CursorThemeModel class provides a model for all locally installed
  * Xcursor themes, and the KDE/Qt legacy bitmap theme.
@@ -62,49 +61,49 @@ class CursorThemeModel : public QAbstractTableModel
 {
     Q_OBJECT
 
-    public:
-        explicit CursorThemeModel(QObject *parent = nullptr);
-        ~CursorThemeModel() override;
-        QHash<int, QByteArray> roleNames() const override;
-        inline int columnCount(const QModelIndex &parent = QModelIndex()) const override;
-        inline int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-        QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
-        QVariant data(const QModelIndex &index, int role) const override;
-        bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
-        void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
+public:
+    explicit CursorThemeModel(QObject *parent = nullptr);
+    ~CursorThemeModel() override;
+    QHash<int, QByteArray> roleNames() const override;
+    inline int columnCount(const QModelIndex &parent = QModelIndex()) const override;
+    inline int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
+    void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
 
-        /// Returns the CursorTheme at @p index.
-        const CursorTheme *theme(const QModelIndex &index);
+    /// Returns the CursorTheme at @p index.
+    const CursorTheme *theme(const QModelIndex &index);
 
-        /// Returns the index for the CursorTheme with the internal name @p name,
-        /// or an invalid index if no matching theme can be found.
-        QModelIndex findIndex(const QString &name);
+    /// Returns the index for the CursorTheme with the internal name @p name,
+    /// or an invalid index if no matching theme can be found.
+    QModelIndex findIndex(const QString &name);
 
-        /// Returns the index for the default theme.
-        QModelIndex defaultIndex();
+    /// Returns the index for the default theme.
+    QModelIndex defaultIndex();
 
-        /// Adds the theme in @p dir, and returns @a true if successful or @a false otherwise.
-        bool addTheme(const QDir &dir);
-        void removeTheme(const QModelIndex &index);
+    /// Adds the theme in @p dir, and returns @a true if successful or @a false otherwise.
+    bool addTheme(const QDir &dir);
+    void removeTheme(const QModelIndex &index);
 
-        /// Returns the list of base dirs Xcursor looks for themes in.
-        const QStringList searchPaths();
+    /// Returns the list of base dirs Xcursor looks for themes in.
+    const QStringList searchPaths();
 
-        /// Refresh the list of themes by checking what's on disk.
-        void refreshList();
+    /// Refresh the list of themes by checking what's on disk.
+    void refreshList();
 
-    private:
-        bool handleDefault(const QDir &dir);
-        void processThemeDir(const QDir &dir);
-        void insertThemes();
-        bool hasTheme(const QString &theme) const;
-        bool isCursorTheme(const QString &theme, const int depth = 0);
+private:
+    bool handleDefault(const QDir &dir);
+    void processThemeDir(const QDir &dir);
+    void insertThemes();
+    bool hasTheme(const QString &theme) const;
+    bool isCursorTheme(const QString &theme, const int depth = 0);
 
-    private:
-        QList<CursorTheme*> list;
-        QStringList baseDirs;
-        QString defaultName;
-        QVector<CursorTheme*> pendingDeletions;
+private:
+    QList<CursorTheme *> list;
+    QStringList baseDirs;
+    QString defaultName;
+    QVector<CursorTheme *> pendingDeletions;
 };
 
 int CursorThemeModel::rowCount(const QModelIndex &) const

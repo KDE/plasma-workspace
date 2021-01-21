@@ -19,7 +19,7 @@
 
 #include "setupdevicejob.h"
 
-void SetupDeviceJob::setupDone(const QModelIndex& index, bool success)
+void SetupDeviceJob::setupDone(const QModelIndex &index, bool success)
 {
     if (index == m_index) {
         setError(!success);
@@ -27,13 +27,11 @@ void SetupDeviceJob::setupDone(const QModelIndex& index, bool success)
     }
 }
 
-void SetupDeviceJob::setupError(const QString& message)
+void SetupDeviceJob::setupError(const QString &message)
 {
     if (!error() || errorText().isEmpty()) {
         setErrorText(message);
     }
 }
-
-
 
 // vim: sw=4 sts=4 et tw=100

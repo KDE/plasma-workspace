@@ -34,33 +34,30 @@
 //
 // Create's a QWidget with size 0/0 and no border, makes this transient
 // for xid, and all other widgets can use this as their parent...
-static QWidget * createParent(int xid)
+static QWidget *createParent(int xid)
 {
-    if(!xid)
+    if (!xid)
         return nullptr;
 
-    QWidget *parent=new QWidget(nullptr, Qt::FramelessWindowHint);
+    QWidget *parent = new QWidget(nullptr, Qt::FramelessWindowHint);
 
     parent->resize(1, 1);
     parent->show();
 
     XWindowAttributes attr;
-    int               rx, ry;
-    Window            junkwin;
+    int rx, ry;
+    Window junkwin;
 
     XSetTransientForHint(QX11Info::display(), parent->winId(), xid);
-    if(XGetWindowAttributes(QX11Info::display(), xid, &attr))
-    {
-        XTranslateCoordinates(QX11Info::display(), xid, attr.root,
-                              -attr.border_width, -16,
-                              &rx, &ry, &junkwin);
+    if (XGetWindowAttributes(QX11Info::display(), xid, &attr)) {
+        XTranslateCoordinates(QX11Info::display(), xid, attr.root, -attr.border_width, -16, &rx, &ry, &junkwin);
 
-        rx=(rx+(attr.width/2));
-        if(rx<0)
-            rx=0;
-        ry=(ry+(attr.height/2));
-        if(ry<0)
-            ry=0;
+        rx = (rx + (attr.width / 2));
+        if (rx < 0)
+            rx = 0;
+        ry = (ry + (attr.height / 2));
+        if (ry < 0)
+            ry = 0;
         parent->move(rx, ry);
     }
     parent->setWindowOpacity(0);

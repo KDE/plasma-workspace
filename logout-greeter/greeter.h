@@ -31,9 +31,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kworkspace.h>
 
 class KSMShutdownDlg;
-namespace KWayland {
-namespace Client {
-    class PlasmaShell;
+namespace KWayland
+{
+namespace Client
+{
+class PlasmaShell;
 }
 }
 

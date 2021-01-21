@@ -33,9 +33,9 @@
 
 #include <algorithm>
 
-ColorsModel::ColorsModel(QObject *parent) : QAbstractListModel(parent)
+ColorsModel::ColorsModel(QObject *parent)
+    : QAbstractListModel(parent)
 {
-
 }
 
 ColorsModel::~ColorsModel() = default;
@@ -58,13 +58,20 @@ QVariant ColorsModel::data(const QModelIndex &index, int role) const
     const auto &item = m_data.at(index.row());
 
     switch (role) {
-    case Qt::DisplayRole: return item.display;
-    case SchemeNameRole: return item.schemeName;
-    case PaletteRole: return item.palette;
-    case ActiveTitleBarBackgroundRole: return item.activeTitleBarBackground;
-    case ActiveTitleBarForegroundRole: return item.activeTitleBarForeground;
-    case PendingDeletionRole: return item.pendingDeletion;
-    case RemovableRole: return item.removable;
+    case Qt::DisplayRole:
+        return item.display;
+    case SchemeNameRole:
+        return item.schemeName;
+    case PaletteRole:
+        return item.palette;
+    case ActiveTitleBarBackgroundRole:
+        return item.activeTitleBarBackground;
+    case ActiveTitleBarForegroundRole:
+        return item.activeTitleBarForeground;
+    case PendingDeletionRole:
+        return item.pendingDeletion;
+    case RemovableRole:
+        return item.removable;
     }
 
     return QVariant();
@@ -133,7 +140,7 @@ void ColorsModel::setSelectedScheme(const QString &scheme)
 
 int ColorsModel::indexOfScheme(const QString &scheme) const
 {
-    auto it = std::find_if(m_data.begin(), m_data.end(), [ &scheme](const ColorsModelData &item) {
+    auto it = std::find_if(m_data.begin(), m_data.end(), [&scheme](const ColorsModelData &item) {
         return item.schemeName == scheme;
     });
 
@@ -159,7 +166,8 @@ void ColorsModel::load()
 
     QStringList schemeFiles;
 
-    const QStringList schemeDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes"), QStandardPaths::LocateDirectory);
+    const QStringList schemeDirs =
+        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes"), QStandardPaths::LocateDirectory);
     for (const QString &dir : schemeDirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList{QStringLiteral("*.colors")});
         for (const QString &file : fileNames) {
@@ -186,7 +194,7 @@ void ColorsModel::load()
         const QPalette palette = KColorScheme::createApplicationPalette(config);
 
         QColor activeTitleBarBackground, activeTitleBarForeground;
-         if (KColorScheme::isColorSetSupported(config, KColorScheme::Header)) {
+        if (KColorScheme::isColorSetSupported(config, KColorScheme::Header)) {
             KColorScheme headerColorScheme(QPalette::Active, KColorScheme::Header, config);
             activeTitleBarBackground = headerColorScheme.background().color();
             activeTitleBarForeground = headerColorScheme.foreground().color();

@@ -19,21 +19,21 @@
 #ifndef PANELVIEW_H
 #define PANELVIEW_H
 
-#include <QPointer>
 #include <Plasma/Theme>
+#include <QPointer>
 #include <QTimer>
 
-#include <PlasmaQuick/ContainmentView>
 #include <PlasmaQuick/ConfigView>
+#include <PlasmaQuick/ContainmentView>
 
 class ShellCorona;
 
 namespace KWayland
 {
-    namespace Client
-    {
-        class PlasmaShellSurface;
-    }
+namespace Client
+{
+class PlasmaShellSurface;
+}
 }
 
 class PanelView : public PlasmaQuick::ContainmentView
@@ -81,7 +81,7 @@ class PanelView : public PlasmaQuick::ContainmentView
      * support NoBackground in order to disable blur/contrast effects and remove
      * the panel shadows
      * @since 5.9
-     */    
+     */
     Q_PROPERTY(Plasma::Types::BackgroundHints backgroundHints WRITE setBackgroundHints READ backgroundHints NOTIFY backgroundHintsChanged)
 
     /**
@@ -101,7 +101,6 @@ class PanelView : public PlasmaQuick::ContainmentView
     Q_PROPERTY(VisibilityMode visibilityMode READ visibilityMode WRITE setVisibilityMode NOTIFY visibilityModeChanged)
 
 public:
-
     enum VisibilityMode {
         NormalPanel = 0, /** default, always visible panel, the windowmanager reserves a places for it */
         AutoHide, /**the panel will be shownn only if the mouse cursor is on screen edges */
@@ -162,8 +161,8 @@ public:
     /*This is different from screen() as is always there, even if the window is
       temporarily outside the screen or if is hidden: only plasmashell will ever
       change this property, unlike QWindow::screen()*/
-    void setScreenToFollow(QScreen* screen);
-    QScreen* screenToFollow() const;
+    void setScreenToFollow(QScreen *screen);
+    QScreen *screenToFollow() const;
 
 protected:
     void resizeEvent(QResizeEvent *ev) override;
@@ -183,7 +182,7 @@ Q_SIGNALS:
     void backgroundHintsChanged();
     void enabledBordersChanged();
 
-    //QWindow does not have a property for screen. Adding this property requires re-implementing the signal
+    // QWindow does not have a property for screen. Adding this property requires re-implementing the signal
     void screenToFollowChanged(QScreen *screen);
     void visibilityModeChanged();
 
@@ -201,7 +200,7 @@ private Q_SLOTS:
     void containmentChanged();
     void statusChanged(Plasma::Types::ItemStatus);
     void restoreAutoHide();
-    void screenDestroyed(QObject* screen);
+    void screenDestroyed(QObject *screen);
     void adaptToScreen();
     void handleQmlStatusChange(QQmlComponent::Status status);
     void updateMask();

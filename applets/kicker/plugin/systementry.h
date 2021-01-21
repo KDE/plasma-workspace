@@ -30,54 +30,56 @@ class SystemEntry : public QObject, public AbstractEntry
 {
     Q_OBJECT
 
-    public:
-        enum Action
-        {
-            NoAction = 0,
-            LockSession,
-            LogoutSession,
-            SaveSession,
-            SwitchUser,
-            Suspend,
-            Hibernate,
-            Reboot,
-            Shutdown,
-        };
+public:
+    enum Action {
+        NoAction = 0,
+        LockSession,
+        LogoutSession,
+        SaveSession,
+        SwitchUser,
+        Suspend,
+        Hibernate,
+        Reboot,
+        Shutdown,
+    };
 
-        explicit SystemEntry(AbstractModel *owner, Action action);
-        explicit SystemEntry(AbstractModel *owner, const QString &id);
-        ~SystemEntry();
+    explicit SystemEntry(AbstractModel *owner, Action action);
+    explicit SystemEntry(AbstractModel *owner, const QString &id);
+    ~SystemEntry();
 
-        Action action() const;
+    Action action() const;
 
-        EntryType type() const override { return RunnableType; }
+    EntryType type() const override
+    {
+        return RunnableType;
+    }
 
-        bool isValid() const override;
+    bool isValid() const override;
 
-        QIcon icon() const override;
-        QString iconName() const;
-        QString name() const override;
-        QString group() const override;
-        QString description() const override;
+    QIcon icon() const override;
+    QString iconName() const;
+    QString name() const override;
+    QString group() const override;
+    QString description() const override;
 
-        QString id() const override;
+    QString id() const override;
 
-        bool run(const QString& actionId = QString(), const QVariant &argument = QVariant()) override;
+    bool run(const QString &actionId = QString(), const QVariant &argument = QVariant()) override;
 
-    Q_SIGNALS:
-        void isValidChanged() const;
+Q_SIGNALS:
+    void isValidChanged() const;
 
-    private Q_SLOTS:
-        void refresh();
+private Q_SLOTS:
+    void refresh();
 
-    private:
-        bool m_initialized;
+private:
+    bool m_initialized;
 
-        Action m_action;
-        bool m_valid;
+    Action m_action;
+    bool m_valid;
 
-        static int s_instanceCount;
-        static SessionManagement *s_sessionManagement;
+    static int s_instanceCount;
+    static SessionManagement *s_sessionManagement;
 };
 
 #endif

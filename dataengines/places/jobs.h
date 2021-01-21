@@ -26,18 +26,16 @@
 class AddEditPlaceJob : public ModelJob
 {
 public:
-    AddEditPlaceJob(KFilePlacesModel* model,
-                    QModelIndex index,
-                    const QVariantMap& parameters,
-                    QObject* parent = nullptr)
+    AddEditPlaceJob(KFilePlacesModel *model, QModelIndex index, const QVariantMap &parameters, QObject *parent = nullptr)
         : ModelJob(parent, model, index, (index.isValid() ? "Edit" : "Add"), parameters)
         , m_text(parameters[QStringLiteral("Name")].toString())
         , m_url(parameters[QStringLiteral("Url")].toUrl())
         , m_icon(parameters[QStringLiteral("Icon")].toString())
-    {}
+    {
+    }
 
-    void start()
-    override {
+    void start() override
+    {
         if (m_index.isValid()) {
             m_model->editPlace(m_index, m_text, m_url, m_icon);
         } else {
@@ -54,13 +52,13 @@ private:
 class RemovePlaceJob : public ModelJob
 {
 public:
-    RemovePlaceJob(KFilePlacesModel* model, const QModelIndex& index,
-                   QObject* parent)
+    RemovePlaceJob(KFilePlacesModel *model, const QModelIndex &index, QObject *parent)
         : ModelJob(parent, model, index, QStringLiteral("Remove"))
-    {}
+    {
+    }
 
-    void start()
-    override {
+    void start() override
+    {
         m_model->removePlace(m_index);
     }
 };
@@ -68,14 +66,14 @@ public:
 class ShowPlaceJob : public ModelJob
 {
 public:
-    ShowPlaceJob(KFilePlacesModel* model, const QModelIndex& index,
-                 bool show = true, QObject* parent = nullptr)
+    ShowPlaceJob(KFilePlacesModel *model, const QModelIndex &index, bool show = true, QObject *parent = nullptr)
         : ModelJob(parent, model, index, (show ? "Show" : "Hide"))
         , m_show(show)
-    {}
+    {
+    }
 
-    void start()
-    override {
+    void start() override
+    {
         m_model->setPlaceHidden(m_index, m_show);
     }
 
@@ -86,13 +84,13 @@ private:
 class TeardownDeviceJob : public ModelJob
 {
 public:
-    TeardownDeviceJob(KFilePlacesModel* model, const QModelIndex& index,
-                      QObject* parent = nullptr)
+    TeardownDeviceJob(KFilePlacesModel *model, const QModelIndex &index, QObject *parent = nullptr)
         : ModelJob(parent, model, index, QStringLiteral("Teardown Device"))
-    {}
+    {
+    }
 
-    void start()
-    override {
+    void start() override
+    {
         m_model->requestTeardown(m_index);
     }
 };
@@ -100,4 +98,3 @@ public:
 #include "setupdevicejob.h"
 
 #endif // JOBS_H
-

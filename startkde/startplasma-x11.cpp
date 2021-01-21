@@ -19,17 +19,17 @@
 
 #include "startplasma.h"
 
-#include <signal.h>
-#include <unistd.h>
 #include <KConfig>
 #include <KConfigGroup>
+#include <signal.h>
+#include <unistd.h>
 
 void sighupHandler(int)
 {
     out << "GOT SIGHUP\n";
 }
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     // When the X server dies we get a HUP signal from xinit. We must ignore it
     // because we still need to do some cleanup.
@@ -53,21 +53,21 @@ int main(int argc, char** argv)
 
     // Check if a Plasma session already is running and whether it's possible to connect to X
     switch (kCheckRunning()) {
-        case NoX11:
-            out << "$DISPLAY is not set or cannot connect to the X server.\n";
-            return 1;
-        case PlasmaRunning:
-            messageBox(QStringLiteral("Plasma seems to be already running on this display.\n"));
-            return 1;
-        case NoPlasmaRunning:
-            break;
+    case NoX11:
+        out << "$DISPLAY is not set or cannot connect to the X server.\n";
+        return 1;
+    case PlasmaRunning:
+        messageBox(QStringLiteral("Plasma seems to be already running on this display.\n"));
+        return 1;
+    case NoPlasmaRunning:
+        break;
     }
 
     createConfigDirectory();
     runStartupConfig();
 
-    //Do not sync any of this section with the wayland versions as there scale factors are
-    //sent properly over wl_output
+    // Do not sync any of this section with the wayland versions as there scale factors are
+    // sent properly over wl_output
 
     {
         KConfig cfg(QStringLiteral("kdeglobals"));
@@ -79,7 +79,7 @@ int main(int argc, char** argv)
             qreal scaleFactor = qFloor(kscreenGroup.readEntry("ScaleFactor", 1.0));
             if (scaleFactor > 1) {
                 qputenv("GDK_SCALE", QByteArray::number(scaleFactor, 'g', 0));
-                qputenv("GDK_DPI_SCALE", QByteArray::number(1.0/scaleFactor, 'g', 3));
+                qputenv("GDK_DPI_SCALE", QByteArray::number(1.0 / scaleFactor, 'g', 3));
             }
         }
     }

@@ -34,5 +34,4 @@ public:
     ~CalendarApplet() override;
 
     Q_INVOKABLE int weekNumber(const QDateTime &dateTime) const;
-
 };

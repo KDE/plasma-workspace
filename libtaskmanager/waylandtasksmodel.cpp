@@ -42,13 +42,12 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 class Q_DECL_HIDDEN WaylandTasksModel::Private
 {
 public:
     Private(WaylandTasksModel *q);
-    QList<KWayland::Client::PlasmaWindow*> windows;
-    QHash<KWayland::Client::PlasmaWindow*, AppData> appDataCache;
+    QList<KWayland::Client::PlasmaWindow *> windows;
+    QHash<KWayland::Client::PlasmaWindow *, AppData> appDataCache;
     KWayland::Client::PlasmaWindowManagement *windowManagement = nullptr;
     KSharedConfig::Ptr rulesConfig;
     KDirWatch *configWatcher = nullptr;
@@ -90,12 +89,15 @@ void WaylandTasksModel::Private::init()
         appDataCache.clear();
 
         // Emit changes of all roles satisfied from app data cache.
-        q->dataChanged(q->index(0, 0),  q->index(windows.count() - 1, 0),
-            QVector<int>{Qt::DecorationRole, AbstractTasksModel::AppId,
-            AbstractTasksModel::AppName, AbstractTasksModel::GenericName,
-            AbstractTasksModel::LauncherUrl,
-            AbstractTasksModel::LauncherUrlWithoutIcon,
-            AbstractTasksModel::SkipTaskbar});
+        q->dataChanged(q->index(0, 0),
+                       q->index(windows.count() - 1, 0),
+                       QVector<int>{Qt::DecorationRole,
+                                    AbstractTasksModel::AppId,
+                                    AbstractTasksModel::AppName,
+                                    AbstractTasksModel::GenericName,
+                                    AbstractTasksModel::LauncherUrl,
+                                    AbstractTasksModel::LauncherUrlWithoutIcon,
+                                    AbstractTasksModel::SkipTaskbar});
     };
 
     rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
@@ -134,29 +136,24 @@ void WaylandTasksModel::Private::initWayland()
     KWayland::Client::Registry *registry = new KWayland::Client::Registry(q);
     registry->create(connection);
 
-    QObject::connect(registry, &KWayland::Client::Registry::plasmaWindowManagementAnnounced, q, [this, registry] (quint32 name, quint32 version) {
-            windowManagement = registry->createPlasmaWindowManagement(name, version, q);
+    QObject::connect(registry, &KWayland::Client::Registry::plasmaWindowManagementAnnounced, q, [this, registry](quint32 name, quint32 version) {
+        windowManagement = registry->createPlasmaWindowManagement(name, version, q);
 
-            QObject::connect(windowManagement, &KWayland::Client::PlasmaWindowManagement::interfaceAboutToBeReleased, q,
-                [this] {
-                    q->beginResetModel();
-                    windows.clear();
-                    q->endResetModel();
-                }
-            );
+        QObject::connect(windowManagement, &KWayland::Client::PlasmaWindowManagement::interfaceAboutToBeReleased, q, [this] {
+            q->beginResetModel();
+            windows.clear();
+            q->endResetModel();
+        });
 
-            QObject::connect(windowManagement, &KWayland::Client::PlasmaWindowManagement::windowCreated, q,
-                [this](KWayland::Client::PlasmaWindow *window) {
-                    addWindow(window);
-                }
-            );
+        QObject::connect(windowManagement, &KWayland::Client::PlasmaWindowManagement::windowCreated, q, [this](KWayland::Client::PlasmaWindow *window) {
+            addWindow(window);
+        });
 
-            const auto windows = windowManagement->windows();
-            for (auto it = windows.constBegin(); it != windows.constEnd(); ++it) {
-                addWindow(*it);
-            }
+        const auto windows = windowManagement->windows();
+        for (auto it = windows.constBegin(); it != windows.constEnd(); ++it) {
+            addWindow(*it);
         }
-    );
+    });
 
     registry->setup();
 }
@@ -188,134 +185,123 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
     QObject::connect(window, &KWayland::Client::PlasmaWindow::unmapped, q, removeWindow);
     QObject::connect(window, &QObject::destroyed, q, removeWindow);
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::titleChanged, q,
-        [window, this] { this->dataChanged(window, Qt::DisplayRole); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::titleChanged, q, [window, this] {
+        this->dataChanged(window, Qt::DisplayRole);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::iconChanged, q,
-        [window, this] {
-            // The icon in the AppData struct might come from PlasmaWindow if it wasn't
-            // filled in by windowUrlFromMetadata+appDataFromUrl.
-            // TODO: Don't evict the cache unnecessarily if this isn't the case. As icons
-            // are currently very static on Wayland, this eviction is unlikely to happen
-            // frequently as of now.
-            appDataCache.remove(window);
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::iconChanged, q, [window, this] {
+        // The icon in the AppData struct might come from PlasmaWindow if it wasn't
+        // filled in by windowUrlFromMetadata+appDataFromUrl.
+        // TODO: Don't evict the cache unnecessarily if this isn't the case. As icons
+        // are currently very static on Wayland, this eviction is unlikely to happen
+        // frequently as of now.
+        appDataCache.remove(window);
 
-            this->dataChanged(window, Qt::DecorationRole);
-        }
-    );
+        this->dataChanged(window, Qt::DecorationRole);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::appIdChanged, q,
-        [window, this] {
-            // The AppData struct in the cache is derived from this and needs
-            // to be evicted in favor of a fresh struct based on the changed
-            // window metadata.
-            appDataCache.remove(window);
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::appIdChanged, q, [window, this] {
+        // The AppData struct in the cache is derived from this and needs
+        // to be evicted in favor of a fresh struct based on the changed
+        // window metadata.
+        appDataCache.remove(window);
 
-            // Refresh roles satisfied from the app data cache.
-            this->dataChanged(window, QVector<int>{AppId, AppName, GenericName,
-                LauncherUrl, LauncherUrlWithoutIcon, SkipTaskbar});
-        }
-    );
+        // Refresh roles satisfied from the app data cache.
+        this->dataChanged(window, QVector<int>{AppId, AppName, GenericName, LauncherUrl, LauncherUrlWithoutIcon, SkipTaskbar});
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::activeChanged, q,
-        [window, this] { this->dataChanged(window, IsActive); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::activeChanged, q, [window, this] {
+        this->dataChanged(window, IsActive);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::closeableChanged, q,
-        [window, this] { this->dataChanged(window, IsClosable); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::closeableChanged, q, [window, this] {
+        this->dataChanged(window, IsClosable);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::movableChanged, q,
-        [window, this] { this->dataChanged(window, IsMovable); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::movableChanged, q, [window, this] {
+        this->dataChanged(window, IsMovable);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::resizableChanged, q,
-        [window, this] { this->dataChanged(window, IsResizable); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::resizableChanged, q, [window, this] {
+        this->dataChanged(window, IsResizable);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::fullscreenableChanged, q,
-        [window, this] { this->dataChanged(window, IsFullScreenable); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::fullscreenableChanged, q, [window, this] {
+        this->dataChanged(window, IsFullScreenable);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::fullscreenChanged, q,
-        [window, this] { this->dataChanged(window, IsFullScreen); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::fullscreenChanged, q, [window, this] {
+        this->dataChanged(window, IsFullScreen);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::maximizeableChanged, q,
-        [window, this] { this->dataChanged(window, IsMaximizable); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::maximizeableChanged, q, [window, this] {
+        this->dataChanged(window, IsMaximizable);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::maximizedChanged, q,
-        [window, this] { this->dataChanged(window, IsMaximized); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::maximizedChanged, q, [window, this] {
+        this->dataChanged(window, IsMaximized);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::minimizeableChanged, q,
-        [window, this] { this->dataChanged(window, IsMinimizable); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::minimizeableChanged, q, [window, this] {
+        this->dataChanged(window, IsMinimizable);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::minimizedChanged, q,
-        [window, this] { this->dataChanged(window, IsMinimized); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::minimizedChanged, q, [window, this] {
+        this->dataChanged(window, IsMinimized);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::keepAboveChanged, q,
-        [window, this] { this->dataChanged(window, IsKeepAbove); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::keepAboveChanged, q, [window, this] {
+        this->dataChanged(window, IsKeepAbove);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::keepBelowChanged, q,
-        [window, this] { this->dataChanged(window, IsKeepBelow); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::keepBelowChanged, q, [window, this] {
+        this->dataChanged(window, IsKeepBelow);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::shadeableChanged, q,
-        [window, this] { this->dataChanged(window, IsShadeable); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::shadeableChanged, q, [window, this] {
+        this->dataChanged(window, IsShadeable);
+    });
 
-// FIXME
-//     QObject::connect(window, &KWayland::Client::PlasmaWindow::virtualDesktopChangeableChanged, q,
-//         // TODO: This is marked deprecated in KWayland, but (IMHO) shouldn't be.
-//         [window, this] { this->dataChanged(window, IsVirtualDesktopsChangeable); }
-//     );
+    // FIXME
+    //     QObject::connect(window, &KWayland::Client::PlasmaWindow::virtualDesktopChangeableChanged, q,
+    //         // TODO: This is marked deprecated in KWayland, but (IMHO) shouldn't be.
+    //         [window, this] { this->dataChanged(window, IsVirtualDesktopsChangeable); }
+    //     );
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::plasmaVirtualDesktopEntered, q,
-        [window, this] {
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::plasmaVirtualDesktopEntered, q, [window, this] {
+        this->dataChanged(window, VirtualDesktops);
+
+        // If the count has changed from 0, the window may no longer be on all virtual
+        // desktops.
+        if (window->plasmaVirtualDesktops().count() > 0) {
             this->dataChanged(window, VirtualDesktops);
-
-            // If the count has changed from 0, the window may no longer be on all virtual
-            // desktops.
-            if (window->plasmaVirtualDesktops().count() > 0) {
-                this->dataChanged(window, VirtualDesktops);
-            }
         }
-    );
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::plasmaVirtualDesktopLeft, q,
-        [window, this] {
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::plasmaVirtualDesktopLeft, q, [window, this] {
+        this->dataChanged(window, VirtualDesktops);
+
+        // If the count has changed to 0, the window is now on all virtual desktops.
+        if (window->plasmaVirtualDesktops().count() == 0) {
             this->dataChanged(window, VirtualDesktops);
-
-            // If the count has changed to 0, the window is now on all virtual desktops.
-            if (window->plasmaVirtualDesktops().count() == 0) {
-                this->dataChanged(window, VirtualDesktops);
-            }
         }
-    );
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::geometryChanged, q,
-        [window, this] { this->dataChanged(window, QVector<int>{Geometry, ScreenGeometry}); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::geometryChanged, q, [window, this] {
+        this->dataChanged(window, QVector<int>{Geometry, ScreenGeometry});
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::demandsAttentionChanged, q,
-        [window, this] { this->dataChanged(window, IsDemandingAttention); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::demandsAttentionChanged, q, [window, this] {
+        this->dataChanged(window, IsDemandingAttention);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::skipTaskbarChanged, q,
-        [window, this] { this->dataChanged(window, SkipTaskbar); }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::skipTaskbarChanged, q, [window, this] {
+        this->dataChanged(window, SkipTaskbar);
+    });
 
-    QObject::connect(window, &KWayland::Client::PlasmaWindow::applicationMenuChanged, q,
-        [window, this] {
-            this->dataChanged(window, QVector<int>{ApplicationMenuServiceName, ApplicationMenuObjectPath});
-        }
-    );
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::applicationMenuChanged, q, [window, this] {
+        this->dataChanged(window, QVector<int>{ApplicationMenuServiceName, ApplicationMenuObjectPath});
+    });
 }
 
 AppData WaylandTasksModel::Private::appData(KWayland::Client::PlasmaWindow *window)
@@ -326,8 +312,7 @@ AppData WaylandTasksModel::Private::appData(KWayland::Client::PlasmaWindow *wind
         return *it;
     }
 
-    const AppData &data = appDataFromUrl(windowUrlFromMetadata(window->appId(),
-        window->pid(), rulesConfig));
+    const AppData &data = appDataFromUrl(windowUrlFromMetadata(window->appId(), window->pid(), rulesConfig));
 
     appDataCache.insert(window, data);
 
@@ -508,9 +493,7 @@ void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
 
 void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0
-        || index.row() >= d->windows.count()
-        || urls.isEmpty()) {
+    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count() || urls.isEmpty()) {
         return;
     }
 

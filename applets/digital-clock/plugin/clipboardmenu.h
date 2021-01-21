@@ -50,7 +50,6 @@ signals:
     void currentDateChanged();
     void secondsIncludedChanged();
 
-
 private:
     QDateTime m_currentDate;
     bool m_secondsIncluded = false;

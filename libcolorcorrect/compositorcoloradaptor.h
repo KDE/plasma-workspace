@@ -17,10 +17,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef COMPOSITORCOLORADAPTOR_H
 #define COMPOSITORCOLORADAPTOR_H
 
-#include <QObject>
-#include <QTime>
 #include <QHash>
+#include <QObject>
 #include <QString>
+#include <QTime>
 
 #include "colorcorrect_export.h"
 #include "colorcorrectconstants.h"
@@ -29,7 +29,6 @@ class QDBusInterface;
 
 namespace ColorCorrect
 {
-
 class COLORCORRECT_EXPORT CompositorAdaptor : public QObject
 {
     Q_OBJECT
@@ -105,97 +104,120 @@ public:
     explicit CompositorAdaptor(QObject *parent = nullptr);
     ~CompositorAdaptor() override = default;
 
-    int error() const {
+    int error() const
+    {
         return (int)m_error;
     }
     void setError(ErrorCode error);
 
-    QString errorText() const {
+    QString errorText() const
+    {
         return m_errorText;
     }
 
     /*
      * General
      */
-    bool nightColorAvailable() const {
+    bool nightColorAvailable() const
+    {
         return m_nightColorAvailable;
     }
-    int minimalTemperature() const {
+    int minimalTemperature() const
+    {
         return MIN_TEMPERATURE;
     }
-    int neutralTemperature() const {
+    int neutralTemperature() const
+    {
         return NEUTRAL_TEMPERATURE;
     }
 
-    bool activeEnabled() const {
+    bool activeEnabled() const
+    {
         return m_activeEnabled;
     }
-    bool active() const {
+    bool active() const
+    {
         return m_active;
     }
-    bool activeStaged() const {
+    bool activeStaged() const
+    {
         return m_activeStaged;
     }
-    void setActiveStaged(bool set) {
+    void setActiveStaged(bool set)
+    {
         if (m_activeStaged == set) {
             return;
         }
         m_activeStaged = set;
         emit activeStagedChanged();
     }
-    bool activeDefault() const {
+    bool activeDefault() const
+    {
         return true;
     }
 
-    bool running() const {
+    bool running() const
+    {
         return m_running;
     }
 
-    bool modeEnabled() const {
+    bool modeEnabled() const
+    {
         return m_modeEnabled;
     }
-    int mode() const {
+    int mode() const
+    {
         return (int)m_mode;
     }
-    int modeStaged() const {
+    int modeStaged() const
+    {
         return (int)m_modeStaged;
     }
-    void setModeStaged(int mode) {
+    void setModeStaged(int mode)
+    {
         if (mode < 0 || 3 < mode || (int)m_modeStaged == mode) {
             return;
         }
         m_modeStaged = (Mode)mode;
         emit modeStagedChanged();
     }
-    int modeDefault() const {
+    int modeDefault() const
+    {
         return (int)Mode::ModeAutomatic;
     }
     /*
      * Color Temperature
      */
-    bool nightTemperatureEnabled() const {
+    bool nightTemperatureEnabled() const
+    {
         return m_nightTemperatureEnabled;
     }
-    int nightTemperature() const {
+    int nightTemperature() const
+    {
         return m_nightTemperature;
     }
-    int nightTemperatureStaged() const {
+    int nightTemperatureStaged() const
+    {
         return m_nightTemperatureStaged;
     }
-    void setNightTemperatureStaged(int val) {
+    void setNightTemperatureStaged(int val)
+    {
         if (m_nightTemperatureStaged == val) {
             return;
         }
         m_nightTemperatureStaged = val;
         emit nightTemperatureStagedChanged();
     }
-    int nightTemperatureDefault() const {
+    int nightTemperatureDefault() const
+    {
         return DEFAULT_NIGHT_TEMPERATURE;
     }
-    int curColorT() const {
+    int curColorT() const
+    {
         return m_curColorT;
     }
-    void setCurColorT(int val) {
+    void setCurColorT(int val)
+    {
         if (m_nightTemperature == val) {
             return;
         }
@@ -205,24 +227,30 @@ public:
     /*
      * Location
      */
-    bool locationEnabled() const {
+    bool locationEnabled() const
+    {
         return m_locationEnabled;
     }
 
-    double latitudeAuto() const {
+    double latitudeAuto() const
+    {
         return m_latitudeAuto;
     }
-    double longitudeAuto() const {
+    double longitudeAuto() const
+    {
         return m_longitudeAuto;
     }
 
-    double latitudeFixed() const {
+    double latitudeFixed() const
+    {
         return m_latitudeFixed;
     }
-    double latitudeFixedStaged() const {
+    double latitudeFixedStaged() const
+    {
         return m_latitudeFixedStaged;
     }
-    void setLatitudeFixedStaged(double val) {
+    void setLatitudeFixedStaged(double val)
+    {
         if (m_latitudeFixedStaged == val) {
             return;
         }
@@ -230,39 +258,48 @@ public:
         emit latitudeFixedStagedChanged();
     }
 
-    double longitudeFixed() const {
+    double longitudeFixed() const
+    {
         return m_longitudeFixed;
     }
-    double longitudeFixedStaged() const {
+    double longitudeFixedStaged() const
+    {
         return m_longitudeFixedStaged;
     }
-    void setLongitudeFixedStaged(double val) {
+    void setLongitudeFixedStaged(double val)
+    {
         if (m_longitudeFixedStaged == val) {
             return;
         }
         m_longitudeFixedStaged = val;
         emit longitudeFixedStagedChanged();
     }
-    double latitudeFixedDefault() const {
+    double latitudeFixedDefault() const
+    {
         return 0.;
     }
-    double longitudeFixedDefault() const {
+    double longitudeFixedDefault() const
+    {
         return 0.;
     }
     /*
      * Timings
      */
-    bool timingsEnabled() const {
+    bool timingsEnabled() const
+    {
         return m_timingsEnabled;
     }
 
-    QTime morningBeginFixed() const {
+    QTime morningBeginFixed() const
+    {
         return m_morningBeginFixed;
     }
-    QTime morningBeginFixedStaged() const {
+    QTime morningBeginFixedStaged() const
+    {
         return m_morningBeginFixedStaged;
     }
-    void setMorningBeginFixedStaged(const QTime &time) {
+    void setMorningBeginFixedStaged(const QTime &time)
+    {
         if (m_morningBeginFixedStaged == time) {
             return;
         }
@@ -270,13 +307,16 @@ public:
         emit morningBeginFixedStagedChanged();
     }
 
-    QTime eveningBeginFixed() const {
+    QTime eveningBeginFixed() const
+    {
         return m_eveningBeginFixed;
     }
-    QTime eveningBeginFixedStaged() const {
+    QTime eveningBeginFixedStaged() const
+    {
         return m_eveningBeginFixedStaged;
     }
-    void setEveningBeginFixedStaged(const QTime &time) {
+    void setEveningBeginFixedStaged(const QTime &time)
+    {
         if (m_eveningBeginFixedStaged == time) {
             return;
         }
@@ -284,26 +324,32 @@ public:
         emit eveningBeginFixedStagedChanged();
     }
     // saved in minutes
-    int transitionTime() const {
+    int transitionTime() const
+    {
         return m_transitionTime;
     }
-    int transitionTimeStaged() const {
+    int transitionTimeStaged() const
+    {
         return m_transitionTimeStaged;
     }
-    void setTransitionTimeStaged(int time) {
+    void setTransitionTimeStaged(int time)
+    {
         if (m_transitionTimeStaged == time) {
             return;
         }
         m_transitionTimeStaged = time;
         emit transitionTimeStagedChanged();
     }
-    QTime morningBeginFixedDefault() const {
-        return QTime(6,0,0);
+    QTime morningBeginFixedDefault() const
+    {
+        return QTime(6, 0, 0);
     }
-    QTime eveningBeginFixedDefault() const {
-        return QTime(18,0,0);
+    QTime eveningBeginFixedDefault() const
+    {
+        return QTime(18, 0, 0);
     }
-    int transitionTimeDefault() const {
+    int transitionTimeDefault() const
+    {
         return FALLBACK_SLOW_UPDATE_TIME;
     }
 
@@ -425,7 +471,6 @@ Q_SIGNALS:
     void dataUpdated();
     void stagedDataReset();
 
-
 private:
     bool resetData(const QHash<QString, QVariant> &data);
     void resetDataAndStaged(const QHash<QString, QVariant> &data);
@@ -464,10 +509,10 @@ private:
 
     bool m_timingsEnabled = true;
 
-    QTime m_morningBeginFixed = QTime(6,0,0);
-    QTime m_eveningBeginFixed = QTime(18,0,0);
-    QTime m_morningBeginFixedStaged = QTime(6,0,0);
-    QTime m_eveningBeginFixedStaged = QTime(18,0,0);
+    QTime m_morningBeginFixed = QTime(6, 0, 0);
+    QTime m_eveningBeginFixed = QTime(18, 0, 0);
+    QTime m_morningBeginFixedStaged = QTime(6, 0, 0);
+    QTime m_eveningBeginFixedStaged = QTime(18, 0, 0);
 
     int m_transitionTime = FALLBACK_SLOW_UPDATE_TIME;
     int m_transitionTimeStaged = FALLBACK_SLOW_UPDATE_TIME;

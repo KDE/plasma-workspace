@@ -26,11 +26,11 @@ class FunnelModel : public ForwardingModel
 {
     Q_OBJECT
 
-    public:
-        explicit FunnelModel(QObject *parent = nullptr);
-        ~FunnelModel() override;
+public:
+    explicit FunnelModel(QObject *parent = nullptr);
+    ~FunnelModel() override;
 
-        void setSourceModel(QAbstractItemModel *model) override;
+    void setSourceModel(QAbstractItemModel *model) override;
 };
 
 #endif

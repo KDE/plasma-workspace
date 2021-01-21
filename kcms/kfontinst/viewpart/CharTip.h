@@ -24,8 +24,8 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QFrame>
 #include "FcEngine.h"
+#include <QFrame>
 
 class QLabel;
 class QTimer;
@@ -34,37 +34,32 @@ class QEvent;
 
 namespace KFI
 {
-
 class CFontPreview;
 
 class CCharTip : public QFrame
 {
     Q_OBJECT
 
-    public:
-
+public:
     CCharTip(CFontPreview *parent);
     ~CCharTip() override;
 
     void setItem(const CFcEngine::TChar &ch);
 
-    private Q_SLOTS:
+private Q_SLOTS:
 
     void showTip();
     void hideTip();
 
-    private:
-
+private:
     void reposition();
     void resizeEvent(QResizeEvent *event) override;
     bool eventFilter(QObject *, QEvent *e) override;
 
-    private:
-
-    CFontPreview     *itsParent;
-    QLabel           *itsLabel,
-                     *itsPixmapLabel;
-    QTimer           *itsTimer;
+private:
+    CFontPreview *itsParent;
+    QLabel *itsLabel, *itsPixmapLabel;
+    QTimer *itsTimer;
     CFcEngine::TChar itsItem;
 };
 

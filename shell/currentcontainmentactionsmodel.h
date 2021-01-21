@@ -25,22 +25,23 @@
 #include <kconfig.h>
 #include <kconfiggroup.h>
 
-namespace Plasma {
-    class Containment;
-    class ContainmentActions;
+namespace Plasma
+{
+class Containment;
+class ContainmentActions;
 }
 
 class QQuickItem;
 
-//This model load the data about available containment actions plugins, such as context menus that can be loaded on mouse click
-//TODO: out of the library?
+// This model load the data about available containment actions plugins, such as context menus that can be loaded on mouse click
+// TODO: out of the library?
 class CurrentContainmentActionsModel : public QStandardItemModel
 {
     Q_OBJECT
 
 public:
     enum Roles {
-        ActionRole = Qt::UserRole+1,
+        ActionRole = Qt::UserRole + 1,
         PluginNameRole,
         HasConfigurationInterfaceRole,
     };

@@ -18,7 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef CHROME_H
 #define CHROME_H
 
@@ -34,21 +33,21 @@ class QJsonObject;
 class ProfileBookmarks;
 class Chrome : public QObject, public Browser
 {
-  Q_OBJECT
+    Q_OBJECT
 public:
-    explicit Chrome(FindProfile *findProfile, QObject* parent = nullptr);
+    explicit Chrome(FindProfile *findProfile, QObject *parent = nullptr);
     ~Chrome() override;
     QList<BookmarkMatch> match(const QString &term, bool addEveryThing) override;
 public Q_SLOTS:
     void prepare() override;
     void teardown() override;
+
 private:
     void parseFolder(const QJsonObject &entry, ProfileBookmarks *profile);
     virtual QList<BookmarkMatch> match(const QString &term, bool addEveryThing, ProfileBookmarks *profileBookmarks);
-    QList<ProfileBookmarks*> m_profileBookmarks;
-    KDirWatch* m_watcher = nullptr;
+    QList<ProfileBookmarks *> m_profileBookmarks;
+    KDirWatch *m_watcher = nullptr;
     bool m_dirty;
-
 };
 
 #endif // CHROME_H

@@ -21,26 +21,26 @@
 #include "interactiveconsole.h"
 
 #include <QAction>
-#include <QDateTime>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QDateTime>
+#include <QElapsedTimer>
 #include <QFile>
 #include <QFileDialog>
 #include <QHBoxLayout>
+#include <QIcon>
 #include <QLabel>
 #include <QMenu>
 #include <QSplitter>
-#include <QToolButton>
-#include <QVBoxLayout>
 #include <QStandardPaths>
 #include <QTextBrowser>
-#include <QIcon>
-#include <QElapsedTimer>
+#include <QToolButton>
+#include <QVBoxLayout>
 
-#include <klocalizedstring.h>
-#include <KSharedConfig>
+#include <KConfigGroup>
 #include <KMessageBox>
 #include <KServiceTypeTrader>
+#include <KSharedConfig>
 #include <KShell>
 #include <KStandardAction>
 #include <KTextEdit>
@@ -49,32 +49,32 @@
 #include <KTextEditor/View>
 #include <KToolBar>
 #include <KWindowSystem>
-#include <KConfigGroup>
+#include <klocalizedstring.h>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
 
-//TODO:
+// TODO:
 // interactive help?
 static const QString s_autosaveFileName(QStringLiteral("interactiveconsoleautosave.js"));
 static const QString s_kwinService = QStringLiteral("org.kde.KWin");
 
 InteractiveConsole::InteractiveConsole(QWidget *parent)
-    : QDialog(parent),
-      m_splitter(new QSplitter(Qt::Vertical, this)),
-      m_editorPart(nullptr),
-      m_editor(nullptr),
-      m_output(nullptr),
-      m_loadAction(KStandardAction::open(this, SLOT(openScriptFile()), this)),
-      m_saveAction(KStandardAction::saveAs(this, SLOT(saveScript()), this)),
-      m_clearAction(KStandardAction::clear(this, SLOT(clearEditor()), this)),
-      m_executeAction(new QAction(QIcon::fromTheme(QStringLiteral("system-run")), i18n("&Execute"), this)),
-      m_plasmaAction(new QAction(QIcon::fromTheme(QStringLiteral("plasma")), i18nc("Toolbar Button to switch to Plasma Scripting Mode", "Plasma"), this)),
-      m_kwinAction(new QAction(QIcon::fromTheme(QStringLiteral("kwin")), i18nc("Toolbar Button to switch to KWin Scripting Mode", "KWin"), this)),
-      m_snippetsMenu(new QMenu(i18n("Templates"), this)),
-      m_fileDialog(nullptr),
-      m_closeWhenCompleted(false),
-      m_mode(PlasmaConsole)
+    : QDialog(parent)
+    , m_splitter(new QSplitter(Qt::Vertical, this))
+    , m_editorPart(nullptr)
+    , m_editor(nullptr)
+    , m_output(nullptr)
+    , m_loadAction(KStandardAction::open(this, SLOT(openScriptFile()), this))
+    , m_saveAction(KStandardAction::saveAs(this, SLOT(saveScript()), this))
+    , m_clearAction(KStandardAction::clear(this, SLOT(clearEditor()), this))
+    , m_executeAction(new QAction(QIcon::fromTheme(QStringLiteral("system-run")), i18n("&Execute"), this))
+    , m_plasmaAction(new QAction(QIcon::fromTheme(QStringLiteral("plasma")), i18nc("Toolbar Button to switch to Plasma Scripting Mode", "Plasma"), this))
+    , m_kwinAction(new QAction(QIcon::fromTheme(QStringLiteral("kwin")), i18nc("Toolbar Button to switch to KWin Scripting Mode", "KWin"), this))
+    , m_snippetsMenu(new QMenu(i18n("Templates"), this))
+    , m_fileDialog(nullptr)
+    , m_closeWhenCompleted(false)
+    , m_mode(PlasmaConsole)
 {
     addAction(KStandardAction::close(this, SLOT(close()), this));
     addAction(m_saveAction);
@@ -82,7 +82,7 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
 
     setWindowTitle(i18n("Desktop Shell Scripting Console"));
     setAttribute(Qt::WA_DeleteOnClose);
-    //setButtons(QDialog::None);
+    // setButtons(QDialog::None);
 
     QWidget *widget = new QWidget(m_splitter);
     QVBoxLayout *editorLayout = new QVBoxLayout(widget);
@@ -134,18 +134,17 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
         if (m_editorPart) {
             m_editorPart->setHighlightingMode(QStringLiteral("JavaScript/PlasmaDesktop"));
 
-            KTextEditor::View * view = m_editorPart->createView(widget);
+            KTextEditor::View *view = m_editorPart->createView(widget);
             view->setContextMenu(view->defaultContextMenu());
 
-            KTextEditor::ConfigInterface *config = qobject_cast<KTextEditor::ConfigInterface*>(view);
+            KTextEditor::ConfigInterface *config = qobject_cast<KTextEditor::ConfigInterface *>(view);
             if (config) {
                 config->setConfigValue(QStringLiteral("line-numbers"), true);
                 config->setConfigValue(QStringLiteral("dynamic-word-wrap"), true);
             }
 
             editorLayout->addWidget(view);
-            connect(m_editorPart, &KTextEditor::Document::textChanged,
-                    this, &InteractiveConsole::scriptTextChanged);
+            connect(m_editorPart, &KTextEditor::Document::textChanged, this, &InteractiveConsole::scriptTextChanged);
             break;
         }
     }
@@ -262,12 +261,11 @@ void InteractiveConsole::loadScript(const QString &script)
         }
     } else {
         QFile file(KShell::tildeExpand(script));
-        if (file.open(QIODevice::ReadOnly | QIODevice::Text) ) {
+        if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             m_editor->setText(file.readAll());
             return;
         }
     }
-
 
     m_output->append(i18n("Unable to load script file <b>%1</b>", script));
 }
@@ -370,14 +368,14 @@ void InteractiveConsole::loadScriptFromUrl(const QUrl &url)
 void InteractiveConsole::populateTemplatesMenu()
 {
     m_snippetsMenu->clear();
-    auto templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), [] (const KPluginMetaData &metaData) {
+    auto templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), [](const KPluginMetaData &metaData) {
         return metaData.value(QStringLiteral("X-Plasma-Shell")) == qApp->applicationName();
     });
-    std::sort(templates.begin(), templates.end(), [] (const KPluginMetaData &left, const KPluginMetaData &right) {
+    std::sort(templates.begin(), templates.end(), [](const KPluginMetaData &left, const KPluginMetaData &right) {
         return left.name() < right.name();
     });
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"));
-    for (const auto &templateMetaData : qAsConst(templates)){
+    for (const auto &templateMetaData : qAsConst(templates)) {
         package.setPath(templateMetaData.pluginId());
         const QString scriptFile = package.filePath("mainscript");
         if (!scriptFile.isEmpty()) {
@@ -389,8 +387,7 @@ void InteractiveConsole::populateTemplatesMenu()
 
 void InteractiveConsole::loadTemplate(QAction *action)
 {
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"),
-        action->data().toString());
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"), action->data().toString());
     const QString scriptFile = package.filePath("mainscript");
     if (!scriptFile.isEmpty()) {
         loadScriptFromUrl(QUrl::fromLocalFile(scriptFile));
@@ -464,7 +461,7 @@ void InteractiveConsole::saveScriptUrlSelected(int result)
 
 void InteractiveConsole::saveScript(const QUrl &url)
 {
-    //create the folder to save if doesn't exists
+    // create the folder to save if doesn't exists
     QFileInfo info(url.path());
     QDir dir;
     dir.mkpath(info.absoluteDir().absolutePath());
@@ -497,7 +494,7 @@ void InteractiveConsole::scriptFileDataReq(KIO::Job *job, QByteArray &data)
     m_job.clear();
 }
 
-void InteractiveConsole::reenableEditor(KJob* job)
+void InteractiveConsole::reenableEditor(KJob *job)
 {
     Q_ASSERT(m_editor);
     if (m_closeWhenCompleted && job->error() != 0) {
@@ -510,7 +507,7 @@ void InteractiveConsole::reenableEditor(KJob* job)
 
 void InteractiveConsole::evaluateScript()
 {
-    //qDebug() << "evaluating" << m_editor->toPlainText();
+    // qDebug() << "evaluating" << m_editor->toPlainText();
     const QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/" + s_autosaveFileName;
     saveScript(QUrl::fromLocalFile(path));
 
@@ -553,7 +550,8 @@ void InteractiveConsole::evaluateScript()
         } else {
             const int id = reply.arguments().constFirst().toInt();
             QDBusConnection::sessionBus().connect(s_kwinService, "/" + QString::number(id), QString(), QStringLiteral("print"), this, SLOT(print(QString)));
-            QDBusConnection::sessionBus().connect(s_kwinService, "/" + QString::number(id), QString(), QStringLiteral("printError"), this, SLOT(print(QString)));
+            QDBusConnection::sessionBus()
+                .connect(s_kwinService, "/" + QString::number(id), QString(), QStringLiteral("printError"), this, SLOT(print(QString)));
             message = QDBusMessage::createMethodCall(s_kwinService, "/" + QString::number(id), QString(), QStringLiteral("run"));
             reply = QDBusConnection::sessionBus().call(message);
             if (reply.type() == QDBusMessage::ErrorMessage) {
@@ -584,5 +582,3 @@ void InteractiveConsole::clearOutput()
 {
     m_output->clear();
 }
-
-

@@ -29,9 +29,8 @@ using namespace Plasma;
 
 namespace KActivities
 {
-    class Controller;
+class Controller;
 } // namespace KActivities
-
 
 class ActivityService : public Plasma::Service
 {
@@ -39,8 +38,7 @@ class ActivityService : public Plasma::Service
 
 public:
     ActivityService(KActivities::Controller *controller, const QString &source);
-    ServiceJob *createJob(const QString &operation,
-                          QMap<QString, QVariant> &parameters) override;
+    ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
     KActivities::Controller *m_activityController;

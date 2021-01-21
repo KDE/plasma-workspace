@@ -24,22 +24,23 @@
 
 #include <kdedmodule.h>
 
-
 class KTimeZonedBase : public KDEDModule
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.KTimeZoned")
 
 public:
-    KTimeZonedBase(QObject *parent, const QList<QVariant>&)
-        : KDEDModule(parent) {}
-    ~KTimeZonedBase() override {};
+    KTimeZonedBase(QObject *parent, const QList<QVariant> &)
+        : KDEDModule(parent)
+    {
+    }
+    ~KTimeZonedBase() override{};
 
 public Q_SLOTS:
     /** D-Bus call to initialize the module.
-        *  @param reinit determines whether to reinitialize if the module has already
-        *                initialized itself
-        */
+     *  @param reinit determines whether to reinitialize if the module has already
+     *                initialized itself
+     */
     Q_SCRIPTABLE void initialize(bool reinit)
     {
         // If we reach here, the module has already been constructed and therefore
@@ -62,6 +63,5 @@ protected:
 
     QString m_localZone; // local system time zone name
 };
-
 
 #endif

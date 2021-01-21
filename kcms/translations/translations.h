@@ -34,42 +34,42 @@ class Translations : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
 
-    Q_PROPERTY(QAbstractItemModel* translationsModel READ translationsModel CONSTANT)
-    Q_PROPERTY(QAbstractItemModel* selectedTranslationsModel READ selectedTranslationsModel CONSTANT)
-    Q_PROPERTY(QAbstractItemModel* availableTranslationsModel READ availableTranslationsModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel *translationsModel READ translationsModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel *selectedTranslationsModel READ selectedTranslationsModel CONSTANT)
+    Q_PROPERTY(QAbstractItemModel *availableTranslationsModel READ availableTranslationsModel CONSTANT)
     Q_PROPERTY(bool everSaved READ everSaved NOTIFY everSavedChanged)
 
-    public:
-        explicit Translations(QObject* parent = nullptr, const QVariantList &list = QVariantList());
-        ~Translations() override;
+public:
+    explicit Translations(QObject *parent = nullptr, const QVariantList &list = QVariantList());
+    ~Translations() override;
 
-        QAbstractItemModel* translationsModel() const;
-        QAbstractItemModel* selectedTranslationsModel() const;
-        QAbstractItemModel* availableTranslationsModel() const;
+    QAbstractItemModel *translationsModel() const;
+    QAbstractItemModel *selectedTranslationsModel() const;
+    QAbstractItemModel *availableTranslationsModel() const;
 
-        bool everSaved() const;
-        TranslationsSettings *settings() const;
+    bool everSaved() const;
+    TranslationsSettings *settings() const;
 
-    public Q_SLOTS:
-        void load() override;
-        void save() override;
-        void defaults() override;
+public Q_SLOTS:
+    void load() override;
+    void save() override;
+    void defaults() override;
 
-    Q_SIGNALS:
-        void everSavedChanged() const;
+Q_SIGNALS:
+    void everSavedChanged() const;
 
-    private Q_SLOTS:
-        void selectedLanguagesChanged();
+private Q_SLOTS:
+    void selectedLanguagesChanged();
 
-    private:
-        bool isSaveNeeded() const override;
+private:
+    bool isSaveNeeded() const override;
 
-        TranslationsData *m_data;
-        TranslationsModel *m_translationsModel;
-        SelectedTranslationsModel *m_selectedTranslationsModel;
-        AvailableTranslationsModel *m_availableTranslationsModel;
+    TranslationsData *m_data;
+    TranslationsModel *m_translationsModel;
+    SelectedTranslationsModel *m_selectedTranslationsModel;
+    AvailableTranslationsModel *m_availableTranslationsModel;
 
-        bool m_everSaved;
+    bool m_everSaved;
 };
 
 #endif

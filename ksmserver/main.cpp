@@ -21,27 +21,27 @@ AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ******************************************************************/
-#include <fixx11h.h>
-#include <config-workspace.h>
 #include <config-ksmserver.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <fcntl.h>
+#include <config-workspace.h>
 #include <errno.h>
+#include <fcntl.h>
+#include <fixx11h.h>
+#include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 #include <KMessageBox>
 
+#include "server.h"
+#include <KLocalizedString>
+#include <KSharedConfig>
+#include <QX11Info>
+#include <kconfig.h>
 #include <kconfiggroup.h>
 #include <kdbusservice.h>
-#include <KLocalizedString>
-#include <kconfig.h>
-#include <KSharedConfig>
 #include <kmanagerselection.h>
-#include <kwindowsystem.h>
 #include <ksmserver_debug.h>
-#include "server.h"
-#include <QX11Info>
+#include <kwindowsystem.h>
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -49,47 +49,45 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <X11/extensions/Xrender.h>
 
 static const char version[] = "0.4";
-static const char description[] = I18N_NOOP( "The reliable Plasma session manager that talks the standard X11R6 \nsession management protocol (XSMP)." );
+static const char description[] = I18N_NOOP("The reliable Plasma session manager that talks the standard X11R6 \nsession management protocol (XSMP).");
 
-Display* dpy = nullptr;
+Display *dpy = nullptr;
 Colormap colormap = 0;
 Visual *visual = nullptr;
 
-extern KSMServer* the_server;
+extern KSMServer *the_server;
 
-void IoErrorHandler ( IceConn iceConn)
+void IoErrorHandler(IceConn iceConn)
 {
-    the_server->ioError( iceConn );
+    the_server->ioError(iceConn);
 }
 
 bool writeTest(QByteArray path)
 {
-   path += "/XXXXXX";
-   int fd = mkstemp(path.data());
-   if (fd == -1)
-      return false;
-   if (write(fd, "Hello World\n", 12) == -1)
-   {
-      int save_errno = errno;
-      close(fd);
-      unlink(path.data());
-      errno = save_errno;
-      return false;
-   }
-   close(fd);
-   unlink(path.data());
-   return true;
+    path += "/XXXXXX";
+    int fd = mkstemp(path.data());
+    if (fd == -1)
+        return false;
+    if (write(fd, "Hello World\n", 12) == -1) {
+        int save_errno = errno;
+        close(fd);
+        unlink(path.data());
+        errno = save_errno;
+        return false;
+    }
+    close(fd);
+    unlink(path.data());
+    return true;
 }
 
 void checkComposite()
 {
-    if( qgetenv( "KDE_SKIP_ARGB_VISUALS" ) == "1" )
+    if (qgetenv("KDE_SKIP_ARGB_VISUALS") == "1")
         return;
     // thanks to zack rusin and frederik for pointing me in the right direction
     // for the following bits of X11 code
     dpy = XOpenDisplay(nullptr); // open default display
-    if (!dpy)
-    {
+    if (!dpy) {
         qCCritical(KSMSERVER) << "Cannot connect to the X server";
         return;
     }
@@ -97,26 +95,18 @@ void checkComposite()
     int screen = DefaultScreen(dpy);
     int eventBase, errorBase;
 
-    if (XRenderQueryExtension(dpy, &eventBase, &errorBase))
-    {
+    if (XRenderQueryExtension(dpy, &eventBase, &errorBase)) {
         int nvi;
         XVisualInfo templ;
-        templ.screen  = screen;
-        templ.depth   = 32;
+        templ.screen = screen;
+        templ.depth = 32;
         templ.c_class = TrueColor;
-        XVisualInfo *xvi = XGetVisualInfo(dpy, VisualScreenMask |
-                                                VisualDepthMask |
-                                                VisualClassMask,
-                                            &templ, &nvi);
-        for (int i = 0; i < nvi; ++i)
-        {
-            XRenderPictFormat *format = XRenderFindVisualFormat(dpy,
-                                                                xvi[i].visual);
-            if (format->type == PictTypeDirect && format->direct.alphaMask)
-            {
+        XVisualInfo *xvi = XGetVisualInfo(dpy, VisualScreenMask | VisualDepthMask | VisualClassMask, &templ, &nvi);
+        for (int i = 0; i < nvi; ++i) {
+            XRenderPictFormat *format = XRenderFindVisualFormat(dpy, xvi[i].visual);
+            if (format->type == PictTypeDirect && format->direct.alphaMask) {
                 visual = xvi[i].visual;
-                colormap = XCreateColormap(dpy, RootWindow(dpy, screen),
-                                            visual, AllocNone);
+                colormap = XCreateColormap(dpy, RootWindow(dpy, screen), visual, AllocNone);
 
                 XFree(xvi);
                 return;
@@ -124,97 +114,93 @@ void checkComposite()
         }
 
         XFree(xvi);
-
     }
-    XCloseDisplay( dpy );
+    XCloseDisplay(dpy);
     dpy = nullptr;
 }
 
-void sanity_check( int argc, char* argv[] )
+void sanity_check(int argc, char *argv[])
 {
     QString msg;
     QByteArray path = qgetenv("HOME");
     const QByteArray readOnly = qgetenv("KDE_HOME_READONLY");
-    if (path.isEmpty())
-    {
+    if (path.isEmpty()) {
         msg = i18n("$HOME not set!");
     }
-    if (msg.isEmpty() && access(path.data(), W_OK))
-    {
+    if (msg.isEmpty() && access(path.data(), W_OK)) {
         if (errno == ENOENT)
             msg = i18n("$HOME directory (%1) does not exist.", QFile::decodeName(path));
         else if (readOnly.isEmpty())
             msg = i18n("No write access to $HOME directory (%1).", QFile::decodeName(path));
     }
-    if (msg.isEmpty() && access(path.data(), R_OK))
-    {
+    if (msg.isEmpty() && access(path.data(), R_OK)) {
         if (errno == ENOENT)
             msg = i18n("$HOME directory (%1) does not exist.", QFile::decodeName(path));
         else
             msg = i18n("No read access to $HOME directory (%1).", QFile::decodeName(path));
     }
-    if (msg.isEmpty() && readOnly.isEmpty() && !writeTest(path))
-    {
+    if (msg.isEmpty() && readOnly.isEmpty() && !writeTest(path)) {
         if (errno == ENOSPC)
             msg = i18n("$HOME directory (%1) is out of disk space.", QFile::decodeName(path));
         else
-            msg = i18n("Writing to the $HOME directory (%2) failed with "
-                       "the error '%1'", QString::fromLocal8Bit(strerror(errno)), QFile::decodeName(path));
+            msg = i18n(
+                "Writing to the $HOME directory (%2) failed with "
+                "the error '%1'",
+                QString::fromLocal8Bit(strerror(errno)),
+                QFile::decodeName(path));
     }
-    if (msg.isEmpty())
-    {
+    if (msg.isEmpty()) {
         path = getenv("ICEAUTHORITY");
-        if (path.isEmpty())
-        {
+        if (path.isEmpty()) {
             path = qgetenv("HOME");
             path += "/.ICEauthority";
         }
-    
+
         if (access(path.data(), W_OK) && (errno != ENOENT))
             msg = i18n("No write access to '%1'.", QFile::decodeName(path));
         else if (access(path.data(), R_OK) && (errno != ENOENT))
             msg = i18n("No read access to '%1'.", QFile::decodeName(path));
     }
-    if (msg.isEmpty())
-    {
+    if (msg.isEmpty()) {
         path = getenv("KDETMP");
         if (path.isEmpty())
             path = "/tmp";
-        if (!writeTest(path))
-        {
+        if (!writeTest(path)) {
             if (errno == ENOSPC)
                 msg = i18n("Temp directory (%1) is out of disk space.", QFile::decodeName(path));
             else
-                msg = i18n("Writing to the temp directory (%2) failed with\n    "
-                           "the error '%1'", QString::fromLocal8Bit(strerror(errno)), QFile::decodeName(path));
+                msg = i18n(
+                    "Writing to the temp directory (%2) failed with\n    "
+                    "the error '%1'",
+                    QString::fromLocal8Bit(strerror(errno)),
+                    QFile::decodeName(path));
         }
     }
-    if (msg.isEmpty() && (path != "/tmp"))
-    {
+    if (msg.isEmpty() && (path != "/tmp")) {
         path = "/tmp";
-        if (!writeTest(path))
-        {
+        if (!writeTest(path)) {
             if (errno == ENOSPC)
                 msg = i18n("Temp directory (%1) is out of disk space.", QFile::decodeName(path));
             else
-                msg = i18n("Writing to the temp directory (%2) failed with\n    "
-                           "the error '%1'", QString::fromLocal8Bit(strerror(errno)), QFile::decodeName(path));
+                msg = i18n(
+                    "Writing to the temp directory (%2) failed with\n    "
+                    "the error '%1'",
+                    QString::fromLocal8Bit(strerror(errno)),
+                    QFile::decodeName(path));
         }
     }
-    if (msg.isEmpty())
-    {
+    if (msg.isEmpty()) {
         path += "/.ICE-unix";
         if (access(path.data(), W_OK) && (errno != ENOENT))
             msg = i18n("No write access to '%1'.", QFile::decodeName(path));
         else if (access(path.data(), R_OK) && (errno != ENOENT))
             msg = i18n("No read access to '%1'.", QFile::decodeName(path));
     }
-    if (!msg.isEmpty())
-    {
-        const QString msg_pre =
-                i18n("The following installation problem was detected\n"
-                     "while trying to start Plasma:") +
-                QStringLiteral("\n\n    ");
+    if (!msg.isEmpty()) {
+        const QString msg_pre = i18n(
+                                    "The following installation problem was detected\n"
+                                    "while trying to start Plasma:")
+            + QStringLiteral("\n\n    ");
         const QString msg_post = i18n("\n\nPlasma is unable to start.\n");
         fputs(msg_pre.toUtf8().constData(), stderr);
         fprintf(stderr, "%s", msg.toUtf8().constData());
@@ -227,11 +213,11 @@ void sanity_check( int argc, char* argv[] )
     }
 }
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
     sanity_check(argc, argv);
 
-    putenv((char*)"SESSION_MANAGER=");
+    putenv((char *)"SESSION_MANAGER=");
     checkComposite();
 
     // force xcb QPA plugin as ksmserver is very X11 specific
@@ -249,9 +235,9 @@ int main(int argc, char* argv[])
         qputenv("QT_QPA_PLATFORM", origQpaPlatform);
     }
 
-    QApplication::setApplicationName( QStringLiteral( "ksmserver") );
-    QApplication::setApplicationVersion( QString::fromLatin1( version ) );
-    QApplication::setOrganizationDomain( QStringLiteral( "kde.org") );
+    QApplication::setApplicationName(QStringLiteral("ksmserver"));
+    QApplication::setApplicationVersion(QString::fromLatin1(version));
+    QApplication::setOrganizationDomain(QStringLiteral("kde.org"));
 
     fcntl(ConnectionNumber(QX11Info::display()), F_SETFD, 1);
 
@@ -262,20 +248,17 @@ int main(int argc, char* argv[])
     parser.addHelpOption();
     parser.addVersionOption();
 
-    QCommandLineOption restoreOption(QStringList() << QStringLiteral("r") << QStringLiteral("restore"),
-                                     i18n("Restores the saved user session if available"));
+    QCommandLineOption restoreOption(QStringList() << QStringLiteral("r") << QStringLiteral("restore"), i18n("Restores the saved user session if available"));
     parser.addOption(restoreOption);
 
-    QCommandLineOption nolocalOption(QStringLiteral("nolocal"),
-                                     i18n("Also allow remote connections"));
+    QCommandLineOption nolocalOption(QStringLiteral("nolocal"), i18n("Also allow remote connections"));
     parser.addOption(nolocalOption);
 
-    QCommandLineOption lockscreenOption(QStringLiteral("lockscreen"),
-                                        i18n("Starts the session in locked mode"));
+    QCommandLineOption lockscreenOption(QStringLiteral("lockscreen"), i18n("Starts the session in locked mode"));
     parser.addOption(lockscreenOption);
 
     QCommandLineOption noLockscreenOption(QStringLiteral("no-lockscreen"),
-                                         i18n("Starts without lock screen support. Only needed if other component provides the lock screen."));
+                                          i18n("Starts without lock screen support. Only needed if other component provides the lock screen."));
     parser.addOption(noLockscreenOption);
 
     parser.process(*a);
@@ -306,21 +289,21 @@ int main(int argc, char* argv[])
     KSMServer *server = new KSMServer(flags);
 
     // for the KDE-already-running check in startkde
-    KSelectionOwner kde_running( "_KDE_RUNNING", 0 );
-    kde_running.claim( false );
+    KSelectionOwner kde_running("_KDE_RUNNING", 0);
+    kde_running.claim(false);
 
-    IceSetIOErrorHandler( IoErrorHandler );
+    IceSetIOErrorHandler(IoErrorHandler);
 
     KConfigGroup config(KSharedConfig::openConfig(), "General");
 
-    QString loginMode = config.readEntry( "loginMode", "restorePreviousLogout" );
+    QString loginMode = config.readEntry("loginMode", "restorePreviousLogout");
 
-    if ( parser.isSet( restoreOption ))
-        server->restoreSession( QStringLiteral( SESSION_BY_USER ) );
-    else if ( loginMode == QLatin1String( "restorePreviousLogout" ) )
-        server->restoreSession( QStringLiteral( SESSION_PREVIOUS_LOGOUT ) );
-    else if ( loginMode == QLatin1String( "restoreSavedSession" ) )
-        server->restoreSession( QStringLiteral( SESSION_BY_USER ) );
+    if (parser.isSet(restoreOption))
+        server->restoreSession(QStringLiteral(SESSION_BY_USER));
+    else if (loginMode == QLatin1String("restorePreviousLogout"))
+        server->restoreSession(QStringLiteral(SESSION_PREVIOUS_LOGOUT));
+    else if (loginMode == QLatin1String("restoreSavedSession"))
+        server->restoreSession(QStringLiteral(SESSION_BY_USER));
     else
         server->startDefaultSession();
 

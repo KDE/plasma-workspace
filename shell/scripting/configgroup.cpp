@@ -19,27 +19,28 @@
  */
 
 #include "configgroup.h"
+#include <QDebug>
 #include <QTimer>
 #include <kconfig.h>
 #include <kconfiggroup.h>
 #include <ksharedconfig.h>
-#include <QDebug>
 
-class ConfigGroupPrivate {
-
+class ConfigGroupPrivate
+{
 public:
     ConfigGroupPrivate(ConfigGroup *q)
-        : q(q),
-          config(nullptr),
-          configGroup(nullptr)
-    {}
+        : q(q)
+        , config(nullptr)
+        , configGroup(nullptr)
+    {
+    }
 
     ~ConfigGroupPrivate()
     {
         delete configGroup;
     }
 
-    ConfigGroup* q;
+    ConfigGroup *q;
     KSharedConfigPtr config;
     KConfigGroup *configGroup;
     QString file;
@@ -47,10 +48,9 @@ public:
     QString group;
 };
 
-
 ConfigGroup::ConfigGroup(QObject *parent)
-    : QObject(parent),
-      d(new ConfigGroupPrivate(this))
+    : QObject(parent)
+    , d(new ConfigGroupPrivate(this))
 {
     // Delay and compress everything within 5 seconds into one sync
     d->synchTimer = new QTimer(this);
@@ -62,7 +62,7 @@ ConfigGroup::ConfigGroup(QObject *parent)
 ConfigGroup::~ConfigGroup()
 {
     if (d->synchTimer->isActive()) {
-        //qDebug() << "SYNC......";
+        // qDebug() << "SYNC......";
         d->synchTimer->stop();
         sync();
     }
@@ -70,7 +70,7 @@ ConfigGroup::~ConfigGroup()
     delete d;
 }
 
-KConfigGroup* ConfigGroup::configGroup()
+KConfigGroup *ConfigGroup::configGroup()
 {
     return d->configGroup;
 }
@@ -80,7 +80,7 @@ QString ConfigGroup::file() const
     return d->file;
 }
 
-void ConfigGroup::setFile(const QString& filename)
+void ConfigGroup::setFile(const QString &filename)
 {
     if (d->file == filename) {
         return;
@@ -118,7 +118,7 @@ QString ConfigGroup::group() const
     return d->group;
 }
 
-void ConfigGroup::setGroup(const QString& groupname)
+void ConfigGroup::setGroup(const QString &groupname)
 {
     if (d->group == groupname) {
         return;
@@ -148,10 +148,10 @@ QStringList ConfigGroup::groupList() const
 bool ConfigGroup::readConfigFile()
 {
     // Find parent ConfigGroup
-    ConfigGroup* parentGroup = nullptr;
-    QObject* current = parent();
+    ConfigGroup *parentGroup = nullptr;
+    QObject *current = parent();
     while (current) {
-        parentGroup = qobject_cast<ConfigGroup*>(current);
+        parentGroup = qobject_cast<ConfigGroup *>(current);
         if (parentGroup) {
             break;
         }
@@ -181,7 +181,7 @@ bool ConfigGroup::readConfigFile()
 
 // Bound methods and slots
 
-bool ConfigGroup::writeEntry(const QString& key, const QJSValue& value)
+bool ConfigGroup::writeEntry(const QString &key, const QJSValue &value)
 {
     if (!d->configGroup) {
         return false;
@@ -192,17 +192,17 @@ bool ConfigGroup::writeEntry(const QString& key, const QJSValue& value)
     return true;
 }
 
-QVariant ConfigGroup::readEntry(const QString& key)
+QVariant ConfigGroup::readEntry(const QString &key)
 {
     if (!d->configGroup) {
         return QVariant();
     }
     const QVariant value = d->configGroup->readEntry(key, QVariant(""));
-    //qDebug() << " reading setting: " << key << value;
+    // qDebug() << " reading setting: " << key << value;
     return value;
 }
 
-void ConfigGroup::deleteEntry(const QString& key)
+void ConfigGroup::deleteEntry(const QString &key)
 {
     if (d->configGroup) {
         d->configGroup->deleteEntry(key);
@@ -212,8 +212,7 @@ void ConfigGroup::deleteEntry(const QString& key)
 void ConfigGroup::sync()
 {
     if (d->configGroup) {
-        //qDebug() << "synching config...";
+        // qDebug() << "synching config...";
         d->configGroup->sync();
     }
 }
-

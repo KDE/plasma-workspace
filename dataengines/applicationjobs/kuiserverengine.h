@@ -28,12 +28,12 @@
 
 namespace NotificationManager
 {
-    class Job;
+class Job;
 }
 
 namespace Plasma
 {
-    class Service;
+class Service;
 } // namespace Plasma
 
 class KuiserverEngine : public Plasma::DataEngine
@@ -41,22 +41,19 @@ class KuiserverEngine : public Plasma::DataEngine
     Q_OBJECT
 
 public:
-    KuiserverEngine(QObject* parent, const QVariantList& args);
+    KuiserverEngine(QObject *parent, const QVariantList &args);
     ~KuiserverEngine() override;
 
     void init();
 
-    Plasma::Service* serviceForSource(const QString& source) override;
+    Plasma::Service *serviceForSource(const QString &source) override;
 
     static QString sourceName(NotificationManager::Job *job);
     static uint jobId(const QString &sourceName);
 
 private:
-    template<typename T, typename signal> void connectJobField(
-            NotificationManager::Job *job,
-            T (NotificationManager::Job::*getter)() const,
-            signal changeSignal,
-            const QString &targetFieldName)
+    template<typename T, typename signal>
+    void connectJobField(NotificationManager::Job *job, T (NotificationManager::Job::*getter)() const, signal changeSignal, const QString &targetFieldName)
     {
         // Set value initially in case we missed the first change
         const QString source = sourceName(job);
@@ -67,20 +64,16 @@ private:
         });
     }
 
-    void updateDescriptionField(
-        NotificationManager::Job *job,
-        int number,
-        QString (NotificationManager::Job::*labelGetter)() const,
-        QString (NotificationManager::Job::*valueGetter)() const
-    );
+    void updateDescriptionField(NotificationManager::Job *job,
+                                int number,
+                                QString (NotificationManager::Job::*labelGetter)() const,
+                                QString (NotificationManager::Job::*valueGetter)() const);
 
-    void updateUnit(
-        NotificationManager::Job *job,
-        int number,
-        const QString &unit,
-        qulonglong (NotificationManager::Job::*processedGetter)() const,
-        qulonglong (NotificationManager::Job::*totalGetter)() const
-    );
+    void updateUnit(NotificationManager::Job *job,
+                    int number,
+                    const QString &unit,
+                    qulonglong (NotificationManager::Job::*processedGetter)() const,
+                    qulonglong (NotificationManager::Job::*totalGetter)() const);
 
     void registerJob(NotificationManager::Job *job);
     void removeJob(NotificationManager::Job *job);

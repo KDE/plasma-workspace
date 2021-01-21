@@ -35,7 +35,6 @@ IconsModel::IconsModel(IconsSettings *iconsSettings, QObject *parent)
     : QAbstractListModel(parent)
     , m_settings(iconsSettings)
 {
-
 }
 
 IconsModel::~IconsModel() = default;
@@ -58,11 +57,16 @@ QVariant IconsModel::data(const QModelIndex &index, int role) const
     const auto &item = m_data.at(index.row());
 
     switch (role) {
-    case Qt::DisplayRole: return item.display;
-    case ThemeNameRole: return item.themeName;
-    case DescriptionRole: return item.description;
-    case RemovableRole: return item.removable;
-    case PendingDeletionRole: return item.pendingDeletion;
+    case Qt::DisplayRole:
+        return item.display;
+    case ThemeNameRole:
+        return item.themeName;
+    case DescriptionRole:
+        return item.description;
+    case RemovableRole:
+        return item.removable;
+    case PendingDeletionRole:
+        return item.pendingDeletion;
     }
 
     return QVariant();
@@ -85,7 +89,7 @@ bool IconsModel::setData(const QModelIndex &index, const QVariant &value, int ro
 
             // if we delete current selected theme move to the next non-pending theme
             const auto nonPending = match(index, PendingDeletionRole, false);
-            if (m_settings->theme() == index.data(ThemeNameRole)  && !nonPending.isEmpty()) {
+            if (m_settings->theme() == index.data(ThemeNameRole) && !nonPending.isEmpty()) {
                 m_settings->setTheme(nonPending.first().data(ThemeNameRole).toString());
             }
             emit pendingDeletionsChanged();
@@ -120,7 +124,7 @@ void IconsModel::load()
     for (const QString &themeName : themes) {
         KIconTheme theme(themeName);
         if (!theme.isValid()) {
-            //qCWarning(KCM_ICONS) << "Not a valid theme" << themeName;
+            // qCWarning(KCM_ICONS) << "Not a valid theme" << themeName;
         }
         if (theme.isHidden()) {
             continue;
@@ -130,8 +134,7 @@ void IconsModel::load()
             theme.name(),
             themeName,
             theme.description(),
-            themeName != KIconTheme::defaultThemeName()
-                && QFileInfo(theme.dir()).isWritable(),
+            themeName != KIconTheme::defaultThemeName() && QFileInfo(theme.dir()).isWritable(),
             false // pending deletion
         };
 

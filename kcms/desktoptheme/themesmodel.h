@@ -4,7 +4,7 @@
  * Copyright (C) 2016 Olivier Churlaud <olivier@churlaud.com>
  * Copyright (C) 2019 Kai Uwe Broulik <kde@privat.broulik.de>
  * Copyright (C) 2019 David Redondo <kde@david-redondo.de>
- * 
+ *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
  * published by the Free Software Foundation; either version 2 of
@@ -25,8 +25,8 @@
 #pragma once
 
 #include <QAbstractListModel>
-#include <QString>
 #include <QPalette>
+#include <QString>
 #include <QVector>
 
 #include <memory>
@@ -61,7 +61,6 @@ public:
     };
     Q_ENUM(ColorType)
 
-
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
@@ -86,13 +85,11 @@ Q_SIGNALS:
 
 private:
     QString m_selectedTheme;
-    //Can't use QVector because unique_ptr causes deletion of copy-ctor
+    // Can't use QVector because unique_ptr causes deletion of copy-ctor
     QVector<ThemesModelData> m_data;
-
 };
 
-struct ThemesModelData
-{
+struct ThemesModelData {
     QString display;
     QString pluginName;
     QString description;

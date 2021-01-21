@@ -1,44 +1,44 @@
 /*
-*   Copyright 2010 Matteo Agostinelli <agostinelli@gmail.com>
-*
-*   This program is free software; you can redistribute it and/or modify
-*   it under the terms of the GNU Library General Public License as
-*   published by the Free Software Foundation; either version 2 or
-*   (at your option) any later version.
-*
-*   This program is distributed in the hope that it will be useful,
-*   but WITHOUT ANY WARRANTY; without even the implied warranty of
-*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-*   GNU General Public License for more details
-*
-*   You should have received a copy of the GNU Library General Public
-*   License along with this program; if not, write to the
-*   Free Software Foundation, Inc.,
-*   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-*/
+ *   Copyright 2010 Matteo Agostinelli <agostinelli@gmail.com>
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU Library General Public License as
+ *   published by the Free Software Foundation; either version 2 or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details
+ *
+ *   You should have received a copy of the GNU Library General Public
+ *   License along with this program; if not, write to the
+ *   Free Software Foundation, Inc.,
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
 
 #include "qalculate_engine.h"
 
 #include <libqalculate/Calculator.h>
 #include <libqalculate/ExpressionItem.h>
-#include <libqalculate/Unit.h>
-#include <libqalculate/Prefix.h>
-#include <libqalculate/Variable.h>
 #include <libqalculate/Function.h>
+#include <libqalculate/Prefix.h>
+#include <libqalculate/Unit.h>
+#include <libqalculate/Variable.h>
 
-#include <QFile>
 #include <QApplication>
 #include <QClipboard>
 #include <QDebug>
+#include <QFile>
 
+#include <KIO/Job>
 #include <KLocalizedString>
 #include <KProtocolManager>
-#include <KIO/Job>
 
 QAtomicInt QalculateEngine::s_counter;
 
-QalculateEngine::QalculateEngine(QObject* parent):
-    QObject(parent)
+QalculateEngine::QalculateEngine(QObject *parent)
+    : QObject(parent)
 {
     s_counter.ref();
     if (!CALCULATOR) {
@@ -64,14 +64,14 @@ void QalculateEngine::updateExchangeRates()
     QUrl source = QUrl("http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml");
     QUrl dest = QUrl::fromLocalFile(QFile::decodeName(CALCULATOR->getExchangeRatesFileName().c_str()));
 
-    KIO::Job* getJob = KIO::file_copy(source, dest, -1, KIO::Overwrite | KIO::HideProgressInfo);
+    KIO::Job *getJob = KIO::file_copy(source, dest, -1, KIO::Overwrite | KIO::HideProgressInfo);
     connect(getJob, &KJob::result, this, &QalculateEngine::updateResult);
 }
 
-void QalculateEngine::updateResult(KJob* job)
+void QalculateEngine::updateResult(KJob *job)
 {
     if (job->error()) {
-        qDebug() << i18n("The exchange rates could not be updated. The following error has been reported: %1",job->errorString());
+        qDebug() << i18n("The exchange rates could not be updated. The following error has been reported: %1", job->errorString());
     } else {
         // the exchange rates have been successfully updated, now load them
         CALCULATOR->loadExchangeRates();
@@ -112,9 +112,10 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
     po.negative_exponents = false;
     po.lower_case_e = true;
     po.base_display = BASE_DISPLAY_NORMAL;
-    #if defined(QALCULATE_MAJOR_VERSION) && defined(QALCULATE_MINOR_VERSION) && (QALCULATE_MAJOR_VERSION > 2 || (QALCULATE_MAJOR_VERSION == 2 && QALCULATE_MINOR_VERSION >= 2))
+#if defined(QALCULATE_MAJOR_VERSION) && defined(QALCULATE_MINOR_VERSION)                                                                                       \
+    && (QALCULATE_MAJOR_VERSION > 2 || (QALCULATE_MAJOR_VERSION == 2 && QALCULATE_MINOR_VERSION >= 2))
     po.interval_display = INTERVAL_DISPLAY_SIGNIFICANT_DIGITS;
-    #endif
+#endif
 
     result.format(po);
 
@@ -133,4 +134,3 @@ void QalculateEngine::copyToClipboard(bool flag)
 
     QApplication::clipboard()->setText(m_lastResult);
 }
-

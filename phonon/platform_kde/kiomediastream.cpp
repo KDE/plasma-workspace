@@ -26,11 +26,11 @@
 
 #include "debug.h"
 
-namespace Phonon {
-
+namespace Phonon
+{
 KioMediaStream::KioMediaStream(const QUrl &url, QObject *parent)
-    : AbstractMediaStream(parent),
-    d_ptr(new KioMediaStreamPrivate(url))
+    : AbstractMediaStream(parent)
+    , d_ptr(new KioMediaStreamPrivate(url))
 {
     d_ptr->q_ptr = this;
     qCDebug(PLATFORM);
@@ -57,22 +57,19 @@ void KioMediaStream::reset()
         Q_ASSERT(d->kiojob);
         d->open = false;
         setStreamSeekable(true);
-        connect(d->kiojob, SIGNAL(open(KIO::Job*)), this, SLOT(_k_bytestreamFileJobOpen(KIO::Job*)));
-        connect(d->kiojob, SIGNAL(position(KIO::Job*, KIO::filesize_t)),
-                this, SLOT(_k_bytestreamSeekDone(KIO::Job*, KIO::filesize_t)));
+        connect(d->kiojob, SIGNAL(open(KIO::Job *)), this, SLOT(_k_bytestreamFileJobOpen(KIO::Job *)));
+        connect(d->kiojob, SIGNAL(position(KIO::Job *, KIO::filesize_t)), this, SLOT(_k_bytestreamSeekDone(KIO::Job *, KIO::filesize_t)));
     } else {
         d->kiojob = KIO::get(d->url, KIO::NoReload, KIO::HideProgressInfo);
         Q_ASSERT(d->kiojob);
         setStreamSeekable(false);
-        connect(d->kiojob, SIGNAL(totalSize(KJob*, qulonglong)),
-                this, SLOT(_k_bytestreamTotalSize(KJob*, qulonglong)));
+        connect(d->kiojob, SIGNAL(totalSize(KJob *, qulonglong)), this, SLOT(_k_bytestreamTotalSize(KJob *, qulonglong)));
         d->kiojob->suspend();
     }
 
     d->kiojob->addMetaData(QStringLiteral("UserAgent"), QLatin1String("KDE Phonon"));
-    connect(d->kiojob, SIGNAL(data(KIO::Job*, QByteArray)),
-            this, SLOT(_k_bytestreamData(KIO::Job*, QByteArray)));
-    connect(d->kiojob, SIGNAL(result(KJob*)), this, SLOT(_k_bytestreamResult(KJob*)));
+    connect(d->kiojob, SIGNAL(data(KIO::Job *, QByteArray)), this, SLOT(_k_bytestreamData(KIO::Job *, QByteArray)));
+    connect(d->kiojob, SIGNAL(result(KJob *)), this, SLOT(_k_bytestreamResult(KJob *)));
 }
 
 KioMediaStream::~KioMediaStream()
@@ -105,7 +102,7 @@ void KioMediaStream::needData()
         } else if (!d->reading) {
             d->reading = true;
             QMetaObject::invokeMethod(this, "_k_read", Qt::QueuedConnection);
-            //filejob->read(32768);
+            // filejob->read(32768);
         }
     } else {
         // KIO::TransferJob
@@ -170,7 +167,7 @@ void KioMediaStreamPrivate::_k_bytestreamData(KIO::Job *, const QByteArray &data
         return;
     }
 
-    //qCDebug(PLATFORM) << "calling writeData on the Backend ByteStream " << data.size();
+    // qCDebug(PLATFORM) << "calling writeData on the Backend ByteStream " << data.size();
     q->writeData(data);
     if (reading) {
         Q_ASSERT(qobject_cast<KIO::FileJob *>(kiojob));
@@ -185,19 +182,14 @@ void KioMediaStreamPrivate::_k_bytestreamResult(KJob *job)
     if (job->error()) {
         QString kioErrorString = job->errorString();
         qCDebug(PLATFORM) << "KIO Job error: " << kioErrorString;
-        QObject::disconnect(kiojob, SIGNAL(data(KIO::Job *,const QByteArray &)),
-                q, SLOT(_k_bytestreamData(KIO::Job *,const QByteArray &)));
-        QObject::disconnect(kiojob, SIGNAL(result(KJob *)),
-                q, SLOT(_k_bytestreamResult(KJob *)));
+        QObject::disconnect(kiojob, SIGNAL(data(KIO::Job *, const QByteArray &)), q, SLOT(_k_bytestreamData(KIO::Job *, const QByteArray &)));
+        QObject::disconnect(kiojob, SIGNAL(result(KJob *)), q, SLOT(_k_bytestreamResult(KJob *)));
         KIO::FileJob *filejob = qobject_cast<KIO::FileJob *>(kiojob);
         if (filejob) {
-            QObject::disconnect(kiojob, SIGNAL(open(KIO::Job *)),
-                    q, SLOT(_k_bytestreamFileJobOpen(KIO::Job *)));
-            QObject::disconnect(kiojob, SIGNAL(position(KIO::Job *, KIO::filesize_t)),
-                    q, SLOT(_k_bytestreamSeekDone(KIO::Job *, KIO::filesize_t)));
+            QObject::disconnect(kiojob, SIGNAL(open(KIO::Job *)), q, SLOT(_k_bytestreamFileJobOpen(KIO::Job *)));
+            QObject::disconnect(kiojob, SIGNAL(position(KIO::Job *, KIO::filesize_t)), q, SLOT(_k_bytestreamSeekDone(KIO::Job *, KIO::filesize_t)));
         } else {
-            QObject::disconnect(kiojob, SIGNAL(totalSize(KJob *, qulonglong)),
-                    q, SLOT(_k_bytestreamTotalSize(KJob *,qulonglong)));
+            QObject::disconnect(kiojob, SIGNAL(totalSize(KJob *, qulonglong)), q, SLOT(_k_bytestreamTotalSize(KJob *, qulonglong)));
         }
         // go to ErrorState - NormalError
         q->error(NormalError, kioErrorString);
@@ -237,7 +229,7 @@ void KioMediaStreamPrivate::_k_bytestreamFileJobOpen(KIO::Job *)
     if (seeking) {
         filejob->seek(seekPosition);
     } else if (reading) {
-        //filejob->read(32768);
+        // filejob->read(32768);
         QMetaObject::invokeMethod(q, "_k_read", Qt::QueuedConnection);
     }
 }

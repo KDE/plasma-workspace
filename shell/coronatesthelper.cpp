@@ -23,7 +23,7 @@
 
 using namespace Plasma;
 
-CoronaTestHelper::CoronaTestHelper(Corona* parent)
+CoronaTestHelper::CoronaTestHelper(Corona *parent)
     : QObject(parent)
     , m_corona(parent)
     , m_exitcode(0)
@@ -31,17 +31,17 @@ CoronaTestHelper::CoronaTestHelper(Corona* parent)
     connect(m_corona, &Corona::startupCompleted, this, &CoronaTestHelper::initialize);
 }
 
-void CoronaTestHelper::processContainment(Plasma::Containment* containment)
+void CoronaTestHelper::processContainment(Plasma::Containment *containment)
 {
-    foreach(Plasma::Applet* applet, containment->applets()) {
+    foreach (Plasma::Applet *applet, containment->applets()) {
         processApplet(applet);
     }
     connect(containment, &Plasma::Containment::appletAdded, this, &CoronaTestHelper::processApplet);
 }
 
-void CoronaTestHelper::processApplet(Plasma::Applet* applet)
+void CoronaTestHelper::processApplet(Plasma::Applet *applet)
 {
-    PlasmaQuick::AppletQuickItem* obj = applet->property("_plasma_graphicObject").value<PlasmaQuick::AppletQuickItem*>();
+    PlasmaQuick::AppletQuickItem *obj = applet->property("_plasma_graphicObject").value<PlasmaQuick::AppletQuickItem *>();
     if (applet->failedToLaunch()) {
         qCWarning(PLASMASHELL) << "cannot test an applet with a launch error" << applet->launchErrorMessage();
         qGuiApp->exit(1);
@@ -61,7 +61,7 @@ void CoronaTestHelper::processApplet(Plasma::Applet* applet)
     integrateTest(testObject);
 }
 
-void CoronaTestHelper::integrateTest(QObject* testObject)
+void CoronaTestHelper::integrateTest(QObject *testObject)
 {
     if (m_registeredTests.contains(testObject))
         return;
@@ -71,7 +71,7 @@ void CoronaTestHelper::integrateTest(QObject* testObject)
         qCWarning(PLASMASHELL) << "the test object should offer a 'done()' signal" << testObject;
         return;
     }
-    if (testObject->metaObject()->indexOfProperty("failed")<0) {
+    if (testObject->metaObject()->indexOfProperty("failed") < 0) {
         qCWarning(PLASMASHELL) << "the test object should offer a 'bool failed' property" << testObject;
         return;
     }
@@ -85,7 +85,7 @@ void CoronaTestHelper::integrateTest(QObject* testObject)
 
 void CoronaTestHelper::testFinished()
 {
-    QObject* testObject = sender();
+    QObject *testObject = sender();
 
     const bool failed = testObject->property("failed").toBool();
     m_exitcode += failed;
@@ -99,7 +99,7 @@ void CoronaTestHelper::testFinished()
 
 void CoronaTestHelper::initialize()
 {
-    foreach(Plasma::Containment* containment, m_corona->containments()) {
+    foreach (Plasma::Containment *containment, m_corona->containments()) {
         processContainment(containment);
     }
     connect(m_corona, &Corona::containmentAdded, this, &CoronaTestHelper::processContainment);

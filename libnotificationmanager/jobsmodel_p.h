@@ -20,9 +20,9 @@
 
 #pragma once
 
-#include <QObject>
 #include <QDBusContext>
 #include <QDBusObjectPath>
+#include <QObject>
 #include <QSet>
 #include <QVector>
 
@@ -33,7 +33,6 @@ class QTimer;
 
 namespace NotificationManager
 {
-
 class Job;
 
 class Q_DECL_HIDDEN JobsModelPrivate : public QObject, protected QDBusContext
@@ -53,15 +52,13 @@ public:
     // V1
     QDBusObjectPath requestView(const QString &appName, const QString &appIconName, int capabilities);
     // V2
-    QDBusObjectPath requestView(const QString &desktopEntry,
-                                int capabilities,
-                                const QVariantMap &hints);
+    QDBusObjectPath requestView(const QString &desktopEntry, int capabilities, const QVariantMap &hints);
 
 Q_SIGNALS:
     void jobViewAboutToBeAdded(int row, Job *job);
     void jobViewAdded(int row, Job *job);
 
-    void jobViewAboutToBeRemoved(int row);//, Job *job);
+    void jobViewAboutToBeRemoved(int row); //, Job *job);
     void jobViewRemoved(int row);
 
     void jobViewChanged(int row, Job *job, const QVector<int> &roles);
@@ -100,7 +97,6 @@ private:
 
     QTimer *m_pendingJobViewsTimer = nullptr;
     QVector<Job *> m_pendingJobViews;
-
 };
 
 } // namespace NotificationManager

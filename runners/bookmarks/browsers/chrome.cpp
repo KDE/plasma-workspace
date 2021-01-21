@@ -18,48 +18,74 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #include "chrome.h"
-#include "faviconfromblob.h"
 #include "browsers/findprofile.h"
+#include "faviconfromblob.h"
 
+#include <QDebug>
+#include <QFileInfo>
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QJsonValue>
-#include <QFileInfo>
-#include <QDebug>
 
-class ProfileBookmarks {
+class ProfileBookmarks
+{
 public:
-    ProfileBookmarks(const Profile &profile) : m_profile(profile) {}
-    inline QJsonArray bookmarks() { return m_bookmarks; }
-    inline Profile profile() { return m_profile; }
-    void tearDown() { m_profile.favicon()->teardown(); clear(); }
-    void add(const QJsonObject &bookmarkEntry) { m_bookmarks << bookmarkEntry; }
-    void add(const QJsonArray &entries) { for (const auto &e: entries) m_bookmarks << e; }
-    void clear() { m_bookmarks = QJsonArray(); }
+    ProfileBookmarks(const Profile &profile)
+        : m_profile(profile)
+    {
+    }
+    inline QJsonArray bookmarks()
+    {
+        return m_bookmarks;
+    }
+    inline Profile profile()
+    {
+        return m_profile;
+    }
+    void tearDown()
+    {
+        m_profile.favicon()->teardown();
+        clear();
+    }
+    void add(const QJsonObject &bookmarkEntry)
+    {
+        m_bookmarks << bookmarkEntry;
+    }
+    void add(const QJsonArray &entries)
+    {
+        for (const auto &e : entries)
+            m_bookmarks << e;
+    }
+    void clear()
+    {
+        m_bookmarks = QJsonArray();
+    }
+
 private:
     Profile m_profile;
     QJsonArray m_bookmarks;
 };
 
-Chrome::Chrome( FindProfile* findProfile, QObject* parent )
-    : QObject(parent),
-    m_watcher(new KDirWatch(this)),
-    m_dirty(false)
+Chrome::Chrome(FindProfile *findProfile, QObject *parent)
+    : QObject(parent)
+    , m_watcher(new KDirWatch(this))
+    , m_dirty(false)
 {
     const auto profiles = findProfile->find();
-    for(const Profile &profile : profiles) {
+    for (const Profile &profile : profiles) {
         updateCacheFile(profile.faviconSource(), profile.faviconCache());
         m_profileBookmarks << new ProfileBookmarks(profile);
         m_watcher->addFile(profile.path());
     }
-    connect(m_watcher, &KDirWatch::created, this, [this] { m_dirty = true; });
+    connect(m_watcher, &KDirWatch::created, this, [this] {
+        m_dirty = true;
+    });
 }
 
 Chrome::~Chrome()
 {
-    for(ProfileBookmarks *profileBookmark : qAsConst(m_profileBookmarks)) {
+    for (ProfileBookmarks *profileBookmark : qAsConst(m_profileBookmarks)) {
         delete profileBookmark;
     }
 }
@@ -70,7 +96,7 @@ QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing)
         prepare();
     }
     QList<BookmarkMatch> results;
-    for(ProfileBookmarks *profileBookmarks : qAsConst(m_profileBookmarks)) {
+    for (ProfileBookmarks *profileBookmarks : qAsConst(m_profileBookmarks)) {
         results << match(term, addEveryThing, profileBookmarks);
     }
     return results;
@@ -94,7 +120,7 @@ QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing, Prof
 void Chrome::prepare()
 {
     m_dirty = false;
-    for(ProfileBookmarks *profileBookmarks : qAsConst(m_profileBookmarks)) {
+    for (ProfileBookmarks *profileBookmarks : qAsConst(m_profileBookmarks)) {
         Profile profile = profileBookmarks->profile();
         profileBookmarks->clear();
         const QJsonArray bookmarks = readChromeFormatBookmarks(profile.path());
@@ -109,7 +135,7 @@ void Chrome::prepare()
 
 void Chrome::teardown()
 {
-    for(ProfileBookmarks *profileBookmarks : qAsConst(m_profileBookmarks)) {
+    for (ProfileBookmarks *profileBookmarks : qAsConst(m_profileBookmarks)) {
         profileBookmarks->tearDown();
     }
 }

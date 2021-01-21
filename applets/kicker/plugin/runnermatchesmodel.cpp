@@ -19,24 +19,23 @@
  ***************************************************************************/
 
 #include "runnermatchesmodel.h"
-#include "runnermodel.h"
 #include "actionlist.h"
+#include "runnermodel.h"
 
 #include <QAction>
 #include <QIcon>
 
 #include <KLocalizedString>
-#include <KRunner/RunnerManager>
 #include <KRun>
+#include <KRunner/RunnerManager>
 
 #include <Plasma/Plasma>
 
-RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const QString &name,
-    Plasma::RunnerManager *manager, QObject *parent)
-: AbstractModel(parent)
-, m_runnerId(runnerId)
-, m_name(name)
-, m_runnerManager(manager)
+RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const QString &name, Plasma::RunnerManager *manager, QObject *parent)
+    : AbstractModel(parent)
+    , m_runnerId(runnerId)
+    , m_name(name)
+    , m_runnerManager(manager)
 {
 }
 
@@ -71,8 +70,7 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         const QString &runnerId = match.runner()->id();
         if (runnerId == QLatin1String("baloosearch") || runnerId == QLatin1String("bookmarks")) {
             return QUrl(match.data().toString());
-        } else if (runnerId == QLatin1String("recentdocuments")
-                   || runnerId == QLatin1String("services")) {
+        } else if (runnerId == QLatin1String("recentdocuments") || runnerId == QLatin1String("services")) {
             KService::Ptr service = KService::serviceByStorageId(match.data().toString());
             if (service) {
                 return QUrl::fromLocalFile(Kicker::resolvedServiceEntryPath(service));
@@ -82,8 +80,8 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         // Hack to expose the protected Plasma::AbstractRunner::actions() method.
         class MyRunner : public Plasma::AbstractRunner
         {
-            public:
-                using Plasma::AbstractRunner::actions;
+        public:
+            using Plasma::AbstractRunner::actions;
         };
 
         MyRunner *runner = static_cast<MyRunner *>(match.runner());
@@ -95,8 +93,10 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         QVariantList actionList;
         const QList<QAction *> actions = m_runnerManager->actionsForMatch(match);
         for (QAction *action : actions) {
-            QVariantMap item = Kicker::createActionItem(action->text(), action->icon().name(), QStringLiteral("runnerAction"),
-                QVariant::fromValue<QObject *>(action));
+            QVariantMap item = Kicker::createActionItem(action->text(), //
+                                                        action->icon().name(),
+                                                        QStringLiteral("runnerAction"),
+                                                        QVariant::fromValue<QObject *>(action));
 
             actionList << item;
         }
@@ -195,8 +195,7 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
         return true;
     } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
         return KRun::run(argument.toString(), {}, nullptr, service ? service->name() : QString(), service ? service->icon() : QString());
-    } else if (actionId == QLatin1String("_kicker_recentDocument")
-        || actionId == QLatin1String("_kicker_forgetRecentDocuments")) {
+    } else if (actionId == QLatin1String("_kicker_recentDocument") || actionId == QLatin1String("_kicker_forgetRecentDocuments")) {
         return Kicker::handleRecentDocumentAction(service, actionId, argument);
     }
 
@@ -221,7 +220,7 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
     return true;
 }
 
-void RunnerMatchesModel::setMatches(const QList< Plasma::QueryMatch > &matches)
+void RunnerMatchesModel::setMatches(const QList<Plasma::QueryMatch> &matches)
 {
     int oldCount = m_matches.count();
     int newCount = matches.count();

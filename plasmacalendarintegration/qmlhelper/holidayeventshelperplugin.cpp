@@ -19,11 +19,11 @@
 
 #include "holidayeventshelperplugin.h"
 
-#include <qqml.h>
 #include <QDebug>
+#include <qqml.h>
 
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
 class QmlConfigHelper : public QObject
 {
@@ -31,7 +31,8 @@ class QmlConfigHelper : public QObject
     Q_PROPERTY(QStringList selectedRegions READ selectedRegions NOTIFY selectedRegionsChanged)
 
 public:
-    explicit QmlConfigHelper(QObject *parent = nullptr) : QObject(parent)
+    explicit QmlConfigHelper(QObject *parent = nullptr)
+        : QObject(parent)
     {
         KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("plasma_calendar_holiday_regions"));
         m_configGroup = config->group("General");
@@ -72,7 +73,7 @@ private:
     KConfigGroup m_configGroup;
 };
 
-void HolidayEventsHelperPlugin::registerTypes(const char* uri)
+void HolidayEventsHelperPlugin::registerTypes(const char *uri)
 {
     qmlRegisterType<QmlConfigHelper>(uri, 1, 0, "QmlConfigHelper");
 }

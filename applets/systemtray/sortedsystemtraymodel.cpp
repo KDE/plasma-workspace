@@ -18,8 +18,8 @@
  ***************************************************************************/
 
 #include "sortedsystemtraymodel.h"
-#include "systemtraymodel.h"
 #include "debug.h"
+#include "systemtraymodel.h"
 
 #include <QList>
 
@@ -30,8 +30,8 @@ static const QList<QString> s_categoryOrder = {QStringLiteral("UnknownCategory")
                                                QStringLiteral("Hardware")};
 
 SortedSystemTrayModel::SortedSystemTrayModel(SortingType sorting, QObject *parent)
-    : QSortFilterProxyModel(parent),
-      m_sorting(sorting)
+    : QSortFilterProxyModel(parent)
+    , m_sorting(sorting)
 {
     setSortLocaleAware(true);
     sort(0);

@@ -20,12 +20,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <QDateTime>
 #include <qmath.h>
 
-namespace ColorCorrect {
-
-static const double TWILIGHT_NAUT    =   -12.0;
-static const double TWILIGHT_CIVIL   =    -6.0;
-static const double SUN_RISE_SET     =    -0.833;
-static const double SUN_HIGH         =     2.0;
+namespace ColorCorrect
+{
+static const double TWILIGHT_NAUT = -12.0;
+static const double TWILIGHT_CIVIL = -6.0;
+static const double SUN_RISE_SET = -0.833;
+static const double SUN_HIGH = 2.0;
 
 QVariantMap calculateSunTimings(double latitude, double longitude, bool morning)
 {
@@ -36,13 +36,13 @@ QVariantMap calculateSunTimings(double latitude, double longitude, bool morning)
     const double rad = M_PI / 180.;
     const double earthObliquity = 23.4397; // epsilon
 
-    const double lat = latitude;    // phi
-    const double lng = -longitude;  // lw
+    const double lat = latitude; // phi
+    const double lng = -longitude; // lw
 
     // times
     QDate prompt = QDate::currentDate();
-    const double juPrompt = prompt.toJulianDay();   // J
-    const double ju2000 = 2451545.;                 // J2000
+    const double juPrompt = prompt.toJulianDay(); // J
+    const double ju2000 = 2451545.; // J2000
 
     // geometry
     auto mod360 = [](double number) -> double {
@@ -90,7 +90,7 @@ QVariantMap calculateSunTimings(double latitude, double longitude, bool morning)
         const double decl = declination(date);
         const double ret0 = (sin(angle) - sin(lat) * sin(decl)) / (cos(lat) * cos(decl));
 
-        double ret = mod360(acos( ret0 ));
+        double ret = mod360(acos(ret0));
         if (180. < ret) {
             ret = ret - 360.;
         }
@@ -102,11 +102,11 @@ QVariantMap calculateSunTimings(double latitude, double longitude, bool morning)
      */
 
     // transit is at noon
-    auto getTransit = [&](const double date) -> double {  // Jtransit
-        const double juMeanSolTime = juPrompt - ju2000 - 0.0009 - lng / 360.;       // n_x = J - J_2000 - J_0 - l_w / 360°
+    auto getTransit = [&](const double date) -> double { // Jtransit
+        const double juMeanSolTime = juPrompt - ju2000 - 0.0009 - lng / 360.; // n_x = J - J_2000 - J_0 - l_w / 360°
         const double juTrEstimate = date + qRound64(juMeanSolTime) - juMeanSolTime; // J_x = J + n - n_x
-        const double anom = anomaly(juTrEstimate);                                  // M
-        const double eclLngM = ecliptLngMean(anom);                                 // L_sun
+        const double anom = anomaly(juTrEstimate); // M
+        const double eclLngM = ecliptLngMean(anom); // L_sun
 
         return juTrEstimate + 0.0053 * sin(anom) - 0.0068 * sin(2 * eclLngM);
     };
@@ -144,13 +144,13 @@ QVariantMap calculateSunTimings(double latitude, double longitude, bool morning)
         timeBegin = QTime();
     } else {
         double timePart = begin - (int)begin;
-        timeBegin = QTime::fromMSecsSinceStartOfDay((int)( timePart * MSC_DAY ));
+        timeBegin = QTime::fromMSecsSinceStartOfDay((int)(timePart * MSC_DAY));
     }
     if (std::isnan(end)) {
         timeEnd = QTime();
     } else {
         double timePart = end - (int)end;
-        timeEnd = QTime::fromMSecsSinceStartOfDay((int)( timePart * MSC_DAY ));
+        timeEnd = QTime::fromMSecsSinceStartOfDay((int)(timePart * MSC_DAY));
     }
 
     QDateTime dateTimeBegin(prompt, timeBegin, Qt::UTC);

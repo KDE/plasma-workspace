@@ -24,8 +24,8 @@
 
 #include <QDBusContext>
 #include <QObject>
-#include <QStringList>
 #include <QSet>
+#include <QStringList>
 
 class QDBusServiceWatcher;
 
@@ -37,7 +37,7 @@ class StatusNotifierWatcher : public KDEDModule, protected QDBusContext
     Q_PROPERTY(int ProtocolVersion READ ProtocolVersion)
 
 public:
-    StatusNotifierWatcher(QObject *parent, const QList<QVariant>&);
+    StatusNotifierWatcher(QObject *parent, const QList<QVariant> &);
     ~StatusNotifierWatcher() override;
 
     QStringList RegisteredStatusNotifierItems() const;
@@ -52,11 +52,11 @@ public Q_SLOTS:
     void RegisterStatusNotifierHost(const QString &service);
 
 protected Q_SLOTS:
-    void serviceUnregistered(const QString& name);
+    void serviceUnregistered(const QString &name);
 
 Q_SIGNALS:
     void StatusNotifierItemRegistered(const QString &service);
-    //TODO: decide if this makes sense, the systray itself could notice the vanishing of items, but looks complete putting it here
+    // TODO: decide if this makes sense, the systray itself could notice the vanishing of items, but looks complete putting it here
     void StatusNotifierItemUnregistered(const QString &service);
     void StatusNotifierHostRegistered();
     void StatusNotifierHostUnregistered();

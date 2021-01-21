@@ -26,7 +26,6 @@
 
 namespace NotificationManager
 {
-
 class Notification;
 
 class ServerInfo;

@@ -22,22 +22,22 @@
 
 #include <QDebug>
 
-AppSource::AppSource(KServiceGroup::Ptr group, QObject *parent) :
-    Plasma::DataContainer(parent),
-    m_group(group),
-    m_app(),
-    m_isApp(false)
+AppSource::AppSource(KServiceGroup::Ptr group, QObject *parent)
+    : Plasma::DataContainer(parent)
+    , m_group(group)
+    , m_app()
+    , m_isApp(false)
 {
     setObjectName(m_group->entryPath());
     setData(QStringLiteral("isApp"), false);
     updateGroup();
 }
 
-AppSource::AppSource(KService::Ptr app, QObject *parent) :
-    Plasma::DataContainer(parent),
-    m_group(),
-    m_app(app),
-    m_isApp(true)
+AppSource::AppSource(KService::Ptr app, QObject *parent)
+    : Plasma::DataContainer(parent)
+    , m_group()
+    , m_app(app)
+    , m_isApp(true)
 {
     setObjectName(m_app->storageId());
     setData(QStringLiteral("isApp"), true);
@@ -74,10 +74,10 @@ void AppSource::updateGroup()
     const auto groupEntries = m_group->entries(true, false, true);
     for (const KSycocaEntry::Ptr &p : groupEntries) {
         if (p->isType(KST_KService)) {
-            const KService::Ptr service(static_cast<KService*>(p.data()));
+            const KService::Ptr service(static_cast<KService *>(p.data()));
             entries << service->storageId();
         } else if (p->isType(KST_KServiceGroup)) {
-            const KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup*>(p.data()));
+            const KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup *>(p.data()));
             entries << serviceGroup->entryPath();
         } else if (p->isType(KST_KServiceSeparator)) {
             entries << QStringLiteral("---");
@@ -103,5 +103,3 @@ void AppSource::updateApp()
     setData(QStringLiteral("display"), !m_app->noDisplay());
     checkForUpdate();
 }
-
-

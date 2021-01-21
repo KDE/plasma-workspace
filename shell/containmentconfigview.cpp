@@ -17,31 +17,31 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "currentcontainmentactionsmodel.h"
 #include "containmentconfigview.h"
-#include "shellcorona.h"
 #include "config-workspace.h"
+#include "currentcontainmentactionsmodel.h"
+#include "shellcorona.h"
 
 #include <QDBusConnection>
 #include <QDebug>
 #include <QDir>
+#include <QQmlComponent>
 #include <QQmlContext>
 #include <QQmlEngine>
-#include <QQmlComponent>
 #include <QStandardPaths>
 
 #include <KConfigLoader>
-#include <KDeclarative/KDeclarative>
 #include <KDeclarative/ConfigPropertyMap>
+#include <KDeclarative/KDeclarative>
 #include <KLocalizedString>
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
+#include <Plasma/ContainmentActions>
 #include <Plasma/Corona>
 #include <Plasma/PluginLoader>
-#include <Plasma/ContainmentActions>
 #include <PlasmaQuick/ConfigModel>
 
-class WallpaperConfigModel: public PlasmaQuick::ConfigModel
+class WallpaperConfigModel : public PlasmaQuick::ConfigModel
 {
     Q_OBJECT
 public:
@@ -50,11 +50,10 @@ public Q_SLOTS:
     void repopulate();
 };
 
-
 //////////////////////////////ContainmentConfigView
 ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow *parent)
-    : ConfigView(cont, parent),
-      m_containment(cont)
+    : ConfigView(cont, parent)
+    , m_containment(cont)
 {
     qmlRegisterType<QAbstractItemModel>();
     rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
@@ -87,10 +86,14 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::containmentActionConfigModel()
         KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Generic"));
 
         for (const KPluginMetaData &plugin : actions) {
-            pkg.setDefaultPackageRoot(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR "/containmentactions"), QStandardPaths::LocateDirectory));
-            m_containmentActionConfigModel->appendCategory(plugin.iconName(), plugin.name(), pkg.filePath("ui", QStringLiteral("config.qml")), plugin.pluginId());
+            pkg.setDefaultPackageRoot(QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                                             QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR "/containmentactions"),
+                                                             QStandardPaths::LocateDirectory));
+            m_containmentActionConfigModel->appendCategory(plugin.iconName(),
+                                                           plugin.name(),
+                                                           pkg.filePath("ui", QStringLiteral("config.qml")),
+                                                           plugin.pluginId());
         }
-
     }
     return m_containmentActionConfigModel;
 }
@@ -122,12 +125,24 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
 {
     if (!m_wallpaperConfigModel) {
         m_wallpaperConfigModel = new WallpaperConfigModel(this);
-        QDBusConnection::sessionBus().connect(QString(), QStringLiteral("/KPackage/Plasma/Wallpaper"), QStringLiteral("org.kde.plasma.kpackage"), QStringLiteral("packageInstalled"),
-            m_wallpaperConfigModel, SLOT(repopulate()));
-        QDBusConnection::sessionBus().connect(QString(), QStringLiteral("/KPackage/Plasma/Wallpaper"), QStringLiteral("org.kde.plasma.kpackage"), QStringLiteral("packageUpdated"),
-            m_wallpaperConfigModel, SLOT(repopulate()));
-        QDBusConnection::sessionBus().connect(QString(), QStringLiteral("/KPackage/Plasma/Wallpaper"), QStringLiteral("org.kde.plasma.kpackage"), QStringLiteral("packageUninstalled"),
-            m_wallpaperConfigModel, SLOT(repopulate()));
+        QDBusConnection::sessionBus().connect(QString(),
+                                              QStringLiteral("/KPackage/Plasma/Wallpaper"),
+                                              QStringLiteral("org.kde.plasma.kpackage"),
+                                              QStringLiteral("packageInstalled"),
+                                              m_wallpaperConfigModel,
+                                              SLOT(repopulate()));
+        QDBusConnection::sessionBus().connect(QString(),
+                                              QStringLiteral("/KPackage/Plasma/Wallpaper"),
+                                              QStringLiteral("org.kde.plasma.kpackage"),
+                                              QStringLiteral("packageUpdated"),
+                                              m_wallpaperConfigModel,
+                                              SLOT(repopulate()));
+        QDBusConnection::sessionBus().connect(QString(),
+                                              QStringLiteral("/KPackage/Plasma/Wallpaper"),
+                                              QStringLiteral("org.kde.plasma.kpackage"),
+                                              QStringLiteral("packageUninstalled"),
+                                              m_wallpaperConfigModel,
+                                              SLOT(repopulate()));
     }
     return m_wallpaperConfigModel;
 }
@@ -141,7 +156,6 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::containmentPluginsConfigModel()
         for (const KPluginInfo &info : actions) {
             m_containmentPluginsConfigModel->appendCategory(info.icon(), info.name(), QString(), info.pluginName());
         }
-
     }
     return m_containmentPluginsConfigModel;
 }
@@ -168,8 +182,7 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
     if (m_containment->wallpaper() == wallpaper) {
         syncWallpaperObjects();
     } else {
-
-        //we have to construct an independent ConfigPropertyMap when we want to configure wallpapers that are not the current one
+        // we have to construct an independent ConfigPropertyMap when we want to configure wallpapers that are not the current one
         KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Generic"));
         pkg.setDefaultPackageRoot(QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR "/wallpapers"));
         pkg.setPath(wallpaper);
@@ -214,12 +227,12 @@ void ContainmentConfigView::syncWallpaperObjects()
     }
     rootContext()->setContextProperty(QStringLiteral("wallpaper"), wallpaperGraphicsObject);
 
-    //FIXME: why m_wallpaperGraphicsObject->property("configuration").value<ConfigPropertyMap *>() doesn't work?
+    // FIXME: why m_wallpaperGraphicsObject->property("configuration").value<ConfigPropertyMap *>() doesn't work?
     m_currentWallpaperConfig = static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
 }
 
 WallpaperConfigModel::WallpaperConfigModel(QObject *parent)
-    :PlasmaQuick::ConfigModel(parent)
+    : PlasmaQuick::ConfigModel(parent)
 {
     repopulate();
 }

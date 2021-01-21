@@ -49,19 +49,13 @@ private Q_SLOTS:
     void on_useInactiveEffects_stateChanged(int state);
 
 private:
-
     /** load options from global */
     void loadOptions();
-    void setCommonForeground(KColorScheme::ForegroundRole role,
-                             int stackIndex,
-                             int buttonIndex);
-    void setCommonDecoration(KColorScheme::DecorationRole role,
-                             int stackIndex,
-                             int buttonIndex);
+    void setCommonForeground(KColorScheme::ForegroundRole role, int stackIndex, int buttonIndex);
+    void setCommonDecoration(KColorScheme::DecorationRole role, int stackIndex, int buttonIndex);
 
     KSharedConfigPtr m_config;
     bool m_disableUpdates;
-
 };
 
 #endif

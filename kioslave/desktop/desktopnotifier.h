@@ -19,9 +19,9 @@
 #ifndef DESKTOPNOTIFIER_H
 #define DESKTOPNOTIFIER_H
 
-#include <kdedmodule.h>
 #include <QDBusAbstractAdaptor>
 #include <QUrl>
+#include <kdedmodule.h>
 
 class KDirWatch;
 
@@ -31,7 +31,7 @@ class DesktopNotifier : public KDEDModule
     Q_CLASSINFO("D-Bus Interface", "org.kde.DesktopNotifier")
 
 public:
-    DesktopNotifier(QObject* parent, const QList<QVariant>&);
+    DesktopNotifier(QObject *parent, const QList<QVariant> &);
 
 public slots:
     Q_SCRIPTABLE Q_NOREPLY void watchDir(const QString &path);
@@ -48,4 +48,3 @@ private:
 };
 
 #endif
-

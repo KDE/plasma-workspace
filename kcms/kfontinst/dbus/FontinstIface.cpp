@@ -23,5 +23,3 @@ OrgKdeFontinstInterface::OrgKdeFontinstInterface(const QString &service, const Q
 OrgKdeFontinstInterface::~OrgKdeFontinstInterface()
 {
 }
-
-

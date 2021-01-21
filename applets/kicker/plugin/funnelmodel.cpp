@@ -19,7 +19,8 @@
 
 #include "funnelmodel.h"
 
-FunnelModel::FunnelModel(QObject *parent) : ForwardingModel(parent)
+FunnelModel::FunnelModel(QObject *parent)
+    : ForwardingModel(parent)
 {
 }
 
@@ -39,7 +40,7 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
         return;
     }
 
-    connect(model, SIGNAL(destroyed(QObject*)), this, SLOT(reset()));
+    connect(model, SIGNAL(destroyed(QObject *)), this, SLOT(reset()));
 
     if (!m_sourceModel) {
         beginResetModel();

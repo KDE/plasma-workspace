@@ -22,17 +22,16 @@
 #define ABSTRACTNOTIFICATIONSMODEL_H
 
 #include <QAbstractListModel>
+#include <QDateTime>
 #include <QScopedPointer>
 #include <QSharedPointer>
-#include <QDateTime>
 
-#include "notifications.h"
 #include "notification.h"
+#include "notifications.h"
 #include "server.h"
 
 namespace NotificationManager
 {
-
 class Q_DECL_EXPORT AbstractNotificationsModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -53,7 +52,7 @@ public:
 
     // Currently configure actions are not exposed in AbstractNotificationsModel to keep it very minimal
     // if usecase for this comes up in future, we can revisit it.
-    
+
     virtual void invokeDefaultAction(uint notificationId) = 0;
     virtual void invokeAction(uint notificationId, const QString &actionName) = 0;
     virtual void reply(uint notificationId, const QString &text) = 0;
@@ -73,9 +72,8 @@ protected:
     void onNotificationRemoved(uint notificationId, Server::CloseReason reason);
 
     void setupNotificationTimeout(const Notification &notification);
-    const QVector<Notification>& notifications();
+    const QVector<Notification> &notifications();
     int rowOfNotification(uint id) const;
-
 
 private:
     friend class NotificationTest;
@@ -84,9 +82,8 @@ private:
     QScopedPointer<Private> d;
 
     Q_DISABLE_COPY(AbstractNotificationsModel)
-
 };
 
 } // namespace NotificationManager
 
-#endif //ABSTRACTNOTIFICATIONSMODEL_H
+#endif // ABSTRACTNOTIFICATIONSMODEL_H

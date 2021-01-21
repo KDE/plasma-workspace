@@ -20,15 +20,16 @@
 
 #pragma once
 
-
 #include <Plasma/Applet>
 
-namespace PlasmaQuick {
-    class AppletQuickItem;
+namespace PlasmaQuick
+{
+class AppletQuickItem;
 }
 
-namespace Plasma {
-    class Containment;
+namespace Plasma
+{
+class Containment;
 }
 
 class PanelSpacer;
@@ -38,7 +39,7 @@ class SpacersTracker : public QObject
     Q_OBJECT
 
 public:
-    SpacersTracker( QObject *parent = nullptr );
+    SpacersTracker(QObject *parent = nullptr);
     ~SpacersTracker() override;
 
     static SpacersTracker *self();
@@ -47,7 +48,7 @@ public:
     void removeSpacer(Plasma::Containment *containment, PanelSpacer *spacer);
 
 private:
-    QHash<Plasma::Containment *, QList<PanelSpacer *> > m_spacers;
+    QHash<Plasma::Containment *, QList<PanelSpacer *>> m_spacers;
 };
 
 class PanelSpacer : public Plasma::Applet
@@ -57,7 +58,7 @@ class PanelSpacer : public Plasma::Applet
     Q_PROPERTY(PlasmaQuick::AppletQuickItem *containment READ containmentGraphicObject CONSTANT)
 
 public:
-    PanelSpacer( QObject *parent, const QVariantList &args );
+    PanelSpacer(QObject *parent, const QVariantList &args);
     ~PanelSpacer() override;
 
     void init() override;
@@ -74,5 +75,3 @@ Q_SIGNALS:
 private:
     PlasmaQuick::AppletQuickItem *m_twinSpacer;
 };
-
-

@@ -46,7 +46,6 @@ public:
 
     ~DBusMenuImporter() override;
 
-
     QAction *actionForId(int id) const;
 
     /**

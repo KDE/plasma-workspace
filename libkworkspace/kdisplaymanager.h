@@ -21,23 +21,23 @@
 #ifndef KDISPLAYMANAGER_H
 #define KDISPLAYMANAGER_H
 
-#include "kworkspace.h"
 #include "config-libkworkspace.h"
+#include "kworkspace.h"
 #include "kworkspace_export.h"
-#include <QString>
-#include <QList>
 #include <QByteArray>
+#include <QList>
+#include <QString>
 
 struct KWORKSPACE_EXPORT SessEnt {
     QString display, from, user, session;
     int vt;
-    bool self:1, tty:1;
+    bool self : 1, tty : 1;
 };
 
 typedef QList<SessEnt> SessList;
 
-class KWORKSPACE_EXPORT KDisplayManager {
-
+class KWORKSPACE_EXPORT KDisplayManager
+{
 #if HAVE_X11
 
 public:
@@ -45,9 +45,7 @@ public:
     ~KDisplayManager();
 
     bool canShutdown();
-    void shutdown(KWorkSpace::ShutdownType shutdownType,
-                  KWorkSpace::ShutdownMode shutdownMode,
-                  const QString &bootOption = QString());
+    void shutdown(KWorkSpace::ShutdownType shutdownType, KWorkSpace::ShutdownMode shutdownMode, const QString &bootOption = QString());
 
     bool isSwitchable();
     int numReserve();
@@ -70,20 +68,40 @@ private:
 #else // Q_WS_X11
 
 public:
-    KDisplayManager() {}
+    KDisplayManager()
+    {
+    }
 
-    bool canShutdown() { return false; }
-    void shutdown(KWorkSpace::ShutdownType shutdownType,
-                  KWorkSpace::ShutdownMode shutdownMode,
-                  const QString &bootOption = QString()) {}
+    bool canShutdown()
+    {
+        return false;
+    }
+    void shutdown(KWorkSpace::ShutdownType shutdownType, KWorkSpace::ShutdownMode shutdownMode, const QString &bootOption = QString())
+    {
+    }
 
-    void setLock(bool) {}
+    void setLock(bool)
+    {
+    }
 
-    bool isSwitchable() { return false; }
-    int numReserve() { return -1; }
-    void startReserve() {}
-    bool localSessions(SessList &list) { return false; }
-    void switchVT(int vt) {}
+    bool isSwitchable()
+    {
+        return false;
+    }
+    int numReserve()
+    {
+        return -1;
+    }
+    void startReserve()
+    {
+    }
+    bool localSessions(SessList &list)
+    {
+        return false;
+    }
+    void switchVT(int vt)
+    {
+    }
 
     bool bootOptions(QStringList &opts, int &dflt, int &curr);
 
@@ -92,10 +110,9 @@ public:
 private:
 #if HAVE_X11
     class Private;
-    Private * const d;
+    Private *const d;
 #endif // HAVE_X11
 
 }; // class KDisplayManager
 
 #endif // KDISPLAYMANAGER_H
-

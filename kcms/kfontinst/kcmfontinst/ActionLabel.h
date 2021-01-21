@@ -31,26 +31,23 @@ class QLabel;
 
 namespace KFI
 {
-
 class CActionLabel : public QLabel
 {
     Q_OBJECT
 
-    public:
-
+public:
     CActionLabel(QWidget *parent);
     ~CActionLabel() override;
     void startAnimation();
     void stopAnimation();
 
-    private Q_SLOTS:
+private Q_SLOTS:
 
     void rotateIcon();
 
-    protected:
-
-    QTimer  *itsTimer;
-    int     itsCount;
+protected:
+    QTimer *itsTimer;
+    int itsCount;
 };
 
 }

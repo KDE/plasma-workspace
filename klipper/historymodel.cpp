@@ -21,7 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "historystringitem.h"
 #include "historyurlitem.h"
 
-
 HistoryModel::HistoryModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_maxSize(0)
@@ -71,11 +70,11 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
 
     QSharedPointer<HistoryItem> item = m_items.at(index.row());
     HistoryItemType type = HistoryItemType::Text;
-    if (dynamic_cast<HistoryStringItem*>(item.data())) {
+    if (dynamic_cast<HistoryStringItem *>(item.data())) {
         type = HistoryItemType::Text;
-    } else if (dynamic_cast<HistoryImageItem*>(item.data())) {
+    } else if (dynamic_cast<HistoryImageItem *>(item.data())) {
         type = HistoryItemType::Image;
-    } else if (dynamic_cast<HistoryURLItem*>(item.data())) {
+    } else if (dynamic_cast<HistoryURLItem *>(item.data())) {
         type = HistoryItemType::Url;
     }
 
@@ -86,13 +85,13 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return item->image();
     case Qt::UserRole:
         return QVariant::fromValue<HistoryItemConstPtr>(qSharedPointerConstCast<const HistoryItem>(item));
-    case Qt::UserRole+1:
+    case Qt::UserRole + 1:
         return item->uuid();
-    case Qt::UserRole+2:
+    case Qt::UserRole + 2:
         return QVariant::fromValue<HistoryItemType>(type);
-    case Qt::UserRole+3:
+    case Qt::UserRole + 3:
         return item->uuid().toBase64();
-    case Qt::UserRole+4:
+    case Qt::UserRole + 4:
         return int(type);
     }
     return QVariant();
@@ -209,12 +208,12 @@ void HistoryModel::moveBackToTop()
     moveToTop(m_items.count() - 1);
 }
 
-QHash< int, QByteArray > HistoryModel::roleNames() const
+QHash<int, QByteArray> HistoryModel::roleNames() const
 {
     QHash<int, QByteArray> hash;
     hash.insert(Qt::DisplayRole, QByteArrayLiteral("DisplayRole"));
     hash.insert(Qt::DecorationRole, QByteArrayLiteral("DecorationRole"));
-    hash.insert(Qt::UserRole+3, QByteArrayLiteral("UuidRole"));
-    hash.insert(Qt::UserRole+4, QByteArrayLiteral("TypeRole"));
+    hash.insert(Qt::UserRole + 3, QByteArrayLiteral("UuidRole"));
+    hash.insert(Qt::UserRole + 4, QByteArrayLiteral("TypeRole"));
     return hash;
 }

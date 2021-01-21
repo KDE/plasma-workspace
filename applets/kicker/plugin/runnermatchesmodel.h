@@ -25,8 +25,9 @@
 
 #include <KRunner/QueryMatch>
 
-namespace Plasma {
-    class RunnerManager;
+namespace Plasma
+{
+class RunnerManager;
 }
 
 class RunnerMatchesModel : public AbstractModel
@@ -35,30 +36,35 @@ class RunnerMatchesModel : public AbstractModel
 
     Q_PROPERTY(QString name READ name CONSTANT)
 
-    public:
-        explicit RunnerMatchesModel(const QString &runnerId, const QString &name,
-            Plasma::RunnerManager *manager, QObject *parent = nullptr);
+public:
+    explicit RunnerMatchesModel(const QString &runnerId, const QString &name, Plasma::RunnerManager *manager, QObject *parent = nullptr);
 
-        QString description() const override;
+    QString description() const override;
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
+    Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
 
-        QString runnerId() const { return m_runnerId; }
-        QString name() const { return m_name; }
+    QString runnerId() const
+    {
+        return m_runnerId;
+    }
+    QString name() const
+    {
+        return m_name;
+    }
 
-        void setMatches(const QList<Plasma::QueryMatch> &matches);
+    void setMatches(const QList<Plasma::QueryMatch> &matches);
 
-        AbstractModel* favoritesModel() override;
+    AbstractModel *favoritesModel() override;
 
-    private:
-        QString m_runnerId;
-        QString m_name;
-        Plasma::RunnerManager *m_runnerManager;
-        QList<Plasma::QueryMatch> m_matches;
+private:
+    QString m_runnerId;
+    QString m_name;
+    Plasma::RunnerManager *m_runnerManager;
+    QList<Plasma::QueryMatch> m_matches;
 };
 
 #endif

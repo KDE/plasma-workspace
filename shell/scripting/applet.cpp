@@ -22,9 +22,9 @@
 
 #include <QAction>
 
-#include <kservice.h>
-#include <kdeclarative/configpropertymap.h>
 #include <kconfigloader.h>
+#include <kdeclarative/configpropertymap.h>
+#include <kservice.h>
 
 #include <Plasma/Applet>
 #include <Plasma/Containment>
@@ -32,13 +32,12 @@
 
 namespace WorkspaceScripting
 {
-
 class Applet::Private
 {
 public:
     Private()
-        : configDirty(false),
-          inWallpaperConfig(false)
+        : configDirty(false)
+        , inWallpaperConfig(false)
     {
     }
 
@@ -52,8 +51,8 @@ public:
 };
 
 Applet::Applet(ScriptEngine *parent)
-    : QObject(parent),
-      d(new Applet::Private)
+    : QObject(parent)
+    , d(new Applet::Private)
 {
     d->engine = parent;
 }
@@ -118,21 +117,22 @@ void Applet::writeConfig(const QString &key, const QJSValue &value)
 {
     if (d->configGroup.isValid()) {
         if (d->inWallpaperConfig) {
-            //hacky, but only way to make the wallpaper react immediately
+            // hacky, but only way to make the wallpaper react immediately
             QObject *wallpaperGraphicsObject = applet()->property("wallpaperGraphicsObject").value<QObject *>();
             if (wallpaperGraphicsObject) {
-                KDeclarative::ConfigPropertyMap *config = static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
+                KDeclarative::ConfigPropertyMap *config =
+                    static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
                 config->setProperty(key.toLatin1(), value.toVariant());
             }
         } else if (applet()->configScheme()) {
-            //check if it can be written in the applets' configScheme
+            // check if it can be written in the applets' configScheme
             KConfigSkeletonItem *item = applet()->configScheme()->findItemByName(key);
             if (item) {
                 item->setProperty(value.toVariant());
                 applet()->configScheme()->blockSignals(true);
                 applet()->configScheme()->save();
-                //why read? read will update KConfigSkeletonItem::mLoadedValue,
-                //allowing a write operation to be performed next time
+                // why read? read will update KConfigSkeletonItem::mLoadedValue,
+                // allowing a write operation to be performed next time
                 applet()->configScheme()->read();
                 applet()->configScheme()->blockSignals(false);
                 emit applet()->configScheme()->configChanged();
@@ -277,6 +277,3 @@ ScriptEngine *Applet::engine() const
 }
 
 }
-
-
-

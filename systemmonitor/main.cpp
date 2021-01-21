@@ -17,15 +17,15 @@
  *
  */
 
+#include <KLocalizedString>
 #include <QApplication>
 #include <QDBusConnection>
-#include <KLocalizedString>
 
 #include <kworkspace.h>
 
 #include "ksystemactivitydialog.h"
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     KWorkSpace::detectPlatform(argc, argv);
     QApplication app(argc, argv);

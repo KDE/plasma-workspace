@@ -21,15 +21,15 @@
 #include "kdebrowser.h"
 #include "bookmarkmatch.h"
 
-#include <QStack>
 #include <QIcon>
+#include <QStack>
 #include <QUrl>
 
-#include <KIO/Global>
 #include <KBookmarkManager>
+#include <KIO/Global>
 
-
-QIcon KDEFavicon::iconFor(const QString &url)  {
+QIcon KDEFavicon::iconFor(const QString &url)
+{
     const QString iconFile = KIO::favIconForUrl(QUrl(url));
     if (iconFile.isEmpty()) {
         return defaultIcon();
@@ -37,28 +37,30 @@ QIcon KDEFavicon::iconFor(const QString &url)  {
     return QIcon::fromTheme(iconFile);
 }
 
-
-KDEFavicon::KDEFavicon(QObject *parent)  : Favicon(parent) {}
-
-
-KDEBrowser::KDEBrowser(QObject *parent) :
-    QObject(parent), m_bookmarkManager(KBookmarkManager::userBookmarksManager()), m_favicon(new KDEFavicon(this))
+KDEFavicon::KDEFavicon(QObject *parent)
+    : Favicon(parent)
 {
 }
 
+KDEBrowser::KDEBrowser(QObject *parent)
+    : QObject(parent)
+    , m_bookmarkManager(KBookmarkManager::userBookmarksManager())
+    , m_favicon(new KDEFavicon(this))
+{
+}
 
-QList< BookmarkMatch > KDEBrowser::match(const QString& term, bool addEverything)
+QList<BookmarkMatch> KDEBrowser::match(const QString &term, bool addEverything)
 {
     KBookmarkGroup bookmarkGroup = m_bookmarkManager->root();
 
-    QList< BookmarkMatch > matches;
+    QList<BookmarkMatch> matches;
     QStack<KBookmarkGroup> groups;
 
     KBookmark bookmark = bookmarkGroup.first();
     while (!bookmark.isNull()) {
-//         if (!context.isValid()) {
-//             return;
-//         } TODO: restore?
+        //         if (!context.isValid()) {
+        //             return;
+        //         } TODO: restore?
 
         if (bookmark.isSeparator()) {
             bookmark = bookmarkGroup.next(bookmark);
@@ -66,15 +68,15 @@ QList< BookmarkMatch > KDEBrowser::match(const QString& term, bool addEverything
         }
 
         if (bookmark.isGroup()) { // descend
-            //qDebug(kdbg_code) << "descending into" << bookmark.text();
+            // qDebug(kdbg_code) << "descending into" << bookmark.text();
             groups.push(bookmarkGroup);
             bookmarkGroup = bookmark.toGroup();
             bookmark = bookmarkGroup.first();
 
             while (bookmark.isNull() && !groups.isEmpty()) {
-//                 if (!context.isValid()) {
-//                     return;
-//                 } TODO: restore?
+                //                 if (!context.isValid()) {
+                //                     return;
+                //                 } TODO: restore?
 
                 bookmark = bookmarkGroup;
                 bookmarkGroup = groups.pop();
@@ -90,9 +92,9 @@ QList< BookmarkMatch > KDEBrowser::match(const QString& term, bool addEverything
 
         bookmark = bookmarkGroup.next(bookmark);
         while (bookmark.isNull() && !groups.isEmpty()) {
-//             if (!context.isValid()) {
-//                 return;
-//             } // TODO: restore?
+            //             if (!context.isValid()) {
+            //                 return;
+            //             } // TODO: restore?
 
             bookmark = bookmarkGroup;
             bookmarkGroup = groups.pop();
@@ -102,4 +104,3 @@ QList< BookmarkMatch > KDEBrowser::match(const QString& term, bool addEverything
     }
     return matches;
 }
-

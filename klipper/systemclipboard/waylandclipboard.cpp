@@ -19,11 +19,11 @@
 
 #include "waylandclipboard.h"
 
+#include <QDebug>
 #include <QFile>
 #include <QFutureWatcher>
-#include <QPointer>
-#include <QDebug>
 #include <QGuiApplication>
+#include <QPointer>
 
 #include <QtWaylandClient/QWaylandClientExtension>
 
@@ -35,8 +35,7 @@
 
 #include <sys/select.h>
 
-class DataControlDeviceManager : public QWaylandClientExtensionTemplate<DataControlDeviceManager>
-        , public QtWayland::zwlr_data_control_manager_v1
+class DataControlDeviceManager : public QWaylandClientExtensionTemplate<DataControlDeviceManager>, public QtWayland::zwlr_data_control_manager_v1
 {
     Q_OBJECT
 public:
@@ -45,7 +44,8 @@ public:
     {
     }
 
-    ~DataControlDeviceManager() {
+    ~DataControlDeviceManager()
+    {
         destroy();
     }
 };
@@ -54,12 +54,13 @@ class DataControlOffer : public QMimeData, public QtWayland::zwlr_data_control_o
 {
     Q_OBJECT
 public:
-    DataControlOffer(struct ::zwlr_data_control_offer_v1 *id):
-        QtWayland::zwlr_data_control_offer_v1(id)
+    DataControlOffer(struct ::zwlr_data_control_offer_v1 *id)
+        : QtWayland::zwlr_data_control_offer_v1(id)
     {
     }
 
-    ~DataControlOffer() {
+    ~DataControlOffer()
+    {
         destroy();
     }
 
@@ -68,20 +69,23 @@ public:
         return m_receivedFormats;
     }
 
-    bool hasFormat(const QString &format) const override {
-         return m_receivedFormats.contains(format);
+    bool hasFormat(const QString &format) const override
+    {
+        return m_receivedFormats.contains(format);
     }
+
 protected:
-    void zwlr_data_control_offer_v1_offer(const QString &mime_type) override {
+    void zwlr_data_control_offer_v1_offer(const QString &mime_type) override
+    {
         m_receivedFormats << mime_type;
     }
 
     QVariant retrieveData(const QString &mimeType, QVariant::Type type) const override;
+
 private:
     static bool readData(int fd, QByteArray &data);
     QStringList m_receivedFormats;
 };
-
 
 QVariant DataControlOffer::retrieveData(const QString &mimeType, QVariant::Type type) const
 {
@@ -91,11 +95,11 @@ QVariant DataControlOffer::retrieveData(const QString &mimeType, QVariant::Type 
     Q_UNUSED(type);
 
     int pipeFds[2];
-    if (pipe(pipeFds) != 0){
+    if (pipe(pipeFds) != 0) {
         return QVariant();
     }
 
-    auto t = const_cast<DataControlOffer*>(this);
+    auto t = const_cast<DataControlOffer *>(this);
     t->receive(mimeType, pipeFds[1]);
 
     close(pipeFds[1]);
@@ -108,7 +112,7 @@ QVariant DataControlOffer::retrieveData(const QString &mimeType, QVariant::Type 
      */
 
     QPlatformNativeInterface *native = qApp->platformNativeInterface();
-    auto display = static_cast<struct ::wl_display*>(native->nativeResourceForIntegration("wl_display"));
+    auto display = static_cast<struct ::wl_display *>(native->nativeResourceForIntegration("wl_display"));
     wl_display_flush(display);
 
     QFile readPipe;
@@ -157,18 +161,19 @@ bool DataControlOffer::readData(int fd, QByteArray &data)
     }
 }
 
-
 class DataControlSource : public QObject, public QtWayland::zwlr_data_control_source_v1
 {
     Q_OBJECT
 public:
     DataControlSource(struct ::zwlr_data_control_source_v1 *id, QMimeData *mimeData);
     DataControlSource();
-    ~DataControlSource() {
+    ~DataControlSource()
+    {
         destroy();
     }
 
-    QMimeData *mimeData() {
+    QMimeData *mimeData()
+    {
         return m_mimeData;
     }
 
@@ -178,6 +183,7 @@ Q_SIGNALS:
 protected:
     void zwlr_data_control_source_v1_send(const QString &mime_type, int32_t fd) override;
     void zwlr_data_control_source_v1_cancelled() override;
+
 private:
     QMimeData *m_mimeData;
 };
@@ -186,7 +192,7 @@ DataControlSource::DataControlSource(struct ::zwlr_data_control_source_v1 *id, Q
     : QtWayland::zwlr_data_control_source_v1(id)
     , m_mimeData(mimeData)
 {
-    for (const QString &format: mimeData->formats()) {
+    for (const QString &format : mimeData->formats()) {
         offer(format);
     }
 }
@@ -211,36 +217,43 @@ class DataControlDevice : public QObject, public QtWayland::zwlr_data_control_de
 public:
     DataControlDevice(struct ::zwlr_data_control_device_v1 *id)
         : QtWayland::zwlr_data_control_device_v1(id)
-    {}
+    {
+    }
 
-    ~DataControlDevice() {
+    ~DataControlDevice()
+    {
         destroy();
     }
 
     void setSelection(std::unique_ptr<DataControlSource> selection);
-    QMimeData *receivedSelection() {
+    QMimeData *receivedSelection()
+    {
         return m_receivedSelection.get();
     }
-    QMimeData *selection() {
+    QMimeData *selection()
+    {
         return m_selection ? m_selection->mimeData() : nullptr;
     }
 
 Q_SIGNALS:
     void receivedSelectionChanged();
     void selectionChanged();
+
 protected:
-    void zwlr_data_control_device_v1_data_offer(struct ::zwlr_data_control_offer_v1 *id) override {
+    void zwlr_data_control_device_v1_data_offer(struct ::zwlr_data_control_offer_v1 *id) override
+    {
         new DataControlOffer(id);
         // this will become memory managed when we retrieve the selection event
         // a compositor calling data_offer without doing that would be a bug
     }
 
-    void zwlr_data_control_device_v1_selection(struct ::zwlr_data_control_offer_v1 *id) override {
-        if(!id ) {
+    void zwlr_data_control_device_v1_selection(struct ::zwlr_data_control_offer_v1 *id) override
+    {
+        if (!id) {
             m_receivedSelection.reset();
         } else {
             auto deriv = QtWayland::zwlr_data_control_offer_v1::fromObject(id);
-            auto offer = dynamic_cast<DataControlOffer*>(deriv); // dynamic because of the dual inheritance
+            auto offer = dynamic_cast<DataControlOffer *>(deriv); // dynamic because of the dual inheritance
             m_receivedSelection.reset(offer);
         }
         emit receivedSelectionChanged();
@@ -250,7 +263,6 @@ private:
     std::unique_ptr<DataControlSource> m_selection; // selection set locally
     std::unique_ptr<DataControlOffer> m_receivedSelection; // latest selection set from externally to here
 };
-
 
 void DataControlDevice::setSelection(std::unique_ptr<DataControlSource> selection)
 {
@@ -269,12 +281,11 @@ WaylandClipboard::WaylandClipboard(QObject *parent)
 {
     connect(m_manager.get(), &DataControlDeviceManager::activeChanged, this, [this]() {
         if (m_manager->isActive()) {
-
             QPlatformNativeInterface *native = qApp->platformNativeInterface();
             if (!native) {
                 return;
             }
-            auto seat = static_cast<struct ::wl_seat*>(native->nativeResourceForIntegration("wl_seat"));
+            auto seat = static_cast<struct ::wl_seat *>(native->nativeResourceForIntegration("wl_seat"));
             if (!seat) {
                 return;
             }
@@ -282,10 +293,10 @@ WaylandClipboard::WaylandClipboard(QObject *parent)
             m_device.reset(new DataControlDevice(m_manager->get_data_device(seat)));
 
             connect(m_device.get(), &DataControlDevice::receivedSelectionChanged, this, [this]() {
-                    emit changed(QClipboard::Clipboard);
+                emit changed(QClipboard::Clipboard);
             });
             connect(m_device.get(), &DataControlDevice::selectionChanged, this, [this]() {
-                    emit changed(QClipboard::Clipboard);
+                emit changed(QClipboard::Clipboard);
             });
         } else {
             m_device.reset();
@@ -312,8 +323,7 @@ void WaylandClipboard::clear(QClipboard::Mode mode)
     if (mode == QClipboard::Clipboard) {
         m_device->set_selection(nullptr);
     } else if (mode == QClipboard::Selection) {
-        if (zwlr_data_control_device_v1_get_version(m_device->object()) >=
-                ZWLR_DATA_CONTROL_DEVICE_V1_SET_PRIMARY_SELECTION_SINCE_VERSION) {
+        if (zwlr_data_control_device_v1_get_version(m_device->object()) >= ZWLR_DATA_CONTROL_DEVICE_V1_SET_PRIMARY_SELECTION_SINCE_VERSION) {
             m_device->set_primary_selection(nullptr);
         }
     }

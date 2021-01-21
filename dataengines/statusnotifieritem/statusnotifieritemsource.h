@@ -23,9 +23,9 @@
 #define STATUSNOTIFIERITEMSOURCE_H
 
 #include <Plasma/DataContainer>
-#include <QString>
 #include <QDBusPendingCallWatcher>
 #include <QMenu>
+#include <QString>
 
 #include "statusnotifieritem_interface.h"
 
@@ -35,7 +35,6 @@ class DBusMenuImporter;
 
 class StatusNotifierItemSource : public Plasma::DataContainer
 {
-
     Q_OBJECT
 
 public:
@@ -64,7 +63,6 @@ private Q_SLOTS:
     void activateCallback(QDBusPendingCallWatcher *);
 
 private:
-
     QPixmap KDbusImageStructToPixmap(const KDbusImageStruct &image) const;
     QIcon imageVectorToPixmap(const KDbusImageVector &vector) const;
     void overlayIcon(QIcon *icon, QIcon *overlay);

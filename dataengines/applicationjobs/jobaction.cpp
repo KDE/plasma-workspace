@@ -18,23 +18,22 @@
 
 #include "jobaction.h"
 
+#include <QDebug>
 #include <kio/global.h>
 #include <klocalizedstring.h>
-#include <QDebug>
 
 void JobAction::start()
 {
     qDebug() << "Trying to perform the action" << operationName();
 
     if (!m_job) {
-        setErrorText(i18nc("%1 is the subject (can be anything) upon which the job is performed",
-                           "The JobView for %1 cannot be found", destination()));
+        setErrorText(i18nc("%1 is the subject (can be anything) upon which the job is performed", "The JobView for %1 cannot be found", destination()));
         setError(-1);
         emitResult();
         return;
     }
 
-    //TODO: check with capabilities before performing actions.
+    // TODO: check with capabilities before performing actions.
     if (operationName() == QLatin1String("resume")) {
         m_job->resume();
     } else if (operationName() == QLatin1String("suspend")) {

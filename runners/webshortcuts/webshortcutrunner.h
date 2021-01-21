@@ -21,32 +21,32 @@
 
 #include <KRunner/AbstractRunner>
 
-class WebshortcutRunner : public Plasma::AbstractRunner 
+class WebshortcutRunner : public Plasma::AbstractRunner
 {
     Q_OBJECT
 
-    public:
-        WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
-        ~WebshortcutRunner() override;
+public:
+    WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    ~WebshortcutRunner() override;
 
-        void match(Plasma::RunnerContext &context) override;
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
+    void match(Plasma::RunnerContext &context) override;
+    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
 
-    private Q_SLOTS:
-        void loadSyntaxes();
-        void configurePrivateBrowsingActions();
+private Q_SLOTS:
+    void loadSyntaxes();
+    void configurePrivateBrowsingActions();
 
-    private:
-        Plasma::QueryMatch m_match;
-        bool m_filterBeforeRun;
+private:
+    Plasma::QueryMatch m_match;
+    bool m_filterBeforeRun;
 
-        QChar m_delimiter;
-        QString m_lastFailedKey;
-        QString m_lastKey;
-        QString m_lastProvider;
-        QRegularExpression m_regex;
-        
-        KServiceAction m_privateAction;
+    QChar m_delimiter;
+    QString m_lastFailedKey;
+    QString m_lastKey;
+    QString m_lastProvider;
+    QRegularExpression m_regex;
+
+    KServiceAction m_privateAction;
 };
 
 #endif

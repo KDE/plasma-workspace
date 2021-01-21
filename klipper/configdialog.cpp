@@ -21,37 +21,36 @@
 #include "configdialog.h"
 
 #include <KConfigSkeleton>
-#include <KShortcutsEditor>
 #include <KEditListWidget>
+#include <KShortcutsEditor>
 #include <kwindowconfig.h>
 
 #include "klipper_debug.h"
 
-#include "klipper.h"
 #include "editactiondialog.h"
+#include "klipper.h"
 
-GeneralWidget::GeneralWidget(QWidget* parent)
+GeneralWidget::GeneralWidget(QWidget *parent)
     : QWidget(parent)
 {
     m_ui.setupUi(this);
     m_ui.kcfg_TimeoutForActionPopups->setSuffix(ki18np(" second", " seconds"));
     m_ui.kcfg_MaxClipItems->setSuffix(ki18np(" entry", " entries"));
-
 }
 
 void GeneralWidget::updateWidgets()
 {
-  if (m_ui.kcfg_IgnoreSelection->isChecked()) {
-    m_ui.kcfg_SyncClipboards->setEnabled(false);
-    m_ui.kcfg_SelectionTextOnly->setEnabled(false);
-  } else if (m_ui.kcfg_SyncClipboards->isChecked()) {
-    m_ui.kcfg_IgnoreSelection->setEnabled(false);
-  }
-
+    if (m_ui.kcfg_IgnoreSelection->isChecked()) {
+        m_ui.kcfg_SyncClipboards->setEnabled(false);
+        m_ui.kcfg_SelectionTextOnly->setEnabled(false);
+    } else if (m_ui.kcfg_SyncClipboards->isChecked()) {
+        m_ui.kcfg_IgnoreSelection->setEnabled(false);
+    }
 }
 
-ActionsWidget::ActionsWidget(QWidget* parent)
-    : QWidget(parent), m_editActDlg(nullptr)
+ActionsWidget::ActionsWidget(QWidget *parent)
+    : QWidget(parent)
+    , m_editActDlg(nullptr)
 {
     m_ui.setupUi(this);
 
@@ -62,13 +61,10 @@ ActionsWidget::ActionsWidget(QWidget* parent)
 
     const KConfigGroup grp = KSharedConfig::openConfig()->group("ActionsWidget");
     QByteArray hdrState = grp.readEntry("ColumnState", QByteArray());
-    if (!hdrState.isEmpty())
-    {
+    if (!hdrState.isEmpty()) {
         qCDebug(KLIPPER_LOG) << "Restoring column state";
         m_ui.kcfg_ActionList->header()->restoreState(QByteArray::fromBase64(hdrState));
-    }
-    else
-    {
+    } else {
         m_ui.kcfg_ActionList->header()->resizeSection(0, 250);
     }
 
@@ -83,19 +79,19 @@ ActionsWidget::ActionsWidget(QWidget* parent)
     onSelectionChanged();
 }
 
-void ActionsWidget::setActionList(const ActionList& list)
+void ActionsWidget::setActionList(const ActionList &list)
 {
-    qDeleteAll( m_actionList );
+    qDeleteAll(m_actionList);
     m_actionList.clear();
 
-    for (ClipAction* action : list) {
+    for (ClipAction *action : list) {
         if (!action) {
             qCDebug(KLIPPER_LOG) << "action is null!";
             continue;
         }
 
         // make a copy for us to work with from now on
-        m_actionList.append( new ClipAction( *action ) );
+        m_actionList.append(new ClipAction(*action));
     }
 
     updateActionListView();
@@ -105,16 +101,16 @@ void ActionsWidget::updateActionListView()
 {
     m_ui.kcfg_ActionList->clear();
 
-    foreach (ClipAction* action, m_actionList) {
+    foreach (ClipAction *action, m_actionList) {
         if (!action) {
             qCDebug(KLIPPER_LOG) << "action is null!";
             continue;
         }
 
         QTreeWidgetItem *item = new QTreeWidgetItem;
-        updateActionItem( item, action );
+        updateActionItem(item, action);
 
-        m_ui.kcfg_ActionList->addTopLevelItem( item );
+        m_ui.kcfg_ActionList->addTopLevelItem(item);
     }
 
     // after all actions loaded, reset modified state of tree widget.
@@ -123,19 +119,19 @@ void ActionsWidget::updateActionListView()
     m_ui.kcfg_ActionList->resetModifiedState();
 }
 
-void ActionsWidget::updateActionItem( QTreeWidgetItem* item, ClipAction* action )
+void ActionsWidget::updateActionItem(QTreeWidgetItem *item, ClipAction *action)
 {
-    if ( !item || !action ) {
+    if (!item || !action) {
         qCDebug(KLIPPER_LOG) << "null pointer passed to function, nothing done";
         return;
     }
 
     // clear children if any
     item->takeChildren();
-    item->setText( 0, action->actionRegexPattern() );
-    item->setText( 1, action->description() );
+    item->setText(0, action->actionRegexPattern());
+    item->setText(1, action->description());
 
-    foreach (const ClipCommand& command, action->commands()) {
+    foreach (const ClipCommand &command, action->commands()) {
         QStringList cmdProps;
         cmdProps << command.command << command.description;
         QTreeWidgetItem *child = new QTreeWidgetItem(item, cmdProps);
@@ -143,7 +139,7 @@ void ActionsWidget::updateActionItem( QTreeWidgetItem* item, ClipAction* action 
     }
 }
 
-void ActionsWidget::setExcludedWMClasses(const QStringList& excludedWMClasses)
+void ActionsWidget::setExcludedWMClasses(const QStringList &excludedWMClasses)
 {
     m_exclWMClasses = excludedWMClasses;
 }
@@ -157,12 +153,12 @@ ActionList ActionsWidget::actionList() const
 {
     // return a copy of our action list
     ActionList list;
-    foreach( ClipAction* action, m_actionList ) {
-        if ( !action ) {
+    foreach (ClipAction *action, m_actionList) {
+        if (!action) {
             qCDebug(KLIPPER_LOG) << "action is null";
             continue;
         }
-        list.append( new ClipAction( *action ) );
+        list.append(new ClipAction(*action));
     }
 
     return list;
@@ -174,8 +170,7 @@ void ActionsWidget::resetModifiedState()
 
     qCDebug(KLIPPER_LOG) << "Saving column state";
     KConfigGroup grp = KSharedConfig::openConfig()->group("ActionsWidget");
-    grp.writeEntry("ColumnState",
-                   m_ui.kcfg_ActionList->header()->saveState().toBase64());
+    grp.writeEntry("ColumnState", m_ui.kcfg_ActionList->header()->saveState().toBase64());
 }
 
 void ActionsWidget::onSelectionChanged()
@@ -191,14 +186,14 @@ void ActionsWidget::onAddAction()
         m_editActDlg = new EditActionDialog(this);
     }
 
-    ClipAction* newAct = new ClipAction;
+    ClipAction *newAct = new ClipAction;
     m_editActDlg->setAction(newAct);
     if (m_editActDlg->exec() == QDialog::Accepted) {
-        m_actionList.append( newAct );
+        m_actionList.append(newAct);
 
-        QTreeWidgetItem* item = new QTreeWidgetItem;
-        updateActionItem( item, newAct );
-        m_ui.kcfg_ActionList->addTopLevelItem( item );
+        QTreeWidgetItem *item = new QTreeWidgetItem;
+        updateActionItem(item, newAct);
+        m_ui.kcfg_ActionList->addTopLevelItem(item);
     }
 }
 
@@ -212,14 +207,14 @@ void ActionsWidget::onEditAction()
     int commandIdx = -1;
     if (item) {
         if (item->parent()) {
-            commandIdx = item->parent()->indexOfChild( item );
+            commandIdx = item->parent()->indexOfChild(item);
             item = item->parent(); // interested in toplevel action
         }
 
-        int idx = m_ui.kcfg_ActionList->indexOfTopLevelItem( item );
-        ClipAction* action = m_actionList.at( idx );
+        int idx = m_ui.kcfg_ActionList->indexOfTopLevelItem(item);
+        ClipAction *action = m_actionList.at(idx);
 
-        if ( !action ) {
+        if (!action) {
             qCDebug(KLIPPER_LOG) << "action is null";
             return;
         }
@@ -232,17 +227,15 @@ void ActionsWidget::onEditAction()
     }
 }
 
-
 void ActionsWidget::onDeleteAction()
 {
     QTreeWidgetItem *item = m_ui.kcfg_ActionList->currentItem();
-    if ( item && item->parent() )
+    if (item && item->parent())
         item = item->parent();
 
-    if ( item )
-    {
-        int idx = m_ui.kcfg_ActionList->indexOfTopLevelItem( item );
-        m_actionList.removeAt( idx );
+    if (item) {
+        int idx = m_ui.kcfg_ActionList->indexOfTopLevelItem(item);
+        m_actionList.removeAt(idx);
     }
 
     delete item;
@@ -252,46 +245,44 @@ void ActionsWidget::onAdvanced()
 {
     QDialog dlg(this);
     dlg.setModal(true);
-    dlg.setWindowTitle( i18n("Advanced Settings") );
+    dlg.setWindowTitle(i18n("Advanced Settings"));
     QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
     buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttons, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
     connect(buttons, &QDialogButtonBox::rejected, &dlg, &QDialog::reject);
 
     AdvancedWidget *widget = new AdvancedWidget(&dlg);
-    widget->setWMClasses( m_exclWMClasses );
+    widget->setWMClasses(m_exclWMClasses);
 
     QVBoxLayout *layout = new QVBoxLayout(&dlg);
     layout->addWidget(widget);
     layout->addWidget(buttons);
 
-    if ( dlg.exec() == QDialog::Accepted ) {
+    if (dlg.exec() == QDialog::Accepted) {
         m_exclWMClasses = widget->wmClasses();
     }
 }
 
-ConfigDialog::ConfigDialog(QWidget* parent, KConfigSkeleton* skeleton, const Klipper* klipper, KActionCollection*collection)
-    : KConfigDialog(parent, QStringLiteral("preferences"), skeleton),
-    m_generalPage(new GeneralWidget(this)),
-    m_actionsPage(new ActionsWidget(this)),
-    m_klipper(klipper)
+ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, const Klipper *klipper, KActionCollection *collection)
+    : KConfigDialog(parent, QStringLiteral("preferences"), skeleton)
+    , m_generalPage(new GeneralWidget(this))
+    , m_actionsPage(new ActionsWidget(this))
+    , m_klipper(klipper)
 {
     addPage(m_generalPage, i18nc("General Config", "General"), QStringLiteral("klipper"), i18n("General Configuration"));
     addPage(m_actionsPage, i18nc("Actions Config", "Actions"), QStringLiteral("system-run"), i18n("Actions Configuration"));
 
-    QWidget* w = new QWidget(this);
-    m_shortcutsWidget = new KShortcutsEditor( collection, w, KShortcutsEditor::GlobalAction );
+    QWidget *w = new QWidget(this);
+    m_shortcutsWidget = new KShortcutsEditor(collection, w, KShortcutsEditor::GlobalAction);
     addPage(m_shortcutsWidget, i18nc("Shortcuts Config", "Shortcuts"), QStringLiteral("preferences-desktop-keyboard"), i18n("Shortcuts Configuration"));
 
     const KConfigGroup grp = KSharedConfig::openConfig()->group("ConfigDialog");
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
 }
 
-
 ConfigDialog::~ConfigDialog()
 {
 }
-
 
 void ConfigDialog::updateSettings()
 {
@@ -318,7 +309,7 @@ void ConfigDialog::updateWidgets()
 {
     // settings were updated, update widgets
 
-    if (m_klipper && m_klipper->urlGrabber() ) {
+    if (m_klipper && m_klipper->urlGrabber()) {
         m_actionsPage->setActionList(m_klipper->urlGrabber()->actionList());
         m_actionsPage->setExcludedWMClasses(m_klipper->urlGrabber()->excludedWMClasses());
     } else {
@@ -335,7 +326,7 @@ void ConfigDialog::updateWidgetsDefault()
     m_shortcutsWidget->allDefault();
 }
 
-AdvancedWidget::AdvancedWidget( QWidget *parent )
+AdvancedWidget::AdvancedWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -349,13 +340,14 @@ AdvancedWidget::AdvancedWidget( QWidget *parent )
     editListBox->setButtons(KEditListWidget::Add | KEditListWidget::Remove);
     editListBox->setCheckAtEntering(true);
 
-    editListBox->setWhatsThis(i18n("<qt>This lets you specify windows in which Klipper should "
-                                   "not invoke \"actions\". Use<br /><br />"
-                                   "<center><b>xprop | grep WM_CLASS</b></center><br />"
-                                   "in a terminal to find out the WM_CLASS of a window. "
-                                   "Next, click on the window you want to examine. The "
-                                   "first string it outputs after the equal sign is the one "
-                                   "you need to enter here.</qt>"));
+    editListBox->setWhatsThis(
+        i18n("<qt>This lets you specify windows in which Klipper should "
+             "not invoke \"actions\". Use<br /><br />"
+             "<center><b>xprop | grep WM_CLASS</b></center><br />"
+             "in a terminal to find out the WM_CLASS of a window. "
+             "Next, click on the window you want to examine. The "
+             "first string it outputs after the equal sign is the one "
+             "you need to enter here.</qt>"));
     groupBox->layout()->addWidget(editListBox);
 
     mainLayout->addWidget(groupBox);
@@ -367,7 +359,7 @@ AdvancedWidget::~AdvancedWidget()
 {
 }
 
-void AdvancedWidget::setWMClasses( const QStringList& items )
+void AdvancedWidget::setWMClasses(const QStringList &items)
 {
     editListBox->setItems(items);
 }
@@ -376,5 +368,3 @@ QStringList AdvancedWidget::wmClasses() const
 {
     return editListBox->items();
 }
-
-

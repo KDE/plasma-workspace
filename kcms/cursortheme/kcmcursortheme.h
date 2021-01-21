@@ -35,7 +35,7 @@ class CursorThemeData;
 
 namespace KIO
 {
-    class FileCopyJob;
+class FileCopyJob;
 }
 
 class CursorThemeConfig : public KQuickAddons::ManagedConfigModule
@@ -59,7 +59,7 @@ public:
     void save() override;
     void defaults() override;
 
-    //for QML properties
+    // for QML properties
     CursorThemeSettings *cursorThemeSettings() const;
 
     bool canInstall() const;
@@ -108,7 +108,6 @@ private Q_SLOTS:
         mode, it stays always disabled. */
     void updateSizeComboBox();
 
-
 private:
     bool isSaveNeeded() const override;
     void installThemeFile(const QString &path);
@@ -123,19 +122,18 @@ private:
     bool iconsIsWritable() const;
     void removeThemes();
 
-
     CursorThemeModel *m_themeModel;
     SortProxyModel *m_themeProxyModel;
     QStandardItemModel *m_sizesModel;
     CursorThemeData *m_data;
 
-/** Holds the last size that was chosen by the user. Example: The user chooses
-    theme1 which provides the sizes 24 and 36. He chooses 36. preferredSize gets
-    set to 36. Now, he switches to theme2 which provides the sizes 30 and 40.
-    preferredSize still is 36, so the UI will default to 40, which is next to 36.
-    Now, he chooses theme3 which provides the sizes 34 and 44. preferredSize is
-    still 36, so the UI defaults to 34. Now the user changes manually to 44. This
-    will also change preferredSize. */
+    /** Holds the last size that was chosen by the user. Example: The user chooses
+        theme1 which provides the sizes 24 and 36. He chooses 36. preferredSize gets
+        set to 36. Now, he switches to theme2 which provides the sizes 30 and 40.
+        preferredSize still is 36, so the UI will default to 40, which is next to 36.
+        Now, he chooses theme3 which provides the sizes 34 and 44. preferredSize is
+        still 36, so the UI defaults to 34. Now the user changes manually to 44. This
+        will also change preferredSize. */
     int m_preferredSize;
 
     bool m_canInstall;

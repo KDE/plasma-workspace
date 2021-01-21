@@ -28,10 +28,9 @@ class QString;
 
 namespace KFI
 {
-
 namespace FcConfig
 {
-    void addDir(const QString &dir, bool system);
+void addDir(const QString &dir, bool system);
 }
 
 }

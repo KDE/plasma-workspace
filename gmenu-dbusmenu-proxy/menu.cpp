@@ -42,12 +42,8 @@ Menu::Menu(const QString &serviceName, const QString &objectPath, QObject *paren
     Q_ASSERT(!serviceName.isEmpty());
     Q_ASSERT(!m_objectPath.isEmpty());
 
-    if (!QDBusConnection::sessionBus().connect(m_serviceName,
-                                               m_objectPath,
-                                               s_orgGtkMenus,
-                                               QStringLiteral("Changed"),
-                                               this,
-                                               SLOT(onMenuChanged(GMenuChangeList)))) {
+    if (!QDBusConnection::sessionBus()
+             .connect(m_serviceName, m_objectPath, s_orgGtkMenus, QStringLiteral("Changed"), this, SLOT(onMenuChanged(GMenuChangeList)))) {
         qCWarning(DBUSMENUPROXY) << "Failed to subscribe to menu changes for" << parent << "on" << serviceName << "at" << objectPath;
     }
 }
@@ -69,13 +65,8 @@ void Menu::start(uint id)
 
     // dbus-send --print-reply --session --dest=:1.103 /org/libreoffice/window/104857641/menus/menubar org.gtk.Menus.Start array:uint32:0
 
-    QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName,
-                                                      m_objectPath,
-                                                      s_orgGtkMenus,
-                                                      QStringLiteral("Start"));
-    msg.setArguments({
-        QVariant::fromValue(QList<uint>{id})
-    });
+    QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName, m_objectPath, s_orgGtkMenus, QStringLiteral("Start"));
+    msg.setArguments({QVariant::fromValue(QList<uint>{id})});
 
     QDBusPendingReply<GMenuItemList> reply = QDBusConnection::sessionBus().asyncCall(msg);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
@@ -115,10 +106,7 @@ void Menu::start(uint id)
 
 void Menu::stop(const QList<uint> &ids)
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName,
-                                                      m_objectPath,
-                                                      s_orgGtkMenus,
-                                                      QStringLiteral("End"));
+    QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName, m_objectPath, s_orgGtkMenus, QStringLiteral("End"));
     msg.setArguments({
         QVariant::fromValue(ids) // don't let it unwrap it, hence in a variant
     });
@@ -133,9 +121,9 @@ void Menu::stop(const QList<uint> &ids)
             // remove all subscriptions that we unsubscribed from
             // TODO is there a nicer algorithm for that?
             // TODO remove all m_menus also?
-            m_subscriptions.erase(std::remove_if(m_subscriptions.begin(), m_subscriptions.end(),
-                                      std::bind(&QList<uint>::contains, m_subscriptions, std::placeholders::_1)),
-                                  m_subscriptions.end());
+            m_subscriptions.erase(
+                std::remove_if(m_subscriptions.begin(), m_subscriptions.end(), std::bind(&QList<uint>::contains, m_subscriptions, std::placeholders::_1)),
+                m_subscriptions.end());
 
             if (m_subscriptions.isEmpty()) {
                 emit menuDisappeared();
@@ -325,7 +313,7 @@ void Menu::actionsChanged(const QStringList &dirtyActions, const QString &prefix
             }
         }
 
-        loopExit: // loop exit
+    loopExit: // loop exit
         return;
     };
 
@@ -335,7 +323,7 @@ void Menu::actionsChanged(const QStringList &dirtyActions, const QString &prefix
     for (const QString &action : dirtyActions) {
         const QString prefixedAction = prefix + action;
 
-        forEachMenuItem([ &prefixedAction, &dirtyItems](int subscription, int section, int index, const QVariantMap &item) {
+        forEachMenuItem([&prefixedAction, &dirtyItems](int subscription, int section, int index, const QVariantMap &item) {
             const QString actionName = Utils::itemActionName(item);
 
             if (actionName == prefixedAction) {
@@ -351,4 +339,3 @@ void Menu::actionsChanged(const QStringList &dirtyActions, const QString &prefix
         emit itemsChanged(dirtyItems);
     }
 }
-

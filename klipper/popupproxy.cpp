@@ -18,8 +18,8 @@
 */
 #include "popupproxy.h"
 
-#include <QStyle>
 #include <QPixmap>
+#include <QStyle>
 #include <QStyleOption>
 
 #include <KLocalizedString>
@@ -27,33 +27,34 @@
 #include "historyitem.h"
 #include "klipperpopup.h"
 
-PopupProxy::PopupProxy( KlipperPopup* parent, int menu_height, int menu_width )
-    : QObject( parent ),
-      m_proxy_for_menu( parent ),
-      m_spill_uuid(),
-      m_menu_height( menu_height ),
-      m_menu_width( menu_width )
+PopupProxy::PopupProxy(KlipperPopup *parent, int menu_height, int menu_width)
+    : QObject(parent)
+    , m_proxy_for_menu(parent)
+    , m_spill_uuid()
+    , m_menu_height(menu_height)
+    , m_menu_width(menu_width)
 {
     if (!parent->history()->empty()) {
         m_spill_uuid = parent->history()->first()->uuid();
     }
-    connect( parent->history(), &History::changed, this, &PopupProxy::slotHistoryChanged );
-    connect(m_proxy_for_menu, SIGNAL(triggered(QAction*)), parent->history(), SLOT(slotMoveToTop(QAction*)));
+    connect(parent->history(), &History::changed, this, &PopupProxy::slotHistoryChanged);
+    connect(m_proxy_for_menu, SIGNAL(triggered(QAction *)), parent->history(), SLOT(slotMoveToTop(QAction *)));
 }
 
-void PopupProxy::slotHistoryChanged() {
+void PopupProxy::slotHistoryChanged()
+{
     deleteMoreMenus();
-
 }
 
-void PopupProxy::deleteMoreMenus() {
-    const QMenu* myParent = parent();
-    if ( myParent != m_proxy_for_menu ) {
-        QMenu* delme = m_proxy_for_menu;
-        m_proxy_for_menu = static_cast<QMenu*>( m_proxy_for_menu->parent() );
-        while ( m_proxy_for_menu != myParent ) {
+void PopupProxy::deleteMoreMenus()
+{
+    const QMenu *myParent = parent();
+    if (myParent != m_proxy_for_menu) {
+        QMenu *delme = m_proxy_for_menu;
+        m_proxy_for_menu = static_cast<QMenu *>(m_proxy_for_menu->parent());
+        while (m_proxy_for_menu != myParent) {
             delme = m_proxy_for_menu;
-            m_proxy_for_menu = static_cast<QMenu*>( m_proxy_for_menu->parent() );
+            m_proxy_for_menu = static_cast<QMenu *>(m_proxy_for_menu->parent());
         }
         // We are called probably from within the menus event-handler (triggered=>slotMoveToTop=>changed=>slotHistoryChanged=>deleteMoreMenus)
         // what can result in a crash if we just delete the menu here (#155196 and #165154) So, delay the delete.
@@ -61,36 +62,36 @@ void PopupProxy::deleteMoreMenus() {
     }
 }
 
-int PopupProxy::buildParent( int index, const QRegularExpression &filter ) {
+int PopupProxy::buildParent(int index, const QRegularExpression &filter)
+{
     deleteMoreMenus();
     // Start from top of  history (again)
     m_spill_uuid = parent()->history()->empty() ? QByteArray() : parent()->history()->first()->uuid();
-    if ( filter.isValid() ) {
+    if (filter.isValid()) {
         m_filter = filter;
     }
 
-    return insertFromSpill( index );
-
+    return insertFromSpill(index);
 }
 
-KlipperPopup* PopupProxy::parent() {
-    return static_cast<KlipperPopup*>( QObject::parent() );
+KlipperPopup *PopupProxy::parent()
+{
+    return static_cast<KlipperPopup *>(QObject::parent());
 }
 
-void PopupProxy::slotAboutToShow() {
+void PopupProxy::slotAboutToShow()
+{
     insertFromSpill();
 }
 
-void PopupProxy::tryInsertItem( HistoryItem const * const item,
-                                int& remainingHeight,
-                                const int index )
+void PopupProxy::tryInsertItem(HistoryItem const *const item, int &remainingHeight, const int index)
 {
     QAction *action = new QAction(m_proxy_for_menu);
-    QPixmap image( item->image() );
-    if ( image.isNull() ) {
+    QPixmap image(item->image());
+    if (image.isNull()) {
         // Squeeze text strings so that do not take up the entire screen (or more)
-        QString text = m_proxy_for_menu->fontMetrics().elidedText( item->text().simplified(), Qt::ElideMiddle, m_menu_width );
-        text.replace( QLatin1Char('&'), QLatin1String("&&") );
+        QString text = m_proxy_for_menu->fontMetrics().elidedText(item->text().simplified(), Qt::ElideMiddle, m_menu_width);
+        text.replace(QLatin1Char('&'), QLatin1String("&&"));
         action->setText(text);
     } else {
         action->setIcon(QIcon(image));
@@ -107,7 +108,7 @@ void PopupProxy::tryInsertItem( HistoryItem const * const item,
     QStyleOptionMenuItem style_options;
     // It would be much easier to use QMenu::initStyleOptions. But that is protected, so until we have a better
     // excuse to subclass that, I'd rather implement this manually.
-    // Note 2 properties, tabwidth and maxIconWidth, are not available from the public interface, so those are left out (probably not 
+    // Note 2 properties, tabwidth and maxIconWidth, are not available from the public interface, so those are left out (probably not
     // important for height. Also, Exclusive checkType is disregarded as  I don't think we will ever use it)
     style_options.initFrom(m_proxy_for_menu);
     style_options.checkType = action->isCheckable() ? QStyleOptionMenuItem::NonExclusive : QStyleOptionMenuItem::NotCheckable;
@@ -120,20 +121,17 @@ void PopupProxy::tryInsertItem( HistoryItem const * const item,
 
     int font_height = QFontMetrics(m_proxy_for_menu->fontMetrics()).height();
 
-    int itemheight = m_proxy_for_menu->style()->sizeFromContents(QStyle::CT_MenuItem,
-                                                              &style_options,
-                                                              QSize( 0, font_height ),
-                                                              m_proxy_for_menu).height();
+    int itemheight = m_proxy_for_menu->style()->sizeFromContents(QStyle::CT_MenuItem, &style_options, QSize(0, font_height), m_proxy_for_menu).height();
     // Subtract the used height
     remainingHeight -= itemheight;
 }
 
-int PopupProxy::insertFromSpill( int index ) {
-
-    const History* history = parent()->history();
+int PopupProxy::insertFromSpill(int index)
+{
+    const History *history = parent()->history();
     // This menu is going to be filled, so we don't need the aboutToShow()
     // signal anymore
-    disconnect( m_proxy_for_menu, nullptr, this, nullptr );
+    disconnect(m_proxy_for_menu, nullptr, this, nullptr);
 
     // Insert history items into the current m_proxy_for_menu,
     // discarding any that doesn't match the current filter.
@@ -146,17 +144,17 @@ int PopupProxy::insertFromSpill( int index ) {
     }
     do {
         if (m_filter.match(item->text()).hasMatch()) {
-            tryInsertItem( item.data(), remainingHeight, index++ );
+            tryInsertItem(item.data(), remainingHeight, index++);
             count++;
         }
         item = history->find(item->next_uuid());
-    } while ( item && history->first() != item && remainingHeight >= 0);
+    } while (item && history->first() != item && remainingHeight >= 0);
     m_spill_uuid = item->uuid();
 
     // If there is more items in the history, insert a new "More..." menu and
     // make *this a proxy for that menu ('s content).
     if (history->first() && m_spill_uuid != history->first()->uuid()) {
-        QMenu* moreMenu = new QMenu(i18n("&More"), m_proxy_for_menu);
+        QMenu *moreMenu = new QMenu(i18n("&More"), m_proxy_for_menu);
         connect(moreMenu, &QMenu::aboutToShow, this, &PopupProxy::slotAboutToShow);
         QAction *before = index < m_proxy_for_menu->actions().count() ? m_proxy_for_menu->actions().at(index) : nullptr;
         m_proxy_for_menu->insertMenu(before, moreMenu);
@@ -165,6 +163,4 @@ int PopupProxy::insertFromSpill( int index ) {
 
     // Return the number of items inserted.
     return count;
-
 }
-

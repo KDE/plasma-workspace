@@ -49,7 +49,7 @@ private Q_SLOTS:
     void variesClicked();
 
     /** slot called when color on a KColorButton changes */
-    void colorChanged( const QColor &newColor );
+    void colorChanged(const QColor &newColor);
 
     /** set the colortable color buttons up according to the current colorset */
     void updateColorTable();
@@ -61,23 +61,22 @@ private Q_SLOTS:
     void setupColorTable();
 
 private:
-    class WindecoColors {
+    class WindecoColors
+    {
     public:
-        enum Role {
-            ActiveForeground = 0,
-            ActiveBackground = 1,
-            InactiveForeground = 2,
-            InactiveBackground = 3,
-            ActiveBlend = 4,
-            InactiveBlend = 5
-        };
+        enum Role { ActiveForeground = 0, ActiveBackground = 1, InactiveForeground = 2, InactiveBackground = 3, ActiveBlend = 4, InactiveBlend = 5 };
 
-        WindecoColors() {}
-        WindecoColors(const KSharedConfigPtr&);
-        virtual ~WindecoColors() {}
+        WindecoColors()
+        {
+        }
+        WindecoColors(const KSharedConfigPtr &);
+        virtual ~WindecoColors()
+        {
+        }
 
-        void load(const KSharedConfigPtr&);
+        void load(const KSharedConfigPtr &);
         QColor color(Role) const;
+
     private:
         QColor m_colors[6];
     };
@@ -85,17 +84,10 @@ private:
     void changeColor(int row, const QColor &newColor);
 
     /** helper to create color entries */
-    void createColorEntry(const QString &text,
-                          const QString &key,
-                          QList<KColorButton *> &list,
-                          int index);
+    void createColorEntry(const QString &text, const QString &key, QList<KColorButton *> &list, int index);
 
-    void setCommonForeground(KColorScheme::ForegroundRole role,
-                             int stackIndex,
-                             int buttonIndex);
-    void setCommonDecoration(KColorScheme::DecorationRole role,
-                             int stackIndex,
-                             int buttonIndex);
+    void setCommonForeground(KColorScheme::ForegroundRole role, int stackIndex, int buttonIndex);
+    void setCommonDecoration(KColorScheme::DecorationRole role, int stackIndex, int buttonIndex);
 
     /** get the groupKey for the given colorSet */
     static QString colorSetGroupKey(int colorSet);
@@ -112,8 +104,6 @@ private:
     WindecoColors m_wmColors;
 
     KSharedConfigPtr m_config;
-
-
 };
 
 #endif

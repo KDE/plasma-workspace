@@ -24,7 +24,6 @@
 
 namespace NotificationManager
 {
-
 class NotificationManagerPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
@@ -32,7 +31,6 @@ class NotificationManagerPlugin : public QQmlExtensionPlugin
 
 public:
     void registerTypes(const char *uri) override;
-
 };
 
 } // namespace NotificationManager

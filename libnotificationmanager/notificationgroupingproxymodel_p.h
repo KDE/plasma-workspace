@@ -19,14 +19,12 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 #pragma once
 
 #include <QAbstractProxyModel>
 
 namespace NotificationManager
 {
-
 class NotificationGroupingProxyModel : public QAbstractProxyModel
 {
     Q_OBJECT
@@ -50,7 +48,7 @@ public:
     QModelIndex mapToSource(const QModelIndex &proxyIndex) const override;
 
 protected:
-    //bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
+    // bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
 
 private:
     bool appsMatch(const QModelIndex &a, const QModelIndex &b) const;
@@ -62,7 +60,6 @@ private:
     void formGroupFor(const QModelIndex &index);
 
     QVector<QVector<int> *> rowMap;
-
 };
 
 } // namespace NotificationManager

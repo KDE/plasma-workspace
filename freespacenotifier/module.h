@@ -25,16 +25,14 @@
 
 #include "freespacenotifier.h"
 
-class FreeSpaceNotifierModule
-        : public KDEDModule
+class FreeSpaceNotifierModule : public KDEDModule
 {
     Q_OBJECT
 public:
-    FreeSpaceNotifierModule(QObject* parent, const QList<QVariant>&);
+    FreeSpaceNotifierModule(QObject *parent, const QList<QVariant> &);
 
 private:
     void showConfiguration();
-
 };
 
 #endif

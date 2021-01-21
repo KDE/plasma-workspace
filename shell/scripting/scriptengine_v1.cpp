@@ -23,114 +23,113 @@
 #include <QDirIterator>
 #include <QFile>
 #include <QFileInfo>
+#include <QFutureWatcher>
 #include <QJSValueIterator>
 #include <QStandardPaths>
-#include <QFutureWatcher>
 
+#include <KApplicationTrader>
 #include <QDebug>
 #include <klocalizedstring.h>
-#include <KApplicationTrader>
 #include <kservicetypetrader.h>
 #include <kshell.h>
 
 // KIO
 //#include <kemailsettings.h> // no camelcase include
 
-#include <Plasma/Applet>
-#include <Plasma/PluginLoader>
-#include <Plasma/Containment>
-#include <qstandardpaths.h>
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
+#include <Plasma/Applet>
+#include <Plasma/Containment>
+#include <Plasma/PluginLoader>
+#include <qstandardpaths.h>
 
+#include "../screenpool.h"
+#include "../standaloneappcorona.h"
 #include "appinterface.h"
-#include "containment.h"
 #include "configgroup.h"
+#include "containment.h"
 #include "panel.h"
 #include "widget.h"
-#include "../standaloneappcorona.h"
-#include "../screenpool.h"
 
-namespace {
-    template <typename T>
-    inline void awaitFuture(const QFuture<T> &future)
+namespace
+{
+template<typename T> inline void awaitFuture(const QFuture<T> &future)
+{
+    while (!future.isFinished()) {
+        QCoreApplication::processEvents();
+    }
+}
+
+class ScriptArray_forEach_Helper
+{
+public:
+    ScriptArray_forEach_Helper(const QJSValue &array)
+        : array(array)
     {
-        while (!future.isFinished()) {
-            QCoreApplication::processEvents();
+    }
+
+    // operator + is commonly used for these things
+    // to avoid having the lambda inside the parenthesis
+    template<typename Function> void operator+(Function function) const
+    {
+        if (!array.isArray())
+            return;
+
+        int length = array.property("length").toInt();
+        for (int i = 0; i < length; ++i) {
+            function(array.property(i));
         }
     }
 
-    class ScriptArray_forEach_Helper {
-    public:
-        ScriptArray_forEach_Helper(const QJSValue &array)
-            : array(array)
-        {
-        }
+private:
+    const QJSValue &array;
+};
 
-        // operator + is commonly used for these things
-        // to avoid having the lambda inside the parenthesis
-        template <typename Function>
-        void operator+ (Function function) const
-        {
-            if (!array.isArray()) return;
+#define SCRIPT_ARRAY_FOREACH(Variable, Array) ScriptArray_forEach_Helper(Array) + [&](const QJSValue &Variable)
 
-            int length = array.property("length").toInt();
-            for (int i = 0; i < length; ++i) {
-                function(array.property(i));
-            }
-        }
-
-    private:
-        const QJSValue &array;
-    };
-
-    #define SCRIPT_ARRAY_FOREACH(Variable, Array) \
-        ScriptArray_forEach_Helper(Array) + [&] (const QJSValue &Variable)
-
-    class ScriptObject_forEach_Helper {
-    public:
-        ScriptObject_forEach_Helper(const QJSValue &object)
-            : object(object)
-        {
-        }
-
-        // operator + is commonly used for these things
-        // to avoid having the lambda inside the parenthesis
-        template <typename Function>
-        void operator+ (Function function) const
-        {
-            QJSValueIterator it(object);
-            while (it.hasNext()) {
-                it.next();
-                function(it.name(), it.value());
-            }
-        }
-
-    private:
-        const QJSValue &object;
-    };
-
-    #define SCRIPT_OBJECT_FOREACH(Key, Value, Array) \
-        ScriptObject_forEach_Helper(Array) + [&] (const QString &Key, const QJSValue &Value)
-
-    // Case insensitive comparison of two strings
-    template <typename StringType>
-    inline bool matches(const QString &object, const StringType &string)
+class ScriptObject_forEach_Helper
+{
+public:
+    ScriptObject_forEach_Helper(const QJSValue &object)
+        : object(object)
     {
-        return object.compare(string, Qt::CaseInsensitive) == 0;
     }
+
+    // operator + is commonly used for these things
+    // to avoid having the lambda inside the parenthesis
+    template<typename Function> void operator+(Function function) const
+    {
+        QJSValueIterator it(object);
+        while (it.hasNext()) {
+            it.next();
+            function(it.name(), it.value());
+        }
+    }
+
+private:
+    const QJSValue &object;
+};
+
+#define SCRIPT_OBJECT_FOREACH(Key, Value, Array) ScriptObject_forEach_Helper(Array) + [&](const QString &Key, const QJSValue &Value)
+
+// Case insensitive comparison of two strings
+template<typename StringType> inline bool matches(const QString &object, const StringType &string)
+{
+    return object.compare(string, Qt::CaseInsensitive) == 0;
+}
 }
 
 namespace WorkspaceScripting
 {
-
 ScriptEngine::V1::V1(ScriptEngine *parent)
-     : QObject(parent),
-       m_engine(parent)
-{}
+    : QObject(parent)
+    , m_engine(parent)
+{
+}
 
 ScriptEngine::V1::~V1()
-{}
+{
+}
 
 QJSValue ScriptEngine::V1::getApiVersion(const QJSValue &param)
 {
@@ -152,7 +151,7 @@ int ScriptEngine::V1::gridUnit() const
 
 QJSValue ScriptEngine::V1::desktopById(const QJSValue &param) const
 {
-    //this needs to work also for string of numberls, like "20"
+    // this needs to work also for string of numberls, like "20"
     if (param.isUndefined()) {
         return m_engine->newError(i18n("desktopById required an id"));
     }
@@ -181,7 +180,7 @@ QJSValue ScriptEngine::V1::desktopsForActivity(const QJSValue &actId) const
 
     const auto result = m_engine->desktopsForActivity(id);
 
-    for (Containment* c: result) {
+    for (Containment *c : result) {
         containments.setProperty(count, m_engine->newQObject(c));
         ++count;
     }
@@ -192,7 +191,7 @@ QJSValue ScriptEngine::V1::desktopsForActivity(const QJSValue &actId) const
 
 QJSValue ScriptEngine::V1::desktopForScreen(const QJSValue &param) const
 {
-    //this needs to work also for string of numberls, like "20"
+    // this needs to work also for string of numberls, like "20"
     if (param.isUndefined()) {
         return m_engine->newError(i18n("activityForScreen requires a screen id"));
     }
@@ -262,7 +261,6 @@ QJSValue ScriptEngine::V1::setActivityName(const QJSValue &idParam, const QJSVal
         return m_engine->newError(i18n("setActivityName required the activity id and name"));
     }
 
-
     const QString id = idParam.toString();
     const QString name = nameParam.toString();
 
@@ -309,20 +307,21 @@ QJSValue ScriptEngine::V1::activities() const
 }
 
 // Utility function to process configs and config groups
-template <typename Object>
-void loadSerializedConfigs(Object *object, const QJSValue &configs)
+template<typename Object> void loadSerializedConfigs(Object *object, const QJSValue &configs)
 {
-    SCRIPT_OBJECT_FOREACH(escapedGroup, config, configs) {
+    SCRIPT_OBJECT_FOREACH(escapedGroup, config, configs)
+    {
         // If the config group is set, pass it on to the containment
         QStringList groups = escapedGroup.split('/', QString::SkipEmptyParts);
-        for (QString &group: groups) {
+        for (QString &group : groups) {
             group = QUrl::fromPercentEncoding(group.toUtf8());
         }
         qDebug() << "Config group" << groups;
         object->setCurrentConfigGroup(groups);
 
         // Read other properties and set the configuration
-        SCRIPT_OBJECT_FOREACH(key, value, config) {
+        SCRIPT_OBJECT_FOREACH(key, value, config)
+        {
             object->writeConfig(key, value);
         };
     };
@@ -344,9 +343,11 @@ QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
     // qDebug() << "DESKTOP DESERIALIZATION: Loading desktops...";
 
     int count = 0;
-    SCRIPT_ARRAY_FOREACH(desktopData, data.property("desktops")) {
+    SCRIPT_ARRAY_FOREACH(desktopData, data.property("desktops"))
+    {
         // If the template has more desktops than we do, ignore them
-        if (count >= desktops.size()) return;
+        if (count >= desktops.size())
+            return;
 
         auto desktop = desktops[count];
         // qDebug() << "DESKTOP DESERIALIZATION: var cont = desktopsArray[...]; " << count << " -> " << desktop;
@@ -359,16 +360,17 @@ QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
         loadSerializedConfigs(desktop, desktopData.property("config"));
 
         // After the config, we want to load the applets
-        SCRIPT_ARRAY_FOREACH(appletData, desktopData.property("applets")) {
+        SCRIPT_ARRAY_FOREACH(appletData, desktopData.property("applets"))
+        {
             // qDebug() << "DESKTOP DESERIALIZATION: Applet: " << appletData.toString();
 
-            auto appletObject = desktop->addWidget( appletData.property("plugin"),
-                appletData.property("geometry.x").toInt()      * gridUnit(),
-                appletData.property("geometry.y").toInt()      * gridUnit(),
-                appletData.property("geometry.width").toInt()  * gridUnit(),
-                appletData.property("geometry.height").toInt() * gridUnit());
+            auto appletObject = desktop->addWidget(appletData.property("plugin"),
+                                                   appletData.property("geometry.x").toInt() * gridUnit(),
+                                                   appletData.property("geometry.y").toInt() * gridUnit(),
+                                                   appletData.property("geometry.width").toInt() * gridUnit(),
+                                                   appletData.property("geometry.height").toInt() * gridUnit());
 
-            if (auto applet = qobject_cast<Widget*>(appletObject.toQObject())) {
+            if (auto applet = qobject_cast<Widget *>(appletObject.toQObject())) {
                 // Now, lets go through the configs for the applet
                 loadSerializedConfigs(applet, appletData.property("config"));
             }
@@ -379,9 +381,9 @@ QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
 
     // qDebug() << "PANEL DESERIALIZATION: Loading panels...";
 
-    SCRIPT_ARRAY_FOREACH(panelData, data.property("panels")) {
-        const auto panel = qobject_cast<Panel *>(m_engine->createContainmentWrapper(
-            QStringLiteral("Panel"), QStringLiteral("org.kde.panel")));
+    SCRIPT_ARRAY_FOREACH(panelData, data.property("panels"))
+    {
+        const auto panel = qobject_cast<Panel *>(m_engine->createContainmentWrapper(QStringLiteral("Panel"), QStringLiteral("org.kde.panel")));
 
         Q_ASSERT(panel);
 
@@ -398,7 +400,8 @@ QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
         loadSerializedConfigs(panel, panelData.property("config"));
 
         // Now dealing with the applets
-        SCRIPT_ARRAY_FOREACH(appletData, panelData.property("applets")) {
+        SCRIPT_ARRAY_FOREACH(appletData, panelData.property("applets"))
+        {
             // qDebug() << "PANEL DESERIALIZATION: Applet: " << appletData.toString();
 
             auto appletObject = panel->addWidget(appletData.property("plugin"));
@@ -406,7 +409,7 @@ QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
             //      << appletData.property("plugin").toString()
             //      ;
 
-            if (auto applet = qobject_cast<Widget*>(appletObject.toQObject())) {
+            if (auto applet = qobject_cast<Widget *>(appletObject.toQObject())) {
                 // Now, lets go through the configs for the applet
                 loadSerializedConfigs(applet, appletData.property("config"));
             }
@@ -423,7 +426,7 @@ QJSValue ScriptEngine::V1::newPanel(const QString &plugin)
 
 QJSValue ScriptEngine::V1::panelById(const QJSValue &idParam) const
 {
-    //this needs to work also for string of numberls, like "20"
+    // this needs to work also for string of numberls, like "20"
     if (idParam.isUndefined()) {
         return m_engine->newError(i18n("panelById requires an id"));
     }
@@ -492,9 +495,9 @@ bool ScriptEngine::V1::loadTemplate(const QString &layout)
         return false;
     }
 
-    auto filter = [&layout](const KPluginMetaData &md) -> bool
-    {
-        return md.pluginId() == layout && KPluginMetaData::readStringList(md.rawData(), QStringLiteral("X-Plasma-ContainmentCategories")).contains(QLatin1String("panel"));
+    auto filter = [&layout](const KPluginMetaData &md) -> bool {
+        return md.pluginId() == layout
+            && KPluginMetaData::readStringList(md.rawData(), QStringLiteral("X-Plasma-ContainmentCategories")).contains(QLatin1String("panel"));
     };
     QList<KPluginMetaData> offers = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
 
@@ -616,12 +619,9 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
         // QString command = settings.getSetting(KEMailSettings::ClientProgram);
         QString command;
         if (command.isEmpty()) {
-            if (KService::Ptr kontact
-                = KService::serviceByStorageId(QStringLiteral("kontact"))) {
-                return storageId ? kontact->storageId()
-                                 : onlyExec(kontact->exec());
-            } else if (KService::Ptr kmail
-                     = KService::serviceByStorageId(QStringLiteral("kmail"))) {
+            if (KService::Ptr kontact = KService::serviceByStorageId(QStringLiteral("kontact"))) {
+                return storageId ? kontact->storageId() : onlyExec(kontact->exec());
+            } else if (KService::Ptr kmail = KService::serviceByStorageId(QStringLiteral("kmail"))) {
                 return storageId ? kmail->storageId() : onlyExec(kmail->exec());
             }
         }
@@ -629,8 +629,7 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
         if (!command.isEmpty()) {
             if (false) {
                 KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
-                const QString preferredTerminal = confGroup.readPathEntry(
-                    "TerminalApplication", QStringLiteral("konsole"));
+                const QString preferredTerminal = confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
                 command = preferredTerminal + QLatin1String(" -e ") + command;
             }
 
@@ -639,11 +638,9 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
 
     } else if (matches(application, QLatin1String("browser"))) {
         KConfigGroup config(KSharedConfig::openConfig(), "General");
-        QString browserApp
-            = config.readPathEntry("BrowserApplication", QString());
+        QString browserApp = config.readPathEntry("BrowserApplication", QString());
         if (browserApp.isEmpty()) {
-            const KService::Ptr htmlApp
-                = KApplicationTrader::preferredService(QStringLiteral("text/html"));
+            const KService::Ptr htmlApp = KApplicationTrader::preferredService(QStringLiteral("text/html"));
             if (htmlApp) {
                 browserApp = storageId ? htmlApp->storageId() : htmlApp->exec();
             }
@@ -655,12 +652,10 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
 
     } else if (matches(application, QLatin1String("terminal"))) {
         KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
-        return onlyExec(confGroup.readPathEntry("TerminalApplication",
-                                                QStringLiteral("konsole")));
+        return onlyExec(confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole")));
 
     } else if (matches(application, QLatin1String("filemanager"))) {
-        KService::Ptr service = KApplicationTrader::preferredService(
-            QStringLiteral("inode/directory"));
+        KService::Ptr service = KApplicationTrader::preferredService(QStringLiteral("inode/directory"));
         if (service) {
             return storageId ? service->storageId() : onlyExec(service->exec());
         }
@@ -668,17 +663,14 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
     } else if (matches(application, QLatin1String("windowmanager"))) {
         KConfig cfg(QStringLiteral("ksmserverrc"), KConfig::NoGlobals);
         KConfigGroup confGroup(&cfg, "General");
-        return onlyExec(
-            confGroup.readEntry("windowManager", QStringLiteral("kwin")));
+        return onlyExec(confGroup.readEntry("windowManager", QStringLiteral("kwin")));
 
     } else if (KService::Ptr service = KApplicationTrader::preferredService(application)) {
         return storageId ? service->storageId() : onlyExec(service->exec());
 
     } else {
         // try the files in share/apps/kcm_componentchooser/
-        const QStringList services = QStandardPaths::locateAll(
-            QStandardPaths::GenericDataLocation,
-            QStringLiteral("kcm_componentchooser/"));
+        const QStringList services = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kcm_componentchooser/"));
         qDebug() << "ok, trying in" << services;
         foreach (const QString &service, services) {
             if (!service.endsWith(QLatin1String(".desktop"))) {
@@ -689,13 +681,10 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
             const QString type = cg.readEntry("valueName", QString());
             // qDebug() << "    checking" << service << type << application;
             if (matches(type, application)) {
-                KConfig store(
-                    cg.readPathEntry("storeInFile", QStringLiteral("null")));
-                KConfigGroup storeCg(&store,
-                                     cg.readEntry("valueSection", QString()));
-                const QString exec = storeCg.readPathEntry(
-                    cg.readEntry("valueName", "kcm_componenchooser_null"),
-                    cg.readEntry("defaultImplementation", QString()));
+                KConfig store(cg.readPathEntry("storeInFile", QStringLiteral("null")));
+                KConfigGroup storeCg(&store, cg.readEntry("valueSection", QString()));
+                const QString exec =
+                    storeCg.readPathEntry(cg.readEntry("valueName", "kcm_componenchooser_null"), cg.readEntry("defaultImplementation", QString()));
                 if (!exec.isEmpty()) {
                     return exec;
                 }
@@ -721,8 +710,7 @@ QJSValue ScriptEngine::V1::applicationPath(const QString &application) const
     }
 
     if (KService::Ptr service = KService::serviceByStorageId(application)) {
-        return QStandardPaths::locate(QStandardPaths::ApplicationsLocation,
-                                      service->entryPath());
+        return QStandardPaths::locate(QStandardPaths::ApplicationsLocation, service->entryPath());
     }
 
     if (application.contains(QLatin1Char('\''))) {
@@ -731,20 +719,15 @@ QJSValue ScriptEngine::V1::applicationPath(const QString &application) const
     }
 
     // next, consult ksycoca for an app by that name
-    KService::List offers = KServiceTypeTrader::self()->query(
-        QStringLiteral("Application"),
-        QStringLiteral("Name =~ '%1'").arg(application));
+    KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("Name =~ '%1'").arg(application));
     if (offers.isEmpty()) {
         // next, consult ksycoca for an app by that generic name
-        offers = KServiceTypeTrader::self()->query(
-            QStringLiteral("Application"),
-            QStringLiteral("GenericName =~ '%1'").arg(application));
+        offers = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("GenericName =~ '%1'").arg(application));
     }
 
     if (!offers.isEmpty()) {
         KService::Ptr offer = offers.first();
-        return QStandardPaths::locate(QStandardPaths::ApplicationsLocation,
-                                      offer->entryPath());
+        return QStandardPaths::locate(QStandardPaths::ApplicationsLocation, offer->entryPath());
     }
 
     return QString();
@@ -756,8 +739,7 @@ QJSValue ScriptEngine::V1::userDataPath(const QString &type, const QString &path
         return QDir::homePath();
     }
 
-    QStandardPaths::StandardLocation location
-        = QStandardPaths::GenericDataLocation;
+    QStandardPaths::StandardLocation location = QStandardPaths::GenericDataLocation;
     if (matches(type, QLatin1String("desktop"))) {
         location = QStandardPaths::DesktopLocation;
 
@@ -795,14 +777,10 @@ QJSValue ScriptEngine::V1::knownWallpaperPlugins(const QString &formFactor) cons
 {
     QString constraint;
     if (!formFactor.isEmpty()) {
-        constraint.append("[X-Plasma-FormFactors] ~~ '")
-            .append(formFactor)
-            .append("'");
+        constraint.append("[X-Plasma-FormFactors] ~~ '").append(formFactor).append("'");
     }
 
-    const QList<KPluginMetaData> wallpapers
-        = KPackage::PackageLoader::self()->listPackages(
-            QStringLiteral("Plasma/Wallpaper"), QString());
+    const QList<KPluginMetaData> wallpapers = KPackage::PackageLoader::self()->listPackages(QStringLiteral("Plasma/Wallpaper"), QString());
     QJSValue rv = m_engine->newArray(wallpapers.size());
     for (auto wp : wallpapers) {
         rv.setProperty(wp.name(), m_engine->newArray(0));
@@ -832,8 +810,7 @@ QJSValue ScriptEngine::V1::configFile(const QJSValue &config, const QString &gro
                 file->setGroup(group);
             }
 
-        } else if (ConfigGroup *parent = qobject_cast<ConfigGroup *>(
-                     config.toQObject())) {
+        } else if (ConfigGroup *parent = qobject_cast<ConfigGroup *>(config.toQObject())) {
             file = new ConfigGroup(parent);
 
             if (!group.isEmpty()) {
@@ -880,9 +857,7 @@ QString ScriptEngine::V1::immutability() const
 
 QJSValue ScriptEngine::V1::createContainment(const QString &type, const QString &defaultPlugin, const QString &plugin)
 {
-    const QString actualPlugin = plugin.isEmpty()
-                               ? defaultPlugin
-                               : plugin;
+    const QString actualPlugin = plugin.isEmpty() ? defaultPlugin : plugin;
 
     auto result = m_engine->createContainmentWrapper(type, actualPlugin);
 
@@ -894,5 +869,3 @@ QJSValue ScriptEngine::V1::createContainment(const QString &type, const QString 
 }
 
 } // namespace WorkspaceScripting
-
-

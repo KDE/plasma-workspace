@@ -20,26 +20,28 @@
 
 #pragma once
 
-#include <QQuickItem>
-#include <QQmlParserStatus>
 #include <QPointer>
+#include <QQmlParserStatus>
+#include <QQuickItem>
 #include <QQuickWindow>
 
 class QTimer;
 
-namespace Plasma {
-    class Containment;
+namespace Plasma
+{
+class Containment;
 }
 
-namespace PlasmaQuick {
-    class AppletQuickItem;
+namespace PlasmaQuick
+{
+class AppletQuickItem;
 }
 
 class AbstractLayoutManager;
 class AppletContainer;
 class ItemContainer;
 
-class AppletsLayout: public QQuickItem
+class AppletsLayout : public QQuickItem
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
@@ -104,7 +106,7 @@ public:
     void setContainment(PlasmaQuick::AppletQuickItem *containment);
 
     QJSValue acceptsAppletCallback() const;
-    void setAcceptsAppletCallback(const QJSValue& callback);
+    void setAcceptsAppletCallback(const QJSValue &callback);
 
     qreal minimumItemWidth() const;
     void setMinimumItemWidth(qreal width);
@@ -177,7 +179,7 @@ protected:
     void updatePolish() override;
     void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
 
-    //void classBegin() override;
+    // void classBegin() override;
     void componentComplete() override;
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
@@ -190,7 +192,6 @@ private Q_SLOTS:
 
 private:
     AppletContainer *createContainerForApplet(PlasmaQuick::AppletQuickItem *appletItem);
-
 
     QString m_configKey;
     QTimer *m_saveLayoutTimer;
@@ -212,7 +213,7 @@ private:
 
     AppletsLayout::EditModeCondition m_editModeCondition = AppletsLayout::Manual;
 
-    QHash <PlasmaQuick::AppletQuickItem *, AppletContainer*> m_containerForApplet;
+    QHash<PlasmaQuick::AppletQuickItem *, AppletContainer *> m_containerForApplet;
 
     QSizeF m_minimumItemSize;
     QSizeF m_defaultItemSize;
@@ -223,4 +224,3 @@ private:
     bool m_mouseDownWasEditMode = false;
     bool m_editMode = false;
 };
-

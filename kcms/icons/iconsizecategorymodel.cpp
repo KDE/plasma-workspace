@@ -17,18 +17,18 @@
  */
 
 #include "iconsizecategorymodel.h"
-#include <KLocalizedString>
 #include <KIconLoader>
+#include <KLocalizedString>
 
 IconSizeCategoryModel::IconSizeCategoryModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_data({
-        {QStringLiteral("toolbarSize"), I18N_NOOP("Toolbar"), QStringLiteral("Toolbar"), KIconLoader::Toolbar},
-        {QStringLiteral("mainToolbarSize"), I18N_NOOP("Main Toolbar"), QStringLiteral("MainToolbar"), KIconLoader::MainToolbar},
-        {QStringLiteral("smallSize"), I18N_NOOP("Small Icons"), QStringLiteral("Small"), KIconLoader::Small},
-        {QStringLiteral("panelSize"), I18N_NOOP("Panel"), QStringLiteral("Panel"), KIconLoader::Panel},
-        {QStringLiteral("dialogSize"), I18N_NOOP("Dialogs"), QStringLiteral("Dialog"), KIconLoader::Dialog},
-    })
+          {QStringLiteral("toolbarSize"), I18N_NOOP("Toolbar"), QStringLiteral("Toolbar"), KIconLoader::Toolbar},
+          {QStringLiteral("mainToolbarSize"), I18N_NOOP("Main Toolbar"), QStringLiteral("MainToolbar"), KIconLoader::MainToolbar},
+          {QStringLiteral("smallSize"), I18N_NOOP("Small Icons"), QStringLiteral("Small"), KIconLoader::Small},
+          {QStringLiteral("panelSize"), I18N_NOOP("Panel"), QStringLiteral("Panel"), KIconLoader::Panel},
+          {QStringLiteral("dialogSize"), I18N_NOOP("Dialogs"), QStringLiteral("Dialog"), KIconLoader::Dialog},
+      })
 {
 }
 
@@ -58,7 +58,7 @@ QVariant IconSizeCategoryModel::data(const QModelIndex &index, int role) const
         return item.configKey;
     case ConfigSectionRole:
         return item.configSection;
-    case  KIconLoaderGroupRole:
+    case KIconLoaderGroupRole:
         return item.kIconloaderGroup;
     }
 

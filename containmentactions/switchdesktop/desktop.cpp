@@ -36,15 +36,14 @@ SwitchDesktop::~SwitchDesktop()
 {
 }
 
-
-QList<QAction*> SwitchDesktop::contextualActions()
+QList<QAction *> SwitchDesktop::contextualActions()
 {
     const int numDesktops = m_virtualDesktopInfo->numberOfDesktops();
     const QVariantList &desktopIds = m_virtualDesktopInfo->desktopIds();
     const QStringList &desktopNames = m_virtualDesktopInfo->desktopNames();
     const QVariant &currentDesktop = m_virtualDesktopInfo->currentDesktop();
 
-    QList<QAction*> actions;
+    QList<QAction *> actions;
     actions.reserve(numDesktops);
 
     if (m_actions.count() < numDesktops) {

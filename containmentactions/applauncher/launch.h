@@ -34,30 +34,29 @@ class QMenu;
 class AppLauncher : public Plasma::ContainmentActions
 {
     Q_OBJECT
-    public:
-        AppLauncher(QObject* parent, const QVariantList& args);
-        ~AppLauncher() override;
+public:
+    AppLauncher(QObject *parent, const QVariantList &args);
+    ~AppLauncher() override;
 
-        void init(const KConfigGroup &config);
+    void init(const KConfigGroup &config);
 
-        QList<QAction*> contextualActions() override;
+    QList<QAction *> contextualActions() override;
 
-        QWidget *createConfigurationInterface(QWidget* parent) override;
-        void configurationAccepted() override;
+    QWidget *createConfigurationInterface(QWidget *parent) override;
+    void configurationAccepted() override;
 
-        void restore(const KConfigGroup &config) override;
-        void save(KConfigGroup &config) override;
+    void restore(const KConfigGroup &config) override;
+    void save(KConfigGroup &config) override;
 
-    protected:
-        void makeMenu(QMenu *menu, const KServiceGroup::Ptr group);
+protected:
+    void makeMenu(QMenu *menu, const KServiceGroup::Ptr group);
 
-    private:
-        KServiceGroup::Ptr m_group;
-        QList<QAction *> m_actions;
+private:
+    KServiceGroup::Ptr m_group;
+    QList<QAction *> m_actions;
 
-        Ui::Config m_ui;
-        bool m_showAppsByName = false;
+    Ui::Config m_ui;
+    bool m_showAppsByName = false;
 };
-
 
 #endif

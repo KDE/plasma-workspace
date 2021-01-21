@@ -27,7 +27,6 @@ class QListWidget;
 
 namespace Plasma
 {
-
 class OpenWidgetAssistant : public KAssistantDialog
 {
     Q_OBJECT

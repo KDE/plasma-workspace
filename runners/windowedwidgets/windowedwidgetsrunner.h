@@ -20,7 +20,6 @@
 #ifndef WINDOWEDWIDGETSRUNNER_H
 #define WINDOWEDWIDGETSRUNNER_H
 
-
 #include <KService>
 #include <QMutex>
 
@@ -45,7 +44,8 @@ public:
     void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
 protected Q_SLOTS:
-    QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;
+    QMimeData *mimeDataForMatch(const Plasma::QueryMatch &match) override;
+
 private:
     void loadMetadataList();
     QList<KPluginMetaData> m_applets;
@@ -53,4 +53,3 @@ private:
 };
 
 #endif
-

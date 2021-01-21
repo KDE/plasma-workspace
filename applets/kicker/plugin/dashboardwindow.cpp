@@ -26,10 +26,11 @@
 #include <KWindowEffects>
 #include <KWindowSystem>
 
-DashboardWindow::DashboardWindow(QQuickItem *parent) : QQuickWindow(parent ? parent->window() : nullptr)
-, m_mainItem(nullptr)
-, m_visualParentItem(nullptr)
-, m_visualParentWindow(nullptr)
+DashboardWindow::DashboardWindow(QQuickItem *parent)
+    : QQuickWindow(parent ? parent->window() : nullptr)
+    , m_mainItem(nullptr)
+    , m_visualParentItem(nullptr)
+    , m_visualParentWindow(nullptr)
 {
     setClearBeforeRendering(true);
     setFlags(Qt::FramelessWindowHint);
@@ -120,7 +121,8 @@ void DashboardWindow::setKeyEventProxy(QQuickItem *item)
     }
 }
 
-void DashboardWindow::toggle() {
+void DashboardWindow::toggle()
+{
     if (isVisible()) {
         close();
     } else {
@@ -168,7 +170,7 @@ void DashboardWindow::keyPressEvent(QKeyEvent *e)
         emit keyEscapePressed();
 
         return;
-// clang-format off
+        // clang-format off
     } else if (m_keyEventProxy && !m_keyEventProxy->hasActiveFocus()
         && !(e->key() == Qt::Key_Home)
         && !(e->key() == Qt::Key_End)
@@ -183,13 +185,19 @@ void DashboardWindow::keyPressEvent(QKeyEvent *e)
         && !(e->key() == Qt::Key_Menu)
         && !(e->key() == Qt::Key_Tab)
         && !(e->key() == Qt::Key_Backtab)) {
-// clang-format on
+        // clang-format on
         QPointer<QQuickItem> previousFocusItem = activeFocusItem();
 
         m_keyEventProxy->forceActiveFocus();
-        QEvent* eventCopy = new QKeyEvent(e->type(), e->key(), e->modifiers(),
-            e->nativeScanCode(), e->nativeVirtualKey(), e->nativeModifiers(),
-            e->text(), e->isAutoRepeat(), e->count());
+        QEvent *eventCopy = new QKeyEvent(e->type(),
+                                          e->key(),
+                                          e->modifiers(),
+                                          e->nativeScanCode(),
+                                          e->nativeVirtualKey(),
+                                          e->nativeModifiers(),
+                                          e->text(),
+                                          e->isAutoRepeat(),
+                                          e->count());
         QCoreApplication::postEvent(this, eventCopy);
 
         // We _need_ to do it twice to make sure the event ping-pong needed

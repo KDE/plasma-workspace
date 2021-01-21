@@ -6,8 +6,8 @@
 #ifndef __UNICODE_SCRIPTS_H__
 #define __UNICODE_SCRIPTS_H__
 
-#include <QtGlobal>
 #include <KLocalizedString>
+#include <QtGlobal>
 
 // clang-format off
 static const char * const constUnicodeScriptList[] =
@@ -1284,4 +1284,3 @@ static const TUnicodeScript constUnicodeScripts[] =
 };
 // clang-format on
 #endif
-

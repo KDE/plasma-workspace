@@ -20,14 +20,13 @@
 
 #include "limitedrowcountproxymodel_p.h"
 
-#include  "notifications.h"
+#include "notifications.h"
 
 using namespace NotificationManager;
 
 LimitedRowCountProxyModel::LimitedRowCountProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
-
 }
 
 LimitedRowCountProxyModel::~LimitedRowCountProxyModel() = default;

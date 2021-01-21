@@ -30,7 +30,6 @@ class ShellCorona;
 
 namespace WorkspaceScripting
 {
-
 class Panel : public Containment
 {
     Q_OBJECT
@@ -88,8 +87,14 @@ public:
     void setHiding(const QString &mode);
 
 public Q_SLOTS:
-    void remove() { Containment::remove(); }
-    void showConfigurationInterface() { Containment::showConfigurationInterface(); }
+    void remove()
+    {
+        Containment::remove();
+    }
+    void showConfigurationInterface()
+    {
+        Containment::showConfigurationInterface();
+    }
 
 private:
     PanelView *panel() const;
@@ -102,4 +107,3 @@ private:
 }
 
 #endif
-

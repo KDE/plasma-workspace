@@ -20,29 +20,29 @@
 #include "splashwindow.h"
 #include "splashapp.h"
 
-#include <QQmlContext>
-#include <QQuickItem>
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QKeyEvent>
 #include <QMouseEvent>
-#include <QTimer>
+#include <QQmlContext>
+#include <QQuickItem>
 #include <QStandardPaths>
 #include <QSurfaceFormat>
-#include <KSharedConfig>
-#include <KConfigGroup>
+#include <QTimer>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
 
-#include <KWayland/Client/surface.h>
 #include <KWayland/Client/plasmashell.h>
+#include <KWayland/Client/surface.h>
 #include <KWindowSystem>
 
 SplashWindow::SplashWindow(bool testing, bool window, const QString &theme)
-    : KQuickAddons::QuickViewSharedEngine(),
-      m_stage(0),
-      m_testing(testing),
-      m_window(window),
-      m_theme(theme)
+    : KQuickAddons::QuickViewSharedEngine()
+    , m_stage(0)
+    , m_testing(testing)
+    , m_window(window)
+    , m_theme(theme)
 {
     setColor(Qt::transparent);
     setDefaultAlphaBuffer(true);
@@ -68,8 +68,8 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme)
         setWindowState(Qt::WindowFullScreen);
     }
 
-    //be sure it will be eventually closed
-    //FIXME: should never be stuck
+    // be sure it will be eventually closed
+    // FIXME: should never be stuck
     QTimer::singleShot(30000, this, &QWindow::close);
 }
 
@@ -83,7 +83,7 @@ void SplashWindow::setStage(int stage)
 bool SplashWindow::event(QEvent *e)
 {
     if (e->type() == QEvent::PlatformSurface) {
-        auto pe = static_cast<QPlatformSurfaceEvent*>(e);
+        auto pe = static_cast<QPlatformSurfaceEvent *>(e);
         switch (pe->surfaceEventType()) {
         case QPlatformSurfaceEvent::SurfaceCreated:
             setupWaylandIntegration();
@@ -113,13 +113,12 @@ void SplashWindow::mousePressEvent(QMouseEvent *event)
     }
 }
 
-void SplashWindow::setGeometry(const QRect& rect)
+void SplashWindow::setGeometry(const QRect &rect)
 {
     bool oldGeometryEmpty = geometry().isNull();
     KQuickAddons::QuickViewSharedEngine::setGeometry(rect);
 
     if (oldGeometryEmpty) {
-
         KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
         KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
         const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
@@ -146,7 +145,7 @@ void SplashWindow::setupWaylandIntegration()
         // already setup
         return;
     }
-    if (SplashApp *a = qobject_cast<SplashApp*>(qApp)) {
+    if (SplashApp *a = qobject_cast<SplashApp *>(qApp)) {
         using namespace KWayland::Client;
         PlasmaShell *interface = a->waylandPlasmaShellInterface();
         if (!interface) {

@@ -75,5 +75,4 @@ private slots:
 private:
     bool m_dragActive = false;
     int m_dragPixmapSize = 48; // Bound to units.iconSizes.large in main.qml
-
 };

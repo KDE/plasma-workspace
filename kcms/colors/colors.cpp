@@ -29,22 +29,22 @@
 #include <QFileInfo>
 #include <QGuiApplication>
 #include <QProcess>
-#include <QStandardItemModel>
-#include <QStandardPaths>
 #include <QQuickItem>
 #include <QQuickRenderControl>
 #include <QQuickWindow>
+#include <QStandardItemModel>
+#include <QStandardPaths>
 
 #include <KAboutData>
-#include <KColorUtils>
 #include <KColorScheme>
+#include <KColorUtils>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KWindowSystem>
 
-#include <KIO/FileCopyJob>
 #include <KIO/DeleteJob>
+#include <KIO/FileCopyJob>
 #include <KIO/JobUiDelegate>
 
 #include <KNSCore/EntryWrapper>
@@ -53,12 +53,12 @@
 
 #include "../krdb/krdb.h"
 
-#include "colorsmodel.h"
-#include "filterproxymodel.h"
-#include "colorssettings.h"
 #include "colorsdata.h"
+#include "colorsmodel.h"
+#include "colorssettings.h"
+#include "filterproxymodel.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_colors.json", registerPlugin<KCMColors>();registerPlugin<ColorsData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_colors.json", registerPlugin<KCMColors>(); registerPlugin<ColorsData>();)
 
 KCMColors::KCMColors(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
@@ -72,8 +72,7 @@ KCMColors::KCMColors(QObject *parent, const QVariantList &args)
     qmlRegisterType<FilterProxyModel>();
     qmlRegisterType<ColorsSettings>();
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_colors"), i18n("Colors"),
-                                       QStringLiteral("2.0"), QString(), KAboutLicense::GPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_colors"), i18n("Colors"), QStringLiteral("2.0"), QString(), KAboutLicense::GPL);
     about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@privat.broulik.de"));
     setAboutData(about);
 
@@ -128,7 +127,7 @@ void KCMColors::reloadModel(const QQmlListReference &changedEntries)
         const QString suffix = QStringLiteral(".colors");
 
         for (int i = 0; i < changedEntries.count(); ++i) {
-            KNSCore::EntryWrapper* entry = qobject_cast<KNSCore::EntryWrapper*>(changedEntries.at(i));
+            KNSCore::EntryWrapper *entry = qobject_cast<KNSCore::EntryWrapper *>(changedEntries.at(i));
             if (entry && entry->entry().status() == KNS3::Entry::Installed) {
                 for (const QString &path : entry->entry().installedFiles()) {
                     const QString fileName = path.section(QLatin1Char('/'), -1, -1);
@@ -175,8 +174,7 @@ void KCMColors::installSchemeFromFile(const QUrl &url)
 
     // Ideally we copied the file into the proper location right away but
     // (for some reason) we determine the file name from the "Name" inside the file
-    m_tempCopyJob = KIO::file_copy(url, QUrl::fromLocalFile(m_tempInstallFile->fileName()),
-                                    -1, KIO::Overwrite);
+    m_tempCopyJob = KIO::file_copy(url, QUrl::fromLocalFile(m_tempInstallFile->fileName()), -1, KIO::Overwrite);
     m_tempCopyJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
     emit downloadingFileChanged();
 
@@ -212,8 +210,7 @@ void KCMColors::installSchemeFile(const QString &path)
         if (increment) {
             newName = name + QString::number(increment);
         }
-        testpath = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-            QStringLiteral("color-schemes/%1.colors").arg(newName));
+        testpath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(newName));
         increment++;
     } while (!testpath.isEmpty());
 
@@ -256,8 +253,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
     QModelIndex idx = m_model->index(m_model->indexOfScheme(schemeName), 0);
 
     m_editDialogProcess = new QProcess(this);
-    connect(m_editDialogProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this,
-        [this](int exitCode, QProcess::ExitStatus exitStatus) {
+    connect(m_editDialogProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
         Q_UNUSED(exitCode);
         Q_UNUSED(exitStatus);
 
@@ -305,7 +301,6 @@ bool KCMColors::isSaveNeeded() const
 {
     return m_activeSchemeEdited || !m_model->match(m_model->index(0, 0), ColorsModel::PendingDeletionRole, true).isEmpty();
 }
-
 
 void KCMColors::load()
 {
@@ -356,7 +351,7 @@ void KCMColors::save()
     processPendingDeletions();
 }
 
-static void copyEntry(KConfigGroup& from, KConfigGroup& to, const QString& entry)
+static void copyEntry(KConfigGroup &from, KConfigGroup &to, const QString &entry)
 {
     if (from.hasKey(entry)) {
         to.writeEntry(entry, from.readEntry(entry));
@@ -365,37 +360,32 @@ static void copyEntry(KConfigGroup& from, KConfigGroup& to, const QString& entry
 
 void KCMColors::saveColors()
 {
-    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-        QStringLiteral("color-schemes/%1.colors").arg(m_model->selectedScheme()));
+    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(m_model->selectedScheme()));
 
     // Using KConfig::SimpleConfig because otherwise Header colors won't be
     // rewritten when a new color scheme is loaded.
     KSharedConfigPtr config = KSharedConfig::openConfig(path, KConfig::SimpleConfig);
 
-    const QStringList colorSetGroupList{
-        QStringLiteral("Colors:View"),
-        QStringLiteral("Colors:Window"),
-        QStringLiteral("Colors:Button"),
-        QStringLiteral("Colors:Selection"),
-        QStringLiteral("Colors:Tooltip"),
-        QStringLiteral("Colors:Complementary"),
-        QStringLiteral("Colors:Header")
-    };
+    const QStringList colorSetGroupList{QStringLiteral("Colors:View"),
+                                        QStringLiteral("Colors:Window"),
+                                        QStringLiteral("Colors:Button"),
+                                        QStringLiteral("Colors:Selection"),
+                                        QStringLiteral("Colors:Tooltip"),
+                                        QStringLiteral("Colors:Complementary"),
+                                        QStringLiteral("Colors:Header")};
 
-    const QStringList colorSetKeyList{
-        QStringLiteral("BackgroundNormal"),
-        QStringLiteral("BackgroundAlternate"),
-        QStringLiteral("ForegroundNormal"),
-        QStringLiteral("ForegroundInactive"),
-        QStringLiteral("ForegroundActive"),
-        QStringLiteral("ForegroundLink"),
-        QStringLiteral("ForegroundVisited"),
-        QStringLiteral("ForegroundNegative"),
-        QStringLiteral("ForegroundNeutral"),
-        QStringLiteral("ForegroundPositive"),
-        QStringLiteral("DecorationFocus"),
-        QStringLiteral("DecorationHover")
-    };
+    const QStringList colorSetKeyList{QStringLiteral("BackgroundNormal"),
+                                      QStringLiteral("BackgroundAlternate"),
+                                      QStringLiteral("ForegroundNormal"),
+                                      QStringLiteral("ForegroundInactive"),
+                                      QStringLiteral("ForegroundActive"),
+                                      QStringLiteral("ForegroundLink"),
+                                      QStringLiteral("ForegroundVisited"),
+                                      QStringLiteral("ForegroundNegative"),
+                                      QStringLiteral("ForegroundNeutral"),
+                                      QStringLiteral("ForegroundPositive"),
+                                      QStringLiteral("DecorationFocus"),
+                                      QStringLiteral("DecorationHover")};
 
     for (auto item : colorSetGroupList) {
         m_config->deleteGroup(item);
@@ -421,23 +411,19 @@ void KCMColors::saveColors()
     KConfigGroup groupWMOut(m_config, "WM");
     KColorScheme inactiveHeaderColorScheme(QPalette::Inactive, KColorScheme::Header, config);
 
-    const QStringList colorItemListWM{
-        QStringLiteral("activeBackground"),
-        QStringLiteral("activeForeground"),
-        QStringLiteral("inactiveBackground"),
-        QStringLiteral("inactiveForeground"),
-        QStringLiteral("activeBlend"),
-        QStringLiteral("inactiveBlend")
-    };
+    const QStringList colorItemListWM{QStringLiteral("activeBackground"),
+                                      QStringLiteral("activeForeground"),
+                                      QStringLiteral("inactiveBackground"),
+                                      QStringLiteral("inactiveForeground"),
+                                      QStringLiteral("activeBlend"),
+                                      QStringLiteral("inactiveBlend")};
 
-    const QVector<QColor> defaultWMColors{
-        KColorScheme(QPalette::Normal, KColorScheme::Header, config).background().color(),
-        KColorScheme(QPalette::Normal, KColorScheme::Header, config).foreground().color(),
-        inactiveHeaderColorScheme.background().color(),
-        inactiveHeaderColorScheme.foreground().color(),
-        KColorScheme(QPalette::Normal, KColorScheme::Header, config).background().color(),
-        inactiveHeaderColorScheme.background().color()
-    };
+    const QVector<QColor> defaultWMColors{KColorScheme(QPalette::Normal, KColorScheme::Header, config).background().color(),
+                                          KColorScheme(QPalette::Normal, KColorScheme::Header, config).foreground().color(),
+                                          inactiveHeaderColorScheme.background().color(),
+                                          inactiveHeaderColorScheme.foreground().color(),
+                                          KColorScheme(QPalette::Normal, KColorScheme::Header, config).background().color(),
+                                          inactiveHeaderColorScheme.background().color()};
 
     int i = 0;
     for (const QString &coloritem : colorItemListWM) {
@@ -445,22 +431,17 @@ void KCMColors::saveColors()
         ++i;
     }
 
-    const QStringList groupNameList{
-        QStringLiteral("ColorEffects:Inactive"),
-        QStringLiteral("ColorEffects:Disabled")
-    };
+    const QStringList groupNameList{QStringLiteral("ColorEffects:Inactive"), QStringLiteral("ColorEffects:Disabled")};
 
-    const QStringList effectList{
-        QStringLiteral("Enable"),
-        QStringLiteral("ChangeSelectionColor"),
-        QStringLiteral("IntensityEffect"),
-        QStringLiteral("IntensityAmount"),
-        QStringLiteral("ColorEffect"),
-        QStringLiteral("ColorAmount"),
-        QStringLiteral("Color"),
-        QStringLiteral("ContrastEffect"),
-        QStringLiteral("ContrastAmount")
-    };
+    const QStringList effectList{QStringLiteral("Enable"),
+                                 QStringLiteral("ChangeSelectionColor"),
+                                 QStringLiteral("IntensityEffect"),
+                                 QStringLiteral("IntensityAmount"),
+                                 QStringLiteral("ColorEffect"),
+                                 QStringLiteral("ColorAmount"),
+                                 QStringLiteral("Color"),
+                                 QStringLiteral("ContrastEffect"),
+                                 QStringLiteral("ContrastAmount")};
 
     for (const QString &groupName : groupNameList) {
         KConfigGroup groupEffectOut(m_config, groupName);
@@ -475,12 +456,11 @@ void KCMColors::saveColors()
 
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | (m_applyToAlien ? KRdbExportColors : 0));
 
-    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KGlobalSettings"),
-                                                      QStringLiteral("org.kde.KGlobalSettings"),
-                                                      QStringLiteral("notifyChange"));
+    QDBusMessage message =
+        QDBusMessage::createSignal(QStringLiteral("/KGlobalSettings"), QStringLiteral("org.kde.KGlobalSettings"), QStringLiteral("notifyChange"));
     message.setArguments({
-        0, //previous KGlobalSettings::PaletteChanged. This is now private API in khintsettings
-        0  //unused in palette changed but needed for the DBus signature
+        0, // previous KGlobalSettings::PaletteChanged. This is now private API in khintsettings
+        0 // unused in palette changed but needed for the DBus signature
     });
     QDBusConnection::sessionBus().send(message);
 
@@ -494,8 +474,7 @@ void KCMColors::processPendingDeletions()
     for (const QString &schemeName : pendingDeletions) {
         Q_ASSERT(schemeName != m_model->selectedScheme());
 
-        const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-            QStringLiteral("color-schemes/%1.colors").arg(schemeName));
+        const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(schemeName));
 
         auto *job = KIO::del(QUrl::fromLocalFile(path), KIO::HideProgressInfo);
         // needs to block for it to work on "OK" where the dialog (kcmshell) closes

@@ -29,23 +29,23 @@ class ActivityRunner : public Plasma::AbstractRunner
 {
     Q_OBJECT
 
-    public:
-        ActivityRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
-        ~ActivityRunner() override;
+public:
+    ActivityRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    ~ActivityRunner() override;
 
-        void match(Plasma::RunnerContext &context) override;
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+    void match(Plasma::RunnerContext &context) override;
+    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
-    private Q_SLOTS:
-        void serviceStatusChanged(KActivities::Consumer::ServiceStatus status);
+private Q_SLOTS:
+    void serviceStatusChanged(KActivities::Consumer::ServiceStatus status);
 
-    private:
-        void addMatch(const KActivities::Info &activity, QList<Plasma::QueryMatch> &matches);
+private:
+    void addMatch(const KActivities::Info &activity, QList<Plasma::QueryMatch> &matches);
 
-        KActivities::Controller *m_activities;
-        KActivities::Consumer *m_consumer;
-        const QString m_keywordi18n;
-        const QString m_keyword;
+    KActivities::Controller *m_activities;
+    KActivities::Consumer *m_consumer;
+    const QString m_keywordi18n;
+    const QString m_keyword;
 };
 
 #endif

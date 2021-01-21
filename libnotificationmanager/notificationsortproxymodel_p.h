@@ -18,7 +18,6 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 #pragma once
 
 #include <QSortFilterProxyModel>
@@ -27,7 +26,6 @@
 
 namespace NotificationManager
 {
-
 class NotificationSortProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
@@ -52,7 +50,6 @@ protected:
 private:
     Notifications::SortMode m_sortMode = Notifications::SortByDate;
     Qt::SortOrder m_sortOrder = Qt::DescendingOrder;
-
 };
 
 } // namespace NotificationManager

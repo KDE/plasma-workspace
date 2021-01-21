@@ -21,8 +21,8 @@
 
 #include "widgetexplorer.h"
 
-#include <QQmlEngine>
 #include <QQmlContext>
+#include <QQmlEngine>
 #include <QQmlExpression>
 #include <QQmlProperty>
 
@@ -32,20 +32,20 @@
 #include <KWindowSystem>
 
 #include <Plasma/Applet>
-#include <Plasma/Corona>
 #include <Plasma/Containment>
+#include <Plasma/Corona>
 #include <Plasma/PluginLoader>
 #include <QStandardPaths>
 
 #include <KActivities/Consumer>
 
 #include <KPackage/Package>
-#include <KPackage/PackageStructure>
 #include <KPackage/PackageLoader>
+#include <KPackage/PackageStructure>
 
+#include "config-workspace.h"
 #include "kcategorizeditemsviewmodels_p.h"
 #include "openwidgetassistant_p.h"
-#include "config-workspace.h"
 
 using namespace KActivities;
 using namespace KCategorizedItemsViewModels;
@@ -63,14 +63,13 @@ WidgetAction::WidgetAction(const QIcon &icon, const QString &text, QObject *pare
 
 class WidgetExplorerPrivate
 {
-
 public:
     WidgetExplorerPrivate(WidgetExplorer *w)
-        : q(w),
-          containment(nullptr),
-          itemModel(w),
-          filterModel(w),
-          activitiesConsumer(new KActivities::Consumer())
+        : q(w)
+        , containment(nullptr)
+        , itemModel(w)
+        , filterModel(w)
+        , activitiesConsumer(new KActivities::Consumer())
     {
         QObject::connect(activitiesConsumer.data(), &Consumer::currentActivityChanged, q, [this] {
             initRunningApplets();
@@ -101,8 +100,8 @@ public:
     Plasma::Containment *containment;
 
     QHash<QString, int> runningApplets; // applet name => count
-    //extra hash so we can look up the names of deleted applets
-    QHash<Plasma::Applet *,QString> appletNames;
+    // extra hash so we can look up the names of deleted applets
+    QHash<Plasma::Applet *, QString> appletNames;
     QPointer<Plasma::OpenWidgetAssistant> openAssistant;
     KPackage::Package *package;
 
@@ -121,34 +120,32 @@ void WidgetExplorerPrivate::initFilters()
 {
     filterModel.clear();
 
-    filterModel.addFilter(i18n("All Widgets"),
-                        KCategorizedItemsViewModels::Filter(), QIcon::fromTheme(QStringLiteral("plasma")));
+    filterModel.addFilter(i18n("All Widgets"), KCategorizedItemsViewModels::Filter(), QIcon::fromTheme(QStringLiteral("plasma")));
 
     if (showSpecialFilters) {
         // Filters: Special
         filterModel.addFilter(i18n("Running"),
-                            KCategorizedItemsViewModels::Filter(QStringLiteral("running"), true),
-                            QIcon::fromTheme(QStringLiteral("dialog-ok")));
+                              KCategorizedItemsViewModels::Filter(QStringLiteral("running"), true),
+                              QIcon::fromTheme(QStringLiteral("dialog-ok")));
 
         filterModel.addFilter(i18n("Uninstallable"),
-                            KCategorizedItemsViewModels::Filter(QStringLiteral("local"), true),
-                            QIcon::fromTheme(QStringLiteral("edit-delete")));
+                              KCategorizedItemsViewModels::Filter(QStringLiteral("local"), true),
+                              QIcon::fromTheme(QStringLiteral("edit-delete")));
 
         filterModel.addSeparator(i18n("Categories:"));
     }
 
     typedef QPair<QString, QString> catPair;
-    QMap<QString, catPair > categories;
+    QMap<QString, catPair> categories;
     QSet<QString> existingCategories = itemModel.categories();
     QStringList cats;
     const QList<KPluginMetaData> list = PluginLoader::self()->listAppletMetaData(QString());
 
-    for (auto& plugin : list) {
+    for (auto &plugin : list) {
         if (!plugin.isValid()) {
             continue;
         }
-        if (plugin.rawData().value("NoDisplay").toBool() || plugin.category() == QLatin1String("Containments") ||
-            plugin.category().isEmpty()) {
+        if (plugin.rawData().value("NoDisplay").toBool() || plugin.category() == QLatin1String("Containments") || plugin.category().isEmpty()) {
             // we don't want to show the hidden category
             continue;
         }
@@ -167,10 +164,8 @@ void WidgetExplorerPrivate::initFilters()
     }
 
     for (const catPair &category : qAsConst(categories)) {
-        filterModel.addFilter(category.first,
-                              KCategorizedItemsViewModels::Filter(QStringLiteral("category"), category.second));
+        filterModel.addFilter(category.first, KCategorizedItemsViewModels::Filter(QStringLiteral("category"), category.second));
     }
-
 }
 
 void WidgetExplorer::classBegin()
@@ -208,15 +203,14 @@ void WidgetExplorer::setShowSpecialFilters(bool show)
     }
 }
 
-QList <QObject *>  WidgetExplorer::widgetsMenuActions()
+QList<QObject *> WidgetExplorer::widgetsMenuActions()
 {
-    QList <QObject *> actionList;
+    QList<QObject *> actionList;
 
     WidgetAction *action = nullptr;
 
     if (KAuthorized::authorize(QStringLiteral("ghns"))) {
-        action = new WidgetAction(QIcon::fromTheme(QStringLiteral("internet-services")),
-                                      i18n("Download New Plasma Widgets"), this);
+        action = new WidgetAction(QIcon::fromTheme(QStringLiteral("internet-services")), i18n("Download New Plasma Widgets"), this);
         connect(action, &QAction::triggered, this, &WidgetExplorer::downloadWidgets);
         actionList << action;
     }
@@ -225,8 +219,7 @@ QList <QObject *>  WidgetExplorer::widgetsMenuActions()
     action->setSeparator(true);
     actionList << action;
 
-    action = new WidgetAction(QIcon::fromTheme(QStringLiteral("package-x-generic")),
-                         i18n("Install Widget From Local File..."), this);
+    action = new WidgetAction(QIcon::fromTheme(QStringLiteral("package-x-generic")), i18n("Install Widget From Local File..."), this);
     QObject::connect(action, &QAction::triggered, this, &WidgetExplorer::openWidgetFile);
     actionList << action;
 
@@ -235,15 +228,15 @@ QList <QObject *>  WidgetExplorer::widgetsMenuActions()
 
 void WidgetExplorerPrivate::initRunningApplets()
 {
-    //get applets from corona, count them, send results to model
+    // get applets from corona, count them, send results to model
     if (!containment) {
         return;
     }
 
     Plasma::Corona *c = containment->corona();
 
-    //we've tried our best to get a corona
-    //we don't want just one containment, we want them all
+    // we've tried our best to get a corona
+    // we don't want just one containment, we want them all
     if (!c) {
         qWarning() << "WidgetExplorer failed to find corona";
         return;
@@ -251,13 +244,16 @@ void WidgetExplorerPrivate::initRunningApplets()
     appletNames.clear();
     runningApplets.clear();
 
-    QObject::connect(c, &Plasma::Corona::screenAdded, q, [this] (int screen) {screenAdded(screen);});
-    QObject::connect(c, &Plasma::Corona::screenRemoved, q, [this] (int screen) {screenRemoved(screen);});
+    QObject::connect(c, &Plasma::Corona::screenAdded, q, [this](int screen) {
+        screenAdded(screen);
+    });
+    QObject::connect(c, &Plasma::Corona::screenRemoved, q, [this](int screen) {
+        screenRemoved(screen);
+    });
 
-    const QList<Containment*> containments = c->containments();
+    const QList<Containment *> containments = c->containments();
     for (Containment *containment : containments) {
-        if (containment->containmentType() == Plasma::Types::DesktopContainment
-            && containment->activity() != activitiesConsumer->currentActivity()) {
+        if (containment->containmentType() == Plasma::Types::DesktopContainment && containment->activity() != activitiesConsumer->currentActivity()) {
             continue;
         }
         if (containment->screen() != -1) {
@@ -265,13 +261,13 @@ void WidgetExplorerPrivate::initRunningApplets()
         }
     }
 
-    //qDebug() << runningApplets;
+    // qDebug() << runningApplets;
     itemModel.setRunningApplets(runningApplets);
 }
 
 void WidgetExplorerPrivate::screenAdded(int screen)
 {
-    const QList<Containment*> containments = containment->corona()->containments();
+    const QList<Containment *> containments = containment->corona()->containments();
     for (auto c : containments) {
         if (c->screen() == screen) {
             addContainment(c);
@@ -282,8 +278,8 @@ void WidgetExplorerPrivate::screenAdded(int screen)
 
 void WidgetExplorerPrivate::screenRemoved(int screen)
 {
-    const QList<Containment*> containments = containment->corona()->containments();
-        for (auto c : containments) {
+    const QList<Containment *> containments = containment->corona()->containments();
+    for (auto c : containments) {
         if (c->lastScreen() == screen) {
             removeContainment(c);
         }
@@ -293,12 +289,12 @@ void WidgetExplorerPrivate::screenRemoved(int screen)
 
 void WidgetExplorerPrivate::addContainment(Containment *containment)
 {
-    QObject::connect(containment, SIGNAL(appletAdded(Plasma::Applet*)), q, SLOT(appletAdded(Plasma::Applet*)));
-    QObject::connect(containment, SIGNAL(appletRemoved(Plasma::Applet*)), q, SLOT(appletRemoved(Plasma::Applet*)));
+    QObject::connect(containment, SIGNAL(appletAdded(Plasma::Applet *)), q, SLOT(appletAdded(Plasma::Applet *)));
+    QObject::connect(containment, SIGNAL(appletRemoved(Plasma::Applet *)), q, SLOT(appletRemoved(Plasma::Applet *)));
 
     foreach (Applet *applet, containment->applets()) {
         if (applet->pluginMetaData().isValid()) {
-            Containment *childContainment = applet->property("containment").value<Containment*>();
+            Containment *childContainment = applet->property("containment").value<Containment *>();
             if (childContainment) {
                 addContainment(childContainment);
             }
@@ -312,10 +308,10 @@ void WidgetExplorerPrivate::addContainment(Containment *containment)
 void WidgetExplorerPrivate::removeContainment(Plasma::Containment *containment)
 {
     containment->disconnect(q);
-    const QList<Applet*> applets = containment->applets();
+    const QList<Applet *> applets = containment->applets();
     for (auto applet : applets) {
         if (applet->pluginMetaData().isValid()) {
-            Containment *childContainment = applet->property("containment").value<Containment*>();
+            Containment *childContainment = applet->property("containment").value<Containment *>();
             if (childContainment) {
                 removeContainment(childContainment);
             }
@@ -323,7 +319,6 @@ void WidgetExplorerPrivate::removeContainment(Plasma::Containment *containment)
         }
     }
 }
-
 
 void WidgetExplorerPrivate::containmentDestroyed()
 {
@@ -360,11 +355,11 @@ void WidgetExplorerPrivate::appletRemoved(Plasma::Applet *applet)
     itemModel.setRunningApplets(name, count);
 }
 
-//WidgetExplorer
+// WidgetExplorer
 
 WidgetExplorer::WidgetExplorer(QObject *parent)
-        : QObject(parent),
-          d(new WidgetExplorerPrivate(this))
+    : QObject(parent)
+    , d(new WidgetExplorerPrivate(this))
 {
     d->filterItemModel.setSortCaseSensitivity(Qt::CaseInsensitive);
     d->filterItemModel.setDynamicSortFilter(true);
@@ -374,9 +369,8 @@ WidgetExplorer::WidgetExplorer(QObject *parent)
 
 WidgetExplorer::~WidgetExplorer()
 {
-     delete d;
+    delete d;
 }
-
 
 void WidgetExplorer::setApplication(const QString &app)
 {
@@ -412,7 +406,6 @@ void WidgetExplorer::setProvides(const QStringList &provides)
     emit providesChanged();
 }
 
-
 void WidgetExplorer::setContainment(Plasma::Containment *containment)
 {
     if (d->containment != containment) {
@@ -423,9 +416,8 @@ void WidgetExplorer::setContainment(Plasma::Containment *containment)
         d->containment = containment;
 
         if (d->containment) {
-            connect(d->containment, SIGNAL(destroyed(QObject*)), this, SLOT(containmentDestroyed()));
+            connect(d->containment, SIGNAL(destroyed(QObject *)), this, SLOT(containmentDestroyed()));
             connect(d->containment, &Applet::immutabilityChanged, this, &WidgetExplorer::immutabilityChanged);
-
         }
 
         d->initRunningApplets();
@@ -449,7 +441,7 @@ Plasma::Corona *WidgetExplorer::corona() const
 
 void WidgetExplorer::addApplet(const QString &pluginName)
 {
-    const QString p = PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/"+pluginName;
+    const QString p = PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/" + pluginName;
     qWarning() << "-------->  load applet: " << pluginName << " relpath: " << p;
 
     QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, p, QStandardPaths::LocateDirectory);
@@ -472,8 +464,6 @@ void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
     }
 }
 
-
-
 void WidgetExplorer::downloadWidgets()
 {
     if (!d->newStuffDialog) {
@@ -486,7 +476,6 @@ void WidgetExplorer::downloadWidgets()
 
 void WidgetExplorer::openWidgetFile()
 {
-
     Plasma::OpenWidgetAssistant *assistant = d->openAssistant.data();
     if (!assistant) {
         assistant = new Plasma::OpenWidgetAssistant(nullptr);
@@ -504,14 +493,15 @@ void WidgetExplorer::openWidgetFile()
 
 void WidgetExplorer::uninstall(const QString &pluginName)
 {
-    static const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/";
+    static const QString packageRoot =
+        QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/";
 
     KPackage::PackageStructure *structure = KPackage::PackageLoader::self()->loadPackageStructure(QStringLiteral("Plasma/Applet"));
 
     KPackage::Package pkg(structure);
     pkg.uninstall(pluginName, packageRoot);
 
-    //FIXME: moreefficient way rather a linear scan?
+    // FIXME: moreefficient way rather a linear scan?
     for (int i = 0; i < d->itemModel.rowCount(); ++i) {
         QStandardItem *item = d->itemModel.item(i);
         if (item->data(PlasmaAppletItemModel::PluginNameRole).toString() == pluginName) {
@@ -524,7 +514,7 @@ void WidgetExplorer::uninstall(const QString &pluginName)
     if (corona()) {
         const auto &containments = corona()->containments();
 
-        for(Containment *c : containments) {
+        for (Containment *c : containments) {
             const auto &applets = c->applets();
 
             for (Applet *applet : applets) {
@@ -537,6 +527,5 @@ void WidgetExplorer::uninstall(const QString &pluginName)
         }
     }
 }
-
 
 #include "moc_widgetexplorer.cpp"

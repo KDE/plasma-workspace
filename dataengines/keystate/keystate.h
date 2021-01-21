@@ -40,8 +40,8 @@ public:
     Plasma::Service *serviceForSource(const QString &source) override;
 
 protected:
-    //bool sourceRequestEvent(const QString &name);
-    //bool updateSourceEvent(const QString &source);
+    // bool sourceRequestEvent(const QString &name);
+    // bool updateSourceEvent(const QString &source);
 
 protected Q_SLOTS:
     void keyPressed(Qt::Key key, bool state);

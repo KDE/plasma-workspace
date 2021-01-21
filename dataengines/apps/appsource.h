@@ -30,30 +30,28 @@
  */
 class AppSource : public Plasma::DataContainer
 {
-
     Q_OBJECT
 
-    public:
-        AppSource(KServiceGroup::Ptr startup, QObject *parent);
-        AppSource(KService::Ptr app, QObject *parent);
-        ~AppSource() override;
+public:
+    AppSource(KServiceGroup::Ptr startup, QObject *parent);
+    AppSource(KService::Ptr app, QObject *parent);
+    ~AppSource() override;
 
-    protected:
-        Plasma::Service *createService();
-        KService::Ptr getApp();
-        bool isApp() const;
+protected:
+    Plasma::Service *createService();
+    KService::Ptr getApp();
+    bool isApp() const;
 
-    private Q_SLOTS:
-        void updateGroup();
-        void updateApp();
+private Q_SLOTS:
+    void updateGroup();
+    void updateApp();
 
-    private:
-        friend class AppsEngine;
-        friend class AppJob;
-        KServiceGroup::Ptr m_group;
-        KService::Ptr m_app;
-        bool m_isApp;
-
+private:
+    friend class AppsEngine;
+    friend class AppJob;
+    KServiceGroup::Ptr m_group;
+    KService::Ptr m_app;
+    bool m_isApp;
 };
 
 #endif // APPSOURCE_H

@@ -29,18 +29,17 @@ class PowerManagementJob : public Plasma::ServiceJob
 {
     Q_OBJECT
 
-    public:
-        PowerManagementJob(const QString &operation, QMap<QString, QVariant> &parameters,
-                           QObject *parent = nullptr);
-        ~PowerManagementJob() override;
+public:
+    PowerManagementJob(const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = nullptr);
+    ~PowerManagementJob() override;
 
-    protected:
-        void start() override;
+protected:
+    void start() override;
 
-    private:
-        QDBusPendingCall setScreenBrightness(int value, bool silent);
-        QDBusPendingCall setKeyboardBrightness(int value, bool silent);
-        SessionManagement *m_session;
+private:
+    QDBusPendingCall setScreenBrightness(int value, bool silent);
+    QDBusPendingCall setKeyboardBrightness(int value, bool silent);
+    SessionManagement *m_session;
 };
 
 #endif // POWERMANAGEMENTJOB_H

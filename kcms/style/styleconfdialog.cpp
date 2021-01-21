@@ -19,47 +19,47 @@
  */
 
 #include "styleconfdialog.h"
-#include <KLocalizedString>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
 
-StyleConfigDialog::StyleConfigDialog(QWidget* parent, const QString &styleName)
-  : QDialog( parent )
+StyleConfigDialog::StyleConfigDialog(QWidget *parent, const QString &styleName)
+    : QDialog(parent)
 {
-  setObjectName( QStringLiteral("StyleConfigDialog") );
-  setModal( true );
-  setWindowTitle( i18n( "Configure %1", styleName ) );
-  QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    setObjectName(QStringLiteral("StyleConfigDialog"));
+    setModal(true);
+    setWindowTitle(i18n("Configure %1", styleName));
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
-  QWidget *mainWidget = new QWidget(this);
-  QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel|QDialogButtonBox::RestoreDefaults, this);
-  mainLayout->addWidget(mainWidget);
+    QWidget *mainWidget = new QWidget(this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
+    mainLayout->addWidget(mainWidget);
 
-  mMainLayout = new QHBoxLayout(mainWidget);
-  mMainLayout->setContentsMargins(0, 0, 0, 0);
+    mMainLayout = new QHBoxLayout(mainWidget);
+    mMainLayout->setContentsMargins(0, 0, 0, 0);
 
-  QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
-  okButton->setDefault(true);
-  okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
-  connect(buttonBox, &QDialogButtonBox::accepted, this, &StyleConfigDialog::slotAccept);
-  connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
-  connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &StyleConfigDialog::defaults);
-  mainLayout->addWidget(buttonBox);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setDefault(true);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &StyleConfigDialog::slotAccept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &StyleConfigDialog::defaults);
+    mainLayout->addWidget(buttonBox);
 
-  buttonBox->button(QDialogButtonBox::Cancel)->setDefault(true);
-  m_dirty = false;
+    buttonBox->button(QDialogButtonBox::Cancel)->setDefault(true);
+    m_dirty = false;
 }
 
 bool StyleConfigDialog::isDirty() const
 {
-  return m_dirty;
+    return m_dirty;
 }
 
 void StyleConfigDialog::setDirty(bool dirty)
 {
-  m_dirty = dirty;
+    m_dirty = dirty;
 }
 
 void StyleConfigDialog::slotAccept()

@@ -21,9 +21,9 @@
 #ifndef SPLASH_APP_H_
 #define SPLASH_APP_H_
 
-#include <QObject>
-#include <QGuiApplication>
 #include <QBasicTimer>
+#include <QGuiApplication>
+#include <QObject>
 
 class SplashWindow;
 
@@ -35,17 +35,17 @@ class PlasmaShell;
 }
 }
 
-class SplashApp: public QGuiApplication
+class SplashApp : public QGuiApplication
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.KSplash")
 
 public:
-    explicit SplashApp(int &argc, char ** argv);
+    explicit SplashApp(int &argc, char **argv);
     ~SplashApp() override;
 
-
-    KWayland::Client::PlasmaShell *waylandPlasmaShellInterface() const {
+    KWayland::Client::PlasmaShell *waylandPlasmaShellInterface() const
+    {
         return m_waylandPlasmaShell;
     }
 
@@ -69,7 +69,7 @@ private:
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell = nullptr;
 
 private Q_SLOTS:
-    void adoptScreen(QScreen*);
+    void adoptScreen(QScreen *);
 };
 
 #endif // SPLASH_APP_H_

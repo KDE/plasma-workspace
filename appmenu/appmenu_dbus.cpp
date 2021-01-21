@@ -24,18 +24,18 @@
 */
 
 #include "appmenu_dbus.h"
-#include "kdbusimporter.h"
 #include "appmenuadaptor.h"
+#include "kdbusimporter.h"
 
 #include <QApplication>
 #include <QDBusMessage>
 #include <QDBusServiceWatcher>
 
-static const char* DBUS_SERVICE = "org.kde.kappmenu";
-static const char* DBUS_OBJECT_PATH = "/KAppMenu";
+static const char *DBUS_SERVICE = "org.kde.kappmenu";
+static const char *DBUS_OBJECT_PATH = "/KAppMenu";
 
-AppmenuDBus::AppmenuDBus(QObject* parent)
-: QObject(parent)
+AppmenuDBus::AppmenuDBus(QObject *parent)
+    : QObject(parent)
 {
 }
 
@@ -43,7 +43,7 @@ AppmenuDBus::~AppmenuDBus()
 {
 }
 
-bool AppmenuDBus::connectToBus(const QString& service, const QString& path)
+bool AppmenuDBus::connectToBus(const QString &service, const QString &path)
 {
     m_service = service.isEmpty() ? DBUS_SERVICE : service;
     QString newPath = path.isEmpty() ? DBUS_OBJECT_PATH : path;

@@ -21,13 +21,13 @@ AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ******************************************************************/
-#include <QCoreApplication>
 #include <QCommandLineParser>
-#include <QtConcurrentRun>
+#include <QCoreApplication>
 #include <QDebug>
 #include <QFile>
 #include <QFutureWatcher>
 #include <QProcess>
+#include <QtConcurrentRun>
 
 #include <unistd.h>
 
@@ -55,12 +55,10 @@ int main(int argc, char *argv[])
     QCommandLineParser parser;
     parser.addHelpOption();
 
-    QCommandLineOption shutdownAllowedOption(QStringLiteral("shutdown-allowed"),
-                                             QStringLiteral("Whether the user is allowed to shut down the system."));
+    QCommandLineOption shutdownAllowedOption(QStringLiteral("shutdown-allowed"), QStringLiteral("Whether the user is allowed to shut down the system."));
     parser.addOption(shutdownAllowedOption);
 
-    QCommandLineOption chooseOption(QStringLiteral("choose"),
-                                    QStringLiteral("Whether the user is offered the choices between logout, shutdown, etc."));
+    QCommandLineOption chooseOption(QStringLiteral("choose"), QStringLiteral("Whether the user is offered the choices between logout, shutdown, etc."));
     parser.addOption(chooseOption);
 
     QCommandLineOption modeOption(QStringLiteral("mode"),
@@ -93,27 +91,23 @@ int main(int argc, char *argv[])
     arguments << QString::number(pipeFds[1]);
     p.setArguments(arguments);
 
-    QObject::connect(&p, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::errorOccurred), &app,
-        [] {
-            QCoreApplication::exit(1);
-        }
-    );
+    QObject::connect(&p, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::errorOccurred), &app, [] {
+        QCoreApplication::exit(1);
+    });
 
     const int resultPipe = pipeFds[0];
-    QObject::connect(&p, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), &app,
-        [resultPipe] (int exitCode) {
-            if (exitCode != 0) {
-                qDebug() << "!!!! finished with exit code: " << exitCode;
-                close(resultPipe);
-                QCoreApplication::exit(1);
-                return;
-            }
-            QFutureWatcher<void> *watcher = new QFutureWatcher<void>();
-            QObject::connect(watcher, &QFutureWatcher<void>::finished, QCoreApplication::instance(), &QCoreApplication::quit, Qt::QueuedConnection);
-            QObject::connect(watcher, &QFutureWatcher<void>::finished, watcher, &QFutureWatcher<void>::deleteLater, Qt::QueuedConnection);
-            watcher->setFuture(QtConcurrent::run(readFromPipe, resultPipe));
+    QObject::connect(&p, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), &app, [resultPipe](int exitCode) {
+        if (exitCode != 0) {
+            qDebug() << "!!!! finished with exit code: " << exitCode;
+            close(resultPipe);
+            QCoreApplication::exit(1);
+            return;
         }
-    );
+        QFutureWatcher<void> *watcher = new QFutureWatcher<void>();
+        QObject::connect(watcher, &QFutureWatcher<void>::finished, QCoreApplication::instance(), &QCoreApplication::quit, Qt::QueuedConnection);
+        QObject::connect(watcher, &QFutureWatcher<void>::finished, watcher, &QFutureWatcher<void>::deleteLater, Qt::QueuedConnection);
+        watcher->setFuture(QtConcurrent::run(readFromPipe, resultPipe));
+    });
 
     p.start();
     close(pipeFds[1]);

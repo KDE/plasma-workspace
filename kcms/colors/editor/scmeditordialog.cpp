@@ -18,9 +18,9 @@
  */
 
 #include "scmeditordialog.h"
-#include "scmeditoroptions.h"
 #include "scmeditorcolors.h"
 #include "scmeditoreffects.h"
+#include "scmeditoroptions.h"
 
 #include <QDebug>
 #include <QDir>
@@ -69,7 +69,7 @@ void SchemeEditorDialog::init()
 {
     setupUi(this);
 
-    schemeKnsUploadButton->setIcon( QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")) );
+    schemeKnsUploadButton->setIcon(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")));
 
     m_optionTab = new SchemeEditorOptions(m_config);
     m_colorTab = new SchemeEditorColors(m_config);
@@ -96,11 +96,9 @@ void SchemeEditorDialog::init()
 
 void SchemeEditorDialog::on_schemeKnsUploadButton_clicked()
 {
-    if (m_unsavedChanges)
-    {
-        KMessageBox::ButtonCode reallyUpload = KMessageBox::questionYesNo(
-            this, i18n("This colour scheme was not saved. Continue?"),
-            i18n("Do you really want to upload?"));
+    if (m_unsavedChanges) {
+        KMessageBox::ButtonCode reallyUpload =
+            KMessageBox::questionYesNo(this, i18n("This colour scheme was not saved. Continue?"), i18n("Do you really want to upload?"));
         if (reallyUpload == KMessageBox::No) {
             return;
         }
@@ -108,35 +106,26 @@ void SchemeEditorDialog::on_schemeKnsUploadButton_clicked()
 
     // upload
     KNS3::UploadDialog dialog(QStringLiteral("colorschemes.knsrc"), this);
-    dialog.setUploadFile(QUrl::fromLocalFile(m_config->name()) );
+    dialog.setUploadFile(QUrl::fromLocalFile(m_config->name()));
     dialog.exec();
 }
 
 void SchemeEditorDialog::on_buttonBox_clicked(QAbstractButton *button)
 {
-    if (buttonBox->standardButton(button) == QDialogButtonBox::Reset)
-    {
+    if (buttonBox->standardButton(button) == QDialogButtonBox::Reset) {
         m_config->markAsClean();
         m_config->reparseConfiguration();
         updateTabs();
         setUnsavedChanges(false);
-    }
-    else if (buttonBox->standardButton(button) == QDialogButtonBox::Save)
-    {
+    } else if (buttonBox->standardButton(button) == QDialogButtonBox::Save) {
         saveScheme(false /*overwrite*/);
-    }
-    else if (buttonBox->standardButton(button) == QDialogButtonBox::Apply)
-    {
+    } else if (buttonBox->standardButton(button) == QDialogButtonBox::Apply) {
         saveScheme(true /*overwrite*/);
-    }
-    else if (buttonBox->standardButton(button) == QDialogButtonBox::Close)
-    {
+    } else if (buttonBox->standardButton(button) == QDialogButtonBox::Close) {
         if (m_unsavedChanges) {
-            KMessageBox::ButtonCode ans = KMessageBox::questionYesNo(
-                this, i18n("You have unsaved changes. Do you really want to quit?"),
-                i18n("Unsaved changes"));
-            if (ans == KMessageBox::No)
-            {
+            KMessageBox::ButtonCode ans =
+                KMessageBox::questionYesNo(this, i18n("You have unsaved changes. Do you really want to quit?"), i18n("Unsaved changes"));
+            if (ans == KMessageBox::No) {
                 return;
             }
         }
@@ -153,8 +142,7 @@ void SchemeEditorDialog::saveScheme(bool overwrite)
     // prompt for the name to save as
     if (!overwrite) {
         bool ok;
-        name = QInputDialog::getText(this, i18n("Save Color Scheme"),
-            i18n("&Enter a name for the color scheme:"), QLineEdit::Normal, m_schemeName, &ok);
+        name = QInputDialog::getText(this, i18n("Save Color Scheme"), i18n("&Enter a name for the color scheme:"), QLineEdit::Normal, m_schemeName, &ok);
         if (!ok) {
             return;
         }
@@ -169,32 +157,29 @@ void SchemeEditorDialog::saveScheme(bool overwrite)
     filename.replace(0, 1, filename.at(0).toUpper());
 
     // check if that name is already in the list
-    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-        QStringLiteral("color-schemes/") + filename + QStringLiteral(".colors"));
+    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/") + filename + QStringLiteral(".colors"));
 
     QFile file(path);
     const int permissions = file.permissions();
     const bool canWrite = (permissions & QFile::WriteUser);
     // or if we can overwrite it if it exists
-    if (path.isEmpty() || !file.exists() || canWrite)
-    {
-        if(canWrite && !overwrite){
+    if (path.isEmpty() || !file.exists() || canWrite) {
+        if (canWrite && !overwrite) {
             int ret = KMessageBox::questionYesNo(this,
-                i18n("A color scheme with that name already exists.\nDo you want to overwrite it?"),
-                i18n("Save Color Scheme"),
-                KStandardGuiItem::overwrite(),
-                KStandardGuiItem::cancel());
+                                                 i18n("A color scheme with that name already exists.\nDo you want to overwrite it?"),
+                                                 i18n("Save Color Scheme"),
+                                                 KStandardGuiItem::overwrite(),
+                                                 KStandardGuiItem::cancel());
 
-            //on don't overwrite, call again the function
-            if(ret == KMessageBox::No){
+            // on don't overwrite, call again the function
+            if (ret == KMessageBox::No) {
                 this->saveScheme(overwrite);
                 return;
             }
         }
 
         // go ahead and save it
-        QString newpath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
-                + "/color-schemes/";
+        QString newpath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/color-schemes/";
         QDir dir;
         dir.mkpath(newpath);
         newpath += filename + ".colors";
@@ -217,17 +202,14 @@ void SchemeEditorDialog::saveScheme(bool overwrite)
 
         QTextStream out(stdout);
         out << filename << endl;
-    }
-    else if (!canWrite && file.exists())
-    {
+    } else if (!canWrite && file.exists()) {
         KMessageBox::error(this, i18n("You do not have permission to overwrite that scheme"), i18n("Error"));
     }
 }
 
 void SchemeEditorDialog::updateTabs(bool madeByUser)
 {
-    if (madeByUser)
-    {
+    if (madeByUser) {
         setUnsavedChanges(true);
     }
     KConfigGroup group(m_config, "ColorEffects:Inactive");
@@ -250,13 +232,10 @@ void SchemeEditorDialog::updateTabs(bool madeByUser)
 void SchemeEditorDialog::setUnsavedChanges(bool changes)
 {
     m_unsavedChanges = changes;
-    if (changes)
-    {
+    if (changes) {
         buttonBox->button(QDialogButtonBox::Apply)->setEnabled(true);
         buttonBox->button(QDialogButtonBox::Reset)->setEnabled(true);
-    }
-    else
-    {
+    } else {
         buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
         buttonBox->button(QDialogButtonBox::Reset)->setEnabled(false);
     }

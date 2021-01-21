@@ -25,15 +25,15 @@
 #include <KConfigWatcher>
 #include <KService>
 
-#include "server.h"
-#include "mirroredscreenstracker_p.h"
 #include "debug.h"
+#include "mirroredscreenstracker_p.h"
+#include "server.h"
 
 // Settings
-#include "donotdisturbsettings.h"
-#include "notificationsettings.h"
-#include "jobsettings.h"
 #include "badgesettings.h"
+#include "donotdisturbsettings.h"
+#include "jobsettings.h"
+#include "notificationsettings.h"
 
 namespace NotificationManager
 {
@@ -79,7 +79,6 @@ public:
 Settings::Private::Private(Settings *q)
     : q(q)
 {
-
 }
 
 Settings::Private::~Private() = default;
@@ -172,10 +171,8 @@ Settings::Settings(QObject *parent)
 
     setLive(true);
 
-    connect(&Server::self(), &Server::inhibitedByApplicationChanged,
-            this, &Settings::notificationsInhibitedByApplicationChanged);
-    connect(&Server::self(), &Server::inhibitionApplicationsChanged,
-            this, &Settings::notificationInhibitionApplicationsChanged);
+    connect(&Server::self(), &Server::inhibitedByApplicationChanged, this, &Settings::notificationsInhibitedByApplicationChanged);
+    connect(&Server::self(), &Server::inhibitionApplicationsChanged, this, &Settings::notificationInhibitionApplicationsChanged);
 
     if (d->dndSettings.whenScreensMirrored()) {
         d->mirroredScreensTracker = MirroredScreensTracker::createTracker();
@@ -303,37 +300,36 @@ void Settings::setLive(bool live)
 
     if (live) {
         d->watcher = KConfigWatcher::create(d->config);
-        d->watcherConnection = connect(d->watcher.data(), &KConfigWatcher::configChanged, this,
-            [this](const KConfigGroup &group, const QByteArrayList &names) {
-                Q_UNUSED(names);
+        d->watcherConnection = connect(d->watcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
+            Q_UNUSED(names);
 
-                if (group.name() == QLatin1String("DoNotDisturb")) {
-                    d->dndSettings.load();
+            if (group.name() == QLatin1String("DoNotDisturb")) {
+                d->dndSettings.load();
 
-                    bool emitScreensMirroredChanged = false;
-                    if (d->dndSettings.whenScreensMirrored()) {
-                        if (!d->mirroredScreensTracker) {
-                            d->mirroredScreensTracker = MirroredScreensTracker::createTracker();
-                            emitScreensMirroredChanged = d->mirroredScreensTracker->screensMirrored();
-                            connect(d->mirroredScreensTracker.data(), &MirroredScreensTracker::screensMirroredChanged, this, &Settings::screensMirroredChanged);
-                        }
-                    } else if (d->mirroredScreensTracker) {
+                bool emitScreensMirroredChanged = false;
+                if (d->dndSettings.whenScreensMirrored()) {
+                    if (!d->mirroredScreensTracker) {
+                        d->mirroredScreensTracker = MirroredScreensTracker::createTracker();
                         emitScreensMirroredChanged = d->mirroredScreensTracker->screensMirrored();
-                        d->mirroredScreensTracker.reset();
+                        connect(d->mirroredScreensTracker.data(), &MirroredScreensTracker::screensMirroredChanged, this, &Settings::screensMirroredChanged);
                     }
-
-                    if (emitScreensMirroredChanged) {
-                        emit screensMirroredChanged();
-                    }
-                } else if (group.name() == QLatin1String("Notifications")) {
-                    d->notificationSettings.load();
-                } else if (group.name() == QLatin1String("Jobs")) {
-                    d->jobSettings.load();
-                } else if (group.name() == QLatin1String("Badges")) {
-                    d->badgeSettings.load();
+                } else if (d->mirroredScreensTracker) {
+                    emitScreensMirroredChanged = d->mirroredScreensTracker->screensMirrored();
+                    d->mirroredScreensTracker.reset();
                 }
 
-                emit settingsChanged();
+                if (emitScreensMirroredChanged) {
+                    emit screensMirroredChanged();
+                }
+            } else if (group.name() == QLatin1String("Notifications")) {
+                d->notificationSettings.load();
+            } else if (group.name() == QLatin1String("Jobs")) {
+                d->jobSettings.load();
+            } else if (group.name() == QLatin1String("Badges")) {
+                d->badgeSettings.load();
+            }
+
+            emit settingsChanged();
         });
     } else {
         disconnect(d->watcherConnection);
@@ -548,7 +544,7 @@ void Settings::setNotificationsInhibitedUntil(const QDateTime &time)
 
 void Settings::resetNotificationsInhibitedUntil()
 {
-    setNotificationsInhibitedUntil(QDateTime());// FIXME d->dndSettings.defaultUntilValue());
+    setNotificationsInhibitedUntil(QDateTime()); // FIXME d->dndSettings.defaultUntilValue());
 }
 
 bool Settings::notificationsInhibitedByApplication() const

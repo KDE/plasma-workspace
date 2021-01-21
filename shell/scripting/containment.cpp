@@ -22,21 +22,20 @@
 #include <QAction>
 #include <QQuickItem>
 
-#include <klocalizedstring.h>
 #include <kactioncollection.h>
 #include <kdeclarative/configpropertymap.h>
+#include <klocalizedstring.h>
 
-#include <Plasma/Corona>
 #include <Plasma/Containment>
+#include <Plasma/Corona>
 #include <Plasma/PluginLoader>
 
-#include "shellcorona.h"
 #include "scriptengine.h"
+#include "shellcorona.h"
 #include "widget.h"
 
 namespace WorkspaceScripting
 {
-
 class Containment::Private
 {
 public:
@@ -52,8 +51,8 @@ public:
 };
 
 Containment::Containment(Plasma::Containment *containment, ScriptEngine *engine)
-    : Applet(engine),
-      d(new Containment::Private)
+    : Applet(engine)
+    , d(new Containment::Private)
 {
     d->containment = containment;
     d->corona = qobject_cast<ShellCorona *>(containment->corona());
@@ -69,8 +68,7 @@ Containment::~Containment()
 {
     if (d->containment) {
         Plasma::Containment *containment = d->containment.data();
-        if (d->oldWallpaperPlugin != d->wallpaperPlugin ||
-            d->oldWallpaperMode != d->wallpaperMode) {
+        if (d->oldWallpaperPlugin != d->wallpaperPlugin || d->oldWallpaperMode != d->wallpaperMode) {
             containment->setWallpaper(d->wallpaperPlugin);
         }
     }
@@ -104,7 +102,6 @@ void Containment::setWallpaperPlugin(const QString &wallpaperPlugin)
     d->wallpaperPlugin = wallpaperPlugin;
 }
 
-
 QString Containment::wallpaperMode() const
 {
     return d->wallpaperMode;
@@ -122,16 +119,16 @@ QString Containment::formFactor() const
     }
 
     switch (d->containment.data()->formFactor()) {
-        case Plasma::Types::Planar:
-            return QStringLiteral("planar");
-        case Plasma::Types::MediaCenter:
-            return QStringLiteral("mediacenter");
-        case Plasma::Types::Horizontal:
-            return QStringLiteral("horizontal");
-        case Plasma::Types::Vertical:
-            return QStringLiteral("vertical");
-        case Plasma::Types::Application:
-            return QStringLiteral("application");
+    case Plasma::Types::Planar:
+        return QStringLiteral("planar");
+    case Plasma::Types::MediaCenter:
+        return QStringLiteral("mediacenter");
+    case Plasma::Types::Horizontal:
+        return QStringLiteral("horizontal");
+    case Plasma::Types::Vertical:
+        return QStringLiteral("vertical");
+    case Plasma::Types::Application:
+        return QStringLiteral("application");
     }
 
     return QStringLiteral("Planar");
@@ -139,7 +136,7 @@ QString Containment::formFactor() const
 
 QList<int> Containment::widgetIds() const
 {
-    //FIXME: the ints could overflow since Applet::id() returns a uint,
+    // FIXME: the ints could overflow since Applet::id() returns a uint,
     //       however QScript deals with QList<uint> very, very poory
     QList<int> w;
 
@@ -185,14 +182,20 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
 
     Plasma::Applet *applet = nullptr;
     if (v.isString()) {
-        //A position has been supplied: search for the containment's graphics object
+        // A position has been supplied: search for the containment's graphics object
         QQuickItem *containmentItem = nullptr;
 
         if (geometry.x() >= 0 && geometry.y() >= 0) {
             containmentItem = d->containment.data()->property("_plasma_graphicObject").value<QQuickItem *>();
 
             if (containmentItem) {
-                QMetaObject::invokeMethod(containmentItem , "createApplet", Qt::DirectConnection, Q_RETURN_ARG(Plasma::Applet *, applet), Q_ARG(QString, v.toString()), Q_ARG(QVariantList, args), Q_ARG(QRectF, geometry));
+                QMetaObject::invokeMethod(containmentItem,
+                                          "createApplet",
+                                          Qt::DirectConnection,
+                                          Q_RETURN_ARG(Plasma::Applet *, applet),
+                                          Q_ARG(QString, v.toString()),
+                                          Q_ARG(QVariantList, args),
+                                          Q_ARG(QRectF, geometry));
             }
             if (applet) {
                 return engine()->wrap(applet);
@@ -200,7 +203,7 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
             return engine()->newError(i18n("Could not create the %1 widget!", v.toString()));
         }
 
-        //Case in which either:
+        // Case in which either:
         // * a geometry wasn't provided
         // * containmentItem wasn't found
         applet = d->containment.data()->createApplet(v.toString(), args);
@@ -210,7 +213,7 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
         }
 
         return engine()->newError(i18n("Could not create the %1 widget!", v.toString()));
-    } else if (Widget *widget = qobject_cast<Widget*>(v.toQObject())) {
+    } else if (Widget *widget = qobject_cast<Widget *>(v.toQObject())) {
         applet = widget->applet();
         d->containment.data()->addApplet(applet);
         return v;
@@ -285,6 +288,3 @@ Plasma::Containment *Containment::containment() const
 }
 
 }
-
-
-

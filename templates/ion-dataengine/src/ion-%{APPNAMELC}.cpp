@@ -21,19 +21,19 @@
 
 #include <KUnitConversion/Converter>
 
-
-%{APPNAME}Ion::%{APPNAME}Ion(QObject *parent, const QVariantList &args)
-  : IonInterface(parent, args)
+% {APPNAME} Ion::
+        % {APPNAME} Ion(QObject *parent, const QVariantList &args)
+    : IonInterface(parent, args)
 {
     // call whenever the ion is ready
     setInitialized(true);
 }
 
-%{APPNAME}Ion::~%{APPNAME}Ion()
+% {APPNAME} Ion::~ % {APPNAME} Ion()
 {
 }
 
-bool %{APPNAME}Ion::updateIonSource(const QString& source)
+bool % {APPNAME} Ion::updateIonSource(const QString &source)
 {
     // We expect the applet to send the source in the following tokenization:
     // ionname:validate:place_name - Triggers validation of place
@@ -50,7 +50,7 @@ bool %{APPNAME}Ion::updateIonSource(const QString& source)
     if (sourceAction.at(1) == QLatin1String("validate") && sourceAction.size() > 2) {
         fetchValidateData(source);
         return true;
-    } 
+    }
 
     if (sourceAction.at(1) == QLatin1String("weather") && sourceAction.size() > 2) {
         fetchWeatherData(source);
@@ -61,22 +61,20 @@ bool %{APPNAME}Ion::updateIonSource(const QString& source)
     return true;
 }
 
-void %{APPNAME}Ion::reset()
+void % {APPNAME} Ion::reset()
 {
 }
 
 // purpose: fetch/use data from provider and trigger processing of returned data in a handler
-void %{APPNAME}Ion::fetchValidateData(const QString &source)
+void % {APPNAME} Ion::fetchValidateData(const QString &source)
 {
-
     // here called directly for a start
     onValidateReport(source);
 }
 
 // purpose: process data from provider and turn into DataEngine data
-void %{APPNAME}Ion::onValidateReport(const QString &source)
+void % {APPNAME} Ion::onValidateReport(const QString &source)
 {
-
     const QStringList sourceAction = source.split(QLatin1Char('|'));
 
     QStringList placeList;
@@ -97,15 +95,14 @@ void %{APPNAME}Ion::onValidateReport(const QString &source)
 }
 
 // purpose: fetch data from provider and trigger processing of returned data in a handler
-void %{APPNAME}Ion::fetchWeatherData(const QString &source)
+void % {APPNAME} Ion::fetchWeatherData(const QString &source)
 {
     // here called directly for a start
     onWeatherDataReport(source);
 }
 
-
 // purpose: process data from provider and turn into DataEngine data for the given source key
-void %{APPNAME}Ion::onWeatherDataReport(const QString &source)
+void % {APPNAME} Ion::onWeatherDataReport(const QString &source)
 {
     Plasma::DataEngine::Data data;
 
@@ -122,7 +119,6 @@ void %{APPNAME}Ion::onWeatherDataReport(const QString &source)
     setData(source, data);
 }
 
-
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(%{APPNAMELC}, %{APPNAME}Ion, "ion-%{APPNAMELC}.json")
+K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(% {APPNAMELC}, % {APPNAME} Ion, "ion-%{APPNAMELC}.json")
 
 #include "ion-%{APPNAMELC}.moc"

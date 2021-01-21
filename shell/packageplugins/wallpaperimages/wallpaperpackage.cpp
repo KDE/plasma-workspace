@@ -19,8 +19,8 @@
 
 #include "wallpaperpackage.h"
 
-#include <QFileInfo>
 #include <QDebug>
+#include <QFileInfo>
 
 #include <klocalizedstring.h>
 
@@ -79,4 +79,3 @@ void WallpaperPackage::pathChanged(KPackage::Package *package)
 K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(WallpaperPackage, "plasma-packagestructure-wallpaperimages.json")
 
 #include "wallpaperpackage.moc"
-

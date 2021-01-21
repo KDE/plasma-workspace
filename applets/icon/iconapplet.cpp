@@ -58,7 +58,6 @@
 IconApplet::IconApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
 {
-
 }
 
 IconApplet::~IconApplet()
@@ -240,7 +239,7 @@ void IconApplet::populate()
 
         if (downloadFavIcon) {
             KIO::FavIconRequestJob *job = new KIO::FavIconRequestJob(m_url);
-            connect(job, &KIO::FavIconRequestJob::result, this, [job, backingDesktopFile, this](KJob *){
+            connect(job, &KIO::FavIconRequestJob::result, this, [job, backingDesktopFile, this](KJob *) {
                 if (!job->error()) {
                     KDesktopFile(backingDesktopFile).desktopGroup().writeEntry(QStringLiteral("Icon"), job->iconFile());
 
@@ -394,7 +393,7 @@ QList<QAction *> IconApplet::contextualActions()
             if (!m_openContainingFolderAction) {
                 if (KProtocolManager::supportsListing(linkUrl)) {
                     m_openContainingFolderAction = new QAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"), this);
-                    connect(m_openContainingFolderAction, &QAction::triggered, this, [ linkUrl] {
+                    connect(m_openContainingFolderAction, &QAction::triggered, this, [linkUrl] {
                         KIO::highlightInFileManager({linkUrl});
                     });
                 }
@@ -432,7 +431,7 @@ void IconApplet::run()
         connect(m_startupTasksModel, &QAbstractItemModel::rowsAboutToBeRemoved, this, std::bind(handleRow, false /*busy*/, _1, _2, _3));
     }
 
-    KIO::OpenUrlJob* job = new KIO::OpenUrlJob(QUrl::fromLocalFile(m_localPath));
+    KIO::OpenUrlJob *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(m_localPath));
     job->setRunExecutables(true); // so it can launch apps
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
     job->start();
@@ -455,7 +454,7 @@ void IconApplet::processDrop(QObject *dropEvent)
         auto service = new KService(localPath);
 
         if (service->isApplication()) {
-            KIO::ApplicationLauncherJob* job = new KIO::ApplicationLauncherJob(KService::Ptr(service));
+            KIO::ApplicationLauncherJob *job = new KIO::ApplicationLauncherJob(KService::Ptr(service));
             job->setUrls(urls);
             job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
             job->start();
@@ -539,8 +538,7 @@ QList<QUrl> IconApplet::urlsFromDrop(QObject *dropEvent)
 
 bool IconApplet::isExecutable(const QMimeType &mimeType)
 {
-    return (mimeType.inherits(QStringLiteral("application/x-executable"))
-            || mimeType.inherits(QStringLiteral("application/x-shellscript")));
+    return (mimeType.inherits(QStringLiteral("application/x-executable")) || mimeType.inherits(QStringLiteral("application/x-shellscript")));
 }
 
 void IconApplet::configure()

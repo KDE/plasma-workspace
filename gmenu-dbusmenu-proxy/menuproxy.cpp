@@ -69,8 +69,7 @@ MenuProxy::MenuProxy()
     , m_writeGtk2SettingsTimer(new QTimer(this))
 {
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
-    m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration |
-                                     QDBusServiceWatcher::WatchForRegistration);
+    m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration | QDBusServiceWatcher::WatchForRegistration);
     m_serviceWatcher->addWatchedService(s_dbusMenuRegistrar);
 
     connect(m_serviceWatcher, &QDBusServiceWatcher::serviceRegistered, this, [this](const QString &service) {
@@ -278,10 +277,8 @@ void MenuProxy::onWindowAdded(WId id)
 
     KWindowInfo info(id, NET::WMWindowType);
 
-    NET::WindowType wType = info.windowType(NET::NormalMask | NET::DesktopMask | NET::DockMask |
-                                            NET::ToolbarMask | NET::MenuMask | NET::DialogMask |
-                                            NET::OverrideMask | NET::TopMenuMask |
-                                            NET::UtilityMask | NET::SplashMask);
+    NET::WindowType wType = info.windowType(NET::NormalMask | NET::DesktopMask | NET::DockMask | NET::ToolbarMask | NET::MenuMask | NET::DialogMask
+                                            | NET::OverrideMask | NET::TopMenuMask | NET::UtilityMask | NET::SplashMask);
 
     // Only top level windows typically have a menu bar, dialogs, such as settings don't
     if (wType != NET::Normal) {
@@ -316,10 +313,10 @@ void MenuProxy::onWindowAdded(WId id)
     m_windows.insert(id, window);
 
     connect(window, &Window::requestWriteWindowProperties, this, [this, window] {
-       Q_ASSERT(!window->proxyObjectPath().isEmpty());
+        Q_ASSERT(!window->proxyObjectPath().isEmpty());
 
-       writeWindowProperty(window->winId(), s_kdeNetWmAppMenuServiceName, s_ourServiceName.toUtf8());
-       writeWindowProperty(window->winId(), s_kdeNetWmAppMenuObjectPath, window->proxyObjectPath().toUtf8());
+        writeWindowProperty(window->winId(), s_kdeNetWmAppMenuServiceName, s_ourServiceName.toUtf8());
+        writeWindowProperty(window->winId(), s_kdeNetWmAppMenuObjectPath, window->proxyObjectPath().toUtf8());
     });
     connect(window, &Window::requestRemoveWindowProperties, this, [this, window] {
         writeWindowProperty(window->winId(), s_kdeNetWmAppMenuServiceName, QByteArray());
@@ -356,7 +353,7 @@ QByteArray MenuProxy::getWindowPropertyString(WId id, const QByteArray &name)
     }
 
     if (propertyReply->type == utf8StringAtom && propertyReply->format == 8 && propertyReply->value_len > 0) {
-        const char *data = (const char *) xcb_get_property_value(propertyReply.data());
+        const char *data = (const char *)xcb_get_property_value(propertyReply.data());
         int len = propertyReply->value_len;
         if (data) {
             value = QByteArray(data, data[len - 1] ? len : len - 1);
@@ -376,8 +373,7 @@ void MenuProxy::writeWindowProperty(WId id, const QByteArray &name, const QByteA
     if (value.isEmpty()) {
         xcb_delete_property(m_xConnection, id, atom);
     } else {
-        xcb_change_property(m_xConnection, XCB_PROP_MODE_REPLACE, id, atom, XCB_ATOM_STRING,
-                            8, value.length(), value.constData());
+        xcb_change_property(m_xConnection, XCB_PROP_MODE_REPLACE, id, atom, XCB_ATOM_STRING, 8, value.length(), value.constData());
     }
 }
 

@@ -24,35 +24,34 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <KParts/ReadOnlyPart>
 #include <KParts/MainWindow>
+#include <KParts/ReadOnlyPart>
 
 class QAction;
 class QUrl;
 
 namespace KFI
 {
-
 class CViewer : public KParts::MainWindow
 {
     Q_OBJECT
 
-    public:
-
+public:
     CViewer();
-    ~CViewer() override { }
+    ~CViewer() override
+    {
+    }
     void showUrl(const QUrl &url);
 
-    public Q_SLOTS:
+public Q_SLOTS:
 
     void fileOpen();
     void configureKeys();
     void enableAction(const char *name, bool enable);
 
-    private:
-
+private:
     KParts::ReadOnlyPart *itsPreview;
-    QAction              *itsPrintAct;
+    QAction *itsPrintAct;
 };
 
 }

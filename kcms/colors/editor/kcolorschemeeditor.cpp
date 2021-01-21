@@ -26,35 +26,31 @@
 #include <KAboutData>
 #include <KWindowSystem>
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
     // Fixes blurry icons with fractional scaling
     QGuiApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     QApplication app(argc, argv);
 
-    KAboutData aboutData(
-        QStringLiteral("kcolorschemeeditor"),
-        i18n("KColorSchemeEditor"),
-        QStringLiteral("0.1"),
-        i18n("Utility to edit and create color schemes"),
-        KAboutLicense::GPL_V3
-    );
-    aboutData.addAuthor(i18n("Olivier Churlaud"), i18n("Utility creation"),
-                        QStringLiteral("olivier@churlaud.com"));
-    aboutData.addAuthor(i18n("Jeremy Whiting"), i18n("KCM code (reused in here)"),
-                        QStringLiteral("jpwhiting@kde.org"));
-    aboutData.addAuthor(i18n("Matthew Woehlke"), i18n("KCM code (reused in here)"),
-                        QStringLiteral("mw_triad@users.sourceforge.net"));
+    KAboutData aboutData(QStringLiteral("kcolorschemeeditor"),
+                         i18n("KColorSchemeEditor"),
+                         QStringLiteral("0.1"),
+                         i18n("Utility to edit and create color schemes"),
+                         KAboutLicense::GPL_V3);
+    aboutData.addAuthor(i18n("Olivier Churlaud"), i18n("Utility creation"), QStringLiteral("olivier@churlaud.com"));
+    aboutData.addAuthor(i18n("Jeremy Whiting"), i18n("KCM code (reused in here)"), QStringLiteral("jpwhiting@kde.org"));
+    aboutData.addAuthor(i18n("Matthew Woehlke"), i18n("KCM code (reused in here)"), QStringLiteral("mw_triad@users.sourceforge.net"));
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
-    parser.addPositionalArgument("theme", i18n("Scheme to edit or to use as a base."),
-        QStringLiteral("kcolorschemeeditor ThemeName"));
+    parser.addPositionalArgument("theme", i18n("Scheme to edit or to use as a base."), QStringLiteral("kcolorschemeeditor ThemeName"));
 
     QCommandLineOption overwriteOption(QStringLiteral("overwrite"), i18n("Show 'Apply' button that saves changes without asking (unlike 'Save As' button)"));
     parser.addOption(overwriteOption);
 
-    QCommandLineOption attachOption(QStringLiteral("attach"), i18n("Makes the dialog transient for another application window specified by handle"), QStringLiteral("handle"));
+    QCommandLineOption attachOption(QStringLiteral("attach"),
+                                    i18n("Makes the dialog transient for another application window specified by handle"),
+                                    QStringLiteral("handle"));
     parser.addOption(attachOption);
 
     aboutData.setupCommandLine(&parser);
@@ -63,14 +59,11 @@ int main(int argc, char* argv[])
 
     const QStringList args = parser.positionalArguments();
     QString path = "";
-    if (args.count() == 1)
-    {
+    if (args.count() == 1) {
         const QString fileBaseName(args.at(0));
-        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-                "color-schemes/" + fileBaseName + ".colors");
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" + fileBaseName + ".colors");
     }
-    if (path.isEmpty())
-    {
+    if (path.isEmpty()) {
         QTextStream out(stderr);
         out << i18n("Scheme not found, falling back to current one.\n");
     }

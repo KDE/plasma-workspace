@@ -19,9 +19,9 @@
 
 #pragma once
 
-#include <QObject>
 #include <QByteArray>
 #include <QHash>
+#include <QObject>
 #include <QWindow> // for WId
 
 #include <xcb/xcb_atom.h>
@@ -73,5 +73,4 @@ private:
     QTimer *m_writeGtk2SettingsTimer;
 
     bool m_enabled = false;
-
 };

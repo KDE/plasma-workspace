@@ -19,60 +19,64 @@
 
 #include <config-X11.h>
 
-#include "kcmcursortheme.h"
 #include "cursorthemedata.h"
+#include "kcmcursortheme.h"
 
-#include "xcursor/thememodel.h"
-#include "xcursor/sortproxymodel.h"
+#include "../krdb/krdb.h"
 #include "xcursor/cursortheme.h"
 #include "xcursor/previewwidget.h"
-#include "../krdb/krdb.h"
+#include "xcursor/sortproxymodel.h"
+#include "xcursor/thememodel.h"
 
 #include <KAboutData>
-#include <KPluginFactory>
-#include <KLocalizedString>
-#include <KMessageBox>
-#include <KUrlRequesterDialog>
+#include <KGlobalSettings>
 #include <KIO/CopyJob>
 #include <KIO/DeleteJob>
 #include <KIO/Job>
 #include <KIO/JobUiDelegate>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KPluginFactory>
 #include <KTar>
-#include <KGlobalSettings>
+#include <KUrlRequesterDialog>
 
 #include <KNSCore/EntryWrapper>
 
 #include <QQmlListReference>
-#include <QX11Info>
 #include <QStandardItemModel>
+#include <QX11Info>
 
-#include <X11/Xlib.h>
 #include <X11/Xcursor/Xcursor.h>
+#include <X11/Xlib.h>
 
 #include <updatelaunchenvjob.h>
 
 #include "cursorthemesettings.h"
 
 #ifdef HAVE_XFIXES
-#  include <X11/extensions/Xfixes.h>
+#include <X11/extensions/Xfixes.h>
 #endif
 
-K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "kcm_cursortheme.json", registerPlugin<CursorThemeConfig>();registerPlugin<CursorThemeData>();)
+K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "kcm_cursortheme.json", registerPlugin<CursorThemeConfig>(); registerPlugin<CursorThemeData>();)
 
 CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args),
-      m_data(new CursorThemeData(this)),
-      m_canInstall(true),
-      m_canResize(true),
-      m_canConfigure(true)
+    : KQuickAddons::ManagedConfigModule(parent, args)
+    , m_data(new CursorThemeData(this))
+    , m_canInstall(true)
+    , m_canResize(true)
+    , m_canConfigure(true)
 {
     m_preferredSize = cursorThemeSettings()->cursorSize();
     connect(cursorThemeSettings(), &CursorThemeSettings::cursorThemeChanged, this, &CursorThemeConfig::updateSizeComboBox);
     qmlRegisterType<PreviewWidget>("org.kde.private.kcm_cursortheme", 1, 0, "PreviewWidget");
     qmlRegisterType<SortProxyModel>();
     qmlRegisterType<CursorThemeSettings>();
-    KAboutData* aboutData = new KAboutData(QStringLiteral("kcm_cursortheme"), i18n("Cursors"),
-        QStringLiteral("1.0"), QString(), KAboutLicense::GPL, i18n("(c) 2003-2007 Fredrik Höglund"));
+    KAboutData *aboutData = new KAboutData(QStringLiteral("kcm_cursortheme"),
+                                           i18n("Cursors"),
+                                           QStringLiteral("1.0"),
+                                           QString(),
+                                           KAboutLicense::GPL,
+                                           i18n("(c) 2003-2007 Fredrik Höglund"));
     aboutData->addAuthor(i18n("Fredrik Höglund"));
     aboutData->addAuthor(i18n("Marco Martin"));
     setAboutData(aboutData);
@@ -93,7 +97,7 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
     }
 
     connect(m_themeModel, &QAbstractItemModel::dataChanged, this, &CursorThemeConfig::settingsChanged);
-    connect(m_themeModel, &QAbstractItemModel::dataChanged, this, [this] (const QModelIndex &start, const QModelIndex &end, const QVector<int> &roles) {
+    connect(m_themeModel, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &start, const QModelIndex &end, const QVector<int> &roles) {
         const QModelIndex currentThemeIndex = m_themeModel->findIndex(cursorThemeSettings()->cursorTheme());
         if (roles.contains(CursorTheme::PendingDeletionRole) && currentThemeIndex.data(CursorTheme::PendingDeletionRole) == true
             && start.row() <= currentThemeIndex.row() && currentThemeIndex.row() <= end.row()) {
@@ -188,12 +192,10 @@ QAbstractItemModel *CursorThemeConfig::sizesModel()
 bool CursorThemeConfig::iconsIsWritable() const
 {
     const QFileInfo icons = QFileInfo(QDir::homePath() + "/.icons");
-    const QFileInfo home  = QFileInfo(QDir::homePath());
+    const QFileInfo home = QFileInfo(QDir::homePath());
 
-    return ((icons.exists() && icons.isDir() && icons.isWritable()) ||
-            (!icons.exists() && home.isWritable()));
+    return ((icons.exists() && icons.isDir() && icons.isWritable()) || (!icons.exists() && home.isWritable()));
 }
-
 
 void CursorThemeConfig::updateSizeComboBox()
 {
@@ -301,21 +303,51 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
 
     if (CursorTheme::haveXfixes()) {
         // Qt cursors
-        names << "left_ptr"       << "up_arrow"      << "cross"      << "wait"
-            << "left_ptr_watch" << "ibeam"         << "size_ver"   << "size_hor"
-            << "size_bdiag"     << "size_fdiag"    << "size_all"   << "split_v"
-            << "split_h"        << "pointing_hand" << "openhand"
-            << "closedhand"     << "forbidden"     << "whats_this" << "copy" << "move" << "link";
+        names << "left_ptr"
+              << "up_arrow"
+              << "cross"
+              << "wait"
+              << "left_ptr_watch"
+              << "ibeam"
+              << "size_ver"
+              << "size_hor"
+              << "size_bdiag"
+              << "size_fdiag"
+              << "size_all"
+              << "split_v"
+              << "split_h"
+              << "pointing_hand"
+              << "openhand"
+              << "closedhand"
+              << "forbidden"
+              << "whats_this"
+              << "copy"
+              << "move"
+              << "link";
 
         // X core cursors
-        names << "X_cursor"            << "right_ptr"           << "hand1"
-            << "hand2"               << "watch"               << "xterm"
-            << "crosshair"           << "left_ptr_watch"      << "center_ptr"
-            << "sb_h_double_arrow"   << "sb_v_double_arrow"   << "fleur"
-            << "top_left_corner"     << "top_side"            << "top_right_corner"
-            << "right_side"          << "bottom_right_corner" << "bottom_side"
-            << "bottom_left_corner"  << "left_side"           << "question_arrow"
-            << "pirate";
+        names << "X_cursor"
+              << "right_ptr"
+              << "hand1"
+              << "hand2"
+              << "watch"
+              << "xterm"
+              << "crosshair"
+              << "left_ptr_watch"
+              << "center_ptr"
+              << "sb_h_double_arrow"
+              << "sb_v_double_arrow"
+              << "fleur"
+              << "top_left_corner"
+              << "top_side"
+              << "top_right_corner"
+              << "right_side"
+              << "bottom_right_corner"
+              << "bottom_side"
+              << "bottom_left_corner"
+              << "left_side"
+              << "question_arrow"
+              << "pirate";
 
         foreach (const QString &name, names) {
             XFixesChangeCursorByName(QX11Info::display(), theme->loadCursor(name, size), QFile::encodeName(name));
@@ -333,17 +365,17 @@ bool CursorThemeConfig::applyTheme(const CursorTheme *theme, const int size)
 int CursorThemeConfig::cursorSizeIndex(int cursorSize) const
 {
     if (m_sizesModel->rowCount() > 0) {
-         const auto items = m_sizesModel->findItems(QString::number(cursorSize));
-         if (items.count() == 1) {
-             return items.first()->row();
-         }
+        const auto items = m_sizesModel->findItems(QString::number(cursorSize));
+        if (items.count() == 1) {
+            return items.first()->row();
+        }
     }
     return -1;
 }
 
 int CursorThemeConfig::cursorSizeFromIndex(int index)
 {
-    Q_ASSERT (index < m_sizesModel->rowCount() && index >= 0);
+    Q_ASSERT(index < m_sizesModel->rowCount() && index >= 0);
 
     return m_sizesModel->item(index)->data().toInt();
 }
@@ -377,23 +409,21 @@ void CursorThemeConfig::save()
     KGlobalSettings::self()->emitChange(KGlobalSettings::CursorChanged);
 }
 
-
 void CursorThemeConfig::load()
 {
     ManagedConfigModule::load();
     setPreferredSize(cursorThemeSettings()->cursorSize());
 
     // Disable the listview and the buttons if we're in kiosk mode
-    if (cursorThemeSettings()->isImmutable( QStringLiteral( "cursorTheme" ))) {
-          setCanConfigure(false);
-          setCanInstall(false);
+    if (cursorThemeSettings()->isImmutable(QStringLiteral("cursorTheme"))) {
+        setCanConfigure(false);
+        setCanInstall(false);
     }
 
     updateSizeComboBox(); // This handles also the kiosk mode
 
     setNeedsSave(false);
 }
-
 
 void CursorThemeConfig::defaults()
 {
@@ -409,10 +439,10 @@ bool CursorThemeConfig::isSaveNeeded() const
 void CursorThemeConfig::ghnsEntriesChanged(const QQmlListReference &changedEntries)
 {
     for (int i = 0; i < changedEntries.count(); ++i) {
-        KNSCore::EntryWrapper* entry = qobject_cast<KNSCore::EntryWrapper*>(changedEntries.at(i));
+        KNSCore::EntryWrapper *entry = qobject_cast<KNSCore::EntryWrapper *>(changedEntries.at(i));
         if (entry) {
             if (entry->entry().status() == KNS3::Entry::Deleted) {
-                for (const QString& deleted : entry->entry().uninstalledFiles()) {
+                for (const QString &deleted : entry->entry().uninstalledFiles()) {
                     QVector<QStringRef> list = deleted.splitRef(QLatin1Char('/'));
                     if (list.last() == QLatin1Char('*')) {
                         list.takeLast();
@@ -423,7 +453,7 @@ void CursorThemeConfig::ghnsEntriesChanged(const QQmlListReference &changedEntri
                     }
                 }
             } else if (entry->entry().status() == KNS3::Entry::Installed) {
-                for (const QString& created : entry->entry().installedFiles()) {
+                for (const QString &created : entry->entry().installedFiles()) {
                     QStringList list = created.split(QLatin1Char('/'));
                     if (list.last() == QLatin1Char('*')) {
                         list.takeLast();
@@ -460,8 +490,7 @@ void CursorThemeConfig::installThemeFromFile(const QUrl &url)
         return;
     }
 
-    m_tempCopyJob = KIO::file_copy(url,QUrl::fromLocalFile(m_tempInstallFile->fileName()),
-                                           -1, KIO::Overwrite);
+    m_tempCopyJob = KIO::file_copy(url, QUrl::fromLocalFile(m_tempInstallFile->fileName()), -1, KIO::Overwrite);
     m_tempCopyJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
     emit downloadingFileChanged();
 
@@ -487,7 +516,7 @@ void CursorThemeConfig::installThemeFile(const QString &path)
 
     // Extract the dir names of the cursor themes in the archive, and
     // append them to themeDirs
-    foreach(const QString &name, archiveDir->entries()) {
+    foreach (const QString &name, archiveDir->entries()) {
         const KArchiveEntry *entry = archiveDir->entry(name);
         if (entry->isDirectory() && entry->name().toLower() != "default") {
             const KArchiveDirectory *dir = static_cast<const KArchiveDirectory *>(entry);
@@ -513,12 +542,12 @@ void CursorThemeConfig::installThemeFile(const QString &path)
     foreach (const QString &dirName, themeDirs) {
         QDir dest(destDir + dirName);
         if (dest.exists()) {
-            QString question = i18n("A theme named %1 already exists in your icon "
-                    "theme folder. Do you want replace it with this one?", dirName);
+            QString question = i18n(
+                "A theme named %1 already exists in your icon "
+                "theme folder. Do you want replace it with this one?",
+                dirName);
 
-            int answer = KMessageBox::warningContinueCancel(nullptr, question,
-                                i18n("Overwrite Theme?"),
-                                KStandardGuiItem::overwrite());
+            int answer = KMessageBox::warningContinueCancel(nullptr, question, i18n("Overwrite Theme?"), KStandardGuiItem::overwrite());
 
             if (answer != KMessageBox::Continue) {
                 continue;
@@ -535,8 +564,7 @@ void CursorThemeConfig::installThemeFile(const QString &path)
         //     result in strange side effects (from the average users point of view). OTOH
         //     a user might want to do this 'upgrade' a global theme.
 
-        const KArchiveDirectory *dir = static_cast<const KArchiveDirectory*>
-                        (archiveDir->entry(dirName));
+        const KArchiveDirectory *dir = static_cast<const KArchiveDirectory *>(archiveDir->entry(dirName));
         dir->copyTo(dest.path());
         m_themeModel->addTheme(dest);
     }

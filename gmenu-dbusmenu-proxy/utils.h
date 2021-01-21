@@ -24,7 +24,6 @@
 
 namespace Utils
 {
-
 int treeStructureToInt(int subscription, int section, int index);
 void intToTreeStructure(int source, int &subscription, int &section, int &index);
 

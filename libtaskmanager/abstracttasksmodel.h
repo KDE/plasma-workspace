@@ -29,7 +29,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 /**
  * @short An abstract base class for (flat) tasks models.
  *
@@ -40,66 +39,65 @@ namespace TaskManager
  * @author Eike Hein <hein@kde.org>
  **/
 
-class TASKMANAGER_EXPORT AbstractTasksModel : public QAbstractListModel,
-    public AbstractTasksModelIface
+class TASKMANAGER_EXPORT AbstractTasksModel : public QAbstractListModel, public AbstractTasksModelIface
 {
     Q_OBJECT
 
 public:
     enum AdditionalRoles {
         AppId = Qt::UserRole + 1, /**< KService storage id (.desktop name sans extension). */
-        AppName,          /**< Application name. */
-        GenericName,      /**< Generic application name. */
-        LauncherUrl,      /**< URL that can be used to launch this application (.desktop or executable). */
+        AppName, /**< Application name. */
+        GenericName, /**< Generic application name. */
+        LauncherUrl, /**< URL that can be used to launch this application (.desktop or executable). */
         LauncherUrlWithoutIcon, /**< Special path to get a launcher URL while skipping fallback icon encoding. Used as speed optimization. */
-        WinIdList,        /**< NOTE: On Wayland, these ids are only useful within the same process. On X11, they are global window ids. */
-        MimeType,         /**< MIME type for this task (window, window group), needed for DND. */
-        MimeData,         /**< Data for MimeType. */
-        IsWindow,         /**< This is a window task. */
-        IsStartup,        /**< This is a startup task. */
-        IsLauncher,       /**< This is a launcher task. */
-        HasLauncher,      /**< A launcher exists for this task. Only implemented by TasksModel, not by either the single-type or munging tasks models. */
-        IsGroupParent,    /**< This is a parent item for a group of child tasks. */
-        ChildCount,       /**< The number of tasks in this group. */
-        IsGroupable,      /**< Whether this task is being ignored by grouping or not. */
-        IsActive,         /**< This is the currently active task. */
-        IsClosable,       /**< requestClose (see below) available. */
-        IsMovable,        /**< requestMove (see below) available. */
-        IsResizable,      /**< requestResize (see below) available. */
-        IsMaximizable,    /**< requestToggleMaximize (see below) available. */
-        IsMaximized,      /**< Task (i.e. window) is maximized. */
-        IsMinimizable,    /**< requestToggleMinimize (see below) available. */
-        IsMinimized,      /**< Task (i.e. window) is minimized. */
-        IsKeepAbove,      /**< Task (i.e. window) is keep-above. */
-        IsKeepBelow,      /**< Task (i.e. window) is keep-below. */
+        WinIdList, /**< NOTE: On Wayland, these ids are only useful within the same process. On X11, they are global window ids. */
+        MimeType, /**< MIME type for this task (window, window group), needed for DND. */
+        MimeData, /**< Data for MimeType. */
+        IsWindow, /**< This is a window task. */
+        IsStartup, /**< This is a startup task. */
+        IsLauncher, /**< This is a launcher task. */
+        HasLauncher, /**< A launcher exists for this task. Only implemented by TasksModel, not by either the single-type or munging tasks models. */
+        IsGroupParent, /**< This is a parent item for a group of child tasks. */
+        ChildCount, /**< The number of tasks in this group. */
+        IsGroupable, /**< Whether this task is being ignored by grouping or not. */
+        IsActive, /**< This is the currently active task. */
+        IsClosable, /**< requestClose (see below) available. */
+        IsMovable, /**< requestMove (see below) available. */
+        IsResizable, /**< requestResize (see below) available. */
+        IsMaximizable, /**< requestToggleMaximize (see below) available. */
+        IsMaximized, /**< Task (i.e. window) is maximized. */
+        IsMinimizable, /**< requestToggleMinimize (see below) available. */
+        IsMinimized, /**< Task (i.e. window) is minimized. */
+        IsKeepAbove, /**< Task (i.e. window) is keep-above. */
+        IsKeepBelow, /**< Task (i.e. window) is keep-below. */
         IsFullScreenable, /**< requestToggleFullScreen (see below) available. */
-        IsFullScreen,     /**< Task (i.e. window) is fullscreen. */
-        IsShadeable,      /**< requestToggleShade (see below) available. */
-        IsShaded,         /**< Task (i.e. window) is shaded. */
+        IsFullScreen, /**< Task (i.e. window) is fullscreen. */
+        IsShadeable, /**< requestToggleShade (see below) available. */
+        IsShaded, /**< Task (i.e. window) is shaded. */
         IsVirtualDesktopsChangeable, /**< requestVirtualDesktop (see below) available. */
-        VirtualDesktops,  /**< Virtual desktops for the task (i.e. window). */
+        VirtualDesktops, /**< Virtual desktops for the task (i.e. window). */
         IsOnAllVirtualDesktops, /**< Task is on all virtual desktops. */
-        Geometry,         /**< The task's geometry (i.e. the window's). */
-        ScreenGeometry,   /**< Screen geometry for the task (i.e. the window's screen). */
-        Activities,       /**< Activities for the task (i.e. window). */
+        Geometry, /**< The task's geometry (i.e. the window's). */
+        ScreenGeometry, /**< Screen geometry for the task (i.e. the window's screen). */
+        Activities, /**< Activities for the task (i.e. window). */
         IsDemandingAttention, /**< Task is demanding attention. */
-        SkipTaskbar,      /**< Task should not be shown in a 'task bar' user interface. */
-        SkipPager,        /**< Task should not to be shown in a 'pager' user interface. */
-        AppPid,           /**< Application Process ID. This is provided best-effort, and may not
-                               be what you expect: For window tasks owned by processes started
-                               from e.g. kwin_wayland, it would be the process id of kwin
-                               itself. DO NOT use this for destructive actions such as closing
-                               the application. The intended use case is to try and (smartly)
-                               gather more information about the task when needed. */
-        StackingOrder,    /**< A window task's index in the window stacking order. Care must be
-                               taken not to assume this index to be unique when iterating over
-                               model contents due to the asynchronous nature of the windowing
-                               system. */
-        LastActivated,    /**< The timestamp of the last time a task was the active task. */
+        SkipTaskbar, /**< Task should not be shown in a 'task bar' user interface. */
+        SkipPager, /**< Task should not to be shown in a 'pager' user interface. */
+        AppPid, /**< Application Process ID. This is provided best-effort, and may not
+                     be what you expect: For window tasks owned by processes started
+                     from e.g. kwin_wayland, it would be the process id of kwin
+                     itself. DO NOT use this for destructive actions such as closing
+                     the application. The intended use case is to try and (smartly)
+                     gather more information about the task when needed. */
+        StackingOrder, /**< A window task's index in the window stacking order. Care must be
+                            taken not to assume this index to be unique when iterating over
+                            model contents due to the asynchronous nature of the windowing
+                            system. */
+        LastActivated, /**< The timestamp of the last time a task was the active task. */
         ApplicationMenuServiceName, /**< The DBus service name for the application's menu.
                                          May be empty. @since 5.19 */
-        ApplicationMenuObjectPath,/**< The DBus object path for the application's menu.
-                                       May be empty. @since 5.19 */
+        ApplicationMenuObjectPath, /**< The DBus object path for the application's menu.
+                                        May be empty. @since 5.19 */
     };
     Q_ENUM(AdditionalRoles)
 
@@ -108,7 +106,7 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
-    QModelIndex	index(int row, int column = 0, const QModelIndex &parent = QModelIndex()) const override;
+    QModelIndex index(int row, int column = 0, const QModelIndex &parent = QModelIndex()) const override;
 
     /**
      * Request activation of the task at the given index. Derived classes are
@@ -301,8 +299,7 @@ public:
      * regard to extracting information from this, and should take care to
      * reject invalid objects.
      **/
-    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
-        QObject *delegate = nullptr) override;
+    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate = nullptr) override;
 };
 
 }

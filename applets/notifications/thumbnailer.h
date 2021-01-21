@@ -25,7 +25,6 @@
 #include <QSize>
 #include <QUrl>
 
-
 class Thumbnailer : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
@@ -89,5 +88,4 @@ private:
     QPixmap m_pixmap;
 
     QString m_iconName;
-
 };

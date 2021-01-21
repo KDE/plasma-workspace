@@ -36,13 +36,10 @@ QString GridLayoutManager::serializeLayout() const
     QString result;
 
     for (auto *item : layout()->childItems()) {
-        ItemContainer *itemCont = qobject_cast<ItemContainer*>(item);
+        ItemContainer *itemCont = qobject_cast<ItemContainer *>(item);
         if (itemCont && itemCont != layout()->placeHolder()) {
-            result += itemCont->key() + QLatin1Char(':')
-                + QString::number(itemCont->x()) + QLatin1Char(',')
-                + QString::number(itemCont->y()) + QLatin1Char(',')
-                + QString::number(itemCont->width()) + QLatin1Char(',')
-                + QString::number(itemCont->height()) + QLatin1Char(',')
+            result += itemCont->key() + QLatin1Char(':') + QString::number(itemCont->x()) + QLatin1Char(',') + QString::number(itemCont->y()) + QLatin1Char(',')
+                + QString::number(itemCont->width()) + QLatin1Char(',') + QString::number(itemCont->height()) + QLatin1Char(',')
                 + QString::number(itemCont->rotation()) + QLatin1Char(';');
         }
     }
@@ -79,20 +76,20 @@ bool GridLayoutManager::itemIsManaged(ItemContainer *item)
 inline void maintainItemEdgeAlignment(ItemContainer *item, const QRectF &newRect, const QRectF &oldRect)
 {
     const qreal leftDist = item->x() - oldRect.x();
-    const qreal hCenterDist = item->x() + item->width()/2 - oldRect.center().x();
+    const qreal hCenterDist = item->x() + item->width() / 2 - oldRect.center().x();
     const qreal rightDist = oldRect.right() - item->x() - item->width();
 
     qreal hMin = qMin(qMin(qAbs(leftDist), qAbs(hCenterDist)), qAbs(rightDist));
     if (qFuzzyCompare(hMin, qAbs(leftDist))) {
         // Right alignment, do nothing
     } else if (qFuzzyCompare(hMin, qAbs(hCenterDist))) {
-        item->setX(newRect.center().x() - item->width()/2 + hCenterDist);
+        item->setX(newRect.center().x() - item->width() / 2 + hCenterDist);
     } else if (qFuzzyCompare(hMin, qAbs(rightDist))) {
-        item->setX(newRect.right() - item->width() - rightDist );
+        item->setX(newRect.right() - item->width() - rightDist);
     }
 
     const qreal topDist = item->y() - oldRect.y();
-    const qreal vCenterDist = item->y() + item->height()/2 - oldRect.center().y();
+    const qreal vCenterDist = item->y() + item->height() / 2 - oldRect.center().y();
     const qreal bottomDist = oldRect.bottom() - item->y() - item->height();
 
     qreal vMin = qMin(qMin(qAbs(topDist), qAbs(vCenterDist)), qAbs(bottomDist));
@@ -100,9 +97,9 @@ inline void maintainItemEdgeAlignment(ItemContainer *item, const QRectF &newRect
     if (qFuzzyCompare(vMin, qAbs(topDist))) {
         // Top alignment, do nothing
     } else if (qFuzzyCompare(vMin, qAbs(vCenterDist))) {
-        item->setY(newRect.center().y() - item->height()/2 + vCenterDist);
+        item->setY(newRect.center().y() - item->height() / 2 + vCenterDist);
     } else if (qFuzzyCompare(vMin, qAbs(bottomDist))) {
-        item->setY(newRect.bottom() - item->height() - bottomDist );
+        item->setY(newRect.bottom() - item->height() - bottomDist);
     }
 }
 
@@ -112,7 +109,7 @@ void GridLayoutManager::layoutGeometryChanged(const QRectF &newGeometry, const Q
     m_pointsForItem.clear();
     for (auto *item : layout()->childItems()) {
         // Stash the old config
-        //m_parsedConfig[item->key()] = {item->x(), item->y(), item->width(), item->height(), item->rotation()};
+        // m_parsedConfig[item->key()] = {item->x(), item->y(), item->width(), item->height(), item->rotation()};
         // Move the item to maintain the distance with the anchors point
         auto *itemCont = qobject_cast<ItemContainer *>(item);
         if (itemCont && itemCont != layout()->placeHolder()) {
@@ -129,7 +126,7 @@ void GridLayoutManager::resetLayout()
     m_grid.clear();
     m_pointsForItem.clear();
     for (auto *item : layout()->childItems()) {
-        ItemContainer *itemCont = qobject_cast<ItemContainer*>(item);
+        ItemContainer *itemCont = qobject_cast<ItemContainer *>(item);
         if (itemCont && itemCont != layout()->placeHolder()) {
             // NOTE: do not use positionItemAndAssign here, because we do not want to emit layoutNeedsSaving, to not save after resize
             positionItem(itemCont);
@@ -145,7 +142,7 @@ void GridLayoutManager::resetLayoutFromConfig()
     QList<ItemContainer *> missingItems;
 
     for (auto *item : layout()->childItems()) {
-        ItemContainer *itemCont = qobject_cast<ItemContainer*>(item);
+        ItemContainer *itemCont = qobject_cast<ItemContainer *>(item);
         if (itemCont && itemCont != layout()->placeHolder()) {
             if (!restoreItem(itemCont)) {
                 missingItems << itemCont;
@@ -186,11 +183,11 @@ bool GridLayoutManager::restoreItem(ItemContainer *item)
 
 bool GridLayoutManager::isRectAvailable(const QRectF &rect)
 {
-    //TODO: define directions in which it can grow
+    // TODO: define directions in which it can grow
     if (rect.x() < 0 || rect.y() < 0 || rect.x() + rect.width() > layout()->width() || rect.y() + rect.height() > layout()->height()) {
         return false;
     }
-    
+
     const QRect cellItemGeom = cellBasedGeometry(rect);
 
     for (int row = cellItemGeom.top(); row <= cellItemGeom.bottom(); ++row) {
@@ -208,7 +205,7 @@ bool GridLayoutManager::assignSpaceImpl(ItemContainer *item)
     // Don't emit extra layoutneedssaving signals
     releaseSpaceImpl(item);
     if (!isRectAvailable(itemGeometry(item))) {
-        qWarning()<<"Trying to take space not available" << item;
+        qWarning() << "Trying to take space not available" << item;
         return false;
     }
 
@@ -224,10 +221,8 @@ bool GridLayoutManager::assignSpaceImpl(ItemContainer *item)
 
     // Reorder items tab order
     for (auto *i2 : layout()->childItems()) {
-        ItemContainer *item2 = qobject_cast<ItemContainer*>(i2);
-        if (item2 && item2->parentItem() == item->parentItem()
-            && item != item2 && item2 != layout()->placeHolder()
-            && item->y() < item2->y() + item2->height()
+        ItemContainer *item2 = qobject_cast<ItemContainer *>(i2);
+        if (item2 && item2->parentItem() == item->parentItem() && item != item2 && item2 != layout()->placeHolder() && item->y() < item2->y() + item2->height()
             && item->x() <= item2->x()) {
             item->stackBefore(item2);
             break;
@@ -327,30 +322,23 @@ void GridLayoutManager::adjustToItemSizeHints(ItemContainer *item)
 
 QRect GridLayoutManager::cellBasedGeometry(const QRectF &geom) const
 {
-    return QRect(
-        round(qBound(0.0, geom.x(), layout()->width() - geom.width()) / cellSize().width()),
-        round(qBound(0.0, geom.y(), layout()->height() - geom.height()) / cellSize().height()),
-        round((qreal)geom.width() / cellSize().width()),
-        round((qreal)geom.height() / cellSize().height())
-    );
+    return QRect(round(qBound(0.0, geom.x(), layout()->width() - geom.width()) / cellSize().width()),
+                 round(qBound(0.0, geom.y(), layout()->height() - geom.height()) / cellSize().height()),
+                 round((qreal)geom.width() / cellSize().width()),
+                 round((qreal)geom.height() / cellSize().height()));
 }
 
 QRect GridLayoutManager::cellBasedBoundingGeometry(const QRectF &geom) const
 {
-    return QRect(
-        floor(qBound(0.0, geom.x(), layout()->width() - geom.width()) / cellSize().width()),
-        floor(qBound(0.0, geom.y(), layout()->height() - geom.height()) / cellSize().height()),
-        ceil((qreal)geom.width() / cellSize().width()),
-        ceil((qreal)geom.height() / cellSize().height())
-    );
+    return QRect(floor(qBound(0.0, geom.x(), layout()->width() - geom.width()) / cellSize().width()),
+                 floor(qBound(0.0, geom.y(), layout()->height() - geom.height()) / cellSize().height()),
+                 ceil((qreal)geom.width() / cellSize().width()),
+                 ceil((qreal)geom.height() / cellSize().height()));
 }
 
 bool GridLayoutManager::isOutOfBounds(const QPair<int, int> &cell) const
 {
-    return cell.first < 0 
-        || cell.second < 0
-        || cell.first >= rows()
-        || cell.second >= columns();
+    return cell.first < 0 || cell.second < 0 || cell.first >= rows() || cell.second >= columns();
 }
 
 bool GridLayoutManager::isCellAvailable(const QPair<int, int> &cell) const
@@ -473,12 +461,9 @@ int GridLayoutManager::freeSpaceInDirection(const QPair<int, int> &cell, Applets
 }
 
 QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &minimumSize, AppletsLayout::PreferredLayoutDirection direction) const
-{  
+{
     // The mionimum size in grid units
-    const QSize minimumGridSize(
-        ceil((qreal)minimumSize.width() / cellSize().width()),
-        ceil((qreal)minimumSize.height() / cellSize().height())
-    );
+    const QSize minimumGridSize(ceil((qreal)minimumSize.width() / cellSize().width()), ceil((qreal)minimumSize.height() / cellSize().height()));
 
     QRect itemCellGeom = cellBasedGeometry(itemGeometry(item));
     itemCellGeom.setWidth(qMax(itemCellGeom.width(), minimumGridSize.width()));
@@ -498,13 +483,11 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
     }
 
     while (!isOutOfBounds(cell)) {
-
         if (direction == AppletsLayout::LeftToRight || direction == AppletsLayout::RightToLeft) {
             partialSize = QSize(INT_MAX, 0);
 
             int currentRow = cell.first;
             for (; currentRow < cell.first + itemCellGeom.height(); ++currentRow) {
-
                 const int freeRow = freeSpaceInDirection(QPair<int, int>(currentRow, cell.second), direction);
 
                 partialSize.setWidth(qMin(partialSize.width(), freeRow));
@@ -514,30 +497,23 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
                 } else if (partialSize.height() < minimumGridSize.height()) {
                     break;
                 }
-        
-                if (partialSize.width() >= itemCellGeom.width()
-                    && partialSize.height() >= itemCellGeom.height()) {
+
+                if (partialSize.width() >= itemCellGeom.width() && partialSize.height() >= itemCellGeom.height()) {
                     break;
                 } else if (partialSize.width() < minimumGridSize.width()) {
                     break;
                 }
             }
 
-            if (partialSize.width() >= minimumGridSize.width()
-            && partialSize.height() >= minimumGridSize.height()) {
-
+            if (partialSize.width() >= minimumGridSize.width() && partialSize.height() >= minimumGridSize.height()) {
                 const int width = qMin(itemCellGeom.width(), partialSize.width()) * cellSize().width();
                 const int height = qMin(itemCellGeom.height(), partialSize.height()) * cellSize().height();
 
-                if  (direction == AppletsLayout::RightToLeft) {
-                    return QRectF((cell.second + 1) * cellSize().width() - width,
-                        cell.first * cellSize().height(),
-                        width, height);
-                // AppletsLayout::LeftToRight
+                if (direction == AppletsLayout::RightToLeft) {
+                    return QRectF((cell.second + 1) * cellSize().width() - width, cell.first * cellSize().height(), width, height);
+                    // AppletsLayout::LeftToRight
                 } else {
-                    return QRectF(cell.second * cellSize().width(),
-                        cell.first * cellSize().height(),
-                        width, height);
+                    return QRectF(cell.second * cellSize().width(), cell.first * cellSize().height(), width, height);
                 }
             } else {
                 cell = nextAvailableCell(nextTakenCell(cell, direction), direction);
@@ -548,7 +524,6 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
 
             int currentColumn = cell.second;
             for (; currentColumn < cell.second + itemCellGeom.width(); ++currentColumn) {
-
                 const int freeColumn = freeSpaceInDirection(QPair<int, int>(cell.first, currentColumn), direction);
 
                 partialSize.setHeight(qMin(partialSize.height(), freeColumn));
@@ -558,30 +533,23 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
                 } else if (partialSize.width() < minimumGridSize.width()) {
                     break;
                 }
-        
-                if (partialSize.width() >= itemCellGeom.width()
-                    && partialSize.height() >= itemCellGeom.height()) {
+
+                if (partialSize.width() >= itemCellGeom.width() && partialSize.height() >= itemCellGeom.height()) {
                     break;
                 } else if (partialSize.height() < minimumGridSize.height()) {
                     break;
                 }
             }
 
-            if (partialSize.width() >= minimumGridSize.width()
-                && partialSize.height() >= minimumGridSize.height()) {
-
+            if (partialSize.width() >= minimumGridSize.width() && partialSize.height() >= minimumGridSize.height()) {
                 const int width = qMin(itemCellGeom.width(), partialSize.width()) * cellSize().width();
                 const int height = qMin(itemCellGeom.height(), partialSize.height()) * cellSize().height();
 
                 if (direction == AppletsLayout::BottomToTop) {
-                    return QRectF(cell.second * cellSize().width(),
-                        (cell.first + 1) * cellSize().height() - height,
-                        width, height);
-                // AppletsLayout::TopToBottom:
+                    return QRectF(cell.second * cellSize().width(), (cell.first + 1) * cellSize().height() - height, width, height);
+                    // AppletsLayout::TopToBottom:
                 } else {
-                    return QRectF(cell.second * cellSize().width(),
-                        cell.first * cellSize().height(),
-                        width, height);
+                    return QRectF(cell.second * cellSize().width(), cell.first * cellSize().height(), width, height);
                 }
             } else {
                 cell = nextAvailableCell(nextTakenCell(cell, direction), direction);
@@ -589,9 +557,8 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
         }
     }
 
-    //We didn't manage to find layout space, return invalid geometry
+    // We didn't manage to find layout space, return invalid geometry
     return QRectF();
 }
-
 
 #include "moc_gridlayoutmanager.cpp"

@@ -21,7 +21,6 @@
 
 #include <KPluginFactory>
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMLookandFeelFactory, "kcm_lookandfeel.json",
-                           registerPlugin<KCMLookandFeel>(); registerPlugin<LookAndFeelData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMLookandFeelFactory, "kcm_lookandfeel.json", registerPlugin<KCMLookandFeel>(); registerPlugin<LookAndFeelData>();)
 
 #include "kcmmain.moc"

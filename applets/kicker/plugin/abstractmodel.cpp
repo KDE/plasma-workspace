@@ -20,9 +20,10 @@
 #include "abstractmodel.h"
 #include "actionlist.h"
 
-AbstractModel::AbstractModel(QObject *parent) : QAbstractListModel(parent)
-, m_favoritesModel(nullptr)
-, m_iconSize(32)
+AbstractModel::AbstractModel(QObject *parent)
+    : QAbstractListModel(parent)
+    , m_favoritesModel(nullptr)
+    , m_iconSize(32)
 {
 }
 
@@ -73,7 +74,8 @@ int AbstractModel::iconSize() const
     return m_iconSize;
 }
 
-void AbstractModel::setIconSize(int iconSize) {
+void AbstractModel::setIconSize(int iconSize)
+{
     if (m_iconSize != iconSize) {
         m_iconSize = iconSize;
         refresh();
@@ -113,7 +115,7 @@ QVariantList AbstractModel::actions() const
     return QVariantList();
 }
 
-AbstractModel* AbstractModel::favoritesModel()
+AbstractModel *AbstractModel::favoritesModel()
 {
     if (m_favoritesModel) {
         return m_favoritesModel;
@@ -137,7 +139,7 @@ void AbstractModel::setFavoritesModel(AbstractModel *model)
     }
 }
 
-AbstractModel* AbstractModel::rootModel()
+AbstractModel *AbstractModel::rootModel()
 {
     if (!parent()) {
         return nullptr;

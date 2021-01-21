@@ -27,18 +27,16 @@ class ModelJob : public Plasma::ServiceJob
     Q_OBJECT
 
 public:
-    ModelJob(QObject* parent, KFilePlacesModel* model,
-             const QModelIndex& index, const QString& operation,
-             const QVariantMap& parameters = QVariantMap())
+    ModelJob(QObject *parent, KFilePlacesModel *model, const QModelIndex &index, const QString &operation, const QVariantMap &parameters = QVariantMap())
         : ServiceJob(QString::number(index.row()), operation, parameters, parent)
         , m_model(model)
         , m_index(index)
-    {}
+    {
+    }
 
 protected:
-    KFilePlacesModel* m_model;
+    KFilePlacesModel *m_model;
     QModelIndex m_index;
 };
 
 #endif // MODELJOB_H
-

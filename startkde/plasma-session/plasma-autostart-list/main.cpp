@@ -17,17 +17,17 @@
    Boston, MA 02110-1301, USA.
 */
 
+#include "../autostart.h"
 #include <QCoreApplication>
 #include <QDebug>
-#include "../autostart.h"
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
     AutoStart as;
 
     QTextStream cout(stdout);
-    auto printPhase = [&cout, &as] (int phase) -> bool {
+    auto printPhase = [&cout, &as](int phase) -> bool {
         AutoStart asN(as);
         asN.setPhase(phase);
         cout << "phase: " << phase << '\n';

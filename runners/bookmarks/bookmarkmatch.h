@@ -18,29 +18,34 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef BOOKMARKMATCH_H
 #define BOOKMARKMATCH_H
 
-#include <QString>
-#include <QList>
 #include <KRunner/QueryMatch>
 #include <QIcon>
+#include <QList>
+#include <QString>
 
 class BookmarkMatch
 {
 public:
-    BookmarkMatch(const QIcon &icon, const QString &searchTerm, const QString &bookmarkTitle, const QString &bookmarkURL, const QString &description = QString());
-    void addTo(QList< BookmarkMatch >& listOfResults, bool addEvenOnNoMatch);
+    BookmarkMatch(const QIcon &icon,
+                  const QString &searchTerm,
+                  const QString &bookmarkTitle,
+                  const QString &bookmarkURL,
+                  const QString &description = QString());
+    void addTo(QList<BookmarkMatch> &listOfResults, bool addEvenOnNoMatch);
     Plasma::QueryMatch asQueryMatch(Plasma::AbstractRunner *runner);
+
 private:
     bool matches(const QString &search, const QString &matchingField);
+
 private:
-  QIcon m_icon;
-  QString m_searchTerm;
-  QString m_bookmarkTitle;
-  QString m_bookmarkURL;
-  QString m_description;
+    QIcon m_icon;
+    QString m_searchTerm;
+    QString m_bookmarkTitle;
+    QString m_bookmarkURL;
+    QString m_description;
 };
 
 #endif // BOOKMARKMATCH_H

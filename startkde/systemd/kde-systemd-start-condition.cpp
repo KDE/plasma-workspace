@@ -17,10 +17,10 @@
 
 */
 
-#include <kautostart.h>
 #include <QCommandLineOption>
 #include <QCommandLineParser>
 #include <QCoreApplication>
+#include <kautostart.h>
 
 int main(int argc, char **argv)
 {
@@ -29,8 +29,8 @@ int main(int argc, char **argv)
     parser.setApplicationDescription(QStringLiteral("Checks start condition for a KDE systemd service"));
     parser.addHelpOption();
     QCommandLineOption option{QStringLiteral("condition"),
-        QStringLiteral("start condition, in the format 'rcfile:group:entry:default'."),
-        QStringLiteral("condition")};
+                              QStringLiteral("start condition, in the format 'rcfile:group:entry:default'."),
+                              QStringLiteral("condition")};
     parser.addOption(option);
     parser.process(app);
 

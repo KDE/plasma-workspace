@@ -20,18 +20,16 @@
 
 #pragma once
 
-#include <QString>
 #include <QModelIndex>
+#include <QString>
 
 class QAbstractItemModel;
 class QDBusConnection;
 
 namespace NotificationManager
 {
-
 namespace Utils
 {
-
 QHash<int, QByteArray> roleNames();
 
 QString processNameFromPid(uint pid);

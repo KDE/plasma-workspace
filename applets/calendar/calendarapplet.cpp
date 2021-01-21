@@ -26,7 +26,6 @@
 CalendarApplet::CalendarApplet(QObject *parent, const QVariantList &data)
     : Plasma::Applet(parent, data)
 {
-
 }
 
 CalendarApplet::~CalendarApplet()

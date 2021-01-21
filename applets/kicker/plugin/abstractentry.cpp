@@ -22,7 +22,7 @@
 #include <QDebug>
 
 AbstractEntry::AbstractEntry(AbstractModel *owner)
-: m_owner(owner)
+    : m_owner(owner)
 {
 }
 
@@ -49,7 +49,6 @@ QString AbstractEntry::name() const
 {
     return QString();
 }
-
 
 QString AbstractEntry::group() const
 {
@@ -91,7 +90,7 @@ QVariantList AbstractEntry::actions() const
     return QVariantList();
 }
 
-bool AbstractEntry::run(const QString& actionId, const QVariant &argument)
+bool AbstractEntry::run(const QString &actionId, const QVariant &argument)
 {
     Q_UNUSED(actionId)
     Q_UNUSED(argument)
@@ -99,10 +98,12 @@ bool AbstractEntry::run(const QString& actionId, const QVariant &argument)
     return false;
 }
 
-AbstractGroupEntry::AbstractGroupEntry(AbstractModel *owner) : AbstractEntry(owner)
+AbstractGroupEntry::AbstractGroupEntry(AbstractModel *owner)
+    : AbstractEntry(owner)
 {
 }
 
-SeparatorEntry::SeparatorEntry(AbstractModel *owner) : AbstractEntry(owner)
+SeparatorEntry::SeparatorEntry(AbstractModel *owner)
+    : AbstractEntry(owner)
 {
 }

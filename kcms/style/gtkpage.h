@@ -20,8 +20,8 @@
 
 #pragma once
 
-#include <QObject>
 #include <QDBusInterface>
+#include <QObject>
 #include <QQmlListReference>
 
 #include "gtkthemesmodel.h"

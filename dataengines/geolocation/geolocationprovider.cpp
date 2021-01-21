@@ -18,13 +18,13 @@
 #include "geolocationprovider.h"
 
 GeolocationProvider::GeolocationProvider(QObject *parent, const QVariantList &args)
-    : QObject(parent),
-      m_sharedData(nullptr),
-      m_sharedAccuracies(nullptr),
-      m_accuracy(1000),
-      m_updateTriggers(SourceEvent),
-      m_available(true),
-      m_updating(false)
+    : QObject(parent)
+    , m_sharedData(nullptr)
+    , m_sharedAccuracies(nullptr)
+    , m_accuracy(1000)
+    , m_updateTriggers(SourceEvent)
+    , m_available(true)
+    , m_updating(false)
 {
     Q_UNUSED(args)
     m_updateTimer.setSingleShot(true);
@@ -132,5 +132,3 @@ void GeolocationProvider::init()
 void GeolocationProvider::update()
 {
 }
-
-

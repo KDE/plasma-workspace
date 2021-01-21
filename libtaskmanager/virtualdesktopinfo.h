@@ -27,7 +27,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 /**
  * @short Provides basic virtual desktop information. The underlying windowing
  * system is abstracted away.

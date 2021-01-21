@@ -20,9 +20,9 @@
 
 #include <KRun>
 
-AppJob::AppJob(AppSource *source, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent) :
-    ServiceJob(source->objectName(), operation, parameters, parent),
-    m_source(source)
+AppJob::AppJob(AppSource *source, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent)
+    : ServiceJob(source->objectName(), operation, parameters, parent)
+    , m_source(source)
 {
 }
 
@@ -41,5 +41,3 @@ void AppJob::start()
     }
     setResult(false);
 }
-
-

@@ -27,14 +27,13 @@ class PackagekitJob : public Plasma::ServiceJob
 {
     Q_OBJECT
 public:
-    PackagekitJob(const QString& destination, const QString& operation, const QMap< QString, QVariant >& parameters, QObject* parent = nullptr);
+    PackagekitJob(const QString &destination, const QString &operation, const QMap<QString, QVariant> &parameters, QObject *parent = nullptr);
     ~PackagekitJob() override;
 
 protected:
     void start() override;
 
 private:
-
 };
 
 #endif // PACKAGEKITJOB_H

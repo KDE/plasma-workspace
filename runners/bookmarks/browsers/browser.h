@@ -21,37 +21,44 @@
 #ifndef BROWSER_H
 #define BROWSER_H
 
-#include <QObject>
+#include "bookmarkmatch.h"
+#include <QDateTime>
 #include <QFile>
 #include <QFileInfo>
-#include <QDateTime>
-#include <QString>
-#include <QJsonObject>
-#include <QJsonDocument>
 #include <QJsonArray>
-#include "bookmarkmatch.h"
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QObject>
+#include <QString>
 
 class Browser
 {
 public:
-    virtual ~Browser() {}
-    virtual QList<BookmarkMatch> match(const QString& term, bool addEveryThing) = 0;
-    virtual void prepare() {}
+    virtual ~Browser()
+    {
+    }
+    virtual QList<BookmarkMatch> match(const QString &term, bool addEveryThing) = 0;
+    virtual void prepare()
+    {
+    }
 
-    enum CacheResult{
+    enum CacheResult {
         Error,
         Copied,
         Unchanged,
     };
 
 public Q_SLOTS:
-    virtual void teardown() {}
+    virtual void teardown()
+    {
+    }
 
 protected:
     /*
      * Updates the cached file if the source has been modified
-    */
-    CacheResult updateCacheFile(const QString &source, const QString &cache) {
+     */
+    CacheResult updateCacheFile(const QString &source, const QString &cache)
+    {
         if (source.isEmpty() || cache.isEmpty()) {
             return Error;
         }
@@ -68,7 +75,8 @@ protected:
         return Unchanged;
     }
 
-    QJsonArray readChromeFormatBookmarks(const QString &path) {
+    QJsonArray readChromeFormatBookmarks(const QString &path)
+    {
         QJsonArray bookmarks;
         QFile bookmarksFile(path);
         if (!bookmarksFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -90,7 +98,8 @@ protected:
     }
 
 private:
-    void parseFolder(const QJsonObject &obj, QJsonArray &bookmarks) {
+    void parseFolder(const QJsonObject &obj, QJsonArray &bookmarks)
+    {
         const QJsonArray children = obj.value(QStringLiteral("children")).toArray();
         for (const QJsonValue &child : children) {
             const QJsonObject entry = child.toObject();
@@ -102,6 +111,5 @@ private:
         }
     }
 };
-
 
 #endif // BROWSER_H

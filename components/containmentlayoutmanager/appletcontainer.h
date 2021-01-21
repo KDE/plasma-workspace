@@ -22,15 +22,15 @@
 
 #include "itemcontainer.h"
 
-#include <QQmlParserStatus>
 #include <QPointer>
+#include <QQmlParserStatus>
 
-
-namespace PlasmaQuick {
-    class AppletQuickItem;
+namespace PlasmaQuick
+{
+class AppletQuickItem;
 }
 
-class AppletContainer: public ItemContainer
+class AppletContainer : public ItemContainer
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
@@ -39,7 +39,8 @@ class AppletContainer: public ItemContainer
 
     Q_PROPERTY(QQmlComponent *busyIndicatorComponent READ busyIndicatorComponent WRITE setBusyIndicatorComponent NOTIFY busyIndicatorComponentChanged)
 
-    Q_PROPERTY(QQmlComponent *configurationRequiredComponent READ configurationRequiredComponent WRITE setConfigurationRequiredComponent NOTIFY configurationRequiredComponentChanged)
+    Q_PROPERTY(QQmlComponent *configurationRequiredComponent READ configurationRequiredComponent WRITE setConfigurationRequiredComponent NOTIFY
+                   configurationRequiredComponentChanged)
 
 public:
     AppletContainer(QQuickItem *parent = nullptr);
@@ -71,4 +72,3 @@ private:
     QPointer<QQmlComponent> m_configurationRequiredComponent;
     QQuickItem *m_configurationRequiredItem = nullptr;
 };
-

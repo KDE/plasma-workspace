@@ -28,7 +28,7 @@ ConfigOverlay::ConfigOverlay(QQuickItem *parent)
     m_hideTimer = new QTimer(this);
     m_hideTimer->setSingleShot(true);
     m_hideTimer->setInterval(600);
-    connect(m_hideTimer, &QTimer::timeout, this, [this] () {
+    connect(m_hideTimer, &QTimer::timeout, this, [this]() {
         setVisible(false);
     });
 }
@@ -104,26 +104,26 @@ void ConfigOverlay::setItemContainer(ItemContainer *container)
     emit topAvailableSpaceChanged();
     emit bottomAvailableSpaceChanged();
 
-    connect(m_itemContainer.data(), &ItemContainer::xChanged, this, [this] () {
+    connect(m_itemContainer.data(), &ItemContainer::xChanged, this, [this]() {
         m_leftAvailableSpace = qMax(0.0, m_itemContainer->x());
         m_rightAvailableSpace = qMax(0.0, m_itemContainer->layout()->width() - (m_itemContainer->x() + m_itemContainer->width()));
         emit leftAvailableSpaceChanged();
         emit rightAvailableSpaceChanged();
     });
 
-    connect(m_itemContainer.data(), &ItemContainer::yChanged, this, [this] () {
+    connect(m_itemContainer.data(), &ItemContainer::yChanged, this, [this]() {
         m_topAvailableSpace = qMax(0.0, m_itemContainer->y());
         m_bottomAvailableSpace = qMax(0.0, m_itemContainer->layout()->height() - (m_itemContainer->y() + m_itemContainer->height()));
         emit topAvailableSpaceChanged();
         emit bottomAvailableSpaceChanged();
     });
 
-    connect(m_itemContainer.data(), &ItemContainer::widthChanged, this, [this] () {
+    connect(m_itemContainer.data(), &ItemContainer::widthChanged, this, [this]() {
         m_rightAvailableSpace = qMax(0.0, m_itemContainer->layout()->width() - (m_itemContainer->x() + m_itemContainer->width()));
         emit rightAvailableSpaceChanged();
     });
 
-    connect(m_itemContainer.data(), &ItemContainer::heightChanged, this, [this] () {
+    connect(m_itemContainer.data(), &ItemContainer::heightChanged, this, [this]() {
         m_bottomAvailableSpace = qMax(0.0, m_itemContainer->layout()->height() - (m_itemContainer->y() + m_itemContainer->height()));
         emit bottomAvailableSpaceChanged();
     });

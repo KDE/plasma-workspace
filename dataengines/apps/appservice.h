@@ -31,18 +31,17 @@
  */
 class AppService : public Plasma::Service
 {
-
     Q_OBJECT
 
-    public:
-        explicit AppService(AppSource *source);
-        ~AppService() override;
+public:
+    explicit AppService(AppSource *source);
+    ~AppService() override;
 
-    protected:
-        Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+protected:
+    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
-    private:
-        AppSource *m_source;
+private:
+    AppSource *m_source;
 };
 
 #endif // APPSERVICE_H

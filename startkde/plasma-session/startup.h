@@ -24,57 +24,59 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #pragma once
 
-#include <QObject>
 #include <KJob>
+#include <QObject>
 #include <QProcessEnvironment>
 
 #include "autostart.h"
 
 class Startup : public QObject
 {
-Q_OBJECT
+    Q_OBJECT
 public:
     Startup(QObject *parent);
-    void upAndRunning( const QString& msg );
+    void upAndRunning(const QString &msg);
     void finishStartup();
 public Q_SLOTS:
     // alternatively we could drop this and have a rule that we /always/ launch everything through klauncher
     // need resolution from frameworks discussion on kdeinit
     void updateLaunchEnv(const QString &key, const QString &value);
+
 private:
     void autoStart(int phase);
 };
 
-class SleepJob: public KJob
+class SleepJob : public KJob
 {
-Q_OBJECT
+    Q_OBJECT
 public:
     SleepJob();
     void start() override;
 };
 
-class KCMInitJob: public KJob
+class KCMInitJob : public KJob
 {
-Q_OBJECT
+    Q_OBJECT
 public:
     KCMInitJob();
     void start() override;
 };
 
-class KDEDInitJob: public KJob
+class KDEDInitJob : public KJob
 {
-Q_OBJECT
+    Q_OBJECT
 public:
     KDEDInitJob();
     void start() override;
 };
 
-class AutoStartAppsJob: public KJob
+class AutoStartAppsJob : public KJob
 {
-Q_OBJECT
+    Q_OBJECT
 public:
     AutoStartAppsJob(const AutoStart &autoStart, int phase);
     void start() override;
+
 private:
     AutoStart m_autoStart;
 };
@@ -82,22 +84,21 @@ private:
 /**
  * Launches a process, and waits for the process to start
  */
-class StartProcessJob: public KJob
+class StartProcessJob : public KJob
 {
     Q_OBJECT
 public:
-    StartProcessJob(const QString &process,
-                    const QStringList &args,
-                    const QProcessEnvironment &additionalEnv = QProcessEnvironment());
+    StartProcessJob(const QString &process, const QStringList &args, const QProcessEnvironment &additionalEnv = QProcessEnvironment());
     void start() override;
+
 private:
-    QProcess* m_process;
+    QProcess *m_process;
 };
 
 /**
  * Launches a process, and waits for the service to appear on the session bus
  */
-class StartServiceJob: public KJob
+class StartServiceJob : public KJob
 {
     Q_OBJECT
 public:
@@ -106,18 +107,19 @@ public:
                     const QString &serviceId,
                     const QProcessEnvironment &additionalEnv = QProcessEnvironment());
     void start() override;
+
 private:
-    QProcess* m_process;
+    QProcess *m_process;
     const QString m_serviceId;
     const QProcessEnvironment m_additionalEnv;
 };
 
-class RestoreSessionJob: public KJob
+class RestoreSessionJob : public KJob
 {
-Q_OBJECT
+    Q_OBJECT
 public:
-   RestoreSessionJob();
-   void start() override;
+    RestoreSessionJob();
+    void start() override;
+
 private:
 };
-

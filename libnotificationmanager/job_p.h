@@ -20,25 +20,23 @@
 
 #pragma once
 
-#include <QObject>
 #include <QDBusContext>
 #include <QDBusObjectPath>
 #include <QDBusVariant>
 #include <QDateTime>
+#include <QObject>
 #include <QSharedPointer>
 #include <QString>
 #include <QUrl>
 
-#include "notifications.h"
 #include "job.h"
+#include "notifications.h"
 
 class QTimer;
 class KFilePlacesModel;
 
 namespace NotificationManager
 {
-
-
 class JobPrivate : public QObject, protected QDBusContext
 {
     Q_OBJECT
@@ -87,22 +85,17 @@ signals:
 private:
     friend class Job;
 
-    template<typename T> bool updateField(const T &newValue,
-                                          T &target,
-                                          void (Job::*changeSignal)())
+    template<typename T> bool updateField(const T &newValue, T &target, void (Job::*changeSignal)())
     {
         if (target != newValue) {
             target = newValue;
-            emit ((static_cast<Job *>(parent()))->*changeSignal)();
+            emit((static_cast<Job *>(parent()))->*changeSignal)();
             return true;
         }
         return false;
     }
 
-    template<typename T> bool updateFieldFromProperties(const QVariantMap &properties,
-                                                        const QString &keyName,
-                                                        T &target,
-                                                        void (Job::*changeSignal)())
+    template<typename T> bool updateFieldFromProperties(const QVariantMap &properties, const QString &keyName, T &target, void (Job::*changeSignal)())
     {
         auto it = properties.find(keyName);
         if (it == properties.end()) {
@@ -169,7 +162,6 @@ private:
     bool m_dismissed = false;
 
     mutable QSharedPointer<KFilePlacesModel> m_placesModel;
-
 };
 
 } // namespace NotificationManager

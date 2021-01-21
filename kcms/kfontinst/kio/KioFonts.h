@@ -32,17 +32,14 @@ class QUrl;
 
 namespace KFI
 {
-
 class Family;
 class Style;
 class FontInstInterface;
 
 class CKioFonts : public KIO::SlaveBase
 {
-    public:
-
-    enum EFolder
-    {
+public:
+    enum EFolder {
         FOLDER_USER,
         FOLDER_SYS,
         FOLDER_ROOT,
@@ -61,23 +58,21 @@ class CKioFonts : public KIO::SlaveBase
     void stat(const QUrl &url) override;
     void special(const QByteArray &a) override;
 
-    private:
-
-    int     listFolder(KIO::UDSEntry &entry, EFolder folder);
+private:
+    int listFolder(KIO::UDSEntry &entry, EFolder folder);
     QString getUserName(uid_t uid);
     QString getGroupName(gid_t gid);
-    bool    createStatEntry(KIO::UDSEntry &entry, const QUrl &url, EFolder folder);
-    void    createUDSEntry(KIO::UDSEntry &entry, EFolder folder);
-    bool    createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Family &family, const Style &style);
-    Family  getFont(const QUrl &url, EFolder folder);
-    void    handleResp(int resp, const QString &file, const QString &tempFile=QString(), bool destIsSystem=false);
+    bool createStatEntry(KIO::UDSEntry &entry, const QUrl &url, EFolder folder);
+    void createUDSEntry(KIO::UDSEntry &entry, EFolder folder);
+    bool createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Family &family, const Style &style);
+    Family getFont(const QUrl &url, EFolder folder);
+    void handleResp(int resp, const QString &file, const QString &tempFile = QString(), bool destIsSystem = false);
 
-    private:
-
-    FontInstInterface       *itsInterface;
-    QTemporaryDir           *itsTempDir;
-    QHash<uid_t, QString>   itsUserCache;
-    QHash<gid_t, QString>   itsGroupCache;
+private:
+    FontInstInterface *itsInterface;
+    QTemporaryDir *itsTempDir;
+    QHash<uid_t, QString> itsUserCache;
+    QHash<gid_t, QString> itsGroupCache;
 };
 
 }

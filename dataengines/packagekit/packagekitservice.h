@@ -23,13 +23,12 @@
 
 #include <Plasma/Service>
 
-
 class PackagekitService : public Plasma::Service
 {
     Q_OBJECT
 public:
-    explicit PackagekitService(QObject* parent = nullptr);
-    Plasma::ServiceJob* createJob(const QString& operation, QMap< QString, QVariant >& parameters) override;
+    explicit PackagekitService(QObject *parent = nullptr);
+    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 };
 
 #endif // PACKAGEKITSERVICE_H

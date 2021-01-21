@@ -21,8 +21,8 @@
 #include <QTimer>
 
 #include <KActivities/Consumer>
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
 int main(int argc, char **argv)
 {
@@ -38,8 +38,7 @@ int main(int argc, char **argv)
     // Migrate history to activity aware config
     auto consumer = new KActivities::Consumer();
     // Wait a bit for consumer to be initialized
-    QObject::connect(consumer, &KActivities::Consumer::serviceStatusChanged, consumer,
-     [consumer, newStateLocation, krunnerrc](){
+    QObject::connect(consumer, &KActivities::Consumer::serviceStatusChanged, consumer, [consumer, newStateLocation, krunnerrc]() {
         const QString history = krunnerrc->group("General").readEntry("history");
         QStringList activities = consumer->activities();
         if (activities.isEmpty()) {

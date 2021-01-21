@@ -22,34 +22,38 @@
 
 #include "abstractentry.h"
 
-namespace KPeople {
-    class PersonData;
+namespace KPeople
+{
+class PersonData;
 }
 
 class ContactEntry : public AbstractEntry
 {
-    public:
-        explicit ContactEntry(AbstractModel *owner, const QString &id);
+public:
+    explicit ContactEntry(AbstractModel *owner, const QString &id);
 
-        EntryType type() const override { return RunnableType; }
+    EntryType type() const override
+    {
+        return RunnableType;
+    }
 
-        bool isValid() const override;
+    bool isValid() const override;
 
-        QIcon icon() const override;
-        QString name() const override;
+    QIcon icon() const override;
+    QString name() const override;
 
-        QString id() const override;
-        QUrl url() const override;
+    QString id() const override;
+    QUrl url() const override;
 
-        bool hasActions() const override;
-        QVariantList actions() const override;
+    bool hasActions() const override;
+    QVariantList actions() const override;
 
-        bool run(const QString& actionId = QString(), const QVariant &argument = QVariant()) override;
+    bool run(const QString &actionId = QString(), const QVariant &argument = QVariant()) override;
 
-        static void showPersonDetailsDialog(const QString &id);
+    static void showPersonDetailsDialog(const QString &id);
 
-    private:
-        KPeople::PersonData *m_personData;
+private:
+    KPeople::PersonData *m_personData;
 };
 
 #endif

@@ -36,8 +36,7 @@ public:
     explicit MultiplexedService(Multiplexer *multiplexer, QObject *parent = nullptr);
 
 protected:
-    Plasma::ServiceJob *createJob(const QString &operation,
-                                  QMap<QString,QVariant> &parameters) override;
+    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 public Q_SLOTS:
     void enableGlobalShortcuts();

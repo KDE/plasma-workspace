@@ -24,7 +24,7 @@
 
 #include "configoverlay.h"
 
-class ResizeHandle: public QQuickItem
+class ResizeHandle : public QQuickItem
 {
     Q_OBJECT
     Q_PROPERTY(Corner resizeCorner MEMBER m_resizeCorner NOTIFY resizeCornerChanged)
@@ -74,4 +74,3 @@ private:
     bool m_resizeWidthBlocked = false;
     bool m_resizeHeightBlocked = false;
 };
-

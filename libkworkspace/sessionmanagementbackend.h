@@ -126,12 +126,17 @@ public:
     void shutdown() override;
     void reboot() override;
     void suspend() override;
-    void hybridSuspend() override {}
+    void hybridSuspend() override
+    {
+    }
     void hibernate() override;
     bool canShutdown() const override;
     bool canReboot() const override;
     bool canSuspend() const override;
-    bool canHybridSuspend() const override { return false; }
+    bool canHybridSuspend() const override
+    {
+        return false;
+    }
     bool canHibernate() const override;
 
 private:
@@ -152,15 +157,43 @@ class DummySessionBackend : public SessionBackend
 public:
     DummySessionBackend();
 
-    SessionManagement::State state() const override { return SessionManagement::State::Error; }
-    void shutdown() override {}
-    void reboot() override {}
-    void suspend() override {}
-    void hybridSuspend() override {}
-    void hibernate() override {}
-    bool canShutdown() const override { return false; }
-    bool canReboot() const override { return false; }
-    bool canSuspend() const override { return false; }
-    bool canHybridSuspend() const override { return false; }
-    bool canHibernate() const override { return false; }
+    SessionManagement::State state() const override
+    {
+        return SessionManagement::State::Error;
+    }
+    void shutdown() override
+    {
+    }
+    void reboot() override
+    {
+    }
+    void suspend() override
+    {
+    }
+    void hybridSuspend() override
+    {
+    }
+    void hibernate() override
+    {
+    }
+    bool canShutdown() const override
+    {
+        return false;
+    }
+    bool canReboot() const override
+    {
+        return false;
+    }
+    bool canSuspend() const override
+    {
+        return false;
+    }
+    bool canHybridSuspend() const override
+    {
+        return false;
+    }
+    bool canHibernate() const override
+    {
+        return false;
+    }
 };

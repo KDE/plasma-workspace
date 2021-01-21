@@ -17,7 +17,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #include "splashapp.h"
 #include <QQuickWindow>
 
@@ -40,13 +39,13 @@ void logMessageHandler(QtMsgType type, const char *msg)
         break;
     case QtWarningMsg:
         txt = QStringLiteral("Warning: %1").arg(msg);
-    break;
+        break;
     case QtCriticalMsg:
         txt = QStringLiteral("Critical: %1").arg(msg);
-    break;
+        break;
     case QtFatalMsg:
         txt = QStringLiteral("Fatal: %1").arg(msg);
-    break;
+        break;
     }
     QFile outFile(QStringLiteral("/tmp/ksplash"));
     outFile.open(QIODevice::WriteOnly | QIODevice::Append);
@@ -62,13 +61,12 @@ int main(int argc, char **argv)
         if (strcmp("--test", argv[i]) == 0 || strcmp("--help", argv[i]) == 0)
             test = true;
     }
-    //enable to send log output to /tmp/ksplash
-    //which is useful for debugging
-//     qInstallMsgHandler(myMessageHandler);
+    // enable to send log output to /tmp/ksplash
+    // which is useful for debugging
+    //     qInstallMsgHandler(myMessageHandler);
     KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);
     SplashApp app(argc, argv);
 
     return app.exec();
 }
-

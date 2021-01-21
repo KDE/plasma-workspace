@@ -20,8 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "../colorcorrectconstants.h"
 
 #include <QObject>
-#include <QVariant>
 #include <QTime>
+#include <QVariant>
 
 using namespace ColorCorrect;
 
@@ -59,8 +59,8 @@ public:
     double longitudeFixed = 0;
 
     bool timingsEnabled = true;
-    QTime morningBeginFixed = QTime(6,0,0);
-    QTime eveningBeginFixed = QTime(18,0,0);
+    QTime morningBeginFixed = QTime(6, 0, 0);
+    QTime eveningBeginFixed = QTime(18, 0, 0);
     int transitionTime = FALLBACK_SLOW_UPDATE_TIME;
 
     bool configChangeExpectSuccess;
@@ -77,4 +77,4 @@ private:
     QHash<QString, QVariant> getData();
 };
 
-#endif //COLORCORRECT_AUTOTESTS_MOCK_KWIN_H
+#endif // COLORCORRECT_AUTOTESTS_MOCK_KWIN_H

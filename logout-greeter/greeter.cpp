@@ -25,21 +25,21 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include "greeter.h"
 
+#include <QApplication>
 #include <QDebug>
 #include <QScreen>
-#include <QApplication>
 
 #include "shutdowndlg.h"
 
-#include "logoutpromptadaptor.h"
 #include "ksmserveriface.h"
+#include "logoutpromptadaptor.h"
 
 #include <KQuickAddons/QtQuickSettings>
 #include <KWindowSystem>
 
 #include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/registry.h>
 #include <KWayland/Client/plasmashell.h>
+#include <KWayland/Client/registry.h>
 
 Greeter::Greeter()
     : QObject()
@@ -67,11 +67,9 @@ void Greeter::setupWaylandIntegration()
     }
     Registry *registry = new Registry(this);
     registry->create(connection);
-    connect(registry, &Registry::plasmaShellAnnounced, this,
-        [this, registry] (quint32 name, quint32 version) {
-            m_waylandPlasmaShell = registry->createPlasmaShell(name, version, this);
-        }
-    );
+    connect(registry, &Registry::plasmaShellAnnounced, this, [this, registry](quint32 name, quint32 version) {
+        m_waylandPlasmaShell = registry->createPlasmaShell(name, version, this);
+    });
     registry->setup();
     connection->roundtrip();
 }
@@ -80,14 +78,14 @@ void Greeter::init()
 {
     setupWaylandIntegration();
     const auto screens = qApp->screens();
-    for (QScreen *screen: screens) {
+    for (QScreen *screen : screens) {
         adoptScreen(screen);
     }
     connect(qApp, &QGuiApplication::screenAdded, this, &Greeter::adoptScreen);
     m_running = true;
 }
 
-void Greeter::adoptScreen(QScreen* screen)
+void Greeter::adoptScreen(QScreen *screen)
 {
     // TODO: last argument is the theme, maybe add command line option for it?
     KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownType, m_waylandPlasmaShell);
@@ -114,10 +112,10 @@ void Greeter::rejected()
 
 bool Greeter::eventFilter(QObject *watched, QEvent *event)
 {
-    if (qobject_cast<KSMShutdownDlg*>(watched)) {
+    if (qobject_cast<KSMShutdownDlg *>(watched)) {
         if (event->type() == QEvent::MouseButtonPress) {
             // check that the position is on no window
-            QMouseEvent *me = static_cast<QMouseEvent*>(event);
+            QMouseEvent *me = static_cast<QMouseEvent *>(event);
             for (auto it = m_dialogs.constBegin(); it != m_dialogs.constEnd(); ++it) {
                 if ((*it)->geometry().contains(me->globalPos())) {
                     return false;
@@ -156,5 +154,3 @@ void Greeter::promptReboot()
     m_shutdownType = KWorkSpace::ShutdownTypeReboot;
     init();
 }
-
-

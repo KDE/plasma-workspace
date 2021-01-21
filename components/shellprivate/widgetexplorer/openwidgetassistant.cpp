@@ -20,27 +20,26 @@
 #include "openwidgetassistant_p.h"
 
 #include <QLabel>
-#include <QVBoxLayout>
 #include <QListWidget>
+#include <QVBoxLayout>
 
-#include <QDebug>
-#include <QUrl>
 #include <KFileWidget>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KService>
 #include <KServiceTypeTrader>
-#include <KLocalizedString>
+#include <QDebug>
+#include <QUrl>
 
-#include <KPackage/PackageStructure>
 #include <KPackage/PackageLoader>
+#include <KPackage/PackageStructure>
 
 namespace Plasma
 {
-
 OpenWidgetAssistant::OpenWidgetAssistant(QWidget *parent)
-    : KAssistantDialog(parent),
-      m_fileWidget(nullptr),
-      m_filePageWidget(nullptr)
+    : KAssistantDialog(parent)
+    , m_fileWidget(nullptr)
+    , m_filePageWidget(nullptr)
 {
     m_filePageWidget = new QWidget(this);
 
@@ -65,7 +64,7 @@ OpenWidgetAssistant::OpenWidgetAssistant(QWidget *parent)
 
 void OpenWidgetAssistant::slotHelpClicked()
 {
-    //enable it when doc will created
+    // enable it when doc will created
 }
 
 void OpenWidgetAssistant::finished()
@@ -73,7 +72,7 @@ void OpenWidgetAssistant::finished()
     m_fileWidget->accept(); // how interesting .. accept() must be called before the state is set
     QString packageFilePath = m_fileWidget->selectedFile();
     if (packageFilePath.isEmpty()) {
-        //TODO: user visible error handling
+        // TODO: user visible error handling
         qDebug() << "hm. no file path?";
         return;
     }
@@ -81,10 +80,8 @@ void OpenWidgetAssistant::finished()
     KPackage::Package installer = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"));
 
     if (!installer.install(packageFilePath)) {
-        KMessageBox::error(this, i18n("Installing the package %1 failed.", packageFilePath),
-                           i18n("Installation Failure"));
+        KMessageBox::error(this, i18n("Installing the package %1 failed.", packageFilePath), i18n("Installation Failure"));
     }
 }
 
 } // Plasma namespace
-

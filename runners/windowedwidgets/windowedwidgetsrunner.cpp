@@ -24,8 +24,8 @@
 #include <QIcon>
 #include <QMimeData>
 
-#include <QDebug>
 #include <KLocalizedString>
+#include <QDebug>
 
 #include <Plasma/Applet>
 #include <Plasma/PluginLoader>
@@ -40,9 +40,12 @@ WindowedWidgetsRunner::WindowedWidgetsRunner(QObject *parent, const KPluginMetaD
     setPriority(AbstractRunner::HighestPriority);
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds Plasma widgets whose name or description match :q:")));
-    addSyntax(Plasma::RunnerSyntax(i18nc("Note this is a KRunner keyword", "mobile applications"), i18n("list all Plasma widgets that can run as standalone applications")));
+    addSyntax(Plasma::RunnerSyntax(i18nc("Note this is a KRunner keyword", "mobile applications"),
+                                   i18n("list all Plasma widgets that can run as standalone applications")));
     setMinLetterCount(3);
-    connect(this, &AbstractRunner::teardown, this, [this](){ m_applets.clear(); });
+    connect(this, &AbstractRunner::teardown, this, [this]() {
+        m_applets.clear();
+    });
 }
 
 WindowedWidgetsRunner::~WindowedWidgetsRunner()
@@ -56,12 +59,9 @@ void WindowedWidgetsRunner::match(Plasma::RunnerContext &context)
     QList<Plasma::QueryMatch> matches;
 
     for (const KPluginMetaData &md : qAsConst(m_applets)) {
-        if (((md.name().contains(term, Qt::CaseInsensitive) ||
-             md.value(QLatin1String("GenericName")).contains(term, Qt::CaseInsensitive) ||
-             md.description().contains(term, Qt::CaseInsensitive)) ||
-             md.category().contains(term, Qt::CaseInsensitive) ||
-             term.startsWith(i18nc("Note this is a KRunner keyword", "mobile applications")))) {
-
+        if (((md.name().contains(term, Qt::CaseInsensitive) || md.value(QLatin1String("GenericName")).contains(term, Qt::CaseInsensitive)
+              || md.description().contains(term, Qt::CaseInsensitive))
+             || md.category().contains(term, Qt::CaseInsensitive) || term.startsWith(i18nc("Note this is a KRunner keyword", "mobile applications")))) {
             Plasma::QueryMatch match(this);
             match.setText(md.name());
             match.setSubtext(md.description());
@@ -91,7 +91,7 @@ void WindowedWidgetsRunner::run(const Plasma::RunnerContext &context, const Plas
     QProcess::startDetached(QStringLiteral("plasmawindowed"), {match.data().toString()});
 }
 
-QMimeData * WindowedWidgetsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
+QMimeData *WindowedWidgetsRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     QMimeData *data = new QMimeData();
     data->setData(QStringLiteral("text/x-plasmoidservicename"), match.data().toString().toUtf8());
@@ -106,10 +106,9 @@ void WindowedWidgetsRunner::loadMetadataList()
     if (!m_applets.isEmpty()) {
         return;
     }
-    const auto &listMetadata =  Plasma::PluginLoader::self()->listAppletMetaData(QString());
+    const auto &listMetadata = Plasma::PluginLoader::self()->listAppletMetaData(QString());
     for (const KPluginMetaData &md : listMetadata) {
-        if (md.isValid()
-            && !md.rawData().value(QStringLiteral("NoDisplay")).toBool()
+        if (md.isValid() && !md.rawData().value(QStringLiteral("NoDisplay")).toBool()
             && !md.rawData().value(QStringLiteral("X-Plasma-StandAloneApp")).toBool()) {
             m_applets << md;
         }
@@ -117,4 +116,3 @@ void WindowedWidgetsRunner::loadMetadataList()
 }
 
 #include "windowedwidgetsrunner.moc"
-

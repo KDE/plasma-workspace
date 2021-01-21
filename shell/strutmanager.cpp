@@ -19,17 +19,18 @@
  */
 
 #include "strutmanager.h"
-#include "shellcorona.h"
 #include "screenpool.h"
+#include "shellcorona.h"
 
-#include <QDBusMetaType>
 #include <QDBusConnection>
-#include <QDBusServiceWatcher>
 #include <QDBusConnectionInterface>
+#include <QDBusMetaType>
+#include <QDBusServiceWatcher>
 
-StrutManager::StrutManager(ShellCorona *plasmashellCorona) : QObject(plasmashellCorona),
-    m_plasmashellCorona(plasmashellCorona),
-    m_serviceWatcher(new QDBusServiceWatcher(this))
+StrutManager::StrutManager(ShellCorona *plasmashellCorona)
+    : QObject(plasmashellCorona)
+    , m_plasmashellCorona(plasmashellCorona)
+    , m_serviceWatcher(new QDBusServiceWatcher(this))
 {
     qDBusRegisterMetaType<QList<QRect>>();
 
@@ -75,7 +76,8 @@ QRegion StrutManager::availableScreenRegion(int id) const
     return r;
 }
 
-void StrutManager::setAvailableScreenRect(const QString &service, const QString &screenName, const QRect &rect) {
+void StrutManager::setAvailableScreenRect(const QString &service, const QString &screenName, const QRect &rect)
+{
     int id = m_plasmashellCorona->screenPool()->id(screenName);
     if (id == -1 || m_availableScreenRects.value(service).value(id) == rect || !addWatchedService(service)) {
         return;
@@ -84,10 +86,11 @@ void StrutManager::setAvailableScreenRect(const QString &service, const QString 
     emit m_plasmashellCorona->availableScreenRectChanged();
 }
 
-void StrutManager::setAvailableScreenRegion(const QString &service, const QString &screenName, const QList<QRect> &rects) {
+void StrutManager::setAvailableScreenRegion(const QString &service, const QString &screenName, const QList<QRect> &rects)
+{
     int id = m_plasmashellCorona->screenPool()->id(screenName);
     QRegion region;
-    foreach(QRect rect, rects) {
+    foreach (QRect rect, rects) {
         region += rect;
     }
 
@@ -98,7 +101,8 @@ void StrutManager::setAvailableScreenRegion(const QString &service, const QStrin
     emit m_plasmashellCorona->availableScreenRegionChanged();
 }
 
-bool StrutManager::addWatchedService(const QString &service) {
+bool StrutManager::addWatchedService(const QString &service)
+{
     if (!m_serviceWatcher->watchedServices().contains(service)) {
         if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(service)) {
             return false;

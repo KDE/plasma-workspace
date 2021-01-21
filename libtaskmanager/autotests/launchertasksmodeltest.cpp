@@ -31,19 +31,19 @@ class LauncherTasksModelTest : public QObject
 {
     Q_OBJECT
 
-    private Q_SLOTS:
-        void initTestCase();
+private Q_SLOTS:
+    void initTestCase();
 
-        void shouldRoundTripLauncherUrlList();
-        void shouldIgnoreInvalidUrls();
-        void shouldAcceptSpaces();
-        void shouldRejectDuplicates();
-        void shouldAddRemoveLauncher();
-        void shouldReturnValidLauncherPositions();
-        void shouldReturnValidData();
+    void shouldRoundTripLauncherUrlList();
+    void shouldIgnoreInvalidUrls();
+    void shouldAcceptSpaces();
+    void shouldRejectDuplicates();
+    void shouldAddRemoveLauncher();
+    void shouldReturnValidLauncherPositions();
+    void shouldReturnValidData();
 
-    private:
-        QStringList m_urlStrings;
+private:
+    QStringList m_urlStrings;
 };
 
 void LauncherTasksModelTest::initTestCase()
@@ -96,9 +96,7 @@ void LauncherTasksModelTest::shouldAcceptSpaces()
 {
     LauncherTasksModel m;
 
-    const QStringList urlStrings{
-        QLatin1String("applications:App with spaces.desktop")
-    };
+    const QStringList urlStrings{QLatin1String("applications:App with spaces.desktop")};
 
     QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::launcherListChanged);
     QVERIFY(launcherListChangedSpy.isValid());

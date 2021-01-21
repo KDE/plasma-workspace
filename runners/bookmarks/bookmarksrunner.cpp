@@ -21,33 +21,31 @@
 #include "bookmarksrunner.h"
 #include "browsers/browser.h"
 
-#include <QList>
-#include <QStack>
-#include <QDir>
-#include <QUrl>
 #include <QDebug>
 #include <QDesktopServices>
+#include <QDir>
+#include <QList>
+#include <QStack>
+#include <QUrl>
 
-#include <KLocalizedString>
 #include <KApplicationTrader>
+#include <KLocalizedString>
 #include <KSharedConfig>
 
 #include "bookmarkmatch.h"
-#include "browserfactory.h"
 #include "bookmarksrunner_defs.h"
+#include "browserfactory.h"
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(BookmarksRunner, "plasma-runner-bookmarks.json")
 
-
-BookmarksRunner::BookmarksRunner(QObject* parent, const KPluginMetaData &metaData, const QVariantList &args)
+BookmarksRunner::BookmarksRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
     : Plasma::AbstractRunner(parent, metaData, args)
     , m_browser(nullptr)
     , m_browserFactory(new BrowserFactory(this))
 {
     setObjectName(QStringLiteral("Bookmarks"));
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds web browser bookmarks matching :q:.")));
-    addSyntax(Plasma::RunnerSyntax(i18nc("list of all web browser bookmarks", "bookmarks"),
-                                   i18n("List all web browser bookmarks")));
+    addSyntax(Plasma::RunnerSyntax(i18nc("list of all web browser bookmarks", "bookmarks"), i18n("List all web browser bookmarks")));
 
     connect(this, &Plasma::AbstractRunner::prepare, this, &BookmarksRunner::prep);
     setMinLetterCount(3);
@@ -60,8 +58,9 @@ void BookmarksRunner::prep()
     auto browser = m_browserFactory->find(findBrowserName(), this);
     if (m_browser != browser) {
         m_browser = browser;
-        connect(this, &Plasma::AbstractRunner::teardown,
-                dynamic_cast<QObject*>(m_browser), [this] () { m_browser->teardown(); });
+        connect(this, &Plasma::AbstractRunner::teardown, dynamic_cast<QObject *>(m_browser), [this]() {
+            m_browser->teardown();
+        });
     }
     m_browser->prepare();
 }
@@ -69,12 +68,11 @@ void BookmarksRunner::prep()
 void BookmarksRunner::match(Plasma::RunnerContext &context)
 {
     const QString term = context.query();
-    bool allBookmarks = term.compare(i18nc("list of all konqueror bookmarks", "bookmarks"),
-                                     Qt::CaseInsensitive) == 0;
-                                     
+    bool allBookmarks = term.compare(i18nc("list of all konqueror bookmarks", "bookmarks"), Qt::CaseInsensitive) == 0;
+
     const QList<BookmarkMatch> matches = m_browser->match(term, allBookmarks);
-    for(BookmarkMatch match : matches) {
-        if(!context.isValid())
+    for (BookmarkMatch match : matches) {
+        if (!context.isValid())
             return;
         context.addMatch(match.asQueryMatch(this));
     }
@@ -82,10 +80,10 @@ void BookmarksRunner::match(Plasma::RunnerContext &context)
 
 QString BookmarksRunner::findBrowserName()
 {
-    //HACK find the default browser
-    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General") );
+    // HACK find the default browser
+    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General"));
     QString exec = config.readPathEntry(QStringLiteral("BrowserApplication"), QString());
-    //qDebug() << "Found exec string: " << exec;
+    // qDebug() << "Found exec string: " << exec;
     if (exec.isEmpty()) {
         KService::Ptr service = KApplicationTrader::preferredService(QStringLiteral("text/html"));
         if (service) {
@@ -93,9 +91,8 @@ QString BookmarksRunner::findBrowserName()
         }
     }
 
-    //qDebug() << "KRunner::Bookmarks: found executable " << exec << " as default browser";
+    // qDebug() << "KRunner::Bookmarks: found executable " << exec << " as default browser";
     return exec;
-
 }
 
 void BookmarksRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action)
@@ -104,14 +101,14 @@ void BookmarksRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
     const QString term = action.data().toString();
     QUrl url = QUrl(term);
 
-    //support urls like "kde.org" by transforming them to https://kde.org
+    // support urls like "kde.org" by transforming them to https://kde.org
     if (url.scheme().isEmpty()) {
         const int idx = term.indexOf('/');
 
         url.clear();
         url.setHost(term.left(idx));
         if (idx != -1) {
-            //allow queries
+            // allow queries
             const int queryStart = term.indexOf('?', idx);
             int pathLength = -1;
             if ((queryStart > -1) && (idx < queryStart)) {
@@ -127,9 +124,9 @@ void BookmarksRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
     QDesktopServices::openUrl(url);
 }
 
-QMimeData * BookmarksRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
+QMimeData *BookmarksRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
-    QMimeData * result = new QMimeData();
+    QMimeData *result = new QMimeData();
     QList<QUrl> urls;
     urls << QUrl(match.data().toString());
     result->setUrls(urls);

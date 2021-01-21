@@ -25,11 +25,11 @@
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(ActivityRunner, "plasma-runner-activityrunner.json")
 
 ActivityRunner::ActivityRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args),
-      m_activities(new KActivities::Controller(this)),
-      m_consumer(new KActivities::Consumer(this)),
-      m_keywordi18n(i18nc("KRunner keyword", "activity")),
-      m_keyword(QStringLiteral("activity"))
+    : Plasma::AbstractRunner(parent, metaData, args)
+    , m_activities(new KActivities::Controller(this))
+    , m_consumer(new KActivities::Consumer(this))
+    , m_keywordi18n(i18nc("KRunner keyword", "activity"))
+    , m_keyword(QStringLiteral("activity"))
 {
     setObjectName(QStringLiteral("Activities"));
     addSyntax(Plasma::RunnerSyntax(m_keywordi18n, i18n("Lists all activities currently available to be run.")));
@@ -126,8 +126,7 @@ void ActivityRunner::addMatch(const KActivities::Info &activity, QList<Plasma::Q
     match.setType(Plasma::QueryMatch::ExactMatch);
     match.setIconName(activity.icon().isEmpty() ? QStringLiteral("activities") : activity.icon());
     match.setText(i18n("Switch to \"%1\"", activity.name()));
-    match.setRelevance(0.7 + ((activity.state() == KActivities::Info::Running ||
-                               activity.state() == KActivities::Info::Starting) ? 0.1 : 0));
+    match.setRelevance(0.7 + ((activity.state() == KActivities::Info::Running || activity.state() == KActivities::Info::Starting) ? 0.1 : 0));
     matches << match;
 }
 

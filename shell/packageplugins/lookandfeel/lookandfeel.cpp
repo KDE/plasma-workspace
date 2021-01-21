@@ -1,22 +1,22 @@
 /******************************************************************************
-*   Copyright 2007-2009 by Aaron Seigo <aseigo@kde.org>                       *
-*   Copyright 2013 by Sebastian Kügler <sebas@kde.org>                        *
-*                                                                             *
-*   This library is free software; you can redistribute it and/or             *
-*   modify it under the terms of the GNU Library General Public               *
-*   License as published by the Free Software Foundation; either              *
-*   version 2 of the License, or (at your option) any later version.          *
-*                                                                             *
-*   This library is distributed in the hope that it will be useful,           *
-*   but WITHOUT ANY WARRANTY; without even the implied warranty of            *
-*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU          *
-*   Library General Public License for more details.                          *
-*                                                                             *
-*   You should have received a copy of the GNU Library General Public License *
-*   along with this library; see the file COPYING.LIB.  If not, write to      *
-*   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,      *
-*   Boston, MA 02110-1301, USA.                                               *
-*******************************************************************************/
+ *   Copyright 2007-2009 by Aaron Seigo <aseigo@kde.org>                       *
+ *   Copyright 2013 by Sebastian Kügler <sebas@kde.org>                        *
+ *                                                                             *
+ *   This library is free software; you can redistribute it and/or             *
+ *   modify it under the terms of the GNU Library General Public               *
+ *   License as published by the Free Software Foundation; either              *
+ *   version 2 of the License, or (at your option) any later version.          *
+ *                                                                             *
+ *   This library is distributed in the hope that it will be useful,           *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of            *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU          *
+ *   Library General Public License for more details.                          *
+ *                                                                             *
+ *   You should have received a copy of the GNU Library General Public License *
+ *   along with this library; see the file COPYING.LIB.  If not, write to      *
+ *   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,      *
+ *   Boston, MA 02110-1301, USA.                                               *
+ *******************************************************************************/
 
 #include "lookandfeel.h"
 
@@ -30,13 +30,13 @@ void LookAndFeelPackage::initPackage(KPackage::Package *package)
     // https://community.kde.org/Plasma/lookAndFeelPackage#
     package->setDefaultPackageRoot(QStringLiteral("plasma/look-and-feel/"));
 
-    //Defaults
+    // Defaults
     package->addFileDefinition("defaults", QStringLiteral("defaults"), i18n("Default settings for theme, etc."));
     package->addDirectoryDefinition("plasmoidsetupscripts", QStringLiteral("plasmoidsetupscripts"), i18n("Script to tweak default configs of plasmoids"));
-    //Colors
+    // Colors
     package->addFileDefinition("colors", QStringLiteral("colors"), i18n("Color scheme to use for applications."));
 
-    //Directories
+    // Directories
     package->addDirectoryDefinition("previews", QStringLiteral("previews"), i18n("Preview Images"));
     package->addFileDefinition("preview", QStringLiteral("previews/preview.png"), i18n("Preview for the whole style"));
     package->addFileDefinition("fullscreenpreview", QStringLiteral("previews/fullscreenpreview.jpg"), i18n("Full size preview for the whole style"));
@@ -62,7 +62,9 @@ void LookAndFeelPackage::initPackage(KPackage::Package *package)
     package->addFileDefinition("userswitchermainscript", QStringLiteral("userswitcher/UserSwitcher.qml"), i18n("Main Script for User Switcher"));
 
     package->addDirectoryDefinition("desktopswitcher", QStringLiteral("desktopswitcher"), i18n("Virtual Desktop Switcher"));
-    package->addFileDefinition("desktopswitchermainscript", QStringLiteral("desktopswitcher/DesktopSwitcher.qml"), i18n("Main Script for Virtual Desktop Switcher"));
+    package->addFileDefinition("desktopswitchermainscript",
+                               QStringLiteral("desktopswitcher/DesktopSwitcher.qml"),
+                               i18n("Main Script for Virtual Desktop Switcher"));
 
     package->addDirectoryDefinition("osd", QStringLiteral("osd"), i18n("On-Screen Display Notifications"));
     package->addFileDefinition("osdmainscript", QStringLiteral("osd/Osd.qml"), i18n("Main Script for On-Screen Display Notifications"));
@@ -74,7 +76,9 @@ void LookAndFeelPackage::initPackage(KPackage::Package *package)
     package->addFileDefinition("runcommandmainscript", QStringLiteral("runcommand/RunCommand.qml"), i18n("Main Script KRunner"));
 
     package->addDirectoryDefinition("windowdecoration", QStringLiteral("windowdecoration"), i18n("Window Decoration"));
-    package->addFileDefinition("windowdecorationmainscript", QStringLiteral("windowdecoration/WindowDecoration.qml"), i18n("Main Script for Window Decoration"));
+    package->addFileDefinition("windowdecorationmainscript",
+                               QStringLiteral("windowdecoration/WindowDecoration.qml"),
+                               i18n("Main Script for Window Decoration"));
 
     package->addDirectoryDefinition("windowswitcher", QStringLiteral("windowswitcher"), i18n("Window Switcher"));
     package->addFileDefinition("windowswitchermainscript", QStringLiteral("windowswitcher/WindowSwitcher.qml"), i18n("Main Script for Window Switcher"));

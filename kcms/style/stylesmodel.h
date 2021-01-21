@@ -24,8 +24,7 @@
 #include <QString>
 #include <QVector>
 
-struct StylesModelData
-{
+struct StylesModelData {
     QString display;
     QString styleName;
     QString description;
@@ -72,5 +71,4 @@ private:
     QString m_selectedStyle;
 
     QVector<StylesModelData> m_data;
-
 };

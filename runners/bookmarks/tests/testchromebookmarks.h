@@ -18,40 +18,49 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef TESTCHROMEBOOKMARKS_H
 #define TESTCHROMEBOOKMARKS_H
 
-#include <QObject>
 #include "browsers/findprofile.h"
+#include <QObject>
 
-class FakeFindProfile : public FindProfile {
+class FakeFindProfile : public FindProfile
+{
 public:
-  FakeFindProfile(const QList<Profile> &profiles) : m_profiles(profiles) {}
-    QList<Profile> find() override { return m_profiles; }
+    FakeFindProfile(const QList<Profile> &profiles)
+        : m_profiles(profiles)
+    {
+    }
+    QList<Profile> find() override
+    {
+        return m_profiles;
+    }
+
 private:
-  QList<Profile> m_profiles;
+    QList<Profile> m_profiles;
 };
 
 class TestChromeBookmarks : public QObject
 {
-Q_OBJECT
+    Q_OBJECT
 public:
-    explicit TestChromeBookmarks(QObject* parent = nullptr) : QObject(parent) {}
+    explicit TestChromeBookmarks(QObject *parent = nullptr)
+        : QObject(parent)
+    {
+    }
 private Q_SLOTS:
-  void initTestCase();
-  void bookmarkFinderShouldFindEachProfileDirectory();
-  void bookmarkFinderShouldReportNoProfilesOnErrors();
-  void itShouldFindNothingWhenPrepareIsNotCalled();
-  void itShouldGracefullyExitWhenFileIsNotFound();
-  void itShouldFindAllBookmarks();
-  void itShouldFindOnlyMatches();
-  void itShouldClearResultAfterCallingTeardown();
-  void itShouldFindBookmarksFromAllProfiles();
+    void initTestCase();
+    void bookmarkFinderShouldFindEachProfileDirectory();
+    void bookmarkFinderShouldReportNoProfilesOnErrors();
+    void itShouldFindNothingWhenPrepareIsNotCalled();
+    void itShouldGracefullyExitWhenFileIsNotFound();
+    void itShouldFindAllBookmarks();
+    void itShouldFindOnlyMatches();
+    void itShouldClearResultAfterCallingTeardown();
+    void itShouldFindBookmarksFromAllProfiles();
 
 private:
     QScopedPointer<FakeFindProfile> m_findBookmarksInCurrentDirectory;
-
 };
 
 #endif // TESTCHROMEBOOKMARKS_H

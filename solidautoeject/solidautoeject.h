@@ -23,7 +23,7 @@
 
 namespace Solid
 {
-    class Device;
+class Device;
 }
 
 class SolidAutoEject : public KDEDModule
@@ -31,7 +31,7 @@ class SolidAutoEject : public KDEDModule
     Q_OBJECT
 
 public:
-    SolidAutoEject(QObject* parent, const QList<QVariant>&);
+    SolidAutoEject(QObject *parent, const QList<QVariant> &);
     ~SolidAutoEject() override;
 
 private slots:
@@ -43,4 +43,3 @@ private:
 };
 
 #endif
-

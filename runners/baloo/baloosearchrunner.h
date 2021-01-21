@@ -22,12 +22,12 @@
 #ifndef _BALOO_SEARCH_RUNNER_H_
 #define _BALOO_SEARCH_RUNNER_H_
 
-#include <QObject>
 #include <QDBusContext>
 #include <QDBusMessage>
+#include <QObject>
 
-#include <KRunner/QueryMatch>
 #include "dbusutils_p.h"
+#include <KRunner/QueryMatch>
 
 class QTimer;
 
@@ -36,7 +36,7 @@ class SearchRunner : public QObject, protected QDBusContext
     Q_OBJECT
 
 public:
-    explicit SearchRunner(QObject* parent=nullptr);
+    explicit SearchRunner(QObject *parent = nullptr);
     ~SearchRunner() override;
 
     RemoteActions Actions();
@@ -45,8 +45,7 @@ public:
 
 private:
     void performMatch();
-    RemoteMatches matchInternal(const QString &searchTerm, const QString& type,
-                                    const QString& category, QSet<QUrl> &foundUrls);
+    RemoteMatches matchInternal(const QString &searchTerm, const QString &type, const QString &category, QSet<QUrl> &foundUrls);
 
     QDBusMessage m_lastRequest;
     QString m_searchTerm;

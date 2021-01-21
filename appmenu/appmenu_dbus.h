@@ -29,20 +29,19 @@
 // Qt
 #include <QDBusContext>
 #include <QDBusObjectPath>
-#include <QObject>
 #include <QDebug>
+#include <QObject>
 #include <qwindowdefs.h>
-
 
 class AppmenuDBus : public QObject, protected QDBusContext
 {
     Q_OBJECT
 
 public:
-    explicit AppmenuDBus(QObject*);
+    explicit AppmenuDBus(QObject *);
     ~AppmenuDBus() override;
 
-    bool connectToBus(const QString& service = QString(), const QString& path = QString());
+    bool connectToBus(const QString &service = QString(), const QString &path = QString());
 
     /**
      * DBus method showing menu at QPoint(x,y) for given DBus service name and menuObjectPath

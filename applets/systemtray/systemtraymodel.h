@@ -25,12 +25,13 @@
 
 #include <KCoreAddons/KPluginMetaData>
 #include <KItemModels/KConcatenateRowsProxyModel>
-#include <Plasma/DataEngineConsumer>
 #include <Plasma/DataEngine>
+#include <Plasma/DataEngineConsumer>
 
-namespace Plasma {
-    class Applet;
-    class PluginLoader;
+namespace Plasma
+{
+class Applet;
+class PluginLoader;
 }
 
 class PlasmoidRegistry;
@@ -40,7 +41,7 @@ class SystemTraySettings;
  * @brief Base class for models used in System Tray.
  *
  */
-class BaseModel: public QAbstractListModel
+class BaseModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
@@ -75,7 +76,7 @@ private:
 /**
  * @brief Data model for plasmoids/applets.
  */
-class PlasmoidModel: public BaseModel
+class PlasmoidModel : public BaseModel
 {
     Q_OBJECT
 public:
@@ -114,7 +115,8 @@ private:
 /**
  * @brief Data model for Status Notifier Items (SNI).
  */
-class StatusNotifierModel : public BaseModel, public Plasma::DataEngineConsumer {
+class StatusNotifierModel : public BaseModel, public Plasma::DataEngineConsumer
+{
     Q_OBJECT
 public:
     enum class Role {
@@ -137,7 +139,7 @@ public:
         WindowId,
     };
 
-    StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject* parent = nullptr);
+    StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject *parent = nullptr);
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;

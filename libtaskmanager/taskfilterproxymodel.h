@@ -21,8 +21,8 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #ifndef TASKFILTERPROXYMODEL_H
 #define TASKFILTERPROXYMODEL_H
 
-#include <QSortFilterProxyModel>
 #include <QRect>
+#include <QSortFilterProxyModel>
 
 #include "abstracttasksproxymodeliface.h"
 
@@ -30,7 +30,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 /**
  * @short A proxy tasks model filtering its source model by various properties.
  *
@@ -56,7 +55,8 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
     Q_PROPERTY(bool filterSkipTaskbar READ filterSkipTaskbar WRITE setFilterSkipTaskbar NOTIFY filterSkipTaskbarChanged)
     Q_PROPERTY(bool filterSkipPager READ filterSkipPager WRITE setFilterSkipPager NOTIFY filterSkipPagerChanged)
 
-    Q_PROPERTY(bool demandingAttentionSkipsFilters READ demandingAttentionSkipsFilters WRITE setDemandingAttentionSkipsFilters NOTIFY demandingAttentionSkipsFiltersChanged)
+    Q_PROPERTY(bool demandingAttentionSkipsFilters READ demandingAttentionSkipsFilters WRITE setDemandingAttentionSkipsFilters NOTIFY
+                   demandingAttentionSkipsFiltersChanged)
 
 public:
     explicit TaskFilterProxyModel(QObject *parent = nullptr);

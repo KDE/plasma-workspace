@@ -46,10 +46,9 @@
 
 namespace WorkspaceScripting
 {
-
 AppInterface::AppInterface(ScriptEngine *env)
-    : QObject(env),
-      m_env(env)
+    : QObject(env)
+    , m_env(env)
 {
     m_theme = new Plasma::Theme(this);
 }
@@ -68,7 +67,7 @@ QJSValue AppInterface::screenGeometry(int screen) const
 
 QList<int> AppInterface::activityIds() const
 {
-    //FIXME: the ints could overflow since Applet::id() returns a uint,
+    // FIXME: the ints could overflow since Applet::id() returns a uint,
     //       however QScript deals with QList<uint> very, very poorly
     QList<int> containments;
 
@@ -83,12 +82,12 @@ QList<int> AppInterface::activityIds() const
 
 QList<int> AppInterface::panelIds() const
 {
-    //FIXME: the ints could overflow since Applet::id() returns a uint,
+    // FIXME: the ints could overflow since Applet::id() returns a uint,
     //       however QScript deals with QList<uint> very, very poorly
     QList<int> panels;
 
     foreach (Plasma::Containment *c, m_env->corona()->containments()) {
-        //qDebug() << "checking" << (QObject*)c << isPanel(c);
+        // qDebug() << "checking" << (QObject*)c << isPanel(c);
         if (ScriptEngine::isPanel(c)) {
             panels.append(c->id());
         }
@@ -104,7 +103,7 @@ QString AppInterface::applicationVersion() const
 
 QString AppInterface::platformVersion() const
 {
-    return QString();//KDE::versionString();
+    return QString(); // KDE::versionString();
 }
 
 int AppInterface::scriptingVersion() const
@@ -172,14 +171,12 @@ bool AppInterface::hasBattery() const
 {
     QList<Solid::Device> batteryDevices = Solid::Device::listFromType(Solid::DeviceInterface::Battery);
 
-    for (auto device: batteryDevices) {
+    for (auto device : batteryDevices) {
         Solid::Battery *battery = device.as<Solid::Battery>();
         // check for _both_ primary and power supply status
         // apparently some devices misreport as "primary", and we don't
         // want to trigger on just having UPC connected to a desktop box
-        if (battery &&
-            battery->type() == Solid::Battery::PrimaryBattery &&
-            battery->isPowerSupply()) {
+        if (battery && battery->type() == Solid::Battery::PrimaryBattery && battery->isPowerSupply()) {
             return true;
         }
     }
@@ -227,6 +224,3 @@ QStringList AppInterface::knownContainmentTypes(const QString &type) const
 }
 
 }
-
-
-

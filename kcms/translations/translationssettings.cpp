@@ -22,8 +22,7 @@
 TranslationsSettings::TranslationsSettings(QObject *parent)
     : TranslationsSettingsBase(parent)
 {
-    connect(this, &TranslationsSettingsBase::languageStringChanged,
-            this, &TranslationsSettings::configuredLanguagesChanged);
+    connect(this, &TranslationsSettingsBase::languageStringChanged, this, &TranslationsSettings::configuredLanguagesChanged);
 }
 
 TranslationsSettings::~TranslationsSettings()

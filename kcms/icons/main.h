@@ -28,8 +28,8 @@
 
 #include <KQuickAddons/ManagedConfigModule>
 
-#include <QScopedPointer>
 #include <QCache>
+#include <QScopedPointer>
 
 class KIconTheme;
 class IconsSettings;
@@ -114,5 +114,4 @@ private:
 
     QScopedPointer<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;
-
 };

@@ -52,10 +52,10 @@ class ActionsTreeWidget : public QTreeWidget
     // Hope this explains it.
     // Yeah, this class is a trick :) If there's a better way to properly
     // update KConfigDialog buttons whenever "some change occurs to QTreeWidget", let me know (dimsuz)
-    Q_PROPERTY( int actionsChanged READ actionsChanged WRITE setActionsChanged USER true )
+    Q_PROPERTY(int actionsChanged READ actionsChanged WRITE setActionsChanged USER true)
 
 public:
-    explicit ActionsTreeWidget(QWidget* parent = nullptr);
+    explicit ActionsTreeWidget(QWidget *parent = nullptr);
 
     void setActionsChanged(int);
     int actionsChanged() const;

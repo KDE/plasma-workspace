@@ -30,7 +30,6 @@
 
 namespace NotificationManager
 {
-
 class JobPrivate;
 
 class NOTIFICATIONMANAGER_EXPORT Job : public QObject
@@ -242,7 +241,6 @@ private:
 
     friend class JobsModel;
     friend class JobsModelPrivate;
-
 };
 
 } // namespace NotificationManager

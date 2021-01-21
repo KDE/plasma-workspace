@@ -28,27 +28,27 @@
 
 #include <dbusmenuimporter.h>
 
-#include <QIcon>
 #include "verticalmenu.h"
+#include <QIcon>
 
 class KDBusMenuImporter : public DBusMenuImporter
 {
-
 public:
     KDBusMenuImporter(const QString &service, const QString &path, QObject *parent)
         : DBusMenuImporter(service, path, parent)
     {
-
     }
 
 protected:
-    QIcon iconForName(const QString &name) override {
+    QIcon iconForName(const QString &name) override
+    {
         return QIcon::fromTheme(name);
     }
 
-    QMenu *createMenu(QWidget *parent) override {
+    QMenu *createMenu(QWidget *parent) override
+    {
         return new VerticalMenu(parent);
     }
 };
 
-#endif //KDBUSIMPORTER_H
+#endif // KDBUSIMPORTER_H

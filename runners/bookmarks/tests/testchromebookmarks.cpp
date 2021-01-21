@@ -19,17 +19,18 @@
  */
 
 #include "testchromebookmarks.h"
-#include <QTest>
-#include <QDir>
 #include "browsers/chrome.h"
 #include "browsers/chromefindprofile.h"
 #include "favicon.h"
+#include <QDir>
+#include <QTest>
 
 using namespace Plasma;
 
 void TestChromeBookmarks::initTestCase()
 {
-    m_findBookmarksInCurrentDirectory.reset(new FakeFindProfile(QList<Profile>({Profile("chrome-config-home/Chrome-Bookmarks-Sample.json", "Sample", new FallbackFavicon())})));
+    m_findBookmarksInCurrentDirectory.reset(
+        new FakeFindProfile(QList<Profile>({Profile("chrome-config-home/Chrome-Bookmarks-Sample.json", "Sample", new FallbackFavicon())})));
 }
 
 void TestChromeBookmarks::bookmarkFinderShouldFindEachProfileDirectory()
@@ -51,11 +52,10 @@ void TestChromeBookmarks::bookmarkFinderShouldReportNoProfilesOnErrors()
     QCOMPARE(profiles.size(), 0);
 }
 
-
 void TestChromeBookmarks::itShouldFindNothingWhenPrepareIsNotCalled()
 {
-  Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.data(), this);
-  QCOMPARE(chrome->match("any", true).size(), 0);
+    Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.data(), this);
+    QCOMPARE(chrome->match("any", true).size(), 0);
 }
 
 void TestChromeBookmarks::itShouldGracefullyExitWhenFileIsNotFound()
@@ -66,14 +66,13 @@ void TestChromeBookmarks::itShouldGracefullyExitWhenFileIsNotFound()
     QCOMPARE(chrome->match("any", true).size(), 0);
 }
 
-
-void verifyMatch(BookmarkMatch &match, const QString &title, const QString &url, qreal relevance, QueryMatch::Type type) {
+void verifyMatch(BookmarkMatch &match, const QString &title, const QString &url, qreal relevance, QueryMatch::Type type)
+{
     QueryMatch queryMatch = match.asQueryMatch(nullptr);
     QCOMPARE(queryMatch.text(), title);
     QCOMPARE(queryMatch.data().toString(), url);
     QCOMPARE(queryMatch.relevance(), relevance);
-    QVERIFY2(queryMatch.type() == type,
-             QStringLiteral("Wrong query match type: expecting %1 but was %2").arg(type, queryMatch.type() ).toLatin1());
+    QVERIFY2(queryMatch.type() == type, QStringLiteral("Wrong query match type: expecting %1 but was %2").arg(type, queryMatch.type()).toLatin1());
 }
 
 void TestChromeBookmarks::itShouldFindAllBookmarks()
@@ -103,14 +102,13 @@ void TestChromeBookmarks::itShouldClearResultAfterCallingTeardown()
     QCOMPARE(chrome->match("any", true).size(), 3);
     chrome->teardown();
     QCOMPARE(chrome->match("any", true).size(), 0);
-
 }
 
 void TestChromeBookmarks::itShouldFindBookmarksFromAllProfiles()
 {
-    FakeFindProfile findBookmarksFromAllProfiles(QList<Profile>()
-        << Profile("chrome-config-home/Chrome-Bookmarks-Sample.json", "Sample", new FallbackFavicon(this))
-        << Profile("chrome-config-home/Chrome-Bookmarks-SecondProfile.json", "SecondProfile", new FallbackFavicon(this)) );
+    FakeFindProfile findBookmarksFromAllProfiles(
+        QList<Profile>() << Profile("chrome-config-home/Chrome-Bookmarks-Sample.json", "Sample", new FallbackFavicon(this))
+                         << Profile("chrome-config-home/Chrome-Bookmarks-SecondProfile.json", "SecondProfile", new FallbackFavicon(this)));
     Chrome *chrome = new Chrome(&findBookmarksFromAllProfiles, this);
     chrome->prepare();
     QList<BookmarkMatch> matches = chrome->match("any", true);
@@ -120,6 +118,5 @@ void TestChromeBookmarks::itShouldFindBookmarksFromAllProfiles()
     verifyMatch(matches[2], "bookmark in somefolder", "https://somefolder.com/", 0.18, QueryMatch::PossibleMatch);
     verifyMatch(matches[3], "bookmark in secondProfile", "https://secondprofile.com/", 0.18, QueryMatch::PossibleMatch);
 }
-
 
 QTEST_MAIN(TestChromeBookmarks);

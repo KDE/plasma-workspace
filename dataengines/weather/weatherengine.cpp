@@ -20,9 +20,8 @@
 
 #include "weatherengine.h"
 
-
-#include <KSycoca>
 #include <KPluginMetaData>
+#include <KSycoca>
 
 #include <Plasma/DataContainer>
 #include <Plasma/PluginLoader>
@@ -30,8 +29,8 @@
 #include "weatherenginedebug.h"
 
 // Constructor
-WeatherEngine::WeatherEngine(QObject *parent, const QVariantList& args)
-        :  Plasma::DataEngine(parent, args)
+WeatherEngine::WeatherEngine(QObject *parent, const QVariantList &args)
+    : Plasma::DataEngine(parent, args)
 {
     m_reconnectTimer.setSingleShot(true);
     connect(&m_reconnectTimer, &QTimer::timeout, this, &WeatherEngine::startReconnect);
@@ -39,12 +38,10 @@ WeatherEngine::WeatherEngine(QObject *parent, const QVariantList& args)
     // Globally notify all plugins to remove their sources (and unload plugin)
     connect(this, &Plasma::DataEngine::sourceRemoved, this, &WeatherEngine::removeIonSource);
 
-    connect(&m_networkConfigurationManager, &QNetworkConfigurationManager::onlineStateChanged,
-            this, &WeatherEngine::onOnlineStateChanged);
+    connect(&m_networkConfigurationManager, &QNetworkConfigurationManager::onlineStateChanged, this, &WeatherEngine::onOnlineStateChanged);
 
     // Get the list of available plugins but don't load them
-    connect(KSycoca::self(), static_cast<void (KSycoca::*)(const QStringList&)>(&KSycoca::databaseChanged),
-            this, &WeatherEngine::updateIonList);
+    connect(KSycoca::self(), static_cast<void (KSycoca::*)(const QStringList &)>(&KSycoca::databaseChanged), this, &WeatherEngine::updateIonList);
 
     updateIonList();
 }
@@ -61,18 +58,17 @@ void WeatherEngine::updateIonList(const QStringList &changedResources)
     if (changedResources.isEmpty() || changedResources.contains(QLatin1String("services"))) {
         removeAllData(QStringLiteral("ions"));
         const auto infos = Plasma::PluginLoader::self()->listDataEngineMetaData(QStringLiteral("weatherengine"));
-        for (const KPluginMetaData& info : infos) {
+        for (const KPluginMetaData &info : infos) {
             const QString data = info.name() + QLatin1Char('|') + info.pluginId();
             setData(QStringLiteral("ions"), info.pluginId(), data);
         }
     }
 }
 
-
 /**
  * SLOT: Remove the datasource from the ion and unload plugin if needed
  */
-void WeatherEngine::removeIonSource(const QString& source)
+void WeatherEngine::removeIonSource(const QString &source)
 {
     QString ionName;
     IonInterface *ion = ionForSource(source, &ionName);
@@ -103,7 +99,7 @@ void WeatherEngine::removeIonSource(const QString& source)
 /**
  * SLOT: Push out new data to applet
  */
-void WeatherEngine::dataUpdated(const QString& source, const Plasma::DataEngine::Data& data)
+void WeatherEngine::dataUpdated(const QString &source, const Plasma::DataEngine::Data &data)
 {
     qCDebug(WEATHER) << "dataUpdated() for:" << source;
     setData(source, data);
@@ -115,7 +111,7 @@ void WeatherEngine::dataUpdated(const QString& source, const Plasma::DataEngine:
 bool WeatherEngine::sourceRequestEvent(const QString &source)
 {
     QString ionName;
-    IonInterface* ion = ionForSource(source, &ionName);
+    IonInterface *ion = ionForSource(source, &ionName);
 
     if (!ion) {
         qCWarning(WEATHER) << "Could not find ion to request source for:" << source;
@@ -153,7 +149,7 @@ bool WeatherEngine::sourceRequestEvent(const QString &source)
 /**
  * SLOT: update the Applet with new data from all ions loaded.
  */
-bool WeatherEngine::updateSourceEvent(const QString& source)
+bool WeatherEngine::updateSourceEvent(const QString &source)
 {
     qCDebug(WEATHER) << "updateSourceEvent(): Network is: " << m_networkConfigurationManager.isOnline();
 
@@ -183,9 +179,9 @@ void WeatherEngine::onOnlineStateChanged(bool isOnline)
 
 void WeatherEngine::startReconnect()
 {
-    for(QHash<QString, int>::ConstIterator it = m_ionUsage.constBegin(); it != m_ionUsage.constEnd(); ++it) {
-        const QString& ionName = it.key();
-        IonInterface * ion = qobject_cast<IonInterface *>(dataEngine(ionName));
+    for (QHash<QString, int>::ConstIterator it = m_ionUsage.constBegin(); it != m_ionUsage.constEnd(); ++it) {
+        const QString &ionName = it.key();
+        IonInterface *ion = qobject_cast<IonInterface *>(dataEngine(ionName));
 
         if (ion) {
             qCDebug(WEATHER) << "Resetting ion" << ion;
@@ -208,7 +204,7 @@ void WeatherEngine::forceUpdate(IonInterface *ion, const QString &source)
     }
 }
 
-IonInterface* WeatherEngine::ionForSource(const QString& source, QString* ionName)
+IonInterface *WeatherEngine::ionForSource(const QString &source, QString *ionName)
 {
     const int offset = source.indexOf(QLatin1Char('|'));
 
@@ -218,7 +214,7 @@ IonInterface* WeatherEngine::ionForSource(const QString& source, QString* ionNam
 
     const QString name = source.left(offset);
 
-    IonInterface* result = qobject_cast<IonInterface *>(dataEngine(name));
+    IonInterface *result = qobject_cast<IonInterface *>(dataEngine(name));
 
     if (result && ionName) {
         *ionName = name;
@@ -226,7 +222,6 @@ IonInterface* WeatherEngine::ionForSource(const QString& source, QString* ionNam
 
     return result;
 }
-
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(weather, WeatherEngine, "plasma-dataengine-weather.json")
 

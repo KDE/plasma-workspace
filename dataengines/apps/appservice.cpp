@@ -21,9 +21,9 @@
 // own
 #include "appjob.h"
 
-AppService::AppService(AppSource *source) :
-    Plasma::Service(source),
-    m_source(source)
+AppService::AppService(AppSource *source)
+    : Plasma::Service(source)
+    , m_source(source)
 {
     setName(QStringLiteral("apps"));
 }
@@ -36,5 +36,3 @@ Plasma::ServiceJob *AppService::createJob(const QString &operation, QMap<QString
 {
     return new AppJob(m_source, operation, parameters, this);
 }
-
-

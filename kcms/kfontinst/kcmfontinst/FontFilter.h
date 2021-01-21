@@ -26,24 +26,21 @@
  */
 
 #include <QActionGroup>
-#include <QIcon>
 #include <QFontDatabase>
 #include <QHBoxLayout>
+#include <QIcon>
+#include <QLineEdit>
 #include <QMenu>
 #include <QPushButton>
-#include <QLineEdit>
 
 namespace KFI
 {
-
 class CFontFilter : public QWidget
 {
     Q_OBJECT
 
-    public:
-
-    enum ECriteria
-    {
+public:
+    enum ECriteria {
         CRIT_FAMILY,
         CRIT_STYLE,
         CRIT_FOUNDRY,
@@ -57,16 +54,18 @@ class CFontFilter : public QWidget
     };
 
     CFontFilter(QWidget *parent);
-    ~CFontFilter() override { }
+    ~CFontFilter() override
+    {
+    }
 
     void setFoundries(const QSet<QString> &currentFoundries);
 
-    Q_SIGNALS:
+Q_SIGNALS:
 
     void criteriaChanged(int crit, qulonglong ws, const QStringList &ft);
     void queryChanged(QString text);
 
-    private Q_SLOTS:
+private Q_SLOTS:
 
     void filterChanged();
     void textChanged(const QString &text);
@@ -74,24 +73,22 @@ class CFontFilter : public QWidget
     void wsChanged(const QString &writingSystemName);
     void foundryChanged(const QString &foundry);
 
-    private:
-
+private:
     void addAction(ECriteria crit, bool on);
     void setCriteria(ECriteria crit);
 
-    private:
-
-    QPushButton                  *m_menuButton;
-    QHBoxLayout                  *m_layout;
-    QMenu                        *m_menu;
-    QLineEdit                    *m_lineEdit;
-    ECriteria                    itsCurrentCriteria;
+private:
+    QPushButton *m_menuButton;
+    QHBoxLayout *m_layout;
+    QMenu *m_menu;
+    QLineEdit *m_lineEdit;
+    ECriteria itsCurrentCriteria;
     QFontDatabase::WritingSystem itsCurrentWs;
-    QStringList                  itsCurrentFileTypes;
-    QIcon                        itsIcons[NUM_CRIT];
-    QString                      itsTexts[NUM_CRIT];
-    QAction                      *itsActions[NUM_CRIT];
-    QActionGroup                 *itsActionGroup;
+    QStringList itsCurrentFileTypes;
+    QIcon itsIcons[NUM_CRIT];
+    QString itsTexts[NUM_CRIT];
+    QAction *itsActions[NUM_CRIT];
+    QActionGroup *itsActionGroup;
 };
 
 }

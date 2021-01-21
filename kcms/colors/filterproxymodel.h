@@ -65,5 +65,4 @@ private:
 
     QString m_query;
     KCMColors::SchemeFilter m_filter = KCMColors::AllSchemes;
-
 };

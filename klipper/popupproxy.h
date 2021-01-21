@@ -42,9 +42,9 @@ public:
      * Inserts up to itemsPerMenu into parent from parent->youngest(),
      * and spills any remaining items into a more menu.
      */
-    PopupProxy( KlipperPopup* parent, int menu_height, int menu_width );
+    PopupProxy(KlipperPopup *parent, int menu_height, int menu_width);
 
-    KlipperPopup* parent();
+    KlipperPopup *parent();
 
     /**
      * Called when rebuilding the menu
@@ -53,11 +53,12 @@ public:
      * @param filter If non-empty, only insert items that match filter as a regex
      * @return number of items inserted.
      */
-    int buildParent( int index, const QRegularExpression &filter = QRegularExpression() );
+    int buildParent(int index, const QRegularExpression &filter = QRegularExpression());
 
 public Q_SLOTS:
     void slotAboutToShow();
     void slotHistoryChanged();
+
 private:
     /**
      * Insert up to m_itemsPerMenu items from spill and a new
@@ -65,13 +66,13 @@ private:
      * @param index Items are inserted at index
      * @return number of items inserted.
      */
-    int insertFromSpill( int index = 0 );
+    int insertFromSpill(int index = 0);
 
     /**
      * Insert item into proxy_for_menu at index,
      * subtracting the items height from remainingHeight
      */
-    void tryInsertItem( HistoryItem const * const item, int& remainingHeight, const int index );
+    void tryInsertItem(HistoryItem const *const item, int &remainingHeight, const int index);
 
     /**
      * Delete all "More..." menus current created.
@@ -79,7 +80,7 @@ private:
     void deleteMoreMenus();
 
 private:
-    QMenu* m_proxy_for_menu;
+    QMenu *m_proxy_for_menu;
     QByteArray m_spill_uuid;
     QRegularExpression m_filter;
     int m_menu_height;

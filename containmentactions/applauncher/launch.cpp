@@ -21,12 +21,12 @@
 
 #include <QDebug>
 
-#include <Plasma/PluginLoader>
 #include <KRun>
+#include <Plasma/PluginLoader>
 
 AppLauncher::AppLauncher(QObject *parent, const QVariantList &args)
-    : Plasma::ContainmentActions(parent, args),
-      m_group(new KServiceGroup(QStringLiteral("/")))
+    : Plasma::ContainmentActions(parent, args)
+    , m_group(new KServiceGroup(QStringLiteral("/")))
 {
 }
 
@@ -38,7 +38,7 @@ void AppLauncher::init(const KConfigGroup &)
 {
 }
 
-QList<QAction*> AppLauncher::contextualActions()
+QList<QAction *> AppLauncher::contextualActions()
 {
     qDeleteAll(m_actions);
     m_actions.clear();
@@ -50,9 +50,9 @@ QList<QAction*> AppLauncher::contextualActions()
 void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr group)
 {
     const auto entries = group->entries(true, true, true);
-    for (const KSycocaEntry::Ptr &p : entries ) {
+    for (const KSycocaEntry::Ptr &p : entries) {
         if (p->isType(KST_KService)) {
-            const KService::Ptr service(static_cast<KService*>(p.data()));
+            const KService::Ptr service(static_cast<KService *>(p.data()));
 
             QString text = service->name();
             if (!m_showAppsByName && !service->genericName().isEmpty()) {
@@ -60,9 +60,9 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr group)
             }
 
             QAction *action = new QAction(QIcon::fromTheme(service->icon()), text, this);
-            connect(action, &QAction::triggered, [action](){
+            connect(action, &QAction::triggered, [action]() {
                 KService::Ptr service = KService::serviceByStorageId(action->data().toString());
-                new KRun(QUrl("file://"+service->entryPath()), nullptr);
+                new KRun(QUrl("file://" + service->entryPath()), nullptr);
             });
             action->setData(service->storageId());
             if (menu) {
@@ -71,7 +71,7 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr group)
                 m_actions << action;
             }
         } else if (p->isType(KST_KServiceGroup)) {
-            const KServiceGroup::Ptr service(static_cast<KServiceGroup*>(p.data()));
+            const KServiceGroup::Ptr service(static_cast<KServiceGroup *>(p.data()));
             if (service->childCount() == 0) {
                 continue;
             }
@@ -119,6 +119,5 @@ void AppLauncher::save(KConfigGroup &config)
 }
 
 K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(applauncher, AppLauncher, "plasma-containmentactions-applauncher.json")
-
 
 #include "launch.moc"

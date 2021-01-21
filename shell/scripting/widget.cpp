@@ -30,7 +30,6 @@
 
 namespace WorkspaceScripting
 {
-
 class Widget::Private
 {
 public:
@@ -42,8 +41,8 @@ public:
 };
 
 Widget::Widget(Plasma::Applet *applet, ScriptEngine *parent)
-    : Applet(parent),
-      d(new Widget::Private)
+    : Applet(parent)
+    , d(new Widget::Private)
 {
     d->applet = applet;
     setCurrentConfigGroup(QStringList());
@@ -157,7 +156,7 @@ QJSValue Widget::geometry() const
 
     if (appletItem) {
         QJSValue rect = engine()->newObject();
-        const QPointF pos = appletItem->mapToScene(QPointF(0,0));
+        const QPointF pos = appletItem->mapToScene(QPointF(0, 0));
         rect.setProperty(QStringLiteral("x"), pos.x());
         rect.setProperty(QStringLiteral("y"), pos.y());
         rect.setProperty(QStringLiteral("width"), appletItem->width());
@@ -182,9 +181,9 @@ void Widget::setGeometry(const QJSValue &geometry)
 
 void Widget::showConfigurationInterface()
 {
-   /* if (d->applet) {
-        d->applet.data()->showConfigurationInterface();
-    }*/
+    /* if (d->applet) {
+         d->applet.data()->showConfigurationInterface();
+     }*/
 }
 
 QString Widget::userBackgroundHints() const
@@ -204,6 +203,3 @@ void Widget::setUserBackgroundHints(QString hint)
 }
 
 }
-
-
-

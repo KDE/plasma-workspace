@@ -29,8 +29,7 @@
 
 class IconsSettings;
 
-struct IconsModelData
-{
+struct IconsModelData {
     QString display;
     QString themeName;
     QString description;
@@ -70,5 +69,4 @@ signals:
 private:
     QVector<IconsModelData> m_data;
     IconsSettings *m_settings;
-
 };

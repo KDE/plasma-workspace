@@ -19,16 +19,16 @@
 
 #pragma once
 
-#include <QObject>
 #include <QDBusContext>
+#include <QObject>
 #include <QString>
 #include <QVector>
 #include <QWindow> // for WId
 
 #include <functional>
 
-#include "gdbusmenutypes_p.h"
 #include "../libdbusmenuqt/dbusmenutypes_p.h"
+#include "gdbusmenutypes_p.h"
 
 class QDBusVariant;
 
@@ -136,5 +136,4 @@ private:
     Actions *m_windowActions = nullptr;
 
     bool m_menuInited = false;
-
 };

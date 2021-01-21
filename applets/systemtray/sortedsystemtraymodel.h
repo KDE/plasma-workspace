@@ -22,7 +22,8 @@
 
 #include <QSortFilterProxyModel>
 
-class SortedSystemTrayModel : public QSortFilterProxyModel {
+class SortedSystemTrayModel : public QSortFilterProxyModel
+{
     Q_OBJECT
 public:
     enum class SortingType {

@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include <X11/Xlib.h>
 #include "kcheckrunning.h"
+#include <X11/Xlib.h>
 
 /*
  Return 0 when KDE is running, 1 when KDE is not running but it is possible
@@ -26,9 +26,9 @@
 */
 CheckRunningState kCheckRunning()
 {
-    Display* dpy = XOpenDisplay( nullptr );
-    if( dpy == nullptr )
+    Display *dpy = XOpenDisplay(nullptr);
+    if (dpy == nullptr)
         return NoX11;
-    Atom atom = XInternAtom( dpy, "_KDE_RUNNING", False );
-    return XGetSelectionOwner( dpy, atom ) != None ? PlasmaRunning : NoPlasmaRunning;
+    Atom atom = XInternAtom(dpy, "_KDE_RUNNING", False);
+    return XGetSelectionOwner(dpy, atom) != None ? PlasmaRunning : NoPlasmaRunning;
 }

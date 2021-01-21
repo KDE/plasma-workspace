@@ -27,7 +27,6 @@
 
 namespace NotificationManager
 {
-
 class NotificationFilterProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
@@ -70,9 +69,7 @@ protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:
-    Notifications::Urgencies m_urgencies = Notifications::LowUrgency
-            | Notifications::NormalUrgency
-            | Notifications::CriticalUrgency;
+    Notifications::Urgencies m_urgencies = Notifications::LowUrgency | Notifications::NormalUrgency | Notifications::CriticalUrgency;
     bool m_showDismissed = false;
     bool m_showExpired = false;
 
@@ -81,7 +78,6 @@ private:
 
     QStringList m_whitelistedDesktopEntries;
     QStringList m_whitelistedNotifyRcNames;
-
 };
 
 } // namespace NotificationManager

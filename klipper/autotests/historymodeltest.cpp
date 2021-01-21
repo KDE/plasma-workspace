@@ -92,8 +92,8 @@ void HistoryModelTest::testInsertRemove()
     history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(fooText)));
     QModelIndex index = history->index(0, 0);
     QCOMPARE(index.data().toString(), fooText);
-    QCOMPARE(index.data(Qt::UserRole).value<HistoryItemConstPtr>()->next_uuid(), index.data(Qt::UserRole+1).toByteArray());
-    QCOMPARE(index.data(Qt::UserRole).value<HistoryItemConstPtr>()->previous_uuid(), index.data(Qt::UserRole+1).toByteArray());
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItemConstPtr>()->next_uuid(), index.data(Qt::UserRole + 1).toByteArray());
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItemConstPtr>()->previous_uuid(), index.data(Qt::UserRole + 1).toByteArray());
 
     history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(barText)));
     QCOMPARE(index.data().toString(), barText);
@@ -168,8 +168,8 @@ void HistoryModelTest::testInsertRemove()
     QVERIFY(history->remove(barUuid));
     QCOMPARE(history->data(history->index(0, 0)).toString(), fooText);
     index = history->index(0, 0);
-    QCOMPARE(index.data(Qt::UserRole).value<HistoryItemConstPtr>()->next_uuid(), index.data(Qt::UserRole+1).toByteArray());
-    QCOMPARE(index.data(Qt::UserRole).value<HistoryItemConstPtr>()->previous_uuid(), index.data(Qt::UserRole+1).toByteArray());
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItemConstPtr>()->next_uuid(), index.data(Qt::UserRole + 1).toByteArray());
+    QCOMPARE(index.data(Qt::UserRole).value<HistoryItemConstPtr>()->previous_uuid(), index.data(Qt::UserRole + 1).toByteArray());
 
     QVERIFY(history->remove(fooUuid));
     QCOMPARE(history->rowCount(), 0);
@@ -212,7 +212,7 @@ void HistoryModelTest::testIndexOf()
     QVERIFY(!history->indexOf(QByteArray()).isValid());
     const QByteArray fooUuid = QCryptographicHash::hash(QByteArrayLiteral("foo"), QCryptographicHash::Sha1);
     QVERIFY(history->indexOf(fooUuid).isValid());
-    QCOMPARE(history->indexOf(fooUuid).data(Qt::UserRole+1).toByteArray(), fooUuid);
+    QCOMPARE(history->indexOf(fooUuid).data(Qt::UserRole + 1).toByteArray(), fooUuid);
 
     history->clear();
     QVERIFY(!history->indexOf(fooUuid).isValid());
@@ -220,7 +220,7 @@ void HistoryModelTest::testIndexOf()
 
 void HistoryModelTest::testType_data()
 {
-    QTest::addColumn<HistoryItem*>("item");
+    QTest::addColumn<HistoryItem *>("item");
     QTest::addColumn<HistoryItemType>("expectedType");
 
     HistoryItem *item = new HistoryStringItem(QStringLiteral("foo"));
@@ -238,10 +238,10 @@ void HistoryModelTest::testType()
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
 
-    QFETCH(HistoryItem*, item);
+    QFETCH(HistoryItem *, item);
     QFETCH(HistoryItemType, expectedType);
     history->insert(QSharedPointer<HistoryItem>(item));
-    QCOMPARE(history->index(0).data(Qt::UserRole+2).value<HistoryItemType>(), expectedType);
+    QCOMPARE(history->index(0).data(Qt::UserRole + 2).value<HistoryItemType>(), expectedType);
 }
 
 QTEST_MAIN(HistoryModelTest)

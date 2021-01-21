@@ -38,14 +38,13 @@ class ShellCorona;
 
 namespace KTextEditor
 {
-    class Document;
+class Document;
 } // namespace KParts
 
 namespace Plasma
 {
-    class Corona;
+class Corona;
 } // namespace Plasma
-
 
 class InteractiveConsole : public QDialog
 {
@@ -131,33 +130,51 @@ class InteractiveConsoleItem : public QObject
 
 public:
     InteractiveConsoleItem()
-        : QObject(nullptr),
-          m_dialog(new InteractiveConsole(nullptr))
+        : QObject(nullptr)
+        , m_dialog(new InteractiveConsole(nullptr))
     {
-        connect(m_dialog, &InteractiveConsole::scriptEngineChanged,
-                this, &InteractiveConsoleItem::scriptEngineChanged);
-        connect(m_dialog, &InteractiveConsole::modeChanged,
-                this, &InteractiveConsoleItem::modeChanged);
-        connect(m_dialog, &InteractiveConsole::visibleChanged,
-                this, &InteractiveConsoleItem::visibleChanged);
+        connect(m_dialog, &InteractiveConsole::scriptEngineChanged, this, &InteractiveConsoleItem::scriptEngineChanged);
+        connect(m_dialog, &InteractiveConsole::modeChanged, this, &InteractiveConsoleItem::modeChanged);
+        connect(m_dialog, &InteractiveConsole::visibleChanged, this, &InteractiveConsoleItem::visibleChanged);
     }
 
-    ~InteractiveConsoleItem()
-    override {
+    ~InteractiveConsoleItem() override
+    {
         m_dialog->deleteLater();
     }
 
-    void setMode(const QString &mode) { m_dialog->setMode(mode); }
-    QString mode() const { return m_dialog->mode(); }
+    void setMode(const QString &mode)
+    {
+        m_dialog->setMode(mode);
+    }
+    QString mode() const
+    {
+        return m_dialog->mode();
+    }
 
-    void setScriptInterface(QObject *obj) { m_dialog->setScriptInterface(obj); }
-    QObject *scriptEngine() const { return m_dialog->scriptEngine(); }
+    void setScriptInterface(QObject *obj)
+    {
+        m_dialog->setScriptInterface(obj);
+    }
+    QObject *scriptEngine() const
+    {
+        return m_dialog->scriptEngine();
+    }
 
-    void setVisible(bool visible) const { visible ? m_dialog->show() : m_dialog->hide(); }
-    bool isVisible() const { return m_dialog->isVisible(); }
+    void setVisible(bool visible) const
+    {
+        visible ? m_dialog->show() : m_dialog->hide();
+    }
+    bool isVisible() const
+    {
+        return m_dialog->isVisible();
+    }
 
 public Q_SLOTS:
-    void loadScript(const QString &path) { m_dialog->loadScript(path); }
+    void loadScript(const QString &path)
+    {
+        m_dialog->loadScript(path);
+    }
 
 Q_SIGNALS:
     void scriptEngineChanged();
@@ -169,4 +186,3 @@ private:
 };
 
 #endif
-

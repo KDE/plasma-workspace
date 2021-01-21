@@ -22,9 +22,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ******************************************************************/
 #include <QApplication>
-#include <QQuickWindow>
 #include <QCommandLineParser>
 #include <QLibraryInfo>
+#include <QQuickWindow>
 
 #include <KQuickAddons/QtQuickSettings>
 
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 
     isShuttingDownPending.waitForFinished();
 
-    //if ksmserver is shutting us down already, we don't want another prompt
+    // if ksmserver is shutting us down already, we don't want another prompt
     if (isShuttingDownPending.value()) {
         return 0;
     }
@@ -70,8 +70,8 @@ int main(int argc, char *argv[])
     Greeter greeter;
 
     if (argc > 1) {
-        //special case, invoked from ksmserver from a former release which had a tonne of args
-        //shouldn't happen often
+        // special case, invoked from ksmserver from a former release which had a tonne of args
+        // shouldn't happen often
         greeter.promptLogout();
     }
 

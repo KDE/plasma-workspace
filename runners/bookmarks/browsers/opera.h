@@ -18,8 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
-
 #ifndef OPERA_H
 #define OPERA_H
 
@@ -30,16 +28,17 @@ class Favicon;
 
 class Opera : public QObject, public Browser
 {
-Q_OBJECT
+    Q_OBJECT
 public:
-    explicit Opera(QObject* parent = nullptr);
-    QList<BookmarkMatch> match(const QString& term, bool addEverything) override;
+    explicit Opera(QObject *parent = nullptr);
+    QList<BookmarkMatch> match(const QString &term, bool addEverything) override;
 public Q_SLOTS:
     void prepare() override;
     void teardown() override;
+
 private:
     QStringList m_operaBookmarkEntries;
-    Favicon * const m_favicon;
+    Favicon *const m_favicon;
 };
 
 #endif // OPERA_H

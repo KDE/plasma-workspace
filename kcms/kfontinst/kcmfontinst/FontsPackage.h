@@ -31,10 +31,9 @@ class QTemporaryDir;
 
 namespace KFI
 {
-
 namespace FontsPackage
 {
-    QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir);
+QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir);
 }
 
 }

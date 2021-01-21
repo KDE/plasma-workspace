@@ -22,11 +22,11 @@
 #include <QStandardPaths>
 
 #include <KActionCollection>
-#include <KDesktopFile>
-#include <KSharedConfig>
-#include <KConfigGroup>
 #include <KConfig>
+#include <KConfigGroup>
+#include <KDesktopFile>
 #include <KGlobalAccel>
+#include <KSharedConfig>
 
 int main(int argc, char **argv)
 {
@@ -37,7 +37,7 @@ int main(int argc, char **argv)
 
     // Fake krunner and remove the old shortcuts
     {
-        KActionCollection oldCollection(static_cast<QObject*>(nullptr));
+        KActionCollection oldCollection(static_cast<QObject *>(nullptr));
         oldCollection.setComponentName(QStringLiteral("krunner"));
 
         QAction *oldAction = new QAction();
@@ -61,9 +61,10 @@ int main(int argc, char **argv)
             displayName = df.readName();
         }
 
-        const QString clipboardActionName = df.actionGroup(QStringLiteral("RunClipboard")).readEntry(QStringLiteral("Name"), QStringLiteral("Run command on clipboard contents"));
+        const QString clipboardActionName =
+            df.actionGroup(QStringLiteral("RunClipboard")).readEntry(QStringLiteral("Name"), QStringLiteral("Run command on clipboard contents"));
 
-        KActionCollection shortCutActions(static_cast<QObject*>(nullptr));
+        KActionCollection shortCutActions(static_cast<QObject *>(nullptr));
         shortCutActions.setComponentName(QStringLiteral("krunner.desktop"));
         shortCutActions.setComponentDisplayName(displayName);
 
@@ -82,4 +83,3 @@ int main(int argc, char **argv)
 
     return 0;
 }
-

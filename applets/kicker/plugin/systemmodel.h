@@ -27,25 +27,25 @@ class SystemModel : public AbstractModel
 {
     Q_OBJECT
 
-    public:
-        explicit SystemModel(QObject *parent = nullptr);
-        ~SystemModel() override;
+public:
+    explicit SystemModel(QObject *parent = nullptr);
+    ~SystemModel() override;
 
-        QString description() const override;
+    QString description() const override;
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-        int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
+    Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
 
-    protected Q_SLOTS:
-        void refresh() override;
+protected Q_SLOTS:
+    void refresh() override;
 
-    private:
-        void populate();
+private:
+    void populate();
 
-        QVector<SystemEntry *> m_entries;
+    QVector<SystemEntry *> m_entries;
 };
 
 #endif

@@ -38,11 +38,10 @@ public:
     PreviewWidget(QWidget *parent);
     ~PreviewWidget() override;
 
-    void setPalette(const KSharedConfigPtr &config,
-                    QPalette::ColorGroup state = QPalette::Active);
+    void setPalette(const KSharedConfigPtr &config, QPalette::ColorGroup state = QPalette::Active);
 
 protected:
-    void setPaletteRecursive(QWidget*, const QPalette&);
+    void setPaletteRecursive(QWidget *, const QPalette &);
     bool eventFilter(QObject *, QEvent *) override;
 };
 

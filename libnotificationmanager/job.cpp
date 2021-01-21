@@ -25,7 +25,6 @@
 
 #include <KService>
 
-
 using namespace NotificationManager;
 
 Job::Job(uint id, QObject *parent)

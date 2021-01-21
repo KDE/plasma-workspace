@@ -27,9 +27,9 @@
 #include <QMenu>
 #include <QRegularExpression>
 
-ClipboardMenu::ClipboardMenu(QObject *parent) : QObject(parent)
+ClipboardMenu::ClipboardMenu(QObject *parent)
+    : QObject(parent)
 {
-
 }
 
 ClipboardMenu::~ClipboardMenu() = default;
@@ -64,19 +64,19 @@ void ClipboardMenu::setupMenu(QAction *action)
 {
     QMenu *menu = new QMenu;
 
-/*
- * The refresh rate of m_currentDate depends of what is shown in the plasmoid.
- * If only minutes are shown, the value is updated at the full minute and
- * seconds are always 0 or 59 and thus useless/confusing to offer for copy.
- * Use a reference to the config's showSeconds to decide if seconds are sent
- * to the clipboard. There was no workaround found ...
- */
+    /*
+     * The refresh rate of m_currentDate depends of what is shown in the plasmoid.
+     * If only minutes are shown, the value is updated at the full minute and
+     * seconds are always 0 or 59 and thus useless/confusing to offer for copy.
+     * Use a reference to the config's showSeconds to decide if seconds are sent
+     * to the clipboard. There was no workaround found ...
+     */
     connect(menu, &QMenu::aboutToShow, this, [this, menu] {
         menu->clear();
 
         const QDate date = m_currentDate.date();
         const QTime time = m_currentDate.time();
-        const QRegularExpression rx ("[^0-9:]");
+        const QRegularExpression rx("[^0-9:]");
         const QChar ws = QLatin1Char(' ');
         QString s;
         QAction *a;
@@ -130,7 +130,7 @@ void ClipboardMenu::setupMenu(QAction *action)
             a = menu->addAction(s);
             a->setData(s);
         }
-        s = date.toString(Qt::SystemLocaleLongDate) + ws +  time.toString(Qt::SystemLocaleShortDate);
+        s = date.toString(Qt::SystemLocaleLongDate) + ws + time.toString(Qt::SystemLocaleShortDate);
         a = menu->addAction(s);
         a->setData(s);
 
@@ -138,11 +138,11 @@ void ClipboardMenu::setupMenu(QAction *action)
 
         QMenu *otherCalendarsMenu = menu->addMenu(i18n("Other Calendars"));
 
-/* Add ICU Calendars if QLocale is ready for
-        Chinese, Coptic, Ethiopic, (Gregorian), Hebrew, Indian, Islamic, Persian
+        /* Add ICU Calendars if QLocale is ready for
+                Chinese, Coptic, Ethiopic, (Gregorian), Hebrew, Indian, Islamic, Persian
 
-        otherCalendarsMenu->addSeparator();
-*/
+                otherCalendarsMenu->addSeparator();
+        */
         s = QString::number(m_currentDate.toMSecsSinceEpoch() / 1000);
         a = otherCalendarsMenu->addAction(i18nc("unix timestamp (seconds since 1.1.1970)", "%1 (UNIX Time)", s));
         a->setData(s);

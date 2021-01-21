@@ -39,8 +39,8 @@
 class KJob;
 namespace KIO
 {
-    class Job;
-    class TransferJob;
+class Job;
+class TransferJob;
 }
 class QXmlStreamReader;
 
@@ -86,9 +86,10 @@ public:
 
         QVector<WeatherData::ForecastInfo *> dayForecasts;
         QVector<WeatherData::ForecastInfo *> nightForecasts;
+
     private:
-        int getMaxTemp(const QVector<WeatherData::ForecastInfo*>& forecastInfos) const;
-        int getMinTemp(const QVector<WeatherData::ForecastInfo*>& forecastInfos) const;
+        int getMaxTemp(const QVector<WeatherData::ForecastInfo *> &forecastInfos) const;
+        int getMinTemp(const QVector<WeatherData::ForecastInfo *> &forecastInfos) const;
     };
 
     QVector<WeatherData::ForecastPeriod *> forecasts;
@@ -97,7 +98,6 @@ public:
 Q_DECLARE_TYPEINFO(WeatherData::ForecastInfo, Q_MOVABLE_TYPE);
 Q_DECLARE_TYPEINFO(WeatherData::ForecastPeriod, Q_MOVABLE_TYPE);
 Q_DECLARE_TYPEINFO(WeatherData, Q_MOVABLE_TYPE);
-
 
 class Q_DECL_EXPORT WetterComIon : public IonInterface
 {
@@ -108,7 +108,7 @@ public:
     ~WetterComIon() override;
 
 public: // IonInterface API
-    bool updateIonSource(const QString& source) override;
+    bool updateIonSource(const QString &source) override;
 
 protected: // IonInterface API
     void reset() override;
@@ -132,22 +132,22 @@ private:
     QHash<QString, QString> setupNightConditionMappings() const;
 
     // Retrieve the mapping from the wetter.com condition code to the respective icon / condition name
-    QMap<QString, ConditionIcons> const& nightIcons() const;
-    QMap<QString, ConditionIcons> const& dayIcons() const;
-    QHash<QString, QString> const& dayConditions() const;
-    QHash<QString, QString> const& nightConditions() const;
+    QMap<QString, ConditionIcons> const &nightIcons() const;
+    QMap<QString, ConditionIcons> const &dayIcons() const;
+    QHash<QString, QString> const &dayConditions() const;
+    QHash<QString, QString> const &nightConditions() const;
 
-    QString getWeatherCondition(const QHash<QString, QString> &conditionList, const QString& condition) const;
+    QString getWeatherCondition(const QHash<QString, QString> &conditionList, const QString &condition) const;
 
     // Find place
-    void findPlace(const QString& place, const QString& source);
-    void parseSearchResults(const QString& source, QXmlStreamReader& xml);
-    void validate(const QString& source, bool parseError);
+    void findPlace(const QString &place, const QString &source);
+    void parseSearchResults(const QString &source, QXmlStreamReader &xml);
+    void validate(const QString &source, bool parseError);
 
     // Retrieve and parse forecast
-    void fetchForecast(const QString& source);
-    void parseWeatherForecast(const QString& source, QXmlStreamReader& xml);
-    void updateWeather(const QString& source, bool parseError);
+    void fetchForecast(const QString &source);
+    void parseWeatherForecast(const QString &source, QXmlStreamReader &xml);
+    void updateWeather(const QString &source, bool parseError);
 
 private:
     struct PlaceInfo {
@@ -174,6 +174,5 @@ private:
     QStringList m_sourcesToReset;
 };
 
-
 #endif
-// kate: indent-mode cstyle; space-indent on; indent-width 4; 
+// kate: indent-mode cstyle; space-indent on; indent-width 4;

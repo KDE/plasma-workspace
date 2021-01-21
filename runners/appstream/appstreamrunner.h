@@ -21,13 +21,13 @@
 #ifndef APPSTREAMRUNNER_H
 #define APPSTREAMRUNNER_H
 
-#include <KRunner/AbstractRunner>
 #include <AppStreamQt/pool.h>
+#include <KRunner/AbstractRunner>
 #include <QMutex>
 
 class InstallerRunner : public Plasma::AbstractRunner
 {
-Q_OBJECT
+    Q_OBJECT
 
 public:
     InstallerRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
@@ -44,4 +44,3 @@ private:
 };
 
 #endif
-

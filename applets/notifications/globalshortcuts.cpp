@@ -46,12 +46,11 @@ GlobalShortcuts::~GlobalShortcuts() = default;
 
 void GlobalShortcuts::showDoNotDisturbOsd(bool doNotDisturb) const
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall(//
+    QDBusMessage msg = QDBusMessage::createMethodCall( //
         QStringLiteral("org.kde.plasmashell"),
         QStringLiteral("/org/kde/osdService"),
         QStringLiteral("org.kde.osdService"),
-        QStringLiteral("showText")
-    );
+        QStringLiteral("showText"));
 
     const QString iconName = doNotDisturb ? QStringLiteral("notifications-disabled") : QStringLiteral("notifications");
     const QString text = doNotDisturb ? i18nc("OSD popup, keep short", "Notifications Off") //

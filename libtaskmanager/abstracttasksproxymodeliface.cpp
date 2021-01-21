@@ -25,7 +25,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 void AbstractTasksProxyModelIface::requestActivate(const QModelIndex &index)
 {
     if (!index.isValid()) {
@@ -157,7 +156,7 @@ void AbstractTasksProxyModelIface::requestToggleKeepBelow(const QModelIndex &ind
         return;
     }
 
-   const QModelIndex &sourceIndex = mapIfaceToSource(index);
+    const QModelIndex &sourceIndex = mapIfaceToSource(index);
     const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {

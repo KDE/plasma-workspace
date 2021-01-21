@@ -52,7 +52,7 @@ ResizeHandle::ResizeHandle(QQuickItem *parent)
         }
     });
 
-    auto syncCursor = [this] () {
+    auto syncCursor = [this]() {
         switch (m_resizeCorner) {
         case Left:
         case Right:
@@ -98,7 +98,7 @@ bool ResizeHandle::resizeTop() const
 
 bool ResizeHandle::resizeRight() const
 {
-    return m_resizeCorner == Right || m_resizeCorner == TopRight ||m_resizeCorner == BottomRight;
+    return m_resizeCorner == Right || m_resizeCorner == TopRight || m_resizeCorner == BottomRight;
 }
 
 bool ResizeHandle::resizeBottom() const
@@ -117,7 +117,6 @@ void ResizeHandle::setResizeBlocked(bool width, bool height)
 
     emit resizeBlockedChanged();
 }
-
 
 void ResizeHandle::mousePressEvent(QMouseEvent *event)
 {
@@ -146,14 +145,14 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
 
     layout->releaseSpace(itemContainer);
     const QPointF difference = m_mouseDownPosition - event->windowPos();
-    
+
     QSizeF minimumSize = QSize(layout->minimumItemWidth(), layout->minimumItemHeight());
     if (itemContainer->layoutAttached()) {
         minimumSize.setWidth(qMax(minimumSize.width(), itemContainer->layoutAttached()->property("minimumWidth").toReal()));
         minimumSize.setHeight(qMax(minimumSize.height(), itemContainer->layoutAttached()->property("minimumHeight").toReal()));
     }
 
-    //Now make minimumSize an integer number of cells
+    // Now make minimumSize an integer number of cells
     minimumSize.setWidth(ceil(minimumSize.width() / layout->cellWidth()) * layout->cellWidth());
     minimumSize.setHeight(ceil(minimumSize.height() / layout->cellWidth()) * layout->cellHeight());
 
@@ -190,8 +189,7 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
         if (layout->isRectAvailable(m_mouseDownGeometry.x(), y - 1, m_mouseDownGeometry.width(), m_mouseDownGeometry.height())) {
             itemContainer->setY(y);
             itemContainer->setHeight(height);
-            setResizeBlocked(m_resizeWidthBlocked,
-                             m_mouseDownGeometry.height() + difference.y() < minimumSize.height());
+            setResizeBlocked(m_resizeWidthBlocked, m_mouseDownGeometry.height() + difference.y() < minimumSize.height());
         } else {
             setResizeBlocked(m_resizeWidthBlocked, true);
         }
@@ -200,8 +198,7 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
 
         if (layout->isRectAvailable(m_mouseDownGeometry.x(), m_mouseDownGeometry.y(), m_mouseDownGeometry.width(), height)) {
             itemContainer->setHeight(qMax(height, minimumSize.height()));
-            setResizeBlocked(m_resizeWidthBlocked,
-                             m_mouseDownGeometry.height() - difference.y() < minimumSize.height());
+            setResizeBlocked(m_resizeWidthBlocked, m_mouseDownGeometry.height() - difference.y() < minimumSize.height());
         } else {
             setResizeBlocked(m_resizeWidthBlocked, true);
         }
@@ -237,7 +234,7 @@ void ResizeHandle::setConfigOverlay(ConfigOverlay *handle)
         return;
     }
 
-    m_configOverlay = handle;    
+    m_configOverlay = handle;
 }
 
 #include "moc_resizehandle.cpp"

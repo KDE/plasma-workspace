@@ -16,15 +16,15 @@
  * along with this library; see the file COPYING.LIB.  If not, write to
  * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
-*/
+ */
 
 #include "devicenotificationsengine.h"
 
 #include <Plasma/DataContainer>
 
-DeviceNotificationsEngine::DeviceNotificationsEngine( QObject* parent, const QVariantList& args )
-    : Plasma::DataEngine( parent, args ),
-      m_solidNotify(new KSolidNotify(this))
+DeviceNotificationsEngine::DeviceNotificationsEngine(QObject *parent, const QVariantList &args)
+    : Plasma::DataEngine(parent, args)
+    , m_solidNotify(new KSolidNotify(this))
 {
     connect(m_solidNotify, &KSolidNotify::notify, this, &DeviceNotificationsEngine::notify);
     connect(m_solidNotify, &KSolidNotify::clearNotification, this, &DeviceNotificationsEngine::clearNotification);
@@ -34,7 +34,7 @@ DeviceNotificationsEngine::~DeviceNotificationsEngine()
 {
 }
 
-void DeviceNotificationsEngine::notify(Solid::ErrorType solidError, const QString& error, const QString& errorDetails, const QString &udi)
+void DeviceNotificationsEngine::notify(Solid::ErrorType solidError, const QString &error, const QString &errorDetails, const QString &udi)
 {
     const QString source = QStringLiteral("%1 notification").arg(udi);
 
@@ -44,7 +44,7 @@ void DeviceNotificationsEngine::notify(Solid::ErrorType solidError, const QStrin
     notificationData.insert(QStringLiteral("errorDetails"), errorDetails);
     notificationData.insert(QStringLiteral("udi"), udi);
 
-    setData(source, notificationData );
+    setData(source, notificationData);
 }
 
 void DeviceNotificationsEngine::clearNotification(const QString &udi)

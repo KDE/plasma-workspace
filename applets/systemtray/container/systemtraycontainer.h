@@ -21,7 +21,6 @@
 #ifndef SYSTEMTRAYCONTAINER_H
 #define SYSTEMTRAYCONTAINER_H
 
-
 #include <Plasma/Applet>
 
 class QQuickItem;

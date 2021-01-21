@@ -29,7 +29,6 @@ class DataEngine;
 
 namespace ColorCorrect
 {
-
 class COLORCORRECT_EXPORT Geolocator : public QObject, public Plasma::DataEngineConsumer
 {
     Q_OBJECT
@@ -41,10 +40,12 @@ public:
     explicit Geolocator(QObject *parent = nullptr);
     ~Geolocator() override = default;
 
-    double latitude() const {
+    double latitude() const
+    {
         return m_latitude;
     }
-    double longitude() const {
+    double longitude() const
+    {
         return m_longitude;
     }
 

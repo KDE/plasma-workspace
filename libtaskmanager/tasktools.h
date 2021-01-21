@@ -32,9 +32,7 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
-struct AppData
-{
+struct AppData {
     QString id; // Application id (*.desktop sans extension).
     QString name; // Application name.
     QString genericName; // Generic application name.
@@ -44,8 +42,8 @@ struct AppData
 };
 
 enum UrlComparisonMode {
-     Strict = 0,
-     IgnoreQueryItems,
+    Strict = 0,
+    IgnoreQueryItems,
 };
 
 /**
@@ -95,8 +93,10 @@ TASKMANAGER_EXPORT AppData appDataFromUrl(const QUrl &url, const QIcon &fallback
  * @returns A .desktop file or executable path for the application
  * owning the window.
  */
-TASKMANAGER_EXPORT QUrl windowUrlFromMetadata(const QString &appId, quint32 pid = 0,
-    KSharedConfig::Ptr config = KSharedConfig::Ptr(), const QString &xWindowsWMClassName = QString());
+TASKMANAGER_EXPORT QUrl windowUrlFromMetadata(const QString &appId,
+                                              quint32 pid = 0,
+                                              KSharedConfig::Ptr config = KSharedConfig::Ptr(),
+                                              const QString &xWindowsWMClassName = QString());
 
 /**
  * Returns a list of (usually application) KService instances for the
@@ -108,8 +108,7 @@ TASKMANAGER_EXPORT QUrl windowUrlFromMetadata(const QString &appId, quint32 pid 
  * behavior.
  * @returns A list of KService instances.
  */
-TASKMANAGER_EXPORT KService::List servicesFromPid(quint32 pid,
-    KSharedConfig::Ptr rulesConfig = KSharedConfig::Ptr());
+TASKMANAGER_EXPORT KService::List servicesFromPid(quint32 pid, KSharedConfig::Ptr rulesConfig = KSharedConfig::Ptr());
 
 /**
  * Returns a list of (usually application) KService instances for the
@@ -132,8 +131,8 @@ TASKMANAGER_EXPORT KService::List servicesFromPid(quint32 pid,
  * behavior.
  * @returns A list of KService instances.
  */
-TASKMANAGER_EXPORT KService::List servicesFromCmdLine(const QString &cmdLine, const QString &processName,
-    KSharedConfig::Ptr rulesConfig = KSharedConfig::Ptr());
+TASKMANAGER_EXPORT KService::List
+servicesFromCmdLine(const QString &cmdLine, const QString &processName, KSharedConfig::Ptr rulesConfig = KSharedConfig::Ptr());
 
 /**
  * Returns an application id for an URL using the preferred:// scheme.
@@ -190,8 +189,7 @@ TASKMANAGER_EXPORT QRect screenGeometry(const QPoint &pos);
  * @param appData An application data struct.
  * @param urls A list of URLs for the application to open.
  */
-TASKMANAGER_EXPORT void runApp(const AppData &appData,
-    const QList<QUrl> &urls = QList<QUrl>());
+TASKMANAGER_EXPORT void runApp(const AppData &appData, const QList<QUrl> &urls = QList<QUrl>());
 }
 
 #endif

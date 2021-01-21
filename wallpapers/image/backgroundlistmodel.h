@@ -24,32 +24,31 @@
 
 #include <QAbstractListModel>
 #include <QCache>
+#include <QMutex>
 #include <QPixmap>
 #include <QRunnable>
-#include <QThread>
-#include <QMutex>
 #include <QSet>
+#include <QThread>
 
 #include <KDirWatch>
 #include <KFileItem>
 
 #include <KPackage/PackageStructure>
 
-
 class Image;
 
 class ImageSizeFinder : public QObject, public QRunnable
 {
     Q_OBJECT
-    public:
-        explicit ImageSizeFinder(const QString &path, QObject *parent = nullptr);
-        void run() override;
+public:
+    explicit ImageSizeFinder(const QString &path, QObject *parent = nullptr);
+    void run() override;
 
-    Q_SIGNALS:
-        void sizeFound(const QString &path, const QSize &size);
+Q_SIGNALS:
+    void sizeFound(const QString &path, const QSize &size);
 
-    private:
-        QString m_path;
+private:
+    QString m_path;
 };
 
 class BackgroundListModel : public QAbstractListModel
@@ -77,8 +76,8 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override ;
-    bool setData(const QModelIndex& index, const QVariant& value, int role = Qt::EditRole) override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
     KPackage::Package package(int index) const;
 
     void reload();
@@ -88,7 +87,10 @@ public:
     Q_INVOKABLE int indexOf(const QString &path) const;
     virtual bool contains(const QString &bg) const;
 
-    int count() const {return m_packages.size();}
+    int count() const
+    {
+        return m_packages.size();
+    }
 
     Q_INVOKABLE void openContainingFolder(int rowIndex);
     Q_INVOKABLE void setPendingDeletion(int rowIndex, bool pendingDeletion);

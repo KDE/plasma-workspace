@@ -18,24 +18,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include <KLocalizedString>
 
-#include <QDBusReply>
 #include <QDBusInterface>
+#include <QDBusReply>
 
 namespace ColorCorrect
 {
-
 CompositorAdaptor::CompositorAdaptor(QObject *parent)
     : QObject(parent)
 {
-    m_iface = new QDBusInterface (QStringLiteral("org.kde.KWin"),
-                                    QStringLiteral("/ColorCorrect"),
-                                    QStringLiteral("org.kde.kwin.ColorCorrect"),
-                                    QDBusConnection::sessionBus(),
-                                    this);
+    m_iface = new QDBusInterface(QStringLiteral("org.kde.KWin"),
+                                 QStringLiteral("/ColorCorrect"),
+                                 QStringLiteral("org.kde.kwin.ColorCorrect"),
+                                 QDBusConnection::sessionBus(),
+                                 this);
 
-    if (!m_iface->connection().connect(QString(), QStringLiteral("/ColorCorrect"),
-                                          QStringLiteral("org.kde.kwin.ColorCorrect"), QStringLiteral("nightColorConfigChanged"),
-                                          this, SLOT(compDataUpdated(QHash<QString, QVariant>)))) {
+    if (!m_iface->connection().connect(QString(),
+                                       QStringLiteral("/ColorCorrect"),
+                                       QStringLiteral("org.kde.kwin.ColorCorrect"),
+                                       QStringLiteral("nightColorConfigChanged"),
+                                       this,
+                                       SLOT(compDataUpdated(QHash<QString, QVariant>)))) {
         setError(ErrorCode::ErrorCodeConnectionFailed);
         return;
     }
@@ -48,7 +50,7 @@ void CompositorAdaptor::setError(ErrorCode error)
         return;
     }
     m_error = error;
-    switch(error) {
+    switch (error) {
     case ErrorCode::ErrorCodeConnectionFailed:
         m_errorText = i18nc("Critical error message", "Failed to connect to the Window Manager");
         break;
@@ -77,11 +79,11 @@ void CompositorAdaptor::reloadData()
     resetDataAndStaged(info);
 }
 
-#define SETTER(out, in, emitsignal) \
-if (out != in) { \
-    out = in; \
-    emit emitsignal; \
-}
+#define SETTER(out, in, emitsignal)                                                                                                                            \
+    if (out != in) {                                                                                                                                           \
+        out = in;                                                                                                                                              \
+        emit emitsignal;                                                                                                                                       \
+    }
 
 void CompositorAdaptor::resetDataAndStaged(const QHash<QString, QVariant> &data)
 {
@@ -141,7 +143,7 @@ bool CompositorAdaptor::resetData(const QHash<QString, QVariant> &data)
 
 QHash<QString, QVariant> CompositorAdaptor::getData()
 {
-    QDBusReply<QHash<QString, QVariant> > reply = m_iface->call("nightColorInfo");
+    QDBusReply<QHash<QString, QVariant>> reply = m_iface->call("nightColorInfo");
     if (reply.isValid()) {
         return reply.value();
     } else {
@@ -244,21 +246,15 @@ bool CompositorAdaptor::checkStaged()
         return actChange;
     }
 
-    bool baseDataChange = actChange ||
-            m_mode != m_modeStaged ||
-            m_nightTemperature != m_nightTemperatureStaged;
-    switch(m_modeStaged) {
+    bool baseDataChange = actChange || m_mode != m_modeStaged || m_nightTemperature != m_nightTemperatureStaged;
+    switch (m_modeStaged) {
     case Mode::ModeAutomatic:
         return baseDataChange;
     case Mode::ModeLocation:
-        return baseDataChange ||
-                m_latitudeFixed != m_latitudeFixedStaged ||
-                m_longitudeFixed != m_longitudeFixedStaged;
+        return baseDataChange || m_latitudeFixed != m_latitudeFixedStaged || m_longitudeFixed != m_longitudeFixedStaged;
     case Mode::ModeTimings:
-        return baseDataChange ||
-                m_morningBeginFixed != m_morningBeginFixedStaged ||
-                m_eveningBeginFixed != m_eveningBeginFixedStaged ||
-                m_transitionTime != m_transitionTimeStaged;
+        return baseDataChange || m_morningBeginFixed != m_morningBeginFixedStaged || m_eveningBeginFixed != m_eveningBeginFixedStaged
+            || m_transitionTime != m_transitionTimeStaged;
     case Mode::ModeConstant:
         return baseDataChange;
     default:
@@ -269,14 +265,9 @@ bool CompositorAdaptor::checkStaged()
 
 bool CompositorAdaptor::checkStagedAll()
 {
-    return m_active != m_activeStaged ||
-            m_mode != m_modeStaged ||
-            m_nightTemperature != m_nightTemperatureStaged ||
-            m_latitudeFixed != m_latitudeFixedStaged ||
-            m_longitudeFixed != m_longitudeFixedStaged ||
-            m_morningBeginFixed != m_morningBeginFixedStaged ||
-            m_eveningBeginFixed != m_eveningBeginFixedStaged ||
-            m_transitionTime != m_transitionTimeStaged;
+    return m_active != m_activeStaged || m_mode != m_modeStaged || m_nightTemperature != m_nightTemperatureStaged || m_latitudeFixed != m_latitudeFixedStaged
+        || m_longitudeFixed != m_longitudeFixedStaged || m_morningBeginFixed != m_morningBeginFixedStaged || m_eveningBeginFixed != m_eveningBeginFixedStaged
+        || m_transitionTime != m_transitionTimeStaged;
 }
 
 }

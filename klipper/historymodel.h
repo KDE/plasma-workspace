@@ -24,8 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class HistoryItem;
 
-enum class HistoryItemType
-{
+enum class HistoryItemType {
     Text,
     Image,
     Url,
@@ -40,7 +39,7 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
-    QHash< int, QByteArray > roleNames() const override;
+    QHash<int, QByteArray> roleNames() const override;
     bool remove(const QByteArray &uuid);
 
     int maxSize() const;
@@ -59,7 +58,8 @@ public:
 
     void insert(QSharedPointer<HistoryItem> item);
 
-    QMutex *mutex() {
+    QMutex *mutex()
+    {
         return &m_mutex;
     }
 
@@ -76,11 +76,13 @@ inline int HistoryModel::maxSize() const
     return m_maxSize;
 }
 
-inline bool HistoryModel::displayImages() const {
+inline bool HistoryModel::displayImages() const
+{
     return m_displayImages;
 }
 
-inline void HistoryModel::setDisplayImages(bool show) {
+inline void HistoryModel::setDisplayImages(bool show)
+{
     m_displayImages = show;
 }
 

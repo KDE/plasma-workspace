@@ -26,23 +26,27 @@
 #include <KIconLoader>
 #include <KLocalizedString>
 
+#include <KPeople/PersonData>
 #include <KPeople/Widgets/Actions>
 #include <KPeople/Widgets/PersonDetailsDialog>
-#include <KPeople/PersonData>
 
-ContactEntry::ContactEntry(AbstractModel *owner, const QString &id) : AbstractEntry(owner)
-, m_personData(nullptr)
+ContactEntry::ContactEntry(AbstractModel *owner, const QString &id)
+    : AbstractEntry(owner)
+    , m_personData(nullptr)
 {
     if (!id.isEmpty()) {
         m_personData = new KPeople::PersonData(id);
 
-        QObject::connect(m_personData, &KPeople::PersonData::dataChanged,
-            [this] { if (m_owner) { m_owner->entryChanged(this); } }
-        );
+        QObject::connect(m_personData, &KPeople::PersonData::dataChanged, [this] {
+            if (m_owner) {
+                m_owner->entryChanged(this);
+            }
+        });
     }
 }
 
-bool ContactEntry::isValid() const {
+bool ContactEntry::isValid() const
+{
     return m_personData;
 }
 
@@ -57,8 +61,7 @@ QIcon ContactEntry::icon() const
         painter.drawEllipse(0, 0, mask.width(), mask.height());
         photo.setMask(mask);
 
-        photo = photo.scaled(m_owner->iconSize(), m_owner->iconSize(),
-            Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        photo = photo.scaled(m_owner->iconSize(), m_owner->iconSize(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
         KIconLoader::global()->drawOverlays(QStringList() << m_personData->presenceIconName(), photo, KIconLoader::Panel);
 
@@ -119,7 +122,7 @@ QVariantList ContactEntry::actions() const
     return actionList;
 }
 
-bool ContactEntry::run(const QString& actionId, const QVariant &argument)
+bool ContactEntry::run(const QString &actionId, const QVariant &argument)
 {
     Q_UNUSED(argument)
 
@@ -134,7 +137,8 @@ bool ContactEntry::run(const QString& actionId, const QVariant &argument)
     return false;
 }
 
-void ContactEntry::showPersonDetailsDialog(const QString &id) {
+void ContactEntry::showPersonDetailsDialog(const QString &id)
+{
     KPeople::PersonDetailsDialog *view = new KPeople::PersonDetailsDialog(nullptr);
     KPeople::PersonData *data = new KPeople::PersonData(id, view);
     view->setPerson(data);

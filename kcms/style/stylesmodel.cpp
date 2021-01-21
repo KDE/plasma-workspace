@@ -30,9 +30,9 @@
 
 #include <algorithm>
 
-StylesModel::StylesModel(QObject *parent) : QAbstractListModel(parent)
+StylesModel::StylesModel(QObject *parent)
+    : QAbstractListModel(parent)
 {
-
 }
 
 StylesModel::~StylesModel() = default;
@@ -60,9 +60,12 @@ QVariant StylesModel::data(const QModelIndex &index, int role) const
             return item.display;
         }
         return item.styleName;
-    case StyleNameRole: return item.styleName;
-    case DescriptionRole: return item.description;
-    case ConfigurableRole: return !item.configPage.isEmpty();
+    case StyleNameRole:
+        return item.styleName;
+    case DescriptionRole:
+        return item.description;
+    case ConfigurableRole:
+        return !item.configPage.isEmpty();
     }
 
     return QVariant();
@@ -145,7 +148,8 @@ void StylesModel::load()
 
     QStringList themeFiles;
 
-    const QStringList themeDirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kstyle/themes"), QStandardPaths::LocateDirectory);
+    const QStringList themeDirs =
+        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kstyle/themes"), QStandardPaths::LocateDirectory);
     for (const QString &dir : themeDirs) {
         const QStringList fileNames = QDir(dir).entryList(QStringList{QStringLiteral("*.themerc")});
         for (const QString &file : fileNames) {

@@ -20,38 +20,37 @@
 #ifndef WEATHERENGINE_H
 #define WEATHERENGINE_H
 
-#include <QTimer>
-#include <QNetworkConfigurationManager>
 #include <QHash>
+#include <QNetworkConfigurationManager>
+#include <QTimer>
 
 #include <Plasma/DataEngine>
 #include <Plasma/DataEngineConsumer>
 
 #include "ions/ion.h"
 
-
 /**
  * @author Shawn Starr
  * This class is DataEngine. It handles loading, unloading, updating any data the ions wish to send. It is a gateway for datasources (ions) to
  * communicate with the WeatherEngine.
- * 
+ *
  * To search for a city:
  * ion|validate|name such as noaa|validate|washington it will return a | separated list of valid places
  *
  * To fetch the weather:
  * ion|weather|place name  where the place name is a name returned by the former validate
  * noaa|weather|Claxton Evans County Airport, GA
- * 
+ *
  * Some ions may have a longer syntax, for instance wetter.com requires two extra params
  * for instance:
- * 
+ *
  * wettercom|validate|turin may return a list with items on the form
  *    Turin, Piemont, IT|extra|IT0PI0397;Turin
- * 
+ *
  * Thus the query for weather will be on the form:
- * 
+ *
  * wettercom|weather|Turin, Piemont, IT|IT0PI0397;Turin
- * 
+ *
  * with the extra strings appended after extra
  */
 
@@ -78,7 +77,7 @@ protected: // Plasma::DataEngine API
     /**
      * @param source The datasource to update.
      */
-    bool updateSourceEvent(const QString& source) override;
+    bool updateSourceEvent(const QString &source) override;
 
 protected Q_SLOTS: // expected DataEngine class method
     /**
@@ -86,7 +85,7 @@ protected Q_SLOTS: // expected DataEngine class method
      * @param source The datasource to be updated.
      * @param data The new data updated.
      */
-    void dataUpdated(const QString& source, const Plasma::DataEngine::Data& data);
+    void dataUpdated(const QString &source, const Plasma::DataEngine::Data &data);
 
 private Q_SLOTS:
     void forceUpdate(IonInterface *ion, const QString &source);
@@ -95,7 +94,7 @@ private Q_SLOTS:
      * Notify WeatherEngine a datasource is being removed.
      * @arg source datasource name.
      */
-    void removeIonSource(const QString& source);
+    void removeIonSource(const QString &source);
 
     /**
      * Whenever networking changes, take action
@@ -113,7 +112,7 @@ private:
      * Get instance of a loaded ion.
      * @returns a IonInterface instance of a loaded plugin.
      */
-    IonInterface* ionForSource(const QString& source, QString* ionName = nullptr);
+    IonInterface *ionForSource(const QString &source, QString *ionName = nullptr);
 
 private:
     QHash<QString, int> m_ionUsage;

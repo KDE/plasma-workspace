@@ -21,32 +21,36 @@
 
 #include "plasmawindowedview.h"
 
+#include <QMenu>
+#include <QQmlContext>
+#include <QQmlEngine>
+#include <QQmlExpression>
+#include <QQmlProperty>
 #include <QQuickItem>
 #include <QResizeEvent>
-#include <QQmlExpression>
-#include <QMenu>
-#include <QQmlEngine>
-#include <QQmlContext>
-#include <QQmlProperty>
 
 #include <KActionCollection>
-#include <KStatusNotifierItem>
 #include <KIconLoader>
 #include <KLocalizedString>
+#include <KStatusNotifierItem>
 
 #include <Plasma/Package>
 
-
 PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
-    : QQuickView(parent),
-      m_applet(nullptr),
-      m_statusNotifier(nullptr),
-      m_withStatusNotifier(false)
+    : QQuickView(parent)
+    , m_applet(nullptr)
+    , m_statusNotifier(nullptr)
+    , m_withStatusNotifier(false)
 {
     engine()->rootContext()->setContextProperty(QStringLiteral("root"), contentItem());
-    //access appletInterface.Layout.minimumWidth, to create the Layout attached object for appletInterface as a sideeffect
-    QQmlExpression *expr = new QQmlExpression(engine()->rootContext(), contentItem(), QStringLiteral("Qt.createQmlObject('import QtQuick 2.0; import QtQuick.Layouts 1.1; import org.kde.plasma.core 2.0; Rectangle {color: theme.backgroundColor; anchors.fill:parent; property Item appletInterface; onAppletInterfaceChanged: print(appletInterface.Layout.minimumWidth)}', root, \"\");"));
-    m_rootObject = expr->evaluate().value<QQuickItem*>();
+    // access appletInterface.Layout.minimumWidth, to create the Layout attached object for appletInterface as a sideeffect
+    QQmlExpression *expr = new QQmlExpression(
+        engine()->rootContext(),
+        contentItem(),
+        QStringLiteral(
+            "Qt.createQmlObject('import QtQuick 2.0; import QtQuick.Layouts 1.1; import org.kde.plasma.core 2.0; Rectangle {color: theme.backgroundColor; "
+            "anchors.fill:parent; property Item appletInterface; onAppletInterfaceChanged: print(appletInterface.Layout.minimumWidth)}', root, \"\");"));
+    m_rootObject = expr->evaluate().value<QQuickItem *>();
 }
 
 PlasmaWindowedView::~PlasmaWindowedView()
@@ -86,16 +90,13 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
         geom.setHeight(qMax(geom.height(), switchSize.height() + 1));
         setGeometry(geom);
     }
-    setMinimumSize(QSize(qMax((int)KIconLoader::SizeEnormous, switchSize.width() + 1),
-               qMax((int)KIconLoader::SizeEnormous, switchSize.height() + 1)));
+    setMinimumSize(QSize(qMax((int)KIconLoader::SizeEnormous, switchSize.width() + 1), qMax((int)KIconLoader::SizeEnormous, switchSize.height() + 1)));
 
     foreach (QObject *child, m_appletInterface->children()) {
-        //find for the needed property of Layout: minimum/maximum/preferred sizes and fillWidth/fillHeight
-        if (child->property("minimumWidth").isValid() && child->property("minimumHeight").isValid() &&
-                child->property("preferredWidth").isValid() && child->property("preferredHeight").isValid() &&
-                child->property("maximumWidth").isValid() && child->property("maximumHeight").isValid() &&
-                child->property("fillWidth").isValid() && child->property("fillHeight").isValid()
-           ) {
+        // find for the needed property of Layout: minimum/maximum/preferred sizes and fillWidth/fillHeight
+        if (child->property("minimumWidth").isValid() && child->property("minimumHeight").isValid() && child->property("preferredWidth").isValid()
+            && child->property("preferredHeight").isValid() && child->property("maximumWidth").isValid() && child->property("maximumHeight").isValid()
+            && child->property("fillWidth").isValid() && child->property("fillHeight").isValid()) {
             m_layout = child;
         }
     }
@@ -106,8 +107,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
     }
     minimumWidthChanged();
     minimumHeightChanged();
-    QObject::connect(applet->containment(), &Plasma::Containment::configureRequested,
-                     this, &PlasmaWindowedView::showConfigurationInterface);
+    QObject::connect(applet->containment(), &Plasma::Containment::configureRequested, this, &PlasmaWindowedView::showConfigurationInterface);
 
     Q_ASSERT(!m_statusNotifier);
     if (m_withStatusNotifier) {
@@ -123,7 +123,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
         updateSniStatus();
         connect(applet, &Plasma::Applet::statusChanged, this, &PlasmaWindowedView::updateSniStatus);
 
-        //set up actions
+        // set up actions
         for (auto a : applet->contextualActions()) {
             m_statusNotifier->contextMenu()->addAction(a);
         }
@@ -135,7 +135,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
         });
         m_statusNotifier->contextMenu()->addAction(closeAction);
 
-        connect(m_statusNotifier.data(), &KStatusNotifierItem::activateRequested, this, [this](bool /*active*/, const QPoint& /*pos*/){
+        connect(m_statusNotifier.data(), &KStatusNotifierItem::activateRequested, this, [this](bool /*active*/, const QPoint & /*pos*/) {
             if (isVisible() && isActive()) {
                 hide();
             } else {
@@ -144,7 +144,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
             }
         });
         auto syncStatus = [this]() {
-            switch(m_applet->status()) {
+            switch (m_applet->status()) {
             case Plasma::Types::AcceptingInputStatus:
             case Plasma::Types::RequiresAttentionStatus:
             case Plasma::Types::NeedsAttentionStatus:
@@ -264,7 +264,8 @@ void PlasmaWindowedView::minimumWidthChanged()
         return;
     }
 
-    setMinimumWidth(qMax(m_appletInterface->property("switchWidth").toInt() + 1, qMax((int)KIconLoader::SizeEnormous, m_layout->property("minimumWidth").toInt())));
+    setMinimumWidth(
+        qMax(m_appletInterface->property("switchWidth").toInt() + 1, qMax((int)KIconLoader::SizeEnormous, m_layout->property("minimumWidth").toInt())));
 }
 
 void PlasmaWindowedView::minimumHeightChanged()
@@ -273,7 +274,8 @@ void PlasmaWindowedView::minimumHeightChanged()
         return;
     }
 
-    setMinimumHeight(qMax(m_appletInterface->property("switchHeight").toInt() + 1, qMax((int)KIconLoader::SizeEnormous, m_layout->property("minimumHeight").toInt())));
+    setMinimumHeight(
+        qMax(m_appletInterface->property("switchHeight").toInt() + 1, qMax((int)KIconLoader::SizeEnormous, m_layout->property("minimumHeight").toInt())));
 }
 
 void PlasmaWindowedView::maximumWidthChanged()

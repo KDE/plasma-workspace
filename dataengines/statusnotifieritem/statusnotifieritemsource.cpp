@@ -20,22 +20,22 @@
  ***************************************************************************/
 
 #include "statusnotifieritemsource.h"
-#include "systemtraytypes.h"
 #include "statusnotifieritemservice.h"
+#include "systemtraytypes.h"
 
-#include <QApplication>
-#include <QIcon>
-#include <QDebug>
 #include <KIconEngine>
 #include <KIconLoader>
-#include <QPainter>
+#include <QApplication>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
 #include <QDBusPendingReply>
-#include <QVariantMap>
+#include <QDebug>
+#include <QIcon>
 #include <QImage>
+#include <QPainter>
 #include <QPixmap>
 #include <QSysInfo>
+#include <QVariantMap>
 
 #include <netinet/in.h>
 
@@ -45,13 +45,14 @@ class PlasmaDBusMenuImporter : public DBusMenuImporter
 {
 public:
     PlasmaDBusMenuImporter(const QString &service, const QString &path, KIconLoader *iconLoader, QObject *parent)
-    : DBusMenuImporter(service, path, parent)
-    , m_iconLoader(iconLoader)
-    {}
+        : DBusMenuImporter(service, path, parent)
+        , m_iconLoader(iconLoader)
+    {
+    }
 
 protected:
-    QIcon iconForName(const QString &name)
-    override {
+    QIcon iconForName(const QString &name) override
+    {
         return QIcon(new KIconEngine(name, m_iconLoader));
     }
 
@@ -60,15 +61,15 @@ private:
 };
 
 StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId, QObject *parent)
-    : Plasma::DataContainer(parent),
-      m_customIconLoader(nullptr),
-      m_menuImporter(nullptr),
-      m_refreshing(false),
-      m_needsReRefreshing(false),
-      m_titleUpdate(true),
-      m_iconUpdate(true),
-      m_tooltipUpdate(true),
-      m_statusUpdate(true)
+    : Plasma::DataContainer(parent)
+    , m_customIconLoader(nullptr)
+    , m_menuImporter(nullptr)
+    , m_refreshing(false)
+    , m_needsReRefreshing(false)
+    , m_titleUpdate(true)
+    , m_iconUpdate(true)
+    , m_tooltipUpdate(true)
+    , m_statusUpdate(true)
 {
     setObjectName(notifierItemId);
     qDBusRegisterMetaType<KDbusImageStruct>();
@@ -78,14 +79,14 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
     m_typeId = notifierItemId;
     m_name = notifierItemId;
 
-    //set the initial values for all the things
-    //this is important as Plasma::DataModel has an unsolvable bug
-    //when it gets data with a new key it tries to update the  QAIM roleNames
-    //from QML this achieves absolutely nothing as there is no signal to tell QQmlDelegateModel to reload the roleNames in QQmlAdapatorModel
-    //no matter if the row changes or the model refreshes
-    //this means it does not re-evaluate what bindings exist (watchedRoleIds) - and we get properties that don't bind and thus system tray icons
+    // set the initial values for all the things
+    // this is important as Plasma::DataModel has an unsolvable bug
+    // when it gets data with a new key it tries to update the  QAIM roleNames
+    // from QML this achieves absolutely nothing as there is no signal to tell QQmlDelegateModel to reload the roleNames in QQmlAdapatorModel
+    // no matter if the row changes or the model refreshes
+    // this means it does not re-evaluate what bindings exist (watchedRoleIds) - and we get properties that don't bind and thus system tray icons
 
-    //by setting everything up-front so that we have all role names when we call the first checkForUpdate()
+    // by setting everything up-front so that we have all role names when we call the first checkForUpdate()
     setData(QStringLiteral("AttentionIcon"), QIcon());
     setData(QStringLiteral("AttentionIconName"), QString());
     setData(QStringLiteral("AttentionMovieName"), QString());
@@ -117,8 +118,7 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
     QString service = notifierItemId.left(slash);
     QString path = notifierItemId.mid(slash);
 
-    m_statusNotifierItemInterface = new org::kde::StatusNotifierItem(service, path,
-                                                                     QDBusConnection::sessionBus(), this);
+    m_statusNotifierItemInterface = new org::kde::StatusNotifierItem(service, path, QDBusConnection::sessionBus(), this);
 
     m_refreshTimer.setSingleShot(true);
     m_refreshTimer.setInterval(10);
@@ -195,7 +195,9 @@ void StatusNotifierItemSource::performRefresh()
 
     m_refreshing = true;
     QDBusMessage message = QDBusMessage::createMethodCall(m_statusNotifierItemInterface->service(),
-                                                          m_statusNotifierItemInterface->path(), QStringLiteral("org.freedesktop.DBus.Properties"), QStringLiteral("GetAll"));
+                                                          m_statusNotifierItemInterface->path(),
+                                                          QStringLiteral("org.freedesktop.DBus.Properties"),
+                                                          QStringLiteral("GetAll"));
 
     message << m_statusNotifierItemInterface->interface();
     QDBusPendingCall call = m_statusNotifierItemInterface->connection().asyncCall(message);
@@ -230,8 +232,8 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         setData(QStringLiteral("StatusChanged"), m_statusUpdate);
         m_statusUpdate = false;
 
-        //IconThemePath (handle this one first, because it has an impact on
-        //others)
+        // IconThemePath (handle this one first, because it has an impact on
+        // others)
         QVariantMap properties = reply.argumentAt<0>();
         QString path = properties[QStringLiteral("IconThemePath")].toString();
 
@@ -245,12 +247,12 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             if (tokens.length() >= 3 && tokens.takeLast() == QLatin1String("icons"))
                 appName = tokens.takeLast().toString();
 
-            //icons may be either in the root directory of the passed path or in a appdir format
-            //i.e hicolor/32x32/iconname.png
+            // icons may be either in the root directory of the passed path or in a appdir format
+            // i.e hicolor/32x32/iconname.png
 
             m_customIconLoader->reconfigure(appName, QStringList(path));
 
-            //add app dir requires an app name, though this is completely unused in this context
+            // add app dir requires an app name, though this is completely unused in this context
             m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
         }
         setData(QStringLiteral("IconThemePath"), path);
@@ -262,13 +264,13 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         setData(QStringLiteral("WindowId"), properties[QStringLiteral("WindowId")]);
         setData(QStringLiteral("ItemIsMenu"), properties[QStringLiteral("ItemIsMenu")]);
 
-        //Attention Movie
+        // Attention Movie
         setData(QStringLiteral("AttentionMovieName"), properties[QStringLiteral("AttentionMovieName")]);
 
         QIcon overlay;
         QStringList overlayNames;
 
-        //Icon
+        // Icon
         {
             KDbusImageVector image;
             QIcon icon;
@@ -306,7 +308,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             setData(QStringLiteral("IconName"), iconName);
         }
 
-        //Attention icon
+        // Attention icon
         {
             KDbusImageVector image;
             QIcon attentionIcon;
@@ -331,7 +333,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             setData(QStringLiteral("AttentionIcon"), attentionIcon);
         }
 
-        //ToolTip
+        // ToolTip
         {
             KDbusToolTipStruct toolTip;
             properties[QStringLiteral("ToolTip")].value<QDBusArgument>() >> toolTip;
@@ -356,7 +358,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             }
         }
 
-        //Menu
+        // Menu
         if (!m_menuImporter) {
             QString menuObjectPath = properties[QStringLiteral("Menu")].value<QDBusObjectPath>().path();
             if (!menuObjectPath.isEmpty()) {
@@ -388,10 +390,10 @@ void StatusNotifierItemSource::contextMenuReady()
 
 QPixmap StatusNotifierItemSource::KDbusImageStructToPixmap(const KDbusImageStruct &image) const
 {
-    //swap from network byte order if we are little endian
+    // swap from network byte order if we are little endian
     if (QSysInfo::ByteOrder == QSysInfo::LittleEndian) {
-        uint *uintBuf = (uint *) image.data.data();
-        for (uint i = 0; i < image.data.size()/sizeof(uint); ++i) {
+        uint *uintBuf = (uint *)image.data.data();
+        for (uint i = 0; i < image.data.size() / sizeof(uint); ++i) {
             *uintBuf = ntohl(*uintBuf);
             ++uintBuf;
         }
@@ -400,16 +402,20 @@ QPixmap StatusNotifierItemSource::KDbusImageStructToPixmap(const KDbusImageStruc
         return QPixmap();
     }
 
-    //avoid a deep copy of the image data
-    //we need to keep a reference to the image.data alive for the lifespan of the image, even if the image is copied
-    //we create a new QByteArray with a shallow copy of the original data on the heap, then delete this in the QImage cleanup
+    // avoid a deep copy of the image data
+    // we need to keep a reference to the image.data alive for the lifespan of the image, even if the image is copied
+    // we create a new QByteArray with a shallow copy of the original data on the heap, then delete this in the QImage cleanup
     auto dataRef = new QByteArray(image.data);
 
-    QImage iconImage(reinterpret_cast<const uchar*>(dataRef->data()), image.width, image.height, QImage::Format_ARGB32,
-            [](void* ptr) {
-                delete static_cast<QByteArray*>(ptr);
-            },
-            dataRef);
+    QImage iconImage(
+        reinterpret_cast<const uchar *>(dataRef->data()),
+        image.width,
+        image.height,
+        QImage::Format_ARGB32,
+        [](void *ptr) {
+            delete static_cast<QByteArray *>(ptr);
+        },
+        dataRef);
     return QPixmap::fromImage(iconImage);
 }
 
@@ -417,7 +423,7 @@ QIcon StatusNotifierItemSource::imageVectorToPixmap(const KDbusImageVector &vect
 {
     QIcon icon;
 
-    for (int i = 0; i<vector.size(); ++i) {
+    for (int i = 0; i < vector.size(); ++i) {
         icon.addPixmap(KDbusImageStructToPixmap(vector[i]));
     }
 
@@ -431,26 +437,26 @@ void StatusNotifierItemSource::overlayIcon(QIcon *icon, QIcon *overlay)
 
     QPainter p(&m_iconPixmap);
 
-    const int size = KIconLoader::SizeSmall/2;
-    p.drawPixmap(QRect(size, size, size, size), overlay->pixmap(size, size), QRect(0,0,size,size));
+    const int size = KIconLoader::SizeSmall / 2;
+    p.drawPixmap(QRect(size, size, size, size), overlay->pixmap(size, size), QRect(0, 0, size, size));
     p.end();
     tmp.addPixmap(m_iconPixmap);
 
-    //if an m_icon exactly that size wasn't found don't add it to the vector
+    // if an m_icon exactly that size wasn't found don't add it to the vector
     m_iconPixmap = icon->pixmap(KIconLoader::SizeSmallMedium, KIconLoader::SizeSmallMedium);
     if (m_iconPixmap.width() == KIconLoader::SizeSmallMedium) {
-        const int size = KIconLoader::SizeSmall/2;
+        const int size = KIconLoader::SizeSmall / 2;
         QPainter p(&m_iconPixmap);
-        p.drawPixmap(QRect(m_iconPixmap.width()-size, m_iconPixmap.height()-size, size, size), overlay->pixmap(size, size), QRect(0,0,size,size));
+        p.drawPixmap(QRect(m_iconPixmap.width() - size, m_iconPixmap.height() - size, size, size), overlay->pixmap(size, size), QRect(0, 0, size, size));
         p.end();
         tmp.addPixmap(m_iconPixmap);
     }
 
     m_iconPixmap = icon->pixmap(KIconLoader::SizeMedium, KIconLoader::SizeMedium);
     if (m_iconPixmap.width() == KIconLoader::SizeMedium) {
-        const int size = KIconLoader::SizeSmall/2;
+        const int size = KIconLoader::SizeSmall / 2;
         QPainter p(&m_iconPixmap);
-        p.drawPixmap(QRect(m_iconPixmap.width()-size, m_iconPixmap.height()-size, size, size), overlay->pixmap(size, size), QRect(0,0,size,size));
+        p.drawPixmap(QRect(m_iconPixmap.width() - size, m_iconPixmap.height() - size, size, size), overlay->pixmap(size, size), QRect(0, 0, size, size));
         p.end();
         tmp.addPixmap(m_iconPixmap);
     }
@@ -459,7 +465,7 @@ void StatusNotifierItemSource::overlayIcon(QIcon *icon, QIcon *overlay)
     if (m_iconPixmap.width() == KIconLoader::SizeLarge) {
         const int size = KIconLoader::SizeSmall;
         QPainter p(&m_iconPixmap);
-        p.drawPixmap(QRect(m_iconPixmap.width()-size, m_iconPixmap.height()-size, size, size), overlay->pixmap(size, size), QRect(0,0,size,size));
+        p.drawPixmap(QRect(m_iconPixmap.width() - size, m_iconPixmap.height() - size, size, size), overlay->pixmap(size, size), QRect(0, 0, size, size));
         p.end();
         tmp.addPixmap(m_iconPixmap);
     }
@@ -469,14 +475,16 @@ void StatusNotifierItemSource::overlayIcon(QIcon *icon, QIcon *overlay)
     // QIcon::addPixmap() doc says: "Custom m_icon engines are free to ignore
     // additionally added pixmaps".
     *icon = tmp;
-    //hopefully huge and enormous not necessary right now, since it's quite costly
+    // hopefully huge and enormous not necessary right now, since it's quite costly
 }
 
 void StatusNotifierItemSource::activate(int x, int y)
 {
     if (m_statusNotifierItemInterface && m_statusNotifierItemInterface->isValid()) {
         QDBusMessage message = QDBusMessage::createMethodCall(m_statusNotifierItemInterface->service(),
-                                                              m_statusNotifierItemInterface->path(), m_statusNotifierItemInterface->interface(), QStringLiteral("Activate"));
+                                                              m_statusNotifierItemInterface->path(),
+                                                              m_statusNotifierItemInterface->interface(),
+                                                              QStringLiteral("Activate"));
 
         message << x << y;
         QDBusPendingCall call = m_statusNotifierItemInterface->connection().asyncCall(message);

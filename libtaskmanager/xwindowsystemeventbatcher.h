@@ -38,8 +38,10 @@ Q_SIGNALS:
     void windowAdded(WId window);
     void windowRemoved(WId window);
     void windowChanged(WId window, NET::Properties properties, NET::Properties2 properties2);
+
 protected:
     void timerEvent(QTimerEvent *event) override;
+
 private:
     struct AllProps {
         NET::Properties properties = {};

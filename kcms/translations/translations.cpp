@@ -29,7 +29,7 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 
-K_PLUGIN_FACTORY_WITH_JSON(TranslationsFactory, "kcm_translations.json", registerPlugin<Translations>();registerPlugin<TranslationsData>();)
+K_PLUGIN_FACTORY_WITH_JSON(TranslationsFactory, "kcm_translations.json", registerPlugin<Translations>(); registerPlugin<TranslationsData>();)
 
 Translations::Translations(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
@@ -39,34 +39,34 @@ Translations::Translations(QObject *parent, const QVariantList &args)
     , m_availableTranslationsModel(new AvailableTranslationsModel(this))
     , m_everSaved(false)
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_translations"),
-        i18n("Configure Plasma translations"),
-        QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
+    KAboutData *about =
+        new KAboutData(QStringLiteral("kcm_translations"), i18n("Configure Plasma translations"), QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
     setAboutData(about);
 
     setButtons(Apply | Default);
 
-    connect(m_selectedTranslationsModel, &SelectedTranslationsModel::selectedLanguagesChanged,
-            this, &Translations::selectedLanguagesChanged);
-    connect(m_selectedTranslationsModel, &SelectedTranslationsModel::selectedLanguagesChanged,
-            m_availableTranslationsModel, &AvailableTranslationsModel::setSelectedLanguages);
+    connect(m_selectedTranslationsModel, &SelectedTranslationsModel::selectedLanguagesChanged, this, &Translations::selectedLanguagesChanged);
+    connect(m_selectedTranslationsModel,
+            &SelectedTranslationsModel::selectedLanguagesChanged,
+            m_availableTranslationsModel,
+            &AvailableTranslationsModel::setSelectedLanguages);
 }
 
 Translations::~Translations()
 {
 }
 
-QAbstractItemModel* Translations::translationsModel() const
+QAbstractItemModel *Translations::translationsModel() const
 {
     return m_translationsModel;
 }
 
-QAbstractItemModel* Translations::selectedTranslationsModel() const
+QAbstractItemModel *Translations::selectedTranslationsModel() const
 {
     return m_selectedTranslationsModel;
 }
 
-QAbstractItemModel* Translations::availableTranslationsModel() const
+QAbstractItemModel *Translations::availableTranslationsModel() const
 {
     return m_availableTranslationsModel;
 }

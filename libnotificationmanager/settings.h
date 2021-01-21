@@ -32,7 +32,6 @@
 
 namespace NotificationManager
 {
-
 /**
  * @short Notification settings and state
  *
@@ -112,15 +111,11 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
     /**
      * A list of desktop entries of applications for which a popup should be shown even in do not disturb mode.
      */
-    Q_PROPERTY(QStringList doNotDisturbPopupWhitelistedApplications
-               READ doNotDisturbPopupWhitelistedApplications
-               NOTIFY settingsChanged)
+    Q_PROPERTY(QStringList doNotDisturbPopupWhitelistedApplications READ doNotDisturbPopupWhitelistedApplications NOTIFY settingsChanged)
     /**
      * A list of notifyrc names of services for which a popup should be shown even in do not disturb mode.
      */
-    Q_PROPERTY(QStringList doNotDisturbPopupWhitelistedServices
-               READ doNotDisturbPopupWhitelistedServices
-               NOTIFY settingsChanged)
+    Q_PROPERTY(QStringList doNotDisturbPopupWhitelistedServices READ doNotDisturbPopupWhitelistedServices NOTIFY settingsChanged)
 
     /**
      * A list of desktop entries of applications which shouldn't be shown in the history.
@@ -143,11 +138,8 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
      * Do not disturb mode is considered active when this property points to a date
      * in the future OR notificationsInhibitedByApplication is true.
      */
-    Q_PROPERTY(QDateTime notificationsInhibitedUntil
-               READ notificationsInhibitedUntil
-               WRITE setNotificationsInhibitedUntil
-               RESET resetNotificationsInhibitedUntil
-               NOTIFY settingsChanged)
+    Q_PROPERTY(QDateTime notificationsInhibitedUntil READ notificationsInhibitedUntil WRITE setNotificationsInhibitedUntil RESET
+                   resetNotificationsInhibitedUntil NOTIFY settingsChanged)
 
     /**
      * Whether an application currently requested do not disturb mode.
@@ -157,27 +149,19 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
      *
      * @sa revokeApplicationInhibitions
      */
-    Q_PROPERTY(bool notificationsInhibitedByApplication
-               READ notificationsInhibitedByApplication
-               NOTIFY notificationsInhibitedByApplicationChanged)
+    Q_PROPERTY(bool notificationsInhibitedByApplication READ notificationsInhibitedByApplication NOTIFY notificationsInhibitedByApplicationChanged)
 
-    Q_PROPERTY(QStringList notificationInhibitionApplications
-               READ notificationInhibitionApplications
-               NOTIFY notificationInhibitionApplicationsChanged)
+    Q_PROPERTY(QStringList notificationInhibitionApplications READ notificationInhibitionApplications NOTIFY notificationInhibitionApplicationsChanged)
 
-    Q_PROPERTY(QStringList notificationInhibitionReasons
-               READ notificationInhibitionReasons
-               NOTIFY notificationInhibitionApplicationsChanged)
+    Q_PROPERTY(QStringList notificationInhibitionReasons READ notificationInhibitionReasons NOTIFY notificationInhibitionApplicationsChanged)
 
     /**
      * Whether to enable do not disturb mode when screens are mirrored/overlapping
      *
      * @since 5.17
      */
-    Q_PROPERTY(bool inhibitNotificationsWhenScreensMirrored
-               READ inhibitNotificationsWhenScreensMirrored
-               WRITE setInhibitNotificationsWhenScreensMirrored
-               NOTIFY settingsChanged)
+    Q_PROPERTY(bool inhibitNotificationsWhenScreensMirrored READ inhibitNotificationsWhenScreensMirrored WRITE setInhibitNotificationsWhenScreensMirrored NOTIFY
+                   settingsChanged)
 
     /**
      * Whether there currently are mirrored/overlapping screens
@@ -203,10 +187,7 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
      * @note This does not actually mute or unmute the actual sound stream,
      * you need to do this yourself using e.g. PulseAudio.
      */
-    Q_PROPERTY(bool notificationSoundsInhibited
-               READ notificationSoundsInhibited
-               WRITE setNotificationSoundsInhibited
-               NOTIFY settingsChanged)
+    Q_PROPERTY(bool notificationSoundsInhibited READ notificationSoundsInhibited WRITE setNotificationSoundsInhibited NOTIFY settingsChanged)
 
     /**
      * Whether to update the properties immediately when they are changed on disk
@@ -357,7 +338,6 @@ signals:
 private:
     class Private;
     QScopedPointer<Private> d;
-
 };
 
 } // namespace NotificationManager

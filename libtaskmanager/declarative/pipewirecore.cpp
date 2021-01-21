@@ -21,9 +21,9 @@
 
 #include "pipewirecore.h"
 #include "logging.h"
-#include <spa/utils/result.h>
 #include <KLocalizedString>
 #include <QSocketNotifier>
+#include <spa/utils/result.h>
 
 PipeWireCore::PipeWireCore()
 {
@@ -32,35 +32,35 @@ PipeWireCore::PipeWireCore()
     pwCoreEvents.error = &PipeWireCore::onCoreError;
 }
 
-void PipeWireCore::onCoreError(void* data, uint32_t id, int seq, int res, const char* message)
+void PipeWireCore::onCoreError(void *data, uint32_t id, int seq, int res, const char *message)
 {
     Q_UNUSED(seq)
 
     qCWarning(PIPEWIRE_LOGGING) << "PipeWire remote error: " << message;
     if (id == PW_ID_CORE && res == -EPIPE) {
-        PipeWireCore *pw = static_cast<PipeWireCore*>(data);
+        PipeWireCore *pw = static_cast<PipeWireCore *>(data);
         Q_EMIT pw->pipewireFailed(QString::fromUtf8(message));
     }
 }
 
 PipeWireCore::~PipeWireCore()
-    {
-        if (pwMainLoop) {
-            pw_loop_leave(pwMainLoop);
-        }
-
-        if (pwCore) {
-            pw_core_disconnect(pwCore);
-        }
-
-        if (pwContext) {
-            pw_context_destroy(pwContext);
-        }
-
-        if (pwMainLoop) {
-            pw_loop_destroy(pwMainLoop);
-        }
+{
+    if (pwMainLoop) {
+        pw_loop_leave(pwMainLoop);
     }
+
+    if (pwCore) {
+        pw_core_disconnect(pwCore);
+    }
+
+    if (pwContext) {
+        pw_context_destroy(pwContext);
+    }
+
+    if (pwMainLoop) {
+        pw_loop_destroy(pwMainLoop);
+    }
+}
 
 bool PipeWireCore::init()
 {
@@ -69,11 +69,10 @@ bool PipeWireCore::init()
 
     QSocketNotifier *notifier = new QSocketNotifier(pw_loop_get_fd(pwMainLoop), QSocketNotifier::Read, this);
     connect(notifier, &QSocketNotifier::activated, this, [this] {
-            int result = pw_loop_iterate (pwMainLoop, 0);
-            if (result < 0)
-                qCWarning(PIPEWIRE_LOGGING) << "pipewire_loop_iterate failed: " << spa_strerror (result);
-        }
-    );
+        int result = pw_loop_iterate(pwMainLoop, 0);
+        if (result < 0)
+            qCWarning(PIPEWIRE_LOGGING) << "pipewire_loop_iterate failed: " << spa_strerror(result);
+    });
 
     pwContext = pw_context_new(pwMainLoop, nullptr, 0);
     if (!pwContext) {

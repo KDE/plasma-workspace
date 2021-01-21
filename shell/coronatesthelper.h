@@ -26,21 +26,21 @@ class CoronaTestHelper : public QObject
 {
     Q_OBJECT
 public:
-    explicit CoronaTestHelper(Plasma::Corona* parent);
+    explicit CoronaTestHelper(Plasma::Corona *parent);
 
-    void processContainment(Plasma::Containment* containment);
-    void processApplet(Plasma::Applet* applet);
+    void processContainment(Plasma::Containment *containment);
+    void processApplet(Plasma::Applet *applet);
 
 private Q_SLOTS:
     void testFinished();
 
 private:
     void initialize();
-    void integrateTest(QObject* testObject);
+    void integrateTest(QObject *testObject);
 
-    Plasma::Corona* m_corona;
-    QSet<QObject*> m_registeredTests;
-    QSet<QObject*> m_tests;
+    Plasma::Corona *m_corona;
+    QSet<QObject *> m_registeredTests;
+    QSet<QObject *> m_tests;
 
     int m_exitcode;
 };

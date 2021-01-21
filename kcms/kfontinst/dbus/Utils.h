@@ -24,16 +24,14 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QString>
 #include "Family.h"
+#include <QString>
 
 namespace KFI
 {
 namespace Utils
 {
-
-enum EFileType
-{
+enum EFileType {
     FILE_INVALID,
     FILE_BITMAP,
     FILE_SCALABLE,

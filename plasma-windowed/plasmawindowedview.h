@@ -22,10 +22,10 @@
 #ifndef PLASMAWINDOWEDVIEW_H
 #define PLASMAWINDOWEDVIEW_H
 
-#include <QQuickView>
-#include <QPointer>
 #include "plasmawindowedcorona.h"
 #include <PlasmaQuick/ConfigView>
+#include <QPointer>
+#include <QQuickView>
 
 class KStatusNotifierItem;
 
@@ -41,7 +41,7 @@ public:
     void setHasStatusNotifier(bool stay);
 
 protected:
-    void resizeEvent(QResizeEvent * ev) override;
+    void resizeEvent(QResizeEvent *ev) override;
     void mouseReleaseEvent(QMouseEvent *ev) override;
     void moveEvent(QMoveEvent *ev) override;
     void hideEvent(QHideEvent *ev) override;

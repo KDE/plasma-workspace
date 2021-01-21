@@ -20,9 +20,9 @@
 #ifndef CONFIGGROUP_H
 #define CONFIGGROUP_H
 
+#include <QJSValue>
 #include <QObject>
 #include <QVariant>
-#include <QJSValue>
 
 #include <KSharedConfig>
 
@@ -38,10 +38,10 @@ class ConfigGroup : public QObject
     Q_PROPERTY(QStringList groupList READ groupList NOTIFY groupListChanged)
 
 public:
-    explicit ConfigGroup(QObject* parent=nullptr);
+    explicit ConfigGroup(QObject *parent = nullptr);
     ~ConfigGroup() override;
 
-    KConfigGroup* configGroup();
+    KConfigGroup *configGroup();
 
     KSharedConfigPtr config() const;
     void setConfig(KSharedConfigPtr config);
@@ -54,7 +54,7 @@ public:
 
     Q_INVOKABLE QVariant readEntry(const QString &key);
     Q_INVOKABLE bool writeEntry(const QString &key, const QJSValue &value);
-    Q_INVOKABLE void deleteEntry(const QString& key);
+    Q_INVOKABLE void deleteEntry(const QString &key);
 
 Q_SIGNALS:
     void fileChanged();
@@ -63,7 +63,7 @@ Q_SIGNALS:
     void groupListChanged();
 
 private:
-    ConfigGroupPrivate* d;
+    ConfigGroupPrivate *d;
 
     bool readConfigFile();
 

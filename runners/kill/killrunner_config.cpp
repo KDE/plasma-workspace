@@ -18,17 +18,18 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-//Project-Includes
+// Project-Includes
 #include "killrunner_config.h"
-//KDE-Includes
-#include <KSharedConfig>
+// KDE-Includes
+#include "config_keys.h"
 #include <KConfigGroup>
 #include <KPluginFactory>
-#include "config_keys.h"
+#include <KSharedConfig>
 
 K_PLUGIN_FACTORY(KillRunnerConfigFactory, registerPlugin<KillRunnerConfig>(QStringLiteral("kcm_krunner_kill"));)
 
-KillRunnerConfigForm::KillRunnerConfigForm(QWidget *parent) : QWidget(parent)
+KillRunnerConfigForm::KillRunnerConfigForm(QWidget *parent)
+    : QWidget(parent)
 {
     setupUi(this);
 }
@@ -59,7 +60,7 @@ void KillRunnerConfig::load()
     KSharedConfig::Ptr cfg = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
     const KConfigGroup grp = cfg->group("Runners").group("Kill Runner");
 
-    m_ui->useTriggerWord->setChecked(grp.readEntry(CONFIG_USE_TRIGGERWORD,true));
+    m_ui->useTriggerWord->setChecked(grp.readEntry(CONFIG_USE_TRIGGERWORD, true));
     m_ui->triggerWord->setText(grp.readEntry(CONFIG_TRIGGERWORD, i18n("kill")));
     m_ui->sorting->setCurrentIndex(m_ui->sorting->findData(grp.readEntry<int>(CONFIG_SORTING, NONE)));
 
@@ -87,7 +88,7 @@ void KillRunnerConfig::defaults()
 
     m_ui->useTriggerWord->setChecked(true);
     m_ui->triggerWord->setText(i18n("kill"));
-    m_ui->sorting->setCurrentIndex(m_ui->sorting->findData((int) NONE));
+    m_ui->sorting->setCurrentIndex(m_ui->sorting->findData((int)NONE));
 
     markAsChanged();
 }

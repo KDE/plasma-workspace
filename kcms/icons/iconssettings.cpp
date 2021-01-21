@@ -16,8 +16,8 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <QObject>
 #include <QDebug>
+#include <QObject>
 
 #include <KBuildSycocaProgressDialog>
 #include <KIconTheme>
@@ -26,8 +26,8 @@
 #include "iconssettings.h"
 
 IconsSettings::IconsSettings(QObject *parent)
-        : IconsSettingsBase(parent)
-        , m_themeDirty(false)
+    : IconsSettingsBase(parent)
+    , m_themeDirty(false)
 {
     connect(this, &IconsSettings::configChanged, this, &IconsSettings::updateIconTheme);
     connect(this, &IconsSettings::ThemeChanged, this, &IconsSettings::updateThemeDirty);

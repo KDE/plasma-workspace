@@ -25,26 +25,26 @@
 
 #include <KLocalizedString>
 
-#include <QDBusObjectPath>
-#include <QDBusArgument>
-#include <QDBusInterface>
-#include <QDBusReply>
-#include <QDBusMetaType>
-#include <QDBusConnectionInterface>
 #include <QCoreApplication>
+#include <QDBusArgument>
+#include <QDBusConnectionInterface>
+#include <QDBusInterface>
+#include <QDBusMetaType>
+#include <QDBusObjectPath>
+#include <QDBusReply>
 #include <QX11Info>
 
 #include <X11/Xauth.h>
 #include <X11/Xlib.h>
 
-#include <sys/types.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <sys/socket.h>
+#include <sys/types.h>
 #include <sys/un.h>
 #include <unistd.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <errno.h>
-#include <stdio.h>
 
 #define _DBUS_PROPERTIES_IFACE "org.freedesktop.DBus.Properties"
 #define _DBUS_PROPERTIES_GET "Get"
@@ -76,8 +76,7 @@
 #define SYSTEMD_SESSIONS_PROPERTY QLatin1String(_SYSTEMD_SESSIONS_PROPERTY)
 #define SYSTEMD_SWITCH_CALL QLatin1String(_SYSTEMD_SWITCH_PROPERTY)
 
-struct NamedDBusObjectPath
-{
+struct NamedDBusObjectPath {
     QString name;
     QDBusObjectPath path;
 };
@@ -102,8 +101,7 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, NamedDBusObjectPa
     return argument;
 }
 
-struct NumberedDBusObjectPath
-{
+struct NumberedDBusObjectPath {
     uint num;
     QDBusObjectPath path;
 };
@@ -130,32 +128,30 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, NumberedDBusObjec
 class SystemdManager : public QDBusInterface
 {
 public:
-    SystemdManager() :
-        QDBusInterface(
-                SYSTEMD_SERVICE,
-                SYSTEMD_BASE_PATH,
-                SYSTEMD_MANAGER_IFACE,
-                QDBusConnection::systemBus()) {}
+    SystemdManager()
+        : QDBusInterface(SYSTEMD_SERVICE, SYSTEMD_BASE_PATH, SYSTEMD_MANAGER_IFACE, QDBusConnection::systemBus())
+    {
+    }
 };
 
 class SystemdSeat : public QDBusInterface
 {
 public:
-    SystemdSeat(const QDBusObjectPath &path) :
-        QDBusInterface(
-                SYSTEMD_SERVICE,
-                path.path(),
-                SYSTEMD_SEAT_IFACE,
-                QDBusConnection::systemBus()) {}
+    SystemdSeat(const QDBusObjectPath &path)
+        : QDBusInterface(SYSTEMD_SERVICE, path.path(), SYSTEMD_SEAT_IFACE, QDBusConnection::systemBus())
+    {
+    }
     /* HACK to be able to extract a(so) type from QDBus, property doesn't do the trick */
-    QList<NamedDBusObjectPath> getSessions() {
+    QList<NamedDBusObjectPath> getSessions()
+    {
         QDBusMessage message = QDBusMessage::createMethodCall(service(), path(), DBUS_PROPERTIES_IFACE, DBUS_PROPERTIES_GET);
-        message <<  interface() << SYSTEMD_SESSIONS_PROPERTY;
+        message << interface() << SYSTEMD_SESSIONS_PROPERTY;
         QDBusMessage reply = QDBusConnection::systemBus().call(message);
 
         QVariantList args = reply.arguments();
         if (!args.isEmpty()) {
-            QList<NamedDBusObjectPath> namedPathList = qdbus_cast< QList<NamedDBusObjectPath> >(args.at(0).value<QDBusVariant>().variant().value<QDBusArgument>());
+            QList<NamedDBusObjectPath> namedPathList =
+                qdbus_cast<QList<NamedDBusObjectPath>>(args.at(0).value<QDBusVariant>().variant().value<QDBusArgument>());
             return namedPathList;
         }
         return QList<NamedDBusObjectPath>();
@@ -165,16 +161,15 @@ public:
 class SystemdSession : public QDBusInterface
 {
 public:
-    SystemdSession(const QDBusObjectPath &path) :
-        QDBusInterface(
-                SYSTEMD_SERVICE,
-                path.path(),
-                SYSTEMD_SESSION_IFACE,
-                QDBusConnection::systemBus()) {}
+    SystemdSession(const QDBusObjectPath &path)
+        : QDBusInterface(SYSTEMD_SERVICE, path.path(), SYSTEMD_SESSION_IFACE, QDBusConnection::systemBus())
+    {
+    }
     /* HACK to be able to extract (so) type from QDBus, property doesn't do the trick */
-    NamedDBusObjectPath getSeat() {
+    NamedDBusObjectPath getSeat()
+    {
         QDBusMessage message = QDBusMessage::createMethodCall(service(), path(), DBUS_PROPERTIES_IFACE, DBUS_PROPERTIES_GET);
-        message <<  interface() <<  SYSTEMD_SEAT_PROPERTY;
+        message << interface() << SYSTEMD_SEAT_PROPERTY;
         QDBusMessage reply = QDBusConnection::systemBus().call(message);
 
         QVariantList args = reply.arguments();
@@ -185,9 +180,10 @@ public:
         }
         return NamedDBusObjectPath();
     }
-    NumberedDBusObjectPath getUser() {
+    NumberedDBusObjectPath getUser()
+    {
         QDBusMessage message = QDBusMessage::createMethodCall(service(), path(), DBUS_PROPERTIES_IFACE, DBUS_PROPERTIES_GET);
-        message <<  interface() <<  SYSTEMD_USER_PROPERTY;
+        message << interface() << SYSTEMD_USER_PROPERTY;
         QDBusMessage reply = QDBusConnection::systemBus().call(message);
 
         QVariantList args = reply.arguments();
@@ -209,34 +205,37 @@ public:
 class CKManager : public QDBusInterface
 {
 public:
-    CKManager() :
-        QDBusInterface(
-                QStringLiteral("org.freedesktop.ConsoleKit"),
-                QStringLiteral("/org/freedesktop/ConsoleKit/Manager"),
-                QStringLiteral("org.freedesktop.ConsoleKit.Manager"),
-                QDBusConnection::systemBus()) {}
+    CKManager()
+        : QDBusInterface(QStringLiteral("org.freedesktop.ConsoleKit"),
+                         QStringLiteral("/org/freedesktop/ConsoleKit/Manager"),
+                         QStringLiteral("org.freedesktop.ConsoleKit.Manager"),
+                         QDBusConnection::systemBus())
+    {
+    }
 };
 
 class CKSeat : public QDBusInterface
 {
 public:
-    CKSeat(const QDBusObjectPath &path) :
-        QDBusInterface(
-                QStringLiteral("org.freedesktop.ConsoleKit"),
-                path.path(),
-                QStringLiteral("org.freedesktop.ConsoleKit.Seat"),
-                QDBusConnection::systemBus()) {}
+    CKSeat(const QDBusObjectPath &path)
+        : QDBusInterface(QStringLiteral("org.freedesktop.ConsoleKit"),
+                         path.path(),
+                         QStringLiteral("org.freedesktop.ConsoleKit.Seat"),
+                         QDBusConnection::systemBus())
+    {
+    }
 };
 
 class CKSession : public QDBusInterface
 {
 public:
-    CKSession(const QDBusObjectPath &path) :
-        QDBusInterface(
-                QStringLiteral("org.freedesktop.ConsoleKit"),
-                path.path(),
-                QStringLiteral("org.freedesktop.ConsoleKit.Session"),
-                QDBusConnection::systemBus()) {}
+    CKSession(const QDBusObjectPath &path)
+        : QDBusInterface(QStringLiteral("org.freedesktop.ConsoleKit"),
+                         path.path(),
+                         QStringLiteral("org.freedesktop.ConsoleKit.Session"),
+                         QDBusConnection::systemBus())
+    {
+    }
     void getSessionLocation(SessEnt &se)
     {
         QString tty;
@@ -259,23 +258,25 @@ public:
 class GDMFactory : public QDBusInterface
 {
 public:
-    GDMFactory() :
-        QDBusInterface(
-                QStringLiteral("org.gnome.DisplayManager"),
-                QStringLiteral("/org/gnome/DisplayManager/LocalDisplayFactory"),
-                QStringLiteral("org.gnome.DisplayManager.LocalDisplayFactory"),
-                QDBusConnection::systemBus()) {}
+    GDMFactory()
+        : QDBusInterface(QStringLiteral("org.gnome.DisplayManager"),
+                         QStringLiteral("/org/gnome/DisplayManager/LocalDisplayFactory"),
+                         QStringLiteral("org.gnome.DisplayManager.LocalDisplayFactory"),
+                         QDBusConnection::systemBus())
+    {
+    }
 };
 
 class LightDMDBus : public QDBusInterface
 {
 public:
-    LightDMDBus() :
-        QDBusInterface(
-                QStringLiteral("org.freedesktop.DisplayManager"),
-                qgetenv("XDG_SEAT_PATH"),
-                QStringLiteral("org.freedesktop.DisplayManager.Seat"),
-                QDBusConnection::systemBus()) {}
+    LightDMDBus()
+        : QDBusInterface(QStringLiteral("org.freedesktop.DisplayManager"),
+                         qgetenv("XDG_SEAT_PATH"),
+                         QStringLiteral("org.freedesktop.DisplayManager.Seat"),
+                         QDBusConnection::systemBus())
+    {
+    }
 };
 
 static enum {
@@ -292,8 +293,12 @@ static const char *ctl, *dpy;
 class KDisplayManager::Private
 {
 public:
-    Private() : fd(-1) {}
-    ~Private() {
+    Private()
+        : fd(-1)
+    {
+    }
+    ~Private()
+    {
         if (fd >= 0)
             close(fd);
     }
@@ -301,13 +306,14 @@ public:
     int fd;
 };
 
-KDisplayManager::KDisplayManager() : d(new Private)
+KDisplayManager::KDisplayManager()
+    : d(new Private)
 {
     const char *ptr;
     struct sockaddr_un sa;
 
     qDBusRegisterMetaType<NamedDBusObjectPath>();
-    qDBusRegisterMetaType<QList<NamedDBusObjectPath> >();
+    qDBusRegisterMetaType<QList<NamedDBusObjectPath>>();
     qDBusRegisterMetaType<NumberedDBusObjectPath>();
 
     if (DMType == Dunno) {
@@ -345,22 +351,18 @@ KDisplayManager::KDisplayManager() : d(new Private)
         } else {
             if ((ptr = strchr(dpy, ':')))
                 ptr = strchr(ptr, '.');
-            snprintf(sa.sun_path, sizeof(sa.sun_path),
-                     "%s/dmctl-%.*s/socket",
-                     ctl, ptr ? int(ptr - dpy) : 512, dpy);
+            snprintf(sa.sun_path, sizeof(sa.sun_path), "%s/dmctl-%.*s/socket", ctl, ptr ? int(ptr - dpy) : 512, dpy);
             if (::connect(d->fd, (struct sockaddr *)&sa, sizeof(sa))) {
                 ::close(d->fd);
                 d->fd = -1;
             }
         }
         break;
-    case OldKDM:
-        {
-            QString tf(ctl);
-            tf.truncate(tf.indexOf(','));
-            d->fd = ::open(tf.toLatin1(), O_WRONLY);
-        }
-        break;
+    case OldKDM: {
+        QString tf(ctl);
+        tf.truncate(tf.indexOf(','));
+        d->fd = ::open(tf.toLatin1(), O_WRONLY);
+    } break;
     }
 }
 
@@ -369,8 +371,7 @@ KDisplayManager::~KDisplayManager()
     delete d;
 }
 
-bool
-KDisplayManager::exec(const char *cmd)
+bool KDisplayManager::exec(const char *cmd)
 {
     QByteArray buf;
 
@@ -389,8 +390,7 @@ KDisplayManager::exec(const char *cmd)
  *  @li If false and @p ret is non-empty, it contains the error message
  *   from KDM.
  */
-bool
-KDisplayManager::exec(const char *cmd, QByteArray &buf)
+bool KDisplayManager::exec(const char *cmd, QByteArray &buf)
 {
     bool ret = false;
     int tl;
@@ -401,10 +401,10 @@ KDisplayManager::exec(const char *cmd, QByteArray &buf)
 
     tl = strlen(cmd);
     if (::write(d->fd, cmd, tl) != tl) {
-      bust:
+    bust:
         ::close(d->fd);
         d->fd = -1;
-      busted:
+    busted:
         buf.resize(0);
         return false;
     }
@@ -425,8 +425,7 @@ KDisplayManager::exec(const char *cmd, QByteArray &buf)
         len += tl;
         if (buf[len - 1] == '\n') {
             buf[len - 1] = 0;
-            if (len > 2 && (buf[0] == 'o' || buf[0] == 'O') &&
-                (buf[1] == 'k' || buf[1] == 'K') && buf[2] <= ' ')
+            if (len > 2 && (buf[0] == 'o' || buf[0] == 'O') && (buf[1] == 'k' || buf[1] == 'K') && buf[2] <= ' ')
                 ret = true;
             break;
         }
@@ -440,13 +439,13 @@ static bool getCurrentSeat(QDBusObjectPath *currentSession, QDBusObjectPath *cur
     if (man.isValid()) {
         *currentSeat = QDBusObjectPath(_SYSTEMD_SEAT_BASE_PATH "/auto");
         SystemdSeat seat(*currentSeat);
-        if (seat.property("Id").isValid()) { //query an arbitrary property to confirm the path is valid
+        if (seat.property("Id").isValid()) { // query an arbitrary property to confirm the path is valid
             return true;
         }
 
         // auto is newer and may not exist on all platforms, fallback to GetSessionByPID if the above failed
 
-        QDBusReply<QDBusObjectPath> r = man.call(QStringLiteral("GetSessionByPID"), (uint) QCoreApplication::applicationPid());
+        QDBusReply<QDBusObjectPath> r = man.call(QStringLiteral("GetSessionByPID"), (uint)QCoreApplication::applicationPid());
         if (r.isValid()) {
             SystemdSession sess(r.value());
             if (sess.isValid()) {
@@ -486,11 +485,10 @@ static QList<QDBusObjectPath> getSessionsForSeat(const QDBusObjectPath &path)
             // This pretty much can't contain any other than local sessions as the seat is retrieved from the current session
             return result;
         }
-    }
-    else if (path.path().startsWith(QLatin1String("/org/freedesktop/ConsoleKit"))) {
+    } else if (path.path().startsWith(QLatin1String("/org/freedesktop/ConsoleKit"))) {
         CKSeat seat(path);
         if (seat.isValid()) {
-            QDBusReply<QList<QDBusObjectPath> > r = seat.call(QStringLiteral("GetSessions"));
+            QDBusReply<QList<QDBusObjectPath>> r = seat.call(QStringLiteral("GetSessions"));
             if (r.isValid()) {
                 // This will contain only local sessions:
                 // - this is only ever called when isSwitchable() is true => local seat
@@ -503,8 +501,7 @@ static QList<QDBusObjectPath> getSessionsForSeat(const QDBusObjectPath &path)
 }
 
 #ifndef KDM_NO_SHUTDOWN
-bool
-KDisplayManager::canShutdown()
+bool KDisplayManager::canShutdown()
 {
     if (DMType == NewGDM || DMType == NoDM || DMType == LightDM) {
         QDBusReply<QString> canPowerOff = SystemdManager().call(QStringLiteral("CanPowerOff"));
@@ -527,10 +524,9 @@ KDisplayManager::canShutdown()
     return exec("caps\n", re) && re.indexOf("\tshutdown") >= 0;
 }
 
-void
-KDisplayManager::shutdown(KWorkSpace::ShutdownType shutdownType,
-                          KWorkSpace::ShutdownMode shutdownMode, /* NOT Default */
-                          const QString &bootOption)
+void KDisplayManager::shutdown(KWorkSpace::ShutdownType shutdownType,
+                               KWorkSpace::ShutdownMode shutdownMode, /* NOT Default */
+                               const QString &bootOption)
 {
     if (shutdownType == KWorkSpace::ShutdownTypeNone || shutdownType == KWorkSpace::ShutdownTypeLogout)
         return;
@@ -549,14 +545,12 @@ KDisplayManager::shutdown(KWorkSpace::ShutdownType shutdownType,
             // * interactive = false: rejects the shutdown if other sessions are active
             // There are no schedule or force modes.
             // We try to map our 4 shutdown modes in the sanest way.
-            bool interactive = (shutdownMode == KWorkSpace::ShutdownModeInteractive
-                                || shutdownMode == KWorkSpace::ShutdownModeForceNow);
-            QDBusReply<QString> check = SystemdManager().call(QLatin1String(
-                    shutdownType == KWorkSpace::ShutdownTypeReboot ? "Reboot" : "PowerOff"), interactive);
+            bool interactive = (shutdownMode == KWorkSpace::ShutdownModeInteractive || shutdownMode == KWorkSpace::ShutdownModeForceNow);
+            QDBusReply<QString> check =
+                SystemdManager().call(QLatin1String(shutdownType == KWorkSpace::ShutdownTypeReboot ? "Reboot" : "PowerOff"), interactive);
             if (!check.isValid()) {
                 // FIXME: entirely ignoring shutdownMode
-                CKManager().call(QLatin1String(
-                        shutdownType == KWorkSpace::ShutdownTypeReboot ? "Restart" : "Stop"));
+                CKManager().call(QLatin1String(shutdownType == KWorkSpace::ShutdownTypeReboot ? "Restart" : "Stop"));
                 // if even CKManager call fails, there is nothing more to be done
             }
             return;
@@ -569,28 +563,22 @@ KDisplayManager::shutdown(KWorkSpace::ShutdownType shutdownType,
 
     QByteArray cmd;
     if (DMType == OldGDM) {
-        cmd.append(shutdownMode == KWorkSpace::ShutdownModeForceNow ?
-                   "SET_LOGOUT_ACTION " : "SET_SAFE_LOGOUT_ACTION ");
-        cmd.append(shutdownType == KWorkSpace::ShutdownTypeReboot ?
-                   "REBOOT\n" : "HALT\n");
+        cmd.append(shutdownMode == KWorkSpace::ShutdownModeForceNow ? "SET_LOGOUT_ACTION " : "SET_SAFE_LOGOUT_ACTION ");
+        cmd.append(shutdownType == KWorkSpace::ShutdownTypeReboot ? "REBOOT\n" : "HALT\n");
     } else {
         cmd.append("shutdown\t");
-        cmd.append(shutdownType == KWorkSpace::ShutdownTypeReboot ?
-                   "reboot\t" : "halt\t");
+        cmd.append(shutdownType == KWorkSpace::ShutdownTypeReboot ? "reboot\t" : "halt\t");
         if (!bootOption.isEmpty())
             cmd.append("=").append(bootOption.toLocal8Bit()).append("\t");
-        cmd.append(shutdownMode == KWorkSpace::ShutdownModeInteractive ?
-                   "ask\n" :
-                   shutdownMode == KWorkSpace::ShutdownModeForceNow ?
-                   "forcenow\n" :
-                   shutdownMode == KWorkSpace::ShutdownModeTryNow ?
-                   "trynow\n" : "schedule\n");
+        cmd.append(shutdownMode == KWorkSpace::ShutdownModeInteractive
+                       ? "ask\n"
+                       : shutdownMode == KWorkSpace::ShutdownModeForceNow ? "forcenow\n"
+                                                                          : shutdownMode == KWorkSpace::ShutdownModeTryNow ? "trynow\n" : "schedule\n");
     }
     exec(cmd.data());
 }
 
-bool
-KDisplayManager::bootOptions(QStringList &opts, int &defopt, int &current)
+bool KDisplayManager::bootOptions(QStringList &opts, int &defopt, int &current)
 {
     if (DMType != NewKDM)
         return false;
@@ -619,8 +607,7 @@ KDisplayManager::bootOptions(QStringList &opts, int &defopt, int &current)
 }
 #endif // KDM_NO_SHUTDOWN
 
-bool
-KDisplayManager::isSwitchable()
+bool KDisplayManager::isSwitchable()
 {
     if (DMType == NewGDM || DMType == LightDM) {
         QDBusObjectPath currentSeat;
@@ -660,8 +647,7 @@ KDisplayManager::isSwitchable()
     return exec("caps\n", re) && re.indexOf("\tlocal") >= 0;
 }
 
-int
-KDisplayManager::numReserve()
+int KDisplayManager::numReserve()
 {
     if (DMType == NewGDM || DMType == OldGDM || DMType == LightDM)
         return 1; /* Bleh */
@@ -677,8 +663,7 @@ KDisplayManager::numReserve()
     return atoi(re.data() + p + 9);
 }
 
-void
-KDisplayManager::startReserve()
+void KDisplayManager::startReserve()
 {
     if (DMType == NewGDM)
         GDMFactory().call(QStringLiteral("CreateTransientDisplay"));
@@ -687,13 +672,11 @@ KDisplayManager::startReserve()
     else if (DMType == LightDM) {
         LightDMDBus lightDM;
         lightDM.call(QStringLiteral("SwitchToGreeter"));
-    }
-    else
+    } else
         exec("reserve\n");
 }
 
-bool
-KDisplayManager::localSessions(SessList &list)
+bool KDisplayManager::localSessions(SessList &list)
 {
     if (DMType == OldKDM)
         return false;
@@ -709,9 +692,9 @@ KDisplayManager::localSessions(SessList &list)
                     if (lsess.isValid()) {
                         SessEnt se;
                         lsess.getSessionLocation(se);
-                        if ((lsess.property("Class").toString() != QLatin1String("greeter")) &&
-                             (lsess.property("State").toString() == QLatin1String("online") ||
-                              lsess.property("State").toString() == QLatin1String("active"))) {
+                        if ((lsess.property("Class").toString() != QLatin1String("greeter"))
+                            && (lsess.property("State").toString() == QLatin1String("online")
+                                || lsess.property("State").toString() == QLatin1String("active"))) {
                             NumberedDBusObjectPath numberedPath = lsess.getUser();
                             se.display = lsess.property("Display").toString();
                             se.vt = lsess.property("VTNr").toInt();
@@ -749,8 +732,7 @@ KDisplayManager::localSessions(SessList &list)
                         list.append(se);
                     }
                 }
-            }
-            else {
+            } else {
                 return false;
             }
             return true;
@@ -763,7 +745,7 @@ KDisplayManager::localSessions(SessList &list)
     if (DMType == OldGDM) {
         if (!exec("CONSOLE_SERVERS\n", re))
             return false;
-        const QStringList sess = QString(re.data() +3).split(QChar(';'), Qt::SkipEmptyParts);
+        const QStringList sess = QString(re.data() + 3).split(QChar(';'), Qt::SkipEmptyParts);
         for (QStringList::ConstIterator it = sess.constBegin(); it != sess.constEnd(); ++it) {
             QStringList ts = (*it).split(QChar(','));
             SessEnt se;
@@ -794,33 +776,21 @@ KDisplayManager::localSessions(SessList &list)
     return true;
 }
 
-void
-KDisplayManager::sess2Str2(const SessEnt &se, QString &user, QString &loc)
+void KDisplayManager::sess2Str2(const SessEnt &se, QString &user, QString &loc)
 {
     if (se.tty) {
         user = i18nc("user: ...", "%1: TTY login", se.user);
-        loc = se.vt ? QStringLiteral("vt%1").arg(se.vt) : se.display ;
+        loc = se.vt ? QStringLiteral("vt%1").arg(se.vt) : se.display;
     } else {
-        user =
-            se.user.isEmpty() ?
-                se.session.isEmpty() ?
-                    i18nc("... location (TTY or X display)", "Unused") :
-                    se.session == QLatin1String("<remote>") ?
-                        i18n("X login on remote host") :
-                        i18nc("... host", "X login on %1", se.session) :
-                se.session == QLatin1String("<unknown>") ?
-                    se.user :
-                    i18nc("user: session type", "%1: %2",
-                          se.user, se.session);
-        loc =
-            se.vt ?
-                QStringLiteral("%1, vt%2").arg(se.display).arg(se.vt) :
-                se.display;
+        user = se.user.isEmpty() ? se.session.isEmpty()
+                ? i18nc("... location (TTY or X display)", "Unused")
+                : se.session == QLatin1String("<remote>") ? i18n("X login on remote host") : i18nc("... host", "X login on %1", se.session)
+                                 : se.session == QLatin1String("<unknown>") ? se.user : i18nc("user: session type", "%1: %2", se.user, se.session);
+        loc = se.vt ? QStringLiteral("%1, vt%2").arg(se.display).arg(se.vt) : se.display;
     }
 }
 
-QString
-KDisplayManager::sess2Str(const SessEnt &se)
+QString KDisplayManager::sess2Str(const SessEnt &se)
 {
     QString user, loc;
 
@@ -828,8 +798,7 @@ KDisplayManager::sess2Str(const SessEnt &se)
     return i18nc("session (location)", "%1 (%2)", user, loc);
 }
 
-bool
-KDisplayManager::switchVT(int vt)
+bool KDisplayManager::switchVT(int vt)
 {
     if (DMType == NewGDM || DMType == LightDM) {
         QDBusObjectPath currentSeat;
@@ -874,8 +843,7 @@ KDisplayManager::switchVT(int vt)
     return exec(QStringLiteral("activate\tvt%1\n").arg(vt).toLatin1());
 }
 
-void
-KDisplayManager::lockSwitchVT(int vt)
+void KDisplayManager::lockSwitchVT(int vt)
 {
     // Lock first, otherwise the lock won't be able to kick in until the session is re-activated.
     QDBusInterface screensaver(QStringLiteral("org.freedesktop.ScreenSaver"), QStringLiteral("/ScreenSaver"), QStringLiteral("org.freedesktop.ScreenSaver"));
@@ -884,8 +852,7 @@ KDisplayManager::lockSwitchVT(int vt)
     switchVT(vt);
 }
 
-void
-KDisplayManager::GDMAuthenticate()
+void KDisplayManager::GDMAuthenticate()
 {
     FILE *fp;
     const char *dpy, *dnum, *dne;
@@ -907,11 +874,8 @@ KDisplayManager::GDMAuthenticate()
         return;
 
     while ((xau = XauReadAuth(fp))) {
-        if (xau->family == FamilyLocal &&
-            xau->number_length == dnl && !memcmp(xau->number, dnum, dnl) &&
-            xau->data_length == 16 &&
-            xau->name_length == 18 && !memcmp(xau->name, "MIT-MAGIC-COOKIE-1", 18))
-        {
+        if (xau->family == FamilyLocal && xau->number_length == dnl && !memcmp(xau->number, dnum, dnl) && xau->data_length == 16 && xau->name_length == 18
+            && !memcmp(xau->name, "MIT-MAGIC-COOKIE-1", 18)) {
             QString cmd(QStringLiteral("AUTH_LOCAL "));
             for (int i = 0; i < 16; i++)
                 cmd += QString::number((uchar)xau->data[i], 16).rightJustified(2, '0');
@@ -924,7 +888,7 @@ KDisplayManager::GDMAuthenticate()
         XauDisposeAuth(xau);
     }
 
-    fclose (fp);
+    fclose(fp);
 }
 
 #endif // HAVE_X11

@@ -32,7 +32,7 @@ class AppMenuApplet : public Plasma::Applet
 {
     Q_OBJECT
 
-    Q_PROPERTY(AppMenuModel* model READ model WRITE setModel NOTIFY modelChanged)
+    Q_PROPERTY(AppMenuModel *model READ model WRITE setModel NOTIFY modelChanged)
 
     Q_PROPERTY(int view READ view WRITE setView NOTIFY viewChanged)
 
@@ -79,7 +79,6 @@ private:
     QMenu *createMenu(int idx) const;
     void setCurrentIndex(int currentIndex);
     void onMenuAboutToHide();
-
 
     int m_currentIndex = -1;
     int m_viewType = FullView;

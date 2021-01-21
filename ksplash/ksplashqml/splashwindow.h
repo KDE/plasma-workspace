@@ -33,7 +33,7 @@ class PlasmaShellSurface;
 }
 }
 
-class SplashWindow: public KQuickAddons::QuickViewSharedEngine
+class SplashWindow : public KQuickAddons::QuickViewSharedEngine
 {
 public:
     SplashWindow(bool testing, bool window, const QString &theme);

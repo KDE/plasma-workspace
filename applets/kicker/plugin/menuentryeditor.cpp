@@ -25,7 +25,8 @@
 
 #include <KPropertiesDialog>
 
-MenuEntryEditor::MenuEntryEditor(QObject* parent) : QObject(parent)
+MenuEntryEditor::MenuEntryEditor(QObject *parent)
+    : QObject(parent)
 {
 }
 
@@ -33,7 +34,7 @@ MenuEntryEditor::~MenuEntryEditor()
 {
 }
 
-bool MenuEntryEditor::canEdit(const QString& entryPath) const
+bool MenuEntryEditor::canEdit(const QString &entryPath) const
 {
     KFileItemList itemList;
     itemList << KFileItem(QUrl::fromLocalFile(entryPath));
@@ -41,7 +42,7 @@ bool MenuEntryEditor::canEdit(const QString& entryPath) const
     return KPropertiesDialog::canDisplay(itemList);
 }
 
-void MenuEntryEditor::edit(const QString& entryPath, const QString& menuId)
+void MenuEntryEditor::edit(const QString &entryPath, const QString &menuId)
 {
     const QString &appsPath = QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation);
     const QUrl &entryUrl = QUrl::fromLocalFile(entryPath);
@@ -59,9 +60,8 @@ void MenuEntryEditor::edit(const QString& entryPath, const QString& menuId)
                 }
             }
 
-            KPropertiesDialog *dialog = new KPropertiesDialog(entryUrl,
-                QUrl::fromLocalFile(appsPath), menuId);
-            //KPropertiesDialog deletes itself
+            KPropertiesDialog *dialog = new KPropertiesDialog(entryUrl, QUrl::fromLocalFile(appsPath), menuId);
+            // KPropertiesDialog deletes itself
             dialog->show();
         }
     }

@@ -24,11 +24,11 @@
  * Boston, MA 02110-1301, USA.
  */
 
+#include "JobRunner.h"
+#include "Misc.h"
+#include <QDialog>
 #include <QThread>
 #include <QTreeWidget>
-#include <QDialog>
-#include "Misc.h"
-#include "JobRunner.h"
 
 class QLabel;
 class QMenu;
@@ -38,7 +38,6 @@ class QAbstractButton;
 
 namespace KFI
 {
-
 class CActionLabel;
 class CFontList;
 class CDuplicatesDialog;
@@ -47,91 +46,102 @@ class CFontFileList : public QThread
 {
     Q_OBJECT
 
-    public:
-
-    typedef QHash<Misc::TFont, QSet<QString> > TFontMap;
+public:
+    typedef QHash<Misc::TFont, QSet<QString>> TFontMap;
 
     //
     // TFile store link from filename to FontMap item.
     // This is used when looking for duplicate filenames (a.ttf/a.TTF).
-    struct TFile
-    {
-        TFile(const QString &n, CFontFileList::TFontMap::Iterator i) : name(n), it(i), useLower(false) { }
-        TFile(const QString &n, bool l=false)                        : name(n), useLower(l)            { }
+    struct TFile {
+        TFile(const QString &n, CFontFileList::TFontMap::Iterator i)
+            : name(n)
+            , it(i)
+            , useLower(false)
+        {
+        }
+        TFile(const QString &n, bool l = false)
+            : name(n)
+            , useLower(l)
+        {
+        }
 
         bool operator==(const TFile &f) const
         {
-            return useLower||f.useLower
-                    ? name.toLower()==f.name.toLower()
-                    : name==f.name;
+            return useLower || f.useLower ? name.toLower() == f.name.toLower() : name == f.name;
         }
 
-        QString                           name;
+        QString name;
         CFontFileList::TFontMap::Iterator it;
-        bool                              useLower;
+        bool useLower;
     };
 
-    public:
-
+public:
     CFontFileList(CDuplicatesDialog *parent);
 
     void start();
     void terminate();
     void getDuplicateFonts(TFontMap &map);
-    bool wasTerminated() const { return itsTerminated; }
+    bool wasTerminated() const
+    {
+        return itsTerminated;
+    }
 
-    Q_SIGNALS:
+Q_SIGNALS:
 
     void finished();
 
-    private:
-
+private:
     void run() override;
     void fileDuplicates(const QString &folder, const QSet<TFile> &files);
 
-    private:
-
-    bool     itsTerminated;
+private:
+    bool itsTerminated;
     TFontMap itsMap;
 };
 
 class CFontFileListView : public QTreeWidget
 {
     Q_OBJECT
-    
-    public:
 
+public:
     class StyleItem : public QTreeWidgetItem
     {
-        public:
-
+    public:
         StyleItem(CFontFileListView *parent, const QStringList &details, const QString &fam, quint32 val)
             : QTreeWidgetItem(parent, details)
             , itsFamily(fam)
             , itsValue(val)
-        { }
+        {
+        }
 
-        const QString & family() const { return itsFamily; }
-        quint32         value() const  { return itsValue; }
+        const QString &family() const
+        {
+            return itsFamily;
+        }
+        quint32 value() const
+        {
+            return itsValue;
+        }
 
-        private:
-
+    private:
         QString itsFamily;
         quint32 itsValue;
     };
-    
+
     CFontFileListView(QWidget *parent);
-    ~CFontFileListView() override { }
+    ~CFontFileListView() override
+    {
+    }
 
-    QSet<QString>        getMarkedFiles();
+    QSet<QString> getMarkedFiles();
     CJobRunner::ItemList getMarkedItems();
-    void                 removeFiles();
+    void removeFiles();
 
-    Q_SIGNALS:
+Q_SIGNALS:
 
     void haveDeletions(bool have);
 
-    private Q_SLOTS:
+private Q_SLOTS:
 
     void openViewer();
     void properties();
@@ -141,42 +151,40 @@ class CFontFileListView : public QTreeWidget
     void clicked(QTreeWidgetItem *item, int col);
     void contextMenuEvent(QContextMenuEvent *ev) override;
 
-    private:
-
+private:
     void checkFiles();
 
-    private:
-
-    QMenu   *itsMenu;
-    QAction *itsMarkAct,
-            *itsUnMarkAct;
+private:
+    QMenu *itsMenu;
+    QAction *itsMarkAct, *itsUnMarkAct;
 };
 
 class CDuplicatesDialog : public QDialog
 {
     Q_OBJECT
 
-    public:
-
+public:
     CDuplicatesDialog(QWidget *parent, CFontList *fl);
 
-    int               exec() override;
-    const CFontList * fontList() const    { return itsFontList; }
+    int exec() override;
+    const CFontList *fontList() const
+    {
+        return itsFontList;
+    }
 
-    private Q_SLOTS:
+private Q_SLOTS:
 
     void scanFinished();
     void slotButtonClicked(QAbstractButton *button);
     void enableButtonOk(bool);
 
-    private:
-
-    QDialogButtonBox  *itsButtonBox;
-    CActionLabel      *itsActionLabel;
-    CFontFileList     *itsFontFileList;
-    QLabel            *itsLabel;
+private:
+    QDialogButtonBox *itsButtonBox;
+    CActionLabel *itsActionLabel;
+    CFontFileList *itsFontFileList;
+    QLabel *itsLabel;
     CFontFileListView *itsView;
-    CFontList         *itsFontList;
+    CFontList *itsFontList;
 };
 
 }

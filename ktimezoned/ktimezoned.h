@@ -33,7 +33,7 @@ class KTimeZoned : public KTimeZonedBase
     Q_OBJECT
 
 public:
-    explicit KTimeZoned(QObject *parent, const QList<QVariant>&);
+    explicit KTimeZoned(QObject *parent, const QList<QVariant> &);
     ~KTimeZoned() override;
 
 private Q_SLOTS:
@@ -44,10 +44,10 @@ private:
     void init(bool restart) override;
     bool findZoneTab(const QString &pathFromConfig);
 
-    KDirWatch *m_dirWatch = nullptr;       // watcher for timezone config changes
-    KDirWatch *m_zoneTabWatch = nullptr;   // watcher for zone.tab changes
-    QString m_zoneinfoDir;       // path to zoneinfo directory
-    QString m_zoneTab;           // path to zone.tab file
+    KDirWatch *m_dirWatch = nullptr; // watcher for timezone config changes
+    KDirWatch *m_zoneTabWatch = nullptr; // watcher for zone.tab changes
+    QString m_zoneinfoDir; // path to zoneinfo directory
+    QString m_zoneTab; // path to zone.tab file
 };
 
 #endif

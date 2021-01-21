@@ -22,7 +22,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace ColorCorrect
 {
-
 class ColorCorrectPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
@@ -34,4 +33,4 @@ public:
 
 }
 
-#endif  // COLORCORRECTPLUGIN_H
+#endif // COLORCORRECTPLUGIN_H

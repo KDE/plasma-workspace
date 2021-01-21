@@ -20,11 +20,11 @@
 #ifndef SCREENPOOL_H
 #define SCREENPOOL_H
 
-#include <QObject>
+#include <QAbstractNativeEventFilter>
 #include <QHash>
+#include <QObject>
 #include <QString>
 #include <QTimer>
-#include <QAbstractNativeEventFilter>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -49,18 +49,18 @@ public:
 
     int firstAvailableId() const;
 
-    //all ids that are known, included screens not enabled at the moment
-    QList <int> knownIds() const;
+    // all ids that are known, included screens not enabled at the moment
+    QList<int> knownIds() const;
 
 protected:
-    bool nativeEventFilter(const QByteArray & eventType, void * message, long * result) override;
+    bool nativeEventFilter(const QByteArray &eventType, void *message, long *result) override;
 
 private:
     void save();
 
     KConfigGroup m_configGroup;
     QString m_primaryConnector;
-    //order is important
+    // order is important
     QMap<int, QString> m_connectorForId;
     QHash<QString, int> m_idForConnector;
 

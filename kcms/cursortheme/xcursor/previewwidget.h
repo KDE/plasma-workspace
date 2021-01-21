@@ -19,9 +19,9 @@
 #ifndef PREVIEWWIDGET_H
 #define PREVIEWWIDGET_H
 
-#include <QQuickPaintedItem>
-#include <QPointer>
 #include "sortproxymodel.h"
+#include <QPointer>
+#include <QQuickPaintedItem>
 
 class CursorTheme;
 class PreviewCursor;
@@ -33,47 +33,45 @@ class PreviewWidget : public QQuickPaintedItem
     Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
     Q_PROPERTY(int currentSize READ currentSize WRITE setCurrentSize NOTIFY currentSizeChanged)
 
+public:
+    explicit PreviewWidget(QQuickItem *parent = nullptr);
+    ~PreviewWidget() override;
 
-    public:
-        explicit PreviewWidget(QQuickItem *parent = nullptr);
-        ~PreviewWidget() override;
+    void setTheme(const CursorTheme *theme, const int size);
+    void setUseLables(bool);
+    void updateImplicitSize();
 
-        void setTheme(const CursorTheme *theme, const int size);
-        void setUseLables(bool);
-        void updateImplicitSize();
+    void setThemeModel(SortProxyModel *themeModel);
+    SortProxyModel *themeModel();
 
-        void setThemeModel(SortProxyModel *themeModel);
-        SortProxyModel *themeModel();
+    void setCurrentIndex(int idx);
+    int currentIndex() const;
 
-        void setCurrentIndex(int idx);
-        int currentIndex() const;
+    void setCurrentSize(int size);
+    int currentSize() const;
 
-        void setCurrentSize(int size);
-        int currentSize() const;
+    Q_INVOKABLE void refresh();
 
-        Q_INVOKABLE void refresh();
+Q_SIGNALS:
+    void themeModelChanged();
+    void currentIndexChanged();
+    void currentSizeChanged();
 
-    Q_SIGNALS:
-        void themeModelChanged();
-        void currentIndexChanged();
-        void currentSizeChanged();
+protected:
+    void paint(QPainter *) override;
+    void hoverMoveEvent(QHoverEvent *event) override;
+    void hoverLeaveEvent(QHoverEvent *e) override;
+    void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
 
-    protected:
-        void paint(QPainter *) override;
-        void hoverMoveEvent(QHoverEvent *event) override;
-        void hoverLeaveEvent(QHoverEvent *e) override;
-        void geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
+private:
+    void layoutItems();
 
-    private:
-        void layoutItems();
-
-        QList<PreviewCursor*> list;
-        const PreviewCursor *current;
-        bool needLayout:1;
-        QPointer<SortProxyModel> m_themeModel;
-        int m_currentIndex;
-        int m_currentSize;
+    QList<PreviewCursor *> list;
+    const PreviewCursor *current;
+    bool needLayout : 1;
+    QPointer<SortProxyModel> m_themeModel;
+    int m_currentIndex;
+    int m_currentSize;
 };
 
 #endif // PREVIEWWIDGET_H
-

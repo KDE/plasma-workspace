@@ -20,12 +20,12 @@
 
 #include "browserfactory.h"
 #include "browsers/browser.h"
-#include "browsers/kdebrowser.h"
-#include "browsers/firefox.h"
-#include "browsers/opera.h"
-#include "browsers/chromefindprofile.h"
 #include "browsers/chrome.h"
+#include "browsers/chromefindprofile.h"
 #include "browsers/falkon.h"
+#include "browsers/firefox.h"
+#include "browsers/kdebrowser.h"
+#include "browsers/opera.h"
 
 Browser *BrowserFactory::find(const QString &browserName, QObject *parent)
 {
@@ -51,9 +51,9 @@ Browser *BrowserFactory::find(const QString &browserName, QObject *parent)
     return m_previousBrowser;
 }
 
-
 BrowserFactory::BrowserFactory(QObject *parent)
-    : QObject(parent), m_previousBrowser(nullptr), m_previousBrowserName(QStringLiteral("invalid"))
+    : QObject(parent)
+    , m_previousBrowser(nullptr)
+    , m_previousBrowserName(QStringLiteral("invalid"))
 {
 }
-

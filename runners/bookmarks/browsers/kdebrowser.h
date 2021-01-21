@@ -26,12 +26,12 @@
 class KBookmarkManager;
 class Favicon;
 
-class KDEFavicon : public Favicon {
+class KDEFavicon : public Favicon
+{
     Q_OBJECT
 public:
     explicit KDEFavicon(QObject *parent = nullptr);
     QIcon iconFor(const QString &url) override;
-
 };
 
 class KDEBrowser : public QObject, public Browser
@@ -39,14 +39,16 @@ class KDEBrowser : public QObject, public Browser
     Q_OBJECT
 public:
     explicit KDEBrowser(QObject *parent = nullptr);
-    QList<BookmarkMatch> match(const QString& term, bool addEverything) override;
+    QList<BookmarkMatch> match(const QString &term, bool addEverything) override;
 
 public Q_SLOTS:
-    void teardown() override {}
+    void teardown() override
+    {
+    }
 
 private:
-    KBookmarkManager * const m_bookmarkManager;
-    Favicon * const m_favicon;
+    KBookmarkManager *const m_bookmarkManager;
+    Favicon *const m_favicon;
 };
 
 #endif // KDEBROWSER_H

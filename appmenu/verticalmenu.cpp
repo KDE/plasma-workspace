@@ -26,11 +26,12 @@
 #include "verticalmenu.h"
 
 #include <QCoreApplication>
-#include <QKeyEvent>
 #include <QEvent>
+#include <QKeyEvent>
 #include <QMouseEvent>
 
-VerticalMenu::VerticalMenu(QWidget* parent) : QMenu(parent)
+VerticalMenu::VerticalMenu(QWidget *parent)
+    : QMenu(parent)
 {
 }
 
@@ -63,14 +64,14 @@ void VerticalMenu::paintEvent(QPaintEvent *pe)
     grabKeyboard();
 }
 
-#define FORWARD(_EVENT_, _TYPE_) \
-void VerticalMenu::_EVENT_##Event(Q##_TYPE_##Event *e) \
-{ \
-    if (QMenu *leaf = leafMenu()) \
-        QCoreApplication::sendEvent(leaf, e); \
-    else \
-        QMenu::_EVENT_##Event(e); \
-} \
+#define FORWARD(_EVENT_, _TYPE_)                                                                                                                               \
+    void VerticalMenu::_EVENT_##Event(Q##_TYPE_##Event *e)                                                                                                     \
+    {                                                                                                                                                          \
+        if (QMenu *leaf = leafMenu())                                                                                                                          \
+            QCoreApplication::sendEvent(leaf, e);                                                                                                              \
+        else                                                                                                                                                   \
+            QMenu::_EVENT_##Event(e);                                                                                                                          \
+    }
 
 FORWARD(keyPress, Key)
 FORWARD(keyRelease, Key)

@@ -22,11 +22,12 @@
 #ifndef STANDALONEAPPCORONA_H
 #define STANDALONEAPPCORONA_H
 
-#include <plasma/corona.h>
 #include "desktopview.h"
+#include <plasma/corona.h>
 
-namespace KActivities {
-    class Consumer;
+namespace KActivities
+{
+class Consumer;
 }
 
 class StandaloneAppCorona : public Plasma::Corona
@@ -34,14 +35,14 @@ class StandaloneAppCorona : public Plasma::Corona
     Q_OBJECT
 
 public:
-    explicit StandaloneAppCorona(const QString &coronaPlugin, QObject * parent = nullptr);
+    explicit StandaloneAppCorona(const QString &coronaPlugin, QObject *parent = nullptr);
     ~StandaloneAppCorona() override;
 
     QRect screenGeometry(int id) const override;
 
     void loadDefaultLayout() override;
 
-    Plasma::Containment *createContainmentForActivity(const QString& activity, int screenNum);
+    Plasma::Containment *createContainmentForActivity(const QString &activity, int screenNum);
 
     void insertActivity(const QString &id, const QString &plugin);
     Plasma::Containment *addPanel(const QString &plugin);

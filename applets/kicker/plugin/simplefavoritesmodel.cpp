@@ -18,18 +18,19 @@
  ***************************************************************************/
 
 #include "simplefavoritesmodel.h"
+#include "actionlist.h"
 #include "appentry.h"
 #include "contactentry.h"
 #include "fileentry.h"
 #include "systementry.h"
-#include "actionlist.h"
 
 #include <KLocalizedString>
 
-SimpleFavoritesModel::SimpleFavoritesModel(QObject *parent) : AbstractModel(parent)
-, m_enabled(true)
-, m_maxFavorites(-1)
-, m_dropPlaceholderIndex(-1)
+SimpleFavoritesModel::SimpleFavoritesModel(QObject *parent)
+    : AbstractModel(parent)
+    , m_enabled(true)
+    , m_maxFavorites(-1)
+    , m_dropPlaceholderIndex(-1)
 {
 }
 
@@ -43,7 +44,7 @@ QString SimpleFavoritesModel::description() const
     return i18n("Favorites");
 }
 
-QVariant SimpleFavoritesModel::data(const QModelIndex& index, int role) const
+QVariant SimpleFavoritesModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= rowCount()) {
         return QVariant();
@@ -68,8 +69,10 @@ QVariant SimpleFavoritesModel::data(const QModelIndex& index, int role) const
     if (role == Qt::DisplayRole) {
         return entry->name();
     } else if (role == Qt::DecorationRole) {
-        if(entry->icon().name() != "") return entry->icon().name();
-        else return entry->icon();
+        if (entry->icon().name() != "")
+            return entry->icon().name();
+        else
+            return entry->icon();
     } else if (role == Kicker::DescriptionRole) {
         return entry->description();
     } else if (role == Kicker::FavoriteIdRole) {
@@ -85,7 +88,7 @@ QVariant SimpleFavoritesModel::data(const QModelIndex& index, int role) const
     return QVariant();
 }
 
-int SimpleFavoritesModel::rowCount(const QModelIndex& parent) const
+int SimpleFavoritesModel::rowCount(const QModelIndex &parent) const
 {
     return parent.isValid() ? 0 : m_entryList.count() + (m_dropPlaceholderIndex != -1 ? 1 : 0);
 }
@@ -118,7 +121,7 @@ QStringList SimpleFavoritesModel::favorites() const
     return m_favorites;
 }
 
-void SimpleFavoritesModel::setFavorites(const QStringList& favorites)
+void SimpleFavoritesModel::setFavorites(const QStringList &favorites)
 {
     QStringList _favorites(favorites);
     _favorites.removeDuplicates();
@@ -136,8 +139,7 @@ int SimpleFavoritesModel::maxFavorites() const
 
 void SimpleFavoritesModel::setMaxFavorites(int max)
 {
-    if (m_maxFavorites != max)
-    {
+    if (m_maxFavorites != max) {
         m_maxFavorites = max;
 
         if (m_maxFavorites != -1 && m_favorites.count() > m_maxFavorites) {
@@ -289,7 +291,7 @@ void SimpleFavoritesModel::refresh()
 
     QStringList newFavorites;
 
-    foreach(const QString &id, m_favorites) {
+    foreach (const QString &id, m_favorites) {
         AbstractEntry *entry = favoriteFromId(id);
 
         if (entry && entry->isValid()) {

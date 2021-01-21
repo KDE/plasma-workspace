@@ -18,29 +18,25 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QDir>
-#include <QUrl>
 #include <QDBusReply>
+#include <QDir>
 #include <QStandardPaths>
+#include <QUrl>
 
-#include <KTar>
 #include <KLocalizedString>
 #include <KNS3/DownloadDialog>
+#include <KTar>
 
 #include "gtkpage.h"
 
 GtkPage::GtkPage(QObject *parent)
     : QObject(parent)
     , m_gtkThemesModel(new GtkThemesModel(this))
-    , gtkConfigInterface(
-        QStringLiteral("org.kde.GtkConfig"),
-        QStringLiteral("/GtkConfig"),
-        QStringLiteral("org.kde.GtkConfig")
-    )
+    , gtkConfigInterface(QStringLiteral("org.kde.GtkConfig"), QStringLiteral("/GtkConfig"), QStringLiteral("org.kde.GtkConfig"))
 {
     connect(m_gtkThemesModel, &GtkThemesModel::themeRemoved, this, &GtkPage::onThemeRemoved);
 
-    connect(m_gtkThemesModel, &GtkThemesModel::selectedThemeChanged, this, [this](){
+    connect(m_gtkThemesModel, &GtkThemesModel::selectedThemeChanged, this, [this]() {
         Q_EMIT gtkThemeSettingsChanged();
     });
 }

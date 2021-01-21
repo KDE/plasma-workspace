@@ -29,7 +29,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 /**
  * @short A proxy tasks model for concatenating multiple source tasks models.
  *
@@ -39,14 +38,14 @@ namespace TaskManager
  * @author Eike Hein <hein@kde.org>
  **/
 
-class TASKMANAGER_EXPORT ConcatenateTasksProxyModel : public KConcatenateRowsProxyModel,
-    public AbstractTasksProxyModelIface
+class TASKMANAGER_EXPORT ConcatenateTasksProxyModel : public KConcatenateRowsProxyModel, public AbstractTasksProxyModelIface
 {
     Q_OBJECT
 
 public:
     explicit ConcatenateTasksProxyModel(QObject *parent = nullptr);
     ~ConcatenateTasksProxyModel() override;
+
 protected:
     QModelIndex mapIfaceToSource(const QModelIndex &index) const override;
 };

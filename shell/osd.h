@@ -25,16 +25,19 @@
 
 #include <KSharedConfig>
 
-namespace KDeclarative {
-    class QmlObjectSharedEngine;
+namespace KDeclarative
+{
+class QmlObjectSharedEngine;
 }
-namespace Plasma {
+namespace Plasma
+{
 }
 
 class QTimer;
 class ShellCorona;
 
-class Osd : public QObject {
+class Osd : public QObject
+{
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.osdService")
 public:

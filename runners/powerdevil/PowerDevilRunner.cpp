@@ -23,14 +23,14 @@
 // kde-workspace/libs
 #include <sessionmanagement.h>
 
+#include <QDBusConnectionInterface>
 #include <QDBusInterface>
 #include <QDBusReply>
-#include <QDBusConnectionInterface>
-#include <QIcon>
 #include <QDebug>
+#include <QIcon>
 
-#include <KSharedConfig>
 #include <KLocalizedString>
+#include <KSharedConfig>
 
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(PowerDevilRunner, "plasma-runner-powerdevil.json")
 
@@ -61,8 +61,9 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaD
 void PowerDevilRunner::updateSyntaxes()
 {
     setSyntaxes({}); // Clear the existing ones
-    addSyntaxForKeyword({m_suspend}, i18n("Lists system suspend (e.g. sleep, hibernate) options "
-                                          "and allows them to be activated"));
+    addSyntaxForKeyword({m_suspend},
+                        i18n("Lists system suspend (e.g. sleep, hibernate) options "
+                             "and allows them to be activated"));
 
     if (m_session->canSuspend()) {
         addSyntaxForKeyword({m_sleep, m_toRam}, i18n("Suspends the system to RAM"));
@@ -73,9 +74,9 @@ void PowerDevilRunner::updateSyntaxes()
     }
 
     Plasma::RunnerSyntax brightnessSyntax(i18nc("Note this is a KRunner keyword", "screen brightness"),
-                            // xgettext:no-c-format
-                            i18n("Lists screen brightness options or sets it to the brightness defined by :q:; "
-                                 "e.g. screen brightness 50 would dim the screen to 50% maximum brightness"));
+                                          // xgettext:no-c-format
+                                          i18n("Lists screen brightness options or sets it to the brightness defined by :q:; "
+                                               "e.g. screen brightness 50 would dim the screen to 50% maximum brightness"));
     brightnessSyntax.addExampleQuery(i18nc("Note this is a KRunner keyword", "dim screen"));
     addSyntax(brightnessSyntax);
 }
@@ -92,7 +93,9 @@ void PowerDevilRunner::initUpdateTriggers()
         if (!dbus.connect(QStringLiteral("org.kde.Solid.PowerManagement"),
                           QStringLiteral("/org/kde/Solid/PowerManagement"),
                           QStringLiteral("org.kde.Solid.PowerManagement"),
-                          QStringLiteral("configurationReloaded"), this, SLOT(updateStatus()))) {
+                          QStringLiteral("configurationReloaded"),
+                          this,
+                          SLOT(updateStatus()))) {
             qDebug() << "error!";
         }
     }
@@ -103,12 +106,7 @@ void PowerDevilRunner::updateStatus()
     updateSyntaxes();
 }
 
-enum SleepState {
-    StandbyState = 1,
-    SuspendState = 2,
-    HibernateState = 4,
-    HybridSuspendState = 8
-};
+enum SleepState { StandbyState = 1, SuspendState = 2, HibernateState = 4, HybridSuspendState = 8 };
 
 void PowerDevilRunner::match(Plasma::RunnerContext &context)
 {
@@ -166,19 +164,19 @@ void PowerDevilRunner::addSuspendMatch(int value, QList<Plasma::QueryMatch> &mat
     match.setType(type);
 
     switch ((SleepState)value) {
-        case SuspendState:
-        case StandbyState:
-            match.setIconName(QStringLiteral("system-suspend"));
-            match.setText(i18nc("Suspend to RAM", "Sleep"));
-            match.setSubtext(i18n("Suspend to RAM"));
-            match.setRelevance(1);
-            break;
-        case HibernateState:
-            match.setIconName(QStringLiteral("system-suspend-hibernate"));
-            match.setText(i18nc("Suspend to disk", "Hibernate"));
-            match.setSubtext(i18n("Suspend to disk"));
-            match.setRelevance(0.99);
-            break;
+    case SuspendState:
+    case StandbyState:
+        match.setIconName(QStringLiteral("system-suspend"));
+        match.setText(i18nc("Suspend to RAM", "Sleep"));
+        match.setSubtext(i18n("Suspend to RAM"));
+        match.setRelevance(1);
+        break;
+    case HibernateState:
+        match.setIconName(QStringLiteral("system-suspend-hibernate"));
+        match.setText(i18nc("Suspend to disk", "Hibernate"));
+        match.setSubtext(i18n("Suspend to disk"));
+        match.setRelevance(0.99);
+        break;
     }
 
     match.setData(value);
@@ -207,28 +205,25 @@ void PowerDevilRunner::run(const Plasma::RunnerContext &context, const Plasma::Q
         brightnessIface.asyncCall(QStringLiteral("setBrightness"), static_cast<int>(brightness / 2));
     } else if (match.id().startsWith(QLatin1String("PowerDevil_Sleep"))) {
         switch ((SleepState)match.data().toInt()) {
-            case SuspendState:
-            case StandbyState:
-                m_session->suspend();
-                break;
-            case HibernateState:
-                m_session->hibernate();
-                break;
+        case SuspendState:
+        case StandbyState:
+            m_session->suspend();
+            break;
+        case HibernateState:
+            m_session->hibernate();
+            break;
         }
     }
 }
 
-bool PowerDevilRunner::matchesRunnerKeywords(const QList<RunnerKeyword> &keywords,
-                                             Plasma::QueryMatch::Type &type,
-                                             const QString &query) const
+bool PowerDevilRunner::matchesRunnerKeywords(const QList<RunnerKeyword> &keywords, Plasma::QueryMatch::Type &type, const QString &query) const
 {
     return std::any_of(keywords.begin(), keywords.end(), [&query, &type](const RunnerKeyword &keyword) {
-        bool exactMatch = keyword.triggerWord.compare(query, Qt::CaseInsensitive) == 0
-            || keyword.translatedTriggerWord.compare(query, Qt::CaseInsensitive) == 0;
+        bool exactMatch =
+            keyword.triggerWord.compare(query, Qt::CaseInsensitive) == 0 || keyword.translatedTriggerWord.compare(query, Qt::CaseInsensitive) == 0;
         type = exactMatch ? Plasma::QueryMatch::ExactMatch : Plasma::QueryMatch::CompletionMatch;
         if (!exactMatch && keyword.supportPartialMatch) {
-            return keyword.triggerWord.startsWith(query, Qt::CaseInsensitive)
-                || keyword.translatedTriggerWord.startsWith(query, Qt::CaseInsensitive);
+            return keyword.triggerWord.startsWith(query, Qt::CaseInsensitive) || keyword.translatedTriggerWord.startsWith(query, Qt::CaseInsensitive);
         }
         return exactMatch;
     });
@@ -245,12 +240,10 @@ void PowerDevilRunner::addSyntaxForKeyword(const QList<RunnerKeyword> &keywords,
 
 int PowerDevilRunner::matchesScreenBrightnessKeywords(const QString &query) const
 {
-    const static QStringList expressions = {
-        QStringLiteral("screen brightness "),
-        i18nc("Note this is a KRunner keyword, it should end with a space", "screen brightness "),
-        QStringLiteral("dim screen "),
-        i18nc("Note this is a KRunner keyword, it should end with a space", "dim screen ")
-    };
+    const static QStringList expressions = {QStringLiteral("screen brightness "),
+                                            i18nc("Note this is a KRunner keyword, it should end with a space", "screen brightness "),
+                                            QStringLiteral("dim screen "),
+                                            i18nc("Note this is a KRunner keyword, it should end with a space", "dim screen ")};
 
     for (const QString &expression : expressions) {
         if (query.startsWith(expression)) {

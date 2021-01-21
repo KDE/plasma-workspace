@@ -23,37 +23,34 @@
 
 #include <kurlmimedata.h>
 
-#include "historystringitem.h"
 #include "historyimageitem.h"
-#include "historyurlitem.h"
 #include "historymodel.h"
+#include "historystringitem.h"
+#include "historyurlitem.h"
 
-HistoryItem::HistoryItem(const QByteArray& uuid)
+HistoryItem::HistoryItem(const QByteArray &uuid)
     : m_model(nullptr)
     , m_uuid(uuid)
 {
 }
 
-HistoryItem::~HistoryItem() {
-
+HistoryItem::~HistoryItem()
+{
 }
 
-HistoryItemPtr HistoryItem::create( const QMimeData* data )
+HistoryItemPtr HistoryItem::create(const QMimeData *data)
 {
-    if (data->hasUrls())
-    {
+    if (data->hasUrls()) {
         KUrlMimeData::MetaDataMap metaData;
         QList<QUrl> urls = KUrlMimeData::urlsFromMimeData(data, KUrlMimeData::PreferKdeUrls, &metaData);
         QByteArray bytes = data->data(QStringLiteral("application/x-kde-cutselection"));
         bool cut = !bytes.isEmpty() && (bytes.at(0) == '1'); // true if 1
         return HistoryItemPtr(new HistoryURLItem(urls, metaData, cut));
     }
-    if (data->hasText())
-    {
+    if (data->hasText()) {
         return HistoryItemPtr(new HistoryStringItem(data->text()));
     }
-    if (data->hasImage())
-    {
+    if (data->hasImage()) {
         QImage image = qvariant_cast<QImage>(data->imageData());
         return HistoryItemPtr(new HistoryImageItem(QPixmap::fromImage(image)));
     }
@@ -61,32 +58,33 @@ HistoryItemPtr HistoryItem::create( const QMimeData* data )
     return HistoryItemPtr(); // Failed.
 }
 
-HistoryItemPtr HistoryItem::create( QDataStream& dataStream ) {
-    if ( dataStream.atEnd() ) {
+HistoryItemPtr HistoryItem::create(QDataStream &dataStream)
+{
+    if (dataStream.atEnd()) {
         return HistoryItemPtr();
     }
     QString type;
     dataStream >> type;
-    if ( type == QLatin1String("url") ) {
+    if (type == QLatin1String("url")) {
         QList<QUrl> urls;
-        QMap< QString, QString > metaData;
+        QMap<QString, QString> metaData;
         int cut;
         dataStream >> urls;
         dataStream >> metaData;
         dataStream >> cut;
-        return HistoryItemPtr(new HistoryURLItem( urls, metaData, cut ));
+        return HistoryItemPtr(new HistoryURLItem(urls, metaData, cut));
     }
-    if ( type == QLatin1String("string") ) {
+    if (type == QLatin1String("string")) {
         QString text;
         dataStream >> text;
-        return HistoryItemPtr(new HistoryStringItem( text ));
+        return HistoryItemPtr(new HistoryStringItem(text));
     }
-    if ( type == QLatin1String("image") ) {
+    if (type == QLatin1String("image")) {
         QPixmap image;
         dataStream >> image;
-        return HistoryItemPtr(new HistoryImageItem( image ));
+        return HistoryItemPtr(new HistoryImageItem(image));
     }
-    qCWarning(KLIPPER_LOG) << "Failed to restore history item: Unknown type \"" << type << "\"" ;
+    qCWarning(KLIPPER_LOG) << "Failed to restore history item: Unknown type \"" << type << "\"";
     return HistoryItemPtr();
 }
 
@@ -101,8 +99,8 @@ QByteArray HistoryItem::next_uuid() const
         // that was wrong, model doesn't contain our item, so there is no chain
         return m_uuid;
     }
-    const int nextRow = (ownIndex.row() +1) % m_model->rowCount();
-    return m_model->index(nextRow, 0).data(Qt::UserRole+1).toByteArray();
+    const int nextRow = (ownIndex.row() + 1) % m_model->rowCount();
+    return m_model->index(nextRow, 0).data(Qt::UserRole + 1).toByteArray();
 }
 
 QByteArray HistoryItem::previous_uuid() const
@@ -117,11 +115,10 @@ QByteArray HistoryItem::previous_uuid() const
         return m_uuid;
     }
     const int nextRow = ((ownIndex.row() == 0) ? m_model->rowCount() : ownIndex.row()) - 1;
-    return m_model->index(nextRow, 0).data(Qt::UserRole+1).toByteArray();
+    return m_model->index(nextRow, 0).data(Qt::UserRole + 1).toByteArray();
 }
 
 void HistoryItem::setModel(HistoryModel *model)
 {
     m_model = model;
 }
-

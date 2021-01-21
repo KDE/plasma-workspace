@@ -21,18 +21,18 @@
 #include "panelshadows_p.h"
 #include "shellcorona.h"
 
+#include <QAction>
 #include <QDebug>
 #include <QDir>
 #include <QQmlComponent>
-#include <QQmlEngine>
 #include <QQmlContext>
+#include <QQmlEngine>
 #include <QScreen>
-#include <QAction>
 
-#include <klocalizedstring.h>
-#include <kwindoweffects.h>
 #include <KActionCollection>
 #include <KWindowSystem>
+#include <klocalizedstring.h>
+#include <kwindoweffects.h>
 
 #include <Plasma/Containment>
 #include <Plasma/PluginLoader>
@@ -42,9 +42,9 @@
 
 //////////////////////////////PanelConfigView
 PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *panelView, QWindow *parent)
-    : ConfigView(containment, parent),
-      m_containment(containment),
-      m_panelView(panelView)
+    : ConfigView(containment, parent)
+    , m_containment(containment)
+    , m_panelView(panelView)
 {
     connect(panelView, &QObject::destroyed, this, &QObject::deleteLater);
 
@@ -53,14 +53,13 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     connect(panelView, &QWindow::screenChanged, &m_screenSyncTimer, QOverload<>::of(&QTimer::start));
     m_screenSyncTimer.setSingleShot(true);
     m_screenSyncTimer.setInterval(150);
-    connect(&m_screenSyncTimer, &QTimer::timeout,
-            [=]() {
-                setScreen(panelView->screen());
-                KWindowSystem::setType(winId(), NET::Dock);
-                KWindowSystem::setState(winId(), NET::KeepAbove);
-                syncGeometry();
-                syncLocation();
-            });
+    connect(&m_screenSyncTimer, &QTimer::timeout, [=]() {
+        setScreen(panelView->screen());
+        KWindowSystem::setType(winId(), NET::Dock);
+        KWindowSystem::setState(winId(), NET::KeepAbove);
+        syncGeometry();
+        syncLocation();
+    });
 
     KWindowSystem::setType(winId(), NET::Dock);
     KWindowSystem::setState(winId(), NET::KeepAbove);
@@ -89,10 +88,11 @@ void PanelConfigView::init()
 void PanelConfigView::updateBlurBehindAndContrast()
 {
     KWindowEffects::enableBlurBehind(winId(), m_theme.blurBehindEnabled());
-    KWindowEffects::enableBackgroundContrast(winId(), m_theme.backgroundContrastEnabled(),
-                                                      m_theme.backgroundContrast(),
-                                                      m_theme.backgroundIntensity(),
-                                                      m_theme.backgroundSaturation());
+    KWindowEffects::enableBackgroundContrast(winId(),
+                                             m_theme.backgroundContrastEnabled(),
+                                             m_theme.backgroundContrast(),
+                                             m_theme.backgroundIntensity(),
+                                             m_theme.backgroundSaturation());
 }
 
 void PanelConfigView::showAddWidgetDialog()
@@ -111,14 +111,14 @@ void PanelConfigView::addPanelSpacer()
     }
     // Add a spacer at the end *except* if there is exactly one spacer already
     // this to trigger the panel centering mode of the spacer in a slightly more discoverable way
-    c->evaluateScript(QStringLiteral("panel = panelById(") + QString::number(m_containment->id()) 
-                + QStringLiteral(");"
-                                 "var spacers = panel.widgets(\"org.kde.plasma.panelspacer\");"
-                                "if (spacers.length === 1) {"
-                                "    panel.addWidget(\"org.kde.plasma.panelspacer\", 0,0,1,1);"
-                                "} else {"
-                                "    panel.addWidget(\"org.kde.plasma.panelspacer\");"
-                                "}"));
+    c->evaluateScript(QStringLiteral("panel = panelById(") + QString::number(m_containment->id())
+                      + QStringLiteral(");"
+                                       "var spacers = panel.widgets(\"org.kde.plasma.panelspacer\");"
+                                       "if (spacers.length === 1) {"
+                                       "    panel.addWidget(\"org.kde.plasma.panelspacer\", 0,0,1,1);"
+                                       "} else {"
+                                       "    panel.addWidget(\"org.kde.plasma.panelspacer\");"
+                                       "}"));
 }
 
 void PanelConfigView::syncGeometry()
@@ -206,7 +206,7 @@ void PanelConfigView::showEvent(QShowEvent *ev)
     syncGeometry();
     syncLocation();
 
-    //this because due to Qt xcb implementation the actual flags gets set only after a while after the window is actually visible
+    // this because due to Qt xcb implementation the actual flags gets set only after a while after the window is actually visible
     m_screenSyncTimer.start();
 
     if (m_containment) {
@@ -247,7 +247,7 @@ void PanelConfigView::moveEvent(QMoveEvent *ev)
 bool PanelConfigView::event(QEvent *e)
 {
     if (e->type() == QEvent::PlatformSurface) {
-        switch (static_cast<QPlatformSurfaceEvent*>(e)->surfaceEventType()) {
+        switch (static_cast<QPlatformSurfaceEvent *>(e)->surfaceEventType()) {
         case QPlatformSurfaceEvent::SurfaceCreated:
             KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
 

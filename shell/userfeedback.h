@@ -26,7 +26,7 @@ class ShellCorona;
 
 namespace KUserFeedback
 {
-    class Provider;
+class Provider;
 }
 
 class UserFeedback : public QObject
@@ -36,6 +36,7 @@ public:
     UserFeedback(ShellCorona *corona, QObject *parent);
     ~UserFeedback() override = default;
     QString describeDataSources() const;
+
 private:
     KUserFeedback::Provider *m_provider;
 };

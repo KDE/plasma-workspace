@@ -32,9 +32,7 @@
 
 #include "debug.h"
 
-PlayerActionJob::PlayerActionJob(const QString& operation,
-                                 QMap<QString,QVariant>& parameters,
-                                 PlayerControl* parent)
+PlayerActionJob::PlayerActionJob(const QString &operation, QMap<QString, QVariant> &parameters, PlayerControl *parent)
     : ServiceJob(parent->name() + ": " + operation, operation, parameters, parent)
     , m_controller(parent)
 {
@@ -57,15 +55,10 @@ void PlayerActionJob::start()
         return;
     }
 
-    if (operation == QLatin1String("Quit") || operation == QLatin1String("Raise")
-                                           || operation == QLatin1String("SetFullscreen")) {
+    if (operation == QLatin1String("Quit") || operation == QLatin1String("Raise") || operation == QLatin1String("SetFullscreen")) {
         listenToCall(m_controller->rootInterface()->asyncCall(operation));
-    } else if (operation == QLatin1String("Play")
-               || operation == QLatin1String("Pause")
-               || operation == QLatin1String("PlayPause")
-               || operation == QLatin1String("Stop")
-               || operation == QLatin1String("Next")
-               || operation == QLatin1String("Previous")) {
+    } else if (operation == QLatin1String("Play") || operation == QLatin1String("Pause") || operation == QLatin1String("PlayPause")
+               || operation == QLatin1String("Stop") || operation == QLatin1String("Next") || operation == QLatin1String("Previous")) {
         listenToCall(m_controller->playerInterface()->asyncCall(operation));
     } else if (operation == QLatin1String("Seek")) {
         if (parameters().value(QStringLiteral("microseconds")).canConvert<long long>()) {
@@ -77,9 +70,7 @@ void PlayerActionJob::start()
         }
     } else if (operation == QLatin1String("SetPosition")) {
         if (parameters().value(QStringLiteral("microseconds")).canConvert<long long>()) {
-            listenToCall(m_controller->playerInterface()->SetPosition(
-                             m_controller->trackId(),
-                             parameters()[QStringLiteral("microseconds")].toLongLong()));
+            listenToCall(m_controller->playerInterface()->SetPosition(m_controller->trackId(), parameters()[QStringLiteral("microseconds")].toLongLong()));
         } else {
             setErrorText(QStringLiteral("microseconds"));
             setError(MissingArgument);
@@ -87,8 +78,7 @@ void PlayerActionJob::start()
         }
     } else if (operation == QLatin1String("OpenUri")) {
         if (parameters().value(QStringLiteral("uri")).canConvert<QUrl>()) {
-            listenToCall(m_controller->playerInterface()->OpenUri(
-                             QString::fromLatin1(parameters()[QStringLiteral("uri")].toUrl().toEncoded())));
+            listenToCall(m_controller->playerInterface()->OpenUri(QString::fromLatin1(parameters()[QStringLiteral("uri")].toUrl().toEncoded())));
         } else {
             qCDebug(MPRIS2) << "uri was of type" << parameters().value(QStringLiteral("uri")).userType();
             setErrorText(QStringLiteral("uri"));
@@ -97,8 +87,7 @@ void PlayerActionJob::start()
         }
     } else if (operation == QLatin1String("SetLoopStatus")) {
         if (parameters().value(QStringLiteral("status")).type() == QVariant::String) {
-            setDBusProperty(m_controller->playerInterface()->interface(),
-                    QStringLiteral("LoopStatus"), QDBusVariant(parameters()[QStringLiteral("status")]));
+            setDBusProperty(m_controller->playerInterface()->interface(), QStringLiteral("LoopStatus"), QDBusVariant(parameters()[QStringLiteral("status")]));
         } else {
             setErrorText(QStringLiteral("status"));
             setError(MissingArgument);
@@ -106,8 +95,7 @@ void PlayerActionJob::start()
         }
     } else if (operation == QLatin1String("SetShuffle")) {
         if (parameters().value(QStringLiteral("on")).type() == QVariant::Bool) {
-            setDBusProperty(m_controller->playerInterface()->interface(),
-                    QStringLiteral("Shuffle"), QDBusVariant(parameters()[QStringLiteral("on")]));
+            setDBusProperty(m_controller->playerInterface()->interface(), QStringLiteral("Shuffle"), QDBusVariant(parameters()[QStringLiteral("on")]));
         } else {
             setErrorText(QStringLiteral("on"));
             setError(MissingArgument);
@@ -115,8 +103,7 @@ void PlayerActionJob::start()
         }
     } else if (operation == QLatin1String("SetRate")) {
         if (parameters().value(QStringLiteral("rate")).type() == QVariant::Double) {
-            setDBusProperty(m_controller->playerInterface()->interface(),
-                    QStringLiteral("Rate"), QDBusVariant(parameters()[QStringLiteral("rate")]));
+            setDBusProperty(m_controller->playerInterface()->interface(), QStringLiteral("Rate"), QDBusVariant(parameters()[QStringLiteral("rate")]));
         } else {
             setErrorText(QStringLiteral("rate"));
             setError(MissingArgument);
@@ -124,8 +111,7 @@ void PlayerActionJob::start()
         }
     } else if (operation == QLatin1String("SetVolume")) {
         if (parameters().value(QStringLiteral("level")).type() == QVariant::Double) {
-            setDBusProperty(m_controller->playerInterface()->interface(),
-                    QStringLiteral("Volume"), QDBusVariant(parameters()[QStringLiteral("level")]));
+            setDBusProperty(m_controller->playerInterface()->interface(), QStringLiteral("Volume"), QDBusVariant(parameters()[QStringLiteral("level")]));
         } else {
             setErrorText(QStringLiteral("level"));
             setError(MissingArgument);
@@ -145,10 +131,7 @@ void PlayerActionJob::start()
             return;
         }
 
-        m_controller->changeVolume(
-            parameters()[QStringLiteral("delta")].toDouble(),
-            parameters()[QStringLiteral("showOSD")].toBool()
-        );
+        m_controller->changeVolume(parameters()[QStringLiteral("delta")].toDouble(), parameters()[QStringLiteral("showOSD")].toBool());
         setError(NoError);
         emitResult();
     } else if (operation == QLatin1String("GetPosition")) {
@@ -159,14 +142,13 @@ void PlayerActionJob::start()
     }
 }
 
-void PlayerActionJob::listenToCall(const QDBusPendingCall& call)
+void PlayerActionJob::listenToCall(const QDBusPendingCall &call)
 {
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished,
-            this,    &PlayerActionJob::callFinished);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, &PlayerActionJob::callFinished);
 }
 
-void PlayerActionJob::callFinished(QDBusPendingCallWatcher* watcher)
+void PlayerActionJob::callFinished(QDBusPendingCallWatcher *watcher)
 {
     QDBusPendingReply<void> result = *watcher;
     watcher->deleteLater();
@@ -182,7 +164,7 @@ void PlayerActionJob::callFinished(QDBusPendingCallWatcher* watcher)
     emitResult();
 }
 
-void PlayerActionJob::setDBusProperty(const QString& iface, const QString& propName, const QDBusVariant& value)
+void PlayerActionJob::setDBusProperty(const QString &iface, const QString &propName, const QDBusVariant &value)
 {
     if (!m_controller) {
         setError(Failed);
@@ -190,9 +172,7 @@ void PlayerActionJob::setDBusProperty(const QString& iface, const QString& propN
         return;
     }
 
-    listenToCall(
-        m_controller->propertiesInterface()->Set(iface, propName, value)
-    );
+    listenToCall(m_controller->propertiesInterface()->Set(iface, propName, value));
 }
 
 QString PlayerActionJob::errorString() const
@@ -201,8 +181,7 @@ QString PlayerActionJob::errorString() const
         const QString name = m_controller ? m_controller->name() : QString();
         return i18n("The media player '%1' cannot perform the action '%2'.", name, operationName());
     } else if (error() == Failed) {
-        return i18n("Attempting to perform the action '%1' failed with the message '%2'.",
-                operationName(), errorText());
+        return i18n("Attempting to perform the action '%1' failed with the message '%2'.", operationName(), errorText());
     } else if (error() == MissingArgument) {
         return i18n("The argument '%1' for the action '%2' is missing or of the wrong type.", operationName(), errorText());
     } else if (error() == UnknownOperation) {

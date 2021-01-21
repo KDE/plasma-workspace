@@ -3,7 +3,7 @@
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License version 2 or at your option version 3 as published 
+ * License version 2 or at your option version 3 as published
  * by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
@@ -17,9 +17,9 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QString>
 #include "sortproxymodel.h"
 #include "cursortheme.h"
+#include <QString>
 
 QHash<int, QByteArray> SortProxyModel::roleNames() const
 {
@@ -33,18 +33,16 @@ int SortProxyModel::compare(const QModelIndex &left, const QModelIndex &right, i
 {
     const QAbstractItemModel *model = sourceModel();
 
-    QString first  = model->data(left,  role).toString();
+    QString first = model->data(left, role).toString();
     QString second = model->data(right, role).toString();
 
-    if (filterCaseSensitivity() == Qt::CaseSensitive)
-    {
-        first  = first.toLower();
+    if (filterCaseSensitivity() == Qt::CaseSensitive) {
+        first = first.toLower();
         second = second.toLower();
     }
 
     return QString::localeAwareCompare(first, second);
 }
-
 
 bool SortProxyModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
 {

@@ -42,8 +42,8 @@ private:
     void addDailyMoonPositionData(const QDateTime &dt);
     void addSolarPositionData(const QDateTime &dt);
     void addDailySolarPositionData(const QDateTime &dt);
-    Sun* sun();
-    Moon* moon();
+    Sun *sun();
+    Moon *moon();
 
     QString m_tzName;
     int m_offset;
@@ -59,4 +59,3 @@ private:
 };
 
 #endif
-

@@ -16,8 +16,7 @@
  * along with this library; see the file COPYING.LIB.  If not, write to
  * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
-*/
-
+ */
 
 #ifndef DEVICENOTIFICATIONSENGINE_H
 #define DEVICENOTIFICATIONSENGINE_H
@@ -34,15 +33,15 @@ class DeviceNotificationsEngine : public Plasma::DataEngine
 {
     Q_OBJECT
 public:
-    DeviceNotificationsEngine( QObject* parent, const QVariantList& args );
+    DeviceNotificationsEngine(QObject *parent, const QVariantList &args);
     ~DeviceNotificationsEngine() override;
 
 private slots:
-     void notify(Solid::ErrorType solidError, const QString& error, const QString& errorDetails, const QString &udi);
+    void notify(Solid::ErrorType solidError, const QString &error, const QString &errorDetails, const QString &udi);
     void clearNotification(const QString &udi);
 
 private:
-    KSolidNotify * m_solidNotify;
+    KSolidNotify *m_solidNotify;
 };
 
 #endif

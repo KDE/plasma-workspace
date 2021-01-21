@@ -24,23 +24,23 @@
 
 #include <QDBusConnection>
 #include <QDBusMessage>
-#include <QDir>
-#include <QTimeZone>
-#include <QFileInfo>
 #include <QDebug>
+#include <QDir>
+#include <QFileInfo>
+#include <QTimeZone>
 
-#include <KConfigGroup>
 #include <KConfig>
+#include <KConfigGroup>
 #include <KDirWatch>
 #include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(KTimeZoned, "ktimezoned.json")
 
-const char LOCAL_ZONE[] = "LocalZone";     // name of local time zone
-const char ZONEINFO_DIR[]   = "ZoneinfoDir";   // path to zoneinfo/ directory
-const char ZONE_TAB[]       = "Zonetab";       // path & name of zone.tab
+const char LOCAL_ZONE[] = "LocalZone"; // name of local time zone
+const char ZONEINFO_DIR[] = "ZoneinfoDir"; // path to zoneinfo/ directory
+const char ZONE_TAB[] = "Zonetab"; // path & name of zone.tab
 
-KTimeZoned::KTimeZoned(QObject* parent, const QList<QVariant>& l)
+KTimeZoned::KTimeZoned(QObject *parent, const QList<QVariant> &l)
     : KTimeZonedBase(parent, l)
 {
     init(false);
@@ -178,7 +178,8 @@ bool KTimeZoned::findZoneTab(const QString &pathFromConfig)
 
 void KTimeZoned::zonetabChanged()
 {
-    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/Daemon"), QStringLiteral("org.kde.KTimeZoned"), QStringLiteral("timeZoneDatabaseUpdated"));
+    QDBusMessage message =
+        QDBusMessage::createSignal(QStringLiteral("/Daemon"), QStringLiteral("org.kde.KTimeZoned"), QStringLiteral("timeZoneDatabaseUpdated"));
     QDBusConnection::sessionBus().send(message);
 }
 

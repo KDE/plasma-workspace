@@ -22,99 +22,93 @@
  */
 
 #include "GroupList.h"
+#include "FcEngine.h"
+#include "KfiConstants.h"
+#include "Misc.h"
 #include <KIconLoader>
 #include <KMessageBox>
-#include <QSaveFile>
-#include <QFont>
+#include <QApplication>
+#include <QDomElement>
 #include <QDropEvent>
+#include <QEvent>
+#include <QFont>
 #include <QHeaderView>
 #include <QMenu>
-#include <QApplication>
-#include <QStyledItemDelegate>
-#include <QPainter>
-#include <QDomElement>
-#include <QTextStream>
-#include <QEvent>
 #include <QMimeData>
+#include <QPainter>
+#include <QSaveFile>
+#include <QStandardPaths>
+#include <QStyledItemDelegate>
+#include <QTextStream>
 #include <QTimer>
 #include <stdlib.h>
 #include <unistd.h>
 #include <utime.h>
-#include <QStandardPaths>
-#include "FcEngine.h"
-#include "Misc.h"
-#include "KfiConstants.h"
 
 namespace KFI
 {
-
 #define GROUPS_DOC "groups"
-#define GROUP_TAG  "group"
-#define NAME_ATTR  "name"
+#define GROUP_TAG "group"
+#define NAME_ATTR "name"
 #define FAMILY_TAG "family"
 
-enum EGroupColumns
-{
+enum EGroupColumns {
     COL_GROUP_NAME,
 
     NUM_GROUP_COLS,
 };
 
 CGroupListItem::CGroupListItem(const QString &name)
-              : itsName(name),
-                itsType(CUSTOM),
-                itsHighlighted(false),
-                itsStatus(CFamilyItem::ENABLED)
+    : itsName(name)
+    , itsType(CUSTOM)
+    , itsHighlighted(false)
+    , itsStatus(CFamilyItem::ENABLED)
 {
-    itsData.validated=false;
+    itsData.validated = false;
 }
 
 CGroupListItem::CGroupListItem(EType type, CGroupList *p)
-              : itsType(type),
-                itsHighlighted(false),
-                itsStatus(CFamilyItem::ENABLED)
+    : itsType(type)
+    , itsHighlighted(false)
+    , itsStatus(CFamilyItem::ENABLED)
 {
-    switch(itsType)
-    {
-        case ALL:
-            itsName=i18n("All Fonts");
-            break;
-        case PERSONAL:
-            itsName=i18n("Personal Fonts");
-            break;
-        case SYSTEM:
-            itsName=i18n("System Fonts");
-            break;
-        default:
-            itsName=i18n("Unclassified");
+    switch (itsType) {
+    case ALL:
+        itsName = i18n("All Fonts");
+        break;
+    case PERSONAL:
+        itsName = i18n("Personal Fonts");
+        break;
+    case SYSTEM:
+        itsName = i18n("System Fonts");
+        break;
+    default:
+        itsName = i18n("Unclassified");
     }
-    itsData.parent=p;
+    itsData.parent = p;
 }
 
 bool CGroupListItem::hasFont(const CFontItem *fnt) const
 {
-    switch(itsType)
-    {
-        case CUSTOM:
-            return itsFamilies.contains(fnt->family());
-        case PERSONAL:
-            return !fnt->isSystem();
-        case SYSTEM:
-            return fnt->isSystem();
-        case ALL:
-            return true;
-        case UNCLASSIFIED:
-        {
-            QList<CGroupListItem *>::ConstIterator it(itsData.parent->itsGroups.begin()),
-                                                   end(itsData.parent->itsGroups.end());
+    switch (itsType) {
+    case CUSTOM:
+        return itsFamilies.contains(fnt->family());
+    case PERSONAL:
+        return !fnt->isSystem();
+    case SYSTEM:
+        return fnt->isSystem();
+    case ALL:
+        return true;
+    case UNCLASSIFIED: {
+        QList<CGroupListItem *>::ConstIterator it(itsData.parent->itsGroups.begin()), end(itsData.parent->itsGroups.end());
 
-            for(; it!=end; ++it)
-                if((*it)->isCustom() && (*it)->families().contains(fnt->family()))
-                    return false;
-            return true;
-        }
-        default:
-            return false;
+        for (; it != end; ++it)
+            if ((*it)->isCustom() && (*it)->families().contains(fnt->family()))
+                return false;
+        return true;
+    }
+    default:
+        return false;
     }
     return false;
 }
@@ -123,32 +117,30 @@ void CGroupListItem::updateStatus(QSet<QString> &enabled, QSet<QString> &disable
 {
     QSet<QString> families(itsFamilies);
 
-    if(0!=families.intersect(partial).count())
-        itsStatus=CFamilyItem::PARTIAL;
-    else
-    {
-        families=itsFamilies;
+    if (0 != families.intersect(partial).count())
+        itsStatus = CFamilyItem::PARTIAL;
+    else {
+        families = itsFamilies;
 
-        bool haveEnabled(0!=families.intersect(enabled).count());
+        bool haveEnabled(0 != families.intersect(enabled).count());
 
-        families=itsFamilies;
+        families = itsFamilies;
 
-        bool haveDisabled(0!=families.intersect(disabled).count());
+        bool haveDisabled(0 != families.intersect(disabled).count());
 
-        if(haveEnabled && haveDisabled)
-            itsStatus=CFamilyItem::PARTIAL;
-        else if(haveEnabled && !haveDisabled)
-            itsStatus=CFamilyItem::ENABLED;
+        if (haveEnabled && haveDisabled)
+            itsStatus = CFamilyItem::PARTIAL;
+        else if (haveEnabled && !haveDisabled)
+            itsStatus = CFamilyItem::ENABLED;
         else
-            itsStatus=CFamilyItem::DISABLED;
+            itsStatus = CFamilyItem::DISABLED;
     }
 }
 
 bool CGroupListItem::load(QDomElement &elem)
 {
-    if(elem.hasAttribute(NAME_ATTR))
-    {
-        itsName=elem.attribute(NAME_ATTR);
+    if (elem.hasAttribute(NAME_ATTR)) {
+        itsName = elem.attribute(NAME_ATTR);
         addFamilies(elem);
         return true;
     }
@@ -159,58 +151,52 @@ bool CGroupListItem::addFamilies(QDomElement &elem)
 {
     int b4(itsFamilies.count());
 
-    for(QDomNode n=elem.firstChild(); !n.isNull(); n=n.nextSibling())
-    {
-        QDomElement ent=n.toElement();
+    for (QDomNode n = elem.firstChild(); !n.isNull(); n = n.nextSibling()) {
+        QDomElement ent = n.toElement();
 
-        if(FAMILY_TAG==ent.tagName())
+        if (FAMILY_TAG == ent.tagName())
             itsFamilies.insert(ent.text());
     }
-    return b4!=itsFamilies.count();
+    return b4 != itsFamilies.count();
 }
 
 void CGroupListItem::save(QTextStream &str)
 {
     str << " <" GROUP_TAG " " NAME_ATTR "=\"" << Misc::encodeText(itsName, str) << "\">" << Qt::endl;
-    if(!itsFamilies.isEmpty())
-    {
-        QSet<QString>::ConstIterator it(itsFamilies.begin()),
-                                     end(itsFamilies.end());
+    if (!itsFamilies.isEmpty()) {
+        QSet<QString>::ConstIterator it(itsFamilies.begin()), end(itsFamilies.end());
 
-        for(; it!=end; ++it)
+        for (; it != end; ++it)
             str << "  <" FAMILY_TAG ">" << Misc::encodeText(*it, str) << "</" FAMILY_TAG ">" << Qt::endl;
     }
     str << " </" GROUP_TAG ">" << Qt::endl;
 }
 
 CGroupList::CGroupList(QWidget *parent)
-          : QAbstractItemModel(parent),
-            itsTimeStamp(0),
-            itsModified(false),
-            itsParent(parent),
-            itsSortOrder(Qt::AscendingOrder)
+    : QAbstractItemModel(parent)
+    , itsTimeStamp(0)
+    , itsModified(false)
+    , itsParent(parent)
+    , itsSortOrder(Qt::AscendingOrder)
 {
-    itsSpecialGroups[CGroupListItem::ALL]=new CGroupListItem(CGroupListItem::ALL, this);
+    itsSpecialGroups[CGroupListItem::ALL] = new CGroupListItem(CGroupListItem::ALL, this);
     itsGroups.append(itsSpecialGroups[CGroupListItem::ALL]);
-    if(Misc::root())
-        itsSpecialGroups[CGroupListItem::PERSONAL]=
-        itsSpecialGroups[CGroupListItem::SYSTEM]=NULL;
-    else
-    {
-        itsSpecialGroups[CGroupListItem::PERSONAL]=new CGroupListItem(CGroupListItem::PERSONAL, this);
+    if (Misc::root())
+        itsSpecialGroups[CGroupListItem::PERSONAL] = itsSpecialGroups[CGroupListItem::SYSTEM] = NULL;
+    else {
+        itsSpecialGroups[CGroupListItem::PERSONAL] = new CGroupListItem(CGroupListItem::PERSONAL, this);
         itsGroups.append(itsSpecialGroups[CGroupListItem::PERSONAL]);
-        itsSpecialGroups[CGroupListItem::SYSTEM]=new CGroupListItem(CGroupListItem::SYSTEM, this);
+        itsSpecialGroups[CGroupListItem::SYSTEM] = new CGroupListItem(CGroupListItem::SYSTEM, this);
         itsGroups.append(itsSpecialGroups[CGroupListItem::SYSTEM]);
     }
-    itsSpecialGroups[CGroupListItem::UNCLASSIFIED]=
-                new CGroupListItem(CGroupListItem::UNCLASSIFIED, this);
+    itsSpecialGroups[CGroupListItem::UNCLASSIFIED] = new CGroupListItem(CGroupListItem::UNCLASSIFIED, this);
     // Locate groups.xml file - normall will be ~/.config/fontgroups.xml
     QString path(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + '/');
 
-    if(!Misc::dExists(path))
+    if (!Misc::dExists(path))
         Misc::createDir(path);
 
-    itsFileName=path+'/'+KFI_GROUPS_FILE;
+    itsFileName = path + '/' + KFI_GROUPS_FILE;
 
     rescan();
 }
@@ -229,30 +215,26 @@ int CGroupList::columnCount(const QModelIndex &) const
 
 void CGroupList::update(const QModelIndex &unHighlight, const QModelIndex &highlight)
 {
-    if(unHighlight.isValid())
-    {
-        CGroupListItem *grp=static_cast<CGroupListItem *>(unHighlight.internalPointer());
-        if(grp)
+    if (unHighlight.isValid()) {
+        CGroupListItem *grp = static_cast<CGroupListItem *>(unHighlight.internalPointer());
+        if (grp)
             grp->setHighlighted(false);
         emit dataChanged(unHighlight, unHighlight);
     }
-    if(highlight.isValid())
-    {
-        CGroupListItem *grp=static_cast<CGroupListItem *>(highlight.internalPointer());
-        if(grp)
+    if (highlight.isValid()) {
+        CGroupListItem *grp = static_cast<CGroupListItem *>(highlight.internalPointer());
+        if (grp)
             grp->setHighlighted(true);
         emit dataChanged(highlight, highlight);
     }
 }
 
-void CGroupList::updateStatus(QSet<QString> &enabled, QSet<QString> &disabled,
-                              QSet<QString> &partial)
+void CGroupList::updateStatus(QSet<QString> &enabled, QSet<QString> &disabled, QSet<QString> &partial)
 {
-    QList<CGroupListItem *>::Iterator it(itsGroups.begin()),
-                                      end(itsGroups.end());
+    QList<CGroupListItem *>::Iterator it(itsGroups.begin()), end(itsGroups.end());
 
-    for(; it!=end; ++it)
-        if((*it)->isCustom())
+    for (; it != end; ++it)
+        if ((*it)->isCustom())
             (*it)->updateStatus(enabled, disabled, partial);
 
     emit layoutChanged();
@@ -260,7 +242,7 @@ void CGroupList::updateStatus(QSet<QString> &enabled, QSet<QString> &disabled,
 
 inline QColor midColour(const QColor &a, const QColor &b)
 {
-    return QColor((a.red()+b.red())>>1, (a.green()+b.green())>>1, (a.blue()+b.blue())>>1);
+    return QColor((a.red() + b.red()) >> 1, (a.green() + b.green()) >> 1, (a.blue() + b.blue()) >> 1);
 }
 
 QVariant CGroupList::data(const QModelIndex &index, int role) const
@@ -268,92 +250,81 @@ QVariant CGroupList::data(const QModelIndex &index, int role) const
     if (!index.isValid())
         return QVariant();
 
-    CGroupListItem *grp=static_cast<CGroupListItem *>(index.internalPointer());
+    CGroupListItem *grp = static_cast<CGroupListItem *>(index.internalPointer());
 
-    if(grp)
-        switch(index.column())
-        {
-            case COL_GROUP_NAME:
-                switch(role)
-                {
-                    case Qt::FontRole:
-                        if(CGroupListItem::SYSTEM==grp->type())
-                        {
-                            QFont font;
-                            font.setItalic(true);
-                            return font;
-                        }
-                        break;
-                    case Qt::SizeHintRole:
-                    {
-                        const int s = KIconLoader::global()->currentSize(KIconLoader::Small);
-                        return QSize(s, s + 4);
-                    }
-                    case Qt::EditRole:
-                    case Qt::DisplayRole:
-                        return grp->name();
-                    case Qt::DecorationRole:
-                        if(grp->highlighted())
-                            switch(grp->type())
-                            {
-                                case CGroupListItem::ALL:      // Removing from a group
-                                    return QIcon::fromTheme("list-remove");
-                                case CGroupListItem::PERSONAL: // Copying/moving
-                                case CGroupListItem::SYSTEM:   // Copying/moving
-                                    return QIcon::fromTheme(Qt::LeftToRight==QApplication::layoutDirection()
-                                                        ? "go-next" : "go-previous");
-                                case CGroupListItem::CUSTOM:   // Adding to a group
-                                    return QIcon::fromTheme("list-add");
-                                default:
-                                    break;
-                            }
-                        else
-                            switch(grp->type())
-                            {
-                                case CGroupListItem::ALL:
-                                    return QIcon::fromTheme("font");
-                                case CGroupListItem::PERSONAL:
-                                    return QIcon::fromTheme("user-identity");
-                                case CGroupListItem::SYSTEM:
-                                    return QIcon::fromTheme("computer");
-                                case CGroupListItem::UNCLASSIFIED:
-                                    return QIcon::fromTheme("fontstatus");
-                                case CGroupListItem::CUSTOM:
-                                    if(0==grp->families().count())
-                                        return QIcon::fromTheme("image-missing");
-                                    switch(grp->status())
-                                    {
-                                        case CFamilyItem::PARTIAL:
-                                            return QIcon::fromTheme("dialog-ok");
-                                        case CFamilyItem::ENABLED:
-                                            return QIcon::fromTheme("dialog-ok");
-                                        case CFamilyItem::DISABLED:
-                                            return QIcon::fromTheme("dialog-cancel");
-                                    }
-                                    break;
-                            }
-                    default:
-                        break;
+    if (grp)
+        switch (index.column()) {
+        case COL_GROUP_NAME:
+            switch (role) {
+            case Qt::FontRole:
+                if (CGroupListItem::SYSTEM == grp->type()) {
+                    QFont font;
+                    font.setItalic(true);
+                    return font;
                 }
                 break;
+            case Qt::SizeHintRole: {
+                const int s = KIconLoader::global()->currentSize(KIconLoader::Small);
+                return QSize(s, s + 4);
+            }
+            case Qt::EditRole:
+            case Qt::DisplayRole:
+                return grp->name();
+            case Qt::DecorationRole:
+                if (grp->highlighted())
+                    switch (grp->type()) {
+                    case CGroupListItem::ALL: // Removing from a group
+                        return QIcon::fromTheme("list-remove");
+                    case CGroupListItem::PERSONAL: // Copying/moving
+                    case CGroupListItem::SYSTEM: // Copying/moving
+                        return QIcon::fromTheme(Qt::LeftToRight == QApplication::layoutDirection() ? "go-next" : "go-previous");
+                    case CGroupListItem::CUSTOM: // Adding to a group
+                        return QIcon::fromTheme("list-add");
+                    default:
+                        break;
+                    }
+                else
+                    switch (grp->type()) {
+                    case CGroupListItem::ALL:
+                        return QIcon::fromTheme("font");
+                    case CGroupListItem::PERSONAL:
+                        return QIcon::fromTheme("user-identity");
+                    case CGroupListItem::SYSTEM:
+                        return QIcon::fromTheme("computer");
+                    case CGroupListItem::UNCLASSIFIED:
+                        return QIcon::fromTheme("fontstatus");
+                    case CGroupListItem::CUSTOM:
+                        if (0 == grp->families().count())
+                            return QIcon::fromTheme("image-missing");
+                        switch (grp->status()) {
+                        case CFamilyItem::PARTIAL:
+                            return QIcon::fromTheme("dialog-ok");
+                        case CFamilyItem::ENABLED:
+                            return QIcon::fromTheme("dialog-ok");
+                        case CFamilyItem::DISABLED:
+                            return QIcon::fromTheme("dialog-cancel");
+                        }
+                        break;
+                    }
+            default:
+                break;
+            }
+            break;
         }
     return QVariant();
 }
 
 bool CGroupList::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    if(Qt::EditRole==role && index.isValid())
-    {
+    if (Qt::EditRole == role && index.isValid()) {
         QString name(value.toString().trimmed());
 
-        if(!name.isEmpty())
-        {
-            CGroupListItem *grp=static_cast<CGroupListItem *>(index.internalPointer());
+        if (!name.isEmpty()) {
+            CGroupListItem *grp = static_cast<CGroupListItem *>(index.internalPointer());
 
-            if(grp && grp->isCustom() && grp->name()!=name && !exists(name, false))
-            {
+            if (grp && grp->isCustom() && grp->name() != name && !exists(name, false)) {
                 grp->setName(name);
-                itsModified=true;
+                itsModified = true;
                 save();
                 sort(0, itsSortOrder);
                 return true;
@@ -368,25 +339,24 @@ Qt::ItemFlags CGroupList::flags(const QModelIndex &index) const
     if (!index.isValid())
         return Qt::ItemIsEnabled;
 
-    CGroupListItem *grp=static_cast<CGroupListItem *>(index.internalPointer());
+    CGroupListItem *grp = static_cast<CGroupListItem *>(index.internalPointer());
 
-    return Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsDropEnabled |
-           (grp && grp->type()==CGroupListItem::CUSTOM ? Qt::ItemIsEditable : Qt::NoItemFlags);
+    return Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsDropEnabled
+        | (grp && grp->type() == CGroupListItem::CUSTOM ? Qt::ItemIsEditable : Qt::NoItemFlags);
 }
 
 QVariant CGroupList::headerData(int section, Qt::Orientation orientation, int role) const
 {
-    if (Qt::Horizontal==orientation && COL_GROUP_NAME==section)
-        switch(role)
-        {
-            case Qt::DisplayRole:
-                return i18n("Group");
-            case Qt::TextAlignmentRole:
-                return QVariant(Qt::AlignLeft | Qt::AlignVCenter);
-            case Qt::WhatsThisRole:
-                return whatsThis();
-            default:
-                break;
+    if (Qt::Horizontal == orientation && COL_GROUP_NAME == section)
+        switch (role) {
+        case Qt::DisplayRole:
+            return i18n("Group");
+        case Qt::TextAlignmentRole:
+            return QVariant(Qt::AlignLeft | Qt::AlignVCenter);
+        case Qt::WhatsThisRole:
+            return whatsThis();
+        default:
+            break;
         }
 
     return QVariant();
@@ -394,11 +364,10 @@ QVariant CGroupList::headerData(int section, Qt::Orientation orientation, int ro
 
 QModelIndex CGroupList::index(int row, int column, const QModelIndex &parent) const
 {
-    if(!parent.isValid())
-    {
-        CGroupListItem *grp=itsGroups.value(row);
+    if (!parent.isValid()) {
+        CGroupListItem *grp = itsGroups.value(row);
 
-        if(grp)
+        if (grp)
             return createIndex(row, column, grp);
     }
 
@@ -424,48 +393,43 @@ void CGroupList::rescan()
 
 void CGroupList::load()
 {
-    time_t ts=Misc::getTimeStamp(itsFileName);
+    time_t ts = Misc::getTimeStamp(itsFileName);
 
-    if(!ts || ts!=itsTimeStamp)
-    {
+    if (!ts || ts != itsTimeStamp) {
         clear();
-        itsTimeStamp=ts;
-        if(load(itsFileName))
-            itsModified=false;
+        itsTimeStamp = ts;
+        if (load(itsFileName))
+            itsModified = false;
     }
 }
 
 bool CGroupList::load(const QString &file)
 {
     QFile f(file);
-    bool  rv(false);
+    bool rv(false);
 
-    if(f.open(QIODevice::ReadOnly))
-    {
+    if (f.open(QIODevice::ReadOnly)) {
         QDomDocument doc;
 
-        if(doc.setContent(&f))
-            for(QDomNode n=doc.documentElement().firstChild(); !n.isNull(); n=n.nextSibling())
-            {
-                QDomElement e=n.toElement();
+        if (doc.setContent(&f))
+            for (QDomNode n = doc.documentElement().firstChild(); !n.isNull(); n = n.nextSibling()) {
+                QDomElement e = n.toElement();
 
-                if(GROUP_TAG==e.tagName() && e.hasAttribute(NAME_ATTR))
-                {
+                if (GROUP_TAG == e.tagName() && e.hasAttribute(NAME_ATTR)) {
                     QString name(e.attribute(NAME_ATTR));
 
-                    CGroupListItem *item=find(name);
+                    CGroupListItem *item = find(name);
 
-                    if(!item)
-                    {
-                        item=new CGroupListItem(name);
-                        if(!itsGroups.contains(itsSpecialGroups[CGroupListItem::UNCLASSIFIED]))
+                    if (!item) {
+                        item = new CGroupListItem(name);
+                        if (!itsGroups.contains(itsSpecialGroups[CGroupListItem::UNCLASSIFIED]))
                             itsGroups.append(itsSpecialGroups[CGroupListItem::UNCLASSIFIED]);
                         itsGroups.append(item);
-                        rv=true;
+                        rv = true;
                     }
 
-                    if(item->addFamilies(e))
-                        rv=true;
+                    if (item->addFamilies(e))
+                        rv = true;
                 }
             }
     }
@@ -474,9 +438,8 @@ bool CGroupList::load(const QString &file)
 
 bool CGroupList::save()
 {
-    if(itsModified && save(itsFileName, nullptr))
-    {
-        itsTimeStamp=Misc::getTimeStamp(itsFileName);
+    if (itsModified && save(itsFileName, nullptr)) {
+        itsTimeStamp = Misc::getTimeStamp(itsFileName);
         return true;
     }
     return false;
@@ -486,25 +449,22 @@ bool CGroupList::save(const QString &fileName, CGroupListItem *grp)
 {
     QSaveFile file(fileName);
 
-    if (file.open(QIODevice::WriteOnly))
-    {
+    if (file.open(QIODevice::WriteOnly)) {
         QTextStream str(&file);
 
         str << "<" GROUPS_DOC ">" << Qt::endl;
 
-        if(grp)
+        if (grp)
             grp->save(str);
-        else
-        {
-            QList<CGroupListItem *>::Iterator it(itsGroups.begin()),
-                                              end(itsGroups.end());
+        else {
+            QList<CGroupListItem *>::Iterator it(itsGroups.begin()), end(itsGroups.end());
 
-            for(; it!=end; ++it)
-                if((*it)->isCustom())
+            for (; it != end; ++it)
+                if ((*it)->isCustom())
                     (*it)->save(str);
         }
         str << "</" GROUPS_DOC ">" << Qt::endl;
-        itsModified=false;
+        itsModified = false;
         return file.commit();
     }
 
@@ -513,9 +473,8 @@ bool CGroupList::save(const QString &fileName, CGroupListItem *grp)
 
 void CGroupList::merge(const QString &file)
 {
-    if(load(file))
-    {
-        itsModified=true;
+    if (load(file)) {
+        itsModified = true;
         sort(0, itsSortOrder);
     }
 }
@@ -524,18 +483,16 @@ void CGroupList::clear()
 {
     beginResetModel();
     itsGroups.removeFirst(); // Remove all
-    if(itsSpecialGroups[CGroupListItem::SYSTEM])
-    {
+    if (itsSpecialGroups[CGroupListItem::SYSTEM]) {
         itsGroups.removeFirst(); // Remove personal
         itsGroups.removeFirst(); // Remove system
     }
-    if(itsGroups.contains(itsSpecialGroups[CGroupListItem::UNCLASSIFIED]))
+    if (itsGroups.contains(itsSpecialGroups[CGroupListItem::UNCLASSIFIED]))
         itsGroups.removeFirst(); // Remove unclassif...
     qDeleteAll(itsGroups);
     itsGroups.clear();
     itsGroups.append(itsSpecialGroups[CGroupListItem::ALL]);
-    if(itsSpecialGroups[CGroupListItem::SYSTEM])
-    {
+    if (itsSpecialGroups[CGroupListItem::SYSTEM]) {
         itsGroups.append(itsSpecialGroups[CGroupListItem::PERSONAL]);
         itsGroups.append(itsSpecialGroups[CGroupListItem::SYSTEM]);
     }
@@ -550,12 +507,11 @@ QModelIndex CGroupList::index(CGroupListItem::EType t)
 
 void CGroupList::createGroup(const QString &name)
 {
-    if(!exists(name))
-    {
-        if(!itsGroups.contains(itsSpecialGroups[CGroupListItem::UNCLASSIFIED]))
+    if (!exists(name)) {
+        if (!itsGroups.contains(itsSpecialGroups[CGroupListItem::UNCLASSIFIED]))
             itsGroups.append(itsSpecialGroups[CGroupListItem::UNCLASSIFIED]);
         itsGroups.append(new CGroupListItem(name));
-        itsModified=true;
+        itsModified = true;
         save();
         sort(0, itsSortOrder);
     }
@@ -563,26 +519,26 @@ void CGroupList::createGroup(const QString &name)
 
 bool CGroupList::removeGroup(const QModelIndex &idx)
 {
-    if(idx.isValid())
-    {
-        CGroupListItem *grp=static_cast<CGroupListItem *>(idx.internalPointer());
+    if (idx.isValid()) {
+        CGroupListItem *grp = static_cast<CGroupListItem *>(idx.internalPointer());
 
-        if(grp && grp->isCustom() &&
-           KMessageBox::Continue==KMessageBox::warningContinueCancel(itsParent,
-                                          i18n("<p>Do you really want to remove \'<b>%1</b>\'?</p>"
-                                               "<p><i>This will only remove the group, and not "
-                                               "the actual fonts.</i></p>", grp->name()),
-                                          i18n("Remove Group"), KGuiItem(i18n("Remove"), "list-remove",
-                                          i18n("Remove group"))))
-        {
-            itsModified=true;
+        if (grp && grp->isCustom()
+            && KMessageBox::Continue
+                == KMessageBox::warningContinueCancel(itsParent,
+                                                      i18n("<p>Do you really want to remove \'<b>%1</b>\'?</p>"
+                                                           "<p><i>This will only remove the group, and not "
+                                                           "the actual fonts.</i></p>",
+                                                           grp->name()),
+                                                      i18n("Remove Group"),
+                                                      KGuiItem(i18n("Remove"), "list-remove", i18n("Remove group")))) {
+            itsModified = true;
             itsGroups.removeAll(grp);
 
-            int stdGroups=1 +// All
-                          (itsSpecialGroups[CGroupListItem::SYSTEM] ? 2 : 0)+ // Personal, System
-                          1; // Unclassified
+            int stdGroups = 1 + // All
+                (itsSpecialGroups[CGroupListItem::SYSTEM] ? 2 : 0) + // Personal, System
+                1; // Unclassified
 
-            if(stdGroups==itsGroups.count() && itsGroups.contains(itsSpecialGroups[CGroupListItem::UNCLASSIFIED]))
+            if (stdGroups == itsGroups.count() && itsGroups.contains(itsSpecialGroups[CGroupListItem::UNCLASSIFIED]))
                 itsGroups.removeAll(itsSpecialGroups[CGroupListItem::UNCLASSIFIED]);
             delete grp;
             save();
@@ -596,21 +552,18 @@ bool CGroupList::removeGroup(const QModelIndex &idx)
 
 void CGroupList::removeFromGroup(const QModelIndex &group, const QSet<QString> &families)
 {
-    if(group.isValid())
-    {
-        CGroupListItem *grp=static_cast<CGroupListItem *>(group.internalPointer());
+    if (group.isValid()) {
+        CGroupListItem *grp = static_cast<CGroupListItem *>(group.internalPointer());
 
-        if(grp && grp->isCustom())
-        {
-            QSet<QString>::ConstIterator it(families.begin()),
-                                         end(families.end());
-            bool                         update(false);
+        if (grp && grp->isCustom()) {
+            QSet<QString>::ConstIterator it(families.begin()), end(families.end());
+            bool update(false);
 
-            for(; it!=end; ++it)
-                if(removeFromGroup(grp, *it))
-                    update=true;
+            for (; it != end; ++it)
+                if (removeFromGroup(grp, *it))
+                    update = true;
 
-            if(update)
+            if (update)
                 emit refresh();
         }
     }
@@ -618,48 +571,44 @@ void CGroupList::removeFromGroup(const QModelIndex &group, const QSet<QString> &
 
 QString CGroupList::whatsThis() const
 {
-    return i18n("<h3>Font Groups</h3><p>This list displays the font groups available on your system. "
-                                       "There are 2 main types of font groups:"
-               "<ul><li><b>Standard</b> are special groups used by the font manager.<ul>%1</ul></li>"
-                   "<li><b>Custom</b> are groups created by you. To add a font family to one of "
-                                     "these groups simply drag it from the list of fonts, and drop "
-                                     "onto the desired group. To remove a family from the group, drag "
-                                     "the font onto the \"All Fonts\" group.</li>"
-                   "</ul></p>",
-                Misc::root()
-                    ? i18n("<li><i>All Fonts</i> contains all the fonts installed on your system.</li>"
+    return i18n(
+        "<h3>Font Groups</h3><p>This list displays the font groups available on your system. "
+        "There are 2 main types of font groups:"
+        "<ul><li><b>Standard</b> are special groups used by the font manager.<ul>%1</ul></li>"
+        "<li><b>Custom</b> are groups created by you. To add a font family to one of "
+        "these groups simply drag it from the list of fonts, and drop "
+        "onto the desired group. To remove a family from the group, drag "
+        "the font onto the \"All Fonts\" group.</li>"
+        "</ul></p>",
+        Misc::root() ? i18n("<li><i>All Fonts</i> contains all the fonts installed on your system.</li>"
                             "<li><i>Unclassified</i> contains all fonts that have not yet been placed "
-                                                    "within a \"Custom\" group.</li>")
-                    : i18n("<li><i>All Fonts</i> contains all the fonts installed on your system - "
-                                                "both  \"System\" and \"Personal\".</li>"
+                            "within a \"Custom\" group.</li>")
+                     : i18n("<li><i>All Fonts</i> contains all the fonts installed on your system - "
+                            "both  \"System\" and \"Personal\".</li>"
                             "<li><i>System</i> contains all fonts that are installed system-wide (i.e. "
-                                            "available to all users).</li>"
+                            "available to all users).</li>"
                             "<li><i>Personal</i> contains your personal fonts.</li>"
                             "<li><i>Unclassified</i> contains all fonts that have not yet been placed "
-                                                    "within a \"Custom\" group.</li>"));
+                            "within a \"Custom\" group.</li>"));
 }
 
 void CGroupList::addToGroup(const QModelIndex &group, const QSet<QString> &families)
 {
-    if(group.isValid())
-    {
-        CGroupListItem *grp=static_cast<CGroupListItem *>(group.internalPointer());
+    if (group.isValid()) {
+        CGroupListItem *grp = static_cast<CGroupListItem *>(group.internalPointer());
 
-        if(grp && grp->isCustom())
-        {
-            QSet<QString>::ConstIterator it(families.begin()),
-                                         end(families.end());
-            bool                         update(false);
+        if (grp && grp->isCustom()) {
+            QSet<QString>::ConstIterator it(families.begin()), end(families.end());
+            bool update(false);
 
-            for(; it!=end; ++it)
-                if(!grp->hasFamily(*it))
-                {
+            for (; it != end; ++it)
+                if (!grp->hasFamily(*it)) {
                     grp->addFamily(*it);
-                    update=true;
-                    itsModified=true;
+                    update = true;
+                    itsModified = true;
                 }
 
-            if(update)
+            if (update)
                 emit refresh();
         }
     }
@@ -667,19 +616,17 @@ void CGroupList::addToGroup(const QModelIndex &group, const QSet<QString> &famil
 
 void CGroupList::removeFamily(const QString &family)
 {
-    QList<CGroupListItem *>::ConstIterator it(itsGroups.begin()),
-                                           end(itsGroups.end());
+    QList<CGroupListItem *>::ConstIterator it(itsGroups.begin()), end(itsGroups.end());
 
-    for(; it!=end; ++it)
+    for (; it != end; ++it)
         removeFromGroup(*it, family);
 }
 
 bool CGroupList::removeFromGroup(CGroupListItem *grp, const QString &family)
 {
-    if(grp && grp->isCustom() && grp->hasFamily(family))
-    {
+    if (grp && grp->isCustom() && grp->hasFamily(family)) {
         grp->removeFamily(family);
-        itsModified=true;
+        itsModified = true;
         return true;
     }
 
@@ -688,22 +635,19 @@ bool CGroupList::removeFromGroup(CGroupListItem *grp, const QString &family)
 
 static bool groupNameLessThan(const CGroupListItem *f1, const CGroupListItem *f2)
 {
-    return f1 && f2 && (f1->type()<f2->type() ||
-                       (f1->type()==f2->type() && QString::localeAwareCompare(f1->name(), f2->name())<0));
+    return f1 && f2 && (f1->type() < f2->type() || (f1->type() == f2->type() && QString::localeAwareCompare(f1->name(), f2->name()) < 0));
 }
 
 static bool groupNameGreaterThan(const CGroupListItem *f1, const CGroupListItem *f2)
 {
-    return f1 && f2 && (f1->type()<f2->type() ||
-                       (f1->type()==f2->type() && QString::localeAwareCompare(f1->name(), f2->name())>0));
+    return f1 && f2 && (f1->type() < f2->type() || (f1->type() == f2->type() && QString::localeAwareCompare(f1->name(), f2->name()) > 0));
 }
 
 void CGroupList::sort(int, Qt::SortOrder order)
 {
-    itsSortOrder=order;
+    itsSortOrder = order;
 
-    std::sort(itsGroups.begin(), itsGroups.end(),
-          Qt::AscendingOrder==order ? groupNameLessThan : groupNameGreaterThan);
+    std::sort(itsGroups.begin(), itsGroups.end(), Qt::AscendingOrder == order ? groupNameLessThan : groupNameGreaterThan);
 
     emit layoutChanged();
 }
@@ -720,13 +664,12 @@ QStringList CGroupList::mimeTypes() const
     return types;
 }
 
-CGroupListItem * CGroupList::find(const QString &name)
+CGroupListItem *CGroupList::find(const QString &name)
 {
-    QList<CGroupListItem *>::ConstIterator it(itsGroups.begin()),
-                                           end(itsGroups.end());
+    QList<CGroupListItem *>::ConstIterator it(itsGroups.begin()), end(itsGroups.end());
 
-    for(; it!=end; ++it)
-        if((*it)->name()==name)
+    for (; it != end; ++it)
+        if ((*it)->name() == name)
             return (*it);
 
     return nullptr;
@@ -734,11 +677,12 @@ CGroupListItem * CGroupList::find(const QString &name)
 
 bool CGroupList::exists(const QString &name, bool showDialog)
 {
-    if(nullptr!=find(name))
-    {
-        if(showDialog)
-            KMessageBox::error(itsParent, i18n("<qt>A group named <b>\'%1\'</b> already "
-                                               "exists.</qt>", name));
+    if (nullptr != find(name)) {
+        if (showDialog)
+            KMessageBox::error(itsParent,
+                               i18n("<qt>A group named <b>\'%1\'</b> already "
+                                    "exists.</qt>",
+                                    name));
         return true;
     }
 
@@ -747,23 +691,26 @@ bool CGroupList::exists(const QString &name, bool showDialog)
 
 class CGroupListViewDelegate : public QStyledItemDelegate
 {
-    public:
-
-    CGroupListViewDelegate(QObject *p) : QStyledItemDelegate(p) { }
-    ~CGroupListViewDelegate() override { }
+public:
+    CGroupListViewDelegate(QObject *p)
+        : QStyledItemDelegate(p)
+    {
+    }
+    ~CGroupListViewDelegate() override
+    {
+    }
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &idx) const override
     {
-        CGroupListItem       *grp=static_cast<CGroupListItem *>(idx.internalPointer());
+        CGroupListItem *grp = static_cast<CGroupListItem *>(idx.internalPointer());
         QStyleOptionViewItem opt(option);
 
-        if(grp && grp->isUnclassified())
+        if (grp && grp->isUnclassified())
             opt.rect.adjust(0, 0, 0, -1);
 
         QStyledItemDelegate::paint(painter, opt, idx);
 
-        if(grp && grp->isUnclassified())
-        {
+        if (grp && grp->isUnclassified()) {
             opt.rect.adjust(2, 0, -2, 1);
             painter->setPen(QApplication::palette().color(QPalette::Text));
             painter->drawLine(opt.rect.bottomLeft(), opt.rect.bottomRight());
@@ -774,28 +721,23 @@ class CGroupListViewDelegate : public QStyledItemDelegate
     {
         QSize sz(QStyledItemDelegate::sizeHint(option, idx));
 
-        CGroupListItem *grp=static_cast<CGroupListItem *>(idx.internalPointer());
+        CGroupListItem *grp = static_cast<CGroupListItem *>(idx.internalPointer());
 
-        if(grp && grp->isUnclassified())
-            sz.setHeight(sz.height()+1);
+        if (grp && grp->isUnclassified())
+            sz.setHeight(sz.height() + 1);
         return sz;
     }
 
     static bool isCloseEvent(QKeyEvent *event)
     {
-        return Qt::Key_Tab==event->key() || Qt::Key_Backtab==event->key() ||
-               Qt::Key_Enter==event->key() || Qt::Key_Return==event->key();
+        return Qt::Key_Tab == event->key() || Qt::Key_Backtab == event->key() || Qt::Key_Enter == event->key() || Qt::Key_Return == event->key();
     }
 
     bool eventFilter(QObject *editor, QEvent *event) override
     {
-        if(editor && event && QEvent::KeyPress==event->type() && isCloseEvent(static_cast<QKeyEvent *>(event)) &&
-           qobject_cast<QLineEdit *>(editor))
-        {
-            QString text=static_cast<QLineEdit *>(editor)->text().trimmed();
-            if(!text.isEmpty() &&
-               !static_cast<CGroupList *>(static_cast<CGroupListView *>(parent())->model())->exists(text, false))
-            {
+        if (editor && event && QEvent::KeyPress == event->type() && isCloseEvent(static_cast<QKeyEvent *>(event)) && qobject_cast<QLineEdit *>(editor)) {
+            QString text = static_cast<QLineEdit *>(editor)->text().trimmed();
+            if (!text.isEmpty() && !static_cast<CGroupList *>(static_cast<CGroupListView *>(parent())->model())->exists(text, false)) {
                 emit commitData(static_cast<QWidget *>(editor));
                 emit closeEditor(static_cast<QWidget *>(editor));
                 return true;
@@ -806,7 +748,7 @@ class CGroupListViewDelegate : public QStyledItemDelegate
 };
 
 CGroupListView::CGroupListView(QWidget *parent, CGroupList *model)
-              : QTreeView(parent)
+    : QTreeView(parent)
 {
     setModel(model);
     setItemDelegate(new CGroupListViewDelegate(this));
@@ -821,46 +763,35 @@ CGroupListView::CGroupListView(QWidget *parent, CGroupList *model)
     setDragEnabled(false);
     header()->setSortIndicatorShown(true);
     setRootIsDecorated(false);
-    itsMenu=new QMenu(this);
+    itsMenu = new QMenu(this);
 
-    itsDeleteAct=itsMenu->addAction(QIcon::fromTheme("list-remove"), i18n("Remove"),
-                                    this, &CGroupListView::del);
+    itsDeleteAct = itsMenu->addAction(QIcon::fromTheme("list-remove"), i18n("Remove"), this, &CGroupListView::del);
     itsMenu->addSeparator();
-    itsEnableAct=itsMenu->addAction(QIcon::fromTheme("font-enable"), i18n("Enable"),
-                                    this, &CGroupListView::enable);
-    itsDisableAct=itsMenu->addAction(QIcon::fromTheme("font-disable"), i18n("Disable"),
-                                     this, &CGroupListView::disable);
+    itsEnableAct = itsMenu->addAction(QIcon::fromTheme("font-enable"), i18n("Enable"), this, &CGroupListView::enable);
+    itsDisableAct = itsMenu->addAction(QIcon::fromTheme("font-disable"), i18n("Disable"), this, &CGroupListView::disable);
     itsMenu->addSeparator();
-    itsRenameAct=itsMenu->addAction(QIcon::fromTheme("edit-rename"), i18n("Rename..."),
-                                    this, &CGroupListView::rename);
+    itsRenameAct = itsMenu->addAction(QIcon::fromTheme("edit-rename"), i18n("Rename..."), this, &CGroupListView::rename);
 
-    if(!Misc::app(KFI_PRINTER).isEmpty())
-    {
+    if (!Misc::app(KFI_PRINTER).isEmpty()) {
         itsMenu->addSeparator();
-        itsPrintAct=itsMenu->addAction(QIcon::fromTheme("document-print"), i18n("Print..."),
-                                       this, &CGroupListView::print);
-    }
-    else
-        itsPrintAct= nullptr;
+        itsPrintAct = itsMenu->addAction(QIcon::fromTheme("document-print"), i18n("Print..."), this, &CGroupListView::print);
+    } else
+        itsPrintAct = nullptr;
     itsMenu->addSeparator();
-    itsExportAct=itsMenu->addAction(QIcon::fromTheme("document-export"), i18n("Export..."),
-                                    this, &CGroupListView::zip);
+    itsExportAct = itsMenu->addAction(QIcon::fromTheme("document-export"), i18n("Export..."), this, &CGroupListView::zip);
 
     setWhatsThis(model->whatsThis());
     header()->setWhatsThis(whatsThis());
-    connect(this, &CGroupListView::addFamilies,
-            model, &CGroupList::addToGroup);
-    connect(this, SIGNAL(removeFamilies(QModelIndex,QSet<QString>)),
-            model, SLOT(removeFromGroup(QModelIndex,QSet<QString>)));
+    connect(this, &CGroupListView::addFamilies, model, &CGroupList::addToGroup);
+    connect(this, SIGNAL(removeFamilies(QModelIndex, QSet<QString>)), model, SLOT(removeFromGroup(QModelIndex, QSet<QString>)));
 }
 
 CGroupListItem::EType CGroupListView::getType()
 {
     QModelIndexList selectedItems(selectedIndexes());
 
-    if(!selectedItems.isEmpty() && selectedItems.last().isValid())
-    {
-        CGroupListItem *grp=static_cast<CGroupListItem *>(selectedItems.last().internalPointer());
+    if (!selectedItems.isEmpty() && selectedItems.last().isValid()) {
+        CGroupListItem *grp = static_cast<CGroupListItem *>(selectedItems.last().internalPointer());
 
         return grp->type();
     }
@@ -874,13 +805,12 @@ void CGroupListView::controlMenu(bool del, bool en, bool dis, bool p, bool exp)
     itsRenameAct->setEnabled(del);
     itsEnableAct->setEnabled(en);
     itsDisableAct->setEnabled(dis);
-    if(itsPrintAct)
+    if (itsPrintAct)
         itsPrintAct->setEnabled(p);
     itsExportAct->setEnabled(exp);
 }
 
-void CGroupListView::selectionChanged(const QItemSelection &selected,
-                                      const QItemSelection &deselected)
+void CGroupListView::selectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
 {
     QModelIndexList deselectedItems(deselected.indexes());
 
@@ -888,19 +818,17 @@ void CGroupListView::selectionChanged(const QItemSelection &selected,
 
     QModelIndexList selectedItems(selectedIndexes());
 
-    if(0==selectedItems.count() && 1==deselectedItems.count())
+    if (0 == selectedItems.count() && 1 == deselectedItems.count())
         selectionModel()->select(deselectedItems.last(), QItemSelectionModel::Select);
     else
-        emit itemSelected(selectedItems.count()
-                            ? selectedItems.last()
-                            : QModelIndex());
+        emit itemSelected(selectedItems.count() ? selectedItems.last() : QModelIndex());
 }
 
 void CGroupListView::rename()
 {
     QModelIndex index(currentIndex());
 
-    if(index.isValid())
+    if (index.isValid())
         edit(index);
 }
 
@@ -911,48 +839,44 @@ void CGroupListView::emitMoveFonts()
 
 void CGroupListView::contextMenuEvent(QContextMenuEvent *ev)
 {
-    if(indexAt(ev->pos()).isValid())
+    if (indexAt(ev->pos()).isValid())
         itsMenu->popup(ev->globalPos());
 }
 
 void CGroupListView::dragEnterEvent(QDragEnterEvent *event)
 {
-    if(event->mimeData()->hasFormat(KFI_FONT_DRAG_MIME))
+    if (event->mimeData()->hasFormat(KFI_FONT_DRAG_MIME))
         event->acceptProposedAction();
 }
 
 void CGroupListView::dragMoveEvent(QDragMoveEvent *event)
 {
-    if(event->mimeData()->hasFormat(KFI_FONT_DRAG_MIME))
-    {
+    if (event->mimeData()->hasFormat(KFI_FONT_DRAG_MIME)) {
         QModelIndex index(indexAt(event->pos()));
 
-        if(index.isValid())
-        {
-            if(COL_GROUP_NAME!=index.column())
-                index=((CGroupList *)model())->createIdx(index.row(), COL_GROUP_NAME, index.internalPointer());
+        if (index.isValid()) {
+            if (COL_GROUP_NAME != index.column())
+                index = ((CGroupList *)model())->createIdx(index.row(), COL_GROUP_NAME, index.internalPointer());
 
-            CGroupListItem        *dest=static_cast<CGroupListItem *>(index.internalPointer());
-            CGroupListItem::EType type=getType();
+            CGroupListItem *dest = static_cast<CGroupListItem *>(index.internalPointer());
+            CGroupListItem::EType type = getType();
 
-            if(dest)
-                if(!selectedIndexes().contains(index))
-                {
+            if (dest)
+                if (!selectedIndexes().contains(index)) {
                     bool ok(true);
 
-                    if(dest->isCustom())
+                    if (dest->isCustom())
                         emit info(i18n("Add to \"%1\".", dest->name()));
-                    else if(CGroupListItem::CUSTOM==type && dest->isAll())
+                    else if (CGroupListItem::CUSTOM == type && dest->isAll())
                         emit info(i18n("Remove from current group."));
-                    else if(!Misc::root() && dest->isPersonal() && CGroupListItem::SYSTEM==type)
+                    else if (!Misc::root() && dest->isPersonal() && CGroupListItem::SYSTEM == type)
                         emit info(i18n("Move to personal folder."));
-                    else if(!Misc::root() && dest->isSystem() && CGroupListItem::PERSONAL==type)
+                    else if (!Misc::root() && dest->isSystem() && CGroupListItem::PERSONAL == type)
                         emit info(i18n("Move to system folder."));
                     else
-                        ok=false;
+                        ok = false;
 
-                    if(ok)
-                    {
+                    if (ok) {
                         drawHighlighter(index);
                         event->acceptProposedAction();
                         return;
@@ -975,43 +899,36 @@ void CGroupListView::dropEvent(QDropEvent *event)
 {
     emit info(QString());
     drawHighlighter(QModelIndex());
-    if(event->mimeData()->hasFormat(KFI_FONT_DRAG_MIME))
-    {
+    if (event->mimeData()->hasFormat(KFI_FONT_DRAG_MIME)) {
         event->acceptProposedAction();
 
         QSet<QString> families;
-        QByteArray    encodedData(event->mimeData()->data(KFI_FONT_DRAG_MIME));
-        QDataStream   ds(&encodedData, QIODevice::ReadOnly);
-        QModelIndex   from(selectedIndexes().last()),
-                      to(indexAt(event->pos()));
+        QByteArray encodedData(event->mimeData()->data(KFI_FONT_DRAG_MIME));
+        QDataStream ds(&encodedData, QIODevice::ReadOnly);
+        QModelIndex from(selectedIndexes().last()), to(indexAt(event->pos()));
 
         ds >> families;
         // Are we moving/copying, removing a font from the current group?
-        if(to.isValid() && from.isValid())
-        {
-            if( ((static_cast<CGroupListItem *>(from.internalPointer()))->isSystem() &&
-                 (static_cast<CGroupListItem *>(to.internalPointer()))->isPersonal()) ||
-                ((static_cast<CGroupListItem *>(from.internalPointer()))->isPersonal() &&
-                 (static_cast<CGroupListItem *>(to.internalPointer()))->isSystem()))
+        if (to.isValid() && from.isValid()) {
+            if (((static_cast<CGroupListItem *>(from.internalPointer()))->isSystem() && (static_cast<CGroupListItem *>(to.internalPointer()))->isPersonal())
+                || ((static_cast<CGroupListItem *>(from.internalPointer()))->isPersonal() && (static_cast<CGroupListItem *>(to.internalPointer()))->isSystem()))
                 QTimer::singleShot(0, this, &CGroupListView::emitMoveFonts);
-            else if((static_cast<CGroupListItem *>(from.internalPointer()))->isCustom() &&
-                    !(static_cast<CGroupListItem *>(to.internalPointer()))->isCustom())
+            else if ((static_cast<CGroupListItem *>(from.internalPointer()))->isCustom() && !(static_cast<CGroupListItem *>(to.internalPointer()))->isCustom())
                 emit removeFamilies(from, families);
             else
                 emit addFamilies(to, families);
         }
 
-        if(isUnclassified())
+        if (isUnclassified())
             emit unclassifiedChanged();
     }
 }
 
 void CGroupListView::drawHighlighter(const QModelIndex &idx)
 {
-    if(itsCurrentDropItem!=idx)
-    {
+    if (itsCurrentDropItem != idx) {
         ((CGroupList *)model())->update(itsCurrentDropItem, idx);
-        itsCurrentDropItem=idx;
+        itsCurrentDropItem = idx;
     }
 }
 
@@ -1022,4 +939,3 @@ bool CGroupListView::viewportEvent(QEvent *event)
 }
 
 }
-

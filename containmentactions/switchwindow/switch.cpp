@@ -31,7 +31,8 @@
 using namespace TaskManager;
 
 ActivityInfo *SwitchWindow::s_activityInfo = nullptr;
-TasksModel *SwitchWindow::s_tasksModel = nullptr;int SwitchWindow::s_instanceCount = 0;
+TasksModel *SwitchWindow::s_tasksModel = nullptr;
+int SwitchWindow::s_instanceCount = 0;
 
 SwitchWindow::SwitchWindow(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args)
@@ -51,8 +52,9 @@ SwitchWindow::SwitchWindow(QObject *parent, const QVariantList &args)
 
         s_tasksModel->setActivity(s_activityInfo->currentActivity());
         s_tasksModel->setFilterByActivity(true);
-        connect(s_activityInfo, &ActivityInfo::currentActivityChanged,
-            this, []() { s_tasksModel->setActivity(s_activityInfo->currentActivity()); });
+        connect(s_activityInfo, &ActivityInfo::currentActivityChanged, this, []() {
+            s_tasksModel->setActivity(s_activityInfo->currentActivity());
+        });
     }
 }
 
@@ -81,15 +83,15 @@ QWidget *SwitchWindow::createConfigurationInterface(QWidget *parent)
     m_ui.setupUi(widget);
     widget->setWindowTitle(i18nc("plasma_containmentactions_switchwindow", "Configure Switch Window Plugin"));
     switch (m_mode) {
-        case AllFlat:
-            m_ui.flatButton->setChecked(true);
-            break;
-        case DesktopSubmenus:
-            m_ui.subButton->setChecked(true);
-            break;
-        case CurrentDesktop:
-            m_ui.curButton->setChecked(true);
-            break;
+    case AllFlat:
+        m_ui.flatButton->setChecked(true);
+        break;
+    case DesktopSubmenus:
+        m_ui.subButton->setChecked(true);
+        break;
+    case CurrentDesktop:
+        m_ui.curButton->setChecked(true);
+        break;
     }
     return widget;
 }

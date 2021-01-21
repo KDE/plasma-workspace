@@ -32,8 +32,8 @@
 class KJob;
 namespace KIO
 {
-    class Job;
-    class TransferJob;
+class Job;
+class TransferJob;
 }
 class QXmlStreamReader;
 
@@ -78,14 +78,13 @@ public:
     };
 
     // 5 day Forecast
-    QVector <WeatherData::ForecastInfo *> forecasts;
+    QVector<WeatherData::ForecastInfo *> forecasts;
 
     bool isForecastsDataPending = false;
 };
 
 Q_DECLARE_TYPEINFO(WeatherData::ForecastInfo, Q_MOVABLE_TYPE);
 Q_DECLARE_TYPEINFO(WeatherData, Q_MOVABLE_TYPE);
-
 
 class Q_DECL_EXPORT UKMETIon : public IonInterface, public Plasma::DataEngineConsumer
 {
@@ -96,11 +95,11 @@ public:
     ~UKMETIon() override;
 
 public: // IonInterface API
-    bool updateIonSource(const QString& source) override;
+    bool updateIonSource(const QString &source) override;
 
 public Q_SLOTS:
     // for solar data pushes from the time engine
-    void dataUpdated(const QString& sourceName, const Plasma::DataEngine::Data& data);
+    void dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data);
 
 protected: // IonInterface API
     void reset() override;
@@ -108,7 +107,7 @@ protected: // IonInterface API
 private Q_SLOTS:
     void setup_slotDataArrived(KIO::Job *, const QByteArray &);
     void setup_slotJobFinished(KJob *);
-    //void setup_slotRedirected(KIO::Job *, const KUrl &url);
+    // void setup_slotRedirected(KIO::Job *, const KUrl &url);
 
     void observation_slotDataArrived(KIO::Job *, const QByteArray &);
     void observation_slotJobFinished(KJob *);
@@ -117,39 +116,39 @@ private Q_SLOTS:
     void forecast_slotJobFinished(KJob *);
 
 private:
-    void updateWeather(const QString& source);
+    void updateWeather(const QString &source);
 
-    //bool night(const QString& source) const;
+    // bool night(const QString& source) const;
 
     /* UKMET Methods - Internal for Ion */
     QMap<QString, ConditionIcons> setupDayIconMappings() const;
     QMap<QString, ConditionIcons> setupNightIconMappings() const;
     QMap<QString, IonInterface::WindDirections> setupWindIconMappings() const;
 
-    QMap<QString, ConditionIcons> const& nightIcons() const;
-    QMap<QString, ConditionIcons> const& dayIcons() const;
-    QMap<QString, IonInterface::WindDirections> const& windIcons() const;
+    QMap<QString, ConditionIcons> const &nightIcons() const;
+    QMap<QString, ConditionIcons> const &dayIcons() const;
+    QMap<QString, IonInterface::WindDirections> const &windIcons() const;
 
     // Load and Parse the place search XML listings
-    void findPlace(const QString& place, const QString& source);
-    void validate(const QString& source); // Sync data source with Applet
-    void getFiveDayForecast(const QString& source);
-    void getXMLData(const QString& source);
-    void readSearchHTMLData(const QString& source, const QByteArray& html);
-    bool readFiveDayForecastXMLData(const QString& source, QXmlStreamReader& xml);
-    void parseSearchLocations(const QString& source, QXmlStreamReader& xml);
+    void findPlace(const QString &place, const QString &source);
+    void validate(const QString &source); // Sync data source with Applet
+    void getFiveDayForecast(const QString &source);
+    void getXMLData(const QString &source);
+    void readSearchHTMLData(const QString &source, const QByteArray &html);
+    bool readFiveDayForecastXMLData(const QString &source, QXmlStreamReader &xml);
+    void parseSearchLocations(const QString &source, QXmlStreamReader &xml);
 
     // Observation parsing methods
-    bool readObservationXMLData(const QString& source, QXmlStreamReader& xml);
-    void parsePlaceObservation(const QString& source, WeatherData& data, QXmlStreamReader& xml);
-    void parseWeatherChannel(const QString& source, WeatherData& data, QXmlStreamReader& xml);
-    void parseWeatherObservation(const QString& source, WeatherData& data, QXmlStreamReader& xml);
-    void parseFiveDayForecast(const QString& source, QXmlStreamReader& xml);
-    void parsePlaceForecast(const QString& source, QXmlStreamReader& xml);
-    void parseWeatherForecast(const QString& source, QXmlStreamReader& xml);
-    void parseUnknownElement(QXmlStreamReader& xml) const;
+    bool readObservationXMLData(const QString &source, QXmlStreamReader &xml);
+    void parsePlaceObservation(const QString &source, WeatherData &data, QXmlStreamReader &xml);
+    void parseWeatherChannel(const QString &source, WeatherData &data, QXmlStreamReader &xml);
+    void parseWeatherObservation(const QString &source, WeatherData &data, QXmlStreamReader &xml);
+    void parseFiveDayForecast(const QString &source, QXmlStreamReader &xml);
+    void parsePlaceForecast(const QString &source, QXmlStreamReader &xml);
+    void parseWeatherForecast(const QString &source, QXmlStreamReader &xml);
+    void parseUnknownElement(QXmlStreamReader &xml) const;
 
-    void parseFloat(float& value, const QString& string);
+    void parseFloat(float &value, const QString &string);
 
     void deleteForecasts();
 
@@ -172,7 +171,7 @@ private:
     QHash<KJob *, QByteArray *> m_jobHtml;
     QHash<KJob *, QString> m_jobList;
 
-    QHash<KJob *, QXmlStreamReader*> m_obsJobXml;
+    QHash<KJob *, QXmlStreamReader *> m_obsJobXml;
     QHash<KJob *, QString> m_obsJobList;
 
     QHash<KJob *, QXmlStreamReader *> m_forecastJobXml;

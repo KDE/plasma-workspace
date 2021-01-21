@@ -30,9 +30,10 @@ class BrowserFactory : public QObject
 public:
     explicit BrowserFactory(QObject *parent = nullptr);
     Browser *find(const QString &browserName, QObject *parent = nullptr);
+
 private:
-  Browser *m_previousBrowser;
-  QString m_previousBrowserName;
+    Browser *m_previousBrowser;
+    QString m_previousBrowserName;
 };
 
 #endif // BROWSERFACTORY_H

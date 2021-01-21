@@ -31,10 +31,10 @@ int main(int argc, char *argv[])
     // after the job is done, prevent this by disabling quit lock.
     QCoreApplication::setQuitLockEnabled(false);
 
-    QCoreApplication *app=new QCoreApplication(argc, argv);
-    KFI::FontInst    fi;
+    QCoreApplication *app = new QCoreApplication(argc, argv);
+    KFI::FontInst fi;
 
-    int rv=app->exec();
+    int rv = app->exec();
     delete app;
     return rv;
 }

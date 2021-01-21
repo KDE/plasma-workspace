@@ -5,7 +5,7 @@
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License version 2 as
- *   published by the Free Software Foundation; either version 2 of the License, or     
+ *   published by the Free Software Foundation; either version 2 of the License, or
  *   (at your option) any later version.
  *
  *   This program is distributed in the hope that it will be useful,
@@ -33,55 +33,54 @@ class FaviconProvider : public QObject
 {
     Q_OBJECT
 
-    public:
-        /**
-         * Creates a new favicon provider.
-         *
-         * @param parent The parent object.
-         * @param url The provider URL.
-         */
-        FaviconProvider( QObject *parent, const QString &url);
+public:
+    /**
+     * Creates a new favicon provider.
+     *
+     * @param parent The parent object.
+     * @param url The provider URL.
+     */
+    FaviconProvider(QObject *parent, const QString &url);
 
-        /**
-         * Destroys the favicon provider.
-         */
-        ~FaviconProvider() override;
+    /**
+     * Destroys the favicon provider.
+     */
+    ~FaviconProvider() override;
 
-        /**
-         * Returns the requested image.
-         *
-         * @note This method returns only a valid image after the
-         *       finished() signal has been emitted.
-         */
-        QImage image() const;
+    /**
+     * Returns the requested image.
+     *
+     * @note This method returns only a valid image after the
+     *       finished() signal has been emitted.
+     */
+    QImage image() const;
 
-        /**
-         * Returns the identifier of the comic request (name + date).
-         */
-        QString identifier() const;
+    /**
+     * Returns the identifier of the comic request (name + date).
+     */
+    QString identifier() const;
 
-    Q_SIGNALS:
-        /**
-         * This signal is emitted whenever a request has been finished
-         * successfully.
-         *
-         * @param provider The provider which emitted the signal.
-         */
-        void finished( FaviconProvider *provider );
+Q_SIGNALS:
+    /**
+     * This signal is emitted whenever a request has been finished
+     * successfully.
+     *
+     * @param provider The provider which emitted the signal.
+     */
+    void finished(FaviconProvider *provider);
 
-        /**
-         * This signal is emitted whenever an error has occurred.
-         *
-         * @param provider The provider which emitted the signal.
-         */
-        void error( FaviconProvider *provider );
+    /**
+     * This signal is emitted whenever an error has occurred.
+     *
+     * @param provider The provider which emitted the signal.
+     */
+    void error(FaviconProvider *provider);
 
-    private:
-      QString m_url;
+private:
+    QString m_url;
 
-      class Private;
-      Private* const d;
-
+    class Private;
+    Private *const d;
 };
 
 #endif

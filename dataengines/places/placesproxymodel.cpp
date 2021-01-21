@@ -24,14 +24,14 @@
 
 #include <KDiskFreeSpaceInfo>
 
-PlacesProxyModel::PlacesProxyModel(QObject* parent, KFilePlacesModel* model)
-    : QIdentityProxyModel(parent),
-      m_placesModel(model)
+PlacesProxyModel::PlacesProxyModel(QObject *parent, KFilePlacesModel *model)
+    : QIdentityProxyModel(parent)
+    , m_placesModel(model)
 {
     setSourceModel(model);
 }
 
-QHash<int, QByteArray>  PlacesProxyModel::roleNames() const
+QHash<int, QByteArray> PlacesProxyModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
     roles.insert(Qt::DisplayRole, "display");
@@ -79,6 +79,3 @@ QVariant PlacesProxyModel::data(const QModelIndex &index, int role) const
         return QIdentityProxyModel::data(index, role);
     }
 }
-
-
-

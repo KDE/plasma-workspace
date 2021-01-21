@@ -27,12 +27,13 @@
 #include <KRunner/AbstractRunner>
 #include <KRunner/RunnerManager>
 
-RunnerModel::RunnerModel(QObject *parent) : QAbstractListModel(parent)
-, m_favoritesModel(nullptr)
-, m_appletInterface(nullptr)
-, m_runnerManager(nullptr)
-, m_mergeResults(false)
-, m_deleteWhenEmpty(false)
+RunnerModel::RunnerModel(QObject *parent)
+    : QAbstractListModel(parent)
+    , m_favoritesModel(nullptr)
+    , m_appletInterface(nullptr)
+    , m_runnerManager(nullptr)
+    , m_mergeResults(false)
+    , m_deleteWhenEmpty(false)
 {
     m_queryTimer.setSingleShot(true);
     m_queryTimer.setInterval(10);
@@ -45,7 +46,7 @@ RunnerModel::~RunnerModel()
 
 QHash<int, QByteArray> RunnerModel::roleNames() const
 {
-    return {{ Qt::DisplayRole, "display" }};
+    return {{Qt::DisplayRole, "display"}};
 }
 
 AbstractModel *RunnerModel::favoritesModel() const
@@ -213,7 +214,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
 {
     // Group matches by runner.
     // We do not use a QMultiHash here because it keeps values in LIFO order, while we want FIFO.
-    QHash<QString, QList<Plasma::QueryMatch> > matchesForRunner;
+    QHash<QString, QList<Plasma::QueryMatch>> matchesForRunner;
 
     for (const Plasma::QueryMatch &match : matches) {
         auto it = matchesForRunner.find(match.runner()->id());
@@ -235,8 +236,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
         RunnerMatchesModel *matchesModel = nullptr;
 
         if (m_models.isEmpty()) {
-            matchesModel = new RunnerMatchesModel(QString(), i18n("Search results"),
-                m_runnerManager, this);
+            matchesModel = new RunnerMatchesModel(QString(), i18n("Search results"), m_runnerManager, this);
 
             beginInsertRows(QModelIndex(), 0, 0);
             m_models.append(matchesModel);
@@ -249,15 +249,15 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
         QList<Plasma::QueryMatch> matches;
         // To preserve the old behavior when allowing all runners we use static sorting
         const static QStringList runnerIds = {QStringLiteral("desktopsessions"),
-                                            QStringLiteral("services"),
-                                            QStringLiteral("places"),
-                                            QStringLiteral("PowerDevil"),
-                                            QStringLiteral("calculator"),
-                                            QStringLiteral("unitconverter"),
-                                            QStringLiteral("shell"),
-                                            QStringLiteral("bookmarks"),
-                                            QStringLiteral("recentdocuments"),
-                                            QStringLiteral("locations")};
+                                              QStringLiteral("services"),
+                                              QStringLiteral("places"),
+                                              QStringLiteral("PowerDevil"),
+                                              QStringLiteral("calculator"),
+                                              QStringLiteral("unitconverter"),
+                                              QStringLiteral("shell"),
+                                              QStringLiteral("bookmarks"),
+                                              QStringLiteral("recentdocuments"),
+                                              QStringLiteral("locations")};
         if (m_runners.isEmpty()) {
             const auto baloo = matchesForRunner.take(QStringLiteral("baloosearch"));
             const auto appstream = matchesForRunner.take(QStringLiteral("krunner_appstream"));
@@ -306,8 +306,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
         for (; it != end; ++it) {
             QList<Plasma::QueryMatch> matches = it.value();
             Q_ASSERT(!matches.isEmpty());
-            RunnerMatchesModel *matchesModel = new RunnerMatchesModel(it.key(),
-                matches.first().runner()->name(), m_runnerManager, this);
+            RunnerMatchesModel *matchesModel = new RunnerMatchesModel(it.key(), matches.first().runner()->name(), m_runnerManager, this);
             matchesModel->setMatches(matches);
 
             if (it.key() == QLatin1String("services")) {
@@ -338,8 +337,7 @@ void RunnerModel::createManager()
         } else {
             m_runnerManager->setAllowedRunners(m_runners);
         }
-        connect(m_runnerManager, &Plasma::RunnerManager::matchesChanged,
-                this, &RunnerModel::matchesChanged);
+        connect(m_runnerManager, &Plasma::RunnerManager::matchesChanged, this, &RunnerModel::matchesChanged);
     }
 }
 

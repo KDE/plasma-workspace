@@ -26,28 +26,24 @@
 #include <QStringList>
 
 #include "debug.h"
-#include "playercontrol.h"
-#include "playercontainer.h"
-#include "multiplexer.h"
 #include "multiplexedservice.h"
+#include "multiplexer.h"
+#include "playercontainer.h"
+#include "playercontrol.h"
 
-Mpris2Engine::Mpris2Engine(QObject* parent,
-                                   const QVariantList& args)
+Mpris2Engine::Mpris2Engine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)
 {
-    auto watcher = new QDBusServiceWatcher(QStringLiteral("org.mpris.MediaPlayer2*"),
-                                       QDBusConnection::sessionBus(),
-                                       QDBusServiceWatcher::WatchForOwnerChange,
-                                       this);
+    auto watcher =
+        new QDBusServiceWatcher(QStringLiteral("org.mpris.MediaPlayer2*"), QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
     connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &Mpris2Engine::serviceOwnerChanged);
 
     QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall(QStringLiteral("ListNames"));
     QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(async, this);
-    connect(callWatcher, &QDBusPendingCallWatcher::finished,
-            this,        &Mpris2Engine::serviceNameFetchFinished);
+    connect(callWatcher, &QDBusPendingCallWatcher::finished, this, &Mpris2Engine::serviceNameFetchFinished);
 }
 
-Plasma::Service* Mpris2Engine::serviceForSource(const QString& source)
+Plasma::Service *Mpris2Engine::serviceForSource(const QString &source)
 {
     if (source == Multiplexer::sourceName) {
         if (!m_multiplexer) {
@@ -55,7 +51,7 @@ Plasma::Service* Mpris2Engine::serviceForSource(const QString& source)
         }
         return new MultiplexedService(m_multiplexer.data(), this);
     } else {
-        PlayerContainer* container = qobject_cast<PlayerContainer*>(containerForSource(source));
+        PlayerContainer *container = qobject_cast<PlayerContainer *>(containerForSource(source));
         if (container) {
             return new PlayerControl(container, this);
         } else {
@@ -72,10 +68,7 @@ QStringList Mpris2Engine::sources() const
         return DataEngine::sources() << Multiplexer::sourceName;
 }
 
-void Mpris2Engine::serviceOwnerChanged(
-            const QString& serviceName,
-            const QString& oldOwner,
-            const QString& newOwner)
+void Mpris2Engine::serviceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner)
 {
     if (!serviceName.startsWith(QLatin1String("org.mpris.MediaPlayer2.")))
         return;
@@ -96,12 +89,12 @@ void Mpris2Engine::serviceOwnerChanged(
     }
 }
 
-bool Mpris2Engine::updateSourceEvent(const QString& source)
+bool Mpris2Engine::updateSourceEvent(const QString &source)
 {
     if (source == Multiplexer::sourceName) {
         return false;
     } else {
-        PlayerContainer *container = qobject_cast<PlayerContainer*>(containerForSource(source));
+        PlayerContainer *container = qobject_cast<PlayerContainer *>(containerForSource(source));
         if (container) {
             container->refresh();
             return true;
@@ -111,7 +104,7 @@ bool Mpris2Engine::updateSourceEvent(const QString& source)
     }
 }
 
-bool Mpris2Engine::sourceRequestEvent(const QString& source)
+bool Mpris2Engine::sourceRequestEvent(const QString &source)
 {
     if (source == Multiplexer::sourceName) {
         createMultiplexer();
@@ -120,21 +113,18 @@ bool Mpris2Engine::sourceRequestEvent(const QString& source)
     return false;
 }
 
-void Mpris2Engine::initialFetchFinished(PlayerContainer* container)
+void Mpris2Engine::initialFetchFinished(PlayerContainer *container)
 {
     qCDebug(MPRIS2) << "Props fetch for" << container->objectName() << "finished; adding";
 
     // don't let future refreshes trigger this
-    disconnect(container, &PlayerContainer::initialFetchFinished,
-               this,      &Mpris2Engine::initialFetchFinished);
-    disconnect(container, &PlayerContainer::initialFetchFailed,
-               this,      &Mpris2Engine::initialFetchFailed);
+    disconnect(container, &PlayerContainer::initialFetchFinished, this, &Mpris2Engine::initialFetchFinished);
+    disconnect(container, &PlayerContainer::initialFetchFailed, this, &Mpris2Engine::initialFetchFailed);
 
     // Check if the player follows the specification dutifully.
     const auto data = container->data();
-    if (data.value(QStringLiteral("Identity")).toString().isEmpty()
-            || !data.value(QStringLiteral("SupportedUriSchemes")).isValid()
-            || !data.value(QStringLiteral("SupportedMimeTypes")).isValid()) {
+    if (data.value(QStringLiteral("Identity")).toString().isEmpty() || !data.value(QStringLiteral("SupportedUriSchemes")).isValid()
+        || !data.value(QStringLiteral("SupportedMimeTypes")).isValid()) {
         qCDebug(MPRIS2) << "MPRIS2 service" << container->objectName() << "isn't standard-compliant, ignoring";
         return;
     }
@@ -145,13 +135,13 @@ void Mpris2Engine::initialFetchFinished(PlayerContainer* container)
     }
 }
 
-void Mpris2Engine::initialFetchFailed(PlayerContainer* container)
+void Mpris2Engine::initialFetchFailed(PlayerContainer *container)
 {
     qCWarning(MPRIS2) << "Failed to find working MPRIS2 interface for" << container->dbusAddress();
     container->deleteLater();
 }
 
-void Mpris2Engine::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher)
+void Mpris2Engine::serviceNameFetchFinished(QDBusPendingCallWatcher *watcher)
 {
     QDBusPendingReply<QStringList> propsReply = *watcher;
     watcher->deleteLater();
@@ -159,7 +149,7 @@ void Mpris2Engine::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher)
     if (propsReply.isError()) {
         qCWarning(MPRIS2) << "Could not get list of available D-Bus services";
     } else {
-        foreach (const QString& serviceName, propsReply.value()) {
+        foreach (const QString &serviceName, propsReply.value()) {
             if (serviceName.startsWith(QLatin1String("org.mpris.MediaPlayer2."))) {
                 qCDebug(MPRIS2) << "Found MPRIS2 service" << serviceName;
                 // watch out for race conditions; the media player could
@@ -168,7 +158,7 @@ void Mpris2Engine::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher)
                 // NB: _disappearing_ between sending this call and doing
                 // this processing is fine
                 QString sourceName = serviceName.mid(23);
-                PlayerContainer *container = qobject_cast<PlayerContainer*>(containerForSource(sourceName));
+                PlayerContainer *container = qobject_cast<PlayerContainer *>(containerForSource(sourceName));
                 if (!container) {
                     qCDebug(MPRIS2) << "Haven't already seen" << serviceName;
                     addMediaPlayer(serviceName, sourceName);
@@ -178,25 +168,23 @@ void Mpris2Engine::serviceNameFetchFinished(QDBusPendingCallWatcher* watcher)
     }
 }
 
-void Mpris2Engine::addMediaPlayer(const QString& serviceName, const QString& sourceName)
+void Mpris2Engine::addMediaPlayer(const QString &serviceName, const QString &sourceName)
 {
     PlayerContainer *container = new PlayerContainer(serviceName, this);
     container->setObjectName(sourceName);
-    connect(container, &PlayerContainer::initialFetchFinished,
-            this,      &Mpris2Engine::initialFetchFinished);
-    connect(container, &PlayerContainer::initialFetchFailed,
-            this,      &Mpris2Engine::initialFetchFailed);
+    connect(container, &PlayerContainer::initialFetchFinished, this, &Mpris2Engine::initialFetchFinished);
+    connect(container, &PlayerContainer::initialFetchFailed, this, &Mpris2Engine::initialFetchFailed);
 }
 
 void Mpris2Engine::createMultiplexer()
 {
-    Q_ASSERT (!m_multiplexer);
+    Q_ASSERT(!m_multiplexer);
     m_multiplexer = new Multiplexer(this);
 
     SourceDict dict = containerDict();
     SourceDict::const_iterator i = dict.constBegin();
     while (i != dict.constEnd()) {
-        PlayerContainer *container = qobject_cast<PlayerContainer*>(i.value());
+        PlayerContainer *container = qobject_cast<PlayerContainer *>(i.value());
         m_multiplexer.data()->addPlayer(container);
         ++i;
     }
@@ -206,4 +194,3 @@ void Mpris2Engine::createMultiplexer()
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(mpris2, Mpris2Engine, "plasma-dataengine-mpris2.json")
 
 #include "mpris2engine.moc"
-

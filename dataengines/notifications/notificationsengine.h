@@ -15,23 +15,21 @@
  * along with this library; see the file COPYING.LIB.  If not, write to
  * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
-*/
-
+ */
 
 #ifndef NOTIFICATIONSENGINE_H
 #define NOTIFICATIONSENGINE_H
 
 #include <Plasma/DataEngine>
-#include <QSet>
 #include <QHash>
+#include <QSet>
 
 namespace NotificationManager
 {
 class Notification;
 }
 
-struct NotificationInhibiton
-{
+struct NotificationInhibiton {
     QString hint;
     QString value;
 };
@@ -47,7 +45,7 @@ class NotificationsEngine : public Plasma::DataEngine
     Q_OBJECT
 
 public:
-    NotificationsEngine( QObject* parent, const QVariantList& args );
+    NotificationsEngine(QObject *parent, const QVariantList &args);
     ~NotificationsEngine() override;
 
     virtual void init();
@@ -56,12 +54,24 @@ public:
      *  This function implements part of Notifications DBus interface.
      *  Once called, will add notification source to the engine
      */
-    uint Notify(const QString &app_name, uint replaces_id, const QString &app_icon, const QString &summary, const QString &body, const QStringList &actions, const QVariantMap &hints, int timeout);
+    uint Notify(const QString &app_name,
+                uint replaces_id,
+                const QString &app_icon,
+                const QString &summary,
+                const QString &body,
+                const QStringList &actions,
+                const QVariantMap &hints,
+                int timeout);
 
-    Plasma::Service* serviceForSource(const QString& source) override;
+    Plasma::Service *serviceForSource(const QString &source) override;
 
-    int createNotification(const QString &appName, const QString &appIcon, const QString &summary,
-                           const QString &body, int timeout, const QStringList &actions, const QVariantMap &hints);
+    int createNotification(const QString &appName,
+                           const QString &appIcon,
+                           const QString &summary,
+                           const QString &body,
+                           int timeout,
+                           const QStringList &actions,
+                           const QVariantMap &hints);
 
     void configureNotification(const QString &appName, const QString &eventId = QString());
 
@@ -80,7 +90,7 @@ private:
 
     QHash<QString, QString> m_activeNotifications;
 
-    QList<NotificationInhibiton*> m_inhibitions;
+    QList<NotificationInhibiton *> m_inhibitions;
 
     friend class NotificationAction;
 };

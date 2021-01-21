@@ -29,7 +29,6 @@ class KFileItem;
 
 namespace Kicker
 {
-
 enum {
     DescriptionRole = Qt::UserRole + 1,
     GroupRole,

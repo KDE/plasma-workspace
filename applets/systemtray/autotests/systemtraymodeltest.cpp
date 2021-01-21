@@ -16,10 +16,10 @@
  *
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
-#include <QtTest>
 #include <QPointer>
+#include <QtTest>
 
 #include <Plasma/Applet>
 #include <Plasma/DataEngine>
@@ -49,51 +49,71 @@ void SystemTrayModelTest::init()
     qunsetenv("LANG");
 }
 
-class MockedPlasmoidRegistry : public PlasmoidRegistry {
+class MockedPlasmoidRegistry : public PlasmoidRegistry
+{
 public:
-    MockedPlasmoidRegistry(QPointer<SystemTraySettings> settings) : PlasmoidRegistry(settings) {}
-    QMap<QString, KPluginMetaData> systemTrayApplets() override {
+    MockedPlasmoidRegistry(QPointer<SystemTraySettings> settings)
+        : PlasmoidRegistry(settings)
+    {
+    }
+    QMap<QString, KPluginMetaData> systemTrayApplets() override
+    {
         return m_systemTrayApplets;
     }
 
     QMap<QString, KPluginMetaData> m_systemTrayApplets;
 };
 
-class MockedSystemTraySettings : public SystemTraySettings {
+class MockedSystemTraySettings : public SystemTraySettings
+{
 public:
-    MockedSystemTraySettings() : SystemTraySettings(nullptr) {}
+    MockedSystemTraySettings()
+        : SystemTraySettings(nullptr)
+    {
+    }
 
-    bool isKnownPlugin(const QString &pluginId) override {
+    bool isKnownPlugin(const QString &pluginId) override
+    {
         return m_knownPlugins.contains(pluginId);
     }
-    const QStringList knownPlugins() const override {
+    const QStringList knownPlugins() const override
+    {
         return m_knownPlugins;
     }
-    void addKnownPlugin(const QString &pluginId) override {
+    void addKnownPlugin(const QString &pluginId) override
+    {
         m_knownPlugins << pluginId;
     }
-    void removeKnownPlugin(const QString &pluginId) override {
+    void removeKnownPlugin(const QString &pluginId) override
+    {
         m_knownPlugins.removeAll(pluginId);
     }
-    bool isEnabledPlugin(const QString &pluginId) const override {
+    bool isEnabledPlugin(const QString &pluginId) const override
+    {
         return m_enabledPlugins.contains(pluginId);
     }
-    const QStringList enabledPlugins() const override {
+    const QStringList enabledPlugins() const override
+    {
         return m_enabledPlugins;
     }
-    void addEnabledPlugin(const QString &pluginId) override {
+    void addEnabledPlugin(const QString &pluginId) override
+    {
         m_enabledPlugins << pluginId;
     }
-    void removeEnabledPlugin(const QString &pluginId) override {
+    void removeEnabledPlugin(const QString &pluginId) override
+    {
         m_enabledPlugins.removeAll(pluginId);
     }
-    bool isShowAllItems() const override {
+    bool isShowAllItems() const override
+    {
         return m_showAllItems;
     }
-    const QStringList shownItems() const override {
+    const QStringList shownItems() const override
+    {
         return m_shownItems;
     }
-    const QStringList hiddenItems() const override {
+    const QStringList hiddenItems() const override
+    {
         return m_hiddenItems;
     };
 
@@ -106,22 +126,22 @@ public:
 
 void SystemTrayModelTest::testPlasmoidModel()
 {
-    //given: mocked PlasmoidRegistry with sample plugin meta data
+    // given: mocked PlasmoidRegistry with sample plugin meta data
     MockedSystemTraySettings *settings = new MockedSystemTraySettings();
     MockedPlasmoidRegistry *plasmoidRegistry = new MockedPlasmoidRegistry(settings);
     plasmoidRegistry->m_systemTrayApplets.insert(DEVICENOTIFIER_ID, KPluginMetaData(QFINDTESTDATA("data/devicenotifier/metadata.desktop")));
     plasmoidRegistry->m_systemTrayApplets.insert(MEDIACONROLLER_ID, KPluginMetaData(QFINDTESTDATA("data/mediacontroller/metadata.desktop")));
 
-    //when: model is initialized
+    // when: model is initialized
     PlasmoidModel *model = new PlasmoidModel(settings, plasmoidRegistry);
 
-    //expect: passes consistency tests
+    // expect: passes consistency tests
     new QAbstractItemModelTester(model, QAbstractItemModelTester::FailureReportingMode::Fatal);
 
-    //and expect: correct model size
+    // and expect: correct model size
     QCOMPARE(model->rowCount(), 2);
     QCOMPARE(model->roleNames().size(), 10);
-    //and expect: correct data returned
+    // and expect: correct data returned
     QModelIndex idx = model->index(0, 0);
     QCOMPARE(model->data(idx, Qt::DisplayRole).toString(), "Device Notifier");
     QVERIFY(model->data(idx, Qt::DecorationRole).isValid());
@@ -143,29 +163,29 @@ void SystemTrayModelTest::testPlasmoidModel()
     QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::EffectiveStatus)), QVariant(Plasma::Types::ItemStatus::HiddenStatus));
     QVERIFY(!model->data(idx, static_cast<int>(PlasmoidModel::Role::HasApplet)).toBool());
 
-    //when: language is changed
+    // when: language is changed
     QLocale::setDefault(QLocale("pl_PL"));
     qputenv("LANG", "pl_PL.UTF-8");
     qputenv("LC_MESSAGES", "pl_PL.UTF-8");
-    //then expect: translated data returned
+    // then expect: translated data returned
     QCOMPARE(model->data(model->index(0, 0), Qt::DisplayRole).toString(), "Powiadomienia o urz\u0105dzeniach");
 
-    //when: applet added
+    // when: applet added
     model->addApplet(new Plasma::Applet(plasmoidRegistry->m_systemTrayApplets.value(MEDIACONROLLER_ID)));
-    //then: applet can be rendered
+    // then: applet can be rendered
     QVERIFY(model->data(idx, static_cast<int>(BaseModel::BaseRole::CanRender)).toBool());
     QVERIFY(model->data(idx, static_cast<int>(PlasmoidModel::Role::HasApplet)).toBool());
     QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::EffectiveStatus)), QVariant(Plasma::Types::ItemStatus::ActiveStatus));
 
-    //and when: applet removed
+    // and when: applet removed
     model->removeApplet(new Plasma::Applet(plasmoidRegistry->m_systemTrayApplets.value(MEDIACONROLLER_ID)));
-    //then: applet cannot be rendered anymore
+    // then: applet cannot be rendered anymore
     QVERIFY(!model->data(idx, static_cast<int>(BaseModel::BaseRole::CanRender)).toBool());
     QVERIFY(!model->data(idx, static_cast<int>(PlasmoidModel::Role::HasApplet)).toBool());
 
-    //and when: invalid index
+    // and when: invalid index
     idx = model->index(4, 0);
-    //then: empty value
+    // then: empty value
     QVERIFY(model->data(idx, static_cast<int>(BaseModel::BaseRole::ItemType)).isNull());
     QVERIFY(!model->data(idx, static_cast<int>(BaseModel::BaseRole::ItemType)).isValid());
     idx = model->index(1, 1);

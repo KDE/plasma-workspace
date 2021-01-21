@@ -27,9 +27,9 @@
 #ifndef FONTS_H
 #define FONTS_H
 
-#include <config-X11.h>
 #include <QAbstractItemModel>
 #include <QStandardItemModel>
+#include <config-X11.h>
 
 #include <KQuickAddons/ManagedConfigModule>
 
@@ -42,7 +42,7 @@ class FontsAASettings;
  */
 class KFonts : public KQuickAddons::ManagedConfigModule
 {
-Q_OBJECT
+    Q_OBJECT
     Q_PROPERTY(FontsSettings *fontsSettings READ fontsSettings CONSTANT)
     Q_PROPERTY(FontsAASettings *fontsAASettings READ fontsAASettings CONSTANT)
     Q_PROPERTY(QAbstractItemModel *subPixelOptionsModel READ subPixelOptionsModel CONSTANT)
@@ -86,4 +86,3 @@ private:
 };
 
 #endif
-

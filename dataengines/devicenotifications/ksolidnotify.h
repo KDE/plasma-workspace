@@ -21,8 +21,8 @@
 #ifndef KSOLIDNOTIFY_H
 #define KSOLIDNOTIFY_H
 
-#include <QObject>
 #include <QHash>
+#include <QObject>
 #include <QString>
 
 #include <Solid/Device>
@@ -36,7 +36,7 @@
  * errors are shown via regular notifications
  *
  * @author Jacopo De Simoi <wilderkde at gmail.com>
-*/
+ */
 
 class KSolidNotify : public QObject
 {
@@ -46,7 +46,7 @@ public:
     explicit KSolidNotify(QObject *parent);
 
 signals:
-    void notify(Solid::ErrorType solidError, const QString& error, const QString& errorDetails, const QString &udi);
+    void notify(Solid::ErrorType solidError, const QString &error, const QString &errorDetails, const QString &udi);
     void blockingAppsReady(const QStringList &apps);
     void clearNotification(const QString &udi);
 
@@ -63,7 +63,7 @@ private:
 
     void onSolidReply(SolidReplyType type, Solid::ErrorType error, const QVariant &errorData, const QString &udi);
 
-    void connectSignals(Solid::Device* device);
+    void connectSignals(Solid::Device *device);
     bool isSafelyRemovable(const QString &udi) const;
     void queryBlockingApps(const QString &devicePath);
 

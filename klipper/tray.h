@@ -35,7 +35,7 @@ public Q_SLOTS:
     void slotSetToolTipFromHistory();
 
 private:
-    Klipper* m_klipper;
+    Klipper *m_klipper;
 };
 
 #endif

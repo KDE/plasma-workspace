@@ -32,18 +32,17 @@
  */
 class StatusNotifierItemService : public Plasma::Service
 {
-
     Q_OBJECT
 
-    public:
-        explicit StatusNotifierItemService(StatusNotifierItemSource *source);
-        ~StatusNotifierItemService() override;
+public:
+    explicit StatusNotifierItemService(StatusNotifierItemSource *source);
+    ~StatusNotifierItemService() override;
 
-    protected:
-        Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+protected:
+    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
-    private:
-        StatusNotifierItemSource *m_source;
+private:
+    StatusNotifierItemSource *m_source;
 };
 
 #endif // STATUSNOTIFIERITEMSERVICE_H

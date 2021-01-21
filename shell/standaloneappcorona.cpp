@@ -22,13 +22,13 @@
 #include "standaloneappcorona.h"
 #include "panelview.h"
 
-#include <QDebug>
 #include <QAction>
+#include <QDebug>
 #include <QQuickItem>
 
-#include <kactivities/consumer.h>
 #include <KActionCollection>
 #include <Plasma/PluginLoader>
+#include <kactivities/consumer.h>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
@@ -36,10 +36,10 @@
 #include "scripting/scriptengine.h"
 
 StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *parent)
-    : Plasma::Corona(parent),
-      m_coronaPlugin(coronaPlugin),
-      m_activityConsumer(new KActivities::Consumer(this)),
-      m_view(nullptr)
+    : Plasma::Corona(parent)
+    , m_coronaPlugin(coronaPlugin)
+    , m_activityConsumer(new KActivities::Consumer(this))
+    , m_view(nullptr)
 {
     qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", QStringLiteral("It is not possible to create objects of type Desktop"));
     qmlRegisterUncreatableType<PanelView>("org.kde.plasma.shell", 2, 0, "Panel", QStringLiteral("It is not possible to create objects of type Panel"));
@@ -74,7 +74,7 @@ StandaloneAppCorona::~StandaloneAppCorona()
 QRect StandaloneAppCorona::screenGeometry(int id) const
 {
     Q_UNUSED(id);
-    if(m_view) {
+    if (m_view) {
         return m_view->geometry();
     } else {
         return QRect();
@@ -103,12 +103,12 @@ void StandaloneAppCorona::load()
         qDebug() << "containment found";
         if (c->containmentType() == Plasma::Types::DesktopContainment || c->containmentType() == Plasma::Types::CustomContainment) {
             QAction *removeAction = c->actions()->action(QStringLiteral("remove"));
-            if(removeAction) {
+            if (removeAction) {
                 removeAction->deleteLater();
             }
             m_view->setContainment(c);
             m_view->show();
-            connect(m_view, &QWindow::visibleChanged, [=](bool visible){
+            connect(m_view, &QWindow::visibleChanged, [=](bool visible) {
                 if (!visible) {
                     deleteLater();
                 }
@@ -122,35 +122,33 @@ void StandaloneAppCorona::loadDefaultLayout()
 {
     const QString script = kPackage().filePath("defaultlayout");
     QFile file(script);
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text) ) {
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QString code = file.readAll();
         qDebug() << "evaluating startup script:" << script;
 
         WorkspaceScripting::ScriptEngine scriptEngine(this);
 
-        connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this,
-                [](const QString &msg) {
-                    qWarning() << msg;
-                });
-        connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this,
-                [](const QString &msg) {
-                    qDebug() << msg;
-                });
+        connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this, [](const QString &msg) {
+            qWarning() << msg;
+        });
+        connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [](const QString &msg) {
+            qDebug() << msg;
+        });
         scriptEngine.evaluateScript(code);
     }
 }
 
-Plasma::Containment *StandaloneAppCorona::createContainmentForActivity(const QString& activity, int screenNum)
+Plasma::Containment *StandaloneAppCorona::createContainmentForActivity(const QString &activity, int screenNum)
 {
     for (Plasma::Containment *cont : containments()) {
-        if (cont->activity() == activity &&
-            (cont->containmentType() == Plasma::Types::DesktopContainment ||
-             cont->containmentType() == Plasma::Types::CustomContainment)) {
+        if (cont->activity() == activity
+            && (cont->containmentType() == Plasma::Types::DesktopContainment || cont->containmentType() == Plasma::Types::CustomContainment)) {
             return cont;
         }
     }
 
-    Plasma::Containment *containment = containmentForScreen(screenNum, m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment"), QVariantList());
+    Plasma::Containment *containment =
+        containmentForScreen(screenNum, m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment"), QVariantList());
     Q_ASSERT(containment);
 
     if (containment) {
@@ -162,7 +160,7 @@ Plasma::Containment *StandaloneAppCorona::createContainmentForActivity(const QSt
 
 void StandaloneAppCorona::activityAdded(const QString &id)
 {
-    //TODO more sanity checks
+    // TODO more sanity checks
     if (m_activityContainmentPlugins.contains(id)) {
         qWarning() << "Activity added twice" << id;
         return;
@@ -178,7 +176,7 @@ void StandaloneAppCorona::activityRemoved(const QString &id)
 
 void StandaloneAppCorona::currentActivityChanged(const QString &newActivity)
 {
-    //qDebug() << "Activity changed:" << newActivity;
+    // qDebug() << "Activity changed:" << newActivity;
 
     if (containments().isEmpty()) {
         return;
@@ -186,20 +184,18 @@ void StandaloneAppCorona::currentActivityChanged(const QString &newActivity)
 
     Plasma::Containment *c = createContainmentForActivity(newActivity, 0);
 
-    connect(c, &Plasma::Containment::showAddWidgetsInterface,
-            this, &StandaloneAppCorona::toggleWidgetExplorer);
+    connect(c, &Plasma::Containment::showAddWidgetsInterface, this, &StandaloneAppCorona::toggleWidgetExplorer);
 
     QAction *removeAction = c->actions()->action(QStringLiteral("remove"));
     if (removeAction) {
         removeAction->deleteLater();
     }
     m_view->setContainment(c);
-
 }
 
 void StandaloneAppCorona::toggleWidgetExplorer()
 {
-    //The view QML has to provide something to display the widget explorer
+    // The view QML has to provide something to display the widget explorer
     m_view->rootObject()->metaObject()->invokeMethod(m_view->rootObject(), "toggleWidgetExplorer", Q_ARG(QVariant, QVariant::fromValue(sender())));
     return;
 }
@@ -220,9 +216,9 @@ void StandaloneAppCorona::insertActivity(const QString &id, const QString &plugi
 
 Plasma::Containment *StandaloneAppCorona::addPanel(const QString &plugin)
 {
-    //this creates a panel that wwill be used for nothing
-    //it's needed by the scriptengine to create
-    //a corona useful also when launched in fullshell
+    // this creates a panel that wwill be used for nothing
+    // it's needed by the scriptengine to create
+    // a corona useful also when launched in fullshell
     Plasma::Containment *panel = createContainment(plugin);
     if (!panel) {
         return nullptr;
@@ -233,14 +229,11 @@ Plasma::Containment *StandaloneAppCorona::addPanel(const QString &plugin)
 
 int StandaloneAppCorona::screenForContainment(const Plasma::Containment *containment) const
 {
-    //this simple corona doesn't have multiscreen support
-    if (containment->containmentType() != Plasma::Types::PanelContainment &&
-        containment->containmentType() != Plasma::Types::CustomPanelContainment) {
+    // this simple corona doesn't have multiscreen support
+    if (containment->containmentType() != Plasma::Types::PanelContainment && containment->containmentType() != Plasma::Types::CustomPanelContainment) {
         if (containment->activity() != m_activityConsumer->currentActivity()) {
             return -1;
         }
     }
     return 0;
 }
-
-

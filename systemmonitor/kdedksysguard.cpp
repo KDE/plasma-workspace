@@ -19,22 +19,22 @@
 
 #include "kdedksysguard.h"
 
-#include <QTimer>
 #include <QAction>
-#include <QStandardPaths>
 #include <QProcess>
+#include <QStandardPaths>
+#include <QTimer>
 
-#include <KPluginFactory>
 #include <KLocalizedString>
+#include <KPluginFactory>
 
-#include <KGlobalAccel>
 #include <KActionCollection>
+#include <KGlobalAccel>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 
 K_PLUGIN_CLASS_WITH_JSON(KDEDKSysGuard, "ksysguard.json")
 
-KDEDKSysGuard::KDEDKSysGuard(QObject* parent, const QVariantList&)
+KDEDKSysGuard::KDEDKSysGuard(QObject *parent, const QVariantList &)
     : KDEDModule(parent)
 {
     QTimer::singleShot(0, this, &KDEDKSysGuard::init);
@@ -46,9 +46,9 @@ KDEDKSysGuard::~KDEDKSysGuard()
 
 void KDEDKSysGuard::init()
 {
-    KActionCollection* actionCollection = new KActionCollection(this);
+    KActionCollection *actionCollection = new KActionCollection(this);
 
-    QAction* action = actionCollection->addAction(QStringLiteral("Show System Activity"));
+    QAction *action = actionCollection->addAction(QStringLiteral("Show System Activity"));
     action->setText(i18n("Show System Activity"));
     connect(action, &QAction::triggered, this, &KDEDKSysGuard::showTaskManager);
 
@@ -58,7 +58,7 @@ void KDEDKSysGuard::init()
 void KDEDKSysGuard::showTaskManager()
 {
     QDBusConnection con = QDBusConnection::sessionBus();
-    QDBusConnectionInterface* interface = con.interface();
+    QDBusConnectionInterface *interface = con.interface();
     if (interface->isServiceRegistered(QStringLiteral("org.kde.systemmonitor"))) {
         QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.systemmonitor"),
                                                           QStringLiteral("/"),
@@ -66,8 +66,7 @@ void KDEDKSysGuard::showTaskManager()
                                                           QStringLiteral("close"));
 
         con.asyncCall(msg);
-    }
-    else {
+    } else {
         const QString exe = QStandardPaths::findExecutable(QStringLiteral("systemmonitor"));
         QProcess::startDetached(exe, QStringList());
     }

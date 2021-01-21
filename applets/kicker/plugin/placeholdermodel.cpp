@@ -22,17 +22,15 @@
 #include "actionlist.h"
 #include "debug.h"
 
-
 PlaceholderModel::PlaceholderModel(QObject *parent)
     : AbstractModel(parent)
     , m_dropPlaceholderIndex(-1)
     , m_isTriggerInhibited(false)
 {
-    connect(&m_triggerInhibitor, &QTimer::timeout,
-            this, [&] {
-                qCDebug(KICKER_DEBUG) << "%%% Inhibit stopped";
-                m_isTriggerInhibited = false;
-            });
+    connect(&m_triggerInhibitor, &QTimer::timeout, this, [&] {
+        qCDebug(KICKER_DEBUG) << "%%% Inhibit stopped";
+        m_isTriggerInhibited = false;
+    });
 
     m_triggerInhibitor.setInterval(500);
     m_triggerInhibitor.setSingleShot(true);
@@ -97,8 +95,7 @@ QModelIndex PlaceholderModel::index(int row, int column, const QModelIndex &pare
 {
     Q_UNUSED(parent)
 
-    return m_sourceModel ? createIndex(row, column)
-                         : QModelIndex();
+    return m_sourceModel ? createIndex(row, column) : QModelIndex();
 }
 
 QModelIndex PlaceholderModel::parent(const QModelIndex &index) const
@@ -114,8 +111,8 @@ QVariant PlaceholderModel::data(const QModelIndex &index, int role) const
 
     if (m_dropPlaceholderIndex == row) {
         switch (role) {
-            case Kicker::IsDropPlaceholderRole:
-                return true;
+        case Kicker::IsDropPlaceholderRole:
+            return true;
 
             // TODO: Maybe it would be nice to show something here?
             // case Qt::DisplayRole:
@@ -124,14 +121,12 @@ QVariant PlaceholderModel::data(const QModelIndex &index, int role) const
             // case Qt::DecorationRole:
             //     return "select";
 
-            default:
-                return QVariant();
-
+        default:
+            return QVariant();
         }
     }
 
-    return m_sourceModel ? m_sourceModel->data(indexToSourceIndex(index), role)
-                         : QVariant();
+    return m_sourceModel ? m_sourceModel->data(indexToSourceIndex(index), role) : QVariant();
 }
 
 int PlaceholderModel::rowCount(const QModelIndex &parent) const
@@ -140,11 +135,10 @@ int PlaceholderModel::rowCount(const QModelIndex &parent) const
         return 0;
     }
 
-    return m_sourceModel->rowCount()
-                + (m_dropPlaceholderIndex != -1 ? 1 : 0);
+    return m_sourceModel->rowCount() + (m_dropPlaceholderIndex != -1 ? 1 : 0);
 }
 
-QModelIndex PlaceholderModel::indexToSourceIndex(const QModelIndex& index) const
+QModelIndex PlaceholderModel::indexToSourceIndex(const QModelIndex &index) const
 {
     if (!m_sourceModel || !index.isValid()) {
         return QModelIndex();
@@ -154,30 +148,25 @@ QModelIndex PlaceholderModel::indexToSourceIndex(const QModelIndex& index) const
     const auto column = index.column();
 
     return index.parent().isValid() ?
-        // We do not support tree models
-        QModelIndex() :
+                                    // We do not support tree models
+        QModelIndex()
+                                    :
 
-        // If we are on top-level, lets add a placeholder
-        m_sourceModel->index(
-                row - (m_dropPlaceholderIndex != -1 && row > m_dropPlaceholderIndex ? 1 : 0),
-                column,
-                QModelIndex()
-            );
+                                    // If we are on top-level, lets add a placeholder
+        m_sourceModel->index(row - (m_dropPlaceholderIndex != -1 && row > m_dropPlaceholderIndex ? 1 : 0), column, QModelIndex());
 }
 
 int PlaceholderModel::sourceRowToRow(int sourceRow) const
 {
-    return sourceRow +
-        (m_dropPlaceholderIndex != -1 && sourceRow >= m_dropPlaceholderIndex ? 1 : 0);
+    return sourceRow + (m_dropPlaceholderIndex != -1 && sourceRow >= m_dropPlaceholderIndex ? 1 : 0);
 }
 
 int PlaceholderModel::rowToSourceRow(int row) const
 {
-    return row == m_dropPlaceholderIndex ? -1 :
-           row - (m_dropPlaceholderIndex != -1 && row > m_dropPlaceholderIndex ? 1 : 0);
+    return row == m_dropPlaceholderIndex ? -1 : row - (m_dropPlaceholderIndex != -1 && row > m_dropPlaceholderIndex ? 1 : 0);
 }
 
-QModelIndex PlaceholderModel::sourceIndexToIndex(const QModelIndex& sourceIndex) const
+QModelIndex PlaceholderModel::sourceIndexToIndex(const QModelIndex &sourceIndex) const
 {
     if (!m_sourceModel || !sourceIndex.isValid()) {
         return QModelIndex();
@@ -187,20 +176,18 @@ QModelIndex PlaceholderModel::sourceIndexToIndex(const QModelIndex& sourceIndex)
     const auto sourceColumn = sourceIndex.column();
 
     return sourceIndex.parent().isValid() ?
-        // We do not support tree-models
-        QModelIndex() :
+                                          // We do not support tree-models
+        QModelIndex()
+                                          :
 
-        // If we are on top-level, lets add a placeholder
-        index(
-                sourceRowToRow(sourceRow),
-                sourceColumn,
-                QModelIndex()
-            );
+                                          // If we are on top-level, lets add a placeholder
+        index(sourceRowToRow(sourceRow), sourceColumn, QModelIndex());
 }
 
 bool PlaceholderModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
-    if (m_isTriggerInhibited) return false;
+    if (m_isTriggerInhibited)
+        return false;
 
     if (auto abstractModel = qobject_cast<AbstractModel *>(m_sourceModel)) {
         return abstractModel->trigger(rowToSourceRow(row), actionId, argument);
@@ -218,10 +205,9 @@ QString PlaceholderModel::labelForRow(int row)
     } else {
         return QString();
     }
-
 }
 
-AbstractModel* PlaceholderModel::modelForRow(int row)
+AbstractModel *PlaceholderModel::modelForRow(int row)
 {
     if (auto abstractModel = qobject_cast<AbstractModel *>(m_sourceModel)) {
         return abstractModel->modelForRow(rowToSourceRow(row));
@@ -231,7 +217,7 @@ AbstractModel* PlaceholderModel::modelForRow(int row)
     }
 }
 
-AbstractModel* PlaceholderModel::favoritesModel()
+AbstractModel *PlaceholderModel::favoritesModel()
 {
     if (auto abstractModel = qobject_cast<AbstractModel *>(m_sourceModel)) {
         return abstractModel->favoritesModel();
@@ -269,82 +255,62 @@ void PlaceholderModel::connectSignals()
 
     connect(sourceModelPtr, SIGNAL(destroyed()), this, SLOT(reset()));
 
-    connect(sourceModelPtr, &QAbstractItemModel::dataChanged,
-            this, [this] (const QModelIndex &from, const QModelIndex &to, const QVector<int> &roles) {
-                emit dataChanged(sourceIndexToIndex(from),
-                                 sourceIndexToIndex(to),
-                                 roles);
-            });
+    connect(sourceModelPtr, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &from, const QModelIndex &to, const QVector<int> &roles) {
+        emit dataChanged(sourceIndexToIndex(from), sourceIndexToIndex(to), roles);
+    });
 
-    connect(sourceModelPtr, &QAbstractItemModel::rowsAboutToBeInserted,
-            this, [this] (const QModelIndex &parent, int from, int to) {
-                if (parent.isValid()) {
-                    qWarning() << "We do not support tree models";
+    connect(sourceModelPtr, &QAbstractItemModel::rowsAboutToBeInserted, this, [this](const QModelIndex &parent, int from, int to) {
+        if (parent.isValid()) {
+            qWarning() << "We do not support tree models";
 
-                } else {
-                    beginInsertRows(QModelIndex(),
-                                    sourceRowToRow(from),
-                                    sourceRowToRow(to));
+        } else {
+            beginInsertRows(QModelIndex(), sourceRowToRow(from), sourceRowToRow(to));
+        }
+    });
 
-                }
-            });
+    connect(sourceModelPtr, &QAbstractItemModel::rowsInserted, this, [this] {
+        endInsertRows();
+        emit countChanged();
+    });
 
-    connect(sourceModelPtr, &QAbstractItemModel::rowsInserted,
-            this, [this] {
-                endInsertRows();
-                emit countChanged();
-            });
-
-
-    connect(sourceModelPtr, &QAbstractItemModel::rowsAboutToBeMoved,
-            this, [this] (const QModelIndex &source, int from, int to, const QModelIndex &dest, int destRow) {
+    connect(sourceModelPtr,
+            &QAbstractItemModel::rowsAboutToBeMoved,
+            this,
+            [this](const QModelIndex &source, int from, int to, const QModelIndex &dest, int destRow) {
                 if (source.isValid() || dest.isValid()) {
                     qWarning() << "We do not support tree models";
 
                 } else {
-                    beginMoveRows(QModelIndex(),
-                                  sourceRowToRow(from),
-                                  sourceRowToRow(to),
-                                  QModelIndex(),
-                                  sourceRowToRow(destRow));
+                    beginMoveRows(QModelIndex(), sourceRowToRow(from), sourceRowToRow(to), QModelIndex(), sourceRowToRow(destRow));
                 }
             });
 
-    connect(sourceModelPtr, &QAbstractItemModel::rowsMoved,
-            this, [this] {
-                endMoveRows();
-            });
+    connect(sourceModelPtr, &QAbstractItemModel::rowsMoved, this, [this] {
+        endMoveRows();
+    });
 
+    connect(sourceModelPtr, &QAbstractItemModel::rowsAboutToBeRemoved, this, [this](const QModelIndex &parent, int from, int to) {
+        if (parent.isValid()) {
+            qWarning() << "We do not support tree models";
 
-    connect(sourceModelPtr, &QAbstractItemModel::rowsAboutToBeRemoved,
-            this, [this] (const QModelIndex &parent, int from, int to) {
-                if (parent.isValid()) {
-                    qWarning() << "We do not support tree models";
+        } else {
+            beginRemoveRows(QModelIndex(), sourceRowToRow(from), sourceRowToRow(to));
+        }
+    });
 
-                } else {
-                    beginRemoveRows(QModelIndex(),
-                                    sourceRowToRow(from),
-                                    sourceRowToRow(to));
-                }
-            });
+    connect(sourceModelPtr, &QAbstractItemModel::rowsRemoved, this, [this] {
+        endRemoveRows();
+        emit countChanged();
+    });
 
-    connect(sourceModelPtr, &QAbstractItemModel::rowsRemoved,
-            this, [this] {
-                endRemoveRows();
-                emit countChanged();
-            });
+    connect(sourceModelPtr, &QAbstractItemModel::modelAboutToBeReset, this, [this] {
+        beginResetModel();
+    });
 
-
-    connect(sourceModelPtr, &QAbstractItemModel::modelAboutToBeReset,
-            this, [this] {
-                beginResetModel();
-            });
-
-    connect(sourceModelPtr, &QAbstractItemModel::modelReset,
-            this, [this] {
-                endResetModel();
-                emit countChanged();
-            });
+    connect(sourceModelPtr, &QAbstractItemModel::modelReset, this, [this] {
+        endResetModel();
+        emit countChanged();
+    });
 
     // We do not have persistant indices
     // connect(sourceModelPtr, &QAbstractItemModel::layoutAboutToBeChanged),
@@ -370,7 +336,8 @@ int PlaceholderModel::dropPlaceholderIndex() const
 
 void PlaceholderModel::setDropPlaceholderIndex(int index)
 {
-    if (index == m_dropPlaceholderIndex) return;
+    if (index == m_dropPlaceholderIndex)
+        return;
 
     inhibitTriggering();
 
@@ -394,9 +361,7 @@ void PlaceholderModel::setDropPlaceholderIndex(int index)
         // Moving the placeholder
         int modelTo = index + (index > m_dropPlaceholderIndex ? 1 : 0);
 
-        if (beginMoveRows(
-                    QModelIndex(), m_dropPlaceholderIndex, m_dropPlaceholderIndex,
-                    QModelIndex(), modelTo)) {
+        if (beginMoveRows(QModelIndex(), m_dropPlaceholderIndex, m_dropPlaceholderIndex, QModelIndex(), modelTo)) {
             m_dropPlaceholderIndex = index;
             endMoveRows();
         }

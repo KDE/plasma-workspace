@@ -22,9 +22,9 @@
 
 #include "forwardingmodel.h"
 
+#include <KFilePlacesModel>
 #include <QQmlParserStatus>
 #include <QSortFilterProxyModel>
-#include <KFilePlacesModel>
 
 class QModelIndex;
 class KFileItem;
@@ -33,31 +33,31 @@ class GroupSortProxy : public QSortFilterProxyModel
 {
     Q_OBJECT
 
-    public:
-        explicit GroupSortProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel);
-        ~GroupSortProxy() override;
+public:
+    explicit GroupSortProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel);
+    ~GroupSortProxy() override;
 
-    protected:
-        bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
+protected:
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 };
 
 class InvalidAppsFilterProxy : public QSortFilterProxyModel
 {
     Q_OBJECT
 
-    public:
-        explicit InvalidAppsFilterProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel);
-        ~InvalidAppsFilterProxy() override;
+public:
+    explicit InvalidAppsFilterProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel);
+    ~InvalidAppsFilterProxy() override;
 
-    protected:
-        bool filterAcceptsRow(int source_row, const QModelIndex & source_parent) const override;
-        bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
+protected:
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
+    bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
 
-    private Q_SLOTS:
-        void connectNewFavoritesModel();
+private Q_SLOTS:
+    void connectNewFavoritesModel();
 
-    private:
-        QPointer<AbstractModel> m_parentModel;
+private:
+    QPointer<AbstractModel> m_parentModel;
 };
 
 class RecentUsageModel : public ForwardingModel, public QQmlParserStatus
@@ -68,67 +68,64 @@ class RecentUsageModel : public ForwardingModel, public QQmlParserStatus
     Q_PROPERTY(int ordering READ ordering WRITE setOrdering NOTIFY orderingChanged)
     Q_PROPERTY(IncludeUsage shownItems READ shownItems WRITE setShownItems NOTIFY shownItemsChanged)
 
-    public:
-        enum IncludeUsage {
-            AppsAndDocs,
-            OnlyApps,
-            OnlyDocs,
-        };
-        Q_ENUM(IncludeUsage)
+public:
+    enum IncludeUsage {
+        AppsAndDocs,
+        OnlyApps,
+        OnlyDocs,
+    };
+    Q_ENUM(IncludeUsage)
 
-        enum Ordering {
-            Recent,
-            Popular,
-        };
+    enum Ordering {
+        Recent,
+        Popular,
+    };
 
-        explicit RecentUsageModel(
-                QObject *parent = nullptr,
-                IncludeUsage usage = AppsAndDocs,
-                int ordering = Recent);
-        ~RecentUsageModel() override;
+    explicit RecentUsageModel(QObject *parent = nullptr, IncludeUsage usage = AppsAndDocs, int ordering = Recent);
+    ~RecentUsageModel() override;
 
-        QString description() const override;
+    QString description() const override;
 
-        QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-        Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
+    Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
 
-        bool hasActions() const override;
-        QVariantList actions() const override;
+    bool hasActions() const override;
+    QVariantList actions() const override;
 
-        void setShownItems(IncludeUsage usage);
-        IncludeUsage shownItems() const;
+    void setShownItems(IncludeUsage usage);
+    IncludeUsage shownItems() const;
 
-        void setOrdering(int ordering);
-        int ordering() const;
+    void setOrdering(int ordering);
+    int ordering() const;
 
-        void classBegin() override;
-        void componentComplete() override;
+    void classBegin() override;
+    void componentComplete() override;
 
-    Q_SIGNALS:
-        void orderingChanged(int ordering);
-        void shownItemsChanged();
+Q_SIGNALS:
+    void orderingChanged(int ordering);
+    void shownItemsChanged();
 
-    private Q_SLOTS:
-        void refresh() override;
+private Q_SLOTS:
+    void refresh() override;
 
-    private:
-        QVariant appData(const QString &resource, int role) const;
-        QVariant docData(const QString &resource, int role) const;
+private:
+    QVariant appData(const QString &resource, int role) const;
+    QVariant docData(const QString &resource, int role) const;
 
-        QString resourceAt(int row) const;
+    QString resourceAt(int row) const;
 
-        QString forgetAllActionName() const;
+    QString forgetAllActionName() const;
 
-        QModelIndex findPlaceForKFileItem(const KFileItem &fileItem) const;
+    QModelIndex findPlaceForKFileItem(const KFileItem &fileItem) const;
 
-        IncludeUsage m_usage;
-        QPointer<QAbstractItemModel> m_activitiesModel;
+    IncludeUsage m_usage;
+    QPointer<QAbstractItemModel> m_activitiesModel;
 
-        Ordering m_ordering;
+    Ordering m_ordering;
 
-        bool m_complete;
-        KFilePlacesModel *m_placesModel;
+    bool m_complete;
+    KFilePlacesModel *m_placesModel;
 };
 
 #endif

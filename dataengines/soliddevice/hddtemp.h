@@ -20,38 +20,36 @@
 #ifndef HDDTEMP_H
 #define HDDTEMP_H
 
-#include <QObject>
 #include <QMap>
+#include <QObject>
 #include <QString>
 #include <QStringList>
-#include <QVariant>
 #include <QTimer>
-
+#include <QVariant>
 
 class HddTemp : public QObject
 {
     Q_OBJECT
 
-    public:
-        enum DataType {
-            Temperature=0,
-            Unit,
-        };
-        
-        explicit HddTemp(QObject *parent = nullptr);
-        ~HddTemp() override;
-        QStringList sources();
-        QVariant data(const QString source, const DataType type) const;
+public:
+    enum DataType {
+        Temperature = 0,
+        Unit,
+    };
 
-    protected:
-        void timerEvent(QTimerEvent *event) override;
+    explicit HddTemp(QObject *parent = nullptr);
+    ~HddTemp() override;
+    QStringList sources();
+    QVariant data(const QString source, const DataType type) const;
 
-    private:
-        int m_failCount;
-        bool m_cacheValid;
-        QMap<QString, QList<QVariant> > m_data;
-        bool updateData();
+protected:
+    void timerEvent(QTimerEvent *event) override;
+
+private:
+    int m_failCount;
+    bool m_cacheValid;
+    QMap<QString, QList<QVariant>> m_data;
+    bool updateData();
 };
-
 
 #endif

@@ -20,9 +20,9 @@
  */
 
 #include "notificationsmodel.h"
-#include "server.h"
 #include "abstractnotificationsmodel_p.h"
 #include "notification_p.h"
+#include "server.h"
 
 #include "debug.h"
 
@@ -80,7 +80,6 @@ void NotificationsModel::close(uint notificationId)
     }
 }
 
-
 void NotificationsModel::invokeDefaultAction(uint notificationId)
 {
     const int row = rowOfNotification(notificationId);
@@ -129,7 +128,6 @@ void NotificationsModel::reply(uint notificationId, const QString &text)
     Server::self().reply(notification.dBusService(), notificationId, text);
 }
 
-
 void NotificationsModel::configure(uint notificationId)
 {
     const int row = rowOfNotification(notificationId);
@@ -172,9 +170,5 @@ void NotificationsModel::configure(const QString &desktopEntry, const QString &n
         args.append(eventId);
     }
 
-    QProcess::startDetached(QStringLiteral("kcmshell5"), {
-        QStringLiteral("notifications"),
-        QStringLiteral("--args"),
-        KShell::joinArgs(args)
-    });
+    QProcess::startDetached(QStringLiteral("kcmshell5"), {QStringLiteral("notifications"), QStringLiteral("--args"), KShell::joinArgs(args)});
 }

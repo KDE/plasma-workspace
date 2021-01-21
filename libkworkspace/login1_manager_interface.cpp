@@ -30,7 +30,8 @@ enum LogindProvider {
 };
 static LogindProvider s_mode = Unknown;
 
-static LogindProvider getLogindMode() {
+static LogindProvider getLogindMode()
+{
     if (s_mode != Unknown) {
         return s_mode;
     }
@@ -61,6 +62,5 @@ OrgFreedesktopLogin1ManagerInterface::OrgFreedesktopLogin1ManagerInterface(const
 OrgFreedesktopLogin1ManagerInterface::~OrgFreedesktopLogin1ManagerInterface()
 {
 }
-
 
 #include "login1_manager_interface.moc"

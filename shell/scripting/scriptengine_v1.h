@@ -21,8 +21,8 @@
 #ifndef SCRIPTENGINE_V1
 #define SCRIPTENGINE_V1
 
-#include <QObject>
 #include <QJSValue>
+#include <QObject>
 
 #include <QFontMetrics>
 
@@ -33,8 +33,8 @@
 
 namespace WorkspaceScripting
 {
-
-class ScriptEngine::V1 : public QObject {
+class ScriptEngine::V1 : public QObject
+{
     Q_OBJECT
     Q_PROPERTY(int gridUnit READ gridUnit CONSTANT)
 
@@ -69,12 +69,13 @@ public:
     Q_INVOKABLE QString immutability() const;
     Q_INVOKABLE QJSValue createContainment(const QString &type, const QString &defautPlugin, const QString &plugin = QString());
 
-    //for ctors
+    // for ctors
     Q_INVOKABLE QJSValue newPanel(const QString &plugin = QStringLiteral("org.kde.panel"));
     Q_INVOKABLE QJSValue configFile(const QJSValue &config = QJSValue(), const QString &group = QString());
 
 Q_SIGNALS:
     void print(const QJSValue &param);
+
 private:
     ScriptEngine *m_engine;
 };
@@ -82,4 +83,3 @@ private:
 }
 
 #endif
-

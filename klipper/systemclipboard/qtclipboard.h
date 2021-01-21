@@ -28,4 +28,3 @@ public:
     void clear(QClipboard::Mode mode) override;
     const QMimeData *mimeData(QClipboard::Mode mode) const override;
 };
-

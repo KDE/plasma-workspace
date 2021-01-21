@@ -20,21 +20,19 @@
 #ifndef APPLET
 #define APPLET
 
-#include <QObject>
 #include <QJSValue>
+#include <QObject>
 #include <QWeakPointer>
 
 #include <kconfiggroup.h>
 
-
 namespace Plasma
 {
-    class Applet;
+class Applet;
 } // namespace Plasma
 
 namespace WorkspaceScripting
 {
-
 class ScriptEngine;
 
 class Applet : public QObject
@@ -79,10 +77,9 @@ public Q_SLOTS:
 
 private:
     class Private;
-    Private * const d;
+    Private *const d;
 };
 
 }
 
 #endif
-

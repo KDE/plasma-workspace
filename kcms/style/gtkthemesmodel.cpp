@@ -18,21 +18,20 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QStandardPaths>
-#include <QDir>
-#include <QUrl>
 #include <QDebug>
+#include <QDir>
+#include <QStandardPaths>
+#include <QUrl>
 
 #include <KIO/DeleteJob>
 
 #include "gtkthemesmodel.h"
 
-GtkThemesModel::GtkThemesModel(QObject* parent)
+GtkThemesModel::GtkThemesModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_selectedTheme(QStringLiteral("Breeze"))
     , m_themesList()
 {
-
 }
 
 void GtkThemesModel::load()
@@ -44,7 +43,6 @@ void GtkThemesModel::load()
         // If the directory contains any of gtk-3.X folders, it is the GTK3 theme for sure
         QDir possibleThemeDirectory(possibleThemePath);
         if (!possibleThemeDirectory.entryList(gtk3SubdirPattern, QDir::Dirs).isEmpty()) {
-
             // Do not show dark Breeze GTK variant, since the colors of it
             // are coming from the color scheme and selecting them here
             // is redundant and does not work
@@ -59,7 +57,8 @@ void GtkThemesModel::load()
     setThemesList(gtk3ThemesNames);
 }
 
-QString GtkThemesModel::themePath(const QString &themeName) {
+QString GtkThemesModel::themePath(const QString &themeName)
+{
     if (themeName.isEmpty()) {
         return QString();
     } else {
@@ -67,7 +66,7 @@ QString GtkThemesModel::themePath(const QString &themeName) {
     }
 }
 
-QVariant GtkThemesModel::data(const QModelIndex& index, int role) const
+QVariant GtkThemesModel::data(const QModelIndex &index, int role) const
 {
     if (role == Qt::DisplayRole || role == Roles::ThemeNameRole) {
         if (index.row() < 0 || index.row() > m_themesList.count()) {
@@ -95,7 +94,7 @@ QHash<int, QByteArray> GtkThemesModel::roleNames() const
     return roles;
 }
 
-int GtkThemesModel::rowCount(const QModelIndex& parent) const
+int GtkThemesModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {
         return 0;
@@ -103,14 +102,15 @@ int GtkThemesModel::rowCount(const QModelIndex& parent) const
     return m_themesList.count();
 }
 
-void GtkThemesModel::setThemesList(const QMap<QString, QString>& themes)
+void GtkThemesModel::setThemesList(const QMap<QString, QString> &themes)
 {
     beginResetModel();
     m_themesList = themes;
     endResetModel();
 }
 
-QMap<QString, QString> GtkThemesModel::themesList() {
+QMap<QString, QString> GtkThemesModel::themesList()
+{
     return m_themesList;
 }
 
@@ -128,13 +128,11 @@ QStringList GtkThemesModel::possiblePathsToThemes()
 {
     QStringList possibleThemesPaths;
 
-    QStringList themesLocationsPaths = QStandardPaths::locateAll(
-            QStandardPaths::GenericDataLocation,
-            QStringLiteral("themes"),
-            QStandardPaths::LocateDirectory);
+    QStringList themesLocationsPaths =
+        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("themes"), QStandardPaths::LocateDirectory);
     themesLocationsPaths << QDir::homePath() + QStringLiteral("/.themes");
 
-    for (const QString& themesLocationPath : qAsConst(themesLocationsPaths)) {
+    for (const QString &themesLocationPath : qAsConst(themesLocationsPaths)) {
         const QStringList possibleThemesDirectoriesNames = QDir(themesLocationPath).entryList(QDir::NoDotAndDotDot | QDir::AllDirs);
         for (const QString &possibleThemeDirectoryName : possibleThemesDirectoriesNames) {
             possibleThemesPaths += themesLocationPath + '/' + possibleThemeDirectoryName;
@@ -152,8 +150,8 @@ bool GtkThemesModel::selectedThemeRemovable()
 void GtkThemesModel::removeSelectedTheme()
 {
     QString path = themePath(m_selectedTheme);
-    KIO::DeleteJob* deleteJob = KIO::del(QUrl::fromLocalFile(path), KIO::HideProgressInfo);
-    connect(deleteJob, &KJob::finished, this, [this](){
+    KIO::DeleteJob *deleteJob = KIO::del(QUrl::fromLocalFile(path), KIO::HideProgressInfo);
+    connect(deleteJob, &KJob::finished, this, [this]() {
         Q_EMIT themeRemoved();
     });
 }

@@ -1,21 +1,21 @@
 /******************************************************************************
-*   Copyright 2013 Sebastian Kügler <sebas@kde.org>                           *
-*                                                                             *
-*   This library is free software; you can redistribute it and/or             *
-*   modify it under the terms of the GNU Library General Public               *
-*   License as published by the Free Software Foundation; either              *
-*   version 2 of the License, or (at your option) any later version.          *
-*                                                                             *
-*   This library is distributed in the hope that it will be useful,           *
-*   but WITHOUT ANY WARRANTY; without even the implied warranty of            *
-*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU          *
-*   Library General Public License for more details.                          *
-*                                                                             *
-*   You should have received a copy of the GNU Library General Public License *
-*   along with this library; see the file COPYING.LIB.  If not, write to      *
-*   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,      *
-*   Boston, MA 02110-1301, USA.                                               *
-*******************************************************************************/
+ *   Copyright 2013 Sebastian Kügler <sebas@kde.org>                           *
+ *                                                                             *
+ *   This library is free software; you can redistribute it and/or             *
+ *   modify it under the terms of the GNU Library General Public               *
+ *   License as published by the Free Software Foundation; either              *
+ *   version 2 of the License, or (at your option) any later version.          *
+ *                                                                             *
+ *   This library is distributed in the hope that it will be useful,           *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of            *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU          *
+ *   Library General Public License for more details.                          *
+ *                                                                             *
+ *   You should have received a copy of the GNU Library General Public License *
+ *   along with this library; see the file COPYING.LIB.  If not, write to      *
+ *   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,      *
+ *   Boston, MA 02110-1301, USA.                                               *
+ *******************************************************************************/
 
 #include "pumpjob.h"
 
@@ -28,12 +28,13 @@
 
 static QTextStream cout(stdout);
 
-class PumpJobPrivate {
+class PumpJobPrivate
+{
 public:
     QString name;
     QString error;
 
-    QTimer* timer;
+    QTimer *timer;
     int interval = 200;
 
     int counter = 0;
@@ -41,8 +42,8 @@ public:
     bool suspended = false;
 };
 
-PumpJob::PumpJob(int interval) :
-    KIO::Job()
+PumpJob::PumpJob(int interval)
+    : KIO::Job()
 {
     d = new PumpJobPrivate;
 
@@ -62,11 +63,11 @@ PumpJob::PumpJob(int interval) :
 
 void PumpJob::init()
 {
-    emit description(this, i18n("Pump Job"),
+    emit description(this,
+                     i18n("Pump Job"),
                      qMakePair(i18n("Source"), QStringLiteral("this is the source")),
                      qMakePair(i18n("Destination"), QStringLiteral("destination, baby")));
     d->timer->start();
-
 }
 
 PumpJob::~PumpJob()
@@ -125,7 +126,7 @@ void PumpJob::timeout()
 
     qDebug() << "percent: " << percent() << "  Seconds: " << seconds;
     if (d->counter % 20 == 0) {
-        //qDebug() << "percent: " << percent() << "  Seconds: " << seconds;
+        // qDebug() << "percent: " << percent() << "  Seconds: " << seconds;
     }
 
     if (d->counter >= 100) {
@@ -135,4 +136,3 @@ void PumpJob::timeout()
 }
 
 #include "moc_pumpjob.cpp"
-

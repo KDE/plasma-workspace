@@ -22,8 +22,8 @@
 #include <KAuthorized>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
-#include <KToolInvocation>
 #include <KShell>
+#include <KToolInvocation>
 #include <QRegularExpression>
 #include <QStandardPaths>
 
@@ -41,9 +41,7 @@ ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData, const
     suspendMatching(!enabled);
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds commands that match :q:, using common shell syntax")));
-    m_actionList = {addAction(QStringLiteral("runInTerminal"),
-                            QIcon::fromTheme(QStringLiteral("utilities-terminal")),
-                            i18n("Run in Terminal Window"))};
+    m_actionList = {addAction(QStringLiteral("runInTerminal"), QIcon::fromTheme(QStringLiteral("utilities-terminal")), i18n("Run in Terminal Window"))};
     m_matchIcon = QIcon::fromTheme(QStringLiteral("system-run"));
 }
 

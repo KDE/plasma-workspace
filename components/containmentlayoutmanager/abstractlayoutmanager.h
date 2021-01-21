@@ -20,8 +20,8 @@
 
 #pragma once
 
-#include <QObject>
 #include "appletslayout.h"
+#include <QObject>
 
 class ItemContainer;
 
@@ -65,7 +65,7 @@ public:
      */
     void releaseSpace(ItemContainer *item);
 
-// VIRTUALS
+    // VIRTUALS
     virtual QString serializeLayout() const = 0;
 
     virtual void parseLayout(const QString &savedLayout) = 0;
@@ -119,7 +119,8 @@ protected:
     virtual void releaseSpaceImpl(ItemContainer *item) = 0;
 
     /**
-     * @returns a rectangle big at least as minimumSize, trying to be as near as possible to the current item's geometry, displaced in the direction we asked, forwards or backwards
+     * @returns a rectangle big at least as minimumSize, trying to be as near as possible to the current item's geometry, displaced in the direction we asked,
+     * forwards or backwards
      * @param item the item container we want to place an item in
      * @param minimumSize the minimum size we need to make sure is available
      * @param direction the preferred item layout direction, can be Closest, LeftToRight, RightToLeft, TopToBottom, and BottomToTop
@@ -134,4 +135,3 @@ private:
     // size in pixels of a crid cell
     QSizeF m_cellSize;
 };
-

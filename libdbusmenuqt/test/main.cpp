@@ -18,11 +18,11 @@
 
 #include <QApplication>
 
+#include <QDateTime>
+#include <QDebug>
+#include <QIcon>
 #include <QMainWindow>
 #include <QMenuBar>
-#include <QDateTime>
-#include <QIcon>
-#include <QDebug>
 
 class MainWindow : public QMainWindow
 {
@@ -30,8 +30,8 @@ public:
     MainWindow();
 };
 
-MainWindow::MainWindow() :
-    QMainWindow()
+MainWindow::MainWindow()
+    : QMainWindow()
 {
     /*set an initial menu with the following
     Menu A

@@ -34,9 +34,7 @@ ClipboardEngine::ClipboardEngine(QObject *parent, const QVariantList &args)
     setModel(s_clipboardSourceName, m_klipper->history()->model());
     setData(s_clipboardSourceName, s_barcodeKey, true);
     auto updateCurrent = [this]() {
-        setData(s_clipboardSourceName,
-                QStringLiteral("current"),
-                m_klipper->history()->empty() ? QString() : m_klipper->history()->first()->text());
+        setData(s_clipboardSourceName, QStringLiteral("current"), m_klipper->history()->empty() ? QString() : m_klipper->history()->first()->text());
     };
     connect(m_klipper->history(), &History::topChanged, this, updateCurrent);
     updateCurrent();

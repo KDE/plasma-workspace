@@ -19,55 +19,52 @@
 #include "soliddeviceengine.h"
 #include "soliddeviceservice.h"
 
-#include <QMetaEnum>
 #include <QDateTime>
+#include <QMetaEnum>
 #include <Solid/GenericInterface>
 #include <klocalizedstring.h>
 
-#include <QApplication>
-#include <QDebug>
 #include <KFormat>
 #include <KNotification>
+#include <QApplication>
+#include <QDebug>
 
 #include <Plasma/DataContainer>
 
-//TODO: implement in libsolid2
+// TODO: implement in libsolid2
 namespace
 {
-    template <class DevIface> DevIface *getAncestorAs(const Solid::Device &device)
-    {
-        for (Solid::Device parent = device.parent();
-             parent.isValid();
-             parent = parent.parent()) {
-            if (parent.is<DevIface>()) {
-                return parent.as<DevIface>();
-            }
+template<class DevIface> DevIface *getAncestorAs(const Solid::Device &device)
+{
+    for (Solid::Device parent = device.parent(); parent.isValid(); parent = parent.parent()) {
+        if (parent.is<DevIface>()) {
+            return parent.as<DevIface>();
         }
-        return nullptr;
     }
+    return nullptr;
+}
 }
 
-SolidDeviceEngine::SolidDeviceEngine(QObject* parent, const QVariantList& args)
-        : Plasma::DataEngine(parent, args),
-          m_temperature(nullptr),
-          m_notifier(nullptr)
+SolidDeviceEngine::SolidDeviceEngine(QObject *parent, const QVariantList &args)
+    : Plasma::DataEngine(parent, args)
+    , m_temperature(nullptr)
+    , m_notifier(nullptr)
 {
     Q_UNUSED(args)
     m_signalmanager = new DeviceSignalMapManager(this);
 
     listenForNewDevices();
     setMinimumPollingInterval(1000);
-    connect(this, &Plasma::DataEngine::sourceRemoved,
-            this, &SolidDeviceEngine::sourceWasRemoved);
+    connect(this, &Plasma::DataEngine::sourceRemoved, this, &SolidDeviceEngine::sourceWasRemoved);
 }
 
 SolidDeviceEngine::~SolidDeviceEngine()
 {
 }
 
-Plasma::Service* SolidDeviceEngine::serviceForSource(const QString& source)
+Plasma::Service *SolidDeviceEngine::serviceForSource(const QString &source)
 {
-    return new SolidDeviceService (this, source);
+    return new SolidDeviceService(this, source);
 }
 
 void SolidDeviceEngine::listenForNewDevices()
@@ -76,12 +73,10 @@ void SolidDeviceEngine::listenForNewDevices()
         return;
     }
 
-    //detect when new devices are added
+    // detect when new devices are added
     m_notifier = Solid::DeviceNotifier::instance();
-    connect(m_notifier, &Solid::DeviceNotifier::deviceAdded,
-            this, &SolidDeviceEngine::deviceAdded);
-    connect(m_notifier, &Solid::DeviceNotifier::deviceRemoved,
-            this, &SolidDeviceEngine::deviceRemoved);
+    connect(m_notifier, &Solid::DeviceNotifier::deviceAdded, this, &SolidDeviceEngine::deviceAdded);
+    connect(m_notifier, &Solid::DeviceNotifier::deviceRemoved, this, &SolidDeviceEngine::deviceRemoved);
 }
 
 bool SolidDeviceEngine::sourceRequestEvent(const QString &name)
@@ -89,7 +84,7 @@ bool SolidDeviceEngine::sourceRequestEvent(const QString &name)
     if (name.startsWith('/')) {
         Solid::Device device = Solid::Device(name);
         if (device.isValid()) {
-            if (m_devicemap.contains(name) ) {
+            if (m_devicemap.contains(name)) {
                 return true;
             } else {
                 m_devicemap[name] = device;
@@ -98,7 +93,7 @@ bool SolidDeviceEngine::sourceRequestEvent(const QString &name)
         }
     } else {
         Solid::Predicate predicate = Solid::Predicate::fromString(name);
-        if (predicate.isValid()  && !m_predicatemap.contains(name)) {
+        if (predicate.isValid() && !m_predicatemap.contains(name)) {
             foreach (const Solid::Device &device, Solid::Device::listFromQuery(predicate)) {
                 m_predicatemap[name] << device.udi();
             }
@@ -186,7 +181,8 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         QStringList bus;
         bus << I18N_NOOP("Ide") << I18N_NOOP("Usb") << I18N_NOOP("Ieee1394") << I18N_NOOP("Scsi") << I18N_NOOP("Sata") << I18N_NOOP("Platform");
         QStringList drivetype;
-        drivetype << I18N_NOOP("Hard Disk") <<  I18N_NOOP("Cdrom Drive") <<  I18N_NOOP("Floppy") <<  I18N_NOOP("Tape") <<  I18N_NOOP("Compact Flash") <<  I18N_NOOP("Memory Stick") <<  I18N_NOOP("Smart Media") <<  I18N_NOOP("SdMmc") <<  I18N_NOOP("Xd");
+        drivetype << I18N_NOOP("Hard Disk") << I18N_NOOP("Cdrom Drive") << I18N_NOOP("Floppy") << I18N_NOOP("Tape") << I18N_NOOP("Compact Flash")
+                  << I18N_NOOP("Memory Stick") << I18N_NOOP("Smart Media") << I18N_NOOP("SdMmc") << I18N_NOOP("Xd");
 
         setData(name, I18N_NOOP("Bus"), bus.at((int)storagedrive->bus()));
         setData(name, I18N_NOOP("Drive Type"), drivetype.at((int)storagedrive->driveType()));
@@ -199,14 +195,13 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         bool isHotpluggable = false;
         Solid::StorageDrive *drive = getAncestorAs<Solid::StorageDrive>(device);
         if (drive) {
-            //remove check for isHotpluggable() when plasmoids are changed to check for both properties
+            // remove check for isHotpluggable() when plasmoids are changed to check for both properties
             isRemovable = (drive->isRemovable() || drive->isHotpluggable());
             isHotpluggable = drive->isHotpluggable();
         }
         setData(name, I18N_NOOP("Removable"), isRemovable);
         setData(name, I18N_NOOP("Hotpluggable"), isHotpluggable);
     }
-
 
     if (device.is<Solid::OpticalDrive>()) {
         Solid::OpticalDrive *opticaldrive = device.as<Solid::OpticalDrive>();
@@ -271,14 +266,13 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         setData(name, I18N_NOOP("Read Speed"), opticaldrive->readSpeed());
         setData(name, I18N_NOOP("Write Speed"), opticaldrive->writeSpeed());
 
-        //the following method return QList<int> so we need to convert it to QList<QVariant>
+        // the following method return QList<int> so we need to convert it to QList<QVariant>
         const QList<int> writespeeds = opticaldrive->writeSpeeds();
         QList<QVariant> variantlist;
-        foreach(int num, writespeeds) {
+        foreach (int num, writespeeds) {
             variantlist << num;
         }
         setData(name, I18N_NOOP("Write Speeds"), variantlist);
-
     }
     if (device.is<Solid::StorageVolume>()) {
         Solid::StorageVolume *storagevolume = device.as<Solid::StorageVolume>();
@@ -289,8 +283,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         devicetypes << I18N_NOOP("Storage Volume");
 
         QStringList usagetypes;
-        usagetypes << i18n("Other") << i18n("Unused") << i18n("File System")
-                   << i18n("Partition Table") << i18n("Raid") << i18n("Encrypted");
+        usagetypes << i18n("Other") << i18n("Unused") << i18n("File System") << i18n("Partition Table") << i18n("Raid") << i18n("Encrypted");
 
         if (usagetypes.count() > storagevolume->usage()) {
             setData(name, I18N_NOOP("Usage"), usagetypes.at((int)storagevolume->usage()));
@@ -304,15 +297,15 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         setData(name, I18N_NOOP("UUID"), storagevolume->uuid());
         updateInUse(name);
 
-        //Check if the volume is part of an encrypted container
-        //This needs to trigger an update for the encrypted container volume since
-        //libsolid cannot notify us when the accessibility of the container changes
+        // Check if the volume is part of an encrypted container
+        // This needs to trigger an update for the encrypted container volume since
+        // libsolid cannot notify us when the accessibility of the container changes
         Solid::Device encryptedContainer = storagevolume->encryptedContainer();
         if (encryptedContainer.isValid()) {
             const QString containerUdi = encryptedContainer.udi();
             setData(name, I18N_NOOP("Encrypted Container"), containerUdi);
             m_encryptedContainerMap[name] = containerUdi;
-            //TODO: compress the calls?
+            // TODO: compress the calls?
             forceUpdateAccessibility(containerUdi);
         }
     }
@@ -324,7 +317,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
 
         devicetypes << I18N_NOOP("OpticalDisc");
 
-        //get the content types
+        // get the content types
         QStringList contenttypelist;
         const Solid::OpticalDisc::ContentTypes contenttypes = opticaldisc->availableContent();
         if (contenttypes.testFlag(Solid::OpticalDisc::Audio)) {
@@ -348,13 +341,11 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         setData(name, I18N_NOOP("Available Content"), contenttypelist);
 
         QStringList disctypes;
-        disctypes << I18N_NOOP("Unknown Disc Type") << I18N_NOOP("CD Rom") << I18N_NOOP("CD Recordable")
-                << I18N_NOOP("CD Rewritable") << I18N_NOOP("DVD Rom") << I18N_NOOP("DVD Ram")
-                << I18N_NOOP("DVD Recordable") << I18N_NOOP("DVD Rewritable") << I18N_NOOP("DVD Plus Recordable")
-                << I18N_NOOP("DVD Plus Rewritable") << I18N_NOOP("DVD Plus Recordable Duallayer")
-                << I18N_NOOP("DVD Plus Rewritable Duallayer") << I18N_NOOP("Blu Ray Rom") << I18N_NOOP("Blu Ray Recordable")
-                << I18N_NOOP("Blu Ray Rewritable") << I18N_NOOP("HD DVD Rom") <<  I18N_NOOP("HD DVD Recordable")
-                << I18N_NOOP("HD DVD Rewritable");
+        disctypes << I18N_NOOP("Unknown Disc Type") << I18N_NOOP("CD Rom") << I18N_NOOP("CD Recordable") << I18N_NOOP("CD Rewritable") << I18N_NOOP("DVD Rom")
+                  << I18N_NOOP("DVD Ram") << I18N_NOOP("DVD Recordable") << I18N_NOOP("DVD Rewritable") << I18N_NOOP("DVD Plus Recordable")
+                  << I18N_NOOP("DVD Plus Rewritable") << I18N_NOOP("DVD Plus Recordable Duallayer") << I18N_NOOP("DVD Plus Rewritable Duallayer")
+                  << I18N_NOOP("Blu Ray Rom") << I18N_NOOP("Blu Ray Recordable") << I18N_NOOP("Blu Ray Rewritable") << I18N_NOOP("HD DVD Rom")
+                  << I18N_NOOP("HD DVD Recordable") << I18N_NOOP("HD DVD Rewritable");
         //+1 because the enum starts at -1
         setData(name, I18N_NOOP("Disc Type"), disctypes.at((int)opticaldisc->discType() + 1));
         setData(name, I18N_NOOP("Appendable"), opticaldisc->isAppendable());
@@ -375,7 +366,6 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         // Cameras are necessarily Removable and Hotpluggable
         setData(name, I18N_NOOP("Removable"), true);
         setData(name, I18N_NOOP("Hotpluggable"), true);
-
     }
     if (device.is<Solid::PortableMediaPlayer>()) {
         Solid::PortableMediaPlayer *mediaplayer = device.as<Solid::PortableMediaPlayer>();
@@ -400,10 +390,9 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         devicetypes << I18N_NOOP("Battery");
 
         QStringList batterytype;
-        batterytype << I18N_NOOP("Unknown Battery") << I18N_NOOP("PDA Battery") << I18N_NOOP("UPS Battery")
-                << I18N_NOOP("Primary Battery") << I18N_NOOP("Mouse Battery") << I18N_NOOP("Keyboard Battery")
-                << I18N_NOOP("Keyboard Mouse Battery") << I18N_NOOP("Camera Battery") << I18N_NOOP("Phone Battery")
-                << I18N_NOOP("Monitor Battery") << I18N_NOOP("Gaming Input Battery") << I18N_NOOP("Bluetooth Battery");
+        batterytype << I18N_NOOP("Unknown Battery") << I18N_NOOP("PDA Battery") << I18N_NOOP("UPS Battery") << I18N_NOOP("Primary Battery")
+                    << I18N_NOOP("Mouse Battery") << I18N_NOOP("Keyboard Battery") << I18N_NOOP("Keyboard Mouse Battery") << I18N_NOOP("Camera Battery")
+                    << I18N_NOOP("Phone Battery") << I18N_NOOP("Monitor Battery") << I18N_NOOP("Gaming Input Battery") << I18N_NOOP("Bluetooth Battery");
 
         QStringList chargestate;
         chargestate << I18N_NOOP("Not Charging") << I18N_NOOP("Charging") << I18N_NOOP("Discharging") << I18N_NOOP("Fully Charged");
@@ -420,19 +409,17 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
     using namespace Solid;
     // we cannot just iterate the enum in reverse order since Battery comes second to last
     // and then our phone which also has a battery gets treated as battery :(
-    static const Solid::DeviceInterface::Type typeOrder[] = {
-        Solid::DeviceInterface::PortableMediaPlayer,
-        Solid::DeviceInterface::Camera,
-        Solid::DeviceInterface::OpticalDisc,
-        Solid::DeviceInterface::StorageVolume,
-        Solid::DeviceInterface::OpticalDrive,
-        Solid::DeviceInterface::StorageDrive,
-        Solid::DeviceInterface::NetworkShare,
-        Solid::DeviceInterface::StorageAccess,
-        Solid::DeviceInterface::Block,
-        Solid::DeviceInterface::Battery,
-        Solid::DeviceInterface::Processor
-    };
+    static const Solid::DeviceInterface::Type typeOrder[] = {Solid::DeviceInterface::PortableMediaPlayer,
+                                                             Solid::DeviceInterface::Camera,
+                                                             Solid::DeviceInterface::OpticalDisc,
+                                                             Solid::DeviceInterface::StorageVolume,
+                                                             Solid::DeviceInterface::OpticalDrive,
+                                                             Solid::DeviceInterface::StorageDrive,
+                                                             Solid::DeviceInterface::NetworkShare,
+                                                             Solid::DeviceInterface::StorageAccess,
+                                                             Solid::DeviceInterface::Block,
+                                                             Solid::DeviceInterface::Battery,
+                                                             Solid::DeviceInterface::Processor};
 
     for (int i = 0; i < 11; ++i) {
         const Solid::DeviceInterface *interface = device.asDeviceInterface(typeOrder[i]);
@@ -446,7 +433,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
     return true;
 }
 
-void SolidDeviceEngine::deviceAdded(const QString& udi)
+void SolidDeviceEngine::deviceAdded(const QString &udi)
 {
     Solid::Device device(udi);
 
@@ -461,33 +448,25 @@ void SolidDeviceEngine::deviceAdded(const QString& udi)
     if (device.is<Solid::OpticalDisc>()) {
         Solid::OpticalDrive *drive = getAncestorAs<Solid::OpticalDrive>(device);
         if (drive) {
-            connect(drive, &Solid::OpticalDrive::ejectRequested,
-                    this, &SolidDeviceEngine::setUnmountingState);
-            connect(drive, &Solid::OpticalDrive::ejectDone,
-                    this, &SolidDeviceEngine::setIdleState);
+            connect(drive, &Solid::OpticalDrive::ejectRequested, this, &SolidDeviceEngine::setUnmountingState);
+            connect(drive, &Solid::OpticalDrive::ejectDone, this, &SolidDeviceEngine::setIdleState);
         }
-    }
-    else if (device.is<Solid::StorageVolume>()) {
+    } else if (device.is<Solid::StorageVolume>()) {
         // update the volume in case of 2-stage devices
         if (m_devicemap.contains(udi) && containerForSource(udi)->data().value(I18N_NOOP("Size")).toULongLong() == 0) {
-            Solid::GenericInterface * iface = device.as<Solid::GenericInterface>();
+            Solid::GenericInterface *iface = device.as<Solid::GenericInterface>();
             if (iface) {
                 iface->setProperty("udi", udi);
-                connect(iface, SIGNAL(propertyChanged(QMap<QString,int>)),
-                        this, SLOT(deviceChanged(QMap<QString,int>)));
+                connect(iface, SIGNAL(propertyChanged(QMap<QString, int>)), this, SLOT(deviceChanged(QMap<QString, int>)));
             }
         }
 
         Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
         if (access) {
-            connect(access, &Solid::StorageAccess::setupRequested,
-                    this, &SolidDeviceEngine::setMountingState);
-            connect(access, &Solid::StorageAccess::setupDone,
-                    this, &SolidDeviceEngine::setIdleState);
-            connect(access, &Solid::StorageAccess::teardownRequested,
-                    this, &SolidDeviceEngine::setUnmountingState);
-            connect(access, &Solid::StorageAccess::teardownDone,
-                    this, &SolidDeviceEngine::setIdleState);
+            connect(access, &Solid::StorageAccess::setupRequested, this, &SolidDeviceEngine::setMountingState);
+            connect(access, &Solid::StorageAccess::setupDone, this, &SolidDeviceEngine::setIdleState);
+            connect(access, &Solid::StorageAccess::teardownRequested, this, &SolidDeviceEngine::setUnmountingState);
+            connect(access, &Solid::StorageAccess::teardownDone, this, &SolidDeviceEngine::setIdleState);
         }
     }
 }
@@ -531,7 +510,7 @@ void SolidDeviceEngine::setIdleState(Solid::ErrorType error, QVariant errorData,
 
 void SolidDeviceEngine::deviceChanged(const QMap<QString, int> &props)
 {
-    Solid::GenericInterface * iface = qobject_cast<Solid::GenericInterface *>(sender());
+    Solid::GenericInterface *iface = qobject_cast<Solid::GenericInterface *>(sender());
     if (iface && iface->isValid() && props.contains(QLatin1String("Size")) && iface->property(QStringLiteral("Size")).toInt() > 0) {
         const QString udi = qobject_cast<QObject *>(iface)->property("udi").toString();
         if (populateDeviceData(udi))
@@ -553,8 +532,7 @@ bool SolidDeviceEngine::updateStorageSpace(const QString &udi)
         QTimer *timer = new QTimer(this);
         timer->setSingleShot(true);
         connect(timer, &QTimer::timeout, [path]() {
-            KNotification::event(KNotification::Error, i18n("Filesystem is not responding"),
-                                 i18n("Filesystem mounted at '%1' is not responding", path));
+            KNotification::event(KNotification::Error, i18n("Filesystem is not responding"), i18n("Filesystem mounted at '%1' is not responding", path));
         });
 
         m_paths.insert(path);
@@ -566,8 +544,7 @@ bool SolidDeviceEngine::updateStorageSpace(const QString &udi)
         connect(job, &KIO::FileSystemFreeSpaceJob::result, timer, &QTimer::deleteLater);
 
         // collect and process info
-        connect(job, &KIO::FileSystemFreeSpaceJob::result, this,
-                [this, timer, path, udi](KIO::Job *job, KIO::filesize_t size, KIO::filesize_t available) {
+        connect(job, &KIO::FileSystemFreeSpaceJob::result, this, [this, timer, path, udi](KIO::Job *job, KIO::filesize_t size, KIO::filesize_t available) {
             timer->stop();
 
             if (!job->error()) {
@@ -612,7 +589,7 @@ bool SolidDeviceEngine::updateEmblems(const QString &udi)
 {
     Solid::Device device = m_devicemap.value(udi);
 
-    setData(udi, I18N_NOOP("Emblems"), device.emblems() );
+    setData(udi, I18N_NOOP("Emblems"), device.emblems());
     return true;
 }
 
@@ -656,7 +633,7 @@ bool SolidDeviceEngine::updateInUse(const QString &udi)
     return true;
 }
 
-bool SolidDeviceEngine::updateSourceEvent(const QString& source)
+bool SolidDeviceEngine::updateSourceEvent(const QString &source)
 {
     bool update1 = updateStorageSpace(source);
     bool update2 = updateHardDiskTemperature(source);
@@ -666,10 +643,10 @@ bool SolidDeviceEngine::updateSourceEvent(const QString& source)
     return (update1 || update2 || update3 || update4);
 }
 
-void SolidDeviceEngine::deviceRemoved(const QString& udi)
+void SolidDeviceEngine::deviceRemoved(const QString &udi)
 {
-    //libsolid cannot notify us when an encrypted container is closed,
-    //hence we trigger an update when a device contained in an encrypted container device dies
+    // libsolid cannot notify us when an encrypted container is closed,
+    // hence we trigger an update when a device contained in an encrypted container device dies
     const QString containerUdi = m_encryptedContainerMap.value(udi, QString());
 
     if (!containerUdi.isEmpty()) {
@@ -688,8 +665,7 @@ void SolidDeviceEngine::deviceRemoved(const QString& udi)
         if (access) {
             disconnect(access, nullptr, this, nullptr);
         }
-    }
-    else if (device.is<Solid::OpticalDisc>()) {
+    } else if (device.is<Solid::OpticalDisc>()) {
         Solid::OpticalDrive *drive = getAncestorAs<Solid::OpticalDrive>(device);
         if (drive) {
             disconnect(drive, nullptr, this, nullptr);
@@ -700,7 +676,7 @@ void SolidDeviceEngine::deviceRemoved(const QString& udi)
     removeSource(udi);
 }
 
-void SolidDeviceEngine::deviceChanged(const QString& udi, const QString &property, const QVariant &value)
+void SolidDeviceEngine::deviceChanged(const QString &udi, const QString &property, const QVariant &value)
 {
     setData(udi, property, value);
     updateSourceEvent(udi);

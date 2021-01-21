@@ -23,10 +23,10 @@
 
 #include "config-klipper.h"
 
-#include <QElapsedTimer>
-#include <QTimer>
 #include <QClipboard>
+#include <QElapsedTimer>
 #include <QPointer>
+#include <QTimer>
 
 #include "urlgrabber.h"
 
@@ -50,34 +50,41 @@ enum class KlipperMode {
 
 class Klipper : public QObject
 {
-  Q_OBJECT
-  Q_CLASSINFO("D-Bus Interface", "org.kde.klipper.klipper")
+    Q_OBJECT
+    Q_CLASSINFO("D-Bus Interface", "org.kde.klipper.klipper")
 
 public Q_SLOTS:
-  Q_SCRIPTABLE QString getClipboardContents();
-  Q_SCRIPTABLE void setClipboardContents(const QString &s);
-  Q_SCRIPTABLE void clearClipboardContents();
-  Q_SCRIPTABLE void clearClipboardHistory();
-  Q_SCRIPTABLE void saveClipboardHistory();
-  Q_SCRIPTABLE QStringList getClipboardHistoryMenu();
-  Q_SCRIPTABLE QString getClipboardHistoryItem(int i);
-  Q_SCRIPTABLE void showKlipperPopupMenu();
-  Q_SCRIPTABLE void showKlipperManuallyInvokeActionMenu();
+    Q_SCRIPTABLE QString getClipboardContents();
+    Q_SCRIPTABLE void setClipboardContents(const QString &s);
+    Q_SCRIPTABLE void clearClipboardContents();
+    Q_SCRIPTABLE void clearClipboardHistory();
+    Q_SCRIPTABLE void saveClipboardHistory();
+    Q_SCRIPTABLE QStringList getClipboardHistoryMenu();
+    Q_SCRIPTABLE QString getClipboardHistoryItem(int i);
+    Q_SCRIPTABLE void showKlipperPopupMenu();
+    Q_SCRIPTABLE void showKlipperManuallyInvokeActionMenu();
 
 public:
-    Klipper(QObject* parent, const KSharedConfigPtr& config, KlipperMode mode = KlipperMode::Standalone);
+    Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mode = KlipperMode::Standalone);
     ~Klipper() override;
 
     /**
      * Get clipboard history (the "document")
      */
-    History* history() { return m_history; }
+    History *history()
+    {
+        return m_history;
+    }
 
-    URLGrabber* urlGrabber() const { return m_myURLGrabber; }
+    URLGrabber *urlGrabber() const
+    {
+        return m_myURLGrabber;
+    }
 
     void saveSettings() const;
 
-    KlipperPopup *popup() {
+    KlipperPopup *popup()
+    {
         return m_popup;
     }
 
@@ -122,33 +129,36 @@ protected:
      * Check data in clipboard, and if it passes these checks,
      * store the data in the clipboard history.
      */
-    void checkClipData( bool selectionMode );
+    void checkClipData(bool selectionMode);
 
     /**
      * Enter clipboard data in the history.
      */
-    QSharedPointer<HistoryItem> applyClipChanges( const QMimeData* data );
+    QSharedPointer<HistoryItem> applyClipChanges(const QMimeData *data);
 
-    void setClipboard( const HistoryItem& item, int mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
+    void setClipboard(const HistoryItem &item, int mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
     bool ignoreClipboardChanges() const;
 
-    KSharedConfigPtr config() const { return m_config; }
+    KSharedConfigPtr config() const
+    {
+        return m_config;
+    }
 
 Q_SIGNALS:
-    void passivePopup(const QString& caption, const QString& text);
-    void editFinished(QSharedPointer< const HistoryItem > item, int result);
+    void passivePopup(const QString &caption, const QString &text);
+    void editFinished(QSharedPointer<const HistoryItem> item, int result);
 
 public Q_SLOTS:
     void slotPopupMenu();
     void slotAskClearHistory();
 protected Q_SLOTS:
-    void showPopupMenu( QMenu * );
+    void showPopupMenu(QMenu *);
     void slotRepeatAction();
-    void setURLGrabberEnabled( bool );
+    void setURLGrabberEnabled(bool);
     void disableURLGrabber();
 
 private Q_SLOTS:
-    void newClipData( QClipboard::Mode );
+    void newClipData(QClipboard::Mode);
     void slotClearClipboard();
 
     void slotHistoryChanged();
@@ -162,37 +172,36 @@ private Q_SLOTS:
     void loadSettings();
 
 private:
-
     static void updateTimestamp();
 
-    SystemClipboard* m_clip;
+    SystemClipboard *m_clip;
 
     QElapsedTimer m_showTimer;
 
-    History* m_history;
+    History *m_history;
     KlipperPopup *m_popup;
     int m_overflowCounter;
 
-    KToggleAction* m_toggleURLGrabAction;
-    QAction* m_clearHistoryAction;
-    QAction* m_repeatAction;
-    QAction* m_editAction;
-    QAction* m_showBarcodeAction;
-    QAction* m_configureAction;
-    QAction* m_quitAction;
-    QAction* m_cycleNextAction;
-    QAction* m_cyclePrevAction;
-    QAction* m_showOnMousePos;
+    KToggleAction *m_toggleURLGrabAction;
+    QAction *m_clearHistoryAction;
+    QAction *m_repeatAction;
+    QAction *m_editAction;
+    QAction *m_showBarcodeAction;
+    QAction *m_configureAction;
+    QAction *m_quitAction;
+    QAction *m_cycleNextAction;
+    QAction *m_cyclePrevAction;
+    QAction *m_showOnMousePos;
 
-    bool m_bKeepContents :1;
-    bool m_bURLGrabber   :1;
-    bool m_bReplayActionInHistory :1;
-    bool m_bUseGUIRegExpEditor    :1;
-    bool m_bNoNullClipboard       :1;
-    bool m_bIgnoreSelection       :1;
-    bool m_bSynchronize           :1;
-    bool m_bSelectionTextOnly     :1;
-    bool m_bIgnoreImages          :1;
+    bool m_bKeepContents : 1;
+    bool m_bURLGrabber : 1;
+    bool m_bReplayActionInHistory : 1;
+    bool m_bUseGUIRegExpEditor : 1;
+    bool m_bNoNullClipboard : 1;
+    bool m_bIgnoreSelection : 1;
+    bool m_bSynchronize : 1;
+    bool m_bSelectionTextOnly : 1;
+    bool m_bIgnoreImages : 1;
 
     /**
      * Avoid reacting to our own changes, using this
@@ -202,7 +211,7 @@ private:
      */
     int m_locklevel;
 
-    URLGrabber* m_myURLGrabber;
+    URLGrabber *m_myURLGrabber;
     QString m_lastURLGrabberTextSelection;
     QString m_lastURLGrabberTextClipboard;
     KSharedConfigPtr m_config;
@@ -212,7 +221,7 @@ private:
 
     bool blockFetchingNewData();
     QString cycleText() const;
-    KActionCollection* m_collection;
+    KActionCollection *m_collection;
     KlipperMode m_mode;
     QTimer *m_saveFileTimer = nullptr;
     QPointer<KNotification> m_notification;

@@ -32,7 +32,7 @@ QString Icons::actionIcon(const QString &actionName)
         return icon;
     }
 
-    static const QHash<QString, QString> s_icons {
+    static const QHash<QString, QString> s_icons{
         {QStringLiteral("new"), QStringLiteral("document-new")}, // appmenu-gtk-module "New"
         {QStringLiteral("image-new"), QStringLiteral("document-new")}, // Gimp "New" item
         {QStringLiteral("adddirect"), QStringLiteral("document-new")}, // LibreOffice "New" item
@@ -268,7 +268,8 @@ QString Icons::actionIcon(const QString &actionName)
     }
 
     if (icon.isEmpty()) {
-        static const auto s_prefixes = QStringList{ // Gimp with appmenu-gtk
+        static const auto s_prefixes = QStringList{
+            // Gimp with appmenu-gtk
             QStringLiteral("file-"),
             QStringLiteral("edit-"),
             QStringLiteral("view-"),
@@ -298,13 +299,13 @@ QString Icons::actionIcon(const QString &actionName)
     }
 
     if (icon.isEmpty()) {
-        static const auto s_prefixes = QStringList{ // Pluma with appmenu-gtk
+        static const auto s_prefixes = QStringList{
+            // Pluma with appmenu-gtk
             QStringLiteral("file"),
             QStringLiteral("edit"),
             QStringLiteral("view"),
             QStringLiteral("help"),
         };
-
 
         for (const QString &prefix : s_prefixes) {
             if (action.startsWith(prefix)) {

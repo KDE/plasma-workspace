@@ -27,16 +27,14 @@ class NotificationService : public Plasma::Service
 {
     Q_OBJECT
 
-    public:
-        NotificationService(NotificationsEngine* parent, const QString& source);
+public:
+    NotificationService(NotificationsEngine *parent, const QString &source);
 
-    protected:
-        Plasma::ServiceJob* createJob(const QString& operation,
-                                      QMap<QString,QVariant>& parameters) override;
+protected:
+    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
-    private:
-        NotificationsEngine* m_notificationEngine;
-
+private:
+    NotificationsEngine *m_notificationEngine;
 };
 
 #endif // NOTIFICATIONSERVICE_H

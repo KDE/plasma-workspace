@@ -1,10 +1,9 @@
 #pragma once
 
-#include <QDBusObjectPath>
 #include <QDBusArgument>
+#include <QDBusObjectPath>
 
-struct SessionInfo
-{
+struct SessionInfo {
     QString sessionId;
     uint userId;
     QString userName;
@@ -14,7 +13,7 @@ struct SessionInfo
 
 typedef QList<SessionInfo> SessionInfoList;
 
-inline QDBusArgument &operator<<(QDBusArgument &argument, const SessionInfo& sessionInfo)
+inline QDBusArgument &operator<<(QDBusArgument &argument, const SessionInfo &sessionInfo)
 {
     argument.beginStructure();
     argument << sessionInfo.sessionId;
@@ -40,8 +39,7 @@ inline const QDBusArgument &operator>>(const QDBusArgument &argument, SessionInf
     return argument;
 }
 
-struct UserInfo
-{
+struct UserInfo {
     uint userId;
     QString name;
     QDBusObjectPath path;
@@ -49,7 +47,7 @@ struct UserInfo
 
 typedef QList<UserInfo> UserInfoList;
 
-inline QDBusArgument &operator<<(QDBusArgument &argument, const UserInfo& userInfo)
+inline QDBusArgument &operator<<(QDBusArgument &argument, const UserInfo &userInfo)
 {
     argument.beginStructure();
     argument << userInfo.userId;
@@ -60,7 +58,7 @@ inline QDBusArgument &operator<<(QDBusArgument &argument, const UserInfo& userIn
     return argument;
 }
 
-inline const QDBusArgument &operator>>(const QDBusArgument &argument, UserInfo& userInfo)
+inline const QDBusArgument &operator>>(const QDBusArgument &argument, UserInfo &userInfo)
 {
     argument.beginStructure();
     argument >> userInfo.userId;
@@ -71,13 +69,12 @@ inline const QDBusArgument &operator>>(const QDBusArgument &argument, UserInfo& 
     return argument;
 }
 
-struct NamedSeatPath
-{
+struct NamedSeatPath {
     QString name;
     QDBusObjectPath path;
 };
 
-inline QDBusArgument &operator<<(QDBusArgument &argument, const NamedSeatPath& namedSeat)
+inline QDBusArgument &operator<<(QDBusArgument &argument, const NamedSeatPath &namedSeat)
 {
     argument.beginStructure();
     argument << namedSeat.name;
@@ -86,7 +83,7 @@ inline QDBusArgument &operator<<(QDBusArgument &argument, const NamedSeatPath& n
     return argument;
 }
 
-inline const QDBusArgument &operator>>(const QDBusArgument &argument, NamedSeatPath& namedSeat)
+inline const QDBusArgument &operator>>(const QDBusArgument &argument, NamedSeatPath &namedSeat)
 {
     argument.beginStructure();
     argument >> namedSeat.name;
@@ -100,13 +97,12 @@ typedef QList<NamedSeatPath> NamedSeatPathList;
 typedef NamedSeatPath NamedSessionPath;
 typedef NamedSeatPathList NamedSessionPathList;
 
-struct NamedUserPath
-{
+struct NamedUserPath {
     uint userId;
     QDBusObjectPath path;
 };
 
-inline QDBusArgument &operator<<(QDBusArgument &argument, const NamedUserPath& namedUser)
+inline QDBusArgument &operator<<(QDBusArgument &argument, const NamedUserPath &namedUser)
 {
     argument.beginStructure();
     argument << namedUser.userId;
@@ -115,7 +111,7 @@ inline QDBusArgument &operator<<(QDBusArgument &argument, const NamedUserPath& n
     return argument;
 }
 
-inline const QDBusArgument &operator>>(const QDBusArgument &argument, NamedUserPath& namedUser)
+inline const QDBusArgument &operator>>(const QDBusArgument &argument, NamedUserPath &namedUser)
 {
     argument.beginStructure();
     argument >> namedUser.userId;
@@ -124,8 +120,7 @@ inline const QDBusArgument &operator>>(const QDBusArgument &argument, NamedUserP
     return argument;
 }
 
-struct Inhibitor
-{
+struct Inhibitor {
     QString what;
     QString who;
     QString why;
@@ -136,7 +131,7 @@ struct Inhibitor
 
 typedef QList<Inhibitor> InhibitorList;
 
-inline QDBusArgument &operator<<(QDBusArgument &argument, const Inhibitor& inhibitor)
+inline QDBusArgument &operator<<(QDBusArgument &argument, const Inhibitor &inhibitor)
 {
     argument.beginStructure();
     argument << inhibitor.what;
@@ -149,7 +144,7 @@ inline QDBusArgument &operator<<(QDBusArgument &argument, const Inhibitor& inhib
     return argument;
 }
 
-inline const QDBusArgument &operator>>(const QDBusArgument &argument, Inhibitor& inhibitor)
+inline const QDBusArgument &operator>>(const QDBusArgument &argument, Inhibitor &inhibitor)
 {
     argument.beginStructure();
     argument >> inhibitor.what;
@@ -175,4 +170,3 @@ Q_DECLARE_METATYPE(NamedUserPath);
 
 Q_DECLARE_METATYPE(Inhibitor);
 Q_DECLARE_METATYPE(QList<Inhibitor>);
-

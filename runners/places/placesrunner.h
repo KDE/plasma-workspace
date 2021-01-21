@@ -20,9 +20,8 @@
 #ifndef PLACESRUNNER_H
 #define PLACESRUNNER_H
 
-
-#include <krunner/abstractrunner.h>
 #include <kfileplacesmodel.h>
+#include <krunner/abstractrunner.h>
 
 class PlacesRunner;
 
@@ -47,7 +46,7 @@ class PlacesRunner : public Plasma::AbstractRunner
     Q_OBJECT
 
 public:
-    PlacesRunner(QObject* parent, const KPluginMetaData &metaData, const QVariantList &args);
+    PlacesRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~PlacesRunner() override;
 
     void match(Plasma::RunnerContext &context) override;
@@ -60,6 +59,5 @@ Q_SIGNALS:
 private:
     PlacesRunnerHelper *m_helper;
 };
-
 
 #endif

@@ -17,14 +17,12 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef FUTUREUTIL_H
 #define FUTUREUTIL_H
 
 #include <QCoreApplication>
 
-template <typename T>
-inline void awaitFuture(const QFuture<T> &future)
+template<typename T> inline void awaitFuture(const QFuture<T> &future)
 {
     while (!future.isFinished()) {
         QCoreApplication::processEvents();

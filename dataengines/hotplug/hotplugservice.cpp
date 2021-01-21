@@ -17,22 +17,18 @@
  */
 
 #include "hotplugservice.h"
-#include "hotplugjob.h"
 #include "hotplugengine.h"
+#include "hotplugjob.h"
 
-HotplugService::HotplugService (HotplugEngine* parent, const QString& source)
-    : Plasma::Service (parent),
-      m_engine(parent)
+HotplugService::HotplugService(HotplugEngine *parent, const QString &source)
+    : Plasma::Service(parent)
+    , m_engine(parent)
 {
-    setName (QStringLiteral("hotplug"));
-    setDestination (source);
+    setName(QStringLiteral("hotplug"));
+    setDestination(source);
 }
 
-Plasma::ServiceJob* HotplugService::createJob (const QString& operation,
-                                                   QMap <QString, QVariant>& parameters)
+Plasma::ServiceJob *HotplugService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
-    return new HotplugJob (m_engine, destination(), operation, parameters, this);
+    return new HotplugJob(m_engine, destination(), operation, parameters, this);
 }
-
-
-

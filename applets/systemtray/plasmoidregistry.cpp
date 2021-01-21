@@ -29,10 +29,10 @@
 
 #include <QDBusConnection>
 
-PlasmoidRegistry::PlasmoidRegistry(QPointer<SystemTraySettings> settings, QObject *parent) :
-    QObject(parent),
-    m_settings(settings),
-    m_dbusObserver(new DBusServiceObserver(settings, this))
+PlasmoidRegistry::PlasmoidRegistry(QPointer<SystemTraySettings> settings, QObject *parent)
+    : QObject(parent)
+    , m_settings(settings)
+    , m_dbusObserver(new DBusServiceObserver(settings, this))
 {
     connect(m_dbusObserver, &DBusServiceObserver::serviceStarted, this, &PlasmoidRegistry::plasmoidEnabled);
     connect(m_dbusObserver, &DBusServiceObserver::serviceStopped, this, &PlasmoidRegistry::plasmoidStopped);
@@ -40,19 +40,28 @@ PlasmoidRegistry::PlasmoidRegistry(QPointer<SystemTraySettings> settings, QObjec
 
 void PlasmoidRegistry::init()
 {
-    QDBusConnection::sessionBus().connect(
-        QString(), QStringLiteral("/KPackage/Plasma/Applet"), QStringLiteral("org.kde.plasma.kpackage"),
-        QStringLiteral("packageInstalled"), this, SLOT(packageInstalled(QString)));
-    QDBusConnection::sessionBus().connect(
-        QString(), QStringLiteral("/KPackage/Plasma/Applet"), QStringLiteral("org.kde.plasma.kpackage"),
-        QStringLiteral("packageUpdated"), this, SLOT(packageInstalled(QString)));
-    QDBusConnection::sessionBus().connect(
-        QString(), QStringLiteral("/KPackage/Plasma/Applet"), QStringLiteral("org.kde.plasma.kpackage"),
-        QStringLiteral("packageUninstalled"), this, SLOT(packageUninstalled(QString)));
+    QDBusConnection::sessionBus().connect(QString(),
+                                          QStringLiteral("/KPackage/Plasma/Applet"),
+                                          QStringLiteral("org.kde.plasma.kpackage"),
+                                          QStringLiteral("packageInstalled"),
+                                          this,
+                                          SLOT(packageInstalled(QString)));
+    QDBusConnection::sessionBus().connect(QString(),
+                                          QStringLiteral("/KPackage/Plasma/Applet"),
+                                          QStringLiteral("org.kde.plasma.kpackage"),
+                                          QStringLiteral("packageUpdated"),
+                                          this,
+                                          SLOT(packageInstalled(QString)));
+    QDBusConnection::sessionBus().connect(QString(),
+                                          QStringLiteral("/KPackage/Plasma/Applet"),
+                                          QStringLiteral("org.kde.plasma.kpackage"),
+                                          QStringLiteral("packageUninstalled"),
+                                          this,
+                                          SLOT(packageUninstalled(QString)));
 
     connect(m_settings, &SystemTraySettings::enabledPluginsChanged, this, &PlasmoidRegistry::onEnabledPluginsChanged);
 
-    for (const auto &info: Plasma::PluginLoader::self()->listAppletMetaData(QString())) {
+    for (const auto &info : Plasma::PluginLoader::self()->listAppletMetaData(QString())) {
         registerPlugin(info);
     }
 
@@ -73,12 +82,12 @@ bool PlasmoidRegistry::isSystemTrayApplet(const QString &pluginId)
 
 void PlasmoidRegistry::onEnabledPluginsChanged(const QStringList &enabledPlugins, const QStringList &disabledPlugins)
 {
-    for (const QString &pluginId: enabledPlugins) {
+    for (const QString &pluginId : enabledPlugins) {
         if (m_systrayApplets.contains(pluginId) && !m_dbusObserver->isDBusActivable(pluginId)) {
             emit plasmoidEnabled(pluginId);
         }
     }
-    for (const QString &pluginId: disabledPlugins) {
+    for (const QString &pluginId : disabledPlugins) {
         if (m_systrayApplets.contains(pluginId)) {
             emit plasmoidDisabled(pluginId);
         }
@@ -91,14 +100,14 @@ void PlasmoidRegistry::packageInstalled(const QString &pluginId)
 
     if (m_systrayApplets.contains(pluginId)) {
         if (m_settings->isEnabledPlugin(pluginId) && !m_dbusObserver->isDBusActivable(pluginId)) {
-            //restart plasmoid
+            // restart plasmoid
             emit plasmoidStopped(pluginId);
             emit plasmoidEnabled(pluginId);
         }
         return;
     }
 
-    for (const auto &info: Plasma::PluginLoader::self()->listAppletMetaData(QString())) {
+    for (const auto &info : Plasma::PluginLoader::self()->listAppletMetaData(QString())) {
         if (info.pluginId() == pluginId) {
             registerPlugin(info);
         }
@@ -126,7 +135,7 @@ void PlasmoidRegistry::registerPlugin(const KPluginMetaData &pluginMetaData)
 
     emit pluginRegistered(pluginMetaData);
 
-    //add plasmoid if is both not enabled explicitly and not already known
+    // add plasmoid if is both not enabled explicitly and not already known
     if (pluginMetaData.isEnabledByDefault()) {
         const QString &candidate = pluginMetaData.pluginId();
         if (!m_settings->isKnownPlugin(candidate)) {
@@ -154,7 +163,7 @@ void PlasmoidRegistry::unregisterPlugin(const QString &pluginId)
 
 void PlasmoidRegistry::sanitizeSettings()
 {
-    //remove all no longer available in the system (e.g. uninstalled)
+    // remove all no longer available in the system (e.g. uninstalled)
     const QStringList knownPlugins = m_settings->knownPlugins();
     for (const QString &pluginId : knownPlugins) {
         if (!m_systrayApplets.contains(pluginId)) {

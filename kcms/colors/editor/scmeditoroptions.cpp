@@ -20,12 +20,12 @@
 
 #include "scmeditoroptions.h"
 
-#include <QDebug>
 #include <KConfigGroup>
+#include <QDebug>
 
 SchemeEditorOptions::SchemeEditorOptions(KSharedConfigPtr config, QWidget *parent)
-    : QWidget( parent )
-    , m_config( config )
+    : QWidget(parent)
+    , m_config(config)
 {
     setupUi(this);
     m_disableUpdates = false;
@@ -86,8 +86,7 @@ void SchemeEditorOptions::on_useInactiveEffects_stateChanged(int state)
 
 void SchemeEditorOptions::on_inactiveSelectionEffect_stateChanged(int state)
 {
-    if (m_disableUpdates)
-    {
+    if (m_disableUpdates) {
         // don't write the config as we are reading it!
         return;
     }

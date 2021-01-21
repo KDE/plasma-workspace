@@ -30,7 +30,7 @@ public:
     ClipboardEngine(QObject *parent, const QVariantList &args);
     ~ClipboardEngine() override;
 
-    Plasma::Service *serviceForSource (const QString &source) override;
+    Plasma::Service *serviceForSource(const QString &source) override;
 
 private:
     Klipper *m_klipper;

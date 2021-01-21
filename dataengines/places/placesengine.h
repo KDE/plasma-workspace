@@ -30,16 +30,14 @@ class PlacesEngine : public Plasma::DataEngine
     Q_OBJECT
 
 public:
-    PlacesEngine(QObject* parent, const QVariantList& args);
+    PlacesEngine(QObject *parent, const QVariantList &args);
     ~PlacesEngine() override;
 
     Plasma::Service *serviceForSource(const QString &source) override;
 
 private:
-
     KFilePlacesModel *m_placesModel;
     PlacesProxyModel *m_proxyModel;
 };
-
 
 #endif // PLACESENGINE_H

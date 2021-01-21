@@ -24,9 +24,9 @@
 
 #include <kdirnotify.h>
 
-#include <QStandardPaths>
-#include <QFile>
 #include <QDir>
+#include <QFile>
+#include <QStandardPaths>
 
 K_PLUGIN_CLASS_WITH_JSON(DesktopNotifier, "desktopnotifier.json")
 
@@ -51,7 +51,7 @@ void DesktopNotifier::watchDir(const QString &path)
 
 void DesktopNotifier::created(const QString &path)
 {
-    if (path == QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs")){
+    if (path == QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs")) {
         checkDesktopLocation();
     }
 }
@@ -75,7 +75,7 @@ void DesktopNotifier::dirty(const QString &path)
         if (!trashUrls.isEmpty()) {
             org::kde::KDirNotify::emitFilesChanged(trashUrls);
         }
-    } else if (path == QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs")){
+    } else if (path == QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs")) {
         checkDesktopLocation();
     } else {
         // Emitting FilesAdded forces a re-read of the dir

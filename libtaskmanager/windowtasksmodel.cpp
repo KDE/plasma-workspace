@@ -31,7 +31,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 class Q_DECL_HIDDEN WindowTasksModel::Private
 {
 public:
@@ -39,7 +38,7 @@ public:
     ~Private();
 
     static int instanceCount;
-    static AbstractTasksModel* sourceTasksModel;
+    static AbstractTasksModel *sourceTasksModel;
 
     void initSourceTasksModel();
 
@@ -48,7 +47,7 @@ private:
 };
 
 int WindowTasksModel::Private::instanceCount = 0;
-AbstractTasksModel* WindowTasksModel::Private::sourceTasksModel = nullptr;
+AbstractTasksModel *WindowTasksModel::Private::sourceTasksModel = nullptr;
 
 WindowTasksModel::Private::Private(WindowTasksModel *q)
     : q(q)

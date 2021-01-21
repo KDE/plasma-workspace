@@ -27,7 +27,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 /**
  * @short Pure virtual method interface for tasks model implementations.
  *
@@ -41,7 +40,9 @@ namespace TaskManager
 class TASKMANAGER_EXPORT AbstractTasksModelIface
 {
 public:
-    virtual ~AbstractTasksModelIface() {}
+    virtual ~AbstractTasksModelIface()
+    {
+    }
 
     /**
      * Request activation of the task at the given index. Implementing classes
@@ -210,8 +211,7 @@ public:
      * regard to extracting information from this, and should take care to
      * reject invalid objects.
      **/
-    virtual void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
-        QObject *delegate = nullptr) = 0;
+    virtual void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate = nullptr) = 0;
 };
 
 }

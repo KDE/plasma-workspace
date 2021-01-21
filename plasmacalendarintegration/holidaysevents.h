@@ -20,8 +20,8 @@
 #ifndef HOLIDAYSEVENTSPLUGIN_H
 #define HOLIDAYSEVENTSPLUGIN_H
 
-#include <QObject>
 #include <CalendarEvents/CalendarEventsPlugin>
+#include <QObject>
 
 #include <KHolidays/HolidayRegion>
 #include <KSharedConfig>
@@ -41,7 +41,7 @@ public:
 private:
     QDate m_lastStartDate;
     QDate m_lastEndDate;
-    QList<KHolidays::HolidayRegion*> m_regions;
+    QList<KHolidays::HolidayRegion *> m_regions;
     QMultiHash<QDate, CalendarEvents::EventData> m_lastData;
     KSharedConfig::Ptr m_config;
 };

@@ -21,9 +21,9 @@
 
 #include "plasmawindowedcorona.h"
 #include "plasmawindowedview.h"
-#include <QDebug>
 #include <QAction>
 #include <QCommandLineParser>
+#include <QDebug>
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -38,7 +38,7 @@ PlasmaWindowedCorona::PlasmaWindowedCorona(QObject *parent)
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"));
     package.setPath(QStringLiteral("org.kde.plasma.desktop"));
     setKPackage(package);
-    //QMetaObject::invokeMethod(this, "load", Qt::QueuedConnection);
+    // QMetaObject::invokeMethod(this, "load", Qt::QueuedConnection);
     load();
 }
 
@@ -50,7 +50,7 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
 
     Plasma::Containment *cont = containments().first();
 
-    //forbid more instances per applet (todo: activate the corresponding already loaded applet)
+    // forbid more instances per applet (todo: activate the corresponding already loaded applet)
     for (Plasma::Applet *a : cont->applets()) {
         if (a->pluginMetaData().pluginId() == applet) {
             return;
@@ -69,15 +69,15 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
         if (plugin == applet) {
             Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, group.toInt(), arguments);
             if (!a) {
-                qWarning() << "Unable to load applet" << applet << "with arguments" <<arguments;
+                qWarning() << "Unable to load applet" << applet << "with arguments" << arguments;
                 v->deleteLater();
                 return;
             }
             a->restore(cg);
 
-            //Access a->config() before adding to containment
-            //will cause applets to be saved in palsmawindowedrc
-            //so applets will only be created on demand
+            // Access a->config() before adding to containment
+            // will cause applets to be saved in palsmawindowedrc
+            // so applets will only be created on demand
             KConfigGroup cg2 = a->config();
             cont->addApplet(a);
 
@@ -88,14 +88,14 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
 
     Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, 0, arguments);
     if (!a) {
-        qWarning() << "Unable to load applet" << applet << "with arguments" <<arguments;
+        qWarning() << "Unable to load applet" << applet << "with arguments" << arguments;
         v->deleteLater();
         return;
     }
 
-    //Access a->config() before adding to containment
-    //will cause applets to be saved in palsmawindowedrc
-    //so applets will only be created on demand
+    // Access a->config() before adding to containment
+    // will cause applets to be saved in palsmawindowedrc
+    // so applets will only be created on demand
     KConfigGroup cg2 = a->config();
     cont->addApplet(a);
 
@@ -111,7 +111,8 @@ void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const
 
     QCommandLineParser parser;
     parser.setApplicationDescription(i18n("Plasma Windowed"));
-    parser.addOption(QCommandLineOption(QStringLiteral("statusnotifier"), i18n("Makes the plasmoid stay alive in the Notification Area, even when the window is closed.")));
+    parser.addOption(
+        QCommandLineOption(QStringLiteral("statusnotifier"), i18n("Makes the plasmoid stay alive in the Notification Area, even when the window is closed.")));
     parser.addPositionalArgument(QStringLiteral("applet"), i18n("The applet to open."));
     parser.addPositionalArgument(QStringLiteral("args"), i18n("Arguments to pass to the plasmoid."), QStringLiteral("[args...]"));
     parser.addVersionOption();
@@ -126,8 +127,7 @@ void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const
 
     QVariantList args;
     QStringList::const_iterator constIterator = positionalArguments.constBegin() + 1;
-    for (; constIterator != positionalArguments.constEnd();
-           ++constIterator) {
+    for (; constIterator != positionalArguments.constEnd(); ++constIterator) {
         args << (*constIterator);
     }
 
@@ -137,7 +137,7 @@ void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const
 QRect PlasmaWindowedCorona::screenGeometry(int id) const
 {
     Q_UNUSED(id);
-    //TODO?
+    // TODO?
     return QRect();
 }
 
@@ -145,7 +145,6 @@ void PlasmaWindowedCorona::load()
 {
     /*this won't load applets, since applets are in plasmawindowedrc*/
     loadLayout(QStringLiteral("plasmawindowed-appletsrc"));
-
 
     bool found = false;
     for (auto c : containments()) {
@@ -166,7 +165,7 @@ void PlasmaWindowedCorona::load()
             m_containment = c;
             m_containment->setFormFactor(Plasma::Types::Application);
             QAction *removeAction = c->actions()->action(QStringLiteral("remove"));
-            if(removeAction) {
+            if (removeAction) {
                 removeAction->deleteLater();
             }
             break;
@@ -178,4 +177,3 @@ void PlasmaWindowedCorona::setHasStatusNotifier(bool stay)
 {
     m_hasStatusNotifier = stay;
 }
-

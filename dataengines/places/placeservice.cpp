@@ -22,10 +22,9 @@
 
 #include <QDebug>
 
-
-PlaceService::PlaceService(QObject* parent, KFilePlacesModel* model)
-    : Plasma::Service(parent),
-      m_model(model)
+PlaceService::PlaceService(QObject *parent, KFilePlacesModel *model)
+    : Plasma::Service(parent)
+    , m_model(model)
 {
     setName(QStringLiteral("org.kde.places"));
 
@@ -33,8 +32,7 @@ PlaceService::PlaceService(QObject* parent, KFilePlacesModel* model)
     qDebug() << "Created a place service for" << destination();
 }
 
-Plasma::ServiceJob* PlaceService::createJob(const QString& operation,
-                                            QMap<QString,QVariant>& parameters)
+Plasma::ServiceJob *PlaceService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
     QModelIndex index = m_model->index(parameters.value(QStringLiteral("placeIndex")).toInt(), 0);
 
@@ -62,7 +60,5 @@ Plasma::ServiceJob* PlaceService::createJob(const QString& operation,
         return nullptr;
     }
 }
-
-
 
 // vim: sw=4 sts=4 et tw=100

@@ -24,11 +24,11 @@
 #ifndef __PRINTER_H__
 #define __PRINTER_H__
 
-#include <QDialog>
-#include <QThread>
-#include <QList>
-#include <QFont>
 #include "Misc.h"
+#include <QDialog>
+#include <QFont>
+#include <QList>
+#include <QThread>
 
 class QLabel;
 class QProgressBar;
@@ -36,65 +36,59 @@ class QPrinter;
 
 namespace KFI
 {
-
 class CActionLabel;
 
 class CPrintThread : public QThread
 {
     Q_OBJECT
 
-    public:
-        
+public:
     CPrintThread(QPrinter *printer, const QList<Misc::TFont> &items, int size, QObject *parent);
     ~CPrintThread() override;
-   
+
     void run() override;
 
-    Q_SIGNALS:
-        
+Q_SIGNALS:
+
     void progress(int p, const QString &f);
 
-    public Q_SLOTS:
-    
+public Q_SLOTS:
+
     void cancel();
 
-    private:
-
-    QPrinter           *itsPrinter;
+private:
+    QPrinter *itsPrinter;
     QList<Misc::TFont> itsItems;
-    int                itsSize;
-    bool               itsCancelled;
+    int itsSize;
+    bool itsCancelled;
 };
 
 class CPrinter : public QDialog
 {
     Q_OBJECT
 
-    public:
-
+public:
     explicit CPrinter(QWidget *parent);
     ~CPrinter() override;
 
     void print(const QList<Misc::TFont> &items, int size);
 
-    Q_SIGNALS:
-        
+Q_SIGNALS:
+
     void cancelled();
 
-    public Q_SLOTS:
-        
+public Q_SLOTS:
+
     void progress(int p, const QString &label);
     void slotCancelClicked();
 
-    private:
-    
+private:
     void closeEvent(QCloseEvent *e) override;
 
-    private:
-
-    QLabel         *itsStatusLabel;
-    QProgressBar   *itsProgress;
-    CActionLabel   *itsActionLabel;
+private:
+    QLabel *itsStatusLabel;
+    QProgressBar *itsProgress;
+    CActionLabel *itsActionLabel;
 };
 
 }

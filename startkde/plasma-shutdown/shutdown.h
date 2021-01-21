@@ -27,7 +27,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <QObject>
 #include <kworkspace.h>
 
-class Shutdown: public QObject
+class Shutdown : public QObject
 {
     Q_OBJECT
 public:
@@ -38,6 +38,7 @@ public:
 private Q_SLOTS:
     void logoutCancelled();
     void logoutComplete();
+
 private:
     void startLogout(KWorkSpace::ShutdownType shutdownType);
     void runShutdownScripts();

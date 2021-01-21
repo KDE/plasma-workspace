@@ -30,7 +30,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 /**
  * @short A unified tasks model.
  *
@@ -81,27 +80,26 @@ class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public Abstr
 
     Q_PROPERTY(GroupMode groupMode READ groupMode WRITE setGroupMode NOTIFY groupModeChanged)
     Q_PROPERTY(bool groupInline READ groupInline WRITE setGroupInline NOTIFY groupInlineChanged)
-    Q_PROPERTY(int groupingWindowTasksThreshold READ groupingWindowTasksThreshold
-               WRITE setGroupingWindowTasksThreshold NOTIFY groupingWindowTasksThresholdChanged)
-    Q_PROPERTY(QStringList groupingAppIdBlacklist READ groupingAppIdBlacklist
-               WRITE setGroupingAppIdBlacklist NOTIFY groupingAppIdBlacklistChanged)
-    Q_PROPERTY(QStringList groupingLauncherUrlBlacklist READ groupingLauncherUrlBlacklist
-               WRITE setGroupingLauncherUrlBlacklist NOTIFY groupingLauncherUrlBlacklistChanged)
+    Q_PROPERTY(
+        int groupingWindowTasksThreshold READ groupingWindowTasksThreshold WRITE setGroupingWindowTasksThreshold NOTIFY groupingWindowTasksThresholdChanged)
+    Q_PROPERTY(QStringList groupingAppIdBlacklist READ groupingAppIdBlacklist WRITE setGroupingAppIdBlacklist NOTIFY groupingAppIdBlacklistChanged)
+    Q_PROPERTY(QStringList groupingLauncherUrlBlacklist READ groupingLauncherUrlBlacklist WRITE setGroupingLauncherUrlBlacklist NOTIFY
+                   groupingLauncherUrlBlacklistChanged)
     Q_PROPERTY(QModelIndex activeTask READ activeTask NOTIFY activeTaskChanged)
 
 public:
     enum SortMode {
-        SortDisabled = 0,   /**< No sorting is done. */
-        SortManual,         /**< Tasks can be moved with move() and syncLaunchers(). */
-        SortAlpha,          /**< Tasks are sorted alphabetically, by AbstractTasksModel::AppName and Qt::DisplayRole. */
+        SortDisabled = 0, /**< No sorting is done. */
+        SortManual, /**< Tasks can be moved with move() and syncLaunchers(). */
+        SortAlpha, /**< Tasks are sorted alphabetically, by AbstractTasksModel::AppName and Qt::DisplayRole. */
         SortVirtualDesktop, /**< Tasks are sorted by the virtual desktop they are on. */
-        SortActivity,        /**< Tasks are sorted by the number of tasks on the activities they're on. */
+        SortActivity, /**< Tasks are sorted by the number of tasks on the activities they're on. */
     };
     Q_ENUM(SortMode)
 
     enum GroupMode {
         GroupDisabled = 0, /**< No grouping is done. */
-        GroupApplications,  /**< Tasks are grouped by the application backing them. */
+        GroupApplications, /**< Tasks are grouped by the application backing them. */
     };
     Q_ENUM(GroupMode)
 
@@ -766,8 +764,7 @@ public:
      * regard to extracting information from this, and should take care to
      * reject invalid objects.
      **/
-    Q_INVOKABLE void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
-        QObject *delegate = nullptr) override;
+    Q_INVOKABLE void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate = nullptr) override;
 
     /**
      * Request toggling whether the task at the given index, along with any
@@ -801,8 +798,7 @@ public:
      * @param index An index in this tasks model.
      * @param newPos The new list position to move the task to.
      */
-    Q_INVOKABLE bool move(int row, int newPos,
-        const QModelIndex &parent = QModelIndex());
+    Q_INVOKABLE bool move(int row, int newPos, const QModelIndex &parent = QModelIndex());
 
     /**
      * Updates the launcher list to reflect the new order after calls to

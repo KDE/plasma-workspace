@@ -26,18 +26,17 @@
 
 #include <Plasma/DataEngineConsumer>
 
-#include <QXmlStreamReader>
 #include <QDateTime>
+#include <QXmlStreamReader>
 
 class KJob;
 namespace KIO
 {
-    class Job;
+class Job;
 } // namespace KIO
 
 class WeatherData
 {
-
 public:
     WeatherData();
 
@@ -103,8 +102,8 @@ public:
     QString windDirection;
     QString windDegrees;
 
-    QVector <WeatherData::WeatherEvent *> watches;
-    QVector <WeatherData::WeatherEvent *> warnings;
+    QVector<WeatherData::WeatherEvent *> watches;
+    QVector<WeatherData::WeatherEvent *> warnings;
 
     float normalHigh;
     float normalLow;
@@ -115,7 +114,7 @@ public:
     QString UVRating;
 
     // 5 day Forecast
-    QVector <WeatherData::ForecastInfo *> forecasts;
+    QVector<WeatherData::ForecastInfo *> forecasts;
 
     // Historical data from previous day.
     float prevHigh;
@@ -155,11 +154,11 @@ public:
     ~EnvCanadaIon() override;
 
 public: // IonInterface API
-    bool updateIonSource(const QString& source) override;
+    bool updateIonSource(const QString &source) override;
 
 public Q_SLOTS:
     // for solar data pushes from the time engine
-    void dataUpdated(const QString& sourceName, const Plasma::DataEngine::Data& data);
+    void dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data);
 
 protected: // IonInterface API
     void reset() override;
@@ -172,7 +171,7 @@ private Q_SLOTS:
     void slotJobFinished(KJob *);
 
 private:
-    void updateWeather(const QString& source);
+    void updateWeather(const QString &source);
 
     /* Environment Canada Methods - Internal for Ion */
     void deleteForecasts();
@@ -180,44 +179,44 @@ private:
     QMap<QString, ConditionIcons> setupConditionIconMappings() const;
     QMap<QString, ConditionIcons> setupForecastIconMappings() const;
 
-    QMap<QString, ConditionIcons> const& conditionIcons() const;
-    QMap<QString, ConditionIcons> const& forecastIcons() const;
+    QMap<QString, ConditionIcons> const &conditionIcons() const;
+    QMap<QString, ConditionIcons> const &forecastIcons() const;
 
     // Load and Parse the place XML listing
     void getXMLSetup();
     bool readXMLSetup();
 
     // Load and parse the specific place(s)
-    void getXMLData(const QString& source);
-    bool readXMLData(const QString& source, QXmlStreamReader& xml);
+    void getXMLData(const QString &source);
+    bool readXMLData(const QString &source, QXmlStreamReader &xml);
 
     // Check if place specified is valid or not
-    QStringList validate(const QString& source) const;
+    QStringList validate(const QString &source) const;
 
     // Catchall for unknown XML tags
-    void parseUnknownElement(QXmlStreamReader& xml) const;
+    void parseUnknownElement(QXmlStreamReader &xml) const;
 
     // Parse weather XML data
-    void parseWeatherSite(WeatherData& data, QXmlStreamReader& xml);
-    void parseDateTime(WeatherData& data, QXmlStreamReader& xml, WeatherData::WeatherEvent* event = nullptr);
-    void parseLocations(WeatherData& data, QXmlStreamReader& xml);
-    void parseConditions(WeatherData& data, QXmlStreamReader& xml);
-    void parseWarnings(WeatherData& data, QXmlStreamReader& xml);
-    void parseWindInfo(WeatherData& data, QXmlStreamReader& xml);
-    void parseWeatherForecast(WeatherData& data, QXmlStreamReader& xml);
-    void parseRegionalNormals(WeatherData& data, QXmlStreamReader& xml);
-    void parseForecast(WeatherData& data, QXmlStreamReader& xml, WeatherData::ForecastInfo* forecast);
-    void parseShortForecast(WeatherData::ForecastInfo* forecast, QXmlStreamReader& xml);
-    void parseForecastTemperatures(WeatherData::ForecastInfo* forecast, QXmlStreamReader& xml);
-    void parseWindForecast(WeatherData::ForecastInfo* forecast, QXmlStreamReader& xml);
-    void parsePrecipitationForecast(WeatherData::ForecastInfo* forecast, QXmlStreamReader& xml);
-    void parsePrecipTotals(WeatherData::ForecastInfo* forecast, QXmlStreamReader& xml);
-    void parseUVIndex(WeatherData& data, QXmlStreamReader& xml);
-    void parseYesterdayWeather(WeatherData& data, QXmlStreamReader& xml);
-    void parseAstronomicals(WeatherData& data, QXmlStreamReader& xml);
-    void parseWeatherRecords(WeatherData& data, QXmlStreamReader& xml);
+    void parseWeatherSite(WeatherData &data, QXmlStreamReader &xml);
+    void parseDateTime(WeatherData &data, QXmlStreamReader &xml, WeatherData::WeatherEvent *event = nullptr);
+    void parseLocations(WeatherData &data, QXmlStreamReader &xml);
+    void parseConditions(WeatherData &data, QXmlStreamReader &xml);
+    void parseWarnings(WeatherData &data, QXmlStreamReader &xml);
+    void parseWindInfo(WeatherData &data, QXmlStreamReader &xml);
+    void parseWeatherForecast(WeatherData &data, QXmlStreamReader &xml);
+    void parseRegionalNormals(WeatherData &data, QXmlStreamReader &xml);
+    void parseForecast(WeatherData &data, QXmlStreamReader &xml, WeatherData::ForecastInfo *forecast);
+    void parseShortForecast(WeatherData::ForecastInfo *forecast, QXmlStreamReader &xml);
+    void parseForecastTemperatures(WeatherData::ForecastInfo *forecast, QXmlStreamReader &xml);
+    void parseWindForecast(WeatherData::ForecastInfo *forecast, QXmlStreamReader &xml);
+    void parsePrecipitationForecast(WeatherData::ForecastInfo *forecast, QXmlStreamReader &xml);
+    void parsePrecipTotals(WeatherData::ForecastInfo *forecast, QXmlStreamReader &xml);
+    void parseUVIndex(WeatherData &data, QXmlStreamReader &xml);
+    void parseYesterdayWeather(WeatherData &data, QXmlStreamReader &xml);
+    void parseAstronomicals(WeatherData &data, QXmlStreamReader &xml);
+    void parseWeatherRecords(WeatherData &data, QXmlStreamReader &xml);
 
-    void parseFloat(float& value, QXmlStreamReader& xml);
+    void parseFloat(float &value, QXmlStreamReader &xml);
 
 private:
     struct XMLMapInfo {
@@ -233,13 +232,12 @@ private:
     QHash<QString, WeatherData> m_weatherData;
 
     // Store KIO jobs
-    QHash<KJob *, QXmlStreamReader*> m_jobXml;
+    QHash<KJob *, QXmlStreamReader *> m_jobXml;
     QHash<KJob *, QString> m_jobList;
     QStringList m_sourcesToReset;
     QXmlStreamReader m_xmlSetup;
 
     bool emitWhenSetup;
-
 };
 
 #endif

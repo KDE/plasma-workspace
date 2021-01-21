@@ -19,10 +19,10 @@
 
 #include "kdeplatformplugin.h"
 
+#include <QCoreApplication>
 #include <QDir>
 #include <QFile>
 #include <QtPlugin>
-#include <QCoreApplication>
 
 #include <KAboutData>
 #include <KConfigGroup>
@@ -34,8 +34,8 @@
 #include "debug.h"
 #include "kiomediastream.h"
 
-namespace Phonon {
-
+namespace Phonon
+{
 KdePlatformPlugin::KdePlatformPlugin()
 {
 }
@@ -54,15 +54,16 @@ QIcon KdePlatformPlugin::icon(const QString &name) const
     return QIcon::fromTheme(name);
 }
 
-void KdePlatformPlugin::notification(const char *notificationName, const QString &text,
-        const QStringList &actions, QObject *receiver,
-        const char *actionSlot) const
+void KdePlatformPlugin::notification(const char *notificationName,
+                                     const QString &text,
+                                     const QStringList &actions,
+                                     QObject *receiver,
+                                     const char *actionSlot) const
 {
     KNotification *notification = new KNotification(notificationName);
     notification->setComponentName(QLatin1String("phonon"));
     notification->setText(text);
-    notification->addContext(QLatin1String("Application"),
-                             KAboutData::applicationData().componentName());
+    notification->addContext(QLatin1String("Application"), KAboutData::applicationData().componentName());
     if (!actions.isEmpty() && receiver && actionSlot) {
         notification->setActions(actions);
         QObject::connect(notification, SIGNAL(activated(unsigned int)), receiver, actionSlot);
@@ -92,12 +93,12 @@ QObject *KdePlatformPlugin::createBackend()
     return nullptr;
 }
 
-QObject *KdePlatformPlugin::createBackend(const QString &/*library*/, const QString &/*version*/)
+QObject *KdePlatformPlugin::createBackend(const QString & /*library*/, const QString & /*version*/)
 {
     return nullptr;
 }
 
-bool KdePlatformPlugin::isMimeTypeAvailable(const QString &/*mimeType*/) const
+bool KdePlatformPlugin::isMimeTypeAvailable(const QString & /*mimeType*/) const
 {
     // Static mimetype based support reporting is utter nonsense, so always say
     // everything is supported.
@@ -154,4 +155,3 @@ QHash<QByteArray, QVariant> KdePlatformPlugin::objectDescriptionProperties(Objec
 }
 
 } // namespace Phonon
-

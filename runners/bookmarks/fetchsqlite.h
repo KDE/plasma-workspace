@@ -20,16 +20,15 @@
 
 #ifndef FETCHSQLITE_H
 #define FETCHSQLITE_H
-#include <QSqlDatabase>
 #include <QList>
+#include <QSqlDatabase>
 #include <QVariantMap>
 
-#include <QVariant>
 #include <QString>
+#include <QVariant>
 
-#include <QObject>
 #include <QMutex>
-
+#include <QObject>
 
 class FetchSqlite : public QObject
 {
@@ -39,7 +38,7 @@ public:
     ~FetchSqlite() override;
     void prepare();
     void teardown();
-    QList<QVariantMap> query(const QString &sql, QMap<QString,QVariant> bindObjects);
+    QList<QVariantMap> query(const QString &sql, QMap<QString, QVariant> bindObjects);
     QList<QVariantMap> query(const QString &sql);
     QStringList tables(QSql::TableType type = QSql::Tables);
 

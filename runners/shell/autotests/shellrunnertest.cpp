@@ -3,9 +3,9 @@
 #include <QTemporaryFile>
 #include <QTest>
 
-#include <KShell>
 #include <KPluginMetaData>
 #include <KRunner/RunnerManager>
+#include <KShell>
 #include <QSignalSpy>
 
 #include <clocale>
@@ -14,7 +14,7 @@ using namespace Plasma;
 
 class ShellRunnerTest : public QObject
 {
-Q_OBJECT
+    Q_OBJECT
 
 private:
     RunnerManager *manager = nullptr;
@@ -67,6 +67,7 @@ void ShellRunnerTest::testShellrunnerQueries_data()
     QTest::addColumn<QString>("expectedCommand");
     QTest::addColumn<QStringList>("expectedENVs");
 
+    // clang-format off
     QTest::newRow("Should show result with full executable path")
         << 1 << "/bin/true" << "/bin/true" << QStringList{};
     QTest::newRow("Should show result with full executable path and args")
@@ -109,6 +110,7 @@ void ShellRunnerTest::testShellrunnerQueries_data()
     QTest::newRow("Should show result for full path with tilde, quoted space and args")
             << 1 << KShell::quoteArg(tildeSpacePath) + " --help"
             << KShell::joinArgs({tildeSpacePath, "--help"}) << QStringList{};
+    // clang-format on
 }
 
 QFileInfo ShellRunnerTest::createExecutableFile(const QString &fileName)

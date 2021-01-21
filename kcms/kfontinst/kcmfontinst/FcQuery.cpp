@@ -28,16 +28,13 @@
 
 namespace KFI
 {
-
 // key: 0(i)(s)
 static int getInt(const QString &str)
 {
-    int rv=KFI_NULL_SETTING,
-        start=str.lastIndexOf(':')+1,
-        end=str.lastIndexOf("(i)(s)");
+    int rv = KFI_NULL_SETTING, start = str.lastIndexOf(':') + 1, end = str.lastIndexOf("(i)(s)");
 
-    if(end>start)
-        rv=str.mid(start, end-start).trimmed().toInt();
+    if (end > start)
+        rv = str.mid(start, end - start).trimmed().toInt();
 
     return rv;
 }
@@ -50,17 +47,17 @@ void CFcQuery::run(const QString &query)
 {
     QStringList args;
 
-    itsFile=itsFont=QString();
-    itsBuffer=QByteArray();
+    itsFile = itsFont = QString();
+    itsBuffer = QByteArray();
 
-    if(itsProc)
+    if (itsProc)
         itsProc->kill();
     else
-        itsProc=new QProcess(this);
+        itsProc = new QProcess(this);
 
     args << "-v" << query;
 
-    connect(itsProc, SIGNAL(finished(int,QProcess::ExitStatus)), SLOT(procExited()));
+    connect(itsProc, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(procExited()));
     connect(itsProc, &QProcess::readyReadStandardOutput, this, &CFcQuery::data);
 
     itsProc->start("fc-match", args);
@@ -68,52 +65,46 @@ void CFcQuery::run(const QString &query)
 
 void CFcQuery::procExited()
 {
-    QString     family;
-    int         weight(KFI_NULL_SETTING), slant(KFI_NULL_SETTING), width(KFI_NULL_SETTING);
+    QString family;
+    int weight(KFI_NULL_SETTING), slant(KFI_NULL_SETTING), width(KFI_NULL_SETTING);
     QStringList results(QString::fromUtf8(itsBuffer, itsBuffer.length()).split(QLatin1Char('\n')));
 
-    if(!results.isEmpty())
-    {
-        QStringList::ConstIterator it(results.begin()),
-                                   end(results.end());
+    if (!results.isEmpty()) {
+        QStringList::ConstIterator it(results.begin()), end(results.end());
 
-        for(; it!=end; ++it)
-        {
+        for (; it != end; ++it) {
             QString line((*it).trimmed());
 
-            if(0==line.indexOf("file:"))  // file: "Wibble"(s)
+            if (0 == line.indexOf("file:")) // file: "Wibble"(s)
             {
-                int endPos=line.indexOf("\"(s)");
+                int endPos = line.indexOf("\"(s)");
 
-                if(-1!=endPos)
-                    itsFile=line.mid(7, endPos-7);
-            }
-            else if(0==line.indexOf("family:"))  // family: "Wibble"(s)
+                if (-1 != endPos)
+                    itsFile = line.mid(7, endPos - 7);
+            } else if (0 == line.indexOf("family:")) // family: "Wibble"(s)
             {
-                int endPos=line.indexOf("\"(s)");
+                int endPos = line.indexOf("\"(s)");
 
-                if(-1!=endPos)
-                    family=line.mid(9, endPos-9);
-            }
-            else if(0==line.indexOf("slant:"))  // slant: 0(i)(s)
-                slant=getInt(line);
-            else if(0==line.indexOf("weight:"))  // weight: 0(i)(s)
-                weight=getInt(line);
-            else if(0==line.indexOf("width:"))  // width: 0(i)(s)
-                width=getInt(line);
+                if (-1 != endPos)
+                    family = line.mid(9, endPos - 9);
+            } else if (0 == line.indexOf("slant:")) // slant: 0(i)(s)
+                slant = getInt(line);
+            else if (0 == line.indexOf("weight:")) // weight: 0(i)(s)
+                weight = getInt(line);
+            else if (0 == line.indexOf("width:")) // width: 0(i)(s)
+                width = getInt(line);
         }
     }
 
-    if(!family.isEmpty())
-        itsFont=FC::createName(family, weight, width, slant);
+    if (!family.isEmpty())
+        itsFont = FC::createName(family, weight, width, slant);
 
     emit finished();
 }
 
 void CFcQuery::data()
 {
-    itsBuffer+=itsProc->readAllStandardOutput();
+    itsBuffer += itsProc->readAllStandardOutput();
 }
 
 }
-

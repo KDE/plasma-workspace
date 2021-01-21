@@ -20,7 +20,7 @@
 
 #include "notificationgroupcollapsingproxymodel_p.h"
 
-#include  "notifications.h"
+#include "notifications.h"
 
 #include "debug.h"
 
@@ -29,7 +29,6 @@ using namespace NotificationManager;
 NotificationGroupCollapsingProxyModel::NotificationGroupCollapsingProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
-
 }
 
 NotificationGroupCollapsingProxyModel::~NotificationGroupCollapsingProxyModel() = default;
@@ -51,19 +50,22 @@ void NotificationGroupCollapsingProxyModel::setSourceModel(QAbstractItemModel *s
         connect(source, &QAbstractItemModel::rowsRemoved, this, &NotificationGroupCollapsingProxyModel::invalidateFilter);
 
         // When a group is removed, there is no item that's being removed, instead the item morphs back into a single notification
-        connect(source, &QAbstractItemModel::dataChanged, this, [this, source](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
-            if (roles.isEmpty() || roles.contains(Notifications::IsGroupRole)) {
-                for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
-                    const QModelIndex sourceIdx = source->index(i, 0);
+        connect(source,
+                &QAbstractItemModel::dataChanged,
+                this,
+                [this, source](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles) {
+                    if (roles.isEmpty() || roles.contains(Notifications::IsGroupRole)) {
+                        for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
+                            const QModelIndex sourceIdx = source->index(i, 0);
 
-                    if (!sourceIdx.data(Notifications::IsGroupRole).toBool()) {
-                        if (m_expandedGroups.contains(sourceIdx)) {
-                            setGroupExpanded(topLeft, false);
+                            if (!sourceIdx.data(Notifications::IsGroupRole).toBool()) {
+                                if (m_expandedGroups.contains(sourceIdx)) {
+                                    setGroupExpanded(topLeft, false);
+                                }
+                            }
                         }
                     }
-                }
-            }
-        });
+                });
     }
 }
 

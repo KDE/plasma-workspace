@@ -30,10 +30,12 @@
 #include <functional>
 
 class OrgFreedesktopScreenSaverInterface;
-namespace org {
-    namespace freedesktop {
-        using ScreenSaver = ::OrgFreedesktopScreenSaverInterface;
-    }
+namespace org
+{
+namespace freedesktop
+{
+using ScreenSaver = ::OrgFreedesktopScreenSaverInterface;
+}
 }
 
 struct SessionEntry {
@@ -66,13 +68,13 @@ public:
 
     enum class Role {
         RealName = Qt::DisplayRole,
-        Icon = Qt::DecorationRole, //path to a file
+        Icon = Qt::DecorationRole, // path to a file
         Name = Qt::UserRole + 1,
         DisplayNumber,
         VtNumber,
         Session,
         IsTty,
-        IconName, //name of an icon
+        IconName, // name of an icon
     };
 
     bool canSwitchUser() const;
@@ -102,7 +104,7 @@ signals:
     void aboutToLockScreen();
 
 private:
-    void checkScreenLocked(const std::function<void (bool)> &cb);
+    void checkScreenLocked(const std::function<void(bool)> &cb);
 
     KDisplayManager m_displayManager;
 
@@ -117,7 +119,6 @@ private:
     bool m_includeUnusedSessions = true;
 
     org::freedesktop::ScreenSaver *m_screensaverInterface = nullptr;
-
 };
 
 #endif // SESSIONSMODEL_H

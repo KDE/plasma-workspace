@@ -21,7 +21,8 @@
 
 #include "iconssettingsbase.h"
 
-class IconsSettings : public IconsSettingsBase {
+class IconsSettings : public IconsSettingsBase
+{
     Q_OBJECT
 public:
     IconsSettings(QObject *parent = nullptr);
@@ -29,9 +30,9 @@ public:
 public slots:
     void updateIconTheme();
     void updateThemeDirty();
+
 private:
     bool m_themeDirty;
 };
 
-
-#endif //PLASMA_DESKTOP_ICONSSETTINGS_H
+#endif // PLASMA_DESKTOP_ICONSSETTINGS_H

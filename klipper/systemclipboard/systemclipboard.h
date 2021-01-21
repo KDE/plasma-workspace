@@ -19,9 +19,9 @@
 
 #pragma once
 
-#include <QObject>
 #include <QClipboard>
 #include <QMimeData>
+#include <QObject>
 
 /**
  * This class mimics QClipboard but unlike QClipboard it will continue
@@ -42,7 +42,7 @@ public:
      * Sets the clipboard to the new contents
      * The clpboard takes ownership of mime
      */
-    //maybe I should unique_ptr it to be expressive, but then I don't match QClipboard?
+    // maybe I should unique_ptr it to be expressive, but then I don't match QClipboard?
     virtual void setMimeData(QMimeData *mime, QClipboard::Mode mode) = 0;
     /**
      * Clears the current clipboard

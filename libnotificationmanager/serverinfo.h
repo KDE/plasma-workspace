@@ -28,7 +28,6 @@
 
 namespace NotificationManager
 {
-
 /**
  * @short Information about the notification server
  *
@@ -77,7 +76,6 @@ Q_SIGNALS:
 private:
     class Private;
     QScopedPointer<Private> d;
-
 };
 
 } // namespace NotificationManager

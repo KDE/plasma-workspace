@@ -21,10 +21,10 @@
 
 #include "deviceserviceaction.h"
 
-#include <QDebug>
-#include <QStandardPaths>
 #include <KDesktopFileActions>
 #include <KLocalizedString>
+#include <QDebug>
+#include <QStandardPaths>
 
 void HotplugJob::start()
 {
@@ -36,8 +36,7 @@ void HotplugJob::start()
         if (services.size() < 1) {
             qWarning() << "Failed to resolve hotplugjob action" << desktopFile << filePath;
             setError(KJob::UserDefinedError);
-            setErrorText(i18nc("error; %1 is the desktop file name of the service",
-                               "Failed to resolve service action for %1.", desktopFile));
+            setErrorText(i18nc("error; %1 is the desktop file name of the service", "Failed to resolve service action for %1.", desktopFile));
             setResult(false); // calls emitResult internally.
             return;
         }
@@ -53,6 +52,3 @@ void HotplugJob::start()
 
     emitResult();
 }
-
-
-

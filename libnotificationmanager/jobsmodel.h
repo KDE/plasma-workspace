@@ -24,12 +24,11 @@
 #include <QScopedPointer>
 #include <QSharedPointer>
 
-#include "notifications.h"
 #include "notificationmanager_export.h"
+#include "notifications.h"
 
 namespace NotificationManager
 {
-
 class JobsModelPrivate;
 
 class NOTIFICATIONMANAGER_EXPORT JobsModel : public QAbstractListModel
@@ -93,7 +92,6 @@ private:
     Q_DISABLE_COPY(JobsModel)
 
     JobsModelPrivate *d;
-
 };
 
 } // namespace NotificationManager

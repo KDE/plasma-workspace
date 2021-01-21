@@ -31,8 +31,8 @@
 
 namespace Plasma
 {
-    class Applet;
-    class Containment;
+class Applet;
+class Containment;
 } // namespace Plasma
 
 class KLocalizedContext;
@@ -42,7 +42,6 @@ namespace WorkspaceScripting
 class AppInterface;
 class Containment;
 class V1;
-
 
 class ScriptEngine : public QJSEngine
 {
@@ -82,7 +81,7 @@ private:
 
     // helpers
     QStringList availableActivities() const;
-    QList<Containment*> desktopsForActivity(const QString &id);
+    QList<Containment *> desktopsForActivity(const QString &id);
     Containment *createContainmentWrapper(const QString &type, const QString &plugin);
 
 private Q_SLOTS:
@@ -101,4 +100,3 @@ static const int PLASMA_DESKTOP_SCRIPTING_VERSION = 20;
 }
 
 #endif
-

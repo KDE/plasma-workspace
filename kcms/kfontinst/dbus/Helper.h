@@ -24,30 +24,27 @@
  * Boston, MA 02110-1301, USA.
  */
 
+#include <KAuth>
 #include <QObject>
 #include <QSet>
-#include <KAuth>
 
 using namespace KAuth;
 
 namespace KFI
 {
-
 class Helper : public QObject
 {
     Q_OBJECT
 
-    public:
-
+public:
     Helper();
     ~Helper() override;
 
-    public Q_SLOTS:
+public Q_SLOTS:
 
     ActionReply manage(const QVariantMap &args);
 
-    private:
-
+private:
     int install(const QVariantMap &args);
     int uninstall(const QVariantMap &args);
     int move(const QVariantMap &args);

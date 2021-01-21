@@ -30,30 +30,29 @@ class Geolocation : public Plasma::DataEngine
 {
     Q_OBJECT
 
-    public:
-        Geolocation(QObject* parent, const QVariantList& args);
-        ~Geolocation() override;
-        virtual void init();
-        QStringList sources() const override;
+public:
+    Geolocation(QObject *parent, const QVariantList &args);
+    ~Geolocation() override;
+    virtual void init();
+    QStringList sources() const override;
 
-    protected:
-        bool sourceRequestEvent(const QString &name) override;
-        bool updateSourceEvent(const QString& name) override;
-        bool updatePlugins(GeolocationProvider::UpdateTriggers triggers);
+protected:
+    bool sourceRequestEvent(const QString &name) override;
+    bool updateSourceEvent(const QString &name) override;
+    bool updatePlugins(GeolocationProvider::UpdateTriggers triggers);
 
-    protected Q_SLOTS:
-        void networkStatusChanged(bool isOnline);
-        void pluginAvailabilityChanged(GeolocationProvider *provider);
-        void pluginUpdated();
-        void actuallySetData();
+protected Q_SLOTS:
+    void networkStatusChanged(bool isOnline);
+    void pluginAvailabilityChanged(GeolocationProvider *provider);
+    void pluginUpdated();
+    void actuallySetData();
 
-    private:
-        Data m_data;
-        EntryAccuracy m_accuracy;
-        QList<GeolocationProvider *> m_plugins;
-        QTimer m_updateTimer;
-        QTimer m_networkChangedTimer;
+private:
+    Data m_data;
+    EntryAccuracy m_accuracy;
+    QList<GeolocationProvider *> m_plugins;
+    QTimer m_updateTimer;
+    QTimer m_networkChangedTimer;
 };
 
 #endif
-

@@ -53,28 +53,27 @@
 
 #include "../krdb/krdb.h"
 
-#include "stylesmodel.h"
 #include "previewitem.h"
-#include "stylesettings.h"
 #include "styledata.h"
+#include "stylesettings.h"
+#include "stylesmodel.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_style.json", registerPlugin<KCMStyle>();registerPlugin<StyleData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_style.json", registerPlugin<KCMStyle>(); registerPlugin<StyleData>();)
 
-extern "C"
+extern "C" {
+Q_DECL_EXPORT void kcminit_style()
 {
-    Q_DECL_EXPORT void kcminit_style()
-    {
-        uint flags = KRdbExportQtSettings | KRdbExportQtColors | KRdbExportXftSettings | KRdbExportGtkTheme;
-        KConfig _config( QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals  );
-        KConfigGroup config(&_config, "X11");
+    uint flags = KRdbExportQtSettings | KRdbExportQtColors | KRdbExportXftSettings | KRdbExportGtkTheme;
+    KConfig _config(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
+    KConfigGroup config(&_config, "X11");
 
-        // This key is written by the "colors" module.
-        bool exportKDEColors = config.readEntry("exportKDEColors", true);
-        if (exportKDEColors) {
-            flags |= KRdbExportColors;
-        }
-        runRdb( flags );
+    // This key is written by the "colors" module.
+    bool exportKDEColors = config.readEntry("exportKDEColors", true);
+    if (exportKDEColors) {
+        flags |= KRdbExportColors;
     }
+    runRdb(flags);
+}
 }
 
 KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
@@ -88,10 +87,12 @@ KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
     qmlRegisterType<StylesModel>();
     qmlRegisterType<PreviewItem>("org.kde.private.kcms.style", 1, 0, "PreviewItem");
 
-    KAboutData *about =
-        new KAboutData( QStringLiteral("kcm_style"), i18n("Application Style"), QStringLiteral("2.0"),
-                        QString(), KAboutLicense::GPL,
-                        i18n("(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"));
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_style"),
+                                       i18n("Application Style"),
+                                       QStringLiteral("2.0"),
+                                       QString(),
+                                       KAboutLicense::GPL,
+                                       i18n("(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"));
 
     about->addAuthor(i18n("Karol Szwed"), QString(), QStringLiteral("gallium@kde.org"));
     about->addAuthor(i18n("Daniel Molkentin"), QString(), QStringLiteral("molkentin@kde.org"));
@@ -100,7 +101,7 @@ KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
 
     if (gtkConfigKdedModuleLoaded()) {
         m_gtkPage = new GtkPage(this);
-        connect(m_gtkPage, &GtkPage::gtkThemeSettingsChanged, this, [this](){
+        connect(m_gtkPage, &GtkPage::gtkThemeSettingsChanged, this, [this]() {
             setNeedsSave(true);
         });
     }
@@ -189,7 +190,7 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
         return;
     }
 
-    m_styleConfigDialog = new StyleConfigDialog(nullptr/*this*/, title);
+    m_styleConfigDialog = new StyleConfigDialog(nullptr /*this*/, title);
     m_styleConfigDialog->setAttribute(Qt::WA_DeleteOnClose);
     m_styleConfigDialog->setWindowModality(Qt::WindowModal);
     m_styleConfigDialog->winId(); // so it creates windowHandle
@@ -200,17 +201,17 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
         }
     }
 
-    typedef QWidget*(* factoryRoutine)( QWidget* parent );
+    typedef QWidget *(*factoryRoutine)(QWidget * parent);
 
-    //Get the factory, and make the widget.
-    factoryRoutine factory      = (factoryRoutine)(allocPtr); //Grmbl. So here I am on my
+    // Get the factory, and make the widget.
+    factoryRoutine factory = (factoryRoutine)(allocPtr); // Grmbl. So here I am on my
     //"never use C casts" moralizing streak, and I find that one can't go void* -> function ptr
-    //even with a reinterpret_cast.
+    // even with a reinterpret_cast.
 
-    QWidget*       pluginConfig = factory( m_styleConfigDialog.data() );
+    QWidget *pluginConfig = factory(m_styleConfigDialog.data());
 
-    //Insert it in...
-    m_styleConfigDialog->setMainWidget( pluginConfig );
+    // Insert it in...
+    m_styleConfigDialog->setMainWidget(pluginConfig);
 
     //..and connect it to the wrapper
     connect(pluginConfig, SIGNAL(changed(bool)), m_styleConfigDialog.data(), SLOT(setDirty(bool)));
@@ -225,7 +226,7 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
         // Force re-rendering of the preview, to apply settings
         emit styleReconfigured(styleName);
 
-        //For now, ask all KDE apps to recreate their styles to apply the setitngs
+        // For now, ask all KDE apps to recreate their styles to apply the setitngs
         KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
 
         // When user edited a style, assume they want to use it, too
@@ -240,11 +241,7 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
 
 bool KCMStyle::gtkConfigKdedModuleLoaded()
 {
-    QDBusInterface kdedInterface(
-        QStringLiteral("org.kde.kded5"),
-        QStringLiteral("/kded"),
-        QStringLiteral("org.kde.kded5")
-    );
+    QDBusInterface kdedInterface(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QStringLiteral("org.kde.kded5"));
     QDBusReply<QStringList> loadedKdedModules = kdedInterface.call(QStringLiteral("loadedModules"));
     return loadedKdedModules.value().contains(QStringLiteral("gtkconfig"));
 }
@@ -293,13 +290,13 @@ void KCMStyle::save()
     // applications on the fly, ensuring that we still follow the user's
     // export fonts/colors settings.
     uint flags = KRdbExportQtSettings | KRdbExportGtkTheme;
-    KConfig _kconfig( QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals  );
+    KConfig _kconfig(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
     KConfigGroup kconfig(&_kconfig, "X11");
     bool exportKDEColors = kconfig.readEntry("exportKDEColors", true);
     if (exportKDEColors) {
         flags |= KRdbExportColors;
     }
-    runRdb( flags );
+    runRdb(flags);
 
     // Now allow KDE apps to reconfigure themselves.
     if (newStyleLoaded) {

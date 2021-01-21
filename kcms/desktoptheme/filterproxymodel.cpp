@@ -23,9 +23,9 @@
 
 #include "themesmodel.h"
 
-FilterProxyModel::FilterProxyModel(QObject *parent) : QSortFilterProxyModel(parent)
+FilterProxyModel::FilterProxyModel(QObject *parent)
+    : QSortFilterProxyModel(parent)
 {
-
 }
 
 FilterProxyModel::~FilterProxyModel() = default;
@@ -113,12 +113,12 @@ bool FilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &source
 
     if (!m_query.isEmpty()) {
         if (!idx.data(Qt::DisplayRole).toString().contains(m_query, Qt::CaseInsensitive)
-                && !idx.data(ThemesModel::PluginNameRole).toString().contains(m_query, Qt::CaseInsensitive)) {
+            && !idx.data(ThemesModel::PluginNameRole).toString().contains(m_query, Qt::CaseInsensitive)) {
             return false;
         }
     }
 
-    const auto type =  idx.data(ThemesModel::ColorTypeRole).value<ThemesModel::ColorType>();
+    const auto type = idx.data(ThemesModel::ColorTypeRole).value<ThemesModel::ColorType>();
     switch (m_filter) {
     case AllThemes:
         return true;

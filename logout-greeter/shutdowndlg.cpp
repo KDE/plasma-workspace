@@ -24,48 +24,48 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "shutdowndlg.h"
 
 #include <QApplication>
-#include <QQuickItem>
-#include <QTimer>
-#include <QFile>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
 #include <QDBusVariant>
-#include <QQuickView>
+#include <QFile>
+#include <QPainter>
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QQmlPropertyMap>
-#include <QPainter>
-#include <QStandardPaths>
-#include <QX11Info>
+#include <QQuickItem>
+#include <QQuickView>
 #include <QScreen>
+#include <QStandardPaths>
+#include <QTimer>
+#include <QX11Info>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
 
 #include <KAuthorized>
+#include <KConfigGroup>
+#include <KDeclarative/KDeclarative>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <KUser>
 #include <KWindowEffects>
 #include <KWindowSystem>
-#include <KDeclarative/KDeclarative>
-#include <KSharedConfig>
-#include <KConfigGroup>
 
-#include <stdio.h>
 #include <netwm.h>
+#include <stdio.h>
 
-#include <X11/Xutil.h>
 #include <X11/Xatom.h>
+#include <X11/Xutil.h>
 #include <fixx11h.h>
 
 #include <config-workspace.h>
 #include <debug.h>
 
-#include <KWayland/Client/surface.h>
 #include <KWayland/Client/plasmashell.h>
+#include <KWayland/Client/surface.h>
 
 static const QString s_login1Service = QStringLiteral("org.freedesktop.login1");
 static const QString s_login1Path = QStringLiteral("/org/freedesktop/login1");
@@ -73,14 +73,12 @@ static const QString s_dbusPropertiesInterface = QStringLiteral("org.freedesktop
 static const QString s_login1ManagerInterface = QStringLiteral("org.freedesktop.login1.Manager");
 static const QString s_login1RebootToFirmwareSetup = QStringLiteral("RebootToFirmwareSetup");
 
-KSMShutdownDlg::KSMShutdownDlg(QWindow* parent,
-                                KWorkSpace::ShutdownType sdtype,
-                                KWayland::Client::PlasmaShell *plasmaShell)
-  : QuickViewSharedEngine(parent),
-    m_result(false),
-    m_waylandPlasmaShell(plasmaShell)
-    // this is a WType_Popup on purpose. Do not change that! Not
-    // having a popup here has severe side effects.
+KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, KWayland::Client::PlasmaShell *plasmaShell)
+    : QuickViewSharedEngine(parent)
+    , m_result(false)
+    , m_waylandPlasmaShell(plasmaShell)
+// this is a WType_Popup on purpose. Do not change that! Not
+// having a popup here has severe side effects.
 {
     // window stuff
     setClearBeforeRendering(true);
@@ -89,20 +87,25 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow* parent,
     setResizeMode(KQuickAddons::QuickViewSharedEngine::SizeRootObjectToView);
 
     // Qt doesn't set this on unmanaged windows
-    //FIXME: or does it?
+    // FIXME: or does it?
     if (KWindowSystem::isPlatformX11()) {
-        XChangeProperty( QX11Info::display(), winId(),
-            XInternAtom( QX11Info::display(), "WM_WINDOW_ROLE", False ), XA_STRING, 8, PropModeReplace,
-            (unsigned char *)"logoutdialog", strlen( "logoutdialog" ));
+        XChangeProperty(QX11Info::display(),
+                        winId(),
+                        XInternAtom(QX11Info::display(), "WM_WINDOW_ROLE", False),
+                        XA_STRING,
+                        8,
+                        PropModeReplace,
+                        (unsigned char *)"logoutdialog",
+                        strlen("logoutdialog"));
 
         XClassHint classHint;
-        classHint.res_name = const_cast<char*>("ksmserver");
-        classHint.res_class = const_cast<char*>("ksmserver");
+        classHint.res_name = const_cast<char *>("ksmserver");
+        classHint.res_class = const_cast<char *>("ksmserver");
         XSetClassHint(QX11Info::display(), winId(), &classHint);
     }
 
-    //QQuickView *windowContainer = QQuickView::createWindowContainer(m_view, this);
-    //windowContainer->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+    // QQuickView *windowContainer = QQuickView::createWindowContainer(m_view, this);
+    // windowContainer->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     QQmlContext *context = rootContext();
     context->setContextProperty(QStringLiteral("maysd"), m_session.canShutdown());
     context->setContextProperty(QStringLiteral("sdtype"), sdtype);
@@ -141,7 +144,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow* parent,
     // TODO KF6 remove, used to read "BootManager" from kdmrc
     context->setContextProperty(QStringLiteral("bootManager"), QStringLiteral("None"));
 
-    //TODO KF6 remove. Unused
+    // TODO KF6 remove. Unused
     context->setContextProperty(QStringLiteral("choose"), false);
 
     // TODO KF6 remove, used to call KDisplayManager::bootOptions
@@ -180,15 +183,15 @@ void KSMShutdownDlg::init()
         return;
     }
 
-    if(!errors().isEmpty()) {
+    if (!errors().isEmpty()) {
         qCWarning(LOGOUT_GREETER) << errors();
     }
 
     connect(rootObject(), SIGNAL(logoutRequested()), SLOT(slotLogout()));
     connect(rootObject(), SIGNAL(haltRequested()), SLOT(slotHalt()));
-    connect(rootObject(), SIGNAL(suspendRequested(int)), SLOT(slotSuspend(int)) );
+    connect(rootObject(), SIGNAL(suspendRequested(int)), SLOT(slotSuspend(int)));
     connect(rootObject(), SIGNAL(rebootRequested()), SLOT(slotReboot()));
-    connect(rootObject(), SIGNAL(rebootRequested2(int)), SLOT(slotReboot(int)) );
+    connect(rootObject(), SIGNAL(rebootRequested2(int)), SLOT(slotReboot(int)));
     connect(rootObject(), SIGNAL(cancelRequested()), SLOT(reject()));
     connect(rootObject(), SIGNAL(lockScreenRequested()), SLOT(slotLockScreen()));
 
@@ -196,39 +199,36 @@ void KSMShutdownDlg::init()
         setGeometry(screen()->geometry());
     });
 
-    //decide in backgroundcontrast whether doing things darker or lighter
-    //set backgroundcontrast here, because in QEvent::PlatformSurface
-    //is too early and we don't have the root object yet
+    // decide in backgroundcontrast whether doing things darker or lighter
+    // set backgroundcontrast here, because in QEvent::PlatformSurface
+    // is too early and we don't have the root object yet
     const QColor backgroundColor = rootObject() ? rootObject()->property("backgroundColor").value<QColor>() : QColor();
-    KWindowEffects::enableBackgroundContrast(winId(), true,
-        0.4,
-        (backgroundColor.value() > 128 ? 1.6 : 0.3),
-        1.7);
+    KWindowEffects::enableBackgroundContrast(winId(), true, 0.4, (backgroundColor.value() > 128 ? 1.6 : 0.3), 1.7);
     KQuickAddons::QuickViewSharedEngine::showFullScreen();
     setFlag(Qt::FramelessWindowHint);
     requestActivate();
 
-    KWindowSystem::setState(winId(), NET::SkipTaskbar|NET::SkipPager);
+    KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
 
     setKeyboardGrabEnabled(true);
 }
 
 void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
 {
-    KQuickAddons::QuickViewSharedEngine::resizeEvent( e );
+    KQuickAddons::QuickViewSharedEngine::resizeEvent(e);
 
-    if( KWindowSystem::compositingActive()) {
-        //TODO: reenable window mask when we are without composite?
-//        clearMask();
+    if (KWindowSystem::compositingActive()) {
+        // TODO: reenable window mask when we are without composite?
+        //        clearMask();
     } else {
-//        setMask(m_view->mask());
+        //        setMask(m_view->mask());
     }
 }
 
 bool KSMShutdownDlg::event(QEvent *e)
 {
     if (e->type() == QEvent::PlatformSurface) {
-        switch (static_cast<QPlatformSurfaceEvent*>(e)->surfaceEventType()) {
+        switch (static_cast<QPlatformSurfaceEvent *>(e)->surfaceEventType()) {
         case QPlatformSurfaceEvent::SurfaceCreated:
             setupWaylandIntegration();
             KWindowEffects::enableBlurBehind(winId(), true);
@@ -288,7 +288,6 @@ void KSMShutdownDlg::slotReboot(int opt)
     accept();
 }
 
-
 void KSMShutdownDlg::slotLockScreen()
 {
     m_bootOption.clear();
@@ -307,13 +306,13 @@ void KSMShutdownDlg::slotSuspend(int spdMethod)
 {
     m_bootOption.clear();
     switch (spdMethod) {
-        case 1: //Solid::PowerManagement::StandbyState:
-        case 2: //Solid::PowerManagement::SuspendState:
-            m_session.suspend();
-            break;
-        case 4:// Solid::PowerManagement::HibernateState:
-            m_session.hibernate();
-            break;
+    case 1: // Solid::PowerManagement::StandbyState:
+    case 2: // Solid::PowerManagement::SuspendState:
+        m_session.suspend();
+        break;
+    case 4: // Solid::PowerManagement::HibernateState:
+        m_session.hibernate();
+        break;
     }
     reject();
 }

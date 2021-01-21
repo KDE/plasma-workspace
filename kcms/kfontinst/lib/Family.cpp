@@ -21,35 +21,31 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QTextStream>
-#include <QDomElement>
-#include <QDebug>
 #include "Family.h"
 #include "Misc.h"
 #include "XmlStrings.h"
+#include <QDebug>
+#include <QDomElement>
+#include <QTextStream>
 
 #define KFI_DBUG qDebug() << time(0L)
 
 namespace KFI
 {
-
 Family::Family(const QDomElement &elem, bool loadStyles)
 {
-    if(elem.hasAttribute(FAMILY_ATTR))
-        itsName=elem.attribute(FAMILY_ATTR);
-    if(elem.hasAttribute(NAME_ATTR))
-        itsName=elem.attribute(NAME_ATTR);
-    if(loadStyles)
-    {
-        for(QDomNode n=elem.firstChild(); !n.isNull(); n=n.nextSibling())
-        {
-            QDomElement ent=n.toElement();
+    if (elem.hasAttribute(FAMILY_ATTR))
+        itsName = elem.attribute(FAMILY_ATTR);
+    if (elem.hasAttribute(NAME_ATTR))
+        itsName = elem.attribute(NAME_ATTR);
+    if (loadStyles) {
+        for (QDomNode n = elem.firstChild(); !n.isNull(); n = n.nextSibling()) {
+            QDomElement ent = n.toElement();
 
-            if(FONT_TAG==ent.tagName())
-            {
+            if (FONT_TAG == ent.tagName()) {
                 Style style(ent, loadStyles);
 
-                if(!style.files().isEmpty())
+                if (!style.files().isEmpty())
                     itsStyles.insert(style);
             }
         }
@@ -58,61 +54,55 @@ Family::Family(const QDomElement &elem, bool loadStyles)
 
 void Family::toXml(bool disabled, QTextStream &s) const
 {
-    QString                  family(KFI::Misc::encodeText(itsName, s));
-    QStringList              entries;
-    StyleCont::ConstIterator it(itsStyles.begin()),
-                             end(itsStyles.end());
+    QString family(KFI::Misc::encodeText(itsName, s));
+    QStringList entries;
+    StyleCont::ConstIterator it(itsStyles.begin()), end(itsStyles.end());
 
-    for(; it!=end; ++it)
-    {
+    for (; it != end; ++it) {
         QString entry((*it).toXml(disabled, disabled ? family : QString(), s));
 
-        if(!entry.isEmpty())
+        if (!entry.isEmpty())
             entries.append(entry);
     }
 
-    if(entries.count()>0)
-    {
-        if(!disabled)
+    if (entries.count() > 0) {
+        if (!disabled)
             s << " <" FAMILY_TAG " " NAME_ATTR "=\"" << KFI::Misc::encodeText(itsName, s) << "\">\n";
 
-        QStringList::ConstIterator it(entries.begin()),
-                                   end(entries.end());
+        QStringList::ConstIterator it(entries.begin()), end(entries.end());
 
-        for(; it!=end; ++it)
+        for (; it != end; ++it)
             s << *it << endl;
 
-        if(!disabled)
+        if (!disabled)
             s << " </" FAMILY_TAG ">" << endl;
     }
 }
 
 }
 
-QDBusArgument & operator<<(QDBusArgument &argument, const KFI::Family &obj)
+QDBusArgument &operator<<(QDBusArgument &argument, const KFI::Family &obj)
 {
     argument.beginStructure();
     argument << obj.name();
 
     argument.beginArray(qMetaTypeId<KFI::Style>());
-    KFI::StyleCont::ConstIterator it(obj.styles().begin()),
-                                  end(obj.styles().end());
-    for(; it!=end; ++it)
+    KFI::StyleCont::ConstIterator it(obj.styles().begin()), end(obj.styles().end());
+    for (; it != end; ++it)
         argument << *it;
     argument.endArray();
     argument.endStructure();
     return argument;
 }
 
-const QDBusArgument & operator>>(const QDBusArgument &argument, KFI::Family &obj)
+const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::Family &obj)
 {
     QString name;
     argument.beginStructure();
     argument >> name;
-    obj=KFI::Family(name);
+    obj = KFI::Family(name);
     argument.beginArray();
-    while(!argument.atEnd())
-    {
+    while (!argument.atEnd()) {
         KFI::Style st;
         argument >> st;
         obj.add(st);
@@ -122,29 +112,27 @@ const QDBusArgument & operator>>(const QDBusArgument &argument, KFI::Family &obj
     return argument;
 }
 
-QDBusArgument & operator<<(QDBusArgument &argument, const KFI::Families &obj)
+QDBusArgument &operator<<(QDBusArgument &argument, const KFI::Families &obj)
 {
     argument.beginStructure();
     argument << obj.isSystem;
 
     argument.beginArray(qMetaTypeId<KFI::Family>());
-    KFI::FamilyCont::ConstIterator it(obj.items.begin()),
-                                   end(obj.items.end());
+    KFI::FamilyCont::ConstIterator it(obj.items.begin()), end(obj.items.end());
 
-    for(; it!=end; ++it)
+    for (; it != end; ++it)
         argument << *it;
     argument.endArray();
     argument.endStructure();
     return argument;
 }
 
-const QDBusArgument & operator>>(const QDBusArgument &argument, KFI::Families &obj)
+const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::Families &obj)
 {
     argument.beginStructure();
     argument >> obj.isSystem;
     argument.beginArray();
-    while(!argument.atEnd())
-    {
+    while (!argument.atEnd()) {
         KFI::Family fam;
         argument >> fam;
         obj.items.insert(fam);

@@ -33,12 +33,11 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 class Q_DECL_HIDDEN StartupTasksModel::Private
 {
 public:
     Private(StartupTasksModel *q);
-    KDirWatch* configWatcher = nullptr;
+    KDirWatch *configWatcher = nullptr;
     KStartupInfo *startupInfo = nullptr;
     QVector<KStartupInfoId> startups;
     QHash<QByteArray, KStartupInfoData> startupData;
@@ -60,12 +59,17 @@ StartupTasksModel::Private::Private(StartupTasksModel *q)
 void StartupTasksModel::Private::init()
 {
     configWatcher = new KDirWatch(q);
-    configWatcher->addFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation)
-        + QLatin1String("/klaunchrc"));
+    configWatcher->addFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/klaunchrc"));
 
-    QObject::connect(configWatcher, &KDirWatch::dirty, [this] { loadConfig(); });
-    QObject::connect(configWatcher, &KDirWatch::created, [this] { loadConfig(); });
-    QObject::connect(configWatcher, &KDirWatch::deleted, [this] { loadConfig(); });
+    QObject::connect(configWatcher, &KDirWatch::dirty, [this] {
+        loadConfig();
+    });
+    QObject::connect(configWatcher, &KDirWatch::created, [this] {
+        loadConfig();
+    });
+    QObject::connect(configWatcher, &KDirWatch::deleted, [this] {
+        loadConfig();
+    });
 
     loadConfig();
 }
@@ -90,64 +94,56 @@ void StartupTasksModel::Private::loadConfig()
     if (!startupInfo) {
         startupInfo = new KStartupInfo(KStartupInfo::CleanOnCantDetect, q);
 
-        QObject::connect(startupInfo, &KStartupInfo::gotNewStartup, q,
-            [this](const KStartupInfoId &id, const KStartupInfoData &data) {
-                if (startups.contains(id)) {
+        QObject::connect(startupInfo, &KStartupInfo::gotNewStartup, q, [this](const KStartupInfoId &id, const KStartupInfoData &data) {
+            if (startups.contains(id)) {
+                return;
+            }
+
+            const QString appId = data.applicationId();
+            const QString bin = data.bin();
+
+            foreach (const KStartupInfoData &known, startupData) {
+                // Reject if we already have a startup notification for this app.
+                if (known.applicationId() == appId && known.bin() == bin) {
                     return;
                 }
+            }
 
-                const QString appId = data.applicationId();
-                const QString bin = data.bin();
+            const int count = startups.count();
+            q->beginInsertRows(QModelIndex(), count, count);
+            startups.append(id);
+            startupData.insert(id.id(), data);
+            launcherUrls.insert(id.id(), launcherUrl(data));
+            q->endInsertRows();
+        });
 
-                foreach(const KStartupInfoData &known, startupData) {
-                    // Reject if we already have a startup notification for this app.
-                    if (known.applicationId() == appId && known.bin() == bin) {
-                        return;
-                    }
+        QObject::connect(startupInfo, &KStartupInfo::gotRemoveStartup, q, [this](const KStartupInfoId &id) {
+            // The order in which startups are cancelled and corresponding
+            // windows appear is not reliable. Add some grace time to make
+            // an overlap more likely, giving a proxy some time to arbitrate
+            // between the two.
+            QTimer::singleShot(500, [this, id]() {
+                const int row = startups.indexOf(id);
+
+                if (row != -1) {
+                    q->beginRemoveRows(QModelIndex(), row, row);
+                    startups.removeAt(row);
+                    startupData.remove(id.id());
+                    launcherUrls.remove(id.id());
+                    q->endRemoveRows();
                 }
+            });
+        });
 
-                const int count = startups.count();
-                q->beginInsertRows(QModelIndex(), count, count);
-                startups.append(id);
+        QObject::connect(startupInfo, &KStartupInfo::gotStartupChange, q, [this](const KStartupInfoId &id, const KStartupInfoData &data) {
+            const int row = startups.indexOf(id);
+            if (row != -1) {
                 startupData.insert(id.id(), data);
                 launcherUrls.insert(id.id(), launcherUrl(data));
-                q->endInsertRows();
+                QModelIndex idx = q->index(row);
+                emit q->dataChanged(idx, idx);
             }
-        );
-
-        QObject::connect(startupInfo, &KStartupInfo::gotRemoveStartup, q,
-            [this](const KStartupInfoId &id) {
-                // The order in which startups are cancelled and corresponding
-                // windows appear is not reliable. Add some grace time to make
-                // an overlap more likely, giving a proxy some time to arbitrate
-                // between the two.
-                QTimer::singleShot(500,
-                    [this, id]() {
-                        const int row = startups.indexOf(id);
-
-                        if (row != -1) {
-                            q->beginRemoveRows(QModelIndex(), row, row);
-                            startups.removeAt(row);
-                            startupData.remove(id.id());
-                            launcherUrls.remove(id.id());
-                            q->endRemoveRows();
-                        }
-                    }
-                );
-            }
-        );
-
-        QObject::connect(startupInfo, &KStartupInfo::gotStartupChange, q,
-            [this](const KStartupInfoId &id, const KStartupInfoData &data) {
-                const int row = startups.indexOf(id);
-                if (row != -1) {
-                    startupData.insert(id.id(), data);
-                    launcherUrls.insert(id.id(), launcherUrl(data));
-                    QModelIndex idx = q->index(row);
-                    emit q->dataChanged(idx, idx);
-                }
-            }
-        );
+        });
     }
 
     c = KConfigGroup(&_c, "TaskbarButtonSettings");
@@ -177,8 +173,7 @@ QUrl StartupTasksModel::Private::launcherUrl(const KStartupInfoData &data)
             // turn into KService desktop entry name
             appId.chop(strlen(".desktop"));
 
-            services = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
-                QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(appId));
+            services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(appId));
         }
     }
 
@@ -186,16 +181,14 @@ QUrl StartupTasksModel::Private::launcherUrl(const KStartupInfoData &data)
 
     // Try StartupWMClass.
     if (services.empty() && !wmClass.isEmpty()) {
-        services = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
-            QStringLiteral("exist Exec and ('%1' =~ StartupWMClass)").arg(wmClass));
+        services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ StartupWMClass)").arg(wmClass));
     }
 
     const QString name = data.findName();
 
     // Try via name ...
     if (services.empty() && !name.isEmpty()) {
-        services = KServiceTypeTrader::self()->query(QStringLiteral("Application"),
-            QStringLiteral("exist Exec and ('%1' =~ Name)").arg(name));
+        services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name)").arg(name));
     }
 
     if (!services.empty()) {
@@ -234,7 +227,7 @@ StartupTasksModel::~StartupTasksModel()
 
 QVariant StartupTasksModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid()  || index.row() >= d->startups.count()) {
+    if (!index.isValid() || index.row() >= d->startups.count()) {
         return QVariant();
     }
 

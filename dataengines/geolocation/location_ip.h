@@ -32,7 +32,6 @@ public:
 private:
     class Private;
     Private *const d;
-
 };
 
 #endif

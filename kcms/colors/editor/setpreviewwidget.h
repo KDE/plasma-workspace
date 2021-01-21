@@ -23,8 +23,8 @@
 #include <QFrame>
 #include <QPalette>
 
-#include <KSharedConfig>
 #include <KColorScheme>
+#include <KSharedConfig>
 
 #include "ui_setpreview.h"
 
@@ -42,7 +42,7 @@ public:
     void setPalette(const KSharedConfigPtr &config, KColorScheme::ColorSet);
 
 protected:
-    void setPaletteRecursive(QWidget*, const QPalette&);
+    void setPaletteRecursive(QWidget *, const QPalette &);
     bool eventFilter(QObject *, QEvent *) override;
 };
 

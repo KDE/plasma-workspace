@@ -23,16 +23,16 @@
 #include <QDir>
 #include <QMimeData>
 
-#include <KLocalizedString>
+#include <KIO/Job>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/OpenUrlJob>
-#include <KIO/Job>
+#include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KShell>
 
+#include <KActivities/Stats/Query>
 #include <KActivities/Stats/ResultModel>
 #include <KActivities/Stats/Terms>
-#include <KActivities/Stats/Query>
 
 using namespace KActivities::Stats;
 using namespace KActivities::Stats::Terms;
@@ -125,7 +125,7 @@ void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::Qu
     job->start();
 }
 
-QMimeData * RecentDocuments::mimeDataForMatch(const Plasma::QueryMatch& match)
+QMimeData *RecentDocuments::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     QMimeData *result = new QMimeData();
     result->setUrls({match.data().toUrl()});

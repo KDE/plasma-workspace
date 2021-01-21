@@ -20,11 +20,10 @@
 #ifndef TIMEENGINE_H
 #define TIMEENGINE_H
 
-#include <kpluginfactory.h>
 #include <Plasma/DataEngine>
+#include <kpluginfactory.h>
 
 #include <QDebug>
-
 
 /**
  * This engine provides the current date and time for a given
@@ -37,23 +36,23 @@ class TimeEngine : public Plasma::DataEngine
 {
     Q_OBJECT
 
-    public:
-        explicit TimeEngine(const KPluginInfo &plugin, QObject *parent = nullptr);
-        TimeEngine(QObject* parent, const QVariantList& args);
-        ~TimeEngine() override;
+public:
+    explicit TimeEngine(const KPluginInfo &plugin, QObject *parent = nullptr);
+    TimeEngine(QObject *parent, const QVariantList &args);
+    ~TimeEngine() override;
 
-        QStringList sources() const override;
+    QStringList sources() const override;
 
-    protected:
-        bool sourceRequestEvent(const QString &name) override;
-        bool updateSourceEvent(const QString &source) override;
+protected:
+    bool sourceRequestEvent(const QString &name) override;
+    bool updateSourceEvent(const QString &source) override;
 
-    protected Q_SLOTS:
-        void clockSkewed(); // call when system time changed and all clocks should be updated
-        void tzConfigChanged();
+protected Q_SLOTS:
+    void clockSkewed(); // call when system time changed and all clocks should be updated
+    void tzConfigChanged();
 
-    private Q_SLOTS:
-        void init();
+private Q_SLOTS:
+    void init();
 };
 
 #endif // TIMEENGINE_H

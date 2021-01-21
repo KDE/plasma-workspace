@@ -26,9 +26,10 @@
 #include <QQuickWindow>
 #include <QTimer>
 
-DragHelper::DragHelper(QObject* parent) : QObject(parent)
-, m_dragIconSize(32)
-, m_dragging(false)
+DragHelper::DragHelper(QObject *parent)
+    : QObject(parent)
+    , m_dragIconSize(32)
+    , m_dragging(false)
 {
 }
 
@@ -55,20 +56,23 @@ bool DragHelper::isDrag(int oldX, int oldY, int newX, int newY) const
     return ((QPoint(oldX, oldY) - QPoint(newX, newY)).manhattanLength() >= QApplication::startDragDistance());
 }
 
-void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QIcon &icon,
-    const QString &extraMimeType, const QString &extraMimeData)
+void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QIcon &icon, const QString &extraMimeType, const QString &extraMimeData)
 {
     // This allows the caller to return, making sure we don't crash if
     // the caller is destroyed mid-drag (as can happen due to a sycoca
     // change).
 
-    QMetaObject::invokeMethod(this, "doDrag", Qt::QueuedConnection,
-        Q_ARG(QQuickItem*, item), Q_ARG(QUrl, url), Q_ARG(QIcon, icon),
-        Q_ARG(QString, extraMimeType), Q_ARG(QString, extraMimeData));
+    QMetaObject::invokeMethod(this,
+                              "doDrag",
+                              Qt::QueuedConnection,
+                              Q_ARG(QQuickItem *, item),
+                              Q_ARG(QUrl, url),
+                              Q_ARG(QIcon, icon),
+                              Q_ARG(QString, extraMimeType),
+                              Q_ARG(QString, extraMimeData));
 }
 
-void DragHelper::doDrag(QQuickItem *item, const QUrl &url, const QIcon &icon,
-    const QString &extraMimeType, const QString &extraMimeData)
+void DragHelper::doDrag(QQuickItem *item, const QUrl &url, const QIcon &icon, const QString &extraMimeType, const QString &extraMimeData)
 {
     setDragging(true);
 

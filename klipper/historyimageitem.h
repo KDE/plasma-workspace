@@ -28,19 +28,22 @@
 class HistoryImageItem : public HistoryItem
 {
 public:
-    explicit HistoryImageItem( const QPixmap& data );
-    ~HistoryImageItem() override {}
+    explicit HistoryImageItem(const QPixmap &data);
+    ~HistoryImageItem() override
+    {
+    }
     QString text() const override;
-    bool operator==( const HistoryItem& rhs) const override {
-        if ( const HistoryImageItem* casted_rhs = dynamic_cast<const HistoryImageItem*>( &rhs ) ) {
+    bool operator==(const HistoryItem &rhs) const override
+    {
+        if (const HistoryImageItem *casted_rhs = dynamic_cast<const HistoryImageItem *>(&rhs)) {
             return &casted_rhs->m_data == &m_data; // Not perfect, but better than nothing.
         }
         return false;
     }
-    const QPixmap& image() const override;
-    QMimeData* mimeData() const override;
+    const QPixmap &image() const override;
+    QMimeData *mimeData() const override;
 
-    void write( QDataStream& stream ) const override;
+    void write(QDataStream &stream) const override;
 
 private:
     /**
@@ -52,7 +55,5 @@ private:
      */
     mutable QString m_text;
 };
-
-
 
 #endif

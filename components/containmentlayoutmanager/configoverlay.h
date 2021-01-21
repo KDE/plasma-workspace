@@ -25,7 +25,7 @@
 
 #include "itemcontainer.h"
 
-class ConfigOverlay: public QQuickItem
+class ConfigOverlay : public QQuickItem
 {
     Q_OBJECT
     Q_PROPERTY(bool open READ open WRITE setOpen NOTIFY openChanged)
@@ -47,10 +47,22 @@ public:
     bool open() const;
     void setOpen(bool open);
 
-    qreal leftAvailableSpace() {return m_leftAvailableSpace;}
-    qreal topAvailableSpace() {return m_topAvailableSpace;}
-    qreal rightAvailableSpace() {return m_rightAvailableSpace;}
-    qreal bottomAvailableSpace() {return m_bottomAvailableSpace;}
+    qreal leftAvailableSpace()
+    {
+        return m_leftAvailableSpace;
+    }
+    qreal topAvailableSpace()
+    {
+        return m_topAvailableSpace;
+    }
+    qreal rightAvailableSpace()
+    {
+        return m_rightAvailableSpace;
+    }
+    qreal bottomAvailableSpace()
+    {
+        return m_bottomAvailableSpace;
+    }
 
     bool touchInteraction() const;
     // This only usable from C++
@@ -79,4 +91,3 @@ private:
     bool m_open = false;
     bool m_touchInteraction = false;
 };
-

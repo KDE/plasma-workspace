@@ -33,8 +33,9 @@
 
 #include "krunner_interface.h"
 
-FilteredPlacesModel::FilteredPlacesModel(QObject *parent) : QSortFilterProxyModel(parent)
-, m_placesModel(new KFilePlacesModel(this))
+FilteredPlacesModel::FilteredPlacesModel(QObject *parent)
+    : QSortFilterProxyModel(parent)
+    , m_placesModel(new KFilePlacesModel(this))
 {
     setSourceModel(m_placesModel);
     sort(0);
@@ -63,8 +64,7 @@ bool FilteredPlacesModel::filterAcceptsRow(int sourceRow, const QModelIndex &sou
 {
     const QModelIndex index = m_placesModel->index(sourceRow, 0, sourceParent);
 
-    return !m_placesModel->isHidden(index)
-        && !m_placesModel->data(index, KFilePlacesModel::FixedDeviceRole).toBool();
+    return !m_placesModel->isHidden(index) && !m_placesModel->data(index, KFilePlacesModel::FixedDeviceRole).toBool();
 }
 
 bool FilteredPlacesModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
@@ -81,7 +81,8 @@ bool FilteredPlacesModel::lessThan(const QModelIndex &left, const QModelIndex &r
     return (left.row() < right.row());
 }
 
-RunCommandModel::RunCommandModel(QObject *parent) : AbstractModel(parent)
+RunCommandModel::RunCommandModel(QObject *parent)
+    : AbstractModel(parent)
 {
 }
 
@@ -124,8 +125,7 @@ Q_INVOKABLE bool RunCommandModel::trigger(int row, const QString &actionId, cons
     Q_UNUSED(argument)
 
     if (row == 0 && KAuthorized::authorize(QStringLiteral("run_command"))) {
-        org::kde::krunner::App krunner(QStringLiteral("org.kde.krunner"),
-            QStringLiteral("/App"), QDBusConnection::sessionBus());
+        org::kde::krunner::App krunner(QStringLiteral("org.kde.krunner"), QStringLiteral("/App"), QDBusConnection::sessionBus());
         krunner.display();
 
         return true;
@@ -134,13 +134,14 @@ Q_INVOKABLE bool RunCommandModel::trigger(int row, const QString &actionId, cons
     return false;
 }
 
-ComputerModel::ComputerModel(QObject *parent) : ForwardingModel(parent)
-, m_concatProxy(new KConcatenateRowsProxyModel(this))
-, m_runCommandModel(new RunCommandModel(this))
-, m_systemAppsModel(new SimpleFavoritesModel(this))
-, m_filteredPlacesModel(new FilteredPlacesModel(this))
-, m_appNameFormat(AppEntry::NameOnly)
-, m_appletInterface(nullptr)
+ComputerModel::ComputerModel(QObject *parent)
+    : ForwardingModel(parent)
+    , m_concatProxy(new KConcatenateRowsProxyModel(this))
+    , m_runCommandModel(new RunCommandModel(this))
+    , m_systemAppsModel(new SimpleFavoritesModel(this))
+    , m_filteredPlacesModel(new FilteredPlacesModel(this))
+    , m_appNameFormat(AppEntry::NameOnly)
+    , m_appletInterface(nullptr)
 {
     connect(m_systemAppsModel, &SimpleFavoritesModel::favoritesChanged, this, &ComputerModel::systemApplicationsChanged);
     m_systemAppsModel->setFavorites(QStringList() << QStringLiteral("systemsettings.desktop"));
@@ -207,12 +208,11 @@ QVariant ComputerModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    const QModelIndex sourceIndex = m_concatProxy->mapToSource(m_concatProxy->index(index.row(),
-        index.column()));
+    const QModelIndex sourceIndex = m_concatProxy->mapToSource(m_concatProxy->index(index.row(), index.column()));
 
     bool isPlace = (sourceIndex.model() == m_filteredPlacesModel);
 
-    if (isPlace)  {
+    if (isPlace) {
         if (role == Kicker::DescriptionRole) {
             if (m_filteredPlacesModel->isDevice(sourceIndex)) {
                 Solid::Device device = m_filteredPlacesModel->deviceForIndex(sourceIndex);

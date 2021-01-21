@@ -33,7 +33,7 @@
 
 #include "debug.h"
 
-static QVariant::Type expPropType(const QString& propName)
+static QVariant::Type expPropType(const QString &propName)
 {
     if (propName == QLatin1String("Identity"))
         return QVariant::String;
@@ -84,7 +84,7 @@ static QVariant::Type expPropType(const QString& propName)
     return QVariant::Invalid;
 }
 
-static PlayerContainer::Cap capFromName(const QString& capName)
+static PlayerContainer::Cap capFromName(const QString &capName)
 {
     if (capName == QLatin1String("CanQuit"))
         return PlayerContainer::CanQuit;
@@ -107,7 +107,7 @@ static PlayerContainer::Cap capFromName(const QString& capName)
     return PlayerContainer::NoCaps;
 }
 
-PlayerContainer::PlayerContainer(const QString& busAddress, QObject* parent)
+PlayerContainer::PlayerContainer(const QString &busAddress, QObject *parent)
     : DataContainer(parent)
     , m_caps(NoCaps)
     , m_fetchesPending(0)
@@ -126,23 +126,15 @@ PlayerContainer::PlayerContainer(const QString& busAddress, QObject* parent)
         setData("InstancePid", pidReply.value());
     }
 
-    m_propsIface = new OrgFreedesktopDBusPropertiesInterface(
-            busAddress, MPRIS2_PATH,
-            QDBusConnection::sessionBus(), this);
+    m_propsIface = new OrgFreedesktopDBusPropertiesInterface(busAddress, MPRIS2_PATH, QDBusConnection::sessionBus(), this);
 
-    m_playerIface = new OrgMprisMediaPlayer2PlayerInterface(
-            busAddress, MPRIS2_PATH,
-            QDBusConnection::sessionBus(), this);
+    m_playerIface = new OrgMprisMediaPlayer2PlayerInterface(busAddress, MPRIS2_PATH, QDBusConnection::sessionBus(), this);
 
-    m_rootIface = new OrgMprisMediaPlayer2Interface(
-            busAddress, MPRIS2_PATH,
-            QDBusConnection::sessionBus(), this);
+    m_rootIface = new OrgMprisMediaPlayer2Interface(busAddress, MPRIS2_PATH, QDBusConnection::sessionBus(), this);
 
-    connect(m_propsIface, &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged,
-            this,         &PlayerContainer::propertiesChanged);
+    connect(m_propsIface, &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged, this, &PlayerContainer::propertiesChanged);
 
-    connect(m_playerIface, &OrgMprisMediaPlayer2PlayerInterface::Seeked,
-            this,          &PlayerContainer::seeked);
+    connect(m_playerIface, &OrgMprisMediaPlayer2PlayerInterface::Seeked, this, &PlayerContainer::seeked);
 
     refresh();
 }
@@ -155,18 +147,17 @@ void PlayerContainer::refresh()
 
     QDBusPendingCall async = m_propsIface->GetAll(OrgMprisMediaPlayer2Interface::staticInterfaceName());
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished,
-            this,    &PlayerContainer::getPropsFinished);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, &PlayerContainer::getPropsFinished);
     ++m_fetchesPending;
 
     async = m_propsIface->GetAll(OrgMprisMediaPlayer2PlayerInterface::staticInterfaceName());
     watcher = new QDBusPendingCallWatcher(async, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished,
-            this,    &PlayerContainer::getPropsFinished);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, &PlayerContainer::getPropsFinished);
     ++m_fetchesPending;
 }
 
-static bool decodeUri(QVariantMap &map, const QString& entry) {
+static bool decodeUri(QVariantMap &map, const QString &entry)
+{
     if (map.contains(entry)) {
         QString urlString = map.value(entry).toString();
         QUrl url = QUrl::fromEncoded(urlString.toUtf8());
@@ -186,7 +177,7 @@ static bool decodeUri(QVariantMap &map, const QString& entry) {
     return true;
 }
 
-void PlayerContainer::copyProperty(const QString& propName, const QVariant& _value, QVariant::Type expType, UpdateType updType)
+void PlayerContainer::copyProperty(const QString &propName, const QVariant &_value, QVariant::Type expType, UpdateType updType)
 {
     QVariant value = _value;
     // we protect our users from bogus values
@@ -196,8 +187,8 @@ void PlayerContainer::copyProperty(const QString& propName, const QVariant& _val
             // Bug 374531: MapType fits all kinds of maps but we crash when we try to stream the arg into a
             // QVariantMap below but get a wrong signature, e.g. a{ss} instead of the expected a{sv}
             if (arg.currentType() != QDBusArgument::MapType || arg.currentSignature() != QLatin1String("a{sv}")) {
-                qCWarning(MPRIS2) << m_dbusAddress << "exports" << propName
-                    << "with the wrong type; it should be D-Bus type \"a{sv}\" instead of " << arg.currentSignature();
+                qCWarning(MPRIS2) << m_dbusAddress << "exports" << propName << "with the wrong type; it should be D-Bus type \"a{sv}\" instead of "
+                                  << arg.currentSignature();
                 return;
             }
             QVariantMap map;
@@ -214,22 +205,18 @@ void PlayerContainer::copyProperty(const QString& propName, const QVariant& _val
         }
     }
     if (value.type() != expType) {
-        const char * gotTypeCh = QDBusMetaType::typeToSignature(value.userType());
+        const char *gotTypeCh = QDBusMetaType::typeToSignature(value.userType());
         QString gotType = gotTypeCh ? QString::fromLatin1(gotTypeCh) : QStringLiteral("<unknown>");
-        const char * expTypeCh = QDBusMetaType::typeToSignature(expType);
+        const char *expTypeCh = QDBusMetaType::typeToSignature(expType);
         QString expType = expTypeCh ? QString::fromLatin1(expTypeCh) : QStringLiteral("<unknown>");
 
-        qCWarning(MPRIS2) << m_dbusAddress << "exports" << propName
-            << "as D-Bus type" << gotType
-            << "but it should be D-Bus type" << expType;
+        qCWarning(MPRIS2) << m_dbusAddress << "exports" << propName << "as D-Bus type" << gotType << "but it should be D-Bus type" << expType;
     }
     if (value.convert(expType)) {
         if (propName == QLatin1String("Position")) {
-
             setData(POS_UPD_STRING, QDateTime::currentDateTimeUtc());
 
         } else if (propName == QLatin1String("Metadata")) {
-
             if (updType == UpdatedSignal) {
                 const QString oldTrackId = data().value(QStringLiteral("Metadata")).toMap().value(QStringLiteral("mpris:trackid")).toString();
                 const QString newTrackId = value.toMap().value(QStringLiteral("mpris:trackid")).toString();
@@ -245,15 +232,12 @@ void PlayerContainer::copyProperty(const QString& propName, const QVariant& _val
                 value = QVariant(metadataMap);
             }
 
-        } else if (propName == QLatin1String("Rate") &&
-                data().value(QStringLiteral("PlaybackStatus")).toString() == QLatin1String("Playing")) {
-
+        } else if (propName == QLatin1String("Rate") && data().value(QStringLiteral("PlaybackStatus")).toString() == QLatin1String("Playing")) {
             if (data().contains(QLatin1String("Position")))
                 recalculatePosition();
             m_currentRate = value.toDouble();
 
         } else if (propName == QLatin1String("PlaybackStatus")) {
-
             if (data().contains(QLatin1String("Position")) && data().contains(QLatin1String("PlaybackStatus"))) {
                 updatePosition();
             }
@@ -283,7 +267,7 @@ void PlayerContainer::copyProperty(const QString& propName, const QVariant& _val
     }
 }
 
-void PlayerContainer::updateFromMap(const QVariantMap& map, UpdateType updType)
+void PlayerContainer::updateFromMap(const QVariantMap &map, UpdateType updType)
 {
     QMap<QString, QVariant>::const_iterator i = map.constBegin();
     while (i != map.constEnd()) {
@@ -301,12 +285,10 @@ void PlayerContainer::updateFromMap(const QVariantMap& map, UpdateType updType)
                     m_caps &= ~cap;
                 }
             } else {
-                const char * gotTypeCh = QDBusMetaType::typeToSignature(i.value().userType());
+                const char *gotTypeCh = QDBusMetaType::typeToSignature(i.value().userType());
                 QString gotType = gotTypeCh ? QString::fromLatin1(gotTypeCh) : QStringLiteral("<unknown>");
 
-                qCWarning(MPRIS2) << m_dbusAddress << "exports" << i.key()
-                    << "as D-Bus type" << gotType
-                    << "but it should be D-Bus type \"b\"";
+                qCWarning(MPRIS2) << m_dbusAddress << "exports" << i.key() << "as D-Bus type" << gotType << "but it should be D-Bus type \"b\"";
             }
         }
         // fake the CanStop capability
@@ -323,7 +305,7 @@ void PlayerContainer::updateFromMap(const QVariantMap& map, UpdateType updType)
     }
 }
 
-void PlayerContainer::getPropsFinished(QDBusPendingCallWatcher* watcher)
+void PlayerContainer::getPropsFinished(QDBusPendingCallWatcher *watcher)
 {
     QDBusPendingReply<QVariantMap> propsReply = *watcher;
     watcher->deleteLater();
@@ -334,9 +316,8 @@ void PlayerContainer::getPropsFinished(QDBusPendingCallWatcher* watcher)
     }
 
     if (propsReply.isError()) {
-        qCWarning(MPRIS2) << m_dbusAddress << "does not implement"
-            << OrgFreedesktopDBusPropertiesInterface::staticInterfaceName()
-            << "correctly" << "Error message was" << propsReply.error().name() << propsReply.error().message();
+        qCWarning(MPRIS2) << m_dbusAddress << "does not implement" << OrgFreedesktopDBusPropertiesInterface::staticInterfaceName() << "correctly"
+                          << "Error message was" << propsReply.error().name() << propsReply.error().message();
         m_fetchesPending = 0;
         emit initialFetchFailed(this);
         return;
@@ -355,19 +336,16 @@ void PlayerContainer::updatePosition()
 {
     QDBusPendingCall async = m_propsIface->Get(OrgMprisMediaPlayer2PlayerInterface::staticInterfaceName(), QStringLiteral("Position"));
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished,
-            this,    &PlayerContainer::getPositionFinished);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, &PlayerContainer::getPositionFinished);
 }
 
-void PlayerContainer::getPositionFinished(QDBusPendingCallWatcher* watcher)
+void PlayerContainer::getPositionFinished(QDBusPendingCallWatcher *watcher)
 {
     QDBusPendingReply<QVariant> propsReply = *watcher;
     watcher->deleteLater();
 
     if (propsReply.isError()) {
-        qCWarning(MPRIS2) << m_dbusAddress << "does not implement"
-            << OrgFreedesktopDBusPropertiesInterface::staticInterfaceName()
-            << "correctly";
+        qCWarning(MPRIS2) << m_dbusAddress << "does not implement" << OrgFreedesktopDBusPropertiesInterface::staticInterfaceName() << "correctly";
         qCDebug(MPRIS2) << "Error message was" << propsReply.error().name() << propsReply.error().message();
         return;
     }
@@ -377,10 +355,7 @@ void PlayerContainer::getPositionFinished(QDBusPendingCallWatcher* watcher)
     checkForUpdate();
 }
 
-void PlayerContainer::propertiesChanged(
-        const QString& interface,
-        const QVariantMap& changedProperties,
-        const QStringList& invalidatedProperties)
+void PlayerContainer::propertiesChanged(const QString &interface, const QVariantMap &changedProperties, const QStringList &invalidatedProperties)
 {
     Q_UNUSED(interface)
 
@@ -410,4 +385,3 @@ void PlayerContainer::recalculatePosition()
     setData(QStringLiteral("Position"), newPos);
     setData(POS_UPD_STRING, now);
 }
-

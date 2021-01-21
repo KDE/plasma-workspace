@@ -20,15 +20,15 @@
 #ifndef __PREVIEW_IMAGE_PROVIDER_H__
 #define __PREVIEW_IMAGE_PROVIDER_H__
 
-#include <QQuickImageProvider>
 #include <QFont>
+#include <QQuickImageProvider>
 
 class PreviewImageProvider : public QQuickImageProvider
 {
 public:
-    PreviewImageProvider(const QFont& font);
+    PreviewImageProvider(const QFont &font);
     QImage requestImage(const QString &id, QSize *size, const QSize &requestedSize) override;
-    
+
 private:
     QFont m_font;
 };

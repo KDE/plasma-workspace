@@ -25,18 +25,18 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "taskmanager_export.h"
 
-namespace KWayland {
-
-namespace Client {
-    class PlasmaWindowManagement;
-    class Surface;
+namespace KWayland
+{
+namespace Client
+{
+class PlasmaWindowManagement;
+class Surface;
 }
 
 }
 
 namespace TaskManager
 {
-
 /**
  * @short A tasks model for Wayland windows.
  *
@@ -61,7 +61,7 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    QModelIndex	index(int row, int column = 0, const QModelIndex &parent = QModelIndex()) const override;
+    QModelIndex index(int row, int column = 0, const QModelIndex &parent = QModelIndex()) const override;
 
     /**
      * Request activation of the window at the given index.
@@ -213,8 +213,7 @@ public:
      * it to QQuickItem, map its coordinates to its window and find the Wayland
      * Surface for the window.
      **/
-    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
-        QObject *delegate = nullptr) override;
+    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate = nullptr) override;
 
     /**
      * Tries to extract a process-internal Wayland window id from supplied mime data.

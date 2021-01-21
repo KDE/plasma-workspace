@@ -23,7 +23,7 @@
 #include <QDBusConnection>
 #include <QDBusInterface>
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
     createConfigDirectory();
@@ -34,10 +34,8 @@ int main(int argc, char** argv)
     {
         const QString locale1Service = QStringLiteral("org.freedesktop.locale1");
         const QString locale1Path = QStringLiteral("/org/freedesktop/locale1");
-        QDBusMessage message = QDBusMessage::createMethodCall(locale1Service,
-                                                        locale1Path,
-                                                        QStringLiteral("org.freedesktop.DBus.Properties"),
-                                                        QLatin1String("GetAll"));
+        QDBusMessage message =
+            QDBusMessage::createMethodCall(locale1Service, locale1Path, QStringLiteral("org.freedesktop.DBus.Properties"), QLatin1String("GetAll"));
         message << locale1Service;
         QDBusMessage resultMessage = QDBusConnection::systemBus().call(message);
         if (resultMessage.type() == QDBusMessage::ReplyMessage) {
@@ -47,7 +45,7 @@ int main(int argc, char** argv)
                 dbusArgument >> result;
             }
 
-            auto queryAndSet = [&](const QByteArray &var, const QString & value) {
+            auto queryAndSet = [&](const QByteArray &var, const QString &value) {
                 const auto r = result.value(value).toString();
                 if (!r.isEmpty())
                     qputenv(var, r.toUtf8());
@@ -85,7 +83,7 @@ int main(int argc, char** argv)
             args << QString::fromLocal8Bit(argv[i]);
         }
     } else {
-        args = QStringList {QStringLiteral("--xwayland"), QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/startplasma-waylandsession") };
+        args = QStringList{QStringLiteral("--xwayland"), QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/startplasma-waylandsession")};
     }
     runSync(QStringLiteral("kwin_wayland_wrapper"), args);
 

@@ -18,7 +18,8 @@
 
 #include "devicesignalmapmanager.h"
 
-DeviceSignalMapManager::DeviceSignalMapManager(QObject *parent) : QObject(parent)
+DeviceSignalMapManager::DeviceSignalMapManager(QObject *parent)
+    : QObject(parent)
 {
     user = parent;
 }
@@ -33,9 +34,9 @@ void DeviceSignalMapManager::mapDevice(Solid::Battery *battery, const QString &u
     if (!signalmap.contains(Solid::DeviceInterface::Battery)) {
         map = new BatterySignalMapper(this);
         signalmap[Solid::DeviceInterface::Battery] = map;
-        connect(map, SIGNAL(deviceChanged(QString,QString,QVariant)), user, SLOT(deviceChanged(QString,QString,QVariant)));
+        connect(map, SIGNAL(deviceChanged(QString, QString, QVariant)), user, SLOT(deviceChanged(QString, QString, QVariant)));
     } else {
-        map = (BatterySignalMapper*)signalmap[Solid::DeviceInterface::Battery];
+        map = (BatterySignalMapper *)signalmap[Solid::DeviceInterface::Battery];
     }
 
     connect(battery, &Solid::Battery::chargePercentChanged, map, &BatterySignalMapper::chargePercentChanged);
@@ -50,9 +51,9 @@ void DeviceSignalMapManager::mapDevice(Solid::StorageAccess *storageaccess, cons
     if (!signalmap.contains(Solid::DeviceInterface::StorageAccess)) {
         map = new StorageAccessSignalMapper(this);
         signalmap[Solid::DeviceInterface::StorageAccess] = map;
-        connect(map, SIGNAL(deviceChanged(QString,QString,QVariant)), user, SLOT(deviceChanged(QString,QString,QVariant)));
+        connect(map, SIGNAL(deviceChanged(QString, QString, QVariant)), user, SLOT(deviceChanged(QString, QString, QVariant)));
     } else {
-        map = (StorageAccessSignalMapper*)signalmap[Solid::DeviceInterface::StorageAccess];
+        map = (StorageAccessSignalMapper *)signalmap[Solid::DeviceInterface::StorageAccess];
     }
 
     connect(storageaccess, &Solid::StorageAccess::accessibilityChanged, map, &StorageAccessSignalMapper::accessibilityChanged);
@@ -61,7 +62,7 @@ void DeviceSignalMapManager::mapDevice(Solid::StorageAccess *storageaccess, cons
 
 void DeviceSignalMapManager::unmapDevice(Solid::Battery *battery)
 {
-    BatterySignalMapper *map = (BatterySignalMapper*)signalmap.value(Solid::DeviceInterface::Battery);
+    BatterySignalMapper *map = (BatterySignalMapper *)signalmap.value(Solid::DeviceInterface::Battery);
     if (!map) {
         return;
     }
@@ -73,12 +74,10 @@ void DeviceSignalMapManager::unmapDevice(Solid::Battery *battery)
 
 void DeviceSignalMapManager::unmapDevice(Solid::StorageAccess *storageaccess)
 {
-    StorageAccessSignalMapper *map = (StorageAccessSignalMapper*)signalmap.value(Solid::DeviceInterface::StorageAccess);
+    StorageAccessSignalMapper *map = (StorageAccessSignalMapper *)signalmap.value(Solid::DeviceInterface::StorageAccess);
     if (!map) {
         return;
     }
 
     disconnect(storageaccess, &Solid::StorageAccess::accessibilityChanged, map, &StorageAccessSignalMapper::accessibilityChanged);
 }
-
-

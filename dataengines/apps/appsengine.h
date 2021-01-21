@@ -43,24 +43,23 @@
  */
 class AppsEngine : public Plasma::DataEngine
 {
-
     Q_OBJECT
 
-    public:
-        AppsEngine(QObject *parent, const QVariantList &args);
-        ~AppsEngine() override;
-        Plasma::Service *serviceForSource(const QString &name) override;
+public:
+    AppsEngine(QObject *parent, const QVariantList &args);
+    ~AppsEngine() override;
+    Plasma::Service *serviceForSource(const QString &name) override;
 
-    protected:
-        virtual void init();
+protected:
+    virtual void init();
 
-    private Q_SLOTS:
-        void sycocaChanged(const QStringList &changes);
+private Q_SLOTS:
+    void sycocaChanged(const QStringList &changes);
 
-    private:
-        friend class AppSource;
-        void addGroup(KServiceGroup::Ptr group);
-        void addApp(KService::Ptr app);
+private:
+    friend class AppSource;
+    void addGroup(KServiceGroup::Ptr group);
+    void addApp(KService::Ptr app);
 };
 
 #endif // TASKSENGINE_H

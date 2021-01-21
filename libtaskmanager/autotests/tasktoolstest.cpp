@@ -46,48 +46,48 @@ class TaskToolsTest : public QObject
 {
     Q_OBJECT
 
-    private Q_SLOTS:
-        void initTestCase();
-        void cleanupTestCase();
+private Q_SLOTS:
+    void initTestCase();
+    void cleanupTestCase();
 
-        void shouldFindApp();
-        void shouldFindDefaultApp();
-        void shouldCompareLauncherUrls();
+    void shouldFindApp();
+    void shouldFindDefaultApp();
+    void shouldCompareLauncherUrls();
 
-    private:
-        QString appLinkPath();
-        void fillReferenceAppData();
-        void createAppLink();
-        void createIcon();
+private:
+    QString appLinkPath();
+    void fillReferenceAppData();
+    void createAppLink();
+    void createIcon();
 
-        AppData m_referenceAppData;
-        QTemporaryDir m_tempDir;
+    AppData m_referenceAppData;
+    QTemporaryDir m_tempDir;
 };
 
 void TaskToolsTest::initTestCase()
 {
-        QStandardPaths::setTestModeEnabled(true);
+    QStandardPaths::setTestModeEnabled(true);
 
-        QVERIFY(m_tempDir.isValid());
-        QVERIFY(QDir().mkpath(m_tempDir.path() + QLatin1String("/config")));
-        QVERIFY(QDir().mkpath(m_tempDir.path() + QLatin1String("/cache")));
-        QVERIFY(QDir().mkpath(m_tempDir.path() + QLatin1String("/data/applications")));
+    QVERIFY(m_tempDir.isValid());
+    QVERIFY(QDir().mkpath(m_tempDir.path() + QLatin1String("/config")));
+    QVERIFY(QDir().mkpath(m_tempDir.path() + QLatin1String("/cache")));
+    QVERIFY(QDir().mkpath(m_tempDir.path() + QLatin1String("/data/applications")));
 
 #ifdef Q_XDG_PLATFORM
-        qputenv("XDG_CONFIG_HOME", QFile::encodeName(m_tempDir.path() + QLatin1String("/config")));
-        qputenv("XDG_CACHE_HOME", QFile::encodeName(m_tempDir.path() + QLatin1String("/cache")));
-        qputenv("XDG_DATA_DIRS", QFile::encodeName(m_tempDir.path() + QLatin1String("/data")));
+    qputenv("XDG_CONFIG_HOME", QFile::encodeName(m_tempDir.path() + QLatin1String("/config")));
+    qputenv("XDG_CACHE_HOME", QFile::encodeName(m_tempDir.path() + QLatin1String("/cache")));
+    qputenv("XDG_DATA_DIRS", QFile::encodeName(m_tempDir.path() + QLatin1String("/data")));
 #else
-        QSKIP("This test requires XDG.");
+    QSKIP("This test requires XDG.");
 #endif
 
-        createIcon();
-        fillReferenceAppData();
-        createAppLink();
+    createIcon();
+    fillReferenceAppData();
+    createAppLink();
 
-        QFile::remove(KSycoca::absoluteFilePath());
-        KSycoca::self()->ensureCacheValid();
-        QVERIFY(QFile::exists(KSycoca::absoluteFilePath()));
+    QFile::remove(KSycoca::absoluteFilePath());
+    KSycoca::self()->ensureCacheValid();
+    QVERIFY(QFile::exists(KSycoca::absoluteFilePath()));
 }
 
 void TaskToolsTest::cleanupTestCase()

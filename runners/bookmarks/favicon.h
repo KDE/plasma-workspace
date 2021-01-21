@@ -18,12 +18,11 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-
 #ifndef FAVICON_H
 #define FAVICON_H
 
-#include <QObject>
 #include <QIcon>
+#include <QObject>
 
 class Favicon : public QObject
 {
@@ -33,23 +32,35 @@ public:
     virtual QIcon iconFor(const QString &url) = 0;
 
 protected:
-    inline QIcon defaultIcon() const { return m_default_icon; }
+    inline QIcon defaultIcon() const
+    {
+        return m_default_icon;
+    }
+
 private:
     QIcon const m_default_icon;
 
 public Q_SLOTS:
-    virtual void prepare() {}
-    virtual void teardown() {}
-    
+    virtual void prepare()
+    {
+    }
+    virtual void teardown()
+    {
+    }
 };
 
-
-class FallbackFavicon : public Favicon {
+class FallbackFavicon : public Favicon
+{
     Q_OBJECT
 public:
-    FallbackFavicon(QObject *parent = nullptr) : Favicon(parent) {}
-    QIcon iconFor(const QString &) override { return defaultIcon(); }
+    FallbackFavicon(QObject *parent = nullptr)
+        : Favicon(parent)
+    {
+    }
+    QIcon iconFor(const QString &) override
+    {
+        return defaultIcon();
+    }
 };
-
 
 #endif // FAVICON_H

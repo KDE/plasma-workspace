@@ -21,9 +21,9 @@
 #include "debug.h"
 
 #include "plasmoidregistry.h"
-#include "systemtraysettings.h"
-#include "systemtraymodel.h"
 #include "sortedsystemtraymodel.h"
+#include "systemtraymodel.h"
+#include "systemtraysettings.h"
 
 #include <QMenu>
 #include <QQuickItem>
@@ -35,16 +35,16 @@
 #include <Plasma/PluginLoader>
 #include <Plasma/ServiceJob>
 
-#include <KActionCollection>
 #include <KAcceleratorManager>
+#include <KActionCollection>
 
-SystemTray::SystemTray(QObject *parent, const QVariantList &args) :
-    Plasma::Containment(parent, args),
-    m_plasmoidModel(nullptr),
-    m_statusNotifierModel(nullptr),
-    m_systemTrayModel(nullptr),
-    m_sortedSystemTrayModel(nullptr),
-    m_configSystemTrayModel(nullptr)
+SystemTray::SystemTray(QObject *parent, const QVariantList &args)
+    : Plasma::Containment(parent, args)
+    , m_plasmoidModel(nullptr)
+    , m_statusNotifierModel(nullptr)
+    , m_systemTrayModel(nullptr)
+    , m_sortedSystemTrayModel(nullptr)
+    , m_configSystemTrayModel(nullptr)
 {
     setHasConfigurationInterface(true);
     setContainmentType(Plasma::Types::CustomEmbeddedContainment);
@@ -66,8 +66,8 @@ void SystemTray::init()
     connect(m_plasmoidRegistry, &PlasmoidRegistry::plasmoidEnabled, this, &SystemTray::startApplet);
     connect(m_plasmoidRegistry, &PlasmoidRegistry::plasmoidStopped, this, &SystemTray::stopApplet);
 
-    //we don't want to automatically propagate the activated signal from the Applet to the Containment
-    //even if SystemTray is of type Containment, it is de facto Applet and should act like one
+    // we don't want to automatically propagate the activated signal from the Applet to the Containment
+    // even if SystemTray is of type Containment, it is de facto Applet and should act like one
     connect(this, &Containment::appletAdded, this, [this](Plasma::Applet *applet) {
         disconnect(applet, &Applet::activated, this, &Applet::activated);
     });
@@ -86,7 +86,7 @@ void SystemTray::restoreContents(KConfigGroup &group)
         setGlobalShortcut(QKeySequence(shortcutText));
     }
 
-    //cache known config group ids for applets
+    // cache known config group ids for applets
     KConfigGroup cg = group.group("Applets");
     for (const QString &group : cg.groupList()) {
         KConfigGroup appletConfig(&cg, group);
@@ -105,7 +105,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
         return;
     }
 
-    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet*>();
+    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
 
     QPointF pos = appletInterface->mapToScene(QPointF(x, y));
 
@@ -119,14 +119,14 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     connect(this, &QObject::destroyed, desktopMenu, &QMenu::close);
     desktopMenu->setAttribute(Qt::WA_DeleteOnClose);
 
-    //this is a workaround where Qt will fail to realize a mouse has been released
+    // this is a workaround where Qt will fail to realize a mouse has been released
 
     // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
     // whilst the mouse is depressed
     // https://bugreports.qt.io/browse/QTBUG-59044
     // this causes the next click to go missing
 
-    //by releasing manually we avoid that situation
+    // by releasing manually we avoid that situation
     auto ungrabMouseHack = [appletInterface]() {
         if (appletInterface->window() && appletInterface->window()->mouseGrabberItem()) {
             appletInterface->window()->mouseGrabberItem()->ungrabMouse();
@@ -134,8 +134,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     };
 
     QTimer::singleShot(0, appletInterface, ungrabMouseHack);
-    //end workaround
-
+    // end workaround
 
     emit applet->contextualActionsAboutToShow();
     const auto contextActions = applet->contextualActions();
@@ -164,8 +163,8 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     if (QScreen *screen = appletInterface->window()->screen()) {
         const QRect geo = screen->availableGeometry();
 
-        pos = QPoint(qBound(geo.left(), (int)pos.x(), geo.right() - desktopMenu->width()),
-                        qBound(geo.top(), (int)pos.y(), geo.bottom() - desktopMenu->height()));
+        pos = QPoint(qBound(geo.left(), (int)pos.x(), geo.right() - desktopMenu->width()), //
+                     qBound(geo.top(), (int)pos.y(), geo.bottom() - desktopMenu->height()));
     }
 
     KAcceleratorManager::manage(desktopMenu);
@@ -195,8 +194,8 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
         int x = parameters[QStringLiteral("x")].toInt();
         int y = parameters[QStringLiteral("y")].toInt();
 
-        //try tofind the icon screen coordinates, and adjust the position as a poor
-        //man's popupPosition
+        // try tofind the icon screen coordinates, and adjust the position as a poor
+        // man's popupPosition
 
         QRect screenItemRect(statusNotifierIcon->mapToScene(QPointF(0, 0)).toPoint(), QSize(statusNotifierIcon->width(), statusNotifierIcon->height()));
 
@@ -237,7 +236,7 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
     }
 }
 
-QPointF SystemTray::popupPosition(QQuickItem* visualParent, int x, int y)
+QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
 {
     if (!visualParent) {
         return QPointF(0, 0);
@@ -302,19 +301,19 @@ QAbstractItemModel *SystemTray::configSystemTrayModel()
 
 void SystemTray::onEnabledAppletsChanged()
 {
-    //remove all that are not allowed anymore
+    // remove all that are not allowed anymore
     const auto appletsList = applets();
     for (Plasma::Applet *applet : appletsList) {
-        //Here it should always be valid.
-        //for some reason it not always is.
+        // Here it should always be valid.
+        // for some reason it not always is.
         if (!applet->pluginMetaData().isValid()) {
             applet->config().parent().deleteGroup();
             applet->deleteLater();
         } else {
             const QString task = applet->pluginMetaData().pluginId();
             if (!m_settings->isEnabledPlugin(task)) {
-                //in those cases we do delete the applet config completely
-                //as they were explicitly disabled by the user
+                // in those cases we do delete the applet config completely
+                // as they were explicitly disabled by the user
                 applet->config().parent().deleteGroup();
                 applet->deleteLater();
                 m_configGroupIds.remove(task);
@@ -331,10 +330,10 @@ void SystemTray::startApplet(const QString &pluginId)
             continue;
         }
 
-        //only allow one instance per applet
+        // only allow one instance per applet
         if (pluginId == applet->pluginMetaData().pluginId()) {
-            //Applet::destroy doesn't delete the applet from Containment::applets in the same event
-            //potentially a dbus activated service being restarted can be added in this time.
+            // Applet::destroy doesn't delete the applet from Containment::applets in the same event
+            // potentially a dbus activated service being restarted can be added in this time.
             if (!applet->destroyed()) {
                 return;
             }
@@ -343,10 +342,10 @@ void SystemTray::startApplet(const QString &pluginId)
 
     qCDebug(SYSTEM_TRAY) << "Adding applet:" << pluginId;
 
-    //known one, recycle the id to reuse old config
+    // known one, recycle the id to reuse old config
     if (m_configGroupIds.contains(pluginId)) {
         Applet *applet = Plasma::PluginLoader::self()->loadApplet(pluginId, m_configGroupIds.value(pluginId), QVariantList());
-        //this should never happen unless explicitly wrong config is hand-written or
+        // this should never happen unless explicitly wrong config is hand-written or
         //(more likely) a previously added applet is uninstalled
         if (!applet) {
             qWarning() << "Unable to find applet" << pluginId;
@@ -354,9 +353,9 @@ void SystemTray::startApplet(const QString &pluginId)
         }
         applet->setProperty("org.kde.plasma:force-create", true);
         addApplet(applet);
-        //create a new one automatic id, new config group
+        // create a new one automatic id, new config group
     } else {
-        Applet * applet = createApplet(pluginId, QVariantList() << "org.kde.plasma:force-create");
+        Applet *applet = createApplet(pluginId, QVariantList() << "org.kde.plasma:force-create");
         if (applet) {
             m_configGroupIds[pluginId] = applet->id();
         }
@@ -368,13 +367,13 @@ void SystemTray::stopApplet(const QString &pluginId)
     const auto appletsList = applets();
     for (Plasma::Applet *applet : appletsList) {
         if (applet->pluginMetaData().isValid() && pluginId == applet->pluginMetaData().pluginId()) {
-            //we are *not* cleaning the config here, because since is one
-            //of those automatically loaded/unloaded by dbus, we want to recycle
-            //the config the next time it's loaded, in case the user configured something here
+            // we are *not* cleaning the config here, because since is one
+            // of those automatically loaded/unloaded by dbus, we want to recycle
+            // the config the next time it's loaded, in case the user configured something here
             applet->deleteLater();
-            //HACK: we need to remove the applet from Containment::applets() as soon as possible
-            //otherwise we may have disappearing applets for restarting dbus services
-            //this may be removed when we depend from a frameworks version in which appletDeleted is emitted as soon as deleteLater() is called
+            // HACK: we need to remove the applet from Containment::applets() as soon as possible
+            // otherwise we may have disappearing applets for restarting dbus services
+            // this may be removed when we depend from a frameworks version in which appletDeleted is emitted as soon as deleteLater() is called
             emit appletDeleted(applet);
         }
     }

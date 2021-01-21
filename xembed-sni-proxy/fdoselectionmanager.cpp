@@ -28,25 +28,25 @@
 
 #include <KSelectionOwner>
 
-#include <xcb/xcb_atom.h>
-#include <xcb/xcb_event.h>
 #include <xcb/composite.h>
 #include <xcb/damage.h>
+#include <xcb/xcb_atom.h>
+#include <xcb/xcb_event.h>
 
-#include "xcbutils.h"
 #include "sniproxy.h"
+#include "xcbutils.h"
 
-#define SYSTEM_TRAY_REQUEST_DOCK    0
-#define SYSTEM_TRAY_BEGIN_MESSAGE   1
-#define SYSTEM_TRAY_CANCEL_MESSAGE  2
+#define SYSTEM_TRAY_REQUEST_DOCK 0
+#define SYSTEM_TRAY_BEGIN_MESSAGE 1
+#define SYSTEM_TRAY_CANCEL_MESSAGE 2
 
-FdoSelectionManager::FdoSelectionManager():
-    QObject(),
-    m_selectionOwner(new KSelectionOwner(Xcb::atoms->selectionAtom, -1, this))
+FdoSelectionManager::FdoSelectionManager()
+    : QObject()
+    , m_selectionOwner(new KSelectionOwner(Xcb::atoms->selectionAtom, -1, this))
 {
     qCDebug(SNIPROXY) << "starting";
 
-    //we may end up calling QCoreApplication::quit() in this method, at which point we need the event loop running
+    // we may end up calling QCoreApplication::quit() in this method, at which point we need the event loop running
     QTimer::singleShot(0, this, &FdoSelectionManager::init);
 }
 
@@ -58,7 +58,7 @@ FdoSelectionManager::~FdoSelectionManager()
 
 void FdoSelectionManager::init()
 {
-    //load damage extension
+    // load damage extension
     xcb_connection_t *c = QX11Info::connection();
     xcb_prefetch_extension_data(c, &xcb_damage_id);
     const auto *reply = xcb_get_extension_data(c, &xcb_damage_id);
@@ -66,7 +66,7 @@ void FdoSelectionManager::init()
         m_damageEventBase = reply->first_event;
         xcb_damage_query_version_unchecked(c, XCB_DAMAGE_MAJOR_VERSION, XCB_DAMAGE_MINOR_VERSION);
     } else {
-        //no XDamage means
+        // no XDamage means
         qCCritical(SNIPROXY) << "could not load damage extension. Quitting";
         qApp->exit(-1);
     }
@@ -244,12 +244,5 @@ void FdoSelectionManager::setSystemTrayVisual()
         }
     }
 
-    xcb_change_property(c,
-                        XCB_PROP_MODE_REPLACE,
-                        m_selectionOwner->ownerWindow(),
-                        Xcb::atoms->visualAtom,
-                        XCB_ATOM_VISUALID,
-                        32,
-                        1,
-                        &trayVisual);
+    xcb_change_property(c, XCB_PROP_MODE_REPLACE, m_selectionOwner->ownerWindow(), Xcb::atoms->visualAtom, XCB_ATOM_VISUALID, 32, 1, &trayVisual);
 }

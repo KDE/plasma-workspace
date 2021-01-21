@@ -34,8 +34,7 @@ using StringBoolMap = QMap<QString, bool>;
 Q_DECLARE_METATYPE(StringBoolMap);
 
 // Menu item itself (Start method)
-struct GMenuItem
-{
+struct GMenuItem {
     uint id;
     uint section;
     VariantMapList items;
@@ -49,8 +48,7 @@ using GMenuItemList = QList<GMenuItem>;
 Q_DECLARE_METATYPE(GMenuItemList);
 
 // Information about what section or submenu to use for a particular entry
-struct GMenuSection
-{
+struct GMenuSection {
     uint subscription;
     uint menu;
 };
@@ -60,8 +58,7 @@ QDBusArgument &operator<<(QDBusArgument &argument, const GMenuSection &item);
 const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuSection &item);
 
 // Changes of a menu item (Changed signal)
-struct GMenuChange
-{
+struct GMenuChange {
     uint subscription;
     uint menu;
 
@@ -78,8 +75,7 @@ using GMenuChangeList = QList<GMenuChange>;
 Q_DECLARE_METATYPE(GMenuChangeList);
 
 // An application action
-struct GMenuAction
-{
+struct GMenuAction {
     bool enabled;
     QDBusSignature signature;
     QVariantList state;
@@ -92,8 +88,7 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, GMenuAction &item
 using GMenuActionMap = QMap<QString, GMenuAction>;
 Q_DECLARE_METATYPE(GMenuActionMap);
 
-struct GMenuActionsChange
-{
+struct GMenuActionsChange {
     QStringList removed;
     QMap<QString, bool> enabledChanged;
     QVariantMap stateChanged;

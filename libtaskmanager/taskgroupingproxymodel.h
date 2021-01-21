@@ -30,7 +30,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 namespace TaskManager
 {
-
 /**
  * @short A proxy tasks model for grouping tasks, forming a tree.
  *
@@ -46,12 +45,10 @@ class TASKMANAGER_EXPORT TaskGroupingProxyModel : public QAbstractProxyModel, pu
     Q_OBJECT
 
     Q_PROPERTY(TasksModel::GroupMode groupMode READ groupMode WRITE setGroupMode NOTIFY groupModeChanged)
-    Q_PROPERTY(bool groupDemandingAttention READ groupDemandingAttention WRITE setGroupDemandingAttention
-        NOTIFY groupDemandingAttentionChanged)
+    Q_PROPERTY(bool groupDemandingAttention READ groupDemandingAttention WRITE setGroupDemandingAttention NOTIFY groupDemandingAttentionChanged)
     Q_PROPERTY(int windowTasksThreshold READ windowTasksThreshold WRITE setWindowTasksThreshold NOTIFY windowTasksThresholdChanged)
     Q_PROPERTY(QStringList blacklistedAppIds READ blacklistedAppIds WRITE setBlacklistedAppIds NOTIFY blacklistedAppIdsChanged)
-    Q_PROPERTY(QStringList blacklistedLauncherUrls READ blacklistedLauncherUrls WRITE setBlacklistedLauncherUrls
-        NOTIFY blacklistedLauncherUrlsChanged)
+    Q_PROPERTY(QStringList blacklistedLauncherUrls READ blacklistedLauncherUrls WRITE setBlacklistedLauncherUrls NOTIFY blacklistedLauncherUrlsChanged)
 
 public:
     explicit TaskGroupingProxyModel(QObject *parent = nullptr);
@@ -369,8 +366,7 @@ public:
      * regard to extracting information from this, and should take care to
      * reject invalid objects.
      **/
-    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry,
-        QObject *delegate = nullptr) override;
+    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate = nullptr) override;
 
     /**
      * Request toggling whether the task at the given index, along with any
@@ -405,7 +401,7 @@ private:
     Q_PRIVATE_SLOT(d, void sourceRowsRemoved(const QModelIndex &parent, int start, int end))
     Q_PRIVATE_SLOT(d, void sourceModelAboutToBeReset())
     Q_PRIVATE_SLOT(d, void sourceModelReset())
-    Q_PRIVATE_SLOT(d, void sourceDataChanged(QModelIndex,QModelIndex,QVector<int>))
+    Q_PRIVATE_SLOT(d, void sourceDataChanged(QModelIndex, QModelIndex, QVector<int>))
 };
 
 }

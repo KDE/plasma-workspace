@@ -21,7 +21,8 @@
 
 #include <QStandardPaths>
 
-SystemSettings::SystemSettings(QObject *parent) : QObject(parent)
+SystemSettings::SystemSettings(QObject *parent)
+    : QObject(parent)
 {
 }
 

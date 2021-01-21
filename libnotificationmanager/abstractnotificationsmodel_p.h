@@ -31,7 +31,6 @@ class QTimer;
 
 namespace NotificationManager
 {
-
 class Q_DECL_HIDDEN AbstractNotificationsModel::Private
 {
 public:
@@ -52,13 +51,12 @@ public:
     // Fallback timeout to ensure all notifications expire eventually
     // otherwise when it isn't shown to the user and doesn't expire
     // an app might wait indefinitely for the notification to do so
-    QHash<uint /*notificationId*/, QTimer*> notificationTimeouts;
+    QHash<uint /*notificationId*/, QTimer *> notificationTimeouts;
 
     QVector<uint /*notificationId*/> pendingRemovals;
     QTimer pendingRemovalTimer;
 
     QDateTime lastRead;
-
 };
 
 }

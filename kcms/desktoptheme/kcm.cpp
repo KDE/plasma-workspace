@@ -22,32 +22,32 @@
 
 #include "kcm.h"
 
-#include <KPluginFactory>
 #include <KAboutData>
 #include <KLocalizedString>
+#include <KPluginFactory>
 
 #include <KIO/FileCopyJob>
 #include <KIO/JobUiDelegate>
 
-#include <Plasma/Theme>
 #include <Plasma/Svg>
+#include <Plasma/Theme>
 
 #include <QDebug>
 #include <QProcess>
 #include <QQuickItem>
 #include <QQuickWindow>
-#include <QStandardPaths>
 #include <QStandardItemModel>
+#include <QStandardPaths>
 #include <QTemporaryFile>
 
-#include "desktopthemesettings.h"
 #include "desktopthemedata.h"
+#include "desktopthemesettings.h"
 #include "filterproxymodel.h"
 #include "themesmodel.h"
 
 Q_LOGGING_CATEGORY(KCM_DESKTOP_THEME, "kcm_desktoptheme")
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "kcm_desktoptheme.json", registerPlugin<KCMDesktopTheme>();registerPlugin<DesktopThemeData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "kcm_desktoptheme.json", registerPlugin<KCMDesktopTheme>(); registerPlugin<DesktopThemeData>();)
 
 KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
@@ -60,8 +60,7 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const QVariantList &args)
     qmlRegisterUncreatableType<ThemesModel>("org.kde.private.kcms.desktoptheme", 1, 0, "ThemesModel", "Cannot create ThemesModel");
     qmlRegisterUncreatableType<FilterProxyModel>("org.kde.private.kcms.desktoptheme", 1, 0, "FilterProxyModel", "Cannot create FilterProxyModel");
 
-    KAboutData* about = new KAboutData(QStringLiteral("kcm_desktoptheme"), i18n("Plasma Style"),
-                                       QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_desktoptheme"), i18n("Plasma Style"), QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("David Rosca"), QString(), QStringLiteral("nowrep@gmail.com"));
     setAboutData(about);
     setButtons(Apply | Default | Help);
@@ -125,8 +124,7 @@ void KCMDesktopTheme::installThemeFromFile(const QUrl &url)
         return;
     }
 
-    m_tempCopyJob = KIO::file_copy(url, QUrl::fromLocalFile(m_tempInstallFile->fileName()),
-                                    -1, KIO::Overwrite);
+    m_tempCopyJob = KIO::file_copy(url, QUrl::fromLocalFile(m_tempInstallFile->fileName()), -1, KIO::Overwrite);
     m_tempCopyJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
     emit downloadingFileChanged();
 
@@ -147,27 +145,27 @@ void KCMDesktopTheme::installTheme(const QString &path)
     qCDebug(KCM_DESKTOP_THEME) << "Installing ... " << path;
 
     const QString program = QStringLiteral("kpackagetool5");
-    const QStringList arguments = { QStringLiteral("--type"), QStringLiteral("Plasma/Theme"), QStringLiteral("--install"), path};
+    const QStringList arguments = {QStringLiteral("--type"), QStringLiteral("Plasma/Theme"), QStringLiteral("--install"), path};
 
     qCDebug(KCM_DESKTOP_THEME) << program << arguments.join(QLatin1Char(' '));
     QProcess *myProcess = new QProcess(this);
-    connect(myProcess, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
-            this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
+    connect(myProcess,
+            static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
+            this,
+            [this](int exitCode, QProcess::ExitStatus exitStatus) {
                 Q_UNUSED(exitStatus)
                 if (exitCode == 0) {
                     emit showSuccessMessage(i18n("Theme installed successfully."));
                     load();
                 } else {
                     Q_EMIT showErrorMessage(i18n("Theme installation failed."));
-
                 }
             });
 
-    connect(myProcess, &QProcess::errorOccurred,
-            this, [this](QProcess::ProcessError e) {
-                qCWarning(KCM_DESKTOP_THEME) << "Theme installation failed: " << e;
-                Q_EMIT showErrorMessage(i18n("Theme installation failed."));
-            });
+    connect(myProcess, &QProcess::errorOccurred, this, [this](QProcess::ProcessError e) {
+        qCWarning(KCM_DESKTOP_THEME) << "Theme installation failed: " << e;
+        Q_EMIT showErrorMessage(i18n("Theme installation failed."));
+    });
 
     myProcess->start(program, arguments);
 }
@@ -184,7 +182,7 @@ void KCMDesktopTheme::applyPlasmaTheme(QQuickItem *item, const QString &themeNam
         m_themes[themeName] = theme;
     }
 
-    Q_FOREACH (Plasma::Svg *svg, item->findChildren<Plasma::Svg*>()) {
+    Q_FOREACH (Plasma::Svg *svg, item->findChildren<Plasma::Svg *>()) {
         svg->setTheme(theme);
         svg->setUsingRenderingCache(false);
     }
@@ -237,8 +235,7 @@ void KCMDesktopTheme::processPendingDeletions()
     const auto pendingDeletions = m_model->match(m_model->index(0, 0), ThemesModel::PendingDeletionRole, true, -1 /*all*/);
     QVector<QPersistentModelIndex> persistentPendingDeletions;
     // turn into persistent model index so we can delete as we go
-    std::transform(pendingDeletions.begin(), pendingDeletions.end(),
-                   std::back_inserter(persistentPendingDeletions), [](const QModelIndex &idx) {
+    std::transform(pendingDeletions.begin(), pendingDeletions.end(), std::back_inserter(persistentPendingDeletions), [](const QModelIndex &idx) {
         return QPersistentModelIndex(idx);
     });
 
@@ -251,18 +248,19 @@ void KCMDesktopTheme::processPendingDeletions()
         const QStringList arguments = {QStringLiteral("-t"), QStringLiteral("theme"), QStringLiteral("-r"), pluginName};
 
         QProcess *process = new QProcess(this);
-        connect(process, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), this,
-            [this, process, idx, pluginName, displayName](int exitCode, QProcess::ExitStatus exitStatus) {
-                Q_UNUSED(exitStatus)
-                if (exitCode == 0) {
-                    m_model->removeRow(idx.row());
-                } else {
-                    emit showErrorMessage(i18n("Removing theme failed: %1",
-                                               QString::fromLocal8Bit(process->readAllStandardOutput().trimmed())));
-                    m_model->setData(idx, false, ThemesModel::PendingDeletionRole);
-                }
-                process->deleteLater();
-            });
+        connect(process,
+                static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
+                this,
+                [this, process, idx, pluginName, displayName](int exitCode, QProcess::ExitStatus exitStatus) {
+                    Q_UNUSED(exitStatus)
+                    if (exitCode == 0) {
+                        m_model->removeRow(idx.row());
+                    } else {
+                        emit showErrorMessage(i18n("Removing theme failed: %1", QString::fromLocal8Bit(process->readAllStandardOutput().trimmed())));
+                        m_model->setData(idx, false, ThemesModel::PendingDeletionRole);
+                    }
+                    process->deleteLater();
+                });
 
         process->start(program, arguments);
         process->waitForFinished(); // needed so it deletes fine when "OK" is clicked and the dialog destroyed

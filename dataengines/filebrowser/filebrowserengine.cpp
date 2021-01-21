@@ -21,16 +21,18 @@
 
 #include <Plasma/DataContainer>
 
-#include <QDir>
 #include <KDirWatch>
 #include <QDebug>
+#include <QDir>
 
-#define InvalidIfEmpty(A) ((A.isEmpty())?(QVariant()):(QVariant(A)))
-#define forMatchingSources for (DataEngine::SourceDict::iterator it = sources.begin(); it != sources.end(); ++it) \
-  if (dir == QDir(it.key()))
+#define InvalidIfEmpty(A) ((A.isEmpty()) ? (QVariant()) : (QVariant(A)))
+#define forMatchingSources                                                                                                                                     \
+    for (DataEngine::SourceDict::iterator it = sources.begin(); it != sources.end(); ++it)                                                                     \
+        if (dir == QDir(it.key()))
 
-FileBrowserEngine::FileBrowserEngine(QObject* parent, const QVariantList& args) :
-    Plasma::DataEngine(parent, args), m_dirWatch(nullptr)
+FileBrowserEngine::FileBrowserEngine(QObject *parent, const QVariantList &args)
+    : Plasma::DataEngine(parent, args)
+    , m_dirWatch(nullptr)
 {
     Q_UNUSED(args)
 
@@ -52,10 +54,10 @@ void FileBrowserEngine::init()
 
 bool FileBrowserEngine::sourceRequestEvent(const QString &path)
 {
-    qDebug() << "source requested() called: "<< path;
+    qDebug() << "source requested() called: " << path;
     m_dirWatch->addDir(path);
     setData(path, QStringLiteral("type"), QVariant("unknown"));
-    updateData (path, INIT);
+    updateData(path, INIT);
     return true;
 }
 
@@ -91,63 +93,65 @@ void FileBrowserEngine::updateData(const QString &path, EventType event)
     clearData(path);
 
     if (type == DIRECTORY) {
-        qDebug() << "directory info processing: "<< path;
+        qDebug() << "directory info processing: " << path;
         if (dir.isReadable()) {
             const QStringList visibleFiles = dir.entryList(QDir::Files, QDir::Name);
-            const QStringList allFiles = dir.entryList(QDir::Files | QDir::Hidden,
-                    QDir::Name);
+            const QStringList allFiles = dir.entryList(QDir::Files | QDir::Hidden, QDir::Name);
 
-            const QStringList visibleDirectories = dir.entryList(QDir::Dirs
-                    | QDir::NoDotAndDotDot, QDir::Name);
-            const QStringList allDirectories = dir.entryList(QDir::Dirs
-                    | QDir::NoDotAndDotDot | QDir::Hidden, QDir::Name);
+            const QStringList visibleDirectories = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot, QDir::Name);
+            const QStringList allDirectories = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot | QDir::Hidden, QDir::Name);
 
-            forMatchingSources {
+            forMatchingSources
+            {
                 qDebug() << "MATCH";
                 it.value()->setData(QStringLiteral("item.type"), QVariant("directory"));
 
                 QVariant vdTmp;
-                if (!visibleDirectories.isEmpty()) vdTmp = QVariant(visibleDirectories);
+                if (!visibleDirectories.isEmpty())
+                    vdTmp = QVariant(visibleDirectories);
                 it.value()->setData(QStringLiteral("directories.visible"), vdTmp);
 
                 QVariant adTmp;
-                if (!allDirectories.empty()) adTmp = QVariant(allDirectories);
+                if (!allDirectories.empty())
+                    adTmp = QVariant(allDirectories);
                 it.value()->setData(QStringLiteral("directories.all"), adTmp);
 
                 QVariant vfTmp;
-                if (!visibleFiles.empty()) vfTmp = QVariant(visibleFiles);
+                if (!visibleFiles.empty())
+                    vfTmp = QVariant(visibleFiles);
                 it.value()->setData(QStringLiteral("files.visible"), vfTmp);
 
                 QVariant afTmp;
-                if (!allFiles.empty()) afTmp = QVariant(allFiles);
+                if (!allFiles.empty())
+                    afTmp = QVariant(allFiles);
                 it.value()->setData(QStringLiteral("files.all"), afTmp);
             }
         }
     } else if (type == FILE) {
-        qDebug() << "file info processing: "<< path;
-        forMatchingSources {
+        qDebug() << "file info processing: " << path;
+        forMatchingSources
+        {
             it.value()->setData(QStringLiteral("item.type"), QVariant("file"));
         }
     } else {
-        forMatchingSources {
+        forMatchingSources
+        {
             it.value()->setData(QStringLiteral("item.type"), QVariant("imaginary"));
         }
     };
-
 }
 
 void FileBrowserEngine::clearData(const QString &path)
 {
     QDir dir(path);
     const DataEngine::SourceDict sources = containerDict();
-    for (DataEngine::SourceDict::const_iterator it = sources.begin(); it
-            != sources.end(); ++it) {
+    for (DataEngine::SourceDict::const_iterator it = sources.begin(); it != sources.end(); ++it) {
         if (dir == QDir(it.key())) {
-            qDebug() << "matched: "<< path << " "<< it.key();
+            qDebug() << "matched: " << path << " " << it.key();
             it.value()->removeAllData();
 
         } else {
-            qDebug() << "didn't match: "<< path << " "<< it.key();
+            qDebug() << "didn't match: " << path << " " << it.key();
         }
     }
 }

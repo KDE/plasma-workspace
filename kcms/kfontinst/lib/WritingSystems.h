@@ -31,21 +31,18 @@
 
 namespace KFI
 {
-
 class KFONTINST_EXPORT WritingSystems
 {
-    public:
-
-    static WritingSystems * instance();
+public:
+    static WritingSystems *instance();
 
     WritingSystems();
 
-    qulonglong  get(FcPattern *pat) const;
-    qulonglong  get(const QStringList &langs) const;
+    qulonglong get(FcPattern *pat) const;
+    qulonglong get(const QStringList &langs) const;
     QStringList getLangs(qulonglong ws) const;
 
-    private:
-
+private:
     QMap<QString, qulonglong> itsMap;
 };
 

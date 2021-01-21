@@ -6,33 +6,40 @@
 
 #include "screencasting.h"
 #include "qwayland-zkde-screencast-unstable-v1.h"
-#include <QRect>
-#include <QDebug>
-#include <KWayland/Client/registry.h>
 #include <KWayland/Client/output.h>
 #include <KWayland/Client/plasmawindowmanagement.h>
+#include <KWayland/Client/registry.h>
+#include <QDebug>
+#include <QRect>
 
 using namespace KWayland::Client;
 
 class ScreencastingStreamPrivate : public QtWayland::zkde_screencast_stream_unstable_v1
 {
 public:
-    ScreencastingStreamPrivate(ScreencastingStream* q) : q(q) {}
-    ~ScreencastingStreamPrivate() {
+    ScreencastingStreamPrivate(ScreencastingStream *q)
+        : q(q)
+    {
+    }
+    ~ScreencastingStreamPrivate()
+    {
         close();
         q->deleteLater();
     }
 
-    void zkde_screencast_stream_unstable_v1_created(uint32_t node) override {
+    void zkde_screencast_stream_unstable_v1_created(uint32_t node) override
+    {
         m_nodeId = node;
         Q_EMIT q->created(node);
     }
 
-    void zkde_screencast_stream_unstable_v1_closed() override {
+    void zkde_screencast_stream_unstable_v1_closed() override
+    {
         Q_EMIT q->closed();
     }
 
-    void zkde_screencast_stream_unstable_v1_failed(const QString &error) override {
+    void zkde_screencast_stream_unstable_v1_failed(const QString &error) override
+    {
         Q_EMIT q->failed(error);
     }
 
@@ -40,7 +47,7 @@ public:
     QPointer<ScreencastingStream> q;
 };
 
-ScreencastingStream::ScreencastingStream(QObject* parent)
+ScreencastingStream::ScreencastingStream(QObject *parent)
     : QObject(parent)
     , d(new ScreencastingStreamPrivate(this))
 {
@@ -62,7 +69,7 @@ public:
     {
     }
 
-    ScreencastingPrivate(::zkde_screencast_unstable_v1* screencasting, Screencasting *q)
+    ScreencastingPrivate(::zkde_screencast_unstable_v1 *screencasting, Screencasting *q)
         : QtWayland::zkde_screencast_unstable_v1(screencasting)
         , q(q)
     {
@@ -76,18 +83,20 @@ public:
     Screencasting *const q;
 };
 
-Screencasting::Screencasting(QObject* parent)
+Screencasting::Screencasting(QObject *parent)
     : QObject(parent)
-{}
+{
+}
 
-Screencasting::Screencasting(Registry *registry, int id, int version, QObject* parent)
+Screencasting::Screencasting(Registry *registry, int id, int version, QObject *parent)
     : QObject(parent)
     , d(new ScreencastingPrivate(registry, id, version, this))
-{}
+{
+}
 
 Screencasting::~Screencasting() = default;
 
-ScreencastingStream* Screencasting::createOutputStream(Output* output, CursorMode mode)
+ScreencastingStream *Screencasting::createOutputStream(Output *output, CursorMode mode)
 {
     auto stream = new ScreencastingStream(this);
     stream->setObjectName(output->model());
@@ -95,21 +104,21 @@ ScreencastingStream* Screencasting::createOutputStream(Output* output, CursorMod
     return stream;
 }
 
-ScreencastingStream* Screencasting::createWindowStream(PlasmaWindow *window, CursorMode mode)
+ScreencastingStream *Screencasting::createWindowStream(PlasmaWindow *window, CursorMode mode)
 {
     auto stream = createWindowStream(QString::fromUtf8(window->uuid()), mode);
     stream->setObjectName(window->appId());
     return stream;
 }
 
-ScreencastingStream* Screencasting::createWindowStream(const QString &uuid, CursorMode mode)
+ScreencastingStream *Screencasting::createWindowStream(const QString &uuid, CursorMode mode)
 {
     auto stream = new ScreencastingStream(this);
     stream->d->init(d->stream_window(uuid, mode));
     return stream;
 }
 
-void Screencasting::setup(::zkde_screencast_unstable_v1* screencasting)
+void Screencasting::setup(::zkde_screencast_unstable_v1 *screencasting)
 {
     d.reset(new ScreencastingPrivate(screencasting, this));
 }

@@ -17,27 +17,23 @@
  */
 
 #include "soliddeviceservice.h"
-#include "soliddevicejob.h"
 #include "soliddeviceengine.h"
+#include "soliddevicejob.h"
 
-SolidDeviceService::SolidDeviceService (SolidDeviceEngine* parent, const QString& source)
-    : Plasma::Service (parent),
-      m_engine(parent)
+SolidDeviceService::SolidDeviceService(SolidDeviceEngine *parent, const QString &source)
+    : Plasma::Service(parent)
+    , m_engine(parent)
 {
-    setName (QStringLiteral("soliddevice"));
-    setDestination (source);
+    setName(QStringLiteral("soliddevice"));
+    setDestination(source);
 }
 
-Plasma::ServiceJob* SolidDeviceService::createJob (const QString& operation,
-                                                   QMap <QString, QVariant>& parameters)
+Plasma::ServiceJob *SolidDeviceService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
     if (operation == QLatin1String("updateFreespace")) {
         m_engine->updateStorageSpace(destination());
         return nullptr;
     }
 
-    return new SolidDeviceJob (m_engine, destination(), operation, parameters);
+    return new SolidDeviceJob(m_engine, destination(), operation, parameters);
 }
-
-
-

@@ -23,7 +23,8 @@
 
 #include <KWindowSystem>
 
-WindowSystem::WindowSystem(QObject *parent) : QObject(parent)
+WindowSystem::WindowSystem(QObject *parent)
+    : QObject(parent)
 {
 }
 
@@ -31,7 +32,7 @@ WindowSystem::~WindowSystem()
 {
 }
 
-bool WindowSystem::eventFilter(QObject* watched, QEvent* event)
+bool WindowSystem::eventFilter(QObject *watched, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn) {
         removeEventFilter(watched);
@@ -60,7 +61,7 @@ bool WindowSystem::isActive(QQuickItem *item)
     return item->window()->isActive();
 }
 
-void WindowSystem::monitorWindowFocus(QQuickItem* item)
+void WindowSystem::monitorWindowFocus(QQuickItem *item)
 {
     if (!item || !item->window()) {
         return;
@@ -69,14 +70,13 @@ void WindowSystem::monitorWindowFocus(QQuickItem* item)
     item->window()->installEventFilter(this);
 }
 
-void WindowSystem::monitorWindowVisibility(QQuickItem* item)
+void WindowSystem::monitorWindowVisibility(QQuickItem *item)
 {
     if (!item || !item->window()) {
         return;
     }
 
-    connect(item->window(), &QQuickWindow::visibilityChanged, this,
-        &WindowSystem::monitoredWindowVisibilityChanged, Qt::UniqueConnection);
+    connect(item->window(), &QQuickWindow::visibilityChanged, this, &WindowSystem::monitoredWindowVisibilityChanged, Qt::UniqueConnection);
 }
 
 void WindowSystem::monitoredWindowVisibilityChanged(QWindow::Visibility visibility) const

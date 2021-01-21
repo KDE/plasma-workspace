@@ -24,16 +24,16 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <KParts/ReadOnlyPart>
-#include <KParts/BrowserExtension>
-#include <KSharedConfig>
-#include <QUrl>
-#include <QFrame>
-#include <QMap>
+#include "Family.h"
+#include "FontPreview.h"
 #include "KfiConstants.h"
 #include "Misc.h"
-#include "FontPreview.h"
-#include "Family.h"
+#include <KParts/BrowserExtension>
+#include <KParts/ReadOnlyPart>
+#include <KSharedConfig>
+#include <QFrame>
+#include <QMap>
+#include <QUrl>
 
 class QPushButton;
 class QLabel;
@@ -44,7 +44,6 @@ class QTemporaryDir;
 
 namespace KFI
 {
-
 class BrowserExtension;
 class FontInstInterface;
 
@@ -52,18 +51,16 @@ class CFontViewPart : public KParts::ReadOnlyPart
 {
     Q_OBJECT
 
-    public:
-
+public:
     CFontViewPart(QWidget *parentWidget, QObject *parent, const QList<QVariant> &args);
     ~CFontViewPart() override;
 
     bool openUrl(const QUrl &url) override;
 
-    protected:
-
+protected:
     bool openFile() override;
 
-    public Q_SLOTS:
+public Q_SLOTS:
 
     void previewStatus(bool st);
     void timeout();
@@ -76,40 +73,37 @@ class CFontViewPart : public KParts::ReadOnlyPart
     void displayType(const QList<CFcEngine::TRange> &range);
     void showFace(int face);
 
-    private:
-
+private:
     void checkInstallable();
 
-    private:
-
-    CFontPreview       *itsPreview;
-    QPushButton        *itsInstallButton;
-    QWidget            *itsFaceWidget;
-    QFrame             *itsFrame;
-    QLabel             *itsFaceLabel;
-    QSpinBox           *itsFaceSelector;
-    QAction            *itsChangeTextAction;
-    int                itsFace;
-    KSharedConfigPtr   itsConfig;
-    BrowserExtension   *itsExtension;
-    QProcess           *itsProc;
-    QTemporaryDir      *itsTempDir;
-    Misc::TFont        itsFontDetails;
-    FontInstInterface  *itsInterface;
-    bool               itsOpening;
+private:
+    CFontPreview *itsPreview;
+    QPushButton *itsInstallButton;
+    QWidget *itsFaceWidget;
+    QFrame *itsFrame;
+    QLabel *itsFaceLabel;
+    QSpinBox *itsFaceSelector;
+    QAction *itsChangeTextAction;
+    int itsFace;
+    KSharedConfigPtr itsConfig;
+    BrowserExtension *itsExtension;
+    QProcess *itsProc;
+    QTemporaryDir *itsTempDir;
+    Misc::TFont itsFontDetails;
+    FontInstInterface *itsInterface;
+    bool itsOpening;
 };
 
 class BrowserExtension : public KParts::BrowserExtension
 {
     Q_OBJECT
 
-    public:
-
+public:
     BrowserExtension(CFontViewPart *parent);
 
     void enablePrint(bool enable);
 
-    public Q_SLOTS:
+public Q_SLOTS:
 
     void print();
 };

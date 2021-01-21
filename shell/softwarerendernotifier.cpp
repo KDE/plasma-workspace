@@ -1,11 +1,11 @@
 #include "softwarerendernotifier.h"
-#include <QMenu>
-#include <QIcon>
-#include <QProcess>
-#include <QGuiApplication>
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <KConfigGroup>
+#include <QGuiApplication>
+#include <QIcon>
+#include <QMenu>
+#include <QProcess>
 
 #include <QQuickWindow>
 
@@ -35,7 +35,7 @@ SoftwareRendererNotifier::SoftwareRendererNotifier(QObject *parent)
         QProcess::startDetached(QStringLiteral("kcmshell5"), {QStringLiteral("qtquicksettings")});
     });
 
-    auto menu = new QMenu; //ownership is transferred in setContextMenu
+    auto menu = new QMenu; // ownership is transferred in setContextMenu
     auto action = new QAction(i18n("Never show again"));
     connect(action, &QAction::triggered, this, [this]() {
         auto group = KSharedConfig::openConfig()->group(QStringLiteral("softwarerenderer"));
@@ -47,4 +47,3 @@ SoftwareRendererNotifier::SoftwareRendererNotifier(QObject *parent)
 }
 
 SoftwareRendererNotifier::~SoftwareRendererNotifier() = default;
-

@@ -16,23 +16,25 @@
  * along with this library; see the file COPYING.LIB.  If not, write to
  * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
  * Boston, MA 02110-1301, USA.
-*/
+ */
 
-#include <QtTest>
-#include <QObject>
 #include <QDebug>
+#include <QObject>
+#include <QtTest>
 
 #include "notification.h"
 #include "notificationsmodel.h"
 #include "server.h"
 
-namespace NotificationManager {
-
+namespace NotificationManager
+{
 class NotificationTest : public QObject
 {
     Q_OBJECT
 public:
-    NotificationTest() {}
+    NotificationTest()
+    {
+    }
 private Q_SLOTS:
     void parse_data();
     void parse();
@@ -45,6 +47,7 @@ void NotificationTest::parse_data()
     QTest::addColumn<QString>("messageIn");
     QTest::addColumn<QString>("expectedOut");
 
+    // clang-format off
     QTest::newRow("basic no HTML") << "I am a notification" << "I am a notification";
     QTest::newRow("whitespace") << "      I am a   notification  " << "I am a notification";
 
@@ -77,6 +80,7 @@ void NotificationTest::parse_data()
     QTest::newRow("image remote URL space in element name") << "This is < img src=\"http://foo.com/boo.png\" alt=\"cheese\" /> and more text" << "This is ";
 
     QTest::newRow("link") << "This is a link <a href=\"http://foo.com/boo\"/> and more text" << "This is a link <a href=\"http://foo.com/boo\"/> and more text";
+    // clang-format on
 }
 
 void NotificationTest::parse()
@@ -87,7 +91,7 @@ void NotificationTest::parse()
     NotificationManager::Notification notification;
     notification.setBody(messageIn);
 
-    expectedOut = "<?xml version=\"1.0\"?><html>"  + expectedOut + "</html>\n";
+    expectedOut = "<?xml version=\"1.0\"?><html>" + expectedOut + "</html>\n";
 
     QCOMPARE(notification.body(), expectedOut);
 }

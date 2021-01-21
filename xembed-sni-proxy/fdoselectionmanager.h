@@ -21,9 +21,9 @@
 #ifndef FDOSELECTIONMANAGER_H
 #define FDOSELECTIONMANAGER_H
 
-#include <QObject>
-#include <QHash>
 #include <QAbstractNativeEventFilter>
+#include <QHash>
+#include <QObject>
 
 #include <xcb/xcb.h>
 

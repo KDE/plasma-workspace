@@ -31,7 +31,7 @@ class KTimeZoned : public KTimeZonedBase
     friend class RegistryWatcherThread;
 
 public:
-    KTimeZoned(QObject *parent, const QList<QVariant>&);
+    KTimeZoned(QObject *parent, const QList<QVariant> &);
     ~KTimeZoned();
 
 private:

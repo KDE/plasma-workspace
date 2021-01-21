@@ -1,25 +1,24 @@
 #include "shutdown.h"
 #include "shutdownadaptor.h"
 
-#include <QDBusConnection>
 #include <QCoreApplication>
+#include <QDBusConnection>
 #include <QDir>
 #include <QProcess>
 #include <QStandardPaths>
 
-#include "sessionmanagementbackend.h"
+#include "debug.h"
 #include "ksmserver_interface.h"
 #include "kwin_interface.h"
-#include "debug.h"
+#include "sessionmanagementbackend.h"
 
-
-Shutdown::Shutdown(QObject *parent):
-    QObject(parent)
+Shutdown::Shutdown(QObject *parent)
+    : QObject(parent)
 {
     new ShutdownAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/Shutdown"), QStringLiteral("org.kde.Shutdown"), this);
 
-    //registered as a new service name for easy moving to new process
+    // registered as a new service name for easy moving to new process
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.Shutdown"));
 }
 
@@ -43,7 +42,8 @@ void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
     m_shutdownType = shutdownType;
 
     OrgKdeKSMServerInterfaceInterface ksmserverIface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-    ksmserverIface.setTimeout(INT32_MAX); // KSMServer closeSession can take a long time to reply, as apps may have prompts.  Value corresponds to DBUS_TIMEOUT_INFINITE
+    ksmserverIface.setTimeout(
+        INT32_MAX); // KSMServer closeSession can take a long time to reply, as apps may have prompts.  Value corresponds to DBUS_TIMEOUT_INFINITE
 
     auto closeSessionReply = ksmserverIface.closeSession();
     auto watcher = new QDBusPendingCallWatcher(closeSessionReply, this);
@@ -67,7 +67,8 @@ void Shutdown::logoutCancelled()
     qApp->quit();
 }
 
-void Shutdown::logoutComplete() {
+void Shutdown::logoutComplete()
+{
     runShutdownScripts();
 
     // technically this isn't needed in the systemd managed mode, but it seems harmless for now. Guard if it becomes an issue
@@ -76,27 +77,26 @@ void Shutdown::logoutComplete() {
     reply.waitForFinished();
 
     if (m_shutdownType == KWorkSpace::ShutdownTypeHalt) {
-            SessionBackend::self()->shutdown();
+        SessionBackend::self()->shutdown();
     } else if (m_shutdownType == KWorkSpace::ShutdownTypeReboot) {
-            SessionBackend::self()->reboot();
-    } else { //logout
+        SessionBackend::self()->reboot();
+    } else { // logout
         qApp->quit();
     }
 }
 
 void Shutdown::runShutdownScripts()
 {
-    const QStringList shutdownFolders = QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("plasma-workspace/shutdown"), QStandardPaths::LocateDirectory);
+    const QStringList shutdownFolders =
+        QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("plasma-workspace/shutdown"), QStandardPaths::LocateDirectory);
     for (const QString &shutDownFolder : shutdownFolders) {
         QDir dir(shutDownFolder);
 
         const QStringList entries = dir.entryList(QDir::Files);
         for (const QString &file : entries) {
             // Don't execute backup files
-            if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QLatin1String(".bak")) &&
-                    (file[0] != QLatin1Char('%') || !file.endsWith(QLatin1Char('%'))) &&
-                    (file[0] != QLatin1Char('#') || !file.endsWith(QLatin1Char('#'))))
-            {
+            if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QLatin1String(".bak")) && (file[0] != QLatin1Char('%') || !file.endsWith(QLatin1Char('%')))
+                && (file[0] != QLatin1Char('#') || !file.endsWith(QLatin1Char('#')))) {
                 const QString fullPath = dir.absolutePath() + QLatin1Char('/') + file;
 
                 qCDebug(PLASMA_SESSION) << "running shutdown script" << fullPath;
@@ -105,4 +105,3 @@ void Shutdown::runShutdownScripts()
         }
     }
 }
-

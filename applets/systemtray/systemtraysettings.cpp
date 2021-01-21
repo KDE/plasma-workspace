@@ -29,11 +29,11 @@ static const QString SHOW_ALL_ITEMS_KEY = QStringLiteral("showAllItems");
 static const QString SHOWN_ITEMS_KEY = QStringLiteral("shownItems");
 static const QString HIDDEN_ITEMS_KEY = QStringLiteral("hiddenItems");
 
-SystemTraySettings::SystemTraySettings(KConfigLoader *config, QObject *parent) :
-    QObject(parent),
-    config(config)
-{   
-    connect(config, &KConfigLoader::configChanged, this, [this] () {
+SystemTraySettings::SystemTraySettings(KConfigLoader *config, QObject *parent)
+    : QObject(parent)
+    , config(config)
+{
+    connect(config, &KConfigLoader::configChanged, this, [this]() {
         if (!updatingConfigValue) {
             loadConfig();
         }

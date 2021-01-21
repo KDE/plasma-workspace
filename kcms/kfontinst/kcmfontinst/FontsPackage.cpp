@@ -21,50 +21,41 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <KZip>
-#include <QTemporaryDir>
-#include <QDir>
 #include "FontsPackage.h"
 #include "KfiConstants.h"
 #include "Misc.h"
+#include <KZip>
+#include <QDir>
+#include <QTemporaryDir>
 
 namespace KFI
 {
-
 namespace FontsPackage
 {
-
 QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir)
 {
     QSet<QUrl> urls;
 
-    if(!tempDir)
+    if (!tempDir)
         return urls;
 
     KZip zip(fileName);
 
-    if(zip.open(QIODevice::ReadOnly))
-    {
-        const KArchiveDirectory *zipDir=zip.directory();
+    if (zip.open(QIODevice::ReadOnly)) {
+        const KArchiveDirectory *zipDir = zip.directory();
 
-        if(zipDir)
-        {
+        if (zipDir) {
             QStringList fonts(zipDir->entries());
 
-            if(!fonts.isEmpty())
-            {
-                QStringList::ConstIterator it(fonts.begin()),
-                                           end(fonts.end());
+            if (!fonts.isEmpty()) {
+                QStringList::ConstIterator it(fonts.begin()), end(fonts.end());
 
-                for(; it!=end; ++it)
-                {
-                    const KArchiveEntry *entry=zipDir->entry(*it);
+                for (; it != end; ++it) {
+                    const KArchiveEntry *entry = zipDir->entry(*it);
 
-                    if(entry && entry->isFile())
-                    {
-                        if(!(*tempDir))
-                        {
-                            (*tempDir)=new QTemporaryDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
+                    if (entry && entry->isFile()) {
+                        if (!(*tempDir)) {
+                            (*tempDir) = new QTemporaryDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
                             (*tempDir)->setAutoRemove(true);
                         }
 
@@ -75,10 +66,8 @@ QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir)
                         //
                         // Cant install hidden fonts, therefore need to
                         // unhide 1st!
-                        if(Misc::isHidden(name))
-                        {
-                            ::rename(QFile::encodeName((*tempDir)->filePath(name)).data(),
-                                     QFile::encodeName((*tempDir)->filePath(name.mid(1))).data());
+                        if (Misc::isHidden(name)) {
+                            ::rename(QFile::encodeName((*tempDir)->filePath(name)).data(), QFile::encodeName((*tempDir)->filePath(name.mid(1))).data());
                             name.remove(0, 1);
                         }
 

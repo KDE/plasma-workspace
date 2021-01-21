@@ -20,25 +20,22 @@
 
 #include "feedback.h"
 
-#include <KConfigGroup>
-#include <KPluginFactory>
 #include <KAboutData>
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KPluginFactory>
 #include <QVector>
 
-#include <KUserFeedback/Provider>
 #include <KUserFeedback/FeedbackConfigUiController>
+#include <KUserFeedback/Provider>
 
 #include "feedbackdata.h"
 #include "feedbacksettings.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(FeedbackFactory, "kcm_feedback.json", registerPlugin<Feedback>();registerPlugin<FeedbackData>();)
+K_PLUGIN_FACTORY_WITH_JSON(FeedbackFactory, "kcm_feedback.json", registerPlugin<Feedback>(); registerPlugin<FeedbackData>();)
 
-//Program to icon hash
-static QHash<QString, QString> s_programs = {
-    { "plasmashell", "plasmashell" },
-    { "plasma-discover", "plasmadiscover" }
-};
+// Program to icon hash
+static QHash<QString, QString> s_programs = {{"plasmashell", "plasmashell"}, {"plasma-discover", "plasmadiscover"}};
 
 inline void swap(QJsonValueRef v1, QJsonValueRef v2)
 {
@@ -49,7 +46,7 @@ inline void swap(QJsonValueRef v1, QJsonValueRef v2)
 
 Feedback::Feedback(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent)
-    //UserFeedback.conf is used by KUserFeedback which uses QSettings and won't go through globals
+    // UserFeedback.conf is used by KUserFeedback which uses QSettings and won't go through globals
     , m_data(new FeedbackData(this))
 {
     Q_UNUSED(args)
@@ -57,12 +54,14 @@ Feedback::Feedback(QObject *parent, const QVariantList &args)
     qmlRegisterType<FeedbackSettings>();
 
     setAboutData(new KAboutData(QStringLiteral("kcm_feedback"),
-                                       i18n("User Feedback"),
-                                       QStringLiteral("1.0"), i18n("Configure user feedback settings"), KAboutLicense::LGPL));
+                                i18n("User Feedback"),
+                                QStringLiteral("1.0"),
+                                i18n("Configure user feedback settings"),
+                                KAboutLicense::LGPL));
 
-    QVector<QProcess*> processes;
-    for (const auto &exec: s_programs.keys()) {
-        QProcess* p = new QProcess(this);
+    QVector<QProcess *> processes;
+    for (const auto &exec : s_programs.keys()) {
+        QProcess *p = new QProcess(this);
         p->setProgram(exec);
         p->setArguments({QStringLiteral("--feedback")});
         p->start();
@@ -80,7 +79,7 @@ void Feedback::programFinished(int exitCode)
     Q_ASSERT(modeEnumIdx >= 0);
     const auto modeEnum = mo.enumerator(modeEnumIdx);
 
-    QProcess* p = qobject_cast<QProcess*>(sender());
+    QProcess *p = qobject_cast<QProcess *>(sender());
     const QString program = p->program();
 
     if (exitCode) {
@@ -89,7 +88,7 @@ void Feedback::programFinished(int exitCode)
     }
 
     QTextStream stream(p);
-    for (QString line; stream.readLineInto(&line); ) {
+    for (QString line; stream.readLineInto(&line);) {
         int sepIdx = line.indexOf(QLatin1String(": "));
         if (sepIdx < 0) {
             break;
@@ -111,14 +110,10 @@ void Feedback::programFinished(int exitCode)
     for (auto it = m_uses.constBegin(), itEnd = m_uses.constEnd(); it != itEnd; ++it) {
         const auto modeUses = *it;
         for (auto itMode = modeUses.constBegin(), itModeEnd = modeUses.constEnd(); itMode != itModeEnd; ++itMode) {
-            m_feedbackSources << QJsonObject({
-                { "mode", it.key() },
-                { "icons", *itMode },
-                { "description", itMode.key() }
-            });
+            m_feedbackSources << QJsonObject({{"mode", it.key()}, {"icons", *itMode}, {"description", itMode.key()}});
         }
     }
-    std::sort(m_feedbackSources.begin(), m_feedbackSources.end(), [](const QJsonValue& valueL, const QJsonValue& valueR){
+    std::sort(m_feedbackSources.begin(), m_feedbackSources.end(), [](const QJsonValue &valueL, const QJsonValue &valueR) {
         const QJsonObject objL(valueL.toObject()), objR(valueR.toObject());
         const auto modeL = objL["mode"].toInt(), modeR = objR["mode"].toInt();
         return modeL < modeR || (modeL == modeR && objL["description"].toString() < objR["description"].toString());

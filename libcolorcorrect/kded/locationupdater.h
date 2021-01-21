@@ -29,7 +29,7 @@ class LocationUpdater : public KDEDModule
 {
     Q_OBJECT
 public:
-    LocationUpdater(QObject* parent, const QList<QVariant> &);
+    LocationUpdater(QObject *parent, const QList<QVariant> &);
 
 public Q_SLOTS:
     void sendLocation(double latitude, double longitude);

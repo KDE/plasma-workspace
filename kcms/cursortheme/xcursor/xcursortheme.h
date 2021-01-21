@@ -3,7 +3,7 @@
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public
- * License version 2 or at your option version 3 as published by 
+ * License version 2 or at your option version 3 as published by
  * the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
@@ -37,37 +37,45 @@ typedef _XcursorImages XcursorImages;
  */
 class XCursorTheme : public CursorTheme
 {
-    public:
-       /**
-        * Initializes itself from the @p dir information, and parses the
-        * index.theme file if the dir has one.
-        */
-        XCursorTheme(const QDir &dir);
-        ~XCursorTheme() override {}
+public:
+    /**
+     * Initializes itself from the @p dir information, and parses the
+     * index.theme file if the dir has one.
+     */
+    XCursorTheme(const QDir &dir);
+    ~XCursorTheme() override
+    {
+    }
 
-        const QStringList inherits() const { return m_inherits; }
-        QImage loadImage(const QString &name, int size = 0) const override;
-        qulonglong loadCursor(const QString &name, int size = 0) const override;
+    const QStringList inherits() const
+    {
+        return m_inherits;
+    }
+    QImage loadImage(const QString &name, int size = 0) const override;
+    qulonglong loadCursor(const QString &name, int size = 0) const override;
 
-        /** Returns the size that the XCursor library would use if no
-            cursor size is given. This depends mainly on Xft.dpi. */
-        int defaultCursorSize() const override;
+    /** Returns the size that the XCursor library would use if no
+        cursor size is given. This depends mainly on Xft.dpi. */
+    int defaultCursorSize() const override;
 
-    protected:
-        XCursorTheme(const QString &title, const QString &desc)
-            : CursorTheme(title, desc) {}
-        void setInherits(const QStringList &val) { m_inherits = val; }
+protected:
+    XCursorTheme(const QString &title, const QString &desc)
+        : CursorTheme(title, desc)
+    {
+    }
+    void setInherits(const QStringList &val)
+    {
+        m_inherits = val;
+    }
 
-    private:
-        XcursorImage *xcLoadImage(const QString &name, int size) const;
-        XcursorImages *xcLoadImages(const QString &name, int size) const;
-        void parseIndexFile();
-        QString findAlternative(const QString &name) const;
-        
+private:
+    XcursorImage *xcLoadImage(const QString &name, int size) const;
+    XcursorImages *xcLoadImages(const QString &name, int size) const;
+    void parseIndexFile();
+    QString findAlternative(const QString &name) const;
 
-        QStringList m_inherits;
-        static QHash<QString, QString> alternatives;
+    QStringList m_inherits;
+    static QHash<QString, QString> alternatives;
 };
 
 #endif // XCURSORTHEME_H
-

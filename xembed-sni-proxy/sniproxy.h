@@ -22,10 +22,10 @@
 #ifndef SNI_PROXY_H
 #define SNI_PROXY_H
 
-#include <QObject>
 #include <QDBusArgument>
 #include <QDBusConnection>
 #include <QDBusObjectPath>
+#include <QObject>
 #include <QPixmap>
 #include <QPoint>
 
@@ -91,7 +91,7 @@ public:
     KDbusImageVector IconPixmap() const;
 
 public Q_SLOTS:
-    //interaction
+    // interaction
     /**
      * Shows the context menu associated to this item
      * at the desired screen position

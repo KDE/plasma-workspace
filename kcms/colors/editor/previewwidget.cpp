@@ -22,8 +22,8 @@
 
 #include <KColorScheme>
 
-
-PreviewWidget::PreviewWidget(QWidget *parent) : QFrame(parent)
+PreviewWidget::PreviewWidget(QWidget *parent)
+    : QFrame(parent)
 {
     setupUi(this);
 
@@ -49,9 +49,8 @@ PreviewWidget::PreviewWidget(QWidget *parent) : QFrame(parent)
     labelSelection6->setBackgroundRole(QPalette::Highlight);
     labelSelection7->setBackgroundRole(QPalette::Highlight);
 
-    QList<QWidget*> widgets = findChildren<QWidget*>();
-    foreach (QWidget* widget, widgets)
-    {
+    QList<QWidget *> widgets = findChildren<QWidget *>();
+    foreach (QWidget *widget, widgets) {
         widget->installEventFilter(this);
         widget->setFocusPolicy(Qt::NoFocus);
     }
@@ -63,49 +62,46 @@ PreviewWidget::~PreviewWidget()
 
 bool PreviewWidget::eventFilter(QObject *, QEvent *ev)
 {
-    switch (ev->type())
-    {
-        case QEvent::MouseButtonPress:
-        case QEvent::MouseButtonRelease:
-        case QEvent::MouseButtonDblClick:
-        case QEvent::MouseMove:
-        case QEvent::KeyPress:
-        case QEvent::KeyRelease:
-        case QEvent::Enter:
-        case QEvent::Leave:
-        case QEvent::Wheel:
-        case QEvent::ContextMenu:
-            return true; // ignore
-        default:
-            break;
+    switch (ev->type()) {
+    case QEvent::MouseButtonPress:
+    case QEvent::MouseButtonRelease:
+    case QEvent::MouseButtonDblClick:
+    case QEvent::MouseMove:
+    case QEvent::KeyPress:
+    case QEvent::KeyRelease:
+    case QEvent::Enter:
+    case QEvent::Leave:
+    case QEvent::Wheel:
+    case QEvent::ContextMenu:
+        return true; // ignore
+    default:
+        break;
     }
     return false;
 }
 
-inline void copyPaletteBrush(QPalette &palette, QPalette::ColorGroup state,
-                             QPalette::ColorRole role)
+inline void copyPaletteBrush(QPalette &palette, QPalette::ColorGroup state, QPalette::ColorRole role)
 {
     palette.setBrush(QPalette::Active, role, palette.brush(state, role));
     if (state == QPalette::Disabled)
         // ### hack, while Qt has no inactive+disabled state
         // TODO copy from Inactive+Disabled to Inactive instead
-        palette.setBrush(QPalette::Inactive, role,
-                         palette.brush(QPalette::Disabled, role));
+        palette.setBrush(QPalette::Inactive, role, palette.brush(QPalette::Disabled, role));
 }
 
-void PreviewWidget::setPaletteRecursive(QWidget *widget,
-                                        const QPalette &palette)
+void PreviewWidget::setPaletteRecursive(QWidget *widget, const QPalette &palette)
 {
     widget->setPalette(palette);
 
     const QObjectList children = widget->children();
     foreach (QObject *child, children) {
         if (child->isWidgetType())
-            setPaletteRecursive((QWidget*)child, palette);
+            setPaletteRecursive((QWidget *)child, palette);
     }
 }
 
-inline void adjustWidgetForeground(QWidget *widget, QPalette::ColorGroup state,
+inline void adjustWidgetForeground(QWidget *widget,
+                                   QPalette::ColorGroup state,
                                    const KSharedConfigPtr &config,
                                    QPalette::ColorRole color,
                                    KColorScheme::ColorSet set,
@@ -117,8 +113,7 @@ inline void adjustWidgetForeground(QWidget *widget, QPalette::ColorGroup state,
     widget->setPalette(palette);
 }
 
-void PreviewWidget::setPalette(const KSharedConfigPtr &config,
-                               QPalette::ColorGroup state)
+void PreviewWidget::setPalette(const KSharedConfigPtr &config, QPalette::ColorGroup state)
 {
     QPalette palette = KColorScheme::createApplicationPalette(config);
 
@@ -143,8 +138,7 @@ void PreviewWidget::setPalette(const KSharedConfigPtr &config,
 
     setPaletteRecursive(this, palette);
 
-#define ADJUST_WIDGET_FOREGROUND(w,c,s,r) \
-    adjustWidgetForeground(w, state, config, QPalette::c, KColorScheme::s, KColorScheme::r);
+#define ADJUST_WIDGET_FOREGROUND(w, c, s, r) adjustWidgetForeground(w, state, config, QPalette::c, KColorScheme::s, KColorScheme::r);
 
     ADJUST_WIDGET_FOREGROUND(labelView1, Text, View, InactiveText);
     ADJUST_WIDGET_FOREGROUND(labelView2, Text, View, ActiveText);
@@ -162,4 +156,3 @@ void PreviewWidget::setPalette(const KSharedConfigPtr &config,
     ADJUST_WIDGET_FOREGROUND(labelSelection6, HighlightedText, Selection, NeutralText);
     ADJUST_WIDGET_FOREGROUND(labelSelection7, HighlightedText, Selection, PositiveText);
 }
-

@@ -2,9 +2,9 @@
  *   Copyright (C) 2007 Marco Martin <notmart@gmail.com>
  *   Copyright (C) 2013 Andrea Scarpino <scarpino@kde.org>
  *
- *   This program is free software; you can redistribute it and/or modify  
- *   it under the terms of the GNU Library General Public License as published by  
- *   the Free Software Foundation; either version 2 of the License, or     
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU Library General Public License as published by
+ *   the Free Software Foundation; either version 2 of the License, or
  *   (at your option) any later version.
  *
  *   This program is distributed in the hope that it will be useful,
@@ -25,7 +25,7 @@
 
 #include "faviconprovider.h"
 
-FaviconsEngine::FaviconsEngine(QObject* parent, const QVariantList& args)
+FaviconsEngine::FaviconsEngine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)
 {
 }
@@ -34,7 +34,7 @@ FaviconsEngine::~FaviconsEngine()
 {
 }
 
-bool FaviconsEngine::updateSourceEvent( const QString &identifier )
+bool FaviconsEngine::updateSourceEvent(const QString &identifier)
 {
     FaviconProvider *provider = new FaviconProvider(this, identifier);
 

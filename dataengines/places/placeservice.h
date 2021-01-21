@@ -29,15 +29,13 @@ class PlaceService : public Plasma::Service
     Q_OBJECT
 
 public:
-    PlaceService(QObject* parent,
-                 KFilePlacesModel* model);
+    PlaceService(QObject *parent, KFilePlacesModel *model);
 
 protected:
-    Plasma::ServiceJob* createJob(const QString& operation,
-                                  QMap<QString,QVariant>& parameters) override;
+    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
-    KFilePlacesModel* m_model;
+    KFilePlacesModel *m_model;
     QModelIndex m_index;
 };
 

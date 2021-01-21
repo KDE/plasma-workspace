@@ -56,8 +56,6 @@ public:
 
     bool isRectAvailable(const QRectF &rect) override;
 
-    
-
 protected:
     // The rectangle as near as possible to the current item geometry which can fit it
     QRectF nextAvailableSpace(ItemContainer *item, const QSizeF &minimumSize, AppletsLayout::PreferredLayoutDirection direction) const override;
@@ -105,10 +103,10 @@ private:
      */
     void adjustToItemSizeHints(ItemContainer *item);
 
-    // What is the item that occupies the point. The point is expressed in cells rather than pixels. a qpair rather a QPointF as QHash doesn't support identification by QPointF
-    QHash <QPair<int, int>, ItemContainer *> m_grid;
-    QHash <ItemContainer *, QSet<QPair<int, int> > > m_pointsForItem;
+    // What is the item that occupies the point. The point is expressed in cells rather than pixels. a qpair rather a QPointF as QHash doesn't support
+    // identification by QPointF
+    QHash<QPair<int, int>, ItemContainer *> m_grid;
+    QHash<ItemContainer *, QSet<QPair<int, int>>> m_pointsForItem;
 
-    QHash <QString, Geom> m_parsedConfig;
+    QHash<QString, Geom> m_parsedConfig;
 };
-

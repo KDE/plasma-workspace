@@ -29,39 +29,35 @@
  */
 
 CursorNotificationHandler::CursorNotificationHandler()
-    : QWidget(), currentName(0)
+    : QWidget()
+    , currentName(0)
 {
     Display *dpy = QX11Info::display();
     int errorBase;
     haveXfixes = false;
 
     // Request cursor change notification events
-    if (XFixesQueryExtension(dpy, &fixesEventBase, &errorBase))
-    {
+    if (XFixesQueryExtension(dpy, &fixesEventBase, &errorBase)) {
         int major, minor;
         XFixesQueryVersion(dpy, &major, &minor);
 
-        if (major >= 2)
-        {
+        if (major >= 2) {
             XFixesSelectCursorInput(dpy, winId(), XFixesDisplayCursorNotifyMask);
             haveXfixes = true;
         }
     }
 }
 
-
 CursorNotificationHandler::~CursorNotificationHandler()
 {
 }
-
 
 QString CursorNotificationHandler::cursorName()
 {
     if (!haveXfixes)
         return QString();
 
-    if (!currentName)
-    {
+    if (!currentName) {
         // Xfixes doesn't have a request for getting the current cursor name,
         // but it's included in the XFixesCursorImage struct.
         XFixesCursorImage *image = XFixesGetCursorImage(QX11Info::display());
@@ -72,7 +68,6 @@ QString CursorNotificationHandler::cursorName()
     return cursorName(currentName);
 }
 
-
 QString CursorNotificationHandler::cursorName(Atom cursor)
 {
     QString name;
@@ -82,8 +77,7 @@ QString CursorNotificationHandler::cursorName(Atom cursor)
     // to keep the X server round trips down.
     if (names.contains(cursor))
         name = names[cursor];
-    else
-    {
+    else {
         char *data = XGetAtomName(QX11Info::display(), cursor);
         name = QString::fromUtf8(data);
         XFree(data);
@@ -94,19 +88,15 @@ QString CursorNotificationHandler::cursorName(Atom cursor)
     return name;
 }
 
-
-bool CursorNotificationHandler::x11Event(XEvent* event)
+bool CursorNotificationHandler::x11Event(XEvent *event)
 {
     if (event->type != fixesEventBase + XFixesCursorNotify)
         return false;
 
-    XFixesCursorNotifyEvent *xfe = reinterpret_cast<XFixesCursorNotifyEvent*>(event);
+    XFixesCursorNotifyEvent *xfe = reinterpret_cast<XFixesCursorNotifyEvent *>(event);
     currentName = xfe->cursor_name;
 
     emit cursorNameChanged(cursorName(currentName));
 
     return false;
 }
-
-
-

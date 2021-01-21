@@ -27,16 +27,18 @@ class Q_DECL_HIDDEN IonInterface::Private
 {
 public:
     Private(IonInterface *i)
-            : ion(i),
-            initialized(false) {}
+        : ion(i)
+        , initialized(false)
+    {
+    }
 
     IonInterface *ion;
     bool initialized;
 };
 
 IonInterface::IonInterface(QObject *parent, const QVariantList &args)
-        : Plasma::DataEngine(parent, args),
-        d(new Private(this))
+    : Plasma::DataEngine(parent, args)
+    , d(new Private(this))
 {
 }
 
@@ -69,7 +71,7 @@ bool IonInterface::sourceRequestEvent(const QString &source)
 /**
  * Update the ion's datasource. Triggered when a Plasma::DataEngine::connectSource() timeout occurs.
  */
-bool IonInterface::updateSourceEvent(const QString& source)
+bool IonInterface::updateSourceEvent(const QString &source)
 {
     qCDebug(IONENGINE) << "updateSource(" << source << ")";
     if (d->initialized) {
@@ -95,7 +97,7 @@ void IonInterface::setInitialized(bool initialized)
 /**
  * Return wind direction svg element to display in applet when given a wind direction.
  */
-QString IonInterface::getWindDirectionIcon(const QMap<QString, WindDirections> &windDirList, const QString& windDirection) const
+QString IonInterface::getWindDirectionIcon(const QMap<QString, WindDirections> &windDirList, const QString &windDirection) const
 {
     switch (windDirList[windDirection.toLower()]) {
     case N:
@@ -219,7 +221,7 @@ QString IonInterface::getWeatherIcon(ConditionIcons condition) const
 /**
  * Return weather icon to display in an applet when given a condition.
  */
-QString IonInterface::getWeatherIcon(const QMap<QString, ConditionIcons> &conditionList, const QString& condition) const
+QString IonInterface::getWeatherIcon(const QMap<QString, ConditionIcons> &conditionList, const QString &condition) const
 {
     return getWeatherIcon(conditionList[condition.toLower()]);
 }

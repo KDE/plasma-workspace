@@ -20,7 +20,6 @@
 
 #include "systemtraytypes.h"
 
-
 // Marshall the ImageStruct data into a D-BUS argument
 const QDBusArgument &operator<<(QDBusArgument &argument, const KDbusImageStruct &icon)
 {
@@ -42,13 +41,13 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, KDbusImageStruct 
 
     if (argument.currentType() == QDBusArgument::StructureType) {
         argument.beginStructure();
-        //qCDebug(DATAENGINE_SNI)() << "begun structure";
+        // qCDebug(DATAENGINE_SNI)() << "begun structure";
         argument >> width;
-        //qCDebug(DATAENGINE_SNI)() << width;
+        // qCDebug(DATAENGINE_SNI)() << width;
         argument >> height;
-        //qCDebug(DATAENGINE_SNI)() << height;
+        // qCDebug(DATAENGINE_SNI)() << height;
         argument >> data;
-        //qCDebug(DATAENGINE_SNI)() << data.size();
+        // qCDebug(DATAENGINE_SNI)() << data.size();
         argument.endStructure();
     }
 
@@ -63,8 +62,8 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, KDbusImageStruct 
 const QDBusArgument &operator<<(QDBusArgument &argument, const KDbusImageVector &iconVector)
 {
     argument.beginArray(qMetaTypeId<KDbusImageStruct>());
-    for (int i=0; i<iconVector.size(); ++i) {
-        argument << iconVector[i]; 
+    for (int i = 0; i < iconVector.size(); ++i) {
+        argument << iconVector[i];
     }
     argument.endArray();
     return argument;

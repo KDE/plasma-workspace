@@ -35,26 +35,26 @@ class CalculatorRunner : public Plasma::AbstractRunner
 {
     Q_OBJECT
 
-    public:
-        CalculatorRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
-        ~CalculatorRunner() override;
+public:
+    CalculatorRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
+    ~CalculatorRunner() override;
 
-        void match(Plasma::RunnerContext &context) override;
+    void match(Plasma::RunnerContext &context) override;
 
-    protected Q_SLOTS:
-        void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
-        QMimeData * mimeDataForMatch(const Plasma::QueryMatch &match) override;
+protected Q_SLOTS:
+    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
+    QMimeData *mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
-    private:
-        QString calculate(const QString &term, bool *isApproximate);
-        void userFriendlyMultiplication(QString &cmd);
-        void userFriendlySubstitutions(QString &cmd);
-        void powSubstitutions(QString &cmd);
-        void hexSubstitutions(QString &cmd);
+private:
+    QString calculate(const QString &term, bool *isApproximate);
+    void userFriendlyMultiplication(QString &cmd);
+    void userFriendlySubstitutions(QString &cmd);
+    void powSubstitutions(QString &cmd);
+    void hexSubstitutions(QString &cmd);
 
-        #ifdef ENABLE_QALCULATE
-        QalculateEngine* m_engine;
-        #endif
+#ifdef ENABLE_QALCULATE
+    QalculateEngine *m_engine;
+#endif
 };
 
 #endif

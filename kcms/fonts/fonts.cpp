@@ -24,37 +24,36 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #include "fonts.h"
 
-#include <QQuickItem>
-#include <QWindow>
-#include <QQmlEngine>
-#include <QQuickView>
 #include <QApplication>
 #include <QFontDatabase>
+#include <QQmlEngine>
+#include <QQuickItem>
+#include <QQuickView>
+#include <QWindow>
 
-#include <KAcceleratorManager>
-#include <KGlobalSettings>
-#include <KConfigGroup>
-#include <KConfig>
 #include <KAboutData>
+#include <KAcceleratorManager>
+#include <KConfig>
+#include <KConfigGroup>
+#include <KFontChooserDialog>
+#include <KGlobalSettings>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KFontChooserDialog>
 #include <KWindowSystem>
 
 #include "../krdb/krdb.h"
-#include "previewimageprovider.h"
 #include "kxftconfig.h"
+#include "previewimageprovider.h"
 
-#include "fontssettings.h"
 #include "fontsaasettings.h"
+#include "fontssettings.h"
 
 #include "fontsdata.h"
 
 /**** DLL Interface ****/
-K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFonts>();registerPlugin<FontsData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFonts>(); registerPlugin<FontsData>();)
 
 /**** KFonts ****/
 
@@ -64,8 +63,7 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
     , m_subPixelOptionsModel(new QStandardItemModel(this))
     , m_hintingOptionsModel(new QStandardItemModel(this))
 {
-    KAboutData* about = new KAboutData("kcm_fonts", i18n("Fonts"),
-                                       "0.1", QString(), KAboutLicense::LGPL);
+    KAboutData *about = new KAboutData("kcm_fonts", i18n("Fonts"), "0.1", QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Antonis Tsiapaliokas"), QString(), "antonis.tsiapaliokas@kde.org");
     setAboutData(about);
     qmlRegisterType<QStandardItemModel>();
@@ -74,7 +72,8 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
 
     setButtons(Apply | Default | Help);
 
-    for (KXftConfig::SubPixel::Type t : {KXftConfig::SubPixel::None, KXftConfig::SubPixel::Rgb, KXftConfig::SubPixel::Bgr, KXftConfig::SubPixel::Vrgb, KXftConfig::SubPixel::Vbgr}) {
+    for (KXftConfig::SubPixel::Type t :
+         {KXftConfig::SubPixel::None, KXftConfig::SubPixel::Rgb, KXftConfig::SubPixel::Bgr, KXftConfig::SubPixel::Vrgb, KXftConfig::SubPixel::Vbgr}) {
         auto item = new QStandardItem(KXftConfig::description(t));
         m_subPixelOptionsModel->appendRow(item);
     }
@@ -146,7 +145,10 @@ void KFonts::save()
     if (fontsAASettings()->forceFontDPI() == 0 && forceFontDPIChanged && !KWindowSystem::isPlatformWayland()) {
         QProcess proc;
         proc.setProcessChannelMode(QProcess::ForwardedChannels);
-        proc.start("xrdb", QStringList() << "-quiet" << "-remove" << "-nocpp");
+        proc.start("xrdb",
+                   QStringList() << "-quiet"
+                                 << "-remove"
+                                 << "-nocpp");
         if (proc.waitForStarted()) {
             proc.write(QByteArray("Xft.dpi\n"));
             proc.closeWriteChannel();
@@ -155,7 +157,6 @@ void KFonts::save()
     }
     QApplication::processEvents();
 #endif
-
 
     KGlobalSettings::self()->emitChange(KGlobalSettings::FontChanged);
 
@@ -256,4 +257,3 @@ void KFonts::setHintingCurrentIndex(int idx)
 }
 
 #include "fonts.moc"
-

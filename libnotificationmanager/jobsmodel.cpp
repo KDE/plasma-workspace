@@ -27,8 +27,8 @@
 
 #include <KJob>
 
-#include <Plasma/DataEngineConsumer>
 #include <Plasma/DataEngine>
+#include <Plasma/DataEngineConsumer>
 #include <Plasma/ServiceJob>
 
 #include "job.h"
@@ -98,8 +98,10 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
     Job *job = d->m_jobViews.at(index.row());
 
     switch (role) {
-    case Notifications::IdRole: return job->id();
-    case Notifications::TypeRole: return Notifications::JobType;
+    case Notifications::IdRole:
+        return job->id();
+    case Notifications::TypeRole:
+        return Notifications::JobType;
     // basically when it started
     case Notifications::CreatedRole:
         if (job->created().isValid()) {
@@ -112,18 +114,29 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
             return job->updated();
         }
         break;
-    case Notifications::SummaryRole: return job->summary();
-    case Notifications::BodyRole: return job->text();
-    case Notifications::DesktopEntryRole: return job->desktopEntry();
-    case Notifications::ApplicationNameRole: return job->applicationName();
-    case Notifications::ApplicationIconNameRole: return job->applicationIconName();
+    case Notifications::SummaryRole:
+        return job->summary();
+    case Notifications::BodyRole:
+        return job->text();
+    case Notifications::DesktopEntryRole:
+        return job->desktopEntry();
+    case Notifications::ApplicationNameRole:
+        return job->applicationName();
+    case Notifications::ApplicationIconNameRole:
+        return job->applicationIconName();
 
-    case Notifications::JobStateRole: return job->state();
-    case Notifications::PercentageRole: return job->percentage();
-    case Notifications::JobErrorRole: return job->error();
-    case Notifications::SuspendableRole: return job->suspendable();
-    case Notifications::KillableRole: return job->killable();
-    case Notifications::JobDetailsRole: return QVariant::fromValue(job);
+    case Notifications::JobStateRole:
+        return job->state();
+    case Notifications::PercentageRole:
+        return job->percentage();
+    case Notifications::JobErrorRole:
+        return job->error();
+    case Notifications::SuspendableRole:
+        return job->suspendable();
+    case Notifications::KillableRole:
+        return job->killable();
+    case Notifications::JobDetailsRole:
+        return QVariant::fromValue(job);
 
     // successfully finished jobs timeout like a regular notifiation
     // whereas running or error'd jobs are persistent
@@ -132,15 +145,19 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
     case Notifications::ClosableRole:
         return job->state() == Notifications::JobStateStopped;
 
-    case Notifications::ConfigurableRole: return false;
-    case Notifications::ExpiredRole: return job->expired();
-    case Notifications::DismissedRole: return job->dismissed();
+    case Notifications::ConfigurableRole:
+        return false;
+    case Notifications::ExpiredRole:
+        return job->expired();
+    case Notifications::DismissedRole:
+        return job->dismissed();
 
     // A job is usually either a long lasting operation you're aware about
     // or a quick job you don't care about.
     // When it's running, it's there, when it failed, it's persistent.
     // There's hardly a reason why it should show up as "unread".
-    case Notifications::ReadRole: return true;
+    case Notifications::ReadRole:
+        return true;
     }
 
     return QVariant();

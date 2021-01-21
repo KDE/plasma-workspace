@@ -3,9 +3,9 @@
  *   Copyright (C) 2008 Marco Martin <notmart@gmail.com>
  *   Copyright (C) 2013 Andrea Scarpino <scarpino@kde.org>
  *
- *   This program is free software; you can redistribute it and/or modify  
- *   it under the terms of the GNU Library General Public License as published by  
- *   the Free Software Foundation; either version 2 of the License, or     
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU Library General Public License as published by
+ *   the Free Software Foundation; either version 2 of the License, or
  *   (at your option) any later version.
  *
  *   This program is distributed in the hope that it will be useful,
@@ -35,19 +35,19 @@ class FaviconsEngine : public Plasma::DataEngine
 {
     Q_OBJECT
 
-    public:
-        FaviconsEngine( QObject* parent, const QVariantList& args );
-        ~FaviconsEngine() override;
+public:
+    FaviconsEngine(QObject *parent, const QVariantList &args);
+    ~FaviconsEngine() override;
 
-    protected:
-        bool sourceRequestEvent( const QString &identifier ) override;
+protected:
+    bool sourceRequestEvent(const QString &identifier) override;
 
-    protected Q_SLOTS:
-        bool updateSourceEvent( const QString &identifier ) override;
+protected Q_SLOTS:
+    bool updateSourceEvent(const QString &identifier) override;
 
-    private Q_SLOTS:
-        void finished( FaviconProvider* );
-        void error( FaviconProvider* );
+private Q_SLOTS:
+    void finished(FaviconProvider *);
+    void error(FaviconProvider *);
 };
 
 #endif

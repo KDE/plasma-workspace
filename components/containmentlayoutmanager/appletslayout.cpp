@@ -22,10 +22,10 @@
 #include "appletcontainer.h"
 #include "gridlayoutmanager.h"
 
-#include <QQmlEngine>
 #include <QQmlContext>
-#include <QTimer>
+#include <QQmlEngine>
 #include <QStyleHints>
+#include <QTimer>
 
 // Plasma
 #include <Containment>
@@ -44,11 +44,11 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
     m_saveLayoutTimer->setSingleShot(true);
     m_saveLayoutTimer->setInterval(100);
     connect(m_layoutManager, &AbstractLayoutManager::layoutNeedsSaving, m_saveLayoutTimer, QOverload<>::of(&QTimer::start));
-    connect(m_saveLayoutTimer, &QTimer::timeout, this, [this] () {
+    connect(m_saveLayoutTimer, &QTimer::timeout, this, [this]() {
         if (!m_configKey.isEmpty() && m_containment && m_containment->corona()->isStartupCompleted()) {
             const QString serializedConfig = m_layoutManager->serializeLayout();
             m_containment->config().writeEntry(m_configKey, serializedConfig);
-            //FIXME: something more efficient
+            // FIXME: something more efficient
             m_layoutManager->parseLayout(serializedConfig);
             m_savedSize = size();
             m_containment->corona()->requireConfigSync();
@@ -58,7 +58,7 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
     m_configKeyChangeTimer = new QTimer(this);
     m_configKeyChangeTimer->setSingleShot(true);
     m_configKeyChangeTimer->setInterval(100);
-    connect(m_configKeyChangeTimer, &QTimer::timeout, this, [this] () {
+    connect(m_configKeyChangeTimer, &QTimer::timeout, this, [this]() {
         if (!m_configKey.isEmpty() && m_containment) {
             m_layoutManager->parseLayout(m_containment->config().readEntry(m_configKey, ""));
 
@@ -83,12 +83,12 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
         if (newGeom.size() == m_savedSize) {
             m_layoutManager->resetLayoutFromConfig();
 
-        // If the resize is consequence of a screen resolution change, queue a relayout maintaining the distance between screen edges
+            // If the resize is consequence of a screen resolution change, queue a relayout maintaining the distance between screen edges
         } else if (!m_geometryBeforeResolutionChange.isEmpty()) {
             m_layoutManager->layoutGeometryChanged(newGeom, m_geometryBeforeResolutionChange);
             m_geometryBeforeResolutionChange = QRectF();
 
-        // Heuristically relayout items only when the plasma startup is fully completed
+            // Heuristically relayout items only when the plasma startup is fully completed
         } else {
             polish();
         }
@@ -107,10 +107,7 @@ PlasmaQuick::AppletQuickItem *AppletsLayout::containment() const
 void AppletsLayout::setContainment(PlasmaQuick::AppletQuickItem *containmentItem)
 {
     // Forbid changing containmentItem at runtime
-    if (m_containmentItem
-        || containmentItem == m_containmentItem
-        || !containmentItem->applet()
-        || !containmentItem->applet()->isContainment()) {
+    if (m_containmentItem || containmentItem == m_containmentItem || !containmentItem->applet() || !containmentItem->applet()->isContainment()) {
         qWarning() << "Error: cannot change the containment to AppletsLayout";
         return;
     }
@@ -130,11 +127,9 @@ void AppletsLayout::setContainment(PlasmaQuick::AppletQuickItem *containmentItem
     m_containmentItem = containmentItem;
     m_containment = static_cast<Plasma::Containment *>(m_containmentItem->applet());
 
-    connect(m_containmentItem, SIGNAL(appletAdded(QObject *, int, int)), 
-            this, SLOT(appletAdded(QObject *, int, int)));
+    connect(m_containmentItem, SIGNAL(appletAdded(QObject *, int, int)), this, SLOT(appletAdded(QObject *, int, int)));
 
-    connect(m_containmentItem, SIGNAL(appletRemoved(QObject *)), 
-            this, SLOT(appletRemoved(QObject *)));
+    connect(m_containmentItem, SIGNAL(appletRemoved(QObject *)), this, SLOT(appletRemoved(QObject *)));
 
     emit containmentChanged();
 }
@@ -259,7 +254,7 @@ void AppletsLayout::setCellHeight(qreal height)
     emit cellHeightChanged();
 }
 
-void AppletsLayout::setAcceptsAppletCallback(const QJSValue& callback)
+void AppletsLayout::setAcceptsAppletCallback(const QJSValue &callback)
 {
     if (m_acceptsAppletCallback.strictlyEquals(callback)) {
         return;
@@ -481,7 +476,7 @@ void AppletsLayout::componentComplete()
         m_layoutManager->parseLayout(m_containment->config().readEntry(m_configKey, ""));
     }
 
-    const QList <QObject*> appletObjects = m_containmentItem->property("applets").value<QList <QObject*> >();
+    const QList<QObject *> appletObjects = m_containmentItem->property("applets").value<QList<QObject *>>();
 
     for (auto *obj : appletObjects) {
         PlasmaQuick::AppletQuickItem *appletItem = qobject_cast<PlasmaQuick::AppletQuickItem *>(obj);
@@ -496,7 +491,7 @@ void AppletsLayout::componentComplete()
         }
     }
 
-    //layout all extra non applet items
+    // layout all extra non applet items
     if (width() > 0 && height() > 0) {
         for (auto *child : childItems()) {
             ItemContainer *item = qobject_cast<ItemContainer *>(child);
@@ -507,11 +502,12 @@ void AppletsLayout::componentComplete()
     }
 
     if (m_containment && m_containment->corona()) {
-        connect(m_containment->corona(), &Plasma::Corona::startupCompleted, this, [](){
-           // m_savedSize = size();
+        connect(m_containment->corona(), &Plasma::Corona::startupCompleted, this, []() {
+            // m_savedSize = size();
         });
-        // When the screen geometry changes, we need to know the geometry just before it did, so we can apply out heuristic of keeping the distance with borders constant
-        connect(m_containment->corona(), &Plasma::Corona::screenGeometryChanged, this, [this](int id){
+        // When the screen geometry changes, we need to know the geometry just before it did, so we can apply out heuristic of keeping the distance with borders
+        // constant
+        connect(m_containment->corona(), &Plasma::Corona::screenGeometryChanged, this, [this](int id) {
             if (m_containment->screen() == id) {
                 m_geometryBeforeResolutionChange = QRectF(x(), y(), width(), height());
             }
@@ -519,7 +515,6 @@ void AppletsLayout::componentComplete()
     }
     QQuickItem::componentComplete();
 }
-
 
 bool AppletsLayout::childMouseEventFilter(QQuickItem *item, QEvent *event)
 {
@@ -534,17 +529,17 @@ bool AppletsLayout::childMouseEventFilter(QQuickItem *item, QEvent *event)
             mousePressEvent(me);
         }
         break;
-        }
+    }
     case QEvent::MouseMove: {
         QMouseEvent *me = static_cast<QMouseEvent *>(event);
         mouseMoveEvent(me);
         break;
-        }
+    }
     case QEvent::MouseButtonRelease: {
         QMouseEvent *me = static_cast<QMouseEvent *>(event);
         mouseReleaseEvent(me);
         break;
-        }
+    }
     case QEvent::UngrabMouse:
         mouseUngrabEvent();
         break;
@@ -570,7 +565,7 @@ void AppletsLayout::mousePressEvent(QMouseEvent *event)
     m_mouseDownWasEditMode = m_editMode;
     m_mouseDownPosition = event->windowPos();
 
-    //event->setAccepted(false);
+    // event->setAccepted(false);
 }
 
 void AppletsLayout::mouseMoveEvent(QMouseEvent *event)
@@ -579,8 +574,7 @@ void AppletsLayout::mouseMoveEvent(QMouseEvent *event)
         return;
     }
 
-    if (!m_editMode
-        && QPointF(event->windowPos() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
+    if (!m_editMode && QPointF(event->windowPos() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
         m_pressAndHoldTimer->stop();
     }
 }
@@ -593,8 +587,7 @@ void AppletsLayout::mouseReleaseEvent(QMouseEvent *event)
         // close by tapping in any empty area only work with real
         // touch events, as we want a different behavior between desktop
         // and tablet mode
-        && (event->source() == Qt::MouseEventSynthesizedBySystem
-            || event->source() == Qt::MouseEventSynthesizedByQt)
+        && (event->source() == Qt::MouseEventSynthesizedBySystem || event->source() == Qt::MouseEventSynthesizedByQt)
         && QPointF(event->windowPos() - m_mouseDownPosition).manhattanLength() < QGuiApplication::styleHints()->startDragDistance()) {
         setEditMode(false);
     }
@@ -620,7 +613,7 @@ void AppletsLayout::appletAdded(QObject *applet, int x, int y)
 {
     PlasmaQuick::AppletQuickItem *appletItem = qobject_cast<PlasmaQuick::AppletQuickItem *>(applet);
 
-    //maybe even an assert?
+    // maybe even an assert?
     if (!appletItem) {
         return;
     }
@@ -648,7 +641,7 @@ void AppletsLayout::appletRemoved(QObject *applet)
 {
     PlasmaQuick::AppletQuickItem *appletItem = qobject_cast<PlasmaQuick::AppletQuickItem *>(applet);
 
-    //maybe even an assert?
+    // maybe even an assert?
     if (!appletItem) {
         return;
     }
@@ -706,8 +699,7 @@ AppletContainer *AppletsLayout::createContainerForApplet(PlasmaQuick::AppletQuic
     const bool geometryWasSaved = m_layoutManager->restoreItem(container);
 
     if (!geometryWasSaved) {
-        container->setPosition(QPointF(appletItem->x() - container->leftPadding(),
-                                       appletItem->y() - container->topPadding()));
+        container->setPosition(QPointF(appletItem->x() - container->leftPadding(), appletItem->y() - container->topPadding()));
 
         if (!appletSize.isEmpty()) {
             container->setSize(QSizeF(qMax(m_minimumItemSize.width(), appletSize.width() + container->leftPadding() + container->rightPadding()),
@@ -719,21 +711,19 @@ AppletContainer *AppletsLayout::createContainerForApplet(PlasmaQuick::AppletQuic
         m_appletContainerComponent->completeCreate();
     }
 
-    //NOTE: This has to be done here as we need the component completed to have all the bindings evaluated
+    // NOTE: This has to be done here as we need the component completed to have all the bindings evaluated
     if (!geometryWasSaved && appletSize.isEmpty()) {
-        if (container->initialSize().width() > m_minimumItemSize.width() &&
-            container->initialSize().height() > m_minimumItemSize.height()) {
-            const QSizeF size = m_layoutManager->cellAlignedContainingSize( container->initialSize());
+        if (container->initialSize().width() > m_minimumItemSize.width() && container->initialSize().height() > m_minimumItemSize.height()) {
+            const QSizeF size = m_layoutManager->cellAlignedContainingSize(container->initialSize());
             container->setSize(size);
         } else {
-            container->setSize(QSizeF(qMax(m_minimumItemSize.width(), m_defaultItemSize.width()),
-                                       qMax(m_minimumItemSize.height(), m_defaultItemSize.height())));
+            container->setSize(
+                QSizeF(qMax(m_minimumItemSize.width(), m_defaultItemSize.width()), qMax(m_minimumItemSize.height(), m_defaultItemSize.height())));
         }
     }
 
     container->setVisible(true);
     appletItem->setVisible(true);
-
 
     return container;
 }

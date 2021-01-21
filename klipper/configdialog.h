@@ -24,8 +24,8 @@
 
 #include "urlgrabber.h"
 
-#include "ui_generalconfig.h"
 #include "ui_actionsconfig.h"
+#include "ui_generalconfig.h"
 
 class KConfigSkeleton;
 class KShortcutsEditor;
@@ -38,7 +38,7 @@ class GeneralWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit GeneralWidget(QWidget* parent);
+    explicit GeneralWidget(QWidget *parent);
     void updateWidgets();
 
 private:
@@ -49,10 +49,10 @@ class ActionsWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ActionsWidget(QWidget* parent);
+    explicit ActionsWidget(QWidget *parent);
 
-    void setActionList(const ActionList&);
-    void setExcludedWMClasses(const QStringList&);
+    void setActionList(const ActionList &);
+    void setExcludedWMClasses(const QStringList &);
 
     ActionList actionList() const;
     QStringList excludedWMClasses() const;
@@ -67,11 +67,11 @@ private Q_SLOTS:
     void onAdvanced();
 
 private:
-    void updateActionItem( QTreeWidgetItem* item, ClipAction* action );
+    void updateActionItem(QTreeWidgetItem *item, ClipAction *action);
     void updateActionListView();
 
     Ui::ActionsWidget m_ui;
-    EditActionDialog* m_editActDlg;
+    EditActionDialog *m_editActDlg;
 
     /**
      * List of actions this page works with
@@ -87,14 +87,14 @@ class AdvancedWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit AdvancedWidget( QWidget* parent = nullptr );
+    explicit AdvancedWidget(QWidget *parent = nullptr);
     ~AdvancedWidget() override;
 
-    void setWMClasses( const QStringList& items );
+    void setWMClasses(const QStringList &items);
     QStringList wmClasses() const;
 
 private:
-    KEditListWidget* editListBox;
+    KEditListWidget *editListBox;
 };
 
 class ConfigDialog : public KConfigDialog
@@ -102,7 +102,7 @@ class ConfigDialog : public KConfigDialog
     Q_OBJECT
 
 public:
-    ConfigDialog( QWidget* parent, KConfigSkeleton* config, const Klipper* klipper, KActionCollection* collection );
+    ConfigDialog(QWidget *parent, KConfigSkeleton *config, const Klipper *klipper, KActionCollection *collection);
     ~ConfigDialog() override;
 
 private:
@@ -114,11 +114,11 @@ private:
     void updateWidgetsDefault() override;
 
 private:
-    GeneralWidget* m_generalPage;
-    ActionsWidget* m_actionsPage;
-    KShortcutsEditor* m_shortcutsWidget;
+    GeneralWidget *m_generalPage;
+    ActionsWidget *m_actionsPage;
+    KShortcutsEditor *m_shortcutsWidget;
 
-    const Klipper* m_klipper;
+    const Klipper *m_klipper;
 };
 
 #endif // CONFIGDIALOG_H

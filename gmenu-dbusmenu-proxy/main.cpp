@@ -24,7 +24,7 @@
 
 #include "menuproxy.h"
 
-int main(int argc, char ** argv)
+int main(int argc, char **argv)
 {
     qputenv("QT_QPA_PLATFORM", "xcb");
 

@@ -20,30 +20,31 @@
 #ifndef PANELCONFIGVIEW_H
 #define PANELCONFIGVIEW_H
 
-#include <PlasmaQuick/ConfigView>
 #include <Plasma/Theme>
+#include <PlasmaQuick/ConfigView>
 
 #include "panelview.h"
 
+#include <QJSValue>
+#include <QPointer>
+#include <QQmlListProperty>
 #include <QQuickItem>
 #include <QQuickView>
-#include <QJSValue>
-#include <QQmlListProperty>
 #include <QStandardItemModel>
-#include <QPointer>
 
 class PanelView;
 
-namespace Plasma {
-    class Containment;
+namespace Plasma
+{
+class Containment;
 }
 
 namespace KWayland
 {
-    namespace Client
-    {
-        class PlasmaShellSurface;
-    }
+namespace Client
+{
+class PlasmaShellSurface;
+}
 }
 
 class PanelConfigView : public PlasmaQuick::ConfigView

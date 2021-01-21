@@ -22,18 +22,17 @@
 #include <QAction>
 #include <QQuickItem>
 
-#include <Plasma/Corona>
 #include <Plasma/Containment>
+#include <Plasma/Corona>
 #include <QScreen>
 
-#include "shellcorona.h"
 #include "panelview.h"
 #include "scriptengine.h"
+#include "shellcorona.h"
 #include "widget.h"
 
 namespace WorkspaceScripting
 {
-
 Panel::Panel(Plasma::Containment *containment, ScriptEngine *engine)
     : Containment(containment, engine)
 {
@@ -51,20 +50,20 @@ QString Panel::location() const
     }
 
     switch (c->location()) {
-        case Plasma::Types::Floating:
-            return "floating";
-        case Plasma::Types::Desktop:
-            return "desktop";
-        case Plasma::Types::FullScreen:
-            return "fullscreen";
-        case Plasma::Types::TopEdge:
-            return "top";
-        case Plasma::Types::BottomEdge:
-            return "bottom";
-        case Plasma::Types::LeftEdge:
-            return "left";
-        case Plasma::Types::RightEdge:
-            return "right";
+    case Plasma::Types::Floating:
+        return "floating";
+    case Plasma::Types::Desktop:
+        return "desktop";
+    case Plasma::Types::FullScreen:
+        return "fullscreen";
+    case Plasma::Types::TopEdge:
+        return "top";
+    case Plasma::Types::BottomEdge:
+        return "bottom";
+    case Plasma::Types::LeftEdge:
+        return "left";
+    case Plasma::Types::RightEdge:
+        return "right";
     }
 
     return "floating";
@@ -115,7 +114,7 @@ PanelView *Panel::panel() const
 // NOTE: this is used *only* for alignment and visibility
 KConfigGroup Panel::panelConfig() const
 {
-    int screenNum = qMax(screen(), 0); //if we don't have a screen (-1) we'll be put on screen 0
+    int screenNum = qMax(screen(), 0); // if we don't have a screen (-1) we'll be put on screen 0
 
     if (QGuiApplication::screens().size() < screenNum) {
         return KConfigGroup();
@@ -124,10 +123,10 @@ KConfigGroup Panel::panelConfig() const
     return PanelView::panelConfig(corona(), containment(), s);
 }
 
-//NOTE: when we don't have a view we should write only to the defaults group as we don't know yet during startup if we are on the "final" screen resolution yet
+// NOTE: when we don't have a view we should write only to the defaults group as we don't know yet during startup if we are on the "final" screen resolution yet
 KConfigGroup Panel::panelConfigDefaults() const
 {
-    int screenNum = qMax(screen(), 0); //if we don't have a screen (-1) we'll be put on screen 0
+    int screenNum = qMax(screen(), 0); // if we don't have a screen (-1) we'll be put on screen 0
 
     if (QGuiApplication::screens().size() < screenNum) {
         return KConfigGroup();
@@ -147,12 +146,12 @@ QString Panel::alignment() const
     }
 
     switch (alignment) {
-        case Qt::AlignRight:
-            return "right";
-        case Qt::AlignCenter:
-            return "center";
-        default:
-            return "left";
+    case Qt::AlignRight:
+        return "right";
+    case Qt::AlignCenter:
+        return "center";
+    default:
+        return "left";
     }
 
     return "left";
@@ -175,7 +174,6 @@ void Panel::setAlignment(const QString &alignment)
         panelConfig().writeEntry("alignment", a);
     }
 }
-
 
 // From now on only panelConfigDefaults should be used
 int Panel::offset() const
@@ -277,16 +275,16 @@ QString Panel::hiding() const
     } else {
         visibility = panelConfig().readEntry("panelVisibility", 0);
     }
-    
+
     switch (visibility) {
-        case PanelView::NormalPanel:
-            return "none";
-        case PanelView::AutoHide:
-            return "autohide";
-        case PanelView::LetWindowsCover:
-            return "windowscover";
-        case PanelView::WindowsGoBelow:
-            return "windowsbelow";
+    case PanelView::NormalPanel:
+        return "none";
+    case PanelView::AutoHide:
+        return "autohide";
+    case PanelView::LetWindowsCover:
+        return "windowscover";
+    case PanelView::WindowsGoBelow:
+        return "windowsbelow";
     }
     return "none";
 }
@@ -310,6 +308,3 @@ void Panel::setHiding(const QString &mode)
 }
 
 }
-
-
-

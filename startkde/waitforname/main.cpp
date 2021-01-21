@@ -18,7 +18,6 @@
 
 #include "waiter.h"
 
-
 int main(int argc, char **argv)
 {
     Waiter app(argc, argv);

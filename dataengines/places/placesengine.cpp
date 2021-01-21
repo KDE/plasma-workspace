@@ -18,12 +18,12 @@
 
 #include "placesengine.h"
 
-#include <QString>
-#include <QIcon>
 #include <QDebug>
+#include <QIcon>
+#include <QString>
 
-#include "placesproxymodel.h"
 #include "placeservice.h"
+#include "placesproxymodel.h"
 
 PlacesEngine::PlacesEngine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)
@@ -49,4 +49,3 @@ Plasma::Service *PlacesEngine::serviceForSource(const QString &source)
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(places, PlacesEngine, "plasma-dataengine-places.json")
 
 #include "placesengine.moc"
-

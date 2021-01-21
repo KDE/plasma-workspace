@@ -63,28 +63,29 @@ Window::~Window() = default;
 
 void Window::init()
 {
-     qCDebug(DBUSMENUPROXY) << "Inited window with menu for" << m_winId << "on" << m_serviceName << "at app" << m_applicationObjectPath << "win" << m_windowObjectPath << "unity" << m_unityObjectPath;
+    qCDebug(DBUSMENUPROXY) << "Inited window with menu for" << m_winId << "on" << m_serviceName << "at app" << m_applicationObjectPath << "win"
+                           << m_windowObjectPath << "unity" << m_unityObjectPath;
 
-     if (!m_applicationMenuObjectPath.isEmpty()) {
-         m_applicationMenu = new Menu(m_serviceName, m_applicationMenuObjectPath, this);
-         connect(m_applicationMenu, &Menu::menuAppeared, this, &Window::updateWindowProperties);
-         connect(m_applicationMenu, &Menu::menuDisappeared, this, &Window::updateWindowProperties);
-         connect(m_applicationMenu, &Menu::subscribed, this, &Window::onMenuSubscribed);
-         // basically so it replies on DBus no matter what
-         connect(m_applicationMenu, &Menu::failedToSubscribe, this, &Window::onMenuSubscribed);
-         connect(m_applicationMenu, &Menu::itemsChanged, this, &Window::menuItemsChanged);
-         connect(m_applicationMenu, &Menu::menusChanged, this, &Window::menuChanged);
-     }
+    if (!m_applicationMenuObjectPath.isEmpty()) {
+        m_applicationMenu = new Menu(m_serviceName, m_applicationMenuObjectPath, this);
+        connect(m_applicationMenu, &Menu::menuAppeared, this, &Window::updateWindowProperties);
+        connect(m_applicationMenu, &Menu::menuDisappeared, this, &Window::updateWindowProperties);
+        connect(m_applicationMenu, &Menu::subscribed, this, &Window::onMenuSubscribed);
+        // basically so it replies on DBus no matter what
+        connect(m_applicationMenu, &Menu::failedToSubscribe, this, &Window::onMenuSubscribed);
+        connect(m_applicationMenu, &Menu::itemsChanged, this, &Window::menuItemsChanged);
+        connect(m_applicationMenu, &Menu::menusChanged, this, &Window::menuChanged);
+    }
 
-     if (!m_menuBarObjectPath.isEmpty()) {
-         m_menuBar = new Menu(m_serviceName, m_menuBarObjectPath, this);
-         connect(m_menuBar, &Menu::menuAppeared, this, &Window::updateWindowProperties);
-         connect(m_menuBar, &Menu::menuDisappeared, this, &Window::updateWindowProperties);
-         connect(m_menuBar, &Menu::subscribed, this, &Window::onMenuSubscribed);
-         connect(m_menuBar, &Menu::failedToSubscribe, this, &Window::onMenuSubscribed);
-         connect(m_menuBar, &Menu::itemsChanged, this, &Window::menuItemsChanged);
-         connect(m_menuBar, &Menu::menusChanged, this, &Window::menuChanged);
-     }
+    if (!m_menuBarObjectPath.isEmpty()) {
+        m_menuBar = new Menu(m_serviceName, m_menuBarObjectPath, this);
+        connect(m_menuBar, &Menu::menuAppeared, this, &Window::updateWindowProperties);
+        connect(m_menuBar, &Menu::menuDisappeared, this, &Window::updateWindowProperties);
+        connect(m_menuBar, &Menu::subscribed, this, &Window::onMenuSubscribed);
+        connect(m_menuBar, &Menu::failedToSubscribe, this, &Window::onMenuSubscribed);
+        connect(m_menuBar, &Menu::itemsChanged, this, &Window::menuItemsChanged);
+        connect(m_menuBar, &Menu::menusChanged, this, &Window::menuChanged);
+    }
 
     if (!m_applicationObjectPath.isEmpty()) {
         m_applicationActions = new Actions(m_serviceName, m_applicationObjectPath, this);
@@ -233,7 +234,7 @@ void Window::initMenu()
 
 void Window::menuItemsChanged(const QVector<uint> &itemIds)
 {
-    if (qobject_cast<Menu*>(sender()) != m_currentMenu) {
+    if (qobject_cast<Menu *>(sender()) != m_currentMenu) {
         return;
     }
 
@@ -242,11 +243,9 @@ void Window::menuItemsChanged(const QVector<uint> &itemIds)
     for (uint id : itemIds) {
         const auto newItem = m_currentMenu->getItem(id);
 
-        DBusMenuItem dBusItem{
-            // 0 is menu, items start at 1
-            static_cast<int>(id),
-            gMenuToDBusMenuProperties(newItem)
-        };
+        DBusMenuItem dBusItem{// 0 is menu, items start at 1
+                              static_cast<int>(id),
+                              gMenuToDBusMenuProperties(newItem)};
         items.append(dBusItem);
     }
 
@@ -255,7 +254,7 @@ void Window::menuItemsChanged(const QVector<uint> &itemIds)
 
 void Window::menuChanged(const QVector<uint> &menuIds)
 {
-    if (qobject_cast<Menu*>(sender()) != m_currentMenu) {
+    if (qobject_cast<Menu *>(sender()) != m_currentMenu) {
         return;
     }
 
@@ -360,8 +359,7 @@ bool Window::registerDBusObject()
 
 void Window::updateWindowProperties()
 {
-    const bool hasMenu = ((m_applicationMenu && m_applicationMenu->hasMenu())
-                           || (m_menuBar && m_menuBar->hasMenu()));
+    const bool hasMenu = ((m_applicationMenu && m_applicationMenu->hasMenu()) || (m_menuBar && m_menuBar->hasMenu()));
 
     if (!hasMenu) {
         emit requestRemoveWindowProperties();
@@ -369,11 +367,11 @@ void Window::updateWindowProperties()
     }
 
     Menu *oldMenu = m_currentMenu;
-    Menu *newMenu = qobject_cast<Menu*>(sender());
+    Menu *newMenu = qobject_cast<Menu *>(sender());
     // set current menu as needed
     if (!m_currentMenu) {
         m_currentMenu = newMenu;
-    // Menu Bar takes precedence over application menu
+        // Menu Bar takes precedence over application menu
     } else if (m_currentMenu == m_applicationMenu && newMenu == m_menuBar) {
         qCDebug(DBUSMENUPROXY) << "Switching from application menu to menu bar";
         m_currentMenu = newMenu;
@@ -415,7 +413,6 @@ void Window::Event(int id, const QString &eventId, const QDBusVariant &data, uin
             triggerAction(action, target, timestamp);
         }
     }
-
 }
 
 DBusMenuItemList Window::GetGroupProperties(const QList<int> &ids, const QStringList &propertyNames)
@@ -480,15 +477,12 @@ uint Window::GetLayout(int parentId, int recursionDepth, const QStringList &prop
     }
 
     dbusItem.id = parentId; // TODO
-    dbusItem.properties = {
-        {QStringLiteral("children-display"), QStringLiteral("submenu")}
-    };
+    dbusItem.properties = {{QStringLiteral("children-display"), QStringLiteral("submenu")}};
 
     int count = 0;
 
     const auto itemsToBeAdded = section.items;
     for (const auto &item : itemsToBeAdded) {
-
         DBusMenuLayoutItem child{
             Utils::treeStructureToInt(section.id, sectionId, ++count),
             gMenuToDBusMenuProperties(item),
@@ -499,7 +493,6 @@ uint Window::GetLayout(int parentId, int recursionDepth, const QStringList &prop
         // Now resolve section aliases
         auto it = item.constFind(QStringLiteral(":section"));
         if (it != item.constEnd()) {
-
             // references another place, add it instead
             GMenuSection gmenuSection = qdbus_cast<GMenuSection>(it->value<QDBusArgument>());
 
@@ -635,7 +628,7 @@ QVariantMap Window::gMenuToDBusMenuProperties(const QVariantMap &source) const
         visible = false;
     } else if (hiddenWhen == QLatin1String("action-missing") && !actionOk) {
         visible = false;
-    // While we have Global Menu we don't have macOS menu (where Quit, Help, etc is separate)
+        // While we have Global Menu we don't have macOS menu (where Quit, Help, etc is separate)
     } else if (hiddenWhen == QLatin1String("macos-menubar")) {
         visible = true;
     }
