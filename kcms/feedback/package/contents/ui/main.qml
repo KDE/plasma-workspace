@@ -51,7 +51,7 @@ SimpleKCM {
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
             wrapMode: Text.WordWrap
-            text: xi18nc("@info", "You can help KDE improve Plasma by contributing information on how you use it, so we can focus on things that matter to you.<nl/><nl/>Contributing this information is optional and entirely anonymous. We never collect your personal data, files you use, websites you visit, or information that could identify you.<nl/><nl/>You can read about our policy in the following link:")
+            text: xi18nc("@info", "You can help KDE improve Plasma by contributing information on how you use it, so we can focus on things that matter to you.<nl/><nl/>Contributing this information is optional and entirely anonymous. We never collect your personal data, files you use, websites you visit, or information that could identify you.<nl/><nl/>You can read about our privacy policy in the following link:")
         }
 
         Kirigami.UrlButton {
