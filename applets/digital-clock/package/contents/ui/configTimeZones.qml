@@ -64,38 +64,37 @@ ColumnLayout {
             // the first item
             currentIndex: -1
 
-            // Using a hand-rolled delegate because Kirigami.BasicListItem doesn't
-            // support being given extra items to display on the end
-            delegate: Kirigami.AbstractListItem {
-                width: configuredTimezoneList.width
-                // Don't need a highlight effect since the list item does
-                // nothing when clicked
+            delegate: Kirigami.BasicListItem {
+                // Otherwise the list item changes height when its subtitles appears
+                implicitHeight: Math.round(Kirigami.Units.gridUnit * 2.5)
+
+                // Don't want a highlight effect here because it doesn't look good
+                hoverEnabled: false
                 activeBackgroundColor: "transparent"
-                contentItem: RowLayout {
-                    QQC2.RadioButton {
-                        visible: configuredTimezoneList.count > 1
-                        checked: plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
-                        onToggled: plasmoid.configuration.lastSelectedTimezone = model.timeZoneId
-                    }
-                    ColumnLayout {
-                        Layout.minimumHeight: Kirigami.Units.iconSizes.large
-                        Layout.fillWidth: true
-                        Layout.alignment: Qt.AlignVCenter
-                        QQC2.Label {
-                            Layout.fillWidth: true
-                            text: model.city
-                            elide: Text.ElideRight
-                        }
-                        QQC2.Label {
-                            Layout.fillWidth: true
-                            Layout.alignment: Qt.AlignTop
-                            text: plasmoid.configuration.lastSelectedTimezone === model.timeZoneId && configuredTimezoneList.count > 1 ? i18n("Clock is currently using this time zone") : ""
-                            elide: Text.ElideRight
-                            font: Kirigami.Theme.smallFont
-                            opacity: 0.7
-                            visible: text.length > 0
-                        }
-                    }
+                activeTextColor: Kirigami.Theme.textColor
+
+                // FIXME: this should have already evaluated to false because
+                // the list item doesn't have an icon
+                reserveSpaceForIcon: false
+
+                // TODO: create Kirigami.MutuallyExclusiveListItem to be the
+                // RadioButton equivalent of Kirigami.CheckableListItem,
+                // and then port to use that in Plasma 5.22
+                leading: QQC2.RadioButton {
+                    visible: configuredTimezoneList.count > 1
+                    checked: plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
+                    onToggled: clickAction.trigger()
+                }
+
+                label: model.city
+                subtitle: plasmoid.configuration.lastSelectedTimezone === model.timeZoneId && configuredTimezoneList.count > 1 ? i18n("Clock is currently using this time zone") : ""
+
+                action: Kirigami.Action {
+                    id: clickAction
+                    onTriggered: plasmoid.configuration.lastSelectedTimezone = model.timeZoneId
+                }
+
+                trailing: RowLayout {
                     QQC2.Button {
                         visible: model.isLocalTimeZone && KCMShell.authorize("clock.desktop").length > 0
                         text: i18n("Switch Local Time Zone...")
