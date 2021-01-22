@@ -159,6 +159,13 @@ SimpleKCM {
                     }
                 }
             }
+            Item {
+                height: Kirigami.Units.gridUnit*2
+            }
+            QQC2.Button {
+                text: i18n("View Previously Collected Data...")
+                onClicked: kcm.push("AuditLog.qml")
+            }
         }
     }
 }
