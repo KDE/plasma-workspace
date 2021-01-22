@@ -60,6 +60,9 @@ ColumnLayout {
                 sourceModel: timeZones
                 onlyShowChecked: true
             }
+            // We have no concept of selection in this list, so don't pre-select
+            // the first item
+            currentIndex: -1
 
             // Using a hand-rolled delegate because Kirigami.BasicListItem doesn't
             // support being given extra items to display on the end
