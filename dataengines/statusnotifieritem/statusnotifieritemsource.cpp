@@ -132,6 +132,7 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
         connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewOverlayIcon, this, &StatusNotifierItemSource::refreshIcons);
         connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewToolTip, this, &StatusNotifierItemSource::refreshToolTip);
         connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewStatus, this, &StatusNotifierItemSource::syncStatus);
+        connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewMenu, this, &StatusNotifierItemSource::refreshMenu);
         refresh();
     }
 }
@@ -176,6 +177,15 @@ void StatusNotifierItemSource::refreshIcons()
 void StatusNotifierItemSource::refreshToolTip()
 {
     m_tooltipUpdate = true;
+    refresh();
+}
+
+void StatusNotifierItemSource::refreshMenu()
+{
+    if (m_menuImporter) {
+        m_menuImporter->deleteLater();
+        m_menuImporter = nullptr;
+    }
     refresh();
 }
 

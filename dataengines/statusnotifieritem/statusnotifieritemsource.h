@@ -56,6 +56,7 @@ private Q_SLOTS:
     void refreshTitle();
     void refreshIcons();
     void refreshToolTip();
+    void refreshMenu();
     void refresh();
     void performRefresh();
     void syncStatus(QString);
