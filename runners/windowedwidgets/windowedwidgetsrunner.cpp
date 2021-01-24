@@ -109,7 +109,7 @@ void WindowedWidgetsRunner::loadMetadataList()
     const auto &listMetadata = Plasma::PluginLoader::self()->listAppletMetaData(QString());
     for (const KPluginMetaData &md : listMetadata) {
         if (md.isValid() && !md.rawData().value(QStringLiteral("NoDisplay")).toBool()
-            && !md.rawData().value(QStringLiteral("X-Plasma-StandAloneApp")).toBool()) {
+            && md.rawData().value(QStringLiteral("X-Plasma-StandAloneApp")).toBool()) {
             m_applets << md;
         }
     }
