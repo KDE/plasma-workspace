@@ -11,7 +11,7 @@ import org.kde.plasma.workspace.keyboardlayout 1.0
 PlasmaComponents3.ToolButton {
     property alias keyboardLayout: keyboardLayout
     readonly property bool hasMultipleKeyboardLayouts: keyboardLayout.layoutsList.length > 1
-    readonly property var layoutNames: keyboardLayout.layoutsList[keyboardLayout.layout]
+    readonly property var layoutNames: keyboardLayout.layoutsList.length ? keyboardLayout.layoutsList[keyboardLayout.layout] : ""
 
     text: layoutNames.longName
     visible: hasMultipleKeyboardLayouts
