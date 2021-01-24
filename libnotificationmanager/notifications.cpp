@@ -196,7 +196,8 @@ void Notifications::Private::initProxyModels()
                     Q_UNUSED(topLeft);
                     Q_UNUSED(bottomRight);
                     if (roles.isEmpty() || roles.contains(Notifications::UpdatedRole) || roles.contains(Notifications::ExpiredRole)
-                        || roles.contains(Notifications::JobStateRole) || roles.contains(Notifications::PercentageRole)) {
+                        || roles.contains(Notifications::JobStateRole) || roles.contains(Notifications::PercentageRole)
+                        || roles.contains(Notifications::ReadRole)) {
                         updateCount();
                     }
                 });
