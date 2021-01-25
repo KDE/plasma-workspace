@@ -192,7 +192,6 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 # locate qdbus in the Qt path because not every distro makes a symlink at /usr/bin/qdbus
 query_qmake(QtBinariesDir QT_INSTALL_BINS)
 
-option(PLASMA_SYSTEMD_BOOT "Use systemd units for startup of plasma (WIP)" FALSE)
 option(PLASMA_WAYLAND_DEFAULT_SESSION "Use Wayland session by default for Plasma" FALSE)
 
 add_subdirectory(doc)
