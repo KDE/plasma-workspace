@@ -49,6 +49,10 @@
       <label>When multiple time zones are configured, this is the one shown on widget restore. Typically the system's current timezone.</label>
       <default>Local</default>
     </entry>
+        <entry name="wheelChangesTimezone" type="Bool">
+      <label>Whether the mouse wheel switches between the timezones configured in selectedTimeZones.</label>
+      <default>false</default>
+    </entry>
     <entry name="displayTimezoneAsCode" type="Bool">
       <label>Whether the timezone is displayed as a code i.e. "GMT" or full text i.e. "London".</label>
       <default>true</default>

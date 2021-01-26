@@ -32,6 +32,8 @@ ColumnLayout {
     id: timeZonesPage
 
     property alias cfg_selectedTimeZones: timeZones.selectedTimeZones
+    property alias cfg_wheelChangesTimezone: enableWheelCheckBox.checked
+
 
     TimeZoneModel {
 
@@ -47,7 +49,7 @@ ColumnLayout {
 
     QQC2.ScrollView {
         Layout.fillWidth: true
-        Layout.preferredHeight: Kirigami.Units.gridUnit * 19
+        Layout.preferredHeight: Kirigami.Units.gridUnit * 16
         Component.onCompleted: background.visible = true // enable border
 
         ListView {
@@ -137,10 +139,20 @@ ColumnLayout {
         onClicked: timezoneSheet.open()
     }
 
+    QQC2.CheckBox {
+        id: enableWheelCheckBox
+        configuredTimezoneList.count > 1
+        Layout.fillWidth: true
+        Layout.topMargin: Kirigami.Units.largeSpacing * 2
+        text: i18n("Switch displayed time zone by scrolling over clock applet")
+    }
+
     QQC2.Label {
         visible: configuredTimezoneList.count > 1
         Layout.fillWidth: true
-        Layout.margins: Kirigami.Units.largeSpacing * 2
+        Layout.topMargin: Kirigami.Units.largeSpacing * 2
+        Layout.leftMargin: Kirigami.Units.largeSpacing * 2
+        Layout.rightMargin: Kirigami.Units.largeSpacing * 2
         text: i18n("Note that using a different time zone for the clock does not change the systemwide local time zone. When you travel, switch the local time zone instead.")
         wrapMode: Text.Wrap
     }
