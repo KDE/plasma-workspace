@@ -72,7 +72,7 @@ KCM.GridViewKCM {
         Kirigami.InlineMessage {
             Layout.fillWidth: true
             type: Kirigami.MessageType.Warning
-            text: i18n("Your desktop layout will be lost and reset to the default layout provided by the selected theme.")
+            text: i18n("Your current layout and configuration of panels, desktop widgets, and wallpapers will be lost and reset to the default layout provided by the selected theme.")
             visible: resetCheckbox.checked
         }
 
