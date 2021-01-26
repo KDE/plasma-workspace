@@ -423,7 +423,44 @@ Item {
 
     MouseArea {
         anchors.fill: parent
+
+        property int wheelDelta: 0
+
         onClicked: plasmoid.expanded = !plasmoid.expanded
+
+        onWheel: {
+            if (!plasmoid.configuration.wheelChangesTimezone) {
+                return;
+            }
+
+            var delta = wheel.angleDelta.y || wheel.angleDelta.x
+            var newIndex = main.tzIndex;
+            wheelDelta += delta;
+            // magic number 120 for common "one click"
+            // See: https://doc.qt.io/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
+            while (wheelDelta >= 120) {
+                wheelDelta -= 120;
+                newIndex--;
+            }
+            while (wheelDelta <= -120) {
+                wheelDelta += 120;
+                newIndex++;
+            }
+
+            if (newIndex >= plasmoid.configuration.selectedTimeZones.length) {
+                newIndex = 0;
+            } else if (newIndex < 0) {
+                newIndex = plasmoid.configuration.selectedTimeZones.length - 1;
+            }
+
+            if (newIndex !== main.tzIndex) {
+                plasmoid.configuration.lastSelectedTimezone = plasmoid.configuration.selectedTimeZones[newIndex];
+                main.tzIndex = newIndex;
+
+                dataSource.dataChanged();
+                setupLabels();
+            }
+        }
     }
 
    /*
