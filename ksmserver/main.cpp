@@ -286,6 +286,12 @@ int main(int argc, char *argv[])
         flags |= KSMServer::InitFlag::NoLockScreen;
     }
 
+    // we use the session_type here as ksmserver is already forced as X above
+    // in wayland, kwin manages the lock screen
+    if (qgetenv("XDG_SESSION_TYPE") == QByteArrayLiteral("wayland")) {
+        flags |= KSMServer::InitFlag::NoLockScreen;
+    }
+
     KSMServer *server = new KSMServer(flags);
 
     // for the KDE-already-running check in startkde
