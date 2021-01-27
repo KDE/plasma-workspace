@@ -65,7 +65,7 @@ Control {
             case PlasmaCore.Types.Horizontal:
                 return Faces.SensorFace.Horizontal;
             case PlasmaCore.Types.Vertical:
-                return Faces.SensorFace.Verical;
+                return Faces.SensorFace.Vertical;
             default:
                 return Faces.SensorFace.Planar;
             }
