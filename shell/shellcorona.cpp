@@ -1883,7 +1883,9 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
     // immediately create the panel here so that we have access to the panel view
     createWaitingPanels();
 
-    m_panelViews.value(panel)->setScreenToFollow(wantedScreen);
+    if (m_panelViews.contains(panel)) {
+        m_panelViews.value(panel)->setScreenToFollow(wantedScreen);
+    }
 
     return panel;
 }
