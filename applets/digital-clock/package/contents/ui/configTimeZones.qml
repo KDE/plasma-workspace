@@ -67,8 +67,6 @@ ColumnLayout {
             delegate: Kirigami.BasicListItem {
                 id: timeZoneListItem
                 property bool isCurrent: plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
-                // Otherwise the list item changes height when its subtitles appears
-                implicitHeight: Math.round(Kirigami.Units.gridUnit * 2.5)
 
                 bold: isCurrent
 
@@ -77,6 +75,7 @@ ColumnLayout {
                 activeBackgroundColor: "transparent"
                 activeTextColor: Kirigami.Theme.textColor
 
+                reserveSpaceForSubtitle: true
                 // FIXME: this should have already evaluated to false because
                 // the list item doesn't have an icon
                 reserveSpaceForIcon: false
