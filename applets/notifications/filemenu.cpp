@@ -187,6 +187,8 @@ void FileMenu::open(int x, int y)
     actions->addServiceActionsTo(menu);
     actions->addPluginActionsTo(menu);
 
+    menu->addSeparator();
+
     QAction *propertiesAction = menu->addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("Properties"));
     connect(propertiesAction, &QAction::triggered, [fileItem] {
         KPropertiesDialog *dialog = new KPropertiesDialog(fileItem.url());
