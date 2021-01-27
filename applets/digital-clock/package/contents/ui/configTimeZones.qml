@@ -65,8 +65,12 @@ ColumnLayout {
             currentIndex: -1
 
             delegate: Kirigami.BasicListItem {
+                id: timeZoneListItem
+                property bool isCurrent: plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
                 // Otherwise the list item changes height when its subtitles appears
                 implicitHeight: Math.round(Kirigami.Units.gridUnit * 2.5)
+
+                bold: isCurrent
 
                 // Don't want a highlight effect here because it doesn't look good
                 hoverEnabled: false
@@ -81,13 +85,14 @@ ColumnLayout {
                 // RadioButton equivalent of Kirigami.CheckableListItem,
                 // and then port to use that in Plasma 5.22
                 leading: QQC2.RadioButton {
+                    id: radioButton
                     visible: configuredTimezoneList.count > 1
-                    checked: plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
+                    checked: timeZoneListItem.isCurrent
                     onToggled: clickAction.trigger()
                 }
 
                 label: model.city
-                subtitle: plasmoid.configuration.lastSelectedTimezone === model.timeZoneId && configuredTimezoneList.count > 1 ? i18n("Clock is currently using this time zone") : ""
+                subtitle: isCurrent && configuredTimezoneList.count > 1 ? i18n("Clock is currently using this time zone") : ""
 
                 action: Kirigami.Action {
                     id: clickAction
