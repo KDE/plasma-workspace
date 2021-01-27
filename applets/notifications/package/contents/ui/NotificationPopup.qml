@@ -179,8 +179,9 @@ PlasmaCore.Dialog {
                 timeout: timer.running ? timer.interval : 0
 
                 closable: true
+
                 onBodyClicked: {
-                    if (area.acceptedButtons & mouse.button) {
+                    if (area.acceptedButtons & Qt.LeftButton) {
                         area.clicked(null /*mouse*/);
                     }
                 }

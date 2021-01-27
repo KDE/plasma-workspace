@@ -27,6 +27,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.11 as Kirigami
 
+import org.kde.plasma.private.notifications 2.0 as Notifications
+
 // NOTE This wrapper item is needed for QQC ScrollView to work
 // In NotificationItem we just do SelectableLabel {} and then it gets confused
 // as to which is the "contentItem"
@@ -96,12 +98,20 @@ Item {
                     flick.contentY = cursorRectangle.y + cursorRectangle.height - flick.height
                 }
             }
-            MouseArea {
-                property int selectionStart
-                property point mouseDownPos: Qt.point(-999, -999);
 
+            // Handle left-click
+            Notifications.TextEditClickHandler {
+                target: bodyText
+                onClicked: {
+                    bodyTextContainer.clicked(null);
+                }
+            }
+
+            // Handle right-click and cursorShape
+            MouseArea {
                 anchors.fill: parent
-                acceptedButtons: Qt.RightButton | Qt.LeftButton
+                acceptedButtons: Qt.RightButton
+
                 cursorShape: {
                     if (bodyText.hoveredLink) {
                         return Qt.PointingHandCursor;
@@ -111,58 +121,16 @@ Item {
                         return bodyTextContainer.cursorShape || Qt.IBeamCursor;
                     }
                 }
-                preventStealing: true // don't let us accidentally drag the Flickable
 
                 onPressed: {
-                    if (mouse.button === Qt.RightButton) {
-                        contextMenu = contextMenuComponent.createObject(bodyText);
-                        contextMenu.link = bodyText.linkAt(mouse.x, mouse.y);
+                    contextMenu = contextMenuComponent.createObject(bodyText);
+                    contextMenu.link = bodyText.linkAt(mouse.x, mouse.y);
 
-                        contextMenu.closed.connect(function() {
-                            contextMenu.destroy();
-                            contextMenu = null;
-                        });
-                        contextMenu.open(mouse.x, mouse.y);
-                        return;
-                    }
-
-                    mouseDownPos = Qt.point(mouse.x, mouse.y);
-                    selectionStart = bodyText.positionAt(mouse.x, mouse.y);
-                    var pos = bodyText.positionAt(mouse.x, mouse.y);
-                    // deselect() would scroll to the end which we don't want
-                    bodyText.select(pos, pos);
-                }
-
-                onReleased: {
-                    // emulate "onClicked"
-                    var manhattanLength = Math.abs(mouseDownPos.x - mouse.x) + Math.abs(mouseDownPos.y - mouse.y);
-                    if (manhattanLength <= Qt.styleHints.startDragDistance) {
-                        var link = bodyText.linkAt(mouse.x, mouse.y);
-                        if (link) {
-                            Qt.openUrlExternally(link);
-                        } else {
-                            bodyTextContainer.clicked(mouse);
-                        }
-                    }
-
-                    // emulate selection clipboard
-                    if (bodyText.selectedText) {
-                        plasmoid.nativeInterface.setSelectionClipboardText(bodyText.selectedText);
-                    }
-
-                    mouseDownPos = Qt.point(-999, -999);
-                }
-
-                // HACK to be able to select text whilst still getting all mouse events to the MouseArea
-                onPositionChanged: {
-                    if (pressed) {
-                        var pos = bodyText.positionAt(mouseX, mouseY);
-                        if (selectionStart < pos) {
-                            bodyText.select(selectionStart, pos);
-                        } else {
-                            bodyText.select(pos, selectionStart);
-                        }
-                    }
+                    contextMenu.closed.connect(function() {
+                        contextMenu.destroy();
+                        contextMenu = null;
+                    });
+                    contextMenu.open(mouse.x, mouse.y);
                 }
             }
         }

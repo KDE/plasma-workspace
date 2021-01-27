@@ -41,6 +41,7 @@
 
 #include "filemenu.h"
 #include "globalshortcuts.h"
+#include "texteditclickhandler.h"
 #include "thumbnailer.h"
 
 NotificationApplet::NotificationApplet(QObject *parent, const QVariantList &data)
@@ -51,6 +52,7 @@ NotificationApplet::NotificationApplet(QObject *parent, const QVariantList &data
         const char uri[] = "org.kde.plasma.private.notifications";
         qmlRegisterType<FileMenu>(uri, 2, 0, "FileMenu");
         qmlRegisterType<GlobalShortcuts>(uri, 2, 0, "GlobalShortcuts");
+        qmlRegisterType<TextEditClickHandler>(uri, 2, 0, "TextEditClickHandler");
         qmlRegisterType<Thumbnailer>(uri, 2, 0, "Thumbnailer");
         qmlProtectModule(uri, 2);
         s_typesRegistered = true;

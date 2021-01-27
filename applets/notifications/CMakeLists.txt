@@ -4,6 +4,7 @@ set(notificationapplet_SRCS
     notificationapplet.cpp
     filemenu.cpp
     globalshortcuts.cpp
+    texteditclickhandler.cpp
     thumbnailer.cpp
 )
 

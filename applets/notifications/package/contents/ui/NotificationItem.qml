@@ -96,7 +96,7 @@ ColumnLayout {
                                         || (jobLoader.item && jobLoader.item.dragging)
     property bool replying: false
 
-    signal bodyClicked(var mouse)
+    signal bodyClicked
     signal closeClicked
     signal configureClicked
     signal dismissClicked
