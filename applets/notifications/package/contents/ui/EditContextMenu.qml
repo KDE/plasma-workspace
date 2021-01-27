@@ -71,6 +71,7 @@ PlasmaComponents.ContextMenu {
 
     PlasmaComponents.MenuItem {
         id: selectAllAction
+        icon: "edit-select-all"
         text: i18nd("plasma_applet_org.kde.plasma.notifications", "Select All")
         onClicked: target.selectAll()
         visible: typeof target.selectAll === "function"
