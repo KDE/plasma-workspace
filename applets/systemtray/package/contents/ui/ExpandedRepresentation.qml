@@ -55,6 +55,9 @@ Item {
             right: parent.right
         }
         height: trayHeading.height + bottomPadding + container.headingHeight
+        Behavior on height {
+            NumberAnimation { duration: PlasmaCore.Units.shortDuration/2; easing.type: Easing.InOutQuad }
+        }
     }
 
     // Main content layout
