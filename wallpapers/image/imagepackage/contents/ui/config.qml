@@ -389,15 +389,11 @@ ColumnLayout {
         id: thumbnailsComponent
 
         Item {
-            KCM.SettingHighlighter {
-                target: wallpapersGrid
-                highlight: configDialog.currentWallpaper === "org.kde.image" && cfg_Image != cfg_ImageDefault
-            }
+            property var imageModel: (configDialog.currentWallpaper === "org.kde.image") ? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
 
             KCM.GridView {
                 id: wallpapersGrid
                 anchors.fill: parent
-                property var imageModel: (configDialog.currentWallpaper == "org.kde.image")? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
 
                 function resetCurrentIndex() {
                     //that min is needed as the module will be populated in an async way
@@ -423,6 +419,11 @@ ColumnLayout {
                     visible: wallpapersGrid.view.count === 0
                     text: i18nd("plasma_wallpaper_org.kde.image", "There are no wallpapers in this slideshow")
                 }
+            }
+
+            KCM.SettingHighlighter {
+                target: wallpapersGrid
+                highlight: configDialog.currentWallpaper === "org.kde.image" && cfg_Image != cfg_ImageDefault
             }
         }
     }
