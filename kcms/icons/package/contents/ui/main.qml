@@ -176,6 +176,9 @@ KCM.GridViewKCM {
             }
             view.forceActiveFocus();
         }
+        onDoubleClicked: {
+            kcm.save();
+        }
     }
 
     footer: ColumnLayout {

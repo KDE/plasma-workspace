@@ -80,4 +80,7 @@ KCM.GridDelegate {
         view.forceActiveFocus();
         kcm.cursorThemeSettings.cursorTheme = kcm.cursorThemeFromIndex(index);
     }
+    onDoubleClicked: {
+            kcm.save();
+    }
 }

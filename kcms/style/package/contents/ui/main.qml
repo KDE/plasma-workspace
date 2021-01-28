@@ -116,6 +116,9 @@ KCM.GridViewKCM {
             kcm.model.selectedStyle = model.styleName;
             view.forceActiveFocus();
         }
+        onDoubleClicked: {
+            kcm.save();
+        }
     }
 
     footer: ColumnLayout {

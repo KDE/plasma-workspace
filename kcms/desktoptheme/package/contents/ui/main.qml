@@ -151,6 +151,9 @@ KCM.GridViewKCM {
             kcm.desktopThemeSettings.name = model.pluginName;
             view.forceActiveFocus();
         }
+        onDoubleClicked: {
+            kcm.save();
+        }
     }
 
     footer: ColumnLayout {

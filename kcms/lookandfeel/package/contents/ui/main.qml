@@ -66,6 +66,9 @@ KCM.GridViewKCM {
             view.forceActiveFocus();
             resetCheckbox.checked = false;
         }
+        onDoubleClicked: {
+            kcm.save();
+        }
     }
 
     footer: ColumnLayout {
