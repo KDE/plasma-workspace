@@ -86,6 +86,21 @@ bool ResizeHandle::resizeBlocked() const
     return m_resizeWidthBlocked || m_resizeHeightBlocked;
 }
 
+void ResizeHandle::setPressed(bool pressed)
+{
+    if (pressed == m_pressed) {
+        return;
+    }
+
+    m_pressed = pressed;
+    emit pressedChanged();
+}
+
+bool ResizeHandle::isPressed() const
+{
+    return m_pressed;
+}
+
 bool ResizeHandle::resizeLeft() const
 {
     return m_resizeCorner == Left || m_resizeCorner == TopLeft || m_resizeCorner == BottomLeft;
@@ -127,6 +142,7 @@ void ResizeHandle::mousePressEvent(QMouseEvent *event)
     m_mouseDownPosition = event->windowPos();
     m_mouseDownGeometry = QRectF(itemContainer->x(), itemContainer->y(), itemContainer->width(), itemContainer->height());
     setResizeBlocked(false, false);
+    setPressed(true);
     event->accept();
 }
 
@@ -209,6 +225,7 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
 
 void ResizeHandle::mouseReleaseEvent(QMouseEvent *event)
 {
+    setPressed(false);
     if (!m_configOverlay || !m_configOverlay->itemContainer()) {
         return;
     }
@@ -226,6 +243,11 @@ void ResizeHandle::mouseReleaseEvent(QMouseEvent *event)
 
     setResizeBlocked(false, false);
     emit resizeBlockedChanged();
+}
+
+void ResizeHandle::mouseUngrabEvent()
+{
+    setPressed(false);
 }
 
 void ResizeHandle::setConfigOverlay(ConfigOverlay *handle)
