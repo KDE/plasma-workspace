@@ -5,9 +5,9 @@ set(appmenuapplet_SRCS
 
 add_library(appmenuplugin SHARED ${appmenuapplet_SRCS})
 target_link_libraries(appmenuplugin
-                      Qt5::Core
-                      Qt5::Widgets
-                      Qt5::Quick
+                      Qt::Core
+                      Qt::Widgets
+                      Qt::Quick
                       KF5::Plasma
                       KF5::WindowSystem
                       PW::LibTaskManager

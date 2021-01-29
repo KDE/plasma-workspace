@@ -17,9 +17,9 @@ qt5_add_dbus_interface(keyboardlayoutplugin_SRCS "org.kde.KeyboardLayouts.xml" k
 
 add_library(keyboardlayoutplugin SHARED ${keyboardlayoutplugin_SRCS})
 
-target_link_libraries(keyboardlayoutplugin Qt5::Core
-                                           Qt5::DBus
-                                           Qt5::Qml)
+target_link_libraries(keyboardlayoutplugin Qt::Core
+                                           Qt::DBus
+                                           Qt::Qml)
 
 set(keyboardlayoutplugin_PATH /org/kde/plasma/workspace/keyboardlayout)
 install(TARGETS keyboardlayoutplugin

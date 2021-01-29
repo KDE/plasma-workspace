@@ -5,7 +5,7 @@ ecm_qt_declare_logging_category(kio_fonts_PART_SRCS
     CATEGORY_NAME org.kde.kcm_kfontinst.kio)
 # qt5_add_dbus_interface(kio_fonts_PART_SRCS ../dbus/org.kde.fontinst.xml FontinstIface)
 add_library(kio_fonts MODULE ${kio_fonts_PART_SRCS} ${KFI_FONTINST_AUTH_SRC} )
-target_link_libraries(kio_fonts Qt5::DBus Qt5::X11Extras Qt5::Xml KF5::Archive KF5::KIOCore KF5::KIOWidgets kfontinst )
+target_link_libraries(kio_fonts Qt::DBus Qt::X11Extras Qt::Xml KF5::Archive KF5::KIOCore KF5::KIOWidgets kfontinst )
 install(TARGETS kio_fonts  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 install( FILES fonts.desktop  DESTINATION  ${KDE_INSTALL_DATADIR}/konqsidebartng/virtual_folders/services )
 install( FILES fonts.protocol  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )

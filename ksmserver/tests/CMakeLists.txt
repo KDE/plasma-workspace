@@ -4,6 +4,6 @@ add_executable(autostart_test
 )
 
 target_link_libraries(autostart_test
-    Qt5::Core
+    Qt::Core
     KF5::Service
 )

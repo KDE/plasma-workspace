@@ -24,7 +24,7 @@ add_executable(kcmTest ${kcmTest_SRCS})
 add_dependencies(kcmTest kcm_lookandfeel)
 
 target_link_libraries(kcmTest
-        Qt5::Test
+        Qt::Test
         KF5::KIOWidgets
         KF5::CoreAddons
         KF5::KCMUtils
@@ -37,14 +37,14 @@ target_link_libraries(kcmTest
         KF5::NewStuff
         PW::KWorkspace
 
-        Qt5::DBus
-        Qt5::Widgets
-        Qt5::QuickWidgets
+        Qt::DBus
+        Qt::Widgets
+        Qt::QuickWidgets
         ${X11_LIBRARIES}
 )
 
 if(X11_FOUND)
-    target_link_libraries(kcmTest Qt5::X11Extras)
+    target_link_libraries(kcmTest Qt::X11Extras)
 endif()
 if (X11_Xcursor_FOUND)
    target_link_libraries(kcmTest ${X11_Xcursor_LIB})

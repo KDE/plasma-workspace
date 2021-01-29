@@ -6,17 +6,17 @@ MACRO(PLASMASHELL_UNIT_TESTS)
        FOREACH(_testname ${ARGN})
                add_executable(${_testname} ${_testname}.cpp ../screenpool.cpp )
                target_link_libraries(${_testname}
-                            Qt5::Test
-                            Qt5::Gui
+                            Qt::Test
+                            Qt::Gui
                             KF5::Service
                             KF5::WindowSystem
                                      )
                if(HAVE_X11)
                   target_link_libraries(${_testname} ${X11_LIBRARIES} ${XCB_LIBRARIES} )
-                  target_link_libraries(${_testname} Qt5::X11Extras)
+                  target_link_libraries(${_testname} Qt::X11Extras)
                endif()
                if(QT_QTOPENGL_FOUND)
-                   target_link_libraries(${_testname} Qt5::OpenGL)
+                   target_link_libraries(${_testname} Qt::OpenGL)
                endif()
                add_test(NAME ${_testname} COMMAND ${_testname})
                ecm_mark_as_test(${_testname})

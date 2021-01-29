@@ -38,12 +38,12 @@ target_include_directories(taskmanager PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT
 
 target_link_libraries(taskmanager
     PUBLIC
-        Qt5::Core
-        Qt5::Gui
-        Qt5::Quick
+        Qt::Core
+        Qt::Gui
+        Qt::Quick
         KF5::ItemModels
     PRIVATE
-        Qt5::DBus
+        Qt::DBus
         KF5::Activities
         KF5::ConfigCore
         KF5::I18n
@@ -57,7 +57,7 @@ target_link_libraries(taskmanager
 if (X11_FOUND)
     target_link_libraries(taskmanager
         PRIVATE
-            Qt5::X11Extras
+            Qt::X11Extras
             KF5::IconThemes)
 endif()
 

@@ -1,5 +1,5 @@
 ########### next target ###############
-#set(EXTERNAL_LIBS KIOCore Qt5::Script KF5::Plasma Qt5::Sql)
+#set(EXTERNAL_LIBS KIOCore Qt::Script KF5::Plasma Qt::Sql)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_bookmarksrunner\")
 
@@ -7,7 +7,7 @@ find_package(Qt5 CONFIG REQUIRED COMPONENTS Sql)
 
 
 set(EXTERNAL_LIBS
-    Qt5::Sql
+    Qt::Sql
     KF5::KIOCore
     KF5::I18n
     KF5::Runner
@@ -53,7 +53,7 @@ set(krunner_bookmarks_test_SRCS
 
 add_library(krunner_bookmarks_test STATIC ${krunner_bookmarks_test_SRCS})
 target_link_libraries(krunner_bookmarks_test
-    Qt5::Sql
+    Qt::Sql
     KF5::KIOCore
     KF5::Runner
 )

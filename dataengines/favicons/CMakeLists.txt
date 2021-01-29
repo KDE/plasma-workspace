@@ -7,7 +7,7 @@ add_library(plasma_engine_favicons MODULE ${favicons_engine_SRCS} )
 target_link_libraries(plasma_engine_favicons
     KF5::Plasma
     KF5::KIOCore
-    Qt5::Gui
+    Qt::Gui
 )
 
 kcoreaddons_desktop_to_json(plasma_engine_favicons plasma-dataengine-favicons.desktop)

@@ -10,7 +10,7 @@ add_library(plasma_containmentactions_switchwindow MODULE ${switchwindow_SRCS})
 kcoreaddons_desktop_to_json(plasma_containmentactions_switchwindow plasma-containmentactions-switchwindow.desktop)
 
 target_link_libraries(plasma_containmentactions_switchwindow
-                      Qt5::Widgets
+                      Qt::Widgets
                       KF5::Plasma
                       KF5::I18n
                       PW::LibTaskManager)

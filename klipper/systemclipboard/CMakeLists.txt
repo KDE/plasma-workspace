@@ -16,8 +16,8 @@ ecm_add_qtwayland_client_protocol(systemclipboard_SRCS
 
 add_library(systemclipboard STATIC ${systemclipboard_SRCS})
 target_link_libraries(systemclipboard
-                      Qt5::Gui
-                      Qt5::WaylandClient
+                      Qt::Gui
+                      Qt::WaylandClient
                       Wayland::Client
                       KF5::WindowSystem
 )

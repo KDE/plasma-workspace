@@ -13,8 +13,8 @@ qt5_add_dbus_interface( plasma_shutdown_SRCS ../../ksmserver/org.kde.KWin.Sessio
 add_executable(plasma-shutdown ${plasma_shutdown_SRCS})
 
 target_link_libraries(plasma-shutdown
-    Qt5::Core
-    Qt5::DBus
+    Qt::Core
+    Qt::DBus
     KF5::ConfigCore
     PW::KWorkspace
 )

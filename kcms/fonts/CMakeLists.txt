@@ -28,11 +28,11 @@ kconfig_add_kcfg_files(kcm_fonts_PART_SRCS fontssettings.kcfgc fontsaasettingsba
 
 add_library(kcm_fonts MODULE ${kcm_fonts_PART_SRCS})
 
-target_link_libraries(kcm_fonts Qt5::DBus Qt5::Xml KF5::KCMUtils KF5::I18n KF5::KDELibs4Support ${FREETYPE_LIBRARIES} kfontinst)
+target_link_libraries(kcm_fonts Qt::DBus Qt::Xml KF5::KCMUtils KF5::I18n KF5::KDELibs4Support ${FREETYPE_LIBRARIES} kfontinst)
 
 if(X11_FOUND)
     target_link_libraries(kcm_fonts
-        Qt5::X11Extras
+        Qt::X11Extras
         KF5::I18n
         KF5::Plasma
         KF5::PlasmaQuick

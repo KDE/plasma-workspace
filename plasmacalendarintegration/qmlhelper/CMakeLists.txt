@@ -1,8 +1,8 @@
 
 add_library(holidayeventshelperplugin SHARED holidayeventshelperplugin.cpp)
 
-target_link_libraries(holidayeventshelperplugin Qt5::Qml
-                                                Qt5::Core
+target_link_libraries(holidayeventshelperplugin Qt::Qml
+                                                Qt::Core
                                                 KF5::ConfigCore
 )
 

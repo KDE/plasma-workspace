@@ -16,9 +16,9 @@ ecm_qt_declare_logging_category(image_SRCS HEADER debug.h
 add_library(plasma_wallpaper_imageplugin SHARED ${image_SRCS})
 
 target_link_libraries(plasma_wallpaper_imageplugin
-	 Qt5::Core
-	 Qt5::Quick
-	 Qt5::Qml
+	 Qt::Core
+	 Qt::Quick
+	 Qt::Qml
 	 KF5::Plasma
          KF5::KIOCore
 	 KF5::KIOWidgets

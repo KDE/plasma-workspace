@@ -10,7 +10,7 @@ add_executable(plasma_waitforname ${plasma_waitforname_SRCS})
 ecm_mark_nongui_executable(plasma_waitforname)
 
 target_link_libraries(plasma_waitforname
-    Qt5::DBus
+    Qt::DBus
    )
 
 configure_file(org.kde.plasma.Notifications.service.in

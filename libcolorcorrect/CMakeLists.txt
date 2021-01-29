@@ -20,12 +20,12 @@ target_link_libraries(colorcorrect
                     PUBLIC
                       KF5::Plasma
 
-                      Qt5::Core
-                      Qt5::Quick
+                      Qt::Core
+                      Qt::Quick
                     PRIVATE
                       KF5::I18n
 
-                      Qt5::DBus)
+                      Qt::DBus)
 
 set_target_properties(colorcorrect PROPERTIES
                       VERSION ${PROJECT_VERSION}

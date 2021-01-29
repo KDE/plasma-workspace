@@ -12,7 +12,7 @@ set(soliddevice_engine_SRCS
 add_library(plasma_engine_soliddevice MODULE ${soliddevice_engine_SRCS})
 
 target_link_libraries(plasma_engine_soliddevice
-  Qt5::Network
+  Qt::Network
   KF5::I18n
   KF5::KIOCore
   KF5::Plasma

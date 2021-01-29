@@ -8,4 +8,4 @@ add_executable(testfindpreferredimage EXCLUDE_FROM_ALL ${testfindpreferredimage_
 
 target_link_libraries(testfindpreferredimage
 	 plasma_wallpaper_imageplugin
-	 Qt5::Test)
+	 Qt::Test)

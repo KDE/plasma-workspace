@@ -27,7 +27,7 @@ qt5_add_dbus_interface(mpris2_engine_SRCS org.mpris.MediaPlayer2.xml mprisroot)
 
 add_library(plasma_engine_mpris2 MODULE ${mpris2_engine_SRCS})
 target_link_libraries(plasma_engine_mpris2
-   Qt5::DBus
+   Qt::DBus
    KF5::ConfigCore
    KF5::GlobalAccel
    KF5::I18n

@@ -49,10 +49,10 @@ set_target_properties(kworkspace PROPERTIES
 generate_export_header(kworkspace)
 target_link_libraries(kworkspace
     PUBLIC
-        Qt5::Core
+        Qt::Core
         KF5::CoreAddons
     PRIVATE
-        Qt5::DBus
+        Qt::DBus
         KF5::I18n
         KF5::WindowSystem
         KF5::ConfigCore
@@ -66,7 +66,7 @@ if(X11_FOUND)
     if(NOT X11_Xau_FOUND)
         message(FATAL_ERROR "Found X11, but not libXau which is required for building kworkspace")
     endif()
-    target_link_libraries(kworkspace PRIVATE Qt5::X11Extras ${X11_LIBRARIES} ${X11_Xau_LIB})
+    target_link_libraries(kworkspace PRIVATE Qt::X11Extras ${X11_LIBRARIES} ${X11_Xau_LIB})
 endif()
 
 write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibKWorkspaceConfigVersion.cmake VERSION

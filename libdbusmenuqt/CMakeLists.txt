@@ -20,8 +20,8 @@ qt5_add_dbus_interface(libdbusmenu_SRCS com.canonical.dbusmenu.xml dbusmenu_inte
 
 add_library(dbusmenuqt STATIC ${libdbusmenu_SRCS})
 target_link_libraries(dbusmenuqt
-    Qt5::DBus
-    Qt5::Widgets
+    Qt::DBus
+    Qt::Widgets
 )
 
 add_subdirectory(test)

@@ -13,8 +13,8 @@ ecm_generate_dbus_service_file(NAME org.kde.krunner
 add_executable(krunner ${krunner_SRCS})
 
 target_link_libraries(krunner
-    Qt5::Quick
-    Qt5::Widgets
+    Qt::Quick
+    Qt::Widgets
     KF5::KIOGui
     KF5::Declarative
     KF5::I18n

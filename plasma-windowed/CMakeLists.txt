@@ -12,9 +12,9 @@ add_executable(plasmawindowed ${plasmawindowed-app_SRCS})
 
 target_link_libraries(
     plasmawindowed
-    Qt5::Widgets
-    Qt5::Quick
-    Qt5::Qml
+    Qt::Widgets
+    Qt::Quick
+    Qt::Qml
     KF5::I18n
     KF5::IconThemes
     KF5::XmlGui

@@ -29,7 +29,7 @@ if(TARGET PkgConfig::PipeWire)
     target_compile_definitions(taskmanagerplugin PRIVATE -DWITH_PIPEWIRE)
     target_sources(taskmanagerplugin PUBLIC pipewirecore.cpp pipewiresourceitem.cpp pipewiresourcestream.cpp screencasting.cpp screencastingrequest.cpp ${SRCS})
     target_link_libraries(taskmanagerplugin PkgConfig::PipeWire
-                                            Qt5::Qml Qt5::Gui_EGL Qt5::GuiPrivate
+                                            Qt::Qml Qt5::Gui_EGL Qt::GuiPrivate
                                             KF5::I18n
                                             KF5::WaylandClient
                                             Wayland::Client)

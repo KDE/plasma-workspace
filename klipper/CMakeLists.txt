@@ -35,7 +35,7 @@ set(klipper_KDEINIT_SRCS ${libklipper_common_SRCS} main.cpp tray.cpp)
 kf5_add_kdeinit_executable(klipper ${klipper_KDEINIT_SRCS})
 
 target_link_libraries(kdeinit_klipper
-    Qt5::Concurrent
+    Qt::Concurrent
     KF5::ConfigGui
     KF5::CoreAddons
     KF5::DBusAddons
@@ -52,7 +52,7 @@ target_link_libraries(kdeinit_klipper
     systemclipboard
 )
 if (X11_FOUND)
-  target_link_libraries(kdeinit_klipper XCB::XCB Qt5::X11Extras)
+  target_link_libraries(kdeinit_klipper XCB::XCB Qt::X11Extras)
 endif()
 
 install(TARGETS kdeinit_klipper ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
@@ -66,9 +66,9 @@ set(plasma_engine_clipboard_SRCS ${libklipper_common_SRCS} clipboardengine.cpp c
 add_library(plasma_engine_clipboard MODULE ${plasma_engine_clipboard_SRCS})
 kcoreaddons_desktop_to_json(plasma_engine_clipboard plasma-dataengine-clipboard.desktop)
 target_link_libraries(plasma_engine_clipboard
-    Qt5::Concurrent
-    Qt5::DBus
-    Qt5::Widgets       # QAction
+    Qt::Concurrent
+    Qt::DBus
+    Qt::Widgets       # QAction
     KF5::ConfigGui
     KF5::CoreAddons    # KUrlMimeData
     KF5::GlobalAccel
@@ -85,7 +85,7 @@ target_link_libraries(plasma_engine_clipboard
     systemclipboard
 )
 if (X11_FOUND)
-  target_link_libraries(plasma_engine_clipboard XCB::XCB Qt5::X11Extras)
+  target_link_libraries(plasma_engine_clipboard XCB::XCB Qt::X11Extras)
 endif()
 install(TARGETS plasma_engine_clipboard DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-clipboard.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

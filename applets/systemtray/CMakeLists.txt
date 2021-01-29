@@ -21,9 +21,9 @@ add_library(org.kde.plasma.private.systemtray MODULE ${systemtray_SRCS})
 kcoreaddons_desktop_to_json(org.kde.plasma.private.systemtray package/metadata.desktop)
 
 target_link_libraries(org.kde.plasma.private.systemtray
-                      Qt5::Gui
-                      Qt5::Quick
-                      Qt5::DBus
+                      Qt::Gui
+                      Qt::Quick
+                      Qt::DBus
                       KF5::Plasma
                       KF5::XmlGui
                       KF5::I18n

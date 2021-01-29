@@ -16,9 +16,9 @@ ecm_qt_declare_logging_category(systemtraymodel_test_SRCS HEADER debug.h
 add_library(systemtraymodel_test STATIC ${systemtraymodel_test_SRCS})
 
 target_link_libraries(systemtraymodel_test
-    Qt5::Core
-    Qt5::DBus
-    Qt5::Quick
+    Qt::Core
+    Qt::DBus
+    Qt::Quick
     KF5::CoreAddons
     KF5::I18n
     KF5::ItemModels
@@ -28,5 +28,5 @@ target_link_libraries(systemtraymodel_test
 
 ecm_add_tests(systemtraymodeltest.cpp
     LINK_LIBRARIES systemtraymodel_test
-    Qt5::Test
+    Qt::Test
 )

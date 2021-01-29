@@ -57,10 +57,10 @@ install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/pri
 add_library(kickerplugin SHARED ${kickerplugin_SRCS})
 
 target_link_libraries(kickerplugin
-                      Qt5::Core
-                      Qt5::Qml
-                      Qt5::Quick
-                      Qt5::X11Extras
+                      Qt::Core
+                      Qt::Qml
+                      Qt::Quick
+                      Qt::X11Extras
                       KF5::Activities
                       KF5::ActivitiesStats
                       KF5::ConfigCore

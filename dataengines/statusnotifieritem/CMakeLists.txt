@@ -29,7 +29,7 @@ ecm_qt_declare_logging_category(statusnotifieritem_engine_SRCS HEADER debug.h
 
 add_library(plasma_engine_statusnotifieritem MODULE ${statusnotifieritem_engine_SRCS})
 target_link_libraries(plasma_engine_statusnotifieritem
-    Qt5::DBus
+    Qt::DBus
     KF5::Service
     KF5::Plasma
     KF5::IconThemes

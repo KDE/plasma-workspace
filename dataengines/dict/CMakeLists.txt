@@ -10,7 +10,7 @@ target_link_libraries (plasma_engine_dict
   KF5::Plasma
   KF5::Service
   KF5::I18n
-  Qt5::Network
+  Qt::Network
 )
 
 kcoreaddons_desktop_to_json(plasma_engine_dict plasma-dataengine-dict.desktop)

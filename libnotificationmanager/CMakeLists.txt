@@ -69,13 +69,13 @@ target_include_directories(notificationmanager PUBLIC "$<BUILD_INTERFACE:${CMAKE
 
 target_link_libraries(notificationmanager
     PUBLIC
-        Qt5::Core
-        Qt5::Gui
-        Qt5::Quick
+        Qt::Core
+        Qt::Gui
+        Qt::Quick
         KF5::ConfigCore
         KF5::ItemModels
     PRIVATE
-        Qt5::DBus
+        Qt::DBus
         KF5::ConfigGui
         KF5::I18n
         KF5::KIOFileWidgets

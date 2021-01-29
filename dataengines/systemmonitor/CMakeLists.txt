@@ -6,7 +6,7 @@ set(systemmonitor_engine_SRCS
 add_library(plasma_engine_systemmonitor MODULE ${systemmonitor_engine_SRCS})
 
 target_link_libraries(plasma_engine_systemmonitor
-    Qt5::Network
+    Qt::Network
     KF5::I18n
     KF5::Plasma
     KF5::Service

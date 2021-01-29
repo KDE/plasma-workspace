@@ -7,7 +7,7 @@ set(holidays-plugin_SRCS
 )
 
 add_library(holidaysevents MODULE ${holidays-plugin_SRCS})
-target_link_libraries(holidaysevents Qt5::Core
+target_link_libraries(holidaysevents Qt::Core
                                      KF5::ConfigCore
                                      KF5::Holidays
                                      KF5::CalendarEvents

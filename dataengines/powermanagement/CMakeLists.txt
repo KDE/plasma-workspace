@@ -18,7 +18,7 @@ target_link_libraries(plasma_engine_powermanagement
     KF5::CoreAddons
     KF5::I18n
     KF5::Service
-    Qt5::DBus
+    Qt::DBus
     PW::KWorkspace
 )
 

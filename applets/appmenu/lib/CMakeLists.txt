@@ -7,9 +7,9 @@ add_library(plasma_applet_appmenu MODULE ${appmenuapplet_SRCS})
 kcoreaddons_desktop_to_json(plasma_applet_appmenu ../package/metadata.desktop)
 
 target_link_libraries(plasma_applet_appmenu
-                      Qt5::Widgets
-                      Qt5::Quick
-                      Qt5::DBus
+                      Qt::Widgets
+                      Qt::Quick
+                      Qt::DBus
                       KF5::Plasma
                       KF5::WindowSystem
                       PW::LibTaskManager)

@@ -56,14 +56,14 @@ target_link_libraries(kcm_lookandfeel
   KF5::QuickAddons
   PW::KWorkspace
 
-  Qt5::DBus
-  Qt5::Widgets
-  Qt5::QuickWidgets
+  Qt::DBus
+  Qt::Widgets
+  Qt::QuickWidgets
   ${X11_LIBRARIES}
 )
 
 if(X11_FOUND)
-    target_link_libraries(kcm_lookandfeel Qt5::X11Extras)
+    target_link_libraries(kcm_lookandfeel Qt::X11Extras)
 endif()
 if (X11_Xcursor_FOUND)
    target_link_libraries(kcm_lookandfeel ${X11_Xcursor_LIB})
@@ -123,14 +123,14 @@ target_link_libraries(lookandfeeltool
   KF5::NewStuff
   PW::KWorkspace
 
-  Qt5::DBus
-  Qt5::Widgets
-  Qt5::QuickWidgets
+  Qt::DBus
+  Qt::Widgets
+  Qt::QuickWidgets
   ${X11_LIBRARIES}
 )
 
 if(X11_FOUND)
-    target_link_libraries(lookandfeeltool Qt5::X11Extras)
+    target_link_libraries(lookandfeeltool Qt::X11Extras)
 endif()
 if (X11_Xcursor_FOUND)
    target_link_libraries(lookandfeeltool ${X11_Xcursor_LIB})

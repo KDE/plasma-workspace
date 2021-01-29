@@ -8,8 +8,8 @@ set(plasma_geolocation_interface_SRCS geolocationprovider.cpp)
 add_library(plasma-geolocation-interface SHARED ${plasma_geolocation_interface_SRCS})
 target_link_libraries(plasma-geolocation-interface
     PUBLIC
-        Qt5::Core
-        Qt5::Network
+        Qt::Core
+        Qt::Network
         KF5::Plasma
     PRIVATE
         KF5::KIOCore

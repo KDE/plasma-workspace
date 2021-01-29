@@ -25,12 +25,12 @@ add_executable(startplasma-wayland ${START_PLASMA_COMMON_SRCS} startplasma-wayla
 add_executable(startplasma-waylandsession ${START_PLASMA_COMMON_SRCS} startplasma-waylandsession.cpp ${startplasma_SRCS})
 
 target_include_directories(startplasma-x11 PRIVATE ${X11_X11_INCLUDE_PATH})
-target_link_libraries(startplasma-x11 PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore PW::KWorkspace
+target_link_libraries(startplasma-x11 PRIVATE Qt::Core Qt::DBus KF5::ConfigCore PW::KWorkspace
     ${X11_X11_LIB} # for kcheckrunning
 )
 
-target_link_libraries(startplasma-wayland PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore PW::KWorkspace)
-target_link_libraries(startplasma-waylandsession PRIVATE Qt5::Core Qt5::DBus KF5::ConfigCore PW::KWorkspace)
+target_link_libraries(startplasma-wayland PRIVATE Qt::Core Qt::DBus KF5::ConfigCore PW::KWorkspace)
+target_link_libraries(startplasma-waylandsession PRIVATE Qt::Core Qt::DBus KF5::ConfigCore PW::KWorkspace)
 add_subdirectory(plasma-session)
 add_subdirectory(plasma-shutdown)
 

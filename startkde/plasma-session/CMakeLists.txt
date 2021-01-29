@@ -25,8 +25,8 @@ qt5_add_dbus_interface( plasma_session_SRCS ../../ksmserver/org.kde.KSMServerInt
 add_executable(plasma_session ${plasma_session_SRCS})
 
 target_link_libraries(plasma_session
-    Qt5::Core
-    Qt5::DBus
+    Qt::Core
+    Qt::DBus
     KF5::ConfigCore
     KF5::Service
     KF5::CoreAddons

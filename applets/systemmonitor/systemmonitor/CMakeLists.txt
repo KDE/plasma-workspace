@@ -7,10 +7,10 @@ add_library(plasma_applet_systemmonitor MODULE ${systemmonitor_SRCS})
 kcoreaddons_desktop_to_json(plasma_applet_systemmonitor package/metadata.desktop)
 
 target_link_libraries(plasma_applet_systemmonitor
-                      Qt5::Gui
-                      Qt5::Qml
-                      Qt5::Quick
-                      Qt5::DBus
+                      Qt::Gui
+                      Qt::Qml
+                      Qt::Quick
+                      Qt::DBus
                       KF5::Plasma
                       KF5::I18n
                       KF5::ConfigCore

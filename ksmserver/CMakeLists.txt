@@ -51,15 +51,15 @@ target_link_libraries(ksmserver
     KF5::KIOGui
     ${X11_LIBRARIES}
     ${X11_Xrender_LIB}
-    Qt5::X11Extras
+    Qt::X11Extras
     KF5::Solid
-    Qt5::Quick
+    Qt::Quick
     KF5::Declarative
     KF5::DBusAddons
     KF5::Notifications
     KF5::Package
     KF5::WindowSystem
-    Qt5::Concurrent
+    Qt::Concurrent
 )
 
 install(TARGETS ksmserver ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

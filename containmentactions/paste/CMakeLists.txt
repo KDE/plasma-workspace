@@ -1,7 +1,7 @@
 add_library(plasma_containmentactions_paste MODULE paste.cpp)
 target_link_libraries(plasma_containmentactions_paste
-    Qt5::Gui
-    Qt5::Widgets
+    Qt::Gui
+    Qt::Widgets
     KF5::Plasma
     KF5::KIOCore
 )

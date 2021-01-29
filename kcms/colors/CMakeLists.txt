@@ -21,7 +21,7 @@ kconfig_add_kcfg_files(kcm_colors_SRCS colorssettings.kcfgc GENERATE_MOC)
 
 add_library(kcm_colors MODULE ${kcm_colors_SRCS})
 target_link_libraries(kcm_colors
-    Qt5::DBus
+    Qt::DBus
     KF5::KCMUtils
     KF5::CoreAddons
     KF5::Declarative
@@ -36,7 +36,7 @@ target_link_libraries(kcm_colors
 )
 
 if(X11_FOUND)
-    target_link_libraries(kcm_colors ${X11_LIBRARIES} Qt5::X11Extras)
+    target_link_libraries(kcm_colors ${X11_LIBRARIES} Qt::X11Extras)
 endif()
 
 kcoreaddons_desktop_to_json(kcm_colors "kcm_colors.desktop")

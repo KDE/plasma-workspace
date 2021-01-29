@@ -14,7 +14,7 @@ ecm_qt_declare_logging_category(time_engine_SRCS HEADER debug.h
 add_library(plasma_engine_time MODULE ${time_engine_SRCS})
 
 target_link_libraries(plasma_engine_time
-    Qt5::DBus
+    Qt::DBus
     KF5::Solid
     KF5::Plasma
     KF5::I18n

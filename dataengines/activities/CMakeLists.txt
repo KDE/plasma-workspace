@@ -17,8 +17,8 @@ target_link_libraries(plasma_engine_activities
                       KF5::Activities
                       KF5::I18n
                       KF5::Service
-                      Qt5::DBus
-                      Qt5::Widgets
+                      Qt::DBus
+                      Qt::Widgets
                       )
 kcoreaddons_desktop_to_json(plasma_engine_activities plasma-dataengine-activities.desktop)
 

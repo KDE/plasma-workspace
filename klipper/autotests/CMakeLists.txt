@@ -18,8 +18,8 @@ set(testHistory_SRCS
 )
 add_executable(testHistory ${testHistory_SRCS})
 target_link_libraries(testHistory
-    Qt5::Test
-    Qt5::Widgets # QAction
+    Qt::Test
+    Qt::Widgets # QAction
     KF5::CoreAddons # KUrlMimeData
     KF5::I18n
 )
@@ -40,8 +40,8 @@ set(testHistoryModel_SRCS
 )
 add_executable(testHistoryModel ${testHistoryModel_SRCS})
 target_link_libraries(testHistoryModel
-    Qt5::Test
-    Qt5::Widgets # QAction
+    Qt::Test
+    Qt::Widgets # QAction
     KF5::CoreAddons # KUrlMimeData
     KF5::I18n
 )

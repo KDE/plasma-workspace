@@ -10,8 +10,8 @@ endif ()
 
 add_library(plasma_engine_mouse MODULE ${mouse_engine_SRCS})
 target_link_libraries(plasma_engine_mouse
-    Qt5::Widgets
-    Qt5::X11Extras
+    Qt::Widgets
+    Qt::X11Extras
     KF5::Plasma
     KF5::WindowSystem
     ${X11_LIBRARIES}

@@ -23,7 +23,7 @@ target_link_libraries (plasma_engine_weather
             KF5::KIOCore
             KF5::Solid
             KF5::Plasma
-            Qt5::Network
+            Qt::Network
             weather_ion)
 
 kcoreaddons_desktop_to_json(plasma_engine_weather plasma-dataengine-weather.desktop SERVICE_TYPES plasma-dataengine.desktop)

@@ -7,8 +7,8 @@ set(kcm_krunner_kill_SRCS
 ki18n_wrap_ui(kcm_krunner_kill_SRCS killrunner_config.ui)
 add_library(kcm_krunner_kill MODULE ${kcm_krunner_kill_SRCS})
 target_link_libraries(kcm_krunner_kill
-    Qt5::Core
-    Qt5::Gui
+    Qt::Core
+    Qt::Gui
     KF5::CoreAddons
     KF5::ConfigCore
     KF5::I18n

@@ -15,9 +15,9 @@ set(digitalclockplugin_SRCS
     )
 
 add_library(digitalclockplugin SHARED ${digitalclockplugin_SRCS})
-target_link_libraries(digitalclockplugin Qt5::Core
-                                          Qt5::Qml
-                                          Qt5::Widgets # for QAction...
+target_link_libraries(digitalclockplugin Qt::Core
+                                          Qt::Qml
+                                          Qt::Widgets # for QAction...
                                           KF5::CoreAddons
                                           KF5::I18n)
 

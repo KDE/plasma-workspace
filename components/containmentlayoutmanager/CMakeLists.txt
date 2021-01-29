@@ -15,9 +15,9 @@ add_library(containmentlayoutmanagerplugin ${containmentlayoutmanagerplugin_SRCS
 
 target_link_libraries(containmentlayoutmanagerplugin
         PUBLIC
-            Qt5::Core
+            Qt::Core
         PRIVATE
-            Qt5::Qml Qt5::Quick
+            Qt::Qml Qt::Quick
             KF5::Plasma KF5::PlasmaQuick
     )
 

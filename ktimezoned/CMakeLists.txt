@@ -10,8 +10,8 @@ kcoreaddons_desktop_to_json(ktimezoned ktimezoned.desktop)
 #qt5_add_dbus_adaptor(kded_ktimezoned_SRCS org.kde.KTimeZoned ktimezonedbus.h DBusHandler)
 
 target_link_libraries(ktimezoned
-   Qt5::Core
-   Qt5::DBus
+   Qt::Core
+   Qt::DBus
    KF5::Service    # plugin factory
    KF5::CoreAddons # KDirWatch
    KF5::DBusAddons # kdedmodule

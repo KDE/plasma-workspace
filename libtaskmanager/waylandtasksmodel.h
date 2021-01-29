@@ -200,7 +200,7 @@ public:
      * from the delegate object passed. Right now, QQuickItem is the only
      * supported delegate object type.
      *
-     * FIXME: This introduces the dependency on Qt5::Quick. I might prefer
+     * FIXME: This introduces the dependency on Qt::Quick. I might prefer
      * reversing this and publishing the window pointer through the model,
      * then calling PlasmaWindow::setMinimizeGeometry in the applet backend,
      * rather than hand delegate items into the lib, keeping the lib more UI-

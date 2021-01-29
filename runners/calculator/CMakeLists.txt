@@ -33,8 +33,8 @@ if ( QALCULATE_FOUND )
                           KF5::KIOCore
                           KF5::Runner
                           KF5::I18n
-                          Qt5::Network
-                          Qt5::Widgets
+                          Qt::Network
+                          Qt::Widgets
     )
 else ()
     add_library(krunner_calculatorrunner MODULE ${krunner_calculatorrunner_SRCS})
@@ -42,8 +42,8 @@ else ()
     target_link_libraries(krunner_calculatorrunner
                           KF5::Runner
                           KF5::I18n
-                          Qt5::Gui
-                          Qt5::Qml
+                          Qt::Gui
+                          Qt::Qml
     )
 endif ()
 

@@ -17,7 +17,7 @@ add_library(plasma_containmentactions_contextmenu MODULE ${contextmenu_SRCS})
 kcoreaddons_desktop_to_json(plasma_containmentactions_contextmenu plasma-containmentactions-contextmenu.desktop)
 
 target_link_libraries(plasma_containmentactions_contextmenu
-                      Qt5::DBus
+                      Qt::DBus
                       KF5::I18n
                       KF5::GlobalAccel
                       KF5::Plasma
