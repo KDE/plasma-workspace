@@ -43,10 +43,10 @@ public:
     explicit Notification(uint id = 0);
 
     Notification(const Notification &other);
-    Notification(Notification &&other) Q_DECL_NOEXCEPT;
+    Notification(Notification &&other) noexcept;
 
     Notification &operator=(const Notification &other);
-    Notification &operator=(Notification &&other) Q_DECL_NOEXCEPT;
+    Notification &operator=(Notification &&other) noexcept;
 
     virtual ~Notification();
 
