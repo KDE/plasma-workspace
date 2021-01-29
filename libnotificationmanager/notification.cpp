@@ -443,7 +443,7 @@ Notification::Notification(const Notification &other)
 {
 }
 
-Notification::Notification(Notification &&other)
+Notification::Notification(Notification &&other) Q_DECL_NOEXCEPT
     : d(other.d)
 {
     other.d = nullptr;
@@ -455,7 +455,7 @@ Notification &Notification::operator=(const Notification &other)
     return *this;
 }
 
-Notification &Notification::operator=(Notification &&other)
+Notification &Notification::operator=(Notification &&other) Q_DECL_NOEXCEPT
 {
     d = other.d;
     other.d = nullptr;
