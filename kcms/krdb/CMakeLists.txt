@@ -2,7 +2,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"krdb\")
 
 add_subdirectory( ad ) 
-add_subdirectory( pics ) 
 
 install(FILES krdb_libpathwipe.upd DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
 
