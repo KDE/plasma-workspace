@@ -37,7 +37,7 @@ include(ECMQMLModules)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner Notifications NotifyConfig Su NewStuff Wallet
                     IdleTime Declarative I18n KCMUtils TextWidgets KDELibs4Support Crash GlobalAccel
-                    DBusAddons Wayland CoreAddons People ActivitiesStats Activities KIO Prison)
+                    DBusAddons Wayland CoreAddons People ActivitiesStats Activities KIO Prison PlasmaQuick Package)
 find_package(KDED CONFIG REQUIRED)
 
 find_package(KF5NetworkManagerQt ${KF5_MIN_VERSION})
@@ -58,11 +58,8 @@ set_package_properties(KF5QuickCharts PROPERTIES
     TYPE RUNTIME
 )
 
-# WARNING PlasmaQuick provides unversioned CMake config
 find_package(KUserFeedback)
-find_package(KF5 REQUIRED COMPONENTS PlasmaQuick)
 find_package(KSysGuard CONFIG REQUIRED)
-find_package(KF5 REQUIRED COMPONENTS Package)
 
 find_package(KF5Baloo)
 set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
