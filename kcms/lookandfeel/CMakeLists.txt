@@ -59,17 +59,17 @@ target_link_libraries(kcm_lookandfeel
   Qt::DBus
   Qt::Widgets
   Qt::QuickWidgets
-  ${X11_LIBRARIES}
+  X11::X11
 )
 
 if(X11_FOUND)
     target_link_libraries(kcm_lookandfeel Qt::X11Extras)
 endif()
 if (X11_Xcursor_FOUND)
-   target_link_libraries(kcm_lookandfeel ${X11_Xcursor_LIB})
+   target_link_libraries(kcm_lookandfeel X11::Xcursor)
 endif ()
 if (X11_Xfixes_FOUND)
-   target_link_libraries(kcm_lookandfeel ${X11_Xfixes_LIB})
+   target_link_libraries(kcm_lookandfeel X11::Xfixes)
 endif ()
 
 kcoreaddons_desktop_to_json(kcm_lookandfeel "kcm_lookandfeel.desktop" SERVICE_TYPES kcmodule.desktop)
@@ -126,17 +126,16 @@ target_link_libraries(lookandfeeltool
   Qt::DBus
   Qt::Widgets
   Qt::QuickWidgets
-  ${X11_LIBRARIES}
 )
 
 if(X11_FOUND)
-    target_link_libraries(lookandfeeltool Qt::X11Extras)
+    target_link_libraries(lookandfeeltool X11::X11 Qt::X11Extras)
 endif()
 if (X11_Xcursor_FOUND)
-   target_link_libraries(lookandfeeltool ${X11_Xcursor_LIB})
+   target_link_libraries(lookandfeeltool X11::Xcursor)
 endif ()
 if (X11_Xfixes_FOUND)
-   target_link_libraries(lookandfeeltool ${X11_Xfixes_LIB})
+   target_link_libraries(lookandfeeltool X11::Xfixes)
 endif ()
 
 install( TARGETS lookandfeeltool ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

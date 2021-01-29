@@ -36,7 +36,7 @@ target_link_libraries(kcm_colors
 )
 
 if(X11_FOUND)
-    target_link_libraries(kcm_colors ${X11_LIBRARIES} Qt::X11Extras)
+    target_link_libraries(kcm_colors X11::X11 Qt::X11Extras)
 endif()
 
 kcoreaddons_desktop_to_json(kcm_colors "kcm_colors.desktop")

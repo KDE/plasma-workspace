@@ -44,7 +44,7 @@ if(X11_FOUND)
         target_link_libraries(kcm_fonts ${FONTCONFIG_LIBRARIES})
     endif()
 
-    target_link_libraries(kcm_fonts ${X11_LIBRARIES} ${X11_Xft_LIB})
+    target_link_libraries(kcm_fonts X11::X11 X11::Xft)
 endif()
 
 kcoreaddons_desktop_to_json(kcm_fonts "kcm_fonts.desktop")

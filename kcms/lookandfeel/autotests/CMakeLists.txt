@@ -40,17 +40,17 @@ target_link_libraries(kcmTest
         Qt::DBus
         Qt::Widgets
         Qt::QuickWidgets
-        ${X11_LIBRARIES}
+        X11::X11
 )
 
 if(X11_FOUND)
     target_link_libraries(kcmTest Qt::X11Extras)
 endif()
 if (X11_Xcursor_FOUND)
-   target_link_libraries(kcmTest ${X11_Xcursor_LIB})
+   target_link_libraries(kcmTest X11::Xcursor)
 endif ()
 if (X11_Xfixes_FOUND)
-   target_link_libraries(kcmTest ${X11_Xfixes_LIB})
+   target_link_libraries(kcmTest X11::Xfixes)
 endif ()
 
 add_test(NAME lookandfeel-kcmTest COMMAND kcmTest)

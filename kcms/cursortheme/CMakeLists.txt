@@ -44,16 +44,16 @@ target_link_libraries(kcm_cursortheme
     KF5::KDELibs4Support
     KF5::NewStuffCore
     KF5::QuickAddons
-    ${X11_LIBRARIES}
+    X11::X11
     XCB::XCB
     PW::KWorkspace
 )
 
 if (X11_Xcursor_FOUND)
-   target_link_libraries(kcm_cursortheme ${X11_Xcursor_LIB})
+   target_link_libraries(kcm_cursortheme X11::Xcursor)
 endif ()
 if (X11_Xfixes_FOUND)
-   target_link_libraries(kcm_cursortheme ${X11_Xfixes_LIB})
+   target_link_libraries(kcm_cursortheme X11::Xfixes)
 endif ()
 
 install(TARGETS kcm_cursortheme  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms )

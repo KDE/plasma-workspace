@@ -19,13 +19,12 @@ target_link_libraries(kfontinst_bin
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::XmlGui
-    ${X11_X11_LIB}
+    X11::X11
     kfontinst
 )
 target_link_libraries(kfontprint_bin
     Qt::PrintSupport
     KF5::IconThemes
-    ${X11_X11_LIB}
     ${FREETYPE_LIBRARIES}
     kfontinstui
     kfontinst

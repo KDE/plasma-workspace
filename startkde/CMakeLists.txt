@@ -24,9 +24,8 @@ add_executable(startplasma-x11 ${START_PLASMA_COMMON_SRCS} startplasma-x11.cpp k
 add_executable(startplasma-wayland ${START_PLASMA_COMMON_SRCS} startplasma-wayland.cpp ${startplasma_SRCS})
 add_executable(startplasma-waylandsession ${START_PLASMA_COMMON_SRCS} startplasma-waylandsession.cpp ${startplasma_SRCS})
 
-target_include_directories(startplasma-x11 PRIVATE ${X11_X11_INCLUDE_PATH})
 target_link_libraries(startplasma-x11 PRIVATE Qt::Core Qt::DBus KF5::ConfigCore PW::KWorkspace
-    ${X11_X11_LIB} # for kcheckrunning
+    X11::X11 # for kcheckrunning
 )
 
 target_link_libraries(startplasma-wayland PRIVATE Qt::Core Qt::DBus KF5::ConfigCore PW::KWorkspace)

@@ -38,7 +38,7 @@ target_link_libraries(kcm_style
     KF5::I18n
     KF5::Notifications
     KF5::Plasma
-    ${X11_LIBRARIES}
+    X11::X11
     KF5::KDELibs4Support
     KF5::GuiAddons
     KF5::QuickAddons

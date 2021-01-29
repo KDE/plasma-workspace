@@ -12,7 +12,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             KF5::WindowSystem
                                      )
                if(HAVE_X11)
-                  target_link_libraries(${_testname} ${X11_LIBRARIES} ${XCB_LIBRARIES} )
+                  target_link_libraries(${_testname} XCB::XCB XCB::RANDR)
                   target_link_libraries(${_testname} Qt::X11Extras)
                endif()
                if(QT_QTOPENGL_FOUND)
