@@ -30,6 +30,7 @@ SlideFilterModel::SlideFilterModel(QObject *parent)
     : QSortFilterProxyModel{parent}
     , m_SortingMode{Image::Random}
     , m_usedInConfig{false}
+    , m_random(m_randomDevice())
 {
     srand(time(nullptr));
     setSortCaseSensitivity(Qt::CaseSensitivity::CaseInsensitive);
@@ -60,7 +61,7 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
             const int old_count = m_randomOrder.size();
             m_randomOrder.resize(this->sourceModel()->rowCount());
             std::iota(m_randomOrder.begin() + old_count, m_randomOrder.end(), old_count);
-            std::random_shuffle(m_randomOrder.begin() + old_count, m_randomOrder.end());
+            std::shuffle(m_randomOrder.begin() + old_count, m_randomOrder.end(), m_random);
         });
         connect(sourceModel, &QAbstractItemModel::rowsRemoved, this, [this] {
             if (m_SortingMode != Image::Random || m_usedInConfig) {
@@ -116,7 +117,7 @@ void SlideFilterModel::setSortingMode(Image::SlideshowMode mode)
 void SlideFilterModel::invalidate()
 {
     if (m_SortingMode == Image::Random && !m_usedInConfig) {
-        std::random_shuffle(m_randomOrder.begin(), m_randomOrder.end());
+        std::shuffle(m_randomOrder.begin(), m_randomOrder.end(), m_random);
     }
     QSortFilterProxyModel::invalidate();
 }
@@ -143,6 +144,6 @@ void SlideFilterModel::buildRandomOrder()
     if (sourceModel()) {
         m_randomOrder.resize(sourceModel()->rowCount());
         std::iota(m_randomOrder.begin(), m_randomOrder.end(), 0);
-        std::random_shuffle(m_randomOrder.begin(), m_randomOrder.end());
+        std::shuffle(m_randomOrder.begin(), m_randomOrder.end(), m_random);
     }
 }

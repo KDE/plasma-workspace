@@ -24,6 +24,8 @@
 #include <QSortFilterProxyModel>
 #include <QVector>
 
+#include <random>
+
 class SlideFilterModel : public QSortFilterProxyModel
 {
     Q_OBJECT
@@ -51,5 +53,7 @@ private:
     QVector<int> m_randomOrder;
     Image::SlideshowMode m_SortingMode;
     bool m_usedInConfig;
+    std::random_device m_randomDevice;
+    std::mt19937 m_random;
 };
 #endif
