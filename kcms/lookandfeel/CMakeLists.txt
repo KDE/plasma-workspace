@@ -20,7 +20,6 @@ configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 set(kcm_lookandfeel_SRCS
     kcmmain.cpp
     kcm.cpp
-    ../krdb/krdb.cpp
 )
 
 if (X11_Xcursor_FOUND)
@@ -44,22 +43,18 @@ kconfig_add_kcfg_files(kcm_lookandfeel_SRCS lookandfeelsettings.kcfgc GENERATE_M
 add_library(kcm_lookandfeel MODULE ${kcm_lookandfeel_SRCS})
 
 target_link_libraries(kcm_lookandfeel
-  KF5::KIOWidgets
-  KF5::CoreAddons
-  KF5::GuiAddons
-  KF5::KCMUtils
-  KF5::I18n
-  KF5::Plasma
-  KF5::PlasmaQuick
-  KF5::KDELibs4Support
-  KF5::Declarative
-  KF5::QuickAddons
-  PW::KWorkspace
-
   Qt::DBus
-  Qt::Widgets
-  Qt::QuickWidgets
-  X11::X11
+  KF5::I18n
+  KF5::KCMUtils
+  KF5::IconThemes
+  KF5::JobWidgets
+  KF5::Service
+  KF5::QuickAddons
+  KF5::KIOWidgets
+  KF5::Declarative
+  KF5::KDELibs4Support
+  PW::KWorkspace
+  krdb
 )
 
 if(X11_FOUND)
@@ -94,7 +89,6 @@ set(plasma-apply-lookandfeel_SRCS
     # TODO: load kcm plugin instead of using code copy
     kcm.cpp
     lookandfeeldata.cpp
-    ../krdb/krdb.cpp
 )
 
 if (X11_Xcursor_FOUND)
@@ -110,22 +104,19 @@ kconfig_add_kcfg_files(plasma-apply-lookandfeel_SRCS lookandfeelsettings.kcfgc G
 add_executable(plasma-apply-lookandfeel ${plasma-apply-lookandfeel_SRCS})
 
 target_link_libraries(plasma-apply-lookandfeel
-  KF5::KIOWidgets
-  KF5::CoreAddons
-  KF5::KCMUtils
-  KF5::I18n
-  #TODO:kpackage
-  KF5::Plasma
-  KF5::PlasmaQuick
-  KF5::KDELibs4Support
-  KF5::Declarative
-  KF5::QuickAddons
-  KF5::NewStuff
-  PW::KWorkspace
-
   Qt::DBus
-  Qt::Widgets
-  Qt::QuickWidgets
+  KF5::CoreAddons
+  KF5::I18n
+  KF5::KCMUtils
+  KF5::IconThemes
+  KF5::JobWidgets
+  KF5::Service
+  KF5::QuickAddons
+  KF5::KIOWidgets
+  KF5::Declarative
+  KF5::KDELibs4Support
+  PW::KWorkspace
+  krdb
 )
 
 if(X11_FOUND)

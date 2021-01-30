@@ -4,7 +4,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_style\")
 ########### next target ###############
 
 set(kcm_style_PART_SRCS
-    ../krdb/krdb.cpp
     styleconfdialog.cpp
     kcmstyle.cpp
     stylesmodel.cpp
@@ -33,21 +32,14 @@ add_library(kcm_style MODULE ${kcm_style_PART_SRCS})
 target_compile_definitions(kcm_style PUBLIC CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")
 
 target_link_libraries(kcm_style
-    Qt::X11Extras
-    Qt::DBus
     KF5::KCMUtils
-    KF5::Completion
     KF5::I18n
-    KF5::Notifications
-    KF5::Plasma
-    X11::X11
+    KF5::KIOCore
     KF5::KDELibs4Support
-    KF5::GuiAddons
     KF5::QuickAddons
-    KF5::WindowSystem
     KF5::Archive
     KF5::NewStuff
-    PW::KWorkspace
+    krdb
 )
 
 kcoreaddons_desktop_to_json(kcm_style "kcm_style.desktop")

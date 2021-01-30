@@ -22,7 +22,7 @@
 #include "cursorthemedata.h"
 #include "kcmcursortheme.h"
 
-#include "../krdb/krdb.h"
+#include "krdb.h"
 #include "xcursor/cursortheme.h"
 #include "xcursor/previewwidget.h"
 #include "xcursor/sortproxymodel.h"

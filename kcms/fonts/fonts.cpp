@@ -43,7 +43,7 @@
 #include <KPluginFactory>
 #include <KWindowSystem>
 
-#include "../krdb/krdb.h"
+#include "krdb.h"
 #include "kxftconfig.h"
 #include "previewimageprovider.h"
 

@@ -49,10 +49,9 @@
 #include <QWidget>
 #include <QWindow>
 
-#include <KGlobal>
 #include <KGlobalSettings>
 
-#include "../krdb/krdb.h"
+#include "krdb.h"
 
 #include "kded_interface.h"
 

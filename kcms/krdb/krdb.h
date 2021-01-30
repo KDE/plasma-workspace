@@ -19,7 +19,6 @@
 
 #ifndef _KRDB_H_
 #define _KRDB_H_
-#include <KSharedConfig>
 
 enum KRdbAction {
     KRdbExportColors = 0x0001, // Export colors to non-(KDE/Qt) apps
@@ -29,6 +28,6 @@ enum KRdbAction {
     KRdbExportGtkTheme = 0x0010, // Export KDE's widget style to Gtk if possible
 };
 
-void runRdb(uint flags);
+void Q_DECL_EXPORT runRdb(uint flags);
 
 #endif

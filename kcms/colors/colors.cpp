@@ -51,7 +51,7 @@
 
 #include <algorithm>
 
-#include "../krdb/krdb.h"
+#include "krdb.h"
 
 #include "colorsapplicator.h"
 #include "colorsdata.h"

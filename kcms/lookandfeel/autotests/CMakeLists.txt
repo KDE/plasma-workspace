@@ -6,7 +6,6 @@ set( kcmTest_SRCS
      kcmtest.cpp
      ../kcm.cpp
      ../lookandfeeldata.cpp
-     ../../krdb/krdb.cpp
 )
 
 if (X11_Xcursor_FOUND)
@@ -24,23 +23,20 @@ add_executable(kcmTest ${kcmTest_SRCS})
 add_dependencies(kcmTest kcm_lookandfeel)
 
 target_link_libraries(kcmTest
-        Qt::Test
-        KF5::KIOWidgets
-        KF5::CoreAddons
-        KF5::KCMUtils
-        KF5::I18n
-        KF5::Plasma
-        KF5::PlasmaQuick
-        KF5::KDELibs4Support
-        KF5::Declarative
-        KF5::QuickAddons
-        KF5::NewStuff
-        PW::KWorkspace
-
         Qt::DBus
-        Qt::Widgets
-        Qt::QuickWidgets
+        Qt::Test
+        KF5::I18n
+        KF5::KCMUtils
+        KF5::IconThemes
+        KF5::JobWidgets
+        KF5::Service
+        KF5::QuickAddons
+        KF5::KIOWidgets
+        KF5::Declarative
+        KF5::KDELibs4Support
+        PW::KWorkspace
         X11::X11
+        krdb
 )
 
 if(X11_FOUND)

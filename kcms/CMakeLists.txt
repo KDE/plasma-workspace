@@ -1,3 +1,5 @@
+add_subdirectory(krdb)
+
 add_subdirectory(desktoptheme)
 add_subdirectory(icons)
 add_subdirectory(translations)
@@ -7,7 +9,6 @@ if(KUserFeedback_FOUND)
 endif()
 
 add_subdirectory(style)
-add_subdirectory(krdb)
 add_subdirectory(lookandfeel)
 add_subdirectory(colors)
 if(X11_Xcursor_FOUND)

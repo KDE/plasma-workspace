@@ -19,7 +19,7 @@
 */
 
 #include "kcm.h"
-#include "../krdb/krdb.h"
+#include "krdb.h"
 #include "config-kcm.h"
 #include "config-workspace.h"
 

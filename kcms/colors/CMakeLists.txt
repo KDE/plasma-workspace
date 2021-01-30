@@ -2,7 +2,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_colors\")
 
 set(kcm_colors_SRCS
-    ../krdb/krdb.cpp
     colors.cpp
     colorsapplicator.cpp
     colorsmodel.cpp
@@ -33,7 +32,7 @@ target_link_libraries(kcm_colors
     KF5::NewStuffCore
     KF5::QuickAddons
     KF5::WindowSystem
-    PW::KWorkspace
+    krdb
 )
 
 if(X11_FOUND)
