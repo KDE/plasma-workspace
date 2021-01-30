@@ -20,7 +20,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <kservice.h>
+#include <KService>
 
 #include <QCommandLineParser>
 #include <QSet>

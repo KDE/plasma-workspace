@@ -36,11 +36,11 @@
 #include <QLibrary>
 #include <QTimer>
 
-#include <kaboutdata.h>
-#include <kconfig.h>
-#include <kconfiggroup.h>
-#include <klocalizedstring.h>
-#include <kservicetypetrader.h>
+#include <KAboutData>
+#include <KConfig>
+#include <KConfigGroup>
+#include <KLocalizedString>
+#include <KServiceTypeTrader>
 #include <kworkspace.h>
 
 static int ready[2];
