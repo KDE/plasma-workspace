@@ -44,12 +44,6 @@
 
 #include "config-workspace.h"
 
-#if defined(Q_WS_X11) || defined(Q_WS_QWS)
-#include <fontconfig/fontconfig.h>
-#include <ft2build.h>
-#include FT_FREETYPE_H
-#endif
-
 #ifdef HAVE_LOCALE_H
 #include <QDialogButtonBox>
 #include <QPushButton>
@@ -92,71 +86,6 @@ static bool sufficientSpace(int y, QPainter *painter, QFont font, const int *siz
     return (y + required) < pageHeight;
 }
 
-#warning needs porting to adjust for QFont changes
-#if defined(Q_WS_X11) || defined(Q_WS_QWS)
-static QString getChars(FT_Face face)
-{
-    QString newStr;
-
-    for (int cmap = 0; cmap < face->num_charmaps; ++cmap)
-        if (face->charmaps[cmap] && FT_ENCODING_ADOBE_CUSTOM == face->charmaps[cmap]->encoding) {
-            FT_Select_Charmap(face, FT_ENCODING_ADOBE_CUSTOM);
-            break;
-        }
-
-    for (unsigned int i = 1; i < 65535; ++i)
-        if (FT_Get_Char_Index(face, i)) {
-            newStr += QChar(i);
-            if (newStr.length() > 255)
-                break;
-        }
-
-    return newStr;
-}
-
-static QString usableStr(FT_Face face, const QString &str)
-{
-    unsigned int slen = str.length(), ch;
-    QString newStr;
-
-    for (ch = 0; ch < slen; ++ch)
-        if (FT_Get_Char_Index(face, str[ch].unicode()))
-            newStr += str[ch];
-    return newStr;
-}
-
-static QString usableStr(QFont &font, const QString &str)
-{
-    FT_Face face = font.freetypeFace();
-    return face ? usableStr(face, str) : str;
-}
-
-static bool hasStr(QFont &font, const QString &str)
-{
-    FT_Face face = font.freetypeFace();
-
-    if (!face)
-        return true;
-
-    for (int ch = 0; ch < str.length(); ++ch)
-        if (!FT_Get_Char_Index(face, str[ch].unicode()))
-            return false;
-    return true;
-}
-
-static QString previewString(QFont &font, const QString &text, bool onlyDrawChars)
-{
-    FT_Face face = font.freetypeFace();
-
-    if (!face)
-        return text;
-
-    QString valid(usableStr(face, text));
-    bool drawChars = onlyDrawChars || (!hasStr(font, CFcEngine::getLowercaseLetters()) && !hasStr(font, CFcEngine::getUppercaseLetters()));
-
-    return valid.length() < (text.length() / 2) || drawChars ? getChars(face) : valid;
-}
-#else
 static QString usableStr(QFont &font, const QString &str)
 {
     Q_UNUSED(font)
@@ -176,7 +105,6 @@ static QString previewString(QFont &font, const QString &text, bool onlyDrawChar
     Q_UNUSED(onlyDrawChars)
     return text;
 }
-#endif
 
 CPrintThread::CPrintThread(QPrinter *printer, const QList<Misc::TFont> &items, int size, QObject *parent)
     : QThread(parent)
