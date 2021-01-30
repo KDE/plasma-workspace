@@ -145,14 +145,6 @@ if(${AppStreamQt_FOUND})
     set(HAVE_APPSTREAMQT true)
 endif()
 
-# Fonts kcm and kfontinst
-find_package(Freetype)
-set_package_properties(Freetype PROPERTIES DESCRIPTION "A font rendering engine"
-                       URL "https://www.freetype.org"
-                       TYPE OPTIONAL
-                       PURPOSE "Needed to build kfontinst, a simple font installer."
-                      )
-
 # Clipboard applet
 ecm_find_qmlmodule(org.kde.prison 1.0)
 
