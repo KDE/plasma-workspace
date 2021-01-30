@@ -18,14 +18,9 @@
 */
 
 #include <config-workspace.h>
-#include <config-xcb.h>
 
 #include "klauncher_iface.h"
 #include "main.h"
-
-#ifdef XCB_FOUND
-#include <xcb/xcb.h>
-#endif
 
 #include <unistd.h>
 
