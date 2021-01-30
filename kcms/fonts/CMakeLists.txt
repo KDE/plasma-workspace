@@ -1,11 +1,6 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_fonts\")
 
-if(FONTCONFIG_FOUND)
-    include_directories(${FONTCONFIG_INCLUDE_DIR})
-endif()
-include_directories(${FREETYPE_INCLUDE_DIRS})
-
 ########### next target ###############
 
 include_directories(../kfontinst/lib)
@@ -28,7 +23,7 @@ kconfig_add_kcfg_files(kcm_fonts_PART_SRCS fontssettings.kcfgc fontsaasettingsba
 
 add_library(kcm_fonts MODULE ${kcm_fonts_PART_SRCS})
 
-target_link_libraries(kcm_fonts Qt::DBus Qt::Xml KF5::KCMUtils KF5::I18n KF5::KDELibs4Support ${FREETYPE_LIBRARIES} kfontinst)
+target_link_libraries(kcm_fonts Qt::DBus Qt::Xml KF5::KCMUtils KF5::I18n KF5::KDELibs4Support kfontinst)
 
 if(X11_FOUND)
     target_link_libraries(kcm_fonts
@@ -39,10 +34,9 @@ if(X11_FOUND)
         KF5::Declarative
         KF5::QuickAddons
         KF5::WidgetsAddons
-        PW::KWorkspace)
-    if(FONTCONFIG_FOUND)
-        target_link_libraries(kcm_fonts ${FONTCONFIG_LIBRARIES})
-    endif()
+        PW::KWorkspace
+        XCB::IMAGE
+        )
 
     target_link_libraries(kcm_fonts X11::X11 X11::Xft)
 endif()

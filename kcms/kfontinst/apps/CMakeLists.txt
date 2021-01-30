@@ -25,7 +25,6 @@ target_link_libraries(kfontinst_bin
 target_link_libraries(kfontprint_bin
     Qt::PrintSupport
     KF5::IconThemes
-    ${FREETYPE_LIBRARIES}
     kfontinstui
     kfontinst
 )
