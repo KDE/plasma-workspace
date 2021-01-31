@@ -425,7 +425,7 @@ void JobPrivate::update(const QVariantMap &properties)
     updateFieldFromProperties(properties, QStringLiteral("processedFiles"), m_processedFiles, &Job::processedFilesChanged);
     updateFieldFromProperties(properties, QStringLiteral("processedBytes"), m_processedBytes, &Job::processedBytesChanged);
     updateFieldFromProperties(properties, QStringLiteral("processedDirectories"), m_processedDirectories, &Job::processedDirectoriesChanged);
-    updateFieldFromProperties(properties, QStringLiteral("Items"), m_processedItems, &Job::processedItemsChanged);
+    updateFieldFromProperties(properties, QStringLiteral("processedItems"), m_processedItems, &Job::processedItemsChanged);
 
     updateFieldFromProperties(properties, QStringLiteral("totalFiles"), m_totalFiles, &Job::totalFilesChanged);
     updateFieldFromProperties(properties, QStringLiteral("totalBytes"), m_totalBytes, &Job::totalBytesChanged);
