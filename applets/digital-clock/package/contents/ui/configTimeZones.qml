@@ -141,7 +141,7 @@ ColumnLayout {
 
     QQC2.CheckBox {
         id: enableWheelCheckBox
-        configuredTimezoneList.count > 1
+        visible: configuredTimezoneList.count > 1
         Layout.fillWidth: true
         Layout.topMargin: Kirigami.Units.largeSpacing * 2
         text: i18n("Switch displayed time zone by scrolling over clock applet")
