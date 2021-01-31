@@ -35,9 +35,14 @@ set(notificationmanager_LIB_SRCS
 ecm_qt_declare_logging_category(notificationmanager_LIB_SRCS
     HEADER debug.h
     IDENTIFIER NOTIFICATIONMANAGER
-    CATEGORY_NAME org.kde.plasma.notifications)
+    CATEGORY_NAME org.kde.plasma.notifications
+    DESCRIPTION "Plasma Notifications" EXPORT LIBNOTIFICATIONMANAGER)
 
-install(FILES libnotificationmanager.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
+ecm_qt_install_logging_categories(
+        EXPORT LIBNOTIFICATIONMANAGER
+        FILE libnotificationmanager.categories
+        DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+        )
 
 # Settings
 kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/donotdisturbsettings.kcfgc GENERATE_MOC)
