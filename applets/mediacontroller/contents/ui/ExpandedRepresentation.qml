@@ -540,7 +540,7 @@ PlasmaExtras.Representation {
                     // Keep the delegate centered by offsetting the padding removed in the parent
                     bottomPadding: verticalPadding + headerItem.bottomPadding
                     topPadding: verticalPadding - headerItem.bottomPadding
-                    onClicked: {
+                    onPressed: {
                         disablePositionUpdate = true
                         mpris2Source.current = modelData["source"];
                         disablePositionUpdate = false
