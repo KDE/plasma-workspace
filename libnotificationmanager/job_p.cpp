@@ -78,14 +78,19 @@ QUrl JobPrivate::localFileOrUrl(const QString &urlString)
     return url;
 }
 
-// Tries to return a more user-friendly displayed destination
-QString JobPrivate::prettyDestUrl() const
+QUrl JobPrivate::destUrl() const
 {
     QUrl url = m_destUrl;
     // In case of a single file and no destUrl, try using the second label (most likely "Destination")...
     if (!url.isValid() && m_totalFiles == 1) {
         url = localFileOrUrl(m_descriptionValue2).adjusted(QUrl::RemoveFilename);
     }
+    return url;
+}
+
+QString JobPrivate::prettyUrl(const QUrl &_url) const
+{
+    QUrl url(_url);
 
     if (!url.isValid()) {
         return QString();
@@ -159,7 +164,14 @@ QString JobPrivate::text() const
         return m_infoMessage;
     }
 
-    const QString destUrlString = prettyDestUrl();
+    const QUrl destUrl = this->destUrl();
+    const QString prettyDestUrl = prettyUrl(destUrl);
+
+    QString destUrlString;
+    if (!prettyDestUrl.isEmpty()) {
+        // Turn destination into a clickable hyperlink
+        destUrlString = QStringLiteral("<a href=\"%1\">%2</a>").arg(destUrl.toString(QUrl::PrettyDecoded), prettyDestUrl);
+    }
 
     if (m_totalFiles == 0) {
         if (!destUrlString.isEmpty()) {
@@ -204,7 +216,7 @@ QString JobPrivate::text() const
 
     qCInfo(NOTIFICATIONMANAGER) << "Failed to generate job text for job with following properties:";
     qCInfo(NOTIFICATIONMANAGER) << "  processedFiles =" << m_processedFiles << ", totalFiles =" << m_totalFiles << ", current file name =" << descriptionUrl().fileName()
-                                << ", destination url string =" << destUrlString;
+                                << ", destination url string =" << this->destUrl();
     qCInfo(NOTIFICATIONMANAGER) << "label1 =" << m_descriptionLabel1 << ", value1 =" << m_descriptionValue1 << ", label2 =" << m_descriptionLabel2
                                 << ", value2 =" << m_descriptionValue2;
 

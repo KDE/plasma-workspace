@@ -109,7 +109,8 @@ private:
 
     static QUrl localFileOrUrl(const QString &stringUrl);
 
-    QString prettyDestUrl() const;
+    QUrl destUrl() const;
+    QString prettyUrl(const QUrl &url) const;
     void updateHasDetails();
 
     void finish();
