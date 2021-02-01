@@ -220,7 +220,6 @@ Startup::Startup(QObject *parent)
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/Startup"), QStringLiteral("org.kde.Startup"), this);
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.Startup"));
 
-    upAndRunning(QStringLiteral("ksmserver"));
     const AutoStart autostart;
 
     QProcess::execute(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF5 "/start_kdeinit_wrapper"), QStringList());
