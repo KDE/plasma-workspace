@@ -38,7 +38,9 @@ struct Inhibition {
 
 namespace NotificationManager
 {
+class Server;
 class ServerInfo;
+class SoundScheme;
 
 class Q_DECL_HIDDEN ServerPrivate : public QObject, protected QDBusContext
 {
@@ -51,6 +53,8 @@ class Q_DECL_HIDDEN ServerPrivate : public QObject, protected QDBusContext
 public:
     ServerPrivate(QObject *parent);
     ~ServerPrivate() override;
+
+    static ServerPrivate *get(Server *q);
 
     // DBus
     uint Notify(const QString &app_name,
@@ -93,7 +97,7 @@ Q_SIGNALS:
 
     void serviceOwnershipLost();
 
-public: // stuff used by public class
+public:
     friend class ServerInfo;
     static QString notificationServiceName();
     static QString notificationServicePath();
@@ -112,6 +116,8 @@ public: // stuff used by public class
     bool externalInhibited() const;
     QList<Inhibition> externalInhibitions() const;
     void clearExternalInhibitions();
+
+    void registerSoundScheme(SoundScheme *soundScheme);
 
     bool m_valid = false;
     uint m_highestNotificationId = 1;
@@ -133,6 +139,8 @@ private:
     uint m_highestInhibitionCookie = 0;
     QHash<uint /*cookie*/, Inhibition> m_externalInhibitions;
     QHash<uint /*cookie*/, QString> m_inhibitionServices;
+
+    QVector<SoundScheme *> m_soundSchemes;
 
     bool m_inhibited = false;
 

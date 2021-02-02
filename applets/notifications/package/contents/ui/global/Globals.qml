@@ -428,6 +428,41 @@ QtObject {
         }
     }
 
+    property QtObject soundNotificationsModel: NotificationManager.Notifications {
+        limit: 0
+        showExpired: false
+        // TODO Check if we want this on or off, probably don't want restoring a job to always make a sound
+        //showDismissed: false
+        blacklistedDesktopEntries: popupNotificationsModel.blacklistedDesktopEntries
+        blacklistedNotifyRcNames: popupNotificationsModel.blacklistedNotifyRcNames
+        whitelistedDesktopEntries: popupNotificationsModel.whitelistedDesktopEntries
+        whitelistedNotifyRcNames: popupNotificationsModel.whitelistedNotifyRcNames
+        // TODO probably? though we could play an error sound when job fails? (or a k3b fanfare when finished;)
+        // perhaps in JobsModel return some sound name based on job state?
+        // would also require monitoring the model for change though...
+        showJobs: false
+        urgencies: popupNotificationsModel.urgencies
+
+        onRowsInserted: {
+            if (globals.inhibited) {
+                return;
+            }
+
+            // TODO should we get spammed it's probably alright if we only play a single sound (not first..last)?
+            const idx = soundNotificationsModel.index(first, 0);
+            if (soundNotificationsModel.data(idx, NotificationManager.Notifications.SuppressSoundRole) === true) {
+                return;
+            }
+
+            let sound = soundScheme.soundFromIndex(idx);
+            if (!sound) {
+                return;
+            }
+
+            sound.play();
+        }
+    }
+
     property QtObject notificationSettings: NotificationManager.Settings {
         onNotificationsInhibitedUntilChanged: globals.checkInhibition()
     }
@@ -676,5 +711,10 @@ QtObject {
 
     property Notifications.GlobalShortcuts shortcuts: Notifications.GlobalShortcuts {
         onToggleDoNotDisturbTriggered: globals.toggleDoNotDisturbMode()
+    }
+
+    property NotificationManager.SoundScheme soundScheme: NotificationManager.SoundScheme {
+        // TODO take from kdeglobals or something
+        schemeName: "Yaru"// "Smooth"
     }
 }

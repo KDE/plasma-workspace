@@ -416,6 +416,14 @@ void Notification::Private::processHints(const QVariantMap &hints)
     }
 
     sanitizeImage(image);
+
+    soundFile = hints.value(QStringLiteral("sound-file")).toString();
+    soundName = hints.value(QStringLiteral("sound-name")).toString();
+    suppressSound = hints.value(QStringLiteral("suppress-sound")).toBool();
+
+    if (!soundFile.isEmpty() || !soundName.isEmpty()) { // FIXME debug
+        qWarning() << "SOUND!!!" << "file" << soundFile << "name" << soundName;
+    }
 }
 
 void Notification::Private::setUrgency(Notifications::Urgency urgency)
@@ -731,6 +739,21 @@ QString Notification::replySubmitButtonIconName() const
 QString Notification::category() const
 {
     return d->category;
+}
+
+QString Notification::soundFile() const
+{
+    return d->soundFile;
+}
+
+QString Notification::soundName() const
+{
+    return d->soundName;
+}
+
+bool Notification::suppressSound() const
+{
+    return d->suppressSound;
 }
 
 bool Notification::expired() const

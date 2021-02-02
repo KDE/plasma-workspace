@@ -124,6 +124,10 @@ public:
 
     QString category() const;
 
+    QString soundFile() const;
+    QString soundName() const;
+    bool suppressSound() const;
+
     bool expired() const;
     void setExpired(bool expired);
 

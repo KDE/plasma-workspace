@@ -99,6 +99,10 @@ public:
 
     QString category;
 
+    QString soundFile;
+    QString soundName;
+    bool suppressSound = false;
+
     QList<QUrl> urls;
     QVariantMap hints = QVariantMap();
 

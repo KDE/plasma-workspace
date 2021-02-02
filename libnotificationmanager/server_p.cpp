@@ -29,6 +29,7 @@
 
 #include "server.h"
 #include "serverinfo.h"
+#include "soundscheme.h"
 
 #include "utils_p.h"
 
@@ -59,6 +60,11 @@ ServerPrivate::ServerPrivate(QObject *parent)
 }
 
 ServerPrivate::~ServerPrivate() = default;
+
+ServerPrivate *ServerPrivate::get(Server *q)
+{
+    return q->d.data();
+}
 
 QString ServerPrivate::notificationServiceName()
 {
@@ -286,7 +292,7 @@ void ServerPrivate::CloseNotification(uint id)
 QStringList ServerPrivate::GetCapabilities() const
 {
     // should this be configurable somehow so the UI can tell what it implements?
-    return QStringList{QStringLiteral("body"),
+    QStringList capabilities{QStringLiteral("body"),
                        QStringLiteral("body-hyperlinks"),
                        QStringLiteral("body-markup"),
                        QStringLiteral("body-images"),
@@ -299,6 +305,12 @@ QStringList ServerPrivate::GetCapabilities() const
                        QStringLiteral("x-kde-display-appname"),
 
                        QStringLiteral("inhibitions")};
+
+    if (!m_soundSchemes.isEmpty()) {
+        capabilities.append(QStringLiteral("sound"));
+    }
+
+    return capabilities;
 }
 
 QString ServerPrivate::GetServerInformation(QString &vendor, QString &version, QString &specVersion) const
@@ -522,6 +534,16 @@ void ServerPrivate::clearExternalInhibitions()
 
     emit externalInhibitedChanged();
     emit externalInhibitionsChanged();
+}
+
+void ServerPrivate::registerSoundScheme(SoundScheme *soundScheme)
+{
+    Q_ASSERT(!m_soundSchemes.contains(soundScheme));
+
+    connect(soundScheme, &QObject::destroyed, this, [this, soundScheme] {
+        m_soundSchemes.removeOne(soundScheme);
+    });
+    m_soundSchemes.append(soundScheme);
 }
 
 void ServerPrivate::RegisterWatcher()

@@ -226,6 +226,7 @@ private:
     Q_DISABLE_COPY(Server)
     // FIXME we also need to disable move and other stuff?
 
+    friend class ServerPrivate;
     QScopedPointer<ServerPrivate> d;
 };
 

@@ -27,6 +27,9 @@ set(notificationmanager_LIB_SRCS
     job.cpp
     job_p.cpp
 
+    soundscheme.cpp
+    eventsound.cpp
+
     limitedrowcountproxymodel.cpp
 
     utils.cpp
@@ -83,11 +86,17 @@ target_link_libraries(notificationmanager
         Qt::DBus
         KF5::ConfigGui
         KF5::I18n
+        KF5::KIOGui
         KF5::KIOFileWidgets
         KF5::Plasma
         KF5::Screen
         KF5::Service
 )
+
+if(Canberra_FOUND)
+    include_directories(${CANBERRA_INCLUDE_DIRS})
+    target_link_libraries(notificationmanager PRIVATE Canberra::Canberra)
+endif()
 
 set_target_properties(notificationmanager PROPERTIES
                       VERSION ${PROJECT_VERSION}

@@ -338,6 +338,13 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
     case Notifications::CategoryRole:
         return notification.category();
 
+    case Notifications::SoundFileRole:
+        return notification.soundFile();
+    case Notifications::SoundNameRole:
+        return notification.soundName();
+    case Notifications::SuppressSoundRole:
+        return notification.suppressSound();
+
     case Notifications::ExpiredRole:
         return notification.expired();
     case Notifications::ReadRole:
