@@ -170,7 +170,7 @@ QString JobPrivate::text() const
     QString destUrlString;
     if (!prettyDestUrl.isEmpty()) {
         // Turn destination into a clickable hyperlink
-        destUrlString = QStringLiteral("<a href=\"%1\">%2</a>").arg(destUrl.toString(QUrl::PrettyDecoded), prettyDestUrl);
+        destUrlString = QStringLiteral("<a href=\"%1\">%2</a>").arg(destUrl.toString(QUrl::PrettyDecoded), prettyDestUrl.toHtmlEscaped());
     }
 
     if (m_totalFiles == 0) {
@@ -183,7 +183,7 @@ QString JobPrivate::text() const
             return i18ncp("Copying n files", "%1 file", "%1 files", m_processedFiles);
         }
     } else if (m_totalFiles == 1) {
-        const QString currentFileName = descriptionUrl().fileName();
+        const QString currentFileName = descriptionUrl().fileName().toHtmlEscaped();
         if (!destUrlString.isEmpty()) {
             if (!currentFileName.isEmpty()) {
                 return i18nc("Copying file to location", "%1 to %2", currentFileName, destUrlString);
