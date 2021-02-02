@@ -253,6 +253,10 @@ void JobPrivate::finish()
         return;
     }
 
+    if (m_killTimer) {
+        m_killTimer->stop();
+    }
+
     Job *job = static_cast<Job *>(parent());
     // update timestamp
     job->resetUpdated();
