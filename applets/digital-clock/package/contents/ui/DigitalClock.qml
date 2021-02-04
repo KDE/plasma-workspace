@@ -314,7 +314,6 @@ Item {
                 // Those magic numbers are purely what looks nice as maximum size, here we have it the smallest
                 // between slightly bigger than the default font (1.4 times) and a bit smaller than the time font
                 font.pixelSize: Math.min(0.7 * timeLabel.height, PlasmaCore.Theme.defaultFont.pixelSize * 1.4)
-                font.minimumPixelSize: theme.smallestFont.pixelSize
                 elide: Text.ElideRight
                 wrapMode: Text.WordWrap
             }
