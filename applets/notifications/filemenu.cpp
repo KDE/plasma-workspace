@@ -145,6 +145,15 @@ void FileMenu::open(int x, int y)
         QApplication::clipboard()->setMimeData(data);
     });
 
+    QAction *copyPathAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18nc("@action:incontextmenu", "Copy Location"));
+    connect(copyPathAction, &QAction::triggered, [fileItem] {
+        QString path = fileItem.localPath();
+        if (path.isEmpty()) {
+            path = fileItem.url().toDisplayString();
+        }
+        QApplication::clipboard()->setText(path);
+    });
+
     menu->addSeparator();
 
     const bool canTrash = itemProperties.isLocal() && itemProperties.supportsMoving();
