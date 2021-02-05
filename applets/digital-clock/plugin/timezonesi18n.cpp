@@ -241,7 +241,7 @@ void TimezonesI18n::init()
          {QStringLiteral("Kerguelen"), i18nc("This is a city associated with particular time zone", "Kerguelen")},
          {QStringLiteral("Khandyga"), i18nc("This is a city associated with particular time zone", "Khandyga")},
          {QStringLiteral("Khartoum"), i18nc("This is a city associated with particular time zone", "Khartoum")},
-         {QStringLiteral("Kiev"), i18nc("This is a city associated with particular time zone", "Kiev")},
+         {QStringLiteral("Kiev"), i18nc("This is a city associated with particular time zone", "Kyiv")},
          {QStringLiteral("Kigali"), i18nc("This is a city associated with particular time zone", "Kigali")},
          {QStringLiteral("Kinshasa"), i18nc("This is a city associated with particular time zone", "Kinshasa")},
          {QStringLiteral("Kiritimati"), i18nc("This is a city associated with particular time zone", "Kiritimati")},
@@ -484,7 +484,7 @@ void TimezonesI18n::init()
          {QStringLiteral("UTC-13:00"), i18nc("This is a generic time zone name, localize as needed", "UTC-13:00")},
          {QStringLiteral("UTC-14:00"), i18nc("This is a generic time zone name, localize as needed", "UTC-14:00")},
          {QStringLiteral("UTC"), i18nc("This is a generic time zone name, localize as needed", "UTC")},
-         {QStringLiteral("Uzhgorod"), i18nc("This is a city associated with particular time zone", "Uzhgorod")},
+         {QStringLiteral("Uzhgorod"), i18nc("This is a city associated with particular time zone", "Uzhhorod")},
          {QStringLiteral("Vaduz"), i18nc("This is a city associated with particular time zone", "Vaduz")},
          {QStringLiteral("Vancouver"), i18nc("This is a city associated with particular time zone", "Vancouver")},
          {QStringLiteral("Vatican"), i18nc("This is a city associated with particular time zone", "Vatican")},
@@ -509,7 +509,7 @@ void TimezonesI18n::init()
          {QStringLiteral("Yellowknife"), i18nc("This is a city associated with particular time zone", "Yellowknife")},
          {QStringLiteral("Yerevan"), i18nc("This is a city associated with particular time zone", "Yerevan")},
          {QStringLiteral("Zagreb"), i18nc("This is a city associated with particular time zone", "Zagreb")},
-         {QStringLiteral("Zaporozhye"), i18nc("This is a city associated with particular time zone", "Zaporozhye")},
+         {QStringLiteral("Zaporozhye"), i18nc("This is a city associated with particular time zone", "Zaporizhzhia")},
          {QStringLiteral("Zurich"), i18nc("This is a city associated with particular time zone", "Zurich")}});
 
 #define ENTRY_ISO_3166(qlocale_enum, string) {QLocale::qlocale_enum, i18nd("iso_3166", string)}
