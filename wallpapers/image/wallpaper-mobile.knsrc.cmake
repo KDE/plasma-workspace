@@ -46,4 +46,4 @@ Categories=Plamo Wallpapers
 TargetDir=wallpapers
 Uncompress=subdir-archive
 
-AdoptionCommand=@QtBinariesDir@/qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'for (var i in desktops()) { d = desktops()[i]; d.wallpaperPlugin = "org.kde.image"; d.currentConfigGroup = ["Wallpaper", "org.kde.image", "General"]; d.writeConfig("Image", "%f") }'
+AdoptionCommand=@QtBinariesDir@/qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "for (var i in desktops()) { d = desktops()[i]; d.wallpaperPlugin = 'org.kde.image'; d.currentConfigGroup = ['Wallpaper', 'org.kde.image', 'General']; d.writeConfig('Image', %f) }"
