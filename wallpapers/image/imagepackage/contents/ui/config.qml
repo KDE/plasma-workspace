@@ -376,7 +376,7 @@ ColumnLayout {
                 }
                 NewStuff.Button {
                     Layout.alignment: Qt.AlignRight
-                    configFile: "wallpaper.knsrc"
+                    configFile: Kirigami.Settings.isMobile ? "wallpaper-mobile.knsrc" : "wallpaper.knsrc"
                     text: i18nd("plasma_wallpaper_org.kde.image", "Get New Wallpapers...")
                     viewMode: NewStuff.Page.ViewMode.Preview
                     onChangedEntriesChanged: imageWallpaper.newStuffFinished();
