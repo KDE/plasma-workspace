@@ -42,8 +42,8 @@ ColumnLayout {
     property int cfg_SlideshowModeDefault
     property alias cfg_Blur: blurRadioButton.checked
     property bool cfg_BlurDefault
-    property string cfg_SlidePaths: ""
-    property string cfg_SlidePathsDefault: ""
+    property var cfg_SlidePaths: []
+    property var cfg_SlidePathsDefault: []
     property int cfg_SlideInterval: 0
     property int cfg_SlideIntervalDefault: 0
     property var cfg_UncheckedSlides: []
