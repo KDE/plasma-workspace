@@ -52,7 +52,8 @@ LocationsRunner::~LocationsRunner()
 void LocationsRunner::match(Plasma::RunnerContext &context)
 {
     QString term = context.query();
-    if (QFileInfo(KShell::tildeExpand(term)).isExecutable()) {
+    QFileInfo tmpInfo(KShell::tildeExpand(term));
+    if (tmpInfo.isFile() && tmpInfo.isExecutable()) {
         return;
     }
     // We want to expand ENV variables like $HOME to get the actual path, BUG: 358221
