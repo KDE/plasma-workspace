@@ -135,7 +135,7 @@ void KSMServer::startApplication(const QStringList &cmd, const QString &clientMa
     auto *job = new KIO::CommandLauncherJob(app, argList);
     auto apps = KApplicationTrader::query([&app](const KService::Ptr service) {
         const QString binary = KIO::DesktopExecParser::executablePath(service->exec());
-        return !binary.isEmpty() && app.endsWith(binary);
+        return !service->noDisplay() && !binary.isEmpty() && app.endsWith(binary);
     });
     if (!apps.empty()) {
         job->setDesktopName(apps[0]->desktopEntryName());
