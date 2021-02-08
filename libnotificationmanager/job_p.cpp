@@ -159,8 +159,8 @@ QString JobPrivate::text() const
         return m_infoMessage;
     }
 
-    const QString currentFileName = descriptionUrl().fileName();
-    const QString destUrlString = prettyDestUrl();
+    const QString currentFileName = descriptionUrl().fileName().toHtmlEscaped();
+    const QString destUrlString = prettyDestUrl().toHtmlEscaped();
 
     if (m_totalFiles == 0) {
         if (!destUrlString.isEmpty()) {
