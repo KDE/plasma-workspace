@@ -76,11 +76,13 @@ IconName=device-notifier
 
 [Event/safelyRemovable]
 Name=Device Status
+Name[az]=Qurğuların statusu
 Name[ca]=Estat del dispositiu
 Name[es]=Estado del dispositivo
 Name[nl]=Apparaatstatus
 Name[nn]=Einingsstatus
 Name[pt]=Estado do Dispositivo
+Name[sl]=Stanje naprave
 Name[sv]=Enhetsstatus
 Name[uk]=Стан пристрою
 Name[x-test]=xxDevice Statusxx
