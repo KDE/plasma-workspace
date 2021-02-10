@@ -64,7 +64,7 @@ void GridLayoutManager::parseLayout(const QString &savedLayout)
             continue;
         }
 
-        m_parsedConfig[id] = {itemGeom[0].toInt(), itemGeom[1].toInt(), itemGeom[2].toInt(), itemGeom[3].toInt(), itemGeom[4].toInt()};
+        m_parsedConfig[id] = {itemGeom[0].toDouble(), itemGeom[1].toDouble(), itemGeom[2].toDouble(), itemGeom[3].toDouble(), itemGeom[4].toDouble()};
     }
 }
 
