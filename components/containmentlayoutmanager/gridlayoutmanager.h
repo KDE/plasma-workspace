@@ -27,11 +27,11 @@ class AppletsLayout;
 class ItemContainer;
 
 struct Geom {
-    int x;
-    int y;
-    int width;
-    int height;
-    int rotation;
+    qreal x;
+    qreal y;
+    qreal width;
+    qreal height;
+    qreal rotation;
 };
 
 class GridLayoutManager : public AbstractLayoutManager
