@@ -172,23 +172,6 @@ Item {
         }
     }
 
-    Plasmoid.compactRepresentation: CompactRepresentation {
-        property int wheelDelta: 0
-
-        onEntered: wheelDelta = 0
-        onExited: wheelDelta = 0
-        onWheel: {
-            var delta = wheel.angleDelta.y || wheel.angleDelta.x
-
-            var maximumBrightness = batterymonitor.maximumScreenBrightness
-            // Don't allow the UI to turn off the screen
-            // Please see https://git.reviewboard.kde.org/r/122505/ for more information
-            var minimumBrightness = (maximumBrightness > 100 ? 1 : 0)
-            var steps = Math.max(1, Math.round(maximumBrightness / 20))
-            var deltaSteps = delta / 120;
-            batterymonitor.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, batterymonitor.screenBrightness + deltaSteps * steps));
-        }
-    }
 
     property QtObject pmSource: PlasmaCore.DataSource {
         id: pmSource
@@ -221,6 +204,8 @@ Item {
             }
         }
     }
+
+    Plasmoid.compactRepresentation: CompactRepresentation {}
 
     Plasmoid.fullRepresentation: PopupDialog {
         id: dialogItem

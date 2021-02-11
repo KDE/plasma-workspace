@@ -23,26 +23,19 @@ import QtGraphicalEffects 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
-Item {
+Rectangle {
     property alias text: label.text
     property Item icon
 
-    Rectangle {
-        id: badgeRect
-        anchors {
-            right: parent.right
-            bottom: parent.bottom
-        }
-        color: PlasmaCore.ColorScope.backgroundColor
-        width: Math.max(units.gridUnit, label.width + units.devicePixelRatio * 2)
-        height: label.height
-        radius: units.devicePixelRatio * 3
-        opacity: 0.9
-    }
+    color: PlasmaCore.ColorScope.backgroundColor
+    width: Math.max(units.gridUnit, label.width + units.devicePixelRatio * 2)
+    height: label.height
+    radius: units.devicePixelRatio * 3
+    opacity: 0.9
 
     PlasmaComponents3.Label {
         id: label
-        anchors.centerIn: badgeRect
+        anchors.centerIn: parent
         font.pixelSize: Math.max(icon.height/4, theme.smallestFont.pixelSize*0.8)
     }
 
