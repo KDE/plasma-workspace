@@ -122,7 +122,7 @@ public:
     void setupShortcuts();
 
 Q_SIGNALS:
-    void logoutCancelled();
+    void logoutFinished(bool sessionClosed);
 
 public Q_SLOTS:
 
@@ -235,7 +235,6 @@ private:
 
     WindowMap legacyWindows;
 
-    QDBusMessage m_performLogoutCall;
     QDBusMessage m_restoreSessionCall;
 
     // subSession stuff
