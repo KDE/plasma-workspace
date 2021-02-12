@@ -95,10 +95,21 @@ void KSMServer::logout(int confirm, int sdtype, int sdmode)
 
 bool KSMServer::closeSession()
 {
+    qCDebug(KSMSERVER) << "Close session called. Current state is:" << state;
+
     Q_ASSERT(calledFromDBus());
-    performLogout();
     setDelayedReply(true);
-    m_performLogoutCall = message();
+
+    const QDBusMessage callerContext = message();
+
+    auto conn = QSharedPointer<QMetaObject::Connection>::create(QMetaObject::Connection());
+    *conn = connect(this, &KSMServer::logoutFinished, this, [callerContext, conn](bool sessionClosed) {
+        auto reply = callerContext.createReply(sessionClosed);
+        QDBusConnection::sessionBus().send(reply);
+        QObject::disconnect(*conn);
+    });
+
+    performLogout();
     return false;
 }
 
@@ -366,12 +377,7 @@ void KSMServer::cancelShutdown(KSMClient *c)
 
     m_kwinInterface->setState(KWinSessionState::Normal);
 
-    if (m_performLogoutCall.type() == QDBusMessage::MethodCallMessage) {
-        auto reply = m_performLogoutCall.createReply(false);
-        QDBusConnection::sessionBus().send(reply);
-        m_performLogoutCall = QDBusMessage();
-    }
-    emit logoutCancelled();
+    emit logoutFinished(false);
 }
 
 void KSMServer::startProtection()
@@ -505,11 +511,7 @@ void KSMServer::completeKilling()
 // shutdown is fully complete
 void KSMServer::killingCompleted()
 {
-    if (m_performLogoutCall.type() == QDBusMessage::MethodCallMessage) {
-        auto reply = m_performLogoutCall.createReply(true);
-        QDBusConnection::sessionBus().send(reply);
-        m_performLogoutCall = QDBusMessage();
-    }
+    emit logoutFinished(true);
     qApp->quit();
 }
 
