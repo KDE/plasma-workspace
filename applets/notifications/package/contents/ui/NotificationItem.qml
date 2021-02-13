@@ -254,7 +254,7 @@ ColumnLayout {
             Layout.topMargin: units.smallSpacing
             Layout.bottomMargin: units.smallSpacing
 
-            visible: iconItem.active || imageItem.active
+            visible: iconItem.active
 
             PlasmaCore.IconItem {
                 id: iconItem
@@ -263,30 +263,9 @@ ColumnLayout {
                 anchors.fill: parent
                 usesPlasmaTheme: false
                 smooth: true
-                source: {
-                    var icon = notificationItem.icon;
-                    if (typeof icon !== "string") { // displayed by QImageItem below
-                        return "";
-                    }
-
-                    // don't show a generic "info" icon since this is a notification already
-                    if (icon === "dialog-information") {
-                        return "";
-                    }
-
-                    return icon;
-                }
+                // don't show a generic "info" icon since this is a notification already
+                source: notificationItem.icon !== "dialog-information" ? notificationItem.icon : ""
                 visible: active
-            }
-
-            KQCAddons.QImageItem {
-                id: imageItem
-                readonly property bool active: !null && nativeWidth > 0
-                anchors.fill: parent
-                smooth: true
-                fillMode: KQCAddons.QImageItem.PreserveAspectFit
-                visible: active
-                image: typeof notificationItem.icon === "object" ? notificationItem.icon : undefined
             }
 
             // JobItem reparents a file icon here for finished jobs with one total file
