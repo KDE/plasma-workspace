@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QDBusReply>
+#include <QDBusPendingCall>
 #include <QDir>
 #include <QStandardPaths>
 #include <QUrl>
@@ -32,24 +32,23 @@
 GtkPage::GtkPage(QObject *parent)
     : QObject(parent)
     , m_gtkThemesModel(new GtkThemesModel(this))
-    , gtkConfigInterface(QStringLiteral("org.kde.GtkConfig"), QStringLiteral("/GtkConfig"), QStringLiteral("org.kde.GtkConfig"))
+    , m_gtkConfigInterface(QStringLiteral("org.kde.GtkConfig"), QStringLiteral("/GtkConfig"), QDBusConnection::sessionBus())
 {
     connect(m_gtkThemesModel, &GtkThemesModel::themeRemoved, this, &GtkPage::onThemeRemoved);
 
     connect(m_gtkThemesModel, &GtkThemesModel::selectedThemeChanged, this, [this]() {
         Q_EMIT gtkThemeSettingsChanged();
     });
+
+    load();
 }
 
-GtkPage::~GtkPage()
-{
-    delete m_gtkThemesModel;
-}
+GtkPage::~GtkPage() = default;
 
 QString GtkPage::gtkThemeFromConfig()
 {
-    QDBusReply<QString> dbusReply = gtkConfigInterface.call(QStringLiteral("gtkTheme"));
-    return dbusReply.value();
+    // FIXME make aysnc but that requires some refactoring on the UI side
+    return m_gtkConfigInterface.gtkTheme().value();
 }
 
 bool GtkPage::gtkPreviewAvailable()
@@ -59,7 +58,7 @@ bool GtkPage::gtkPreviewAvailable()
 
 void GtkPage::showGtkPreview()
 {
-    gtkConfigInterface.call(QStringLiteral("showGtkThemePreview"), m_gtkThemesModel->selectedTheme());
+    m_gtkConfigInterface.showGtkThemePreview(m_gtkThemesModel->selectedTheme());
 }
 
 void GtkPage::onThemeRemoved()
@@ -111,7 +110,9 @@ void GtkPage::installGtkThemeFromFile(const QUrl &fileUrl)
 
 void GtkPage::save()
 {
-    gtkConfigInterface.call(QStringLiteral("setGtkTheme"), m_gtkThemesModel->selectedTheme());
+    auto call = m_gtkConfigInterface.setGtkTheme(m_gtkThemesModel->selectedTheme());
+    // needs to block so "OK" button closing kcmshell still saves properly
+    call.waitForFinished();
 }
 
 void GtkPage::defaults()

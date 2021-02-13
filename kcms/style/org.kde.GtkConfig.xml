@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.GtkConfig">
+    <method name="setGtkTheme">
+      <arg name="themeName" type="s" direction="in"/>
+    </method>
+    <method name="gtkTheme">
+      <arg type="s" direction="out"/>
+    </method>
+    <method name="showGtkThemePreview">
+      <arg name="themeName" type="s" direction="in"/>
+    </method>
+  </interface>
+</node>

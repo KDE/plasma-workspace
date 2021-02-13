@@ -20,11 +20,12 @@
 
 #pragma once
 
-#include <QDBusInterface>
 #include <QObject>
 #include <QQmlListReference>
 
 #include "gtkthemesmodel.h"
+
+#include "kdegtkconfig_interface.h"
 
 class GtkPage : public QObject
 {
@@ -63,5 +64,5 @@ Q_SIGNALS:
 private:
     GtkThemesModel *m_gtkThemesModel;
 
-    QDBusInterface gtkConfigInterface;
+    OrgKdeGtkConfigInterface m_gtkConfigInterface;
 };

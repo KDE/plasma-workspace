@@ -47,11 +47,12 @@ class KCMStyle : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
 
-    Q_PROPERTY(GtkPage *gtkPage MEMBER m_gtkPage CONSTANT)
+    Q_PROPERTY(GtkPage *gtkPage READ gtkPage CONSTANT)
     Q_PROPERTY(StylesModel *model READ model CONSTANT)
     Q_PROPERTY(StyleSettings *styleSettings READ styleSettings CONSTANT)
     Q_PROPERTY(ToolBarStyle mainToolBarStyle READ mainToolBarStyle WRITE setMainToolBarStyle NOTIFY mainToolBarStyleChanged)
     Q_PROPERTY(ToolBarStyle otherToolBarStyle READ otherToolBarStyle WRITE setOtherToolBarStyle NOTIFY otherToolBarStyleChanged)
+    Q_PROPERTY(bool gtkConfigKdedModuleLoaded READ gtkConfigKdedModuleLoaded NOTIFY gtkConfigKdedModuleLoadedChanged)
 
 public:
     KCMStyle(QObject *parent, const QVariantList &args);
@@ -65,6 +66,8 @@ public:
     };
     Q_ENUM(ToolBarStyle)
 
+    GtkPage *gtkPage();
+
     StylesModel *model() const;
 
     StyleSettings *styleSettings() const;
@@ -77,8 +80,10 @@ public:
     void setOtherToolBarStyle(ToolBarStyle style);
     Q_SIGNAL void otherToolBarStyleChanged();
 
+    bool gtkConfigKdedModuleLoaded() const;
+    Q_SIGNAL void gtkConfigKdedModuleLoadedChanged();
+
     Q_INVOKABLE void configure(const QString &title, const QString &styleName, QQuickItem *ctx = nullptr);
-    Q_INVOKABLE bool gtkConfigKdedModuleLoaded();
 
     void load() override;
     void save() override;
@@ -90,6 +95,7 @@ Q_SIGNALS:
 
 private:
     void loadSettingsToModel();
+    void checkGtkConfigKdedModuleLoaded();
 
     StyleData *m_data;
     StylesModel *m_model;
@@ -101,7 +107,10 @@ private:
     ToolBarStyle m_otherToolBarStyle = NoText;
 
     QPointer<StyleConfigDialog> m_styleConfigDialog;
-    GtkPage *m_gtkPage;
+
+    bool m_gtkConfigKdedModuleLoaded = false;
+    GtkPage *m_gtkPage = nullptr;
+
 };
 
 #endif // __KCMSTYLE_H

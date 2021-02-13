@@ -136,7 +136,7 @@ KCM.GridViewKCM {
 
             QtControls.Button {
                 id: gtkSettingsButton
-                visible: kcm.gtkConfigKdedModuleLoaded()
+                visible: kcm.gtkConfigKdedModuleLoaded
                 text: i18n("Configure GNOME/GTK Application Style...")
                 icon.name: "configure"
                 onClicked: root.openGtkStyleSettings()

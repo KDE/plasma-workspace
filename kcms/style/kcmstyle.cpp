@@ -37,7 +37,8 @@
 #include <KPluginFactory>
 #include <KPluginLoader>
 
-#include <QDBusReply>
+#include <QDBusPendingReply>
+#include <QDBusPendingCallWatcher>
 #include <QLibrary>
 #include <QMetaEnum>
 #include <QQuickItem>
@@ -52,6 +53,8 @@
 #include <KGlobalSettings>
 
 #include "../krdb/krdb.h"
+
+#include "kded_interface.h"
 
 #include "previewitem.h"
 #include "styledata.h"
@@ -80,7 +83,6 @@ KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
     , m_data(new StyleData(this))
     , m_model(new StylesModel(this))
-    , m_gtkPage()
 {
     qmlRegisterUncreatableType<KCMStyle>("org.kde.private.kcms.style", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
     qmlRegisterType<StyleSettings>();
@@ -99,12 +101,6 @@ KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
     about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@broulik.de"));
     setAboutData(about);
 
-    if (gtkConfigKdedModuleLoaded()) {
-        m_gtkPage = new GtkPage(this);
-        connect(m_gtkPage, &GtkPage::gtkThemeSettingsChanged, this, [this]() {
-            setNeedsSave(true);
-        });
-    }
     connect(m_model, &StylesModel::selectedStyleChanged, this, [this](const QString &style) {
         styleSettings()->setWidgetStyle(style);
     });
@@ -120,6 +116,18 @@ KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
 }
 
 KCMStyle::~KCMStyle() = default;
+
+GtkPage *KCMStyle::gtkPage()
+{
+    if (!m_gtkPage) {
+        m_gtkPage = new GtkPage(this);
+        connect(m_gtkPage, &GtkPage::gtkThemeSettingsChanged, this, [this]() {
+            setNeedsSave(true);
+        });
+    }
+
+    return m_gtkPage;
+}
 
 StylesModel *KCMStyle::model() const
 {
@@ -239,15 +247,39 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
     m_styleConfigDialog->show();
 }
 
-bool KCMStyle::gtkConfigKdedModuleLoaded()
+bool KCMStyle::gtkConfigKdedModuleLoaded() const
 {
-    QDBusInterface kdedInterface(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QStringLiteral("org.kde.kded5"));
-    QDBusReply<QStringList> loadedKdedModules = kdedInterface.call(QStringLiteral("loadedModules"));
-    return loadedKdedModules.value().contains(QStringLiteral("gtkconfig"));
+    return m_gtkConfigKdedModuleLoaded;
+}
+
+void KCMStyle::checkGtkConfigKdedModuleLoaded()
+{
+    org::kde::kded5 kdedInterface(QStringLiteral("org.kde.kded5"),
+                                  QStringLiteral("/kded"),
+                                  QDBusConnection::sessionBus());
+    auto call = kdedInterface.loadedModules();
+    auto *watcher = new QDBusPendingCallWatcher(call, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+        QDBusPendingReply<QStringList> reply = *watcher;
+        watcher->deleteLater();
+
+        if (reply.isError()) {
+            qWarning() << "Failed to check whether GTK Config KDED module is loaded" << reply.error().message();
+            return;
+        }
+
+        const bool isLoaded = reply.value().contains(QLatin1String("gtkconfig"));
+        if (m_gtkConfigKdedModuleLoaded != isLoaded) {
+            m_gtkConfigKdedModuleLoaded = isLoaded;
+            Q_EMIT gtkConfigKdedModuleLoadedChanged();
+        }
+    });
 }
 
 void KCMStyle::load()
 {
+    checkGtkConfigKdedModuleLoaded();
+
     if (m_gtkPage) {
         m_gtkPage->load();
     }
