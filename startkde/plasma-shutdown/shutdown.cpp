@@ -17,8 +17,6 @@ Shutdown::Shutdown(QObject *parent)
 {
     new ShutdownAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/Shutdown"), QStringLiteral("org.kde.Shutdown"), this);
-
-    // registered as a new service name for easy moving to new process
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.Shutdown"));
 }
 
