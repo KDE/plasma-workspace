@@ -14,6 +14,7 @@
 
 Shutdown::Shutdown(QObject *parent)
     : QObject(parent)
+    , m_quitLock(new QEventLoopLocker())
 {
     new ShutdownAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/Shutdown"), QStringLiteral("org.kde.Shutdown"), this);
@@ -62,7 +63,7 @@ void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
 void Shutdown::logoutCancelled()
 {
     m_shutdownType = KWorkSpace::ShutdownTypeNone;
-    qApp->quit();
+    m_quitLock.reset();
 }
 
 void Shutdown::logoutComplete()
@@ -79,7 +80,7 @@ void Shutdown::logoutComplete()
     } else if (m_shutdownType == KWorkSpace::ShutdownTypeReboot) {
         SessionBackend::self()->reboot();
     } else { // logout
-        qApp->quit();
+        m_quitLock.reset();
     }
 }
 

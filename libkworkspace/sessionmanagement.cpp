@@ -30,6 +30,9 @@
 #include "logoutprompt_interface.h"
 #include "screenlocker_interface.h"
 #include "shutdown_interface.h"
+#include "dbusutil.h"
+
+using namespace DBusUtitls;
 
 // add a constructor with the service names and paths pre-populated
 class LogoutPromptIface : public OrgKdeLogoutPromptInterface
@@ -130,10 +133,10 @@ void SessionManagement::requestShutdown(ConfirmationMode confirmationMode)
     }
     if (confirm) {
         LogoutPromptIface iface;
-        iface.promptShutDown();
+        watchCall(iface.promptShutDown());
     } else {
         ShutdownIface iface;
-        iface.logoutAndShutdown();
+        watchCall(iface.logoutAndShutdown());
     }
 }
 
@@ -148,10 +151,10 @@ void SessionManagement::requestReboot(ConfirmationMode confirmationMode)
     }
     if (confirm) {
         LogoutPromptIface iface;
-        iface.promptReboot();
+        watchCall(iface.promptReboot());
     } else {
         ShutdownIface iface;
-        iface.logoutAndReboot();
+        watchCall(iface.logoutAndReboot());
     }
 }
 
@@ -166,10 +169,10 @@ void SessionManagement::requestLogout(ConfirmationMode confirmationMode)
     }
     if (confirm) {
         LogoutPromptIface iface;
-        iface.promptLogout();
+        watchCall(iface.promptLogout());
     } else {
         ShutdownIface iface;
-        iface.logout();
+        watchCall(iface.logout());
     }
 }
 
@@ -203,7 +206,7 @@ void SessionManagement::lock()
         return;
     }
     OrgFreedesktopScreenSaverInterface iface(QStringLiteral("org.freedesktop.ScreenSaver"), QStringLiteral("/ScreenSaver"), QDBusConnection::sessionBus());
-    iface.Lock();
+    watchCall(iface.Lock());
 }
 
 void SessionManagement::switchUser()
@@ -212,7 +215,7 @@ void SessionManagement::switchUser()
         return;
     }
     OrgKdeScreensaverInterface iface(QStringLiteral("org.freedesktop.ScreenSaver"), QStringLiteral("/ScreenSaver"), QDBusConnection::sessionBus());
-    iface.SwitchUser();
+    watchCall(iface.SwitchUser());
 }
 
 void SessionManagement::saveSession()
@@ -221,7 +224,7 @@ void SessionManagement::saveSession()
         return;
     }
     OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-    ksmserver.saveCurrentSession();
+    watchCall(ksmserver.saveCurrentSession());
 }
 
 #include "sessionmanagement.moc"

@@ -25,7 +25,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #pragma once
 
 #include <QObject>
+#include <QEventLoopLocker>
+
 #include <kworkspace.h>
+#include <memory.h>
 
 class Shutdown : public QObject
 {
@@ -43,4 +46,5 @@ private:
     void startLogout(KWorkSpace::ShutdownType shutdownType);
     void runShutdownScripts();
     KWorkSpace::ShutdownType m_shutdownType;
+    QScopedPointer<QEventLoopLocker> m_quitLock;
 };

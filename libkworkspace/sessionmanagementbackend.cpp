@@ -33,8 +33,11 @@
 #include "consolekit_manager_interface.h"
 #include "login1_manager_interface.h"
 #include "upower_interface.h"
+#include "dbusutil.h"
 
 static SessionBackend *s_backend = nullptr;
+
+using namespace DBusUtitls;
 
 SessionBackend *SessionBackend::self()
 {
@@ -147,30 +150,27 @@ SessionManagement::State LogindSessionBackend::state() const
 
 void LogindSessionBackend::shutdown()
 {
-    // logind will confirm credentials with the caller, if the app quits after sending this
-    // this may fail
-    // its not really needed for suspend tasks where the calling app won't be closing
-    m_login1->PowerOff(true).waitForFinished();
+    watchCall(m_login1->PowerOff(true));
 }
 
 void LogindSessionBackend::reboot()
 {
-    m_login1->Reboot(true).waitForFinished();
+    watchCall(m_login1->Reboot(true));
 }
 
 void LogindSessionBackend::suspend()
 {
-    m_login1->Suspend(true);
+    watchCall(m_login1->Suspend(true));
 }
 
 void LogindSessionBackend::hybridSuspend()
 {
-    m_login1->HybridSleep(true);
+    watchCall(m_login1->HybridSleep(true));
 }
 
 void LogindSessionBackend::hibernate()
 {
-    m_login1->Hibernate(true);
+    watchCall(m_login1->Hibernate(true));
 }
 
 bool LogindSessionBackend::canShutdown() const
@@ -240,22 +240,22 @@ SessionManagement::State ConsoleKitSessionBackend::state() const
 
 void ConsoleKitSessionBackend::shutdown()
 {
-    m_ck->Stop();
+    watchCall(m_ck->Stop());
 }
 
 void ConsoleKitSessionBackend::reboot()
 {
-    m_ck->Restart();
+    watchCall(m_ck->Restart());
 }
 
 void ConsoleKitSessionBackend::suspend()
 {
-    m_upower->Suspend();
+    watchCall(m_upower->Suspend());
 }
 
 void ConsoleKitSessionBackend::hibernate()
 {
-    m_upower->Hibernate();
+    watchCall(m_upower->Hibernate());
 }
 
 bool ConsoleKitSessionBackend::canShutdown() const
