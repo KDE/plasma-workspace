@@ -517,7 +517,21 @@ PlasmaCore.ColorScope {
                 visible: inputPanel.status == Loader.Ready
             }
 
-            PW.KeyboardLayoutButton {
+            PlasmaComponents3.ToolButton {
+                Accessible.description: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to change keyboard layout", "Switch layout")
+                icon.name: "input-keyboard"
+
+                PW.KeyboardLayoutSwitcher {
+                    id: keyboardLayoutSwitcher
+
+                    anchors.fill: parent
+                    acceptedButtons: Qt.NoButton
+                }
+
+                text: keyboardLayoutSwitcher.layoutNames.longName
+                onClicked: keyboardLayoutSwitcher.keyboardLayout.switchToNextLayout()
+
+                visible: keyboardLayoutSwitcher.hasMultipleKeyboardLayouts
             }
 
             Item {
