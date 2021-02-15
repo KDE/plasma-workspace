@@ -107,7 +107,7 @@ int main(int argc, char **argv)
         } else if (!query.isEmpty()) {
             view.query(query);
         } else {
-            view.display();
+            view.toggleDisplay();
         }
     };
 
