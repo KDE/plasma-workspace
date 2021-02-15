@@ -27,7 +27,7 @@
 namespace DBusUtitls {
    /**
     * A lot of DBus calls are used as fire-and-forget.
-    * This utility function prints a warning if the call receives and error.
+    * This utility function prints a warning if the call receives an error.
     *
     * It also holds an EventLoopLocker whilst any call is in flight.
     * This is useful for:
