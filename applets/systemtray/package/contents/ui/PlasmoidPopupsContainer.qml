@@ -28,7 +28,6 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 StackView {
     id: mainStack
     focus: true
-    clip: true
 
     Layout.minimumWidth: units.gridUnit * 12
     Layout.minimumHeight: units.gridUnit * 12
