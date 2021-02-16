@@ -568,25 +568,21 @@ PlasmaComponents3.Page {
                     visible: list.count === 0 && NotificationManager.Server.valid
                 }
 
-                ColumnLayout {
-                    id: serverUnavailableColumn
+                PlasmaExtras.PlaceholderMessage {
+                    anchors.centerIn: parent
+                    width: parent.width - (units.largeSpacing * 4)
 
-                    width: list.width
+                    text: i18n("Notification service not available")
                     visible: list.count === 0 && !NotificationManager.Server.valid
 
-                    PlasmaExtras.Heading {
-                        Layout.fillWidth: true
-                        level: 3
-                        opacity: 0.6
-                        text: i18n("Notification service not available")
-                        wrapMode: Text.WordWrap
-                    }
-
+                    // TODO: port to using the subtitle property once it exists
                     PlasmaComponents3.Label {
                         // Checking valid to avoid creating ServerInfo object if everything is alright
                         readonly property NotificationManager.ServerInfo currentOwner: !NotificationManager.Server.valid ? NotificationManager.Server.currentOwner
                                                                                                                         : null
 
+                        // PlasmaExtras.PlaceholderMessage is internally a ColumnLayout,
+                        // so we can use Layout.whatever properties here
                         Layout.fillWidth: true
                         wrapMode: Text.WordWrap
                         text: currentOwner ? i18nc("Vendor and product name",
