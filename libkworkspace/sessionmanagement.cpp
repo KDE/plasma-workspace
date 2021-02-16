@@ -130,10 +130,10 @@ void SessionManagement::requestShutdown(ConfirmationMode confirmationMode)
     }
     if (confirm) {
         LogoutPromptIface iface;
-        iface.promptShutDown();
+        iface.promptShutDown().waitForFinished();
     } else {
         ShutdownIface iface;
-        iface.logoutAndShutdown();
+        iface.logoutAndShutdown().waitForFinished();
     }
 }
 
@@ -148,10 +148,10 @@ void SessionManagement::requestReboot(ConfirmationMode confirmationMode)
     }
     if (confirm) {
         LogoutPromptIface iface;
-        iface.promptReboot();
+        iface.promptReboot().waitForFinished();
     } else {
         ShutdownIface iface;
-        iface.logoutAndReboot();
+        iface.logoutAndReboot().waitForFinished();
     }
 }
 
@@ -166,10 +166,10 @@ void SessionManagement::requestLogout(ConfirmationMode confirmationMode)
     }
     if (confirm) {
         LogoutPromptIface iface;
-        iface.promptLogout();
+        iface.promptLogout().waitForFinished();
     } else {
         ShutdownIface iface;
-        iface.logout();
+        iface.logout().waitForFinished();
     }
 }
 
