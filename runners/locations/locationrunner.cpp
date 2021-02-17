@@ -52,7 +52,8 @@ LocationsRunner::~LocationsRunner()
 void LocationsRunner::match(Plasma::RunnerContext &context)
 {
     QString term = context.query();
-    QFileInfo tmpInfo(KShell::tildeExpand(term));
+    // If we have a query with an executable and optionally arguments, BUG: 433053
+    QFileInfo tmpInfo(KShell::tildeExpand(KShell::splitArgs(term).constFirst()));
     if (tmpInfo.isFile() && tmpInfo.isExecutable()) {
         return;
     }
