@@ -839,6 +839,7 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
             auto *job = new KIO::OpenUrlJob(appData.url);
             job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
             job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+            job->setRunExecutables(true);
             job->start();
 
             if (!appData.id.isEmpty()) {
