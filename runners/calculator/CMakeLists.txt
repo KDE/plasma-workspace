@@ -25,9 +25,9 @@ set(krunner_calculatorrunner_SRCS
 )
 
 if ( QALCULATE_FOUND )
-    add_library(krunner_calculatorrunner MODULE ${qalculate_engine_SRCS} ${krunner_calculatorrunner_SRCS})
-    kcoreaddons_desktop_to_json(krunner_calculatorrunner plasma-runner-calculator.desktop )
-    target_link_libraries(krunner_calculatorrunner
+    add_library(calculator MODULE ${qalculate_engine_SRCS} ${krunner_calculatorrunner_SRCS})
+    kcoreaddons_desktop_to_json(calculator plasma-runner-calculator.desktop )
+    target_link_libraries(calculator
                           ${QALCULATE_LIBRARIES}
                           ${CLN_LIBRARIES}
                           KF5::KIOCore
@@ -37,9 +37,9 @@ if ( QALCULATE_FOUND )
                           Qt::Widgets
     )
 else ()
-    add_library(krunner_calculatorrunner MODULE ${krunner_calculatorrunner_SRCS})
-    kcoreaddons_desktop_to_json(krunner_calculatorrunner plasma-runner-calculator.desktop )
-    target_link_libraries(krunner_calculatorrunner
+    add_library(calculator MODULE ${krunner_calculatorrunner_SRCS})
+    kcoreaddons_desktop_to_json(calculator plasma-runner-calculator.desktop )
+    target_link_libraries(calculator
                           KF5::Runner
                           KF5::I18n
                           Qt::Gui
@@ -47,4 +47,7 @@ else ()
     )
 endif ()
 
-install(TARGETS krunner_calculatorrunner DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner" )
+install(TARGETS calculator DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner" )
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
