@@ -35,7 +35,12 @@ PlasmaComponents3.Page {
     property bool isBrightnessAvailable
     property bool isKeyboardBrightnessAvailable
 
+    property string activeProfile
+    property var profiles
+    property string inhibitionReason
+
     signal powermanagementChanged(bool disabled)
+    signal activateProfileRequested(string profile)
 
     header: PlasmaExtras.PlasmoidHeading {
         PowerManagementItem {
@@ -106,6 +111,15 @@ PlasmaComponents3.Page {
                         keyboardBrightnessSlider.value = batterymonitor.keyboardBrightness
                     }
                 }
+            }
+
+            PowerProfileItem {
+                width: parent.width
+                activeProfile: dialog.activeProfile
+                profiles: dialog.profiles
+                inhibitionReason: dialog.inhibitionReason
+                visible: profiles.length > 0
+                onActivateProfileRequested: dialog.activateProfileRequested(profile)
             }
         }
 

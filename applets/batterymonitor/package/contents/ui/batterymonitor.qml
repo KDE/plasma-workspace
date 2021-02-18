@@ -231,6 +231,12 @@ Item {
 
         pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
 
+        readonly property string actuallyActiveProfile: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Current Profile"] || "") : ""
+        activeProfile: actuallyActiveProfile
+        profiles: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profiles"] || []) : []
+
+        inhibitionReason: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Performance Inhibited Reason"] || "") : ""
+
         property int cookie1: -1
         property int cookie2: -1
         onPowermanagementChanged: {
@@ -268,6 +274,32 @@ Item {
                 });
             }
             batterymonitor.powermanagementDisabled = disabled
+        }
+
+        PlasmaCore.DataSource {
+            id: notificationSource
+            engine: "notifications"
+        }
+
+        onActivateProfileRequested: {
+            dialogItem.activeProfile = profile
+            const service = pmSource.serviceForSource("PowerDevil");
+            let op = service.operationDescription("setPowerProfile");
+            op.profile = profile;
+
+            let job = service.startOperationCall(op);
+            job.finished.connect((job) => {
+                dialogItem.activeProfile = Qt.binding(() => actuallyActiveProfile)
+                if (!job.result) {
+                    var notifications = notificationSource.serviceForSource("notification")
+                    var operation = notifications.operationDescription("createNotification");
+                    operation.appName = i18n("Battery and Brightness")
+                    operation.appIcon = "dialog-error";
+                    operation.icon = "dialog-error"
+                    operation.body = i18n("Failed to activate %1 mode", profile)
+                    notifications.startOperationCall(operation);
+                }
+            });
         }
     }
 }

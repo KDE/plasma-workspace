@@ -73,6 +73,10 @@ private Q_SLOTS:
     void inhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed);
     void chargeStopThresholdChanged(int threshold);
 
+    void updatePowerProfileCurrentProfile(const QString &profile);
+    void updatePowerProfileChoices(const QStringList &choices);
+    void updatePowerProfilePerformanceInhibitedReason(const QString &reason);
+
 private:
     void populateApplicationData(const QString &name, QString *prettyName, QString *icon);
     QString batteryType(const Solid::Battery *battery) const;

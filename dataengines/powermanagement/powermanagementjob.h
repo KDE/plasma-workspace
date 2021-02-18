@@ -39,6 +39,7 @@ protected:
 private:
     QDBusPendingCall setScreenBrightness(int value, bool silent);
     QDBusPendingCall setKeyboardBrightness(int value, bool silent);
+    QDBusPendingCall setPowerProfile(const QString &value);
     SessionManagement *m_session;
 };
 

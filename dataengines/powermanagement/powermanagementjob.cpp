@@ -40,12 +40,12 @@ PowerManagementJob::~PowerManagementJob()
 {
 }
 
-static void callWhenFinished(const QDBusPendingCall &pending, std::function<void()> func, QObject *parent)
+static void callWhenFinished(const QDBusPendingCall &pending, std::function<void(bool)> func, QObject *parent)
 {
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, parent);
     QObject::connect(watcher, &QDBusPendingCallWatcher::finished, parent, [func](QDBusPendingCallWatcher *watcher) {
         watcher->deleteLater();
-        func();
+        func(!watcher->isError());
     });
 }
 
@@ -142,8 +142,8 @@ void PowerManagementJob::start()
         auto pending = setScreenBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
         callWhenFinished(
             pending,
-            [this] {
-                setResult(true);
+            [this] (bool success) {
+                setResult(success);
             },
             this);
         return;
@@ -151,8 +151,17 @@ void PowerManagementJob::start()
         auto pending = setKeyboardBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
         callWhenFinished(
             pending,
-            [this] {
-                setResult(true);
+            [this] (bool success) {
+                setResult(success);
+            },
+            this);
+        return;
+    } else if (operation == QLatin1String("setPowerProfile")) {
+        auto pending = setPowerProfile(parameters().value(QStringLiteral("profile")).toString());
+        callWhenFinished(
+            pending,
+            [this] (bool success) {
+                setResult(success);
             },
             this);
         return;
@@ -178,6 +187,16 @@ QDBusPendingCall PowerManagementJob::setKeyboardBrightness(int value, bool silen
                                                       QStringLiteral("/org/kde/Solid/PowerManagement/Actions/KeyboardBrightnessControl"),
                                                       QStringLiteral("org.kde.Solid.PowerManagement.Actions.KeyboardBrightnessControl"),
                                                       silent ? "setKeyboardBrightnessSilent" : "setKeyboardBrightness");
+    msg << value;
+    return QDBusConnection::sessionBus().asyncCall(msg);
+}
+
+QDBusPendingCall PowerManagementJob::setPowerProfile(const QString &value)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"),
+                                                      QStringLiteral("/org/kde/Solid/PowerManagement/Actions/PowerProfile"),
+                                                      QStringLiteral("org.kde.Solid.PowerManagement.Actions.PowerProfile"),
+                                                      QStringLiteral("setProfile"));
     msg << value;
     return QDBusConnection::sessionBus().asyncCall(msg);
 }
