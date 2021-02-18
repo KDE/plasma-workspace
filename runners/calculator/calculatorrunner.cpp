@@ -66,6 +66,7 @@ CalculatorRunner::~CalculatorRunner()
 #endif
 }
 
+#ifndef ENABLE_QALCULATE
 void CalculatorRunner::powSubstitutions(QString &cmd)
 {
     if (cmd.contains(QLatin1String("e+"), Qt::CaseInsensitive)) {
@@ -178,6 +179,7 @@ void CalculatorRunner::hexSubstitutions(QString &cmd)
         }
     }
 }
+#endif
 
 void CalculatorRunner::userFriendlySubstitutions(QString &cmd)
 {

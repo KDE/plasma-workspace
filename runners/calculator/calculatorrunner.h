@@ -49,8 +49,10 @@ private:
     QString calculate(const QString &term, bool *isApproximate);
     void userFriendlyMultiplication(QString &cmd);
     void userFriendlySubstitutions(QString &cmd);
+#ifndef ENABLE_QALCULATE
     void powSubstitutions(QString &cmd);
     void hexSubstitutions(QString &cmd);
+#endif
 
 #ifdef ENABLE_QALCULATE
     QalculateEngine *m_engine;
