@@ -29,6 +29,8 @@
 #include <QHash>
 #include <QPair>
 
+#include "properties_interface.h"
+
 class SessionManagement;
 
 using InhibitionInfo = QPair<QString, QString>;
@@ -72,8 +74,16 @@ private Q_SLOTS:
     void triggersLidActionChanged(bool triggers);
     void inhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed);
     void chargeStopThresholdChanged(int threshold);
+    void powerProfilesPropertiesChanged(const QString &iface, const QVariantMap &changed, const QStringList &invalidated);
 
 private:
+    void getPowerProfileActiveProfile();
+    void getPowerProfileProfiles();
+
+    void updatePowerProfileActiveProfile(const QString &activeProfile);
+    void updatePowerProfileProfiles(const QDBusVariant &profileDBusVariant);
+    void updatePowerProfilePerformanceInhibited(const QString &inhibited);
+
     void populateApplicationData(const QString &name, QString *prettyName, QString *icon);
     QString batteryType(const Solid::Battery *battery) const;
     QStringList basicSourceNames() const;
@@ -85,6 +95,9 @@ private:
     QHash<QString, QPair<QString, QString>> m_applicationInfo; // <appname, <pretty name, icon>>
 
     SessionManagement *m_session;
+
+    OrgFreedesktopDBusPropertiesInterface m_powerProfilesPropertiesIface;
+
 };
 
 #endif

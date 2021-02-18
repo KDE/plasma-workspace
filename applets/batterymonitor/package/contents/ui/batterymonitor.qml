@@ -222,6 +222,9 @@ Item {
 
         pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
 
+        activeProfile: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Active Profile"] || "") : ""
+        profiles: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profiles"] || ["lel"]) : ["wat"]
+
         property int cookie1: -1
         property int cookie2: -1
         onPowermanagementChanged: {
@@ -259,6 +262,21 @@ Item {
                 });
             }
             batterymonitor.powermanagementDisabled = !checked
+        }
+
+        onActivateProfileRequested: {
+            const service = pmSource.serviceForSource("PowerDevil");
+            let op = service.operationDescription("setPowerProfile");
+            op.profile = profile;
+
+            let job = service.startOperationCall(op);
+            job.finished.connect((job) => {
+                if (job.error) {
+                    console.warn("Failed to set profile to", profile, job.errorText);
+                    // TODO show message to user?
+                    return;
+                }
+            });
         }
     }
 }

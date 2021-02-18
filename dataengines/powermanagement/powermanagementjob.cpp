@@ -27,6 +27,7 @@
 #include <sessionmanagement.h>
 
 #include <krunner_interface.h>
+#include "properties_interface.h"
 
 #include "powermanagementjob.h"
 
@@ -155,6 +156,29 @@ void PowerManagementJob::start()
                 setResult(true);
             },
             this);
+        return;
+    } else if (operation == QLatin1String("setPowerProfile")) {
+        OrgFreedesktopDBusPropertiesInterface iface(QStringLiteral("net.hadess.PowerProfiles"),
+                                                    QStringLiteral("/net/hadess/PowerProfiles"),
+                                                    QDBusConnection::systemBus());
+        auto reply = iface.Set(QStringLiteral("net.hadess.PowerProfiles"),
+                               QStringLiteral("ActiveProfile"),
+                               QDBusVariant(parameters().value(QStringLiteral("profile"))));
+        QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+        connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+            QDBusPendingReply<> reply = *watcher;
+            watcher->deleteLater();
+
+            if (reply.isError()) {
+                // FIXME doesn't arrive on JS side
+                setError(reply.error().type());
+                setErrorText(reply.error().message());
+                setResult(false);
+                return;
+            }
+
+            setResult(true);
+        });
         return;
     }
 

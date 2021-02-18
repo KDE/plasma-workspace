@@ -47,17 +47,24 @@
 
 static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
 
+static const auto s_powerProfilesIface = QStringLiteral("net.hadess.PowerProfiles");
+
 Q_DECLARE_METATYPE(QList<InhibitionInfo>)
 Q_DECLARE_METATYPE(InhibitionInfo)
+Q_DECLARE_METATYPE(QList<QVariant>)
 
 PowermanagementEngine::PowermanagementEngine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)
     , m_sources(basicSourceNames())
     , m_session(new SessionManagement(this))
+    , m_powerProfilesPropertiesIface(s_powerProfilesIface,
+                                     QStringLiteral("/net/hadess/PowerProfiles"),
+                                     QDBusConnection::systemBus())
 {
     Q_UNUSED(args)
     qDBusRegisterMetaType<QList<InhibitionInfo>>();
     qDBusRegisterMetaType<InhibitionInfo>();
+    qDBusRegisterMetaType<QList<QVariant>>();
     init();
 }
 
@@ -142,6 +149,9 @@ void PowermanagementEngine::init()
                                                    SLOT(chargeStopThresholdChanged(int)))) {
             qDebug() << "error connecting to charge stop threshold changes via dbus";
         }
+
+        connect(&m_powerProfilesPropertiesIface, &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged,
+                this, &PowermanagementEngine::powerProfilesPropertiesChanged);
     }
 }
 
@@ -149,7 +159,7 @@ QStringList PowermanagementEngine::basicSourceNames() const
 {
     QStringList sources;
     sources << QStringLiteral("Battery") << QStringLiteral("AC Adapter") << QStringLiteral("Sleep States") << QStringLiteral("PowerDevil")
-            << QStringLiteral("Inhibitions");
+            << QStringLiteral("Inhibitions") << QStringLiteral("Power Profiles");
     return sources;
 }
 
@@ -362,6 +372,10 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         // any info concerning lock screen/screensaver goes here
     } else if (name == QLatin1String("UserActivity")) {
         setData(QStringLiteral("UserActivity"), QStringLiteral("IdleTime"), KIdleTime::instance()->idleTime());
+    } else if (name == QLatin1String("Power Profiles")) {
+        getPowerProfileActiveProfile();
+        getPowerProfileProfiles();
+        // TODO performance inhibited
     } else {
         qDebug() << "Data for '" << name << "' not found";
         return false;
@@ -567,6 +581,33 @@ void PowermanagementEngine::updateAcPlugState(bool onBattery)
     setData(QStringLiteral("AC Adapter"), QStringLiteral("Plugged in"), !onBattery);
 }
 
+void PowermanagementEngine::updatePowerProfileActiveProfile(const QString &activeProfile)
+{
+    setData(QStringLiteral("Power Profiles"), QStringLiteral("Active Profile"), activeProfile);
+}
+
+void PowermanagementEngine::updatePowerProfileProfiles(const QDBusVariant &profileDBusVariant)
+{
+    // wtf... TODO check signature and what not
+    const auto profiles = qdbus_cast<QList<QVariantMap>>(profileDBusVariant.variant().value<QDBusArgument>());
+
+    QStringList profilesList;
+    profilesList.reserve(profiles.count());
+
+    for (const QVariant &profileVariant : profiles) {
+        // We don't care about the details, just the profile name
+        // TODO or should we, in case new properties get added?
+        profilesList << profileVariant.toMap().value(QStringLiteral("Profile")).toString();
+    }
+
+    setData(QStringLiteral("Power Profiles"), QStringLiteral("Profiles"), profilesList);
+}
+
+void PowermanagementEngine::updatePowerProfilePerformanceInhibited(const QString &inhibited)
+{
+    setData(QStringLiteral("Power Profiles"), QStringLiteral("Performance Inhibited"), inhibited);
+}
+
 void PowermanagementEngine::deviceRemoved(const QString &udi)
 {
     if (m_batterySources.contains(udi)) {
@@ -708,6 +749,65 @@ void PowermanagementEngine::populateApplicationData(const QString &name, QString
 void PowermanagementEngine::chargeStopThresholdChanged(int threshold)
 {
     setData(QStringLiteral("Battery"), QStringLiteral("Charge Stop Threshold"), threshold);
+}
+
+void PowermanagementEngine::getPowerProfileActiveProfile()
+{
+    auto reply = m_powerProfilesPropertiesIface.Get(s_powerProfilesIface, QStringLiteral("ActiveProfile"));
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+        QDBusPendingReply<QVariant> reply = *watcher;
+        watcher->deleteLater();
+
+        if (reply.isError()) {
+            return;
+        }
+
+        updatePowerProfileActiveProfile(reply.value().toString());
+    });
+}
+
+void PowermanagementEngine::getPowerProfileProfiles()
+{
+    auto reply = m_powerProfilesPropertiesIface.Get(s_powerProfilesIface, QStringLiteral("Profiles"));
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+        QDBusPendingReply<QDBusVariant> reply = *watcher;
+        watcher->deleteLater();
+
+        if (reply.isError()) {
+            return;
+        }
+
+        updatePowerProfileProfiles(reply.value());
+    });
+}
+
+// TODO performance inhibited
+
+void PowermanagementEngine::powerProfilesPropertiesChanged(const QString &iface, const QVariantMap &changed, const QStringList &invalidated)
+{
+    if (iface != s_powerProfilesIface) {
+        return;
+    }
+
+    const QString activeProfile = QStringLiteral("ActiveProfile");
+    auto it = changed.find(activeProfile);
+    if (it != changed.end()) {
+        updatePowerProfileActiveProfile(it->toString());
+    } else if (invalidated.contains(activeProfile)) {
+        getPowerProfileActiveProfile();
+    }
+
+    const QString profiles = QStringLiteral("Profiles");
+    it = changed.find(profiles);
+    if (it != changed.end()) {
+        updatePowerProfileProfiles(it->value<QDBusVariant>());
+    } else {
+        getPowerProfileProfiles();
+    }
+
+    // TODO performance inhibited
 }
 
 K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(powermanagement, PowermanagementEngine, "plasma-dataengine-powermanagement.json")
