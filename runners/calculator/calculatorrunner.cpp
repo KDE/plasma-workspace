@@ -231,7 +231,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
 
     bool toHex = cmd.startsWith(QLatin1String("hex="));
     bool startsWithEquals = !toHex && cmd[0] == QLatin1Char('=');
-    const static QRegularExpression hexRegex(QStringLiteral("^=?0x.+"), QRegularExpression::CaseInsensitiveOption);
+    const static QRegularExpression hexRegex(QStringLiteral("0x[0-9a-f]+"), QRegularExpression::CaseInsensitiveOption);
     const bool parseHex = cmd.contains(hexRegex);
     if (!parseHex) {
         userFriendlyMultiplication(cmd);
