@@ -48,4 +48,10 @@
             <label>Whether the OSD should be suppressed</label>
         </entry>
     </group>
+
+    <group name="setPowerProfile">
+        <entry name="profile" type="String">
+            <label>The name of the profile to change the active power profile to</label>
+        </entry>
+    </group>
 </kcfg>
