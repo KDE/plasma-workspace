@@ -4,9 +4,9 @@ set(krunner_locations_SRCS
     locationrunner.cpp
 )
 
-add_library(krunner_locations MODULE ${krunner_locations_SRCS})
-kcoreaddons_desktop_to_json(krunner_locations plasma-runner-locations.desktop)
-target_link_libraries(krunner_locations
+add_library(locations MODULE ${krunner_locations_SRCS})
+kcoreaddons_desktop_to_json(locations plasma-runner-locations.desktop)
+target_link_libraries(locations
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::I18n
@@ -14,4 +14,8 @@ target_link_libraries(krunner_locations
     KF5::Notifications
 )
 
-install(TARGETS krunner_locations DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner" )
+install(TARGETS locations DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner" )
+
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
