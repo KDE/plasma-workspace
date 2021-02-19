@@ -1,6 +1,6 @@
 [Unit]
 Description=KDE Plasma Workspace
-Wants=plasma-ksmserver.service plasma-kcminit.service
+After=plasma-ksmserver.service plasma-kcminit.service
 PartOf=graphical-session.target
 
 [Service]
