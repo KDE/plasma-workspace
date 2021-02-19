@@ -582,7 +582,7 @@ KSMServer::KSMServer(InitFlags flags)
         setenv("SESSION_MANAGER", session_manager, true);
 
         auto updateEnvJob = new UpdateLaunchEnvJob(QStringLiteral("SESSION_MANAGER"), QString::fromLatin1(session_manager));
-        updateEnvJob->start();
+        updateEnvJob->exec();
 
         free(session_manager);
     }
