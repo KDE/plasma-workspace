@@ -1,4 +1,3 @@
-add_subdirectory(activities)
 if(KF5Baloo_FOUND)
  add_subdirectory(baloo)
 endif()
