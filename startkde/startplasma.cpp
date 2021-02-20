@@ -379,6 +379,7 @@ bool useSystemdBoot()
     }
 
     if (configValue == QLatin1String("force")) {
+        qInfo() << "Systemd boot forced";
         return true;
     }
 
@@ -462,8 +463,9 @@ bool startPlasmaSession(bool wayland)
                                                   QStringLiteral("org.freedesktop.systemd1.Manager"),
                                                   QStringLiteral("StartUnit"));
         msg << QStringLiteral("plasma-workspace@%1.target").arg(platform) << QStringLiteral("fail");
-        auto reply = QDBusConnection::sessionBus().call(msg);
-        if (reply.type() == QDBusMessage::ErrorMessage) {
+        QDBusReply<QDBusObjectPath> reply = QDBusConnection::sessionBus().call(msg);
+        if (!reply.isValid()) {
+            qWarning() << "Could not start systemd managed Plasma session:" << reply.error().name() << reply.error().message();
             messageBox(QStringLiteral("startkde: Could not start Plasma session.\n"));
             rc = false;
         }
