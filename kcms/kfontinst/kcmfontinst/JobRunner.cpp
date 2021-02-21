@@ -102,7 +102,9 @@ QUrl CJobRunner::encode(const QString &family, quint32 style, bool system)
 {
     QUrl url(FC::encode(family, style));
 
-    url.setQuery(QUrlQuery({{QStringLiteral("sys"), system ? QStringLiteral("true") : QStringLiteral("false")}}));
+    QUrlQuery query(url);
+    query.addQueryItem(QStringLiteral("sys"), system ? QStringLiteral("true") : QStringLiteral("false"));
+    url.setQuery(query);
     return url;
 }
 
