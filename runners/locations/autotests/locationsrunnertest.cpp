@@ -24,7 +24,7 @@
 #include <QMimeData>
 #include <QTest>
 
-class ConverterRunnerTest : public AbstractRunnerTest
+class LocationsRunnerTest : public AbstractRunnerTest
 {
     Q_OBJECT
 private:
@@ -40,7 +40,7 @@ private Q_SLOTS:
     void testMimeData();
 };
 
-void ConverterRunnerTest::initTestCase()
+void LocationsRunnerTest::initTestCase()
 {
     initProperties();
     const QFileInfoList entries = QDir::home().entryInfoList(QDir::NoDotAndDotDot | QDir::Files | QDir::Hidden);
@@ -54,14 +54,14 @@ void ConverterRunnerTest::initTestCase()
     QVERIFY(!normalHomeFile.isEmpty());
 }
 
-void ConverterRunnerTest::shouldNotProduceResult()
+void LocationsRunnerTest::shouldNotProduceResult()
 {
     QFETCH(QString, query);
     launchQuery(query);
     QVERIFY(manager->matches().isEmpty());
 }
 
-void ConverterRunnerTest::shouldProduceResult()
+void LocationsRunnerTest::shouldProduceResult()
 {
     QFETCH(QString, query);
     QFETCH(QVariant, data);
@@ -71,7 +71,7 @@ void ConverterRunnerTest::shouldProduceResult()
     QCOMPARE(matches.first().data(), data);
 }
 
-void ConverterRunnerTest::shouldNotProduceResult_data()
+void LocationsRunnerTest::shouldNotProduceResult_data()
 {
     QTest::addColumn<QString>("query");
 
@@ -87,7 +87,7 @@ void ConverterRunnerTest::shouldNotProduceResult_data()
     QTest::newRow("nonexistent protocol") << "thisprotocoldoesnotexist:test123";
 }
 
-void ConverterRunnerTest::shouldProduceResult_data()
+void LocationsRunnerTest::shouldProduceResult_data()
 {
     QTest::addColumn<QString>("query");
     QTest::addColumn<QVariant>("data");
@@ -115,13 +115,15 @@ void ConverterRunnerTest::shouldProduceResult_data()
         QTest::newRow("mailto URL") << "mailto:user.user@user.com" << QVariant("mailto:user.user@user.com");
     }
 
-    QTest::newRow("ssh URL") << "ssh:localhost" << QVariant("ssh:localhost");
-    QTest::newRow("help URL") << "help:krunner" << QVariant("help:krunner");
-    QTest::newRow("smb URL") << "smb:server/path" << QVariant("smb:server/path");
-    QTest::newRow("smb URL shorthand syntax") << R"(\\server\path)" << QVariant("smb://server/path");
+    if (KProtocolInfo::isKnownProtocol(QStringLiteral("smb"))) {
+        QTest::newRow("ssh URL") << "ssh:localhost" << QVariant("ssh:localhost");
+        QTest::newRow("help URL") << "help:krunner" << QVariant("help:krunner");
+        QTest::newRow("smb URL") << "smb:server/path" << QVariant("smb:server/path");
+        QTest::newRow("smb URL shorthand syntax") << R"(\\server\path)" << QVariant("smb://server/path");
+    }
 }
 
-void ConverterRunnerTest::testMimeData()
+void LocationsRunnerTest::testMimeData()
 {
     launchQuery(QDir::homePath());
     QMimeData *data = manager->mimeDataForMatch(manager->matches().constFirst());
@@ -129,6 +131,6 @@ void ConverterRunnerTest::testMimeData()
     QCOMPARE(data->urls(), QList<QUrl>{QUrl::fromLocalFile(QDir::homePath())});
 }
 
-QTEST_MAIN(ConverterRunnerTest)
+QTEST_MAIN(LocationsRunnerTest)
 
 #include "locationsrunnertest.moc"
