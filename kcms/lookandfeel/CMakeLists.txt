@@ -138,6 +138,7 @@ if (X11_Xfixes_FOUND)
    target_link_libraries(plasma-apply-lookandfeel X11::Xfixes)
 endif ()
 
-file(CREATE_LINK plasma-apply-lookandfeel ${CMAKE_BINARY_DIR}/bin/lookandfeeltool SYMBOLIC)
-install( FILES ${CMAKE_BINARY_DIR}/bin/lookandfeeltool DESTINATION ${KDE_INSTALL_BINDIR} )
+ADD_CUSTOM_TARGET(plasma-apply-lookandfeel_link ALL
+                  COMMAND ${CMAKE_COMMAND} -E create_symlink ${KDE_INSTALL_FULL_BINDIR}/plasma-apply-lookandfeel ${CMAKE_CURRENT_BINARY_DIR}/lookandfeeltool)
+install( FILES ${CMAKE_CURRENT_BINARY_DIR}/lookandfeeltool DESTINATION ${KDE_INSTALL_FULL_BINDIR}/ )
 install( TARGETS plasma-apply-lookandfeel ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
