@@ -52,7 +52,6 @@ void ConverterRunnerTest::initTestCase()
         }
     }
     QVERIFY(!normalHomeFile.isEmpty());
-    QVERIFY(!executableHomeFile.isEmpty());
 }
 
 void ConverterRunnerTest::shouldNotProduceResult()
@@ -78,7 +77,9 @@ void ConverterRunnerTest::shouldNotProduceResult_data()
 
     QTest::newRow("executable name") << "ls";
     QTest::newRow("executable file path") << "/bin/ls";
-    QTest::newRow("executable file in home dir") << executableHomeFile;
+    if (!executableHomeFile.isEmpty()) {
+        QTest::newRow("executable file in home dir") << executableHomeFile;
+    }
     QTest::newRow("executable path and argument") << "/bin/ls -Al";
     QTest::newRow("non existent file") << QDir::homePath() + "_thisfiledoesnotexist.abc";
     QTest::newRow("non existent file URL") << QUrl::fromLocalFile(QDir::homePath() + "_thisfiledoesnotexist.abc").toString();
@@ -100,8 +101,9 @@ void ConverterRunnerTest::shouldProduceResult_data()
     QTest::newRow("file tilde") << KShell::tildeCollapse(normalHomeFile) << QVariant(QUrl::fromLocalFile(normalHomeFile));
     QTest::newRow("file with $HOME as env variable") << KShell::tildeCollapse(normalHomeFile).replace("~", "$HOME") << QVariant(QUrl::fromLocalFile(normalHomeFile));
     QTest::newRow("file URL") << QUrl::fromLocalFile(normalHomeFile).toString() << QVariant(QUrl::fromLocalFile(normalHomeFile));
-    QTest::newRow("file URL to executable") << QUrl::fromLocalFile(executableHomeFile).toString() << QVariant(QUrl::fromLocalFile(executableHomeFile));
-
+    if (!executableHomeFile.isEmpty()) {
+        QTest::newRow("file URL to executable") << QUrl::fromLocalFile(executableHomeFile).toString() << QVariant(QUrl::fromLocalFile(executableHomeFile));
+    }
     if (KProtocolInfo::isHelperProtocol("vnc")) {
         QTest::newRow("vnc URL") << "vnc:foo" << QVariant("vnc:foo");
     }
