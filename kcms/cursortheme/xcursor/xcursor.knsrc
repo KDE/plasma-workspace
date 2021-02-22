@@ -40,3 +40,4 @@ Categories=X11 Mouse Theme
 InstallPath=.icons
 Uncompress=always
 RemoveDeadEntries=true
+AdoptionCommand=plasma-apply-cursortheme %f

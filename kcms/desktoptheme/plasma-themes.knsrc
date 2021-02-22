@@ -1,5 +1,5 @@
 [KNewStuff3]
-Name=Plasma Styles
+Name=Plasma Themes
 Name[ast]=Estilos de Plasma
 Name[az]=Plasma Üslubu
 Name[ca]=Estils del Plasma
@@ -42,3 +42,4 @@ Uncompress=kpackage
 KPackageType=Plasma/Theme
 TagFilter=ghns_excluded!=1,plasma##version==5
 DownloadTagFilter=plasma##version==5
+AdoptionCommand=plasma-apply-desktoptheme %f

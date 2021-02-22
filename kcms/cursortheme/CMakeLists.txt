@@ -6,6 +6,7 @@ include_directories( ${LIBUSB_INCLUDE_DIR} )
 
 set( libnoinst_SRCS
 xcursor/thememodel.cpp
+xcursor/themeapplicator.cpp
 xcursor/cursortheme.cpp
 xcursor/xcursortheme.cpp
 xcursor/previewwidget.cpp
@@ -59,6 +60,42 @@ endif ()
 install(TARGETS kcm_cursortheme  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms )
 
 kcoreaddons_desktop_to_json(kcm_cursortheme "kcm_cursortheme.desktop")
+
+########### next target ###############
+
+set(plasma-apply-cursortheme_SRCS
+    plasma-apply-cursortheme.cpp
+
+    xcursor/cursortheme.cpp
+    xcursor/themeapplicator.cpp
+    xcursor/thememodel.cpp
+    xcursor/xcursortheme.cpp
+    ../krdb/krdb.cpp
+)
+
+kconfig_add_kcfg_files(plasma-applycursortheme_SRCS cursorthemesettings.kcfgc GENERATE_MOC)
+add_executable(plasma-apply-cursortheme ${plasma-apply-cursortheme_SRCS})
+
+target_link_libraries(plasma-apply-cursortheme
+    Qt::DBus
+    Qt::X11Extras
+    KF5::GuiAddons
+    KF5::I18n
+    KF5::KCMUtils
+    KF5::KDELibs4Support
+    KF5::WindowSystem
+    X11::X11
+    XCB::XCB
+    PW::KWorkspace
+)
+if (X11_Xcursor_FOUND)
+   target_link_libraries(plasma-apply-cursortheme X11::Xcursor)
+endif ()
+if (X11_Xfixes_FOUND)
+   target_link_libraries(plasma-apply-cursortheme X11::Xfixes)
+endif ()
+
+install(TARGETS plasma-apply-cursortheme  DESTINATION ${KDE_BINDIR} )
 
 ########### install files ###############
 

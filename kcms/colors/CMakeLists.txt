@@ -4,6 +4,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_colors\")
 set(kcm_colors_SRCS
     ../krdb/krdb.cpp
     colors.cpp
+    colorsapplicator.cpp
     colorsmodel.cpp
     filterproxymodel.cpp
 )
@@ -41,9 +42,35 @@ endif()
 
 kcoreaddons_desktop_to_json(kcm_colors "kcm_colors.desktop")
 
+
+set(plasma-apply-colorscheme_SRCS
+    plasma-apply-colorscheme.cpp
+    colorsapplicator.cpp
+    colorsmodel.cpp
+    ../krdb/krdb.cpp
+)
+
+kconfig_add_kcfg_files(plasma-apply-colorscheme_SRCS colorssettings.kcfgc GENERATE_MOC)
+
+add_executable(plasma-apply-colorscheme ${plasma-apply-colorscheme_SRCS})
+
+target_link_libraries(plasma-apply-colorscheme
+    Qt::Core
+    Qt::DBus
+    Qt::Gui
+    Qt::X11Extras
+    KF5::GuiAddons
+    KF5::KCMUtils
+    KF5::I18n
+    KF5::WindowSystem
+    PW::KWorkspace
+    X11::X11
+)
+
 install(FILES colorssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES kcm_colors.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(TARGETS kcm_colors DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
+install(TARGETS plasma-apply-colorscheme DESTINATION ${KDE_INSTALL_BINDIR})
 install(FILES colorschemes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 kpackage_install_package(package kcm_colors kcms)

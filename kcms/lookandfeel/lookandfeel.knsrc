@@ -40,3 +40,4 @@ Categories=121
 StandardResource=tmp
 Uncompress=kpackage
 KPackageType=Plasma/LookAndFeel
+AdoptionCommand=plasma-apply-lookandfeel --apply %f

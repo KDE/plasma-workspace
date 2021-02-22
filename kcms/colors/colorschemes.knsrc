@@ -39,3 +39,4 @@ Uncompress=archive
 Categories=KDE Color Scheme KDE4
 UploadCategories=KDE Color Scheme KDE4
 RemoveDeadEntries=true
+AdoptionCommand=plasma-apply-colorscheme %f

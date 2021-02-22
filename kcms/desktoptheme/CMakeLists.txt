@@ -32,9 +32,24 @@ target_link_libraries(kcm_desktoptheme
 
 kcoreaddons_desktop_to_json(kcm_desktoptheme "kcm_desktoptheme.desktop" SERVICE_TYPES kcmodule.desktop)
 
+set(plasma-apply-desktoptheme_SRCS
+    plasma-apply-desktoptheme.cpp
+    themesmodel.cpp
+)
+
+add_executable(plasma-apply-desktoptheme ${plasma-apply-desktoptheme_SRCS})
+
+target_link_libraries(plasma-apply-desktoptheme
+  KF5::CoreAddons
+  KF5::KCMUtils
+  KF5::I18n
+  KF5::Plasma
+)
+
 #this desktop file is installed only for retrocompatibility with sycoca
 install(FILES kcm_desktoptheme.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(FILES plasma-themes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 install(TARGETS kcm_desktoptheme DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
+install(TARGETS plasma-apply-desktoptheme DESTINATION ${KDE_INSTALL_BINDIR})
 
 kpackage_install_package(package kcm_desktoptheme kcms)

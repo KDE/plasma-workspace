@@ -28,17 +28,26 @@ target_link_libraries(plasma_wallpaper_imageplugin
          KF5::NewStuff
          )
 
+set(plasma-apply-wallpaperimage_SRCS
+    plasma-apply-wallpaperimage.cpp
+)
+add_executable(plasma-apply-wallpaperimage ${plasma-apply-wallpaperimage_SRCS})
+target_link_libraries(plasma-apply-wallpaperimage
+    Qt::Core
+    Qt::DBus
+    KF5::I18n
+)
+
 if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
 
 install(TARGETS plasma_wallpaper_imageplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/wallpapers/image)
+install(TARGETS plasma-apply-wallpaperimage DESTINATION ${KDE_INSTALL_BINDIR})
 
 install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/wallpapers/image)
 
-configure_file(wallpaper.knsrc.cmake ${CMAKE_CURRENT_BINARY_DIR}/wallpaper.knsrc)
-configure_file(wallpaper-mobile.knsrc.cmake ${CMAKE_CURRENT_BINARY_DIR}/wallpaper-mobile.knsrc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/wallpaper.knsrc ${CMAKE_CURRENT_BINARY_DIR}/wallpaper-mobile.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
+install(FILES wallpaper.knsrc wallpaper-mobile.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 plasma_install_package(imagepackage org.kde.image wallpapers wallpaper)
 plasma_install_package(slideshowpackage org.kde.slideshow wallpapers wallpaper)

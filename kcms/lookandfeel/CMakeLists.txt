@@ -89,7 +89,7 @@ kpackage_install_package(package kcm_lookandfeel kcms)
 
 ###### Command line tool
 
-set(lookandfeeltool_SRCS
+set(plasma-apply-lookandfeel_SRCS
     lnftool.cpp
     # TODO: load kcm plugin instead of using code copy
     kcm.cpp
@@ -98,18 +98,18 @@ set(lookandfeeltool_SRCS
 )
 
 if (X11_Xcursor_FOUND)
-    set(lookandfeeltool_SRCS
-        ${lookandfeeltool_SRCS}
+    set(plasma-apply-lookandfeel_SRCS
+        ${plasma-apply-lookandfeel_SRCS}
         ../cursortheme/xcursor/cursortheme.cpp
         ../cursortheme/xcursor/xcursortheme.cpp
     )
 endif ()
 
-kconfig_add_kcfg_files(lookandfeeltool_SRCS lookandfeelsettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(plasma-apply-lookandfeel_SRCS lookandfeelsettings.kcfgc GENERATE_MOC)
 
-add_executable(lookandfeeltool ${lookandfeeltool_SRCS})
+add_executable(plasma-apply-lookandfeel ${plasma-apply-lookandfeel_SRCS})
 
-target_link_libraries(lookandfeeltool
+target_link_libraries(plasma-apply-lookandfeel
   KF5::KIOWidgets
   KF5::CoreAddons
   KF5::KCMUtils
@@ -129,14 +129,15 @@ target_link_libraries(lookandfeeltool
 )
 
 if(X11_FOUND)
-    target_link_libraries(lookandfeeltool X11::X11 Qt::X11Extras)
+    target_link_libraries(plasma-apply-lookandfeel X11::X11 Qt::X11Extras)
 endif()
 if (X11_Xcursor_FOUND)
-   target_link_libraries(lookandfeeltool X11::Xcursor)
+   target_link_libraries(plasma-apply-lookandfeel X11::Xcursor)
 endif ()
 if (X11_Xfixes_FOUND)
-   target_link_libraries(lookandfeeltool X11::Xfixes)
+   target_link_libraries(plasma-apply-lookandfeel X11::Xfixes)
 endif ()
 
-install( TARGETS lookandfeeltool ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
-
+file(CREATE_LINK plasma-apply-lookandfeel ${CMAKE_BINARY_DIR}/bin/lookandfeeltool SYMBOLIC)
+install( FILES ${CMAKE_BINARY_DIR}/bin/lookandfeeltool DESTINATION ${KDE_INSTALL_BINDIR} )
+install( TARGETS plasma-apply-lookandfeel ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
