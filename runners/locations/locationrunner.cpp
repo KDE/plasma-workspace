@@ -53,9 +53,12 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
 {
     QString term = context.query();
     // If we have a query with an executable and optionally arguments, BUG: 433053
-    QFileInfo tmpInfo(KShell::tildeExpand(KShell::splitArgs(term).constFirst()));
-    if (tmpInfo.isFile() && tmpInfo.isExecutable()) {
-        return;
+    const QStringList split = KShell::splitArgs(term);
+    if (!split.isEmpty()) {
+        QFileInfo tmpInfo(KShell::tildeExpand(split.constFirst()));
+        if (tmpInfo.isFile() && tmpInfo.isExecutable()) {
+            return;
+        }
     }
     // We want to expand ENV variables like $HOME to get the actual path, BUG: 358221
     KUriFilter::self()->filterUri(term, {QStringLiteral("kshorturifilter")});
