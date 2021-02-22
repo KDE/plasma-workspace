@@ -14,7 +14,7 @@ var data = [{
 }, {
     icon: "system-shutdown",
     operation: "requestShutdown",
-    configKey: "requestShutdown",
+    configKey: "requestShutDown",
     tooltip_mainText: i18n("Shutdown..."),
     tooltip_subText: i18n("Turn off the computer"),
     requires: "Shutdown"
