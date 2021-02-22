@@ -1,6 +1,7 @@
 /*
  *   Copyright (C) 2007 Barış Metin <baris@pardus.org.tr>
  *   Copyright (C) 2010 Matteo Agostinelli <agostinelli@gmail.com>
+ *   Copyright (C) 2021 Alexander Lohnau <alexander.lohnau@gmx.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License version 2 as
