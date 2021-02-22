@@ -37,6 +37,7 @@
 #include <updatelaunchenvjob.h>
 
 #include "startplasma.h"
+#include "systemd/dbus_types.h"
 
 #include "../config-workspace.h"
 #include "debug.h"
@@ -351,17 +352,33 @@ QProcess *setupKSplash()
 
 bool hasSystemdService(const QString &serviceName)
 {
+    static bool s_typesRegistered = false;
+
+    if (!s_typesRegistered) {
+        qDBusRegisterMetaType<ManagerDBusUnit>();
+        qDBusRegisterMetaType<ManagerDBusUnitList>();
+        s_typesRegistered = true;
+    }
+
     auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
                                               QStringLiteral("/org/freedesktop/systemd1"),
                                               QStringLiteral("org.freedesktop.systemd1.Manager"),
                                               QStringLiteral("ListUnitsByNames"));
     msg << QStringList({serviceName});
-    auto reply = QDBusConnection::sessionBus().call(msg);
-    if (reply.type() == QDBusMessage::ErrorMessage) {
+    QDBusPendingReply<ManagerDBusUnitList> reply = QDBusConnection::sessionBus().call(msg);
+
+    // This can happen if systemd is not available. In that case, we clearly don't have the service available
+    if (reply.isError()) {
         return false;
     }
-    // if we have a service returned then it must have found it
-    return !reply.arguments().isEmpty();
+
+    ManagerDBusUnitList unitList = reply.value();
+
+    if (unitList.isEmpty()) {
+        return false;
+    };
+
+    return unitList.first().loadState == QLatin1String("loaded");
 }
 
 bool useSystemdBoot()
