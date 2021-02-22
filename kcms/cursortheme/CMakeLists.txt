@@ -73,7 +73,7 @@ set(plasma-apply-cursortheme_SRCS
     ../krdb/krdb.cpp
 )
 
-kconfig_add_kcfg_files(plasma-applycursortheme_SRCS cursorthemesettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(plasma-apply-cursortheme_SRCS cursorthemesettings.kcfgc GENERATE_MOC)
 add_executable(plasma-apply-cursortheme ${plasma-apply-cursortheme_SRCS})
 
 target_link_libraries(plasma-apply-cursortheme
