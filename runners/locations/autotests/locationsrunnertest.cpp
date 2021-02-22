@@ -85,6 +85,9 @@ void LocationsRunnerTest::shouldNotProduceResult_data()
     QTest::newRow("non existent file URL") << QUrl::fromLocalFile(QDir::homePath() + "_thisfiledoesnotexist.abc").toString();
     QTest::newRow("nonexistent file with $HOME as env variable") << "$HOME/_thisfiledoesnotexist.abc";
     QTest::newRow("nonexistent protocol") << "thisprotocoldoesnotexist:test123";
+    QTest::newRow("empty string") << "";
+    QTest::newRow("missing closing double quote") << "\"";
+    QTest::newRow("missing closing single quote") << "'";
 }
 
 void LocationsRunnerTest::shouldProduceResult_data()
