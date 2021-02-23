@@ -48,7 +48,9 @@ void CalculatorRunnerTest::testQuery_data()
     QTest::newRow("simple power") << "2^3" << "8";
 
     QTest::newRow("x as multiplication sign") << "25x4" << "100";
+#ifdef ENABLE_QALCULATE
     QTest::newRow("single digit factorial") << "5!" << "120";
+#endif
 
     QTest::newRow("hex to decimal lower case") << "0xf" << "15";
     QTest::newRow("hex to decimal upper case") << "0xF" << "15";
@@ -64,6 +66,9 @@ void CalculatorRunnerTest::testQuery_data()
 
 void CalculatorRunnerTest::testApproximation()
 {
+#ifndef ENABLE_QALCULATE
+    QSKIP("Approximations are only with Qalculate supported");
+#endif
     launchQuery("5^1234567");
     QCOMPARE(manager->matches().size(), 1);
     QCOMPARE(manager->matches().constFirst().subtext(), "Approximation");
