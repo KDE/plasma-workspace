@@ -7,6 +7,7 @@
 #include <KRunner/RunnerManager>
 #include <KShell>
 #include <QSignalSpy>
+#include <QStandardPaths>
 
 #include <clocale>
 
@@ -67,11 +68,14 @@ void ShellRunnerTest::testShellrunnerQueries_data()
     QTest::addColumn<QString>("expectedCommand");
     QTest::addColumn<QStringList>("expectedENVs");
 
+    // On The BSDs the path can differ, this will give us the absolute path
+    const QString executablePath = QStandardPaths::findExecutable("true");
+    QVERIFY(!executablePath.isEmpty());
     // clang-format off
     QTest::newRow("Should show result with full executable path")
-        << 1 << "/bin/true" << "/bin/true" << QStringList{};
+        << 1 << executablePath << executablePath << QStringList{};
     QTest::newRow("Should show result with full executable path and args")
-        << 1 << "/bin/true --help" << "/bin/true --help" << QStringList{};
+        << 1 << executablePath + " --help" << executablePath + " --help" << QStringList{};
     QTest::newRow("Should bot show result for non-existent path")
         << 0 << "/bin/trueeeeeee" << QString() << QStringList{};
     QTest::newRow("Should show result for executable name")
