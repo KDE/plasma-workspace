@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: CC0-1.0
+[Desktop Entry]
+Type=Application
+Exec=konversation -qwindowtitle %c %u
+Icon=konversation
+X-DocPath=konversation/index.html
+MimeType=x-scheme-handler/irc;x-scheme-handler/ircs;
+GenericName=IRC Client
+Terminal=false
+Name=Konversation
+Categories=Qt;KDE;Network;IRCClient;
+X-DBUS-StartupType=Unique
+X-DBUS-ServiceName=org.kde.konversation
+StartupNotify=true

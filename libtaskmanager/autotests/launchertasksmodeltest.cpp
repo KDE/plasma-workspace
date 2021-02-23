@@ -1,5 +1,6 @@
 /********************************************************************
 Copyright 2016  Eike Hein <hein@kde.org>
+Copyright 2021  Alexander Lohnau <alexander.lohnau@gmx.de>
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -49,8 +50,10 @@ private:
 void LauncherTasksModelTest::initTestCase()
 {
     qApp->setProperty("org.kde.KActivities.core.disableAutostart", true);
-    m_urlStrings << QLatin1String("file:///usr/share/applications/org.kde.systemmonitor.desktop");
-    m_urlStrings << QLatin1String("file:///usr/share/applications/org.kde.konversation.desktop");
+    m_urlStrings = QStringList{QUrl::fromLocalFile(QFINDTESTDATA("data/applications/org.kde.dolphin.desktop")).toString(),
+                               QUrl::fromLocalFile(QFINDTESTDATA("data/applications/org.kde.konversation.desktop")).toString()};
+    // We don't want the globally installed apps to interfere and want the test to use our data files
+    qputenv("XDG_DATA_DIRS", QFINDTESTDATA("data").toLocal8Bit());
 }
 
 void LauncherTasksModelTest::shouldRoundTripLauncherUrlList()
@@ -113,9 +116,8 @@ void LauncherTasksModelTest::shouldRejectDuplicates()
 {
     LauncherTasksModel m;
 
-    QStringList urlStrings;
-    urlStrings << QLatin1String("file:///usr/share/applications/org.kde.dolphin.desktop");
-    urlStrings << QLatin1String("file:///usr/share/applications/org.kde.dolphin.desktop");
+    const QStringList urlStrings = {QUrl::fromLocalFile(QFINDTESTDATA("data/applications/org.kde.dolphin.desktop")).toString(),
+                                    QUrl::fromLocalFile(QFINDTESTDATA("data/applications/org.kde.dolphin.desktop")).toString()};
 
     QSignalSpy launcherListChangedSpy(&m, &LauncherTasksModel::launcherListChanged);
     QVERIFY(launcherListChangedSpy.isValid());
