@@ -1227,10 +1227,13 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
         disconnect(this, &QuickViewSharedEngine::statusChanged, this, &PanelView::handleQmlStatusChange);
 
         updatePadding();
-        connect(rootObject, SIGNAL(bottomPaddingChanged()), this, SLOT(updatePadding()));
-        connect(rootObject, SIGNAL(topPaddingChanged()), this, SLOT(updatePadding()));
-        connect(rootObject, SIGNAL(rightPaddingChanged()), this, SLOT(updatePadding()));
-        connect(rootObject, SIGNAL(leftPaddingChanged()), this, SLOT(updatePadding()));
+        int paddingSignal = rootObject->metaObject()->indexOfSignal(SIGNAL(bottomPaddingChanged()));
+        if (paddingSignal >= 0) {
+            connect(rootObject, SIGNAL(bottomPaddingChanged()), this, SLOT(updatePadding()));
+            connect(rootObject, SIGNAL(topPaddingChanged()), this, SLOT(updatePadding()));
+            connect(rootObject, SIGNAL(rightPaddingChanged()), this, SLOT(updatePadding()));
+            connect(rootObject, SIGNAL(leftPaddingChanged()), this, SLOT(updatePadding()));
+        }
 
         const QVariant maskProperty = rootObject->property("panelMask");
         if (static_cast<QMetaType::Type>(maskProperty.type()) == QMetaType::QRegion) {
