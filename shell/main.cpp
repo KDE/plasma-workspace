@@ -165,6 +165,10 @@ int main(int argc, char *argv[])
 
         ShellCorona *corona = new ShellCorona(&app);
         corona->setShell(cliOptions.value(shellPluginOption));
+        if (!corona->kPackage().isValid()) {
+            qCritical() << "starting invalid corona" << corona->shell();
+            return 1;
+        }
 
 #ifdef WITH_KUSERFEEDBACKCORE
         auto userFeedback = new UserFeedback(corona, &app);
