@@ -881,7 +881,7 @@ void ShellCorona::requestApplicationConfigSync()
 void ShellCorona::loadDefaultLayout()
 {
     // pre-startup scripts
-    QString script = m_lookAndFeelPackage.filePath("layouts", QString(shell() + "-prelayout.js").toLatin1());
+    QString script = m_lookAndFeelPackage.filePath("layouts", shell() + "-prelayout.js");
     if (!script.isEmpty()) {
         QFile file(script);
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -913,7 +913,7 @@ void ShellCorona::loadDefaultLayout()
     script = m_testModeLayout;
 
     if (script.isEmpty()) {
-        script = m_lookAndFeelPackage.filePath("layouts", QString(shell() + "-layout.js").toLatin1());
+        script = m_lookAndFeelPackage.filePath("layouts", shell() + "-layout.js");
     }
     if (script.isEmpty()) {
         script = kPackage().filePath("defaultlayout");
