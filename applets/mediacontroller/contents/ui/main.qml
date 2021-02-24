@@ -167,9 +167,15 @@ Item {
     Plasmoid.fullRepresentation: ExpandedRepresentation {}
 
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
-        source: root.state === "playing" ? "media-playback-playing" :
-                root.state === "paused" ?  "media-playback-paused" :
-                                           "media-playback-stopped"
+        source: {
+            if (root.state === "playing") {
+                return "media-playback-playing";
+            } else if (root.state === "paused") {
+                return "media-playback-paused";
+            } else {
+                return "media-playback-stopped";
+            }
+        }
         active: compactMouse.containsMouse
 
         MouseArea {
