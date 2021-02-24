@@ -149,7 +149,7 @@ QtObject {
 
         // When no explicit screen corner is configured,
         // restrict notification popup position by horizontal panel width
-        if (notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget
+        if (visualParent && notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget
             && plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
             const visualParentWindow = visualParent.Window.window;
             if (visualParentWindow) {
