@@ -47,6 +47,9 @@ StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *p
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"));
     package.setPath(m_coronaPlugin);
     package.setAllowExternalPaths(true);
+    if (!package.isValid()) {
+        qCritical() << "starting invalid corona" << m_coronaPlugin;
+    }
     setKPackage(package);
 
     Plasma::Theme theme;
