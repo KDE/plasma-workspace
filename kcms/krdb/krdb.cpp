@@ -438,8 +438,13 @@ void runRdb(uint flags)
 
         int dpi;
 
+        //even though this sets up the X rdb, we want to use the value the
+        //user has set to use when under wayland - as X apps will be scaled by the compositor
         if (KWindowSystem::isPlatformWayland()) {
-            dpi = 96; // Don't change the default DPI at all under wayland
+            dpi = cfgfonts.readEntry("forceFontDPIWayland", 0);
+            if (dpi == 0) { //with wayland we want xwayland to run at 96 dpi (unless set otherwise) as we have wayland scaling on top
+                dpi = 96;
+            }
         } else {
             dpi = cfgfonts.readEntry("forceFontDPI", 0);
         }
