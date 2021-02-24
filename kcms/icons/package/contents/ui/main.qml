@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.14 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kcm 1.3 as KCM
@@ -231,11 +231,15 @@ KCM.GridViewKCM {
 
         RowLayout {
             Layout.fillWidth: true
-
-            QtControls.Button {
+            // Using a non-flat toolbutton here, so it matches the items in the actiontoolbar
+            // (a Button is just ever so slightly smaller than a ToolButton, and it would look
+            // kind of silly if the buttons aren't the same size)
+            QtControls.ToolButton {
                 id: iconSizesButton
                 text: i18n("Configure Icon Sizes")
                 icon.name: "transform-scale" // proper icon?
+                display: QtControls.ToolButton.TextBesideIcon
+                flat: false
                 checkable: true
                 checked: iconSizePopupLoader.item && iconSizePopupLoader.item.opened
                 onClicked: {
@@ -244,29 +248,55 @@ KCM.GridViewKCM {
                 }
             }
 
-            Item {
-                Layout.fillWidth: true
-            }
-
-            QtControls.Button {
-                id: installFromFileButton
-                enabled: root.view.enabled
-                text: i18n("Install from File...")
-                icon.name: "document-import"
-                onClicked: fileDialogLoader.active = true
-            }
-
-            NewStuff.Button {
-                id: newStuffButton
-                enabled: root.view.enabled
-                text: i18n("Get New Icons...")
-                configFile: "icons.knsrc"
-                viewMode: NewStuff.Page.ViewMode.Preview
-                Connections {
-                    target: newStuffButton.engine.engine
-                    function onSignalEntryEvent(entry, event) {
-                        kcm.ghnsEntriesChanged();
+            Kirigami.ActionToolBar {
+                flat: false
+                alignment: Qt.AlignRight
+                actions: [
+                    Kirigami.Action {
+                        enabled: root.view.enabled
+                        text: i18n("Install from File...")
+                        icon.name: "document-import"
+                        onTriggered: fileDialogLoader.active = true
+                    },
+                    Kirigami.Action {
+                        enabled: root.view.enabled
+                        text: i18n("Get New Icons...")
+                        icon.name: "get-hot-new-stuff"
+                        onTriggered: { newStuffPage.open(); }
                     }
+                ]
+            }
+        }
+    }
+
+    Loader {
+        id: newStuffPage
+
+        // Use this function to open the dialog. It seems roundabout, but this ensures
+        // that the dialog is not constructed until we want it to be shown the first time,
+        // since it will initialise itself on the first load (which causes it to phone
+        // home) and we don't want that until the user explicitly asks for it.
+        function open() {
+            if (item) {
+                item.open();
+            } else {
+                active = true;
+            }
+        }
+        onLoaded: {
+            item.open();
+        }
+
+        active: false
+        asynchronous: true
+
+        sourceComponent: NewStuff.Dialog {
+            configFile: "icons.knsrc"
+            viewMode: NewStuff.Page.ViewMode.Preview
+            Connections {
+                target: newStuffPage.item.engine.engine
+                function onSignalEntryEvent(entry, event) {
+                    kcm.ghnsEntriesChanged();
                 }
             }
         }
