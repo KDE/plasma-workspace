@@ -1,5 +1,11 @@
 [KNewStuff3]
 Name=Plasma Themes
+Name[ca]=Temes del Plasma
+Name[fr]=Thèmes Plasma
+Name[nl]=Plasma-thema's
+Name[uk]=Теми Плазми
+Name[vi]=Chủ đề Plasma
+Name[x-test]=xxPlasma Themesxx
 
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=Plasma Theme

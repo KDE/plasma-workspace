@@ -1,6 +1,7 @@
 [KNewStuff3]
 Name=Wallpapers
 Name[ast]=Fondos de pantalla
+Name[ca]=Fons de pantalla
 Name[ca@valencia]=Fons de pantalla
 Name[da]=Baggrundsbilleder
 Name[de]=Hintergrundbilder
@@ -20,13 +21,18 @@ Name[ko]=배경 그림
 Name[lt]=Darbalaukio fonai
 Name[lv]=Tapetes
 Name[nl]=Achtergrondafbeeldingen
+Name[nn]=Bakgrunnsbilete
 Name[pa]=ਵਾਲਪੇਪਰ
 Name[pl]=Tapety
 Name[pt_BR]=Papéis de parede
 Name[ru]=Обои
 Name[sk]=Tapety
 Name[sl]=Slike ozadij
+Name[sv]=Skrivbordsunderlägg
 Name[tr]=Duvar Kağıtları
+Name[uk]=Зображення тла
+Name[vi]=Phông nền
+Name[x-test]=xxWallpapersxx
 Name[zh_TW]=桌布
 
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
