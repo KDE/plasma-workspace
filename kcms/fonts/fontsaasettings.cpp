@@ -264,6 +264,7 @@ FontsAASettings::FontsAASettings(QObject *parent)
     addItemInternal("subPixel", defaultSubPixel(), &FontsAASettings::subPixelChanged);
     addItemInternal("hinting", defaultHinting(), &FontsAASettings::hintingChanged);
 
+    connect(this, &FontsAASettings::forceFontDPIWaylandChanged, this, &FontsAASettings::dpiChanged);
     connect(this, &FontsAASettings::forceFontDPIChanged, this, &FontsAASettings::dpiChanged);
 }
 
