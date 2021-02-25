@@ -201,6 +201,21 @@ QJSValue ScriptEngine::V1::desktopForScreen(const QJSValue &param) const
     return m_engine->wrap(containments.empty() ? nullptr : containments[0]);
 }
 
+QJSValue ScriptEngine::V1::screenForConnector(const QJSValue &param) const
+{
+    // this needs to work also for string of numerals, like "20"
+    if (param.isUndefined()) {
+        return m_engine->newError(i18n("screenForConnector requires a connector name"));
+    }
+
+    const QString connector = param.toString();
+    ShellCorona *sc = qobject_cast<ShellCorona *>(m_engine->m_corona);
+    if (sc) {
+        return m_engine->toScriptValue<int>(sc->screenPool()->id(connector));
+    }
+    return m_engine->toScriptValue<int>(-1);
+}
+
 QJSValue ScriptEngine::V1::createActivity(const QJSValue &nameParam, const QString &pluginParam)
 {
     if (!nameParam.isString()) {

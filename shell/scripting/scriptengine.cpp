@@ -202,6 +202,7 @@ void ScriptEngine::setupEngine()
     m_scriptSelf.setProperty(QStringLiteral("desktops"), globalScriptEngineObject.property("desktops"));
     m_scriptSelf.setProperty(QStringLiteral("desktopById"), globalScriptEngineObject.property("desktopById"));
     m_scriptSelf.setProperty(QStringLiteral("desktopForScreen"), globalScriptEngineObject.property("desktopForScreen"));
+    m_scriptSelf.setProperty(QStringLiteral("screenForConnector"), globalScriptEngineObject.property("screenForConnector"));
     m_scriptSelf.setProperty(QStringLiteral("panelById"), globalScriptEngineObject.property("panelById"));
     m_scriptSelf.setProperty(QStringLiteral("panels"), globalScriptEngineObject.property("panels"));
     m_scriptSelf.setProperty(QStringLiteral("fileExists"), globalScriptEngineObject.property("fileExists"));

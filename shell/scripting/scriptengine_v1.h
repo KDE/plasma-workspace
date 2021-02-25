@@ -47,6 +47,7 @@ public:
     Q_INVOKABLE QJSValue desktopById(const QJSValue &id = QJSValue()) const;
     Q_INVOKABLE QJSValue desktopsForActivity(const QJSValue &id = QJSValue()) const;
     Q_INVOKABLE QJSValue desktopForScreen(const QJSValue &screen = QJSValue()) const;
+    Q_INVOKABLE QJSValue screenForConnector(const QJSValue &param = QJSValue()) const;
     Q_INVOKABLE QJSValue createActivity(const QJSValue &nameParam = QJSValue(), const QString &plugin = QString());
     Q_INVOKABLE QJSValue setCurrentActivity(const QJSValue &id = QJSValue());
     Q_INVOKABLE QJSValue setActivityName(const QJSValue &idParam = QJSValue(), const QJSValue &nameParam = QJSValue());
