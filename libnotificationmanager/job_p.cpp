@@ -370,7 +370,13 @@ void JobPrivate::clearDescriptionField(uint number)
 
 void JobPrivate::setDestUrl(const QDBusVariant &urlVariant)
 {
-    const QUrl destUrl = QUrl(urlVariant.variant().toUrl().adjusted(QUrl::StripTrailingSlash)); // urgh
+    QUrl destUrl = QUrl(urlVariant.variant().toUrl().adjusted(QUrl::StripTrailingSlash)); // urgh
+    if (destUrl.scheme().isEmpty()) {
+        qCInfo(NOTIFICATIONMANAGER) << "Job from" << m_applicationName
+                                    << "set a destUrl" << destUrl << "without a scheme (assuming 'file'), this is an application bug!";
+        destUrl.setScheme(QStringLiteral("file"));
+    }
+
     updateField(destUrl, m_destUrl, &Job::destUrlChanged);
 }
 
