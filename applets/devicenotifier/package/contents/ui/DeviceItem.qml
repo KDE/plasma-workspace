@@ -136,7 +136,9 @@ PlasmaExtras.ExpandableListItem {
     }
 
 
-    icon: sdSource.data[udi] == undefined ? "" : sdSource.data[udi].Icon
+    // When there's no better icon available, show a placeholder icon instead
+    // of nothing
+    icon: sdSource.data[udi] == undefined ? "device-notifier" : sdSource.data[udi].Icon
 
     iconEmblem: {
         if (sdSource.data[udi] != undefined) {
