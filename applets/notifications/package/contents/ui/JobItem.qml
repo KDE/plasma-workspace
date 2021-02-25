@@ -46,8 +46,7 @@ ColumnLayout {
     readonly property int totalFiles: jobItem.jobDetails && jobItem.jobDetails.totalFiles || 0
     readonly property var url: {
        if (jobItem.jobState !== NotificationManager.Notifications.JobStateStopped
-               || jobItem.jobError
-               || totalFiles <= 0) {
+               || jobItem.jobError) {
            return null;
        }
 
@@ -222,9 +221,9 @@ ColumnLayout {
             id: openButton
             height: Math.max(implicitHeight, otherFileActionsButton.implicitHeight)
             // would be nice to have the file icon here?
-            text: jobItem.jobDetails && jobItem.jobDetails.totalFiles > 1
-                    ? i18nd("plasma_applet_org.kde.plasma.notifications", "Open Containing Folder")
-                    : i18nd("plasma_applet_org.kde.plasma.notifications", "Open")
+            text: jobItem.jobDetails && jobItem.jobDetails.totalFiles === 1
+                    ? i18nd("plasma_applet_org.kde.plasma.notifications", "Open")
+                    : i18nd("plasma_applet_org.kde.plasma.notifications", "Open Containing Folder")
             onClicked: jobItem.openUrl(jobItem.url)
         }
     }
