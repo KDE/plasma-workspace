@@ -195,13 +195,23 @@ DataControlSource::DataControlSource(struct ::zwlr_data_control_source_v1 *id, Q
     for (const QString &format : mimeData->formats()) {
         offer(format);
     }
+    if(mimeData->hasText())
+    {
+        // ensure GTK applications get this mimetype to avoid them discarding the offer
+        offer(QStringLiteral("text/plain;charset=utf-8"));
+    }
 }
 
 void DataControlSource::zwlr_data_control_source_v1_send(const QString &mime_type, int32_t fd)
 {
     QFile c;
+    QString send_mime_type = mime_type;
+    if(send_mime_type == QStringLiteral("text/plain;charset=utf-8")) {
+        // if we get a request on the fallback mime, send the data from the original mime type
+        send_mime_type = QStringLiteral("text/plain");
+    }
     if (c.open(fd, QFile::WriteOnly, QFile::AutoCloseHandle)) {
-        c.write(m_mimeData->data(mime_type));
+        c.write(m_mimeData->data(send_mime_type));
         c.close();
     }
 }
