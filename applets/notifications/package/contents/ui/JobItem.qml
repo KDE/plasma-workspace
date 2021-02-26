@@ -234,7 +234,6 @@ ColumnLayout {
             when: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended
             PropertyChanges {
                 target: suspendButton
-                tooltip: i18ndc("plasma_applet_org.kde.plasma.notifications", "Resume paused job", "Resume")
                 checked: true
             }
             PropertyChanges {
