@@ -31,7 +31,10 @@
 
 #include <KConfigLoader>
 #include <KDeclarative/QmlObjectSharedEngine>
+#include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
+#include <KNotifications/KNotificationJobUiDelegate>
+#include <KService>
 
 SystemMonitor::SystemMonitor(QObject *parent, const QVariantList &args)
     : Plasma::Applet(parent, args)
@@ -89,6 +92,13 @@ void SystemMonitor::configChanged()
     if (m_sensorFaceController) {
         m_sensorFaceController->reloadConfig();
     }
+}
+
+void SystemMonitor::openSystemMonitor()
+{
+    auto job = new KIO::ApplicationLauncherJob(KService::serviceByDesktopName("org.kde.plasma-systemmonitor"));
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+    job->start();
 }
 
 K_EXPORT_PLASMA_APPLET_WITH_JSON(systemmonitor, SystemMonitor, "metadata.json")

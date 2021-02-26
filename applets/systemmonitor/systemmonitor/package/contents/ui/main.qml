@@ -52,4 +52,19 @@ Item {
     }
 
     Plasmoid.configurationRequired: plasmoid.nativeInterface.faceController.highPrioritySensorIds.length == 0 && plasmoid.nativeInterface.faceController.lowPrioritySensorIds.length == 0 && plasmoid.nativeInterface.faceController.totalSensor.length == 0
+
+    MouseArea {
+        parent: plasmoid
+        anchors.fill: plasmoid
+        acceptedButtons: Qt.MiddleButton
+        onClicked: action_openSystemMonitor()
+    }
+
+    function action_openSystemMonitor() {
+        Plasmoid.nativeInterface.openSystemMonitor()
+    }
+
+    Component.onCompleted: {
+        Plasmoid.setAction("openSystemMonitor", i18nc("@action", "Open System Monitor..."), "utilities-system-monitor")
+    }
 }

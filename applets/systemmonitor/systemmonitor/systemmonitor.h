@@ -49,6 +49,7 @@ public:
     ~SystemMonitor() override;
 
     void init() override;
+    Q_INVOKABLE void openSystemMonitor();
 
     KSysGuard::SensorFaceController *faceController() const;
 
