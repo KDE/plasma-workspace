@@ -60,6 +60,7 @@ MouseArea {
 
     CurrentItemHighLight {
         location: plasmoid.location
+        parent: root
     }
 
     DnD.DropArea {

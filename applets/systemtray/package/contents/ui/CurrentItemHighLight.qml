@@ -22,25 +22,15 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 PlasmaCore.FrameSvgItem {
-    id: expandedItem
+    id: currentItemHighLight
 
     property int location
+
     property bool animationEnabled: true
+    property var highlightedItem: null
 
     z: -1 // always draw behind icons
-    width: parent.width
-    height: parent.height
-    opacity: parent && systemTrayState.expanded ? 1 : 0
-
-    function changeHighlightedItem(nextItem) {
-        parent = nextItem;
-    }
-
-    function changeHighlightedItemNoAnimation(nextItem) {
-        animationEnabled = false;
-        parent = nextItem;
-        animationEnabled = true;
-    }
+    opacity: systemTrayState.expanded ? 1 : 0
 
     imagePath: "widgets/tabbar"
     prefix: {
@@ -68,29 +58,52 @@ PlasmaCore.FrameSvgItem {
         target: systemTrayState
 
         function onActiveAppletChanged() {
-            if (systemTrayState.activeApplet && systemTrayState.activeApplet.parent.inVisibleLayout) {
-                changeHighlightedItem(systemTrayState.activeApplet.parent.container)
-            } else if (systemTrayState.expanded) {
-                changeHighlightedItem(root)
-            }
+            updateHighlightedItem();
         }
 
         function onExpandedChanged() {
-            if (systemTrayState.expanded && !systemTrayState.activeApplet) {
-                changeHighlightedItemNoAnimation(root)
-            }
+            updateHighlightedItem();
         }
+    }
+
+    function updateHighlightedItem() {
+        if (systemTrayState.expanded) {
+            if (systemTrayState.activeApplet && systemTrayState.activeApplet.parent.inVisibleLayout) {
+                changeHighlightedItem(systemTrayState.activeApplet.parent.container);
+            } else { // 'Show hiden items' popup
+                changeHighlightedItem(parent);
+            }
+        } else {
+            highlightedItem = null;
+        }
+    }
+
+    function changeHighlightedItem(nextItem) {
+        if (!highlightedItem) {
+            // do not animate the first appearance
+            animationEnabled = false;
+        }
+
+        highlightedItem = nextItem;
+
+        const p = parent.mapFromItem(highlightedItem, 0, 0)
+        x = p.x;
+        y = p.y;
+        width = highlightedItem.width
+        height = highlightedItem.height
+
+        animationEnabled = true;
     }
 
     Behavior on opacity {
         NumberAnimation {
             duration: PlasmaCore.Units.longDuration
-            easing.type: parent && systemTrayState.expanded ? Easing.OutCubic : Easing.InCubic
+            easing.type: systemTrayState.expanded ? Easing.OutCubic : Easing.InCubic
         }
     }
     Behavior on x {
         id: xAnim
-        enabled: parent && animationEnabled
+        enabled: animationEnabled
         NumberAnimation {
             duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutCubic
@@ -98,7 +111,7 @@ PlasmaCore.FrameSvgItem {
     }
     Behavior on y {
         id: yAnim
-        enabled: parent && animationEnabled
+        enabled: animationEnabled
         NumberAnimation {
             duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutCubic
@@ -106,7 +119,7 @@ PlasmaCore.FrameSvgItem {
     }
     Behavior on width {
         id: widthAnim
-        enabled: parent && animationEnabled
+        enabled: animationEnabled
         NumberAnimation {
             duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutCubic
@@ -114,7 +127,7 @@ PlasmaCore.FrameSvgItem {
     }
     Behavior on height {
         id: heightAnim
-        enabled: parent && animationEnabled
+        enabled: animationEnabled
         NumberAnimation {
             duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutCubic
