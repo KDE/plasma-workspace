@@ -505,6 +505,7 @@ void TimezonesI18n::init()
          {QStringLiteral("Winnipeg"), i18nc("This is a city associated with particular time zone", "Winnipeg")},
          {QStringLiteral("Yakutat"), i18nc("This is a city associated with particular time zone", "Yakutat")},
          {QStringLiteral("Yakutsk"), i18nc("This is a city associated with particular time zone", "Yakutsk")},
+         {QStringLiteral("Yangon"), i18nc("This is a city associated with particular time zone", "Yangon")},
          {QStringLiteral("Yekaterinburg"), i18nc("This is a city associated with particular time zone", "Yekaterinburg")},
          {QStringLiteral("Yellowknife"), i18nc("This is a city associated with particular time zone", "Yellowknife")},
          {QStringLiteral("Yerevan"), i18nc("This is a city associated with particular time zone", "Yerevan")},
