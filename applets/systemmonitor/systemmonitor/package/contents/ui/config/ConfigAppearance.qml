@@ -39,10 +39,12 @@ QQC2.Control {
 
     function saveConfig() {
         contentItem.saveConfig();
+        plasmoid.nativeInterface.faceController.reloadConfig()
     }
-    
-    contentItem: plasmoid.nativeInterface.faceController.appearanceConfigUi
-    
+
+    // Workaround for Bug 424458, when reusing the controller/item things break
+    contentItem: plasmoid.nativeInterface.workaroundController(root).appearanceConfigUi
+
     Connections {
         target: contentItem
         function onConfigurationChanged() {
