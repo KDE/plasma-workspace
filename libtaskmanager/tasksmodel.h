@@ -73,6 +73,7 @@ class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public Abstr
     Q_PROPERTY(bool filterByScreen READ filterByScreen WRITE setFilterByScreen NOTIFY filterByScreenChanged)
     Q_PROPERTY(bool filterByActivity READ filterByActivity WRITE setFilterByActivity NOTIFY filterByActivityChanged)
     Q_PROPERTY(bool filterNotMinimized READ filterNotMinimized WRITE setFilterNotMinimized NOTIFY filterNotMinimizedChanged)
+    Q_PROPERTY(bool filterNotMaximized READ filterNotMaximized WRITE setFilterNotMaximized NOTIFY filterNotMaximized)
 
     Q_PROPERTY(SortMode sortMode READ sortMode WRITE setSortMode NOTIFY sortModeChanged)
     Q_PROPERTY(bool separateLaunchers READ separateLaunchers WRITE setSeparateLaunchers NOTIFY separateLaunchersChanged)
@@ -294,6 +295,23 @@ public:
      * @param filter Whether non-minimized tasks should be filtered.
      **/
     void setFilterNotMinimized(bool filter);
+
+    /**
+     * Whether non-maximized tasks should be filtered. Defaults to
+     * @c false.
+     *
+     * @see setFilterNotMaximized
+     * @returns @c true if non-maximized tasks should be filtered.
+     **/
+    bool filterNotMaximized() const;
+
+    /**
+     * Set whether non-maximized tasks should be filtered.
+     *
+     * @see filterNotMaximized
+     * @param filter Whether non-maximized tasks should be filtered.
+     **/
+    void setFilterNotMaximized(bool filter);
 
     /**
      * The sort mode used in sorting tasks. Defaults to SortAlpha.
@@ -848,6 +866,7 @@ Q_SIGNALS:
     void filterByScreenChanged() const;
     void filterByActivityChanged() const;
     void filterNotMinimizedChanged() const;
+    void filterNotMaximizedChanged() const;
     void sortModeChanged() const;
     void separateLaunchersChanged() const;
     void launchInPlaceChanged() const;

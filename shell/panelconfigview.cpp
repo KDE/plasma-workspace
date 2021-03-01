@@ -289,6 +289,17 @@ PanelView::VisibilityMode PanelConfigView::visibilityMode() const
     return m_panelView->visibilityMode();
 }
 
+void PanelConfigView::setOpacityMode(PanelView::OpacityMode mode)
+{
+    m_panelView->setOpacityMode(mode);
+    emit opacityModeChanged();
+}
+
+PanelView::OpacityMode PanelConfigView::opacityMode() const
+{
+    return m_panelView->opacityMode();
+}
+
 Plasma::FrameSvg::EnabledBorders PanelConfigView::enabledBorders() const
 {
     return m_enabledBorders;

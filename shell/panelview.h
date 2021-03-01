@@ -100,6 +100,18 @@ class PanelView : public PlasmaQuick::ContainmentView
      */
     Q_PROPERTY(VisibilityMode visibilityMode READ visibilityMode WRITE setVisibilityMode NOTIFY visibilityModeChanged)
 
+    /**
+     *  Property that determines how a panel's opacity behaves.
+     *
+     * @see OpacityMode
+     */
+    Q_PROPERTY(OpacityMode opacityMode READ opacityMode WRITE setOpacityMode NOTIFY opacityModeChanged)
+
+    /**
+    /*  Property that determines whether adaptive opacity is used.
+     */
+    Q_PROPERTY(bool adaptiveOpacityEnabled READ adaptiveOpacityEnabled NOTIFY adaptiveOpacityEnabledChanged)
+
 public:
     enum VisibilityMode {
         NormalPanel = 0, /** default, always visible panel, the windowmanager reserves a places for it */
@@ -108,6 +120,14 @@ public:
         WindowsGoBelow, /** always visible, windows will go under the panel, no area reserved */
     };
     Q_ENUM(VisibilityMode)
+
+    /** Enumeration of possible opacity modes. */
+    enum OpacityMode {
+        Adaptive = 0, /** The panel will change opacity depending on the presence of a maximized window */
+        Opaque, /** The panel will always be opaque */
+        Translucent /** The panel will always be translucent */
+    };
+    Q_ENUM(OpacityMode)
 
     explicit PanelView(ShellCorona *corona, QScreen *targetScreen = nullptr, QWindow *parent = nullptr);
     ~PanelView() override;
@@ -147,6 +167,11 @@ public:
     VisibilityMode visibilityMode() const;
     void setVisibilityMode(PanelView::VisibilityMode mode);
 
+    PanelView::OpacityMode opacityMode() const;
+	bool adaptiveOpacityEnabled();
+    void setOpacityMode(PanelView::OpacityMode mode);
+    void updateAdaptiveOpacityEnabled();
+
     /**
      * @returns the geometry of the panel given a distance
      */
@@ -185,6 +210,8 @@ Q_SIGNALS:
     // QWindow does not have a property for screen. Adding this property requires re-implementing the signal
     void screenToFollowChanged(QScreen *screen);
     void visibilityModeChanged();
+    void opacityModeChanged();
+    void adaptiveOpacityEnabledChanged();
 
 protected Q_SLOTS:
     /**
@@ -235,6 +262,7 @@ private:
     ShellCorona *m_corona;
     QTimer m_strutsTimer;
     VisibilityMode m_visibilityMode;
+    OpacityMode m_opacityMode;
     Plasma::Theme m_theme;
     QTimer m_positionPaneltimer;
     QTimer m_unhideTimer;

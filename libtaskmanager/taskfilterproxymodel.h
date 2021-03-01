@@ -52,6 +52,7 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
     Q_PROPERTY(bool filterByScreen READ filterByScreen WRITE setFilterByScreen NOTIFY filterByScreenChanged)
     Q_PROPERTY(bool filterByActivity READ filterByActivity WRITE setFilterByActivity NOTIFY filterByActivityChanged)
     Q_PROPERTY(bool filterNotMinimized READ filterNotMinimized WRITE setFilterNotMinimized NOTIFY filterNotMinimizedChanged)
+    Q_PROPERTY(bool filterNotMaximized READ filterNotMaximized WRITE setFilterNotMaximized NOTIFY filterNotMaximizedChanged)
     Q_PROPERTY(bool filterSkipTaskbar READ filterSkipTaskbar WRITE setFilterSkipTaskbar NOTIFY filterSkipTaskbarChanged)
     Q_PROPERTY(bool filterSkipPager READ filterSkipPager WRITE setFilterSkipPager NOTIFY filterSkipPagerChanged)
 
@@ -213,6 +214,23 @@ public:
     void setFilterNotMinimized(bool filter);
 
     /**
+     * Whether non-maximized tasks should be filtered. Defaults to
+     * @c false.
+     *
+     * @see setFilterNotMaximized
+     * @returns @c true if non-maximized tasks should be filtered.
+     **/
+    bool filterNotMaximized() const;
+
+    /**
+     * Set whether non-maximized tasks should be filtered.
+     *
+     * @see filterNotMaximized
+     * @param filter Whether non-maximized tasks should be filtered.
+     **/
+    void setFilterNotMaximized(bool filter);
+
+    /**
      * Whether tasks which should be omitted from 'task bars' should be
      * filtered. Defaults to @c true.
      *
@@ -285,6 +303,7 @@ Q_SIGNALS:
     void filterByScreenChanged() const;
     void filterByActivityChanged() const;
     void filterNotMinimizedChanged() const;
+    void filterNotMaximizedChanged() const;
     void filterSkipTaskbarChanged() const;
     void filterSkipPagerChanged() const;
     void demandingAttentionSkipsFiltersChanged() const;
