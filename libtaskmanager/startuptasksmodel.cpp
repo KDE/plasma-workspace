@@ -122,7 +122,7 @@ void StartupTasksModel::Private::loadConfig()
             // windows appear is not reliable. Add some grace time to make
             // an overlap more likely, giving a proxy some time to arbitrate
             // between the two.
-            QTimer::singleShot(500, [this, id]() {
+            QTimer::singleShot(500, q, [this, id]() {
                 const int row = startups.indexOf(id);
 
                 if (row != -1) {
