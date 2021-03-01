@@ -52,6 +52,9 @@ public:
 
     KSysGuard::SensorFaceController *faceController() const;
 
+    // Workaround for Bug 424458, when reusing the controller/item things break in ConfigAppearance
+    Q_INVOKABLE KSysGuard::SensorFaceController *workaroundController(QQuickItem *context) const;
+
 public Q_SLOTS:
     void configChanged() override;
 

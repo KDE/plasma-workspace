@@ -77,6 +77,13 @@ KSysGuard::SensorFaceController *SystemMonitor::faceController() const
     return m_sensorFaceController;
 }
 
+KSysGuard::SensorFaceController *SystemMonitor::workaroundController(QQuickItem *context) const
+{
+    KConfigGroup cg = config();
+    return new KSysGuard::SensorFaceController(cg, qmlEngine(context));
+}
+
+
 void SystemMonitor::configChanged()
 {
     if (m_sensorFaceController) {
