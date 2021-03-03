@@ -46,7 +46,6 @@ public Q_SLOTS:
     void startLogout();
 
 private:
-    QAction *m_runCommandAction;
     QAction *m_lockScreenAction;
     QAction *m_logoutAction;
     QAction *m_separator1;
