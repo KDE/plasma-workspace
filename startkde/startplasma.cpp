@@ -319,7 +319,7 @@ void setupPlasmaEnvironment()
     qputenv("KDE_SESSION_UID", QByteArray::number(getuid()));
     qputenv("XDG_CURRENT_DESKTOP", "KDE");
 
-    qputenv("KDE_APPLICATIONS_AS_SCOPE", "1");
+    qputenv("KDE_APPLICATIONS_AS_SERVICE", "1");
 
     // Add kdedefaults dir to allow config defaults overriding from a writable location
     QByteArray currentConfigDirs = qgetenv("XDG_CONFIG_DIRS");
