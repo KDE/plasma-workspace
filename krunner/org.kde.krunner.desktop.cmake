@@ -49,6 +49,7 @@ Name[vi]=KRunner
 Name[x-test]=xxKRunnerxx
 Name[zh_CN]=KRunner
 Name[zh_TW]=KRunner
+Icon=krunner
 OnlyShowIn=KDE;
 Type=Application
 DBusActivatable=True
