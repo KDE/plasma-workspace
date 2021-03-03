@@ -73,6 +73,7 @@ Name[uk]=Сповіщення про пристрої
 Name[vi]=Trình thông báo thiết bị
 Name[wa]=Notifiaedje d' éndjin
 Name[x-test]=xxDevice Notifierxx
+Name[zh_CN]=设备通知器
 Name[zh_TW]=裝置通知
 IconName=device-notifier
 
@@ -96,5 +97,6 @@ Name[sv]=Enhetsstatus
 Name[uk]=Стан пристрою
 Name[vi]=Trạng thái thiết bị
 Name[x-test]=xxDevice Statusxx
+Name[zh_CN]=设备状态
 Sound=Oxygen-Sys-App-Message.ogg
 Action=Sound
