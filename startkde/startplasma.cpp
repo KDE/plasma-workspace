@@ -354,8 +354,8 @@ bool hasSystemdService(const QString &serviceName)
     auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
                                               QStringLiteral("/org/freedesktop/systemd1"),
                                               QStringLiteral("org.freedesktop.systemd1.Manager"),
-                                              QStringLiteral("ListUnitsByNames"));
-    msg << QStringList({serviceName});
+                                              QStringLiteral("ListUnitFilesByPatterns"));
+    msg << QStringList({QStringLiteral("enabled"), QStringLiteral("static")}) << QStringList({serviceName});
     auto reply = QDBusConnection::sessionBus().call(msg);
     if (reply.type() == QDBusMessage::ErrorMessage) {
         return false;
@@ -373,7 +373,7 @@ bool useSystemdBoot()
         return false;
     }
 
-    if (!hasSystemdService(QStringLiteral("plasma-workspace@ANY.target"))) {
+    if (!hasSystemdService(QStringLiteral("plasma-workspace@.target"))) {
         qWarning() << "Systemd boot requested, but plasma services were not found";
         return false;
     }
