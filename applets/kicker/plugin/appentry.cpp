@@ -183,10 +183,13 @@ bool AppEntry::isValid() const
 QIcon AppEntry::icon() const
 {
     if (m_icon.isNull()) {
-        if (QFileInfo::exists(m_service->icon())) {
+        if (m_service && QFileInfo::exists(m_service->icon())) {
             m_icon = QIcon(m_service->icon());
-        } else {
-            m_icon = QIcon::fromTheme(m_service->icon(), QIcon::fromTheme(QStringLiteral("unknown")));
+        } else if (m_service) {
+            m_icon = QIcon::fromTheme(m_service->icon());
+        }
+        if (m_icon.isNull()) {
+            m_icon = QIcon::fromTheme(QStringLiteral("unknown"));
         }
     }
     return m_icon;
