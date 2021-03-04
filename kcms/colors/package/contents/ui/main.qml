@@ -310,21 +310,53 @@ KCM.GridViewKCM {
             }
         }
 
-        RowLayout {
-            Layout.alignment: Qt.AlignRight
+        Kirigami.ActionToolBar {
+            flat: false
+            alignment: Qt.AlignRight
+            actions: [
+                Kirigami.Action {
+                    text: i18n("Install from File...")
+                    icon.name: "document-import"
+                    onTriggered: fileDialogLoader.active = true
+                },
+                Kirigami.Action {
+                    text: i18n("Get New Color Schemes...")
+                    icon.name: "get-hot-new-stuff"
+                    onTriggered: { newStuffPage.open(); }
+                }
+            ]
+        }
+    }
 
-            QtControls.Button {
-                text: i18n("Install from File...")
-                icon.name: "document-import"
-                onClicked: fileDialogLoader.active = true
+    Loader {
+        id: newStuffPage
+
+        // Use this function to open the dialog. It seems roundabout, but this ensures
+        // that the dialog is not constructed until we want it to be shown the first time,
+        // since it will initialise itself on the first load (which causes it to phone
+        // home) and we don't want that until the user explicitly asks for it.
+        function open() {
+            if (item) {
+                item.open();
+            } else {
+                active = true;
             }
+        }
+        onLoaded: {
+            item.open();
+        }
 
-            NewStuff.Button {
-                id: newStuffButton
-                text: i18n("Get New Color Schemes...")
-                configFile: "colorschemes.knsrc"
-                viewMode: NewStuff.Page.ViewMode.Tiles
-                onChangedEntriesChanged: kcm.reloadModel(newStuffButton.changedEntries);
+        active: false
+        asynchronous: true
+
+        sourceComponent: NewStuff.Dialog {
+            configFile: "colorschemes.knsrc"
+            viewMode: NewStuff.Page.ViewMode.Tiles
+            Connections {
+                target: newStuffPage.item
+                function onChangedEntriesChanged() {
+                    kcm.reloadModel(newStuffPage.item.changedEntries);
+                }
             }
         }
     }

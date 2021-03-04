@@ -21,7 +21,7 @@ import QtQuick.Window 2.2 // for Screen
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QtControls
 import QtQuick.Dialogs 1.1 as QtDialogs
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.5 as Kirigami
 import org.kde.newstuff 1.62 as NewStuff
 import org.kde.kcm 1.3 as KCM
 
@@ -91,87 +91,101 @@ KCM.GridViewKCM {
 
         RowLayout {
             id: row1
-                //spacer
-                Item {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
+
+            KCM.SettingStateBinding {
+                configObject: kcm.cursorThemeSettings
+                settingName: "cursorSize"
+                extraEnabledConditions: kcm.canResize
+            }
+
+            QtControls.Label {
+                text: i18n("Size:")
+            }
+            QtControls.ComboBox {
+                id: sizeCombo
+                model: kcm.sizesModel
+                textRole: "display"
+                currentIndex: kcm.cursorSizeIndex(kcm.cursorThemeSettings.cursorSize);
+                onActivated: {
+                    kcm.cursorThemeSettings.cursorSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
+                    kcm.preferredSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
                 }
 
-            RowLayout {
-                id: comboLayout
+                delegate: QtControls.ItemDelegate {
+                    id: sizeComboDelegate
 
-                KCM.SettingStateBinding {
-                    configObject: kcm.cursorThemeSettings
-                    settingName: "cursorSize"
-                    extraEnabledConditions: kcm.canResize
-                }
+                    readonly property int size: parseInt(model.display)
 
-                QtControls.Label {
-                    text: i18n("Size:")
-                }
-                QtControls.ComboBox {
-                    id: sizeCombo
-                    model: kcm.sizesModel
-                    textRole: "display"
-                    currentIndex: kcm.cursorSizeIndex(kcm.cursorThemeSettings.cursorSize);
-                    onActivated: {
-                        kcm.cursorThemeSettings.cursorSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
-                        kcm.preferredSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
-                    }
+                    width: parent.width
+                    highlighted: ListView.isCurrentItem
+                    text: model.display
 
-                    delegate: QtControls.ItemDelegate {
-                        id: sizeComboDelegate
+                    contentItem: RowLayout {
+                        Kirigami.Icon {
+                            source: model.decoration
+                            smooth: true
+                            Layout.preferredWidth: sizeComboDelegate.size / Screen.devicePixelRatio
+                            Layout.preferredHeight: sizeComboDelegate.size / Screen.devicePixelRatio
+                            visible: valid && sizeComboDelegate.size > 0
+                        }
 
-                        readonly property int size: parseInt(model.display)
-
-                        width: parent.width
-                        highlighted: ListView.isCurrentItem
-                        text: model.display
-
-                        contentItem: RowLayout {
-                            Kirigami.Icon {
-                                source: model.decoration
-                                smooth: true
-                                Layout.preferredWidth: sizeComboDelegate.size / Screen.devicePixelRatio
-                                Layout.preferredHeight: sizeComboDelegate.size / Screen.devicePixelRatio
-                                visible: valid && sizeComboDelegate.size > 0
-                            }
-
-                            QtControls.Label {
-                                Layout.fillWidth: true
-                                color: sizeComboDelegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                                text: model[sizeCombo.textRole]
-                                elide: Text.ElideRight
-                            }
+                        QtControls.Label {
+                            Layout.fillWidth: true
+                            color: sizeComboDelegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+                            text: model[sizeCombo.textRole]
+                            elide: Text.ElideRight
                         }
                     }
                 }
             }
-            RowLayout {
-                parent: footerLayout.x + footerLayout.width - comboLayout.width > width ? row1 : row2
-                QtControls.Button {
-                    icon.name: "document-import"
-                    text: i18n("&Install from File...")
-                    onClicked: fileDialogLoader.active = true;
-                    enabled: kcm.canInstall
-                }
-                NewStuff.Button {
-                    id: newStuffButton
-                    enabled: kcm.canInstall
-                    text: i18n("&Get New Cursors...")
-                    configFile: "xcursor.knsrc"
-                    viewMode: NewStuff.Page.ViewMode.Tiles
-                    onChangedEntriesChanged: kcm.ghnsEntriesChanged(newStuffButton.changedEntries);
-                }
+            Kirigami.ActionToolBar {
+                flat: false
+                alignment: Qt.AlignRight
+                actions: [
+                    Kirigami.Action {
+                        text: i18n("&Install from File...")
+                        icon.name: "document-import"
+                        onTriggered: fileDialogLoader.active = true
+                        enabled: kcm.canInstall
+                    },
+                    Kirigami.Action {
+                        text: i18n("&Get New Cursors...")
+                        icon.name: "get-hot-new-stuff"
+                        onTriggered: { newStuffPage.open(); }
+                        enabled: kcm.canInstall
+                    }
+                ]
             }
         }
-        RowLayout {
-            id: row2
-            visible: children.length > 1
-            //spacer
-            Item {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
+    }
+
+    Loader {
+        id: newStuffPage
+
+        // Use this function to open the dialog. It seems roundabout, but this ensures
+        // that the dialog is not constructed until we want it to be shown the first time,
+        // since it will initialise itself on the first load (which causes it to phone
+        // home) and we don't want that until the user explicitly asks for it.
+        function open() {
+            if (item) {
+                item.open();
+            } else {
+                active = true;
+            }
+        }
+        onLoaded: {
+            item.open();
+        }
+
+        active: false
+        asynchronous: true
+
+        sourceComponent: NewStuff.Dialog {
+            configFile: "xcursor.knsrc"
+            viewMode: NewStuff.Page.ViewMode.Tiles
+            Connections {
+                target: newStuffPage.item
+                onChangedEntriesChanged: kcm.ghnsEntriesChanged(newStuffPage.item.changedEntries);
             }
         }
     }
