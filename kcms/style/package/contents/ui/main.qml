@@ -21,7 +21,7 @@
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QtControls
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kcm 1.3 as KCM
 import org.kde.private.kcms.style 1.0 as Private
 
@@ -122,10 +122,11 @@ KCM.GridViewKCM {
         RowLayout {
             Layout.alignment: Qt.AlignLeft
 
-            QtControls.Button {
+            QtControls.ToolButton {
                 id: effectSettingsButton
                 text: i18n("Configure Icons and Toolbars")
                 icon.name: "configure-toolbars" // proper icon?
+                flat: false
                 checkable: true
                 checked: effectSettingsPopupLoader.item && effectSettingsPopupLoader.item.opened
                 onClicked: {
@@ -134,12 +135,17 @@ KCM.GridViewKCM {
                 }
             }
 
-            QtControls.Button {
-                id: gtkSettingsButton
-                visible: kcm.gtkConfigKdedModuleLoaded()
-                text: i18n("Configure GNOME/GTK Application Style...")
-                icon.name: "configure"
-                onClicked: root.openGtkStyleSettings()
+            Kirigami.ActionToolBar {
+                flat: false
+                alignment: Qt.AlignRight
+                actions: [
+                    Kirigami.Action {
+                        visible: kcm.gtkConfigKdedModuleLoaded
+                        text: i18n("Configure GNOME/GTK Application Style...")
+                        icon.name: "configure"
+                        onTriggered: root.openGtkStyleSettings()
+                    }
+                ]
             }
         }
     }
