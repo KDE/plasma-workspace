@@ -139,7 +139,7 @@ PlasmaCore.ColorScope {
             color: root.lightBackground ? PlasmaCore.ColorScope.backgroundColor : "black" // black matches Breeze window decoration and desktopcontainment
             Behavior on opacity {
                 OpacityAnimator {
-                    duration: 1000
+                    duration: PlasmaCore.Units.veryLongDuration * 2
                     easing.type: Easing.InOutQuad
                 }
             }

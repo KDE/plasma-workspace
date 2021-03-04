@@ -63,6 +63,7 @@ Rectangle {
             sourceSize.height: size
         }
 
+        // TODO: port to PlasmaComponents3.BusyIndicator
         Image {
             id: busyIndicator
             //in the middle of the remaining space
@@ -75,8 +76,13 @@ Rectangle {
                 id: rotationAnimator
                 from: 0
                 to: 360
-                duration: 1500
+                // Not using a standard duration value because we don't want the
+                // animation to spin faster or slower based on the user's animation
+                // scaling preferences; it doesn't make sense in this context
+                duration: 2000
                 loops: Animation.Infinite
+                // Don't want it to animate at all if the user has disabled animations
+                running: PlasmaCore.Units.longDuration > 1
             }
         }
         Row {
@@ -108,7 +114,7 @@ Rectangle {
         target: content
         from: 0
         to: 1
-        duration: 1000
+        duration: PlasmaCore.Units.veryLongDuration * 2
         easing.type: Easing.InOutQuad
     }
 }

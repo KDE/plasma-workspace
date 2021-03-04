@@ -56,7 +56,7 @@ KWin.Switcher {
                 id: thumbnailListView
                 model: tabBox.model
                 spacing: units.smallSpacing
-                highlightMoveDuration: 250
+                highlightMoveDuration: PlasmaCore.Units.longDuration
                 highlightResizeDuration: 0
 
                 Connections {

@@ -56,7 +56,7 @@ PlasmaCore.FrameSvgItem {
     SequentialAnimation {
         id: hideAnimation
         // prevent press and hold from flickering
-        PauseAnimation { duration: 100 }
+        PauseAnimation { duration: PlasmaCore.Units.shortDuration }
         NumberAnimation {
             target: osd
             property: "opacity"

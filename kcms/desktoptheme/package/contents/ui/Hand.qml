@@ -70,7 +70,7 @@ PlasmaCore.SvgItem {
         Behavior on angle {
             RotationAnimation {
                 id: anim
-                duration: 200
+                duration: PlasmaCore.Units.longDuration
                 direction: RotationAnimation.Clockwise
                 easing.type: Easing.OutElastic
                 easing.overshoot: 0.5

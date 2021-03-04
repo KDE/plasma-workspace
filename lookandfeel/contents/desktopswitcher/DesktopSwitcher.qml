@@ -149,7 +149,7 @@ KWin.Switcher {
                     prefix: "hover"
                     width: listView.width
                 }
-                highlightMoveDuration: 250
+                highlightMoveDuration: PlasmaCore.Units.longDuration
                 boundsBehavior: Flickable.StopAtBounds
                 Connections {
                     target: tabBox

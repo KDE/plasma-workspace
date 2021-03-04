@@ -90,7 +90,7 @@ PlasmaComponents3.Page {
             target: messageHighlight
             from: 1
             to: 0
-            duration: 3000
+            duration: PlasmaCore.Units.veryLongDuration * 8
             easing.type: Easing.InOutQuad
         }
 

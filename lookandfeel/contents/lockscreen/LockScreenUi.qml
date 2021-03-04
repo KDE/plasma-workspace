@@ -139,7 +139,7 @@ PlasmaCore.ColorScope {
             }
         }
 
-        Component.onCompleted: PropertyAnimation { id: launchAnimation; target: lockScreenRoot; property: "opacity"; from: 0; to: 1; duration: 1000 }
+        Component.onCompleted: PropertyAnimation { id: launchAnimation; target: lockScreenRoot; property: "opacity"; from: 0; to: 1; duration: PlasmaCore.Units.veryLongDuration * 2 }
 
         states: [
             State {
@@ -158,8 +158,8 @@ PlasmaCore.ColorScope {
             from: ""
             to: "onOtherSession"
 
-            PropertyAnimation { id: stateChangeAnimation; properties: "y"; duration: 300; easing.type: Easing.InQuad}
-            PropertyAnimation { properties: "opacity"; duration: 300}
+            PropertyAnimation { id: stateChangeAnimation; properties: "y"; duration: PlasmaCore.Units.longDuration; easing.type: Easing.InQuad}
+            PropertyAnimation { properties: "opacity"; duration: PlasmaCore.Units.longDuration}
 
             onRunningChanged: {
                 // after the animation has finished switch session: since we only animate the transition TO state "onOtherSession"
@@ -192,7 +192,7 @@ PlasmaCore.ColorScope {
             color: lockScreenUi.lightBackground ? PlasmaCore.ColorScope.backgroundColor : "black" // black matches Breeze window decoration and desktopcontainment
             Behavior on opacity {
                 OpacityAnimator {
-                    duration: 1000
+                    duration: PlasmaCore.Units.veryLongDuration * 2
                     easing.type: Easing.InOutQuad
                 }
             }

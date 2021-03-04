@@ -43,7 +43,7 @@ Item {
         NumberAnimation {
             target: wallpaperFader
             property: "factor"
-            duration: 1000
+            duration: PlasmaCore.Units.veryLongDuration * 2
             easing.type: Easing.InOutQuad
         }
     }
@@ -157,7 +157,7 @@ Item {
             NumberAnimation {
                 targets: [mainStack, footer, clock]
                 property: "opacity"
-                duration: units.longDuration
+                duration: units.veryLongDuration
                 easing.type: Easing.InOutQuad
             }
         },
@@ -167,7 +167,7 @@ Item {
             NumberAnimation {
                 targets: [mainStack, footer, clock]
                 property: "opacity"
-                duration: 500
+                duration: PlasmaCore.Units.veryLongDuration
                 easing.type: Easing.InOutQuad
             }
         }
