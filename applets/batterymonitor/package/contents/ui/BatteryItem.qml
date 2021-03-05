@@ -44,7 +44,7 @@ Item {
         id: detailsLayout
 
         property int leftColumnWidth: 0
-        width: units.gridUnit * 11
+        width: PlasmaCore.Units.gridUnit * 11
 
         PlasmaComponents3.Label {
             id: brokenBatteryLabel
@@ -61,7 +61,7 @@ Item {
 
             PlasmaComponents3.Label {
                 id: detailsLabel
-                width: modelData.value && parent ? parent.width - detailsLayout.leftColumnWidth - units.smallSpacing : detailsLayout.leftColumnWidth + units.smallSpacing
+                width: modelData.value && parent ? parent.width - detailsLayout.leftColumnWidth - PlasmaCore.Units.smallSpacing : detailsLayout.leftColumnWidth + PlasmaCore.Units.smallSpacing
                 wrapMode: Text.NoWrap
                 onPaintedWidthChanged: { // horrible HACK to get a column layout
                     if (paintedWidth > detailsLayout.leftColumnWidth) {
@@ -89,7 +89,7 @@ Item {
 
     Column {
         width: parent.width
-        spacing: units.smallSpacing
+        spacing: PlasmaCore.Units.smallSpacing
 
         PlasmaCore.ToolTipArea {
             width: parent.width
@@ -100,7 +100,7 @@ Item {
             mainItem: Row {
                 id: batteryItemToolTip
 
-                property int _s: units.largeSpacing / 2
+                property int _s: PlasmaCore.Units.largeSpacing / 2
 
                 Layout.minimumWidth: implicitWidth + batteryItemToolTip._s
                 Layout.minimumHeight: implicitHeight + batteryItemToolTip._s * 2
@@ -114,7 +114,7 @@ Item {
                 BatteryIcon {
                     x: batteryItemToolTip._s * 2
                     y: batteryItemToolTip._s
-                    width: units.iconSizes.desktop // looks weird and small but that's what DefaultTooltip uses
+                    width: PlasmaCore.Units.iconSizes.desktop // looks weird and small but that's what DefaultTooltip uses
                     height: width
                     batteryType: batteryIcon.batteryType
                     percent: batteryIcon.percent
@@ -142,12 +142,12 @@ Item {
             RowLayout {
                 id: infoRow
                 width: parent.width
-                spacing: units.gridUnit
+                spacing: PlasmaCore.Units.gridUnit
 
                 BatteryIcon {
                     id: batteryIcon
                     Layout.alignment: Qt.AlignTop
-                    width: units.iconSizes.medium
+                    width: PlasmaCore.Units.iconSizes.medium
                     height: width
                     batteryType: model.Type
                     percent: model.Percent
@@ -158,11 +158,11 @@ Item {
                 Column {
                     Layout.fillWidth: true
                     Layout.alignment: batteryItem.isPresent ? Qt.AlignTop : Qt.AlignVCenter
-                    spacing: units.smallSpacing
+                    spacing: PlasmaCore.Units.smallSpacing
 
                     RowLayout {
                         width: parent.width
-                        spacing: units.smallSpacing
+                        spacing: PlasmaCore.Units.smallSpacing
 
                         PlasmaComponents3.Label {
                             id: batteryNameLabel
@@ -201,7 +201,7 @@ Item {
             property bool inListView: true
             anchors {
                 left: parent.left
-                leftMargin: batteryIcon.width + units.gridUnit
+                leftMargin: batteryIcon.width + PlasmaCore.Units.gridUnit
                 right: parent.right
             }
             visible: !!item

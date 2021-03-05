@@ -50,15 +50,15 @@ PlasmaComponents3.Page {
 
     FocusScope {
         anchors.fill: parent
-        anchors.topMargin: units.smallSpacing * 2
+        anchors.topMargin: PlasmaCore.Units.smallSpacing * 2
 
         focus: true
 
         Column {
             id: settingsColumn
             anchors.horizontalCenter: parent.horizontalCenter
-            width: parent.width - units.smallSpacing * 2
-            spacing: Math.round(units.gridUnit / 2)
+            width: parent.width - PlasmaCore.Units.smallSpacing * 2
+            spacing: Math.round(PlasmaCore.Units.gridUnit / 2)
 
             BrightnessItem {
                 id: brightnessSlider
@@ -113,17 +113,17 @@ PlasmaComponents3.Page {
             anchors {
                 horizontalCenter: parent.horizontalCenter
                 top: settingsColumn.bottom
-                topMargin: units.gridUnit
-                leftMargin: units.smallSpacing
+                topMargin: PlasmaCore.Units.gridUnit
+                leftMargin: PlasmaCore.Units.smallSpacing
                 bottom: parent.bottom
             }
-            width: parent.width - units.smallSpacing * 2
+            width: parent.width - PlasmaCore.Units.smallSpacing * 2
 
             ListView {
                 id: batteryList
 
                 boundsBehavior: Flickable.StopAtBounds
-                spacing: Math.round(units.gridUnit / 2)
+                spacing: Math.round(PlasmaCore.Units.gridUnit / 2)
 
                 KeyNavigation.tab: brightnessSlider
                 KeyNavigation.backtab: pmSwitch

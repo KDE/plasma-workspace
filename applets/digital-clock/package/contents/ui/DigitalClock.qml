@@ -114,7 +114,7 @@ Item {
 
                 height: timeLabel.height + (main.showDate || timezoneLabel.visible ? 0.8 * timeLabel.height : 0)
                 width: Math.max(timeLabel.paintedWidth + (main.showDate ? timezoneLabel.paintedWidth : 0), 
-                                timezoneLabel.paintedWidth, dateLabel.paintedWidth) + units.smallSpacing * 2
+                                timezoneLabel.paintedWidth, dateLabel.paintedWidth) + PlasmaCore.Units.smallSpacing * 2
             }
 
             PropertyChanges {
@@ -343,8 +343,8 @@ Item {
                 target: main
                 Layout.fillHeight: false
                 Layout.fillWidth: false
-                Layout.minimumWidth: units.gridUnit * 3
-                Layout.minimumHeight: units.gridUnit * 3
+                Layout.minimumWidth: PlasmaCore.Units.gridUnit * 3
+                Layout.minimumHeight: PlasmaCore.Units.gridUnit * 3
             }
 
             PropertyChanges {
@@ -384,7 +384,7 @@ Item {
 
                 height: 0.7 * timeLabel.height
                 font.pixelSize: 1024
-                width: Math.max(timeLabel.contentWidth, units.gridUnit * 3)
+                width: Math.max(timeLabel.contentWidth, PlasmaCore.Units.gridUnit * 3)
                 verticalAlignment: Text.AlignVCenter
 
                 fontSizeMode: Text.Fit
@@ -478,7 +478,7 @@ Item {
             verticalItemAlignment: Grid.AlignVCenter
 
             flow: Grid.TopToBottom
-            columnSpacing: units.smallSpacing
+            columnSpacing: PlasmaCore.Units.smallSpacing
 
             Rectangle {
                 height: 0.8 * sizehelper.height

@@ -26,7 +26,7 @@ PlasmaCore.ToolTipArea {
     id: tooltip
 
     property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
-    implicitWidth: units.iconSizes.smallMedium
+    implicitWidth: PlasmaCore.Units.iconSizes.smallMedium
     implicitHeight: implicitWidth
 
     subText: systemTrayState.expanded ? i18n("Close popup") : i18n("Show hidden icons")
@@ -36,7 +36,7 @@ PlasmaCore.ToolTipArea {
         anchors.fill: parent
         onClicked: systemTrayState.expanded = !systemTrayState.expanded
 
-        readonly property int arrowAnimationDuration: units.shortDuration
+        readonly property int arrowAnimationDuration: PlasmaCore.Units.shortDuration
 
         PlasmaCore.Svg {
             id: arrowSvg

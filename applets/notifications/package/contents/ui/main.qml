@@ -93,11 +93,11 @@ Item {
         return lines.join("\n");
     }
 
-    Plasmoid.switchWidth: units.gridUnit * 14
+    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 14
     // This is to let the plasmoid expand in a vertical panel for a "sidebar" notification panel
     // The CompactRepresentation size is limited to not have the notification icon grow gigantic
     // but it should still switch over to full rep once there's enough width (disregarding the limited height)
-    Plasmoid.switchHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? 1 : units.gridUnit * 10
+    Plasmoid.switchHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? 1 : PlasmaCore.Units.gridUnit * 10
 
     Plasmoid.onExpandedChanged: {
         if (!plasmoid.expanded) {
@@ -148,7 +148,7 @@ Item {
     Binding {
         target: plasmoid.nativeInterface
         property: "dragPixmapSize"
-        value: units.iconSizes.large
+        value: PlasmaCore.Units.iconSizes.large
         restoreMode: Binding.RestoreBinding
     }
 

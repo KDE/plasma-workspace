@@ -103,7 +103,7 @@ Item {
         }
 
         Item { // spacer
-            width: units.smallSpacing
+            width: PlasmaCore.Units.smallSpacing
             height: 1
         }
 

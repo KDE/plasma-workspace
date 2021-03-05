@@ -119,7 +119,7 @@ DraggableFileArea {
         PlasmaCore.IconItem {
             anchors.centerIn: parent
             width: height
-            height: units.roundToIconSize(parent.height)
+            height: PlasmaCore.Units.roundToIconSize(parent.height)
             usesPlasmaTheme: false
             source: !thumbnailer.busy && !thumbnailer.hasPreview ? thumbnailer.iconName : ""
         }
@@ -135,7 +135,7 @@ DraggableFileArea {
             anchors {
                 top: parent.top
                 right: parent.right
-                margins: units.smallSpacing
+                margins: PlasmaCore.Units.smallSpacing
             }
             Accessible.name: tooltip.text
             icon.name: "application-menu"

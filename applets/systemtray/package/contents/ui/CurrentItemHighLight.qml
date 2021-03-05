@@ -84,7 +84,7 @@ PlasmaCore.FrameSvgItem {
 
     Behavior on opacity {
         NumberAnimation {
-            duration: units.longDuration
+            duration: PlasmaCore.Units.longDuration
             easing.type: parent && systemTrayState.expanded ? Easing.OutCubic : Easing.InCubic
         }
     }
@@ -92,7 +92,7 @@ PlasmaCore.FrameSvgItem {
         id: xAnim
         enabled: parent && animationEnabled
         NumberAnimation {
-            duration: units.longDuration
+            duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutCubic
         }
     }
@@ -100,7 +100,7 @@ PlasmaCore.FrameSvgItem {
         id: yAnim
         enabled: parent && animationEnabled
         NumberAnimation {
-            duration: units.longDuration
+            duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutCubic
         }
     }
@@ -108,7 +108,7 @@ PlasmaCore.FrameSvgItem {
         id: widthAnim
         enabled: parent && animationEnabled
         NumberAnimation {
-            duration: units.longDuration
+            duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutCubic
         }
     }
@@ -116,7 +116,7 @@ PlasmaCore.FrameSvgItem {
         id: heightAnim
         enabled: parent && animationEnabled
         NumberAnimation {
-            duration: units.longDuration
+            duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutCubic
         }
     }

@@ -32,8 +32,8 @@ Item {
     Layout.fillWidth: plasmoid.configuration.expanding
     Layout.fillHeight: plasmoid.configuration.expanding
 
-    Layout.minimumWidth: plasmoid.nativeInterface.containment.editMode ? units.gridUnit * 2 : 1
-    Layout.minimumHeight: plasmoid.nativeInterface.containment.editMode ? units.gridUnit * 2 : 1
+    Layout.minimumWidth: plasmoid.nativeInterface.containment.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
+    Layout.minimumHeight: plasmoid.nativeInterface.containment.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
     Layout.preferredWidth: horizontal
         ? (plasmoid.configuration.expanding ? optimalSize : plasmoid.configuration.length)
         : 0
@@ -43,7 +43,7 @@ Item {
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
-    property int optimalSize: units.largeSpacing
+    property int optimalSize: PlasmaCore.Units.largeSpacing
 
     function action_expanding() {
         plasmoid.configuration.expanding = plasmoid.action("expanding").checked;
@@ -157,9 +157,9 @@ Item {
         var halfContainment = root.horizontal ?plasmoid.nativeInterface.containment.width/2 : plasmoid.nativeInterface.containment.height/2;
 
         if (leftTwin == plasmoid) {
-            root.optimalSize = Math.max(units.smallSpacing, halfContainment - middleItemsSizeHint/2 - leftItemsSizeHint)
+            root.optimalSize = Math.max(PlasmaCore.Units.smallSpacing, halfContainment - middleItemsSizeHint/2 - leftItemsSizeHint)
         } else {
-            root.optimalSize = Math.max(units.smallSpacing, halfContainment - middleItemsSizeHint/2 - rightItemsSizeHint)
+            root.optimalSize = Math.max(PlasmaCore.Units.smallSpacing, halfContainment - middleItemsSizeHint/2 - rightItemsSizeHint)
         }
     }
     

@@ -29,7 +29,7 @@ ActionButton {
     property var action
     onClicked: action()
     Layout.alignment: Qt.AlignTop
-    iconSize: units.iconSizes.huge
+    iconSize: PlasmaCore.Units.iconSizes.huge
     circleVisiblity: activeFocus || containsMouse
     circleOpacity: 0.15 // Selected option's circle is instantly visible
     opacity: activeFocus || containsMouse ? 1 : 0.5
@@ -38,7 +38,7 @@ ActionButton {
     font.pointSize: theme.defaultFont.pointSize + 1
     Behavior on opacity {
         OpacityAnimator {
-            duration: units.longDuration
+            duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutQuad
         }
     }

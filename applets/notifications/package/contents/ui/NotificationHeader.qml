@@ -70,8 +70,8 @@ RowLayout {
         ageLabel.agoText = ageLabel.generateAgoText();
     }
 
-    spacing: units.smallSpacing
-    Layout.preferredHeight: Math.max(applicationNameLabel.implicitHeight, units.iconSizes.small)
+    spacing: PlasmaCore.Units.smallSpacing
+    Layout.preferredHeight: Math.max(applicationNameLabel.implicitHeight, PlasmaCore.Units.iconSizes.small)
 
     Component.onCompleted: updateAgoText()
 
@@ -85,8 +85,8 @@ RowLayout {
 
     PlasmaCore.IconItem {
         id: applicationIconItem
-        Layout.preferredWidth: units.iconSizes.small
-        Layout.preferredHeight: units.iconSizes.small
+        Layout.preferredWidth: PlasmaCore.Units.iconSizes.small
+        Layout.preferredHeight: PlasmaCore.Units.iconSizes.small
         source: notificationHeading.applicationIconSource
         usesPlasmaTheme: false
         visible: valid
@@ -227,11 +227,11 @@ RowLayout {
             Charts.PieChart {
                 id: chart
                 anchors.fill: parent
-                anchors.margins: units.smallSpacing + Math.max(Math.floor(units.devicePixelRatio), 1)
+                anchors.margins: PlasmaCore.Units.smallSpacing + Math.max(Math.floor(PlasmaCore.Units.devicePixelRatio), 1)
 
                 opacity: (notificationHeading.remainingTime > 0 && notificationHeading.remainingTime < notificationHeading.timeout) ? 1 : 0
                 Behavior on opacity {
-                    NumberAnimation { duration: units.longDuration }
+                    NumberAnimation { duration: PlasmaCore.Units.longDuration }
                 }
 
                 range { from: 0; to: notificationHeading.timeout; automatic: false }
@@ -239,7 +239,7 @@ RowLayout {
                 valueSources: Charts.SingleValueSource { value: notificationHeading.remainingTime }
                 colorSource: Charts.SingleValueSource { value: theme.highlightColor }
 
-                thickness: Math.max(Math.floor(units.devicePixelRatio), 1) * 5
+                thickness: Math.max(Math.floor(PlasmaCore.Units.devicePixelRatio), 1) * 5
 
                 transform: Scale { origin.x: chart.width / 2; xScale: -1 }
             }

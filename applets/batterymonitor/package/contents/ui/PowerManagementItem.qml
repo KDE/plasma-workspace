@@ -33,7 +33,7 @@ ColumnLayout {
 
     RowLayout {
         Layout.fillWidth: true
-        Layout.leftMargin: units.smallSpacing
+        Layout.leftMargin: PlasmaCore.Units.smallSpacing
 
         PlasmaComponents3.CheckBox {
             id: pmCheckBox
@@ -45,8 +45,8 @@ ColumnLayout {
 
     ColumnLayout {
         Layout.fillWidth: true
-        Layout.leftMargin: units.gridUnit + units.smallSpacing // width of checkbox and spacer
-        spacing: units.smallSpacing
+        Layout.leftMargin: PlasmaCore.Units.gridUnit + PlasmaCore.Units.smallSpacing // width of checkbox and spacer
+        spacing: PlasmaCore.Units.smallSpacing
 
         InhibitionHint {
             Layout.fillWidth: true

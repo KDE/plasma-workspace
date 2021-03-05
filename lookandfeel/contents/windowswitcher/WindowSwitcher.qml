@@ -55,7 +55,7 @@ KWin.Switcher {
             ListView {
                 id: thumbnailListView
                 model: tabBox.model
-                spacing: units.smallSpacing
+                spacing: PlasmaCore.Units.smallSpacing
                 highlightMoveDuration: PlasmaCore.Units.longDuration
                 highlightResizeDuration: 0
 
@@ -83,9 +83,9 @@ KWin.Switcher {
                         id: delegateColumn
                         anchors.horizontalCenter: parent.horizontalCenter
                         // anchors.centerIn causes layouting glitches
-                        y: units.smallSpacing
-                        width: parent.width - 2 * units.smallSpacing
-                        spacing: units.smallSpacing
+                        y: PlasmaCore.Units.smallSpacing
+                        width: parent.width - 2 * PlasmaCore.Units.smallSpacing
+                        spacing: PlasmaCore.Units.smallSpacing
 
                         focus: index == thumbnailListView.currentIndex
                         Accessible.name: model.caption
@@ -102,12 +102,12 @@ KWin.Switcher {
                         }
 
                         RowLayout {
-                            spacing: units.smallSpacing
+                            spacing: PlasmaCore.Units.smallSpacing
                             Layout.fillWidth: true
 
                             PlasmaCore.IconItem {
-                                Layout.preferredHeight: units.iconSizes.medium
-                                Layout.preferredWidth: units.iconSizes.medium
+                                Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
+                                Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
                                 source: model.icon
                                 usesPlasmaTheme: false
                             }

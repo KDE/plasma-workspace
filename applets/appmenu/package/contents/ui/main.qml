@@ -71,8 +71,8 @@ Item {
         Layout.minimumHeight: implicitHeight
 
         flow: root.vertical ? GridLayout.TopToBottom : GridLayout.LeftToRight
-        rowSpacing: units.smallSpacing
-        columnSpacing: units.smallSpacing
+        rowSpacing: PlasmaCore.Units.smallSpacing
+        columnSpacing: PlasmaCore.Units.smallSpacing
 
         Component.onCompleted: {
             plasmoid.nativeInterface.buttonGrid = buttonGrid

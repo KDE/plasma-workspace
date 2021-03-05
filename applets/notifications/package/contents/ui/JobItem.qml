@@ -118,7 +118,7 @@ ColumnLayout {
     RowLayout {
         id: progressRow
         Layout.fillWidth: true
-        spacing: units.smallSpacing
+        spacing: PlasmaCore.Units.smallSpacing
 
         PlasmaComponents3.ProgressBar {
             id: progressBar
@@ -184,7 +184,7 @@ ColumnLayout {
 
     Flow { // it's a Flow so it can wrap if too long
         Layout.fillWidth: true
-        spacing: units.smallSpacing
+        spacing: PlasmaCore.Units.smallSpacing
         // We want the actions to be right-aligned but Flow also reverses
         // the order of items, so we put them in reverse order
         layoutDirection: Qt.RightToLeft

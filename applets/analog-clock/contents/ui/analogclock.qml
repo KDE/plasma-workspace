@@ -30,8 +30,8 @@ import org.kde.plasma.components 3.0 as PlasmaComponents
 Item {
     id: analogclock
 
-    width: units.gridUnit * 15
-    height: units.gridUnit * 15
+    width: PlasmaCore.Units.gridUnit * 15
+    height: PlasmaCore.Units.gridUnit * 15
     property int hours
     property int minutes
     property int seconds
@@ -82,8 +82,8 @@ Item {
 
     Plasmoid.compactRepresentation: Item {
         id: representation
-        Layout.minimumWidth: plasmoid.formFactor !== PlasmaCore.Types.Vertical ? representation.height : units.gridUnit
-        Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? representation.width : units.gridUnit
+        Layout.minimumWidth: plasmoid.formFactor !== PlasmaCore.Types.Vertical ? representation.height : PlasmaCore.Units.gridUnit
+        Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? representation.width : PlasmaCore.Units.gridUnit
 
         MouseArea {
             anchors.fill: parent
@@ -233,8 +233,8 @@ Item {
         }
     }
     Plasmoid.fullRepresentation: PlasmaCalendar.MonthView {
-        Layout.minimumWidth: units.gridUnit * 20
-        Layout.minimumHeight: units.gridUnit * 20
+        Layout.minimumWidth: PlasmaCore.Units.gridUnit * 20
+        Layout.minimumHeight: PlasmaCore.Units.gridUnit * 20
 
         today: dataSource.data["Local"]["DateTime"]
     }

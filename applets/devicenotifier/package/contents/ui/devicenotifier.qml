@@ -54,8 +54,8 @@ Item {
     // causing our "No devices" heading to overlap with the remaining device
     property int pendingDelegateRemoval: 0
 
-    Plasmoid.switchWidth: units.gridUnit * 10
-    Plasmoid.switchHeight: units.gridUnit * 10
+    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 10
+    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 10
 
     Plasmoid.toolTipMainText: filterModel.count > 0 && filterModel.get(0) ? i18n("Most Recent Device") : i18n("No Devices Available")
     Plasmoid.toolTipSubText: {
@@ -96,8 +96,8 @@ Item {
 
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
         source: devicenotifier.popupIcon
-        width: units.iconSizes.medium;
-        height: units.iconSizes.medium;
+        width: PlasmaCore.Units.iconSizes.medium;
+        height: PlasmaCore.Units.iconSizes.medium;
         active: compactMouse.containsMouse
         MouseArea {
             id: compactMouse

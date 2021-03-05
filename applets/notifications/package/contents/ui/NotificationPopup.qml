@@ -158,7 +158,7 @@ PlasmaCore.Dialog {
                 from: timer.interval
                 to: 0
                 duration: timer.interval
-                running: timer.running && units.longDuration > 1
+                running: timer.running && PlasmaCore.Units.longDuration > 1
             }
 
             NotificationItem {

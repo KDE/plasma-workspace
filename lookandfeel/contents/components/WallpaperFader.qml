@@ -157,7 +157,7 @@ Item {
             NumberAnimation {
                 targets: [mainStack, footer, clock]
                 property: "opacity"
-                duration: units.veryLongDuration
+                duration: PlasmaCore.Units.veryLongDuration
                 easing.type: Easing.InOutQuad
             }
         },

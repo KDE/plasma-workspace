@@ -26,10 +26,10 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 Item {
     id: tooltipContentItem
 
-    property int preferredTextWidth: units.gridUnit * 20
+    property int preferredTextWidth: PlasmaCore.Units.gridUnit * 20
 
-    width: childrenRect.width + units.gridUnit
-    height: childrenRect.height + units.gridUnit
+    width: childrenRect.width + PlasmaCore.Units.gridUnit
+    height: childrenRect.height + PlasmaCore.Units.gridUnit
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -40,7 +40,7 @@ Item {
         anchors {
             left: parent.left
             top: parent.top
-            margins: units.gridUnit / 2
+            margins: PlasmaCore.Units.gridUnit / 2
         }
 
         spacing: 0

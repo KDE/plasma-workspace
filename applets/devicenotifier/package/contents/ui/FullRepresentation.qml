@@ -35,8 +35,8 @@ PlasmaComponents3.Page {
     id: fullRep
     property bool spontaneousOpen: false
 
-    Layout.minimumWidth: units.gridUnit * 12
-    Layout.minimumHeight: units.gridUnit * 12
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 12
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 12
 
     header: PlasmaExtras.BasicPlasmoidHeading {
         visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) || devicenotifier.mountedRemovables > 1
@@ -159,7 +159,7 @@ PlasmaComponents3.Page {
 
             PlasmaExtras.PlaceholderMessage {
                 anchors.centerIn: parent
-                width: parent.width - (units.largeSpacing * 4)
+                width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
                 text: plasmoid.configuration.removableDevices ? i18n("No removable devices attached") : i18n("No disks available")
                 visible: notifierDialog.count === 0 && !devicenotifier.pendingDelegateRemoval
             }

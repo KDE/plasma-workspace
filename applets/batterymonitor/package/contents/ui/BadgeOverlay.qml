@@ -28,9 +28,9 @@ Rectangle {
     property Item icon
 
     color: PlasmaCore.ColorScope.backgroundColor
-    width: Math.max(units.gridUnit, label.width + units.devicePixelRatio * 2)
+    width: Math.max(PlasmaCore.Units.gridUnit, label.width + PlasmaCore.Units.devicePixelRatio * 2)
     height: label.height
-    radius: units.devicePixelRatio * 3
+    radius: PlasmaCore.Units.devicePixelRatio * 3
     opacity: 0.9
 
     PlasmaComponents3.Label {
@@ -43,7 +43,7 @@ Rectangle {
     layer.effect: DropShadow {
         horizontalOffset: 0
         verticalOffset: 0
-        radius: units.devicePixelRatio * 2
+        radius: PlasmaCore.Units.devicePixelRatio * 2
         samples: radius*2
         color: Qt.rgba(0, 0, 0, 0.5)
     }

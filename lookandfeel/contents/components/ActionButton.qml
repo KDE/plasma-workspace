@@ -36,15 +36,15 @@ Item {
 
     activeFocusOnTab: true
 
-    property int iconSize: units.gridUnit * 3
+    property int iconSize: PlasmaCore.Units.gridUnit * 3
 
-    implicitWidth: Math.max(iconSize + units.largeSpacing * 2, label.contentWidth)
-    implicitHeight: iconSize + units.smallSpacing + label.implicitHeight
+    implicitWidth: Math.max(iconSize + PlasmaCore.Units.largeSpacing * 2, label.contentWidth)
+    implicitHeight: iconSize + PlasmaCore.Units.smallSpacing + label.implicitHeight
 
     opacity: activeFocus || containsMouse ? 1 : 0.85
         Behavior on opacity {
             PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
-                duration: units.longDuration
+                duration: PlasmaCore.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
     }
@@ -52,14 +52,14 @@ Item {
     Rectangle {
         id: iconCircle
         anchors.centerIn: icon
-        width: iconSize + units.smallSpacing
+        width: iconSize + PlasmaCore.Units.smallSpacing
         height: width
         radius: width / 2
         color: softwareRendering ?  PlasmaCore.ColorScope.backgroundColor : PlasmaCore.ColorScope.textColor
         opacity: root.activeFocus || containsMouse ? (softwareRendering ? 0.8 : 0.15) : (softwareRendering ? 0.6 : 0)
         Behavior on opacity {
                 PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
         }
@@ -75,7 +75,7 @@ Item {
         opacity: 0.15
         Behavior on scale {
                 PropertyAnimation {
-                    duration: units.shortDuration
+                    duration: PlasmaCore.Units.shortDuration
                     easing.type: Easing.InOutQuart
                 }
         }
@@ -99,7 +99,7 @@ Item {
         font.pointSize: root.fontSize
         anchors {
             top: icon.bottom
-            topMargin: (softwareRendering ? 1.5 : 1) * units.smallSpacing
+            topMargin: (softwareRendering ? 1.5 : 1) * PlasmaCore.Units.smallSpacing
             left: parent.left
             right: parent.right
         }

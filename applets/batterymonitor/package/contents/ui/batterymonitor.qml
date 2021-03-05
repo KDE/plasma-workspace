@@ -29,8 +29,8 @@ import "logic.js" as Logic
 
 Item {
     id: batterymonitor
-    Plasmoid.switchWidth: units.gridUnit * 10
-    Plasmoid.switchHeight: units.gridUnit * 10
+    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 10
+    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 10
 
     LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -209,8 +209,8 @@ Item {
 
     Plasmoid.fullRepresentation: PopupDialog {
         id: dialogItem
-        Layout.minimumWidth: units.iconSizes.medium * 9
-        Layout.minimumHeight: units.gridUnit * 15
+        Layout.minimumWidth: PlasmaCore.Units.iconSizes.medium * 9
+        Layout.minimumHeight: PlasmaCore.Units.gridUnit * 15
         // TODO Probably needs a sensible preferredHeight too
 
         model: plasmoid.expanded ? batteries : null

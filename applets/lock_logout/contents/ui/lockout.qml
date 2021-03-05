@@ -49,7 +49,7 @@ Flow {
     Layout.preferredWidth: Layout.minimumWidth
     Layout.preferredHeight: Layout.minimumHeight
 
-    readonly property int minButtonSize: units.iconSizes.small
+    readonly property int minButtonSize: PlasmaCore.Units.iconSizes.small
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
     readonly property int visibleButtons: {

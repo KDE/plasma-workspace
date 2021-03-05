@@ -94,8 +94,8 @@ ColumnLayout {
             property bool allowCompletion: false
 
             clearButtonShown: true
-            Layout.minimumWidth: units.gridUnit * 25
-            Layout.maximumWidth: units.gridUnit * 25
+            Layout.minimumWidth: PlasmaCore.Units.gridUnit * 25
+            Layout.maximumWidth: PlasmaCore.Units.gridUnit * 25
 
             activeFocusOnPress: true
             placeholderText: results.runnerName ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
@@ -109,7 +109,7 @@ ColumnLayout {
                     right: parent.right
                     top: parent.top
                     bottom: parent.bottom
-                    margins: units.smallSpacing
+                    margins: PlasmaCore.Units.smallSpacing
                     rightMargin: height
                 }
 
@@ -197,7 +197,7 @@ ColumnLayout {
                     verticalCenter: parent.verticalCenter
                 }
                 // match clear button
-                width: Math.max(parent.height * 0.8, units.iconSizes.small)
+                width: Math.max(parent.height * 0.8, PlasmaCore.Units.iconSizes.small)
                 height: width
                 svg: PlasmaCore.Svg {
                     imagePath: "widgets/arrows"

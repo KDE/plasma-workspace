@@ -39,7 +39,7 @@ PlasmaComponents3.Page {
     Layout.maximumWidth: _minimumWidth
     Layout.maximumHeight: _minimumHeight
 
-    readonly property int paddings: units.smallSpacing
+    readonly property int paddings: PlasmaCore.Units.smallSpacing
     readonly property bool showAgenda: PlasmaCalendar.EventPluginsManager.enabledPlugins.length > 0
     readonly property bool showClocks: plasmoid.configuration.selectedTimeZones.length > 1
 
@@ -113,8 +113,8 @@ PlasmaComponents3.Page {
         // it, erroneously expecting to never be in a Layout
         Item {
             Layout.fillWidth: true
-            Layout.minimumHeight: units.gridUnit * 22
-            Layout.minimumWidth: units.gridUnit * 22
+            Layout.minimumHeight: PlasmaCore.Units.gridUnit * 22
+            Layout.minimumWidth: PlasmaCore.Units.gridUnit * 22
 
             PlasmaCalendar.MonthView {
                 id: monthView
@@ -153,7 +153,7 @@ PlasmaComponents3.Page {
 
             visible: calendar.showAgenda || calendar.showClocks
 
-            Layout.minimumWidth: units.gridUnit * 14
+            Layout.minimumWidth: PlasmaCore.Units.gridUnit * 14
 
             // Agenda view stuff
             // -----------------
@@ -177,8 +177,8 @@ PlasmaComponents3.Page {
 
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-                Layout.minimumHeight: units.gridUnit * 4
-                Layout.leftMargin: -units.smallSpacing
+                Layout.minimumHeight: PlasmaCore.Units.gridUnit * 4
+                Layout.leftMargin: -PlasmaCore.Units.smallSpacing
 
                 function formatDateWithoutYear(date) {
                     // Unfortunatelly Qt overrides ECMA's Date.toLocaleDateString(),
@@ -312,7 +312,7 @@ PlasmaComponents3.Page {
                                     columns: 3
                                     rows: 2
                                     rowSpacing: 0
-                                    columnSpacing: 2 * units.smallSpacing
+                                    columnSpacing: 2 * PlasmaCore.Units.smallSpacing
 
                                     width: parent.width
 
@@ -325,7 +325,7 @@ PlasmaComponents3.Page {
                                         Layout.fillHeight: true
 
                                         color: modelData.eventColor
-                                        width: 5 * units.devicePixelRatio
+                                        width: 5 * PlasmaCore.Units.devicePixelRatio
                                         visible: modelData.eventColor !== ""
                                     }
 
@@ -408,8 +408,8 @@ PlasmaComponents3.Page {
                     anchors.fill: holidaysView
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
-                    anchors.leftMargin: units.largeSpacing
-                    anchors.rightMargin: units.largeSpacing
+                    anchors.leftMargin: PlasmaCore.Units.largeSpacing
+                    anchors.rightMargin: PlasmaCore.Units.largeSpacing
                     text: monthView.isToday(monthView.currentDate) ? i18n("No events for today")
                                                                 : i18n("No events for this day");
                     level: 3
@@ -467,7 +467,7 @@ PlasmaComponents3.Page {
 
                 Layout.fillWidth: true
                 Layout.fillHeight: !agenda.visible
-                Layout.leftMargin: -units.smallSpacing
+                Layout.leftMargin: -PlasmaCore.Units.smallSpacing
 
                 ListView {
                     id: clocksList
@@ -493,7 +493,7 @@ PlasmaComponents3.Page {
                         separatorVisible: false
 
                         width: clocksList.width
-                        height: units.gridUnit + units.smallSpacing
+                        height: PlasmaCore.Units.gridUnit + PlasmaCore.Units.smallSpacing
 
                         RowLayout {
                             anchors.fill: parent

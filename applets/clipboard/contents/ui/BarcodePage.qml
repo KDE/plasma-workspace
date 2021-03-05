@@ -95,7 +95,7 @@ ColumnLayout {
     Item {
         Layout.fillWidth: parent
         Layout.fillHeight: parent
-        Layout.topMargin: units.smallSpacing
+        Layout.topMargin: PlasmaCore.Units.smallSpacing
 
         Prison.Barcode {
             id: barcodeItem

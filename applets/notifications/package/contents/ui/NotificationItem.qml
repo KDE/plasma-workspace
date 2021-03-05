@@ -109,7 +109,7 @@ ColumnLayout {
     signal resumeJobClicked
     signal killJobClicked
 
-    spacing: units.smallSpacing
+    spacing: PlasmaCore.Units.smallSpacing
 
     Item {
         id: headingElement
@@ -166,7 +166,7 @@ ColumnLayout {
     RowLayout {
         id: bodyRow
         Layout.fillWidth: true
-        spacing: units.smallSpacing
+        spacing: PlasmaCore.Units.smallSpacing
 
         ColumnLayout {
             Layout.fillWidth: true
@@ -225,7 +225,7 @@ ColumnLayout {
                 id: bodyTextRow
 
                 Layout.fillWidth: true
-                spacing: units.smallSpacing
+                spacing: PlasmaCore.Units.smallSpacing
 
                 SelectableLabel {
                     id: bodyLabel
@@ -249,10 +249,10 @@ ColumnLayout {
         Item {
             id: iconContainer
 
-            Layout.preferredWidth: units.iconSizes.large
-            Layout.preferredHeight: units.iconSizes.large
-            Layout.topMargin: units.smallSpacing
-            Layout.bottomMargin: units.smallSpacing
+            Layout.preferredWidth: PlasmaCore.Units.iconSizes.large
+            Layout.preferredHeight: PlasmaCore.Units.iconSizes.large
+            Layout.topMargin: PlasmaCore.Units.smallSpacing
+            Layout.bottomMargin: PlasmaCore.Units.smallSpacing
 
             visible: iconItem.active
 
@@ -311,13 +311,13 @@ ColumnLayout {
         Flow { // it's a Flow so it can wrap if too long
             id: actionFlow
             width: parent.width
-            spacing: units.smallSpacing
+            spacing: PlasmaCore.Units.smallSpacing
             layoutDirection: Qt.RightToLeft
             enabled: !replyLoader.active
             opacity: replyLoader.active ? 0 : 1
             Behavior on opacity {
                 NumberAnimation {
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
@@ -376,13 +376,13 @@ ColumnLayout {
             x: active ? 0 : parent.width
             Behavior on x {
                 NumberAnimation {
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }
             Behavior on opacity {
                 NumberAnimation {
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }

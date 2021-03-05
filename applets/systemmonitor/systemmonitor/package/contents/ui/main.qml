@@ -36,10 +36,10 @@ Item {
 
     Plasmoid.switchWidth: Plasmoid.formFactor === PlasmaCore.Types.Planar
         ? -1
-        : (Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumWidth : units.gridUnit * 8)
+        : (Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumWidth : PlasmaCore.Units.gridUnit * 8)
     Plasmoid.switchHeight: Plasmoid.formFactor === PlasmaCore.Types.Planar
         ? -1
-        : (Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumHeight : units.gridUnit * 12)
+        : (Plasmoid.fullRepresentationItem ? Plasmoid.fullRepresentationItem.Layout.minimumHeight : PlasmaCore.Units.gridUnit * 12)
 
     Plasmoid.preferredRepresentation: Plasmoid.formFactor === PlasmaCore.Types.Planar ? Plasmoid.fullRepresentation : null
 

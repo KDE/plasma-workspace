@@ -28,8 +28,8 @@ import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 Item {
     id: root
 
-    width: units.gridUnit * 10
-    height: units.gridUnit * 4
+    width: PlasmaCore.Units.gridUnit * 10
+    height: PlasmaCore.Units.gridUnit * 4
     property string dateFormatString: setDateFormatString()
     Plasmoid.backgroundHints: PlasmaCore.Types.ShadowBackground | PlasmaCore.Types.ConfigurableBackground
     property date tzDate: {

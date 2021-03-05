@@ -39,14 +39,14 @@ MouseArea {
     readonly property bool constrained: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
     property bool containsAcceptableDrag: false
 
-    height: Math.round(units.iconSizes.desktop + 2 * theme.mSize(theme.defaultFont).height)
-    width: Math.round(units.iconSizes.desktop * 1.5)
+    height: Math.round(PlasmaCore.Units.iconSizes.desktop + 2 * theme.mSize(theme.defaultFont).height)
+    width: Math.round(PlasmaCore.Units.iconSizes.desktop * 1.5)
 
-    Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : units.iconSizes.small
-    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (units.iconSizes.small + 2 * theme.mSize(theme.defaultFont).height)
+    Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
+    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * theme.mSize(theme.defaultFont).height)
 
-    Layout.maximumWidth: inPanel ? units.iconSizeHints.panel : -1
-    Layout.maximumHeight: inPanel ? units.iconSizeHints.panel : -1
+    Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
+    Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
     hoverEnabled: true
 

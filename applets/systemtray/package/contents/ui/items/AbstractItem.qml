@@ -76,7 +76,7 @@ PlasmaCore.ToolTipArea {
         targetItem: iconContainer
         running: (abstractItem.status === PlasmaCore.Types.NeedsAttentionStatus ||
             abstractItem.status === PlasmaCore.Types.RequiresAttentionStatus ) &&
-            units.longDuration > 0
+            PlasmaCore.Units.longDuration > 0
     }
 
     function activated() {
@@ -91,7 +91,7 @@ PlasmaCore.ToolTipArea {
             target: iconContainer
             from: 1
             to: 0.5
-            duration: units.shortDuration
+            duration: PlasmaCore.Units.shortDuration
             easing.type: Easing.InQuad
         }
 
@@ -99,7 +99,7 @@ PlasmaCore.ToolTipArea {
             target: iconContainer
             from: 0.5
             to: 1
-            duration: units.shortDuration
+            duration: PlasmaCore.Units.shortDuration
             easing.type: Easing.OutQuad
         }
     }
@@ -134,22 +134,22 @@ PlasmaCore.ToolTipArea {
 
             property alias container: abstractItem
             property alias inVisibleLayout: abstractItem.inVisibleLayout
-            readonly property int size: abstractItem.inVisibleLayout ? root.itemSize : units.iconSizes.medium
+            readonly property int size: abstractItem.inVisibleLayout ? root.itemSize : PlasmaCore.Units.iconSizes.medium
 
             Layout.alignment: Qt.Bottom | Qt.AlignHCenter
             Layout.fillHeight: abstractItem.inHiddenLayout ? true : false
             implicitWidth: root.vertical && abstractItem.inVisibleLayout ? abstractItem.width : size
             implicitHeight: !root.vertical && abstractItem.inVisibleLayout ? abstractItem.height : size
-            Layout.topMargin: abstractItem.inHiddenLayout ? Math.round(units.smallSpacing * 1.5): 0
+            Layout.topMargin: abstractItem.inHiddenLayout ? Math.round(PlasmaCore.Units.smallSpacing * 1.5): 0
         }
         PlasmaComponents3.Label {
             id: label
 
             Layout.fillWidth: true
             Layout.fillHeight: abstractItem.inHiddenLayout ? true : false
-            Layout.leftMargin: abstractItem.inHiddenLayout ? units.smallSpacing : 0
-            Layout.rightMargin: abstractItem.inHiddenLayout ? units.smallSpacing : 0
-            Layout.bottomMargin: abstractItem.inHiddenLayout ? units.smallSpacing : 0
+            Layout.leftMargin: abstractItem.inHiddenLayout ? PlasmaCore.Units.smallSpacing : 0
+            Layout.rightMargin: abstractItem.inHiddenLayout ? PlasmaCore.Units.smallSpacing : 0
+            Layout.bottomMargin: abstractItem.inHiddenLayout ? PlasmaCore.Units.smallSpacing : 0
 
             visible: abstractItem.inHiddenLayout
 
@@ -162,7 +162,7 @@ PlasmaCore.ToolTipArea {
             opacity: visible ? 1 : 0
             Behavior on opacity {
                 NumberAnimation {
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                     easing.type: Easing.InOutQuad
                 }
             }

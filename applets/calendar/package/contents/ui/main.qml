@@ -26,8 +26,8 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.calendar 2.0
 
 Item {
-    Plasmoid.switchWidth: units.gridUnit * 12
-    Plasmoid.switchHeight: units.gridUnit * 12
+    Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 12
+    Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 12
 
     Plasmoid.toolTipMainText: Qt.formatDate(dataSource.data.Local.DateTime, "dddd")
     Plasmoid.toolTipSubText: {
@@ -41,8 +41,8 @@ Item {
         return Qt.formatDate(dataSource.data.Local.DateTime, format)
     }
 
-    Layout.minimumWidth: units.iconSizes.large
-    Layout.minimumHeight: units.iconSizes.large
+    Layout.minimumWidth: PlasmaCore.Units.iconSizes.large
+    Layout.minimumHeight: PlasmaCore.Units.iconSizes.large
 
     PlasmaCore.DataSource {
         id: dataSource
@@ -114,7 +114,7 @@ Item {
 
         // sizing taken from digital clock
         readonly property int _minimumWidth: calendar.showWeekNumbers ? Math.round(_minimumHeight * 1.75) : Math.round(_minimumHeight * 1.5)
-        readonly property int _minimumHeight: units.gridUnit * 14
+        readonly property int _minimumHeight: PlasmaCore.Units.gridUnit * 14
 
         Layout.preferredWidth: _minimumWidth
         Layout.preferredHeight: Math.round(_minimumHeight * 1.5)

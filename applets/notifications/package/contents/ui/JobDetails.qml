@@ -34,8 +34,8 @@ GridLayout {
     property QtObject jobDetails
 
     columns: 2
-    rowSpacing: Math.round(units.smallSpacing / 2)
-    columnSpacing: units.smallSpacing
+    rowSpacing: Math.round(PlasmaCore.Units.smallSpacing / 2)
+    columnSpacing: PlasmaCore.Units.smallSpacing
 
     // once you use Layout.column/Layout.row *all* of the items in the Layout have to use them
     Repeater {

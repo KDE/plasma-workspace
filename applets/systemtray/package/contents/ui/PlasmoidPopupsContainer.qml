@@ -29,8 +29,8 @@ StackView {
     id: mainStack
     focus: true
 
-    Layout.minimumWidth: units.gridUnit * 12
-    Layout.minimumHeight: units.gridUnit * 12
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 12
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 12
 
     readonly property Item activeApplet: systemTrayState.activeApplet
 
