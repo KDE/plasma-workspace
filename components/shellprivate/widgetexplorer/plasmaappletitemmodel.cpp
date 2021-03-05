@@ -279,12 +279,14 @@ void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
             return false;
         }
 
-        bool inFormFactor = true;
-
         static const auto formFactors = KDeclarative::KDeclarative::runtimePlatform();
+        // If runtimePlatformis not defined, accept everything
+        bool inFormFactor = formFactors.isEmpty();
+
         for (const QString &formFactor : formFactors) {
-            if (!plugin.formFactors().isEmpty() && !plugin.formFactors().contains(formFactor)) {
-                inFormFactor = false;
+            if (plugin.formFactors().isEmpty() || plugin.formFactors().contains(formFactor)) {
+                inFormFactor = true;
+                break;
             }
         }
 
