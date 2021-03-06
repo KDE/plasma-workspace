@@ -27,11 +27,13 @@
 #include "KfiConstants.h"
 #include "Misc.h"
 #include "config-fontinst.h"
+
 #include <KConfigGroup>
 #include <KIO/FileCopyJob>
 #include <KIO/StatJob>
 #include <KJobWidgets>
 #include <KSharedConfig>
+
 #include <QCheckBox>
 #include <QCloseEvent>
 #include <QDBusServiceWatcher>
@@ -47,9 +49,12 @@
 #include <QStyleOption>
 #include <QTemporaryDir>
 #include <QTimer>
+#include <QUrlQuery>
 #include <QVBoxLayout>
+
 #include <QX11Info>
 #include <X11/Xlib.h>
+
 #include <fontconfig/fontconfig.h>
 #include <kio/global.h>
 #include <sys/resource.h>

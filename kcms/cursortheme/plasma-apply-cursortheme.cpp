@@ -18,11 +18,12 @@
 
 #include "cursorthemesettings.h"
 
+#include "../kcms-common_p.h"
+
 #include "xcursor/themeapplicator.h"
 #include "xcursor/thememodel.h"
 #include "xcursor/cursortheme.h"
 
-#include <KGlobalSettings>
 #include <KLocalizedString>
 
 #include <QApplication>
@@ -76,8 +77,7 @@ int main(int argc, char **argv)
             if (theme) {
                 settings->setCursorTheme(theme->name());
                 if (settings->save() && applyTheme(theme, theme->defaultCursorSize())) {
-                    // Deprecation warning, since it looks like we genuinely need to do this to successfully propagate the settings
-                    KGlobalSettings::self()->emitChange(KGlobalSettings::CursorChanged);
+                    notifyKcmChange(GlobalChangeType::CursorChanged);
                     ts << i18n("Successfully applied the mouse cursor theme %1 to your current Plasma session", theme->title()) << endl;
                 } else {
                     ts << i18n("You have to restart the Plasma session for your newly applied mouse cursor theme to display correctly.") << endl;

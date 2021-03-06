@@ -20,15 +20,16 @@
 
 #include "kcm.h"
 #include "krdb.h"
+#include "../kcms-common_p.h"
 #include "config-kcm.h"
 #include "config-workspace.h"
 
 #include <KAboutData>
 #include <KAutostart>
 #include <KDialogJobUiDelegate>
-#include <KGlobalSettings>
 #include <KIO/ApplicationLauncherJob>
 #include <KIconLoader>
+#include <KMessageBox>
 #include <KService>
 #include <KSharedConfig>
 
@@ -431,7 +432,7 @@ void KCMLookandFeel::setWidgetStyle(const QString &style)
         m_configGroup.writeEntry("widgetStyle", style, KConfig::Notify);
         m_configGroup.sync();
         // FIXME: changing style on the fly breaks QQuickWidgets
-        KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
+        notifyKcmChange(GlobalChangeType::StyleChanged);
     }
 }
 
@@ -452,7 +453,7 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
     configGroup.writeEntry("ColorScheme", scheme, KConfig::Notify);
 
     configGroup.sync();
-    KGlobalSettings::self()->emitChange(KGlobalSettings::PaletteChanged);
+    notifyKcmChange(GlobalChangeType::PaletteChanged);
 }
 
 void KCMLookandFeel::setIcons(const QString &theme)
@@ -519,7 +520,7 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
     runRdb(0);
 
     // Notify all applications that the cursor theme has changed
-    KGlobalSettings::self()->emitChange(KGlobalSettings::CursorChanged);
+    notifyKcmChange(GlobalChangeType::CursorChanged);
 
     // Reload the standard cursors
     QStringList names;

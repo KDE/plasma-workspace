@@ -40,7 +40,6 @@
 #include <QTextStream>
 
 #include <KColorScheme>
-#include <KColorUtils>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>

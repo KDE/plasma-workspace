@@ -29,6 +29,7 @@
 
 #include "kcmstyle.h"
 
+#include "../kcms-common_p.h"
 #include "styleconfdialog.h"
 
 #include <KAboutData>
@@ -36,6 +37,7 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KPluginLoader>
+#include <KToolBar>
 
 #include <QDBusPendingReply>
 #include <QDBusPendingCallWatcher>
@@ -48,8 +50,6 @@
 #include <QStyleFactory>
 #include <QWidget>
 #include <QWindow>
-
-#include <KGlobalSettings>
 
 #include "krdb.h"
 
@@ -234,7 +234,7 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
         emit styleReconfigured(styleName);
 
         // For now, ask all KDE apps to recreate their styles to apply the setitngs
-        KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
+        notifyKcmChange(GlobalChangeType::StyleChanged);
 
         // When user edited a style, assume they want to use it, too
         styleSettings()->setWidgetStyle(styleName);
@@ -331,14 +331,18 @@ void KCMStyle::save()
 
     // Now allow KDE apps to reconfigure themselves.
     if (newStyleLoaded) {
-        KGlobalSettings::self()->emitChange(KGlobalSettings::StyleChanged);
+        notifyKcmChange(GlobalChangeType::StyleChanged);
     }
 
     if (m_effectsDirty) {
-        KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged, KGlobalSettings::SETTINGS_STYLE);
-        // ##### FIXME - Doesn't apply all settings correctly due to bugs in
-        // KApplication/KToolbar
-        KGlobalSettings::self()->emitChange(KGlobalSettings::ToolbarStyleChanged);
+        // This notifies listeners about:
+        //  - GraphicEffectsLevel' config entry, (e.g. to set QPlatformTheme::ThemeHint::UiEffects)
+        //  - ShowIconsOnPushButtons config entry, (e.g. to set QPlatformTheme::DialogButtonBoxButtonsHaveIcons)
+        notifyKcmChange(GlobalChangeType::SettingsChanged, GlobalSettingsCategory::SETTINGS_STYLE);
+
+        // FIXME - Doesn't apply all settings correctly due to bugs in KApplication/KToolbar.
+        // Is this ^ still an issue?
+        KToolBar::emitToolbarStyleChanged();
     }
 
     m_effectsDirty = false;

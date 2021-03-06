@@ -34,11 +34,14 @@ include(KDEGitCommitHooks)
 include(ECMConfiguredInstall)
 include(ECMGenerateDBusServiceFile)
 include(ECMQMLModules)
+include(ECMGenerateExportHeader)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-                    Plasma DocTools Runner Notifications NotifyConfig Su NewStuff Wallet
-                    IdleTime Declarative I18n KCMUtils TextWidgets KDELibs4Support Crash GlobalAccel
-                    DBusAddons Wayland CoreAddons People ActivitiesStats Activities KIO Prison PlasmaQuick Package)
+                    Plasma DocTools Runner Notifications NotifyConfig Su NewStuff Wallet IdleTime
+                    Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
+                    CoreAddons People ActivitiesStats Activities KIO Prison PlasmaQuick Package
+                    GuiAddons Archive ItemModels IconThemes UnitConversion ItemModels Init)
+
 find_package(KDED CONFIG REQUIRED)
 
 find_package(KF5NetworkManagerQt ${KF5_MIN_VERSION})
@@ -121,6 +124,11 @@ endif()
 find_package(QtWaylandScanner REQUIRED)
 find_package(PlasmaWaylandProtocols REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client)
+
+if(FONTCONFIG_FOUND)
+  # kfontinst
+  find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS PrintSupport)
+endif()
 
 if(X11_FOUND)
   find_package(XCB MODULE REQUIRED COMPONENTS XCB RANDR IMAGE)

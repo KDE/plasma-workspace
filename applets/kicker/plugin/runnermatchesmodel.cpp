@@ -24,6 +24,7 @@
 
 #include <QAction>
 #include <QIcon>
+#include <QUrlQuery>
 
 #include <KLocalizedString>
 #include <KRun>

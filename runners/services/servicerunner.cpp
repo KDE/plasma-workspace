@@ -29,6 +29,7 @@
 #include <QIcon>
 #include <QStandardPaths>
 #include <QUrl>
+#include <QUrlQuery>
 
 #include <KActivities/ResourceInstance>
 #include <KLocalizedString>

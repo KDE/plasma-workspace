@@ -27,6 +27,8 @@
 #include "fonts.h"
 
 #include <QApplication>
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <QFontDatabase>
 #include <QQmlEngine>
 #include <QQuickItem>
@@ -38,12 +40,12 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KFontChooserDialog>
-#include <KGlobalSettings>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KWindowSystem>
 
 #include "krdb.h"
+#include "../kcms-common_p.h"
 #include "kxftconfig.h"
 #include "previewimageprovider.h"
 
@@ -159,7 +161,11 @@ void KFonts::save()
     QApplication::processEvents();
 #endif
 
-    KGlobalSettings::self()->emitChange(KGlobalSettings::FontChanged);
+    // Notify the world about the font changes
+    if (qEnvironmentVariableIsSet("KDE_FULL_SESSION")) {
+        QDBusMessage message = QDBusMessage::createSignal("/KDEPlatformTheme", "org.kde.KDEPlatformTheme", "refreshFonts");
+        QDBusConnection::sessionBus().send(message);
+    }
 
     runRdb(KRdbExportXftSettings | KRdbExportGtkTheme);
 }

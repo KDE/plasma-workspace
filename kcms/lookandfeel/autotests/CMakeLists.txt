@@ -6,6 +6,7 @@ set( kcmTest_SRCS
      kcmtest.cpp
      ../kcm.cpp
      ../lookandfeeldata.cpp
+     ../../kcms-common_p.h
 )
 
 if (X11_Xcursor_FOUND)
@@ -33,7 +34,6 @@ target_link_libraries(kcmTest
         KF5::QuickAddons
         KF5::KIOWidgets
         KF5::Declarative
-        KF5::KDELibs4Support
         PW::KWorkspace
         X11::X11
         krdb

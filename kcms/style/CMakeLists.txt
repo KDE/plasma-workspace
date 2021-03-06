@@ -4,6 +4,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_style\")
 ########### next target ###############
 
 set(kcm_style_PART_SRCS
+    ../kcms-common_p.h
     styleconfdialog.cpp
     kcmstyle.cpp
     stylesmodel.cpp
@@ -35,7 +36,6 @@ target_link_libraries(kcm_style
     KF5::KCMUtils
     KF5::I18n
     KF5::KIOCore
-    KF5::KDELibs4Support
     KF5::QuickAddons
     KF5::Archive
     KF5::NewStuff

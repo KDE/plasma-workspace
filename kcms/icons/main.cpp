@@ -27,6 +27,7 @@
  */
 
 #include "main.h"
+#include "../kcms-common_p.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -157,6 +158,7 @@ void IconModule::save()
     ManagedConfigModule::save();
 
     if (needToExportToKDE4) {
+        // Is this still needed?
         exportToKDE4();
     }
 
@@ -301,13 +303,8 @@ void IconModule::exportToKDE4()
                 }
 
                 // message kde4 apps that icon theme has changed
-                for (int i = 0; i < KIconLoader::LastGroup; i++) {
-                    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KGlobalSettings"),
-                                                                      QStringLiteral("org.kde.KGlobalSettings"),
-                                                                      QStringLiteral("notifyChange"));
-                    message.setArguments({4, // KGlobalSettings::IconChanged
-                                          KIconLoader::Group(i)});
-                    QDBusConnection::sessionBus().send(message);
+                for (int i = 0; i < KIconLoader::LastGroup; ++i) {
+                    notifyKcmChange(GlobalChangeType::IconChanged, KIconLoader::Group(i));
                 }
 
                 cachePathProcess->deleteLater();

@@ -19,13 +19,11 @@
 #include "colorssettings.h"
 #include "colorsmodel.h"
 
+#include "../kcms-common_p.h"
 #include "../krdb/krdb.h"
 
 #include <KColorScheme>
 #include <KConfig>
-
-#include <QDBusConnection>
-#include <QDBusMessage>
 
 static void copyEntry(KConfigGroup &from, KConfigGroup &to, const QString &entry)
 {
@@ -139,11 +137,5 @@ void applyScheme(ColorsSettings *settings, ColorsModel *model)
     }
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | (applyToAlien ? KRdbExportColors : 0));
 
-    QDBusMessage message =
-        QDBusMessage::createSignal(QStringLiteral("/KGlobalSettings"), QStringLiteral("org.kde.KGlobalSettings"), QStringLiteral("notifyChange"));
-    message.setArguments({
-        0, // previous KGlobalSettings::PaletteChanged. This is now private API in khintsettings
-        0 // unused in palette changed but needed for the DBus signature
-    });
-    QDBusConnection::sessionBus().send(message);
+    notifyKcmChange(GlobalChangeType::PaletteChanged);
 }

@@ -20,6 +20,7 @@ configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 set(kcm_lookandfeel_SRCS
     kcmmain.cpp
     kcm.cpp
+    ../kcms-common_p.h
 )
 
 if (X11_Xcursor_FOUND)
@@ -52,7 +53,6 @@ target_link_libraries(kcm_lookandfeel
   KF5::QuickAddons
   KF5::KIOWidgets
   KF5::Declarative
-  KF5::KDELibs4Support
   PW::KWorkspace
   krdb
 )
@@ -90,6 +90,7 @@ set(plasma-apply-lookandfeel_SRCS
     # TODO: load kcm plugin instead of using code copy
     kcm.cpp
     lookandfeeldata.cpp
+    ../kcms-common_p.h
 )
 
 if (X11_Xcursor_FOUND)
@@ -115,7 +116,6 @@ target_link_libraries(plasma-apply-lookandfeel
   KF5::QuickAddons
   KF5::KIOWidgets
   KF5::Declarative
-  KF5::KDELibs4Support
   PW::KWorkspace
   krdb
 )
