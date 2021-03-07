@@ -134,6 +134,7 @@ PlasmaComponents3.Page {
             model: filterModel
 
             delegate: DeviceItem {
+                width: notifierDialog.width
                 udi: DataEngineSource
             }
             highlight: PlasmaComponents.Highlight { }
