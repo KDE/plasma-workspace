@@ -44,7 +44,6 @@ CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaD
 {
 #ifdef ENABLE_QALCULATE
     m_engine = new QalculateEngine;
-    setSpeed(SlowSpeed);
 #endif
 
     setObjectName(QStringLiteral("Calculator"));
