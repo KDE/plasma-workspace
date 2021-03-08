@@ -138,8 +138,7 @@ endif()
 find_package(AppStreamQt 0.10.6)
 set_package_properties(AppStreamQt PROPERTIES DESCRIPTION "Access metadata for listing available software"
                        URL "https://www.freedesktop.org/wiki/Distributions/AppStream/"
-		       TYPE OPTIONAL
-                      )
+                       TYPE OPTIONAL)
 
 if(${AppStreamQt_FOUND})
     set(HAVE_APPSTREAMQT true)
