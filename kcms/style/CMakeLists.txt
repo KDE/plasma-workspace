@@ -48,6 +48,7 @@ install(FILES stylesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES style_widgetstyle_default_breeze.upd style_widgetstyle_default_breeze.pl DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
 install(FILES gtk_themes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 install(FILES kcm_style.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+set_target_properties(kcm_style PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kcms")
 install(TARGETS kcm_style DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
 kpackage_install_package(package kcm_style kcms)

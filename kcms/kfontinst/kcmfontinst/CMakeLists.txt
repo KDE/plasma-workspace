@@ -18,7 +18,8 @@ target_link_libraries(kcm_fontinst
     X11::X11
 )
 
-install(TARGETS kcm_fontinst  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
+set_target_properties(kcm_fontinst PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kcms")
+install(TARGETS kcm_fontinst  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install( FILES fontinst.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
 install( FILES kfontinst.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 

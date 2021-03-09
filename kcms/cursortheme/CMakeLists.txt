@@ -56,6 +56,7 @@ if (X11_Xfixes_FOUND)
    target_link_libraries(kcm_cursortheme X11::Xfixes)
 endif ()
 
+set_target_properties(kcm_cursortheme PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kcms")
 install(TARGETS kcm_cursortheme  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms )
 
 kcoreaddons_desktop_to_json(kcm_cursortheme "kcm_cursortheme.desktop")

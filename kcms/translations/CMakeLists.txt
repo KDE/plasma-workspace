@@ -28,7 +28,7 @@ target_link_libraries(kcm_translations
 kcoreaddons_desktop_to_json(kcm_translations "kcm_translations.desktop")
 
 ########### install files ###############
-
+set_target_properties(kcm_translations PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kcms")
 install(TARGETS kcm_translations DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(FILES kcm_translations.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_translations kcms)

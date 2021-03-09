@@ -23,6 +23,7 @@ target_link_libraries(kcm_feedback
 kcoreaddons_desktop_to_json(kcm_feedback "kcm_feedback.desktop")
 
 install(FILES feedbacksettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
+set_target_properties(kcm_feedback PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kcms")
 install(TARGETS kcm_feedback DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(FILES kcm_feedback.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_feedback kcms)
