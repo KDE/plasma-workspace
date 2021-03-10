@@ -365,17 +365,22 @@ bool AbstractNotificationsModel::setData(const QModelIndex &index, const QVarian
     }
 
     Notification &notification = d->notifications[index.row()];
+    bool dirty = false;
 
     switch (role) {
     case Notifications::ReadRole:
         if (value.toBool() != notification.read()) {
             notification.setRead(value.toBool());
-            return true;
+            dirty = true;
         }
         break;
     }
 
-    return false;
+    if (dirty) {
+        Q_EMIT dataChanged(index, index, {role});
+    }
+
+    return dirty;
 }
 
 int AbstractNotificationsModel::rowCount(const QModelIndex &parent) const
