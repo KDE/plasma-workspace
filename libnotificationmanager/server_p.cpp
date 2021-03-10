@@ -292,6 +292,7 @@ QStringList ServerPrivate::GetCapabilities() const
                        QStringLiteral("body-images"),
                        QStringLiteral("icon-static"),
                        QStringLiteral("actions"),
+                       QStringLiteral("persistence"),
                        QStringLiteral("inline-reply"),
 
                        QStringLiteral("x-kde-urls"),

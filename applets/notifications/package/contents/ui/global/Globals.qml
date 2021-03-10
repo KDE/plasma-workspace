@@ -510,8 +510,17 @@ QtObject {
             replySubmitButtonText: model.replySubmitButtonText || ""
             replySubmitButtonIconName: model.replySubmitButtonIconName || ""
 
-            onExpired: popupNotificationsModel.expire(popupNotificationsModel.index(index, 0))
+            onExpired: {
+                if (model.resident) {
+                    // When resident, only mark it as expired so the popup disappears
+                    // but don't actually invalidate the notification
+                    model.expired = true;
+                } else {
+                    popupNotificationsModel.expire(popupNotificationsModel.index(index, 0))
+                }
+            }
             onHoverEntered: model.read = true
+            // explicit close, even when resident
             onCloseClicked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
             onDismissClicked: model.dismissed = true
             onConfigureClicked: popupNotificationsModel.configure(popupNotificationsModel.index(index, 0))
@@ -540,33 +549,54 @@ QtObject {
 
                         if (highestIdx && highestIdx.valid) {
                             tasksModel.requestActivate(highestIdx);
-                            popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
+                            if (!model.resident) {
+                                popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                            }
 
                         }
                         return;
                     }
 
                     tasksModel.requestActivate(defaultActionFallbackWindowIdx);
-                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
+                    if (!model.resident) {
+                        popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                    }
                     return;
                 }
 
                 popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0))
-                popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                if (!model.resident) {
+                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                }
             }
             onActionInvoked: {
                 popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName)
-                popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                if (!model.resident) {
+                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                }
             }
             onReplied: {
                 popupNotificationsModel.reply(popupNotificationsModel.index(index, 0), text);
-                popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
+                if (!model.resident) {
+                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                }
             }
             onOpenUrl: {
                 Qt.openUrlExternally(url);
-                popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                // Client isn't informed of this action, so we always hide the popup
+                if (model.resident) {
+                    model.expired = true;
+                } else {
+                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                }
             }
-            onFileActionInvoked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+            onFileActionInvoked: {
+                if (model.resident) {
+                    model.expired = true;
+                } else {
+                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                }
+            }
 
             onSuspendJobClicked: popupNotificationsModel.suspendJob(popupNotificationsModel.index(index, 0))
             onResumeJobClicked: popupNotificationsModel.resumeJob(popupNotificationsModel.index(index, 0))

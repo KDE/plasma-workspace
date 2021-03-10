@@ -130,6 +130,12 @@ public:
     bool dismissed() const;
     void setDismissed(bool dismissed);
 
+    bool resident() const;
+    void setResident(bool resident);
+
+    bool transient() const;
+    void setTransient(bool transient);
+
     // Little bit of mess here, we want to sometime keep track of processed hints, and not process it.
     QVariantMap hints() const;
     void setHints(const QVariantMap &hints);

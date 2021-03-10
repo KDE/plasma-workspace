@@ -287,6 +287,8 @@ public:
         CategoryRole, ///< The (optional) category of the notification. Notifications can optionally have a type indicator. Although neither client or nor
                       ///< server must support this, some may choose to. Those servers implementing categories may use them to intelligently display the
                       ///< notification in a certain way, or group notifications of similar types.  @since 5.21
+        ResidentRole, ///< Whether the notification should keep its actions even when they were invoked. @since 5.22
+        TransientRole, ///< Whether the notification is transient and should not be kept in history. @since 5.22
     };
     Q_ENUM(Roles)
 

@@ -281,7 +281,6 @@ PlasmaComponents3.Page {
                     var urls = historyModel.data(idx, NotificationManager.Notifications.UrlsRole);
                     if (urls && urls.length === 1) {
                         Qt.openUrlExternally(urls[0]);
-                        historyModel.expire(idx);
                         return;
                     }
 
@@ -520,18 +519,26 @@ PlasmaComponents3.Page {
                                             } else {
                                                 historyModel.invokeAction(historyModel.index(index, 0), actionName);
                                             }
-                                            // Keep it in the history
-                                            historyModel.expire(historyModel.index(index, 0));
+
+                                            expire();
                                         }
                                         onOpenUrl: {
                                             Qt.openUrlExternally(url);
-                                            historyModel.expire(historyModel.index(index, 0));
+                                            expire();
                                         }
-                                        onFileActionInvoked: historyModel.expire(historyModel.index(index, 0))
+                                        onFileActionInvoked: expire()
 
                                         onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
                                         onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
                                         onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
+
+                                        function expire() {
+                                            if (model.resident) {
+                                                model.expired = true;
+                                            } else {
+                                                historyModel.expire(historyModel.index(index, 0));
+                                            }
+                                        }
                                     }
                                 }
 

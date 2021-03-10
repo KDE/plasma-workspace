@@ -108,6 +108,9 @@ public:
 
     bool expired = false;
     bool dismissed = false;
+
+    bool resident = false;
+    bool transient = false;
 };
 
 } // namespace NotificationManager

@@ -372,6 +372,9 @@ void Notification::Private::processHints(const QVariantMap &hints)
         }
     }
 
+    resident = hints.value(QStringLiteral("resident")).toBool();
+    transient = hints.value(QStringLiteral("transient")).toBool();
+
     userActionFeedback = hints.value(QStringLiteral("x-kde-user-action-feedback")).toBool();
     if (userActionFeedback) {
         // A confirmation of an explicit user interaction is assumed to have been seen by the user.
@@ -751,6 +754,27 @@ bool Notification::dismissed() const
 void Notification::setDismissed(bool dismissed)
 {
     d->dismissed = dismissed;
+}
+
+bool Notification::resident() const
+{
+    return d->resident;
+}
+
+void Notification::setResident(bool resident)
+{
+    d->resident = resident;
+}
+
+
+bool Notification::transient() const
+{
+    return d->transient;
+}
+
+void Notification::setTransient(bool transient)
+{
+    d->transient = transient;
 }
 
 QVariantMap Notification::hints() const
