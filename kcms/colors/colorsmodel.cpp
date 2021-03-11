@@ -217,7 +217,9 @@ void ColorsModel::load()
         m_data.append(item);
     }
 
+    // Sort case-insensitively
     QCollator collator;
+    collator.setCaseSensitivity(Qt::CaseInsensitive);
     std::sort(m_data.begin(), m_data.end(), [&collator](const ColorsModelData &a, const ColorsModelData &b) {
         return collator.compare(a.display, b.display) < 0;
     });

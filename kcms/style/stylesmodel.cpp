@@ -200,7 +200,9 @@ void StylesModel::load()
 
     m_data = styleData.values().toVector();
 
+    // Sort case-insensitively
     QCollator collator;
+    collator.setCaseSensitivity(Qt::CaseInsensitive);
     std::sort(m_data.begin(), m_data.end(), [&collator](const StylesModelData &a, const StylesModelData &b) {
         const QString aDisplay = !a.display.isEmpty() ? a.display : a.styleName;
         const QString bDisplay = !b.display.isEmpty() ? b.display : b.styleName;

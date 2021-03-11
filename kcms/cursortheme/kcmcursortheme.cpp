@@ -87,7 +87,8 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
 
     m_themeProxyModel = new SortProxyModel(this);
     m_themeProxyModel->setSourceModel(m_themeModel);
-    m_themeProxyModel->setFilterCaseSensitivity(Qt::CaseSensitive);
+    // sort ordering is already case-insensitive; match that for filtering too
+    m_themeProxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
     m_themeProxyModel->sort(NameColumn, Qt::AscendingOrder);
 
     m_sizesModel = new QStandardItemModel(this);

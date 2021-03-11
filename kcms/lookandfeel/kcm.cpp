@@ -174,7 +174,15 @@ void KCMLookandFeel::loadModel()
 {
     m_model->clear();
 
-    const QList<KPackage::Package> pkgs = availablePackages({"defaults", "layouts"});
+    QList<KPackage::Package> pkgs = availablePackages({"defaults", "layouts"});
+
+    // Sort case-insensitively
+    QCollator collator;
+    collator.setCaseSensitivity(Qt::CaseInsensitive);
+    std::sort(pkgs.begin(), pkgs.end(), [&collator](const KPackage::Package &a, const KPackage::Package &b) {
+        return collator.compare(a.metadata().name(), b.metadata().name()) < 0;
+    });
+
     for (const KPackage::Package &pkg : pkgs) {
         if (!pkg.metadata().isValid()) {
             continue;
@@ -225,7 +233,6 @@ void KCMLookandFeel::loadModel()
 
         m_model->appendRow(row);
     }
-    m_model->sort(0 /*column*/);
 
     // Model has been cleared so pretend the selected look and fell changed to force view update
     emit lookAndFeelSettings()->lookAndFeelPackageChanged();

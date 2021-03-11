@@ -36,7 +36,7 @@ int SortProxyModel::compare(const QModelIndex &left, const QModelIndex &right, i
     QString first = model->data(left, role).toString();
     QString second = model->data(right, role).toString();
 
-    if (filterCaseSensitivity() == Qt::CaseSensitive) {
+    if (filterCaseSensitivity() == Qt::CaseInsensitive) {
         first = first.toLower();
         second = second.toLower();
     }

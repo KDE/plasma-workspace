@@ -216,7 +216,9 @@ void ThemesModel::load()
         }
     }
 
+    // Sort case-insensitively
     QCollator collator;
+    collator.setCaseSensitivity(Qt::CaseInsensitive);
     std::sort(m_data.begin(), m_data.end(), [&collator](const ThemesModelData &a, const ThemesModelData &b) {
         return collator.compare(a.display, b.display) < 0;
     });
