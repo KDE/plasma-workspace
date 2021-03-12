@@ -94,7 +94,11 @@ void SwitchDesktop::performNextAction()
     int nextDesktopIndex = currentDesktopIndex + 1;
 
     if (nextDesktopIndex == desktopIds.count()) {
-        nextDesktopIndex = 0;
+        if (m_virtualDesktopInfo->navigationWrappingAround()) {
+            nextDesktopIndex = 0;
+        } else {
+            return;
+        }
     }
 
     m_virtualDesktopInfo->requestActivate(desktopIds.at(nextDesktopIndex));
@@ -112,7 +116,11 @@ void SwitchDesktop::performPreviousAction()
     int previousDesktopIndex = currentDesktopIndex - 1;
 
     if (previousDesktopIndex < 0) {
-        previousDesktopIndex = desktopIds.count() - 1;
+        if (m_virtualDesktopInfo->navigationWrappingAround()) {
+            previousDesktopIndex = desktopIds.count() - 1;
+        } else {
+            return;
+        }
     }
 
     m_virtualDesktopInfo->requestActivate(desktopIds.at(previousDesktopIndex));

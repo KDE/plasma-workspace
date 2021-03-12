@@ -46,6 +46,7 @@ class TASKMANAGER_EXPORT VirtualDesktopInfo : public QObject
     Q_PROPERTY(QVariantList desktopIds READ desktopIds NOTIFY desktopIdsChanged)
     Q_PROPERTY(QStringList desktopNames READ desktopNames NOTIFY desktopNamesChanged)
     Q_PROPERTY(int desktopLayoutRows READ desktopLayoutRows NOTIFY desktopLayoutRowsChanged)
+    Q_PROPERTY(int navigationWrappingAround READ navigationWrappingAround NOTIFY navigationWrappingAroundChanged)
 
 public:
     explicit VirtualDesktopInfo(QObject *parent = nullptr);
@@ -129,12 +130,20 @@ public:
      **/
     void requestRemoveDesktop(quint32 position);
 
+    /**
+     * Whether or not to wrap navigation such that activating the next virtual
+     * desktop when at the last one will go to the first one, and activating the
+     * previous virtual desktop when at the first one will go to the last one.
+     */
+    bool navigationWrappingAround() const;
+
 Q_SIGNALS:
     void currentDesktopChanged() const;
     void numberOfDesktopsChanged() const;
     void desktopIdsChanged() const;
     void desktopNamesChanged() const;
     void desktopLayoutRowsChanged() const;
+    void navigationWrappingAroundChanged() const;
 
 private:
     class Private;
