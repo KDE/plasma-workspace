@@ -100,6 +100,7 @@ ColumnLayout {
         twinFormLayouts: parentLayout
         QtControls2.ComboBox {
             id: resizeComboBox
+            Layout.preferredWidth: Math.max(implicitWidth, wallpaperComboBox.implicitWidth)
             Kirigami.FormData.label: i18nd("plasma_wallpaper_org.kde.image", "Positioning:")
             model: [
                         {
