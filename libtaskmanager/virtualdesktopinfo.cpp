@@ -530,7 +530,7 @@ void VirtualDesktopInfo::requestRemoveDesktop(quint32 position)
     return d->requestRemoveDesktop(position);
 }
 
-bool VirtualDesktopInfo::navigationWrappingAround()
+bool VirtualDesktopInfo::navigationWrappingAround() const
 {
     return d->navigationWrappingAround;
 }
