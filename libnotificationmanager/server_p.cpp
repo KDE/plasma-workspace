@@ -378,17 +378,33 @@ uint ServerPrivate::Inhibit(const QString &desktop_entry, const QString &reason,
 {
     const QString dbusService = message().service();
 
+    QString applicationName = desktop_entry;
+
     qCDebug(NOTIFICATIONMANAGER) << "Request inhibit from service" << dbusService << "which is" << desktop_entry << "with reason" << reason;
 
+    // xdg-desktop-portal forwards appId only for sandboxed apps it can trust
+    // Resolve it to process name here to at least have something, even if that means showing "xdg-desktop-portal-kde is currently..."
     if (desktop_entry.isEmpty()) {
-        // TODO return error
-        return 0;
+        QDBusReply<uint> pidReply = connection().interface()->servicePid(message().service());
+        if (pidReply.isValid()) {
+            const auto pid = pidReply.value();
+
+            const QString processName = Utils::processNameFromPid(pid);
+            if (!processName.isEmpty()) {
+                qCDebug(NOTIFICATIONMANAGER) << "Resolved inhibition to be from process name" << processName;
+                applicationName = processName;
+            }
+        }
+    } else {
+        KService::Ptr service = KService::serviceByDesktopName(desktop_entry);
+        if (service) {
+            applicationName = service->name();
+        }
     }
 
-    KService::Ptr service = KService::serviceByDesktopName(desktop_entry);
-    QString applicationName;
-    if (service) { // should we check for this and error if it didn't find a service?
-        applicationName = service->name();
+    if (applicationName.isEmpty()) {
+        sendErrorReply(QDBusError::InvalidArgs, QStringLiteral("No meaningful desktop_entry provided"));
+        return 0;
     }
 
     m_inhibitionWatcher->addWatchedService(dbusService);
