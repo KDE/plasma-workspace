@@ -61,6 +61,7 @@ private Q_SLOTS:
 
 private:
     QScopedPointer<FakeFindProfile> m_findBookmarksInCurrentDirectory;
+    QString m_configHome;
 };
 
 #endif // TESTCHROMEBOOKMARKS_H

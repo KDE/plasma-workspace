@@ -62,5 +62,5 @@ install(TARGETS krunner_bookmarksrunner DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf
 
 # Currently tests include only chrome, so no need to get include them if json is not found
 if(BUILD_TESTING)
-   add_subdirectory(tests)
+   add_subdirectory(autotests)
 endif()
