@@ -34,11 +34,11 @@ public:
     QIcon iconFor(const QString &url) override;
 };
 
-class KDEBrowser : public QObject, public Browser
+class Konqueror : public QObject, public Browser
 {
     Q_OBJECT
 public:
-    explicit KDEBrowser(QObject *parent = nullptr);
+    explicit Konqueror(QObject *parent = nullptr);
     QList<BookmarkMatch> match(const QString &term, bool addEverything) override;
 
 public Q_SLOTS:

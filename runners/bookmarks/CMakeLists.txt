@@ -35,7 +35,7 @@ set(krunner_bookmarksrunner_SRCS
     browsers/chromefindprofile.cpp
     browsers/chrome.cpp
     browsers/firefox.cpp
-    browsers/kdebrowser.cpp
+    browsers/konqueror.cpp
     browsers/opera.cpp
     browsers/falkon.cpp
 )

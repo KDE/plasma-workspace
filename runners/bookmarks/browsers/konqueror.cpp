@@ -18,7 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "kdebrowser.h"
+#include "konqueror.h"
 #include "bookmarkmatch.h"
 
 #include <QIcon>
@@ -42,14 +42,14 @@ KDEFavicon::KDEFavicon(QObject *parent)
 {
 }
 
-KDEBrowser::KDEBrowser(QObject *parent)
+Konqueror::Konqueror(QObject *parent)
     : QObject(parent)
     , m_bookmarkManager(KBookmarkManager::userBookmarksManager())
     , m_favicon(new KDEFavicon(this))
 {
 }
 
-QList<BookmarkMatch> KDEBrowser::match(const QString &term, bool addEverything)
+QList<BookmarkMatch> Konqueror::match(const QString &term, bool addEverything)
 {
     KBookmarkGroup bookmarkGroup = m_bookmarkManager->root();
 
