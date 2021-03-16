@@ -49,6 +49,7 @@ set(krunner_bookmarks_test_SRCS
     ${krunner_bookmarks_common_SRCS}
     browsers/chromefindprofile.cpp
     browsers/chrome.cpp
+    browsers/firefox.cpp
  )
 
 add_library(krunner_bookmarks_test STATIC ${krunner_bookmarks_test_SRCS})

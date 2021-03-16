@@ -159,7 +159,7 @@ void Firefox::init(const QString &firefoxConfigDir)
     m_dbFile = grp.readEntry("dbfile", QString());
     if (m_dbFile.isEmpty() || !QFile::exists(m_dbFile)) {
         // Try to get the right database file, the default profile is used
-        KConfig firefoxProfile(firefoxConfigDir + "profiles.ini", KConfig::SimpleConfig);
+        KConfig firefoxProfile(firefoxConfigDir + "/profiles.ini", KConfig::SimpleConfig);
         QStringList profilesList = firefoxProfile.groupList();
         profilesList = profilesList.filter(QRegularExpression(QStringLiteral("^Profile\\d+$")));
 
@@ -190,7 +190,7 @@ void Firefox::init(const QString &firefoxConfigDir)
             qCWarning(RUNNER_BOOKMARKS) << "No default firefox profile found";
             return;
         }
-        profilePath.prepend(firefoxConfigDir);
+        profilePath.prepend(firefoxConfigDir + "/");
         m_dbFile = profilePath + "/places.sqlite";
         m_dbFile_fav = profilePath + "/favicons.sqlite";
     } else {
