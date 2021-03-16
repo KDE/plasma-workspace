@@ -453,7 +453,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == ScreenGeometry) {
         return screenGeometry(window->geometry().center());
     } else if (role == Activities) {
-        // FIXME Implement.
+        return window->plasmaActivities();
     } else if (role == IsDemandingAttention) {
         return window->isDemandingAttention();
     } else if (role == SkipTaskbar) {
@@ -679,8 +679,23 @@ void WaylandTasksModel::requestNewVirtualDesktop(const QModelIndex &index)
 
 void WaylandTasksModel::requestActivities(const QModelIndex &index, const QStringList &activities)
 {
-    Q_UNUSED(index)
-    Q_UNUSED(activities)
+    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+        return;
+    }
+
+    auto * const window = d->windows.at(index.row());
+    const auto newActivities = activities.toSet();
+    const auto oldActivities = window->plasmaActivities().toSet();
+
+    const auto activitiesToAdd = newActivities - oldActivities;
+    for (const auto &activity : activitiesToAdd) {
+        window->requestEnterActivity(activity);
+    }
+
+    const auto activitiesToRemove = oldActivities - newActivities;
+    for (const auto &activity : activitiesToRemove) {
+        window->requestLeaveActivity(activity);
+    }
 }
 
 void WaylandTasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
