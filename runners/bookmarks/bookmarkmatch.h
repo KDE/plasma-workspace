@@ -37,6 +37,11 @@ public:
     void addTo(QList<BookmarkMatch> &listOfResults, bool addEvenOnNoMatch);
     Plasma::QueryMatch asQueryMatch(Plasma::AbstractRunner *runner);
 
+    Q_REQUIRED_RESULT QString bookmarkTitle() const
+    {
+        return m_bookmarkTitle;
+    }
+
     Q_REQUIRED_RESULT QString bookmarkUrl() const
     {
         return m_bookmarkURL;
