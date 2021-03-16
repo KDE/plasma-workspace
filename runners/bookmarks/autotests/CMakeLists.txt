@@ -9,3 +9,7 @@ file(COPY chrome/chrome-config-home DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/chro
 ecm_add_test(firefox/testfirefoxbookmarks.cpp TEST_NAME testFirefoxBookmarks
     LINK_LIBRARIES Qt::Test krunner_bookmarks_common
 )
+
+ecm_add_test(bookmarksmatchtest.cpp TEST_NAME testBookmarksMatch
+    LINK_LIBRARIES Qt::Test krunner_bookmarks_common
+)

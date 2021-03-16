@@ -4,11 +4,11 @@
 
 #include "browsers/firefox.h"
 
-class TestFirefoxBookmarks : public QObject
+class TestBookmarksMatch : public QObject
 {
     Q_OBJECT
 public:
-    explicit TestFirefoxBookmarks(QObject *parent = nullptr)
+    explicit TestBookmarksMatch(QObject *parent = nullptr)
         : QObject(parent)
     {
     }
@@ -23,13 +23,13 @@ private Q_SLOTS:
     void testBookmarksQuery_data();
 };
 
-void TestFirefoxBookmarks::initTestCase()
+void TestBookmarksMatch::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
     m_firefox = new Firefox(this, QFINDTESTDATA("firefox-config-home"));
 }
 
-void TestFirefoxBookmarks::testAllBookmarks()
+void TestBookmarksMatch::testAllBookmarks()
 {
     m_firefox->prepare();
     const QList<BookmarkMatch> matches = m_firefox->match(QStringLiteral("kde"), true);
@@ -37,7 +37,7 @@ void TestFirefoxBookmarks::testAllBookmarks()
     m_firefox->teardown();
 }
 
-void TestFirefoxBookmarks::testBookmarksQuery_data()
+void TestBookmarksMatch::testBookmarksQuery_data()
 {
     QTest::addColumn<QString>("query");
     QTest::addColumn<QStringList>("expectedUrls");
@@ -49,7 +49,7 @@ void TestFirefoxBookmarks::testBookmarksQuery_data()
     QTest::newRow("query that matches multiple titles") << "ubuntu" << QStringList{"http://www.ubuntu.com/", "http://wiki.ubuntu.com/"};
 }
 
-void TestFirefoxBookmarks::testBookmarksQuery()
+void TestBookmarksMatch::testBookmarksQuery()
 {
     QFETCH(QString, query);
     QFETCH(QStringList, expectedUrls);
@@ -63,6 +63,6 @@ void TestFirefoxBookmarks::testBookmarksQuery()
     m_firefox->teardown();
 }
 
-QTEST_MAIN(TestFirefoxBookmarks)
+QTEST_MAIN(TestBookmarksMatch)
 
 #include "testfirefoxbookmarks.moc"
