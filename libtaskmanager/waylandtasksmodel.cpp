@@ -150,6 +150,13 @@ void WaylandTasksModel::Private::initWayland()
             addWindow(window);
         });
 
+        QObject::connect(windowManagement, &KWayland::Client::PlasmaWindowManagement::stackingOrderUuidsChanged, q, [this]() {
+                for (const auto window : qAsConst(windows)) {
+                    this->dataChanged(window, StackingOrder);
+                }
+            }
+        );
+
         const auto windows = windowManagement->windows();
         for (auto it = windows.constBegin(); it != windows.constEnd(); ++it) {
             addWindow(*it);
