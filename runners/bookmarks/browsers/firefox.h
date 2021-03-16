@@ -22,6 +22,7 @@
 #define FIREFOX_H
 
 #include "browser.h"
+#include <QDir>
 #include <QSqlDatabase>
 
 class Favicon;
@@ -30,7 +31,7 @@ class Firefox : public QObject, public Browser
 {
     Q_OBJECT
 public:
-    explicit Firefox(QObject *parent = nullptr);
+    explicit Firefox(QObject *parent = nullptr, const QString &firefoxConfigDir = QDir::homePath() + QStringLiteral("/.mozilla/firefox/"));
     ~Firefox() override;
     QList<BookmarkMatch> match(const QString &term, bool addEverything) override;
 public Q_SLOTS:
@@ -38,7 +39,7 @@ public Q_SLOTS:
     void prepare() override;
 
 private:
-    virtual void reloadConfiguration();
+    virtual void init(const QString &firefoxConfigDir);
     QString m_dbFile;
     QString m_dbFile_fav;
     QString m_dbCacheFile;

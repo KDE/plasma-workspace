@@ -30,7 +30,7 @@
 #include <QFile>
 #include <QRegularExpression>
 
-Firefox::Firefox(QObject *parent)
+Firefox::Firefox(QObject *parent, const QString &firefoxConfigDir)
     : QObject(parent)
     , m_favicon(new FallbackFavicon(this))
     , m_fetchsqlite(nullptr)
@@ -38,7 +38,7 @@ Firefox::Firefox(QObject *parent)
 {
     m_dbCacheFile = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/bookmarkrunnerfirefoxdbfile.sqlite");
     m_dbCacheFile_fav = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + QStringLiteral("/bookmarkrunnerfirefoxfavdbfile.sqlite");
-    reloadConfiguration();
+    init(firefoxConfigDir);
 }
 
 Firefox::~Firefox()
@@ -148,7 +148,7 @@ void Firefox::teardown()
     m_favicon->teardown();
 }
 
-void Firefox::reloadConfiguration()
+void Firefox::init(const QString &firefoxConfigDir)
 {
     if (!QSqlDatabase::isDriverAvailable(QStringLiteral("QSQLITE"))) {
         qCWarning(RUNNER_BOOKMARKS) << "SQLITE driver isn't available";
@@ -159,7 +159,7 @@ void Firefox::reloadConfiguration()
     m_dbFile = grp.readEntry("dbfile", QString());
     if (m_dbFile.isEmpty() || !QFile::exists(m_dbFile)) {
         // Try to get the right database file, the default profile is used
-        KConfig firefoxProfile(QDir::homePath() + "/.mozilla/firefox/profiles.ini", KConfig::SimpleConfig);
+        KConfig firefoxProfile(firefoxConfigDir + "profiles.ini", KConfig::SimpleConfig);
         QStringList profilesList = firefoxProfile.groupList();
         profilesList = profilesList.filter(QRegularExpression(QStringLiteral("^Profile\\d+$")));
 
@@ -190,7 +190,7 @@ void Firefox::reloadConfiguration()
             qCWarning(RUNNER_BOOKMARKS) << "No default firefox profile found";
             return;
         }
-        profilePath.prepend(QStringLiteral("%1/.mozilla/firefox/").arg(QDir::homePath()));
+        profilePath.prepend(firefoxConfigDir);
         m_dbFile = profilePath + "/places.sqlite";
         m_dbFile_fav = profilePath + "/favicons.sqlite";
     } else {
