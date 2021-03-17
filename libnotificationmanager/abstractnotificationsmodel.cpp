@@ -103,16 +103,14 @@ void AbstractNotificationsModel::Private::onNotificationReplaced(uint replacedId
 
     Notification newNotification(notification);
 
-    // Resident notifications are expected to be updateable in the history
-    // transfer a few flags over to new notification so it doesn't plop back up
-    if (newNotification.resident()) {
-        const Notification &oldNotification = notifications.at(row);
-        if (oldNotification.resident()) {
-            newNotification.setExpired(oldNotification.expired());
-            newNotification.setDismissed(oldNotification.dismissed());
-            newNotification.setRead(oldNotification.read());
-        }
-    }
+    const Notification &oldNotification = notifications.at(row);
+    // As per spec a notification must be replaced atomically with no visual cues.
+    // Transfer over properties that might cause this, such as unread showing the bell again,
+    // or created() which should indicate the original date, whereas updated() is when it was last updated
+    newNotification.setCreated(oldNotification.created());
+    newNotification.setExpired(oldNotification.expired());
+    newNotification.setDismissed(oldNotification.dismissed());
+    newNotification.setRead(oldNotification.read());
 
     notifications[row] = newNotification;
     const QModelIndex idx = q->index(row, 0);

@@ -490,6 +490,11 @@ QDateTime Notification::created() const
     return d->created;
 }
 
+void Notification::setCreated(const QDateTime &created)
+{
+    d->created = created;
+}
+
 QDateTime Notification::updated() const
 {
     return d->updated;

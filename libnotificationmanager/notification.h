@@ -55,8 +55,11 @@ public:
     QString dBusService() const;
     void setDBusService(const QString &dBusService);
 
+    // Creation time of the original notification
     QDateTime created() const;
+    void setCreated(const QDateTime &created);
 
+    // Last time it was updated, or invalid if it never was
     QDateTime updated() const;
     void resetUpdated();
 
