@@ -43,7 +43,8 @@ int main(int argc, char **argv)
     if (!df.readName().isEmpty()) {
         displayName = df.readName();
     }
-    const QString clipboardActionName = df.actionGroup(QStringLiteral("RunClipboard")).readEntry(QStringLiteral("Name"), QStringLiteral("Run command on clipboard contents"));
+    const QString clipboardActionName = df.actionGroup(QStringLiteral("RunClipboard")).readEntry(QStringLiteral("Name"), //
+    QStringLiteral("Run command on clipboard contents"));
 
     KActionCollection shortCutActions(nullptr, oldDesktopFile);
     shortCutActions.setComponentDisplayName(displayName);

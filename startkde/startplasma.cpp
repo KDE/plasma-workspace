@@ -95,8 +95,8 @@ bool isShellVariable(const QByteArray &name) {
 
 bool isSessionVariable(const QByteArray &name) {
     // Check is variable is specific to session.
-    return name == "DISPLAY" || name == "XAUTHORITY" ||
-           name == "WAYLAND_DISPLAY" || name == "WAYLAND_SOCKET" ||
+    return name == "DISPLAY" || name == "XAUTHORITY" || //
+           name == "WAYLAND_DISPLAY" || name == "WAYLAND_SOCKET" || //
            name.startsWith("XDG_");
 }
 

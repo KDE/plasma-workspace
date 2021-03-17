@@ -60,7 +60,7 @@ bool TextEditClickHandler::eventFilter(QObject *watched, QEvent *event)
     } else if (event->type() == QEvent::MouseButtonRelease) {
         const auto *e = static_cast<QMouseEvent *>(event);
 
-        if (m_pressPos.x() > -1 && m_pressPos.y() > -1
+        if (m_pressPos.x() > -1 && m_pressPos.y() > -1 //
                 && (m_pressPos - e->pos()).manhattanLength() < qGuiApp->styleHints()->startDragDistance()) {
             Q_EMIT clicked();
         }

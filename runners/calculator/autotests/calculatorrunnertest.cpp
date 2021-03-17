@@ -41,6 +41,7 @@ void CalculatorRunnerTest::testQuery_data()
     QTest::addColumn<QString>("query");
     QTest::addColumn<QString>("result");
 
+    // clang-format off
     QTest::newRow("simple addition") << "1+1" << "2";
     QTest::newRow("simple subtraction") << "2-1" << "1";
     QTest::newRow("simple multiplication") << "2*2" << "4";
@@ -64,6 +65,7 @@ void CalculatorRunnerTest::testQuery_data()
     // BUG: 431362
     QTest::newRow("hex and decimal addition") << "0x12+1" << "19";
     QTest::newRow("hex and decimal addition reversed") << "1+0x12" << "19";
+    // clang-format on
 }
 
 void CalculatorRunnerTest::testApproximation()

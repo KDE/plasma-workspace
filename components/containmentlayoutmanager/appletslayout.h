@@ -103,7 +103,7 @@ public:
     enum LayoutChange {
         NoChange = 0,
         SizeChange = 1,
-        ConfigKeyChange = 2
+        ConfigKeyChange = 2,
     };
     Q_DECLARE_FLAGS(LayoutChanges, LayoutChange)
 
