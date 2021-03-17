@@ -257,7 +257,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
                                               QStringLiteral("shell"),
                                               QStringLiteral("bookmarks"),
                                               QStringLiteral("recentdocuments"),
-                                              QStringLiteral("locations")};
+                                              QStringLiteral("locations"),};
         if (m_runners.isEmpty()) {
             const auto baloo = matchesForRunner.take(QStringLiteral("baloosearch"));
             const auto appstream = matchesForRunner.take(QStringLiteral("krunner_appstream"));

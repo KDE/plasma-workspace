@@ -98,7 +98,7 @@ static const struct {
                                   {QFontDatabase::Myanmar, 0x1000},
                                   {QFontDatabase::Ogham, 0x1681},
                                   {QFontDatabase::Runic, 0x16a0},
-                                  {QFontDatabase::Any, 0x0}};
+                                  {QFontDatabase::Any, 0x0},};
 
 qulonglong WritingSystems::get(FcPattern *pat) const
 {

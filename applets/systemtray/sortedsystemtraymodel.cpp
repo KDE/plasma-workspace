@@ -27,7 +27,7 @@ static const QList<QString> s_categoryOrder = {QStringLiteral("UnknownCategory")
                                                QStringLiteral("ApplicationStatus"),
                                                QStringLiteral("Communications"),
                                                QStringLiteral("SystemServices"),
-                                               QStringLiteral("Hardware")};
+                                               QStringLiteral("Hardware"),};
 
 SortedSystemTrayModel::SortedSystemTrayModel(SortingType sorting, QObject *parent)
     : QSortFilterProxyModel(parent)

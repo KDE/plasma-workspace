@@ -419,7 +419,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
                                                              Solid::DeviceInterface::StorageAccess,
                                                              Solid::DeviceInterface::Block,
                                                              Solid::DeviceInterface::Battery,
-                                                             Solid::DeviceInterface::Processor};
+                                                             Solid::DeviceInterface::Processor,};
 
     for (int i = 0; i < 11; ++i) {
         const Solid::DeviceInterface *interface = device.asDeviceInterface(typeOrder[i]);
