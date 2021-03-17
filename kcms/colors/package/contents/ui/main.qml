@@ -149,9 +149,8 @@ KCM.GridViewKCM {
 
             color: model.palette.window
 
+            Kirigami.Theme.inherit: false
             Kirigami.Theme.highlightColor: model.palette.highlight
-            Kirigami.Theme.highlightedTextColor: model.palette.highlightedText
-            Kirigami.Theme.linkColor: model.palette.link
             Kirigami.Theme.textColor: model.palette.text
 
             Rectangle {
@@ -208,11 +207,26 @@ KCM.GridViewKCM {
                 QtControls.Frame {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
-                    Kirigami.Theme.backgroundColor: model.palette.base
-                    // FIXME Make Frame still visible but without any inner padding
-                    padding: 1
+                    padding: 0
+
                     activeFocusOnTab: false
 
+                    // Frame by default has a transparent background, override it so we can use the view color
+                    // instead.
+                    background: Rectangle {
+                        color: Kirigami.Theme.backgroundColor
+                        border.width: 1
+                        border.color: Qt.rgba(model.palette.text.r, model.palette.text.g, model.palette.text.b, 0.3)
+                    }
+
+                    // We need to set inherit to false here otherwise the child ItemDelegates will not use the
+                    // alternative base color we set here.
+                    Kirigami.Theme.inherit: false
+                    Kirigami.Theme.backgroundColor: model.palette.base
+                    Kirigami.Theme.highlightColor: model.palette.highlight
+                    Kirigami.Theme.highlightedTextColor: model.palette.highlightedText
+                    Kirigami.Theme.linkColor: model.palette.link
+                    Kirigami.Theme.textColor: model.palette.text
                     Column {
                         id: listPreviewColumn
 
@@ -221,7 +235,8 @@ KCM.GridViewKCM {
                             .arg(model.palette.linkVisited)
                             .arg(i18nc("Visited hyperlink", "visited"))
 
-                        width: parent.width
+                        anchors.fill: parent
+                        anchors.margins: 1
 
                         QtControls.ItemDelegate {
                             width: parent.width
