@@ -1,6 +1,7 @@
 /*
  *   Copyright 2007 Glenn Ergeerts <glenn.ergeerts@telenet.be>
  *   Copyright 2012 Glenn Ergeerts <marco.gulino@gmail.com>
+ *   Copyright 2021 Alexander Lohnau <alexander.lohnau@gmx.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License as
