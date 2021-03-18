@@ -39,7 +39,6 @@ public Q_SLOTS:
     void prepare() override;
 
 private:
-    void init(const QString &firefoxConfigDir);
     QString m_dbFile;
     QString m_dbFile_fav;
     const QString m_dbCacheFile;

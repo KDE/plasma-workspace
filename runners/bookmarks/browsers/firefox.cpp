@@ -38,7 +38,63 @@ Firefox::Firefox(const QString &firefoxConfigDir, QObject *parent)
     , m_fetchsqlite(nullptr)
     , m_fetchsqlite_fav(nullptr)
 {
-    init(firefoxConfigDir);
+    if (!QSqlDatabase::isDriverAvailable(QStringLiteral("QSQLITE"))) {
+        qCWarning(RUNNER_BOOKMARKS) << "SQLITE driver isn't available";
+        return;
+    }
+
+    KConfigGroup grp(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General"));
+    /* This allows the user to specify a profile database */
+    m_dbFile = grp.readEntry("dbfile", QString());
+    if (m_dbFile.isEmpty() || !QFile::exists(m_dbFile)) {
+        // Try to get the right database file, the default profile is used
+        KConfig firefoxProfile(firefoxConfigDir + "/profiles.ini", KConfig::SimpleConfig);
+        QStringList profilesList = firefoxProfile.groupList();
+        profilesList = profilesList.filter(QRegularExpression(QStringLiteral("^Profile\\d+$")));
+
+        QString profilePath;
+        if (profilesList.size() == 1) {
+            // There is only 1 profile so we select it
+            KConfigGroup fGrp = firefoxProfile.group(profilesList.first());
+            profilePath = fGrp.readEntry("Path");
+        } else {
+            const QStringList installConfig = firefoxProfile.groupList().filter(QRegularExpression("^Install.*"));
+            // The profile with Default=1 is not always the default profile, see BUG: 418526
+            // If there is only one Install* group it contains the default profile
+            if (installConfig.size() == 1) {
+                profilePath = firefoxProfile.group(installConfig.first()).readEntry("Default");
+            } else {
+                // There are multiple profiles, find the default one
+                for (const QString &profileName : qAsConst(profilesList)) {
+                    KConfigGroup fGrp = firefoxProfile.group(profileName);
+                    if (fGrp.readEntry<int>("Default", 0)) {
+                        profilePath = fGrp.readEntry("Path");
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (profilePath.isEmpty()) {
+            qCWarning(RUNNER_BOOKMARKS) << "No default firefox profile found";
+            return;
+        }
+        profilePath.prepend(firefoxConfigDir + "/");
+        m_dbFile = profilePath + "/places.sqlite";
+        m_dbFile_fav = profilePath + "/favicons.sqlite";
+    } else {
+        auto dir = QDir(m_dbFile);
+        if (dir.cdUp()) {
+            QString profilePath = dir.absolutePath();
+            m_dbFile_fav = profilePath + "/favicons.sqlite";
+        }
+    }
+    // We can reuse the favicon instance over the lifetime of the plugin consequently the
+    // icons that are already written to disk can be reused in multiple match sessions
+    updateCacheFile(m_dbFile_fav, m_dbCacheFile_fav);
+    m_fetchsqlite_fav = new FetchSqlite(m_dbCacheFile_fav, this);
+    delete m_favicon;
+    m_favicon = FaviconFromBlob::firefox(m_fetchsqlite_fav, this);
 }
 
 Firefox::~Firefox()
@@ -146,64 +202,4 @@ void Firefox::teardown()
         m_fetchsqlite = nullptr;
     }
     m_favicon->teardown();
-}
-
-void Firefox::init(const QString &firefoxConfigDir)
-{
-    if (!QSqlDatabase::isDriverAvailable(QStringLiteral("QSQLITE"))) {
-        qCWarning(RUNNER_BOOKMARKS) << "SQLITE driver isn't available";
-        return;
-    }
-    KConfigGroup grp(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General"));
-    /* This allows the user to specify a profile database */
-    m_dbFile = grp.readEntry("dbfile", QString());
-    if (m_dbFile.isEmpty() || !QFile::exists(m_dbFile)) {
-        // Try to get the right database file, the default profile is used
-        KConfig firefoxProfile(firefoxConfigDir + "/profiles.ini", KConfig::SimpleConfig);
-        QStringList profilesList = firefoxProfile.groupList();
-        profilesList = profilesList.filter(QRegularExpression(QStringLiteral("^Profile\\d+$")));
-
-        QString profilePath;
-        if (profilesList.size() == 1) {
-            // There is only 1 profile so we select it
-            KConfigGroup fGrp = firefoxProfile.group(profilesList.first());
-            profilePath = fGrp.readEntry("Path");
-        } else {
-            const QStringList installConfig = firefoxProfile.groupList().filter(QRegularExpression("^Install.*"));
-            // The profile with Default=1 is not always the default profile, see BUG: 418526
-            // If there is only one Install* group it contains the default profile
-            if (installConfig.size() == 1) {
-                profilePath = firefoxProfile.group(installConfig.first()).readEntry("Default");
-            } else {
-                // There are multiple profiles, find the default one
-                for (const QString &profileName : qAsConst(profilesList)) {
-                    KConfigGroup fGrp = firefoxProfile.group(profileName);
-                    if (fGrp.readEntry<int>("Default", 0)) {
-                        profilePath = fGrp.readEntry("Path");
-                        break;
-                    }
-                }
-            }
-        }
-
-        if (profilePath.isEmpty()) {
-            qCWarning(RUNNER_BOOKMARKS) << "No default firefox profile found";
-            return;
-        }
-        profilePath.prepend(firefoxConfigDir + "/");
-        m_dbFile = profilePath + "/places.sqlite";
-        m_dbFile_fav = profilePath + "/favicons.sqlite";
-    } else {
-        auto dir = QDir(m_dbFile);
-        if (dir.cdUp()) {
-            QString profilePath = dir.absolutePath();
-            m_dbFile_fav = profilePath + "/favicons.sqlite";
-        }
-    }
-    // We can reuse the favicon instance over the lifetime of the plugin consequently the
-    // icons that are already written to disk can be reused in multiple match sessions
-    updateCacheFile(m_dbFile_fav, m_dbCacheFile_fav);
-    m_fetchsqlite_fav = new FetchSqlite(m_dbCacheFile_fav, this);
-    delete m_favicon;
-    m_favicon = FaviconFromBlob::firefox(m_fetchsqlite_fav, this);
 }
