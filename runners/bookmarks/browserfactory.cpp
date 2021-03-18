@@ -35,7 +35,7 @@ Browser *BrowserFactory::find(const QString &browserName, QObject *parent)
     delete m_previousBrowser;
     m_previousBrowserName = browserName;
     if (browserName.contains(QLatin1String("firefox"), Qt::CaseInsensitive) || browserName.contains(QLatin1String("iceweasel"), Qt::CaseInsensitive)) {
-        m_previousBrowser = new Firefox(parent);
+        m_previousBrowser = new Firefox(QDir::homePath() + QStringLiteral("/.mozilla/firefox"), parent);
     } else if (browserName.contains(QLatin1String("opera"), Qt::CaseInsensitive)) {
         m_previousBrowser = new Opera(parent);
     } else if (browserName.contains(QLatin1String("chrome"), Qt::CaseInsensitive)) {

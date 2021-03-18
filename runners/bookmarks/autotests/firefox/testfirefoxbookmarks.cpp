@@ -13,13 +13,10 @@ class TestBookmarksMatch : public QObject
 {
     Q_OBJECT
 public:
-    explicit TestBookmarksMatch(QObject *parent = nullptr)
-        : QObject(parent)
-    {
-    }
+    using QObject::QObject;
 
 private:
-    Firefox *m_firefox;
+    Firefox *m_firefox = nullptr;
 
 private Q_SLOTS:
     void initTestCase();
@@ -31,7 +28,7 @@ private Q_SLOTS:
 void TestBookmarksMatch::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
-    m_firefox = new Firefox(this, QFINDTESTDATA("firefox-config-home"));
+    m_firefox = new Firefox(QFINDTESTDATA("firefox-config-home"), this);
 }
 
 void TestBookmarksMatch::testAllBookmarks()

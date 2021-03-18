@@ -14,13 +14,7 @@ class TestBookmarksMatch : public QObject
 {
     Q_OBJECT
 public:
-    explicit TestBookmarksMatch(QObject *parent = nullptr)
-        : QObject(parent)
-    {
-    }
-
-private:
-    Firefox *m_firefox;
+    using QObject::QObject;
 
 private Q_SLOTS:
     void testQueryMatchConversion();
