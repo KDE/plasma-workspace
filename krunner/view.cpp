@@ -62,6 +62,10 @@ View::View(QWindow *)
     setTitle(i18n("KRunner"));
 
     m_config = KConfigGroup(KSharedConfig::openConfig(), "General");
+    m_stateData = KSharedConfig::openConfig(QStringLiteral("krunnerstaterc"), //
+                                            KConfig::NoGlobals,
+                                            QStandardPaths::GenericDataLocation)
+                      ->group("General");
     m_configWatcher = KConfigWatcher::create(KSharedConfig::openConfig());
     connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
         Q_UNUSED(names);
@@ -156,7 +160,7 @@ void View::setFreeFloating(bool floating)
 void View::loadConfig()
 {
     setFreeFloating(m_config.readEntry("FreeFloating", false));
-    setPinned(m_config.readEntry("Pinned", false));
+    setPinned(m_stateData.readEntry("Pinned", false));
 }
 
 bool View::event(QEvent *event)
@@ -375,7 +379,7 @@ void View::setPinned(bool pinned)
 {
     if (m_pinned != pinned) {
         m_pinned = pinned;
-        m_config.writeEntry("Pinned", pinned);
+        m_stateData.writeEntry("Pinned", pinned);
         Q_EMIT pinnedChanged();
     }
 }

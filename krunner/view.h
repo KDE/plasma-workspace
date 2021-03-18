@@ -99,6 +99,7 @@ private:
     QPoint m_customPos;
     KDeclarative::QmlObject *m_qmlObj;
     KConfigGroup m_config;
+    KConfigGroup m_stateData;
     KConfigWatcher::Ptr m_configWatcher;
     qreal m_offset;
     bool m_floating : 1;
