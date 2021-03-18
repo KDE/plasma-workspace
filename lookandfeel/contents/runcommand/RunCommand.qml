@@ -132,7 +132,9 @@ ColumnLayout {
             function move_up() {
                 if (length === 0) {
                     root.showHistory = true;
-                    listView.forceActiveFocus();
+                    if (listView.count > 0) {
+                        listView.forceActiveFocus();
+                    }
                 } else if (results.count > 0) {
                     results.forceActiveFocus();
                     results.decrementCurrentIndex();
@@ -142,7 +144,9 @@ ColumnLayout {
             function move_down() {
                 if (length === 0) {
                     root.showHistory = true;
-                    listView.forceActiveFocus();
+                    if (listView.count > 0) {
+                        listView.forceActiveFocus();
+                    }
                 } else if (results.count > 0) {
                     results.forceActiveFocus();
                     results.incrementCurrentIndex();
