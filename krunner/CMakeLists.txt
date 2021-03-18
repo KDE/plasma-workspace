@@ -23,6 +23,7 @@ target_link_libraries(krunner
     KF5::Crash
     KF5::WaylandClient
     KF5::QuickAddons
+    KF5::Runner
     PW::KWorkspace
 )
 target_compile_definitions(krunner PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
