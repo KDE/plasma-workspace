@@ -49,15 +49,34 @@ void TestBookmarksMatch::testQueryMatchConversion_data()
     QTest::addColumn<int>("expectedMatchType");
     QTest::addColumn<qreal>("expectedRelevance");
 
-    // clang-format off
-    QTest::newRow("no text match")               << "krunner"               << "KDE Community" << "https://somehost.com/" << ""       << (int)QueryMatch::PossibleMatch << 0.18;
-    QTest::newRow("title partly matches")        << "kde"                   << "KDE Community" << "https://somehost.com/" << ""       << (int)QueryMatch::PossibleMatch << 0.45;
-    QTest::newRow("title exactly matches")       << "kde community"         << "KDE Community" << "https://somehost.com/" << ""       << (int)QueryMatch::ExactMatch    << 1.0;
-    QTest::newRow("url partly matches")          << "somehost"              << "KDE Community" << "https://somehost.com/" << ""       << (int)QueryMatch::PossibleMatch << 0.2;
-    QTest::newRow("url exactly matches")         << "https://somehost.com/" << "KDE Community" << "https://somehost.com/" << ""       << (int)QueryMatch::PossibleMatch << 0.2;
-    QTest::newRow("description exactly matches") << "test"                  << "KDE Community" << "https://somehost.com/" << "test"   << (int)QueryMatch::ExactMatch    << 1.0;
-    QTest::newRow("description partly matches")  << "test"                  << "KDE Community" << "https://somehost.com/" << "testme" << (int)QueryMatch::PossibleMatch << 0.3;
-    // clang-format on
+    QTest::newRow("no text match") << "krunner"
+                                   << "KDE Community"
+                                   << "https://somehost.com/"
+                                   << "" << (int)QueryMatch::PossibleMatch << 0.18;
+    QTest::newRow("title partly matches") << "kde"
+                                          << "KDE Community"
+                                          << "https://somehost.com/"
+                                          << "" << (int)QueryMatch::PossibleMatch << 0.45;
+    QTest::newRow("title exactly matches") << "kde community"
+                                           << "KDE Community"
+                                           << "https://somehost.com/"
+                                           << "" << (int)QueryMatch::ExactMatch << 1.0;
+    QTest::newRow("url partly matches") << "somehost"
+                                        << "KDE Community"
+                                        << "https://somehost.com/"
+                                        << "" << (int)QueryMatch::PossibleMatch << 0.2;
+    QTest::newRow("url exactly matches") << "https://somehost.com/"
+                                         << "KDE Community"
+                                         << "https://somehost.com/"
+                                         << "" << (int)QueryMatch::PossibleMatch << 0.2;
+    QTest::newRow("description exactly matches") << "test"
+                                                 << "KDE Community"
+                                                 << "https://somehost.com/"
+                                                 << "test" << (int)QueryMatch::ExactMatch << 1.0;
+    QTest::newRow("description partly matches") << "test"
+                                                << "KDE Community"
+                                                << "https://somehost.com/"
+                                                << "testme" << (int)QueryMatch::PossibleMatch << 0.3;
 }
 
 void TestBookmarksMatch::testAddToList()
