@@ -182,6 +182,7 @@ KCM.GridViewKCM {
                     bottom: parent.bottom
                     margins: Kirigami.Units.smallSpacing
                 }
+                spacing: Kirigami.Units.smallSpacing
 
                 RowLayout {
                     Layout.fillWidth: true
