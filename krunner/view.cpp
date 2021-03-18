@@ -379,3 +379,16 @@ void View::setPinned(bool pinned)
         Q_EMIT pinnedChanged();
     }
 }
+
+void View::removeFromHistory(int index)
+{
+    if (m_manager) {
+        m_manager->removeFromHistory(index);
+        Q_EMIT historyChanged();
+    }
+}
+
+QStringList View::history() const
+{
+    return m_manager ? m_manager->history() : QStringList();
+}
