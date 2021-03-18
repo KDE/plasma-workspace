@@ -5,15 +5,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_bookmarksrunner\")
 
 find_package(Qt5 CONFIG REQUIRED COMPONENTS Sql)
 
-
-set(EXTERNAL_LIBS
-    Qt::Sql
-    KF5::KIOCore
-    KF5::I18n
-    KF5::Runner
-    KF5::Bookmarks
-)
-
 set(krunner_bookmarks_common_SRCS
     bookmarkmatch.cpp
     faviconfromblob.cpp
@@ -35,15 +26,15 @@ ecm_qt_declare_logging_category(krunner_bookmarks_common_SRCS
 )
 
 add_library(krunner_bookmarks_common STATIC ${krunner_bookmarks_common_SRCS})
-target_link_libraries(krunner_bookmarks_common ${EXTERNAL_LIBS})
-
-set(krunner_bookmarksrunner_SRCS
-    bookmarksrunner.cpp
-    browserfactory.cpp
+target_link_libraries(krunner_bookmarks_common
+    Qt::Sql
+    KF5::KIOCore
+    KF5::I18n
+    KF5::Runner
+    KF5::Bookmarks
 )
 
-
-add_library(krunner_bookmarksrunner MODULE ${krunner_bookmarksrunner_SRCS})
+add_library(krunner_bookmarksrunner MODULE bookmarksrunner.cpp browserfactory.cpp)
 kcoreaddons_desktop_to_json(krunner_bookmarksrunner plasma-runner-bookmarks.desktop )
 target_link_libraries(krunner_bookmarksrunner krunner_bookmarks_common)
 
