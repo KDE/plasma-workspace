@@ -7,6 +7,7 @@ set(systemclipboard_SRCS
     systemclipboard.cpp
     qtclipboard.cpp
     waylandclipboard.cpp
+    datacontrol.cpp
 )
 
 ecm_add_qtwayland_client_protocol(systemclipboard_SRCS

@@ -19,10 +19,7 @@
 
 #pragma once
 #include "systemclipboard.h"
-#include <memory>
-
-class DataControlDevice;
-class DataControlDeviceManager;
+#include "datacontrol.h"
 
 class WaylandClipboard : public SystemClipboard
 {
@@ -33,6 +30,5 @@ public:
     const QMimeData *mimeData(QClipboard::Mode mode) const override;
 
 private:
-    std::unique_ptr<DataControlDeviceManager> m_manager;
-    std::unique_ptr<DataControlDevice> m_device;
+    DataControl m_dataControl;
 };
