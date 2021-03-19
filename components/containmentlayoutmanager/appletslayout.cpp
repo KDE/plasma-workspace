@@ -45,6 +45,8 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
     m_saveLayoutTimer->setInterval(100);
     connect(m_layoutManager, &AbstractLayoutManager::layoutNeedsSaving, m_saveLayoutTimer, QOverload<>::of(&QTimer::start));
     connect(m_saveLayoutTimer, &QTimer::timeout, this, [this]() {
+        // We can't save the layout during bootup, for performance reasons and to avoid race consitions as much as possible, so if we needto save and still starting up,
+        // don't actually savenow, but we will when Corona::startupCompleted is emitted
         if (!m_configKey.isEmpty() && m_containment && m_containment->corona()->isStartupCompleted()) {
             const QString serializedConfig = m_layoutManager->serializeLayout();
             m_containment->config().writeEntry(m_configKey, serializedConfig);
@@ -502,6 +504,7 @@ void AppletsLayout::componentComplete()
     }
 
     if (m_containment && m_containment->corona()) {
+        // We inhibit save during startup, so actually save now that startup is completed
         connect(m_containment->corona(), &Plasma::Corona::startupCompleted, this, [this]() {
             save();
         });
