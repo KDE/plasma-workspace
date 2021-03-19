@@ -48,6 +48,7 @@ public:
     Private(WaylandTasksModel *q);
     QList<KWayland::Client::PlasmaWindow *> windows;
     QHash<KWayland::Client::PlasmaWindow *, AppData> appDataCache;
+    QHash<KWayland::Client::PlasmaWindow *, QTime> lastActivated;
     KWayland::Client::PlasmaWindowManagement *windowManagement = nullptr;
     KSharedConfig::Ptr rulesConfig;
     KDirWatch *configWatcher = nullptr;
@@ -178,6 +179,7 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
             q->beginRemoveRows(QModelIndex(), row, row);
             windows.removeAt(row);
             appDataCache.remove(window);
+            lastActivated.remove(window);
             q->endRemoveRows();
         }
     };
@@ -211,6 +213,9 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
     });
 
     QObject::connect(window, &KWayland::Client::PlasmaWindow::activeChanged, q, [window, this] {
+        if (window->isActive()) {
+            lastActivated[window] = QTime::currentTime();
+        }
         this->dataChanged(window, IsActive);
     });
 
@@ -452,6 +457,10 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->pid();
     } else if (role == StackingOrder) {
         return d->windowManagement->stackingOrderUuids().indexOf(window->uuid());
+    } else if (role == LastActivated) {
+        if (d->lastActivated.contains(window)) {
+            return d->lastActivated.value(window);
+        }
     } else if (role == ApplicationMenuObjectPath) {
         return window->applicationMenuObjectPath();
     } else if (role == ApplicationMenuServiceName) {
