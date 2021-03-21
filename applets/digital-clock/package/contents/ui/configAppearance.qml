@@ -23,6 +23,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.0 as QtLayouts
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 import org.kde.kirigami 2.5 as Kirigami
@@ -45,6 +46,7 @@ QtLayouts.ColumnLayout {
     property string cfg_dateFormat: "shortDate"
     property alias cfg_customDateFormat: customDateFormat.text
     property alias cfg_use24hFormat: use24hFormat.currentIndex
+    property alias cfg_dateDisplayFormat: dateDisplayFormat.currentIndex
 
     onCfg_fontFamilyChanged: {
         // HACK by the time we populate our model and/or the ComboBox is finished the value is still undefined
@@ -75,11 +77,25 @@ QtLayouts.ColumnLayout {
 
     Kirigami.FormLayout {
         QtLayouts.Layout.fillWidth: true
-
-        QtControls.CheckBox {
-            id: showDate
+        
+        QtLayouts.RowLayout {
             Kirigami.FormData.label: i18n("Information:")
-            text: i18n("Show date")
+
+            QtControls.CheckBox {
+                id: showDate
+                text: i18n("Show date")
+            }
+            
+            QtControls.ComboBox {
+                id: dateDisplayFormat
+                enabled: showDate.checked
+                visible: plasmoid.formFactor !== PlasmaCore.Types.Vertical
+                model: [
+                    i18n("Adaptive location"),
+                    i18n("Always beside time"),
+                ]
+                onActivated: cfg_dateDisplayFormat = currentIndex
+            }
         }
 
         QtControls.CheckBox {

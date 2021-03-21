@@ -55,8 +55,10 @@ Item {
     // This is the index in the list of user selected timezones
     property int tzIndex: 0
 
+    // if showing the date and the time in one line or
     // if the date/timezone cannot be fit with the smallest font to its designated space
-    readonly property bool oneLineMode: plasmoid.formFactor === PlasmaCore.Types.Horizontal &&
+    property bool oneLineMode: plasmoid.configuration.dateDisplayFormat === 1 ||
+                                        plasmoid.formFactor === PlasmaCore.Types.Horizontal &&
                                         main.height <= 2 * theme.smallestFont.pixelSize &&
                                         (main.showDate || timezoneLabel.visible)
 
@@ -182,8 +184,9 @@ Item {
         },
 
         State {
-            name: "horizontalPanelSmall"
-            when: plasmoid.formFactor === PlasmaCore.Types.Horizontal && main.oneLineMode
+            name: "oneLineDate"
+            // the one-line mode has no effect on a vertical panel because it would never fit
+            when: plasmoid.formFactor !== PlasmaCore.Types.Vertical && main.oneLineMode
 
             PropertyChanges {
                 target: main
@@ -211,7 +214,7 @@ Item {
                 target: dateLabel
 
                 height: timeLabel.height
-                width: dateLabel.paintedWidth
+                width: dateLabel.paintedWidth + PlasmaCore.Units.smallSpacing
 
                 font.pixelSize: 1024
                 verticalAlignment: Text.AlignVCenter
@@ -479,15 +482,6 @@ Item {
 
             flow: Grid.TopToBottom
             columnSpacing: PlasmaCore.Units.smallSpacing
-
-            Rectangle {
-                height: 0.8 * sizehelper.height
-                width: 1
-                visible: main.showDate && main.oneLineMode
-
-                color: theme.textColor
-                opacity: 0.4
-            }
 
             Components.Label  {
                 id: timeLabel
