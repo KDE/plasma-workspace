@@ -9,4 +9,5 @@ Type=dbus
 BusName=org.kde.runners.baloo
 TimeoutSec=5sec
 Slice=background.slice
-Restart=no #as we're dbus activated anyway
+# as we're dbus activated anyway
+Restart=no
