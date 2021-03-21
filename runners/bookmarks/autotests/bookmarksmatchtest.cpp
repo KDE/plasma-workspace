@@ -25,17 +25,15 @@ private Q_SLOTS:
 void TestBookmarksMatch::testQueryMatchConversion()
 {
     QFETCH(QString, searchTerm);
-    QFETCH(QString, bookmarkTitle);
-    QFETCH(QString, bookmarkUrl);
     QFETCH(QString, bookmarkDescription);
     QFETCH(int, expectedMatchType);
     QFETCH(qreal, expectedRelevance);
 
-    BookmarkMatch bookmarkMatch(QIcon::fromTheme("unknown"), searchTerm, bookmarkTitle, bookmarkUrl, bookmarkDescription);
+    BookmarkMatch bookmarkMatch(QIcon::fromTheme("unknown"), searchTerm, "KDE Community", "https://somehost.com/", bookmarkDescription);
     QueryMatch match = bookmarkMatch.asQueryMatch(nullptr);
 
-    QCOMPARE(match.text(), bookmarkTitle);
-    QCOMPARE(match.data().toString(), bookmarkUrl);
+    QCOMPARE(match.text(), "KDE Community");
+    QCOMPARE(match.data().toString(), "https://somehost.com/");
     QCOMPARE(match.type(), expectedMatchType);
     QCOMPARE(match.relevance(), expectedRelevance);
 }
@@ -43,40 +41,21 @@ void TestBookmarksMatch::testQueryMatchConversion()
 void TestBookmarksMatch::testQueryMatchConversion_data()
 {
     QTest::addColumn<QString>("searchTerm");
-    QTest::addColumn<QString>("bookmarkTitle");
-    QTest::addColumn<QString>("bookmarkUrl");
     QTest::addColumn<QString>("bookmarkDescription");
     QTest::addColumn<int>("expectedMatchType");
     QTest::addColumn<qreal>("expectedRelevance");
 
-    QTest::newRow("no text match") << "krunner"
-                                   << "KDE Community"
-                                   << "https://somehost.com/"
-                                   << "" << (int)QueryMatch::PossibleMatch << 0.18;
-    QTest::newRow("title partly matches") << "kde"
-                                          << "KDE Community"
-                                          << "https://somehost.com/"
-                                          << "" << (int)QueryMatch::PossibleMatch << 0.45;
-    QTest::newRow("title exactly matches") << "kde community"
-                                           << "KDE Community"
-                                           << "https://somehost.com/"
-                                           << "" << (int)QueryMatch::ExactMatch << 1.0;
-    QTest::newRow("url partly matches") << "somehost"
-                                        << "KDE Community"
-                                        << "https://somehost.com/"
-                                        << "" << (int)QueryMatch::PossibleMatch << 0.2;
-    QTest::newRow("url exactly matches") << "https://somehost.com/"
-                                         << "KDE Community"
-                                         << "https://somehost.com/"
-                                         << "" << (int)QueryMatch::PossibleMatch << 0.2;
-    QTest::newRow("description exactly matches") << "test"
-                                                 << "KDE Community"
-                                                 << "https://somehost.com/"
-                                                 << "test" << (int)QueryMatch::ExactMatch << 1.0;
-    QTest::newRow("description partly matches") << "test"
-                                                << "KDE Community"
-                                                << "https://somehost.com/"
-                                                << "testme" << (int)QueryMatch::PossibleMatch << 0.3;
+    auto newRow = [](const char *dataTag, const QString searchTerm, const QString bookmarkDescription, int expectedMatchType, qreal expectedRelevance) {
+        QTest::newRow(dataTag) << searchTerm << bookmarkDescription << expectedMatchType << expectedRelevance;
+    };
+
+    newRow("no text match", "krunner", "", (int)QueryMatch::PossibleMatch, 0.18);
+    newRow("title partly matches", "kde", "", (int)QueryMatch::PossibleMatch, 0.45);
+    newRow("title exactly matches", "kde community", "", (int)QueryMatch::ExactMatch, 1.0);
+    newRow("url partly matches", "somehost", "", (int)QueryMatch::PossibleMatch, 0.2);
+    newRow("url exactly matches", "https://somehost.com/", "", (int)QueryMatch::PossibleMatch, 0.2);
+    newRow("description exactly matches", "test", "test", (int)QueryMatch::ExactMatch, 1.0);
+    newRow("description partly matches", "test", "testme", (int)QueryMatch::PossibleMatch, 0.3);
 }
 
 void TestBookmarksMatch::testAddToList()
