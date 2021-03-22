@@ -31,11 +31,14 @@
 #include <kactivities/controller.h>
 #include <klocalizedstring.h>
 #include <kwindowsystem.h>
+#include <KStartupInfo>
 
 #include <KPackage/Package>
 
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/surface.h>
+
+#include <QX11Info>
 
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     : PlasmaQuick::ContainmentView(corona, nullptr)
@@ -285,6 +288,10 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
             m_configView->deleteLater();
         } else {
             m_configView->show();
+            auto window = qobject_cast<QWindow*>(m_configView);
+            if (window && QX11Info::isPlatformX11()) {
+                KStartupInfo::setNewStartupId(window, QX11Info::nextStartupId());
+            }
             m_configView->requestActivate();
             return;
         }
@@ -309,6 +316,12 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
     m_configView.data()->init();
     m_configView.data()->setTransientParent(this);
     m_configView.data()->show();
+    m_configView->requestActivate();
+
+    auto window = qobject_cast<QWindow*>(m_configView);
+    if (window && QX11Info::isPlatformX11()) {
+        KStartupInfo::setNewStartupId(window, QX11Info::nextStartupId());
+    }
     m_configView->requestActivate();
 }
 
