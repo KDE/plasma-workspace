@@ -15,8 +15,6 @@ if(X11_Xcursor_FOUND)
     add_subdirectory(cursortheme)
 endif()
 
-set(libkxftconfig_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/fonts/kxftconfig.cpp )
-
 if(FONTCONFIG_FOUND)
     add_subdirectory( kfontinst )
     add_subdirectory( fonts )

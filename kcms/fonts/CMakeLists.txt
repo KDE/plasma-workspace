@@ -3,20 +3,15 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_fonts\")
 
 ########### next target ###############
 
-include_directories(../kfontinst/lib)
-
 set(kcm_fonts_PART_SRCS
     previewrenderengine.cpp
     previewimageprovider.cpp
     fonts.cpp
     fontsaasettings.cpp
+    kxftconfig.cpp
     ../kfontinst/lib/FcEngine.cpp
     ../kcms-common_p.h
 )
-
-if(X11_FOUND)
-    set(kcm_fonts_PART_SRCS ${kcm_fonts_PART_SRCS} ${libkxftconfig_SRCS})
-endif()
 
 kcmutils_generate_module_data(
     kcm_fonts_PART_SRCS
