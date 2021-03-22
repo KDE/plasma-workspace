@@ -40,8 +40,9 @@ set(plasma-apply-desktoptheme_SRCS
 add_executable(plasma-apply-desktoptheme ${plasma-apply-desktoptheme_SRCS})
 
 target_link_libraries(plasma-apply-desktoptheme
+  Qt::Widgets
   KF5::CoreAddons
-  KF5::KCMUtils
+  KF5::ConfigWidgets
   KF5::I18n
   KF5::Plasma
 )
