@@ -314,6 +314,14 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
     QObject::connect(window, &KWayland::Client::PlasmaWindow::applicationMenuChanged, q, [window, this] {
         this->dataChanged(window, QVector<int>{ApplicationMenuServiceName, ApplicationMenuObjectPath});
     });
+
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::plasmaActivityEntered, q, [window, this] {
+        this->dataChanged(window, Activities);
+    });
+
+    QObject::connect(window, &KWayland::Client::PlasmaWindow::plasmaActivityLeft, q, [window, this] {
+        this->dataChanged(window, Activities);
+    });
 }
 
 AppData WaylandTasksModel::Private::appData(KWayland::Client::PlasmaWindow *window)
