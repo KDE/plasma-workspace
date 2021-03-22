@@ -96,7 +96,7 @@ if (X11_Xfixes_FOUND)
    target_link_libraries(plasma-apply-cursortheme X11::Xfixes)
 endif ()
 
-install(TARGETS plasma-apply-cursortheme  DESTINATION ${KDE_BINDIR} )
+install(TARGETS plasma-apply-cursortheme  DESTINATION ${KDE_INSTALL_BINDIR})
 
 ########### install files ###############
 
