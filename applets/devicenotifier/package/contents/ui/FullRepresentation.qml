@@ -38,7 +38,7 @@ PlasmaComponents3.Page {
     Layout.minimumWidth: PlasmaCore.Units.gridUnit * 12
     Layout.minimumHeight: PlasmaCore.Units.gridUnit * 12
 
-    header: PlasmaExtras.BasicPlasmoidHeading {
+    header: PlasmaExtras.PlasmoidHeading {
         visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) || devicenotifier.mountedRemovables > 1
         PlasmaComponents3.ToolButton {
             id: unmountAll
