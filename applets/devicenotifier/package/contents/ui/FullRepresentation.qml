@@ -42,6 +42,7 @@ PlasmaComponents3.Page {
         visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) || devicenotifier.mountedRemovables > 1
         PlasmaComponents3.ToolButton {
             id: unmountAll
+            anchors.right: parent.right
             visible: devicenotifier.mountedRemovables > 1;
 
             icon.name: "media-eject"
