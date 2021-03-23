@@ -67,6 +67,9 @@ Item {
         plasmoid.setAction("configure", i18n("Configure Clipboard..."), "configure", "alt+d, s");
 
         plasmoid.setAction("clearHistory", i18n("Clear History"), "edit-clear-history");
+        plasmoid.action("clearHistory").visible = Qt.binding(() => {
+            return !main.isClipboardEmpty;
+        });
     }
 
     PlasmaCore.DataSource {

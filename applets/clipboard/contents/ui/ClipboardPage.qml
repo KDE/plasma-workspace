@@ -98,7 +98,7 @@ ColumnLayout {
                 }
             }
             PlasmaComponents3.ToolButton {
-                visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading)
+                visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && plasmoid.action("clearHistory").visible
 
                 icon.name: "edit-clear-history"
                 onClicked: {
