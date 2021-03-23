@@ -73,6 +73,15 @@ PlasmaExtras.ExpandableListItem {
         }
     }
 
+    Connections {
+         target: plasmoid.action("unmountAllDevices")
+         function onTriggered() {
+             if (model["Removable"] && isMounted) {
+                 actionTriggered();
+             }
+         }
+     }
+
     // this keeps the delegate around for 5 seconds after the device has been
     // removed in case there was a message, such as "you can now safely remove this"
     ListView.onRemove: {

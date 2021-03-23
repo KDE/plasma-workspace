@@ -235,6 +235,13 @@ Item {
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
         }
 
+        plasmoid.setAction("unmountAllDevices", i18n("Remove All"), "media-eject");
+        plasmoid.action("unmountAllDevices").visible = Qt.binding(() => {
+            return devicenotifier.mountedRemovables > 1;
+        });
+ 
+        plasmoid.setActionSeparator("sep0");
+
         plasmoid.setAction("showRemovableDevices", i18n("Removable Devices"), "drive-removable-media");
         devicenotifier.showRemovableDevicesAction = plasmoid.action("showRemovableDevices");
         devicenotifier.showRemovableDevicesAction.checkable = true;
