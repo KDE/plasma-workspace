@@ -73,6 +73,7 @@ public:
 
     void load() override;
     void save() override;
+    void defaults() override;
 
     Q_INVOKABLE void ghnsEntriesChanged();
     Q_INVOKABLE void installThemeFromFile(const QUrl &url);

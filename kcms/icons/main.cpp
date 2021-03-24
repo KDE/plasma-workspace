@@ -498,4 +498,12 @@ int IconModule::pluginIndex(const QString &themeName) const
     return -1;
 }
 
+void IconModule::defaults()
+{
+    for (int i = 0, count = m_model->rowCount(QModelIndex()); i < count; ++i) {
+        m_model->setData(m_model->index(i), false, IconsModel::Roles::PendingDeletionRole);
+    }
+    ManagedConfigModule::defaults();
+}
+
 #include "main.moc"
