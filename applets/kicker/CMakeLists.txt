@@ -37,6 +37,7 @@ set(kickerplugin_SRCS
     plugin/systementry.cpp
     plugin/systemmodel.cpp
     plugin/systemsettings.cpp
+    plugin/trianglemousefilter.cpp
     plugin/wheelinterceptor.cpp
     plugin/windowsystem.cpp
     plugin/funnelmodel.cpp
@@ -81,5 +82,7 @@ target_link_libraries(kickerplugin
 if (${HAVE_APPSTREAMQT})
 target_link_libraries(kickerplugin AppStreamQt)
 endif()
+
+add_subdirectory(plugin/autotests)
 
 install(TARGETS kickerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/kicker)
