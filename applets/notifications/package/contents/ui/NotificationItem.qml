@@ -95,6 +95,7 @@ ColumnLayout {
     readonly property bool dragging: (thumbnailStripLoader.item && thumbnailStripLoader.item.dragging)
                                         || (jobLoader.item && jobLoader.item.dragging)
     property bool replying: false
+    readonly property bool hasPendingReply: replyLoader.item && replyLoader.item.text !== ""
 
     signal bodyClicked
     signal closeClicked

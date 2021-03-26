@@ -154,7 +154,8 @@ PlasmaCore.Dialog {
                     if (notificationItem.dragging || notificationItem.menuOpen) {
                         return false;
                     }
-                    if (notificationItem.replying) {
+                    if (notificationItem.replying
+                            && (notificationPopup.active || notificationItem.hasPendingReply)) {
                         return false;
                     }
                     return true;
