@@ -272,8 +272,7 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, const Kli
     addPage(m_generalPage, i18nc("General Config", "General"), QStringLiteral("klipper"), i18n("General Configuration"));
     addPage(m_actionsPage, i18nc("Actions Config", "Actions"), QStringLiteral("system-run"), i18n("Actions Configuration"));
 
-    QWidget *w = new QWidget(this);
-    m_shortcutsWidget = new KShortcutsEditor(collection, w, KShortcutsEditor::GlobalAction);
+    m_shortcutsWidget = new KShortcutsEditor(collection, this, KShortcutsEditor::GlobalAction);
     addPage(m_shortcutsWidget, i18nc("Shortcuts Config", "Shortcuts"), QStringLiteral("preferences-desktop-keyboard"), i18n("Shortcuts Configuration"));
 
     const KConfigGroup grp = KSharedConfig::openConfig()->group("ConfigDialog");
