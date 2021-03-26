@@ -141,8 +141,24 @@ PlasmaCore.Dialog {
             Timer {
                 id: timer
                 interval: notificationPopup.effectiveTimeout
-                running: notificationPopup.visible && !area.containsMouse && interval > 0
-                    && !notificationItem.dragging && !notificationItem.menuOpen && !notificationItem.replying
+                running: {
+                    if (!notificationPopup.visible) {
+                        return false;
+                    }
+                    if (area.containsMouse) {
+                        return false;
+                    }
+                    if (interval <= 0) {
+                        return false;
+                    }
+                    if (notificationItem.dragging || notificationItem.menuOpen) {
+                        return false;
+                    }
+                    if (notificationItem.replying) {
+                        return false;
+                    }
+                    return true;
+                }
                 onTriggered: {
                     if (notificationPopup.dismissTimeout) {
                         notificationPopup.dismissClicked();
