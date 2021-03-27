@@ -270,7 +270,7 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &appName, const QStr
 
 QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry, int capabilities, const QVariantMap &hints)
 {
-    qCDebug(NOTIFICATIONMANAGER) << "JobView requested by" << desktopEntry << "with hints" << hints;
+    qCDebug(NOTIFICATIONMANAGER) << "JobView requested by" << desktopEntry;
 
     if (!m_highestJobId) {
         ++m_highestJobId;
@@ -316,6 +316,9 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry, int c
 
     job->setSuspendable(capabilities & KJob::Suspendable);
     job->setKillable(capabilities & KJob::Killable);
+
+    // Apply initial properties
+    job->d->update(hints);
 
     connect(job, &Job::updatedChanged, this, [this, job] {
         scheduleUpdate(job, Notifications::UpdatedRole);
