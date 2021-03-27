@@ -58,7 +58,6 @@ void ContextMenu::restore(const KConfigGroup &config)
     // because it really wants to mangle this nice aligned list
     if (c->containmentType() == Plasma::Types::PanelContainment || c->containmentType() == Plasma::Types::CustomPanelContainment) {
         m_actionOrder << QStringLiteral("add widgets")
-                      << QStringLiteral("_add panel")
                       << QStringLiteral("_context")
                       << QStringLiteral("configure")
                       << QStringLiteral("remove");
