@@ -121,11 +121,7 @@ ColumnLayout {
 
             Kirigami.PlaceholderMessage {
                 visible: configuredTimezoneList.count === 1
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    bottom: parent.bottom
-                    bottomMargin: Kirigami.Units.gridUnit * 7
-                }
+                anchors.centerIn: parent
                 width: parent.width - (Kirigami.Units.largeSpacing * 12)
                 text: i18n("Add more time zones to display all of them in the applet's pop-up, or use one of them for the clock itself")
             }
