@@ -66,6 +66,26 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
+    Connections {
+        target: systemTrayState.activeApplet
+
+        function onParentChanged() {
+            updateHighlightedItem();
+        }
+    }
+
+    Connections {
+        target: parent
+
+        function onWidthChanged() {
+            updateHighlightedItem();
+        }
+
+        function onHeightChanged() {
+            updateHighlightedItem();
+        }
+    }
+
     function updateHighlightedItem() {
         if (systemTrayState.expanded) {
             if (systemTrayState.activeApplet && systemTrayState.activeApplet.parent.inVisibleLayout) {
@@ -79,8 +99,9 @@ PlasmaCore.FrameSvgItem {
     }
 
     function changeHighlightedItem(nextItem) {
-        if (!highlightedItem) {
-            // do not animate the first appearance
+        // do not animate the first appearance
+        // or when size of parent (root) changes
+        if (!highlightedItem || (highlightedItem === nextItem && nextItem === parent)) {
             animationEnabled = false;
         }
 
