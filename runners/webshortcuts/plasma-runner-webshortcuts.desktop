@@ -3,6 +3,7 @@
 Name=Web Search Keywords
 Name[az]=İnternetdə axtarış üçün açar sözlər
 Name[ca]=Paraules clau de cerca a la web
+Name[cs]=Klíčová slova pro hledání na webu
 Name[da]=Nøgleord til websøgning
 Name[en_GB]=Web Search Keywords
 Name[es]=Palabras clave de búsqueda web
@@ -33,6 +34,7 @@ Name[zh_CN]=网络搜索关键字
 Comment=Search the web using keywords
 Comment[az]=Açar sözlərdən istifadə edərək internetdə axtarış
 Comment[ca]=Cerca a la web usant paraules clau
+Comment[cs]=Prohledat web použitím klíčových slov
 Comment[da]=Søg på nettet med nøgleord
 Comment[en_GB]=Search the web using keywords
 Comment[es]=Buscar la web usando palabras clave
