@@ -64,7 +64,7 @@ public:
     void classBegin() override;
     void componentComplete() override;
 
-signals:
+Q_SIGNALS:
     void menuVisibleChanged();
 
     void urlChanged();

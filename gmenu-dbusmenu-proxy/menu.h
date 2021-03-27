@@ -52,7 +52,7 @@ public:
 public slots:
     void actionsChanged(const QStringList &dirtyActions, const QString &prefix);
 
-signals:
+Q_SIGNALS:
     void menuAppeared(); // emitted the first time a menu was successfully loaded
     void menuDisappeared();
 

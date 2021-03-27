@@ -46,7 +46,7 @@ public:
 
     Q_INVOKABLE void setupMenu(QAction *action);
 
-signals:
+Q_SIGNALS:
     void currentDateChanged();
     void secondsIncludedChanged();
 

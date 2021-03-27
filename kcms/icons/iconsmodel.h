@@ -63,7 +63,7 @@ public:
 
     void load();
 
-signals:
+Q_SIGNALS:
     void pendingDeletionsChanged();
 
 private:

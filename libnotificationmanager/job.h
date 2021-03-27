@@ -207,7 +207,7 @@ public:
     Q_INVOKABLE void resume();
     Q_INVOKABLE void kill();
 
-signals:
+Q_SIGNALS:
     void updatedChanged();
     void summaryChanged();
     void textChanged();

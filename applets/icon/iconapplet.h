@@ -68,7 +68,7 @@ public:
 
     Q_INVOKABLE bool isAcceptableDrag(QObject *dropEvent);
 
-signals:
+Q_SIGNALS:
     void urlChanged(const QUrl &url);
 
     void nameChanged(const QString &name);

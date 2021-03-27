@@ -34,7 +34,7 @@ public:
 
     Q_INVOKABLE void showDoNotDisturbOsd(bool doNotDisturb) const;
 
-signals:
+Q_SIGNALS:
     void toggleDoNotDisturbTriggered();
 
 private:

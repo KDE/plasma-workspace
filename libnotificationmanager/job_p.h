@@ -69,7 +69,7 @@ public:
     void terminate(uint errorCode, const QString &errorMessage, const QVariantMap &hints);
     void update(const QVariantMap &properties);
 
-signals:
+Q_SIGNALS:
     void closed();
 
     void infoMessageChanged();

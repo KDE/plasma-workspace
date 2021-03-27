@@ -45,7 +45,7 @@ class KSolidNotify : public QObject
 public:
     explicit KSolidNotify(QObject *parent);
 
-signals:
+Q_SIGNALS:
     void notify(Solid::ErrorType solidError, const QString &error, const QString &errorDetails, const QString &udi);
     void blockingAppsReady(const QStringList &apps);
     void clearNotification(const QString &udi);

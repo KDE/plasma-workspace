@@ -66,7 +66,7 @@ public:
     QRect screenGeometry() const;
     void setScreenGeometry(QRect geometry);
 
-signals:
+Q_SIGNALS:
     void requestActivateIndex(int index);
 
 private Q_SLOTS:
@@ -74,7 +74,7 @@ private Q_SLOTS:
     void setVisible(bool visible);
     void update();
 
-signals:
+Q_SIGNALS:
     void menuAvailableChanged();
     void modelNeedsUpdate();
     void screenGeometryChanged();

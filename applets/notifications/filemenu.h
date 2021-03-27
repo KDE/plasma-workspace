@@ -47,7 +47,7 @@ public:
 
     Q_INVOKABLE void open(int x, int y);
 
-signals:
+Q_SIGNALS:
     void actionTriggered(QAction *action);
 
     void urlChanged();

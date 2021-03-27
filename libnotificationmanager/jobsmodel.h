@@ -84,7 +84,7 @@ public:
 
     void clear(Notifications::ClearFlags flags);
 
-signals:
+Q_SIGNALS:
     void serviceOwnershipLost();
 
 private:

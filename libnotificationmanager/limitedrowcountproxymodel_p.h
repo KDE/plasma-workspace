@@ -35,7 +35,7 @@ public:
     int limit() const;
     void setLimit(int limit);
 
-signals:
+Q_SIGNALS:
     void limitChanged();
 
 protected:

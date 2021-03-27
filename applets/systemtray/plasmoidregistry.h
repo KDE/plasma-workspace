@@ -39,7 +39,7 @@ public:
     virtual QMap<QString, KPluginMetaData> systemTrayApplets();
     bool isSystemTrayApplet(const QString &pluginId);
 
-signals:
+Q_SIGNALS:
     /**
      * @brief Emitted when new plasmoid configuration is registered.
      * Emitted on initial run or when new plasmoid is installed in the system.

@@ -63,7 +63,7 @@ public:
 
     Q_INVOKABLE void forceActivateWindow(QWindow *window);
 
-signals:
+Q_SIGNALS:
     void dragActiveChanged();
     void dragPixmapSizeChanged();
     void focussedPlasmaDialogChanged();

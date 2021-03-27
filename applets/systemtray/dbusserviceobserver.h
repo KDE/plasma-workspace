@@ -44,7 +44,7 @@ public:
     void unregisterPlugin(const QString &pluginId);
     bool isDBusActivable(const QString &pluginId);
 
-signals:
+Q_SIGNALS:
     void serviceStarted(const QString &pluginId);
     void serviceStopped(const QString &pluginId);
 

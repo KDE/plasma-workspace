@@ -37,7 +37,7 @@ public:
     explicit FreeSpaceNotifier(const QString &path, const KLocalizedString &notificationText, QObject *parent = nullptr);
     ~FreeSpaceNotifier() override;
 
-signals:
+Q_SIGNALS:
     void configureRequested();
 
 private:

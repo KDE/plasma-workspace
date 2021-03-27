@@ -83,7 +83,7 @@ public:
     QString status() const;
     uint version() const;
 
-signals:
+Q_SIGNALS:
     // don't want to pollute X stuff into Menu, let all of that be in MenuProxy
     void requestWriteWindowProperties();
     void requestRemoveWindowProperties();

@@ -322,7 +322,7 @@ public:
      */
     Q_INVOKABLE void revokeApplicationInhibitions();
 
-signals:
+Q_SIGNALS:
     void settingsChanged();
 
     void liveChanged();

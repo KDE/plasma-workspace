@@ -44,7 +44,7 @@ public:
     Q_INVOKABLE void reply(uint notificationId, const QString &text) override;
     bool valid();
 
-signals:
+Q_SIGNALS:
     void validChanged(bool valid);
 
 private:

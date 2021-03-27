@@ -42,7 +42,7 @@ public:
 
     bool isValid() const; // basically "has actions"
 
-signals:
+Q_SIGNALS:
     void loaded();
     void failedToLoad(); // expose error?
     void actionsChanged(const QStringList &dirtyActions);

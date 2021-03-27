@@ -56,7 +56,7 @@ public:
     QStringList whitelistedNotifyRcNames() const;
     void setWhitelistedNotifyRcNames(const QStringList &whitelist);
 
-signals:
+Q_SIGNALS:
     void urgenciesChanged();
     void showExpiredChanged();
     void showDismissedChanged();

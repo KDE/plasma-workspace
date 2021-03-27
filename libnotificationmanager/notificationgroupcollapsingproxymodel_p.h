@@ -49,7 +49,7 @@ public:
 
     void collapseAll();
 
-signals:
+Q_SIGNALS:
     void limitChanged();
     void lastReadChanged();
     void expandUnreadChanged();

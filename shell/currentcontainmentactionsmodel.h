@@ -61,7 +61,7 @@ public:
     Q_INVOKABLE void showAbout(int row, QQuickItem *ctx = nullptr);
     Q_INVOKABLE void save();
 
-signals:
+Q_SIGNALS:
     void configurationChanged();
 
 private:

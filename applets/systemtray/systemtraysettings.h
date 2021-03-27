@@ -51,7 +51,7 @@ public:
 
     virtual void cleanupPlugin(const QString &pluginId);
 
-signals:
+Q_SIGNALS:
     void configurationChanged();
     void enabledPluginsChanged(const QStringList &enabledPlugins, const QStringList &disabledPlugins);
 

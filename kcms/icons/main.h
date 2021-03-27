@@ -85,7 +85,7 @@ public:
     // QML doesn't understand QList<QPixmap>, hence wrapped in a QVariantList
     Q_INVOKABLE QVariantList previewIcons(const QString &themeName, int size, qreal dpr, int limit = -1);
 
-signals:
+Q_SIGNALS:
     void downloadingFileChanged();
 
     void showSuccessMessage(const QString &message);

@@ -59,7 +59,7 @@ public:
     void setSubPixel(KXftConfig::SubPixel::Type type);
     void setHinting(KXftConfig::Hint::Style hinting);
 
-signals:
+Q_SIGNALS:
     void excludeChanged();
     void excludeFromChanged();
     void excludeToChanged();

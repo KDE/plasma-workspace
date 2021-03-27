@@ -62,7 +62,7 @@ public:
     int view() const;
     void setView(int type);
 
-signals:
+Q_SIGNALS:
     void modelChanged();
     void viewChanged();
     void currentIndexChanged();

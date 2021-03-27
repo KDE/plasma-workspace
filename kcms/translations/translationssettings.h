@@ -33,7 +33,7 @@ public:
     QStringList configuredLanguages() const;
     void setConfiguredLanguages(const QStringList &langs);
 
-signals:
+Q_SIGNALS:
     void configuredLanguagesChanged();
 };
 

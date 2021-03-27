@@ -49,7 +49,7 @@ public:
     QList<int> objectDescriptionIndexes(ObjectDescriptionType type) const override;
     QHash<QByteArray, QVariant> objectDescriptionProperties(ObjectDescriptionType type, int index) const override;
 
-signals:
+Q_SIGNALS:
     void objectDescriptionChanged(ObjectDescriptionType);
 };
 

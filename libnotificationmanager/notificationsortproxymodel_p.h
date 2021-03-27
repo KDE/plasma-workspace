@@ -40,7 +40,7 @@ public:
     Qt::SortOrder sortOrder() const;
     void setSortOrder(Qt::SortOrder sortOrder);
 
-signals:
+Q_SIGNALS:
     void sortModeChanged();
     void sortOrderChanged();
 
