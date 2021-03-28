@@ -46,7 +46,7 @@ Item {
     }
 
     property string lastSelectedTimezone: plasmoid.configuration.lastSelectedTimezone
-    property bool displayTimezoneAsCode: plasmoid.configuration.displayTimezoneAsCode
+    property int displayTimezoneFormat: plasmoid.configuration.displayTimezoneFormat
     property int use24hFormat: plasmoid.configuration.use24hFormat
 
     property string lastDate: ""
@@ -66,7 +66,7 @@ Item {
         setupLabels();
     }
 
-    onDisplayTimezoneAsCodeChanged: { setupLabels(); }
+    onDisplayTimezoneFormatChanged: { setupLabels(); }
     onStateChanged: { setupLabels(); }
 
     onLastSelectedTimezoneChanged: { timeFormatCorrection(Qt.locale().timeFormat(Locale.ShortFormat)) }
@@ -611,8 +611,20 @@ Item {
         var timezoneString = "";
 
         if (showTimezone) {
-            timezoneString = plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone Abbreviation"]
-                                                                          : TimezonesI18n.i18nCity(dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
+            // format timezone as tz code, city or UTC offset
+            if (displayTimezoneFormat === 0) {
+                timezoneString = dataSource.data[lastSelectedTimezone]["Timezone Abbreviation"]
+            } else if (displayTimezoneFormat === 1) {
+                timezoneString = TimezonesI18n.i18nCity(dataSource.data[lastSelectedTimezone]["Timezone City"]);
+            } else if (displayTimezoneFormat === 2) {
+                var lastOffset = dataSource.data[lastSelectedTimezone]["Offset"];
+                var symbol = lastOffset > 0 ? '+' : '';
+                var hours = Math.floor(lastOffset / 3600);
+                var minutes = Math.floor(lastOffset % 3600 / 60);
+
+                timezoneString = "UTC" + symbol + hours.toString().padStart(2, '0') + ":" + minutes.toString().padStart(2, '0');
+            }
+
             timezoneLabel.text = (main.showDate || main.oneLineMode) && plasmoid.formFactor === PlasmaCore.Types.Horizontal ? "(" + timezoneString + ")" : timezoneString;
         } else {
             // this clears the label and that makes it hidden

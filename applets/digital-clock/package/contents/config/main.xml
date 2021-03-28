@@ -53,9 +53,14 @@
       <label>Whether the mouse wheel switches between the timezones configured in selectedTimeZones.</label>
       <default>false</default>
     </entry>
-    <entry name="displayTimezoneAsCode" type="Bool">
-      <label>Whether the timezone is displayed as a code i.e. "GMT" or full text i.e. "London".</label>
-      <default>true</default>
+    <entry name="displayTimezoneFormat" type="Enum">
+      <label>Whether the timezone is displayed as a code i.e. "GMT", full text i.e. "London" or UTC offset "+1".</label>
+      <choices name="Settings::displayTimezoneFormat">
+        <choice name="Code" />
+        <choice name="FullText" />
+        <choice name="UTCOffset" />
+      </choices>
+      <default>Code</default>
     </entry>
     <entry name="showWeekNumbers" type="Bool">
       <label>Whether the calendar should show week numbers.</label>

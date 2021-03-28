@@ -39,7 +39,7 @@ QtLayouts.ColumnLayout {
     property alias cfg_italicText: italicCheckBox.checked
 
     property alias cfg_showLocalTimezone: showLocalTimezone.checked
-    property alias cfg_displayTimezoneAsCode: timezoneCodeRadio.checked
+    property alias cfg_displayTimezoneFormat: displayTimezoneFormat.currentIndex
     property alias cfg_showSeconds: showSeconds.checked
 
     property alias cfg_showDate: showDate.checked
@@ -126,18 +126,17 @@ QtLayouts.ColumnLayout {
             Kirigami.FormData.isSection: true
         }
 
-        QtLayouts.ColumnLayout {
+        QtLayouts.RowLayout {
             Kirigami.FormData.label: i18n("Display time zone as:")
-            Kirigami.FormData.buddyFor: timezoneCityRadio
 
-            QtControls.RadioButton {
-                id: timezoneCityRadio
-                text: i18n("Time zone city")
-            }
-
-            QtControls.RadioButton {
-                id: timezoneCodeRadio
-                text: i18n("Time zone code")
+            QtControls.ComboBox {
+                id: displayTimezoneFormat
+                model: [
+                    i18n("Code"),
+                    i18n("City"),
+                    i18n("Offset from UTC time"),
+                ]
+                onActivated: cfg_displayTimezoneFormat = currentIndex
             }
         }
 
@@ -295,12 +294,6 @@ QtLayouts.ColumnLayout {
     }
 
     Component.onCompleted: {
-        if (plasmoid.configuration.displayTimezoneAsCode) {
-            timezoneCodeRadio.checked = true;
-        } else {
-            timezoneCityRadio.checked = true;
-        }
-
         if (!plasmoid.configuration.showLocalTimezone) {
             showLocalTimeZoneWhenDifferent.checked = true;
         }
