@@ -190,12 +190,12 @@ QStringList AppInterface::knownWidgetTypes() const
 
 QStringList AppInterface::knownActivityTypes() const
 {
-    return knownContainmentTypes(QStringLiteral("desktop"));
+    return knownContainmentTypes(QStringLiteral("Desktop"));
 }
 
 QStringList AppInterface::knownPanelTypes() const
 {
-    return knownContainmentTypes(QStringLiteral("panel"));
+    return knownContainmentTypes(QStringLiteral("Panel"));
 }
 
 QStringList AppInterface::knownContainmentTypes(const QString &type) const
