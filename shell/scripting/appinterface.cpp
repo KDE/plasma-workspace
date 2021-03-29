@@ -213,11 +213,11 @@ QStringList AppInterface::knownPanelTypes() const
 QStringList AppInterface::knownContainmentTypes(const QString &type) const
 {
     QStringList containments;
-    const KPluginInfo::List infoLs = Plasma::PluginLoader::listContainmentsOfType(type);
+    const QList<KPluginMetaData> plugins = Plasma::PluginLoader::listContainmentsMetaDataOfType(type);
 
-    containments.reserve(infoLs.count());
-    for (const KPluginInfo &info : infoLs) {
-        containments.append(info.pluginName());
+    containments.reserve(plugins.count());
+    for (const KPluginMetaData &plugin : plugins) {
+        containments.append(plugin.pluginId());
     }
 
     return containments;

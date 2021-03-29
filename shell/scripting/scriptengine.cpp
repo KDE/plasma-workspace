@@ -382,9 +382,9 @@ QList<Containment *> ScriptEngine::desktopsForActivity(const QString &id)
 Plasma::Containment *ScriptEngine::createContainment(const QString &type, const QString &plugin)
 {
     bool exists = false;
-    const KPluginInfo::List list = Plasma::PluginLoader::listContainmentsOfType(type);
-    foreach (const KPluginInfo &info, list) {
-        if (info.pluginName() == plugin) {
+    const QList<KPluginMetaData> list = Plasma::PluginLoader::listContainmentsMetaDataOfType(type);
+    foreach (const KPluginMetaData &pluginInfo, list) {
+        if (pluginInfo.pluginId() == plugin) {
             exists = true;
             break;
         }

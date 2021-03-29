@@ -152,9 +152,9 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::containmentPluginsConfigModel()
     if (!m_containmentPluginsConfigModel) {
         m_containmentPluginsConfigModel = new PlasmaQuick::ConfigModel(this);
 
-        const KPluginInfo::List actions = Plasma::PluginLoader::self()->listContainmentsOfType(QStringLiteral("Desktop"));
-        for (const KPluginInfo &info : actions) {
-            m_containmentPluginsConfigModel->appendCategory(info.icon(), info.name(), QString(), info.pluginName());
+        const QList<KPluginMetaData> actions = Plasma::PluginLoader::self()->listContainmentsMetaDataOfType(QStringLiteral("Desktop"));
+        for (const KPluginMetaData &plugin : actions) {
+            m_containmentPluginsConfigModel->appendCategory(plugin.iconName(), plugin.name(), QString(), plugin.pluginId());
         }
     }
     return m_containmentPluginsConfigModel;
