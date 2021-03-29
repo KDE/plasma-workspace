@@ -29,11 +29,11 @@ configure_file(config-klipper.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-klipper
 ki18n_wrap_ui(libklipper_common_SRCS generalconfig.ui actionsconfig.ui editactiondialog.ui)
 kconfig_add_kcfg_files(libklipper_common_SRCS klippersettings.kcfgc)
 
-set(klipper_KDEINIT_SRCS ${libklipper_common_SRCS} main.cpp tray.cpp)
+set(klipper_SRCS ${libklipper_common_SRCS} main.cpp tray.cpp)
 
-kf5_add_kdeinit_executable(klipper ${klipper_KDEINIT_SRCS})
+add_executable(klipper ${klipper_SRCS})
 
-target_link_libraries(kdeinit_klipper
+target_link_libraries(klipper
     Qt::Concurrent
     KF5::ConfigGui
     KF5::CoreAddons
@@ -51,10 +51,9 @@ target_link_libraries(kdeinit_klipper
     systemclipboard
 )
 if (X11_FOUND)
-  target_link_libraries(kdeinit_klipper XCB::XCB Qt::X11Extras)
+  target_link_libraries(klipper XCB::XCB Qt::X11Extras)
 endif()
 
-install(TARGETS kdeinit_klipper ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(TARGETS klipper         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES org.kde.klipper.desktop DESTINATION ${KDE_INSTALL_APPDIR})

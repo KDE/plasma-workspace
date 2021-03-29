@@ -32,7 +32,7 @@
 #include "klipper.h"
 #include "tray.h"
 
-extern "C" int Q_DECL_EXPORT kdemain(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain("klipper");
