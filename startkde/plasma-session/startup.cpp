@@ -166,7 +166,7 @@ class NotificationThread : public QThread
     void run() override
     {
         // We cannot parent to the thread itself so let's create
-        // a QObject on the stack and parent everythign to it
+        // a QObject on the stack and parent everything to it
         QObject parent;
         KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QList<QPair<QString, QString>>(), QStringLiteral("startkde"));
         const QString action = notifyConfig.readEntry(QStringLiteral("Action"));
