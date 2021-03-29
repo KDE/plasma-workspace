@@ -123,7 +123,7 @@ void SolidUiServer::onPassphraseDialogCompleted(const QString &pass, bool keep)
 
         if (!reply.isValid()) {
             qWarning() << "Impossible to send the passphrase to the application, D-Bus said: " << reply.error().name() << ", " << reply.error().message()
-                       << endl;
+                       << Qt::endl;
             return; // don't save into wallet if an error occurs
         }
 

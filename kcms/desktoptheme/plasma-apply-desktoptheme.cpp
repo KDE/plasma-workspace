@@ -54,7 +54,7 @@ int main(int argc, char **argv)
             requestedTheme = requestedTheme.split(dirSplit, Qt::SkipEmptyParts).last();
         }
         if (Plasma::Theme().themeName() == requestedTheme) {
-            ts << i18n("The requested theme \"%1\" is already set as the theme for the current Plasma session.", requestedTheme) << endl;
+            ts << i18n("The requested theme \"%1\" is already set as the theme for the current Plasma session.", requestedTheme) << Qt::endl;
             // Not an error condition really, let's just ignore that
         } else {
             bool found{false};
@@ -70,21 +70,24 @@ int main(int argc, char **argv)
                 availableThemes << currentTheme;
             }
             if (found) {
-                ts << i18n("The current Plasma session's theme has been set to %1", requestedTheme) << endl;
+                ts << i18n("The current Plasma session's theme has been set to %1", requestedTheme) << Qt::endl;
             } else {
-                ts << i18n("Could not find theme \"%1\". The theme should be one of the following options: %2", requestedTheme, availableThemes.join(QLatin1String{", "})) << endl;
+                ts << i18n("Could not find theme \"%1\". The theme should be one of the following options: %2",
+                           requestedTheme,
+                           availableThemes.join(QLatin1String{", "}))
+                   << Qt::endl;
                 errorCode = -1;
             }
         }
     } else if (parser->isSet(QStringLiteral("list-themes"))) {
-        ts << i18n("You have the following Plasma themes on your system:") << endl;
+        ts << i18n("You have the following Plasma themes on your system:") << Qt::endl;
         model->load();
         for (int i = 0 ; i < model->rowCount(); ++i) {
             QString themeName{model->data(model->index(i), ThemesModel::PluginNameRole).toString()};
             if (Plasma::Theme().themeName() == themeName) {
-                ts << QString(" * %1 (current theme for this Plasma session)").arg(themeName) << endl;
+                ts << QString(" * %1 (current theme for this Plasma session)").arg(themeName) << Qt::endl;
             } else {
-                ts << QString(" * %1").arg(themeName) << endl;
+                ts << QString(" * %1").arg(themeName) << Qt::endl;
             }
         }
     } else {

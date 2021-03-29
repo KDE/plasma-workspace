@@ -52,7 +52,11 @@ int main(int argc, char **argv)
         if (wallpaperFile.contains(QStringLiteral("\'"))) {
             // If this happens, we might very well assume that there is some kind of funny business going on
             // even if technically it could just be a possessive. But, security first, so...
-            ts << i18n("There is a stray single quote in the filename of this wallpaper (') - please contact the author of the wallpaper to fix this, or rename the file yourself: %1", wallpaperFile) << endl;
+            ts << i18n(
+                "There is a stray single quote in the filename of this wallpaper (') - please contact the author of the wallpaper to fix this, or rename the "
+                "file yourself: %1",
+                wallpaperFile)
+               << Qt::endl;
             errorCode = -1;
         } else {
             if (wallpaperInfo.exists()) {
@@ -87,19 +91,19 @@ int main(int argc, char **argv)
                 auto reply = QDBusConnection::sessionBus().call(message);
 
                 if (reply.type() == QDBusMessage::ErrorMessage) {
-                    ts << i18n("An error occurred while attempting to set the Plasma wallpaper:\n") << reply.errorMessage() << endl;
+                    ts << i18n("An error occurred while attempting to set the Plasma wallpaper:\n") << reply.errorMessage() << Qt::endl;
                     errorCode = -1;
                 } else {
                     if (isKPackage) {
-                        ts << i18n("Successfully set the wallpaper for all desktops to the KPackage based %1", wallpaperFile) << endl;
+                        ts << i18n("Successfully set the wallpaper for all desktops to the KPackage based %1", wallpaperFile) << Qt::endl;
                     } else {
-                        ts << i18n("Successfully set the wallpaper for all desktops to the image %1", wallpaperFile) << endl;
+                        ts << i18n("Successfully set the wallpaper for all desktops to the image %1", wallpaperFile) << Qt::endl;
                     }
                 }
 
         } else if (errorCode == 0) {
             // Just to avoid spitting out multiple errors
-            ts << i18n("The file passed to be set as wallpaper does not exist, or we cannot identify it as a wallpaper: %1", wallpaperFile) << endl;
+            ts << i18n("The file passed to be set as wallpaper does not exist, or we cannot identify it as a wallpaper: %1", wallpaperFile) << Qt::endl;
             errorCode = -1;
         }
     } else {

@@ -72,7 +72,7 @@ int main(int argc, char **argv)
 
         if (exitCode == 0) {
             if (settings->colorScheme() == requestedScheme) {
-                ts << i18n("The requested theme \"%1\" is already set as the theme for the current Plasma session.", requestedScheme) << endl;
+                ts << i18n("The requested theme \"%1\" is already set as the theme for the current Plasma session.", requestedScheme) << Qt::endl;
                 // Not an error condition, no reason to set the theme, but basically this is fine
             } else if (!requestedScheme.isEmpty()) {
                 int newSchemeIndex{-1};
@@ -92,28 +92,32 @@ int main(int argc, char **argv)
                     settings->setColorScheme(requestedScheme);
                     applyScheme(settings, model);
                     settings->save();
-                    ts << i18n("Successfully applied the color scheme %1 to your current Plasma session", requestedScheme) << endl;
+                    ts << i18n("Successfully applied the color scheme %1 to your current Plasma session", requestedScheme) << Qt::endl;
                 } else {
-                    ts << i18n("Could not find theme \"%1\". The theme should be one of the following options: %2", requestedScheme, availableThemes.join(QLatin1String{", "})) << endl;
+                    ts << i18n("Could not find theme \"%1\". The theme should be one of the following options: %2",
+                               requestedScheme,
+                               availableThemes.join(QLatin1String{", "}))
+                       << Qt::endl;
                 }
             } else {
                 // This shouldn't happen, but let's catch it and make angry noises, just in case...
-                ts << i18n("You have managed to pass an empty color scheme name, which isn't supported behavior.") << endl;
+                ts << i18n("You have managed to pass an empty color scheme name, which isn't supported behavior.") << Qt::endl;
                 exitCode = -1;
             }
         } else {
-            ts << i18n("The file you attempted to set as your scheme, %1, could not be identified as a color scheme.", parser->positionalArguments().first()) << endl;
+            ts << i18n("The file you attempted to set as your scheme, %1, could not be identified as a color scheme.", parser->positionalArguments().first())
+               << Qt::endl;
             exitCode = -1;
         }
     } else if (parser->isSet(QStringLiteral("list-schemes"))) {
-        ts << i18n("You have the following color schemes on your system:") << endl;
+        ts << i18n("You have the following color schemes on your system:") << Qt::endl;
         int currentThemeIndex = model->selectedSchemeIndex();
         for (int i = 0 ; i < model->rowCount(QModelIndex()); ++i) {
             const QString schemeName = model->data(model->index(i, 0), ColorsModel::SchemeNameRole).toString();
             if (i == currentThemeIndex) {
-                ts << i18n(" * %1 (current color scheme)", schemeName) << endl;
+                ts << i18n(" * %1 (current color scheme)", schemeName) << Qt::endl;
             } else {
-                ts << QString(" * %1").arg(schemeName) << endl;
+                ts << QString(" * %1").arg(schemeName) << Qt::endl;
             }
         }
     } else {

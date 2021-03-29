@@ -493,14 +493,14 @@ void KSMServer::startKilling()
         SmsDie(c->connection());
     }
 
-    qCDebug(KSMSERVER) << " We killed all clients. We have now clients.count()=" << clients.count() << endl;
+    qCDebug(KSMSERVER) << " We killed all clients. We have now clients.count()=" << clients.count() << Qt::endl;
     completeKilling();
     QTimer::singleShot(10000, this, &KSMServer::timeoutQuit);
 }
 
 void KSMServer::completeKilling()
 {
-    qCDebug(KSMSERVER) << "KSMServer::completeKilling clients.count()=" << clients.count() << endl;
+    qCDebug(KSMSERVER) << "KSMServer::completeKilling clients.count()=" << clients.count() << Qt::endl;
     if (state == Killing) {
         if (!clients.isEmpty()) // still waiting for clients to go away
             return;
@@ -565,14 +565,14 @@ void KSMServer::startKillingSubSession()
         SmsDie(c->connection());
     }
 
-    qCDebug(KSMSERVER) << " We killed some clients. We have now clients.count()=" << clients.count() << endl;
+    qCDebug(KSMSERVER) << " We killed some clients. We have now clients.count()=" << clients.count() << Qt::endl;
     completeKillingSubSession();
     QTimer::singleShot(10000, this, &KSMServer::signalSubSessionClosed);
 }
 
 void KSMServer::completeKillingSubSession()
 {
-    qCDebug(KSMSERVER) << "KSMServer::completeKillingSubSession clients.count()=" << clients.count() << endl;
+    qCDebug(KSMSERVER) << "KSMServer::completeKillingSubSession clients.count()=" << clients.count() << Qt::endl;
     if (state == KillingSubSession) {
         if (!clientsToKill.isEmpty()) {
             return; // still waiting for clients to go away

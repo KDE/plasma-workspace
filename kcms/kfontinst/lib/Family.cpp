@@ -72,10 +72,10 @@ void Family::toXml(bool disabled, QTextStream &s) const
         QStringList::ConstIterator it(entries.begin()), end(entries.end());
 
         for (; it != end; ++it)
-            s << *it << endl;
+            s << *it << Qt::endl;
 
         if (!disabled)
-            s << " </" FAMILY_TAG ">" << endl;
+            s << " </" FAMILY_TAG ">" << Qt::endl;
     }
 }
 
