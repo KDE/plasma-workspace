@@ -207,7 +207,7 @@ void MenuProxy::writeGtk2Settings()
             continue;
         }
 
-        gtkModules = line.mid(equalSignIdx + 1).split(QLatin1Char(':'), QString::SkipEmptyParts);
+        gtkModules = line.mid(equalSignIdx + 1).split(QLatin1Char(':'), Qt::SkipEmptyParts);
 
         break;
     }
@@ -238,7 +238,7 @@ void MenuProxy::writeGtk3Settings()
     auto cfg = KSharedConfig::openConfig(gtk3SettingsIniPath(), KConfig::NoGlobals);
     KConfigGroup group(cfg, "Settings");
 
-    QStringList gtkModules = group.readEntry("gtk-modules", QString()).split(QLatin1Char(':'), QString::SkipEmptyParts);
+    QStringList gtkModules = group.readEntry("gtk-modules", QString()).split(QLatin1Char(':'), Qt::SkipEmptyParts);
     addOrRemoveAppMenuGtkModule(gtkModules);
 
     if (!gtkModules.isEmpty()) {

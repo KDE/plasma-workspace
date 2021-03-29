@@ -87,7 +87,7 @@ void Opera::prepare()
 
     // load contents
     QString contents = operaBookmarksFile.readAll();
-    m_operaBookmarkEntries = contents.split(QStringLiteral("\n\n"), QString::SkipEmptyParts);
+    m_operaBookmarkEntries = contents.split(QStringLiteral("\n\n"), Qt::SkipEmptyParts);
 
     // close file
     operaBookmarksFile.close();

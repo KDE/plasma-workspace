@@ -31,7 +31,7 @@ TranslationsSettings::~TranslationsSettings()
 
 QStringList TranslationsSettings::configuredLanguages() const
 {
-    return languageString().split(QLatin1Char(':'), QString::SkipEmptyParts);
+    return languageString().split(QLatin1Char(':'), Qt::SkipEmptyParts);
 }
 
 void TranslationsSettings::setConfiguredLanguages(const QStringList &langs)

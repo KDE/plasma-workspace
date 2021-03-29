@@ -126,7 +126,7 @@ void KSolidNotify::queryBlockingApps(const QString &devicePath)
     connect(p, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), [=](int, QProcess::ExitStatus) {
         QStringList blockApps;
         QString out(p->readAll());
-        const QVector<QStringRef> pidList = out.splitRef(QRegularExpression(QStringLiteral("\\s+")), QString::SkipEmptyParts);
+        const QVector<QStringRef> pidList = out.splitRef(QRegularExpression(QStringLiteral("\\s+")), Qt::SkipEmptyParts);
         KSysGuard::Processes procs;
         for (const QStringRef &pidStr : pidList) {
             int pid = pidStr.toInt();

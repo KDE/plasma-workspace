@@ -327,7 +327,7 @@ template<typename Object> void loadSerializedConfigs(Object *object, const QJSVa
     SCRIPT_OBJECT_FOREACH(escapedGroup, config, configs)
     {
         // If the config group is set, pass it on to the containment
-        QStringList groups = escapedGroup.split('/', QString::SkipEmptyParts);
+        QStringList groups = escapedGroup.split('/', Qt::SkipEmptyParts);
         for (QString &group : groups) {
             group = QUrl::fromPercentEncoding(group.toUtf8());
         }

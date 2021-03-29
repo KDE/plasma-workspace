@@ -72,7 +72,7 @@ void TimeSource::setTimeZone(const QString &tz)
     const QString trTimezone = i18n(m_tzName.toUtf8());
     setData(I18N_NOOP("Timezone"), trTimezone);
 
-    const QStringList tzParts = trTimezone.split('/', QString::SkipEmptyParts);
+    const QStringList tzParts = trTimezone.split('/', Qt::SkipEmptyParts);
     if (tzParts.count() == 1) {
         // no '/' so just set it as the city
         setData(I18N_NOOP("Timezone City"), trTimezone);
@@ -162,7 +162,7 @@ QString TimeSource::parseName(const QString &name)
     static const QString datetime = I18N_NOOP("DateTime");
 
     // now parse out what we got handed in
-    const QStringList list = name.split('|', QString::SkipEmptyParts);
+    const QStringList list = name.split('|', Qt::SkipEmptyParts);
 
     const int listSize = list.size();
     for (int i = 1; i < listSize; ++i) {

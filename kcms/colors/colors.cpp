@@ -258,7 +258,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
         Q_UNUSED(exitCode);
         Q_UNUSED(exitStatus);
 
-        const auto savedThemes = QString::fromUtf8(m_editDialogProcess->readAllStandardOutput()).split(QLatin1Char('\n'), QString::SkipEmptyParts);
+        const auto savedThemes = QString::fromUtf8(m_editDialogProcess->readAllStandardOutput()).split(QLatin1Char('\n'), Qt::SkipEmptyParts);
 
         if (!savedThemes.isEmpty()) {
             m_model->load(); // would be cool to just reload/add the changed/new ones

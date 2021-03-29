@@ -197,7 +197,7 @@ bool DictEngine::sourceRequestEvent(const QString &query)
         m_tcpSocket = nullptr;
     }
 
-    QStringList queryParts = query.split(':', QString::SkipEmptyParts);
+    QStringList queryParts = query.split(':', Qt::SkipEmptyParts);
     if (queryParts.isEmpty()) {
         return false;
     }
