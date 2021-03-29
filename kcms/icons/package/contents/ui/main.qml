@@ -297,9 +297,13 @@ KCM.GridViewKCM {
             configFile: "icons.knsrc"
             viewMode: NewStuff.Page.ViewMode.Preview
             Connections {
-                target: newStuffPage.item.engine.engine
-                function onSignalEntryEvent(entry, event) {
-                    kcm.ghnsEntriesChanged();
+                target: newStuffPage.item.engine
+                function onEntryEvent(entry, event) {
+                    if (event == 2) {
+                        kcm.reloadConfig();
+                    } else if (event == 1) {
+                        kcm.ghnsEntriesChanged();
+                    }
                 }
             }
         }

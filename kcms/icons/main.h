@@ -72,6 +72,11 @@ public:
     bool downloadingFile() const;
 
     void load() override;
+    Q_INVOKABLE void reloadConfig()
+    {
+        ManagedConfigModule::load();
+    }
+
     void save() override;
     void defaults() override;
 
