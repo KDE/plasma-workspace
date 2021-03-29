@@ -46,7 +46,6 @@ void setupFontDpi();
 QProcess *setupKSplash();
 void setupX11();
 
-bool startKDEInit();
 bool startPlasmaSession(bool wayland);
 
 void waitForKonqi();

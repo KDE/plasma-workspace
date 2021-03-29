@@ -37,7 +37,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "kcminit_interface.h"
 #include "kded_interface.h"
 #include "ksmserver_interface.h"
-#include <klauncher_interface.h>
 
 #include <KCompositeJob>
 #include <KConfigGroup>
@@ -221,14 +220,10 @@ Startup::Startup(QObject *parent)
 
     const AutoStart autostart;
 
+    // Keep for KF5; remove in KF6 (KInit will be gone then)
     QProcess::execute(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF5 "/start_kdeinit_wrapper"), QStringList());
 
-    KJob *phase1;
-    QProcessEnvironment kdedProcessEnv;
-    kdedProcessEnv.insert(QStringLiteral("KDED_STARTED_BY_KDEINIT"), QStringLiteral("1"));
-
     KJob *windowManagerJob = nullptr;
-
     if (qEnvironmentVariable("XDG_SESSION_TYPE") != QLatin1String("wayland")) {
         QString windowManager;
         if (qEnvironmentVariableIsSet("KDEWM")) {
@@ -245,9 +240,10 @@ Startup::Startup(QObject *parent)
         }
     }
 
+    KJob *phase1 = nullptr;
     const QVector<KJob *> sequence = {
         new StartProcessJob(QStringLiteral("kcminit_startup"), {}),
-        new StartServiceJob(QStringLiteral("kded5"), {}, QStringLiteral("org.kde.kded5"), kdedProcessEnv),
+        new StartServiceJob(QStringLiteral("kded5"), {}, QStringLiteral("org.kde.kded5"), {}),
         windowManagerJob,
         new StartServiceJob(QStringLiteral("ksmserver"), QCoreApplication::instance()->arguments().mid(1), QStringLiteral("org.kde.ksmserver")),
         new StartupPhase0(autostart, this),

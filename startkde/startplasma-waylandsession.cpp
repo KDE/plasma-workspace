@@ -23,20 +23,6 @@ int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
 
-    // Boot sequence:
-    //
-    // kdeinit is used to fork off processes which improves memory usage
-    // and startup time.
-    //
-    // * kdeinit starts klauncher first.
-    // * Then kded is started. kded is responsible for keeping the sycoca
-    //   database up to date. When an up to date database is present it goes
-    //   into the background and the startup continues.
-    // * Then kdeinit starts kcminit. kcminit performs initialisation of
-    //   certain devices according to the user's settings
-    //
-    // * Then ksmserver is started which takes control of the rest of the startup sequence
-
     setupFontDpi();
     QScopedPointer<QProcess, KillBeforeDeleter> ksplash;
 
@@ -65,6 +51,7 @@ int main(int argc, char **argv)
     waitForKonqi();
     out << "startplasma-waylandsession: Shutting down...\n";
 
+    // Keep for KF5; remove in KF6 (KInit will be gone then)
     runSync(QStringLiteral("kdeinit5_shutdown"), {});
 
     cleanupX11();

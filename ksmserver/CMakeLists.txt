@@ -24,10 +24,6 @@ qt_add_dbus_interface( ksmserver_SRCS ${KSCREENLOCKER_DBUS_INTERFACES_DIR}/org.k
 qt_add_dbus_interface( ksmserver_SRCS org.kde.LogoutPrompt.xml logoutprompt_interface)
 qt_add_dbus_interface( ksmserver_SRCS org.kde.KWin.Session.xml kwinsession_interface)
 
-
-set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
-qt_add_dbus_interface( ksmserver_SRCS ${klauncher_xml} klauncher_interface )
-
 qt_add_dbus_interface( ksmserver_SRCS ../startkde/plasma-session/org.kde.Startup.xml startup_interface )
 qt_add_dbus_interface( ksmserver_SRCS ../startkde/plasma-shutdown/org.kde.Shutdown.xml shutdown_interface )
 

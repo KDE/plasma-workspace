@@ -88,7 +88,7 @@ void UpdateLaunchEnvJob::start()
         }
         const QString value = d->environment.value(varName);
 
-        // KLauncher
+        // KLauncher; remove this in KF6 (by then KInit will be gone)
         org::kde::KLauncher klauncher(QStringLiteral("org.kde.klauncher5"), QStringLiteral("/KLauncher"), QDBusConnection::sessionBus());
         auto klauncherReply = klauncher.setLaunchEnv(varName, value);
         d->monitorReply(klauncherReply);

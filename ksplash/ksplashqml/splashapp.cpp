@@ -36,14 +36,14 @@
 #define TEST_STEP_INTERVAL 2000
 
 /**
- * There are 7 used stages in ksplash
- *  - initial
+ * There are 7 stages in ksplash
+ *  - initial (from this class)
+ *  - startPlasma (from startplasma)
  *  - kcminit
- *  - kinit
  *  - ksmserver
- *  - wm
- *  - ready
- *  - desktop
+ *  - wm (for X11 from KWin, for Wayland from this class)
+ *  - ready (from plasma-session startup)
+ *  - desktop (from shellcorona)
  */
 
 SplashApp::SplashApp(int &argc, char **argv)
@@ -111,11 +111,6 @@ void SplashApp::timerEvent(QTimerEvent *event)
 
 void SplashApp::setStage(const QString &stage)
 {
-    // filter out startup events from KDED as they will be removed in a future release
-    if (stage == QLatin1String("kded") || stage == QLatin1String("confupdate")) {
-        return;
-    }
-
     if (m_stages.contains(stage)) {
         return;
     }

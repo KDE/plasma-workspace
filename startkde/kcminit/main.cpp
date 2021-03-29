@@ -19,12 +19,13 @@
 
 #include <config-workspace.h>
 
-#include "klauncher_iface.h"
 #include "main.h"
 
 #include <unistd.h>
 
 #include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusPendingCall>
 #include <QDebug>
 #include <QFile>
 #include <QGuiApplication>
@@ -202,11 +203,12 @@ void KCMInit::runPhase1()
     qApp->exit(0);
 }
 
-extern "C" Q_DECL_EXPORT int kdemain(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-    // kdeinit waits for kcminit to finish, but during KDE startup
-    // only important kcm's are started very early in the login process,
-    // the rest is delayed, so fork and make parent return after the initial phase
+    // plasma-session startup waits for kcminit to finish running phase 0 kcms
+    // (theoretically that is only important kcms that need to be started very
+    // early in the login process), the rest is delayed, so fork and make parent
+    // return after the initial phase
     pipe(ready);
     if (fork() != 0) {
         waitForReady();
