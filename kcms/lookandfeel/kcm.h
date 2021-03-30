@@ -24,6 +24,7 @@
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <KNSCore/EntryWrapper>
 #include <QDir>
 
 #include <KPackage/Package>
@@ -83,7 +84,13 @@ public:
     void setDesktopSwitcher(const QString &theme);
     void setWindowDecoration(const QString &library, const QString &theme);
 
-    Q_INVOKABLE void reloadModel();
+    Q_INVOKABLE void knsEntryChanged(KNSCore::EntryWrapper *wrapper);
+    Q_INVOKABLE void reloadConfig()
+    {
+        ManagedConfigModule::load();
+    }
+
+    void addKPackageToModel(const KPackage::Package &pkg);
 
     bool isSaveNeeded() const override;
 

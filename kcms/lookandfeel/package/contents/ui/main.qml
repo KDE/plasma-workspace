@@ -128,9 +128,13 @@ KCM.GridViewKCM {
             configFile: "lookandfeel.knsrc"
             viewMode: NewStuff.Page.ViewMode.Preview
             Connections {
-                target: newStuffPage.item.engine.engine
-                function onSignalEntryEvent(entry, event) {
-                    kcm.reloadModel();
+                target: newStuffPage.item.engine
+                function onEntryEvent(entry, event) {
+                    if (event == 2) {
+                        kcm.reloadConfig();
+                    } else if (event == 1) {
+                        kcm.knsEntryChanged(entry);
+                    }
                 }
             }
         }

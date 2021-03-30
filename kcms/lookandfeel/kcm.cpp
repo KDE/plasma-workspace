@@ -51,6 +51,8 @@
 
 #include <X11/Xlib.h>
 
+#include <KNSCore/EntryInternal>
+#include <QFileInfo>
 #include <updatelaunchenvjob.h>
 
 #include "lookandfeeldata.h"
@@ -115,9 +117,24 @@ KCMLookandFeel::~KCMLookandFeel()
 {
 }
 
-void KCMLookandFeel::reloadModel()
+void KCMLookandFeel::knsEntryChanged(KNSCore::EntryWrapper *wrapper)
 {
-    loadModel();
+    const KNSCore::EntryInternal entry = wrapper->entry();
+    auto removeItemFromModel = [&entry, this]() {
+        const QString guessedPluginId = QFileInfo(entry.uninstalledFiles().constFirst()).fileName();
+        const int index = pluginIndex(guessedPluginId);
+        if (index != -1) {
+            m_model->removeRows(index, 1);
+        }
+    };
+    if (entry.status() == KNS3::Entry::Deleted && !entry.uninstalledFiles().isEmpty()) {
+        removeItemFromModel();
+    } else if (entry.status() == KNS3::Entry::Installed && !entry.installedFiles().isEmpty()) {
+        removeItemFromModel(); // In case we updated it we don't want to have it in twice
+        KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+        pkg.setPath(entry.installedFiles().constFirst());
+        addKPackageToModel(pkg);
+    }
 }
 
 QStandardItemModel *KCMLookandFeel::lookAndFeelModel() const
@@ -185,58 +202,63 @@ void KCMLookandFeel::loadModel()
     });
 
     for (const KPackage::Package &pkg : pkgs) {
-        if (!pkg.metadata().isValid()) {
-            continue;
-        }
-        QStandardItem *row = new QStandardItem(pkg.metadata().name());
-        row->setData(pkg.metadata().pluginId(), PluginNameRole);
-        row->setData(pkg.metadata().description(), DescriptionRole);
-        row->setData(pkg.filePath("preview"), ScreenshotRole);
-        row->setData(pkg.filePath("fullscreenpreview"), FullScreenPreviewRole);
-
-        // What the package provides
-        row->setData(!pkg.filePath("splashmainscript").isEmpty(), HasSplashRole);
-        row->setData(!pkg.filePath("lockscreenmainscript").isEmpty(), HasLockScreenRole);
-        row->setData(!pkg.filePath("runcommandmainscript").isEmpty(), HasRunCommandRole);
-        row->setData(!pkg.filePath("logoutmainscript").isEmpty(), HasLogoutRole);
-
-        if (!pkg.filePath("defaults").isEmpty()) {
-            KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("defaults"));
-            KConfigGroup cg(conf, "kdeglobals");
-            cg = KConfigGroup(&cg, "General");
-            bool hasColors = !cg.readEntry("ColorScheme", QString()).isEmpty();
-            if (!hasColors) {
-                hasColors = !pkg.filePath("colors").isEmpty();
-            }
-            row->setData(hasColors, HasColorsRole);
-            cg = KConfigGroup(&cg, "KDE");
-            row->setData(!cg.readEntry("widgetStyle", QString()).isEmpty(), HasWidgetStyleRole);
-            cg = KConfigGroup(conf, "kdeglobals");
-            cg = KConfigGroup(&cg, "Icons");
-            row->setData(!cg.readEntry("Theme", QString()).isEmpty(), HasIconsRole);
-
-            cg = KConfigGroup(conf, "kdeglobals");
-            cg = KConfigGroup(&cg, "Theme");
-            row->setData(!cg.readEntry("name", QString()).isEmpty(), HasPlasmaThemeRole);
-
-            cg = KConfigGroup(conf, "kcminputrc");
-            cg = KConfigGroup(&cg, "Mouse");
-            row->setData(!cg.readEntry("cursorTheme", QString()).isEmpty(), HasCursorsRole);
-
-            cg = KConfigGroup(conf, "kwinrc");
-            cg = KConfigGroup(&cg, "WindowSwitcher");
-            row->setData(!cg.readEntry("LayoutName", QString()).isEmpty(), HasWindowSwitcherRole);
-
-            cg = KConfigGroup(conf, "kwinrc");
-            cg = KConfigGroup(&cg, "DesktopSwitcher");
-            row->setData(!cg.readEntry("LayoutName", QString()).isEmpty(), HasDesktopSwitcherRole);
-        }
-
-        m_model->appendRow(row);
+        addKPackageToModel(pkg);
     }
 
     // Model has been cleared so pretend the selected look and fell changed to force view update
     emit lookAndFeelSettings()->lookAndFeelPackageChanged();
+}
+
+void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)
+{
+    if (!pkg.metadata().isValid()) {
+        return;
+    }
+    QStandardItem *row = new QStandardItem(pkg.metadata().name());
+    row->setData(pkg.metadata().pluginId(), PluginNameRole);
+    row->setData(pkg.metadata().description(), DescriptionRole);
+    row->setData(pkg.filePath("preview"), ScreenshotRole);
+    row->setData(pkg.filePath("fullscreenpreview"), FullScreenPreviewRole);
+
+    // What the package provides
+    row->setData(!pkg.filePath("splashmainscript").isEmpty(), HasSplashRole);
+    row->setData(!pkg.filePath("lockscreenmainscript").isEmpty(), HasLockScreenRole);
+    row->setData(!pkg.filePath("runcommandmainscript").isEmpty(), HasRunCommandRole);
+    row->setData(!pkg.filePath("logoutmainscript").isEmpty(), HasLogoutRole);
+
+    if (!pkg.filePath("defaults").isEmpty()) {
+        KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("defaults"));
+        KConfigGroup cg(conf, "kdeglobals");
+        cg = KConfigGroup(&cg, "General");
+        bool hasColors = !cg.readEntry("ColorScheme", QString()).isEmpty();
+        if (!hasColors) {
+            hasColors = !pkg.filePath("colors").isEmpty();
+        }
+        row->setData(hasColors, HasColorsRole);
+        cg = KConfigGroup(&cg, "KDE");
+        row->setData(!cg.readEntry("widgetStyle", QString()).isEmpty(), HasWidgetStyleRole);
+        cg = KConfigGroup(conf, "kdeglobals");
+        cg = KConfigGroup(&cg, "Icons");
+        row->setData(!cg.readEntry("Theme", QString()).isEmpty(), HasIconsRole);
+
+        cg = KConfigGroup(conf, "kdeglobals");
+        cg = KConfigGroup(&cg, "Theme");
+        row->setData(!cg.readEntry("name", QString()).isEmpty(), HasPlasmaThemeRole);
+
+        cg = KConfigGroup(conf, "kcminputrc");
+        cg = KConfigGroup(&cg, "Mouse");
+        row->setData(!cg.readEntry("cursorTheme", QString()).isEmpty(), HasCursorsRole);
+
+        cg = KConfigGroup(conf, "kwinrc");
+        cg = KConfigGroup(&cg, "WindowSwitcher");
+        row->setData(!cg.readEntry("LayoutName", QString()).isEmpty(), HasWindowSwitcherRole);
+
+        cg = KConfigGroup(conf, "kwinrc");
+        cg = KConfigGroup(&cg, "DesktopSwitcher");
+        row->setData(!cg.readEntry("LayoutName", QString()).isEmpty(), HasDesktopSwitcherRole);
+    }
+
+    m_model->appendRow(row);
 }
 
 bool KCMLookandFeel::isSaveNeeded() const
