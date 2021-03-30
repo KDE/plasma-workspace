@@ -19,7 +19,6 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.private.kcms.desktoptheme 1.0 as Private
 
 Item {
