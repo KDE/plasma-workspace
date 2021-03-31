@@ -103,9 +103,23 @@ QtLayouts.ColumnLayout {
             text: i18n("Show seconds")
         }
 
-        QtControls.CheckBox {
-            id: showLocalTimezone
-            text: i18n("Show local time zone")
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        QtLayouts.ColumnLayout {
+            Kirigami.FormData.label: i18n("Show time zone:")
+            Kirigami.FormData.buddyFor: showLocalTimeZoneWhenDifferent
+
+            QtControls.RadioButton {
+                id: showLocalTimeZoneWhenDifferent
+                text: i18n("Only when different from local time zone")
+            }
+
+            QtControls.RadioButton {
+                id: showLocalTimezone
+                text: i18n("Always")
+            }
         }
 
         Item {
@@ -285,6 +299,10 @@ QtLayouts.ColumnLayout {
             timezoneCodeRadio.checked = true;
         } else {
             timezoneCityRadio.checked = true;
+        }
+
+        if (!plasmoid.configuration.showLocalTimezone) {
+            showLocalTimeZoneWhenDifferent.checked = true;
         }
     }
 }
