@@ -81,10 +81,10 @@ int main(int argc, char **argv)
 
     } else if (parser.isSet(_apply)) {
         QString requestedTheme{parser.value(_apply)};
-        if (!requestedTheme.endsWith(QStringLiteral("/"))) {
-            // Just in case this isn't demarked as being a directory, let's just do that.
-            // There would be other ways of doing this, but they all feel a bit convoluted
-            // when this is all it really takes for our purposes.
+        QFileInfo info(requestedTheme);
+        // Check if the theme name passed validates as the absolute path for a folder
+        if (info.isDir()) {
+            // absolute paths need to be passed with trailing shash to KPackage
             requestedTheme += QStringLiteral("/");
         }
         KPackage::Package p = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
