@@ -480,8 +480,10 @@ void Klipper::disableURLGrabber()
 {
     QMessageBox *message = new QMessageBox(QMessageBox::Information,
                                            QString(),
-                                           i18n("You can enable URL actions later by left-clicking on the "
-                                                "Klipper icon and selecting 'Enable Clipboard Actions'"));
+                                           xi18nc("@info",
+                                                  "You can enable URL actions later in the "
+                                                  "<interface>Actions</interface> page of the "
+                                                  "Clipboard applet's configuration window"));
     message->setAttribute(Qt::WA_DeleteOnClose);
     message->setModal(false);
     message->show();
