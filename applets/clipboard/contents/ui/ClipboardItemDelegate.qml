@@ -31,6 +31,11 @@ PlasmaExtras.ListItem {
     property bool supportsBarcodes
     property int maximumNumberOfPreviews: Math.floor(width / (PlasmaCore.Units.gridUnit * 4 + PlasmaCore.Units.smallSpacing))
     readonly property real gradientThreshold: (label.width - toolButtonsLoader.width) / label.width
+    // Consider tall to be > about 1.5x the default height for purposes of top-aligning
+    // the buttons to preserve Fitts' Law when deleting multiple items in a row,
+    // or else the top-alignment doesn't look deliberate enough and people will think
+    // it's a bug
+    readonly property bool isTall: height > Math.round(PlasmaCore.Units.gridUnit * 2.5)
 
     signal itemSelected(string uuid)
     signal remove(string uuid)
@@ -110,9 +115,11 @@ PlasmaExtras.ListItem {
 
     Loader {
         id: toolButtonsLoader
+
         anchors {
             right: label.right
-            verticalCenter: parent.verticalCenter
+            top: menuItem.isTall? parent.top : undefined
+            verticalCenter: menuItem.isTall ? undefined : parent.verticalCenter
         }
         source: "DelegateToolButtons.qml"
         active: menuItem.ListView.isCurrentItem
