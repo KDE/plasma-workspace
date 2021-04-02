@@ -23,7 +23,6 @@
 #include <KService>
 
 #include <QCommandLineParser>
-#include <QSet>
 
 class KCMInit : public QObject
 {
@@ -40,7 +39,7 @@ private:
     bool runModule(const QString &libName, KService::Ptr service);
     void runModules(int phase);
     KService::List m_list;
-    QSet<QString> m_alreadyInitialized;
+    QStringList m_alreadyInitialized;
 };
 
 #endif // MAIN_H

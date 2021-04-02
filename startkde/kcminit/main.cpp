@@ -130,7 +130,7 @@ void KCMInit::runModules(int phase)
         // try to load the library
         if (!m_alreadyInitialized.contains(library)) {
             runModule(library, service);
-            m_alreadyInitialized.insert(library);
+            m_alreadyInitialized.append(library);
         }
     }
 }
