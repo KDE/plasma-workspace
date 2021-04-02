@@ -27,7 +27,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KService>
-#include <KServiceTypeTrader>
 #include <QDebug>
 #include <QUrl>
 
