@@ -8,6 +8,7 @@
 #include "interactiveconsole.h"
 
 #include <QAction>
+#include <QApplication>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDateTime>
@@ -26,7 +27,8 @@
 
 #include <KConfigGroup>
 #include <KMessageBox>
-#include <KServiceTypeTrader>
+#include <KPluginFactory>
+#include <KPluginLoader>
 #include <KSharedConfig>
 #include <KShell>
 #include <KStandardAction>
@@ -115,26 +117,41 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
 
     editorLayout->addWidget(toolBar);
 
-    const KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("KTextEditor/Document"));
-    for (const KService::Ptr &service : offers) {
-        m_editorPart = service->createInstance<KTextEditor::Document>(widget);
-        if (m_editorPart) {
-            m_editorPart->setHighlightingMode(QStringLiteral("JavaScript/PlasmaDesktop"));
+    auto tryLoadingKatePart = [=]() {
+        KTextEditor::Document *result = nullptr;
+        KPluginLoader loader(QStringLiteral("kf5/parts/katepart"));
 
-            KTextEditor::View *view = m_editorPart->createView(widget);
-            view->setContextMenu(view->defaultContextMenu());
-
-            KTextEditor::ConfigInterface *config = qobject_cast<KTextEditor::ConfigInterface *>(view);
-            if (config) {
-                config->setConfigValue(QStringLiteral("line-numbers"), true);
-                config->setConfigValue(QStringLiteral("dynamic-word-wrap"), true);
-            }
-
-            editorLayout->addWidget(view);
-            connect(m_editorPart, &KTextEditor::Document::textChanged, this, &InteractiveConsole::scriptTextChanged);
-            break;
+        KPluginFactory *factory = loader.factory();
+        if (!factory) {
+            qWarning() << "Error loading katepart plugin:" << loader.errorString();
+            return result;
         }
-    }
+
+        result = factory->create<KTextEditor::Document>(widget);
+
+        if (!result) {
+            qWarning() << "Error creating katepart object";
+            return result;
+        }
+
+        result->setHighlightingMode(QStringLiteral("JavaScript/PlasmaDesktop"));
+
+        KTextEditor::View *view = result->createView(widget);
+        view->setContextMenu(view->defaultContextMenu());
+
+        KTextEditor::ConfigInterface *config = qobject_cast<KTextEditor::ConfigInterface *>(view);
+        if (config) {
+            config->setConfigValue(QStringLiteral("line-numbers"), true);
+            config->setConfigValue(QStringLiteral("dynamic-word-wrap"), true);
+        }
+
+        editorLayout->addWidget(view);
+        connect(result, &KTextEditor::Document::textChanged, this, &InteractiveConsole::scriptTextChanged);
+
+        return result;
+    };
+
+    m_editorPart = tryLoadingKatePart();
 
     if (!m_editorPart) {
         m_editor = new KTextEdit(widget);
