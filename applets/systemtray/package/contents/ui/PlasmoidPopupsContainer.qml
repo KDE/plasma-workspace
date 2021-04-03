@@ -71,6 +71,13 @@ StackView {
             mainStack.replace(emptyPage);
         }
     }
+
+    onCurrentItemChanged: {
+        if (currentItem !== null && plasmoid.expanded) {
+            currentItem.forceActiveFocus();
+        }
+    }
+
     Connections {
         target: plasmoid
         function onAppletRemoved(applet) {
