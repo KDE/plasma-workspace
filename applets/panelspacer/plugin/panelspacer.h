@@ -73,5 +73,5 @@ Q_SIGNALS:
     void twinSpacerChanged();
 
 private:
-    PlasmaQuick::AppletQuickItem *m_twinSpacer;
+    PlasmaQuick::AppletQuickItem *m_twinSpacer = nullptr;
 };
