@@ -29,6 +29,7 @@ PlasmaCore.ToolTipArea {
 
     height: inVisibleLayout ? visibleLayout.cellHeight : hiddenTasks.cellHeight
     width: inVisibleLayout ? visibleLayout.cellWidth : hiddenTasks.cellWidth
+    focus: true
 
     property var model: itemModel
 
@@ -40,6 +41,26 @@ PlasmaCore.ToolTipArea {
     readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
     readonly property bool inVisibleLayout: effectiveStatus === PlasmaCore.Types.ActiveStatus
 
+    // TODO figure out a way to use an ItemDelegate instead of trying to
+    // reimplement basic keyboard navigation/accessibility stuff.
+    Accessible.name: mainText
+    Accessible.description: subText
+    Accessible.role: Accessible.Button
+    Accessible.onPressAction: keyboardPressed()
+    Keys.onEnterPressed: keyboardPressed()
+    Keys.onSpacePressed: keyboardPressed()
+
+    // Simulate mouse clicked event
+    function keyboardPressed() {
+        const mouse = {
+            x: 0,
+            y: 0,
+            accepted: false,
+            button: Qt.LeftButton,
+            buttons: Qt.LeftButton,
+        };
+        clicked(mouse);
+    }
     signal clicked(var mouse)
     signal pressed(var mouse)
     signal wheel(var wheel)
@@ -105,6 +126,7 @@ PlasmaCore.ToolTipArea {
     }
 
     MouseArea {
+        id: itemMouseArea
         anchors.fill: abstractItem
         hoverEnabled: true
         drag.filterChildren: true
