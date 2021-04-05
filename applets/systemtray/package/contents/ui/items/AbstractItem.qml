@@ -48,6 +48,7 @@ PlasmaCore.ToolTipArea {
     Accessible.role: Accessible.Button
     Accessible.onPressAction: keyboardPressed()
     Keys.onEnterPressed: keyboardPressed()
+    Keys.onReturnPressed: keyboardPressed()
     Keys.onSpacePressed: keyboardPressed()
 
     // Simulate mouse clicked event
@@ -126,7 +127,6 @@ PlasmaCore.ToolTipArea {
     }
 
     MouseArea {
-        id: itemMouseArea
         anchors.fill: abstractItem
         hoverEnabled: true
         drag.filterChildren: true
