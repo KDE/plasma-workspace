@@ -45,6 +45,7 @@ PlasmaComponents3.ScrollView {
         id: hiddenTasks
 
         activeFocusOnTab: hiddenTasksView.visible
+        onActiveFocusChanged: currentIndex = activeFocus ? 0 : -1;
 
         readonly property int rows: 4
         readonly property int columns: 4
