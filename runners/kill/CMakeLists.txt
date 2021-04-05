@@ -29,6 +29,7 @@ target_link_libraries(krunner_kill
                       )
 add_dependencies(krunner_kill kcm_krunner_kill)
 
+set_target_properties(krunner_kill PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kf5/krunner")
 install(TARGETS krunner_kill DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner")
 install(TARGETS kcm_krunner_kill DESTINATION ${KDE_INSTALL_PLUGINDIR})
 install(FILES plasma-runner-kill_config.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

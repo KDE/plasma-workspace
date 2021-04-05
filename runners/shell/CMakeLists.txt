@@ -14,6 +14,7 @@ target_link_libraries(krunner_shell
     KF5::Completion
 )
 
+set_target_properties(krunner_shell PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kf5/krunner")
 install(TARGETS krunner_shell DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner")
 
 if(BUILD_TESTING)

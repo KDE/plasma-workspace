@@ -47,6 +47,7 @@ else ()
     )
 endif ()
 
+set_target_properties(calculator PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kf5/krunner")
 install(TARGETS calculator DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner" )
 if(BUILD_TESTING)
     add_subdirectory(autotests)

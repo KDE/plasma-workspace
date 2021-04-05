@@ -37,6 +37,7 @@ target_link_libraries(krunner_bookmarks_common
 add_library(krunner_bookmarksrunner MODULE bookmarksrunner.cpp browserfactory.cpp)
 kcoreaddons_desktop_to_json(krunner_bookmarksrunner plasma-runner-bookmarks.desktop )
 target_link_libraries(krunner_bookmarksrunner krunner_bookmarks_common)
+set_target_properties(krunner_bookmarksrunner PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kf5/krunner")
 
 install(TARGETS krunner_bookmarksrunner DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner")
 

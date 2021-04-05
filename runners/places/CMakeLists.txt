@@ -14,4 +14,5 @@ target_link_libraries(krunner_placesrunner
     KF5::Notifications
 )
 
+set_target_properties(krunner_placesrunner PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kf5/krunner")
 install(TARGETS krunner_placesrunner DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner" )
