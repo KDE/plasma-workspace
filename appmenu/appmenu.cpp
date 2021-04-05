@@ -37,9 +37,6 @@
 #include <QDBusInterface>
 #include <QMenu>
 
-#include <KConfig>
-#include <KConfigGroup>
-#include <KSharedConfig>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
 
