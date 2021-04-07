@@ -14,10 +14,10 @@ target_link_libraries(ksplashqml
     KF5::ConfigCore
     KF5::Package
     KF5::QuickAddons
-    KF5::WaylandClient
     KF5::WindowSystem
     KF5::QuickAddons
     PW::KWorkspace
+    LayerShellQt::Interface
    )
 
 install(TARGETS ksplashqml ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

@@ -77,6 +77,7 @@ find_package(KWinDBusInterface CONFIG REQUIRED)
 find_package(KF5Screen CONFIG REQUIRED)
 find_package(KScreenLocker 5.13.80 REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
+find_package(LayerShellQt CONFIG REQUIRED)
 find_package(KF5Holidays)
 set_package_properties(KF5Holidays PROPERTIES DESCRIPTION "Holidays provider for Plasma calendar"
                        TYPE OPTIONAL
