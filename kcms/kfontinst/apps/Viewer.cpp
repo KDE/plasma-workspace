@@ -45,7 +45,8 @@ namespace KFI
 {
 CViewer::CViewer()
 {
-    KPluginFactory *factory = KPluginLoader("kfontviewpart").factory();
+    KPluginLoader loader("kf5/parts/kfontviewpart");
+    KPluginFactory *factory = loader.factory();
 
     if (factory) {
         itsPreview = factory->create<KParts::ReadOnlyPart>(this);
@@ -65,8 +66,10 @@ CViewer::CViewer()
 
         setAutoSaveSettings();
         applyMainWindowSettings(KSharedConfig::openConfig()->group("MainWindow"));
-    } else
-        exit(0);
+    } else {
+        qWarning() << "Error loading kfontviewpart:" << loader.errorString();
+        exit(1);
+    }
 }
 
 void CViewer::fileOpen()

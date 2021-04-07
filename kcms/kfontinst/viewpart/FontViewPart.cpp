@@ -65,7 +65,7 @@ static QString getFamily(const QString &font)
     return -1 == commaPos ? font : font.left(commaPos);
 }
 
-K_PLUGIN_FACTORY(CFontViewPartFactory, registerPlugin<CFontViewPart>();)
+K_PLUGIN_CLASS_WITH_JSON(CFontViewPart, "kfontviewpart.json")
 
 CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList<QVariant> &)
     : KParts::ReadOnlyPart(parent)
@@ -99,8 +99,6 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
     itsFrame->setFocusPolicy(Qt::ClickFocus);
     previewFrame->setFrameShape(QFrame::StyledPanel);
     previewFrame->setFrameShadow(QFrame::Sunken);
-    KAboutData aboutData(KFI_NAME, i18n("FontViewPart"), WORKSPACE_VERSION_STRING);
-    setComponentData(aboutData);
 
     itsPreview = new CFontPreview(previewFrame);
     itsPreview->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
