@@ -53,6 +53,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <KUser>
 #include <KWindowEffects>
 #include <KWindowSystem>
+#include <LayerShellQt/Window>
 
 #include <netwm.h>
 #include <stdio.h>
@@ -64,19 +65,15 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <config-workspace.h>
 #include <debug.h>
 
-#include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/surface.h>
-
 static const QString s_login1Service = QStringLiteral("org.freedesktop.login1");
 static const QString s_login1Path = QStringLiteral("/org/freedesktop/login1");
 static const QString s_dbusPropertiesInterface = QStringLiteral("org.freedesktop.DBus.Properties");
 static const QString s_login1ManagerInterface = QStringLiteral("org.freedesktop.login1.Manager");
 static const QString s_login1RebootToFirmwareSetup = QStringLiteral("RebootToFirmwareSetup");
 
-KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, KWayland::Client::PlasmaShell *plasmaShell)
+KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype)
     : QuickViewSharedEngine(parent)
     , m_result(false)
-    , m_waylandPlasmaShell(plasmaShell)
 // this is a WType_Popup on purpose. Do not change that! Not
 // having a popup here has severe side effects.
 {
@@ -211,6 +208,10 @@ void KSMShutdownDlg::init()
     KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
 
     setKeyboardGrabEnabled(true);
+    KWindowEffects::enableBlurBehind(winId(), true);
+    if (auto w = LayerShellQt::Window::get(this)) {
+        w->setKeyboardInteractivity(true);
+    }
 }
 
 void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
@@ -223,47 +224,6 @@ void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
     } else {
         //        setMask(m_view->mask());
     }
-}
-
-bool KSMShutdownDlg::event(QEvent *e)
-{
-    if (e->type() == QEvent::PlatformSurface) {
-        switch (static_cast<QPlatformSurfaceEvent *>(e)->surfaceEventType()) {
-        case QPlatformSurfaceEvent::SurfaceCreated:
-            setupWaylandIntegration();
-            KWindowEffects::enableBlurBehind(winId(), true);
-            break;
-        case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
-            delete m_shellSurface;
-            m_shellSurface = nullptr;
-            break;
-        }
-    }
-    return KQuickAddons::QuickViewSharedEngine::event(e);
-}
-
-void KSMShutdownDlg::setupWaylandIntegration()
-{
-    if (m_shellSurface) {
-        // already setup
-        return;
-    }
-    if (!m_waylandPlasmaShell) {
-        return;
-    }
-    using namespace KWayland::Client;
-    Surface *s = Surface::fromWindow(this);
-    if (!s) {
-        return;
-    }
-
-    m_shellSurface = m_waylandPlasmaShell->createSurface(s, this);
-    // Use Role::Panel to make it go above all other windows
-    // see allso KSplash splashwindow.cpp
-    m_shellSurface->setPosition(geometry().topLeft());
-    m_shellSurface->setRole(PlasmaShellSurface::Role::Panel);
-    m_shellSurface->setPanelTakesFocus(true);
-    m_shellSurface->setPanelBehavior(PlasmaShellSurface::PanelBehavior::WindowsGoBelow);
 }
 
 void KSMShutdownDlg::slotLogout()

@@ -36,14 +36,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <KQuickAddons/QtQuickSettings>
 #include <KWindowSystem>
-
-#include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/registry.h>
+#include <LayerShellQt/Shell>
 
 Greeter::Greeter()
     : QObject()
-    , m_waylandPlasmaShell(nullptr)
 {
     new LogoutPromptAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/LogoutPrompt"), this);
@@ -60,18 +56,7 @@ void Greeter::setupWaylandIntegration()
     if (!KWindowSystem::isPlatformWayland()) {
         return;
     }
-    using namespace KWayland::Client;
-    ConnectionThread *connection = ConnectionThread::fromApplication(this);
-    if (!connection) {
-        return;
-    }
-    Registry *registry = new Registry(this);
-    registry->create(connection);
-    connect(registry, &Registry::plasmaShellAnnounced, this, [this, registry](quint32 name, quint32 version) {
-        m_waylandPlasmaShell = registry->createPlasmaShell(name, version, this);
-    });
-    registry->setup();
-    connection->roundtrip();
+    LayerShellQt::Shell::useLayerShell();
 }
 
 void Greeter::init()
@@ -88,7 +73,7 @@ void Greeter::init()
 void Greeter::adoptScreen(QScreen *screen)
 {
     // TODO: last argument is the theme, maybe add command line option for it?
-    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownType, m_waylandPlasmaShell);
+    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownType);
     w->installEventFilter(this);
     m_dialogs << w;
 

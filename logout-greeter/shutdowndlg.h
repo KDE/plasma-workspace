@@ -29,22 +29,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kworkspace.h>
 #include <sessionmanagement.h>
 
-namespace KWayland
-{
-namespace Client
-{
-class PlasmaShell;
-class PlasmaShellSurface;
-}
-}
-
 // The confirmation dialog
 class KSMShutdownDlg : public KQuickAddons::QuickViewSharedEngine
 {
     Q_OBJECT
 
 public:
-    KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, KWayland::Client::PlasmaShell *plasmaShell = nullptr);
+    KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype);
 
     void init();
     bool result() const;
@@ -65,16 +56,12 @@ Q_SIGNALS:
 
 protected:
     void resizeEvent(QResizeEvent *e) override;
-    bool event(QEvent *e) override;
 
 private:
-    void setupWaylandIntegration();
     QString m_bootOption;
     QStringList rebootOptions;
     bool m_result : 1;
     SessionManagement m_session;
-    KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
-    KWayland::Client::PlasmaShellSurface *m_shellSurface = nullptr;
 };
 
 #endif

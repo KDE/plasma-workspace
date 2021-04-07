@@ -19,9 +19,9 @@ target_link_libraries(ksmserver-logout-greeter
     KF5::I18n
     KF5::Package
     KF5::QuickAddons
-    KF5::WaylandClient
     KF5::WindowSystem
     X11::X11
+    LayerShellQt::Interface
 )
 install(TARGETS ksmserver-logout-greeter DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 kdbusaddons_generate_dbus_service_file(ksmserver-logout-greeter org.kde.LogoutPrompt ${KDE_INSTALL_FULL_LIBEXECDIR})

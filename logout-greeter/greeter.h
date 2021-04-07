@@ -31,13 +31,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <kworkspace.h>
 
 class KSMShutdownDlg;
-namespace KWayland
-{
-namespace Client
-{
-class PlasmaShell;
-}
-}
 
 class QScreen;
 
@@ -66,5 +59,4 @@ private:
 
     KWorkSpace::ShutdownType m_shutdownType = KWorkSpace::ShutdownTypeHalt;
     QVector<KSMShutdownDlg *> m_dialogs;
-    KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
 };
