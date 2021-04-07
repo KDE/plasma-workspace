@@ -46,7 +46,7 @@ ContainmentLayoutManager.AppletContainer {
         : PlasmaCore.Theme.NormalColorGroup
 
     onFocusChanged: {
-        if (!focus) {
+        if (!focus && !dragActive) {
             editMode = false;
         }
     }
