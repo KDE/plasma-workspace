@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2018-03-30</date>
-<releaseinfo>Plasma 5.12</releaseinfo>
+<date>2021-04-08</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -34,9 +34,16 @@
   <para>This module lets you manage the color schemes on your machine.
   It shows a list of color schemes shipped with &plasma; and a preview at the top.
   Only one scheme is active at once, but you may edit schemes.
-  You can remove schemes using <guibutton>Remove Scheme</guibutton>.
+  You can remove schemes using the <guibutton>Remove Scheme</guibutton> button that
+  is shown when you hover the mouse pointer over an item in the grid.
   Note that system schemes cannot be removed; the button for this action is
   disabled.</para>
+
+  <para>It is possible to filter the scheme list using the <guilabel>Search...</guilabel>
+  field above the grid. Moreover, you can use the combo box next to this field to
+  show only the <guimenuitem>Light Schemes</guimenuitem> or the <guimenuitem>Dark
+  Schemes</guimenuitem>.
+  </para>
 
   <para>If you have an Internet connection,
   you can also browse and retrieve user-created schemes using <guibutton>Get
@@ -46,28 +53,22 @@
   obtained, as well as import &kde; 4 schemes named like &quot;*.colors&quot;.
   </para>
 
-  <para>If <guilabel>Apply colors to non-Qt applications</guilabel>
-  is checked, Plasma will attempt to export its color scheme so that
-  non-Qt applications will use the same colors. Most applications will
-  honor the exported scheme to varying degrees, though some may have bugs
-  or otherwise not honor the exported scheme.
-  </para>
-
-  <para>Note: This documentation will sometimes refer to the
+  <note>
+  <para>This documentation will sometimes refer to the
   &quot;current&quot; scheme, or the &quot;active&quot; scheme.
   The &quot;current&quot; scheme is the set of colors and color scheme options
   that was most recently applied, &ie; what you would get if you choose
   <guibutton>Cancel</guibutton>. The &quot;active&quot; scheme is the set of
   colors as has been most recently edited by you, &ie; what you would get if
   you choose <guibutton>Apply</guibutton>.</para>
+  </note>
 </sect2>
 
 <sect2>
   <title>Edit or Create Schemes</title>
   <para>To edit or create new schemes select a scheme from the list and press the
   <guibutton>Edit Scheme</guibutton> button to open a dialog with three tabs 
-  <guilabel>Options</guilabel>, <guilabel>Colors</guilabel>, <guilabel>Disabled</guilabel>
-  and <guilabel>Inactive</guilabel>.
+  <guilabel>Options</guilabel>, <guilabel>Colors</guilabel>, and <guilabel>Disabled</guilabel>.
   When you have created a scheme you like, you can upload it, reset it or save it
   under a different name or overwrite the active scheme.
   </para>
@@ -82,7 +83,7 @@
 
   <itemizedlist>
     <listitem><para><guilabel>Apply effects to inactive windows</guilabel>
-      &mdash; If checked, state effects (see below) will be applied to inactive
+        &mdash; If checked, state effects (see <link linkend="color-effects">below</link>) will be applied to inactive
       windows. This can help visually identify active versus inactive windows,
       and may have aesthetic value, depending on your taste. However, some
       users feel that it causes distracting &quot;flickering&quot; since
@@ -269,9 +270,9 @@
 </sect3>
 
 <sect3 id="color-effects">
-  <title>Color State Effects</title>
+  <title>Disabled</title>
 
-  <para>Color state effects are applied to interface elements in the inactive
+  <para>Color state effects from this tab are applied to interface elements in the inactive
   (windows that do not have focus; only if <guilabel>Apply inactive window
   color effects</guilabel> is enabled) or disabled states. By changing the
   effects, the appearance of elements in these states can be changed. Usually,
@@ -280,7 +281,7 @@
   will have strongly reduced contrast and are often notably darker or lighter.
   </para>
 
-  <para>Three types of effect may be applied to each state (with the effects
+  <para>Three types of effects may be applied to each state (with the effects
   of the two states being independent). These are Intensity, Color and
   Contrast. The first two (Intensity, Color) control the overall color, while
   the last (Contrast) deals with the foreground colors relative to the
@@ -331,7 +332,7 @@
       </para></listitem>
       <listitem><para>Fade &mdash;
         smoothly blends the original color into a reference color. The minimum
-        setting on the slider produces no change; maximum gives the reference
+        setting on the slider produces no change; the maximum gives the reference
         color.
       </para></listitem>
       <listitem><para>Tint &mdash;
