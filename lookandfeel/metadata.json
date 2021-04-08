@@ -136,6 +136,7 @@
         "Version": "2.0",
         "Website": "https://www.kde.org"
     },
+    "X-Plasma-APIVersion": "2",
     "Keywords": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
     "Keywords[ar]": "سطح المكتب;مساحة العمل;المظهر;المظهر والإحساس;اخرج;Lock;علق;أطفئ;أسبت;",
     "Keywords[ast]": "Escritoriu;Estaya de trabayu;Aspeutu;Estilu;Aspeutu y Estilu;Zarrar sesión;Zarru de sesión;Bloquiar;Bloquéu;Suspender;Suspensión;Apagar;Apagáu;Ivernar;Ivernación;Hibernar;Hibernación;",

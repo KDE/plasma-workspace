@@ -18,6 +18,7 @@ SessionManagementScreen {
 
     property Item mainPasswordBox: passwordBox
     property bool lockScreenUiVisible: false
+    property alias echoMode: passwordBox.echoMode
 
     //the y position that should be ensured visible when the on screen keyboard is visible
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
@@ -26,7 +27,7 @@ SessionManagementScreen {
      * Login has been requested with the following username and password
      * If username field is visible, it will be taken from that, otherwise from the "name" property of the currentIndex
      */
-    signal loginRequest(string password)
+    signal passwordResult(string password)
 
     function startLogin() {
         const password = passwordBox.text
@@ -37,7 +38,7 @@ SessionManagementScreen {
         //
         // See https://bugreports.qt.io/browse/QTBUG-55460
         loginButton.forceActiveFocus();
-        loginRequest(password);
+        passwordResult(password);
     }
 
     RowLayout {

@@ -32,18 +32,37 @@ PlasmaCore.ColorScope {
                 root.notification += "\n"
             }
             root.notification += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Unlocking failed");
+            graceLockTimer.restart();
+            notificationRemoveTimer.restart();
         }
-        function onGraceLockedChanged() {
-            if (!authenticator.graceLocked) {
-                root.notification = "";
-                root.clearPassword();
+
+        function onSucceeded() {
+        }
+
+        function onInfoMessage(msg) {
+            if (root.notification) {
+                root.notification += "\n"
             }
-        }
-        function onMessage(msg) {
             root.notification += msg;
         }
-        function onError(err) {
-            root.notification += err;
+
+        function onErrorMessage(msg) {
+            if (root.notification) {
+                root.notification += "\n"
+            }
+            root.notification += msg;
+        }
+
+        function onPrompt(msg) {
+            root.notification = msg;
+            mainBlock.echoMode = TextInput.Normal
+            mainBlock.mainPasswordBox.text = "";
+            mainBlock.mainPasswordBox.forceActiveFocus();
+        }
+        function onPromptForSecret(msg) {
+            mainBlock.echoMode = TextInput.Password
+            mainBlock.mainPasswordBox.text = "";
+            mainBlock.mainPasswordBox.forceActiveFocus();
         }
     }
 
@@ -79,6 +98,7 @@ PlasmaCore.ColorScope {
     MouseArea {
         id: lockScreenRoot
 
+        property bool calledUnlock: false
         property bool uiVisible: false
         property bool blockUI: mainStack.depth > 1 || mainBlock.mainPasswordBox.text.length > 0 || inputPanel.keyboardActive
 
@@ -89,12 +109,15 @@ PlasmaCore.ColorScope {
         hoverEnabled: true
         drag.filterChildren: true
         onPressed: uiVisible = true;
-        onPositionChanged: uiVisible = true;
         onUiVisibleChanged: {
             if (blockUI) {
                 fadeoutTimer.running = false;
             } else if (uiVisible) {
                 fadeoutTimer.restart();
+            }
+            if (!calledUnlock) {
+                calledUnlock = true
+                authenticator.tryUnlock();
             }
         }
         onBlockUIChanged: {
@@ -126,6 +149,16 @@ PlasmaCore.ColorScope {
                     lockScreenRoot.uiVisible = false;
                 }
             }
+        }
+        Timer {
+            id: notificationRemoveTimer
+            interval: 3000
+            onTriggered: root.notification = ""
+        }
+        Timer {
+            id: graceLockTimer
+            interval: 3000
+            onTriggered: authenticator.tryUnlock();
         }
 
         Component.onCompleted: PropertyAnimation { id: launchAnimation; target: lockScreenRoot; property: "opacity"; from: 0; to: 1; duration: PlasmaCore.Units.veryLongDuration * 2 }
@@ -229,11 +262,14 @@ PlasmaCore.ColorScope {
 
                 showUserList: userList.y + mainStack.y > 0
 
+                enabled: !graceLockTimer.running
+
                 Stack.onStatusChanged: {
                     // prepare for presenting again to the user
                     if (Stack.status === Stack.Activating) {
                         mainPasswordBox.remove(0, mainPasswordBox.length)
                         mainPasswordBox.focus = true
+                        root.notification = ""
                     }
                 }
                 userListModel: users
@@ -250,9 +286,8 @@ PlasmaCore.ColorScope {
                     return parts.join(" • ");
                 }
 
-                onLoginRequest: {
-                    root.notification = ""
-                    authenticator.tryUnlock(password)
+                onPasswordResult: {
+                    authenticator.respond(password)
                 }
 
                 actionItems: [
@@ -552,14 +587,6 @@ PlasmaCore.ColorScope {
             }
 
             Battery {}
-        }
-    }
-
-    Component.onCompleted: {
-        // version support checks
-        if (root.interfaceVersion < 1) {
-            // ksmserver of 5.4, with greeter of 5.5
-            root.viewVisible = true;
         }
     }
 }
