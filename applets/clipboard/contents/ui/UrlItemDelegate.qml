@@ -76,7 +76,7 @@ Item {
             }
             Rectangle {
                 id: overlay
-                color: theme.textColor
+                color: PlasmaCore.Theme.textColor
                 opacity: 0.6
                 height: PlasmaCore.Units.gridUnit
                 anchors {
@@ -86,8 +86,8 @@ Item {
                 }
             }
             PlasmaComponents3.Label {
-                font: theme.smallestFont
-                color: theme.backgroundColor
+                font: PlasmaCore.Theme.smallestFont
+                color: PlasmaCore.Theme.backgroundColor
                 maximumLineCount: 1
                 anchors {
                     verticalCenter: overlay.verticalCenter
@@ -119,6 +119,6 @@ Item {
         }
         verticalAlignment: Text.AlignBottom
         horizontalAlignment: Text.AlignCenter
-        font: theme.smallestFont
+        font: PlasmaCore.Theme.smallestFont
     }
 }

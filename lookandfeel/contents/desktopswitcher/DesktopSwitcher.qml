@@ -77,7 +77,7 @@ KWin.Switcher {
                         horizontalAlignment: Text.AlignHCenter
                         text: display
                         font.bold: true
-                        color: theme.textColor
+                        color: PlasmaCore.Theme.textColor
                         elide: Text.ElideMiddle
                         anchors {
                             left: iconElement.right

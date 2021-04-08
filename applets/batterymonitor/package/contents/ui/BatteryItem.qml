@@ -51,7 +51,7 @@ Item {
             width: parent ? parent.width : implicitWidth
             wrapMode: Text.WordWrap
             text: batteryItem.isBroken && typeof model.Capacity !== "undefined" ? i18n("This battery's health is at only %1% and should be replaced. Please contact your hardware vendor for more details.", model.Capacity) : ""
-            font: !!detailsLayout.parent.inListView ? theme.smallestFont : theme.defaultFont
+            font: !!detailsLayout.parent.inListView ? PlasmaCore.Theme.smallestFont : PlasmaCore.Theme.defaultFont
             visible: batteryItem.isBroken
         }
 
@@ -77,7 +77,7 @@ Item {
                         PropertyChanges {
                             target: detailsLabel
                             horizontalAlignment: modelData.value ? Text.AlignRight : Text.AlignLeft
-                            font: theme.smallestFont
+                            font: PlasmaCore.Theme.smallestFont
                             width: parent ? parent.width / 2 : 0
                             elide: Text.ElideNone // eliding and height: implicitHeight causes loops
                         }

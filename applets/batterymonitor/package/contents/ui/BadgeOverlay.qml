@@ -36,7 +36,7 @@ Rectangle {
     PlasmaComponents3.Label {
         id: label
         anchors.centerIn: parent
-        font.pixelSize: Math.max(icon.height/4, theme.smallestFont.pixelSize*0.8)
+        font.pixelSize: Math.max(icon.height/4, PlasmaCore.Theme.smallestFont.pixelSize*0.8)
     }
 
     layer.enabled: true

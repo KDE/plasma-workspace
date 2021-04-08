@@ -35,7 +35,7 @@ ActionButton {
     opacity: activeFocus || containsMouse ? 1 : 0.5
     labelRendering: Text.QtRendering // Remove once we've solved Qt bug: https://bugreports.qt.io/browse/QTBUG-70138 (KDE bug: https://bugs.kde.org/show_bug.cgi?id=401644)
     font.underline: false
-    font.pointSize: theme.defaultFont.pointSize + 1
+    font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
     Behavior on opacity {
         OpacityAnimator {
             duration: PlasmaCore.Units.longDuration

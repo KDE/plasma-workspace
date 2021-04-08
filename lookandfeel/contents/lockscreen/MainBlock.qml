@@ -56,7 +56,7 @@ SessionManagementScreen {
 
         PlasmaComponents3.TextField {
             id: passwordBox
-            font.pointSize: theme.defaultFont.pointSize + 1
+            font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
             Layout.fillWidth: true
 
             placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")

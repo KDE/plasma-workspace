@@ -47,9 +47,9 @@ PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
     QQmlExpression *expr = new QQmlExpression(
         engine()->rootContext(),
         contentItem(),
-        QStringLiteral(
-            "Qt.createQmlObject('import QtQuick 2.0; import QtQuick.Layouts 1.1; import org.kde.plasma.core 2.0; Rectangle {color: theme.backgroundColor; "
-            "anchors.fill:parent; property Item appletInterface; onAppletInterfaceChanged: print(appletInterface.Layout.minimumWidth)}', root, \"\");"));
+        QStringLiteral("Qt.createQmlObject('import QtQuick 2.0; import QtQuick.Layouts 1.1; import org.kde.plasma.core 2.0 as PlasmaCore; "
+                       "Rectangle {color: PlasmaCore.Theme.backgroundColor; anchors.fill:parent; "
+                       "property Item appletInterface; onAppletInterfaceChanged: print(appletInterface.Layout.minimumWidth)}', root, \"\");"));
     m_rootObject = expr->evaluate().value<QQuickItem *>();
 }
 

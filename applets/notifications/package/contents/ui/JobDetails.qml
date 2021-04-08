@@ -47,7 +47,7 @@ GridLayout {
             Layout.alignment: Qt.AlignTop | Qt.AlignRight
             text: jobDetails["descriptionLabel" + modelData] && jobDetails["descriptionValue" + modelData]
                 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Row description, e.g. Source", "%1:", jobDetails["descriptionLabel" + modelData]) : ""
-            font: theme.smallestFont
+            font: PlasmaCore.Theme.smallestFont
             textFormat: Text.PlainText
             visible: text !== ""
         }
@@ -61,7 +61,7 @@ GridLayout {
             Layout.column: 1
             Layout.row: index
             Layout.fillWidth: true
-            font: theme.smallestFont
+            font: PlasmaCore.Theme.smallestFont
             elide: Text.ElideMiddle
             textFormat: Text.PlainText
             wrapMode: Text.WrapAtWordBoundaryOrAnywhere
@@ -146,7 +146,7 @@ GridLayout {
 
                 return "";
             }
-            font: theme.smallestFont
+            font: PlasmaCore.Theme.smallestFont
             textFormat: Text.PlainText
             visible: text !== ""
         }
@@ -158,7 +158,7 @@ GridLayout {
         Layout.fillWidth: true
         text: jobDetails.speed > 0 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
                                            KCoreAddons.Format.formatByteSize(jobDetails.speed)) : ""
-        font: theme.smallestFont
+        font: PlasmaCore.Theme.smallestFont
         textFormat: Text.PlainText
         visible: text !== ""
     }

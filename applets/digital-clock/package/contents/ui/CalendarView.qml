@@ -257,7 +257,7 @@ PlasmaComponents3.Page {
                     readonly property string timeString: Qt.formatTime(new Date(2000, 12, 12, 12, 12, 12, 12))
                     readonly property string dateString: agenda.formatDateWithoutYear(new Date(2000, 12, 12, 12, 12, 12))
 
-                    font: theme.defaultFont
+                    font: PlasmaCore.Theme.defaultFont
                     text: timeString.length > dateString.length ? timeString : dateString
                 }
 

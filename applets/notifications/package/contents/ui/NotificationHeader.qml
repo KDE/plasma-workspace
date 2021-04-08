@@ -237,7 +237,7 @@ RowLayout {
                 range { from: 0; to: notificationHeading.timeout; automatic: false }
 
                 valueSources: Charts.SingleValueSource { value: notificationHeading.remainingTime }
-                colorSource: Charts.SingleValueSource { value: theme.highlightColor }
+                colorSource: Charts.SingleValueSource { value: PlasmaCore.Theme.highlightColor }
 
                 thickness: Math.max(Math.floor(PlasmaCore.Units.devicePixelRatio), 1) * 5
 

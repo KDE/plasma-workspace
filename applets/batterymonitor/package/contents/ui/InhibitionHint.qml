@@ -38,7 +38,7 @@ RowLayout {
     PlasmaComponents3.Label {
         id: label
         Layout.fillWidth: true
-        font: theme.smallestFont
+        font: PlasmaCore.Theme.smallestFont
         wrapMode: Text.WordWrap
         elide: Text.ElideRight
         maximumLineCount: 4

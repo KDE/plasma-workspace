@@ -117,7 +117,7 @@ Item {
                 elide: Text.ElideRight
                 text: mpris2Source.track || i18nd("plasma_lookandfeel_org.kde.lookandfeel", "No media playing")
                 textFormat: Text.PlainText
-                font.pointSize: theme.defaultFont.pointSize + 1
+                font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
                 maximumLineCount: 1
             }
 
@@ -128,7 +128,7 @@ Item {
                 // if no artist is given, show player name instead
                 text: mpris2Source.artist || mpris2Source.identity || ""
                 textFormat: Text.PlainText
-                font.pointSize: theme.smallestFont.pointSize + 1
+                font.pointSize: PlasmaCore.Theme.smallestFont.pointSize + 1
                 maximumLineCount: 1
             }
         }

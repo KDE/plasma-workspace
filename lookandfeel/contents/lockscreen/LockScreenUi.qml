@@ -457,7 +457,7 @@ PlasmaCore.ColorScope {
 
                     PlasmaComponents3.Button {
                         Layout.fillWidth: true
-                        font.pointSize: theme.defaultFont.pointSize + 1
+                        font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch to This Session")
                         onClicked: initSwitchSession()
                         visible: sessionsModel.count > 0
@@ -465,7 +465,7 @@ PlasmaCore.ColorScope {
 
                     PlasmaComponents3.Button {
                         Layout.fillWidth: true
-                        font.pointSize: theme.defaultFont.pointSize + 1
+                        font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Start New Session")
                         onClicked: {
                             mainStack.pop({immediate:true})

@@ -59,7 +59,7 @@ Item {
     // if the date/timezone cannot be fit with the smallest font to its designated space
     property bool oneLineMode: plasmoid.configuration.dateDisplayFormat === 1 ||
                                         plasmoid.formFactor === PlasmaCore.Types.Horizontal &&
-                                        main.height <= 2 * theme.smallestFont.pixelSize &&
+                                        main.height <= 2 * PlasmaCore.Theme.smallestFont.pixelSize &&
                                         (main.showDate || timezoneLabel.visible)
 
     onDateFormatChanged: {
@@ -177,7 +177,7 @@ Item {
                  * and still fits well into the panel with all the applied margins.
                  */
                 height: Math.min(main.showDate || timezoneLabel.visible ? main.height * 0.56 : main.height * 0.71,
-                                 3 * theme.defaultFont.pixelSize)
+                                 3 * PlasmaCore.Theme.defaultFont.pixelSize)
 
                 font.pixelSize: sizehelper.height
             }
@@ -252,10 +252,10 @@ Item {
             PropertyChanges {
                 target: sizehelper
 
-                height: Math.min(main.height, 3 * theme.defaultFont.pixelSize)
+                height: Math.min(main.height, 3 * PlasmaCore.Theme.defaultFont.pixelSize)
 
                 fontSizeMode: Text.VerticalFit
-                font.pixelSize: 3 * theme.defaultFont.pixelSize
+                font.pixelSize: 3 * PlasmaCore.Theme.defaultFont.pixelSize
             }
         },
 
@@ -290,7 +290,7 @@ Item {
                 height: sizehelper.contentHeight
                 width: main.width
 
-                font.pixelSize: Math.min(timeLabel.height, 3 * theme.defaultFont.pixelSize)
+                font.pixelSize: Math.min(timeLabel.height, 3 * PlasmaCore.Theme.defaultFont.pixelSize)
                 fontSizeMode: Text.HorizontalFit
             }
 
@@ -334,7 +334,7 @@ Item {
                 width: main.width
 
                 fontSizeMode: Text.HorizontalFit
-                font.pixelSize: 3 * theme.defaultFont.pixelSize
+                font.pixelSize: 3 * PlasmaCore.Theme.defaultFont.pixelSize
             }
         },
 
@@ -487,8 +487,8 @@ Item {
                 id: timeLabel
 
                 font {
-                    family: plasmoid.configuration.fontFamily || theme.defaultFont.family
-                    weight: plasmoid.configuration.boldText ? Font.Bold : theme.defaultFont.weight
+                    family: plasmoid.configuration.fontFamily || PlasmaCore.Theme.defaultFont.family
+                    weight: plasmoid.configuration.boldText ? Font.Bold : PlasmaCore.Theme.defaultFont.weight
                     italic: plasmoid.configuration.italicText
                     pixelSize: 1024
                 }

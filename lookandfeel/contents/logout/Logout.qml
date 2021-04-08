@@ -141,7 +141,7 @@ PlasmaCore.ColorScope {
         width: Math.max(implicitWidth, PlasmaCore.Units.gridUnit * 16)
 
         PlasmaComponents.Label {
-            font.pointSize: theme.defaultFont.pointSize + 1
+            font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
             Layout.maximumWidth: PlasmaCore.Units.gridUnit * 16
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
@@ -156,7 +156,7 @@ PlasmaCore.ColorScope {
         }
 
         PlasmaComponents.Label {
-            font.pointSize: theme.defaultFont.pointSize + 1
+            font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
             Layout.maximumWidth: PlasmaCore.Units.gridUnit * 16
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
@@ -221,7 +221,7 @@ PlasmaCore.ColorScope {
         }
 
         PlasmaComponents.Label {
-            font.pointSize: theme.defaultFont.pointSize + 1
+            font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
             Layout.alignment: Qt.AlignHCenter
             //opacity, as visible would re-layout
             opacity: countDownTimer.running ? 1 : 0
@@ -247,14 +247,14 @@ PlasmaCore.ColorScope {
             Layout.alignment: Qt.AlignHCenter
             PlasmaComponents.Button {
                 implicitWidth: PlasmaCore.Units.gridUnit * 6
-                font.pointSize: theme.defaultFont.pointSize + 1
+                font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
                 enabled: root.currentAction !== null
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "OK")
                 onClicked: root.currentAction()
             }
             PlasmaComponents.Button {
                 implicitWidth: PlasmaCore.Units.gridUnit * 6
-                font.pointSize: theme.defaultFont.pointSize + 1
+                font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Cancel")
                 onClicked: root.cancelRequested()
             }

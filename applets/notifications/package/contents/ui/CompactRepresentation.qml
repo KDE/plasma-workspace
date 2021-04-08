@@ -37,7 +37,7 @@ MouseArea {
         || plasmoid.location === PlasmaCore.Types.LeftEdge)
 
     Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
-    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * theme.mSize(theme.defaultFont).height)
+    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
 
     Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
     Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
@@ -88,7 +88,7 @@ MouseArea {
             range { from: 0; to: 100; automatic: false }
 
             valueSources: Charts.SingleValueSource { value: compactRoot.jobsPercentage }
-            colorSource: Charts.SingleValueSource { value: theme.highlightColor }
+            colorSource: Charts.SingleValueSource { value: PlasmaCore.Theme.highlightColor }
 
             thickness: PlasmaCore.Units.devicePixelRatio * 5
         }
@@ -101,7 +101,7 @@ MouseArea {
             fontSizeMode: Text.Fit
             font.pointSize: 1024
             font.pixelSize: -1
-            minimumPointSize: 5//theme.smallestFont.pointSize
+            minimumPointSize: 5//PlasmaCore.Theme.smallestFont.pointSize
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             text: compactRoot.unreadCount || ""

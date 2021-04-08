@@ -66,17 +66,17 @@ Item {
             enabled: !Kirigami.Settings.isMobile
 
             color: PlasmaCore.ColorScope.textColor
-            selectedTextColor: theme.viewBackgroundColor
-            selectionColor: theme.viewFocusColor
-            font.capitalization: theme.defaultFont.capitalization
-            font.family: theme.defaultFont.family
-            font.italic: theme.defaultFont.italic
-            font.letterSpacing: theme.defaultFont.letterSpacing
-            font.pointSize: theme.defaultFont.pointSize
-            font.strikeout: theme.defaultFont.strikeout
-            font.underline: theme.defaultFont.underline
-            font.weight: theme.defaultFont.weight
-            font.wordSpacing: theme.defaultFont.wordSpacing
+            selectedTextColor: PlasmaCore.Theme.viewBackgroundColor
+            selectionColor: PlasmaCore.Theme.viewFocusColor
+            font.capitalization: PlasmaCore.Theme.defaultFont.capitalization
+            font.family: PlasmaCore.Theme.defaultFont.family
+            font.italic: PlasmaCore.Theme.defaultFont.italic
+            font.letterSpacing: PlasmaCore.Theme.defaultFont.letterSpacing
+            font.pointSize: PlasmaCore.Theme.defaultFont.pointSize
+            font.strikeout: PlasmaCore.Theme.defaultFont.strikeout
+            font.underline: PlasmaCore.Theme.defaultFont.underline
+            font.weight: PlasmaCore.Theme.defaultFont.weight
+            font.wordSpacing: PlasmaCore.Theme.defaultFont.wordSpacing
             // Work around Qt bug where NativeRendering breaks for non-integer scale factors
             // https://bugreports.qt.io/browse/QTBUG-67007
             renderType: Screen.devicePixelRatio % 1 !== 0 ? Text.QtRendering : Text.NativeRendering

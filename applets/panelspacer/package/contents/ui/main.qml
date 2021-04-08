@@ -166,7 +166,7 @@ Item {
 
     Rectangle {
         anchors.fill: parent
-        color: theme.highlightColor
+        color: PlasmaCore.Theme.highlightColor
         visible: plasmoid.nativeInterface.containment.editMode
     }
 }

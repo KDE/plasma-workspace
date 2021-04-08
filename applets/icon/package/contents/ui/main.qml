@@ -39,11 +39,11 @@ MouseArea {
     readonly property bool constrained: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
     property bool containsAcceptableDrag: false
 
-    height: Math.round(PlasmaCore.Units.iconSizes.desktop + 2 * theme.mSize(theme.defaultFont).height)
+    height: Math.round(PlasmaCore.Units.iconSizes.desktop + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
     width: Math.round(PlasmaCore.Units.iconSizes.desktop * 1.5)
 
     Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
-    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * theme.mSize(theme.defaultFont).height)
+    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
 
     Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
     Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1

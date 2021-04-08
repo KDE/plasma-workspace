@@ -91,11 +91,11 @@ RowLayout {
         // and plasma-pa:VolumeSlider.qml
         color: {
             if (progressBar.value <= 100) {
-                return theme.textColor
+                return PlasmaCore.Theme.textColor
             } else if (progressBar.value > 100 && progressBar.value <= 125) {
-                return theme.neutralTextColor
+                return PlasmaCore.Theme.neutralTextColor
             } else {
-                return theme.negativeTextColor
+                return PlasmaCore.Theme.negativeTextColor
             }
         }
     }

@@ -69,7 +69,7 @@ ColumnLayout {
             // Don't need to show the inhibitions when power management
             // isn't enabled anyway
             visible: inhibitions.length > 0 && pmCheckBox.checked
-            font: theme.smallestFont
+            font: PlasmaCore.Theme.smallestFont
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
             maximumLineCount: 3

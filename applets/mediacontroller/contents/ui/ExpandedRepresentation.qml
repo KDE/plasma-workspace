@@ -334,7 +334,7 @@ PlasmaExtras.Representation {
                     id: timeMetrics
                     text: i18nc("Remaining time for song e.g -5:42", "-%1",
                                 KCoreAddons.Format.formatDuration(seekSlider.to / 1000, expandedRepresentation.durationFormattingOptions))
-                    font: theme.smallestFont
+                    font: PlasmaCore.Theme.smallestFont
                 }
 
                 PlasmaComponents3.Label { // Time Elapsed
@@ -343,7 +343,7 @@ PlasmaExtras.Representation {
                     horizontalAlignment: Text.AlignRight
                     text: KCoreAddons.Format.formatDuration(seekSlider.value / 1000, expandedRepresentation.durationFormattingOptions)
                     opacity: 0.9
-                    font: theme.smallestFont
+                    font: PlasmaCore.Theme.smallestFont
                     color: PlasmaCore.ColorScope.textColor
                 }
 
@@ -406,7 +406,7 @@ PlasmaExtras.Representation {
                     text: i18nc("Remaining time for song e.g -5:42", "-%1",
                                 KCoreAddons.Format.formatDuration((seekSlider.to - seekSlider.value) / 1000, expandedRepresentation.durationFormattingOptions))
                     opacity: 0.9
-                    font: theme.smallestFont
+                    font: PlasmaCore.Theme.smallestFont
                     color: PlasmaCore.ColorScope.textColor
                 }
             }
@@ -415,7 +415,7 @@ PlasmaExtras.Representation {
                 id: playerControls
 
                 property bool enabled: root.canControl
-                property int controlsSize: theme.mSize(theme.defaultFont).height * 3
+                property int controlsSize: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * 3
 
                 Layout.alignment: Qt.AlignHCenter
                 Layout.bottomMargin: PlasmaCore.Units.smallSpacing
