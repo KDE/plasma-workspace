@@ -51,6 +51,7 @@ bool startPlasmaSession(bool wayland);
 
 void waitForKonqi();
 
+static void resetSystemdFailedUnits();
 static bool hasSystemdService(const QString &serviceName);
 static bool useSystemdBoot();
 

@@ -447,6 +447,17 @@ QProcess *setupKSplash()
     return p;
 }
 
+// If something went on an endless restart crash loop it will get blacklisted, as this is a clean login we will want to reset those counters
+// This is independent of whether we use the Plasma systemd boot
+void resetSystemdFailedUnits()
+{
+    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                                          QStringLiteral("/org/freedesktop/systemd1"),
+                                                          QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                                          QStringLiteral("ResetFailed"));
+    QDBusConnection::sessionBus().call(message);
+}
+
 bool hasSystemdService(const QString &serviceName)
 {
     auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
@@ -489,6 +500,7 @@ bool useSystemdBoot()
 
 bool startPlasmaSession(bool wayland)
 {
+    resetSystemdFailedUnits();
     OrgKdeKSplashInterface iface(QStringLiteral("org.kde.KSplash"), QStringLiteral("/KSplash"), QDBusConnection::sessionBus());
     iface.setStage(QStringLiteral("kinit"));
     // finally, give the session control to the session manager
