@@ -22,3 +22,6 @@ CMakeLists.txt.user*
 .idea
 .clang-format
 /build*/
+/compile_commands.json
+.clangd
+/cmake-build*
