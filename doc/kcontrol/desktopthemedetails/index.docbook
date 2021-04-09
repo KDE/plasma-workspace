@@ -18,32 +18,33 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2019-03-08</date>
-<releaseinfo>Plasma 5.16</releaseinfo>
+<date>2021-04-09</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
 <keyword>System Settings</keyword>
 <keyword>desktop</keyword>
+<keyword>style</keyword>
 <keyword>theme</keyword>
 <keyword>plasma</keyword>
 </keywordset>
 </articleinfo>
 
 <para>
-  &plasma; comes with multiple themes. The &plasma; theme defines how the different
+  &plasma; comes with multiple styles. The &plasma; style defines how the different
   components of &plasma; are displayed (&eg; Plasmoids, panels, widgets).
 </para>
 
 <para>
   <screenshot>
-    <screeninfo>Here's a screenshot of the &plasma; theme manager</screeninfo>
+    <screeninfo>Here's a screenshot of the &plasma; style manager</screeninfo>
     <mediaobject>
       <imageobject>
         <imagedata fileref="main.png" format="PNG" />
       </imageobject>
       <textobject>
-        <phrase>Customizing &plasma; theme</phrase>
+        <phrase>Customizing &plasma; style</phrase>
       </textobject>
     </mediaobject>
   </screenshot>
@@ -51,29 +52,36 @@
 
 <para>In this module you can:</para>
 <itemizedlist>
-  <listitem><para>install and choose &plasma; themes</para></listitem>
-  <listitem><para>edit &plasma; themes</para></listitem>
-  <listitem><para>remove &plasma; themes</para></listitem>
+  <listitem><para>install and choose &plasma; styles</para></listitem>
+  <listitem><para>edit &plasma; styles</para></listitem>
+  <listitem><para>remove &plasma; styles</para></listitem>
 </itemizedlist>
 
 <para>
-  If you want to remove a theme, use the <inlinemediaobject><imageobject><imagedata
+  It is possible to filter the style list using the <guilabel>Search...</guilabel>
+  field above the grid. Moreover, you can use the combo box next to this field to
+  show only the <guimenuitem>Light Themes</guimenuitem>, the <guimenuitem>Dark
+  Themes</guimenuitem> or the <guimenuitem>Color scheme compatible</guimenuitem> themes.
+</para>
+
+<para>
+  If you want to remove a style, use the <inlinemediaobject><imageobject><imagedata
   fileref="edit-delete.png" format="PNG"/></imageobject></inlinemediaobject> overlay
-  icon at the bottom right of the theme icon. To undo this action click on the
+  icon at the bottom right of the style icon. To undo this action click on the
   <inlinemediaobject><imageobject><imagedata fileref="edit-undo.png"
   format="PNG"/></imageobject></inlinemediaobject> icon.
-  If you hit <guibutton>Apply</guibutton> or <guibutton>OK</guibutton> the themes
+  If you hit the <guibutton>Apply</guibutton> button the styles
   selected for removal are actually deleted, so you cannot undo individual or all
   deletions.
 </para>
 
 <para>
   If the plasma-sdk package is installed on your system, a button appears hovering
-  a theme preview and lets you start the <application>Plasma Theme Explorer</application>.
+  a style preview and lets you start the <application>Plasma Theme Explorer</application>.
 </para>
 <para>
   For more technical information visit <ulink
-  url="https://techbase.kde.org/Development/Tutorials/Plasma5/ThemeDetails">this
+  url="https://develop.kde.org/docs/plasma/theme/theme-details/">this
   page</ulink>.
 </para>
 
@@ -83,9 +91,9 @@
     <listitem>
     <para>
       You need to be connected to the Internet to use it. Clicking on this button will
-      display a dialog where you can choose a new plasma theme. Clicking on
-      <guibutton>Install</guibutton> in the dialog will install the chosen &plasma; theme
-      and after you <guibutton>Close</guibutton> the installer your new theme is
+      display a dialog where you can choose a new plasma style. Clicking on
+      <guibutton>Install</guibutton> in the dialog will install the chosen &plasma; style
+      and after you <guibutton>Close</guibutton> the installer your new style is
       immediately available.
     </para>
     <para>
@@ -107,12 +115,12 @@
     <term><guilabel>Install from File...</guilabel></term>
     <listitem>
       <para>
-      If you downloaded new themes from the internet, you can use this to browse to the
-        location of those newly downloaded themes. Clicking on this button will bring you the
-        file dialog to point to the &plasma; theme tarball you have on your disk.</para>
+      If you downloaded new styles from the internet, you can use this to browse to the
+        location of those newly downloaded styles. Clicking on this button will bring you the
+        file dialog to point to the &plasma; style tarball you have on your disk.</para>
 
-      <para>Clicking <guibutton>Open</guibutton> in this dialog will install the theme you
-        pointed to and make it available in the theme list.
+      <para>Clicking <guibutton>Open</guibutton> in this dialog will install the style you
+        pointed to and make it available in the style list.
       </para>
     </listitem>
   </varlistentry>
