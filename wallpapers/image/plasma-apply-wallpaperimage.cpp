@@ -65,9 +65,8 @@ int main(int argc, char **argv)
                     // that makes the operation much heavier than it needs to be
                     isWallpaper = true;
                 } else {
-                    if (QFileInfo(QStringLiteral("%1/metadata.desktop").arg(wallpaperFile)).exists()
-                    || QFileInfo(QStringLiteral("%1/metadata.json").arg(wallpaperFile)).exists()
-                    ) {
+                    if (QFileInfo::exists(QStringLiteral("%1/metadata.desktop").arg(wallpaperFile))
+                        || QFileInfo::exists(QStringLiteral("%1/metadata.json").arg(wallpaperFile))) {
                         isWallpaper = true;
                         isKPackage = true;
                         // Similarly to above, we could read all the information out of the kpackage, but
