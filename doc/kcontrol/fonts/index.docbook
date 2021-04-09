@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2018-12-10</date>
-<releaseinfo>Plasma 5.14</releaseinfo>
+<date>2021-04-09</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -77,7 +77,10 @@ to label icons</para></listitem>
 <para>Each font has a corresponding <guibutton>Choose...</guibutton>
 button.  By clicking on this button, a dialog box appears.  You can
 use this dialog box to choose a new font, a font style and size.
-Then press <guibutton>Ok</guibutton>.</para>
+Then press <guibutton>OK</guibutton>.</para>
+
+<para>Check the <guilabel>Show only monospaced fonts</guilabel> to
+filter out all non-monospaced fonts from the list.</para>
 
 <para>An example of the font you have chosen will be displayed in the space
 between the font group name and the <guibutton>Choose...</guibutton>
@@ -95,6 +98,9 @@ appear, but you will notice checkboxes that allow you to change the
 <guilabel>Size</guilabel> independently of each other.  You can
 choose any one, two, or three of these options, and they will be
 applied to all the font groups.</para>
+
+<para>Check the <guilabel>Show only monospaced fonts</guilabel> to
+filter out all non-monospaced fonts from the list.</para>
 
 <para>
 <screenshot>
@@ -119,19 +125,18 @@ faces and styles.</para>
 <sect2 id="fonts-aa">
 <title>Anti-aliasing text</title>
 
-<para>Default anti-aliasing settings are those used system wide by your distribution and labelled <guilabel>Vendor Default</guilabel>. You can disable all anti-aliasing by choosing <guilabel>Disabled</guilabel> in the drop down box.</para>
+<para>To use anti-aliasing setting, simply check the <guilabel>Enabled</guilabel> item and select the custom settings.</para>
 
-<para>To use different anti-aliasing setting, simply choose <guilabel>Enabled</guilabel> from the box on the right of <guilabel>Use anti-aliasing:</guilabel>
-and enable the custom settings.</para>
-
-<para>Placing a mark in the <guilabel>Exclude range:</guilabel> checkbox will allow you to specify which range of fonts will <emphasis>not</emphasis> be anti-aliased.  This range is specified with the two combo boxes below.</para>
+<para>Placing a mark in the <guilabel>Exclude range from anti-aliasing</guilabel> checkbox will allow you to specify which range of fonts will <emphasis>not</emphasis> be anti-aliased.  This range is specified with the two combo boxes below.</para>
 
 <para>You can also choose the method used to create an anti-alias
 look to your fonts, and how strongly it should be applied changing
 the <ulink url="https://en.wikipedia.org/wiki/Subpixel_rendering">
 Sub-pixel rendering</ulink> and <ulink url="https://en.wikipedia.org/wiki/Font_hinting">
-font hinting</ulink>. If you are not familiar with the individual methods,
-you should leave this option alone.</para>
+font hinting</ulink>. It is also possible to <guilabel>Force font DPI</guilabel> for
+the <ulink url="https://en.wikipedia.org/wiki/Dots_per_inch">screen rendering</ulink>.
+If you are not familiar with the individual methods,
+you should leave these options alone.</para>
 
 <note><para>
 The ability to use anti-aliased fonts and icons requires that you have
