@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
  </authorgroup>
 
-	  <date>2018-11-28</date>
-	  <releaseinfo>Plasma 5.14</releaseinfo>
+	  <date>2021-04-09</date>
+	  <releaseinfo>Plasma 5.20</releaseinfo>
 
 	  <keywordset>
 		<keyword>KDE</keyword>
@@ -54,7 +54,7 @@ American English will be used.
 </para>
 
 <para>
-You can add a language to the main list by clicking the <guibutton>Add language</guibutton>
+You can add a language to the main list by clicking the <guibutton>Add languages...</guibutton>
 button.
 The localized language names of &systemsettings; translations
 installed and available on your system are displayed. If the language you want to use is
@@ -68,12 +68,6 @@ on the <inlinemediaobject><imageobject><imagedata fileref="list-remove.png" form
 list by selecting a language and clicking on the <inlinemediaobject><imageobject>
 <imagedata fileref="go-top.png" format="PNG"/>
 </imageobject></inlinemediaobject> icon.
-</para>
-
-<para>Only languages with installed &systemsettings; translations will be offered as options
-for <guilabel>Primary language</guilabel> and <guilabel>Fallback language</guilabel>
-in the <guilabel>Switch Application Language</guilabel> dialog of the 
-<guimenu>Help</guimenu> menu.
 </para>
 
 <note>
