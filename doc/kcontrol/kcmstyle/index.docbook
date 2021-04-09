@@ -8,30 +8,26 @@
 <article id="kcmstyle" lang="&language;">
 <articleinfo>
 
-<title>Widget Style</title>
+<title>Application Style</title>
 <authorgroup>
 <author>&Mike.McBride; &Mike.McBride.mail;</author>
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2018-03-18</date>
-<releaseinfo>Plasma 5.12</releaseinfo>
+<date>2021-04-09</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
 <keyword>System Settings</keyword>
 <keyword>style</keyword>
+<keyword>application</keyword>
 <keyword>widgets</keyword>
 </keywordset>
 </articleinfo>
 
-<variablelist>
-<varlistentry>
-<term>Introduction</term>
-<listitem>
-
 <para>This module is used to configure how the individual widgets are
-drawn by Plasma.</para>
+drawn by &plasma;.</para>
 
 <note><para>A <emphasis>Widget</emphasis> is a commonly-used
 programmer's term for referring to User Interface elements such as
@@ -44,46 +40,31 @@ but to change the color of the widgets, you should refer to the
 section entitled <ulink
 url="help:/kcontrol/colors/index.html">Colors</ulink>.</para>
 
-<para>This panel is divided into two tabs:  <guilabel>Applications</guilabel> 
-and <guilabel>Fine Tuning</guilabel>.</para>
+<para>The top grid, labeled <guilabel>Application Style</guilabel> 
+contains a list of the previews of the pre-defined styles.
+Each style has a name, and a brief description is shown when you
+hover its item with the mouse pointer.</para>
 
-</listitem>
-</varlistentry>
+<para>If you want to configure a &plasma; theme, use the <guilabel>Configure Style...</guilabel> overlay
+icon at the bottom right of the widget style icon in the grid.</para>
 
-<varlistentry>
-<term><guilabel>Applications</guilabel> tab</term>
-<listitem>
-<para>The top drop down box, labeled <guilabel>Widget Style</guilabel> 
-contains a list of the pre-defined styles.
-Each style has a name, and a brief description.</para>
+<para>If implemented, it is possible to change almost every aspect of the style: center tabbar tabs, draw toolbar item separators, draw focus indicator in lists, draw slider tick marks, enable extended resize handlers, define keyboard accelerators visibility, windows' drag mode, use frames for the better accessibility, use buttons on the scrollbars, use transparency in the menus.</para>
 
-<para>To change styles, select a style in the drop down box, and a preview
-of the style will be displayed in the preview box below the style list.</para>
-
-<para> If a style is configurable, the <guibutton>Configure...</guibutton> button 
-at the right side of the drop down box is enabled and can be used to open
-a dialog to select further settings.</para>
-
-</listitem>
-</varlistentry>
-
-<varlistentry> 
-<term><guilabel>Fine Tuning</guilabel> tab</term>
-<listitem>
+<para>The general configuration can be made by pressing the <guibutton>Configure Icons and Toolbars</guibutton> button below the grid. This button opens a pane to select further settings.</para>
 <variablelist>
 
 <varlistentry> 
-<term><guilabel>Show icons in buttons</guilabel></term>
+<term><guilabel>Show icons: On buttons</guilabel></term>
 <listitem>
 <para>If this option is selected, action buttons (like <guibutton>OK</guibutton> and 
 <guibutton>Apply</guibutton>) will have a small icon located within them to act
 as a visual reference.  If this option is not selected, then only text
-will appear in the button.</para>
+will appear on the button.</para>
 </listitem> 
 </varlistentry> 
 
 <varlistentry> 
-<term><guilabel>Show icons in menus</guilabel></term>
+<term><guilabel>Show icons: In menus</guilabel></term>
 <listitem>
 <para>If this option is selected, &kde; applications will show small icons alongside 
 most menu items.  If this option is not selected, then only text
@@ -93,31 +74,25 @@ applications.</para>
 </varlistentry> 
 
 <varlistentry> 
-<term><guilabel>Main toolbar text location</guilabel>, <guilabel>Secondary toolbar text location</guilabel></term>
+<term><guilabel>Main toolbar label</guilabel>, <guilabel>Secondary toolbar label</guilabel></term>
 <listitem>
-<para>These drop down boxes lets you determine where on the button in both toolbars the 
+<para>These drop down boxes let you determine where on the button in both toolbars the 
 text name of the button will appear as the default.  
-If <guilabel>No Text</guilabel> is selected, then there is no text on the toolbar buttons.  
-If  <guilabel>Text Only</guilabel> is selected, then the button's icon is replaced with a text name of 
-the button. If <guilabel>Text Beside Icons</guilabel> is selected, then the name of the button 
+If <guilabel>None</guilabel> is selected, then there is no text on the toolbar buttons.  
+If  <guilabel>Text only</guilabel> is selected, then the button's icon is replaced with a text name of 
+the button. If <guilabel>Beside icons</guilabel> is selected, then the name of the button 
 will be placed to the <emphasis>right</emphasis> of the icon. 
-If <guilabel>Text Below Icons</guilabel> is selected, the default will be to have the text 
+If <guilabel>Below icon</guilabel> is selected, the default will be to have the text 
 of the button <emphasis>below</emphasis> the icon.</para>
 
-<tip><para>This option only specifies the <emphasis>default</emphasis> location.  
-Each application can override the setting used in this panel.</para></tip>
+<tip><para>These options only specify the <emphasis>default</emphasis> location.  
+Each application can override the settings used in this panel.</para></tip>
 </listitem> 
 </varlistentry> 
 
 </variablelist>
 
-</listitem>
-</varlistentry>
-
-</variablelist>
-
-<para>The global menu is now automatically enabled when you place a global menu applet in a panel or add the menu button 
-to the window decoration in <guilabel>Buttons</guilabel> tab of the <guilabel>Window Decorations</guilabel> module.
+<para>The <guibutton>Configure GNOME/GTK Application Style...</guibutton> button can be used to open the configuration tab where you can choose <guilabel>GTK theme</guilabel>, install GTK theme from file or <guibutton>Get New GNOME/GTK Application Styles</guibutton> from the Internet.
 </para>
 
 </article>
