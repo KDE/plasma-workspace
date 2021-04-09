@@ -343,7 +343,7 @@ void TasksModel::Private::initModels()
 
                     if ((!appId.isEmpty() && appId == filterIndex.data(AbstractTasksModel::AppId).toString())
                         || (!appName.isEmpty() && appName == filterIndex.data(AbstractTasksModel::AppName).toString())) {
-                        filterProxyModel->dataChanged(filterIndex, filterIndex);
+                        Q_EMIT filterProxyModel->dataChanged(filterIndex, filterIndex);
                     }
                 }
             }
@@ -481,7 +481,7 @@ void TasksModel::Private::updateAnyTaskDemandsAttention()
 
     if (taskFound != anyTaskDemandsAttention) {
         anyTaskDemandsAttention = taskFound;
-        q->anyTaskDemandsAttentionChanged();
+        Q_EMIT q->anyTaskDemandsAttentionChanged();
     }
 }
 

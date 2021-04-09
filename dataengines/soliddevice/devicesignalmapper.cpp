@@ -43,19 +43,19 @@ BatterySignalMapper::~BatterySignalMapper()
 
 void BatterySignalMapper::chargePercentChanged(int value)
 {
-    emit(deviceChanged(signalmap[sender()], QStringLiteral("Charge Percent"), value));
+    Q_EMIT deviceChanged(signalmap[sender()], QStringLiteral("Charge Percent"), value);
 }
 
 void BatterySignalMapper::chargeStateChanged(int newState)
 {
     QStringList chargestate;
     chargestate << QStringLiteral("Fully Charged") << QStringLiteral("Charging") << QStringLiteral("Discharging");
-    emit(deviceChanged(signalmap[sender()], QStringLiteral("Charge State"), chargestate.at(newState)));
+    Q_EMIT deviceChanged(signalmap[sender()], QStringLiteral("Charge State"), chargestate.at(newState));
 }
 
 void BatterySignalMapper::presentStateChanged(bool newState)
 {
-    emit(deviceChanged(signalmap[sender()], QStringLiteral("Plugged In"), newState));
+    Q_EMIT deviceChanged(signalmap[sender()], QStringLiteral("Plugged In"), newState);
 }
 
 StorageAccessSignalMapper::StorageAccessSignalMapper(QObject *parent)
@@ -69,5 +69,5 @@ StorageAccessSignalMapper::~StorageAccessSignalMapper()
 
 void StorageAccessSignalMapper::accessibilityChanged(bool accessible)
 {
-    emit(deviceChanged(signalmap[sender()], QStringLiteral("Accessible"), accessible));
+    Q_EMIT deviceChanged(signalmap[sender()], QStringLiteral("Accessible"), accessible);
 }

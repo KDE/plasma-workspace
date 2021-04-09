@@ -553,5 +553,5 @@ void ServerPrivate::UnRegisterWatcher()
 
 void ServerPrivate::InvokeAction(uint id, const QString &actionKey)
 {
-    ActionInvoked(id, actionKey);
+    Q_EMIT ActionInvoked(id, actionKey);
 }

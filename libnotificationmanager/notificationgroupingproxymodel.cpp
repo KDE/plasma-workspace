@@ -87,7 +87,7 @@ bool NotificationGroupingProxyModel::tryToGroup(const QModelIndex &sourceIndex, 
             if (!silent) {
                 endInsertRows();
 
-                dataChanged(parent, parent);
+                Q_EMIT dataChanged(parent, parent);
             }
 
             return true;
@@ -234,7 +234,7 @@ void NotificationGroupingProxyModel::setSourceModel(QAbstractItemModel *sourceMo
                             endRemoveRows();
 
                             // We're no longer a group parent.
-                            dataChanged(parent, parent);
+                            Q_EMIT dataChanged(parent, parent);
                             // Remove group member.
                         } else {
                             const QModelIndex parent = index(j, 0);
@@ -244,7 +244,7 @@ void NotificationGroupingProxyModel::setSourceModel(QAbstractItemModel *sourceMo
 
                             // Various roles of the parent evaluate child data, and the
                             // child list has changed.
-                            dataChanged(parent, parent);
+                            Q_EMIT dataChanged(parent, parent);
 
                             // Signal children count change for all other items in the group.
                             emit dataChanged(index(0, 0, parent), index(rowMap.count() - 1, 0, parent), {Notifications::GroupChildrenCountRole});
@@ -291,10 +291,10 @@ void NotificationGroupingProxyModel::setSourceModel(QAbstractItemModel *sourceMo
                         // TODO: Some roles do not need to bubble up as they fall through to the first
                         // child in data(); it _might_ be worth adding constraints here later.
                         if (parent.isValid()) {
-                            dataChanged(parent, parent, roles);
+                            Q_EMIT dataChanged(parent, parent, roles);
                         }
 
-                        dataChanged(proxyIndex, proxyIndex, roles);
+                        Q_EMIT dataChanged(proxyIndex, proxyIndex, roles);
                     }
                 });
     }

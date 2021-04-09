@@ -63,7 +63,7 @@ void BaseModel::onConfigurationChanged()
     m_hiddenItems = m_settings->hiddenItems();
 
     for (int i = 0; i < rowCount(); i++) {
-        dataChanged(index(i, 0), index(i, 0), {static_cast<int>(BaseModel::BaseRole::EffectiveStatus)});
+        Q_EMIT dataChanged(index(i, 0), index(i, 0), {static_cast<int>(BaseModel::BaseRole::EffectiveStatus)});
     }
 }
 
@@ -210,10 +210,10 @@ void PlasmoidModel::addApplet(Plasma::Applet *applet)
     connect(applet, &Plasma::Applet::statusChanged, this, [this, applet](Plasma::Types::ItemStatus status) {
         Q_UNUSED(status)
         int idx = indexOfPluginId(applet->pluginMetaData().pluginId());
-        dataChanged(index(idx, 0), index(idx, 0), {static_cast<int>(BaseRole::Status)});
+        Q_EMIT dataChanged(index(idx, 0), index(idx, 0), {static_cast<int>(BaseRole::Status)});
     });
 
-    dataChanged(index(idx, 0), index(idx, 0));
+    Q_EMIT dataChanged(index(idx, 0), index(idx, 0));
 }
 
 void PlasmoidModel::removeApplet(Plasma::Applet *applet)
@@ -221,7 +221,7 @@ void PlasmoidModel::removeApplet(Plasma::Applet *applet)
     int idx = indexOfPluginId(applet->pluginMetaData().pluginId());
     if (idx >= 0) {
         m_items[idx].applet = nullptr;
-        dataChanged(index(idx, 0), index(idx, 0));
+        Q_EMIT dataChanged(index(idx, 0), index(idx, 0));
         applet->disconnect(this);
     }
 }
@@ -450,7 +450,7 @@ void StatusNotifierModel::dataUpdated(const QString &sourceName, const Plasma::D
 
         endInsertRows();
     } else {
-        dataChanged(index(idx, 0), index(idx, 0));
+        Q_EMIT dataChanged(index(idx, 0), index(idx, 0));
     }
 }
 

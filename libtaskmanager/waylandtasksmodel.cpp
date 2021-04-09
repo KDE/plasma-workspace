@@ -90,15 +90,15 @@ void WaylandTasksModel::Private::init()
         appDataCache.clear();
 
         // Emit changes of all roles satisfied from app data cache.
-        q->dataChanged(q->index(0, 0),
-                       q->index(windows.count() - 1, 0),
-                       QVector<int>{Qt::DecorationRole,
-                                    AbstractTasksModel::AppId,
-                                    AbstractTasksModel::AppName,
-                                    AbstractTasksModel::GenericName,
-                                    AbstractTasksModel::LauncherUrl,
-                                    AbstractTasksModel::LauncherUrlWithoutIcon,
-                                    AbstractTasksModel::SkipTaskbar});
+        Q_EMIT q->dataChanged(q->index(0, 0),
+                              q->index(windows.count() - 1, 0),
+                              QVector<int>{Qt::DecorationRole,
+                                           AbstractTasksModel::AppId,
+                                           AbstractTasksModel::AppName,
+                                           AbstractTasksModel::GenericName,
+                                           AbstractTasksModel::LauncherUrl,
+                                           AbstractTasksModel::LauncherUrlWithoutIcon,
+                                           AbstractTasksModel::SkipTaskbar});
     };
 
     rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
