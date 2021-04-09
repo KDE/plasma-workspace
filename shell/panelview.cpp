@@ -1021,9 +1021,12 @@ QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
     }
 
     QRectF containmentRect(containmentItem->mapToScene(QPoint(0, 0)), QSizeF(containmentItem->width(), containmentItem->height()));
-
-    return QPointF(qBound(containmentRect.left() + m_leftPadding, point.x(), containmentRect.right() - m_rightPadding),
-                   qBound(containmentRect.top() + m_topPadding, point.y(), containmentRect.bottom() - m_bottomPadding));
+    
+    // We are removing 1 to the e.g. containmentRect.right() - m_rightPadding because the last pixel would otherwise 
+    // the first one in the margin, and thus the mouse event would be discarded. Instead, the first pixel given by 
+    // containmentRect.left() + m_leftPadding the first one *not* in the margin, so it work.
+    return QPointF(qBound(containmentRect.left() + m_leftPadding, point.x(), containmentRect.right() - m_rightPadding - 1),
+                   qBound(containmentRect.top() + m_topPadding, point.y(), containmentRect.bottom() - m_bottomPadding - 1));
 }
 
 void PanelView::updateMask()
