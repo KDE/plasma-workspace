@@ -138,7 +138,7 @@ void FileMenu::open(int x, int y)
 
     // KStandardAction? But then the Ctrl+C shortcut makes no sense in this context
     QAction *copyAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("&Copy"));
-    connect(copyAction, &QAction::triggered, [fileItem] {
+    connect(copyAction, &QAction::triggered, this, [fileItem] {
         // inspired by KDirModel::mimeData()
         QMimeData *data = new QMimeData(); // who cleans it up?
         KUrlMimeData::setUrls({fileItem.url()}, {fileItem.mostLocalUrl()}, data);
@@ -146,7 +146,7 @@ void FileMenu::open(int x, int y)
     });
 
     QAction *copyPathAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18nc("@action:incontextmenu", "Copy Location"));
-    connect(copyPathAction, &QAction::triggered, [fileItem] {
+    connect(copyPathAction, &QAction::triggered, this, [fileItem] {
         QString path = fileItem.localPath();
         if (path.isEmpty()) {
             path = fileItem.url().toDisplayString();

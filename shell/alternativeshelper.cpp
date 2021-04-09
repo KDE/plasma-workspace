@@ -75,7 +75,7 @@ void AlternativesHelper::loadAlternative(const QString &plugin)
 
     m_applet->destroy();
 
-    connect(m_applet, &QObject::destroyed, [=]() {
+    connect(m_applet, &QObject::destroyed, contItem, [=]() {
         Plasma::Applet *newApplet = nullptr;
         QMetaObject::invokeMethod(contItem,
                                   "createApplet",

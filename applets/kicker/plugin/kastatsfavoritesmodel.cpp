@@ -546,7 +546,7 @@ void KAStatsFavoritesModel::portOldFavorites(const QStringList &ids)
     qCDebug(KICKER_DEBUG) << "Save ordering (from portOldFavorites) -->";
     Private::saveOrdering(ids, clientId, m_activities->currentActivity());
 
-    QTimer::singleShot(500, std::bind(&KAStatsFavoritesModel::initForClient, this, clientId));
+    QTimer::singleShot(500, this, std::bind(&KAStatsFavoritesModel::initForClient, this, clientId));
 }
 
 void KAStatsFavoritesModel::addFavorite(const QString &id, int index)
