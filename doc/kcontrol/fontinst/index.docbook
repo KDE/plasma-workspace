@@ -14,8 +14,8 @@
 <!-- TRANS:ROLES_OF_TRANSLATORS -->
 </authorgroup>
 
-<date>2018-03-31</date>
-<releaseinfo>Plasma 5.12</releaseinfo>
+<date>2021-04-09</date>
+<releaseinfo>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword>KDE</keyword>
@@ -53,7 +53,7 @@
 <sect2 id="font-list">
 <title>Font List</title>
 <para>
-The main display is a list of the installed fonts, grouped via the fonts' family name - the number in square brackets represents the number of installed styles for that family. e.g. The <quote>Times</quote> font may be listed as:
+The main display is a list of the installed fonts, grouped via the fonts' family name - the number in square brackets represents the number of installed styles for that family. &eg; the <quote>Times</quote> font may be listed as:
 <itemizedlist>
 <listitem>
     <para>Times [4]</para>
@@ -67,8 +67,8 @@ The main display is a list of the installed fonts, grouped via the fonts' family
 </itemizedlist>
 </para>
 
-<para>To install a font, press the <guibutton>Add...</guibutton> button, and select the desired fonts from within the file dialog. The selected font group will control where the fonts will be installed.</para>
-<para>To un-install fonts, select the appropriate fonts from the list, and press the <guibutton>Delete...</guibutton> button.</para>
+<para>To install a font, press the <guibutton>Install from File...</guibutton> button, and select the desired fonts from within the file dialog. The selected font group will control where the fonts will be installed.</para>
+<para>To un-install fonts, select the appropriate fonts from the list, and press the <inlinemediaobject><imageobject><imagedata fileref="edit-delete.png" format="PNG"/></imageobject></inlinemediaobject> button.</para>
 
 <para>Click with the &RMB; to open a context menu with some additional actions like <guilabel>Enable</guilabel>, <guilabel>Disable</guilabel>, <guilabel>Print</guilabel>, <ulink url="help:/kfontviewer/index.html"><guilabel>Open in Font Viewer</guilabel></ulink> and <guilabel>Reload</guilabel>.</para>
 
@@ -97,7 +97,7 @@ The main display is a list of the installed fonts, grouped via the fonts' family
 <sect2 id="font-duplicates">
 <title>Duplicate Fonts</title>
 <para>If you have lots of fonts installed on your system it is possible that you may have duplicates.</para> 
-<para>Click on the tools icon above the group list and select the <guilabel>Scan For Duplicate Fonts...</guilabel> tool, a simple tool that will scan your system looking for fonts that have multiple files associated with them. For example, if you have <quote>times.ttf</quote> and <quote>times.TTF</quote> installed in <quote>/usr/local/share/fonts</quote> the underlying font mechanism (called <quote>FontConfig</quote>) will only see one of these. So, if you un-installed the font, it would re-appear, as only one of the files would have been removed. Running this tool will produce a dialog listing each font that has multiple files, and the corresponding list of files. To select a file for deletion, click on the column containing the trash can icon.</para>
+<para>Click on the <guilabel>Find Duplicates...</guilabel> button to open a simple tool that will scan your system looking for fonts that have multiple files associated with them. For example, if you have <quote>times.ttf</quote> and <quote>times.TTF</quote> installed in <quote>/usr/local/share/fonts</quote> the underlying font mechanism (called <quote>FontConfig</quote>) will only see one of these. So, if you un-installed the font, it would re-appear, as only one of the files would have been removed. Running this tool will produce a dialog listing each font that has multiple files, and the corresponding list of files. To select a file for deletion, click on the column containing the trash can icon.</para>
 </sect2>
 
 <sect2 id="font-preview">
