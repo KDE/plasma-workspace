@@ -24,8 +24,11 @@
 
 #include <KWindowSystem>
 #include <QAbstractListModel>
+#include <QAbstractListModel>
+#include <QAction>
 #include <QPointer>
 #include <QRect>
+#include <QStringList>
 #include <QStringList>
 #include <tasksmodel.h>
 
@@ -65,9 +68,11 @@ public:
 
     QRect screenGeometry() const;
     void setScreenGeometry(QRect geometry);
+    QList<QAction*> flatActionList();
 
 Q_SIGNALS:
     void requestActivateIndex(int index);
+    void bringToFocus(int index);
 
 private Q_SLOTS:
     void onActiveWindowChanged();
@@ -92,7 +97,13 @@ private:
     //! window that its menu initialization may be delayed
     WId m_delayedMenuWindowId = 0;
 
+    QScopedPointer<QMenu> m_searchMenu;
     QPointer<QMenu> m_menu;
+    QPointer<QAction> m_searchAction;
+    QList<QAction*> m_currentSearchActions;
+
+    void removeSearchActionsFromMenu();
+    void insertSearchActionsIntoMenu(const QString &filter = QString());
 
     QDBusServiceWatcher *m_serviceWatcher;
     QString m_serviceName;

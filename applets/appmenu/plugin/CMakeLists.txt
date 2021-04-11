@@ -10,6 +10,7 @@ target_link_libraries(appmenuplugin
                       Qt::Quick
                       KF5::Plasma
                       KF5::WindowSystem
+                      KF5::I18n
                       PW::LibTaskManager
                       dbusmenuqt)
 
