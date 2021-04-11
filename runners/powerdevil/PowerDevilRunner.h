@@ -45,7 +45,6 @@ private Q_SLOTS:
     void updateStatus();
 
 private:
-    void initUpdateTriggers();
     void updateSyntaxes();
     void addSuspendMatch(int value, QList<Plasma::QueryMatch> &matches, Plasma::QueryMatch::Type type);
     // Returns -1 if there is no match, otherwise the percentage that the user has entered

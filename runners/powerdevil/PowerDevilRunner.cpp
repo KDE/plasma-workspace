@@ -40,7 +40,6 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaD
 {
     setObjectName(QStringLiteral("PowerDevil"));
     updateStatus();
-    initUpdateTriggers();
     setMinLetterCount(3);
     const KLocalizedString suspend = ki18nc("Note this is a KRunner keyword", "suspend");
     m_suspend = RunnerKeyword{suspend.untranslatedText(), suspend.toString()};
@@ -83,22 +82,6 @@ void PowerDevilRunner::updateSyntaxes()
 
 PowerDevilRunner::~PowerDevilRunner()
 {
-}
-
-void PowerDevilRunner::initUpdateTriggers()
-{
-    // Also receive updates triggered through the DBus
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    if (dbus.interface()->isServiceRegistered(QStringLiteral("org.kde.Solid.PowerManagement"))) {
-        if (!dbus.connect(QStringLiteral("org.kde.Solid.PowerManagement"),
-                          QStringLiteral("/org/kde/Solid/PowerManagement"),
-                          QStringLiteral("org.kde.Solid.PowerManagement"),
-                          QStringLiteral("configurationReloaded"),
-                          this,
-                          SLOT(updateStatus()))) {
-            qDebug() << "error!";
-        }
-    }
 }
 
 void PowerDevilRunner::updateStatus()
