@@ -255,6 +255,7 @@ ColumnLayout {
                     if (!/[\x00-\x1F\x7F]/.test(event.text)) {
                         queryField.text += event.text;
                     }
+                    queryField.cursorPosition = queryField.text.length
                     queryField.focus = true;
                 }
             }
