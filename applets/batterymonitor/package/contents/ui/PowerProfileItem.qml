@@ -30,6 +30,7 @@ RowLayout {
     property string activeProfile
     property var profiles: []
     property string inhibitionReason
+    property string degradationReason
 
     signal activateProfileRequested(string profile)
 
@@ -109,6 +110,8 @@ RowLayout {
             }
         }
 
+        // NOTE Only one of these will be visible at a time since the daemon will only set one depending
+        // on its version
         InhibitionHint {
             visible: inhibitionReason
             width: parent.width
@@ -122,6 +125,19 @@ RowLayout {
                 default:
                     return i18n("Performance mode is unavailable.")
                 }
+            }
+        }
+        InhibitionHint {
+            visible: activeProfile == "performance" && degradationReason
+            width: parent.width
+            iconSource: "dialog-information"
+            text: switch(degradationReason) {
+                case "lap-detected":
+                    return i18n("Performance may be reduced because the computer has detected it is sitting on your lap.")
+                case "high-operating-temperature":
+                     return i18n("Performance may be reduced because the computer is running too hot.")
+                default:
+                  return i18n("Performance may be reduced.")
             }
         }
     }
