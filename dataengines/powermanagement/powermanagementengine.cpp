@@ -169,6 +169,15 @@ void PowermanagementEngine::init()
                                                    SLOT(updatePowerProfilePerformanceInhibitedReason(QString)))) {
             qDebug() << "error connecting to inhibition reason changes via dbus";
         }
+
+        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/PowerProfile"),
+                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.PowerProfile"),
+                                                   QStringLiteral("performanceDegradedReasonChanged"),
+                                                   this,
+                                                   SLOT(performanceDegradedReasonChanged(QString)))) {
+            qDebug() << "error connecting to degradation reason changes via dbus";
+        }
     }
 }
 
@@ -431,6 +440,20 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
             }
             updatePowerProfilePerformanceInhibitedReason(reply.value());
         });
+
+        auto degradedMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                          QStringLiteral("/org/kde/Solid/PowerManagement/Actions/PowerProfile"),
+                                                          QStringLiteral("org.kde.Solid.PowerManagement.Actions.PowerProfile"),
+                                                          QStringLiteral("performanceDegradedReason"));
+        auto degradedWatcher = new QDBusPendingCallWatcher(QDBusConnection::sessionBus().asyncCall(degradedMsg));
+        connect(degradedWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+            watcher->deleteLater();
+            QDBusPendingReply<QString> reply = *watcher;
+            if (reply.isError()) {
+                return;
+            };
+            updatePowerProfilePerformanceDegradedReason(reply.value());
+        });
     } else {
         qDebug() << "Data for '" << name << "' not found";
         return false;
@@ -643,13 +666,17 @@ void PowermanagementEngine::updatePowerProfileCurrentProfile(const QString &acti
 
 void PowermanagementEngine::updatePowerProfileChoices(const QStringList &choices)
 {
-
     setData(QStringLiteral("Power Profiles"), QStringLiteral("Profiles"), choices);
 }
 
 void PowermanagementEngine::updatePowerProfilePerformanceInhibitedReason(const QString &reason)
 {
     setData(QStringLiteral("Power Profiles"), QStringLiteral("Performance Inhibited Reason"), reason);
+}
+
+void PowermanagementEngine::updatePowerProfilePerformanceDegradedReason(const QString &reason)
+{
+    setData(QStringLiteral("Power Profiles"), QStringLiteral("Performance Degraded Reason"), reason);
 }
 
 void PowermanagementEngine::deviceRemoved(const QString &udi)
