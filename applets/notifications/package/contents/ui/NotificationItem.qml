@@ -104,7 +104,7 @@ ColumnLayout {
     signal actionInvoked(string actionName)
     signal replied(string text)
     signal openUrl(string url)
-    signal fileActionInvoked
+    signal fileActionInvoked(QtObject action)
 
     signal suspendJobClicked
     signal resumeJobClicked
@@ -296,7 +296,7 @@ ColumnLayout {
             onKillJobClicked: notificationItem.killJobClicked()
 
             onOpenUrl: notificationItem.openUrl(url)
-            onFileActionInvoked: notificationItem.fileActionInvoked()
+            onFileActionInvoked: notificationItem.fileActionInvoked(action)
 
             hovered: notificationItem.hovered
         }
@@ -425,7 +425,7 @@ ColumnLayout {
             bottomPadding: -thumbnailStripLoader.Layout.bottomMargin
             urls: notificationItem.urls
             onOpenUrl: notificationItem.openUrl(url)
-            onFileActionInvoked: notificationItem.fileActionInvoked()
+            onFileActionInvoked: notificationItem.fileActionInvoked(action)
         }
     }
 

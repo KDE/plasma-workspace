@@ -80,7 +80,7 @@ PlasmaCore.Dialog {
     signal actionInvoked(string actionName)
     signal replied(string text)
     signal openUrl(string url)
-    signal fileActionInvoked
+    signal fileActionInvoked(QtObject action)
 
     signal expired
     signal hoverEntered
@@ -208,7 +208,7 @@ PlasmaCore.Dialog {
                 onActionInvoked: notificationPopup.actionInvoked(actionName)
                 onReplied: notificationPopup.replied(text)
                 onOpenUrl: notificationPopup.openUrl(url)
-                onFileActionInvoked: notificationPopup.fileActionInvoked()
+                onFileActionInvoked: notificationPopup.fileActionInvoked(action)
 
                 onSuspendJobClicked: notificationPopup.suspendJobClicked()
                 onResumeJobClicked: notificationPopup.resumeJobClicked()

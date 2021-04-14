@@ -501,12 +501,7 @@ PlasmaComponents3.Page {
                                             return labels;
                                         }
 
-                                        onCloseClicked: {
-                                            historyModel.close(historyModel.index(index, 0));
-                                            if (list.count === 0) {
-                                                root.closePassivePlasmoid();
-                                            }
-                                        }
+                                        onCloseClicked: close()
                                         onDismissClicked: {
                                             model.dismissed = false;
                                             root.closePassivePlasmoid();
@@ -526,7 +521,13 @@ PlasmaComponents3.Page {
                                             Qt.openUrlExternally(url);
                                             expire();
                                         }
-                                        onFileActionInvoked: expire()
+                                        onFileActionInvoked: {
+                                            if (action.objectName === "movetotrash" || action.objectName === "deletefile") {
+                                                close();
+                                            } else {
+                                                expire();
+                                            }
+                                        }
 
                                         onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
                                         onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
@@ -537,6 +538,13 @@ PlasmaComponents3.Page {
                                                 model.expired = true;
                                             } else {
                                                 historyModel.expire(historyModel.index(index, 0));
+                                            }
+                                        }
+
+                                        function close() {
+                                            historyModel.close(historyModel.index(index, 0));
+                                            if (list.count === 0) {
+                                                root.closePassivePlasmoid();
                                             }
                                         }
                                     }

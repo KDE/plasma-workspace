@@ -49,7 +49,7 @@ DraggableFileArea {
     property int bottomPadding: 0
 
     signal openUrl(string url)
-    signal fileActionInvoked
+    signal fileActionInvoked(QtObject action)
 
     dragParent: previewPixmap
     dragUrl: thumbnailer.url
@@ -72,7 +72,7 @@ DraggableFileArea {
         id: fileMenu
         url: thumbnailer.url
         visualParent: menuButton
-        onActionTriggered: thumbnailArea.fileActionInvoked()
+        onActionTriggered: thumbnailArea.fileActionInvoked(action)
     }
 
     Notifications.Thumbnailer {

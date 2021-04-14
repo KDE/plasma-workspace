@@ -73,7 +73,7 @@ ColumnLayout {
     signal killJobClicked
 
     signal openUrl(string url)
-    signal fileActionInvoked
+    signal fileActionInvoked(QtObject action)
 
     spacing: 0
 
@@ -249,7 +249,7 @@ ColumnLayout {
             Notifications.FileMenu {
                 id: otherFileActionsMenu
                 url: jobItem.url || ""
-                onActionTriggered: jobItem.fileActionInvoked()
+                onActionTriggered: jobItem.fileActionInvoked(action)
             }
         }
 

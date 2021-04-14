@@ -591,10 +591,11 @@ QtObject {
                 }
             }
             onFileActionInvoked: {
-                if (model.resident) {
-                    model.expired = true;
+                if (!model.resident
+                    || (action.objectName === "movetotrash" || action.objectName === "deletefile")) {
+                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
                 } else {
-                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                    model.expired = true;
                 }
             }
 
