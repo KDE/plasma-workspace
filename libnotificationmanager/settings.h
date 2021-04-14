@@ -176,6 +176,13 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
     Q_PROPERTY(bool screensMirrored READ screensMirrored WRITE setScreensMirrored NOTIFY screensMirroredChanged)
 
     /**
+     * Whether to enable do not disturb mode while screen sharing
+     *
+     * @since 5.22
+     */
+    Q_PROPERTY(bool inhibitNotificationsWhenScreenSharing READ inhibitNotificationsWhenScreenSharing WRITE setInhibitNotificationsWhenScreenSharing NOTIFY settingsChanged)
+
+    /**
      * Whether notification sounds should be disabled
      *
      * This does not reflect the actual mute state of the Notification Sounds
@@ -310,6 +317,9 @@ public:
 
     bool screensMirrored() const;
     void setScreensMirrored(bool enable);
+
+    bool inhibitNotificationsWhenScreenSharing() const;
+    void setInhibitNotificationsWhenScreenSharing(bool inhibit);
 
     bool notificationSoundsInhibited() const;
     void setNotificationSoundsInhibited(bool inhibited);

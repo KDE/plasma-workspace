@@ -594,6 +594,21 @@ void Settings::setScreensMirrored(bool mirrored)
     }
 }
 
+bool Settings::inhibitNotificationsWhenScreenSharing() const
+{
+    return d->dndSettings.whenScreenSharing();
+}
+
+void Settings::setInhibitNotificationsWhenScreenSharing(bool inhibit)
+{
+    if (inhibit == inhibitNotificationsWhenScreenSharing()) {
+        return;
+    }
+
+    d->dndSettings.setWhenScreenSharing(inhibit);
+    d->setDirty(true);
+}
+
 void Settings::revokeApplicationInhibitions()
 {
     Server::self().clearInhibitions();
