@@ -260,7 +260,7 @@ void PipeWireSourceItem::updateTextureDmaBuf(const QVector<DmaBufPlane> &planes,
         return;
     }
 
-    m_createNextTexture = [this, size] {
+    m_createNextTexture = [this, size, format] {
         if (!m_texture) {
             m_texture.reset(new QOpenGLTexture(QOpenGLTexture::Target2D));
             bool created = m_texture->create();
@@ -277,7 +277,8 @@ void PipeWireSourceItem::updateTextureDmaBuf(const QVector<DmaBufPlane> &planes,
         m_texture->setSize(size.width(), size.height());
 
         int textureId = m_texture->textureId();
-        return window()->createTextureFromNativeObject(QQuickWindow::NativeObjectTexture, &textureId, 0 /*a vulkan thing?*/, size, {});
+        QQuickWindow::CreateTextureOption textureOption = format == DRM_FORMAT_ARGB8888 ? QQuickWindow::TextureHasAlphaChannel : QQuickWindow::TextureIsOpaque;
+        return window()->createTextureFromNativeObject(QQuickWindow::NativeObjectTexture, &textureId, 0 /*a vulkan thing?*/, size, textureOption);
     };
     if (window()->isVisible()) {
         update();
