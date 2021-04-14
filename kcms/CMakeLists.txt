@@ -19,3 +19,5 @@ if(FONTCONFIG_FOUND)
     add_subdirectory( kfontinst )
     add_subdirectory( fonts )
 endif()
+
+add_subdirectory(autostart)
