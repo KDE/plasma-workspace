@@ -22,6 +22,7 @@
 
 #include <krunner/abstractrunner.h>
 
+#include <QAction>
 #include <QIcon>
 
 class RecentDocuments : public Plasma::AbstractRunner
@@ -34,6 +35,9 @@ public:
 
     void match(Plasma::RunnerContext &context) override;
     void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
+
+private:
+    QList<QAction *> m_actions;
 };
 
 #endif

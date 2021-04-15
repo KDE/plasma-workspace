@@ -25,6 +25,7 @@
 #include <KShell>
 #include <KSycoca>
 #include <KUriFilter>
+#include <QAction>
 #include <QDBusConnection>
 #include <QDesktopServices>
 
@@ -94,7 +95,7 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
             m_privateAction = action;
             const QString actionText = containsPrivate ? i18n("Search in private window") : i18n("Search in incognito window");
             const QIcon icon = QIcon::fromTheme(QStringLiteral("view-private"), QIcon::fromTheme(QStringLiteral("view-hidden")));
-            m_match.setActions({addAction(QStringLiteral("privateSearch"), icon, actionText)});
+            m_match.setActions({new QAction(icon, actionText, this)});
             return;
         }
     }

@@ -21,6 +21,7 @@
 #ifndef CALCULATORRUNNER_H
 #define CALCULATORRUNNER_H
 
+#include <QAction>
 #include <QMimeData>
 
 #ifdef ENABLE_QALCULATE
@@ -58,6 +59,7 @@ private:
 #ifdef ENABLE_QALCULATE
     QalculateEngine *m_engine;
 #endif
+    QList<QAction *> m_actions;
 };
 
 #endif

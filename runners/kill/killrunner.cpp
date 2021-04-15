@@ -39,9 +39,11 @@ KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData, const Q
 {
     setObjectName(QStringLiteral("Kill Runner"));
 
-    addAction(QStringLiteral("SIGTERM"), QIcon::fromTheme(QStringLiteral("application-exit")), i18n("Send SIGTERM"))->setData(15);
-    addAction(QStringLiteral("SIGKILL"), QIcon::fromTheme(QStringLiteral("process-stop")), i18n("Send SIGKILL"))->setData(9);
-    m_actionList = {action(QStringLiteral("SIGTERM")), action(QStringLiteral("SIGKILL"))};
+    auto *sigterm = new QAction(QIcon::fromTheme(QStringLiteral("application-exit")), i18n("Send SIGTERM"), this);
+    sigterm->setData(15);
+    auto *sigkill = new QAction(QIcon::fromTheme(QStringLiteral("process-stop")), i18n("Send SIGKILL"), this);
+    sigkill->setData(9);
+    m_actionList = {sigterm, sigkill};
 
     connect(this, &Plasma::AbstractRunner::prepare, this, &KillRunner::prep);
     connect(this, &Plasma::AbstractRunner::teardown, this, &KillRunner::cleanup);

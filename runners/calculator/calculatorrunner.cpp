@@ -55,7 +55,7 @@ CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaD
     addSyntax(Plasma::RunnerSyntax(QStringLiteral("=:q:"), description));
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:="), description));
 
-    addAction(QStringLiteral("copyToClipboard"), QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard"));
+    m_actions = {new QAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy to Clipboard"), this)};
     setMinLetterCount(2);
 }
 
@@ -286,7 +286,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
         }
         match.setData(result);
         match.setId(term);
-        match.setActions(actions().values());
+        match.setActions(m_actions);
         context.addMatch(match);
     }
 }

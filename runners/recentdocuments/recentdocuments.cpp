@@ -46,7 +46,7 @@ RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaDat
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:.")));
 
-    addAction(QStringLiteral("openParentDir"), QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"));
+    m_actions = {new QAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"), this)};
     setMinLetterCount(3);
 }
 
