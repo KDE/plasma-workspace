@@ -179,7 +179,7 @@ Item {
         });
 
         // FIXME only while Multi-page KCMs are broken when embedded in plasmoid config
-        plasmoid.setAction("openKcm", i18n("&Configure Event Notifications and Actions..."), "preferences-desktop-notification-bell");
+        plasmoid.setAction("openKcm", i18n("&Configure Event Notifications and Actions..."), "notifications");
         plasmoid.action("openKcm").visible = (KQCAddons.KCMShell.authorize("kcm_notifications.desktop").length > 0);
     }
 }
