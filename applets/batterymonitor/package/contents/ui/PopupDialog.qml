@@ -39,6 +39,7 @@ PlasmaComponents3.Page {
     property var profiles
     property string inhibitionReason
     property string degradationReason
+    property var profileHolds
 
     signal powermanagementChanged(bool disabled)
     signal activateProfileRequested(string profile)
@@ -121,6 +122,8 @@ PlasmaComponents3.Page {
                 inhibitionReason: dialog.inhibitionReason
                 visible: profiles.length > 0
                 degradationReason: dialog.degradationReason
+                profileHolds: dialog.profileHolds
+                visible: profilesCount > 1
                 onActivateProfileRequested: dialog.activateProfileRequested(profile)
             }
         }

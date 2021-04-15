@@ -58,6 +58,8 @@ PowermanagementEngine::PowermanagementEngine(QObject *parent, const QVariantList
     Q_UNUSED(args)
     qDBusRegisterMetaType<QList<InhibitionInfo>>();
     qDBusRegisterMetaType<InhibitionInfo>();
+    qDBusRegisterMetaType<QList<QVariant>>();
+    qDBusRegisterMetaType<QList<QVariantMap>>();
     init();
 }
 
@@ -170,6 +172,7 @@ void PowermanagementEngine::init()
             qDebug() << "error connecting to inhibition reason changes via dbus";
         }
 
+
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
                                                    QStringLiteral("/org/kde/Solid/PowerManagement/Actions/PowerProfile"),
                                                    QStringLiteral("org.kde.Solid.PowerManagement.Actions.PowerProfile"),
@@ -177,6 +180,15 @@ void PowermanagementEngine::init()
                                                    this,
                                                    SLOT(performanceDegradedReasonChanged(QString)))) {
             qDebug() << "error connecting to degradation reason changes via dbus";
+        }
+
+        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/PowerProfile"),
+                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.PowerProfile"),
+                                                   QStringLiteral("updatePowerProfileHolds"),
+                                                   this,
+                                                   SLOT(profileHoldsChanged(QList<QVariantMap>)))) {
+            qDebug() << "error connecting to profile hold changes via dbus";
         }
     }
 }
@@ -454,6 +466,20 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
             };
             updatePowerProfilePerformanceDegradedReason(reply.value());
         });
+
+        auto holdsMsg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                       QStringLiteral("/org/kde/Solid/PowerManagement/Actions/PowerProfile"),
+                                                       QStringLiteral("org.kde.Solid.PowerManagement.Actions.PowerProfile"),
+                                                       QStringLiteral("profileHolds"));
+        auto holdsWatcher = new QDBusPendingCallWatcher(QDBusConnection::sessionBus().asyncCall(holdsMsg));
+        connect(holdsWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+            watcher->deleteLater();
+            QDBusPendingReply<QList<QVariantMap>> reply = *watcher;
+            if (reply.isError()) {
+                return;
+            };
+            updatePowerProfileHolds(reply.value());
+        });
     } else {
         qDebug() << "Data for '" << name << "' not found";
         return false;
@@ -677,6 +703,24 @@ void PowermanagementEngine::updatePowerProfilePerformanceInhibitedReason(const Q
 void PowermanagementEngine::updatePowerProfilePerformanceDegradedReason(const QString &reason)
 {
     setData(QStringLiteral("Power Profiles"), QStringLiteral("Performance Degraded Reason"), reason);
+}
+
+void PowermanagementEngine::updatePowerProfileHolds(const QList<QVariantMap> &holds)
+{
+    QList<QVariantMap> out;
+    std::transform(holds.cbegin(), holds.cend(), std::back_inserter(out), [this](const QVariantMap &hold) {
+        QString prettyName;
+        QString icon;
+        populateApplicationData(hold[QStringLiteral("ApplicationId")].toString(), &prettyName, &icon);
+        return QVariantMap{
+            {QStringLiteral("Name"), prettyName},
+            {QStringLiteral("Icon"), icon},
+            {QStringLiteral("Reason"), hold[QStringLiteral("Reason")]},
+            {QStringLiteral("Profile"), hold[QStringLiteral("Profile")]},
+        };
+    });
+    qDebug() << out;
+    setData(QStringLiteral("Power Profiles"), QStringLiteral("Profile Holds"), QVariant::fromValue(out));
 }
 
 void PowermanagementEngine::deviceRemoved(const QString &udi)

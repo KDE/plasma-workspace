@@ -77,6 +77,7 @@ private Q_SLOTS:
     void updatePowerProfileChoices(const QStringList &choices);
     void updatePowerProfilePerformanceInhibitedReason(const QString &reason);
     void updatePowerProfilePerformanceDegradedReason(const QString &reason);
+    void updatePowerProfileHolds(const QList<QVariantMap> &holds);
 
 private:
     void populateApplicationData(const QString &name, QString *prettyName, QString *icon);
