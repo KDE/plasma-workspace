@@ -121,7 +121,7 @@ void Thumbnailer::generatePreview()
         return;
     }
 
-    if (!m_url.isValid() || !m_url.isLocalFile() || !m_size.isValid()) {
+    if (!m_url.isValid() || !m_url.isLocalFile() || !m_size.isValid() || m_size.isEmpty()) {
         return;
     }
 
