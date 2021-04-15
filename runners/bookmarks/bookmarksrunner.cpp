@@ -124,16 +124,4 @@ void BookmarksRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
     QDesktopServices::openUrl(url);
 }
 
-QMimeData *BookmarksRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
-{
-    QMimeData *result = new QMimeData();
-    QList<QUrl> urls;
-    urls << QUrl(match.data().toString());
-    result->setUrls(urls);
-
-    result->setText(match.data().toString());
-
-    return result;
-}
-
 #include "bookmarksrunner.moc"

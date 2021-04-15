@@ -130,6 +130,7 @@ void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
             } else {
                 const QUrl url = KFilePlacesModel::convertedUrl(m_places.url(current_index));
                 match.setData(url);
+                match.setUrls({url});
                 match.setId(url.toDisplayString());
             }
 
@@ -167,17 +168,6 @@ void PlacesRunner::run(const Plasma::RunnerContext &context, const Plasma::Query
     } else if (action.data().canConvert<QString>()) {
         m_helper->openDevice(action.data().toString());
     }
-}
-
-QMimeData *PlacesRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
-{
-    if (match.data().type() == QVariant::Url) {
-        QMimeData *result = new QMimeData();
-        result->setUrls({match.data().toUrl()});
-        return result;
-    }
-
-    return nullptr;
 }
 
 #include "placesrunner.moc"

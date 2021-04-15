@@ -51,7 +51,6 @@ public:
 
     void match(Plasma::RunnerContext &context) override;
     void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
-    QMimeData *mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
 Q_SIGNALS:
     void doMatch(Plasma::RunnerContext *context);

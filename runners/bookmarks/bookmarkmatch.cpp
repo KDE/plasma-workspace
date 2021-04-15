@@ -68,6 +68,7 @@ Plasma::QueryMatch BookmarkMatch::asQueryMatch(Plasma::AbstractRunner *runner)
     match.setText(isNameEmpty ? (!isDescriptionEmpty ? m_description : m_bookmarkURL) : m_bookmarkTitle);
 
     match.setData(m_bookmarkURL);
+    match.setUrls({QUrl(m_bookmarkURL)});
     return match;
 }
 

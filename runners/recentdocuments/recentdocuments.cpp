@@ -96,6 +96,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         match.setIconName(KIO::iconNameForUrl(url));
         match.setRelevance(relevance);
         match.setData(QVariant(url));
+        match.setUrls({url});
         if (url.isLocalFile()) {
             match.setActions(actions().values());
         }
@@ -123,13 +124,6 @@ void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::Qu
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
     job->setRunExecutables(false);
     job->start();
-}
-
-QMimeData *RecentDocuments::mimeDataForMatch(const Plasma::QueryMatch &match)
-{
-    QMimeData *result = new QMimeData();
-    result->setUrls({match.data().toUrl()});
-    return result;
 }
 
 #include "recentdocuments.moc"

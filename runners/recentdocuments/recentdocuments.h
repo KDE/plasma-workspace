@@ -34,9 +34,6 @@ public:
 
     void match(Plasma::RunnerContext &context) override;
     void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
-
-private Q_SLOTS:
-    QMimeData *mimeDataForMatch(const Plasma::QueryMatch &match) override;
 };
 
 #endif

@@ -48,8 +48,6 @@ private:
 private:
     Browser *m_browser;
     BrowserFactory *const m_browserFactory;
-protected Q_SLOTS:
-    QMimeData *mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
 private Q_SLOTS:
     void prep();
