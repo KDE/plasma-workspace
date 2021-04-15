@@ -54,6 +54,7 @@ PlasmaCore.FrameSvgItem {
             return prefix;
     }
 
+    // update when System Tray is expanded - applet activated or hidden icons shown
     Connections {
         target: systemTrayState
 
@@ -66,6 +67,7 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
+    // update when applet changes parent (e.g. moves from active to hidden icons)
     Connections {
         target: systemTrayState.activeApplet
 
@@ -74,6 +76,7 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
+    // update when System Tray size changes
     Connections {
         target: parent
 
@@ -86,9 +89,18 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
+    // update when scale of newly added tray item changes (check 'add' animation in GridView in main.qml)
+    Connections {
+        target: !!highlightedItem && highlightedItem.parent ? highlightedItem.parent : null
+
+        function onScaleChanged() {
+            updateHighlightedItem();
+        }
+    }
+
     function updateHighlightedItem() {
         if (systemTrayState.expanded) {
-            if (systemTrayState.activeApplet && systemTrayState.activeApplet.parent.inVisibleLayout) {
+            if (systemTrayState.activeApplet && systemTrayState.activeApplet.parent && systemTrayState.activeApplet.parent.inVisibleLayout) {
                 changeHighlightedItem(systemTrayState.activeApplet.parent.container);
             } else { // 'Show hiden items' popup
                 changeHighlightedItem(parent);
@@ -100,8 +112,8 @@ PlasmaCore.FrameSvgItem {
 
     function changeHighlightedItem(nextItem) {
         // do not animate the first appearance
-        // or when size of parent (root) changes
-        if (!highlightedItem || (highlightedItem === nextItem && nextItem === parent)) {
+        // or when the property value of a highlighted item changes
+        if (!highlightedItem || (highlightedItem === nextItem)) {
             animationEnabled = false;
         }
 
