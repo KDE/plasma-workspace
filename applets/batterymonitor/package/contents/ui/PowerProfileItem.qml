@@ -31,6 +31,7 @@ RowLayout {
     property var profiles: []
     property string inhibitionReason
     property string degradationReason
+    property var profileHolds: []
 
     signal activateProfileRequested(string profile)
 
@@ -140,5 +141,22 @@ RowLayout {
                   return i18n("Performance may be reduced.")
             }
         }
+
+        InhibitionHint {
+            visible: holdRepeater.count > 0
+            text: i18np("One application has requested activating %2:",
+                        "%1 applications have requested activating %2:", holdRepeater.count,
+                        profileSlider.profileData.find((profile) => profile.profile == profileItem.activeProfile).label)
+        }
+        Repeater {
+            id: holdRepeater
+            model: profileItem.profileHolds.filter((hold) => hold.Profile == profileItem.activeProfile)
+            InhibitionHint {
+                x: PlasmaCore.Units.smallSpacing
+                iconSource: modelData.Icon
+                text: i18nc("%1 is the name of the application, %2 is the reason provided by it for activating performance mode","%1: %2", modelData.Name, modelData.Reason)
+            }
+        }
+
     }
 }
