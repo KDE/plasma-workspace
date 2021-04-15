@@ -43,6 +43,7 @@ class AppMenuModel : public QAbstractListModel
 
     Q_PROPERTY(bool menuAvailable READ menuAvailable WRITE setMenuAvailable NOTIFY menuAvailableChanged)
     Q_PROPERTY(bool visible READ visible NOTIFY visibleChanged)
+    Q_PROPERTY(QAction* globalAction READ globalAction CONSTANT)
 
     Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
 
@@ -69,6 +70,8 @@ public:
     QRect screenGeometry() const;
     void setScreenGeometry(QRect geometry);
     QList<QAction*> flatActionList();
+
+    QAction* globalAction();
 
 Q_SIGNALS:
     void requestActivateIndex(int index);
@@ -100,6 +103,7 @@ private:
     QScopedPointer<QMenu> m_searchMenu;
     QPointer<QMenu> m_menu;
     QPointer<QAction> m_searchAction;
+    QPointer<QAction> m_globalAction;
     QList<QAction*> m_currentSearchActions;
 
     void removeSearchActionsFromMenu();

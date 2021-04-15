@@ -23,7 +23,9 @@
 
 #include "appmenumodel.h"
 
+#include <KGlobalAccel>
 #include <QAction>
+#include <QDebug>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>
@@ -97,6 +99,12 @@ AppMenuModel::AppMenuModel(QObject *parent)
 
     // X11 has funky menu behaviour that prevents this from working properly.
     if (KWindowSystem::isPlatformWayland()) {
+        m_globalAction = new QAction(this);
+        m_globalAction->setObjectName(QStringLiteral("org.kde.plasma.appmenu.search"));
+
+        KGlobalAccel::self()->setShortcut(m_globalAction, {Qt::META + Qt::Key_A});
+        KGlobalAccel::self()->setDefaultShortcut(m_globalAction, {Qt::META + Qt::Key_A});
+
         m_searchAction = new QAction(this);
         m_searchAction->setText(i18n("Search"));
         m_searchAction->setObjectName(QStringLiteral("appmenu"));
@@ -130,6 +138,11 @@ AppMenuModel::AppMenuModel(QObject *parent)
 }
 
 AppMenuModel::~AppMenuModel() = default;
+
+QAction* AppMenuModel::globalAction()
+{
+    return m_globalAction;
+}
 
 bool AppMenuModel::menuAvailable() const
 {

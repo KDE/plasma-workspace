@@ -11,6 +11,7 @@ target_link_libraries(appmenuplugin
                       KF5::Plasma
                       KF5::WindowSystem
                       KF5::I18n
+                      KF5::GlobalAccel
                       PW::LibTaskManager
                       dbusmenuqt)
 

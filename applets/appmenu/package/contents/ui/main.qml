@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-import QtQuick 2.0
+import QtQuick 2.10
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.8
 
@@ -114,6 +114,8 @@ Item {
             model: appMenuModel.visible ? appMenuModel : null
 
             PlasmaComponents3.ToolButton {
+                id: __menuButton
+
                 readonly property int buttonIndex: index
 
                 Layout.fillWidth: root.vertical
@@ -141,6 +143,14 @@ Item {
                     checked = Qt.binding(function() {
                         return plasmoid.nativeInterface.currentIndex === index;
                     });
+                }
+
+                Connections {
+                    enabled: buttonRepeater.count === __menuButton.buttonIndex
+                    target: appMenuModel.globalAction
+                    function onTriggered() {
+                        __menuButton.clicked()
+                    }
                 }
 
                 // QMenu opens on press, so we'll replicate that here
