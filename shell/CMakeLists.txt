@@ -33,7 +33,7 @@ set (plasma_shell_SRCS
     panelconfigview.cpp
     panelshadows.cpp
     shellcorona.cpp
-    standaloneappcorona
+    standaloneappcorona.cpp
     osd.cpp
     coronatesthelper.cpp
     strutmanager.cpp
