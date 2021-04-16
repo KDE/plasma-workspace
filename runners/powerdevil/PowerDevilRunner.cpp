@@ -114,7 +114,6 @@ void PowerDevilRunner::match(Plasma::RunnerContext &context)
     Plasma::QueryMatch::Type type = Plasma::QueryMatch::ExactMatch;
     QList<Plasma::QueryMatch> matches;
 
-    QString parameter;
     int screenBrightnessResults = matchesScreenBrightnessKeywords(term);
     if (screenBrightnessResults != -1) {
         Plasma::QueryMatch match(this);
