@@ -257,6 +257,7 @@ private:
     int m_rightPadding;
     bool m_initCompleted;
     bool m_containsMouse = false;
+    bool m_fakeEventPending = false;
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_panelConfigView;
     ShellCorona *m_corona;
