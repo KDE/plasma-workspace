@@ -54,8 +54,8 @@ PlasmaCore.ToolTipArea {
     // Simulate mouse clicked event
     function keyboardPressed() {
         const mouse = {
-            x: 0,
-            y: 0,
+            x: width / 2,
+            y: height / 2,
             accepted: false,
             button: Qt.LeftButton,
             buttons: Qt.LeftButton,
