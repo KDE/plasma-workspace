@@ -44,6 +44,7 @@ else ()
                           KF5::I18n
                           Qt::Gui
                           Qt::Qml
+                          Qt::Widgets
     )
 endif ()
 
