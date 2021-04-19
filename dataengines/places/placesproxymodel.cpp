@@ -8,8 +8,7 @@
 
 #include <QDebug>
 #include <QIcon>
-
-#include <KDiskFreeSpaceInfo>
+#include <QStorageInfo>
 
 PlacesProxyModel::PlacesProxyModel(QObject *parent, KFilePlacesModel *model)
     : QIdentityProxyModel(parent)
@@ -49,18 +48,18 @@ QVariant PlacesProxyModel::data(const QModelIndex &index, int role) const
 
     case SizeRole: {
         const QString path = m_placesModel->url(index).path();
-        KDiskFreeSpaceInfo info = KDiskFreeSpaceInfo::freeSpaceInfo(path);
-        return info.size();
+        QStorageInfo info{path};
+        return info.isValid() && info.isReady() ? info.bytesTotal() : QVariant{};
     }
     case UsedRole: {
         const QString path = m_placesModel->url(index).path();
-        KDiskFreeSpaceInfo info = KDiskFreeSpaceInfo::freeSpaceInfo(path);
-        return info.used();
+        QStorageInfo info{path};
+        return info.isValid() && info.isReady() ? info.bytesTotal() - info.bytesAvailable() : QVariant{};
     }
     case AvailableRole: {
         const QString path = m_placesModel->url(index).path();
-        KDiskFreeSpaceInfo info = KDiskFreeSpaceInfo::freeSpaceInfo(path);
-        return info.used();
+        QStorageInfo info{path};
+        return info.isValid() && info.isReady() ? info.bytesAvailable() : QVariant{};
     }
     default:
         return QIdentityProxyModel::data(index, role);

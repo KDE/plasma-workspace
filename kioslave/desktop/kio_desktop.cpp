@@ -9,7 +9,6 @@
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KDirNotify>
-#include <KDiskFreeSpaceInfo>
 #include <KIO/UDSEntry>
 #include <KLocalizedString>
 
@@ -17,6 +16,7 @@
 #include <QDir>
 #include <QFile>
 #include <QStandardPaths>
+#include <QStorageInfo>
 
 #include "desktopnotifier_interface.h"
 #include "kded_interface.h"
@@ -235,10 +235,10 @@ void DesktopProtocol::fileSystemFreeSpace(const QUrl &url)
     Q_UNUSED(url)
 
     const QString desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
-    const KDiskFreeSpaceInfo spaceInfo = KDiskFreeSpaceInfo::freeSpaceInfo(desktopPath);
-    if (spaceInfo.isValid()) {
-        setMetaData(QStringLiteral("total"), QString::number(spaceInfo.size()));
-        setMetaData(QStringLiteral("available"), QString::number(spaceInfo.available()));
+    QStorageInfo storageInfo{desktopPath};
+    if (storageInfo.isValid() && storageInfo.isReady()) {
+        setMetaData(QStringLiteral("total"), QString::number(storageInfo.bytesTotal()));
+        setMetaData(QStringLiteral("available"), QString::number(storageInfo.bytesAvailable()));
         finished();
     } else {
         error(KIO::ERR_CANNOT_STAT, desktopPath);
