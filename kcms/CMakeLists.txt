@@ -21,3 +21,6 @@ if(FONTCONFIG_FOUND)
 endif()
 
 add_subdirectory(autostart)
+add_subdirectory(formats)
+add_subdirectory(notifications)
+add_subdirectory(nightcolor)
