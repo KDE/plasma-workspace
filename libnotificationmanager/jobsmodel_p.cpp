@@ -43,14 +43,15 @@
 #include <kio/global.h>
 
 #include <algorithm>
+#include <chrono>
 
 using namespace NotificationManager;
+using namespace std::literals::chrono_literals;
 
 JobsModelPrivate::JobsModelPrivate(QObject *parent)
     : QObject(parent)
     , m_serviceWatcher(new QDBusServiceWatcher(this))
     , m_compressUpdatesTimer(new QTimer(this))
-    , m_pendingJobViewsTimer(new QTimer(this))
 {
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
     m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
@@ -76,29 +77,6 @@ JobsModelPrivate::JobsModelPrivate(QObject *parent)
         }
 
         m_pendingDirtyRoles.clear();
-    });
-
-    m_pendingJobViewsTimer->setInterval(500);
-    m_pendingJobViewsTimer->setSingleShot(true);
-    connect(m_pendingJobViewsTimer, &QTimer::timeout, this, [this] {
-        const auto pendingJobs = m_pendingJobViews;
-        for (Job *job : pendingJobs) {
-            if (job->state() == Notifications::JobStateStopped) {
-                // Stop finished or canceled in the meantime, remove
-                qCDebug(NOTIFICATIONMANAGER) << "By the time we wanted to show JobView" << job->id() << "from" << job->applicationName()
-                                             << ", it was already stopped";
-                remove(job);
-                continue;
-            }
-
-            const int newRow = m_jobViews.count();
-            emit jobViewAboutToBeAdded(newRow, job);
-            m_jobViews.append(job);
-            emit jobViewAdded(newRow, job);
-            updateApplicationPercentage(job->desktopEntry());
-        }
-
-        m_pendingJobViews.clear();
     });
 }
 
@@ -317,6 +295,42 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry, int c
     job->setSuspendable(capabilities & KJob::Suspendable);
     job->setKillable(capabilities & KJob::Killable);
 
+    connect(job->d, &JobPrivate::showRequested, this, [this, job] {
+        if (job->state() == Notifications::JobStateStopped) {
+            // Stop finished or canceled in the meantime, remove
+            qCDebug(NOTIFICATIONMANAGER) << "By the time we wanted to show JobView" << job->id() << "from" << job->applicationName()
+                                         << ", it was already stopped";
+            remove(job);
+            return;
+        }
+
+        const int pendingRow = m_pendingJobViews.indexOf(job);
+        Q_ASSERT(pendingRow > -1);
+        m_pendingJobViews.removeAt(pendingRow);
+
+        const int newRow = m_jobViews.count();
+        Q_EMIT jobViewAboutToBeAdded(newRow, job);
+        m_jobViews.append(job);
+        Q_EMIT jobViewAdded(newRow, job);
+        updateApplicationPercentage(job->desktopEntry());
+    });
+
+    m_pendingJobViews.append(job);
+
+    if (hints.value(QStringLiteral("immediate")).toBool()) {
+        // Slightly delay showing the job so that the first update() call with a
+        // summary will be shown atomically to the user.
+        job->d->delayedShow(50ms, JobPrivate::ShowCondition::OnTimeout
+                               | JobPrivate::ShowCondition::OnSummary
+                               | JobPrivate::ShowCondition::OnTermination);
+    } else {
+        // Delay showing a job view to avoid showing really short stat jobs and other useless stuff.
+        job->d->delayedShow(500ms, JobPrivate::ShowCondition::OnTimeout);
+    }
+
+    m_jobServices.insert(job, serviceName);
+    m_serviceWatcher->addWatchedService(serviceName);
+
     // Apply initial properties
     job->d->update(hints);
 
@@ -359,21 +373,6 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry, int c
     connect(job->d, &JobPrivate::closed, this, [this, job] {
         remove(job);
     });
-
-    // Delay showing a job view by 500ms to avoid showing really short stat jobs and other useless stuff
-    if (hints.value(QStringLiteral("immediate")).toBool()) {
-        const int newRow = m_jobViews.count();
-        emit jobViewAboutToBeAdded(newRow, job);
-        m_jobViews.append(job);
-        emit jobViewAdded(newRow, job);
-        updateApplicationPercentage(job->desktopEntry());
-    } else {
-        m_pendingJobViews.append(job);
-        m_pendingJobViewsTimer->start();
-    }
-
-    m_jobServices.insert(job, serviceName);
-    m_serviceWatcher->addWatchedService(serviceName);
 
     if (!connection().interface()->isServiceRegistered(serviceName)) {
         qCWarning(NOTIFICATIONMANAGER) << "Service that requested the view wasn't registered anymore by the time the request was being processed";

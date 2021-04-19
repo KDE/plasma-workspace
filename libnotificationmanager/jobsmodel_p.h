@@ -95,7 +95,6 @@ private:
     QTimer *m_compressUpdatesTimer = nullptr;
     QHash<Job *, QVector<int>> m_pendingDirtyRoles;
 
-    QTimer *m_pendingJobViewsTimer = nullptr;
     QVector<Job *> m_pendingJobViews;
 };
 

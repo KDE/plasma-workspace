@@ -28,11 +28,13 @@
 #include <QSharedPointer>
 #include <QString>
 #include <QUrl>
+#include <QTimer>
+
+#include <chrono>
 
 #include "job.h"
 #include "notifications.h"
 
-class QTimer;
 class KFilePlacesModel;
 
 namespace NotificationManager
@@ -45,10 +47,18 @@ public:
     JobPrivate(uint id, QObject *parent);
     ~JobPrivate() override;
 
+    enum class ShowCondition {
+        OnTimeout = 1 << 0,
+        OnSummary = 1 << 1,
+        OnTermination = 1 << 2
+    };
+    Q_DECLARE_FLAGS(ShowConditions, ShowCondition)
+
     QDBusObjectPath objectPath() const;
     QUrl descriptionUrl() const;
     QString text() const;
 
+    void delayedShow(std::chrono::milliseconds delay, ShowConditions showConditions);
     void kill();
 
     // DBus
@@ -70,6 +80,7 @@ public:
     void update(const QVariantMap &properties);
 
 Q_SIGNALS:
+    void showRequested();
     void closed();
 
     void infoMessageChanged();
@@ -111,11 +122,17 @@ private:
 
     static QUrl localFileOrUrl(const QString &stringUrl);
 
+    void requestShow();
+
     QUrl destUrl() const;
     QString prettyUrl(const QUrl &url) const;
     void updateHasDetails();
 
     void finish();
+
+    QTimer m_showTimer;
+    ShowConditions m_showConditions = {};
+    bool m_showRequested = false;
 
     QTimer *m_killTimer = nullptr;
 
@@ -168,3 +185,5 @@ private:
 };
 
 } // namespace NotificationManager
+
+Q_DECLARE_OPERATORS_FOR_FLAGS(NotificationManager::JobPrivate::ShowConditions)

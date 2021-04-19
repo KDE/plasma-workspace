@@ -42,6 +42,9 @@ JobPrivate::JobPrivate(uint id, QObject *parent)
     : QObject(parent)
     , m_id(id)
 {
+    m_showTimer.setSingleShot(true);
+    connect(&m_showTimer, &QTimer::timeout, this, &JobPrivate::requestShow);
+
     m_objectPath.setPath(QStringLiteral("/org/kde/notificationmanager/jobs/JobView_%1").arg(id));
 
     // TODO also v1? it's identical to V2 except it doesn't have setError method so supporting it should be easy
@@ -52,6 +55,14 @@ JobPrivate::JobPrivate(uint id, QObject *parent)
 }
 
 JobPrivate::~JobPrivate() = default;
+
+void JobPrivate::requestShow()
+{
+    if (!m_showRequested) {
+        m_showRequested = true;
+        Q_EMIT showRequested();
+    }
+}
 
 QDBusObjectPath JobPrivate::objectPath() const
 {
@@ -221,6 +232,15 @@ QString JobPrivate::text() const
                                 << ", value2 =" << m_descriptionValue2;
 
     return QString();
+}
+
+void JobPrivate::delayedShow(std::chrono::milliseconds delay, ShowConditions showConditions)
+{
+    m_showConditions = showConditions;
+
+    if (showConditions.testFlag(ShowCondition::OnTimeout)) {
+        m_showTimer.start(delay);
+    }
 }
 
 void JobPrivate::kill()
@@ -393,6 +413,12 @@ void JobPrivate::terminate(uint errorCode, const QString &errorMessage, const QV
     Job *job = static_cast<Job *>(parent());
     job->setError(errorCode);
     job->setErrorText(errorMessage);
+
+    // Request show just before changing state to stopped, so we're not discarded
+    if (m_showConditions.testFlag(ShowCondition::OnTermination)) {
+        requestShow();
+    }
+
     job->setState(Notifications::JobStateStopped);
     finish();
 }
@@ -453,4 +479,8 @@ void JobPrivate::update(const QVariantMap &properties)
     }
 
     updateHasDetails();
+
+    if (!m_summary.isEmpty() && m_showConditions.testFlag(ShowCondition::OnSummary)) {
+        requestShow();
+    }
 }
