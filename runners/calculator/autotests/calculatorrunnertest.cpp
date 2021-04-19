@@ -50,6 +50,8 @@ void CalculatorRunnerTest::testQuery_data()
     QTest::newRow("x as multiplication sign") << "25x4" << "100";
 #ifdef ENABLE_QALCULATE
     QTest::newRow("single digit factorial") << "5!" << "120";
+    QTest::newRow("superscripted number") << "2³"
+                                          << "8"; // BUG: 435932
 #endif
 
     QTest::newRow("hex to decimal lower case") << "0xf" << "15";

@@ -85,7 +85,8 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
     }
 
     QString input = expression;
-    QByteArray ba = input.replace(QChar(0xA3), "GBP").replace(QChar(0xA5), "JPY").replace('$', "USD").replace(QChar(0x20AC), "EUR").toLatin1();
+    // Make sure to use toLocal8Bit, the expression can contain non-latin1 characters
+    QByteArray ba = input.replace(QChar(0xA3), "GBP").replace(QChar(0xA5), "JPY").replace('$', "USD").replace(QChar(0x20AC), "EUR").toLocal8Bit();
     const char *ctext = ba.data();
 
     CALCULATOR->terminateThreads();
