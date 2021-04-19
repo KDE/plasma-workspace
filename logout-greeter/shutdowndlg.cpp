@@ -211,6 +211,7 @@ void KSMShutdownDlg::init()
     KWindowEffects::enableBlurBehind(winId(), true);
     if (auto w = LayerShellQt::Window::get(this)) {
         w->setKeyboardInteractivity(true);
+        w->setExclusiveZone(-1);
     }
 }
 
