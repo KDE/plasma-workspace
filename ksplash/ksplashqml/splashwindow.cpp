@@ -30,6 +30,8 @@
 #include <QSurfaceFormat>
 #include <QTimer>
 
+#include <LayerShellQt/Window>
+
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
 
@@ -42,6 +44,13 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme)
     , m_window(window)
     , m_theme(theme)
 {
+    if (KWindowSystem::isPlatformWayland()) {
+        if (auto layerShellWindow = LayerShellQt::Window::get(this)) {
+            layerShellWindow->setScope(QStringLiteral("ksplashqml"));
+            layerShellWindow->setLayer(LayerShellQt::Window::LayerOverlay);
+        }
+    }
+
     setColor(Qt::transparent);
     setDefaultAlphaBuffer(true);
     setClearBeforeRendering(true);
