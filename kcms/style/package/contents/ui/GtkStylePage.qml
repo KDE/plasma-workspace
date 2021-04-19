@@ -141,13 +141,17 @@ Kirigami.Page {
         asynchronous: true
 
         sourceComponent: NewStuff.Dialog {
+            id: newStuffDialog
             configFile: "gtk_themes.knsrc"
             viewMode: NewStuff.Page.ViewMode.Preview
             Connections {
-                target: newStuffPage.item
-                function onChangedEntriesChanged() {
-                    kcm.gtkPage.onGhnsEntriesChanged(newStuffPage.item.changedEntries);
+                target: newStuffDialog.engine
+                function onEntryEvent(entry, event) {
+                    if (event == 1) {
+                        kcm.load();
+                    }
                 }
+
             }
         }
     }

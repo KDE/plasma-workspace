@@ -37,7 +37,7 @@ public:
     GtkPage(QObject *parent = nullptr);
     ~GtkPage() override;
 
-    void load();
+    Q_INVOKABLE void load();
     void save();
     void defaults();
 
@@ -51,7 +51,6 @@ public Q_SLOTS:
     void installGtkThemeFromFile(const QUrl &fileUrl);
 
     void onThemeRemoved();
-    void onGhnsEntriesChanged(const QQmlListReference &changedEnties);
 
 Q_SIGNALS:
     void gtkThemesModelChanged(GtkThemesModel *model);

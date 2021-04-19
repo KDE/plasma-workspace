@@ -68,15 +68,6 @@ void GtkPage::onThemeRemoved()
     save();
 }
 
-void GtkPage::onGhnsEntriesChanged(const QQmlListReference &changedEnties)
-{
-    if (changedEnties.count() == 0) {
-        return;
-    }
-
-    load();
-}
-
 void GtkPage::installGtkThemeFromFile(const QUrl &fileUrl)
 {
     QString themesInstallDirectoryPath(QDir::homePath() + QStringLiteral("/.themes"));
