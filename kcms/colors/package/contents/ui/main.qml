@@ -366,14 +366,20 @@ KCM.GridViewKCM {
         asynchronous: true
 
         sourceComponent: NewStuff.Dialog {
+            id: newStuffDialog
             configFile: "colorschemes.knsrc"
             viewMode: NewStuff.Page.ViewMode.Tiles
             Connections {
-                target: newStuffPage.item
-                function onChangedEntriesChanged() {
-                    kcm.reloadModel(newStuffPage.item.changedEntries);
+                target: newStuffDialog.engine
+                function onEntryEvent(entry, event) {
+                    if (event == 1) {
+                        kcm.knsEntryChanged(entry)
+                    } else if (event == 2) {
+                        kcm.loadSelectedColorScheme()
+                    }
                 }
             }
+
         }
     }
 

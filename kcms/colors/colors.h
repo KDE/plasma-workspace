@@ -21,8 +21,8 @@
 
 #pragma once
 
+#include <KNSCore/EntryWrapper>
 #include <QPointer>
-#include <QQmlListReference>
 #include <QScopedPointer>
 
 #include <KSharedConfig>
@@ -67,7 +67,8 @@ public:
     ColorsSettings *colorsSettings() const;
     bool downloadingFile() const;
 
-    Q_INVOKABLE void reloadModel(const QQmlListReference &changedEntries);
+    Q_INVOKABLE void loadSelectedColorScheme();
+    Q_INVOKABLE void knsEntryChanged(KNSCore::EntryWrapper *entry);
     Q_INVOKABLE void installSchemeFromFile(const QUrl &url);
 
     Q_INVOKABLE void editScheme(const QString &schemeName, QQuickItem *ctx);
