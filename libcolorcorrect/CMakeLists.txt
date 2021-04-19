@@ -11,6 +11,7 @@ set(colorcorrect_LIB_SRCS
     )
 
 add_library(colorcorrect ${colorcorrect_LIB_SRCS})
+add_library(PW::LibColorCorrect ALIAS colorcorrect)
 
 generate_export_header(colorcorrect)
 
