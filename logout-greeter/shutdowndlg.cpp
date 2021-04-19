@@ -212,6 +212,7 @@ void KSMShutdownDlg::init()
     if (auto w = LayerShellQt::Window::get(this)) {
         w->setKeyboardInteractivity(true);
         w->setExclusiveZone(-1);
+        w->setLayer(LayerShellQt::Window::LayerOverlay);
     }
 }
 
