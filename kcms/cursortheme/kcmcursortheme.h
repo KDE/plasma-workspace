@@ -20,6 +20,7 @@
 #ifndef KCMCURSORTHEME_H
 #define KCMCURSORTHEME_H
 
+#include <KNSCore/EntryWrapper>
 #include <KQuickAddons/ManagedConfigModule>
 #include <QScopedPointer>
 
@@ -97,7 +98,7 @@ Q_SIGNALS:
     void showErrorMessage(const QString &message);
 
 public Q_SLOTS:
-    void ghnsEntriesChanged(const QQmlListReference &changedEntries);
+    void ghnsEntryChanged(KNSCore::EntryWrapper *entry);
     void installThemeFromFile(const QUrl &url);
 
 private Q_SLOTS:

@@ -42,9 +42,6 @@
 #include <KTar>
 #include <KUrlRequesterDialog>
 
-#include <KNSCore/EntryWrapper>
-
-#include <QQmlListReference>
 #include <QStandardItemModel>
 #include <QX11Info>
 
@@ -357,38 +354,33 @@ bool CursorThemeConfig::isSaveNeeded() const
     return !m_themeModel->match(m_themeModel->index(0, 0), CursorTheme::PendingDeletionRole, true).isEmpty();
 }
 
-void CursorThemeConfig::ghnsEntriesChanged(const QQmlListReference &changedEntries)
+void CursorThemeConfig::ghnsEntryChanged(KNSCore::EntryWrapper *entry)
 {
-    for (int i = 0; i < changedEntries.count(); ++i) {
-        KNSCore::EntryWrapper *entry = qobject_cast<KNSCore::EntryWrapper *>(changedEntries.at(i));
-        if (entry) {
-            if (entry->entry().status() == KNS3::Entry::Deleted) {
-                for (const QString &deleted : entry->entry().uninstalledFiles()) {
-                    QVector<QStringRef> list = deleted.splitRef(QLatin1Char('/'));
-                    if (list.last() == QLatin1Char('*')) {
-                        list.takeLast();
-                    }
-                    QModelIndex idx = m_themeModel->findIndex(list.last().toString());
-                    if (idx.isValid()) {
-                        m_themeModel->removeTheme(idx);
-                    }
-                }
-            } else if (entry->entry().status() == KNS3::Entry::Installed) {
-                for (const QString &created : entry->entry().installedFiles()) {
-                    QStringList list = created.split(QLatin1Char('/'));
-                    if (list.last() == QLatin1Char('*')) {
-                        list.takeLast();
-                    }
-                    // Because we sometimes get some extra slashes in the installed files list
-                    list.removeAll({});
-                    // Because we'll also get the containing folder, if it was not already there
-                    // we need to ignore it.
-                    if (list.last() == QLatin1String(".icons")) {
-                        continue;
-                    }
-                    m_themeModel->addTheme(list.join(QLatin1Char('/')));
-                }
+    if (entry->entry().status() == KNS3::Entry::Deleted) {
+        for (const QString &deleted : entry->entry().uninstalledFiles()) {
+            QVector<QStringRef> list = deleted.splitRef(QLatin1Char('/'));
+            if (list.last() == QLatin1Char('*')) {
+                list.takeLast();
             }
+            QModelIndex idx = m_themeModel->findIndex(list.last().toString());
+            if (idx.isValid()) {
+                m_themeModel->removeTheme(idx);
+            }
+        }
+    } else if (entry->entry().status() == KNS3::Entry::Installed) {
+        for (const QString &created : entry->entry().installedFiles()) {
+            QStringList list = created.split(QLatin1Char('/'));
+            if (list.last() == QLatin1Char('*')) {
+                list.takeLast();
+            }
+            // Because we sometimes get some extra slashes in the installed files list
+            list.removeAll({});
+            // Because we'll also get the containing folder, if it was not already there
+            // we need to ignore it.
+            if (list.last() == QLatin1String(".icons")) {
+                continue;
+            }
+            m_themeModel->addTheme(list.join(QLatin1Char('/')));
         }
     }
 }

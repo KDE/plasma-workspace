@@ -181,11 +181,16 @@ KCM.GridViewKCM {
         asynchronous: true
 
         sourceComponent: NewStuff.Dialog {
+            id: newStuffDialog
             configFile: "xcursor.knsrc"
             viewMode: NewStuff.Page.ViewMode.Tiles
             Connections {
-                target: newStuffPage.item
-                onChangedEntriesChanged: kcm.ghnsEntriesChanged(newStuffPage.item.changedEntries);
+                target: newStuffDialog.engine
+                function onEntryEvent(entry, event) {
+                    if (event == 1) {
+                        kcm.ghnsEntryChanged(entry);
+                    }
+                }
             }
         }
     }
