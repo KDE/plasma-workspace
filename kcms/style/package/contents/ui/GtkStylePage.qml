@@ -147,7 +147,7 @@ Kirigami.Page {
             Connections {
                 target: newStuffDialog.engine
                 function onEntryEvent(entry, event) {
-                    if (event == 1) {
+                    if (event == 1) { // StatusChangedEvent
                         kcm.load();
                     }
                 }

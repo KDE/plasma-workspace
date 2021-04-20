@@ -372,9 +372,9 @@ KCM.GridViewKCM {
             Connections {
                 target: newStuffDialog.engine
                 function onEntryEvent(entry, event) {
-                    if (event == 1) {
+                    if (event == 1) { // StatusChangedEvent
                         kcm.knsEntryChanged(entry)
-                    } else if (event == 2) {
+                    } else if (event == 2) { // AdoptedEvent
                         kcm.loadSelectedColorScheme()
                     }
                 }

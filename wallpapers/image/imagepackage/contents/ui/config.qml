@@ -381,7 +381,7 @@ ColumnLayout {
                     text: i18nd("plasma_wallpaper_org.kde.image", "Get New Wallpapers…")
                     viewMode: NewStuff.Page.ViewMode.Preview
                     onEntryEvent: function(entry, event) {
-                        if (event == 1) {
+                        if (event == 1) { // StatusChangedEvent
                             imageWallpaper.newStuffFinished()
                         }
                     }
@@ -477,7 +477,7 @@ ColumnLayout {
             text: i18nd("plasma_wallpaper_org.kde.image", "Get New Wallpapers…")
             viewMode: NewStuff.Page.ViewMode.Preview
             onEntryEvent: function(entry, event) {
-                if (event == 1) {
+                if (event == 1) { // StatusChangedEvent
                     imageWallpaper.newStuffFinished()
                 }
             }

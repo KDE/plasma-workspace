@@ -130,9 +130,9 @@ KCM.GridViewKCM {
             Connections {
                 target: newStuffPage.item.engine
                 function onEntryEvent(entry, event) {
-                    if (event == 2) {
+                    if (event == 2) { // AdoptedEvent
                         kcm.reloadConfig();
-                    } else if (event == 1) {
+                    } else if (event == 1) { // StatusChangedEvent
                         kcm.knsEntryChanged(entry);
                     }
                 }
