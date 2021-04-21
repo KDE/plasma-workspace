@@ -32,6 +32,7 @@ Name[ru]=Plasma (разрабатываемая версия, X11 ${CMAKE_INSTAL
 Name[sk]=Plasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[sl]=Plasma (Razvoj, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[sv]=Plasma (utveckling, X11 ${CMAKE_INSTALL_FULL_BINDIR})
+Name[tr]=Plasma (Geliştirme, X11 $ {CMAKE_INSTALL_FULL_BINDIR})
 Name[uk]=Плазма (Розробка, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[vi]=Plasma (Phát triển, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[x-test]=xxPlasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})xx
