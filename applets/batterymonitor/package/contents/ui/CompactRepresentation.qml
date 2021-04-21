@@ -86,9 +86,9 @@ MouseArea {
                     anchors.bottom: parent.bottom
                     anchors.right: parent.right
 
-                    visible: plasmoid.configuration.showPercentage
+                    visible: plasmoid.configuration.showPercentage && batteryContainer.hasBattery
 
-                    text: batteryContainer.hasBattery ? i18nc("battery percentage below battery icon", "%1%", percent) : i18nc("short symbol to signal there is no battery currently available", "-")
+                    text: i18nc("battery percentage below battery icon", "%1%", percent)
                     icon: batteryIcon
                 }
             }
