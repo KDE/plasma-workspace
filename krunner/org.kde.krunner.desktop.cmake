@@ -93,6 +93,7 @@ Name[ru]=Запустить команду из буфера обмена
 Name[sk]=Spustiť príkaz na obsahu schránky
 Name[sl]=Zaženi ukaz na vsebini odložišča
 Name[sv]=Kör kommando med klippbordets innehåll
+Name[tr]=Pano içeriğinde komut çalıştır
 Name[uk]=Виконати команду над вмістом буфера обміну
 Name[vi]=Chạy lệnh với nội dung bảng nháp
 Name[x-test]=xxRun command on clipboard contentsxx
