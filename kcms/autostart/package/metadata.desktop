@@ -1,6 +1,12 @@
 [Desktop Entry]
 Name=Autostart
+Name[es]=Inicio automático
+Name[nl]=Autostart
+Name[x-test]=xxAutostartxx
 Comment=Automatically Started Applications
+Comment[es]=Aplicaciones que se inician automáticamente
+Comment[nl]=Automatisch gestarte toepassingen
+Comment[x-test]=xxAutomatically Started Applicationsxx
 Encoding=UTF-8
 Type=Service
 Icon=system-run
@@ -11,5 +17,8 @@ X-Plasma-MainScript=ui/main.qml
 X-KDE-System-Settings-Parent-Category=session
 X-KDE-ParentApp=kcontrol
 X-KDE-Keywords=Autostart Manager,autostart,startup,system startup,plasma start,cron
+X-KDE-Keywords[es]=Gestor de inicio automático,inicio automático,inicio,inicio del sistema,inicio de plasma,cron
+X-KDE-Keywords[nl]=Autostartbeheerder,autostarten,opstarten,opstarten systeem,opstarten plasma,cron
+X-KDE-Keywords[x-test]=xxAutostart Managerxx,xxautostartxx,xxstartupxx,xxsystem startupxx,xxplasma startxx,xxcronxx
 X-DocPath=kcontrol/autostart/index.html
 X-KDE-Weight=30
