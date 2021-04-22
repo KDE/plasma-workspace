@@ -41,6 +41,13 @@ class QDBusServiceWatcher;
 class KDBusMenuImporter;
 class AppmenuDBus;
 class VerticalMenu;
+namespace KWayland
+{
+namespace Client
+{
+class PlasmaShell;
+};
+};
 
 class AppMenuModule : public KDEDModule, protected QDBusContext
 {
@@ -48,6 +55,7 @@ class AppMenuModule : public KDEDModule, protected QDBusContext
 public:
     AppMenuModule(QObject *parent, const QList<QVariant> &list);
     ~AppMenuModule() override;
+    bool eventFilter(QObject *object, QEvent *event) override;
 
 Q_SIGNALS:
     /**
@@ -91,6 +99,7 @@ private:
     void fakeUnityAboutToShow(const QString &service, const QDBusObjectPath &menuObjectPath);
 
     KDBusMenuImporter *getImporter(const QString &service, const QString &path);
+    void initMenuWayland();
 
     MenuImporter *m_menuImporter = nullptr;
     AppmenuDBus *m_appmenuDBus;
@@ -100,6 +109,7 @@ private:
 #ifdef HAVE_X11
     xcb_connection_t *m_xcbConn = nullptr;
 #endif
+    KWayland::Client::PlasmaShell *m_plasmashell = nullptr;;
 };
 
 #endif

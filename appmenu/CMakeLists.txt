@@ -18,8 +18,11 @@ kcoreaddons_desktop_to_json(appmenu appmenu.desktop)
 
 target_link_libraries(appmenu
     Qt::DBus
+    Qt::WaylandClientPrivate
+    Qt::XkbCommonSupportPrivate
     KF5::DBusAddons
     KF5::KIOCore
+    KF5::WaylandClient
     KF5::WindowSystem
     dbusmenuqt
 )

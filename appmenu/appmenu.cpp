@@ -36,7 +36,14 @@
 #include <QApplication>
 #include <QDBusInterface>
 #include <QMenu>
+#include <private/qwaylanddisplay_p.h>
+#include <private/qwaylandinputdevice_p.h>
+#include <private/qwaylandwindow_p.h>
 
+#include <KWayland/Client/connection_thread.h>
+#include <KWayland/Client/plasmashell.h>
+#include <KWayland/Client/registry.h>
+#include <KWayland/Client/surface.h>
 #include <kpluginfactory.h>
 #include <kpluginloader.h>
 
@@ -108,6 +115,16 @@ AppMenuModule::AppMenuModule(QObject *parent, const QList<QVariant> &)
         m_xcbConn = xcb_connect(nullptr, nullptr);
     }
 #endif
+    if (qGuiApp->platformName() == QLatin1String("wayland")) {
+        auto connection = KWayland::Client::ConnectionThread::fromApplication();
+        KWayland::Client::Registry registry;
+        registry.create(connection);
+        connect(&registry, &KWayland::Client::Registry::plasmaShellAnnounced, this, [this, &registry](quint32 name, quint32 version) {
+            m_plasmashell = registry.createPlasmaShell(name, version, this);
+        });
+        registry.setup();
+        connection->roundtrip();
+    }
 }
 
 AppMenuModule::~AppMenuModule()
@@ -199,9 +216,12 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
             importer->deleteLater();
         });
 
-        // m_menuImporter->fakeUnityAboutToShow(serviceName, menuObjectPath);
-
-        m_menu.data()->popup(QPoint(x, y) / qApp->devicePixelRatio());
+        if (m_plasmashell) {
+            connect(m_menu.data(), &QMenu::aboutToShow, this, &AppMenuModule::initMenuWayland, Qt::UniqueConnection);
+            m_menu.data()->popup(QPoint(x, y));
+        } else {
+            m_menu.data()->popup(QPoint(x, y) / qApp->devicePixelRatio());
+        }
 
         QAction *actiontoActivate = importer->actionForId(actionId);
 
@@ -228,7 +248,31 @@ void AppMenuModule::itemActivationRequested(int actionId, uint timeStamp)
 
 // this method is not really used anymore but has to be kept for DBus compatibility
 void AppMenuModule::reconfigure()
+{}
+
+void AppMenuModule::initMenuWayland()
 {
+    auto window = m_menu->windowHandle();
+    if (window && m_plasmashell) {
+        window->setFlag(Qt::FramelessWindowHint);
+        window->requestActivate();
+        auto plasmaSurface = m_plasmashell->createSurface(KWayland::Client::Surface::fromWindow(window), m_menu.data());
+        plasmaSurface->setPosition(window->position());
+        m_menu->installEventFilter(this);
+    }
+}
+
+bool AppMenuModule::eventFilter(QObject *object, QEvent *event)
+{
+    // HACK we need an input serial to create popups but Qt only sets them on click
+    if (object == m_menu && event->type() == QEvent::Enter && m_plasmashell) {
+        auto waylandWindow = dynamic_cast<QtWaylandClient::QWaylandWindow *>(m_menu->windowHandle()->handle());
+        if (waylandWindow) {
+            const auto device = waylandWindow->display()->currentInputDevice();
+            waylandWindow->display()->setLastInputDevice(device, device->pointer()->mEnterSerial, waylandWindow);
+        }
+    }
+    return KDEDModule::eventFilter(object, event);
 }
 
 #include "appmenu.moc"
