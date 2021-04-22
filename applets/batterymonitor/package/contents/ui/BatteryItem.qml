@@ -208,6 +208,19 @@ Item {
             opacity: 0.5
             sourceComponent: batteryDetails
         }
+
+        InhibitionHint {
+            anchors {
+                left: parent.left
+                leftMargin: batteryIcon.width + PlasmaCore.Units.gridUnit
+                right: parent.right
+            }
+            readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
+            readonly property bool pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
+            visible: pluggedIn && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100
+            iconSource: "kt-speed-limits" // FIXME good icon
+            text: i18n("Your battery is configured to only charge up to %1%.", chargeStopThreshold || 0)
+        }
     }
 
 }

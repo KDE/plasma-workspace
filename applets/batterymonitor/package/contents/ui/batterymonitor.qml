@@ -223,22 +223,7 @@ Item {
         property int cookie2: -1
         onPowermanagementChanged: {
             var service = pmSource.serviceForSource("PowerDevil");
-            if (checked) {
-                var op1 = service.operationDescription("stopSuppressingSleep");
-                op1.cookie = cookie1;
-                var op2 = service.operationDescription("stopSuppressingScreenPowerManagement");
-                op2.cookie = cookie2;
-
-                var job1 = service.startOperationCall(op1);
-                job1.finished.connect(function(job) {
-                    cookie1 = -1;
-                });
-
-                var job2 = service.startOperationCall(op2);
-                job2.finished.connect(function(job) {
-                    cookie2 = -1;
-                });
-            } else {
+            if (disabled) {
                 var reason = i18n("The battery applet has enabled system-wide inhibition");
                 var op1 = service.operationDescription("beginSuppressingSleep");
                 op1.reason = reason;
@@ -254,8 +239,23 @@ Item {
                 job2.finished.connect(function(job) {
                     cookie2 = job.result;
                 });
+            } else {
+                var op1 = service.operationDescription("stopSuppressingSleep");
+                op1.cookie = cookie1;
+                var op2 = service.operationDescription("stopSuppressingScreenPowerManagement");
+                op2.cookie = cookie2;
+
+                var job1 = service.startOperationCall(op1);
+                job1.finished.connect(function(job) {
+                    cookie1 = -1;
+                });
+
+                var job2 = service.startOperationCall(op2);
+                job2.finished.connect(function(job) {
+                    cookie2 = -1;
+                });
             }
-            batterymonitor.powermanagementDisabled = !checked
+            batterymonitor.powermanagementDisabled = disabled
         }
     }
 }

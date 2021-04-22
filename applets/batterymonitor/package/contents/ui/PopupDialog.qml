@@ -35,14 +35,14 @@ PlasmaComponents3.Page {
     property bool isBrightnessAvailable
     property bool isKeyboardBrightnessAvailable
 
-    signal powermanagementChanged(bool checked)
+    signal powermanagementChanged(bool disabled)
 
     header: PlasmaExtras.PlasmoidHeading {
         PowerManagementItem {
             id: pmSwitch
             width: parent.width
             pluggedIn: dialog.pluggedIn
-            onEnabledChanged: powermanagementChanged(enabled)
+            onDisabledChanged: powermanagementChanged(disabled)
             KeyNavigation.tab: batteryList
             KeyNavigation.backtab: keyboardBrightnessSlider
         }
