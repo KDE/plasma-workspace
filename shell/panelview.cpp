@@ -425,11 +425,10 @@ void PanelView::setOpacityMode(PanelView::OpacityMode mode)
 {
     if (m_opacityMode != mode) {
         m_opacityMode = mode;
-        if (config().isValid() && config().parent().isValid()) {
-            config().parent().writeEntry("panelOpacity", (int)mode);
-            m_corona->requestApplicationConfigSync();
-        }
         emit opacityModeChanged();
+        config().writeEntry("panelOpacity", (int)mode);
+        configDefaults().writeEntry("panelOpacity", (int)mode);
+        m_corona->requestApplicationConfigSync();
     }
 }
 
