@@ -114,10 +114,7 @@ Item {
 
     property var inhibitions: []
 
-    readonly property var kcms: ["powerdevilprofilesconfig.desktop",
-                                 "powerdevilactivitiesconfig.desktop",
-                                 "powerdevilglobalconfig.desktop"]
-    readonly property bool kcmsAuthorized: KCMShell.authorize(batterymonitor.kcms).length > 0
+    readonly property bool kcmAuthorized: KCMShell.authorize("powerdevilprofilesconfig.desktop").length > 0
 
     readonly property bool kcmEnergyInformationAuthorized: KCMShell.authorize("kcm_energyinfo.desktop").length > 0
 
@@ -153,7 +150,7 @@ Item {
     }
 
     function action_powerdevilkcm() {
-        KCMShell.open(batterymonitor.kcms);
+        KCMShell.openSystemSettings("powerdevilprofilesconfig");
     }
 
     function action_energyinformationkcm() {
@@ -167,7 +164,7 @@ Item {
         if (batterymonitor.kcmEnergyInformationAuthorized) {
             plasmoid.setAction("energyinformationkcm", i18n("&Show Energy Information..."), "battery");
         }
-        if (batterymonitor.kcmsAuthorized) {
+        if (batterymonitor.kcmAuthorized) {
             plasmoid.setAction("powerdevilkcm", i18n("&Configure Power Saving..."), "preferences-system-power-management");
         }
     }
