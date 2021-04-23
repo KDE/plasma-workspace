@@ -22,7 +22,7 @@ add_library(plasma_engine_weather MODULE ${weather_SRCS})
 target_link_libraries (plasma_engine_weather
             KF5::KIOCore
             KF5::Solid
-            KF5::Plasma
+            KF5::Plasma5Support
             Qt::Network
             weather_ion)
 

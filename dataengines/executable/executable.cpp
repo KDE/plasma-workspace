@@ -19,11 +19,11 @@
 #include "executable.h"
 #include <QDebug>
 ExecutableContainer::ExecutableContainer(const QString &command, QObject *parent)
-    : Plasma::DataContainer(parent)
+    : Plasma5Support::DataContainer(parent)
     , m_process(nullptr)
 {
     setObjectName(command);
-    connect(this, &Plasma::DataContainer::updateRequested, this, &ExecutableContainer::exec);
+    connect(this, &Plasma5Support::DataContainer::updateRequested, this, &ExecutableContainer::exec);
     exec();
 }
 
@@ -61,7 +61,7 @@ void ExecutableContainer::exec()
 }
 
 ExecutableEngine::ExecutableEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     setMinimumPollingInterval(1000);
 }
@@ -72,6 +72,6 @@ bool ExecutableEngine::sourceRequestEvent(const QString &source)
     return true;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(executable, ExecutableEngine, "plasma-dataengine-executable.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(executable, ExecutableEngine, "plasma-dataengine-executable.json")
 
 #include "executable.moc"

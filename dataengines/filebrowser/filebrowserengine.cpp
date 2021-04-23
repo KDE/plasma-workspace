@@ -19,7 +19,7 @@
 
 #include "filebrowserengine.h"
 
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 
 #include <KDirWatch>
 #include <QDebug>
@@ -31,7 +31,7 @@
         if (dir == QDir(it.key()))
 
 FileBrowserEngine::FileBrowserEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
     , m_dirWatch(nullptr)
 {
     Q_UNUSED(args)
@@ -156,6 +156,6 @@ void FileBrowserEngine::clearData(const QString &path)
     }
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(filebrowser, FileBrowserEngine, "plasma-dataengine-filebrowser.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(filebrowser, FileBrowserEngine, "plasma-dataengine-filebrowser.json")
 
 #include "filebrowserengine.moc"

@@ -20,7 +20,7 @@
 #ifndef PLAYERACTIONJOB_H
 #define PLAYERACTIONJOB_H
 
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/ServiceJob>
 
 #include "playercontrol.h"
 
@@ -28,7 +28,7 @@ class QDBusPendingCallWatcher;
 class QDBusPendingCall;
 class QDBusVariant;
 
-class PlayerActionJob : public Plasma::ServiceJob
+class PlayerActionJob : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 

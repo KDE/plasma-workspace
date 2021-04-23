@@ -13,7 +13,7 @@ add_library(plasma_engine_powermanagement MODULE ${powermanagement_engine_SRCS})
 
 target_link_libraries(plasma_engine_powermanagement
     KF5::Solid
-    KF5::Plasma
+    KF5::Plasma5Support
     KF5::IdleTime
     KF5::CoreAddons
     KF5::I18n
@@ -26,4 +26,4 @@ kcoreaddons_desktop_to_json(plasma_engine_powermanagement plasma-dataengine-powe
 
 install(TARGETS plasma_engine_powermanagement DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-powermanagement.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
-install(FILES powermanagementservice.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
+install(FILES powermanagementservice.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)

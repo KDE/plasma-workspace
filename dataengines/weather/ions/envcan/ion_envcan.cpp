@@ -726,7 +726,7 @@ bool EnvCanadaIon::readXMLData(const QString &source, QXmlStreamReader &xml)
     }
 
     bool solarDataSourceNeedsConnect = false;
-    Plasma::DataEngine *timeEngine = dataEngine(QStringLiteral("time"));
+    Plasma5Support::DataEngine *timeEngine = dataEngine(QStringLiteral("time"));
     if (timeEngine) {
         const bool canCalculateElevation = (data.observationDateTime.isValid() && (!qIsNaN(data.stationLatitude) && !qIsNaN(data.stationLongitude)));
         if (canCalculateElevation) {
@@ -1407,7 +1407,7 @@ void EnvCanadaIon::updateWeather(const QString &source)
 
     const WeatherData &weatherData = m_weatherData[source];
 
-    Plasma::DataEngine::Data data;
+    Plasma5Support::DataEngine::Data data;
 
     data.insert(QStringLiteral("Country"), weatherData.countryName);
     data.insert(QStringLiteral("Place"), QVariant(weatherData.cityName + QStringLiteral(", ") + weatherData.shortTerritoryName));
@@ -1625,7 +1625,7 @@ void EnvCanadaIon::updateWeather(const QString &source)
     setData(source, data);
 }
 
-void EnvCanadaIon::dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data)
+void EnvCanadaIon::dataUpdated(const QString &sourceName, const Plasma5Support::DataEngine::Data &data)
 {
     const bool isNight = (data.value(QStringLiteral("Corrected Elevation")).toDouble() < 0.0);
 
@@ -1638,6 +1638,6 @@ void EnvCanadaIon::dataUpdated(const QString &sourceName, const Plasma::DataEngi
     }
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(envcan, EnvCanadaIon, "ion-envcan.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(envcan, EnvCanadaIon, "ion-envcan.json")
 
 #include "ion_envcan.moc"

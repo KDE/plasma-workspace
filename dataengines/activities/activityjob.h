@@ -20,14 +20,14 @@
 #define ACTIVITYJOB_H
 
 // plasma
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/ServiceJob>
 
 namespace KActivities
 {
 class Controller;
 } // namespace KActivities
 
-class ActivityJob : public Plasma::ServiceJob
+class ActivityJob : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 

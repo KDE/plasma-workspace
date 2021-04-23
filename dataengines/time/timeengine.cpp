@@ -41,7 +41,7 @@
 #endif
 
 TimeEngine::TimeEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     Q_UNUSED(args)
     setMinimumPollingInterval(333);
@@ -144,6 +144,6 @@ bool TimeEngine::updateSourceEvent(const QString &tz)
     return false;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(time, TimeEngine, "plasma-dataengine-time.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(time, TimeEngine, "plasma-dataengine-time.json")
 
 #include "timeengine.moc"

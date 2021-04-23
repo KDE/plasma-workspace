@@ -18,7 +18,7 @@
 
 #ifndef DICTENGINE_H
 #define DICTENGINE_H
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 #include <QCache>
 #include <QMap>
 #include <QVariantMap>
@@ -28,7 +28,7 @@ class QTcpSocket;
  * This class evaluates the basic expressions given in the interface.
  */
 
-class DictEngine : public Plasma::DataEngine
+class DictEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 

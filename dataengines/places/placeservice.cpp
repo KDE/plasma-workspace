@@ -23,7 +23,7 @@
 #include <QDebug>
 
 PlaceService::PlaceService(QObject *parent, KFilePlacesModel *model)
-    : Plasma::Service(parent)
+    : Plasma5Support::Service(parent)
     , m_model(model)
 {
     setName(QStringLiteral("org.kde.places"));
@@ -32,7 +32,7 @@ PlaceService::PlaceService(QObject *parent, KFilePlacesModel *model)
     qDebug() << "Created a place service for" << destination();
 }
 
-Plasma::ServiceJob *PlaceService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
+Plasma5Support::ServiceJob *PlaceService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
     QModelIndex index = m_model->index(parameters.value(QStringLiteral("placeIndex")).toInt(), 0);
 

@@ -21,7 +21,7 @@
 #ifndef POWERMANAGEMENTENGINE_H
 #define POWERMANAGEMENTENGINE_H
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 #include <solid/battery.h>
 
@@ -37,7 +37,7 @@ using InhibitionInfo = QPair<QString, QString>;
  * This class provides runtime information about the battery and AC status
  * for use in power management Plasma applets.
  */
-class PowermanagementEngine : public Plasma::DataEngine
+class PowermanagementEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 
@@ -45,7 +45,7 @@ public:
     PowermanagementEngine(QObject *parent, const QVariantList &args);
     ~PowermanagementEngine() override;
     QStringList sources() const override;
-    Plasma::Service *serviceForSource(const QString &source) override;
+    Plasma5Support::Service *serviceForSource(const QString &source) override;
 
 protected:
     bool sourceRequestEvent(const QString &name) override;

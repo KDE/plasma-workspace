@@ -133,7 +133,7 @@ Comment[zh_TW]=列出資訊或啟動選單中所有應用程式
 Type=Service
 Icon=user-desktop
 
-X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-ServiceTypes=Plasma5Support/DataEngine
 X-KDE-Library=plasma_engine_apps
 
 X-KDE-PluginInfo-Author=Chani

@@ -15,7 +15,7 @@ target_link_libraries(plasma_engine_soliddevice
   Qt::Network
   KF5::I18n
   KF5::KIOCore
-  KF5::Plasma
+  KF5::Plasma5Support
   KF5::Solid
   KF5::CoreAddons
   KF5::Notifications
@@ -25,4 +25,4 @@ kcoreaddons_desktop_to_json(plasma_engine_soliddevice plasma-dataengine-soliddev
 
 install(TARGETS plasma_engine_soliddevice DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-soliddevice.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
-install(FILES soliddevice.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services )
+install(FILES soliddevice.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services )

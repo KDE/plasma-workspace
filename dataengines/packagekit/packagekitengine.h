@@ -21,9 +21,9 @@
 #ifndef PACKAGEKITENGINE_H
 #define PACKAGEKITENGINE_H
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
-class PackagekitEngine : public Plasma::DataEngine
+class PackagekitEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 
@@ -32,7 +32,7 @@ public:
     void init();
 
 protected:
-    Plasma::Service *serviceForSource(const QString &source) override;
+    Plasma5Support::Service *serviceForSource(const QString &source) override;
 
 private:
     bool m_pk_available;

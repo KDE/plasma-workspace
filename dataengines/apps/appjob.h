@@ -20,12 +20,12 @@
 #define APPJOB_H
 
 // plasma
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/ServiceJob>
 
 // own
 #include "appsource.h"
 
-class AppJob : public Plasma::ServiceJob
+class AppJob : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 

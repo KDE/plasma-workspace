@@ -31,7 +31,7 @@
 static const QString s_watcherServiceName(QStringLiteral("org.kde.StatusNotifierWatcher"));
 
 StatusNotifierItemEngine::StatusNotifierItemEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
     , m_statusNotifierWatcher(nullptr)
 {
     Q_UNUSED(args);
@@ -43,15 +43,15 @@ StatusNotifierItemEngine::~StatusNotifierItemEngine()
     QDBusConnection::sessionBus().unregisterService(m_serviceName);
 }
 
-Plasma::Service *StatusNotifierItemEngine::serviceForSource(const QString &name)
+Plasma5Support::Service *StatusNotifierItemEngine::serviceForSource(const QString &name)
 {
     StatusNotifierItemSource *source = dynamic_cast<StatusNotifierItemSource *>(containerForSource(name));
     // if source does not exist, return null service
     if (!source) {
-        return Plasma::DataEngine::serviceForSource(name);
+        return Plasma5Support::DataEngine::serviceForSource(name);
     }
 
-    Plasma::Service *service = source->createService();
+    Plasma5Support::Service *service = source->createService();
     service->setParent(this);
     return service;
 }
@@ -165,6 +165,6 @@ void StatusNotifierItemEngine::newItem(const QString &service)
     addSource(itemSource);
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(statusnotifieritem, StatusNotifierItemEngine, "plasma-dataengine-statusnotifieritem.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(statusnotifieritem, StatusNotifierItemEngine, "plasma-dataengine-statusnotifieritem.json")
 
 #include "statusnotifieritem_engine.moc"

@@ -137,7 +137,7 @@ Comment[zh_TW]=Geolocation 資料引擎
 Icon=applications-internet
 
 Type=Service
-X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-ServiceTypes=Plasma5Support/DataEngine
 X-KDE-Library=plasma_engine_geolocation
 
 X-KDE-PluginInfo-Author=Petri Damstén

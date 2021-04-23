@@ -120,7 +120,7 @@ Comment[zh_CN]=用于提供应用程序状态信息的引擎，急于状态通�
 Comment[zh_TW]=基於狀態通知器協定的應用程式狀態資訊引擎。
 Icon=preferences-desktop-notification
 
-X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-ServiceTypes=Plasma5Support/DataEngine
 Type=Service
 X-KDE-Library=plasma_engine_statusnotifieritem
 X-KDE-PluginInfo-Author=Matthieu Gallien

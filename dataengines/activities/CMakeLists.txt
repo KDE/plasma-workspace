@@ -13,7 +13,7 @@ qt5_add_dbus_interface(
 add_library(plasma_engine_activities MODULE ${activity_engine_SRCS})
 target_link_libraries(plasma_engine_activities
                       KF5::CoreAddons
-                      KF5::Plasma
+                      KF5::Plasma5Support
                       KF5::Activities
                       KF5::I18n
                       KF5::Service
@@ -29,4 +29,4 @@ install(FILES plasma-dataengine-activities.desktop
         DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
 install(FILES activities.operations
-        DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
+        DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)

@@ -4,7 +4,7 @@ set(filebrowser_engine_SRCS
 
 add_library(plasma_engine_filebrowser MODULE ${filebrowser_engine_SRCS})
 target_link_libraries(plasma_engine_filebrowser
-    KF5::Plasma
+    KF5::Plasma5Support
     KF5::Service
     KF5::KIOCore
 )

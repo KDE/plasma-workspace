@@ -21,14 +21,14 @@
 #ifndef PACKAGEKITSERVICE_H
 #define PACKAGEKITSERVICE_H
 
-#include <Plasma/Service>
+#include <Plasma5Support/Service>
 
-class PackagekitService : public Plasma::Service
+class PackagekitService : public Plasma5Support::Service
 {
     Q_OBJECT
 public:
     explicit PackagekitService(QObject *parent = nullptr);
-    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+    Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 };
 
 #endif // PACKAGEKITSERVICE_H

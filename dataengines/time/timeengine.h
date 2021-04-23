@@ -20,7 +20,7 @@
 #ifndef TIMEENGINE_H
 #define TIMEENGINE_H
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 #include <kpluginfactory.h>
 
 #include <QDebug>
@@ -32,7 +32,7 @@
  * "Local" is a special source that is an alias for the current
  * timezone.
  */
-class TimeEngine : public Plasma::DataEngine
+class TimeEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 

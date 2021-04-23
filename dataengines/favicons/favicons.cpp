@@ -26,7 +26,7 @@
 #include "faviconprovider.h"
 
 FaviconsEngine::FaviconsEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
 }
 
@@ -66,6 +66,6 @@ void FaviconsEngine::error(FaviconProvider *provider)
     provider->deleteLater();
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(favicons, FaviconsEngine, "plasma-dataengine-favicons.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(favicons, FaviconsEngine, "plasma-dataengine-favicons.json")
 
 #include "favicons.moc"

@@ -27,7 +27,7 @@
 static const char SOURCE[] = "location";
 
 Geolocation::Geolocation(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     Q_UNUSED(args)
     setMinimumPollingInterval(500);
@@ -146,6 +146,6 @@ void Geolocation::actuallySetData()
     setData(SOURCE, m_data);
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(geolocation, Geolocation, "plasma-dataengine-geolocation.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(geolocation, Geolocation, "plasma-dataengine-geolocation.json")
 
 #include "geolocation.moc"

@@ -20,13 +20,13 @@
 #ifndef MULTIPLEXER_H
 #define MULTIPLEXER_H
 
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 
 #include "playercontainer.h"
 
 #include <QWeakPointer>
 
-class Multiplexer : public Plasma::DataContainer
+class Multiplexer : public Plasma5Support::DataContainer
 {
     Q_OBJECT
 
@@ -43,12 +43,12 @@ Q_SIGNALS:
     void activePlayerChanged(PlayerContainer *container);
 
 private Q_SLOTS:
-    void playerUpdated(const QString &name, const Plasma::DataEngine::Data &data);
+    void playerUpdated(const QString &name, const Plasma5Support::DataEngine::Data &data);
 
 private:
     void evaluatePlayer(PlayerContainer *container);
     void setBestActive();
-    void replaceData(const Plasma::DataEngine::Data &data);
+    void replaceData(const Plasma5Support::DataEngine::Data &data);
     PlayerContainer *firstPlayerFromHash(const QHash<QString, PlayerContainer *> &hash, PlayerContainer **proxyCandidate) const;
 
     QString m_activeName;

@@ -32,7 +32,7 @@
 using namespace NotificationManager;
 
 KuiserverEngine::KuiserverEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     init();
 }
@@ -51,7 +51,7 @@ uint KuiserverEngine::jobId(const QString &sourceName)
     return sourceName.midRef(4 /*length of Job + space*/).toUInt();
 }
 
-Plasma::Service *KuiserverEngine::serviceForSource(const QString &source)
+Plasma5Support::Service *KuiserverEngine::serviceForSource(const QString &source)
 {
     const uint id = jobId(source);
     if (!id) {
@@ -269,6 +269,6 @@ void KuiserverEngine::updateEta(Job *job)
     setData(source, QStringLiteral("eta"), remaining / job->speed());
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(kuiserver, KuiserverEngine, "plasma-dataengine-applicationjobs.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(kuiserver, KuiserverEngine, "plasma-dataengine-applicationjobs.json")
 
 #include "kuiserverengine.moc"

@@ -19,7 +19,7 @@ target_link_libraries(plasma_engine_notifications
     KF5::IconThemes
     KF5::KIOCore
     KF5::Notifications
-    KF5::Plasma
+    KF5::Plasma5Support
     KF5::Service
     KF5::NotifyConfig
     PW::LibNotificationManager
@@ -29,4 +29,4 @@ kcoreaddons_desktop_to_json(plasma_engine_notifications plasma-dataengine-notifi
 
 install(TARGETS plasma_engine_notifications DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-notifications.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
-install(FILES notifications.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
+install(FILES notifications.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)

@@ -20,12 +20,12 @@
 #define POWERMANAGEMENTJOB_H
 
 // plasma
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/ServiceJob>
 
 class SessionManagement;
 class QDBusPendingCall;
 
-class PowerManagementJob : public Plasma::ServiceJob
+class PowerManagementJob : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 

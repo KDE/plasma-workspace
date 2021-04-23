@@ -151,7 +151,7 @@ Comment[zh_TW]=時區的日期和時間
 Type=Service
 Icon=preferences-system-time
 
-X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-ServiceTypes=Plasma5Support/DataEngine
 X-KDE-Library=plasma_engine_time
 
 X-KDE-PluginInfo-Author=Aaron Seigo

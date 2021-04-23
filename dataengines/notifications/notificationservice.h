@@ -19,11 +19,11 @@
 #ifndef NOTIFICATIONSERVICE_H
 #define NOTIFICATIONSERVICE_H
 
-#include <Plasma/Service>
+#include <Plasma5Support/Service>
 
 class NotificationsEngine;
 
-class NotificationService : public Plasma::Service
+class NotificationService : public Plasma5Support::Service
 {
     Q_OBJECT
 
@@ -31,7 +31,7 @@ public:
     NotificationService(NotificationsEngine *parent, const QString &source);
 
 protected:
-    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+    Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
     NotificationsEngine *m_notificationEngine;

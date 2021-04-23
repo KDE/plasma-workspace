@@ -23,7 +23,7 @@
 #include "statusnotifieritemjob.h"
 
 StatusNotifierItemService::StatusNotifierItemService(StatusNotifierItemSource *source)
-    : Plasma::Service(source)
+    : Plasma5Support::Service(source)
     , m_source(source)
 {
     setName(QStringLiteral("statusnotifieritem"));
@@ -33,7 +33,7 @@ StatusNotifierItemService::~StatusNotifierItemService()
 {
 }
 
-Plasma::ServiceJob *StatusNotifierItemService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
+Plasma5Support::ServiceJob *StatusNotifierItemService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
     return new StatusNotifierItemJob(m_source, operation, parameters, this);
 }

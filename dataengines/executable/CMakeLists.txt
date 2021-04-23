@@ -5,7 +5,7 @@ set(executable_engine_SRCS
 add_library(plasma_engine_executable MODULE ${executable_engine_SRCS})
 
 target_link_libraries(plasma_engine_executable
-    KF5::Plasma
+    KF5::Plasma5Support
     KF5::Service
     KF5::CoreAddons
 )

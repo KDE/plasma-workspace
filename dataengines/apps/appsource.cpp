@@ -23,7 +23,7 @@
 #include <QDebug>
 
 AppSource::AppSource(KServiceGroup::Ptr group, QObject *parent)
-    : Plasma::DataContainer(parent)
+    : Plasma5Support::DataContainer(parent)
     , m_group(group)
     , m_app()
     , m_isApp(false)
@@ -34,7 +34,7 @@ AppSource::AppSource(KServiceGroup::Ptr group, QObject *parent)
 }
 
 AppSource::AppSource(KService::Ptr app, QObject *parent)
-    : Plasma::DataContainer(parent)
+    : Plasma5Support::DataContainer(parent)
     , m_group()
     , m_app(app)
     , m_isApp(true)
@@ -48,7 +48,7 @@ AppSource::~AppSource()
 {
 }
 
-Plasma::Service *AppSource::createService()
+Plasma5Support::Service *AppSource::createService()
 {
     return new AppService(this);
 }

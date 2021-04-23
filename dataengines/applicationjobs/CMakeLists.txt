@@ -12,7 +12,7 @@ target_link_libraries(plasma_engine_applicationjobs
   KF5::CoreAddons
   KF5::I18n
   KF5::KIOCore
-  KF5::Plasma
+  KF5::Plasma5Support
   KF5::Service
   PW::LibNotificationManager
 )
@@ -21,4 +21,4 @@ kcoreaddons_desktop_to_json(plasma_engine_applicationjobs plasma-dataengine-appl
 
 install(TARGETS plasma_engine_applicationjobs DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-applicationjobs.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
-install(FILES applicationjobs.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
+install(FILES applicationjobs.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)

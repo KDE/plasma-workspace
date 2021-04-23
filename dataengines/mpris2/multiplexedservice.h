@@ -19,7 +19,7 @@
 #ifndef MULTIPLEXEDSERVICE_H
 #define MULTIPLEXEDSERVICE_H
 
-#include <Plasma/Service>
+#include <Plasma5Support/Service>
 
 #include "playercontrol.h"
 #include <QWeakPointer>
@@ -28,7 +28,7 @@ class Multiplexer;
 class PlayerControl;
 class KActionCollection;
 
-class MultiplexedService : public Plasma::Service
+class MultiplexedService : public Plasma5Support::Service
 {
     Q_OBJECT
 
@@ -36,7 +36,7 @@ public:
     explicit MultiplexedService(Multiplexer *multiplexer, QObject *parent = nullptr);
 
 protected:
-    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+    Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 public Q_SLOTS:
     void enableGlobalShortcuts();

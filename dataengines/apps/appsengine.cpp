@@ -22,7 +22,7 @@
 #include <KSycoca>
 
 AppsEngine::AppsEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     Q_UNUSED(args);
     init();
@@ -46,20 +46,20 @@ void AppsEngine::sycocaChanged(const QStringList &changes)
     }
 }
 
-Plasma::Service *AppsEngine::serviceForSource(const QString &name)
+Plasma5Support::Service *AppsEngine::serviceForSource(const QString &name)
 {
     AppSource *source = dynamic_cast<AppSource *>(containerForSource(name));
     // if source does not exist, return null service
     if (!source) {
-        return Plasma::DataEngine::serviceForSource(name);
+        return Plasma5Support::DataEngine::serviceForSource(name);
     }
 
     // if source represents a group or something, return null service
     if (!source->isApp()) {
-        return Plasma::DataEngine::serviceForSource(name);
+        return Plasma5Support::DataEngine::serviceForSource(name);
     }
     // if source represent a proper app, return real service
-    Plasma::Service *service = source->createService();
+    Plasma5Support::Service *service = source->createService();
     service->setParent(this);
     return service;
 }
@@ -88,6 +88,6 @@ void AppsEngine::addApp(KService::Ptr app)
     addSource(appSource);
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(apps, AppsEngine, "plasma-dataengine-apps.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(apps, AppsEngine, "plasma-dataengine-apps.json")
 
 #include "appsengine.moc"

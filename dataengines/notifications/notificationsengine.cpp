@@ -30,8 +30,8 @@
 #include <QGuiApplication>
 #include <klocalizedstring.h>
 
-#include <Plasma/DataContainer>
-#include <Plasma/Service>
+#include <Plasma5Support/DataContainer>
+#include <Plasma5Support/Service>
 
 #include <QImage>
 
@@ -40,7 +40,7 @@
 using namespace NotificationManager;
 
 NotificationsEngine::NotificationsEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     init();
 }
@@ -119,7 +119,7 @@ void NotificationsEngine::notificationAdded(const Notification &notification)
 
     const QString source = QStringLiteral("notification %1").arg(id);
 
-    Plasma::DataEngine::Data notificationData;
+    Plasma5Support::DataEngine::Data notificationData;
     notificationData.insert(QStringLiteral("id"), QString::number(id));
     notificationData.insert(QStringLiteral("eventId"), eventId);
     notificationData.insert(QStringLiteral("appName"), notification.applicationName());
@@ -196,7 +196,7 @@ void NotificationsEngine::removeNotification(uint id, uint closeReason)
     }
 }
 
-Plasma::Service *NotificationsEngine::serviceForSource(const QString &source)
+Plasma5Support::Service *NotificationsEngine::serviceForSource(const QString &source)
 {
     return new NotificationService(this, source);
 }
@@ -246,6 +246,6 @@ QSharedPointer<NotificationInhibiton> NotificationsEngine::createInhibition(cons
     return rc;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(notifications, NotificationsEngine, "plasma-dataengine-notifications.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(notifications, NotificationsEngine, "plasma-dataengine-notifications.json")
 
 #include "notificationsengine.moc"

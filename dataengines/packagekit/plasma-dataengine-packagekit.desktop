@@ -104,7 +104,7 @@ Comment[zh_TW]=PackageKit 資料引擎
 Icon=package-x-generic
 
 Type=Service
-X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-ServiceTypes=Plasma5Support/DataEngine
 X-KDE-Library=plasma_engine_packagekit
 
 X-KDE-PluginInfo-Author=Gregor Taetzner

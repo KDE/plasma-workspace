@@ -23,7 +23,7 @@
 #include <klocalizedstring.h>
 
 KeyStatesEngine::KeyStatesEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     m_mods.insert(Qt::Key_Shift, I18N_NOOP("Shift"));
     m_mods.insert(Qt::Key_Control, I18N_NOOP("Ctrl"));
@@ -78,7 +78,7 @@ void KeyStatesEngine::init()
     connect(&m_keyInfo, &KModifierKeyInfo::keyRemoved, this, &KeyStatesEngine::keyRemoved);
 }
 
-Plasma::Service *KeyStatesEngine::serviceForSource(const QString &source)
+Plasma5Support::Service *KeyStatesEngine::serviceForSource(const QString &source)
 {
     QMap<Qt::Key, QString>::const_iterator it;
     QMap<Qt::Key, QString>::const_iterator end = m_mods.constEnd();
@@ -88,7 +88,7 @@ Plasma::Service *KeyStatesEngine::serviceForSource(const QString &source)
         }
     }
 
-    return Plasma::DataEngine::serviceForSource(source);
+    return Plasma5Support::DataEngine::serviceForSource(source);
 }
 
 void KeyStatesEngine::keyPressed(Qt::Key key, bool state)
@@ -137,6 +137,6 @@ void KeyStatesEngine::keyRemoved(Qt::Key key)
     }
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(keystate, KeyStatesEngine, "plasma-dataengine-keystate.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(keystate, KeyStatesEngine, "plasma-dataengine-keystate.json")
 
 #include "keystate.moc"

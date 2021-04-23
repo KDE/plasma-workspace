@@ -16,7 +16,7 @@ add_library(plasma_engine_time MODULE ${time_engine_SRCS})
 target_link_libraries(plasma_engine_time
     Qt::DBus
     KF5::Solid
-    KF5::Plasma
+    KF5::Plasma5Support
     KF5::I18n
     KF5::Service
 )

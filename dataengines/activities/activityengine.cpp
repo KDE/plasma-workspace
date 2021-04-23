@@ -30,7 +30,7 @@
 #define ACTIVITYRANKING_OBJECT "/ActivityRanking"
 
 ActivityEngine::ActivityEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     Q_UNUSED(args);
     init();
@@ -245,7 +245,7 @@ void ActivityEngine::activityStateChanged()
     setData(QStringLiteral("Status"), QStringLiteral("Running"), m_runningActivities);
 }
 
-Plasma::Service *ActivityEngine::serviceForSource(const QString &source)
+Plasma5Support::Service *ActivityEngine::serviceForSource(const QString &source)
 {
     // FIXME validate the name
     ActivityService *service = new ActivityService(m_activityController, source);
@@ -253,6 +253,6 @@ Plasma::Service *ActivityEngine::serviceForSource(const QString &source)
     return service;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(activities, ActivityEngine, "plasma-dataengine-activities.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(activities, ActivityEngine, "plasma-dataengine-activities.json")
 
 #include "activityengine.moc"

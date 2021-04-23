@@ -5,7 +5,7 @@ set(favicons_engine_SRCS
 
 add_library(plasma_engine_favicons MODULE ${favicons_engine_SRCS} )
 target_link_libraries(plasma_engine_favicons
-    KF5::Plasma
+    KF5::Plasma5Support
     KF5::KIOCore
     Qt::Gui
 )

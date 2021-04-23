@@ -668,7 +668,7 @@ void WetterComIon::updateWeather(const QString &source, bool parseError)
 
     const WeatherData &weatherData = m_weatherData[source];
 
-    Plasma::DataEngine::Data data;
+    Plasma5Support::DataEngine::Data data;
     data.insert(QStringLiteral("Place"), placeInfo.displayName);
 
     if (!parseError && !weatherData.forecasts.isEmpty()) {
@@ -790,6 +790,6 @@ int WeatherData::ForecastPeriod::getMinTemp(const QVector<WeatherData::ForecastI
     return result;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(wettercom, WetterComIon, "ion-wettercom.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(wettercom, WetterComIon, "ion-wettercom.json")
 
 #include "ion_wettercom.moc"

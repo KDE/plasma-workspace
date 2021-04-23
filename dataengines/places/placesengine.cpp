@@ -26,7 +26,7 @@
 #include "placesproxymodel.h"
 
 PlacesEngine::PlacesEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
 {
     m_placesModel = new KFilePlacesModel(this);
     m_proxyModel = new PlacesProxyModel(this, m_placesModel);
@@ -37,7 +37,7 @@ PlacesEngine::~PlacesEngine()
 {
 }
 
-Plasma::Service *PlacesEngine::serviceForSource(const QString &source)
+Plasma5Support::Service *PlacesEngine::serviceForSource(const QString &source)
 {
     if (source == QLatin1String("places")) {
         return new PlaceService(this, m_placesModel);
@@ -46,6 +46,6 @@ Plasma::Service *PlacesEngine::serviceForSource(const QString &source)
     return DataEngine::serviceForSource(source);
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(places, PlacesEngine, "plasma-dataengine-places.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(places, PlacesEngine, "plasma-dataengine-places.json")
 
 #include "placesengine.moc"

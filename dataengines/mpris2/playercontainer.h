@@ -20,7 +20,7 @@
 #ifndef PLAYERCONTAINER_H
 #define PLAYERCONTAINER_H
 
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 #include <QFlags>
 
 class OrgFreedesktopDBusPropertiesInterface;
@@ -28,7 +28,7 @@ class OrgMprisMediaPlayer2Interface;
 class OrgMprisMediaPlayer2PlayerInterface;
 class QDBusPendingCallWatcher;
 
-class PlayerContainer : public Plasma::DataContainer
+class PlayerContainer : public Plasma5Support::DataContainer
 {
     Q_OBJECT
 

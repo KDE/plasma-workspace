@@ -135,7 +135,7 @@ Comment[x-test]=xxApplication job updates (via kuiserver)xx
 Comment[zh_CN]=提供程序任务更新信息(通过 kuiserver)
 Comment[zh_TW]=應用程式工作更新（透過 kuiserver）
 Type=Service
-X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-ServiceTypes=Plasma5Support/DataEngine
 Icon=tool-animator
 X-KDE-Library=plasma_engine_applicationjobs
 

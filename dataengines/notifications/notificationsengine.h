@@ -20,7 +20,7 @@
 #ifndef NOTIFICATIONSENGINE_H
 #define NOTIFICATIONSENGINE_H
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 #include <QHash>
 #include <QSet>
 
@@ -40,7 +40,7 @@ typedef QSharedPointer<NotificationInhibiton> NotificationInhibitonPtr;
  *  Engine which provides data sources for notifications.
  *  Each notification is represented by one source.
  */
-class NotificationsEngine : public Plasma::DataEngine
+class NotificationsEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 
@@ -63,7 +63,7 @@ public:
                 const QVariantMap &hints,
                 int timeout);
 
-    Plasma::Service *serviceForSource(const QString &source) override;
+    Plasma5Support::Service *serviceForSource(const QString &source) override;
 
     int createNotification(const QString &appName,
                            const QString &appIcon,

@@ -19,11 +19,11 @@
 #ifndef HOTPLUG_SERVICE_H
 #define HOTPLUG_SERVICE_H
 
-#include <Plasma/Service>
+#include <Plasma5Support/Service>
 
 class HotplugEngine;
 
-class HotplugService : public Plasma::Service
+class HotplugService : public Plasma5Support::Service
 {
     Q_OBJECT
 
@@ -31,7 +31,7 @@ public:
     HotplugService(HotplugEngine *parent, const QString &source);
 
 protected:
-    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+    Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
     HotplugEngine *m_engine;

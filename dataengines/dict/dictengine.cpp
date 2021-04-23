@@ -25,10 +25,10 @@
 #include <QTcpSocket>
 #include <QUrl>
 
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 
 DictEngine::DictEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
     , m_tcpSocket(nullptr)
 {
     Q_UNUSED(args)
@@ -256,6 +256,6 @@ bool DictEngine::sourceRequestEvent(const QString &query)
     return true;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(dict, DictEngine, "plasma-dataengine-dict.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(dict, DictEngine, "plasma-dataengine-dict.json")
 
 #include "dictengine.moc"

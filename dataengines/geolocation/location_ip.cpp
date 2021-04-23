@@ -130,7 +130,7 @@ private:
     QByteArray m_countryPayload;
     bool m_countryResolved = false;
     bool m_geoLocationResolved = false;
-    Plasma::DataEngine::Data m_data;
+    Plasma5Support::DataEngine::Data m_data;
 };
 
 Ip::Ip(QObject *parent, const QVariantList &args)
@@ -175,7 +175,7 @@ void Ip::update()
 {
     d->clear();
     if (!NetworkManager::isNetworkingEnabled()) {
-        setData(Plasma::DataEngine::Data());
+        setData(Plasma5Support::DataEngine::Data());
         return;
     }
     const QJsonArray wifiAccessPoints = accessPoints();

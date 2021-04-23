@@ -22,7 +22,7 @@
 #include "appjob.h"
 
 AppService::AppService(AppSource *source)
-    : Plasma::Service(source)
+    : Plasma5Support::Service(source)
     , m_source(source)
 {
     setName(QStringLiteral("apps"));
@@ -32,7 +32,7 @@ AppService::~AppService()
 {
 }
 
-Plasma::ServiceJob *AppService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
+Plasma5Support::ServiceJob *AppService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
     return new AppJob(m_source, operation, parameters, this);
 }

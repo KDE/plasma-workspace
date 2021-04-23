@@ -25,7 +25,7 @@
 #endif
 
 MouseEngine::MouseEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
     , timerId(0)
 #ifdef HAVE_XFIXES
     , handler(nullptr)
@@ -89,6 +89,6 @@ void MouseEngine::updateCursorName(const QString &name)
     setData(QLatin1String("Name"), QVariant(name));
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(mouse, MouseEngine, "plasma-dataengine-mouse.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(mouse, MouseEngine, "plasma-dataengine-mouse.json")
 
 #include "mouseengine.moc"

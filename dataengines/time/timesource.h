@@ -20,13 +20,13 @@
 #ifndef TIMESOURCE_H
 #define TIMESOURCE_H
 
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 #include <QTimeZone>
 
 class Sun;
 class Moon;
 
-class TimeSource : public Plasma::DataContainer
+class TimeSource : public Plasma5Support::DataContainer
 {
     Q_OBJECT
 

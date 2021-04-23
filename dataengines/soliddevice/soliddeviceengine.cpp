@@ -29,7 +29,7 @@
 #include <QApplication>
 #include <QDebug>
 
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 
 // TODO: implement in libsolid2
 namespace
@@ -46,7 +46,7 @@ template<class DevIface> DevIface *getAncestorAs(const Solid::Device &device)
 }
 
 SolidDeviceEngine::SolidDeviceEngine(QObject *parent, const QVariantList &args)
-    : Plasma::DataEngine(parent, args)
+    : Plasma5Support::DataEngine(parent, args)
     , m_temperature(nullptr)
     , m_notifier(nullptr)
 {
@@ -55,14 +55,14 @@ SolidDeviceEngine::SolidDeviceEngine(QObject *parent, const QVariantList &args)
 
     listenForNewDevices();
     setMinimumPollingInterval(1000);
-    connect(this, &Plasma::DataEngine::sourceRemoved, this, &SolidDeviceEngine::sourceWasRemoved);
+    connect(this, &Plasma5Support::DataEngine::sourceRemoved, this, &SolidDeviceEngine::sourceWasRemoved);
 }
 
 SolidDeviceEngine::~SolidDeviceEngine()
 {
 }
 
-Plasma::Service *SolidDeviceEngine::serviceForSource(const QString &source)
+Plasma5Support::Service *SolidDeviceEngine::serviceForSource(const QString &source)
 {
     return new SolidDeviceService(this, source);
 }
@@ -682,6 +682,6 @@ void SolidDeviceEngine::deviceChanged(const QString &udi, const QString &propert
     updateSourceEvent(udi);
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(soliddevice, SolidDeviceEngine, "plasma-dataengine-soliddevice.json")
+K_EXPORT_PLASMA5SUPPORT_DATAENGINE_WITH_JSON(soliddevice, SolidDeviceEngine, "plasma-dataengine-soliddevice.json")
 
 #include "soliddeviceengine.moc"

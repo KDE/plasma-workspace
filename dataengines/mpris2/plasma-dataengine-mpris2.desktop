@@ -103,7 +103,7 @@ Comment[x-test]=xxProvides information from and control over media players via M
 Comment[zh_CN]=通过 MPRIS2 获取信息并控制播放器
 Comment[zh_TW]=透過 MPRIS2 取得媒體播放器的資訊並控制
 
-X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-ServiceTypes=Plasma5Support/DataEngine
 Type=Service
 Icon=applications-multimedia
 X-KDE-Library=plasma_engine_mpris2

@@ -20,11 +20,11 @@
 #ifndef PLACESERVICE_H
 #define PLACESERVICE_H
 
-#include <Plasma/Service>
+#include <Plasma5Support/Service>
 
 #include "placesengine.h"
 
-class PlaceService : public Plasma::Service
+class PlaceService : public Plasma5Support::Service
 {
     Q_OBJECT
 
@@ -32,7 +32,7 @@ public:
     PlaceService(QObject *parent, KFilePlacesModel *model);
 
 protected:
-    Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
+    Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
     KFilePlacesModel *m_model;

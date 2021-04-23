@@ -37,7 +37,7 @@ include(ECMQMLModules)
 include(ECMGenerateExportHeader)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-                    Plasma DocTools Runner Notifications NotifyConfig Su NewStuff Wallet IdleTime
+                    Plasma Plasma5Support DocTools Runner Notifications NotifyConfig Su NewStuff Wallet IdleTime
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
                     CoreAddons People ActivitiesStats Activities KIO Prison PlasmaQuick Package
                     GuiAddons Archive ItemModels IconThemes UnitConversion ItemModels Init)

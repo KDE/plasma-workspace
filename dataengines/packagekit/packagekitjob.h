@@ -21,9 +21,9 @@
 #ifndef PACKAGEKITJOB_H
 #define PACKAGEKITJOB_H
 
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/ServiceJob>
 
-class PackagekitJob : public Plasma::ServiceJob
+class PackagekitJob : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 public:

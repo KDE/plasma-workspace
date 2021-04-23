@@ -117,7 +117,7 @@ void Multiplexer::addPlayer(PlayerContainer *container)
 {
     evaluatePlayer(container);
 
-    connect(container, &Plasma::DataContainer::dataUpdated, this, &Multiplexer::playerUpdated);
+    connect(container, &Plasma5Support::DataContainer::dataUpdated, this, &Multiplexer::playerUpdated);
 }
 
 void Multiplexer::removePlayer(const QString &name)
@@ -156,7 +156,7 @@ PlayerContainer *Multiplexer::activePlayer() const
     return container;
 }
 
-void Multiplexer::playerUpdated(const QString &name, const Plasma::DataEngine::Data &newData)
+void Multiplexer::playerUpdated(const QString &name, const Plasma5Support::DataEngine::Data &newData)
 {
     Q_UNUSED(name);
     Q_UNUSED(newData);
@@ -229,11 +229,11 @@ void Multiplexer::setBestActive()
     emit activePlayerChanged(container);
 }
 
-void Multiplexer::replaceData(const Plasma::DataEngine::Data &data)
+void Multiplexer::replaceData(const Plasma5Support::DataEngine::Data &data)
 {
     removeAllData();
 
-    Plasma::DataEngine::Data::const_iterator it = data.constBegin();
+    Plasma5Support::DataEngine::Data::const_iterator it = data.constBegin();
     while (it != data.constEnd()) {
         setData(it.key(), it.value());
         ++it;

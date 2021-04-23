@@ -20,10 +20,10 @@
 #define EXECUTABLE_DATAENGINE_H
 
 #include <KProcess>
-#include <Plasma/DataContainer>
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataContainer>
+#include <Plasma5Support/DataEngine>
 
-class ExecutableContainer : public Plasma::DataContainer
+class ExecutableContainer : public Plasma5Support::DataContainer
 {
     Q_OBJECT
 public:
@@ -38,7 +38,7 @@ private:
     KProcess *m_process;
 };
 
-class ExecutableEngine : public Plasma::DataEngine
+class ExecutableEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 public:

@@ -22,7 +22,7 @@
 #ifndef STATUSNOTIFIERITEMSOURCE_H
 #define STATUSNOTIFIERITEMSOURCE_H
 
-#include <Plasma/DataContainer>
+#include <Plasma5Support/DataContainer>
 #include <QDBusPendingCallWatcher>
 #include <QMenu>
 #include <QString>
@@ -33,14 +33,14 @@ class KIconLoader;
 
 class DBusMenuImporter;
 
-class StatusNotifierItemSource : public Plasma::DataContainer
+class StatusNotifierItemSource : public Plasma5Support::DataContainer
 {
     Q_OBJECT
 
 public:
     StatusNotifierItemSource(const QString &service, QObject *parent);
     ~StatusNotifierItemSource() override;
-    Plasma::Service *createService();
+    Plasma5Support::Service *createService();
 
     void activate(int x, int y);
     void secondaryActivate(int x, int y);

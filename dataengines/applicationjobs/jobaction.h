@@ -23,7 +23,7 @@
 
 #include <QPointer>
 
-#include <plasma/servicejob.h>
+#include <plasma5support/servicejob.h>
 
 #include "job.h"
 
@@ -32,7 +32,7 @@ namespace NotificationManager
 class Job;
 }
 
-class JobAction : public Plasma::ServiceJob
+class JobAction : public Plasma5Support::ServiceJob
 {
     Q_OBJECT
 

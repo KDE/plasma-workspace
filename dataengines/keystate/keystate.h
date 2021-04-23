@@ -20,7 +20,7 @@
 #ifndef KEYSTATEENGINE_H
 #define KEYSTATEENGINE_H
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 #include <kmodifierkeyinfo.h>
 
@@ -28,7 +28,7 @@
  * This engine provides the current state of the keyboard modifiers
  * and mouse buttons, primarily useful for accessibility feature support.
  */
-class KeyStatesEngine : public Plasma::DataEngine
+class KeyStatesEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 
@@ -37,7 +37,7 @@ public:
     ~KeyStatesEngine() override;
 
     void init();
-    Plasma::Service *serviceForSource(const QString &source) override;
+    Plasma5Support::Service *serviceForSource(const QString &source) override;
 
 protected:
     // bool sourceRequestEvent(const QString &name);

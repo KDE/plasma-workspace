@@ -20,12 +20,12 @@
 #ifndef POWERMANAGEMENTSERVICE_H
 #define POWERMANAGEMENTSERVICE_H
 
-#include <Plasma/Service>
-#include <Plasma/ServiceJob>
+#include <Plasma5Support/Service>
+#include <Plasma5Support/ServiceJob>
 
-using namespace Plasma;
+using namespace Plasma5Support;
 
-class PowerManagementService : public Plasma::Service
+class PowerManagementService : public Plasma5Support::Service
 {
     Q_OBJECT
 

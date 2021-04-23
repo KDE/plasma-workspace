@@ -148,7 +148,7 @@ Comment[zh_TW]=執行可執行資料引擎
 Icon=application-x-executable-script
 
 Type=Service
-X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-ServiceTypes=Plasma5Support/DataEngine
 X-KDE-Library=plasma_engine_executable
 
 X-KDE-PluginInfo-Author=

@@ -125,7 +125,7 @@ Comment[zh_TW]=Plasma 活動的資訊
 Type=Service
 Icon=preferences-desktop-activities
 
-X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-ServiceTypes=Plasma5Support/DataEngine
 X-KDE-Library=plasma_engine_activities
 X-Plasma-EngineName=activities
 X-KDE-PluginInfo-Author=Chani Armitage

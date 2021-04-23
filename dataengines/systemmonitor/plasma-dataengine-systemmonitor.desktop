@@ -157,7 +157,7 @@ Comment[zh_TW]=系統狀態資訊
 Icon=utilities-system-monitor
 
 Type=Service
-X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-ServiceTypes=Plasma5Support/DataEngine
 X-KDE-Library=plasma_engine_systemmonitor
 
 X-KDE-PluginInfo-Author=

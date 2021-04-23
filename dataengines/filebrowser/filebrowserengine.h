@@ -20,14 +20,14 @@
 #ifndef FILEBROWSERENGINE_H
 #define FILEBROWSERENGINE_H
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 class KDirWatch;
 
 /**
  * This class evaluates the basic expressions given in the interface.
  */
-class FileBrowserEngine : public Plasma::DataEngine
+class FileBrowserEngine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 

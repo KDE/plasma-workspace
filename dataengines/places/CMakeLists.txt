@@ -11,7 +11,7 @@ set(CMAKE_AUTOMOC TRUE)
 add_library(plasma_engine_places MODULE ${places_engine_SRCS})
 
 target_link_libraries(plasma_engine_places
-    KF5::Plasma
+    KF5::Plasma5Support
     KF5::KIOCore
     KF5::KIOFileWidgets
     KF5::Solid
@@ -24,5 +24,5 @@ install(TARGETS plasma_engine_places
 install(FILES plasma-dataengine-places.desktop
         DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 install(FILES org.kde.places.operations
-        DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services )
+        DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services )
 

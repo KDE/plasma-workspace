@@ -19,7 +19,7 @@
 #ifndef MPRIS2ENGINE_H
 #define MPRIS2ENGINE_H
 
-#include <Plasma/DataEngine>
+#include <Plasma5Support/DataEngine>
 
 #include <QWeakPointer>
 
@@ -30,14 +30,14 @@ class Multiplexer;
 /**
  * The MPRIS2 data engine.
  */
-class Mpris2Engine : public Plasma::DataEngine
+class Mpris2Engine : public Plasma5Support::DataEngine
 {
     Q_OBJECT
 
 public:
     Mpris2Engine(QObject *parent, const QVariantList &args);
 
-    Plasma::Service *serviceForSource(const QString &source) override;
+    Plasma5Support::Service *serviceForSource(const QString &source) override;
     QStringList sources() const override;
 
 protected:

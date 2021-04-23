@@ -31,7 +31,7 @@ add_library(plasma_engine_statusnotifieritem MODULE ${statusnotifieritem_engine_
 target_link_libraries(plasma_engine_statusnotifieritem
     Qt::DBus
     KF5::Service
-    KF5::Plasma
+    KF5::Plasma5Support
     KF5::IconThemes
     dbusmenuqt
 )
@@ -40,5 +40,5 @@ kcoreaddons_desktop_to_json(plasma_engine_statusnotifieritem plasma-dataengine-s
 
 install(TARGETS plasma_engine_statusnotifieritem DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-statusnotifieritem.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-install(FILES statusnotifieritem.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
+install(FILES statusnotifieritem.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)
 
