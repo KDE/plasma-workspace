@@ -149,7 +149,7 @@ Item {
         });
     }
 
-    function action_powerdevilkcm() {
+    function action_configure() {
         KCMShell.openSystemSettings("powerdevilprofilesconfig");
     }
 
@@ -157,18 +157,30 @@ Item {
         KCMShell.openInfoCenter("kcm_energyinfo");
     }
 
+    function action_showPercentage() {
+        if (!plasmoid.configuration.showPercentage) {
+            plasmoid.configuration.showPercentage = true;
+        } else {
+            plasmoid.configuration.showPercentage = false;
+        }
+    }
+
     Component.onCompleted: {
         Logic.updateBrightness(batterymonitor, pmSource);
         Logic.updateInhibitions(batterymonitor, pmSource)
 
         if (batterymonitor.kcmEnergyInformationAuthorized) {
-            plasmoid.setAction("energyinformationkcm", i18n("&Show Energy Information..."), "battery");
+            plasmoid.setAction("energyinformationkcm", i18n("&Show Energy Information..."), "documentinfo");
         }
+        plasmoid.setAction("showPercentage", i18n("Show Battery Percentage on Icon"), "format-number-percent");
+        plasmoid.action("showPercentage").checkable = true;
+        plasmoid.action("showPercentage").checked = Qt.binding(() => {return plasmoid.configuration.showPercentage;});
+
         if (batterymonitor.kcmAuthorized) {
-            plasmoid.setAction("powerdevilkcm", i18n("&Configure Power Saving..."), "preferences-system-power-management");
+            plasmoid.removeAction("configure");
+            plasmoid.setAction("configure", i18n("&Configure Energy Saving..."), "configure", "alt+d, s");
         }
     }
-
 
     property QtObject pmSource: PlasmaCore.DataSource {
         id: pmSource
