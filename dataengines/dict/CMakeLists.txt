@@ -15,5 +15,5 @@ target_link_libraries (plasma_engine_dict
 
 kcoreaddons_desktop_to_json(plasma_engine_dict plasma-dataengine-dict.desktop)
 
-install(TARGETS plasma_engine_dict DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+install(TARGETS plasma_engine_dict DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
 install(FILES plasma-dataengine-dict.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

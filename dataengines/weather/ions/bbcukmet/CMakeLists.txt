@@ -17,5 +17,5 @@ kcoreaddons_desktop_to_json(ion_bbcukmet ion-bbcukmet.desktop SERVICE_TYPES plas
 
 install (FILES ion-bbcukmet.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
-install (TARGETS ion_bbcukmet DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+install (TARGETS ion_bbcukmet DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
 

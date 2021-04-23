@@ -17,5 +17,5 @@ kcoreaddons_desktop_to_json(ion_envcan ion-envcan.desktop SERVICE_TYPES plasma-d
 
 install (FILES ion-envcan.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
-install (TARGETS ion_envcan DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+install (TARGETS ion_envcan DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
 

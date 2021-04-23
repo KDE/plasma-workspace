@@ -23,5 +23,5 @@ target_link_libraries(plasma_engine_time
 
 kcoreaddons_desktop_to_json(plasma_engine_time plasma-dataengine-time.desktop)
 
-install(TARGETS plasma_engine_time DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+install(TARGETS plasma_engine_time DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
 install(FILES plasma-dataengine-time.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )

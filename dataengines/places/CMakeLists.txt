@@ -20,7 +20,7 @@ target_link_libraries(plasma_engine_places
 kcoreaddons_desktop_to_json(plasma_engine_places plasma-dataengine-places.desktop)
 
 install(TARGETS plasma_engine_places
-        DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+        DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
 install(FILES plasma-dataengine-places.desktop
         DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 install(FILES org.kde.places.operations

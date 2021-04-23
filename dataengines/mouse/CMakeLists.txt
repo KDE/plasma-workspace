@@ -23,6 +23,6 @@ endif ()
 
 kcoreaddons_desktop_to_json(plasma_engine_mouse plasma-dataengine-mouse.desktop)
 
-install(TARGETS plasma_engine_mouse DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
+install(TARGETS plasma_engine_mouse DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
 install(FILES plasma-dataengine-mouse.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 
