@@ -692,8 +692,9 @@ void WaylandTasksModel::requestActivities(const QModelIndex &index, const QStrin
     }
 
     auto * const window = d->windows.at(index.row());
-    const auto newActivities = activities.toSet();
-    const auto oldActivities = window->plasmaActivities().toSet();
+    const auto newActivities = QSet(activities.begin(), activities.end());
+    const auto plasmaActivities = window->plasmaActivities();
+    const auto oldActivities = QSet(plasmaActivities.begin(), plasmaActivities.end());
 
     const auto activitiesToAdd = newActivities - oldActivities;
     for (const auto &activity : activitiesToAdd) {
