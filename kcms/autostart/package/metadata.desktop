@@ -2,6 +2,7 @@
 Name=Autostart
 Name[az]=Avtomatik başlama
 Name[ca]=Inici automàtic
+Name[cs]=Automatické spuštění
 Name[de]=Autostart
 Name[es]=Inicio automático
 Name[fr]=Démarrage automatique
@@ -13,6 +14,7 @@ Name[x-test]=xxAutostartxx
 Comment=Automatically Started Applications
 Comment[az]=Avtomatik işə düşən tətbiqlər
 Comment[ca]=Aplicacions iniciades automàticament
+Comment[cs]=Automaticky spouštěné aplikace
 Comment[de]=Automatisch zu startende Anwendungen
 Comment[es]=Aplicaciones que se inician automáticamente
 Comment[fr]=Applications automatiquement démarrées
