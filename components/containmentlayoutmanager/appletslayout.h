@@ -48,11 +48,6 @@ class AppletsLayout : public QQuickItem
 
     Q_PROPERTY(QString configKey READ configKey WRITE setConfigKey NOTIFY configKeyChanged)
 
-    // A config key that can be used as fallback when loading and configKey is not found
-    // Is always a backup of the last used configKey. Useful when the configkey depends
-    // from the screen size and plasma starts on an "unexpected" size
-    Q_PROPERTY(QString fallbackConfigKey READ fallbackConfigKey WRITE setFallbackConfigKey NOTIFY fallbackConfigKeyChanged)
-
     Q_PROPERTY(PlasmaQuick::AppletQuickItem *containment READ containment WRITE setContainment NOTIFY containmentChanged)
 
     Q_PROPERTY(QJSValue acceptsAppletCallback READ acceptsAppletCallback WRITE setAcceptsAppletCallback NOTIFY acceptsAppletCallbackChanged)
@@ -100,22 +95,12 @@ public:
     };
     Q_ENUM(EditModeCondition)
 
-    enum LayoutChange {
-        NoChange = 0,
-        SizeChange = 1,
-        ConfigKeyChange = 2
-    };
-    Q_DECLARE_FLAGS(LayoutChanges, LayoutChange)
-
     AppletsLayout(QQuickItem *parent = nullptr);
     ~AppletsLayout();
 
     // QML setters and getters
     QString configKey() const;
     void setConfigKey(const QString &key);
-
-    QString fallbackConfigKey() const;
-    void setFallbackConfigKey(const QString &key);
 
     PlasmaQuick::AppletQuickItem *containment() const;
     void setContainment(PlasmaQuick::AppletQuickItem *containment);
@@ -175,7 +160,6 @@ Q_SIGNALS:
     void appletRefused(QObject *applet, int x, int y);
 
     void configKeyChanged();
-    void fallbackConfigKeyChanged();
     void containmentChanged();
     void minimumItemWidthChanged();
     void minimumItemHeightChanged();
@@ -210,10 +194,8 @@ private:
     AppletContainer *createContainerForApplet(PlasmaQuick::AppletQuickItem *appletItem);
 
     QString m_configKey;
-    QString m_fallbackConfigKey;
     QTimer *m_saveLayoutTimer;
-    QTimer *m_layoutChangeTimer;
-    LayoutChanges m_layoutChanges = NoChange;
+    QTimer *m_configKeyChangeTimer;
 
     PlasmaQuick::AppletQuickItem *m_containmentItem = nullptr;
     Plasma::Containment *m_containment = nullptr;
@@ -225,6 +207,7 @@ private:
     QPointer<QQuickItem> m_eventManagerToFilter;
 
     QTimer *m_pressAndHoldTimer;
+    QTimer *m_sizeSyncTimer;
 
     QJSValue m_acceptsAppletCallback;
 
@@ -240,7 +223,4 @@ private:
     QPointF m_mouseDownPosition = QPoint(-1, -1);
     bool m_mouseDownWasEditMode = false;
     bool m_editMode = false;
-    bool m_sizeSpecificLayouts = false;
 };
-
-Q_DECLARE_OPERATORS_FOR_FLAGS(AppletsLayout::LayoutChanges)
