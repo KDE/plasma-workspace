@@ -56,6 +56,10 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
      */
     Q_PROPERTY(bool keepCriticalAlwaysOnTop READ keepCriticalAlwaysOnTop WRITE setKeepCriticalAlwaysOnTop NOTIFY settingsChanged)
     /**
+     * Whether to keep normal notifications always on top.
+     */
+    Q_PROPERTY(bool keepNormalAlwaysOnTop READ keepNormalAlwaysOnTop WRITE setKeepNormalAlwaysOnTop NOTIFY settingsChanged)
+    /**
      * Whether to show popups for low priority notifications.
      */
     Q_PROPERTY(bool lowPriorityPopups READ lowPriorityPopups WRITE setLowPriorityPopups NOTIFY settingsChanged)
@@ -265,6 +269,9 @@ public:
 
     bool keepCriticalAlwaysOnTop() const;
     void setKeepCriticalAlwaysOnTop(bool enable);
+
+    bool keepNormalAlwaysOnTop() const;
+    void setKeepNormalAlwaysOnTop(bool enable);
 
     bool lowPriorityPopups() const;
     void setLowPriorityPopups(bool enable);

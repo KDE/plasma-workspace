@@ -375,6 +375,20 @@ void Settings::setCriticalPopupsInDoNotDisturbMode(bool enable)
     d->setDirty(true);
 }
 
+bool Settings::keepNormalAlwaysOnTop() const
+{
+    return d->notificationSettings.normalAlwaysOnTop();
+}
+
+void Settings::setKeepNormalAlwaysOnTop(bool enable)
+{
+    if (this->keepNormalAlwaysOnTop() == enable) {
+        return;
+    }
+    d->notificationSettings.setNormalAlwaysOnTop(enable);
+    d->setDirty(true);
+}
+
 bool Settings::lowPriorityPopups() const
 {
     return d->notificationSettings.lowPriorityPopups();
