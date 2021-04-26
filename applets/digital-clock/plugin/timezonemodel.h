@@ -47,7 +47,7 @@ Q_SIGNALS:
 
 private:
     QString m_filterString;
-    bool m_onlyShowChecked;
+    bool m_onlyShowChecked = false;
     QStringMatcher m_stringMatcher;
 };
 
