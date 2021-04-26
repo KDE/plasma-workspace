@@ -49,8 +49,11 @@ ColumnLayout {
 
     QQC2.ScrollView {
         Layout.fillWidth: true
-        Layout.preferredHeight: Kirigami.Units.gridUnit * 16
+        Layout.fillHeight: true
         Component.onCompleted: background.visible = true // enable border
+
+        // HACK: Hide unnecesary horizontal scrollbar (https://bugreports.qt.io/browse/QTBUG-83890)
+        QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
 
         ListView {
             id: configuredTimezoneList
@@ -127,8 +130,13 @@ ColumnLayout {
 
             Kirigami.PlaceholderMessage {
                 visible: configuredTimezoneList.count === 1
-                anchors.centerIn: parent
-                width: parent.width - (Kirigami.Units.largeSpacing * 12)
+                anchors {
+                    top: parent.verticalCenter // Visual offset for system timezone and header
+                    left: parent.left
+                    right: parent.right
+                    leftMargin: Kirigami.Units.largeSpacing * 6
+                    rightMargin: Kirigami.Units.largeSpacing * 6
+                }
                 text: i18n("Add more time zones to display all of them in the applet's pop-up, or use one of them for the clock itself")
             }
         }
@@ -143,19 +151,23 @@ ColumnLayout {
 
     QQC2.CheckBox {
         id: enableWheelCheckBox
-        visible: configuredTimezoneList.count > 1
+        enabled: configuredTimezoneList.count > 1
         Layout.fillWidth: true
-        Layout.topMargin: Kirigami.Units.largeSpacing * 2
+        Layout.topMargin: Kirigami.Units.largeSpacing
+        Layout.bottomMargin: Kirigami.Units.largeSpacing
         text: i18n("Switch displayed time zone by scrolling over clock applet")
     }
 
-    QQC2.Label {
-        visible: configuredTimezoneList.count > 1
+    Kirigami.Separator {
         Layout.fillWidth: true
-        Layout.topMargin: Kirigami.Units.largeSpacing * 2
+    }
+
+    QQC2.Label {
+        Layout.fillWidth: true
         Layout.leftMargin: Kirigami.Units.largeSpacing * 2
         Layout.rightMargin: Kirigami.Units.largeSpacing * 2
         text: i18n("Note that using a different time zone for the clock does not change the systemwide local time zone. When you travel, switch the local time zone instead.")
+        font: Kirigami.Theme.smallFont
         wrapMode: Text.Wrap
     }
 
@@ -177,9 +189,6 @@ ColumnLayout {
 
         // Need to manually set the parent when using this in a Plasma config dialog
         parent: timeZonesPage.parent
-
-        // It interferes with the search field in the header
-        showCloseButton: false
 
         header: ColumnLayout {
             Layout.preferredWidth: Kirigami.Units.gridUnit * 25
