@@ -195,6 +195,13 @@ bool Osd::init()
         connect(m_osdTimer, &QTimer::timeout, this, &Osd::hideOsd);
     }
 
+    // HACK: Due to timing issue (the plasma shell surface interface being
+    // known to kwin only too late), we're setting a special title to the
+    // OSD windows. This way kwin can pick that up and mark the window type
+    // properly. Especially important for window rules and placement processing
+    // within kwin which takes the wrong decision otherwise.
+    m_osdObject->rootObject()->setProperty("title", "PlasmaShell/OSD");
+
     return true;
 }
 
