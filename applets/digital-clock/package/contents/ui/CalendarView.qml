@@ -25,6 +25,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.private.digitalclock 1.0
 
 // Top-level layout containing:
 // - Left column with world clock and agenda view
@@ -80,18 +81,27 @@ PlasmaExtras.Representation {
                     text: monthView.currentDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
                 }
             }
-            // Heading text
-            PlasmaExtras.Heading {
-                visible: agenda.visible
+            RowLayout {
+                // Heading text
+                PlasmaExtras.Heading {
+                    visible: agenda.visible
 
-                Layout.fillWidth: true
-                Layout.leftMargin: calendar.paddings
+                    Layout.fillWidth: true
+                    Layout.leftMargin: calendar.paddings
 
-                level: 2
+                    level: 2
 
-                text: i18n("Events")
-                maximumLineCount: 1
-                elide: Text.ElideRight
+                    text: i18n("Events")
+                    maximumLineCount: 1
+                    elide: Text.ElideRight
+                }
+                PlasmaComponents3.ToolButton {
+                    visible: agenda.visible && ApplicationIntegration.korganizerInstalled
+                    text: i18nc("@action:button Add event", "Add...")
+                    Layout.rightMargin: calendar.paddings
+                    icon.name: "list-add"
+                    onClicked: ApplicationIntegration.launchKorganizer()
+                }
             }
         }
 

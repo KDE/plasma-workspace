@@ -12,14 +12,18 @@ set(digitalclockplugin_SRCS
     timezonesi18n.cpp
     digitalclockplugin.cpp
     clipboardmenu.cpp
+    applicationintegration.cpp
     )
 
 add_library(digitalclockplugin SHARED ${digitalclockplugin_SRCS})
-target_link_libraries(digitalclockplugin Qt::Core
-                                          Qt::Qml
-                                          Qt::Widgets # for QAction...
-                                          KF5::CoreAddons
-                                          KF5::I18n)
+target_link_libraries(digitalclockplugin
+    PRIVATE
+        Qt::Core
+        Qt::Qml
+        Qt::Widgets # for QAction...
+        KF5::CoreAddons
+        KF5::KIOGui
+        KF5::I18n)
 
 install(TARGETS digitalclockplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/digitalclock)
 
