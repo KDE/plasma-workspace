@@ -34,6 +34,7 @@ target_link_libraries(plasmashellprivateplugin
         KF5::WindowSystem
         KF5::Declarative
         KF5::Activities
+        KF5::TextWidgets
 )
 
 if (KF5TextEditor_FOUND)
