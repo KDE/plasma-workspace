@@ -47,9 +47,11 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
     connect(m_saveLayoutTimer, &QTimer::timeout, this, [this]() {
         // We can't save the layout during bootup, for performance reasons and to avoid race consitions as much as possible, so if we needto save and still starting up,
         // don't actually savenow, but we will when Corona::startupCompleted is emitted
+
         if (!m_configKey.isEmpty() && m_containment && m_containment->corona()->isStartupCompleted()) {
             const QString serializedConfig = m_layoutManager->serializeLayout();
             m_containment->config().writeEntry(m_configKey, serializedConfig);
+            m_containment->config().writeEntry(m_fallbackConfigKey, serializedConfig);
             // FIXME: something more efficient
             m_layoutManager->parseLayout(serializedConfig);
             m_savedSize = size();
@@ -57,43 +59,42 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
         }
     });
 
-    m_configKeyChangeTimer = new QTimer(this);
-    m_configKeyChangeTimer->setSingleShot(true);
-    m_configKeyChangeTimer->setInterval(100);
-    connect(m_configKeyChangeTimer, &QTimer::timeout, this, [this]() {
-        if (!m_configKey.isEmpty() && m_containment) {
-            m_layoutManager->parseLayout(m_containment->config().readEntry(m_configKey, ""));
+    m_layoutChangeTimer = new QTimer(this);
+    m_layoutChangeTimer->setSingleShot(true);
+    m_layoutChangeTimer->setInterval(100);
+    connect(m_layoutChangeTimer, &QTimer::timeout, this, [this]() {
+        const QString &serializedConfig = m_containment->config().readEntry(m_configKey, "");
+        if ((m_layoutChanges & ConfigKeyChange) && !serializedConfig.isEmpty()) {
+            if (!m_configKey.isEmpty() && m_containment) {
+                m_layoutManager->parseLayout(serializedConfig);
 
-            if (width() > 0 && height() > 0) {
+                if (width() > 0 && height() > 0) {
+                    m_layoutManager->resetLayoutFromConfig();
+                    m_savedSize = size();
+                }
+            }
+        } else if (m_layoutChanges & SizeChange) {
+            const QRect newGeom(x(), y(), width(), height());
+            // The size has been restored from the last one it has been saved: restore that exact same layout
+            if (newGeom.size() == m_savedSize) {
                 m_layoutManager->resetLayoutFromConfig();
-                m_savedSize = size();
+
+                // If the resize is consequence of a screen resolution change, queue a relayout maintaining the distance between screen edges
+            } else if (!m_geometryBeforeResolutionChange.isEmpty()) {
+                m_layoutManager->layoutGeometryChanged(newGeom, m_geometryBeforeResolutionChange);
+                m_geometryBeforeResolutionChange = QRectF();
+
+                // Heuristically relayout items only when the plasma startup is fully completed
+            } else {
+                polish();
             }
         }
+        m_layoutChanges = NoChange;
     });
     m_pressAndHoldTimer = new QTimer(this);
     m_pressAndHoldTimer->setSingleShot(true);
     connect(m_pressAndHoldTimer, &QTimer::timeout, this, [this]() {
         setEditMode(true);
-    });
-
-    m_sizeSyncTimer = new QTimer(this);
-    m_sizeSyncTimer->setSingleShot(true);
-    m_sizeSyncTimer->setInterval(150);
-    connect(m_sizeSyncTimer, &QTimer::timeout, this, [this]() {
-        const QRect newGeom(x(), y(), width(), height());
-        // The size has been restored from the last one it has been saved: restore that exact same layout
-        if (newGeom.size() == m_savedSize) {
-            m_layoutManager->resetLayoutFromConfig();
-
-            // If the resize is consequence of a screen resolution change, queue a relayout maintaining the distance between screen edges
-        } else if (!m_geometryBeforeResolutionChange.isEmpty()) {
-            m_layoutManager->layoutGeometryChanged(newGeom, m_geometryBeforeResolutionChange);
-            m_geometryBeforeResolutionChange = QRectF();
-
-            // Heuristically relayout items only when the plasma startup is fully completed
-        } else {
-            polish();
-        }
     });
 }
 
@@ -150,9 +151,28 @@ void AppletsLayout::setConfigKey(const QString &key)
     m_configKey = key;
 
     // Reloading everything from the new config is expansive, event compress it
-    m_configKeyChangeTimer->start();
+    m_layoutChanges |= ConfigKeyChange;
+    m_layoutChangeTimer->start();
 
     emit configKeyChanged();
+}
+
+QString AppletsLayout::fallbackConfigKey() const
+{
+    return m_fallbackConfigKey;
+}
+
+void AppletsLayout::setFallbackConfigKey(const QString &key)
+{
+    if (m_fallbackConfigKey == key) {
+        return;
+    }
+
+    m_fallbackConfigKey = key;
+
+    
+
+    emit fallbackConfigKeyChanged();
 }
 
 QJSValue AppletsLayout::acceptsAppletCallback() const
@@ -455,7 +475,8 @@ void AppletsLayout::geometryChanged(const QRectF &newGeometry, const QRectF &old
 
     // Only do a layouting procedure if we received a valid size
     if (!newGeometry.isEmpty()) {
-        m_sizeSyncTimer->start();
+        m_layoutChanges |= SizeChange;
+        m_layoutChangeTimer->start();
     }
 
     QQuickItem::geometryChanged(newGeometry, oldGeometry);
@@ -475,7 +496,12 @@ void AppletsLayout::componentComplete()
     }
 
     if (!m_configKey.isEmpty()) {
-        m_layoutManager->parseLayout(m_containment->config().readEntry(m_configKey, ""));
+        const QString &serializedConfig = m_containment->config().readEntry(m_configKey, "");
+        if (!serializedConfig.isEmpty()) {
+            m_layoutManager->parseLayout(serializedConfig);
+        } else {
+            m_layoutManager->parseLayout(m_containment->config().readEntry(m_fallbackConfigKey, ""));
+        }
     }
 
     const QList<QObject *> appletObjects = m_containmentItem->property("applets").value<QList<QObject *>>();
