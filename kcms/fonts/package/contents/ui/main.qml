@@ -25,7 +25,7 @@ import QtQuick.Dialogs 1.2 as QtDialogs
 
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kcm 1.3 as KCM
+import org.kde.kcm 1.6 as KCM
 
 KCM.SimpleKCM {
     id: root
@@ -188,7 +188,7 @@ KCM.SimpleKCM {
                     text: i18n("Enable")
                     Layout.fillWidth: true
                 }
-                ContextualHelpButton {
+                KCM.ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip Anti-Aliasing", "Pixels on displays are generally aligned in a grid. Therefore shapes of fonts that do not align with this grid will look blocky and wrong unless <emphasis>anti-aliasing</emphasis> techniques are used to reduce this effect. You generally want to keep this option enabled unless it causes problems.")
                 }
 
@@ -309,7 +309,7 @@ KCM.SimpleKCM {
                         extraEnabledConditions: antiAliasingCheckBox.checked && !kcm.fontsAASettings.isAaImmutable
                     }
                 }
-                ContextualHelpButton {
+                KCM.ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip Sub-pixel rendering", "<para>On TFT or LCD screens every single pixel is actually composed of three or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can be changed independently to further improve the quality of displayed fonts.</para> <para>The rendering quality is only improved if the selection matches the manner in which the sub-pixels of your display are aligned. Most displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some have <emphasis>BGR</emphasis> and some exotic orderings are not supported by this feature.</para>This does not work with CRT monitors.")
                 }
             }
@@ -355,7 +355,7 @@ KCM.SimpleKCM {
                         extraEnabledConditions: antiAliasingCheckBox.checked && !kcm.fontsAASettings.isAaImmutable
                     }
                 }
-                ContextualHelpButton {
+                KCM.ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip Hinting", "Hinting is a technique in which hints embedded in a font are used to enhance the rendering quality especially at small sizes. Stronger hinting generally leads to sharper edges but the small letters will less closely resemble their shape at big sizes.")
                 }
             }
@@ -407,7 +407,7 @@ KCM.SimpleKCM {
                         extraEnabledConditions: dpiCheckBox.enabled && dpiCheckBox.checked
                     }
                 }
-                ContextualHelpButton {
+                KCM.ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip Force fonts DPI", "<para>This option forces a specific DPI value for fonts. It may be useful when the real DPI of the hardware is not detected properly and it is also often misused when poor quality fonts are used that do not look well with DPI values other than 96 or 120 DPI.</para><para>The use of this option is generally discouraged.</para><para>If you are using the <emphasis>X Window System</emphasis>, for selecting the proper DPI value a better option is explicitly configuring it for the whole X server if possible (e.g. DisplaySize in xorg.conf). When fonts do not render properly with the real DPI value better fonts should be used or configuration of font hinting should be checked.</para>")
                 }
             }
