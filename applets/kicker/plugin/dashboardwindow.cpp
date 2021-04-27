@@ -217,7 +217,7 @@ void DashboardWindow::keyPressEvent(QKeyEvent *e)
 
 void DashboardWindow::updateTheme()
 {
-    KWindowEffects::enableBlurBehind(winId(), true);
+    KWindowEffects::enableBlurBehind(this, true);
 }
 
 void DashboardWindow::visualParentWindowChanged(QQuickWindow *window)

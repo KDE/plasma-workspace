@@ -87,8 +87,8 @@ void PanelConfigView::init()
 
 void PanelConfigView::updateBlurBehindAndContrast()
 {
-    KWindowEffects::enableBlurBehind(winId(), m_theme.blurBehindEnabled());
-    KWindowEffects::enableBackgroundContrast(winId(),
+    KWindowEffects::enableBlurBehind(this, m_theme.blurBehindEnabled());
+    KWindowEffects::enableBackgroundContrast(this,
                                              m_theme.backgroundContrastEnabled(),
                                              m_theme.backgroundContrast(),
                                              m_theme.backgroundIntensity(),
@@ -183,7 +183,7 @@ void PanelConfigView::syncLocation()
         break;
     }
 
-    KWindowEffects::slideWindow(winId(), slideLocation, -1);
+    KWindowEffects::slideWindow(this, slideLocation, -1);
 
     if (m_enabledBorders != enabledBorders) {
         m_enabledBorders = enabledBorders;

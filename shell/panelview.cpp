@@ -480,7 +480,7 @@ void PanelView::positionPanel()
         m_shellSurface->setPosition(pos);
     }
 
-    KWindowEffects::slideWindow(winId(), slideLocation, -1);
+    KWindowEffects::slideWindow(this, slideLocation, -1);
 }
 
 QRect PanelView::geometryByDistance(int distance) const
@@ -772,7 +772,7 @@ void PanelView::setAutoHideEnabled(bool enabled)
         value |= hideType << 8;
 
         xcb_change_property(c, XCB_PROP_MODE_REPLACE, winId(), atom->atom, XCB_ATOM_CARDINAL, 32, 1, &value);
-        KWindowEffects::slideWindow(winId(), slideLocation, -1);
+        KWindowEffects::slideWindow(this, slideLocation, -1);
     }
 #endif
     if (m_shellSurface && (m_visibilityMode == PanelView::AutoHide || m_visibilityMode == PanelView::LetWindowsCover)) {
@@ -1067,8 +1067,8 @@ QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
 void PanelView::updateMask()
 {
     if (m_backgroundHints == Plasma::Types::NoBackground) {
-        KWindowEffects::enableBlurBehind(winId(), false);
-        KWindowEffects::enableBackgroundContrast(winId(), false);
+        KWindowEffects::enableBlurBehind(this, false);
+        KWindowEffects::enableBackgroundContrast(this, false);
         setMask(QRegion());
     } else {
         QRegion mask;
@@ -1081,8 +1081,8 @@ void PanelView::updateMask()
             }
         }
 
-        KWindowEffects::enableBlurBehind(winId(), m_theme.blurBehindEnabled(), mask);
-        KWindowEffects::enableBackgroundContrast(winId(),
+        KWindowEffects::enableBlurBehind(this, m_theme.blurBehindEnabled(), mask);
+        KWindowEffects::enableBackgroundContrast(this,
                                                  m_theme.backgroundContrastEnabled(),
                                                  m_theme.backgroundContrast(),
                                                  m_theme.backgroundIntensity(),

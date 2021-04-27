@@ -200,7 +200,7 @@ void KSMShutdownDlg::init()
     // set backgroundcontrast here, because in QEvent::PlatformSurface
     // is too early and we don't have the root object yet
     const QColor backgroundColor = rootObject() ? rootObject()->property("backgroundColor").value<QColor>() : QColor();
-    KWindowEffects::enableBackgroundContrast(winId(), true, 0.4, (backgroundColor.value() > 128 ? 1.6 : 0.3), 1.7);
+    KWindowEffects::enableBackgroundContrast(this, true, 0.4, (backgroundColor.value() > 128 ? 1.6 : 0.3), 1.7);
     KQuickAddons::QuickViewSharedEngine::showFullScreen();
     setFlag(Qt::FramelessWindowHint);
     requestActivate();
@@ -208,7 +208,7 @@ void KSMShutdownDlg::init()
     KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
 
     setKeyboardGrabEnabled(true);
-    KWindowEffects::enableBlurBehind(winId(), true);
+    KWindowEffects::enableBlurBehind(this, true);
     if (auto w = LayerShellQt::Window::get(this)) {
         w->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
         w->setExclusiveZone(-1);
