@@ -45,6 +45,7 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
     m_saveLayoutTimer->setInterval(100);
     connect(m_layoutManager, &AbstractLayoutManager::layoutNeedsSaving, m_saveLayoutTimer, QOverload<>::of(&QTimer::start));
     connect(m_saveLayoutTimer, &QTimer::timeout, this, [this]() {
+        qWarning()<<"DEBUG for" << this << ": m_saveLayoutTimer expired. m_containment is:" << m_containment;
         // We can't save the layout during bootup, for performance reasons and to avoid race consitions as much as possible, so if we needto save and still starting up,
         // don't actually savenow, but we will when Corona::startupCompleted is emitted
 
@@ -63,6 +64,7 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
     m_layoutChangeTimer->setSingleShot(true);
     m_layoutChangeTimer->setInterval(100);
     connect(m_layoutChangeTimer, &QTimer::timeout, this, [this]() {
+        qWarning()<<"DEBUG for" << this << ": m_layoutChangeTimer expired. m_containment is:" << m_containment;
         const QString &serializedConfig = m_containment->config().readEntry(m_configKey, "");
         if ((m_layoutChanges & ConfigKeyChange) && !serializedConfig.isEmpty()) {
             if (!m_configKey.isEmpty() && m_containment) {
@@ -96,6 +98,8 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
     connect(m_pressAndHoldTimer, &QTimer::timeout, this, [this]() {
         setEditMode(true);
     });
+
+    qWarning() << "DEBUG for" << this << ": AppletsLayout Constructor done" << this;
 }
 
 AppletsLayout::~AppletsLayout()
@@ -109,6 +113,8 @@ PlasmaQuick::AppletQuickItem *AppletsLayout::containment() const
 
 void AppletsLayout::setContainment(PlasmaQuick::AppletQuickItem *containmentItem)
 {
+    qWarning() << "DEBUG for" << this << ": setting a new containment" << containmentItem;
+
     // Forbid changing containmentItem at runtime
     if (m_containmentItem || containmentItem == m_containmentItem || !containmentItem->applet() || !containmentItem->applet()->isContainment()) {
         qWarning() << "Error: cannot change the containment to AppletsLayout";
@@ -144,6 +150,7 @@ QString AppletsLayout::configKey() const
 
 void AppletsLayout::setConfigKey(const QString &key)
 {
+    qWarning() << "DEBUG for" << this << ": setting a new config key" << key << " m_containment is:" << m_containment;
     if (m_configKey == key) {
         return;
     }
