@@ -4,6 +4,7 @@ set(kworkspace_LIB_SRCS kdisplaymanager.cpp
                         sessionmanagement.cpp
                         sessionmanagementbackend.cpp
                         updatelaunchenvjob.cpp
+                        autostartscriptdesktopfile.cpp
    )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libkworkspace\")
@@ -73,6 +74,7 @@ install( FILES kdisplaymanager.h
                kworkspace.h
                sessionmanagement.h
                updatelaunchenvjob.h
+               autostartscriptdesktopfile.h
                ${CMAKE_CURRENT_BINARY_DIR}/config-libkworkspace.h
                ${CMAKE_CURRENT_BINARY_DIR}/kworkspace_export.h
          DESTINATION ${KDE_INSTALL_INCLUDEDIR}/kworkspace5 COMPONENT Devel )

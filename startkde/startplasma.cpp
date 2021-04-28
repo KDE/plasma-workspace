@@ -34,6 +34,7 @@
 
 #include <unistd.h>
 
+#include <autostartscriptdesktopfile.h>
 #include <updatelaunchenvjob.h>
 
 #include "startplasma.h"
@@ -538,6 +539,9 @@ bool startPlasmaSession(bool wayland)
         }
     });
 
+    // Create .desktop files for the scripts in .config/autostart-scripts
+    migrateUserScriptsAutostart();
+
     if (!useSystemdBoot()) {
         qCDebug(PLASMA_STARTUP) << "Using classic boot";
         QProcess startPlasmaSession;
@@ -610,4 +614,48 @@ void waitForKonqi()
             }
         }
     }
+}
+
+static void migrateUserScriptsAutostart()
+{
+    QDir configLocation(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation));
+    QDir autostartScriptsLocation(configLocation.filePath(QStringLiteral("autostart-scripts")));
+    if (!autostartScriptsLocation.exists()) {
+        return;
+    }
+    const QDir autostartScriptsMovedLocation(configLocation.filePath(QStringLiteral("old-autostart-scripts")));
+    const auto entries = autostartScriptsLocation.entryInfoList(QDir::Files);
+    for (const auto &info : entries) {
+        const auto scriptName = info.fileName();
+        const auto scriptPath = info.absoluteFilePath();
+        const auto scriptMovedPath = autostartScriptsMovedLocation.filePath(scriptName);
+
+        // Don't migrate backup files
+        if (scriptName.endsWith(QLatin1Char('~')) || scriptName.endsWith(QLatin1String(".bak"))
+            || (scriptName[0] == QLatin1Char('%') && scriptName.endsWith(QLatin1Char('%')))
+            || (scriptName[0] == QLatin1Char('#') && scriptName.endsWith(QLatin1Char('#')))) {
+            qCDebug(PLASMA_STARTUP) << "Not migrating backup autostart script" << scriptName;
+            continue;
+        }
+
+        // Migrate autostart script to a standard .desktop autostart file
+        AutostartScriptDesktopFile desktopFile(scriptName, info.isSymLink() ? info.symLinkTarget() : scriptMovedPath);
+        qCInfo(PLASMA_STARTUP) << "Migrated legacy autostart script" << scriptPath << "to" << desktopFile.fileName();
+
+        if (info.isSymLink() && QFile::remove(scriptPath)) {
+            qCInfo(PLASMA_STARTUP) << "Removed legacy autostart script" << scriptPath << "that pointed to" << info.symLinkTarget();
+        }
+    }
+    // Delete or rename autostart-scripts to old-autostart-scripts to avoid running the migration again
+    if (autostartScriptsLocation.entryInfoList(QDir::Files).empty()) {
+        autostartScriptsLocation.removeRecursively();
+    } else {
+        configLocation.rename(autostartScriptsLocation.dirName(), autostartScriptsMovedLocation.dirName());
+    }
+    // Reload systemd so that the XDG autostart generator is run again to pick up the new .desktop files
+    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                                          QStringLiteral("/org/freedesktop/systemd1"),
+                                                          QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                                          QStringLiteral("Reload"));
+    QDBusConnection::sessionBus().call(message);
 }

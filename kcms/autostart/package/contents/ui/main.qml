@@ -75,7 +75,7 @@ KCM.ScrollViewKCM {
                     text: i18n("Properties")
                     icon.name: "document-properties"
                     onTriggered: kcm.model.editApplication(model.index, root)
-                    visible: model.source === AutostartModel.XdgAutoStart
+                    visible: model.source === AutostartModel.XdgAutoStart || model.source === AutostartModel.XdgScripts
                 },
                 Kirigami.Action {
                     text: i18n("Remove")
@@ -91,8 +91,11 @@ KCM.ScrollViewKCM {
                 if (section == AutostartModel.XdgAutoStart) {
                     return i18n("Applications")
                 }
-                if (section == AutostartModel.XdgScripts || section == AutostartModel.PlasmaStart) {
+                if (section == AutostartModel.XdgScripts) {
                     return i18n("Login Scripts")
+                }
+                if (section == AutostartModel.PlasmaEnvScripts) {
+                    return i18n("Pre-startup Scripts")
                 }
                 if (section == AutostartModel.PlasmaShutdown) {
                     return i18n("Logout Scripts")

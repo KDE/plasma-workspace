@@ -132,15 +132,14 @@ public:
         : Phase(autostart, parent)
     {
     }
-    void runUserAutostart();
-    bool migrateKDE4Autostart(const QString &folder);
+    void migrateKDE4Autostart();
 
     void start() override
     {
         qCDebug(PLASMA_SESSION) << "Phase 2";
+        migrateKDE4Autostart();
         addSubjob(new AutoStartAppsJob(m_autostart, 2));
         addSubjob(new KDEDInitJob());
-        runUserAutostart();
     }
 };
 
@@ -352,48 +351,21 @@ void RestoreSessionJob::start()
     connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
 }
 
-void StartupPhase2::runUserAutostart()
-{
-    // Now let's execute the scripts in the KDE-specific autostart-scripts folder.
-    const QString autostartFolder =
-        QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QDir::separator() + QStringLiteral("autostart-scripts");
-
-    QDir dir(autostartFolder);
-    if (!dir.exists()) {
-        // Create dir in all cases, so that users can find it :-)
-        dir.mkpath(QStringLiteral("."));
-
-        if (!migrateKDE4Autostart(autostartFolder)) {
-            return;
-        }
-    }
-
-    const QStringList entries = dir.entryList(QDir::Files);
-    for (const QString &file : entries) {
-        // Don't execute backup files
-        if (!file.endsWith(QLatin1Char('~')) && !file.endsWith(QLatin1String(".bak")) && (file[0] != QLatin1Char('%') || !file.endsWith(QLatin1Char('%')))
-            && (file[0] != QLatin1Char('#') || !file.endsWith(QLatin1Char('#')))) {
-            const QString fullPath = dir.absolutePath() + QLatin1Char('/') + file;
-
-            qCInfo(PLASMA_SESSION) << "Starting autostart script " << fullPath;
-            auto p = new KProcess; // deleted in onFinished lambda
-            p->setProgram(fullPath);
-            p->start();
-            connect(p, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [p](int exitCode) {
-                qCInfo(PLASMA_SESSION) << "autostart script" << p->program() << "finished with exit code " << exitCode;
-                p->deleteLater();
-            });
-        }
-    }
-}
-
-bool StartupPhase2::migrateKDE4Autostart(const QString &autostartFolder)
+void StartupPhase2::migrateKDE4Autostart()
 {
     // Migrate user autostart from kde4
     Kdelibs4Migration migration;
     if (!migration.kdeHomeFound()) {
-        return false;
+        return;
     }
+
+    const QString autostartFolder =
+        QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QDir::separator() + QStringLiteral("autostart-scripts");
+    QDir dir(autostartFolder);
+    if (!dir.exists()) {
+        dir.mkpath(QStringLiteral("."));
+    }
+
     // KDEHOME/Autostart was the default value for KGlobalSettings::autostart()
     QString oldAutostart = migration.kdeHome() + QStringLiteral("/Autostart");
     // That path could be customized in kdeglobals
@@ -420,7 +392,7 @@ bool StartupPhase2::migrateKDE4Autostart(const QString &autostartFolder)
             qCWarning(PLASMA_SESSION) << "Error copying" << src << "to" << dest;
         }
     }
-    return true;
+    return;
 }
 
 AutoStartAppsJob::AutoStartAppsJob(const AutoStart &autostart, int phase)

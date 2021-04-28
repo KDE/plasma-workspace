@@ -20,8 +20,10 @@
 #define AUTOSTARTMODEL_H
 
 #include <QAbstractListModel>
+#include <QDir>
 
 #include <KService>
+#include <optional>
 
 struct AutostartEntry;
 class QQuickItem;
@@ -46,7 +48,7 @@ public:
         XdgAutoStart = 0,
         XdgScripts = 1,
         PlasmaShutdown = 2,
-        PlasmaStart = 3,
+        PlasmaEnvScripts = 3,
     };
     Q_ENUM(AutostartEntrySource)
 
@@ -69,8 +71,11 @@ Q_SIGNALS:
 private:
     void addApplication(const KService::Ptr &service);
     void loadScriptsFromDir(const QString &subDir, AutostartEntrySource kind);
-    QString XdgAutoStartPath() const;
+    void insertScriptEntry(int index, const QString &name, const QString &path, AutostartModel::AutostartEntrySource kind);
+    static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName);
 
+    QDir m_xdgConfigPath;
+    QDir m_xdgAutoStartPath;
     QVector<AutostartEntry> m_entries;
 };
 
