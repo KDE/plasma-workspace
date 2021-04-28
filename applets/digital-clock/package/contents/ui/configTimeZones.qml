@@ -50,6 +50,10 @@ ColumnLayout {
     QQC2.ScrollView {
         Layout.fillWidth: true
         Layout.fillHeight: true
+        // Or else the page becomes scrollable when the list has a lot of items,
+        // rather than the list becoming scrollable, which is what we want
+        Layout.maximumHeight: timeZonesPage.parent.height - Kirigami.Units.gridUnit * 7
+
         Component.onCompleted: background.visible = true // enable border
 
         // HACK: Hide unnecesary horizontal scrollbar (https://bugreports.qt.io/browse/QTBUG-83890)
