@@ -172,9 +172,7 @@ private Q_SLOTS:
 
         // check that KDirLister now has the correct item (#382341)
         if (lister) {
-            const KFileItem fileItem = lister->findByUrl(destUrl);
-            QVERIFY(!fileItem.isNull());
-            QCOMPARE(fileItem.targetUrl(), QUrl::fromLocalFile(destFilePath));
+            QTRY_COMPARE(lister->findByUrl(destUrl).targetUrl(), QUrl::fromLocalFile(destFilePath));
         }
     }
 
