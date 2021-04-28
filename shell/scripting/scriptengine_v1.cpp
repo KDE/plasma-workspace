@@ -485,8 +485,10 @@ QJSValue ScriptEngine::V1::panels() const
     const auto result = m_engine->m_corona->containments();
 
     for (const auto c : result) {
-        panels.setProperty(count, m_engine->wrap(c));
-        ++count;
+        if (isPanel(c)) {
+            panels.setProperty(count, m_engine->wrap(c));
+            ++count;
+        }
     }
     panels.setProperty(QStringLiteral("length"), count);
 
