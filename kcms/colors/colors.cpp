@@ -119,6 +119,9 @@ bool KCMColors::downloadingFile() const
 
 void KCMColors::knsEntryChanged(KNSCore::EntryWrapper *entry)
 {
+    if (!entry) {
+        return;
+    }
     m_model->load();
 
     // If a new theme was installed, select the first color file in it

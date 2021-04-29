@@ -119,6 +119,9 @@ KCMLookandFeel::~KCMLookandFeel()
 
 void KCMLookandFeel::knsEntryChanged(KNSCore::EntryWrapper *wrapper)
 {
+    if (!wrapper) {
+        return;
+    }
     const KNSCore::EntryInternal entry = wrapper->entry();
     auto removeItemFromModel = [&entry, this]() {
         const QString guessedPluginId = QFileInfo(entry.uninstalledFiles().constFirst()).fileName();
