@@ -2,6 +2,7 @@
    Copyright (c) 2014 Marco Martin <mart@kde.org>
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
    Copyright (c) 2019 Cyril Rossi <cyril.rossi@enioka.com>
+   Copyright (c) 2021 Benjamin Port <benjamin.port@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -436,10 +437,26 @@ void KCMLookandFeel::setWidgetStyle(const QString &style)
     // Test if style can be installed before updating the config.
     QScopedPointer<QStyle> newStyle(QStyleFactory::create(style));
     if (newStyle) {
-        m_configGroup.writeEntry("widgetStyle", style, KConfig::Notify);
-        m_configGroup.sync();
+        writeNewDefaults(QStringLiteral("kdeglobals"), QStringLiteral("KDE"), QStringLiteral("widgetStyle"), style, KConfig::Notify);
+
         // FIXME: changing style on the fly breaks QQuickWidgets
         notifyKcmChange(GlobalChangeType::StyleChanged);
+    }
+}
+
+void KCMLookandFeel::revertKeyIfNeeded(KConfigGroup &group, KConfigGroup &home, KConfigGroup &defaults)
+{
+    for (const QString &key : group.keyList()) {
+        home.revertToDefault(key);
+        if (m_data->isDefaults()) {
+            defaults.revertToDefault(key);
+        }
+    }
+    for (const QString &subgroupname : group.groupList()) {
+        KConfigGroup subgroup(group.group(subgroupname));
+        KConfigGroup subgroupHome(home.group(subgroupname));
+        KConfigGroup subgroupDefaults(defaults.group(subgroupname));
+        revertKeyIfNeeded(subgroup, subgroupHome, subgroupDefaults);
     }
 }
 
@@ -449,17 +466,24 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
         return;
     }
 
-    KSharedConfigPtr conf = KSharedConfig::openConfig(colorFile, KSharedConfig::CascadeConfig);
-    foreach (const QString &grp, conf->groupList()) {
-        KConfigGroup cg(conf, grp);
-        KConfigGroup cg2(&m_config, grp);
-        cg.copyTo(&cg2, KConfig::Notify);
+
+    KConfig configDefault(configDefaults("kdeglobals"));
+    KSharedConfigPtr colorConf = KSharedConfig::openConfig(colorFile, KSharedConfig::CascadeConfig);
+    if (!m_data->isDefaults()) {
+        colorConf->copyTo(configDefault.name(), &configDefault);
+    } else {
+        for (const QString &grp : colorConf->groupList()) {
+            KConfigGroup colorConfGroup(colorConf, grp);
+            KConfigGroup cghome(&m_config, grp);
+            KConfigGroup cgd(&configDefault, grp);
+            revertKeyIfNeeded(colorConfGroup, cghome, cgd);
+            colorConf->deleteGroup(grp);
+        }
     }
 
-    KConfigGroup configGroup(&m_config, "General");
-    configGroup.writeEntry("ColorScheme", scheme, KConfig::Notify);
-
-    configGroup.sync();
+    writeNewDefaults(m_config, configDefault, QStringLiteral("General"), QStringLiteral("ColorScheme"), scheme, KConfig::Notify);
+    m_config.sync();
+    configDefault.sync();
     notifyKcmChange(GlobalChangeType::PaletteChanged);
 }
 
@@ -469,9 +493,7 @@ void KCMLookandFeel::setIcons(const QString &theme)
         return;
     }
 
-    KConfigGroup cg(&m_config, "Icons");
-    cg.writeEntry("Theme", theme, KConfig::Notify);
-    cg.sync();
+    writeNewDefaults(QStringLiteral("kdeglobals"), QStringLiteral("Icons"), QStringLiteral("Theme"), theme, KConfig::Notify);
 
     for (int i = 0; i < KIconLoader::LastGroup; i++) {
         KIconLoader::emitChange(KIconLoader::Group(i));
@@ -484,10 +506,7 @@ void KCMLookandFeel::setPlasmaTheme(const QString &theme)
         return;
     }
 
-    KConfig config(QStringLiteral("plasmarc"));
-    KConfigGroup cg(&config, "Theme");
-    cg.writeEntry("name", theme);
-    cg.sync();
+    writeNewDefaults(QStringLiteral("plasmarc"), QStringLiteral("Theme"), QStringLiteral("name"), theme);
 }
 
 void KCMLookandFeel::setCursorTheme(const QString themeName)
@@ -497,16 +516,15 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
         return;
     }
 
-    KConfig config(QStringLiteral("kcminputrc"));
-    KConfigGroup cg(&config, "Mouse");
-    cg.writeEntry("cursorTheme", themeName, KConfig::Notify);
-    cg.sync();
+    writeNewDefaults(QStringLiteral("kcminputrc"), QStringLiteral("Mouse"), QStringLiteral("cursorTheme"), themeName, KConfig::Notify);
 
 #ifdef HAVE_XCURSOR
     // Require the Xcursor version that shipped with X11R6.9 or greater, since
     // in previous versions the Xfixes code wasn't enabled due to a bug in the
     // build system (freedesktop bug #975).
 #if defined(HAVE_XFIXES) && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
+    KConfig config(QStringLiteral("kcminputrc"));
+    KConfigGroup cg(&config, QStringLiteral("Mouse"));
     const int cursorSize = cg.readEntry("cursorSize", 24);
 
     QDir themeDir = cursorThemeDir(themeName, 0);
@@ -653,11 +671,13 @@ void KCMLookandFeel::setSplashScreen(const QString &theme)
     }
 
     KConfig config(QStringLiteral("ksplashrc"));
-    KConfigGroup cg(&config, "KSplash");
-    cg.writeEntry("Theme", theme);
+    KConfigGroup cg(&config, QStringLiteral("KSplash"));
+
+    KConfig configDefault(configDefaults(QStringLiteral("ksplashrc")));
+    KConfigGroup cgd(&configDefault, QStringLiteral("KSplash"));
+    writeNewDefaults(cg, cgd, QStringLiteral("Theme"), theme);
     // TODO: a way to set none as spash in the l&f
-    cg.writeEntry("Engine", "KSplashQML");
-    cg.sync();
+    writeNewDefaults(cg, cgd, QStringLiteral("Engine"), QStringLiteral("KSplashQML"));
 }
 
 void KCMLookandFeel::setLockScreen(const QString &theme)
@@ -666,10 +686,7 @@ void KCMLookandFeel::setLockScreen(const QString &theme)
         return;
     }
 
-    KConfig config(QStringLiteral("kscreenlockerrc"));
-    KConfigGroup cg(&config, "Greeter");
-    cg.writeEntry("Theme", theme);
-    cg.sync();
+    writeNewDefaults(QStringLiteral("kscreenlockerrc"), QStringLiteral("Greeter"), QStringLiteral("Theme"), theme);
 }
 
 void KCMLookandFeel::setWindowSwitcher(const QString &theme)
@@ -678,10 +695,7 @@ void KCMLookandFeel::setWindowSwitcher(const QString &theme)
         return;
     }
 
-    KConfig config(QStringLiteral("kwinrc"));
-    KConfigGroup cg(&config, "TabBox");
-    cg.writeEntry("LayoutName", theme);
-    cg.sync();
+    writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("TabBox"), QStringLiteral("LayoutName"), theme);
 }
 
 void KCMLookandFeel::setDesktopSwitcher(const QString &theme)
@@ -691,10 +705,12 @@ void KCMLookandFeel::setDesktopSwitcher(const QString &theme)
     }
 
     KConfig config(QStringLiteral("kwinrc"));
-    KConfigGroup cg(&config, "TabBox");
-    cg.writeEntry("DesktopLayout", theme);
-    cg.writeEntry("DesktopListLayout", theme);
-    cg.sync();
+    KConfigGroup cg(&config, QStringLiteral("TabBox"));
+
+    KConfig configDefault(configDefaults(QStringLiteral("kwinrc")));
+    KConfigGroup cgd(&configDefault, QStringLiteral("TabBox"));
+    writeNewDefaults(cg, cgd, QStringLiteral("DesktopLayout"), theme);
+    writeNewDefaults(cg, cgd, QStringLiteral("DesktopListLayout"), theme);
 }
 
 void KCMLookandFeel::setWindowDecoration(const QString &library, const QString &theme)
@@ -704,11 +720,13 @@ void KCMLookandFeel::setWindowDecoration(const QString &library, const QString &
     }
 
     KConfig config(QStringLiteral("kwinrc"));
-    KConfigGroup cg(&config, "org.kde.kdecoration2");
-    cg.writeEntry("library", library);
-    cg.writeEntry("theme", theme, KConfig::Notify);
+    KConfigGroup cg(&config, QStringLiteral("org.kde.kdecoration2"));
 
-    cg.sync();
+    KConfig configDefault(configDefaults(QStringLiteral("kwinrc")));
+    KConfigGroup cgd(&configDefault, QStringLiteral("org.kde.kdecoration2"));
+    writeNewDefaults(cg, cgd, QStringLiteral("library"), library);
+    writeNewDefaults(cg, cgd, QStringLiteral("theme"), theme, KConfig::Notify);
+
     // Reload KWin.
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"));
     QDBusConnection::sessionBus().send(message);
@@ -729,4 +747,41 @@ void KCMLookandFeel::setResetDefaultLayout(bool reset)
 bool KCMLookandFeel::resetDefaultLayout() const
 {
     return m_resetDefaultLayout;
+}
+
+void KCMLookandFeel::writeNewDefaults(const QString &filename, const QString &group, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags)
+{
+    KConfig config(filename);
+    KConfigGroup cg(&config, group);
+
+    KConfig configDefault(configDefaults(filename));
+    KConfigGroup cgd(&configDefault, group);
+
+    writeNewDefaults(cg, cgd, key, value, writeFlags);
+}
+
+void KCMLookandFeel::writeNewDefaults(KConfig &config, KConfig &configDefault, const QString &group, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags)
+{
+    KConfigGroup cg(&config, group);
+    KConfigGroup cgd(&configDefault, group);
+
+    writeNewDefaults(cg, cgd, key, value, writeFlags);
+}
+
+void KCMLookandFeel::writeNewDefaults(KConfigGroup &cg, KConfigGroup &cgd, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags)
+{
+    if (m_data->isDefaults()) {
+        cgd.revertToDefault(key);
+    } else {
+        cgd.writeEntry(key, value, writeFlags);
+    }
+    cgd.sync();
+
+    cg.revertToDefault(key, writeFlags);
+    cg.sync();
+}
+
+KConfig KCMLookandFeel::configDefaults(const QString &filename)
+{
+    return KConfig(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/" + filename, KConfig::SimpleConfig);
 }

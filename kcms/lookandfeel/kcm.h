@@ -2,6 +2,7 @@
    Copyright (c) 2014 Marco Martin <mart@kde.org>
    Copyright (c) 2014 Vishesh Handa <me@vhanda.in>
    Copyright (c) 2019 Cyril Rossi <cyril.rossi@enioka.com>
+   Copyright (c) 2021 Benjamin Port <benjamin.port@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -97,6 +98,13 @@ private:
     void loadModel();
     QDir cursorThemeDir(const QString &theme, const int depth);
     const QStringList cursorSearchPaths();
+
+    void revertKeyIfNeeded(KConfigGroup &group, KConfigGroup &home, KConfigGroup &defaults);
+
+    void writeNewDefaults(const QString &filename, const QString &group, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
+    void writeNewDefaults(KConfig &config, KConfig &configDefault, const QString &group, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
+    void writeNewDefaults(KConfigGroup &cg, KConfigGroup &cgd, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
+    static KConfig configDefaults(const QString &filename);
 
     LookAndFeelData *m_data;
     QStandardItemModel *m_model;

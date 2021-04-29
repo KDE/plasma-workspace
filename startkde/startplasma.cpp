@@ -323,6 +323,12 @@ void setupPlasmaEnvironment()
     qputenv("XDG_CURRENT_DESKTOP", "KDE");
 
     qputenv("KDE_APPLICATIONS_AS_SCOPE", "1");
+
+    // Add kdedefaults dir to allow config defaults overriding from a writable location
+    const auto current_xdg_config_dirs =  qgetenv("XDG_CONFIG_DIRS");
+    const auto new_xdg_dir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation).toUtf8() + "/kdedefaults";
+    qputenv("XDG_CONFIG_DIRS", new_xdg_dir + ":" + current_xdg_config_dirs);
+
 }
 
 void setupX11()
