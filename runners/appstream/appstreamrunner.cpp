@@ -26,6 +26,7 @@
 #include <QDesktopServices>
 #include <QDir>
 #include <QIcon>
+#include <QTimer>
 
 #include <KApplicationTrader>
 #include <KLocalizedString>
@@ -39,7 +40,8 @@ InstallerRunner::InstallerRunner(QObject *parent, const KPluginMetaData &metaDat
     : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Installation Suggestions"));
-    setPriority(AbstractRunner::HighestPriority);
+    // We want to give the other runners time to check if there are matching applications already installed
+    setPriority(AbstractRunner::LowestPriority);
 
     addSyntax(Plasma::RunnerSyntax(":q:", i18n("Looks for non-installed components according to :q:")));
     setMinLetterCount(3);
@@ -80,6 +82,25 @@ static QIcon componentIcon(const AppStream::Component &comp)
 
 void InstallerRunner::match(Plasma::RunnerContext &context)
 {
+    // Give the other runners a bit of time to produce results
+    QEventLoop loop;
+    QTimer::singleShot(200, &loop, [&loop]() {
+        loop.quit();
+    });
+    loop.exec();
+    if (!context.isValid()) {
+        return;
+    }
+
+    // Check if other plugins have already found an executable, if that is the case we do
+    // not want to ask the user to install anything else
+    const QList<Plasma::QueryMatch> matches = context.matches();
+    for (const auto &match : matches) {
+        if (match.id().startsWith(QLatin1String("exec://"))) {
+            return;
+        }
+    }
+
     const auto components = findComponentsByString(context.query()).mid(0, 3);
 
     for (const AppStream::Component &component : components) {

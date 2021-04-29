@@ -97,6 +97,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         match.setRelevance(relevance);
         match.setData(QVariant(url));
         match.setUrls({url});
+        match.setId(url.toString());
         if (url.isLocalFile()) {
             match.setActions(actions().values());
         }

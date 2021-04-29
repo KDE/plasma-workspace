@@ -172,7 +172,7 @@ RemoteMatches SearchRunner::matchInternal(const QString &searchTerm, const QStri
 
         foundUrls.insert(url);
 
-        match.id = it.filePath();
+        match.id = url.toString();
         match.text = url.fileName();
         match.iconName = mimeDb.mimeTypeForFile(localUrl).iconName();
         match.relevance = relevance;
@@ -197,7 +197,7 @@ RemoteMatches SearchRunner::matchInternal(const QString &searchTerm, const QStri
 
 void SearchRunner::Run(const QString &id, const QString &actionId)
 {
-    const QUrl url = QUrl::fromLocalFile(id);
+    const QUrl url(id);
     if (actionId == s_openParentDirId) {
         KIO::highlightInFileManager({url});
         return;

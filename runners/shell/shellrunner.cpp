@@ -36,7 +36,8 @@ ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData, const
     : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Command"));
-    setPriority(AbstractRunner::HighestPriority);
+    // The results from the services runner are preferred, consequently we set a low priority
+    setPriority(AbstractRunner::LowestPriority);
     // If the runner is not authorized we can suspend it
     bool enabled = KAuthorized::authorize(QStringLiteral("run_command")) && KAuthorized::authorize(QStringLiteral("shell_access"));
     suspendMatching(!enabled);
@@ -57,7 +58,7 @@ void ShellRunner::match(Plasma::RunnerContext &context)
     if (parseShellCommand(context.query(), envs, command)) {
         const QString term = context.query();
         Plasma::QueryMatch match(this);
-        match.setId(term);
+        match.setId(QStringLiteral("exec://") + context.query());
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setIcon(m_matchIcon);
         match.setText(i18n("Run %1", term));
