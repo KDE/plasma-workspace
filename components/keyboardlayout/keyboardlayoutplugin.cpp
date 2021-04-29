@@ -22,6 +22,7 @@
 
 #include "keyboardlayoutplugin.h"
 #include "keyboardlayout.h"
+#include "virtualkeyboard.h"
 
 #include <QQmlEngine>
 
@@ -30,4 +31,7 @@ void KeyboardLayoutPlugin::registerTypes(const char *uri)
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.workspace.keyboardlayout"));
 
     qmlRegisterType<KeyboardLayout>(uri, 1, 0, "KeyboardLayout");
+    qmlRegisterSingletonType<OrgKdeKwinVirtualKeyboardInterface>(uri, 1, 0, "KWinVirtualKeyboard", [](QQmlEngine *, QJSEngine *) -> QObject * {
+        return new KwinVirtualKeyboardInterface;
+    });
 }
