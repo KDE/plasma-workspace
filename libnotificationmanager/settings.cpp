@@ -347,20 +347,6 @@ bool Settings::dirty() const
     return d->dirty;
 }
 
-bool Settings::keepCriticalAlwaysOnTop() const
-{
-    return d->notificationSettings.criticalAlwaysOnTop();
-}
-
-void Settings::setKeepCriticalAlwaysOnTop(bool enable)
-{
-    if (this->keepCriticalAlwaysOnTop() == enable) {
-        return;
-    }
-    d->notificationSettings.setCriticalAlwaysOnTop(enable);
-    d->setDirty(true);
-}
-
 bool Settings::criticalPopupsInDoNotDisturbMode() const
 {
     return d->notificationSettings.criticalInDndMode();

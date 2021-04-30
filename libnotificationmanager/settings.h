@@ -52,10 +52,6 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
      */
     Q_PROPERTY(bool criticalPopupsInDoNotDisturbMode READ criticalPopupsInDoNotDisturbMode WRITE setCriticalPopupsInDoNotDisturbMode NOTIFY settingsChanged)
     /**
-     * Whether to keep critical notifications always on top.
-     */
-    Q_PROPERTY(bool keepCriticalAlwaysOnTop READ keepCriticalAlwaysOnTop WRITE setKeepCriticalAlwaysOnTop NOTIFY settingsChanged)
-    /**
      * Whether to keep normal notifications always on top.
      */
     Q_PROPERTY(bool keepNormalAlwaysOnTop READ keepNormalAlwaysOnTop WRITE setKeepNormalAlwaysOnTop NOTIFY settingsChanged)
@@ -267,9 +263,6 @@ public:
 
     bool criticalPopupsInDoNotDisturbMode() const;
     void setCriticalPopupsInDoNotDisturbMode(bool enable);
-
-    bool keepCriticalAlwaysOnTop() const;
-    void setKeepCriticalAlwaysOnTop(bool enable);
 
     bool keepNormalAlwaysOnTop() const;
     void setKeepNormalAlwaysOnTop(bool enable);
