@@ -248,16 +248,18 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
 
         QList<Plasma::QueryMatch> matches;
         // To preserve the old behavior when allowing all runners we use static sorting
-        const static QStringList runnerIds = {QStringLiteral("desktopsessions"),
-                                              QStringLiteral("services"),
-                                              QStringLiteral("places"),
-                                              QStringLiteral("PowerDevil"),
-                                              QStringLiteral("calculator"),
-                                              QStringLiteral("unitconverter"),
-                                              QStringLiteral("shell"),
-                                              QStringLiteral("bookmarks"),
-                                              QStringLiteral("recentdocuments"),
-                                              QStringLiteral("locations"),};
+        const static QStringList runnerIds = {
+            QStringLiteral("desktopsessions"),
+            QStringLiteral("services"),
+            QStringLiteral("places"),
+            QStringLiteral("PowerDevil"),
+            QStringLiteral("calculator"),
+            QStringLiteral("unitconverter"),
+            QStringLiteral("shell"),
+            QStringLiteral("bookmarks"),
+            QStringLiteral("recentdocuments"),
+            QStringLiteral("locations"),
+        };
         if (m_runners.isEmpty()) {
             const auto baloo = matchesForRunner.take(QStringLiteral("baloosearch"));
             const auto appstream = matchesForRunner.take(QStringLiteral("krunner_appstream"));

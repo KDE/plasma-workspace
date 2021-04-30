@@ -29,7 +29,6 @@ Application::Application() = default;
 Application::Application(const KService::Ptr &service)
     : m_service(service)
 {
-
 }
 
 QString Application::name() const
@@ -50,7 +49,6 @@ bool Application::isValid() const
 FileInfo::FileInfo(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 FileInfo::~FileInfo() = default;

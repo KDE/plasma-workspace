@@ -23,11 +23,13 @@
 
 #include <QList>
 
-static const QList<QString> s_categoryOrder = {QStringLiteral("UnknownCategory"),
-                                               QStringLiteral("ApplicationStatus"),
-                                               QStringLiteral("Communications"),
-                                               QStringLiteral("SystemServices"),
-                                               QStringLiteral("Hardware"),};
+static const QList<QString> s_categoryOrder = {
+    QStringLiteral("UnknownCategory"),
+    QStringLiteral("ApplicationStatus"),
+    QStringLiteral("Communications"),
+    QStringLiteral("SystemServices"),
+    QStringLiteral("Hardware"),
+};
 
 SortedSystemTrayModel::SortedSystemTrayModel(SortingType sorting, QObject *parent)
     : QSortFilterProxyModel(parent)

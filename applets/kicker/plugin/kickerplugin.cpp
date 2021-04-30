@@ -62,5 +62,4 @@ void KickerPlugin::registerTypes(const char *uri)
     qmlRegisterType<TriangleMouseFilter>(uri, 0, 1, "TriangleMouseFilter");
     qmlRegisterType<WheelInterceptor>(uri, 0, 1, "WheelInterceptor");
     qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
-
 }

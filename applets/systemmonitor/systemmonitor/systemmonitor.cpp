@@ -86,7 +86,6 @@ KSysGuard::SensorFaceController *SystemMonitor::workaroundController(QQuickItem 
     return new KSysGuard::SensorFaceController(cg, qmlEngine(context));
 }
 
-
 void SystemMonitor::configChanged()
 {
     if (m_sensorFaceController) {

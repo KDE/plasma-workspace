@@ -103,5 +103,4 @@ private:
     QString m_iconName;
 
     Application m_preferredApplication;
-
 };

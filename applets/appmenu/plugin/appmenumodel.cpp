@@ -175,15 +175,15 @@ int AppMenuModel::rowCount(const QModelIndex &parent) const
         return 0;
     }
 
-    return m_menu->actions().count()+(KWindowSystem::isPlatformWayland() ? 1 : 0);
+    return m_menu->actions().count() + (KWindowSystem::isPlatformWayland() ? 1 : 0);
 }
 
 void AppMenuModel::removeSearchActionsFromMenu()
 {
-    for (const auto &action: m_currentSearchActions) {
+    for (const auto &action : m_currentSearchActions) {
         m_searchAction->menu()->removeAction(action);
     }
-    m_currentSearchActions = QList<QAction*>();
+    m_currentSearchActions = QList<QAction *>();
 }
 
 void AppMenuModel::insertSearchActionsIntoMenu(const QString &filter)
@@ -193,7 +193,7 @@ void AppMenuModel::insertSearchActionsIntoMenu(const QString &filter)
         return;
     }
     const auto actions = flatActionList();
-    for (const auto &action: actions) {
+    for (const auto &action : actions) {
         if (action->text().contains(filter, Qt::CaseInsensitive)) {
             m_searchAction->menu()->addAction(action);
             m_currentSearchActions << action;
@@ -233,14 +233,14 @@ QHash<int, QByteArray> AppMenuModel::roleNames() const
     return roleNames;
 }
 
-QList<QAction*> AppMenuModel::flatActionList()
+QList<QAction *> AppMenuModel::flatActionList()
 {
-    QList<QAction*> ret;
+    QList<QAction *> ret;
     if (!m_menuAvailable || !m_menu) {
         return ret;
     }
-    const auto actions = m_menu->findChildren<QAction*>();
-    for (auto &action: actions) {
+    const auto actions = m_menu->findChildren<QAction *>();
+    for (auto &action : actions) {
         if (action->menu() == nullptr) {
             ret << action;
         }
@@ -260,7 +260,7 @@ QVariant AppMenuModel::data(const QModelIndex &index, int role) const
         if (role == MenuRole) {
             return m_searchAction->text();
         } else if (role == ActionRole) {
-            return QVariant::fromValue((void*)m_searchAction);
+            return QVariant::fromValue((void *)m_searchAction);
         }
     }
     if (row >= actions.count()) {

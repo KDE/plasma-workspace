@@ -19,8 +19,8 @@
 #pragma once
 
 #include <QObject>
-#include <QPointer>
 #include <QPointF>
+#include <QPointer>
 
 class QQuickItem;
 
@@ -53,5 +53,4 @@ Q_SIGNALS:
 private:
     QPointer<QQuickItem> m_target;
     QPointF m_pressPos{-1, -1};
-
 };

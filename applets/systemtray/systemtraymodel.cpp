@@ -291,7 +291,8 @@ static QVariant extractIcon(const Plasma::DataEngine::Data &sniData, const QStri
     }
 }
 
-static QString extractItemId(const Plasma::DataEngine::Data &sniData) {
+static QString extractItemId(const Plasma::DataEngine::Data &sniData)
+{
     const QString itemId = sniData.value(QStringLiteral("Id")).toString();
     // Bug 378910: workaround for Dropbox not following the SNI specification
     if (itemId.startsWith(QLatin1String("dropbox-client-"))) {

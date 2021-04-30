@@ -24,11 +24,9 @@
 
 #include <KWindowSystem>
 #include <QAbstractListModel>
-#include <QAbstractListModel>
 #include <QAction>
 #include <QPointer>
 #include <QRect>
-#include <QStringList>
 #include <QStringList>
 #include <tasksmodel.h>
 
@@ -68,7 +66,7 @@ public:
 
     QRect screenGeometry() const;
     void setScreenGeometry(QRect geometry);
-    QList<QAction*> flatActionList();
+    QList<QAction *> flatActionList();
 
 Q_SIGNALS:
     void requestActivateIndex(int index);
@@ -100,7 +98,7 @@ private:
     QScopedPointer<QMenu> m_searchMenu;
     QPointer<QMenu> m_menu;
     QPointer<QAction> m_searchAction;
-    QList<QAction*> m_currentSearchActions;
+    QList<QAction *> m_currentSearchActions;
 
     void removeSearchActionsFromMenu();
     void insertSearchActionsIntoMenu(const QString &filter = QString());
