@@ -498,6 +498,8 @@ Item {
                     weight: plasmoid.configuration.boldText ? Font.Bold : theme.defaultFont.weight
                     italic: plasmoid.configuration.italicText
                     pixelSize: 1024
+                    pointSize: undefined // Because we're setting the pixel size instead
+                                         // TODO: remove once this label is ported to PC3
                 }
                 minimumPixelSize: 1
 
@@ -523,6 +525,8 @@ Item {
                 font.weight: timeLabel.font.weight
                 font.italic: timeLabel.font.italic
                 font.pixelSize: 1024
+                font.pointSize: undefined // Because we're setting the pixel size instead
+                                          // TODO: remove once this label is ported to PC3
                 minimumPixelSize: 1
 
                 visible: text.length > 0
@@ -540,6 +544,8 @@ Item {
             font.weight: timeLabel.font.weight
             font.italic: timeLabel.font.italic
             font.pixelSize: 1024
+            font.pointSize: undefined // Because we're setting the pixel size instead
+                                      // TODO: remove once this label is ported to PC3
             minimumPixelSize: 1
 
             horizontalAlignment: Text.AlignHCenter
