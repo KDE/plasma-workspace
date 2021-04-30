@@ -207,6 +207,7 @@ MouseArea {
             id: expander
             Layout.fillWidth: vertical
             Layout.fillHeight: !vertical
+            Layout.alignment: vertical ? Qt.AlignvCenter : Qt.AlignHCenter
             visible: root.hiddenLayout.itemCount > 0
         }
     }
