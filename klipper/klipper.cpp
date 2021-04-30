@@ -93,6 +93,7 @@ private:
 Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mode)
     : QObject(parent)
     , m_overflowCounter(0)
+    , m_quitAction(nullptr)
     , m_locklevel(0)
     , m_config(config)
     , m_pendingContentsCheck(false)
@@ -159,10 +160,12 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     m_configureAction->setText(i18n("&Configure Klipper..."));
     connect(m_configureAction, &QAction::triggered, this, &Klipper::slotConfigure);
 
-    m_quitAction = m_collection->addAction(QStringLiteral("quit"));
-    m_quitAction->setIcon(QIcon::fromTheme(QStringLiteral("application-exit")));
-    m_quitAction->setText(i18nc("@item:inmenu Quit Klipper", "&Quit"));
-    connect(m_quitAction, &QAction::triggered, this, &Klipper::slotQuit);
+    if (KlipperMode::Standalone == m_mode) {
+        m_quitAction = m_collection->addAction(QStringLiteral("quit"));
+        m_quitAction->setIcon(QIcon::fromTheme(QStringLiteral("application-exit")));
+        m_quitAction->setText(i18nc("@item:inmenu Quit Klipper", "&Quit"));
+        connect(m_quitAction, &QAction::triggered, this, &Klipper::slotQuit);
+    }
 
     m_repeatAction = m_collection->addAction(QStringLiteral("repeat_action"));
     m_repeatAction->setText(i18n("Manually Invoke Action on Current Clipboard"));
@@ -212,6 +215,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
         m_popup->plugAction(m_repeatAction);
         m_popup->plugAction(m_editAction);
         m_popup->plugAction(m_showBarcodeAction);
+        Q_ASSERT(m_quitAction);
         m_popup->plugAction(m_quitAction);
     }
 
