@@ -3,6 +3,7 @@
  This file is part of the KDE project.
 
 Copyright (C) 2014 Martin Gräßlin <mgraesslin@kde.org>
+Copyright (C) 2021 Benjamin Port <benjamin.port@enioka.com>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -27,6 +28,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 class KcmTest : public QObject
 {
+    /**
+     *  Following tests ensure lookandfeel configuration are saved to kdedefaults,
+     *  and configuration (kdeglobals, kwinrc...) from XDG_CONFIG_HOME return default value.
+     *
+     *  Because test don't have a modified XDG_CONFIG_DIRS with kdedefault dir added,
+     *  we can easily check XDG_CONFIG_HOME values have default value and still using cascade/global behavior
+     */
     Q_OBJECT
 private Q_SLOTS:
     void initTestCase();
@@ -98,7 +106,11 @@ void KcmTest::testWidgetStyle()
     KConfigGroup cg(&config, "KDE");
     // We have to use an actual theme name here because setWidgetStyle checks
     // if the theme can actually be used before it changes the config
-    QCOMPARE(cg.readEntry("widgetStyle", QString()), QStringLiteral("Fusion"));
+    QCOMPARE(cg.readEntry("widgetStyle", QString()), QString());
+
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kdeglobals", KConfig::SimpleConfig);
+    KConfigGroup cgd(&configDefault, "KDE");
+    QCOMPARE(cgd.readEntry("widgetStyle", QString()), QStringLiteral("Fusion"));
 }
 
 void KcmTest::testColors()
@@ -108,7 +120,11 @@ void KcmTest::testColors()
 
     KConfig config(QStringLiteral("kdeglobals"));
     KConfigGroup cg(&config, "General");
-    QCOMPARE(cg.readEntry("ColorScheme", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cg.readEntry("ColorScheme", QString()), QString());
+
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kdeglobals", KConfig::SimpleConfig);
+    KConfigGroup cgd(&configDefault, "General");
+    QCOMPARE(cgd.readEntry("ColorScheme", QString()), QStringLiteral("customTestValue"));
 }
 
 void KcmTest::testIcons()
@@ -117,7 +133,11 @@ void KcmTest::testIcons()
 
     KConfig config(QStringLiteral("kdeglobals"));
     KConfigGroup cg(&config, "Icons");
-    QCOMPARE(cg.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cg.readEntry("Theme", QString()), QString());
+
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kdeglobals", KConfig::SimpleConfig);
+    KConfigGroup cgd(&configDefault, "Icons");
+    QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
 }
 
 void KcmTest::testPlasmaTheme()
@@ -126,7 +146,11 @@ void KcmTest::testPlasmaTheme()
 
     KConfig config(QStringLiteral("plasmarc"));
     KConfigGroup cg(&config, "Theme");
-    QCOMPARE(cg.readEntry("name", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cg.readEntry("name", QString()), QString());
+
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/plasmarc", KConfig::SimpleConfig);
+    KConfigGroup cgd(&configDefault, "Theme");
+    QCOMPARE(cgd.readEntry("name", QString()), QStringLiteral("customTestValue"));
 }
 
 void KcmTest::testCursorTheme()
@@ -135,7 +159,11 @@ void KcmTest::testCursorTheme()
 
     KConfig config(QStringLiteral("kcminputrc"));
     KConfigGroup cg(&config, "Mouse");
-    QCOMPARE(cg.readEntry("cursorTheme", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cg.readEntry("cursorTheme", QString()), QString());
+
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kcminputrc", KConfig::SimpleConfig);
+    KConfigGroup cgd(&configDefault, "Mouse");
+    QCOMPARE(cgd.readEntry("cursorTheme", QString()), QStringLiteral("customTestValue"));
 }
 
 void KcmTest::testSplashScreen()
@@ -144,8 +172,13 @@ void KcmTest::testSplashScreen()
 
     KConfig config(QStringLiteral("ksplashrc"));
     KConfigGroup cg(&config, "KSplash");
-    QCOMPARE(cg.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
-    QCOMPARE(cg.readEntry("Engine", QString()), QStringLiteral("KSplashQML"));
+    QCOMPARE(cg.readEntry("Theme", QString()), QString());
+    QCOMPARE(cg.readEntry("Engine", QString()), QString());
+
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/ksplashrc", KConfig::SimpleConfig);
+    KConfigGroup cgd(&configDefault, "KSplash");
+    QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cgd.readEntry("Engine", QString()), QStringLiteral("KSplashQML"));
 }
 
 void KcmTest::testLockScreen()
@@ -154,7 +187,11 @@ void KcmTest::testLockScreen()
 
     KConfig config(QStringLiteral("kscreenlockerrc"));
     KConfigGroup cg(&config, "Greeter");
-    QCOMPARE(cg.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cg.readEntry("Theme", QString()), QString());
+
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kscreenlockerrc", KConfig::SimpleConfig);
+    KConfigGroup cgd(&configDefault, "Greeter");
+    QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
 }
 
 void KcmTest::testWindowSwitcher()
@@ -163,7 +200,11 @@ void KcmTest::testWindowSwitcher()
 
     KConfig config(QStringLiteral("kwinrc"));
     KConfigGroup cg(&config, "TabBox");
-    QCOMPARE(cg.readEntry("LayoutName", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cg.readEntry("LayoutName", QString()), QString());
+
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kwinrc", KConfig::SimpleConfig);
+    KConfigGroup cgd(&configDefault, "TabBox");
+    QCOMPARE(cgd.readEntry("LayoutName", QString()), QStringLiteral("customTestValue"));
 }
 
 void KcmTest::testDesktopSwitcher()
@@ -172,48 +213,81 @@ void KcmTest::testDesktopSwitcher()
 
     KConfig config(QStringLiteral("kwinrc"));
     KConfigGroup cg(&config, "TabBox");
-    QCOMPARE(cg.readEntry("DesktopLayout", QString()), QStringLiteral("customTestValue"));
-    QCOMPARE(cg.readEntry("DesktopListLayout", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cg.readEntry("DesktopLayout", QString()), QString());
+    QCOMPARE(cg.readEntry("DesktopListLayout", QString()), QString());
+
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kwinrc", KConfig::SimpleConfig);
+    KConfigGroup cgd(&configDefault, "TabBox");
+    QCOMPARE(cgd.readEntry("DesktopLayout", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cgd.readEntry("DesktopListLayout", QString()), QStringLiteral("customTestValue"));
 }
 
 void KcmTest::testKCMSave()
 {
     m_KCMLookandFeel->save();
 
+    // On real setup we read entries from kdedefaults directory (XDG_CONFIG_DIRS is modified but not in test scenario)
+
     KConfig config(QStringLiteral("kdeglobals"));
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kdeglobals", KConfig::SimpleConfig);
     KConfigGroup cg(&config, "KDE");
+    KConfigGroup cgd(&configDefault, "KDE");
     // See comment in testWidgetStyle
-    QCOMPARE(cg.readEntry("widgetStyle", QString()), QStringLiteral("Fusion"));
+    QCOMPARE(cg.readEntry("widgetStyle", QString()), QString());
+    QCOMPARE(cgd.readEntry("widgetStyle", QString()), QStringLiteral("Fusion"));
 
     cg = KConfigGroup(&config, "General");
+    cgd = KConfigGroup(&configDefault, "General");
     // save() capitalizes the ColorScheme
-    QCOMPARE(cg.readEntry("ColorScheme", QString()), QStringLiteral("TestValue"));
+    QCOMPARE(cg.readEntry("ColorScheme", QString()), QString());
+    QCOMPARE(cgd.readEntry("ColorScheme", QString()), QStringLiteral("TestValue"));
 
     cg = KConfigGroup(&config, "Icons");
-    QCOMPARE(cg.readEntry("Theme", QString()), QStringLiteral("testValue"));
+    cgd = KConfigGroup(&configDefault, "Icons");
+    QCOMPARE(cg.readEntry("Theme", QString()), QString());
+    QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("testValue"));
 
     KConfig plasmaConfig(QStringLiteral("plasmarc"));
+    KConfig plasmaConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/plasmarc", KConfig::SimpleConfig);
     cg = KConfigGroup(&plasmaConfig, "Theme");
-    QCOMPARE(cg.readEntry("name", QString()), QStringLiteral("testValue"));
+    cgd = KConfigGroup(&plasmaConfigDefault, "Theme");
+    QCOMPARE(cg.readEntry("name", QString()), QString());
+    QCOMPARE(cgd.readEntry("name", QString()), QStringLiteral("testValue"));
 
     KConfig inputConfig(QStringLiteral("kcminputrc"));
+    KConfig inputConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kcminputrc", KConfig::SimpleConfig);
     cg = KConfigGroup(&inputConfig, "Mouse");
-    QCOMPARE(cg.readEntry("cursorTheme", QString()), QStringLiteral("testValue"));
+    cgd = KConfigGroup(&inputConfigDefault, "Mouse");
+    QCOMPARE(cg.readEntry("cursorTheme", QString()), QString());
+    QCOMPARE(cgd.readEntry("cursorTheme", QString()), QStringLiteral("testValue"));
 
     KConfig splashConfig(QStringLiteral("ksplashrc"));
+    KConfig splashConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/ksplashrc", KConfig::SimpleConfig);
     cg = KConfigGroup(&splashConfig, "KSplash");
-    QCOMPARE(cg.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
-    QCOMPARE(cg.readEntry("Engine", QString()), QStringLiteral("KSplashQML"));
+    cgd = KConfigGroup(&splashConfigDefault, "KSplash");
+    QCOMPARE(cg.readEntry("Theme", QString()), QString());
+    QCOMPARE(cg.readEntry("Engine", QString()), QString());
+    QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cgd.readEntry("Engine", QString()), QStringLiteral("KSplashQML"));
 
     KConfig lockerConfig(QStringLiteral("kscreenlockerrc"));
+    KConfig lockerConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kscreenlockerrc",
+                                KConfig::SimpleConfig);
     cg = KConfigGroup(&lockerConfig, "Greeter");
-    QCOMPARE(cg.readEntry("Theme", QString()), QStringLiteral("org.kde.test"));
+    cgd = KConfigGroup(&lockerConfigDefault, "Greeter");
+    QCOMPARE(cg.readEntry("Theme", QString()), QString());
+    QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("org.kde.test"));
 
     KConfig kwinConfig(QStringLiteral("kwinrc"));
+    KConfig kwinConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kwinrc", KConfig::SimpleConfig);
     cg = KConfigGroup(&kwinConfig, "TabBox");
-    QCOMPARE(cg.readEntry("LayoutName", QString()), QStringLiteral("testValue"));
-    QCOMPARE(cg.readEntry("DesktopLayout", QString()), QStringLiteral("testDesktopValue"));
-    QCOMPARE(cg.readEntry("DesktopListLayout", QString()), QStringLiteral("testDesktopValue"));
+    cgd = KConfigGroup(&kwinConfigDefault, "TabBox");
+    QCOMPARE(cg.readEntry("LayoutName", QString()), QString());
+    QCOMPARE(cg.readEntry("DesktopLayout", QString()), QString());
+    QCOMPARE(cg.readEntry("DesktopListLayout", QString()), QString());
+    QCOMPARE(cgd.readEntry("LayoutName", QString()), QStringLiteral("testValue"));
+    QCOMPARE(cgd.readEntry("DesktopLayout", QString()), QStringLiteral("testDesktopValue"));
+    QCOMPARE(cgd.readEntry("DesktopListLayout", QString()), QStringLiteral("testDesktopValue"));
 }
 
 QTEST_MAIN(KcmTest)
