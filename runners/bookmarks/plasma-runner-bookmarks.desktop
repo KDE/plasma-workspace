@@ -158,3 +158,5 @@ X-KDE-PluginInfo-Name=bookmarks
 X-KDE-PluginInfo-Version=1.1
 X-KDE-PluginInfo-License=LGPL
 X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-Runner-Unique-Results=true
+X-Plasma-Runner-Weak-Results=true

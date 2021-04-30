@@ -162,3 +162,5 @@ X-KDE-PluginInfo-Name=locations
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-License=LGPL
 X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-Runner-Unique-Results=true
+X-Plasma-Runner-Weak-Results=false

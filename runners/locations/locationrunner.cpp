@@ -98,6 +98,10 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
         } else {
             match.setIconName(KProtocolInfo::icon(protocol));
             match.setText(i18n("Go to %1", url.toDisplayString(QUrl::PreferLocalFile)));
+            // in case of https://phabricator.kde.org we add a slash at the end to make it comparable to results of other runners
+            if (url.scheme() == QLatin1String("https") && url.toString().endsWith(url.host())) {
+                match.setId(url.toString() + QLatin1Char('/'));
+            }
         }
 
         if (url.scheme() == QLatin1String("mailto")) {
