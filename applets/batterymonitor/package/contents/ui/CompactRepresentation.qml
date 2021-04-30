@@ -28,23 +28,33 @@ MouseArea {
 
     property real itemSize: Math.min(root.height, root.width/view.count)
     readonly property bool isConstrained: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
-    property int wheelDelta: 0
+    property real brightnessError: 0
 
 
     onClicked: plasmoid.expanded = !plasmoid.expanded
-    onEntered: wheelDelta = 0
-    onExited: wheelDelta = 0
+    
     onWheel: {
-        var delta = wheel.angleDelta.y || wheel.angleDelta.x
+        var delta = wheel.angleDelta.y
 
         var maximumBrightness = batterymonitor.maximumScreenBrightness
         // Don't allow the UI to turn off the screen
         // Please see https://git.reviewboard.kde.org/r/122505/ for more information
         var minimumBrightness = (maximumBrightness > 100 ? 1 : 0)
-        var steps = Math.max(1, Math.round(maximumBrightness / 20))
-        var deltaSteps = delta / 120;
-        batterymonitor.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, batterymonitor.screenBrightness + deltaSteps * steps));
+        var stepSize = Math.max(1, maximumBrightness / 20)
+
+        if (Math.abs(delta) < 120) {
+            // Touchpad scrolling
+            brightnessError += delta * stepSize / 120
+            var change = Math.round(brightnessError);
+            var newBrightness = batterymonitor.screenBrightness + change
+            brightnessError -= change
+        } else {
+            // Discrete/wheel scrolling
+            var newBrightness = Math.round(batterymonitor.screenBrightness/stepSize + delta/120) * stepSize
+        }
+        batterymonitor.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, newBrightness));
     }
+
 
 
     //Should we consider turning this into a Flow item?

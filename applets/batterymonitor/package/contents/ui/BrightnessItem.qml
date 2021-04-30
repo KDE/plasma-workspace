@@ -55,7 +55,7 @@ RowLayout {
             spacing: PlasmaCore.Units.smallSpacing
 
             function percentage(from, to, value) {
-                return Math.floor(100 * (value - from) / (to - from));
+                return Math.round(100 * (value - from) / (to - from));
             }
 
             PlasmaComponents3.Label {
