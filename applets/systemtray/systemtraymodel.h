@@ -21,10 +21,10 @@
 #define SYSTEMTRAYMODEL_H
 
 #include <QAbstractListModel>
+#include <QConcatenateTablesProxyModel>
 #include <QList>
 
 #include <KCoreAddons/KPluginMetaData>
-#include <KItemModels/KConcatenateRowsProxyModel>
 #include <Plasma/DataEngine>
 #include <Plasma/DataEngineConsumer>
 
@@ -165,7 +165,7 @@ private:
 /**
  * @brief Cantenating model for system tray, that can expose multiple data models as one.
  */
-class SystemTrayModel : public KConcatenateRowsProxyModel
+class SystemTrayModel : public QConcatenateTablesProxyModel
 {
     Q_OBJECT
 public:

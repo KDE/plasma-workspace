@@ -466,9 +466,9 @@ int StatusNotifierModel::indexOfSource(const QString &source) const
 }
 
 SystemTrayModel::SystemTrayModel(QObject *parent)
-    : KConcatenateRowsProxyModel(parent)
+    : QConcatenateTablesProxyModel(parent)
 {
-    m_roleNames = KConcatenateRowsProxyModel::roleNames();
+    m_roleNames = QConcatenateTablesProxyModel::roleNames();
 }
 
 QHash<int, QByteArray> SystemTrayModel::roleNames() const
@@ -487,5 +487,5 @@ void SystemTrayModel::addSourceModel(QAbstractItemModel *sourceModel)
         }
     }
 
-    KConcatenateRowsProxyModel::addSourceModel(sourceModel);
+    QConcatenateTablesProxyModel::addSourceModel(sourceModel);
 }
