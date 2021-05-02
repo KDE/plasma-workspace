@@ -62,10 +62,14 @@ ColumnLayout {
             // isn't enabled anyway
             visible: inhibitions.length === 1 && !powerManagement.disabled
             Layout.fillWidth: true
-            iconSource: inhibitions[0].Icon || ""
-            text: inhibitions[0].Reason ?
-                                        i18n("%1 is inhibiting sleep and screen locking (%2)", inhibitions[0].Name, inhibitions[0].Reason)
-                                        : i18n("%1 is inhibiting sleep and screen locking (unknown reason)", inhibitions[0].Name)
+            iconSource: inhibitions.length === 1 ? inhibitions[0].Icon : ""
+            text: inhibitions.length === 1 ?
+                    inhibitions[0].Reason ?
+                        i18n("%1 is inhibiting sleep and screen locking (%2)", inhibitions[0].Name, inhibitions[0].Reason)
+                    :
+                        i18n("%1 is inhibiting sleep and screen locking (unknown reason)", inhibitions[0].Name)
+                :
+                    ""
         }
 
 
