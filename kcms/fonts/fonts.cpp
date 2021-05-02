@@ -44,8 +44,8 @@
 #include <KPluginFactory>
 #include <KWindowSystem>
 
-#include "krdb.h"
 #include "../kcms-common_p.h"
+#include "krdb.h"
 #include "kxftconfig.h"
 #include "previewimageprovider.h"
 

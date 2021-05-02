@@ -28,10 +28,10 @@
 #include <qopenglshaderprogram.h>
 
 #include <KAuthorized>
+#include <KStartupInfo>
 #include <kactivities/controller.h>
 #include <klocalizedstring.h>
 #include <kwindowsystem.h>
-#include <KStartupInfo>
 
 #include <KPackage/Package>
 
@@ -288,7 +288,7 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
             m_configView->deleteLater();
         } else {
             m_configView->show();
-            auto window = qobject_cast<QWindow*>(m_configView);
+            auto window = qobject_cast<QWindow *>(m_configView);
             if (window && QX11Info::isPlatformX11()) {
                 KStartupInfo::setNewStartupId(window, QX11Info::nextStartupId());
             }
@@ -318,7 +318,7 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
     m_configView.data()->show();
     m_configView->requestActivate();
 
-    auto window = qobject_cast<QWindow*>(m_configView);
+    auto window = qobject_cast<QWindow *>(m_configView);
     if (window && QX11Info::isPlatformX11()) {
         KStartupInfo::setNewStartupId(window, QX11Info::nextStartupId());
     }

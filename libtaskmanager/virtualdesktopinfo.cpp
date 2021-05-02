@@ -26,11 +26,11 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include <KWayland/Client/registry.h>
 #include <KWindowSystem>
 
-#include <QDebug>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
+#include <QDebug>
 
 #include <config-X11.h>
 
@@ -83,29 +83,23 @@ protected Q_SLOTS:
 VirtualDesktopInfo::Private::Private()
 {
     // Connect to navigationWrappingAroundChanged signal
-    const bool connection = QDBusConnection::sessionBus().connect(
-        QStringLiteral("org.kde.KWin"),
-        QStringLiteral("/VirtualDesktopManager"),
-        QStringLiteral("org.kde.KWin.VirtualDesktopManager"),
-        QStringLiteral("navigationWrappingAroundChanged"),
-        this,
-        SLOT(navigationWrappingAroundChanged(bool)));
+    const bool connection = QDBusConnection::sessionBus().connect(QStringLiteral("org.kde.KWin"),
+                                                                  QStringLiteral("/VirtualDesktopManager"),
+                                                                  QStringLiteral("org.kde.KWin.VirtualDesktopManager"),
+                                                                  QStringLiteral("navigationWrappingAroundChanged"),
+                                                                  this,
+                                                                  SLOT(navigationWrappingAroundChanged(bool)));
     if (!connection) {
         qWarning() << "Could not connect to org.kde.KWin.VirtualDesktopManager.navigationWrappingAroundChanged signal";
     }
 
     // ...Then get the property's current value
-    QDBusMessage msg = QDBusMessage::createMethodCall(
-        QStringLiteral("org.kde.KWin"),
-        QStringLiteral("/VirtualDesktopManager"),
-        QStringLiteral("org.freedesktop.DBus.Properties"),
-        QStringLiteral("Get")
-    );
-    msg.setArguments({
-        QStringLiteral("org.kde.KWin.VirtualDesktopManager"),
-        QStringLiteral("navigationWrappingAround")
-    });
-    auto *watcher = new QDBusPendingCallWatcher( QDBusConnection::sessionBus().asyncCall(msg), this);
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                      QStringLiteral("/VirtualDesktopManager"),
+                                                      QStringLiteral("org.freedesktop.DBus.Properties"),
+                                                      QStringLiteral("Get"));
+    msg.setArguments({QStringLiteral("org.kde.KWin.VirtualDesktopManager"), QStringLiteral("navigationWrappingAround")});
+    auto *watcher = new QDBusPendingCallWatcher(QDBusConnection::sessionBus().asyncCall(msg), this);
     QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<QVariant> reply = *watcher;
         watcher->deleteLater();
@@ -117,7 +111,6 @@ VirtualDesktopInfo::Private::Private()
 
         navigationWrappingAroundChanged(reply.value().toBool());
     });
-
 }
 
 void VirtualDesktopInfo::Private::navigationWrappingAroundChanged(bool newVal)

@@ -50,7 +50,8 @@ namespace TaskManager
 {
 typedef QSet<QString> ActivitiesSet;
 
-template<typename ActivitiesCollection> inline bool isOnAllActivities(const ActivitiesCollection &activities)
+template<typename ActivitiesCollection>
+inline bool isOnAllActivities(const ActivitiesCollection &activities)
 {
     return activities.isEmpty() || activities.contains(NULL_UUID);
 }

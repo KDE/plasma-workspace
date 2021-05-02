@@ -110,7 +110,6 @@ private:
 
     bool m_gtkConfigKdedModuleLoaded = false;
     GtkPage *m_gtkPage = nullptr;
-
 };
 
 #endif // __KCMSTYLE_H

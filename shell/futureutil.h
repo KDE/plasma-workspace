@@ -22,7 +22,8 @@
 
 #include <QCoreApplication>
 
-template<typename T> inline void awaitFuture(const QFuture<T> &future)
+template<typename T>
+inline void awaitFuture(const QFuture<T> &future)
 {
     while (!future.isFinished()) {
         QCoreApplication::processEvents();

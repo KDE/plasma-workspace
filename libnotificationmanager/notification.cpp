@@ -771,7 +771,6 @@ void Notification::setResident(bool resident)
     d->resident = resident;
 }
 
-
 bool Notification::transient() const
 {
     return d->transient;

@@ -118,7 +118,7 @@ int main(int argc, char **argv)
         parser.parse(arguments);
         updateVisibility();
     });
-    QObject::connect(&service, &KDBusService::activateActionRequested, &view, [&view] (const QString &action) {
+    QObject::connect(&service, &KDBusService::activateActionRequested, &view, [&view](const QString &action) {
         if (action == QLatin1String("RunClipboard")) {
             view.displayWithClipboardContents();
         }

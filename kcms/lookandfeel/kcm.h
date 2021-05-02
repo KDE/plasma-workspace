@@ -101,9 +101,19 @@ private:
 
     void revertKeyIfNeeded(KConfigGroup &group, KConfigGroup &home, KConfigGroup &defaults);
 
-    void writeNewDefaults(const QString &filename, const QString &group, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
-    void writeNewDefaults(KConfig &config, KConfig &configDefault, const QString &group, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
-    void writeNewDefaults(KConfigGroup &cg, KConfigGroup &cgd, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
+    void writeNewDefaults(const QString &filename,
+                          const QString &group,
+                          const QString &key,
+                          const QString &value,
+                          KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
+    void writeNewDefaults(KConfig &config,
+                          KConfig &configDefault,
+                          const QString &group,
+                          const QString &key,
+                          const QString &value,
+                          KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
+    void
+    writeNewDefaults(KConfigGroup &cg, KConfigGroup &cgd, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
     static KConfig configDefaults(const QString &filename);
 
     LookAndFeelData *m_data;

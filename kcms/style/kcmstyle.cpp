@@ -39,8 +39,8 @@
 #include <KPluginLoader>
 #include <KToolBar>
 
-#include <QDBusPendingReply>
 #include <QDBusPendingCallWatcher>
+#include <QDBusPendingReply>
 #include <QLibrary>
 #include <QMetaEnum>
 #include <QQuickItem>
@@ -253,9 +253,7 @@ bool KCMStyle::gtkConfigKdedModuleLoaded() const
 
 void KCMStyle::checkGtkConfigKdedModuleLoaded()
 {
-    org::kde::kded5 kdedInterface(QStringLiteral("org.kde.kded5"),
-                                  QStringLiteral("/kded"),
-                                  QDBusConnection::sessionBus());
+    org::kde::kded5 kdedInterface(QStringLiteral("org.kde.kded5"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
     auto call = kdedInterface.loadedModules();
     auto *watcher = new QDBusPendingCallWatcher(call, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {

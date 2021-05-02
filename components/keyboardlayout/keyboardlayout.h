@@ -43,8 +43,10 @@ private:
 
     enum DBusData { Layout, LayoutsList };
 
-    template<class T> void requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)());
-    template<DBusData> void requestDBusData();
+    template<class T>
+    void requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)());
+    template<DBusData>
+    void requestDBusData();
 
     uint mLayout;
     QVector<LayoutNames> mLayoutsList;

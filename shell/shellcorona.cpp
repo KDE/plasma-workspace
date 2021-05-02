@@ -433,10 +433,10 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
         const auto location = cont->location();
 
         panelJson.insert("location",
-                         location == Plasma::Types::TopEdge
-                             ? "top"
-                             : location == Plasma::Types::LeftEdge ? "left"
-                                                                   : location == Plasma::Types::RightEdge ? "right" : /* Plasma::Types::BottomEdge */ "bottom");
+                         location == Plasma::Types::TopEdge         ? "top"
+                             : location == Plasma::Types::LeftEdge  ? "left"
+                             : location == Plasma::Types::RightEdge ? "right"
+                                                                    : /* Plasma::Types::BottomEdge */ "bottom");
 
         const qreal height =
             // If we do not have a panel, fallback to 4 units

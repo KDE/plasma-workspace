@@ -48,7 +48,7 @@ KXftConfig::SubPixel::Type defaultSubPixel()
     return KXftConfig::SubPixel::Rgb;
 }
 
- KXftConfig::Hint::Style defaultHinting()
+KXftConfig::Hint::Style defaultHinting()
 {
     return KXftConfig::Hint::Slight;
 }

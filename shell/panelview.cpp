@@ -633,7 +633,8 @@ void PanelView::restore()
     // the place for this config key is changed in Plasma 5.9
     // Do NOT use readConfigValueWithFallBack
     setVisibilityMode((VisibilityMode)panelConfig.parent().readEntry<int>("panelVisibility", panelConfig.readEntry<int>("panelVisibility", (int)NormalPanel)));
-    setOpacityMode((OpacityMode)config().parent().readEntry<int>("panelOpacity", configDefaults().parent().readEntry<int>("panelOpacity", PanelView::OpacityMode::Adaptive)));
+    setOpacityMode((OpacityMode)config().parent().readEntry<int>("panelOpacity",
+                                                                 configDefaults().parent().readEntry<int>("panelOpacity", PanelView::OpacityMode::Adaptive)));
     m_initCompleted = true;
     resizePanel();
     positionPanel();
@@ -1056,9 +1057,9 @@ QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
     }
 
     QRectF containmentRect(containmentItem->mapToScene(QPoint(0, 0)), QSizeF(containmentItem->width(), containmentItem->height()));
-    
-    // We are removing 1 to the e.g. containmentRect.right() - m_rightPadding because the last pixel would otherwise 
-    // the first one in the margin, and thus the mouse event would be discarded. Instead, the first pixel given by 
+
+    // We are removing 1 to the e.g. containmentRect.right() - m_rightPadding because the last pixel would otherwise
+    // the first one in the margin, and thus the mouse event would be discarded. Instead, the first pixel given by
     // containmentRect.left() + m_leftPadding the first one *not* in the margin, so it work.
     return QPointF(qBound(containmentRect.left() + m_leftPadding, point.x(), containmentRect.right() - m_rightPadding - 1),
                    qBound(containmentRect.top() + m_topPadding, point.y(), containmentRect.bottom() - m_bottomPadding - 1));

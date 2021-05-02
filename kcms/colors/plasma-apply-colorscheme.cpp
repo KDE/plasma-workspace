@@ -17,8 +17,8 @@
 */
 
 #include "colorsapplicator.h"
-#include "colorssettings.h"
 #include "colorsmodel.h"
+#include "colorssettings.h"
 
 #include "../krdb/krdb.h"
 
@@ -26,12 +26,12 @@
 #include <KConfig>
 #include <KLocalizedString>
 
-#include <QGuiApplication>
 #include <QCommandLineParser>
-#include <QDebug>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QDebug>
 #include <QFile>
+#include <QGuiApplication>
 #include <QTimer>
 
 int main(int argc, char **argv)
@@ -46,15 +46,20 @@ int main(int argc, char **argv)
 
     QCommandLineParser *parser = new QCommandLineParser;
     parser->addHelpOption();
-    parser->setApplicationDescription(i18n("This tool allows you to set the color scheme for the current Plasma session, without accidentally setting it to one that is either not available, or which is already set."));
-    parser->addPositionalArgument(QStringLiteral("colorscheme"), i18n("The name of the color scheme you wish to set for your current Plasma session (passing a full path will only use the last part of the path)"));
-    parser->addOption(QCommandLineOption(QStringLiteral("list-schemes"), i18n("Show all the color schemes available on the system (and which is the current theme)")));
+    parser->setApplicationDescription(
+        i18n("This tool allows you to set the color scheme for the current Plasma session, without accidentally setting it to one that is either not "
+             "available, or which is already set."));
+    parser->addPositionalArgument(
+        QStringLiteral("colorscheme"),
+        i18n("The name of the color scheme you wish to set for your current Plasma session (passing a full path will only use the last part of the path)"));
+    parser->addOption(
+        QCommandLineOption(QStringLiteral("list-schemes"), i18n("Show all the color schemes available on the system (and which is the current theme)")));
     parser->process(app);
 
     int exitCode{0};
-    ColorsSettings* settings = new ColorsSettings(&app);
+    ColorsSettings *settings = new ColorsSettings(&app);
     QTextStream ts(stdout);
-    ColorsModel* model = new ColorsModel(&app);
+    ColorsModel *model = new ColorsModel(&app);
     model->load();
     model->setSelectedScheme(settings->colorScheme());
     if (!parser->positionalArguments().isEmpty()) {
@@ -77,7 +82,7 @@ int main(int argc, char **argv)
             } else if (!requestedScheme.isEmpty()) {
                 int newSchemeIndex{-1};
                 QStringList availableThemes;
-                for (int i = 0 ; i < model->rowCount(QModelIndex()); ++i) {
+                for (int i = 0; i < model->rowCount(QModelIndex()); ++i) {
                     QString schemeName = model->data(model->index(i, 0), ColorsModel::SchemeNameRole).toString();
                     availableThemes << schemeName;
                     if (schemeName == requestedScheme) {
@@ -112,7 +117,7 @@ int main(int argc, char **argv)
     } else if (parser->isSet(QStringLiteral("list-schemes"))) {
         ts << i18n("You have the following color schemes on your system:") << Qt::endl;
         int currentThemeIndex = model->selectedSchemeIndex();
-        for (int i = 0 ; i < model->rowCount(QModelIndex()); ++i) {
+        for (int i = 0; i < model->rowCount(QModelIndex()); ++i) {
             const QString schemeName = model->data(model->index(i, 0), ColorsModel::SchemeNameRole).toString();
             if (i == currentThemeIndex) {
                 ts << i18n(" * %1 (current color scheme)", schemeName) << Qt::endl;
@@ -123,8 +128,9 @@ int main(int argc, char **argv)
     } else {
         parser->showHelp();
     }
-    QTimer::singleShot(0, &app, [&app,&exitCode](){ app.exit(exitCode); });
+    QTimer::singleShot(0, &app, [&app, &exitCode]() {
+        app.exit(exitCode);
+    });
 
     return app.exec();
 }
-

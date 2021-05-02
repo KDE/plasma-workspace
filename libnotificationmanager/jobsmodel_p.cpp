@@ -486,9 +486,7 @@ void JobsModelPrivate::onServiceUnregistered(const QString &serviceName)
             continue;
         }
 
-        job->d->terminate(KIO::ERR_OWNER_DIED,
-                          i18n("Application closed unexpectedly."),
-                          {} /*hints*/);
+        job->d->terminate(KIO::ERR_OWNER_DIED, i18n("Application closed unexpectedly."), {} /*hints*/);
     }
 
     Q_ASSERT(!m_serviceWatcher->watchedServices().contains(serviceName));

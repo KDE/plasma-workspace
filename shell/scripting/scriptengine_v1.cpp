@@ -53,7 +53,8 @@
 
 namespace
 {
-template<typename T> inline void awaitFuture(const QFuture<T> &future)
+template<typename T>
+inline void awaitFuture(const QFuture<T> &future)
 {
     while (!future.isFinished()) {
         QCoreApplication::processEvents();
@@ -70,7 +71,8 @@ public:
 
     // operator + is commonly used for these things
     // to avoid having the lambda inside the parenthesis
-    template<typename Function> void operator+(Function function) const
+    template<typename Function>
+    void operator+(Function function) const
     {
         if (!array.isArray())
             return;
@@ -97,7 +99,8 @@ public:
 
     // operator + is commonly used for these things
     // to avoid having the lambda inside the parenthesis
-    template<typename Function> void operator+(Function function) const
+    template<typename Function>
+    void operator+(Function function) const
     {
         QJSValueIterator it(object);
         while (it.hasNext()) {
@@ -113,7 +116,8 @@ private:
 #define SCRIPT_OBJECT_FOREACH(Key, Value, Array) ScriptObject_forEach_Helper(Array) + [&](const QString &Key, const QJSValue &Value)
 
 // Case insensitive comparison of two strings
-template<typename StringType> inline bool matches(const QString &object, const StringType &string)
+template<typename StringType>
+inline bool matches(const QString &object, const StringType &string)
 {
     return object.compare(string, Qt::CaseInsensitive) == 0;
 }
@@ -322,7 +326,8 @@ QJSValue ScriptEngine::V1::activities() const
 }
 
 // Utility function to process configs and config groups
-template<typename Object> void loadSerializedConfigs(Object *object, const QJSValue &configs)
+template<typename Object>
+void loadSerializedConfigs(Object *object, const QJSValue &configs)
 {
     SCRIPT_OBJECT_FOREACH(escapedGroup, config, configs)
     {

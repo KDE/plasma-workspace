@@ -56,7 +56,11 @@ int main(int argc, char **argv)
     const static auto _r = QStringLiteral("resetLayout");
 
     QCommandLineOption _list = QCommandLineOption(QStringList() << QStringLiteral("l") << _l, i18n("List available global theme packages"));
-    QCommandLineOption _apply = QCommandLineOption(QStringList() << QStringLiteral("a") << _a, i18n("Apply a global theme package. This can be the name of a package, or a full path to an installed package, at which point this tool will ensure it is a global theme package and then attempt to apply it"), i18n("packagename"));
+    QCommandLineOption _apply =
+        QCommandLineOption(QStringList() << QStringLiteral("a") << _a,
+                           i18n("Apply a global theme package. This can be the name of a package, or a full path to an installed package, at which point this "
+                                "tool will ensure it is a global theme package and then attempt to apply it"),
+                           i18n("packagename"));
     QCommandLineOption _resetLayout = QCommandLineOption(QStringList() << _r, i18n("Reset the Plasma Desktop layout"));
 
     QCommandLineParser parser;

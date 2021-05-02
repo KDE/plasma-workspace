@@ -91,14 +91,16 @@ inline qulonglong toBit(QFontDatabase::WritingSystem ws)
 static const struct {
     QFontDatabase::WritingSystem ws;
     ushort ch;
-} sampleCharForWritingSystem[] = {{QFontDatabase::Telugu, 0xc15},
-                                  {QFontDatabase::Kannada, 0xc95},
-                                  {QFontDatabase::Malayalam, 0xd15},
-                                  {QFontDatabase::Sinhala, 0xd9a},
-                                  {QFontDatabase::Myanmar, 0x1000},
-                                  {QFontDatabase::Ogham, 0x1681},
-                                  {QFontDatabase::Runic, 0x16a0},
-                                  {QFontDatabase::Any, 0x0},};
+} sampleCharForWritingSystem[] = {
+    {QFontDatabase::Telugu, 0xc15},
+    {QFontDatabase::Kannada, 0xc95},
+    {QFontDatabase::Malayalam, 0xd15},
+    {QFontDatabase::Sinhala, 0xd9a},
+    {QFontDatabase::Myanmar, 0x1000},
+    {QFontDatabase::Ogham, 0x1681},
+    {QFontDatabase::Runic, 0x16a0},
+    {QFontDatabase::Any, 0x0},
+};
 
 qulonglong WritingSystems::get(FcPattern *pat) const
 {

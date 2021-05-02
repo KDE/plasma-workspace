@@ -34,7 +34,8 @@
 // TODO: implement in libsolid2
 namespace
 {
-template<class DevIface> DevIface *getAncestorAs(const Solid::Device &device)
+template<class DevIface>
+DevIface *getAncestorAs(const Solid::Device &device)
 {
     for (Solid::Device parent = device.parent(); parent.isValid(); parent = parent.parent()) {
         if (parent.is<DevIface>()) {
@@ -409,17 +410,19 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
     using namespace Solid;
     // we cannot just iterate the enum in reverse order since Battery comes second to last
     // and then our phone which also has a battery gets treated as battery :(
-    static const Solid::DeviceInterface::Type typeOrder[] = {Solid::DeviceInterface::PortableMediaPlayer,
-                                                             Solid::DeviceInterface::Camera,
-                                                             Solid::DeviceInterface::OpticalDisc,
-                                                             Solid::DeviceInterface::StorageVolume,
-                                                             Solid::DeviceInterface::OpticalDrive,
-                                                             Solid::DeviceInterface::StorageDrive,
-                                                             Solid::DeviceInterface::NetworkShare,
-                                                             Solid::DeviceInterface::StorageAccess,
-                                                             Solid::DeviceInterface::Block,
-                                                             Solid::DeviceInterface::Battery,
-                                                             Solid::DeviceInterface::Processor,};
+    static const Solid::DeviceInterface::Type typeOrder[] = {
+        Solid::DeviceInterface::PortableMediaPlayer,
+        Solid::DeviceInterface::Camera,
+        Solid::DeviceInterface::OpticalDisc,
+        Solid::DeviceInterface::StorageVolume,
+        Solid::DeviceInterface::OpticalDrive,
+        Solid::DeviceInterface::StorageDrive,
+        Solid::DeviceInterface::NetworkShare,
+        Solid::DeviceInterface::StorageAccess,
+        Solid::DeviceInterface::Block,
+        Solid::DeviceInterface::Battery,
+        Solid::DeviceInterface::Processor,
+    };
 
     for (int i = 0; i < 11; ++i) {
         const Solid::DeviceInterface *interface = device.asDeviceInterface(typeOrder[i]);

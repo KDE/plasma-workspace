@@ -168,7 +168,7 @@ public:
     void setVisibilityMode(PanelView::VisibilityMode mode);
 
     PanelView::OpacityMode opacityMode() const;
-	bool adaptiveOpacityEnabled();
+    bool adaptiveOpacityEnabled();
     void setOpacityMode(PanelView::OpacityMode mode);
     void updateAdaptiveOpacityEnabled();
 

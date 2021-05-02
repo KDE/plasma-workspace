@@ -20,9 +20,9 @@
 
 #include "../kcms-common_p.h"
 
+#include "xcursor/cursortheme.h"
 #include "xcursor/themeapplicator.h"
 #include "xcursor/thememodel.h"
-#include "xcursor/cursortheme.h"
 
 #include <KLocalizedString>
 
@@ -44,15 +44,19 @@ int main(int argc, char **argv)
 
     QCommandLineParser *parser = new QCommandLineParser;
     parser->addHelpOption();
-    parser->setApplicationDescription(i18n("This tool allows you to set the mouse cursor theme for the current Plasma session, without accidentally setting it to one that is either not available, or which is already set."));
-    parser->addPositionalArgument(QStringLiteral("cursortheme"), i18n("The name of the cursor theme you wish to set for your current Plasma session (passing a full path will only use the last part of the path)"));
+    parser->setApplicationDescription(
+        i18n("This tool allows you to set the mouse cursor theme for the current Plasma session, without accidentally setting it to one that is either not "
+             "available, or which is already set."));
+    parser->addPositionalArgument(
+        QStringLiteral("cursortheme"),
+        i18n("The name of the cursor theme you wish to set for your current Plasma session (passing a full path will only use the last part of the path)"));
     parser->addOption(QCommandLineOption(QStringLiteral("list-themes"), i18n("Show all the themes available on the system (and which is the current theme)")));
     parser->process(app);
 
     int errorCode{0};
-    CursorThemeSettings* settings = new CursorThemeSettings(&app);
+    CursorThemeSettings *settings = new CursorThemeSettings(&app);
     QTextStream ts(stdout);
-    CursorThemeModel* model = new CursorThemeModel(&app);
+    CursorThemeModel *model = new CursorThemeModel(&app);
     if (!parser->positionalArguments().isEmpty()) {
         QString requestedTheme{parser->positionalArguments().first()};
         const QString dirSplit{"/"};
@@ -86,18 +90,21 @@ int main(int argc, char **argv)
                 }
             } else {
                 QStringList availableThemes;
-                for (int i = 0 ; i < model->rowCount(); ++i) {
-                    const CursorTheme* theme = model->theme(model->index(i, 0));
+                for (int i = 0; i < model->rowCount(); ++i) {
+                    const CursorTheme *theme = model->theme(model->index(i, 0));
                     availableThemes << theme->name();
                 }
-                ts << i18n("Could not find theme \"%1\". The theme should be one of the following options: %2", requestedTheme, availableThemes.join(QLatin1String{", "})) << endl;
+                ts << i18n("Could not find theme \"%1\". The theme should be one of the following options: %2",
+                           requestedTheme,
+                           availableThemes.join(QLatin1String{", "}))
+                   << endl;
                 errorCode = -1;
             }
         }
     } else if (parser->isSet(QStringLiteral("list-themes"))) {
         ts << i18n("You have the following mouse cursor themes on your system:") << endl;
-        for (int i = 0 ; i < model->rowCount(); ++i) {
-            const CursorTheme* theme = model->theme(model->index(i, 0));
+        for (int i = 0; i < model->rowCount(); ++i) {
+            const CursorTheme *theme = model->theme(model->index(i, 0));
             if (settings->cursorTheme() == theme->name()) {
                 ts << QString(" * %1 (%2 - current theme for this Plasma session)").arg(theme->title()).arg(theme->name()) << endl;
             } else {
@@ -107,8 +114,9 @@ int main(int argc, char **argv)
     } else {
         parser->showHelp();
     }
-    QTimer::singleShot(0, &app, [&app,&errorCode](){ app.exit(errorCode); });
+    QTimer::singleShot(0, &app, [&app, &errorCode]() {
+        app.exit(errorCode);
+    });
 
     return app.exec();
 }
-

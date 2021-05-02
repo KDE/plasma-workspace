@@ -151,11 +151,10 @@ void WaylandTasksModel::Private::initWayland()
         });
 
         QObject::connect(windowManagement, &KWayland::Client::PlasmaWindowManagement::stackingOrderUuidsChanged, q, [this]() {
-                for (const auto window : qAsConst(windows)) {
-                    this->dataChanged(window, StackingOrder);
-                }
+            for (const auto window : qAsConst(windows)) {
+                this->dataChanged(window, StackingOrder);
             }
-        );
+        });
 
         const auto windows = windowManagement->windows();
         for (auto it = windows.constBegin(); it != windows.constEnd(); ++it) {
@@ -691,7 +690,7 @@ void WaylandTasksModel::requestActivities(const QModelIndex &index, const QStrin
         return;
     }
 
-    auto * const window = d->windows.at(index.row());
+    auto *const window = d->windows.at(index.row());
     const auto newActivities = QSet(activities.begin(), activities.end());
     const auto plasmaActivities = window->plasmaActivities();
     const auto oldActivities = QSet(plasmaActivities.begin(), plasmaActivities.end());

@@ -298,7 +298,9 @@ void CFontViewPart::timeout()
     else
         FcInitReinitialize();
 
-    itsPreview->showFont(!package && itsFontDetails.family.isEmpty() ? localFilePath() : fontFile.isEmpty() ? itsFontDetails.family : fontFile,
+    itsPreview->showFont(!package && itsFontDetails.family.isEmpty() ? localFilePath()
+                             : fontFile.isEmpty()                    ? itsFontDetails.family
+                                                                     : fontFile,
                          itsFontDetails.styleInfo,
                          fileIndex);
 

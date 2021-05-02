@@ -85,7 +85,8 @@ Q_SIGNALS:
 private:
     friend class Job;
 
-    template<typename T> bool updateField(const T &newValue, T &target, void (Job::*changeSignal)())
+    template<typename T>
+    bool updateField(const T &newValue, T &target, void (Job::*changeSignal)())
     {
         if (target != newValue) {
             target = newValue;
@@ -95,7 +96,8 @@ private:
         return false;
     }
 
-    template<typename T> bool updateFieldFromProperties(const QVariantMap &properties, const QString &keyName, T &target, void (Job::*changeSignal)())
+    template<typename T>
+    bool updateFieldFromProperties(const QVariantMap &properties, const QString &keyName, T &target, void (Job::*changeSignal)())
     {
         auto it = properties.find(keyName);
         if (it == properties.end()) {

@@ -20,10 +20,10 @@
 
 #include <KLocalizedString>
 
-#include <QCoreApplication>
 #include <QCommandLineParser>
-#include <QDBusMessage>
+#include <QCoreApplication>
 #include <QDBusConnection>
+#include <QDBusMessage>
 #include <QDebug>
 #include <QFileInfo>
 #include <QTimer>
@@ -39,7 +39,8 @@ int main(int argc, char **argv)
     QCommandLineParser *parser = new QCommandLineParser;
     parser->addHelpOption();
     parser->setApplicationDescription(i18n("This tool allows you to set an image as the wallpaper for the Plasma session."));
-    parser->addPositionalArgument(QStringLiteral("imagefile"), i18n("An image file or an installed wallpaper kpackage that you wish to set as the wallpaper for your Plasma session"));
+    parser->addPositionalArgument(QStringLiteral("imagefile"),
+                                  i18n("An image file or an installed wallpaper kpackage that you wish to set as the wallpaper for your Plasma session"));
     parser->process(app);
 
     int errorCode{0};
@@ -85,20 +86,20 @@ int main(int argc, char **argv)
                 << "d.currentConfigGroup = ['Wallpaper', 'org.kde.image', 'General'];"
                 << "d.writeConfig('Image', 'file://" + wallpaperFile + "');"
                 << "}";
-                auto message = QDBusMessage::createMethodCall("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "evaluateScript");
-                message.setArguments(QVariantList() << QVariant(script));
-                auto reply = QDBusConnection::sessionBus().call(message);
+            auto message = QDBusMessage::createMethodCall("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "evaluateScript");
+            message.setArguments(QVariantList() << QVariant(script));
+            auto reply = QDBusConnection::sessionBus().call(message);
 
-                if (reply.type() == QDBusMessage::ErrorMessage) {
-                    ts << i18n("An error occurred while attempting to set the Plasma wallpaper:\n") << reply.errorMessage() << Qt::endl;
-                    errorCode = -1;
+            if (reply.type() == QDBusMessage::ErrorMessage) {
+                ts << i18n("An error occurred while attempting to set the Plasma wallpaper:\n") << reply.errorMessage() << Qt::endl;
+                errorCode = -1;
+            } else {
+                if (isKPackage) {
+                    ts << i18n("Successfully set the wallpaper for all desktops to the KPackage based %1", wallpaperFile) << Qt::endl;
                 } else {
-                    if (isKPackage) {
-                        ts << i18n("Successfully set the wallpaper for all desktops to the KPackage based %1", wallpaperFile) << Qt::endl;
-                    } else {
-                        ts << i18n("Successfully set the wallpaper for all desktops to the image %1", wallpaperFile) << Qt::endl;
-                    }
+                    ts << i18n("Successfully set the wallpaper for all desktops to the image %1", wallpaperFile) << Qt::endl;
                 }
+            }
 
         } else if (errorCode == 0) {
             // Just to avoid spitting out multiple errors
@@ -108,7 +109,9 @@ int main(int argc, char **argv)
     } else {
         parser->showHelp();
     }
-    QTimer::singleShot(0, &app, [&app,&errorCode](){ app.exit(errorCode); });
+    QTimer::singleShot(0, &app, [&app, &errorCode]() {
+        app.exit(errorCode);
+    });
 
     return app.exec();
 }

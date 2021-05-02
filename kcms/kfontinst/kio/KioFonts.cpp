@@ -559,7 +559,9 @@ void CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder)
     KFI_DBUG << QString(FOLDER_SYS == folder ? i18n(KFI_KIO_FONTS_SYS) : i18n(KFI_KIO_FONTS_USER));
     entry.clear();
     entry.fastInsert(KIO::UDSEntry::UDS_NAME,
-                     FOLDER_ROOT == folder || Misc::root() ? i18n("Fonts") : FOLDER_SYS == folder ? i18n(KFI_KIO_FONTS_SYS) : i18n(KFI_KIO_FONTS_USER));
+                     FOLDER_ROOT == folder || Misc::root() ? i18n("Fonts")
+                         : FOLDER_SYS == folder            ? i18n(KFI_KIO_FONTS_SYS)
+                                                           : i18n(KFI_KIO_FONTS_USER));
     entry.fastInsert(KIO::UDSEntry::UDS_ACCESS, !Misc::root() && FOLDER_SYS == folder ? 0444 : 0744);
     entry.fastInsert(KIO::UDSEntry::UDS_USER, Misc::root() || FOLDER_SYS == folder ? QString::fromLatin1("root") : getUserName(getuid()));
     entry.fastInsert(KIO::UDSEntry::UDS_GROUP, Misc::root() || FOLDER_SYS == folder ? QString::fromLatin1("root") : getGroupName(getgid()));

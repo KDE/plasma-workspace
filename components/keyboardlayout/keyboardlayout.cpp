@@ -10,13 +10,15 @@
 
 #include <QDBusInterface>
 
-template<> inline void KeyboardLayout::requestDBusData<KeyboardLayout::Layout>()
+template<>
+inline void KeyboardLayout::requestDBusData<KeyboardLayout::Layout>()
 {
     if (mIface)
         requestDBusData(mIface->getLayout(), mLayout, &KeyboardLayout::layoutChanged);
 }
 
-template<> inline void KeyboardLayout::requestDBusData<KeyboardLayout::LayoutsList>()
+template<>
+inline void KeyboardLayout::requestDBusData<KeyboardLayout::LayoutsList>()
 {
     if (mIface)
         requestDBusData(mIface->getLayoutsList(), mLayoutsList, &KeyboardLayout::layoutsListChanged);
@@ -70,7 +72,8 @@ void KeyboardLayout::setLayout(uint index)
         mIface->setLayout(index);
 }
 
-template<class T> void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)())
+template<class T>
+void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)())
 {
     connect(new QDBusPendingCallWatcher(pendingReply, this), &QDBusPendingCallWatcher::finished, this, [this, &out, notify](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<T> reply = *watcher;

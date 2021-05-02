@@ -24,8 +24,8 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
-#include <QTimer>
 #include <QDebug>
+#include <QTimer>
 
 int main(int argc, char **argv)
 {
@@ -39,14 +39,18 @@ int main(int argc, char **argv)
 
     QCommandLineParser *parser = new QCommandLineParser;
     parser->addHelpOption();
-    parser->setApplicationDescription(i18n("This tool allows you to set the theme of the current Plasma session, without accidentally setting it to one that is either not available, or which is already set."));
-    parser->addPositionalArgument(QStringLiteral("themename"), i18n("The name of the theme you wish to set for your current Plasma session (passing a full path will only use the last part of the path)"));
+    parser->setApplicationDescription(
+        i18n("This tool allows you to set the theme of the current Plasma session, without accidentally setting it to one that is either not available, or "
+             "which is already set."));
+    parser->addPositionalArgument(
+        QStringLiteral("themename"),
+        i18n("The name of the theme you wish to set for your current Plasma session (passing a full path will only use the last part of the path)"));
     parser->addOption(QCommandLineOption(QStringLiteral("list-themes"), i18n("Show all the themes available on the system (and which is the current theme)")));
     parser->process(app);
 
     int errorCode{0};
     QTextStream ts(stdout);
-    ThemesModel* model{new ThemesModel(&app)};
+    ThemesModel *model{new ThemesModel(&app)};
     if (!parser->positionalArguments().isEmpty()) {
         QString requestedTheme{parser->positionalArguments().first()};
         const QString dirSplit{"/"};
@@ -60,7 +64,7 @@ int main(int argc, char **argv)
             bool found{false};
             QStringList availableThemes;
             model->load();
-            for (int i = 0 ; i < model->rowCount(); ++i) {
+            for (int i = 0; i < model->rowCount(); ++i) {
                 QString currentTheme{model->data(model->index(i), ThemesModel::PluginNameRole).toString()};
                 if (currentTheme == requestedTheme) {
                     Plasma::Theme().setThemeName(requestedTheme);
@@ -82,7 +86,7 @@ int main(int argc, char **argv)
     } else if (parser->isSet(QStringLiteral("list-themes"))) {
         ts << i18n("You have the following Plasma themes on your system:") << Qt::endl;
         model->load();
-        for (int i = 0 ; i < model->rowCount(); ++i) {
+        for (int i = 0; i < model->rowCount(); ++i) {
             QString themeName{model->data(model->index(i), ThemesModel::PluginNameRole).toString()};
             if (Plasma::Theme().themeName() == themeName) {
                 ts << QString(" * %1 (current theme for this Plasma session)").arg(themeName) << Qt::endl;
@@ -93,7 +97,9 @@ int main(int argc, char **argv)
     } else {
         parser->showHelp();
     }
-    QTimer::singleShot(0, &app, [&app,&errorCode](){ app.exit(errorCode); });
+    QTimer::singleShot(0, &app, [&app, &errorCode]() {
+        app.exit(errorCode);
+    });
 
     return app.exec();
 }

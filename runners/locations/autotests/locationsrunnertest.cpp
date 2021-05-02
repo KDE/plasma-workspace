@@ -102,7 +102,8 @@ void LocationsRunnerTest::shouldProduceResult_data()
 
     QTest::newRow("file") << normalHomeFile << QVariant(QUrl::fromLocalFile(normalHomeFile));
     QTest::newRow("file tilde") << KShell::tildeCollapse(normalHomeFile) << QVariant(QUrl::fromLocalFile(normalHomeFile));
-    QTest::newRow("file with $HOME as env variable") << KShell::tildeCollapse(normalHomeFile).replace("~", "$HOME") << QVariant(QUrl::fromLocalFile(normalHomeFile));
+    QTest::newRow("file with $HOME as env variable") << KShell::tildeCollapse(normalHomeFile).replace("~", "$HOME")
+                                                     << QVariant(QUrl::fromLocalFile(normalHomeFile));
     QTest::newRow("file URL") << QUrl::fromLocalFile(normalHomeFile).toString() << QVariant(QUrl::fromLocalFile(normalHomeFile));
     if (!executableHomeFile.isEmpty()) {
         QTest::newRow("file URL to executable") << QUrl::fromLocalFile(executableHomeFile).toString() << QVariant(QUrl::fromLocalFile(executableHomeFile));

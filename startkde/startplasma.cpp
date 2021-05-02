@@ -89,18 +89,21 @@ int runSync(const QString &program, const QStringList &args, const QStringList &
     return p.exitCode();
 }
 
-bool isShellVariable(const QByteArray &name) {
+bool isShellVariable(const QByteArray &name)
+{
     return name == "_" || name.startsWith("SHLVL");
 }
 
-bool isSessionVariable(const QByteArray &name) {
+bool isSessionVariable(const QByteArray &name)
+{
     // Check is variable is specific to session.
     return name == "DISPLAY" || name == "XAUTHORITY" || //
-           name == "WAYLAND_DISPLAY" || name == "WAYLAND_SOCKET" || //
-           name.startsWith("XDG_");
+        name == "WAYLAND_DISPLAY" || name == "WAYLAND_SOCKET" || //
+        name.startsWith("XDG_");
 }
 
-void setEnvironmentVariable(const QByteArray &name, const QByteArray &value) {
+void setEnvironmentVariable(const QByteArray &name, const QByteArray &value)
+{
     if (qgetenv(name) != value) {
         //        qCDebug(PLASMA_STARTUP) << "setting..." << env.left(idx) << env.mid(idx+1) << "was" << qgetenv(env.left(idx));
         qputenv(name, value);
@@ -200,7 +203,8 @@ void setupCursor(bool wayland)
     qputenv("XCURSOR_SIZE", QByteArray::number(kcminputrc_mouse_cursorsize));
 }
 
-std::optional<QStringList> getSystemdEnvironment() {
+std::optional<QStringList> getSystemdEnvironment()
+{
     QStringList list;
     auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
                                               QStringLiteral("/org/freedesktop/systemd1"),
@@ -229,7 +233,8 @@ std::optional<QStringList> getSystemdEnvironment() {
 //
 // Systemd read ~/.config/environment.d which applies to all systemd user unit.
 // But it won't work if plasma is not started by systemd.
-void importSystemdEnvrionment() {
+void importSystemdEnvrionment()
+{
     auto environment = getSystemdEnvironment();
     if (!environment) {
         return;
@@ -325,10 +330,9 @@ void setupPlasmaEnvironment()
     qputenv("KDE_APPLICATIONS_AS_SCOPE", "1");
 
     // Add kdedefaults dir to allow config defaults overriding from a writable location
-    const auto current_xdg_config_dirs =  qgetenv("XDG_CONFIG_DIRS");
+    const auto current_xdg_config_dirs = qgetenv("XDG_CONFIG_DIRS");
     const auto new_xdg_dir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation).toUtf8() + "/kdedefaults";
     qputenv("XDG_CONFIG_DIRS", new_xdg_dir + ":" + current_xdg_config_dirs);
-
 }
 
 void setupX11()

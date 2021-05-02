@@ -726,9 +726,10 @@ CJobRunner::Item::Item(const QUrl &u, const QString &n, bool dis)
     , fileName(Misc::getFile(u.path()))
     , isDisabled(dis)
 {
-    type = Misc::checkExt(fileName, "pfa") || Misc::checkExt(fileName, "pfb")
-        ? TYPE1_FONT
-        : Misc::checkExt(fileName, "afm") ? TYPE1_AFM : Misc::checkExt(fileName, "pfm") ? TYPE1_PFM : OTHER_FONT;
+    type = Misc::checkExt(fileName, "pfa") || Misc::checkExt(fileName, "pfb") ? TYPE1_FONT
+        : Misc::checkExt(fileName, "afm")                                     ? TYPE1_AFM
+        : Misc::checkExt(fileName, "pfm")                                     ? TYPE1_PFM
+                                                                              : OTHER_FONT;
 
     if (OTHER_FONT != type) {
         int pos(fileName.lastIndexOf('.'));

@@ -22,8 +22,8 @@
 #include "cursorthemedata.h"
 #include "kcmcursortheme.h"
 
-#include "krdb.h"
 #include "../kcms-common_p.h"
+#include "krdb.h"
 
 #include "xcursor/cursortheme.h"
 #include "xcursor/previewwidget.h"

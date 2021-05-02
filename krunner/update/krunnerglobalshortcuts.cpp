@@ -43,8 +43,9 @@ int main(int argc, char **argv)
     if (!df.readName().isEmpty()) {
         displayName = df.readName();
     }
-    const QString clipboardActionName = df.actionGroup(QStringLiteral("RunClipboard")).readEntry(QStringLiteral("Name"), //
-    QStringLiteral("Run command on clipboard contents"));
+    const QString clipboardActionName = df.actionGroup(QStringLiteral("RunClipboard"))
+                                            .readEntry(QStringLiteral("Name"), //
+                                                       QStringLiteral("Run command on clipboard contents"));
 
     KActionCollection shortCutActions(nullptr, oldDesktopFile);
     shortCutActions.setComponentDisplayName(displayName);
@@ -55,11 +56,11 @@ int main(int argc, char **argv)
 
     QList<QKeySequence> oldRunCommand;
     QList<QKeySequence> oldRunClipboard;
-     if (KGlobalAccel::isComponentActive(oldCompomentName)) {
+    if (KGlobalAccel::isComponentActive(oldCompomentName)) {
         oldRunCommand = KGlobalAccel::self()->globalShortcut(oldCompomentName, QStringLiteral("run command"));
         oldRunClipboard = KGlobalAccel::self()->globalShortcut(oldCompomentName, QStringLiteral("run command on clipboard contents"));
         KGlobalAccel::self()->cleanComponent(oldCompomentName);
-    } else if(KGlobalAccel::isComponentActive(oldDesktopFile)) {
+    } else if (KGlobalAccel::isComponentActive(oldDesktopFile)) {
         oldRunCommand = KGlobalAccel::self()->globalShortcut(oldDesktopFile, runCommandAction.objectName());
         oldRunClipboard = KGlobalAccel::self()->globalShortcut(oldDesktopFile, runClipboardAction.objectName());
         KGlobalAccel::self()->cleanComponent(oldDesktopFile);

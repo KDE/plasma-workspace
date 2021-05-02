@@ -489,8 +489,9 @@ bool EnvCanadaIon::updateIonSource(const QString &source)
     if (sourceAction[1] == QLatin1String("validate") && sourceAction.size() > 2) {
         const QStringList result = validate(sourceAction[2]);
 
-        const QString reply = (result.size() == 1 ? QStringLiteral("envcan|valid|single|") + result[0]
-                                                   : (result.size() > 1) ? QStringLiteral("envcan|valid|multiple|") + result.join(QLatin1Char('|')) : QStringLiteral("envcan|invalid|single|") + sourceAction[2]);
+        const QString reply = (result.size() == 1        ? QStringLiteral("envcan|valid|single|") + result[0]
+                                   : (result.size() > 1) ? QStringLiteral("envcan|valid|multiple|") + result.join(QLatin1Char('|'))
+                                                         : QStringLiteral("envcan|invalid|single|") + sourceAction[2]);
         setData(source, QStringLiteral("validate"), reply);
 
         return true;
@@ -1593,10 +1594,10 @@ void EnvCanadaIon::updateWeather(const QString &source)
         data.insert(QStringLiteral("Yesterday Precip Total"), i18nc("precipitation total, very little", "Trace"));
     } else if (!prevPrecipTotal.isEmpty()) {
         data.insert(QStringLiteral("Yesterday Precip Total"), prevPrecipTotal);
-        const QString& prevPrecipType = weatherData.prevPrecipType;
-        const KUnitConversion::UnitId unit = 
-            (prevPrecipType == QLatin1String("mm") ? KUnitConversion::Millimeter :
-            prevPrecipType == QLatin1String("cm") ? KUnitConversion::Centimeter : KUnitConversion::NoUnit);
+        const QString &prevPrecipType = weatherData.prevPrecipType;
+        const KUnitConversion::UnitId unit = (prevPrecipType == QLatin1String("mm")       ? KUnitConversion::Millimeter
+                                                  : prevPrecipType == QLatin1String("cm") ? KUnitConversion::Centimeter
+                                                                                          : KUnitConversion::NoUnit);
         data.insert(QStringLiteral("Yesterday Precip Unit"), unit);
     }
 

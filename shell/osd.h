@@ -23,8 +23,8 @@
 #include <QString>
 #include <QUrl>
 
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 
 namespace KDeclarative
 {

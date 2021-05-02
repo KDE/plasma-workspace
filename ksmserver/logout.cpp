@@ -143,8 +143,9 @@ void KSMServer::shutdown(KWorkSpace::ShutdownConfirm confirm, KWorkSpace::Shutdo
 
     KConfigGroup cg(config, "General");
 
-    bool logoutConfirmed =
-        (confirm == KWorkSpace::ShutdownConfirmYes ? false : confirm == KWorkSpace::ShutdownConfirmNo ? true : !cg.readEntry("confirmLogout", true));
+    bool logoutConfirmed = (confirm == KWorkSpace::ShutdownConfirmYes      ? false
+                                : confirm == KWorkSpace::ShutdownConfirmNo ? true
+                                                                           : !cg.readEntry("confirmLogout", true));
 
     int shutdownType = (sdtype != KWorkSpace::ShutdownTypeDefault ? sdtype : cg.readEntry("shutdownType", (int)KWorkSpace::ShutdownType::ShutdownTypeLogout));
 

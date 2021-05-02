@@ -16,8 +16,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "colorssettings.h"
 #include "colorsmodel.h"
+#include "colorssettings.h"
 
 #include "../kcms-common_p.h"
 #include "../krdb/krdb.h"

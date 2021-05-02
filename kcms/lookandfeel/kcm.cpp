@@ -20,10 +20,10 @@
 */
 
 #include "kcm.h"
-#include "krdb.h"
 #include "../kcms-common_p.h"
 #include "config-kcm.h"
 #include "config-workspace.h"
+#include "krdb.h"
 
 #include <KAboutData>
 #include <KAutostart>
@@ -466,7 +466,6 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
         return;
     }
 
-
     KConfig configDefault(configDefaults("kdeglobals"));
     KSharedConfigPtr colorConf = KSharedConfig::openConfig(colorFile, KSharedConfig::CascadeConfig);
     if (!m_data->isDefaults()) {
@@ -749,7 +748,11 @@ bool KCMLookandFeel::resetDefaultLayout() const
     return m_resetDefaultLayout;
 }
 
-void KCMLookandFeel::writeNewDefaults(const QString &filename, const QString &group, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags)
+void KCMLookandFeel::writeNewDefaults(const QString &filename,
+                                      const QString &group,
+                                      const QString &key,
+                                      const QString &value,
+                                      KConfig::WriteConfigFlags writeFlags)
 {
     KConfig config(filename);
     KConfigGroup cg(&config, group);
@@ -760,7 +763,12 @@ void KCMLookandFeel::writeNewDefaults(const QString &filename, const QString &gr
     writeNewDefaults(cg, cgd, key, value, writeFlags);
 }
 
-void KCMLookandFeel::writeNewDefaults(KConfig &config, KConfig &configDefault, const QString &group, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags)
+void KCMLookandFeel::writeNewDefaults(KConfig &config,
+                                      KConfig &configDefault,
+                                      const QString &group,
+                                      const QString &key,
+                                      const QString &value,
+                                      KConfig::WriteConfigFlags writeFlags)
 {
     KConfigGroup cg(&config, group);
     KConfigGroup cgd(&configDefault, group);

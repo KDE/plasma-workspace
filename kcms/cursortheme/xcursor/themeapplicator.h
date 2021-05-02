@@ -29,4 +29,4 @@ class CursorTheme;
         version, otherwise returns \e true. */
 bool applyTheme(const CursorTheme *theme, const int size);
 
-#endif//THEMEAPPLICATOR_H
+#endif // THEMEAPPLICATOR_H

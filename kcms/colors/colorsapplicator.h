@@ -31,4 +31,4 @@ class ColorsModel;
  */
 void applyScheme(ColorsSettings *settings, ColorsModel *model);
 
-#endif//COLORSAPPLICATOR_H
+#endif // COLORSAPPLICATOR_H

@@ -570,10 +570,10 @@ void KDisplayManager::shutdown(KWorkSpace::ShutdownType shutdownType,
         cmd.append(shutdownType == KWorkSpace::ShutdownTypeReboot ? "reboot\t" : "halt\t");
         if (!bootOption.isEmpty())
             cmd.append("=").append(bootOption.toLocal8Bit()).append("\t");
-        cmd.append(shutdownMode == KWorkSpace::ShutdownModeInteractive
-                       ? "ask\n"
+        cmd.append(shutdownMode == KWorkSpace::ShutdownModeInteractive    ? "ask\n"
                        : shutdownMode == KWorkSpace::ShutdownModeForceNow ? "forcenow\n"
-                                                                          : shutdownMode == KWorkSpace::ShutdownModeTryNow ? "trynow\n" : "schedule\n");
+                       : shutdownMode == KWorkSpace::ShutdownModeTryNow   ? "trynow\n"
+                                                                          : "schedule\n");
     }
     exec(cmd.data());
 }

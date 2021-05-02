@@ -184,7 +184,8 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
      *
      * @since 5.22
      */
-    Q_PROPERTY(bool inhibitNotificationsWhenScreenSharing READ inhibitNotificationsWhenScreenSharing WRITE setInhibitNotificationsWhenScreenSharing NOTIFY settingsChanged)
+    Q_PROPERTY(bool inhibitNotificationsWhenScreenSharing READ inhibitNotificationsWhenScreenSharing WRITE setInhibitNotificationsWhenScreenSharing NOTIFY
+                   settingsChanged)
 
     /**
      * Whether notification sounds should be disabled

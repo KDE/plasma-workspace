@@ -45,7 +45,8 @@ namespace Xcb
 {
 typedef xcb_window_t WindowId;
 
-template<typename T> using ScopedCPointer = QScopedPointer<T, QScopedPointerPodDeleter>;
+template<typename T>
+using ScopedCPointer = QScopedPointer<T, QScopedPointerPodDeleter>;
 
 class Atom
 {
