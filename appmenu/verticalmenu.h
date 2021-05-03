@@ -54,14 +54,7 @@ public:
         m_menuObjectPath = menuObjectPath;
     }
 
-protected:
-    void keyPressEvent(QKeyEvent *) override;
-    void keyReleaseEvent(QKeyEvent *) override;
-    void paintEvent(QPaintEvent *) override;
-
 private:
-    QMenu *leafMenu();
-
     QString m_serviceName;
     QDBusObjectPath m_menuObjectPath;
 };
