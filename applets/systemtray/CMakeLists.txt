@@ -2,13 +2,31 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.private.syst
 
 plasma_install_package(package org.kde.plasma.private.systemtray)
 
+include_directories(${plasma-workspace_SOURCE_DIR}/statusnotifierwatcher)
+
 set(systemtray_SRCS
     dbusserviceobserver.cpp
     plasmoidregistry.cpp
-    systemtraysettings.cpp
-    systemtraymodel.cpp
     sortedsystemtraymodel.cpp
+    statusnotifieritemjob.cpp
+    statusnotifieritemhost.cpp
+    statusnotifieritemservice.cpp
+    statusnotifieritemsource.cpp
+    systemtraymodel.cpp
+    systemtraysettings.cpp
+    systemtraytypes.cpp
 )
+
+qt5_add_dbus_interface(systemtray_SRCS ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf5_org.kde.StatusNotifierWatcher.xml statusnotifierwatcher_interface)
+qt5_add_dbus_interface(systemtray_SRCS ${plasma-workspace_SOURCE_DIR}/dataengines/mpris2/org.freedesktop.DBus.Properties.xml dbusproperties)
+
+set(statusnotifieritem_xml ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf5_org.kde.StatusNotifierItem.xml)
+set_source_files_properties(${statusnotifieritem_xml} PROPERTIES
+   NO_NAMESPACE false
+   INCLUDE "systemtraytypes.h"
+   CLASSNAME OrgKdeStatusNotifierItem
+)
+qt5_add_dbus_interface(systemtray_SRCS ${statusnotifieritem_xml} statusnotifieritem_interface)
 
 ecm_qt_declare_logging_category(systemtray_SRCS HEADER debug.h
                                             IDENTIFIER SYSTEM_TRAY
@@ -22,7 +40,9 @@ target_link_libraries(systemtraymodel_static
     KF5::XmlGui
     KF5::I18n
     KF5::ItemModels
-    KF5::Plasma)
+    KF5::Plasma
+    KF5::IconThemes
+    dbusmenuqt)
 
 add_library(org.kde.plasma.private.systemtray MODULE systemtray.cpp)
 

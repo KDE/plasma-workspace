@@ -21,6 +21,8 @@
 #include "debug.h"
 
 #include "plasmoidregistry.h"
+#include "statusnotifieritemhost.h"
+#include "statusnotifieritemsource.h"
 #include "systemtraysettings.h"
 
 #include <KLocalizedString>
@@ -257,17 +259,19 @@ int PlasmoidModel::indexOfPluginId(const QString &pluginId) const
 StatusNotifierModel::StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject *parent)
     : BaseModel(settings, parent)
 {
-    m_dataEngine = dataEngine(QStringLiteral("statusnotifieritem"));
+    m_sniHost = StatusNotifierItemHost::self();
 
-    connect(m_dataEngine, &Plasma::DataEngine::sourceAdded, this, &StatusNotifierModel::addSource);
-    connect(m_dataEngine, &Plasma::DataEngine::sourceRemoved, this, &StatusNotifierModel::removeSource);
+    connect(m_sniHost, &StatusNotifierItemHost::itemAdded, this, &StatusNotifierModel::addSource);
+    connect(m_sniHost, &StatusNotifierItemHost::itemRemoved, this, &StatusNotifierModel::removeSource);
 
-    m_dataEngine->connectAllSources(this);
+    for (auto service : m_sniHost->services()) {
+        addSource(service);
+    }
 }
 
-static Plasma::Types::ItemStatus extractStatus(const Plasma::DataEngine::Data &sniData)
+static Plasma::Types::ItemStatus extractStatus(const StatusNotifierItemSource *sniData)
 {
-    QString status = sniData.value(QStringLiteral("Status")).toString();
+    QString status = sniData->status();
     if (status == QLatin1String("Active")) {
         return Plasma::Types::ItemStatus::ActiveStatus;
     } else if (status == QLatin1String("NeedsAttention")) {
@@ -279,19 +283,18 @@ static Plasma::Types::ItemStatus extractStatus(const Plasma::DataEngine::Data &s
     }
 }
 
-static QVariant extractIcon(const Plasma::DataEngine::Data &sniData, const QString &key, const QVariant &defaultValue = QVariant())
+static QVariant extractIcon(const QIcon &icon, const QVariant &defaultValue = QVariant())
 {
-    QVariant icon = sniData.value(key);
-    if (icon.isValid() && icon.canConvert<QIcon>() && !icon.value<QIcon>().isNull()) {
+    if (!icon.isNull()) {
         return icon;
     } else {
         return defaultValue;
     }
 }
 
-static QString extractItemId(const Plasma::DataEngine::Data &sniData)
+static QString extractItemId(const StatusNotifierItemSource *sniData)
 {
-    const QString itemId = sniData.value(QStringLiteral("Id")).toString();
+    const QString itemId = sniData->id();
     // Bug 378910: workaround for Dropbox not following the SNI specification
     if (itemId.startsWith(QLatin1String("dropbox-client-"))) {
         return QLatin1String("dropbox-client-PID");
@@ -307,16 +310,16 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
     }
 
     StatusNotifierModel::Item item = m_items[index.row()];
-    Plasma::DataContainer *dataContainer = m_dataEngine->containerForSource(item.source);
-    const Plasma::DataEngine::Data &sniData = dataContainer->data();
+    StatusNotifierItemSource *sniData = m_sniHost->itemForService(item.source);
+
     const QString itemId = extractItemId(sniData);
 
     if (role <= Qt::UserRole) {
         switch (role) {
         case Qt::DisplayRole:
-            return sniData.value(QStringLiteral("Title"));
+            return sniData->title();
         case Qt::DecorationRole:
-            return extractIcon(sniData, QStringLiteral("Icon"), sniData.value(QStringLiteral("IconName")));
+            return extractIcon(sniData->icon(), sniData->iconName());
         default:
             return QVariant();
         }
@@ -331,8 +334,8 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
         case BaseRole::CanRender:
             return true;
         case BaseRole::Category: {
-            QVariant category = sniData.value(QStringLiteral("Category"));
-            return category.isNull() ? QStringLiteral("UnknownCategory") : sniData.value(QStringLiteral("Category"));
+            QVariant category = sniData->category();
+            return category.isNull() ? QStringLiteral("UnknownCategory") : sniData->category();
         }
         case BaseRole::Status:
             return extractStatus(sniData);
@@ -349,35 +352,35 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
     case Role::Service:
         return QVariant::fromValue(item.service);
     case Role::AttentionIcon:
-        return extractIcon(sniData, QStringLiteral("AttentionIcon"));
+        return extractIcon(sniData->attentionIcon());
     case Role::AttentionIconName:
-        return sniData.value(QStringLiteral("AttentionIconName"));
+        return sniData->attentionIconName();
     case Role::AttentionMovieName:
-        return sniData.value(QStringLiteral("AttentionMovieName"));
+        return sniData->attentionMovieName();
     case Role::Category:
-        return sniData.value(QStringLiteral("Category"));
+        return sniData->category();
     case Role::Icon:
-        return extractIcon(sniData, QStringLiteral("Icon"));
+        return extractIcon(sniData->icon());
     case Role::IconName:
-        return sniData.value(QStringLiteral("IconName"));
+        return sniData->iconName();
     case Role::IconThemePath:
-        return sniData.value(QStringLiteral("IconThemePath"));
+        return sniData->iconThemePath();
     case Role::Id:
         return itemId;
     case Role::ItemIsMenu:
-        return sniData.value(QStringLiteral("ItemIsMenu"));
+        return sniData->itemIsMenu();
     case Role::OverlayIconName:
-        return sniData.value(QStringLiteral("OverlayIconName"));
+        return sniData->overlayIconName();
     case Role::Status:
         return extractStatus(sniData);
     case Role::Title:
-        return sniData.value(QStringLiteral("Title"));
+        return sniData->title();
     case Role::ToolTipSubTitle:
-        return sniData.value(QStringLiteral("ToolTipSubTitle"));
+        return sniData->toolTipSubTitle();
     case Role::ToolTipTitle:
-        return sniData.value(QStringLiteral("ToolTipTitle"));
+        return sniData->toolTipTitle();
     case Role::WindowId:
-        return sniData.value(QStringLiteral("WindowId"));
+        return sniData->windowId();
     default:
         return QVariant();
     }
@@ -415,13 +418,23 @@ QHash<int, QByteArray> StatusNotifierModel::roleNames() const
 
 void StatusNotifierModel::addSource(const QString &source)
 {
-    m_dataEngine->connectSource(source, this);
+    int count = rowCount();
+    beginInsertRows(QModelIndex(), count, count);
+
+    StatusNotifierModel::Item item;
+    item.source = source;
+
+    StatusNotifierItemSource *sni = m_sniHost->itemForService(source);
+    connect(sni, &StatusNotifierItemSource::dataUpdated, this, [=]() {
+        dataUpdated(source);
+    });
+    item.service = sni->createService();
+    m_items.append(item);
+    endInsertRows();
 }
 
 void StatusNotifierModel::removeSource(const QString &source)
 {
-    m_dataEngine->disconnectSource(source, this);
-
     int idx = indexOfSource(source);
     if (idx >= 0) {
         beginRemoveRows(QModelIndex(), idx, idx);
@@ -431,24 +444,11 @@ void StatusNotifierModel::removeSource(const QString &source)
     }
 }
 
-void StatusNotifierModel::dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data)
+void StatusNotifierModel::dataUpdated(const QString &sourceName)
 {
-    Q_UNUSED(data)
-
     int idx = indexOfSource(sourceName);
 
-    if (idx < 0) {
-        int count = rowCount();
-        beginInsertRows(QModelIndex(), count, count);
-
-        StatusNotifierModel::Item item;
-        item.source = sourceName;
-        item.service = m_dataEngine->serviceForSource(sourceName);
-
-        m_items.append(item);
-
-        endInsertRows();
-    } else {
+    if (idx >= 0) {
         Q_EMIT dataChanged(index(idx, 0), index(idx, 0));
     }
 }

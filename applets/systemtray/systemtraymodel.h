@@ -23,10 +23,11 @@
 #include <QAbstractListModel>
 #include <QConcatenateTablesProxyModel>
 #include <QList>
+#include <QPointer>
 
 #include <KCoreAddons/KPluginMetaData>
-#include <Plasma/DataEngine>
-#include <Plasma/DataEngineConsumer>
+#include <Plasma/Plasma>
+#include <Plasma/Service>
 
 namespace Plasma
 {
@@ -36,6 +37,7 @@ class PluginLoader;
 
 class PlasmoidRegistry;
 class SystemTraySettings;
+class StatusNotifierItemHost;
 
 /**
  * @brief Base class for models used in System Tray.
@@ -115,7 +117,7 @@ private:
 /**
  * @brief Data model for Status Notifier Items (SNI).
  */
-class StatusNotifierModel : public BaseModel, public Plasma::DataEngineConsumer
+class StatusNotifierModel : public BaseModel
 {
     Q_OBJECT
 public:
@@ -148,19 +150,19 @@ public:
 public Q_SLOTS:
     void addSource(const QString &source);
     void removeSource(const QString &source);
-    void dataUpdated(const QString &sourceName, const Plasma::DataEngine::Data &data);
+    void dataUpdated(const QString &sourceName);
 
-private:
+public:
     struct Item {
         QString source;
         Plasma::Service *service = nullptr;
     };
-
     int indexOfSource(const QString &source) const;
 
-    Plasma::DataEngine *m_dataEngine = nullptr;
+    StatusNotifierItemHost *m_sniHost = nullptr;
     QVector<Item> m_items;
 };
+Q_DECLARE_TYPEINFO(StatusNotifierModel::Item, Q_MOVABLE_TYPE);
 
 /**
  * @brief Cantenating model for system tray, that can expose multiple data models as one.
