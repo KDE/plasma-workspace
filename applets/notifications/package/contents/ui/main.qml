@@ -158,13 +158,6 @@ Item {
         }
     }
 
-    function action_clearHistory() {
-        historyModel.clear(NotificationManager.Notifications.ClearExpired);
-        if (historyModel.count === 0) {
-            closePassivePlasmoid();
-        }
-    }
-
     function action_openKcm() {
         KQCAddons.KCMShell.openSystemSettings("kcm_notifications");
     }
@@ -172,11 +165,6 @@ Item {
     Component.onCompleted: {
         Globals.adopt(plasmoid);
 
-        plasmoid.setAction("clearHistory", i18n("Clear History"), "edit-clear-history");
-        var clearAction = plasmoid.action("clearHistory");
-        clearAction.visible = Qt.binding(function() {
-            return historyModel.expiredNotificationsCount > 0;
-        });
 
         // FIXME only while Multi-page KCMs are broken when embedded in plasmoid config
         plasmoid.setAction("openKcm", i18n("&Configure Event Notifications and Actions..."), "notifications");
