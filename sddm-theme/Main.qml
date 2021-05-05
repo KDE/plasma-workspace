@@ -270,7 +270,8 @@ PlasmaCore.ColorScope {
                     state = "hidden";
                 }
             }
-            source: "components/VirtualKeyboard.qml"
+
+            source: Qt.platform.pluginName.includes("wayland") ? "components/VirtualKeyboard_wayland.qml" : "components/VirtualKeyboard.qml"
             anchors {
                 left: parent.left
                 right: parent.right
