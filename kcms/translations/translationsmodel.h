@@ -1,6 +1,7 @@
 /*
  *  Copyright (C) 2014 John Layt <john@layt.net>
  *  Copyright (C) 2018 Eike Hein <hein@kde.org>
+ *  Copyright (C) 2021 Harald Sitter <sitter@kde.org>
  *
  *  This library is free software; you can redistribute it and/or
  *  modify it under the terms of the GNU Library General Public
@@ -35,6 +36,8 @@ public:
     enum AdditionalRoles {
         LanguageCode = Qt::UserRole + 1,
         IsMissing,
+        IsIncomplete,
+        IsInstalling,
     };
     Q_ENUM(AdditionalRoles)
 
@@ -72,6 +75,7 @@ public:
     void setSelectedLanguages(const QStringList &languages);
 
     QStringList missingLanguages() const;
+    Q_INVOKABLE void completeLanguage(int index);
 
     Q_INVOKABLE void move(int from, int to);
     Q_INVOKABLE void remove(const QString &languageCode);
@@ -81,8 +85,13 @@ Q_SIGNALS:
     void missingLanguagesChanged() const;
 
 private:
+    void reloadCompleteness(const QString &languageCode);
+
     QStringList m_selectedLanguages;
     QStringList m_missingLanguages;
+
+    QHash<QString, QStringList> m_incompleteLanguagesWithPackages;
+    QStringList m_installingLanguages;
 };
 
 class AvailableTranslationsModel : public TranslationsModel

@@ -17,6 +17,20 @@ kcmutils_generate_module_data(
 
 kconfig_add_kcfg_files(kcm_translations_PART_SRCS translationssettingsbase.kcfgc GENERATE_MOC)
 
+ecm_qt_declare_logging_category(
+    kcm_translations_PART_SRCS
+        HEADER debug.h
+        IDENTIFIER KCM_TRANSLATIONS
+        CATEGORY_NAME org.kde.kcm_translations
+        DESCRIPTION "Translations KCM"
+        EXPORT kcm_translations
+)
+
+ecm_qt_install_logging_categories(
+    EXPORT kcm_translations
+    DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
+)
+
 add_library(kcm_translations MODULE ${kcm_translations_PART_SRCS})
 
 target_link_libraries(kcm_translations
@@ -24,6 +38,10 @@ target_link_libraries(kcm_translations
     KF5::KCMUtils
     KF5::QuickAddons
 )
+
+if(HAVE_PACKAGEKIT)
+    target_link_libraries(kcm_translations PK::packagekitqt5)
+endif()
 
 kcoreaddons_desktop_to_json(kcm_translations "kcm_translations.desktop")
 
