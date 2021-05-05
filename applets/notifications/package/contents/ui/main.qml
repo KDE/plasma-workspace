@@ -178,8 +178,11 @@ Item {
             return historyModel.expiredNotificationsCount > 0;
         });
 
-        // FIXME only while Multi-page KCMs are broken when embedded in plasmoid config
-        plasmoid.setAction("openKcm", i18n("&Configure Event Notifications and Actions..."), "notifications");
-        plasmoid.action("openKcm").visible = (KQCAddons.KCMShell.authorize("kcm_notifications.desktop").length > 0);
+        // The applet's config window has nothing in it, so let's make the header's
+        // "Configure" button open the KCM instead, like we do in the Bluetooth
+        // and Networks applets
+        plasmoid.removeAction("configure");
+        plasmoid.setAction("configure", i18n("&Configure Event Notifications and Actions..."), "notifications");
+        plasmoid.action("configure").visible = (KQCAddons.KCMShell.authorize("kcm_notifications.desktop").length > 0);
     }
 }
