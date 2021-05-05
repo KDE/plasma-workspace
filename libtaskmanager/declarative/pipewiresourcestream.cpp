@@ -93,7 +93,9 @@ void PipeWireSourceStream::onStreamParamChanged(void *data, uint32_t id, const s
                                                                  SPA_PARAM_BUFFERS_stride,
                                                                  SPA_POD_CHOICE_RANGE_Int(stride, stride, INT32_MAX),
                                                                  SPA_PARAM_BUFFERS_align,
-                                                                 SPA_POD_Int(16));
+                                                                 SPA_POD_Int(16),
+                                                                 SPA_PARAM_BUFFERS_dataType,
+                                                                 SPA_POD_Int((1 << SPA_DATA_MemPtr) | (1 << SPA_DATA_MemFd) | (1 << SPA_DATA_DmaBuf)));
     pw_stream_update_params(pw->pwStream, &param, 1);
 }
 
