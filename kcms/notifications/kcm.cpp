@@ -45,11 +45,11 @@
 #include "notificationsdata.h"
 #include "sourcesmodel.h"
 
-#include <notificationmanager/badgesettings.h>
-#include <notificationmanager/behaviorsettings.h>
-#include <notificationmanager/donotdisturbsettings.h>
-#include <notificationmanager/jobsettings.h>
-#include <notificationmanager/notificationsettings.h>
+#include <libnotificationmanager/badgesettings.h>
+#include <libnotificationmanager/behaviorsettings.h>
+#include <libnotificationmanager/donotdisturbsettings.h>
+#include <libnotificationmanager/jobsettings.h>
+#include <libnotificationmanager/notificationsettings.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMNotificationsFactory, "kcm_notifications.json", registerPlugin<KCMNotifications>(); registerPlugin<NotificationsData>();)
 

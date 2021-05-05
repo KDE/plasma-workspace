@@ -70,7 +70,7 @@ target_compile_definitions(notificationmanager PRIVATE -DPROJECT_VERSION="${PROJ
 
 generate_export_header(notificationmanager)
 
-target_include_directories(notificationmanager PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>" "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/notificationmanager>")
+target_include_directories(notificationmanager PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>" "$<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>" "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/notificationmanager>")
 
 target_link_libraries(notificationmanager
     PUBLIC

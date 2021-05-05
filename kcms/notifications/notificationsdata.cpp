@@ -20,11 +20,11 @@
 
 #include "notificationsdata.h"
 
-#include <notificationmanager/badgesettings.h>
-#include <notificationmanager/behaviorsettings.h>
-#include <notificationmanager/donotdisturbsettings.h>
-#include <notificationmanager/jobsettings.h>
-#include <notificationmanager/notificationsettings.h>
+#include <libnotificationmanager/badgesettings.h>
+#include <libnotificationmanager/behaviorsettings.h>
+#include <libnotificationmanager/donotdisturbsettings.h>
+#include <libnotificationmanager/jobsettings.h>
+#include <libnotificationmanager/notificationsettings.h>
 
 NotificationsData::NotificationsData(QObject *parent, const QVariantList &args)
     : KCModuleData(parent, args)
