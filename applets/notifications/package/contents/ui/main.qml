@@ -172,7 +172,7 @@ Item {
     Component.onCompleted: {
         Globals.adopt(plasmoid);
 
-        plasmoid.setAction("clearHistory", i18n("Clear History"), "edit-clear-history");
+        plasmoid.setAction("clearHistory", i18n("Clear All Notifications"), "edit-clear-history");
         var clearAction = plasmoid.action("clearHistory");
         clearAction.visible = Qt.binding(function() {
             return historyModel.expiredNotificationsCount > 0;
