@@ -173,18 +173,15 @@ PlasmaComponents3.Page {
                 }
 
                 PlasmaComponents3.ToolButton {
-                    // TODO: Conditionalize visiblity again once support is added
-                    // in plasma-framework for showing more than one action on the
-                    // header so the clear button isn't always in the hamburger menu
+                    visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading)
 
-                    text: i18nc("Clear all notifications", "Clear All")
+                    Accessible.name: plasmoid.action("clearHistory").text
                     icon.name: "edit-clear-history"
-                    enabled: historyModel.expiredNotificationsCount > 0
-                    onClicked: {
-                        historyModel.clear(NotificationManager.Notifications.ClearExpired);
-                        if (historyModel.count === 0) {
-                            root.closePassivePlasmoid();
-                        }
+                    enabled: plasmoid.action("clearHistory").visible
+                    onClicked: action_clearHistory()
+
+                    PlasmaComponents3.ToolTip {
+                        text: parent.Accessible.name
                     }
                 }
             }
