@@ -24,6 +24,7 @@
 #include <QApplication>
 #include <QDesktopWidget>
 #include <QKeyEvent>
+#include <QScreen>
 #include <QWidgetAction>
 
 #include <KHelpMenu>
@@ -83,9 +84,12 @@ KlipperPopup::KlipperPopup(History *history)
     ensurePolished();
     KWindowInfo windowInfo(winId(), NET::WMGeometry);
     QRect geometry = windowInfo.geometry();
-    QRect screen = qApp->desktop()->screenGeometry(geometry.center());
-    int menuHeight = (screen.height()) * 3 / 4;
-    int menuWidth = (screen.width()) * 1 / 3;
+    QScreen *screen = QGuiApplication::screenAt(geometry.center());
+    if (screen == nullptr) {
+        return;
+    }
+    int menuHeight = (screen->geometry().height()) * 3 / 4;
+    int menuWidth = (screen->geometry().width()) * 1 / 3;
 
     m_popupProxy = new PopupProxy(this, menuHeight, menuWidth);
 
