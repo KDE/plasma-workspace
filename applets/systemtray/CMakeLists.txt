@@ -8,26 +8,27 @@ set(systemtray_SRCS
     systemtraysettings.cpp
     systemtraymodel.cpp
     sortedsystemtraymodel.cpp
-    systemtray.cpp
 )
 
 ecm_qt_declare_logging_category(systemtray_SRCS HEADER debug.h
                                             IDENTIFIER SYSTEM_TRAY
                                             CATEGORY_NAME kde.systemtray
                                             DEFAULT_SEVERITY Info)
+add_library(systemtraymodel_static STATIC ${systemtray_SRCS})
+target_link_libraries(systemtraymodel_static
+    Qt::Gui
+    Qt::Quick
+    Qt::DBus
+    KF5::XmlGui
+    KF5::I18n
+    KF5::ItemModels
+    KF5::Plasma)
 
-add_library(org.kde.plasma.private.systemtray MODULE ${systemtray_SRCS})
+add_library(org.kde.plasma.private.systemtray MODULE systemtray.cpp)
 
 kcoreaddons_desktop_to_json(org.kde.plasma.private.systemtray package/metadata.desktop)
 
-target_link_libraries(org.kde.plasma.private.systemtray
-                      Qt::Gui
-                      Qt::Quick
-                      Qt::DBus
-                      KF5::Plasma
-                      KF5::XmlGui
-                      KF5::I18n
-                      KF5::ItemModels)
+target_link_libraries(org.kde.plasma.private.systemtray systemtraymodel_static)
 
 install(TARGETS org.kde.plasma.private.systemtray DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
 
