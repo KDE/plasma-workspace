@@ -254,6 +254,8 @@ endif()
 
 add_subdirectory(templates)
 
+ki18n_install(po)
+
 install(FILES plasma-workspace.categories   DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
