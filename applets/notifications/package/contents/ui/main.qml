@@ -143,6 +143,12 @@ Item {
             }
             return urgencies;
         }
+
+        onCountChanged: {
+            if (count === 0) {
+                closePassivePlasmoid();
+            }
+        }
     }
 
     Binding {

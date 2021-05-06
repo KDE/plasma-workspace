@@ -409,9 +409,6 @@ PlasmaComponents3.Page {
 
                                 onCloseClicked: {
                                     historyModel.close(historyModel.index(index, 0))
-                                    if (list.count === 0) {
-                                        root.closePassivePlasmoid();
-                                    }
                                 }
 
                                 onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
@@ -502,6 +499,7 @@ PlasmaComponents3.Page {
                                         }
 
                                         onCloseClicked: close()
+
                                         onDismissClicked: {
                                             model.dismissed = false;
                                             root.closePassivePlasmoid();
@@ -543,9 +541,6 @@ PlasmaComponents3.Page {
 
                                         function close() {
                                             historyModel.close(historyModel.index(index, 0));
-                                            if (list.count === 0) {
-                                                root.closePassivePlasmoid();
-                                            }
                                         }
                                     }
                                 }
