@@ -72,8 +72,8 @@
 KCMLookandFeel::KCMLookandFeel(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
     , m_data(new LookAndFeelData(this))
-    , m_config(QStringLiteral("kdeglobals"))
-    , m_configGroup(m_config.group("KDE"))
+    , m_config(KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::FullConfig))
+    , m_configGroup(m_config->group("KDE"))
     , m_applyColors(true)
     , m_applyWidgetStyle(true)
     , m_applyIcons(true)
@@ -509,8 +509,8 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
     }
 
     KConfig configDefault(configDefaults("kdeglobals"));
-    writeNewDefaults(m_config, configDefault, QStringLiteral("General"), QStringLiteral("ColorScheme"), scheme, KConfig::Notify);
-    applyScheme(colorFile, &m_config, KConfig::Notify);
+    writeNewDefaults(*m_config, configDefault, QStringLiteral("General"), QStringLiteral("ColorScheme"), scheme, KConfig::Notify);
+    applyScheme(colorFile, m_config.data(), KConfig::Notify);
 }
 
 void KCMLookandFeel::setIcons(const QString &theme)
@@ -549,8 +549,8 @@ void KCMLookandFeel::setCursorTheme(const QString themeName)
     // in previous versions the Xfixes code wasn't enabled due to a bug in the
     // build system (freedesktop bug #975).
 #if defined(HAVE_XFIXES) && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
-    KConfig config(QStringLiteral("kcminputrc"));
-    KConfigGroup cg(&config, QStringLiteral("Mouse"));
+    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("kcminputrc"));
+    KConfigGroup cg(config, QStringLiteral("Mouse"));
     const int cursorSize = cg.readEntry("cursorSize", 24);
 
     QDir themeDir = cursorThemeDir(themeName, 0);
@@ -696,8 +696,8 @@ void KCMLookandFeel::setSplashScreen(const QString &theme)
         return;
     }
 
-    KConfig config(QStringLiteral("ksplashrc"));
-    KConfigGroup cg(&config, QStringLiteral("KSplash"));
+    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("ksplashrc"));
+    KConfigGroup cg(config, QStringLiteral("KSplash"));
 
     KConfig configDefault(configDefaults(QStringLiteral("ksplashrc")));
     KConfigGroup cgd(&configDefault, QStringLiteral("KSplash"));
@@ -730,8 +730,8 @@ void KCMLookandFeel::setDesktopSwitcher(const QString &theme)
         return;
     }
 
-    KConfig config(QStringLiteral("kwinrc"));
-    KConfigGroup cg(&config, QStringLiteral("TabBox"));
+    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("kwinrc"));
+    KConfigGroup cg(config, QStringLiteral("TabBox"));
 
     KConfig configDefault(configDefaults(QStringLiteral("kwinrc")));
     KConfigGroup cgd(&configDefault, QStringLiteral("TabBox"));
@@ -745,8 +745,8 @@ void KCMLookandFeel::setWindowDecoration(const QString &library, const QString &
         return;
     }
 
-    KConfig config(QStringLiteral("kwinrc"));
-    KConfigGroup cg(&config, QStringLiteral("org.kde.kdecoration2"));
+    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("kwinrc"));
+    KConfigGroup cg(config, QStringLiteral("org.kde.kdecoration2"));
 
     KConfig configDefault(configDefaults(QStringLiteral("kwinrc")));
     KConfigGroup cgd(&configDefault, QStringLiteral("org.kde.kdecoration2"));
@@ -779,8 +779,8 @@ void KCMLookandFeel::writeNewDefaults(const QString &filename,
                                       const QString &value,
                                       KConfig::WriteConfigFlags writeFlags)
 {
-    KConfig config(filename);
-    KConfigGroup cg(&config, group);
+    KSharedConfigPtr config = KSharedConfig::openConfig(filename);
+    KConfigGroup cg(config, group);
 
     KConfig configDefault(configDefaults(filename));
     KConfigGroup cgd(&configDefault, group);

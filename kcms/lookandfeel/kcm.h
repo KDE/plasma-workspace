@@ -25,6 +25,7 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KNSCore/EntryWrapper>
+#include <KSharedConfig>
 
 #include <QDir>
 #include <QStandardItemModel>
@@ -126,6 +127,7 @@ private:
                           KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
     void
     writeNewDefaults(KConfigGroup &cg, KConfigGroup &cgd, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
+
     static KConfig configDefaults(const QString &filename);
 
     LookAndFeelData *m_data;
@@ -133,7 +135,7 @@ private:
     KPackage::Package m_package;
     QStringList m_cursorSearchPaths;
 
-    KConfig m_config;
+    KSharedConfig::Ptr m_config;
     KConfigGroup m_configGroup;
 
     bool m_applyColors : 1;
