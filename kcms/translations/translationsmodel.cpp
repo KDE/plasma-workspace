@@ -265,31 +265,33 @@ QStringList SelectedTranslationsModel::selectedLanguages() const
 
 void SelectedTranslationsModel::setSelectedLanguages(const QStringList &languages)
 {
-    if (m_selectedLanguages != languages) {
-        QStringList missingLanguages;
-
-        for (const QString &lang : languages) {
-            reloadCompleteness(lang);
-            if (!m_installedLanguages.contains(lang)) {
-                missingLanguages << lang;
-            }
-        }
-
-        missingLanguages.sort();
-
-        if (missingLanguages != m_missingLanguages) {
-            m_missingLanguages = missingLanguages;
-            emit missingLanguagesChanged();
-        }
-
-        beginResetModel();
-
-        m_selectedLanguages = languages;
-
-        endResetModel();
-
-        emit selectedLanguagesChanged(m_selectedLanguages);
+    if (m_selectedLanguages == languages) {
+        return;
     }
+
+    QStringList missingLanguages;
+
+    for (const QString &lang : languages) {
+        reloadCompleteness(lang);
+        if (!m_installedLanguages.contains(lang)) {
+            missingLanguages << lang;
+        }
+    }
+
+    missingLanguages.sort();
+
+    if (missingLanguages != m_missingLanguages) {
+        m_missingLanguages = missingLanguages;
+        emit missingLanguagesChanged();
+    }
+
+    beginResetModel();
+
+    m_selectedLanguages = languages;
+
+    endResetModel();
+
+    emit selectedLanguagesChanged(m_selectedLanguages);
 }
 
 QStringList SelectedTranslationsModel::missingLanguages() const
