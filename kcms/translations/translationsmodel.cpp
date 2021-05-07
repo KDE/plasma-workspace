@@ -165,8 +165,7 @@ QHash<int, QByteArray> TranslationsModel::roleNames() const
 {
     QHash<int, QByteArray> roles = QAbstractItemModel::roleNames();
 
-    QMetaEnum e = metaObject()->enumerator(metaObject()->indexOfEnumerator("AdditionalRoles"));
-
+    const auto e = QMetaEnum::fromType<AdditionalRoles>();
     for (int i = 0; i < e.keyCount(); ++i) {
         roles.insert(e.value(i), e.key(i));
     }
