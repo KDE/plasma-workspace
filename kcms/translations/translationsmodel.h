@@ -42,7 +42,6 @@ public:
     Q_ENUM(AdditionalRoles)
 
     explicit TranslationsModel(QObject *parent = nullptr);
-    ~TranslationsModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 
@@ -66,7 +65,6 @@ class SelectedTranslationsModel : public TranslationsModel
 
 public:
     explicit SelectedTranslationsModel(QObject *parent = nullptr);
-    ~SelectedTranslationsModel() override;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -100,7 +98,6 @@ class AvailableTranslationsModel : public TranslationsModel
 
 public:
     explicit AvailableTranslationsModel(QObject *parent = nullptr);
-    ~AvailableTranslationsModel() override;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;

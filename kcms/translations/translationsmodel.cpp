@@ -161,10 +161,6 @@ TranslationsModel::TranslationsModel(QObject *parent)
     }
 }
 
-TranslationsModel::~TranslationsModel()
-{
-}
-
 QHash<int, QByteArray> TranslationsModel::roleNames() const
 {
     QHash<int, QByteArray> roles = QAbstractItemModel::roleNames();
@@ -233,10 +229,6 @@ QString TranslationsModel::languageCodeToName(const QString &languageCode) const
 
 SelectedTranslationsModel::SelectedTranslationsModel(QObject *parent)
     : TranslationsModel(parent)
-{
-}
-
-SelectedTranslationsModel::~SelectedTranslationsModel()
 {
 }
 
@@ -418,10 +410,6 @@ void SelectedTranslationsModel::remove(const QString &languageCode)
 
 AvailableTranslationsModel::AvailableTranslationsModel(QObject *parent)
     : TranslationsModel(parent)
-{
-}
-
-AvailableTranslationsModel::~AvailableTranslationsModel()
 {
 }
 
