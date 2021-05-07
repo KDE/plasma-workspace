@@ -466,20 +466,14 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
         return;
     }
 
-    KConfig configDefault(configDefaults("kdeglobals"));
-    KSharedConfigPtr colorConf = KSharedConfig::openConfig(colorFile, KSharedConfig::CascadeConfig);
-    if (!m_data->isDefaults()) {
-        colorConf->copyTo(configDefault.name(), &configDefault);
-    } else {
-        for (const QString &grp : colorConf->groupList()) {
-            KConfigGroup colorConfGroup(colorConf, grp);
-            KConfigGroup cghome(&m_config, grp);
-            KConfigGroup cgd(&configDefault, grp);
-            revertKeyIfNeeded(colorConfGroup, cghome, cgd);
-            colorConf->deleteGroup(grp);
-        }
+    KSharedConfigPtr conf = KSharedConfig::openConfig(colorFile, KSharedConfig::CascadeConfig);
+    for (const QString &grp : conf->groupList()) {
+        KConfigGroup cg(conf, grp);
+        KConfigGroup cg2(&m_config, grp);
+        cg.copyTo(&cg2, KConfig::Notify);
     }
 
+    KConfig configDefault(configDefaults("kdeglobals"));
     writeNewDefaults(m_config, configDefault, QStringLiteral("General"), QStringLiteral("ColorScheme"), scheme, KConfig::Notify);
     m_config.sync();
     configDefault.sync();
