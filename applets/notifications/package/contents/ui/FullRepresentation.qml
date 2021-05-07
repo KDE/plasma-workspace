@@ -407,10 +407,7 @@ PlasmaComponents3.Page {
                                 closable: model.closable
                                 closeButtonTooltip: i18n("Close Group")
 
-                                onCloseClicked: {
-                                    historyModel.close(historyModel.index(index, 0))
-                                }
-
+                                onCloseClicked: historyModel.close(historyModel.index(index, 0))
                                 onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
                             }
                         }
@@ -502,7 +499,7 @@ PlasmaComponents3.Page {
 
                                         onDismissClicked: {
                                             model.dismissed = false;
-                                            root.closePassivePlasmoid();
+                                            root.closePlasmoid();
                                         }
                                         onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
 

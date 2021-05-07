@@ -146,7 +146,7 @@ Item {
 
         onCountChanged: {
             if (count === 0) {
-                closePassivePlasmoid();
+                closePlasmoid();
             }
         }
     }
@@ -158,8 +158,8 @@ Item {
         restoreMode: Binding.RestoreBinding
     }
 
-    function closePassivePlasmoid() {
-        if (plasmoid.status !== PlasmaCore.Types.PassiveStatus && plasmoid.hideOnWindowDeactivate) {
+    function closePlasmoid() {
+        if (plasmoid.hideOnWindowDeactivate) {
             plasmoid.expanded = false;
         }
     }
@@ -167,7 +167,7 @@ Item {
     function action_clearHistory() {
         historyModel.clear(NotificationManager.Notifications.ClearExpired);
         if (historyModel.count === 0) {
-            closePassivePlasmoid();
+            closePlasmoid();
         }
     }
 
