@@ -150,7 +150,7 @@ bool DataControlOffer::readData(int fd, QByteArray &data)
             int n = read(fd, buf, sizeof buf);
 
             if (n < 0) {
-                qWarning("DataControlOffer: read() failed");
+                qWarning("DataControlOffer: read() failed: %s", strerror(errno));
                 return false;
             } else if (n == 0) {
                 return true;
