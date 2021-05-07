@@ -227,11 +227,6 @@ QString TranslationsModel::languageCodeToName(const QString &languageCode) const
     return languageName;
 }
 
-SelectedTranslationsModel::SelectedTranslationsModel(QObject *parent)
-    : TranslationsModel(parent)
-{
-}
-
 QVariant SelectedTranslationsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() < 0 || index.row() >= m_selectedLanguages.count()) {
@@ -406,11 +401,6 @@ void SelectedTranslationsModel::remove(const QString &languageCode)
     endRemoveRows();
 
     emit selectedLanguagesChanged(m_selectedLanguages);
-}
-
-AvailableTranslationsModel::AvailableTranslationsModel(QObject *parent)
-    : TranslationsModel(parent)
-{
 }
 
 QVariant AvailableTranslationsModel::data(const QModelIndex &index, int role) const

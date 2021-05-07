@@ -64,7 +64,7 @@ class SelectedTranslationsModel : public TranslationsModel
     Q_PROPERTY(QStringList missingLanguages READ missingLanguages NOTIFY missingLanguagesChanged)
 
 public:
-    explicit SelectedTranslationsModel(QObject *parent = nullptr);
+    using TranslationsModel::TranslationsModel;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -97,7 +97,7 @@ class AvailableTranslationsModel : public TranslationsModel
     Q_OBJECT
 
 public:
-    explicit AvailableTranslationsModel(QObject *parent = nullptr);
+    using TranslationsModel::TranslationsModel;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
