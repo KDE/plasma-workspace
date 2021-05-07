@@ -88,6 +88,12 @@ Name[x-test]=xxNotificationsxx
 Name[zh_CN]=通知
 Name[zh_TW]=通知
 Comment=Event Notifications and Actions
+Comment[ca]=Notificacions d'esdeveniments i accions
+Comment[de]=Ereignis-Benachrichtigungen und -Aktionen
+Comment[nl]=Meldingen en acties van gebeurtenissen
+Comment[sv]=Underrättelser om händelser och åtgärder
+Comment[uk]=Сповіщення щодо подій та дії
+Comment[x-test]=xxEvent Notifications and Actionsxx
 
 Icon=preferences-desktop-notification-bell
 Type=Service
