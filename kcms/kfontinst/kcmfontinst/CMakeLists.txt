@@ -3,7 +3,7 @@ set(kcm_fontinst_PART_SRCS ${libkfontinstview_SRCS} ${libkfontinstjobrunner_SRCS
     FontFilter.cpp FontFilterProxyStyle.cpp FcQuery.cpp PreviewList.cpp)
 # qt_add_dbus_interface(kcm_fontinst_PART_SRCS ../dbus/org.kde.fontinst.xml FontinstIface)
 
-add_library(kcm_fontinst MODULE ${kcm_fontinst_PART_SRCS})
+kcoreaddons_add_plugin(kcm_fontinst SOURCES ${kcm_fontinst_PART_SRCS} INSTALL_NAMESPACE "kcms")
 
 target_link_libraries(kcm_fontinst
     KF5::Archive
@@ -18,8 +18,6 @@ target_link_libraries(kcm_fontinst
     X11::X11
 )
 
-set_target_properties(kcm_fontinst PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kcms")
-install(TARGETS kcm_fontinst  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install( FILES fontinst.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
 install( FILES kfontinst.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 

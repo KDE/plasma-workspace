@@ -59,15 +59,13 @@ if (X11_Xfixes_FOUND)
    target_link_libraries(kcm_lookandfeel_static X11::Xfixes)
 endif ()
 
-add_library(kcm_lookandfeel MODULE kcmmain.cpp)
+kcoreaddons_add_plugin(kcm_lookandfeel SOURCES kcmmain.cpp INSTALL_NAMESPACE "kcms")
 kcoreaddons_desktop_to_json(kcm_lookandfeel "kcm_lookandfeel.desktop" SERVICE_TYPES kcmodule.desktop)
 target_link_libraries(kcm_lookandfeel kcm_lookandfeel_static)
 
 #this desktop file is installed only for retrocompatibility with sycoca
 install(FILES lookandfeelsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES kcm_lookandfeel.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-set_target_properties(kcm_lookandfeel PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kcms")
-install(TARGETS kcm_lookandfeel DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(FILES lookandfeel.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 if(BUILD_TESTING)

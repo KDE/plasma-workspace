@@ -10,8 +10,7 @@ ecm_qt_declare_logging_category(systemtraycontainer_SRCS HEADER debug.h
                                             CATEGORY_NAME kde.systemtraycontainer
                                             DEFAULT_SEVERITY Info)
 
-add_library(org.kde.plasma.systemtray MODULE ${systemtraycontainer_SRCS})
-
+kcoreaddons_add_plugin(org.kde.plasma.systemtray SOURCES ${systemtraycontainer_SRCS} INSTALL_NAMESPACE "plasma/applets")
 kcoreaddons_desktop_to_json(org.kde.plasma.systemtray package/metadata.desktop)
 
 target_link_libraries(org.kde.plasma.systemtray
@@ -20,8 +19,3 @@ target_link_libraries(org.kde.plasma.systemtray
                       KF5::Plasma
                       KF5::XmlGui
                       KF5::I18n)
-
-
-install(TARGETS org.kde.plasma.systemtray DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
-
-

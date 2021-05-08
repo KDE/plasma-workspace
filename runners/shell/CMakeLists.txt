@@ -1,8 +1,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_shell\")
 
-set(krunner_shell_SRCS shellrunner.cpp)
-
-add_library(krunner_shell MODULE ${krunner_shell_SRCS})
+kcoreaddons_add_plugin(krunner_shell SOURCES shellrunner.cpp INSTALL_NAMESPACE "kf5/krunner")
 kcoreaddons_desktop_to_json(krunner_shell plasma-runner-shell.desktop)
 target_link_libraries(krunner_shell
     KF5::KIOCore
@@ -13,9 +11,6 @@ target_link_libraries(krunner_shell
     KF5::Runner
     KF5::Completion
 )
-
-set_target_properties(krunner_shell PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kf5/krunner")
-install(TARGETS krunner_shell DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner")
 
 if(BUILD_TESTING)
 add_subdirectory(autotests)

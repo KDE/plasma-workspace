@@ -2,11 +2,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"systemmonitor\")
 
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 
-set (KDED_KSYSGUARD_SRCS
-     kdedksysguard.cpp
-)
-
-add_library(ksysguard MODULE ${KDED_KSYSGUARD_SRCS})
+kcoreaddons_add_plugin(ksysguard SOURCES kdedksysguard.cpp INSTALL_NAMESPACE "kf5/kded")
 kcoreaddons_desktop_to_json(ksysguard ksysguard.desktop)
 
 target_link_libraries(ksysguard
@@ -15,8 +11,6 @@ target_link_libraries(ksysguard
     KF5::XmlGui
     KF5::GlobalAccel
 )
-
-install(TARGETS ksysguard DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded)
 
 add_executable(systemmonitor ksystemactivitydialog.cpp main.cpp)
 

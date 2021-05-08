@@ -1,9 +1,4 @@
-set(systemmonitor_SRCS
-    systemmonitor.cpp
-)
-
-add_library(plasma_applet_systemmonitor MODULE ${systemmonitor_SRCS})
-
+kcoreaddons_add_plugin(plasma_applet_systemmonitor SOURCES systemmonitor.cpp INSTALL_NAMESPACE "plasma/applets")
 kcoreaddons_desktop_to_json(plasma_applet_systemmonitor package/metadata.desktop)
 
 target_link_libraries(plasma_applet_systemmonitor
@@ -22,8 +17,5 @@ target_link_libraries(plasma_applet_systemmonitor
                       KSysGuard::Sensors
                       KSysGuard::SensorFaces
                      )
-
-
-install(TARGETS plasma_applet_systemmonitor DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
 
 plasma_install_package(package org.kde.plasma.systemmonitor)

@@ -30,7 +30,7 @@ kcmutils_generate_module_data(
 
 
 kconfig_add_kcfg_files(kcm_cursortheme_PART_SRCS cursorthemesettings.kcfgc GENERATE_MOC)
-add_library(kcm_cursortheme MODULE ${kcm_cursortheme_PART_SRCS})
+kcoreaddons_add_plugin(kcm_cursortheme SOURCES ${kcm_cursortheme_PART_SRCS} INSTALL_NAMESPACE "kcms")
 
 
 target_link_libraries(kcm_cursortheme
@@ -56,9 +56,6 @@ endif ()
 if (X11_Xfixes_FOUND)
    target_link_libraries(kcm_cursortheme X11::Xfixes)
 endif ()
-
-set_target_properties(kcm_cursortheme PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kcms")
-install(TARGETS kcm_cursortheme  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms )
 
 kcoreaddons_desktop_to_json(kcm_cursortheme "kcm_cursortheme.desktop")
 

@@ -31,7 +31,7 @@ ecm_qt_install_logging_categories(
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
-add_library(kcm_translations MODULE ${kcm_translations_PART_SRCS})
+kcoreaddons_add_plugin(kcm_translations SOURCES ${kcm_translations_PART_SRCS} INSTALL_NAMESPACE "kcms")
 
 target_link_libraries(kcm_translations
     KF5::I18n
@@ -46,8 +46,6 @@ endif()
 kcoreaddons_desktop_to_json(kcm_translations "kcm_translations.desktop")
 
 ########### install files ###############
-set_target_properties(kcm_translations PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kcms")
-install(TARGETS kcm_translations DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(FILES kcm_translations.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_translations kcms)
 

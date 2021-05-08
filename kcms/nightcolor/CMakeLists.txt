@@ -5,7 +5,7 @@ set(kcm_nightcolor_SRCS
     kcm.cpp
 )
 
-add_library(kcm_nightcolor MODULE ${kcm_nightcolor_SRCS})
+kcoreaddons_add_plugin(kcm_nightcolor SOURCES ${kcm_nightcolor_SRCS} INSTALL_NAMESPACE "kcms")
 
 target_link_libraries(kcm_nightcolor
     KF5::QuickAddons
@@ -18,7 +18,5 @@ kcoreaddons_desktop_to_json(kcm_nightcolor "kcm_nightcolor.desktop" SERVICE_TYPE
 
 #this desktop file is installed only for retrocompatibility with sycoca
 install(FILES kcm_nightcolor.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-
-install(TARGETS kcm_nightcolor DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
 kpackage_install_package(package kcm_nightcolor kcms)

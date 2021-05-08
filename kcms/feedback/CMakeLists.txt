@@ -11,7 +11,7 @@ kcmutils_generate_module_data(
 )
 
 kconfig_add_kcfg_files(kcm_feedback_PART_SRCS feedbacksettings.kcfgc GENERATE_MOC)
-add_library(kcm_feedback MODULE ${kcm_feedback_PART_SRCS})
+kcoreaddons_add_plugin(kcm_feedback SOURCES ${kcm_feedback_PART_SRCS} INSTALL_NAMESPACE "kcms")
 
 target_link_libraries(kcm_feedback
     KF5::I18n
@@ -23,7 +23,5 @@ target_link_libraries(kcm_feedback
 kcoreaddons_desktop_to_json(kcm_feedback "kcm_feedback.desktop")
 
 install(FILES feedbacksettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-set_target_properties(kcm_feedback PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kcms")
-install(TARGETS kcm_feedback DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(FILES kcm_feedback.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_feedback kcms)

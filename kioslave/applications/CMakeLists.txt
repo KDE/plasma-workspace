@@ -1,8 +1,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kio5_applications\")
 
-add_library(kio_applications MODULE kio_applications.cpp)
+kcoreaddons_add_plugin(kio_applications SOURCES kio_applications.cpp INSTALL_NAMESPACE "kf5/kio")
 set_target_properties(kio_applications PROPERTIES OUTPUT_NAME "applications")
 
 target_link_libraries(kio_applications KF5::KIOCore KF5::I18n KF5::Service Qt::Network)
-
-install(TARGETS kio_applications  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kio)

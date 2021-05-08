@@ -22,8 +22,7 @@ kcmutils_generate_module_data(
 )
 
 kconfig_add_kcfg_files(kcm_fonts_PART_SRCS fontssettings.kcfgc fontsaasettingsbase.kcfgc GENERATE_MOC)
-
-add_library(kcm_fonts MODULE ${kcm_fonts_PART_SRCS})
+kcoreaddons_add_plugin(kcm_fonts SOURCES ${kcm_fonts_PART_SRCS} INSTALL_NAMESPACE "kcms")
 
 target_link_libraries(kcm_fonts KF5::I18n KF5::WindowSystem KF5::KCMUtils KF5::QuickAddons KF5::Declarative kfontinst krdb)
 
@@ -35,7 +34,5 @@ kcoreaddons_desktop_to_json(kcm_fonts "kcm_fonts.desktop")
 
 ########### install files ###############
 install(FILES fontssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-set_target_properties(kcm_fonts PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kcms")
-install(TARGETS kcm_fonts DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(FILES kcm_fonts.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_fonts kcms)

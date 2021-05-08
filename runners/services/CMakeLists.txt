@@ -21,14 +21,11 @@ target_link_libraries(krunner_services_static
     KF5::Activities
 )
 
-add_library(krunner_services MODULE plugin.cpp)
+kcoreaddons_add_plugin(krunner_services SOURCES plugin.cpp INSTALL_NAMESPACE "kf5/krunner")
 kcoreaddons_desktop_to_json(krunner_services plasma-runner-services.desktop)
 target_link_libraries(krunner_services
     krunner_services_static
 )
-
-set_target_properties(krunner_services PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kf5/krunner")
-install(TARGETS krunner_services DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/krunner")
 
 if(BUILD_TESTING)
    add_subdirectory(autotests)

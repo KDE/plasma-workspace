@@ -20,7 +20,7 @@ kcmutils_generate_module_data(
 # needed for krdb
 kconfig_add_kcfg_files(kcm_colors_SRCS colorssettings.kcfgc GENERATE_MOC)
 
-add_library(kcm_colors MODULE ${kcm_colors_SRCS})
+kcoreaddons_add_plugin(kcm_colors SOURCES ${kcm_colors_SRCS} INSTALL_NAMESPACE "kcms")
 target_link_libraries(kcm_colors
     Qt::DBus
     KF5::KCMUtils
@@ -70,8 +70,6 @@ target_link_libraries(plasma-apply-colorscheme
 
 install(FILES colorssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES kcm_colors.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-set_target_properties(kcm_colors PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin/kcms")
-install(TARGETS kcm_colors DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 install(TARGETS plasma-apply-colorscheme DESTINATION ${KDE_INSTALL_BINDIR})
 install(FILES colorschemes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 

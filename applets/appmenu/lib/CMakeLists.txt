@@ -1,9 +1,4 @@
-set(appmenuapplet_SRCS
-    appmenuapplet.cpp
-)
-
-add_library(plasma_applet_appmenu MODULE ${appmenuapplet_SRCS})
-
+kcoreaddons_add_plugin(plasma_applet_appmenu SOURCES appmenuapplet.cpp INSTALL_NAMESPACE "plasma/applets")
 kcoreaddons_desktop_to_json(plasma_applet_appmenu ../package/metadata.desktop)
 
 target_link_libraries(plasma_applet_appmenu
@@ -13,5 +8,3 @@ target_link_libraries(plasma_applet_appmenu
                       KF5::Plasma
                       KF5::WindowSystem
                       PW::LibTaskManager)
-
-install(TARGETS plasma_applet_appmenu DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)

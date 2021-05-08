@@ -8,7 +8,7 @@ set(kcm_notifications_SRCS
     notificationsdata.cpp
 )
 
-add_library(kcm_notifications MODULE ${kcm_notifications_SRCS})
+kcoreaddons_add_plugin(kcm_notifications SOURCES ${kcm_notifications_SRCS} INSTALL_NAMESPACE "kcms")
 target_link_libraries(kcm_notifications
     KF5::KCMUtils
     KF5::CoreAddons
@@ -25,7 +25,6 @@ target_link_libraries(kcm_notifications
 kcoreaddons_desktop_to_json(kcm_notifications "kcm_notifications.desktop")
 
 install(FILES kcm_notifications.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-install(TARGETS kcm_notifications DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
 kpackage_install_package(package kcm_notifications kcms)
 

@@ -1,4 +1,4 @@
-add_library(plasma_containmentactions_paste MODULE paste.cpp)
+kcoreaddons_add_plugin(plasma_containmentactions_paste SOURCES paste.cpp INSTALL_NAMESPACE "plasma/containmentactions")
 target_link_libraries(plasma_containmentactions_paste
     Qt::Gui
     Qt::Widgets
@@ -7,5 +7,3 @@ target_link_libraries(plasma_containmentactions_paste
 )
 
 kcoreaddons_desktop_to_json(plasma_containmentactions_paste plasma-containmentactions-paste.desktop)
-
-install(TARGETS plasma_containmentactions_paste DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/containmentactions)

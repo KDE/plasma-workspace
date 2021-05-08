@@ -44,13 +44,10 @@ target_link_libraries(systemtraymodel_static
     KF5::IconThemes
     dbusmenuqt)
 
-add_library(org.kde.plasma.private.systemtray MODULE systemtray.cpp)
-
+kcoreaddons_add_plugin(org.kde.plasma.private.systemtray SOURCES systemtray.cpp INSTALL_NAMESPACE "plasma/applets")
 kcoreaddons_desktop_to_json(org.kde.plasma.private.systemtray package/metadata.desktop)
 
 target_link_libraries(org.kde.plasma.private.systemtray systemtraymodel_static)
-
-install(TARGETS org.kde.plasma.private.systemtray DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/applets)
 
 add_subdirectory(container)
 if(BUILD_TESTING)

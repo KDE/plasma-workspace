@@ -11,9 +11,7 @@ qt_add_dbus_interface(contextmenu_SRCS ${krunner_xml} krunner_interface)
 
 qt_add_dbus_interface(contextmenu_SRCS ${SCREENSAVER_DBUS_INTERFACE} screensaver_interface)
 
-
-add_library(plasma_containmentactions_contextmenu MODULE ${contextmenu_SRCS})
-
+kcoreaddons_add_plugin(plasma_containmentactions_contextmenu SOURCES ${contextmenu_SRCS} INSTALL_NAMESPACE "plasma/containmentactions")
 kcoreaddons_desktop_to_json(plasma_containmentactions_contextmenu plasma-containmentactions-contextmenu.desktop)
 
 target_link_libraries(plasma_containmentactions_contextmenu
@@ -24,5 +22,3 @@ target_link_libraries(plasma_containmentactions_contextmenu
                       KF5::XmlGui
                       KF5::KIOCore
                       PW::KWorkspace)
-
-install(TARGETS plasma_containmentactions_contextmenu DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/containmentactions)

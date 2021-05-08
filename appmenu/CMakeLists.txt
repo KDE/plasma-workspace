@@ -13,7 +13,7 @@ qt_add_dbus_adaptor(kded_appmenu_SRCS com.canonical.AppMenu.Registrar.xml
 qt_add_dbus_adaptor(kded_appmenu_SRCS org.kde.kappmenu.xml
     appmenu_dbus.h AppmenuDBus appmenuadaptor AppmenuAdaptor)
 
-add_library(appmenu MODULE ${kded_appmenu_SRCS})
+kcoreaddons_add_plugin(appmenu SOURCES ${kded_appmenu_SRCS} INSTALL_NAMESPACE "kf5/kded")
 kcoreaddons_desktop_to_json(appmenu appmenu.desktop)
 
 pkg_check_modules(XKBCommon REQUIRED IMPORTED_TARGET xkbcommon)
@@ -34,8 +34,6 @@ target_link_libraries(appmenu
 if (HAVE_X11)
     target_link_libraries(appmenu Qt::X11Extras XCB::XCB)
 endif()
-
-install(TARGETS appmenu DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded )
 
 ########### install files ###############
 
