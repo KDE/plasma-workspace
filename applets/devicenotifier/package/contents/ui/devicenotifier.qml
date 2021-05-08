@@ -263,11 +263,12 @@ Item {
         plasmoid.setActionSeparator("sep2");
 
         if (devicenotifier.openAutomounterKcmAuthorized) {
-            plasmoid.setAction("openAutomounterKcm", i18nc("Open auto mounter kcm", "Configure Removable Devices..."), "configure")
+            plasmoid.removeAction("configure");
+            plasmoid.setAction("configure", i18nc("Open auto mounter kcm", "Configure Removable Devices..."), "configure")
         }
     }
 
-    function action_openAutomounterKcm() {
+    function action_configure() {
         KCMShell.openSystemSettings("device_automounter_kcm")
     }
 
