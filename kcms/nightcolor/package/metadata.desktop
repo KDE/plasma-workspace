@@ -1,15 +1,22 @@
 [Desktop Entry]
 Name=Night Color
+Name[az]=Gecə Rəngi
 Name[ca]=Color de nit
 Name[de]=Nachtfarben
+Name[es]=Color nocturno
 Name[nl]=Nachtkleur
+Name[ru]=Ночная цветовая схема
+Name[sl]=Nočna barva
 Name[sv]=Nattfärg
 Name[uk]=Нічні кольори
 Name[x-test]=xxNight Colorxx
 Comment=Adjust color temperature at night to reduce eye strain
+Comment[az]=Gözə mənfi təsirini azaltmaq üçün gecə rəng temperaturunu ayarlayın
 Comment[ca]=Ajusta la temperatura del color per a la nit per reduir la tensió ocular
 Comment[de]=Farbtemperatur nachts anpassen, um die Belastung für die Augen zu reduzieen
 Comment[nl]=Kleurtemperatuur bij nacht aanpassen on vermoeidheid van de ogen te vermijden
+Comment[ru]=Изменение цветовой температуры в ночное время для снижения нагрузки на глаза
+Comment[sl]=Prilagodi temperaturo barve ponoči za zmanjševanje obremenitev oči
 Comment[sv]=Justera färgtemperatur på natten för att reducera ögonbelastning
 Comment[uk]=Коригування температури кольорів для зменшення навантаження на очі вночі
 Comment[x-test]=xxAdjust color temperature at night to reduce eye strainxx
