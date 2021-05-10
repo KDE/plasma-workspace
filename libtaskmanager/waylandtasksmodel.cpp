@@ -749,7 +749,7 @@ void WaylandTasksModel::requestPublishDelegateGeometry(const QModelIndex &index,
     window->setMinimizedGeometry(surface, rect);
 }
 
-quint32 WaylandTasksModel::winIdFromMimeData(const QMimeData *mimeData, bool *ok)
+QUuid WaylandTasksModel::winIdFromMimeData(const QMimeData *mimeData, bool *ok)
 {
     Q_ASSERT(mimeData);
 
@@ -761,15 +761,16 @@ quint32 WaylandTasksModel::winIdFromMimeData(const QMimeData *mimeData, bool *ok
         return 0;
     }
 
-    quint32 id = mimeData->data(Private::mimeType()).toUInt(ok);
+    QUuid id(mimeData->data(Private::mimeType()));
+    *ok = !id.isNull();
 
     return id;
 }
 
-QList<quint32> WaylandTasksModel::winIdsFromMimeData(const QMimeData *mimeData, bool *ok)
+QList<QUuid> WaylandTasksModel::winIdsFromMimeData(const QMimeData *mimeData, bool *ok)
 {
     Q_ASSERT(mimeData);
-    QList<quint32> ids;
+    QList<QUuid> ids;
 
     if (ok) {
         *ok = false;
@@ -778,7 +779,7 @@ QList<quint32> WaylandTasksModel::winIdsFromMimeData(const QMimeData *mimeData, 
     if (!mimeData->hasFormat(Private::groupMimeType())) {
         // Try to extract single window id.
         bool singularOk;
-        WId id = winIdFromMimeData(mimeData, &singularOk);
+        QUuid id = winIdFromMimeData(mimeData, &singularOk);
 
         if (ok) {
             *ok = singularOk;

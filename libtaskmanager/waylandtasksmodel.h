@@ -221,7 +221,7 @@ public:
      * @param mimeData Some mime data.
      * @param @ok Set to true or false on success or failure.
      */
-    static quint32 winIdFromMimeData(const QMimeData *mimeData, bool *ok = nullptr);
+    static QUuid winIdFromMimeData(const QMimeData *mimeData, bool *ok = nullptr);
 
     /**
      * Tries to extract process-internal Wayland window ids from supplied mime data.
@@ -229,7 +229,7 @@ public:
      * @param mimeData Some mime data.
      * @param @ok Set to true or false on success or failure.
      */
-    static QList<quint32> winIdsFromMimeData(const QMimeData *mimeData, bool *ok = nullptr);
+    static QList<QUuid> winIdsFromMimeData(const QMimeData *mimeData, bool *ok = nullptr);
 
 private:
     class Private;
