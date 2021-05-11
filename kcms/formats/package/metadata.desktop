@@ -1,0 +1,25 @@
+[Desktop Entry]
+Name=Formats
+Name[x-test]=xxFormatsxx
+Comment=Numeric, Currency and Time Formats
+Comment[x-test]=xxNumeric, Currency and Time Formatsxx
+
+X-KDE-Keywords=language,translation,number format,locale,Country,charsets,character sets,Decimal symbol,Thousands separator,symbol,separator,sign,positive,negative,currency,money,fractional digits,calendar,time,date,formats,week,week start,first,paper,size,letter,A4,measure,metric,English,Imperial
+X-KDE-Keywords[x-test]=xxlanguagexx,xxtranslationxx,xxnumber formatxx,xxlocalexx,xxCountryxx,xxcharsetsxx,xxcharacter setsxx,xxDecimal symbolxx,xxThousands separatorxx,xxsymbolxx,xxseparatorxx,xxsignxx,xxpositivexx,xxnegativexx,xxcurrencyxx,xxmoneyxx,xxfractional digitsxx,xxcalendarxx,xxtimexx,xxdatexx,xxformatsxx,xxweekxx,xxweek startxx,xxfirstxx,xxpaperxx,xxsizexx,xxletterxx,xxA4xx,xxmeasurexx,xxmetricxx,xxEnglishxx,xxImperialxx
+
+Icon=preferences-desktop-locale
+Type=Service
+X-KDE-ServiceTypes=KCModule
+X-DocPath=kcontrol/formats/index.html
+
+X-KDE-Library=kcm_formats
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=regionalsettings
+X-KDE-Weight=50
+X-KDE-PluginInfo-Name=kcm_formats
+X-Plasma-API=declarativeappletscript
+
+X-KDE-FormFactors=tablet,handset,desktop
+
+X-Plasma-MainScript=ui/main.qml

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <include>QtGlobal</include>
+  <include>KLocalizedString</include>
+  <kcfgfile name="plasma-localerc" />
+  <group name="Formats">
+    <entry name="useDetailed" type="Bool">
+        <default>false</default>
+    </entry>
+    <entry key="LANG" name="lang" type="String">
+        <default code="true">QString::fromLocal8Bit(qgetenv("LANG"))</default>
+    </entry>
+    <entry key="LC_NUMERIC" name="numeric" type="String">
+        <code>
+            auto lc_numeric {QString::fromLocal8Bit(qgetenv("LC_NUMERIC"))};
+            lc_numeric = lc_numeric.isEmpty() ? i18n("Default") : lc_numeric;
+        </code>
+        <default code="true">
+            lc_numeric
+        </default>
+    </entry>
+    <entry key="LC_TIME" name="time" type="String">
+        <code>
+            auto lc_time {QString::fromLocal8Bit(qgetenv("LC_TIME"))};
+            lc_time = lc_time.isEmpty() ? i18n("Default") : lc_time;
+        </code>
+        <default code="true">lc_time</default>
+    </entry>
+    <entry key="LC_MONETARY" name="monetary" type="String">
+        <code>
+            auto lc_monetary {QString::fromLocal8Bit(qgetenv("LC_MONETARY"))};
+            lc_monetary = lc_monetary.isEmpty() ? i18n("Default") : lc_monetary;
+        </code>
+        <default code="true">lc_monetary</default>
+    </entry>
+    <entry key="LC_MEASUREMENT" name="measurement" type="String">
+        <code>
+            auto lc_measurement {QString::fromLocal8Bit(qgetenv("LC_MEASUREMENT"))};
+            lc_measurement = lc_measurement.isEmpty() ? i18n("Default") : lc_measurement;
+        </code>
+        <default code="true">lc_measurement</default>
+    </entry>
+    <entry key="LC_COLLATE" name="collate" type="String">
+        <code>
+            auto lc_collate {QString::fromLocal8Bit(qgetenv("LC_COLLATE"))};
+            lc_collate = lc_collate.isEmpty() ? i18n("Default") : lc_collate;
+        </code>
+        <default code="true">lc_collate</default>
+    </entry>
+    <entry key="LC_CTYPE" name="ctype" type="String">
+        <code>
+            auto lc_ctype {QString::fromLocal8Bit(qgetenv("LC_CTYPE"))};
+            lc_ctype = lc_ctype.isEmpty() ? i18n("Default") : lc_ctype;
+        </code>
+        <default code="true">lc_ctype</default>
+    </entry>
+    <entry key="LANGUAGE" name="language" type="String">
+       <code>
+            auto language {QString::fromLocal8Bit(qgetenv("LANGUAGE"))};
+            language = language.isEmpty() ? i18n("Default") : language;
+        </code>
+        <default code="true">language</default>
+    </entry>
+  </group>
+</kcfg>
