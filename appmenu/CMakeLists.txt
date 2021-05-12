@@ -24,6 +24,7 @@ target_link_libraries(appmenu
     KF5::KIOCore
     KF5::WaylandClient
     KF5::WindowSystem
+    Wayland::Client
     dbusmenuqt
 )
 
