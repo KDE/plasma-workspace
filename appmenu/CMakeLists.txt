@@ -16,6 +16,8 @@ qt5_add_dbus_adaptor(kded_appmenu_SRCS org.kde.kappmenu.xml
 add_library(appmenu MODULE ${kded_appmenu_SRCS})
 kcoreaddons_desktop_to_json(appmenu appmenu.desktop)
 
+pkg_check_modules(XKBCommon REQUIRED IMPORTED_TARGET xkbcommon)
+
 target_link_libraries(appmenu
     Qt::DBus
     Qt::WaylandClientPrivate
@@ -25,6 +27,7 @@ target_link_libraries(appmenu
     KF5::WaylandClient
     KF5::WindowSystem
     Wayland::Client
+    PkgConfig::XKBCommon
     dbusmenuqt
 )
 
