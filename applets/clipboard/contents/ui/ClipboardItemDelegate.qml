@@ -118,8 +118,7 @@ PlasmaExtras.ListItem {
 
         anchors {
             right: label.right
-            top: menuItem.isTall? parent.top : undefined
-            verticalCenter: menuItem.isTall ? undefined : parent.verticalCenter
+            verticalCenter: parent.verticalCenter
         }
         source: "DelegateToolButtons.qml"
         active: menuItem.ListView.isCurrentItem
