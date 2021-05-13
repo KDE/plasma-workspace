@@ -29,9 +29,6 @@ import org.kde.kirigami 2.11 as Kirigami
 
 import org.kde.plasma.private.notifications 2.0 as Notifications
 
-// NOTE This wrapper item is needed for QQC ScrollView to work
-// In NotificationItem we just do SelectableLabel {} and then it gets confused
-// as to which is the "contentItem"
 PlasmaComponents3.ScrollView {
     id: bodyTextContainer
 

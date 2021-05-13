@@ -253,6 +253,7 @@ PlasmaComponents3.Page {
             Layout.preferredWidth: PlasmaCore.Units.gridUnit * 18
             Layout.preferredHeight: PlasmaCore.Units.gridUnit * 24
             Layout.leftMargin: PlasmaCore.Units.smallSpacing
+            background: null
 
             ListView {
                 id: list

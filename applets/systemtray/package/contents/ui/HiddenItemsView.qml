@@ -36,6 +36,7 @@ PlasmaComponents3.ScrollView {
     onHoveredChanged: if (!hovered) {
         hiddenTasks.currentIndex = -1;
     }
+    background: null
 
     PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
     PlasmaComponents3.ScrollBar.vertical.policy: systemTrayState.activeApplet ? PlasmaComponents3.ScrollBar.AlwaysOff : PlasmaComponents3.ScrollBar.AsNeeded
