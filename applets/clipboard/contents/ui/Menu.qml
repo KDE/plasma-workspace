@@ -20,10 +20,11 @@ import QtQuick 2.0
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents // For Highlight
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import org.kde.kirigami 2.12 as Kirigami
 
-PlasmaExtras.ScrollArea {
+PlasmaComponents3.ScrollView {
     id: menu
     property alias view: menuListView
     property alias model: menuListView.model

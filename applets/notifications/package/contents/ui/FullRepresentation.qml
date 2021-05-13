@@ -247,13 +247,12 @@ PlasmaComponents3.Page {
         spacing: PlasmaCore.Units.smallSpacing
 
         // actual notifications
-        PlasmaExtras.ScrollArea {
+        PlasmaComponents3.ScrollView {
             Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.preferredWidth: PlasmaCore.Units.gridUnit * 18
             Layout.preferredHeight: PlasmaCore.Units.gridUnit * 24
             Layout.leftMargin: PlasmaCore.Units.smallSpacing
-            frameVisible: false
 
             ListView {
                 id: list

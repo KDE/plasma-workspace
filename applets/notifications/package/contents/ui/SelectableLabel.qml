@@ -24,7 +24,7 @@ import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kirigami 2.11 as Kirigami
 
 import org.kde.plasma.private.notifications 2.0 as Notifications
@@ -32,11 +32,10 @@ import org.kde.plasma.private.notifications 2.0 as Notifications
 // NOTE This wrapper item is needed for QQC ScrollView to work
 // In NotificationItem we just do SelectableLabel {} and then it gets confused
 // as to which is the "contentItem"
-Item {
+PlasmaComponents3.ScrollView {
     id: bodyTextContainer
 
     property alias text: bodyText.text
-    property alias font: bodyText.font
 
     property int cursorShape
 
@@ -45,93 +44,64 @@ Item {
     signal clicked(var mouse)
     signal linkActivated(string link)
 
-    implicitWidth: bodyText.paintedWidth
-    implicitHeight: bodyText.paintedHeight
+    implicitHeight: Math.min(bodyText.implicitHeight, PlasmaCore.Units.gridUnit * 5)
 
+    PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
+    contentWidth: availableWidth
 
-    PlasmaExtras.ScrollArea {
-        id: bodyTextScrollArea
+    PlasmaComponents3.TextArea {
+        id: bodyText
+        enabled: !Kirigami.Settings.isMobile
+        leftPadding: 0
+        rightPadding: 0
+        topPadding: 0
+        bottomPadding: 0
 
-        anchors.fill: parent
+        background: Item {}
+        // Work around Qt bug where NativeRendering breaks for non-integer scale factors
+        // https://bugreports.qt.io/browse/QTBUG-67007
+        renderType: Screen.devicePixelRatio % 1 !== 0 ? Text.QtRendering : Text.NativeRendering
+        // Selectable only when we are in desktop mode
+        selectByMouse: !Kirigami.Settings.tabletMode
 
-        flickableItem.boundsBehavior: Flickable.StopAtBounds
-        flickableItem.flickableDirection: Flickable.VerticalFlick
-        horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
+        readOnly: true
+        wrapMode: Text.Wrap
+        textFormat: TextEdit.RichText
 
-        TextEdit {
-            id: bodyText
-            width: bodyTextScrollArea.width
-            // TODO check that this doesn't causes infinite loops when it starts adding and removing the scrollbar
-            //width: bodyTextScrollArea.viewport.width
-            enabled: !Kirigami.Settings.isMobile
+        onLinkActivated: bodyTextContainer.linkActivated(link)
 
-            color: PlasmaCore.ColorScope.textColor
-            selectedTextColor: PlasmaCore.Theme.viewBackgroundColor
-            selectionColor: PlasmaCore.Theme.viewFocusColor
-            font.capitalization: PlasmaCore.Theme.defaultFont.capitalization
-            font.family: PlasmaCore.Theme.defaultFont.family
-            font.italic: PlasmaCore.Theme.defaultFont.italic
-            font.letterSpacing: PlasmaCore.Theme.defaultFont.letterSpacing
-            font.pointSize: PlasmaCore.Theme.defaultFont.pointSize
-            font.strikeout: PlasmaCore.Theme.defaultFont.strikeout
-            font.underline: PlasmaCore.Theme.defaultFont.underline
-            font.weight: PlasmaCore.Theme.defaultFont.weight
-            font.wordSpacing: PlasmaCore.Theme.defaultFont.wordSpacing
-            // Work around Qt bug where NativeRendering breaks for non-integer scale factors
-            // https://bugreports.qt.io/browse/QTBUG-67007
-            renderType: Screen.devicePixelRatio % 1 !== 0 ? Text.QtRendering : Text.NativeRendering
-            // Selectable only when we are in desktop mode
-            selectByMouse: !Kirigami.Settings.tabletMode
-            
-            readOnly: true
-            wrapMode: Text.Wrap
-            textFormat: TextEdit.RichText
+        // Handle left-click
+        Notifications.TextEditClickHandler {
+            target: bodyText
+            onClicked: {
+                bodyTextContainer.clicked(null);
+            }
+        }
 
-            onLinkActivated: bodyTextContainer.linkActivated(link)
+        // Handle right-click and cursorShape
+        MouseArea {
+            anchors.fill: parent
+            acceptedButtons: Qt.RightButton
 
-            // ensure selecting text scrolls the view as needed...
-            onCursorRectangleChanged: {
-                var flick = bodyTextScrollArea.flickableItem
-                if (flick.contentY >= cursorRectangle.y) {
-                    flick.contentY = cursorRectangle.y
-                } else if (flick.contentY + flick.height <= cursorRectangle.y + cursorRectangle.height) {
-                    flick.contentY = cursorRectangle.y + cursorRectangle.height - flick.height
+            cursorShape: {
+                if (bodyText.hoveredLink) {
+                    return Qt.PointingHandCursor;
+                } else if (bodyText.selectionStart !== bodyText.selectionEnd) {
+                    return Qt.IBeamCursor;
+                } else {
+                    return bodyTextContainer.cursorShape || Qt.IBeamCursor;
                 }
             }
 
-            // Handle left-click
-            Notifications.TextEditClickHandler {
-                target: bodyText
-                onClicked: {
-                    bodyTextContainer.clicked(null);
-                }
-            }
+            onPressed: {
+                contextMenu = contextMenuComponent.createObject(bodyText);
+                contextMenu.link = bodyText.linkAt(mouse.x, mouse.y);
 
-            // Handle right-click and cursorShape
-            MouseArea {
-                anchors.fill: parent
-                acceptedButtons: Qt.RightButton
-
-                cursorShape: {
-                    if (bodyText.hoveredLink) {
-                        return Qt.PointingHandCursor;
-                    } else if (bodyText.selectionStart !== bodyText.selectionEnd) {
-                        return Qt.IBeamCursor;
-                    } else {
-                        return bodyTextContainer.cursorShape || Qt.IBeamCursor;
-                    }
-                }
-
-                onPressed: {
-                    contextMenu = contextMenuComponent.createObject(bodyText);
-                    contextMenu.link = bodyText.linkAt(mouse.x, mouse.y);
-
-                    contextMenu.closed.connect(function() {
-                        contextMenu.destroy();
-                        contextMenu = null;
-                    });
-                    contextMenu.open(mouse.x, mouse.y);
-                }
+                contextMenu.closed.connect(function() {
+                    contextMenu.destroy();
+                    contextMenu = null;
+                });
+                contextMenu.open(mouse.x, mouse.y);
             }
         }
     }

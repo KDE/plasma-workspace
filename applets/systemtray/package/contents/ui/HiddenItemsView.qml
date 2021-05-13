@@ -23,49 +23,45 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents // For Highlight
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import "items"
 
-MouseArea {
+PlasmaComponents3.ScrollView {
     id: hiddenTasksView
 
     property alias layout: hiddenTasks
 
     hoverEnabled: true
-    onExited: hiddenTasks.currentIndex = -1
+    onHoveredChanged: if (!hovered) {
+        hiddenTasks.currentIndex = -1;
+    }
 
-    PlasmaExtras.ScrollArea {
-        width: parent.width
-        height: parent.height
-        frameVisible: false
+    PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
+    PlasmaComponents3.ScrollBar.vertical.policy: systemTrayState.activeApplet ? PlasmaComponents3.ScrollBar.AlwaysOff : PlasmaComponents3.ScrollBar.AsNeeded
 
-        horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
-        verticalScrollBarPolicy: systemTrayState.activeApplet ? Qt.ScrollBarAlwaysOff : Qt.ScrollBarAsNeeded
+    GridView {
+        id: hiddenTasks
 
-        GridView {
-            id: hiddenTasks
+        readonly property int rows: 4
+        readonly property int columns: 4
 
-            readonly property int rows: 4
-            readonly property int columns: 4
+        cellWidth: hiddenTasks.width / hiddenTasks.columns
+        cellHeight: hiddenTasks.height / hiddenTasks.rows
 
-            cellWidth: hiddenTasks.width / hiddenTasks.columns
-            cellHeight: hiddenTasks.height / hiddenTasks.rows
+        currentIndex: -1
+        highlight: PlasmaComponents.Highlight {}
+        highlightMoveDuration: 0
 
-            currentIndex: -1
-            highlight: PlasmaComponents.Highlight {}
-            highlightMoveDuration: 0
+        readonly property int itemCount: model.count
 
-            readonly property int itemCount: model.count
-
-            model: PlasmaCore.SortFilterModel {
-                sourceModel: plasmoid.nativeInterface.systemTrayModel
-                filterRole: "effectiveStatus"
-                filterCallback: function(source_row, value) {
-                    return value === PlasmaCore.Types.PassiveStatus
-                }
+        model: PlasmaCore.SortFilterModel {
+            sourceModel: plasmoid.nativeInterface.systemTrayModel
+            filterRole: "effectiveStatus"
+            filterCallback: function(source_row, value) {
+                return value === PlasmaCore.Types.PassiveStatus
             }
-            delegate: ItemLoader {}
         }
+        delegate: ItemLoader {}
     }
 }
