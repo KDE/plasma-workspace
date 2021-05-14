@@ -316,7 +316,7 @@ QJSValue ScriptEngine::V1::activities() const
 
     const auto result = m_engine->availableActivities();
 
-    for (const auto a : result) {
+    for (const auto &a : result) {
         acts.setProperty(count, a);
         ++count;
     }
