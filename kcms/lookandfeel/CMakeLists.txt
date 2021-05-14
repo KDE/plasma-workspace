@@ -5,8 +5,10 @@ if(X11_Xcursor_FOUND)
     set(HAVE_XCURSOR TRUE)
 endif()
 
-if(${Breeze_FOUND} AND ${BREEZE_WITH_KDECORATION})
-    set(HAVE_BREEZE_DECO TRUE)
+if(${Breeze_FOUND})
+    if(${BREEZE_WITH_KDECORATION})
+        set(HAVE_BREEZE_DECO TRUE)
+    endif()
 endif()
 
 configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
