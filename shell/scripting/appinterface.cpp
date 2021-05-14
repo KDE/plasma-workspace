@@ -158,6 +158,7 @@ bool AppInterface::coronaLocked() const
 
 void AppInterface::sleep(int ms)
 {
+    Q_UNUSED(ms)
     // TODO KF6 remove
 
     // Sleep was implemented with a nested event loop which would cause nested

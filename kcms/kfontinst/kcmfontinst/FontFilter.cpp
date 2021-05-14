@@ -39,8 +39,6 @@
 
 namespace KFI
 {
-static const int constArrowPad(5);
-
 static void deselectCurrent(QActionGroup *act)
 {
     QAction *prev(act->checkedAction());

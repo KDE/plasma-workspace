@@ -84,7 +84,6 @@ static QString partialIcon(bool load = true)
         if (!load)
             QFile::remove(name);
     } else if (load) {
-        QString pth;
         QPixmap pix = KIconLoader::global()->loadIcon("dialog-ok", KIconLoader::Small, KIconLoader::SizeSmall, KIconLoader::DisabledState);
 
         pix.save(name, "PNG");
