@@ -29,7 +29,6 @@
 #include <QQuickWindow>
 #include <QTimer>
 
-#include <KFileItemActions>
 #include <KFileItemListProperties>
 #include <KLocalizedString>
 #include <KPropertiesDialog>
