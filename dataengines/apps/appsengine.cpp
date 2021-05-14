@@ -35,15 +35,10 @@ AppsEngine::~AppsEngine()
 void AppsEngine::init()
 {
     addGroup(KServiceGroup::root());
-    connect(KSycoca::self(), QOverload<const QStringList &>::of(&KSycoca::databaseChanged), this, &AppsEngine::sycocaChanged);
-}
-
-void AppsEngine::sycocaChanged(const QStringList &changes)
-{
-    if (changes.contains(QLatin1String("apps")) || changes.contains(QLatin1String("xdgdata-apps"))) {
+    connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, [this]() {
         removeAllSources();
         addGroup(KServiceGroup::root());
-    }
+    });
 }
 
 Plasma::Service *AppsEngine::serviceForSource(const QString &name)

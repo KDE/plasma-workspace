@@ -230,7 +230,7 @@ PlasmaAppletItemModel::PlasmaAppletItemModel(QObject *parent)
     : QStandardItemModel(parent)
     , m_startupCompleted(false)
 {
-    connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(populateModel(QStringList)));
+    connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, &PlasmaAppletItemModel::populateModel);
 
     setSortRole(Qt::DisplayRole);
 }
@@ -253,12 +253,8 @@ QHash<int, QByteArray> PlasmaAppletItemModel::roleNames() const
     return newRoleNames;
 }
 
-void PlasmaAppletItemModel::populateModel(const QStringList &whatChanged)
+void PlasmaAppletItemModel::populateModel()
 {
-    if (!whatChanged.isEmpty() && !whatChanged.contains(QLatin1String("services"))) {
-        return;
-    }
-
     clear();
 
     auto filter = [this](const KPluginMetaData &plugin) -> bool {

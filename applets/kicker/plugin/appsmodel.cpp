@@ -565,7 +565,9 @@ void AppsModel::refreshInternal()
         m_changeTimer->setInterval(100);
         connect(m_changeTimer, SIGNAL(timeout()), this, SLOT(refresh()));
 
-        connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), SLOT(checkSycocaChanges(QStringList)));
+        connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, [this]() {
+            m_changeTimer->start();
+        });
     } else {
         KServiceGroup::Ptr group = KServiceGroup::group(m_entryPath);
         processServiceGroup(group);
@@ -713,13 +715,6 @@ void AppsModel::sortEntries()
             return c.compare(a->name(), b->name()) < 0;
         }
     });
-}
-
-void AppsModel::checkSycocaChanges(const QStringList &changes)
-{
-    if (changes.contains(QLatin1String("services")) || changes.contains(QLatin1String("apps")) || changes.contains(QLatin1String("xdgdata-apps"))) {
-        m_changeTimer->start();
-    }
 }
 
 void AppsModel::entryChanged(AbstractEntry *entry)

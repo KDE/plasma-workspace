@@ -209,7 +209,7 @@ private Q_SLOTS:
     void currentActivityChanged(const QString &newActivity);
     void activityAdded(const QString &id);
     void activityRemoved(const QString &id);
-    void checkAddPanelAction(const QStringList &sycocaChanges = QStringList());
+    void checkAddPanelAction();
     void addPanel();
     void addPanel(QAction *action);
     void populateAddPanelsMenu();

@@ -114,7 +114,7 @@ private:
     bool m_startupCompleted : 1;
 
 private Q_SLOTS:
-    void populateModel(const QStringList &whatChanged = QStringList());
+    void populateModel();
 };
 
 #endif /*PLASMAAPPLETSMODEL_H_*/

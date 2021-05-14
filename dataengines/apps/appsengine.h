@@ -53,9 +53,6 @@ public:
 protected:
     virtual void init();
 
-private Q_SLOTS:
-    void sycocaChanged(const QStringList &changes);
-
 private:
     friend class AppSource;
     void addGroup(KServiceGroup::Ptr group);

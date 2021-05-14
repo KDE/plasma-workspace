@@ -139,9 +139,6 @@ protected:
 
     QObject *m_appletInterface;
 
-private Q_SLOTS:
-    void checkSycocaChanges(const QStringList &changes);
-
 private:
     void processServiceGroup(KServiceGroup::Ptr group);
     void sortEntries();

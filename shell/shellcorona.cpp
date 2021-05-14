@@ -165,7 +165,7 @@ ShellCorona::ShellCorona(QObject *parent)
     KGlobalAccel::self()->setGlobalShortcut(dashboardAction, Qt::CTRL | Qt::Key_F12);
 
     checkAddPanelAction();
-    connect(KSycoca::self(), SIGNAL(databaseChanged(QStringList)), this, SLOT(checkAddPanelAction(QStringList)));
+    connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, &ShellCorona::checkAddPanelAction);
 
     // Activity stuff
     QAction *activityAction = actions()->addAction(QStringLiteral("manage activities"));
@@ -1726,12 +1726,8 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     return newContainment;
 }
 
-void ShellCorona::checkAddPanelAction(const QStringList &sycocaChanges)
+void ShellCorona::checkAddPanelAction()
 {
-    if (!sycocaChanges.isEmpty() && !sycocaChanges.contains(QLatin1String("services"))) {
-        return;
-    }
-
     delete m_addPanelAction;
     m_addPanelAction = nullptr;
 
