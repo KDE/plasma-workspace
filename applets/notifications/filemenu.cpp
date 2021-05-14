@@ -134,7 +134,7 @@ void FileMenu::open(int x, int y)
     KFileItemListProperties itemProperties(KFileItemList({fileItem}));
     actions->setItemListProperties(itemProperties);
 
-    actions->addOpenWithActionsTo(menu);
+    actions->insertOpenWithActionsTo(nullptr, menu, QStringList());
 
     // KStandardAction? But then the Ctrl+C shortcut makes no sense in this context
     QAction *copyAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("&Copy"));
@@ -193,8 +193,7 @@ void FileMenu::open(int x, int y)
 
     menu->addSeparator();
 
-    actions->addServiceActionsTo(menu);
-    actions->addPluginActionsTo(menu);
+    actions->addActionsTo(menu);
 
     menu->addSeparator();
 

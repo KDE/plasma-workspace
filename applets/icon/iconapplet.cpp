@@ -385,7 +385,7 @@ QList<QAction *> IconApplet::contextualActions()
                     m_openWithMenu.reset(new QMenu());
                 }
                 m_openWithMenu->clear();
-                m_fileItemActions->addOpenWithActionsTo(m_openWithMenu.data());
+                m_fileItemActions->insertOpenWithActionsTo(nullptr, m_openWithMenu.data(), QStringList());
 
                 m_openWithActions = m_openWithMenu->actions();
             }
