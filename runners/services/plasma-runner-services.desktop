@@ -174,5 +174,4 @@ X-KDE-PluginInfo-Name=services
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-License=LGPL
 X-KDE-PluginInfo-EnabledByDefault=true
-X-Plasma-AdvertiseSingleRunnerQueryMode=true
 X-Plasma-Runner-Unique-Results=true
