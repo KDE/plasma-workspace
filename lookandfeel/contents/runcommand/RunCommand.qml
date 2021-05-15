@@ -121,24 +121,26 @@ ColumnLayout {
             function move_up() {
                 if (length === 0) {
                     root.showHistory = true;
-                    if (listView.count > 0) {
-                        listView.forceActiveFocus();
-                    }
                 } else if (results.count > 0) {
-                    results.forceActiveFocus();
                     results.decrementCurrentIndex();
                 }
+                focusCurrentListView()
             }
 
             function move_down() {
                 if (length === 0) {
                     root.showHistory = true;
-                    if (listView.count > 0) {
-                        listView.forceActiveFocus();
-                    }
+                } else if (results.count > 0) {
+                    results.incrementCurrentIndex();
+                }
+                focusCurrentListView()
+            }
+
+            function focusCurrentListView() {
+                if (listView.count > 0) {
+                    listView.forceActiveFocus();
                 } else if (results.count > 0) {
                     results.forceActiveFocus();
-                    results.incrementCurrentIndex();
                 }
             }
 
@@ -164,6 +166,12 @@ ColumnLayout {
                         move_up()
                         event.accepted = true;
                     }
+                }
+                // We only need to handle the Key_End case, the first item is focused by default
+                if (event.key === Qt.Key_End && results.count > 0 && cursorPosition === text.length) {
+                    results.currentIndex = results.count - 1
+                    event.accepted = true;
+                    focusCurrentListView()
                 }
             }
             Keys.onUpPressed: move_up()
@@ -243,6 +251,10 @@ ColumnLayout {
                     incrementCurrentIndex()
                 } else if (ctrl && event.key === Qt.Key_K) {
                     decrementCurrentIndex()
+                } else if (event.key === Qt.Key_Home) {
+                    results.currentIndex = 0
+                } else if (event.key === Qt.Key_End) {
+                    results.currentIndex = results.count - 1
                 } else if (event.text !== "") {
                     // This prevents unprintable control characters from being inserted
                     if (!/[\x00-\x1F\x7F]/.test(event.text)) {
@@ -318,6 +330,10 @@ ColumnLayout {
                     incrementCurrentIndex()
                 } else if (ctrl && event.key === Qt.Key_K) {
                     decrementCurrentIndex()
+                } else if (event.key === Qt.Key_Home) {
+                    currentIndex = 0
+                } else if (event.key === Qt.Key_End) {
+                    currentIndex = count - 1
                 } else if (event.text !== "") {
                     // This prevents unprintable control characters from being inserted
                     if (event.key == Qt.Key_Escape) {
