@@ -165,7 +165,7 @@ Item {
                         action: modelData
                     }
                     onObjectAdded: {
-                        if (object !== actionsButton.applet.action("configure")) {
+                        if (object.action !== actionsButton.applet.action("configure")) {
                             configMenu.addMenuItem(object);
                         }
                     }
