@@ -106,6 +106,8 @@ Comment[de]=Ereignis-Benachrichtigungen und -Aktionen
 Comment[es]=Notificaciones y acciones de eventos
 Comment[fr]=Notifications d'évènements et d'actions
 Comment[ia]=Notificationes de evento e Actiones
+Comment[it]=Notifiche degli eventi e azioni
+Comment[ko]=이벤트 알림과 동작
 Comment[nl]=Meldingen en acties van gebeurtenissen
 Comment[pl]=Powiadomienia i działania zdarzeń
 Comment[pt]=Notificações de Eventos e Acções
@@ -117,6 +119,7 @@ Comment[sv]=Underrättelser om händelser och åtgärder
 Comment[uk]=Сповіщення щодо подій та дії
 Comment[vi]=Thông báo và hành động cho sự kiện
 Comment[x-test]=xxEvent Notifications and Actionsxx
+Comment[zh_CN]=事件通知和动作
 
 X-KDE_Keywords=System sounds,Audio,Sound,Notify,Alerts,Notification,popups,disturb,do not disturb,quiet,concentrate,concentration
 
