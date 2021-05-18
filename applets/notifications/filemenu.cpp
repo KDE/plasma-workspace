@@ -133,6 +133,7 @@ void FileMenu::open(int x, int y)
     KFileItemActions *actions = new KFileItemActions(menu);
     KFileItemListProperties itemProperties(KFileItemList({fileItem}));
     actions->setItemListProperties(itemProperties);
+    actions->setParentWidget(menu);
 
     actions->insertOpenWithActionsTo(nullptr, menu, QStringList());
 
