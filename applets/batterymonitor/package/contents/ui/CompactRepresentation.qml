@@ -34,7 +34,7 @@ MouseArea {
     onClicked: plasmoid.expanded = !plasmoid.expanded
     
     onWheel: {
-        var delta = wheel.angleDelta.y
+        var delta = wheel.angleDelta.y || wheel.angleDelta.x
 
         var maximumBrightness = batterymonitor.maximumScreenBrightness
         // Don't allow the UI to turn off the screen
