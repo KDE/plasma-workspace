@@ -258,6 +258,8 @@ void AppMenuModule::initMenuWayland()
         window->requestActivate();
         auto plasmaSurface = m_plasmashell->createSurface(KWayland::Client::Surface::fromWindow(window), m_menu.data());
         plasmaSurface->setPosition(window->position());
+        plasmaSurface->setSkipSwitcher(true);
+        plasmaSurface->setSkipTaskbar(true);
         m_menu->installEventFilter(this);
     }
 }
