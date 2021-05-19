@@ -371,6 +371,7 @@ PlasmaExtras.Representation {
                         padding: calendar.paddings
                         leftPadding: calendar.paddings + PlasmaCore.Units.smallSpacing * 2
                         text: eventTitle.text
+                        hoverEnabled: true
                         property bool hasTime: {
                             // Explicitly all-day event
                             if (modelData.isAllDay) {
@@ -398,7 +399,7 @@ PlasmaExtras.Representation {
 
                         PlasmaComponents3.ToolTip {
                             text: modelData.description
-                            visible: text !== ""
+                            visible: text !== "" && eventItem.hovered
                         }
 
                         contentItem: GridLayout {
