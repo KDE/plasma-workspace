@@ -53,7 +53,7 @@ QString GtkPage::gtkThemeFromConfig()
 
 bool GtkPage::gtkPreviewAvailable()
 {
-    return !QStandardPaths::findExecutable(QStringLiteral("gtk_preview"), {CMAKE_INSTALL_FULL_LIBEXECDIR}).isEmpty();
+    return !QStandardPaths::findExecutable(QStringLiteral("gtk3_preview"), {CMAKE_INSTALL_FULL_LIBEXECDIR}).isEmpty();
 }
 
 void GtkPage::showGtkPreview()
