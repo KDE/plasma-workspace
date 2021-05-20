@@ -96,7 +96,10 @@ ContainmentLayoutManager.AppletContainer {
     initialSize.width: applet.switchWidth + leftPadding + rightPadding
     initialSize.height: applet.switchHeight + topPadding + bottomPadding
 
+    onRotationChanged: background.syncBlurEnabled()
+
     background: PlasmaCore.FrameSvgItem {
+        id: background
         imagePath: {
             if (!contentItem) {
                 return "";
@@ -109,6 +112,16 @@ ContainmentLayoutManager.AppletContainer {
                 return "";
             }
         }
+
+        property bool blurEnabled: false
+        function syncBlurEnabled() {
+            blurEnabled = appletContainer.rotation === 0 && plasmoid.GraphicsInfo.api !== GraphicsInfo.Software && hasElementPrefix("blurred");
+        }
+        prefix: blurEnabled ? "blurred" : ""
+        Component.onCompleted: syncBlurEnabled()
+
+        onRepaintNeeded: syncBlurEnabled()
+
         DropShadow {
             anchors {
                 fill: parent
@@ -130,6 +143,54 @@ ContainmentLayoutManager.AppletContainer {
 
             source: contentItem && contentItem.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground ? contentItem : null
             visible: source != null
+        }
+
+        OpacityMask {
+            id: mask
+            enabled: visible
+            rotation: appletContainer.rotation
+            Component.onCompleted:  mask.parent = plasmoid
+            width: appletContainer.width
+            height: appletContainer.height
+            x: appletContainer.Kirigami.ScenePosition.x + Math.max(0, -appletContainer.x)
+            y: appletContainer.Kirigami.ScenePosition.y + Math.max(0, -appletContainer.y)
+
+            visible: background.blurEnabled && (appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
+            z: -2
+            source: blur
+            maskSource: 
+            ShaderEffectSource {
+                width: mask.width
+                height: mask.height
+                sourceRect: Qt.rect(Math.max(0, -appletContainer.x),
+                                    Math.max(0, -appletContainer.y),
+                                    width, height);
+                sourceItem: PlasmaCore.FrameSvgItem {
+                    imagePath: "widgets/background"
+                    prefix: "blurred-mask"
+                    parent: appletContainer.background
+                    anchors.fill: parent
+                    visible: false
+                }
+            }
+
+            FastBlur {
+                id: blur
+                anchors.fill: parent
+
+                radius: 128
+                visible: false
+
+                source: ShaderEffectSource {
+                    width: blur.width
+                    height: blur.height
+                    sourceRect: Qt.rect(Math.max(0, appletContainer.x),
+                                        Math.max(0, appletContainer.y),
+                                        appletContainer.width - Math.max(0, - (appletContainer.parent.width - appletContainer.x - appletContainer.width)),
+                                        appletContainer.height - Math.max(0, - (appletContainer.parent.height - appletContainer.y - appletContainer.height)));
+                    sourceItem: plasmoid.wallpaper
+                }
+            }
         }
     }
 
