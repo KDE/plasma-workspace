@@ -63,7 +63,7 @@ PlasmaExtras.ScrollArea {
             width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
 
             visible: menuListView.count === 0
-            text: i18n("Clipboard is empty")
+            text: model.filterRegExp.length  > 0 ? i18n("No matches") : i18n("Clipboard is empty")
         }
     }
 }
