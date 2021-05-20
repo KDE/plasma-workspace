@@ -134,6 +134,7 @@ Item {
         }
 
         PlasmaComponents3.ToolButton {
+            focusPolicy: Qt.TabFocus
             enabled: mpris2Source.canGoBack
             Layout.preferredHeight: PlasmaCore.Units.gridUnit*2
             Layout.preferredWidth: Layout.preferredHeight
@@ -147,6 +148,7 @@ Item {
         }
 
         PlasmaComponents3.ToolButton {
+            focusPolicy: Qt.TabFocus
             Layout.fillHeight: true
             Layout.preferredWidth: height // make this button bigger
             icon.name: mpris2Source.playing ? "media-playback-pause" : "media-playback-start"
@@ -158,6 +160,7 @@ Item {
         }
 
         PlasmaComponents3.ToolButton {
+            focusPolicy: Qt.TabFocus
             enabled: mpris2Source.canGoNext
             Layout.preferredHeight: PlasmaCore.Units.gridUnit*2
             Layout.preferredWidth: Layout.preferredHeight
