@@ -32,6 +32,8 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 
+#include <cmath>
+
 K_EXPORT_PLASMA_RUNNER_WITH_JSON(PowerDevilRunner, "plasma-runner-powerdevil.json")
 
 PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
@@ -179,7 +181,9 @@ void PowerDevilRunner::run(const Plasma::RunnerContext &context, const Plasma::Q
     if (match.id().startsWith(QLatin1String("PowerDevil_ProfileChange"))) {
         iface.asyncCall(QStringLiteral("loadProfile"), match.data().toString());
     } else if (match.id() == QLatin1String("PowerDevil_BrightnessChange")) {
-        brightnessIface.asyncCall(QStringLiteral("setBrightness"), match.data().toInt());
+        QDBusReply<int> max = brightnessIface.call("brightnessMax");
+        const int value = max.isValid() ? std::round(match.data().toInt() * max / 100.0) : match.data().toInt();
+        brightnessIface.asyncCall("setBrightness", value);
     } else if (match.id() == QLatin1String("PowerDevil_DimTotal")) {
         brightnessIface.asyncCall(QStringLiteral("setBrightness"), 0);
     } else if (match.id() == QLatin1String("PowerDevil_DimHalf")) {
