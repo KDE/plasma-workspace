@@ -26,9 +26,9 @@
 #include <QLoggingCategory>
 #include <QMessageBox>
 #include <QProcess>
+#include <QQmlDebuggingEnabler>
 #include <QQuickWindow>
 #include <QSessionManager>
-#include <QtQml/QQmlDebuggingEnabler>
 
 #include <KAboutData>
 #include <KQuickAddons/QtQuickSettings>

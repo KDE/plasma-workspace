@@ -26,8 +26,8 @@
 
 #include <QDateTime>
 #include <QDomDocument>
+#include <QMetaType>
 #include <QStringList>
-#include <QtCore/QMetaType>
 
 class KXftConfig
 {
