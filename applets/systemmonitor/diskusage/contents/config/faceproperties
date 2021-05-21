@@ -1,8 +1,8 @@
 [Config]
 chartFace=org.kde.ksysguard.horizontalbars
-highPrioritySensorIds=["partitions/.*/filllevel"]
-totalSensors=["partitions/all/filllevel"]
-lowPrioritySensorIds=["partitions/all/total"]
+highPrioritySensorIds=["disk/.*/usedPercent"]
+totalSensors=["disk/all/usedPercent"]
+lowPrioritySensorIds=["disk/all/total"]
 
 [FaceConfig]
 rangeAuto=true
