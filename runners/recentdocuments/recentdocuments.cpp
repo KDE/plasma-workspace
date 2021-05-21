@@ -99,7 +99,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         match.setUrls({url});
         match.setId(url.toString());
         if (url.isLocalFile()) {
-            match.setActions(actions().values());
+            match.setActions(m_actions);
         }
         match.setText(name);
 
