@@ -59,11 +59,11 @@ PlasmaCore.FrameSvgItem {
         target: systemTrayState
 
         function onActiveAppletChanged() {
-            updateHighlightedItem();
+            Qt.callLater(updateHighlightedItem);
         }
 
         function onExpandedChanged() {
-            updateHighlightedItem();
+            Qt.callLater(updateHighlightedItem);
         }
     }
 
@@ -72,7 +72,7 @@ PlasmaCore.FrameSvgItem {
         target: systemTrayState.activeApplet
 
         function onParentChanged() {
-            updateHighlightedItem();
+            Qt.callLater(updateHighlightedItem);
         }
     }
 
@@ -81,11 +81,11 @@ PlasmaCore.FrameSvgItem {
         target: parent
 
         function onWidthChanged() {
-            updateHighlightedItem();
+            Qt.callLater(updateHighlightedItem);
         }
 
         function onHeightChanged() {
-            updateHighlightedItem();
+            Qt.callLater(updateHighlightedItem);
         }
     }
 
@@ -94,7 +94,7 @@ PlasmaCore.FrameSvgItem {
         target: !!highlightedItem && highlightedItem.parent ? highlightedItem.parent : null
 
         function onScaleChanged() {
-            updateHighlightedItem();
+            Qt.callLater(updateHighlightedItem);
         }
     }
 
