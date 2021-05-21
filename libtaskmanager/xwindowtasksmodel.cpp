@@ -832,7 +832,7 @@ void XWindowTasksModel::requestToggleMinimized(const QModelIndex &index)
     const WId window = d->windows.at(index.row());
     const KWindowInfo *info = d->windowInfo(window);
 
-    if (info->isMinimized()) {
+    if (index.data(AbstractTasksModel::IsHidden).toBool()) {
         bool onCurrent = info->isOnCurrentDesktop();
 
         // FIXME: Move logic up into proxy? (See also others.)
