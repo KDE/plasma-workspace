@@ -142,10 +142,14 @@ private:
 template<typename... Args>
 CompletionCheck *CompletionCheck::create(Args &&... _args)
 {
+#ifdef HAVE_PACKAGEKIT
+    // Ubuntu completion depends on packagekit. When packagekit is not available there's no point supporting
+    // completion checking as we'll have no way to complete the language if it is incomplete.
     KOSRelease os;
     if (os.id() == QLatin1String("ubuntu") || os.idLike().contains(QLatin1String("ubuntu"))) {
         return new UbuntuCompletionCheck(std::forward<Args>(_args)...);
     }
+#endif
     return nullptr;
 }
 
