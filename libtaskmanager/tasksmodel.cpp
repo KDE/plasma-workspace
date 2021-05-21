@@ -303,6 +303,7 @@ void TasksModel::Private::initModels()
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByActivityChanged, q, &TasksModel::filterByActivityChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterNotMinimizedChanged, q, &TasksModel::filterNotMinimizedChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterNotMaximizedChanged, q, &TasksModel::filterNotMaximizedChanged);
+    QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterHiddenChanged, q, &TasksModel::filterHiddenChanged);
 
     groupingProxyModel = new TaskGroupingProxyModel(q);
     groupingProxyModel->setSourceModel(filterProxyModel);
@@ -1161,6 +1162,16 @@ bool TasksModel::filterNotMaximized() const
 void TasksModel::setFilterNotMaximized(bool filter)
 {
     d->filterProxyModel->setFilterNotMaximized(filter);
+}
+
+bool TasksModel::filterHidden() const
+{
+    return d->filterProxyModel->filterHidden();
+}
+
+void TasksModel::setFilterHidden(bool filter)
+{
+    d->filterProxyModel->setFilterHidden(filter);
 }
 
 TasksModel::SortMode TasksModel::sortMode() const

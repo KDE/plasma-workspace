@@ -74,6 +74,7 @@ class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public Abstr
     Q_PROPERTY(bool filterByActivity READ filterByActivity WRITE setFilterByActivity NOTIFY filterByActivityChanged)
     Q_PROPERTY(bool filterNotMinimized READ filterNotMinimized WRITE setFilterNotMinimized NOTIFY filterNotMinimizedChanged)
     Q_PROPERTY(bool filterNotMaximized READ filterNotMaximized WRITE setFilterNotMaximized NOTIFY filterNotMaximizedChanged)
+    Q_PROPERTY(bool filterHidden READ filterHidden WRITE setFilterHidden NOTIFY filterHiddenChanged)
 
     Q_PROPERTY(SortMode sortMode READ sortMode WRITE setSortMode NOTIFY sortModeChanged)
     Q_PROPERTY(bool separateLaunchers READ separateLaunchers WRITE setSeparateLaunchers NOTIFY separateLaunchersChanged)
@@ -312,6 +313,23 @@ public:
      * @param filter Whether non-maximized tasks should be filtered.
      **/
     void setFilterNotMaximized(bool filter);
+
+    /**
+     * Whether hidden tasks should be filtered. Defaults to
+     * @c false.
+     *
+     * @see setFilterHidden
+     * @returns @c true if hidden tasks should be filtered.
+     **/
+    bool filterHidden() const;
+
+    /**
+     * Set whether hidden tasks should be filtered.
+     *
+     * @see filterHidden
+     * @param filter Whether hidden tasks should be filtered.
+     **/
+    void setFilterHidden(bool filter);
 
     /**
      * The sort mode used in sorting tasks. Defaults to SortAlpha.
@@ -867,6 +885,7 @@ Q_SIGNALS:
     void filterByActivityChanged() const;
     void filterNotMinimizedChanged() const;
     void filterNotMaximizedChanged() const;
+    void filterHiddenChanged() const;
     void sortModeChanged() const;
     void separateLaunchersChanged() const;
     void launchInPlaceChanged() const;

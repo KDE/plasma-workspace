@@ -979,12 +979,12 @@ void TaskGroupingProxyModel::requestToggleMinimized(const QModelIndex &index)
     if (index.parent().isValid() || !d->isGroup(index.row())) {
         d->abstractTasksSourceModel->requestToggleMinimized(mapToSource(index));
     } else {
-        const bool goalState = !index.data(AbstractTasksModel::IsMinimized).toBool();
+        const bool goalState = !index.data(AbstractTasksModel::IsHidden).toBool();
 
         for (int i = 0; i < rowCount(index); ++i) {
             const QModelIndex &child = this->index(i, 0, index);
 
-            if (child.data(AbstractTasksModel::IsMinimized).toBool() != goalState) {
+            if (child.data(AbstractTasksModel::IsHidden).toBool() != goalState) {
                 d->abstractTasksSourceModel->requestToggleMinimized(mapToSource(child));
             }
         }

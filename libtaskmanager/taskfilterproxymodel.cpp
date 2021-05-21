@@ -41,6 +41,7 @@ public:
     bool filterByActivity = false;
     bool filterNotMinimized = false;
     bool filterNotMaximized = false;
+    bool filterHidden = false;
     bool filterSkipTaskbar = true;
     bool filterSkipPager = false;
 
@@ -202,6 +203,22 @@ void TaskFilterProxyModel::setFilterNotMaximized(bool filter)
     }
 }
 
+bool TaskFilterProxyModel::filterHidden() const
+{
+    return d->filterHidden;
+}
+
+void TaskFilterProxyModel::setFilterHidden(bool filter)
+{
+    if (d->filterHidden != filter) {
+        d->filterHidden = filter;
+
+        invalidateFilter();
+
+        emit filterHiddenChanged();
+    }
+}
+
 bool TaskFilterProxyModel::filterSkipTaskbar() const
 {
     return d->filterSkipTaskbar;
@@ -323,6 +340,15 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
         bool isMaximized = sourceIdx.data(AbstractTasksModel::IsMaximized).toBool();
 
         if (!isMaximized) {
+            return false;
+        }
+    }
+
+    // Filter hidden.
+    if (d->filterHidden) {
+        bool isHidden = sourceIdx.data(AbstractTasksModel::IsHidden).toBool();
+
+        if (isHidden) {
             return false;
         }
     }
