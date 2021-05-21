@@ -1,6 +1,7 @@
 /*
  *   Copyright (C) 2006 Aaron Seigo <aseigo@kde.org>
  *   Copyright (C) 2016 Kai Uwe Broulik <kde@privat.broulik.de>
+ *   Copyright (C) 2020-2021 Alexander Lohnau <alexander.lonau@gmx.de>
  *
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU Library General Public License version 2 as
