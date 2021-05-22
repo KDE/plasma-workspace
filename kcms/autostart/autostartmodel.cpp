@@ -126,9 +126,9 @@ void AutostartModel::load()
 
     m_entries.append(scriptEntries);
 
-    loadScriptsFromDir(QStringLiteral("/plasma-workspace/env/"), AutostartModel::AutostartEntrySource::PlasmaEnvScripts);
+    loadScriptsFromDir(QStringLiteral("plasma-workspace/env/"), AutostartModel::AutostartEntrySource::PlasmaEnvScripts);
 
-    loadScriptsFromDir(QStringLiteral("/plasma-workspace/shutdown/"), AutostartModel::AutostartEntrySource::PlasmaShutdown);
+    loadScriptsFromDir(QStringLiteral("plasma-workspace/shutdown/"), AutostartModel::AutostartEntrySource::PlasmaShutdown);
 
     endResetModel();
 }
@@ -322,7 +322,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
         AutostartScriptDesktopFile desktopFile(fileName, file.filePath());
         insertScriptEntry(lastLoginScript + 1, fileName, desktopFile.fileName(), kind);
     } else if (kind == AutostartModel::AutostartEntrySource::PlasmaShutdown) {
-        const QUrl destinationScript = QUrl::fromLocalFile(QDir(m_xdgConfigPath.filePath(QStringLiteral("/plasma-workspace/shutdown/"))).filePath(fileName));
+        const QUrl destinationScript = QUrl::fromLocalFile(QDir(m_xdgConfigPath.filePath(QStringLiteral("plasma-workspace/shutdown/"))).filePath(fileName));
         KIO::CopyJob *job = KIO::link(url, destinationScript, KIO::HideProgressInfo);
         job->setAutoRename(true);
         job->setProperty("finalUrl", destinationScript);
