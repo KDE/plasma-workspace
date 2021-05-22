@@ -10,4 +10,4 @@ add_executable(krunnerhistory krunnerhistory.cpp)
 target_link_libraries(krunnerhistory KF5::Runner KF5::ConfigCore KF5::Activities)
 
 install(TARGETS krunnerglobalshortcuts krunnerhistory DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)
-install(FILES krunnerglobalshortcuts.upd krunnerhistory.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+install(FILES krunnerglobalshortcuts2.upd krunnerhistory.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
