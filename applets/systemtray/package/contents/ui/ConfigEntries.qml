@@ -284,7 +284,9 @@ ColumnLayout {
                         onClicked: configureAction.trigger()
 
                         QQC2.ToolTip {
-                            text: parent.Accessible.name
+                            // Strip out ampersands right before non-whitespace characters, i.e.
+                            // those used to determine the alt key shortcut
+                            text: parent.Accessible.name.replace(/&(?=\S)/g, "")
                         }
                     }
                 }
