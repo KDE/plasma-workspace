@@ -171,7 +171,7 @@ Item {
         }
     }
 
-    function action_openKcm() {
+    function action_configure() {
         KQCAddons.KCMShell.openSystemSettings("kcm_notifications");
     }
 
