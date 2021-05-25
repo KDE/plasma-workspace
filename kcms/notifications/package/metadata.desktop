@@ -131,4 +131,6 @@ X-KDE-PluginInfo-Website=
 X-KDE-ServiceTypes=Plasma/Generic
 X-Plasma-API=declarativeappletscript
 
+X-KDE-FormFactors=tablet,handset,desktop
+
 X-Plasma-MainScript=ui/main.qml
