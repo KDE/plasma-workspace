@@ -69,7 +69,6 @@ PlasmaComponents3.Page {
                 leftMargin: PlasmaCore.Units.smallSpacing
             }
             id: header
-            visible: !Kirigami.Settings.isMobile
             spacing: 0
 
             RowLayout {
