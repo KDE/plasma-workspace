@@ -108,7 +108,7 @@ KCM.ScrollViewKCM {
             width: parent.width - (Kirigami.Units.largeSpacing * 4)
             visible: parent.count === 0
             text: i18n("No user-specified autostart items")
-            explanation: xi18nc("@info", "Click the <interface>Add...</interface> button below to add some")
+            explanation: xi18nc("@info", "Click the <interface>Add…</interface> button below to add some")
         }
     }
 
@@ -161,7 +161,7 @@ KCM.ScrollViewKCM {
             id: menuButton
 
             icon.name: "list-add"
-            text: i18n("Add...")
+            text: i18n("Add…")
 
             checkable: true
             checked: menu.opened
@@ -187,19 +187,19 @@ KCM.ScrollViewKCM {
             dim: false
 
             MenuItem {
-                text: i18n("Add Application...")
+                text: i18n("Add Application…")
                 icon.name: "list-add"
 
                 onClicked: kcm.model.showApplicationDialog(root)
             }
             MenuItem {
-                text: i18n("Add Login Script...")
+                text: i18n("Add Login Script…")
                 icon.name: "list-add"
 
                 onClicked: loginFileDialogLoader.active = true
             }
             MenuItem {
-                text: i18n("Add Logout Script...")
+                text: i18n("Add Logout Script…")
                 icon.name: "list-add"
 
                 onClicked: logoutFileDialogLoader.active = true

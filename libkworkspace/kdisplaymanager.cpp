@@ -779,13 +779,13 @@ bool KDisplayManager::localSessions(SessList &list)
 void KDisplayManager::sess2Str2(const SessEnt &se, QString &user, QString &loc)
 {
     if (se.tty) {
-        user = i18nc("user: ...", "%1: TTY login", se.user);
+        user = i18nc("user: …", "%1: TTY login", se.user);
         loc = se.vt ? QStringLiteral("vt%1").arg(se.vt) : se.display;
     } else {
         // clang-format off
         user = se.user.isEmpty() ? se.session.isEmpty()
-                                 ? i18nc("... location (TTY or X display)", "Unused") : se.session == QLatin1String("<remote>") 
-                                 ? i18n("X login on remote host")                     : i18nc("... host", "X login on %1", se.session) 
+                                 ? i18nc("… location (TTY or X display)", "Unused") : se.session == QLatin1String("<remote>")
+                                 ? i18n("X login on remote host")                     : i18nc("… host", "X login on %1", se.session)
                                                                                       : se.session == QLatin1String("<unknown>") 
                                  ? se.user                                            : i18nc("user: session type", "%1: %2", se.user, se.session);
         // clang-format on

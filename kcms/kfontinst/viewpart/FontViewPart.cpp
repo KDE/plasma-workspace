@@ -105,7 +105,7 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
     itsFaceLabel = new QLabel(i18n("Show Face:"), itsFaceWidget);
     itsFaceSelector = new QSpinBox(itsFaceWidget);
     itsFaceSelector->setValue(1);
-    itsInstallButton = new QPushButton(i18n("Install..."), controls);
+    itsInstallButton = new QPushButton(i18n("Install…"), controls);
     itsInstallButton->setEnabled(false);
     previewLayout->addWidget(itsPreview);
     faceLayout->addWidget(itsFaceLabel);
@@ -126,7 +126,7 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList
 
     itsChangeTextAction = actionCollection()->addAction("changeText");
     itsChangeTextAction->setIcon(QIcon::fromTheme("edit-rename"));
-    itsChangeTextAction->setText(i18n("Change Text..."));
+    itsChangeTextAction->setText(i18n("Change Text…"));
     connect(itsChangeTextAction, &QAction::triggered, this, &CFontViewPart::changeText);
 
     CPreviewSelectAction *displayTypeAction = new CPreviewSelectAction(this, CPreviewSelectAction::BlocksAndScripts);

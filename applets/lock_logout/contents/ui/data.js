@@ -15,21 +15,21 @@ var data = [{
     icon: "system-shutdown",
     operation: "requestShutdown",
     configKey: "requestShutDown",
-    tooltip_mainText: i18n("Shutdown..."),
+    tooltip_mainText: i18n("Shutdown…"),
     tooltip_subText: i18n("Turn off the computer"),
     requires: "Shutdown"
 }, {
     icon: "system-reboot",
     operation: "requestReboot",
     configKey: "requestReboot",
-    tooltip_mainText: i18n("Restart..."),
+    tooltip_mainText: i18n("Restart…"),
     tooltip_subText: i18n("Reboot the computer"),
     requires: "Reboot"
 }, {
     icon: "system-log-out",
     operation: "requestLogout",
     configKey: "requestLogout",
-    tooltip_mainText: i18n("Logout..."),
+    tooltip_mainText: i18n("Logout…"),
     tooltip_subText: i18n("End the session"),
     requires: "Logout"
 }, {

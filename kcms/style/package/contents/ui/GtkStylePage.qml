@@ -87,7 +87,7 @@ Kirigami.Page {
 
                     QtControls.Button {
                         icon.name: "preview"
-                        text: i18n("Preview...")
+                        text: i18n("Preview…")
                         onClicked: kcm.gtkPage.showGtkPreview()
                         visible: kcm.gtkPage.gtkPreviewAvailable()
                     }
@@ -106,12 +106,12 @@ Kirigami.Page {
             alignment: Qt.AlignRight
             actions: [
                 Kirigami.Action {
-                    text: i18n("Install from File...")
+                    text: i18n("Install from File…")
                     icon.name: "document-import"
                     onTriggered: fileDialogLoader.active = true
                 },
                 Kirigami.Action {
-                    text: i18n("Get New GNOME/GTK Application Styles...")
+                    text: i18n("Get New GNOME/GTK Application Styles…")
                     icon.name: "get-hot-new-stuff"
                     onTriggered: { newStuffPage.open(); }
                 }

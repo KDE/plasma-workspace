@@ -91,7 +91,7 @@ CDuplicatesDialog::CDuplicatesDialog(QWidget *parent, CFontList *fl)
 int CDuplicatesDialog::exec()
 {
     itsActionLabel->startAnimation();
-    itsLabel->setText(i18n("Scanning for duplicate fonts. Please wait..."));
+    itsLabel->setText(i18n("Scanning for duplicate fonts. Please wait…"));
     itsFontFileList->start();
     return QDialog::exec();
 }
@@ -219,7 +219,7 @@ void CDuplicatesDialog::slotButtonClicked(QAbstractButton *button)
         if (!itsFontFileList->wasTerminated()) {
             if (itsFontFileList->isRunning()) {
                 if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Cancel font scan?"))) {
-                    itsLabel->setText(i18n("Canceling..."));
+                    itsLabel->setText(i18n("Canceling…"));
 
                     if (itsFontFileList->isRunning())
                         itsFontFileList->terminate();

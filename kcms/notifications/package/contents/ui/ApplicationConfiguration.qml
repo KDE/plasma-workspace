@@ -130,7 +130,7 @@ ColumnLayout {
 
         QtControls.Button {
             id: configureEventsButton
-            text: i18n("Configure Events...")
+            text: i18n("Configure Events…")
             icon.name: "preferences-desktop-notification"
             visible: !!configColumn.notifyRcName
             onClicked: configColumn.configureEvents()

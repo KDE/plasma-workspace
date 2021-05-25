@@ -386,7 +386,7 @@ QVariantList editApplicationAction(const KService::Ptr &service)
 
     if (canEditApplication(service)) {
         // TODO: Using the KMenuEdit icon might be misleading.
-        QVariantMap editAction = Kicker::createActionItem(i18n("Edit Application..."), QStringLiteral("kmenuedit"), QStringLiteral("editApplication"));
+        QVariantMap editAction = Kicker::createActionItem(i18n("Edit Application…"), QStringLiteral("kmenuedit"), QStringLiteral("editApplication"));
         actionList << editAction;
     }
 
@@ -430,7 +430,7 @@ QVariantList appstreamActions(const KService::Ptr &service)
     for (const auto &component : components) {
         const QString componentId = component.id();
 
-        QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons..."),
+        QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons…"),
                                                                appStreamHandler->icon(),
                                                                "manageApplication",
                                                                QVariant(QLatin1String("appstream://") + componentId));

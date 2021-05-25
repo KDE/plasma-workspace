@@ -107,7 +107,7 @@ KCM.GridViewKCM {
         actions: [
             Kirigami.Action {
                 iconName: "document-edit"
-                tooltip: i18n("Configure Style...")
+                tooltip: i18n("Configure Style…")
                 enabled: model.configurable
                 onTriggered: kcm.configure(model.display, model.styleName, delegate)
             }
@@ -143,7 +143,7 @@ KCM.GridViewKCM {
                 actions: [
                     Kirigami.Action {
                         visible: kcm.gtkConfigKdedModuleLoaded
-                        text: i18n("Configure GNOME/GTK Application Style...")
+                        text: i18n("Configure GNOME/GTK Application Style…")
                         icon.name: "configure"
                         onTriggered: root.openGtkStyleSettings()
                     }

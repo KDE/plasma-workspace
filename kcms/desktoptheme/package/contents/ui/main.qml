@@ -127,7 +127,7 @@ KCM.GridViewKCM {
         actions: [
             Kirigami.Action {
                 iconName: "document-edit"
-                tooltip: i18n("Edit Theme...")
+                tooltip: i18n("Edit Theme…")
                 enabled: !model.pendingDeletion
                 visible: kcm.canEditThemes
                 onTriggered: kcm.editTheme(model.pluginName)
@@ -183,12 +183,12 @@ KCM.GridViewKCM {
             alignment: Qt.AlignRight
             actions: [
                 Kirigami.Action {
-                    text: i18n("Install from File...")
+                    text: i18n("Install from File…")
                     icon.name: "document-import"
                     onTriggered: fileDialogLoader.active = true
                 },
                 Kirigami.Action {
-                    text: i18n("Get New Plasma Styles...")
+                    text: i18n("Get New Plasma Styles…")
                     icon.name: "get-hot-new-stuff"
                     onTriggered: { newStuffPage.open(); }
                 }

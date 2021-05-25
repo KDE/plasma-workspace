@@ -117,7 +117,7 @@ QVariantList ContactEntry::actions() const
 {
     QVariantList actionList;
 
-    actionList << Kicker::createActionItem(i18n("Show Contact Information..."), QStringLiteral("identity"), QStringLiteral("showContactInfo"));
+    actionList << Kicker::createActionItem(i18n("Show Contact Information…"), QStringLiteral("identity"), QStringLiteral("showContactInfo"));
 
     return actionList;
 }

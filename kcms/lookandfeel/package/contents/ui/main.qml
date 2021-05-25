@@ -94,7 +94,7 @@ KCM.GridViewKCM {
                 alignment: Qt.AlignRight
                 actions: [
                     Kirigami.Action {
-                        text: i18n("Get New Global Themes...")
+                        text: i18n("Get New Global Themes…")
                         icon.name: "get-hot-new-stuff"
                         onTriggered: { newStuffPage.open(); }
                     }

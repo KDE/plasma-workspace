@@ -386,7 +386,7 @@ void CJobRunner::doNext()
             // Force reconfig if command was already set to update...
             dbus()->reconfigure(getpid(), CMD_UPDATE == itsCmd);
             itsCmd = CMD_UPDATE;
-            itsStatusLabel->setText(i18n("Updating font configuration. Please wait..."));
+            itsStatusLabel->setText(i18n("Updating font configuration. Please wait…"));
             itsProgress->setValue(itsProgress->maximum());
             emit configuring();
         } else {

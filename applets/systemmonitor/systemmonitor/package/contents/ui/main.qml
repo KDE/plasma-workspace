@@ -65,6 +65,6 @@ Item {
     }
 
     Component.onCompleted: {
-        Plasmoid.setAction("openSystemMonitor", i18nc("@action", "Open System Monitor..."), "utilities-system-monitor")
+        Plasmoid.setAction("openSystemMonitor", i18nc("@action", "Open System Monitor…"), "utilities-system-monitor")
     }
 }

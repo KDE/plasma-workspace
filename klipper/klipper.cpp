@@ -157,7 +157,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     QString CONFIGURE = QStringLiteral("configure");
     m_configureAction = m_collection->addAction(CONFIGURE);
     m_configureAction->setIcon(QIcon::fromTheme(CONFIGURE));
-    m_configureAction->setText(i18n("&Configure Klipper..."));
+    m_configureAction->setText(i18n("&Configure Klipper…"));
     connect(m_configureAction, &QAction::triggered, this, &Klipper::slotConfigure);
 
     if (KlipperMode::Standalone == m_mode) {
@@ -175,7 +175,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     // add an edit-possibility
     m_editAction = m_collection->addAction(QStringLiteral("edit_clipboard"));
     m_editAction->setIcon(QIcon::fromTheme(QStringLiteral("document-properties")));
-    m_editAction->setText(i18n("&Edit Contents..."));
+    m_editAction->setText(i18n("&Edit Contents…"));
     KGlobalAccel::setGlobalShortcut(m_editAction, QKeySequence());
     connect(m_editAction, &QAction::triggered, this, [this]() {
         editData(m_history->first());
@@ -183,7 +183,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
 
     // add barcode for mobile phones
     m_showBarcodeAction = m_collection->addAction(QStringLiteral("show-barcode"));
-    m_showBarcodeAction->setText(i18n("&Show Barcode..."));
+    m_showBarcodeAction->setText(i18n("&Show Barcode…"));
     KGlobalAccel::setGlobalShortcut(m_showBarcodeAction, QKeySequence());
     connect(m_showBarcodeAction, &QAction::triggered, this, [this]() {
         showBarcode(m_history->first());

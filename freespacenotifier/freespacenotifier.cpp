@@ -99,7 +99,7 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
             m_notification->setComponentName(QStringLiteral("freespacenotifier"));
             m_notification->setText(text);
 
-            QStringList actions = {i18n("Configure Warning...")};
+            QStringList actions = {i18n("Configure Warning…")};
 
             auto filelight = filelightService();
             if (filelight) {

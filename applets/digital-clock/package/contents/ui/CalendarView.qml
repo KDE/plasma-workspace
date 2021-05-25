@@ -97,7 +97,7 @@ PlasmaExtras.Representation {
                 }
                 PlasmaComponents3.ToolButton {
                     visible: agenda.visible && ApplicationIntegration.korganizerInstalled
-                    text: i18nc("@action:button Add event", "Add...")
+                    text: i18nc("@action:button Add event", "Add…")
                     Layout.rightMargin: calendar.paddings
                     icon.name: "list-add"
                     onClicked: ApplicationIntegration.launchKorganizer()
@@ -524,7 +524,7 @@ PlasmaExtras.Representation {
 
                 PlasmaComponents3.ToolButton {
                     visible: KCMShell.authorize("clock.desktop").length > 0
-                    text: i18n("Switch...")
+                    text: i18n("Switch…")
                     icon.name: "preferences-system-time"
                     onClicked: KCMShell.openSystemSettings("clock")
 

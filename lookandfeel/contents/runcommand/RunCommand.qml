@@ -86,7 +86,7 @@ ColumnLayout {
             Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure Search Plugins")
             visible: runnerWindow.canConfigure
             PlasmaComponents3.ToolTip {
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure KRunner...")
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure KRunner…")
             }
         }
         PlasmaComponents3.TextField {
@@ -100,9 +100,9 @@ ColumnLayout {
             activeFocusOnPress: true
             placeholderText: results.runnerName ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
                                                          "Textfield placeholder text, query specific KRunner",
-                                                         "Search '%1'...", results.runnerName)
+                                                         "Search '%1'…", results.runnerName)
                                                 : i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
-                                                         "Textfield placeholder text", "Search...")
+                                                         "Textfield placeholder text", "Search…")
 
             PlasmaComponents3.BusyIndicator {
                 anchors {

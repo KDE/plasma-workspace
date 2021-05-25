@@ -770,15 +770,15 @@ CGroupListView::CGroupListView(QWidget *parent, CGroupList *model)
     itsEnableAct = itsMenu->addAction(QIcon::fromTheme("font-enable"), i18n("Enable"), this, &CGroupListView::enable);
     itsDisableAct = itsMenu->addAction(QIcon::fromTheme("font-disable"), i18n("Disable"), this, &CGroupListView::disable);
     itsMenu->addSeparator();
-    itsRenameAct = itsMenu->addAction(QIcon::fromTheme("edit-rename"), i18n("Rename..."), this, &CGroupListView::rename);
+    itsRenameAct = itsMenu->addAction(QIcon::fromTheme("edit-rename"), i18n("Rename…"), this, &CGroupListView::rename);
 
     if (!Misc::app(KFI_PRINTER).isEmpty()) {
         itsMenu->addSeparator();
-        itsPrintAct = itsMenu->addAction(QIcon::fromTheme("document-print"), i18n("Print..."), this, &CGroupListView::print);
+        itsPrintAct = itsMenu->addAction(QIcon::fromTheme("document-print"), i18n("Print…"), this, &CGroupListView::print);
     } else
         itsPrintAct = nullptr;
     itsMenu->addSeparator();
-    itsExportAct = itsMenu->addAction(QIcon::fromTheme("document-export"), i18n("Export..."), this, &CGroupListView::zip);
+    itsExportAct = itsMenu->addAction(QIcon::fromTheme("document-export"), i18n("Export…"), this, &CGroupListView::zip);
 
     setWhatsThis(model->whatsThis());
     header()->setWhatsThis(whatsThis());

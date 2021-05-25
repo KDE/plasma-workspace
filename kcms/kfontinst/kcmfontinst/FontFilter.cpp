@@ -276,7 +276,7 @@ void CFontFilter::filterChanged()
             itsCurrentFileTypes.clear();
 
             setCriteria(crit);
-            m_lineEdit->setPlaceholderText(i18n("Filter by %1...", act->text()));
+            m_lineEdit->setPlaceholderText(i18n("Filter by %1…", act->text()));
             m_lineEdit->setReadOnly(false);
         }
     }
@@ -342,7 +342,7 @@ void CFontFilter::addAction(ECriteria crit, bool on)
     itsActions[crit]->setData((int)crit);
     itsActions[crit]->setChecked(on);
     if (on)
-        m_lineEdit->setPlaceholderText(i18n("Filter by %1...", itsTexts[crit]));
+        m_lineEdit->setPlaceholderText(i18n("Filter by %1…", itsTexts[crit]));
     connect(itsActions[crit], &QAction::toggled, this, &CFontFilter::filterChanged);
 }
 

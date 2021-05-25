@@ -105,7 +105,7 @@ AppMenuModel::AppMenuModel(QObject *parent)
         auto searchAction = new QWidgetAction(this);
         auto searchBar = new QLineEdit;
         searchBar->setClearButtonEnabled(true);
-        searchBar->setPlaceholderText(i18n("Search..."));
+        searchBar->setPlaceholderText(i18n("Search…"));
         searchBar->setMinimumWidth(200);
         searchBar->setContentsMargins(4, 4, 4, 4);
         connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, [=]() {

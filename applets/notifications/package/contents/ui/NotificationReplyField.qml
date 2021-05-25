@@ -47,7 +47,7 @@ RowLayout {
         id: replyTextField
         Layout.fillWidth: true
         placeholderText: replyRow.placeholderText
-                         || i18ndc("plasma_applet_org.kde.plasma.notifications", "Text field placeholder", "Type a reply...")
+                         || i18ndc("plasma_applet_org.kde.plasma.notifications", "Text field placeholder", "Type a reply…")
         onAccepted: {
             if (replyButton.enabled) {
                 replyRow.replied(text);

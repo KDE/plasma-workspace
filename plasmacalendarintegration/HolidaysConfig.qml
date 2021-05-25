@@ -54,7 +54,7 @@ ColumnLayout {
     QQC2.TextField {
         id: filter
         Layout.fillWidth: true
-        placeholderText: i18nd("kholidays_calendar_plugin", "Search...")
+        placeholderText: i18nd("kholidays_calendar_plugin", "Search…")
     }
 
     // Still QQC1 bevcause there's no QQC2 TableView

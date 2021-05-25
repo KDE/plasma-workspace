@@ -915,7 +915,7 @@ QVariant CFontListSortFilterProxy::data(const QModelIndex &idx, int role) const
                     else
                         tip += "<tr><td>" + Misc::contractHome((*fit).path()) + "</td></tr>";
                 if (allFiles.count() > constMaxFiles)
-                    tip += "<tr><td><i>" + i18n("...plus %1 more", allFiles.count() - constMaxFiles) + "</td></tr>";
+                    tip += "<tr><td><i>" + i18n("…plus %1 more", allFiles.count() - constMaxFiles) + "</td></tr>";
 
                 tip += "</table></p>";
                 return tip;
@@ -936,7 +936,7 @@ QVariant CFontListSortFilterProxy::data(const QModelIndex &idx, int role) const
                     else
                         tip += "<tr><td>" + Misc::contractHome((*fit).path()) + "</td></tr>";
                 if (files.count() > constMaxFiles)
-                    tip += "<tr><td><i>" + i18n("...plus %1 more", files.count() - constMaxFiles) + "</td></tr></li>";
+                    tip += "<tr><td><i>" + i18n("…plus %1 more", files.count() - constMaxFiles) + "</td></tr></li>";
 
                 tip += "</table></p>";
                 return tip;
@@ -1245,7 +1245,7 @@ CFontListView::CFontListView(QWidget *parent, CFontList *model)
     if (!Misc::app(KFI_VIEWER).isEmpty())
         itsMenu->addSeparator();
     itsPrintAct =
-        Misc::app(KFI_VIEWER).isEmpty() ? nullptr : itsMenu->addAction(QIcon::fromTheme("document-print"), i18n("Print..."), this, &CFontListView::print);
+        Misc::app(KFI_VIEWER).isEmpty() ? nullptr : itsMenu->addAction(QIcon::fromTheme("document-print"), i18n("Print…"), this, &CFontListView::print);
     itsViewAct =
         Misc::app(KFI_VIEWER).isEmpty() ? nullptr : itsMenu->addAction(QIcon::fromTheme("kfontview"), i18n("Open in Font Viewer"), this, &CFontListView::view);
     itsMenu->addSeparator();

@@ -134,10 +134,10 @@ Item {
 
         root.initTimezones();
         if (KCMShell.authorize("clock.desktop").length > 0) {
-            plasmoid.setAction("clockkcm", i18n("Adjust Date and Time..."), "preferences-system-time");
+            plasmoid.setAction("clockkcm", i18n("Adjust Date and Time…"), "preferences-system-time");
         }
         if (KCMShell.authorize("formats.desktop").length > 0) {
-            plasmoid.setAction("formatskcm", i18n("Set Time Format..."));
+            plasmoid.setAction("formatskcm", i18n("Set Time Format…"));
         }
 
         // Set the list of enabled plugins from config

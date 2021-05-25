@@ -170,7 +170,7 @@ Item {
         Logic.updateInhibitions(batterymonitor, pmSource)
 
         if (batterymonitor.kcmEnergyInformationAuthorized) {
-            plasmoid.setAction("energyinformationkcm", i18n("&Show Energy Information..."), "documentinfo");
+            plasmoid.setAction("energyinformationkcm", i18n("&Show Energy Information…"), "documentinfo");
         }
         plasmoid.setAction("showPercentage", i18n("Show Battery Percentage on Icon"), "format-number-percent");
         plasmoid.action("showPercentage").checkable = true;
@@ -178,7 +178,7 @@ Item {
 
         if (batterymonitor.kcmAuthorized) {
             plasmoid.removeAction("configure");
-            plasmoid.setAction("configure", i18n("&Configure Energy Saving..."), "configure", "alt+d, s");
+            plasmoid.setAction("configure", i18n("&Configure Energy Saving…"), "configure", "alt+d, s");
         }
     }
 

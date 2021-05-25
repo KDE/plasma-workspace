@@ -372,13 +372,13 @@ ColumnLayout {
                 QtControls2.Button {
                     Layout.alignment: Qt.AlignRight
                     icon.name: "list-add"
-                    text: i18nd("plasma_wallpaper_org.kde.image","Add Folder...")
+                    text: i18nd("plasma_wallpaper_org.kde.image","Add Folder…")
                     onClicked: imageWallpaper.showAddSlidePathsDialog()
                 }
                 NewStuff.Button {
                     Layout.alignment: Qt.AlignRight
                     configFile: Kirigami.Settings.isMobile ? "wallpaper-mobile.knsrc" : "wallpaper.knsrc"
-                    text: i18nd("plasma_wallpaper_org.kde.image", "Get New Wallpapers...")
+                    text: i18nd("plasma_wallpaper_org.kde.image", "Get New Wallpapers…")
                     viewMode: NewStuff.Page.ViewMode.Preview
                     onChangedEntriesChanged: imageWallpaper.newStuffFinished();
                 }
@@ -464,13 +464,13 @@ ColumnLayout {
         visible: configDialog.currentWallpaper == "org.kde.image"
         QtControls2.Button {
             icon.name: "list-add"
-            text: i18nd("plasma_wallpaper_org.kde.image","Add Image...")
+            text: i18nd("plasma_wallpaper_org.kde.image","Add Image…")
             onClicked: imageWallpaper.showFileDialog();
         }
         NewStuff.Button {
             Layout.alignment: Qt.AlignRight
             configFile: Kirigami.Settings.isMobile ? "wallpaper-mobile.knsrc" : "wallpaper.knsrc"
-            text: i18nd("plasma_wallpaper_org.kde.image", "Get New Wallpapers...")
+            text: i18nd("plasma_wallpaper_org.kde.image", "Get New Wallpapers…")
             viewMode: NewStuff.Page.ViewMode.Preview
             onChangedEntriesChanged: imageWallpaper.newStuffFinished();
         }

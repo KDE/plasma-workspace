@@ -219,7 +219,7 @@ QList<QObject *> WidgetExplorer::widgetsMenuActions()
     action->setSeparator(true);
     actionList << action;
 
-    action = new WidgetAction(QIcon::fromTheme(QStringLiteral("package-x-generic")), i18n("Install Widget From Local File..."), this);
+    action = new WidgetAction(QIcon::fromTheme(QStringLiteral("package-x-generic")), i18n("Install Widget From Local File…"), this);
     QObject::connect(action, &QAction::triggered, this, &WidgetExplorer::openWidgetFile);
     actionList << action;
 

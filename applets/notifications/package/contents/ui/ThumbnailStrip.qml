@@ -156,7 +156,7 @@ DraggableFileArea {
 
             PlasmaComponents3.ToolTip {
                 id: tooltip
-                text: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options...")
+                text: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options…")
             }
         }
     }

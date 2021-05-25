@@ -110,7 +110,7 @@ ColumnLayout {
                 trailing: RowLayout {
                     QQC2.Button {
                         visible: model.isLocalTimeZone && KCMShell.authorize("clock.desktop").length > 0
-                        text: i18n("Switch Local Time Zone...")
+                        text: i18n("Switch Local Time Zone…")
                         icon.name: "preferences-system-time"
                         onClicked: KCMShell.openSystemSettings("clock")
                     }
@@ -148,7 +148,7 @@ ColumnLayout {
 
     QQC2.Button {
         Layout.alignment: Qt.AlignLeft // Explicitly set so it gets reversed for LTR mode
-        text: i18n("Add Time Zones...")
+        text: i18n("Add Time Zones…")
         icon.name: "list-add"
         onClicked: timezoneSheet.open()
     }

@@ -274,7 +274,7 @@ KCM.GridViewKCM {
         actions: [
             Kirigami.Action {
                 iconName: "document-edit"
-                tooltip: i18n("Edit Color Scheme...")
+                tooltip: i18n("Edit Color Scheme…")
                 enabled: !model.pendingDeletion
                 onTriggered: kcm.editScheme(model.schemeName, root)
             },
@@ -331,12 +331,12 @@ KCM.GridViewKCM {
             alignment: Qt.AlignRight
             actions: [
                 Kirigami.Action {
-                    text: i18n("Install from File...")
+                    text: i18n("Install from File…")
                     icon.name: "document-import"
                     onTriggered: fileDialogLoader.active = true
                 },
                 Kirigami.Action {
-                    text: i18n("Get New Color Schemes...")
+                    text: i18n("Get New Color Schemes…")
                     icon.name: "get-hot-new-stuff"
                     onTriggered: { newStuffPage.open(); }
                 }

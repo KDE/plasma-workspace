@@ -215,13 +215,13 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList &)
     itsGroupList = new CGroupList(groupWidget);
     itsGroupListView = new CGroupListView(groupWidget, itsGroupList);
 
-    QPushButton *createGroup = new CPushButton(KGuiItem(QString(), "list-add", i18n("Create New Group...")), groupWidget);
+    QPushButton *createGroup = new CPushButton(KGuiItem(QString(), "list-add", i18n("Create New Group…")), groupWidget);
 
-    itsDeleteGroupControl = new CPushButton(KGuiItem(QString(), "list-remove", i18n("Remove Group...")), groupWidget);
+    itsDeleteGroupControl = new CPushButton(KGuiItem(QString(), "list-remove", i18n("Remove Group…")), groupWidget);
 
-    itsEnableGroupControl = new CPushButton(KGuiItem(QString(), "font-enable", i18n("Enable Fonts in Group...")), groupWidget);
+    itsEnableGroupControl = new CPushButton(KGuiItem(QString(), "font-enable", i18n("Enable Fonts in Group…")), groupWidget);
 
-    itsDisableGroupControl = new CPushButton(KGuiItem(QString(), "font-disable", i18n("Disable Fonts in Group...")), groupWidget);
+    itsDisableGroupControl = new CPushButton(KGuiItem(QString(), "font-disable", i18n("Disable Fonts in Group…")), groupWidget);
 
     groupsLayout->addWidget(itsGroupListView, 0, 0, 1, 5);
     groupsLayout->addWidget(createGroup, 1, 0);
@@ -263,12 +263,12 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList &)
     itsFontListView->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 
     itsScanDuplicateFontsControl =
-        new CPushButton(KGuiItem(i18n("Find Duplicates..."), "edit-duplicate", i18n("Scan for Duplicate Fonts...")), fontControlWidget);
+        new CPushButton(KGuiItem(i18n("Find Duplicates…"), "edit-duplicate", i18n("Scan for Duplicate Fonts…")), fontControlWidget);
 
-    itsAddFontControl = new CPushButton(KGuiItem(i18n("Install from File..."), "document-import", i18n("Install fonts from a local file")), fontControlWidget);
-    itsGetNewFontsControl = new CPushButton(KGuiItem(i18n("Get New Fonts..."), "get-hot-new-stuff", i18n("Download new fonts")), fontControlWidget);
+    itsAddFontControl = new CPushButton(KGuiItem(i18n("Install from File…"), "document-import", i18n("Install fonts from a local file")), fontControlWidget);
+    itsGetNewFontsControl = new CPushButton(KGuiItem(i18n("Get New Fonts…"), "get-hot-new-stuff", i18n("Download new fonts")), fontControlWidget);
 
-    itsDeleteFontControl = new CPushButton(KGuiItem(QString(), "edit-delete", i18n("Delete Selected Fonts...")), fontControlWidget);
+    itsDeleteFontControl = new CPushButton(KGuiItem(QString(), "edit-delete", i18n("Delete Selected Fonts…")), fontControlWidget);
 
     itsPreviewSplitter->addWidget(itsPreviewWidget);
     itsPreviewSplitter->setCollapsible(1, true);
@@ -326,7 +326,7 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList &)
     itsPreviewMenu->addSeparator();
     CPreviewSelectAction *prevSel = new CPreviewSelectAction(itsPreviewMenu);
     itsPreviewMenu->addAction(prevSel);
-    QAction *changeTextAct = new QAction(QIcon::fromTheme("edit-rename"), i18n("Change Preview Text..."), this);
+    QAction *changeTextAct = new QAction(QIcon::fromTheme("edit-rename"), i18n("Change Preview Text…"), this);
     itsPreviewMenu->addAction(changeTextAct),
 
         itsPreviewListMenu = new QMenu(itsPreviewList);
@@ -632,7 +632,7 @@ void CKCmFontInst::deleteFonts()
         }
 
         if (doIt) {
-            itsStatusLabel->setText(i18n("Deleting font(s)..."));
+            itsStatusLabel->setText(i18n("Deleting font(s)…"));
             doCmd(CJobRunner::CMD_DELETE, urls);
         }
     }
@@ -679,7 +679,7 @@ void CKCmFontInst::moveFonts()
         }
 
         if (doIt) {
-            itsStatusLabel->setText(i18n("Moving font(s)..."));
+            itsStatusLabel->setText(i18n("Moving font(s)…"));
             doCmd(CJobRunner::CMD_MOVE, urls, !itsGroupListView->isSystem());
         }
     }
@@ -816,7 +816,7 @@ void CKCmFontInst::printGroup()
 void CKCmFontInst::listingPercent(int p)
 {
     if (0 == p) {
-        showInfo(i18n("Scanning font list..."));
+        showInfo(i18n("Scanning font list…"));
         itsListingProgress->show();
     } else if (100 == p && p != itsListingProgress->value()) {
         removeDeletedFontsFromGroups();
@@ -973,12 +973,12 @@ void CKCmFontInst::addFonts(const QSet<QUrl> &src)
 
         //
         // Check if font has any associated AFM or PFM file...
-        itsStatusLabel->setText(i18n("Looking for any associated files..."));
+        itsStatusLabel->setText(i18n("Looking for any associated files…"));
 
         if (!itsProgress) {
             itsProgress = new QProgressDialog(this);
-            itsProgress->setWindowTitle(i18n("Scanning Files..."));
-            itsProgress->setLabelText(i18n("Looking for additional files to install..."));
+            itsProgress->setWindowTitle(i18n("Scanning Files…"));
+            itsProgress->setLabelText(i18n("Looking for additional files to install…"));
             itsProgress->setModal(true);
             itsProgress->setAutoReset(true);
             itsProgress->setAutoClose(true);
@@ -1018,7 +1018,7 @@ void CKCmFontInst::addFonts(const QSet<QUrl> &src)
         for (it = copy.begin(); it != end; ++it)
             installUrls.append(*it);
 
-        itsStatusLabel->setText(i18n("Installing font(s)..."));
+        itsStatusLabel->setText(i18n("Installing font(s)…"));
         doCmd(CJobRunner::CMD_INSTALL, installUrls, system);
     }
 }
@@ -1140,9 +1140,9 @@ void CKCmFontInst::toggleFonts(CJobRunner::ItemList &urls, const QStringList &fo
 
     if (doIt) {
         if (enable)
-            itsStatusLabel->setText(i18n("Enabling font(s)..."));
+            itsStatusLabel->setText(i18n("Enabling font(s)…"));
         else
-            itsStatusLabel->setText(i18n("Disabling font(s)..."));
+            itsStatusLabel->setText(i18n("Disabling font(s)…"));
 
         doCmd(enable ? CJobRunner::CMD_ENABLE : CJobRunner::CMD_DISABLE, urls);
     }

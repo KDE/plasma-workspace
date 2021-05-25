@@ -143,13 +143,13 @@ KCM.GridViewKCM {
                 alignment: Qt.AlignRight
                 actions: [
                     Kirigami.Action {
-                        text: i18n("&Install from File...")
+                        text: i18n("&Install from File…")
                         icon.name: "document-import"
                         onTriggered: fileDialogLoader.active = true
                         enabled: kcm.canInstall
                     },
                     Kirigami.Action {
-                        text: i18n("&Get New Cursors...")
+                        text: i18n("&Get New Cursors…")
                         icon.name: "get-hot-new-stuff"
                         onTriggered: { newStuffPage.open(); }
                         enabled: kcm.canInstall

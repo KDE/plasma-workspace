@@ -264,7 +264,7 @@ Item {
 
         if (devicenotifier.openAutomounterKcmAuthorized) {
             plasmoid.removeAction("configure");
-            plasmoid.setAction("configure", i18nc("Open auto mounter kcm", "Configure Removable Devices..."), "configure")
+            plasmoid.setAction("configure", i18nc("Open auto mounter kcm", "Configure Removable Devices…"), "configure")
         }
     }
 

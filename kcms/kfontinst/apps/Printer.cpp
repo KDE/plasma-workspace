@@ -315,7 +315,7 @@ void CPrinter::progress(int p, const QString &label)
 
 void CPrinter::slotCancelClicked()
 {
-    itsStatusLabel->setText(i18n("Canceling..."));
+    itsStatusLabel->setText(i18n("Canceling…"));
     emit cancelled();
 }
 

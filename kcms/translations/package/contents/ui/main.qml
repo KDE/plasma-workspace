@@ -307,7 +307,7 @@ ScrollViewKCM {
 
             enabled: availableLanguagesList.count
 
-            text: i18nc("@action:button", "Add languages...")
+            text: i18nc("@action:button", "Add languages…")
 
             onClicked: addLanguagesSheet.sheetOpen = !addLanguagesSheet.sheetOpen
 

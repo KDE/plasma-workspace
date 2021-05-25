@@ -35,7 +35,7 @@ KCM.SimpleKCM {
     Kirigami.Action {
         id: kscreenAction
         visible: KCMShell.authorize("kcm_kscreen.desktop").length > 0
-        text: i18n("Change Display Scaling...")
+        text: i18n("Change Display Scaling…")
         iconName: "preferences-desktop-display"
         onTriggered: KCMShell.open("kcm_kscreen.desktop")
     }
@@ -92,7 +92,7 @@ KCM.SimpleKCM {
                 id: adjustAllFontsButton
                 Layout.preferredWidth: formLayout.maxImplicitWidth
                 icon.name: "font-select-symbolic"
-                text: i18n("&Adjust All Fonts...")
+                text: i18n("&Adjust All Fonts…")
 
                 onClicked: kcm.adjustAllFonts();
                 enabled: !kcm.fontsSettings.isImmutable("font")

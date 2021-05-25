@@ -92,7 +92,7 @@ QVariant RecentContactsModel::data(const QModelIndex &index, int role) const
 
         actionList << Kicker::createSeparatorActionItem();
 
-        actionList << Kicker::createActionItem(i18n("Show Contact Information..."), QStringLiteral("identity"), QStringLiteral("showContactInfo"));
+        actionList << Kicker::createActionItem(i18n("Show Contact Information…"), QStringLiteral("identity"), QStringLiteral("showContactInfo"));
 
         return actionList;
     } else if (role == Kicker::DescriptionRole) {

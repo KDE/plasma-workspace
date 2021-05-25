@@ -219,7 +219,7 @@ KCM.SimpleKCM {
             }
             QtControls.Button {
                 id: positionCustomButton
-                text: i18n("Choose Custom Position...")
+                text: i18n("Choose Custom Position…")
                 icon.name: "preferences-desktop-display"
                 onClicked: kcm.push("PopupPositionPage.qml")
             }
@@ -330,7 +330,7 @@ KCM.SimpleKCM {
 
         QtControls.Button {
             Kirigami.FormData.label: i18n("Applications:")
-            text: i18n("Configure...")
+            text: i18n("Configure…")
             icon.name: "configure"
             enabled: root.notificationsAvailable
             onClicked: root.openSourcesSettings()

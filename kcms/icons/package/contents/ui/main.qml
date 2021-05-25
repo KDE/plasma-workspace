@@ -257,13 +257,13 @@ KCM.GridViewKCM {
                 actions: [
                     Kirigami.Action {
                         enabled: root.view.enabled
-                        text: i18n("Install from File...")
+                        text: i18n("Install from File…")
                         icon.name: "document-import"
                         onTriggered: fileDialogLoader.active = true
                     },
                     Kirigami.Action {
                         enabled: root.view.enabled
-                        text: i18n("Get New Icons...")
+                        text: i18n("Get New Icons…")
                         icon.name: "get-hot-new-stuff"
                         onTriggered: { newStuffPage.open(); }
                     }

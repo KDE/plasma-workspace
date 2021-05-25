@@ -137,7 +137,7 @@ void InstallerRunner::match(Plasma::RunnerContext &context)
         match.setType(Plasma::QueryMatch::PossibleMatch);
         match.setId(componentId);
         match.setIcon(componentIcon(component));
-        match.setText(i18n("Get %1...", component.name()));
+        match.setText(i18n("Get %1…", component.name()));
         match.setSubtext(component.summary());
         match.setData(QUrl("appstream://" + componentId));
         match.setRelevance(component.name().compare(context.query(), Qt::CaseInsensitive) == 0 ? 1. : 0.7);

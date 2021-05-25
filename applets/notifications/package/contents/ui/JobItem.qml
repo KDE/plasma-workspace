@@ -243,7 +243,7 @@ ColumnLayout {
             }
 
             PlasmaComponents3.ToolTip {
-                text: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options...")
+                text: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options…")
             }
 
             Notifications.FileMenu {
@@ -281,7 +281,7 @@ ColumnLayout {
                     when: !fileInfo.busy
                     PropertyChanges {
                         target: openButton
-                        text: i18nd("plasma_applet_org.kde.plasma.notifications", "Open with...");
+                        text: i18nd("plasma_applet_org.kde.plasma.notifications", "Open with…");
                         icon.name: "system-run"
                     }
                 }

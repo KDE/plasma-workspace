@@ -350,7 +350,7 @@ bool IconModule::installThemes(const QStringList &themes, const QString &archive
     bool everythingOk = true;
     const QString localThemesDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/icons/./"));
 
-    emit showProgress(i18n("Installing icon themes..."));
+    emit showProgress(i18n("Installing icon themes…"));
 
     KTar archive(archiveName);
     archive.open(QIODevice::ReadOnly);
@@ -360,7 +360,7 @@ bool IconModule::installThemes(const QStringList &themes, const QString &archive
 
     KArchiveDirectory *currentTheme = nullptr;
     for (const QString &theme : themes) {
-        emit showProgress(i18n("Installing %1 theme...", theme));
+        emit showProgress(i18n("Installing %1 theme…", theme));
 
         qApp->processEvents(QEventLoop::ExcludeUserInputEvents);
 
