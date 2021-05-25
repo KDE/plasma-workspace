@@ -62,9 +62,7 @@ void BaseModel::onConfigurationChanged()
     m_shownItems = m_settings->shownItems();
     m_hiddenItems = m_settings->hiddenItems();
 
-    for (int i = 0; i < rowCount(); i++) {
-        Q_EMIT dataChanged(index(i, 0), index(i, 0), {static_cast<int>(BaseModel::BaseRole::EffectiveStatus)});
-    }
+    Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), {static_cast<int>(BaseModel::BaseRole::EffectiveStatus)});
 }
 
 Plasma::Types::ItemStatus BaseModel::calculateEffectiveStatus(bool canRender, Plasma::Types::ItemStatus status, QString itemId) const
