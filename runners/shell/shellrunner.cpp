@@ -59,7 +59,7 @@ void ShellRunner::match(Plasma::RunnerContext &context)
     if (parseShellCommand(context.query(), envs, command)) {
         const QString term = context.query();
         Plasma::QueryMatch match(this);
-        match.setId(QStringLiteral("exec://") + context.query());
+        match.setId(QStringLiteral("exec://") + command);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setIcon(m_matchIcon);
         match.setText(i18n("Run %1", term));
@@ -88,8 +88,11 @@ bool ShellRunner::parseShellCommand(const QString &query, QStringList &envs, QSt
     const static QRegularExpression envRegex = QRegularExpression(QStringLiteral("^.+=.+$"));
     const QStringList split = KShell::splitArgs(query);
     for (const auto &entry : split) {
-        if (!QStandardPaths::findExecutable(KShell::tildeExpand(entry)).isEmpty()) {
-            command = KShell::joinArgs(split.mid(split.indexOf(entry)));
+        const QString executablePath = QStandardPaths::findExecutable(KShell::tildeExpand(entry));
+        if (!executablePath.isEmpty()) {
+            QStringList executableParts{executablePath};
+            executableParts << split.mid(split.indexOf(entry) + 1);
+            command = KShell::joinArgs(executableParts);
             return true;
         } else if (envRegex.match(entry).hasMatch()) {
             envs.append(entry);

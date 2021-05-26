@@ -1,5 +1,5 @@
 /*
- *   Copyright (C) 2016-2020 Harald Sitter <sitter@kde.org>
+ *   Copyright (C) 2016-2021 Harald Sitter <sitter@kde.org>
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Lesser General Public
@@ -47,6 +47,7 @@ private Q_SLOTS:
     void testSystemSettings();
     void testForeignAppsOutscoreKCMs();
     void testINotifyUsage();
+    void testKCMId();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -237,6 +238,21 @@ void ServiceRunnerTest::testINotifyUsage()
     thread->deleteLater();
 
     QVERIFY(inotifyCountCool);
+}
+
+void ServiceRunnerTest::testKCMId()
+{
+    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    Plasma::RunnerContext context;
+    context.setQuery(QStringLiteral("kcm_kwin_virtualdesktops"));
+
+    runner.match(context);
+
+    const auto matches = context.matches();
+    QCOMPARE(matches.count(), 1);
+    // Ensure KCM ids are uniquely identifying the KCM, not just the host application.
+    // The specific format of the id is a bit besides the point so we'll only check for our kcm being mentioned.
+    QVERIFY(matches.at(0).id().contains("kcm_kwin_virtualdesktops"));
 }
 
 QTEST_MAIN(ServiceRunnerTest)
