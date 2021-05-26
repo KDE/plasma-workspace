@@ -184,8 +184,8 @@ private:
             const static QRegularExpression snapCleanupRegex(QStringLiteral("env BAMF_DESKTOP_FILE_HINT=.+ "));
             exec.remove(snapCleanupRegex);
         }
-        match.setId(QStringLiteral("exec://") + KIO::DesktopExecParser::executableName(exec));
-
+        const QStringList resultingArgs = KIO::DesktopExecParser(KService(QString(), exec, QString()), {}).resultingArguments();
+        match.setId(QStringLiteral("exec://") + resultingArgs.join(QLatin1Char(' ')));
         if (!service->genericName().isEmpty() && service->genericName() != name) {
             match.setSubtext(service->genericName());
         } else if (!service->comment().isEmpty()) {
