@@ -40,7 +40,7 @@ Translations::Translations(QObject *parent, const QVariantList &args)
     , m_everSaved(false)
 {
     KAboutData *about =
-        new KAboutData(QStringLiteral("kcm_translations"), i18n("Configure Plasma translations"), QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
+        new KAboutData(QStringLiteral("kcm_translations"), i18n("Language"), QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
     setAboutData(about);
 
     setButtons(Apply | Default);
