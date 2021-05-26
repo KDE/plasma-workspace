@@ -57,7 +57,7 @@ void KlipperTray::slotSetToolTipFromHistory()
         if (top->text().length() <= TOOLTIP_LENGTH_LIMIT) {
             setToolTipSubTitle(top->text());
         } else {
-            setToolTipSubTitle(top->text().left(TOOLTIP_LENGTH_LIMIT - 3) + QStringLiteral("…"));
+            setToolTipSubTitle(top->text().left(TOOLTIP_LENGTH_LIMIT - 1) + QStringLiteral("…"));
         }
     }
 }
