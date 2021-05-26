@@ -281,7 +281,8 @@ ScrollViewKCM {
                 Kirigami.Action {
                     property bool removing: false
                     enabled: removing || !model.IsMissing
-                    iconName: "list-remove"
+                    iconName: "edit-delete"
+                    visible: languagesList.count > 1
                     tooltip: i18nc("@info:tooltip", "Remove")
                     onTriggered: {
                         removing = true; // Don't crash by re-evaluating `enabled` during destruction.
