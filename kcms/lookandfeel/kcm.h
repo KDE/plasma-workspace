@@ -85,9 +85,12 @@ public:
 
     Q_INVOKABLE void reloadModel();
 
+    bool isSaveNeeded() const override;
+
 public Q_SLOTS:
     void load() override;
     void save() override;
+    void defaults() override;
 
 Q_SIGNALS:
     void resetDefaultLayoutChanged();
