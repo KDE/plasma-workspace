@@ -356,7 +356,8 @@ void KCMColors::save()
 
 void KCMColors::saveColors()
 {
-    applyScheme(colorsSettings(), m_model);
+    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(m_model->selectedScheme()));
+    applyScheme(path, colorsSettings()->config());
     m_selectedSchemeDirty = false;
 }
 

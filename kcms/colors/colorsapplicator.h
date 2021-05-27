@@ -1,5 +1,6 @@
 /*
    Copyright (c) 2021 Dan Leinir Turthra Jensen <admin@leinir.dk>
+   Copyright (c) 2021 Benjamin Port <benjamin.port@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -19,16 +20,17 @@
 #ifndef COLORSAPPLICATOR_H
 #define COLORSAPPLICATOR_H
 
-class ColorsSettings;
-class ColorsModel;
+#include <QString>
+
+#include <KConfig>
+
 /**
  * Performs the task of actually applying a color scheme to the current session, based on
- * what is currently set in the settings and model instances passed into the function.
+ * color scheme file path and configuration file.
  * When using this function, you select the scheme to use by setting the model's selected scheme
- * @param settings The settings instance which lets us update the system with the new colors
- * @param model The model which holds the information on which scheme is currently selected, and what colors it contains
- * @see ColorsModel::setSelectedScheme(QString)
+ * @param colorFilePath The scheme color file path
+ * @param configOut The config which holds the information on which scheme is currently selected, and what colors it contains
  */
-void applyScheme(ColorsSettings *settings, ColorsModel *model);
+void applyScheme(const QString &colorSchemePath, KConfig *configOut, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
 
 #endif // COLORSAPPLICATOR_H

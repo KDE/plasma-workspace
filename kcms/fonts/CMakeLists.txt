@@ -10,7 +10,7 @@ set(kcm_fonts_PART_SRCS
     fontsaasettings.cpp
     kxftconfig.cpp
     ../kfontinst/lib/FcEngine.cpp
-    ../kcms-common_p.h
+    ../kcms-common.cpp
 )
 
 kcmutils_generate_module_data(

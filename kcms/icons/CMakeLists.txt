@@ -2,7 +2,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_icons\")
 
 ########### next target ###############
 
-set(kcm_icons_PART_SRCS main.cpp iconsmodel.cpp iconsizecategorymodel.cpp iconssettings.cpp)
+set(kcm_icons_PART_SRCS main.cpp iconsmodel.cpp iconsizecategorymodel.cpp iconssettings.cpp ../kcms-common.cpp)
 
 kcmutils_generate_module_data(
     kcm_icons_PART_SRCS

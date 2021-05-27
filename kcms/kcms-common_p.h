@@ -36,12 +36,6 @@ enum GlobalSettingsCategory {
     SETTINGS_STYLE,
 };
 
-void notifyKcmChange(GlobalChangeType changeType, int arg = 0)
-{
-    QDBusMessage message =
-        QDBusMessage::createSignal(QStringLiteral("/KGlobalSettings"), QStringLiteral("org.kde.KGlobalSettings"), QStringLiteral("notifyChange"));
-    message.setArguments({changeType, arg});
-    QDBusConnection::sessionBus().send(message);
-}
+void notifyKcmChange(GlobalChangeType changeType, int arg = 0);
 
 #endif

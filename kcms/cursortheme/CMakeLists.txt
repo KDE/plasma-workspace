@@ -11,7 +11,7 @@ xcursor/cursortheme.cpp
 xcursor/xcursortheme.cpp
 xcursor/previewwidget.cpp
 xcursor/sortproxymodel.cpp
-../kcms-common_p.h
+../kcms-common.cpp
 )
 
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ )
@@ -68,7 +68,7 @@ set(plasma-apply-cursortheme_SRCS
     xcursor/themeapplicator.cpp
     xcursor/thememodel.cpp
     xcursor/xcursortheme.cpp
-    ../kcms-common_p.h
+    ../kcms-common.cpp
     ../krdb/krdb.cpp
 )
 

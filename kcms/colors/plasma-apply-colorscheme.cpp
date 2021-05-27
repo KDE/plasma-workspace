@@ -95,7 +95,9 @@ int main(int argc, char **argv)
                 if (newSchemeIndex > -1) {
                     model->setSelectedScheme(requestedScheme);
                     settings->setColorScheme(requestedScheme);
-                    applyScheme(settings, model);
+                    const QString path =
+                        QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(model->selectedScheme()));
+                    applyScheme(path, settings->config());
                     settings->save();
                     ts << i18n("Successfully applied the color scheme %1 to your current Plasma session", requestedScheme) << Qt::endl;
                 } else {

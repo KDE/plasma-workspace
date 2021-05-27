@@ -58,6 +58,8 @@
 #include "lookandfeeldata.h"
 #include "lookandfeelsettings.h"
 
+#include "../colors/colorsapplicator.h"
+
 #ifdef HAVE_XCURSOR
 #include "../cursortheme/xcursor/xcursortheme.h"
 #include <X11/Xcursor/Xcursor.h>
@@ -506,18 +508,9 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
         return;
     }
 
-    KSharedConfigPtr conf = KSharedConfig::openConfig(colorFile, KSharedConfig::CascadeConfig);
-    for (const QString &grp : conf->groupList()) {
-        KConfigGroup cg(conf, grp);
-        KConfigGroup cg2(&m_config, grp);
-        cg.copyTo(&cg2, KConfig::Notify);
-    }
-
     KConfig configDefault(configDefaults("kdeglobals"));
     writeNewDefaults(m_config, configDefault, QStringLiteral("General"), QStringLiteral("ColorScheme"), scheme, KConfig::Notify);
-    m_config.sync();
-    configDefault.sync();
-    notifyKcmChange(GlobalChangeType::PaletteChanged);
+    applyScheme(colorFile, &m_config, KConfig::Notify);
 }
 
 void KCMLookandFeel::setIcons(const QString &theme)

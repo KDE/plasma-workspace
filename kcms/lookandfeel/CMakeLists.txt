@@ -15,7 +15,8 @@ configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 
 set(kcm_lookandfeel_SRCS
     kcm.cpp
-    ../kcms-common_p.h
+    ../colors/colorsapplicator.cpp
+    ../kcms-common.cpp
 )
 
 if (X11_Xcursor_FOUND)

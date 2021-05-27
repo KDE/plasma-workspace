@@ -4,7 +4,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_style\")
 ########### next target ###############
 
 set(kcm_style_PART_SRCS
-    ../kcms-common_p.h
+    ../kcms-common.cpp
     styleconfdialog.cpp
     kcmstyle.cpp
     stylesmodel.cpp

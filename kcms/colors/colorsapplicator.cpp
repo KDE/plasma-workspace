@@ -1,5 +1,6 @@
 /*
    Copyright (c) 2021 Dan Leinir Turthra Jensen <admin@leinir.dk>
+   Copyright (c) 2021 Benjamin Port <benjamin.port@enioka.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -16,29 +17,24 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "colorsmodel.h"
-#include "colorssettings.h"
-
 #include "../kcms-common_p.h"
 #include "../krdb/krdb.h"
 
 #include <KColorScheme>
-#include <KConfig>
+#include <KConfigGroup>
 
-static void copyEntry(KConfigGroup &from, KConfigGroup &to, const QString &entry)
+static void copyEntry(KConfigGroup &from, KConfigGroup &to, const QString &entry, KConfig::WriteConfigFlags writeConfigFlag = KConfig::Normal)
 {
     if (from.hasKey(entry)) {
-        to.writeEntry(entry, from.readEntry(entry));
+        to.writeEntry(entry, from.readEntry(entry), writeConfigFlag);
     }
 }
 
-void applyScheme(ColorsSettings *settings, ColorsModel *model)
+void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig::WriteConfigFlags writeConfigFlag)
 {
-    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(model->selectedScheme()));
-
     // Using KConfig::SimpleConfig because otherwise Header colors won't be
     // rewritten when a new color scheme is loaded.
-    KSharedConfigPtr config = KSharedConfig::openConfig(path, KConfig::SimpleConfig);
+    KSharedConfigPtr config = KSharedConfig::openConfig(colorSchemePath, KConfig::SimpleConfig);
 
     const QStringList colorSetGroupList{QStringLiteral("Colors:View"),
                                         QStringLiteral("Colors:Window"),
@@ -61,28 +57,28 @@ void applyScheme(ColorsSettings *settings, ColorsModel *model)
                                       QStringLiteral("DecorationFocus"),
                                       QStringLiteral("DecorationHover")};
 
-    for (auto item : colorSetGroupList) {
-        settings->config()->deleteGroup(item);
+    for (const auto &item : colorSetGroupList) {
+        configOutput->deleteGroup(item);
 
         KConfigGroup sourceGroup(config, item);
-        KConfigGroup targetGroup(settings->config(), item);
+        KConfigGroup targetGroup(configOutput, item);
 
-        for (auto entry : colorSetKeyList) {
-            copyEntry(sourceGroup, targetGroup, entry);
+        for (const auto &entry : colorSetKeyList) {
+            copyEntry(sourceGroup, targetGroup, entry, writeConfigFlag);
         }
 
         if (sourceGroup.hasGroup("Inactive")) {
             sourceGroup = sourceGroup.group("Inactive");
             targetGroup = targetGroup.group("Inactive");
 
-            for (auto entry : colorSetKeyList) {
-                copyEntry(sourceGroup, targetGroup, entry);
+            for (const auto &entry : colorSetKeyList) {
+                copyEntry(sourceGroup, targetGroup, entry, writeConfigFlag);
             }
         }
     }
 
     KConfigGroup groupWMTheme(config, "WM");
-    KConfigGroup groupWMOut(settings->config(), "WM");
+    KConfigGroup groupWMOut(configOutput, "WM");
     KColorScheme inactiveHeaderColorScheme(QPalette::Inactive, KColorScheme::Header, config);
 
     const QStringList colorItemListWM{QStringLiteral("activeBackground"),
@@ -101,7 +97,7 @@ void applyScheme(ColorsSettings *settings, ColorsModel *model)
 
     int i = 0;
     for (const QString &coloritem : colorItemListWM) {
-        groupWMOut.writeEntry(coloritem, groupWMTheme.readEntry(coloritem, defaultWMColors.value(i)));
+        groupWMOut.writeEntry(coloritem, groupWMTheme.readEntry(coloritem, defaultWMColors.value(i)), writeConfigFlag);
         ++i;
     }
 
@@ -118,20 +114,20 @@ void applyScheme(ColorsSettings *settings, ColorsModel *model)
                                  QStringLiteral("ContrastAmount")};
 
     for (const QString &groupName : groupNameList) {
-        KConfigGroup groupEffectOut(settings->config(), groupName);
+        KConfigGroup groupEffectOut(configOutput, groupName);
         KConfigGroup groupEffectTheme(config, groupName);
 
         for (const QString &effect : effectList) {
-            groupEffectOut.writeEntry(effect, groupEffectTheme.readEntry(effect));
+            groupEffectOut.writeEntry(effect, groupEffectTheme.readEntry(effect), writeConfigFlag);
         }
     }
 
-    settings->config()->sync();
+    configOutput->sync();
 
     bool applyToAlien{true};
     {
         KConfig cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
-        KConfigGroup group(settings->config(), "General");
+        KConfigGroup group(configOutput, "General");
         group = KConfigGroup(&cfg, "X11");
         applyToAlien = group.readEntry("exportKDEColors", applyToAlien);
     }
