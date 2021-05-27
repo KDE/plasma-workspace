@@ -64,7 +64,7 @@ KCM.GridViewKCM {
         onClicked: {
             kcm.lookAndFeelSettings.lookAndFeelPackage = model.pluginName;
             view.forceActiveFocus();
-            resetCheckbox.checked = false;
+            kcm.resetDefaultLayout = false;
         }
         onDoubleClicked: {
             kcm.save();

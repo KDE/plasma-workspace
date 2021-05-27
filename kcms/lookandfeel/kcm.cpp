@@ -239,12 +239,19 @@ void KCMLookandFeel::loadModel()
     emit lookAndFeelSettings()->lookAndFeelPackageChanged();
 }
 
+bool KCMLookandFeel::isSaveNeeded() const
+{
+    return m_resetDefaultLayout || lookAndFeelSettings()->isSaveNeeded();
+}
+
 void KCMLookandFeel::load()
 {
     ManagedConfigModule::load();
 
     m_package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
     m_package.setPath(lookAndFeelSettings()->lookAndFeelPackage());
+
+    setResetDefaultLayout(false);
 }
 
 void KCMLookandFeel::save()
@@ -425,6 +432,14 @@ void KCMLookandFeel::save()
     m_configGroup.sync();
     m_package.setPath(lookAndFeelSettings()->lookAndFeelPackage());
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings | KRdbExportXftSettings);
+
+    setResetDefaultLayout(false);
+}
+
+void KCMLookandFeel::defaults()
+{
+    setResetDefaultLayout(false);
+    ManagedConfigModule::defaults();
 }
 
 void KCMLookandFeel::setWidgetStyle(const QString &style)
@@ -732,9 +747,7 @@ void KCMLookandFeel::setResetDefaultLayout(bool reset)
     }
     m_resetDefaultLayout = reset;
     emit resetDefaultLayoutChanged();
-    if (reset) {
-        setNeedsSave(true);
-    }
+    settingsChanged();
 }
 
 bool KCMLookandFeel::resetDefaultLayout() const
