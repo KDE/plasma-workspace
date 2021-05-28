@@ -40,6 +40,7 @@
 
 ContextMenu::ContextMenu(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args)
+    , m_runCommandAction(nullptr)
     , m_lockScreenAction(nullptr)
     , m_logoutAction(nullptr)
     , m_separator1(nullptr)
@@ -88,7 +89,12 @@ void ContextMenu::restore(const KConfigGroup &config)
     }
 
     // everything below should only happen once, so check for it
-    if (!m_lockScreenAction) {
+    if (!m_runCommandAction) {
+        m_runCommandAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Show KRunner"), this);
+        m_runCommandAction->setIcon(QIcon::fromTheme(QStringLiteral("plasma-search")));
+        m_runCommandAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("krunner.desktop"), QStringLiteral("_launch")).value(0));
+        connect(m_runCommandAction, &QAction::triggered, this, &ContextMenu::runCommand);
+
         m_lockScreenAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Lock Screen"), this);
         m_lockScreenAction->setIcon(QIcon::fromTheme(QStringLiteral("system-lock-screen")));
         m_lockScreenAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("ksmserver"), QStringLiteral("Lock Session")).value(0));
@@ -162,6 +168,10 @@ QAction *ContextMenu::action(const QString &name)
     } else if (name == QLatin1String("_add panel")) {
         if (c->corona() && c->corona()->immutability() == Plasma::Types::Mutable) {
             return c->corona()->actions()->action(QStringLiteral("add panel"));
+        }
+    } else if (name == QLatin1String("_run_command")) {
+        if (KAuthorized::authorizeAction(QStringLiteral("run_command")) && KAuthorized::authorize(QStringLiteral("run_command"))) {
+            return m_runCommandAction;
         }
     } else if (name == QLatin1String("_lock_screen")) {
         if (KAuthorized::authorizeAction(QStringLiteral("lock_screen"))) {
