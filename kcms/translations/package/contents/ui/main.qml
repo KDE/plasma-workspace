@@ -159,7 +159,7 @@ ScrollViewKCM {
 
             text: i18ncp("@info %2 is the language code",
                 "The translation files for the language with the code '%2' could not be found. The language will be removed from your configuration. If you want to add it back, please install the localization files for it and add the language again.",
-                "The translation files for the languages with the codes '%2' could not be found. These languages will be removed from your configuration. If you want to add them back, please install the localization files for it and the languages again.",
+                "The translation files for the languages with the codes '%2' could not be found. These languages will be removed from your configuration. If you want to add them back, please install the localization files for it and add the languages again.",
                 kcm.selectedTranslationsModel.missingLanguages.length,
                 kcm.selectedTranslationsModel.missingLanguages.join(i18nc("@info separator in list of language codes", "', '")))
 
