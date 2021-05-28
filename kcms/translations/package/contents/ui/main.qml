@@ -258,7 +258,12 @@ ScrollViewKCM {
 
                         Layout.alignment: Qt.AlignVCenter
 
-                        text: (index == 0) ? i18nc("@item:inlistbox 1 = Language name", "%1 (Default)", model.display) : model.display
+                        text: switch(index){
+                            // Don't assing undefind to string if the index is invalid.
+                            case -1: ""; break;
+                            case 0: i18nc("@item:inlistbox 1 = Language name", "%1 (Default)", model.display); break;
+                            default: model.display; break;
+                        }
 
                         color: (model.IsMissing ? Kirigami.Theme.negativeTextColor
                             : (listItem.checked || (listItem.pressed && !listItem.checked && !listItem.sectionDelegate)
