@@ -90,6 +90,7 @@ void ContextMenu::restore(const KConfigGroup &config)
                       << QStringLiteral("_sep3")
                       << QStringLiteral("_wallpaper");
         disabled.insert(QStringLiteral("configure shortcuts"));
+        disabled.insert(QStringLiteral("_run_command"));
     }
 
     for (const QString &name : qAsConst(m_actionOrder)) {
