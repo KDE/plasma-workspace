@@ -44,6 +44,8 @@ PlasmaExtras.ExpandableListItem {
     readonly property double totalSpace: sdSource.data[udi] && sdSource.data[udi]["Size"] ? sdSource.data[udi]["Size"] : -1.0
     property bool freeSpaceKnown: freeSpace > 0 && totalSpace > 0
 
+    readonly property bool isRootVolume: sdSource.data[udi]["File Path"] ? sdSource.data[udi]["File Path"] == "/" : false
+
     onOperationResultChanged: {
         if (!popupIconTimer.running) {
             if (operationResult == 1) {
@@ -201,7 +203,8 @@ PlasmaExtras.ExpandableListItem {
             }
         }
         text: {
-            if (!sdSource.data[udi].Removable) {
+            // It's possible for the root volume to be on a removable disk
+            if (!sdSource.data[udi].Removable || deviceItem.isRootVolume) {
                 return i18n("Open in File Manager")
             } else {
                 var types = model["Device Types"];
