@@ -50,7 +50,7 @@ public:
     enum class ShowCondition {
         OnTimeout = 1 << 0,
         OnSummary = 1 << 1,
-        OnTermination = 1 << 2
+        OnTermination = 1 << 2,
     };
     Q_DECLARE_FLAGS(ShowConditions, ShowCondition)
 
