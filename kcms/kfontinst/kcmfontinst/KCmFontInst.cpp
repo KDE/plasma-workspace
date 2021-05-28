@@ -262,8 +262,7 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList &)
     itsFontListView = new CFontListView(itsPreviewSplitter, itsFontList);
     itsFontListView->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 
-    itsScanDuplicateFontsControl =
-        new CPushButton(KGuiItem(i18n("Find Duplicates…"), "edit-duplicate", i18n("Scan for Duplicate Fonts…")), fontControlWidget);
+    itsScanDuplicateFontsControl = new CPushButton(KGuiItem(i18n("Find Duplicates…"), "edit-duplicate", i18n("Scan for Duplicate Fonts…")), fontControlWidget);
 
     itsAddFontControl = new CPushButton(KGuiItem(i18n("Install from File…"), "document-import", i18n("Install fonts from a local file")), fontControlWidget);
     itsGetNewFontsControl = new CPushButton(KGuiItem(i18n("Get New Fonts…"), "get-hot-new-stuff", i18n("Download new fonts")), fontControlWidget);

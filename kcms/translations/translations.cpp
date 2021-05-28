@@ -39,8 +39,7 @@ Translations::Translations(QObject *parent, const QVariantList &args)
     , m_availableTranslationsModel(new AvailableTranslationsModel(this))
     , m_everSaved(false)
 {
-    KAboutData *about =
-        new KAboutData(QStringLiteral("kcm_translations"), i18n("Language"), QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_translations"), i18n("Language"), QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
     setAboutData(about);
 
     setButtons(Apply | Default);

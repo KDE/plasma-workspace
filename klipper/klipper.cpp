@@ -984,12 +984,12 @@ void Klipper::showBarcode(const QSharedPointer<const HistoryItem> &item)
 void Klipper::slotAskClearHistory()
 {
     int clearHist = KMessageBox::warningContinueCancel(nullptr,
-                                               i18n("Really delete entire clipboard history?"),
-                                               i18n("Delete clipboard history?"),
-                                               KStandardGuiItem::cont(),
-                                               KStandardGuiItem::cancel(),
-                                               QStringLiteral("klipperClearHistoryAskAgain"),
-                                               KMessageBox::Dangerous);
+                                                       i18n("Really delete entire clipboard history?"),
+                                                       i18n("Delete clipboard history?"),
+                                                       KStandardGuiItem::cont(),
+                                                       KStandardGuiItem::cancel(),
+                                                       QStringLiteral("klipperClearHistoryAskAgain"),
+                                                       KMessageBox::Dangerous);
     if (clearHist == KMessageBox::Continue) {
         history()->slotClear();
         saveHistory();

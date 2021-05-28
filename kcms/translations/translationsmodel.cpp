@@ -97,7 +97,7 @@ public:
     enum class Result { Error, Incomplete, Complete };
 
     template<typename... Args>
-    static CompletionCheck *create(Args &&... _args);
+    static CompletionCheck *create(Args &&..._args);
     ~CompletionCheck() override = default;
 
     virtual void start() = 0;
@@ -140,7 +140,7 @@ private:
 };
 
 template<typename... Args>
-CompletionCheck *CompletionCheck::create(Args &&... _args)
+CompletionCheck *CompletionCheck::create(Args &&..._args)
 {
 #ifdef HAVE_PACKAGEKIT
     // Ubuntu completion depends on packagekit. When packagekit is not available there's no point supporting

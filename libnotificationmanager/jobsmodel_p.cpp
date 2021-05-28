@@ -320,9 +320,7 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry, int c
     if (hints.value(QStringLiteral("immediate")).toBool()) {
         // Slightly delay showing the job so that the first update() call with a
         // summary will be shown atomically to the user.
-        job->d->delayedShow(50ms, JobPrivate::ShowCondition::OnTimeout
-                               | JobPrivate::ShowCondition::OnSummary
-                               | JobPrivate::ShowCondition::OnTermination);
+        job->d->delayedShow(50ms, JobPrivate::ShowCondition::OnTimeout | JobPrivate::ShowCondition::OnSummary | JobPrivate::ShowCondition::OnTermination);
     } else {
         // Delay showing a job view to avoid showing really short stat jobs and other useless stuff.
         job->d->delayedShow(500ms, JobPrivate::ShowCondition::OnTimeout);

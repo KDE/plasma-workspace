@@ -248,7 +248,8 @@ void AppMenuModule::itemActivationRequested(int actionId, uint timeStamp)
 
 // this method is not really used anymore but has to be kept for DBus compatibility
 void AppMenuModule::reconfigure()
-{}
+{
+}
 
 void AppMenuModule::initMenuWayland()
 {

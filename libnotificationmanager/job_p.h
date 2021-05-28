@@ -27,8 +27,8 @@
 #include <QObject>
 #include <QSharedPointer>
 #include <QString>
-#include <QUrl>
 #include <QTimer>
+#include <QUrl>
 
 #include <chrono>
 
