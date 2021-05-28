@@ -163,7 +163,7 @@ ScrollViewKCM {
                 kcm.selectedTranslationsModel.missingLanguages.length,
                 kcm.selectedTranslationsModel.missingLanguages.join(i18nc("@info separator in list of language codes", "', '")))
 
-            visible: kcm.selectedTranslationsModel.missingLanguages.length
+            visible: kcm.selectedTranslationsModel.missingLanguages.length > 0
         }
 
         QtControls.Label {
