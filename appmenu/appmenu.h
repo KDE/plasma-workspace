@@ -109,7 +109,7 @@ private:
 #ifdef HAVE_X11
     xcb_connection_t *m_xcbConn = nullptr;
 #endif
-    KWayland::Client::PlasmaShell *m_plasmashell = nullptr;;
+    KWayland::Client::PlasmaShell *m_plasmashell = nullptr;
 };
 
 #endif
