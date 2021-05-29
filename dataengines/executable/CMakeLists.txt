@@ -2,7 +2,7 @@ set(executable_engine_SRCS
     executable.cpp
 )
 
-add_library(plasma_engine_executable MODULE ${executable_engine_SRCS})
+kcoreaddons_add_plugin(plasma_engine_executable SOURCES ${executable_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 
 target_link_libraries(plasma_engine_executable
     KF5::Plasma
@@ -12,5 +12,4 @@ target_link_libraries(plasma_engine_executable
 
 kcoreaddons_desktop_to_json(plasma_engine_executable plasma-dataengine-executable.desktop)
 
-install(TARGETS plasma_engine_executable DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-executable.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )

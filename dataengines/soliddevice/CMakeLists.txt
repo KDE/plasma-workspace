@@ -9,7 +9,7 @@ set(soliddevice_engine_SRCS
     soliddevicejob.cpp
 )
 
-add_library(plasma_engine_soliddevice MODULE ${soliddevice_engine_SRCS})
+kcoreaddons_add_plugin(plasma_engine_soliddevice SOURCES ${soliddevice_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 
 target_link_libraries(plasma_engine_soliddevice
   Qt::Network
@@ -23,6 +23,5 @@ target_link_libraries(plasma_engine_soliddevice
 
 kcoreaddons_desktop_to_json(plasma_engine_soliddevice plasma-dataengine-soliddevice.desktop)
 
-install(TARGETS plasma_engine_soliddevice DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-soliddevice.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 install(FILES soliddevice.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services )

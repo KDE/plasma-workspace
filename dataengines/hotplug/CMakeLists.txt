@@ -8,7 +8,7 @@ set(hotplug_engine_SRCS
     hotplugjob.cpp
 )
 
-add_library(plasma_engine_hotplug MODULE ${hotplug_engine_SRCS})
+kcoreaddons_add_plugin(plasma_engine_hotplug SOURCES ${hotplug_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 target_link_libraries(plasma_engine_hotplug
     KF5::CoreAddons
     KF5::Plasma
@@ -22,6 +22,5 @@ target_link_libraries(plasma_engine_hotplug
 
 kcoreaddons_desktop_to_json(plasma_engine_hotplug plasma-dataengine-hotplug.desktop)
 
-install(TARGETS plasma_engine_hotplug DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-hotplug.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(FILES hotplug.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

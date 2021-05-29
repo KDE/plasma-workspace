@@ -8,7 +8,7 @@ if (X11_Xfixes_FOUND)
     set(mouse_engine_SRCS ${mouse_engine_SRCS} cursornotificationhandler.cpp)
 endif ()
 
-add_library(plasma_engine_mouse MODULE ${mouse_engine_SRCS})
+kcoreaddons_add_plugin(plasma_engine_mouse SOURCES ${mouse_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 target_link_libraries(plasma_engine_mouse
     Qt::Widgets
     Qt::X11Extras
@@ -23,6 +23,5 @@ endif ()
 
 kcoreaddons_desktop_to_json(plasma_engine_mouse plasma-dataengine-mouse.desktop)
 
-install(TARGETS plasma_engine_mouse DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-mouse.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 

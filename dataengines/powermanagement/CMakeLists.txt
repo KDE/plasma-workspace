@@ -9,7 +9,7 @@ set(powermanagement_engine_SRCS
 set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)
 qt_add_dbus_interface(powermanagement_engine_SRCS ${krunner_xml} krunner_interface)
 
-add_library(plasma_engine_powermanagement MODULE ${powermanagement_engine_SRCS})
+kcoreaddons_add_plugin(plasma_engine_powermanagement SOURCES ${powermanagement_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 
 target_link_libraries(plasma_engine_powermanagement
     KF5::Solid
@@ -24,6 +24,5 @@ target_link_libraries(plasma_engine_powermanagement
 
 kcoreaddons_desktop_to_json(plasma_engine_powermanagement plasma-dataengine-powermanagement.desktop)
 
-install(TARGETS plasma_engine_powermanagement DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-powermanagement.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 install(FILES powermanagementservice.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

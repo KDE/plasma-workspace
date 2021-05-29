@@ -3,7 +3,7 @@ set(systemmonitor_engine_SRCS
    systemmonitor.cpp
 )
 
-add_library(plasma_engine_systemmonitor MODULE ${systemmonitor_engine_SRCS})
+kcoreaddons_add_plugin(plasma_engine_systemmonitor SOURCES ${systemmonitor_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 
 target_link_libraries(plasma_engine_systemmonitor
     Qt::Network
@@ -15,5 +15,4 @@ target_link_libraries(plasma_engine_systemmonitor
 
 kcoreaddons_desktop_to_json(plasma_engine_systemmonitor plasma-dataengine-systemmonitor.desktop)
 
-install(TARGETS plasma_engine_systemmonitor DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-systemmonitor.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )

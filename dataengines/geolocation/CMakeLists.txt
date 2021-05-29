@@ -30,7 +30,7 @@ install(FILES geolocationprovider.h ${CMAKE_CURRENT_BINARY_DIR}/geolocation_expo
 # -------------------------------------------------------------------------------------------------
 
 
-add_library(plasma_engine_geolocation MODULE geolocation.cpp)
+kcoreaddons_add_plugin(plasma_engine_geolocation SOURCES geolocation.cpp INSTALL_NAMESPACE plasma/dataengine)
 target_compile_definitions(plasma_engine_geolocation PRIVATE -DQT_NO_KEYWORDS)
 generate_export_header(plasma_engine_geolocation EXPORT_FILE_NAME "geolocation_export.h" BASE_NAME "GEOLOCATION")
 target_link_libraries(plasma_engine_geolocation
@@ -43,7 +43,6 @@ target_link_libraries(plasma_engine_geolocation
     KF5::Solid)
 kcoreaddons_desktop_to_json(plasma_engine_geolocation plasma-dataengine-geolocation.desktop)
 
-install(TARGETS plasma_engine_geolocation DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install(FILES plasma-dataengine-geolocation.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(FILES plasma-geolocationprovider.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})
 

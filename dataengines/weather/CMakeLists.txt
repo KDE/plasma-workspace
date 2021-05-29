@@ -17,7 +17,7 @@ ecm_qt_declare_logging_category(weather_SRCS
     DEFAULT_SEVERITY Info
 )
 
-add_library(plasma_engine_weather MODULE ${weather_SRCS})
+kcoreaddons_add_plugin(plasma_engine_weather SOURCES ${weather_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 
 target_link_libraries (plasma_engine_weather
             KF5::KIOCore
@@ -28,5 +28,4 @@ target_link_libraries (plasma_engine_weather
 
 kcoreaddons_desktop_to_json(plasma_engine_weather plasma-dataengine-weather.desktop SERVICE_TYPES plasma-dataengine.desktop)
 
-install (TARGETS plasma_engine_weather DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 install (FILES plasma-dataengine-weather.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
