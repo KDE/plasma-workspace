@@ -30,6 +30,4 @@ install(TARGETS desktopnotifier DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded)
 
 ########### install files ###############
 
-install( FILES desktop.protocol  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
-
 install(FILES directory.desktop directory.trash DESTINATION ${KDE_INSTALL_DATADIR}/kio_desktop)

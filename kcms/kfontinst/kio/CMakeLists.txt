@@ -8,7 +8,6 @@ add_library(kio_fonts MODULE ${kio_fonts_PART_SRCS} ${KFI_FONTINST_AUTH_SRC} )
 target_link_libraries(kio_fonts Qt::DBus Qt::X11Extras Qt::Xml KF5::Archive KF5::KIOCore KF5::KIOWidgets kfontinst )
 install(TARGETS kio_fonts  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
 install( FILES fonts.desktop  DESTINATION  ${KDE_INSTALL_DATADIR}/konqsidebartng/virtual_folders/services )
-install( FILES fonts.protocol  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
 ecm_install_icons( ICONS
                    128-mimetypes-fonts-package.png
                    16-mimetypes-fonts-package.png
