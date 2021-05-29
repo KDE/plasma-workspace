@@ -27,6 +27,13 @@
 #include <QStandardPaths>
 #include <QUrl>
 
+// Pseudo plugin class to embed meta data
+class KIOPluginForMetaData : public QObject
+{
+    Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.kde.kio.slave.applications" FILE "applications.json")
+};
+
 class ApplicationsProtocol : public KIO::SlaveBase
 {
 public:
@@ -198,3 +205,5 @@ void ApplicationsProtocol::listDir(const QUrl &url)
     totalSize(count);
     finished();
 }
+
+#include "kio_applications.moc"

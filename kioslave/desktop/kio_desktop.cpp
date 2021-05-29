@@ -34,6 +34,13 @@
 #include "desktopnotifier_interface.h"
 #include "kded_interface.h"
 
+// Pseudo plugin class to embed meta data
+class KIOPluginForMetaData : public QObject
+{
+    Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.kde.kio.slave.desktop" FILE "desktop.json")
+};
+
 extern "C" {
 int Q_DECL_EXPORT kdemain(int argc, char **argv)
 {
@@ -250,3 +257,5 @@ void DesktopProtocol::fileSystemFreeSpace(const QUrl &url)
         error(KIO::ERR_CANNOT_STAT, desktopPath);
     }
 }
+
+#include "kio_desktop.moc"

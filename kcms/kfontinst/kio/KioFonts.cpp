@@ -51,6 +51,13 @@
 
 static const int constReconfigTimeout = 10;
 
+// Pseudo plugin class to embed meta data
+class KIOPluginForMetaData : public QObject
+{
+    Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.kde.kio.slave.fonts" FILE "fonts.json")
+};
+
 extern "C" {
 
 Q_DECL_EXPORT int kdemain(int argc, char **argv)
@@ -729,3 +736,5 @@ void CKioFonts::handleResp(int resp, const QString &file, const QString &tempFil
 }
 
 }
+
+#include "KioFonts.moc"
