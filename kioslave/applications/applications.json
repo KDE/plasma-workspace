@@ -1,0 +1,54 @@
+{
+    "KDE-KIO-Protocols": {
+        "applications": {
+            "Class": ":local",
+            "Icon": "start-here-kde",
+            "deleting": false,
+            "exec": "kf5/kio/applications",
+            "input": "none",
+            "linking": false,
+            "listing": [
+                "Name",
+                "Type",
+                "Size",
+                "Date",
+                "Access",
+                "Owner",
+                "Group",
+                "Link"
+            ],
+            "makedir": false,
+            "maxInstances": 2,
+            "moving": false,
+            "output": "filesystem",
+            "protocol": "applications",
+            "reading": true,
+            "writing": false
+        },
+        "programs": {
+            "Class": ":local",
+            "Icon": "start-here-kde",
+            "deleting": false,
+            "exec": "kf5/kio/applications",
+            "input": "none",
+            "linking": false,
+            "listing": [
+                "Name",
+                "Type",
+                "Size",
+                "Date",
+                "Access",
+                "Owner",
+                "Group",
+                "Link"
+            ],
+            "makedir": false,
+            "maxInstances": 2,
+            "moving": false,
+            "output": "filesystem",
+            "protocol": "programs",
+            "reading": true,
+            "writing": false
+        }
+    }
+}

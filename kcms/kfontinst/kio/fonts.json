@@ -1,0 +1,32 @@
+{
+    "KDE-KIO-Protocols": {
+        "fonts": {
+            "Class": ":local",
+            "Icon": "preferences-desktop-font-installer",
+            "copyFromFile": false,
+            "copyToFile": false,
+            "defaultMimetype": "application/octet-stream",
+            "deleting": true,
+            "exec": "kio_fonts",
+            "input": "none",
+            "linking": false,
+            "listing": [
+                "Name",
+                "Type",
+                "Size",
+                "Date",
+                "AccessDate",
+                "Access",
+                "Owner",
+                "Group"
+            ],
+            "makedir": false,
+            "maxInstances": 1,
+            "moving": true,
+            "output": "filesystem",
+            "protocol": "fonts",
+            "reading": true,
+            "writing": true
+        }
+    }
+}
