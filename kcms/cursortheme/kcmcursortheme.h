@@ -24,6 +24,8 @@
 #include <KQuickAddons/ManagedConfigModule>
 #include <QScopedPointer>
 
+#include "cursorthemesettings.h"
+
 class QQmlListReference;
 class QStandardItemModel;
 class QTemporaryFile;
@@ -31,7 +33,6 @@ class QTemporaryFile;
 class CursorThemeModel;
 class SortProxyModel;
 class CursorTheme;
-class CursorThemeSettings;
 class CursorThemeData;
 
 namespace KIO

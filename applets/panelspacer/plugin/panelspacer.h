@@ -21,11 +21,7 @@
 #pragma once
 
 #include <Plasma/Applet>
-
-namespace PlasmaQuick
-{
-class AppletQuickItem;
-}
+#include <PlasmaQuick/AppletQuickItem>
 
 namespace Plasma
 {

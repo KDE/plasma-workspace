@@ -21,9 +21,9 @@
 #ifndef SYSTEMTRAYCONTAINER_H
 #define SYSTEMTRAYCONTAINER_H
 
-#include <Plasma/Applet>
+#include <QQuickItem>
 
-class QQuickItem;
+#include <Plasma/Applet>
 
 /**
  * @brief Thin wrapping 'Plasma::Applet' for SystemTray.

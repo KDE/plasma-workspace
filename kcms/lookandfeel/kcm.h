@@ -25,14 +25,16 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KNSCore/EntryWrapper>
+
 #include <QDir>
+#include <QStandardItemModel>
 
 #include <KPackage/Package>
 #include <KQuickAddons/ManagedConfigModule>
 
+#include "lookandfeelsettings.h"
+
 class QQuickItem;
-class QStandardItemModel;
-class LookAndFeelSettings;
 class LookAndFeelData;
 
 class KCMLookandFeel : public KQuickAddons::ManagedConfigModule

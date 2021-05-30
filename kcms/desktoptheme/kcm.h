@@ -25,6 +25,9 @@
 
 #include <KQuickAddons/ManagedConfigModule>
 
+#include "desktopthemesettings.h"
+#include "themesmodel.h"
+
 class QTemporaryFile;
 
 namespace Plasma
@@ -38,10 +41,8 @@ class FileCopyJob;
 }
 
 class QQuickItem;
-class DesktopThemeSettings;
 class DesktopThemeData;
 class FilterProxyModel;
-class ThemesModel;
 
 class KCMDesktopTheme : public KQuickAddons::ManagedConfigModule
 {

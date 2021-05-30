@@ -33,9 +33,10 @@
 
 #include <KQuickAddons/ManagedConfigModule>
 
+#include "fontsaasettings.h"
+#include "fontssettings.h"
+
 class FontsData;
-class FontsSettings;
-class FontsAASettings;
 
 /**
  * The Desktop/fonts tab in kcontrol.

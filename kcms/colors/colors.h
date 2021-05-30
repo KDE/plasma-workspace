@@ -29,6 +29,9 @@
 
 #include <KQuickAddons/ManagedConfigModule>
 
+#include "colorsmodel.h"
+#include "colorssettings.h"
+
 class QProcess;
 class QTemporaryFile;
 
@@ -37,9 +40,7 @@ namespace KIO
 class FileCopyJob;
 }
 
-class ColorsModel;
 class FilterProxyModel;
-class ColorsSettings;
 class ColorsData;
 
 class KCMColors : public KQuickAddons::ManagedConfigModule

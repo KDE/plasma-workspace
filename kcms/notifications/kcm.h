@@ -25,18 +25,19 @@
 #include <QHash>
 #include <QKeySequence>
 
+#include "badgesettings.h"
+#include "donotdisturbsettings.h"
+#include "filterproxymodel.h"
+#include "jobsettings.h"
+#include "notificationsettings.h"
+#include "sourcesmodel.h"
+
 class QAction;
 
-class SourcesModel;
-class FilterProxyModel;
 class NotificationsData;
 
 namespace NotificationManager
 {
-class DoNotDisturbSettings;
-class NotificationSettings;
-class JobSettings;
-class BadgeSettings;
 class BehaviorSettings;
 }
 

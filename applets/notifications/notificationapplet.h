@@ -21,12 +21,13 @@
 
 #pragma once
 
+#include <QQuickItem>
+#include <QWindow>
+
 #include <Plasma/Applet>
 
-class QQuickItem;
 class QString;
 class QRect;
-class QWindow;
 
 class NotificationApplet : public Plasma::Applet
 {

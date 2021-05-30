@@ -20,10 +20,10 @@
 
 #include <QObject>
 #include <QPointer>
+#include <QQuickItem>
 #include <QUrl>
 
 class QAction;
-class QQuickItem;
 
 class FileMenu : public QObject
 {

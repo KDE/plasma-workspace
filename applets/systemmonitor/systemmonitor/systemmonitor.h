@@ -27,13 +27,14 @@
 #include <KDesktopFile>
 #include <KPackage/Package>
 
+#include <faces/SensorFaceController.h>
+
 class ApplicationListModel;
 class QQuickItem;
 
 namespace KSysGuard
 {
 class SensorFace;
-class SensorFaceController;
 }
 
 class KConfigLoader;

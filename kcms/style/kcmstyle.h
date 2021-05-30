@@ -35,12 +35,12 @@
 #include <KQuickAddons/ManagedConfigModule>
 
 #include "gtkpage.h"
+#include "stylesettings.h"
+#include "stylesmodel.h"
 
 class QQuickItem;
 
-class StyleSettings;
 class StyleData;
-class StylesModel;
 class StyleConfigDialog;
 
 class KCMStyle : public KQuickAddons::ManagedConfigModule
