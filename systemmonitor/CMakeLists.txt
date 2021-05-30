@@ -22,6 +22,7 @@ add_executable(systemmonitor ksystemactivitydialog.cpp main.cpp)
 
 target_link_libraries(systemmonitor
     KSysGuard::ProcessUi
+    KF5::CoreAddons
     KF5::ConfigCore
     KF5::I18n
     KF5::XmlGui
