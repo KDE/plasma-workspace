@@ -195,7 +195,7 @@ KCM.SimpleKCM {
                     }
                 }
                 QQC2.Label {
-                        text: tempSlider.value + i18n(" K")
+                        text: i18nc("Color temperature in Kelvin degrees", "%1K", tempSlider.value)
                 }
                 //row 2
                 QQC2.Label {
@@ -238,7 +238,7 @@ KCM.SimpleKCM {
                 visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeAutomatic
                 enabled: activator.checked
                 wrapMode: Text.Wrap
-                text: i18n("Latitude: %1   Longitude: %2", Math.round(locator.latitude * 100)/100, Math.round(locator.longitude * 100)/100)
+                text: i18n("Latitude: %1°   Longitude: %2°", Math.round(locator.latitude * 100)/100, Math.round(locator.longitude * 100)/100)
             }
 
             // Show time entry fields in manual timings mode
