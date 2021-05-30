@@ -3,7 +3,7 @@ set(sessionsprivateplugin_SRCS
     sessionsprivateplugin.cpp
 )
 
-qt5_add_dbus_interface(sessionsprivateplugin_SRCS ${SCREENSAVER_DBUS_INTERFACE} screensaver_interface)
+qt_add_dbus_interface(sessionsprivateplugin_SRCS ${SCREENSAVER_DBUS_INTERFACE} screensaver_interface)
 
 kconfig_add_kcfg_files(sessionsprivateplugin_SRCS kscreensaversettings.kcfgc)
 

@@ -4,7 +4,7 @@ set(krunner_sessions_SRCS
     sessionrunner.cpp
 )
 
-qt5_add_dbus_interface(krunner_sessions_SRCS ${SCREENSAVER_DBUS_INTERFACE} screensaver_interface)
+qt_add_dbus_interface(krunner_sessions_SRCS ${SCREENSAVER_DBUS_INTERFACE} screensaver_interface)
 
 add_library(krunner_sessions MODULE ${krunner_sessions_SRCS})
 kcoreaddons_desktop_to_json(krunner_sessions plasma-runner-sessions.desktop)

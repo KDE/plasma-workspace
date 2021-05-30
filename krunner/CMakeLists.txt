@@ -4,7 +4,7 @@ set(krunner_SRCS
 )
 
 set(krunner_dbusAppXML dbus/org.kde.krunner.App.xml)
-qt5_add_dbus_adaptor(krunner_SRCS ${krunner_dbusAppXML} view.h View)
+qt_add_dbus_adaptor(krunner_SRCS ${krunner_dbusAppXML} view.h View)
 ecm_generate_dbus_service_file(NAME org.kde.krunner
                                                            EXECUTABLE ${KDE_INSTALL_FULL_BINDIR}/krunner
                                                            SYSTEMD_SERVICE plasma-krunner.service

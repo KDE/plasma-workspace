@@ -17,8 +17,8 @@ set(systemtray_SRCS
     systemtraytypes.cpp
 )
 
-qt5_add_dbus_interface(systemtray_SRCS ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf5_org.kde.StatusNotifierWatcher.xml statusnotifierwatcher_interface)
-qt5_add_dbus_interface(systemtray_SRCS ${plasma-workspace_SOURCE_DIR}/dataengines/mpris2/org.freedesktop.DBus.Properties.xml dbusproperties)
+qt_add_dbus_interface(systemtray_SRCS ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf5_org.kde.StatusNotifierWatcher.xml statusnotifierwatcher_interface)
+qt_add_dbus_interface(systemtray_SRCS ${plasma-workspace_SOURCE_DIR}/dataengines/mpris2/org.freedesktop.DBus.Properties.xml dbusproperties)
 
 set(statusnotifieritem_xml ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf5_org.kde.StatusNotifierItem.xml)
 set_source_files_properties(${statusnotifieritem_xml} PROPERTIES
@@ -26,7 +26,7 @@ set_source_files_properties(${statusnotifieritem_xml} PROPERTIES
    INCLUDE "systemtraytypes.h"
    CLASSNAME OrgKdeStatusNotifierItem
 )
-qt5_add_dbus_interface(systemtray_SRCS ${statusnotifieritem_xml} statusnotifieritem_interface)
+qt_add_dbus_interface(systemtray_SRCS ${statusnotifieritem_xml} statusnotifieritem_interface)
 
 ecm_qt_declare_logging_category(systemtray_SRCS HEADER debug.h
                                             IDENTIFIER SYSTEM_TRAY

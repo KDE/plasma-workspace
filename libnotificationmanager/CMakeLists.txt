@@ -53,15 +53,15 @@ kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/behaviorsettings.kcfgc 
 
 # DBus
 # Notifications
-qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.freedesktop.Notifications.xml server_p.h NotificationManager::ServerPrivate)
-qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.notificationmanager.xml server_p.h NotificationManager::ServerPrivate)
-qt5_add_dbus_interface(notificationmanager_LIB_SRCS dbus/org.freedesktop.Notifications.xml fdonotifications_interface)
+qt_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.freedesktop.Notifications.xml server_p.h NotificationManager::ServerPrivate)
+qt_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.notificationmanager.xml server_p.h NotificationManager::ServerPrivate)
+qt_add_dbus_interface(notificationmanager_LIB_SRCS dbus/org.freedesktop.Notifications.xml fdonotifications_interface)
 # JobView
-qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.kuiserver.xml jobsmodel_p.h NotificationManager::JobsModelPrivate)
-qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.JobViewServer.xml jobsmodel_p.h NotificationManager::JobsModelPrivate)
-qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.JobViewServerV2.xml jobsmodel_p.h NotificationManager::JobsModelPrivate)
-qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.JobViewV2.xml job_p.h NotificationManager::JobPrivate)
-qt5_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.JobViewV3.xml job_p.h NotificationManager::JobPrivate)
+qt_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.kuiserver.xml jobsmodel_p.h NotificationManager::JobsModelPrivate)
+qt_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.JobViewServer.xml jobsmodel_p.h NotificationManager::JobsModelPrivate)
+qt_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.JobViewServerV2.xml jobsmodel_p.h NotificationManager::JobsModelPrivate)
+qt_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.JobViewV2.xml job_p.h NotificationManager::JobPrivate)
+qt_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.JobViewV3.xml job_p.h NotificationManager::JobPrivate)
 
 add_library(notificationmanager ${notificationmanager_LIB_SRCS})
 add_library(PW::LibNotificationManager ALIAS notificationmanager)

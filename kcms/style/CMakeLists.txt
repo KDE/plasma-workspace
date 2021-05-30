@@ -13,8 +13,8 @@ set(kcm_style_PART_SRCS
     previewitem.cpp
     styledata.cpp
 )
-qt5_add_dbus_interface(kcm_style_PART_SRCS ${KDED_DBUS_INTERFACE} kded_interface)
-qt5_add_dbus_interface(kcm_style_PART_SRCS org.kde.GtkConfig.xml kdegtkconfig_interface)
+qt_add_dbus_interface(kcm_style_PART_SRCS ${KDED_DBUS_INTERFACE} kded_interface)
+qt_add_dbus_interface(kcm_style_PART_SRCS org.kde.GtkConfig.xml kdegtkconfig_interface)
 
 kcmutils_generate_module_data(
     kcm_style_PART_SRCS

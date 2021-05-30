@@ -48,8 +48,8 @@ ecm_qt_declare_logging_category(kickerplugin_SRCS
     IDENTIFIER KICKER_DEBUG
     CATEGORY_NAME org.kde.plasma.kicker)
 
-qt5_add_dbus_interface(kickerplugin_SRCS ${CMAKE_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml krunner_interface)
-qt5_add_dbus_interface(kickerplugin_SRCS ${CMAKE_SOURCE_DIR}/ksmserver/org.kde.KSMServerInterface.xml ksmserver_interface)
+qt_add_dbus_interface(kickerplugin_SRCS ${CMAKE_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml krunner_interface)
+qt_add_dbus_interface(kickerplugin_SRCS ${CMAKE_SOURCE_DIR}/ksmserver/org.kde.KSMServerInterface.xml ksmserver_interface)
 
 install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/kicker)
 

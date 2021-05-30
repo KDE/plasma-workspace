@@ -33,11 +33,11 @@ set(XEMBED_SNI_PROXY_SOURCES
     xtestsender.cpp
  )
 
-qt5_add_dbus_adaptor(XEMBED_SNI_PROXY_SOURCES org.kde.StatusNotifierItem.xml
+qt_add_dbus_adaptor(XEMBED_SNI_PROXY_SOURCES org.kde.StatusNotifierItem.xml
                      sniproxy.h SNIProxy)
 
 set(statusnotifierwatcher_xml org.kde.StatusNotifierWatcher.xml)
-qt5_add_dbus_interface(XEMBED_SNI_PROXY_SOURCES ${statusnotifierwatcher_xml} statusnotifierwatcher_interface)
+qt_add_dbus_interface(XEMBED_SNI_PROXY_SOURCES ${statusnotifierwatcher_xml} statusnotifierwatcher_interface)
 
 ecm_qt_declare_logging_category(XEMBED_SNI_PROXY_SOURCES HEADER debug.h
                                                IDENTIFIER SNIPROXY

@@ -3,7 +3,7 @@
 set(kcminit_KDEINIT_SRCS main.cpp)
 
 set(klauncher_xml ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml)
-qt5_add_dbus_interface(kcminit_KDEINIT_SRCS ${klauncher_xml} klauncher_iface)
+qt_add_dbus_interface(kcminit_KDEINIT_SRCS ${klauncher_xml} klauncher_iface)
 
 kf5_add_kdeinit_executable( kcminit ${kcminit_KDEINIT_SRCS})
 
@@ -18,7 +18,7 @@ install(TARGETS kcminit         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 set(kcminit_startup_KDEINIT_SRCS main.cpp)
 
-qt5_add_dbus_interface(kcminit_startup_KDEINIT_SRCS ${klauncher_xml} klauncher_iface)
+qt_add_dbus_interface(kcminit_startup_KDEINIT_SRCS ${klauncher_xml} klauncher_iface)
 kf5_add_kdeinit_executable( kcminit_startup ${kcminit_startup_KDEINIT_SRCS})
 
 ecm_install_configured_files(INPUT plasma-kcminit-phase1.service.in  plasma-kcminit.service.in

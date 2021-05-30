@@ -16,7 +16,7 @@ set(scripting_SRC
 )
 
 set(plasmashell_dbusXML dbus/org.kde.PlasmaShell.xml)
-qt5_add_dbus_adaptor(scripting_SRC ${plasmashell_dbusXML} shellcorona.h ShellCorona plasmashelladaptor)
+qt_add_dbus_adaptor(scripting_SRC ${plasmashell_dbusXML} shellcorona.h ShellCorona plasmashelladaptor)
 
 ecm_qt_declare_logging_category(plasmashell HEADER debug.h
                                                IDENTIFIER PLASMASHELL
@@ -51,7 +51,7 @@ if (TARGET KUserFeedbackCore)
 endif()
 
 set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)
-qt5_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
+qt_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
 
 
 add_executable(plasmashell

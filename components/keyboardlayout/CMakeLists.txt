@@ -13,8 +13,8 @@ ecm_qt_declare_logging_category(keyboardlayoutplugin_SRCS HEADER debug.h
 set_source_files_properties(org.kde.KeyboardLayouts.xml
         PROPERTIES INCLUDE layoutnames.h)
 
-qt5_add_dbus_interface(keyboardlayoutplugin_SRCS "org.kde.KeyboardLayouts.xml" keyboard_layout_interface)
-qt5_add_dbus_interface(keyboardlayoutplugin_SRCS "${KWIN_VIRTUALKEYBOARD_INTERFACE}" virtualkeyboard_interface)
+qt_add_dbus_interface(keyboardlayoutplugin_SRCS "org.kde.KeyboardLayouts.xml" keyboard_layout_interface)
+qt_add_dbus_interface(keyboardlayoutplugin_SRCS "${KWIN_VIRTUALKEYBOARD_INTERFACE}" virtualkeyboard_interface)
 
 add_library(keyboardlayoutplugin SHARED ${keyboardlayoutplugin_SRCS})
 

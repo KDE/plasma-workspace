@@ -4,7 +4,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_baloosearch5\")
 set(baloosearchrunner_SRCS
     baloosearchrunner.cpp)
 
-qt5_add_dbus_adaptor(baloosearchrunner_SRCS "org.kde.krunner1.xml" baloosearchrunner.h SearchRunner)
+qt_add_dbus_adaptor(baloosearchrunner_SRCS "org.kde.krunner1.xml" baloosearchrunner.h SearchRunner)
 add_executable(baloorunner ${baloosearchrunner_SRCS})
 
 target_link_libraries(baloorunner

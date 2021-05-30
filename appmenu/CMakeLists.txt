@@ -7,10 +7,10 @@ set(kded_appmenu_SRCS
     verticalmenu.cpp
     )
 
-qt5_add_dbus_adaptor(kded_appmenu_SRCS com.canonical.AppMenu.Registrar.xml
+qt_add_dbus_adaptor(kded_appmenu_SRCS com.canonical.AppMenu.Registrar.xml
     menuimporter.h MenuImporter menuimporteradaptor MenuImporterAdaptor)
 
-qt5_add_dbus_adaptor(kded_appmenu_SRCS org.kde.kappmenu.xml
+qt_add_dbus_adaptor(kded_appmenu_SRCS org.kde.kappmenu.xml
     appmenu_dbus.h AppmenuDBus appmenuadaptor AppmenuAdaptor)
 
 add_library(appmenu MODULE ${kded_appmenu_SRCS})

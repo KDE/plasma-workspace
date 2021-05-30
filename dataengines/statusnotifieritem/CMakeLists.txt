@@ -10,8 +10,8 @@ set(statusnotifieritem_engine_SRCS
 )
 
 set(statusnotifierwatcher_xml ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf5_org.kde.StatusNotifierWatcher.xml)
-qt5_add_dbus_interface(statusnotifieritem_engine_SRCS ${statusnotifierwatcher_xml} statusnotifierwatcher_interface)
-qt5_add_dbus_interface(statusnotifieritem_engine_SRCS ../mpris2/org.freedesktop.DBus.Properties.xml dbusproperties)
+qt_add_dbus_interface(statusnotifieritem_engine_SRCS ${statusnotifierwatcher_xml} statusnotifierwatcher_interface)
+qt_add_dbus_interface(statusnotifieritem_engine_SRCS ../mpris2/org.freedesktop.DBus.Properties.xml dbusproperties)
 
 set(statusnotifieritem_xml ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf5_org.kde.StatusNotifierItem.xml)
 
@@ -20,7 +20,7 @@ set_source_files_properties(${statusnotifieritem_xml} PROPERTIES
    INCLUDE "systemtraytypes.h"
    CLASSNAME OrgKdeStatusNotifierItem
 )
-qt5_add_dbus_interface(statusnotifieritem_engine_SRCS ${statusnotifieritem_xml} statusnotifieritem_interface)
+qt_add_dbus_interface(statusnotifieritem_engine_SRCS ${statusnotifieritem_xml} statusnotifieritem_interface)
 
 ecm_qt_declare_logging_category(statusnotifieritem_engine_SRCS HEADER debug.h
                                                IDENTIFIER DATAENGINE_SNI

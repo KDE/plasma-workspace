@@ -5,7 +5,7 @@ set(activity_engine_SRCS
         activityjob.cpp)
 
 set_source_files_properties(org.kde.ActivityManager.ActivityRanking.xml PROPERTIES INCLUDE "ActivityData.h")
-qt5_add_dbus_interface(
+qt_add_dbus_interface(
    activity_engine_SRCS org.kde.ActivityManager.ActivityRanking.xml
    ActivityRankingInterface
    )
