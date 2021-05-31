@@ -797,18 +797,6 @@ void Image::nextSlide()
     Q_EMIT wallpaperPathChanged();
 }
 
-void Image::openSlide()
-{
-    if (!m_wallpaperPackage.isValid()) {
-        return;
-    }
-
-    // open in image viewer
-    QUrl filepath(m_wallpaperPackage.filePath("preferred"));
-    qCDebug(IMAGEWALLPAPER) << "opening file " << filepath.path();
-    new KRun(filepath, nullptr);
-}
-
 void Image::pathCreated(const QString &path)
 {
     if (m_slideshowModel->indexOf(path) == -1) {

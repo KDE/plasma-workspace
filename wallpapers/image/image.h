@@ -151,10 +151,6 @@ Q_SIGNALS:
 protected Q_SLOTS:
     void showAddSlidePathsDialog();
     void wallpaperBrowseCompleted();
-    /**
-     * Open the current slide in the default image application
-     */
-    void openSlide();
     void startSlideshow();
     void fileDialogFinished();
     void addUrl(const QUrl &url, bool setAsCurrent);
