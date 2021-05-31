@@ -63,6 +63,7 @@ install(FILES klipper.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 # Plasma Data Engine
 set(plasma_engine_clipboard_SRCS ${libklipper_common_SRCS} clipboardengine.cpp clipboardservice.cpp clipboardjob.cpp)
 kcoreaddons_add_plugin(plasma_engine_clipboard SOURCES ${plasma_engine_clipboard_SRCS} INSTALL_NAMESPACE "plasma/dataengine")
+kcoreaddons_desktop_to_json(plasma_engine_clipboard plasma-dataengine-clipboard.desktop)
 target_link_libraries(plasma_engine_clipboard
     Qt::Concurrent
     Qt::DBus
