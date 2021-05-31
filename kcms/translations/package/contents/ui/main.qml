@@ -42,6 +42,7 @@ ScrollViewKCM {
 
             property string languageCode: model.LanguageCode
 
+            width: availableLanguagesList.width
             reserveSpaceForIcon: false
 
             label: model.display
@@ -97,14 +98,8 @@ ScrollViewKCM {
             id: availableLanguagesList
 
             implicitWidth: 18 * Kirigami.Units.gridUnit
-
             model: kcm.availableTranslationsModel
-
-            delegate: Kirigami.DelegateRecycler {
-                width: parent.width
-
-                sourceComponent: addLanguageItemComponent
-            }
+            delegate: addLanguageItemComponent
         }
 
         footer: RowLayout {
