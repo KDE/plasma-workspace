@@ -43,11 +43,12 @@
 #include <KDirWatch>
 #include <KIO/CopyJob>
 #include <KIO/Job>
+#include <KIO/OpenUrlJob>
+#include <KNotificationJobUiDelegate>
 #include <KRandom>
 #include <QDebug>
 #include <QFileDialog>
 #include <klocalizedstring.h>
-#include <krun.h>
 
 #include "backgroundlistmodel.h"
 #include "slidefiltermodel.h"
@@ -878,7 +879,11 @@ void Image::commitDeletion()
 
 void Image::openFolder(const QString &path)
 {
-    new KRun(QUrl::fromLocalFile(path), nullptr);
+    auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(path));
+    auto *delegate = new KNotificationJobUiDelegate;
+    delegate->setAutoErrorHandlingEnabled(true);
+    job->setUiDelegate(delegate);
+    job->start();
 }
 
 void Image::toggleSlide(const QString &path, bool checked)
