@@ -195,7 +195,7 @@ KCM.SimpleKCM {
                     }
                 }
                 QQC2.Label {
-                        text: i18nc("Color temperature in Kelvin degrees", "%1K", tempSlider.value)
+                        text: i18nc("Color temperature in Kelvin", "%1K", tempSlider.value)
                 }
                 //row 2
                 QQC2.Label {
