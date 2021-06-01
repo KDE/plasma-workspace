@@ -203,6 +203,8 @@ ScrollViewKCM {
                     QtControls.BusyIndicator {
                         visible: model.IsInstalling
                         running: visible
+                        // the control style (e.g. org.kde.desktop) may force a padding that will shrink the indicator way down. ignore it.
+                        padding: 0
 
                         Layout.alignment: Qt.AlignVCenter
 
