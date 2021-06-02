@@ -29,14 +29,14 @@ SimpleKCM {
     id: root
 
     ConfigModule.buttons: ConfigModule.Default | ConfigModule.Apply
-    leftPadding: width * 0.1
-    rightPadding: leftPadding
 
     implicitWidth: Kirigami.Units.gridUnit * 38
     implicitHeight: Kirigami.Units.gridUnit * 35
 
 
     ColumnLayout {
+        spacing: 0
+
         Kirigami.InlineMessage {
             id: infoLabel
             Layout.fillWidth: true
@@ -48,8 +48,11 @@ SimpleKCM {
 
         QQC2.Label {
             Kirigami.FormData.label: i18n("Plasma:")
-            Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
+            Layout.topMargin: Kirigami.Units.gridUnit
+            Layout.leftMargin: Kirigami.Units.gridUnit
+            Layout.rightMargin: Kirigami.Units.gridUnit
+            Layout.alignment: Qt.AlignHCenter
             wrapMode: Text.WordWrap
             text: xi18nc("@info", "You can help KDE improve Plasma by contributing information on how you use it, so we can focus on things that matter to you.<nl/><nl/>Contributing this information is optional and entirely anonymous. We never collect your personal data, files you use, websites you visit, or information that could identify you.<nl/><nl/>You can read about our privacy policy in the following link:")
         }
@@ -61,8 +64,7 @@ SimpleKCM {
 
         Kirigami.Separator {
             Layout.fillWidth: true
-            Layout.topMargin: Kirigami.Units.gridUnit
-            Layout.bottomMargin: Kirigami.Units.gridUnit
+            Layout.margins: Kirigami.Units.gridUnit
         }
 
         Kirigami.FormLayout {
