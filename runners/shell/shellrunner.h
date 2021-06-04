@@ -20,6 +20,7 @@
 #define SHELLRUNNER_H
 
 #include <KRunner/AbstractRunner>
+#include <optional>
 
 /**
  * This class runs programs using the literal name of the binary, much as one
@@ -37,7 +38,7 @@ public:
     void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
 private:
-    bool parseShellCommand(const QString &query, QStringList &envs, QString &command);
+    std::optional<QString> parseShellCommand(const QString &query, QStringList &envs);
     QList<QAction *> m_actionList;
     QIcon m_matchIcon;
 };

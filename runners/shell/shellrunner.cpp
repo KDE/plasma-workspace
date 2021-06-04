@@ -55,14 +55,14 @@ ShellRunner::~ShellRunner()
 void ShellRunner::match(Plasma::RunnerContext &context)
 {
     QStringList envs;
-    QString command = context.query();
-    if (parseShellCommand(context.query(), envs, command)) {
-        const QString term = context.query();
+    std::optional<QString> parsingResult = parseShellCommand(context.query(), envs);
+    if (parsingResult.has_value()) {
+        const QString command = parsingResult.value();
         Plasma::QueryMatch match(this);
         match.setId(QStringLiteral("exec://") + command);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setIcon(m_matchIcon);
-        match.setText(i18n("Run %1", term));
+        match.setText(i18n("Run %1", context.query()));
         match.setData(QVariantList({command, envs}));
         match.setRelevance(0.7);
         match.setActions(m_actionList);
@@ -83,7 +83,7 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
     job->start();
 }
 
-bool ShellRunner::parseShellCommand(const QString &query, QStringList &envs, QString &command)
+std::optional<QString> ShellRunner::parseShellCommand(const QString &query, QStringList &envs)
 {
     const static QRegularExpression envRegex = QRegularExpression(QStringLiteral("^.+=.+$"));
     const QStringList split = KShell::splitArgs(query);
@@ -92,15 +92,14 @@ bool ShellRunner::parseShellCommand(const QString &query, QStringList &envs, QSt
         if (!executablePath.isEmpty()) {
             QStringList executableParts{executablePath};
             executableParts << split.mid(split.indexOf(entry) + 1);
-            command = KShell::joinArgs(executableParts);
-            return true;
+            return KShell::joinArgs(executableParts);
         } else if (envRegex.match(entry).hasMatch()) {
             envs.append(entry);
         } else {
-            return false;
+            return std::nullopt;
         }
     }
-    return false;
+    return std::nullopt;
 }
 
 #include "shellrunner.moc"
