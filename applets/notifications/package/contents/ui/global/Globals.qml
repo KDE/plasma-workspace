@@ -256,7 +256,7 @@ QtObject {
 
             var inhibitedUntil = notificationSettings.notificationsInhibitedUntil;
             if (!isNaN(inhibitedUntil.getTime())) {
-                inhibited |= (new Date().getTime() < inhibitedUntil.getTime());
+                inhibited |= (Date.now() < inhibitedUntil.getTime());
             }
 
             if (notificationSettings.notificationsInhibitedByApplication) {

@@ -120,8 +120,7 @@ RowLayout {
                 return "";
             }
 
-            var now = new Date();
-            var deltaMinutes = Math.floor((now.getTime() - time.getTime()) / 1000 / 60);
+            var deltaMinutes = Math.floor((Date.now() - time.getTime()) / 1000 / 60);
             if (deltaMinutes < 1) {
                 return "";
             }
