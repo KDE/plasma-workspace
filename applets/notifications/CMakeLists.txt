@@ -20,7 +20,9 @@ target_link_libraries(plasma_applet_notifications
                       KF5::Plasma
                       KF5::PlasmaQuick
                       KF5::GlobalAccel
+                      KF5::KIOGui
                       KF5::KIOWidgets # for PreviewJob
+                      KF5::Notifications # for KNotificationJobUiDelegate
                       )
 
 plasma_install_package(package org.kde.plasma.notifications)

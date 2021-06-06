@@ -231,6 +231,8 @@ ColumnLayout {
             height: Math.max(implicitHeight, openButton.implicitHeight)
             icon.name: "application-menu"
             checkable: true
+            text: openButton.visible ? "" : Accessible.name
+            Accessible.name: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options…")
             onPressedChanged: {
                 if (pressed) {
                     checked = Qt.binding(function() {
@@ -243,7 +245,8 @@ ColumnLayout {
             }
 
             PlasmaComponents3.ToolTip {
-                text: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options…")
+                text: parent.Accessible.name
+                enabled: parent.text === ""
             }
 
             Notifications.FileMenu {
@@ -270,19 +273,16 @@ ColumnLayout {
                     }
                 },
                 State {
-                    when: fileInfo.preferredApplication.valid
+                    when: fileInfo.openAction
                     PropertyChanges {
                         target: openButton
-                        text: i18nd("plasma_applet_org.kde.plasma.notifications", "Open with %1", fileInfo.preferredApplication.name)
-                        icon.name: fileInfo.preferredApplication.iconName
-                    }
-                },
-                State {
-                    when: !fileInfo.busy
-                    PropertyChanges {
-                        target: openButton
-                        text: i18nd("plasma_applet_org.kde.plasma.notifications", "Open with…");
-                        icon.name: "system-run"
+                        text: fileInfo.openAction.text
+                        icon.name: fileInfo.openActionIconName
+                        visible: fileInfo.openAction.enabled
+                        onClicked: {
+                            fileInfo.openAction.trigger();
+                            jobItem.fileActionInvoked(fileInfo.openAction);
+                        }
                     }
                 }
             ]
