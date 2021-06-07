@@ -137,37 +137,35 @@ void PipeWireSourceItem::setNodeId(uint nodeId)
 
 QSGNode *PipeWireSourceItem::updatePaintNode(QSGNode *node, QQuickItem::UpdatePaintNodeData *)
 {
-    if (m_createNextTexture) {
-        auto texture = m_createNextTexture();
-        if (!texture) {
-            delete node;
-            return nullptr;
-        }
-
-        if (m_needsRecreateTexture) {
-            delete node;
-            node = nullptr;
-            m_needsRecreateTexture = false;
-        }
-
-        QSGImageNode *textureNode = static_cast<QSGImageNode *>(node);
-        if (!textureNode) {
-            textureNode = window()->createImageNode();
-            textureNode->setOwnsTexture(true);
-            node = textureNode;
-        }
-
-        textureNode->setTexture(texture);
-
-        if (texture) {
-            const auto br = boundingRect().toRect();
-            QRect rect({0, 0}, texture->textureSize().scaled(br.size(), Qt::KeepAspectRatio));
-            rect.moveCenter(br.center());
-
-            textureNode->setRect(rect);
-        }
+    if (Q_UNLIKELY(!m_createNextTexture)) {
+        return node;
     }
-    return node;
+
+    auto texture = m_createNextTexture();
+    if (!texture) {
+        delete node;
+        return nullptr;
+    }
+
+    if (m_needsRecreateTexture) {
+        delete node;
+        node = nullptr;
+        m_needsRecreateTexture = false;
+    }
+
+    QSGImageNode *textureNode = static_cast<QSGImageNode *>(node);
+    if (!textureNode) {
+        textureNode = window()->createImageNode();
+        textureNode->setOwnsTexture(true);
+    }
+    textureNode->setTexture(texture);
+
+    const auto br = boundingRect().toRect();
+    QRect rect({0, 0}, texture->textureSize().scaled(br.size(), Qt::KeepAspectRatio));
+    rect.moveCenter(br.center());
+    textureNode->setRect(rect);
+
+    return textureNode;
 }
 
 QString PipeWireSourceItem::error() const
