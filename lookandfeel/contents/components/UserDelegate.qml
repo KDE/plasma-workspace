@@ -32,7 +32,6 @@ Item {
 
     property bool isCurrent: true
 
-    readonly property var m: model
     property string name
     property string userName
     property string avatarPath
