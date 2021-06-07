@@ -47,7 +47,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <KAuthorized>
 #include <KConfigGroup>
-#include <KDeclarative/KDeclarative>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KUser>
@@ -153,9 +152,6 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype)
     context->setContextProperty(QStringLiteral("rebootOptions"), rebootOptionsMap);
 
     // engine stuff
-    KDeclarative::KDeclarative kdeclarative;
-    kdeclarative.setDeclarativeEngine(engine());
-    kdeclarative.setupEngine(engine());
     engine()->rootContext()->setContextObject(new KLocalizedContext(engine()));
 }
 
