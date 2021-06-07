@@ -199,4 +199,3 @@ void StatusNotifierItemHost::removeSNIService(const QString &service)
     }
 }
 
-#include "statusnotifieritemhost.moc"
