@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 
     KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);
-    QApplication app(argc, argv);
+    QGuiApplication app(argc, argv);
 
     KQuickAddons::QtQuickSettings::init();
 
