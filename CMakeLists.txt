@@ -28,7 +28,6 @@ include(ECMOptionalAddSubdirectory)
 include(ECMQtDeclareLoggingCategory)
 include(ECMQueryQmake)
 include(ECMInstallIcons)
-include(KDEPackageAppTemplates)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
 include(ECMConfiguredInstall)
@@ -265,8 +264,6 @@ add_subdirectory(soliduiserver)
 if(KF5Holidays_FOUND)
     add_subdirectory(plasmacalendarintegration)
 endif()
-
-add_subdirectory(templates)
 
 ki18n_install(po)
 
