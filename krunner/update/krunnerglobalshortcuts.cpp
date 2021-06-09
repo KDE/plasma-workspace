@@ -49,10 +49,12 @@ int main(int argc, char **argv)
 
     KActionCollection shortCutActions(nullptr, oldDesktopFile);
     shortCutActions.setComponentDisplayName(displayName);
-    QAction runCommandAction(displayName);
-    shortCutActions.addAction(QStringLiteral("_launch"), &runCommandAction);
-    QAction runClipboardAction(clipboardActionName);
-    shortCutActions.addAction(QStringLiteral("RunClipboard"), &runClipboardAction);
+    // The actions are intentionally allocated and never cleaned up, because otherwise KGlobalAccel
+    // will mark them as inactive
+    auto runCommandAction = new QAction(displayName);
+    shortCutActions.addAction(QStringLiteral("_launch"), runCommandAction);
+    auto runClipboardAction = new QAction(clipboardActionName);
+    shortCutActions.addAction(QStringLiteral("RunClipboard"), runClipboardAction);
 
     QList<QKeySequence> oldRunCommand;
     QList<QKeySequence> oldRunClipboard;
@@ -61,23 +63,23 @@ int main(int argc, char **argv)
         oldRunClipboard = KGlobalAccel::self()->globalShortcut(oldCompomentName, QStringLiteral("run command on clipboard contents"));
         KGlobalAccel::self()->cleanComponent(oldCompomentName);
     } else if (KGlobalAccel::isComponentActive(oldDesktopFile)) {
-        oldRunCommand = KGlobalAccel::self()->globalShortcut(oldDesktopFile, runCommandAction.objectName());
-        oldRunClipboard = KGlobalAccel::self()->globalShortcut(oldDesktopFile, runClipboardAction.objectName());
+        oldRunCommand = KGlobalAccel::self()->globalShortcut(oldDesktopFile, runCommandAction->objectName());
+        oldRunClipboard = KGlobalAccel::self()->globalShortcut(oldDesktopFile, runClipboardAction->objectName());
         KGlobalAccel::self()->cleanComponent(oldDesktopFile);
     } else {
         return 0;
     }
 
-    shortCutActions.takeAction(&runCommandAction);
-    shortCutActions.takeAction(&runClipboardAction);
+    shortCutActions.takeAction(runCommandAction);
+    shortCutActions.takeAction(runClipboardAction);
     shortCutActions.setComponentName(newDesktopFile);
-    shortCutActions.addActions({&runCommandAction, &runClipboardAction});
+    shortCutActions.addActions({runCommandAction, runClipboardAction});
 
     if (!oldRunCommand.isEmpty()) {
-        KGlobalAccel::self()->setShortcut(&runCommandAction, oldRunCommand, KGlobalAccel::NoAutoloading);
+        KGlobalAccel::self()->setShortcut(runCommandAction, oldRunCommand, KGlobalAccel::NoAutoloading);
     }
     if (!oldRunClipboard.isEmpty()) {
-        KGlobalAccel::self()->setShortcut(&runClipboardAction, oldRunClipboard, KGlobalAccel::NoAutoloading);
+        KGlobalAccel::self()->setShortcut(runClipboardAction, oldRunClipboard, KGlobalAccel::NoAutoloading);
     }
 
     return 0;
