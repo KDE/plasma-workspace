@@ -73,7 +73,7 @@ std::optional<AutostartEntry> AutostartModel::loadDesktopEntry(const QString &fi
 
     const auto lstEntry = grp.readXdgListEntry("OnlyShowIn");
     const bool onlyInPlasma = lstEntry.contains(QLatin1String("KDE"));
-    const QString iconName = config.readIcon();
+    const QString iconName = !config.readIcon().isEmpty() ? config.readIcon() : QStringLiteral("dialog-scripts");
     const auto kind = AutostartScriptDesktopFile::isAutostartScript(config) ? XdgScripts : XdgAutoStart; // .config/autostart load desktop at startup
     const QString tryCommand = grp.readEntry("TryExec");
 
@@ -235,12 +235,14 @@ void AutostartModel::addApplication(const KService::Ptr &service)
         newDeskTopFile->sync();
     }
 
+    const QString iconName = !service->icon().isEmpty() ? service->icon() : QStringLiteral("dialog-scripts");
+
     const auto entry = AutostartEntry{service->name(),
                                       AutostartModel::AutostartEntrySource::XdgAutoStart, // .config/autostart load desktop at startup
                                       true,
                                       desktopPath,
                                       false,
-                                      service->icon()};
+                                      iconName};
 
     int lastApplication = -1;
     for (const AutostartEntry &e : qAsConst(m_entries)) {
