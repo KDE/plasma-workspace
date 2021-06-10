@@ -225,7 +225,7 @@ void AutostartModel::addApplication(const KService::Ptr &service)
         desktopFile.sync();
 
     } else {
-        desktopPath = m_xdgAutoStartPath.filePath(service->desktopEntryName() + QStringLiteral(".desktop"));
+        desktopPath = m_xdgAutoStartPath.filePath(service->storageId());
 
         QFile::remove(desktopPath);
 
