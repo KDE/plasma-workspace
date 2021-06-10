@@ -314,9 +314,7 @@ void UKMETIon::getXMLData(const QString &source)
 // Parses city list and gets the correct city based on ID number
 void UKMETIon::findPlace(const QString &place, const QString &source)
 {
-    /* There's a page= parameter, results are limited to 10 by page */
-    const QUrl url(QLatin1String("https://www.bbc.com/locator/default/en-GB/search.json?search=") + place
-                   + QLatin1String("&filter=international&postcode_unit=false&postcode_district=true"));
+    const QUrl url(QLatin1String("https://open.live.bbc.co.uk/locator/locations?s=") + place + QLatin1String("&format=json"));
 
     KIO::TransferJob *getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
@@ -346,17 +344,20 @@ void UKMETIon::readSearchHTMLData(const QString &source, const QByteArray &html)
 {
     int counter = 2;
 
-    QJsonObject jsonDocumentObject = QJsonDocument::fromJson(html).object();
+    QJsonObject jsonDocumentObject = QJsonDocument::fromJson(html).object().value(QStringLiteral("response")).toObject();
 
     if (!jsonDocumentObject.isEmpty()) {
-        const QJsonArray results = jsonDocumentObject.value(QStringLiteral("results")).toArray();
+        const QJsonArray results = jsonDocumentObject.value(QStringLiteral("locations")).toArray();
 
         for (const QJsonValue &resultValue : results) {
             QJsonObject result = resultValue.toObject();
             const QString id = result.value(QStringLiteral("id")).toString();
-            const QString fullName = result.value(QStringLiteral("fullName")).toString();
+            const QString name = result.value(QStringLiteral("name")).toString();
+            const QString area = result.value(QStringLiteral("container")).toString();
+            const QString country = result.value(QStringLiteral("country")).toString();
 
-            if (!id.isEmpty() && !fullName.isEmpty()) {
+            if (!id.isEmpty() && !name.isEmpty() && !area.isEmpty() && !country.isEmpty()) {
+                const QString fullName = name + QLatin1String(", ") + area + QLatin1String(", ") + country;
                 QString tmp = QLatin1String("bbcukmet|") + fullName;
 
                 // Duplicate places can exist
