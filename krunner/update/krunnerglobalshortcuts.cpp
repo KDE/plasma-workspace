@@ -47,7 +47,7 @@ int main(int argc, char **argv)
                                             .readEntry(QStringLiteral("Name"), //
                                                        QStringLiteral("Run command on clipboard contents"));
 
-    KActionCollection shortCutActions(nullptr, oldDesktopFile);
+    KActionCollection shortCutActions(nullptr, newDesktopFile);
     shortCutActions.setComponentDisplayName(displayName);
     // The actions are intentionally allocated and never cleaned up, because otherwise KGlobalAccel
     // will mark them as inactive
@@ -77,11 +77,6 @@ int main(int argc, char **argv)
         oldRunClipboard = KGlobalAccel::self()->globalShortcut(oldDesktopFile, runClipboardAction->objectName());
         KGlobalAccel::self()->cleanComponent(oldDesktopFile);
     }
-
-    shortCutActions.takeAction(runCommandAction);
-    shortCutActions.takeAction(runClipboardAction);
-    shortCutActions.setComponentName(newDesktopFile);
-    shortCutActions.addActions({runCommandAction, runClipboardAction});
 
     if (!oldRunCommand.isEmpty()) {
         KGlobalAccel::self()->setShortcut(runCommandAction, oldRunCommand, KGlobalAccel::NoAutoloading);
