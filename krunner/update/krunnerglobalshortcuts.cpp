@@ -58,16 +58,24 @@ int main(int argc, char **argv)
 
     QList<QKeySequence> oldRunCommand;
     QList<QKeySequence> oldRunClipboard;
-    if (KGlobalAccel::isComponentActive(oldCompomentName)) {
-        oldRunCommand = KGlobalAccel::self()->globalShortcut(oldCompomentName, QStringLiteral("run command"));
-        oldRunClipboard = KGlobalAccel::self()->globalShortcut(oldCompomentName, QStringLiteral("run command on clipboard contents"));
-        KGlobalAccel::self()->cleanComponent(oldCompomentName);
-    } else if (KGlobalAccel::isComponentActive(oldDesktopFile)) {
+
+    // It can happen that the old component is not active so we do it unconditionally
+    KActionCollection oldActions(nullptr, oldCompomentName);
+    QAction oldRunCommandAction, oldRunClipboardAction;
+    oldActions.addAction(QStringLiteral("run command"), &oldRunCommandAction);
+    oldActions.addAction(QStringLiteral("run command on clipboard contents"), &oldRunClipboardAction);
+    oldRunCommand = KGlobalAccel::self()->globalShortcut(oldCompomentName, oldRunCommandAction.objectName());
+    oldRunClipboard = KGlobalAccel::self()->globalShortcut(oldCompomentName, oldRunClipboardAction.objectName());
+    KGlobalAccel::self()->setShortcut(&oldRunCommandAction, {});
+    KGlobalAccel::self()->setShortcut(&oldRunClipboardAction, {});
+    KGlobalAccel::self()->removeAllShortcuts(&oldRunCommandAction);
+    KGlobalAccel::self()->removeAllShortcuts(&oldRunClipboardAction);
+    KGlobalAccel::self()->cleanComponent(oldCompomentName);
+
+    if (KGlobalAccel::isComponentActive(oldDesktopFile)) {
         oldRunCommand = KGlobalAccel::self()->globalShortcut(oldDesktopFile, runCommandAction->objectName());
         oldRunClipboard = KGlobalAccel::self()->globalShortcut(oldDesktopFile, runClipboardAction->objectName());
         KGlobalAccel::self()->cleanComponent(oldDesktopFile);
-    } else {
-        return 0;
     }
 
     shortCutActions.takeAction(runCommandAction);
