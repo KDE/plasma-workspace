@@ -555,3 +555,10 @@ void StatusNotifierItemSource::contextMenu(int x, int y)
         }
     }
 }
+
+void StatusNotifierItemSource::provideXdgActivationToken(const QString &token)
+{
+    if (m_statusNotifierItemInterface && m_statusNotifierItemInterface->isValid()) {
+        m_statusNotifierItemInterface->ProvideXdgActivationToken(token);
+    }
+}

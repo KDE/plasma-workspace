@@ -514,6 +514,7 @@ PlasmaCore.ColorScope {
             }
 
             PlasmaComponents3.ToolButton {
+                focusPolicy: Qt.TabFocus
                 text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to show/hide virtual keyboard", "Virtual Keyboard")
                 icon.name: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
                 onClicked: {
@@ -527,6 +528,7 @@ PlasmaCore.ColorScope {
             }
 
             PlasmaComponents3.ToolButton {
+                focusPolicy: Qt.TabFocus
                 Accessible.description: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Button to change keyboard layout", "Switch layout")
                 icon.name: "input-keyboard"
 

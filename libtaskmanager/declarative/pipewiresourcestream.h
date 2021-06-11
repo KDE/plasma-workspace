@@ -54,7 +54,7 @@ class PipeWireSourceStream : public QObject
 {
     Q_OBJECT
 public:
-    explicit PipeWireSourceStream(QObject *parent);
+    explicit PipeWireSourceStream(bool dmaBufSupported, QObject *parent);
     ~PipeWireSourceStream();
 
     static void onStreamParamChanged(void *data, uint32_t id, const struct spa_pod *format);
@@ -67,10 +67,7 @@ public:
         return m_error;
     }
 
-    QSize size() const
-    {
-        return QSize(videoFormat.size.width, videoFormat.size.height);
-    }
+    QSize size() const;
     bool createStream(uint nodeid);
     void stop();
     void setActive(bool active);
@@ -82,6 +79,7 @@ Q_SIGNALS:
     void streamReady();
     void startStreaming();
     void stopStreaming();
+    void streamChanged();
     void dmabufTextureReceived(const QVector<DmaBufPlane> &planes, uint32_t format);
     void imageTextureReceived(const QImage &image);
 
@@ -98,5 +96,6 @@ private:
     bool m_stopped = false;
 
     spa_video_info_raw videoFormat;
+    const bool m_dmaBufSupported = false;
     QString m_error;
 };

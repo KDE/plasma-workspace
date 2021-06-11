@@ -48,6 +48,7 @@ private Q_SLOTS:
     void contextMenuReady(QMenu *menu);
 
 private:
+    void performJob();
     StatusNotifierItemSource *m_source;
 };
 

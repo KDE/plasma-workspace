@@ -42,6 +42,7 @@ target_link_libraries(systemtraymodel_static
     KF5::ItemModels
     KF5::Plasma
     KF5::IconThemes
+    KF5::WindowSystem
     dbusmenuqt)
 
 kcoreaddons_add_plugin(org.kde.plasma.private.systemtray SOURCES systemtray.cpp INSTALL_NAMESPACE "plasma/applets")

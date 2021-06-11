@@ -45,6 +45,7 @@ public:
     void secondaryActivate(int x, int y);
     void scroll(int delta, const QString &direction);
     void contextMenu(int x, int y);
+    void provideXdgActivationToken(const QString &token);
 
     QIcon attentionIcon() const;
     QString attentionIconName() const;

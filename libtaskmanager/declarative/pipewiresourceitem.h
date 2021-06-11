@@ -40,6 +40,9 @@ class PipeWireSourceItem : public QQuickItem
     Q_OBJECT
     /// Specify the pipewire node id that we want to play
     Q_PROPERTY(uint nodeId READ nodeId WRITE setNodeId NOTIFY nodeIdChanged)
+
+    /// Reports the original size of the stream
+    Q_PROPERTY(QSize sourceSize READ sourceSize NOTIFY streamChanged)
 public:
     PipeWireSourceItem(QQuickItem *parent = nullptr);
     ~PipeWireSourceItem() override;
@@ -52,18 +55,19 @@ public:
     {
         return m_nodeId;
     }
+    QSize sourceSize() const;
 
     void componentComplete() override;
     void releaseResources() override;
 
 Q_SIGNALS:
+    void streamChanged();
     void nodeIdChanged(uint nodeId);
 
 private:
     void itemChange(ItemChange change, const ItemChangeData &data) override;
     void updateTextureDmaBuf(const QVector<DmaBufPlane> &plane, uint32_t format);
     void updateTextureImage(const QImage &image);
-    void setSize(const QSize &size);
 
     uint m_nodeId = 0;
     std::function<QSGTexture *()> m_createNextTexture;

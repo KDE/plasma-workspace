@@ -18,7 +18,7 @@
  */
 
 #include "statusnotifieritemjob.h"
-#include <iostream>
+#include <KWindowSystem>
 
 StatusNotifierItemJob::StatusNotifierItemJob(StatusNotifierItemSource *source, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent)
     : ServiceJob(source->objectName(), operation, parameters, parent)
@@ -34,6 +34,24 @@ StatusNotifierItemJob::~StatusNotifierItemJob()
 }
 
 void StatusNotifierItemJob::start()
+{
+    if (operationName() == QLatin1String("Scroll")) {
+        performJob();
+        return;
+    }
+
+    QWindow *window = nullptr;
+    const quint32 launchedSerial = KWindowSystem::lastInputSerial(window);
+    connect(KWindowSystem::self(), &KWindowSystem::xdgActivationTokenArrived, this, [this, launchedSerial](quint32 serial, const QString &token) {
+        if (serial == launchedSerial) {
+            m_source->provideXdgActivationToken(token);
+            performJob();
+        }
+    });
+    KWindowSystem::requestXdgActivationToken(window, launchedSerial, m_source->id());
+}
+
+void StatusNotifierItemJob::performJob()
 {
     if (operationName() == QString::fromLatin1("Activate")) {
         m_source->activate(parameters()[QStringLiteral("x")].toInt(), parameters()[QStringLiteral("y")].toInt());
