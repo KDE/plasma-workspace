@@ -9,45 +9,45 @@
     <property name="WindowId" type="i" access="read"/>
 
     <!-- An additional path to add to the theme search path to find the icons specified above. -->
-<!--     <property name="IconThemePath" type="s" access="read"/> -->
-<!--     <property name="Menu" type="o" access="read"/> -->
+    <property name="IconThemePath" type="s" access="read"/>
+    <property name="Menu" type="o" access="read"/>
     <property name="ItemIsMenu" type="b" access="read"/>
 
 
     <!-- main icon -->
     <!-- names are preferred over pixmaps -->
-<!--     <property name="IconName" type="s" access="read"/> -->
+    <property name="IconName" type="s" access="read"/>
 
     <!--struct containing width, height and image data-->
-    <property name="IconPixmap" type="(iiay)" access="read">
+    <property name="IconPixmap" type="a(iiay)" access="read">
       <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusImageVector"/>
     </property>
 
-<!--     <property name="OverlayIconName" type="s" access="read"/> -->
+    <property name="OverlayIconName" type="s" access="read"/>
 
-<!--     <property name="OverlayIconPixmap" type="(iiay)" access="read"> -->
-<!--       <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusImageVector"/> -->
-<!--     </property> -->
+    <property name="OverlayIconPixmap" type="a(iiay)" access="read">
+      <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusImageVector"/>
+    </property>
 
 
     <!-- Requesting attention icon -->
-<!--     <property name="AttentionIconName" type="s" access="read"/> -->
+    <property name="AttentionIconName" type="s" access="read"/>
 
     <!--same definition as image-->
-<!--     <property name="AttentionIconPixmap" type="(iiay)" access="read"> -->
-<!--       <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusImageVector"/> -->
-<!--     </property> -->
+    <property name="AttentionIconPixmap" type="a(iiay)" access="read">
+      <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusImageVector"/>
+    </property>
 
-<!--     <property name="AttentionMovieName" type="s" access="read"/> -->
+    <property name="AttentionMovieName" type="s" access="read"/>
 
 
 
     <!-- tooltip data -->
 
     <!--(iiay) is an image-->
-<!--     <property name="ToolTip" type="(s(iiay)ss)" access="read"> -->
-<!--       <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusToolTipStruct"/> -->
-<!--     </property> -->
+    <property name="ToolTip" type="(sa(iiay)ss)" access="read">
+      <annotation name="org.qtproject.QtDBus.QtTypeName" value="KDbusToolTipStruct"/>
+    </property>
 
 
     <!-- interaction: the systemtray wants the application to do something -->
@@ -83,6 +83,9 @@
     </signal>
 
     <signal name="NewOverlayIcon">
+    </signal>
+
+    <signal name="NewMenu">
     </signal>
 
     <signal name="NewToolTip">
