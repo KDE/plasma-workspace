@@ -61,7 +61,7 @@
     </entry>
     <entry name="MaxClipItems" type="Int">
         <label>Clipboard history size</label>
-        <default>7</default>
+        <default>20</default>
         <min>1</min>
         <max>2048</max>
     </entry>
