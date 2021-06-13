@@ -11,6 +11,7 @@ qt_add_dbus_interface( LOGOUT_GREETER_SRCS ../ksmserver/org.kde.KSMServerInterfa
 add_executable(ksmserver-logout-greeter ${LOGOUT_GREETER_SRCS})
 target_link_libraries(ksmserver-logout-greeter
     PW::KWorkspace
+    Qt::Widgets
     Qt::Quick
     Qt::X11Extras
     Qt::DBus
