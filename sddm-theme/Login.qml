@@ -83,6 +83,8 @@ SessionManagementScreen {
                 }
             }
 
+            visible: userList.currentItem.m.needsPassword
+
             Keys.onEscapePressed: {
                 mainStack.currentItem.forceActiveFocus();
             }
@@ -115,8 +117,9 @@ SessionManagementScreen {
             Layout.preferredHeight: passwordBox.implicitHeight
             Layout.preferredWidth: loginButton.Layout.preferredHeight
 
-            icon.name: "go-next"
+            icon.name: text.length == 0 ? "go-next" : ""
 
+            text: userList.currentItem.m.needsPassword ? "" : i18n("Log In")
             onClicked: startLogin();
         }
     }
