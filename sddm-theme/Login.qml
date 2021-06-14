@@ -115,7 +115,7 @@ SessionManagementScreen {
             id: loginButton
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log In")
             Layout.preferredHeight: passwordBox.implicitHeight
-            Layout.preferredWidth: loginButton.Layout.preferredHeight
+            Layout.preferredWidth: text.length == 0 ? loginButton.Layout.preferredHeight : undefined
 
             icon.name: text.length == 0 ? "go-next" : ""
 
