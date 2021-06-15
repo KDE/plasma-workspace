@@ -125,14 +125,10 @@ QMenu *AppMenuApplet::createMenu(int idx) const
     QAction *action = nullptr;
 
     if (view() == CompactView) {
-        menu = new QMenu();
-        for (int i = 0; i < m_model->rowCount(); i++) {
-            const QModelIndex index = m_model->index(i, 0);
-            const QVariant data = m_model->data(index, AppMenuModel::ActionRole);
-            action = (QAction *)data.value<void *>();
-            menu->addAction(action);
+        auto menuAction = static_cast<QAction*>(m_model->data(QModelIndex(), AppMenuModel::ActionRole).value<void *>());
+        if (menuAction) {
+            menu = menuAction->menu();
         }
-        menu->setAttribute(Qt::WA_DeleteOnClose);
     } else if (view() == FullView) {
         const QModelIndex index = m_model->index(idx, 0);
         const QVariant data = m_model->data(index, AppMenuModel::ActionRole);
