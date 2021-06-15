@@ -234,12 +234,20 @@ QList<QAction *> AppMenuModel::flatActionList()
 
 QVariant AppMenuModel::data(const QModelIndex &index, int role) const
 {
-    const int row = index.row();
-    if (row < 0 || !m_menuAvailable || !m_menu) {
+    if (!m_menuAvailable || !m_menu) {
         return QVariant();
     }
 
+    if (!index.isValid()) {
+        if (role == MenuRole) {
+            return QString();
+        } else if (role == ActionRole) {
+            return QVariant::fromValue((void *)(m_menu->menuAction()));
+        }
+    }
+
     const auto actions = m_menu->actions();
+    const int row = index.row();
     if (row == actions.count() && KWindowSystem::isPlatformWayland()) {
         if (role == MenuRole) {
             return m_searchAction->text();
