@@ -115,6 +115,8 @@ int main(int argc, char *argv[])
     const QString defaultShell = startupConfGroup.readEntry("ShellPackage", qEnvironmentVariable("PLASMA_DEFAULT_SHELL", "org.kde.plasma.desktop"));
 
     bool replace = false;
+
+    ShellCorona *corona;
     {
         QCommandLineParser cliOptions;
 
@@ -163,7 +165,7 @@ int main(int argc, char *argv[])
         QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
         QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
-        ShellCorona *corona = new ShellCorona(&app);
+        corona = new ShellCorona(&app);
         corona->setShell(cliOptions.value(shellPluginOption));
         if (!corona->kPackage().isValid()) {
             qCritical() << "starting invalid corona" << corona->shell();
@@ -246,6 +248,7 @@ int main(int argc, char *argv[])
 
     KDBusService service(KDBusService::Unique | KDBusService::StartupOption(replace ? KDBusService::Replace : 0));
 
+    corona->init();
     SoftwareRendererNotifier::notifyIfRelevant();
 
     return app.exec();

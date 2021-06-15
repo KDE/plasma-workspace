@@ -108,7 +108,10 @@ ShellCorona::ShellCorona(QObject *parent)
     if (!packageName.isEmpty()) {
         m_lookAndFeelPackage.setPath(packageName);
     }
+}
 
+void ShellCorona::init()
+{
     connect(this, &Plasma::Corona::containmentCreated, this, [this](Plasma::Containment *c) {
         executeSetupPlasmoidScript(c, c);
     });
