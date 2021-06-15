@@ -80,6 +80,7 @@ public:
     ~ShellCorona() override;
 
     KPackage::Package lookAndFeelPackage();
+    void init();
 
     /**
      * Where to save global configuration that doesn't have anything to do with the scene (e.g. views)
