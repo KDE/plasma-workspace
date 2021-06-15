@@ -35,8 +35,6 @@ class Translations : public KQuickAddons::ManagedConfigModule
     Q_OBJECT
 
     Q_PROPERTY(QAbstractItemModel *translationsModel READ translationsModel CONSTANT)
-    Q_PROPERTY(QAbstractItemModel *selectedTranslationsModel READ selectedTranslationsModel CONSTANT)
-    Q_PROPERTY(QAbstractItemModel *availableTranslationsModel READ availableTranslationsModel CONSTANT)
     Q_PROPERTY(bool everSaved READ everSaved NOTIFY everSavedChanged)
 
 public:
@@ -44,8 +42,6 @@ public:
     ~Translations() override;
 
     QAbstractItemModel *translationsModel() const;
-    QAbstractItemModel *selectedTranslationsModel() const;
-    QAbstractItemModel *availableTranslationsModel() const;
 
     bool everSaved() const;
     TranslationsSettings *settings() const;
@@ -66,8 +62,6 @@ private:
 
     TranslationsData *m_data;
     TranslationsModel *m_translationsModel;
-    SelectedTranslationsModel *m_selectedTranslationsModel;
-    AvailableTranslationsModel *m_availableTranslationsModel;
 
     bool m_everSaved;
 };

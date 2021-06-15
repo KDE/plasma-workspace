@@ -35,20 +35,14 @@ Translations::Translations(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)
     , m_data(new TranslationsData(this))
     , m_translationsModel(new TranslationsModel(this))
-    , m_selectedTranslationsModel(new SelectedTranslationsModel(this))
-    , m_availableTranslationsModel(new AvailableTranslationsModel(this))
     , m_everSaved(false)
 {
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_translations"), i18n("Language"), QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
+    auto *about = new KAboutData(QStringLiteral("kcm_translations"), i18n("Language"), QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
     setAboutData(about);
 
     setButtons(Apply | Default);
 
-    connect(m_selectedTranslationsModel, &SelectedTranslationsModel::selectedLanguagesChanged, this, &Translations::selectedLanguagesChanged);
-    connect(m_selectedTranslationsModel,
-            &SelectedTranslationsModel::selectedLanguagesChanged,
-            m_availableTranslationsModel,
-            &AvailableTranslationsModel::setSelectedLanguages);
+    connect(m_translationsModel, &TranslationsModel::selectedLanguagesChanged, this, &Translations::selectedLanguagesChanged);
 }
 
 Translations::~Translations()
@@ -60,16 +54,6 @@ QAbstractItemModel *Translations::translationsModel() const
     return m_translationsModel;
 }
 
-QAbstractItemModel *Translations::selectedTranslationsModel() const
-{
-    return m_selectedTranslationsModel;
-}
-
-QAbstractItemModel *Translations::availableTranslationsModel() const
-{
-    return m_availableTranslationsModel;
-}
-
 bool Translations::everSaved() const
 {
     return m_everSaved;
@@ -78,8 +62,7 @@ bool Translations::everSaved() const
 void Translations::load()
 {
     KQuickAddons::ManagedConfigModule::load();
-    m_availableTranslationsModel->setSelectedLanguages(settings()->configuredLanguages());
-    m_selectedTranslationsModel->setSelectedLanguages(settings()->configuredLanguages());
+    m_translationsModel->setSelectedLanguages(settings()->configuredLanguages());
 }
 
 void Translations::save()
@@ -92,21 +75,19 @@ void Translations::save()
 void Translations::defaults()
 {
     KQuickAddons::ManagedConfigModule::defaults();
-    m_availableTranslationsModel->setSelectedLanguages(settings()->configuredLanguages());
-    m_selectedTranslationsModel->setSelectedLanguages(settings()->configuredLanguages());
+    m_translationsModel->setSelectedLanguages(settings()->configuredLanguages());
 }
 
 void Translations::selectedLanguagesChanged()
 {
-    auto configuredLanguages = m_selectedTranslationsModel->selectedLanguages();
+    auto configuredLanguages = m_translationsModel->selectedLanguages();
 
-    const auto missingLanguages = m_selectedTranslationsModel->missingLanguages();
+    const auto missingLanguages = m_translationsModel->missingLanguages();
     for (const auto &lang : missingLanguages) {
         configuredLanguages.removeOne(lang);
     }
 
     settings()->setConfiguredLanguages(configuredLanguages);
-    m_selectedTranslationsModel->setSelectedLanguages(configuredLanguages);
 }
 
 TranslationsSettings *Translations::settings() const
@@ -116,7 +97,7 @@ TranslationsSettings *Translations::settings() const
 
 bool Translations::isSaveNeeded() const
 {
-    return !m_selectedTranslationsModel->missingLanguages().isEmpty();
+    return !m_translationsModel->missingLanguages().isEmpty();
 }
 
 #include "translations.moc"

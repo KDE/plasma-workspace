@@ -5,7 +5,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_translations\")
 
 ########### next target ###############
 
-set(kcm_translations_PART_SRCS translations.cpp translationsmodel.cpp translationssettings.cpp)
+set(kcm_translations_PART_SRCS translations.cpp translationsmodel.cpp translationssettings.cpp language.cpp)
 
 kcmutils_generate_module_data(
     kcm_translations_PART_SRCS
