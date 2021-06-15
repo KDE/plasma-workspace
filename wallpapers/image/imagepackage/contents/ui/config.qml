@@ -26,7 +26,6 @@ import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.newstuff 1.62 as NewStuff
-import org.kde.draganddrop 2.0 as DragDrop
 import org.kde.kcm 1.5 as KCM
 import org.kde.kirigami 2.12 as Kirigami
 
@@ -433,17 +432,17 @@ ColumnLayout {
         }
     }
 
-    DragDrop.DropArea {
+    DropArea {
         Layout.fillWidth: true
         Layout.fillHeight: true
 
-        onDragEnter: {
-            if (!event.mimeData.hasUrls) {
-                event.ignore();
+        onEntered: {
+            if (drag.hasUrls) {
+                event.accept();
             }
         }
-        onDrop: {
-            event.mimeData.urls.forEach(function (url) {
+        onDropped: {
+            drop.urls.forEach(function (url) {
                 if (url.indexOf("file://") === 0) {
                     var path = url.substr(7); // 7 is length of "file://"
                     if (configDialog.currentWallpaper === "org.kde.image") {
