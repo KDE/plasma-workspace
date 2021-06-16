@@ -247,6 +247,7 @@ add_subdirectory(kioslave)
 add_subdirectory(ktimezoned)
 add_subdirectory(menu)
 add_subdirectory(phonon)
+add_subdirectory(settings-open)
 
 # This ensures pressing the eject button on a CD drive ejects the disc
 # It listens to the Solid::OpticalDrive::ejectPressed signal that is only

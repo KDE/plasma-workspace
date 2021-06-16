@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Open System Settings
+MimeType=x-scheme-handler/systemsettings
+Exec=settings-open %U
+Icon=systemsettings
+Type=Application
+NoDisplay=true
