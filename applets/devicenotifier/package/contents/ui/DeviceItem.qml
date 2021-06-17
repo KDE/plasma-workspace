@@ -44,7 +44,7 @@ PlasmaExtras.ExpandableListItem {
     readonly property double totalSpace: sdSource.data[udi] && sdSource.data[udi]["Size"] ? sdSource.data[udi]["Size"] : -1.0
     property bool freeSpaceKnown: freeSpace > 0 && totalSpace > 0
 
-    readonly property bool isRootVolume: sdSource.data[udi]["File Path"] ? sdSource.data[udi]["File Path"] == "/" : false
+    readonly property bool isRootVolume: (sdSource.data[udi] != undefined && sdSource.data[udi]["File Path"]) ? sdSource.data[udi]["File Path"] == "/" : false
 
     onOperationResultChanged: {
         if (!popupIconTimer.running) {
@@ -196,7 +196,7 @@ PlasmaExtras.ExpandableListItem {
 
     defaultActionButtonAction: QQC2.Action {
         icon.name: {
-            if (!sdSource.data[udi].Removable) {
+            if (!(sdSource.data[udi] != undefined && sdSource.data[udi].Removable)) {
                 return "document-open-folder"
             } else {
                 return isMounted ? "media-eject" : "document-open-folder"
@@ -204,7 +204,7 @@ PlasmaExtras.ExpandableListItem {
         }
         text: {
             // It's possible for the root volume to be on a removable disk
-            if (!sdSource.data[udi].Removable || deviceItem.isRootVolume) {
+            if (!(sdSource.data[udi] != undefined && sdSource.data[udi].Removable) || deviceItem.isRootVolume) {
                 return i18n("Open in File Manager")
             } else {
                 var types = model["Device Types"];
@@ -257,7 +257,7 @@ PlasmaExtras.ExpandableListItem {
         icon.name: "media-mount"
 
         // Only show for unmounted removable devices
-        enabled: sdSource.data[udi].Removable && !deviceItem.isMounted
+        enabled: (sdSource.data[udi] != undefined && sdSource.data[udi].Removable) && !deviceItem.isMounted
 
         onTriggered: {
             var service = sdSource.serviceForSource(udi);
