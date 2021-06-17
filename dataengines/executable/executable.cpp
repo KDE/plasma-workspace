@@ -72,6 +72,6 @@ bool ExecutableEngine::sourceRequestEvent(const QString &source)
     return true;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(executable, ExecutableEngine, "plasma-dataengine-executable.json")
+K_PLUGIN_CLASS_WITH_JSON(ExecutableEngine, "plasma-dataengine-executable.json")
 
 #include "executable.moc"

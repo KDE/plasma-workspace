@@ -191,6 +191,6 @@ void Mpris2Engine::createMultiplexer()
     addSource(m_multiplexer.data());
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(mpris2, Mpris2Engine, "plasma-dataengine-mpris2.json")
+K_PLUGIN_CLASS_WITH_JSON(Mpris2Engine, "plasma-dataengine-mpris2.json")
 
 #include "mpris2engine.moc"

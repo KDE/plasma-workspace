@@ -186,6 +186,6 @@ void SystemMonitorEngine::sensorLost(int)
     m_waitingFor--;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(systemmonitor, SystemMonitorEngine, "plasma-dataengine-systemmonitor.json")
+K_PLUGIN_CLASS_WITH_JSON(SystemMonitorEngine, "plasma-dataengine-systemmonitor.json")
 
 #include "systemmonitor.moc"

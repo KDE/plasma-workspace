@@ -1015,6 +1015,6 @@ void UKMETIon::dataUpdated(const QString &sourceName, const Plasma::DataEngine::
     }
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(bbcukmet, UKMETIon, "ion-bbcukmet.json")
+K_PLUGIN_CLASS_WITH_JSON(UKMETIon, "ion-bbcukmet.json")
 
 #include "ion_bbcukmet.moc"

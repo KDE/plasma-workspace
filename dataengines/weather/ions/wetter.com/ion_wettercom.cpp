@@ -790,6 +790,6 @@ int WeatherData::ForecastPeriod::getMinTemp(const QVector<WeatherData::ForecastI
     return result;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(wettercom, WetterComIon, "ion-wettercom.json")
+K_PLUGIN_CLASS_WITH_JSON(WetterComIon, "ion-wettercom.json")
 
 #include "ion_wettercom.moc"

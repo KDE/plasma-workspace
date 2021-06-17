@@ -89,6 +89,6 @@ void MouseEngine::updateCursorName(const QString &name)
     setData(QLatin1String("Name"), QVariant(name));
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(mouse, MouseEngine, "plasma-dataengine-mouse.json")
+K_PLUGIN_CLASS_WITH_JSON(MouseEngine, "plasma-dataengine-mouse.json")
 
 #include "mouseengine.moc"

@@ -146,6 +146,6 @@ void Geolocation::actuallySetData()
     setData(SOURCE, m_data);
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(geolocation, Geolocation, "plasma-dataengine-geolocation.json")
+K_PLUGIN_CLASS_WITH_JSON(Geolocation, "plasma-dataengine-geolocation.json")
 
 #include "geolocation.moc"

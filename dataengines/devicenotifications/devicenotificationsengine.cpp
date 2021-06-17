@@ -52,6 +52,6 @@ void DeviceNotificationsEngine::clearNotification(const QString &udi)
     removeSource(QStringLiteral("%1 notification").arg(udi));
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(devicenotifications, DeviceNotificationsEngine, "plasma-dataengine-devicenotifications.json")
+K_PLUGIN_CLASS_WITH_JSON(DeviceNotificationsEngine, "plasma-dataengine-devicenotifications.json")
 
 #include "devicenotificationsengine.moc"

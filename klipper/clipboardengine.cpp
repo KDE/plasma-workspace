@@ -57,6 +57,6 @@ Plasma::Service *ClipboardEngine::serviceForSource(const QString &source)
     return service;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(org.kde.plasma.clipboard, ClipboardEngine, "plasma-dataengine-clipboard.json")
+K_PLUGIN_CLASS_WITH_JSON(ClipboardEngine, "plasma-dataengine-clipboard.json")
 
 #include "clipboardengine.moc"

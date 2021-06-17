@@ -256,6 +256,6 @@ bool DictEngine::sourceRequestEvent(const QString &query)
     return true;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(dict, DictEngine, "plasma-dataengine-dict.json")
+K_PLUGIN_CLASS_WITH_JSON(DictEngine, "plasma-dataengine-dict.json")
 
 #include "dictengine.moc"

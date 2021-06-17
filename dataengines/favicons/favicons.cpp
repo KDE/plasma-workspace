@@ -66,6 +66,6 @@ void FaviconsEngine::error(FaviconProvider *provider)
     provider->deleteLater();
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(favicons, FaviconsEngine, "plasma-dataengine-favicons.json")
+K_PLUGIN_CLASS_WITH_JSON(FaviconsEngine, "plasma-dataengine-favicons.json")
 
 #include "favicons.moc"

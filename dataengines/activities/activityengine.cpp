@@ -253,6 +253,6 @@ Plasma::Service *ActivityEngine::serviceForSource(const QString &source)
     return service;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(activities, ActivityEngine, "plasma-dataengine-activities.json")
+K_PLUGIN_CLASS_WITH_JSON(ActivityEngine, "plasma-dataengine-activities.json")
 
 #include "activityengine.moc"

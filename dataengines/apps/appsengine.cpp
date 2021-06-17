@@ -83,6 +83,6 @@ void AppsEngine::addApp(KService::Ptr app)
     addSource(appSource);
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(apps, AppsEngine, "plasma-dataengine-apps.json")
+K_PLUGIN_CLASS_WITH_JSON(AppsEngine, "plasma-dataengine-apps.json")
 
 #include "appsengine.moc"

@@ -156,6 +156,6 @@ void FileBrowserEngine::clearData(const QString &path)
     }
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(filebrowser, FileBrowserEngine, "plasma-dataengine-filebrowser.json")
+K_PLUGIN_CLASS_WITH_JSON(FileBrowserEngine, "plasma-dataengine-filebrowser.json")
 
 #include "filebrowserengine.moc"

@@ -46,6 +46,6 @@ Plasma::Service *PlacesEngine::serviceForSource(const QString &source)
     return DataEngine::serviceForSource(source);
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(places, PlacesEngine, "plasma-dataengine-places.json")
+K_PLUGIN_CLASS_WITH_JSON(PlacesEngine, "plasma-dataengine-places.json")
 
 #include "placesengine.moc"

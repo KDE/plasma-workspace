@@ -280,6 +280,6 @@ void HotplugEngine::onDeviceRemoved(const QString &udi)
     removeSource(udi);
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(hotplug, HotplugEngine, "plasma-dataengine-hotplug.json")
+K_PLUGIN_CLASS_WITH_JSON(HotplugEngine, "plasma-dataengine-hotplug.json")
 
 #include "hotplugengine.moc"

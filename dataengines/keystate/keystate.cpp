@@ -137,6 +137,6 @@ void KeyStatesEngine::keyRemoved(Qt::Key key)
     }
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(keystate, KeyStatesEngine, "plasma-dataengine-keystate.json")
+K_PLUGIN_CLASS_WITH_JSON(KeyStatesEngine, "plasma-dataengine-keystate.json")
 
 #include "keystate.moc"

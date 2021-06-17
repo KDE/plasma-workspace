@@ -1635,6 +1635,6 @@ void EnvCanadaIon::dataUpdated(const QString &sourceName, const Plasma::DataEngi
     }
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(envcan, EnvCanadaIon, "ion-envcan.json")
+K_PLUGIN_CLASS_WITH_JSON(EnvCanadaIon, "ion-envcan.json")
 
 #include "ion_envcan.moc"

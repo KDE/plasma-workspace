@@ -246,6 +246,6 @@ QSharedPointer<NotificationInhibiton> NotificationsEngine::createInhibition(cons
     return rc;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(notifications, NotificationsEngine, "plasma-dataengine-notifications.json")
+K_PLUGIN_CLASS_WITH_JSON(NotificationsEngine, "plasma-dataengine-notifications.json")
 
 #include "notificationsengine.moc"

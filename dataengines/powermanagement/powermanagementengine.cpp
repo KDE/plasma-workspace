@@ -710,6 +710,6 @@ void PowermanagementEngine::chargeStopThresholdChanged(int threshold)
     setData(QStringLiteral("Battery"), QStringLiteral("Charge Stop Threshold"), threshold);
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(powermanagement, PowermanagementEngine, "plasma-dataengine-powermanagement.json")
+K_PLUGIN_CLASS_WITH_JSON(PowermanagementEngine, "plasma-dataengine-powermanagement.json")
 
 #include "powermanagementengine.moc"

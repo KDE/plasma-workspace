@@ -917,6 +917,6 @@ void NOAAIon::dataUpdated(const QString &sourceName, const Plasma::DataEngine::D
     }
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(noaa, NOAAIon, "ion-noaa.json")
+K_PLUGIN_CLASS_WITH_JSON(NOAAIon, "ion-noaa.json")
 
 #include "ion_noaa.moc"

@@ -685,6 +685,6 @@ void SolidDeviceEngine::deviceChanged(const QString &udi, const QString &propert
     updateSourceEvent(udi);
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(soliddevice, SolidDeviceEngine, "plasma-dataengine-soliddevice.json")
+K_PLUGIN_CLASS_WITH_JSON(SolidDeviceEngine, "plasma-dataengine-soliddevice.json")
 
 #include "soliddeviceengine.moc"

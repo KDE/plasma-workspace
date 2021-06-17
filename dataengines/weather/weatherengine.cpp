@@ -223,6 +223,6 @@ IonInterface *WeatherEngine::ionForSource(const QString &source, QString *ionNam
     return result;
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(weather, WeatherEngine, "plasma-dataengine-weather.json")
+K_PLUGIN_CLASS_WITH_JSON(WeatherEngine, "plasma-dataengine-weather.json")
 
 #include "weatherengine.moc"

@@ -269,6 +269,6 @@ void KuiserverEngine::updateEta(Job *job)
     setData(source, QStringLiteral("eta"), remaining / job->speed());
 }
 
-K_EXPORT_PLASMA_DATAENGINE_WITH_JSON(kuiserver, KuiserverEngine, "plasma-dataengine-applicationjobs.json")
+K_PLUGIN_CLASS_WITH_JSON(KuiserverEngine, "plasma-dataengine-applicationjobs.json")
 
 #include "kuiserverengine.moc"
