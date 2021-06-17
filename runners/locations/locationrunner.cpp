@@ -34,7 +34,7 @@
 #include <KUriFilter>
 #include <QDebug>
 
-K_EXPORT_PLASMA_RUNNER_WITH_JSON(LocationsRunner, "plasma-runner-locations.json")
+K_PLUGIN_CLASS_WITH_JSON(LocationsRunner, "plasma-runner-locations.json")
 
 LocationsRunner::LocationsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
     : Plasma::AbstractRunner(parent, metaData, args)

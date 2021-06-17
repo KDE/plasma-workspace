@@ -27,7 +27,7 @@
 
 #include "screensaver_interface.h"
 
-K_EXPORT_PLASMA_RUNNER_WITH_JSON(SessionRunner, "plasma-runner-sessions.json")
+K_PLUGIN_CLASS_WITH_JSON(SessionRunner, "plasma-runner-sessions.json")
 
 SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
     : Plasma::AbstractRunner(parent, metaData, args)

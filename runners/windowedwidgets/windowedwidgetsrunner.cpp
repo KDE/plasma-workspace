@@ -31,7 +31,7 @@
 #include <Plasma/PluginLoader>
 #include <QMutexLocker>
 
-K_EXPORT_PLASMA_RUNNER_WITH_JSON(WindowedWidgetsRunner, "plasma-runner-windowedwidgets.json")
+K_PLUGIN_CLASS_WITH_JSON(WindowedWidgetsRunner, "plasma-runner-windowedwidgets.json")
 
 WindowedWidgetsRunner::WindowedWidgetsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
     : Plasma::AbstractRunner(parent, metaData, args)

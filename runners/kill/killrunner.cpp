@@ -31,7 +31,7 @@
 #include <processcore/process.h>
 #include <processcore/processes.h>
 
-K_EXPORT_PLASMA_RUNNER_WITH_JSON(KillRunner, "plasma-runner-kill.json")
+K_PLUGIN_CLASS_WITH_JSON(KillRunner, "plasma-runner-kill.json")
 
 KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
     : Plasma::AbstractRunner(parent, metaData, args)

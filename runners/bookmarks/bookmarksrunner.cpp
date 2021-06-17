@@ -36,7 +36,7 @@
 #include "bookmarksrunner_defs.h"
 #include "browserfactory.h"
 
-K_EXPORT_PLASMA_RUNNER_WITH_JSON(BookmarksRunner, "plasma-runner-bookmarks.json")
+K_PLUGIN_CLASS_WITH_JSON(BookmarksRunner, "plasma-runner-bookmarks.json")
 
 BookmarksRunner::BookmarksRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
     : Plasma::AbstractRunner(parent, metaData, args)

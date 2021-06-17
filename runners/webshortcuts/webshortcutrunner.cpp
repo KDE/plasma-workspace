@@ -174,6 +174,6 @@ void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::
     }
 }
 
-K_EXPORT_PLASMA_RUNNER_WITH_JSON(WebshortcutRunner, "plasma-runner-webshortcuts.json")
+K_PLUGIN_CLASS_WITH_JSON(WebshortcutRunner, "plasma-runner-webshortcuts.json")
 
 #include "webshortcutrunner.moc"
