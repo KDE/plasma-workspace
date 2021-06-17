@@ -139,6 +139,6 @@ PlasmaQuick::AppletQuickItem *PanelSpacer::containmentGraphicObject() const
     return containment()->property("_plasma_graphicObject").value<PlasmaQuick::AppletQuickItem *>();
 }
 
-K_EXPORT_PLASMA_APPLET_WITH_JSON(panelspacer, PanelSpacer, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(PanelSpacer, "metadata.json")
 
 #include "panelspacer.moc"

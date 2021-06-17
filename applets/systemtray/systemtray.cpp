@@ -379,6 +379,6 @@ void SystemTray::stopApplet(const QString &pluginId)
     }
 }
 
-K_EXPORT_PLASMA_APPLET_WITH_JSON(systemtray, SystemTray, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(SystemTray, "metadata.json")
 
 #include "systemtray.moc"

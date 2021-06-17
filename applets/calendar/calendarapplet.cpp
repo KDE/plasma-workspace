@@ -37,6 +37,6 @@ int CalendarApplet::weekNumber(const QDateTime &dateTime) const
     return dateTime.date().weekNumber();
 }
 
-K_EXPORT_PLASMA_APPLET_WITH_JSON(calendar, CalendarApplet, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(CalendarApplet, "metadata.json")
 
 #include "calendarapplet.moc"

@@ -589,6 +589,6 @@ void IconApplet::setLocalPath(const QString &localPath)
     config().writeEntry(QStringLiteral("localPath"), localPath);
 }
 
-K_EXPORT_PLASMA_APPLET_WITH_JSON(icon, IconApplet, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(IconApplet, "metadata.json")
 
 #include "iconapplet.moc"

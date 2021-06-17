@@ -191,6 +191,6 @@ void NotificationApplet::forceActivateWindow(QWindow *window)
     }
 }
 
-K_EXPORT_PLASMA_APPLET_WITH_JSON(icon, NotificationApplet, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(NotificationApplet, "metadata.json")
 
 #include "notificationapplet.moc"

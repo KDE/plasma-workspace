@@ -301,6 +301,6 @@ bool AppMenuApplet::eventFilter(QObject *watched, QEvent *event)
     return false;
 }
 
-K_EXPORT_PLASMA_APPLET_WITH_JSON(appmenu, AppMenuApplet, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(AppMenuApplet, "metadata.json")
 
 #include "appmenuapplet.moc"

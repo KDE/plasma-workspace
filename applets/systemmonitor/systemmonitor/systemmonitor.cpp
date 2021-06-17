@@ -100,6 +100,6 @@ void SystemMonitor::openSystemMonitor()
     job->start();
 }
 
-K_EXPORT_PLASMA_APPLET_WITH_JSON(systemmonitor, SystemMonitor, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(SystemMonitor, "metadata.json")
 
 #include "systemmonitor.moc"

@@ -153,6 +153,6 @@ QQuickItem *SystemTrayContainer::internalSystray()
     return m_internalSystray;
 }
 
-K_EXPORT_PLASMA_APPLET_WITH_JSON(systemtraycontainer, SystemTrayContainer, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(SystemTrayContainer, "metadata.json")
 
 #include "systemtraycontainer.moc"
