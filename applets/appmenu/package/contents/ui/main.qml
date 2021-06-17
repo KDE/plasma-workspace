@@ -25,6 +25,7 @@ import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.private.appmenu 1.0 as AppMenuPrivate
+import org.kde.kirigami 2.5 as Kirigami
 
 Item {
     id: root
@@ -118,19 +119,8 @@ Item {
 
                 Layout.fillWidth: root.vertical
                 Layout.fillHeight: !root.vertical
-                text: {
-                    var text = activeMenu;
-
-                    var alt = keystateSource.data.Alt;
-                    if (!alt || !alt.Pressed) {
-                        // StyleHelpers.removeMnemonics
-                        text = text.replace(/([^&]*)&(.)([^&]*)/g, function (match, p1, p2, p3) {
-                            return p1.concat(p2, p3);
-                        });
-                    }
-
-                    return text;
-                }
+                text: activeMenu
+                Kirigami.MnemonicData.active: keystateSource.data.Alt && keystateSource.data.Alt.Pressed
                 // fake highlighted
                 checkable: plasmoid.nativeInterface.currentIndex === index
                 checked: checkable
