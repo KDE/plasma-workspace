@@ -118,6 +118,6 @@ void AppLauncher::save(KConfigGroup &config)
     config.writeEntry(QStringLiteral("showAppsByName"), m_showAppsByName);
 }
 
-K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(applauncher, AppLauncher, "plasma-containmentactions-applauncher.json")
+K_PLUGIN_CLASS_WITH_JSON(AppLauncher, "plasma-containmentactions-applauncher.json")
 
 #include "launch.moc"

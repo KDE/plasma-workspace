@@ -274,6 +274,6 @@ void SwitchWindow::doSwitch(bool up)
     }
 }
 
-K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(switchwindow, SwitchWindow, "plasma-containmentactions-switchwindow.json")
+K_PLUGIN_CLASS_WITH_JSON(SwitchWindow, "plasma-containmentactions-switchwindow.json")
 
 #include "switch.moc"

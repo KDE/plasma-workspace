@@ -99,6 +99,6 @@ void SwitchActivity::performPreviousAction()
     m_controller.setCurrentActivity(activities[i]);
 }
 
-K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(switchactivity, SwitchActivity, "plasma-containmentactions-switchactivity.json")
+K_PLUGIN_CLASS_WITH_JSON(SwitchActivity, "plasma-containmentactions-switchactivity.json")
 
 #include "switch.moc"

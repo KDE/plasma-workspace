@@ -303,6 +303,6 @@ void ContextMenu::save(KConfigGroup &config)
     }
 }
 
-K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(contextmenu, ContextMenu, "plasma-containmentactions-contextmenu.json")
+K_PLUGIN_CLASS_WITH_JSON(ContextMenu, "plasma-containmentactions-contextmenu.json")
 
 #include "menu.moc"

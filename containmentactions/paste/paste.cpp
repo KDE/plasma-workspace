@@ -70,6 +70,6 @@ void Paste::doPaste()
         ->invokeMethod(graphicObject, "processMimeData", Qt::DirectConnection, Q_ARG(QMimeData *, mimeData), Q_ARG(int, pos.x()), Q_ARG(int, pos.y()));
 }
 
-K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(paste, Paste, "plasma-containmentactions-paste.json")
+K_PLUGIN_CLASS_WITH_JSON(Paste, "plasma-containmentactions-paste.json")
 
 #include "paste.moc"

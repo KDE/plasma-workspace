@@ -125,6 +125,6 @@ void SwitchDesktop::performPreviousAction()
     m_virtualDesktopInfo->requestActivate(desktopIds.at(previousDesktopIndex));
 }
 
-K_EXPORT_PLASMA_CONTAINMENTACTIONS_WITH_JSON(switchdesktop, SwitchDesktop, "plasma-containmentactions-switchdesktop.json")
+K_PLUGIN_CLASS_WITH_JSON(SwitchDesktop, "plasma-containmentactions-switchdesktop.json")
 
 #include "desktop.moc"
