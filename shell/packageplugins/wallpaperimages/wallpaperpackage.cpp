@@ -76,6 +76,6 @@ void WallpaperPackage::pathChanged(KPackage::Package *package)
     guard = false;
 }
 
-K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(WallpaperPackage, "plasma-packagestructure-wallpaperimages.json")
+K_PLUGIN_CLASS_WITH_JSON(WallpaperPackage, "plasma-packagestructure-wallpaperimages.json")
 
 #include "wallpaperpackage.moc"

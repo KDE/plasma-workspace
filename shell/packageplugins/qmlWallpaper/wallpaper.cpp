@@ -66,6 +66,6 @@ void QmlWallpaperPackage::initPackage(KPackage::Package *package)
     package->addDirectoryDefinition("translations", QStringLiteral("locale"), i18n("Translations"));
 }
 
-K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(QmlWallpaperPackage, "plasma-packagestructure-wallpaper.json")
+K_PLUGIN_CLASS_WITH_JSON(QmlWallpaperPackage, "plasma-packagestructure-wallpaper.json")
 
 #include "wallpaper.moc"

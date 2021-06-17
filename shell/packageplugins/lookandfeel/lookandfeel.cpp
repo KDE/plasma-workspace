@@ -104,6 +104,6 @@ void LookAndFeelPackage::pathChanged(KPackage::Package *package)
     }
 }
 
-K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(LookAndFeelPackage, "plasma-packagestructure-lookandfeel.json")
+K_PLUGIN_CLASS_WITH_JSON(LookAndFeelPackage, "plasma-packagestructure-lookandfeel.json")
 
 #include "lookandfeel.moc"

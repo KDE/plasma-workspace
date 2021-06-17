@@ -29,6 +29,6 @@ void LayoutTemplatePackage::initPackage(KPackage::Package *package)
     package->setRequired("mainscript", true);
 }
 
-K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(LayoutTemplatePackage, "plasma-packagestructure-layouttemplate.json")
+K_PLUGIN_CLASS_WITH_JSON(LayoutTemplatePackage, "plasma-packagestructure-layouttemplate.json")
 
 #include "layouttemplate.moc"

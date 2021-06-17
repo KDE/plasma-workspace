@@ -97,6 +97,6 @@ void ShellPackage::pathChanged(KPackage::Package *package)
     }
 }
 
-K_EXPORT_KPACKAGE_PACKAGE_WITH_JSON(ShellPackage, "plasma-packagestructure-plasma-shell.json")
+K_PLUGIN_CLASS_WITH_JSON(ShellPackage, "plasma-packagestructure-plasma-shell.json")
 
 #include "shellpackage.moc"
