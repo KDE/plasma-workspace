@@ -119,7 +119,7 @@ void PipeWireSourceItem::setNodeId(uint nodeId)
             return nullptr;
         };
     } else {
-        m_stream.reset(new PipeWireSourceStream(true, this));
+        m_stream.reset(new PipeWireSourceStream(this));
         m_stream->createStream(m_nodeId);
         if (!m_stream->error().isEmpty()) {
             m_stream.reset(nullptr);
@@ -130,7 +130,6 @@ void PipeWireSourceItem::setNodeId(uint nodeId)
 
         connect(m_stream.data(), &PipeWireSourceStream::dmabufTextureReceived, this, &PipeWireSourceItem::updateTextureDmaBuf);
         connect(m_stream.data(), &PipeWireSourceStream::imageTextureReceived, this, &PipeWireSourceItem::updateTextureImage);
-        connect(m_stream.data(), &PipeWireSourceStream::streamChanged, this, &PipeWireSourceItem::streamChanged);
     }
 
     Q_EMIT nodeIdChanged(nodeId);
@@ -303,9 +302,4 @@ void PipeWireSourceItem::componentComplete()
     if (m_stream)
         m_stream->setActive(isVisible());
     QQuickItem::componentComplete();
-}
-
-QSize PipeWireSourceItem::sourceSize() const
-{
-    return m_stream ? m_stream->size() : QSize();
 }

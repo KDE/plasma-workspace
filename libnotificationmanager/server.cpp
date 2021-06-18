@@ -26,7 +26,6 @@
 
 #include "debug.h"
 
-#include <KWindowSystem>
 #include <QDebug>
 
 using namespace NotificationManager;
@@ -78,18 +77,7 @@ void Server::closeNotification(uint notificationId, CloseReason reason)
 
 void Server::invokeAction(uint notificationId, const QString &actionName)
 {
-    QWindow *window = nullptr;
-    const int launchedSerial = KWindowSystem::lastInputSerial(window);
-    connect(KWindowSystem::self(),
-            &KWindowSystem::xdgActivationTokenArrived,
-            this,
-            [this, launchedSerial, notificationId, actionName](int tokenSerial, const QString &token) {
-                if (tokenSerial == launchedSerial) {
-                    emit d->ActivationToken(notificationId, token);
-                    emit d->ActionInvoked(notificationId, actionName);
-                }
-            });
-    KWindowSystem::requestXdgActivationToken(window, launchedSerial, {});
+    emit d->ActionInvoked(notificationId, actionName);
 }
 
 void Server::reply(const QString &dbusService, uint notificationId, const QString &text)

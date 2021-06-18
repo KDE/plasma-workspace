@@ -81,10 +81,6 @@ void PipeWireSourceStream::onStreamParamChanged(void *data, uint32_t id, const s
     uint8_t paramsBuffer[1024];
     spa_pod_builder pod_builder = SPA_POD_BUILDER_INIT(paramsBuffer, sizeof(paramsBuffer));
 
-    int extraTypes = 0;
-    if (pw->m_dmaBufSupported) {
-        extraTypes += 1 << SPA_DATA_DmaBuf;
-    }
     const spa_pod *param = (spa_pod *)spa_pod_builder_add_object(&pod_builder,
                                                                  SPA_TYPE_OBJECT_ParamBuffers,
                                                                  SPA_PARAM_Buffers,
@@ -99,9 +95,8 @@ void PipeWireSourceStream::onStreamParamChanged(void *data, uint32_t id, const s
                                                                  SPA_PARAM_BUFFERS_align,
                                                                  SPA_POD_Int(16),
                                                                  SPA_PARAM_BUFFERS_dataType,
-                                                                 SPA_POD_Int((1 << SPA_DATA_MemPtr) | (1 << SPA_DATA_MemFd) | extraTypes));
+                                                                 SPA_POD_Int((1 << SPA_DATA_MemPtr) | (1 << SPA_DATA_MemFd) | (1 << SPA_DATA_DmaBuf)));
     pw_stream_update_params(pw->pwStream, &param, 1);
-    Q_EMIT pw->streamChanged();
 }
 
 static void onProcess(void *data)
@@ -110,14 +105,8 @@ static void onProcess(void *data)
     stream->process();
 }
 
-QSize PipeWireSourceStream::size() const
-{
-    return QSize(videoFormat.size.width, videoFormat.size.height);
-}
-
-PipeWireSourceStream::PipeWireSourceStream(bool dmaBufSupported, QObject *parent)
+PipeWireSourceStream::PipeWireSourceStream(QObject *parent)
     : QObject(parent)
-    , m_dmaBufSupported(dmaBufSupported)
 {
     pwStreamEvents.version = PW_VERSION_STREAM_EVENTS;
     pwStreamEvents.process = &onProcess;

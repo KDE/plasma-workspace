@@ -80,7 +80,6 @@ Q_SIGNALS:
     // DBus
     void NotificationClosed(uint id, uint reason);
     void ActionInvoked(uint id, const QString &actionKey);
-    void ActivationToken(uint id, const QString &activationToken);
     // non-standard
     // This is manually emitted as targeted signal in sendReplyText()
     void NotificationReplied(uint id, const QString &text);
