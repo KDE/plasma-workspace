@@ -154,7 +154,7 @@ RowLayout {
                 return "";
             }
 
-            var eta = remaining / speed;
+            var eta = remaining / details.speed;
             if (eta < 0.5) { // Avoid showing "0 seconds remaining"
                 return "";
             }
