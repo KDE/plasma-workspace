@@ -94,7 +94,7 @@ QUrl JobPrivate::destUrl() const
     QUrl url = m_destUrl;
     // In case of a single file and no destUrl, try using the second label (most likely "Destination")...
     if (!url.isValid() && m_totalFiles == 1) {
-        url = localFileOrUrl(m_descriptionValue2).adjusted(QUrl::RemoveFilename);
+        url = localFileOrUrl(m_descriptionValue2).adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash);
     }
     return url;
 }
