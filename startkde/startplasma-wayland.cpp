@@ -77,6 +77,8 @@ int main(int argc, char **argv)
     setupPlasmaEnvironment();
     runStartupConfig();
     qputenv("PLASMA_USE_QT_SCALING", "1");
+    qputenv("GDK_SCALE", "1");
+    qputenv("GDK_DPI_SCALE", "1");
 
     qputenv("XDG_SESSION_TYPE", "wayland");
 
