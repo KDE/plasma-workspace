@@ -70,6 +70,7 @@ Name[x-test]=xxApplication Informationxx
 Name[zh_CN]=应用程序信息
 Name[zh_TW]=應用程式資訊
 Comment=Information and launching of all applications in the app menu.
+Comment[ar]=معلومات وبدء تشغيل جميع التطبيقات في قائمة التطبيق.
 Comment[az]=Tətbiq menyusundan bütün tətbiqlər haqqında məlumat və onların başladılması.
 Comment[bs]=Podaci o programima iz programskog menija i njihovo pokretanje.
 Comment[ca]=Informació i llançament de totes les aplicacions en el menú d'aplicacions.

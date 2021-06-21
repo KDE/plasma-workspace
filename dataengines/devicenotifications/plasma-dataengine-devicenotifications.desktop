@@ -66,6 +66,7 @@ Name[x-test]=xxDevice Notificationsxx
 Name[zh_CN]=设备通知
 Name[zh_TW]=裝置通知
 Comment=Passive device notifications for the user.
+Comment[ar]=إخطارات الجهاز السلبية للمستخدم.
 Comment[az]=Bu istifadəçi üçün qurğuların passiv bildirişləri.
 Comment[bg]=Пасивни уведомления от устройствата за потребителя.
 Comment[bs]=Pasivna obavještenja o uređajima za korisnika.

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Disks & Devices
+Name[ar]=الأجهزة والأقراص
 Name[ast]=Discos y preseos
 Name[az]=Disklər və Qurğular
 Name[ca]=Discs i dispositius
@@ -37,6 +38,7 @@ Name[vi]=Đĩa & Thiết bị
 Name[x-test]=xxDisks & Devicesxx
 Name[zh_CN]=磁盘和设备
 Comment=Notifications and access for devices
+Comment[ar]=إخطارات ووصول الأجهزة
 Comment[az]=Cihazlar üçün bildirişlər və onlara giriş
 Comment[ca]=Notificacions i accés als dispositius
 Comment[cs]=Upozorňování a přístup k zařízením

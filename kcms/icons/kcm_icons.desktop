@@ -11,6 +11,7 @@ X-KDE-System-Settings-Parent-Category=appearance
 X-KDE-Weight=60
 
 Name=Icons
+Name[ar]=الأيقونات
 Name[ast]=Iconos
 Name[az]=Nişanlar
 Name[ca]=Icones
@@ -49,6 +50,7 @@ Name[x-test]=xxIconsxx
 Name[zh_CN]=图标
 
 Comment=Choose icon theme
+Comment[ar]=اختر سمة الأيقونة
 Comment[az]=İkon mövzusunu seçin
 Comment[ca]=Trieu el tema d'icones
 Comment[cs]=Vyberte motiv ikon
@@ -85,6 +87,7 @@ Comment[x-test]=xxChoose icon themexx
 Comment[zh_CN]=选择图标主题
 
 X-KDE-Keywords=icons,effects,size,hicolor,locolor
+X-KDE-Keywords[ar]=أيقونة,تأثير,حجم,لون حاد,لون خافت
 X-KDE-Keywords[az]=ikonlar,effektlər,tünd rənglər,açıq rənglər,icons,effects,size,hicolor,locolor
 X-KDE-Keywords[ca]=icones,efectes,mida,color alt,color baix
 X-KDE-Keywords[cs]=ikony,efekty,velikost,hicolor,locolor

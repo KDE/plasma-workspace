@@ -1,5 +1,6 @@
 [Misc]
 Name=Cleanlooks
+Name[ar]=كلين لوك
 Name[az]=Cleanlooks
 Name[bg]=Cleanlooks
 Name[bs]=Čistina
@@ -66,6 +67,7 @@ Name[x-test]=xxCleanlooksxx
 Name[zh_CN]=清爽
 Name[zh_TW]=乾淨外觀
 Comment=Built-in unthemed style similar to Clearlooks from GNOME
+Comment[ar]=نمط مدمج بدون سمة مشابه لكلير لوك من غنوم
 Comment[az]=GNOME mühitindəki kimi "Aydın Baxış" üslubuna oxşar quraşdırılmış üslub
 Comment[bg]=Вграден стил, подобен на Clearlooks от GNOME
 Comment[bs]=Ugrađeni bestematski stil nalik na Bistar izgled iz Gnoma

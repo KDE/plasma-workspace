@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Individual Core Usage
+Name[ar]=استخدام النوى الفردية
 Name[az]=MP nüvəsinin yükü
 Name[ca]=Ús individual de nucli
 Name[da]=Brug af hver kerne
@@ -35,6 +36,7 @@ Name[x-test]=xxIndividual Core Usagexx
 Name[zh_CN]=单个核心使用
 Name[zh_TW]=獨立核心用量
 Comment=System monitor Widget that shows usage of individual CPU cores
+Comment[ar]=أداة مراقبة النظام التي تعرض استخدام كل نواة من المعالج
 Comment[az]=Mərkəzi prosessorun hər nüvəsinin yüklənmə səviyyəsinin izlənməsi
 Comment[ca]=Giny del monitor del sistema que mostra l'ús dels nuclis individuals de la CPU
 Comment[da]=Systemovervågning-widget som viser brug af hver CPU-kerne

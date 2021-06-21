@@ -3,6 +3,7 @@ Exec=@CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-dbus-run-session-if-needed ${CMAKE_I
 TryExec=${CMAKE_INSTALL_FULL_BINDIR}/startplasma-wayland
 DesktopNames=KDE
 Name=Plasma (Wayland)
+Name[ar]=بلازما (ويلاند)
 Name[ast]=Plasma (Wayland)
 Name[az]=Plasma (Wayland)
 Name[ca]=Plasma (Wayland)

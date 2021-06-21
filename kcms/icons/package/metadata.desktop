@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Icons
+Name[ar]=الأيقونات
 Name[ast]=Iconos
 Name[az]=Nişanlar
 Name[ca]=Icones
@@ -37,6 +38,7 @@ Name[vi]=Biểu tượng
 Name[x-test]=xxIconsxx
 Name[zh_CN]=图标
 Comment=Choose icon theme
+Comment[ar]=اختر سمة الأيقونة
 Comment[az]=İkon mövzusunu seçin
 Comment[ca]=Trieu el tema d'icones
 Comment[cs]=Vyberte motiv ikon

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Cursors
+Name[ar]=المؤشرات
 Name[ast]=Cursores
 Name[az]=Kursorlar
 Name[ca]=Cursors
@@ -37,6 +38,7 @@ Name[vi]=Con trỏ
 Name[x-test]=xxCursorsxx
 Name[zh_CN]=光标
 Comment=Choose mouse cursor theme
+Comment[ar]=اختر سِمة المؤشر
 Comment[az]=Siçan kursoru mövzusunu seçmək
 Comment[ca]=Trieu el tema del cursor del ratolí
 Comment[cs]=Zvolte motiv ukazatele myši

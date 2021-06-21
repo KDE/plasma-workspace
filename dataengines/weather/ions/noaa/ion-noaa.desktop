@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=NOAA's National Weather Service
+Name[ar]=خدمة الطقس الوطنية NOAA 
 Name[az]=ABŞ Milli Hava Xidməti, NOAA
 Name[be@latin]=Nacyjanalnaja słužba nadvorja „NOAA”
 Name[bg]=Метеорологична станция NOAA
@@ -72,6 +73,7 @@ Name[x-test]=xxNOAA's National Weather Servicexx
 Name[zh_CN]=美国国家海洋和大气管理局提供的国家天气服务
 Name[zh_TW]=NOAA 的國家天氣服務
 Comment=XML Data from NOAA's National Weather Service
+Comment[ar]=بيانات XML من خدمة الطقس الوطنية التابعة لـ NOAA
 Comment[az]=ABŞ Milli Hava Xidmətindən (NOAA) XML formatında məlumatlar
 Comment[be@latin]=Źviestki ŭ farmacie „XML” ad Nacyjanalnaj słužby nadvorja „NOAA”
 Comment[bg]=XML данни от метеорологична станция NOAA

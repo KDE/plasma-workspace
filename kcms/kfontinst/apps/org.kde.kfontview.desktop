@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=KFontView
+Name[ar]=عارض الخط ك
 Name[ast]=KFontView
 Name[az]=KFontView
 Name[ca]=KFontView
@@ -40,6 +41,7 @@ X-KDE-StartupNotify=true
 Type=Application
 MimeType=application/x-font-ttf;application/x-font-type1;application/x-font-otf;application/x-font-pcf;application/x-font-bdf;application/vnd.kde.fontspackage;font/otf;font/ttf;
 GenericName=Font Viewer
+GenericName[ar]=عارض الخط
 GenericName[az]=Şriftə baxış vasitəsi
 GenericName[ca]=Visor de tipus de lletra
 GenericName[cs]=Prohlížeč písem

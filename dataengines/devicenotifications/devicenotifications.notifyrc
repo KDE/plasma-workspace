@@ -80,6 +80,7 @@ IconName=device-notifier
 
 [Event/safelyRemovable]
 Name=Device Status
+Name[ar]=حالة الأجهزة
 Name[az]=Qurğuların statusu
 Name[ca]=Estat del dispositiu
 Name[cs]=Stav zařízení

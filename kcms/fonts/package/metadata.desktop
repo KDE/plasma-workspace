@@ -38,6 +38,7 @@ Name[x-test]=xxFontsxx
 Name[zh_CN]=字体
 
 Comment=Configure user interface fonts
+Comment[ar]=اضبط خطوط واجهة المستخدم
 Comment[az]=İstifadəçi interfeysi şriftlərini tənzimləmək
 Comment[ca]=Configura els tipus de lletra de la interfície d'usuari
 Comment[cs]=Nastavte písmo uživatelského rozhraní

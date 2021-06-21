@@ -1,6 +1,7 @@
 [Desktop Entry]
 # ctxt: plasma runner
 Name=Web Search Keywords
+Name[ar]=كلمات بحث الويب
 Name[az]=İnternetdə axtarış üçün açar sözlər
 Name[ca]=Paraules clau de cerca a la web
 Name[cs]=Klíčová slova pro hledání na webu
@@ -35,6 +36,7 @@ Name[vi]=Từ khoá tìm kiếm web
 Name[x-test]=xxWeb Search Keywordsxx
 Name[zh_CN]=网络搜索关键字
 Comment=Search the web using keywords
+Comment[ar]=يبحث في الويب باستخدام كلمات مفتاحية
 Comment[az]=Açar sözlərdən istifadə edərək internetdə axtarış
 Comment[ca]=Cerca a la web usant paraules clau
 Comment[cs]=Prohledat web použitím klíčových slov

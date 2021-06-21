@@ -157,6 +157,7 @@ Comment[x-test]=xxLock the screen or log outxx
 Comment[zh_CN]=锁定屏幕或注销
 Comment[zh_TW]=鎖定螢幕或登出
 Keywords=Lock;Logout;Sleep;Hibernate;Switch User;
+Keywords[ar]=اقفل;اخرج;نم;أسبت;بدل المستخدم;
 Keywords[ast]=Bloquiar;Bloquéu;Suspender;Suspensión;Dormir;Dormición;Ivernar;Ivernación;Hibernar;Hibernación;Cambiar d'usuariu;Cambéu d'usuariu;Cambéu d'usuarios;
 Keywords[az]=Kilid;Sistemdən Çıxış;Yuxu Rejimi;Gözləmə Rejimi;İstifadəçini Dəyişmək;Lock;Logout;Sleep;Hibernate;Switch User;
 Keywords[bs]=Zaključavanje;Odjava;Spavanje;Hibernacija;Promjena korisnika;

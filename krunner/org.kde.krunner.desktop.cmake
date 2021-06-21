@@ -64,6 +64,7 @@ X-KDE-Wayland-Interfaces=org_kde_plasma_window_management
 [Desktop Action RunClipboard]
 Exec=krunner -c
 Name=Run command on clipboard contents
+Name[ar]=شغل أمر في محتويات الحافظة
 Name[az]=Əmri, mübadilə buferindən başlatmaq
 Name[ca]=Executa una ordre al contingut del porta-retalls
 Name[ca@valencia]=Executa una ordre en el contingut del porta-retalls

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Colors
+Name[ar]=الألوان
 Name[ast]=Colores
 Name[az]=Rənglər
 Name[ca]=Colors
@@ -37,6 +38,7 @@ Name[vi]=Màu
 Name[x-test]=xxColorsxx
 Name[zh_CN]=颜色
 Comment=Choose color scheme
+Comment[ar]=اختر مخطط الألوان
 Comment[az]=Rəng sxemini seçmək
 Comment[ca]=Trieu l'esquema de color
 Comment[cs]=Vyberte barevné schéma

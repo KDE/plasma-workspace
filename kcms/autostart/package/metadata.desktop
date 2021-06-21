@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Autostart
+Name[ar]=بدء تلقائي
 Name[az]=Avtomatik başlama
 Name[ca]=Inici automàtic
 Name[cs]=Automatické spuštění
@@ -28,6 +29,7 @@ Name[vi]=Khởi động tự động
 Name[x-test]=xxAutostartxx
 Name[zh_CN]=自动启动
 Comment=Automatically Started Applications
+Comment[ar]=التطبيقات التي تبدأ آليا
 Comment[az]=Avtomatik işə düşən tətbiqlər
 Comment[ca]=Aplicacions iniciades automàticament
 Comment[cs]=Automaticky spouštěné aplikace
@@ -65,6 +67,7 @@ X-Plasma-MainScript=ui/main.qml
 X-KDE-System-Settings-Parent-Category=session
 X-KDE-ParentApp=kcontrol
 X-KDE-Keywords=Autostart Manager,autostart,startup,system startup,plasma start,cron
+X-KDE-Keywords[ar]=مدير بدء, بدء آلي, بدء النظام, بدء بلازما
 X-KDE-Keywords[az]=Autostart Manager,autostart,startup,system startup,plasma start,cronAvtomatik başlama meneceri, avtomatik başlama, sistemin işə salınması Plasmanın başladılması
 X-KDE-Keywords[ca]=Gestor de l'inici automàtic,inici automàtic,inici,inici del sistema,inici del Plasma,cron
 X-KDE-Keywords[de]=Autostart Manager,autostart,startup,system startup,plasma start,cron,Autostartverwaltung,Autostart,Startvorgang,Systemstart,Plasma-Start,Cron

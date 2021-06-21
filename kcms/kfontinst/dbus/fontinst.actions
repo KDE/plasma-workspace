@@ -1,5 +1,6 @@
 [Domain]
 Name=Font Installer
+Name[ar]=مثبت الخط
 Name[az]=Şrift quraşdırıcı
 Name[ca]=Instal·lador de tipus de lletra
 Name[cs]=Instalátor písem
@@ -37,6 +38,7 @@ Name[zh_CN]=字体安装程序
 Icon=preferences-desktop-font-installer
 [org.kde.fontinst.manage]
 Name=Manage system-wide fonts.
+Name[ar]=أدر الخطوط في النظام بأكمله
 Name[az]=Sistem şriftlərinin idarəsi.
 Name[ca]=Gestiona els tipus de lletra del sistema.
 Name[cs]=Spravovat systémová písma.
@@ -72,6 +74,7 @@ Name[vi]=Quản lí phông chữ toàn hệ thống.
 Name[x-test]=xxManage system-wide fonts.xx
 Name[zh_CN]=管理系统字体。
 Description=Modifying the system-wide font configuration requires privileges.
+Description[ar]=يتطلب تعديل ضبط الخطوط على مستوى النظام امتيازات مدير نظام.
 Description[az]=Sistem şriftləri ayarlarını dəyişmək üçün imtiyazlar tələb olunur.
 Description[ca]=La modificació de la configuració dels tipus de lletra del sistema requereix privilegis.
 Description[cs]=Změna konfigurace systémových písem vyžaduje oprávnění.

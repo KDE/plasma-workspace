@@ -13,6 +13,7 @@ Number of Actions=7
 [Action_0]
 Description=Jpeg-Image
 Description[af]=Jpeg Beeld
+Description[ar]=صورة-Jpeg
 Description[az]=JPEG şəkil
 Description[be]=Відарыс JPEG
 Description[be@latin]=Vyjava „JPEG”
@@ -190,6 +191,7 @@ Enabled=true
 [Action_1]
 Description=Web-URL
 Description[af]=Web-URL
+Description[ar]=عنوان-ويب
 Description[az]=Veb səhifəyə keçid
 Description[be]=Web-URL
 Description[be@latin]=Adras u siecivie
@@ -832,6 +834,7 @@ Enabled=true
 [Action_2]
 Description=Mail-URL
 Description[af]=Mail-URL
+Description[ar]=عنوان-بريد
 Description[az]=Göndərmək
 Description[be]=Mail-URL
 Description[be@latin]=Paštovy adras
@@ -1017,6 +1020,7 @@ Enabled=true
 Commandline=konsole -e mutt `echo %s | sed 's/mailto://g'`
 Description=Launch &mutt
 Description[af]=Lanseer mutt
+Description[ar]=شغل mutt
 Description[az]=&mutt başlatmaq
 Description[be]=Запусціць &mutt
 Description[be@latin]=Uklučy prahramu „&mutt”
@@ -1579,6 +1583,7 @@ Enabled=true
 [Action_5]
 Description=Gopher URL
 Description[af]=Gopher Url
+Description[ar]=عنوان غوفر
 Description[az]=Gopher keçid ünvanı
 Description[be]=Gopher URL
 Description[be@latin]=Adras słužby „Gopher”

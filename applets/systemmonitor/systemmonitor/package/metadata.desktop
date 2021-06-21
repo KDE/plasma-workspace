@@ -1,6 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=System monitor Sensor
+Name[ar]=متحسس مراقبة النظام
 Name[az]=Sistem İzləməsi Sensoru
 Name[ca]=Sensor del monitor del sistema
 Name[cs]=Senzor monitoru systému
@@ -37,6 +38,7 @@ Name[x-test]=xxSystem monitor Sensorxx
 Name[zh_CN]=系统监视传感器
 Name[zh_TW]=系統監視器感測器
 Comment=Displays a configurable chart of a system monitor sensor
+Comment[ar]=يعرض مخططًا قابلًا للتكوين لمتحسسات مراقبة النظام
 Comment[az]=Sistem izləməsi sensorunun ayarlana bilən qrafiki
 Comment[ca]=Mostra un diagrama configurable d'un sensor del monitor del sistema
 Comment[da]=Viser et konfigurerbart diagram over en systemovervågning-sensor

@@ -295,7 +295,7 @@ Comment[zh_TW]=用於警告通知
 
 [Event/freespacenotif]
 Name=Running low on disk space
-Name[ar]=مساحة القرص منخفضة
+Name[ar]=انخفاض مساحة القرص
 Name[ast]=Pocu espaciu nel discu
 Name[az]=Boş disk sahəsi bitmək üzrədir
 Name[bg]=Дисковото пространство е твърде малко

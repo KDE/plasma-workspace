@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Network speed
+Name[ar]=سرعة الشبكة
 Name[az]=Şəbəkə sürəti
 Name[ca]=Velocitat de xarxa
 Name[cs]=Rychlost sítě
@@ -37,6 +38,7 @@ Name[x-test]=xxNetwork speedxx
 Name[zh_CN]=网络速度
 Name[zh_TW]=網路速度
 Comment=System monitor Widget that shows the download and upload data rate
+Comment[ar]=أداة مراقبة النظام التي تعرض سرعة تنزيل ورفع البيانات
 Comment[az]=Şəbəkə üzərindən verilənlərin yükləmə və ötürmə sürətini göstərir
 Comment[ca]=Giny del monitor del sistema que mostra la velocitat de baixada i pujada de les dades
 Comment[da]=Systemovervågning-widget som viser download- og uploadhastighed

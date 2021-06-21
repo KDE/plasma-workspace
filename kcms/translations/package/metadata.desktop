@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Language
+Name[ar]=اللغة
 Name[ast]=Llingua
 Name[az]=Dil
 Name[ca]=Idioma
@@ -41,6 +42,7 @@ Name[x-test]=xxLanguagexx
 Name[zh_CN]=语言
 Name[zh_TW]=語言
 Comment=Change workspace and application languages
+Comment[ar]=يغير لغات التطبيقات ومساحة العمل
 Comment[ast]=Camuda les llingües de la estaya de trabayu y les aplicaciones
 Comment[az]=İş mühitinin və tətbiqlərin dillərini dəyişmək
 Comment[ca]=Canvi dels idiomes de l'espai de treball i les aplicacions

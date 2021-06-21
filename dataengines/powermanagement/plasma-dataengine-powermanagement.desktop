@@ -73,6 +73,7 @@ Name[x-test]=xxPower Managementxx
 Name[zh_CN]=电源管理
 Name[zh_TW]=電源管理
 Comment=Battery, AC, sleep and PowerDevil information.
+Comment[ar]=معلومات عن البطارية والشحن و النوم و عفريت الطاقة
 Comment[az]=Batareya, elektrik şəbəkəsi, və PowerDevil məlumatları.
 Comment[bg]=Данни за батерия, AC, приспиване и PowerDevil
 Comment[bs]=Podaci iz Strujnog đavola o bateriji, AC‑u, i spavanju.

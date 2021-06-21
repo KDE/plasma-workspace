@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Memory Usage
+Name[ar]=استخدام الذاكرة
 Name[ast]=Usu de la memoria
 Name[az]=Yaddaş İstifadəsi
 Name[ca]=Ús de memòria
@@ -38,6 +39,7 @@ Name[x-test]=xxMemory Usagexx
 Name[zh_CN]=内存使用
 Name[zh_TW]=記憶體用量
 Comment=System monitor Widget that shows physical memory usage
+Comment[ar]=أداة مراقبة النظام التي تعرض استخدام الذاكرة الفعلية
 Comment[az]=Fiziki yaddaşın istifadəsini izləyir
 Comment[ca]=Giny del monitor del sistema que mostra l'ús de la memòria física
 Comment[da]=Systemovervågning-widget som viser brug af den fysiske hukommelse

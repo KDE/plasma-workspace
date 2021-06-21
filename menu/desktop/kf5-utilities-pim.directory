@@ -2,6 +2,7 @@
 Type=Directory
 Name=PIM
 Name[af]=PIM
+Name[ar]=إدارة المعلومات الشخصية 
 Name[as]=PIM
 Name[ast]=XIP
 Name[az]=Səxsi Məlumat İdarəçisi
@@ -89,6 +90,7 @@ Name[zh_TW]=PIM
 Icon=office-calendar
 Comment=PIM
 Comment[af]=Persoonlike Informasie Bestuurder
+Comment[ar]=إدارة المعلومات الشخصية 
 Comment[as]=PIM
 Comment[ast]=XIP
 Comment[az]=Səxsi Məlumat İdarəçisi

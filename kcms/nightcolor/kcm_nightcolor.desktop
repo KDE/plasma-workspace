@@ -13,6 +13,7 @@ X-KDE-System-Settings-Parent-Category=display
 X-KDE-Weight=120
 
 Name=Night Color
+Name[ar]=لون ليلي
 Name[az]=Gecə Rəngi
 Name[ca]=Color de nit
 Name[cs]=Noční barva
@@ -39,6 +40,7 @@ Name[vi]=Màu buổi tối
 Name[x-test]=xxNight Colorxx
 Name[zh_CN]=夜间颜色
 Comment=Adjust color temperature at night to reduce eye strain
+Comment[ar]=يضبط درجة حرارة اللون ليلاً لتقليل إجهاد العين
 Comment[az]=Gözə mənfi təsirini azaltmaq üçün gecə rəng temperaturunu ayarlayın
 Comment[ca]=Ajusta la temperatura del color per a la nit per reduir la tensió ocular
 Comment[de]=Farbtemperatur nachts anpassen, um die Belastung für die Augen zu reduzieen
@@ -65,6 +67,7 @@ Comment[x-test]=xxAdjust color temperature at night to reduce eye strainxx
 Comment[zh_CN]=在夜间调整色温以减少视觉疲劳
 
 X-KDE-Keywords=kwin,window,manager,night,colors,redshift,eyes
+X-KDE-Keywords[ar]=ك.وين,نافذة,مدير,ليلي,ألوان,إزاحة الحمرة,عين
 X-KDE-Keywords[az]=kwin,window,manager,night,colors,redshift,eyes,pəncərə,menecer,gecə,rənglər,göz,gözlər
 X-KDE-Keywords[ca]=kwin,finestra,gestor,nit,colors,desplaçament cap al roig,ulls
 X-KDE-Keywords[de]=kwin,fenster,window,nacht,farben,redshift,augen

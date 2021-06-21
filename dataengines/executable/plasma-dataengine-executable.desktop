@@ -76,6 +76,7 @@ Name[x-test]=xxRun Commandsxx
 Name[zh_CN]=运行命令
 Name[zh_TW]=執行指令
 Comment=Run Executable Data Engine
+Comment[ar]=محرك بيانات لتشغل برامج الأوامر
 Comment[az]=İcra oluna bilən verilənlər mexanizmini işə salmaq
 Comment[be@latin]=Uklučaj systemu dostupu da źviestak
 Comment[bg]=Изпълнение на програми

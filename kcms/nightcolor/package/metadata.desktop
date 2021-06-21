@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Night Color
+Name[ar]=لون ليلي
 Name[az]=Gecə Rəngi
 Name[ca]=Color de nit
 Name[cs]=Noční barva
@@ -26,6 +27,7 @@ Name[vi]=Màu buổi tối
 Name[x-test]=xxNight Colorxx
 Name[zh_CN]=夜间颜色
 Comment=Adjust color temperature at night to reduce eye strain
+Comment[ar]=يضبط درجة حرارة اللون ليلاً لتقليل إجهاد العين
 Comment[az]=Gözə mənfi təsirini azaltmaq üçün gecə rəng temperaturunu ayarlayın
 Comment[ca]=Ajusta la temperatura del color per a la nit per reduir la tensió ocular
 Comment[de]=Farbtemperatur nachts anpassen, um die Belastung für die Augen zu reduzieen
