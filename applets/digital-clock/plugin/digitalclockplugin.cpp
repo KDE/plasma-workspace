@@ -50,7 +50,7 @@ void DigitalClockPlugin::registerTypes(const char *uri)
 
     qmlRegisterSingletonType<ClipboardMenu>(uri, 1, 0, "ClipboardMenu", clipboardMenu_singletontype_provider);
 
-    qmlRegisterSingletonType<ClipboardMenu>(uri, 1, 0, "ApplicationIntegration", [](QQmlEngine *engine, QJSEngine *scriptEngine) {
+    qmlRegisterSingletonType<ApplicationIntegration>(uri, 1, 0, "ApplicationIntegration", [](QQmlEngine *engine, QJSEngine *scriptEngine) {
         Q_UNUSED(engine);
         Q_UNUSED(scriptEngine);
         return new ApplicationIntegration();
