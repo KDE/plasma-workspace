@@ -31,6 +31,9 @@ namespace NotificationManager
 {
 class JobsModelPrivate;
 
+/**
+ * A model used for listing Job.
+ */
 class NOTIFICATIONMANAGER_EXPORT JobsModel : public QAbstractListModel
 {
     Q_OBJECT

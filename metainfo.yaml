@@ -1,0 +1,31 @@
+maintainer:
+- notmart
+description: Plasma Workspace
+platforms:
+    - name: Linux
+    - name: FreeBSD
+portingAid: false
+deprecated: false
+release: true
+
+group: Plasma
+public_lib: true
+public_source_dirs:
+    - libkworkspace
+    - libdbusmenuqt
+    - libtaskmanager
+    - libkworkspace
+    - libnotificationmanager
+
+group_info:
+    name: plasma
+    fancyname: Plasma
+    maintainer: notmart
+    mailinglist: plasma-devel
+    platforms:
+      - Linux
+      - FreeBSD
+    description: Provides APIs to build plasma widgets, wallpaper plugins and more.
+    logo: konqi_frameworks.png
+    long_description:
+        - TODO
