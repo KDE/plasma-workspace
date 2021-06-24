@@ -90,9 +90,8 @@ static QString writableGtkrc(int version)
 }
 
 // -----------------------------------------------------------------------------
-static void applyGtkStyles(bool active, int version)
+static void applyGtkStyles(int version)
 {
-    Q_UNUSED(active);
     QString gtkkde = writableGtkrc(version);
     QByteArray gtkrc = getenv(gtkEnvVar(version));
     QStringList list = QFile::decodeName(gtkrc).split(QLatin1Char(':'));
@@ -320,7 +319,6 @@ static void createGtkrc(const QPalette &cg, bool exportGtkTheme, const QString &
 void runRdb(uint flags)
 {
     // Obtain the application palette that is about to be set.
-    bool exportColors = flags & KRdbExportColors;
     bool exportQtColors = flags & KRdbExportQtColors;
     bool exportQtSettings = flags & KRdbExportQtSettings;
     bool exportXftSettings = flags & KRdbExportXftSettings;
@@ -346,46 +344,6 @@ void runRdb(uint flags)
 
     createGtkrc(newPal, exportGtkTheme, gtkTheme, 1);
     createGtkrc(newPal, exportGtkTheme, gtkTheme, 2);
-
-    // Export colors to non-(KDE/Qt) apps (e.g. Motif, GTK+ apps)
-    if (exportColors) {
-        KConfigGroup g(KSharedConfig::openConfig(), "WM");
-        QString preproc;
-        QColor backCol = newPal.color(QPalette::Active, QPalette::Window);
-        addColorDef(preproc, "FOREGROUND", newPal.color(QPalette::Active, QPalette::WindowText));
-        addColorDef(preproc, "BACKGROUND", backCol);
-        addColorDef(preproc, "HIGHLIGHT", backCol.lighter(100 + (2 * KColorScheme::contrast() + 4) * 16 / 1));
-        addColorDef(preproc, "LOWLIGHT", backCol.darker(100 + (2 * KColorScheme::contrast() + 4) * 10));
-        addColorDef(preproc, "SELECT_BACKGROUND", newPal.color(QPalette::Active, QPalette::Highlight));
-        addColorDef(preproc, "SELECT_FOREGROUND", newPal.color(QPalette::Active, QPalette::HighlightedText));
-        addColorDef(preproc, "WINDOW_BACKGROUND", newPal.color(QPalette::Active, QPalette::Base));
-        addColorDef(preproc, "WINDOW_FOREGROUND", newPal.color(QPalette::Active, QPalette::Text));
-        addColorDef(preproc, "INACTIVE_BACKGROUND", g.readEntry("inactiveBackground", QColor(224, 223, 222)));
-        addColorDef(preproc, "INACTIVE_FOREGROUND", g.readEntry("inactiveBackground", QColor(224, 223, 222)));
-        addColorDef(preproc, "ACTIVE_BACKGROUND", g.readEntry("activeBackground", QColor(48, 174, 232)));
-        addColorDef(preproc, "ACTIVE_FOREGROUND", g.readEntry("activeBackground", QColor(48, 174, 232)));
-        //---------------------------------------------------------------
-
-        tmpFile.write(preproc.toLatin1(), preproc.length());
-
-        QStringList list;
-
-        const QStringList adPaths =
-            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kdisplay/app-defaults/"), QStandardPaths::LocateDirectory);
-        for (QStringList::ConstIterator it = adPaths.constBegin(); it != adPaths.constEnd(); ++it) {
-            QDir dSys(*it);
-
-            if (dSys.exists()) {
-                dSys.setFilter(QDir::Files);
-                dSys.setSorting(QDir::Name);
-                dSys.setNameFilters(QStringList(QStringLiteral("*.ad")));
-                list += dSys.entryList();
-            }
-        }
-
-        for (QStringList::ConstIterator it = list.constBegin(); it != list.constEnd(); ++it)
-            copyFile(tmpFile, QStandardPaths::locate(QStandardPaths::GenericDataLocation, "kdisplay/app-defaults/" + (*it)), true);
-    }
 
     // Merge ~/.Xresources or fallback to ~/.Xdefaults
     QString homeDir = QDir::homePath();
@@ -476,8 +434,8 @@ void runRdb(uint flags)
 #endif
     proc.execute();
 
-    applyGtkStyles(exportColors, 1);
-    applyGtkStyles(exportColors, 2);
+    applyGtkStyles(1);
+    applyGtkStyles(2);
 
     /* Qt exports */
     if (exportQtColors || exportQtSettings) {
