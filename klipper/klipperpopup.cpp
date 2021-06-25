@@ -86,7 +86,7 @@ KlipperPopup::KlipperPopup(History *history)
     QRect geometry = windowInfo.geometry();
     QScreen *screen = QGuiApplication::screenAt(geometry.center());
     if (screen == nullptr) {
-        return;
+        screen = QGuiApplication::screens()[0];
     }
     int menuHeight = (screen->geometry().height()) * 3 / 4;
     int menuWidth = (screen->geometry().width()) * 1 / 3;
