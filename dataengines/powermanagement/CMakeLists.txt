@@ -24,5 +24,4 @@ target_link_libraries(plasma_engine_powermanagement
 
 kcoreaddons_desktop_to_json(plasma_engine_powermanagement plasma-dataengine-powermanagement.desktop)
 
-install(FILES plasma-dataengine-powermanagement.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
 install(FILES powermanagementservice.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

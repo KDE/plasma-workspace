@@ -10,9 +10,6 @@ kcoreaddons_desktop_to_json(plasma_engine_packagekit plasma-dataengine-packageki
 
 target_link_libraries(plasma_engine_packagekit KF5::Plasma KF5::CoreAddons Qt::DBus )
 
-install(FILES plasma-dataengine-packagekit.desktop
-    DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
-
 install(FILES packagekit.operations
     DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
 

@@ -15,6 +15,5 @@ target_link_libraries(ion_wettercom
 
 kcoreaddons_desktop_to_json(ion_wettercom ion-wettercom.desktop SERVICE_TYPES plasma-dataengine.desktop)
 
-install(FILES ion-wettercom.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(TARGETS ion_wettercom DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 

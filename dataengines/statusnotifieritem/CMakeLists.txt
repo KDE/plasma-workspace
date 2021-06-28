@@ -39,6 +39,5 @@ target_link_libraries(plasma_engine_statusnotifieritem
 
 kcoreaddons_desktop_to_json(plasma_engine_statusnotifieritem plasma-dataengine-statusnotifieritem.desktop)
 
-install(FILES plasma-dataengine-statusnotifieritem.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(FILES statusnotifieritem.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
 

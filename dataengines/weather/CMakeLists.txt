@@ -27,5 +27,3 @@ target_link_libraries (plasma_engine_weather
             weather_ion)
 
 kcoreaddons_desktop_to_json(plasma_engine_weather plasma-dataengine-weather.desktop SERVICE_TYPES plasma-dataengine.desktop)
-
-install (FILES plasma-dataengine-weather.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

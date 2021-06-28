@@ -25,8 +25,5 @@ kcoreaddons_desktop_to_json(plasma_engine_activities plasma-dataengine-activitie
 install(TARGETS plasma_engine_activities
         DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 
-install(FILES plasma-dataengine-activities.desktop
-        DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-
 install(FILES activities.operations
         DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

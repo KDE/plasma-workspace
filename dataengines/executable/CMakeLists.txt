@@ -11,5 +11,3 @@ target_link_libraries(plasma_engine_executable
 )
 
 kcoreaddons_desktop_to_json(plasma_engine_executable plasma-dataengine-executable.desktop)
-
-install(FILES plasma-dataengine-executable.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )

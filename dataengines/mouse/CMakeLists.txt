@@ -22,6 +22,3 @@ if (X11_Xfixes_FOUND)
 endif ()
 
 kcoreaddons_desktop_to_json(plasma_engine_mouse plasma-dataengine-mouse.desktop)
-
-install(FILES plasma-dataengine-mouse.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
-

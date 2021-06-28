@@ -43,7 +43,6 @@ target_link_libraries(plasma_engine_geolocation
     KF5::Solid)
 kcoreaddons_desktop_to_json(plasma_engine_geolocation plasma-dataengine-geolocation.desktop)
 
-install(FILES plasma-dataengine-geolocation.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(FILES plasma-geolocationprovider.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})
 
 # -------------------------------------------------------------------------------------------------

@@ -22,5 +22,4 @@ target_link_libraries(plasma_engine_hotplug
 
 kcoreaddons_desktop_to_json(plasma_engine_hotplug plasma-dataengine-hotplug.desktop)
 
-install(FILES plasma-dataengine-hotplug.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(FILES hotplug.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

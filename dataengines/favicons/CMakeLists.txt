@@ -11,7 +11,3 @@ target_link_libraries(plasma_engine_favicons
 )
 
 kcoreaddons_desktop_to_json(plasma_engine_favicons plasma-dataengine-favicons.desktop)
-
-install(FILES plasma-dataengine-favicons.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR} )
-
-
