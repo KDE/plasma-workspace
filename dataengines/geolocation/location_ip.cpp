@@ -199,6 +199,6 @@ void Ip::update()
     connect(datajob, &KIO::TransferJob::result, d, &Ip::Private::readCountry);
 }
 
-K_EXPORT_PLASMA_GEOLOCATIONPROVIDER(ip, Ip)
+K_PLUGIN_CLASS_WITH_JSON(Ip, "plasma-geolocation-ip.json")
 
 #include "location_ip.moc"

@@ -120,6 +120,6 @@ void Gps::update()
     }
 }
 
-K_EXPORT_PLASMA_GEOLOCATIONPROVIDER(gps, Gps)
+K_PLUGIN_CLASS_WITH_JSON(Gps, "plasma-geolocation-gps.json")
 
 #include "location_gps.moc"

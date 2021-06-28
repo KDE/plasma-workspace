@@ -1,9 +1,3 @@
-if(NOT CMAKE_VERSION VERSION_LESS "3.10.0")
-    # CMake 3.9+ warns about automoc on files without Q_OBJECT, and doesn't know about other macros.
-    # 3.10+ lets us provide more macro names that require automoc.
-    list(APPEND CMAKE_AUTOMOC_MACRO_NAMES K_EXPORT_PLASMA_GEOLOCATIONPROVIDER)
-endif()
-
 set(plasma_geolocation_interface_SRCS geolocationprovider.cpp)
 add_library(plasma-geolocation-interface SHARED ${plasma_geolocation_interface_SRCS})
 target_link_libraries(plasma-geolocation-interface
@@ -50,6 +44,7 @@ install(FILES plasma-geolocationprovider.desktop DESTINATION ${KDE_INSTALL_KSERV
 set(plasma_geolocation_ip_SRCS location_ip.cpp)
 ecm_qt_declare_logging_category(plasma_geolocation_ip_SRCS HEADER geolocdebug.h IDENTIFIER DATAENGINE_GEOLOCATION CATEGORY_NAME org.kde.plasma.dataengine.geolocation)
 add_library(plasma-geolocation-ip MODULE ${plasma_geolocation_ip_SRCS})
+kcoreaddons_desktop_to_json(plasma-geolocation-ip plasma-geolocation-ip.desktop)
 target_compile_definitions(plasma-geolocation-ip PRIVATE -DQT_NO_KEYWORDS)
 target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF5::KIOCore KF5::NetworkManagerQt)
 install(FILES plasma-geolocation-ip.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
@@ -68,6 +63,7 @@ if(LIBGPS_FOUND)
     set(plasma_geolocation_gps_SRCS location_gps.cpp)
     ecm_qt_declare_logging_category(plasma_geolocation_gps_SRCS HEADER geolocdebug.h IDENTIFIER DATAENGINE_GEOLOCATION CATEGORY_NAME org.kde.plasma.dataengine.geolocation)
     add_library(plasma-geolocation-gps MODULE ${plasma_geolocation_gps_SRCS})
+    kcoreaddons_desktop_to_json(plasma-geolocation-gps plasma-geolocation-gps.desktop)
     target_link_libraries(plasma-geolocation-gps plasma-geolocation-interface ${LIBGPS_LIBRARIES})
     install(FILES plasma-geolocation-gps.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
     install(TARGETS plasma-geolocation-gps DESTINATION ${KDE_INSTALL_PLUGINDIR})
