@@ -19,7 +19,8 @@
 
 #include <limits.h>
 
-#include <KServiceTypeTrader>
+#include <KPluginLoader>
+#include <KPluginMetaData>
 #include <NetworkManagerQt/Manager>
 #include <QDebug>
 #include <QNetworkConfigurationManager>
@@ -29,7 +30,6 @@ static const char SOURCE[] = "location";
 Geolocation::Geolocation(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)
 {
-    Q_UNUSED(args)
     setMinimumPollingInterval(500);
     connect(NetworkManager::notifier(), &NetworkManager::Notifier::networkingEnabledChanged, this, &Geolocation::networkStatusChanged);
     connect(NetworkManager::notifier(), &NetworkManager::Notifier::wirelessEnabledChanged, this, &Geolocation::networkStatusChanged);
@@ -47,19 +47,18 @@ Geolocation::Geolocation(QObject *parent, const QVariantList &args)
 void Geolocation::init()
 {
     // TODO: should this be delayed even further, e.g. when the source is requested?
-    const KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("Plasma/GeolocationProvider"));
-    QVariantList args;
-
-    for (const KService::Ptr &service : offers) {
-        QString error;
-        GeolocationProvider *plugin = service->createInstance<GeolocationProvider>(nullptr, args, &error);
-        if (plugin) {
-            m_plugins << plugin;
-            plugin->init(&m_data, &m_accuracy);
-            connect(plugin, &GeolocationProvider::updated, this, &Geolocation::pluginUpdated);
-            connect(plugin, &GeolocationProvider::availabilityChanged, this, &Geolocation::pluginAvailabilityChanged);
-        } else {
-            qDebug() << "Failed to load GeolocationProvider:" << error;
+    const QVector<KPluginMetaData> offers = KPluginLoader::findPlugins("plasma/geolocationprovider");
+    for (const auto &metaData : offers) {
+        KPluginLoader loader(metaData.fileName());
+        if (KPluginFactory *factory = loader.factory()) {
+            if (auto plugin = factory->create<GeolocationProvider>(this)) {
+                m_plugins << plugin;
+                plugin->init(&m_data, &m_accuracy);
+                connect(plugin, &GeolocationProvider::updated, this, &Geolocation::pluginUpdated);
+                connect(plugin, &GeolocationProvider::availabilityChanged, this, &Geolocation::pluginAvailabilityChanged);
+            } else {
+                qDebug() << "Failed to load GeolocationProvider:" << metaData.fileName();
+            }
         }
     }
 }
