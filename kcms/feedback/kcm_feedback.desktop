@@ -10,7 +10,7 @@ X-KDE-ParentApp=kcontrol
 X-KDE-System-Settings-Parent-Category=personalization
 
 Name=User Feedback
-Name[ar]=ملاحظات المستخدمين
+Name[ar]=مشاركة بياناتك
 Name[ast]=Comentarios d'usuariu
 Name[az]=İstifadəçi Rəyi
 Name[ca]=Comentaris de l'usuari
@@ -51,7 +51,7 @@ Name[x-test]=xxUser Feedbackxx
 Name[zh_CN]=用户反馈
 Name[zh_TW]=使用者意見回應
 Comment=Configure user feedback settings
-Comment[ar]=اضبط إعدادات ملاحظات المستخدمين
+Comment[ar]=اضبط إعدادات مشاركة بياناتك
 Comment[az]=İstifadəçi rəyi ayarlarını tənzimləmək
 Comment[ca]=Configura les opcions dels comentaris de l'usuari
 Comment[cs]=Nastavení voleb uživatelské zpětné vazby
