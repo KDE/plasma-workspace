@@ -1,5 +1,4 @@
 /*
-    This file is part of the KDE libraries
     SPDX-FileCopyrightText: 2007, 2009 David Jarvie <djarvie@kde.org>
     SPDX-FileCopyrightText: 2013 Martin Klapetek <mklapetek@kde.org>
 

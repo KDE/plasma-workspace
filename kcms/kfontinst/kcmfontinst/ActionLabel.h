@@ -2,8 +2,6 @@
 #define __ACTION_LABEL_H__
 
 /*
- * KFontInst - KDE Font Installer
- *
  * SPDX-FileCopyrightText: 2003-2007 Craig Drummond <craig@kde.org>
  * SPDX-License-Identifier: GPL-2.0-or-later
  */

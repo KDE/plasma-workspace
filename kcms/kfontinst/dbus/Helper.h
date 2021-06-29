@@ -2,8 +2,6 @@
 #define HELPER_H
 
 /*
- * KFontInst - KDE Font Installer
- *
  * SPDX-FileCopyrightText: 2003-2010 Craig Drummond <craig@kde.org>
  * SPDX-License-Identifier: GPL-2.0-or-later
  */

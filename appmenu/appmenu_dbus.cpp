@@ -1,6 +1,4 @@
 /*
-    This file is part of the KDE project.
-
     SPDX-FileCopyrightText: 2011 Lionel Chauvin <megabigbug@yahoo.fr>
     SPDX-FileCopyrightText: 2011, 2012 Cédric Bellegarde <gnumdk@gmail.com>
 

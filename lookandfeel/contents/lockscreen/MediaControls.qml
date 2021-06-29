@@ -1,6 +1,4 @@
 /*
-    This file is part of the KDE project.
-
 SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
 
 SPDX-License-Identifier: GPL-2.0-or-later

@@ -1,4 +1,4 @@
-/* This file is part of the KDE project
+/*
     SPDX-FileCopyrightText: 2005 Lubos Lunak <l.lunak@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later

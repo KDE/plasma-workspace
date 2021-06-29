@@ -1,10 +1,9 @@
 /*
-    This file is part of the KDE project.
-
 SPDX-FileCopyrightText: 2017 Martin Gräßlin <mgraesslin@kde.org>
 
 SPDX-License-Identifier: GPL-2.0-or-later
 */
+
 import QtQuick 2.5
 import QtQuick.VirtualKeyboard 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore

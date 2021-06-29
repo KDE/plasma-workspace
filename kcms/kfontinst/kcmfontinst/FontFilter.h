@@ -2,8 +2,6 @@
 #define __FONT_FILTER_H__
 
 /*
- * KFontInst - KDE Font Installer
- *
  * SPDX-FileCopyrightText: 2003-2007 Craig Drummond <craig@kde.org>
  * SPDX-FileCopyrightText:  2019 Guo Yunhe <i@guoyunhe.me>
  *

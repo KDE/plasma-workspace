@@ -1,4 +1,4 @@
-/* This file is part of the KDE Project
+/*
     SPDX-FileCopyrightText: 2005 Jean-Remy Falleri <jr.falleri@laposte.net>
     SPDX-FileCopyrightText: 2005-2007 Kevin Ottens <ervin@kde.org>
     SPDX-FileCopyrightText: 2007 Alexis Ménard <darktears31@gmail.com>

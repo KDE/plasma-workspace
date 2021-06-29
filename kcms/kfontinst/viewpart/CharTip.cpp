@@ -1,6 +1,4 @@
 /*
-    KFontInst - KDE Font Installer
-
     Inspired by konq_filetip.cc
 
     SPDX-FileCopyrightText: 2003-2007 Craig Drummond <craig@kde.org>

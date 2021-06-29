@@ -1,4 +1,4 @@
-/* This file is part of the KDE project
+/*
 
     SPDX-FileCopyrightText: Andrew Stanley-Jones <asj@cban.com>
     SPDX-FileCopyrightText: 2000 Carsten Pfeiffer <pfeiffer@kde.org>

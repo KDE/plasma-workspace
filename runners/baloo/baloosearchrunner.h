@@ -1,5 +1,4 @@
 /*
-    This file is part of the KDE Baloo Project
     SPDX-FileCopyrightText: 2014 Vishesh Handa <me@vhanda.in>
     SPDX-FileCopyrightText: 2017 David Edmundson <davidedmundson@kde.org>
 

@@ -1,5 +1,4 @@
 /*
-    This file is part of the KDE base distribution
     SPDX-FileCopyrightText: 2001 Waldo Bastian <bastian@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-only

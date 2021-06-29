@@ -1,7 +1,4 @@
 /*
-    KSld - the KDE Screenlocker Daemon
-    This file is part of the KDE project.
-
 SPDX-FileCopyrightText: 2014 Martin Gräßlin <mgraesslin@kde.org>
 SPDX-FileCopyrightText: 2021 Benjamin Port <benjamin.port@enioka.com>
 

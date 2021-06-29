@@ -1,4 +1,4 @@
-/* This file is part of the KDE project
+/*
     SPDX-FileCopyrightText: 2009 David Faure <faure@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
