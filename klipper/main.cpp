@@ -1,5 +1,5 @@
 /* This file is part of the KDE project
-    Copyright (C) Andrew Stanley-Jones <asj@cban.com>
+    SPDX-FileCopyrightText: Andrew Stanley-Jones <asj@cban.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */

@@ -1,6 +1,6 @@
 /*
     Registers as a embed container
-    Copyright (C) 2015 <davidedmundson@kde.org> David Edmundson
+    SPDX-FileCopyrightText: 2015 David Edmundson <davidedmundson@kde.org>
 
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
