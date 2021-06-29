@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <protocol name="wlr_data_control_unstable_v1">
   <copyright>
-    Copyright © 2018 Simon Ser
-    Copyright © 2019 Ivan Molodetskikh
+    SPDX-FileCopyrightText: 2018 Simon Ser
+    SPDX-FileCopyrightText: 2019 Ivan Molodetskikh
 
     Permission to use, copy, modify, distribute, and sell this
     software and its documentation for any purpose is hereby granted

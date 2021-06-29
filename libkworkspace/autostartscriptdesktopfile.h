@@ -1,7 +1,7 @@
 /*
- * SPDX-FileCopyrightText: 2021 Henri Chain <henri.chain@enioka.com>
- * SPDX-License-Identifier: LGPL-2.1-or-later
- */
+    SPDX-FileCopyrightText: 2021 Henri Chain <henri.chain@enioka.com>
+    SPDX-License-Identifier: LGPL-2.1-or-later
+*/
 
 #pragma once
 #include "kworkspace_export.h"

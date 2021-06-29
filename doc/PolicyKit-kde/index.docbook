@@ -68,10 +68,10 @@ actions and authorized applications.</para>
 &policykit-kde;
 </para>
 <para>
-Program copyright 2008-2009 Daniel Nicoletti
+Program SPDX-FileCopyrightText: 2008-2009 Daniel Nicoletti
 </para>
 <para>
-Documentation copyright 2008-2009 Daniel Nicoletti
+Documentation SPDX-FileCopyrightText: 2008-2009 Daniel Nicoletti
 </para>
 
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
