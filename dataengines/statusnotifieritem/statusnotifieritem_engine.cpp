@@ -1,5 +1,4 @@
 /*
-
     SPDX-FileCopyrightText: 2009 Marco Martin <notmart@gmail.com>
     SPDX-FileCopyrightText: 2009 Matthieu Gallien <matthieu_gallien@yahoo.fr>
 

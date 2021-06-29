@@ -1,5 +1,4 @@
 /*
-
     SPDX-FileCopyrightText: 2009 Marco Martin <notmart@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later

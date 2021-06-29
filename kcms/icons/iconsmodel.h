@@ -3,9 +3,6 @@
     KDE Frameworks 5 port SPDX-FileCopyrightText: 2013 Jonathan Riddell <jr@jriddell.org>
     SPDX-FileCopyrightText: 2018 Kai Uwe Broulik <kde@privat.broulik.de>
 
-    Requires the Qt widget libraries, available at no cost at
-    https://www.qt.io/
-
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 

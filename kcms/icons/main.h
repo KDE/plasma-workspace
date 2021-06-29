@@ -6,9 +6,6 @@
     SPDX-FileCopyrightText: 2018 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2019 Benjamin Port <benjamin.port@enioka.com>
 
-    Requires the Qt widget libraries, available at no cost at
-    https://www.qt.io/
-
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 

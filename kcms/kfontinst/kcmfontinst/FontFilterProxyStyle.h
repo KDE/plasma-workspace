@@ -4,6 +4,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
+
 #ifndef CFONTFILTERPROXYSTYLE_H
 #define CFONTFILTERPROXYSTYLE_H
 #include <QStyle>

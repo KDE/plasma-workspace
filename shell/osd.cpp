@@ -1,5 +1,5 @@
 /*
-    Copyright 2014 (c) Martin Klapetek <mklapetek@kde.org>
+    SPDX-FileCopyrightText: 2014 Martin Klapetek <mklapetek@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
