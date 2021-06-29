@@ -4,7 +4,6 @@ ksmserver - the KDE session management server
 SPDX-FileCopyrightText: 2018 David Edmundson <davidedmundson@kde.org>
 
 SPDX-License-Identifier: MIT
-
 */
 
 #pragma once

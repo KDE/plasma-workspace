@@ -5,7 +5,6 @@ SPDX-FileCopyrightText: 2016 Martin Graesslin <mgraesslin@kde.org>
 SPDX-FileCopyrightText: 2018 David Edmundson <davidedmundson@kde.org>
 
 SPDX-License-Identifier: MIT
-
 */
 
 #pragma once
