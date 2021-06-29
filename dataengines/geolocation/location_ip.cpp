@@ -1,9 +1,11 @@
 /*
     SPDX-FileCopyrightText: 2009 Petri Damstén <damu@iki.fi>
-    - Original Implementation.
-    2009 Andrew Coles  <andrew.coles@yahoo.co.uk>
-    - Extension to iplocationtools engine.
-    2015 Martin Gräßlin <mgraesslin@kde.org>
+
+    Original Implementation:
+    SPDX-FileCopyrightText: 2009 Andrew Coles <andrew.coles@yahoo.co.uk>
+
+    Extension to iplocationtools engine:
+    SPDX-FileCopyrightText: 2015 Martin Gräßlin <mgraesslin@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
