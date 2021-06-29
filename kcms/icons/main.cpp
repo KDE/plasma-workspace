@@ -1,30 +1,18 @@
 /*
- * main.cpp
- *
- * Copyright (c) 1999 Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
- * Copyright (c) 2000 Antonio Larrosa <larrosa@kde.org>
- * Copyright (C) 2000 Geert Jansen <jansen@kde.org>
- * KDE Frameworks 5 port Copyright (C) 2013 Jonathan Riddell <jr@jriddell.org>
- * Copyright (C) 2018 Kai Uwe Broulik <kde@privat.broulik.de>
- * Copyright (C) 2019 Benjamin Port <benjamin.port@enioka.com>
- *
- * Requires the Qt widget libraries, available at no cost at
- * https://www.qt.io/
- *
- *  This program is free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 2 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program; if not, write to the Free Software
- *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- */
+    main.cpp
+
+    SPDX-FileCopyrightText: 1999 Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
+    SPDX-FileCopyrightText: 2000 Antonio Larrosa <larrosa@kde.org>
+    SPDX-FileCopyrightText: 2000 Geert Jansen <jansen@kde.org>
+    KDE Frameworks 5 port SPDX-FileCopyrightText: 2013 Jonathan Riddell <jr@jriddell.org>
+    SPDX-FileCopyrightText: 2018 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2019 Benjamin Port <benjamin.port@enioka.com>
+
+    Requires the Qt widget libraries, available at no cost at
+    https://www.qt.io/
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
 #include "main.h"
 #include "../kcms-common_p.h"
