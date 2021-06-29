@@ -1,6 +1,6 @@
 /* This file is part of the KDE project
 
-    Copyright (C) by Andrew Stanley-Jones <asj@cban.com>
+    SPDX-FileCopyrightText: Andrew Stanley-Jones <asj@cban.com>
     SPDX-FileCopyrightText: 2000 Carsten Pfeiffer <pfeiffer@kde.org>
     SPDX-FileCopyrightText: 2004 Esben Mose Hansen <kde@mosehansen.dk>
     SPDX-FileCopyrightText: 2008 Dmitry Suzdalev <dimsuz@gmail.com>

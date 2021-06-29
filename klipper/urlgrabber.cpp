@@ -1,5 +1,5 @@
 /* This file is part of the KDE project
-    Copyright (C) SPDX-FileCopyrightText: 2000, 2001, 2002 Carsten Pfeiffer <pfeiffer@kde.org>
+    SPDX-FileCopyrightText: 2000, 2001, 2002 Carsten Pfeiffer <pfeiffer@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
