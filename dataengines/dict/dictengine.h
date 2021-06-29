@@ -1,5 +1,6 @@
 /*
-    SPDX-FileCopyrightText: 2007 Thomas Georgiou <TAGeorgiou@gmail.com> and Jeff Cooper <weirdsox11@gmail.com>
+    SPDX-FileCopyrightText: Jeff Cooper <weirdsox11@gmail.com>
+    SPDX-FileCopyrightText: 2007 Thomas Georgiou <TAGeorgiou@gmail.com>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */

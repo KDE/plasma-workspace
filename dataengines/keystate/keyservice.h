@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2009 Aaron Seigo aseigo @kde.org
+    SPDX-FileCopyrightText: 2009 Aaron Seigo <aseigo@kde.org>
 
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
