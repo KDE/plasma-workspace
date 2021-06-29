@@ -9,7 +9,7 @@
     SPDX-FileCopyrightText: 2001 Matthias Ettrich (add support for GTK applications )
     SPDX-FileCopyrightText: 2001 Waldo Bastian <bastian@kde.org>
     SPDX-FileCopyrightText: 2002 Karol Szwed <gallium@kde.org>
-    This application is freely distributable under the GNU Public License.
+    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include <config-X11.h>
