@@ -2,7 +2,6 @@
     SPDX-FileCopyrightText: 2020 Henri Chain <henri.chain@enioka.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
-
 */
 
 #include "../plasmaautostart/plasmaautostart.h"

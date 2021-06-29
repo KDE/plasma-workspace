@@ -2,7 +2,6 @@
     SPDX-FileCopyrightText: 2007-2008 Matthias Kretz <kretz@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-only
-
 */
 
 #include "kdeplatformplugin.h"

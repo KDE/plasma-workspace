@@ -3,7 +3,6 @@
     Copyright (C) 2015 <davidedmundson@kde.org> David Edmundson
 
     SPDX-License-Identifier: LGPL-2.1-or-later
-
 */
 
 #include <QGuiApplication>

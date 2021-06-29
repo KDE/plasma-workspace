@@ -12,7 +12,6 @@
     SPDX-FileCopyrightText: 2001 Waldo Bastian <bastian@kde.org>
     SPDX-FileCopyrightText: 2002 Karol Szwed <gallium@kde.org>
     This application is freely distributable under the GNU Public License.
-
 */
 
 #include <config-X11.h>

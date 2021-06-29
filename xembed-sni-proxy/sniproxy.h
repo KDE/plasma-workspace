@@ -4,7 +4,6 @@
     Copyright (C) 2019 <materka@gmail.com> Konrad Materka
 
     SPDX-License-Identifier: LGPL-2.1-or-later
-
 */
 
 #pragma once

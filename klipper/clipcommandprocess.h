@@ -2,7 +2,6 @@
     SPDX-FileCopyrightText: 2009 Esben Mose Hansen <kde@mosehansen.dk>
 
     SPDX-License-Identifier: GPL-2.0-or-later
-
 */
 
 #pragma once
