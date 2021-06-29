@@ -3,7 +3,6 @@
     SPDX-FileCopyrightText: 2014 Lukáš Tinkl <ltinkl@redhat.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
-
 */
 
 #ifndef KSOLIDNOTIFY_H

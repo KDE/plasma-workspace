@@ -2,7 +2,6 @@
     SPDX-FileCopyrightText: 2019 Marco Martin <mart@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
-
 */
 
 #include "abstractlayoutmanager.h"

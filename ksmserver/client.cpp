@@ -11,7 +11,6 @@ SPDX-FileCopyrightText: 1999 Matthias Ettrich <ettrich@kde.org>
 SPDX-FileCopyrightText: 1999 Preston Brown <pbrown@kde.org>
 
 SPDX-License-Identifier: MIT
-
 */
 
 #include <config-workspace.h>
