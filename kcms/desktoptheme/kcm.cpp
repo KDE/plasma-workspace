@@ -1,4 +1,4 @@
-/* This file is part of the KDE Project
+/*
     SPDX-FileCopyrightText: 2014 Marco Martin <mart@kde.org>
     SPDX-FileCopyrightText: 2014 Vishesh Handa <me@vhanda.in>
     SPDX-FileCopyrightText: 2016 David Rosca <nowrep@gmail.com>

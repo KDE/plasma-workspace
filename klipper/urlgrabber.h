@@ -1,4 +1,4 @@
-/* This file is part of the KDE project
+/*
     SPDX-FileCopyrightText: 2000 Carsten Pfeiffer <pfeiffer@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later

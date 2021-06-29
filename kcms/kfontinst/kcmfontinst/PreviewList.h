@@ -1,8 +1,6 @@
 #pragma once
 
 /*
- * KFontInst - KDE Font Installer
- *
  * SPDX-FileCopyrightText: 2009 Craig Drummond <craig@kde.org>
  * SPDX-License-Identifier: GPL-2.0-or-later
  */

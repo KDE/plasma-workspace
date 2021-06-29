@@ -1,5 +1,4 @@
 /*
-    This file is part of the KDE libraries
     SPDX-FileCopyrightText: 2014 Vishesh Handa <me@vhanda.in>
 
     SPDX-License-Identifier: LGPL-2.0-only
