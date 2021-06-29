@@ -1,19 +1,19 @@
-/****************************************************************************
-**
-**
-** KRDB - puts current KDE color scheme into preprocessor statements
-** cats specially written application default files and uses xrdb -merge to
-** write to RESOURCE_MANAGER. Thus it gives a  simple way to make non-KDE
-** applications fit in with the desktop
-**
-** Copyright (C) 1998 by Mark Donohoe
-** Copyright (C) 1999 by Dirk A. Mueller (reworked for KDE 2.0)
-** Copyright (C) 2001 by Matthias Ettrich (add support for GTK applications )
-** Copyright (C) 2001 by Waldo Bastian <bastian@kde.org>
-** Copyright (C) 2002 by Karol Szwed <gallium@kde.org>
-** This application is freely distributable under the GNU Public License.
-**
-*****************************************************************************/
+/*
+
+
+    KRDB - puts current KDE color scheme into preprocessor statements
+    cats specially written application default files and uses xrdb -merge to
+    write to RESOURCE_MANAGER. Thus it gives a  simple way to make non-KDE
+    applications fit in with the desktop
+
+    SPDX-FileCopyrightText: 1998 Mark Donohoe
+    SPDX-FileCopyrightText: 1999 Dirk A. Mueller (reworked for KDE 2.0)
+    SPDX-FileCopyrightText: 2001 Matthias Ettrich (add support for GTK applications )
+    SPDX-FileCopyrightText: 2001 Waldo Bastian <bastian@kde.org>
+    SPDX-FileCopyrightText: 2002 Karol Szwed <gallium@kde.org>
+    This application is freely distributable under the GNU Public License.
+
+*/
 
 #include <config-X11.h>
 #include <config-workspace.h>

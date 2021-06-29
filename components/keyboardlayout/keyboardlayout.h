@@ -1,8 +1,8 @@
 /*
- * SPDX-FileCopyrightText: 2014 Daniel Vrátil <dvratil@redhat.com>
- * SPDX-FileCopyrightText: 2020 Andrey Butirsky <butirsky@gmail.com>
- * SPDX-License-Identifier: LGPL-2.1-or-later
- */
+    SPDX-FileCopyrightText: 2014 Daniel Vrátil <dvratil@redhat.com>
+    SPDX-FileCopyrightText: 2020 Andrey Butirsky <butirsky@gmail.com>
+    SPDX-License-Identifier: LGPL-2.1-or-later
+*/
 
 #ifndef KEYBOARDLAYOUT_H
 #define KEYBOARDLAYOUT_H

@@ -1,31 +1,19 @@
 /*
- * KCMStyle
- * Copyright (C) 2002 Karol Szwed <gallium@kde.org>
- * Copyright (C) 2002 Daniel Molkentin <molkentin@kde.org>
- * Copyright (C) 2007 Urs Wolfer <uwolfer @ kde.org>
- * Copyright (C) 2019 Kai Uwe Broulik <kde@broulik.de>
- * Copyright (C) 2019 Cyril Rossi <cyril.rossi@enioka.com>
- *
- * Portions Copyright (C) TrollTech AS.
- *
- * Based on kcmdisplay
- * Copyright (C) 1997-2002 kcmdisplay Authors.
- * (see Help -> About Style Settings)
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public
- * License version 2 as published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; see the file COPYING.  If not, write to
- * the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
- * Boston, MA 02110-1301, USA.
- */
+    KCMStyle
+    SPDX-FileCopyrightText: 2002 Karol Szwed <gallium@kde.org>
+    SPDX-FileCopyrightText: 2002 Daniel Molkentin <molkentin@kde.org>
+    SPDX-FileCopyrightText: 2007 Urs Wolfer <uwolfer @ kde.org>
+    SPDX-FileCopyrightText: 2019 Kai Uwe Broulik <kde@broulik.de>
+    SPDX-FileCopyrightText: 2019 Cyril Rossi <cyril.rossi@enioka.com>
+
+    Portions Copyright (C) TrollTech AS.
+
+    Based on kcmdisplay
+    SPDX-FileCopyrightText: 1997-2002 kcmdisplay Authors.
+    (see Help -> About Style Settings)
+
+    SPDX-License-Identifier: GPL-2.0-only
+*/
 
 #ifndef KCMSTYLE_H
 #define KCMSTYLE_H

@@ -1,27 +1,14 @@
 /*
-    Copyright 1997 Mark Donohoe
-    Copyright 1999 Lars Knoll
-    Copyright 2000 Rik Hemsley
-    Copyright 2015 Antonis Tsiapaliokas <antonis.tsiapaliokas@kde.org>
-    Copyright 2017 Marco Martin <mart@kde.org>
-    Copyright 2019 Benjamin Port <benjamin.port@enioka.com>
+    SPDX-FileCopyrightText: 1997 Mark Donohoe
+    SPDX-FileCopyrightText: 1999 Lars Knoll
+    SPDX-FileCopyrightText: 2000 Rik Hemsley
+    SPDX-FileCopyrightText: 2015 Antonis Tsiapaliokas <antonis.tsiapaliokas@kde.org>
+    SPDX-FileCopyrightText: 2017 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 2019 Benjamin Port <benjamin.port@enioka.com>
 
     Ported to kcontrol2 by Geert Jansen.
 
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Library General Public
-    License as published by the Free Software Foundation; either
-    version 2 of the License, or (at your option) any later version.
-
-    This library is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-    Library General Public License for more details.
-
-    You should have received a copy of the GNU Library General Public License
-    along with this library; see the file COPYING.LIB.  If not, write to
-    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-    Boston, MA 02110-1301, USA.
+    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #ifndef FONTS_H
