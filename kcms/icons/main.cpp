@@ -4,9 +4,11 @@
     SPDX-FileCopyrightText: 1999 Matthias Hoelzer-Kluepfel <hoelzer@kde.org>
     SPDX-FileCopyrightText: 2000 Antonio Larrosa <larrosa@kde.org>
     SPDX-FileCopyrightText: 2000 Geert Jansen <jansen@kde.org>
-    KDE Frameworks 5 port SPDX-FileCopyrightText: 2013 Jonathan Riddell <jr@jriddell.org>
     SPDX-FileCopyrightText: 2018 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2019 Benjamin Port <benjamin.port@enioka.com>
+
+    KDE Frameworks 5 port:
+    SPDX-FileCopyrightText: 2013 Jonathan Riddell <jr@jriddell.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
