@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2007 Aaron Seigo <aseigo@kde.org>
     SPDX-FileCopyrightText: 2007-2008 Sebastian Kuegler <sebas@kde.org>
-    CopyRight 2007 Maor Vanmak <mvanmak1@gmail.com>
+    SPDX-FileCopyrightText: 2007 Maor Vanmak <mvanmak1@gmail.com>
     SPDX-FileCopyrightText: 2008 Dario Freddi <drf54321@gmail.com>
 
     SPDX-License-Identifier: LGPL-2.0-only

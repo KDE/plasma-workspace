@@ -1,6 +1,4 @@
 /*
-
-
     KRDB - puts current KDE color scheme into preprocessor statements
     cats specially written application default files and uses xrdb -merge to
     write to RESOURCE_MANAGER. Thus it gives a  simple way to make non-KDE
