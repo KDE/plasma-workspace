@@ -1,15 +1,15 @@
 /*
-ksmserver - the KDE session management server
+    ksmserver - the KDE session management server
 
-SPDX-FileCopyrightText: 2000 Matthias Ettrich <ettrich@kde.org>
+    SPDX-FileCopyrightText: 2000 Matthias Ettrich <ettrich@kde.org>
 
-relatively small extensions by Oswald Buddenhagen <ob6@inf.tu-dresden.de>
+    relatively small extensions by Oswald Buddenhagen <ob6@inf.tu-dresden.de>
 
-some code taken from the dcopserver (part of the KDE libraries), which is
-SPDX-FileCopyrightText: 1999 Matthias Ettrich <ettrich@kde.org>
-SPDX-FileCopyrightText: 1999 Preston Brown <pbrown@kde.org>
+    some code taken from the dcopserver (part of the KDE libraries), which is
+    SPDX-FileCopyrightText: 1999 Matthias Ettrich <ettrich@kde.org>
+    SPDX-FileCopyrightText: 1999 Preston Brown <pbrown@kde.org>
 
-SPDX-License-Identifier: MIT
+    SPDX-License-Identifier: MIT
 */
 
 #include <config-ksmserver.h>

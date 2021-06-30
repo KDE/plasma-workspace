@@ -1,9 +1,9 @@
 /*
-SPDX-FileCopyrightText: 2011 Martin Gräßlin <mgraesslin@kde.org>
-SPDX-FileCopyrightText: 2013 Marco Martin <mart@kde.org>
-SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2011 Martin Gräßlin <mgraesslin@kde.org>
+    SPDX-FileCopyrightText: 2013 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
 
-SPDX-License-Identifier: GPL-2.0-or-later
+    SPDX-License-Identifier: GPL-2.0-or-later
 */
 import QtQuick 2.0
 import QtQuick.Layouts 1.1

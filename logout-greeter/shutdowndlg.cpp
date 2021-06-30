@@ -1,8 +1,8 @@
 /*
-SPDX-FileCopyrightText: 2000 Matthias Ettrich <ettrich@kde.org>
-SPDX-FileCopyrightText: 2007 Urs Wolfer <uwolfer @ kde.org>
+    SPDX-FileCopyrightText: 2000 Matthias Ettrich <ettrich@kde.org>
+    SPDX-FileCopyrightText: 2007 Urs Wolfer <uwolfer @ kde.org>
 
-SPDX-License-Identifier: MIT
+    SPDX-License-Identifier: MIT
 */
 
 #include "shutdowndlg.h"

@@ -1,8 +1,9 @@
 /*
-SPDX-FileCopyrightText: 2017 Roman Gilg <subdiff@gmail.com>
+    SPDX-FileCopyrightText: 2017 Roman Gilg <subdiff@gmail.com>
 
-SPDX-License-Identifier: GPL-2.0-or-later
+    SPDX-License-Identifier: GPL-2.0-or-later
 */
+
 #include "mock_kwin.h"
 #include "qtest_dbus.h"
 
