@@ -11,6 +11,7 @@
 #include <QDataStream>
 #include <QDateTime>
 #include <QFile>
+#include <QVariant>
 #include <QFileInfo>
 #include <QSocketNotifier>
 #include <QTextStream>
