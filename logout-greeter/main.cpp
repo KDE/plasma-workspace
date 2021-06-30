@@ -1,9 +1,9 @@
 /*
-ksmserver - the KDE session management server
+    ksmserver - the KDE session management server
 
-SPDX-FileCopyrightText: 2016 Martin Graesslin <mgraesslin@kde.org>
+    SPDX-FileCopyrightText: 2016 Martin Graesslin <mgraesslin@kde.org>
 
-SPDX-License-Identifier: MIT
+    SPDX-License-Identifier: MIT
 */
 #include <QApplication>
 #include <QCommandLineParser>

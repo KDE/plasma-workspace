@@ -1,9 +1,9 @@
 /*
-ksmserver - the KDE session management server
+    ksmserver - the KDE session management server
 
-SPDX-FileCopyrightText: 2000 Matthias Ettrich <ettrich@kde.org>
+    SPDX-FileCopyrightText: 2000 Matthias Ettrich <ettrich@kde.org>
 
-SPDX-License-Identifier: MIT
+    SPDX-License-Identifier: MIT
 */
 
 #pragma once

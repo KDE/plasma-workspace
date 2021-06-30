@@ -1,8 +1,8 @@
 /*
-SPDX-FileCopyrightText: 2012, 2013 Martin Graesslin <mgraesslin@kde.org>
-SPDX-FileCopyrightText: 2015 David Edmudson <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 2012, 2013 Martin Graesslin <mgraesslin@kde.org>
+    SPDX-FileCopyrightText: 2015 David Edmudson <davidedmundson@kde.org>
 
-SPDX-License-Identifier: GPL-2.0-or-later
+    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #pragma once
