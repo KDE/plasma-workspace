@@ -1,10 +1,10 @@
+/*
+    SPDX-FileCopyrightText: 2003-2010 Craig Drummond <craig@kde.org>
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
+
 #ifndef HELPER_H
 #define HELPER_H
-
-/*
- * SPDX-FileCopyrightText: 2003-2010 Craig Drummond <craig@kde.org>
- * SPDX-License-Identifier: GPL-2.0-or-later
- */
 
 #include <KAuth>
 #include <QObject>

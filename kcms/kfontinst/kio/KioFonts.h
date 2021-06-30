@@ -1,10 +1,10 @@
+/*
+    SPDX-FileCopyrightText: 2003-2007 Craig Drummond <craig@kde.org>
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
+
 #ifndef __KIO_FONTS_H__
 #define __KIO_FONTS_H__
-
-/*
- * SPDX-FileCopyrightText: 2003-2007 Craig Drummond <craig@kde.org>
- * SPDX-License-Identifier: GPL-2.0-or-later
- */
 
 #include <KIO/SlaveBase>
 #include <sys/types.h>

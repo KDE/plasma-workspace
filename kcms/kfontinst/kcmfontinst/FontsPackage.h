@@ -1,10 +1,10 @@
+/*
+    SPDX-FileCopyrightText: 2009 Craig Drummond <craig@kde.org>
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
+
 #ifndef __FONTS_PACKAGE_H__
 #define __FONTS_PACKAGE_H__
-
-/*
- * SPDX-FileCopyrightText: 2009 Craig Drummond <craig@kde.org>
- * SPDX-License-Identifier: GPL-2.0-or-later
- */
 
 class QTemporaryDir;
 

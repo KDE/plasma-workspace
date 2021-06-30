@@ -1,10 +1,10 @@
+/*
+    SPDX-FileCopyrightText: 2003-2009 Craig Drummond <craig@kde.org>
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
+
 #ifndef __WRITING_SYSTEMS_H__
 #define __WRITING_SYSTEMS_H__
-
-/*
- * SPDX-FileCopyrightText: 2003-2009 Craig Drummond <craig@kde.org>
- * SPDX-License-Identifier: GPL-2.0-or-later
- */
 
 #include "kfontinst_export.h"
 #include <QMap>

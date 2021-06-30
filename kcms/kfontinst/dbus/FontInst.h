@@ -1,10 +1,10 @@
+/*
+    SPDX-FileCopyrightText: 2003-2009 Craig Drummond <craig@kde.org>
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
+
 #ifndef FONTINST_H
 #define FONTINST_H
-
-/*
- * SPDX-FileCopyrightText: 2003-2009 Craig Drummond <craig@kde.org>
- * SPDX-License-Identifier: GPL-2.0-or-later
- */
 
 #include "Family.h"
 #include "Folder.h"

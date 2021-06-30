@@ -1,10 +1,10 @@
+/*
+    SPDX-FileCopyrightText: 2003-2009 Craig Drummond <craig@kde.org>
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
+
 #ifndef __XML_STRINGS_H__
 #define __XML_STRINGS_H__
-
-/*
- * SPDX-FileCopyrightText: 2003-2009 Craig Drummond <craig@kde.org>
- * SPDX-License-Identifier: GPL-2.0-or-later
- */
 
 #define FONTLIST_TAG "fontlist"
 #define FONT_TAG "font"
