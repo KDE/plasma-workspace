@@ -303,9 +303,15 @@ Item {
                 continue
             }
 
+            const playerData = mpris2Source.data[source];
+            // source data is removed before its name is removed from the list
+            if (!playerData) {
+                continue;
+            }
+
             model.push({
-                'text': mpris2Source.data[source]["Identity"],
-                'icon': mpris2Source.data[source]["Desktop Icon Name"] || mpris2Source.data[source]["DesktopEntry"] || "emblem-music-symbolic",
+                'text': playerData["Identity"],
+                'icon': playerData["Desktop Icon Name"] || playerData["DesktopEntry"] || "emblem-music-symbolic",
                 'source': source
             });
         }
