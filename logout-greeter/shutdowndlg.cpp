@@ -205,10 +205,12 @@ void KSMShutdownDlg::init()
 
     setKeyboardGrabEnabled(true);
     KWindowEffects::enableBlurBehind(this, true);
-    if (auto w = LayerShellQt::Window::get(this)) {
-        w->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
-        w->setExclusiveZone(-1);
-        w->setLayer(LayerShellQt::Window::LayerOverlay);
+    if (KWindowSystem::isPlatformWayland()) {
+        if (auto w = LayerShellQt::Window::get(this)) {
+            w->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
+            w->setExclusiveZone(-1);
+            w->setLayer(LayerShellQt::Window::LayerOverlay);
+        }
     }
 }
 
