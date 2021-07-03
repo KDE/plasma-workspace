@@ -40,7 +40,5 @@ Name[zh_CN]=字体
 
 ProvidersUrl=https://distribute.kde.org/khotnewstuff/fonts-providers.xml
 Categories=KDE-Look.org Fonts
-ChecksumPolicy=ifpossible
-SignaturePolicy=ifpossible
 TargetDir=kfontinst
 Uncompress=archive
