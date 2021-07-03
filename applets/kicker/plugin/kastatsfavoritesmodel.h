@@ -26,7 +26,6 @@
 #include <QPointer>
 
 #include <KConfig>
-#include <KService>
 
 class PlaceholderModel;
 

@@ -23,7 +23,6 @@ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 #include "virtualdesktopinfo.h"
 
 #include <KDirWatch>
-#include <KService>
 #include <KSharedConfig>
 #include <KWayland/Client/connection_thread.h>
 #include <KWayland/Client/plasmawindowmanagement.h>

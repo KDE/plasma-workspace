@@ -28,7 +28,6 @@
 
 #include <KFilePlacesModel>
 #include <KLocalizedString>
-#include <KService>
 #include <KShell>
 
 #include <kio/global.h>

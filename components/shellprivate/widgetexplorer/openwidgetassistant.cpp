@@ -26,7 +26,6 @@
 #include <KFileWidget>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KService>
 #include <QDebug>
 #include <QUrl>
 

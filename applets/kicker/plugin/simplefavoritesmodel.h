@@ -24,8 +24,6 @@
 
 #include <QPointer>
 
-#include <KService>
-
 class SimpleFavoritesModel : public AbstractModel
 {
     Q_OBJECT
