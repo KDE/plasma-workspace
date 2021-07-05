@@ -28,4 +28,6 @@ group_info:
     description: Provides APIs to build plasma widgets, wallpaper plugins and more.
     logo: konqi_frameworks.png
     long_description:
-        - TODO
+        - Plasma is a desktop environment for Linux and FreeBSD but it's built as a platforms
+          in which plugins can be built to extends its features or completely new desktop
+          environment can be built on top.
