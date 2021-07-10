@@ -78,6 +78,7 @@ Comment[fi]=Kone sovelusten tilatiedoille, perustuu tilailmoitinyhteyskäytänt�
 Comment[fr]=Moteur d'informations sur l'état des applications utilisant le protocole de notification d'état.
 Comment[gl]=Motor para información do estado das aplicacións, baseado no protocolo Status Notifier.
 Comment[he]=מנוע עבור מידע אודות מצב של יישומים, המתבסס על הפרוטוקול של Status Notifier.
+Comment[hi]=स्थिति सूचक प्रोटोकॉल के आधार पर अनुप्रयोगों की स्थिति की जानकारी के लिए इंजन।
 Comment[hr]=Mehanizam za statusne informacije aplikacija baziran na protokolu glasnika stanja.
 Comment[hu]=Az állaporértesítés protokollon alapuló  modul az alkalmazások állapotértesítési információihoz.
 Comment[ia]=Motor pro information de stato de applicationes basate sur le protocollo de Notificator de Stato
