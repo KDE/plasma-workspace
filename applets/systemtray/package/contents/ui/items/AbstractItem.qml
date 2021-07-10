@@ -111,7 +111,7 @@ PlasmaCore.ToolTipArea {
         acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
         onClicked: abstractItem.clicked(mouse)
         onPressed: {
-            abstractItem.hideToolTip()
+            abstractItem.hideImmediately()
             abstractItem.pressed(mouse)
         }
         onPressAndHold: {
