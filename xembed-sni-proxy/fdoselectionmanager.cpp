@@ -1,7 +1,7 @@
 /*
     Registers as a embed container
     SPDX-FileCopyrightText: 2015 David Edmundson <davidedmundson@kde.org>
-    SPDX-FileCopyrightText:  2019 Konrad Materka <materka@gmail.com>
+    SPDX-FileCopyrightText: 2019 Konrad Materka <materka@gmail.com>
 
     SPDX-License-Identifier: LGPL-2.1-or-later
 */

@@ -7,10 +7,10 @@
     SPDX-FileCopyrightText: 2019 Kai Uwe Broulik <kde@broulik.de>
     SPDX-FileCopyrightText: 2019 Cyril Rossi <cyril.rossi@enioka.com>
 
-    Portions SPDX-FileCopyrightText: 2007 Paolo Capriotti <p.capriotti@gmail.com>
-    Portions SPDX-FileCopyrightText: 2007 Ivan Cukic <ivan.cukic+kde@gmail.com>
-    Portions SPDX-FileCopyrightText: 2008 Petri Damsten <damu@iki.fi>
-    Portions SPDX-FileCopyrightText: 2000 TrollTech AS.
+    SPDX-FileCopyrightText: 2007 Paolo Capriotti <p.capriotti@gmail.com>
+    SPDX-FileCopyrightText: 2007 Ivan Cukic <ivan.cukic+kde@gmail.com>
+    SPDX-FileCopyrightText: 2008 Petri Damsten <damu@iki.fi>
+    SPDX-FileCopyrightText: 2000 TrollTech AS.
 
     SPDX-License-Identifier: GPL-2.0-only
 */
@@ -81,7 +81,7 @@ KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
                                        QStringLiteral("2.0"),
                                        QString(),
                                        KAboutLicense::GPL,
-                                       i18n("(c) 2002 Karol Szwed, Daniel Molkentin, SPDX-FileCopyrightText: 2019 Kai Uwe Broulik "));
+                                       i18n("(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "));
 
     about->addAuthor(i18n("Karol Szwed"), QString(), QStringLiteral("gallium@kde.org"));
     about->addAuthor(i18n("Daniel Molkentin"), QString(), QStringLiteral("molkentin@kde.org"));

@@ -5,10 +5,15 @@
     applications fit in with the desktop
 
     SPDX-FileCopyrightText: 1998 Mark Donohoe
-    SPDX-FileCopyrightText: 1999 Dirk A. Mueller (reworked for KDE 2.0)
-    SPDX-FileCopyrightText: 2001 Matthias Ettrich (add support for GTK applications )
     SPDX-FileCopyrightText: 2001 Waldo Bastian <bastian@kde.org>
     SPDX-FileCopyrightText: 2002 Karol Szwed <gallium@kde.org>
+
+    reworked for KDE 2.0:
+    SPDX-FileCopyrightText: 1999 Dirk A. Mueller
+
+    add support for GTK applications:
+    SPDX-FileCopyrightText: 2001 Matthias Ettrich
+
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 

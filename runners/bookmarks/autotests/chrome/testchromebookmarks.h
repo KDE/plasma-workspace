@@ -1,5 +1,6 @@
 /*
-    SPDX-FileCopyrightText: 2007, 2012 Glenn Ergeerts <glenn.ergeerts@telenet.be>
+    SPDX-FileCopyrightText: 2007 Glenn Ergeerts <glenn.ergeerts@telenet.be>
+    SPDX-FileCopyrightText: 2012 Marco Gulino <marco.gulino@xpeppers.com>
     SPDX-FileCopyrightText: 2021 Alexander Lohnau <alexander.lohnau@gmx.de>
 
     SPDX-License-Identifier: LGPL-2.0-or-later

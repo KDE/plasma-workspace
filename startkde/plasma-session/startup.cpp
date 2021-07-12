@@ -3,8 +3,7 @@
     SPDX-FileCopyrightText: 2005 Lubos Lunak <l.lunak@kde.org>
     SPDX-FileCopyrightText: 2018 David Edmundson <davidedmundson@kde.org>
 
-
-    relatively small extensions by Oswald Buddenhagen <ob6@inf.tu-dresden.de>
+    SPDX-FileContributor: Oswald Buddenhagen <ob6@inf.tu-dresden.de>
 
     some code taken from the dcopserver (part of the KDE libraries), which is
     SPDX-FileCopyrightText: 1999 Matthias Ettrich <ettrich@kde.org>

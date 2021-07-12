@@ -6,7 +6,8 @@
     SPDX-FileCopyrightText: 2017 Marco Martin <mart@kde.org>
     SPDX-FileCopyrightText: 2019 Benjamin Port <benjamin.port@enioka.com>
 
-    Ported to kcontrol2 by Geert Jansen.
+    Ported to kcontrol2:
+    SPDX-FileCopyrightText: Geert Jansen
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */

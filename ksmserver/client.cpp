@@ -4,7 +4,7 @@
     SPDX-FileCopyrightText: 2000 Matthias Ettrich <ettrich@kde.org>
     SPDX-FileCopyrightText: 2005 Lubos Lunak <l.lunak@kde.org>
 
-    relatively small extensions by Oswald Buddenhagen <ob6@inf.tu-dresden.de>
+    SPDX-FileContributor: Oswald Buddenhagen <ob6@inf.tu-dresden.de>
 
     some code taken from the dcopserver (part of the KDE libraries), which is
     SPDX-FileCopyrightText: 1999 Matthias Ettrich <ettrich@kde.org>
