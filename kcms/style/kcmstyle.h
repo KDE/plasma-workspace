@@ -1,16 +1,15 @@
 /*
     KCMStyle
+    SPDX-FileCopyrightText: 2000 TrollTech AS.
     SPDX-FileCopyrightText: 2002 Karol Szwed <gallium@kde.org>
     SPDX-FileCopyrightText: 2002 Daniel Molkentin <molkentin@kde.org>
     SPDX-FileCopyrightText: 2007 Urs Wolfer <uwolfer @ kde.org>
     SPDX-FileCopyrightText: 2019 Kai Uwe Broulik <kde@broulik.de>
     SPDX-FileCopyrightText: 2019 Cyril Rossi <cyril.rossi@enioka.com>
 
-    Portions Copyright (C) TrollTech AS.
 
     Based on kcmdisplay
     SPDX-FileCopyrightText: 1997-2002 kcmdisplay Authors.
-    (see Help -> About Style Settings)
 
     SPDX-License-Identifier: GPL-2.0-only
 */
