@@ -48,7 +48,7 @@ void StatusNotifierItemJob::start()
             performJob();
         }
     });
-    KWindowSystem::requestXdgActivationToken(window, launchedSerial, m_source->id());
+    KWindowSystem::requestXdgActivationToken(window, launchedSerial, {});
 }
 
 void StatusNotifierItemJob::performJob()
