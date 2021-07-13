@@ -29,9 +29,7 @@
 #include "dbusutils_p.h"
 #include <KRunner/QueryMatch>
 
-class QTimer;
-
-class SearchRunner : public QObject, protected QDBusContext
+class SearchRunner : public QObject
 {
     Q_OBJECT
 
@@ -44,12 +42,7 @@ public:
     void Run(const QString &id, const QString &actionId);
 
 private:
-    void performMatch();
     RemoteMatches matchInternal(const QString &searchTerm, const QString &type, const QString &category, QSet<QUrl> &foundUrls);
-
-    QDBusMessage m_lastRequest;
-    QString m_searchTerm;
-    QTimer *m_timer = nullptr;
 };
 
 #endif // _BALOO_SEARCH_RUNNER_H_

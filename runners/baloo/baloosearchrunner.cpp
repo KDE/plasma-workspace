@@ -58,11 +58,7 @@ int main(int argc, char **argv)
 
 SearchRunner::SearchRunner(QObject *parent)
     : QObject(parent)
-    , m_timer(new QTimer(this))
 {
-    m_timer->setSingleShot(true);
-    connect(m_timer, &QTimer::timeout, this, &SearchRunner::performMatch);
-
     new Krunner1Adaptor(this);
     qDBusRegisterMetaType<RemoteMatch>();
     qDBusRegisterMetaType<RemoteMatches>();
@@ -89,56 +85,26 @@ RemoteMatches SearchRunner::Match(const QString &searchTerm)
     if (searchTerm.startsWith(QLatin1Char('='))) {
         return RemoteMatches();
     }
-    setDelayedReply(true);
 
-    if (m_lastRequest.type() != QDBusMessage::InvalidMessage) {
-        QDBusConnection::sessionBus().send(m_lastRequest.createReply(QVariantList()));
-    }
-
-    m_lastRequest = message();
-    m_searchTerm = searchTerm;
-
-    // Baloo (as of 2014-11-20) is single threaded. It has an internal mutex which results in
-    // queries being queued one after another. Also, Baloo is really really slow for small queries
-    // For example - on my SSD, it takes about 1.4 seconds for 'f' with an SSD.
-    // When searching for "fire", it results in "f", "fi", "fir" and then "fire" being searched
-    // We're therefore hacking around this by having a small delay for very short queries so that
-    // they do not get queued internally in Baloo
-    //
-    int waitTimeMs = 0;
-
-    if (searchTerm.length() <= 3) {
-        waitTimeMs = 100;
-    }
-    // we're still using the event delayed call even when the length is < 3 so that if we have multiple Match() calls in our DBus queue, we only process the
-    // last one
-    m_timer->start(waitTimeMs);
-
-    return RemoteMatches();
-}
-
-void SearchRunner::performMatch()
-{
     // Filter out duplicates
     QSet<QUrl> foundUrls;
     // The location runner handles file paths, otherwise we would end up with duplicate entries
-    QFileInfo fileInfo(KShell::tildeExpand(m_searchTerm));
+    QFileInfo fileInfo(KShell::tildeExpand(searchTerm));
     if (fileInfo.exists()) {
         foundUrls << QUrl::fromLocalFile(fileInfo.absoluteFilePath());
     }
 
     RemoteMatches matches;
-    matches << matchInternal(m_searchTerm, QStringLiteral("Audio"), i18n("Audio"), foundUrls);
-    matches << matchInternal(m_searchTerm, QStringLiteral("Image"), i18n("Image"), foundUrls);
-    matches << matchInternal(m_searchTerm, QStringLiteral("Video"), i18n("Video"), foundUrls);
-    matches << matchInternal(m_searchTerm, QStringLiteral("Spreadsheet"), i18n("Spreadsheet"), foundUrls);
-    matches << matchInternal(m_searchTerm, QStringLiteral("Presentation"), i18n("Presentation"), foundUrls);
-    matches << matchInternal(m_searchTerm, QStringLiteral("Folder"), i18n("Folder"), foundUrls);
-    matches << matchInternal(m_searchTerm, QStringLiteral("Document"), i18n("Document"), foundUrls);
-    matches << matchInternal(m_searchTerm, QStringLiteral("Archive"), i18n("Archive"), foundUrls);
+    matches << matchInternal(searchTerm, QStringLiteral("Audio"), i18n("Audio"), foundUrls);
+    matches << matchInternal(searchTerm, QStringLiteral("Image"), i18n("Image"), foundUrls);
+    matches << matchInternal(searchTerm, QStringLiteral("Video"), i18n("Video"), foundUrls);
+    matches << matchInternal(searchTerm, QStringLiteral("Spreadsheet"), i18n("Spreadsheet"), foundUrls);
+    matches << matchInternal(searchTerm, QStringLiteral("Presentation"), i18n("Presentation"), foundUrls);
+    matches << matchInternal(searchTerm, QStringLiteral("Folder"), i18n("Folder"), foundUrls);
+    matches << matchInternal(searchTerm, QStringLiteral("Document"), i18n("Document"), foundUrls);
+    matches << matchInternal(searchTerm, QStringLiteral("Archive"), i18n("Archive"), foundUrls);
 
-    QDBusConnection::sessionBus().send(m_lastRequest.createReply(QVariant::fromValue(matches)));
-    m_lastRequest = QDBusMessage();
+    return matches;
 }
 
 RemoteMatches SearchRunner::matchInternal(const QString &searchTerm, const QString &type, const QString &category, QSet<QUrl> &foundUrls)
