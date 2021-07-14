@@ -88,11 +88,6 @@ RemoteMatches SearchRunner::Match(const QString &searchTerm)
 
     // Filter out duplicates
     QSet<QUrl> foundUrls;
-    // The location runner handles file paths, otherwise we would end up with duplicate entries
-    QFileInfo fileInfo(KShell::tildeExpand(searchTerm));
-    if (fileInfo.exists()) {
-        foundUrls << QUrl::fromLocalFile(fileInfo.absoluteFilePath());
-    }
 
     RemoteMatches matches;
     matches << matchInternal(searchTerm, QStringLiteral("Audio"), i18n("Audio"), foundUrls);
