@@ -164,6 +164,7 @@ void TranslationsModel::move(int from, int to)
     // only very few languages will be selected and thus visible when a move occurs.
     beginResetModel();
     m_selectedLanguages.move(from, to);
+    Q_EMIT selectedLanguagesChanged(m_selectedLanguages);
     endResetModel();
 }
 
@@ -180,6 +181,7 @@ void TranslationsModel::remove(const QString &languageCode)
     const QModelIndex modelIndex = createIndex(index, 0);
 
     m_selectedLanguages.removeAll(languageCode);
+    Q_EMIT selectedLanguagesChanged(m_selectedLanguages);
     Q_EMIT dataChanged(modelIndex, modelIndex, {IsSelected, SelectionPreference});
 }
 
