@@ -830,7 +830,9 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
             auto *job = new KIO::ApplicationLauncherJob(service);
             job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
             job->setUrls(urls);
-            job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+            if (KWindowSystem::isPlatformX11()) {
+                job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+            }
             job->start();
 
             KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
@@ -838,7 +840,9 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
         } else {
             auto *job = new KIO::OpenUrlJob(appData.url);
             job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
-            job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+            if (KWindowSystem::isPlatformX11()) {
+                job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+            }
             job->setRunExecutables(true);
             job->start();
 
