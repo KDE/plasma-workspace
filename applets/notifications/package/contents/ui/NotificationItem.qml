@@ -122,17 +122,13 @@ ColumnLayout {
         PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.HeaderColorGroup
         PlasmaCore.ColorScope.inherit: false
 
-        PlasmaCore.FrameSvgItem {
-            imagePath: "widgets/plasmoidheading"
-            prefix: "header"
+        PlasmaExtras.PlasmoidHeading {
             anchors {
                 fill: parent
                 leftMargin: -margins.left
                 rightMargin: -margins.right
             }
             visible: !notificationItem.inHistory && fromCurrentTheme
-            colorGroup: parent.PlasmaCore.ColorScope.colorGroup
-            PlasmaCore.ColorScope.inherit: false
         }
 
         NotificationHeader {
