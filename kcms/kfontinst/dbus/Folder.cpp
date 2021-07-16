@@ -41,7 +41,6 @@
 #include <fontconfig/fontconfig.h>
 
 #define DISABLED_FONTS "disabledfonts"
-#define KFI_DBUG qDebug() << time(nullptr)
 
 namespace KFI
 {
@@ -107,7 +106,7 @@ void Folder::loadDisabled()
 
     QFile f(itsDisabledCfg.name);
 
-    KFI_DBUG << itsDisabledCfg.name;
+    // qDebug() << itsDisabledCfg.name;
     itsDisabledCfg.dirty = false;
     if (f.open(QIODevice::ReadOnly)) {
         QDomDocument doc;
@@ -139,10 +138,10 @@ void Folder::loadDisabled()
                                     if (FILE_TAG == ent.tagName()) {
                                         File file(ent, true);
 
-                                        if (!file.path().isEmpty())
+                                        if (!file.path().isEmpty()) {
                                             files.append(file);
-                                        else {
-                                            KFI_DBUG << "Set dirty from load";
+                                        } else {
+                                            // qDebug() << "Set dirty from load";
                                             itsDisabledCfg.dirty = true;
                                         }
                                     }
@@ -174,14 +173,14 @@ void Folder::saveDisabled()
 {
     if (itsDisabledCfg.dirty) {
         if (!itsIsSystem || Misc::root()) {
-            KFI_DBUG << itsDisabledCfg.name;
+            // qDebug() << itsDisabledCfg.name;
 
             QSaveFile file;
 
             file.setFileName(itsDisabledCfg.name);
 
             if (!file.open(QIODevice::WriteOnly)) {
-                KFI_DBUG << "Exit - cant open save file";
+                // qDebug() << "Exit - cant open save file";
                 qApp->exit(0);
             }
 
@@ -197,7 +196,7 @@ void Folder::saveDisabled()
             str.flush();
 
             if (!file.commit()) {
-                KFI_DBUG << "Exit - cant finalize save file";
+                // qDebug() << "Exit - cant finalize save file";
                 qApp->exit(0);
             }
         }
@@ -290,7 +289,7 @@ void Folder::add(const Family &family)
 
 void Folder::configure(bool force)
 {
-    KFI_DBUG << "EMPTY MODIFIED " << itsModifiedDirs.isEmpty();
+    // qDebug() << "EMPTY MODIFIED " << itsModifiedDirs.isEmpty();
 
     if (force || !itsModifiedDirs.isEmpty()) {
         saveDisabled();
@@ -307,9 +306,9 @@ void Folder::configure(bool force)
 
         itsModifiedDirs.clear();
 
-        KFI_DBUG << "RUN FC";
+        // qDebug() << "RUN FC";
         Misc::doCmd("fc-cache");
-        KFI_DBUG << "DONE";
+        // qDebug() << "DONE";
     }
 }
 

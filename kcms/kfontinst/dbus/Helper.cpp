@@ -36,8 +36,6 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-#define KFI_DBUG qDebug() << time(nullptr)
-
 KAUTH_HELPER_MAIN("org.kde.fontinst", KFI::Helper)
 
 namespace KFI
@@ -92,7 +90,6 @@ static void cleanup()
 
 Helper::Helper()
 {
-    KFI_DBUG;
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
     registerSignalHandler(signalHander);
     qAddPostRoutine(cleanup);
@@ -110,24 +107,25 @@ ActionReply Helper::manage(const QVariantMap &args)
     int result = KIO::ERR_UNSUPPORTED_ACTION;
     QString method = args["method"].toString();
 
-    KFI_DBUG << method;
+    // qDebug() << method;
 
-    if ("install" == method)
+    if ("install" == method) {
         result = install(args);
-    else if ("uninstall" == method)
+    } else if ("uninstall" == method) {
         result = uninstall(args);
-    else if ("move" == method)
+    } else if ("move" == method) {
         result = move(args);
-    else if ("toggle" == method)
+    } else if ("toggle" == method) {
         result = toggle(args);
-    else if ("removeFile" == method)
+    } else if ("removeFile" == method) {
         result = removeFile(args);
-    else if ("reconfigure" == method)
+    } else if ("reconfigure" == method) {
         result = reconfigure();
-    else if ("saveDisabled" == method)
+    } else if ("saveDisabled" == method) {
         result = saveDisabled();
-    else
-        KFI_DBUG << "Uknown action";
+    } else {
+        // qDebug() << "Uknown action";
+    }
 
     if (FontInst::STATUS_OK == result)
         return ActionReply::SuccessReply();
@@ -143,7 +141,7 @@ int Helper::install(const QVariantMap &args)
     bool createAfm(args["createAfm"].toBool());
     int type(args["type"].toInt());
 
-    KFI_DBUG << file << destFolder << name << createAfm;
+    // qDebug() << file << destFolder << name << createAfm;
 
     int result = FontInst::STATUS_OK;
 
@@ -207,7 +205,7 @@ int Helper::move(const QVariantMap &args)
     QString dest(args["dest"].toString());
     int uid(args["uid"].toInt()), gid(args["gid"].toInt());
 
-    KFI_DBUG << files << dest << toSystem;
+    // qDebug() << files << dest << toSystem;
 
     int result = FontInst::STATUS_OK;
     QStringList::ConstIterator it(files.constBegin()), end(files.constEnd());
@@ -272,7 +270,7 @@ int Helper::toggle(const QVariantMap &args)
     Family font(doc.documentElement(), true);
     bool enable(args["enable"].toBool());
 
-    KFI_DBUG << font.name() << enable;
+    // qDebug() << font.name() << enable;
 
     if (1 != font.styles().count())
         return KIO::ERR_WRITE_ACCESS_DENIED;
@@ -288,7 +286,7 @@ int Helper::toggle(const QVariantMap &args)
         QString to = Misc::getDir((*it).path()) + QString(enable ? Misc::unhide(Misc::getFile((*it).path())) : Misc::hide(Misc::getFile((*it).path())));
 
         if (to != (*it).path()) {
-            KFI_DBUG << "MOVE:" << (*it).path() << " to " << to;
+            // qDebug() << "MOVE:" << (*it).path() << " to " << to;
             if (renameFontFile((*it).path(), to)) {
                 modifiedDirs.insert(Misc::getDir(enable ? to : (*it).path()));
                 toggledFiles.insert(File(to, (*it).foundry(), (*it).index()));
@@ -355,7 +353,7 @@ int Helper::removeFile(const QVariantMap &args)
 {
     QString file(args["file"].toString());
 
-    KFI_DBUG << file;
+    // qDebug() << file;
 
     QString dir(Misc::getDir(file));
     int result = Misc::fExists(file) ? QFile::remove(file) ? (int)FontInst::STATUS_OK : (int)KIO::ERR_WRITE_ACCESS_DENIED : (int)KIO::ERR_DOES_NOT_EXIST;
@@ -368,18 +366,17 @@ int Helper::removeFile(const QVariantMap &args)
 
 int Helper::reconfigure()
 {
-    KFI_DBUG;
 
     saveDisabled();
-    KFI_DBUG << theFontFolder.isModified();
-    if (theFontFolder.isModified())
+    // qDebug() << theFontFolder.isModified();
+    if (theFontFolder.isModified()) {
         theFontFolder.configure();
+    }
     return FontInst::STATUS_OK;
 }
 
 int Helper::saveDisabled()
 {
-    KFI_DBUG;
     // Load internally calls save!
     theFontFolder.loadDisabled();
     return FontInst::STATUS_OK;

@@ -349,7 +349,6 @@ void CalculatorRunner::run(const Plasma::RunnerContext &context, const Plasma::Q
 
 QMimeData *CalculatorRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
-    // qDebug();
     QMimeData *result = new QMimeData();
     result->setText(match.text());
     return result;

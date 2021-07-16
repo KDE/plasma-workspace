@@ -35,8 +35,6 @@
 
 #include "debug.h"
 
-#define KFI_DBUG qCDebug(KCM_KFONTINST_THUMBNAIL)
-
 extern "C" {
 Q_DECL_EXPORT ThumbCreator *new_creator()
 {
@@ -55,7 +53,7 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
     QString realPath(path);
     QTemporaryDir *tempDir = nullptr;
 
-    KFI_DBUG << "Create font thumbnail for:" << path << Qt::endl;
+    qCDebug(KCM_KFONTINST_THUMBNAIL) << "Create font thumbnail for:" << path << Qt::endl;
 
     // Is this a appliaction/vnd.kde.fontspackage file? If so, extract 1 scalable font...
     QMimeDatabase db;

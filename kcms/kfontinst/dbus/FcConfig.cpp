@@ -35,8 +35,6 @@
 #include <fontconfig/fontconfig.h>
 #include <stdio.h>
 
-#define KFI_DBUG qDebug() << time(nullptr)
-
 namespace KFI
 {
 namespace FcConfig
@@ -104,7 +102,7 @@ void addDir(const QString &dir, bool system)
     QFile f(fileName);
     bool hasDir(false);
 
-    KFI_DBUG << "Using fontconfig file:" << fileName;
+    // qDebug() << "Using fontconfig file:" << fileName;
 
     // Load existing file - and check to see whether it has the dir...
     if (f.open(QIODevice::ReadOnly)) {

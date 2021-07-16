@@ -28,8 +28,6 @@
 #include <QDomElement>
 #include <QTextStream>
 
-#define KFI_DBUG qDebug() << time(0L)
-
 namespace KFI
 {
 Family::Family(const QDomElement &elem, bool loadStyles)
