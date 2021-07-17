@@ -45,18 +45,20 @@ CPreviewList::CPreviewList(QObject *parent)
 
 QVariant CPreviewList::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid())
+    if (!index.isValid()) {
         return QVariant();
+    }
 
     CPreviewListItem *item = static_cast<CPreviewListItem *>(index.internalPointer());
 
-    if (item)
+    if (item) {
         switch (role) {
         case Qt::DisplayRole:
             return FC::createName(item->name(), item->style());
         default:
             break;
         }
+    }
     return QVariant();
 }
 
@@ -70,8 +72,9 @@ QModelIndex CPreviewList::index(int row, int column, const QModelIndex &parent) 
     if (!parent.isValid()) {
         CPreviewListItem *item = itsItems.value(row);
 
-        if (item)
+        if (item) {
             return createIndex(row, column, item);
+        }
     }
 
     return QModelIndex();
@@ -99,8 +102,9 @@ void CPreviewList::showFonts(const QModelIndexList &fonts)
         CFontModelItem *mi = static_cast<CFontModelItem *>(index.internalPointer());
         CFontItem *font = mi->parent() ? static_cast<CFontItem *>(mi) : (static_cast<CFamilyItem *>(mi))->regularFont();
 
-        if (font)
+        if (font) {
             itsItems.append(new CPreviewListItem(font->family(), font->styleInfo(), font->isEnabled() ? QString() : font->fileName(), font->index()));
+        }
     }
 
     emit layoutChanged();

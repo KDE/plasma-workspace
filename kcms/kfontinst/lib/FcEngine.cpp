@@ -132,8 +132,9 @@ inline bool equalSlant(int a, int b)
 
 static void closeFont(XftFont *&font)
 {
-    if (font)
+    if (font) {
         XftFontClose(QX11Info::display(), font);
+    }
     font = nullptr;
 }
 
@@ -234,8 +235,9 @@ bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
 
     if (itsDraw
         && (txt.red() << 8 != itsTxtColor.color.red || txt.green() << 8 != itsTxtColor.color.green || txt.blue() << 8 != itsTxtColor.color.blue
-            || bnd.red() << 8 != itsBgndColor.color.red || bnd.green() << 8 != itsBgndColor.color.green || bnd.blue() << 8 != itsBgndColor.color.blue))
+            || bnd.red() << 8 != itsBgndColor.color.red || bnd.green() << 8 != itsBgndColor.color.green || bnd.blue() << 8 != itsBgndColor.color.blue)) {
         freeColors();
+    }
 
     if (0x0000 == itsTxtColor.color.alpha) {
         XRenderColor xrenderCol;
@@ -284,17 +286,19 @@ bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
         for (int i = 0; i < num_vinfo; ++i) {
             if (vinfo[i].visual == defaultVinfo.visual) {
                 if (defaultVinfo.depth == 30) {
-                    if (vinfo[i].red_mask == 0x3ff)
+                    if (vinfo[i].red_mask == 0x3ff) {
                         imageFormat = QImage::Format_BGR30;
-                    else if (vinfo[i].blue_mask == 0x3ff)
+                    } else if (vinfo[i].blue_mask == 0x3ff) {
                         imageFormat = QImage::Format_RGB30;
+                    }
                 } else if (defaultVinfo.depth == 32) {
-                    if (vinfo[i].blue_mask == 0xff)
+                    if (vinfo[i].blue_mask == 0xff) {
                         imageFormat = QImage::Format_ARGB32_Premultiplied;
-                    else if (vinfo[i].red_mask == 0x3ff)
+                    } else if (vinfo[i].red_mask == 0x3ff) {
                         imageFormat = QImage::Format_A2BGR30_Premultiplied;
-                    else if (vinfo[i].blue_mask == 0x3ff)
+                    } else if (vinfo[i].blue_mask == 0x3ff) {
                         imageFormat = QImage::Format_A2RGB30_Premultiplied;
+                    }
                 }
                 break;
             }
@@ -302,14 +306,17 @@ bool CFcEngine::Xft::init(const QColor &txt, const QColor &bnd, int w, int h)
         XFree(vinfo);
     }
 
-    if (itsPix.allocate(w, h) && itsDraw)
+    if (itsPix.allocate(w, h) && itsDraw) {
         XftDrawChange(itsDraw, itsPix.x11);
+    }
 
-    if (!itsDraw)
+    if (!itsDraw) {
         itsDraw = XftDrawCreate(QX11Info::display(), itsPix.x11, DefaultVisual(QX11Info::display(), 0), DefaultColormap(QX11Info::display(), 0));
+    }
 
-    if (itsDraw)
+    if (itsDraw) {
         XftDrawRect(itsDraw, &itsBgndColor, 0, 0, w, h);
+    }
 
     return itsDraw;
 }
@@ -352,13 +359,15 @@ bool CFcEngine::Xft::drawChar32(XftFont *xftFont, quint32 ch, int &x, int &y, in
 
         XftTextExtents32(QX11Info::display(), xftFont, &ch, 1, &extents);
 
-        if (extents.x > 0)
+        if (extents.x > 0) {
             x += extents.x;
+        }
 
         if (x + extents.width + constBorder > w) {
             x = 0;
-            if (extents.x > 0)
+            if (extents.x > 0) {
                 x += extents.x;
+            }
             y += fontHeight + constBorder;
         }
 
@@ -381,8 +390,9 @@ bool CFcEngine::Xft::drawString(XftFont *xftFont, const QString &text, int x, in
     const FcChar16 *str = (FcChar16 *)(text.utf16());
 
     XftTextExtents16(QX11Info::display(), xftFont, str, text.length(), &extents);
-    if (y + extents.height <= h)
+    if (y + extents.height <= h) {
         XftDrawString16(itsDraw, &itsTxtColor, xftFont, x, y + extents.y, str, text.length());
+    }
     if (extents.height > 0) {
         y += extents.height;
         return true;
@@ -427,8 +437,9 @@ bool CFcEngine::Xft::drawGlyph(XftFont *xftFont, FT_UInt i, int &x, int &y, int 
     }
 
     if (x + extents.width + 2 > w) {
-        if (oneLine)
+        if (oneLine) {
             return false;
+        }
 
         x = 0;
         y += fontHeight + 2;
@@ -455,28 +466,34 @@ bool CFcEngine::Xft::drawAllGlyphs(XftFont *xftFont, int fontHeight, int &x, int
             int space(fontHeight / 10), drawn(0);
             QRect r;
 
-            if (!space)
+            if (!space) {
                 space = 1;
+            }
 
             rv = true;
             y += fontHeight;
-            for (int i = 1; i < face->num_glyphs && y < h; ++i)
+            for (int i = 1; i < face->num_glyphs && y < h; ++i) {
                 if (drawGlyph(xftFont, i, x, y, w, h, fontHeight, oneLine, r)) {
                     if (r.height() > 0) {
                         if (used) {
-                            if (used->isEmpty())
+                            if (used->isEmpty()) {
                                 *used = r;
-                            else
+                            } else {
                                 *used = used->united(r);
+                            }
                         }
-                        if (max > 0 && ++drawn >= max)
+                        if (max > 0 && ++drawn >= max) {
                             break;
+                        }
                     }
-                } else
+                } else {
                     break;
+                }
+            }
 
-            if (oneLine)
+            if (oneLine) {
                 x = 0;
+            }
             XftUnlockFace(xftFont);
         }
     }
@@ -495,18 +512,20 @@ bool CFcEngine::Xft::drawAllChars(XftFont *xftFont, int fontHeight, int &x, int 
             int space(fontHeight / 10), drawn(0);
             QRect r;
 
-            if (!space)
+            if (!space) {
                 space = 1;
+            }
 
             rv = true;
             y += fontHeight;
 
             FT_Select_Charmap(face, FT_ENCODING_UNICODE);
-            for (int cmap = 0; cmap < face->num_charmaps; ++cmap)
+            for (int cmap = 0; cmap < face->num_charmaps; ++cmap) {
                 if (face->charmaps[cmap] && FT_ENCODING_ADOBE_CUSTOM == face->charmaps[cmap]->encoding) {
                     FT_Select_Charmap(face, FT_ENCODING_ADOBE_CUSTOM);
                     break;
                 }
+            }
 
             for (unsigned int i = 1; i < 65535 && y < h; ++i) {
                 int glyph = FT_Get_Char_Index(face, i);
@@ -515,21 +534,25 @@ bool CFcEngine::Xft::drawAllChars(XftFont *xftFont, int fontHeight, int &x, int 
                     if (drawGlyph(xftFont, glyph, x, y, w, h, fontHeight, oneLine, r)) {
                         if (r.height() > 0) {
                             if (used) {
-                                if (used->isEmpty())
+                                if (used->isEmpty()) {
                                     *used = r;
-                                else
+                                } else {
                                     *used = used->united(r);
+                                }
                             }
-                            if (max > 0 && ++drawn >= max)
+                            if (max > 0 && ++drawn >= max) {
                                 break;
+                            }
                         }
-                    } else
+                    } else {
                         break;
+                    }
                 }
             }
 
-            if (oneLine)
+            if (oneLine) {
                 x = 0;
+            }
             XftUnlockFace(xftFont);
         }
     }
@@ -574,9 +597,11 @@ static bool hasStr(XftFont *font, QString &str)
 {
     unsigned int slen = str.length(), ch;
 
-    for (ch = 0; ch < slen; ++ch)
-        if (!FcCharSetHasChar(font->charset, str[ch].unicode()))
+    for (ch = 0; ch < slen; ++ch) {
+        if (!FcCharSetHasChar(font->charset, str[ch].unicode())) {
             return false;
+        }
+    }
     return true;
 }
 
@@ -585,9 +610,11 @@ static QString usableStr(XftFont *font, QString &str)
     unsigned int slen = str.length(), ch;
     QString newStr;
 
-    for (ch = 0; ch < slen; ++ch)
-        if (FcCharSetHasChar(font->charset, str[ch].unicode()))
+    for (ch = 0; ch < slen; ++ch) {
+        if (FcCharSetHasChar(font->charset, str[ch].unicode())) {
             newStr += str[ch];
+        }
+    }
     return newStr;
 }
 
@@ -600,11 +627,12 @@ static void setTransparentBackground(QImage &img, const QColor &col)
 {
     // Convert background to transparent, and text to correct colour...
     img = img.convertToFormat(QImage::Format_ARGB32);
-    for (int x = 0; x < img.width(); ++x)
+    for (int x = 0; x < img.width(); ++x) {
         for (int y = 0; y < img.height(); ++y) {
             int v(qRed(img.pixel(x, y)));
             img.setPixel(x, y, qRgba(qMin(col.red() + v, 255), qMin(col.green() + v, 255), qMin(col.blue() + v, 255), 255 - v));
         }
+    }
 }
 
 CFcEngine::CFcEngine(bool init)
@@ -614,8 +642,9 @@ CFcEngine::CFcEngine(bool init)
     , itsPreviewString(getDefaultPreviewString())
     , itsXft(nullptr)
 {
-    if (init)
+    if (init) {
         reinit();
+    }
 }
 
 CFcEngine::~CFcEngine()
@@ -655,9 +684,11 @@ QImage CFcEngine::drawPreview(const QString &name, quint32 style, int faceNo, co
             {
                 int bSize = 0;
 
-                for (int s = 0; s < itsSizes.size(); ++s)
-                    if (itsSizes[s] <= fSize || 0 == bSize)
+                for (int s = 0; s < itsSizes.size(); ++s) {
+                    if (itsSizes[s] <= fSize || 0 == bSize) {
                         bSize = itsSizes[s];
+                    }
+                }
                 fSize = bSize;
                 if (bSize > h) {
                     origHeight = h;
@@ -688,8 +719,9 @@ QImage CFcEngine::drawPreview(const QString &name, quint32 style, int faceNo, co
                         QRect used;
 
                         rv = xft()->drawAllGlyphs(xftFont, fSize, x, y, constInitialWidth, h, true, text.length(), &used);
-                        if (rv)
+                        if (rv) {
                             usedWidth = used.width();
+                        }
                     }
 
                     if (rv) {
@@ -700,11 +732,13 @@ QImage CFcEngine::drawPreview(const QString &name, quint32 style, int faceNo, co
                                 img =
                                     img.scaledToHeight(origHeight, Qt::SmoothTransformation)
                                         .copy(0, 0, width + (2 * constOffset) < constInitialWidth ? width + (2 * constOffset) : constInitialWidth, origHeight);
-                            } else
+                            } else {
                                 img = img.copy(0, 0, usedWidth + (2 * constOffset) < constInitialWidth ? usedWidth + (2 * constOffset) : constInitialWidth, h);
+                            }
 
-                            if (needAlpha)
+                            if (needAlpha) {
                                 setTransparentBackground(img, txt);
+                            }
                         }
                     }
                     closeFont(xftFont);
@@ -729,9 +763,11 @@ QImage CFcEngine::draw(const QString &name, quint32 style, int faceNo, const QCo
             {
                 int bSize = 0;
 
-                for (int s = 0; s < itsSizes.size(); ++s)
-                    if (itsSizes[s] <= fSize || 0 == bSize)
+                for (int s = 0; s < itsSizes.size(); ++s) {
+                    if (itsSizes[s] <= fSize || 0 == bSize) {
                         bSize = itsSizes[s];
+                    }
+                }
                 fSize = bSize;
             }
 
@@ -775,8 +811,9 @@ QImage CFcEngine::draw(const QString &name, quint32 style, int faceNo, const QCo
                         if (!img.isNull()) {
                             img = img.copy(0, 0, w, h);
 
-                            if (needAlpha)
+                            if (needAlpha) {
                                 setTransparentBackground(img, txt);
+                            }
                         }
                     }
                 }
@@ -805,16 +842,18 @@ QImage CFcEngine::draw(const QString &name,
     h = h * dpr;
     bool rv = false;
 
-    if (chars)
+    if (chars) {
         chars->clear();
+    }
 
     if (!name.isEmpty() && ((name == itsName && style == itsStyle && File::equalIndex(faceNo, itsIndex)) || parse(name, style, faceNo))) {
         //
         // We allow kio_thumbnail to cache our thumbs. Normal is 128x128, and large is 256x256
         // ...if kio_thumbnail asks us for a bigger size, then it is probably the file info dialog, in
         // which case treat it as a normal preview...
-        if (thumb && (h > 256 || w != h))
+        if (thumb && (h > 256 || w != h)) {
             thumb = false;
+        }
 
         int x = 0, y = 0;
 
@@ -841,9 +880,11 @@ QImage CFcEngine::draw(const QString &name,
                     {
                         int bSize = 0;
 
-                        for (int s = 0; s < itsSizes.size(); ++s)
-                            if (itsSizes[s] <= fSize || 0 == bSize)
+                        for (int s = 0; s < itsSizes.size(); ++s) {
+                            if (itsSizes[s] <= fSize || 0 == bSize) {
                                 bSize = itsSizes[s];
+                            }
+                        }
                         fSize = bSize;
                     }
 
@@ -860,29 +901,34 @@ QImage CFcEngine::draw(const QString &name,
                                 text = getPunctuation().mid(1, 2); // '1' '2'
                                 valid = usableStr(xftFont, text);
                             }
-                        } else if (valid.length() < (text.length() / 2))
+                        } else if (valid.length() < (text.length() / 2)) {
                             for (int i = 0; i < 3; ++i) {
                                 text = 0 == i ? getUppercaseLetters() : 1 == i ? getLowercaseLetters() : getPunctuation();
                                 valid = usableStr(xftFont, text);
 
-                                if (valid.length() >= (text.length() / 2))
+                                if (valid.length() >= (text.length() / 2)) {
                                     break;
+                                }
                             }
+                        }
 
-                        if (itsScalable ? valid.length() != text.length() : valid.length() < (text.length() / 2))
+                        if (itsScalable ? valid.length() != text.length() : valid.length() < (text.length() / 2)) {
                             xft()->drawAllChars(xftFont, fSize, x, y, imgWidth, imgHeight, true, itsScalable ? 2 : -1, itsScalable ? &used : nullptr);
-                        else {
+                        } else {
                             QVector<uint> ucs4(valid.toUcs4());
                             QRect r;
 
-                            for (int ch = 0; ch < ucs4.size(); ++ch) // Display char by char so wraps...
+                            for (int ch = 0; ch < ucs4.size(); ++ch) { // Display char by char so wraps...
                                 if (xft()->drawChar32(xftFont, ucs4[ch], x, y, imgWidth, imgHeight, fSize, r)) {
-                                    if (used.isEmpty())
+                                    if (used.isEmpty()) {
                                         used = r;
-                                    else
+                                    } else {
                                         used = used.united(r);
-                                } else
+                                    }
+                                } else {
                                     break;
+                                }
+                            }
                         }
 
                         closeFont(xftFont);
@@ -899,44 +945,52 @@ QImage CFcEngine::draw(const QString &name,
                     if (xftFont) {
                         bool lc(hasStr(xftFont, lowercase)), uc(hasStr(xftFont, uppercase)), drawGlyphs = !lc && !uc;
 
-                        if (drawGlyphs)
+                        if (drawGlyphs) {
                             y -= 8;
-                        else {
+                        } else {
                             QString validPunc(usableStr(xftFont, punctuation));
                             bool punc(validPunc.length() >= (punctuation.length() / 2));
 
-                            if (lc)
+                            if (lc) {
                                 xft()->drawString(xftFont, lowercase, x, y, h);
-                            if (uc)
+                            }
+                            if (uc) {
                                 xft()->drawString(xftFont, uppercase, x, y, h);
-                            if (punc)
+                            }
+                            if (punc) {
                                 xft()->drawString(xftFont, validPunc, x, y, h);
-                            if (lc || uc || punc)
+                            }
+                            if (lc || uc || punc) {
                                 line2Pos = y + 2;
+                            }
                             y += 8;
                         }
 
                         QString previewString(getPreviewString());
 
                         if (!drawGlyphs) {
-                            if (!lc && uc)
+                            if (!lc && uc) {
                                 previewString = previewString.toUpper();
-                            if (!uc && lc)
+                            }
+                            if (!uc && lc) {
                                 previewString = previewString.toLower();
+                            }
                         }
 
                         closeFont(xftFont);
-                        for (int s = 0; s < itsSizes.size(); ++s)
+                        for (int s = 0; s < itsSizes.size(); ++s) {
                             if ((xftFont = getFont(itsSizes[s]))) {
                                 int fontHeight = xftFont->ascent + xftFont->descent;
 
                                 rv = true;
-                                if (drawGlyphs)
+                                if (drawGlyphs) {
                                     xft()->drawAllChars(xftFont, fontHeight, x, y, w, h, itsSizes.count() > 1);
-                                else
+                                } else {
                                     xft()->drawString(xftFont, previewString, x, y, h);
+                                }
                                 closeFont(xftFont);
                             }
+                        }
                     }
                 } else if (1 == range.count() && (range.first().null() || 0 == range.first().to)) {
                     if (range.first().null()) {
@@ -965,14 +1019,17 @@ QImage CFcEngine::draw(const QString &name,
                         int fontHeight = xftFont->ascent + xftFont->descent, xOrig(x), yOrig(y);
                         QRect r;
 
-                        for (it = range.begin(); it != end && !stop; ++it)
+                        for (it = range.begin(); it != end && !stop; ++it) {
                             for (quint32 c = (*it).from; c <= (*it).to && !stop; ++c) {
                                 if (xft()->drawChar32(xftFont, c, x, y, w, h, fontHeight, r)) {
-                                    if (chars && !r.isEmpty())
+                                    if (chars && !r.isEmpty()) {
                                         chars->append(TChar(r, c));
-                                } else
+                                    }
+                                } else {
                                     stop = true;
+                                }
                             }
+                        }
 
                         if (x == xOrig && y == yOrig) {
                             // No characters found within the selected range...
@@ -990,15 +1047,18 @@ QImage CFcEngine::draw(const QString &name,
 
                         p.setPen(txt);
                         p.drawLine(0, line1Pos, w - 1, line1Pos);
-                        if (line2Pos)
+                        if (line2Pos) {
                             p.drawLine(0, line2Pos, w - 1, line2Pos);
+                        }
                     }
 
                     if (!img.isNull()) {
-                        if (itsScalable && !used.isEmpty() && (used.width() < imgWidth || used.height() < imgHeight))
+                        if (itsScalable && !used.isEmpty() && (used.width() < imgWidth || used.height() < imgHeight)) {
                             img = img.copy(used);
-                        if (needAlpha)
+                        }
+                        if (needAlpha) {
                             setTransparentBackground(img, txt);
+                        }
                     }
                 }
             }
@@ -1082,8 +1142,9 @@ QFont CFcEngine::getQFont(const QString &family, quint32 style, int size)
 
 bool CFcEngine::parse(const QString &name, quint32 style, int face)
 {
-    if (name.isEmpty())
+    if (name.isEmpty()) {
         return false;
+    }
 
     reinit();
 
@@ -1095,17 +1156,20 @@ bool CFcEngine::parse(const QString &name, quint32 style, int face)
     if (!itsInstalled) {
         int count;
         FcPattern *pat = FcFreeTypeQuery((const FcChar8 *)(QFile::encodeName(itsName).data()), face < 1 ? 0 : face, nullptr, &count);
-        if (!pat)
+        if (!pat) {
             return false;
+        }
         itsDescriptiveName = FC::createName(pat);
         FcPatternDestroy(pat);
-    } else
+    } else {
         itsDescriptiveName = FC::createName(itsName, itsStyle);
+    }
 
     itsIndex = face < 1 ? 0 : face;
 
-    if (!itsInstalled) // Then add to fontconfig's list, so that Xft can display it...
+    if (!itsInstalled) { // Then add to fontconfig's list, so that Xft can display it...
         addFontFile(itsName);
+    }
     return true;
 }
 
@@ -1119,8 +1183,9 @@ XftFont *CFcEngine::queryFont()
 
     XftFont *f = getFont(constQuerySize);
 
-    if (f && !isCorrect(f, true))
+    if (f && !isCorrect(f, true)) {
         closeFont(f);
+    }
 
     if (itsInstalled && !f) {
         // Perhaps it is a newly installed font? If so try re-initialising fontconfig...
@@ -1131,8 +1196,9 @@ XftFont *CFcEngine::queryFont()
 
         // This time don't bother checking family - we've re-inited fc anyway, so things should be
         // up to date... And for "Symbol" Fc returns "Standard Symbols L", so wont match anyway!
-        if (f && !isCorrect(f, false))
+        if (f && !isCorrect(f, false)) {
             closeFont(f);
+        }
     }
 #ifdef KFI_FC_DEBUG
     qDebug() << "ret" << (int)f;
@@ -1156,7 +1222,7 @@ XftFont *CFcEngine::getFont(int size)
         FC::decomposeStyleVal(itsStyle, weight, width, slant);
 
 #ifndef KFI_FC_NO_WIDTHS
-        if (KFI_NULL_SETTING != width)
+        if (KFI_NULL_SETTING != width) {
             f = XftFontOpen(QX11Info::display(),
                             0,
                             FC_FAMILY,
@@ -1175,7 +1241,7 @@ XftFont *CFcEngine::getFont(int size)
                             FcTypeDouble,
                             (double)size,
                             NULL);
-        else
+        } else {
 #endif
             f = XftFontOpen(QX11Info::display(),
                             0,
@@ -1192,6 +1258,7 @@ XftFont *CFcEngine::getFont(int size)
                             FcTypeDouble,
                             (double)size,
                             NULL);
+        }
     } else {
         FcPattern *pattern = FcPatternBuild(nullptr,
                                             FC_FILE,
@@ -1219,8 +1286,9 @@ bool CFcEngine::isCorrect(XftFont *f, bool checkFamily)
     int iv, weight, width, slant;
     FcChar8 *str;
 
-    if (itsInstalled)
+    if (itsInstalled) {
         FC::decomposeStyleVal(itsStyle, weight, width, slant);
+    }
 
 #ifdef KFI_FC_DEBUG
     QString xxx;
@@ -1273,8 +1341,9 @@ bool CFcEngine::isCorrect(XftFont *f, bool checkFamily)
 
 void CFcEngine::getSizes()
 {
-    if (!itsSizes.isEmpty())
+    if (!itsSizes.isEmpty()) {
         return;
+    }
 
 #ifdef KFI_FC_DEBUG
     qDebug();
@@ -1290,8 +1359,9 @@ void CFcEngine::getSizes()
         double px(0.0);
 
         if (itsInstalled) {
-            if (FcResultMatch != FcPatternGetBool(f->pattern, FC_SCALABLE, 0, &itsScalable))
+            if (FcResultMatch != FcPatternGetBool(f->pattern, FC_SCALABLE, 0, &itsScalable)) {
                 itsScalable = FcFalse;
+            }
 
             if (!itsScalable) {
                 FcPattern *pat = nullptr;
@@ -1301,7 +1371,7 @@ void CFcEngine::getSizes()
                 FC::decomposeStyleVal(itsStyle, weight, width, slant);
 
 #ifndef KFI_FC_NO_WIDTHS
-                if (KFI_NULL_SETTING != width)
+                if (KFI_NULL_SETTING != width) {
                     pat = FcPatternBuild(nullptr,
                                          FC_FAMILY,
                                          FcTypeString,
@@ -1316,7 +1386,7 @@ void CFcEngine::getSizes()
                                          FcTypeInteger,
                                          width,
                                          NULL);
-                else
+                } else {
 #endif
                     pat = FcPatternBuild(nullptr,
                                          FC_FAMILY,
@@ -1329,6 +1399,7 @@ void CFcEngine::getSizes()
                                          FcTypeInteger,
                                          slant,
                                          NULL);
+                }
 
                 FcFontSet *set = FcFontList(nullptr, pat, os);
 
@@ -1341,17 +1412,19 @@ void CFcEngine::getSizes()
                     qDebug() << "got fixed sizes: " << set->nfont;
 #endif
                     itsSizes.reserve(set->nfont);
-                    for (int i = 0; i < set->nfont; i++)
+                    for (int i = 0; i < set->nfont; i++) {
                         if (FcResultMatch == FcPatternGetDouble(set->fonts[i], FC_PIXEL_SIZE, 0, &px)) {
                             itsSizes.push_back((int)px);
 
 #ifdef KFI_FC_DEBUG
                             qDebug() << "got fixed: " << px;
 #endif
-                            if (px <= alphaSize)
+                            if (px <= alphaSize) {
                                 itsAlphaSizeIndex = size;
+                            }
                             size++;
                         }
+                    }
                     FcFontSetDestroy(set);
                 }
             }
@@ -1379,8 +1452,9 @@ void CFcEngine::getSizes()
 #endif
                         itsSizes.push_back((int)px);
 
-                        if (px <= alphaSize)
+                        if (px <= alphaSize) {
                             itsAlphaSizeIndex = size;
+                        }
                     }
                 }
                 XftUnlockFace(f);
@@ -1396,8 +1470,9 @@ void CFcEngine::getSizes()
         for (int i = 0; constScalableSizes[i]; ++i) {
             int px = point2Pixel(constScalableSizes[i]);
 
-            if (px <= alphaSize)
+            if (px <= alphaSize) {
                 itsAlphaSizeIndex = i;
+            }
             itsSizes.push_back(px);
         }
     }
@@ -1411,8 +1486,9 @@ void CFcEngine::drawName(int x, int &y, int h)
 {
     QString title(itsDescriptiveName.isEmpty() ? i18n("ERROR: Could not determine font's name.") : itsDescriptiveName);
 
-    if (1 == itsSizes.size())
+    if (1 == itsSizes.size()) {
         title = i18np("%2 [1 pixel]", "%2 [%1 pixels]", itsSizes[0], title);
+    }
 
     xft()->drawString(title, x, y, h);
 }
@@ -1436,8 +1512,9 @@ void CFcEngine::reinit()
 
 CFcEngine::Xft *CFcEngine::xft()
 {
-    if (!itsXft)
+    if (!itsXft) {
         itsXft = new Xft;
+    }
     return itsXft;
 }
 

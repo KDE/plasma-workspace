@@ -33,8 +33,9 @@ static int getInt(const QString &str)
 {
     int rv = KFI_NULL_SETTING, start = str.lastIndexOf(':') + 1, end = str.lastIndexOf("(i)(s)");
 
-    if (end > start)
+    if (end > start) {
         rv = str.mid(start, end - start).trimmed().toInt();
+    }
 
     return rv;
 }
@@ -50,10 +51,11 @@ void CFcQuery::run(const QString &query)
     itsFile = itsFont = QString();
     itsBuffer = QByteArray();
 
-    if (itsProc)
+    if (itsProc) {
         itsProc->kill();
-    else
+    } else {
         itsProc = new QProcess(this);
+    }
 
     args << "-v" << query;
 
@@ -79,25 +81,29 @@ void CFcQuery::procExited()
             {
                 int endPos = line.indexOf("\"(s)");
 
-                if (-1 != endPos)
+                if (-1 != endPos) {
                     itsFile = line.mid(7, endPos - 7);
+                }
             } else if (0 == line.indexOf("family:")) // family: "Wibble"(s)
             {
                 int endPos = line.indexOf("\"(s)");
 
-                if (-1 != endPos)
+                if (-1 != endPos) {
                     family = line.mid(9, endPos - 9);
-            } else if (0 == line.indexOf("slant:")) // slant: 0(i)(s)
+                }
+            } else if (0 == line.indexOf("slant:")) { // slant: 0(i)(s)
                 slant = getInt(line);
-            else if (0 == line.indexOf("weight:")) // weight: 0(i)(s)
+            } else if (0 == line.indexOf("weight:")) { // weight: 0(i)(s)
                 weight = getInt(line);
-            else if (0 == line.indexOf("width:")) // width: 0(i)(s)
+            } else if (0 == line.indexOf("width:")) { // width: 0(i)(s)
                 width = getInt(line);
+            }
         }
     }
 
-    if (!family.isEmpty())
+    if (!family.isEmpty()) {
         itsFont = FC::createName(family, weight, width, slant);
+    }
 
     emit finished();
 }

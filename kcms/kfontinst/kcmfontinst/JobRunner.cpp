@@ -75,8 +75,9 @@ FontInstInterface *CJobRunner::dbus()
 
 QString CJobRunner::folderName(bool sys)
 {
-    if (!theInterface)
+    if (!theInterface) {
         return QString();
+    }
 
     QDBusPendingReply<QString> reply = theInterface->folderName(sys);
 
@@ -146,8 +147,9 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
 {
     setModal(true);
 
-    if (nullptr == parent && 0 != xid)
+    if (nullptr == parent && 0 != xid) {
         XSetTransientForHint(QX11Info::display(), winId(), xid);
+    }
 
     itsButtonBox = new QDialogButtonBox;
     connect(itsButtonBox, &QDialogButtonBox::clicked, this, &CJobRunner::slotButtonClicked);
@@ -207,9 +209,9 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
     layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 1, 0);
     itsStack->insertWidget(PAGE_CANCEL, page);
 
-    if (KSharedConfig::openConfig(KFI_UI_CFG_FILE)->group(CFG_GROUP).readEntry(CFG_DONT_SHOW_FINISHED_MSG, false))
+    if (KSharedConfig::openConfig(KFI_UI_CFG_FILE)->group(CFG_GROUP).readEntry(CFG_DONT_SHOW_FINISHED_MSG, false)) {
         itsDontShowFinishedMsg = nullptr;
-    else {
+    } else {
         page = new QFrame(itsStack);
         layout = new QGridLayout(page);
         QLabel *finishedLabel = new QLabel(i18n("<h3>Finished</h3>"
@@ -249,9 +251,9 @@ void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmA
     int dotPos(ext.lastIndexOf('.'));
     bool check(false);
 
-    if (-1 == dotPos) // Hmm, no extension - check anyway...
+    if (-1 == dotPos) { // Hmm, no extension - check anyway...
         check = true;
-    else // Cool, got an extension - see if it is a Type1 font...
+    } else // Cool, got an extension - see if it is a Type1 font...
     {
         ext = ext.mid(dotPos + 1);
         check = 0 == ext.compare("pfa", Qt::CaseInsensitive) || 0 == ext.compare("pfb", Qt::CaseInsensitive);
@@ -283,7 +285,7 @@ void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmA
             }
         }
 
-        if (afmAndPfm || !gotAfm)
+        if (afmAndPfm || !gotAfm) {
             for (e = 0; pfm[e]; ++e) {
                 QUrl statUrl(url);
                 statUrl.setPath(Misc::changeExt(url.path(), pfm[e]));
@@ -303,6 +305,7 @@ void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmA
                     break;
                 }
             }
+        }
     }
 }
 
@@ -354,10 +357,11 @@ int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
 
     itsDestIsSystem = destIsSystem;
     itsUrls = urls;
-    if (CMD_INSTALL == cmd)
+    if (CMD_INSTALL == cmd) {
         std::sort(itsUrls.begin(), itsUrls.end()); // Sort list of fonts so that we have type1 fonts followed by their metrics...
-    else if (CMD_MOVE == cmd)
+    } else if (CMD_MOVE == cmd) {
         addEnableActions(itsUrls);
+    }
     itsIt = itsUrls.constBegin();
     itsEnd = itsUrls.constEnd();
     itsPrev = itsEnd;
@@ -391,8 +395,9 @@ void CJobRunner::doNext()
             emit configuring();
         } else {
             itsActionLabel->stopAnimation();
-            if (PAGE_ERROR != itsStack->currentIndex())
+            if (PAGE_ERROR != itsStack->currentIndex()) {
                 reject();
+            }
         }
     } else {
         Misc::TFont font;
@@ -402,9 +407,9 @@ void CJobRunner::doNext()
         case CMD_INSTALL: {
             itsCurrentFile = fileName((*itsIt));
 
-            if (itsCurrentFile.isEmpty()) // Failed to download...
+            if (itsCurrentFile.isEmpty()) { // Failed to download...
                 dbusStatus(getpid(), constDownloadFailed);
-            else {
+            } else {
                 // Create AFM if this is a PFM, and the previous was not the AFM for this font...
                 bool createAfm =
                     Item::TYPE1_PFM == (*itsIt).type && (itsPrev == itsEnd || (*itsIt).fileName != (*itsPrev).fileName || Item::TYPE1_AFM != (*itsPrev).type);
@@ -433,8 +438,9 @@ void CJobRunner::doNext()
                 setWindowTitle(i18n("Enabling"));
                 dbus()->enable(font.family, font.styleInfo, system, getpid(), false);
             } else {
-                if (itsPrev != itsEnd && (*itsPrev).fileName == QLatin1String("--"))
+                if (itsPrev != itsEnd && (*itsPrev).fileName == QLatin1String("--")) {
                     setWindowTitle(i18n("Moving"));
+                }
                 dbus()->move(font.family, font.styleInfo, itsDestIsSystem, getpid(), false);
             }
             break;
@@ -473,8 +479,9 @@ void CJobRunner::dbusServiceOwnerChanged(const QString &name, const QString &fro
 
 void CJobRunner::dbusStatus(int pid, int status)
 {
-    if (pid != getpid())
+    if (pid != getpid()) {
         return;
+    }
 
     if (CMD_UPDATE == itsCmd) {
         setPage(PAGE_COMPLETE);
@@ -520,12 +527,13 @@ void CJobRunner::dbusStatus(int pid, int status)
                 if (next != itsEnd && Item::TYPE1_FONT == (*itsIt).type && (*next).fileName == currentName
                     && (Item::TYPE1_AFM == (*next).type || Item::TYPE1_PFM == (*next).type)) {
                     next++;
-                    if (next != itsEnd && (*next).fileName == currentName && (Item::TYPE1_AFM == (*next).type || Item::TYPE1_PFM == (*next).type))
+                    if (next != itsEnd && (*next).fileName == currentName && (Item::TYPE1_AFM == (*next).type || Item::TYPE1_PFM == (*next).type)) {
                         next++;
+                    }
                 }
-                if (1 == itsUrls.count() || next == itsEnd)
+                if (1 == itsUrls.count() || next == itsEnd) {
                     setPage(PAGE_ERROR, errorString(status));
-                else {
+                } else {
                     setPage(PAGE_SKIP, errorString(status));
                     return;
                 }
@@ -547,13 +555,16 @@ void CJobRunner::contineuToNext(bool cont)
             ++itsIt;
 
             // Skip afm/pfm
-            if (itsIt != itsEnd && (*itsIt).fileName == currentName && (Item::TYPE1_AFM == (*itsIt).type || Item::TYPE1_PFM == (*itsIt).type))
+            if (itsIt != itsEnd && (*itsIt).fileName == currentName && (Item::TYPE1_AFM == (*itsIt).type || Item::TYPE1_PFM == (*itsIt).type)) {
                 ++itsIt;
+            }
             // Skip pfm/afm
-            if (itsIt != itsEnd && (*itsIt).fileName == currentName && (Item::TYPE1_AFM == (*itsIt).type || Item::TYPE1_PFM == (*itsIt).type))
+            if (itsIt != itsEnd && (*itsIt).fileName == currentName && (Item::TYPE1_AFM == (*itsIt).type || Item::TYPE1_PFM == (*itsIt).type)) {
                 ++itsIt;
-        } else
+            }
+        } else {
             ++itsIt;
+        }
     } else {
         itsUrls.empty();
         itsIt = itsEnd = itsUrls.constEnd();
@@ -565,8 +576,9 @@ void CJobRunner::slotButtonClicked(QAbstractButton *button)
 {
     switch (itsStack->currentIndex()) {
     case PAGE_PROGRESS:
-        if (itsIt != itsEnd)
+        if (itsIt != itsEnd) {
             itsCancelClicked = true;
+        }
         break;
     case PAGE_SKIP:
         setPage(PAGE_PROGRESS);
@@ -581,8 +593,9 @@ void CJobRunner::slotButtonClicked(QAbstractButton *button)
 
         break;
     case PAGE_CANCEL:
-        if (button == itsButtonBox->button(QDialogButtonBox::Yes))
+        if (button == itsButtonBox->button(QDialogButtonBox::Yes)) {
             itsIt = itsEnd;
+        }
         itsCancelClicked = false;
         setPage(PAGE_PROGRESS);
         itsActionLabel->startAnimation();
@@ -650,16 +663,16 @@ void CJobRunner::setPage(int page, const QString &msg)
 
 QString CJobRunner::fileName(const QUrl &url)
 {
-    if (url.isLocalFile())
+    if (url.isLocalFile()) {
         return url.toLocalFile();
-    else {
+    } else {
         auto job = KIO::mostLocalUrl(url);
         job->exec();
         QUrl local = job->mostLocalUrl();
 
-        if (local.isLocalFile())
+        if (local.isLocalFile()) {
             return local.toLocalFile(); // Yipee! no need to download!!
-        else {
+        } else {
             // Need to do actual download...
             if (!itsTempDir) {
                 itsTempDir = new QTemporaryDir(QDir::tempPath() + "/fontinst");
@@ -668,10 +681,11 @@ QString CJobRunner::fileName(const QUrl &url)
 
             QString tempName(itsTempDir->filePath(Misc::getFile(url.path())));
             auto job = KIO::file_copy(url, QUrl::fromLocalFile(tempName), -1, KIO::Overwrite);
-            if (job->exec())
+            if (job->exec()) {
                 return tempName;
-            else
+            } else {
                 return QString();
+            }
         }
     }
 }
@@ -681,12 +695,13 @@ QString CJobRunner::errorString(int value) const
     Misc::TFont font(FC::decode(*itsIt));
     QString urlStr;
 
-    if (CMD_REMOVE_FILE == itsCmd)
+    if (CMD_REMOVE_FILE == itsCmd) {
         urlStr = (*itsIt).fileName;
-    else if (font.family.isEmpty())
+    } else if (font.family.isEmpty()) {
         urlStr = (*itsIt).url();
-    else
+    } else {
         urlStr = FC::createName(font.family, font.styleInfo);
+    }
 
     switch (value) {
     case constDownloadFailed:
@@ -734,8 +749,9 @@ CJobRunner::Item::Item(const QUrl &u, const QString &n, bool dis)
     if (OTHER_FONT != type) {
         int pos(fileName.lastIndexOf('.'));
 
-        if (-1 != pos)
+        if (-1 != pos) {
             fileName.truncate(pos);
+        }
     }
 }
 

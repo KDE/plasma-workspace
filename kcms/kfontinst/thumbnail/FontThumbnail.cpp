@@ -85,8 +85,9 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
                                 || mime == "application/x-font-type1") {
                                 realPath = tempDir->filePath(entry->name());
                                 break;
-                            } else
+                            } else {
                                 ::unlink(QFile::encodeName(tempDir->filePath(entry->name())).data());
+                            }
                         }
                     }
                 }

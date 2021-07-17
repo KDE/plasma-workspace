@@ -94,8 +94,9 @@ bool isAPfm(const QString &fname)
                 4 == fread(&length, 1, 4, f) && // length...
                 length == fLength && 0 == fseek(f, constCopyrightLen, SEEK_CUR) && // Skip copyright notice...
                 2 == fread(&type, 1, 2, f) && 0 == fseek(f, constTypeToExt, SEEK_CUR) && 2 == fread(&extlen, 1, 2, f) && extlen == constExtLen
-                && 0 == fseek(f, constExtToFname, SEEK_CUR) && 4 == fread(&fontname, 1, 4, f) && fontname > constFontnameMin && fontname < constFontnameMax)
+                && 0 == fseek(f, constExtToFname, SEEK_CUR) && 4 == fread(&fontname, 1, 4, f) && fontname > constFontnameMin && fontname < constFontnameMax) {
                 ok = true;
+            }
             fclose(f);
         }
     }
@@ -119,8 +120,9 @@ bool isAType1(const QString &fname)
         FILE *f = fopen(name.constData(), "r");
 
         if (f) {
-            if (constStrLen == fread(buffer, 1, constStrLen, f))
+            if (constStrLen == fread(buffer, 1, constStrLen, f)) {
                 match = 0 == memcmp(buffer, constStr, constStrLen);
+            }
             fclose(f);
         }
     } else if (Misc::checkExt(name, "pfb")) {
@@ -129,8 +131,9 @@ bool isAType1(const QString &fname)
         FILE *f = fopen(name.constData(), "r");
 
         if (f) {
-            if (constPfbLen == fread(buffer, 1, constPfbLen, f))
+            if (constPfbLen == fread(buffer, 1, constPfbLen, f)) {
                 match = buffer[0] == constPfbMarker && 0 == memcmp(&buffer[constPfbOffset], constStr, constStrLen);
+            }
             fclose(f);
         }
     }
@@ -165,8 +168,9 @@ void createAfm(const QString &file, EFileType type)
             } else // Its a PFM, so look for existing Type1
             {
                 t1 = getMatch(file, "pfa");
-                if (t1.isEmpty())
+                if (t1.isEmpty()) {
                     t1 = getMatch(file, "pfb");
+                }
                 pfm = file;
             }
 
@@ -182,11 +186,11 @@ void createAfm(const QString &file, EFileType type)
 
 EFileType check(const QString &file, Family &fam)
 {
-    if (isAAfm(file))
+    if (isAAfm(file)) {
         return FILE_AFM;
-    else if (isAPfm(file))
+    } else if (isAPfm(file)) {
         return FILE_PFM;
-    else {
+    } else {
         // Check that file is a font via FreeType...
         int count = 0;
         FcPattern *pat = FcFreeTypeQuery((const FcChar8 *)(QFile::encodeName(file).constData()), 0, nullptr, &count);

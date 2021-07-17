@@ -51,10 +51,12 @@ QUrl encode(const QString &name, quint32 style, const QString &file, int index)
 
     url.setScheme(FC_PROTOCOL);
     query.addQueryItem(FC_STYLE_QUERY, QString::number(style));
-    if (!file.isEmpty())
+    if (!file.isEmpty()) {
         query.addQueryItem(FC_FILE_QUERY, file);
-    if (index > 0)
+    }
+    if (index > 0) {
         query.addQueryItem(FC_INDEX_QUERY, QString::number(index));
+    }
 
     url.setQuery(query);
     return url;
@@ -80,85 +82,105 @@ int getIndex(const QUrl &url)
 
 int weight(int w)
 {
-    if (KFI_NULL_SETTING == w)
+    if (KFI_NULL_SETTING == w) {
 #ifdef KFI_HAVE_MEDIUM_WEIGHT
         return FC_WEIGHT_MEDIUM;
+    }
 #else
         return FC_WEIGHT_REGULAR;
 #endif
 
-    if (w < FC_WEIGHT_EXTRALIGHT)
+    if (w < FC_WEIGHT_EXTRALIGHT) {
         return FC_WEIGHT_THIN;
+    }
 
-    if (w < (FC_WEIGHT_EXTRALIGHT + FC_WEIGHT_LIGHT) / 2)
+    if (w < (FC_WEIGHT_EXTRALIGHT + FC_WEIGHT_LIGHT) / 2) {
         return FC_WEIGHT_EXTRALIGHT;
+    }
 
-    if (w < (FC_WEIGHT_LIGHT + FC_WEIGHT_REGULAR) / 2)
+    if (w < (FC_WEIGHT_LIGHT + FC_WEIGHT_REGULAR) / 2) {
         return FC_WEIGHT_LIGHT;
+    }
 
 #ifdef KFI_HAVE_MEDIUM_WEIGHT
-    if (w < (FC_WEIGHT_REGULAR + FC_WEIGHT_MEDIUM) / 2)
+    if (w < (FC_WEIGHT_REGULAR + FC_WEIGHT_MEDIUM) / 2) {
         return FC_WEIGHT_REGULAR;
+    }
 
-    if (w < (FC_WEIGHT_MEDIUM + FC_WEIGHT_DEMIBOLD) / 2)
+    if (w < (FC_WEIGHT_MEDIUM + FC_WEIGHT_DEMIBOLD) / 2) {
         return FC_WEIGHT_MEDIUM;
+    }
 #else
     if (w < (FC_WEIGHT_REGULAR + FC_WEIGHT_DEMIBOLD) / 2)
         return FC_WEIGHT_REGULAR;
 #endif
 
-    if (w < (FC_WEIGHT_DEMIBOLD + FC_WEIGHT_BOLD) / 2)
+    if (w < (FC_WEIGHT_DEMIBOLD + FC_WEIGHT_BOLD) / 2) {
         return FC_WEIGHT_DEMIBOLD;
+    }
 
-    if (w < (FC_WEIGHT_BOLD + FC_WEIGHT_EXTRABOLD) / 2)
+    if (w < (FC_WEIGHT_BOLD + FC_WEIGHT_EXTRABOLD) / 2) {
         return FC_WEIGHT_BOLD;
+    }
 
-    if (w < (FC_WEIGHT_EXTRABOLD + FC_WEIGHT_BLACK) / 2)
+    if (w < (FC_WEIGHT_EXTRABOLD + FC_WEIGHT_BLACK) / 2) {
         return FC_WEIGHT_EXTRABOLD;
+    }
 
     return FC_WEIGHT_BLACK;
 }
 
 int width(int w)
 {
-    if (KFI_NULL_SETTING == w)
+    if (KFI_NULL_SETTING == w) {
         return KFI_FC_WIDTH_NORMAL;
+    }
 
-    if (w < KFI_FC_WIDTH_EXTRACONDENSED)
+    if (w < KFI_FC_WIDTH_EXTRACONDENSED) {
         return KFI_FC_WIDTH_EXTRACONDENSED;
+    }
 
-    if (w < (KFI_FC_WIDTH_EXTRACONDENSED + KFI_FC_WIDTH_CONDENSED) / 2)
+    if (w < (KFI_FC_WIDTH_EXTRACONDENSED + KFI_FC_WIDTH_CONDENSED) / 2) {
         return KFI_FC_WIDTH_EXTRACONDENSED;
+    }
 
-    if (w < (KFI_FC_WIDTH_CONDENSED + KFI_FC_WIDTH_SEMICONDENSED) / 2)
+    if (w < (KFI_FC_WIDTH_CONDENSED + KFI_FC_WIDTH_SEMICONDENSED) / 2) {
         return KFI_FC_WIDTH_CONDENSED;
+    }
 
-    if (w < (KFI_FC_WIDTH_SEMICONDENSED + KFI_FC_WIDTH_NORMAL) / 2)
+    if (w < (KFI_FC_WIDTH_SEMICONDENSED + KFI_FC_WIDTH_NORMAL) / 2) {
         return KFI_FC_WIDTH_SEMICONDENSED;
+    }
 
-    if (w < (KFI_FC_WIDTH_NORMAL + KFI_FC_WIDTH_SEMIEXPANDED) / 2)
+    if (w < (KFI_FC_WIDTH_NORMAL + KFI_FC_WIDTH_SEMIEXPANDED) / 2) {
         return KFI_FC_WIDTH_NORMAL;
+    }
 
-    if (w < (KFI_FC_WIDTH_SEMIEXPANDED + KFI_FC_WIDTH_EXPANDED) / 2)
+    if (w < (KFI_FC_WIDTH_SEMIEXPANDED + KFI_FC_WIDTH_EXPANDED) / 2) {
         return KFI_FC_WIDTH_SEMIEXPANDED;
+    }
 
-    if (w < (KFI_FC_WIDTH_EXPANDED + KFI_FC_WIDTH_EXTRAEXPANDED) / 2)
+    if (w < (KFI_FC_WIDTH_EXPANDED + KFI_FC_WIDTH_EXTRAEXPANDED) / 2) {
         return KFI_FC_WIDTH_EXPANDED;
+    }
 
-    if (w < (KFI_FC_WIDTH_EXTRAEXPANDED + KFI_FC_WIDTH_ULTRAEXPANDED) / 2)
+    if (w < (KFI_FC_WIDTH_EXTRAEXPANDED + KFI_FC_WIDTH_ULTRAEXPANDED) / 2) {
         return KFI_FC_WIDTH_EXTRAEXPANDED;
+    }
 
     return KFI_FC_WIDTH_ULTRAEXPANDED;
 }
 
 int slant(int s)
 {
-    if (KFI_NULL_SETTING == s || s < FC_SLANT_ITALIC)
+    if (KFI_NULL_SETTING == s || s < FC_SLANT_ITALIC) {
         return FC_SLANT_ROMAN;
+    }
 
 #ifdef KFI_HAVE_OBLIQUE
-    if (s < (FC_SLANT_ITALIC + FC_SLANT_OBLIQUE) / 2)
+    if (s < (FC_SLANT_ITALIC + FC_SLANT_OBLIQUE) / 2) {
         return FC_SLANT_ITALIC;
+    }
 
     return FC_SLANT_OBLIQUE;
 #else
@@ -168,11 +190,13 @@ int slant(int s)
 
 int spacing(int s)
 {
-    if (s < FC_MONO)
+    if (s < FC_MONO) {
         return FC_PROPORTIONAL;
+    }
 
-    if (s < (FC_MONO + FC_CHARCELL) / 2)
+    if (s < (FC_MONO + FC_CHARCELL) / 2) {
         return FC_MONO;
+    }
 
     return FC_CHARCELL;
 }
@@ -289,10 +313,12 @@ int strToWidth(const QString &str, QString &newStr)
 
 int strToSlant(const QString &str)
 {
-    if (-1 != str.indexOf(i18n(KFI_SLANT_ITALIC)))
+    if (-1 != str.indexOf(i18n(KFI_SLANT_ITALIC))) {
         return FC_SLANT_ITALIC;
-    if (-1 != str.indexOf(i18n(KFI_SLANT_OBLIQUE)))
+    }
+    if (-1 != str.indexOf(i18n(KFI_SLANT_OBLIQUE))) {
         return FC_SLANT_OBLIQUE;
+    }
     return FC_SLANT_ROMAN;
 }
 
@@ -300,7 +326,7 @@ quint32 createStyleVal(const QString &name)
 {
     int pos;
 
-    if (-1 == (pos = name.indexOf(", "))) // No style information...
+    if (-1 == (pos = name.indexOf(", "))) { // No style information...
         return createStyleVal(FC_WEIGHT_REGULAR,
 #ifdef KFI_FC_NO_WIDTHS
                               KFI_NULL_SETTING
@@ -309,7 +335,7 @@ quint32 createStyleVal(const QString &name)
 #endif
                               ,
                               FC_SLANT_ROMAN);
-    else {
+    } else {
         QString style(name.mid(pos + 2));
 
         return createStyleVal(strToWeight(style, style),
@@ -337,9 +363,9 @@ void decomposeStyleVal(quint32 styleInfo, int &weight, int &width, int &slant)
 
 quint32 styleValFromStr(const QString &style)
 {
-    if (style.isEmpty())
+    if (style.isEmpty()) {
         return KFI_NO_STYLE_INFO;
-    else {
+    } else {
         quint32 val;
 
         QTextStream(const_cast<QString *>(&style), QIODevice::ReadOnly) >> val;
@@ -352,8 +378,9 @@ QString getFcString(FcPattern *pat, const char *val, int index)
     QString rv;
     FcChar8 *fcStr;
 
-    if (FcResultMatch == FcPatternGetString(pat, val, index, &fcStr))
+    if (FcResultMatch == FcPatternGetString(pat, val, index, &fcStr)) {
         rv = QString::fromUtf8((char *)fcStr);
+    }
 
     return rv;
 }
@@ -369,12 +396,13 @@ QString getFcLangString(FcPattern *pat, const char *val, const char *valLang)
     for (int i = 0; true; ++i) {
         QString lang = getFcString(pat, valLang, i);
 
-        if (lang.isEmpty())
+        if (lang.isEmpty()) {
             break;
-        else if (QString::fromLatin1("en") == lang)
+        } else if (QString::fromLatin1("en") == lang) {
             return getFcString(pat, val, i);
-        else if (QString::fromLatin1("xx") != lang && -1 == langIndex)
+        } else if (QString::fromLatin1("xx") != lang && -1 == langIndex) {
             langIndex = i;
+        }
     }
 
     return getFcString(pat, val, langIndex > 0 ? langIndex : 0);
@@ -384,8 +412,9 @@ int getFcInt(FcPattern *pat, const char *val, int index, int def)
 {
     int rv;
 
-    if (FcResultMatch == FcPatternGetInteger(pat, val, index, &rv))
+    if (FcResultMatch == FcPatternGetInteger(pat, val, index, &rv)) {
         return rv;
+    }
     return def;
 }
 
@@ -468,33 +497,38 @@ QString createStyleName(int weight, int width, int slant)
     QString name, weightString, widthString, slantString;
 
 #ifndef KFI_FC_NO_WIDTHS
-    if (KFI_NULL_SETTING != width)
+    if (KFI_NULL_SETTING != width) {
         widthString = widthStr(width);
+    }
 #endif
 
-    if (KFI_NULL_SETTING != slant)
+    if (KFI_NULL_SETTING != slant) {
         slantString = slantStr(slant);
+    }
 
     //
     // If weight is "Regular", we only want to display it if slant and width are empty.
     if (KFI_NULL_SETTING != weight) {
         weightString = weightStr(weight, !slantString.isEmpty() || !widthString.isEmpty());
 
-        if (!weightString.isEmpty())
+        if (!weightString.isEmpty()) {
             name = weightString;
+        }
     }
 
 #ifndef KFI_FC_NO_WIDTHS
     if (!widthString.isEmpty()) {
-        if (!name.isEmpty())
+        if (!name.isEmpty()) {
             name += QChar(' ');
+        }
         name += widthString;
     }
 #endif
 
     if (!slantString.isEmpty()) {
-        if (!name.isEmpty())
+        if (!name.isEmpty()) {
             name += QChar(' ');
+        }
         name += slantString;
     }
     return name;
@@ -595,8 +629,9 @@ bool bitmapsEnabled()
         FcObjectSetDestroy(os);
 
         if (set) {
-            if (set->nfont)
+            if (set->nfont) {
                 enabled = true;
+            }
 
             FcFontSetDestroy(set);
         }

@@ -58,8 +58,9 @@ CViewer::CViewer()
 
         itsPrintAct->setEnabled(false);
 
-        if (itsPreview->browserExtension())
+        if (itsPreview->browserExtension()) {
             connect(itsPreview->browserExtension(), &KParts::BrowserExtension::enableAction, this, &CViewer::enableAction);
+        }
 
         setCentralWidget(itsPreview->widget());
         createGUI(itsPreview);
@@ -83,15 +84,17 @@ void CViewer::fileOpen()
                                          << "application/x-font-pcf");
     if (dlg.exec() == QDialog::Accepted) {
         QUrl url = dlg.selectedUrls().value(0);
-        if (url.isValid())
+        if (url.isValid()) {
             showUrl(url);
+        }
     }
 }
 
 void CViewer::showUrl(const QUrl &url)
 {
-    if (url.isValid())
+    if (url.isValid()) {
         itsPreview->openUrl(url);
+    }
 }
 
 void CViewer::configureKeys()
@@ -104,8 +107,9 @@ void CViewer::configureKeys()
 
 void CViewer::enableAction(const char *name, bool enable)
 {
-    if (0 == qstrcmp("print", name))
+    if (0 == qstrcmp("print", name)) {
         itsPrintAct->setEnabled(enable);
+    }
 }
 
 class ViewerApplication : public QApplication

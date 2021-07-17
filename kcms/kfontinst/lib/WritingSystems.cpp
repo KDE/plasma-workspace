@@ -108,20 +108,25 @@ qulonglong WritingSystems::get(FcPattern *pat) const
     FcLangSet *langset(nullptr);
 
     if (FcResultMatch == FcPatternGetLangSet(pat, FC_LANG, 0, &langset)) {
-        for (int i = 0; constLanguageForWritingSystem[i].lang; ++i)
-            if (FcLangDifferentLang != FcLangSetHasLang(langset, constLanguageForWritingSystem[i].lang))
+        for (int i = 0; constLanguageForWritingSystem[i].lang; ++i) {
+            if (FcLangDifferentLang != FcLangSetHasLang(langset, constLanguageForWritingSystem[i].lang)) {
                 ws |= toBit(constLanguageForWritingSystem[i].ws);
-    } else
+            }
+        }
+    } else {
         ws |= toBit(QFontDatabase::Other);
+    }
 
     FcCharSet *cs(nullptr);
 
     if (FcResultMatch == FcPatternGetCharSet(pat, FC_CHARSET, 0, &cs)) {
         // some languages are not supported by FontConfig, we rather check the
         // charset to detect these
-        for (int i = 0; QFontDatabase::Any != sampleCharForWritingSystem[i].ws; ++i)
-            if (FcCharSetHasChar(cs, sampleCharForWritingSystem[i].ch))
+        for (int i = 0; QFontDatabase::Any != sampleCharForWritingSystem[i].ws; ++i) {
+            if (FcCharSetHasChar(cs, sampleCharForWritingSystem[i].ch)) {
                 ws |= toBit(sampleCharForWritingSystem[i].ws);
+            }
+        }
     }
 
     return ws;
@@ -134,8 +139,9 @@ qulonglong WritingSystems::get(const QStringList &langs) const
 
     QStringList::ConstIterator it(langs.begin()), end(langs.end());
 
-    for (; it != end; ++it)
+    for (; it != end; ++it) {
         ws |= itsMap[*it];
+    }
 
     return ws;
 }
@@ -145,17 +151,20 @@ QStringList WritingSystems::getLangs(qulonglong ws) const
     QMap<QString, qulonglong>::ConstIterator wit(itsMap.begin()), wend(itsMap.end());
     QStringList systems;
 
-    for (; wit != wend; ++wit)
-        if (ws & wit.value())
+    for (; wit != wend; ++wit) {
+        if (ws & wit.value()) {
             systems += wit.key();
+        }
+    }
     return systems;
 }
 
 WritingSystems::WritingSystems()
 {
-    for (int i = 0; QFontDatabase::Any != constLanguageForWritingSystem[i].ws; ++i)
-        if (constLanguageForWritingSystem[i].lang)
+    for (int i = 0; QFontDatabase::Any != constLanguageForWritingSystem[i].ws; ++i) {
+        if (constLanguageForWritingSystem[i].lang) {
             itsMap[(const char *)constLanguageForWritingSystem[i].lang] = ((qulonglong)1) << constLanguageForWritingSystem[i].ws;
+        }
+    }
 }
-
 }

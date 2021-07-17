@@ -46,9 +46,11 @@ namespace KFI
 {
 EUnicodeCategory getCategory(quint32 ucs2)
 {
-    for (int i = 0; UNICODE_INVALID != constUnicodeCategoryList[i].category; ++i)
-        if (constUnicodeCategoryList[i].start <= ucs2 && constUnicodeCategoryList[i].end >= ucs2)
+    for (int i = 0; UNICODE_INVALID != constUnicodeCategoryList[i].category; ++i) {
+        if (constUnicodeCategoryList[i].start <= ucs2 && constUnicodeCategoryList[i].end >= ucs2) {
             return constUnicodeCategoryList[i].category;
+        }
+    }
 
     return UNICODE_UNASSIGNED;
 }
@@ -158,8 +160,9 @@ void CCharTip::setItem(const CFcEngine::TChar &ch)
 
 void CCharTip::showTip()
 {
-    if (!itsParent->underMouse())
+    if (!itsParent->underMouse()) {
         return;
+    }
 
     static const int constPixSize = 96;
 
@@ -176,8 +179,9 @@ void CCharTip::showTip()
     const ushort *utf16(str.utf16());
 
     for (int i = 0; utf16[i]; ++i) {
-        if (i)
+        if (i) {
             details += ' ';
+        }
         details += QStringLiteral("0x%1").arg(utf16[i], 4, 16);
     }
     details += "</td></tr>";
@@ -186,8 +190,9 @@ void CCharTip::showTip()
     QByteArray utf8(str.toUtf8());
 
     for (int i = 0; i < utf8.size(); ++i) {
-        if (i)
+        if (i) {
             details += ' ';
+        }
         details += QStringLiteral("0x%1").arg((unsigned char)(utf8.constData()[i]), 2, 16);
     }
     details += "</td></tr>";
@@ -195,9 +200,10 @@ void CCharTip::showTip()
     // Note: the "<b></b> below is just to stop Qt converting the xml entry into
     // a character!
     if ((0x0001 <= itsItem.ucs4 && itsItem.ucs4 <= 0xD7FF) || (0xE000 <= itsItem.ucs4 && itsItem.ucs4 <= 0xFFFD)
-        || (0x10000 <= itsItem.ucs4 && itsItem.ucs4 <= 0x10FFFF))
+        || (0x10000 <= itsItem.ucs4 && itsItem.ucs4 <= 0x10FFFF)) {
         details +=
             "<tr><td align=\"right\"><b>" + i18n("XML Decimal Entity") + "&nbsp;</b></td><td>" + "&#<b></b>" + QString::number(itsItem.ucs4) + ";</td></tr>";
+    }
 
     details += "</table>";
     itsLabel->setText(details);
@@ -219,10 +225,11 @@ void CCharTip::showTip()
                                            range,
                                            nullptr);
 
-    if (!img.isNull())
+    if (!img.isNull()) {
         itsPixmapLabel->setPixmap(QPixmap::fromImage(img));
-    else
+    } else {
         itsPixmapLabel->setPixmap(QPixmap());
+    }
 
     itsTimer->disconnect(this);
     connect(itsTimer, &QTimer::timeout, this, &CCharTip::hideTip);
@@ -251,16 +258,18 @@ void CCharTip::reposition()
     QRect desk(QApplication::screenAt(rect.center())->geometry());
 
     if ((rect.center().x() + width()) > desk.right()) {
-        if (pos.x() - width() < 0)
+        if (pos.x() - width() < 0) {
             pos.setX(0);
-        else
+        } else {
             pos.setX(pos.x() - width());
+        }
     }
     // should the tooltip be shown above or below the ivi ?
-    if (rect.bottom() + height() > desk.bottom())
+    if (rect.bottom() + height() > desk.bottom()) {
         pos.setY(rect.top() - height());
-    else
+    } else {
         pos.setY(rect.bottom() + 1);
+    }
 
     move(pos);
     update();

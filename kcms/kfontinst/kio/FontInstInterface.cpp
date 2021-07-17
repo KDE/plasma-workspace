@@ -49,8 +49,9 @@ FontInstInterface::FontInstInterface()
     connect(itsInterface, &OrgKdeFontinstInterface::fontList, this, &FontInstInterface::fontList);
     connect(itsInterface, &OrgKdeFontinstInterface::fontStat, this, &FontInstInterface::fontStat);
 
-    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(OrgKdeFontinstInterface::staticInterfaceName()))
+    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(OrgKdeFontinstInterface::staticInterfaceName())) {
         QProcess::startDetached(QLatin1String(KFONTINST_LIB_EXEC_DIR "/fontinst"), QStringList());
+    }
 }
 
 FontInstInterface::~FontInstInterface()
@@ -99,8 +100,9 @@ Family FontInstInterface::statFont(const QString &file, bool system)
 
 QString FontInstInterface::folderName(bool sys)
 {
-    if (!itsInterface)
+    if (!itsInterface) {
         return QString();
+    }
 
     QDBusPendingReply<QString> reply = itsInterface->folderName(sys);
 

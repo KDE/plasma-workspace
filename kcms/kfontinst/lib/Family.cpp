@@ -32,10 +32,12 @@ namespace KFI
 {
 Family::Family(const QDomElement &elem, bool loadStyles)
 {
-    if (elem.hasAttribute(FAMILY_ATTR))
+    if (elem.hasAttribute(FAMILY_ATTR)) {
         itsName = elem.attribute(FAMILY_ATTR);
-    if (elem.hasAttribute(NAME_ATTR))
+    }
+    if (elem.hasAttribute(NAME_ATTR)) {
         itsName = elem.attribute(NAME_ATTR);
+    }
     if (loadStyles) {
         for (QDomNode n = elem.firstChild(); !n.isNull(); n = n.nextSibling()) {
             QDomElement ent = n.toElement();
@@ -43,8 +45,9 @@ Family::Family(const QDomElement &elem, bool loadStyles)
             if (FONT_TAG == ent.tagName()) {
                 Style style(ent, loadStyles);
 
-                if (!style.files().isEmpty())
+                if (!style.files().isEmpty()) {
                     itsStyles.insert(style);
+                }
             }
         }
     }
@@ -59,21 +62,25 @@ void Family::toXml(bool disabled, QTextStream &s) const
     for (; it != end; ++it) {
         QString entry((*it).toXml(disabled, disabled ? family : QString(), s));
 
-        if (!entry.isEmpty())
+        if (!entry.isEmpty()) {
             entries.append(entry);
+        }
     }
 
     if (entries.count() > 0) {
-        if (!disabled)
+        if (!disabled) {
             s << " <" FAMILY_TAG " " NAME_ATTR "=\"" << KFI::Misc::encodeText(itsName, s) << "\">\n";
+        }
 
         QStringList::ConstIterator it(entries.begin()), end(entries.end());
 
-        for (; it != end; ++it)
+        for (; it != end; ++it) {
             s << *it << Qt::endl;
+        }
 
-        if (!disabled)
+        if (!disabled) {
             s << " </" FAMILY_TAG ">" << Qt::endl;
+        }
     }
 }
 
@@ -86,8 +93,9 @@ QDBusArgument &operator<<(QDBusArgument &argument, const KFI::Family &obj)
 
     argument.beginArray(qMetaTypeId<KFI::Style>());
     KFI::StyleCont::ConstIterator it(obj.styles().begin()), end(obj.styles().end());
-    for (; it != end; ++it)
+    for (; it != end; ++it) {
         argument << *it;
+    }
     argument.endArray();
     argument.endStructure();
     return argument;
@@ -118,8 +126,9 @@ QDBusArgument &operator<<(QDBusArgument &argument, const KFI::Families &obj)
     argument.beginArray(qMetaTypeId<KFI::Family>());
     KFI::FamilyCont::ConstIterator it(obj.items.begin()), end(obj.items.end());
 
-    for (; it != end; ++it)
+    for (; it != end; ++it) {
         argument << *it;
+    }
     argument.endArray();
     argument.endStructure();
     return argument;

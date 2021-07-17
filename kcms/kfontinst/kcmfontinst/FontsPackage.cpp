@@ -36,8 +36,9 @@ QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir)
 {
     QSet<QUrl> urls;
 
-    if (!tempDir)
+    if (!tempDir) {
         return urls;
+    }
 
     KZip zip(fileName);
 

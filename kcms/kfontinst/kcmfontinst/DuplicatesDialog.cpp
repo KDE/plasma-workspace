@@ -145,21 +145,24 @@ void CDuplicatesDialog::scanFinished()
                     details.append("");
                     details.append(KFormat().formatByteSize(info.size()));
                     details.append(QLocale().toString(info.created()));
-                    if (info.isSymLink())
+                    if (info.isSymLink()) {
                         details.append(info.symLinkTarget());
+                    }
                     new QTreeWidgetItem(top, details);
-                    if (Misc::checkExt(*fit, "pfa") || Misc::checkExt(*fit, "pfb"))
+                    if (Misc::checkExt(*fit, "pfa") || Misc::checkExt(*fit, "pfb")) {
                         t1++;
-                    else
+                    } else {
                         tt++;
+                    }
                 }
                 top->setData(COL_FILE, Qt::DecorationRole, QIcon::fromTheme(t1 > tt ? "application-x-font-type1" : "application-x-font-ttf"));
                 top->setFont(COL_FILE, boldFont);
             }
 
             QTreeWidgetItem *item = nullptr;
-            for (int i = 0; (item = itsView->topLevelItem(i)); ++i)
+            for (int i = 0; (item = itsView->topLevelItem(i)); ++i) {
                 item->setExpanded(true);
+            }
 
             itsView->setSortingEnabled(true);
             itsView->header()->resizeSections(QHeaderView::ResizeToContents);
@@ -167,8 +170,9 @@ void CDuplicatesDialog::scanFinished()
             int width =
                 (itsView->frameWidth() + 8) * 2 + style()->pixelMetric(QStyle::PM_LayoutLeftMargin) + style()->pixelMetric(QStyle::PM_LayoutRightMargin);
 
-            for (int i = 0; i < itsView->header()->count(); ++i)
+            for (int i = 0; i < itsView->header()->count(); ++i) {
                 width += itsView->header()->sectionSize(i);
+            }
 
             width = qMin(QApplication::desktop()->screenGeometry(this).width(), width);
             resize(width, height());
@@ -207,10 +211,12 @@ void CDuplicatesDialog::slotButtonClicked(QAbstractButton *button)
             itsFontList->setSlowUpdates(false);
             itsView->removeFiles();
             files = itsView->getMarkedFiles();
-            if (fCount != files.count())
+            if (fCount != files.count()) {
                 CFcEngine::setDirty();
-            if (0 == files.count())
+            }
+            if (0 == files.count()) {
                 accept();
+            }
         }
         break;
     }
@@ -221,13 +227,15 @@ void CDuplicatesDialog::slotButtonClicked(QAbstractButton *button)
                 if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Cancel font scan?"))) {
                     itsLabel->setText(i18n("Canceling…"));
 
-                    if (itsFontFileList->isRunning())
+                    if (itsFontFileList->isRunning()) {
                         itsFontFileList->terminate();
-                    else
+                    } else {
                         reject();
+                    }
                 }
-            } else
+            } else {
                 reject();
+            }
         }
         break;
     default:
@@ -238,8 +246,9 @@ void CDuplicatesDialog::slotButtonClicked(QAbstractButton *button)
 void CDuplicatesDialog::enableButtonOk(bool on)
 {
     QPushButton *okButton = itsButtonBox->button(QDialogButtonBox::Ok);
-    if (okButton)
+    if (okButton) {
         okButton->setEnabled(on);
+    }
 }
 
 static uint qHash(const CFontFileList::TFile &key)
@@ -274,11 +283,13 @@ void CFontFileList::getDuplicateFonts(TFontMap &map)
         TFontMap::Iterator it(map.begin()), end(map.end());
 
         // Now re-iterate, and remove any entries that only have 1 file...
-        for (it = map.begin(); it != end;)
-            if ((*it).count() < 2)
+        for (it = map.begin(); it != end;) {
+            if ((*it).count() < 2) {
                 it = map.erase(it);
-            else
+            } else {
                 ++it;
+            }
+        }
     }
 }
 
@@ -290,15 +301,18 @@ void CFontFileList::run()
     for (; it != end; ++it) {
         QList<CFontItem *>::ConstIterator fontIt((*it)->fonts().begin()), fontEnd((*it)->fonts().end());
 
-        for (; fontIt != fontEnd; ++fontIt)
+        for (; fontIt != fontEnd; ++fontIt) {
             if (!(*fontIt)->isBitmap()) {
                 Misc::TFont font((*fontIt)->family(), (*fontIt)->styleInfo());
                 FileCont::ConstIterator fileIt((*fontIt)->files().begin()), fileEnd((*fontIt)->files().end());
 
-                for (; fileIt != fileEnd; ++fileIt)
-                    if (!Misc::isMetrics((*fileIt).path()) && !Misc::isBitmap((*fileIt).path()))
+                for (; fileIt != fileEnd; ++fileIt) {
+                    if (!Misc::isMetrics((*fileIt).path()) && !Misc::isBitmap((*fileIt).path())) {
                         itsMap[font].insert((*fileIt).path());
+                    }
+                }
             }
+        }
     }
 
     // if we have 2 fonts: /wibble/a.ttf and /wibble/a.TTF fontconfig only returns the 1st, so we
@@ -312,15 +326,17 @@ void CFontFileList::run()
             QStringList add;
             QSet<QString>::const_iterator fIt((*it).begin()), fEnd((*it).end());
 
-            for (; fIt != fEnd && !itsTerminated; ++fIt, ++n)
+            for (; fIt != fEnd && !itsTerminated; ++fIt, ++n) {
                 folderMap[Misc::getDir(*fIt)].insert(TFile(Misc::getFile(*fIt), it));
+            }
         }
 
         // Go through our folder map, and check for file duplicates...
         QHash<QString, QSet<TFile>>::Iterator folderIt(folderMap.begin()), folderEnd(folderMap.end());
 
-        for (; folderIt != folderEnd && !itsTerminated; ++folderIt)
+        for (; folderIt != folderEnd && !itsTerminated; ++folderIt) {
             fileDuplicates(folderIt.key(), *folderIt);
+        }
     }
 
     emit finished();
@@ -343,8 +359,9 @@ void CFontFileList::fileDuplicates(const QString &folder, const QSet<TFile> &fil
             // FontMap iterator, and update its list of files.
             QSet<TFile>::ConstIterator entry = files.find(TFile(fileInfo.fileName(), true));
 
-            if (entry != files.end())
+            if (entry != files.end()) {
                 (*((*entry).it)).insert(fileInfo.absoluteFilePath());
+            }
         }
     }
 }
@@ -384,8 +401,9 @@ CFontFileListView::CFontFileListView(QWidget *parent)
     setAlternatingRowColors(true);
 
     itsMenu = new QMenu(this);
-    if (!Misc::app(KFI_VIEWER).isEmpty())
+    if (!Misc::app(KFI_VIEWER).isEmpty()) {
         itsMenu->addAction(QIcon::fromTheme("kfontview"), i18n("Open in Font Viewer"), this, &CFontFileListView::openViewer);
+    }
     itsMenu->addAction(QIcon::fromTheme("document-properties"), i18n("Properties"), this, &CFontFileListView::properties);
     itsMenu->addSeparator();
     itsUnMarkAct = itsMenu->addAction(i18n("Unmark for Deletion"), this, &CFontFileListView::unmark);
@@ -407,8 +425,9 @@ QSet<QString> CFontFileListView::getMarkedFiles()
         for (int c = 0; c < font->childCount(); ++c) {
             QTreeWidgetItem *file = font->child(c);
 
-            if (isMarked(file))
+            if (isMarked(file)) {
                 files.insert(file->text(0));
+            }
         }
     }
 
@@ -428,8 +447,9 @@ CJobRunner::ItemList CFontFileListView::getMarkedItems()
         for (int c = 0; c < style->childCount(); ++c) {
             QTreeWidgetItem *file = style->child(c);
 
-            if (isMarked(file))
+            if (isMarked(file)) {
                 items.append(CJobRunner::Item(file->text(0), style->family(), style->value(), 0 != file->text(0).indexOf(home)));
+            }
         }
     }
 
@@ -448,21 +468,25 @@ void CFontFileListView::removeFiles()
         for (int c = 0; c < font->childCount(); ++c) {
             QTreeWidgetItem *file = font->child(c);
 
-            if (!Misc::fExists(file->text(0)))
+            if (!Misc::fExists(file->text(0))) {
                 removeFiles.append(file);
+            }
         }
 
         QList<QTreeWidgetItem *>::ConstIterator it(removeFiles.begin()), end(removeFiles.end());
 
-        for (; it != end; ++it)
+        for (; it != end; ++it) {
             delete (*it);
-        if (0 == font->childCount())
+        }
+        if (0 == font->childCount()) {
             removeFonts.append(font);
+        }
     }
 
     QList<QTreeWidgetItem *>::ConstIterator it(removeFonts.begin()), end(removeFonts.end());
-    for (; it != end; ++it)
+    for (; it != end; ++it) {
         delete (*it);
+    }
 }
 
 void CFontFileListView::openViewer()
@@ -475,8 +499,9 @@ void CFontFileListView::openViewer()
     QSet<QString> files;
 
     foreach (item, items)
-        if (item->parent()) // Then it is a file, not font name :-)
+        if (item->parent()) { // Then it is a file, not font name :-)
             files.insert(item->text(0));
+        }
 
     if (!files.isEmpty()
         && (files.count() < constMaxBeforePrompt
@@ -501,9 +526,10 @@ void CFontFileListView::properties()
     QMimeDatabase db;
 
     foreach (item, items)
-        if (item->parent())
+        if (item->parent()) {
             files.append(
                 KFileItem(QUrl::fromLocalFile(item->text(0)), db.mimeTypeForFile(item->text(0)).name(), item->text(COL_LINK).isEmpty() ? S_IFREG : S_IFLNK));
+        }
 
     if (!files.isEmpty()) {
         KPropertiesDialog dlg(files, this);
@@ -517,8 +543,9 @@ void CFontFileListView::mark()
     QTreeWidgetItem *item;
 
     foreach (item, items)
-        if (item->parent())
+        if (item->parent()) {
             markItem(item);
+        }
     checkFiles();
 }
 
@@ -528,8 +555,9 @@ void CFontFileListView::unmark()
     QTreeWidgetItem *item;
 
     foreach (item, items)
-        if (item->parent())
+        if (item->parent()) {
             unmarkItem(item);
+        }
     checkFiles();
 }
 
@@ -539,17 +567,19 @@ void CFontFileListView::selectionChanged()
     QTreeWidgetItem *item;
 
     foreach (item, items)
-        if (!item->parent() && item->isSelected())
+        if (!item->parent() && item->isSelected()) {
             item->setSelected(false);
+        }
 }
 
 void CFontFileListView::clicked(QTreeWidgetItem *item, int col)
 {
     if (item && COL_TRASH == col && item->parent()) {
-        if (isMarked(item))
+        if (isMarked(item)) {
             unmarkItem(item);
-        else
+        } else {
             markItem(item);
+        }
         checkFiles();
     }
 }
@@ -559,8 +589,9 @@ void CFontFileListView::contextMenuEvent(QContextMenuEvent *ev)
     QTreeWidgetItem *item(itemAt(ev->pos()));
 
     if (item && item->parent()) {
-        if (!item->isSelected())
+        if (!item->isSelected()) {
             item->setSelected(true);
+        }
 
         bool haveUnmarked(false), haveMarked(false);
 
@@ -569,14 +600,16 @@ void CFontFileListView::contextMenuEvent(QContextMenuEvent *ev)
 
         foreach (item, items) {
             if (item->parent() && item->isSelected()) {
-                if (isMarked(item))
+                if (isMarked(item)) {
                     haveMarked = true;
-                else
+                } else {
                     haveUnmarked = true;
+                }
             }
 
-            if (haveUnmarked && haveMarked)
+            if (haveUnmarked && haveMarked) {
                 break;
+            }
         }
 
         itsMarkAct->setEnabled(haveUnmarked);
@@ -601,15 +634,17 @@ void CFontFileListView::checkFiles()
                 QTreeWidgetItem *file = font->child(c);
                 QString link(font->child(c)->text(COL_LINK));
 
-                if (!link.isEmpty() && marked.contains(link))
-                    if (!isMarked(file))
+                if (!link.isEmpty() && marked.contains(link)) {
+                    if (!isMarked(file)) {
                         markItem(file);
+                    }
+                }
             }
         }
 
         emit haveDeletions(true);
-    } else
+    } else {
         emit haveDeletions(false);
+    }
 }
-
 }

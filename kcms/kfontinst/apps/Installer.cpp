@@ -90,8 +90,9 @@ int CInstaller::install(const QSet<QUrl> &urls)
 
             QList<QUrl>::Iterator aIt(associatedUrls.begin()), aEnd(associatedUrls.end());
 
-            for (; aIt != aEnd; ++aIt)
+            for (; aIt != aEnd; ++aIt) {
                 instUrls.insert(*aIt);
+            }
         }
     }
 
@@ -99,12 +100,14 @@ int CInstaller::install(const QSet<QUrl> &urls)
         CJobRunner::ItemList list;
         QSet<QUrl>::ConstIterator it(instUrls.begin()), end(instUrls.end());
 
-        for (; it != end; ++it)
+        for (; it != end; ++it) {
             list.append(*it);
+        }
 
         return jobRunner->exec(CJobRunner::CMD_INSTALL, list, Misc::root() || sysInstall);
-    } else
+    } else {
         return -1;
+    }
 }
 
 CInstaller::~CInstaller()

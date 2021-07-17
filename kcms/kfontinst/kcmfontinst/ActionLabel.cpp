@@ -63,8 +63,9 @@ CActionLabel::CActionLabel(QWidget *parent)
         QImage img(KIconLoader::global()->loadIcon("application-x-font-ttf", KIconLoader::NoGroup, 32).toImage());
         double increment = 360.0 / constNumIcons;
 
-        for (int i = 0; i < constNumIcons; ++i)
+        for (int i = 0; i < constNumIcons; ++i) {
             theIcons[i] = new QPixmap(QPixmap::fromImage(0 == i ? img : img.transformed(rotateMatrix(img.width(), img.height(), increment * i))));
+        }
     }
 
     setPixmap(*theIcons[0]);
@@ -74,11 +75,12 @@ CActionLabel::CActionLabel(QWidget *parent)
 
 CActionLabel::~CActionLabel()
 {
-    if (0 == --theUsageCount)
+    if (0 == --theUsageCount) {
         for (int i = 0; i < constNumIcons; ++i) {
             delete theIcons[i];
             theIcons[i] = nullptr;
         }
+    }
 }
 
 void CActionLabel::startAnimation()
@@ -97,8 +99,9 @@ void CActionLabel::stopAnimation()
 
 void CActionLabel::rotateIcon()
 {
-    if (++itsCount == constNumIcons)
+    if (++itsCount == constNumIcons) {
         itsCount = 0;
+    }
 
     setPixmap(*theIcons[itsCount]);
 }

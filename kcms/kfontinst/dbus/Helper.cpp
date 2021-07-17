@@ -46,8 +46,9 @@ typedef void (*SignalHandler)(int);
 
 static void registerSignalHandler(SignalHandler handler)
 {
-    if (!handler)
+    if (!handler) {
         handler = SIG_DFL;
+    }
 
     sigset_t mask;
     sigemptyset(&mask);
@@ -127,8 +128,9 @@ ActionReply Helper::manage(const QVariantMap &args)
         // qDebug() << "Uknown action";
     }
 
-    if (FontInst::STATUS_OK == result)
+    if (FontInst::STATUS_OK == result) {
         return ActionReply::SuccessReply();
+    }
 
     ActionReply reply(ActionReply::HelperErrorType);
     reply.setErrorCode(static_cast<KAuth::ActionReply::Error>(result));
@@ -145,16 +147,19 @@ int Helper::install(const QVariantMap &args)
 
     int result = FontInst::STATUS_OK;
 
-    if (!Misc::dExists(destFolder))
+    if (!Misc::dExists(destFolder)) {
         result = Misc::createDir(destFolder) ? (int)FontInst::STATUS_OK : (int)KIO::ERR_WRITE_ACCESS_DENIED;
+    }
 
-    if (FontInst::STATUS_OK == result)
+    if (FontInst::STATUS_OK == result) {
         result = QFile::copy(file, destFolder + name) ? (int)FontInst::STATUS_OK : (int)KIO::ERR_WRITE_ACCESS_DENIED;
+    }
 
     if (FontInst::STATUS_OK == result) {
         Misc::setFilePerms(QFile::encodeName(destFolder + name));
-        if ((Utils::FILE_SCALABLE == type || Utils::FILE_PFM == type) && createAfm)
+        if ((Utils::FILE_SCALABLE == type || Utils::FILE_PFM == type) && createAfm) {
             Utils::createAfm(destFolder + name, (KFI::Utils::EFileType)type);
+        }
         theFontFolder.addModifiedDir(destFolder);
     }
 
@@ -169,17 +174,19 @@ int Helper::uninstall(const QVariantMap &args)
     if (FontInst::STATUS_OK == result) {
         QStringList::ConstIterator it(files.constBegin()), end(files.constEnd());
 
-        for (; it != end; ++it)
+        for (; it != end; ++it) {
             if (!Misc::fExists(*it) || QFile::remove(*it)) {
                 // Also remove any AFM or PFM files...
                 QStringList other;
                 Misc::getAssociatedFiles(*it, other);
                 QStringList::ConstIterator oit(other.constBegin()), oend(other.constEnd());
-                for (; oit != oend; ++oit)
+                for (; oit != oend; ++oit) {
                     QFile::remove(*oit);
+                }
 
                 theFontFolder.addModifiedDir(Misc::getDir(*it));
             }
+        }
     }
 
     return result;
@@ -187,14 +194,16 @@ int Helper::uninstall(const QVariantMap &args)
 
 static bool renameFontFile(const QString &from, const QString &to, int uid = -1, int gid = -1)
 {
-    if (!QFile::rename(from, to))
+    if (!QFile::rename(from, to)) {
         return false;
+    }
 
     QByteArray dest(QFile::encodeName(to));
 
     Misc::setFilePerms(dest);
-    if (-1 != uid && -1 != gid)
+    if (-1 != uid && -1 != gid) {
         ::chown(dest.data(), uid, gid);
+    }
     return true;
 }
 
@@ -211,9 +220,11 @@ int Helper::move(const QVariantMap &args)
     QStringList::ConstIterator it(files.constBegin()), end(files.constEnd());
 
     // Cant move hidden fonts - need to unhide first.
-    for (; it != end && FontInst::STATUS_OK == result; ++it)
-        if (Misc::isHidden(Misc::getFile(*it)))
+    for (; it != end && FontInst::STATUS_OK == result; ++it) {
+        if (Misc::isHidden(Misc::getFile(*it))) {
             result = KIO::ERR_UNSUPPORTED_ACTION;
+        }
+    }
 
     if (FontInst::STATUS_OK == result) {
         QHash<QString, QString> movedFiles;
@@ -225,8 +236,9 @@ int Helper::move(const QVariantMap &args)
 
             if (!Misc::dExists(destFolder)) {
                 result = Misc::createDir(destFolder) ? (int)FontInst::STATUS_OK : (int)KIO::ERR_WRITE_ACCESS_DENIED;
-                if (FontInst::STATUS_OK == result)
+                if (FontInst::STATUS_OK == result) {
                     ::chown(QFile::encodeName(destFolder).data(), toUid, toGid);
+                }
             }
 
             if (renameFontFile(*it, destFolder + name, toUid, toGid)) {
@@ -240,24 +252,28 @@ int Helper::move(const QVariantMap &args)
 
                 for (; ait != aend && FontInst::STATUS_OK == result; ++ait) {
                     name = Misc::getFile(*ait);
-                    if (renameFontFile(*ait, destFolder + name, toUid, toGid))
+                    if (renameFontFile(*ait, destFolder + name, toUid, toGid)) {
                         movedFiles[*ait] = destFolder + name;
-                    else
+                    } else {
                         result = KIO::ERR_WRITE_ACCESS_DENIED;
+                    }
                 }
 
-                if (toSystem)
+                if (toSystem) {
                     theFontFolder.addModifiedDir(theFontFolder.location());
-            } else
+                }
+            } else {
                 result = KIO::ERR_WRITE_ACCESS_DENIED;
+            }
         }
 
         if (FontInst::STATUS_OK != result) // un-move fonts!
         {
             QHash<QString, QString>::ConstIterator it(movedFiles.constBegin()), end(movedFiles.constEnd());
 
-            for (; it != end; ++it)
+            for (; it != end; ++it) {
                 renameFontFile(it.value(), it.key(), fromUid, fromGid);
+            }
         }
     }
     return result;
@@ -272,8 +288,9 @@ int Helper::toggle(const QVariantMap &args)
 
     // qDebug() << font.name() << enable;
 
-    if (1 != font.styles().count())
+    if (1 != font.styles().count()) {
         return KIO::ERR_WRITE_ACCESS_DENIED;
+    }
 
     int result = FontInst::STATUS_OK;
     FileCont files((*font.styles().begin()).files()), toggledFiles;
@@ -302,14 +319,16 @@ int Helper::toggle(const QVariantMap &args)
                     to = Misc::getDir(*ait) + QString(enable ? Misc::unhide(Misc::getFile(*ait)) : Misc::hide(Misc::getFile(*ait)));
 
                     if (to != *ait) {
-                        if (renameFontFile(*ait, to))
+                        if (renameFontFile(*ait, to)) {
                             movedAssoc[*ait] = to;
-                        else
+                        } else {
                             result = KIO::ERR_WRITE_ACCESS_DENIED;
+                        }
                     }
                 }
-            } else
+            } else {
                 result = KIO::ERR_WRITE_ACCESS_DENIED;
+            }
         }
     }
 
@@ -318,32 +337,38 @@ int Helper::toggle(const QVariantMap &args)
     if (FontInst::STATUS_OK == result) {
         FamilyCont::ConstIterator f = theFontFolder.fonts().find(font);
 
-        if (theFontFolder.fonts().end() == f)
+        if (theFontFolder.fonts().end() == f) {
             f = theFontFolder.addFont(font);
+        }
 
         StyleCont::ConstIterator st = (*f).styles().find(*font.styles().begin());
 
-        if ((*f).styles().end() == st)
+        if ((*f).styles().end() == st) {
             st = (*f).add(*font.styles().begin());
+        }
 
         // This helper only needs to store list of disabled fonts,
         // for writing back to disk - therefore no need to store
         // list of enabled font files.
         FileCont empty;
         (*st).setFiles(enable ? empty : toggledFiles);
-        if ((*st).files().isEmpty())
+        if ((*st).files().isEmpty()) {
             (*f).remove(*st);
-        if ((*f).styles().isEmpty())
+        }
+        if ((*f).styles().isEmpty()) {
             theFontFolder.removeFont(*f);
+        }
         theFontFolder.setDisabledDirty();
     } else {
         QHash<File, QString>::ConstIterator fit(movedFonts.constBegin()), fend(movedFonts.constEnd());
         QHash<QString, QString>::ConstIterator ait(movedAssoc.constBegin()), aend(movedAssoc.constEnd());
 
-        for (; fit != fend; ++fit)
+        for (; fit != fend; ++fit) {
             renameFontFile(fit.value(), fit.key().path());
-        for (; ait != aend; ++ait)
+        }
+        for (; ait != aend; ++ait) {
             renameFontFile(ait.value(), ait.key());
+        }
     }
 
     return result;
@@ -358,15 +383,15 @@ int Helper::removeFile(const QVariantMap &args)
     QString dir(Misc::getDir(file));
     int result = Misc::fExists(file) ? QFile::remove(file) ? (int)FontInst::STATUS_OK : (int)KIO::ERR_WRITE_ACCESS_DENIED : (int)KIO::ERR_DOES_NOT_EXIST;
 
-    if (FontInst::STATUS_OK == result)
+    if (FontInst::STATUS_OK == result) {
         theFontFolder.addModifiedDir(dir);
+    }
 
     return result;
 }
 
 int Helper::reconfigure()
 {
-
     saveDisabled();
     // qDebug() << theFontFolder.isModified();
     if (theFontFolder.isModified()) {
@@ -386,9 +411,11 @@ int Helper::checkWriteAction(const QStringList &files)
 {
     QStringList::ConstIterator it(files.constBegin()), end(files.constEnd());
 
-    for (; it != end; ++it)
-        if (!Misc::dWritable(Misc::getDir(*it)))
+    for (; it != end; ++it) {
+        if (!Misc::dWritable(Misc::getDir(*it))) {
             return KIO::ERR_WRITE_ACCESS_DENIED;
+        }
+    }
     return FontInst::STATUS_OK;
 }
 

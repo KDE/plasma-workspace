@@ -73,12 +73,14 @@ QString getConfigFile(bool system)
 
         if (Misc::fExists(f)) {
             // For nonsystem, only consider file within $HOME
-            if (system || 0 == Misc::fileSyntax(f).indexOf(home))
+            if (system || 0 == Misc::fileSyntax(f).indexOf(home)) {
                 files.append(f);
+            }
         }
 #if (FC_VERSION >= 20300)
-        if (system && Misc::dExists(f) && (f.contains(QRegExp("/conf\\.d/?$")) || f.contains(QRegExp("/conf\\.d?$"))))
+        if (system && Misc::dExists(f) && (f.contains(QRegExp("/conf\\.d/?$")) || f.contains(QRegExp("/conf\\.d?$")))) {
             return Misc::dirSyntax(f) + constKdeRootFcFile; // This ones good enough for me!
+        }
 #endif
     }
 
@@ -87,12 +89,15 @@ QString getConfigFile(bool system)
     if (!files.isEmpty()) {
         QStringList::const_iterator it(files.begin()), end(files.end());
 
-        for (; it != end; ++it)
-            if (-1 != (*it).indexOf(QRegExp(system ? "/local\\.conf$" : "/\\.?fonts\\.conf$")))
+        for (; it != end; ++it) {
+            if (-1 != (*it).indexOf(QRegExp(system ? "/local\\.conf$" : "/\\.?fonts\\.conf$"))) {
                 return *it;
+            }
+        }
         return files.front(); // Just return the 1st one...
-    } else // Hmmm... no known files?
+    } else { // Hmmm... no known files?
         return system ? "/etc/fonts/local.conf" : Misc::fileSyntax(home + "/.fonts.conf");
+    }
 }
 
 void addDir(const QString &dir, bool system)
@@ -114,9 +119,11 @@ void addDir(const QString &dir, bool system)
             while (!n.isNull() && !hasDir) {
                 QDomElement e = n.toElement();
 
-                if (!e.isNull() && "dir" == e.tagName())
-                    if (0 == Misc::expandHome(Misc::dirSyntax(e.text())).indexOf(dir))
+                if (!e.isNull() && "dir" == e.tagName()) {
+                    if (0 == Misc::expandHome(Misc::dirSyntax(e.text())).indexOf(dir)) {
                         hasDir = true;
+                    }
+                }
                 n = n.nextSibling();
             }
         }
@@ -125,8 +132,9 @@ void addDir(const QString &dir, bool system)
 
     // Add dir, and save, if config does not already have this dir.
     if (!hasDir) {
-        if (doc.documentElement().isNull())
+        if (doc.documentElement().isNull()) {
             doc.appendChild(doc.createElement("fontconfig"));
+        }
 
         QDomElement newNode = doc.createElement("dir");
         QDomText text = doc.createTextNode(Misc::contractHome(xDirSyntax(dir)));
@@ -153,21 +161,24 @@ void addDir(const QString &dir, bool system)
                     QString str(doc.toString());
                     int idx;
 
-                    if (0 != str.indexOf("<?xml"))
+                    if (0 != str.indexOf("<?xml")) {
                         str.insert(0, xmlHeader);
-                    else if (0 == str.indexOf(qtXmlHeader))
+                    } else if (0 == str.indexOf(qtXmlHeader)) {
                         str.replace(0, strlen(qtXmlHeader), xmlHeader);
+                    }
 
-                    if (-1 != (idx = str.indexOf(qtDocTypeLine)))
+                    if (-1 != (idx = str.indexOf(qtDocTypeLine))) {
                         str.replace(idx, strlen(qtDocTypeLine), docTypeLine);
+                    }
 
                     //
                     // Write to file...
                     fputs(str.toUtf8(), f);
                     fclose(f);
 
-                    if (!FcAtomicReplaceOrig(atomic))
+                    if (!FcAtomicReplaceOrig(atomic)) {
                         FcAtomicDeleteNew(atomic);
+                    }
                 }
                 FcAtomicUnlock(atomic);
             }

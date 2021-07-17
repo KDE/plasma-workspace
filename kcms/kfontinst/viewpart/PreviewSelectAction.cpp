@@ -54,15 +54,18 @@ void CPreviewSelectAction::setMode(Mode mode)
     case Basic:
         break;
     case BlocksAndScripts:
-        for (itsNumUnicodeBlocks = 0; constUnicodeBlocks[itsNumUnicodeBlocks].blockName; ++itsNumUnicodeBlocks)
+        for (itsNumUnicodeBlocks = 0; constUnicodeBlocks[itsNumUnicodeBlocks].blockName; ++itsNumUnicodeBlocks) {
             items.append(i18n("Unicode Block: %1", i18n(constUnicodeBlocks[itsNumUnicodeBlocks].blockName)));
+        }
 
-        for (int i = 0; constUnicodeScriptList[i]; ++i)
+        for (int i = 0; constUnicodeScriptList[i]; ++i) {
             items.append(i18n("Unicode Script: %1", i18n(constUnicodeScriptList[i])));
+        }
         break;
     case ScriptsOnly:
-        for (int i = 0; constUnicodeScriptList[i]; ++i)
+        for (int i = 0; constUnicodeScriptList[i]; ++i) {
             items.append(i18n(constUnicodeScriptList[i]));
+        }
     }
 
     setItems(items);
@@ -73,18 +76,20 @@ void CPreviewSelectAction::selected(int index)
 {
     QList<CFcEngine::TRange> list;
 
-    if (0 == index)
+    if (0 == index) {
         ;
-    else if (1 == index)
+    } else if (1 == index) {
         list.append(CFcEngine::TRange());
-    else if (index < itsNumUnicodeBlocks + 2)
+    } else if (index < itsNumUnicodeBlocks + 2) {
         list.append(CFcEngine::TRange(constUnicodeBlocks[index - 2].start, constUnicodeBlocks[index - 2].end));
-    else {
+    } else {
         int script(index - (2 + itsNumUnicodeBlocks));
 
-        for (int i = 0; constUnicodeScripts[i].scriptIndex >= 0; ++i)
-            if (constUnicodeScripts[i].scriptIndex == script)
+        for (int i = 0; constUnicodeScripts[i].scriptIndex >= 0; ++i) {
+            if (constUnicodeScripts[i].scriptIndex == script) {
                 list.append(CFcEngine::TRange(constUnicodeScripts[i].start, constUnicodeScripts[i].end));
+            }
+        }
     }
 
     emit range(list);
