@@ -171,6 +171,14 @@ void CKioFonts::listDir(const QUrl &url)
 {
     qCDebug(KCM_KFONTINST_KIO) << url;
 
+    KIO::UDSEntry ownRootEntry;
+    ownRootEntry.reserve(4);
+    ownRootEntry.fastInsert(KIO::UDSEntry::UDS_NAME, QStringLiteral("."));
+    ownRootEntry.fastInsert(KIO::UDSEntry::UDS_FILE_TYPE, S_IFDIR);
+    ownRootEntry.fastInsert(KIO::UDSEntry::UDS_SIZE, 0);
+    ownRootEntry.fastInsert(KIO::UDSEntry::UDS_ACCESS, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH);
+    listEntry(ownRootEntry);
+
     QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), Qt::SkipEmptyParts));
     EFolder folder = Misc::root() ? FOLDER_SYS : getFolder(pathList);
     KIO::UDSEntry entry;
