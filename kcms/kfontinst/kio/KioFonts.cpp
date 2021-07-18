@@ -617,18 +617,20 @@ bool CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Famil
 
     entry.clear();
 
-    entry.fastInsert(KIO::UDSEntry::UDS_NAME, name);
+    entry.fastInsert(KIO::UDSEntry::UDS_DISPLAY_NAME, name);
     entry.fastInsert(KIO::UDSEntry::UDS_SIZE, size);
     entry.fastInsert(UDS_EXTRA_FC_STYLE, style.value());
 
     QList<File>::ConstIterator it(files.constBegin()), end(files.constEnd());
 
     for (; it != end; ++it) {
-        QByteArray cPath(QFile::encodeName((*it).path()));
+        const QString fontPath = it->path();
+        QByteArray cPath(QFile::encodeName(fontPath));
         QT_STATBUF buff;
 
         if (-1 != QT_LSTAT(cPath, &buff)) {
-            QString fileName(Misc::getFile((*it).path())), mt;
+            const QString fileName = Misc::getFile(fontPath);
+            QString mt;
             int dotPos(fileName.lastIndexOf('.'));
             QString extension(-1 == dotPos ? QString() : fileName.mid(dotPos));
 
@@ -650,7 +652,7 @@ bool CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Famil
             else {
                 // File extension check failed, use QMimeDatabase to read contents...
                 QMimeDatabase db;
-                QMimeType mime = db.mimeTypeForFile((*it).path());
+                QMimeType mime = db.mimeTypeForFile(fontPath);
                 QStringList patterns = mime.globPatterns();
                 mt = mime.name();
                 if (patterns.size() > 0)
@@ -664,29 +666,16 @@ bool CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder, const Famil
             entry.fastInsert(KIO::UDSEntry::UDS_USER, getUserName(buff.st_uid));
             entry.fastInsert(KIO::UDSEntry::UDS_GROUP, getGroupName(buff.st_gid));
             entry.fastInsert(KIO::UDSEntry::UDS_MIME_TYPE, mt);
+            const QUrl entryUrl = QUrl::fromLocalFile(fontPath);
+            entry.fastInsert(KIO::UDSEntry::UDS_URL, entryUrl.toDisplayString());
+            entry.fastInsert(KIO::UDSEntry::UDS_NAME, entryUrl.fileName());
 
             if (hidden) {
                 entry.fastInsert(KIO::UDSEntry::UDS_HIDDEN, 1);
-                entry.fastInsert(UDS_EXTRA_FILE_NAME, (*it).path());
-                entry.fastInsert(UDS_EXTRA_FILE_FACE, (*it).path());
+                entry.fastInsert(UDS_EXTRA_FILE_NAME, fontPath);
+                entry.fastInsert(UDS_EXTRA_FILE_FACE, fontPath);
             }
 
-            QString path(QString::fromLatin1("/"));
-
-            if (!Misc::root()) {
-                path += FOLDER_SYS == folder ? i18n(KFI_KIO_FONTS_SYS) : i18n(KFI_KIO_FONTS_USER);
-                path += QString::fromLatin1("/");
-            }
-            path += name;
-
-            if (files.count() > 1 || haveExtraFiles)
-                path += QString::fromLatin1(KFI_FONTS_PACKAGE);
-            else
-                path += extension;
-
-            QUrl url(QUrl::fromLocalFile(path));
-            url.setScheme(KFI_KIO_FONTS_PROTOCOL);
-            entry.fastInsert(KIO::UDSEntry::UDS_URL, url.url());
             return true;
         }
     }
