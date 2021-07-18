@@ -12,9 +12,7 @@ group: Plasma
 public_lib: true
 public_source_dirs:
     - libkworkspace
-    - libdbusmenuqt
     - libtaskmanager
-    - libkworkspace
     - libnotificationmanager
 
 group_info:
