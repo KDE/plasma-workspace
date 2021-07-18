@@ -110,6 +110,7 @@ PlasmaComponents3.Page {
         }
 
         PlasmaComponents3.ScrollView {
+            PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
             anchors {
                 horizontalCenter: parent.horizontalCenter
                 top: settingsColumn.bottom

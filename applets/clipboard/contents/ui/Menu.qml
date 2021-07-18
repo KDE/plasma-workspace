@@ -34,6 +34,7 @@ PlasmaComponents3.ScrollView {
     signal edit(string uuid)
     signal barcode(string text)
     signal action(string uuid)
+    PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
     ListView {
         id: menuListView

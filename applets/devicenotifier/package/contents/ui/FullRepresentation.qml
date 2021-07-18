@@ -126,6 +126,7 @@ PlasmaComponents3.Page {
 
     PlasmaComponents3.ScrollView {
         anchors.fill: parent
+        PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
         ListView {
             id: notifierDialog
