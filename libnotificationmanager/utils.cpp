@@ -14,7 +14,9 @@
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QFile>
+#include <QFileInfo>
 #include <QMetaEnum>
+#include <QSettings>
 #include <QTextStream>
 
 #include <KConcatenateRowsProxyModel>
@@ -62,26 +64,37 @@ QString Utils::processNameFromPid(uint pid)
     return processInfo.name();
 }
 
-QString Utils::desktopEntryFromPid(uint pid)
+static QString desktopFileHintFromPid(uint pid)
 {
-    QFile environFile(QStringLiteral("/proc/%1/environ").arg(QString::number(pid)));
-    if (!environFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    const QString flatpakInfoPath = QStringLiteral("/proc/%1/root/.flatpak-info").arg(QString::number(pid));
+    if (QFileInfo::exists(flatpakInfoPath)) {
+        QSettings flatpakInfo(flatpakInfoPath, QSettings::IniFormat);
+
+        const QString name = flatpakInfo.value("Application/name").toString();
+        if (!name.isEmpty()) {
+            return name;
+        }
+
+        // If it's a flatpak, can't be a snap, bail out.
         return QString();
     }
 
-    const QByteArray bamfDesktopFileHint = QByteArrayLiteral("BAMF_DESKTOP_FILE_HINT");
+    QFile environFile(QStringLiteral("/proc/%1/environ").arg(QString::number(pid)));
+    if (environFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        const QByteArray bamfDesktopFileHint = QByteArrayLiteral("BAMF_DESKTOP_FILE_HINT");
 
-    const auto lines = environFile.readAll().split('\0');
-    for (const QByteArray &line : lines) {
-        const int equalsIdx = line.indexOf('=');
-        if (equalsIdx <= 0) {
-            continue;
-        }
+        const auto lines = environFile.readAll().split('\0');
+        for (const QByteArray &line : lines) {
+            const int equalsIdx = line.indexOf('=');
+            if (equalsIdx <= 0) {
+                continue;
+            }
 
-        const QByteArray key = line.left(equalsIdx);
-        if (key == bamfDesktopFileHint) {
-            const QByteArray value = line.mid(equalsIdx + 1);
-            return value;
+            const QByteArray key = line.left(equalsIdx);
+            if (key == bamfDesktopFileHint) {
+                const QByteArray value = line.mid(equalsIdx + 1);
+                return value;
+            }
         }
     }
 
