@@ -92,36 +92,9 @@ Item {
                 visible: visibleActions > 0
                 checked: visibleActions > 1 ? configMenu.status !== PC2.DialogStatus.Closed : singleAction && singleAction.checked
                 property QtObject applet: systemTrayState.activeApplet || plasmoid
-                onAppletChanged: {
-                    configMenu.clearMenuItems();
-                    updateVisibleActions();
-                }
-                property int visibleActions: 0
-                property QtObject singleAction
+                property int visibleActions: menuItemFactory.count
+                property QtObject singleAction: visibleActions === 1 ? menuItemFactory.object.action : null
 
-                function updateVisibleActions() {
-                    let newSingleAction = null;
-                    let newVisibleActions = 0;
-                    for (let i in applet.contextualActions) {
-                        let action = applet.contextualActions[i];
-                        if (action.visible && action !== actionsButton.applet.action("configure")) {
-                            newVisibleActions++;
-                            newSingleAction = action;
-                            action.changed.connect(() => {updateVisibleActions()});
-                        }
-                    }
-                    if (newVisibleActions > 1) {
-                        newSingleAction = null;
-                    }
-                    visibleActions = newVisibleActions;
-                    singleAction = newSingleAction;
-                }
-                Connections {
-                    target: actionsButton.applet
-                    function onContextualActionsChanged() {
-                        Qt.callLater(actionsButton.updateVisibleActions);
-                    }
-                }
                 icon.name: "application-menu"
                 checkable: visibleActions > 1 || (singleAction && singleAction.checkable)
                 contentItem.opacity: visibleActions > 1
@@ -159,15 +132,24 @@ Item {
                 }
 
                 Instantiator {
-                    model: actionsButton.applet.contextualActions
+                    id: menuItemFactory
+                    model: {
+                        configMenu.clearMenuItems();
+                        let actions = [];
+                        for (let i in actionsButton.applet.contextualActions) {
+                            const action = actionsButton.applet.contextualActions[i];
+                            if (action.visible && action !== actionsButton.applet.action("configure")) {
+                                actions.push(action);
+                            }
+                        }
+                        return actions;
+                    }
                     delegate: PC2.MenuItem {
                         id: menuItem
                         action: modelData
                     }
                     onObjectAdded: {
-                        if (object.action !== actionsButton.applet.action("configure")) {
-                            configMenu.addMenuItem(object);
-                        }
+                        configMenu.addMenuItem(object);
                     }
                 }
             }
