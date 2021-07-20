@@ -49,12 +49,14 @@ MouseArea {
             readonly property int rows: 4
             readonly property int columns: 4
 
-            cellWidth: hiddenTasks.width / hiddenTasks.columns
-            cellHeight: hiddenTasks.height / hiddenTasks.rows
+            cellWidth: Math.floor(hiddenTasks.width / hiddenTasks.columns)
+            cellHeight: Math.floor(hiddenTasks.height / hiddenTasks.rows)
 
             currentIndex: -1
             highlight: PlasmaComponents.Highlight {}
             highlightMoveDuration: 0
+
+            pixelAligned: true
 
             readonly property int itemCount: model.count
 
