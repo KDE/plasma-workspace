@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=Input Method
+Comment=Manage your Input Methods
+
+Icon=input-keyboard-virtual
+Type=Service
+X-KDE-ServiceTypes=Plasma/Applet
+
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/manage-inputmethod.qml
+
+X-KDE-PluginInfo-Author=Aleix Pol Gonzalez
+X-KDE-PluginInfo-Email=aleixpol@kde.org
+X-KDE-PluginInfo-Name=org.kde.plasma.manage-inputmethod
+X-KDE-PluginInfo-Version=3.0
+X-KDE-PluginInfo-Website=https://plasma.kde.org/
+X-KDE-PluginInfo-Category=Accessibility
+X-KDE-PluginInfo-License=GPL-2.0+
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-FormFactors=tablet,handset,desktop
