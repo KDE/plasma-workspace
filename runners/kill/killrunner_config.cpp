@@ -26,7 +26,7 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 
-K_PLUGIN_FACTORY(KillRunnerConfigFactory, registerPlugin<KillRunnerConfig>(QStringLiteral("kcm_krunner_kill"));)
+K_PLUGIN_FACTORY(KillRunnerConfigFactory, registerPlugin<KillRunnerConfig>();)
 
 KillRunnerConfigForm::KillRunnerConfigForm(QWidget *parent)
     : QWidget(parent)
