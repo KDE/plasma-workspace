@@ -101,6 +101,8 @@ RowLayout {
                     horizontalAlignment: index == 0 ? Text.AlignLeft : (index == profileSlider.profileData.length - 1 ? Text.AlignRight : Text.AlignHCenter)
                     Layout.fillWidth: true
                     Layout.preferredWidth: 50   // Common width for better alignment
+                    // Disable label for inhibited items to reinforce unavailability
+                    enabled: !profileSlider.profileData[index].inhibited
 
                     text: modelData.label
                 }
