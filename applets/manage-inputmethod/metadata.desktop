@@ -1,6 +1,22 @@
 [Desktop Entry]
 Name=Input Method
+Name[az]=Daxiletmə üsulu
+Name[ca]=Mètode d'entrada
+Name[cs]=Metoda vstupu
+Name[es]=Método de entrada
+Name[nl]=Invoermethode
+Name[sv]=Inmatningsmetod
+Name[uk]=Спосіб введення
+Name[x-test]=xxInput Methodxx
 Comment=Manage your Input Methods
+Comment[az]=Daxiletmə üsulunu idarə edin
+Comment[ca]=Gestioneu els mètodes d'entrada
+Comment[cs]=Spravujte svoje metody vstupu
+Comment[es]=Gestión de métodos de entrada
+Comment[nl]=Uw invoermethoden beheren
+Comment[sv]=Hantera dina inmatningsmetoder
+Comment[uk]=Керування вашими способами введення
+Comment[x-test]=xxManage your Input Methodsxx
 
 Icon=input-keyboard-virtual
 Type=Service
