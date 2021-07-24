@@ -77,11 +77,26 @@ KCM.GridViewKCM {
             }
         }
 
-        RowLayout {
-            id: row1
+        Kirigami.FormLayout {
+            QtControls.ComboBox {
+                Kirigami.FormData.label: i18n("Animation by cursor when opening applications:")
+                textRole: "text"
+                valueRole: "value"
 
-            QtControls.Label {
-                text: i18n("Size:")
+                onCurrentIndexChanged: kcm.launchFeedbackSettings.cursorFeedbackType = model[currentIndex].value
+                currentIndex: kcm.launchFeedbackSettings.cursorFeedbackType
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.launchFeedbackSettings
+                    settingName: "cursorFeedbackType"
+                }
+
+                model: [
+                    { value: LaunchFeedback.CNone, text: i18n("None") },
+                    { value: LaunchFeedback.CStatic, text: i18n("Stationary icon") },
+                    { value: LaunchFeedback.CBlinking, text: i18n("Blinking icon") },
+                    { value: LaunchFeedback.CBouncing, text: i18n("Bouncing icon") },
+                ]
             }
             QtControls.ComboBox {
                 id: sizeCombo
@@ -98,6 +113,7 @@ KCM.GridViewKCM {
                     settingName: "cursorSize"
                     extraEnabledConditions: kcm.canResize
                 }
+                Kirigami.FormData.label: i18n("Cursor size:")
 
                 delegate: QtControls.ItemDelegate {
                     id: sizeComboDelegate
@@ -126,6 +142,17 @@ KCM.GridViewKCM {
                     }
                 }
             }
+        }
+
+        RowLayout {
+            id: row1
+
+            KCM.SettingStateBinding {
+                configObject: kcm.cursorThemeSettings
+                settingName: "cursorSize"
+                extraEnabledConditions: kcm.canResize
+            }
+
             Kirigami.ActionToolBar {
                 flat: false
                 alignment: Qt.AlignRight

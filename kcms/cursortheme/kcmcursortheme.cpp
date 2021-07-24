@@ -38,6 +38,8 @@
 #include <updatelaunchenvjob.h>
 
 #include "cursorthemesettings.h"
+#include "launchfeedbackdata.h"
+#include "launchfeedbacksettings.h"
 
 #ifdef HAVE_XFIXES
 #include <X11/extensions/Xfixes.h>
@@ -51,12 +53,26 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const KPluginMetaData &dat
     , m_canInstall(true)
     , m_canResize(true)
     , m_canConfigure(true)
+    , m_launchData(new LaunchFeedbackData(this))
 {
     m_preferredSize = cursorThemeSettings()->cursorSize();
     connect(cursorThemeSettings(), &CursorThemeSettings::cursorThemeChanged, this, &CursorThemeConfig::updateSizeComboBox);
     qmlRegisterType<PreviewWidget>("org.kde.private.kcm_cursortheme", 1, 0, "PreviewWidget");
     qmlRegisterAnonymousType<SortProxyModel>("SortProxyModel",1);
     qmlRegisterAnonymousType<CursorThemeSettings>("CursorThemeSettings",1);
+    qmlRegisterUncreatableType<CursorThemeConfig>("org.kde.private.kcm_cursortheme", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
+    qmlRegisterUncreatableType<LaunchFeedbackSettings>("org.kde.private.kcm_cursortheme", 1, 0, "LaunchFeedback", "cannot create singleton");
+    connect(m_launchData->settings(), &KConfigSkeleton::configChanged, this, &CursorThemeConfig::settingsChanged);
+
+    KAboutData *aboutData = new KAboutData(QStringLiteral("kcm_cursortheme"),
+                                           i18n("Cursors"),
+                                           QStringLiteral("1.0"),
+                                           QString(),
+                                           KAboutLicense::GPL,
+                                           i18n("(c) 2003-2007 Fredrik Höglund"));
+    aboutData->addAuthor(i18n("Fredrik Höglund"));
+    aboutData->addAuthor(i18n("Marco Martin"));
+    setAboutData(aboutData);
 
     m_themeModel = new CursorThemeModel(this);
 
@@ -288,9 +304,15 @@ QString CursorThemeConfig::cursorThemeFromIndex(int index) const
     return m_themeProxyModel->theme(idx)->name();
 }
 
+LaunchFeedbackSettings *CursorThemeConfig::launchFeedbackSettings() const
+{
+    return m_launchData->settings();
+}
+
 void CursorThemeConfig::save()
 {
     ManagedConfigModule::save();
+    m_launchData->settings()->save();
     setPreferredSize(cursorThemeSettings()->cursorSize());
 
     int row = cursorThemeIndex(cursorThemeSettings()->cursorTheme());
@@ -329,7 +351,7 @@ void CursorThemeConfig::defaults()
 
 bool CursorThemeConfig::isSaveNeeded() const
 {
-    return !m_themeModel->match(m_themeModel->index(0, 0), CursorTheme::PendingDeletionRole, true).isEmpty();
+    return m_launchData->settings()->isSaveNeeded() || !m_themeModel->match(m_themeModel->index(0, 0), CursorTheme::PendingDeletionRole, true).isEmpty();
 }
 
 void CursorThemeConfig::ghnsEntryChanged(KNSCore::EntryWrapper *entry)

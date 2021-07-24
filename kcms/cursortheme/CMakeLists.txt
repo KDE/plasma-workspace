@@ -15,7 +15,17 @@ include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ )
 
 ########### next target ###############
 
-set(kcm_cursortheme_PART_SRCS kcmcursortheme.cpp ${libnoinst_SRCS})
+set(kcm_cursortheme_PART_SRCS kcmcursortheme.cpp launchfeedbacksettings.cpp ${libnoinst_SRCS})
+
+kcmutils_generate_module_data(
+    kcm_cursortheme_PART_SRCS
+    MODULE_DATA_HEADER launchfeedbackdata.h
+    MODULE_DATA_CLASS_NAME LaunchFeedbackData
+    SETTINGS_HEADERS launchfeedbacksettings.h
+    SETTINGS_CLASSES LaunchFeedbackSettings
+)
+
+kconfig_add_kcfg_files(kcm_cursortheme_PART_SRCS launchfeedbacksettingsbase.kcfgc GENERATE_MOC)
 
 kcmutils_generate_module_data(
     kcm_cursortheme_PART_SRCS
@@ -92,6 +102,7 @@ install(TARGETS plasma-apply-cursortheme  DESTINATION ${KDE_INSTALL_BINDIR})
 
 ########### install files ###############
 
+install(FILES launchfeedbacksettingsbase.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES cursorthemesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES delete_cursor_old_default_size.upd delete_cursor_old_default_size.pl DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
 install( FILES kcm_cursortheme.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
