@@ -118,11 +118,25 @@ PlasmaExtras.ListItem {
 
         anchors {
             right: label.right
-            top: menuItem.isTall? parent.top : undefined
-            verticalCenter: menuItem.isTall ? undefined : parent.verticalCenter
+            verticalCenter: parent.verticalCenter
         }
         source: "DelegateToolButtons.qml"
         active: menuItem.ListView.isCurrentItem
+
+        // It's not recommended to change anchors via conditional bindings, use AnchorChanges instead.
+        // See https://doc.qt.io/qt-5/qtquick-positioning-anchors.html#changing-anchors
+        states: [
+            State {
+                when: menuItem.isTall
+
+                AnchorChanges {
+                    target: toolButtonsLoader
+                    anchors.top: parent.top
+                    anchors.verticalCenter: undefined
+                }
+            }
+        ]
+
         onActiveChanged: {
             if (active) {
                 // break binding, once it was loaded, never unload
