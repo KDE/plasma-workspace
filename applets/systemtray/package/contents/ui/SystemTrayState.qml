@@ -79,12 +79,6 @@ QtObject {
         function onActivated() {
             acceptExpandedChange = true
         }
-        //emitted when the configuration dialog is opened
-        function onUserConfiguringChanged() {
-            if (plasmoid.userConfiguring) {
-                systemTrayState.expanded = false
-            }
-        }
         function onExpandedChanged() {
             if (acceptExpandedChange) {
                 expanded = plasmoid.expanded
