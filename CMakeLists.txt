@@ -37,10 +37,11 @@ include(ECMQMLModules)
 include(ECMGenerateExportHeader)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-                    Plasma DocTools Runner Notifications NotifyConfig Su NewStuff Wallet IdleTime
+                    Plasma Runner Notifications NotifyConfig Su NewStuff Wallet IdleTime
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
                     CoreAddons People ActivitiesStats Activities KIO Prison PlasmaQuick Package
-                    GuiAddons Archive ItemModels IconThemes UnitConversion ItemModels Init TextEditor)
+                    GuiAddons Archive ItemModels IconThemes UnitConversion ItemModels Init TextEditor
+                    OPTIONAL_COMPONENTS DocTools)
 
 find_package(KDED CONFIG REQUIRED)
 
@@ -229,7 +230,9 @@ query_qmake(QtBinariesDir QT_INSTALL_BINS)
 
 option(PLASMA_WAYLAND_DEFAULT_SESSION "Use Wayland session by default for Plasma" FALSE)
 
-add_subdirectory(doc)
+if(KF5DocTools_FOUND)
+  add_subdirectory(doc)
+endif()
 add_subdirectory(libkworkspace)
 add_subdirectory(libdbusmenuqt)
 add_subdirectory(appmenu)
