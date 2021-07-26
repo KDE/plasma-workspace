@@ -120,7 +120,7 @@ RowLayout {
                 case "high-operating-temperature":
                     return i18n("Performance mode is unavailable because the computer is running too hot.")
                 default:
-                    return i18n("Performance may be reduced.")
+                    return i18n("Performance mode is unavailable.")
                 }
             }
         }
