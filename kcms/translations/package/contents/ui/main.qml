@@ -106,7 +106,7 @@ ScrollViewKCM {
         rightPadding: 0
         bottomPadding: 0
 
-        header: Kirigami.Heading { text: i18nc("@title:window", "Add Languages") }
+        title: i18nc("@title:window", "Add Languages")
 
         property var selectedLanguages: []
 
