@@ -239,11 +239,10 @@ private:
             query = generateQuery(queryList);
         }
 
-        KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
-        services += KServiceTypeTrader::self()->query(QStringLiteral("KCModule"), query);
+        const KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
 
         qCDebug(RUNNER_SERVICES) << "got " << services.count() << " services from " << query;
-        for (const KService::Ptr &service : qAsConst(services)) {
+        for (const KService::Ptr &service : services) {
             if (disqualify(service)) {
                 continue;
             }
@@ -295,21 +294,9 @@ private:
                 }
             }
 
-            const bool isKCM = service->serviceTypes().contains(QLatin1String("KCModule"));
-            if (!isKCM && (service->categories().contains(QLatin1String("KDE")) || service->serviceTypes().contains(QLatin1String("KCModule")))) {
+            if (service->categories().contains(QLatin1String("KDE"))) {
                 qCDebug(RUNNER_SERVICES) << "found a kde thing" << id << match.subtext() << relevance;
                 relevance += .09;
-            }
-
-            if (isKCM) {
-                if (service->parentApp() == QStringLiteral("kinfocenter")) {
-                    match.setMatchCategory(i18n("System Information"));
-                } else {
-                    match.setMatchCategory(i18n("System Settings"));
-                }
-                // KCMs are, on the balance, less relevant. Drop it ever so much. So they may get outscored
-                // by an otherwise equally applicable match.
-                relevance -= .001;
             }
 
             qCDebug(RUNNER_SERVICES) << service->name() << "is this relevant:" << relevance;
