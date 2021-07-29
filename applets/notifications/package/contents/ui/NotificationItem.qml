@@ -128,7 +128,7 @@ ColumnLayout {
                 leftMargin: -margins.left
                 rightMargin: -margins.right
             }
-            visible: !notificationItem.inHistory && fromCurrentTheme
+            visible: !notificationItem.inHistory
         }
 
         NotificationHeader {
