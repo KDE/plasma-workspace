@@ -22,10 +22,10 @@ KDbusImageStruct::KDbusImageStruct(const QImage &image)
     width = image.size().width();
     height = image.size().height();
     if (image.format() == QImage::Format_ARGB32) {
-        data = QByteArray((char *)image.bits(), image.byteCount());
+        data = QByteArray((char *)image.bits(), image.sizeInBytes());
     } else {
         QImage image32 = image.convertToFormat(QImage::Format_ARGB32);
-        data = QByteArray((char *)image32.bits(), image32.byteCount());
+        data = QByteArray((char *)image32.bits(), image32.sizeInBytes());
     }
 
     // swap to network byte order if we are little endian

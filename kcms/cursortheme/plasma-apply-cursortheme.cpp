@@ -59,7 +59,7 @@ int main(int argc, char **argv)
         }
 
         if (settings->cursorTheme() == requestedTheme) {
-            ts << i18n("The requested theme \"%1\" is already set as the theme for the current Plasma session.", requestedTheme) << endl;
+            ts << i18n("The requested theme \"%1\" is already set as the theme for the current Plasma session.", requestedTheme) << Qt::endl;
             // This is not an error condition, no reason to set an error code
         } else {
             auto results = model->findIndex(requestedTheme);
@@ -70,9 +70,9 @@ int main(int argc, char **argv)
                 settings->setCursorTheme(theme->name());
                 if (settings->save() && applyTheme(theme, theme->defaultCursorSize())) {
                     notifyKcmChange(GlobalChangeType::CursorChanged);
-                    ts << i18n("Successfully applied the mouse cursor theme %1 to your current Plasma session", theme->title()) << endl;
+                    ts << i18n("Successfully applied the mouse cursor theme %1 to your current Plasma session", theme->title()) << Qt::endl;
                 } else {
-                    ts << i18n("You have to restart the Plasma session for your newly applied mouse cursor theme to display correctly.") << endl;
+                    ts << i18n("You have to restart the Plasma session for your newly applied mouse cursor theme to display correctly.") << Qt::endl;
                     // A bit of an odd one, more a warning than an error, but this means we can forward it
                     errorCode = -1;
                 }
@@ -85,18 +85,18 @@ int main(int argc, char **argv)
                 ts << i18n("Could not find theme \"%1\". The theme should be one of the following options: %2",
                            requestedTheme,
                            availableThemes.join(QLatin1String{", "}))
-                   << endl;
+                   << Qt::endl;
                 errorCode = -1;
             }
         }
     } else if (parser->isSet(QStringLiteral("list-themes"))) {
-        ts << i18n("You have the following mouse cursor themes on your system:") << endl;
+        ts << i18n("You have the following mouse cursor themes on your system:") << Qt::endl;
         for (int i = 0; i < model->rowCount(); ++i) {
             const CursorTheme *theme = model->theme(model->index(i, 0));
             if (settings->cursorTheme() == theme->name()) {
-                ts << QString(" * %1 (%2 - current theme for this Plasma session)").arg(theme->title()).arg(theme->name()) << endl;
+                ts << QString(" * %1 (%2 - current theme for this Plasma session)").arg(theme->title()).arg(theme->name()) << Qt::endl;
             } else {
-                ts << QString(" * %1 (%2)").arg(theme->title()).arg(theme->name()) << endl;
+                ts << QString(" * %1 (%2)").arg(theme->title()).arg(theme->name()) << Qt::endl;
             }
         }
     } else {

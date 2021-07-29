@@ -44,7 +44,7 @@ void ExecutableContainer::exec()
     if (m_process->state() == QProcess::NotRunning) {
         m_process->start();
     } else {
-        qDebug() << "Process" << objectName() << "already running. Pid:" << m_process->pid();
+        qDebug() << "Process" << objectName() << "already running. Pid:" << m_process->processId();
     }
 }
 

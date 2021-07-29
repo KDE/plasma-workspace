@@ -49,13 +49,13 @@ KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
     const char uri[] = "org.kde.private.kcms.notifications";
     qmlRegisterUncreatableType<SourcesModel>(uri, 1, 0, "SourcesModel", QStringLiteral("Cannot create instances of SourcesModel"));
 
-    qmlRegisterType<FilterProxyModel>();
-    qmlRegisterType<QKeySequence>();
-    qmlRegisterType<NotificationManager::DoNotDisturbSettings>();
-    qmlRegisterType<NotificationManager::NotificationSettings>();
-    qmlRegisterType<NotificationManager::JobSettings>();
-    qmlRegisterType<NotificationManager::BadgeSettings>();
-    qmlRegisterType<NotificationManager::BehaviorSettings>();
+    qmlRegisterAnonymousType<FilterProxyModel>("FilterProxyModel",1);
+    qmlRegisterAnonymousType<QKeySequence>("QKeySequence",1);
+    qmlRegisterAnonymousType<NotificationManager::DoNotDisturbSettings>("DoNotDisturbSettings",1);
+    qmlRegisterAnonymousType<NotificationManager::NotificationSettings>("NotificationSettings",1);
+    qmlRegisterAnonymousType<NotificationManager::JobSettings>("JobSettings",1);
+    qmlRegisterAnonymousType<NotificationManager::BadgeSettings>("BadgeSettings",1);
+    qmlRegisterAnonymousType<NotificationManager::BehaviorSettings>("BehaviorSettings",1);
     qmlProtectModule(uri, 1);
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_notifications"), i18n("Notifications"), QStringLiteral("5.0"), QString(), KAboutLicense::GPL);

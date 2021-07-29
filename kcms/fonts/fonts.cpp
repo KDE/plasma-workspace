@@ -56,9 +56,9 @@ KFonts::KFonts(QObject *parent, const QVariantList &args)
     KAboutData *about = new KAboutData("kcm_fonts", i18n("Fonts"), "0.1", QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Antonis Tsiapaliokas"), QString(), "antonis.tsiapaliokas@kde.org");
     setAboutData(about);
-    qmlRegisterType<QStandardItemModel>();
-    qmlRegisterType<FontsSettings>();
-    qmlRegisterType<FontsAASettings>();
+    qmlRegisterAnonymousType<QStandardItemModel>("QStandardItemModel",1);
+    qmlRegisterAnonymousType<FontsSettings>("FontsSettings",1);
+    qmlRegisterAnonymousType<FontsAASettings>("FontsAASettings",1);
 
     setButtons(Apply | Default | Help);
 

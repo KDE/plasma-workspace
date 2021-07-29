@@ -13,5 +13,5 @@ void ImagePlugin::registerTypes(const char *uri)
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.wallpapers.image"));
 
     qmlRegisterType<Image>(uri, 2, 0, "Image");
-    qmlRegisterType<QAbstractItemModel>();
+    qmlRegisterAnonymousType<QAbstractItemModel>("QAbstractItemModel",1);
 }

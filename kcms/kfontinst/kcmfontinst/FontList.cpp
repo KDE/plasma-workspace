@@ -1337,7 +1337,7 @@ void CFontListView::getFonts(CJobRunner::ItemList &urls, QStringList &fontNames,
                     CFamilyItem *fam = static_cast<CFamilyItem *>(realIndex.internalPointer());
 
                     for (int ch = 0; ch < fam->fontCount(); ++ch) {
-                        QModelIndex child(itsProxy->mapToSource(index.child(ch, 0)));
+                        QModelIndex child(itsProxy->mapToSource(index.model()->index(ch, 0, index)));
 
                         if (child.isValid() && (static_cast<CFontModelItem *>(child.internalPointer()))->isFont()) {
                             CFontItem *font = static_cast<CFontItem *>(child.internalPointer());
@@ -1804,7 +1804,7 @@ void CFontListView::startDrag(Qt::DropActions supportedActions)
         drag->setPixmap(pix);
         drag->setMimeData(data);
         drag->setHotSpot(hotspot);
-        drag->start(supportedActions);
+        drag->exec(supportedActions);
     }
 }
 

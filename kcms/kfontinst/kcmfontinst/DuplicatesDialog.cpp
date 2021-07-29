@@ -126,7 +126,7 @@ void CDuplicatesDialog::scanFinished()
                     details.append(*fit);
                     details.append("");
                     details.append(KFormat().formatByteSize(info.size()));
-                    details.append(QLocale().toString(info.created()));
+                    details.append(QLocale().toString(info.birthTime()));
                     if (info.isSymLink()) {
                         details.append(info.symLinkTarget());
                     }
