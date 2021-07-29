@@ -115,7 +115,7 @@ PlasmaCore.Dialog {
 
     mainItem: Item {
         width: notificationPopup.popupWidth
-        height: notificationItem.implicitHeight + notificationItem.y
+        height: notificationItem.height + notificationItem.y
         DraggableDelegate {
             id: area
             width: parent.width
