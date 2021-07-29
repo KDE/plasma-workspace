@@ -19,8 +19,7 @@
  *
  */
 
-#ifndef SNI_PROXY_H
-#define SNI_PROXY_H
+#pragma once
 
 #include <QDBusArgument>
 #include <QDBusConnection>
@@ -171,5 +170,3 @@ private:
     bool sendingClickEvent;
     InjectMode m_injectMode;
 };
-
-#endif // SNIPROXY_H

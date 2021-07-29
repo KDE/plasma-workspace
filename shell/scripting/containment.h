@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef CONTAINMENT
-#define CONTAINMENT
+#pragma once
 
 #include <QJSValue>
 #include <QWeakPointer>
@@ -92,5 +91,3 @@ private:
 };
 
 }
-
-#endif

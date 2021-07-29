@@ -19,8 +19,7 @@
  *
  */
 
-#ifndef CLIPBOARDMENU_H
-#define CLIPBOARDMENU_H
+#pragma once
 
 #include <QDateTime>
 #include <QObject>
@@ -54,5 +53,3 @@ private:
     QDateTime m_currentDate;
     bool m_secondsIncluded = false;
 };
-
-#endif // CLIPBOARDMENU_H

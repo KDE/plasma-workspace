@@ -18,8 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef PACKAGEKITENGINE_H
-#define PACKAGEKITENGINE_H
+#pragma once
 
 #include <Plasma/DataEngine>
 
@@ -37,5 +36,3 @@ protected:
 private:
     bool m_pk_available;
 };
-
-#endif // PACKAGEKITENGINE_H

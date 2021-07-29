@@ -15,8 +15,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program; if not, write to the Free Software
  */
-#ifndef __kcmformats_h__
-#define __kcmformats_h__
+#pragma once
 
 #include <KCModule>
 #include <KConfigGroup>
@@ -61,5 +60,3 @@ private:
     Ui::KCMFormatsWidget *m_ui;
     KConfigGroup m_config;
 };
-
-#endif

@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef APPENTRY_H
-#define APPENTRY_H
+#pragma once
 
 #include "abstractentry.h"
 
@@ -95,5 +94,3 @@ private:
     mutable QIcon m_icon;
     QPointer<AbstractModel> m_childModel;
 };
-
-#endif

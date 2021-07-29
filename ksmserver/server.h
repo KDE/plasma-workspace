@@ -22,8 +22,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ******************************************************************/
 
-#ifndef SERVER_H
-#define SERVER_H
+#pragma once
 
 #define INT32 QINT32
 #include <X11/ICE/ICElib.h>
@@ -246,5 +245,3 @@ private:
     int sockets[2];
     friend bool readFromPipe(int pipe);
 };
-
-#endif

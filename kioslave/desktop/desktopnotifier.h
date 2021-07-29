@@ -16,8 +16,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef DESKTOPNOTIFIER_H
-#define DESKTOPNOTIFIER_H
+#pragma once
 
 #include <QDBusAbstractAdaptor>
 #include <QUrl>
@@ -46,5 +45,3 @@ private:
     KDirWatch *dirWatch;
     QUrl m_desktopLocation;
 };
-
-#endif

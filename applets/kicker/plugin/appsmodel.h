@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef APPSMODEL_H
-#define APPSMODEL_H
+#pragma once
 
 #include "abstractmodel.h"
 #include "appentry.h"
@@ -155,5 +154,3 @@ private:
     QStringList m_hiddenEntries;
     static MenuEntryEditor *m_menuEntryEditor;
 };
-
-#endif

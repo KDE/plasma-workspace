@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef STRUTMANAGER_H
-#define STRUTMANAGER_H
+#pragma once
 
 #include <QHash>
 #include <QObject>
@@ -53,5 +52,3 @@ private:
     QHash<const QString, QHash<int, QRect>> m_availableScreenRects;
     QHash<const QString, QHash<int, QRegion>> m_availableScreenRegions;
 };
-
-#endif

@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef POWERMANAGEMENTSERVICE_H
-#define POWERMANAGEMENTSERVICE_H
+#pragma once
 
 #include <Plasma/Service>
 #include <Plasma/ServiceJob>
@@ -33,5 +32,3 @@ public:
     explicit PowerManagementService(QObject *parent = nullptr);
     ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 };
-
-#endif // POWERMANAGEMENTSERVICE_H

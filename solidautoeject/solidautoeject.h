@@ -16,8 +16,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SOLIDAUTOEJECT_H
-#define SOLIDAUTOEJECT_H
+#pragma once
 
 #include <kdedmodule.h>
 
@@ -41,5 +40,3 @@ private slots:
 private:
     void connectDevice(const Solid::Device &device);
 };
-
-#endif

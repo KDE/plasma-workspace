@@ -18,8 +18,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef KILLRUNNER_CONFIG_KEYS_H
-#define KILLRUNNER_CONFIG_KEYS_H
+#pragma once
 
 static const char CONFIG_USE_TRIGGERWORD[] = "useTriggerWord";
 static const char CONFIG_TRIGGERWORD[] = "triggerWord";
@@ -31,5 +30,3 @@ enum Sort {
     CPU,
     CPUI,
 };
-
-#endif

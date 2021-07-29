@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef DRAGHELPER_H
-#define DRAGHELPER_H
+#pragma once
 
 #include <QIcon>
 #include <QObject>
@@ -65,5 +64,3 @@ private:
                             const QString &extraMimeData = QString());
     void setDragging(bool dragging);
 };
-
-#endif

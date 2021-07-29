@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef ABSTRACTMODEL_H
-#define ABSTRACTMODEL_H
+#pragma once
 
 #include <QAbstractListModel>
 
@@ -82,5 +81,3 @@ protected:
 private:
     int m_iconSize;
 };
-
-#endif

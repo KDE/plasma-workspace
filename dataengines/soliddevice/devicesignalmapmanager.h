@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef DEVICE_SIGNALMAP_MANAGER_H
-#define DEVICE_SIGNALMAP_MANAGER_H
+#pragma once
 
 #include <QDebug>
 
@@ -41,5 +40,3 @@ private:
     QMap<Solid::DeviceInterface::Type, DeviceSignalMapper *> signalmap;
     QObject *user;
 };
-
-#endif

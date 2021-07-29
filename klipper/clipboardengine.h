@@ -16,8 +16,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#ifndef KLIPPER_CLIPBOARDENGINE_H
-#define KLIPPER_CLIPBOARDENGINE_H
+#pragma once
 
 #include <Plasma/DataEngine>
 
@@ -35,5 +34,3 @@ public:
 private:
     Klipper *m_klipper;
 };
-
-#endif

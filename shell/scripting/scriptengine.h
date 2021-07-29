@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SCRIPTENGINE
-#define SCRIPTENGINE
+#pragma once
 
 #include <QJSEngine>
 #include <QJSValue>
@@ -98,5 +97,3 @@ private:
 
 static const int PLASMA_DESKTOP_SCRIPTING_VERSION = 20;
 }
-
-#endif

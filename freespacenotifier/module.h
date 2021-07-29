@@ -17,8 +17,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef MODULE_H
-#define MODULE_H
+#pragma once
 
 #include <KDEDModule>
 #include <QObject>
@@ -34,5 +33,3 @@ public:
 private:
     void showConfiguration();
 };
-
-#endif

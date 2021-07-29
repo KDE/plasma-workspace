@@ -1,5 +1,4 @@
-#ifndef __MISC_H__
-#define __MISC_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -155,5 +154,3 @@ inline Q_DECL_EXPORT QDataStream &operator>>(QDataStream &ds, KFI::Misc::TFont &
     ds >> font.family >> font.styleInfo;
     return ds;
 }
-
-#endif

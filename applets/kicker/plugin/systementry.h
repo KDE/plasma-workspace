@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef SYSTEMENTRY_H
-#define SYSTEMENTRY_H
+#pragma once
 
 #include "abstractentry.h"
 
@@ -81,5 +80,3 @@ private:
     static int s_instanceCount;
     static SessionManagement *s_sessionManagement;
 };
-
-#endif

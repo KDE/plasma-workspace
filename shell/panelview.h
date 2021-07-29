@@ -16,8 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef PANELVIEW_H
-#define PANELVIEW_H
+#pragma once
 
 #include <Plasma/Theme>
 #include <QPointer>
@@ -276,5 +275,3 @@ private:
 
     static const int STRUTSTIMERDELAY = 200;
 };
-
-#endif // PANELVIEW_H

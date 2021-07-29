@@ -14,8 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#ifndef _KCM_NIGHTCOLOR_H
-#define _KCM_NIGHTCOLOR_H
+#pragma once
 
 #include <KQuickAddons/ConfigModule>
 
@@ -42,5 +41,3 @@ Q_SIGNALS:
 };
 
 }
-
-#endif // _KCM_NIGHTCOLOR_H

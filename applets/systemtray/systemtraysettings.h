@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef SYSTEMTRAYSETTINGS_H
-#define SYSTEMTRAYSETTINGS_H
+#pragma once
 
 #include <QObject>
 #include <QPointer>
@@ -66,5 +65,3 @@ private:
     QStringList m_extraItems;
     QStringList m_knownItems;
 };
-
-#endif // SYSTEMTRAYSETTINGS_H

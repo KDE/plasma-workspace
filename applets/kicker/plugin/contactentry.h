@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef CONTACTENTRY_H
-#define CONTACTENTRY_H
+#pragma once
 
 #include "abstractentry.h"
 
@@ -55,5 +54,3 @@ public:
 private:
     KPeople::PersonData *m_personData;
 };
-
-#endif

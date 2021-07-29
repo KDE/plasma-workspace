@@ -18,8 +18,7 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
-#ifndef LAUNCHERTASKSMODEL_P_H
-#define LAUNCHERTASKSMODEL_P_H
+#pragma once
 
 #include <QDebug>
 #include <QStringList>
@@ -75,5 +74,3 @@ inline static std::pair<QUrl, QStringList> deserializeLauncher(const QString &se
 }
 
 } // namespace TaskManager
-
-#endif // LAUNCHERTASKSMODEL_P_H

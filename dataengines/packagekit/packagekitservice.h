@@ -18,8 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef PACKAGEKITSERVICE_H
-#define PACKAGEKITSERVICE_H
+#pragma once
 
 #include <Plasma/Service>
 
@@ -30,5 +29,3 @@ public:
     explicit PackagekitService(QObject *parent = nullptr);
     Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 };
-
-#endif // PACKAGEKITSERVICE_H

@@ -18,8 +18,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef UTILS_P_H
-#define UTILS_P_H
+#pragma once
 
 class QString;
 
@@ -27,5 +26,3 @@ class QString;
  * Swap mnemonic char: Qt uses '&', while dbusmenu uses '_'
  */
 QString swapMnemonicChar(const QString &in, const char src, const char dst);
-
-#endif /* UTILS_P_H */

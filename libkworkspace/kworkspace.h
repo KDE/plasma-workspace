@@ -17,8 +17,7 @@
     Boston, MA 02110-1301, USA.
 */
 
-#ifndef KWORKSPACE_H
-#define KWORKSPACE_H
+#pragma once
 
 #include "kworkspace_export.h"
 
@@ -165,5 +164,3 @@ KWORKSPACE_EXPORT void propagateSessionManager();
 KWORKSPACE_EXPORT void detectPlatform(int argc, char **argv);
 
 }
-
-#endif

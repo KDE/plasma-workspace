@@ -18,8 +18,7 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
-#ifndef TASKTOOLS_H
-#define TASKTOOLS_H
+#pragma once
 
 #include "taskmanager_export.h"
 
@@ -191,5 +190,3 @@ TASKMANAGER_EXPORT QRect screenGeometry(const QPoint &pos);
  */
 TASKMANAGER_EXPORT void runApp(const AppData &appData, const QList<QUrl> &urls = QList<QUrl>());
 }
-
-#endif

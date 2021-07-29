@@ -19,8 +19,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef FAVICONPROVIDER_H
-#define FAVICONPROVIDER_H
+#pragma once
 
 #include <QObject>
 
@@ -82,5 +81,3 @@ private:
     class Private;
     Private *const d;
 };
-
-#endif

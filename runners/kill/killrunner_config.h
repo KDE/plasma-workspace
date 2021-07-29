@@ -18,8 +18,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef KILLRUNNERCONFIG_H
-#define KILLRUNNERCONFIG_H
+#pragma once
 
 // Project-Includes
 #include "ui_killrunner_config.h"
@@ -50,4 +49,3 @@ public Q_SLOTS:
 private:
     KillRunnerConfigForm *m_ui;
 };
-#endif

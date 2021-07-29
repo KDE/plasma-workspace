@@ -16,8 +16,7 @@
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef DIGITALCLOCKPLUGIN_H
-#define DIGITALCLOCKPLUGIN_H
+#pragma once
 
 #include <QQmlExtensionPlugin>
 
@@ -29,5 +28,3 @@ class DigitalClockPlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif // DIGITALCLOCKPLUGIN_H

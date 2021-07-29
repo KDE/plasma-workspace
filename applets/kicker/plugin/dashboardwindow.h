@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef DASHBOARDWINDOW_H
-#define DASHBOARDWINDOW_H
+#pragma once
 
 #include <Plasma/Theme>
 
@@ -77,5 +76,3 @@ private:
     QPointer<QQuickItem> m_keyEventProxy;
     Plasma::Theme m_theme;
 };
-
-#endif

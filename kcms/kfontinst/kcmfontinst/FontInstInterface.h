@@ -1,5 +1,4 @@
-#ifndef __FONTINST_INTERFACE_H__
-#define __FONTINST_INTERFACE_H__
+#pragma once
 
 #include "FontInst.h"
 #include "FontinstIface.h"
@@ -16,5 +15,3 @@ public:
 };
 
 }
-
-#endif

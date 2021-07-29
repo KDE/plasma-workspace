@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef KCHECKRUNNING_H
-#define KCHECKRUNNING_H
+#pragma once
 
 enum CheckRunningState {
     PlasmaRunning,
@@ -27,5 +26,3 @@ enum CheckRunningState {
 };
 
 CheckRunningState kCheckRunning();
-
-#endif

@@ -16,8 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef DESKTOPVIEW_H
-#define DESKTOPVIEW_H
+#pragma once
 
 #include <PlasmaQuick/ConfigView>
 #include <PlasmaQuick/ContainmentView>
@@ -110,5 +109,3 @@ private:
     KWayland::Client::PlasmaShellSurface *m_shellSurface;
     QString m_krunnerText;
 };
-
-#endif // DESKTOPVIEW_H

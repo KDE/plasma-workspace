@@ -17,8 +17,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef __SCMEDITORDIALOG_H__
-#define __SCMEDITORDIALOG_H__
+#pragma once
 
 #include <KColorScheme>
 #include <KSharedConfig>
@@ -75,5 +74,3 @@ private:
 
     bool m_showApplyOverwriteButton = false;
 };
-
-#endif

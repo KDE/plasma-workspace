@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef INTERACTIVECONSOLE
-#define INTERACTIVECONSOLE
+#pragma once
 
 #include <QDialog>
 #include <QPointer>
@@ -184,5 +183,3 @@ Q_SIGNALS:
 private:
     InteractiveConsole *m_dialog;
 };
-
-#endif

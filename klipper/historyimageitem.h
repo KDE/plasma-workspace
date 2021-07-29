@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef HISTORYIMAGEITEM_H
-#define HISTORYIMAGEITEM_H
+#pragma once
 
 #include "historyitem.h"
 
@@ -55,5 +54,3 @@ private:
      */
     mutable QString m_text;
 };
-
-#endif

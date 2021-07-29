@@ -18,8 +18,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef DBUSMENUTYPES_P_H
-#define DBUSMENUTYPES_P_H
+#pragma once
 
 // Qt
 #include <QList>
@@ -93,4 +92,3 @@ QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuShortcut &);
 const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuShortcut &);
 
 void DBusMenuTypes_register();
-#endif /* DBUSMENUTYPES_P_H */

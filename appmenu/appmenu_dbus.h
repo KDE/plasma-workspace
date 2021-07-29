@@ -23,8 +23,7 @@
   DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef APPMENU_DBUS_H
-#define APPMENU_DBUS_H
+#pragma once
 
 // Qt
 #include <QDBusContext>
@@ -83,5 +82,3 @@ Q_SIGNALS:
 private:
     QString m_service;
 };
-
-#endif // APPMENU_DBUS_H

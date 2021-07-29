@@ -17,12 +17,9 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  *
  */
-#ifndef XTEST_SENDER_H
-#define XTEST_SENDER_H
+#pragma once
 
 typedef struct _XDisplay Display;
 
 void sendXTestPressed(Display *display, int button);
 void sendXTestReleased(Display *display, int button);
-
-#endif

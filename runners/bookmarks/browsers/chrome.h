@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef CHROME_H
-#define CHROME_H
+#pragma once
 
 #include "browser.h"
 #include "findprofile.h"
@@ -49,5 +48,3 @@ private:
     KDirWatch *m_watcher = nullptr;
     bool m_dirty;
 };
-
-#endif // CHROME_H

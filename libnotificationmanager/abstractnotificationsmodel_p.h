@@ -18,8 +18,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef ABSTRACTNOTIFICATIONSMODEL_P_H
-#define ABSTRACTNOTIFICATIONSMODEL_P_H
+#pragma once
 
 #include "notification.h"
 #include "server.h"
@@ -60,5 +59,3 @@ public:
 };
 
 }
-
-#endif // ABSTRACTNOTIFICATIONSMODEL_P_H

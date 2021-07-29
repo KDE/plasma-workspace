@@ -17,8 +17,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef CURSORTHEME_H
-#define CURSORTHEME_H
+#pragma once
 
 #include <QHash>
 #include <QPixmap>
@@ -197,5 +196,3 @@ void CursorTheme::setName(const QString &name)
     m_name = name;
     m_hash = qHash(name);
 }
-
-#endif // CURSORTHEME_H

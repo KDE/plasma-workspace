@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef TIMEZONEDATA_H
-#define TIMEZONEDATA_H
+#pragma once
 
 #include <QString>
 
@@ -33,5 +32,3 @@ public:
     bool isLocalTimeZone;
     int offsetFromUtc;
 };
-
-#endif // TIMEZONEDATA_H

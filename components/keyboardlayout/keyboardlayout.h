@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later
  */
 
-#ifndef KEYBOARDLAYOUT_H
-#define KEYBOARDLAYOUT_H
+#pragma once
 
 #include <QDBusReply>
 
@@ -52,5 +51,3 @@ private:
     QVector<LayoutNames> mLayoutsList;
     OrgKdeKeyboardLayoutsInterface *mIface;
 };
-
-#endif // KEYBOARDLAYOUT_H

@@ -17,8 +17,7 @@
  * Boston, MA  02110-1301  USA
  */
 
-#ifndef PLACESPROXYMODEL_H
-#define PLACESPROXYMODEL_H
+#pragma once
 
 #include <KFilePlacesModel>
 #include <QIdentityProxyModel>
@@ -45,5 +44,3 @@ public:
 private:
     KFilePlacesModel *m_placesModel;
 };
-
-#endif // PLACESPROXYMODEL_H

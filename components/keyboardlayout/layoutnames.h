@@ -1,5 +1,4 @@
-#ifndef LAYOUTNAMES_H
-#define LAYOUTNAMES_H
+#pragma once
 
 #include <QMetaType>
 
@@ -24,5 +23,3 @@ Q_DECLARE_METATYPE(LayoutNames)
 
 QDBusArgument &operator<<(QDBusArgument &argument, const LayoutNames &layoutNames);
 const QDBusArgument &operator>>(const QDBusArgument &argument, LayoutNames &layoutNames);
-
-#endif // LAYOUTNAMES_H

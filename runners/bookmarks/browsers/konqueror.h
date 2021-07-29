@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef KDEBROWSER_H
-#define KDEBROWSER_H
+#pragma once
 
 #include "browser.h"
 #include "favicon.h"
@@ -50,5 +49,3 @@ private:
     KBookmarkManager *const m_bookmarkManager;
     Favicon *const m_favicon;
 };
-
-#endif // KDEBROWSER_H

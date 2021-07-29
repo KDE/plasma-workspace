@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef MPRIS2ENGINE_H
-#define MPRIS2ENGINE_H
+#pragma once
 
 #include <Plasma/DataEngine>
 
@@ -56,5 +55,3 @@ private:
 
     QPointer<Multiplexer> m_multiplexer;
 };
-
-#endif // MPRIS2ENGINE_H

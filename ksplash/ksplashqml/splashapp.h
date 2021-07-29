@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SPLASH_APP_H_
-#define SPLASH_APP_H_
+#pragma once
 
 #include <QBasicTimer>
 #include <QGuiApplication>
@@ -56,5 +55,3 @@ private:
 private Q_SLOTS:
     void adoptScreen(QScreen *);
 };
-
-#endif // SPLASH_APP_H_

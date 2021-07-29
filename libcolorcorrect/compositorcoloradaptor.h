@@ -14,8 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#ifndef COMPOSITORCOLORADAPTOR_H
-#define COMPOSITORCOLORADAPTOR_H
+#pragma once
 
 #include <QHash>
 #include <QObject>
@@ -519,5 +518,3 @@ private:
 };
 
 }
-
-#endif // COMPOSITORCOLORADAPTOR_H

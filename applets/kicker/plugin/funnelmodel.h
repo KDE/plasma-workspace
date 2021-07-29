@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef FUNNELMODEL_H
-#define FUNNELMODEL_H
+#pragma once
 
 #include "forwardingmodel.h"
 
@@ -32,5 +31,3 @@ public:
 
     void setSourceModel(QAbstractItemModel *model) override;
 };
-
-#endif

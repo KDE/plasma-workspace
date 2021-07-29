@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef PANELCONFIGVIEW_H
-#define PANELCONFIGVIEW_H
+#pragma once
 
 #include <Plasma/Theme>
 #include <PlasmaQuick/ConfigView>
@@ -99,5 +98,3 @@ private:
     QTimer m_screenSyncTimer;
     QPointer<KWayland::Client::PlasmaShellSurface> m_shellSurface;
 };
-
-#endif // multiple inclusion guard

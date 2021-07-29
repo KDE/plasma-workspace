@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef BOOKMARKSRUNNER_H
-#define BOOKMARKSRUNNER_H
+#pragma once
 
 #include <QMimeData>
 #include <krunner/abstractrunner.h>
@@ -52,5 +51,3 @@ private:
 private Q_SLOTS:
     void prep();
 };
-
-#endif

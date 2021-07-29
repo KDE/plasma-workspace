@@ -20,8 +20,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef _KCM_DESKTOPTHEME_H
-#define _KCM_DESKTOPTHEME_H
+#pragma once
 
 #include <KQuickAddons/ManagedConfigModule>
 
@@ -102,5 +101,3 @@ private:
 };
 
 Q_DECLARE_LOGGING_CATEGORY(KCM_DESKTOP_THEME)
-
-#endif // _KCM_DESKTOPTHEME_H

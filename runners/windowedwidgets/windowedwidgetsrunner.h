@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef WINDOWEDWIDGETSRUNNER_H
-#define WINDOWEDWIDGETSRUNNER_H
+#pragma once
 
 #include <KService>
 #include <QMutex>
@@ -51,5 +50,3 @@ private:
     QList<KPluginMetaData> m_applets;
     QMutex m_mutex;
 };
-
-#endif

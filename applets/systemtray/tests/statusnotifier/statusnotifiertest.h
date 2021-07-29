@@ -17,8 +17,7 @@
  *   Boston, MA 02110-1301, USA.                                               *
  *******************************************************************************/
 
-#ifndef STATUSNOTIFIERTEST_H
-#define STATUSNOTIFIERTEST_H
+#pragma once
 
 #include <QDialog>
 #include <QWidget>
@@ -57,5 +56,3 @@ public Q_SLOTS:
 private:
     StatusNotifierTestPrivate *d;
 };
-
-#endif

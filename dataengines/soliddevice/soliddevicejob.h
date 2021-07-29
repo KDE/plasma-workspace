@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SOLIDDEVICE_JOB_H
-#define SOLIDDEVICE_JOB_H
+#pragma once
 
 #include "soliddeviceengine.h"
 
@@ -45,5 +44,3 @@ private:
     SolidDeviceEngine *m_engine;
     QString m_dest;
 };
-
-#endif // SOLIDDEVICE_JOB_H

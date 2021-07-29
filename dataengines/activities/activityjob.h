@@ -16,8 +16,7 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef ACTIVITYJOB_H
-#define ACTIVITYJOB_H
+#pragma once
 
 // plasma
 #include <Plasma/ServiceJob>
@@ -46,5 +45,3 @@ private:
     KActivities::Controller *m_activityController;
     QString m_id;
 };
-
-#endif // TASKJOB_H

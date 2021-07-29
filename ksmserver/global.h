@@ -22,10 +22,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ******************************************************************/
 
-#ifndef GLOBAL_H
-#define GLOBAL_H
+#pragma once
 
 #define KSMVendorString "KDE"
 #define KSMReleaseString "1.0"
-
-#endif

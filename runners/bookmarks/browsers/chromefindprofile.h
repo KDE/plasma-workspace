@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef CHROMEFINDPROFILE_H
-#define CHROMEFINDPROFILE_H
+#pragma once
 
 #include "browsers/findprofile.h"
 #include <QDir>
@@ -35,5 +34,3 @@ private:
     QString const m_applicationName;
     QString const m_homeDirectory;
 };
-
-#endif // CHROMEFINDPROFILE_H

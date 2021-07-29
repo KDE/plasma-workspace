@@ -18,8 +18,7 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
-#ifndef WINDOWTASKSMODEL_H
-#define WINDOWTASKSMODEL_H
+#pragma once
 
 #include <QIdentityProxyModel>
 
@@ -61,5 +60,3 @@ private:
 };
 
 }
-
-#endif

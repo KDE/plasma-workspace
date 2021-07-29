@@ -18,8 +18,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef KTIMEZONED_H
-#define KTIMEZONED_H
+#pragma once
 
 #include "ktimezonedbase.h"
 
@@ -41,5 +40,3 @@ private:
 
     RegistryWatcherThread *mRegistryWatcherThread; // thread that watches the timezone registry key
 };
-
-#endif

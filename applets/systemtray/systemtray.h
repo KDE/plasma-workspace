@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef SYSTEMTRAY_H
-#define SYSTEMTRAY_H
+#pragma once
 
 #include <QAbstractItemModel>
 #include <QRegExp>
@@ -104,5 +103,3 @@ private:
 
     QHash<QString /*plugin id*/, int /*config group*/> m_configGroupIds;
 };
-
-#endif

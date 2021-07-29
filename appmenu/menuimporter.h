@@ -24,8 +24,7 @@
   DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef MENUIMPORTER_H
-#define MENUIMPORTER_H
+#pragma once
 
 // Qt
 #include <QDBusArgument>
@@ -88,5 +87,3 @@ private:
     QHash<WId, QDBusObjectPath> m_menuPaths;
     QHash<WId, QString> m_windowClasses;
 };
-
-#endif /* MENUIMPORTER_H */

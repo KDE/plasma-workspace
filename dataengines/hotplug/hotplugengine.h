@@ -17,8 +17,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef HOTPLUGENGINE_H
-#define HOTPLUGENGINE_H
+#pragma once
 
 #include <QObject>
 
@@ -63,5 +62,3 @@ private:
     Solid::Predicate m_encryptedPredicate;
     KDirWatch *m_dirWatch;
 };
-
-#endif

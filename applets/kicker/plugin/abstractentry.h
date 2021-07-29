@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef ABSTRACTENTRY_H
-#define ABSTRACTENTRY_H
+#pragma once
 
 #include "abstractmodel.h"
 
@@ -85,5 +84,3 @@ public:
         return SeparatorType;
     }
 };
-
-#endif

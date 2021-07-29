@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef SYSTEMTRAYTYPES_H
-#define SYSTEMTRAYTYPES_H
+#pragma once
 
 #include <QDBusArgument>
 
@@ -33,5 +32,3 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, KDbusImageVector 
 
 const QDBusArgument &operator<<(QDBusArgument &argument, const KDbusToolTipStruct &toolTip);
 const QDBusArgument &operator>>(const QDBusArgument &argument, KDbusToolTipStruct &toolTip);
-
-#endif

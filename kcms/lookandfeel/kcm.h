@@ -19,8 +19,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef _KCM_SEARCH_H
-#define _KCM_SEARCH_H
+#pragma once
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -148,5 +147,3 @@ private:
     bool m_resetDefaultLayout : 1;
     bool m_applyWindowDecoration : 1;
 };
-
-#endif

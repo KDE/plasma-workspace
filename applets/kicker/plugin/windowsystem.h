@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef WINDOWSYSTEM_H
-#define WINDOWSYSTEM_H
+#pragma once
 
 #include <QObject>
 #include <QQuickWindow>
@@ -49,5 +48,3 @@ Q_SIGNALS:
 private Q_SLOTS:
     void monitoredWindowVisibilityChanged(QWindow::Visibility visibility) const;
 };
-
-#endif

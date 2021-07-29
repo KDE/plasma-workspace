@@ -15,8 +15,7 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef GEOLOCATION_DATAENGINE_H
-#define GEOLOCATION_DATAENGINE_H
+#pragma once
 
 #include <QTimer>
 
@@ -54,5 +53,3 @@ private:
     QTimer m_updateTimer;
     QTimer m_networkChangedTimer;
 };
-
-#endif

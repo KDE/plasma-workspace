@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SCREENPOOL_H
-#define SCREENPOOL_H
+#pragma once
 
 #include <QAbstractNativeEventFilter>
 #include <QHash>
@@ -67,5 +66,3 @@ private:
     QTimer m_configSaveTimer;
     int m_xrandrExtensionOffset;
 };
-
-#endif // SCREENPOOL_H

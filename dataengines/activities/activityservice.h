@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef ACTIVITY_SERVICE_H
-#define ACTIVITY_SERVICE_H
+#pragma once
 
 #include "activityengine.h"
 
@@ -44,5 +43,3 @@ private:
     KActivities::Controller *m_activityController;
     QString m_id;
 };
-
-#endif // SEARCHLAUNCH_SERVICE_H

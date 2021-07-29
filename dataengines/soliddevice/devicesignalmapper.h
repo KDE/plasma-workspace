@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef DEVICE_SIGNAL_MAPPER_H
-#define DEVICE_SIGNAL_MAPPER_H
+#pragma once
 
 #include <QMap>
 #include <QObject>
@@ -80,5 +79,3 @@ public:
 public Q_SLOTS:
     void accessibilityChanged(bool accessible);
 };
-
-#endif

@@ -16,8 +16,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef URLGRABBER_H
-#define URLGRABBER_H
+#pragma once
 
 #include <QHash>
 #include <QSharedPointer>
@@ -236,5 +235,3 @@ private:
     QList<ClipCommand> m_myCommands;
     bool m_automatic;
 };
-
-#endif // URLGRABBER_H

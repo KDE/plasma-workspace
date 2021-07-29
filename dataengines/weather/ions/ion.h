@@ -17,8 +17,7 @@
  * Boston, MA 02110-1301, USA.                                               *
  *****************************************************************************/
 
-#ifndef ION_H
-#define ION_H
+#pragma once
 
 #include <Plasma/DataEngine>
 
@@ -253,5 +252,3 @@ private:
     class Private;
     Private *const d;
 };
-
-#endif

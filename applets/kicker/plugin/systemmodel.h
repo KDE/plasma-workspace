@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef SYSTEMMODEL_H
-#define SYSTEMMODEL_H
+#pragma once
 
 #include "abstractmodel.h"
 #include "systementry.h"
@@ -47,5 +46,3 @@ private:
 
     QVector<SystemEntry *> m_entries;
 };
-
-#endif

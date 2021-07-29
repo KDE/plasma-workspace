@@ -1,5 +1,4 @@
-#ifndef __CHAR_TIP_H__
-#define __CHAR_TIP_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -64,5 +63,3 @@ private:
 };
 
 }
-
-#endif

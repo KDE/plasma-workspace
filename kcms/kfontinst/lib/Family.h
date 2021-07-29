@@ -1,5 +1,4 @@
-#ifndef __FAMILY_H__
-#define __FAMILY_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -108,5 +107,3 @@ Q_DECL_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const KFI::Fami
 Q_DECL_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::Family &obj);
 Q_DECL_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const KFI::Families &obj);
 Q_DECL_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::Families &obj);
-
-#endif

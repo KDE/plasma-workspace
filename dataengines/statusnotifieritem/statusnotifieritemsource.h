@@ -19,8 +19,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef STATUSNOTIFIERITEMSOURCE_H
-#define STATUSNOTIFIERITEMSOURCE_H
+#pragma once
 
 #include <Plasma/DataContainer>
 #include <QDBusPendingCallWatcher>
@@ -84,5 +83,3 @@ private:
     bool m_tooltipUpdate : 1;
     bool m_statusUpdate : 1;
 };
-
-#endif // STATUSNOTIFIERITEMSOURCE_H

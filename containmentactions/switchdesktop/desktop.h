@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SWITCHDESKTOP_HEADER
-#define SWITCHDESKTOP_HEADER
+#pragma once
 
 #include <plasma/containmentactions.h>
 
@@ -49,5 +48,3 @@ private:
     QHash<int, QAction *> m_actions;
     TaskManager::VirtualDesktopInfo *m_virtualDesktopInfo;
 };
-
-#endif

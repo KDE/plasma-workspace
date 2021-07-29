@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef PLACESENGINE_H
-#define PLACESENGINE_H
+#pragma once
 
 #include <Plasma/DataEngine>
 
@@ -39,5 +38,3 @@ private:
     KFilePlacesModel *m_placesModel;
     PlacesProxyModel *m_proxyModel;
 };
-
-#endif // PLACESENGINE_H

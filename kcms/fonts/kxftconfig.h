@@ -1,5 +1,4 @@
-#ifndef __KXFTCONFIG_H__
-#define __KXFTCONFIG_H__
+#pragma once
 
 /*
    Copyright (c) 2002 Craig Drummond <craig@kde.org>
@@ -243,6 +242,4 @@ private:
 
 Q_DECLARE_METATYPE(KXftConfig::Hint::Style)
 Q_DECLARE_METATYPE(KXftConfig::SubPixel::Type)
-#endif
-
 #endif

@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef COLORSAPPLICATOR_H
-#define COLORSAPPLICATOR_H
+#pragma once
 
 #include <QString>
 
@@ -32,5 +31,3 @@
  * @param configOut The config which holds the information on which scheme is currently selected, and what colors it contains
  */
 void applyScheme(const QString &colorSchemePath, KConfig *configOut, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
-
-#endif // COLORSAPPLICATOR_H

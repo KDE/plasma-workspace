@@ -16,8 +16,7 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef APPSERVICE_H
-#define APPSERVICE_H
+#pragma once
 
 // plasma
 #include <Plasma/Service>
@@ -43,5 +42,3 @@ protected:
 private:
     AppSource *m_source;
 };
-
-#endif // APPSERVICE_H

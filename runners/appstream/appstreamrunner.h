@@ -18,8 +18,7 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>. *
  ***************************************************************************/
 
-#ifndef APPSTREAMRUNNER_H
-#define APPSTREAMRUNNER_H
+#pragma once
 
 #include <AppStreamQt/pool.h>
 #include <KRunner/AbstractRunner>
@@ -42,5 +41,3 @@ private:
     AppStream::Pool m_db;
     QMutex m_appstreamMutex;
 };
-
-#endif

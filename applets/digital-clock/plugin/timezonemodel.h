@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef TIMEZONEMODEL_H
-#define TIMEZONEMODEL_H
+#pragma once
 
 #include <QAbstractListModel>
 #include <QSortFilterProxyModel>
@@ -94,5 +93,3 @@ private:
     QStringList m_selectedTimeZones;
     TimezonesI18n *m_timezonesI18n;
 };
-
-#endif // TIMEZONEMODEL_H

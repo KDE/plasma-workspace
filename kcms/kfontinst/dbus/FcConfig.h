@@ -1,5 +1,4 @@
-#ifndef __FC_CONFIG_H__
-#define __FC_CONFIG_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -34,5 +33,3 @@ void addDir(const QString &dir, bool system);
 }
 
 }
-
-#endif

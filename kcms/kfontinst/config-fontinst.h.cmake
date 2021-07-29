@@ -1,5 +1,4 @@
-#ifndef __CONFIG_FONTINST_H__
-#define __CONFIG_FONTINST_H__
+#pragma once
 
 #define KFONTINST_LIB_EXEC_DIR "${KAUTH_HELPER_INSTALL_ABSOLUTE_DIR}"
 

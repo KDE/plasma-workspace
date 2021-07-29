@@ -18,8 +18,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef DBUSMENUIMPORTER_H
-#define DBUSMENUIMPORTER_H
+#pragma once
 
 // Qt
 #include <QObject>
@@ -107,5 +106,3 @@ private:
     // Use Q_PRIVATE_SLOT to avoid exposing DBusMenuItemList
     Q_PRIVATE_SLOT(d, void slotItemsPropertiesUpdated(const DBusMenuItemList &updatedList, const DBusMenuItemKeysList &removedList))
 };
-
-#endif /* DBUSMENUIMPORTER_H */

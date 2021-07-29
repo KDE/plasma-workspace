@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef DEVICEACTION_H
-#define DEVICEACTION_H
+#pragma once
 
 #include <solid/device.h>
 
@@ -42,5 +41,3 @@ private:
     QString m_label;
     QString m_iconName;
 };
-
-#endif

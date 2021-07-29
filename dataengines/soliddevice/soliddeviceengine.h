@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SOLIDDEVICEENGINE_H
-#define SOLIDDEVICEENGINE_H
+#pragma once
 
 #include <QList>
 #include <QMap>
@@ -98,5 +97,3 @@ private Q_SLOTS:
     void setIdleState(Solid::ErrorType error, QVariant errorData, const QString &udi);
     void deviceChanged(const QMap<QString, int> &props);
 };
-
-#endif

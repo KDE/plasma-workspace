@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef JOBACTION_H
-#define JOBACTION_H
+#pragma once
 
 #include "kuiserverengine.h"
 
@@ -48,5 +47,3 @@ public:
 private:
     QPointer<NotificationManager::Job> m_job;
 };
-
-#endif // JOBVIEW_H

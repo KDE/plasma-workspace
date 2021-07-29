@@ -19,8 +19,7 @@
  *
  */
 
-#ifndef _BALOO_SEARCH_RUNNER_H_
-#define _BALOO_SEARCH_RUNNER_H_
+#pragma once
 
 #include <QDBusContext>
 #include <QDBusMessage>
@@ -44,5 +43,3 @@ public:
 private:
     RemoteMatches matchInternal(const QString &searchTerm, const QString &type, const QString &category, QSet<QUrl> &foundUrls);
 };
-
-#endif // _BALOO_SEARCH_RUNNER_H_

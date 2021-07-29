@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef KIO_DESKTOP_H
-#define KIO_DESKTOP_H
+#pragma once
 
 #include <kio/forwardingslavebase.h>
 
@@ -42,5 +41,3 @@ protected:
 private:
     void fileSystemFreeSpace(const QUrl &url);
 };
-
-#endif

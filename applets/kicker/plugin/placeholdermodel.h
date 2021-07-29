@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef PLACEHOLDERMODEL_H
-#define PLACEHOLDERMODEL_H
+#pragma once
 
 #include "abstractmodel.h"
 
@@ -90,5 +89,3 @@ private:
     bool m_isTriggerInhibited;
     QTimer m_triggerInhibitor;
 };
-
-#endif

@@ -17,8 +17,7 @@
 
 */
 
-#ifndef CLIPCOMMANDPROCESS_H
-#define CLIPCOMMANDPROCESS_H
+#pragma once
 
 #include <KProcess>
 #include <QSharedPointer>
@@ -46,5 +45,3 @@ private:
     QSharedPointer<const HistoryItem> m_historyItem;
     QString m_newhistoryItem;
 };
-
-#endif // CLIPCOMMANDPROCESS_H

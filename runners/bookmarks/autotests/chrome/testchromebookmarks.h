@@ -19,8 +19,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef TESTCHROMEBOOKMARKS_H
-#define TESTCHROMEBOOKMARKS_H
+#pragma once
 
 #include "browsers/findprofile.h"
 #include <QObject>
@@ -64,5 +63,3 @@ private:
     QScopedPointer<FakeFindProfile> m_findBookmarksInCurrentDirectory;
     QString m_configHome;
 };
-
-#endif // TESTCHROMEBOOKMARKS_H

@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef __PREVIEW_IMAGE_PROVIDER_H__
-#define __PREVIEW_IMAGE_PROVIDER_H__
+#pragma once
 
 #include <QFont>
 #include <QQuickImageProvider>
@@ -32,5 +31,3 @@ public:
 private:
     QFont m_font;
 };
-
-#endif // __PREVIEW_IMAGE_PROVIDER_H__

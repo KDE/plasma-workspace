@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef SYSTEMTRAYTYPEDEFS_H
-#define SYSTEMTRAYTYPEDEFS_H
+#pragma once
 
 #include <QByteArray>
 #include <QMetaType>
@@ -44,5 +43,3 @@ struct KDbusToolTipStruct {
 Q_DECLARE_METATYPE(KDbusImageStruct)
 Q_DECLARE_METATYPE(KDbusImageVector)
 Q_DECLARE_METATYPE(KDbusToolTipStruct)
-
-#endif

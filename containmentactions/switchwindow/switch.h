@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SWITCHWINDOW_HEADER
-#define SWITCHWINDOW_HEADER
+#pragma once
 
 #include "ui_config.h"
 #include <plasma/containmentactions.h>
@@ -73,5 +72,3 @@ private:
     static TaskManager::TasksModel *s_tasksModel;
     static int s_instanceCount;
 };
-
-#endif

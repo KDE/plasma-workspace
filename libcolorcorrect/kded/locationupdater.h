@@ -14,8 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#ifndef LOCATIONUPDATER_H
-#define LOCATIONUPDATER_H
+#pragma once
 
 #include <kdedmodule.h>
 
@@ -40,5 +39,3 @@ private:
     ColorCorrect::CompositorAdaptor *m_adaptor = nullptr;
     ColorCorrect::Geolocator *m_locator = nullptr;
 };
-
-#endif

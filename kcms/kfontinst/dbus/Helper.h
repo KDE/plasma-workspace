@@ -1,5 +1,4 @@
-#ifndef HELPER_H
-#define HELPER_H
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -56,5 +55,3 @@ private:
 };
 
 }
-
-#endif

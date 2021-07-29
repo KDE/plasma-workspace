@@ -20,8 +20,7 @@
  *
  */
 
-#ifndef SNIDBUS_H
-#define SNIDBUS_H
+#pragma once
 
 #include <QByteArray>
 #include <QDBusArgument>
@@ -61,5 +60,3 @@ const QDBusArgument &operator<<(QDBusArgument &argument, const KDbusToolTipStruc
 const QDBusArgument &operator>>(const QDBusArgument &argument, KDbusToolTipStruct &toolTip);
 
 Q_DECLARE_METATYPE(KDbusToolTipStruct)
-
-#endif // SNIDBUS_H

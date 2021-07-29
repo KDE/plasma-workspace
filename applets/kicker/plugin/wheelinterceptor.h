@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef WHEELINTERCEPTOR_H
-#define WHEELINTERCEPTOR_H
+#pragma once
 
 #include <QPointer>
 #include <QQuickItem>
@@ -48,5 +47,3 @@ protected:
 private:
     QPointer<QQuickItem> m_destination;
 };
-
-#endif

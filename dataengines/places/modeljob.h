@@ -16,8 +16,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor,
  * Boston, MA  02110-1301  USA
  */
-#ifndef MODELJOB_H
-#define MODELJOB_H
+#pragma once
 
 #include <Plasma/ServiceJob>
 #include <kfileplacesmodel.h>
@@ -38,5 +37,3 @@ protected:
     KFilePlacesModel *m_model;
     QModelIndex m_index;
 };
-
-#endif // MODELJOB_H

@@ -19,8 +19,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef STATUSNOTIFIERITEMHOST_H
-#define STATUSNOTIFIERITEMHOST_H
+#pragma once
 
 #include "statusnotifierwatcher_interface.h"
 #include <QDBusConnection>
@@ -64,5 +63,3 @@ private:
     static const int s_protocolVersion = 0;
     QHash<QString, StatusNotifierItemSource *> m_sniServices;
 };
-
-#endif

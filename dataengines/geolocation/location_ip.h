@@ -15,8 +15,7 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef IP_H
-#define IP_H
+#pragma once
 
 #include "geolocationprovider.h"
 
@@ -33,5 +32,3 @@ private:
     class Private;
     Private *const d;
 };
-
-#endif

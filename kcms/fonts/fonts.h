@@ -24,8 +24,7 @@
     Boston, MA 02110-1301, USA.
 */
 
-#ifndef FONTS_H
-#define FONTS_H
+#pragma once
 
 #include <QAbstractItemModel>
 #include <QStandardItemModel>
@@ -85,5 +84,3 @@ private:
     QStandardItemModel *m_subPixelOptionsModel;
     QStandardItemModel *m_hintingOptionsModel;
 };
-
-#endif

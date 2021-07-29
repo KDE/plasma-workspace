@@ -1,5 +1,4 @@
-#ifndef FOLDER_H
-#define FOLDER_H
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -142,5 +141,3 @@ inline Q_DECL_EXPORT uint qHash(const Folder::FlatFont &key)
 }
 
 }
-
-#endif

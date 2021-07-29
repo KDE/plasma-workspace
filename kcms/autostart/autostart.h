@@ -19,8 +19,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA          *
  ***************************************************************************/
 
-#ifndef AUTOSTART_H
-#define AUTOSTART_H
+#pragma once
 
 #include <KQuickAddons/ConfigModule>
 
@@ -44,5 +43,3 @@ public:
 private:
     AutostartModel *m_model;
 };
-
-#endif

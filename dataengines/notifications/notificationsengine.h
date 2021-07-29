@@ -17,8 +17,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef NOTIFICATIONSENGINE_H
-#define NOTIFICATIONSENGINE_H
+#pragma once
 
 #include <Plasma/DataEngine>
 #include <QHash>
@@ -96,5 +95,3 @@ private:
 };
 
 Q_DECLARE_METATYPE(NotificationInhibitonPtr);
-
-#endif

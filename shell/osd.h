@@ -16,8 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef OSD_H
-#define OSD_H
+#pragma once
 
 #include <QObject>
 #include <QString>
@@ -81,5 +80,3 @@ private:
 
     KConfigGroup m_osdConfigGroup;
 };
-
-#endif // OSD_H

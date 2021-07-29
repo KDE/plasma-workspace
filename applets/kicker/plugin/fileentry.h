@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef FILEENTRY_H
-#define FILEENTRY_H
+#pragma once
 
 #include "abstractentry.h"
 
@@ -52,5 +51,3 @@ public:
 private:
     KFileItem *m_fileItem;
 };
-
-#endif

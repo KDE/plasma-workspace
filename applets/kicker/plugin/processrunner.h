@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef PROCESSRUNNER_H
-#define PROCESSRUNNER_H
+#pragma once
 
 #include <QAction>
 
@@ -32,5 +31,3 @@ public:
 
     Q_INVOKABLE void runMenuEditor();
 };
-
-#endif

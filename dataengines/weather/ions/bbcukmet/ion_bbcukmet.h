@@ -19,8 +19,7 @@
 
 /* Ion for BBC Weather from UKMET Office */
 
-#ifndef ION_BBCUKMET_H
-#define ION_BBCUKMET_H
+#pragma once
 
 #include "../ion.h"
 
@@ -179,5 +178,3 @@ private:
 
     QStringList m_sourcesToReset;
 };
-
-#endif

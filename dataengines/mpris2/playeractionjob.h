@@ -17,8 +17,7 @@
  * Boston, MA  02110-1301  USA
  */
 
-#ifndef PLAYERACTIONJOB_H
-#define PLAYERACTIONJOB_H
+#pragma once
 
 #include <Plasma/ServiceJob>
 
@@ -69,5 +68,3 @@ private:
 
     QPointer<PlayerControl> m_controller;
 };
-
-#endif // PLAYERACTIONJOB_H

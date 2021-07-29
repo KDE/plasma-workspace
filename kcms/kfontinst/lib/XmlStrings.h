@@ -1,5 +1,4 @@
-#ifndef __XML_STRINGS_H__
-#define __XML_STRINGS_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -41,5 +40,3 @@
 #define SYSTEM_ATTR "system"
 #define ERROR_ATTR "error"
 #define LANG_SEP ","
-
-#endif

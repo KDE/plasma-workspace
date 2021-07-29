@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef CALCULATORRUNNER_H
-#define CALCULATORRUNNER_H
+#pragma once
 
 #include <QAction>
 #include <QMimeData>
@@ -61,5 +60,3 @@ private:
 #endif
     QList<QAction *> m_actions;
 };
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef __KFI_CONSTANTS_H__
-#define __KFI_CONSTANTS_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -123,5 +122,3 @@ enum EUdsExtraEntries {
 #define KFI_SPACING_PROPORTIONAL I18N_NOOP("Proportional")
 
 #define KFI_UNKNOWN_FOUNDRY I18N_NOOP("Unknown")
-
-#endif

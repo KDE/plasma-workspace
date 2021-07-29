@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef KEYSTATEENGINE_H
-#define KEYSTATEENGINE_H
+#pragma once
 
 #include <Plasma/DataEngine>
 
@@ -56,5 +55,3 @@ private:
     QMap<Qt::Key, QString> m_mods;
     QMap<Qt::MouseButton, QString> m_buttons;
 };
-
-#endif // KEYSTATEENGINE_H

@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SYSTEMMONITORENGINE_H
-#define SYSTEMMONITORENGINE_H
+#pragma once
 
 #include <Plasma/DataEngine>
 
@@ -57,5 +56,3 @@ private:
     QTimer *m_timer;
     int m_waitingFor;
 };
-
-#endif

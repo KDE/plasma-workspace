@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef _KRDB_H_
-#define _KRDB_H_
+#pragma once
 
 enum KRdbAction {
     KRdbExportColors = 0x0001, // Export colors to non-(KDE/Qt) apps
@@ -29,5 +28,3 @@ enum KRdbAction {
 };
 
 void Q_DECL_EXPORT runRdb(uint flags);
-
-#endif

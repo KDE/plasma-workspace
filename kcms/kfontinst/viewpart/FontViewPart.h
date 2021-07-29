@@ -1,5 +1,4 @@
-#ifndef __FONT_VIEW_PART_H__
-#define __FONT_VIEW_PART_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -109,5 +108,3 @@ public Q_SLOTS:
 };
 
 }
-
-#endif

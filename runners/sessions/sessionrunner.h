@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SESSIONRUNNER_H
-#define SESSIONRUNNER_H
+#pragma once
 
 #include <kdisplaymanager.h>
 #include <krunner/abstractrunner.h>
@@ -54,5 +53,3 @@ private:
     SessionManagement m_session;
     bool m_canLogout;
 };
-
-#endif

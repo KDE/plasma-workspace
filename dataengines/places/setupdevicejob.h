@@ -16,8 +16,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor,
  * Boston, MA  02110-1301  USA
  */
-#ifndef SETUPDEVICEJOB_H
-#define SETUPDEVICEJOB_H
+#pragma once
 
 #include "modeljob.h"
 
@@ -42,5 +41,3 @@ private Q_SLOTS:
     void setupDone(const QModelIndex &index, bool success);
     void setupError(const QString &message);
 };
-
-#endif // SETUPDEVICEJOB_H

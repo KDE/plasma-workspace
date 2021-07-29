@@ -14,8 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#ifndef COLORCORRECT_AUTOTESTS_MOCK_KWIN_H
-#define COLORCORRECT_AUTOTESTS_MOCK_KWIN_H
+#pragma once
 
 #include "../colorcorrectconstants.h"
 
@@ -76,5 +75,3 @@ Q_SIGNALS:
 private:
     QHash<QString, QVariant> getData();
 };
-
-#endif // COLORCORRECT_AUTOTESTS_MOCK_KWIN_H

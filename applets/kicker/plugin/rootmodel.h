@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef ROOTMODEL_H
-#define ROOTMODEL_H
+#pragma once
 
 #include "appsmodel.h"
 
@@ -128,5 +127,3 @@ private:
     RecentUsageModel *m_recentDocsModel;
     RecentContactsModel *m_recentContactsModel;
 };
-
-#endif

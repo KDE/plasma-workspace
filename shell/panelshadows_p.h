@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef PANELSHADOWS_P_H
-#define PANELSHADOWS_P_H
+#pragma once
 
 #include <QSet>
 
@@ -43,5 +42,3 @@ private:
     class Private;
     Private *const d;
 };
-
-#endif

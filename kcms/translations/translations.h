@@ -19,8 +19,7 @@
  *  Boston, MA 02110-1301, USA.
  */
 
-#ifndef TRANSLATIONS_H
-#define TRANSLATIONS_H
+#pragma once
 
 #include <KQuickAddons/ManagedConfigModule>
 
@@ -65,5 +64,3 @@ private:
 
     bool m_everSaved;
 };
-
-#endif

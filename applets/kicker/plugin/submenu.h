@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef SUBMENU_H
-#define SUBMENU_H
+#pragma once
 
 #include <PlasmaQuick/Dialog>
 
@@ -54,5 +53,3 @@ private:
     int m_offset;
     bool m_facingLeft;
 };
-
-#endif

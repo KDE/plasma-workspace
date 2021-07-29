@@ -17,8 +17,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef HISTORY_H
-#define HISTORY_H
+#pragma once
 
 #include <QByteArray>
 #include <QHash>
@@ -150,5 +149,3 @@ private:
 
     QByteArray m_cycleStartUuid;
 };
-
-#endif

@@ -18,8 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef NOTIFICATIONSDATA_H
-#define NOTIFICATIONSDATA_H
+#pragma once
 
 #include <QObject>
 
@@ -65,5 +64,3 @@ private:
     NotificationManager::BadgeSettings *m_badgeSettings;
     QHash<int, NotificationManager::BehaviorSettings *> m_behaviorSettingsList;
 };
-
-#endif // NOTIFICATIONSDATA_H

@@ -21,8 +21,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef __FC_H__
-#define __FC_H__
+#pragma once
 
 #include "KfiConstants.h"
 #include "Misc.h"
@@ -127,5 +126,3 @@ extern Q_DECL_EXPORT QString spacingStr(int s);
 extern Q_DECL_EXPORT bool bitmapsEnabled();
 }
 }
-
-#endif

@@ -17,8 +17,7 @@
  * Boston, MA  02110-1301  USA
  */
 
-#ifndef MULTIPLEXER_H
-#define MULTIPLEXER_H
+#pragma once
 
 #include <Plasma/DataContainer>
 
@@ -58,5 +57,3 @@ private:
 
     QHash<qlonglong, PlayerContainer *> m_proxies;
 };
-
-#endif // MULTIPLEXER_H

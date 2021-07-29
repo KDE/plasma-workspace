@@ -20,8 +20,7 @@
     THE SOFTWARE.
 */
 
-#ifndef SESSIONSMODEL_H
-#define SESSIONSMODEL_H
+#pragma once
 
 #include <QAbstractListModel>
 
@@ -120,5 +119,3 @@ private:
 
     org::freedesktop::ScreenSaver *m_screensaverInterface = nullptr;
 };
-
-#endif // SESSIONSMODEL_H

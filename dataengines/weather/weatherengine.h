@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA          *
  ***************************************************************************/
 
-#ifndef WEATHERENGINE_H
-#define WEATHERENGINE_H
+#pragma once
 
 #include <QHash>
 #include <QNetworkConfigurationManager>
@@ -119,5 +118,3 @@ private:
     QTimer m_reconnectTimer;
     QNetworkConfigurationManager m_networkConfigurationManager;
 };
-
-#endif

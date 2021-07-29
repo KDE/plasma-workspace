@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef KSYSTEMACTIVITYDIALOG__H
-#define KSYSTEMACTIVITYDIALOG__H
+#pragma once
 
 #ifndef Q_WS_WIN
 
@@ -62,5 +61,3 @@ private:
     KSysGuardProcessList m_processList;
 };
 #endif // not Q_WS_WIN
-
-#endif // KSYSTEMACTIVITYDIALOG__H

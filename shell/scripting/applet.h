@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef APPLET
-#define APPLET
+#pragma once
 
 #include <QJSValue>
 #include <QObject>
@@ -81,5 +80,3 @@ private:
 };
 
 }
-
-#endif

@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef APPINTERFACE
-#define APPINTERFACE
+#pragma once
 
 #include <QJSValue>
 #include <QObject>
@@ -101,5 +100,3 @@ private:
 };
 
 }
-
-#endif

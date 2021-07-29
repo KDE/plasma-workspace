@@ -18,8 +18,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef WATCHEDNOTIFICATIONSMODEL_H
-#define WATCHEDNOTIFICATIONSMODEL_H
+#pragma once
 
 #include "abstractnotificationsmodel.h"
 
@@ -54,5 +53,3 @@ private:
 };
 
 }
-
-#endif // WATCHEDNOTIFICATIONSMODEL_H

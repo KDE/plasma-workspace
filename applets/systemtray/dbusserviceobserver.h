@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef DBUSSERVICEOBSERVER_H
-#define DBUSSERVICEOBSERVER_H
+#pragma once
 
 #include <QHash>
 #include <QObject>
@@ -66,5 +65,3 @@ private:
     bool m_dbusSessionServiceNamesFetched = false;
     bool m_dbusSystemServiceNamesFetched = false;
 };
-
-#endif // DBUSSERVICEOBSERVER_H

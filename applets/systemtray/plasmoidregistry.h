@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef PLASMOIDREGISTRY_H
-#define PLASMOIDREGISTRY_H
+#pragma once
 
 #include <QMap>
 #include <QObject>
@@ -91,5 +90,3 @@ private:
 
     QMap<QString /*plugin id*/, KPluginMetaData> m_systrayApplets;
 };
-
-#endif // PLASMOIDREGISTRY_H

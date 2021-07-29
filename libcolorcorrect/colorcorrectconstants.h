@@ -14,8 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#ifndef COLORCORRECT_CONSTANTS_H
-#define COLORCORRECT_CONSTANTS_H
+#pragma once
 
 namespace ColorCorrect
 {
@@ -27,5 +26,3 @@ static const int DEFAULT_NIGHT_TEMPERATURE = 4500;
 static const int FALLBACK_SLOW_UPDATE_TIME = 30; // in minutes
 
 }
-
-#endif // COLORCORRECT_CONSTANTS_H

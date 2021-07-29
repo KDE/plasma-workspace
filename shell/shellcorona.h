@@ -20,8 +20,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SHELLCORONA_H
-#define SHELLCORONA_H
+#pragma once
 
 #include "plasma/corona.h"
 
@@ -270,5 +269,3 @@ private:
 
     StrutManager *m_strutManager;
 };
-
-#endif // SHELLCORONA_H

@@ -17,8 +17,7 @@
  * Boston, MA  02110-1301  USA
  */
 
-#ifndef PLAYERCONTROL_H
-#define PLAYERCONTROL_H
+#pragma once
 
 #include "playercontainer.h"
 
@@ -77,5 +76,3 @@ private Q_SLOTS:
 private:
     PlayerContainer *m_container;
 };
-
-#endif // PLAYERCONTROL_H

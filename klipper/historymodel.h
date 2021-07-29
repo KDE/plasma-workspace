@@ -16,8 +16,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#ifndef KLIPPER_HISTORYMODEL_H
-#define KLIPPER_HISTORYMODEL_H
+#pragma once
 
 #include <QAbstractListModel>
 #include <QMutex>
@@ -87,5 +86,3 @@ inline void HistoryModel::setDisplayImages(bool show)
 }
 
 Q_DECLARE_METATYPE(HistoryItemType)
-
-#endif

@@ -19,8 +19,7 @@
  *
  ******************************************************************/
 
-#ifndef APPMENUPLUGIN_H
-#define APPMENUPLUGIN_H
+#pragma once
 
 #include <QQmlExtensionPlugin>
 
@@ -32,5 +31,3 @@ class AppmenuPlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif

@@ -24,8 +24,7 @@
   DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef APPMENUMODULE_H
-#define APPMENUMODULE_H
+#pragma once
 
 #include <config-X11.h>
 #ifdef HAVE_X11
@@ -111,5 +110,3 @@ private:
 #endif
     KWayland::Client::PlasmaShell *m_plasmashell = nullptr;
 };
-
-#endif

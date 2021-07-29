@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SCRIPTENGINE_V1
-#define SCRIPTENGINE_V1
+#pragma once
 
 #include <QJSValue>
 #include <QObject>
@@ -82,5 +81,3 @@ private:
 };
 
 }
-
-#endif

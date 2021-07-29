@@ -1,5 +1,4 @@
-#ifndef __FONT_PREVIEW_H__
-#define __FONT_PREVIEW_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -89,5 +88,3 @@ private:
 };
 
 }
-
-#endif

@@ -17,8 +17,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef XCURSORTHEME_H
-#define XCURSORTHEME_H
+#pragma once
 
 #include <QHash>
 
@@ -77,5 +76,3 @@ private:
     QStringList m_inherits;
     static QHash<QString, QString> alternatives;
 };
-
-#endif // XCURSORTHEME_H

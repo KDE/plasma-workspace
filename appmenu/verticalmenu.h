@@ -23,8 +23,7 @@
   DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef VERTICALMENU_H
-#define VERTICALMENU_H
+#pragma once
 
 #include <QDBusObjectPath>
 #include <QMenu>
@@ -58,5 +57,3 @@ private:
     QString m_serviceName;
     QDBusObjectPath m_menuObjectPath;
 };
-
-#endif // VERTICALMENU_H

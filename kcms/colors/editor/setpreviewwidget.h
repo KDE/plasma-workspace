@@ -17,8 +17,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef __SETPREVIEWWIDGET_H__
-#define __SETPREVIEWWIDGET_H__
+#pragma once
 
 #include <QFrame>
 #include <QPalette>
@@ -45,5 +44,3 @@ protected:
     void setPaletteRecursive(QWidget *, const QPalette &);
     bool eventFilter(QObject *, QEvent *) override;
 };
-
-#endif

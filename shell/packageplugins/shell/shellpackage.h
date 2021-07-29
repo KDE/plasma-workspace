@@ -17,8 +17,7 @@
  *   Boston, MA 02110-1301, USA.                                               *
  *******************************************************************************/
 
-#ifndef SHELLPACKAGE_PLUGIN_H
-#define SHELLPACKAGE_PLUGIN_H
+#pragma once
 
 #include <KPackage/PackageStructure>
 
@@ -29,5 +28,3 @@ public:
     void initPackage(KPackage::Package *package) override;
     void pathChanged(KPackage::Package *package) override;
 };
-
-#endif // SHELLPACKAGE_PLUGIN_H

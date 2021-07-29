@@ -16,8 +16,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef POPUPPROXY_H
-#define POPUPPROXY_H
+#pragma once
 
 #include <QObject>
 #include <QRegularExpression>
@@ -86,5 +85,3 @@ private:
     int m_menu_height;
     int m_menu_width;
 };
-
-#endif

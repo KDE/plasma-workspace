@@ -27,8 +27,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef KCMSTYLE_H
-#define KCMSTYLE_H
+#pragma once
 
 #include <QPointer>
 
@@ -111,5 +110,3 @@ private:
     bool m_gtkConfigKdedModuleLoaded = false;
     GtkPage *m_gtkPage = nullptr;
 };
-
-#endif // __KCMSTYLE_H

@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef FUTUREUTIL_H
-#define FUTUREUTIL_H
+#pragma once
 
 #include <QCoreApplication>
 
@@ -29,5 +28,3 @@ inline void awaitFuture(const QFuture<T> &future)
         QCoreApplication::processEvents();
     }
 }
-
-#endif /* !FUTUREUTIL_H */

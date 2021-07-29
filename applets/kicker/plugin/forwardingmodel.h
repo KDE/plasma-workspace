@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef FORWARDINGMODEL_H
-#define FORWARDINGMODEL_H
+#pragma once
 
 #include "abstractmodel.h"
 
@@ -73,5 +72,3 @@ protected:
 
     QPointer<QAbstractItemModel> m_sourceModel;
 };
-
-#endif

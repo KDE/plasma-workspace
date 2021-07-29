@@ -1,5 +1,4 @@
-#ifndef __FC_ENGINE_H__
-#define __FC_ENGINE_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -177,5 +176,3 @@ private:
 };
 
 }
-
-#endif

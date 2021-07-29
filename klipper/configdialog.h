@@ -17,8 +17,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef CONFIGDIALOG_H
-#define CONFIGDIALOG_H
+#pragma once
 
 #include <KConfigDialog>
 
@@ -120,5 +119,3 @@ private:
 
     const Klipper *m_klipper;
 };
-
-#endif // CONFIGDIALOG_H

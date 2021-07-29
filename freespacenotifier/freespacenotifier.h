@@ -18,8 +18,7 @@
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef _FREESPACENOTIFIER_H_
-#define _FREESPACENOTIFIER_H_
+#pragma once
 
 #include <QPointer>
 #include <QTimer>
@@ -56,5 +55,3 @@ private:
     QPointer<KNotification> m_notification;
     qint64 m_lastAvail = -1; // used to suppress repeated warnings when available space hasn't changed
 };
-
-#endif

@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef OPERA_H
-#define OPERA_H
+#pragma once
 
 #include "browser.h"
 #include <QStringList>
@@ -40,5 +39,3 @@ private:
     QStringList m_operaBookmarkEntries;
     Favicon *const m_favicon;
 };
-
-#endif // OPERA_H

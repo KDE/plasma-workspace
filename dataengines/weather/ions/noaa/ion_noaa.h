@@ -19,8 +19,7 @@
 
 /* Ion for NOAA's National Weather Service XML data */
 
-#ifndef ION_NOAA_H
-#define ION_NOAA_H
+#pragma once
 
 #include "../ion.h"
 
@@ -175,5 +174,3 @@ private:
     // bool emitWhenSetup;
     QStringList m_sourcesToReset;
 };
-
-#endif

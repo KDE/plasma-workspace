@@ -19,8 +19,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef KTIMEZONEDBASE_H
-#define KTIMEZONEDBASE_H
+#pragma once
 
 #include <kdedmodule.h>
 
@@ -63,5 +62,3 @@ protected:
 
     QString m_localZone; // local system time zone name
 };
-
-#endif

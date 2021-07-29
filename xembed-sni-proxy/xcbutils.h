@@ -16,8 +16,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
-#ifndef KWIN_XCB_UTILS_H
-#define KWIN_XCB_UTILS_H
+#pragma once
 
 #include <xcb/composite.h>
 #include <xcb/damage.h>
@@ -131,5 +130,3 @@ public:
 extern Atoms *atoms;
 
 } // namespace Xcb
-
-#endif // KWIN_XCB_UTILS_H

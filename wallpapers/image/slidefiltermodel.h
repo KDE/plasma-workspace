@@ -16,8 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-#ifndef SLIDEFILTERMODEL_H
-#define SLIDEFILTERMODEL_H
+#pragma once
 
 #include <image.h>
 
@@ -56,4 +55,3 @@ private:
     std::random_device m_randomDevice;
     std::mt19937 m_random;
 };
-#endif

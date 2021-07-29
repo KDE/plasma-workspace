@@ -16,8 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef CORONATESTHELPER_H
-#define CORONATESTHELPER_H
+#pragma once
 
 #include <Plasma/Corona>
 #include <QSet>
@@ -44,5 +43,3 @@ private:
 
     int m_exitcode;
 };
-
-#endif

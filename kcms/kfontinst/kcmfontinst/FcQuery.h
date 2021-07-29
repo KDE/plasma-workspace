@@ -1,5 +1,4 @@
-#ifndef __FC_QUERY_H__
-#define __FC_QUERY_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -71,5 +70,3 @@ private:
 };
 
 }
-
-#endif

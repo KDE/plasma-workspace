@@ -16,8 +16,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef HISTORYURLITEM_H
-#define HISTORYURLITEM_H
+#pragma once
 
 #include <kurlmimedata.h>
 
@@ -44,5 +43,3 @@ private:
     KUrlMimeData::MetaDataMap m_metaData;
     bool m_cut;
 };
-
-#endif

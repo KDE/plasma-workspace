@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef HDDTEMP_H
-#define HDDTEMP_H
+#pragma once
 
 #include <QMap>
 #include <QObject>
@@ -51,5 +50,3 @@ private:
     QMap<QString, QList<QVariant>> m_data;
     bool updateData();
 };
-
-#endif

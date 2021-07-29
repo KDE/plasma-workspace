@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef PLASMA_KCATEGORIZEDITEMSVIEWMODELS_P_H
-#define PLASMA_KCATEGORIZEDITEMSVIEWMODELS_P_H
+#pragma once
 
 #include <QIcon>
 #include <QPair>
@@ -180,5 +179,3 @@ private:
 } // end of namespace
 
 Q_DECLARE_METATYPE(KCategorizedItemsViewModels::Filter)
-
-#endif /*KCATEGORIZEDITEMSVIEWMODELS_H_*/

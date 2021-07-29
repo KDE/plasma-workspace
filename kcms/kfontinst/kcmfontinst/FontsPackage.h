@@ -1,5 +1,4 @@
-#ifndef __FONTS_PACKAGE_H__
-#define __FONTS_PACKAGE_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -37,5 +36,3 @@ QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir);
 }
 
 }
-
-#endif

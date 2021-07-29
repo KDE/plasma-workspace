@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef DEVICESERVICEACTION_H
-#define DEVICESERVICEACTION_H
+#pragma once
 
 #include "deviceaction.h"
 
@@ -38,5 +37,3 @@ public:
 private:
     KServiceAction m_service;
 };
-
-#endif

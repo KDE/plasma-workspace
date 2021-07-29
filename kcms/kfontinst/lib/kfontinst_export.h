@@ -18,8 +18,7 @@
 
 */
 
-#ifndef KFONTINST_EXPORT_H
-#define KFONTINST_EXPORT_H
+#pragma once
 
 #include <QtGlobal>
 
@@ -38,5 +37,3 @@
 #define KFONTINST_EXPORT Q_DECL_EXPORT
 
 #endif
-
-#endif // KFONTINST_EXPORT_H

@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SHELLRUNNER_H
-#define SHELLRUNNER_H
+#pragma once
 
 #include <KRunner/AbstractRunner>
 #include <optional>
@@ -42,5 +41,3 @@ private:
     QList<QAction *> m_actionList;
     QIcon m_matchIcon;
 };
-
-#endif

@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef PASTE_HEADER
-#define PASTE_HEADER
+#pragma once
 
 #include <plasma/containmentactions.h>
 
@@ -38,5 +37,3 @@ private Q_SLOTS:
 private:
     QAction *m_action;
 };
-
-#endif

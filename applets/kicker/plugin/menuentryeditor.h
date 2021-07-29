@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef MENUENTRYEDITOR_H
-#define MENUENTRYEDITOR_H
+#pragma once
 
 #include <QObject>
 
@@ -35,5 +34,3 @@ public:
 public Q_SLOTS:
     void edit(const QString &entryPath, const QString &menuId);
 };
-
-#endif

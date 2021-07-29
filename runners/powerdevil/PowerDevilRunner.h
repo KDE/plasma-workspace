@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef POWERDEVILRUNNER_H
-#define POWERDEVILRUNNER_H
+#pragma once
 
 #include <KRunner/AbstractRunner>
 #include <QDBusConnection>
@@ -59,5 +58,3 @@ private:
     RunnerKeyword m_dimScreen;
     RunnerKeyword m_screenBrightness;
 };
-
-#endif

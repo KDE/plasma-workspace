@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef SYSTEMTRAYMODEL_H
-#define SYSTEMTRAYMODEL_H
+#pragma once
 
 #include <QAbstractListModel>
 #include <QConcatenateTablesProxyModel>
@@ -180,5 +179,3 @@ public:
 private:
     QHash<int, QByteArray> m_roleNames;
 };
-
-#endif // SYSTEMTRAYMODEL_H

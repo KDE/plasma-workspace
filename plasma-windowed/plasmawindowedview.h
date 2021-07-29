@@ -19,8 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-#ifndef PLASMAWINDOWEDVIEW_H
-#define PLASMAWINDOWEDVIEW_H
+#pragma once
 
 #include "plasmawindowedcorona.h"
 #include <PlasmaQuick/ConfigView>
@@ -67,5 +66,3 @@ private:
     QPointer<KStatusNotifierItem> m_statusNotifier;
     bool m_withStatusNotifier;
 };
-
-#endif

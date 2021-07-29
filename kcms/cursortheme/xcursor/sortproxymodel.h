@@ -17,8 +17,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef SORTPROXYMODEL_H
-#define SORTPROXYMODEL_H
+#pragma once
 
 #include <QSortFilterProxyModel>
 #include <thememodel.h>
@@ -79,5 +78,3 @@ void SortProxyModel::removeTheme(const QModelIndex &index)
     CursorThemeModel *model = static_cast<CursorThemeModel *>(sourceModel());
     model->removeTheme(mapToSource(index));
 }
-
-#endif // SORTPROXYMODEL_H

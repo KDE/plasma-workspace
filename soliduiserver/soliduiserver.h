@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SOLIDUISERVER_H
-#define SOLIDUISERVER_H
+#pragma once
 
 #include <kdedmodule.h>
 #include <qwindowdefs.h>
@@ -50,4 +49,3 @@ private:
 
     QMap<QString, KPasswordDialog *> m_idToPassphraseDialog;
 };
-#endif

@@ -18,8 +18,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef EDIT_ACTION_DIALOG_H
-#define EDIT_ACTION_DIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -69,4 +68,3 @@ private:
     ClipAction *m_action;
     ActionDetailModel *m_model;
 };
-#endif

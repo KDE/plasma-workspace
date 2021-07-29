@@ -19,8 +19,7 @@
  *   Boston, MA 02110-1301, USA.                                               *
  *******************************************************************************/
 
-#ifndef WALLPAPER_H
-#define WALLPAPER_H
+#pragma once
 
 #include <KPackage/PackageStructure>
 
@@ -32,5 +31,3 @@ public:
     }
     void initPackage(KPackage::Package *package) override;
 };
-
-#endif

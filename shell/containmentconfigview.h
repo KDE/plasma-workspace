@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef CONTAINMENTCONFIGVIEW_H
-#define CONTAINMENTCONFIGVIEW_H
+#pragma once
 
 #include <KDeclarative/ConfigPropertyMap>
 #include <PlasmaQuick/ConfigModel>
@@ -80,5 +79,3 @@ private:
     KDeclarative::ConfigPropertyMap *m_currentWallpaperConfig = nullptr;
     KDeclarative::ConfigPropertyMap *m_ownWallpaperConfig = nullptr;
 };
-
-#endif // multiple inclusion guard

@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef KUISERVERENGINE_H
-#define KUISERVERENGINE_H
+#pragma once
 
 #include <QVector>
 
@@ -88,5 +87,3 @@ private:
 
     QVector<NotificationManager::Job *> m_jobs;
 };
-
-#endif

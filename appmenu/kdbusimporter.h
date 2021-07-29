@@ -23,8 +23,7 @@
   DEALINGS IN THE SOFTWARE.
 */
 
-#ifndef KDBUSIMPORTER_H
-#define KDBUSIMPORTER_H
+#pragma once
 
 #include <dbusmenuimporter.h>
 
@@ -50,5 +49,3 @@ protected:
         return new VerticalMenu(parent);
     }
 };
-
-#endif // KDBUSIMPORTER_H

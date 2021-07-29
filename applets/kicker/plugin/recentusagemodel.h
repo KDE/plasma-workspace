@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef RECENTUSAGEMODEL_H
-#define RECENTUSAGEMODEL_H
+#pragma once
 
 #include "forwardingmodel.h"
 
@@ -127,5 +126,3 @@ private:
     bool m_complete;
     KFilePlacesModel *m_placesModel;
 };
-
-#endif

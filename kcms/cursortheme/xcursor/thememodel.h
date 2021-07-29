@@ -17,8 +17,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef THEMEMODEL_H
-#define THEMEMODEL_H
+#pragma once
 
 #include <QAbstractTableModel>
 #include <QStringList>
@@ -115,5 +114,3 @@ int CursorThemeModel::columnCount(const QModelIndex &) const
 {
     return 2;
 }
-
-#endif // THEMEMODEL_H

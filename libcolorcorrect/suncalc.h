@@ -14,8 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#ifndef COLORCORRECT_SUNCALC_H
-#define COLORCORRECT_SUNCALC_H
+#pragma once
 
 #include <QDate>
 #include <QObject>
@@ -53,5 +52,3 @@ public:
 };
 
 }
-
-#endif // COLORCORRECT_SUNCALC_H

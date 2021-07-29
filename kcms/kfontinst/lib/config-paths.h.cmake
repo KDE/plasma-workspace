@@ -1,6 +1,3 @@
-#ifndef __CONFIG_KFONTINST_PATHS_H__
-#define __CONFIG_KFONTINST_PATHS_H__
+#pragma once
 
 #define KFONTINST_LIBEXEC_DIR "${CMAKE_INSTALL_FULL_LIBEXECDIR}"
-
-#endif

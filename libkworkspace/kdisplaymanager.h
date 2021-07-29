@@ -18,8 +18,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef KDISPLAYMANAGER_H
-#define KDISPLAYMANAGER_H
+#pragma once
 
 #include "config-libkworkspace.h"
 #include "kworkspace.h"
@@ -114,5 +113,3 @@ private:
 #endif // HAVE_X11
 
 }; // class KDisplayManager
-
-#endif // KDISPLAYMANAGER_H

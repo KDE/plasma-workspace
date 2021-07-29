@@ -1,5 +1,4 @@
-#ifndef __CREATE_PARENT_H__
-#define __CREATE_PARENT_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -65,5 +64,3 @@ static QWidget *createParent(int xid)
 
     return parent;
 }
-
-#endif

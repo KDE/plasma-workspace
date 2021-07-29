@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SERVICERUNNER_H
-#define SERVICERUNNER_H
+#pragma once
 
 #include <KService>
 
@@ -48,5 +47,3 @@ protected Q_SLOTS:
 protected:
     void setupMatch(const KService::Ptr &service, Plasma::QueryMatch &action);
 };
-
-#endif

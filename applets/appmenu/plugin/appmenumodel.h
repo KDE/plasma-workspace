@@ -19,8 +19,7 @@
  *
  ******************************************************************/
 
-#ifndef APPMENUMODEL_H
-#define APPMENUMODEL_H
+#pragma once
 
 #include <KWindowSystem>
 #include <QAbstractListModel>
@@ -109,5 +108,3 @@ private:
 
     QPointer<KDBusMenuImporter> m_importer;
 };
-
-#endif

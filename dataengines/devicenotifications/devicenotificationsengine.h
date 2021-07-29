@@ -18,8 +18,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef DEVICENOTIFICATIONSENGINE_H
-#define DEVICENOTIFICATIONSENGINE_H
+#pragma once
 
 #include <Plasma/DataEngine>
 
@@ -43,5 +42,3 @@ private slots:
 private:
     KSolidNotify *m_solidNotify;
 };
-
-#endif

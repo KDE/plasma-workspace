@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef FALKON_H
-#define FALKON_H
+#pragma once
 
 #include "browser.h"
 
@@ -40,5 +39,3 @@ private:
     QString m_startupProfile;
     Favicon *m_favicon;
 };
-
-#endif // FALKON_H

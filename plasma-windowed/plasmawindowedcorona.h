@@ -19,8 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-#ifndef PLASMAWINDOWEDCORONA_H
-#define PLASMAWINDOWEDCORONA_H
+#pragma once
 
 #include <Plasma/Corona>
 
@@ -43,5 +42,3 @@ private:
     Plasma::Containment *m_containment = nullptr;
     bool m_hasStatusNotifier = false;
 };
-
-#endif

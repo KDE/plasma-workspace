@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef _AUTOSTART_H_
-#define _AUTOSTART_H_
+#pragma once
 
 #include <QStringList>
 #include <QVector>
@@ -58,5 +57,3 @@ private:
     int m_phase;
     bool m_phasedone;
 };
-
-#endif

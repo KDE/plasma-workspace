@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef SYSTEMTRAYCONTAINER_H
-#define SYSTEMTRAYCONTAINER_H
+#pragma once
 
 #include <QQuickItem>
 
@@ -54,5 +53,3 @@ private:
     QPointer<Plasma::Containment> m_innerContainment;
     QPointer<QQuickItem> m_internalSystray;
 };
-
-#endif

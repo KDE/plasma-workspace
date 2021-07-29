@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef LOCATIONRUNNER_H
-#define LOCATIONRUNNER_H
+#pragma once
 
 #include <krunner/abstractrunner.h>
 
@@ -32,5 +31,3 @@ public:
     void match(Plasma::RunnerContext &context) override;
     void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 };
-
-#endif

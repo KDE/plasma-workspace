@@ -14,8 +14,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#ifndef COLORCORRECT_GEOLOCATOR_H
-#define COLORCORRECT_GEOLOCATOR_H
+#pragma once
 
 #include "colorcorrect_export.h"
 
@@ -68,5 +67,3 @@ private:
 };
 
 }
-
-#endif // COLORCORRECT_GEOLOCATOR_H

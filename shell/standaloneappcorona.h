@@ -19,8 +19,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-#ifndef STANDALONEAPPCORONA_H
-#define STANDALONEAPPCORONA_H
+#pragma once
 
 #include "desktopview.h"
 #include <plasma/corona.h>
@@ -67,5 +66,3 @@ private:
     DesktopView *m_view;
     QHash<QString, QString> m_activityContainmentPlugins;
 };
-
-#endif

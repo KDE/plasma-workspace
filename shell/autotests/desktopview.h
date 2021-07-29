@@ -16,8 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef DESKTOPVIEW_H
-#define DESKTOPVIEW_H
+#pragma once
 
 #include <Plasma/Corona>
 #include <QPointer>
@@ -42,5 +41,3 @@ public:
 private:
     QPointer<QScreen> m_screenToFollow;
 };
-
-#endif // DESKTOPVIEW_H

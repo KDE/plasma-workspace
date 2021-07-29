@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef BROWSER_H
-#define BROWSER_H
+#pragma once
 
 #include "bookmarkmatch.h"
 #include <QDateTime>
@@ -111,5 +110,3 @@ private:
         }
     }
 };
-
-#endif // BROWSER_H

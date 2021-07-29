@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef JOBCONTROL_H
-#define JOBCONTROL_H
+#pragma once
 
 #include <plasma/service.h>
 
@@ -38,5 +37,3 @@ protected:
 private:
     QPointer<NotificationManager::Job> m_job;
 };
-
-#endif // JOBCONTROL_H

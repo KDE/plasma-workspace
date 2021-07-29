@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef SWITCHACTIVITY_HEADER
-#define SWITCHACTIVITY_HEADER
+#pragma once
 
 #include <plasma/containmentactions.h>
 
@@ -48,5 +47,3 @@ private:
     KActivities::Consumer m_consumer;
     KActivities::Controller m_controller;
 };
-
-#endif

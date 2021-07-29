@@ -19,8 +19,7 @@
  *
  */
 
-#ifndef TIMEZONESI18N_H
-#define TIMEZONESI18N_H
+#pragma once
 
 #include <QHash>
 #include <QLocale>
@@ -44,5 +43,3 @@ private:
     QHash<QLocale::Country, QString> m_i18nCountries;
     bool m_isInitialized;
 };
-
-#endif // TIMEZONESI18N_H

@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef PANEL
-#define PANEL
+#pragma once
 
 #include <QJSValue>
 #include <QWeakPointer>
@@ -105,5 +104,3 @@ private:
 };
 
 }
-
-#endif

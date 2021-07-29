@@ -17,8 +17,7 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef STATUSNOTIFIERITEMSERVICE_H
-#define STATUSNOTIFIERITEMSERVICE_H
+#pragma once
 
 // own
 #include "statusnotifieritemsource.h"
@@ -44,5 +43,3 @@ protected:
 private:
     StatusNotifierItemSource *m_source;
 };
-
-#endif // STATUSNOTIFIERITEMSERVICE_H

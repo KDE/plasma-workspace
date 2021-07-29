@@ -16,8 +16,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef HISTORYSTRINGITEM_H
-#define HISTORYSTRINGITEM_H
+#pragma once
 
 #include <QMimeData>
 
@@ -56,5 +55,3 @@ inline QString HistoryStringItem::text() const
 {
     return m_data;
 }
-
-#endif

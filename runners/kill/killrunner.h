@@ -18,8 +18,7 @@
  * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef KILLRUNNER_H
-#define KILLRUNNER_H
+#pragma once
 
 #include <QReadWriteLock>
 #include <QTimer>
@@ -73,5 +72,3 @@ private:
     /** Reuse value */
     bool m_hasTrigger;
 };
-
-#endif

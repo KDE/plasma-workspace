@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef STATUSNOTIFIERWATCHER_H
-#define STATUSNOTIFIERWATCHER_H
+#pragma once
 
 #include <kdedmodule.h>
 
@@ -66,4 +65,3 @@ private:
     QStringList m_registeredServices;
     QSet<QString> m_statusNotifierHostServices;
 };
-#endif

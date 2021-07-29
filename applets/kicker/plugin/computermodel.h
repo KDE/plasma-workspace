@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef COMPUTERMODEL_H
-#define COMPUTERMODEL_H
+#pragma once
 
 #include "appentry.h"
 #include "forwardingmodel.h"
@@ -116,5 +115,3 @@ private:
     AppEntry::NameFormat m_appNameFormat;
     QObject *m_appletInterface;
 };
-
-#endif

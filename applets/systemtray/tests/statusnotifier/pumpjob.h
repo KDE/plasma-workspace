@@ -17,8 +17,7 @@
  *   Boston, MA 02110-1301, USA.                                               *
  *******************************************************************************/
 
-#ifndef PUMPJOB_H
-#define PUMPJOB_H
+#pragma once
 
 #include <KJob>
 
@@ -52,5 +51,3 @@ public Q_SLOTS:
 private:
     PumpJobPrivate *d;
 };
-
-#endif

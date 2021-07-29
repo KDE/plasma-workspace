@@ -18,8 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef PACKAGEKITJOB_H
-#define PACKAGEKITJOB_H
+#pragma once
 
 #include <Plasma/ServiceJob>
 
@@ -35,5 +34,3 @@ protected:
 
 private:
 };
-
-#endif // PACKAGEKITJOB_H

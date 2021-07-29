@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef BACKGROUNDLISTMODEL_H
-#define BACKGROUNDLISTMODEL_H
+#pragma once
 
 #include "image.h"
 
@@ -149,5 +148,3 @@ private:
     static QMutex s_suffixMutex;
     static QStringList s_suffixes;
 };
-
-#endif // BACKGROUNDLISTMODEL_H

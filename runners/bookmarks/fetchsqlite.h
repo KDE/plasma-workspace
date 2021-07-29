@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef FETCHSQLITE_H
-#define FETCHSQLITE_H
+#pragma once
 #include <QList>
 #include <QSqlDatabase>
 #include <QVariantMap>
@@ -46,5 +45,3 @@ private:
     QString const m_databaseFile;
     QMutex m_mutex;
 };
-
-#endif // FETCHSQLITE_H

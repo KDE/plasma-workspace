@@ -17,8 +17,7 @@
 
 */
 
-#ifndef MAIN_H
-#define MAIN_H
+#pragma once
 
 #include <KService>
 
@@ -41,5 +40,3 @@ private:
     KService::List m_list;
     QStringList m_alreadyInitialized;
 };
-
-#endif // MAIN_H

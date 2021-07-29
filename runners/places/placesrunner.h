@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef PLACESRUNNER_H
-#define PLACESRUNNER_H
+#pragma once
 
 #include <kfileplacesmodel.h>
 #include <krunner/abstractrunner.h>
@@ -58,5 +57,3 @@ Q_SIGNALS:
 private:
     PlacesRunnerHelper *m_helper;
 };
-
-#endif

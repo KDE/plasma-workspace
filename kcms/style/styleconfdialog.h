@@ -18,8 +18,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef STYLE_CONF_DIALOG
-#define STYLE_CONF_DIALOG
+#pragma once
 
 #include <QDialog>
 class QHBoxLayout;
@@ -45,5 +44,3 @@ private:
     bool m_dirty;
     QHBoxLayout *mMainLayout = nullptr;
 };
-
-#endif

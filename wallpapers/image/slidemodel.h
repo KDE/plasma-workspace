@@ -16,8 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  2.010-1301, USA.
  */
 
-#ifndef SLIDEMODEL_H
-#define SLIDEMODEL_H
+#pragma once
 
 #include "backgroundlistmodel.h"
 
@@ -39,5 +38,3 @@ private Q_SLOTS:
     void removeBackgrounds(const QStringList &paths, const QString &token);
     void backgroundsFound(const QStringList &paths, const QString &token);
 };
-
-#endif

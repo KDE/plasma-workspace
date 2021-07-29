@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef __PREVIEW_RENDER_ENGINE_H
-#define __PREVIEW_RENDER_ENGINE_H
+#pragma once
 
 #include "FcEngine.h"
 #include "kxftconfig.h"
@@ -37,5 +36,3 @@ public:
 };
 
 #endif // HAVE_FONTCONFIG
-
-#endif // __PREVIEW_RENDER_ENGINE_H

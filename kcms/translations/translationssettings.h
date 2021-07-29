@@ -17,8 +17,7 @@
  *  Boston, MA 02110-1301, USA.
  */
 
-#ifndef TRANSLATIONSSETTINGS_H
-#define TRANSLATIONSSETTINGS_H
+#pragma once
 
 #include "translationssettingsbase.h"
 
@@ -36,5 +35,3 @@ public:
 Q_SIGNALS:
     void configuredLanguagesChanged();
 };
-
-#endif // TRANSLATIONSSETTINGS_H

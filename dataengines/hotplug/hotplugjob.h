@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef HOTPLUG_JOB_H
-#define HOTPLUG_JOB_H
+#pragma once
 
 #include "hotplugengine.h"
 
@@ -41,5 +40,3 @@ private:
     HotplugEngine *m_engine;
     QString m_dest;
 };
-
-#endif // HOTPLUG_JOB_H

@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef PLASMA_PLASMAAPPLETITEMMODEL_P_H
-#define PLASMA_PLASMAAPPLETITEMMODEL_P_H
+#pragma once
 
 #include "kcategorizeditemsviewmodels_p.h"
 #include <KConfigGroup>
@@ -116,5 +115,3 @@ private:
 private Q_SLOTS:
     void populateModel();
 };
-
-#endif /*PLASMAAPPLETSMODEL_H_*/

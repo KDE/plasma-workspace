@@ -19,8 +19,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef WIDGETEXPLORER_H
-#define WIDGETEXPLORER_H
+#pragma once
 
 #include <QAction>
 #include <QObject>
@@ -171,5 +170,3 @@ private:
     WidgetExplorerPrivate *const d;
     friend class WidgetExplorerPrivate;
 };
-
-#endif // WIDGETEXPLORER_H

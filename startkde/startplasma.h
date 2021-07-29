@@ -17,8 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef STARTPLASMA_H
-#define STARTPLASMA_H
+#pragma once
 
 #include "config-startplasma.h"
 #include "kcheckrunning/kcheckrunning.h"
@@ -63,5 +62,3 @@ struct KillBeforeDeleter {
         delete pointer;
     }
 };
-
-#endif

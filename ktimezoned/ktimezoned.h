@@ -19,8 +19,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef KTIMEZONED_H
-#define KTIMEZONED_H
+#pragma once
 
 #include "ktimezonedbase.h"
 
@@ -49,5 +48,3 @@ private:
     QString m_zoneinfoDir; // path to zoneinfo directory
     QString m_zoneTab; // path to zone.tab file
 };
-
-#endif

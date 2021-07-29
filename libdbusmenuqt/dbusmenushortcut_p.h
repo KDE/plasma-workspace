@@ -18,8 +18,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef DBUSMENUSHORTCUT_H
-#define DBUSMENUSHORTCUT_H
+#pragma once
 
 // Qt
 #include <QMetaType>
@@ -35,5 +34,3 @@ public:
 };
 
 Q_DECLARE_METATYPE(DBusMenuShortcut)
-
-#endif /* DBUSMENUSHORTCUT_H */

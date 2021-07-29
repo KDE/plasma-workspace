@@ -21,8 +21,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef __PRINTER_H__
-#define __PRINTER_H__
+#pragma once
 
 #include "Misc.h"
 #include <QDialog>
@@ -92,5 +91,3 @@ private:
 };
 
 }
-
-#endif

@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef CURSORNOTIFICATIONHANDLER_H
-#define CURSORNOTIFICATIONHANDLER_H
+#pragma once
 
 #include <QMap>
 #include <QWidget>
@@ -50,5 +49,3 @@ private:
     Atom currentName;
     QMap<Atom, QString> names;
 };
-
-#endif

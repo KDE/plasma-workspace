@@ -16,8 +16,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef PREVIEWWIDGET_H
-#define PREVIEWWIDGET_H
+#pragma once
 
 #include "sortproxymodel.h"
 #include <QPointer>
@@ -73,5 +72,3 @@ private:
     int m_currentIndex;
     int m_currentSize;
 };
-
-#endif // PREVIEWWIDGET_H

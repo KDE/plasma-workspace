@@ -17,8 +17,7 @@
  *
  */
 
-#ifndef KDEDKSYSGUARD_H
-#define KDEDKSYSGUARD_H
+#pragma once
 
 #include <KDEDModule>
 #include <QVariantList>
@@ -35,5 +34,3 @@ private Q_SLOTS:
     void init();
     void showTaskManager();
 };
-
-#endif // KDEDKSYSGUARD_H

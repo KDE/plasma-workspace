@@ -16,8 +16,7 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef POWERMANAGEMENTJOB_H
-#define POWERMANAGEMENTJOB_H
+#pragma once
 
 // plasma
 #include <Plasma/ServiceJob>
@@ -42,5 +41,3 @@ private:
     QDBusPendingCall setPowerProfile(const QString &value);
     SessionManagement *m_session;
 };
-
-#endif // POWERMANAGEMENTJOB_H

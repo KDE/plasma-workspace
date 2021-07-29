@@ -22,8 +22,7 @@
 
 /* Ion for weather data from wetter.com */
 
-#ifndef ION_WETTERCOM_H
-#define ION_WETTERCOM_H
+#pragma once
 
 #include "../ion.h"
 
@@ -173,6 +172,4 @@ private:
 
     QStringList m_sourcesToReset;
 };
-
-#endif
 // kate: indent-mode cstyle; space-indent on; indent-width 4;

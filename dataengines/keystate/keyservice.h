@@ -17,8 +17,7 @@
  * Boston, MA  02110-1301  USA
  */
 
-#ifndef KEYSERVICE_H
-#define KEYSERVICE_H
+#pragma once
 
 #include <Plasma/Service>
 #include <Plasma/ServiceJob>
@@ -65,5 +64,3 @@ public:
 private:
     KeyService *m_service;
 };
-
-#endif // KEYSERVICE_H

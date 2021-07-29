@@ -16,8 +16,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef VIEW_H
-#define VIEW_H
+#pragma once
 
 #include <KConfigGroup>
 #include <KConfigWatcher>
@@ -124,5 +123,3 @@ private:
     QStringList m_history;
     Plasma::RunnerManager *m_manager = nullptr;
 };
-
-#endif // View_H

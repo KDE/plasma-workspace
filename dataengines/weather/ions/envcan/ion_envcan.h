@@ -19,8 +19,7 @@
 
 /* Ion for Environment Canada XML data */
 
-#ifndef ION_ENVCAN_H
-#define ION_ENVCAN_H
+#pragma once
 
 #include "../ion.h"
 
@@ -239,5 +238,3 @@ private:
 
     bool emitWhenSetup;
 };
-
-#endif

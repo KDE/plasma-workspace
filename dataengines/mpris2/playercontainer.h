@@ -17,8 +17,7 @@
  * Boston, MA  02110-1301  USA
  */
 
-#ifndef PLAYERCONTAINER_H
-#define PLAYERCONTAINER_H
+#pragma once
 
 #include <Plasma/DataContainer>
 #include <QFlags>
@@ -107,5 +106,3 @@ private:
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(PlayerContainer::Caps)
-
-#endif // PLAYERCONTAINER_H

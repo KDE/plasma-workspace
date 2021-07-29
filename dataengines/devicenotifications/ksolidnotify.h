@@ -18,8 +18,7 @@
 
  */
 
-#ifndef KSOLIDNOTIFY_H
-#define KSOLIDNOTIFY_H
+#pragma once
 
 #include <QHash>
 #include <QObject>
@@ -69,4 +68,3 @@ private:
 
     QHash<QString, Solid::Device> m_devices;
 };
-#endif

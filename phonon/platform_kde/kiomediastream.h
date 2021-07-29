@@ -17,8 +17,7 @@
 
 */
 
-#ifndef PHONON_KIOMEDIASTREAM_H
-#define PHONON_KIOMEDIASTREAM_H
+#pragma once
 
 #include <Phonon/AbstractMediaStream>
 
@@ -54,5 +53,3 @@ private:
 };
 
 } // namespace Phonon
-
-#endif // PHONON_KIOMEDIASTREAM_H

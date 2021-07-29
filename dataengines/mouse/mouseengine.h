@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef MOUSEENGINE_H
-#define MOUSEENGINE_H
+#pragma once
 
 #include <QPoint>
 #include <QTimerEvent>
@@ -54,5 +53,3 @@ private:
     CursorNotificationHandler *handler;
 #endif
 };
-
-#endif

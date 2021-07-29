@@ -18,8 +18,7 @@
  *
  */
 
-#ifndef FDOSELECTIONMANAGER_H
-#define FDOSELECTIONMANAGER_H
+#pragma once
 
 #include <QAbstractNativeEventFilter>
 #include <QHash>
@@ -59,5 +58,3 @@ private:
     QHash<xcb_window_t, SNIProxy *> m_proxies;
     KSelectionOwner *m_selectionOwner;
 };
-
-#endif

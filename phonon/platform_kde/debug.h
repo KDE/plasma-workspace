@@ -1,8 +1,5 @@
-#ifndef DEBUG_H
-#define DEBUG_H
+#pragma once
 
 #include <QLoggingCategory>
 
 Q_DECLARE_LOGGING_CATEGORY(PLATFORM)
-
-#endif // DEBUG_H

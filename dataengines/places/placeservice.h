@@ -17,8 +17,7 @@
  * Boston, MA  02110-1301  USA
  */
 
-#ifndef PLACESERVICE_H
-#define PLACESERVICE_H
+#pragma once
 
 #include <Plasma/Service>
 
@@ -38,5 +37,3 @@ private:
     KFilePlacesModel *m_model;
     QModelIndex m_index;
 };
-
-#endif // PLACESERVICE_H

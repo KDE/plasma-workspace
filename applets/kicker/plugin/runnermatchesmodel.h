@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef RUNNERMATCHESMODEL_H
-#define RUNNERMATCHESMODEL_H
+#pragma once
 
 #include "abstractmodel.h"
 
@@ -66,5 +65,3 @@ private:
     Plasma::RunnerManager *m_runnerManager;
     QList<Plasma::QueryMatch> m_matches;
 };
-
-#endif

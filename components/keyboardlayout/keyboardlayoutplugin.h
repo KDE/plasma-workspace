@@ -20,8 +20,7 @@
     THE SOFTWARE.
 */
 
-#ifndef KEYBOARDLAYOUTPLUGIN_H
-#define KEYBOARDLAYOUTPLUGIN_H
+#pragma once
 
 #include <QQmlExtensionPlugin>
 
@@ -33,5 +32,3 @@ class KeyboardLayoutPlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif // KEYBOARDLAYOUTPLUGIN_H

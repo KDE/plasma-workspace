@@ -17,8 +17,7 @@
 
 */
 
-#ifndef KIOMEDIASTREAM_P_H
-#define KIOMEDIASTREAM_P_H
+#pragma once
 
 #include "kiomediastream.h"
 
@@ -73,5 +72,3 @@ protected:
 };
 
 } // namespace Phonon
-
-#endif // KIOMEDIASTREAM_P_H

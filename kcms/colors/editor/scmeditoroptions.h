@@ -17,8 +17,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef __SCMEDITOROPTIONS_H__
-#define __SCMEDITOROPTIONS_H__
+#pragma once
 
 #include <KColorScheme>
 #include <KSharedConfig>
@@ -57,5 +56,3 @@ private:
     KSharedConfigPtr m_config;
     bool m_disableUpdates;
 };
-
-#endif

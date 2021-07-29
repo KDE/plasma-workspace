@@ -20,8 +20,7 @@
     THE SOFTWARE.
 */
 
-#ifndef SESSIONSPRIVATEPLUGIN_H
-#define SESSIONSPRIVATEPLUGIN_H
+#pragma once
 
 #include <QQmlExtensionPlugin>
 
@@ -33,5 +32,3 @@ class SessionsPrivatePlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif // SESSIONSPRIVATEPLUGIN_H

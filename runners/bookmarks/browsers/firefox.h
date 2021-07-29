@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef FIREFOX_H
-#define FIREFOX_H
+#pragma once
 
 #include "browser.h"
 #include <QDir>
@@ -47,5 +46,3 @@ private:
     FetchSqlite *m_fetchsqlite;
     FetchSqlite *m_fetchsqlite_fav;
 };
-
-#endif // FIREFOX_H

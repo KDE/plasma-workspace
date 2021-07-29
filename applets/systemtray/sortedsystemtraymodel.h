@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef SORTEDSYSTEMTRAYMODEL_H
-#define SORTEDSYSTEMTRAYMODEL_H
+#pragma once
 
 #include <QSortFilterProxyModel>
 
@@ -45,5 +44,3 @@ private:
 
     SortingType m_sorting;
 };
-
-#endif // SORTEDSYSTEMTRAYMODEL_H

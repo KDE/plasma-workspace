@@ -18,8 +18,7 @@
     License along with this library. If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef COLORCORRECT_AUTOTESTS_QTEST_DBUS_H
-#define COLORCORRECT_AUTOTESTS_QTEST_DBUS_H
+#pragma once
 
 #include <QtTest>
 #include <stdlib.h>
@@ -47,4 +46,3 @@
         dbus.waitForFinished();                                                                                                                                \
         return result;                                                                                                                                         \
     }
-#endif // COLORCORRECT_AUTOTESTS_QTEST_DBUS_H

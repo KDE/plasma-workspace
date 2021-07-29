@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef DICTENGINE_H
-#define DICTENGINE_H
+#pragma once
 #include <Plasma/DataEngine>
 #include <QCache>
 #include <QMap>
@@ -56,5 +55,3 @@ private:
     QString m_serverName;
     QCache<QString, QVariantMap> m_availableDictsCache;
 };
-
-#endif

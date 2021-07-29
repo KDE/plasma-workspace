@@ -1,5 +1,4 @@
-#ifndef __GROUP_LIST_H__
-#define __GROUP_LIST_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -287,5 +286,3 @@ private:
     QModelIndex itsCurrentDropItem;
 };
 }
-
-#endif

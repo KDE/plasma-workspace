@@ -21,8 +21,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef IMAGE_HEADER
-#define IMAGE_HEADER
+#pragma once
 
 #include <QDateTime>
 #include <QObject>
@@ -198,5 +197,3 @@ private:
     QDateTime m_previousModified;
     QString m_findToken;
 };
-
-#endif

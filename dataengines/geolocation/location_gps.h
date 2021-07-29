@@ -15,8 +15,7 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef GPS_H
-#define GPS_H
+#pragma once
 
 #include <QMutex>
 #include <QThread>
@@ -62,5 +61,3 @@ private:
     gps_data_t *m_gpsdata;
 #endif
 };
-
-#endif

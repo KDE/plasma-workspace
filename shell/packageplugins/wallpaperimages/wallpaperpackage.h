@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef WALLPAPERPACKAGE_H
-#define WALLPAPERPACKAGE_H
+#pragma once
 
 #include <KPackage/PackageStructure>
 
@@ -32,5 +31,3 @@ public:
     void initPackage(KPackage::Package *package) override;
     void pathChanged(KPackage::Package *package) override;
 };
-
-#endif

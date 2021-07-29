@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef RUNNERMODEL_H
-#define RUNNERMODEL_H
+#pragma once
 
 #include "abstractmodel.h"
 
@@ -105,5 +104,3 @@ private:
     bool m_mergeResults;
     bool m_deleteWhenEmpty;
 };
-
-#endif

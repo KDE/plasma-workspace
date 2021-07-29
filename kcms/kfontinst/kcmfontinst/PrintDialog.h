@@ -1,5 +1,4 @@
-#ifndef __PRINT_DIALOG_H__
-#define __PRINT_DIALOG_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -45,5 +44,3 @@ private:
 };
 
 }
-
-#endif

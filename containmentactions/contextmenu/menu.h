@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef CONTEXTMENU_HEADER
-#define CONTEXTMENU_HEADER
+#pragma once
 
 #include <QButtonGroup>
 #include <plasma/containmentactions.h>
@@ -59,5 +58,3 @@ private:
     QButtonGroup *m_buttons;
     SessionManagement *m_session;
 };
-
-#endif

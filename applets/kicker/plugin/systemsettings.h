@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef SYSTEMSETTINGS_H
-#define SYSTEMSETTINGS_H
+#pragma once
 
 #include <QObject>
 
@@ -32,5 +31,3 @@ public:
 
     Q_INVOKABLE QString picturesLocation() const;
 };
-
-#endif

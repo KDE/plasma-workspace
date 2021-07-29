@@ -17,8 +17,7 @@
 
 */
 
-#ifndef PHONON_KDEPLATFORMPLUGIN_H
-#define PHONON_KDEPLATFORMPLUGIN_H
+#pragma once
 
 #include <QObject>
 #include <phonon/objectdescription.h>
@@ -54,5 +53,3 @@ Q_SIGNALS:
 };
 
 } // namespace Phonon
-
-#endif // PHONON_KDEPLATFORMPLUGIN_H

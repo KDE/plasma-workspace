@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef NOTIFICATIONSERVICE_H
-#define NOTIFICATIONSERVICE_H
+#pragma once
 
 #include <Plasma/Service>
 
@@ -36,5 +35,3 @@ protected:
 private:
     NotificationsEngine *m_notificationEngine;
 };
-
-#endif // NOTIFICATIONSERVICE_H

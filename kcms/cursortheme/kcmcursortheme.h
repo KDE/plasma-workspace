@@ -17,8 +17,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef KCMCURSORTHEME_H
-#define KCMCURSORTHEME_H
+#pragma once
 
 #include <KNSCore/EntryWrapper>
 #include <KQuickAddons/ManagedConfigModule>
@@ -137,5 +136,3 @@ private:
     QScopedPointer<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;
 };
-
-#endif

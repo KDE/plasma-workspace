@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef TIMEENGINE_H
-#define TIMEENGINE_H
+#pragma once
 
 #include <Plasma/DataEngine>
 #include <kpluginfactory.h>
@@ -54,5 +53,3 @@ protected Q_SLOTS:
 private Q_SLOTS:
     void init();
 };
-
-#endif // TIMEENGINE_H

@@ -17,8 +17,7 @@
   Boston, MA 02110-1301, USA.
 */
 
-#ifndef HOLIDAYEVENTSHELPERPLUGIN_H
-#define HOLIDAYEVENTSHELPERPLUGIN_H
+#pragma once
 
 #include <QQmlExtensionPlugin>
 
@@ -29,5 +28,3 @@ class HolidayEventsHelperPlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif // HOLIDAYEVENTSHELPERPLUGIN_H

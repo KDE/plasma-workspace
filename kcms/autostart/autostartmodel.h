@@ -16,8 +16,7 @@
  *   Free Software Foundation, Inc.,                                       *
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA          *
  ***************************************************************************/
-#ifndef AUTOSTARTMODEL_H
-#define AUTOSTARTMODEL_H
+#pragma once
 
 #include <QAbstractListModel>
 #include <QDir>
@@ -88,5 +87,3 @@ struct AutostartEntry {
     QString iconName;
 };
 Q_DECLARE_TYPEINFO(AutostartEntry, Q_MOVABLE_TYPE);
-
-#endif // AUTOSTARTMODEL_H

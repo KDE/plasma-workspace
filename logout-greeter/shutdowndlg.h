@@ -22,8 +22,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ******************************************************************/
 
-#ifndef SHUTDOWNDLG_H
-#define SHUTDOWNDLG_H
+#pragma once
 
 #include <kquickaddons/quickviewsharedengine.h>
 #include <kworkspace.h>
@@ -63,5 +62,3 @@ private:
     bool m_result : 1;
     SessionManagement m_session;
 };
-
-#endif

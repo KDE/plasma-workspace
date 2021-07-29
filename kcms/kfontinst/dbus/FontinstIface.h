@@ -8,8 +8,7 @@
  * Do not edit! All changes made to it will be lost.
  */
 
-#ifndef FONTINSTIFACE_H_1402519768
-#define FONTINSTIFACE_H_1402519768
+#pragma once
 
 #include "Family.h"
 #include <QByteArray>
@@ -147,4 +146,3 @@ namespace kde
 typedef ::OrgKdeFontinstInterface fontinst;
 }
 }
-#endif

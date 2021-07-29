@@ -21,8 +21,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef __JOB_RUNNER_H__
-#define __JOB_RUNNER_H__
+#pragma once
 
 #include "FontInstInterface.h"
 #include <QDialog>
@@ -131,5 +130,3 @@ private:
 };
 
 }
-
-#endif

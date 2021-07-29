@@ -16,8 +16,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef HISTORYITEM_H
-#define HISTORYITEM_H
+#pragma once
 
 #include <QPixmap>
 
@@ -126,5 +125,3 @@ inline QDataStream &operator<<(QDataStream &lhs, HistoryItem const *const rhs)
 Q_DECLARE_METATYPE(HistoryItem *)
 Q_DECLARE_METATYPE(HistoryItemPtr)
 Q_DECLARE_METATYPE(HistoryItemConstPtr)
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef __ACTION_LABEL_H__
-#define __ACTION_LABEL_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -51,5 +50,3 @@ protected:
 };
 
 }
-
-#endif

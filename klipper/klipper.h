@@ -18,8 +18,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef KLIPPER_H
-#define KLIPPER_H
+#pragma once
 
 #include "config-klipper.h"
 
@@ -226,5 +225,3 @@ private:
     QTimer *m_saveFileTimer = nullptr;
     QPointer<KNotification> m_notification;
 };
-
-#endif

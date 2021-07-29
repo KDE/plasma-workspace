@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef TIMESOURCE_H
-#define TIMESOURCE_H
+#pragma once
 
 #include <Plasma/DataContainer>
 #include <QTimeZone>
@@ -57,5 +56,3 @@ private:
     bool m_local : 1;
     QTimeZone m_tz;
 };
-
-#endif

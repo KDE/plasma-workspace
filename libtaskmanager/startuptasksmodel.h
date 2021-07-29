@@ -18,8 +18,7 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
-#ifndef STARTUPTASKSMODEL_H
-#define STARTUPTASKSMODEL_H
+#pragma once
 
 #include "abstracttasksmodel.h"
 #include "taskmanager_export.h"
@@ -65,5 +64,3 @@ private:
 };
 
 }
-
-#endif

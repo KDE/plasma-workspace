@@ -16,8 +16,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef EXECUTABLE_DATAENGINE_H
-#define EXECUTABLE_DATAENGINE_H
+#pragma once
 
 #include <KProcess>
 #include <Plasma/DataContainer>
@@ -47,5 +46,3 @@ public:
 protected:
     bool sourceRequestEvent(const QString &source) override;
 };
-
-#endif

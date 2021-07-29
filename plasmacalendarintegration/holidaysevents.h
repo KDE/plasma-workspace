@@ -17,8 +17,7 @@
 
 */
 
-#ifndef HOLIDAYSEVENTSPLUGIN_H
-#define HOLIDAYSEVENTSPLUGIN_H
+#pragma once
 
 #include <CalendarEvents/CalendarEventsPlugin>
 #include <QObject>
@@ -45,5 +44,3 @@ private:
     QMultiHash<QDate, CalendarEvents::EventData> m_lastData;
     KSharedConfig::Ptr m_config;
 };
-
-#endif

@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef CURRENTCONTAINMENTACTIONSMODEL_H
-#define CURRENTCONTAINMENTACTIONSMODEL_H
+#pragma once
 
 #include <QStandardItemModel>
 
@@ -72,5 +71,3 @@ private:
     KConfig m_tempConfigParent;
     QStringList m_removedTriggers;
 };
-
-#endif

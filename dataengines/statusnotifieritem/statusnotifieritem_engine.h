@@ -19,8 +19,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef STATUSNOTIFIERITEM_ENGINE_H
-#define STATUSNOTIFIERITEM_ENGINE_H
+#pragma once
 
 #include "statusnotifierwatcher_interface.h"
 #include <Plasma/DataEngine>
@@ -54,5 +53,3 @@ private:
     QString m_serviceName;
     static const int s_protocolVersion = 0;
 };
-
-#endif

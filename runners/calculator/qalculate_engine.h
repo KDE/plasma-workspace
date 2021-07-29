@@ -17,8 +17,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef QALCULATEENGINE_H
-#define QALCULATEENGINE_H
+#pragma once
 
 #include <QAtomicInt>
 #include <QObject>
@@ -54,5 +53,3 @@ private:
     QString m_lastResult;
     static QAtomicInt s_counter;
 };
-
-#endif // QALCULATEENGINE_H

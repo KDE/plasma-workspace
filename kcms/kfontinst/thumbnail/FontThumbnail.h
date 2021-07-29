@@ -1,5 +1,4 @@
-#ifndef __FONT_THUMBNAIL__H__
-#define __FONT_THUMBNAIL__H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -46,5 +45,3 @@ private:
 };
 
 }
-
-#endif

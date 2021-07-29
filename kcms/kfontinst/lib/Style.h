@@ -1,5 +1,4 @@
-#ifndef __STYLE_H__
-#define __STYLE_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -120,5 +119,3 @@ inline Q_DECL_EXPORT uint qHash(const Style &key)
 Q_DECLARE_METATYPE(KFI::Style)
 Q_DECL_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const KFI::Style &obj);
 Q_DECL_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, KFI::Style &obj);
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef __PREVIEW_SELECT_ACTION_H__
-#define __PREVIEW_SELECT_ACTION_H__
+#pragma once
 
 /*
  * KFontInst - KDE Font Installer
@@ -61,5 +60,3 @@ private:
 };
 
 }
-
-#endif

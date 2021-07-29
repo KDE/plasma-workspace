@@ -15,8 +15,7 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef GEOLOCATIONPROVIDER_H
-#define GEOLOCATIONPROVIDER_H
+#pragma once
 
 #include <QHash>
 #include <QObject>
@@ -76,5 +75,3 @@ private:
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(GeolocationProvider::UpdateTriggers)
-
-#endif

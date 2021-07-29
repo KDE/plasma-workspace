@@ -20,8 +20,7 @@
     THE SOFTWARE.
 */
 
-#ifndef SHELLPRIVATEPLUGIN_H
-#define SHELLPRIVATEPLUGIN_H
+#pragma once
 
 #include <QQmlExtensionPlugin>
 
@@ -33,5 +32,3 @@ class PlasmaShellPrivatePlugin : public QQmlExtensionPlugin
 public:
     void registerTypes(const char *uri) override;
 };
-
-#endif

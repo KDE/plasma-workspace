@@ -16,8 +16,7 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef KLIPPERPOPUP_H
-#define KLIPPERPOPUP_H
+#pragma once
 
 #include <QList>
 
@@ -141,5 +140,3 @@ private:
      */
     QKeyEvent *m_lastEvent;
 };
-
-#endif

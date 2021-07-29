@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef BROWSERFACTORY_H
-#define BROWSERFACTORY_H
+#pragma once
 #include <QObject>
 #include <QString>
 
@@ -35,5 +34,3 @@ private:
     Browser *m_previousBrowser;
     QString m_previousBrowserName;
 };
-
-#endif // BROWSERFACTORY_H

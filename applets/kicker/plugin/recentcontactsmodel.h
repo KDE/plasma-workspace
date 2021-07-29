@@ -18,8 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-#ifndef RECENTCONTACTSMODEL_H
-#define RECENTCONTACTSMODEL_H
+#pragma once
 
 #include "forwardingmodel.h"
 
@@ -56,5 +55,3 @@ private:
     QHash<QString, KPeople::PersonData *> m_idToData;
     QHash<KPeople::PersonData *, int> m_dataToRow;
 };
-
-#endif

@@ -19,8 +19,7 @@
  *  Boston, MA 02110-1301, USA.
  */
 
-#ifndef TRANSLATIONSMODEL_H
-#define TRANSLATIONSMODEL_H
+#pragma once
 
 #include <QAbstractListModel>
 
@@ -84,5 +83,3 @@ private:
     // We intentionally do not model this properly to keep things simple!
     QStringList m_missingLanguages;
 };
-
-#endif

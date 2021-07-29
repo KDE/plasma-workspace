@@ -15,8 +15,7 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef SOLARSYSTEM_H
-#define SOLARSYSTEM_H
+#pragma once
 
 #include <QDateTime>
 #include <QPair>
@@ -146,5 +145,3 @@ protected:
 private:
     Sun *m_sun;
 };
-
-#endif

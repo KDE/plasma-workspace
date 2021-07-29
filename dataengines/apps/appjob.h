@@ -16,8 +16,7 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef APPJOB_H
-#define APPJOB_H
+#pragma once
 
 // plasma
 #include <Plasma/ServiceJob>
@@ -39,5 +38,3 @@ protected:
 private:
     AppSource *m_source;
 };
-
-#endif // APPJOB_H

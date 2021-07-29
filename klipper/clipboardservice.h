@@ -16,8 +16,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
-#ifndef KLIPPER_CLIPBOARDSERVICE_H
-#define KLIPPER_CLIPBOARDSERVICE_H
+#pragma once
 
 #include <Plasma/Service>
 
@@ -37,5 +36,3 @@ private:
     Klipper *m_klipper;
     QString m_uuid;
 };
-
-#endif
