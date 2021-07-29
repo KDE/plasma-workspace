@@ -7,5 +7,3 @@
 #define KWIN_WAYLAND_BIN_PATH "@KWIN_WAYLAND_BIN_PATH@"
 
 #define KWIN_BIN "${KWIN_BIN}"
-
-#endif
