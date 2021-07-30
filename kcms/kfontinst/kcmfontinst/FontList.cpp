@@ -35,6 +35,7 @@ namespace KFI
 {
 const QStringList CFontList::fontMimeTypes(QStringList() << "font/ttf"
                                                          << "font/otf"
+                                                         << "font/collection"
                                                          << "application/x-font-ttf"
                                                          << "application/x-font-otf"
                                                          << "application/x-font-type1"

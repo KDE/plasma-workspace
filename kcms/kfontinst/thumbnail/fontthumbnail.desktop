@@ -39,6 +39,6 @@ Name[vi]=Tệp phông chữ
 Name[x-test]=xxFont Filesxx
 Name[zh_CN]=字体文件
 X-KDE-ServiceTypes=ThumbCreator
-MimeType=application/x-font-ttf;application/x-font-type1;application/x-font-bdf;application/x-font-pcf;application/x-font-otf;fonts/package;font/ttf;font/otf;
+MimeType=application/x-font-ttf;application/x-font-type1;application/x-font-bdf;application/x-font-pcf;application/x-font-otf;fonts/package;font/ttf;font/otf;font/collection;
 X-KDE-Library=fontthumbnail
 CacheThumbnail=true
