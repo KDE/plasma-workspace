@@ -56,6 +56,6 @@ X-KDE-Library=plasma_packagestructure_wallpaperimages
 
 X-KDE-PluginInfo-Author=Aaron Seigo
 X-KDE-PluginInfo-Email=aseigo@kde.org
-X-KDE-PluginInfo-Name=Wallpaper/Images
+KPackageStructure=Wallpaper/Images
 X-KDE-PluginInfo-Version=1
 X-KDE-ParentApp=org.kde.plasmashell
