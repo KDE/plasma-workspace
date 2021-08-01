@@ -7,3 +7,4 @@ target_link_libraries(plasma_packagestructure_lookandfeel
    KF5::I18n
    KF5::Package
 )
+set_target_properties(plasma_packagestructure_lookandfeel PROPERTIES OUTPUT_NAME plasma_lookandfeel)

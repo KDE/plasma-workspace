@@ -8,3 +8,4 @@ target_link_libraries(plasma_packagestructure_layoutemplate
 )
 
 kcoreaddons_desktop_to_json(plasma_packagestructure_layoutemplate plasma-packagestructure-layouttemplate.desktop)
+set_target_properties(plasma_packagestructure_layoutemplate PROPERTIES OUTPUT_NAME plasma_layouttemplate)
