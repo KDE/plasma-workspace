@@ -19,10 +19,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.1
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
-Row {
+RowLayout {
     id: toolButtonsLayout
     visible: menuItem.ListView.isCurrentItem
 
