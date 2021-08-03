@@ -25,9 +25,13 @@ import org.kde.kirigami 2.12 as Kirigami
 
 PlasmaExtras.ScrollArea {
     id: menu
+
     property alias view: menuListView
     property alias model: menuListView.model
     property bool supportsBarcodes
+
+    frameVisible: false
+
     signal itemSelected(string uuid)
     signal remove(string uuid)
     signal edit(string uuid)
