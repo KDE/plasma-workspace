@@ -39,7 +39,7 @@ Name[sl]=Formati
 Name[sv]=Format
 Name[tr]=Biçimler
 Name[uk]=Формати
-Name[vi]=Định dạng
+Name[vi]=Dạng thức
 Name[x-test]=xxFormatsxx
 Name[zh_CN]=格式
 Comment=Numeric, Currency and Time Formats
@@ -71,7 +71,7 @@ Comment[sl]=Številski, valuta in oblike časa
 Comment[sv]=Numeriska format, valutaformat och tidsformat
 Comment[tr]=Sayısal, Para Birimi ve Saat Biçimleri
 Comment[uk]=Формати запису чисел, грошових сум та часу
-Comment[vi]=Định dạng số, tiền tệ và thời gian
+Comment[vi]=Dạng thức số, tiền tệ và thời gian
 Comment[x-test]=xxNumeric, Currency and Time Formatsxx
 Comment[zh_CN]=数字、货币和时间格式
 
@@ -104,7 +104,7 @@ X-KDE-Keywords[sl]=jezik,prevod,format števil,lokalno,država,nabor znakov,kodn
 X-KDE-Keywords[sv]=språk,översättning,nummerformat,plats,Land,teckenuppsättningar,decimalsymbol,tusentalsavgränsare,symbol,avgränsare,tecken,positivt,negativt,valuta,pengar,bråkdelssiffror,kalender,tid,datum,format,vecka, veckostart,först,papper,storlek,letter,A4,mått,meter,engelska
 X-KDE-Keywords[tr]=dil,çeviri,sayı biçimi,yerel,Ülke,karakter kümeleri,karakter kümeleri,Ondalık simgesi,Binlik ayırıcı,sembol,ayırıcı,işareti,pozitif,negatif,para birimi,para,kesirli basamaklar,takvim,zaman,tarih,biçimler,hafta,hafta başlangıç,ilk,kağıt,boyut,mektup,A4,ölçü,metrik,İngilizce,İmparatorluk
 X-KDE-Keywords[uk]=language,translation,number format,locale,Country,charsets,character sets,Decimal symbol,Thousands separator,symbol,separator,sign,positive,negative,currency,money,fractional digits,calendar,time,date,formats,week,week start,first,paper,size,letter,A4,measure,metric,English,Imperial,мова,мови,переклад,переклади,числа,формат,число,локаль,країна,набір,символ,кодування,розряд,тисяч,дробовий,дробова частина,роздільник,символ,знак,додатне,додатний,додатній,від’ємний,від’ємне,валюта,гроші,грошова одиниця,календар,час,дата,формати,тиждень,робочий тиждень,початок тижня,перший,папір,аркуш,вимір,виміри,вимірювання,одиниці вимірювання,метричний,метричні,метр,англійські,імперські
-X-KDE-Keywords[vi]=language,translation,number format,locale,Country,charsets,character sets,Decimal symbol,Thousands separator,symbol,separator,sign,positive,negative,currency,money,fractional digits,calendar,time,date,formats,week,week start,first,paper,size,letter,A4,measure,metric,English,Imperial,ngôn ngữ,biên dịch,định dạng số,vùng,quốc gia,bộ mã tự,bộ chữ,dấu thập phân,dấu phân cách hàng nghìn,kí hiệu,phần phân cách,dấu,dương,âm,tiền tệ,tiền,chữ số thập phân,lịch,thời gian,ngày,định dạng,tuần,bắt đầu tuần,đầu tiên,giấy,cỡ,thư,đo,theo hệ mét,theo hệ Anh
+X-KDE-Keywords[vi]=language,translation,number format,locale,Country,charsets,character sets,Decimal symbol,Thousands separator,symbol,separator,sign,positive,negative,currency,money,fractional digits,calendar,time,date,formats,week,week start,first,paper,size,letter,A4,measure,metric,English,Imperial,ngôn ngữ,biên dịch,dạng thức số,vùng,quốc gia,bộ mã tự,bộ chữ,dấu thập phân,dấu phân cách hàng nghìn,kí hiệu,phần phân cách,dấu,dương,âm,tiền tệ,tiền,chữ số thập phân,lịch,thời gian,ngày,dạng thức,tuần,bắt đầu tuần,đầu tiên,giấy,cỡ,thư,đo,theo hệ mét,theo hệ Anh
 X-KDE-Keywords[x-test]=xxlanguagexx,xxtranslationxx,xxnumber formatxx,xxlocalexx,xxCountryxx,xxcharsetsxx,xxcharacter setsxx,xxDecimal symbolxx,xxThousands separatorxx,xxsymbolxx,xxseparatorxx,xxsignxx,xxpositivexx,xxnegativexx,xxcurrencyxx,xxmoneyxx,xxfractional digitsxx,xxcalendarxx,xxtimexx,xxdatexx,xxformatsxx,xxweekxx,xxweek startxx,xxfirstxx,xxpaperxx,xxsizexx,xxletterxx,xxA4xx,xxmeasurexx,xxmetricxx,xxEnglishxx,xxImperialxx
 X-KDE-Keywords[zh_CN]=language,translation,number format,locale,Country,charsets,character sets,Decimal symbol,Thousands separator,symbol,separator,sign,positive,negative,currency,money,fractional digits,calendar,time,date,formats,week,week start,first,paper,size,letter,A4,measure,metric,English,Imperial,语言,翻译,数字格式,语系,国家,字符集,千分符,十进制符号,符号,分隔符,正数,负数,现金,钱,日历,分号,时间,日期,星期,周,第一,纸张,大小,信件,度量,度量衡,英制,公制
 
