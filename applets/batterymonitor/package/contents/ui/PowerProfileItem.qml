@@ -120,7 +120,7 @@ RowLayout {
             text: {
                 switch(inhibitionReason) {
                 case "lap-detected":
-                    return i18n("Performance mode is unavailable because the computer has detected it is sitting on your lap.")
+                    return i18n("Performance mode has been disabled to reduce heat generation because the computer has detected that it may be sitting on your lap.")
                 case "high-operating-temperature":
                     return i18n("Performance mode is unavailable because the computer is running too hot.")
                 default:
@@ -134,7 +134,7 @@ RowLayout {
             iconSource: "dialog-information"
             text: switch(degradationReason) {
                 case "lap-detected":
-                    return i18n("Performance may be reduced because the computer has detected it is sitting on your lap.")
+                    return i18n("Performance may be lowered to reduce heat generation because the computer has detected that it may be sitting on your lap.")
                 case "high-operating-temperature":
                      return i18n("Performance may be reduced because the computer is running too hot.")
                 default:
