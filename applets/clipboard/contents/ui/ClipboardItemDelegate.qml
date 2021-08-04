@@ -60,6 +60,9 @@ PlasmaExtras.ListItem {
             menuListView.currentIndex = -1
         }
     }
+    Keys.onDeletePressed: {
+        remove(UuidRole);
+    }
 
     ListView.onIsCurrentItemChanged: {
         if (ListView.isCurrentItem) {

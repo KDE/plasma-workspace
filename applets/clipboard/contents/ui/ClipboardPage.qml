@@ -90,6 +90,19 @@ ColumnLayout {
                 clearButtonShown: true
                 Layout.fillWidth: true
 
+                // Only override delete key behavior to delete list items if
+                // it would do nothing
+                Keys.enabled: filter.text.length == 0 || filter.cursorPosition == filter.length
+                Keys.onDeletePressed: {
+                    let clipboardItemIndex = clipboardMenu.view.currentIndex
+                    if (clipboardItemIndex != -1) {
+                        let uuid = clipboardMenu.model.get(clipboardItemIndex).UuidRole
+                        if (uuid) {
+                            clipboardMenu.view.currentItem.remove(uuid);
+                        }
+                    }
+                }
+
                 Connections {
                     target: main
                     function onClearSearchField() {
