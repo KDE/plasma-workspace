@@ -53,7 +53,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.isSection: true
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
-            text: i18n("Could not find a 'Notifications' widget which is required for displaying notifications.");
+            text: i18n("Could not find a 'Notifications' widget, which is required for displaying notifications. Make sure that it is enabled either in your System Tray or as a standalone widget.");
             visible: currentOwnerInfo.status === NotificationManager.ServerInfo.NotRunning
         }
 
