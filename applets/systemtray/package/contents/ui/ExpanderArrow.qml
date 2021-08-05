@@ -26,8 +26,9 @@ PlasmaCore.ToolTipArea {
     id: tooltip
 
     property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
-    implicitWidth: PlasmaCore.Units.iconSizes.smallMedium
-    implicitHeight: implicitWidth
+    property int iconSize: PlasmaCore.Units.iconSizes.smallMedium
+    implicitWidth: iconSize
+    implicitHeight: iconSize
 
     subText: systemTrayState.expanded ? i18n("Close popup") : i18n("Show hidden icons")
 

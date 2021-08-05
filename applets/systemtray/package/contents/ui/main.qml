@@ -151,8 +151,6 @@ MouseArea {
             implicitHeight: root.vertical ? cellHeight * Math.ceil(count / rowsOrColumns) : root.height
             implicitWidth: !root.vertical ? cellWidth * Math.ceil(count / rowsOrColumns) : root.width
 
-            // Used only by AbstractItem, but it's easiest to keep it here since it
-            // uses dimensions from this item to calculate the final value
             readonly property int itemSize: {
                 if (autoSize) {
                     const size = Math.min(implicitWidth / rowsOrColumns, implicitHeight / rowsOrColumns)
@@ -209,6 +207,7 @@ MouseArea {
             Layout.fillWidth: vertical
             Layout.fillHeight: !vertical
             Layout.alignment: vertical ? Qt.AlignVCenter : Qt.AlignHCenter
+            iconSize: tasksGrid.itemSize
             visible: root.hiddenLayout.itemCount > 0
         }
     }
