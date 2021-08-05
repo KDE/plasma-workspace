@@ -124,7 +124,10 @@ MouseArea {
 
             // The icon size to display when not using the auto-scaling setting
             readonly property int smallIconSize: PlasmaCore.Units.iconSizes.smallMedium
-            readonly property bool autoSize: plasmoid.configuration.scaleIconsToFit
+
+            // Automatically use autoSize setting when in tablet mode, if it's
+            // not already being used
+            readonly property bool autoSize: plasmoid.configuration.scaleIconsToFit || Kirigami.Settings.tabletMode
 
             readonly property int gridThickness: root.vertical ? root.width : root.height
             // Should change to 2 rows/columns on a 56px panel (in standard DPI)

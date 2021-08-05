@@ -34,16 +34,23 @@ ColumnLayout {
 
         QQC2.RadioButton {
             Kirigami.FormData.label: i18nc("The arrangement of system tray icons in the Panel", "Panel icon size:")
+            enabled: !Kirigami.Settings.tabletMode
             text: i18n("Small")
-            checked: cfg_scaleIconsToFit == false
+            checked: cfg_scaleIconsToFit == false && !Kirigami.Settings.tabletMode
             onToggled: cfg_scaleIconsToFit = !checked
         }
         QQC2.RadioButton {
             id: automaticRadioButton
+            enabled: !Kirigami.Settings.tabletMode
             text: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("Scale with Panel height")
                                                                       : i18n("Scale with Panel width")
-            checked: cfg_scaleIconsToFit == true
+            checked: cfg_scaleIconsToFit == true || Kirigami.Settings.tabletMode
             onToggled: cfg_scaleIconsToFit = checked
+        }
+        QQC2.Label {
+            visible: Kirigami.Settings.tabletMode
+            text: i18n("Automatically enabled when in tablet mode")
+            font: PlasmaCore.Theme.smallestFont
         }
     }
 }
