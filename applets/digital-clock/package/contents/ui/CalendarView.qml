@@ -71,7 +71,10 @@ PlasmaExtras.Representation {
         // -----------------
         ColumnLayout {
             id: eventHeader
+
+            anchors.left: parent.left
             width: visible ? parent.width / 2 - 1 : 0
+
             visible: calendar.showAgenda || calendar.showClocks
             RowLayout {
                 PlasmaExtras.Heading {
