@@ -480,11 +480,12 @@ void CursorThemeConfig::installThemeFile(const QString &path)
 void CursorThemeConfig::removeThemes()
 {
     const QModelIndexList indices = m_themeModel->match(m_themeModel->index(0, 0), CursorTheme::PendingDeletionRole, true, -1);
-    for (const auto &idx : indices) {
-        if (!idx.isValid()) {
-            return;
-        }
-
+    QList<QPersistentModelIndex> persistentIndices;
+    persistentIndices.reserve(indices.count());
+    std::transform(indices.constBegin(), indices.constEnd(), std::back_inserter(persistentIndices), [](const QModelIndex index) {
+        return QPersistentModelIndex(index);
+    });
+    for (const auto &idx : qAsConst(persistentIndices)) {
         const CursorTheme *theme = m_themeModel->theme(idx);
 
         // Delete the theme from the harddrive
