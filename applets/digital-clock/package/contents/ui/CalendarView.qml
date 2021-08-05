@@ -546,10 +546,13 @@ PlasmaExtras.Representation {
             Layout.fillWidth: true
             Layout.fillHeight: !agenda.visible
             Layout.minimumHeight: visible ? PlasmaCore.Units.gridUnit * 7 : 0
+            Layout.maximumHeight: agenda.visible ? PlasmaCore.Units.gridUnit * 10 : undefined
 
             ListView {
                 id: clocksList
-                width: parent.width
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.rightMargin: PlasmaCore.Units.smallSpacing * 2
 
                 highlight: Item {}
 
