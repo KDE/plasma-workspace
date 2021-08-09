@@ -411,93 +411,116 @@ PlasmaExtras.Representation {
                 }
             }
 
-            RowLayout { // Player Controls
-                id: playerControls
+            Item {
 
-                property bool enabled: root.canControl
-                property int controlsSize: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * 3
+                Layout.fillWidth: true
+                height: childrenRect.height
 
-                Layout.alignment: Qt.AlignHCenter
-                Layout.bottomMargin: PlasmaCore.Units.smallSpacing
-                spacing: PlasmaCore.Units.smallSpacing
+                RowLayout { // Player Controls
+                    id: playerControls
 
-                PlasmaComponents3.ToolButton {
-                    Layout.rightMargin: LayoutMirroring.enabled ? 0 : PlasmaCore.Units.largeSpacing - playerControls.spacing
-                    Layout.leftMargin: LayoutMirroring.enabled ? PlasmaCore.Units.largeSpacing - playerControls.spacing : 0
-                    icon.name: "media-playlist-shuffle"
-                    icon.width: expandedRepresentation.controlSize
-                    icon.height: expandedRepresentation.controlSize
-                    checked: root.shuffle === true
-                    enabled: root.canControl && root.shuffle !== undefined
-                    Accessible.name: i18n("Shuffle")
-                    onClicked: {
-                        const service = mpris2Source.serviceForSource(mpris2Source.current);
-                        let operation = service.operationDescription("SetShuffle");
-                        operation.on = !root.shuffle;
-                        service.startOperationCall(operation);
-                    }
+                    property bool enabled: root.canControl
+                    property int controlsSize: PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height * 3
 
-                    PlasmaComponents3.ToolTip {
-                        text: parent.Accessible.name
-                    }
-                }
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.bottomMargin: PlasmaCore.Units.smallSpacing
 
-                PlasmaComponents3.ToolButton { // Previous
-                    icon.width: expandedRepresentation.controlSize
-                    icon.height: expandedRepresentation.controlSize
-                    Layout.alignment: Qt.AlignVCenter
-                    enabled: playerControls.enabled && root.canGoPrevious
-                    icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
-                    onClicked: {
-                        seekSlider.value = 0    // Let the media start from beginning. Bug 362473
-                        root.action_previous()
-                    }
-                }
+                    spacing: PlasmaCore.Units.smallSpacing
 
-                PlasmaComponents3.ToolButton { // Pause/Play
-                    icon.width: expandedRepresentation.controlSize
-                    icon.height: expandedRepresentation.controlSize
-                    Layout.alignment: Qt.AlignVCenter
-                    enabled: root.state == "playing" ? root.canPause : root.canPlay
-                    icon.name: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
-                    onClicked: root.togglePlaying()
-                }
-
-                PlasmaComponents3.ToolButton { // Next
-                    icon.width: expandedRepresentation.controlSize
-                    icon.height: expandedRepresentation.controlSize
-                    Layout.alignment: Qt.AlignVCenter
-                    enabled: playerControls.enabled && root.canGoNext
-                    icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
-                    onClicked: {
-                        seekSlider.value = 0    // Let the media start from beginning. Bug 362473
-                        root.action_next()
-                    }
-                }
-
-                PlasmaComponents3.ToolButton {
-                    Layout.leftMargin: LayoutMirroring.enabled ? 0 : PlasmaCore.Units.largeSpacing - playerControls.spacing
-                    Layout.rightMargin: LayoutMirroring.enabled ? PlasmaCore.Units.largeSpacing - playerControls.spacing : 0
-                    icon.name: root.loopStatus === "Track" ? "media-playlist-repeat-song" : "media-playlist-repeat"
-                    icon.width: expandedRepresentation.controlSize
-                    icon.height: expandedRepresentation.controlSize
-                    checked: root.loopStatus !== undefined && root.loopStatus !== "None"
-                    enabled: root.canControl && root.loopStatus !== undefined
-                    Accessible.name: root.loopStatus === "Track" ? i18n("Repeat Track") : i18n("Repeat")
-                    onClicked: {
-                        const service = mpris2Source.serviceForSource(mpris2Source.current);
-                        let operation = service.operationDescription("SetLoopStatus");
-                        switch (root.loopStatus) {
-                        case "Playlist":
-                            operation.status = "Track";
-                            break;
-                        case "Track":
-                            operation.status = "None";
-                            break;
-                        default:
-                            operation.status = "Playlist";
+                    PlasmaComponents3.ToolButton {
+                        Layout.rightMargin: LayoutMirroring.enabled ? 0 : PlasmaCore.Units.largeSpacing - playerControls.spacing
+                        Layout.leftMargin: LayoutMirroring.enabled ? PlasmaCore.Units.largeSpacing - playerControls.spacing : 0
+                        icon.name: "media-playlist-shuffle"
+                        icon.width: expandedRepresentation.controlSize
+                        icon.height: expandedRepresentation.controlSize
+                        checked: root.shuffle === true
+                        enabled: root.canControl && root.shuffle !== undefined
+                        Accessible.name: i18n("Shuffle")
+                        onClicked: {
+                            const service = mpris2Source.serviceForSource(mpris2Source.current);
+                            let operation = service.operationDescription("SetShuffle");
+                            operation.on = !root.shuffle;
+                            service.startOperationCall(operation);
                         }
-                        service.startOperationCall(operation);
+
+                        PlasmaComponents3.ToolTip {
+                            text: parent.Accessible.name
+                        }
+                    }
+
+                    PlasmaComponents3.ToolButton { // Previous
+                        icon.width: expandedRepresentation.controlSize
+                        icon.height: expandedRepresentation.controlSize
+                        Layout.alignment: Qt.AlignVCenter
+                        enabled: playerControls.enabled && root.canGoPrevious
+                        icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
+                        onClicked: {
+                            seekSlider.value = 0    // Let the media start from beginning. Bug 362473
+                            root.action_previous()
+                        }
+                    }
+
+                    PlasmaComponents3.ToolButton { // Pause/Play
+                        icon.width: expandedRepresentation.controlSize
+                        icon.height: expandedRepresentation.controlSize
+                        Layout.alignment: Qt.AlignVCenter
+                        enabled: root.state == "playing" ? root.canPause : root.canPlay
+                        icon.name: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
+                        onClicked: root.togglePlaying()
+                    }
+
+                    PlasmaComponents3.ToolButton { // Next
+                        icon.width: expandedRepresentation.controlSize
+                        icon.height: expandedRepresentation.controlSize
+                        Layout.alignment: Qt.AlignVCenter
+                        enabled: playerControls.enabled && root.canGoNext
+                        icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
+                        onClicked: {
+                            seekSlider.value = 0    // Let the media start from beginning. Bug 362473
+                            root.action_next()
+                        }
+                    }
+
+                    PlasmaComponents3.ToolButton {
+                        Layout.leftMargin: LayoutMirroring.enabled ? 0 : PlasmaCore.Units.largeSpacing - playerControls.spacing
+                        Layout.rightMargin: LayoutMirroring.enabled ? PlasmaCore.Units.largeSpacing - playerControls.spacing : 0
+                        icon.name: root.loopStatus === "Track" ? "media-playlist-repeat-song" : "media-playlist-repeat"
+                        icon.width: expandedRepresentation.controlSize
+                        icon.height: expandedRepresentation.controlSize
+                        checked: root.loopStatus !== undefined && root.loopStatus !== "None"
+                        enabled: root.canControl && root.loopStatus !== undefined
+                        Accessible.name: root.loopStatus === "Track" ? i18n("Repeat Track") : i18n("Repeat")
+                        onClicked: {
+                            const service = mpris2Source.serviceForSource(mpris2Source.current);
+                            let operation = service.operationDescription("SetLoopStatus");
+                            switch (root.loopStatus) {
+                            case "Playlist":
+                                operation.status = "Track";
+                                break;
+                            case "Track":
+                                operation.status = "None";
+                                break;
+                            default:
+                                operation.status = "Playlist";
+                            }
+                            service.startOperationCall(operation);
+                        }
+
+                        PlasmaComponents3.ToolTip {
+                            text: parent.Accessible.name
+                        }
+                    }
+                }
+
+                PlasmaComponents3.ToolButton { // Raise
+                    icon.width: expandedRepresentation.controlSize
+                    icon.height: expandedRepresentation.controlSize
+                    anchors.right: parent.right
+                    enabled: playerControls.enabled && mpris2Source.currentData.CanRaise
+                    Accessible.name: i18n("Raise Player")
+                    icon.name: "window-maximize"
+                    onClicked: {
+                        root.action_open()
                     }
 
                     PlasmaComponents3.ToolTip {
