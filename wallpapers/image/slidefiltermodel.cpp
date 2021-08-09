@@ -21,14 +21,16 @@
 #include "backgroundlistmodel.h"
 #include "slidemodel.h"
 
-#include <QFileInfo>
 #include <QRandomGenerator>
+#include <QFileInfo>
+#include <QDir>
 
 #include <algorithm>
 
 SlideFilterModel::SlideFilterModel(QObject *parent)
     : QSortFilterProxyModel{parent}
     , m_SortingMode{Image::Random}
+    , m_SortingFoldersFirst{false}
     , m_usedInConfig{false}
     , m_random(m_randomDevice())
 {
@@ -79,6 +81,8 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
 
 bool SlideFilterModel::lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const
 {
+    Qt::CaseSensitivity cs = Qt::CaseInsensitive;
+
     switch (m_SortingMode) {
     case Image::Random:
         if (m_usedInConfig) {
@@ -86,28 +90,67 @@ bool SlideFilterModel::lessThan(const QModelIndex &source_left, const QModelInde
         }
         return m_randomOrder.indexOf(source_left.row()) < m_randomOrder.indexOf(source_right.row());
     case Image::Alphabetical:
-        return QSortFilterProxyModel::lessThan(source_left, source_right);
+        if (m_SortingFoldersFirst) {
+            QFileInfo leftFile(getLocalFilePath(source_left));
+            QFileInfo rightFile(getLocalFilePath(source_right));
+            QString leftFilePath = getFilePathWithDir(leftFile);
+            QString rightFilePath = getFilePathWithDir(rightFile);
+
+            if (leftFilePath == rightFilePath) {
+                return QString::compare(leftFile.fileName(), rightFile.fileName(), cs) < 0;
+            } else if (leftFilePath.startsWith(rightFilePath, cs)) {
+                return true;
+            } else if (rightFilePath.startsWith(leftFilePath, cs)) {
+                return false;
+            } else {
+                return QString::compare(leftFilePath, rightFilePath, cs) < 0;
+            }
+        } else {
+            QFileInfo leftFile(getLocalFilePath(source_left));
+            QFileInfo rightFile(getLocalFilePath(source_right));
+            return QString::compare(leftFile.fileName(), rightFile.fileName(), cs) < 0;
+        }
     case Image::AlphabeticalReversed:
-        return !QSortFilterProxyModel::lessThan(source_left, source_right);
+        if (m_SortingFoldersFirst) {
+            QFileInfo leftFile(getLocalFilePath(source_left));
+            QFileInfo rightFile(getLocalFilePath(source_right));
+            QString leftFilePath = getFilePathWithDir(leftFile);
+            QString rightFilePath = getFilePathWithDir(rightFile);
+
+            if (leftFilePath == rightFilePath) {
+                return QString::compare(leftFile.fileName(), rightFile.fileName(), cs) > 0;
+            } else if (leftFilePath.startsWith(rightFilePath, cs)) {
+                return true;
+            } else if (rightFilePath.startsWith(leftFilePath, cs)) {
+                return false;
+            } else {
+                return QString::compare(leftFilePath, rightFilePath, cs) > 0;
+            }
+        } else {
+            QFileInfo leftFile(getLocalFilePath(source_left));
+            QFileInfo rightFile(getLocalFilePath(source_right));
+            return QString::compare(leftFile.fileName(), rightFile.fileName(), cs) > 0;
+        }
     case Image::Modified: // oldest first
     {
-        QFileInfo f1(source_left.data(BackgroundListModel::PathRole).toUrl().toLocalFile());
-        QFileInfo f2(source_right.data(BackgroundListModel::PathRole).toUrl().toLocalFile());
-        return f1.lastModified() < f2.lastModified();
+        QFileInfo leftFile(getLocalFilePath(source_left));
+        QFileInfo rightFile(getLocalFilePath(source_right));
+        return leftFile.lastModified() < rightFile.lastModified();
     }
     case Image::ModifiedReversed: // newest first
     {
-        QFileInfo f1(source_left.data(BackgroundListModel::PathRole).toUrl().toLocalFile());
-        QFileInfo f2(source_right.data(BackgroundListModel::PathRole).toUrl().toLocalFile());
-        return !(f1.lastModified() < f2.lastModified());
+        QFileInfo leftFile(getLocalFilePath(source_left));
+        QFileInfo rightFile(getLocalFilePath(source_right));
+        return !(leftFile.lastModified() < rightFile.lastModified());
     }
     }
     Q_UNREACHABLE();
 }
 
-void SlideFilterModel::setSortingMode(Image::SlideshowMode mode)
+void SlideFilterModel::setSortingMode(Image::SlideshowMode slideshowMode, bool slideshowFoldersFirst)
 {
-    m_SortingMode = mode;
+    m_SortingMode = slideshowMode;
+    m_SortingFoldersFirst = slideshowFoldersFirst;
     if (m_SortingMode == Image::Random && !m_usedInConfig) {
         buildRandomOrder();
     }
@@ -146,4 +189,14 @@ void SlideFilterModel::buildRandomOrder()
         std::iota(m_randomOrder.begin(), m_randomOrder.end(), 0);
         std::shuffle(m_randomOrder.begin(), m_randomOrder.end(), m_random);
     }
+}
+
+QString SlideFilterModel::getLocalFilePath(const QModelIndex& modelIndex) const
+{
+    return modelIndex.data(BackgroundListModel::PathRole).toUrl().toLocalFile();
+}
+
+QString SlideFilterModel::getFilePathWithDir(const QFileInfo& fileInfo) const
+{
+    return fileInfo.canonicalPath().append(QDir::separator());
 }

@@ -77,6 +77,7 @@ QQC2.StackView {
         slidePaths: wallpaper.configuration.SlidePaths
         slideTimer: wallpaper.configuration.SlideInterval
         slideshowMode: wallpaper.configuration.SlideshowMode
+        slideshowFoldersFirst: wallpaper.configuration.SlideshowFoldersFirst
         uncheckedSlides: wallpaper.configuration.UncheckedSlides
     }
 

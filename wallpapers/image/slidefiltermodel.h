@@ -22,6 +22,7 @@
 
 #include <QSortFilterProxyModel>
 #include <QVector>
+#include <QFileInfo>
 
 #include <random>
 
@@ -36,7 +37,7 @@ public:
     bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
     void setSourceModel(QAbstractItemModel *sourceModel) override;
-    void setSortingMode(Image::SlideshowMode mode);
+    void setSortingMode(Image::SlideshowMode slideshowMode, bool slideshowFoldersFirst);
     void invalidate();
     void invalidateFilter();
 
@@ -49,8 +50,12 @@ Q_SIGNALS:
 private:
     void buildRandomOrder();
 
+    QString getLocalFilePath(const QModelIndex& modelIndex) const;
+    QString getFilePathWithDir(const QFileInfo& fileInfo) const;
+
     QVector<int> m_randomOrder;
     Image::SlideshowMode m_SortingMode;
+    bool m_SortingFoldersFirst;
     bool m_usedInConfig;
     std::random_device m_randomDevice;
     std::mt19937 m_random;

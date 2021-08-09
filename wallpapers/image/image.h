@@ -50,6 +50,7 @@ class Image : public QObject, public QQmlParserStatus
 
     Q_PROPERTY(RenderingMode renderingMode READ renderingMode WRITE setRenderingMode NOTIFY renderingModeChanged)
     Q_PROPERTY(SlideshowMode slideshowMode READ slideshowMode WRITE setSlideshowMode NOTIFY slideshowModeChanged)
+    Q_PROPERTY(bool slideshowFoldersFirst READ slideshowFoldersFirst WRITE setSlideshowFoldersFirst NOTIFY slideshowFoldersFirstChanged)
     Q_PROPERTY(QUrl wallpaperPath READ wallpaperPath NOTIFY wallpaperPathChanged)
     Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel *slideFilterModel READ slideFilterModel CONSTANT)
@@ -76,7 +77,7 @@ public:
     };
     Q_ENUM(SlideshowMode)
 
-    explicit Image(QObject *parent = nullptr);
+    explicit Image(QObject* parent = nullptr);
     ~Image() override;
 
     QUrl wallpaperPath() const;
@@ -100,7 +101,10 @@ public:
     void setRenderingMode(RenderingMode mode);
 
     SlideshowMode slideshowMode() const;
-    void setSlideshowMode(SlideshowMode mode);
+    void setSlideshowMode(SlideshowMode slideshowMode);
+
+    bool slideshowFoldersFirst() const;
+    void setSlideshowFoldersFirst(bool slideshowFoldersFirst);
 
     QSize targetSize() const;
     void setTargetSize(const QSize &size);
@@ -139,6 +143,7 @@ Q_SIGNALS:
     void wallpaperPathChanged();
     void renderingModeChanged();
     void slideshowModeChanged();
+    void slideshowFoldersFirstChanged();
     void targetSizeChanged();
     void slideTimerChanged();
     void usersWallpapersChanged();
@@ -183,6 +188,7 @@ private:
 
     RenderingMode m_mode;
     SlideshowMode m_slideshowMode;
+    bool m_slideshowFoldersFirst;
 
     KPackage::Package m_wallpaperPackage;
     QStringList m_slidePaths;

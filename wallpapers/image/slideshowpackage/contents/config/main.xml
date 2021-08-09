@@ -31,7 +31,7 @@
       <default>900</default>
     </entry>
     <entry name="TransitionAnimationDuration" type="int">
-      <label>Fade Transition Animation  (ms)</label>
+      <label>Fade Transition Animation (ms)</label>
       <default>1000</default>
     </entry>
     <entry name="UncheckedSlides" type="StringList">
@@ -41,6 +41,10 @@
     <entry name="SlideshowMode" type="int">
         <label>Ordering mode for the slideshow</label>
         <default>0</default>
+    </entry>
+    <entry name="SlideshowFoldersFirst" type="bool">
+        <label>Processing folders first for the slideshow</label>
+        <default>false</default>
     </entry>
   </group>
 </kcfg>

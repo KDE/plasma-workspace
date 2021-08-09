@@ -66,6 +66,7 @@ Image::Image(QObject *parent)
     , m_dirWatch(new KDirWatch(this))
     , m_mode(SingleImage)
     , m_slideshowMode(Random)
+    , m_slideshowFoldersFirst(false)
     , m_currentSlide(-1)
     , m_model(nullptr)
     , m_slideshowModel(new SlideModel(this, this))
@@ -166,18 +167,37 @@ Image::SlideshowMode Image::slideshowMode() const
     return m_slideshowMode;
 }
 
-void Image::setSlideshowMode(Image::SlideshowMode mode)
+void Image::setSlideshowMode(Image::SlideshowMode slideshowMode)
 {
-    if (mode == m_slideshowMode) {
+    if (slideshowMode == m_slideshowMode) {
         return;
     }
-    m_slideshowMode = mode;
-    m_slideFilterModel->setSortingMode(mode);
+    m_slideshowMode = slideshowMode;
+    m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
     m_slideFilterModel->sort(0);
     if (m_mode == SlideShow) {
         startSlideshow();
     }
     emit slideshowModeChanged();
+}
+
+bool Image::slideshowFoldersFirst() const
+{
+    return m_slideshowFoldersFirst;
+}
+
+void Image::setSlideshowFoldersFirst(bool slideshowFoldersFirst)
+{
+    if (slideshowFoldersFirst == m_slideshowFoldersFirst) {
+        return;
+    }
+    m_slideshowFoldersFirst = slideshowFoldersFirst;
+    m_slideFilterModel->setSortingMode(m_slideshowMode, m_slideshowFoldersFirst);
+    m_slideFilterModel->sort(0);
+    if (m_mode == SlideShow) {
+        startSlideshow();
+    }
+    emit slideshowFoldersFirstChanged();
 }
 
 float distance(const QSize &size, const QSize &desired)
