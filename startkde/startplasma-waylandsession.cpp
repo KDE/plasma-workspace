@@ -19,12 +19,6 @@ int main(int argc, char **argv)
 
     out << "startplasma-waylandsession: Starting up...";
 
-    if (qEnvironmentVariableIsSet("DISPLAY")) {
-        setupX11();
-    } else {
-        qWarning() << "running kwin without Xwayland support";
-    }
-
     if (!syncDBusEnvironment()) {
         out << "Could not sync environment to dbus.\n";
         return 2;
