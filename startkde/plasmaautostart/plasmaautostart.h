@@ -12,7 +12,7 @@
 #include <QStringList>
 #include <memory>
 
-class KAutostartPrivate;
+class PlasmaAutostartPrivate;
 
 /**
  * @class KAutostart kautostart.h <KAutostart>
@@ -36,7 +36,7 @@ class KAutostartPrivate;
  * config.setAutoStart(autostart.autoStarts());
  * @endcode
  */
-class KAutostart : public QObject
+class PlasmaAutostart : public QObject
 {
     Q_OBJECT
 
@@ -62,8 +62,8 @@ public:
      * @since 5.61 we are allowed to specify an absolute path to the service
      * description and it will still work.
      */
-    explicit KAutostart(const QString &entryName = QString(), QObject *parent = nullptr);
-    ~KAutostart();
+    explicit PlasmaAutostart(const QString &entryName = QString(), QObject *parent = nullptr);
+    ~PlasmaAutostart();
 
     /**
      * Flags for each of the conditions that may affect whether or not
@@ -286,8 +286,8 @@ private:
     bool checkStartCondition() const;
 
 private:
-    std::unique_ptr<KAutostartPrivate> const d;
+    std::unique_ptr<PlasmaAutostartPrivate> const d;
 };
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(KAutostart::Conditions)
+Q_DECLARE_OPERATORS_FOR_FLAGS(PlasmaAutostart::Conditions)
 #endif

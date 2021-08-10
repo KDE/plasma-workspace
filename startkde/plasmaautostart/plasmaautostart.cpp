@@ -5,7 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "kautostart.h"
+#include "plasmaautostart.h"
 
 #include <KConfigGroup>
 #include <KDesktopFile>
@@ -14,16 +14,16 @@
 #include <QDir>
 #include <QFile>
 
-class KAutostartPrivate
+class PlasmaAutostartPrivate
 {
 public:
-    KAutostartPrivate()
+    PlasmaAutostartPrivate()
         : df(nullptr)
         , copyIfNeededChecked(false)
     {
     }
 
-    ~KAutostartPrivate()
+    ~PlasmaAutostartPrivate()
     {
         delete df;
     }
@@ -35,7 +35,7 @@ public:
     bool copyIfNeededChecked;
 };
 
-void KAutostartPrivate::copyIfNeeded()
+void PlasmaAutostartPrivate::copyIfNeeded()
 {
     if (copyIfNeededChecked) {
         return;
@@ -56,9 +56,9 @@ void KAutostartPrivate::copyIfNeeded()
     copyIfNeededChecked = true;
 }
 
-KAutostart::KAutostart(const QString &entryName, QObject *parent)
+PlasmaAutostart::PlasmaAutostart(const QString &entryName, QObject *parent)
     : QObject(parent)
-    , d(new KAutostartPrivate)
+    , d(new PlasmaAutostartPrivate)
 {
     const bool isAbsolute = QDir::isAbsolutePath(entryName);
     if (isAbsolute) {
@@ -85,9 +85,9 @@ KAutostart::KAutostart(const QString &entryName, QObject *parent)
     }
 }
 
-KAutostart::~KAutostart() = default;
+PlasmaAutostart::~PlasmaAutostart() = default;
 
-void KAutostart::setAutostarts(bool autostart)
+void PlasmaAutostart::setAutostarts(bool autostart)
 {
     bool currentAutostartState = !d->df->desktopGroup().readEntry("Hidden", false);
     if (currentAutostartState == autostart) {
@@ -98,7 +98,7 @@ void KAutostart::setAutostarts(bool autostart)
     d->df->desktopGroup().writeEntry("Hidden", !autostart);
 }
 
-bool KAutostart::autostarts(const QString &environment, Conditions check) const
+bool PlasmaAutostart::autostarts(const QString &environment, Conditions check) const
 {
     // check if this is actually a .desktop file
     bool starts = d->df->desktopGroup().exists();
@@ -121,12 +121,12 @@ bool KAutostart::autostarts(const QString &environment, Conditions check) const
     return starts;
 }
 
-bool KAutostart::checkStartCondition() const
+bool PlasmaAutostart::checkStartCondition() const
 {
-    return KAutostart::isStartConditionMet(d->df->desktopGroup().readEntry("X-KDE-autostart-condition"));
+    return PlasmaAutostart::isStartConditionMet(d->df->desktopGroup().readEntry("X-KDE-autostart-condition"));
 }
 
-bool KAutostart::isStartConditionMet(const QString &condition)
+bool PlasmaAutostart::isStartConditionMet(const QString &condition)
 {
     if (condition.isEmpty()) {
         return true;
@@ -148,7 +148,7 @@ bool KAutostart::isStartConditionMet(const QString &condition)
     return cg.readEntry(list[2], defaultValue);
 }
 
-bool KAutostart::checkAllowedEnvironment(const QString &environment) const
+bool PlasmaAutostart::checkAllowedEnvironment(const QString &environment) const
 {
     const QStringList allowed = allowedEnvironments();
     if (!allowed.isEmpty()) {
@@ -163,12 +163,12 @@ bool KAutostart::checkAllowedEnvironment(const QString &environment) const
     return true;
 }
 
-QString KAutostart::command() const
+QString PlasmaAutostart::command() const
 {
     return d->df->desktopGroup().readEntry("Exec", QString());
 }
 
-void KAutostart::setCommand(const QString &command)
+void PlasmaAutostart::setCommand(const QString &command)
 {
     if (d->df->desktopGroup().readEntry("Exec", QString()) == command) {
         return;
@@ -178,12 +178,12 @@ void KAutostart::setCommand(const QString &command)
     d->df->desktopGroup().writeEntry("Exec", command);
 }
 
-QString KAutostart::visibleName() const
+QString PlasmaAutostart::visibleName() const
 {
     return d->df->readName();
 }
 
-void KAutostart::setVisibleName(const QString &name)
+void PlasmaAutostart::setVisibleName(const QString &name)
 {
     if (d->df->desktopGroup().readEntry("Name", QString()) == name) {
         return;
@@ -193,18 +193,18 @@ void KAutostart::setVisibleName(const QString &name)
     d->df->desktopGroup().writeEntry("Name", name);
 }
 
-bool KAutostart::isServiceRegistered(const QString &entryName)
+bool PlasmaAutostart::isServiceRegistered(const QString &entryName)
 {
     const QString localDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/autostart/");
     return QFile::exists(localDir + entryName + QLatin1String(".desktop"));
 }
 
-QString KAutostart::commandToCheck() const
+QString PlasmaAutostart::commandToCheck() const
 {
     return d->df->desktopGroup().readPathEntry("TryExec", QString());
 }
 
-void KAutostart::setCommandToCheck(const QString &exec)
+void PlasmaAutostart::setCommandToCheck(const QString &exec)
 {
     if (d->df->desktopGroup().readEntry("TryExec", QString()) == exec) {
         return;
@@ -216,7 +216,7 @@ void KAutostart::setCommandToCheck(const QString &exec)
 
 // do not specialize the readEntry template -
 // http://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=100911
-static KAutostart::StartPhase readEntry(const KConfigGroup &group, const char *key, KAutostart::StartPhase aDefault)
+static PlasmaAutostart::StartPhase readEntry(const KConfigGroup &group, const char *key, PlasmaAutostart::StartPhase aDefault)
 {
     const QByteArray data = group.readEntry(key, QByteArray());
 
@@ -225,22 +225,22 @@ static KAutostart::StartPhase readEntry(const KConfigGroup &group, const char *k
     }
 
     if (data == "0" || data == "BaseDesktop") {
-        return KAutostart::BaseDesktop;
+        return PlasmaAutostart::BaseDesktop;
     } else if (data == "1" || data == "DesktopServices") {
-        return KAutostart::DesktopServices;
+        return PlasmaAutostart::DesktopServices;
     } else if (data == "2" || data == "Applications") {
-        return KAutostart::Applications;
+        return PlasmaAutostart::Applications;
     }
 
     return aDefault;
 }
 
-KAutostart::StartPhase KAutostart::startPhase() const
+PlasmaAutostart::StartPhase PlasmaAutostart::startPhase() const
 {
     return readEntry(d->df->desktopGroup(), "X-KDE-autostart-phase", Applications);
 }
 
-void KAutostart::setStartPhase(KAutostart::StartPhase phase)
+void PlasmaAutostart::setStartPhase(PlasmaAutostart::StartPhase phase)
 {
     QString data = QStringLiteral("Applications");
 
@@ -263,12 +263,12 @@ void KAutostart::setStartPhase(KAutostart::StartPhase phase)
     d->df->desktopGroup().writeEntry("X-KDE-autostart-phase", data);
 }
 
-QStringList KAutostart::allowedEnvironments() const
+QStringList PlasmaAutostart::allowedEnvironments() const
 {
     return d->df->desktopGroup().readXdgListEntry("OnlyShowIn");
 }
 
-void KAutostart::setAllowedEnvironments(const QStringList &environments)
+void PlasmaAutostart::setAllowedEnvironments(const QStringList &environments)
 {
     if (d->df->desktopGroup().readEntry("OnlyShowIn", QStringList()) == environments) {
         return;
@@ -278,7 +278,7 @@ void KAutostart::setAllowedEnvironments(const QStringList &environments)
     d->df->desktopGroup().writeXdgListEntry("OnlyShowIn", environments);
 }
 
-void KAutostart::addToAllowedEnvironments(const QString &environment)
+void PlasmaAutostart::addToAllowedEnvironments(const QString &environment)
 {
     QStringList envs = allowedEnvironments();
 
@@ -290,7 +290,7 @@ void KAutostart::addToAllowedEnvironments(const QString &environment)
     setAllowedEnvironments(envs);
 }
 
-void KAutostart::removeFromAllowedEnvironments(const QString &environment)
+void PlasmaAutostart::removeFromAllowedEnvironments(const QString &environment)
 {
     QStringList envs = allowedEnvironments();
     int index = envs.indexOf(environment);
@@ -303,12 +303,12 @@ void KAutostart::removeFromAllowedEnvironments(const QString &environment)
     setAllowedEnvironments(envs);
 }
 
-QStringList KAutostart::excludedEnvironments() const
+QStringList PlasmaAutostart::excludedEnvironments() const
 {
     return d->df->desktopGroup().readXdgListEntry("NotShowIn");
 }
 
-void KAutostart::setExcludedEnvironments(const QStringList &environments)
+void PlasmaAutostart::setExcludedEnvironments(const QStringList &environments)
 {
     if (d->df->desktopGroup().readEntry("NotShowIn", QStringList()) == environments) {
         return;
@@ -318,7 +318,7 @@ void KAutostart::setExcludedEnvironments(const QStringList &environments)
     d->df->desktopGroup().writeXdgListEntry("NotShowIn", environments);
 }
 
-void KAutostart::addToExcludedEnvironments(const QString &environment)
+void PlasmaAutostart::addToExcludedEnvironments(const QString &environment)
 {
     QStringList envs = excludedEnvironments();
 
@@ -330,7 +330,7 @@ void KAutostart::addToExcludedEnvironments(const QString &environment)
     setExcludedEnvironments(envs);
 }
 
-void KAutostart::removeFromExcludedEnvironments(const QString &environment)
+void PlasmaAutostart::removeFromExcludedEnvironments(const QString &environment)
 {
     QStringList envs = excludedEnvironments();
     int index = envs.indexOf(environment);
@@ -343,7 +343,7 @@ void KAutostart::removeFromExcludedEnvironments(const QString &environment)
     setExcludedEnvironments(envs);
 }
 
-QString KAutostart::startAfter() const
+QString PlasmaAutostart::startAfter() const
 {
     return d->df->desktopGroup().readEntry("X-KDE-autostart-after");
 }
