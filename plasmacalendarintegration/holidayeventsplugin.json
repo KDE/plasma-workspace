@@ -1,7 +1,14 @@
 {
-    "Name": "Holidays",
-    "Description": "Calendar plugin for displaying public holidays",
-    "Icon": "view-calendar-holiday",
-    "ConfigUi": "holidays/HolidaysConfig.qml",
-    "Authors": { "Name": "Martin Klapetek", "Email": "mklapetek@kde.org" }
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "mklapetek@kde.org",
+                "Name": "Martin Klapetek"
+            }
+        ],
+        "Description": "Calendar plugin for displaying public holidays",
+        "Icon": "view-calendar-holiday",
+        "Name": "Holidays"
+    },
+    "X-KDE-PlasmaCalendar-ConfigUi": "holidays/HolidaysConfig.qml"
 }
