@@ -79,6 +79,8 @@ RowLayout {
             onMoved: {
                 if (!profileData[value].inhibited) {
                     activateProfileRequested(profileData[value].profile)
+                } else {
+                    value = Qt.binding(() => profileData.findIndex((profile => profile.profile == profileItem.activeProfile)))
                 }
             }
             // fake having a disabled second half
