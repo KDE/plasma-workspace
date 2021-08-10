@@ -19,10 +19,11 @@
 
 #include "autostart.h"
 
+#include "../plasmaautostart/plasmaautostart.h"
+
 #include <QDir>
 #include <QHash>
 #include <QStandardPaths>
-#include <kautostart.h>
 
 AutoStart::AutoStart()
     : m_phase(-1)
@@ -79,8 +80,8 @@ void AutoStart::loadAutoStartList()
     }
 
     for (auto it = files.constBegin(); it != files.constEnd(); ++it) {
-        KAutostart config(*it);
-        if (!config.autostarts(QStringLiteral("KDE"), KAutostart::CheckAll)) {
+        PlasmaAutostart config(*it);
+        if (!config.autostarts(QStringLiteral("KDE"), PlasmaAutostart::CheckAll)) {
             continue;
         }
 
@@ -88,7 +89,7 @@ void AutoStart::loadAutoStartList()
         item.service = *it;
         item.name = extractName(it.key());
         item.startAfter = config.startAfter();
-        item.phase = qMax(KAutostart::BaseDesktop, config.startPhase());
+        item.phase = qMax(PlasmaAutostart::BaseDesktop, config.startPhase());
         m_startList.append(item);
     }
 }

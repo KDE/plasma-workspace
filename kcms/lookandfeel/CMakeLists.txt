@@ -50,6 +50,7 @@ target_link_libraries(kcm_lookandfeel_static
     KF5::NewStuff
     PW::KWorkspace
     krdb
+    PlasmaAutostart
 )
 if(X11_FOUND)
     target_link_libraries(kcm_lookandfeel_static Qt::X11Extras)

@@ -20,13 +20,13 @@
 */
 
 #include "kcm.h"
+#include "../../startkde/plasmaautostart/plasmaautostart.h"
 #include "../kcms-common_p.h"
 #include "config-kcm.h"
 #include "config-workspace.h"
 #include "krdb.h"
 
 #include <KAboutData>
-#include <KAutostart>
 #include <KDialogJobUiDelegate>
 #include <KIO/ApplicationLauncherJob>
 #include <KIconLoader>
@@ -421,7 +421,7 @@ void KCMLookandFeel::save()
                 if (qEnvironmentVariableIsSet("KDE_FULL_SESSION")) {
                     for (const QString &serviceFile : autostartServices) {
                         KService service(serviceFile + QStringLiteral(".desktop"));
-                        KAutostart as(serviceFile);
+                        PlasmaAutostart as(serviceFile);
                         as.setAutostarts(false);
                         // FIXME: quite ugly way to stop things, and what about non KDE things?
                         QProcess::startDetached(QStringLiteral("kquitapp5"),
@@ -436,7 +436,7 @@ void KCMLookandFeel::save()
 
                 for (const QString &serviceFile : autostartServices) {
                     KService::Ptr service{new KService(serviceFile + QStringLiteral(".desktop"))};
-                    KAutostart as(serviceFile);
+                    PlasmaAutostart as(serviceFile);
                     as.setCommand(service->exec());
                     as.setAutostarts(true);
                     if (qEnvironmentVariableIsSet("KDE_FULL_SESSION")) {

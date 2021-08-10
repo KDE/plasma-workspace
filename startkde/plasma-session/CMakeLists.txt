@@ -30,6 +30,7 @@ target_link_libraries(plasma_session
     KF5::KIOCore
     PW::KWorkspace
     ${PHONON_LIBRARIES}
+    PlasmaAutostart
 )
 
 install(TARGETS plasma_session ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

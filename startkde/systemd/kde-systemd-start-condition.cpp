@@ -17,10 +17,10 @@
 
 */
 
+#include "../plasmaautostart/plasmaautostart.h"
 #include <QCommandLineOption>
 #include <QCommandLineParser>
 #include <QCoreApplication>
-#include <kautostart.h>
 
 int main(int argc, char **argv)
 {
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
         parser.showHelp(255);
     }
 
-    if (KAutostart::isStartConditionMet(parser.value(option))) {
+    if (PlasmaAutostart::isStartConditionMet(parser.value(option))) {
         return 0;
     } else {
         return 1;
