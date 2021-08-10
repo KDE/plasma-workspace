@@ -1,3 +1,4 @@
+add_subdirectory(kautostart)
 add_subdirectory(kcminit)
 add_subdirectory(waitforname)
 
