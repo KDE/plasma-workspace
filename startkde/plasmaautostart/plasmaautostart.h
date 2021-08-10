@@ -14,27 +14,8 @@
 
 class PlasmaAutostartPrivate;
 
-/**
- * @class KAutostart kautostart.h <KAutostart>
- *
- * KAutostart provides a programmatic means to control the state of
- * autostart services on a per-user basis. This is useful for applications
- * that wish to offer a configurable means to allow the application to be
- * autostarted.
- *
- * By using this class you future-proof your applications against potential
- * future or platform-specific changes to the autostart mechanism(s).
- *
- * Typical usage might look like:
- *
- * @code
- * KAutostart autostart; // without an entryName arg, gets name from KAboutData
- * autostart.setAutostarts(true); // will now start up when the user logs in
- *
- * // set the value in our configuration settings to reflect whether or not
- * // we will actually start up on log in
- * config.setAutoStart(autostart.autoStarts());
- * @endcode
+/*
+ * This class was imported from KService at commit c2cedaaeba0a53939c96a1273ab92ed1d6ca7bcf
  */
 class PlasmaAutostart : public QObject
 {
@@ -58,9 +39,6 @@ public:
      * @param entryName the name used to identify the service. If none is
      *        provided then it uses the name registered with KAboutData.
      * @param parent QObject
-     *
-     * @since 5.61 we are allowed to specify an absolute path to the service
-     * description and it will still work.
      */
     explicit PlasmaAutostart(const QString &entryName = QString(), QObject *parent = nullptr);
     ~PlasmaAutostart();
@@ -148,37 +126,12 @@ public:
     void setCommand(const QString &command);
 
     /**
-     * Returns the user-visible name this autostart service is registered as
-     * @see setVisibleName(), setEntryName()
-     */
-    QString visibleName() const;
-    /**
-     * Sets the user-visible name for this autostart service.
-     * @see visibleName()
-     */
-    void setVisibleName(const QString &entryName);
-
-    /**
      * Checks whether or not a service by the given name @p entryName is registered
      * with the autostart system. Does not check whether or not it is
      * set to actually autostart or not.
      * @param entryName the name of the service to check for
      */
     static bool isServiceRegistered(const QString &entryName);
-
-    /**
-     * Returns the executable to check for when attempting to autostart
-     * this service. If the executable is not found in the user's
-     * environment, it will not autostart.
-     * @see setCommandToCheck()
-     */
-    QString commandToCheck() const;
-    /**
-     * Sets the executable to check for the existence of when
-     * autostarting this service
-     * @see commandToCheck()
-     */
-    void setCommandToCheck(const QString &exec);
 
     /**
      * Returns the autostart phase this service is started in.
@@ -189,15 +142,6 @@ public:
      * @see StartPhase, setStartPhase()
      */
     StartPhase startPhase() const;
-    /**
-     * Sets the service (by name) this service should be started after.
-     *
-     * Note that this is KDE specific and may not work in other
-     * environments.
-     *
-     * @see StartPhase, startPhase()
-     */
-    void setStartPhase(StartPhase phase);
 
     /**
      * Returns the list of environments (e.g. "KDE") this service is allowed
@@ -212,23 +156,6 @@ public:
      * @see setAllowedEnvironments()
      */
     QStringList allowedEnvironments() const;
-    /**
-     * Sets the environments this service is allowed to start in
-     * @see allowedEnvironments(), addToAllowedEnvironments()
-     */
-    void setAllowedEnvironments(const QStringList &environments);
-    /**
-     * Adds an environment to the list of environments this service may
-     * start in.
-     * @see setAllowedEnvironments(), removeFromAllowedEnvironments()
-     */
-    void addToAllowedEnvironments(const QString &environment);
-    /**
-     * Removes an environment to the list of environments this service may
-     * start in.
-     * @see addToAllowedEnvironments()
-     */
-    void removeFromAllowedEnvironments(const QString &environment);
 
     /**
      * Returns the list of environments this service is explicitly not
@@ -241,44 +168,23 @@ public:
      * @see setExcludedEnvironments()
      */
     QStringList excludedEnvironments() const;
-    /**
-     * Sets the environments this service is not allowed to start in
-     * @see excludedEnvironments(), addToExcludedEnvironments()
-     */
-    void setExcludedEnvironments(const QStringList &environments);
-    /**
-     * Adds an environment to the list of environments this service may
-     * not be autostarted in
-     * @see removeFromExcludedEnvironments()
-     */
-    void addToExcludedEnvironments(const QString &environment);
-    /**
-     * Removes an environment to the list of environments this service may
-     * not be autostarted in
-     * @see addToExcludedEnvironments()
-     */
-    void removeFromExcludedEnvironments(const QString &environment);
 
     /**
      * Returns the name of another service that should be autostarted
      * before this one (if that service would be autostarted).
      * @internal
-     * @since 4.3
      */
     QString startAfter() const;
 
     /**
      * Checks whether autostart is allowed in the given environment,
      * depending on allowedEnvironments() and excludedEnvironments().
-     * @since 4.3
      */
     bool checkAllowedEnvironment(const QString &environment) const;
 
     /**
      * Checks that a given autostart configuration condition is met.
      * @param condition: config in the format "rcfile:group:entry:default"
-     *
-     * @since 5.69
      */
     static bool isStartConditionMet(const QString &condition);
 

@@ -178,40 +178,10 @@ void PlasmaAutostart::setCommand(const QString &command)
     d->df->desktopGroup().writeEntry("Exec", command);
 }
 
-QString PlasmaAutostart::visibleName() const
-{
-    return d->df->readName();
-}
-
-void PlasmaAutostart::setVisibleName(const QString &name)
-{
-    if (d->df->desktopGroup().readEntry("Name", QString()) == name) {
-        return;
-    }
-
-    d->copyIfNeeded();
-    d->df->desktopGroup().writeEntry("Name", name);
-}
-
 bool PlasmaAutostart::isServiceRegistered(const QString &entryName)
 {
     const QString localDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/autostart/");
     return QFile::exists(localDir + entryName + QLatin1String(".desktop"));
-}
-
-QString PlasmaAutostart::commandToCheck() const
-{
-    return d->df->desktopGroup().readPathEntry("TryExec", QString());
-}
-
-void PlasmaAutostart::setCommandToCheck(const QString &exec)
-{
-    if (d->df->desktopGroup().readEntry("TryExec", QString()) == exec) {
-        return;
-    }
-
-    d->copyIfNeeded();
-    d->df->desktopGroup().writePathEntry("TryExec", exec);
 }
 
 // do not specialize the readEntry template -
@@ -240,107 +210,14 @@ PlasmaAutostart::StartPhase PlasmaAutostart::startPhase() const
     return readEntry(d->df->desktopGroup(), "X-KDE-autostart-phase", Applications);
 }
 
-void PlasmaAutostart::setStartPhase(PlasmaAutostart::StartPhase phase)
-{
-    QString data = QStringLiteral("Applications");
-
-    switch (phase) {
-    case BaseDesktop:
-        data = QStringLiteral("BaseDesktop");
-        break;
-    case DesktopServices:
-        data = QStringLiteral("DesktopServices");
-        break;
-    case Applications: // This is the default
-        break;
-    }
-
-    if (d->df->desktopGroup().readEntry("X-KDE-autostart-phase", QString()) == data) {
-        return;
-    }
-
-    d->copyIfNeeded();
-    d->df->desktopGroup().writeEntry("X-KDE-autostart-phase", data);
-}
-
 QStringList PlasmaAutostart::allowedEnvironments() const
 {
     return d->df->desktopGroup().readXdgListEntry("OnlyShowIn");
 }
 
-void PlasmaAutostart::setAllowedEnvironments(const QStringList &environments)
-{
-    if (d->df->desktopGroup().readEntry("OnlyShowIn", QStringList()) == environments) {
-        return;
-    }
-
-    d->copyIfNeeded();
-    d->df->desktopGroup().writeXdgListEntry("OnlyShowIn", environments);
-}
-
-void PlasmaAutostart::addToAllowedEnvironments(const QString &environment)
-{
-    QStringList envs = allowedEnvironments();
-
-    if (envs.contains(environment)) {
-        return;
-    }
-
-    envs.append(environment);
-    setAllowedEnvironments(envs);
-}
-
-void PlasmaAutostart::removeFromAllowedEnvironments(const QString &environment)
-{
-    QStringList envs = allowedEnvironments();
-    int index = envs.indexOf(environment);
-
-    if (index < 0) {
-        return;
-    }
-
-    envs.removeAt(index);
-    setAllowedEnvironments(envs);
-}
-
 QStringList PlasmaAutostart::excludedEnvironments() const
 {
     return d->df->desktopGroup().readXdgListEntry("NotShowIn");
-}
-
-void PlasmaAutostart::setExcludedEnvironments(const QStringList &environments)
-{
-    if (d->df->desktopGroup().readEntry("NotShowIn", QStringList()) == environments) {
-        return;
-    }
-
-    d->copyIfNeeded();
-    d->df->desktopGroup().writeXdgListEntry("NotShowIn", environments);
-}
-
-void PlasmaAutostart::addToExcludedEnvironments(const QString &environment)
-{
-    QStringList envs = excludedEnvironments();
-
-    if (envs.contains(environment)) {
-        return;
-    }
-
-    envs.append(environment);
-    setExcludedEnvironments(envs);
-}
-
-void PlasmaAutostart::removeFromExcludedEnvironments(const QString &environment)
-{
-    QStringList envs = excludedEnvironments();
-    int index = envs.indexOf(environment);
-
-    if (index < 0) {
-        return;
-    }
-
-    envs.removeAt(index);
-    setExcludedEnvironments(envs);
 }
 
 QString PlasmaAutostart::startAfter() const
