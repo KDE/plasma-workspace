@@ -10,9 +10,8 @@
 
 #include <QObject>
 #include <QStringList>
-#include <memory>
 
-class PlasmaAutostartPrivate;
+class KDesktopFile;
 
 /*
  * This class was imported from KService at commit c2cedaaeba0a53939c96a1273ab92ed1d6ca7bcf
@@ -190,9 +189,10 @@ public:
 
 private:
     bool checkStartCondition() const;
-
-private:
-    std::unique_ptr<PlasmaAutostartPrivate> const d;
+    void copyIfNeeded();
+    QString name;
+    KDesktopFile *df;
+    bool copyIfNeededChecked;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(PlasmaAutostart::Conditions)
