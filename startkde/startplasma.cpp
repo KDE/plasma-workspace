@@ -336,28 +336,6 @@ void setupX11()
     //     so don't move this up.
 
     runSync(QStringLiteral("xsetroot"), {QStringLiteral("-cursor_name"), QStringLiteral("left_ptr")});
-    runSync(QStringLiteral("xprop"),
-            {QStringLiteral("-root"),
-             QStringLiteral("-f"),
-             QStringLiteral("KDE_FULL_SESSION"),
-             QStringLiteral("8t"),
-             QStringLiteral("-set"),
-             QStringLiteral("KDE_FULL_SESSION"),
-             QStringLiteral("true")});
-    runSync(QStringLiteral("xprop"),
-            {QStringLiteral("-root"),
-             QStringLiteral("-f"),
-             QStringLiteral("KDE_SESSION_VERSION"),
-             QStringLiteral("32c"),
-             QStringLiteral("-set"),
-             QStringLiteral("KDE_SESSION_VERSION"),
-             QStringLiteral("5")});
-}
-
-void cleanupX11()
-{
-    runSync(QStringLiteral("xprop"), {QStringLiteral("-root"), QStringLiteral("-remove"), QStringLiteral("KDE_FULL_SESSION")});
-    runSync(QStringLiteral("xprop"), {QStringLiteral("-root"), QStringLiteral("-remove"), QStringLiteral("KDE_SESSION_VERSION")});
 }
 
 void cleanupPlasmaEnvironment(const std::optional<QStringList> &oldSystemdEnvironment)

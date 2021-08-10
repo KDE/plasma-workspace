@@ -26,7 +26,6 @@ void importSystemdEnvrionment();
 void runEnvironmentScripts();
 void setupPlasmaEnvironment();
 void cleanupPlasmaEnvironment(const std::optional<QStringList> &oldSystemdEnvironment);
-void cleanupX11();
 bool syncDBusEnvironment();
 void setupFontDpi();
 QProcess *setupKSplash();

@@ -93,7 +93,6 @@ int main(int argc, char **argv)
     runSync(QStringLiteral("kdeinit5_shutdown"), {});
 
     cleanupPlasmaEnvironment(oldSystemdEnvironment);
-    cleanupX11();
 
     out << "startkde: Done.\n";
 

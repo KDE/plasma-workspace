@@ -41,7 +41,6 @@ int main(int argc, char **argv)
     // Keep for KF5; remove in KF6 (KInit will be gone then)
     runSync(QStringLiteral("kdeinit5_shutdown"), {});
 
-    cleanupX11();
     out << "startplasma-waylandsession: Done.\n";
 
     return 0;
