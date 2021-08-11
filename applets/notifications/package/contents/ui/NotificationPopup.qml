@@ -7,6 +7,7 @@
 import QtQuick 2.8
 import QtQuick.Layouts 1.1
 
+import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.notificationmanager 1.0 as NotificationManager
@@ -88,7 +89,8 @@ PlasmaCore.Dialog {
     }
 
     location: PlasmaCore.Types.Floating
-    flags: notificationItem.replying ? 0 : Qt.WindowDoesNotAcceptFocus
+    // On wayland we need focus to copy to the clipboard, we change on mouse interaction until the cursor leaves 
+    flags: notificationItem.replying || focusListener.wantsFocus ? 0 : Qt.WindowDoesNotAcceptFocus
 
     visible: false
 
@@ -99,9 +101,17 @@ PlasmaCore.Dialog {
         }
     }
 
-    mainItem: Item {
+    mainItem: KQuickAddons.MouseEventListener {
+        id: focusListener
+        property bool wantsFocus: false
+        acceptedButtons: Qt.AllButtons
+        hoverEnabled: true
+        onPressed: wantsFocus = true
+        onContainsMouseChanged: wantsFocus = wantsFocus && containsMouse
+
         width: notificationPopup.popupWidth
         height: notificationItem.height + notificationItem.y
+
         DraggableDelegate {
             id: area
             width: parent.width
