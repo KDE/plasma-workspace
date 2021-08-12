@@ -60,6 +60,7 @@ X-KDE-ServiceTypes=Plasma/Applet
 
 X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/manage-inputmethod.qml
+X-Plasma-NotificationArea=true
 
 X-KDE-PluginInfo-Author=Aleix Pol Gonzalez
 X-KDE-PluginInfo-Email=aleixpol@kde.org
