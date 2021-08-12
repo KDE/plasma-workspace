@@ -21,14 +21,12 @@ ecm_qt_declare_logging_category(START_PLASMA_COMMON_SRCS HEADER debug.h IDENTIFI
 
 add_executable(startplasma-x11 ${START_PLASMA_COMMON_SRCS} startplasma-x11.cpp kcheckrunning/kcheckrunning.cpp ${startplasma_SRCS})
 add_executable(startplasma-wayland ${START_PLASMA_COMMON_SRCS} startplasma-wayland.cpp ${startplasma_SRCS})
-add_executable(startplasma-waylandsession ${START_PLASMA_COMMON_SRCS} startplasma-waylandsession.cpp ${startplasma_SRCS})
 
 target_link_libraries(startplasma-x11 PRIVATE Qt::Core Qt::DBus KF5::ConfigCore PW::KWorkspace
     X11::X11 # for kcheckrunning
 )
 
 target_link_libraries(startplasma-wayland PRIVATE Qt::Core Qt::DBus KF5::ConfigCore PW::KWorkspace)
-target_link_libraries(startplasma-waylandsession PRIVATE Qt::Core Qt::DBus KF5::ConfigCore PW::KWorkspace)
 add_subdirectory(plasma-session)
 add_subdirectory(plasma-shutdown)
 
@@ -42,6 +40,5 @@ configure_file(config-startplasma.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-sta
 
 install(TARGETS startplasma-x11 ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 install(TARGETS startplasma-wayland ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(TARGETS startplasma-waylandsession DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 install(PROGRAMS plasma-sourceenv.sh DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 install(PROGRAMS plasma-dbus-run-session-if-needed DESTINATION ${KDE_INSTALL_LIBEXECDIR})
