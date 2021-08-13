@@ -123,11 +123,7 @@ ColumnLayout {
         PlasmaCore.ColorScope.inherit: false
 
         PlasmaExtras.PlasmoidHeading {
-            anchors {
-                fill: parent
-                leftMargin: -margins.left
-                rightMargin: -margins.right
-            }
+            anchors.fill: parent
             visible: !notificationItem.inHistory
         }
 
