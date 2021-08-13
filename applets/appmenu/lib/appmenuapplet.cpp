@@ -176,6 +176,11 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
     }
 
     QMenu *actionMenu = createMenu(idx);
+    actionMenu->createWinId();
+    QWindow *menuWindow = actionMenu->windowHandle();
+    Q_ASSERT(menuWindow);
+    menuWindow->setTransientParent(ctx->window());
+
     if (actionMenu) {
         // this is a workaround where Qt will fail to realize a mouse has been released
         // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
