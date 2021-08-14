@@ -3,12 +3,36 @@
         "Authors": [
             {
                 "Email": "mklapetek@kde.org",
-                "Name": "Martin Klapetek"
+                "Name": "Martin Klapetek",
+                "Name[az]": "Martin Klapetek",
+                "Name[ca]": "Martin Klapetek",
+                "Name[cs]": "Martin Klapetek",
+                "Name[es]": "Martin Klapetek",
+                "Name[nl]": "Martin Klapetek",
+                "Name[sv]": "Martin Klapetek",
+                "Name[uk]": "Martin Klapetek",
+                "Name[x-test]": "xxMartin Klapetekxx"
             }
         ],
         "Description": "Calendar plugin for displaying public holidays",
+        "Description[az]": "Ümumi bayramları göstərmək üçün təqvim əlavəsi",
+        "Description[ca]": "Connector de calendari per a mostrar els festius oficials",
+        "Description[cs]": "Modul kalendáře pro zobrazování státních svátků",
+        "Description[es]": "Complemento del calendario para mostrar días festivos nacionales",
+        "Description[nl]": "Plug-in voor agenda voor tonen van publieke vrije dagen",
+        "Description[sv]": "Kalenderinsticksprogram för att visa allmänna helgdagar",
+        "Description[uk]": "Додаток календаря для показу офіційних свят",
+        "Description[x-test]": "xxCalendar plugin for displaying public holidaysxx",
         "Icon": "view-calendar-holiday",
-        "Name": "Holidays"
+        "Name": "Holidays",
+        "Name[az]": "Bayramlar",
+        "Name[ca]": "Dies festius",
+        "Name[cs]": "Svátky",
+        "Name[es]": "Días festivos",
+        "Name[nl]": "Vrije dagen",
+        "Name[sv]": "Helgdagar",
+        "Name[uk]": "Свята",
+        "Name[x-test]": "xxHolidaysxx"
     },
     "X-KDE-PlasmaCalendar-ConfigUi": "holidays/HolidaysConfig.qml"
 }
