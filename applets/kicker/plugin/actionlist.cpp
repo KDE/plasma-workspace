@@ -285,6 +285,7 @@ QVariantList recentDocumentActions(KService::Ptr service)
 
     while (list.count() < 6 && resultIt != results.end()) {
         const QString resource = (*resultIt).resource();
+        const QString mimeType = (*resultIt).mimetype();
         ++resultIt;
 
         const QUrl url(resource);
@@ -303,7 +304,7 @@ QVariantList recentDocumentActions(KService::Ptr service)
             list << createTitleActionItem(i18n("Recent Files"));
         }
 
-        QVariantMap item = createActionItem(url.fileName(), fileItem.iconName(), QStringLiteral("_kicker_recentDocument"), resource);
+        QVariantMap item = createActionItem(url.fileName(), fileItem.iconName(), QStringLiteral("_kicker_recentDocument"), QStringList{resource, mimeType});
 
         list << item;
     }
@@ -343,14 +344,30 @@ bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, 
         return false;
     }
 
-    QString argument = _argument.toString();
+    const QStringList argument = _argument.toStringList();
+    const auto resource = argument.at(0);
+    const auto mimeType = argument.at(1);
+
+    // prevents using a service file that does not support opening a mime type for a file it created
+    // for instance a screenshot tool
+    if (!mimeType.isEmpty()) {
+        if (!service->hasMimeType(mimeType)) {
+            // needs to find the application that supports this mimetype
+            service = KApplicationTrader::preferredService(mimeType);
+
+            if (!service) {
+                // no service found to handle the mimetype
+                return false;
+            }
+        }
+    }
 
     if (argument.isEmpty()) {
         return false;
     }
 
     auto *job = new KIO::ApplicationLauncherJob(service);
-    job->setUrls({QUrl(argument)});
+    job->setUrls({QUrl::fromUserInput(resource)});
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
     return job->exec();
 }

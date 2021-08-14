@@ -11,6 +11,7 @@
 #include <KFilePlacesModel>
 #include <QQmlParserStatus>
 #include <QSortFilterProxyModel>
+#include <KActivities/Stats/ResultModel>
 
 class QModelIndex;
 class KFileItem;
@@ -100,6 +101,7 @@ private:
     QVariant docData(const QString &resource, int role) const;
 
     QString resourceAt(int row) const;
+    QVariant rowValueAt(int row, KActivities::Stats::ResultModel::Roles role) const;
 
     QString forgetAllActionName() const;
 

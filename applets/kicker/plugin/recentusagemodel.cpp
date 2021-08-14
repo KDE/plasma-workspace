@@ -29,6 +29,7 @@
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KRun>
+#include <KService/KApplicationTrader>
 #include <KService>
 #include <KStartupInfo>
 
@@ -160,13 +161,18 @@ QString RecentUsageModel::description() const
 
 QString RecentUsageModel::resourceAt(int row) const
 {
+    return rowValueAt(row, ResultModel::ResourceRole).toString();
+}
+
+QVariant RecentUsageModel::rowValueAt(int row, ResultModel::Roles role) const
+{
     QSortFilterProxyModel *sourceProxy = qobject_cast<QSortFilterProxyModel *>(sourceModel());
 
     if (sourceProxy) {
-        return sourceProxy->sourceModel()->data(sourceProxy->mapToSource(sourceProxy->index(row, 0)), ResultModel::ResourceRole).toString();
+        return sourceProxy->sourceModel()->data(sourceProxy->mapToSource(sourceProxy->index(row, 0)), role).toString();
     }
 
-    return sourceModel()->data(index(row, 0), ResultModel::ResourceRole).toString();
+    return sourceModel()->data(index(row, 0), role);
 }
 
 QVariant RecentUsageModel::data(const QModelIndex &index, int role) const
@@ -339,6 +345,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
 
     if (actionId.isEmpty() && withinBounds) {
         const QString &resource = resourceAt(row);
+        const QString &mimeType = rowValueAt(row, ResultModel::MimeType).toString();
 
         if (!resource.startsWith(QLatin1String("applications:"))) {
             const QUrl resourceUrl = docData(resource, Kicker::UrlRole).toUrl();
@@ -363,6 +370,20 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
             timeStamp = QX11Info::appUserTime();
         }
 #endif
+
+        // prevents using a service file that does not support opening a mime type for a file it created
+        // for instance a screenshot tool
+        if (!mimeType.isEmpty()) {
+            if (!service->hasMimeType(mimeType)) {
+                // needs to find the application that supports this mimetype
+                service = KApplicationTrader::preferredService(mimeType);
+
+                if (!service) {
+                    // no service found to handle the mimetype
+                    return false;
+                }
+            }
+        }
 
         auto *job = new KIO::ApplicationLauncherJob(service);
         job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
