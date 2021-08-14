@@ -8,6 +8,7 @@
 #include "actionlist.h"
 #include "appentry.h"
 #include "appsmodel.h"
+#include "debug.h"
 #include "kastatsfavoritesmodel.h"
 #include <kio_version.h>
 
@@ -381,6 +382,8 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
                 if (!service) {
                     // no service found to handle the mimetype
                     return false;
+                } else {
+                    qCWarning(KICKER_DEBUG) << "Preventing the file to open with " << service->desktopEntryName() << "no alternative found";
                 }
             }
         }
