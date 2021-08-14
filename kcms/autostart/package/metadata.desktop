@@ -71,6 +71,7 @@ X-KDE-ParentApp=kcontrol
 X-KDE-Keywords=Autostart Manager,autostart,startup,system startup,plasma start,cron
 X-KDE-Keywords[az]=Autostart Manager,autostart,startup,system startup,plasma start,cronAvtomatik başlama meneceri, avtomatik başlama, sistemin işə salınması Plasmanın başladılması
 X-KDE-Keywords[ca]=Gestor de l'inici automàtic,inici automàtic,inici,inici del sistema,inici del Plasma,cron
+X-KDE-Keywords[cs]=správce automatického spuštění,automatické spuštění,spuštění systému,spuštění plasma,cron
 X-KDE-Keywords[de]=Autostart Manager,autostart,startup,system startup,plasma start,cron,Autostartverwaltung,Autostart,Startvorgang,Systemstart,Plasma-Start,Cron
 X-KDE-Keywords[en_GB]=Autostart Manager,autostart,startup,system startup,plasma start,cron
 X-KDE-Keywords[es]=Gestor de inicio automático,inicio automático,inicio,inicio del sistema,inicio de plasma,cron
