@@ -326,7 +326,7 @@ void FontsAASettings::setAntiAliasing(bool enabled)
 
 int FontsAASettings::dpi() const
 {
-    return forceFontDPI();
+    return KWindowSystem::isPlatformWayland() ? forceFontDPIWayland() : forceFontDPI();
 }
 
 void FontsAASettings::setDpi(int newDPI)
@@ -335,8 +335,11 @@ void FontsAASettings::setDpi(int newDPI)
         return;
     }
 
-    setForceFontDPI(newDPI);
-
+    if (KWindowSystem::isPlatformWayland()) {
+        setForceFontDPIWayland(newDPI);
+    } else {
+        setForceFontDPI(newDPI);
+    }
     emit dpiChanged();
 }
 
