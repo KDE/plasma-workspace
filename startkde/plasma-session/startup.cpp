@@ -148,10 +148,7 @@ Startup::Startup(QObject *parent)
 
     const AutoStart autostart;
 
-    // Keep for KF5; remove in KF6 (KInit will be gone then)
-    QProcess::execute(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF5 "/start_kdeinit_wrapper"), QStringList());
-
-    KJob *windowManagerJob = nullptr;
+    KJob *x11WindowManagerJob = nullptr;
     if (qEnvironmentVariable("XDG_SESSION_TYPE") != QLatin1String("wayland")) {
         QString windowManager;
         if (qEnvironmentVariableIsSet("KDEWM")) {
@@ -162,11 +159,30 @@ Startup::Startup(QObject *parent)
         }
 
         if (windowManager == QLatin1String(KWIN_BIN)) {
-            windowManagerJob = new StartServiceJob(windowManager, {}, QStringLiteral("org.kde.KWin"));
+            x11WindowManagerJob = new StartServiceJob(windowManager, {}, QStringLiteral("org.kde.KWin"));
         } else {
-            windowManagerJob = new StartServiceJob(windowManager, {}, {});
+            x11WindowManagerJob = new StartServiceJob(windowManager, {}, {});
         }
+    } else {
+        // This must block until started as it sets the WAYLAND_DISPLAY/DISPLAY env variables needed for the rest of the boot
+        // fortunately it's very fast as it's just starting a wrapper
+        StartServiceJob kwinWaylandJob(QStringLiteral("kwin_wayland_wrapper"), {QStringLiteral("--xwayland")}, QStringLiteral("org.kde.KWinWrapper"));
+        kwinWaylandJob.exec();
+        // kslpash is only launched in plasma-session from the wayland mode, for X it's in startplasma-x11
+
+        const KConfig cfg(QStringLiteral("ksplashrc"));
+        // the splashscreen and progress indicator
+        KConfigGroup ksplashCfg = cfg.group("KSplash");
+        if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
+            QProcess::startDetached(QStringLiteral("ksplashqml"), {ksplashCfg.readEntry("Theme", QStringLiteral("Breeze"))});
+        }
+        // FIXME 1: this code path is missing setupFontDpi() after X has started. Move to kcminit?
+        // FIXME 2: the systemd path has no concept of kslpash
+        // FIXME 3: the systemd code path is missing setupFontDpi
     }
+
+    // Keep for KF5; remove in KF6 (KInit will be gone then)
+    QProcess::execute(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF5 "/start_kdeinit_wrapper"), QStringList());
 
     KJob *phase1 = nullptr;
     m_lock.reset(new QEventLoopLocker);
@@ -174,7 +190,7 @@ Startup::Startup(QObject *parent)
     const QVector<KJob *> sequence = {
         new StartProcessJob(QStringLiteral("kcminit_startup"), {}),
         new StartServiceJob(QStringLiteral("kded5"), {}, QStringLiteral("org.kde.kded5"), {}),
-        windowManagerJob,
+        x11WindowManagerJob,
         new StartServiceJob(QStringLiteral("ksmserver"), QCoreApplication::instance()->arguments().mid(1), QStringLiteral("org.kde.ksmserver")),
         new StartupPhase0(autostart, this),
         phase1 = new StartupPhase1(autostart, this),

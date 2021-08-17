@@ -1,7 +1,7 @@
 [Unit]
 Description=KDE Session Management Server
-Wants=plasma-kcminit.service
 PartOf=graphical-session.target
+After=plasma-kwin_wayland.service plasma-kcminit.service
 
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/ksmserver
