@@ -28,7 +28,6 @@
 #include <KConfigGroup>
 #include <KMessageBox>
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KSharedConfig>
 #include <KShell>
 #include <KStandardAction>
@@ -117,22 +116,15 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
 
     editorLayout->addWidget(toolBar);
 
-    auto tryLoadingKatePart = [=]() {
-        KTextEditor::Document *result = nullptr;
-        KPluginLoader loader(QStringLiteral("kf5/parts/katepart"));
+    auto tryLoadingKatePart = [=]() -> KTextEditor::Document * {
+        const auto loadResult = KPluginFactory::instantiatePlugin<KTextEditor::Document>(KPluginMetaData(QStringLiteral("kf5/parts/katepart")), this);
 
-        KPluginFactory *factory = loader.factory();
-        if (!factory) {
-            qWarning() << "Error loading katepart plugin:" << loader.errorString();
-            return result;
+        if (!loadResult) {
+            qWarning() << "Error loading katepart plugin:" << loadResult.errorString;
+            return nullptr;
         }
 
-        result = factory->create<KTextEditor::Document>(widget);
-
-        if (!result) {
-            qWarning() << "Error creating katepart object";
-            return result;
-        }
+        KTextEditor::Document *result = loadResult.plugin;
 
         result->setHighlightingMode(QStringLiteral("JavaScript/PlasmaDesktop"));
 

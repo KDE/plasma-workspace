@@ -12,7 +12,6 @@
 #include <KDBusService>
 #include <KParts/BrowserExtension>
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KSharedConfig>
 #include <KShortcutsDialog>
 #include <KStandardAction>
@@ -27,32 +26,31 @@ namespace KFI
 {
 CViewer::CViewer()
 {
-    KPluginLoader loader("kf5/parts/kfontviewpart");
-    KPluginFactory *factory = loader.factory();
+    const auto result = KPluginFactory::instantiatePlugin<KParts::ReadOnlyPart>(KPluginMetaData(QStringLiteral("kf5/parts/kfontviewpart")), this);
 
-    if (factory) {
-        itsPreview = factory->create<KParts::ReadOnlyPart>(this);
-
-        actionCollection()->addAction(KStandardAction::Open, this, SLOT(fileOpen()));
-        actionCollection()->addAction(KStandardAction::Quit, this, SLOT(close()));
-        actionCollection()->addAction(KStandardAction::KeyBindings, this, SLOT(configureKeys()));
-        itsPrintAct = actionCollection()->addAction(KStandardAction::Print, itsPreview, SLOT(print()));
-
-        itsPrintAct->setEnabled(false);
-
-        if (itsPreview->browserExtension()) {
-            connect(itsPreview->browserExtension(), &KParts::BrowserExtension::enableAction, this, &CViewer::enableAction);
-        }
-
-        setCentralWidget(itsPreview->widget());
-        createGUI(itsPreview);
-
-        setAutoSaveSettings();
-        applyMainWindowSettings(KSharedConfig::openConfig()->group("MainWindow"));
-    } else {
-        qWarning() << "Error loading kfontviewpart:" << loader.errorString();
+    if (!result) {
+        qWarning() << "Error loading kfontviewpart:" << result.errorString;
         exit(1);
     }
+
+    itsPreview = result.plugin;
+
+    actionCollection()->addAction(KStandardAction::Open, this, SLOT(fileOpen()));
+    actionCollection()->addAction(KStandardAction::Quit, this, SLOT(close()));
+    actionCollection()->addAction(KStandardAction::KeyBindings, this, SLOT(configureKeys()));
+    itsPrintAct = actionCollection()->addAction(KStandardAction::Print, itsPreview, SLOT(print()));
+
+    itsPrintAct->setEnabled(false);
+
+    if (itsPreview->browserExtension()) {
+        connect(itsPreview->browserExtension(), &KParts::BrowserExtension::enableAction, this, &CViewer::enableAction);
+    }
+
+    setCentralWidget(itsPreview->widget());
+    createGUI(itsPreview);
+
+    setAutoSaveSettings();
+    applyMainWindowSettings(KSharedConfig::openConfig()->group("MainWindow"));
 }
 
 void CViewer::fileOpen()

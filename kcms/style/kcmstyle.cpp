@@ -24,7 +24,6 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KToolBar>
 
 #include <QDBusPendingCallWatcher>
@@ -171,7 +170,7 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
         return;
     }
 
-    QLibrary library(KPluginLoader::findPlugin(configPage));
+    QLibrary library(QPluginLoader(configPage).fileName());
     if (!library.load()) {
         qWarning() << "Failed to load style config page" << configPage << library.errorString();
         emit showErrorMessage(i18n("There was an error loading the configuration dialog for this style."));

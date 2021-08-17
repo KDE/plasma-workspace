@@ -59,9 +59,9 @@ bool KCMInit::runModule(const QString &libName, KService::Ptr service)
     } else
         kcminit = KCMINIT_PREFIX + libName;
 
-    QString path = KPluginLoader::findPlugin(libName);
+    QString path = QPluginLoader(libName).fileName();
     if (path.isEmpty()) {
-        path = KPluginLoader::findPlugin(QStringLiteral("kcms/") + libName);
+        path = QPluginLoader(QStringLiteral("kcms/") + libName).fileName();
     }
 
     if (path.isEmpty()) {

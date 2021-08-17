@@ -8,7 +8,6 @@
 
 #include <limits.h>
 
-#include <KPluginLoader>
 #include <KPluginMetaData>
 #include <NetworkManagerQt/Manager>
 #include <QDebug>
@@ -36,18 +35,17 @@ Geolocation::Geolocation(QObject *parent, const QVariantList &args)
 void Geolocation::init()
 {
     // TODO: should this be delayed even further, e.g. when the source is requested?
-    const QVector<KPluginMetaData> offers = KPluginLoader::findPlugins("plasma/geolocationprovider");
+    const QVector<KPluginMetaData> offers = KPluginMetaData::findPlugins("plasma/geolocationprovider");
     for (const auto &metaData : offers) {
-        KPluginLoader loader(metaData.fileName());
-        if (KPluginFactory *factory = loader.factory()) {
-            if (auto plugin = factory->create<GeolocationProvider>(this)) {
-                m_plugins << plugin;
-                plugin->init(&m_data, &m_accuracy);
-                connect(plugin, &GeolocationProvider::updated, this, &Geolocation::pluginUpdated);
-                connect(plugin, &GeolocationProvider::availabilityChanged, this, &Geolocation::pluginAvailabilityChanged);
-            } else {
-                qDebug() << "Failed to load GeolocationProvider:" << metaData.fileName();
-            }
+        auto result = KPluginFactory::instantiatePlugin<GeolocationProvider>(metaData, this);
+        if (result) {
+            GeolocationProvider *plugin = result.plugin;
+            m_plugins << plugin;
+            plugin->init(&m_data, &m_accuracy);
+            connect(plugin, &GeolocationProvider::updated, this, &Geolocation::pluginUpdated);
+            connect(plugin, &GeolocationProvider::availabilityChanged, this, &Geolocation::pluginAvailabilityChanged);
+        } else {
+            qDebug() << "Failed to load GeolocationProvider:" << metaData.fileName() << result.errorString;
         }
     }
 }
