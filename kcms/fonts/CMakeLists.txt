@@ -9,6 +9,7 @@ set(kcm_fonts_PART_SRCS
     fonts.cpp
     fontsaasettings.cpp
     kxftconfig.cpp
+    fontinit.cpp
     ../kfontinst/lib/FcEngine.cpp
     ../kcms-common.cpp
 )

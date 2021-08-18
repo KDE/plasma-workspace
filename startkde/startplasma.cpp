@@ -391,25 +391,6 @@ bool syncDBusEnvironment()
     return job->exec();
 }
 
-void setupFontDpi()
-{
-    KConfig cfg(QStringLiteral("kcmfonts"));
-    KConfigGroup fontsCfg(&cfg, "General");
-
-    if (!fontsCfg.hasKey("forceFontDPI")) {
-        return;
-    }
-
-    // TODO port to c++?
-    const QByteArray input = "Xft.dpi: " + QByteArray::number(fontsCfg.readEntry("forceFontDPI", 0));
-    QProcess p;
-    p.start(QStringLiteral("xrdb"), {QStringLiteral("-quiet"), QStringLiteral("-merge"), QStringLiteral("-nocpp")});
-    p.setProcessChannelMode(QProcess::ForwardedChannels);
-    p.write(input);
-    p.closeWriteChannel();
-    p.waitForFinished(-1);
-}
-
 static bool desktopLockedAtStart = false;
 
 QProcess *setupKSplash()

@@ -58,7 +58,6 @@ int main(int argc, char **argv)
     }
 
     setupCursor(false);
-    setupFontDpi();
     QScopedPointer<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
 
     runEnvironmentScripts();

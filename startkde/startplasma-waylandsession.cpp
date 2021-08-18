@@ -10,7 +10,6 @@ int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
 
-    setupFontDpi();
     QScopedPointer<QProcess, KillBeforeDeleter> ksplash;
 
     if (!qEnvironmentVariableIsSet("KWIN_RESTART_COUNT")) {

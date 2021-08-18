@@ -1,7 +1,7 @@
 [Desktop Entry]
 Icon=preferences-desktop-font
 Type=Service
-X-KDE-ServiceTypes=KCModule
+X-KDE-ServiceTypes=KCModule,KCModuleInit
 X-DocPath=kcontrol/fonts/index.html
 
 X-KDE-Library=kcm_fonts
@@ -9,6 +9,9 @@ X-KDE-ParentApp=kcontrol
 
 X-KDE-System-Settings-Parent-Category=appearance
 X-KDE-Weight=50
+
+X-KDE-Init-Symbol=kcminit_fonts
+X-KDE-Init-Phase=0
 
 Name=Fonts
 Name[ar]=الخطوط
