@@ -56,6 +56,9 @@ void Greeter::init()
 
 void Greeter::adoptScreen(QScreen *screen)
 {
+    if (screen->geometry().isNull()) {
+        return;
+    }
     // TODO: last argument is the theme, maybe add command line option for it?
     KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownType);
     w->installEventFilter(this);
