@@ -120,22 +120,14 @@ PlasmaExtras.Representation {
 
     Item { // Album Art Background + Details
         anchors.fill: parent
+        clip: true
 
-        Image {
+        ShaderEffect {
             id: backgroundImage
+            property Image source: albumArt
 
-            source: root.albumArt
-            sourceSize.width: 512 /*
-                                    * Setting a sourceSize.width here
-                                    * prevents flickering when resizing the
-                                    * plasmoid on a desktop.
-                                    */
-
-            anchors.fill: parent
-            fillMode: Image.PreserveAspectCrop
-
-            asynchronous: true
-            visible: !!root.track && status === Image.Ready && !softwareRendering
+            anchors.centerIn: parent
+            visible: !!root.track && source.status === Image.Ready && !softwareRendering
 
             layer.enabled: !softwareRendering
             layer.effect: HueSaturation {
@@ -153,6 +145,16 @@ PlasmaExtras.Representation {
                     samples: 63
 
                     transparentBorder: false
+                }
+            }
+            // use State to avoid unnecessary reevaluation of width and height
+            states: State {
+                name: "albumArtReady"
+                when: plasmoid.expanded && backgroundImage.visible && albumArt.paintedWidth > 0
+                PropertyChanges {
+                    target: backgroundImage
+                    width: parent.width * Math.max(1, source.paintedWidth / source.paintedHeight)
+                    height: parent.width * Math.max(1, source.paintedHeight / source.paintedWidth)
                 }
             }
         }
