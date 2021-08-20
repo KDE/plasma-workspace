@@ -24,6 +24,7 @@ set(taskmanager_LIB_SRCS
 if (X11_FOUND)
     set(taskmanager_LIB_SRCS
         ${taskmanager_LIB_SRCS}
+        xstartuptasksmodel.cpp
         xwindowsystemeventbatcher.cpp
         xwindowtasksmodel.cpp
     )
@@ -91,6 +92,7 @@ install(FILES
 
 if (X11_FOUND)
     install(FILES
+        xstartuptasksmodel.h
         xwindowtasksmodel.h
         DESTINATION ${KDE_INSTALL_INCLUDEDIR}/taskmanager COMPONENT Devel
     )

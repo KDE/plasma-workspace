@@ -38,6 +38,7 @@
 #include <KIO/OpenUrlJob>
 #include <KIO/StatJob>
 
+#include <abstracttasksmodel.h>
 #include <startuptasksmodel.h>
 
 IconApplet::IconApplet(QObject *parent, const QVariantList &data)

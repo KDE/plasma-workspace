@@ -6,8 +6,10 @@
 
 #pragma once
 
-#include "abstracttasksmodel.h"
+#include "abstracttasksproxymodeliface.h"
 #include "taskmanager_export.h"
+
+#include <QIdentityProxyModel>
 
 namespace TaskManager
 {
@@ -25,7 +27,7 @@ namespace TaskManager
  * @author Eike Hein <hein@kde.org>
  */
 
-class TASKMANAGER_EXPORT StartupTasksModel : public AbstractTasksModel
+class TASKMANAGER_EXPORT StartupTasksModel : public QIdentityProxyModel, public AbstractTasksProxyModelIface
 {
     Q_OBJECT
 
@@ -33,16 +35,10 @@ public:
     explicit StartupTasksModel(QObject *parent = nullptr);
     ~StartupTasksModel() override;
 
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    QHash<int, QByteArray> roleNames() const override;
 
-    /**
-     * Request an additional instance of the application backing the
-     * startup notification at the given index.
-     *
-     * @param index An index in this startup tasks model.
-     **/
-    void requestNewInstance(const QModelIndex &index) override;
+protected:
+    QModelIndex mapIfaceToSource(const QModelIndex &index) const override;
 
 private:
     class Private;
