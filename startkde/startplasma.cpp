@@ -566,7 +566,11 @@ bool startPlasmaSession(bool wayland)
 
     // We want to exit when both ksmserver and plasma-session-shutdown have finished
     // This also closes if ksmserver crashes unexpectedly, as in those cases plasma-shutdown is not running
-    serviceWatcher.addWatchedService(QStringLiteral("org.kde.ksmserver"));
+    if (wayland) {
+        serviceWatcher.addWatchedService(QStringLiteral("org.kde.KWinWrapper"));
+    } else {
+        serviceWatcher.addWatchedService(QStringLiteral("org.kde.ksmserver"));
+    }
     serviceWatcher.addWatchedService(QStringLiteral("org.kde.Shutdown"));
     serviceWatcher.setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
 
