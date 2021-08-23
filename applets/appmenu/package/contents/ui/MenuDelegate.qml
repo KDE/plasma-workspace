@@ -19,6 +19,7 @@ import QtQuick 2.10
 import QtQuick.Controls 2.10
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PC3
+import org.kde.kirigami 2.12 as Kirigami
 
 AbstractButton {
     id: controlRoot
@@ -30,6 +31,9 @@ AbstractButton {
         Hover,
         Down
     }
+
+    Kirigami.MnemonicData.controlType: Kirigami.MnemonicData.SecondaryControl
+    Kirigami.MnemonicData.label: controlRoot.text
 
     leftPadding: rest.margins.left
     topPadding: rest.margins.top
@@ -72,6 +76,6 @@ AbstractButton {
     }
 
     contentItem: PC3.Label {
-        text: controlRoot.text
+        text: controlRoot.Kirigami.MnemonicData.richTextLabel
     }
 }

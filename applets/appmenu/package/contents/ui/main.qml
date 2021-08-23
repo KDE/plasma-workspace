@@ -109,10 +109,15 @@ Item {
                 Layout.fillWidth: root.vertical
                 Layout.fillHeight: !root.vertical
                 text: activeMenu
-                Kirigami.MnemonicData.active: keystateSource.data.Alt && keystateSource.data.Alt.Pressed
-                // fake highlighted
-                checkable: plasmoid.nativeInterface.currentIndex === index
-                checked: checkable
+                Kirigami.MnemonicData.active: {
+                    try {
+                        return keystateSource.data.Alt && keystateSource.data.Alt.Pressed
+                    } catch (error) {
+                        return false
+                    }
+                }
+
+                down: pressed || plasmoid.nativeInterface.currentIndex === index
 
                 visible: text !== ""
                 onClicked: {
