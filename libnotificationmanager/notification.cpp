@@ -15,10 +15,10 @@
 #include <QRegularExpression>
 #include <QXmlStreamReader>
 
+#include <KApplicationTrader>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KService>
-#include <KServiceTypeTrader>
 
 #include "debug.h"
 
@@ -262,17 +262,25 @@ KService::Ptr Notification::Private::serviceForDesktopEntry(const QString &deskt
     // Try if it's a renamed flatpak
     if (!service) {
         const QString desktopId = desktopEntry + QLatin1String(".desktop");
-        // HACK Querying for XDG lists in KServiceTypeTrader does not work, do it manually
-        const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and exist [X-Flatpak-RenamedFrom]"));
-        for (auto it = services.constBegin(); it != services.constEnd() && !service; ++it) {
-            const QVariant renamedFrom = (*it)->property(QStringLiteral("X-Flatpak-RenamedFrom"), QVariant::String);
-            const auto names = renamedFrom.toString().split(QChar(';'));
+
+        const auto services = KApplicationTrader::query([&desktopId](const KService::Ptr &app) -> bool {
+            const QString renamedFrom = app->property(QStringLiteral("X-Flatpak-RenamedFrom"), QVariant::String).toString();
+
+            if (renamedFrom.isEmpty()) {
+                return false;
+            }
+
+            const auto names = renamedFrom.split(QChar(';'));
             for (const QString &name : names) {
                 if (name == desktopId) {
-                    service = *it;
-                    break;
+                    return true;
                 }
             }
+            return false;
+        });
+
+        if (!services.isEmpty()) {
+            service = services.first();
         }
     }
 
