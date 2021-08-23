@@ -70,3 +70,5 @@ X-KDE-PluginInfo-Category=Accessibility
 X-KDE-PluginInfo-License=GPL-2.0+
 X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-FormFactors=tablet,handset,desktop
+X-Plasma-NotificationArea=true
+X-Plasma-NotificationAreaCategory=SystemServices
