@@ -17,6 +17,7 @@ KCM.SimpleKCM {
     id: root
     property int error: cA.error
     property bool defaultRequested: false
+    property var locator
     implicitHeight: Kirigami.Units.gridUnit * 29
     implicitWidth: Kirigami.Units.gridUnit * 35
 
@@ -24,12 +25,25 @@ KCM.SimpleKCM {
         id: cA
     }
 
-    CC.Geolocator {
-        id: locator
-    }
-
     CC.SunCalc {
         id: sunCalc
+    }
+
+    // the Geolocator object is created dynamically so we can have control over when geolocation is attempted
+    // because the object attempts geolocation immediately when created, which is unnecessary (and bad for privacy)
+
+    function startLocator() {
+        root.locator = Qt.createQmlObject('import org.kde.colorcorrect 0.1 as CC; CC.Geolocator {}', root, "geoLocatorObj");
+    }
+
+    function endLocator() {
+        root.locator.destroy();
+    }
+
+    Component.onCompleted: {
+        if (cA.mode == CC.CompositorAdaptor.ModeAutomatic && cA.active) {
+            startLocator();
+        }
     }
 
     function calcNeedsSave() {
@@ -219,9 +233,28 @@ KCM.SimpleKCM {
                 currentIndex: cA.mode
                 onCurrentIndexChanged: {
                     cA.modeStaged = currentIndex;
+                    if (currentIndex == CC.CompositorAdaptor.ModeAutomatic) {
+                        startLocator();
+                    } else {
+                        endLocator();
+                    }
                     calcNeedsSave();
                 }
             }
+
+            // Inform about geolocation access in auto mode
+            QQC2.Label {
+                visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeAutomatic
+                enabled: activator.checked
+                wrapMode: Text.Wrap
+                Layout.maximumWidth: modeSwitcher.width
+                text: i18n("The device's location will be periodically updated using GPS (if available), or by sending network information to <a href=\"https://location.services.mozilla.com\">Mozilla Location Services</a>.")
+                onLinkActivated: { Qt.openUrlExternally("https://location.services.mozilla.com"); }
+                font: Kirigami.Theme.smallFont
+            }
+
+            // Workaround for Layout.margins not working in Kirigami FormLayout (bug 434625)
+            Item { implicitHeight: Kirigami.Units.largeSpacing }
 
             // Show current location in auto mode
             QQC2.Label {
