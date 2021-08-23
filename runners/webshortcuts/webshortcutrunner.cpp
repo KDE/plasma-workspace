@@ -63,7 +63,8 @@ void WebshortcutRunner::loadSyntaxes()
 
 void WebshortcutRunner::configurePrivateBrowsingActions()
 {
-    clearActions();
+    qDeleteAll(m_match.actions());
+    m_match.setActions({});
     const QString browserFile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"))->group("General").readEntry("BrowserApplication");
     KService::Ptr service;
     if (!browserFile.isEmpty()) {
