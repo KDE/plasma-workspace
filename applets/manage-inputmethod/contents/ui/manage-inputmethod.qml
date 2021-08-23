@@ -56,7 +56,7 @@ Item {
                 target: plasmoid
                 icon: "input-keyboard-virtual-off"
                 toolTipSubText: i18n("Virtual Keyboard: unavailable")
-                status: PlasmaCore.Types.PassiveStatus
+                status: PlasmaCore.Types.HiddenStatus
             }
             PropertyChanges { target: root; overlays: [ "emblem-unavailable" ] }
         },
@@ -87,7 +87,7 @@ Item {
             PropertyChanges { target: plasmoid
                 icon: "input-keyboard-virtual-on"
                 toolTipSubText: i18n("Virtual Keyboard: enabled")
-                status: PlasmaCore.Types.PassiveStatus
+                status: PlasmaCore.Types.ActiveStatus
             }
             PropertyChanges { target: root; overlays: [] }
         }
