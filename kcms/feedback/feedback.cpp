@@ -38,7 +38,7 @@ Feedback::Feedback(QObject *parent, const QVariantList &args)
 {
     Q_UNUSED(args)
 
-    qmlRegisterType<FeedbackSettings>();
+    qmlRegisterAnonymousType<FeedbackSettings>("org.kde.userfeedback.kcm", 1);
 
     setAboutData(new KAboutData(QStringLiteral("kcm_feedback"),
                                 i18n("User Feedback"),
