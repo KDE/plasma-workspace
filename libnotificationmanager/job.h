@@ -18,6 +18,14 @@ namespace NotificationManager
 {
 class JobPrivate;
 
+/**
+ * @short Represents a single job.
+ *
+ * A Job represents a special notification that has some progress information and in
+ * some cases can be suspended or killed.
+ *
+ * @author Kai Uwe Broulik <kde@privat.broulik.de>
+ */
 class NOTIFICATIONMANAGER_EXPORT Job : public QObject
 {
     Q_OBJECT

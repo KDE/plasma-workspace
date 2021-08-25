@@ -23,7 +23,6 @@ namespace TaskManager
  *
  * @author Eike Hein <hein@kde.org>
  **/
-
 class TASKMANAGER_EXPORT AbstractTasksModel : public QAbstractListModel, public AbstractTasksModelIface
 {
     Q_OBJECT

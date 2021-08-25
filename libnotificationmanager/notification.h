@@ -19,7 +19,7 @@
 namespace NotificationManager
 {
 /**
- * @short Represents a single notification
+ * @short Represents a single notification.
  *
  * @author Kai Uwe Broulik <kde@privat.broulik.de>
  **/
