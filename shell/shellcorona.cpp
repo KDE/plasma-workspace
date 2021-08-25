@@ -80,7 +80,6 @@ ShellCorona::ShellCorona(QObject *parent)
     , m_activityController(new KActivities::Controller(this))
     , m_addPanelAction(nullptr)
     , m_addPanelsMenu(nullptr)
-    , m_interactiveConsole(nullptr)
     , m_waylandPlasmaShell(nullptr)
     , m_closingDown(false)
     , m_strutManager(new StrutManager(this))
@@ -1425,102 +1424,41 @@ void ShellCorona::toggleDashboard()
     setDashboardShown(!KWindowSystem::showingDesktop());
 }
 
-void ShellCorona::loadInteractiveConsole()
-{
-    if (KSharedConfig::openConfig()->isImmutable() || !KAuthorized::authorize(QStringLiteral("plasma-desktop/scripting_console"))) {
-        delete m_interactiveConsole;
-        m_interactiveConsole = nullptr;
-        return;
-    }
-
-    if (!m_interactiveConsole) {
-        const QUrl consoleQML = kPackage().fileUrl("interactiveconsole");
-        if (consoleQML.isEmpty()) {
-            return;
-        }
-
-        m_interactiveConsole = new KDeclarative::QmlObjectSharedEngine(this);
-        m_interactiveConsole->setInitializationDelayed(true);
-        m_interactiveConsole->setSource(consoleQML);
-
-        QObject *engine = new WorkspaceScripting::ScriptEngine(this, m_interactiveConsole);
-        m_interactiveConsole->rootContext()->setContextProperty(QStringLiteral("scriptEngine"), engine);
-
-        m_interactiveConsole->completeInitialization();
-        if (m_interactiveConsole->rootObject()) {
-            connect(m_interactiveConsole->rootObject(), SIGNAL(visibleChanged(bool)), this, SLOT(interactiveConsoleVisibilityChanged(bool)));
-        }
-    }
-}
-
-void ShellCorona::showInteractiveConsole()
-{
-    loadInteractiveConsole();
-    if (m_interactiveConsole && m_interactiveConsole->rootObject()) {
-        m_interactiveConsole->rootObject()->setProperty("mode", "desktop");
-        m_interactiveConsole->rootObject()->setProperty("visible", true);
-    }
-}
-
-void ShellCorona::loadScriptInInteractiveConsole(const QString &script)
-{
-    showInteractiveConsole();
-    if (m_interactiveConsole) {
-        m_interactiveConsole->rootObject()->setProperty("script", script);
-    }
-}
-
-void ShellCorona::showInteractiveKWinConsole()
-{
-    loadInteractiveConsole();
-
-    if (m_interactiveConsole && m_interactiveConsole->rootObject()) {
-        m_interactiveConsole->rootObject()->setProperty("mode", "windowmanager");
-        m_interactiveConsole->rootObject()->setProperty("visible", true);
-    }
-}
-
-void ShellCorona::loadKWinScriptInInteractiveConsole(const QString &script)
-{
-    showInteractiveKWinConsole();
-    if (m_interactiveConsole) {
-        m_interactiveConsole->rootObject()->setProperty("script", script);
-    }
-}
-
-void ShellCorona::evaluateScript(const QString &script)
+QString ShellCorona::evaluateScript(const QString &script)
 {
     if (calledFromDBus()) {
         if (immutability() == Plasma::Types::SystemImmutable) {
             sendErrorReply(QDBusError::Failed, QStringLiteral("Widgets are locked"));
-            return;
+            return QString();
         } else if (!KAuthorized::authorize(QStringLiteral("plasma-desktop/scripting_console"))) {
             sendErrorReply(QDBusError::Failed, QStringLiteral("Administrative policies prevent script execution"));
-            return;
+            return QString();
         }
     }
 
     WorkspaceScripting::ScriptEngine scriptEngine(this);
+    QString buffer;
+    QTextStream bufferStream(&buffer, QIODevice::WriteOnly | QIODevice::Text);
 
-    connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this, [](const QString &msg) {
+    connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this, [&bufferStream](const QString &msg) {
         qWarning() << msg;
+        bufferStream << msg;
     });
-    connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [](const QString &msg) {
+    connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [&bufferStream](const QString &msg) {
         qDebug() << msg;
+        bufferStream << msg;
     });
 
     scriptEngine.evaluateScript(script);
-    if (!scriptEngine.errorString().isEmpty() && calledFromDBus()) {
-        sendErrorReply(QDBusError::Failed, scriptEngine.errorString());
-    }
-}
 
-void ShellCorona::interactiveConsoleVisibilityChanged(bool visible)
-{
-    if (!visible) {
-        m_interactiveConsole->deleteLater();
-        m_interactiveConsole = nullptr;
+    bufferStream.flush();
+
+    if (calledFromDBus() && !scriptEngine.errorString().isEmpty()) {
+        sendErrorReply(QDBusError::Failed, scriptEngine.errorString());
+        return QString();
     }
+
+    return buffer;
 }
 
 void ShellCorona::checkActivities()

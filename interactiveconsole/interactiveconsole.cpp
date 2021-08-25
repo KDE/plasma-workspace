@@ -46,6 +46,7 @@
 // interactive help?
 static const QString s_autosaveFileName(QStringLiteral("interactiveconsoleautosave.js"));
 static const QString s_kwinService = QStringLiteral("org.kde.KWin");
+static const QString s_plasmaShellService = QStringLiteral("org.kde.plasmashell");
 
 InteractiveConsole::InteractiveConsole(QWidget *parent)
     : QDialog(parent)
@@ -504,9 +505,6 @@ void InteractiveConsole::reenableEditor(KJob *job)
 void InteractiveConsole::evaluateScript()
 {
     // qDebug() << "evaluating" << m_editor->toPlainText();
-    const QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/" + s_autosaveFileName;
-    saveScript(QUrl::fromLocalFile(path));
-
     m_output->moveCursor(QTextCursor::End);
     QTextCursor cursor = m_output->textCursor();
     m_output->setTextCursor(cursor);
@@ -531,11 +529,23 @@ void InteractiveConsole::evaluateScript()
     t.start();
 
     if (m_mode == PlasmaConsole) {
-        if (m_scriptEngine) {
-            const QString script = m_editorPart ? m_editorPart->text() : m_editor->toPlainText();
-            QMetaObject::invokeMethod(m_scriptEngine, "evaluateScript", Q_ARG(QString, script));
+        QDBusMessage message = QDBusMessage::createMethodCall(s_plasmaShellService,
+                                                              QStringLiteral("/PlasmaShell"),
+                                                              QStringLiteral("org.kde.PlasmaShell"),
+                                                              QStringLiteral("evaluateScript"));
+        QList<QVariant> arguments;
+        arguments << QVariant(m_editorPart->text());
+        message.setArguments(arguments);
+        QDBusMessage reply = QDBusConnection::sessionBus().call(message);
+        if (reply.type() == QDBusMessage::ErrorMessage) {
+            print(reply.errorMessage());
+        } else {
+            print(reply.arguments().first().toString());
         }
     } else if (m_mode == KWinConsole) {
+        const QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/" + s_autosaveFileName;
+        saveScript(QUrl::fromLocalFile(path));
+
         QDBusMessage message = QDBusMessage::createMethodCall(s_kwinService, QStringLiteral("/Scripting"), QString(), QStringLiteral("loadScript"));
         QList<QVariant> arguments;
         arguments << QVariant(path);

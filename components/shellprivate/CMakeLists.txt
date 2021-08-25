@@ -1,10 +1,4 @@
 
-if (KF5TextEditor_FOUND)
-   set(interactiveconsole_SRCS
-       interactiveconsole/interactiveconsole.cpp
-       )
-endif (KF5TextEditor_FOUND)
-
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-shellprivate.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-shellprivate.h)
 
 set(plasmashellprivateplugin_SRCS
@@ -13,7 +7,6 @@ set(plasmashellprivateplugin_SRCS
     widgetexplorer/openwidgetassistant.cpp
     widgetexplorer/widgetexplorer.cpp
     shellprivateplugin.cpp
-    ${interactiveconsole_SRCS}
 )
 
 add_library(plasmashellprivateplugin SHARED ${plasmashellprivateplugin_SRCS})
@@ -36,11 +29,6 @@ target_link_libraries(plasmashellprivateplugin
         KF5::Activities
         KF5::TextWidgets
 )
-
-if (KF5TextEditor_FOUND)
-   target_link_libraries(plasmashellprivateplugin
-                         KF5::TextEditor)
-endif (KF5TextEditor_FOUND)
 
 install(TARGETS plasmashellprivateplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/shell)
 install(FILES

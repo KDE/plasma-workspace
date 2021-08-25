@@ -41,7 +41,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma DocTools Runner Notifications NotifyConfig Su NewStuff Wallet IdleTime
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
                     CoreAddons People ActivitiesStats Activities KIO Prison PlasmaQuick Package
-                    GuiAddons Archive ItemModels IconThemes UnitConversion ItemModels Init)
+                    GuiAddons Archive ItemModels IconThemes UnitConversion ItemModels Init TextEditor)
 
 find_package(KDED CONFIG REQUIRED)
 
@@ -72,7 +72,6 @@ set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
                        PURPOSE "Needed for the File Search runner."
                       )
 
-find_package(KF5TextEditor)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 
 find_package(KF5Screen CONFIG REQUIRED)
@@ -254,6 +253,8 @@ add_subdirectory(kioslave)
 add_subdirectory(ktimezoned)
 add_subdirectory(menu)
 add_subdirectory(phonon)
+
+add_subdirectory(interactiveconsole)
 
 # This ensures pressing the eject button on a CD drive ejects the disc
 # It listens to the Solid::OpticalDrive::ejectPressed signal that is only

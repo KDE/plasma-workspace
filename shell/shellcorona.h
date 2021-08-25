@@ -128,14 +128,9 @@ public Q_SLOTS:
     /// DBUS methods
     void toggleDashboard();
     void setDashboardShown(bool show);
-    void loadInteractiveConsole();
-    void showInteractiveConsole();
-    void loadScriptInInteractiveConsole(const QString &script);
-    void showInteractiveKWinConsole();
-    void loadKWinScriptInInteractiveConsole(const QString &script);
     void toggleActivityManager();
     void toggleWidgetExplorer();
-    void evaluateScript(const QString &string);
+    QString evaluateScript(const QString &string);
     void activateLauncherMenu();
 
     QByteArray dumpCurrentLayoutJS() const;
@@ -205,7 +200,6 @@ private Q_SLOTS:
     void primaryOutputChanged();
 
     void panelContainmentDestroyed(QObject *cont);
-    void interactiveConsoleVisibilityChanged(bool visible);
     void handleScreenRemoved(QScreen *screen);
 
     void activateTaskManagerEntry(int index);
@@ -244,7 +238,6 @@ private:
     QScopedPointer<QMenu> m_addPanelsMenu;
     KPackage::Package m_lookAndFeelPackage;
     QSet<QScreen *> m_redundantOutputs;
-    KDeclarative::QmlObjectSharedEngine *m_interactiveConsole;
 
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;

@@ -11,18 +11,9 @@
     <method name="setDashboardShown">
       <arg name="show" type="b" direction="in"/>
     </method>
-    <method name="showInteractiveConsole">
-    </method>
-    <method name="loadScriptInInteractiveConsole">
-      <arg name="script" type="s" direction="in"/>
-    </method>
-    <method name="showInteractiveKWinConsole">
-    </method>
-    <method name="loadKWinScriptInInteractiveConsole">
-      <arg name="script" type="s" direction="in"/>
-    </method>
     <method name="evaluateScript">
       <arg name="script" type="s" direction="in"/>
+      <arg name="output" type="s" direction="out"/>
     </method>
     <method name="dumpCurrentLayoutJS">
       <arg name="script" type="ay" direction="out"/>
