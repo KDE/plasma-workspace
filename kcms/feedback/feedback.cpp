@@ -21,8 +21,14 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(FeedbackFactory, "kcm_feedback.json", registerPlugin<Feedback>(); registerPlugin<FeedbackData>();)
 
-// Program to icon hash
-static QHash<QString, QString> s_programs = {{"plasmashell", "plasmashell"}, {"plasma-discover", "plasmadiscover"}};
+struct Information {
+    QString icon;
+    QString kuserfeedbackComponent;
+};
+static QHash<QString, Information> s_programs = {
+    { "plasmashell", {"plasmashell", "plasmashell"} },
+    { "plasma-discover", {"plasmadiscover", "discover" } },
+};
 
 inline void swap(QJsonValueRef v1, QJsonValueRef v2)
 {
@@ -90,7 +96,7 @@ void Feedback::programFinished(int exitCode)
         }
 
         const QString description = line.mid(sepIdx + 1);
-        m_uses[modeValue][description] << s_programs[program];
+        m_uses[modeValue][description] << s_programs[program].icon;
     }
     p->deleteLater();
     m_feedbackSources = {};
@@ -117,6 +123,18 @@ bool Feedback::feedbackEnabled() const
 FeedbackSettings *Feedback::feedbackSettings() const
 {
     return m_data->settings();
+}
+
+QJsonArray Feedback::audits() const
+{
+    QJsonArray ret;
+    for (auto it = s_programs.constBegin(); it != s_programs.constEnd(); ++it) {
+        ret += QJsonObject {
+            { "program", it.key() },
+            { "audits", QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + '/' + it->kuserfeedbackComponent + QStringLiteral("/kuserfeedback/audit")).toString() },
+        };
+    }
+    return ret;
 }
 
 #include "feedback.moc"

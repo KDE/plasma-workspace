@@ -149,6 +149,21 @@ SimpleKCM {
                     }
                 }
             }
+
+            Item {
+                implicitHeight: Kirigami.Units.largeSpacing
+                Layout.fillWidth: true
+            }
+            Repeater {
+                model: kcm.audits
+                delegate: Kirigami.LinkButton {
+                    Layout.fillWidth: true
+                    horizontalAlignment: Text.AlignLeft
+                    Kirigami.FormData.label: model.index === 0 ? i18n("View sent data:") : ""
+                    text: modelData.program
+                    onClicked: Qt.openUrlExternally(modelData.audits)
+                }
+            }
         }
     }
 }
