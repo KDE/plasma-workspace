@@ -497,8 +497,16 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
     }
 
     KConfig configDefault(configDefaults("kdeglobals"));
+
+    auto set = [this]() {
+        m_config->group("General").writeEntry("AccentColor", QColor());
+        m_config->group("General").deleteEntry("AccentColor", KConfig::Notify);
+    };
+
+    set();
     writeNewDefaults(*m_config, configDefault, QStringLiteral("General"), QStringLiteral("ColorScheme"), scheme, KConfig::Notify);
     applyScheme(colorFile, m_config.data(), KConfig::Notify);
+    set();
 }
 
 void KCMLookandFeel::setIcons(const QString &theme)
