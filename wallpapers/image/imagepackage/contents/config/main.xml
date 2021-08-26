@@ -10,6 +10,10 @@
       <label>Blur background filling</label>
       <default>false</default>
     </entry>
+    <entry name="SlideshowFoldersFirst" type="bool">
+      <label>Display folders first when on slideshow</label>
+      <default>false</default>
+    </entry>
     <entry name="Color" type="Color">
       <label>Color of the wallpaper</label>
       <default>#000000</default>
