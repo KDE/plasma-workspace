@@ -870,7 +870,7 @@ void Klipper::editData(const QSharedPointer<const HistoryItem> &item)
     KTextEdit *edit = new KTextEdit(dlg);
     edit->setAcceptRichText(false);
     if (item) {
-        edit->setPlainText(item->text());
+        edit->setPlainText(item->mimeData()->text());
     }
     edit->setFocus();
     edit->setMinimumSize(300, 40);

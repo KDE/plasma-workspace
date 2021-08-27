@@ -37,8 +37,3 @@ public:
 private:
     QString m_data;
 };
-
-inline QString HistoryStringItem::text() const
-{
-    return m_data;
-}
