@@ -102,6 +102,7 @@ Name[ja]=アプリケーション
 Name[ko]=프로그램
 Name[lt]=Programa
 Name[lv]=Programma
+Name[ml]=ആപ്ലിക്കേഷൻ
 Name[nb]=Program
 Name[nds]=Programm
 Name[nl]=Toepassing
@@ -166,6 +167,7 @@ Name[km]=បាន​ផ្លាស់ប្ដូរ​ឧបករណ៍​�
 Name[ko]=오디오 출력 장치 변경됨
 Name[lt]=Pakeistas garso išvedimo įrenginys
 Name[lv]=Izmainījās audio izvades ierīce
+Name[ml]=ശബ്ദ ഔട്ട്പുട്ട് ഉപകരണം മാറ്റി
 Name[mr]=आवाज आउटपुट देणारे साधन बदलले
 Name[nb]=Utgangsenhet for lyd er endret
 Name[nds]=Klangutgaavreedschap ännert
@@ -230,6 +232,7 @@ Comment[km]=ជូន​ដំណឹង នៅ​ពេល​ឧបករណ៍�
 Comment[ko]=오디오 출력 장치가 자동으로 변경되었을 때 알림
 Comment[lt]=Pranešimas, kai garso išvedimo įrenginys buvo automatiškai pakeistas
 Comment[lv]=Paziņojums, kad automātiski izmainās audio izvades ierīce
+Comment[ml]=ശബ്ദ ഔട്ട്പുട്ട് ഉപകരണം യാന്ത്രികമായി മാറുമ്പോൾ അറിയിപ്പ്
 Comment[mr]=आवाज आउटपुट देणारे साधन स्वयंचलितरित्या बदलले जाईल तेव्हाची सूचना
 Comment[nb]=Varsling når utgangsenhet for lyd er endret automatisk
 Comment[nds]=Bescheed, wenn sik de Klangutgaavreedschap automaatsch ännert hett

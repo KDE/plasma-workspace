@@ -32,6 +32,7 @@ Name[kn]=ಸ್ಥಿತಿ ಸೂಚನಾ ಮಾಹಿತಿ
 Name[ko]=장치 알림이 정보
 Name[lt]=Būsenos pranešėjo informacija
 Name[lv]=Statusa ziņotāja informācija
+Name[ml]=സ്ഥിതിവിവര അറിയിപ്പിന്റെ വിവരങ്ങള്‍
 Name[mr]=स्थिती निदर्शक माहिती
 Name[nb]=StatusNotifier-opplysninger
 Name[nds]=Statusbescheed-Informatschonen
@@ -92,6 +93,7 @@ Comment[km]=ម៉ាស៊ីន​សម្រាប់​ព័ត៌មា�
 Comment[ko]=상태 알림 프로토콜을 사용하는 프로그램 상태 정보 엔진입니다.
 Comment[lt]=Programų būsenos informacijos variklis, pagrįstas būsenos pranešėjo protokolu.
 Comment[lv]=Programmas statusa informācijas dzinējs, kas ir bāzēts uz sistēmas paziņojumu protokolu.
+Comment[ml]=സ്ഥിതിവിവര നോട്ടിഫയർ പ്രോട്ടോക്കോൾ അടിസ്ഥാനമാക്കി അപ്ലിക്കേഷനുകളുടെ സ്ഥിതിവിവര വിവരങ്ങൾക്കായുള്ള യന്ത്രം.
 Comment[mr]=अनुप्रयोग स्थिती माहिती साठी स्थिती निदर्शक शिष्टाचारावर आधारित इंजिन
 Comment[nb]=Motor for programstatus-informasjon basert på Status Notifier-protokollen.
 Comment[nds]=Karn för Programmstatus-Informatschonen, de dat Statusbescheed-Protokoll bruukt.
