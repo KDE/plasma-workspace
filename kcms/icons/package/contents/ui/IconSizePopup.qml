@@ -62,6 +62,7 @@ QtControls.Popup {
                     keyNavigationEnabled: true
                     keyNavigationWraps: true
                     highlightMoveDuration: 0
+                    clip: true
 
                     model: kcm.iconSizeCategoryModel
                     currentIndex: 0 // Initialize with the first item
