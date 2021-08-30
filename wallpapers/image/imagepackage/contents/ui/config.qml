@@ -426,15 +426,13 @@ ColumnLayout {
                 view.delegate: WallpaperDelegate {
                     color: cfg_Color
                 }
+            }
 
-                Kirigami.PlaceholderMessage {
-                    anchors.fill: parent
-                    anchors.margins: Kirigami.Units.largeSpacing * 2
-                    // FIXME: this is needed to vertically center it in the grid for some reason
-                    anchors.topMargin: wallpapersGrid.height / 2
-                    visible: wallpapersGrid.view.count === 0
-                    text: i18nd("plasma_wallpaper_org.kde.image", "There are no wallpapers in this slideshow")
-                }
+            Kirigami.PlaceholderMessage {
+                anchors.centerIn: parent
+                width: parent.width - (Kirigami.Units.largeSpacing * 4)
+                visible: wallpapersGrid.view.count === 0
+                text: i18nd("plasma_wallpaper_org.kde.image", "There are no wallpapers in this slideshow")
             }
 
             KCM.SettingHighlighter {
