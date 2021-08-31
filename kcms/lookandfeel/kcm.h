@@ -74,6 +74,7 @@ public:
     void setDesktopSwitcher(const QString &theme);
     void setWindowDecoration(const QString &library, const QString &theme);
     void setWindowPlacement(const QString &value);
+    void setShellPackage(const QString &name);
 
     Q_INVOKABLE void knsEntryChanged(KNSCore::EntryWrapper *wrapper);
     Q_INVOKABLE void reloadConfig()
@@ -134,6 +135,7 @@ private:
     bool m_applyWindowSwitcher : 1;
     bool m_applyDesktopSwitcher : 1;
     bool m_applyWindowPlacement : 1 = true;
+    bool m_applyShellPackage : 1 = true;
     bool m_resetDefaultLayout : 1;
     bool m_applyWindowDecoration : 1;
 };

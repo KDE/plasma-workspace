@@ -387,6 +387,12 @@ void KCMLookandFeel::save()
             setWindowPlacement(cg.readEntry("Placement", QStringLiteral("Smart")));
         }
 
+        if (m_applyShellPackage) {
+            cg = KConfigGroup(conf, "plasmashellrc");
+            cg = KConfigGroup(&cg, "Shell");
+            setShellPackage(cg.readEntry("ShellPackage", QString()));
+        }
+
         if (m_applyWindowDecoration) {
             cg = KConfigGroup(conf, "kwinrc");
             cg = KConfigGroup(&cg, "org.kde.kdecoration2");
@@ -748,6 +754,11 @@ void KCMLookandFeel::setWindowPlacement(const QString &value)
     }
 
     writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("Windows"), QStringLiteral("Placement"), value);
+}
+
+void KCMLookandFeel::setShellPackage(const QString &value)
+{
+    writeNewDefaults(QStringLiteral("plasmashellrc"), QStringLiteral("Shell"), QStringLiteral("ShellPackage"), value);
 }
 
 void KCMLookandFeel::setWindowDecoration(const QString &library, const QString &theme)
