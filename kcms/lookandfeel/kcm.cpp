@@ -410,6 +410,12 @@ void KCMLookandFeel::save()
             QDBusConnection::sessionBus().send(message);
         }
 
+        if (m_plasmashellChanged) {
+            QDBusMessage message =
+                QDBusMessage::createSignal(QStringLiteral("/PlasmaShell"), QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("refreshCurrentShell"));
+            QDBusConnection::sessionBus().send(message);
+        }
+
         // autostart
         if (m_resetDefaultLayout) {
             // remove all the old package to autostart
@@ -759,6 +765,7 @@ void KCMLookandFeel::setWindowPlacement(const QString &value)
 void KCMLookandFeel::setShellPackage(const QString &value)
 {
     writeNewDefaults(QStringLiteral("plasmashellrc"), QStringLiteral("Shell"), QStringLiteral("ShellPackage"), value);
+    m_plasmashellChanged = true;
 }
 
 void KCMLookandFeel::setWindowDecoration(const QString &library, const QString &theme)

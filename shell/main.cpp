@@ -98,10 +98,6 @@ int main(int argc, char *argv[])
 
     app.setQuitOnLastWindowClosed(false);
 
-    KSharedConfig::Ptr startupConf = KSharedConfig::openConfig(QStringLiteral("plasmashellrc"));
-    KConfigGroup startupConfGroup(startupConf, "Shell");
-    const QString defaultShell = startupConfGroup.readEntry("ShellPackage", qEnvironmentVariable("PLASMA_DEFAULT_SHELL", "org.kde.plasma.desktop"));
-
     bool replace = false;
 
     ShellCorona *corona;
@@ -116,7 +112,7 @@ int main(int argc, char *argv[])
         QCommandLineOption shellPluginOption(QStringList() << QStringLiteral("p") << QStringLiteral("shell-plugin"),
                                              i18n("Force loading the given shell plugin"),
                                              QStringLiteral("plugin"),
-                                             defaultShell);
+                                             ShellCorona::defaultShell());
 
         QCommandLineOption standaloneOption(QStringList() << QStringLiteral("a") << QStringLiteral("standalone"),
                                             i18n("Load plasmashell as a standalone application, needs the shell-plugin option to be specified"));

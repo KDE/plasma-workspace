@@ -138,4 +138,6 @@ private:
     bool m_applyShellPackage : 1 = true;
     bool m_resetDefaultLayout : 1;
     bool m_applyWindowDecoration : 1;
+
+    bool m_plasmashellChanged = false;
 };

@@ -2127,6 +2127,20 @@ void ShellCorona::activateTaskManagerEntry(int index)
     }
 }
 
+QString ShellCorona::defaultShell()
+{
+    KSharedConfig::Ptr startupConf = KSharedConfig::openConfig(QStringLiteral("plasmashellrc"));
+    KConfigGroup startupConfGroup(startupConf, "Shell");
+    return startupConfGroup.readEntry("ShellPackage", qEnvironmentVariable("PLASMA_DEFAULT_SHELL", "org.kde.plasma.desktop"));
+}
+
+void ShellCorona::refreshCurrentShell()
+{
+    KSharedConfig::openConfig(QStringLiteral("plasmashellrc"))->reparseConfiguration();
+    //  FIXME:   setShell(defaultShell());
+    QProcess::startDetached("plasmashell", {"--replace"});
+}
+
 // Desktop corona handler
 
 #include "moc_shellcorona.cpp"

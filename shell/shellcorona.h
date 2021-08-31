@@ -106,6 +106,8 @@ public:
 
     QString defaultContainmentPlugin() const;
 
+    static QString defaultShell();
+
 Q_SIGNALS:
     void glInitializationFailed();
 
@@ -157,6 +159,8 @@ public Q_SLOTS:
     {
         return m_panelViews.count();
     }
+
+    void refreshCurrentShell();
 
 protected Q_SLOTS:
     /**

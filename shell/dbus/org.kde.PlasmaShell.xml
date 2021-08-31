@@ -23,5 +23,6 @@
     </method>
     <method name="activateLauncherMenu">
     </method>
+    <method name="refreshCurrentShell" />
   </interface>
 </node>
