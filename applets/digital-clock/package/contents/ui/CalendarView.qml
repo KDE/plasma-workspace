@@ -609,6 +609,17 @@ PlasmaExtras.Representation {
         anchors.right: parent.right
         anchors.top: parent.top
         anchors.bottom: parent.bottom
+        MouseArea {
+            parent: monthViewWrapper
+            anchors.fill: parent
+            onWheel: {
+                if (wheel.angleDelta.y > 0) {
+                    monthView.previousView();
+                } else if (wheel.angleDelta.y < 0) {
+                    monthView.nextView();
+                }
+            }
+        }
         PlasmaCalendar.MonthView {
             id: monthView
             anchors.margins: PlasmaCore.Units.smallSpacing
