@@ -107,6 +107,7 @@ QVariant DataControlOffer::retrieveData(const QString &mimeType, QVariant::Type 
     if (readPipe.open(pipeFds[0], QIODevice::ReadOnly)) {
         QByteArray data;
         if (readData(pipeFds[0], data)) {
+            close(pipeFds[0]);
             return data;
         }
         close(pipeFds[0]);
