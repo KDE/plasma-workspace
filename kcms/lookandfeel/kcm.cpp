@@ -381,6 +381,12 @@ void KCMLookandFeel::save()
             setDesktopSwitcher(cg.readEntry("LayoutName", QString()));
         }
 
+        if (m_applyWindowPlacement) {
+            cg = KConfigGroup(conf, "kwinrc");
+            cg = KConfigGroup(&cg, "Windows");
+            setWindowPlacement(cg.readEntry("Placement", QStringLiteral("Smart")));
+        }
+
         if (m_applyWindowDecoration) {
             cg = KConfigGroup(conf, "kwinrc");
             cg = KConfigGroup(&cg, "org.kde.kdecoration2");
@@ -393,7 +399,7 @@ void KCMLookandFeel::save()
         }
 
         // Reload KWin if something changed, but only once.
-        if (m_applyWindowSwitcher || m_applyDesktopSwitcher || m_applyWindowDecoration) {
+        if (m_applyWindowSwitcher || m_applyDesktopSwitcher || m_applyWindowDecoration || m_applyWindowPlacement) {
             QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"));
             QDBusConnection::sessionBus().send(message);
         }
@@ -733,6 +739,15 @@ void KCMLookandFeel::setDesktopSwitcher(const QString &theme)
     KConfigGroup cgd(&configDefault, QStringLiteral("TabBox"));
     writeNewDefaults(cg, cgd, QStringLiteral("DesktopLayout"), theme);
     writeNewDefaults(cg, cgd, QStringLiteral("DesktopListLayout"), theme);
+}
+
+void KCMLookandFeel::setWindowPlacement(const QString &value)
+{
+    if (value.isEmpty()) {
+        return;
+    }
+
+    writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("Windows"), QStringLiteral("Placement"), value);
 }
 
 void KCMLookandFeel::setWindowDecoration(const QString &library, const QString &theme)
