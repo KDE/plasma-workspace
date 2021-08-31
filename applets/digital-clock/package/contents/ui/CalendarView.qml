@@ -613,9 +613,9 @@ PlasmaExtras.Representation {
             parent: monthViewWrapper
             anchors.fill: parent
             onWheel: {
-                if (wheel.angleDelta.y > 0) {
+                if (wheel.angleDelta.y >= 120) {
                     monthView.previousView();
-                } else if (wheel.angleDelta.y < 0) {
+                } else if (wheel.angleDelta.y <= -120) {
                     monthView.nextView();
                 }
             }
