@@ -612,10 +612,18 @@ PlasmaExtras.Representation {
         MouseArea {
             parent: monthViewWrapper
             anchors.fill: parent
+            property int wheelDelta: 0
             onWheel: {
-                if (wheel.angleDelta.y >= 120) {
+                var delta = wheel.angleDelta.y || wheel.angleDelta.x
+                wheelDelta += delta;
+                // magic number 120 for common "one click"
+                // See: https://doc.qt.io/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
+                while (wheelDelta >= 120) {
+                    wheelDelta -= 120;
                     monthView.previousView();
-                } else if (wheel.angleDelta.y <= -120) {
+                }
+                while (wheelDelta <= -120) {
+                    wheelDelta += 120;
                     monthView.nextView();
                 }
             }
