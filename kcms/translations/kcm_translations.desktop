@@ -97,4 +97,6 @@ Comment[x-test]=xxChange workspace and application languagesxx
 Comment[zh_CN]=更改工作空间和应用程序语言
 Comment[zh_TW]=變更工作區及應用程式的語言
 
+X-KDE-Keywords=language,writing,text,idioms,dialect,words,region,regional,country,internationalization,locale
+
 Categories=Qt;KDE;X-KDE-settings-translations;

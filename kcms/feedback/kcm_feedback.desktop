@@ -93,4 +93,6 @@ Comment[x-test]=xxConfigure user feedback settingsxx
 Comment[zh_CN]=配置用户反馈设置
 Comment[zh_TW]=設定使用者意見回應設定
 
+X-KDE-Keywords=feedback,report,contact,data collection,statistics,usage,log,logging,telemetry
+
 Categories=Qt;KDE;
