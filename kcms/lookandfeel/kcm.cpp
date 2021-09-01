@@ -781,10 +781,6 @@ void KCMLookandFeel::setWindowDecoration(const QString &library, const QString &
     KConfigGroup cgd(&configDefault, QStringLiteral("org.kde.kdecoration2"));
     writeNewDefaults(cg, cgd, QStringLiteral("library"), library);
     writeNewDefaults(cg, cgd, QStringLiteral("theme"), theme, KConfig::Notify);
-
-    // Reload KWin.
-    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"));
-    QDBusConnection::sessionBus().send(message);
 }
 
 void KCMLookandFeel::setResetDefaultLayout(bool reset)
