@@ -64,7 +64,7 @@ QString Utils::processNameFromPid(uint pid)
     return processInfo.name();
 }
 
-static QString desktopFileHintFromPid(uint pid)
+QString Utils::desktopEntryFromPid(uint pid)
 {
     const QString flatpakInfoPath = QStringLiteral("/proc/%1/root/.flatpak-info").arg(QString::number(pid));
     if (QFileInfo::exists(flatpakInfoPath)) {
