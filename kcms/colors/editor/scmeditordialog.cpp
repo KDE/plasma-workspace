@@ -72,7 +72,8 @@ void SchemeEditorDialog::init()
     connect(m_disabledTab, &SchemeEditorEffects::changed, this, &SchemeEditorDialog::updateTabs);
     connect(m_inactiveTab, &SchemeEditorEffects::changed, this, &SchemeEditorDialog::updateTabs);
 
-    // "Apply" is only shown in overwrite mode
+    // "Save" is only shown in overwrite mode
+    KGuiItem::assign(buttonBox->button(QDialogButtonBox::Apply), KStandardGuiItem::save());
     buttonBox->button(QDialogButtonBox::Apply)->setVisible(false);
     buttonBox->button(QDialogButtonBox::Apply)->setEnabled(false);
 
