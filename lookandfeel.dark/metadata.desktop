@@ -1,6 +1,18 @@
 [Desktop Entry]
 Comment=Breeze Dark by the KDE VDG
+Comment[ca]=Brisa fosca, creat pel VDG del KDE
+Comment[nl]=Breeze Dark door de KDE VDG
+Comment[sl]=Sapica temna, avtorjev KDE VDG
+Comment[sv]=Breeze mörk av KDE:s visuella designgrupp
+Comment[uk]=Темна Breeze, автори — KDE VDG
+Comment[x-test]=xxBreeze Dark by the KDE VDGxx
 Name=Breeze Dark
+Name[ca]=Brisa fosca
+Name[nl]=Breeze Dark
+Name[sl]=Sapica temna
+Name[sv]=Breeze mörk
+Name[uk]=Темна Breeze
+Name[x-test]=xxBreeze Darkxx
 Type=Service
 
 X-KDE-ServiceTypes=Plasma/LookAndFeel
