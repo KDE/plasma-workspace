@@ -31,7 +31,8 @@ PlasmaExtras.ExpandableListItem {
     readonly property double totalSpace: sdSource.data[udi] && sdSource.data[udi]["Size"] ? sdSource.data[udi]["Size"] : -1.0
     property bool freeSpaceKnown: freeSpace > 0 && totalSpace > 0
 
-    readonly property bool isRootVolume: (sdSource.data[udi] != undefined && sdSource.data[udi]["File Path"]) ? sdSource.data[udi]["File Path"] == "/" : false
+    readonly property bool isRootVolume: sdSource.data[udi] && sdSource.data[udi]["File Path"] ? sdSource.data[udi]["File Path"] == "/" : false
+    readonly property bool isRemovable: sdSource.data[udi] && sdSource.data[udi]["Removable"] ? sdSource.data[udi]["Removable"] : false
 
     onOperationResultChanged: {
         if (!popupIconTimer.running) {
@@ -119,7 +120,7 @@ PlasmaExtras.ExpandableListItem {
         var operationName
         var operation
         var wasMounted = isMounted;
-        if (!sdSource.data[udi].Removable || !isMounted) {
+        if (!isRemovable || !isMounted) {
             service = hpSource.serviceForSource(udi);
             operation = service.operationDescription('invokeAction');
             operation.predicate = "test-predicate-openinwindow.desktop";
@@ -136,26 +137,23 @@ PlasmaExtras.ExpandableListItem {
 
     // When there's no better icon available, show a placeholder icon instead
     // of nothing
-    icon: sdSource.data[udi] == undefined ? "device-notifier" : sdSource.data[udi].Icon
+    icon: sdSource.data[udi] ? sdSource.data[udi].Icon : "device-notifier"
 
     iconEmblem: {
-        if (sdSource.data[udi] != undefined) {
-            if (deviceItem.hasMessage) {
-                if (deviceItem.message.solidError === 0) {
-                    return "emblem-information"
-                } else {
-                    return "emblem-error"
-                }
-            } else if (deviceItem.state == 0 && Emblems && Emblems[0]) {
-                return Emblems[0]
+        if (deviceItem.hasMessage) {
+            if (deviceItem.message.solidError === 0) {
+                return "emblem-information"
             } else {
-                return ""
+                return "emblem-error"
             }
+        } else if (deviceItem.state == 0 && Emblems && Emblems[0]) {
+            return Emblems[0]
+        } else {
+            return ""
         }
-        return ""
     }
 
-    title: sdSource.data[udi] == undefined ? "" : sdSource.data[udi].Description
+    title: sdSource.data[udi] ? sdSource.data[udi].Description : ""
 
     subtitle: {
         if (deviceItem.hasMessage) {
@@ -192,15 +190,15 @@ PlasmaExtras.ExpandableListItem {
 
     defaultActionButtonAction: QQC2.Action {
         icon.name: {
-            if (!(sdSource.data[udi] != undefined && sdSource.data[udi].Removable)) {
-                return "document-open-folder"
-            } else {
+            if (isRemovable) {
                 return isMounted ? "media-eject" : "document-open-folder"
+            } else {
+                return "document-open-folder"
             }
         }
         text: {
             // It's possible for the root volume to be on a removable disk
-            if (!(sdSource.data[udi] != undefined && sdSource.data[udi].Removable) || deviceItem.isRootVolume) {
+            if (!isRemovable || isRootVolume) {
                 return i18n("Open in File Manager")
             } else {
                 var types = model["Device Types"];
@@ -232,7 +230,7 @@ PlasmaExtras.ExpandableListItem {
                 if (modelData.predicate != "test-predicate-openinwindow.desktop") {
                     return true;
                 }
-                return sdSource.data[udi].Removable && deviceItem.isMounted;
+                return deviceItem.isRemovable && deviceItem.isMounted;
             }
             onTriggered: {
                 var service = hpSource.serviceForSource(udi);
@@ -253,7 +251,7 @@ PlasmaExtras.ExpandableListItem {
         icon.name: "media-mount"
 
         // Only show for unmounted removable devices
-        enabled: (sdSource.data[udi] != undefined && sdSource.data[udi].Removable) && !deviceItem.isMounted
+        enabled: deviceItem.isRemovable && !deviceItem.isMounted
 
         onTriggered: {
             var service = sdSource.serviceForSource(udi);
