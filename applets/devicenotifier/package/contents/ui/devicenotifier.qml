@@ -75,6 +75,7 @@ Item {
         onSourceAdded: {
             disconnectSource(source);
             connectSource(source);
+            sdSource.connectedSources = sources
         }
         onSourceRemoved: {
             disconnectSource(source);
@@ -98,7 +99,6 @@ Item {
     PlasmaCore.DataSource {
         id: sdSource
         engine: "soliddevice"
-        connectedSources: hpSource.sources
         interval: 0
         property string last
         onSourceAdded: {
