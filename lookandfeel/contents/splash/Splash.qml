@@ -28,14 +28,6 @@ Rectangle {
     Item {
         id: content
         anchors.fill: parent
-        opacity: 0
-        TextMetrics {
-            id: units
-            text: "M"
-            property int gridUnit: boundingRect.height
-            property int largeSpacing: PlasmaCore.Units.gridUnit
-            property int smallSpacing: Math.max(2, gridUnit/4)
-        }
 
         Image {
             id: logo
