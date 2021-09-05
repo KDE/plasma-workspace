@@ -80,10 +80,12 @@ Comment[x-test]=xxAdjust color temperature at night to reduce eye strainxx
 Comment[zh_CN]=在夜间调整色温以减少视觉疲劳
 
 X-KDE-Keywords=kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature
+X-KDE-Keywords[ar]=ك.وين,نافذة,مدير,ليلي,ألوان,إرهاق العين,الحمرة,البرتقالي,الأصفر,دافئ,تعتيم الشاشة,درجة الحرارة
 X-KDE-Keywords[ca]=kwin,finestra,gestor,nit,colors,desplaçament cap al roig,ulls,mode nit,color,mode fosc,fosc,enfosquiment,dormir,tensió ocular,vermell,desplaçament,taronja,groc,càlid,tint de pantalla,temperatura
 X-KDE-Keywords[es]=kwin,ventana,gestor,noche,colores,redshift,ojos,modo nocturno,color,modo oscuro,oscurecer,dormir,esfuerzo visual,fatiga visual,rojo,desplazamiento,naranja,amarillo,cálido,tono de la pantalla,temperatura
 X-KDE-Keywords[fr]=kwin, gestionnaire de fenêtres, nuit, couleurs, décalage vers le rouge, yeux, mode nuit, couleur, mode sombre, sombre, réglage, sommeil, fatigue oculaire, rouge, décalage, orange, jaune, chaud, teinte d'écran, température
 X-KDE-Keywords[nl]=kwin,venster,manager,nacht,kleuren,roodverschuiving,ogen,modus nacht,kleur,modus donker,gedimd,slaap,vermoeiing van het oog,rood,verschuiving,oranje,geel,warm,scherm,schermtint,temperatuur
+X-KDE-Keywords[pl]=kwin,okno,zarządzanie,noc,barwy,redshift,oczy,tryb nocny,barwa,tryb ciemny,ciemny,przyciemnienie,sen,wytężenie wzroku,czerwony,przesunięcie,pomarańczowy,żółty,ciepły,zabarwienie ekranu,temperatura
 X-KDE-Keywords[pt]=kwin,gestor,janelas,noite,cores,desvio do vermelho,olhos,modo nocturno,cor,modo escuro,escuro,escurecido,dormir,vista cansada,vermelho,desvio,laranja,amarelo,quente,pintura do ecrã,temperatura
 X-KDE-Keywords[sl]=kwin,okno,upravljalnik,nočne barve,rdeči pomik,oči,nočni način,barve,temni način,temina,zabrisanje,spanje,napenjanje oči,pomik,oranžna,rumena,toplo,odtenek zaslona,temperatura
 X-KDE-Keywords[sv]=kwin,fönster,hanterare,natt,färger,rödskift,ögon,nattläge,färg,mörkt läge,mörk,ljussvag,viloläge,ögonbelastning,röd,skift,orange,gul,varm,skärmfärgton,temperatur

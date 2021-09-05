@@ -94,10 +94,12 @@ Comment[zh_CN]=配置用户反馈设置
 Comment[zh_TW]=設定使用者意見回應設定
 
 X-KDE-Keywords=feedback,report,contact,data collection,statistics,usage,log,logging,telemetry
+X-KDE-Keywords[ar]=ردود الفعل,التقرير,الاتصال,جمع البيانات,الإحصاءات,الاستخدام,السجل,التسجيل,القياس عن بعد,مشاركة بيانات
 X-KDE-Keywords[ca]=comentari,informe,contacte,recol·lecció de dades,estadístiques,ús,registre, enregistrament,telemetria
 X-KDE-Keywords[es]=realimentación,comentarios y sugerencias,informe,contacto,recopilación de datos,estadísticas,uso,registro,telemetría
 X-KDE-Keywords[fr]=Retour utilisateur, rapport, contact, collecte de données, statistiques, utilisation, journal, connexion, télémétrie
 X-KDE-Keywords[nl]=terugkoppeling,rapport,contactpersoon,gegevensverzameling,statistieken,gebruik,log,loggen,telemetrie
+X-KDE-Keywords[pl]=informacja zwrotna,zgłoszenie,kontakt,zbiór danych,statystyka,użycie,dziennik,rejestrowanie,telemetria
 X-KDE-Keywords[pt]=reacções,relatório,contacto,recolha de dados,estatísticas,utilização,registo,telemetria
 X-KDE-Keywords[sl]=povratni odziv,poročilo,zbiranje podatkov,statistika,uporaba,dnevnik,beleženje,telemetrija
 X-KDE-Keywords[sv]=återkoppling,rapportera,kontakta,datainsamling,statistik,användning,logg,loggning,telemetri

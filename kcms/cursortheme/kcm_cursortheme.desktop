@@ -91,10 +91,12 @@ Comment[x-test]=xxChoose mouse cursor themexx
 Comment[zh_CN]=选择鼠标光标主题
 
 X-KDE-Keywords=Mouse,Cursor,Theme,Cursor Appearance,Cursor Color,Cursor Theme,Mouse Theme,Mouse Appearance,Mouse Skin,Pointer Colors,Pointer Appearance,cursor skin,cursor style,mouse style,pointer
+X-KDE-Keywords[ar]=فأرة,مؤشر,سمة,مظهر المؤشر,لون المؤشر, سمة,سمة المؤشر,مظهر الفأرة,جلد الفأرة,لون المؤشر,مظهر المؤشر
 X-KDE-Keywords[ca]=Ratolí,Cursor,Tema,Aparença de cursor,Color de cursor,Tema de cursor,Tema de ratolí,Aparença de ratolí,Pell de ratolí,Colors d'apuntador,Aparença d'apuntador,pell de cursor,estil de cursor,estil de ratolí,apuntador
 X-KDE-Keywords[es]=Ratón,mouse,cursor,tema,aspecto del cursor,apariencia del cursor,color del cursor,tema de cursores,tema del ratón,aspecto del ratón,piel del ratón,colores del puntero,aspecto del puntero,piel del cursor,estilo del cursor,estilo del ratón,puntero
 X-KDE-Keywords[fr]=Souris, curseur, thème, apparence du curseur, couleur du curseur, thème de curseurs, thème de souris, apparence de la souris, habillage de souris, couleurs de pointeurs, apparence de pointeurs, habillage de curseurs, style de curseurs
 X-KDE-Keywords[nl]=Muis,Cursor,Thema,Uiterlijk van cursor,kleur van cursor,Thema van cursor,Thema van muis,uiterlijk van muis,Muisoppervlak,Kleuren van aanwijzer,Uiterlijk van aanwijzer,uiterlijk van cursor,cursorstijl,muisstijl,aanwijzer
+X-KDE-Keywords[pl]=Mysz,Kursor,Motyw,Wygląd kursora,Kolor kursora,Motyw kursora,Motyw myszy,Wygląd myszy,Skórka myszy,Kolory wskaźnika,Wygląd wskaźnika,skórka myszy,wygląd wskaźnika,styl myszy,wskaźnik
 X-KDE-Keywords[pt]=Rato,Cursor,Tema,Aparência do Cursor,Cor do Cursor,Tema do Cursor,Tema do Rato,Aparência do Rato,Visuais do Rato,Cores do Ponteiro,Aparência do Ponteiro,visual do cursor,estilo do cursor,estilo do rato,ponteiro
 X-KDE-Keywords[sl]=Miška,Kazalka,Videz kazalke,Barva kazalke,Tema kazalke,Tema miške,Videz,Preobleke,barve miške,videz kazalke,slog kazalke,slog miške,kazalec
 X-KDE-Keywords[sv]=Mus,Pekare,Tema,Utseende,Pekarfärg,Pekartema,Mustema,Musutseende,Musskal,Pekarfärger,Pekarutseende,färgskal,pekarstil,musstil,pekare

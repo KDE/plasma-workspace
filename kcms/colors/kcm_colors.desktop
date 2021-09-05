@@ -92,10 +92,12 @@ Comment[zh_CN]=选择配色方案
 
 
 X-KDE-Keywords=color,colour,scheme,contrast,Widget colors,Color Scheme,color style,color theme,tint,accent color,color scheme,dark mode,light mode,accent colour,accent,highlight,colour
+X-KDE-Keywords[ar]=ألوان,تشكيلة,تباين,ألوان الأدوات,تشكيلة ألوان,لون نمط,سمة ألوان,تمييز,نمط داكن,نمط فاتح
 X-KDE-Keywords[ca]=color,esquema,contrast,colors de giny,esquema de color,estil de color, tema de color,tint,color d'accent,esquema de color,mode fosc,mode clar,accent,ressaltat
 X-KDE-Keywords[es]=color,colores,esquema,contraste,colores de los widgets,colores de los elementos gráficos,esquema de color,estilo de color,tema de color,tinte,color de acento,modo oscuro,modo claro,resaltar
 X-KDE-Keywords[fr]=couleurs, couleurs, thème, contraste, couleurs des composants graphiques, thème de couleurs, style de couleurs, thème de couleurs, teinte, couleur accentuée, mode sombre, mode clair, accentuation de couleur, accentuation, surbrillance
 X-KDE-Keywords[nl]=color,colour,kleur,kleuren,scheme,schema,contrast,Widget colors,Widgetkleuren,Color Scheme,kleurenschema,kleurstijl,kleurthema,tint,accentkleur,modus donker,modus licht,accent,accentuering
+X-KDE-Keywords[pl]=kolory,schemat,kontrast,kolory elementów interfejsu,zestaw kolorów,styl kolorów,motyw kolorów,tusz,kolor akcentujący,zestaw kolorów,tryb ciemny,tryb jasny,kolor akcentujący,akcent,podświetlenie,barwa
 X-KDE-Keywords[pt]=cores,esquema,contraste,cores do elemento gráfico,esquema de cores,estilo de cores,tema de cores,pintura,cor acentuada,esquema de cores,modo escuro,modo claro, cor acentuada,acento,tom claro,cor
 X-KDE-Keywords[sl]=barva,barve,sheme,kontrast,gradnik,barve gradnikov,barvne sheme,barvni slog,barvna tema,odtenek,poudarjena barva,barvna shema,temni način,svetli način,barva poudarka,osvetljevanje
 X-KDE-Keywords[sv]=färg,schema,kontrast,Komponentfärger,Färgschema,färgstil,färgtema,färgton,accentfärg,färgschema,mörkt läge,ljust läge,accent,färgläggning
