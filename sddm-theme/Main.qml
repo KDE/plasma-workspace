@@ -414,6 +414,7 @@ PlasmaCore.ColorScope {
                         }
                         ScriptAction {
                             script: {
+                                inputPanel.item.activated = false;
                                 Qt.inputMethod.hide();
                             }
                         }
