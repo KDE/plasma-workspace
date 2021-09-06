@@ -104,7 +104,7 @@ void PowerManagementJob::start()
                                                           QStringLiteral("/org/freedesktop/PowerManagement/Inhibit"),
                                                           QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
                                                           QStringLiteral("UnInhibit"));
-        msg << parameters().value(QStringLiteral("cookie")).toInt();
+        msg << parameters().value(QStringLiteral("cookie")).toUInt();
         QDBusReply<void> reply = QDBusConnection::sessionBus().call(msg);
         setResult(reply.isValid());
         return;
@@ -122,7 +122,7 @@ void PowerManagementJob::start()
                                                           QStringLiteral("/ScreenSaver"),
                                                           QStringLiteral("org.freedesktop.ScreenSaver"),
                                                           QStringLiteral("UnInhibit"));
-        msg << parameters().value(QStringLiteral("cookie")).toInt();
+        msg << parameters().value(QStringLiteral("cookie")).toUInt();
         QDBusReply<uint> reply = QDBusConnection::sessionBus().call(msg);
         setResult(reply.isValid());
         return;
