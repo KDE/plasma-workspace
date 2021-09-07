@@ -23,7 +23,7 @@
 #include "lookandfeelsettings.h"
 
 class QQuickItem;
-class LookAndFeelData;
+class LookAndFeelManager;
 
 class KCMLookandFeel : public KQuickAddons::ManagedConfigModule
 {
@@ -58,33 +58,21 @@ public:
     QStandardItemModel *lookAndFeelModel() const;
 
     Q_INVOKABLE int pluginIndex(const QString &pluginName) const;
-
-    bool resetDefaultLayout() const;
-    void setResetDefaultLayout(bool reset);
-
-    // Setters of the various theme pieces
-    void setWidgetStyle(const QString &style);
-    void setColors(const QString &scheme, const QString &colorFile);
-    void setIcons(const QString &theme);
-    void setPlasmaTheme(const QString &theme);
-    void setCursorTheme(const QString theme);
-    void setSplashScreen(const QString &theme);
-    void setLockScreen(const QString &theme);
-    void setWindowSwitcher(const QString &theme);
-    void setDesktopSwitcher(const QString &theme);
-    void setWindowDecoration(const QString &library, const QString &theme);
-    void setWindowPlacement(const QString &value);
-    void setShellPackage(const QString &name);
-
     Q_INVOKABLE void knsEntryChanged(KNSCore::EntryWrapper *wrapper);
     Q_INVOKABLE void reloadConfig()
     {
         ManagedConfigModule::load();
     }
 
+    LookAndFeelManager *lookAndFeel() const
+    {
+        return m_lnf;
+    };
     void addKPackageToModel(const KPackage::Package &pkg);
 
     bool isSaveNeeded() const override;
+    bool resetDefaultLayout() const;
+    void setResetDefaultLayout(bool reset);
 
 public Q_SLOTS:
     void load() override;
@@ -99,43 +87,12 @@ private:
     QList<KPackage::Package> availablePackages(const QStringList &components);
     void loadModel();
     QDir cursorThemeDir(const QString &theme, const int depth);
-    const QStringList cursorSearchPaths();
+    QStringList cursorSearchPaths();
+    void cursorsChanged(const QString &name);
 
-    void writeNewDefaults(const QString &filename,
-                          const QString &group,
-                          const QString &key,
-                          const QString &value,
-                          KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
-    void writeNewDefaults(KConfig &config,
-                          KConfig &configDefault,
-                          const QString &group,
-                          const QString &key,
-                          const QString &value,
-                          KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
-    void
-    writeNewDefaults(KConfigGroup &cg, KConfigGroup &cgd, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
+    LookAndFeelManager *const m_lnf;
 
-    static KConfig configDefaults(const QString &filename);
-
-    LookAndFeelData *m_data;
     QStandardItemModel *m_model;
     KPackage::Package m_package;
     QStringList m_cursorSearchPaths;
-
-    KSharedConfig::Ptr m_config;
-    KConfigGroup m_configGroup;
-
-    bool m_applyColors : 1;
-    bool m_applyWidgetStyle : 1;
-    bool m_applyIcons : 1;
-    bool m_applyPlasmaTheme : 1;
-    bool m_applyCursors : 1;
-    bool m_applyWindowSwitcher : 1;
-    bool m_applyDesktopSwitcher : 1;
-    bool m_applyWindowPlacement : 1 = true;
-    bool m_applyShellPackage : 1 = true;
-    bool m_resetDefaultLayout : 1;
-    bool m_applyWindowDecoration : 1;
-
-    bool m_plasmashellChanged = false;
 };
