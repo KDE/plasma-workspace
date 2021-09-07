@@ -15,6 +15,7 @@ configure_file (config-kcm.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kcm.h )
 
 set(kcm_lookandfeel_SRCS
     kcm.cpp
+    lookandfeelmanager.cpp
     ../colors/colorsapplicator.cpp
     ../kcms-common.cpp
 )
@@ -46,7 +47,7 @@ target_link_libraries(kcm_lookandfeel_static
     KF5::Service
     KF5::QuickAddons
     KF5::GuiAddons
-    KF5::KIOWidgets
+    KF5::KIOGui
     KF5::Declarative
     KF5::NewStuff
     PW::KWorkspace
