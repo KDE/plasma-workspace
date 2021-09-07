@@ -190,7 +190,8 @@ void DesktopProtocol::rename(const QUrl &_src, const QUrl &_dest, KIO::JobFlags 
 
     QUrl dest;
     rewriteUrl(_dest, dest);
-    const QString destPath = dest.toLocalFile();
+    QString destPath = dest.toLocalFile();
+    QUrl reported_dest = _dest;
 
     if (KDesktopFile::isDesktopFile(srcPath)) {
         QString friendlyName;
@@ -200,6 +201,8 @@ void DesktopProtocol::rename(const QUrl &_src, const QUrl &_dest, KIO::JobFlags 
             friendlyName = KIO::decodeFileName(fileName.left(fileName.length() - 8));
         } else {
             friendlyName = KIO::decodeFileName(dest.fileName());
+            destPath.append(QLatin1String(".desktop"));
+            reported_dest.setPath(reported_dest.path().append(QLatin1String(".desktop")));
         }
 
         // Update the value of the Name field in the file.
@@ -211,7 +214,7 @@ void DesktopProtocol::rename(const QUrl &_src, const QUrl &_dest, KIO::JobFlags 
     }
 
     if (QFile(srcPath).rename(destPath)) {
-        org::kde::KDirNotify::emitFileRenamedWithLocalPath(_src, _dest, destPath);
+        org::kde::KDirNotify::emitFileRenamedWithLocalPath(_src, reported_dest, destPath);
         finished();
     } else {
         error(KIO::ERR_CANNOT_RENAME, srcPath);
