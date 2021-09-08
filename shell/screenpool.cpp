@@ -136,11 +136,7 @@ void ScreenPool::insertScreenMapping(int id, const QString &connector)
 
 int ScreenPool::id(const QString &connector) const
 {
-    if (!m_idForConnector.contains(connector)) {
-        return -1;
-    }
-
-    return m_idForConnector.value(connector);
+    return m_idForConnector.value(connector, -1);
 }
 
 QString ScreenPool::connector(int id) const
