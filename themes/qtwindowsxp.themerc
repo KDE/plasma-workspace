@@ -68,7 +68,7 @@ Name[uk]=MS Windows XP
 Name[vi]=MS Windows XP
 Name[wa]=MS Windows XP
 Name[x-test]=xxMS Windows XPxx
-Name[zh_CN]=微软 Windows XP
+Name[zh_CN]=MS Windows XP 风格
 Name[zh_TW]=MS Windows XP
 Comment=Style that uses the Windows XP style engine
 Comment[ar]=نمط يستخدِم محرّك سمات ويندوز إكس.بي
@@ -135,7 +135,7 @@ Comment[uk]=Стиль, що використовує рушій стилів Wi
 Comment[vi]=Kiểu cách sử dụng dụng cụ kiểu cách của Windows XP
 Comment[wa]=Stîle ki s' sieve do moteur di stîle di Windows XP
 Comment[x-test]=xxStyle that uses the Windows XP style enginexx
-Comment[zh_CN]=使用 Windows XP 样式引擎的风格
+Comment[zh_CN]=使用 Windows XP 风格引擎的风格
 Comment[zh_TW]=使用 Windows XP 樣式引擎的樣式
 [KDE]
 WidgetStyle=WindowsXP

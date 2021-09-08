@@ -102,6 +102,7 @@ X-KDE-Keywords[ar]=لغة,كتابة,نص,مصطلحات,لهجة,كلمات,م�
 X-KDE-Keywords[ca]=idioma,escriptura,text,frases fetes,dialecte,paraules,regió,regional,país,internacionalització,locale,configuració regional
 X-KDE-Keywords[es]=idioma,escritura,texto,lenguajes,dialecto,palabras,región,regional,país,internacionalización,local,locale
 X-KDE-Keywords[fr]=langue, écriture, texte, idiomes, dialecte, mots, région, régional, pays, internationalisation, locale
+X-KDE-Keywords[hi]=भाषा, लेखन, पाठ, मुहावरे, बोली, शब्द, क्षेत्र, क्षेत्रीय, देश,अंतर्राष्ट्रीयकरण, लोकेल
 X-KDE-Keywords[nl]=taal,schrijven,tekst,idiomen,dialect,woorden,regio,regionaal,land,internationalisatie,taalregio
 X-KDE-Keywords[pl]=język,pisanie,tekst,idiomy,dialekt,słowa,regiony,regionalne,kraj,umiędzynarodowienie,tłumaczenie
 X-KDE-Keywords[pt]=língua,escrita,texto,idiomas,dialecto,palavras,região,regional,país,internacionalização,localização
@@ -111,5 +112,6 @@ X-KDE-Keywords[sv]=språk,skriva,text,idiom,dialekt,ord,region,regional,land,lan
 X-KDE-Keywords[uk]=language,writing,text,idioms,dialect,words,region,regional,country,internationalization,locale,мова,писемність,письмо,текст,ідіоми,діалект,слова,регіон,регіональний,країна,міжнародний,локаль
 X-KDE-Keywords[vi]=language,writing,text,idioms,dialect,words,region,regional,country,internationalization,locale,ngôn ngữ,viết,chữ,thành ngữ,phương ngôn,từ,vùng,theo vùng,nước,quốc tế hoá
 X-KDE-Keywords[x-test]=xxlanguagexx,xxwritingxx,xxtextxx,xxidiomsxx,xxdialectxx,xxwordsxx,xxregionxx,xxregionalxx,xxcountryxx,xxinternationalizationxx,xxlocalexx
+X-KDE-Keywords[zh_CN]=language,writing,text,idioms,dialect,words,region,regional,country,internationalization,locale,语言,书写,文字,文本,成语,惯用语,俗语,习语,方言,语言风格,字,词,单词,区域,区域设置,国家,地区,国际化,本地化,当地
 
 Categories=Qt;KDE;X-KDE-settings-translations;

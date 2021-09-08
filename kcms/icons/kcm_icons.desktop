@@ -96,6 +96,7 @@ X-KDE-Keywords[ar]=أيقونات,تأثيرات,حجم,تغيير الرموز,
 X-KDE-Keywords[ca]=icones,efectes,mida,color alt,color baix,canvi d'icones,botons,tema de botons,tema d'icones,tema,iconografia
 X-KDE-Keywords[es]=iconos,efectos,tamaño,hicolor,locolor,cambiar iconos,botones,tema de botones,tema de iconos,tema,iconografía
 X-KDE-Keywords[fr]=icônes, effets, taille, couleurs haute définition, couleurs basse définition, changement d'icônes, boutons, thème de boutons, thème d'icônes, thème, iconographie
+X-KDE-Keywords[hi]=प्रतीक,प्रभाव,आकार,है-कलर,लो-कलर,चिह्न बदलना,बटन,बटन प्रसंग,आइकन प्रसंग,थीम,आइकनोग्राफी
 X-KDE-Keywords[nl]=pictogrammen,effecten,grootte,hi-kleur,lo-kleur,pictogrammen wijzigen,knoppen,knoppenthema,thema,iconografie
 X-KDE-Keywords[pl]=ikony,efekty,rozmiar,hicolor,locolor,zmiana ikon,przyciski,wygląd przycisków,wygląd ikon,wygląd,ikonografia
 X-KDE-Keywords[pt]=ícones,efeitos,tamanho,muitas cores,poucas cores,mudar os ícones,botões,tema de botões,tema de ícones,tema,iconografia
@@ -105,5 +106,6 @@ X-KDE-Keywords[sv]=ikoner,effekter,storlek,många färger,få färger,ändra iko
 X-KDE-Keywords[uk]=icons,effects,size,hicolor,locolor,change icons,buttons,button theme,icon theme,theme,iconography,піктограми,значки,іконки,ефекти,розмір,колір,змінити піктограми,кнопки,тема кнопок,тема піктограм,тема значків,тема,піктографія
 X-KDE-Keywords[vi]=icons,effects,size,hicolor,locolor,change icons,buttons,button theme,icon theme,theme,iconography,biểu tượng,hiệu ứng,cỡ,màu cao,màu thấp,thay đổi biểu tượng,nút,chủ đề nút,chủ đề biểu tượng,chủ đề,biểu tượng học
 X-KDE-Keywords[x-test]=xxiconsxx,xxeffectsxx,xxsizexx,xxhicolorxx,xxlocolorxx,xxchange iconsxx,xxbuttonsxx,xxbutton themexx,xxicon themexx,xxthemexx,xxiconographyxx
+X-KDE-Keywords[zh_CN]=icons,effects,size,hicolor,locolor,change icons,buttons,button theme,icon theme,theme,iconography,图标,效果,特效,动效,大小,图标大小,高彩色,低彩色,多颜色,少颜色,更改图标,修改图标,替换图标,按钮,按钮主题,图标主题,主题,图像学
 
 Categories=Qt;KDE;X-KDE-settings-looknfeel;

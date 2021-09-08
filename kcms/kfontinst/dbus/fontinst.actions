@@ -114,6 +114,6 @@ Description[tr]=Sistem genelinde yazı tipi yapılandırmasını değiştirmek, 
 Description[uk]=Для зміни параметрів загальносистемних шрифтів потрібні відповідні права доступу.
 Description[vi]=Việc chỉnh sửa cấu hình phông chữ toàn hệ thống đòi hỏi đặc quyền.
 Description[x-test]=xxModifying the system-wide font configuration requires privileges.xx
-Description[zh_CN]=修改系统字体配置需要权限。
+Description[zh_CN]=修改系统字体配置需要相应权限。
 Policy=auth_admin
 Persistence=session

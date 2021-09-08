@@ -98,6 +98,7 @@ X-KDE-Keywords[ar]=ردود الفعل,التقرير,الاتصال,جمع ال
 X-KDE-Keywords[ca]=comentari,informe,contacte,recol·lecció de dades,estadístiques,ús,registre, enregistrament,telemetria
 X-KDE-Keywords[es]=realimentación,comentarios y sugerencias,informe,contacto,recopilación de datos,estadísticas,uso,registro,telemetría
 X-KDE-Keywords[fr]=Retour utilisateur, rapport, contact, collecte de données, statistiques, utilisation, journal, connexion, télémétrie
+X-KDE-Keywords[hi]=प्रतिक्रिया, रिपोर्ट, संपर्क, डेटा संग्रह, आंकड़े, उपयोग, लॉग, लॉगिंग,टेलीमेटरी
 X-KDE-Keywords[nl]=terugkoppeling,rapport,contactpersoon,gegevensverzameling,statistieken,gebruik,log,loggen,telemetrie
 X-KDE-Keywords[pl]=informacja zwrotna,zgłoszenie,kontakt,zbiór danych,statystyka,użycie,dziennik,rejestrowanie,telemetria
 X-KDE-Keywords[pt]=reacções,relatório,contacto,recolha de dados,estatísticas,utilização,registo,telemetria
@@ -107,5 +108,6 @@ X-KDE-Keywords[sv]=återkoppling,rapportera,kontakta,datainsamling,statistik,anv
 X-KDE-Keywords[uk]=feedback,report,contact,data collection,statistics,usage,log,logging,telemetry,відгук,звіт,зв'язок,контакт,збирання даних,статистика,користування,журнал,журналювання,телеметрія
 X-KDE-Keywords[vi]=feedback,report,contact,data collection,statistics,usage,log,logging,telemetry,phản hồi,báo cáo,liên hệ,thu thập dữ liệu,thống kê,sử dụng,nhật kí,ghi nhật kí,viễn trắc
 X-KDE-Keywords[x-test]=xxfeedbackxx,xxreportxx,xxcontactxx,xxdata collectionxx,xxstatisticsxx,xxusagexx,xxlogxx,xxloggingxx,xxtelemetryxx
+X-KDE-Keywords[zh_CN]=feedback,report,contact,data collection,statistics,usage,log,logging,telemetry,反馈,回馈,反映,报告,联系,数据收集,数据统计,统计数据,使用数据,用量,使用率,使用水平,日志,日志记录,上报,遥测
 
 Categories=Qt;KDE;

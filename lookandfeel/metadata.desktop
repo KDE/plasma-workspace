@@ -38,7 +38,7 @@ Comment[tr]=KDE VDG'den esinti
 Comment[uk]=Breeze, автори — KDE VDG
 Comment[vi]=Breeze, do KDE VDG
 Comment[x-test]=xxBreeze by the KDE VDGxx
-Comment[zh_CN]=微风，由 KDE VDG 创作
+Comment[zh_CN]=Breeze 微风主题，由 KDE VDG (视觉设计团队) 设计制作
 Comment[zh_TW]=由 KDE VDG 設計的 Breeze
 Keywords=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;
 Keywords[ar]=سطح المكتب;مساحة العمل;المظهر;المظهر والإحساس;اخرج;Lock;علق;أطفئ;أسبت;
@@ -137,7 +137,7 @@ Name[tr]=Breeze
 Name[uk]=Breeze
 Name[vi]=Breeze
 Name[x-test]=xxBreezexx
-Name[zh_CN]=微风
+Name[zh_CN]=Breeze 微风
 Name[zh_TW]=微風
 Type=Service
 
