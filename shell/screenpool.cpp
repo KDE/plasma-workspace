@@ -38,16 +38,18 @@ ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
 
 void ScreenPool::load()
 {
-    m_primaryConnector = QString();
+    m_primaryConnector.clear();
     m_connectorForId.clear();
     m_idForConnector.clear();
 
-    QScreen *primary = qGuiApp->primaryScreen();
-    if (primary) {
-        m_primaryConnector = primary->name();
-        if (!m_primaryConnector.isEmpty()) {
-            m_connectorForId[0] = m_primaryConnector;
-            m_idForConnector[m_primaryConnector] = 0;
+    if (KWindowSystem::isPlatformX11()) {
+        QScreen *primary = qGuiApp->primaryScreen();
+        if (primary) {
+            m_primaryConnector = primary->name();
+            if (!m_primaryConnector.isEmpty()) {
+                m_connectorForId[0] = m_primaryConnector;
+                m_idForConnector[m_primaryConnector] = 0;
+            }
         }
     }
 
@@ -84,6 +86,11 @@ ScreenPool::~ScreenPool()
 QString ScreenPool::primaryConnector() const
 {
     return m_primaryConnector;
+}
+
+int ScreenPool::primaryScreenId() const
+{
+    return m_idForConnector.value(m_primaryConnector);
 }
 
 void ScreenPool::setPrimaryConnector(const QString &primary)
