@@ -38,16 +38,30 @@ ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
 
 void ScreenPool::load()
 {
-    m_primaryConnector = QString();
+    m_primaryConnector.clear();
     m_connectorForId.clear();
     m_idForConnector.clear();
 
-    QScreen *primary = qGuiApp->primaryScreen();
-    if (primary) {
-        m_primaryConnector = primary->name();
-        if (!m_primaryConnector.isEmpty()) {
+    const auto screens = qGuiApp->screens();
+    if (KWindowSystem::isPlatformWayland() && m_configGroup.hasKey("0")) {
+        auto lastPrimary = m_configGroup.readEntry("0", QString());
+        if (std::any_of(screens.cbegin(), screens.cend(), [&](QScreen *screen) {
+                return screen->name() == lastPrimary;
+            })) {
+            m_primaryConnector = lastPrimary;
             m_connectorForId[0] = m_primaryConnector;
             m_idForConnector[m_primaryConnector] = 0;
+        }
+    }
+
+    if (m_primaryConnector.isEmpty()) {
+        QScreen *primary = qGuiApp->primaryScreen();
+        if (primary) {
+            m_primaryConnector = primary->name();
+            if (!m_primaryConnector.isEmpty()) {
+                m_connectorForId[0] = m_primaryConnector;
+                m_idForConnector[m_primaryConnector] = 0;
+            }
         }
     }
 
@@ -68,7 +82,7 @@ void ScreenPool::load()
     // containment->screen() will return an incorrect -1
     // at startup, if it' asked before corona::addOutput()
     // is performed, driving to the creation of a new containment
-    for (QScreen *screen : qGuiApp->screens()) {
+    for (QScreen *screen : screens) {
         if (!m_idForConnector.contains(screen->name())) {
             insertScreenMapping(firstAvailableId(), screen->name());
         }
