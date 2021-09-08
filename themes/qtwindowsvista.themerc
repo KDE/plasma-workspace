@@ -68,7 +68,7 @@ Name[uk]=MS Windows Vista
 Name[vi]=MS Windows Vista
 Name[wa]=MS Windows Vista
 Name[x-test]=xxMS Windows Vistaxx
-Name[zh_CN]=MS Windows Vista
+Name[zh_CN]=MS Windows Vista 风格
 Name[zh_TW]=MS Windows Vista
 Comment=Style that uses the Windows Vista style engine
 Comment[ar]=نمط يستخدِم محرّك سمات ويندوز فيستا
@@ -135,7 +135,7 @@ Comment[uk]=Стиль, що використовує рушій стилів Wi
 Comment[vi]=Kiểu cách sử dụng dụng cụ kiểu cách của Windows Vista
 Comment[wa]=Stîle ki s' sieve do moteur di stîle di Windows Vista
 Comment[x-test]=xxStyle that uses the Windows Vista style enginexx
-Comment[zh_CN]=使用 Windows Vista 样式引擎的风格
+Comment[zh_CN]=使用 Windows Vista 风格引擎的风格
 Comment[zh_TW]=使用 Windows Vista 樣式引擎的樣式
 [KDE]
 WidgetStyle=WindowsVista

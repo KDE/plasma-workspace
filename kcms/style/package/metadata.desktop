@@ -73,7 +73,7 @@ Comment[tr]=Uygulama stilini ve davranışını yapılandırın
 Comment[uk]=Налаштовування стилю і поведінки вікон програм
 Comment[vi]=Cấu hình kiểu cách và ứng xử của ứng dụng
 Comment[x-test]=xxConfigure application style and behaviorxx
-Comment[zh_CN]=配置应用程序样式和行为
+Comment[zh_CN]=配置应用程序视觉风格和行为
 
 Icon=preferences-desktop-theme-applications
 Type=Service
