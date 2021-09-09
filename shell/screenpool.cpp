@@ -91,11 +91,7 @@ void ScreenPool::setPrimaryConnector(const QString &primary)
         return;
     }
 
-    int oldIdForPrimary = -1;
-    if (m_idForConnector.contains(primary)) {
-        oldIdForPrimary = m_idForConnector.value(primary);
-    }
-
+    int oldIdForPrimary = m_idForConnector.value(primary, -1);
     if (oldIdForPrimary == -1) {
         // move old primary to new free id
         oldIdForPrimary = firstAvailableId();
