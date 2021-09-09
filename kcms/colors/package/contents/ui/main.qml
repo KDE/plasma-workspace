@@ -146,8 +146,7 @@ KCM.GridViewKCM {
                 checked: Qt.colorEqual(kcm.accentColor, "transparent")
                 onToggled: {
                     if (enabled) {
-                        kcm.accentColor = undefined
-                        root.accentColor = undefined
+                        kcm.accentColor = "transparent"
                     }
                 }
             }
@@ -224,7 +223,6 @@ KCM.GridViewKCM {
                             if (enabled) {
                                 accentBox.checked = true
                                 kcm.accentColor = modelData
-                                root.accentColor = modelData
                             }
                         }
                     }

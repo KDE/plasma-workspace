@@ -62,8 +62,6 @@ KCMColors::KCMColors(QObject *parent, const QVariantList &args)
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_colors"), i18n("Colors"), QStringLiteral("2.0"), QString(), KAboutLicense::GPL);
 
-    m_accentColor = savedAccentColor();
-
     about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@privat.broulik.de"));
     setAboutData(about);
 
@@ -77,6 +75,8 @@ KCMColors::KCMColors(QObject *parent, const QVariantList &args)
     connect(colorsSettings(), &ColorsSettings::colorSchemeChanged, this, [this] {
         m_model->setSelectedScheme(colorsSettings()->colorScheme());
     });
+
+    connect(colorsSettings(), &ColorsSettings::accentColorChanged, this, &KCMColors::accentColorChanged);
 
     connect(m_model, &ColorsModel::selectedSchemeChanged, m_filteredModel, &FilterProxyModel::setSelectedScheme);
     m_filteredModel->setSourceModel(m_model);
@@ -102,30 +102,18 @@ ColorsSettings *KCMColors::colorsSettings() const
     return m_data->settings();
 }
 
-std::optional<QColor> KCMColors::savedAccentColor() const
-{
-    if (!colorsSettings()->config()->group("General").hasKey("AccentColor")) {
-        return {};
-    }
-    return colorsSettings()->accentColor();
-}
-
 QColor KCMColors::accentColor() const
 {
-    return m_accentColor.value_or(Qt::transparent);
+    const QColor color = colorsSettings()->accentColor();
+    if (!color.isValid()) {
+        return QColor(Qt::transparent);
+    }
+    return color;
 }
 
 void KCMColors::setAccentColor(const QColor &accentColor)
 {
-    m_accentColor = accentColor;
-    Q_EMIT accentColorChanged();
-    Q_EMIT settingsChanged();
-}
-
-void KCMColors::resetAccentColor()
-{
-    m_accentColor.reset();
-    Q_EMIT accentColorChanged();
+    colorsSettings()->setAccentColor(accentColor);
     Q_EMIT settingsChanged();
 }
 
@@ -331,9 +319,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
 
 bool KCMColors::isSaveNeeded() const
 {
-    return m_activeSchemeEdited || 
-           !m_model->match(m_model->index(0, 0), ColorsModel::PendingDeletionRole, true).isEmpty() ||
-           savedAccentColor() != m_accentColor;
+    return m_activeSchemeEdited || !m_model->match(m_model->index(0, 0), ColorsModel::PendingDeletionRole, true).isEmpty() || colorsSettings()->isSaveNeeded();
 }
 
 void KCMColors::load()
@@ -364,7 +350,7 @@ void KCMColors::save()
     // We need to save the colors change first, to avoid a situation,
     // when we announced that the color scheme has changed, but
     // the colors themselves in the color scheme have not yet
-    if (m_selectedSchemeDirty || m_activeSchemeEdited || m_accentColor != savedAccentColor()) {
+    if (m_selectedSchemeDirty || m_activeSchemeEdited || colorsSettings()->isSaveNeeded()) {
         saveColors();
     }
     ManagedConfigModule::save();
@@ -382,25 +368,19 @@ void KCMColors::saveColors()
     // code already a mess, so might as well just do what works.
     KSharedConfigPtr globalConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
 
-    auto set = [=]() {
+    auto setGlobals = [=]() {
         globalConfig->group("General").writeEntry("AccentColor", QColor());
-
-        if (m_accentColor.has_value()) {
-            colorsSettings()->setAccentColor(*m_accentColor);
-            globalConfig->group("General").writeEntry("AccentColor", *m_accentColor, KConfig::Notify);
+        if (accentColor() != QColor(Qt::transparent)) {
+            globalConfig->group("General").writeEntry("AccentColor", accentColor(), KConfig::Notify);
         } else {
-            auto g = colorsSettings()->config()->group("General");
-            g.deleteEntry("AccentColor");
             globalConfig->group("General").deleteEntry("AccentColor", KConfig::Notify);
         }
     };
 
-    set();
-
+    setGlobals();
     applyScheme(path, colorsSettings()->config());
     m_selectedSchemeDirty = false;
-
-    set();
+    setGlobals();
 }
 
 QColor KCMColors::accentBackground(const QColor& accent, const QColor& background)

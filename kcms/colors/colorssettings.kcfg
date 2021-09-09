@@ -11,6 +11,7 @@
     </entry>
     <entry name="accentColor" key="AccentColor" type="Color">
       <label>Accent color</label>
+      <default>transparent</default>
     </entry>
   </group>
 </kcfg>
