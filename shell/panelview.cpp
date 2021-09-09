@@ -94,7 +94,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     m_strutsTimer.setSingleShot(true);
     connect(&m_strutsTimer, &QTimer::timeout, this, &PanelView::updateStruts);
 
-    qmlRegisterType<QScreen>();
+    qmlRegisterAnonymousType<QScreen>("", 1);
     rootContext()->setContextProperty(QStringLiteral("panel"), this);
     setSource(m_corona->kPackage().fileUrl("views", QStringLiteral("Panel.qml")));
     updatePadding();
@@ -925,16 +925,15 @@ bool PanelView::event(QEvent *e)
     case QEvent::Wheel: {
         QWheelEvent *we = static_cast<QWheelEvent *>(e);
 
-        if (!containmentContainsPosition(we->pos()) && !m_fakeEventPending) {
-            QWheelEvent we2(positionAdjustedForContainment(we->pos()),
-                            positionAdjustedForContainment(we->pos()) + position(),
+        if (!containmentContainsPosition(we->position()) && !m_fakeEventPending) {
+            QWheelEvent we2(positionAdjustedForContainment(we->position()),
+                            positionAdjustedForContainment(we->position()) + position(),
                             we->pixelDelta(),
                             we->angleDelta(),
-                            we->angleDelta().y(),
-                            we->orientation(),
                             we->buttons(),
                             we->modifiers(),
-                            we->phase());
+                            we->phase(),
+                            we->inverted());
 
             m_fakeEventPending = true;
             QCoreApplication::sendEvent(this, &we2);

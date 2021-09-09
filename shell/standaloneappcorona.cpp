@@ -137,7 +137,7 @@ Plasma::Containment *StandaloneAppCorona::createContainmentForActivity(const QSt
     }
 
     Plasma::Containment *containment =
-        containmentForScreen(screenNum, m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment"), QVariantList());
+        containmentForScreen(screenNum, activity, m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment"), QVariantList());
     Q_ASSERT(containment);
 
     if (containment) {
