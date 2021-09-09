@@ -211,8 +211,8 @@ private Q_SLOTS:
     void restore();
     void setAutoHideEnabled(bool autoHideEnabled);
     void showTemporarily();
-    void containmentChanged();
-    void statusChanged(Plasma::Types::ItemStatus);
+    void refreshContainment();
+    void refreshStatus(Plasma::Types::ItemStatus);
     void restoreAutoHide();
     void screenDestroyed(QObject *screen);
     void adaptToScreen();

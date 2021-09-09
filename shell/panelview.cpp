@@ -84,8 +84,8 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     connect(&m_unhideTimer, &QTimer::timeout, this, &PanelView::restoreAutoHide);
 
     m_lastScreen = targetScreen;
-    connect(this, SIGNAL(locationChanged(Plasma::Types::Location)), &m_positionPaneltimer, SLOT(start()));
-    connect(this, SIGNAL(containmentChanged()), this, SLOT(containmentChanged()));
+    connect(this, &PanelView::locationChanged, &m_positionPaneltimer, qOverload<>(&QTimer::start));
+    connect(this, &PanelView::containmentChanged, this, &PanelView::refreshContainment);
 
     if (!m_corona->kPackage().isValid()) {
         qWarning() << "Invalid home screen package";
@@ -1224,7 +1224,7 @@ void PanelView::updateStruts()
                                     strut.bottom_end);
 }
 
-void PanelView::containmentChanged()
+void PanelView::refreshContainment()
 {
     restore();
     connect(containment(), &Plasma::Containment::userConfiguringChanged, this, [this](bool configuring) {
@@ -1236,7 +1236,7 @@ void PanelView::containmentChanged()
         }
     });
 
-    connect(containment(), SIGNAL(statusChanged(Plasma::Types::ItemStatus)), SLOT(statusChanged(Plasma::Types::ItemStatus)));
+    connect(containment(), &Plasma::Applet::statusChanged, this, &PanelView::refreshStatus);
     connect(containment(), &Plasma::Applet::appletDeleted, this, [this] {
         // containment()->destroyed() is true only when the user deleted it
         // so the config is to be thrown away, not during shutdown
@@ -1280,7 +1280,7 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
     }
 }
 
-void PanelView::statusChanged(Plasma::Types::ItemStatus status)
+void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
 {
     if (status == Plasma::Types::NeedsAttentionStatus) {
         showTemporarily();
