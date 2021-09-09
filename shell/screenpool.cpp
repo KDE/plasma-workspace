@@ -55,10 +55,11 @@ void ScreenPool::load()
     const auto keys = m_configGroup.keyList();
     for (const QString &key : keys) {
         QString connector = m_configGroup.readEntry(key, QString());
-        if (!key.isEmpty() && !connector.isEmpty() && !m_connectorForId.contains(key.toInt()) && !m_idForConnector.contains(connector)) {
-            m_connectorForId[key.toInt()] = connector;
-            m_idForConnector[connector] = key.toInt();
-        } else if (m_idForConnector.value(connector) != key.toInt()) {
+        const int currentId = key.toInt();
+        if (!key.isEmpty() && !connector.isEmpty() && !m_connectorForId.contains(currentId) && !m_idForConnector.contains(connector)) {
+            m_connectorForId[currentId] = connector;
+            m_idForConnector[connector] = currentId;
+        } else if (m_idForConnector.value(connector) != currentId) {
             m_configGroup.deleteEntry(key);
         }
     }
