@@ -301,9 +301,9 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
     } else {
         m_configView = new PlasmaQuick::ConfigView(applet);
     }
-    m_configView.data()->init();
-    m_configView.data()->setTransientParent(this);
-    m_configView.data()->show();
+    m_configView->init();
+    m_configView->setTransientParent(this);
+    m_configView->show();
     m_configView->requestActivate();
 
     auto window = qobject_cast<QWindow *>(m_configView);

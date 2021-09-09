@@ -45,7 +45,7 @@ Widget::~Widget()
 uint Widget::id() const
 {
     if (d->applet) {
-        return d->applet.data()->id();
+        return d->applet->id();
     }
 
     return 0;
@@ -54,7 +54,7 @@ uint Widget::id() const
 QString Widget::type() const
 {
     if (d->applet) {
-        return d->applet.data()->pluginMetaData().pluginId();
+        return d->applet->pluginMetaData().pluginId();
     }
 
     return QString();
@@ -63,7 +63,7 @@ QString Widget::type() const
 void Widget::remove()
 {
     if (d->applet) {
-        d->applet.data()->destroy();
+        d->applet->destroy();
         d->applet.clear();
     }
 }
@@ -71,14 +71,14 @@ void Widget::remove()
 void Widget::setGlobalShortcut(const QString &shortcut)
 {
     if (d->applet) {
-        d->applet.data()->setGlobalShortcut(QKeySequence(shortcut));
+        d->applet->setGlobalShortcut(QKeySequence(shortcut));
     }
 }
 
 QString Widget::globalShorcut() const
 {
     if (d->applet) {
-        return d->applet.data()->globalShortcut().toString();
+        return d->applet->globalShortcut().toString();
     }
 
     return QString();
@@ -86,7 +86,7 @@ QString Widget::globalShorcut() const
 
 Plasma::Applet *Widget::applet() const
 {
-    return d->applet.data();
+    return d->applet;
 }
 
 int Widget::index() const
@@ -95,8 +95,7 @@ int Widget::index() const
         return -1;
     }
 
-    Plasma::Applet *applet = d->applet.data();
-    Plasma::Containment *c = applet->containment();
+    Plasma::Containment *c = d->applet->containment();
     if (!c) {
         return -1;
     }
@@ -123,8 +122,7 @@ void Widget::setIndex(int index)
         return;
     }
 
-    Plasma::Applet *applet = d->applet.data();
-    Plasma::Containment *c = applet->containment();
+    Plasma::Containment *c = d->applet->containment();
     if (!c) {
         return;
     }
@@ -139,7 +137,7 @@ void Widget::setIndex(int index)
 
 QJSValue Widget::geometry() const
 {
-    QQuickItem *appletItem = d->applet.data()->property("_plasma_graphicObject").value<QQuickItem *>();
+    QQuickItem *appletItem = d->applet->property("_plasma_graphicObject").value<QQuickItem *>();
 
     if (appletItem) {
         QJSValue rect = engine()->newObject();
@@ -158,8 +156,8 @@ void Widget::setGeometry(const QJSValue &geometry)
 {
     Q_UNUSED(geometry)
     /*if (d->applet) {
-        d->applet.data()->setGeometry(geometry);
-        KConfigGroup cg = d->applet.data()->config().parent();
+        d->applet->setGeometry(geometry);
+        KConfigGroup cg = d->applet->config().parent();
         if (cg.isValid()) {
             cg.writeEntry("geometry", geometry);
         }
@@ -169,7 +167,7 @@ void Widget::setGeometry(const QJSValue &geometry)
 void Widget::showConfigurationInterface()
 {
     /* if (d->applet) {
-         d->applet.data()->showConfigurationInterface();
+         d->applet->showConfigurationInterface();
      }*/
 }
 

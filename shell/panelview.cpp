@@ -673,12 +673,12 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
         m_panelConfigView = new PlasmaQuick::ConfigView(applet);
     }
 
-    m_panelConfigView.data()->init();
-    m_panelConfigView.data()->show();
-    m_panelConfigView.data()->requestActivate();
+    m_panelConfigView->init();
+    m_panelConfigView->show();
+    m_panelConfigView->requestActivate();
 
     if (isPanelConfig) {
-        KWindowSystem::setState(m_panelConfigView.data()->winId(), NET::SkipTaskbar | NET::SkipPager);
+        KWindowSystem::setState(m_panelConfigView->winId(), NET::SkipTaskbar | NET::SkipPager);
     }
 }
 
@@ -997,8 +997,8 @@ bool PanelView::event(QEvent *e)
     }
 
     case QEvent::Hide: {
-        if (m_panelConfigView && m_panelConfigView.data()->isVisible()) {
-            m_panelConfigView.data()->hide();
+        if (m_panelConfigView && m_panelConfigView->isVisible()) {
+            m_panelConfigView->hide();
         }
         m_containsMouse = false;
         break;

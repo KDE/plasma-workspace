@@ -54,9 +54,8 @@ Containment::Containment(Plasma::Containment *containment, ScriptEngine *engine)
 Containment::~Containment()
 {
     if (d->containment) {
-        Plasma::Containment *containment = d->containment.data();
         if (d->oldWallpaperPlugin != d->wallpaperPlugin || d->oldWallpaperMode != d->wallpaperMode) {
-            containment->setWallpaper(d->wallpaperPlugin);
+            d->containment->setWallpaper(d->wallpaperPlugin);
         }
     }
 
@@ -76,7 +75,7 @@ int Containment::screen() const
         return -1;
     }
 
-    return d->containment.data()->screen();
+    return d->containment->screen();
 }
 
 QString Containment::wallpaperPlugin() const
@@ -105,7 +104,7 @@ QString Containment::formFactor() const
         return QStringLiteral("Planar");
     }
 
-    switch (d->containment.data()->formFactor()) {
+    switch (d->containment->formFactor()) {
     case Plasma::Types::Planar:
         return QStringLiteral("planar");
     case Plasma::Types::MediaCenter:
@@ -128,7 +127,7 @@ QList<int> Containment::widgetIds() const
     QList<int> w;
 
     if (d->containment) {
-        foreach (const Plasma::Applet *applet, d->containment.data()->applets()) {
+        foreach (const Plasma::Applet *applet, d->containment->applets()) {
             w.append(applet->id());
         }
     }
@@ -145,7 +144,7 @@ QJSValue Containment::widgetById(const QJSValue &paramId) const
     const uint id = paramId.toInt();
 
     if (d->containment) {
-        foreach (Plasma::Applet *w, d->containment.data()->applets()) {
+        foreach (Plasma::Applet *w, d->containment->applets()) {
             if (w->id() == id) {
                 return engine()->wrap(w);
             }
@@ -173,7 +172,7 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
         QQuickItem *containmentItem = nullptr;
 
         if (geometry.x() >= 0 && geometry.y() >= 0) {
-            containmentItem = d->containment.data()->property("_plasma_graphicObject").value<QQuickItem *>();
+            containmentItem = d->containment->property("_plasma_graphicObject").value<QQuickItem *>();
 
             if (containmentItem) {
                 QMetaObject::invokeMethod(containmentItem,
@@ -193,7 +192,7 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
         // Case in which either:
         // * a geometry wasn't provided
         // * containmentItem wasn't found
-        applet = d->containment.data()->createApplet(v.toString(), args);
+        applet = d->containment->createApplet(v.toString(), args);
 
         if (applet) {
             return engine()->wrap(applet);
@@ -202,7 +201,7 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
         return engine()->newError(i18n("Could not create the %1 widget!", v.toString()));
     } else if (Widget *widget = qobject_cast<Widget *>(v.toQObject())) {
         applet = widget->applet();
-        d->containment.data()->addApplet(applet);
+        d->containment->addApplet(applet);
         return v;
     }
 
@@ -218,7 +217,7 @@ QJSValue Containment::widgets(const QString &widgetType) const
     QJSValue widgets = engine()->newArray();
     int count = 0;
 
-    foreach (Plasma::Applet *widget, d->containment.data()->applets()) {
+    foreach (Plasma::Applet *widget, d->containment->applets()) {
         if (widgetType.isEmpty() || widget->pluginMetaData().pluginId() == widgetType) {
             widgets.setProperty(count, engine()->wrap(widget));
             ++count;
@@ -235,7 +234,7 @@ uint Containment::id() const
         return 0;
     }
 
-    return d->containment.data()->id();
+    return d->containment->id();
 }
 
 QString Containment::type() const
@@ -244,20 +243,20 @@ QString Containment::type() const
         return QString();
     }
 
-    return d->containment.data()->pluginMetaData().pluginId();
+    return d->containment->pluginMetaData().pluginId();
 }
 
 void Containment::remove()
 {
     if (d->containment) {
-        d->containment.data()->destroy();
+        d->containment->destroy();
     }
 }
 
 void Containment::showConfigurationInterface()
 {
     if (d->containment) {
-        QAction *configAction = d->containment.data()->actions()->action(QStringLiteral("configure"));
+        QAction *configAction = d->containment->actions()->action(QStringLiteral("configure"));
         if (configAction && configAction->isEnabled()) {
             configAction->trigger();
         }
@@ -266,12 +265,12 @@ void Containment::showConfigurationInterface()
 
 Plasma::Applet *Containment::applet() const
 {
-    return d->containment.data();
+    return d->containment;
 }
 
 Plasma::Containment *Containment::containment() const
 {
-    return d->containment.data();
+    return d->containment;
 }
 
 }
