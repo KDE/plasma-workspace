@@ -135,7 +135,7 @@ PlasmaComponents3.Page {
             section {
                 property: "Type Description"
                 delegate: Item {
-                    height: childrenRect.height
+                    height: Math.floor(childrenRect.height)
                     width: notifierDialog.width
                     PlasmaExtras.Heading {
                         level: 3
