@@ -2128,7 +2128,11 @@ QString ShellCorona::defaultShell()
 {
     KSharedConfig::Ptr startupConf = KSharedConfig::openConfig(QStringLiteral("plasmashellrc"));
     KConfigGroup startupConfGroup(startupConf, "Shell");
-    return startupConfGroup.readEntry("ShellPackage", qEnvironmentVariable("PLASMA_DEFAULT_SHELL", "org.kde.plasma.desktop"));
+    const QString defaultValue = qEnvironmentVariable("PLASMA_DEFAULT_SHELL", "org.kde.plasma.desktop");
+    QString value = startupConfGroup.readEntry("ShellPackage", defaultValue);
+
+    // In the global theme an empty value was written, make sure we still return a shell package
+    return value.isEmpty() ? defaultValue : value;
 }
 
 void ShellCorona::refreshCurrentShell()
