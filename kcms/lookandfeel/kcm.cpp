@@ -764,6 +764,10 @@ void KCMLookandFeel::setWindowPlacement(const QString &value)
 
 void KCMLookandFeel::setShellPackage(const QString &value)
 {
+    if (value.isEmpty()) {
+        return;
+    }
+
     writeNewDefaults(QStringLiteral("plasmashellrc"), QStringLiteral("Shell"), QStringLiteral("ShellPackage"), value);
     m_plasmashellChanged = true;
 }
