@@ -99,9 +99,11 @@ Comment[zh_TW]=變更工作區及應用程式的語言
 
 X-KDE-Keywords=language,writing,text,idioms,dialect,words,region,regional,country,internationalization,locale
 X-KDE-Keywords[ar]=لغة,كتابة,نص,مصطلحات,لهجة,كلمات,منطقة,إقليمية,بلد,التدويل,اللغة
+X-KDE-Keywords[az]=language,writing,text,idioms,dialect,words,region,regional,country,internationalization,locale,dil,yazı,mətn,deyimlər,dialekt,bölgə,bölgə üzrə,ölkə,milli,lokal,yerli
 X-KDE-Keywords[ca]=idioma,escriptura,text,frases fetes,dialecte,paraules,regió,regional,país,internacionalització,locale,configuració regional
 X-KDE-Keywords[en_GB]=language,writing,text,idioms,dialect,words,region,regional,country,internationalisation,locale
 X-KDE-Keywords[es]=idioma,escritura,texto,lenguajes,dialecto,palabras,región,regional,país,internacionalización,local,locale
+X-KDE-Keywords[eu]=hizkuntza,idazketa,testua,esamoldeak,dialektoa,hitzak,eskualdea, eskualdekoa,herrialdea,nazioartekotzea,tokiko konfigurazioa
 X-KDE-Keywords[fr]=langue, écriture, texte, idiomes, dialecte, mots, région, régional, pays, internationalisation, locale
 X-KDE-Keywords[hi]=भाषा, लेखन, पाठ, मुहावरे, बोली, शब्द, क्षेत्र, क्षेत्रीय, देश,अंतर्राष्ट्रीयकरण, लोकेल
 X-KDE-Keywords[nl]=taal,schrijven,tekst,idiomen,dialect,woorden,regio,regionaal,land,internationalisatie,taalregio
