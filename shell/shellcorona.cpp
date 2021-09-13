@@ -662,10 +662,11 @@ void ShellCorona::load()
                 // historically CustomContainments are treated as desktops
             } else if (containment->containmentType() == Plasma::Types::DesktopContainment
                        || containment->containmentType() == Plasma::Types::CustomContainment) {
+                // FIXME ideally fix this, or at least document the crap out of it
                 int screen = containment->lastScreen();
                 if (screen < 0) {
-                    screen = m_screenPool->primaryScreenId();
-                    qWarning() << "last screen is unknown so putting containment on screen " << screen;
+                    screen = 0;
+                    qWarning() << "last screen is < 0 so putting containment on screen " << screen;
                 }
                 insertContainment(containment->activity(), screen, containment);
             }
@@ -1291,7 +1292,7 @@ void ShellCorona::createWaitingPanels()
         // ignore non existing (yet?) screens
         int requestedScreen = cont->lastScreen();
         if (requestedScreen < 0) {
-            requestedScreen = m_desktopViewforId.cbegin().key();
+            requestedScreen = 0;
         }
 
         DesktopView *desktopView = m_desktopViewforId.value(requestedScreen);
