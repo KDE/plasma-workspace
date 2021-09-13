@@ -1770,7 +1770,7 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
     }
 
     // find out what screen this panel should go on
-    QScreen *wantedScreen = QGuiApplication::screenAt(QCursor::pos());
+    QScreen *wantedScreen = qGuiApp->focusWindow() ? qGuiApp->focusWindow()->screen() : qGuiApp->primaryScreen();
 
     QList<Plasma::Types::Location> availableLocations;
     availableLocations << Plasma::Types::LeftEdge << Plasma::Types::TopEdge << Plasma::Types::RightEdge << Plasma::Types::BottomEdge;
