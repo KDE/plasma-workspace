@@ -1,0 +1,31 @@
+// SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+// SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
+
+// !!! This file was auto-generated. Do not edit it manually! !!!
+
+#pragma once
+
+#include <QHash>
+#include <QString>
+
+#include <KLocalizedString>
+
+namespace TimezonesI18nData
+{
+using TimezoneCityToL10nMap = QHash<QString, QString>;
+using TimezoneContinentToL10nMap = QHash<QString, QString>;
+
+static TimezoneCityToL10nMap timezoneCityToL10nMap()
+{
+    return {<% cities.each do |city| %>
+        {QStringLiteral("<%= city %>"), i18nc("<%= city_description(city) %>", "<%= to_city_name(city) %>")},<%end%>
+    };
+}
+
+static TimezoneContinentToL10nMap timezoneContinentToL10nMap()
+{
+    return {<% continents.each do |continent| %>
+        {QStringLiteral("<%= continent %>"), i18nc("<%= continent_description(continent) %>", "<%= to_contient_name(continent) %>")},<%end%>
+    };
+}
+} // namespace TimezonesI18nData
