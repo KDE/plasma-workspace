@@ -80,12 +80,6 @@ KCM.GridViewKCM {
         RowLayout {
             id: row1
 
-            KCM.SettingStateBinding {
-                configObject: kcm.cursorThemeSettings
-                settingName: "cursorSize"
-                extraEnabledConditions: kcm.canResize
-            }
-
             QtControls.Label {
                 text: i18n("Size:")
             }
@@ -97,6 +91,12 @@ KCM.GridViewKCM {
                 onActivated: {
                     kcm.cursorThemeSettings.cursorSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
                     kcm.preferredSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
+                }
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.cursorThemeSettings
+                    settingName: "cursorSize"
+                    extraEnabledConditions: kcm.canResize
                 }
 
                 delegate: QtControls.ItemDelegate {
