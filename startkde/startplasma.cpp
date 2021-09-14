@@ -439,17 +439,19 @@ void resetSystemdFailedUnits()
 
 bool hasSystemdService(const QString &serviceName)
 {
+    qDBusRegisterMetaType<QPair<QString, QString>>();
+    qDBusRegisterMetaType<QList<QPair<QString, QString>>>();
     auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
                                               QStringLiteral("/org/freedesktop/systemd1"),
                                               QStringLiteral("org.freedesktop.systemd1.Manager"),
                                               QStringLiteral("ListUnitFilesByPatterns"));
     msg << QStringList({QStringLiteral("enabled"), QStringLiteral("static")}) << QStringList({serviceName});
-    auto reply = QDBusConnection::sessionBus().call(msg);
-    if (reply.type() == QDBusMessage::ErrorMessage) {
+    QDBusReply<QList<QPair<QString, QString>>> reply = QDBusConnection::sessionBus().call(msg);
+    if (!reply.isValid()) {
         return false;
     }
     // if we have a service returned then it must have found it
-    return !reply.arguments().isEmpty();
+    return !reply.value().isEmpty();
 }
 
 bool useSystemdBoot()
