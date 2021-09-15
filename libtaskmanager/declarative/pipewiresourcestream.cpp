@@ -1,6 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2018-2020 Red Hat Inc
-    SPDX-FileCopyrightText: 2020 Aleix Pol Gonzalez <aleixpol@kde.org>
+    SPDX-FileCopyrightText: 2020-2021 Aleix Pol Gonzalez <aleixpol@kde.org>
     SPDX-FileContributor: Jan Grulich <jgrulich@redhat.com>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
@@ -17,11 +17,87 @@
 #include <sys/mman.h>
 #include <unistd.h>
 
+#include <QGuiApplication>
 #include <QLoggingCategory>
 #include <QOpenGLTexture>
 #include <QSocketNotifier>
+#include <QVersionNumber>
+#include <qpa/qplatformnativeinterface.h>
 
 #include <KLocalizedString>
+
+#include <EGL/egl.h>
+#include <EGL/eglext.h>
+
+#include <QtPlatformHeaders/QEGLNativeContext>
+#undef Status
+
+static uint32_t SpaPixelFormatToDrmFormat(uint32_t spa_format)
+{
+    switch (spa_format) {
+    case SPA_VIDEO_FORMAT_RGBA:
+        return DRM_FORMAT_ABGR8888;
+    case SPA_VIDEO_FORMAT_RGBx:
+        return DRM_FORMAT_XBGR8888;
+    case SPA_VIDEO_FORMAT_BGRA:
+        return DRM_FORMAT_ARGB8888;
+    case SPA_VIDEO_FORMAT_BGRx:
+        return DRM_FORMAT_XRGB8888;
+    default:
+        return DRM_FORMAT_INVALID;
+    }
+}
+
+static std::vector<uint64_t> queryDmaBufModifiers(EGLDisplay display, uint32_t format)
+{
+    static auto eglQueryDmaBufModifiersEXT = (PFNEGLQUERYDMABUFMODIFIERSEXTPROC)eglGetProcAddress("eglQueryDmaBufModifiersEXT");
+    static auto eglQueryDmaBufFormatsEXT = (PFNEGLQUERYDMABUFFORMATSEXTPROC)eglGetProcAddress("eglQueryDmaBufFormatsEXT");
+    if (!eglQueryDmaBufFormatsEXT || !eglQueryDmaBufModifiersEXT) {
+        return {};
+    }
+
+    uint32_t drm_format = SpaPixelFormatToDrmFormat(format);
+    if (drm_format == DRM_FORMAT_INVALID) {
+        qCDebug(PIPEWIRE_LOGGING) << "Failed to find matching DRM format." << format;
+        return {DRM_FORMAT_MOD_INVALID};
+    }
+
+    EGLint count = 0;
+    EGLBoolean success = eglQueryDmaBufFormatsEXT(display, 0, nullptr, &count);
+
+    if (!success || count == 0) {
+        qCWarning(PIPEWIRE_LOGGING) << "Failed to query DMA-BUF format count.";
+        return {DRM_FORMAT_MOD_INVALID};
+    }
+
+    std::vector<uint32_t> formats(count);
+    if (!eglQueryDmaBufFormatsEXT(display, count, reinterpret_cast<EGLint *>(formats.data()), &count)) {
+        if (!success)
+            qCWarning(PIPEWIRE_LOGGING) << "Failed to query DMA-BUF formats.";
+        return {DRM_FORMAT_MOD_INVALID};
+    }
+
+    if (std::find(formats.begin(), formats.end(), drm_format) == formats.end()) {
+        qCDebug(PIPEWIRE_LOGGING) << "Format " << drm_format << " not supported for modifiers.";
+        return {DRM_FORMAT_MOD_INVALID};
+    }
+
+    success = eglQueryDmaBufModifiersEXT(display, drm_format, 0, nullptr, nullptr, &count);
+    if (!success || count == 0) {
+        if (!success)
+            qCWarning(PIPEWIRE_LOGGING) << "Failed to query DMA-BUF modifier count.";
+        return {DRM_FORMAT_MOD_INVALID};
+    }
+
+    std::vector<uint64_t> modifiers(count);
+    if (!eglQueryDmaBufModifiersEXT(display, drm_format, count, modifiers.data(), nullptr, &count)) {
+        qCWarning(PIPEWIRE_LOGGING) << "Failed to query DMA-BUF modifiers.";
+    }
+
+    // Support modifier-less buffers
+    modifiers.push_back(DRM_FORMAT_MOD_INVALID);
+    return modifiers;
+}
 
 void PipeWireSourceStream::onStreamStateChanged(void *data, pw_stream_state old, pw_stream_state state, const char *error_message)
 {
@@ -48,6 +124,42 @@ void PipeWireSourceStream::onStreamStateChanged(void *data, pw_stream_state old,
     }
 }
 
+static spa_pod *buildFormat(spa_pod_builder *builder, spa_video_format format, const std::vector<uint64_t> &modifiers = {})
+{
+    spa_pod_frame f[2];
+    const spa_rectangle pw_min_screen_bounds{1, 1};
+    const spa_rectangle pw_max_screen_bounds{UINT32_MAX, UINT32_MAX};
+
+    spa_pod_builder_push_object(builder, &f[0], SPA_TYPE_OBJECT_Format, SPA_PARAM_EnumFormat);
+    spa_pod_builder_add(builder, SPA_FORMAT_mediaType, SPA_POD_Id(SPA_MEDIA_TYPE_video), 0);
+    spa_pod_builder_add(builder, SPA_FORMAT_mediaSubtype, SPA_POD_Id(SPA_MEDIA_SUBTYPE_raw), 0);
+    spa_pod_builder_add(builder, SPA_FORMAT_VIDEO_format, SPA_POD_Id(format), 0);
+
+    if (modifiers.size()) {
+        auto pw_version = QVersionNumber::fromString(pw_get_library_version());
+
+        // SPA_POD_PROP_FLAG_DONT_FIXATE can be used with PipeWire >= 0.3.33
+        if (pw_version.majorVersion() >= 0 && pw_version.minorVersion() >= 3 && pw_version.microVersion() >= 33) {
+            spa_pod_builder_prop(builder, SPA_FORMAT_VIDEO_modifier, SPA_POD_PROP_FLAG_MANDATORY | SPA_POD_PROP_FLAG_DONT_FIXATE);
+        } else {
+            spa_pod_builder_prop(builder, SPA_FORMAT_VIDEO_modifier, SPA_POD_PROP_FLAG_MANDATORY);
+        }
+        spa_pod_builder_push_choice(builder, &f[1], SPA_CHOICE_Enum, 0);
+        // mofifiers from the array
+        for (auto it = modifiers.begin(); it != modifiers.end(); it++) {
+            spa_pod_builder_long(builder, *it);
+            if (it == modifiers.begin()) {
+                spa_pod_builder_long(builder, *it);
+            }
+        }
+        spa_pod_builder_pop(builder, &f[1]);
+    }
+
+    spa_pod_builder_add(builder, SPA_FORMAT_VIDEO_size, SPA_POD_CHOICE_RANGE_Rectangle(&pw_min_screen_bounds, &pw_min_screen_bounds, &pw_max_screen_bounds), 0);
+
+    return static_cast<spa_pod *>(spa_pod_builder_pop(builder, &f[0]));
+}
+
 void PipeWireSourceStream::onStreamParamChanged(void *data, uint32_t id, const struct spa_pod *format)
 {
     if (!format || id != SPA_PARAM_Format) {
@@ -67,6 +179,10 @@ void PipeWireSourceStream::onStreamParamChanged(void *data, uint32_t id, const s
     uint8_t paramsBuffer[1024];
     spa_pod_builder pod_builder = SPA_POD_BUILDER_INIT(paramsBuffer, sizeof(paramsBuffer));
 
+    const auto bufferTypes = spa_pod_find_prop(format, nullptr, SPA_FORMAT_VIDEO_modifier)
+        ? (1 << SPA_DATA_DmaBuf) | (1 << SPA_DATA_MemFd) | (1 << SPA_DATA_MemPtr)
+        : (1 << SPA_DATA_MemFd) | (1 << SPA_DATA_MemPtr);
+
     const spa_pod *param = (spa_pod *)spa_pod_builder_add_object(&pod_builder,
                                                                  SPA_TYPE_OBJECT_ParamBuffers,
                                                                  SPA_PARAM_Buffers,
@@ -81,7 +197,7 @@ void PipeWireSourceStream::onStreamParamChanged(void *data, uint32_t id, const s
                                                                  SPA_PARAM_BUFFERS_align,
                                                                  SPA_POD_Int(16),
                                                                  SPA_PARAM_BUFFERS_dataType,
-                                                                 SPA_POD_Int((1 << SPA_DATA_MemPtr) | (1 << SPA_DATA_MemFd) | (1 << SPA_DATA_DmaBuf)));
+                                                                 SPA_POD_CHOICE_FLAGS_Int(bufferTypes));
     pw_stream_update_params(pw->pwStream, &param, 1);
 }
 
@@ -138,29 +254,19 @@ bool PipeWireSourceStream::createStream(uint nodeid)
 
     uint8_t buffer[1024];
     spa_pod_builder podBuilder = SPA_POD_BUILDER_INIT(buffer, sizeof(buffer));
-    spa_fraction minFramerate = SPA_FRACTION(1, 1);
-    spa_fraction maxFramerate = SPA_FRACTION(25, 1);
 
-    const spa_pod *param = (spa_pod *)spa_pod_builder_add_object(&podBuilder,
-                                                                 SPA_TYPE_OBJECT_Format,
-                                                                 SPA_PARAM_EnumFormat,
-                                                                 SPA_FORMAT_mediaType,
-                                                                 SPA_POD_Id(SPA_MEDIA_TYPE_video),
-                                                                 SPA_FORMAT_mediaSubtype,
-                                                                 SPA_POD_Id(SPA_MEDIA_SUBTYPE_raw),
-                                                                 SPA_FORMAT_VIDEO_format,
-                                                                 SPA_POD_CHOICE_ENUM_Id(6,
-                                                                                        SPA_VIDEO_FORMAT_RGBx,
-                                                                                        SPA_VIDEO_FORMAT_RGBA,
-                                                                                        SPA_VIDEO_FORMAT_BGRx,
-                                                                                        SPA_VIDEO_FORMAT_BGRA,
-                                                                                        SPA_VIDEO_FORMAT_RGB,
-                                                                                        SPA_VIDEO_FORMAT_BGR),
-                                                                 SPA_FORMAT_VIDEO_maxFramerate,
-                                                                 SPA_POD_CHOICE_RANGE_Fraction(&maxFramerate, &minFramerate, &maxFramerate));
+    const QVector<spa_video_format> formats =
+        {SPA_VIDEO_FORMAT_RGBx, SPA_VIDEO_FORMAT_RGBA, SPA_VIDEO_FORMAT_BGRx, SPA_VIDEO_FORMAT_BGRA, SPA_VIDEO_FORMAT_RGB, SPA_VIDEO_FORMAT_BGR};
+    QVector<const spa_pod *> params;
+    params.reserve(formats.size() * 2);
+    const EGLDisplay display = static_cast<EGLDisplay>(QGuiApplication::platformNativeInterface()->nativeResourceForIntegration("egldisplay"));
+    for (spa_video_format format : formats) {
+        params += buildFormat(&podBuilder, format, queryDmaBufModifiers(display, format));
+        params += buildFormat(&podBuilder, format, {});
+    }
 
     pw_stream_flags s = (pw_stream_flags)(PW_STREAM_FLAG_DONT_RECONNECT | PW_STREAM_FLAG_AUTOCONNECT);
-    if (pw_stream_connect(pwStream, PW_DIRECTION_INPUT, pwNodeId, s, &param, 1) != 0) {
+    if (pw_stream_connect(pwStream, PW_DIRECTION_INPUT, pwNodeId, s, params.data(), params.size()) != 0) {
         qCWarning(PIPEWIRE_LOGGING) << "Could not connect to stream";
         pw_stream_destroy(pwStream);
         return false;
