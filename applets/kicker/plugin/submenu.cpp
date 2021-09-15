@@ -18,7 +18,7 @@ SubMenu::SubMenu(QQuickItem *parent)
     , m_offset(0)
     , m_facingLeft(false)
 {
-    KWindowSystem::setType(winId(), NET::Menu);
+    setType(PopupMenu);
 }
 
 SubMenu::~SubMenu()
