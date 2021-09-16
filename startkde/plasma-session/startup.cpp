@@ -21,6 +21,7 @@
 #include "ksmserver_interface.h"
 
 #include <KCompositeJob>
+#include <KConfig>
 #include <KConfigGroup>
 #include <KIO/DesktopExecParser>
 #include <KProcess>
