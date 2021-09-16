@@ -26,10 +26,8 @@ target_link_libraries(plasma_session
     KF5::ConfigCore
     KF5::Service
     KF5::CoreAddons
-    KF5::Notifications
     KF5::KIOCore
     PW::KWorkspace
-    ${PHONON_LIBRARIES}
     PlasmaAutostart
 )
 

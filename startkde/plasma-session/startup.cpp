@@ -23,14 +23,9 @@
 #include <KCompositeJob>
 #include <KConfigGroup>
 #include <KIO/DesktopExecParser>
-#include <KNotifyConfig>
 #include <KProcess>
 #include <KService>
 #include <Kdelibs4Migration>
-
-#include <phonon/audiooutput.h>
-#include <phonon/mediaobject.h>
-#include <phonon/mediasource.h>
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -137,62 +132,6 @@ void SleepJob::start()
     t->start(100);
 }
 
-// Put the notification in its own thread as it can happen that
-// PulseAudio will start initializing with this, so let's not
-// block the main thread with waiting for PulseAudio to start
-class NotificationThread : public QThread
-{
-    Q_OBJECT
-    void run() override
-    {
-        // We cannot parent to the thread itself so let's create
-        // a QObject on the stack and parent everything to it
-        QObject parent;
-        KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QList<QPair<QString, QString>>(), QStringLiteral("startkde"));
-        const QString action = notifyConfig.readEntry(QStringLiteral("Action"));
-        if (action.isEmpty() || !action.split(QLatin1Char('|')).contains(QLatin1String("Sound"))) {
-            // no startup sound configured
-            return;
-        }
-        Phonon::AudioOutput *m_audioOutput = new Phonon::AudioOutput(Phonon::NotificationCategory, &parent);
-
-        QString soundFilename = notifyConfig.readEntry(QStringLiteral("Sound"));
-        if (soundFilename.isEmpty()) {
-            qCWarning(PLASMA_SESSION) << "Audio notification requested, but no sound file provided in notifyrc file, aborting audio notification";
-            return;
-        }
-
-        QUrl soundURL;
-        const auto dataLocations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
-        for (const QString &dataLocation : dataLocations) {
-            soundURL = QUrl::fromUserInput(soundFilename, dataLocation + QStringLiteral("/sounds"), QUrl::AssumeLocalFile);
-            if (soundURL.isLocalFile() && QFile::exists(soundURL.toLocalFile())) {
-                break;
-            } else if (!soundURL.isLocalFile() && soundURL.isValid()) {
-                break;
-            }
-            soundURL.clear();
-        }
-        if (soundURL.isEmpty()) {
-            qCWarning(PLASMA_SESSION) << "Audio notification requested, but sound file from notifyrc file was not found, aborting audio notification";
-            return;
-        }
-
-        Phonon::MediaObject *m = new Phonon::MediaObject(&parent);
-        connect(m, &Phonon::MediaObject::finished, this, &NotificationThread::quit);
-
-        Phonon::createPath(m, m_audioOutput);
-
-        m->setCurrentSource(soundURL);
-        m->play();
-        exec();
-    }
-
-private:
-    // Prevent application exit until the thread (and hence the sound) completes
-    QEventLoopLocker m_locker;
-};
-
 Startup::Startup(QObject *parent)
     : QObject(parent)
 {
@@ -243,12 +182,6 @@ Startup::Startup(QObject *parent)
         }
         last = job;
     }
-
-    connect(phase1, &KJob::finished, this, []() {
-        NotificationThread *loginSound = new NotificationThread();
-        connect(loginSound, &NotificationThread::finished, loginSound, &NotificationThread::deleteLater);
-        loginSound->start();
-    });
 
     connect(sequence.last(), &KJob::finished, this, &Startup::finishStartup);
     sequence.first()->start();

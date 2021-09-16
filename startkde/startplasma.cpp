@@ -17,7 +17,12 @@
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <KNotifyConfig>
 #include <KSharedConfig>
+
+#include <phonon/audiooutput.h>
+#include <phonon/mediaobject.h>
+#include <phonon/mediasource.h>
 
 #include <unistd.h>
 
@@ -565,6 +570,7 @@ bool startPlasmaSession(bool wayland)
         }
     }
     if (rc) {
+        playStartupSound(e);
         e.exec();
     }
     return rc;
@@ -638,4 +644,49 @@ static void migrateUserScriptsAutostart()
                                                           QStringLiteral("org.freedesktop.systemd1.Manager"),
                                                           QStringLiteral("Reload"));
     QDBusConnection::sessionBus().call(message);
+}
+
+static void playStartupSound(QObject &parent)
+{
+    KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QList<QPair<QString, QString>>(), QStringLiteral("startkde"));
+    const QString action = notifyConfig.readEntry(QStringLiteral("Action"));
+    if (action.isEmpty() || !action.split(QLatin1Char('|')).contains(QLatin1String("Sound"))) {
+        // no startup sound configured
+        return;
+    }
+    Phonon::AudioOutput *audioOutput = new Phonon::AudioOutput(Phonon::NotificationCategory, &parent);
+
+    QString soundFilename = notifyConfig.readEntry(QStringLiteral("Sound"));
+    if (soundFilename.isEmpty()) {
+        qCWarning(PLASMA_STARTUP) << "Audio notification requested, but no sound file provided in notifyrc file, aborting audio notification";
+        audioOutput->deleteLater();
+        return;
+    }
+
+    QUrl soundURL;
+    const auto dataLocations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+    for (const QString &dataLocation : dataLocations) {
+        soundURL = QUrl::fromUserInput(soundFilename, dataLocation + QStringLiteral("/sounds"), QUrl::AssumeLocalFile);
+        if (soundURL.isLocalFile() && QFile::exists(soundURL.toLocalFile())) {
+            break;
+        } else if (!soundURL.isLocalFile() && soundURL.isValid()) {
+            break;
+        }
+        soundURL.clear();
+    }
+    if (soundURL.isEmpty()) {
+        qCWarning(PLASMA_STARTUP) << "Audio notification requested, but sound file from notifyrc file was not found, aborting audio notification";
+        audioOutput->deleteLater();
+        return;
+    }
+
+    Phonon::MediaObject *mediaObject = new Phonon::MediaObject(&parent);
+    QObject::connect(mediaObject, &Phonon::MediaObject::finished, [&mediaObject, &audioOutput]() {
+        mediaObject->deleteLater();
+        audioOutput->deleteLater();
+    });
+    Phonon::createPath(mediaObject, audioOutput);
+
+    mediaObject->setCurrentSource(soundURL);
+    mediaObject->play();
 }
