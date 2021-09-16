@@ -34,7 +34,15 @@ target_link_libraries(startplasma-x11 PRIVATE
     ${PHONON_LIBRARIES}
 )
 
-target_link_libraries(startplasma-wayland PRIVATE Qt::Core Qt::DBus KF5::ConfigCore PW::KWorkspace)
+target_link_libraries(startplasma-wayland PRIVATE
+    Qt::Core
+    Qt::DBus
+    KF5::ConfigCore
+    KF5::Notifications
+    PW::KWorkspace
+    ${PHONON_LIBRARIES}
+)
+
 target_link_libraries(startplasma-waylandsession PRIVATE
     Qt::Core
     Qt::DBus
