@@ -8,10 +8,8 @@
 
 #pragma once
 
-#include <KCModule>
-#include <KConfigGroup>
-
 #include <KQuickAddons/ManagedConfigModule>
+
 class FormatsSettings;
 class KCMFormats : public KQuickAddons::ManagedConfigModule
 {
