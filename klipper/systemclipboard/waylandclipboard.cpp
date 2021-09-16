@@ -7,10 +7,12 @@
 #include "waylandclipboard.h"
 
 #include <QDebug>
+#include <QEventLoopLocker>
 #include <QFile>
 #include <QFutureWatcher>
 #include <QGuiApplication>
 #include <QPointer>
+#include <QtConcurrent>
 
 #include <QtWaylandClient/QWaylandClientExtension>
 
@@ -191,16 +193,21 @@ DataControlSource::DataControlSource(struct ::zwlr_data_control_source_v1 *id, Q
 
 void DataControlSource::zwlr_data_control_source_v1_send(const QString &mime_type, int32_t fd)
 {
-    QFile c;
-    QString send_mime_type = mime_type;
-    if (send_mime_type == QStringLiteral("text/plain;charset=utf-8")) {
+    QString sendMimeType = mime_type;
+    if (sendMimeType == QStringLiteral("text/plain;charset=utf-8")) {
         // if we get a request on the fallback mime, send the data from the original mime type
-        send_mime_type = QStringLiteral("text/plain");
+        sendMimeType = QStringLiteral("text/plain");
     }
-    if (c.open(fd, QFile::WriteOnly, QFile::AutoCloseHandle)) {
-        c.write(m_mimeData->data(send_mime_type));
-        c.close();
-    }
+
+    const QByteArray mimeContents = m_mimeData->data(sendMimeType);
+    QtConcurrent::run([sendMimeType, mimeContents, fd] {
+        QEventLoopLocker lock;
+        QFile c;
+        if (c.open(fd, QFile::WriteOnly, QFile::AutoCloseHandle)) {
+            c.write(mimeContents);
+            c.close();
+        }
+    });
 }
 
 void DataControlSource::zwlr_data_control_source_v1_cancelled()
