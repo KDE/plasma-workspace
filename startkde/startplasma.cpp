@@ -681,10 +681,6 @@ static void playStartupSound(QObject &parent)
     }
 
     Phonon::MediaObject *mediaObject = new Phonon::MediaObject(&parent);
-    QObject::connect(mediaObject, &Phonon::MediaObject::finished, [&mediaObject, &audioOutput]() {
-        mediaObject->deleteLater();
-        audioOutput->deleteLater();
-    });
     Phonon::createPath(mediaObject, audioOutput);
 
     mediaObject->setCurrentSource(soundURL);
