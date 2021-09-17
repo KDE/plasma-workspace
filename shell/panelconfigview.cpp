@@ -252,6 +252,7 @@ bool PanelConfigView::event(QEvent *e)
                     break;
                 }
                 m_shellSurface = interface->createSurface(s, this);
+                m_shellSurface->setPanelTakesFocus(true);
             }
             break;
         case QPlatformSurfaceEvent::SurfaceAboutToBeDestroyed:
