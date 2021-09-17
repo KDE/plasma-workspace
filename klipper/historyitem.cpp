@@ -30,15 +30,25 @@ HistoryItemPtr HistoryItem::create(const QMimeData *data)
     if (data->hasUrls()) {
         KUrlMimeData::MetaDataMap metaData;
         QList<QUrl> urls = KUrlMimeData::urlsFromMimeData(data, KUrlMimeData::PreferKdeUrls, &metaData);
+        if (urls.isEmpty()) {
+            return HistoryItemPtr();
+        }
         QByteArray bytes = data->data(QStringLiteral("application/x-kde-cutselection"));
         bool cut = !bytes.isEmpty() && (bytes.at(0) == '1'); // true if 1
         return HistoryItemPtr(new HistoryURLItem(urls, metaData, cut));
     }
     if (data->hasText()) {
+        const QString text = data->text();
+        if (text.isEmpty()) { // reading mime data can fail. Avoid ghost entries
+            return HistoryItemPtr();
+        }
         return HistoryItemPtr(new HistoryStringItem(data->text()));
     }
     if (data->hasImage()) {
-        QImage image = qvariant_cast<QImage>(data->imageData());
+        const QImage image = qvariant_cast<QImage>(data->imageData());
+        if (image.isNull()) {
+            return HistoryItemPtr();
+        }
         return HistoryItemPtr(new HistoryImageItem(QPixmap::fromImage(image)));
     }
 
