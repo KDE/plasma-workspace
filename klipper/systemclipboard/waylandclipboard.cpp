@@ -23,6 +23,11 @@
 
 #include "qwayland-wlr-data-control-unstable-v1.h"
 
+static QString utf8Text()
+{
+    return QStringLiteral("text/plain;charset=utf-8");
+}
+
 class DataControlDeviceManager : public QWaylandClientExtensionTemplate<DataControlDeviceManager>, public QtWayland::zwlr_data_control_manager_v1
 {
     Q_OBJECT
@@ -57,9 +62,12 @@ public:
         return m_receivedFormats;
     }
 
-    bool hasFormat(const QString &format) const override
+    bool hasFormat(const QString &mimeType) const override
     {
-        return m_receivedFormats.contains(format);
+        if (mimeType == QStringLiteral("text/plain") && m_receivedFormats.contains(utf8Text())) {
+            return true;
+        }
+        return m_receivedFormats.contains(mimeType);
     }
 
 protected:
@@ -77,10 +85,16 @@ private:
 
 QVariant DataControlOffer::retrieveData(const QString &mimeType, QVariant::Type type) const
 {
-    if (!hasFormat(mimeType)) {
-        return QVariant();
-    }
     Q_UNUSED(type);
+
+    QString mime = mimeType;
+    if (!m_receivedFormats.contains(mimeType)) {
+        if (mimeType == QStringLiteral("text/plain") && m_receivedFormats.contains(utf8Text())) {
+            mime = utf8Text();
+        } else {
+            return QVariant();
+        }
+    }
 
     int pipeFds[2];
     if (pipe(pipeFds) != 0) {
@@ -88,7 +102,7 @@ QVariant DataControlOffer::retrieveData(const QString &mimeType, QVariant::Type 
     }
 
     auto t = const_cast<DataControlOffer *>(this);
-    t->receive(mimeType, pipeFds[1]);
+    t->receive(mime, pipeFds[1]);
 
     close(pipeFds[1]);
 
