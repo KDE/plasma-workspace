@@ -1,7 +1,7 @@
 Understanding the Code
 ======================
 Various design documents can be found in the design/ directory and API documentation
-generated from the headers is hosted at http://api.kde.org.
+generated from the headers is hosted at https://api.kde.org.
 
 Finding the Team
 ================
@@ -17,5 +17,5 @@ New code should follow the kdelibs hacking style, as found here:
     https://community.kde.org/Policies/Kdelibs_Coding_Style
 
 Existing code that does not follow this style should be migrated over during
-editting.
+editing.
 
