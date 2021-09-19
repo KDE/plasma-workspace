@@ -117,6 +117,7 @@ Comment[ko]=이벤트 알림과 동작
 Comment[lt]=Pranešimai apie įvykius ir veiksmai
 Comment[ml]=സംഭവ അറിയിപ്പുകളും പ്രവര്‍ത്തനങ്ങളും
 Comment[nl]=Meldingen en acties van gebeurtenissen
+Comment[nn]=Varslingar og handlingar for hendingar
 Comment[pa]=ਈਵੈਂਟ ਨੋਟੀਫਿਕੇਸ਼ਨ ਤੇ ਕਾਰਵਾਈਆਂ
 Comment[pl]=Powiadomienia i działania zdarzeń
 Comment[pt]=Notificações de Eventos e Acções
@@ -130,7 +131,7 @@ Comment[tr]=Etkinlik Bildirimleri ve Eylemler
 Comment[uk]=Сповіщення щодо подій та дії
 Comment[vi]=Thông báo và hành động cho sự kiện
 Comment[x-test]=xxEvent Notifications and Actionsxx
-Comment[zh_CN]=事件通知和动作
+Comment[zh_CN]=事件通知和操作
 
 X-KDE_Keywords=System sounds,Audio,Sound,Notify,Alerts,Notification,popups,disturb,do not disturb,quiet,concentrate,concentration,alarm,popup,pop up,progress,badges,alert sounds,warning sounds,dnd,mute
 
