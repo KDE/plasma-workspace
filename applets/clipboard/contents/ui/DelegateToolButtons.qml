@@ -30,7 +30,7 @@ RowLayout {
         onClicked: menuItem.barcode(DisplayRole)
 
         PlasmaComponents3.ToolTip {
-            text: i18n("Show barcode")
+            text: i18n("Show QR code")
         }
     }
     PlasmaComponents3.ToolButton {

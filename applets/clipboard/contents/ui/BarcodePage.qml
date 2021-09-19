@@ -74,7 +74,7 @@ ColumnLayout {
                 onClicked: menu.openRelative()
 
                 PlasmaComponents3.ToolTip {
-                    text: i18n("Change the barcode type")
+                    text: i18n("Change the QR code type")
                 }
             }
         }
@@ -98,7 +98,7 @@ ColumnLayout {
             anchors.fill: parent
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            text: i18n("Creating barcode failed")
+            text: i18n("Creating QR code failed")
             wrapMode: Text.WordWrap
             visible: barcodeItem.implicitWidth === 0 && barcodeItem.implicitHeight === 0
         }
@@ -107,7 +107,7 @@ ColumnLayout {
             anchors.fill: parent
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            text: i18n("The barcode is too large to be displayed")
+            text: i18n("The QR code is too large to be displayed")
             wrapMode: Text.WordWrap
             visible: barcodeItem.implicitWidth > barcodeItem.width || barcodeItem.implicitHeight > barcodeItem.height
         }
