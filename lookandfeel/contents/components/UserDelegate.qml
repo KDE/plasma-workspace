@@ -25,7 +25,7 @@ Item {
     property string iconSource
     property bool constrainText: true
     property alias nameFontSize: usernameDelegate.font.pointSize
-    property int fontSize: PlasmaCore.Theme.defaultFont.pointSize + 2
+    property int fontSize: PlasmaCore.Theme.defaultFont.pointSize + 6
     signal clicked()
 
     property real faceSize: PlasmaCore.Units.gridUnit * 7
