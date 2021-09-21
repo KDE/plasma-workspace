@@ -30,7 +30,6 @@ class SNIProxy : public QObject
     Q_PROPERTY(int WindowId READ WindowId)
     Q_PROPERTY(bool ItemIsMenu READ ItemIsMenu)
     Q_PROPERTY(KDbusImageVector IconPixmap READ IconPixmap)
-    Q_PROPERTY(QDBusObjectPath Menu READ menu CONSTANT)
 
 public:
     explicit SNIProxy(xcb_window_t wid, QObject *parent = nullptr);
@@ -39,10 +38,7 @@ public:
     void update();
     void resizeWindow(const uint16_t width, const uint16_t height) const;
     void hideContainerWindow(xcb_window_t windowId) const;
-    QDBusObjectPath menu() const
-    {
-        return QDBusObjectPath("/");
-    }
+
     /**
      * @return the category of the application associated to this item
      * @see Category
@@ -79,8 +75,6 @@ public:
      * @return a serialization of the icon data
      */
     KDbusImageVector IconPixmap() const;
-
-    void ProvideXdgActivationToken(const QString &token);
 
 public Q_SLOTS:
     // interaction

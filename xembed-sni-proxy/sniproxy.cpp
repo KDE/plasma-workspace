@@ -594,9 +594,3 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
 
     sendingClickEvent = false;
 }
-
-void SNIProxy::ProvideXdgActivationToken(const QString &token)
-{
-    // Skip, Xembed is well-known for being X
-    Q_UNUSED(token);
-}
