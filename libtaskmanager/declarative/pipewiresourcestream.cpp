@@ -139,7 +139,7 @@ static spa_pod *buildFormat(spa_pod_builder *builder, spa_video_format format, c
         auto pw_version = QVersionNumber::fromString(pw_get_library_version());
 
         // SPA_POD_PROP_FLAG_DONT_FIXATE can be used with PipeWire >= 0.3.33
-        if (pw_version.majorVersion() >= 0 && pw_version.minorVersion() >= 3 && pw_version.microVersion() >= 33) {
+        if (pw_version >= QVersionNumber(0, 3, 33)) {
             spa_pod_builder_prop(builder, SPA_FORMAT_VIDEO_modifier, SPA_POD_PROP_FLAG_MANDATORY | SPA_POD_PROP_FLAG_DONT_FIXATE);
         } else {
             spa_pod_builder_prop(builder, SPA_FORMAT_VIDEO_modifier, SPA_POD_PROP_FLAG_MANDATORY);
