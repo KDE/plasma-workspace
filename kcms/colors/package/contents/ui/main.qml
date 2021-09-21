@@ -59,7 +59,7 @@ KCM.GridViewKCM {
     // we have a duplicate property here as "var" instead of "color", so that we
     // can set it to "undefined", which lets us use the "a || b" shorthand for
     // "a if a is defined, otherwise b"
-    property var accentColor: Qt.colorEqual(kcm.accentColor, "transparent") ? undefined : kcm.accentColor
+    readonly property var accentColor: Qt.colorEqual(kcm.accentColor, "transparent") ? undefined : kcm.accentColor
 
     DropArea {
         anchors.fill: parent
@@ -158,14 +158,14 @@ KCM.GridViewKCM {
 
                     onToggled: {
                         if (enabled) {
-                            colorRepeater.itemAt(0).checked = true
-                            colorRepeater.itemAt(0).toggled()
+                            kcm.accentColor = colorRepeater.model[0]
                         }
                     }
                 }
                 component ColorRadioButton : T.RadioButton {
                     id: control
                     opacity: accentBox.checked ? 1.0 : 0.5
+                    autoExclusive: false
 
                     property color color: "transparent"
 
@@ -220,10 +220,8 @@ KCM.GridViewKCM {
                         checked: Qt.colorEqual(kcm.accentColor, modelData)
 
                         onToggled: {
-                            if (enabled) {
-                                accentBox.checked = true
-                                kcm.accentColor = modelData
-                            }
+                            kcm.accentColor = modelData
+                            checked = Qt.binding(() => Qt.colorEqual(kcm.accentColor, modelData));
                         }
                     }
                 }
