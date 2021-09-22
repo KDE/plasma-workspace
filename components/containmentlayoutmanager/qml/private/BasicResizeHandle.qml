@@ -24,7 +24,7 @@ ContainmentLayoutManager.ResizeHandle {
 
         shadow.size: PlasmaCore.Units.smallSpacing
         shadow.color: Qt.rgba(0.0, 0.0, 0.0, 0.2)
-        shadow.yOffset: Kirigami.Units.devicePixelRatio * 2
+        shadow.yOffset: 2
 
         border.width: PlasmaCore.Units.devicePixelRatio
         border.color: Qt.tint(Kirigami.Theme.textColor,
