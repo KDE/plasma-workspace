@@ -142,8 +142,9 @@ KCM.GridViewKCM {
 
                 Kirigami.FormData.label: i18n("Use accent color:")
                 text: i18n("From current color scheme")
-
+                leftPadding: Kirigami.Units.largeSpacing
                 checked: Qt.colorEqual(kcm.accentColor, "transparent")
+
                 onToggled: {
                     if (enabled) {
                         kcm.accentColor = "transparent"
@@ -154,7 +155,6 @@ KCM.GridViewKCM {
                 QtControls.RadioButton {
                     id: accentBox
                     checked: !Qt.colorEqual(kcm.accentColor, "transparent")
-                    text: i18n("Custom:")
 
                     onToggled: {
                         if (enabled) {
@@ -169,12 +169,6 @@ KCM.GridViewKCM {
 
                     property color color: "transparent"
 
-                    MouseArea {
-                        enabled: false
-                        anchors.fill: parent
-                        cursorShape: Qt.PointingHandCursor
-                    }
-
                     implicitWidth: Math.round(Kirigami.Units.gridUnit * 1.25)
                     implicitHeight: Math.round(Kirigami.Units.gridUnit * 1.25)
 
@@ -187,7 +181,6 @@ KCM.GridViewKCM {
                         }
                     }
                     indicator: Rectangle {
-                        color: "white"
                         radius: height / 2
                         visible: control.checked
                         anchors {
@@ -199,7 +192,14 @@ KCM.GridViewKCM {
                             width: 1
                         }
                     }
+
+                    MouseArea {
+                        enabled: false
+                        anchors.fill: parent
+                        cursorShape: Qt.PointingHandCursor
+                    }
                 }
+
                 Repeater {
                     id: colorRepeater
 
@@ -215,6 +215,7 @@ KCM.GridViewKCM {
                         "#926ee4",
                         "#686b6f",
                     ]
+
                     delegate: ColorRadioButton {
                         color: modelData
                         checked: Qt.colorEqual(kcm.accentColor, modelData)
@@ -223,6 +224,61 @@ KCM.GridViewKCM {
                             kcm.accentColor = modelData
                             checked = Qt.binding(() => Qt.colorEqual(kcm.accentColor, modelData));
                         }
+                    }
+                }
+
+                QtControls.Label {
+                    id: customColorPickerLabel
+                    text: i18n("Custom:")
+                    opacity: customColorIndicator.opacity
+                    Layout.leftMargin: Kirigami.Units.smallSpacing
+                }
+
+                QtDialogs.ColorDialog {
+                    id: colorDialog
+                    title: i18n("Choose custom accent color")
+                    // User must either choose a colour or cancel the operation before doing something else
+                    modality: Qt.ApplicationModal
+                    onAccepted: {
+                        kcm.accentColor = colorDialog.color
+                    }
+                }
+
+                ColorRadioButton {
+                    id: customColorIndicator
+
+                    property bool isCustomColor: root.accentColor ?
+                                                    !colorRepeater.model.some(color => Qt.colorEqual(color, root.accentColor))
+                                                    : false
+
+                    /* The qt binding will keep the binding alive as well as uncheck the button
+                     * we can't just disable the button because then the icon will become grey
+                     * and also we have to provide a MouseArea for interaction. Both of these
+                     * can be done with the button being disabled but it will become very
+                     * complex and will result in lot of extra code */
+
+                    function openColorDialog(){
+                        checked = Qt.binding(() => customColorIndicator.isCustomColor)
+                        colorDialog.open()
+                    }
+
+                    color:  isCustomColor ? kcm.accentColor : "transparent"
+                    checked: isCustomColor
+
+                    onClicked: openColorDialog()
+
+                    QtControls.RoundButton {
+                        id: customColorButtonPickerIconContainer
+
+                        anchors.fill: parent
+                        padding: 0  // Round button adds some padding by default which we don't need. Setting this to 0 centers the icon
+
+                        visible: !customColorIndicator.isCustomColor
+
+                        onClicked: customColorIndicator.openColorDialog()
+
+                        icon.name: "color-picker"
+                        icon.width : Kirigami.Units.iconSizes.small // This provides a nice padding
                     }
                 }
             }
