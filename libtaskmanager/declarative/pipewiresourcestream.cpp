@@ -66,7 +66,7 @@ static std::vector<uint64_t> queryDmaBufModifiers(EGLDisplay display, uint32_t f
     uint32_t drm_format = SpaPixelFormatToDrmFormat(format);
     if (drm_format == DRM_FORMAT_INVALID) {
         qCDebug(PIPEWIRE_LOGGING) << "Failed to find matching DRM format." << format;
-        return {DRM_FORMAT_MOD_INVALID};
+        return {};
     }
 
     EGLint count = 0;
@@ -74,14 +74,14 @@ static std::vector<uint64_t> queryDmaBufModifiers(EGLDisplay display, uint32_t f
 
     if (!success || count == 0) {
         qCWarning(PIPEWIRE_LOGGING) << "Failed to query DMA-BUF format count.";
-        return {DRM_FORMAT_MOD_INVALID};
+        return {};
     }
 
     std::vector<uint32_t> formats(count);
     if (!eglQueryDmaBufFormatsEXT(display, count, reinterpret_cast<EGLint *>(formats.data()), &count)) {
         if (!success)
             qCWarning(PIPEWIRE_LOGGING) << "Failed to query DMA-BUF formats.";
-        return {DRM_FORMAT_MOD_INVALID};
+        return {};
     }
 
     if (std::find(formats.begin(), formats.end(), drm_format) == formats.end()) {
@@ -93,7 +93,7 @@ static std::vector<uint64_t> queryDmaBufModifiers(EGLDisplay display, uint32_t f
     if (!success || count == 0) {
         if (!success)
             qCWarning(PIPEWIRE_LOGGING) << "Failed to query DMA-BUF modifier count.";
-        return {DRM_FORMAT_MOD_INVALID};
+        return {};
     }
 
     std::vector<uint64_t> modifiers(count);
@@ -268,7 +268,10 @@ bool PipeWireSourceStream::createStream(uint nodeid)
     params.reserve(formats.size() * 2);
     const EGLDisplay display = static_cast<EGLDisplay>(QGuiApplication::platformNativeInterface()->nativeResourceForIntegration("egldisplay"));
     for (spa_video_format format : formats) {
-        params += buildFormat(&podBuilder, format, queryDmaBufModifiers(display, format));
+        if (auto modifiers = queryDmaBufModifiers(display, format); modifiers.size() > 0) {
+            params += buildFormat(&podBuilder, format, modifiers);
+        }
+
         params += buildFormat(&podBuilder, format, {});
     }
 
