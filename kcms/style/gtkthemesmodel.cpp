@@ -16,7 +16,7 @@
 GtkThemesModel::GtkThemesModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_selectedTheme(QStringLiteral("Breeze"))
-    , m_themesList()
+    , m_themes()
 {
 }
 
@@ -48,25 +48,25 @@ QString GtkThemesModel::themePath(const QString &themeName)
     if (themeName.isEmpty()) {
         return QString();
     } else {
-        return m_themesList.find(themeName).value();
+        return m_themes.constFind(themeName).value();
     }
 }
 
 QVariant GtkThemesModel::data(const QModelIndex &index, int role) const
 {
-    if (role == Qt::DisplayRole || role == Roles::ThemeNameRole) {
-        if (index.row() < 0 || index.row() > m_themesList.count()) {
-            return QVariant();
-        }
+    if (!checkIndex(index)) {
+        return QVariant();
+    }
 
-        return m_themesList.keys().at(index.row());
-    } else if (role == Roles::ThemePathRole) {
-        if (index.row() < 0 || index.row() > m_themesList.count()) {
-            return QVariant();
-        }
+    const auto &item = m_themes.constBegin() + index.row();
 
-        return m_themesList.values().at(index.row());
-    } else {
+    switch (role) {
+    case Qt::DisplayRole:
+    case Roles::ThemeNameRole:
+        return item.key();
+    case Roles::ThemePathRole:
+        return item.value();
+    default:
         return QVariant();
     }
 }
@@ -85,19 +85,19 @@ int GtkThemesModel::rowCount(const QModelIndex &parent) const
     if (parent.isValid()) {
         return 0;
     }
-    return m_themesList.count();
+    return m_themes.count();
 }
 
 void GtkThemesModel::setThemesList(const QMap<QString, QString> &themes)
 {
     beginResetModel();
-    m_themesList = themes;
+    m_themes = themes;
     endResetModel();
 }
 
 QMap<QString, QString> GtkThemesModel::themesList()
 {
-    return m_themesList;
+    return m_themes;
 }
 
 void GtkThemesModel::setSelectedTheme(const QString &themeName)
@@ -144,7 +144,7 @@ void GtkThemesModel::removeSelectedTheme()
 
 int GtkThemesModel::findThemeIndex(const QString &themeName)
 {
-    return static_cast<int>(std::distance(m_themesList.begin(), m_themesList.find(themeName)));
+    return static_cast<int>(std::distance(m_themes.constBegin(), m_themes.constFind(themeName)));
 }
 
 void GtkThemesModel::setSelectedThemeDirty()

@@ -54,5 +54,6 @@ private:
     QString themePath(const QString &themeName);
 
     QString m_selectedTheme;
-    QMap<QString, QString> m_themesList;
+    // mapping from theme name to theme path, ordered by name
+    QMap<QString, QString> m_themes;
 };
