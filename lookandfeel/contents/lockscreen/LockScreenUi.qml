@@ -433,7 +433,12 @@ PlasmaCore.ColorScope {
                 // initiating session switch and preparing lockscreen for possible return of user
                 function finalSwitchSession() {
                     mainStack.pop({immediate:true})
-                    sessionsModel.switchUser(userListCurrentModelData.vtNumber)
+                    if (userListCurrentItem === null) {
+                        console.warn("Switching to an undefined user")
+                    } else if (userListCurrentItem.vtNumber === undefined) {
+                        console.warn("Switching to an undefined VT")
+                    }
+                    sessionsModel.switchUser(userListCurrentItem.vtNumber)
                     lockScreenRoot.state = ''
                 }
 

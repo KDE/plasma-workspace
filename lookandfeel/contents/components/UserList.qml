@@ -37,6 +37,7 @@ ListView {
         avatarPath: model.icon || ""
         iconSource: model.iconName || "user-identity"
         fontSize: view.fontSize
+        vtNumber: model.vtNumber
 
         name: {
             var displayName = model.realName || model.name

@@ -43,7 +43,7 @@ Item {
      * Self explanatory
      */
     property alias userListCurrentIndex: userListView.currentIndex
-    property var userListCurrentModelData: userListView.currentItem === null ? [] : userListView.currentItem.m
+    property alias userListCurrentItem: userListView.currentItem
     property bool showUserList: true
 
     property alias userList: userListView
