@@ -48,7 +48,7 @@ Item {
 
     property alias userList: userListView
 
-    property int fontSize: PlasmaCore.Theme.defaultFont.pointSize + 6
+    property int fontSize: PlasmaCore.Theme.defaultFont.pointSize + 2
 
     default property alias _children: innerLayout.children
 
