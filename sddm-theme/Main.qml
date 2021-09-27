@@ -140,10 +140,11 @@ PlasmaCore.ColorScope {
 
         Clock {
             id: clock
-            visible: y > 0
             property Item shadow: clockShadow
-            y: (userListComponent.userList.y + mainStack.y)/2 - height/2
+            visible: y > 0
             anchors.horizontalCenter: parent.horizontalCenter
+            y: (userListComponent.userList.y + mainStack.y)/2 - height/2
+            Layout.alignment: Qt.AlignBaseline
         }
 
         QQC2.StackView {
