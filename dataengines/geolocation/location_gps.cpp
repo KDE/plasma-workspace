@@ -52,7 +52,9 @@ void Gpsd::run()
 #else
             if (m_gpsdata->online) {
 #endif
-#if GPSD_API_MAJOR_VERSION >= 10
+#if GPSD_API_MAJOR_VERSION >= 12
+                if (m_gpsdata->fix.status != STATUS_UNK) {
+#elif GPSD_API_MAJOR_VERSION >= 10
                 if (m_gpsdata->fix.status != STATUS_NO_FIX) {
 #else
                 if (m_gpsdata->status != STATUS_NO_FIX) {
