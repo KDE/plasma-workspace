@@ -174,7 +174,7 @@ public:
         destroy();
     }
 
-    QMimeData *mimeData()
+    const QMimeData *mimeData() const
     {
         return m_mimeData;
     }
@@ -187,7 +187,7 @@ protected:
     void zwlr_data_control_source_v1_cancelled() override;
 
 private:
-    QMimeData *m_mimeData;
+    const QMimeData *const m_mimeData;
 };
 
 DataControlSource::DataControlSource(struct ::zwlr_data_control_source_v1 *id, QMimeData *mimeData)
@@ -237,21 +237,21 @@ public:
     }
 
     void setSelection(std::unique_ptr<DataControlSource> selection);
-    QMimeData *receivedSelection()
+    const QMimeData *receivedSelection()
     {
         return m_receivedSelection.get();
     }
-    QMimeData *selection()
+    const QMimeData *selection()
     {
         return m_selection ? m_selection->mimeData() : nullptr;
     }
 
     void setPrimarySelection(std::unique_ptr<DataControlSource> selection);
-    QMimeData *receivedPrimarySelection()
+    const QMimeData *receivedPrimarySelection()
     {
         return m_receivedPrimarySelection.get();
     }
-    QMimeData *primarySelection()
+    const QMimeData *primarySelection()
     {
         return m_primarySelection ? m_primarySelection->mimeData() : nullptr;
     }
