@@ -1,16 +1,19 @@
 /*
     SPDX-FileCopyrightText: 2020 David Edmundson <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 2021 David Redondo <kde@david-redondo.de>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "waylandclipboard.h"
 
+#include <QAbstractEventDispatcher>
 #include <QDebug>
 #include <QFile>
 #include <QFutureWatcher>
 #include <QGuiApplication>
 #include <QPointer>
+#include <QThread>
 
 #include <QtWaylandClient/QWaylandClientExtension>
 
@@ -328,13 +331,59 @@ void DataControlDevice::setPrimarySelection(std::unique_ptr<DataControlSource> s
     }
 }
 
+class WlQueue : public QObject
+{
+    Q_OBJECT
+public:
+    WlQueue();
+    ~WlQueue();
+    wl_event_queue *queue() const
+    {
+        return m_queue;
+    }
+public Q_SLOTS:
+    void dispatchEvents();
+
+private:
+    wl_event_queue *m_queue;
+};
+
+WlQueue::WlQueue()
+{
+    auto display = static_cast<wl_display *>(qApp->platformNativeInterface()->nativeResourceForIntegration("wl_display"));
+    m_queue = wl_display_create_queue((display));
+}
+
+WlQueue::~WlQueue()
+{
+    wl_event_queue_destroy(m_queue);
+}
+
+void WlQueue::dispatchEvents()
+{
+    auto display = static_cast<wl_display *>(qApp->platformNativeInterface()->nativeResourceForIntegration("wl_display"));
+    while (wl_display_prepare_read_queue(display, m_queue) != 0) {
+        wl_display_dispatch_queue_pending(display, m_queue);
+    }
+    wl_display_flush(display);
+    pollfd pollfds{wl_display_get_fd(display), POLLIN, 0};
+    if (poll(&pollfds, 1, 1) > 0) {
+        wl_display_read_events(display);
+    } else {
+        wl_display_cancel_read(display);
+    }
+    wl_display_dispatch_queue_pending(display, m_queue);
+}
+
 WaylandClipboard::WaylandClipboard(QObject *parent)
     : SystemClipboard(parent)
     , m_manager(new DataControlDeviceManager)
+    , m_sourceThread(new QThread)
+    , m_sourceQueue(new WlQueue)
 {
-    connect(m_manager.get(), &DataControlDeviceManager::activeChanged, this, [this]() {
+    QPlatformNativeInterface *native = qApp->platformNativeInterface();
+    connect(m_manager.get(), &DataControlDeviceManager::activeChanged, this, [this, native]() {
         if (m_manager->isActive()) {
-            QPlatformNativeInterface *native = qApp->platformNativeInterface();
             if (!native) {
                 return;
             }
@@ -349,6 +398,9 @@ WaylandClipboard::WaylandClipboard(QObject *parent)
                 emit changed(QClipboard::Clipboard);
             });
             connect(m_device.get(), &DataControlDevice::selectionChanged, this, [this]() {
+                if (!m_device->primarySelection() && !m_device->selection()) {
+                    m_sourceThread->quit();
+                }
                 emit changed(QClipboard::Clipboard);
             });
 
@@ -356,13 +408,32 @@ WaylandClipboard::WaylandClipboard(QObject *parent)
                 emit changed(QClipboard::Selection);
             });
             connect(m_device.get(), &DataControlDevice::primarySelectionChanged, this, [this]() {
+                if (!m_device->primarySelection() && !m_device->selection()) {
+                    m_sourceThread->quit();
+                }
                 emit changed(QClipboard::Selection);
             });
 
         } else {
             m_device.reset();
+            m_sourceThread->quit();
         }
     });
+    m_sourceThread->setObjectName(QStringLiteral("DataControlSource Thread"));
+    m_sourceQueue->moveToThread(m_sourceThread);
+    connect(QCoreApplication::eventDispatcher(), &QAbstractEventDispatcher::aboutToBlock, m_sourceQueue, &WlQueue::dispatchEvents);
+}
+
+WaylandClipboard::~WaylandClipboard()
+{
+    if (m_sourceThread->isRunning()) {
+        connect(m_sourceThread, &QThread::finished, &QObject::deleteLater);
+        connect(m_sourceThread, &QThread::finished, m_sourceQueue, &QObject::deleteLater);
+        m_sourceThread->quit();
+    } else {
+        delete m_sourceThread;
+        delete m_sourceQueue;
+    }
 }
 
 void WaylandClipboard::setMimeData(QMimeData *mime, QClipboard::Mode mode)
@@ -371,10 +442,16 @@ void WaylandClipboard::setMimeData(QMimeData *mime, QClipboard::Mode mode)
         return;
     }
     auto source = std::make_unique<DataControlSource>(m_manager->create_data_source(), mime);
+    source->moveToThread(m_sourceThread);
+    wl_proxy_set_queue(reinterpret_cast<wl_proxy *>(source->object()), m_sourceQueue->queue());
     if (mode == QClipboard::Clipboard) {
         m_device->setSelection(std::move(source));
     } else if (mode == QClipboard::Selection) {
         m_device->setPrimarySelection(std::move(source));
+    }
+
+    if (!m_sourceThread->isRunning()) {
+        m_sourceThread->start();
     }
 }
 
