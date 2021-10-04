@@ -82,6 +82,26 @@ PlasmaExtras.Representation {
     Keys.onReleased: {
         keyPressed = false
 
+        if ((event.key == Qt.Key_Tab || event.key == Qt.Key_Backtab) && event.modifiers & Qt.ControlModifier) {
+            event.accepted = true;
+            if (root.mprisSourcesModel.length > 2) {
+                var nextIndex = playerSelector.currentIndex + 1;
+                if (event.key == Qt.Key_Backtab || event.modifiers & Qt.ShiftModifier) {
+                    nextIndex -= 2;
+                }
+                if (nextIndex == root.mprisSourcesModel.length) {
+                    nextIndex = 0;
+                }
+                if (nextIndex < 0) {
+                    nextIndex = root.mprisSourcesModel.length - 1;
+                }
+                playerSelector.currentIndex = nextIndex;
+                disablePositionUpdate = true;
+                mpris2Source.current = root.mprisSourcesModel[nextIndex]["source"];
+                disablePositionUpdate = false;
+            }
+        }
+
         if (!event.modifiers) {
             event.accepted = true
 
