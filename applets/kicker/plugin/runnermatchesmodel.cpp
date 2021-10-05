@@ -89,11 +89,11 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
             actionList << item;
         }
 
-        // Only try to get a KService for matches from the services runner. Assuming
+        // Only try to get a KService for matches from the services and systemsettings runner. Assuming
         // that any other runner returns something we want to turn into a KService is
         // unsafe, e.g. files from the Baloo runner might match a storageId just by
         // accident, creating a dangerous false positive.
-        if (match.runner()->id() != QLatin1String("services")) {
+        if (match.runner()->id() != QLatin1String("services") && match.runner()->id() != QLatin1String("krunner_systemsettings")) {
             return actionList;
         }
 
