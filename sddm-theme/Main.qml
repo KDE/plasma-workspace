@@ -155,6 +155,13 @@ PlasmaCore.ColorScope {
             }
             height: root.height + PlasmaCore.Units.gridUnit * 3
 
+            // If true (depends on the style and environment variables), hover events are always accepted
+            // and propagation stopped. This means the parent MouseArea won't get them and the UI won't be shown.
+            // Disable capturing those events while the UI is hidden to avoid that, while still passing events otherwise.
+            // One issue is that while the UI is visible, mouse activity won't keep resetting the timer, but when it
+            // finally expires, the next event should immediately set uiVisible = true again.
+            hoverEnabled: loginScreenRoot.uiVisible ? undefined : false
+
             focus: true //StackView is an implicit focus scope, so we need to give this focus so the item inside will have it
 
             Timer {
