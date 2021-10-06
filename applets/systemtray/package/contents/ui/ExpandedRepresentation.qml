@@ -80,7 +80,7 @@ Item {
                 checked: visibleActions > 1 ? configMenu.status !== PC2.DialogStatus.Closed : singleAction && singleAction.checked
                 property QtObject applet: systemTrayState.activeApplet || plasmoid
                 property int visibleActions: menuItemFactory.count
-                property QtObject singleAction: visibleActions === 1 ? menuItemFactory.object.action : null
+                property QtObject singleAction: visibleActions === 1 && menuItemFactory.object ? menuItemFactory.object.action : null
 
                 icon.name: "application-menu"
                 checkable: visibleActions > 1 || (singleAction && singleAction.checkable)
