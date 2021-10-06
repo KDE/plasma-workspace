@@ -76,6 +76,25 @@ private:
 };
 }
 
+ClipboardContentTextEdit::ClipboardContentTextEdit(QWidget *parent)
+    : KTextEdit(parent)
+{
+}
+
+void ClipboardContentTextEdit::keyPressEvent(QKeyEvent *event)
+{
+    // Handle Ctrl+Enter to accept
+    const int key = event->key();
+    if (key == Qt::Key_Return || key == Qt::Key_Enter) {
+        if ((key == Qt::Key_Enter && (event->modifiers() == Qt::KeypadModifier)) || !event->modifiers()) {
+            Q_EMIT done();
+            event->accept();
+            return;
+        }
+    }
+    KTextEdit::keyPressEvent(event);
+}
+
 // config == KGlobal::config for process, otherwise applet
 Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mode)
     : QObject(parent)
@@ -859,7 +878,6 @@ void Klipper::editData(const QSharedPointer<const HistoryItem> &item)
     QPointer<QDialog> dlg(new QDialog());
     dlg->setWindowTitle(i18n("Edit Contents"));
     QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, dlg);
-    buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttons, &QDialogButtonBox::accepted, dlg.data(), &QDialog::accept);
     connect(buttons, &QDialogButtonBox::rejected, dlg.data(), &QDialog::reject);
     connect(dlg.data(), &QDialog::finished, dlg.data(), [this, dlg, item](int result) {
@@ -867,7 +885,7 @@ void Klipper::editData(const QSharedPointer<const HistoryItem> &item)
         dlg->deleteLater();
     });
 
-    KTextEdit *edit = new KTextEdit(dlg);
+    ClipboardContentTextEdit *edit = new ClipboardContentTextEdit(dlg);
     edit->setAcceptRichText(false);
     if (item) {
         edit->setPlainText(item->mimeData()->text());
@@ -879,6 +897,7 @@ void Klipper::editData(const QSharedPointer<const HistoryItem> &item)
     layout->addWidget(buttons);
     dlg->adjustSize();
 
+    connect(edit, &ClipboardContentTextEdit::done, dlg.data(), &QDialog::accept);
     connect(dlg.data(), &QDialog::accepted, this, [this, edit, item]() {
         QString text = edit->toPlainText();
         if (item) {
