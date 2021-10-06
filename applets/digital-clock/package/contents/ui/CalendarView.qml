@@ -535,7 +535,7 @@ PlasmaExtras.Representation {
             Layout.fillWidth: true
             Layout.fillHeight: !agenda.visible
             Layout.minimumHeight: visible ? PlasmaCore.Units.gridUnit * 7 : 0
-            Layout.maximumHeight: agenda.visible ? PlasmaCore.Units.gridUnit * 10 : undefined
+            Layout.maximumHeight: agenda.visible ? PlasmaCore.Units.gridUnit * 10 : -1
 
             ListView {
                 id: clocksList
