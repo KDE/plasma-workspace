@@ -125,6 +125,8 @@ PlasmaComponents3.Page {
                 udi: DataEngineSource
             }
             highlight: PlasmaComponents.Highlight { }
+            highlightMoveDuration: 0
+            highlightResizeDuration: 0
 
             currentIndex: devicenotifier.currentIndex
 
