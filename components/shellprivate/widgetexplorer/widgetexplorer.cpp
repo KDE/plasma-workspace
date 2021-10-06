@@ -141,7 +141,6 @@ void WidgetExplorerPrivate::initFilters()
             cats << c;
         }
     }
-    qWarning() << "TODO: port listCategories()";
     for (const QString &category : qAsConst(cats)) {
         const QString lowerCaseCat = category.toLower();
         if (existingCategories.contains(lowerCaseCat)) {
