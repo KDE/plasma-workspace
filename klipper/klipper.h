@@ -14,6 +14,8 @@
 #include <QPointer>
 #include <QTimer>
 
+#include <KTextEdit>
+
 #include "urlgrabber.h"
 
 class KToggleAction;
@@ -32,6 +34,15 @@ class SystemClipboard;
 enum class KlipperMode {
     Standalone,
     DataEngine,
+};
+
+class ClipboardContentTextEdit : public KTextEdit
+{
+    Q_OBJECT
+public:
+    ClipboardContentTextEdit(QWidget *parent);
+    void keyPressEvent(QKeyEvent *event) override;
+    Q_SIGNAL void done();
 };
 
 class Klipper : public QObject
