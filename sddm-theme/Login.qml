@@ -83,7 +83,7 @@ SessionManagementScreen {
                 }
             }
 
-            visible: userList.currentItem.m.needsPassword
+            visible: userList.currentItem.needsPassword
 
             Keys.onEscapePressed: {
                 mainStack.currentItem.forceActiveFocus();
@@ -115,11 +115,11 @@ SessionManagementScreen {
             id: loginButton
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log In")
             Layout.preferredHeight: passwordBox.implicitHeight
-            Layout.preferredWidth: text.length == 0 ? loginButton.Layout.preferredHeight : undefined
+            Layout.preferredWidth: text.length == 0 ? loginButton.Layout.preferredHeight : -1
 
             icon.name: text.length == 0 ? "go-next" : ""
 
-            text: userList.currentItem.m.needsPassword ? "" : i18n("Log In")
+            text: userList.currentItem.needsPassword ? "" : i18n("Log In")
             onClicked: startLogin();
         }
     }
