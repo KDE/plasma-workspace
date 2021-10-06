@@ -38,6 +38,7 @@ ListView {
         iconSource: model.iconName || "user-identity"
         fontSize: view.fontSize
         vtNumber: model.vtNumber
+        needsPassword: model.needsPassword
 
         name: {
             var displayName = model.realName || model.name
