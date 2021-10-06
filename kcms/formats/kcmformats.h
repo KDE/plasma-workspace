@@ -1,52 +1,34 @@
 /*
     kcmformats.h
     SPDX-FileCopyrightText: 2014 Sebastian Kügler <sebas@kde.org>
+    SPDX-FileCopyrightText: 2021 Han Young <hanyoung@protonmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #pragma once
 
-#include <KCModule>
 #include <KConfigGroup>
+#include <KQuickAddons/ManagedConfigModule>
 
-#include <QHash>
-#include <QIcon>
-
-namespace Ui
-{
-class KCMFormatsWidget;
-}
-class QComboBox;
-
-class KCMFormats : public KCModule
+class FormatsSettings;
+class OptionsModel;
+class KCMFormats : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
-
+    Q_PROPERTY(FormatsSettings *settings READ settings CONSTANT)
+    Q_PROPERTY(OptionsModel *optionsModel READ optionsModel CONSTANT)
 public:
-    explicit KCMFormats(QWidget *parent = nullptr, const QVariantList &list = QVariantList());
-    ~KCMFormats() override;
+    explicit KCMFormats(QObject *parent = nullptr, const QVariantList &list = QVariantList());
+    virtual ~KCMFormats() override = default;
 
-    void load() override;
-    void save() override;
-    void defaults() override;
+    FormatsSettings *settings() const;
+    OptionsModel *optionsModel() const;
+    Q_INVOKABLE QQuickItem *getSubPage(int index) const; // proxy from KQuickAddons to Qml
+    Q_INVOKABLE void unset(const QString &setting);
 
 private:
-    void addLocaleToCombo(QComboBox *combo, const QLocale &locale);
-    void initCombo(QComboBox *combo, const QList<QLocale> &allLocales);
-    void connectCombo(QComboBox *combo);
-    QList<QComboBox *> m_combos;
+    QHash<QString, QString> m_cachedFlags;
 
-    QIcon loadFlagIcon(const QString &flagCode);
-    QHash<QString, QIcon> m_cachedFlags;
-    QIcon m_cachedUnknown;
-
-    void readConfig();
-    void writeConfig();
-
-    void updateExample();
-    void updateEnabled();
-
-    Ui::KCMFormatsWidget *m_ui;
-    KConfigGroup m_config;
+    OptionsModel *m_optionsModel = nullptr;
 };
