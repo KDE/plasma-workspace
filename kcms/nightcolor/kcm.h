@@ -5,28 +5,27 @@
 */
 #pragma once
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickAddons/ManagedConfigModule>
+
+#include "nightcolorsettings.h"
+
+class NightColorData;
 
 namespace ColorCorrect
 {
-class KCMNightColor : public KQuickAddons::ConfigModule
+class KCMNightColor : public KQuickAddons::ManagedConfigModule
 {
     Q_OBJECT
+
+    Q_PROPERTY(NightColorSettings *nightColorSettings READ nightColorSettings CONSTANT)
 public:
     KCMNightColor(QObject *parent, const QVariantList &args);
-    ~KCMNightColor() override
-    {
-    }
+    ~KCMNightColor() override = default;
 
-public Q_SLOTS:
-    void load() override;
-    void save() override;
-    void defaults() override;
+    NightColorSettings *nightColorSettings() const;
 
-Q_SIGNALS:
-    void loadRelay();
-    void saveRelay();
-    void defaultsRelay();
+private:
+    NightColorData *m_data;
 };
 
 }

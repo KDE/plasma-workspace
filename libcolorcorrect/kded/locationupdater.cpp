@@ -17,13 +17,17 @@ LocationUpdater::LocationUpdater(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
 {
     m_adaptor = new ColorCorrect::CompositorAdaptor(this);
-    connect(m_adaptor, &ColorCorrect::CompositorAdaptor::dataUpdated, this, &LocationUpdater::resetLocator);
+    m_configWatcher = KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("kwinrc")));
+    connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, &LocationUpdater::resetLocator);
+    connect(m_adaptor, &ColorCorrect::CompositorAdaptor::runningChanged, this, &LocationUpdater::resetLocator);
     resetLocator();
 }
 
 void LocationUpdater::resetLocator()
 {
-    if (m_adaptor->running() && m_adaptor->mode() == 0) {
+    KConfigGroup group(m_configWatcher->config(), QStringLiteral("NightColor"));
+    auto mode = group.readEntry(QStringLiteral("Mode"), 0);
+    if (m_adaptor->running() && mode == 0) {
         if (!m_locator) {
             m_locator = new ColorCorrect::Geolocator(this);
             connect(m_locator, &ColorCorrect::Geolocator::locationChanged, this, &LocationUpdater::sendLocation);

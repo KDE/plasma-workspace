@@ -8,24 +8,20 @@ import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.5 as QQC2
 import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kcm 1.5 as KCM
 
 Kirigami.FormLayout {
     twinFormLayouts: parentLayout
 
-    Connections {
-        target: root
-        function onReset() {
-            reset()
+    QQC2.Button {
+        text: i18n("Detect Location")
+        // Match combobox width
+        Layout.minimumWidth: modeSwitcher.width
+        icon.name: "find-location"
+        onClicked: {
+            latitudeFixedField.backend = locator.latitude;
+            longitudeFixedField.backend = locator.longitude;
         }
-        function onDefaults() {
-            latitudeFixedField.backend = cA.latitudeFixedDefault;
-            longitudeFixedField.backend = cA.longitudeFixedDefault;
-        }
-    }
-
-    function reset() {
-        latitudeFixedField.backend = cA.latitudeFixed;
-        longitudeFixedField.backend = cA.longitudeFixed;
     }
 
     NumberField {
@@ -34,11 +30,15 @@ Kirigami.FormLayout {
         Layout.minimumWidth: modeSwitcher.width
         Layout.maximumWidth: modeSwitcher.width
         Kirigami.FormData.label: i18n("Latitude:")
-        backend: cA.latitudeFixedStaged
         validator: DoubleValidator {bottom: -90; top: 90; decimals: 10}
+        backend: kcm.nightColorSettings.latitudeFixed
         onBackendChanged: {
-            cA.latitudeFixedStaged = backend;
-            calcNeedsSave();
+            kcm.nightColorSettings.latitudeFixed = backend;
+        }
+        KCM.SettingStateBinding {
+            configObject: kcm.nightColorSettings
+            settingName: "LatitudeFixed"
+            extraEnabledConditions: kcm.nightColorSettings.active
         }
     }
 
@@ -48,11 +48,15 @@ Kirigami.FormLayout {
         Layout.minimumWidth: modeSwitcher.width
         Layout.maximumWidth: modeSwitcher.width
         Kirigami.FormData.label: i18n("Longitude:")
-        backend: cA.longitudeFixedStaged
         validator: DoubleValidator {bottom: -180; top: 180; decimals: 10}
+        backend: kcm.nightColorSettings.longitudeFixed
         onBackendChanged: {
-            cA.longitudeFixedStaged = backend;
-            calcNeedsSave();
+            kcm.nightColorSettings.longitudeFixed = backend;
+        }
+        KCM.SettingStateBinding {
+            configObject: kcm.nightColorSettings
+            settingName: "LongitudeFixed"
+            extraEnabledConditions: kcm.nightColorSettings.active
         }
     }
 

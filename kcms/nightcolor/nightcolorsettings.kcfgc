@@ -1,0 +1,11 @@
+File=nightcolorsettings.kcfg
+Namespace=ColorCorrect
+ClassName=NightColorSettings
+Mutators=true
+# nightcolormanager.h is needed for NightColorMode
+IncludeFiles=enum.h
+UseEnumTypes=true
+DefaultValueGetters=true
+GenerateProperties=true
+ParentInConstructor=true
+Notifiers=true

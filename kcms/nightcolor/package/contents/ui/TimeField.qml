@@ -10,49 +10,49 @@ import QtQuick.Controls 2.5 as QQC2
 QQC2.TextField {
     id: field
 
-    property date backend
+    property string backend
     horizontalAlignment: TextInput.AlignHCenter
 
-    onBackendChanged: readIn()
+    onBackendChanged: updateTextFromBackend()
 
     function getNormedDate() {
         var nD = new Date();
-        nD.setHours(backend.getHours());
-        nD.setMinutes(backend.getMinutes());
+        var d = backendToDate();
+        nD.setHours(d.getHours());
+        nD.setMinutes(d.getMinutes());
         return nD;
     }
 
-    function readIn() {
-        if (!backend) {
+    function updateTextFromBackend() {
+        if (!backend || backend.length !== 4) {
             return;
         }
-
-        var hours = backend.getHours();
-        var minutes = backend.getMinutes();
-        if (hours < 10) {
-            hours = "0" + hours;
-        }
-        if (minutes < 10) {
-            minutes = "0" + minutes;
-        }
-
+        var hours = backend.slice(0, 2);
+        var minutes = backend.slice(2, 4);
         text = hours + ":" + minutes;
     }
 
-    function submit() {
-        if (text.length != 5) {
+    function backendToDate() {
+        if (backend.length !== 4) {
+            return;
+        }
+        var hours = backend.slice(0, 2);
+        var minutes = backend.slice(2, 4);
+        var date = new Date();
+        date.setHours(hours, minutes, 0, 0);
+        return date
+    }
+
+    function updateBackendFromText() {
+        if (text.length !== 5) {
             return;
         }
         var hours = text.slice(0, 2);
         var minutes = text.slice(3, 5);
-
-        var date = new Date();
-        date.setHours(hours, minutes, 0, 0);
-
-        backend = date;
+        backend = hours + minutes;
     }
 
-    onTextChanged: submit()
+    onTextChanged: updateBackendFromText()
     inputMask: "00:00"
     selectByMouse: false
     inputMethodHints: Qt.ImhPreferNumbers

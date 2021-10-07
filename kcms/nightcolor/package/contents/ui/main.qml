@@ -9,9 +9,11 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.5 as QQC2
 
 import org.kde.kirigami 2.5 as Kirigami
-import org.kde.kcm 1.2 as KCM
+import org.kde.kcm 1.5 as KCM
 
 import org.kde.colorcorrect 0.1 as CC
+
+import org.kde.private.kcms.nightcolor 1.0
 
 KCM.SimpleKCM {
     id: root
@@ -41,85 +43,10 @@ KCM.SimpleKCM {
     }
 
     Component.onCompleted: {
-        if (cA.mode == CC.CompositorAdaptor.ModeAutomatic && cA.active) {
+        if (kcm.nightColorSettings.mode == CC.CompositorAdaptor.ModeAutomatic && kcm.nightColorSettings.active) {
             startLocator();
         }
     }
-
-    function calcNeedsSave() {
-        kcm.needsSave = cA.checkStaged();
-        // If the user changes something manually again after
-        // Default was triggered, only allow a normal
-        // configuration change again:
-        defaultRequested = false;
-
-        calcRepresentsDefault();
-    }
-    function calcRepresentsDefault() {
-        if (cA.nightColorAvailable) {
-            kcm.representsDefaults = activator.checked === cA.activeDefault &&
-                tempSlider.value === cA.nightTemperatureDefault &&
-                modeSwitcher.currentIndex === cA.modeDefault &&
-                cA.latitudeFixedStaged === cA.latitudeFixedDefault &&
-                cA.longitudeFixedStaged === cA.longitudeFixedDefault &&
-                cA.morningBeginFixedStaged.toString() === cA.morningBeginFixedDefault.toString() &&
-                cA.eveningBeginFixedStaged.toString() === cA.eveningBeginFixedDefault.toString() &&
-                cA.transitionTimeStaged === cA.transitionTimeDefault;
-        } else {
-            kcm.representsDefaults = true;
-        }
-    }
-
-    Connections {
-        target: kcm
-        function onLoadRelay() {
-            cA.reloadData()
-        }
-        function onSaveRelay() {
-            if (defaultRequested) {
-                cA.sendConfigurationAll()
-            } else {
-                cA.sendConfiguration();
-            }
-        }
-        function onDefaultsRelay() {
-            if (!cA.nightColorAvailable) {
-                return;
-            }
-            activator.checked = cA.activeDefault;
-            tempSlider.value = cA.nightTemperatureDefault;
-            modeSwitcher.currentIndex = cA.modeDefault;
-
-            // set everything else to default as well
-            defaults()
-
-            mornBeginManField.backend = cA.morningBeginFixedDefault;
-            evenBeginManField.backend = cA.eveningBeginFixedDefault;
-            transTimeField.value = cA.transitionTimeDefault;
-            cA.transitionTimeStaged = transTimeField.value;
-
-            kcm.needsSave = cA.checkStagedAll();
-            defaultRequested = true;
-
-            calcRepresentsDefault();
-        }
-    }
-    signal defaults()
-
-    Connections {
-        target: cA
-        function onDataUpdated() {
-            calcNeedsSave()
-        }
-        function onStagedDataReset() {
-            activator.checked = cA.active;
-            tempSlider.value = cA.nightTemperature;
-            modeSwitcher.currentIndex = cA.mode;
-            reset();
-            calcNeedsSave();
-        }
-    }
-    signal reset()
 
     header: ColumnLayout{
         Kirigami.InlineMessage {
@@ -149,24 +76,19 @@ KCM.SimpleKCM {
         Kirigami.FormLayout {
             id: parentLayout
 
-            Connections {
-                target: root
-                function onReset() {
-                    mornBeginManField.backend = cA.morningBeginFixed;
-                    evenBeginManField.backend = cA.eveningBeginFixed;
-                    transTimeField.value = cA.transitionTime;
-                }
-            }
-
             QQC2.CheckBox {
                 id: activator
                 text: i18n("Activate Night Color")
-                enabled: cA.nightColorAvailable
-                checked: cA.active
+                checked: kcm.nightColorSettings.active
+                onCheckedChanged: kcm.nightColorSettings.active = checked
 
-                onToggled: {
-                    cA.activeStaged = checked;
-                    calcNeedsSave();
+                KCM.SettingStateBinding {
+                    configObject: kcm.nightColorSettings
+                    settingName: "Active"
+                    extraEnabledConditions: true//cA.nightColorAvailable
+                }
+                KCM.SettingHighlighter {
+                    highlight: true
                 }
             }
 
@@ -177,7 +99,7 @@ KCM.SimpleKCM {
             GridLayout {
                 Kirigami.FormData.label: i18n("Night Color Temperature:")
                 Kirigami.FormData.buddyFor: tempSlider
-                enabled: activator.checked
+                enabled: kcm.nightColorSettings.active
 
                 columns: 4
 
@@ -185,17 +107,20 @@ KCM.SimpleKCM {
                     id: tempSlider
                     // Match combobox width
                     Layout.minimumWidth: modeSwitcher.width
-                    enabled: activator.checked
-                    from: cA.minimalTemperature
-                    to: cA.neutralTemperature
-                    value: cA.nightTemperature
+                    from: 1000 // TODO get min/max fron kcfg
+                    to: 6500
                     stepSize: 100
+
+                    value: kcm.nightColorSettings.nightTemperature
+
+                    onMoved: kcm.nightColorSettings.nightTemperature = value
 
                     Layout.columnSpan: 3
 
-                    onValueChanged: {
-                        cA.nightTemperatureStaged = value;
-                        calcNeedsSave();
+                    KCM.SettingStateBinding {
+                        configObject: kcm.nightColorSettings
+                        settingName: "NightTemperature"
+                        extraEnabledConditions: kcm.nightColorSettings.active
                     }
                 }
                 QQC2.Label {
@@ -230,15 +155,20 @@ KCM.SimpleKCM {
                     i18n("Custom time"),
                     i18n("Always on")
                 ]
-                currentIndex: cA.mode
+                currentIndex: kcm.nightColorSettings.mode
                 onCurrentIndexChanged: {
-                    cA.modeStaged = currentIndex;
-                    if (currentIndex == CC.CompositorAdaptor.ModeAutomatic) {
+		    kcm.nightColorSettings.mode = currentIndex;
+		    if (currentIndex == CC.CompositorAdaptor.ModeAutomatic) {
                         startLocator();
                     } else {
                         endLocator();
                     }
-                    calcNeedsSave();
+		}
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.nightColorSettings
+                    settingName: "Mode"
+                    extraEnabledConditions: kcm.nightColorSettings.active
                 }
             }
 
@@ -258,7 +188,7 @@ KCM.SimpleKCM {
 
             // Show current location in auto mode
             QQC2.Label {
-                visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeAutomatic
+                visible: kcm.nightColorSettings.mode === NightColorMode.Automatic
                 enabled: activator.checked
                 wrapMode: Text.Wrap
                 text: i18n("Latitude: %1°   Longitude: %2°", Math.round(locator.latitude * 100)/100, Math.round(locator.longitude * 100)/100)
@@ -269,12 +199,17 @@ KCM.SimpleKCM {
                 id: evenBeginManField
                 // Match combobox width
                 Layout.minimumWidth: modeSwitcher.width
-                visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeTimings
+                visible: kcm.nightColorSettings.mode === NightColorMode.Timings
                 Kirigami.FormData.label: i18n("Turn on at:")
-                backend: cA.eveningBeginFixedStaged
+                backend: kcm.nightColorSettings.eveningBeginFixed
                 onBackendChanged: {
-                    cA.eveningBeginFixedStaged = backend;
-                    calcNeedsSave();
+                    kcm.nightColorSettings.eveningBeginFixed = backend;
+                }
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.nightColorSettings
+                    settingName: "EveningBeginFixed"
+                    extraEnabledConditions: kcm.nightColorSettings.active && kcm.nightColorSettings.mode === NightColorMode.Timings
                 }
 
                 QQC2.ToolTip {
@@ -286,12 +221,17 @@ KCM.SimpleKCM {
                 id: mornBeginManField
                 // Match combobox width
                 Layout.minimumWidth: modeSwitcher.width
-                visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeTimings
+                visible: kcm.nightColorSettings.mode === NightColorMode.Timings
                 Kirigami.FormData.label: i18n("Turn off at:")
-                backend: cA.morningBeginFixedStaged
+                backend: kcm.nightColorSettings.morningBeginFixed
                 onBackendChanged: {
-                    cA.morningBeginFixedStaged = backend;
-                    calcNeedsSave();
+                    kcm.nightColorSettings.morningBeginFixed = backend;
+                }
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.nightColorSettings
+                    settingName: "MorningBeginFixed"
+                    extraEnabledConditions: kcm.nightColorSettings.active && kcm.nightColorSettings.mode === NightColorMode.Timings
                 }
 
                 QQC2.ToolTip {
@@ -301,23 +241,28 @@ KCM.SimpleKCM {
 
             QQC2.SpinBox {
                 id: transTimeField
-                visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeTimings
+                visible: kcm.nightColorSettings.mode === NightColorMode.Timings
                 // Match width of combobox and input fields
                 Layout.minimumWidth: modeSwitcher.width
                 Kirigami.FormData.label: i18n("Transition duration:")
                 from: 1
                 to: 600 // less than 12 hours (in minutes: 720)
-                value: cA.transitionTimeStaged
+                value: kcm.nightColorSettings.transitionTime
                 editable: true
                 onValueModified: {
-                    cA.transitionTimeStaged = value;
-                    calcNeedsSave();
+                    kcm.nightColorSettings.transitionTime = value;
                 }
                 textFromValue: function(value, locale) {
                     return i18np("%1 minute", "%1 minutes", value)
                 }
                 valueFromText: function(text, locale) {
                     return parseInt(text);
+                }
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.nightColorSettings
+                    settingName: "TransitionTime"
+                    extraEnabledConditions: kcm.nightColorSettings.active
                 }
 
                 QQC2.ToolTip {
@@ -351,18 +296,18 @@ KCM.SimpleKCM {
 
         // Show location chooser in manual location mode
         LocationsFixedView {
-            visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeLocation
+            visible: kcm.nightColorSettings.mode === NightColorMode.Location
             enabled: activator.checked
         }
 
         // Show start/end times in automatic and manual location modes
         TimingsView {
             id: timings
-            visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeAutomatic ||
-                     modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeLocation
-            enabled: activator.checked
-            latitude: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeAutomatic ? locator.latitude : cA.latitudeFixedStaged
-            longitude: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeAutomatic ? locator.longitude : cA.longitudeFixedStaged
+            visible: kcm.nightColorSettings.mode === NightColorMode.Automatic ||
+            kcm.nightColorSettings.mode === NightColorMode.Location
+            enabled: kcm.nightColorSettings.active
+            latitude: kcm.nightColorSettings.mode === NightColorMode.Automatic ? locator.latitude : kcm.nightColorSettings.latitudeFixed
+            longitude: kcm.nightColorSettings.mode === NightColorMode.Automatic ? locator.longitude : kcm.nightColorSettings.longitudeFixed
         }
     }
 }

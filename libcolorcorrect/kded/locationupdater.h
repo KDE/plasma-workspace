@@ -7,6 +7,8 @@
 
 #include <kdedmodule.h>
 
+#include <KConfigWatcher>
+
 namespace ColorCorrect
 {
 class Geolocator;
@@ -19,12 +21,11 @@ class LocationUpdater : public KDEDModule
 public:
     LocationUpdater(QObject *parent, const QList<QVariant> &);
 
-public Q_SLOTS:
-    void sendLocation(double latitude, double longitude);
-
 private:
     void resetLocator();
+    void sendLocation(double latitude, double longitude);
 
     ColorCorrect::CompositorAdaptor *m_adaptor = nullptr;
     ColorCorrect::Geolocator *m_locator = nullptr;
+    KConfigWatcher::Ptr m_configWatcher;
 };
