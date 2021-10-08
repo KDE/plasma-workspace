@@ -137,7 +137,7 @@ MouseArea {
                 }
             }
 
-            //depending on the form factor, we are calculating only one dimention, second is always the same as root/parent
+            //depending on the form factor, we are calculating only one dimension, second is always the same as root/parent
             implicitHeight: root.vertical ? cellHeight * Math.ceil(count / rowsOrColumns) : root.height
             implicitWidth: !root.vertical ? cellWidth * Math.ceil(count / rowsOrColumns) : root.width
 
