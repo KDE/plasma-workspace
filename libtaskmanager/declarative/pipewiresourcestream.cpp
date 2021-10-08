@@ -90,15 +90,16 @@ static std::vector<uint64_t> queryDmaBufModifiers(EGLDisplay display, uint32_t f
     }
 
     success = eglQueryDmaBufModifiersEXT(display, drm_format, 0, nullptr, nullptr, &count);
-    if (!success || count == 0) {
-        if (!success)
-            qCWarning(PIPEWIRE_LOGGING) << "Failed to query DMA-BUF modifier count.";
+    if (!success) {
+        qCWarning(PIPEWIRE_LOGGING) << "Failed to query DMA-BUF modifier count.";
         return {};
     }
 
     std::vector<uint64_t> modifiers(count);
-    if (!eglQueryDmaBufModifiersEXT(display, drm_format, count, modifiers.data(), nullptr, &count)) {
-        qCWarning(PIPEWIRE_LOGGING) << "Failed to query DMA-BUF modifiers.";
+    if (count > 0) {
+        if (!eglQueryDmaBufModifiersEXT(display, drm_format, count, modifiers.data(), nullptr, &count)) {
+            qCWarning(PIPEWIRE_LOGGING) << "Failed to query DMA-BUF modifiers.";
+        }
     }
 
     // Support modifier-less buffers
