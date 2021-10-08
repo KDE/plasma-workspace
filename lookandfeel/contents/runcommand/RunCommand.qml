@@ -278,7 +278,8 @@ ColumnLayout {
 
             onUpdateQueryString: {
                 queryField.text = text
-                queryField.cursorPosition = cursorPosition
+                queryField.select(cursorPosition, root.query.length)
+                queryField.focus = true;
             }
         }
     }

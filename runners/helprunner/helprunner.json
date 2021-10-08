@@ -1,0 +1,17 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "alexander.lohnau@gmx.de",
+                "Name": "Alexander Lohnau"
+            }
+        ],
+        "Description": "Shows help information about runners when typing \"?\" or \"help\"",
+        "EnabledByDefault": true,
+        "Icon": "help-contextual",
+        "Name": "Help Runner",
+        "ServiceTypes": [
+            "Plasma/Runner"
+        ]
+    }
+}
