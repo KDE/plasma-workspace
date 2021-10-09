@@ -71,7 +71,8 @@ void HelpRunner::run(const RunnerContext &context, const QueryMatch &match)
 {
     Q_UNUSED(context);
     const QString query = match.data().toString();
-    const int idx = query.indexOf(i18nd("krunner", "<search term>"));
+    static const QRegularExpression placeholderRegex{QStringLiteral("<.+>$")};
+    const int idx = query.indexOf(placeholderRegex);
     context.requestQueryStringUpdate(query, idx == -1 ? query.count() : idx);
 }
 
