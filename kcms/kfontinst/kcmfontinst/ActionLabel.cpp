@@ -5,24 +5,24 @@
 
 #include "ActionLabel.h"
 #include <KIconLoader>
-#include <QMatrix>
 #include <QPixmap>
 #include <QTimer>
+#include <QTransform>
 
 namespace KFI
 {
 // Borrowed from kolourpaint...
-static QMatrix matrixWithZeroOrigin(const QMatrix &matrix, int width, int height)
+static QTransform matrixWithZeroOrigin(const QTransform &matrix, int width, int height)
 {
     QRect newRect(matrix.mapRect(QRect(0, 0, width, height)));
 
-    return QMatrix(matrix.m11(), matrix.m12(), matrix.m21(), matrix.m22(), matrix.dx() - newRect.left(), matrix.dy() - newRect.top());
+    return QTransform(matrix.m11(), matrix.m12(), matrix.m21(), matrix.m22(), matrix.dx() - newRect.left(), matrix.dy() - newRect.top());
 }
 
-static QMatrix rotateMatrix(int width, int height, double angle)
+static QTransform rotateMatrix(int width, int height, double angle)
 {
-    QMatrix matrix;
-    matrix.translate(width / 2, height / 2);
+    QTransform matrix;
+    matrix.translate(width / 2.0, height / 2.0);
     matrix.rotate(angle);
 
     return matrixWithZeroOrigin(matrix, width, height);
