@@ -28,7 +28,6 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaD
     , m_session(new SessionManagement(this))
 {
     setObjectName(QStringLiteral("PowerDevil"));
-    updateStatus();
     setMinLetterCount(3);
     const KLocalizedString suspend = ki18nc("Note this is a KRunner keyword", "suspend");
     m_suspend = RunnerKeyword{suspend.untranslatedText(), suspend.toString()};
@@ -44,6 +43,7 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaD
     m_dimScreen = RunnerKeyword{dimScreen.untranslatedText(), dimScreen.toString()};
     const KLocalizedString screenBrightness = ki18nc("Note this is a KRunner keyword", "dim screen");
     m_screenBrightness = RunnerKeyword{screenBrightness.untranslatedText(), screenBrightness.toString()};
+    updateStatus();
 }
 
 void PowerDevilRunner::updateSyntaxes()
