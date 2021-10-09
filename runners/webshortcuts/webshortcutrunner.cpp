@@ -49,9 +49,16 @@ void WebshortcutRunner::loadSyntaxes()
 
     QList<Plasma::RunnerSyntax> syns;
     const QStringList providers = filterData.preferredSearchProviders();
+    const QRegularExpression replaceRegex(QStringLiteral(":q$"));
+    const QString placeholder = QStringLiteral(":q:");
     for (const QString &provider : providers) {
-        Plasma::RunnerSyntax s(filterData.queryForPreferredSearchProvider(provider), /*":q:",*/
+        Plasma::RunnerSyntax s(filterData.queryForPreferredSearchProvider(provider).replace(replaceRegex, placeholder),
                                i18n("Opens \"%1\" in a web browser with the query :q:.", provider));
+        syns << s;
+    }
+    if (!providers.isEmpty()) {
+        QString defaultKey = filterData.queryForSearchProvider(providers.constFirst()).defaultKey();
+        Plasma::RunnerSyntax s(QStringLiteral("!%1 :q:").arg(defaultKey), i18n("Search using the DuckDuckGo bang syntax"));
         syns << s;
     }
 
