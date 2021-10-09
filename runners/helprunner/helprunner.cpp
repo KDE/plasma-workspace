@@ -52,7 +52,6 @@ void HelpRunner::match(RunnerContext &context)
                 match.setMultiLine(true);
                 match.setMatchCategory(runner->name());
                 match.setIcon(runner->icon());
-                match.setSubtext(runner->description());
                 matches << match;
             }
         } else {
