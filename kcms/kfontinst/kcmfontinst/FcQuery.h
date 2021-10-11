@@ -20,7 +20,7 @@ class CFcQuery : public QObject
 public:
     CFcQuery(QObject *parent)
         : QObject(parent)
-        , itsProc(nullptr)
+        , m_proc(nullptr)
     {
     }
     ~CFcQuery() override;
@@ -29,11 +29,11 @@ public:
 
     const QString &font() const
     {
-        return itsFont;
+        return m_font;
     }
     const QString &file() const
     {
-        return itsFile;
+        return m_file;
     }
 
 private Q_SLOTS:
@@ -46,9 +46,9 @@ Q_SIGNALS:
     void finished();
 
 private:
-    QProcess *itsProc;
-    QByteArray itsBuffer;
-    QString itsFile, itsFont;
+    QProcess *m_proc;
+    QByteArray m_buffer;
+    QString m_file, m_font;
 };
 
 }

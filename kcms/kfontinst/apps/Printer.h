@@ -38,10 +38,10 @@ public Q_SLOTS:
     void cancel();
 
 private:
-    QPrinter *itsPrinter;
-    QList<Misc::TFont> itsItems;
-    int itsSize;
-    bool itsCancelled;
+    QPrinter *m_printer;
+    QList<Misc::TFont> m_items;
+    int m_size;
+    bool m_cancelled;
 };
 
 class CPrinter : public QDialog
@@ -67,9 +67,9 @@ private:
     void closeEvent(QCloseEvent *e) override;
 
 private:
-    QLabel *itsStatusLabel;
-    QProgressBar *itsProgress;
-    CActionLabel *itsActionLabel;
+    QLabel *m_statusLabel;
+    QProgressBar *m_progress;
+    CActionLabel *m_actionLabel;
 };
 
 }

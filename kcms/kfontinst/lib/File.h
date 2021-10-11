@@ -24,36 +24,36 @@ public:
     }
 
     File(const QString &pth = QString(), const QString &fndry = QString(), int idx = 0)
-        : itsPath(pth)
-        , itsFoundry(fndry)
-        , itsIndex(idx)
+        : m_path(pth)
+        , m_foundry(fndry)
+        , m_index(idx)
     {
     }
     File(const QDomElement &elem, bool disabled);
 
     bool operator==(const File &o) const
     {
-        return equalIndex(itsIndex, o.itsIndex) && itsPath == o.itsPath;
+        return equalIndex(m_index, o.m_index) && m_path == o.m_path;
     }
 
     QString toXml(bool disabledOnly, QTextStream &s) const;
 
     const QString &path() const
     {
-        return itsPath;
+        return m_path;
     }
     const QString &foundry() const
     {
-        return itsFoundry;
+        return m_foundry;
     }
     int index() const
     {
-        return itsIndex;
+        return m_index;
     }
 
 private:
-    QString itsPath, itsFoundry;
-    int itsIndex;
+    QString m_path, m_foundry;
+    int m_index;
 };
 
 typedef QSet<File> FileCont;

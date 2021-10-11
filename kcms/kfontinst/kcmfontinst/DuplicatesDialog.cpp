@@ -41,11 +41,11 @@ enum EDialogColumns {
 
 CDuplicatesDialog::CDuplicatesDialog(QWidget *parent, CFontList *fl)
     : QDialog(parent)
-    , itsFontList(fl)
+    , m_fontList(fl)
 {
     setWindowTitle(i18n("Duplicate Fonts"));
-    itsButtonBox = new QDialogButtonBox(QDialogButtonBox::Cancel);
-    connect(itsButtonBox, &QDialogButtonBox::clicked, this, &CDuplicatesDialog::slotButtonClicked);
+    m_buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel);
+    connect(m_buttonBox, &QDialogButtonBox::clicked, this, &CDuplicatesDialog::slotButtonClicked);
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
 
@@ -53,57 +53,57 @@ CDuplicatesDialog::CDuplicatesDialog(QWidget *parent, CFontList *fl)
 
     QFrame *page = new QFrame(this);
     mainLayout->addWidget(page);
-    mainLayout->addWidget(itsButtonBox);
+    mainLayout->addWidget(m_buttonBox);
 
     QGridLayout *layout = new QGridLayout(page);
     layout->setContentsMargins(0, 0, 0, 0);
 
-    itsLabel = new QLabel(page);
-    itsView = new CFontFileListView(page);
-    itsView->hide();
-    layout->addWidget(itsActionLabel = new CActionLabel(this), 0, 0);
-    layout->addWidget(itsLabel, 0, 1);
-    itsLabel->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Preferred);
-    layout->addWidget(itsView, 1, 0, 1, 2);
-    itsFontFileList = new CFontFileList(this);
-    connect(itsFontFileList, SIGNAL(finished()), SLOT(scanFinished()));
-    connect(itsView, &CFontFileListView::haveDeletions, this, &CDuplicatesDialog::enableButtonOk);
+    m_label = new QLabel(page);
+    m_view = new CFontFileListView(page);
+    m_view->hide();
+    layout->addWidget(m_actionLabel = new CActionLabel(this), 0, 0);
+    layout->addWidget(m_label, 0, 1);
+    m_label->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Preferred);
+    layout->addWidget(m_view, 1, 0, 1, 2);
+    m_fontFileList = new CFontFileList(this);
+    connect(m_fontFileList, SIGNAL(finished()), SLOT(scanFinished()));
+    connect(m_view, &CFontFileListView::haveDeletions, this, &CDuplicatesDialog::enableButtonOk);
 }
 
 int CDuplicatesDialog::exec()
 {
-    itsActionLabel->startAnimation();
-    itsLabel->setText(i18n("Scanning for duplicate fonts. Please wait…"));
-    itsFontFileList->start();
+    m_actionLabel->startAnimation();
+    m_label->setText(i18n("Scanning for duplicate fonts. Please wait…"));
+    m_fontFileList->start();
     return QDialog::exec();
 }
 
 void CDuplicatesDialog::scanFinished()
 {
-    itsActionLabel->stopAnimation();
+    m_actionLabel->stopAnimation();
 
-    if (itsFontFileList->wasTerminated()) {
-        itsFontFileList->wait();
+    if (m_fontFileList->wasTerminated()) {
+        m_fontFileList->wait();
         reject();
     } else {
         CFontFileList::TFontMap duplicates;
 
-        itsFontFileList->getDuplicateFonts(duplicates);
+        m_fontFileList->getDuplicateFonts(duplicates);
 
         if (0 == duplicates.count()) {
-            itsButtonBox->setStandardButtons(QDialogButtonBox::Close);
-            itsLabel->setText(i18n("No duplicate fonts found."));
+            m_buttonBox->setStandardButtons(QDialogButtonBox::Close);
+            m_label->setText(i18n("No duplicate fonts found."));
         } else {
             QSize sizeB4(size());
 
-            itsButtonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Close);
-            QPushButton *okButton = itsButtonBox->button(QDialogButtonBox::Ok);
+            m_buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Close);
+            QPushButton *okButton = m_buttonBox->button(QDialogButtonBox::Ok);
             okButton->setDefault(true);
             okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
             okButton->setText(i18n("Delete Marked Files"));
             okButton->setEnabled(false);
-            itsLabel->setText(i18np("%1 duplicate font found.", "%1 duplicate fonts found.", duplicates.count()));
-            itsView->show();
+            m_label->setText(i18np("%1 duplicate font found.", "%1 duplicate fonts found.", duplicates.count()));
+            m_view->show();
 
             CFontFileList::TFontMap::ConstIterator it(duplicates.begin()), end(duplicates.end());
             QFont boldFont(font());
@@ -115,7 +115,7 @@ void CDuplicatesDialog::scanFinished()
 
                 details << FC::createName(it.key().family, it.key().styleInfo);
 
-                CFontFileListView::StyleItem *top = new CFontFileListView::StyleItem(itsView, details, it.key().family, it.key().styleInfo);
+                CFontFileListView::StyleItem *top = new CFontFileListView::StyleItem(m_view, details, it.key().family, it.key().styleInfo);
 
                 QSet<QString>::ConstIterator fit((*it).begin()), fend((*it).end());
                 int tt(0), t1(0);
@@ -142,18 +142,17 @@ void CDuplicatesDialog::scanFinished()
             }
 
             QTreeWidgetItem *item = nullptr;
-            for (int i = 0; (item = itsView->topLevelItem(i)); ++i) {
+            for (int i = 0; (item = m_view->topLevelItem(i)); ++i) {
                 item->setExpanded(true);
             }
 
-            itsView->setSortingEnabled(true);
-            itsView->header()->resizeSections(QHeaderView::ResizeToContents);
+            m_view->setSortingEnabled(true);
+            m_view->header()->resizeSections(QHeaderView::ResizeToContents);
 
-            int width =
-                (itsView->frameWidth() + 8) * 2 + style()->pixelMetric(QStyle::PM_LayoutLeftMargin) + style()->pixelMetric(QStyle::PM_LayoutRightMargin);
+            int width = (m_view->frameWidth() + 8) * 2 + style()->pixelMetric(QStyle::PM_LayoutLeftMargin) + style()->pixelMetric(QStyle::PM_LayoutRightMargin);
 
-            for (int i = 0; i < itsView->header()->count(); ++i) {
-                width += itsView->header()->sectionSize(i);
+            for (int i = 0; i < m_view->header()->count(); ++i) {
+                width += m_view->header()->sectionSize(i);
             }
 
             width = qMin(QApplication::desktop()->screenGeometry(this).width(), width);
@@ -177,22 +176,22 @@ enum EStatus {
 
 void CDuplicatesDialog::slotButtonClicked(QAbstractButton *button)
 {
-    switch (itsButtonBox->standardButton(button)) {
+    switch (m_buttonBox->standardButton(button)) {
     case QDialogButtonBox::Ok: {
-        QSet<QString> files = itsView->getMarkedFiles();
+        QSet<QString> files = m_view->getMarkedFiles();
         int fCount = files.count();
 
         if (1 == fCount ? KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Are you sure you wish to delete:\n%1", *files.begin()))
                         : KMessageBox::Yes == KMessageBox::warningYesNoList(this, i18n("Are you sure you wish to delete:"), files.values())) {
-            itsFontList->setSlowUpdates(true);
+            m_fontList->setSlowUpdates(true);
 
             CJobRunner runner(this);
 
-            connect(&runner, &CJobRunner::configuring, itsFontList, &CFontList::unsetSlowUpdates);
-            runner.exec(CJobRunner::CMD_REMOVE_FILE, itsView->getMarkedItems(), false);
-            itsFontList->setSlowUpdates(false);
-            itsView->removeFiles();
-            files = itsView->getMarkedFiles();
+            connect(&runner, &CJobRunner::configuring, m_fontList, &CFontList::unsetSlowUpdates);
+            runner.exec(CJobRunner::CMD_REMOVE_FILE, m_view->getMarkedItems(), false);
+            m_fontList->setSlowUpdates(false);
+            m_view->removeFiles();
+            files = m_view->getMarkedFiles();
             if (fCount != files.count()) {
                 CFcEngine::setDirty();
             }
@@ -204,13 +203,13 @@ void CDuplicatesDialog::slotButtonClicked(QAbstractButton *button)
     }
     case QDialogButtonBox::Cancel:
     case QDialogButtonBox::Close:
-        if (!itsFontFileList->wasTerminated()) {
-            if (itsFontFileList->isRunning()) {
+        if (!m_fontFileList->wasTerminated()) {
+            if (m_fontFileList->isRunning()) {
                 if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Cancel font scan?"))) {
-                    itsLabel->setText(i18n("Canceling…"));
+                    m_label->setText(i18n("Canceling…"));
 
-                    if (itsFontFileList->isRunning()) {
-                        itsFontFileList->terminate();
+                    if (m_fontFileList->isRunning()) {
+                        m_fontFileList->terminate();
                     } else {
                         reject();
                     }
@@ -227,7 +226,7 @@ void CDuplicatesDialog::slotButtonClicked(QAbstractButton *button)
 
 void CDuplicatesDialog::enableButtonOk(bool on)
 {
-    QPushButton *okButton = itsButtonBox->button(QDialogButtonBox::Ok);
+    QPushButton *okButton = m_buttonBox->button(QDialogButtonBox::Ok);
     if (okButton) {
         okButton->setEnabled(on);
     }
@@ -240,26 +239,26 @@ static uint qHash(const CFontFileList::TFile &key)
 
 CFontFileList::CFontFileList(CDuplicatesDialog *parent)
     : QThread(parent)
-    , itsTerminated(false)
+    , m_terminated(false)
 {
 }
 
 void CFontFileList::start()
 {
     if (!isRunning()) {
-        itsTerminated = false;
+        m_terminated = false;
         QThread::start();
     }
 }
 
 void CFontFileList::terminate()
 {
-    itsTerminated = true;
+    m_terminated = true;
 }
 
 void CFontFileList::getDuplicateFonts(TFontMap &map)
 {
-    map = itsMap;
+    map = m_map;
 
     if (!map.isEmpty()) {
         TFontMap::Iterator it(map.begin()), end(map.end());
@@ -290,7 +289,7 @@ void CFontFileList::run()
 
                 for (; fileIt != fileEnd; ++fileIt) {
                     if (!Misc::isMetrics((*fileIt).path()) && !Misc::isBitmap((*fileIt).path())) {
-                        itsMap[font].insert((*fileIt).path());
+                        m_map[font].insert((*fileIt).path());
                     }
                 }
             }
@@ -299,16 +298,16 @@ void CFontFileList::run()
 
     // if we have 2 fonts: /wibble/a.ttf and /wibble/a.TTF fontconfig only returns the 1st, so we
     // now iterate over fontconfig's list, and look for other matching fonts...
-    if (!itsMap.isEmpty() && !itsTerminated) {
+    if (!m_map.isEmpty() && !m_terminated) {
         // Create a map of folder -> set<files>
-        TFontMap::Iterator it(itsMap.begin()), end(itsMap.end());
+        TFontMap::Iterator it(m_map.begin()), end(m_map.end());
         QHash<QString, QSet<TFile>> folderMap;
 
-        for (int n = 0; it != end && !itsTerminated; ++it) {
+        for (int n = 0; it != end && !m_terminated; ++it) {
             QStringList add;
             QSet<QString>::const_iterator fIt((*it).begin()), fEnd((*it).end());
 
-            for (; fIt != fEnd && !itsTerminated; ++fIt, ++n) {
+            for (; fIt != fEnd && !m_terminated; ++fIt, ++n) {
                 folderMap[Misc::getDir(*fIt)].insert(TFile(Misc::getFile(*fIt), it));
             }
         }
@@ -316,7 +315,7 @@ void CFontFileList::run()
         // Go through our folder map, and check for file duplicates...
         QHash<QString, QSet<TFile>>::Iterator folderIt(folderMap.begin()), folderEnd(folderMap.end());
 
-        for (; folderIt != folderEnd && !itsTerminated; ++folderIt) {
+        for (; folderIt != folderEnd && !m_terminated; ++folderIt) {
             fileDuplicates(folderIt.key(), *folderIt);
         }
     }
@@ -332,7 +331,7 @@ void CFontFileList::fileDuplicates(const QString &folder, const QSet<TFile> &fil
 
     QFileInfoList list(dir.entryInfoList());
 
-    for (int i = 0; i < list.size() && !itsTerminated; ++i) {
+    for (int i = 0; i < list.size() && !m_terminated; ++i) {
         QFileInfo fileInfo(list.at(i));
 
         // Check if this file is already know about - this will do a case-sensitive comparison
@@ -382,14 +381,14 @@ CFontFileListView::CFontFileListView(QWidget *parent)
     setAllColumnsShowFocus(true);
     setAlternatingRowColors(true);
 
-    itsMenu = new QMenu(this);
+    m_menu = new QMenu(this);
     if (!Misc::app(KFI_VIEWER).isEmpty()) {
-        itsMenu->addAction(QIcon::fromTheme("kfontview"), i18n("Open in Font Viewer"), this, &CFontFileListView::openViewer);
+        m_menu->addAction(QIcon::fromTheme("kfontview"), i18n("Open in Font Viewer"), this, &CFontFileListView::openViewer);
     }
-    itsMenu->addAction(QIcon::fromTheme("document-properties"), i18n("Properties"), this, &CFontFileListView::properties);
-    itsMenu->addSeparator();
-    itsUnMarkAct = itsMenu->addAction(i18n("Unmark for Deletion"), this, &CFontFileListView::unmark);
-    itsMarkAct = itsMenu->addAction(QIcon::fromTheme("edit-delete"), i18n("Mark for Deletion"), this, &CFontFileListView::mark);
+    m_menu->addAction(QIcon::fromTheme("document-properties"), i18n("Properties"), this, &CFontFileListView::properties);
+    m_menu->addSeparator();
+    m_unMarkAct = m_menu->addAction(i18n("Unmark for Deletion"), this, &CFontFileListView::unmark);
+    m_markAct = m_menu->addAction(QIcon::fromTheme("edit-delete"), i18n("Mark for Deletion"), this, &CFontFileListView::mark);
 
     connect(this, SIGNAL(itemSelectionChanged()), SLOT(selectionChanged()));
     connect(this, SIGNAL(itemClicked(QTreeWidgetItem *, int)), SLOT(clicked(QTreeWidgetItem *, int)));
@@ -594,9 +593,9 @@ void CFontFileListView::contextMenuEvent(QContextMenuEvent *ev)
             }
         }
 
-        itsMarkAct->setEnabled(haveUnmarked);
-        itsUnMarkAct->setEnabled(haveMarked);
-        itsMenu->popup(ev->globalPos());
+        m_markAct->setEnabled(haveUnmarked);
+        m_unMarkAct->setEnabled(haveMarked);
+        m_menu->popup(ev->globalPos());
     }
 }
 

@@ -41,7 +41,7 @@ public:
 
     CFcEngine *engine()
     {
-        return itsEngine;
+        return m_engine;
     }
 
 public Q_SLOTS:
@@ -57,14 +57,14 @@ Q_SIGNALS:
     void atMin(bool);
 
 private:
-    QImage itsImage;
-    int itsCurrentFace, itsLastWidth, itsLastHeight, itsStyleInfo;
-    QString itsFontName;
-    QList<CFcEngine::TRange> itsRange;
-    QList<CFcEngine::TChar> itsChars;
-    CFcEngine::TChar itsLastChar;
-    CCharTip *itsTip;
-    CFcEngine *itsEngine;
+    QImage m_image;
+    int m_currentFace, m_lastWidth, m_lastHeight, m_styleInfo;
+    QString m_fontName;
+    QList<CFcEngine::TRange> m_range;
+    QList<CFcEngine::TChar> m_chars;
+    CFcEngine::TChar m_lastChar;
+    CCharTip *m_tip;
+    CFcEngine *m_engine;
 
     friend class CCharTip;
 };

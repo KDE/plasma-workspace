@@ -64,13 +64,13 @@ private:
     QHBoxLayout *m_layout;
     QMenu *m_menu;
     QLineEdit *m_lineEdit;
-    ECriteria itsCurrentCriteria;
-    QFontDatabase::WritingSystem itsCurrentWs;
-    QStringList itsCurrentFileTypes;
-    QIcon itsIcons[NUM_CRIT];
-    QString itsTexts[NUM_CRIT];
-    QAction *itsActions[NUM_CRIT];
-    QActionGroup *itsActionGroup;
+    ECriteria m_currentCriteria;
+    QFontDatabase::WritingSystem m_currentWs;
+    QStringList m_currentFileTypes;
+    QIcon m_icons[NUM_CRIT];
+    QString m_texts[NUM_CRIT];
+    QAction *m_actions[NUM_CRIT];
+    QActionGroup *m_actionGroup;
 };
 
 }

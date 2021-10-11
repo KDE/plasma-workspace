@@ -38,12 +38,12 @@ Style::Style(const QDomElement &elem, bool loadFiles)
         }
     }
 
-    itsScalable = !elem.hasAttribute(SCALABLE_ATTR) || elem.attribute(SCALABLE_ATTR) != "false";
-    itsValue = FC::createStyleVal(weight, width, slant);
-    itsWritingSystems = 0;
+    m_scalable = !elem.hasAttribute(SCALABLE_ATTR) || elem.attribute(SCALABLE_ATTR) != "false";
+    m_value = FC::createStyleVal(weight, width, slant);
+    m_writingSystems = 0;
 
     if (elem.hasAttribute(LANGS_ATTR)) {
-        itsWritingSystems = WritingSystems::instance()->get(elem.attribute(LANGS_ATTR).split(LANG_SEP, Qt::SkipEmptyParts));
+        m_writingSystems = WritingSystems::instance()->get(elem.attribute(LANGS_ATTR).split(LANG_SEP, Qt::SkipEmptyParts));
     }
 
     if (loadFiles) {
@@ -51,7 +51,7 @@ Style::Style(const QDomElement &elem, bool loadFiles)
             File file(elem, false);
 
             if (!file.path().isEmpty()) {
-                itsFiles.insert(file);
+                m_files.insert(file);
             }
         } else {
             for (QDomNode n = elem.firstChild(); !n.isNull(); n = n.nextSibling()) {
@@ -61,7 +61,7 @@ Style::Style(const QDomElement &elem, bool loadFiles)
                     File file(ent, false);
 
                     if (!file.path().isEmpty()) {
-                        itsFiles.insert(file);
+                        m_files.insert(file);
                     }
                 }
             }
@@ -72,7 +72,7 @@ Style::Style(const QDomElement &elem, bool loadFiles)
 QString Style::toXml(bool disabled, const QString &family, QTextStream &s) const
 {
     QStringList files;
-    FileCont::ConstIterator it(itsFiles.begin()), end(itsFiles.end());
+    FileCont::ConstIterator it(m_files.begin()), end(m_files.end());
 
     for (; it != end; ++it) {
         QString f((*it).toXml(disabled, s));
@@ -86,7 +86,7 @@ QString Style::toXml(bool disabled, const QString &family, QTextStream &s) const
         QString str("  <" FONT_TAG " ");
         int weight, width, slant;
 
-        KFI::FC::decomposeStyleVal(itsValue, weight, width, slant);
+        KFI::FC::decomposeStyleVal(m_value, weight, width, slant);
 
         if (!family.isEmpty()) {
             str += FAMILY_ATTR "=\"" + family + "\" ";
@@ -100,11 +100,11 @@ QString Style::toXml(bool disabled, const QString &family, QTextStream &s) const
         if (KFI_NULL_SETTING != slant) {
             str += SLANT_ATTR "=\"" + QString::number(slant) + "\" ";
         }
-        if (!itsScalable) {
+        if (!m_scalable) {
             str += SCALABLE_ATTR "=\"false\" ";
         }
 
-        QStringList ws(WritingSystems::instance()->getLangs(itsWritingSystems));
+        QStringList ws(WritingSystems::instance()->getLangs(m_writingSystems));
 
         if (!ws.isEmpty()) {
             str += LANGS_ATTR "=\"" + ws.join(LANG_SEP) + "\" ";

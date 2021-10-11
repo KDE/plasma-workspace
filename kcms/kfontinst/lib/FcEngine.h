@@ -79,52 +79,52 @@ public:
                 QList<TChar> *chars = nullptr);
     int getNumIndexes()
     {
-        return itsIndexCount;
+        return m_indexCount;
     } // Only valid after draw has been called!
     static QFont getQFont(const QString &family, quint32 style, int size);
     const QVector<int> &sizes() const
     {
-        return itsSizes;
+        return m_sizes;
     }
     bool atMin() const
     {
-        return 0 == itsSizes.size() || 0 == itsAlphaSizeIndex;
+        return 0 == m_sizes.size() || 0 == m_alphaSizeIndex;
     }
     bool atMax() const
     {
-        return 0 == itsSizes.size() || itsSizes.size() - 1 == itsAlphaSizeIndex;
+        return 0 == m_sizes.size() || m_sizes.size() - 1 == m_alphaSizeIndex;
     }
     void zoomIn()
     {
         if (!atMax())
-            itsAlphaSizeIndex++;
+            m_alphaSizeIndex++;
     }
     void zoomOut()
     {
         if (!atMin())
-            itsAlphaSizeIndex--;
+            m_alphaSizeIndex--;
     }
     int alphaSize() const
     {
-        return itsSizes[itsAlphaSizeIndex];
+        return m_sizes[m_alphaSizeIndex];
     }
     quint32 styleVal()
     {
-        return itsStyle;
+        return m_style;
     }
     const QString &descriptiveName() const
     {
-        return itsDescriptiveName;
+        return m_descriptiveName;
     }
 
     const QString &getPreviewString()
     {
-        return itsPreviewString;
+        return m_previewString;
     }
     static QString getDefaultPreviewString();
     void setPreviewString(const QString &str)
     {
-        itsPreviewString = str.isEmpty() ? getDefaultPreviewString() : str;
+        m_previewString = str.isEmpty() ? getDefaultPreviewString() : str;
     }
     static QString getUppercaseLetters();
     static QString getLowercaseLetters();
@@ -145,16 +145,16 @@ private:
     Xft *xft();
 
 private:
-    bool itsInstalled;
-    QString itsName, itsDescriptiveName;
-    quint32 itsStyle;
-    int itsIndex, itsIndexCount, itsAlphaSizeIndex;
-    QVector<int> itsSizes;
-    FcBool itsScalable;
-    QStringList itsAddedFiles;
-    QString itsPreviewString;
+    bool m_installed;
+    QString m_name, m_descriptiveName;
+    quint32 m_style;
+    int m_index, m_indexCount, m_alphaSizeIndex;
+    QVector<int> m_sizes;
+    FcBool m_scalable;
+    QStringList m_addedFiles;
+    QString m_previewString;
     static bool theirFcDirty;
-    Xft *itsXft;
+    Xft *m_xft;
 };
 
 }

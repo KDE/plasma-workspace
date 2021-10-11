@@ -16,8 +16,8 @@
 namespace KFI
 {
 FontInstInterface::FontInstInterface()
-    : itsInterface(new OrgKdeFontinstInterface(OrgKdeFontinstInterface::staticInterfaceName(), FONTINST_PATH, QDBusConnection::sessionBus(), nullptr))
-    , itsActive(false)
+    : m_interface(new OrgKdeFontinstInterface(OrgKdeFontinstInterface::staticInterfaceName(), FONTINST_PATH, QDBusConnection::sessionBus(), nullptr))
+    , m_active(false)
 {
     FontInst::registerTypes();
 
@@ -27,9 +27,9 @@ FontInstInterface::FontInstInterface()
                                                            this);
 
     connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &FontInstInterface::dbusServiceOwnerChanged);
-    connect(itsInterface, &OrgKdeFontinstInterface::status, this, &FontInstInterface::status);
-    connect(itsInterface, &OrgKdeFontinstInterface::fontList, this, &FontInstInterface::fontList);
-    connect(itsInterface, &OrgKdeFontinstInterface::fontStat, this, &FontInstInterface::fontStat);
+    connect(m_interface, &OrgKdeFontinstInterface::status, this, &FontInstInterface::status);
+    connect(m_interface, &OrgKdeFontinstInterface::fontList, this, &FontInstInterface::fontList);
+    connect(m_interface, &OrgKdeFontinstInterface::fontStat, this, &FontInstInterface::fontStat);
 
     if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(OrgKdeFontinstInterface::staticInterfaceName())) {
         QProcess::startDetached(QLatin1String(KFONTINST_LIB_EXEC_DIR "/fontinst"), QStringList());
@@ -42,29 +42,29 @@ FontInstInterface::~FontInstInterface()
 
 int FontInstInterface::install(const QString &file, bool toSystem)
 {
-    itsInterface->install(file, true, toSystem, getpid(), true);
+    m_interface->install(file, true, toSystem, getpid(), true);
     return waitForResponse();
 }
 
 int FontInstInterface::uninstall(const QString &name, bool fromSystem)
 {
-    itsInterface->uninstall(name, fromSystem, getpid(), true);
+    m_interface->uninstall(name, fromSystem, getpid(), true);
     return waitForResponse();
 }
 
 int FontInstInterface::reconfigure()
 {
-    itsInterface->reconfigure(getpid(), false);
+    m_interface->reconfigure(getpid(), false);
     return waitForResponse();
 }
 
 Families FontInstInterface::list(bool system)
 {
     Families rv;
-    itsInterface->list(system ? FontInst::SYS_MASK : FontInst::USR_MASK, getpid());
+    m_interface->list(system ? FontInst::SYS_MASK : FontInst::USR_MASK, getpid());
     if (FontInst::STATUS_OK == waitForResponse()) {
-        rv = itsFamilies;
-        itsFamilies = Families();
+        rv = m_families;
+        m_families = Families();
     }
     return rv;
 }
@@ -72,21 +72,21 @@ Families FontInstInterface::list(bool system)
 Family FontInstInterface::statFont(const QString &file, bool system)
 {
     Family rv;
-    itsInterface->statFont(file, system ? FontInst::SYS_MASK : FontInst::USR_MASK, getpid());
+    m_interface->statFont(file, system ? FontInst::SYS_MASK : FontInst::USR_MASK, getpid());
     if (FontInst::STATUS_OK == waitForResponse()) {
-        rv = *itsFamilies.items.begin();
-        itsFamilies = Families();
+        rv = *m_families.items.begin();
+        m_families = Families();
     }
     return rv;
 }
 
 QString FontInstInterface::folderName(bool sys)
 {
-    if (!itsInterface) {
+    if (!m_interface) {
         return QString();
     }
 
-    QDBusPendingReply<QString> reply = itsInterface->folderName(sys);
+    QDBusPendingReply<QString> reply = m_interface->folderName(sys);
 
     reply.waitForFinished();
     return reply.isError() ? QString() : reply.argumentAt<0>();
@@ -94,48 +94,48 @@ QString FontInstInterface::folderName(bool sys)
 
 int FontInstInterface::waitForResponse()
 {
-    itsStatus = FontInst::STATUS_OK;
-    itsFamilies = Families();
-    itsActive = true;
+    m_status = FontInst::STATUS_OK;
+    m_families = Families();
+    m_active = true;
 
-    itsEventLoop.exec();
+    m_eventLoop.exec();
     qCDebug(KCM_KFONTINST_KIO) << "Loop finished";
-    return itsStatus;
+    return m_status;
 }
 
 void FontInstInterface::dbusServiceOwnerChanged(const QString &name, const QString &from, const QString &to)
 {
-    if (itsActive && to.isEmpty() && !from.isEmpty() && name == QLatin1String(OrgKdeFontinstInterface::staticInterfaceName())) {
+    if (m_active && to.isEmpty() && !from.isEmpty() && name == QLatin1String(OrgKdeFontinstInterface::staticInterfaceName())) {
         qCDebug(KCM_KFONTINST_KIO) << "Service died :-(";
-        itsStatus = FontInst::STATUS_SERVICE_DIED;
-        itsEventLoop.quit();
+        m_status = FontInst::STATUS_SERVICE_DIED;
+        m_eventLoop.quit();
     }
 }
 
 void FontInstInterface::status(int pid, int value)
 {
-    if (itsActive && pid == getpid()) {
+    if (m_active && pid == getpid()) {
         qCDebug(KCM_KFONTINST_KIO) << "Status:" << value;
-        itsStatus = value;
-        itsEventLoop.quit();
+        m_status = value;
+        m_eventLoop.quit();
     }
 }
 
 void FontInstInterface::fontList(int pid, const QList<KFI::Families> &families)
 {
-    if (itsActive && pid == getpid()) {
-        itsFamilies = 1 == families.count() ? *families.begin() : Families();
-        itsStatus = 1 == families.count() ? (int)FontInst::STATUS_OK : (int)KIO::ERR_DOES_NOT_EXIST;
-        itsEventLoop.quit();
+    if (m_active && pid == getpid()) {
+        m_families = 1 == families.count() ? *families.begin() : Families();
+        m_status = 1 == families.count() ? (int)FontInst::STATUS_OK : (int)KIO::ERR_DOES_NOT_EXIST;
+        m_eventLoop.quit();
     }
 }
 
 void FontInstInterface::fontStat(int pid, const KFI::Family &font)
 {
-    if (itsActive && pid == getpid()) {
-        itsFamilies = Families(font, false);
-        itsStatus = font.styles().count() > 0 ? (int)FontInst::STATUS_OK : (int)KIO::ERR_DOES_NOT_EXIST;
-        itsEventLoop.quit();
+    if (m_active && pid == getpid()) {
+        m_families = Families(font, false);
+        m_status = font.styles().count() > 0 ? (int)FontInst::STATUS_OK : (int)KIO::ERR_DOES_NOT_EXIST;
+        m_eventLoop.quit();
     }
 }
 

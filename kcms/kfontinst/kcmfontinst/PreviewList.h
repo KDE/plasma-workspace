@@ -18,34 +18,34 @@ class CPreviewListItem
 {
 public:
     CPreviewListItem(const QString &name, quint32 style, const QString &file, int index)
-        : itsName(name)
-        , itsFile(file)
-        , itsStyle(style)
-        , itsIndex(index)
+        : m_name(name)
+        , m_file(file)
+        , m_style(style)
+        , m_index(index)
     {
     }
 
     const QString &name() const
     {
-        return itsName;
+        return m_name;
     }
     quint32 style() const
     {
-        return itsStyle;
+        return m_style;
     }
     const QString &file() const
     {
-        return itsFile;
+        return m_file;
     }
     int index() const
     {
-        return itsIndex;
+        return m_index;
     }
 
 private:
-    QString itsName, itsFile;
-    quint32 itsStyle;
-    int itsIndex;
+    QString m_name, m_file;
+    quint32 m_style;
+    int m_index;
 };
 
 class CPreviewList : public QAbstractItemModel
@@ -66,7 +66,7 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
         Q_UNUSED(parent)
-        return itsItems.count();
+        return m_items.count();
     }
     int columnCount(const QModelIndex &parent = QModelIndex()) const override
     {
@@ -77,7 +77,7 @@ public:
     void showFonts(const QModelIndexList &font);
 
 private:
-    QList<CPreviewListItem *> itsItems;
+    QList<CPreviewListItem *> m_items;
 };
 
 class CPreviewListView : public QTreeView
@@ -99,7 +99,7 @@ Q_SIGNALS:
     void showMenu(const QPoint &pos);
 
 private:
-    CPreviewList *itsModel;
+    CPreviewList *m_model;
 };
 
 }

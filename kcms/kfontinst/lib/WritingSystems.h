@@ -24,7 +24,7 @@ public:
     QStringList getLangs(qulonglong ws) const;
 
 private:
-    QMap<QString, qulonglong> itsMap;
+    QMap<QString, qulonglong> m_map;
 };
 
 }

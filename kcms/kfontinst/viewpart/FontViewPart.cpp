@@ -51,91 +51,91 @@ K_PLUGIN_CLASS_WITH_JSON(CFontViewPart, "kfontviewpart.json")
 
 CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const QList<QVariant> &)
     : KParts::ReadOnlyPart(parent)
-    , itsConfig(KSharedConfig::openConfig())
-    , itsProc(nullptr)
-    , itsTempDir(nullptr)
-    , itsInterface(new FontInstInterface())
-    , itsOpening(false)
+    , m_config(KSharedConfig::openConfig())
+    , m_proc(nullptr)
+    , m_tempDir(nullptr)
+    , m_interface(new FontInstInterface())
+    , m_opening(false)
 {
     // create browser extension (for printing when embedded into browser)
-    itsExtension = new BrowserExtension(this);
+    m_extension = new BrowserExtension(this);
 
-    itsFrame = new QFrame(parentWidget);
+    m_frame = new QFrame(parentWidget);
 
-    QFrame *previewFrame = new QFrame(itsFrame);
-    QWidget *controls = new QWidget(itsFrame);
+    QFrame *previewFrame = new QFrame(m_frame);
+    QWidget *controls = new QWidget(m_frame);
 
-    itsFaceWidget = new QWidget(controls);
+    m_faceWidget = new QWidget(controls);
 
-    QBoxLayout *mainLayout = new QBoxLayout(QBoxLayout::TopToBottom, itsFrame);
+    QBoxLayout *mainLayout = new QBoxLayout(QBoxLayout::TopToBottom, m_frame);
 
     QBoxLayout *previewLayout = new QBoxLayout(QBoxLayout::LeftToRight, previewFrame), *controlsLayout = new QBoxLayout(QBoxLayout::LeftToRight, controls),
-               *faceLayout = new QBoxLayout(QBoxLayout::LeftToRight, itsFaceWidget);
+               *faceLayout = new QBoxLayout(QBoxLayout::LeftToRight, m_faceWidget);
     previewLayout->setContentsMargins(0, 0, 0, 0);
     previewLayout->setSpacing(0);
     faceLayout->setContentsMargins(0, 0, 0, 0);
     controlsLayout->setContentsMargins(0, 0, 0, 0);
     previewLayout->setSpacing(0);
 
-    itsFrame->setFrameShape(QFrame::NoFrame);
-    itsFrame->setFocusPolicy(Qt::ClickFocus);
+    m_frame->setFrameShape(QFrame::NoFrame);
+    m_frame->setFocusPolicy(Qt::ClickFocus);
     previewFrame->setFrameShape(QFrame::StyledPanel);
     previewFrame->setFrameShadow(QFrame::Sunken);
 
-    itsPreview = new CFontPreview(previewFrame);
-    itsPreview->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
-    itsFaceLabel = new QLabel(i18n("Show Face:"), itsFaceWidget);
-    itsFaceSelector = new QSpinBox(itsFaceWidget);
-    itsFaceSelector->setValue(1);
-    itsInstallButton = new QPushButton(i18n("Install…"), controls);
-    itsInstallButton->setEnabled(false);
-    previewLayout->addWidget(itsPreview);
-    faceLayout->addWidget(itsFaceLabel);
-    faceLayout->addWidget(itsFaceSelector);
+    m_preview = new CFontPreview(previewFrame);
+    m_preview->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
+    m_faceLabel = new QLabel(i18n("Show Face:"), m_faceWidget);
+    m_faceSelector = new QSpinBox(m_faceWidget);
+    m_faceSelector->setValue(1);
+    m_installButton = new QPushButton(i18n("Install…"), controls);
+    m_installButton->setEnabled(false);
+    previewLayout->addWidget(m_preview);
+    faceLayout->addWidget(m_faceLabel);
+    faceLayout->addWidget(m_faceSelector);
     faceLayout->addItem(new QSpacerItem(faceLayout->spacing(), 0, QSizePolicy::Fixed, QSizePolicy::Fixed));
-    itsFaceWidget->hide();
+    m_faceWidget->hide();
 
-    itsPreview->engine()->readConfig(*itsConfig);
+    m_preview->engine()->readConfig(*m_config);
 
-    controlsLayout->addWidget(itsFaceWidget);
+    controlsLayout->addWidget(m_faceWidget);
     controlsLayout->addStretch(1);
-    controlsLayout->addWidget(itsInstallButton);
+    controlsLayout->addWidget(m_installButton);
     mainLayout->addWidget(previewFrame);
     mainLayout->addWidget(controls);
-    connect(itsPreview, &CFontPreview::status, this, &CFontViewPart::previewStatus);
-    connect(itsInstallButton, &QAbstractButton::clicked, this, &CFontViewPart::install);
-    connect(itsFaceSelector, SIGNAL(valueChanged(int)), SLOT(showFace(int)));
+    connect(m_preview, &CFontPreview::status, this, &CFontViewPart::previewStatus);
+    connect(m_installButton, &QAbstractButton::clicked, this, &CFontViewPart::install);
+    connect(m_faceSelector, SIGNAL(valueChanged(int)), SLOT(showFace(int)));
 
-    itsChangeTextAction = actionCollection()->addAction("changeText");
-    itsChangeTextAction->setIcon(QIcon::fromTheme("edit-rename"));
-    itsChangeTextAction->setText(i18n("Change Text…"));
-    connect(itsChangeTextAction, &QAction::triggered, this, &CFontViewPart::changeText);
+    m_changeTextAction = actionCollection()->addAction("changeText");
+    m_changeTextAction->setIcon(QIcon::fromTheme("edit-rename"));
+    m_changeTextAction->setText(i18n("Change Text…"));
+    connect(m_changeTextAction, &QAction::triggered, this, &CFontViewPart::changeText);
 
     CPreviewSelectAction *displayTypeAction = new CPreviewSelectAction(this, CPreviewSelectAction::BlocksAndScripts);
     actionCollection()->addAction("displayType", displayTypeAction);
     connect(displayTypeAction, &CPreviewSelectAction::range, this, &CFontViewPart::displayType);
 
-    QAction *zoomIn = actionCollection()->addAction(KStandardAction::ZoomIn, itsPreview, SLOT(zoomIn())),
-            *zoomOut = actionCollection()->addAction(KStandardAction::ZoomOut, itsPreview, SLOT(zoomOut()));
+    QAction *zoomIn = actionCollection()->addAction(KStandardAction::ZoomIn, m_preview, SLOT(zoomIn())),
+            *zoomOut = actionCollection()->addAction(KStandardAction::ZoomOut, m_preview, SLOT(zoomOut()));
 
-    connect(itsPreview, &CFontPreview::atMax, zoomIn, &QAction::setDisabled);
-    connect(itsPreview, &CFontPreview::atMin, zoomOut, &QAction::setDisabled);
+    connect(m_preview, &CFontPreview::atMax, zoomIn, &QAction::setDisabled);
+    connect(m_preview, &CFontPreview::atMin, zoomOut, &QAction::setDisabled);
 
     setXMLFile("kfontviewpart.rc");
-    setWidget(itsFrame);
-    itsExtension->enablePrint(false);
+    setWidget(m_frame);
+    m_extension->enablePrint(false);
 
     FontInst::registerTypes();
-    connect(itsInterface, &OrgKdeFontinstInterface::status, this, &CFontViewPart::dbusStatus);
-    connect(itsInterface, &OrgKdeFontinstInterface::fontStat, this, &CFontViewPart::fontStat);
+    connect(m_interface, &OrgKdeFontinstInterface::status, this, &CFontViewPart::dbusStatus);
+    connect(m_interface, &OrgKdeFontinstInterface::fontStat, this, &CFontViewPart::fontStat);
 }
 
 CFontViewPart::~CFontViewPart()
 {
-    delete itsTempDir;
-    itsTempDir = nullptr;
-    delete itsInterface;
-    itsInterface = nullptr;
+    delete m_tempDir;
+    m_tempDir = nullptr;
+    delete m_interface;
+    m_interface = nullptr;
 }
 
 static inline QUrl mostLocalUrl(const QUrl &url, QWidget *widget)
@@ -152,8 +152,8 @@ bool CFontViewPart::openUrl(const QUrl &url)
         return false;
     }
 
-    itsFontDetails = FC::decode(url);
-    if (!itsFontDetails.family.isEmpty() || KFI_KIO_FONTS_PROTOCOL == url.scheme() || mostLocalUrl(url, itsFrame).isLocalFile()) {
+    m_fontDetails = FC::decode(url);
+    if (!m_fontDetails.family.isEmpty() || KFI_KIO_FONTS_PROTOCOL == url.scheme() || mostLocalUrl(url, m_frame).isLocalFile()) {
         setUrl(url);
         emit started(nullptr);
         setLocalFilePath(this->url().path());
@@ -171,7 +171,7 @@ bool CFontViewPart::openFile()
 {
     // NOTE: Can't do the real open here, as we don't seem to be able to use KIO::NetAccess functions
     // during initial start-up. Bug report 111535 indicates that calling "konqueror <font>" crashes.
-    itsInstallButton->setEnabled(false);
+    m_installButton->setEnabled(false);
     QTimer::singleShot(0, this, &CFontViewPart::timeout);
     return true;
 }
@@ -189,7 +189,7 @@ static inline bool statUrl(const QUrl &url, KIO::UDSEntry *udsEntry)
 
 void CFontViewPart::timeout()
 {
-    if (!itsInstallButton) {
+    if (!m_installButton) {
         return;
     }
 
@@ -197,13 +197,13 @@ void CFontViewPart::timeout()
     int fileIndex(-1);
     QString fontFile;
 
-    delete itsTempDir;
-    itsTempDir = nullptr;
+    delete m_tempDir;
+    m_tempDir = nullptr;
 
-    itsOpening = true;
+    m_opening = true;
 
-    if (!itsFontDetails.family.isEmpty()) {
-        emit setWindowCaption(FC::createName(itsFontDetails.family, itsFontDetails.styleInfo));
+    if (!m_fontDetails.family.isEmpty()) {
+        emit setWindowCaption(FC::createName(m_fontDetails.family, m_fontDetails.styleInfo));
         fontFile = FC::getFile(url());
         fileIndex = FC::getIndex(url());
     } else if (isFonts) {
@@ -227,8 +227,8 @@ void CFontViewPart::timeout()
                 fontFile = udsEntry.stringValue(UDS_EXTRA_FILE_NAME);
                 fileIndex = udsEntry.numberValue(UDS_EXTRA_FILE_FACE, 0);
             }
-            itsFontDetails.family = getFamily(udsEntry.stringValue(KIO::UDSEntry::UDS_NAME));
-            itsFontDetails.styleInfo = udsEntry.numberValue(UDS_EXTRA_FC_STYLE);
+            m_fontDetails.family = getFamily(udsEntry.stringValue(KIO::UDSEntry::UDS_NAME));
+            m_fontDetails.styleInfo = udsEntry.numberValue(UDS_EXTRA_FC_STYLE);
             emit setWindowCaption(udsEntry.stringValue(KIO::UDSEntry::UDS_NAME));
         } else {
             previewStatus(false);
@@ -254,21 +254,21 @@ void CFontViewPart::timeout()
                             const KArchiveEntry *entry = zipDir->entry(*it);
 
                             if (entry && entry->isFile()) {
-                                delete itsTempDir;
-                                itsTempDir = new QTemporaryDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
-                                itsTempDir->setAutoRemove(true);
+                                delete m_tempDir;
+                                m_tempDir = new QTemporaryDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
+                                m_tempDir->setAutoRemove(true);
 
-                                ((KArchiveFile *)entry)->copyTo(itsTempDir->path());
+                                ((KArchiveFile *)entry)->copyTo(m_tempDir->path());
 
                                 QMimeDatabase db;
-                                QString mime(db.mimeTypeForFile(itsTempDir->filePath(entry->name())).name());
+                                QString mime(db.mimeTypeForFile(m_tempDir->filePath(entry->name())).name());
 
                                 if (mime == "font/ttf" || mime == "font/otf" || mime == "application/x-font-ttf" || mime == "application/x-font-otf"
                                     || mime == "application/x-font-type1") {
-                                    fontFile = itsTempDir->filePath(entry->name());
+                                    fontFile = m_tempDir->filePath(entry->name());
                                     break;
                                 } else {
-                                    ::unlink(QFile::encodeName(itsTempDir->filePath(entry->name())).data());
+                                    ::unlink(QFile::encodeName(m_tempDir->filePath(entry->name())).data());
                                 }
                             }
                         }
@@ -278,35 +278,33 @@ void CFontViewPart::timeout()
         }
     }
 
-    itsInstallButton->setEnabled(false);
+    m_installButton->setEnabled(false);
 
-    if (itsFontDetails.family.isEmpty()) {
+    if (m_fontDetails.family.isEmpty()) {
         emit setWindowCaption(url().toDisplayString());
     } else {
         FcInitReinitialize();
     }
 
-    itsPreview->showFont(!package && itsFontDetails.family.isEmpty() ? localFilePath()
-                             : fontFile.isEmpty()                    ? itsFontDetails.family
-                                                                     : fontFile,
-                         itsFontDetails.styleInfo,
-                         fileIndex);
+    m_preview->showFont(!package && m_fontDetails.family.isEmpty() ? localFilePath() : fontFile.isEmpty() ? m_fontDetails.family : fontFile,
+                        m_fontDetails.styleInfo,
+                        fileIndex);
 
-    if (!isFonts && itsPreview->engine()->getNumIndexes() > 1) {
+    if (!isFonts && m_preview->engine()->getNumIndexes() > 1) {
         showFs = true;
-        itsFaceSelector->setRange(1, itsPreview->engine()->getNumIndexes());
-        itsFaceSelector->setSingleStep(1);
-        itsFaceSelector->blockSignals(true);
-        itsFaceSelector->setValue(1);
-        itsFaceSelector->blockSignals(false);
+        m_faceSelector->setRange(1, m_preview->engine()->getNumIndexes());
+        m_faceSelector->setSingleStep(1);
+        m_faceSelector->blockSignals(true);
+        m_faceSelector->setValue(1);
+        m_faceSelector->blockSignals(false);
     }
 
-    itsFaceWidget->setVisible(showFs);
+    m_faceWidget->setVisible(showFs);
 }
 
 void CFontViewPart::previewStatus(bool st)
 {
-    if (itsOpening) {
+    if (m_opening) {
         bool printable(false);
 
         if (st) {
@@ -328,25 +326,25 @@ void CFontViewPart::previewStatus(bool st)
             }
 #endif
         }
-        itsExtension->enablePrint(st && printable);
-        itsOpening = false;
+        m_extension->enablePrint(st && printable);
+        m_opening = false;
     }
-    itsChangeTextAction->setEnabled(st);
+    m_changeTextAction->setEnabled(st);
 
     if (!st) {
-        KMessageBox::error(itsFrame, i18n("Could not read font."));
+        KMessageBox::error(m_frame, i18n("Could not read font."));
     }
 }
 
 void CFontViewPart::install()
 {
-    if (!itsProc || QProcess::NotRunning == itsProc->state()) {
+    if (!m_proc || QProcess::NotRunning == m_proc->state()) {
         QStringList args;
 
-        if (!itsProc) {
-            itsProc = new QProcess(this);
+        if (!m_proc) {
+            m_proc = new QProcess(this);
         } else {
-            itsProc->kill();
+            m_proc->kill();
         }
 
         QString title = QGuiApplication::applicationDisplayName();
@@ -354,12 +352,12 @@ void CFontViewPart::install()
             title = QCoreApplication::applicationName();
         }
 
-        args << "--embed" << QStringLiteral("0x%1").arg((unsigned int)itsFrame->window()->winId(), 0, 16) << "--qwindowtitle" << title << "--qwindowicon"
+        args << "--embed" << QStringLiteral("0x%1").arg((unsigned int)m_frame->window()->winId(), 0, 16) << "--qwindowtitle" << title << "--qwindowicon"
              << "kfontview" << url().toDisplayString();
 
-        connect(itsProc, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(installlStatus()));
-        itsProc->start(Misc::app(KFI_INSTALLER), args);
-        itsInstallButton->setEnabled(false);
+        connect(m_proc, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(installlStatus()));
+        m_proc->start(Misc::app(KFI_INSTALLER), args);
+        m_installButton->setEnabled(false);
     }
 }
 
@@ -371,27 +369,27 @@ void CFontViewPart::installlStatus()
 void CFontViewPart::dbusStatus(int pid, int status)
 {
     if (pid == getpid() && FontInst::STATUS_OK != status) {
-        itsInstallButton->setEnabled(false);
+        m_installButton->setEnabled(false);
     }
 }
 
 void CFontViewPart::fontStat(int pid, const KFI::Family &font)
 {
     if (pid == getpid()) {
-        itsInstallButton->setEnabled(!Misc::app(KFI_INSTALLER).isEmpty() && font.styles().count() == 0);
+        m_installButton->setEnabled(!Misc::app(KFI_INSTALLER).isEmpty() && font.styles().count() == 0);
     }
 }
 
 void CFontViewPart::changeText()
 {
     bool status;
-    QString oldStr(itsPreview->engine()->getPreviewString()),
-        newStr(QInputDialog::getText(itsFrame, i18n("Preview String"), i18n("Please enter new string:"), QLineEdit::Normal, oldStr, &status));
+    QString oldStr(m_preview->engine()->getPreviewString()),
+        newStr(QInputDialog::getText(m_frame, i18n("Preview String"), i18n("Please enter new string:"), QLineEdit::Normal, oldStr, &status));
 
     if (status && newStr != oldStr) {
-        itsPreview->engine()->setPreviewString(newStr);
-        itsPreview->engine()->writeConfig(*itsConfig);
-        itsPreview->showFont();
+        m_preview->engine()->setPreviewString(newStr);
+        m_preview->engine()->writeConfig(*m_config);
+        m_preview->showFont();
     }
 }
 
@@ -404,16 +402,16 @@ void CFontViewPart::print()
         title = QCoreApplication::applicationName();
     }
 
-    if (!itsFontDetails.family.isEmpty()) {
-        args << "--embed" << QStringLiteral("0x%1").arg((unsigned int)itsFrame->window()->winId(), 0, 16) << "--qwindowtitle" << title << "--qwindowicon"
+    if (!m_fontDetails.family.isEmpty()) {
+        args << "--embed" << QStringLiteral("0x%1").arg((unsigned int)m_frame->window()->winId(), 0, 16) << "--qwindowtitle" << title << "--qwindowicon"
              << "kfontview"
              << "--size"
              << "0"
-             << "--pfont" << QString(itsFontDetails.family + ',' + QString().setNum(itsFontDetails.styleInfo));
+             << "--pfont" << QString(m_fontDetails.family + ',' + QString().setNum(m_fontDetails.styleInfo));
     }
 #ifdef KFI_PRINT_APP_FONTS
     else
-        args << "--embed" << QStringLiteral("0x%1").arg((unsigned int)itsFrame->window()->winId(), 0, 16) << "--qwindowtitle" << title << "--qwindowicon"
+        args << "--embed" << QStringLiteral("0x%1").arg((unsigned int)m_frame->window()->winId(), 0, 16) << "--qwindowtitle" << title << "--qwindowicon"
              << "kfontview"
              << "--size "
              << "0" << localFilePath() << QString().setNum(KFI_NO_STYLE_INFO);
@@ -426,23 +424,23 @@ void CFontViewPart::print()
 
 void CFontViewPart::displayType(const QList<CFcEngine::TRange> &range)
 {
-    itsPreview->setUnicodeRange(range);
-    itsChangeTextAction->setEnabled(0 == range.count());
+    m_preview->setUnicodeRange(range);
+    m_changeTextAction->setEnabled(0 == range.count());
 }
 
 void CFontViewPart::showFace(int face)
 {
-    itsPreview->showFace(face - 1);
+    m_preview->showFace(face - 1);
 }
 
 void CFontViewPart::checkInstallable()
 {
-    if (itsFontDetails.family.isEmpty()) {
+    if (m_fontDetails.family.isEmpty()) {
         if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(OrgKdeFontinstInterface::staticInterfaceName())) {
             QProcess::startDetached(QLatin1String(KFONTINST_LIB_EXEC_DIR "/fontinst"), QStringList());
         }
-        itsInstallButton->setEnabled(false);
-        itsInterface->statFont(itsPreview->engine()->descriptiveName(), FontInst::SYS_MASK | FontInst::USR_MASK, getpid());
+        m_installButton->setEnabled(false);
+        m_interface->statFont(m_preview->engine()->descriptiveName(), FontInst::SYS_MASK | FontInst::USR_MASK, getpid());
     }
 }
 

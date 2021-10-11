@@ -20,73 +20,73 @@ class KFONTINST_EXPORT Style
 {
 public:
     Style(quint32 v = 0, bool sc = false, qulonglong ws = 0)
-        : itsValue(v)
-        , itsWritingSystems(ws)
-        , itsScalable(sc)
+        : m_value(v)
+        , m_writingSystems(ws)
+        , m_scalable(sc)
     {
     }
     Style(const QDomElement &elem, bool loadFiles);
 
     bool operator==(const Style &o) const
     {
-        return itsValue == o.itsValue;
+        return m_value == o.m_value;
     }
 
     QString toXml(bool disabled, const QString &family, QTextStream &s) const;
     FileCont::ConstIterator add(const File &f) const
     {
-        return itsFiles.insert(f);
+        return m_files.insert(f);
     }
     void remove(const File &f) const
     {
-        itsFiles.remove(f);
+        m_files.remove(f);
     }
     quint32 value() const
     {
-        return itsValue;
+        return m_value;
     }
     void setWritingSystems(qulonglong ws) const
     {
-        itsWritingSystems = ws;
+        m_writingSystems = ws;
     }
     qulonglong writingSystems() const
     {
-        return itsWritingSystems;
+        return m_writingSystems;
     }
     const FileCont &files() const
     {
-        return itsFiles;
+        return m_files;
     }
     void setScalable(bool sc = true) const
     {
-        itsScalable = sc;
+        m_scalable = sc;
     }
     bool scalable() const
     {
-        return itsScalable;
+        return m_scalable;
     }
     void clearFiles() const
     {
-        itsFiles.clear();
+        m_files.clear();
     }
     void setFiles(const FileCont &f) const
     {
-        itsFiles = f;
+        m_files = f;
     }
     void addFiles(const FileCont &f) const
     {
-        itsFiles += f;
+        m_files += f;
     }
     void removeFiles(const FileCont &f) const
     {
-        itsFiles -= f;
+        m_files -= f;
     }
 
 private:
-    quint32 itsValue;
-    mutable qulonglong itsWritingSystems;
-    mutable bool itsScalable;
-    mutable FileCont itsFiles;
+    quint32 m_value;
+    mutable qulonglong m_writingSystems;
+    mutable bool m_scalable;
+    mutable FileCont m_files;
 };
 
 typedef QSet<Style> StyleCont;

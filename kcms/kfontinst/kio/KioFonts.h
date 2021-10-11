@@ -50,10 +50,10 @@ private:
     void handleResp(int resp, const QString &file, const QString &tempFile = QString(), bool destIsSystem = false);
 
 private:
-    FontInstInterface *itsInterface;
-    QTemporaryDir *itsTempDir;
-    QHash<uid_t, QString> itsUserCache;
-    QHash<gid_t, QString> itsGroupCache;
+    FontInstInterface *m_interface;
+    QTemporaryDir *m_tempDir;
+    QHash<uid_t, QString> m_userCache;
+    QHash<gid_t, QString> m_groupCache;
 };
 
 }

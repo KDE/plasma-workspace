@@ -84,12 +84,12 @@ public:
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     int row(const CFamilyItem *fam) const
     {
-        return itsFamilies.indexOf((CFamilyItem *)fam);
+        return m_families.indexOf((CFamilyItem *)fam);
     }
     void forceNewPreviews();
     const CFamilyItemCont &families() const
     {
-        return itsFamilies;
+        return m_families;
     }
     QModelIndex createIndex(int row, int column, void *data = nullptr) const
     {
@@ -102,11 +102,11 @@ public:
     void refresh(bool allowSys, bool allowUser);
     bool allowSys() const
     {
-        return itsAllowSys;
+        return m_allowSys;
     }
     bool allowUser() const
     {
-        return itsAllowUser;
+        return m_allowUser;
     }
     void getFamilyStats(QSet<QString> &enabled, QSet<QString> &disabled, QSet<QString> &partial);
     void getFoundries(QSet<QString> &foundries) const;
@@ -114,7 +114,7 @@ public:
     void setSlowUpdates(bool slow);
     bool slowUpdates() const
     {
-        return itsSlowUpdates;
+        return m_slowUpdates;
     }
 
 Q_SIGNALS:
@@ -141,19 +141,19 @@ private:
     CFamilyItem *findFamily(const QString &familyName);
 
 private:
-    CFamilyItemCont itsFamilies;
-    CFamilyItemHash itsFamilyHash;
-    bool itsBlockSignals, itsAllowSys, itsAllowUser, itsSlowUpdates;
+    CFamilyItemCont m_families;
+    CFamilyItemHash m_familyHash;
+    bool m_blockSignals, m_allowSys, m_allowUser, m_slowUpdates;
     static int theirPreviewSize;
-    FamilyCont itsSlowedMsgs[NUM_MSGS_TYPES][FontInst::FOLDER_COUNT];
+    FamilyCont m_slowedMsgs[NUM_MSGS_TYPES][FontInst::FOLDER_COUNT];
 };
 
 class CFontModelItem
 {
 public:
     CFontModelItem(CFontModelItem *p)
-        : itsParent(p)
-        , itsIsSystem(false)
+        : m_parent(p)
+        , m_isSystem(false)
     {
     }
     virtual ~CFontModelItem()
@@ -162,29 +162,29 @@ public:
 
     CFontModelItem *parent() const
     {
-        return itsParent;
+        return m_parent;
     }
     bool isFamily() const
     {
-        return nullptr == itsParent;
+        return nullptr == m_parent;
     }
     bool isFont() const
     {
-        return nullptr != itsParent;
+        return nullptr != m_parent;
     }
     bool isSystem() const
     {
-        return itsIsSystem;
+        return m_isSystem;
     }
     void setIsSystem(bool sys)
     {
-        itsIsSystem = sys;
+        m_isSystem = sys;
     }
     virtual int rowNumber() const = 0;
 
 protected:
-    CFontModelItem *itsParent;
-    bool itsIsSystem;
+    CFontModelItem *m_parent;
+    bool m_isSystem;
 };
 
 class CFamilyItem : public CFontModelItem
@@ -201,17 +201,17 @@ public:
 
     bool operator==(const CFamilyItem &other) const
     {
-        return itsName == other.itsName;
+        return m_name == other.m_name;
     }
 
     bool addFonts(const StyleCont &styles, bool sys);
     const QString &name() const
     {
-        return itsName;
+        return m_name;
     }
     const CFontItemCont &fonts() const
     {
-        return itsFonts;
+        return m_fonts;
     }
     void addFont(CFontItem *font, bool update = true);
     void removeFont(CFontItem *font, bool update);
@@ -221,44 +221,44 @@ public:
     CFontItem *findFont(quint32 style, bool sys);
     int rowNumber() const override
     {
-        return itsParent.row(this);
+        return m_parent.row(this);
     }
     int row(const CFontItem *font) const
     {
-        return itsFonts.indexOf((CFontItem *)font);
+        return m_fonts.indexOf((CFontItem *)font);
     }
     EStatus status() const
     {
-        return itsStatus;
+        return m_status;
     }
     EStatus realStatus() const
     {
-        return itsRealStatus;
+        return m_realStatus;
     }
     CFontItem *regularFont()
     {
-        return itsRegularFont;
+        return m_regularFont;
     }
     int fontCount() const
     {
-        return itsFontCount;
+        return m_fontCount;
     }
     void getFoundries(QSet<QString> &foundries) const;
     bool slowUpdates() const
     {
-        return itsParent.slowUpdates();
+        return m_parent.slowUpdates();
     }
 
 private:
     bool usable(const CFontItem *font, bool root);
 
 private:
-    QString itsName;
-    CFontItemCont itsFonts;
-    int itsFontCount;
-    EStatus itsStatus, itsRealStatus;
-    CFontItem *itsRegularFont; // 'RegularFont' is font nearest to 'Regular' style, and used for previews.
-    CFontList &itsParent;
+    QString m_name;
+    CFontItemCont m_fonts;
+    int m_fontCount;
+    EStatus m_status, m_realStatus;
+    CFontItem *m_regularFont; // 'RegularFont' is font nearest to 'Regular' style, and used for previews.
+    CFontList &m_parent;
 };
 
 class CFontItem : public CFontModelItem
@@ -272,35 +272,35 @@ public:
     void refresh();
     QString name() const
     {
-        return family() + QString::fromLatin1(", ") + itsStyleName;
+        return family() + QString::fromLatin1(", ") + m_styleName;
     }
     bool isEnabled() const
     {
-        return itsEnabled;
+        return m_enabled;
     }
     bool isHidden() const
     {
-        return !itsEnabled;
+        return !m_enabled;
     }
     bool isBitmap() const
     {
-        return !itsStyle.scalable();
+        return !m_style.scalable();
     }
     const QString &fileName() const
     {
-        return (*itsStyle.files().begin()).path();
+        return (*m_style.files().begin()).path();
     }
     const QString &style() const
     {
-        return itsStyleName;
+        return m_styleName;
     }
     quint32 styleInfo() const
     {
-        return itsStyle.value();
+        return m_style.value();
     }
     int index() const
     {
-        return (*itsStyle.files().begin()).index();
+        return (*m_style.files().begin()).index();
     }
     const QString &family() const
     {
@@ -312,11 +312,11 @@ public:
     }
     const FileCont &files() const
     {
-        return itsStyle.files();
+        return m_style.files();
     }
     qulonglong writingSystems() const
     {
-        return itsStyle.writingSystems();
+        return m_style.writingSystems();
     }
     QUrl url() const
     {
@@ -324,25 +324,25 @@ public:
     }
     void removeFile(const File &f)
     {
-        itsStyle.remove(f);
+        m_style.remove(f);
     }
     void removeFiles(const FileCont &f)
     {
-        itsStyle.removeFiles(f);
+        m_style.removeFiles(f);
     }
     void addFile(const File &f)
     {
-        itsStyle.add(f);
+        m_style.add(f);
     }
     void addFiles(const FileCont &f)
     {
-        itsStyle.addFiles(f);
+        m_style.addFiles(f);
     }
 
 private:
-    QString itsStyleName;
-    Style itsStyle;
-    bool itsEnabled;
+    QString m_styleName;
+    Style m_style;
+    bool m_enabled;
 };
 
 class CFontListSortFilterProxy : public QSortFilterProxyModel
@@ -363,7 +363,7 @@ public:
     void setFilterGroup(CGroupListItem *grp);
     CGroupListItem *filterGroup()
     {
-        return itsGroup;
+        return m_group;
     }
 
     void setFilterText(const QString &text);
@@ -381,17 +381,17 @@ Q_SIGNALS:
 private:
     QString filterText() const
     {
-        return CFontFilter::CRIT_FONTCONFIG == itsFilterCriteria ? (itsFcQuery ? itsFcQuery->font() : QString()) : itsFilterText;
+        return CFontFilter::CRIT_FONTCONFIG == m_filterCriteria ? (m_fcQuery ? m_fcQuery->font() : QString()) : m_filterText;
     }
 
 private:
-    CGroupListItem *itsGroup;
-    QString itsFilterText;
-    CFontFilter::ECriteria itsFilterCriteria;
-    qulonglong itsFilterWs;
-    QStringList itsFilterTypes;
-    QTimer *itsTimer;
-    CFcQuery *itsFcQuery;
+    CGroupListItem *m_group;
+    QString m_filterText;
+    CFontFilter::ECriteria m_filterCriteria;
+    qulonglong m_filterWs;
+    QStringList m_filterTypes;
+    QTimer *m_timer;
+    CFcQuery *m_fcQuery;
 };
 
 class CFontListView : public QTreeView
@@ -448,11 +448,11 @@ private:
     bool viewportEvent(QEvent *event) override;
 
 private:
-    CFontListSortFilterProxy *itsProxy;
-    CFontList *itsModel;
-    QMenu *itsMenu;
-    QAction *itsDeleteAct, *itsEnableAct, *itsDisableAct, *itsPrintAct, *itsViewAct;
-    bool itsAllowDrops;
+    CFontListSortFilterProxy *m_proxy;
+    CFontList *m_model;
+    QMenu *m_menu;
+    QAction *m_deleteAct, *m_enableAct, *m_disableAct, *m_printAct, *m_viewAct;
+    bool m_allowDrops;
 };
 
 }

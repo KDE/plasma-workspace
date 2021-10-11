@@ -93,22 +93,22 @@ private:
     QString errorString(int value) const;
 
 private:
-    ECommand itsCmd;
-    ItemList itsUrls;
-    ItemList::ConstIterator itsIt, itsEnd, itsPrev;
-    bool itsDestIsSystem;
-    QLabel *itsStatusLabel, *itsSkipLabel, *itsErrorLabel;
-    QProgressBar *itsProgress;
-    bool itsAutoSkip, itsCancelClicked, itsModified;
-    QTemporaryDir *itsTempDir;
-    QString itsCurrentFile;
-    CActionLabel *itsActionLabel;
-    QStackedWidget *itsStack;
-    int itsLastDBusStatus;
-    QCheckBox *itsDontShowFinishedMsg;
-    QDialogButtonBox *itsButtonBox;
-    QPushButton *itsSkipButton;
-    QPushButton *itsAutoSkipButton;
+    ECommand m_cmd;
+    ItemList m_urls;
+    ItemList::ConstIterator m_it, m_end, m_prev;
+    bool m_destIsSystem;
+    QLabel *m_statusLabel, *m_skipLabel, *m_errorLabel;
+    QProgressBar *m_progress;
+    bool m_autoSkip, m_cancelClicked, m_modified;
+    QTemporaryDir *m_tempDir;
+    QString m_currentFile;
+    CActionLabel *m_actionLabel;
+    QStackedWidget *m_stack;
+    int m_lastDBusStatus;
+    QCheckBox *m_dontShowFinishedMsg;
+    QDialogButtonBox *m_buttonBox;
+    QPushButton *m_skipButton;
+    QPushButton *m_autoSkipButton;
 };
 
 }

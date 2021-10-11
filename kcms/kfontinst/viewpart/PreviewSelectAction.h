@@ -38,7 +38,7 @@ private Q_SLOTS:
     void selected(int index);
 
 private:
-    int itsNumUnicodeBlocks;
+    int m_numUnicodeBlocks;
 };
 
 }

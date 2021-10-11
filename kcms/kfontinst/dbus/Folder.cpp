@@ -43,7 +43,7 @@ Folder::~Folder()
 
 void Folder::init(bool system, bool systemBus)
 {
-    itsIsSystem = system;
+    m_isSystem = system;
     if (!system) {
         FcStrList *list = FcConfigGetFontDirs(FcInitLoadConfigAndFonts());
         QStringList dirs;
@@ -53,48 +53,48 @@ void Folder::init(bool system, bool systemBus)
             dirs.append(Misc::dirSyntax((const char *)fcDir));
         }
 
-        itsLocation = Misc::getFolder(Misc::dirSyntax(QDir::homePath() + "/.fonts/"), Misc::dirSyntax(QDir::homePath()), dirs);
+        m_location = Misc::getFolder(Misc::dirSyntax(QDir::homePath() + "/.fonts/"), Misc::dirSyntax(QDir::homePath()), dirs);
     } else {
-        itsLocation = KFI_DEFAULT_SYS_FONTS_FOLDER;
+        m_location = KFI_DEFAULT_SYS_FONTS_FOLDER;
     }
 
     if ((!system && !systemBus) || (system && systemBus)) {
-        FcConfig::addDir(itsLocation, system);
+        FcConfig::addDir(m_location, system);
     }
 
-    itsDisabledCfg.dirty = false;
-    if (itsDisabledCfg.name.isEmpty()) {
+    m_disabledCfg.dirty = false;
+    if (m_disabledCfg.name.isEmpty()) {
         QString fileName("/" DISABLED_FONTS ".xml");
 
         if (system) {
-            itsDisabledCfg.name = QString::fromLatin1(KFI_ROOT_CFG_DIR) + fileName;
+            m_disabledCfg.name = QString::fromLatin1(KFI_ROOT_CFG_DIR) + fileName;
         } else {
             QString path = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/');
 
             if (!Misc::dExists(path)) {
                 Misc::createDir(path);
             }
-            itsDisabledCfg.name = path + fileName;
+            m_disabledCfg.name = path + fileName;
         }
-        itsDisabledCfg.timestamp = 0;
+        m_disabledCfg.timestamp = 0;
     }
 }
 
 bool Folder::allowToggling() const
 {
-    return Misc::fExists(itsDisabledCfg.name) ? Misc::fWritable(itsDisabledCfg.name) : Misc::dWritable(Misc::getDir(itsDisabledCfg.name));
+    return Misc::fExists(m_disabledCfg.name) ? Misc::fWritable(m_disabledCfg.name) : Misc::dWritable(Misc::getDir(m_disabledCfg.name));
 }
 
 void Folder::loadDisabled()
 {
-    if (itsDisabledCfg.dirty) {
+    if (m_disabledCfg.dirty) {
         saveDisabled();
     }
 
-    QFile f(itsDisabledCfg.name);
+    QFile f(m_disabledCfg.name);
 
-    // qDebug() << itsDisabledCfg.name;
-    itsDisabledCfg.dirty = false;
+    // qDebug() << m_disabledCfg.name;
+    m_disabledCfg.dirty = false;
     if (f.open(QIODevice::ReadOnly)) {
         QDomDocument doc;
 
@@ -117,7 +117,7 @@ void Folder::loadDisabled()
                                 if (!file.path().isEmpty()) {
                                     files.append(file);
                                 } else {
-                                    itsDisabledCfg.dirty = true;
+                                    m_disabledCfg.dirty = true;
                                 }
                             } else {
                                 for (QDomNode n = e.firstChild(); !n.isNull(); n = n.nextSibling()) {
@@ -130,7 +130,7 @@ void Folder::loadDisabled()
                                             files.append(file);
                                         } else {
                                             // qDebug() << "Set dirty from load";
-                                            itsDisabledCfg.dirty = true;
+                                            m_disabledCfg.dirty = true;
                                         }
                                     }
                                 }
@@ -139,7 +139,7 @@ void Folder::loadDisabled()
                             if (files.count() > 0) {
                                 QList<File>::ConstIterator it(files.begin()), end(files.end());
 
-                                FamilyCont::ConstIterator f(itsFonts.insert(fam));
+                                FamilyCont::ConstIterator f(m_fonts.insert(fam));
                                 StyleCont::ConstIterator s((*f).add(style));
 
                                 for (; it != end; ++it) {
@@ -153,7 +153,7 @@ void Folder::loadDisabled()
         }
 
         f.close();
-        itsDisabledCfg.updateTimeStamp();
+        m_disabledCfg.updateTimeStamp();
     }
 
     saveDisabled();
@@ -161,13 +161,13 @@ void Folder::loadDisabled()
 
 void Folder::saveDisabled()
 {
-    if (itsDisabledCfg.dirty) {
-        if (!itsIsSystem || Misc::root()) {
-            // qDebug() << itsDisabledCfg.name;
+    if (m_disabledCfg.dirty) {
+        if (!m_isSystem || Misc::root()) {
+            // qDebug() << m_disabledCfg.name;
 
             QSaveFile file;
 
-            file.setFileName(itsDisabledCfg.name);
+            file.setFileName(m_disabledCfg.name);
 
             if (!file.open(QIODevice::WriteOnly)) {
                 // qDebug() << "Exit - cant open save file";
@@ -178,7 +178,7 @@ void Folder::saveDisabled()
 
             str << "<" DISABLED_FONTS ">" << Qt::endl;
 
-            FamilyCont::ConstIterator it(itsFonts.begin()), end(itsFonts.end());
+            FamilyCont::ConstIterator it(m_fonts.begin()), end(m_fonts.end());
 
             for (; it != end; ++it) {
                 (*it).toXml(true, str);
@@ -191,15 +191,15 @@ void Folder::saveDisabled()
                 qApp->exit(0);
             }
         }
-        itsDisabledCfg.updateTimeStamp();
-        itsDisabledCfg.dirty = false;
+        m_disabledCfg.updateTimeStamp();
+        m_disabledCfg.dirty = false;
     }
 }
 
 QStringList Folder::toXml(int max)
 {
     QStringList rv;
-    FamilyCont::ConstIterator it(itsFonts.begin()), end(itsFonts.end());
+    FamilyCont::ConstIterator it(m_fonts.begin()), end(m_fonts.end());
     QString string;
     QTextStream str(&string);
 
@@ -210,7 +210,7 @@ QStringList Folder::toXml(int max)
                 rv.append(string);
                 string = QString();
             }
-            str << "<" FONTLIST_TAG " " << SYSTEM_ATTR "=\"" << (itsIsSystem ? "true" : "false") << "\">" << Qt::endl;
+            str << "<" FONTLIST_TAG " " << SYSTEM_ATTR "=\"" << (m_isSystem ? "true" : "false") << "\">" << Qt::endl;
         }
 
         (*it).toXml(false, str);
@@ -225,8 +225,8 @@ QStringList Folder::toXml(int max)
 
 Families Folder::list()
 {
-    Families fam(itsIsSystem);
-    FamilyCont::ConstIterator it(itsFonts.begin()), end(itsFonts.end());
+    Families fam(m_isSystem);
+    FamilyCont::ConstIterator it(m_fonts.begin()), end(m_fonts.end());
 
     for (int i = 0; it != end; ++it, ++i) {
         fam.items.insert(*it);
@@ -237,9 +237,9 @@ Families Folder::list()
 
 bool Folder::contains(const QString &family, quint32 style)
 {
-    FamilyCont::ConstIterator fam = itsFonts.find(Family(family));
+    FamilyCont::ConstIterator fam = m_fonts.find(Family(family));
 
-    if (fam == itsFonts.end()) {
+    if (fam == m_fonts.end()) {
         return false;
     }
 
@@ -250,10 +250,10 @@ bool Folder::contains(const QString &family, quint32 style)
 
 void Folder::add(const Family &family)
 {
-    FamilyCont::ConstIterator existingFamily = itsFonts.find(family);
+    FamilyCont::ConstIterator existingFamily = m_fonts.find(family);
 
-    if (existingFamily == itsFonts.end()) {
-        itsFonts.insert(family);
+    if (existingFamily == m_fonts.end()) {
+        m_fonts.insert(family);
     } else {
         StyleCont::ConstIterator it(family.styles().begin()), end(family.styles().end());
 
@@ -284,12 +284,12 @@ void Folder::add(const Family &family)
 
 void Folder::configure(bool force)
 {
-    // qDebug() << "EMPTY MODIFIED " << itsModifiedDirs.isEmpty();
+    // qDebug() << "EMPTY MODIFIED " << m_modifiedDirs.isEmpty();
 
-    if (force || !itsModifiedDirs.isEmpty()) {
+    if (force || !m_modifiedDirs.isEmpty()) {
         saveDisabled();
 
-        QSet<QString>::ConstIterator it(itsModifiedDirs.constBegin()), end(itsModifiedDirs.constEnd());
+        QSet<QString>::ConstIterator it(m_modifiedDirs.constBegin()), end(m_modifiedDirs.constEnd());
         QSet<QString> dirs;
 
         for (; it != end; ++it) {
@@ -302,7 +302,7 @@ void Folder::configure(bool force)
             QProcess::startDetached(QStringLiteral(KFONTINST_LIB_EXEC_DIR "/fontinst_x11"), dirs.values());
         }
 
-        itsModifiedDirs.clear();
+        m_modifiedDirs.clear();
 
         // qDebug() << "RUN FC";
         Misc::doCmd("fc-cache");
@@ -312,7 +312,7 @@ void Folder::configure(bool force)
 
 Folder::Flat Folder::flatten() const
 {
-    FamilyCont::ConstIterator fam = itsFonts.begin(), famEnd = itsFonts.end();
+    FamilyCont::ConstIterator fam = m_fonts.begin(), famEnd = m_fonts.end();
     Flat rv;
 
     for (; fam != famEnd; ++fam) {

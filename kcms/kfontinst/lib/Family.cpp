@@ -15,10 +15,10 @@ namespace KFI
 Family::Family(const QDomElement &elem, bool loadStyles)
 {
     if (elem.hasAttribute(FAMILY_ATTR)) {
-        itsName = elem.attribute(FAMILY_ATTR);
+        m_name = elem.attribute(FAMILY_ATTR);
     }
     if (elem.hasAttribute(NAME_ATTR)) {
-        itsName = elem.attribute(NAME_ATTR);
+        m_name = elem.attribute(NAME_ATTR);
     }
     if (loadStyles) {
         for (QDomNode n = elem.firstChild(); !n.isNull(); n = n.nextSibling()) {
@@ -28,7 +28,7 @@ Family::Family(const QDomElement &elem, bool loadStyles)
                 Style style(ent, loadStyles);
 
                 if (!style.files().isEmpty()) {
-                    itsStyles.insert(style);
+                    m_styles.insert(style);
                 }
             }
         }
@@ -37,9 +37,9 @@ Family::Family(const QDomElement &elem, bool loadStyles)
 
 void Family::toXml(bool disabled, QTextStream &s) const
 {
-    QString family(KFI::Misc::encodeText(itsName, s));
+    QString family(KFI::Misc::encodeText(m_name, s));
     QStringList entries;
-    StyleCont::ConstIterator it(itsStyles.begin()), end(itsStyles.end());
+    StyleCont::ConstIterator it(m_styles.begin()), end(m_styles.end());
 
     for (; it != end; ++it) {
         QString entry((*it).toXml(disabled, disabled ? family : QString(), s));
@@ -51,7 +51,7 @@ void Family::toXml(bool disabled, QTextStream &s) const
 
     if (entries.count() > 0) {
         if (!disabled) {
-            s << " <" FAMILY_TAG " " NAME_ATTR "=\"" << KFI::Misc::encodeText(itsName, s) << "\">\n";
+            s << " <" FAMILY_TAG " " NAME_ATTR "=\"" << KFI::Misc::encodeText(m_name, s) << "\">\n";
         }
 
         QStringList::ConstIterator it(entries.begin()), end(entries.end());

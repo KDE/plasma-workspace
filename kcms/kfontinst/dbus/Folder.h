@@ -57,18 +57,18 @@ public:
     void init(bool system, bool systemBus);
     const QString &location() const
     {
-        return itsLocation;
+        return m_location;
     }
     bool allowToggling() const;
     void loadDisabled();
     void saveDisabled();
     void setDisabledDirty()
     {
-        itsDisabledCfg.dirty = true;
+        m_disabledCfg.dirty = true;
     }
     bool disabledDirty() const
     {
-        return itsDisabledCfg.dirty;
+        return m_disabledCfg.dirty;
     }
     QStringList toXml(int max = 0);
     Families list();
@@ -76,45 +76,45 @@ public:
     void add(const Family &family);
     void addModifiedDir(const QString &dir)
     {
-        itsModifiedDirs.insert(dir);
+        m_modifiedDirs.insert(dir);
     }
     void addModifiedDirs(const QSet<QString> &dirs)
     {
-        itsModifiedDirs += dirs;
+        m_modifiedDirs += dirs;
     }
     bool isModified() const
     {
-        return !itsModifiedDirs.isEmpty();
+        return !m_modifiedDirs.isEmpty();
     }
     void clearModified()
     {
-        itsModifiedDirs.clear();
+        m_modifiedDirs.clear();
     }
     void configure(bool force = false);
     Flat flatten() const;
     const FamilyCont &fonts() const
     {
-        return itsFonts;
+        return m_fonts;
     }
     FamilyCont::ConstIterator addFont(const Family &fam)
     {
-        return itsFonts.insert(fam);
+        return m_fonts.insert(fam);
     }
     void removeFont(const Family &fam)
     {
-        itsFonts.remove(fam);
+        m_fonts.remove(fam);
     }
     void clearFonts()
     {
-        itsFonts.clear();
+        m_fonts.clear();
     }
 
 private:
-    bool itsIsSystem;
-    FamilyCont itsFonts;
-    CfgFile itsDisabledCfg;
-    QString itsLocation;
-    QSet<QString> itsModifiedDirs;
+    bool m_isSystem;
+    FamilyCont m_fonts;
+    CfgFile m_disabledCfg;
+    QString m_location;
+    QSet<QString> m_modifiedDirs;
 };
 
 inline Q_DECL_EXPORT uint qHash(const Folder::FlatFont &key)

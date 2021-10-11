@@ -37,15 +37,15 @@ CPrintDialog::CPrintDialog(QWidget *parent)
     QLabel *lbl = new QLabel(i18n("Select size to print font:"), page);
     lbl->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
     layout->addWidget(lbl, 0, 0);
-    itsSize = new QComboBox(page);
-    itsSize->insertItem(0, i18n("Waterfall"));
-    itsSize->insertItem(1, i18n("12pt"));
-    itsSize->insertItem(2, i18n("18pt"));
-    itsSize->insertItem(3, i18n("24pt"));
-    itsSize->insertItem(4, i18n("36pt"));
-    itsSize->insertItem(5, i18n("48pt"));
-    itsSize->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Maximum);
-    layout->addWidget(itsSize, 0, 1);
+    m_size = new QComboBox(page);
+    m_size->insertItem(0, i18n("Waterfall"));
+    m_size->insertItem(1, i18n("12pt"));
+    m_size->insertItem(2, i18n("18pt"));
+    m_size->insertItem(3, i18n("24pt"));
+    m_size->insertItem(4, i18n("36pt"));
+    m_size->insertItem(5, i18n("48pt"));
+    m_size->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Maximum);
+    layout->addWidget(m_size, 0, 1);
     layout->addItem(new QSpacerItem(2, 2), 2, 0);
 
     mainLayout->addWidget(page);
@@ -54,7 +54,7 @@ CPrintDialog::CPrintDialog(QWidget *parent)
 
 bool CPrintDialog::exec(int size)
 {
-    itsSize->setCurrentIndex(size);
+    m_size->setCurrentIndex(size);
     return QDialog::Accepted == QDialog::exec();
 }
 

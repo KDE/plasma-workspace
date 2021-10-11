@@ -17,8 +17,8 @@ class CInstaller
 {
 public:
     CInstaller(QWidget *p)
-        : itsParent(p)
-        , itsTempDir(nullptr)
+        : m_parent(p)
+        , m_tempDir(nullptr)
     {
     }
     ~CInstaller();
@@ -26,8 +26,8 @@ public:
     int install(const QSet<QUrl> &urls);
 
 private:
-    QWidget *itsParent;
-    QTemporaryDir *itsTempDir;
+    QWidget *m_parent;
+    QTemporaryDir *m_tempDir;
 };
 
 }

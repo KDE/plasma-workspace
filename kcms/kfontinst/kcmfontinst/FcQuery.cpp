@@ -30,28 +30,28 @@ void CFcQuery::run(const QString &query)
 {
     QStringList args;
 
-    itsFile = itsFont = QString();
-    itsBuffer = QByteArray();
+    m_file = m_font = QString();
+    m_buffer = QByteArray();
 
-    if (itsProc) {
-        itsProc->kill();
+    if (m_proc) {
+        m_proc->kill();
     } else {
-        itsProc = new QProcess(this);
+        m_proc = new QProcess(this);
     }
 
     args << "-v" << query;
 
-    connect(itsProc, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(procExited()));
-    connect(itsProc, &QProcess::readyReadStandardOutput, this, &CFcQuery::data);
+    connect(m_proc, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(procExited()));
+    connect(m_proc, &QProcess::readyReadStandardOutput, this, &CFcQuery::data);
 
-    itsProc->start("fc-match", args);
+    m_proc->start("fc-match", args);
 }
 
 void CFcQuery::procExited()
 {
     QString family;
     int weight(KFI_NULL_SETTING), slant(KFI_NULL_SETTING), width(KFI_NULL_SETTING);
-    QStringList results(QString::fromUtf8(itsBuffer, itsBuffer.length()).split(QLatin1Char('\n')));
+    QStringList results(QString::fromUtf8(m_buffer, m_buffer.length()).split(QLatin1Char('\n')));
 
     if (!results.isEmpty()) {
         QStringList::ConstIterator it(results.begin()), end(results.end());
@@ -64,7 +64,7 @@ void CFcQuery::procExited()
                 int endPos = line.indexOf("\"(s)");
 
                 if (-1 != endPos) {
-                    itsFile = line.mid(7, endPos - 7);
+                    m_file = line.mid(7, endPos - 7);
                 }
             } else if (0 == line.indexOf("family:")) // family: "Wibble"(s)
             {
@@ -84,7 +84,7 @@ void CFcQuery::procExited()
     }
 
     if (!family.isEmpty()) {
-        itsFont = FC::createName(family, weight, width, slant);
+        m_font = FC::createName(family, weight, width, slant);
     }
 
     emit finished();
@@ -92,7 +92,7 @@ void CFcQuery::procExited()
 
 void CFcQuery::data()
 {
-    itsBuffer += itsProc->readAllStandardOutput();
+    m_buffer += m_proc->readAllStandardOutput();
 }
 
 }

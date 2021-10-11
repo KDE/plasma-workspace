@@ -11,7 +11,7 @@ namespace KFI
 {
 CPreviewSelectAction::CPreviewSelectAction(QObject *parent, Mode mode)
     : KSelectAction(QIcon::fromTheme("character-set"), i18n("Preview Type"), parent)
-    , itsNumUnicodeBlocks(0)
+    , m_numUnicodeBlocks(0)
 {
     setMode(mode);
 
@@ -36,8 +36,8 @@ void CPreviewSelectAction::setMode(Mode mode)
     case Basic:
         break;
     case BlocksAndScripts:
-        for (itsNumUnicodeBlocks = 0; constUnicodeBlocks[itsNumUnicodeBlocks].blockName; ++itsNumUnicodeBlocks) {
-            items.append(i18n("Unicode Block: %1", i18n(constUnicodeBlocks[itsNumUnicodeBlocks].blockName)));
+        for (m_numUnicodeBlocks = 0; constUnicodeBlocks[m_numUnicodeBlocks].blockName; ++m_numUnicodeBlocks) {
+            items.append(i18n("Unicode Block: %1", i18n(constUnicodeBlocks[m_numUnicodeBlocks].blockName)));
         }
 
         for (int i = 0; constUnicodeScriptList[i]; ++i) {
@@ -62,10 +62,10 @@ void CPreviewSelectAction::selected(int index)
         ;
     } else if (1 == index) {
         list.append(CFcEngine::TRange());
-    } else if (index < itsNumUnicodeBlocks + 2) {
+    } else if (index < m_numUnicodeBlocks + 2) {
         list.append(CFcEngine::TRange(constUnicodeBlocks[index - 2].start, constUnicodeBlocks[index - 2].end));
     } else {
-        int script(index - (2 + itsNumUnicodeBlocks));
+        int script(index - (2 + m_numUnicodeBlocks));
 
         for (int i = 0; constUnicodeScripts[i].scriptIndex >= 0; ++i) {
             if (constUnicodeScripts[i].scriptIndex == script) {

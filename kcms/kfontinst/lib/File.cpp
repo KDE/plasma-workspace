@@ -25,23 +25,23 @@ File::File(const QDomElement &elem, bool disabled)
 
     if (!disabled || Misc::fExists(path)) // Only need to check instance if we are loading the disabled file...
     {
-        itsFoundry = elem.attribute(FOUNDRY_ATTR);
-        itsIndex = elem.hasAttribute(FACE_ATTR) ? elem.attribute(FACE_ATTR).toInt() : 0;
-        itsPath = path;
+        m_foundry = elem.attribute(FOUNDRY_ATTR);
+        m_index = elem.hasAttribute(FACE_ATTR) ? elem.attribute(FACE_ATTR).toInt() : 0;
+        m_path = path;
     }
 }
 
 QString File::toXml(bool disabled, QTextStream &s) const
 {
-    if (!disabled || Misc::isHidden(Misc::getFile(itsPath))) {
-        QString str(PATH_ATTR "=\"" + KFI::Misc::encodeText(KFI::Misc::contractHome(itsPath), s) + "\"");
+    if (!disabled || Misc::isHidden(Misc::getFile(m_path))) {
+        QString str(PATH_ATTR "=\"" + KFI::Misc::encodeText(KFI::Misc::contractHome(m_path), s) + "\"");
 
-        if (!itsFoundry.isEmpty() && QString::fromLatin1("unknown") != itsFoundry) {
-            str += " " FOUNDRY_ATTR "=\"" + KFI::Misc::encodeText(itsFoundry, s) + "\"";
+        if (!m_foundry.isEmpty() && QString::fromLatin1("unknown") != m_foundry) {
+            str += " " FOUNDRY_ATTR "=\"" + KFI::Misc::encodeText(m_foundry, s) + "\"";
         }
 
-        if (itsIndex > 0) {
-            str += " " FACE_ATTR "=\"" + QString::number(itsIndex) + "\"";
+        if (m_index > 0) {
+            str += " " FACE_ATTR "=\"" + QString::number(m_index) + "\"";
         }
 
         return str;

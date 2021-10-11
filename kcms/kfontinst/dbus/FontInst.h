@@ -117,8 +117,8 @@ private:
     static void emergencySave(int sig);
 
 private:
-    QTimer *itsConnectionsTimer, *itsFontListTimer;
-    QSet<int> itsConnections;
+    QTimer *m_connectionsTimer, *m_fontListTimer;
+    QSet<int> m_connections;
 };
 
 }

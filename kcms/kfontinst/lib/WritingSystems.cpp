@@ -122,7 +122,7 @@ qulonglong WritingSystems::get(const QStringList &langs) const
     QStringList::ConstIterator it(langs.begin()), end(langs.end());
 
     for (; it != end; ++it) {
-        ws |= itsMap[*it];
+        ws |= m_map[*it];
     }
 
     return ws;
@@ -130,7 +130,7 @@ qulonglong WritingSystems::get(const QStringList &langs) const
 
 QStringList WritingSystems::getLangs(qulonglong ws) const
 {
-    QMap<QString, qulonglong>::ConstIterator wit(itsMap.begin()), wend(itsMap.end());
+    QMap<QString, qulonglong>::ConstIterator wit(m_map.begin()), wend(m_map.end());
     QStringList systems;
 
     for (; wit != wend; ++wit) {
@@ -145,7 +145,7 @@ WritingSystems::WritingSystems()
 {
     for (int i = 0; QFontDatabase::Any != constLanguageForWritingSystem[i].ws; ++i) {
         if (constLanguageForWritingSystem[i].lang) {
-            itsMap[(const char *)constLanguageForWritingSystem[i].lang] = ((qulonglong)1) << constLanguageForWritingSystem[i].ws;
+            m_map[(const char *)constLanguageForWritingSystem[i].lang] = ((qulonglong)1) << constLanguageForWritingSystem[i].ws;
         }
     }
 }

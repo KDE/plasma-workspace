@@ -64,7 +64,7 @@ public:
     void getDuplicateFonts(TFontMap &map);
     bool wasTerminated() const
     {
-        return itsTerminated;
+        return m_terminated;
     }
 
 Q_SIGNALS:
@@ -76,8 +76,8 @@ private:
     void fileDuplicates(const QString &folder, const QSet<TFile> &files);
 
 private:
-    bool itsTerminated;
-    TFontMap itsMap;
+    bool m_terminated;
+    TFontMap m_map;
 };
 
 class CFontFileListView : public QTreeWidget
@@ -90,23 +90,23 @@ public:
     public:
         StyleItem(CFontFileListView *parent, const QStringList &details, const QString &fam, quint32 val)
             : QTreeWidgetItem(parent, details)
-            , itsFamily(fam)
-            , itsValue(val)
+            , m_family(fam)
+            , m_value(val)
         {
         }
 
         const QString &family() const
         {
-            return itsFamily;
+            return m_family;
         }
         quint32 value() const
         {
-            return itsValue;
+            return m_value;
         }
 
     private:
-        QString itsFamily;
-        quint32 itsValue;
+        QString m_family;
+        quint32 m_value;
     };
 
     CFontFileListView(QWidget *parent);
@@ -136,8 +136,8 @@ private:
     void checkFiles();
 
 private:
-    QMenu *itsMenu;
-    QAction *itsMarkAct, *itsUnMarkAct;
+    QMenu *m_menu;
+    QAction *m_markAct, *m_unMarkAct;
 };
 
 class CDuplicatesDialog : public QDialog
@@ -150,7 +150,7 @@ public:
     int exec() override;
     const CFontList *fontList() const
     {
-        return itsFontList;
+        return m_fontList;
     }
 
 private Q_SLOTS:
@@ -160,12 +160,12 @@ private Q_SLOTS:
     void enableButtonOk(bool);
 
 private:
-    QDialogButtonBox *itsButtonBox;
-    CActionLabel *itsActionLabel;
-    CFontFileList *itsFontFileList;
-    QLabel *itsLabel;
-    CFontFileListView *itsView;
-    CFontList *itsFontList;
+    QDialogButtonBox *m_buttonBox;
+    CActionLabel *m_actionLabel;
+    CFontFileList *m_fontFileList;
+    QLabel *m_label;
+    CFontFileListView *m_view;
+    CFontList *m_fontList;
 };
 
 }

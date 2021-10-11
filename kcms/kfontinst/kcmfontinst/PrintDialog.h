@@ -18,11 +18,11 @@ public:
     bool exec(int size);
     int chosenSize()
     {
-        return itsSize->currentIndex();
+        return m_size->currentIndex();
     }
 
 private:
-    QComboBox *itsSize;
+    QComboBox *m_size;
 };
 
 }

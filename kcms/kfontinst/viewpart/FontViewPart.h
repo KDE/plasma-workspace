@@ -58,21 +58,21 @@ private:
     void checkInstallable();
 
 private:
-    CFontPreview *itsPreview;
-    QPushButton *itsInstallButton;
-    QWidget *itsFaceWidget;
-    QFrame *itsFrame;
-    QLabel *itsFaceLabel;
-    QSpinBox *itsFaceSelector;
-    QAction *itsChangeTextAction;
-    int itsFace;
-    KSharedConfigPtr itsConfig;
-    BrowserExtension *itsExtension;
-    QProcess *itsProc;
-    QTemporaryDir *itsTempDir;
-    Misc::TFont itsFontDetails;
-    FontInstInterface *itsInterface;
-    bool itsOpening;
+    CFontPreview *m_preview;
+    QPushButton *m_installButton;
+    QWidget *m_faceWidget;
+    QFrame *m_frame;
+    QLabel *m_faceLabel;
+    QSpinBox *m_faceSelector;
+    QAction *m_changeTextAction;
+    int m_face;
+    KSharedConfigPtr m_config;
+    BrowserExtension *m_extension;
+    QProcess *m_proc;
+    QTemporaryDir *m_tempDir;
+    Misc::TFont m_fontDetails;
+    FontInstInterface *m_interface;
+    bool m_opening;
 };
 
 class BrowserExtension : public KParts::BrowserExtension

@@ -105,17 +105,17 @@ static QString toStr(EUnicodeCategory cat)
 
 CCharTip::CCharTip(CFontPreview *parent)
     : QFrame(nullptr, Qt::ToolTip | Qt::WindowStaysOnTopHint | Qt::X11BypassWindowManagerHint)
-    , itsParent(parent)
+    , m_parent(parent)
 {
-    itsPixmapLabel = new QLabel(this);
-    itsLabel = new QLabel(this);
-    itsTimer = new QTimer(this);
+    m_pixmapLabel = new QLabel(this);
+    m_label = new QLabel(this);
+    m_timer = new QTimer(this);
 
     QBoxLayout *layout = new QBoxLayout(QBoxLayout::LeftToRight, this);
     layout->setContentsMargins(8, 8, 8, 8);
     layout->setSpacing(0);
-    layout->addWidget(itsPixmapLabel);
-    layout->addWidget(itsLabel);
+    layout->addWidget(m_pixmapLabel);
+    layout->addWidget(m_label);
 
     setPalette(QToolTip::palette());
     setFrameShape(QFrame::Box);
@@ -131,29 +131,28 @@ void CCharTip::setItem(const CFcEngine::TChar &ch)
 {
     hideTip();
 
-    itsItem = ch;
-    itsTimer->disconnect(this);
-    connect(itsTimer, &QTimer::timeout, this, &CCharTip::showTip);
-    itsTimer->setSingleShot(true);
-    itsTimer->start(300);
+    m_item = ch;
+    m_timer->disconnect(this);
+    connect(m_timer, &QTimer::timeout, this, &CCharTip::showTip);
+    m_timer->setSingleShot(true);
+    m_timer->start(300);
 }
 
 void CCharTip::showTip()
 {
-    if (!itsParent->underMouse()) {
+    if (!m_parent->underMouse()) {
         return;
     }
 
     static const int constPixSize = 96;
 
-    EUnicodeCategory cat(getCategory(itsItem.ucs4));
+    EUnicodeCategory cat(getCategory(m_item.ucs4));
     QString details("<table>");
 
     details += "<tr><td align=\"right\"><b>" + i18n("Category") + "&nbsp;</b></td><td>" + toStr(cat) + "</td></tr>";
-    details +=
-        "<tr><td align=\"right\"><b>" + i18n("UCS-4") + "&nbsp;</b></td><td>" + "U+" + QStringLiteral("%1").arg(itsItem.ucs4, 4, 16) + "&nbsp;</td></tr>";
+    details += "<tr><td align=\"right\"><b>" + i18n("UCS-4") + "&nbsp;</b></td><td>" + "U+" + QStringLiteral("%1").arg(m_item.ucs4, 4, 16) + "&nbsp;</td></tr>";
 
-    QString str(QString::fromUcs4(&(itsItem.ucs4), 1));
+    QString str(QString::fromUcs4(&(m_item.ucs4), 1));
     details += "<tr><td align=\"right\"><b>" + i18n("UTF-16") + "&nbsp;</b></td><td>";
 
     const ushort *utf16(str.utf16());
@@ -179,42 +178,42 @@ void CCharTip::showTip()
 
     // Note: the "<b></b> below is just to stop Qt converting the xml entry into
     // a character!
-    if ((0x0001 <= itsItem.ucs4 && itsItem.ucs4 <= 0xD7FF) || (0xE000 <= itsItem.ucs4 && itsItem.ucs4 <= 0xFFFD)
-        || (0x10000 <= itsItem.ucs4 && itsItem.ucs4 <= 0x10FFFF)) {
+    if ((0x0001 <= m_item.ucs4 && m_item.ucs4 <= 0xD7FF) || (0xE000 <= m_item.ucs4 && m_item.ucs4 <= 0xFFFD)
+        || (0x10000 <= m_item.ucs4 && m_item.ucs4 <= 0x10FFFF)) {
         details +=
-            "<tr><td align=\"right\"><b>" + i18n("XML Decimal Entity") + "&nbsp;</b></td><td>" + "&#<b></b>" + QString::number(itsItem.ucs4) + ";</td></tr>";
+            "<tr><td align=\"right\"><b>" + i18n("XML Decimal Entity") + "&nbsp;</b></td><td>" + "&#<b></b>" + QString::number(m_item.ucs4) + ";</td></tr>";
     }
 
     details += "</table>";
-    itsLabel->setText(details);
+    m_label->setText(details);
 
     QList<CFcEngine::TRange> range;
-    range.append(CFcEngine::TRange(itsItem.ucs4, 0));
+    range.append(CFcEngine::TRange(m_item.ucs4, 0));
 
     QColor bgnd(Qt::white);
     bgnd.setAlpha(0);
 
-    QImage img = itsParent->engine()->draw(itsParent->itsFontName,
-                                           itsParent->itsStyleInfo,
-                                           itsParent->itsCurrentFace - 1,
-                                           palette().text().color(),
-                                           bgnd,
-                                           constPixSize,
-                                           constPixSize,
-                                           false,
-                                           range,
-                                           nullptr);
+    QImage img = m_parent->engine()->draw(m_parent->m_fontName,
+                                          m_parent->m_styleInfo,
+                                          m_parent->m_currentFace - 1,
+                                          palette().text().color(),
+                                          bgnd,
+                                          constPixSize,
+                                          constPixSize,
+                                          false,
+                                          range,
+                                          nullptr);
 
     if (!img.isNull()) {
-        itsPixmapLabel->setPixmap(QPixmap::fromImage(img));
+        m_pixmapLabel->setPixmap(QPixmap::fromImage(img));
     } else {
-        itsPixmapLabel->setPixmap(QPixmap());
+        m_pixmapLabel->setPixmap(QPixmap());
     }
 
-    itsTimer->disconnect(this);
-    connect(itsTimer, &QTimer::timeout, this, &CCharTip::hideTip);
-    itsTimer->setSingleShot(true);
-    itsTimer->start(15000);
+    m_timer->disconnect(this);
+    connect(m_timer, &QTimer::timeout, this, &CCharTip::hideTip);
+    m_timer->setSingleShot(true);
+    m_timer->start(15000);
 
     qApp->installEventFilter(this);
     reposition();
@@ -223,16 +222,16 @@ void CCharTip::showTip()
 
 void CCharTip::hideTip()
 {
-    itsTimer->stop();
+    m_timer->stop();
     qApp->removeEventFilter(this);
     hide();
 }
 
 void CCharTip::reposition()
 {
-    QRect rect(itsItem);
+    QRect rect(m_item);
 
-    rect.moveTopRight(itsParent->mapToGlobal(rect.topRight()));
+    rect.moveTopRight(m_parent->mapToGlobal(rect.topRight()));
 
     QPoint pos(rect.center());
     QRect desk(QApplication::screenAt(rect.center())->geometry());

@@ -20,41 +20,41 @@ class KFONTINST_EXPORT Family
 {
 public:
     Family(const QString &n = QString())
-        : itsName(n)
+        : m_name(n)
     {
     }
     Family(const QDomElement &elem, bool loadStyles);
 
     bool operator==(const Family &o) const
     {
-        return itsName == o.itsName;
+        return m_name == o.m_name;
     }
 
     void toXml(bool disabled, QTextStream &s) const;
     StyleCont::ConstIterator add(const Style &s) const
     {
-        return itsStyles.insert(s);
+        return m_styles.insert(s);
     }
     void remove(const Style &s) const
     {
-        itsStyles.remove(s);
+        m_styles.remove(s);
     }
     void setStyles(const StyleCont &s) const
     {
-        itsStyles = s;
+        m_styles = s;
     }
     const QString &name() const
     {
-        return itsName;
+        return m_name;
     }
     const StyleCont styles() const
     {
-        return itsStyles;
+        return m_styles;
     }
 
 private:
-    QString itsName;
-    mutable StyleCont itsStyles;
+    QString m_name;
+    mutable StyleCont m_styles;
 };
 
 typedef QSet<Family> FamilyCont;

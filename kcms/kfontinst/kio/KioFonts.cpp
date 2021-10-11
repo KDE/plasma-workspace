@@ -144,15 +144,15 @@ static QString removeKnownExtension(const QUrl &url)
 
 CKioFonts::CKioFonts(const QByteArray &pool, const QByteArray &app)
     : KIO::SlaveBase(KFI_KIO_FONTS_PROTOCOL, pool, app)
-    , itsInterface(new FontInstInterface())
-    , itsTempDir(nullptr)
+    , m_interface(new FontInstInterface())
+    , m_tempDir(nullptr)
 {
 }
 
 CKioFonts::~CKioFonts()
 {
-    delete itsInterface;
-    delete itsTempDir;
+    delete m_interface;
+    delete m_tempDir;
 }
 
 void CKioFonts::listDir(const QUrl &url)
@@ -211,12 +211,12 @@ void CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobFlags /*flags*
                    "Please extract %1, and install the components individually.",
                    url.toDisplayString()));
     } else {
-        if (!itsTempDir) {
-            itsTempDir = new QTemporaryDir(QDir::tempPath() + QString::fromLatin1("/kio_fonts_") + QString::number(getpid()));
-            itsTempDir->setAutoRemove(true);
+        if (!m_tempDir) {
+            m_tempDir = new QTemporaryDir(QDir::tempPath() + QString::fromLatin1("/kio_fonts_") + QString::number(getpid()));
+            m_tempDir->setAutoRemove(true);
         }
 
-        QString tempFile(itsTempDir->filePath(url.fileName()));
+        QString tempFile(m_tempDir->filePath(url.fileName()));
         QFile dest(tempFile);
 
         if (dest.open(QIODevice::WriteOnly)) {
@@ -244,7 +244,7 @@ void CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobFlags /*flags*
                 ::exit(255);
             }
 
-            handleResp(itsInterface->install(tempFile, Misc::root() || FOLDER_SYS == folder), url.fileName(), tempFile, FOLDER_SYS == folder);
+            handleResp(m_interface->install(tempFile, Misc::root() || FOLDER_SYS == folder), url.fileName(), tempFile, FOLDER_SYS == folder);
             QFile::remove(tempFile);
         } else {
             error(EACCES == errno ? KIO::ERR_WRITE_ACCESS_DENIED : KIO::ERR_CANNOT_OPEN_FOR_WRITING, dest.fileName());
@@ -455,7 +455,7 @@ void CKioFonts::del(const QUrl &url, bool isFile)
     } else if (!Misc::root() && FOLDER_ROOT == folder) {
         error(KIO::ERR_SLAVE_DEFINED, i18n("Can only remove fonts from either \"%1\" or \"%2\".", i18n(KFI_KIO_FONTS_USER), i18n(KFI_KIO_FONTS_SYS)));
     } else if (!name.isEmpty()) {
-        handleResp(itsInterface->uninstall(name, Misc::root() || FOLDER_SYS == folder), name);
+        handleResp(m_interface->uninstall(name, Misc::root() || FOLDER_SYS == folder), name);
     } else {
         error(KIO::ERR_DOES_NOT_EXIST, url.toDisplayString());
     }
@@ -503,7 +503,7 @@ void CKioFonts::special(const QByteArray &a)
         error(KIO::ERR_UNSUPPORTED_ACTION, i18n("No special methods supported."));
     } else {
         setTimeoutSpecialCommand(-1);
-        itsInterface->reconfigure();
+        m_interface->reconfigure();
     }
 }
 
@@ -512,7 +512,7 @@ int CKioFonts::listFolder(KIO::UDSEntry &entry, EFolder folder)
     qCDebug(KCM_KFONTINST_KIO) << folder;
 
     int styleCount(0);
-    KFI::Families families(itsInterface->list(FOLDER_SYS == folder));
+    KFI::Families families(m_interface->list(FOLDER_SYS == folder));
     FamilyCont::ConstIterator family(families.items.begin()), end(families.items.end());
 
     qCDebug(KCM_KFONTINST_KIO) << "Num families:" << families.items.count();
@@ -533,28 +533,28 @@ int CKioFonts::listFolder(KIO::UDSEntry &entry, EFolder folder)
 
 QString CKioFonts::getUserName(uid_t uid)
 {
-    if (!itsUserCache.contains(uid)) {
+    if (!m_userCache.contains(uid)) {
         struct passwd *user = getpwuid(uid);
         if (user) {
-            itsUserCache.insert(uid, QString::fromLatin1(user->pw_name));
+            m_userCache.insert(uid, QString::fromLatin1(user->pw_name));
         } else {
             return QString::number(uid);
         }
     }
-    return itsUserCache[uid];
+    return m_userCache[uid];
 }
 
 QString CKioFonts::getGroupName(gid_t gid)
 {
-    if (!itsGroupCache.contains(gid)) {
+    if (!m_groupCache.contains(gid)) {
         struct group *grp = getgrgid(gid);
         if (grp) {
-            itsGroupCache.insert(gid, QString::fromLatin1(grp->gr_name));
+            m_groupCache.insert(gid, QString::fromLatin1(grp->gr_name));
         } else {
             return QString::number(gid);
         }
     }
-    return itsGroupCache[gid];
+    return m_groupCache[gid];
 }
 
 bool CKioFonts::createStatEntry(KIO::UDSEntry &entry, const QUrl &url, EFolder folder)
@@ -696,7 +696,7 @@ Family CKioFonts::getFont(const QUrl &url, EFolder folder)
 
     qCDebug(KCM_KFONTINST_KIO) << url << name;
 
-    return itsInterface->statFont(name, FOLDER_SYS == folder);
+    return m_interface->statFont(name, FOLDER_SYS == folder);
 }
 
 void CKioFonts::handleResp(int resp, const QString &file, const QString &tempFile, bool destIsSystem)
@@ -721,7 +721,7 @@ void CKioFonts::handleResp(int resp, const QString &file, const QString &tempFil
         error(KIO::ERR_SLAVE_DEFINED, i18n("Could not remove all files associated with %1", file));
         break;
     case KIO::ERR_FILE_ALREADY_EXIST: {
-        QString name(Misc::modifyName(file)), destFolder(Misc::getDestFolder(itsInterface->folderName(destIsSystem), name));
+        QString name(Misc::modifyName(file)), destFolder(Misc::getDestFolder(m_interface->folderName(destIsSystem), name));
         error(KIO::ERR_SLAVE_DEFINED, i18n("<i>%1</i> already exists.", destFolder + name));
         break;
     }

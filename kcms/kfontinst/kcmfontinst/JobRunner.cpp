@@ -120,12 +120,12 @@ static void addIcon(QGridLayout *layout, QFrame *page, const char *iconName, int
 
 CJobRunner::CJobRunner(QWidget *parent, int xid)
     : QDialog(parent)
-    , itsIt(itsUrls.end())
-    , itsEnd(itsIt)
-    , itsAutoSkip(false)
-    , itsCancelClicked(false)
-    , itsModified(false)
-    , itsTempDir(nullptr)
+    , m_it(m_urls.end())
+    , m_end(m_it)
+    , m_autoSkip(false)
+    , m_cancelClicked(false)
+    , m_modified(false)
+    , m_tempDir(nullptr)
 {
     setModal(true);
 
@@ -133,68 +133,68 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
         XSetTransientForHint(QX11Info::display(), winId(), xid);
     }
 
-    itsButtonBox = new QDialogButtonBox;
-    connect(itsButtonBox, &QDialogButtonBox::clicked, this, &CJobRunner::slotButtonClicked);
+    m_buttonBox = new QDialogButtonBox;
+    connect(m_buttonBox, &QDialogButtonBox::clicked, this, &CJobRunner::slotButtonClicked);
 
-    itsSkipButton = new QPushButton(i18n("Skip"));
-    itsButtonBox->addButton(itsSkipButton, QDialogButtonBox::ActionRole);
-    itsSkipButton->hide();
-    itsAutoSkipButton = new QPushButton(i18n("AutoSkip"));
-    itsButtonBox->addButton(itsAutoSkipButton, QDialogButtonBox::ActionRole);
-    itsAutoSkipButton->hide();
+    m_skipButton = new QPushButton(i18n("Skip"));
+    m_buttonBox->addButton(m_skipButton, QDialogButtonBox::ActionRole);
+    m_skipButton->hide();
+    m_autoSkipButton = new QPushButton(i18n("AutoSkip"));
+    m_buttonBox->addButton(m_autoSkipButton, QDialogButtonBox::ActionRole);
+    m_autoSkipButton->hide();
 
-    itsStack = new QStackedWidget(this);
+    m_stack = new QStackedWidget(this);
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
-    mainLayout->addWidget(itsStack);
-    mainLayout->addWidget(itsButtonBox);
+    mainLayout->addWidget(m_stack);
+    mainLayout->addWidget(m_buttonBox);
 
     QStyleOption option;
     option.initFrom(this);
     int iconSize = style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, this);
 
-    QFrame *page = new QFrame(itsStack);
+    QFrame *page = new QFrame(m_stack);
     QGridLayout *layout = new QGridLayout(page);
-    itsStatusLabel = new QLabel(page);
-    itsProgress = new QProgressBar(page);
-    //     itsStatusLabel->setWordWrap(true);
-    layout->addWidget(itsActionLabel = new CActionLabel(this), 0, 0, 2, 1);
-    layout->addWidget(itsStatusLabel, 0, 1);
-    layout->addWidget(itsProgress, 1, 1);
+    m_statusLabel = new QLabel(page);
+    m_progress = new QProgressBar(page);
+    //     m_statusLabel->setWordWrap(true);
+    layout->addWidget(m_actionLabel = new CActionLabel(this), 0, 0, 2, 1);
+    layout->addWidget(m_statusLabel, 0, 1);
+    layout->addWidget(m_progress, 1, 1);
     layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 2, 0);
-    itsStack->insertWidget(PAGE_PROGRESS, page);
+    m_stack->insertWidget(PAGE_PROGRESS, page);
 
-    page = new QFrame(itsStack);
+    page = new QFrame(m_stack);
     layout = new QGridLayout(page);
-    itsSkipLabel = new QLabel(page);
-    itsSkipLabel->setWordWrap(true);
+    m_skipLabel = new QLabel(page);
+    m_skipLabel->setWordWrap(true);
     addIcon(layout, page, "dialog-error", iconSize);
-    layout->addWidget(itsSkipLabel, 0, 1);
+    layout->addWidget(m_skipLabel, 0, 1);
     layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 1, 0);
-    itsStack->insertWidget(PAGE_SKIP, page);
+    m_stack->insertWidget(PAGE_SKIP, page);
 
-    page = new QFrame(itsStack);
+    page = new QFrame(m_stack);
     layout = new QGridLayout(page);
-    itsErrorLabel = new QLabel(page);
-    itsErrorLabel->setWordWrap(true);
+    m_errorLabel = new QLabel(page);
+    m_errorLabel->setWordWrap(true);
     addIcon(layout, page, "dialog-error", iconSize);
-    layout->addWidget(itsErrorLabel, 0, 1);
+    layout->addWidget(m_errorLabel, 0, 1);
     layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 1, 0);
-    itsStack->insertWidget(PAGE_ERROR, page);
+    m_stack->insertWidget(PAGE_ERROR, page);
 
-    page = new QFrame(itsStack);
+    page = new QFrame(m_stack);
     layout = new QGridLayout(page);
     QLabel *cancelLabel = new QLabel(i18n("<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"), page);
     cancelLabel->setWordWrap(true);
     addIcon(layout, page, "dialog-warning", iconSize);
     layout->addWidget(cancelLabel, 0, 1);
     layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 1, 0);
-    itsStack->insertWidget(PAGE_CANCEL, page);
+    m_stack->insertWidget(PAGE_CANCEL, page);
 
     if (KSharedConfig::openConfig(KFI_UI_CFG_FILE)->group(CFG_GROUP).readEntry(CFG_DONT_SHOW_FINISHED_MSG, false)) {
-        itsDontShowFinishedMsg = nullptr;
+        m_dontShowFinishedMsg = nullptr;
     } else {
-        page = new QFrame(itsStack);
+        page = new QFrame(m_stack);
         layout = new QGridLayout(page);
         QLabel *finishedLabel = new QLabel(i18n("<h3>Finished</h3>"
                                                 "<p>Please note that any open applications will need to be "
@@ -204,12 +204,12 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
         addIcon(layout, page, "dialog-information", iconSize);
         layout->addWidget(finishedLabel, 0, 1);
         layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 1, 0);
-        itsDontShowFinishedMsg = new QCheckBox(i18n("Do not show this message again"), page);
-        itsDontShowFinishedMsg->setChecked(false);
+        m_dontShowFinishedMsg = new QCheckBox(i18n("Do not show this message again"), page);
+        m_dontShowFinishedMsg->setChecked(false);
         layout->addItem(new QSpacerItem(0, layout->spacing(), QSizePolicy::Fixed, QSizePolicy::Fixed), 2, 0);
-        layout->addWidget(itsDontShowFinishedMsg, 3, 1);
+        layout->addWidget(m_dontShowFinishedMsg, 3, 1);
         layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 4, 0);
-        itsStack->insertWidget(PAGE_COMPLETE, page);
+        m_stack->insertWidget(PAGE_COMPLETE, page);
     }
 
     QDBusServiceWatcher *watcher = new QDBusServiceWatcher(QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()),
@@ -224,7 +224,7 @@ CJobRunner::CJobRunner(QWidget *parent, int xid)
 
 CJobRunner::~CJobRunner()
 {
-    delete itsTempDir;
+    delete m_tempDir;
 }
 
 void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmAndPfm, QWidget *widget)
@@ -310,7 +310,7 @@ static void addEnableActions(CJobRunner::ItemList &urls)
 
 int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
 {
-    itsAutoSkip = itsCancelClicked = itsModified = false;
+    m_autoSkip = m_cancelClicked = m_modified = false;
 
     switch (cmd) {
     case CMD_INSTALL:
@@ -327,7 +327,7 @@ int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
         break;
     case CMD_UPDATE:
         setWindowTitle(i18n("Updating"));
-        itsModified = true;
+        m_modified = true;
         break;
     case CMD_REMOVE_FILE:
         setWindowTitle(i18n("Removing"));
@@ -337,47 +337,47 @@ int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
         setWindowTitle(i18n("Disabling"));
     }
 
-    itsDestIsSystem = destIsSystem;
-    itsUrls = urls;
+    m_destIsSystem = destIsSystem;
+    m_urls = urls;
     if (CMD_INSTALL == cmd) {
-        std::sort(itsUrls.begin(), itsUrls.end()); // Sort list of fonts so that we have type1 fonts followed by their metrics...
+        std::sort(m_urls.begin(), m_urls.end()); // Sort list of fonts so that we have type1 fonts followed by their metrics...
     } else if (CMD_MOVE == cmd) {
-        addEnableActions(itsUrls);
+        addEnableActions(m_urls);
     }
-    itsIt = itsUrls.constBegin();
-    itsEnd = itsUrls.constEnd();
-    itsPrev = itsEnd;
-    itsProgress->setValue(0);
-    itsProgress->setRange(0, itsUrls.count() + 1);
-    itsProgress->show();
-    itsCmd = cmd;
-    itsCurrentFile = QString();
-    itsStatusLabel->setText(QString());
+    m_it = m_urls.constBegin();
+    m_end = m_urls.constEnd();
+    m_prev = m_end;
+    m_progress->setValue(0);
+    m_progress->setRange(0, m_urls.count() + 1);
+    m_progress->show();
+    m_cmd = cmd;
+    m_currentFile = QString();
+    m_statusLabel->setText(QString());
     setPage(PAGE_PROGRESS);
     QTimer::singleShot(0, this, &CJobRunner::doNext);
     QTimer::singleShot(constInterfaceCheck, this, &CJobRunner::checkInterface);
-    itsActionLabel->startAnimation();
+    m_actionLabel->startAnimation();
     int rv = QDialog::exec();
-    if (itsTempDir) {
-        delete itsTempDir;
-        itsTempDir = nullptr;
+    if (m_tempDir) {
+        delete m_tempDir;
+        m_tempDir = nullptr;
     }
     return rv;
 }
 
 void CJobRunner::doNext()
 {
-    if (itsIt == itsEnd /* || CMD_UPDATE==itsCmd*/) {
-        if (itsModified) {
+    if (m_it == m_end /* || CMD_UPDATE==m_cmd*/) {
+        if (m_modified) {
             // Force reconfig if command was already set to update...
-            dbus()->reconfigure(getpid(), CMD_UPDATE == itsCmd);
-            itsCmd = CMD_UPDATE;
-            itsStatusLabel->setText(i18n("Updating font configuration. Please wait…"));
-            itsProgress->setValue(itsProgress->maximum());
+            dbus()->reconfigure(getpid(), CMD_UPDATE == m_cmd);
+            m_cmd = CMD_UPDATE;
+            m_statusLabel->setText(i18n("Updating font configuration. Please wait…"));
+            m_progress->setValue(m_progress->maximum());
             emit configuring();
         } else {
-            itsActionLabel->stopAnimation();
-            if (PAGE_ERROR != itsStack->currentIndex()) {
+            m_actionLabel->stopAnimation();
+            if (PAGE_ERROR != m_stack->currentIndex()) {
                 reject();
             }
         }
@@ -385,77 +385,77 @@ void CJobRunner::doNext()
         Misc::TFont font;
         bool system;
 
-        switch (itsCmd) {
+        switch (m_cmd) {
         case CMD_INSTALL: {
-            itsCurrentFile = fileName((*itsIt));
+            m_currentFile = fileName((*m_it));
 
-            if (itsCurrentFile.isEmpty()) { // Failed to download...
+            if (m_currentFile.isEmpty()) { // Failed to download...
                 dbusStatus(getpid(), constDownloadFailed);
             } else {
                 // Create AFM if this is a PFM, and the previous was not the AFM for this font...
                 bool createAfm =
-                    Item::TYPE1_PFM == (*itsIt).type && (itsPrev == itsEnd || (*itsIt).fileName != (*itsPrev).fileName || Item::TYPE1_AFM != (*itsPrev).type);
+                    Item::TYPE1_PFM == (*m_it).type && (m_prev == m_end || (*m_it).fileName != (*m_prev).fileName || Item::TYPE1_AFM != (*m_prev).type);
 
-                dbus()->install(itsCurrentFile, createAfm, itsDestIsSystem, getpid(), false);
+                dbus()->install(m_currentFile, createAfm, m_destIsSystem, getpid(), false);
             }
             break;
         }
         case CMD_DELETE:
-            decode(*itsIt, font, system);
+            decode(*m_it, font, system);
             dbus()->uninstall(font.family, font.styleInfo, system, getpid(), false);
             break;
         case CMD_ENABLE:
-            decode(*itsIt, font, system);
+            decode(*m_it, font, system);
             dbus()->enable(font.family, font.styleInfo, system, getpid(), false);
             break;
         case CMD_DISABLE:
-            decode(*itsIt, font, system);
+            decode(*m_it, font, system);
             dbus()->disable(font.family, font.styleInfo, system, getpid(), false);
             break;
         case CMD_MOVE:
-            decode(*itsIt, font, system);
+            decode(*m_it, font, system);
             // To 'Move' a disabled font, we first need to enable it. To accomplish this, JobRunner creates a 'fake' entry
             // with the filename "--"
-            if ((*itsIt).fileName == QLatin1String("--")) {
+            if ((*m_it).fileName == QLatin1String("--")) {
                 setWindowTitle(i18n("Enabling"));
                 dbus()->enable(font.family, font.styleInfo, system, getpid(), false);
             } else {
-                if (itsPrev != itsEnd && (*itsPrev).fileName == QLatin1String("--")) {
+                if (m_prev != m_end && (*m_prev).fileName == QLatin1String("--")) {
                     setWindowTitle(i18n("Moving"));
                 }
-                dbus()->move(font.family, font.styleInfo, itsDestIsSystem, getpid(), false);
+                dbus()->move(font.family, font.styleInfo, m_destIsSystem, getpid(), false);
             }
             break;
         case CMD_REMOVE_FILE:
-            decode(*itsIt, font, system);
-            dbus()->removeFile(font.family, font.styleInfo, (*itsIt).fileName, system, getpid(), false);
+            decode(*m_it, font, system);
+            dbus()->removeFile(font.family, font.styleInfo, (*m_it).fileName, system, getpid(), false);
             break;
         default:
             break;
         }
-        itsStatusLabel->setText(CMD_INSTALL == itsCmd ? (*itsIt).url() : FC::createName(FC::decode(*itsIt)));
-        itsProgress->setValue(itsProgress->value() + 1);
+        m_statusLabel->setText(CMD_INSTALL == m_cmd ? (*m_it).url() : FC::createName(FC::decode(*m_it)));
+        m_progress->setValue(m_progress->value() + 1);
 
         // Keep copy of this iterator - so that can check whether AFM should be created.
-        itsPrev = itsIt;
+        m_prev = m_it;
     }
 }
 
 void CJobRunner::checkInterface()
 {
-    if (itsIt == itsUrls.constBegin() && !FontInst::isStarted(dbus())) {
+    if (m_it == m_urls.constBegin() && !FontInst::isStarted(dbus())) {
         setPage(PAGE_ERROR, i18n("Unable to start backend."));
-        itsActionLabel->stopAnimation();
-        itsIt = itsEnd;
+        m_actionLabel->stopAnimation();
+        m_it = m_end;
     }
 }
 
 void CJobRunner::dbusServiceOwnerChanged(const QString &name, const QString &from, const QString &to)
 {
-    if (to.isEmpty() && !from.isEmpty() && name == QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()) && itsIt != itsEnd) {
+    if (to.isEmpty() && !from.isEmpty() && name == QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()) && m_it != m_end) {
         setPage(PAGE_ERROR, i18n("Backend died, but has been restarted. Please try again."));
-        itsActionLabel->stopAnimation();
-        itsIt = itsEnd;
+        m_actionLabel->stopAnimation();
+        m_it = m_end;
     }
 }
 
@@ -465,55 +465,55 @@ void CJobRunner::dbusStatus(int pid, int status)
         return;
     }
 
-    if (CMD_UPDATE == itsCmd) {
+    if (CMD_UPDATE == m_cmd) {
         setPage(PAGE_COMPLETE);
         return;
     }
 
-    itsLastDBusStatus = status;
+    m_lastDBusStatus = status;
 
-    if (itsCancelClicked) {
-        itsActionLabel->stopAnimation();
+    if (m_cancelClicked) {
+        m_actionLabel->stopAnimation();
         setPage(PAGE_CANCEL);
         return;
         /*
-        if(RESP_CANCEL==itsResponse)
-            itsIt=itsEnd;
-        itsCancelClicked=false;
+        if(RESP_CANCEL==m_response)
+            m_it=m_end;
+        m_cancelClicked=false;
         setPage(PAGE_PROGRESS);
-        itsActionLabel->startAnimation();
+        m_actionLabel->startAnimation();
         */
     }
 
-    // itsIt will equal itsEnd if user decided to cancel the current op
-    if (itsIt == itsEnd) {
+    // m_it will equal m_end if user decided to cancel the current op
+    if (m_it == m_end) {
         doNext();
     } else if (0 == status) {
-        itsModified = true;
-        ++itsIt;
+        m_modified = true;
+        ++m_it;
         doNext();
     } else {
-        bool cont(itsAutoSkip && itsUrls.count() > 1);
-        QString currentName((*itsIt).fileName);
+        bool cont(m_autoSkip && m_urls.count() > 1);
+        QString currentName((*m_it).fileName);
 
         if (!cont) {
-            itsActionLabel->stopAnimation();
+            m_actionLabel->stopAnimation();
 
             if (FontInst::STATUS_SERVICE_DIED == status) {
                 setPage(PAGE_ERROR, errorString(status));
-                itsIt = itsEnd;
+                m_it = m_end;
             } else {
-                ItemList::ConstIterator lastPartOfCurrent(itsIt), next(itsIt == itsEnd ? itsEnd : itsIt + 1);
+                ItemList::ConstIterator lastPartOfCurrent(m_it), next(m_it == m_end ? m_end : m_it + 1);
 
                 // If we're installing a Type1 font, and its already installed - then we need to skip past AFM/PFM
-                if (next != itsEnd && Item::TYPE1_FONT == (*itsIt).type && (*next).fileName == currentName
+                if (next != m_end && Item::TYPE1_FONT == (*m_it).type && (*next).fileName == currentName
                     && (Item::TYPE1_AFM == (*next).type || Item::TYPE1_PFM == (*next).type)) {
                     next++;
-                    if (next != itsEnd && (*next).fileName == currentName && (Item::TYPE1_AFM == (*next).type || Item::TYPE1_PFM == (*next).type)) {
+                    if (next != m_end && (*next).fileName == currentName && (Item::TYPE1_AFM == (*next).type || Item::TYPE1_PFM == (*next).type)) {
                         next++;
                     }
                 }
-                if (1 == itsUrls.count() || next == itsEnd) {
+                if (1 == m_urls.count() || next == m_end) {
                     setPage(PAGE_ERROR, errorString(status));
                 } else {
                     setPage(PAGE_SKIP, errorString(status));
@@ -528,46 +528,46 @@ void CJobRunner::dbusStatus(int pid, int status)
 
 void CJobRunner::contineuToNext(bool cont)
 {
-    itsActionLabel->startAnimation();
+    m_actionLabel->startAnimation();
     if (cont) {
-        if (CMD_INSTALL == itsCmd && Item::TYPE1_FONT == (*itsIt).type) // Did we error on a pfa/pfb? if so, exclude the afm/pfm...
+        if (CMD_INSTALL == m_cmd && Item::TYPE1_FONT == (*m_it).type) // Did we error on a pfa/pfb? if so, exclude the afm/pfm...
         {
-            QString currentName((*itsIt).fileName);
+            QString currentName((*m_it).fileName);
 
-            ++itsIt;
+            ++m_it;
 
             // Skip afm/pfm
-            if (itsIt != itsEnd && (*itsIt).fileName == currentName && (Item::TYPE1_AFM == (*itsIt).type || Item::TYPE1_PFM == (*itsIt).type)) {
-                ++itsIt;
+            if (m_it != m_end && (*m_it).fileName == currentName && (Item::TYPE1_AFM == (*m_it).type || Item::TYPE1_PFM == (*m_it).type)) {
+                ++m_it;
             }
             // Skip pfm/afm
-            if (itsIt != itsEnd && (*itsIt).fileName == currentName && (Item::TYPE1_AFM == (*itsIt).type || Item::TYPE1_PFM == (*itsIt).type)) {
-                ++itsIt;
+            if (m_it != m_end && (*m_it).fileName == currentName && (Item::TYPE1_AFM == (*m_it).type || Item::TYPE1_PFM == (*m_it).type)) {
+                ++m_it;
             }
         } else {
-            ++itsIt;
+            ++m_it;
         }
     } else {
-        itsUrls.empty();
-        itsIt = itsEnd = itsUrls.constEnd();
+        m_urls.empty();
+        m_it = m_end = m_urls.constEnd();
     }
     doNext();
 }
 
 void CJobRunner::slotButtonClicked(QAbstractButton *button)
 {
-    switch (itsStack->currentIndex()) {
+    switch (m_stack->currentIndex()) {
     case PAGE_PROGRESS:
-        if (itsIt != itsEnd) {
-            itsCancelClicked = true;
+        if (m_it != m_end) {
+            m_cancelClicked = true;
         }
         break;
     case PAGE_SKIP:
         setPage(PAGE_PROGRESS);
-        if (button == itsSkipButton) {
+        if (button == m_skipButton) {
             contineuToNext(true);
-        } else if (button == itsAutoSkipButton) {
-            itsAutoSkip = true;
+        } else if (button == m_autoSkipButton) {
+            m_autoSkip = true;
             contineuToNext(true);
         } else {
             contineuToNext(false);
@@ -575,19 +575,19 @@ void CJobRunner::slotButtonClicked(QAbstractButton *button)
 
         break;
     case PAGE_CANCEL:
-        if (button == itsButtonBox->button(QDialogButtonBox::Yes)) {
-            itsIt = itsEnd;
+        if (button == m_buttonBox->button(QDialogButtonBox::Yes)) {
+            m_it = m_end;
         }
-        itsCancelClicked = false;
+        m_cancelClicked = false;
         setPage(PAGE_PROGRESS);
-        itsActionLabel->startAnimation();
+        m_actionLabel->startAnimation();
         // Now continue...
-        dbusStatus(getpid(), itsLastDBusStatus);
+        dbusStatus(getpid(), m_lastDBusStatus);
         break;
     case PAGE_COMPLETE:
-        if (itsDontShowFinishedMsg) {
+        if (m_dontShowFinishedMsg) {
             KConfigGroup grp(KSharedConfig::openConfig(KFI_UI_CFG_FILE)->group(CFG_GROUP));
-            grp.writeEntry(CFG_DONT_SHOW_FINISHED_MSG, itsDontShowFinishedMsg->isChecked());
+            grp.writeEntry(CFG_DONT_SHOW_FINISHED_MSG, m_dontShowFinishedMsg->isChecked());
         }
     case PAGE_ERROR:
         QDialog::accept();
@@ -597,47 +597,46 @@ void CJobRunner::slotButtonClicked(QAbstractButton *button)
 
 void CJobRunner::closeEvent(QCloseEvent *e)
 {
-    if (PAGE_COMPLETE != itsStack->currentIndex()) {
+    if (PAGE_COMPLETE != m_stack->currentIndex()) {
         e->ignore();
-        slotButtonClicked(PAGE_CANCEL == itsStack->currentIndex() ? itsButtonBox->button(QDialogButtonBox::No)
-                                                                  : itsButtonBox->button(QDialogButtonBox::Cancel));
+        slotButtonClicked(PAGE_CANCEL == m_stack->currentIndex() ? m_buttonBox->button(QDialogButtonBox::No) : m_buttonBox->button(QDialogButtonBox::Cancel));
     }
 }
 
 void CJobRunner::setPage(int page, const QString &msg)
 {
-    itsStack->setCurrentIndex(page);
+    m_stack->setCurrentIndex(page);
 
     switch (page) {
     case PAGE_PROGRESS:
-        itsButtonBox->setStandardButtons(QDialogButtonBox::Cancel);
-        itsSkipButton->hide();
-        itsAutoSkipButton->hide();
+        m_buttonBox->setStandardButtons(QDialogButtonBox::Cancel);
+        m_skipButton->hide();
+        m_autoSkipButton->hide();
         break;
     case PAGE_SKIP:
-        itsSkipLabel->setText(i18n("<h3>Error</h3>") + QLatin1String("<p>") + msg + QLatin1String("</p>"));
-        itsButtonBox->setStandardButtons(QDialogButtonBox::Cancel);
-        itsSkipButton->show();
-        itsAutoSkipButton->show();
+        m_skipLabel->setText(i18n("<h3>Error</h3>") + QLatin1String("<p>") + msg + QLatin1String("</p>"));
+        m_buttonBox->setStandardButtons(QDialogButtonBox::Cancel);
+        m_skipButton->show();
+        m_autoSkipButton->show();
         break;
     case PAGE_ERROR:
-        itsErrorLabel->setText(i18n("<h3>Error</h3>") + QLatin1String("<p>") + msg + QLatin1String("</p>"));
-        itsButtonBox->setStandardButtons(QDialogButtonBox::Cancel);
-        itsSkipButton->hide();
-        itsAutoSkipButton->hide();
+        m_errorLabel->setText(i18n("<h3>Error</h3>") + QLatin1String("<p>") + msg + QLatin1String("</p>"));
+        m_buttonBox->setStandardButtons(QDialogButtonBox::Cancel);
+        m_skipButton->hide();
+        m_autoSkipButton->hide();
         break;
     case PAGE_CANCEL:
-        itsButtonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No);
-        itsSkipButton->hide();
-        itsAutoSkipButton->hide();
+        m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No);
+        m_skipButton->hide();
+        m_autoSkipButton->hide();
         break;
     case PAGE_COMPLETE:
-        if (!itsDontShowFinishedMsg || itsDontShowFinishedMsg->isChecked()) {
+        if (!m_dontShowFinishedMsg || m_dontShowFinishedMsg->isChecked()) {
             QDialog::accept();
         } else {
-            itsButtonBox->setStandardButtons(QDialogButtonBox::Close);
-            itsSkipButton->hide();
-            itsAutoSkipButton->hide();
+            m_buttonBox->setStandardButtons(QDialogButtonBox::Close);
+            m_skipButton->hide();
+            m_autoSkipButton->hide();
         }
         break;
     }
@@ -656,12 +655,12 @@ QString CJobRunner::fileName(const QUrl &url)
             return local.toLocalFile(); // Yipee! no need to download!!
         } else {
             // Need to do actual download...
-            if (!itsTempDir) {
-                itsTempDir = new QTemporaryDir(QDir::tempPath() + "/fontinst");
-                itsTempDir->setAutoRemove(true);
+            if (!m_tempDir) {
+                m_tempDir = new QTemporaryDir(QDir::tempPath() + "/fontinst");
+                m_tempDir->setAutoRemove(true);
             }
 
-            QString tempName(itsTempDir->filePath(Misc::getFile(url.path())));
+            QString tempName(m_tempDir->filePath(Misc::getFile(url.path())));
             auto job = KIO::file_copy(url, QUrl::fromLocalFile(tempName), -1, KIO::Overwrite);
             if (job->exec()) {
                 return tempName;
@@ -674,13 +673,13 @@ QString CJobRunner::fileName(const QUrl &url)
 
 QString CJobRunner::errorString(int value) const
 {
-    Misc::TFont font(FC::decode(*itsIt));
+    Misc::TFont font(FC::decode(*m_it));
     QString urlStr;
 
-    if (CMD_REMOVE_FILE == itsCmd) {
-        urlStr = (*itsIt).fileName;
+    if (CMD_REMOVE_FILE == m_cmd) {
+        urlStr = (*m_it).fileName;
     } else if (font.family.isEmpty()) {
-        urlStr = (*itsIt).url();
+        urlStr = (*m_it).url();
     } else {
         urlStr = FC::createName(font.family, font.styleInfo);
     }
@@ -693,7 +692,7 @@ QString CJobRunner::errorString(int value) const
     case FontInst::STATUS_BITMAPS_DISABLED:
         return i18n("<i>%1</i> is a bitmap font, and these have been disabled on your system.", urlStr);
     case FontInst::STATUS_ALREADY_INSTALLED:
-        return i18n("<i>%1</i> contains the font <b>%2</b>, which is already installed on your system.", urlStr, FC::getName(itsCurrentFile));
+        return i18n("<i>%1</i> contains the font <b>%2</b>, which is already installed on your system.", urlStr, FC::getName(m_currentFile));
     case FontInst::STATUS_NOT_FONT_FILE:
         return i18n("<i>%1</i> is not a font.", urlStr);
     case FontInst::STATUS_PARTIAL_DELETE:
@@ -701,7 +700,7 @@ QString CJobRunner::errorString(int value) const
     case FontInst::STATUS_NO_SYS_CONNECTION:
         return i18n("Failed to start the system daemon.<br><i>%1</i>", urlStr);
     case KIO::ERR_FILE_ALREADY_EXIST: {
-        QString name(Misc::modifyName(Misc::getFile((*itsIt).fileName))), destFolder(Misc::getDestFolder(folderName(itsDestIsSystem), name));
+        QString name(Misc::modifyName(Misc::getFile((*m_it).fileName))), destFolder(Misc::getDestFolder(folderName(m_destIsSystem), name));
         return i18n("<i>%1</i> already exists.", destFolder + name);
     }
     case KIO::ERR_DOES_NOT_EXIST:

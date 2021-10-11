@@ -26,12 +26,12 @@ int CInstaller::install(const QSet<QUrl> &urls)
 {
     QSet<QUrl>::ConstIterator it(urls.begin()), end(urls.end());
     bool sysInstall(false);
-    CJobRunner *jobRunner = new CJobRunner(itsParent);
+    CJobRunner *jobRunner = new CJobRunner(m_parent);
 
     CJobRunner::startDbusService();
 
     if (!Misc::root()) {
-        switch (KMessageBox::questionYesNoCancel(itsParent,
+        switch (KMessageBox::questionYesNoCancel(m_parent,
                                                  i18n("Do you wish to install the font(s) for personal use "
                                                       "(only available to you), or "
                                                       "system-wide (available to all users)?"),
@@ -60,14 +60,14 @@ int CInstaller::install(const QSet<QUrl> &urls)
             QString localFile(local.toLocalFile());
 
             if (Misc::isPackage(localFile)) {
-                instUrls += FontsPackage::extract(localFile, &itsTempDir);
+                instUrls += FontsPackage::extract(localFile, &m_tempDir);
                 package = true;
             }
         }
         if (!package) {
             QList<QUrl> associatedUrls;
 
-            CJobRunner::getAssociatedUrls(*it, associatedUrls, false, itsParent);
+            CJobRunner::getAssociatedUrls(*it, associatedUrls, false, m_parent);
             instUrls.insert(*it);
 
             QList<QUrl>::Iterator aIt(associatedUrls.begin()), aEnd(associatedUrls.end());
@@ -94,7 +94,7 @@ int CInstaller::install(const QSet<QUrl> &urls)
 
 CInstaller::~CInstaller()
 {
-    delete itsTempDir;
+    delete m_tempDir;
 }
 
 }

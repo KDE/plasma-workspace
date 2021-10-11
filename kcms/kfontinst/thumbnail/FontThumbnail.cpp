@@ -80,7 +80,7 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
     QColor bgnd(Qt::black);
 
     bgnd.setAlpha(0);
-    img = itsEngine.draw(realPath, KFI_NO_STYLE_INFO, 0, QApplication::palette().text().color(), bgnd, width, height, true);
+    img = m_engine.draw(realPath, KFI_NO_STYLE_INFO, 0, QApplication::palette().text().color(), bgnd, width, height, true);
 
     delete tempDir;
     return !img.isNull();

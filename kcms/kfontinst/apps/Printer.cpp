@@ -91,10 +91,10 @@ static QString previewString(QFont &font, const QString &text, bool onlyDrawChar
 
 CPrintThread::CPrintThread(QPrinter *printer, const QList<Misc::TFont> &items, int size, QObject *parent)
     : QThread(parent)
-    , itsPrinter(printer)
-    , itsItems(items)
-    , itsSize(size)
-    , itsCancelled(false)
+    , m_printer(printer)
+    , m_items(items)
+    , m_size(size)
+    , m_cancelled(false)
 {
 }
 
@@ -104,7 +104,7 @@ CPrintThread::~CPrintThread()
 
 void CPrintThread::cancel()
 {
-    itsCancelled = true;
+    m_cancelled = true;
 }
 
 void CPrintThread::run()
@@ -114,28 +114,28 @@ void CPrintThread::run()
     bool changedFontEmbeddingSetting(false);
     QString str(CFcEngine(false).getPreviewString());
 
-    if (!itsPrinter->fontEmbeddingEnabled()) {
-        itsPrinter->setFontEmbeddingEnabled(true);
+    if (!m_printer->fontEmbeddingEnabled()) {
+        m_printer->setFontEmbeddingEnabled(true);
         changedFontEmbeddingSetting = true;
     }
 
-    itsPrinter->setResolution(72);
-    painter.begin(itsPrinter);
+    m_printer->setResolution(72);
+    painter.begin(m_printer);
 
-    int pageWidth = painter.device()->width(), pageHeight = painter.device()->height(), y = 0, oneSize[2] = {itsSize, 0};
+    int pageWidth = painter.device()->width(), pageHeight = painter.device()->height(), y = 0, oneSize[2] = {m_size, 0};
     const int *sizes = oneSize;
     bool firstFont(true);
 
-    if (0 == itsSize) {
+    if (0 == m_size) {
         sizes = CFcEngine::constScalableSizes;
     }
 
     painter.setClipping(true);
     painter.setClipRect(0, 0, pageWidth, pageHeight);
 
-    QList<Misc::TFont>::ConstIterator it(itsItems.constBegin()), end(itsItems.constEnd());
+    QList<Misc::TFont>::ConstIterator it(m_items.constBegin()), end(m_items.constEnd());
 
-    for (int i = 0; it != end && !itsCancelled; ++it, ++i) {
+    for (int i = 0; it != end && !m_cancelled; ++it, ++i) {
         QString name(FC::createName((*it).family, (*it).styleInfo));
         emit progress(i, name);
 
@@ -154,8 +154,8 @@ void CPrintThread::run()
 #endif
         painter.setFont(sans);
 
-        if (!firstFont && !sufficientSpace(y, &painter, font, sizes, pageHeight, itsSize)) {
-            itsPrinter->newPage();
+        if (!firstFont && !sufficientSpace(y, &painter, font, sizes, pageHeight, m_size)) {
+            m_printer->newPage();
             y = 0;
         }
         painter.setFont(sans);
@@ -169,7 +169,7 @@ void CPrintThread::run()
         bool onlyDrawChars = false;
         Qt::TextElideMode em = Qt::LeftToRight == QApplication::layoutDirection() ? Qt::ElideRight : Qt::ElideLeft;
 
-        if (0 == itsSize) {
+        if (0 == m_size) {
             font.setPointSize(CFcEngine::constDefaultAlphaSize);
             painter.setFont(font);
 
@@ -222,13 +222,13 @@ void CPrintThread::run()
         y += (s < 1 || sizes[s - 1] < 25 ? 14 : 28);
         firstFont = false;
     }
-    emit progress(itsItems.count(), QString());
+    emit progress(m_items.count(), QString());
     painter.end();
 
     //
     // Did we change the users font settings? If so, reset to their previous values...
     if (changedFontEmbeddingSetting) {
-        itsPrinter->setFontEmbeddingEnabled(false);
+        m_printer->setFontEmbeddingEnabled(false);
     }
 }
 
@@ -245,12 +245,12 @@ CPrinter::CPrinter(QWidget *parent)
 
     QFrame *page = new QFrame(this);
     QGridLayout *layout = new QGridLayout(page);
-    itsStatusLabel = new QLabel(page);
-    itsProgress = new QProgressBar(page);
-    layout->addWidget(itsActionLabel = new CActionLabel(this), 0, 0, 2, 1);
-    layout->addWidget(itsStatusLabel, 0, 1);
-    layout->addWidget(itsProgress, 1, 1);
-    itsProgress->setRange(0, 100);
+    m_statusLabel = new QLabel(page);
+    m_progress = new QProgressBar(page);
+    layout->addWidget(m_actionLabel = new CActionLabel(this), 0, 0, 2, 1);
+    layout->addWidget(m_statusLabel, 0, 1);
+    layout->addWidget(m_progress, 1, 1);
+    m_progress->setRange(0, 100);
     layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 2, 0);
 
     mainLayout->addWidget(page);
@@ -274,13 +274,13 @@ void CPrinter::print(const QList<Misc::TFont> &items, int size)
     if (dialog->exec()) {
         CPrintThread *thread = new CPrintThread(&printer, items, size, this);
 
-        itsProgress->setRange(0, items.count());
-        itsProgress->setValue(0);
+        m_progress->setRange(0, items.count());
+        m_progress->setValue(0);
         progress(0, QString());
         connect(thread, &CPrintThread::progress, this, &CPrinter::progress);
         connect(thread, &QThread::finished, this, &QDialog::accept);
         connect(this, &CPrinter::cancelled, thread, &CPrintThread::cancel);
-        itsActionLabel->startAnimation();
+        m_actionLabel->startAnimation();
         thread->start();
         exec();
         delete thread;
@@ -298,14 +298,14 @@ void CPrinter::print(const QList<Misc::TFont> &items, int size)
 void CPrinter::progress(int p, const QString &label)
 {
     if (!label.isEmpty()) {
-        itsStatusLabel->setText(label);
+        m_statusLabel->setText(label);
     }
-    itsProgress->setValue(p);
+    m_progress->setValue(p);
 }
 
 void CPrinter::slotCancelClicked()
 {
-    itsStatusLabel->setText(i18n("Canceling…"));
+    m_statusLabel->setText(i18n("Canceling…"));
     emit cancelled();
 }
 

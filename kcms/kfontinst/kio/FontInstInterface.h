@@ -39,11 +39,11 @@ private Q_SLOTS:
     void fontStat(int pid, const KFI::Family &font);
 
 private:
-    OrgKdeFontinstInterface *itsInterface;
-    bool itsActive;
-    int itsStatus;
-    Families itsFamilies;
-    QEventLoop itsEventLoop;
+    OrgKdeFontinstInterface *m_interface;
+    bool m_active;
+    int m_status;
+    Families m_families;
+    QEventLoop m_eventLoop;
 };
 
 }

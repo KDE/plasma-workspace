@@ -23,7 +23,7 @@ public:
     Flags flags() const override;
 
 private:
-    CFcEngine itsEngine;
+    CFcEngine m_engine;
 };
 
 }

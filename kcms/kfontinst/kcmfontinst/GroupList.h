@@ -45,61 +45,61 @@ public:
 
     const QString &name() const
     {
-        return itsName;
+        return m_name;
     }
     void setName(const QString &n)
     {
-        itsName = n;
+        m_name = n;
     }
     QSet<QString> &families()
     {
-        return itsFamilies;
+        return m_families;
     }
     EType type() const
     {
-        return itsType;
+        return m_type;
     }
     bool isCustom() const
     {
-        return CUSTOM == itsType;
+        return CUSTOM == m_type;
     }
     bool isAll() const
     {
-        return ALL == itsType;
+        return ALL == m_type;
     }
     bool isUnclassified() const
     {
-        return UNCLASSIFIED == itsType;
+        return UNCLASSIFIED == m_type;
     }
     bool isPersonal() const
     {
-        return PERSONAL == itsType;
+        return PERSONAL == m_type;
     }
     bool isSystem() const
     {
-        return SYSTEM == itsType;
+        return SYSTEM == m_type;
     }
     bool validated() const
     {
-        return isCustom() ? itsData.validated : true;
+        return isCustom() ? m_data.validated : true;
     }
     void setValidated()
     {
         if (isCustom())
-            itsData.validated = true;
+            m_data.validated = true;
     }
     bool highlighted() const
     {
-        return itsHighlighted;
+        return m_highlighted;
     }
     void setHighlighted(bool b)
     {
-        itsHighlighted = b;
+        m_highlighted = b;
     }
     bool hasFont(const CFontItem *fnt) const;
     CFamilyItem::EStatus status() const
     {
-        return itsStatus;
+        return m_status;
     }
     void updateStatus(QSet<QString> &enabled, QSet<QString> &disabled, QSet<QString> &partial);
     bool load(QDomElement &elem);
@@ -107,24 +107,24 @@ public:
     void save(QTextStream &str);
     void addFamily(const QString &family)
     {
-        itsFamilies.insert(family);
+        m_families.insert(family);
     }
     void removeFamily(const QString &family)
     {
-        itsFamilies.remove(family);
+        m_families.remove(family);
     }
     bool hasFamily(const QString &family)
     {
-        return itsFamilies.contains(family);
+        return m_families.contains(family);
     }
 
 private:
-    QSet<QString> itsFamilies;
-    QString itsName;
-    EType itsType;
-    Data itsData;
-    bool itsHighlighted;
-    CFamilyItem::EStatus itsStatus;
+    QSet<QString> m_families;
+    QString m_name;
+    EType m_type;
+    Data m_data;
+    bool m_highlighted;
+    CFamilyItem::EStatus m_status;
 };
 
 class CGroupList : public QAbstractItemModel
@@ -162,7 +162,7 @@ public:
 
     CGroupListItem *group(CGroupListItem::EType t)
     {
-        return itsSpecialGroups[t];
+        return m_specialGroups[t];
     }
     bool exists(const QString &name, bool showDialog = true);
 
@@ -187,13 +187,13 @@ private:
     }
 
 private:
-    QString itsFileName;
-    time_t itsTimeStamp;
-    bool itsModified;
-    QWidget *itsParent;
-    QList<CGroupListItem *> itsGroups;
-    QMap<CGroupListItem::EType, CGroupListItem *> itsSpecialGroups;
-    Qt::SortOrder itsSortOrder;
+    QString m_fileName;
+    time_t m_timeStamp;
+    bool m_modified;
+    QWidget *m_parent;
+    QList<CGroupListItem *> m_groups;
+    QMap<CGroupListItem::EType, CGroupListItem *> m_specialGroups;
+    Qt::SortOrder m_sortOrder;
 
     friend class CGroupListItem;
     friend class CGroupListView;
@@ -263,8 +263,8 @@ private:
     bool viewportEvent(QEvent *event) override;
 
 private:
-    QMenu *itsMenu;
-    QAction *itsDeleteAct, *itsEnableAct, *itsDisableAct, *itsPrintAct, *itsRenameAct, *itsExportAct;
-    QModelIndex itsCurrentDropItem;
+    QMenu *m_menu;
+    QAction *m_deleteAct, *m_enableAct, *m_disableAct, *m_printAct, *m_renameAct, *m_exportAct;
+    QModelIndex m_currentDropItem;
 };
 }

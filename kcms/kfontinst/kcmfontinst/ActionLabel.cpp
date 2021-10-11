@@ -51,8 +51,8 @@ CActionLabel::CActionLabel(QWidget *parent)
     }
 
     setPixmap(*theIcons[0]);
-    itsTimer = new QTimer(this);
-    connect(itsTimer, &QTimer::timeout, this, &CActionLabel::rotateIcon);
+    m_timer = new QTimer(this);
+    connect(m_timer, &QTimer::timeout, this, &CActionLabel::rotateIcon);
 }
 
 CActionLabel::~CActionLabel()
@@ -67,25 +67,25 @@ CActionLabel::~CActionLabel()
 
 void CActionLabel::startAnimation()
 {
-    itsCount = 0;
+    m_count = 0;
     setPixmap(*theIcons[0]);
-    itsTimer->start(1000 / constNumIcons);
+    m_timer->start(1000 / constNumIcons);
 }
 
 void CActionLabel::stopAnimation()
 {
-    itsTimer->stop();
-    itsCount = 0;
-    setPixmap(*theIcons[itsCount]);
+    m_timer->stop();
+    m_count = 0;
+    setPixmap(*theIcons[m_count]);
 }
 
 void CActionLabel::rotateIcon()
 {
-    if (++itsCount == constNumIcons) {
-        itsCount = 0;
+    if (++m_count == constNumIcons) {
+        m_count = 0;
     }
 
-    setPixmap(*theIcons[itsCount]);
+    setPixmap(*theIcons[m_count]);
 }
 
 }

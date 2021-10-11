@@ -99,22 +99,22 @@ static void sortActions(KSelectAction *group)
 CFontFilter::CFontFilter(QWidget *parent)
     : QWidget(parent)
 {
-    itsIcons[CRIT_FAMILY] = QIcon::fromTheme("draw-text");
-    itsTexts[CRIT_FAMILY] = i18n("Family");
-    itsIcons[CRIT_STYLE] = QIcon::fromTheme("format-text-bold");
-    itsTexts[CRIT_STYLE] = i18n("Style");
-    itsIcons[CRIT_FOUNDRY] = QIcon::fromTheme("user-identity");
-    itsTexts[CRIT_FOUNDRY] = i18n("Foundry");
-    itsIcons[CRIT_FONTCONFIG] = QIcon::fromTheme("system-search");
-    itsTexts[CRIT_FONTCONFIG] = i18n("FontConfig Match");
-    itsIcons[CRIT_FILETYPE] = QIcon::fromTheme("preferences-desktop-font-installer");
-    itsTexts[CRIT_FILETYPE] = i18n("File Type");
-    itsIcons[CRIT_FILENAME] = QIcon::fromTheme("application-x-font-type1");
-    itsTexts[CRIT_FILENAME] = i18n("File Name");
-    itsIcons[CRIT_LOCATION] = QIcon::fromTheme("folder");
-    itsTexts[CRIT_LOCATION] = i18n("File Location");
-    itsIcons[CRIT_WS] = QIcon::fromTheme("character-set");
-    itsTexts[CRIT_WS] = i18n("Writing System");
+    m_icons[CRIT_FAMILY] = QIcon::fromTheme("draw-text");
+    m_texts[CRIT_FAMILY] = i18n("Family");
+    m_icons[CRIT_STYLE] = QIcon::fromTheme("format-text-bold");
+    m_texts[CRIT_STYLE] = i18n("Style");
+    m_icons[CRIT_FOUNDRY] = QIcon::fromTheme("user-identity");
+    m_texts[CRIT_FOUNDRY] = i18n("Foundry");
+    m_icons[CRIT_FONTCONFIG] = QIcon::fromTheme("system-search");
+    m_texts[CRIT_FONTCONFIG] = i18n("FontConfig Match");
+    m_icons[CRIT_FILETYPE] = QIcon::fromTheme("preferences-desktop-font-installer");
+    m_texts[CRIT_FILETYPE] = i18n("File Type");
+    m_icons[CRIT_FILENAME] = QIcon::fromTheme("application-x-font-type1");
+    m_texts[CRIT_FILENAME] = i18n("File Name");
+    m_icons[CRIT_LOCATION] = QIcon::fromTheme("folder");
+    m_texts[CRIT_LOCATION] = i18n("File Location");
+    m_icons[CRIT_WS] = QIcon::fromTheme("character-set");
+    m_texts[CRIT_WS] = i18n("Writing System");
 
     m_layout = new QHBoxLayout(this);
     setLayout(m_layout);
@@ -134,22 +134,22 @@ CFontFilter::CFontFilter(QWidget *parent)
     m_menu = new QMenu(this);
     m_menuButton->setMenu(m_menu);
 
-    itsActionGroup = new QActionGroup(this);
+    m_actionGroup = new QActionGroup(this);
     addAction(CRIT_FAMILY, true);
     addAction(CRIT_STYLE, false);
 
-    KSelectAction *foundryMenu = new KSelectAction(itsIcons[CRIT_FOUNDRY], itsTexts[CRIT_FOUNDRY], this);
-    itsActions[CRIT_FOUNDRY] = foundryMenu;
-    m_menu->addAction(itsActions[CRIT_FOUNDRY]);
+    KSelectAction *foundryMenu = new KSelectAction(m_icons[CRIT_FOUNDRY], m_texts[CRIT_FOUNDRY], this);
+    m_actions[CRIT_FOUNDRY] = foundryMenu;
+    m_menu->addAction(m_actions[CRIT_FOUNDRY]);
     foundryMenu->setData((int)CRIT_FOUNDRY);
     foundryMenu->setVisible(false);
     connect(foundryMenu, SIGNAL(triggered(QString)), SLOT(foundryChanged(QString)));
 
     addAction(CRIT_FONTCONFIG, false);
 
-    KSelectAction *ftMenu = new KSelectAction(itsIcons[CRIT_FILETYPE], itsTexts[CRIT_FILETYPE], this);
-    itsActions[CRIT_FILETYPE] = ftMenu;
-    m_menu->addAction(itsActions[CRIT_FILETYPE]);
+    KSelectAction *ftMenu = new KSelectAction(m_icons[CRIT_FILETYPE], m_texts[CRIT_FILETYPE], this);
+    m_actions[CRIT_FILETYPE] = ftMenu;
+    m_menu->addAction(m_actions[CRIT_FILETYPE]);
     ftMenu->setData((int)CRIT_FILETYPE);
 
     QStringList::ConstIterator it(CFontList::fontMimeTypes.constBegin()), end(CFontList::fontMimeTypes.constEnd());
@@ -172,17 +172,17 @@ CFontFilter::CFontFilter(QWidget *parent)
 
     sortActions(ftMenu);
     connect(ftMenu, SIGNAL(triggered(QString)), SLOT(ftChanged(QString)));
-    itsCurrentFileTypes.clear();
+    m_currentFileTypes.clear();
 
     addAction(CRIT_FILENAME, false);
     addAction(CRIT_LOCATION, false);
 
-    KSelectAction *wsMenu = new KSelectAction(itsIcons[CRIT_WS], itsTexts[CRIT_WS], this);
-    itsActions[CRIT_WS] = wsMenu;
-    m_menu->addAction(itsActions[CRIT_WS]);
+    KSelectAction *wsMenu = new KSelectAction(m_icons[CRIT_WS], m_texts[CRIT_WS], this);
+    m_actions[CRIT_WS] = wsMenu;
+    m_menu->addAction(m_actions[CRIT_WS]);
     wsMenu->setData((int)CRIT_WS);
 
-    itsCurrentWs = QFontDatabase::Any;
+    m_currentWs = QFontDatabase::Any;
     for (int i = QFontDatabase::Latin; i < QFontDatabase::WritingSystemsCount; ++i) {
         KToggleAction *wsAct =
             new KToggleAction(QFontDatabase::Other == i ? i18n("Symbol/Other") : QFontDatabase::writingSystemName((QFontDatabase::WritingSystem)i), this);
@@ -200,10 +200,10 @@ CFontFilter::CFontFilter(QWidget *parent)
 
 void CFontFilter::setFoundries(const QSet<QString> &currentFoundries)
 {
-    QAction *act(((KSelectAction *)itsActions[CRIT_FOUNDRY])->currentAction());
+    QAction *act(((KSelectAction *)m_actions[CRIT_FOUNDRY])->currentAction());
     QString prev(act && act->isChecked() ? act->text() : QString());
     bool changed(false);
-    QList<QAction *> prevFoundries(((KSelectAction *)itsActions[CRIT_FOUNDRY])->actions());
+    QList<QAction *> prevFoundries(((KSelectAction *)m_actions[CRIT_FOUNDRY])->actions());
     QList<QAction *>::ConstIterator fIt(prevFoundries.constBegin()), fEnd(prevFoundries.constEnd());
     QSet<QString> foundries(currentFoundries);
 
@@ -212,7 +212,7 @@ void CFontFilter::setFoundries(const QSet<QString> &currentFoundries)
         if (foundries.contains((*fIt)->text())) {
             foundries.remove((*fIt)->text());
         } else {
-            ((KSelectAction *)itsActions[CRIT_FOUNDRY])->removeAction(*fIt);
+            ((KSelectAction *)m_actions[CRIT_FOUNDRY])->removeAction(*fIt);
             (*fIt)->deleteLater();
             changed = true;
         }
@@ -227,40 +227,40 @@ void CFontFilter::setFoundries(const QSet<QString> &currentFoundries)
             QString foundry(*it);
 
             foundry.replace("&", "&&");
-            ((KSelectAction *)itsActions[CRIT_FOUNDRY])->addAction(foundry);
+            ((KSelectAction *)m_actions[CRIT_FOUNDRY])->addAction(foundry);
         }
         changed = true;
     }
 
     if (changed) {
-        sortActions((KSelectAction *)itsActions[CRIT_FOUNDRY]);
+        sortActions((KSelectAction *)m_actions[CRIT_FOUNDRY]);
         if (!prev.isEmpty()) {
-            act = ((KSelectAction *)itsActions[CRIT_FOUNDRY])->action(prev);
+            act = ((KSelectAction *)m_actions[CRIT_FOUNDRY])->action(prev);
             if (act) {
-                ((KSelectAction *)itsActions[CRIT_FOUNDRY])->setCurrentAction(act);
+                ((KSelectAction *)m_actions[CRIT_FOUNDRY])->setCurrentAction(act);
             } else {
-                ((KSelectAction *)itsActions[CRIT_FOUNDRY])->setCurrentItem(0);
+                ((KSelectAction *)m_actions[CRIT_FOUNDRY])->setCurrentItem(0);
             }
         }
 
-        itsActions[CRIT_FOUNDRY]->setVisible(((KSelectAction *)itsActions[CRIT_FOUNDRY])->actions().count());
+        m_actions[CRIT_FOUNDRY]->setVisible(((KSelectAction *)m_actions[CRIT_FOUNDRY])->actions().count());
     }
 }
 
 void CFontFilter::filterChanged()
 {
-    QAction *act(itsActionGroup->checkedAction());
+    QAction *act(m_actionGroup->checkedAction());
 
     if (act) {
         ECriteria crit((ECriteria)act->data().toInt());
 
-        if (itsCurrentCriteria != crit) {
-            deselectCurrent((KSelectAction *)itsActions[CRIT_FOUNDRY]);
-            deselectCurrent((KSelectAction *)itsActions[CRIT_FILETYPE]);
-            deselectCurrent((KSelectAction *)itsActions[CRIT_WS]);
+        if (m_currentCriteria != crit) {
+            deselectCurrent((KSelectAction *)m_actions[CRIT_FOUNDRY]);
+            deselectCurrent((KSelectAction *)m_actions[CRIT_FILETYPE]);
+            deselectCurrent((KSelectAction *)m_actions[CRIT_WS]);
             m_lineEdit->setText(QString());
-            itsCurrentWs = QFontDatabase::Any;
-            itsCurrentFileTypes.clear();
+            m_currentWs = QFontDatabase::Any;
+            m_currentFileTypes.clear();
 
             setCriteria(crit);
             m_lineEdit->setPlaceholderText(i18n("Filter by %1…", act->text()));
@@ -271,51 +271,51 @@ void CFontFilter::filterChanged()
 
 void CFontFilter::ftChanged(const QString &ft)
 {
-    deselectCurrent((KSelectAction *)itsActions[CRIT_FOUNDRY]);
-    deselectCurrent((KSelectAction *)itsActions[CRIT_WS]);
-    deselectCurrent(itsActionGroup);
+    deselectCurrent((KSelectAction *)m_actions[CRIT_FOUNDRY]);
+    deselectCurrent((KSelectAction *)m_actions[CRIT_WS]);
+    deselectCurrent(m_actionGroup);
 
-    QAction *act(((KSelectAction *)itsActions[CRIT_FILETYPE])->currentAction());
+    QAction *act(((KSelectAction *)m_actions[CRIT_FILETYPE])->currentAction());
 
     if (act) {
-        itsCurrentFileTypes = act->data().toStringList();
+        m_currentFileTypes = act->data().toStringList();
     }
-    itsCurrentCriteria = CRIT_FILETYPE;
+    m_currentCriteria = CRIT_FILETYPE;
     m_lineEdit->setReadOnly(true);
-    setCriteria(itsCurrentCriteria);
+    setCriteria(m_currentCriteria);
     m_lineEdit->setText(ft);
     m_lineEdit->setPlaceholderText(m_lineEdit->text());
 }
 
 void CFontFilter::wsChanged(const QString &writingSystemName)
 {
-    deselectCurrent((KSelectAction *)itsActions[CRIT_FOUNDRY]);
-    deselectCurrent((KSelectAction *)itsActions[CRIT_FILETYPE]);
-    deselectCurrent(itsActionGroup);
+    deselectCurrent((KSelectAction *)m_actions[CRIT_FOUNDRY]);
+    deselectCurrent((KSelectAction *)m_actions[CRIT_FILETYPE]);
+    deselectCurrent(m_actionGroup);
 
-    QAction *act(((KSelectAction *)itsActions[CRIT_WS])->currentAction());
+    QAction *act(((KSelectAction *)m_actions[CRIT_WS])->currentAction());
 
     if (act) {
-        itsCurrentWs = (QFontDatabase::WritingSystem)act->data().toInt();
+        m_currentWs = (QFontDatabase::WritingSystem)act->data().toInt();
     }
-    itsCurrentCriteria = CRIT_WS;
+    m_currentCriteria = CRIT_WS;
     m_lineEdit->setReadOnly(true);
-    setCriteria(itsCurrentCriteria);
+    setCriteria(m_currentCriteria);
     m_lineEdit->setText(writingSystemName);
     m_lineEdit->setPlaceholderText(m_lineEdit->text());
 }
 
 void CFontFilter::foundryChanged(const QString &foundry)
 {
-    deselectCurrent((KSelectAction *)itsActions[CRIT_WS]);
-    deselectCurrent((KSelectAction *)itsActions[CRIT_FILETYPE]);
-    deselectCurrent(itsActionGroup);
+    deselectCurrent((KSelectAction *)m_actions[CRIT_WS]);
+    deselectCurrent((KSelectAction *)m_actions[CRIT_FILETYPE]);
+    deselectCurrent(m_actionGroup);
 
-    itsCurrentCriteria = CRIT_FOUNDRY;
+    m_currentCriteria = CRIT_FOUNDRY;
     m_lineEdit->setReadOnly(true);
     m_lineEdit->setText(foundry);
     m_lineEdit->setPlaceholderText(m_lineEdit->text());
-    setCriteria(itsCurrentCriteria);
+    setCriteria(m_currentCriteria);
 }
 
 void CFontFilter::textChanged(const QString &text)
@@ -325,22 +325,22 @@ void CFontFilter::textChanged(const QString &text)
 
 void CFontFilter::addAction(ECriteria crit, bool on)
 {
-    itsActions[crit] = new KToggleAction(itsIcons[crit], itsTexts[crit], this);
-    m_menu->addAction(itsActions[crit]);
-    itsActionGroup->addAction(itsActions[crit]);
-    itsActions[crit]->setData((int)crit);
-    itsActions[crit]->setChecked(on);
+    m_actions[crit] = new KToggleAction(m_icons[crit], m_texts[crit], this);
+    m_menu->addAction(m_actions[crit]);
+    m_actionGroup->addAction(m_actions[crit]);
+    m_actions[crit]->setData((int)crit);
+    m_actions[crit]->setChecked(on);
     if (on) {
-        m_lineEdit->setPlaceholderText(i18n("Filter by %1…", itsTexts[crit]));
+        m_lineEdit->setPlaceholderText(i18n("Filter by %1…", m_texts[crit]));
     }
-    connect(itsActions[crit], &QAction::toggled, this, &CFontFilter::filterChanged);
+    connect(m_actions[crit], &QAction::toggled, this, &CFontFilter::filterChanged);
 }
 
 void CFontFilter::setCriteria(ECriteria crit)
 {
-    itsCurrentCriteria = crit;
+    m_currentCriteria = crit;
 
-    emit criteriaChanged(crit, ((qulonglong)1) << (int)itsCurrentWs, itsCurrentFileTypes);
+    emit criteriaChanged(crit, ((qulonglong)1) << (int)m_currentWs, m_currentFileTypes);
 }
 
 }

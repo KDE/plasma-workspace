@@ -38,10 +38,10 @@ private:
     bool eventFilter(QObject *, QEvent *e) override;
 
 private:
-    CFontPreview *itsParent;
-    QLabel *itsLabel, *itsPixmapLabel;
-    QTimer *itsTimer;
-    CFcEngine::TChar itsItem;
+    CFontPreview *m_parent;
+    QLabel *m_label, *m_pixmapLabel;
+    QTimer *m_timer;
+    CFcEngine::TChar m_item;
 };
 
 }
