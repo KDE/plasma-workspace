@@ -625,7 +625,7 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
     }
 
     const QModelIndex &parent = proxyIndex.parent();
-    const bool isGroup = (!parent.isValid() && d->isGroup(proxyIndex.row()));
+    const bool isWindowGroup = (!parent.isValid() && d->isGroup(proxyIndex.row()));
 
     // For group parent items, this will map to the first child task.
     const QModelIndex &sourceIndex = mapToSource(proxyIndex);
@@ -638,7 +638,7 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
         return !d->isBlacklisted(sourceIndex);
     }
 
-    if (isGroup) {
+    if (isWindowGroup) {
         // For group parent items, DisplayRole is mapped to AppName of the first child.
         if (role == Qt::DisplayRole) {
             const QString &appName = sourceIndex.data(AbstractTasksModel::AppName).toString();
@@ -873,7 +873,7 @@ void TaskGroupingProxyModel::setBlacklistedLauncherUrls(const QStringList &list)
             if (d->isGroup(i)) {
                 const QModelIndex &groupRep = index(i, 0);
                 const QUrl &launcherUrl = groupRep.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
-                const QString &launcherUrlString = launcherUrl.toString(QUrl::RemoveQuery | QUrl::RemoveQuery);
+                const QString &launcherUrlString = launcherUrl.toString(QUrl::RemoveQuery);
 
                 if (set.contains(launcherUrlString)) {
                     d->breakGroupFor(groupRep); // Safe since we're iterating backwards.
@@ -1186,7 +1186,7 @@ void TaskGroupingProxyModel::requestToggleGrouping(const QModelIndex &index)
 {
     const QString &appId = index.data(AbstractTasksModel::AppId).toString();
     const QUrl &launcherUrl = index.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
-    const QString &launcherUrlString = launcherUrl.toString(QUrl::RemoveQuery | QUrl::RemoveQuery);
+    const QString &launcherUrlString = launcherUrl.toString(QUrl::RemoveQuery);
 
     if (d->blacklistedAppIds.contains(appId) || d->blacklistedLauncherUrls.contains(launcherUrlString)) {
         d->blacklistedAppIds.remove(appId);
