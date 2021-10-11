@@ -78,9 +78,10 @@ RowLayout {
         visible: valid
     }
 
-    PlasmaExtras.DescriptiveLabel {
+    PlasmaExtras.Heading {
         id: applicationNameLabel
         Layout.fillWidth: true
+        level: 2
         textFormat: Text.PlainText
         elide: Text.ElideLeft
         text: notificationHeading.applicationName + (notificationHeading.originName ? " · " + notificationHeading.originName : "")

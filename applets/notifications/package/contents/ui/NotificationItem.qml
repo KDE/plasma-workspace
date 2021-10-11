@@ -108,11 +108,6 @@ ColumnLayout {
         PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.HeaderColorGroup
         PlasmaCore.ColorScope.inherit: false
 
-        PlasmaExtras.PlasmoidHeading {
-            anchors.fill: parent
-            visible: !notificationItem.inHistory
-        }
-
         NotificationHeader {
             id: notificationHeading
             anchors {
