@@ -165,6 +165,8 @@ ColumnLayout {
                     wrapMode: Text.WordWrap
                     elide: Text.ElideRight
                     level: 4
+                    // Give it a bit more visual prominence than the app name in the header
+                    type: PlasmaExtras.Heading.Type.Primary
                     text: {
                         if (notificationItem.notificationType === NotificationManager.Notifications.JobType) {
                             if (notificationItem.jobState === NotificationManager.Notifications.JobStateSuspended) {
