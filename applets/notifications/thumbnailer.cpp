@@ -17,10 +17,12 @@
 #include <QQuickWindow>
 #include <QTimer>
 
+#include <KConfigGroup>
 #include <KFileItemListProperties>
 #include <KLocalizedString>
 #include <KPropertiesDialog>
 #include <KProtocolManager>
+#include <KSharedConfig>
 #include <KUrlMimeData>
 
 #include <KIO/OpenFileManagerWindowJob>
@@ -113,7 +115,11 @@ void Thumbnailer::generatePreview()
     }
 
     auto maxSize = qMax(m_size.width(), m_size.height());
-    KIO::PreviewJob *job = KIO::filePreview(KFileItemList({KFileItem(m_url)}), QSize(maxSize, maxSize));
+
+    KConfigGroup previewSettings(KSharedConfig::openConfig(QStringLiteral("dolphinrc")), "PreviewSettings");
+    const QStringList enabledPlugins = previewSettings.readEntry("Plugins", KIO::PreviewJob::defaultPlugins());
+
+    KIO::PreviewJob *job = KIO::filePreview(KFileItemList({KFileItem(m_url)}), QSize(maxSize, maxSize), &enabledPlugins);
     job->setScaleType(KIO::PreviewJob::Scaled);
     job->setIgnoreMaximumSize(true);
 
