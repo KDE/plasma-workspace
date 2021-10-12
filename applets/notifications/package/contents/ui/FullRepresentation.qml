@@ -233,13 +233,16 @@ PlasmaComponents3.Page {
         spacing: PlasmaCore.Units.smallSpacing
 
         // actual notifications
-        PlasmaExtras.ScrollArea {
+        PlasmaComponents3.ScrollView {
             Layout.fillWidth: true
             Layout.fillHeight: true
             Layout.preferredWidth: PlasmaCore.Units.gridUnit * 18
             Layout.preferredHeight: PlasmaCore.Units.gridUnit * 24
             Layout.leftMargin: PlasmaCore.Units.smallSpacing
-            frameVisible: false
+            background: null
+
+            // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
+            PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
             ListView {
                 id: list
