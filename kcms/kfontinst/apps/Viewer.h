@@ -33,6 +33,7 @@ public Q_SLOTS:
 private:
     KParts::ReadOnlyPart *m_preview;
     QAction *m_printAct;
+    QAction *m_openAct;
 };
 
 }

@@ -35,10 +35,14 @@ CViewer::CViewer()
 
     m_preview = result.plugin;
 
-    actionCollection()->addAction(KStandardAction::Open, this, SLOT(fileOpen()));
+    m_openAct = actionCollection()->addAction(KStandardAction::Open, this, SLOT(fileOpen()));
     actionCollection()->addAction(KStandardAction::Quit, this, SLOT(close()));
     actionCollection()->addAction(KStandardAction::KeyBindings, this, SLOT(configureKeys()));
     m_printAct = actionCollection()->addAction(KStandardAction::Print, m_preview, SLOT(print()));
+
+    // Make tooltips more specific, instead of "document".
+    m_openAct->setToolTip(i18n("Open an existing font file"));
+    m_printAct->setToolTip(i18n("Print font preview"));
 
     m_printAct->setEnabled(false);
 
