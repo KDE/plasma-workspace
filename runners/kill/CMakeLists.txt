@@ -5,7 +5,7 @@ set(kcm_krunner_kill_SRCS
 )
 
 ki18n_wrap_ui(kcm_krunner_kill_SRCS killrunner_config.ui)
-add_library(kcm_krunner_kill MODULE ${kcm_krunner_kill_SRCS})
+kcoreaddons_add_plugin(kcm_krunner_kill SOURCES ${kcm_krunner_kill_SRCS} INSTALL_NAMESPACE "kf5/krunner/kcms")
 target_link_libraries(kcm_krunner_kill
     Qt::Core
     Qt::Gui
@@ -27,7 +27,3 @@ target_link_libraries(krunner_kill
                       KF5::Runner
                       KSysGuard::ProcessCore
                       )
-add_dependencies(krunner_kill kcm_krunner_kill)
-
-install(TARGETS kcm_krunner_kill DESTINATION ${KDE_INSTALL_PLUGINDIR})
-install(FILES plasma-runner-kill_config.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})

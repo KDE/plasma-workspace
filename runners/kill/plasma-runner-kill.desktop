@@ -147,3 +147,4 @@ X-KDE-PluginInfo-Name=Kill Runner
 X-KDE-PluginInfo-Version=0.1
 X-KDE-PluginInfo-License=LGPL
 X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-ConfigModule=kf5/krunner/kcms/kcm_krunner_kill
