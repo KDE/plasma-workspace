@@ -19,6 +19,13 @@ ColumnLayout {
 
     property alias text: barcodeItem.content
 
+    Keys.onPressed: {
+        if (event.key == Qt.Key_Escape) {
+            stack.pop()
+            event.accepted = true;
+        }
+    }
+
     property var header: PlasmaExtras.PlasmoidHeading {
         RowLayout {
             anchors.fill: parent

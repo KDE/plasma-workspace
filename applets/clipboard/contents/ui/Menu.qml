@@ -4,7 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
+import QtQml 2.15
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents // For Highlight
@@ -49,6 +50,12 @@ PlasmaComponents3.ScrollView {
             onEdit: menu.edit(uuid)
             onBarcode: menu.barcode(text)
             onAction: menu.action(uuid)
+
+            Binding {
+                target: menuListView; when: containsMouse
+                property: "currentIndex"; value: index
+                restoreMode: Binding.RestoreBinding
+            }
         }
 
         PlasmaExtras.PlaceholderMessage {

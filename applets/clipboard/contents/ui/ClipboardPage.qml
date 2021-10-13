@@ -15,14 +15,45 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 ColumnLayout {
     Keys.onPressed: {
+        function goToCurrent() {
+            clipboardMenu.view.positionViewAtIndex(clipboardMenu.view.currentIndex, ListView.Contain);
+            if (clipboardMenu.view.currentIndex != -1) {
+                clipboardMenu.view.currentItem.forceActiveFocus();
+            }
+        }
+        function forwardToFilter() {
+            // filter.text += event.text wil break if the key is backspace
+            if (event.key === Qt.Key_Backspace && filter.text == "") {
+                return;
+            }
+            if (event.text !== "" && !filter.activeFocus) {
+                clipboardMenu.view.currentIndex = -1
+                if (event.matches(StandardKey.Paste)) {
+                    filter.paste();
+                } else {
+                    filter.text = "";
+                    filter.text += event.text;
+                }
+                filter.forceActiveFocus();
+                event.accepted = true;
+            }
+        }
         switch(event.key) {
             case Qt.Key_Up: {
-                clipboardMenu.view.decrementCurrentIndex();
+                if (clipboardMenu.view.currentIndex == 0) {
+                    clipboardMenu.view.currentIndex = -1;
+                    filter.forceActiveFocus();
+                    filter.selectAll();
+                } else {
+                    clipboardMenu.view.decrementCurrentIndex();
+                    goToCurrent();
+                }
                 event.accepted = true;
                 break;
             }
             case Qt.Key_Down: {
                 clipboardMenu.view.incrementCurrentIndex();
+                goToCurrent();
                 event.accepted = true;
                 break;
             }
@@ -47,25 +78,28 @@ ColumnLayout {
                 }
                 break;
             }
-            default: { // forward key to filter
-                // filter.text += event.text wil break if the key is backspace
-                if (event.key === Qt.Key_Backspace && filter.text == "") {
-                    return;
-                }
-                if (event.text !== "" && !filter.activeFocus) {
-                    clipboardMenu.view.currentIndex = -1
-                    if (event.matches(StandardKey.Paste)) {
-                        filter.paste();
-                    } else {
-                        filter.text = "";
-                        filter.text += event.text;
-                    }
+            case Qt.Key_F: {
+                if (event.modifiers & Qt.ControlModifier) {
                     filter.forceActiveFocus();
+                    filter.selectAll();
                     event.accepted = true;
+                } else {
+                    forwardToFilter();
                 }
+                break;
+            }
+            case Qt.Key_Tab:
+            case Qt.Key_Backtab: {
+                // prevent search filter from getting Tab key events
+                break;
+            }
+            default: {
+                forwardToFilter();
             }
         }
     }
+
+    Keys.forwardTo: [stack.currentPage]
 
     property var header: PlasmaExtras.PlasmoidHeading {
         RowLayout {

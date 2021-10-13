@@ -10,10 +10,10 @@ import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaExtras
+import org.kde.plasma.components 2.0 as PlasmaComponents2
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
-PlasmaExtras.ListItem {
+PlasmaComponents2.ListItem {
     id: menuItem
 
     property bool supportsBarcodes
@@ -41,13 +41,7 @@ PlasmaExtras.ListItem {
         if (plasmoid.hideOnWindowDeactivate)
             plasmoid.expanded = false;
     }
-    onContainsMouseChanged: {
-        if (containsMouse) {
-            menuListView.currentIndex = index
-        } else {
-            menuListView.currentIndex = -1
-        }
-    }
+
     Keys.onDeletePressed: {
         remove(UuidRole);
     }
@@ -130,6 +124,8 @@ PlasmaExtras.ListItem {
 
         onActiveChanged: {
             if (active) {
+                menuItem.KeyNavigation.tab =  toolButtonsLoader.item.children[0]
+                menuItem.KeyNavigation.right = toolButtonsLoader.item.children[0]
                 // break binding, once it was loaded, never unload
                 active = true;
             }
