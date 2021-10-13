@@ -183,6 +183,7 @@ PlasmaCore.Dialog {
                 hovered: area.containsMouse
                 maximumLineCount: 8
                 bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0
+                urgency: notificationPopup.urgency
 
                 thumbnailLeftPadding: -notificationPopup.margins.left
                 thumbnailRightPadding: -notificationPopup.margins.right
