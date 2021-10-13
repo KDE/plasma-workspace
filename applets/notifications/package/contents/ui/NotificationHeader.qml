@@ -81,7 +81,8 @@ RowLayout {
     PlasmaExtras.Heading {
         id: applicationNameLabel
         Layout.fillWidth: true
-        level: 4
+        level: 5
+        opacity: 0.9
         textFormat: Text.PlainText
         elide: Text.ElideLeft
         text: notificationHeading.applicationName + (notificationHeading.originName ? " · " + notificationHeading.originName : "")
