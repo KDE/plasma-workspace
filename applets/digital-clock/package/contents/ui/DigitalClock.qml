@@ -46,10 +46,20 @@ Item {
 
     // if showing the date and the time in one line or
     // if the date/timezone cannot be fit with the smallest font to its designated space
-    property bool oneLineMode: plasmoid.configuration.dateDisplayFormat === 1 ||
-                                        plasmoid.formFactor === PlasmaCore.Types.Horizontal &&
-                                        main.height <= 2 * PlasmaCore.Theme.smallestFont.pixelSize &&
-                                        (main.showDate || timezoneLabel.visible)
+    property bool oneLineMode: {
+        if (plasmoid.configuration.dateDisplayFormat === 1) {
+            // BesideTime
+            return true;
+        } else if (plasmoid.configuration.dateDisplayFormat === 2) {
+            // BelowTime
+            return false;
+        } else {
+            // Adaptive
+            return plasmoid.formFactor === PlasmaCore.Types.Horizontal &&
+                main.height <= 2 * PlasmaCore.Theme.smallestFont.pixelSize &&
+                (main.showDate || timezoneLabel.visible);
+        }
+    }
 
     onDateFormatChanged: {
         setupLabels();

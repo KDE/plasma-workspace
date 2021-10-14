@@ -79,6 +79,7 @@ QtLayouts.ColumnLayout {
                 model: [
                     i18n("Adaptive location"),
                     i18n("Always beside time"),
+                    i18n("Always below time"),
                 ]
                 onActivated: cfg_dateDisplayFormat = currentIndex
             }

@@ -87,6 +87,7 @@
       <choices name="Settings::dateDisplayFormat">
         <choice name="Adaptive" />
         <choice name="BesideTime" />
+        <choice name="BelowTime" />
       </choices>
       <default>Adaptive</default>
     </entry>
