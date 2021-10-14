@@ -93,13 +93,15 @@ RowLayout {
         Layout.fillWidth: true
     }
 
-    PlasmaExtras.DescriptiveLabel {
+    PlasmaExtras.Heading {
         id: ageLabel
 
         // the "n minutes ago" text, for jobs we show remaining time instead
         // updated periodically by a Timer hence this property with generate() function
         property string agoText: ""
         visible: text !== ""
+        level: 5
+        opacity: 0.9
         text: generateRemainingText() || agoText
         Layout.rightMargin: Math.round(-notificationHeading.spacing / 2)
 
