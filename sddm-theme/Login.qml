@@ -83,7 +83,7 @@ SessionManagementScreen {
                 }
             }
 
-            visible: userList.currentItem.needsPassword
+            visible: root.showUsernamePrompt || userList.currentItem.needsPassword
 
             Keys.onEscapePressed: {
                 mainStack.currentItem.forceActiveFocus();
@@ -119,7 +119,7 @@ SessionManagementScreen {
 
             icon.name: text.length == 0 ? "go-next" : ""
 
-            text: userList.currentItem.needsPassword ? "" : i18n("Log In")
+            text: root.showUsernamePrompt || userList.currentItem.needsPassword ? "" : i18n("Log In")
             onClicked: startLogin();
         }
     }
