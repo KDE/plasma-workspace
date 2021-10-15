@@ -245,7 +245,7 @@ void PlasmaAppletItemModel::populateModel()
     clear();
 
     auto filter = [this](const KPluginMetaData &plugin) -> bool {
-        const QStringList provides = KPluginMetaData::readStringList(plugin.rawData(), QStringLiteral("X-Plasma-Provides"));
+        const QStringList provides = plugin.value(QStringLiteral("X-Plasma-Provides"), QStringList());
 
         if (!m_provides.isEmpty()) {
             const bool providesFulfilled = std::any_of(m_provides.cbegin(), m_provides.cend(), [&provides](const QString &p) {

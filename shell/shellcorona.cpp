@@ -1662,7 +1662,7 @@ void ShellCorona::checkAddPanelAction()
 
     auto filter = [](const KPluginMetaData &md) -> bool {
         return !md.rawData().value(QStringLiteral("NoDisplay")).toBool()
-            && KPluginMetaData::readStringList(md.rawData(), QStringLiteral("X-Plasma-ContainmentCategories")).contains(QLatin1String("panel"));
+            && md.value(QStringLiteral("X-Plasma-ContainmentCategories"), QStringList()).contains(QLatin1String("panel"));
     };
     QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
 
@@ -1701,7 +1701,7 @@ void ShellCorona::populateAddPanelsMenu()
 
     auto filter = [](const KPluginMetaData &md) -> bool {
         return !md.rawData().value(QStringLiteral("NoDisplay")).toBool()
-            && KPluginMetaData::readStringList(md.rawData(), QStringLiteral("X-Plasma-ContainmentCategories")).contains(QLatin1String("panel"));
+            && md.value(QStringLiteral("X-Plasma-ContainmentCategories"), QStringList()).contains(QLatin1String("panel"));
     };
     const QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
     for (const auto &tpl : templates) {
@@ -2056,7 +2056,7 @@ void ShellCorona::activateLauncherMenu()
     for (auto it = m_panelViews.constBegin(), end = m_panelViews.constEnd(); it != end; ++it) {
         const auto applets = it.key()->applets();
         for (auto applet : applets) {
-            const auto provides = KPluginMetaData::readStringList(applet->pluginMetaData().rawData(), QStringLiteral("X-Plasma-Provides"));
+            const auto provides = applet->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
             if (provides.contains(QLatin1String("org.kde.plasma.launchermenu"))) {
                 if (!applet->globalShortcut().isEmpty()) {
                     emit applet->activated();
@@ -2072,7 +2072,7 @@ void ShellCorona::activateTaskManagerEntry(int index)
     auto activateTaskManagerEntryOnContainment = [](const Plasma::Containment *c, int index) {
         const auto &applets = c->applets();
         for (auto *applet : applets) {
-            const auto &provides = KPluginMetaData::readStringList(applet->pluginMetaData().rawData(), QStringLiteral("X-Plasma-Provides"));
+            const auto &provides = applet->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
             if (provides.contains(QLatin1String("org.kde.plasma.multitasking"))) {
                 if (QQuickItem *appletInterface = applet->property("_plasma_graphicObject").value<QQuickItem *>()) {
                     const auto &childItems = appletInterface->childItems();
