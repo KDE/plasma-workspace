@@ -27,7 +27,6 @@
 #include <KWayland/Client/registry.h>
 #include <KWayland/Client/surface.h>
 #include <kpluginfactory.h>
-#include <kpluginloader.h>
 
 #if HAVE_X11
 #include <QX11Info>

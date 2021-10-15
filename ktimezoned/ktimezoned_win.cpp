@@ -24,7 +24,6 @@
 #include <klocale.h>
 
 #include <kpluginfactory.h>
-#include <kpluginloader.h>
 
 #ifdef Q_OS_WIN
 #include <Windows.h>
