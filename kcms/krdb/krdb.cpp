@@ -410,13 +410,34 @@ void runRdb(uint flags)
         if (dpi != 0)
             contents += "Xft.dpi: " + QString::number(dpi) + '\n';
         else {
-            KProcess proc;
-            proc << QStringLiteral("xrdb") << QStringLiteral("-quiet") << QStringLiteral("-remove") << QStringLiteral("-nocpp");
-            proc.start();
-            if (proc.waitForStarted()) {
-                proc.write(QByteArray("Xft.dpi\n"));
-                proc.closeWriteChannel();
-                proc.waitForFinished();
+            KProcess queryProc;
+            queryProc << QStringLiteral("xrdb") << QStringLiteral("-query");
+            queryProc.setOutputChannelMode(KProcess::OnlyStdoutChannel);
+            queryProc.start();
+            if (queryProc.waitForFinished()) {
+                QByteArray db = queryProc.readAllStandardOutput();
+                int idx1 = 0;
+                while (idx1 < db.size()) {
+                    int idx2 = db.indexOf('\n', idx1);
+                    if (idx2 == -1) {
+                        idx2 = db.size() - 1;
+                    }
+                    const auto entry = QByteArray::fromRawData(db.constData() + idx1, idx2 - idx1 + 1);
+                    if (entry.startsWith("Xft.dpi:")) {
+                        db.remove(idx1, entry.size());
+                    } else {
+                        idx1 = idx2 + 1;
+                    }
+                }
+
+                KProcess loadProc;
+                loadProc << QStringLiteral("xrdb") << QStringLiteral("-quiet") << QStringLiteral("-load") << QStringLiteral("-nocpp");
+                loadProc.start();
+                if (loadProc.waitForStarted()) {
+                    loadProc.write(db);
+                    loadProc.closeWriteChannel();
+                    loadProc.waitForFinished();
+                }
             }
         }
     }
