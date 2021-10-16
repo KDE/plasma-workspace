@@ -2053,16 +2053,28 @@ void ShellCorona::configurationChanged(const QString &path)
 
 void ShellCorona::activateLauncherMenu()
 {
+    auto activateLauncher = [](Plasma::Applet *applet) -> bool {
+        const auto provides = applet->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
+        if (provides.contains(QLatin1String("org.kde.plasma.launchermenu"))) {
+            if (!applet->globalShortcut().isEmpty()) {
+                emit applet->activated();
+                return true;
+            }
+        }
+        return false;
+    };
+
     for (auto it = m_panelViews.constBegin(), end = m_panelViews.constEnd(); it != end; ++it) {
         const auto applets = it.key()->applets();
         for (auto applet : applets) {
-            const auto provides = applet->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
-            if (provides.contains(QLatin1String("org.kde.plasma.launchermenu"))) {
-                if (!applet->globalShortcut().isEmpty()) {
-                    emit applet->activated();
-                    return;
-                }
+            if (activateLauncher(applet)) {
+                return;
             }
+        }
+    }
+    for (auto it = m_desktopViewforId.constBegin(), itEnd = m_desktopViewforId.constEnd(); it != itEnd; ++it) {
+        if (activateLauncher((*it)->containment())) {
+            return;
         }
     }
 }
