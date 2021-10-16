@@ -64,6 +64,8 @@ public:
     void handleFrame(struct pw_buffer *buffer);
     void process();
 
+    bool setAllowDmaBuf(bool allowed);
+
 Q_SIGNALS:
     void streamReady();
     void startStreaming();
@@ -85,4 +87,5 @@ private:
 
     spa_video_info_raw videoFormat;
     QString m_error;
+    bool m_allowDmaBuf = true;
 };

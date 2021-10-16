@@ -187,7 +187,7 @@ void PipeWireSourceStream::onStreamParamChanged(void *data, uint32_t id, const s
     uint8_t paramsBuffer[1024];
     spa_pod_builder pod_builder = SPA_POD_BUILDER_INIT(paramsBuffer, sizeof(paramsBuffer));
 
-    const auto bufferTypes = spa_pod_find_prop(format, nullptr, SPA_FORMAT_VIDEO_modifier)
+    const auto bufferTypes = pw->m_allowDmaBuf && spa_pod_find_prop(format, nullptr, SPA_FORMAT_VIDEO_modifier)
         ? (1 << SPA_DATA_DmaBuf) | (1 << SPA_DATA_MemFd) | (1 << SPA_DATA_MemPtr)
         : (1 << SPA_DATA_MemFd) | (1 << SPA_DATA_MemPtr);
 
@@ -269,8 +269,10 @@ bool PipeWireSourceStream::createStream(uint nodeid)
     params.reserve(formats.size() * 2);
     const EGLDisplay display = static_cast<EGLDisplay>(QGuiApplication::platformNativeInterface()->nativeResourceForIntegration("egldisplay"));
     for (spa_video_format format : formats) {
-        if (auto modifiers = queryDmaBufModifiers(display, format); modifiers.size() > 0) {
-            params += buildFormat(&podBuilder, format, modifiers);
+        if (m_allowDmaBuf) {
+            if (auto modifiers = queryDmaBufModifiers(display, format); modifiers.size() > 0) {
+                params += buildFormat(&podBuilder, format, modifiers);
+            }
         }
 
         params += buildFormat(&podBuilder, format, {});
