@@ -12,11 +12,19 @@ import "../components"
 
 Item {
     id: root
-    property bool viewVisible: false
     property bool debug: false
     property string notification
     property int interfaceVersion: org_kde_plasma_screenlocker_greeter_interfaceVersion ? org_kde_plasma_screenlocker_greeter_interfaceVersion : 0
     signal clearPassword()
+
+    // These are magical properties that kscreenlocker looks for
+    property bool viewVisible: false
+    property bool suspendToRamSupported: false
+    property bool suspendToDiskSupported: false
+
+    // These are magical signals that kscreenlocker looks for
+    signal suspendToDisk()
+    signal suspendToRam()
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true

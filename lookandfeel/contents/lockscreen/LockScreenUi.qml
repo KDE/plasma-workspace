@@ -256,6 +256,20 @@ PlasmaCore.ColorScope {
 
                 actionItems: [
                     ActionButton {
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Sleep")
+                        iconSource: "system-suspend"
+                        onClicked: root.suspendToRam()
+                        visible: root.suspendToRamSupported
+                        anchors.verticalCenter: parent.top
+                    },
+                    ActionButton {
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Hibernate")
+                        iconSource: "system-suspend-hibernate"
+                        onClicked: root.suspendToDisk()
+                        visible: root.suspendToDiskSupported
+                        anchors.verticalCenter: parent.top
+                    },
+                    ActionButton {
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
                         iconSource: "system-switch-user"
                         onClicked: {
