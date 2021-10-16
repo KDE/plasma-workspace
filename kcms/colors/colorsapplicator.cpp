@@ -150,6 +150,4 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         applyToAlien = group.readEntry("exportKDEColors", applyToAlien);
     }
     runRdb(KRdbExportQtColors | KRdbExportGtkTheme | (applyToAlien ? KRdbExportColors : 0));
-
-    notifyKcmChange(GlobalChangeType::PaletteChanged);
 }

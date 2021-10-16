@@ -8,6 +8,7 @@
 #include "colorsmodel.h"
 #include "colorssettings.h"
 
+#include "../kcms-common_p.h"
 #include "../krdb/krdb.h"
 
 #include <KColorScheme>
@@ -87,6 +88,7 @@ int main(int argc, char **argv)
                         QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(model->selectedScheme()));
                     applyScheme(path, settings->config());
                     settings->save();
+                    notifyKcmChange(GlobalChangeType::PaletteChanged);
                     ts << i18n("Successfully applied the color scheme %1 to your current Plasma session", requestedScheme) << Qt::endl;
                 } else {
                     ts << i18n("Could not find theme \"%1\". The theme should be one of the following options: %2",

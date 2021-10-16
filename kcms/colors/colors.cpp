@@ -46,6 +46,8 @@
 #include "colorssettings.h"
 #include "filterproxymodel.h"
 
+#include "../kcms-common_p.h"
+
 K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_colors.json", registerPlugin<KCMColors>(); registerPlugin<ColorsData>();)
 
 KCMColors::KCMColors(QObject *parent, const QVariantList &args)
@@ -354,6 +356,7 @@ void KCMColors::save()
         saveColors();
     }
     ManagedConfigModule::save();
+    notifyKcmChange(GlobalChangeType::PaletteChanged);
     m_activeSchemeEdited = false;
 
     processPendingDeletions();
