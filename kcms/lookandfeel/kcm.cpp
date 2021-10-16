@@ -518,6 +518,7 @@ void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
 
     writeNewDefaults(*m_config, configDefault, QStringLiteral("General"), QStringLiteral("ColorScheme"), scheme, KConfig::Notify);
     applyScheme(colorFile, m_config.data(), KConfig::Notify);
+    notifyKcmChange(GlobalChangeType::PaletteChanged);
 }
 
 void KCMLookandFeel::setIcons(const QString &theme)
