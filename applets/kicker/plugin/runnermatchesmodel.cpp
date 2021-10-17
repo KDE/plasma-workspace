@@ -65,18 +65,7 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
             }
         }
     } else if (role == Kicker::HasActionListRole) {
-        // Hack to expose the protected Plasma::AbstractRunner::actions() method.
-        class MyRunner : public Plasma::AbstractRunner
-        {
-        public:
-            using Plasma::AbstractRunner::actions;
-        };
-
-        MyRunner *runner = static_cast<MyRunner *>(match.runner());
-
-        Q_ASSERT(runner);
-
-        return match.runner()->id() == QLatin1String("services") || !runner->actions().isEmpty();
+        return match.runner()->id() == QLatin1String("services") || !match.runner()->findChildren<QAction *>().isEmpty();
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
         const QList<QAction *> actions = m_runnerManager->actionsForMatch(match);
