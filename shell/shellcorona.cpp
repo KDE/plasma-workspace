@@ -1126,6 +1126,9 @@ bool ShellCorona::isOutputRedundant(QScreen *screen) const
         if (screen == s) {
             continue;
         }
+        if (s->geometry().isNull()) {
+            return false;
+        }
 
         const QRect otherGeometry = s->geometry();
 
