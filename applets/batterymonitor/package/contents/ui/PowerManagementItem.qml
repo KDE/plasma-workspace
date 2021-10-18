@@ -83,11 +83,10 @@ ColumnLayout {
             InhibitionHint {
                 Layout.fillWidth: true
                 iconSource: inhibitions[index].Icon || ""
-                text: inhibitions[index].Reason ?
-                                                i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", inhibitions[index].Name, inhibitions[index].Reason)
-                                                : i18nc("Application name: reason for preventing sleep and screen locking", "%1: unknown reason", inhibitions[index].Name)
+                text: inhibitions[index].Reason
+                    ? i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", inhibitions[index].Name, inhibitions[index].Reason)
+                    : i18nc("Application name: reason for preventing sleep and screen locking", "%1: unknown reason", inhibitions[index].Name)
             }
         }
     }
 }
-

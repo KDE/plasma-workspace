@@ -209,5 +209,4 @@ Item {
             text: i18n("Your battery is configured to only charge up to %1%.", chargeStopThreshold || 0)
         }
     }
-
 }

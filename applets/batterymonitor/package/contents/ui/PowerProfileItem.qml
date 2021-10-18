@@ -44,7 +44,7 @@ RowLayout {
             id: profileSlider
             width: parent.width
 
-            readonly property var profileData:  [{
+            readonly property var profileData: [{
                 label: i18n("Power Save"),
                 profile: "power-saver",
                 inhibited: false
@@ -67,7 +67,7 @@ RowLayout {
                 if (!profileData[value].inhibited) {
                     activateProfileRequested(profileData[value].profile)
                 } else {
-                    value = Qt.binding(() => profileData.findIndex((profile => profile.profile == profileItem.activeProfile)))
+                    value = Qt.binding(() => profileData.findIndex(profile => profile.profile == profileItem.activeProfile))
                 }
             }
             // fake having a disabled second half
@@ -91,7 +91,7 @@ RowLayout {
                 PlasmaComponents3.Label {
                     horizontalAlignment: index == 0 ? Text.AlignLeft : (index == profileSlider.profileData.length - 1 ? Text.AlignRight : Text.AlignHCenter)
                     Layout.fillWidth: true
-                    Layout.preferredWidth: 50   // Common width for better alignment
+                    Layout.preferredWidth: 50 // Common width for better alignment
                     // Disable label for inhibited items to reinforce unavailability
                     enabled: !profileSlider.profileData[index].inhibited
 
@@ -106,15 +106,13 @@ RowLayout {
             visible: inhibitionReason
             width: parent.width
             iconSource: "dialog-information"
-            text: {
-                switch(inhibitionReason) {
+            text: switch(inhibitionReason) {
                 case "lap-detected":
                     return i18n("Performance mode has been disabled to reduce heat generation because the computer has detected that it may be sitting on your lap.")
                 case "high-operating-temperature":
                     return i18n("Performance mode is unavailable because the computer is running too hot.")
                 default:
                     return i18n("Performance mode is unavailable.")
-                }
             }
         }
         InhibitionHint {
@@ -125,27 +123,27 @@ RowLayout {
                 case "lap-detected":
                     return i18n("Performance may be lowered to reduce heat generation because the computer has detected that it may be sitting on your lap.")
                 case "high-operating-temperature":
-                     return i18n("Performance may be reduced because the computer is running too hot.")
+                    return i18n("Performance may be reduced because the computer is running too hot.")
                 default:
-                  return i18n("Performance may be reduced.")
+                    return i18n("Performance may be reduced.")
             }
         }
 
         InhibitionHint {
             visible: holdRepeater.count > 0
             text: i18np("One application has requested activating %2:",
-                        "%1 applications have requested activating %2:", holdRepeater.count,
-                        profileSlider.profileData.find((profile) => profile.profile == profileItem.activeProfile).label)
+                        "%1 applications have requested activating %2:",
+                        holdRepeater.count,
+                        profileSlider.profileData.find(profile => profile.profile == profileItem.activeProfile).label)
         }
         Repeater {
             id: holdRepeater
-            model: profileItem.profileHolds.filter((hold) => hold.Profile == profileItem.activeProfile)
+            model: profileItem.profileHolds.filter(hold => hold.Profile == profileItem.activeProfile)
             InhibitionHint {
                 x: PlasmaCore.Units.smallSpacing
                 iconSource: modelData.Icon
-                text: i18nc("%1 is the name of the application, %2 is the reason provided by it for activating performance mode","%1: %2", modelData.Name, modelData.Reason)
+                text: i18nc("%1 is the name of the application, %2 is the reason provided by it for activating performance mode", "%1: %2", modelData.Name, modelData.Reason)
             }
         }
-
     }
 }

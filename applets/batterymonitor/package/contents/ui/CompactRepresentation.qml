@@ -17,9 +17,8 @@ MouseArea {
     readonly property bool isConstrained: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
     property real brightnessError: 0
 
-
     onClicked: plasmoid.expanded = !plasmoid.expanded
-    
+
     onWheel: {
         var delta = wheel.angleDelta.y || wheel.angleDelta.x
 
@@ -41,8 +40,6 @@ MouseArea {
         }
         batterymonitor.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, newBrightness));
     }
-
-
 
     //Should we consider turning this into a Flow item?
     Row {

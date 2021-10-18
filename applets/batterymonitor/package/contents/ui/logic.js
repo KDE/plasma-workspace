@@ -16,7 +16,7 @@ function stringForBatteryState(batteryData) {
             default: return i18n("Not Charging");
         }
     } else {
-        return i18nc("Battery is currently not present in the bay","Not present");
+        return i18nc("Battery is currently not present in the bay", "Not present");
     }
 }
 
