@@ -89,7 +89,11 @@ RowLayout {
             Repeater {
                 model: profileSlider.profileData
                 PlasmaComponents3.Label {
-                    horizontalAlignment: index == 0 ? Text.AlignLeft : (index == profileSlider.profileData.length - 1 ? Text.AlignRight : Text.AlignHCenter)
+                    // At the time of writing, QtQuick/Positioner QML Type does not support Layouts
+                    readonly property bool isFirstItem: index === 0
+                    readonly property bool isLastItem: index === profileSlider.profileData.length - 1
+
+                    horizontalAlignment: isFirstItem ? Text.AlignLeft : (isLastItem ? Text.AlignRight : Text.AlignHCenter)
                     Layout.fillWidth: true
                     Layout.preferredWidth: 50 // Common width for better alignment
                     // Disable label for inhibited items to reinforce unavailability
