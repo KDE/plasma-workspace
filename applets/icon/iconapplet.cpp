@@ -128,7 +128,7 @@ void IconApplet::populate()
                 // if this restriction is set, KIO won't allow running desktop files from outside
                 // registered services, applications, and so on, in this case we'll use the original
                 // .desktop file and lose the ability to customize it
-                if (!KAuthorized::authorize(QStringLiteral("run_desktop_files"))) {
+                if (!KAuthorized::authorize(KAuthorized::RUN_DESKTOP_FILES)) {
                     populateFromDesktopFile(localUrlString);
                     // we don't call setLocalPath here as we don't want to store localPath to be a system-location
                     // so that the fact that we cannot edit is re-evaluated every time
@@ -491,7 +491,7 @@ bool IconApplet::isAcceptableDrag(QObject *dropEvent)
     QMimeDatabase db;
     const QMimeType mimeType = db.mimeTypeForUrl(m_url);
 
-    if (KAuthorized::authorize(QStringLiteral("shell_access")) && isExecutable(mimeType)) {
+    if (KAuthorized::authorize(KAuthorized::SHELL_ACCESS) && isExecutable(mimeType)) {
         return true;
     }
 

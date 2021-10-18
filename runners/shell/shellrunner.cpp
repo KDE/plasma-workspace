@@ -28,7 +28,7 @@ ShellRunner::ShellRunner(QObject *parent, const KPluginMetaData &metaData, const
     // The results from the services runner are preferred, consequently we set a low priority
     setPriority(AbstractRunner::LowestPriority);
     // If the runner is not authorized we can suspend it
-    bool enabled = KAuthorized::authorize(QStringLiteral("run_command")) && KAuthorized::authorize(QStringLiteral("shell_access"));
+    bool enabled = KAuthorized::authorize(QStringLiteral("run_command")) && KAuthorized::authorize(KAuthorized::SHELL_ACCESS);
     suspendMatching(!enabled);
 
     addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds commands that match :q:, using common shell syntax")));

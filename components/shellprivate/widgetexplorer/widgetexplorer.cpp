@@ -195,7 +195,7 @@ QList<QObject *> WidgetExplorer::widgetsMenuActions()
 
     WidgetAction *action = nullptr;
 
-    if (KAuthorized::authorize(QStringLiteral("ghns"))) {
+    if (KAuthorized::authorize(KAuthorized::GHNS)) {
         action = new WidgetAction(QIcon::fromTheme(QStringLiteral("internet-services")), i18n("Download New Plasma Widgets"), this);
         connect(action, &QAction::triggered, this, &WidgetExplorer::downloadWidgets);
         actionList << action;
