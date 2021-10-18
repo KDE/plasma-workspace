@@ -68,6 +68,14 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
     for (auto item : colorSetGroupList) {
         configOutput->deleteGroup(item);
 
+        // Not all color schemes have header colors; in this case we don't want
+        // to write out any header color data because then various things will think
+        // the color scheme *does* have header colors, which it mostly doesn't, and
+        // things will visually break in creative ways
+        if (item == QStringLiteral("Colors:Header") && !config->hasGroup(QStringLiteral("Colors:Header"))) {
+            continue;
+        }
+
         KConfigGroup sourceGroup(config, item);
         KConfigGroup targetGroup(configOutput, item);
 
