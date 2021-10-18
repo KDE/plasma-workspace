@@ -57,7 +57,7 @@ Item {
     }
 
     Plasmoid.toolTipSubText: {
-        var parts = [];
+        const parts = [];
 
         // Add special text for the "plugged in but still discharging" case
         if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"] && pmSource.data.Battery.State === "Discharging") {
@@ -67,7 +67,7 @@ Item {
         if (batteries.count === 0) {
             parts.push("No Batteries Available");
         } else if (remainingTime > 0) {
-            var remainingTimeString = KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds);
+            const remainingTimeString = KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds);
             if (pmSource.data["Battery"]["State"] === "FullyCharged") {
                 // Don't add anything
             } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {

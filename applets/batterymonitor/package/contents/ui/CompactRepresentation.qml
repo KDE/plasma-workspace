@@ -20,23 +20,24 @@ MouseArea {
     onClicked: plasmoid.expanded = !plasmoid.expanded
 
     onWheel: {
-        var delta = wheel.angleDelta.y || wheel.angleDelta.x
+        const delta = wheel.angleDelta.y || wheel.angleDelta.x
 
-        var maximumBrightness = batterymonitor.maximumScreenBrightness
+        const maximumBrightness = batterymonitor.maximumScreenBrightness
         // Don't allow the UI to turn off the screen
         // Please see https://git.reviewboard.kde.org/r/122505/ for more information
-        var minimumBrightness = (maximumBrightness > 100 ? 1 : 0)
-        var stepSize = Math.max(1, maximumBrightness / 20)
+        const minimumBrightness = (maximumBrightness > 100 ? 1 : 0)
+        const stepSize = Math.max(1, maximumBrightness / 20)
 
+        let newBrightness;
         if (Math.abs(delta) < 120) {
             // Touchpad scrolling
-            brightnessError += delta * stepSize / 120
-            var change = Math.round(brightnessError);
-            var newBrightness = batterymonitor.screenBrightness + change
-            brightnessError -= change
+            brightnessError += delta * stepSize / 120;
+            const change = Math.round(brightnessError);
+            brightnessError -= change;
+            newBrightness = batterymonitor.screenBrightness + change;
         } else {
             // Discrete/wheel scrolling
-            var newBrightness = Math.round(batterymonitor.screenBrightness/stepSize + delta/120) * stepSize
+            newBrightness = Math.round(batterymonitor.screenBrightness/stepSize + delta/120) * stepSize;
         }
         batterymonitor.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, newBrightness));
     }
