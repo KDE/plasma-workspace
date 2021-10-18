@@ -55,25 +55,25 @@ RowLayout {
             }, {
                 label: i18n("Performance"),
                 profile: "performance",
-                inhibited: profileItem.inhibitionReason != ""
+                inhibited: profileItem.inhibitionReason !== ""
             }]
 
             from: 0
             to: 2
             stepSize: 1
-            value: profileData.findIndex((profile => profile.profile == profileItem.activeProfile))
+            value: profileData.findIndex((profile => profile.profile === profileItem.activeProfile))
             snapMode: PlasmaComponents3.Slider.SnapAlways
             onMoved: {
                 if (!profileData[value].inhibited) {
                     activateProfileRequested(profileData[value].profile)
                 } else {
-                    value = Qt.binding(() => profileData.findIndex(profile => profile.profile == profileItem.activeProfile))
+                    value = Qt.binding(() => profileData.findIndex(profile => profile.profile === profileItem.activeProfile))
                 }
             }
             // fake having a disabled second half
             Rectangle {
                 z: -1
-                visible: profileItem.inhibitionReason != ""
+                visible: profileItem.inhibitionReason !== ""
                 color: PlasmaCore.Theme.backgroundColor
                 anchors.left: parent.horizontalCenter
                 anchors.leftMargin: 1
@@ -116,7 +116,7 @@ RowLayout {
             }
         }
         InhibitionHint {
-            visible: activeProfile == "performance" && degradationReason
+            visible: activeProfile === "performance" && degradationReason
             width: parent.width
             iconSource: "dialog-information"
             text: switch(degradationReason) {
@@ -134,11 +134,11 @@ RowLayout {
             text: i18np("One application has requested activating %2:",
                         "%1 applications have requested activating %2:",
                         holdRepeater.count,
-                        profileSlider.profileData.find(profile => profile.profile == profileItem.activeProfile).label)
+                        profileSlider.profileData.find(profile => profile.profile === profileItem.activeProfile).label)
         }
         Repeater {
             id: holdRepeater
-            model: profileItem.profileHolds.filter(hold => hold.Profile == profileItem.activeProfile)
+            model: profileItem.profileHolds.filter(hold => hold.Profile === profileItem.activeProfile)
             InhibitionHint {
                 x: PlasmaCore.Units.smallSpacing
                 iconSource: modelData.Icon
