@@ -172,7 +172,7 @@ void FileInfo::mimeTypeFound(const QString &mimeType)
     } else {
         m_openAction->setText(i18n("Open with…"));
         m_openAction->setIcon(QIcon::fromTheme(QStringLiteral("system-run")));
-        m_openAction->setEnabled(KAuthorized::authorizeAction(QStringLiteral("openwith")));
+        m_openAction->setEnabled(KAuthorized::authorizeAction(KAuthorized::OPEN_WITH));
     }
 
     Q_EMIT mimeTypeChanged();
