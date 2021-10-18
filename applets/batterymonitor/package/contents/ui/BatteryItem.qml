@@ -43,7 +43,6 @@ Item {
         }
 
         Repeater {
-            id: detailsRepeater
             model: Logic.batteryDetails(batteryItem.battery, batterymonitor.remainingTime)
 
             PlasmaComponents3.Label {
