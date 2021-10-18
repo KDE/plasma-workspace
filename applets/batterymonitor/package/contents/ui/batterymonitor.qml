@@ -46,9 +46,9 @@ Item {
         if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
             const state = pmSource.data.Battery.State;
             if (state === "NoCharge") {
-                return i18n("Battery at %1%, not Charging", percent);
+                return i18n("Battery at %1%, Not Charging", percent);
             } else if (state === "Discharging") {
-                return i18n("Battery at %1%, plugged in but still discharging", percent);
+                return i18n("Battery at %1%, Plugged in but still Discharging", percent);
             } else if (state === "Charging") {
                 return i18n("Battery at %1%, Charging", percent);
             }
@@ -71,12 +71,12 @@ Item {
             if (pmSource.data["Battery"]["State"] === "FullyCharged") {
                 // Don't add anything
             } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
-                parts.push(i18nc("time until fully charged - HH:MM","%1 until fully charged", remainingTimeString));
+                parts.push(i18nc("Time until fully charged - HH:MM","%1 until fully charged", remainingTimeString));
             } else {
-                parts.push(i18nc("remaining time left of battery usage - HH:MM","%1 remaining", remainingTimeString));
+                parts.push(i18nc("Remaining time left of battery usage - HH:MM","%1 remaining", remainingTimeString));
             }
         } else if (pmSource.data.Battery.State === "NoCharge") {
-            parts.push(i18n("Not charging"))
+            parts.push(i18n("Not Charging"))
         } // otherwise, don't add anything
 
         if (powermanagementDisabled) {
