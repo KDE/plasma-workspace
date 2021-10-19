@@ -78,6 +78,8 @@ ColumnLayout {
                 clearButtonShown: true
                 Layout.fillWidth: true
 
+                inputMethodHints: Qt.ImhNoPredictiveText
+
                 // Only override delete key behavior to delete list items if
                 // it would do nothing
                 Keys.enabled: filter.text.length == 0 || filter.cursorPosition == filter.length

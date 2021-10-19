@@ -41,6 +41,7 @@ ColumnLayout {
         id: filter
         Layout.fillWidth: true
         placeholderText: i18nd("kholidays_calendar_plugin", "Search…")
+        inputMethodHints: Qt.ImhNoPredictiveText
     }
 
     // Still QQC1 bevcause there's no QQC2 TableView
