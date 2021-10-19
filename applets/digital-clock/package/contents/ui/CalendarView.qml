@@ -192,7 +192,7 @@ PlasmaExtras.Representation {
                 icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-next" : "go-previous"
                 onClicked: monthView.previousView()
                 Accessible.name: tooltip
-                PlasmaComponents3.ToolTip {
+                PlasmaComponents3.ToolTip { // TODO Not sure how to do this one
                     text: {
                         switch(monthView.calendarViewDisplayed) {
                             case PlasmaCalendar.MonthView.CalendarView.DayView:
