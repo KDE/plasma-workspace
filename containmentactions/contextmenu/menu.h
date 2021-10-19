@@ -30,11 +30,13 @@ public:
 public Q_SLOTS:
     void runCommand();
     void startLogout();
+    void configureDisplays();
 
 private:
     QAction *m_runCommandAction;
     QAction *m_lockScreenAction;
     QAction *m_logoutAction;
+    QAction *m_configureDisplaysAction;
     QAction *m_separator1;
     QAction *m_separator2;
     QAction *m_separator3;

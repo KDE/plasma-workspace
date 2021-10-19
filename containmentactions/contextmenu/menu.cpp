@@ -14,6 +14,7 @@
 #include <KActionCollection>
 #include <KAuthorized>
 #include <KGlobalAccel>
+#include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
 #include <QDebug>
 #include <QIcon>
@@ -30,6 +31,7 @@ ContextMenu::ContextMenu(QObject *parent, const QVariantList &args)
     , m_runCommandAction(nullptr)
     , m_lockScreenAction(nullptr)
     , m_logoutAction(nullptr)
+    , m_configureDisplaysAction(nullptr)
     , m_separator1(nullptr)
     , m_separator2(nullptr)
     , m_separator3(nullptr)
@@ -52,6 +54,8 @@ void ContextMenu::restore(const KConfigGroup &config)
     QHash<QString, bool> actions;
     QSet<QString> disabled;
 
+    // clang-format off
+    // because it really wants to mangle this nice aligned list
     if (c->containmentType() == Plasma::Types::PanelContainment || c->containmentType() == Plasma::Types::CustomPanelContainment) {
         m_actionOrder << QStringLiteral("add widgets")
                       << QStringLiteral("_add panel")
@@ -61,6 +65,7 @@ void ContextMenu::restore(const KConfigGroup &config)
     } else {
         actions.insert(QStringLiteral("configure shortcuts"), false);
         m_actionOrder << QStringLiteral("configure")
+                      << QStringLiteral("_display_settings")
                       << QStringLiteral("run associated application")
                       << QStringLiteral("configure shortcuts")
                       << QStringLiteral("_sep1")
@@ -79,6 +84,7 @@ void ContextMenu::restore(const KConfigGroup &config)
         disabled.insert(QStringLiteral("configure shortcuts"));
         disabled.insert(QStringLiteral("_run_command"));
     }
+    // clang-format on
 
     for (const QString &name : qAsConst(m_actionOrder)) {
         actions.insert(name, !disabled.contains(name));
@@ -114,6 +120,10 @@ void ContextMenu::restore(const KConfigGroup &config)
             m_logoutAction->setEnabled(m_session->canLogout());
         });
         connect(m_logoutAction, &QAction::triggered, this, &ContextMenu::startLogout);
+
+        m_configureDisplaysAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Configure Display Settings…"), this);
+        m_configureDisplaysAction->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-display")));
+        connect(m_configureDisplaysAction, &QAction::triggered, this, &ContextMenu::configureDisplays);
 
         m_separator1 = new QAction(this);
         m_separator1->setSeparator(true);
@@ -183,6 +193,10 @@ QAction *ContextMenu::action(const QString &name)
         if (KAuthorized::authorize(QStringLiteral("logout"))) {
             return m_logoutAction;
         }
+    } else if (name == QLatin1String("_display_settings")) {
+        if (KAuthorized::authorizeControlModule(QStringLiteral("kcm_kscreen.desktop")) && KService::serviceByStorageId(QStringLiteral("kcm_kscreen"))) {
+            return m_configureDisplaysAction;
+        }
     } else if (name == QLatin1String("edit mode")) {
         if (c->corona()) {
             return c->corona()->actions()->action(QStringLiteral("edit mode"));
@@ -224,6 +238,27 @@ void ContextMenu::startLogout()
         m_session->requestLogout();
         break;
     }
+}
+
+// FIXME: this function contains some code copied from KCMShell::openSystemSettings()
+// which is not publicly available to C++ code right now. Eventually we should
+// move that code into KIO so it's accessible to everyone, and then call that
+// function instead of this one
+void ContextMenu::configureDisplays()
+{
+    const QString systemSettings = QStringLiteral("systemsettings");
+    const QString kscreenKCM = QStringLiteral("kcm_kscreen");
+
+    KIO::CommandLauncherJob *job = nullptr;
+
+    // Open in System Settings if it's available
+    if (KService::serviceByDesktopName(systemSettings)) {
+        job = new KIO::CommandLauncherJob(QStringLiteral("systemsettings5"), {kscreenKCM});
+        job->setDesktopName(systemSettings);
+    } else {
+        job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell5"), {kscreenKCM});
+    }
+    job->start();
 }
 
 QWidget *ContextMenu::createConfigurationInterface(QWidget *parent)

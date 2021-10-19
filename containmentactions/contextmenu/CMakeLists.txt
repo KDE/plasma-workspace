@@ -20,4 +20,5 @@ target_link_libraries(plasma_containmentactions_contextmenu
                       KF5::Plasma
                       KF5::XmlGui
                       KF5::KIOCore
+                      KF5::KIOGui
                       PW::KWorkspace)
