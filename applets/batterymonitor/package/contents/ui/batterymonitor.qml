@@ -37,50 +37,58 @@ Item {
 
     Plasmoid.toolTipMainText: {
         if (batteries.count === 0 || !pmSource.data["Battery"]["Has Cumulative"]) {
-            return plasmoid.title
-        } else if (pmSource.data["Battery"]["State"] === "FullyCharged") {
-            return i18n("Fully Charged");
+            return plasmoid.title;
         }
 
         const percent = pmSource.data.Battery.Percent;
-        if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
-            const state = pmSource.data.Battery.State;
-            if (state === "NoCharge") {
-                return i18n("Battery at %1%, Not Charging", percent);
-            } else if (state === "Discharging") {
-                return i18n("Battery at %1%, Plugged in but still Discharging", percent);
-            } else if (state === "Charging") {
-                return i18n("Battery at %1%, Charging", percent);
-            }
+        const state = pmSource.data.Battery.State;
+
+        if (state === "FullyCharged") {
+            return i18n("Fully Charged");
         }
+
         return i18n("Battery at %1%", percent);
     }
 
     Plasmoid.toolTipSubText: {
         const parts = [];
+        const state = pmSource.data.Battery.State;
 
-        // Add special text for the "plugged in but still discharging" case
-        if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"] && pmSource.data.Battery.State === "Discharging") {
-            parts.push(i18n("The power supply is not powerful enough to charge the battery"))
-        }
+        // === header part ===
 
         if (batteries.count === 0) {
             parts.push("No Batteries Available");
         } else if (remainingTime > 0) {
             const remainingTimeString = KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds);
-            if (pmSource.data["Battery"]["State"] === "FullyCharged") {
-                // Don't add anything
-            } else if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"]) {
-                parts.push(i18nc("Time until fully charged - HH:MM","%1 until fully charged", remainingTimeString));
-            } else {
-                parts.push(i18nc("Remaining time left of battery usage - HH:MM","%1 remaining", remainingTimeString));
+            // Don't add anything for fully charged
+            if (state !== "FullyCharged") {
+                if (isPluggedInToACAdapter) {
+                    parts.push(i18nc("Time until fully charged - HH:MM", "%1 until fully charged", remainingTimeString));
+                } else {
+                    parts.push(i18nc("Remaining time left of battery usage - HH:MM", "%1 remaining", remainingTimeString));
+                }
             }
-        } else if (pmSource.data.Battery.State === "NoCharge") {
-            parts.push(i18n("Not Charging"))
-        } // otherwise, don't add anything
+        } else if (state === "NoCharge") {
+            parts.push(i18n("Not Charging"));
+        } // Otherwise, don't add anything
 
-        if (powermanagementDisabled) {
-            parts.push(i18n("Automatic sleep and screen locking are disabled"));
+        // === auxiliary parts ===
+
+        // Add special text for the "plugged in but still discharging" case
+        if (isPluggedInToACAdapter && state === "Discharging") {
+            if (parts.length !== 0) {
+                parts.push(""); // add separator if needed
+            }
+            parts.push(i18n("Plugged in but still discharging."));
+            parts.push(i18nc("Insert a line break if needed to match the width of messages above",
+                             "The power supply is not powerful\nenough to charge the battery."));
+        }
+
+        if (powermanagementDisabled || inhibitions.length !== 0) {
+            if (parts.length !== 0) {
+                parts.push(""); // add separator if needed
+            }
+            parts.push(i18n("Automatic sleep and screen locking are disabled."));
         }
         return parts.join("\n");
     }
@@ -94,6 +102,8 @@ Item {
 
     property int keyboardBrightness
     readonly property int maximumKeyboardBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Keyboard Brightness"] || 0 : 0
+
+    readonly property bool isPluggedInToACAdapter: pmSource.data["AC Adapter"] ? pmSource.data["AC Adapter"]["Plugged in"] : false
 
     readonly property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
 
