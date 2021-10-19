@@ -136,9 +136,9 @@ PlasmaExtras.Representation {
                 visible: plasmoid.action("configure").enabled
                 icon.name: "configure"
                 onClicked: plasmoid.action("configure").trigger()
-                PlasmaComponents3.ToolTip {
-                    text: plasmoid.action("configure").text
-                }
+                PlasmaComponents3.ToolTip.text: plasmoid.action("configure").text
+                PlasmaComponents3.ToolTip.visible: hovered
+                PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
             }
 
             // Allows the user to keep the calendar open for reference
@@ -149,9 +149,9 @@ PlasmaExtras.Representation {
                 checked: plasmoid.configuration.pin
                 onToggled: plasmoid.configuration.pin = checked
                 icon.name: "window-pin"
-                PlasmaComponents3.ToolTip {
-                    text: i18n("Keep Open")
-                }
+                PlasmaComponents3.ToolTip.text: i18n("Keep Open")
+                PlasmaComponents3.ToolTip.visible: hovered
+                PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
             }
 
             PlasmaComponents3.TabBar {
@@ -227,7 +227,7 @@ PlasmaExtras.Representation {
                 icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-previous" : "go-next"
                 onClicked: monthView.nextView()
                 Accessible.name: tooltip
-                PlasmaComponents3.ToolTip {
+                PlasmaComponents3.ToolTip { // TODO Not sure how to do this one
                     text: {
                         switch(monthView.calendarViewDisplayed) {
                             case PlasmaCalendar.MonthView.CalendarView.DayView:
@@ -389,10 +389,9 @@ PlasmaExtras.Representation {
                             return !(startIsMidnight && endIsMidnight && sameDay);
                         }
 
-                        PlasmaComponents3.ToolTip {
-                            text: modelData.description
-                            visible: text !== "" && eventItem.hovered
-                        }
+                        PlasmaComponents3.ToolTip.text: modelData.description
+                        PlasmaComponents3.ToolTip.visible: text !== "" && eventItem.hovered
+                        PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
 
                         contentItem: GridLayout {
                             id: eventGrid
@@ -520,9 +519,9 @@ PlasmaExtras.Representation {
                     icon.name: "preferences-system-time"
                     onClicked: KCMShell.openSystemSettings("clock")
 
-                    PlasmaComponents3.ToolTip {
-                        text: i18n("Switch to another timezone")
-                    }
+                    PlasmaComponents3.ToolTip.text: i18n("Switch to another timezone")
+                    PlasmaComponents3.ToolTip.visible: hovered
+                    PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
                 }
             }
         }

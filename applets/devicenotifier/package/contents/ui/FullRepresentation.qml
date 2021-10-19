@@ -34,9 +34,9 @@ PlasmaComponents3.Page {
             icon.name: "media-eject"
             text: i18n("Remove All")
 
-            PlasmaComponents3.ToolTip {
-                text: i18n("Click to safely remove all devices")
-            }
+            PlasmaComponents3.ToolTip.text: i18n("Click to safely remove all devices")
+            PlasmaComponents3.ToolTip.visible: hovered
+            PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
         }
     }
     

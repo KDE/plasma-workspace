@@ -20,9 +20,9 @@ RowLayout {
         icon.name: "system-run"
         onClicked: menuItem.action(UuidRole)
 
-        PlasmaComponents3.ToolTip {
-            text: i18n("Invoke action")
-        }
+        PlasmaComponents3.ToolTip.text: i18n("Invoke action")
+        PlasmaComponents3.ToolTip.visible: hovered
+        PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
         KeyNavigation.right: barcodeToolButton
     }
     PlasmaComponents3.ToolButton {
@@ -31,9 +31,9 @@ RowLayout {
         visible: supportsBarcodes
         onClicked: menuItem.barcode(DisplayRole)
 
-        PlasmaComponents3.ToolTip {
-            text: i18n("Show QR code")
-        }
+        PlasmaComponents3.ToolTip.text: i18n("Show QR code")
+        PlasmaComponents3.ToolTip.visible: hovered
+        PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
         KeyNavigation.right: editToolButton
     }
     PlasmaComponents3.ToolButton {
@@ -43,9 +43,9 @@ RowLayout {
         visible: TypeRole === 0
         onClicked: menuItem.edit(UuidRole)
 
-        PlasmaComponents3.ToolTip {
-            text: i18n("Edit contents")
-        }
+        PlasmaComponents3.ToolTip.text: i18n("Edit contents")
+        PlasmaComponents3.ToolTip.visible: hovered
+        PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
         KeyNavigation.right: deleteToolButton
     }
     PlasmaComponents3.ToolButton {
@@ -53,8 +53,8 @@ RowLayout {
         icon.name: "edit-delete"
         onClicked: menuItem.remove(UuidRole)
 
-        PlasmaComponents3.ToolTip {
-            text: i18n("Remove from history")
-        }
+        PlasmaComponents3.ToolTip.text: i18n("Remove from history")
+        PlasmaComponents3.ToolTip.visible: hovered
+        PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
     }
 }
