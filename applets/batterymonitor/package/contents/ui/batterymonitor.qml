@@ -28,7 +28,7 @@ Item {
         }
 
         if (pmSource.data.Battery["Has Cumulative"]
-            && pmSource.data["Battery"]["State"] !== "FullyCharged") {
+            && !(pmSource.data["Battery"]["State"] === "FullyCharged" && pmSource.data["AC Adapter"]["Plugged in"])) {
             return PlasmaCore.Types.ActiveStatus
         }
 
