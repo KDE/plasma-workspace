@@ -15,6 +15,7 @@ import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.digitalclock 1.0
+import org.kde.kirigami 2.12 as Kirigami
 
 // Top-level layout containing:
 // - Left column with world clock and agenda view
