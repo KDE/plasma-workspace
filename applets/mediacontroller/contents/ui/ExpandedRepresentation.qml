@@ -427,8 +427,8 @@ PlasmaExtras.Representation {
                     }
 
                     PlasmaComponents3.ToolTip.text: parent.Accessible.name
-                    PlasmaComponents3.ToolTip.visible: hovered
-                    PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+                    PlasmaComponents3.ToolTip.visible: hovered || pressed
+                    PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
                 }
 
                 PlasmaComponents3.ToolButton { // Previous
@@ -490,8 +490,8 @@ PlasmaExtras.Representation {
                     }
 
                     PlasmaComponents3.ToolTip.text: parent.Accessible.name
-                    PlasmaComponents3.ToolTip.visible: hovered
-                    PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+                    PlasmaComponents3.ToolTip.visible: hovered || pressed
+                    PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
                 }
             }
         }
@@ -524,8 +524,8 @@ PlasmaExtras.Representation {
                     icon.height: PlasmaCore.Units.iconSizes.smallMedium
                     Accessible.name: modelData["text"]
                     PlasmaComponents3.ToolTip.text: modelData["text"]
-                    PlasmaComponents3.ToolTip.visible: hovered
-                    PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+                    PlasmaComponents3.ToolTip.visible: hovered || pressed
+                    PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
                     // Keep the delegate centered by offsetting the padding removed in the parent
                     bottomPadding: verticalPadding + headerItem.bottomPadding
                     topPadding: verticalPadding - headerItem.bottomPadding

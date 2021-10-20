@@ -21,8 +21,8 @@ RowLayout {
         onClicked: menuItem.action(UuidRole)
 
         PlasmaComponents3.ToolTip.text: i18n("Invoke action")
-        PlasmaComponents3.ToolTip.visible: hovered
-        PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+        PlasmaComponents3.ToolTip.visible: hovered || pressed
+        PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
         KeyNavigation.right: barcodeToolButton
     }
     PlasmaComponents3.ToolButton {
@@ -32,8 +32,8 @@ RowLayout {
         onClicked: menuItem.barcode(DisplayRole)
 
         PlasmaComponents3.ToolTip.text: i18n("Show QR code")
-        PlasmaComponents3.ToolTip.visible: hovered
-        PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+        PlasmaComponents3.ToolTip.visible: hovered || pressed
+        PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
         KeyNavigation.right: editToolButton
     }
     PlasmaComponents3.ToolButton {
@@ -44,8 +44,8 @@ RowLayout {
         onClicked: menuItem.edit(UuidRole)
 
         PlasmaComponents3.ToolTip.text: i18n("Edit contents")
-        PlasmaComponents3.ToolTip.visible: hovered
-        PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+        PlasmaComponents3.ToolTip.visible: hovered || pressed
+        PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
         KeyNavigation.right: deleteToolButton
     }
     PlasmaComponents3.ToolButton {
@@ -54,7 +54,7 @@ RowLayout {
         onClicked: menuItem.remove(UuidRole)
 
         PlasmaComponents3.ToolTip.text: i18n("Remove from history")
-        PlasmaComponents3.ToolTip.visible: hovered
-        PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+        PlasmaComponents3.ToolTip.visible: hovered || pressed
+        PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
     }
 }

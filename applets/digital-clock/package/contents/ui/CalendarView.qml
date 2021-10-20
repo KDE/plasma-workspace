@@ -137,8 +137,8 @@ PlasmaExtras.Representation {
                 icon.name: "configure"
                 onClicked: plasmoid.action("configure").trigger()
                 PlasmaComponents3.ToolTip.text: plasmoid.action("configure").text
-                PlasmaComponents3.ToolTip.visible: hovered
-                PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+                PlasmaComponents3.ToolTip.visible: hovered || pressed
+                PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
             }
 
             // Allows the user to keep the calendar open for reference
@@ -150,8 +150,8 @@ PlasmaExtras.Representation {
                 onToggled: plasmoid.configuration.pin = checked
                 icon.name: "window-pin"
                 PlasmaComponents3.ToolTip.text: i18n("Keep Open")
-                PlasmaComponents3.ToolTip.visible: hovered
-                PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+                PlasmaComponents3.ToolTip.visible: hovered || pressed
+                PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
             }
 
             PlasmaComponents3.TabBar {
@@ -204,8 +204,8 @@ PlasmaExtras.Representation {
                                 return "";
                         }
                     }
-                PlasmaComponents3.ToolTip.visible: hovered
-                PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+                PlasmaComponents3.ToolTip.visible: hovered || pressed
+                PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
             }
 
             PlasmaComponents3.ToolButton {
@@ -239,8 +239,8 @@ PlasmaExtras.Representation {
                                  return "";
                          }
                      }
-                PlasmaComponents3.ToolTip.visible: hovered
-                PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+                PlasmaComponents3.ToolTip.visible: hovered || pressed
+                PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
             }
         }
     }
@@ -390,8 +390,8 @@ PlasmaExtras.Representation {
                         }
 
                         PlasmaComponents3.ToolTip.text: modelData.description
-                        PlasmaComponents3.ToolTip.visible: text !== "" && eventItem.hovered
-                        PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+                        PlasmaComponents3.ToolTip.visible: text !== "" && eventItem.hovered || pressed
+                        PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
 
                         contentItem: GridLayout {
                             id: eventGrid
@@ -520,8 +520,8 @@ PlasmaExtras.Representation {
                     onClicked: KCMShell.openSystemSettings("clock")
 
                     PlasmaComponents3.ToolTip.text: i18n("Switch to another timezone")
-                    PlasmaComponents3.ToolTip.visible: hovered
-                    PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+                    PlasmaComponents3.ToolTip.visible: hovered || pressed
+                    PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
                 }
             }
         }

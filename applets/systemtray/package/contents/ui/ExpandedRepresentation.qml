@@ -110,7 +110,7 @@ Item {
                     }
                 }
                 PlasmaComponents.ToolTip.text: actionsButton.singleAction ? actionsButton.singleAction.text : i18n("More actions")
-                PlasmaComponents.ToolTip.visible: hovered
+                PlasmaComponents.ToolTip.visible: hovered || pressed
                 PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
                 PC2.Menu {
                     id: configMenu
@@ -144,7 +144,7 @@ Item {
                 icon.name: "configure"
                 visible: actionsButton.applet && actionsButton.applet.action("configure")
                 PlasmaComponents.ToolTip.text: actionsButton.applet.action("configure").text
-                PlasmaComponents.ToolTip.visible: hovered
+                PlasmaComponents.ToolTip.visible: hovered || pressed
                 PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
                 onClicked: actionsButton.applet.action("configure").trigger();
             }
@@ -156,7 +156,7 @@ Item {
                 onToggled: plasmoid.configuration.pin = checked
                 icon.name: "window-pin"
                 PlasmaComponents.ToolTip.text: i18n("Keep Open")
-                PlasmaComponents.ToolTip.visible: hovered
+                PlasmaComponents.ToolTip.visible: hovered || pressed
                 PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
             }
         }

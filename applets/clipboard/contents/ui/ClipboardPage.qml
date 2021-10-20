@@ -144,8 +144,8 @@ ColumnLayout {
                 }
 
                 PlasmaComponents3.ToolTip.text: i18n("Clear history")
-                PlasmaComponents3.ToolTip.visible: hovered
-                PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
+                PlasmaComponents3.ToolTip.visible: hovered || pressed
+                PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
             }
         }
     }
