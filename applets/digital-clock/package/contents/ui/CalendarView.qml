@@ -192,8 +192,7 @@ PlasmaExtras.Representation {
                 icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-next" : "go-previous"
                 onClicked: monthView.previousView()
                 Accessible.name: tooltip
-                PlasmaComponents3.ToolTip { // TODO Not sure how to do this one
-                    text: {
+                PlasmaComponents3.ToolTip.text: {
                         switch(monthView.calendarViewDisplayed) {
                             case PlasmaCalendar.MonthView.CalendarView.DayView:
                                 return i18n("Previous month")
@@ -205,7 +204,8 @@ PlasmaExtras.Representation {
                                 return "";
                         }
                     }
-                }
+                PlasmaComponents3.ToolTip.visible: hovered
+                PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
             }
 
             PlasmaComponents3.ToolButton {
@@ -227,20 +227,20 @@ PlasmaExtras.Representation {
                 icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-previous" : "go-next"
                 onClicked: monthView.nextView()
                 Accessible.name: tooltip
-                PlasmaComponents3.ToolTip { // TODO Not sure how to do this one
-                    text: {
-                        switch(monthView.calendarViewDisplayed) {
-                            case PlasmaCalendar.MonthView.CalendarView.DayView:
-                                return i18n("Next month")
-                            case PlasmaCalendar.MonthView.CalendarView.MonthView:
-                                return i18n("Next year")
-                            case PlasmaCalendar.MonthView.CalendarView.YearView:
-                                return i18n("Next decade")
-                            default:
-                                return "";
-                        }
-                    }
-                }
+                PlasmaComponents3.ToolTip.text: {
+                         switch(monthView.calendarViewDisplayed) {
+                             case PlasmaCalendar.MonthView.CalendarView.DayView:
+                                 return i18n("Next month")
+                             case PlasmaCalendar.MonthView.CalendarView.MonthView:
+                                 return i18n("Next year")
+                             case PlasmaCalendar.MonthView.CalendarView.YearView:
+                                 return i18n("Next decade")
+                             default:
+                                 return "";
+                         }
+                     }
+                PlasmaComponents3.ToolTip.visible: hovered
+                PlasmaComponents3.ToolTip.delay:Kirigami.Units.ToolTipDelay
             }
         }
     }
