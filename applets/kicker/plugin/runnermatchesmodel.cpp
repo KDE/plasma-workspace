@@ -86,7 +86,11 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
             return actionList;
         }
 
-        const QUrl dataUrl(match.data().toUrl());
+        QUrl dataUrl(match.data().toUrl());
+        if (dataUrl.isEmpty() && !match.urls().isEmpty()) {
+            // needed for systemsettigs runner
+            dataUrl = match.urls().constFirst();
+        }
         if (dataUrl.scheme() != QLatin1String("applications")) {
             return actionList;
         }
@@ -162,7 +166,11 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
 
     QObject *appletInterface = static_cast<RunnerModel *>(parent())->appletInterface();
 
-    const KService::Ptr service = KService::serviceByStorageId(match.data().toUrl().toString(QUrl::RemoveScheme));
+    KService::Ptr service = KService::serviceByStorageId(match.data().toUrl().toString(QUrl::RemoveScheme));
+    if (!service && !match.urls().isEmpty()) {
+        // needed for systemsettigs runner
+        service = KService::serviceByStorageId(match.urls().constFirst().toString(QUrl::RemoveScheme));
+    }
 
     if (Kicker::handleAddLauncherAction(actionId, appletInterface, service)) {
         return false; // We don't want to close Kicker, BUG: 390585
