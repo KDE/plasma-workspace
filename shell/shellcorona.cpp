@@ -2074,6 +2074,9 @@ void ShellCorona::activateLauncherMenu()
                 return;
             }
         }
+        if (activateLauncher((*it)->containment())) {
+            return;
+        }
     }
     for (auto it = m_desktopViewforId.constBegin(), itEnd = m_desktopViewforId.constEnd(); it != itEnd; ++it) {
         if (activateLauncher((*it)->containment())) {
