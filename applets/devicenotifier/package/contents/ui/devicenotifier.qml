@@ -263,7 +263,7 @@ Item {
     }
 
     function action_configure() {
-        KCMShell.openSystemSettings("device_automounter_kcm")
+        KCMShell.openSystemSettings("kcm_device_automounter")
     }
 
     function action_showRemovableDevices() {

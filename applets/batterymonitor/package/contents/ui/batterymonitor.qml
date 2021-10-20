@@ -137,7 +137,7 @@ Item {
     }
 
     function action_configure() {
-        KCMShell.openSystemSettings("powerdevilprofilesconfig");
+        KCMShell.openSystemSettings("kcm_powerdevilprofilesconfig");
     }
 
     function action_energyinformationkcm() {
