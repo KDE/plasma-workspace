@@ -143,7 +143,7 @@ Item {
             PlasmaComponents.ToolButton {
                 icon.name: "configure"
                 visible: actionsButton.applet && actionsButton.applet.action("configure")
-                PlasmaComponents.ToolTip.text: parent.visible ? actionsButton.applet.action("configure").text : ""
+                PlasmaComponents.ToolTip.text: actionsButton.applet.action("configure").text
                 PlasmaComponents.ToolTip.visible: hovered
                 PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
                 onClicked: actionsButton.applet.action("configure").trigger();
