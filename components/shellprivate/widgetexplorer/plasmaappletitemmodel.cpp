@@ -14,6 +14,7 @@
 #include <KAboutData>
 #include <KConfig>
 #include <KDeclarative/KDeclarative>
+#include <KJsonUtils>
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 #include <KSycoca>
@@ -122,7 +123,7 @@ void PlasmaAppletItem::setRunning(int count)
 
 bool PlasmaAppletItem::matches(const QString &pattern) const
 {
-    const QString keywordsList = KPluginMetaData::readTranslatedString(m_info.rawData(), QStringLiteral("Keywords"));
+    const QString keywordsList = KJsonUtils::readTranslatedString(m_info.rawData(), QStringLiteral("Keywords"));
     const auto keywords = keywordsList.splitRef(QLatin1Char(';'), Qt::SkipEmptyParts);
 
     for (const auto &keyword : keywords) {
