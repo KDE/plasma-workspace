@@ -1,0 +1,5 @@
+module org.kde.plasma.workspace.dialogs
+
+DesktopCSDSystemDialog 1.0 DesktopCSDSystemDialog.qml
+DesktopSystemDialog 1.0 DesktopSystemDialog.qml
+MobileSystemDialog 1.0 MobileSystemDialog.qml
