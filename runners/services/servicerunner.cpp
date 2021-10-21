@@ -165,7 +165,7 @@ private:
 
         QUrl url(service->storageId());
         url.setScheme(QStringLiteral("applications"));
-        match.setData(url);
+        match.setUrls({url});
         QString exec = service->exec();
         // We have a snap, remove the ENV variable
         if (exec.contains(QLatin1String("BAMF_DESKTOP_FILE_HINT"))) {
@@ -374,7 +374,7 @@ private:
                 query.addQueryItem(QStringLiteral("action"), action.name());
                 url.setQuery(query);
 
-                match.setData(url);
+                match.setUrls({url});
 
                 qreal relevance = 0.5;
                 if (matchIndex == 0) {
@@ -420,7 +420,7 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
 {
     Q_UNUSED(context)
 
-    const QUrl dataUrl = match.data().toUrl();
+    const QUrl dataUrl = match.urls().constFirst();
 
     KService::Ptr service = KService::serviceByStorageId(dataUrl.path());
     if (!service) {
