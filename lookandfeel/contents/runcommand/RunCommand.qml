@@ -268,6 +268,10 @@ ColumnLayout {
                 }
             }
 
+            Keys.onEscapePressed: {
+                runnerWindow.visible = false
+            }
+
             onActivated: {
                 runnerWindow.visible = false
             }
