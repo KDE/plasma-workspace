@@ -218,6 +218,7 @@ PlasmaExtras.Representation {
                     */
                 Kirigami.Heading { // Song Title
                     id: songTitle
+                    visible: root.track
                     level: 1
 
                     color: (softwareRendering || !albumArt.visible) ? PlasmaCore.ColorScope.textColor : "white"
@@ -227,7 +228,7 @@ PlasmaExtras.Representation {
                     fontSizeMode: Text.VerticalFit
                     elide: Text.ElideRight
 
-                    text: root.track || i18n("No media playing")
+                    text: root.track
 
                     Layout.fillWidth: true
                     Layout.maximumHeight: PlasmaCore.Units.gridUnit*5
@@ -296,6 +297,13 @@ PlasmaExtras.Representation {
                     Layout.maximumHeight: PlasmaCore.Units.gridUnit*2
                 }
             }
+        }
+
+        PlasmaExtras.PlaceholderMessage { // "No media playing" placeholder message
+            anchors.centerIn: parent
+            width: parent.width - (PlasmaCore.Units.largeSpacing * 8)
+            visible: !root.track
+            text: i18n("No media playing")
         }
     }
 
