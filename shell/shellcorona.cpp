@@ -113,7 +113,7 @@ void ShellCorona::init()
     connect(&m_waitingPanelsTimer, &QTimer::timeout, this, &ShellCorona::createWaitingPanels);
 
     m_reconsiderOutputsTimer.setSingleShot(true);
-    m_reconsiderOutputsTimer.setInterval(1000);
+    m_reconsiderOutputsTimer.setInterval(250);
     connect(&m_reconsiderOutputsTimer, &QTimer::timeout, this, &ShellCorona::reconsiderOutputs);
 
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(kPackage().filePath("defaults")), "Desktop");
