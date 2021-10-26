@@ -25,7 +25,7 @@ class NotificationApplet : public Plasma::Applet
     Q_PROPERTY(QQuickItem *systemTrayRepresentation READ systemTrayRepresentation CONSTANT)
 
 public:
-    explicit NotificationApplet(QObject *parent, const QVariantList &data);
+    explicit NotificationApplet(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~NotificationApplet() override;
 
     void init() override;

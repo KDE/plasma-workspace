@@ -23,8 +23,8 @@
 #include <KNotifications/KNotificationJobUiDelegate>
 #include <KService>
 
-SystemMonitor::SystemMonitor(QObject *parent, const QVariantList &args)
-    : Plasma::Applet(parent, args)
+SystemMonitor::SystemMonitor(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::Applet(parent, metaData, args)
 {
     setHasConfigurationInterface(true);
 

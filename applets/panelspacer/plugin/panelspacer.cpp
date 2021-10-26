@@ -79,8 +79,8 @@ void SpacersTracker::removeSpacer(Plasma::Containment *containment, PanelSpacer 
 
 /////////////////////////////////////////////////////////////////////
 
-PanelSpacer::PanelSpacer(QObject *parent, const QVariantList &args)
-    : Plasma::Applet(parent, args)
+PanelSpacer::PanelSpacer(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::Applet(parent, metaData, args)
 {
 }
 

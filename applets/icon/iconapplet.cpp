@@ -41,8 +41,8 @@
 #include <abstracttasksmodel.h>
 #include <startuptasksmodel.h>
 
-IconApplet::IconApplet(QObject *parent, const QVariantList &data)
-    : Plasma::Applet(parent, data)
+IconApplet::IconApplet(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : Plasma::Applet(parent, metaData, args)
 {
 }
 

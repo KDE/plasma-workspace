@@ -32,7 +32,7 @@ class IconApplet : public Plasma::Applet
     Q_PROPERTY(QString genericName READ genericName NOTIFY genericNameChanged)
 
 public:
-    explicit IconApplet(QObject *parent, const QVariantList &data);
+    explicit IconApplet(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~IconApplet() override;
 
     void init() override;

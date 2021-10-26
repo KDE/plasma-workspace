@@ -32,7 +32,7 @@ class SystemMonitor : public Plasma::Applet
     Q_PROPERTY(KSysGuard::SensorFaceController *faceController READ faceController CONSTANT)
 
 public:
-    SystemMonitor(QObject *parent, const QVariantList &args);
+    SystemMonitor(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~SystemMonitor() override;
 
     void init() override;
