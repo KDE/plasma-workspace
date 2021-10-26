@@ -22,9 +22,9 @@ SessionManagement *SystemEntry::s_sessionManagement = nullptr;
 
 SystemEntry::SystemEntry(AbstractModel *owner, Action action)
     : AbstractEntry(owner)
+    , m_initialized(false)
     , m_action(action)
     , m_valid(false)
-    , m_initialized(false)
 {
     refresh();
     ++s_instanceCount;
@@ -33,9 +33,9 @@ SystemEntry::SystemEntry(AbstractModel *owner, Action action)
 
 SystemEntry::SystemEntry(AbstractModel *owner, const QString &id)
     : AbstractEntry(owner)
+    , m_initialized(false)
     , m_action(NoAction)
     , m_valid(false)
-    , m_initialized(false)
 {
     if (id == QLatin1String("lock-screen")) {
         m_action = LockSession;
