@@ -48,7 +48,7 @@ static const QString s_autosaveFileName(QStringLiteral("interactiveconsoleautosa
 static const QString s_kwinService = QStringLiteral("org.kde.KWin");
 static const QString s_plasmaShellService = QStringLiteral("org.kde.plasmashell");
 
-InteractiveConsole::InteractiveConsole(QWidget *parent)
+InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
     : QDialog(parent)
     , m_splitter(new QSplitter(Qt::Vertical, this))
     , m_editorPart(nullptr)
@@ -63,7 +63,7 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
     , m_snippetsMenu(new QMenu(i18n("Templates"), this))
     , m_fileDialog(nullptr)
     , m_closeWhenCompleted(false)
-    , m_mode(PlasmaConsole)
+    , m_mode(mode)
 {
     addAction(KStandardAction::close(this, SLOT(close()), this));
     addAction(m_saveAction);
@@ -101,7 +101,8 @@ InteractiveConsole::InteractiveConsole(QWidget *parent)
     modeGroup->addAction(m_kwinAction);
     m_plasmaAction->setCheckable(true);
     m_kwinAction->setCheckable(true);
-    m_plasmaAction->setChecked(true);
+    m_kwinAction->setChecked(mode == KWinConsole);
+    m_plasmaAction->setChecked(mode == PlasmaConsole);
     connect(modeGroup, &QActionGroup::triggered, this, &InteractiveConsole::modeSelectionChanged);
 
     KToolBar *toolBar = new KToolBar(this, true, false);

@@ -37,13 +37,13 @@ class InteractiveConsole : public QDialog
     Q_OBJECT
 
 public:
-    explicit InteractiveConsole(QWidget *parent = nullptr);
-    ~InteractiveConsole() override;
-
     enum ConsoleMode {
         PlasmaConsole,
         KWinConsole,
     };
+
+    explicit InteractiveConsole(ConsoleMode mode, QWidget *parent = nullptr);
+    ~InteractiveConsole() override;
 
     void setMode(const QString &mode);
     QString mode() const;
