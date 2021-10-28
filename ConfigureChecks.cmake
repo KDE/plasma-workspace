@@ -1,5 +1,3 @@
-set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${CMAKE_MODULE_PATH} )
-
 set(KWIN_BIN "kwin_x11" CACHE STRING "Name of the KWin binary")
 
 check_include_files(limits.h HAVE_LIMITS_H)
