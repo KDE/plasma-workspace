@@ -82,15 +82,20 @@ Comment[zh_CN]=选择配色方案
 
 Icon=preferences-desktop-color
 Type=Service
+Categories=Qt;KDE;X-KDE-settings-looknfeel;
 X-KDE-PluginInfo-Author=Kai Uwe Broulik
 X-KDE-PluginInfo-Email=kde@privat.broulik.de
 X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-Name=kcm_colors
 X-KDE-PluginInfo-Version=
 X-KDE-PluginInfo-Website=https://www.kde.org/plasma-desktop
-X-KDE-ServiceTypes=Plasma/Generic
+X-KDE-ServiceTypes=KCModule
 X-Plasma-API=declarativeappletscript
-
+X-DocPath=kcontrol/colors/index.html
+X-KDE-Library=kcm_colors
+X-KDE-ParentApp=kcontrol
+X-KDE-System-Settings-Parent-Category=appearance
+X-KDE-Weight=40
 X-KDE-FormFactors=tablet,handset,desktop
-
+X-KDE-Keywords=color,colour,scheme,contrast,Widget colors,Color Scheme,color style,color theme,tint,accent color,color scheme,dark mode,light mode,accent colour,accent,highlight,colour
 X-Plasma-MainScript=ui/main.qml
