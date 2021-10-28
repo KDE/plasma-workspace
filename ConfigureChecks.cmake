@@ -5,5 +5,3 @@ check_include_files(sys/time.h HAVE_SYS_TIME_H)     # ksmserver, ksplashml, sftp
 check_include_files(unistd.h HAVE_UNISTD_H)
 
 set(HAVE_FONTCONFIG ${FONTCONFIG_FOUND}) # kcms/{fonts,kfontinst}
-set(HAVE_XCURSOR ${X11_Xcursor_FOUND}) # many uses
-set(HAVE_XFIXES ${X11_Xfixes_FOUND}) # klipper, kicker

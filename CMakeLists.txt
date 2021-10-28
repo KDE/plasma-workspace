@@ -9,6 +9,7 @@ set(KF5_MIN_VERSION "5.94")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 set(INSTALL_SDDM_THEME TRUE)
 option(INSTALL_SDDM_WAYLAND_SESSION OFF)
+option(WITH_X11 "Build with X11 support. Building without is experimental" ON)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -115,26 +116,43 @@ set_package_properties(Fontconfig PROPERTIES DESCRIPTION "Font access configurat
                        PURPOSE "Needed to build font configuration and installation tools"
                       )
 
+if(WITH_X11)
+    find_package(X11)
+    set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
+                            URL "https://www.x.org"
+                            TYPE REQUIRED
+                            PURPOSE "Required for building the X11 based workspace")
+    function(check_X11_lib _lib)
+        if (NOT TARGET X11::${_lib})
+            message(SEND_ERROR "Required component ${_lib} of X11 was not found")
+        endif()
+    endfunction()
+    check_X11_lib(ICE)
+    check_X11_lib(SM)
+    check_X11_lib(X11)
+    check_X11_lib(Xau)
+    check_X11_lib(Xcursor)
+    check_X11_lib(Xfixes)
+    check_X11_lib(Xft)
+    check_X11_lib(Xrender)
+    check_X11_lib(Xtst)
 
-find_package(X11)
-set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
-                        URL "https://www.x.org"
-                        TYPE OPTIONAL
-                        PURPOSE "Required for building the X11 based workspace")
-function(check_X11_lib _lib)
-    if (NOT TARGET X11::${_lib})
-        message(SEND_ERROR "Required component ${_lib} of X11 was not found")
+    set(HAVE_X11 1)
+    set(HAVE_XCURSOR 1)
+    set(HAVE_XFIXES 1)
+
+    find_package(XCB MODULE REQUIRED COMPONENTS XCB RANDR IMAGE)
+    set_package_properties(XCB PROPERTIES TYPE REQUIRED)
+
+    if (QT_MAJOR_VERSION EQUAL "5")
+        find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
     endif()
-endfunction()
-check_X11_lib(ICE)
-check_X11_lib(SM)
-check_X11_lib(X11)
-check_X11_lib(Xau)
-check_X11_lib(Xcursor)
-check_X11_lib(Xfixes)
-check_X11_lib(Xft)
-check_X11_lib(Xrender)
-check_X11_lib(Xtst)
+
+else()
+    set(HAVE_X11 0)
+    set(HAVE_XCURSOR 0)
+    set(HAVE_XFIXES 0)
+endif()
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(PipeWire IMPORTED_TARGET libpipewire-0.3)
@@ -157,22 +175,6 @@ find_package(Wayland REQUIRED COMPONENTS Client Server) # Server is used in auto
 if(FONTCONFIG_FOUND)
   # kfontinst
   find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS PrintSupport)
-endif()
-
-if(X11_FOUND)
-  find_package(XCB MODULE REQUIRED COMPONENTS XCB RANDR IMAGE)
-  set_package_properties(XCB PROPERTIES TYPE REQUIRED)
-  if(NOT X11_SM_FOUND)
-    message(FATAL_ERROR "\nThe X11 Session Management (SM) development package could not be found.\nPlease install libSM.\n")
-  endif(NOT X11_SM_FOUND)
-
-  if (QT_MAJOR_VERSION EQUAL "5")
-    find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
-  endif()
-endif()
-
-if(X11_FOUND AND XCB_XCB_FOUND)
-  set(HAVE_X11 1)
 endif()
 
 find_package(AppStreamQt 0.10.6)

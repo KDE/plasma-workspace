@@ -60,7 +60,7 @@ target_link_libraries(kcm_colors
     krdb
 )
 
-if(X11_FOUND)
+if(HAVE_X11)
     target_link_libraries(kcm_colors X11::X11)
     if (QT_MAJOR_VERSION EQUAL "5")
         target_link_libraries(kcm_colors Qt::X11Extras)

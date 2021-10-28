@@ -22,7 +22,7 @@ set(taskmanager_LIB_SRCS
     windowtasksmodel.cpp
 )
 
-if (X11_FOUND)
+if (HAVE_X11)
     set(taskmanager_LIB_SRCS
         ${taskmanager_LIB_SRCS}
         xstartuptasksmodel.cpp
@@ -56,7 +56,7 @@ target_link_libraries(taskmanager
         KF5::WindowSystem
 )
 
-if (X11_FOUND)
+if (HAVE_X11)
     target_link_libraries(taskmanager PRIVATE KF5::IconThemes)
     if (QT_MAJOR_VERSION EQUAL "5")
         target_link_libraries(taskmanager PRIVATE Qt::X11Extras)
@@ -101,7 +101,7 @@ install(FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/taskmanager COMPONENT Devel
 )
 
-if (X11_FOUND)
+if (HAVE_X11)
     install(FILES
         xstartuptasksmodel.h
         xwindowtasksmodel.h

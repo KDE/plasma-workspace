@@ -5,7 +5,7 @@ set(mouse_engine_SRCS
     mouseengine.h
 )
 
-if (X11_Xfixes_FOUND)
+if (HAVE_X11)
     set(mouse_engine_SRCS ${mouse_engine_SRCS} cursornotificationhandler.cpp)
 endif ()
 
@@ -14,14 +14,14 @@ target_link_libraries(plasma_engine_mouse
     Qt::Widgets
     KF5::Plasma
     KF5::WindowSystem
-    X11::X11
 )
-if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(plasma_engine_mouse Qt::X11Extras)
-else()
-    target_link_libraries(plasma_engine_mouse Qt::GuiPrivate)
-endif()
 
-if (X11_Xfixes_FOUND)
-	target_link_libraries(plasma_engine_mouse X11::Xfixes)
+if (HAVE_X11)
+    if (QT_MAJOR_VERSION EQUAL "5")
+        target_link_libraries(plasma_engine_mouse Qt::X11Extras)
+    else()
+        target_link_libraries(plasma_engine_mouse Qt::GuiPrivate)
+    endif()
+
+    target_link_libraries(plasma_engine_mouse X11::X11 X11::Xfixes)
 endif ()

@@ -1,7 +1,7 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_lookandfeel\")
 
-if(X11_Xcursor_FOUND)
+if(HAVE_X11)
     set(HAVE_XCURSOR TRUE)
 endif()
 
@@ -19,7 +19,7 @@ add_library(lookandfeelmanager STATIC
     ../kcms-common.cpp
 )
 
-if (X11_Xcursor_FOUND)
+if (HAVE_X11)
     target_sources(lookandfeelmanager PRIVATE
         ../cursortheme/xcursor/cursortheme.cpp
         ../cursortheme/xcursor/xcursortheme.cpp
@@ -49,19 +49,14 @@ target_link_libraries(lookandfeelmanager
     krdb
 )
 
-if(X11_FOUND)
+if(HAVE_X11)
     if (QT_MAJOR_VERSION EQUAL "5")
         target_link_libraries(lookandfeelmanager Qt::X11Extras)
     else()
         target_link_libraries(lookandfeelmanager Qt::GuiPrivate)
     endif()
+   target_link_libraries(lookandfeelmanager X11::Xcursor X11::Xfixes)
 endif()
-if (X11_Xcursor_FOUND)
-   target_link_libraries(lookandfeelmanager X11::Xcursor)
-endif ()
-if (X11_Xfixes_FOUND)
-   target_link_libraries(lookandfeelmanager X11::Xfixes)
-endif ()
 
 add_library(kcm_lookandfeel_objects OBJECT kcm.cpp)
 target_link_libraries(kcm_lookandfeel_objects

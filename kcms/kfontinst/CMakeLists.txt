@@ -1,7 +1,7 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kfontinst\")
 
-if (X11_Xft_FOUND)
+if (HAVE_X11)
     check_include_files(locale.h HAVE_LOCALE_H)
     configure_file(config-fontinst.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-fontinst.h)
     include_directories(

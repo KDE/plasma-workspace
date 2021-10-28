@@ -50,7 +50,8 @@ target_link_libraries(libklipper_common_static
     KF5::WaylandClient
     KF5::IconThemes
     ${ZLIB_LIBRARY})
-if (X11_FOUND)
+
+if (HAVE_X11)
     target_link_libraries(libklipper_common_static XCB::XCB)
     if (QT_MAJOR_VERSION EQUAL "5")
         target_link_libraries(libklipper_common_static Qt::X11Extras)

@@ -28,7 +28,7 @@ kcmutils_generate_desktop_file (kcm_fonts)
 
 target_link_libraries(kcm_fonts KF5::I18n KF5::WindowSystem KF5::KCMUtils KF5::QuickAddons KF5::Declarative kfontinst krdb)
 
-if(X11_FOUND)
+if(HAVE_X11)
     target_link_libraries(kcm_fonts X11::X11 X11::Xft XCB::IMAGE)
     if (QT_MAJOR_VERSION EQUAL "5")
         target_link_libraries(kcm_fonts Qt::X11Extras)
