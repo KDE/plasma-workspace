@@ -25,6 +25,7 @@ class QMenu;
 class QScreen;
 class ScreenPool;
 class StrutManager;
+class PrimaryOutputWatcher;
 
 namespace KActivities
 {
@@ -201,7 +202,7 @@ private Q_SLOTS:
     void populateAddPanelsMenu();
 
     void addOutput(QScreen *screen);
-    void primaryOutputChanged();
+    void primaryOutputNameChanged();
 
     void panelContainmentDestroyed(QObject *cont);
     void handleScreenRemoved(QScreen *screen);
@@ -252,4 +253,5 @@ private:
     QString m_testModeLayout;
 
     StrutManager *m_strutManager;
+    PrimaryOutputWatcher *const m_primaryWatcher;
 };

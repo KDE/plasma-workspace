@@ -5,18 +5,10 @@
 */
 
 #include "screenpool.h"
-#include <config-plasma.h>
 
 #include <KWindowSystem>
 #include <QGuiApplication>
 #include <QScreen>
-
-#if HAVE_X11
-#include <QX11Info>
-#include <xcb/randr.h>
-#include <xcb/xcb.h>
-#include <xcb/xcb_event.h>
-#endif
 
 ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     : QObject(parent)
@@ -26,23 +18,14 @@ ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     connect(&m_configSaveTimer, &QTimer::timeout, this, [this]() {
         m_configGroup.sync();
     });
-
-#if HAVE_X11
-    if (KWindowSystem::isPlatformX11()) {
-        qApp->installNativeEventFilter(this);
-        const xcb_query_extension_reply_t *reply = xcb_get_extension_data(QX11Info::connection(), &xcb_randr_id);
-        m_xrandrExtensionOffset = reply->first_event;
-    }
-#endif
 }
 
-void ScreenPool::load()
+void ScreenPool::load(QScreen *primary)
 {
     m_primaryConnector = QString();
     m_connectorForId.clear();
     m_idForConnector.clear();
 
-    QScreen *primary = qGuiApp->primaryScreen();
     if (primary) {
         m_primaryConnector = primary->name();
         if (!m_primaryConnector.isEmpty()) {
@@ -161,36 +144,6 @@ int ScreenPool::firstAvailableId() const
 QList<int> ScreenPool::knownIds() const
 {
     return m_connectorForId.keys();
-}
-
-bool ScreenPool::nativeEventFilter(const QByteArray &eventType, void *message, long int *result)
-{
-    Q_UNUSED(result);
-#if HAVE_X11
-    // a particular edge case: when we switch the only enabled screen
-    // we don't have any signal about it, the primary screen changes but we have the same old QScreen* getting recycled
-    // see https://bugs.kde.org/show_bug.cgi?id=373880
-    // if this slot will be invoked many times, their//second time on will do nothing as name and primaryconnector will be the same by then
-    if (eventType[0] != 'x') {
-        return false;
-    }
-
-    xcb_generic_event_t *ev = static_cast<xcb_generic_event_t *>(message);
-
-    const auto responseType = XCB_EVENT_RESPONSE_TYPE(ev);
-
-    if (responseType == m_xrandrExtensionOffset + XCB_RANDR_SCREEN_CHANGE_NOTIFY) {
-        if (qGuiApp->primaryScreen()->name() != primaryConnector()) {
-            // new screen?
-            if (id(qGuiApp->primaryScreen()->name()) < 0) {
-                insertScreenMapping(firstAvailableId(), qGuiApp->primaryScreen()->name());
-            }
-            // switch the primary screen in the pool
-            setPrimaryConnector(qGuiApp->primaryScreen()->name());
-        }
-    }
-#endif
-    return false;
 }
 
 #include "moc_screenpool.cpp"
