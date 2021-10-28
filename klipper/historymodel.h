@@ -6,7 +6,7 @@
 #pragma once
 
 #include <QAbstractListModel>
-#include <QMutex>
+#include <QRecursiveMutex>
 
 class HistoryItem;
 
@@ -44,7 +44,7 @@ public:
 
     void insert(QSharedPointer<HistoryItem> item);
 
-    QMutex *mutex()
+    QRecursiveMutex *mutex()
     {
         return &m_mutex;
     }
@@ -54,7 +54,7 @@ private:
     QList<QSharedPointer<HistoryItem>> m_items;
     int m_maxSize;
     bool m_displayImages;
-    QMutex m_mutex;
+    QRecursiveMutex m_mutex;
 };
 
 inline int HistoryModel::maxSize() const

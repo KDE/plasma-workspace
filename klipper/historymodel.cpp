@@ -13,7 +13,6 @@ HistoryModel::HistoryModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_maxSize(0)
     , m_displayImages(true)
-    , m_mutex(QMutex::Recursive)
 {
 }
 
