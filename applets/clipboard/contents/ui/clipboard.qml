@@ -70,9 +70,12 @@ Item {
             var operation = service.operationDescription(op);
             return service.startOperationCall(operation);
         }
-        function edit(uuid) {
+        function edit(uuid, text) {
             clipboardSource.editing = true;
-            var job = clipboardSource.service(uuid, "edit");
+            const service = clipboardSource.serviceForSource(uuid);
+            const operation = service.operationDescription("edit");
+            operation.text = text;
+            const job = service.startOperationCall(operation);
             job.finished.connect(function() {
                 clipboardSource.editing = false;
             });
@@ -103,12 +106,6 @@ Item {
             id: stack
             anchors.fill: parent
             initialPage: ClipboardPage {
-                anchors.fill: parent
-            }
-        }
-        Component {
-            id: barcodePage
-            BarcodePage {
                 anchors.fill: parent
             }
         }

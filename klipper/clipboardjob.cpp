@@ -7,6 +7,7 @@
 #include "clipboardjob.h"
 #include "history.h"
 #include "historyitem.h"
+#include "historystringitem.h"
 #include "klipper.h"
 
 #include "klipper_debug.h"
@@ -56,6 +57,18 @@ void ClipboardJob::start()
         m_klipper->history()->remove(item);
         setResult(true);
     } else if (operation == QLatin1String("edit")) {
+        if (parameters().contains(QLatin1String("text"))) {
+            const QString text = parameters()[QLatin1String("text")].toString();
+            if (item) {
+                m_klipper->history()->remove(item);
+            }
+            m_klipper->history()->insert(HistoryItemPtr(new HistoryStringItem(text)));
+            if (m_klipper->urlGrabber()) {
+                m_klipper->urlGrabber()->checkNewData(HistoryItemConstPtr(m_klipper->history()->first()));
+            }
+            setResult(true);
+            return;
+        }
         connect(m_klipper, &Klipper::editFinished, this, [this, item](HistoryItemConstPtr editedItem, int result) {
             if (item != editedItem) {
                 // not our item

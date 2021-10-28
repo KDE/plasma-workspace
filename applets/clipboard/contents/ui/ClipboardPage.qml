@@ -14,6 +14,8 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 ColumnLayout {
+    id: clipboardPage
+    property alias view: clipboardMenu.view
     Keys.onPressed: {
         function goToCurrent() {
             clipboardMenu.view.positionViewAtIndex(clipboardMenu.view.currentIndex, ListView.Contain);
@@ -37,6 +39,10 @@ ColumnLayout {
                 filter.forceActiveFocus();
                 event.accepted = true;
             }
+        }
+        if (stack.currentPage !== clipboardPage) {
+            event.accepted = false;
+            return;
         }
         switch(event.key) {
             case Qt.Key_Up: {
@@ -171,9 +177,14 @@ ColumnLayout {
         Layout.topMargin: PlasmaCore.Units.smallSpacing
         onItemSelected: clipboardSource.service(uuid, "select")
         onRemove: clipboardSource.service(uuid, "remove")
-        onEdit: clipboardSource.edit(uuid)
+        onEdit: {
+            stack.push(Qt.resolvedUrl("EditPage.qml"), {
+                text: clipboardMenu.model.get(clipboardMenu.view.currentIndex).DisplayRole,
+                uuid: uuid
+            });
+        }
         onBarcode: {
-            stack.push(barcodePage, {
+            stack.push(Qt.resolvedUrl("BarcodePage.qml"), {
                 text: text
             });
         }
