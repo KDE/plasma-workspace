@@ -37,16 +37,11 @@ kcoreaddons_desktop_to_json(plasma-geolocation-ip plasma-geolocation-ip.desktop)
 target_compile_definitions(plasma-geolocation-ip PRIVATE -DQT_NO_KEYWORDS)
 target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF5::KIOCore KF5::NetworkManagerQt)
 
-set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
-find_package(libgps)
-set_package_properties(libgps PROPERTIES DESCRIPTION "GPS support for geolocation"
-                       URL "https://www.berlios.de/software/gpsd/"
-                       TYPE OPTIONAL
-                      )
-if(LIBGPS_FOUND)
-    include_directories(${LIBGPS_INCLUDES} ${LIBGPS_INCLUDE_DIR})
+pkg_check_modules(LIBGPS libgps IMPORTED_TARGET)
+
+if(TARGET PkgConfig::LIBGPS)
     kcoreaddons_add_plugin(plasma-geolocation-gps SOURCES location_gps.cpp INSTALL_NAMESPACE plasma/geolocationprovider)
     ecm_qt_declare_logging_category(plasma-geolocation-gps HEADER geolocdebug.h IDENTIFIER DATAENGINE_GEOLOCATION CATEGORY_NAME org.kde.plasma.dataengine.geolocation)
     kcoreaddons_desktop_to_json(plasma-geolocation-gps plasma-geolocation-gps.desktop)
-    target_link_libraries(plasma-geolocation-gps plasma-geolocation-interface ${LIBGPS_LIBRARIES})
+    target_link_libraries(plasma-geolocation-gps plasma-geolocation-interface PkgConfig::LIBGPS)
 endif()
