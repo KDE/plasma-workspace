@@ -1,9 +1,6 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_cursortheme\")
 
-include_directories( ${LIBUSB_INCLUDE_DIR} )
-
-
 set( libnoinst_SRCS
 xcursor/thememodel.cpp
 xcursor/themeapplicator.cpp
