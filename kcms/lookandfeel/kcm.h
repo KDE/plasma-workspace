@@ -101,8 +101,6 @@ private:
     QDir cursorThemeDir(const QString &theme, const int depth);
     const QStringList cursorSearchPaths();
 
-    void revertKeyIfNeeded(KConfigGroup &group, KConfigGroup &home, KConfigGroup &defaults);
-
     void writeNewDefaults(const QString &filename,
                           const QString &group,
                           const QString &key,

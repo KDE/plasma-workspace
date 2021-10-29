@@ -492,22 +492,6 @@ void KCMLookandFeel::setWidgetStyle(const QString &style)
     }
 }
 
-void KCMLookandFeel::revertKeyIfNeeded(KConfigGroup &group, KConfigGroup &home, KConfigGroup &defaults)
-{
-    for (const QString &key : group.keyList()) {
-        home.revertToDefault(key);
-        if (m_data->isDefaults()) {
-            defaults.revertToDefault(key);
-        }
-    }
-    for (const QString &subgroupname : group.groupList()) {
-        KConfigGroup subgroup(group.group(subgroupname));
-        KConfigGroup subgroupHome(home.group(subgroupname));
-        KConfigGroup subgroupDefaults(defaults.group(subgroupname));
-        revertKeyIfNeeded(subgroup, subgroupHome, subgroupDefaults);
-    }
-}
-
 void KCMLookandFeel::setColors(const QString &scheme, const QString &colorFile)
 {
     if (scheme.isEmpty() && colorFile.isEmpty()) {
