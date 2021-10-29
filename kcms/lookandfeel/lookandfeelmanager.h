@@ -24,8 +24,18 @@ class LookAndFeelManager : public QObject
 {
     Q_OBJECT
 public:
+    enum class Mode {
+        Apply, // Apply the look and feel theme, i.e. change the active settings and set them up as new defaults. This is the default.
+        Defaults // Only set up the options of the look and feel theme as new defaults without changing any active setting
+    };
+
     LookAndFeelManager(QObject *parent = nullptr);
 
+    void setMode(Mode mode);
+    /**
+     * Apply the theme represented by package, with oldPackage being the currently active package.
+     * Effects depend upon the Mode of this object. If Mode is Defaults, oldPackage is ignored.
+     */
     void save(const KPackage::Package &package, const KPackage::Package &oldPackage);
 
     bool resetDefaultLayout() const;
@@ -79,6 +89,7 @@ private:
 
     QStringList m_cursorSearchPaths;
     LookAndFeelData *const m_data;
+    Mode m_mode = Mode::Apply;
     bool m_applyColors : 1 = true;
     bool m_applyWidgetStyle : 1 = true;
     bool m_applyIcons : 1 = true;
