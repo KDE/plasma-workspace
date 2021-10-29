@@ -18,6 +18,8 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KNotifyConfig>
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
 #include <KSharedConfig>
 
 #include <phonon/audiooutput.h>
@@ -32,6 +34,7 @@
 #include "startplasma.h"
 
 #include "../config-workspace.h"
+#include "../kcms/lookandfeel/lookandfeelmanager.h"
 #include "debug.h"
 
 QTextStream out(stderr);
@@ -357,7 +360,19 @@ void setupPlasmaEnvironment()
         currentConfigDirs = "/etc/xdg";
     }
     const auto extraConfigDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation).toUtf8() + "/kdedefaults";
+    QDir().mkpath(QString::fromUtf8(extraConfigDir));
     qputenv("XDG_CONFIG_DIRS", extraConfigDir + ":" + currentConfigDirs);
+
+    const KConfig globals;
+    const QString currentLnf = KConfigGroup(&globals, QStringLiteral("KDE")).readEntry("LookAndFeelPackage", QStringLiteral("org.kde.breeze.desktop"));
+    QFile activeLnf(QString::fromUtf8(extraConfigDir + "/package"));
+    activeLnf.open(QIODevice::ReadOnly);
+    if (activeLnf.readLine() != currentLnf.toUtf8()) {
+        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), currentLnf);
+        LookAndFeelManager lnfManager;
+        lnfManager.setMode(LookAndFeelManager::Mode::Defaults);
+        lnfManager.save(package, KPackage::Package());
+    }
 }
 
 void setupX11()
