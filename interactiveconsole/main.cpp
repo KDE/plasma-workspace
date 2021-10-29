@@ -21,14 +21,13 @@ int main(int argc, char **argv)
     parser.addOption(kwinOpt);
     parser.addHelpOption();
     parser.process(app);
-
-    if (parser.isSet(kwinOpt)) {
+    if (parser.isSet(plasmaOpt) && parser.isSet(kwinOpt)) {
+        qWarning() << "Only one mode can be specified when launching the interactive console";
+        exit(1);
+    } else if (parser.isSet(kwinOpt)) {
         mode = InteractiveConsole::KWinConsole;
     } else if (parser.isSet(plasmaOpt)) {
         mode = InteractiveConsole::PlasmaConsole;
-    } else if (parser.isSet(plasmaOpt) && parser.isSet(kwinOpt)) {
-        qWarning() << "Only one mode can be specified when launching the interactive console";
-        exit(1);
     }
     // set to delete on close
     auto console = new InteractiveConsole(mode);
