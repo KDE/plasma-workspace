@@ -25,6 +25,7 @@ DraggableFileArea {
     // for multiple files)
     property var urls
 
+    property alias hasPreview: thumbnailer.hasPreview
     readonly property alias menuOpen: fileMenu.visible
 
     property int _pressX: -1

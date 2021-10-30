@@ -18,6 +18,8 @@ PlasmaCore.Dialog {
     id: notificationPopup
 
     property int popupWidth
+    // There is a Timer below setting it to true so the notification will eventually show regardless
+    property bool wantsToBeVisible: urls.length === 0 || notificationItem.thumbnailHasPreview
 
     property alias notificationType: notificationItem.notificationType
 
@@ -111,6 +113,16 @@ PlasmaCore.Dialog {
 
         width: notificationPopup.popupWidth
         height: notificationItem.height + notificationItem.y
+
+        // If thumbnail takes too long, display notification nonetheless
+        Timer {
+            interval: 500
+            running: notificationItem.urls.length > 0
+            repeat: false
+            onTriggered: {
+                notificationPopup.wantsToBeVisible = true;
+            }
+        }
 
         DraggableDelegate {
             id: area

@@ -376,7 +376,9 @@ QtObject {
                 }
             }
 
-            popup.visible = visible;
+            popup.visible = Qt.binding(() => {
+                return visible && popup.wantsToBeVisible;
+            });
         }
     }
 

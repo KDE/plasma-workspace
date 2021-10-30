@@ -66,6 +66,7 @@ ColumnLayout {
     property int headingLeftPadding: 0
     property int headingRightPadding: 0
 
+    property bool thumbnailHasPreview: false
     property int thumbnailLeftPadding: 0
     property int thumbnailRightPadding: 0
     property int thumbnailTopPadding: 0
@@ -404,6 +405,7 @@ ColumnLayout {
         active: notificationItem.urls.length > 0
         visible: active
         sourceComponent: ThumbnailStrip {
+            id: strip
             leftPadding: -thumbnailStripLoader.Layout.leftMargin
             rightPadding: -thumbnailStripLoader.Layout.rightMargin
             topPadding: -notificationItem.thumbnailTopPadding
@@ -411,6 +413,12 @@ ColumnLayout {
             urls: notificationItem.urls
             onOpenUrl: notificationItem.openUrl(url)
             onFileActionInvoked: notificationItem.fileActionInvoked(action)
+
+            Binding {
+                target: notificationItem
+                property: "thumbnailHasPreview"
+                value: strip.hasPreview
+            }
         }
     }
 
