@@ -1,6 +1,22 @@
 [Desktop Entry]
 Name=User Accounts
+Name[ca]=Comptes d'usuaris
+Name[es]=Cuentas de usuarios
+Name[hu]=Felhasználói fiókok
+Name[nl]=Gebruikersaccounts
+Name[pl]=Konta użytkowników
+Name[sv]=Användarkonton
+Name[uk]=Облікові записи
+Name[x-test]=xxUser Accountsxx
 Comment=Manage users
+Comment[ca]=Gestiona els usuaris
+Comment[es]=Gestión de usuarios
+Comment[hu]=Felhasználók kezelése
+Comment[nl]=Gebruikers beheren
+Comment[pl]=Zarządzanie użytkownikami
+Comment[sv]=Hantera användare
+Comment[uk]=Керування користувачами
+Comment[x-test]=xxManage usersxx
 Icon=preferences-system-users
 Keywords=
 Type=Service
