@@ -137,7 +137,6 @@ void LogindSessionBackend::shutdown()
 {
     // logind will confirm credentials with the caller, if the app quits after sending this
     // this may fail
-    // its not really needed for suspend tasks where the calling app won't be closing
     m_login1->PowerOff(true).waitForFinished();
 }
 
@@ -148,17 +147,19 @@ void LogindSessionBackend::reboot()
 
 void LogindSessionBackend::suspend()
 {
-    m_login1->Suspend(true);
+    // these need to be synchronous as well - ksmserver-logout-greeter specifically calls these
+    // and will quit immediately after
+    m_login1->Suspend(true).waitForFinished();
 }
 
 void LogindSessionBackend::hybridSuspend()
 {
-    m_login1->HybridSleep(true);
+    m_login1->HybridSleep(true).waitForFinished();
 }
 
 void LogindSessionBackend::hibernate()
 {
-    m_login1->Hibernate(true);
+    m_login1->Hibernate(true).waitForFinished();;
 }
 
 bool LogindSessionBackend::canShutdown() const
