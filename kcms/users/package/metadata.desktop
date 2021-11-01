@@ -1,7 +1,8 @@
 [Desktop Entry]
 Name=User Accounts
-Name[ca]=Comptes d'usuaris
+Name[ca]=Comptes d'usuari
 Name[es]=Cuentas de usuarios
+Name[fr]=Comptes d'utilisateurs
 Name[hu]=Felhasználói fiókok
 Name[nl]=Gebruikersaccounts
 Name[pl]=Konta użytkowników
@@ -11,6 +12,7 @@ Name[x-test]=xxUser Accountsxx
 Comment=Manage users
 Comment[ca]=Gestiona els usuaris
 Comment[es]=Gestión de usuarios
+Comment[fr]=Gérer les utilisateurs
 Comment[hu]=Felhasználók kezelése
 Comment[nl]=Gebruikers beheren
 Comment[pl]=Zarządzanie użytkownikami
