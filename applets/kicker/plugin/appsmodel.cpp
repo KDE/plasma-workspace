@@ -60,16 +60,13 @@ AppsModel::AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesO
     , m_sorted(true)
     , m_appNameFormat(AppEntry::NameOnly)
 {
-    foreach (AbstractEntry *suggestedEntry, entryList) {
-        bool found = false;
+    for (AbstractEntry *suggestedEntry : entryList) {
+        const auto sameStorageId = [=](const AbstractEntry *entry) {
+            return entry->type() == AbstractEntry::RunnableType
+                && static_cast<const AppEntry *>(entry)->service()->storageId() == static_cast<const AppEntry *>(suggestedEntry)->service()->storageId();
+        };
 
-        for (const AbstractEntry *entry : qAsConst(m_entryList)) {
-            if (entry->type() == AbstractEntry::RunnableType
-                && static_cast<const AppEntry *>(entry)->service()->storageId() == static_cast<const AppEntry *>(suggestedEntry)->service()->storageId()) {
-                found = true;
-                break;
-            }
-        }
+        const bool found = std::find_if(m_entryList.cbegin(), m_entryList.cend(), sameStorageId) != m_entryList.cend();
 
         if (!found) {
             m_entryList << suggestedEntry;
