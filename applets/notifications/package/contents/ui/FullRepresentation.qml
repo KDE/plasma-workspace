@@ -414,7 +414,8 @@ PlasmaComponents3.Page {
                                             elementId: "vertical-line"
                                             svg: lineSvg
                                             anchors.horizontalCenter: parent.horizontalCenter
-                                            width: PlasmaCore.Units.iconSizes.small
+                                            // Want a thicker than default bar
+                                            width: Math.min(groupLineContainer.width, naturalSize.width * PlasmaCore.Units.devicePixelRatio * 3)
                                             height: parent.height
                                         }
                                     }
