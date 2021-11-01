@@ -32,8 +32,6 @@ public:
     int count() const;
     virtual int separatorCount() const;
 
-    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
-
     int iconSize() const;
     void setIconSize(int size);
 

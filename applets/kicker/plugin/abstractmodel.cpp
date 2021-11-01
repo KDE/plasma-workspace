@@ -47,15 +47,6 @@ int AbstractModel::separatorCount() const
     return 0;
 }
 
-int AbstractModel::columnCount(const QModelIndex &parent) const
-{
-    if (parent.isValid()) {
-        return 0;
-    }
-
-    return 1;
-}
-
 int AbstractModel::iconSize() const
 {
     return m_iconSize;
