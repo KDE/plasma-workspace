@@ -445,7 +445,11 @@ bool hasSystemdService(const QString &serviceName)
                                               QStringLiteral("/org/freedesktop/systemd1"),
                                               QStringLiteral("org.freedesktop.systemd1.Manager"),
                                               QStringLiteral("ListUnitFilesByPatterns"));
-    msg << QStringList({QStringLiteral("enabled"), QStringLiteral("static")}) << QStringList({serviceName});
+    msg << QStringList({QStringLiteral("enabled"),
+                        QStringLiteral("static"),
+                        QStringLiteral("linked"),
+                        QStringLiteral("linked-runtime")});
+    msg << QStringList({serviceName});
     QDBusReply<QList<QPair<QString, QString>>> reply = QDBusConnection::sessionBus().call(msg);
     if (!reply.isValid()) {
         return false;
