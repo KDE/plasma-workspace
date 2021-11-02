@@ -11,5 +11,5 @@ add_library(kfontviewpart MODULE ${kfontviewpart_PART_SRCS})
 target_link_libraries(kfontviewpart KF5::Archive KF5::Parts KF5::XmlGui kfontinstui kfontinst )
 
 install(TARGETS kfontviewpart  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/parts )
-install( FILES kfontviewpart.rc DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/kfontinst )
 
+install( FILES kfontviewpart.rc DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/kfontview )
