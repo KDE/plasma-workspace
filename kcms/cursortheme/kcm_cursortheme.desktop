@@ -104,3 +104,6 @@ X-KDE-Keywords[sl]=Miška,Kazalka,Tema,Videz kazalke,Barva kazalke,Tema kazalke,
 X-KDE-Keywords[sv]=Mus,Pekare,Tema,Utseende,Pekarfärg,Pekartema,Mustema,Musutseende,Musskal,Pekarfärger,Pekarutseende,färgskal,pekarstil,pekarstorlek,musstil,pekare
 X-KDE-Keywords[uk]=миша,вказівник,тема,вигляд вказівника,колір вказівника,тема вказівника,тема миші,вигляд миші,стиль вказівника,розмір вказівника,стиль миші,Mouse,Cursor,Theme,Cursor Appearance,Cursor Color,Cursor Theme,Mouse Theme,Mouse Appearance,Mouse Skins,Pointer Colors,Pointer Appearance,cursor skin,cursor style,cursor size,mouse style,pointer
 X-KDE-Keywords[x-test]=xxMousexx,xxCursorxx,xxThemexx,xxCursor Appearancexx,xxCursor Colorxx,xxCursor Themexx,xxMouse Themexx,xxMouse Appearancexx,xxMouse Skinxx,xxPointer Colorsxx,xxPointer Appearancexx,xxcursor skinxx,xxcursor stylexx,xxcursor sizexx,xxmouse stylexx,xxpointerxx,
+
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml

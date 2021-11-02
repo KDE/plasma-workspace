@@ -18,7 +18,7 @@
 #include "localelistmodel.h"
 #include "optionsmodel.h"
 
-K_PLUGIN_CLASS_WITH_JSON(KCMFormats, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(KCMFormats, "kcm_formats.json")
 
 KCMFormats::KCMFormats(QObject *parent, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, args)

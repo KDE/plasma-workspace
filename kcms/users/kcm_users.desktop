@@ -40,3 +40,6 @@ X-KDE-Keywords[pt_BR]=usuários,contas,imagem do perfil,foto do perfil,avatar,í
 X-KDE-Keywords[sl]=uporabniki,računi,slika profila,fotografija profila,avatar,ime,geslo,gesla,email,e-pošta,skrbnik,uporabnik root,profil,briši uporabnika,briši račun,pfp,prstni odtis,biometrika
 X-KDE-Keywords[uk]=users,accounts,profile picture,profile photo,avatar,name,password,passwords,email,e-mail,administrator,root user,standard user,profile,delete user,delete account,pfp,fingerprint,biometric,користувачі,облікові записи,записи,зображення профілю,фото профілю,аватар,ім'я,назва,пароль,паролі,електронна пошта,адміністратор,користувач рут,стандартний користувач,профіль,вилучити користувача,вилучити обліковий запис,пфп,пеефпеЄ,відбиток,біометрія,біометричний
 X-KDE-Keywords[x-test]=xxusersxx,xxaccountsxx,xxprofile picturexx,xxprofile photoxx,xxavatarxx,xxnamexx,xxpasswordxx,xxpasswordsxx,xxemailxx,xxe-mailxx,xxadministratorxx,xxroot userxx,xxstandard userxx,xxprofilexx,xxdelete userxx,xxdelete accountxx,xxpfpxx,xxfingerprintxx,xxbiometricxx
+
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
