@@ -713,7 +713,7 @@ void ShellCorona::primaryOutputChanged()
 
     QScreen *oldPrimary = m_desktopViewforId.value(0)->screen();
     QScreen *newPrimary = qGuiApp->primaryScreen();
-    if (!newPrimary || newPrimary == oldPrimary) {
+    if (!newPrimary || newPrimary == oldPrimary || newPrimary->geometry().isNull()) {
         return;
     }
 
@@ -1180,6 +1180,11 @@ void ShellCorona::reconsiderOutputs()
 void ShellCorona::addOutput(QScreen *screen)
 {
     Q_ASSERT(screen);
+
+    if (screen->geometry().isNull()) {
+        return;
+    }
+
     connect(screen, &QScreen::geometryChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
 
     if (isOutputRedundant(screen)) {
