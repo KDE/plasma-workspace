@@ -24,7 +24,7 @@ class Translations : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(bool everSaved READ everSaved NOTIFY everSavedChanged)
 
 public:
-    explicit Translations(QObject *parent = nullptr, const QVariantList &list = QVariantList());
+    explicit Translations(QObject *parent, const KPluginMetaData &data, const QVariantList &list = QVariantList());
     ~Translations() override;
 
     QAbstractItemModel *translationsModel() const;

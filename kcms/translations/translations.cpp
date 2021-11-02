@@ -18,8 +18,8 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(TranslationsFactory, "kcm_translations.json", registerPlugin<Translations>(); registerPlugin<TranslationsData>();)
 
-Translations::Translations(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+Translations::Translations(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, data, args)
     , m_data(new TranslationsData(this))
     , m_translationsModel(new TranslationsModel(this))
     , m_everSaved(false)

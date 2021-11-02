@@ -10,10 +10,10 @@
 #include <KAboutData>
 #include <KLocalizedString>
 
-K_PLUGIN_CLASS_WITH_JSON(Autostart, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(Autostart, "kcm_autostart.json")
 
-Autostart::Autostart(QObject *parent, const QVariantList &)
-    : KQuickAddons::ConfigModule(parent)
+Autostart::Autostart(QObject *parent, const KPluginMetaData &data, const QVariantList &)
+    : KQuickAddons::ConfigModule(parent, data)
     , m_model(new AutostartModel(this))
 {
     setButtons(Help);

@@ -138,3 +138,7 @@ Comment[zh_CN]=事件通知和操作
 X-KDE_Keywords=System sounds,Audio,Sound,Notify,Alerts,Notification,popups,disturb,do not disturb,quiet,concentrate,concentration,alarm,popup,pop up,progress,badges,alert sounds,warning sounds,dnd,mute
 
 Categories=Qt;KDE;X-KDE-settings-sound;
+
+X-Plasma-API=declarativeappletscript
+X-KDE-FormFactors=tablet,handset,desktop
+X-Plasma-MainScript=ui/main.qml

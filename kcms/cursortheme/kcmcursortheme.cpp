@@ -46,8 +46,8 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "kcm_cursortheme.json", registerPlugin<CursorThemeConfig>(); registerPlugin<CursorThemeData>();)
 
-CursorThemeConfig::CursorThemeConfig(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+CursorThemeConfig::CursorThemeConfig(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, data, args)
     , m_data(new CursorThemeData(this))
     , m_canInstall(true)
     , m_canResize(true)

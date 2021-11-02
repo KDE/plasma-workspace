@@ -65,8 +65,8 @@ Q_DECL_EXPORT void kcminit_style()
 }
 }
 
-KCMStyle::KCMStyle(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+KCMStyle::KCMStyle(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, data, args)
     , m_data(new StyleData(this))
     , m_model(new StylesModel(this))
 {

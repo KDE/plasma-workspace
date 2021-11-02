@@ -120,3 +120,6 @@ X-KDE-Keywords[x-test]=xxstylexx,xxstylesxx,xxlookxx,xxwidgetxx,xxiconsxx,xxtool
 X-KDE-Keywords[zh_CN]=style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu,GTK,GNOME,application style,app,programs,appearance,skin,themes,light mode,dark mode,样式,风格,外观,视觉,视觉效果,视效,小部件,部件,窗口部件,控件,组件,图标,工具栏,文字,文本,高亮,高光,重点显示,应用,应用程序,KDE 应用程序,主题,菜单,全局菜单,应用程序风格,应用程序样式,程序,皮肤,浅色模式,亮色模式,明亮模式,白色模式,深色模式,暗色模式,暗黑模式,黑暗模式,黑色模式
 
 Categories=Qt;KDE;X-KDE-settings-looknfeel;
+
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml

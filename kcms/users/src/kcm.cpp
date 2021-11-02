@@ -29,8 +29,8 @@ Q_LOGGING_CATEGORY(kcm_users, "kcm_users")
 
 K_PLUGIN_CLASS_WITH_JSON(KCMUser, "kcm_users.json")
 
-KCMUser::KCMUser(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, data, args)
     , m_dbusInterface(new OrgFreedesktopAccountsInterface(QStringLiteral("org.freedesktop.Accounts"),
                                                           QStringLiteral("/org/freedesktop/Accounts"),
                                                           QDBusConnection::systemBus(),

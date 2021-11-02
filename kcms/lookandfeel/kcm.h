@@ -51,7 +51,7 @@ public:
         HasDesktopSwitcherRole,
     };
 
-    KCMLookandFeel(QObject *parent, const QVariantList &args);
+    KCMLookandFeel(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~KCMLookandFeel() override;
 
     LookAndFeelSettings *lookAndFeelSettings() const;

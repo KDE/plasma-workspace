@@ -48,10 +48,10 @@
 
 #include "../kcms-common_p.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "metadata.json", registerPlugin<KCMColors>(); registerPlugin<ColorsData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_colors.json", registerPlugin<KCMColors>(); registerPlugin<ColorsData>();)
 
-KCMColors::KCMColors(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+KCMColors::KCMColors(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, data, args)
     , m_model(new ColorsModel(this))
     , m_filteredModel(new FilterProxyModel(this))
     , m_data(new ColorsData(this))

@@ -122,3 +122,7 @@ X-KDE-Keywords[x-test]=xxfeedbackxx,xxreportxx,xxcontactxx,xxdata collectionxx,x
 X-KDE-Keywords[zh_CN]=feedback,report,contact,data collection,statistics,usage,log,logging,telemetry,反馈,回馈,反映,报告,联系,数据收集,数据统计,统计数据,使用数据,用量,使用率,使用水平,日志,日志记录,上报,遥测
 
 Categories=Qt;KDE;
+
+X-KDE-FormFactors=tablet,handset,desktop
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml

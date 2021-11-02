@@ -49,7 +49,7 @@ class KCMNotifications : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(QString initialEventId READ initialEventId WRITE setInitialEventId NOTIFY initialEventIdChanged)
 
 public:
-    KCMNotifications(QObject *parent, const QVariantList &args);
+    KCMNotifications(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~KCMNotifications() override;
 
     SourcesModel *sourcesModel() const;

@@ -39,8 +39,8 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMNotificationsFactory, "kcm_notifications.json", registerPlugin<KCMNotifications>(); registerPlugin<NotificationsData>();)
 
-KCMNotifications::KCMNotifications(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, data, args)
     , m_sourcesModel(new SourcesModel(this))
     , m_filteredModel(new FilterProxyModel(this))
     , m_data(new NotificationsData(this))

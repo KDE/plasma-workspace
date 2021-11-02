@@ -53,8 +53,8 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(IconsFactory, "kcm_icons.json", registerPlugin<IconModule>(); registerPlugin<IconsData>();)
 
-IconModule::IconModule(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+IconModule::IconModule(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, data, args)
     , m_data(new IconsData(this))
     , m_model(new IconsModel(m_data->settings(), this))
     , m_iconSizeCategoryModel(new IconSizeCategoryModel(this))

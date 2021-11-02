@@ -57,8 +57,8 @@
 #include <X11/extensions/Xfixes.h>
 #endif
 
-KCMLookandFeel::KCMLookandFeel(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, data, args)
     , m_data(new LookAndFeelData(this))
     , m_config(KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::FullConfig))
     , m_configGroup(m_config->group("KDE"))

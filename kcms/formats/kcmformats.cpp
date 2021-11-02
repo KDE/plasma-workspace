@@ -18,10 +18,10 @@
 #include "localelistmodel.h"
 #include "optionsmodel.h"
 
-K_PLUGIN_CLASS_WITH_JSON(KCMFormats, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(KCMFormats, "kcm_formats.json")
 
-KCMFormats::KCMFormats(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+KCMFormats::KCMFormats(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, data, args)
     , m_optionsModel(new OptionsModel(this))
 {
     KAboutData *aboutData = new KAboutData(QStringLiteral("kcm_formats"),

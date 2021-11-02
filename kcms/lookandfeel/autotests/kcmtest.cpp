@@ -75,7 +75,7 @@ void KcmTest::initTestCase()
     KConfigGroup cg(&config, "KDE");
     cg.writeEntry("LookAndFeelPackage", "org.kde.test");
     cg.sync();
-    m_KCMLookandFeel = new KCMLookandFeel(nullptr, QVariantList());
+    m_KCMLookandFeel = new KCMLookandFeel(nullptr, KPluginMetaData(), QVariantList());
     m_KCMLookandFeel->load();
 }
 
