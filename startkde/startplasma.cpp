@@ -372,6 +372,24 @@ void setupPlasmaEnvironment()
         LookAndFeelManager lnfManager;
         lnfManager.setMode(LookAndFeelManager::Mode::Defaults);
         lnfManager.save(package, KPackage::Package());
+        const QString colorScheme = KConfigGroup(&globals, QStringLiteral("General")).readEntry("ColorScheme", QStringLiteral("BreezeLight"));
+    }
+    // If no colors are saved, take them from the LNF and apply
+    if (!globals.hasGroup("Colors:Window") || !globals.hasGroup("Colors:View") ||
+        !globals.hasGroup("Colors:Button") || !globals.hasGroup("Colors:Tooltip") ||
+        !globals.hasGroup("Colors:Selection")) {
+        LookAndFeelManager lnfManager;
+        lnfManager.setMode(LookAndFeelManager::Mode::Apply);
+        const KConfig globals; // Reload the config
+        const QString colorScheme = KConfigGroup(&globals, QStringLiteral("General")).readEntry("ColorScheme", QStringLiteral("BreezeLight"));
+        QString path = lnfManager.colorSchemeFile(colorScheme);
+        if (!path.isEmpty()) {
+            lnfManager.setColors(colorScheme, path);
+        }
+        const QString svgCache = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + QLatin1Char('/') + QStringLiteral("plasma-svgelements");
+        if (!svgCache.isEmpty()) {
+            QFile::remove(svgCache);
+        }
     }
 }
 

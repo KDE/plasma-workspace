@@ -222,6 +222,35 @@ KConfig LookAndFeelManager::configDefaults(const QString &filename)
     return KConfig(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/kdedefaults/") + filename, KConfig::SimpleConfig);
 }
 
+QString LookAndFeelManager::colorSchemeFile(const QString &schemeName)
+{
+    QString colorScheme(schemeName);
+    colorScheme.remove(QLatin1Char('\'')); // So Foo's does not become FooS
+    QRegExp fixer(QStringLiteral("[\\W,.-]+(.?)"));
+    int offset;
+    while ((offset = fixer.indexIn(colorScheme)) >= 0) {
+        colorScheme.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
+    }
+    colorScheme.replace(0, 1, colorScheme.at(0).toUpper());
+
+    // NOTE: why this loop trough all the scheme files?
+    // the scheme theme name is an heuristic, there is no plugin metadata whatsoever.
+    // is based on the file name stripped from weird characters or the
+    // eventual id- prefix store.kde.org puts, so we can just find a
+    // theme that ends as the specified name
+    const QStringList schemeDirs =
+        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes"), QStandardPaths::LocateDirectory);
+    for (const QString &dir : schemeDirs) {
+        const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.colors"));
+        for (const QString &file : fileNames) {
+            if (file.endsWith(colorScheme + QStringLiteral(".colors"))) {
+                return dir + QLatin1Char('/') + file;
+            }
+        }
+    }
+    return QString();
+}
+
 void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::Package &previousPackage)
 {
     if (m_resetDefaultLayout && m_mode == Mode::Apply) {
@@ -264,34 +293,9 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
                     setColors(package.metadata().name(), colorsFile);
                 }
             } else if (!colorScheme.isEmpty()) {
-                colorScheme.remove(QLatin1Char('\'')); // So Foo's does not become FooS
-                QRegExp fixer(QStringLiteral("[\\W,.-]+(.?)"));
-                int offset;
-                while ((offset = fixer.indexIn(colorScheme)) >= 0) {
-                    colorScheme.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
-                }
-                colorScheme.replace(0, 1, colorScheme.at(0).toUpper());
-
-                // NOTE: why this loop trough all the scheme files?
-                // the scheme theme name is an heuristic, there is no plugin metadata whatsoever.
-                // is based on the file name stripped from weird characters or the
-                // eventual id- prefix store.kde.org puts, so we can just find a
-                // theme that ends as the specified name
-                bool schemeFound = false;
-                const QStringList schemeDirs =
-                    QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes"), QStandardPaths::LocateDirectory);
-                for (const QString &dir : schemeDirs) {
-                    const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.colors"));
-                    for (const QString &file : fileNames) {
-                        if (file.endsWith(colorScheme + QStringLiteral(".colors"))) {
-                            setColors(colorScheme, dir + QLatin1Char('/') + file);
-                            schemeFound = true;
-                            break;
-                        }
-                    }
-                    if (schemeFound) {
-                        break;
-                    }
+                QString path = colorSchemeFile(colorScheme);
+                if (!path.isEmpty()) {
+                    setColors(colorScheme, path);
                 }
             }
         }
