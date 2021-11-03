@@ -6,6 +6,8 @@
 */
 #pragma once
 #include <QAbstractListModel>
+#include <array>
+
 class FormatsSettings;
 class OptionsModel : public QAbstractListModel
 {
