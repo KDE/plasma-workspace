@@ -15,8 +15,8 @@ Item {
 
     property int preferredTextWidth: PlasmaCore.Units.gridUnit * 20
 
-    width: childrenRect.width + PlasmaCore.Units.gridUnit
-    height: childrenRect.height + PlasmaCore.Units.gridUnit
+    implicitWidth: mainLayout.implicitWidth + PlasmaCore.Units.gridUnit
+    implicitHeight: mainLayout.implicitHeight + PlasmaCore.Units.gridUnit
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -24,6 +24,7 @@ Item {
     PlasmaCore.ColorScope.inherit: false
 
     ColumnLayout {
+        id: mainLayout
         anchors {
             left: parent.left
             top: parent.top
