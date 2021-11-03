@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=User Accounts
+Name[az]=İstifadəçi hesabları
 Name[ca]=Comptes d'usuari
 Name[es]=Cuentas de usuarios
 Name[fr]=Comptes d'utilisateurs
@@ -13,6 +14,7 @@ Name[sv]=Användarkonton
 Name[uk]=Облікові записи
 Name[x-test]=xxUser Accountsxx
 Comment=Manage users
+Comment[az]=İstifaadəçiləri idarə edin
 Comment[ca]=Gestiona els usuaris
 Comment[es]=Gestión de usuarios
 Comment[fr]=Gérer les utilisateurs
