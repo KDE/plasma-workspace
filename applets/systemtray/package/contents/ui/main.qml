@@ -121,10 +121,11 @@ MouseArea {
             readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(count, Math.floor(gridThickness / (smallIconSize + PlasmaCore.Units.smallSpacing))))
 
             // Add margins only if the panel is larger than a small icon (to avoid large gaps between tiny icons)
-            readonly property int smallSizeCellLength: gridThickness < smallIconSize ? smallIconSize : smallIconSize + PlasmaCore.Units.smallSpacing * 2
+            readonly property int cellSpacing: PlasmaCore.Units.smallSpacing * 2
+            readonly property int smallSizeCellLength: gridThickness < smallIconSize ? smallIconSize : smallIconSize + cellSpacing
             cellHeight: {
                 if (root.vertical) {
-                    return autoSize ? root.width + PlasmaCore.Units.smallSpacing : smallSizeCellLength
+                    return autoSize ? itemSize + (gridThickness < itemSize ? 0 : cellSpacing) : smallSizeCellLength
                 } else {
                     return autoSize ? root.height : Math.floor(root.height / rowsOrColumns)
                 }
@@ -133,7 +134,7 @@ MouseArea {
                 if (root.vertical) {
                     return autoSize ? root.width : Math.floor(root.width / rowsOrColumns)
                 } else {
-                    return autoSize ? root.height + PlasmaCore.Units.smallSpacing : smallSizeCellLength
+                    return autoSize ? itemSize + (gridThickness < itemSize ? 0 : cellSpacing) : smallSizeCellLength
                 }
             }
 
@@ -143,8 +144,7 @@ MouseArea {
 
             readonly property int itemSize: {
                 if (autoSize) {
-                    const size = Math.min(implicitWidth / rowsOrColumns, implicitHeight / rowsOrColumns)
-                    return PlasmaCore.Units.roundToIconSize(Math.min(size, PlasmaCore.Units.iconSizes.enormous))
+                    return PlasmaCore.Units.roundToIconSize(Math.min(Math.min(root.width, root.height) / rowsOrColumns, PlasmaCore.Units.iconSizes.enormous))
                 } else {
                     return smallIconSize
                 }
