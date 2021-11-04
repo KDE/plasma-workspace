@@ -222,7 +222,7 @@ KConfig LookAndFeelManager::configDefaults(const QString &filename)
     return KConfig(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/kdedefaults/") + filename, KConfig::SimpleConfig);
 }
 
-QString LookAndFeelManager::colorSchemeFile(const QString &schemeName)
+QString LookAndFeelManager::colorSchemeFile(const QString &schemeName) const
 {
     QString colorScheme(schemeName);
     colorScheme.remove(QLatin1Char('\'')); // So Foo's does not become FooS

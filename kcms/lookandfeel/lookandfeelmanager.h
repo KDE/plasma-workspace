@@ -38,7 +38,7 @@ public:
      */
     void save(const KPackage::Package &package, const KPackage::Package &oldPackage);
 
-    QString colorSchemeFile(const QString &schemeName);
+    QString colorSchemeFile(const QString &schemeName) const;
 
     bool resetDefaultLayout() const;
     void setResetDefaultLayout(bool reset);

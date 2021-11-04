@@ -372,23 +372,31 @@ void setupPlasmaEnvironment()
         LookAndFeelManager lnfManager;
         lnfManager.setMode(LookAndFeelManager::Mode::Defaults);
         lnfManager.save(package, KPackage::Package());
-        const QString colorScheme = KConfigGroup(&globals, QStringLiteral("General")).readEntry("ColorScheme", QStringLiteral("BreezeLight"));
     }
-    // If no colors are saved, take them from the LNF and apply
-    if (!globals.hasGroup("Colors:Window") || !globals.hasGroup("Colors:View") ||
-        !globals.hasGroup("Colors:Button") || !globals.hasGroup("Colors:Tooltip") ||
-        !globals.hasGroup("Colors:Selection")) {
+    // check if colors changed, if so apply them and discard palsma cache
+    {
         LookAndFeelManager lnfManager;
         lnfManager.setMode(LookAndFeelManager::Mode::Apply);
-        const KConfig globals; // Reload the config
-        const QString colorScheme = KConfigGroup(&globals, QStringLiteral("General")).readEntry("ColorScheme", QStringLiteral("BreezeLight"));
+        KConfig globals(QStringLiteral("kdeglobals")); // Reload the config
+        KConfigGroup generalGroup(&globals, QStringLiteral("General"));
+        const QString colorScheme = generalGroup.readEntry("ColorScheme", QStringLiteral("BreezeLight"));
         QString path = lnfManager.colorSchemeFile(colorScheme);
+
         if (!path.isEmpty()) {
-            lnfManager.setColors(colorScheme, path);
-        }
-        const QString svgCache = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + QLatin1Char('/') + QStringLiteral("plasma-svgelements");
-        if (!svgCache.isEmpty()) {
-            QFile::remove(svgCache);
+            QFile f(path);
+            QCryptographicHash hash(QCryptographicHash::Sha1);
+            if (f.open(QFile::ReadOnly) && hash.addData(&f)) {
+                const QString fileHash = QString::fromUtf8(hash.result().toHex());
+                if (fileHash != generalGroup.readEntry("ColorSchemeHash", QString())) {
+                    lnfManager.setColors(colorScheme, path);
+                    generalGroup.writeEntry("ColorSchemeHash", fileHash);
+                    generalGroup.sync();
+                    const QString svgCache = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + QLatin1Char('/') + QStringLiteral("plasma-svgelements");
+                    if (!svgCache.isEmpty()) {
+                        QFile::remove(svgCache);
+                    }
+                }
+            }
         }
     }
 }
