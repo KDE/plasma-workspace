@@ -2,7 +2,7 @@
 Name=Individual Core Usage
 Name[ar]=استخدام النوى الفردية
 Name[az]=MP nüvəsinin yükü
-Name[ca]=Ús individual de nucli
+Name[ca]=Ús individual del nucli
 Name[da]=Brug af hver kerne
 Name[de]=Verwendung einzelner Kerne
 Name[en_GB]=Individual Core Usage
@@ -40,7 +40,7 @@ Name[zh_TW]=獨立核心用量
 Comment=System monitor Widget that shows usage of individual CPU cores
 Comment[ar]=أداة مراقبة النظام التي تعرض استخدام كل نواة من المعالج
 Comment[az]=Mərkəzi prosessorun hər nüvəsinin yüklənmə səviyyəsinin izlənməsi
-Comment[ca]=Giny del monitor del sistema que mostra l'ús dels nuclis individuals de la CPU
+Comment[ca]=Giny del monitor del sistema que mostra l'ús individual dels nuclis de la CPU
 Comment[da]=Systemovervågning-widget som viser brug af hver CPU-kerne
 Comment[en_GB]=System monitor Widget that shows usage of individual CPU cores
 Comment[es]=Elemento gráfico del monitor del sistema que muestra el uso de los núcleos individuales de la CPU
