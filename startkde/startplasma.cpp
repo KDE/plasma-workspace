@@ -36,6 +36,14 @@
 
 QTextStream out(stderr);
 
+void sigtermHandler(int signalNumber)
+{
+    Q_UNUSED(signalNumber)
+    if (QCoreApplication::instance()) {
+        QCoreApplication::instance()->exit(-1);
+    }
+}
+
 void messageBox(const QString &text)
 {
     out << text;
@@ -66,6 +74,24 @@ QStringList allServices(const QLatin1String &prefix)
     return names;
 }
 
+void gentleTermination(QProcess *p)
+{
+    if (p->state() != QProcess::Running) {
+        return;
+    }
+
+    p->close();
+    p->terminate();
+
+    // Wait longer for a session than a greeter
+    if (!p->waitForFinished(5000)) {
+        p->kill();
+        if (!p->waitForFinished(5000)) {
+            qWarning() << "Could not fully finish the process" << p->program();
+        }
+    }
+}
+
 int runSync(const QString &program, const QStringList &args, const QStringList &env)
 {
     QProcess p;
@@ -73,6 +99,10 @@ int runSync(const QString &program, const QStringList &args, const QStringList &
         p.setEnvironment(QProcess::systemEnvironment() << env);
     p.setProcessChannelMode(QProcess::ForwardedChannels);
     p.start(program, args);
+
+    QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, &p, [&p] {
+        gentleTermination(&p);
+    });
     //     qCDebug(PLASMA_STARTUP) << "started..." << program << args;
     p.waitForFinished(-1);
     if (p.exitCode()) {
@@ -529,7 +559,7 @@ bool startPlasmaSession(bool wayland)
         QObject::connect(&startPlasmaSession, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [&rc, &e](int exitCode, QProcess::ExitStatus) {
             if (exitCode == 255) {
                 // Startup error
-                messageBox(QStringLiteral("startkde: Could not start ksmserver. Check your installation.\n"));
+                messageBox(QStringLiteral("startkde: Could not start plasma_session. Check your installation.\n"));
                 rc = false;
                 e.quit();
             }
@@ -556,6 +586,7 @@ bool startPlasmaSession(bool wayland)
     }
     if (rc) {
         playStartupSound(e);
+        QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, &e, &QEventLoop::quit);
         e.exec();
     }
     return rc;

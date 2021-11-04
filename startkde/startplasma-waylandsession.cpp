@@ -5,10 +5,12 @@
 */
 
 #include "startplasma.h"
+#include <signal.h>
 
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
+    signal(SIGTERM, sigtermHandler);
 
     QScopedPointer<QProcess, KillBeforeDeleter> ksplash;
 

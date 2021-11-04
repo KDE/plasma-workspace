@@ -9,6 +9,7 @@
 #include <KConfigGroup>
 #include <QDBusConnection>
 #include <QDBusInterface>
+#include <signal.h>
 
 int main(int argc, char **argv)
 {
@@ -16,6 +17,7 @@ int main(int argc, char **argv)
 
     createConfigDirectory();
     setupCursor(true);
+    signal(SIGTERM, sigtermHandler);
 
     {
         KConfig fonts(QStringLiteral("kcmfonts"));
