@@ -4,6 +4,8 @@ set(plasma_session_SRCS
     main.cpp
     autostart.cpp
     startup.cpp
+    sessiontrack.cpp
+    signalhandler.cpp
 )
 
 ecm_qt_declare_logging_category(plasma_session_SRCS  HEADER debug.h IDENTIFIER PLASMA_SESSION CATEGORY_NAME org.kde.plasma.session)
@@ -20,14 +22,10 @@ qt_add_dbus_interface( plasma_session_SRCS ../../ksmserver/org.kde.KSMServerInte
 
 add_executable(plasma_session ${plasma_session_SRCS})
 
+target_include_directories(plasma_session PRIVATE ${CMAKE_SOURCE_DIR}/startkde ${CMAKE_BINARY_DIR}/startkde)
 target_link_libraries(plasma_session
-    Qt::Core
-    Qt::DBus
-    KF5::ConfigCore
-    KF5::Service
-    KF5::CoreAddons
+    startplasma
     KF5::KIOCore
-    PW::KWorkspace
     PlasmaAutostart
 )
 

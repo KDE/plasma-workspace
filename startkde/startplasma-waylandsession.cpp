@@ -18,7 +18,7 @@ int main(int argc, char **argv)
         ksplash.reset(setupKSplash());
     }
 
-    out << "startplasma-waylandsession: Starting up...";
+    out << "startplasma-waylandsession: Starting up...\n";
 
     if (!syncDBusEnvironment()) {
         out << "Could not sync environment to dbus.\n";

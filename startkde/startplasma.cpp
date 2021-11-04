@@ -542,9 +542,10 @@ bool startPlasmaSession(bool wayland)
     // Create .desktop files for the scripts in .config/autostart-scripts
     migrateUserScriptsAutostart();
 
+    QScopedPointer<QProcess, KillBeforeDeleter> startPlasmaSession;
     if (!useSystemdBoot()) {
+        startPlasmaSession.reset(new QProcess);
         qCDebug(PLASMA_STARTUP) << "Using classic boot";
-        QProcess startPlasmaSession;
 
         QStringList plasmaSessionOptions;
         if (wayland) {
@@ -555,19 +556,19 @@ bool startPlasmaSession(bool wayland)
             }
         }
 
-        startPlasmaSession.setProcessChannelMode(QProcess::ForwardedChannels);
-        QObject::connect(&startPlasmaSession, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [&rc, &e](int exitCode, QProcess::ExitStatus) {
-            if (exitCode == 255) {
-                // Startup error
-                messageBox(QStringLiteral("startkde: Could not start plasma_session. Check your installation.\n"));
-                rc = false;
-                e.quit();
-            }
-        });
+        startPlasmaSession->setProcessChannelMode(QProcess::ForwardedChannels);
+        QObject::connect(startPlasmaSession.data(),
+                         QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
+                         &e,
+                         [&rc](int exitCode, QProcess::ExitStatus) {
+                             if (exitCode == 255) {
+                                 // Startup error
+                                 messageBox(QStringLiteral("startkde: Could not start plasma_session. Check your installation.\n"));
+                                 rc = false;
+                             }
+                         });
 
-        startPlasmaSession.start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
-        // plasma-session starts everything else up then quits
-        rc = startPlasmaSession.waitForFinished(120 * 1000);
+        startPlasmaSession->start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
     } else {
         qCDebug(PLASMA_STARTUP) << "Using systemd boot";
         const QString platform = wayland ? QStringLiteral("wayland") : QStringLiteral("x11");
@@ -582,10 +583,11 @@ bool startPlasmaSession(bool wayland)
             qWarning() << "Could not start systemd managed Plasma session:" << reply.error().name() << reply.error().message();
             messageBox(QStringLiteral("startkde: Could not start Plasma session.\n"));
             rc = false;
+        } else {
+            playStartupSound(e);
         }
     }
     if (rc) {
-        playStartupSound(e);
         QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, &e, &QEventLoop::quit);
         e.exec();
     }
@@ -662,7 +664,7 @@ static void migrateUserScriptsAutostart()
     QDBusConnection::sessionBus().call(message);
 }
 
-static void playStartupSound(QObject &parent)
+void playStartupSound(QObject &parent)
 {
     KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QList<QPair<QString, QString>>(), QStringLiteral("startkde"));
     const QString action = notifyConfig.readEntry(QStringLiteral("Action"));
