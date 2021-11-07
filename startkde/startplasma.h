@@ -40,7 +40,7 @@ static void resetSystemdFailedUnits();
 static bool hasSystemdService(const QString &serviceName);
 static bool useSystemdBoot();
 static void migrateUserScriptsAutostart();
-void playStartupSound(QObject &parent);
+void playStartupSound(QObject *parent);
 
 void gentleTermination(QProcess *process);
 
