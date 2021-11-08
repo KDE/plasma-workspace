@@ -23,7 +23,7 @@ Rectangle {
     PlasmaComponents3.Label {
         id: label
         anchors.centerIn: parent
-        font.pixelSize: Math.max(icon.height/4, PlasmaCore.Theme.smallestFont.pixelSize*0.8)
+        font.pixelSize: Math.max(icon.height / 4, PlasmaCore.Theme.smallestFont.pixelSize * 0.8)
     }
 
     layer.enabled: true
@@ -31,8 +31,7 @@ Rectangle {
         horizontalOffset: 0
         verticalOffset: 0
         radius: PlasmaCore.Units.devicePixelRatio * 2
-        samples: radius*2
+        samples: radius * 2
         color: Qt.rgba(0, 0, 0, 0.5)
     }
 }
-

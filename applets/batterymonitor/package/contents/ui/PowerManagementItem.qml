@@ -42,7 +42,6 @@ ColumnLayout {
             text: i18nc("Minimize the length of this string as much as possible", "Your notebook is configured not to sleep when closing the lid while an external monitor is connected.")
         }
 
-
         // UI to display when there is only one inhibition
         InhibitionHint {
             // Don't need to show the inhibitions when power management
@@ -59,7 +58,6 @@ ColumnLayout {
                     ""
         }
 
-
         // UI to display when there is more than one inhibition
         PlasmaComponents3.Label {
             id: inhibitionExplanation
@@ -75,6 +73,7 @@ ColumnLayout {
                         "%1 applications are inhibiting sleep and screen locking:",
                         inhibitions.length)
         }
+
         Repeater {
             visible: inhibitions.length > 1
 
