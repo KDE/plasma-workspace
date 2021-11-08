@@ -193,7 +193,6 @@ Item {
                 leftMargin: batteryIcon.width + PlasmaCore.Units.gridUnit
                 right: parent.right
             }
-            visible: !!item
             opacity: 0.5
             sourceComponent: batteryDetails
         }
