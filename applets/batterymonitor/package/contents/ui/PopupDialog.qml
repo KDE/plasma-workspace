@@ -136,7 +136,7 @@ PlasmaComponents3.Page {
                 KeyNavigation.backtab: pmSwitch
 
                 delegate: BatteryItem {
-                    width: parent.width
+                    width: ListView.view.width
                     battery: model
                     matchHeightOfSlider: brightnessSlider.slider
                 }
