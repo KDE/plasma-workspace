@@ -212,7 +212,6 @@ Item {
         // TODO Probably needs a sensible preferredHeight too
 
         model: plasmoid.expanded ? batteries : null
-        anchors.fill: parent
         focus: true
 
         isBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Screen Brightness Available"] ? true : false
