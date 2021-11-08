@@ -9,8 +9,8 @@
 
 #include <QAction>
 
+#include <KConfigPropertyMap>
 #include <kconfigloader.h>
-#include <kdeclarative/configpropertymap.h>
 #include <kservice.h>
 
 #include <Plasma/Applet>
@@ -107,8 +107,7 @@ void Applet::writeConfig(const QString &key, const QJSValue &value)
             // hacky, but only way to make the wallpaper react immediately
             QObject *wallpaperGraphicsObject = applet()->property("wallpaperGraphicsObject").value<QObject *>();
             if (wallpaperGraphicsObject) {
-                KDeclarative::ConfigPropertyMap *config =
-                    static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
+                KConfigPropertyMap *config = static_cast<KConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
                 config->setProperty(key.toLatin1(), value.toVariant());
             }
         } else if (applet()->configScheme()) {

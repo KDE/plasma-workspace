@@ -74,6 +74,7 @@ target_link_libraries(plasmashell
  KF5::PlasmaQuick
  KF5::Solid
  KF5::Declarative
+ KF5::ConfigQml
  KF5::I18n
  KF5::Activities
  KF5::GlobalAccel

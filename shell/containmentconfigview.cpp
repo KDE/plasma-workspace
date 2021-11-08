@@ -18,7 +18,7 @@
 #include <QStandardPaths>
 
 #include <KConfigLoader>
-#include <KDeclarative/ConfigPropertyMap>
+#include <KConfigPropertyMap>
 #include <KDeclarative/KDeclarative>
 #include <KLocalizedString>
 #include <KPackage/Package>
@@ -147,8 +147,9 @@ PlasmaQuick::ConfigModel *ContainmentConfigView::containmentPluginsConfigModel()
     return m_containmentPluginsConfigModel;
 }
 
-KDeclarative::ConfigPropertyMap *ContainmentConfigView::wallpaperConfiguration() const
+KConfigPropertyMap *ContainmentConfigView::wallpaperConfiguration() const
 {
+    Q_ASSERT(m_currentWallpaperConfig);
     return m_currentWallpaperConfig;
 }
 
@@ -163,8 +164,9 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
         return;
     }
 
-    delete m_ownWallpaperConfig;
-    m_ownWallpaperConfig = nullptr;
+    if (m_currentWallpaperConfig) {
+        m_currentWallpaperConfig->writeConfig();
+    }
 
     if (m_containment->wallpaper() == wallpaper) {
         syncWallpaperObjects();
@@ -177,12 +179,13 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
         KConfigGroup cfg = m_containment->config();
         cfg = KConfigGroup(&cfg, "Wallpaper");
         cfg = KConfigGroup(&cfg, wallpaper);
-        m_currentWallpaperConfig = m_ownWallpaperConfig = new KDeclarative::ConfigPropertyMap(new KConfigLoader(cfg, &file), this);
+        if (!m_currentWallpaperConfig) {
+            m_currentWallpaperConfig = new KConfigPropertyMap(new KConfigLoader(cfg, &file), this);
+        }
     }
 
     m_currentWallpaper = wallpaper;
     Q_EMIT currentWallpaperChanged();
-    Q_EMIT wallpaperConfigurationChanged();
 }
 
 void ContainmentConfigView::applyWallpaper()
@@ -191,18 +194,7 @@ void ContainmentConfigView::applyWallpaper()
 
     syncWallpaperObjects();
 
-    if (m_currentWallpaperConfig && m_ownWallpaperConfig) {
-        for (const auto &key : m_ownWallpaperConfig->keys()) {
-            auto value = m_ownWallpaperConfig->value(key);
-            m_currentWallpaperConfig->insert(key, value);
-            m_currentWallpaperConfig->valueChanged(key, value);
-        }
-    }
-
-    delete m_ownWallpaperConfig;
-    m_ownWallpaperConfig = nullptr;
-
-    Q_EMIT wallpaperConfigurationChanged();
+    m_currentWallpaperConfig->writeConfig();
 }
 
 void ContainmentConfigView::syncWallpaperObjects()
@@ -215,7 +207,7 @@ void ContainmentConfigView::syncWallpaperObjects()
     rootContext()->setContextProperty(QStringLiteral("wallpaper"), wallpaperGraphicsObject);
 
     // FIXME: why m_wallpaperGraphicsObject->property("configuration").value<ConfigPropertyMap *>() doesn't work?
-    m_currentWallpaperConfig = static_cast<KDeclarative::ConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
+    m_currentWallpaperConfig = static_cast<KConfigPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
 }
 
 WallpaperConfigModel::WallpaperConfigModel(QObject *parent)

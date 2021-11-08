@@ -10,7 +10,6 @@
 #include <QQuickItem>
 
 #include <kactioncollection.h>
-#include <kdeclarative/configpropertymap.h>
 #include <klocalizedstring.h>
 
 #include <Plasma/Containment>
