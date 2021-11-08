@@ -28,8 +28,10 @@ RowLayout {
 
     spacing: PlasmaCore.Units.smallSpacing
 
-    width: Math.max(Math.min(Screen.desktopAvailableWidth / 2, implicitWidth), PlasmaCore.Units.gridUnit * 15)
-    height: PlasmaCore.Units.iconSizes.medium
+    Layout.minimumWidth: Math.max(Math.min(Screen.desktopAvailableWidth / 2, implicitWidth), PlasmaCore.Units.gridUnit * 15)
+    Layout.minimumHeight: PlasmaCore.Units.iconSizes.medium
+    Layout.maximumWidth: Layout.minimumWidth
+    Layout.maximumHeight: Layout.minimumHeight
 
     PlasmaCore.IconItem {
         Layout.leftMargin: PlasmaCore.Units.smallSpacing
