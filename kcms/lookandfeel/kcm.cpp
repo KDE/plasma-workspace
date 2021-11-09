@@ -384,7 +384,7 @@ void KCMLookandFeel::save()
         if (m_applyWindowPlacement) {
             cg = KConfigGroup(conf, "kwinrc");
             cg = KConfigGroup(&cg, "Windows");
-            setWindowPlacement(cg.readEntry("Placement", QStringLiteral("Smart")));
+            setWindowPlacement(cg.readEntry("Placement", QStringLiteral("Centered")));
         }
 
         if (m_applyShellPackage) {
