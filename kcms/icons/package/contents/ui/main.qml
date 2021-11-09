@@ -11,7 +11,7 @@ import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.14 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
-import org.kde.newstuff 1.62 as NewStuff
+import org.kde.newstuff 1.81 as NewStuff
 import org.kde.kcm 1.3 as KCM
 
 import org.kde.private.kcms.icons 1.0 as Private
@@ -247,50 +247,18 @@ KCM.GridViewKCM {
                         icon.name: "document-import"
                         onTriggered: fileDialogLoader.active = true
                     },
-                    Kirigami.Action {
-                        enabled: root.view.enabled
+                    NewStuff.Action {
                         text: i18n("Get New Icons…")
-                        icon.name: "get-hot-new-stuff"
-                        onTriggered: { newStuffPage.open(); }
+                        configFile: "icons.knsrc"
+                        function onEntryEvent(entry, event) {
+                            if (event == 1) { // StatusChangedEvent
+                                kcm.ghnsEntriesChanged();
+                            } else if (event == 2) { // AdoptedEvent
+                                kcm.reloadConfig();
+                            }
+                        }
                     }
                 ]
-            }
-        }
-    }
-
-    Loader {
-        id: newStuffPage
-
-        // Use this function to open the dialog. It seems roundabout, but this ensures
-        // that the dialog is not constructed until we want it to be shown the first time,
-        // since it will initialise itself on the first load (which causes it to phone
-        // home) and we don't want that until the user explicitly asks for it.
-        function open() {
-            if (item) {
-                item.open();
-            } else {
-                active = true;
-            }
-        }
-        onLoaded: {
-            item.open();
-        }
-
-        active: false
-        asynchronous: true
-
-        sourceComponent: NewStuff.Dialog {
-            configFile: "icons.knsrc"
-            viewMode: NewStuff.Page.ViewMode.Preview
-            Connections {
-                target: newStuffPage.item.engine
-                function onEntryEvent(entry, event) {
-                    if (event == 2) { // AdoptedEvent
-                        kcm.reloadConfig();
-                    } else if (event == 1) { // StatusChangedEvent
-                        kcm.ghnsEntriesChanged();
-                    }
-                }
             }
         }
     }

@@ -10,6 +10,7 @@
 #include <KCModule>
 #include <KConfig>
 #include <KIO/Job>
+#include <KNS3/Button>
 #include <QSet>
 #include <QUrl>
 
@@ -59,7 +60,7 @@ public Q_SLOTS:
     void disableGroup();
     void changeText();
     void duplicateFonts();
-    void downloadFonts();
+    void downloadFonts(const QList<KNS3::Entry> &changedEntries);
     void print();
     void printGroup();
     void listingPercent(int p);
@@ -90,8 +91,9 @@ private:
     CFontListView *m_fontListView;
     CGroupList *m_groupList;
     CGroupListView *m_groupListView;
-    QPushButton *m_deleteGroupControl, *m_enableGroupControl, *m_disableGroupControl, *m_addFontControl, *m_getNewFontsControl, *m_deleteFontControl,
+    QPushButton *m_deleteGroupControl, *m_enableGroupControl, *m_disableGroupControl, *m_addFontControl, *m_deleteFontControl,
         *m_scanDuplicateFontsControl;
+    KNS3::Button *m_getNewFontsControl;
     CFontFilter *m_filter;
     QString m_lastStatusBarMsg;
     KIO::Job *m_job;
