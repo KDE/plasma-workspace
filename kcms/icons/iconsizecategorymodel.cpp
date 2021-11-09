@@ -11,6 +11,7 @@
 IconSizeCategoryModel::IconSizeCategoryModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_data({
+          {QStringLiteral("desktopSize"), I18N_NOOP("Icon Views"), QStringLiteral("Icon Views"), KIconLoader::Desktop},
           {QStringLiteral("toolbarSize"), i18n("Toolbar"), QStringLiteral("Toolbar"), KIconLoader::Toolbar},
           {QStringLiteral("mainToolbarSize"), i18n("Main Toolbar"), QStringLiteral("MainToolbar"), KIconLoader::MainToolbar},
           {QStringLiteral("smallSize"), i18n("Small Icons"), QStringLiteral("Small"), KIconLoader::Small},
