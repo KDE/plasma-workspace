@@ -217,7 +217,7 @@ void XWindowTasksModel::Private::addWindow(WId window)
 
         // Update demands attention state for leader.
         if (info.hasState(NET::DemandsAttention) && windows.contains(leader)) {
-            transientsDemandingAttention.insertMulti(leader, window);
+            transientsDemandingAttention.insert(leader, window);
             dataChanged(leader, QVector<int>{IsDemandingAttention});
         }
 
@@ -279,7 +279,7 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
 
         if (info.hasState(NET::DemandsAttention)) {
             if (!transientsDemandingAttention.values(leader).contains(window)) {
-                transientsDemandingAttention.insertMulti(leader, window);
+                transientsDemandingAttention.insert(leader, window);
                 dataChanged(leader, QVector<int>{IsDemandingAttention});
             }
         } else if (transientsDemandingAttention.remove(window)) {
@@ -297,7 +297,7 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
 
                 if (leader != oldLeader) {
                     transientsDemandingAttention.remove(oldLeader, window);
-                    transientsDemandingAttention.insertMulti(leader, window);
+                    transientsDemandingAttention.insert(leader, window);
                     dataChanged(oldLeader, QVector<int>{IsDemandingAttention});
                     dataChanged(leader, QVector<int>{IsDemandingAttention});
                 }
