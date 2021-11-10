@@ -1,3 +1,6 @@
+remove_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00) # needed for QNetworkConfigurationManager
+
 set(plasma_geolocation_interface_SRCS geolocationprovider.cpp)
 add_library(plasma-geolocation-interface SHARED ${plasma_geolocation_interface_SRCS})
 target_link_libraries(plasma-geolocation-interface
