@@ -20,7 +20,7 @@ void HotplugJob::start()
         const QString desktopFile = parameters()[QStringLiteral("predicate")].toString();
         const QString filePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "solid/actions/" + desktopFile);
 
-        QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(filePath, true);
+        QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(KService(filePath), true);
         if (services.size() < 1) {
             qWarning() << "Failed to resolve hotplugjob action" << desktopFile << filePath;
             setError(KJob::UserDefinedError);
