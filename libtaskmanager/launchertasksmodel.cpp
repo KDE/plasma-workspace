@@ -103,12 +103,9 @@ void LauncherTasksModel::Private::init()
                                            AbstractTasksModel::LauncherUrlWithoutIcon});
     });
 
-    void (KSycoca::*myDatabaseChangeSignal)(const QStringList &) = &KSycoca::databaseChanged;
-    QObject::connect(KSycoca::self(), myDatabaseChangeSignal, q, [this](const QStringList &changedResources) {
-        if (changedResources.contains(QLatin1String("services")) || changedResources.contains(QLatin1String("apps"))
-            || changedResources.contains(QLatin1String("xdgdata-apps"))) {
-            sycocaChangeTimer.start();
-        }
+    void (KSycoca::*myDatabaseChangeSignal)() = &KSycoca::databaseChanged;
+    QObject::connect(KSycoca::self(), myDatabaseChangeSignal, q, [this]() {
+        sycocaChangeTimer.start();
     });
 }
 
