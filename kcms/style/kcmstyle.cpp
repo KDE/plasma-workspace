@@ -70,9 +70,10 @@ KCMStyle::KCMStyle(QObject *parent, const KPluginMetaData &data, const QVariantL
     , m_data(new StyleData(this))
     , m_model(new StylesModel(this))
 {
-    qmlRegisterUncreatableType<KCMStyle>("org.kde.private.kcms.style", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
-    qmlRegisterType<StyleSettings>();
-    qmlRegisterType<StylesModel>();
+    auto uri = "org.kde.private.kcms.style";
+    qmlRegisterUncreatableType<KCMStyle>(uri, 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
+    qmlRegisterAnonymousType<StyleSettings>(uri, 1);
+    qmlRegisterAnonymousType<StylesModel>(uri, 1);
     qmlRegisterType<PreviewItem>("org.kde.private.kcms.style", 1, 0, "PreviewItem");
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_style"),

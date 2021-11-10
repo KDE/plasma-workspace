@@ -57,10 +57,11 @@ KCMColors::KCMColors(QObject *parent, const KPluginMetaData &data, const QVarian
     , m_data(new ColorsData(this))
     , m_config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")))
 {
-    qmlRegisterUncreatableType<KCMColors>("org.kde.private.kcms.colors", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
-    qmlRegisterType<ColorsModel>();
-    qmlRegisterType<FilterProxyModel>();
-    qmlRegisterType<ColorsSettings>();
+    auto uri = "org.kde.private.kcms.colors";
+    qmlRegisterUncreatableType<KCMColors>(uri, 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
+    qmlRegisterAnonymousType<ColorsModel>(uri, 1);
+    qmlRegisterAnonymousType<FilterProxyModel>(uri, 1);
+    qmlRegisterAnonymousType<ColorsSettings>(uri, 1);
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_colors"), i18n("Colors"), QStringLiteral("2.0"), QString(), KAboutLicense::GPL);
 

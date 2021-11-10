@@ -59,12 +59,13 @@ IconModule::IconModule(QObject *parent, const KPluginMetaData &data, const QVari
     , m_model(new IconsModel(m_data->settings(), this))
     , m_iconSizeCategoryModel(new IconSizeCategoryModel(this))
 {
-    qmlRegisterType<IconsSettings>();
-    qmlRegisterType<IconsModel>();
-    qmlRegisterType<IconSizeCategoryModel>();
+    auto uri = "org.kde.private.kcms.icons";
+    qmlRegisterAnonymousType<IconsSettings>(uri, 1);
+    qmlRegisterAnonymousType<IconsModel>(uri, 1);
+    qmlRegisterAnonymousType<IconSizeCategoryModel>(uri, 1);
 
     // to be able to access its enums
-    qmlRegisterUncreatableType<KIconLoader>("org.kde.private.kcms.icons", 1, 0, "KIconLoader", QString());
+    qmlRegisterUncreatableType<KIconLoader>(uri, 1, 0, "KIconLoader", QString());
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm5_icons"),
                                        i18n("Icons"),

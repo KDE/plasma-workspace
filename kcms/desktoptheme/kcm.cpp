@@ -44,7 +44,7 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const KPluginMetaData &data, c
     , m_filteredModel(new FilterProxyModel(this))
     , m_haveThemeExplorerInstalled(false)
 {
-    qmlRegisterType<DesktopThemeSettings>();
+    qmlRegisterAnonymousType<DesktopThemeSettings>("org.kde.private.kcms.desktoptheme", 1);
     qmlRegisterUncreatableType<ThemesModel>("org.kde.private.kcms.desktoptheme", 1, 0, "ThemesModel", "Cannot create ThemesModel");
     qmlRegisterUncreatableType<FilterProxyModel>("org.kde.private.kcms.desktoptheme", 1, 0, "FilterProxyModel", "Cannot create FilterProxyModel");
 

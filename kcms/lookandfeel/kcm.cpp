@@ -57,9 +57,9 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, con
     : KQuickAddons::ManagedConfigModule(parent, data, args)
     , m_lnf(new LookAndFeelManager(this))
 {
-    qmlRegisterType<LookAndFeelSettings>();
-    qmlRegisterType<QStandardItemModel>();
-    qmlRegisterType<KCMLookandFeel>();
+    qmlRegisterAnonymousType<LookAndFeelSettings>("", 1);
+    qmlRegisterAnonymousType<QStandardItemModel>("", 1);
+    qmlRegisterAnonymousType<KCMLookandFeel>("", 1);
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_lookandfeel"), i18n("Global Theme"), QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));

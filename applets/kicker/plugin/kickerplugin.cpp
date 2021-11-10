@@ -29,7 +29,7 @@ void KickerPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(QLatin1String(uri) == QLatin1String("org.kde.plasma.private.kicker"));
 
-    qmlRegisterType<AbstractModel>();
+    qmlRegisterAnonymousType<AbstractModel>("", 1);
 
     qmlRegisterType<AppsModel>(uri, 0, 1, "AppsModel");
     qmlRegisterType<ComputerModel>(uri, 0, 1, "ComputerModel");
