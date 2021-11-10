@@ -27,9 +27,9 @@
 #include <KFileItem>
 #include <KIO/ApplicationLauncherJob>
 #include <KIO/OpenFileManagerWindowJob>
+#include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
-#include <KRun>
 #include <KService/KApplicationTrader>
 #include <KService>
 #include <KStartupInfo>
@@ -351,8 +351,9 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         if (!resource.startsWith(QLatin1String("applications:"))) {
             const QUrl resourceUrl = docData(resource, Kicker::UrlRole).toUrl();
 
-            KRun *run = new KRun(resourceUrl, nullptr);
-            run->setRunExecutables(false);
+            auto job = new KIO::OpenUrlJob(resourceUrl);
+            job->setRunExecutables(false);
+            job->start();
 
             return true;
         }

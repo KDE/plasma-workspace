@@ -6,7 +6,7 @@
 
 #include "appjob.h"
 
-#include <KRun>
+#include <KIO/OpenUrlJob>
 
 AppJob::AppJob(AppSource *source, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent)
     : ServiceJob(source->objectName(), operation, parameters, parent)
@@ -23,7 +23,8 @@ void AppJob::start()
     const QString operation = operationName();
     if (operation == QLatin1String("launch")) {
         QString path = m_source->getApp()->entryPath();
-        new KRun(QUrl(path), nullptr);
+        auto job = new KIO::OpenUrlJob(QUrl(path));
+        job->start();
         setResult(true);
         return;
     }

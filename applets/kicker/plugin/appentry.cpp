@@ -24,10 +24,10 @@
 #include <KApplicationTrader>
 #include <KConfigGroup>
 #include <KIO/ApplicationLauncherJob>
+#include <KIO/CommandLauncherJob>
 #include <KJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
-#include <KRun>
 #include <KSharedConfig>
 #include <KShell>
 #include <KStartupInfo>
@@ -226,7 +226,10 @@ bool AppEntry::run(const QString &actionId, const QVariant &argument)
     } else if (Kicker::handleAppstreamActions(actionId, argument)) {
         return true;
     } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
-        return KRun::run(argument.toString(), {}, nullptr, m_service->name(), m_service->icon());
+        auto job = new KIO::CommandLauncherJob(argument.toString());
+        job->setDesktopName(m_service->entryPath());
+        job->setIcon(m_service->icon());
+        return job->exec();
     }
 
     return Kicker::handleRecentDocumentAction(m_service, actionId, argument);

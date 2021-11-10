@@ -13,8 +13,8 @@
 #include <QIcon>
 #include <QUrlQuery>
 
+#include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
-#include <KRun>
 #include <KRunner/RunnerManager>
 
 #include <Plasma/Plasma>
@@ -179,7 +179,10 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
     } else if (Kicker::handleAppstreamActions(actionId, argument)) {
         return true;
     } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
-        return KRun::run(argument.toString(), {}, nullptr, service ? service->name() : QString(), service ? service->icon() : QString());
+        auto job = new KIO::CommandLauncherJob(argument.toString());
+        job->setDesktopName(service->entryPath());
+        job->setIcon(service->icon());
+        return job->exec();
     } else if (actionId == QLatin1String("_kicker_recentDocument") || actionId == QLatin1String("_kicker_forgetRecentDocuments")) {
         return Kicker::handleRecentDocumentAction(service, actionId, argument);
     }

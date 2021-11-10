@@ -14,8 +14,8 @@
 #include <KAuthorized>
 #include <KConcatenateRowsProxyModel>
 #include <KFilePlacesModel>
+#include <KIO/OpenUrlJob>
 #include <KLocalizedString>
-#include <KRun>
 #include <Solid/Device>
 
 #include "krunner_interface.h"
@@ -239,7 +239,8 @@ bool ComputerModel::trigger(int row, const QString &actionId, const QVariant &ar
         const QUrl &url = m_filteredPlacesModel->url(sourceIndex);
 
         if (url.isValid()) {
-            new KRun(url, nullptr);
+            auto job = new KIO::OpenUrlJob(url);
+            job->start();
 
             return true;
         }
@@ -281,5 +282,6 @@ void ComputerModel::onSetupDone(Solid::ErrorType error, QVariant errorData, cons
 
     Q_ASSERT(access);
 
-    new KRun(QUrl::fromLocalFile(access->filePath()), nullptr);
+    auto job = new KIO::OpenUrlJob(QUrl::fromLocalFile(access->filePath()));
+    job->start();
 }
