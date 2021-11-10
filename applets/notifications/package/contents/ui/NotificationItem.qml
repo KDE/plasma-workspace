@@ -149,9 +149,9 @@ ColumnLayout {
 
         // When the urgent notification line is visible, remove margins to allow
         // it to touch the edges of the popup
-        Layout.topMargin: urgentNotificationLine.visible? notificationItem.thumbnailTopPadding + PlasmaCore.Units.devicePixelRatio : -1
-        Layout.leftMargin: urgentNotificationLine.visible? notificationItem.thumbnailLeftPadding : -1
-        Layout.bottomMargin: urgentNotificationLine.visible? notificationItem.thumbnailBottomPadding : -1
+        Layout.topMargin: urgentNotificationLine.visible ? notificationItem.thumbnailTopPadding + PlasmaCore.Units.devicePixelRatio : undefined
+        Layout.leftMargin: urgentNotificationLine.visible ? notificationItem.thumbnailLeftPadding : undefined
+        Layout.bottomMargin: urgentNotificationLine.visible ? notificationItem.thumbnailBottomPadding : undefined
 
         spacing: PlasmaCore.Units.smallSpacing
 
@@ -172,9 +172,9 @@ ColumnLayout {
             // Re-add margins to this item if they were removed in the parent item
             // to let the urgent notification line touch the edges; we do want
             // everything else to have normal margins
-            Layout.topMargin: urgentNotificationLine.visible? -notificationItem.thumbnailTopPadding : -1
-            Layout.leftMargin: urgentNotificationLine.visible? -notificationItem.thumbnailLeftPadding : -1
-            Layout.bottomMargin: urgentNotificationLine.visible? -notificationItem.thumbnailBottomPadding : -1
+            Layout.topMargin: urgentNotificationLine.visible ? -notificationItem.thumbnailTopPadding : undefined
+            Layout.leftMargin: urgentNotificationLine.visible ? -notificationItem.thumbnailLeftPadding : undefined
+            Layout.bottomMargin: urgentNotificationLine.visible ? -notificationItem.thumbnailBottomPadding : undefined
 
             spacing: PlasmaCore.Units.smallSpacing
 
