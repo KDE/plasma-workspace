@@ -9,7 +9,7 @@
 namespace TaskManager
 {
 ConcatenateTasksProxyModel::ConcatenateTasksProxyModel(QObject *parent)
-    : KConcatenateRowsProxyModel(parent)
+    : QConcatenateTablesProxyModel(parent)
 {
 }
 
