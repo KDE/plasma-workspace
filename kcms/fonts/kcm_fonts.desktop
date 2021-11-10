@@ -125,6 +125,5 @@ X-KDE-Keywords[zh_CN]=fonts,font size,styles,charsets,character sets,panel,contr
 
 Categories=Qt;KDE;X-KDE-settings-looknfeel;
 
-X-Plasma-API=declarativeappletscript
 X-KDE-FormFactors=tablet,handset,desktop
 X-Plasma-MainScript=ui/main.qml

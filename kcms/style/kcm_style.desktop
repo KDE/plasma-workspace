@@ -121,5 +121,4 @@ X-KDE-Keywords[zh_CN]=style,styles,look,widget,icons,toolbars,text,highlight,app
 
 Categories=Qt;KDE;X-KDE-settings-looknfeel;
 
-X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/main.qml

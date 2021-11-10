@@ -120,5 +120,4 @@ X-KDE-Keywords[zh_CN]=theme,look,feel,global theme,desktop,appearance,skin, glob
 Categories=Qt;KDE;X-KDE-settings-looknfeel;
 
 X-KDE-ServiceTypes=Plasma/Generic
-X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/main.qml

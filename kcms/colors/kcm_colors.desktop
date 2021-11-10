@@ -90,7 +90,6 @@ X-KDE-PluginInfo-Name=kcm_colors
 X-KDE-PluginInfo-Version=
 X-KDE-PluginInfo-Website=https://www.kde.org/plasma-desktop
 X-KDE-ServiceTypes=KCModule
-X-Plasma-API=declarativeappletscript
 X-DocPath=kcontrol/colors/index.html
 X-KDE-Library=kcm_colors
 X-KDE-ParentApp=kcontrol

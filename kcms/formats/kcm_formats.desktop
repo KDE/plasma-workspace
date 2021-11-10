@@ -111,7 +111,6 @@ X-KDE-ParentApp=kcontrol
 X-KDE-System-Settings-Parent-Category=regionalsettings
 X-KDE-Weight=50
 X-KDE-PluginInfo-Name=kcm_formats
-X-Plasma-API=declarativeappletscript
 
 X-KDE-FormFactors=tablet,handset,desktop
 

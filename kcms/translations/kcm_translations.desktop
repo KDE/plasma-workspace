@@ -128,6 +128,5 @@ X-KDE-Keywords[zh_CN]=language,writing,text,idioms,dialect,words,region,regional
 
 Categories=Qt;KDE;X-KDE-settings-translations;
 
-X-Plasma-API=declarativeappletscript
 X-KDE-FormFactors=tablet,handset,desktop
 X-Plasma-MainScript=ui/main.qml
