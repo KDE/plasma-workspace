@@ -64,9 +64,6 @@ int main(int argc, char *argv[])
 
     KDBusService service(KDBusService::Unique);
 
-    // make KConfigDialog "know" when our actions page is changed
-    KConfigDialogManager::changedMap()->insert(QStringLiteral("ActionsTreeWidget"), SIGNAL(changed()));
-
     KlipperTray klipper;
     return app.exec();
 }

@@ -18,6 +18,7 @@ ActionsTreeWidget::ActionsTreeWidget(QWidget *parent)
         connect(treeModel, &QAbstractItemModel::rowsInserted, this, &ActionsTreeWidget::onItemChanged);
         connect(treeModel, &QAbstractItemModel::rowsRemoved, this, &ActionsTreeWidget::onItemChanged);
     }
+    setProperty("kcfg_propertyNotify", true);
 }
 
 void ActionsTreeWidget::onItemChanged()
