@@ -27,7 +27,6 @@
 #include <QStringList>
 #include <QSvgRenderer>
 
-#include <KAboutData>
 #include <KConfigGroup>
 #include <KIconLoader>
 #include <KIconTheme>
@@ -66,19 +65,6 @@ IconModule::IconModule(QObject *parent, const KPluginMetaData &data, const QVari
 
     // to be able to access its enums
     qmlRegisterUncreatableType<KIconLoader>(uri, 1, 0, "KIconLoader", QString());
-
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_icons"),
-                                       i18n("Icons"),
-                                       QStringLiteral("1.0"),
-                                       i18n("Icons Control Panel Module"),
-                                       KAboutLicense::GPL,
-                                       i18n("(c) 2000-2003 Geert Jansen"));
-    about->addAuthor(i18n("Geert Jansen"), QString(), QStringLiteral("jansen@kde.org"));
-    about->addAuthor(i18n("Antonio Larrosa Jimenez"), QString(), QStringLiteral("larrosa@kde.org"));
-    about->addCredit(i18n("Torsten Rahn"), QString(), QStringLiteral("torsten@kde.org"));
-    about->addAuthor(i18n("Jonathan Riddell"), QString(), QStringLiteral("jr@jriddell.org"));
-    about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@privat.broulik.de>"));
-    setAboutData(about);
 
     setButtons(Apply | Default);
 

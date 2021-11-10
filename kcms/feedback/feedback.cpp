@@ -7,7 +7,6 @@
 
 #include "feedback.h"
 
-#include <KAboutData>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
@@ -43,12 +42,6 @@ Feedback::Feedback(QObject *parent, const KPluginMetaData &data, const QVariantL
     , m_data(new FeedbackData(this))
 {
     qmlRegisterAnonymousType<FeedbackSettings>("org.kde.userfeedback.kcm", 1);
-
-    setAboutData(new KAboutData(QStringLiteral("kcm_feedback"),
-                                i18n("User Feedback"),
-                                QStringLiteral("1.0"),
-                                i18n("Configure user feedback settings"),
-                                KAboutLicense::LGPL));
 
     QVector<QProcess *> processes;
     for (const auto &exec : s_programs.keys()) {

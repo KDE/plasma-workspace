@@ -11,7 +11,6 @@
 #include "translationsmodel.h"
 #include "translationssettings.h"
 
-#include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KSharedConfig>
@@ -24,9 +23,6 @@ Translations::Translations(QObject *parent, const KPluginMetaData &data, const Q
     , m_translationsModel(new TranslationsModel(this))
     , m_everSaved(false)
 {
-    auto *about = new KAboutData(QStringLiteral("kcm_translations"), i18n("Language"), QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
-    setAboutData(about);
-
     setButtons(Apply | Default);
 
     connect(m_translationsModel, &TranslationsModel::selectedLanguagesChanged, this, &Translations::selectedLanguagesChanged);

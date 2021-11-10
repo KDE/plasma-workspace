@@ -23,7 +23,6 @@
 #include <QQuickView>
 #include <QWindow>
 
-#include <KAboutData>
 #include <KAcceleratorManager>
 #include <KConfig>
 #include <KConfigGroup>
@@ -47,15 +46,12 @@ K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFont
 
 /**** KFonts ****/
 
-KFonts::KFonts(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+KFonts::KFonts(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, metaData, args)
     , m_data(new FontsData(this))
     , m_subPixelOptionsModel(new QStandardItemModel(this))
     , m_hintingOptionsModel(new QStandardItemModel(this))
 {
-    KAboutData *about = new KAboutData("kcm_fonts", i18n("Fonts"), "0.1", QString(), KAboutLicense::LGPL);
-    about->addAuthor(i18n("Antonis Tsiapaliokas"), QString(), "antonis.tsiapaliokas@kde.org");
-    setAboutData(about);
     qmlRegisterAnonymousType<QStandardItemModel>("QStandardItemModel",1);
     qmlRegisterAnonymousType<FontsSettings>("FontsSettings",1);
     qmlRegisterAnonymousType<FontsAASettings>("FontsAASettings",1);

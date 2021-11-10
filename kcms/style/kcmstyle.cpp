@@ -20,7 +20,6 @@
 #include "../kcms-common_p.h"
 #include "styleconfdialog.h"
 
-#include <KAboutData>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
@@ -75,18 +74,6 @@ KCMStyle::KCMStyle(QObject *parent, const KPluginMetaData &data, const QVariantL
     qmlRegisterAnonymousType<StyleSettings>(uri, 1);
     qmlRegisterAnonymousType<StylesModel>(uri, 1);
     qmlRegisterType<PreviewItem>("org.kde.private.kcms.style", 1, 0, "PreviewItem");
-
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_style"),
-                                       i18n("Application Style"),
-                                       QStringLiteral("2.0"),
-                                       QString(),
-                                       KAboutLicense::GPL,
-                                       i18n("(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "));
-
-    about->addAuthor(i18n("Karol Szwed"), QString(), QStringLiteral("gallium@kde.org"));
-    about->addAuthor(i18n("Daniel Molkentin"), QString(), QStringLiteral("molkentin@kde.org"));
-    about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@broulik.de"));
-    setAboutData(about);
 
     connect(m_model, &StylesModel::selectedStyleChanged, this, [this](const QString &style) {
         styleSettings()->setWidgetStyle(style);

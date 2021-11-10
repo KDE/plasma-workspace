@@ -22,7 +22,6 @@
 #include <QStandardItemModel>
 #include <QStandardPaths>
 
-#include <KAboutData>
 #include <KColorScheme>
 #include <KColorUtils>
 #include <KConfigGroup>
@@ -62,11 +61,6 @@ KCMColors::KCMColors(QObject *parent, const KPluginMetaData &data, const QVarian
     qmlRegisterAnonymousType<ColorsModel>(uri, 1);
     qmlRegisterAnonymousType<FilterProxyModel>(uri, 1);
     qmlRegisterAnonymousType<ColorsSettings>(uri, 1);
-
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_colors"), i18n("Colors"), QStringLiteral("2.0"), QString(), KAboutLicense::GPL);
-
-    about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@privat.broulik.de"));
-    setAboutData(about);
 
     connect(m_model, &ColorsModel::pendingDeletionsChanged, this, &KCMColors::settingsChanged);
 

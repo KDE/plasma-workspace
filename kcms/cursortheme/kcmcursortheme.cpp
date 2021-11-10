@@ -19,7 +19,6 @@
 #include "xcursor/themeapplicator.h"
 #include "xcursor/thememodel.h"
 
-#include <KAboutData>
 #include <KIO/CopyJob>
 #include <KIO/DeleteJob>
 #include <KIO/Job>
@@ -58,15 +57,6 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const KPluginMetaData &dat
     qmlRegisterType<PreviewWidget>("org.kde.private.kcm_cursortheme", 1, 0, "PreviewWidget");
     qmlRegisterAnonymousType<SortProxyModel>("SortProxyModel",1);
     qmlRegisterAnonymousType<CursorThemeSettings>("CursorThemeSettings",1);
-    KAboutData *aboutData = new KAboutData(QStringLiteral("kcm_cursortheme"),
-                                           i18n("Cursors"),
-                                           QStringLiteral("1.0"),
-                                           QString(),
-                                           KAboutLicense::GPL,
-                                           i18n("(c) 2003-2007 Fredrik Höglund"));
-    aboutData->addAuthor(i18n("Fredrik Höglund"));
-    aboutData->addAuthor(i18n("Marco Martin"));
-    setAboutData(aboutData);
 
     m_themeModel = new CursorThemeModel(this);
 

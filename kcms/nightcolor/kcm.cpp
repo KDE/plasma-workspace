@@ -6,7 +6,6 @@
 
 #include "kcm.h"
 
-#include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
 
@@ -23,9 +22,6 @@ KCMNightColor::KCMNightColor(QObject *parent, const KPluginMetaData &data, const
     qmlRegisterAnonymousType<NightColorSettings>("org.kde.private.kcms.nightcolor", 1);
     qmlRegisterUncreatableMetaObject(ColorCorrect::staticMetaObject, "org.kde.private.kcms.nightcolor", 1, 0, "NightColorMode", "Error: only enums");
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_nightcolor"), i18n("Night Color"), QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
-    about->addAuthor(i18n("Roman Gilg"), QString(), QStringLiteral("subdiff@gmail.com"));
-    setAboutData(about);
     setButtons(Apply | Default);
 }
 

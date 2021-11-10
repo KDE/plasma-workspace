@@ -10,7 +10,6 @@
 
 #include "kcm.h"
 
-#include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
 
@@ -48,9 +47,6 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const KPluginMetaData &data, c
     qmlRegisterUncreatableType<ThemesModel>("org.kde.private.kcms.desktoptheme", 1, 0, "ThemesModel", "Cannot create ThemesModel");
     qmlRegisterUncreatableType<FilterProxyModel>("org.kde.private.kcms.desktoptheme", 1, 0, "FilterProxyModel", "Cannot create FilterProxyModel");
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_desktoptheme"), i18n("Plasma Style"), QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
-    about->addAuthor(i18n("David Rosca"), QString(), QStringLiteral("nowrep@gmail.com"));
-    setAboutData(about);
     setButtons(Apply | Default | Help);
 
     m_haveThemeExplorerInstalled = !QStandardPaths::findExecutable(QStringLiteral("plasmathemeexplorer")).isEmpty();

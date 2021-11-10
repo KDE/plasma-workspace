@@ -18,7 +18,6 @@
 #include <QVBoxLayout>
 #include <QWindow>
 
-#include <KAboutData>
 #include <KConfigGroup>
 #include <KGlobalAccel>
 #include <KLocalizedString>
@@ -57,10 +56,6 @@ KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data,
     qmlRegisterAnonymousType<NotificationManager::BadgeSettings>("BadgeSettings",1);
     qmlRegisterAnonymousType<NotificationManager::BehaviorSettings>("BehaviorSettings",1);
     qmlProtectModule(uri, 1);
-
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_notifications"), i18n("Notifications"), QStringLiteral("5.0"), QString(), KAboutLicense::GPL);
-    about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@privat.broulik.de"));
-    setAboutData(about);
 
     m_filteredModel->setSourceModel(m_sourcesModel);
 

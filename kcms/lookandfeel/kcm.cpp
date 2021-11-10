@@ -13,7 +13,6 @@
 #include "config-workspace.h"
 #include "krdb.h"
 
-#include <KAboutData>
 #include <KDialogJobUiDelegate>
 #include <KIO/ApplicationLauncherJob>
 #include <KIconLoader>
@@ -61,9 +60,6 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, con
     qmlRegisterAnonymousType<QStandardItemModel>("", 1);
     qmlRegisterAnonymousType<KCMLookandFeel>("", 1);
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_lookandfeel"), i18n("Global Theme"), QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
-    about->addAuthor(i18n("Marco Martin"), QString(), QStringLiteral("mart@kde.org"));
-    setAboutData(about);
     setButtons(Apply | Default);
 
     m_model = new QStandardItemModel(this);
