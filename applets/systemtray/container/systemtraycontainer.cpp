@@ -13,8 +13,8 @@
 #include <QAction>
 #include <kactioncollection.h>
 
-SystemTrayContainer::SystemTrayContainer(QObject *parent, const QVariantList &args)
-    : Plasma::Applet(parent, args)
+SystemTrayContainer::SystemTrayContainer(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : Plasma::Applet(parent, data, args)
 {
 }
 

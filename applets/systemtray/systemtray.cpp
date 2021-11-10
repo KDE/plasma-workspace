@@ -25,8 +25,8 @@
 #include <KAcceleratorManager>
 #include <KActionCollection>
 
-SystemTray::SystemTray(QObject *parent, const QVariantList &args)
-    : Plasma::Containment(parent, args)
+SystemTray::SystemTray(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : Plasma::Containment(parent, data, args)
     , m_plasmoidModel(nullptr)
     , m_statusNotifierModel(nullptr)
     , m_systemTrayModel(nullptr)

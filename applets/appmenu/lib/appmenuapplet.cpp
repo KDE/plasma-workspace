@@ -27,8 +27,8 @@ QString viewService()
 }
 }
 
-AppMenuApplet::AppMenuApplet(QObject *parent, const QVariantList &data)
-    : Plasma::Applet(parent, data)
+AppMenuApplet::AppMenuApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : Plasma::Applet(parent, data, args)
 {
     ++s_refs;
     // if we're the first, register the service

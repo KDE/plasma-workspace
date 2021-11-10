@@ -8,8 +8,8 @@
 
 #include <QDateTime>
 
-CalendarApplet::CalendarApplet(QObject *parent, const QVariantList &data)
-    : Plasma::Applet(parent, data)
+CalendarApplet::CalendarApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : Plasma::Applet(parent, data, args)
 {
 }
 

@@ -21,7 +21,7 @@ class SystemTrayContainer : public Plasma::Applet
     Q_PROPERTY(QQuickItem *internalSystray READ internalSystray NOTIFY internalSystrayChanged)
 
 public:
-    SystemTrayContainer(QObject *parent, const QVariantList &args);
+    SystemTrayContainer(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~SystemTrayContainer() override;
 
     void init() override;

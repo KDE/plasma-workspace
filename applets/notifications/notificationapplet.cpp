@@ -30,8 +30,8 @@
 #include "texteditclickhandler.h"
 #include "thumbnailer.h"
 
-NotificationApplet::NotificationApplet(QObject *parent, const QVariantList &data)
-    : Plasma::Applet(parent, data)
+NotificationApplet::NotificationApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : Plasma::Applet(parent, data, args)
 {
     static bool s_typesRegistered = false;
     if (!s_typesRegistered) {
