@@ -50,7 +50,7 @@ bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentI
 
     switch (target) {
     case Desktop: {
-        containment = corona->containmentForScreen(containment->screen());
+        containment = corona->containmentForScreen(containment->screen(), QString(), QString());
 
         if (containment) {
             return (containment->immutability() == Plasma::Types::Mutable);
@@ -122,7 +122,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
 
     switch (target) {
     case Desktop: {
-        containment = corona->containmentForScreen(containment->screen());
+        containment = corona->containmentForScreen(containment->screen(), QString(), QString());
 
         if (!containment) {
             return;
@@ -212,7 +212,7 @@ QObject *ContainmentInterface::screenContainment(QObject *appletInterface)
         return nullptr;
     }
 
-    return corona->containmentForScreen(containment->screen());
+    return corona->containmentForScreen(containment->screen(), QString(), QString());
 }
 
 bool ContainmentInterface::screenContainmentMutable(QObject *appletInterface)
