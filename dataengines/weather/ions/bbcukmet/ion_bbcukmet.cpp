@@ -301,7 +301,16 @@ void UKMETIon::getXMLData(const QString &source)
 // Parses city list and gets the correct city based on ID number
 void UKMETIon::findPlace(const QString &place, const QString &source)
 {
+    // the API needs auto=true for partial-text searching
+    // but unlike the normal query, using auto=true doesn't show locations which match the text but with different unicode
+    // for example "hyderabad" with no auto matches "Hyderabad" and "Hyderābād"
+    // but with auto matches only "Hyderabad"
+    // so we merge the two results
     const QUrl url(QLatin1String("https://open.live.bbc.co.uk/locator/locations?s=") + place + QLatin1String("&format=json"));
+    const QUrl autoUrl(QLatin1String("https://open.live.bbc.co.uk/locator/locations?s=") + place + QLatin1String("&format=json&auto=true"));
+
+    m_normalSearchArrived = false;
+    m_autoSearchArrived = false;
 
     KIO::TransferJob *getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
@@ -309,7 +318,20 @@ void UKMETIon::findPlace(const QString &place, const QString &source)
     m_jobList.insert(getJob, source);
 
     connect(getJob, &KIO::TransferJob::data, this, &UKMETIon::setup_slotDataArrived);
-    connect(getJob, &KJob::result, this, &UKMETIon::setup_slotJobFinished);
+
+    KIO::TransferJob *autoGetJob = KIO::get(autoUrl, KIO::Reload, KIO::HideProgressInfo);
+    autoGetJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
+    m_jobHtml.insert(autoGetJob, new QByteArray());
+    m_jobList.insert(autoGetJob, source);
+
+    connect(autoGetJob, &KIO::TransferJob::data, this, &UKMETIon::setup_slotDataArrived);
+
+    connect(getJob, &KJob::result, this, [&](KJob *job) {
+        setup_slotJobFinished(job, QStringLiteral("normal"));
+    });
+    connect(autoGetJob, &KJob::result, this, [&](KJob *job) {
+        setup_slotJobFinished(job, QStringLiteral("auto"));
+    });
 }
 
 void UKMETIon::getFiveDayForecast(const QString &source)
@@ -327,35 +349,49 @@ void UKMETIon::getFiveDayForecast(const QString &source)
     connect(getJob, &KJob::result, this, &UKMETIon::forecast_slotJobFinished);
 }
 
-void UKMETIon::readSearchHTMLData(const QString &source, const QByteArray &html)
+void UKMETIon::readSearchHTMLData(const QString &source, const QList<QByteArray *> htmls)
 {
     int counter = 2;
 
-    QJsonObject jsonDocumentObject = QJsonDocument::fromJson(html).object().value(QStringLiteral("response")).toObject();
+    for (const QByteArray *html : htmls) {
+        if (!html) {
+            continue;
+        }
 
-    if (!jsonDocumentObject.isEmpty()) {
-        const QJsonArray results = jsonDocumentObject.value(QStringLiteral("locations")).toArray();
+        QJsonObject jsonDocumentObject = QJsonDocument::fromJson(*html).object().value(QStringLiteral("response")).toObject();
 
-        for (const QJsonValue &resultValue : results) {
-            QJsonObject result = resultValue.toObject();
-            const QString id = result.value(QStringLiteral("id")).toString();
-            const QString name = result.value(QStringLiteral("name")).toString();
-            const QString area = result.value(QStringLiteral("container")).toString();
-            const QString country = result.value(QStringLiteral("country")).toString();
+        if (!jsonDocumentObject.isEmpty()) {
+            QJsonValue resultsVariant = jsonDocumentObject.value(QStringLiteral("locations"));
 
-            if (!id.isEmpty() && !name.isEmpty() && !area.isEmpty() && !country.isEmpty()) {
-                const QString fullName = name + QLatin1String(", ") + area + QLatin1String(", ") + country;
-                QString tmp = QLatin1String("bbcukmet|") + fullName;
+            if (resultsVariant.isUndefined()) {
+                // this is a response from an auto=true query
+                resultsVariant = jsonDocumentObject.value(QStringLiteral("results")).toObject().value(QStringLiteral("results"));
+            }
 
-                // Duplicate places can exist
-                if (m_locations.contains(tmp)) {
-                    tmp += QLatin1String(" (#") + QString::number(counter) + QLatin1Char(')');
-                    counter++;
+            const QJsonArray results = resultsVariant.toArray();
+
+            for (const QJsonValue &resultValue : results) {
+                QJsonObject result = resultValue.toObject();
+                const QString id = result.value(QStringLiteral("id")).toString();
+                const QString name = result.value(QStringLiteral("name")).toString();
+                const QString area = result.value(QStringLiteral("container")).toString();
+                const QString country = result.value(QStringLiteral("country")).toString();
+
+                if (!id.isEmpty() && !name.isEmpty() && !area.isEmpty() && !country.isEmpty()) {
+                    const QString fullName = name + QLatin1String(", ") + area + QLatin1String(", ") + country;
+                    QString tmp = QLatin1String("bbcukmet|") + fullName;
+
+                    // Duplicate places can exist, show them too
+                    // but not if they have the exact same id, which can happen since we're merging two results
+                    if (m_locations.contains(tmp) && m_place[tmp].stationId != id) {
+                        tmp += QLatin1String(" (#") + QString::number(counter) + QLatin1Char(')');
+                        counter++;
+                    }
+                    XMLMapInfo &place = m_place[tmp];
+                    place.stationId = id;
+                    place.place = fullName;
+                    m_locations.append(tmp);
                 }
-                XMLMapInfo &place = m_place[tmp];
-                place.stationId = id;
-                place.place = fullName;
-                m_locations.append(tmp);
             }
         }
     }
@@ -388,7 +424,7 @@ void UKMETIon::setup_slotDataArrived(KIO::Job *job, const QByteArray &data)
     m_jobHtml[job]->append(data);
 }
 
-void UKMETIon::setup_slotJobFinished(KJob *job)
+void UKMETIon::setup_slotJobFinished(KJob *job, const QString &type)
 {
     if (job->error() == KIO::ERR_SERVER_TIMEOUT) {
         setData(m_jobList[job], QStringLiteral("validate"), QStringLiteral("bbcukmet|timeout"));
@@ -399,16 +435,26 @@ void UKMETIon::setup_slotJobFinished(KJob *job)
         return;
     }
 
+    if (type == QStringLiteral("normal")) {
+        m_normalSearchArrived = true;
+    }
+    if (type == QStringLiteral("auto")) {
+        m_autoSearchArrived = true;
+    }
+    if (!(m_normalSearchArrived && m_autoSearchArrived)) {
+        return;
+    }
+
     // If Redirected, don't go to this routine
     if (!m_locations.contains(QLatin1String("bbcukmet|") + m_jobList[job])) {
-        QByteArray *reader = m_jobHtml.value(job);
-        if (reader) {
-            readSearchHTMLData(m_jobList[job], *reader);
-        }
+        readSearchHTMLData(m_jobList[job] /* source is same for both */, m_jobHtml.values());
     }
-    m_jobList.remove(job);
-    delete m_jobHtml[job];
-    m_jobHtml.remove(job);
+
+    m_jobList.clear();
+    for (auto html : m_jobHtml.values()) {
+        delete html;
+    }
+    m_jobHtml.clear();
 }
 
 void UKMETIon::observation_slotDataArrived(KIO::Job *job, const QByteArray &data)
