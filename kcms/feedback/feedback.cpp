@@ -38,7 +38,7 @@ inline void swap(QJsonValueRef v1, QJsonValueRef v2)
 }
 
 Feedback::Feedback(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent)
+    : KQuickAddons::ManagedConfigModule(parent, data, args)
     // UserFeedback.conf is used by KUserFeedback which uses QSettings and won't go through globals
     , m_data(new FeedbackData(this))
 {
