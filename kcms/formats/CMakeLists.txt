@@ -26,5 +26,5 @@ target_link_libraries(kcm_formats
 
 ########### install files ###############
 install(TARGETS kcm_formats  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms )
-install(FILES kcm_formats.desktop RENAME kcm_formats.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_formats.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_formats kcms)
