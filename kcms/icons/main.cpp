@@ -280,23 +280,20 @@ void IconModule::exportToKDE4()
     kde4config.sync();
 
     QProcess *cachePathProcess = new QProcess(this);
-    connect(cachePathProcess,
-            QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-            this,
-            [cachePathProcess](int exitCode, QProcess::ExitStatus status) {
-                if (status == QProcess::NormalExit && exitCode == 0) {
-                    QString path = cachePathProcess->readAllStandardOutput().trimmed();
-                    path.append(QLatin1String("icon-cache.kcache"));
-                    QFile::remove(path);
-                }
+    connect(cachePathProcess, &QProcess::finished, this, [cachePathProcess](int exitCode, QProcess::ExitStatus status) {
+        if (status == QProcess::NormalExit && exitCode == 0) {
+            QString path = cachePathProcess->readAllStandardOutput().trimmed();
+            path.append(QLatin1String("icon-cache.kcache"));
+            QFile::remove(path);
+        }
 
-                // message kde4 apps that icon theme has changed
-                for (int i = 0; i < KIconLoader::LastGroup; ++i) {
-                    notifyKcmChange(GlobalChangeType::IconChanged, KIconLoader::Group(i));
-                }
+        // message kde4 apps that icon theme has changed
+        for (int i = 0; i < KIconLoader::LastGroup; ++i) {
+            notifyKcmChange(GlobalChangeType::IconChanged, KIconLoader::Group(i));
+        }
 
-                cachePathProcess->deleteLater();
-            });
+        cachePathProcess->deleteLater();
+    });
     cachePathProcess->start(QStringLiteral("kde4-config"), {QStringLiteral("--path"), QStringLiteral("cache")});
 }
 

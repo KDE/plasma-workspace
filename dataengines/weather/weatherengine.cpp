@@ -28,7 +28,7 @@ WeatherEngine::WeatherEngine(QObject *parent, const QVariantList &args)
     connect(&m_networkConfigurationManager, &QNetworkConfigurationManager::onlineStateChanged, this, &WeatherEngine::onOnlineStateChanged);
 
     // Get the list of available plugins but don't load them
-    connect(KSycoca::self(), static_cast<void (KSycoca::*)()>(&KSycoca::databaseChanged), this, &WeatherEngine::updateIonList);
+    connect(KSycoca::self(), &KSycoca::databaseChanged, this, &WeatherEngine::updateIonList);
 
     updateIonList();
 }

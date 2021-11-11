@@ -42,8 +42,6 @@ Feedback::Feedback(QObject *parent, const KPluginMetaData &data, const QVariantL
     // UserFeedback.conf is used by KUserFeedback which uses QSettings and won't go through globals
     , m_data(new FeedbackData(this))
 {
-    Q_UNUSED(args)
-
     qmlRegisterAnonymousType<FeedbackSettings>("org.kde.userfeedback.kcm", 1);
 
     setAboutData(new KAboutData(QStringLiteral("kcm_feedback"),
@@ -58,7 +56,7 @@ Feedback::Feedback(QObject *parent, const KPluginMetaData &data, const QVariantL
         p->setProgram(exec);
         p->setArguments({QStringLiteral("--feedback")});
         p->start();
-        connect(p, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &Feedback::programFinished);
+        connect(p, &QProcess::finished, this, &Feedback::programFinished);
         processes << p;
     }
 }

@@ -103,7 +103,7 @@ public:
     {
         proc.setProgram("/usr/bin/check-language-support");
         proc.setArguments({"--language", m_languageCode.left(m_languageCode.indexOf(QLatin1Char('@')))});
-        connect(&proc, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, [this] {
+        connect(&proc, &QProcess::finished, this, [this] {
             const QString output = QString::fromUtf8(proc.readAllStandardOutput().simplified());
             // Whenever we don't get packages back simply pretend the language is complete as we can't
             // give any useful information on what's wrong anyway.

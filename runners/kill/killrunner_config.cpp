@@ -35,7 +35,7 @@ KillRunnerConfig::KillRunnerConfig(QWidget *parent, const QVariantList &args)
 
     connect(m_ui->useTriggerWord, &QCheckBox::stateChanged, this, &KillRunnerConfig::markAsChanged);
     connect(m_ui->triggerWord, &KLineEdit::textChanged, this, &KillRunnerConfig::markAsChanged);
-    connect(m_ui->sorting, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &KillRunnerConfig::markAsChanged);
+    connect(m_ui->sorting, &QComboBox::currentIndexChanged, this, &KillRunnerConfig::markAsChanged);
 
     load();
 }

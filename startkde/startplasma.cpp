@@ -598,16 +598,13 @@ bool startPlasmaSession(bool wayland)
         }
 
         startPlasmaSession->setProcessChannelMode(QProcess::ForwardedChannels);
-        QObject::connect(startPlasmaSession.data(),
-                         QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-                         &e,
-                         [&rc](int exitCode, QProcess::ExitStatus) {
-                             if (exitCode == 255) {
-                                 // Startup error
-                                 messageBox(QStringLiteral("startkde: Could not start plasma_session. Check your installation.\n"));
-                                 rc = false;
-                             }
-                         });
+        QObject::connect(startPlasmaSession.data(), &QProcess::finished, &e, [&rc](int exitCode, QProcess::ExitStatus) {
+            if (exitCode == 255) {
+                // Startup error
+                messageBox(QStringLiteral("startkde: Could not start plasma_session. Check your installation.\n"));
+                rc = false;
+            }
+        });
 
         startPlasmaSession->start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
     } else {

@@ -103,8 +103,7 @@ void LauncherTasksModel::Private::init()
                                            AbstractTasksModel::LauncherUrlWithoutIcon});
     });
 
-    void (KSycoca::*myDatabaseChangeSignal)() = &KSycoca::databaseChanged;
-    QObject::connect(KSycoca::self(), myDatabaseChangeSignal, q, [this]() {
+    QObject::connect(KSycoca::self(), &KSycoca::databaseChanged, q, [this]() {
         sycocaChangeTimer.start();
     });
 }

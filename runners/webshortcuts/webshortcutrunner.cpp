@@ -31,7 +31,7 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &met
     sessionDbus.connect(QString(), QStringLiteral("/"), QStringLiteral("org.kde.KUriFilterPlugin"), QStringLiteral("configure"), this, SLOT(loadSyntaxes()));
     loadSyntaxes();
     configurePrivateBrowsingActions();
-    connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, &WebshortcutRunner::configurePrivateBrowsingActions);
+    connect(KSycoca::self(), &KSycoca::databaseChanged, this, &WebshortcutRunner::configurePrivateBrowsingActions);
     setMinLetterCount(3);
 }
 

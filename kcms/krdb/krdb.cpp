@@ -501,7 +501,7 @@ void runRdb(uint flags)
                             PropModeReplace,
                             (unsigned char *)stamp.buffer().data(),
                             stamp.buffer().size());
-            QApplication::flush();
+            qApp->processEvents();
         }
 #endif
     }

@@ -276,7 +276,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
     QModelIndex idx = m_model->index(m_model->indexOfScheme(schemeName), 0);
 
     m_editDialogProcess = new QProcess(this);
-    connect(m_editDialogProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
+    connect(m_editDialogProcess, &QProcess::finished, this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
         Q_UNUSED(exitCode);
         Q_UNUSED(exitStatus);
 

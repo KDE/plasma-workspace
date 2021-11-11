@@ -549,7 +549,7 @@ void AppsModel::refreshInternal()
         m_changeTimer->setInterval(100);
         connect(m_changeTimer, SIGNAL(timeout()), this, SLOT(refresh()));
 
-        connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, [this]() {
+        connect(KSycoca::self(), &KSycoca::databaseChanged, this, [this]() {
             m_changeTimer->start();
         });
     } else {

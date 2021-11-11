@@ -52,7 +52,7 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id)
     if (url.scheme() == QLatin1String("preferred")) {
         m_service = defaultAppByName(url.host());
         m_id = id;
-        m_con = QObject::connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), owner, [this, owner, id]() {
+        m_con = QObject::connect(KSycoca::self(), &KSycoca::databaseChanged, owner, [this, owner, id]() {
             KSharedConfig::openConfig()->reparseConfiguration();
             m_service = defaultAppByName(QUrl(id).host());
             if (m_service) {

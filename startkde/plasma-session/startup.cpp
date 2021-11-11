@@ -419,7 +419,7 @@ StartProcessJob::StartProcessJob(const QString &process, const QStringList &args
     env.insert(additionalEnv);
     m_process->setProcessEnvironment(env);
 
-    connect(m_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [this](int exitCode) {
+    connect(m_process, &QProcess::finished, [this](int exitCode) {
         qCInfo(PLASMA_SESSION) << "process job " << m_process->program() << "finished with exit code " << exitCode;
         emitResult();
     });

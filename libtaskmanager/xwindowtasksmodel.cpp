@@ -121,8 +121,7 @@ void XWindowTasksModel::Private::init()
 
     QObject::connect(&sycocaChangeTimer, &QTimer::timeout, q, clearCacheAndRefresh);
 
-    void (KSycoca::*myDatabaseChangeSignal)() = &KSycoca::databaseChanged;
-    QObject::connect(KSycoca::self(), myDatabaseChangeSignal, q, [this]() {
+    QObject::connect(KSycoca::self(), &KSycoca::databaseChanged, q, [this]() {
         sycocaChangeTimer.start();
     });
 

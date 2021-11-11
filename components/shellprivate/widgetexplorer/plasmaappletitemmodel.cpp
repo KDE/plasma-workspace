@@ -218,7 +218,7 @@ PlasmaAppletItemModel::PlasmaAppletItemModel(QObject *parent)
     : QStandardItemModel(parent)
     , m_startupCompleted(false)
 {
-    connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, &PlasmaAppletItemModel::populateModel);
+    connect(KSycoca::self(), &KSycoca::databaseChanged, this, &PlasmaAppletItemModel::populateModel);
 
     setSortRole(Qt::DisplayRole);
 }

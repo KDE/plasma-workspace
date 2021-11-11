@@ -153,7 +153,7 @@ void ShellCorona::init()
     KGlobalAccel::self()->setGlobalShortcut(dashboardAction, Qt::CTRL | Qt::Key_F12);
 
     checkAddPanelAction();
-    connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, &ShellCorona::checkAddPanelAction);
+    connect(KSycoca::self(), &KSycoca::databaseChanged, this, &ShellCorona::checkAddPanelAction);
 
     // Activity stuff
     QAction *activityAction = actions()->addAction(QStringLiteral("manage activities"));
