@@ -43,7 +43,7 @@ KCM.SimpleKCM {
     }
 
     Component.onCompleted: {
-        if (kcm.nightColorSettings.mode == CC.CompositorAdaptor.ModeAutomatic && kcm.nightColorSettings.active) {
+        if (kcm.nightColorSettings.mode == NightColorMode.Automatic && kcm.nightColorSettings.active) {
             startLocator();
         }
     }
@@ -157,13 +157,13 @@ KCM.SimpleKCM {
                 ]
                 currentIndex: kcm.nightColorSettings.mode
                 onCurrentIndexChanged: {
-		    kcm.nightColorSettings.mode = currentIndex;
-		    if (currentIndex == CC.CompositorAdaptor.ModeAutomatic) {
+                    kcm.nightColorSettings.mode = currentIndex;
+                    if (currentIndex == NightColorMode.Automatic) {
                         startLocator();
                     } else {
                         endLocator();
                     }
-		}
+                }
 
                 KCM.SettingStateBinding {
                     configObject: kcm.nightColorSettings
@@ -174,7 +174,7 @@ KCM.SimpleKCM {
 
             // Inform about geolocation access in auto mode
             QQC2.Label {
-                visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeAutomatic
+                visible: modeSwitcher.currentIndex === NightColorMode.Automatic
                 enabled: activator.checked
                 wrapMode: Text.Wrap
                 Layout.maximumWidth: modeSwitcher.width
