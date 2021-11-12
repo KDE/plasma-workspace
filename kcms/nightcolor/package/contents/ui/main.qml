@@ -199,6 +199,7 @@ KCM.SimpleKCM {
                 id: evenBeginManField
                 // Match combobox width
                 Layout.minimumWidth: modeSwitcher.width
+                Layout.maximumWidth: modeSwitcher.width
                 visible: kcm.nightColorSettings.mode === NightColorMode.Timings
                 Kirigami.FormData.label: i18n("Turn on at:")
                 backend: kcm.nightColorSettings.eveningBeginFixed
@@ -221,6 +222,7 @@ KCM.SimpleKCM {
                 id: mornBeginManField
                 // Match combobox width
                 Layout.minimumWidth: modeSwitcher.width
+                Layout.maximumWidth: modeSwitcher.width
                 visible: kcm.nightColorSettings.mode === NightColorMode.Timings
                 Kirigami.FormData.label: i18n("Turn off at:")
                 backend: kcm.nightColorSettings.morningBeginFixed

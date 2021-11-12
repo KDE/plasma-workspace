@@ -13,16 +13,6 @@ import org.kde.kcm 1.5 as KCM
 Kirigami.FormLayout {
     twinFormLayouts: parentLayout
 
-    QQC2.Button {
-        text: i18n("Detect Location")
-        // Match combobox width
-        Layout.minimumWidth: modeSwitcher.width
-        icon.name: "find-location"
-        onClicked: {
-            latitudeFixedField.backend = locator.latitude;
-            longitudeFixedField.backend = locator.longitude;
-        }
-    }
 
     NumberField {
         id: latitudeFixedField
