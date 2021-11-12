@@ -457,6 +457,15 @@ static Status KSMNewClientProc(SmsConn conn, SmPointer manager_data, unsigned lo
     *failure_reason_ret = nullptr;
 
     void *client = ((KSMServer *)manager_data)->newClient(conn);
+    if(client == NULL) {
+        const char *errstr = "Connection rejected: ksmserver is shutting down";
+        qCWarning(KSMSERVER, "%s", errstr);
+
+        if ((*failure_reason_ret = (char *)malloc(strlen(errstr) + 1)) != NULL) {
+            strcpy(*failure_reason_ret, errstr);
+        }
+        return 0;
+    }
 
     cb->register_client.callback = KSMRegisterClientProc;
     cb->register_client.manager_data = client;
@@ -690,8 +699,11 @@ void KSMServer::processData(int /*socket*/)
 
 KSMClient *KSMServer::newClient(SmsConn conn)
 {
-    KSMClient *client = new KSMClient(conn);
-    clients.append(client);
+    KSMClient *client = nullptr;
+    if(state != Killing) {
+        client = new KSMClient(conn);
+        clients.append(client);
+    }
     return client;
 }
 
