@@ -656,7 +656,7 @@ void WetterComIon::updateWeather(const QString &source, bool parseError)
     const WeatherData &weatherData = m_weatherData[source];
 
     Plasma::DataEngine::Data data;
-    data.insert(QStringLiteral("Place"), QString(placeInfo.displayName + QStringLiteral(", ") + placeInfo.placeCode.left(2)));
+    data.insert(QStringLiteral("Place"), placeInfo.displayName);
 
     if (!parseError && !weatherData.forecasts.isEmpty()) {
         data.insert(QStringLiteral("Station"), placeInfo.displayName);
