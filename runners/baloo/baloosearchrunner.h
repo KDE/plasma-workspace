@@ -14,7 +14,7 @@
 #include "dbusutils_p.h"
 #include <KRunner/QueryMatch>
 
-class SearchRunner : public QObject
+class SearchRunner : public QObject, protected QDBusContext
 {
     Q_OBJECT
 
