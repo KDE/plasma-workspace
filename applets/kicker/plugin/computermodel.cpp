@@ -12,10 +12,10 @@
 #include <QIcon>
 
 #include <KAuthorized>
+#include <KConcatenateRowsProxyModel>
 #include <KFilePlacesModel>
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
-#include <QConcatenateTablesProxyModel>
 #include <Solid/Device>
 
 #include "krunner_interface.h"
@@ -123,7 +123,7 @@ Q_INVOKABLE bool RunCommandModel::trigger(int row, const QString &actionId, cons
 
 ComputerModel::ComputerModel(QObject *parent)
     : ForwardingModel(parent)
-    , m_concatProxy(new QConcatenateTablesProxyModel(this))
+    , m_concatProxy(new KConcatenateRowsProxyModel(this))
     , m_runCommandModel(new RunCommandModel(this))
     , m_systemAppsModel(new SimpleFavoritesModel(this))
     , m_filteredPlacesModel(new FilteredPlacesModel(this))

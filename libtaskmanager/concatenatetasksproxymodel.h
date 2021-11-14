@@ -8,7 +8,7 @@
 
 #include "abstracttasksproxymodeliface.h"
 
-#include <QConcatenateTablesProxyModel>
+#include <KConcatenateRowsProxyModel>
 
 #include "taskmanager_export.h"
 
@@ -17,13 +17,13 @@ namespace TaskManager
 /**
  * @short A proxy tasks model for concatenating multiple source tasks models.
  *
- * This proxy model is a subclass of QConcatenateTablesProxyModel implementing
+ * This proxy model is a subclass of KConcatenateRowsProxyModel implementing
  * AbstractTasksModelIface, forwarding calls to the correct source model.
  *
  * @author Eike Hein <hein@kde.org>
  **/
 
-class TASKMANAGER_EXPORT ConcatenateTasksProxyModel : public QConcatenateTablesProxyModel, public AbstractTasksProxyModelIface
+class TASKMANAGER_EXPORT ConcatenateTasksProxyModel : public KConcatenateRowsProxyModel, public AbstractTasksProxyModelIface
 {
     Q_OBJECT
 

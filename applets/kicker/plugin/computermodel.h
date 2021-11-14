@@ -14,7 +14,7 @@
 
 class SimpleFavoritesModel;
 
-class QConcatenateTablesProxyModel;
+class KConcatenateRowsProxyModel;
 class KFilePlacesModel;
 
 namespace Solid
@@ -95,7 +95,7 @@ private Q_SLOTS:
     void onSetupDone(Solid::ErrorType error, QVariant errorData, const QString &udi);
 
 private:
-    QConcatenateTablesProxyModel *m_concatProxy;
+    KConcatenateRowsProxyModel *m_concatProxy;
     RunCommandModel *m_runCommandModel;
     SimpleFavoritesModel *m_systemAppsModel;
     FilteredPlacesModel *m_filteredPlacesModel;

@@ -6,11 +6,11 @@
 
 #include "notifications.h"
 
-#include <QConcatenateTablesProxyModel>
 #include <QDebug>
 #include <QMetaEnum>
 #include <QSharedPointer>
 
+#include <KConcatenateRowsProxyModel>
 #include <KDescendantsProxyModel>
 
 #include "limitedrowcountproxymodel_p.h"
@@ -67,7 +67,7 @@ public:
     JobsModel::Ptr jobsModel;
     QSharedPointer<Settings> settings() const;
 
-    QConcatenateTablesProxyModel *notificationsAndJobsModel = nullptr;
+    KConcatenateRowsProxyModel *notificationsAndJobsModel = nullptr;
 
     NotificationFilterProxyModel *filterModel = nullptr;
     NotificationSortProxyModel *sortModel = nullptr;
@@ -125,7 +125,7 @@ void Notifications::Private::initProxyModels()
      * NotificationsModel      JobsModel
      *        \\                 /
      *         \\               /
-     *     QConcatenateTablesProxyModel
+     *     KConcatenateRowsProxyModel
      *               |||
      *               |||
      *     NotificationFilterProxyModel
@@ -158,7 +158,7 @@ void Notifications::Private::initProxyModels()
      */
 
     if (!notificationsAndJobsModel) {
-        notificationsAndJobsModel = new QConcatenateTablesProxyModel(q);
+        notificationsAndJobsModel = new KConcatenateRowsProxyModel(q);
     }
 
     if (!filterModel) {
@@ -344,8 +344,8 @@ QModelIndex Notifications::Private::mapFromModel(const QModelIndex &idx) const
                     found = true;
                     break;
                 }
-            } else if (auto *concatenateModel = qobject_cast<QConcatenateTablesProxyModel *>(model)) {
-                // There's no "sourceModels()" on QConcatenateTablesProxyModel
+            } else if (auto *concatenateModel = qobject_cast<KConcatenateRowsProxyModel *>(model)) {
+                // There's no "sourceModels()" on KConcatenateRowsProxyModel
                 if (idxModel == notificationsModel.data() || idxModel == jobsModel.data()) {
                     resolvedIdx = concatenateModel->mapFromSource(resolvedIdx);
                     found = true;

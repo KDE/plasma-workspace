@@ -186,6 +186,7 @@ include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055800)
+add_definitions(-DKITEMMODELS_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054F00)
 
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )

@@ -10,7 +10,6 @@
 
 #include <QAbstractItemModel>
 #include <QAbstractProxyModel>
-#include <QConcatenateTablesProxyModel>
 #include <QCoreApplication>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
@@ -19,6 +18,8 @@
 #include <QMetaEnum>
 #include <QSettings>
 #include <QTextStream>
+
+#include <KConcatenateRowsProxyModel>
 
 #include <KProcessList>
 
@@ -108,8 +109,8 @@ QModelIndex Utils::mapToModel(const QModelIndex &idx, const QAbstractItemModel *
     while (resolvedIdx.isValid() && resolvedIdx.model() != sourceModel) {
         if (auto *proxyModel = qobject_cast<const QAbstractProxyModel *>(resolvedIdx.model())) {
             resolvedIdx = proxyModel->mapToSource(resolvedIdx);
-            // QConcatenateTablesProxyModel isn't a "real" proxy model, so we need to special case for it :(
-        } else if (auto *concatenateModel = qobject_cast<const QConcatenateTablesProxyModel *>(resolvedIdx.model())) {
+            // KConcatenateRowsProxyModel isn't a "real" proxy model, so we need to special case for it :(
+        } else if (auto *concatenateModel = qobject_cast<const KConcatenateRowsProxyModel *>(resolvedIdx.model())) {
             resolvedIdx = concatenateModel->mapToSource(resolvedIdx);
         } else {
             if (resolvedIdx.model() != sourceModel) {
