@@ -37,3 +37,8 @@ kcoreaddons_desktop_to_json(kcm_fonts "kcm_fonts.desktop")
 install(FILES fontssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES kcm_fonts.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_fonts kcms)
+
+add_custom_command(TARGET kcm_fonts POST_BUILD
+                   COMMAND ${CMAKE_COMMAND} -E create_symlink ../kcms/systemsettings/kcm_fonts.so kcm_fonts_init.so)
+
+install( FILES ${CMAKE_CURRENT_BINARY_DIR}/kcm_fonts_init.so DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcminit)

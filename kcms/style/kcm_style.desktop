@@ -1,7 +1,7 @@
 [Desktop Entry]
 Icon=preferences-desktop-theme-applications
 Type=Service
-X-KDE-ServiceTypes=KCModule,KCModuleInit
+X-KDE-ServiceTypes=KCModule
 X-DocPath=kcontrol/kcmstyle/index.html
 
 X-KDE-Library=kcm_style

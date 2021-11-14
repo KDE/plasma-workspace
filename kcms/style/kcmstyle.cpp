@@ -50,7 +50,7 @@
 K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_style.json", registerPlugin<KCMStyle>(); registerPlugin<StyleData>();)
 
 extern "C" {
-Q_DECL_EXPORT void kcminit_style()
+Q_DECL_EXPORT void kcminit()
 {
     uint flags = KRdbExportQtSettings | KRdbExportQtColors | KRdbExportXftSettings | KRdbExportGtkTheme;
     KConfig _config(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);

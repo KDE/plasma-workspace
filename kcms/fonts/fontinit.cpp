@@ -12,7 +12,7 @@
 #include <QProcess>
 
 extern "C" {
-Q_DECL_EXPORT void kcminit_fonts()
+Q_DECL_EXPORT void kcminit()
 {
     KConfig cfg(QStringLiteral("kcmfonts"));
     KConfigGroup fontsCfg(&cfg, "General");

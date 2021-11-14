@@ -50,3 +50,8 @@ install(FILES gtk_themes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 install(FILES kcm_style.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
 kpackage_install_package(package kcm_style kcms)
+
+add_custom_command(TARGET kcm_style POST_BUILD
+                   COMMAND ${CMAKE_COMMAND} -E create_symlink ../kcms/systemsettings/kcm_style.so kcm_style_init.so)
+
+install( FILES ${CMAKE_CURRENT_BINARY_DIR}/kcm_style_init.so DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcminit)
