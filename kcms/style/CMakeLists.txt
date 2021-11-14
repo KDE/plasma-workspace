@@ -28,7 +28,7 @@ ki18n_wrap_ui(kcm_style_PART_SRCS stylepreview.ui)
 
 kconfig_add_kcfg_files(kcm_style_PART_SRCS stylesettings.kcfgc GENERATE_MOC)
 
-kcoreaddons_add_plugin(kcm_style SOURCES ${kcm_style_PART_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_style SOURCES ${kcm_style_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_compile_definitions(kcm_style PUBLIC CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")
 
