@@ -265,11 +265,7 @@ void ShellCorona::setShell(const QString &shell)
 
     if (themeName.isEmpty()) {
         KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Theme");
-
-        themeName = shellCfg.readEntry("name", "default");
-        KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(m_lookAndFeelPackage.filePath("defaults")), "plasmarc");
-        lnfCfg = KConfigGroup(&lnfCfg, themeGroupKey);
-        themeName = lnfCfg.readEntry(themeNameKey, themeName);
+        themeName = shellCfg.readEntry(themeNameKey, "default");
     }
 
     if (!themeName.isEmpty()) {
