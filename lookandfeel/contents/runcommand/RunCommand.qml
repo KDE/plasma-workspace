@@ -223,6 +223,18 @@ ColumnLayout {
         }
         PlasmaComponents3.ToolButton {
             checkable: true
+            checked: root.query.startsWith("?")
+            // Reset if out quers starts with "?", otherwise set it to "?"
+            onClicked: root.query = root.query.startsWith("?") ? "" : "?"
+            icon.name: "question"
+            Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Show Usage Help")
+            Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Show Usage Help")
+            PlasmaComponents3.ToolTip {
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Show Usage Help")
+            }
+        }
+        PlasmaComponents3.ToolButton {
+            checkable: true
             checked: runnerWindow.pinned
             onToggled: runnerWindow.pinned = checked
             icon.name: "window-pin"
