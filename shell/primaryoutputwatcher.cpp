@@ -52,6 +52,10 @@ PrimaryOutputWatcher::PrimaryOutputWatcher(QObject *parent)
         qGuiApp->installNativeEventFilter(this);
         const xcb_query_extension_reply_t *reply = xcb_get_extension_data(QX11Info::connection(), &xcb_randr_id);
         m_xrandrExtensionOffset = reply->first_event;
+        setPrimaryOutputName(qGuiApp->primaryScreen()->name());
+        connect(qGuiApp, &QGuiApplication::primaryScreenChanged, this, [this](QScreen *newPrimary) {
+            setPrimaryOutputName(newPrimary->name());
+        });
     }
 #endif
     if (KWindowSystem::isPlatformWayland()) {
