@@ -698,35 +698,37 @@ void ShellCorona::load()
     }
 }
 
-void ShellCorona::primaryOutputNameChanged()
+void ShellCorona::primaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName)
 {
-    if (!m_desktopViewforId.contains(0)) {
-        return;
-    }
-
     // when the appearance of a new primary screen *moves*
     // the position of the now secondary, the two screens will appear overlapped for an instant, and a spurious output redundant would happen here if checked
     // immediately
     m_reconsiderOutputsTimer.start();
 
-    QScreen *oldPrimary = m_desktopViewforId.value(0)->screen();
+    QScreen *oldPrimary = m_primaryWatcher->screenForName(oldOutputName);
     QScreen *newPrimary = m_primaryWatcher->primaryScreen();
     if (!newPrimary || newPrimary == oldPrimary || newPrimary->geometry().isNull()) {
         return;
     }
-
-    const int oldIdOfPrimary = m_screenPool->id(newPrimary->name());
+    const int oldPrimaryId = m_screenPool->id(oldOutputName);
+    const int newPrimaryId = m_screenPool->id(newOutputName);
     m_screenPool->setPrimaryConnector(newPrimary->name());
     // swap order in m_desktopViewforId
-    if (m_desktopViewforId.contains(0) && m_desktopViewforId.contains(oldIdOfPrimary)) {
-        DesktopView *primaryDesktop = m_desktopViewforId.value(0);
-        DesktopView *oldDesktopOfPrimary = m_desktopViewforId.value(oldIdOfPrimary);
+    if (m_desktopViewforId.contains(newPrimaryId) && m_desktopViewforId.contains(oldPrimaryId)) {
+        DesktopView *primaryDesktop = m_desktopViewforId.value(newPrimaryId);
+        DesktopView *oldDesktopOfPrimary = m_desktopViewforId.value(oldPrimaryId);
+        m_desktopViewforId.remove(newPrimaryId);
+        m_desktopViewforId.remove(oldPrimaryId);
 
-        primaryDesktop->setScreenToFollow(newPrimary);
-        oldDesktopOfPrimary->setScreenToFollow(oldPrimary);
+        m_desktopViewforId[oldPrimaryId] = primaryDesktop;
+        primaryDesktop->setScreenToFollow(oldPrimary);
+
+        m_desktopViewforId[newPrimaryId] = oldDesktopOfPrimary;
+        oldDesktopOfPrimary->setScreenToFollow(newPrimary);
+
         primaryDesktop->show();
         oldDesktopOfPrimary->show();
-        // corner case: the new primary screen was added into redundant outputs when appeared, *and* !m_desktopViewforId.contains(oldIdOfPrimary)
+        // corner case: the new primary screen was added into redundant outputs when appeared, *and* !m_desktopViewforId.contains(oldPrimaryId)
         // meaning that we had only one screen, connected a new oone that
         // a) is now primary and
         // b) is at 0,0 position, moving the current screen out of the way

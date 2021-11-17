@@ -26,13 +26,13 @@ void ScreenPool::load(QScreen *primary)
     m_connectorForId.clear();
     m_idForConnector.clear();
 
-    if (primary) {
-        m_primaryConnector = primary->name();
-        if (!m_primaryConnector.isEmpty()) {
-            m_connectorForId[0] = m_primaryConnector;
-            m_idForConnector[m_primaryConnector] = 0;
-        }
-    }
+//     if (primary) {
+//         m_primaryConnector = primary->name();
+//         if (!m_primaryConnector.isEmpty()) {
+//             m_connectorForId[0] = m_primaryConnector;
+//             m_idForConnector[m_primaryConnector] = 0;
+//         }
+//     }
 
     // restore the known ids to connector mappings
     const auto keys = m_configGroup.keyList();
@@ -74,7 +74,7 @@ void ScreenPool::setPrimaryConnector(const QString &primary)
     if (m_primaryConnector == primary) {
         return;
     }
-
+/*
     int oldIdForPrimary = m_idForConnector.value(primary, -1);
     if (oldIdForPrimary == -1) {
         // move old primary to new free id
@@ -85,7 +85,7 @@ void ScreenPool::setPrimaryConnector(const QString &primary)
     m_idForConnector[primary] = 0;
     m_connectorForId[0] = primary;
     m_idForConnector[m_primaryConnector] = oldIdForPrimary;
-    m_connectorForId[oldIdForPrimary] = m_primaryConnector;
+    m_connectorForId[oldIdForPrimary] = m_primaryConnector;*/
     m_primaryConnector = primary;
     save();
 }
@@ -105,9 +105,9 @@ void ScreenPool::insertScreenMapping(int id, const QString &connector)
     Q_ASSERT(!m_connectorForId.contains(id) || m_connectorForId.value(id) == connector);
     Q_ASSERT(!m_idForConnector.contains(connector) || m_idForConnector.value(connector) == id);
 
-    if (id == 0) {
-        m_primaryConnector = connector;
-    }
+//     if (id == 0) {
+//         m_primaryConnector = connector;
+//     }
 
     m_connectorForId[id] = connector;
     m_idForConnector[connector] = id;

@@ -105,6 +105,9 @@ void DesktopView::adaptToScreen()
     }
 
     m_oldScreen = m_screenToFollow;
+    if (containment()) {
+        containment()->reactToScreenChange();
+    }
 }
 
 DesktopView::WindowType DesktopView::windowType() const

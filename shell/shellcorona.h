@@ -202,7 +202,7 @@ private Q_SLOTS:
     void populateAddPanelsMenu();
 
     void addOutput(QScreen *screen);
-    void primaryOutputNameChanged();
+    void primaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName);
 
     void panelContainmentDestroyed(QObject *cont);
     void handleScreenRemoved(QScreen *screen);
