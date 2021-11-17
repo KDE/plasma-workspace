@@ -18,7 +18,7 @@ import "private" as Private
 Kirigami.AbstractApplicationWindow {
     id: root
 
-    default property Item mainItem
+    default property alias mainItem: contentsControl.contentItem
 
     /**
      * Main text of the dialog.
@@ -28,12 +28,12 @@ Kirigami.AbstractApplicationWindow {
     /**
      * Subtitle of the dialog.
      */
-    property string subtitle: ""
+    property alias subtitle: subtitleLabel.text
 
     /**
      * This property holds the icon used in the dialog.
      */
-    property string iconName: ""
+    property alias iconName: icon.source
 
     /**
      * This property holds the list of actions for this dialog.
@@ -68,7 +68,7 @@ Kirigami.AbstractApplicationWindow {
     /**
      * This property holds the QQC2 DialogButtonBox used in the footer of the dialog.
      */
-    property alias dialogButtonBox: footer
+    readonly property alias dialogButtonBox: footerButtonBox
     
     width: column.implicitWidth
     height: column.implicitHeight + footer.implicitHeight
@@ -101,8 +101,8 @@ Kirigami.AbstractApplicationWindow {
             spacing: Kirigami.Units.gridUnit
             
             Kirigami.Icon {
-                visible: root.iconName
-                source: root.iconName
+                id: icon
+                visible: source
                 Layout.alignment: Qt.AlignTop | Qt.AlignLeft
                 implicitWidth: Kirigami.Units.iconSizes.large
                 implicitHeight: Kirigami.Units.iconSizes.large
@@ -119,18 +119,18 @@ Kirigami.AbstractApplicationWindow {
                     elide: Text.ElideRight
                 }
                 Label {
+                    id: subtitleLabel
                     Layout.fillWidth: true
-                    text: root.subtitle
                     wrapMode: Text.Wrap
                     elide: Text.ElideRight
                 }
                 Control {
+                    id: contentsControl
                     Layout.fillWidth: true
                     leftPadding: 0
                     rightPadding: 0
                     bottomPadding: 0
                     topPadding: 0
-                    contentItem: root.mainItem
                 }
             }
         }
@@ -145,7 +145,7 @@ Kirigami.AbstractApplicationWindow {
         contentItem: RowLayout {
             Item { Layout.fillWidth: true }
             DialogButtonBox {
-                id: footer
+                id: footerButtonBox
                 spacing: Kirigami.Units.smallSpacing
                 
                 Repeater {
