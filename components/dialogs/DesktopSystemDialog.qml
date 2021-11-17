@@ -55,7 +55,18 @@ Kirigami.AbstractApplicationWindow {
 
     visible: false
 
+    signal accept()
+    signal reject()
+    property bool accepted: false
+    onAccept: accepted = true
+
+    onVisibleChanged: if (!visible && !accepted) {
+        root.reject()
+    }
+
     ColumnLayout {
+        Keys.onEscapePressed: root.reject()
+
         id: column
         spacing: 0
         anchors.fill: parent
@@ -116,6 +127,8 @@ Kirigami.AbstractApplicationWindow {
             DialogButtonBox {
                 id: footerButtonBox
                 spacing: Kirigami.Units.smallSpacing
+                onAccepted: root.accept()
+                onRejected: root.reject()
                 
                 Repeater {
                     model: root.actions
