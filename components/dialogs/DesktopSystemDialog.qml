@@ -42,28 +42,6 @@ Kirigami.AbstractApplicationWindow {
      * to click.
      */
     property list<Kirigami.Action> actions
-
-    /**
-     * This property holds the preferred height of the dialog.
-     * 
-     * The content will receive a hint for how tall it should be to have
-     * the dialog to be this height.
-     * 
-     * If the content, header or footer require more space, then the height
-     * of the dialog will expand to the necessary amount of space.
-     */
-    property real preferredHeight: -1
-
-    /**
-     * This property holds the preferred width of the dialog.
-     * 
-     * The content will receive a hint for how wide it should be to have
-     * the dialog be this wide.
-     * 
-     * If the content, header or footer require more space, then the width
-     * of the dialog will expand to the necessary amount of space.
-     */
-    property real preferredWidth: -1
     
     /**
      * This property holds the QQC2 DialogButtonBox used in the footer of the dialog.
@@ -76,23 +54,13 @@ Kirigami.AbstractApplicationWindow {
     flags: Qt.Dialog
 
     visible: false
-    
-    Kirigami.Separator { 
-        anchors.left: parent.left 
-        anchors.right: parent.right
-        anchors.top: parent.top
-    }
-    
+
     ColumnLayout {
         id: column
         spacing: 0
+        anchors.fill: parent
         
         RowLayout {
-            Layout.maximumWidth: root.maximumWidth
-            Layout.maximumHeight: root.maximumHeight - footer.height
-            Layout.preferredWidth: root.preferredWidth
-            Layout.preferredHeight: root.preferredHeight - footer.height
-            
             Layout.topMargin: Kirigami.Units.gridUnit
             Layout.bottomMargin: Kirigami.Units.gridUnit
             Layout.leftMargin: Kirigami.Units.gridUnit
@@ -127,6 +95,7 @@ Kirigami.AbstractApplicationWindow {
                 Control {
                     id: contentsControl
                     Layout.fillWidth: true
+                    Layout.fillHeight: true
                     leftPadding: 0
                     rightPadding: 0
                     bottomPadding: 0
