@@ -312,6 +312,10 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry, int c
         job->d->delayedShow(500ms, JobPrivate::ShowCondition::OnTimeout);
     }
 
+    if (hints.value(QStringLiteral("transient")).toBool()) {
+        job->setTransient(true);
+    }
+
     m_jobServices.insert(job, serviceName);
     m_serviceWatcher->addWatchedService(serviceName);
 

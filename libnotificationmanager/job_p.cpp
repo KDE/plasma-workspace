@@ -264,8 +264,8 @@ void JobPrivate::finish()
     // Unregister the dbus service since the client is done with it
     QDBusConnection::sessionBus().unregisterObject(m_objectPath.path());
 
-    // When user canceled transfer, remove it without notice
-    if (m_error == KIO::ERR_USER_CANCELED) {
+    // When user canceled job or a transient job finished successfully, remove it without notice
+    if (m_error == KIO::ERR_USER_CANCELED || (!m_error && m_transient)) {
         emit closed();
         return;
     }

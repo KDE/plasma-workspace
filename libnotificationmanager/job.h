@@ -167,6 +167,9 @@ public:
     // TODO remove and let only constructor do it?
     void setKillable(bool killable);
 
+    bool transient() const;
+    void setTransient(bool transient);
+
     QUrl destUrl() const;
 
     qulonglong speed() const;

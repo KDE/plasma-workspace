@@ -159,6 +159,16 @@ void Job::setKillable(bool killable)
     d->m_killable = killable;
 }
 
+bool Job::transient() const
+{
+    return d->m_transient;
+}
+
+void Job::setTransient(bool transient)
+{
+    d->m_transient = transient;
+}
+
 QUrl Job::destUrl() const
 {
     return d->m_destUrl;
