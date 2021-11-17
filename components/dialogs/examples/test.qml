@@ -25,7 +25,6 @@ Kirigami.AbstractApplicationWindow {
         subtitle: "This will reset all of your data."
         iconName: "documentinfo"
         
-        preferredWidth: Kirigami.Units.gridUnit * 17
         dialogButtonBox.standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
         dialogButtonBox.onAccepted: simple.close()
         dialogButtonBox.onRejected: simple.close()
@@ -57,7 +56,6 @@ Kirigami.AbstractApplicationWindow {
         title: "Authentication Required"
         subtitle: "Authentication is needed to run `/usr/bin/ls` as the super user."
         iconName: "im-user-online"
-        preferredWidth: Kirigami.Units.gridUnit * 25
         
         Kirigami.PasswordField {}
         
