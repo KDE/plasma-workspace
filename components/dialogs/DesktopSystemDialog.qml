@@ -152,9 +152,7 @@ Kirigami.AbstractApplicationWindow {
                     model: root.actions
                     
                     delegate: Button {
-                        text: modelData.text
-                        icon: modelData.icon
-                        onClicked: modelData.trigger()
+                        action: modelData
                     }
                 }
             }
