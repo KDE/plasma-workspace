@@ -21,9 +21,9 @@ Kirigami.AbstractApplicationWindow {
     default property Item mainItem
 
     /**
-     * Title of the dialog.
+     * Main text of the dialog.
      */
-    property string title: ""
+    property alias mainText: titleHeading.text
 
     /**
      * Subtitle of the dialog.
@@ -112,9 +112,9 @@ Kirigami.AbstractApplicationWindow {
                 Layout.fillWidth: true
                 spacing: Kirigami.Units.largeSpacing
                 Kirigami.Heading {
+                    id: titleHeading
                     Layout.fillWidth: true
                     level: 2
-                    text: root.title
                     wrapMode: Text.Wrap
                     elide: Text.ElideRight
                 }
