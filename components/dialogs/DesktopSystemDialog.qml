@@ -94,6 +94,7 @@ Kirigami.AbstractApplicationWindow {
                 spacing: Kirigami.Units.largeSpacing
                 Kirigami.Heading {
                     id: titleHeading
+                    text: root.title
                     Layout.fillWidth: true
                     level: 2
                     wrapMode: Text.Wrap
