@@ -47,6 +47,11 @@ Kirigami.AbstractApplicationWindow {
      * This property holds the QQC2 DialogButtonBox used in the footer of the dialog.
      */
     readonly property alias dialogButtonBox: footerButtonBox
+
+    /**
+     * Controls whether the accept button is enabled
+     */
+    property bool acceptable: true
     
     width: column.implicitWidth
     height: column.implicitHeight + footer.implicitHeight
@@ -132,7 +137,14 @@ Kirigami.AbstractApplicationWindow {
                 spacing: Kirigami.Units.smallSpacing
                 onAccepted: root.accept()
                 onRejected: root.reject()
-                
+
+                Binding {
+                    target: footerButtonBox.standardButton(DialogButtonBox.Ok)
+                    property: "enabled"
+                    when: footerButtonBox.standardButton(DialogButtonBox.Ok)
+                    value: root.acceptable
+                }
+
                 Repeater {
                     model: root.actions
                     

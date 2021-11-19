@@ -56,9 +56,9 @@ Kirigami.AbstractApplicationWindow {
         title: "Authentication Required"
         subtitle: "Authentication is needed to run `/usr/bin/ls` as the super user."
         iconName: "im-user-online"
-        
+
         Kirigami.PasswordField {}
-        
+
         actions: [
             Kirigami.Action {
                 text: "Details"
@@ -74,6 +74,26 @@ Kirigami.AbstractApplicationWindow {
                 text: "OK"
                 icon.name: "dialog-ok"
                 onTriggered: desktopPolkit.close()
+            }
+        ]
+    }
+
+    DesktopSystemDialog {
+        id: xdgDialog
+        title: "Wallet access"
+        subtitle: "Share your wallet with 'Somebody'."
+        iconName: "kwallet"
+        acceptable: false
+
+        dialogButtonBox.standardButtons: DialogButtonBox.Ok | DialogButtonBox.Ok
+        Component.onCompleted: {
+            dialogButtonBox.standardButton(DialogButtonBox.Ok).text = "Share"
+        }
+        actions: [
+            Kirigami.Action {
+                text: "Something Happens"
+                iconName: "documentinfo"
+                onTriggered: xdgDialog.acceptable = true
             }
         ]
     }
@@ -290,6 +310,16 @@ Kirigami.AbstractApplicationWindow {
                     desktopCSDPolkit.showFullScreen()
                 } else {
                     desktopCSDPolkit.show()
+                }
+            }
+        }
+        Button {
+            text: "XDG dialog (Desktop)"
+            onClicked: {
+                if (checkbox.checked) {
+                    xdgDialog.showFullScreen()
+                } else {
+                    xdgDialog.show()
                 }
             }
         }
