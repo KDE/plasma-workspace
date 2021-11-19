@@ -3,8 +3,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"klipper\")
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 
-add_subdirectory(systemclipboard)
-
 set(libklipper_common_SRCS
     klipper.cpp
     urlgrabber.cpp
@@ -35,6 +33,7 @@ target_link_libraries(libklipper_common_static
     KF5::ConfigGui
     KF5::CoreAddons
     KF5::DBusAddons
+    KF5::GuiAddons
     KF5::GlobalAccel
     KF5::KIOWidgets
     KF5::Notifications
@@ -44,8 +43,7 @@ target_link_libraries(libklipper_common_static
     KF5::WindowSystem
     KF5::WidgetsAddons
     KF5::XmlGui
-    ${ZLIB_LIBRARY}
-    systemclipboard)
+    ${ZLIB_LIBRARY})
 if (X11_FOUND)
     target_link_libraries(libklipper_common_static XCB::XCB Qt::X11Extras)
 endif()
@@ -80,8 +78,8 @@ target_link_libraries(plasma_engine_clipboard
     KF5::WidgetsAddons # KMessageBox
     KF5::WindowSystem
     KF5::XmlGui        # KActionCollection
+    KF5::GuiAddons
     ${ZLIB_LIBRARY}
-    systemclipboard
 )
 if (X11_FOUND)
   target_link_libraries(plasma_engine_clipboard XCB::XCB Qt::X11Extras)

@@ -25,6 +25,7 @@
 #include <KGlobalAccel>
 #include <KMessageBox>
 #include <KNotification>
+#include <KSystemClipboard>
 #include <KTextEdit>
 #include <KToggleAction>
 #include <KWindowSystem>
@@ -36,8 +37,6 @@
 #include "historystringitem.h"
 #include "klipperpopup.h"
 #include "klippersettings.h"
-
-#include "systemclipboard.h"
 
 #include <prison/Prison>
 
@@ -112,9 +111,9 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/klipper"), this, QDBusConnection::ExportScriptableSlots);
 
     updateTimestamp(); // read initial X user time
-    m_clip = SystemClipboard::instance();
+    m_clip = KSystemClipboard::instance();
 
-    connect(m_clip, &SystemClipboard::changed, this, &Klipper::newClipData);
+    connect(m_clip, &KSystemClipboard::changed, this, &Klipper::newClipData);
 
     connect(&m_overflowClearTimer, &QTimer::timeout, this, &Klipper::slotClearOverflow);
 
