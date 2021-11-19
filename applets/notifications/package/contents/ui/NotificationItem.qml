@@ -49,7 +49,6 @@ ColumnLayout {
     property int jobState
     property int percentage
     property int jobError: 0
-    property int urgency
     property bool suspendable
     property bool killable
 
@@ -147,148 +146,117 @@ ColumnLayout {
     RowLayout {
         id: bodyRow
         Layout.fillWidth: true
-
-        // When the urgent notification line is visible, remove margins to allow
-        // it to touch the edges of the popup
-        Layout.topMargin: urgentNotificationLine.visible ? notificationItem.thumbnailTopPadding + PlasmaCore.Units.devicePixelRatio : undefined
-        Layout.leftMargin: urgentNotificationLine.visible ? notificationItem.thumbnailLeftPadding : undefined
-        Layout.bottomMargin: urgentNotificationLine.visible ? notificationItem.thumbnailBottomPadding : undefined
-
         spacing: PlasmaCore.Units.smallSpacing
 
-        // Visual flourish for urgent notifications to make them stand out more
-        Rectangle {
-            id: urgentNotificationLine
-            Layout.fillHeight: true
-            Layout.alignment: Qt.AlignVCenter
-            implicitWidth: Math.round(PlasmaCore.Units.gridUnit / 4)
-
-            color: PlasmaCore.Theme.neutralTextColor
-
-            visible: notificationItem.urgency == NotificationManager.Notifications.CriticalUrgency
-        }
-
-        RowLayout {
+        ColumnLayout {
             Layout.fillWidth: true
-            // Re-add margins to this item if they were removed in the parent item
-            // to let the urgent notification line touch the edges; we do want
-            // everything else to have normal margins
-            Layout.topMargin: urgentNotificationLine.visible ? -notificationItem.thumbnailTopPadding : undefined
-            Layout.leftMargin: urgentNotificationLine.visible ? -notificationItem.thumbnailLeftPadding : undefined
-            Layout.bottomMargin: urgentNotificationLine.visible ? -notificationItem.thumbnailBottomPadding : undefined
+            spacing: 0
 
-            spacing: PlasmaCore.Units.smallSpacing
-
-            ColumnLayout {
+            RowLayout {
+                id: summaryRow
                 Layout.fillWidth: true
-                spacing: 0
+                visible: summaryLabel.text !== ""
 
-                RowLayout {
-                    id: summaryRow
+                PlasmaExtras.Heading {
+                    id: summaryLabel
                     Layout.fillWidth: true
-                    visible: summaryLabel.text !== ""
-
-                    PlasmaExtras.Heading {
-                        id: summaryLabel
-                        Layout.fillWidth: true
-                        Layout.preferredHeight: implicitHeight
-                        textFormat: Text.PlainText
-                        maximumLineCount: 3
-                        wrapMode: Text.WordWrap
-                        elide: Text.ElideRight
-                        level: 4
-                        // Give it a bit more visual prominence than the app name in the header
-                        type: PlasmaExtras.Heading.Type.Primary
-                        text: {
-                            if (notificationItem.notificationType === NotificationManager.Notifications.JobType) {
-                                if (notificationItem.jobState === NotificationManager.Notifications.JobStateSuspended) {
+                    Layout.preferredHeight: implicitHeight
+                    textFormat: Text.PlainText
+                    maximumLineCount: 3
+                    wrapMode: Text.WordWrap
+                    elide: Text.ElideRight
+                    level: 4
+                    // Give it a bit more visual prominence than the app name in the header
+                    type: PlasmaExtras.Heading.Type.Primary
+                    text: {
+                        if (notificationItem.notificationType === NotificationManager.Notifications.JobType) {
+                            if (notificationItem.jobState === NotificationManager.Notifications.JobStateSuspended) {
+                                if (notificationItem.summary) {
+                                    return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying is paused", "%1 (Paused)", notificationItem.summary);
+                                }
+                            } else if (notificationItem.jobState === NotificationManager.Notifications.JobStateStopped) {
+                                if (notificationItem.jobError) {
                                     if (notificationItem.summary) {
-                                        return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying is paused", "%1 (Paused)", notificationItem.summary);
-                                    }
-                                } else if (notificationItem.jobState === NotificationManager.Notifications.JobStateStopped) {
-                                    if (notificationItem.jobError) {
-                                        if (notificationItem.summary) {
-                                            return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has failed", "%1 (Failed)", notificationItem.summary);
-                                        } else {
-                                            return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Failed");
-                                        }
+                                        return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has failed", "%1 (Failed)", notificationItem.summary);
                                     } else {
-                                        if (notificationItem.summary) {
-                                            return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has finished", "%1 (Finished)", notificationItem.summary);
-                                        } else {
-                                            return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Finished");
-                                        }
+                                        return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Failed");
+                                    }
+                                } else {
+                                    if (notificationItem.summary) {
+                                        return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has finished", "%1 (Finished)", notificationItem.summary);
+                                    } else {
+                                        return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Finished");
                                     }
                                 }
                             }
-                            // some apps use their app name as summary, avoid showing the same text twice
-                            // try very hard to match the two
-                            if (notificationItem.summary && notificationItem.summary.toLocaleLowerCase().trim() != notificationItem.applicationName.toLocaleLowerCase().trim()) {
-                                return notificationItem.summary;
-                            }
-                            return "";
                         }
-                        visible: text !== ""
+                        // some apps use their app name as summary, avoid showing the same text twice
+                        // try very hard to match the two
+                        if (notificationItem.summary && notificationItem.summary.toLocaleLowerCase().trim() != notificationItem.applicationName.toLocaleLowerCase().trim()) {
+                            return notificationItem.summary;
+                        }
+                        return "";
                     }
-
-                    // inGroup headerItem is reparented here
+                    visible: text !== ""
                 }
 
-                RowLayout {
-                    id: bodyTextRow
+                // inGroup headerItem is reparented here
+            }
 
+            RowLayout {
+                id: bodyTextRow
+
+                Layout.fillWidth: true
+                spacing: PlasmaCore.Units.smallSpacing
+
+                SelectableLabel {
+                    id: bodyLabel
+                    listViewParent: notificationItem.listViewParent
+                    // FIXME how to assign this via State? target: bodyLabel.Layout doesn't work and just assigning the property doesn't either
+                    Layout.alignment: notificationItem.inGroup ? Qt.AlignTop : Qt.AlignVCenter
                     Layout.fillWidth: true
-                    spacing: PlasmaCore.Units.smallSpacing
 
-                    SelectableLabel {
-                        id: bodyLabel
-                        listViewParent: notificationItem.listViewParent
-                        // FIXME how to assign this via State? target: bodyLabel.Layout doesn't work and just assigning the property doesn't either
-                        Layout.alignment: notificationItem.inGroup ? Qt.AlignTop : Qt.AlignVCenter
-                        Layout.fillWidth: true
+                    Layout.maximumHeight: notificationItem.maximumLineCount > 0
+                                          ? (theme.mSize(font).height * notificationItem.maximumLineCount) : -1
 
-                        Layout.maximumHeight: notificationItem.maximumLineCount > 0
-                                            ? (theme.mSize(font).height * notificationItem.maximumLineCount) : -1
+                    // HACK RichText does not allow to specify link color and since LineEdit
+                    // does not support StyledText, we have to inject some CSS to force the color,
+                    // cf. QTBUG-81463 and to some extent QTBUG-80354
+                    text: "<style>a { color: " + PlasmaCore.Theme.linkColor + "; }</style>" + notificationItem.body
 
-                        // HACK RichText does not allow to specify link color and since LineEdit
-                        // does not support StyledText, we have to inject some CSS to force the color,
-                        // cf. QTBUG-81463 and to some extent QTBUG-80354
-                        text: "<style>a { color: " + PlasmaCore.Theme.linkColor + "; }</style>" + notificationItem.body
-
-                        // Cannot do text !== "" because RichText adds some HTML tags even when empty
-                        visible: notificationItem.body !== ""
-                        onClicked: notificationItem.bodyClicked(mouse)
-                        onLinkActivated: Qt.openUrlExternally(link)
-                    }
-
-                    // inGroup iconContainer is reparented here
-                }
-            }
-
-            Item {
-                id: iconContainer
-
-                Layout.preferredWidth: PlasmaCore.Units.iconSizes.large
-                Layout.preferredHeight: PlasmaCore.Units.iconSizes.large
-                Layout.topMargin: PlasmaCore.Units.smallSpacing
-                Layout.bottomMargin: PlasmaCore.Units.smallSpacing
-
-                visible: iconItem.active
-
-                PlasmaCore.IconItem {
-                    id: iconItem
-                    // don't show two identical icons
-                    readonly property bool active: valid && source != notificationItem.applicationIconSource
-                    anchors.fill: parent
-                    usesPlasmaTheme: false
-                    smooth: true
-                    // don't show a generic "info" icon since this is a notification already
-                    source: notificationItem.icon !== "dialog-information" ? notificationItem.icon : ""
-                    visible: active
+                    // Cannot do text !== "" because RichText adds some HTML tags even when empty
+                    visible: notificationItem.body !== ""
+                    onClicked: notificationItem.bodyClicked(mouse)
+                    onLinkActivated: Qt.openUrlExternally(link)
                 }
 
-                // JobItem reparents a file icon here for finished jobs with one total file
+                // inGroup iconContainer is reparented here
             }
+        }
+
+        Item {
+            id: iconContainer
+
+            Layout.preferredWidth: PlasmaCore.Units.iconSizes.large
+            Layout.preferredHeight: PlasmaCore.Units.iconSizes.large
+            Layout.topMargin: PlasmaCore.Units.smallSpacing
+            Layout.bottomMargin: PlasmaCore.Units.smallSpacing
+
+            visible: iconItem.active
+
+            PlasmaCore.IconItem {
+                id: iconItem
+                // don't show two identical icons
+                readonly property bool active: valid && source != notificationItem.applicationIconSource
+                anchors.fill: parent
+                usesPlasmaTheme: false
+                smooth: true
+                // don't show a generic "info" icon since this is a notification already
+                source: notificationItem.icon !== "dialog-information" ? notificationItem.icon : ""
+                visible: active
+            }
+
+            // JobItem reparents a file icon here for finished jobs with one total file
         }
     }
 
