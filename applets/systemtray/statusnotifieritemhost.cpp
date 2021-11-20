@@ -93,6 +93,15 @@ void StatusNotifierItemHost::registerWatcher(const QString &service)
                                                                   m_statusNotifierWatcher->path(),
                                                                   m_statusNotifierWatcher->connection());
 
+            connect(m_statusNotifierWatcher,
+                    &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemRegistered,
+                    this,
+                    &StatusNotifierItemHost::serviceRegistered);
+            connect(m_statusNotifierWatcher,
+                    &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemUnregistered,
+                    this,
+                    &StatusNotifierItemHost::serviceUnregistered);
+
             QDBusPendingReply<QDBusVariant> pendingItems = propetriesIface.Get(m_statusNotifierWatcher->interface(), "RegisteredStatusNotifierItems");
 
             QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingItems, this);
@@ -106,16 +115,6 @@ void StatusNotifierItemHost::registerWatcher(const QString &service)
                     }
                 }
             });
-
-            connect(m_statusNotifierWatcher,
-                    &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemRegistered,
-                    this,
-                    &StatusNotifierItemHost::serviceRegistered);
-            connect(m_statusNotifierWatcher,
-                    &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemUnregistered,
-                    this,
-                    &StatusNotifierItemHost::serviceUnregistered);
-
         } else {
             delete m_statusNotifierWatcher;
             m_statusNotifierWatcher = nullptr;
