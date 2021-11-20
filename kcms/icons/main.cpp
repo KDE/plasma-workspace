@@ -67,7 +67,7 @@ IconModule::IconModule(QObject *parent, const KPluginMetaData &data, const QVari
     // to be able to access its enums
     qmlRegisterUncreatableType<KIconLoader>(uri, 1, 0, "KIconLoader", QString());
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm5_icons"),
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_icons"),
                                        i18n("Icons"),
                                        QStringLiteral("1.0"),
                                        i18n("Icons Control Panel Module"),
