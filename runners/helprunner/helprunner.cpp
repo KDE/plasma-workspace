@@ -59,7 +59,7 @@ void HelpRunner::match(RunnerContext &context)
             match.setText(syntaxes.constFirst().exampleQueries().constFirst());
             match.setIcon(runner->icon());
             match.setSubtext(runner->description());
-            match.setType(QueryMatch::InformationalMatch);
+            match.setType(QueryMatch::CompletionMatch);
             match.setData(QVariant(QStringLiteral("?") + runner->name()));
             matches << match;
         }
@@ -69,11 +69,16 @@ void HelpRunner::match(RunnerContext &context)
 
 void HelpRunner::run(const RunnerContext &context, const QueryMatch &match)
 {
-    Q_UNUSED(context);
-    const QString query = match.data().toString();
-    static const QRegularExpression placeholderRegex{QStringLiteral("<.+>$")};
-    const int idx = query.indexOf(placeholderRegex);
-    context.requestQueryStringUpdate(query, idx == -1 ? query.count() : idx);
+    context.ignoreCurrentMatchForHistory();
+    if (match.type() == QueryMatch::CompletionMatch) {
+        const QString completedRunnerName = match.data().toString();
+        context.requestQueryStringUpdate(completedRunnerName, -1);
+    } else {
+        const QString query = match.data().toString();
+        static const QRegularExpression placeholderRegex{QStringLiteral("<.+>$")};
+        const int idx = query.indexOf(placeholderRegex);
+        context.requestQueryStringUpdate(query, idx == -1 ? query.count() : idx);
+    }
 }
 
 K_PLUGIN_CLASS_WITH_JSON(HelpRunner, "helprunner.json")
