@@ -545,7 +545,7 @@ QRect PanelView::geometryByDistance(int distance) const
 
 void PanelView::resizePanel()
 {
-    if (!m_initCompleted) {
+    if (!m_initCompleted || !m_screenToFollow) {
         return;
     }
 

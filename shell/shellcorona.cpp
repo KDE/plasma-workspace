@@ -710,13 +710,24 @@ void ShellCorona::primaryOutputNameChanged(const QString &oldOutputName, const Q
     if (!newPrimary || newPrimary == oldPrimary || newPrimary->geometry().isNull()) {
         return;
     }
+
     const int oldPrimaryId = m_screenPool->id(oldOutputName);
     const int newPrimaryId = m_screenPool->id(newOutputName);
     m_screenPool->setPrimaryConnector(newPrimary->name());
+
+    // Sometimes this is invoked before the outputadded signalhandler
+    if (!m_desktopViewforId.contains(newPrimaryId) && !m_redundantOutputs.contains(newPrimary)) {
+        addOutput(newPrimary);
+    }
+    if (!m_desktopViewforId.contains(oldPrimaryId) && !m_redundantOutputs.contains(oldPrimary)) {
+        addOutput(oldPrimary);
+    }
+
     // swap order in m_desktopViewforId
     if (m_desktopViewforId.contains(newPrimaryId) && m_desktopViewforId.contains(oldPrimaryId)) {
         DesktopView *primaryDesktop = m_desktopViewforId.value(newPrimaryId);
         DesktopView *oldDesktopOfPrimary = m_desktopViewforId.value(oldPrimaryId);
+
         m_desktopViewforId.remove(newPrimaryId);
         m_desktopViewforId.remove(oldPrimaryId);
 
@@ -726,8 +737,6 @@ void ShellCorona::primaryOutputNameChanged(const QString &oldOutputName, const Q
         m_desktopViewforId[newPrimaryId] = oldDesktopOfPrimary;
         oldDesktopOfPrimary->setScreenToFollow(newPrimary);
 
-        primaryDesktop->show();
-        oldDesktopOfPrimary->show();
         // corner case: the new primary screen was added into redundant outputs when appeared, *and* !m_desktopViewforId.contains(oldPrimaryId)
         // meaning that we had only one screen, connected a new oone that
         // a) is now primary and
@@ -1062,12 +1071,12 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
         if (panelView->containment()->screen() == idx) {
             m_waitingPanels << panelView->containment();
             it.remove();
-            delete panelView;
+            panelView->destroy();
         }
     }
 
     m_desktopViewforId.erase(itDesktop);
-    delete desktopView;
+    desktopView->destroy();
 
     emit screenRemoved(idx);
 }
@@ -1184,6 +1193,10 @@ void ShellCorona::addOutput(QScreen *screen)
         return;
     }
 
+    // This condition may happen when addOutput could have been already called by primaryOutputNameChanged
+    if (m_desktopViewforId.contains(m_screenPool->id(screen->name()))) {
+        return;
+    }
     connect(screen, &QScreen::geometryChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
 
     if (isOutputRedundant(screen)) {
