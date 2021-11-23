@@ -56,6 +56,7 @@ Dependencies:
     'plasma/libkscreen': '@same'
     'plasma/kwin': '@same'
     'plasma/libksysguard': '@same'
+    'libraries/plasma-wayland-protocols': '@latest'
     'libraries/kuserfeedback': '@stable'
 
 Dependencies:
