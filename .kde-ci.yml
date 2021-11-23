@@ -59,7 +59,6 @@ Dependencies:
     'libraries/plasma-wayland-protocols': '@latest'
     'libraries/kuserfeedback': '@stable'
 
-Dependencies:
 - 'on': ['Linux']
   'require':
     'frameworks/networkmanager-qt': '@latest'
