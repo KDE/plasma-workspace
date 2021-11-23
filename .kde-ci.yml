@@ -44,3 +44,17 @@ Dependencies:
     'frameworks/plasma-framework': '@latest'
     'frameworks/solid': '@latest'
     'frameworks/sonnet': '@latest'
+    'frameworks/kholidays': '@latest'
+    'frameworks/kquickcharts': '@latest'
+    'frameworks/kded': '@latest'
+    'plasma/layer-shell-qt': '@same'
+    'plasma/kscreenlocker': '@same'
+    'plasma/libkscreen': '@same'
+    'plasma/kwin': '@same'
+    'plasma/libksysguard': '@same'
+    'libraries/kuserfeedback': '@stable'
+
+Dependencies:
+- 'on': ['Linux']
+  'require':
+    'frameworks/networkmanager-qt': '@latest'
