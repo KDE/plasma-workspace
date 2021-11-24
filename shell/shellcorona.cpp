@@ -629,7 +629,7 @@ void ShellCorona::load()
 
     disconnect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load);
 
-    m_screenPool->load(m_primaryWatcher->primaryScreen());
+    m_screenPool->load();
 
     // TODO: a kconf_update script is needed
     QString configFileName(QStringLiteral("plasma-") + m_shell + QStringLiteral("-appletsrc"));
@@ -681,6 +681,14 @@ void ShellCorona::load()
         if (!m_desktopViewforId.contains(m_screenPool->id(screen->name()))) {
             addOutput(screen);
         }
+    }
+
+    // If the primary connector changed while plasma was not running, update all the lastScreen() to cause a swap
+    if (!m_screenPool->primaryConnector().isEmpty() && m_screenPool->primaryConnector() != m_primaryWatcher->primaryScreen()->name()) {
+        for (auto c : containments()) {
+            c->reactToScreenChange();
+        }
+        m_screenPool->setPrimaryConnector(m_primaryWatcher->primaryScreen()->name());
     }
     connect(qGuiApp, &QGuiApplication::screenAdded, this, &ShellCorona::addOutput, Qt::UniqueConnection);
     connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ShellCorona::handleScreenRemoved, Qt::UniqueConnection);
@@ -1868,7 +1876,19 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
         if (containment->lastScreen() == m_screenPool->id(screen->name())
             && (containment->activity() == m_activityController->currentActivity() || containment->containmentType() == Plasma::Types::PanelContainment
                 || containment->containmentType() == Plasma::Types::CustomPanelContainment)) {
-            return containment->lastScreen();
+            // Do we have to do a screen swap due to primary change when plasma was not running?
+            if (m_screenPool->primaryConnector() != m_primaryWatcher->primaryScreen()->name()) {
+                if (m_screenPool->connector(containment->lastScreen()) == m_screenPool->primaryConnector()) {
+                    return m_screenPool->id(m_primaryWatcher->primaryScreen()->name());
+                } else if (m_screenPool->connector(containment->lastScreen()) == m_primaryWatcher->primaryScreen()->name()) {
+                    return m_screenPool->id(m_screenPool->primaryConnector());
+                } else {
+                    return containment->lastScreen();
+                }
+            // most of the times
+            } else {
+                return containment->lastScreen();
+            }
         }
     }
 

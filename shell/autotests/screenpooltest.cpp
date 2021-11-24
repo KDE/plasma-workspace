@@ -29,6 +29,7 @@ private:
     ScreenPool *m_screenPool;
 };
 
+//TODO: this test iis to be redone completely
 void ScreenPoolTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
@@ -37,7 +38,7 @@ void ScreenPoolTest::initTestCase()
     cg.deleteGroup();
     cg.sync();
     m_screenPool = new ScreenPool(KSharedConfig::openConfig(), this);
-    m_screenPool->load(qGuiApp->primaryScreen());
+    m_screenPool->load();
 }
 
 void ScreenPoolTest::cleanupTestCase()
