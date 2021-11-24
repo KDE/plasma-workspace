@@ -752,10 +752,13 @@ void ShellCorona::primaryOutputNameChanged(const QString &oldOutputName, const Q
         // a) is now primary and
         // b) is at 0,0 position, moving the current screen out of the way
         // and this will always happen in two events
-    } else if (m_desktopViewforId.contains(newPrimaryId) && m_redundantOutputs.contains(newPrimary)) {
-        m_desktopViewforId[newPrimaryId]->setScreenToFollow(newPrimary);
-        m_redundantOutputs.remove(newPrimary);
-        m_redundantOutputs.insert(oldPrimary);
+    } else if (m_desktopViewforId.contains(oldPrimaryId) && m_redundantOutputs.contains(newPrimary)) {
+         m_redundantOutputs.remove(newPrimary);
+         DesktopView *oldDesktopOfPrimary = m_desktopViewforId.value(oldPrimaryId);
+         m_desktopViewforId.remove(oldPrimaryId);
+         m_desktopViewforId[newPrimaryId] = oldDesktopOfPrimary;
+         oldDesktopOfPrimary->setScreenToFollow(newPrimary);
+         m_redundantOutputs.insert(oldPrimary);
     }
 
     for (PanelView *panel : qAsConst(m_panelViews)) {
@@ -1156,16 +1159,16 @@ bool ShellCorona::isOutputRedundant(QScreen *screen) const
             && ( // since at this point contains is true, if either
                  // measure of othergeometry is bigger, has a bigger area
                 otherGeometry.width() > thisGeometry.width() || otherGeometry.height() > thisGeometry.height() ||
-                // ids not -1 are considered in descending order of importance
+                // ids not -1 are considered in descending order of importance unless one is the primary screen
+                // TODO: remove this order of importance?
                 //-1 means that is a screen not known yet, just arrived and
                 // not yet in screenpool: this happens for screens that
                 // are hotplugged and weren't known. it does NOT happen
                 // at first startup, as screenpool populates on load with all screens connected at the moment before the rest of the shell starts up
-                (thisId == -1 && otherId != -1) || (thisId > otherId && otherId != -1))) {
+                (thisId == -1 && otherId != -1) || s == m_primaryWatcher->primaryScreen())) {
             return true;
         }
     }
-
     return false;
 }
 
