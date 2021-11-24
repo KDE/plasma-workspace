@@ -18,6 +18,10 @@
 
 #include <KQuickAddons/QtQuickSettings>
 #include <KWindowSystem>
+
+#include <KConfigGroup>
+#include <KSharedConfig>
+
 #include <LayerShellQt/Shell>
 
 #define TEST_STEP_INTERVAL 2000
@@ -53,6 +57,12 @@ SplashApp::SplashApp(int &argc, char **argv)
     m_testing = parser.isSet(QStringLiteral("test"));
     m_window = parser.isSet(QStringLiteral("window"));
     m_theme = parser.positionalArguments().value(0);
+    if (m_theme.isEmpty()) {
+        KConfigGroup ksplashCfg = KSharedConfig::openConfig()->group("KSplash");
+        if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
+            m_theme = ksplashCfg.readEntry("Theme", QStringLiteral("Breeze"));
+        }
+    }
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerObject(QStringLiteral("/KSplash"), this, QDBusConnection::ExportScriptableSlots);

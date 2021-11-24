@@ -174,7 +174,7 @@ Startup::Startup(QObject *parent)
         // the splashscreen and progress indicator
         KConfigGroup ksplashCfg = cfg.group("KSplash");
         if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
-            QProcess::startDetached(QStringLiteral("ksplashqml"), {ksplashCfg.readEntry("Theme", QStringLiteral("Breeze"))});
+            QProcess::startDetached(QStringLiteral("ksplashqml"), {});
         }
         // FIXME 1: this code path is missing setupFontDpi() after X has started. Move to kcminit?
         // FIXME 2: the systemd path has no concept of kslpash

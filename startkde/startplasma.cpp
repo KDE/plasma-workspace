@@ -540,6 +540,21 @@ bool useSystemdBoot()
     return hasSystemdService(QStringLiteral("xdg-desktop-autostart.target"));
 }
 
+void startKSplashViaSystemd()
+{
+    const KConfig cfg(QStringLiteral("ksplashrc"));
+    // the splashscreen and progress indicator
+    KConfigGroup ksplashCfg = cfg.group("KSplash");
+    if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
+        auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                                  QStringLiteral("/org/freedesktop/systemd1"),
+                                                  QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                                  QStringLiteral("StartUnit"));
+        msg << QStringLiteral("plasma-ksplash.service") << QStringLiteral("fail");
+        QDBusReply<QDBusObjectPath> reply = QDBusConnection::sessionBus().call(msg);
+    }
+}
+
 bool startPlasmaSession(bool wayland)
 {
     resetSystemdFailedUnits();
@@ -627,6 +642,9 @@ bool startPlasmaSession(bool wayland)
             rc = false;
         } else {
             playStartupSound(&e);
+        }
+        if (wayland) {
+            startKSplashViaSystemd();
         }
     }
     if (rc) {
