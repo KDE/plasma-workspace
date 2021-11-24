@@ -715,6 +715,8 @@ void ShellCorona::primaryOutputNameChanged(const QString &oldOutputName, const Q
 
     QScreen *oldPrimary = m_primaryWatcher->screenForName(oldOutputName);
     QScreen *newPrimary = m_primaryWatcher->primaryScreen();
+    qWarning()<<"OLD"<<oldPrimary<<"NEW"<<newPrimary;
+
     if (!newPrimary || newPrimary == oldPrimary || newPrimary->geometry().isNull()) {
         return;
     }
@@ -750,8 +752,8 @@ void ShellCorona::primaryOutputNameChanged(const QString &oldOutputName, const Q
         // a) is now primary and
         // b) is at 0,0 position, moving the current screen out of the way
         // and this will always happen in two events
-    } else if (m_desktopViewforId.contains(0) && m_redundantOutputs.contains(newPrimary)) {
-        m_desktopViewforId[0]->setScreenToFollow(newPrimary);
+    } else if (m_desktopViewforId.contains(newPrimaryId) && m_redundantOutputs.contains(newPrimary)) {
+        m_desktopViewforId[newPrimaryId]->setScreenToFollow(newPrimary);
         m_redundantOutputs.remove(newPrimary);
         m_redundantOutputs.insert(oldPrimary);
     }
