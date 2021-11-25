@@ -79,8 +79,8 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype)
                         strlen("logoutdialog"));
 
         XClassHint classHint;
-        classHint.res_name = const_cast<char *>("ksmserver");
-        classHint.res_class = const_cast<char *>("ksmserver");
+        classHint.res_name = const_cast<char *>("ksmserver-logout-greeter");
+        classHint.res_class = const_cast<char *>("ksmserver-logout-greeter");
         XSetClassHint(QX11Info::display(), winId(), &classHint);
     }
 
