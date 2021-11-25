@@ -190,26 +190,47 @@ PlasmaExtras.Representation {
                     source: root.albumArt
                 }
 
-                PlasmaCore.IconItem { // Fallback
-                    visible: !albumArt.visible
-                    source: {
-                        if (mpris2Source.currentData["Desktop Icon Name"])
-                            return mpris2Source.currentData["Desktop Icon Name"]
-                        return "media-album-cover"
+                Loader {
+                    // When albumArt is shown, the icon is unloaded to reduce memory usage.
+                    readonly property string icon: (mpris2Source.currentData && mpris2Source.currentData["Desktop Icon Name"]) || "media-album-cover"
+                    active: !albumArt.visible
+                    anchors.fill: parent
+
+                    sourceComponent: root.track ? fallbackIconItem : placeholderMessage
+
+                    Component {
+                        id: fallbackIconItem
+
+                        PlasmaCore.IconItem { // Fallback
+                            source: icon
+                            anchors {
+                                fill: parent
+                                margins: PlasmaCore.Units.largeSpacing * 2
+                            }
+                        }
                     }
 
-                    anchors {
-                        fill: parent
-                        margins: PlasmaCore.Units.largeSpacing*2
+                    Component {
+                        id: placeholderMessage
+                        Item { // Put PlaceholderMessage in Item so PlaceholderMessage will not fill its parent.
+                            anchors.fill: parent
+
+                            PlasmaExtras.PlaceholderMessage { // "No media playing" placeholder message
+                                width: parent.width // For text wrap
+                                anchors.centerIn: parent
+                                iconName: icon
+                                text: i18n("No media playing")
+                            }
+                        }
                     }
                 }
             }
 
             ColumnLayout { // Details Column
+                visible: root.track
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 Layout.preferredWidth: 50
-                Layout.alignment: !(albumArt.visible || !!mpris2Source.currentData["Desktop Icon Name"]) ? Qt.AlignHCenter : 0
 
                 /*
                     * We use Kirigami.Heading instead of PlasmaExtras.Heading
@@ -218,7 +239,6 @@ PlasmaExtras.Representation {
                     */
                 Kirigami.Heading { // Song Title
                     id: songTitle
-                    visible: root.track
                     level: 1
 
                     color: (softwareRendering || !albumArt.visible) ? PlasmaCore.ColorScope.textColor : "white"
@@ -235,7 +255,7 @@ PlasmaExtras.Representation {
                 }
                 Kirigami.Heading { // Song Artist
                     id: songArtist
-                    visible: root.track && root.artist
+                    visible: root.artist
                     level: 2
 
                     color: (softwareRendering || !albumArt.visible) ? PlasmaCore.ColorScope.textColor : "white"
@@ -297,13 +317,6 @@ PlasmaExtras.Representation {
                     Layout.maximumHeight: PlasmaCore.Units.gridUnit*2
                 }
             }
-        }
-
-        PlasmaExtras.PlaceholderMessage { // "No media playing" placeholder message
-            anchors.centerIn: parent
-            width: parent.width - (PlasmaCore.Units.largeSpacing * 8)
-            visible: !root.track
-            text: i18n("No media playing")
         }
     }
 
