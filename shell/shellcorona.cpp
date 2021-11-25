@@ -723,15 +723,19 @@ void ShellCorona::primaryOutputNameChanged(const QString &oldOutputName, const Q
 
     const int oldPrimaryId = m_screenPool->id(oldOutputName);
     const int newPrimaryId = m_screenPool->id(newOutputName);
-    m_screenPool->setPrimaryConnector(newPrimary->name());
 
     // Sometimes this is invoked before the outputadded signalhandler
     if (!m_desktopViewforId.contains(newPrimaryId) && !m_redundantOutputs.contains(newPrimary)) {
+        m_pendingPrimaryChange = true;
+        return;
         addOutput(newPrimary);
     }
     if (!m_desktopViewforId.contains(oldPrimaryId) && !m_redundantOutputs.contains(oldPrimary)) {
+        m_pendingPrimaryChange = true;
+        return;
         addOutput(oldPrimary);
     }
+    m_screenPool->setPrimaryConnector(newPrimary->name());
 
     // swap order in m_desktopViewforId
     if (m_desktopViewforId.contains(newPrimaryId) && m_desktopViewforId.contains(oldPrimaryId)) {
@@ -1266,6 +1270,10 @@ void ShellCorona::addOutput(QScreen *screen)
     emit availableScreenRectChanged();
     emit screenAdded(m_screenPool->id(screen->name()));
 
+    if (m_pendingPrimaryChange && screen == m_primaryWatcher->primaryScreen()) {
+        primaryOutputNameChanged(m_screenPool->primaryConnector(), m_primaryWatcher->primaryScreen()->name());
+        m_pendingPrimaryChange = false;
+    }
     CHECK_SCREEN_INVARIANTS
 }
 
