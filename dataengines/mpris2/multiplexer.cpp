@@ -126,6 +126,11 @@ void Multiplexer::removePlayer(const QString &name)
     if (name == m_activeName) {
         setBestActive();
     }
+
+    // When there is no player opened
+    if (m_proxies.empty()) {
+        Q_EMIT playerListEmptied();
+    }
 }
 
 PlayerContainer *Multiplexer::activePlayer() const
