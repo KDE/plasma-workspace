@@ -28,10 +28,10 @@ PlasmaExtras.Representation {
 
     readonly property int controlSize: PlasmaCore.Units.iconSizes.medium
 
-    property double position: mpris2Source.currentData.Position || 0
-    readonly property real rate: mpris2Source.currentData.Rate || 1
+    property double position: (mpris2Source.currentData && mpris2Source.currentData.Position) || 0
+    readonly property real rate: (mpris2Source.currentData && mpris2Source.currentData.Rate) || 1
     readonly property double length: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
-    readonly property bool canSeek: mpris2Source.currentData.CanSeek || false
+    readonly property bool canSeek: (mpris2Source.currentData && mpris2Source.currentData.CanSeek) || false
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
 
     // only show hours (the default for KFormat) when track is actually longer than an hour
