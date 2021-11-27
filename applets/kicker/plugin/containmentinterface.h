@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QObject>
+#include <QQuickItem>
 #include <QUrl>
 
 namespace Plasma
@@ -40,6 +41,10 @@ public:
     static Q_INVOKABLE void ensureMutable(Plasma::Containment *containment);
 
 private:
+    template<class UnaryPredicate>
+    static QQuickItem *findPlasmaGraphicObjectChildIf(const Plasma::Applet *applet, UnaryPredicate predicate);
+    static QQuickItem *firstPlasmaGraphicObjectChild(const Plasma::Applet *applet);
+
     static Plasma::Applet *findTaskManagerApplet(Plasma::Containment *containment);
     static QStringList m_knownTaskManagers;
 };
