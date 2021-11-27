@@ -124,4 +124,3 @@ X-KDE-Keywords[zh_CN]=icons,effects,size,hicolor,locolor,change icons,buttons,bu
 Categories=Qt;KDE;X-KDE-settings-looknfeel;
 
 X-KDE-FormFactors=tablet,handset,desktop
-X-Plasma-MainScript=ui/main.qml

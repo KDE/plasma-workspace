@@ -77,7 +77,6 @@ Icon=system-run
 X-KDE-Library=kcm_autostart
 X-KDE-ServiceTypes=KCModule
 X-KDE-FormFactors=tablet,handset,desktop
-X-Plasma-MainScript=ui/main.qml
 X-KDE-System-Settings-Parent-Category=session
 X-KDE-ParentApp=kcontrol
 X-KDE-Keywords=Autostart Manager,system startup,plasma start,cron,auto,start,start up,boot,load,session

@@ -116,4 +116,3 @@ X-KDE-Keywords[zh_CN]=kwin,window,manager,night,colors,redshift,eyes,night mode,
 Categories=Qt;KDE;X-KDE-settings-nightcolor
 
 X-KDE-FormFactors=tablet,handset,desktop
-X-Plasma-MainScript=ui/main.qml

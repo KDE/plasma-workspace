@@ -125,4 +125,3 @@ X-KDE-Keywords[zh_CN]=feedback,report,contact,data collection,statistics,usage,l
 Categories=Qt;KDE;
 
 X-KDE-FormFactors=tablet,handset,desktop
-X-Plasma-MainScript=ui/main.qml

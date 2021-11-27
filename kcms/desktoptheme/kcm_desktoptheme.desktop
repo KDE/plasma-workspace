@@ -118,4 +118,3 @@ X-KDE-Keywords[x-test]=xxDesktop Themexx,xxPlasma Themexx,xxplasma stylexx,xxdes
 X-KDE-Keywords[zh_CN]=Desktop Theme,Plasma Theme,plasma style,desktop style,plasma skin,desktop skin,theme,桌面主题,Plasma 主题,plasma 风格,plasma 样式,plasma 皮肤,桌面皮肤,桌面风格,桌面样式,主题
 
 X-KDE-FormFactors=tablet,handset,desktop
-X-Plasma-MainScript=ui/main.qml

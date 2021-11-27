@@ -140,4 +140,3 @@ X-KDE_Keywords=System sounds,Audio,Sound,Notify,Alerts,Notification,popups,distu
 Categories=Qt;KDE;X-KDE-settings-sound;
 
 X-KDE-FormFactors=tablet,handset,desktop
-X-Plasma-MainScript=ui/main.qml

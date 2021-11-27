@@ -114,5 +114,3 @@ X-KDE-Weight=50
 X-KDE-PluginInfo-Name=kcm_formats
 
 X-KDE-FormFactors=tablet,handset,desktop
-
-X-Plasma-MainScript=ui/main.qml
