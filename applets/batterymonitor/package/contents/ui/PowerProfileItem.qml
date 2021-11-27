@@ -15,9 +15,39 @@ RowLayout {
     id: profileItem
 
     property string activeProfile
+
     property string inhibitionReason
+    readonly property bool inhibited: inhibitionReason !== ""
+
     property string degradationReason
-    property var profileHolds: []
+
+    // type: [{ Name: string, Icon: string, Profile: string, Reason: string }]
+    required property var profileHolds
+
+    // The canBeInhibited property mean that this profile's availability
+    // depends on profileItem.inhibited value (and thus on the
+    // inhibitionReason string).
+    readonly property var profileData: [
+        {
+            label: i18n("Power Save"),
+            profile: "power-saver",
+            canBeInhibited: false,
+        }, {
+            label: i18n("Balanced"),
+            profile: "balanced",
+            canBeInhibited: false,
+        }, {
+            label: i18n("Performance"),
+            profile: "performance",
+            canBeInhibited: true,
+        }
+    ]
+
+    readonly property int activeProfileIndex: profileData.findIndex(data => data.profile === activeProfile)
+    // type: typeof(profileData[])?
+    readonly property var activeProfileData: activeProfileIndex !== -1 ? profileData[activeProfileIndex] : undefined
+    // type: typeof(profileHolds)
+    readonly property var activeHolds: profileHolds.filter(hold => hold.Profile === activeProfile)
 
     signal activateProfileRequested(string profile)
 
@@ -43,36 +73,23 @@ RowLayout {
             id: profileSlider
             width: parent.width
 
-            readonly property var profileData: [{
-                label: i18n("Power Save"),
-                profile: "power-saver",
-                inhibited: false
-            }, {
-                label: i18n("Balanced"),
-                profile: "balanced",
-                inhibited: false
-            }, {
-                label: i18n("Performance"),
-                profile: "performance",
-                inhibited: profileItem.inhibitionReason !== ""
-            }]
-
             from: 0
             to: 2
             stepSize: 1
-            value: profileData.findIndex((profile => profile.profile === profileItem.activeProfile))
+            value: profileItem.activeProfileIndex
             snapMode: PlasmaComponents3.Slider.SnapAlways
             onMoved: {
-                if (!profileData[value].inhibited) {
-                    activateProfileRequested(profileData[value].profile)
+                const { canBeInhibited, profile } = profileItem.profileData[value];
+                if (!(canBeInhibited && profileItem.inhibited)) {
+                    activateProfileRequested(profile);
                 } else {
-                    value = Qt.binding(() => profileData.findIndex(profile => profile.profile === profileItem.activeProfile))
+                    value = Qt.binding(() => profileItem.activeProfileIndex);
                 }
             }
             // fake having a disabled second half
             Rectangle {
                 z: -1
-                visible: profileItem.inhibitionReason !== ""
+                visible: profileItem.inhibited
                 color: PlasmaCore.Theme.backgroundColor
                 anchors.left: parent.horizontalCenter
                 anchors.leftMargin: 1
@@ -86,17 +103,17 @@ RowLayout {
             width: parent.width
             spacing: 0
             Repeater {
-                model: profileSlider.profileData
+                model: profileItem.profileData
                 PlasmaComponents3.Label {
                     // At the time of writing, QtQuick/Positioner QML Type does not support Layouts
                     readonly property bool isFirstItem: index === 0
-                    readonly property bool isLastItem: index === profileSlider.profileData.length - 1
+                    readonly property bool isLastItem: index === profileItem.profileData.length - 1
 
                     horizontalAlignment: isFirstItem ? Text.AlignLeft : (isLastItem ? Text.AlignRight : Text.AlignHCenter)
                     Layout.fillWidth: true
                     Layout.preferredWidth: 50 // Common width for better alignment
                     // Disable label for inhibited items to reinforce unavailability
-                    enabled: !profileSlider.profileData[index].inhibited
+                    enabled: !(profileItem.profileData[index].canBeInhibited && profileItem.inhibited)
 
                     text: modelData.label
                 }
@@ -106,7 +123,7 @@ RowLayout {
         // NOTE Only one of these will be visible at a time since the daemon will only set one depending
         // on its version
         InhibitionHint {
-            visible: profileItem.inhibitionReason
+            visible: profileItem.inhibited
             width: parent.width
             iconSource: "dialog-information"
             text: switch(profileItem.inhibitionReason) {
@@ -119,7 +136,7 @@ RowLayout {
             }
         }
         InhibitionHint {
-            visible: profileItem.activeProfile === "performance" && profileItem.degradationReason
+            visible: profileItem.activeProfile === "performance" && profileItem.degradationReason !== ""
             width: parent.width
             iconSource: "dialog-information"
             text: switch(profileItem.degradationReason) {
@@ -133,19 +150,21 @@ RowLayout {
         }
 
         InhibitionHint {
-            visible: holdRepeater.count > 0
-            text: i18np("One application has requested activating %2:",
+            visible: profileItem.activeHolds.length > 0 && profileItem.activeProfileData !== undefined
+            text: profileItem.activeProfileData !== undefined
+                ? i18np("One application has requested activating %2:",
                         "%1 applications have requested activating %2:",
-                        holdRepeater.count,
-                        profileSlider.profileData.find(profile => profile.profile === profileItem.activeProfile).label)
+                        profileItem.activeHolds.length,
+                        i18n(profileItem.activeProfileData.label))
+                : ""
         }
         Repeater {
-            id: holdRepeater
-            model: profileItem.profileHolds.filter(hold => hold.Profile === profileItem.activeProfile)
+            model: profileItem.activeHolds
             InhibitionHint {
                 x: PlasmaCore.Units.smallSpacing
                 iconSource: modelData.Icon
-                text: i18nc("%1 is the name of the application, %2 is the reason provided by it for activating performance mode", "%1: %2", modelData.Name, modelData.Reason)
+                text: i18nc("%1 is the name of the application, %2 is the reason provided by it for activating performance mode",
+                            "%1: %2", modelData.Name, modelData.Reason)
             }
         }
     }

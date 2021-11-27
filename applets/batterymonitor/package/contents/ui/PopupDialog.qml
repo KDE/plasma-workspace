@@ -27,7 +27,8 @@ PlasmaComponents3.Page {
     property var profiles
     property string inhibitionReason
     property string degradationReason
-    property var profileHolds
+    // type: [{ Name: string, Icon: string, Profile: string, Reason: string }]
+    required property var profileHolds
 
     signal powermanagementChanged(bool disabled)
     signal activateProfileRequested(string profile)
