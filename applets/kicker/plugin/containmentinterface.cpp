@@ -70,15 +70,7 @@ bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentI
     }
     case TaskManager: {
         if (!entryPath.isEmpty() && containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
-            const Plasma::Applet *taskManager = nullptr;
-
-            foreach (const Plasma::Applet *applet, containment->applets()) {
-                if (m_knownTaskManagers.contains(applet->pluginMetaData().pluginId())) {
-                    taskManager = applet;
-
-                    break;
-                }
-            }
+            const Plasma::Applet *taskManager = findTaskManagerApplet(containment);
 
             if (taskManager) {
                 QQuickItem *gObj = qobject_cast<QQuickItem *>(taskManager->property("_plasma_graphicObject").value<QObject *>());
@@ -168,15 +160,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
     }
     case TaskManager: {
         if (containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
-            const Plasma::Applet *taskManager = nullptr;
-
-            foreach (const Plasma::Applet *applet, containment->applets()) {
-                if (m_knownTaskManagers.contains(applet->pluginMetaData().pluginId())) {
-                    taskManager = applet;
-
-                    break;
-                }
-            }
+            const Plasma::Applet *taskManager = findTaskManagerApplet(containment);
 
             if (taskManager) {
                 QQuickItem *gObj = qobject_cast<QQuickItem *>(taskManager->property("_plasma_graphicObject").value<QObject *>());
@@ -234,4 +218,13 @@ void ContainmentInterface::ensureMutable(Plasma::Containment *containment)
     if (containment && containment->immutability() != Plasma::Types::Mutable) {
         containment->actions()->action(QStringLiteral("lock widgets"))->trigger();
     }
+}
+
+Plasma::Applet *ContainmentInterface::findTaskManagerApplet(Plasma::Containment *containment)
+{
+    const QList<Plasma::Applet *> applets = containment->applets();
+    const auto found = std::find_if(applets.cbegin(), applets.cend(), [](const Plasma::Applet *applet) {
+        return m_knownTaskManagers.contains(applet->pluginMetaData().pluginId());
+    });
+    return found != applets.cend() ? *found : nullptr;
 }

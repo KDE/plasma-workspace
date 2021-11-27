@@ -11,6 +11,7 @@
 
 namespace Plasma
 {
+class Applet;
 class Containment;
 }
 
@@ -39,5 +40,6 @@ public:
     static Q_INVOKABLE void ensureMutable(Plasma::Containment *containment);
 
 private:
+    static Plasma::Applet *findTaskManagerApplet(Plasma::Containment *containment);
     static QStringList m_knownTaskManagers;
 };

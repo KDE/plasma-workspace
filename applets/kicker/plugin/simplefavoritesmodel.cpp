@@ -278,7 +278,7 @@ void SimpleFavoritesModel::refresh()
 
     QStringList newFavorites;
 
-    foreach (const QString &id, m_favorites) {
+    for (const QString &id : std::as_const(m_favorites)) {
         AbstractEntry *entry = favoriteFromId(id);
 
         if (entry && entry->isValid()) {

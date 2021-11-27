@@ -222,7 +222,7 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
         if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications"))) {
             QStringList hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
 
-            foreach (const QString &app, m_hiddenEntries) {
+            for (const QString &app : std::as_const(m_hiddenEntries)) {
                 hiddenApps.removeOne(app);
             }
 
@@ -257,7 +257,8 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
 
             QStringList hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
 
-            foreach (const QString &app, appsModel->hiddenEntries()) {
+            const QStringList hiddenEntries = appsModel->hiddenEntries();
+            for (const QString &app : hiddenEntries) {
                 hiddenApps.removeOne(app);
             }
 
@@ -465,6 +466,13 @@ void AppsModel::refresh()
     emit separatorCountChanged();
 }
 
+static bool containsSameStorageId(const QList<AbstractEntry *> &entryList, KService::Ptr service)
+{
+    return std::any_of(entryList.cbegin(), entryList.cend(), [=](const AbstractEntry *entry) {
+        return entry->type() == AbstractEntry::RunnableType && static_cast<const AppEntry *>(entry)->service()->storageId() == service->storageId();
+    });
+}
+
 void AppsModel::refreshInternal()
 {
     if (m_staticEntryList) {
@@ -508,15 +516,7 @@ void AppsModel::refreshInternal()
                     continue;
                 }
 
-                bool found = false;
-
-                for (const AbstractEntry *entry : qAsConst(m_entryList)) {
-                    if (entry->type() == AbstractEntry::RunnableType && static_cast<const AppEntry *>(entry)->service()->storageId() == service->storageId()) {
-                        found = true;
-                    }
-                }
-
-                if (!found) {
+                if (!containsSameStorageId(m_entryList, service)) {
                     m_entryList << new AppEntry(this, service, m_appNameFormat);
                 }
             } else if (p->isType(KST_KServiceSeparator) && m_showSeparators && m_showTopLevelItems) {
@@ -573,7 +573,7 @@ void AppsModel::refreshInternal()
             int at = 0;
             QList<AbstractEntry *> page;
 
-            foreach (AbstractEntry *app, m_entryList) {
+            for (AbstractEntry *app : std::as_const(m_entryList)) {
                 page.append(app);
 
                 if (at == (m_pageSize - 1)) {
@@ -604,7 +604,8 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
 
     bool hasSubGroups = false;
 
-    foreach (KServiceGroup::Ptr subGroup, group->groupEntries(KServiceGroup::ExcludeNoDisplay)) {
+    const QList<KServiceGroup::Ptr> groupEntries = group->groupEntries(KServiceGroup::ExcludeNoDisplay);
+    for (KServiceGroup::Ptr subGroup : groupEntries) {
         if (subGroup->childCount() > 0) {
             hasSubGroups = true;
 
@@ -646,16 +647,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
                 continue;
             }
 
-            bool found = false;
-
-            for (const AbstractEntry *entry : qAsConst(m_entryList)) {
-                if (entry->type() == AbstractEntry::RunnableType && static_cast<const AppEntry *>(entry)->service()->storageId() == service->storageId()) {
-                    found = true;
-                    break;
-                }
-            }
-
-            if (!found) {
+            if (!containsSameStorageId(m_entryList, service)) {
                 m_entryList << new AppEntry(this, service, m_appNameFormat);
             }
         } else if (p->isType(KST_KServiceSeparator) && m_showSeparators) {

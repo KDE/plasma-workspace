@@ -336,7 +336,7 @@ void RootModel::refresh()
             QList<AbstractEntry *> page;
             page.reserve(m_pageSize);
 
-            foreach (AbstractEntry *app, apps) {
+            for (AbstractEntry *app : std::as_const(apps)) {
                 page.append(app);
 
                 if (at == (m_pageSize - 1)) {
@@ -361,7 +361,7 @@ void RootModel::refresh()
             QList<AbstractEntry *> groups;
             QHash<QString, QList<AbstractEntry *>> m_categoryHash;
 
-            foreach (const AbstractEntry *groupEntry, m_entryList) {
+            for (const AbstractEntry *groupEntry : std::as_const(m_entryList)) {
                 AbstractModel *model = groupEntry->childModel();
 
                 if (!model)
