@@ -17,8 +17,11 @@
 // FIXME HACK TODO: Unfortunately we have no choice but to hard-code a list of
 // applets we know to expose the correct interface right now -- this is slated
 // for replacement with some form of generic service.
-QStringList ContainmentInterface::m_knownTaskManagers = QStringList()
-    << QLatin1String("org.kde.plasma.taskmanager") << QLatin1String("org.kde.plasma.icontasks") << QLatin1String("org.kde.plasma.expandingiconstaskmanager");
+QStringList ContainmentInterface::m_knownTaskManagers{
+    QLatin1String("org.kde.plasma.taskmanager"),
+    QLatin1String("org.kde.plasma.icontasks"),
+    QLatin1String("org.kde.plasma.expandingiconstaskmanager"),
+};
 
 ContainmentInterface::ContainmentInterface(QObject *parent)
     : QObject(parent)
