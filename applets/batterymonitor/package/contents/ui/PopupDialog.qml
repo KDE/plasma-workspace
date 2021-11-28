@@ -108,7 +108,7 @@ PlasmaComponents3.Page {
                 activeProfile: dialog.activeProfile
                 profiles: dialog.profiles
                 inhibitionReason: dialog.inhibitionReason
-                visible: profiles.length > 0
+                visible: dialog.profiles.length > 0
                 degradationReason: dialog.degradationReason
                 profileHolds: dialog.profileHolds
                 onActivateProfileRequested: dialog.activateProfileRequested(profile)

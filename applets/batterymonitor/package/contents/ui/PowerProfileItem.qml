@@ -107,10 +107,10 @@ RowLayout {
         // NOTE Only one of these will be visible at a time since the daemon will only set one depending
         // on its version
         InhibitionHint {
-            visible: inhibitionReason
+            visible: profileItem.inhibitionReason
             width: parent.width
             iconSource: "dialog-information"
-            text: switch(inhibitionReason) {
+            text: switch(profileItem.inhibitionReason) {
                 case "lap-detected":
                     return i18n("Performance mode has been disabled to reduce heat generation because the computer has detected that it may be sitting on your lap.")
                 case "high-operating-temperature":
@@ -120,10 +120,10 @@ RowLayout {
             }
         }
         InhibitionHint {
-            visible: activeProfile === "performance" && degradationReason
+            visible: profileItem.activeProfile === "performance" && profileItem.degradationReason
             width: parent.width
             iconSource: "dialog-information"
-            text: switch(degradationReason) {
+            text: switch(profileItem.degradationReason) {
                 case "lap-detected":
                     return i18n("Performance may be lowered to reduce heat generation because the computer has detected that it may be sitting on your lap.")
                 case "high-operating-temperature":
