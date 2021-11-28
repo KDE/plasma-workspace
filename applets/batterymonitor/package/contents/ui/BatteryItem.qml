@@ -96,20 +96,18 @@ Item {
             mainItem: Row {
                 id: batteryItemToolTip
 
-                property int _s: PlasmaCore.Units.largeSpacing / 2
+                Layout.minimumWidth: implicitWidth + PlasmaCore.Units.smallSpacing * 2
+                Layout.minimumHeight: implicitHeight + PlasmaCore.Units.gridUnit
+                Layout.maximumWidth: implicitWidth + PlasmaCore.Units.smallSpacing * 2
+                Layout.maximumHeight: implicitHeight + PlasmaCore.Units.gridUnit
+                width: implicitWidth + PlasmaCore.Units.smallSpacing * 2
+                height: implicitHeight + PlasmaCore.Units.gridUnit
 
-                Layout.minimumWidth: implicitWidth + batteryItemToolTip._s
-                Layout.minimumHeight: implicitHeight + batteryItemToolTip._s * 2
-                Layout.maximumWidth: implicitWidth + batteryItemToolTip._s
-                Layout.maximumHeight: implicitHeight + batteryItemToolTip._s * 2
-                width: implicitWidth + batteryItemToolTip._s
-                height: implicitHeight + batteryItemToolTip._s * 2
-
-                spacing: batteryItemToolTip._s*2
+                spacing: PlasmaCore.Units.gridUnit
 
                 BatteryIcon {
-                    x: batteryItemToolTip._s * 2
-                    y: batteryItemToolTip._s
+                    x: PlasmaCore.Units.gridUnit
+                    y: PlasmaCore.Units.smallSpacing * 2
                     width: PlasmaCore.Units.iconSizes.desktop // looks weird and small but that's what DefaultTooltip uses
                     height: width
                     batteryType: batteryIcon.batteryType
@@ -121,8 +119,8 @@ Item {
 
                 Column {
                     id: mainColumn
-                    x: batteryItemToolTip._s
-                    y: batteryItemToolTip._s
+                    x: PlasmaCore.Units.smallSpacing * 2
+                    y: PlasmaCore.Units.smallSpacing * 2
 
                     PlasmaExtras.Heading {
                         level: 3
