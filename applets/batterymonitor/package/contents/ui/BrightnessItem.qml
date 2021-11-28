@@ -15,6 +15,7 @@ RowLayout {
     id: item
     property alias icon: brightnessIcon.source
     property alias label: brightnessLabel.text
+    property alias slider: brightnessSlider
     property alias value: brightnessSlider.value
     property alias maximumValue: brightnessSlider.to
     property alias stepSize: brightnessSlider.stepSize

@@ -138,6 +138,7 @@ PlasmaComponents3.Page {
                 delegate: BatteryItem {
                     width: parent.width
                     battery: model
+                    matchHeightOfSlider: brightnessSlider.slider
                 }
             }
         }

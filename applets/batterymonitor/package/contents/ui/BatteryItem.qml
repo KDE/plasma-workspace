@@ -28,6 +28,13 @@ Item {
 
     readonly property bool isBroken: model.Capacity > 0 && model.Capacity < 50
 
+    // Existing instance of a slider to use as a reference to calculate extra
+    // margins for a progress bar, so that the row of labels on top of it
+    // could visually look as if it were on the same distance from the bar as
+    // they are from the slider.
+    property PlasmaComponents3.Slider matchHeightOfSlider: PlasmaComponents3.Slider {}
+    readonly property real extraMargin: Math.max(0, Math.floor((matchHeightOfSlider.height - chargeBar.height) / 2))
+
     property Component batteryDetails: Flow { // GridLayout crashes with a Repeater in it somehow
         id: detailsLayout
 
@@ -174,17 +181,11 @@ Item {
                     }
 
                     PlasmaComponents3.ProgressBar {
-                        property real extraMargin: Math.max(0, Math.round((matchHeightOfSlider.height - height) / 2))
-                        // Instance of a slider to use as a reference to
-                        // calculate extra margins for the progress bar, so
-                        // that the row of labels on top of it could visually
-                        // look as if it were on the same distance from the
-                        // bar as they would be from the slider.
-                        property PlasmaComponents3.Slider matchHeightOfSlider: PlasmaComponents3.Slider {}
+                        id: chargeBar
 
                         Layout.fillWidth: true
-                        Layout.topMargin: extraMargin
-                        Layout.bottomMargin: extraMargin
+                        Layout.topMargin: batteryItem.extraMargin
+                        Layout.bottomMargin: batteryItem.extraMargin
 
                         from: 0
                         to: 100
