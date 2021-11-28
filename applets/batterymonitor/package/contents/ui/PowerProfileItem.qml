@@ -15,7 +15,6 @@ RowLayout {
     id: profileItem
 
     property string activeProfile
-    property var profiles: []
     property string inhibitionReason
     property string degradationReason
     property var profileHolds: []

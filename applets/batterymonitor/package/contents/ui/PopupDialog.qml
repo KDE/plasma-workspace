@@ -106,7 +106,6 @@ PlasmaComponents3.Page {
             PowerProfileItem {
                 width: parent.width
                 activeProfile: dialog.activeProfile
-                profiles: dialog.profiles
                 inhibitionReason: dialog.inhibitionReason
                 visible: dialog.profiles.length > 0
                 degradationReason: dialog.degradationReason
