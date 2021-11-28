@@ -47,7 +47,9 @@ Item {
 
             PlasmaComponents3.Label {
                 id: detailsLabel
-                width: modelData.value && parent ? parent.width - detailsLayout.leftColumnWidth - PlasmaCore.Units.smallSpacing : detailsLayout.leftColumnWidth + PlasmaCore.Units.smallSpacing
+                width: modelData.value && parent
+                    ? parent.width - detailsLayout.leftColumnWidth - PlasmaCore.Units.smallSpacing
+                    : detailsLayout.leftColumnWidth + PlasmaCore.Units.smallSpacing
                 wrapMode: Text.NoWrap
                 onPaintedWidthChanged: { // horrible HACK to get a column layout
                     if (paintedWidth > detailsLayout.leftColumnWidth) {
