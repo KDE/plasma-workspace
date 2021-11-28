@@ -147,7 +147,7 @@ Item {
                 ColumnLayout {
                     Layout.fillWidth: true
                     Layout.alignment: batteryItem.isPresent ? Qt.AlignTop : Qt.AlignVCenter
-                    spacing: PlasmaCore.Units.smallSpacing
+                    spacing: 0
 
                     RowLayout {
                         spacing: PlasmaCore.Units.smallSpacing
@@ -174,7 +174,18 @@ Item {
                     }
 
                     PlasmaComponents3.ProgressBar {
+                        property real extraMargin: Math.max(0, Math.round((matchHeightOfSlider.height - height) / 2))
+                        // Instance of a slider to use as a reference to
+                        // calculate extra margins for the progress bar, so
+                        // that the row of labels on top of it could visually
+                        // look as if it were on the same distance from the
+                        // bar as they would be from the slider.
+                        property PlasmaComponents3.Slider matchHeightOfSlider: PlasmaComponents3.Slider {}
+
                         Layout.fillWidth: true
+                        Layout.topMargin: extraMargin
+                        Layout.bottomMargin: extraMargin
+
                         from: 0
                         to: 100
                         visible: batteryItem.isPresent
