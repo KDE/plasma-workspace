@@ -144,13 +144,12 @@ Item {
                     pluggedIn: model.State === "Charging" && model["Is Power Supply"]
                 }
 
-                Column {
+                ColumnLayout {
                     Layout.fillWidth: true
                     Layout.alignment: batteryItem.isPresent ? Qt.AlignTop : Qt.AlignVCenter
                     spacing: PlasmaCore.Units.smallSpacing
 
                     RowLayout {
-                        width: parent.width
                         spacing: PlasmaCore.Units.smallSpacing
 
                         PlasmaComponents3.Label {
@@ -175,7 +174,7 @@ Item {
                     }
 
                     PlasmaComponents3.ProgressBar {
-                        width: parent.width
+                        Layout.fillWidth: true
                         from: 0
                         to: 100
                         visible: batteryItem.isPresent
