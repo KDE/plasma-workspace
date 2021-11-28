@@ -1,5 +1,5 @@
 [Desktop Entry]
-Icon=preferences-desktop-locale
+Icon=preferences-desktop-feedback
 Type=Service
 X-KDE-ServiceTypes=KCModule
 X-DocPath=kcontrol/feedback/index.html
