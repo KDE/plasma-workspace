@@ -43,6 +43,12 @@ int main(int argc, char **argv)
         i18n("The name of the color scheme you wish to set for your current Plasma session (passing a full path will only use the last part of the path)"));
     parser->addOption(
         QCommandLineOption(QStringLiteral("list-schemes"), i18n("Show all the color schemes available on the system (and which is the current theme)")));
+    parser->addOption(
+        QCommandLineOption(QStringLiteral("accent-color"),
+                           i18n("The name of the accent color you want to set. SVG color names (https://www.w3.org/TR/SVG11/types.html#ColorKeywords) and hex "
+                                "color codes are supported. Quote the hex code if there is possibility of shell expansion"),
+                           "accentColor",
+                           "0"));
     parser->process(app);
 
     int exitCode{0};
@@ -51,7 +57,7 @@ int main(int argc, char **argv)
     ColorsModel *model = new ColorsModel(&app);
     model->load();
     model->setSelectedScheme(settings->colorScheme());
-    if (!parser->positionalArguments().isEmpty()) {
+    if (!parser->positionalArguments().isEmpty() && !parser->isSet(QStringLiteral("accent-color"))) {
         QString requestedScheme{parser->positionalArguments().first()};
         const QString dirSplit{"/"};
         if (requestedScheme.contains(dirSplit)) {
@@ -106,6 +112,22 @@ int main(int argc, char **argv)
                << Qt::endl;
             exitCode = -1;
         }
+    } else if (parser->isSet(QStringLiteral("accent-color"))) {
+        QString accentColor = parser->value("accent-color");
+
+        if (QColor::isValidColor(accentColor)) {
+            const QString path =
+                QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(model->selectedScheme()));
+            settings->setAccentColor(accentColor);
+            settings->save();
+            applyScheme(path, settings->config());
+            notifyKcmChange(GlobalChangeType::PaletteChanged);
+            ts << i18n("Successfully applied the accent color %1", accentColor) << Qt::endl;
+        } else {
+            ts << i18n("Invalid accent color ") << accentColor << Qt::endl;
+            exitCode = -1;
+        }
+
     } else if (parser->isSet(QStringLiteral("list-schemes"))) {
         ts << i18n("You have the following color schemes on your system:") << Qt::endl;
         int currentThemeIndex = model->selectedSchemeIndex();
