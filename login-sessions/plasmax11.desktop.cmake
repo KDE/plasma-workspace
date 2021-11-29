@@ -62,6 +62,7 @@ Comment[fr]=Plasma, par KDE
 Comment[gl]=Plasma, fornecido por KDE.
 Comment[he]=פלזמה באמצעות KDE
 Comment[hi]=केडीइ द्वारा प्लाज़्मा
+Comment[hsb]=Plasma wot KDE
 Comment[hu]=Plasma a KDE-től
 Comment[ia]=Plasma per KDE
 Comment[id]=Plasma oleh KDE
