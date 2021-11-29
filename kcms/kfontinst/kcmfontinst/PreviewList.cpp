@@ -69,18 +69,18 @@ QModelIndex CPreviewList::parent(const QModelIndex &) const
 
 void CPreviewList::clear()
 {
-    emit layoutAboutToBeChanged();
+    Q_EMIT layoutAboutToBeChanged();
     qDeleteAll(m_items);
     m_items.clear();
-    emit layoutChanged();
+    Q_EMIT layoutChanged();
 }
 
 void CPreviewList::showFonts(const QModelIndexList &fonts)
 {
     clear();
-    emit layoutAboutToBeChanged();
+    Q_EMIT layoutAboutToBeChanged();
     QModelIndex index;
-    foreach (index, fonts) {
+    Q_FOREACH (index, fonts) {
         CFontModelItem *mi = static_cast<CFontModelItem *>(index.internalPointer());
         CFontItem *font = mi->parent() ? static_cast<CFontItem *>(mi) : (static_cast<CFamilyItem *>(mi))->regularFont();
 
@@ -89,7 +89,7 @@ void CPreviewList::showFonts(const QModelIndexList &fonts)
         }
     }
 
-    emit layoutChanged();
+    Q_EMIT layoutChanged();
 }
 
 class CPreviewListViewDelegate : public QStyledItemDelegate
@@ -194,7 +194,7 @@ void CPreviewListView::showFonts(const QModelIndexList &fonts)
 
 void CPreviewListView::contextMenuEvent(QContextMenuEvent *ev)
 {
-    emit showMenu(ev->pos());
+    Q_EMIT showMenu(ev->pos());
 }
 
 }

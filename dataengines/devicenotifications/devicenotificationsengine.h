@@ -22,7 +22,7 @@ public:
     DeviceNotificationsEngine(QObject *parent, const QVariantList &args);
     ~DeviceNotificationsEngine() override;
 
-private slots:
+private Q_SLOTS:
     void notify(Solid::ErrorType solidError, const QString &error, const QString &errorDetails, const QString &udi);
     void clearNotification(const QString &udi);
 

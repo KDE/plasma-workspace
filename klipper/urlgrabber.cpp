@@ -108,7 +108,7 @@ void URLGrabber::matchingMimeActions(const QString &clipData)
         KService::List lst = KApplicationTrader::queryByMimeType(mimetype.name());
         if (!lst.isEmpty()) {
             ClipAction *action = new ClipAction(QString(), mimetype.comment());
-            foreach (const KService::Ptr &service, lst) {
+            Q_FOREACH (const KService::Ptr &service, lst) {
                 action->addCommand(ClipCommand(QString(), service->name(), true, service->icon(), ClipCommand::IGNORE, service->storageId()));
             }
             m_myMatches.append(action);
@@ -124,7 +124,7 @@ const ActionList &URLGrabber::matchingActions(const QString &clipData, bool auto
 
     // now look for matches in custom user actions
     QRegularExpression re;
-    foreach (ClipAction *action, m_myActions) {
+    Q_FOREACH (ClipAction *action, m_myActions) {
         re.setPattern(action->actionRegexPattern());
         const QRegularExpressionMatch match = re.match(clipData);
         if (match.hasMatch() && (action->automatic() || !automatically_invoked)) {
@@ -167,7 +167,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
 
         connect(m_myMenu, &QMenu::triggered, this, &URLGrabber::slotItemSelected);
 
-        foreach (ClipAction *clipAct, matchingActionsList) {
+        Q_FOREACH (ClipAction *clipAct, matchingActionsList) {
             m_myMenu->addSection(QIcon::fromTheme(QStringLiteral("klipper")),
                                  i18n("%1 - Actions For: %2", clipAct->description(), KStringHandler::csqueeze(text, 45)));
             QList<ClipCommand> cmdList = clipAct->commands();
@@ -210,7 +210,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
         if (m_myPopupKillTimeout > 0)
             m_myPopupKillTimer->start(1000 * m_myPopupKillTimeout);
 
-        emit sigPopup(m_myMenu);
+        Q_EMIT sigPopup(m_myMenu);
     }
 }
 
@@ -292,7 +292,7 @@ void URLGrabber::saveSettings() const
 
     int i = 0;
     QString group;
-    foreach (ClipAction *action, m_myActions) {
+    Q_FOREACH (ClipAction *action, m_myActions) {
         group = QStringLiteral("Action_%1").arg(i);
         action->save(KSharedConfig::openConfig(), group);
         ++i;
@@ -419,7 +419,7 @@ void ClipAction::save(KSharedConfigPtr kc, const QString &group) const
 
     int i = 0;
     // now iterate over all commands of this action
-    foreach (const ClipCommand &cmd, m_myCommands) {
+    Q_FOREACH (const ClipCommand &cmd, m_myCommands) {
         QString _group = group + QStringLiteral("/Command_%1");
         KConfigGroup cg(kc, _group.arg(i));
 

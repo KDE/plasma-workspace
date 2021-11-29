@@ -50,9 +50,9 @@ History::History(QObject *parent)
     connect(m_model, &HistoryModel::rowsInserted, this, [this](const QModelIndex &parent, int start) {
         Q_UNUSED(parent)
         if (start == 0) {
-            emit topChanged();
+            Q_EMIT topChanged();
         }
-        emit changed();
+        Q_EMIT changed();
     });
     connect(m_model,
             &HistoryModel::rowsMoved,
@@ -62,16 +62,16 @@ History::History(QObject *parent)
                 Q_UNUSED(sourceEnd)
                 Q_UNUSED(destinationParent)
                 if (sourceStart == 0 || destinationRow == 0) {
-                    emit topChanged();
+                    Q_EMIT topChanged();
                 }
-                emit changed();
+                Q_EMIT changed();
             });
     connect(m_model, &HistoryModel::rowsRemoved, this, [this](const QModelIndex &parent, int start) {
         Q_UNUSED(parent)
         if (start == 0) {
-            emit topChanged();
+            Q_EMIT topChanged();
         }
-        emit changed();
+        Q_EMIT changed();
     });
     connect(m_model, &HistoryModel::modelReset, this, &History::changed);
     connect(m_model, &HistoryModel::modelReset, this, &History::topChanged);
@@ -132,14 +132,14 @@ void History::slotMoveToTop(const QByteArray &uuid)
         // The item is already at the top, but it still may be not be set as the actual clipboard
         // contents, normally this happens if the item is only in the X11 mouse selection but
         // not in the Ctrl+V clipboard.
-        emit topChanged();
+        Q_EMIT topChanged();
         m_topIsUserSelected = true;
-        emit topIsUserSelectedSet();
+        Q_EMIT topIsUserSelectedSet();
         return;
     }
     m_model->moveToTop(uuid);
     m_topIsUserSelected = true;
-    emit topIsUserSelectedSet();
+    Q_EMIT topIsUserSelectedSet();
 }
 
 void History::setMaxSize(unsigned max_size)

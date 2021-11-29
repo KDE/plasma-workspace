@@ -78,7 +78,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
     }
     setMinimumSize(QSize(qMax((int)KIconLoader::SizeEnormous, switchSize.width() + 1), qMax((int)KIconLoader::SizeEnormous, switchSize.height() + 1)));
 
-    foreach (QObject *child, m_appletInterface->children()) {
+    Q_FOREACH (QObject *child, m_appletInterface->children()) {
         // find for the needed property of Layout: minimum/maximum/preferred sizes and fillWidth/fillHeight
         if (child->property("minimumWidth").isValid() && child->property("minimumHeight").isValid() && child->property("preferredWidth").isValid()
             && child->property("preferredHeight").isValid() && child->property("maximumWidth").isValid() && child->property("maximumHeight").isValid()
@@ -176,11 +176,11 @@ void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
         return;
     }
 
-    emit m_applet->contextualActionsAboutToShow();
+    Q_EMIT m_applet->contextualActionsAboutToShow();
 
     QMenu menu;
 
-    foreach (QAction *action, m_applet->contextualActions()) {
+    Q_FOREACH (QAction *action, m_applet->contextualActions()) {
         if (action) {
             menu.addAction(action);
         }

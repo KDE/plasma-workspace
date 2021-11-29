@@ -20,10 +20,10 @@ class DesktopNotifier : public KDEDModule
 public:
     DesktopNotifier(QObject *parent, const QList<QVariant> &);
 
-public slots:
+public Q_SLOTS:
     Q_SCRIPTABLE Q_NOREPLY void watchDir(const QString &path);
 
-private slots:
+private Q_SLOTS:
     void created(const QString &path);
     void dirty(const QString &path);
 

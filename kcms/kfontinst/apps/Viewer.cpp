@@ -119,7 +119,7 @@ public Q_SLOTS:
         if (!args.isEmpty()) {
             cmdParser.process(args);
             bool first = true;
-            foreach (const QString &arg, cmdParser.positionalArguments()) {
+            Q_FOREACH (const QString &arg, cmdParser.positionalArguments()) {
                 QUrl url(QUrl::fromUserInput(arg, workingDirectory));
 
                 if (!first) {

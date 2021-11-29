@@ -109,7 +109,7 @@ void AbstractLayoutManager::positionItemAndAssign(ItemContainer *item)
 bool AbstractLayoutManager::assignSpace(ItemContainer *item)
 {
     if (assignSpaceImpl(item)) {
-        emit layoutNeedsSaving();
+        Q_EMIT layoutNeedsSaving();
         return true;
     } else {
         return false;
@@ -119,7 +119,7 @@ bool AbstractLayoutManager::assignSpace(ItemContainer *item)
 void AbstractLayoutManager::releaseSpace(ItemContainer *item)
 {
     releaseSpaceImpl(item);
-    emit layoutNeedsSaving();
+    Q_EMIT layoutNeedsSaving();
 }
 
 void AbstractLayoutManager::layoutGeometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)

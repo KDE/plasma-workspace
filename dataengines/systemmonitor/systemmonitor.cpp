@@ -115,7 +115,7 @@ void SystemMonitorEngine::answerReceived(int id, const QList<QByteArray> &answer
         m_sensors.clear();
         int count = 0;
 
-        foreach (const QByteArray &sens, answer) {
+        Q_FOREACH (const QByteArray &sens, answer) {
             const QString sensStr{QString::fromUtf8(sens)};
             const QVector<QStringRef> newSensorInfo = sensStr.splitRef('\t');
             if (newSensorInfo.count() < 2) {

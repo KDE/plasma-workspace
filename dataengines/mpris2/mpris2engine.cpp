@@ -137,7 +137,7 @@ void Mpris2Engine::serviceNameFetchFinished(QDBusPendingCallWatcher *watcher)
     if (propsReply.isError()) {
         qCWarning(MPRIS2) << "Could not get list of available D-Bus services";
     } else {
-        foreach (const QString &serviceName, propsReply.value()) {
+        Q_FOREACH (const QString &serviceName, propsReply.value()) {
             if (serviceName.startsWith(QLatin1String("org.mpris.MediaPlayer2."))) {
                 qCDebug(MPRIS2) << "Found MPRIS2 service" << serviceName;
                 // watch out for race conditions; the media player could

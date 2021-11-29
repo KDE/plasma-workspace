@@ -58,7 +58,7 @@ QList<int> AppInterface::activityIds() const
     //       however QScript deals with QList<uint> very, very poorly
     QList<int> containments;
 
-    foreach (Plasma::Containment *c, m_env->corona()->containments()) {
+    Q_FOREACH (Plasma::Containment *c, m_env->corona()->containments()) {
         if (!ScriptEngine::isPanel(c)) {
             containments.append(c->id());
         }
@@ -73,7 +73,7 @@ QList<int> AppInterface::panelIds() const
     //       however QScript deals with QList<uint> very, very poorly
     QList<int> panels;
 
-    foreach (Plasma::Containment *c, m_env->corona()->containments()) {
+    Q_FOREACH (Plasma::Containment *c, m_env->corona()->containments()) {
         // qDebug() << "checking" << (QObject*)c << isPanel(c);
         if (ScriptEngine::isPanel(c)) {
             panels.append(c->id());

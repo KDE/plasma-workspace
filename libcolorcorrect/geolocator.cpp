@@ -56,15 +56,15 @@ void Geolocator::dataUpdated(const QString &source, const Plasma::DataEngine::Da
     if (m_latitude != lat) {
         m_latitude = lat;
         isChanged = true;
-        emit latitudeChanged();
+        Q_EMIT latitudeChanged();
     }
     if (m_longitude != lng) {
         m_longitude = lng;
         isChanged = true;
-        emit longitudeChanged();
+        Q_EMIT longitudeChanged();
     }
     if (isChanged) {
-        emit locationChanged(m_latitude, m_longitude);
+        Q_EMIT locationChanged(m_latitude, m_longitude);
     }
 }
 

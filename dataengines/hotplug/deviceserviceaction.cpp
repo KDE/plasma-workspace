@@ -38,7 +38,7 @@ class DelayedExecutor : public QObject
 public:
     DelayedExecutor(const KServiceAction &service, Solid::Device &device);
 
-private slots:
+private Q_SLOTS:
     void _k_storageSetupDone(Solid::ErrorType error, QVariant errorData, const QString &udi);
 
 private:

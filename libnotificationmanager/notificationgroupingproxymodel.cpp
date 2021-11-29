@@ -233,7 +233,7 @@ void NotificationGroupingProxyModel::setSourceModel(QAbstractItemModel *sourceMo
                             Q_EMIT dataChanged(parent, parent);
 
                             // Signal children count change for all other items in the group.
-                            emit dataChanged(index(0, 0, parent), index(rowMap.count() - 1, 0, parent), {Notifications::GroupChildrenCountRole});
+                            Q_EMIT dataChanged(index(0, 0, parent), index(rowMap.count() - 1, 0, parent), {Notifications::GroupChildrenCountRole});
                         }
 
                         break;

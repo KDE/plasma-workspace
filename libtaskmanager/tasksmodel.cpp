@@ -180,7 +180,7 @@ void TasksModel::Private::initModels()
                          }
 
                          if (roles.contains(AbstractTasksModel::IsActive)) {
-                             emit q->activeTaskChanged();
+                             Q_EMIT q->activeTaskChanged();
                          }
 
                          // In manual sort mode, updateManualSortMap() may consult the sortRowInsertQueue
@@ -748,7 +748,7 @@ void TasksModel::Private::updateActivityTaskCounts()
         return;
     }
 
-    foreach (const QString &activity, activityInfo->runningActivities()) {
+    Q_FOREACH (const QString &activity, activityInfo->runningActivities()) {
         activityTaskCounts.insert(activity, 0);
     }
 
@@ -764,7 +764,7 @@ void TasksModel::Private::updateActivityTaskCounts()
                 i.setValue(i.value() + 1);
             }
         } else {
-            foreach (const QString &activity, activities) {
+            Q_FOREACH (const QString &activity, activities) {
                 ++activityTaskCounts[activity];
             }
         }
@@ -889,7 +889,7 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
         const QStringList &leftActivities = left.data(AbstractTasksModel::Activities).toStringList();
 
         if (!leftActivities.isEmpty()) {
-            foreach (const QString &activity, leftActivities) {
+            Q_FOREACH (const QString &activity, leftActivities) {
                 leftScore += activityTaskCounts[activity];
             }
         }
@@ -897,7 +897,7 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
         const QStringList &rightActivities = right.data(AbstractTasksModel::Activities).toStringList();
 
         if (!rightActivities.isEmpty()) {
-            foreach (const QString &activity, rightActivities) {
+            Q_FOREACH (const QString &activity, rightActivities) {
                 rightScore += activityTaskCounts[activity];
             }
         }
@@ -1056,7 +1056,7 @@ void TasksModel::updateLauncherCount()
 
     if (d->launcherCount != count) {
         d->launcherCount = count;
-        emit launcherCountChanged();
+        Q_EMIT launcherCountChanged();
     }
 }
 
@@ -1218,7 +1218,7 @@ void TasksModel::setSortMode(SortMode mode)
 
         d->forceResort();
 
-        emit sortModeChanged();
+        Q_EMIT sortModeChanged();
     }
 }
 
@@ -1235,7 +1235,7 @@ void TasksModel::setSeparateLaunchers(bool separate)
         d->updateManualSortMap();
         d->forceResort();
 
-        emit separateLaunchersChanged();
+        Q_EMIT separateLaunchersChanged();
     }
 }
 
@@ -1251,7 +1251,7 @@ void TasksModel::setLaunchInPlace(bool launchInPlace)
 
         d->forceResort();
 
-        emit launchInPlaceChanged();
+        Q_EMIT launchInPlaceChanged();
     }
 }
 
@@ -1288,7 +1288,7 @@ void TasksModel::setGroupInline(bool groupInline)
 
         d->updateGroupInline();
 
-        emit groupInlineChanged();
+        Q_EMIT groupInlineChanged();
     }
 }
 
@@ -1306,7 +1306,7 @@ void TasksModel::setGroupingWindowTasksThreshold(int threshold)
             d->groupingProxyModel->setWindowTasksThreshold(threshold);
         }
 
-        emit groupingWindowTasksThresholdChanged();
+        Q_EMIT groupingWindowTasksThresholdChanged();
     }
 }
 
@@ -1726,7 +1726,7 @@ void TasksModel::syncLaunchers()
     QMap<int, QString> sortedShownLaunchers;
     QStringList sortedHiddenLaunchers;
 
-    foreach (const QString &launcherUrlStr, launcherList()) {
+    Q_FOREACH (const QString &launcherUrlStr, launcherList()) {
         int row = -1;
         QStringList activities;
         QUrl launcherUrl;

@@ -63,7 +63,7 @@ void Menu::start(uint id)
         QDBusPendingReply<GMenuItemList> reply = *watcherPtr;
         if (reply.isError()) {
             qCWarning(DBUSMENUPROXY) << "Failed to start subscription to" << id << "on" << m_serviceName << "at" << m_objectPath << reply.error();
-            emit failedToSubscribe(id);
+            Q_EMIT failedToSubscribe(id);
         } else {
             const bool hadMenu = !m_menus.isEmpty();
 
@@ -83,10 +83,10 @@ void Menu::start(uint id)
 
             // do we have a menu now? let's tell everyone
             if (!hadMenu && !m_menus.isEmpty()) {
-                emit menuAppeared();
+                Q_EMIT menuAppeared();
             }
 
-            emit subscribed(id);
+            Q_EMIT subscribed(id);
         }
     });
 }
@@ -113,7 +113,7 @@ void Menu::stop(const QList<uint> &ids)
                 m_subscriptions.end());
 
             if (m_subscriptions.isEmpty()) {
-                emit menuDisappeared();
+                Q_EMIT menuDisappeared();
             }
         }
         watcher->deleteLater();
@@ -265,16 +265,16 @@ void Menu::onMenuChanged(const GMenuChangeList &changes)
 
     // do we have a menu now? let's tell everyone
     if (!hadMenu && !m_menus.isEmpty()) {
-        emit menuAppeared();
+        Q_EMIT menuAppeared();
     } else if (hadMenu && m_menus.isEmpty()) {
-        emit menuDisappeared();
+        Q_EMIT menuDisappeared();
     }
 
     if (!dirtyItems.isEmpty()) {
-        emit itemsChanged(dirtyItems);
+        Q_EMIT itemsChanged(dirtyItems);
     }
 
-    emit menusChanged(dirtyMenus);
+    Q_EMIT menusChanged(dirtyMenus);
 }
 
 void Menu::actionsChanged(const QStringList &dirtyActions, const QString &prefix)
@@ -323,6 +323,6 @@ void Menu::actionsChanged(const QStringList &dirtyActions, const QString &prefix
     }
 
     if (!dirtyItems.isEmpty()) {
-        emit itemsChanged(dirtyItems);
+        Q_EMIT itemsChanged(dirtyItems);
     }
 }

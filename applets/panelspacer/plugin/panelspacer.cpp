@@ -113,7 +113,7 @@ void PanelSpacer::setTwinSpacer(PlasmaQuick::AppletQuickItem *spacer)
     }
 
     m_twinSpacer = spacer;
-    emit twinSpacerChanged();
+    Q_EMIT twinSpacerChanged();
 }
 
 PlasmaQuick::AppletQuickItem *PanelSpacer::twinSpacer() const

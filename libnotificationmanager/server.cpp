@@ -22,10 +22,10 @@ Server::Server(QObject *parent)
 {
     connect(d.data(), &ServerPrivate::validChanged, this, &Server::validChanged);
     connect(d.data(), &ServerPrivate::inhibitedChanged, this, [this] {
-        emit inhibitedChanged(inhibited());
+        Q_EMIT inhibitedChanged(inhibited());
     });
     connect(d.data(), &ServerPrivate::externalInhibitedChanged, this, [this] {
-        emit inhibitedByApplicationChanged(inhibitedByApplication());
+        Q_EMIT inhibitedByApplicationChanged(inhibitedByApplication());
     });
     connect(d.data(), &ServerPrivate::externalInhibitionsChanged, this, &Server::inhibitionApplicationsChanged);
     connect(d.data(), &ServerPrivate::serviceOwnershipLost, this, &Server::serviceOwnershipLost);
@@ -56,14 +56,14 @@ ServerInfo *Server::currentOwner() const
 
 void Server::closeNotification(uint notificationId, CloseReason reason)
 {
-    emit notificationRemoved(notificationId, reason);
+    Q_EMIT notificationRemoved(notificationId, reason);
 
-    emit d->NotificationClosed(notificationId, static_cast<uint>(reason)); // tell on DBus
+    Q_EMIT d->NotificationClosed(notificationId, static_cast<uint>(reason)); // tell on DBus
 }
 
 void Server::invokeAction(uint notificationId, const QString &actionName)
 {
-    emit d->ActionInvoked(notificationId, actionName);
+    Q_EMIT d->ActionInvoked(notificationId, actionName);
 }
 
 void Server::reply(const QString &dbusService, uint notificationId, const QString &text)

@@ -484,7 +484,7 @@ void UKMETIon::observation_slotJobFinished(KJob *job)
 
     if (m_sourcesToReset.contains(source)) {
         m_sourcesToReset.removeAll(source);
-        emit forceUpdate(this, source);
+        Q_EMIT forceUpdate(this, source);
     }
 }
 

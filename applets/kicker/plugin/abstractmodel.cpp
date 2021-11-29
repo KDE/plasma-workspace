@@ -113,7 +113,7 @@ void AbstractModel::setFavoritesModel(AbstractModel *model)
     if (m_favoritesModel != model) {
         m_favoritesModel = model;
 
-        emit favoritesModelChanged();
+        Q_EMIT favoritesModelChanged();
     }
 }
 

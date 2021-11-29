@@ -89,7 +89,7 @@ void WaylandTasksModel::Private::init()
     rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
     configWatcher = new KDirWatch(q);
 
-    foreach (const QString &location, QStandardPaths::standardLocations(QStandardPaths::ConfigLocation)) {
+    Q_FOREACH (const QString &location, QStandardPaths::standardLocations(QStandardPaths::ConfigLocation)) {
         configWatcher->addFile(location + QLatin1String("/taskmanagerrulesrc"));
     }
 
@@ -353,13 +353,13 @@ QString WaylandTasksModel::Private::groupMimeType()
 void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, int role)
 {
     QModelIndex idx = q->index(windows.indexOf(window));
-    emit q->dataChanged(idx, idx, QVector<int>{role});
+    Q_EMIT q->dataChanged(idx, idx, QVector<int>{role});
 }
 
 void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, const QVector<int> &roles)
 {
     QModelIndex idx = q->index(windows.indexOf(window));
-    emit q->dataChanged(idx, idx, roles);
+    Q_EMIT q->dataChanged(idx, idx, roles);
 }
 
 WaylandTasksModel::WaylandTasksModel(QObject *parent)

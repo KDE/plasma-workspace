@@ -69,7 +69,7 @@ bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentI
         if (!entryPath.isEmpty() && containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
             const Plasma::Applet *taskManager = nullptr;
 
-            foreach (const Plasma::Applet *applet, containment->applets()) {
+            Q_FOREACH (const Plasma::Applet *applet, containment->applets()) {
                 if (m_knownTaskManagers.contains(applet->pluginMetaData().pluginId())) {
                     taskManager = applet;
 
@@ -139,7 +139,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
 
             QQuickItem *rootItem = nullptr;
 
-            foreach (QQuickItem *item, gObj->childItems()) {
+            Q_FOREACH (QQuickItem *item, gObj->childItems()) {
                 if (item->objectName() == QLatin1String("folder")) {
                     rootItem = item;
 
@@ -167,7 +167,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
         if (containment->pluginMetaData().pluginId() == QLatin1String("org.kde.panel")) {
             const Plasma::Applet *taskManager = nullptr;
 
-            foreach (const Plasma::Applet *applet, containment->applets()) {
+            Q_FOREACH (const Plasma::Applet *applet, containment->applets()) {
                 if (m_knownTaskManagers.contains(applet->pluginMetaData().pluginId())) {
                     taskManager = applet;
 

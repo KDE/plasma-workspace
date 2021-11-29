@@ -110,7 +110,7 @@ void CursorThemeConfig::setCanInstall(bool can)
     }
 
     m_canInstall = can;
-    emit canInstallChanged();
+    Q_EMIT canInstallChanged();
 }
 
 bool CursorThemeConfig::canInstall() const
@@ -125,7 +125,7 @@ void CursorThemeConfig::setCanResize(bool can)
     }
 
     m_canResize = can;
-    emit canResizeChanged();
+    Q_EMIT canResizeChanged();
 }
 
 bool CursorThemeConfig::canResize() const
@@ -140,7 +140,7 @@ void CursorThemeConfig::setCanConfigure(bool can)
     }
 
     m_canConfigure = can;
-    emit canConfigureChanged();
+    Q_EMIT canConfigureChanged();
 }
 
 int CursorThemeConfig::preferredSize() const
@@ -154,7 +154,7 @@ void CursorThemeConfig::setPreferredSize(int size)
         return;
     }
     m_preferredSize = size;
-    emit preferredSizeChanged();
+    Q_EMIT preferredSizeChanged();
 }
 
 bool CursorThemeConfig::canConfigure() const
@@ -213,7 +213,7 @@ void CursorThemeConfig::updateSizeComboBox()
                 maxIconHeight = m_pixmap.height();
             }
 
-            foreach (i, sizes) {
+            Q_FOREACH (i, sizes) {
                 m_pixmap = theme->createIcon(i);
                 if (m_pixmap.width() > maxIconWidth) {
                     maxIconWidth = m_pixmap.width();
@@ -265,7 +265,7 @@ void CursorThemeConfig::updateSizeComboBox()
         setCanResize(m_sizesModel->rowCount() > 0);
     }
     // We need to emit a cursorSizeChanged in all case to refresh UI
-    emit cursorThemeSettings()->cursorSizeChanged();
+    Q_EMIT cursorThemeSettings()->cursorSizeChanged();
 }
 
 int CursorThemeConfig::cursorSizeIndex(int cursorSize) const
@@ -308,7 +308,7 @@ void CursorThemeConfig::save()
     const CursorTheme *theme = selected.isValid() ? m_themeProxyModel->theme(selected) : nullptr;
 
     if (!applyTheme(theme, cursorThemeSettings()->cursorSize())) {
-        emit showInfoMessage(i18n("You have to restart the Plasma session for these changes to take effect."));
+        Q_EMIT showInfoMessage(i18n("You have to restart the Plasma session for these changes to take effect."));
     }
     removeThemes();
 
@@ -386,18 +386,18 @@ void CursorThemeConfig::installThemeFromFile(const QUrl &url)
 
     m_tempInstallFile.reset(new QTemporaryFile());
     if (!m_tempInstallFile->open()) {
-        emit showErrorMessage(i18n("Unable to create a temporary file."));
+        Q_EMIT showErrorMessage(i18n("Unable to create a temporary file."));
         m_tempInstallFile.reset();
         return;
     }
 
     m_tempCopyJob = KIO::file_copy(url, QUrl::fromLocalFile(m_tempInstallFile->fileName()), -1, KIO::Overwrite);
     m_tempCopyJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    emit downloadingFileChanged();
+    Q_EMIT downloadingFileChanged();
 
     connect(m_tempCopyJob, &KIO::FileCopyJob::result, this, [this, url](KJob *job) {
         if (job->error() != KJob::NoError) {
-            emit showErrorMessage(i18n("Unable to download the icon theme archive: %1", job->errorText()));
+            Q_EMIT showErrorMessage(i18n("Unable to download the icon theme archive: %1", job->errorText()));
             return;
         }
 
@@ -417,7 +417,7 @@ void CursorThemeConfig::installThemeFile(const QString &path)
 
     // Extract the dir names of the cursor themes in the archive, and
     // append them to themeDirs
-    foreach (const QString &name, archiveDir->entries()) {
+    Q_FOREACH (const QString &name, archiveDir->entries()) {
         const KArchiveEntry *entry = archiveDir->entry(name);
         if (entry->isDirectory() && entry->name().toLower() != "default") {
             const KArchiveDirectory *dir = static_cast<const KArchiveDirectory *>(entry);
@@ -428,19 +428,19 @@ void CursorThemeConfig::installThemeFile(const QString &path)
     }
 
     if (themeDirs.isEmpty()) {
-        emit showErrorMessage(i18n("The file is not a valid icon theme archive."));
+        Q_EMIT showErrorMessage(i18n("The file is not a valid icon theme archive."));
         return;
     }
 
     // The directory we'll install the themes to
     QString destDir = QDir::homePath() + "/.icons/";
     if (!QDir().mkpath(destDir)) {
-        emit showErrorMessage(i18n("Failed to create 'icons' folder."));
+        Q_EMIT showErrorMessage(i18n("Failed to create 'icons' folder."));
         return;
     }
 
     // Process each cursor theme in the archive
-    foreach (const QString &dirName, themeDirs) {
+    Q_FOREACH (const QString &dirName, themeDirs) {
         QDir dest(destDir + dirName);
         if (dest.exists()) {
             QString question = i18n(
@@ -472,7 +472,7 @@ void CursorThemeConfig::installThemeFile(const QString &path)
 
     archive.close();
 
-    emit showSuccessMessage(i18n("Theme installed successfully."));
+    Q_EMIT showSuccessMessage(i18n("Theme installed successfully."));
 
     m_themeModel->refreshList();
 }

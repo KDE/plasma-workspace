@@ -36,7 +36,7 @@ Q_SIGNALS:
     void blockingAppsReady(const QStringList &apps);
     void clearNotification(const QString &udi);
 
-protected slots:
+protected Q_SLOTS:
     void onDeviceAdded(const QString &udi);
     void onDeviceRemoved(const QString &udi);
 

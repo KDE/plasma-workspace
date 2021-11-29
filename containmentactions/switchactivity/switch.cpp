@@ -31,7 +31,7 @@ void SwitchActivity::makeMenu()
 {
     qDeleteAll(m_actions);
     m_actions.clear();
-    foreach (const QString &id, m_consumer.activities(KActivities::Info::Running)) {
+    Q_FOREACH (const QString &id, m_consumer.activities(KActivities::Info::Running)) {
         KActivities::Info info(id);
         QAction *action = new QAction(QIcon::fromTheme(info.icon()), info.name(), this);
         action->setData(id);

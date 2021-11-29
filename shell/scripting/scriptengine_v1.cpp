@@ -149,7 +149,7 @@ QJSValue ScriptEngine::V1::desktopById(const QJSValue &param) const
 
     const quint32 id = param.toInt();
 
-    foreach (Plasma::Containment *c, m_engine->m_corona->containments()) {
+    Q_FOREACH (Plasma::Containment *c, m_engine->m_corona->containments()) {
         if (c->id() == id && !isPanel(c)) {
             return m_engine->wrap(c);
         }
@@ -440,7 +440,7 @@ QJSValue ScriptEngine::V1::panelById(const QJSValue &idParam) const
 
     const quint32 id = idParam.toInt();
 
-    foreach (Plasma::Containment *c, m_engine->m_corona->containments()) {
+    Q_FOREACH (Plasma::Containment *c, m_engine->m_corona->containments()) {
         if (c->id() == id && isPanel(c)) {
             return m_engine->wrap(c);
         }
@@ -680,7 +680,7 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
         // try the files in share/apps/kcm_componentchooser/
         const QStringList services = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kcm_componentchooser/"));
         qDebug() << "ok, trying in" << services;
-        foreach (const QString &service, services) {
+        Q_FOREACH (const QString &service, services) {
             if (!service.endsWith(QLatin1String(".desktop"))) {
                 continue;
             }

@@ -24,7 +24,7 @@ AppletContainer::AppletContainer(QQuickItem *parent)
         connectBusyIndicator();
         connectConfigurationRequired();
 
-        emit appletChanged();
+        Q_EMIT appletChanged();
     });
 }
 
@@ -62,7 +62,7 @@ void AppletContainer::setBusyIndicatorComponent(QQmlComponent *component)
         m_busyIndicatorItem = nullptr;
     }
 
-    emit busyIndicatorComponentChanged();
+    Q_EMIT busyIndicatorComponentChanged();
 }
 
 void AppletContainer::connectBusyIndicator()
@@ -112,7 +112,7 @@ void AppletContainer::setConfigurationRequiredComponent(QQmlComponent *component
         m_configurationRequiredItem = nullptr;
     }
 
-    emit configurationRequiredComponentChanged();
+    Q_EMIT configurationRequiredComponentChanged();
 }
 
 void AppletContainer::connectConfigurationRequired()

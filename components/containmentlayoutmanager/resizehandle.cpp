@@ -79,7 +79,7 @@ void ResizeHandle::setPressed(bool pressed)
     }
 
     m_pressed = pressed;
-    emit pressedChanged();
+    Q_EMIT pressedChanged();
 }
 
 bool ResizeHandle::isPressed() const
@@ -116,7 +116,7 @@ void ResizeHandle::setResizeBlocked(bool width, bool height)
     m_resizeWidthBlocked = width;
     m_resizeHeightBlocked = height;
 
-    emit resizeBlockedChanged();
+    Q_EMIT resizeBlockedChanged();
 }
 
 void ResizeHandle::mousePressEvent(QMouseEvent *event)
@@ -228,7 +228,7 @@ void ResizeHandle::mouseReleaseEvent(QMouseEvent *event)
     event->accept();
 
     setResizeBlocked(false, false);
-    emit resizeBlockedChanged();
+    Q_EMIT resizeBlockedChanged();
 }
 
 void ResizeHandle::mouseUngrabEvent()

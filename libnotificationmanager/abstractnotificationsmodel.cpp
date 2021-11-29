@@ -100,7 +100,7 @@ void AbstractNotificationsModel::Private::onNotificationReplaced(uint replacedId
 
     notifications[row] = newNotification;
     const QModelIndex idx = q->index(row, 0);
-    emit q->dataChanged(idx, idx);
+    Q_EMIT q->dataChanged(idx, idx);
 }
 
 void AbstractNotificationsModel::Private::onNotificationRemoved(uint removedId, Server::CloseReason reason)
@@ -124,7 +124,7 @@ void AbstractNotificationsModel::Private::onNotificationRemoved(uint removedId, 
         notification.setActions(QStringList());
 
         // clang-format off
-        emit q->dataChanged(idx, idx, {
+        Q_EMIT q->dataChanged(idx, idx, {
             Notifications::ExpiredRole,
             // TODO only emit those if actually changed?
             Notifications::ActionNamesRole,
@@ -251,7 +251,7 @@ void AbstractNotificationsModel::setLastRead(const QDateTime &lastRead)
 {
     if (d->lastRead != lastRead) {
         d->lastRead = lastRead;
-        emit lastReadChanged();
+        Q_EMIT lastReadChanged();
     }
 }
 

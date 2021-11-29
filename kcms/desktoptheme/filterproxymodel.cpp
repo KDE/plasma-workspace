@@ -31,9 +31,9 @@ void FilterProxyModel::setSelectedTheme(const QString &pluginName)
     m_selectedTheme = pluginName;
 
     if (!firstTime) {
-        emit selectedThemeChanged();
+        Q_EMIT selectedThemeChanged();
     }
-    emit selectedThemeIndexChanged();
+    Q_EMIT selectedThemeIndexChanged();
 }
 
 int FilterProxyModel::selectedThemeIndex() const
@@ -64,10 +64,10 @@ void FilterProxyModel::setQuery(const QString &query)
         m_query = query;
         invalidateFilter();
 
-        emit queryChanged();
+        Q_EMIT queryChanged();
 
         if (selectedThemeIndex() != oldIndex) {
-            emit selectedThemeIndexChanged();
+            Q_EMIT selectedThemeIndexChanged();
         }
     }
 }
@@ -85,10 +85,10 @@ void FilterProxyModel::setFilter(ThemeFilter filter)
         m_filter = filter;
         invalidateFilter();
 
-        emit filterChanged();
+        Q_EMIT filterChanged();
 
         if (selectedThemeIndex() != oldIndex) {
-            emit selectedThemeIndexChanged();
+            Q_EMIT selectedThemeIndexChanged();
         }
     }
 }

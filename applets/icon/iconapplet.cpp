@@ -230,7 +230,7 @@ void IconApplet::populate()
                     KDesktopFile(backingDesktopFile).desktopGroup().writeEntry(QStringLiteral("Icon"), job->iconFile());
 
                     m_iconName = job->iconFile();
-                    emit iconNameChanged(m_iconName);
+                    Q_EMIT iconNameChanged(m_iconName);
                 }
             });
         }
@@ -250,13 +250,13 @@ void IconApplet::populateFromDesktopFile(const QString &path)
     const QString &name = desktopFile.readName();
     if (m_name != name) {
         m_name = name;
-        emit nameChanged(name);
+        Q_EMIT nameChanged(name);
     }
 
     const QString &genericName = desktopFile.readGenericName();
     if (m_genericName != genericName) {
         m_genericName = genericName;
-        emit genericNameChanged(genericName);
+        Q_EMIT genericNameChanged(genericName);
     }
 
     setIconName(desktopFile.readIcon());
@@ -293,7 +293,7 @@ void IconApplet::setIconName(const QString &iconName)
     const QString newIconName = (!iconName.isEmpty() ? iconName : QStringLiteral("unknown"));
     if (m_iconName != newIconName) {
         m_iconName = newIconName;
-        emit iconNameChanged(newIconName);
+        Q_EMIT iconNameChanged(newIconName);
     }
 }
 

@@ -312,7 +312,7 @@ void SchemeEditorColors::changeColor(int row, const QColor &newColor)
 
     updateColorSchemes();
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 QString SchemeEditorColors::colorSetGroupKey(int colorSet)
@@ -369,7 +369,7 @@ void SchemeEditorColors::updateColorTable()
         stackPreview->setCurrentIndex(0);
 
         KColorButton *button;
-        foreach (button, m_commonColorButtons) {
+        Q_FOREACH (button, m_commonColorButtons) {
             button->blockSignals(true);
         }
 
@@ -404,7 +404,7 @@ void SchemeEditorColors::updateColorTable()
         m_commonColorButtons[24]->setColor(m_wmColors.color(WindecoColors::InactiveForeground));
         m_commonColorButtons[25]->setColor(m_wmColors.color(WindecoColors::InactiveBlend));
 
-        foreach (button, m_commonColorButtons) {
+        Q_FOREACH (button, m_commonColorButtons) {
             button->blockSignals(false);
         }
     } else {

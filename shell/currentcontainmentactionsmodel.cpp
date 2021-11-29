@@ -116,7 +116,7 @@ bool CurrentContainmentActionsModel::append(const QString &action, const QString
 
     appendRow(item);
 
-    emit configurationChanged();
+    Q_EMIT configurationChanged();
     return true;
 }
 
@@ -154,7 +154,7 @@ void CurrentContainmentActionsModel::update(int row, const QString &action, cons
                     HasConfigurationInterfaceRole);
         }
 
-        emit configurationChanged();
+        Q_EMIT configurationChanged();
     }
 }
 
@@ -167,7 +167,7 @@ void CurrentContainmentActionsModel::remove(int row)
         delete m_plugins[action];
         m_plugins.remove(action);
         m_removedTriggers << action;
-        emit configurationChanged();
+        Q_EMIT configurationChanged();
     }
 }
 
@@ -241,7 +241,7 @@ void CurrentContainmentActionsModel::showAbout(int row, QQuickItem *ctx)
 
 void CurrentContainmentActionsModel::save()
 {
-    foreach (const QString &removedTrigger, m_removedTriggers) {
+    Q_FOREACH (const QString &removedTrigger, m_removedTriggers) {
         m_containment->setContainmentActions(removedTrigger, QString());
     }
     m_removedTriggers.clear();

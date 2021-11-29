@@ -54,7 +54,7 @@ Q_SIGNALS:
     void dragPixmapSizeChanged();
     void focussedPlasmaDialogChanged();
 
-private slots:
+private Q_SLOTS:
     void doDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap);
 
 private:

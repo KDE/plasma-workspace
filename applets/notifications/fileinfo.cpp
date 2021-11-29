@@ -35,7 +35,7 @@ void FileInfo::setUrl(const QUrl &url)
     if (m_url != url) {
         m_url = url;
         reload();
-        emit urlChanged(url);
+        Q_EMIT urlChanged(url);
     }
 }
 
@@ -48,7 +48,7 @@ void FileInfo::setBusy(bool busy)
 {
     if (m_busy != busy) {
         m_busy = busy;
-        emit busyChanged(busy);
+        Q_EMIT busyChanged(busy);
     }
 }
 
@@ -61,7 +61,7 @@ void FileInfo::setError(int error)
 {
     if (m_error != error) {
         m_error = error;
-        emit errorChanged(error);
+        Q_EMIT errorChanged(error);
     }
 }
 

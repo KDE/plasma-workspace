@@ -52,7 +52,7 @@ void RunnerModel::setFavoritesModel(AbstractModel *model)
             m_queryTimer.start();
         }
 
-        emit favoritesModelChanged();
+        Q_EMIT favoritesModelChanged();
     }
 }
 
@@ -72,7 +72,7 @@ void RunnerModel::setAppletInterface(QObject *appletInterface)
             m_queryTimer.start();
         }
 
-        emit appletInterfaceChanged();
+        Q_EMIT appletInterfaceChanged();
     }
 }
 
@@ -92,7 +92,7 @@ void RunnerModel::setDeleteWhenEmpty(bool deleteWhenEmpty)
             m_queryTimer.start();
         }
 
-        emit deleteWhenEmptyChanged();
+        Q_EMIT deleteWhenEmptyChanged();
     }
 }
 
@@ -112,7 +112,7 @@ void RunnerModel::setMergeResults(bool merge)
             m_queryTimer.start();
         }
 
-        emit mergeResultsChanged();
+        Q_EMIT mergeResultsChanged();
     }
 }
 
@@ -162,7 +162,7 @@ void RunnerModel::setRunners(const QStringList &runners)
             m_runnerManager->setAllowedRunners(runners);
         }
 
-        emit runnersChanged();
+        Q_EMIT runnersChanged();
     }
 }
 
@@ -178,7 +178,7 @@ void RunnerModel::setQuery(const QString &query)
 
         m_queryTimer.start();
 
-        emit queryChanged();
+        Q_EMIT queryChanged();
     }
 }
 
@@ -228,7 +228,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
             beginInsertRows(QModelIndex(), 0, 0);
             m_models.append(matchesModel);
             endInsertRows();
-            emit countChanged();
+            Q_EMIT countChanged();
         } else {
             matchesModel = m_models.at(0);
         }
@@ -279,7 +279,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
             m_models.removeAt(row);
             delete matchesModel;
             endRemoveRows();
-            emit countChanged();
+            Q_EMIT countChanged();
         } else {
             matchesModel->setMatches(matches);
         }
@@ -302,7 +302,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
                 beginInsertRows(QModelIndex(), 0, 0);
                 m_models.prepend(matchesModel);
                 endInsertRows();
-                emit countChanged();
+                Q_EMIT countChanged();
             } else {
                 m_models.append(matchesModel);
                 ++appendCount;
@@ -312,7 +312,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
         if (appendCount > 0) {
             beginInsertRows(QModelIndex(), rowCount() - appendCount, rowCount() - 1);
             endInsertRows();
-            emit countChanged();
+            Q_EMIT countChanged();
         }
     }
 }
@@ -348,5 +348,5 @@ void RunnerModel::clear()
 
     endResetModel();
 
-    emit countChanged();
+    Q_EMIT countChanged();
 }

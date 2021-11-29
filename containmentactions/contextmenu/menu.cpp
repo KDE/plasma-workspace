@@ -129,7 +129,7 @@ QList<QAction *> ContextMenu::contextualActions()
     Plasma::Containment *c = containment();
     Q_ASSERT(c);
     QList<QAction *> actions;
-    foreach (const QString &name, m_actionOrder) {
+    Q_FOREACH (const QString &name, m_actionOrder) {
         if (!m_actions.value(name)) {
             continue;
         }
@@ -235,7 +235,7 @@ QWidget *ContextMenu::createConfigurationInterface(QWidget *parent)
     m_buttons = new QButtonGroup(widget);
     m_buttons->setExclusive(false);
 
-    foreach (const QString &name, m_actionOrder) {
+    Q_FOREACH (const QString &name, m_actionOrder) {
         QCheckBox *item = nullptr;
 
         if (name == QLatin1String("_context")) {

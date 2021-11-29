@@ -169,7 +169,7 @@ void KCMColors::loadSelectedColorScheme()
         // These are normally synced but initially the model doesn't emit a change to avoid the
         // Apply button from being enabled without any user interaction. Sync manually here.
         m_filteredModel->setSelectedScheme(colorsSettings()->defaultColorSchemeValue());
-        emit showSchemeNotInstalledWarning(schemeName);
+        Q_EMIT showSchemeNotInstalledWarning(schemeName);
     } else {
         m_model->setSelectedScheme(schemeName);
         m_filteredModel->setSelectedScheme(schemeName);
@@ -190,7 +190,7 @@ void KCMColors::installSchemeFromFile(const QUrl &url)
 
     m_tempInstallFile.reset(new QTemporaryFile());
     if (!m_tempInstallFile->open()) {
-        emit showErrorMessage(i18n("Unable to create a temporary file."));
+        Q_EMIT showErrorMessage(i18n("Unable to create a temporary file."));
         m_tempInstallFile.reset();
         return;
     }
@@ -199,11 +199,11 @@ void KCMColors::installSchemeFromFile(const QUrl &url)
     // (for some reason) we determine the file name from the "Name" inside the file
     m_tempCopyJob = KIO::file_copy(url, QUrl::fromLocalFile(m_tempInstallFile->fileName()), -1, KIO::Overwrite);
     m_tempCopyJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    emit downloadingFileChanged();
+    Q_EMIT downloadingFileChanged();
 
     connect(m_tempCopyJob, &KIO::FileCopyJob::result, this, [this, url](KJob *job) {
         if (job->error() != KJob::NoError) {
-            emit showErrorMessage(i18n("Unable to download the color scheme: %1", job->errorText()));
+            Q_EMIT showErrorMessage(i18n("Unable to download the color scheme: %1", job->errorText()));
             return;
         }
 
@@ -221,7 +221,7 @@ void KCMColors::installSchemeFile(const QString &path)
     const QString name = group.readEntry("Name");
 
     if (name.isEmpty()) {
-        emit showErrorMessage(i18n("This file is not a color scheme file."));
+        Q_EMIT showErrorMessage(i18n("This file is not a color scheme file."));
         return;
     }
 
@@ -240,14 +240,14 @@ void KCMColors::installSchemeFile(const QString &path)
     QString newPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/color-schemes/");
 
     if (!QDir().mkpath(newPath)) {
-        emit showErrorMessage(i18n("Failed to create 'color-scheme' data folder."));
+        Q_EMIT showErrorMessage(i18n("Failed to create 'color-scheme' data folder."));
         return;
     }
 
     newPath += newName + QLatin1String(".colors");
 
     if (!QFile::copy(path, newPath)) {
-        emit showErrorMessage(i18n("Failed to copy color scheme into 'color-scheme' data folder."));
+        Q_EMIT showErrorMessage(i18n("Failed to copy color scheme into 'color-scheme' data folder."));
         return;
     }
 
@@ -264,7 +264,7 @@ void KCMColors::installSchemeFile(const QString &path)
         m_model->setSelectedScheme(newName);
     }
 
-    emit showSuccessMessage(i18n("Color scheme installed successfully."));
+    Q_EMIT showSuccessMessage(i18n("Color scheme installed successfully."));
 }
 
 void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)

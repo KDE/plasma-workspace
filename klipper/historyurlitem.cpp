@@ -13,7 +13,7 @@ namespace
 QByteArray compute_uuid(const QList<QUrl> &_urls, const KUrlMimeData::MetaDataMap &_metaData, bool _cut)
 {
     QCryptographicHash hash(QCryptographicHash::Sha1);
-    foreach (const QUrl &url, _urls) {
+    Q_FOREACH (const QUrl &url, _urls) {
         hash.addData(url.toEncoded());
         hash.addData("\0", 1); // Use binary zero as that is not a valid path character
     }

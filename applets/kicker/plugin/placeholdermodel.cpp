@@ -61,9 +61,9 @@ void PlaceholderModel::setSourceModel(QAbstractItemModel *sourceModel)
 
     endResetModel();
 
-    emit countChanged();
-    emit sourceModelChanged();
-    emit descriptionChanged();
+    Q_EMIT countChanged();
+    Q_EMIT sourceModelChanged();
+    Q_EMIT descriptionChanged();
 }
 
 bool PlaceholderModel::canFetchMore(const QModelIndex &parent) const
@@ -228,8 +228,8 @@ void PlaceholderModel::reset()
 {
     beginResetModel();
     endResetModel();
-    emit countChanged();
-    emit separatorCountChanged();
+    Q_EMIT countChanged();
+    Q_EMIT separatorCountChanged();
 }
 
 void PlaceholderModel::connectSignals()
@@ -243,7 +243,7 @@ void PlaceholderModel::connectSignals()
     connect(sourceModelPtr, SIGNAL(destroyed()), this, SLOT(reset()));
 
     connect(sourceModelPtr, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &from, const QModelIndex &to, const QVector<int> &roles) {
-        emit dataChanged(sourceIndexToIndex(from), sourceIndexToIndex(to), roles);
+        Q_EMIT dataChanged(sourceIndexToIndex(from), sourceIndexToIndex(to), roles);
     });
 
     connect(sourceModelPtr, &QAbstractItemModel::rowsAboutToBeInserted, this, [this](const QModelIndex &parent, int from, int to) {
@@ -257,7 +257,7 @@ void PlaceholderModel::connectSignals()
 
     connect(sourceModelPtr, &QAbstractItemModel::rowsInserted, this, [this] {
         endInsertRows();
-        emit countChanged();
+        Q_EMIT countChanged();
     });
 
     connect(sourceModelPtr,
@@ -287,7 +287,7 @@ void PlaceholderModel::connectSignals()
 
     connect(sourceModelPtr, &QAbstractItemModel::rowsRemoved, this, [this] {
         endRemoveRows();
-        emit countChanged();
+        Q_EMIT countChanged();
     });
 
     connect(sourceModelPtr, &QAbstractItemModel::modelAboutToBeReset, this, [this] {
@@ -296,7 +296,7 @@ void PlaceholderModel::connectSignals()
 
     connect(sourceModelPtr, &QAbstractItemModel::modelReset, this, [this] {
         endResetModel();
-        emit countChanged();
+        Q_EMIT countChanged();
     });
 
     // We do not have persistant indices
@@ -334,7 +334,7 @@ void PlaceholderModel::setDropPlaceholderIndex(int index)
         m_dropPlaceholderIndex = index;
         endRemoveRows();
 
-        emit countChanged();
+        Q_EMIT countChanged();
 
     } else if (index != -1 && m_dropPlaceholderIndex == -1) {
         // Creating the placeholder
@@ -342,7 +342,7 @@ void PlaceholderModel::setDropPlaceholderIndex(int index)
         m_dropPlaceholderIndex = index;
         endInsertRows();
 
-        emit countChanged();
+        Q_EMIT countChanged();
 
     } else if (m_dropPlaceholderIndex != index) {
         // Moving the placeholder
@@ -354,5 +354,5 @@ void PlaceholderModel::setDropPlaceholderIndex(int index)
         }
     }
 
-    emit dropPlaceholderIndexChanged();
+    Q_EMIT dropPlaceholderIndexChanged();
 }

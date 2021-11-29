@@ -88,7 +88,7 @@ void XStartupTasksModel::Private::loadConfig()
             const QString appId = data.applicationId();
             const QString bin = data.bin();
 
-            foreach (const KStartupInfoData &known, startupData) {
+            Q_FOREACH (const KStartupInfoData &known, startupData) {
                 // Reject if we already have a startup notification for this app.
                 if (known.applicationId() == appId && known.bin() == bin) {
                     return;
@@ -127,7 +127,7 @@ void XStartupTasksModel::Private::loadConfig()
                 startupData.insert(id.id(), data);
                 launcherUrls.insert(id.id(), launcherUrl(data));
                 QModelIndex idx = q->index(row);
-                emit q->dataChanged(idx, idx);
+                Q_EMIT q->dataChanged(idx, idx);
             }
         });
     }

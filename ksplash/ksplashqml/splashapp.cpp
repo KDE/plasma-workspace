@@ -60,7 +60,7 @@ SplashApp::SplashApp(int &argc, char **argv)
 
     setupWaylandIntegration();
 
-    foreach (QScreen *screen, screens())
+    Q_FOREACH (QScreen *screen, screens())
         adoptScreen(screen);
 
     setStage(QStringLiteral("initial"));
@@ -111,7 +111,7 @@ void SplashApp::setStage(int stage)
     if (m_stage == 7) {
         QGuiApplication::exit(EXIT_SUCCESS);
     }
-    foreach (SplashWindow *w, m_windows) {
+    Q_FOREACH (SplashWindow *w, m_windows) {
         w->setStage(stage);
     }
 }

@@ -200,8 +200,8 @@ void SNIProxy::update()
         qCDebug(SNIPROXY) << "Scaling pixmap of window" << m_windowId << Title() << "from w*h" << w << h;
         m_pixmap = m_pixmap.scaled(s_embedSize, s_embedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
     }
-    emit NewIcon();
-    emit NewToolTip();
+    Q_EMIT NewIcon();
+    Q_EMIT NewToolTip();
 }
 
 void SNIProxy::resizeWindow(const uint16_t width, const uint16_t height) const

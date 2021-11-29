@@ -135,7 +135,7 @@ void KCMStyle::setMainToolBarStyle(ToolBarStyle style)
 {
     if (m_mainToolBarStyle != style) {
         m_mainToolBarStyle = style;
-        emit mainToolBarStyleChanged();
+        Q_EMIT mainToolBarStyleChanged();
 
         const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
         styleSettings()->setToolButtonStyle(toolBarStyleEnum.valueToKey(m_mainToolBarStyle));
@@ -152,7 +152,7 @@ void KCMStyle::setOtherToolBarStyle(ToolBarStyle style)
 {
     if (m_otherToolBarStyle != style) {
         m_otherToolBarStyle = style;
-        emit otherToolBarStyleChanged();
+        Q_EMIT otherToolBarStyleChanged();
 
         const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
         styleSettings()->setToolButtonStyleOtherToolbars(toolBarStyleEnum.valueToKey(m_otherToolBarStyle));
@@ -174,14 +174,14 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
     QLibrary library(QPluginLoader(configPage).fileName());
     if (!library.load()) {
         qWarning() << "Failed to load style config page" << configPage << library.errorString();
-        emit showErrorMessage(i18n("There was an error loading the configuration dialog for this style."));
+        Q_EMIT showErrorMessage(i18n("There was an error loading the configuration dialog for this style."));
         return;
     }
 
     auto allocPtr = library.resolve("allocate_kstyle_config");
     if (!allocPtr) {
         qWarning() << "Failed to resolve allocate_kstyle_config in" << configPage;
-        emit showErrorMessage(i18n("There was an error loading the configuration dialog for this style."));
+        Q_EMIT showErrorMessage(i18n("There was an error loading the configuration dialog for this style."));
         return;
     }
 
@@ -219,7 +219,7 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
         }
 
         // Force re-rendering of the preview, to apply settings
-        emit styleReconfigured(styleName);
+        Q_EMIT styleReconfigured(styleName);
 
         // For now, ask all KDE apps to recreate their styles to apply the setitngs
         notifyKcmChange(GlobalChangeType::StyleChanged);
@@ -294,7 +294,7 @@ void KCMStyle::save()
             m_previousStyle = styleSettings()->widgetStyle();
         } else {
             const QString styleDisplay = m_model->data(m_model->index(m_model->indexOfStyle(styleSettings()->widgetStyle()), 0), Qt::DisplayRole).toString();
-            emit showErrorMessage(i18n("Failed to apply selected style '%1'.", styleDisplay));
+            Q_EMIT showErrorMessage(i18n("Failed to apply selected style '%1'.", styleDisplay));
 
             // Reset selected style back to current in case of failure
             styleSettings()->setWidgetStyle(m_previousStyle);
@@ -350,7 +350,7 @@ void KCMStyle::defaults()
 
 void KCMStyle::loadSettingsToModel()
 {
-    emit styleSettings()->widgetStyleChanged();
+    Q_EMIT styleSettings()->widgetStyleChanged();
 
     const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
     setMainToolBarStyle(static_cast<ToolBarStyle>(toolBarStyleEnum.keyToValue(qUtf8Printable(styleSettings()->toolButtonStyle()))));

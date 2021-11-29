@@ -50,10 +50,10 @@ PumpJob::PumpJob(int interval)
 
 void PumpJob::init()
 {
-    emit description(this,
-                     i18n("Pump Job"),
-                     qMakePair(i18n("Source"), QStringLiteral("this is the source")),
-                     qMakePair(i18n("Destination"), QStringLiteral("destination, baby")));
+    Q_EMIT description(this,
+                       i18n("Pump Job"),
+                       qMakePair(i18n("Source"), QStringLiteral("this is the source")),
+                       qMakePair(i18n("Destination"), QStringLiteral("destination, baby")));
     d->timer->start();
 }
 
@@ -85,7 +85,7 @@ bool PumpJob::doResume()
     d->suspended = false;
     qDebug() << "resume";
     d->timer->start();
-    emit resumed(this);
+    Q_EMIT resumed(this);
     return KJob::doResume();
 }
 
@@ -99,7 +99,7 @@ bool PumpJob::doSuspend()
     d->suspended = true;
     qDebug() << "suspend";
     d->timer->stop();
-    emit suspended(this);
+    Q_EMIT suspended(this);
     return KJob::doSuspend();
 }
 
@@ -109,7 +109,7 @@ void PumpJob::timeout()
     setPercent(d->counter);
     emitSpeed(1024 * 1024 * d->counter / 70); // just something randomly changing
     int seconds = (int)((d->interval * 100) - (d->interval * percent())) / 1000;
-    emit infoMessage(this, i18n("Testing kuiserver (%1 seconds remaining)", seconds), i18n("Testing kuiserver (%1 seconds remaining)", seconds));
+    Q_EMIT infoMessage(this, i18n("Testing kuiserver (%1 seconds remaining)", seconds), i18n("Testing kuiserver (%1 seconds remaining)", seconds));
 
     qDebug() << "percent: " << percent() << "  Seconds: " << seconds;
     if (d->counter % 20 == 0) {

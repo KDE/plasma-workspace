@@ -214,7 +214,7 @@ void KCMLookandFeel::loadModel()
     }
 
     // Model has been cleared so pretend the selected look and fell changed to force view update
-    emit lookAndFeelSettings()->lookAndFeelPackageChanged();
+    Q_EMIT lookAndFeelSettings()->lookAndFeelPackageChanged();
 }
 
 void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)
@@ -332,7 +332,7 @@ QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)
     }
 
     // Search each icon theme directory for 'theme'
-    foreach (const QString &baseDir, cursorSearchPaths()) {
+    Q_FOREACH (const QString &baseDir, cursorSearchPaths()) {
         QDir dir(baseDir);
         if (!dir.exists() || !dir.cd(theme)) {
             continue;
@@ -456,7 +456,7 @@ void KCMLookandFeel::cursorsChanged(const QString &themeName)
           << QStringLiteral("bottom_side") << QStringLiteral("bottom_left_corner") << QStringLiteral("left_side") << QStringLiteral("question_arrow")
           << QStringLiteral("pirate");
 
-    foreach (const QString &name, names) {
+    Q_FOREACH (const QString &name, names) {
         XFixesChangeCursorByName(QX11Info::display(), theme.loadCursor(name, cursorSize), QFile::encodeName(name));
     }
 

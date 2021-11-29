@@ -214,7 +214,7 @@ bool CursorThemeModel::hasTheme(const QString &name) const
 {
     const uint hash = qHash(name);
 
-    foreach (const CursorTheme *theme, list)
+    Q_FOREACH (const CursorTheme *theme, list)
         if (theme->hash() == hash)
             return true;
 
@@ -228,7 +228,7 @@ bool CursorThemeModel::isCursorTheme(const QString &theme, const int depth)
         return false;
 
     // Search each icon theme directory for 'theme'
-    foreach (const QString &baseDir, searchPaths()) {
+    Q_FOREACH (const QString &baseDir, searchPaths()) {
         QDir dir(baseDir);
         if (!dir.exists() || !dir.cd(theme))
             continue;
@@ -319,7 +319,7 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
     if (!haveCursors) {
         bool foundCursorTheme = false;
 
-        foreach (const QString &name, theme->inherits())
+        Q_FOREACH (const QString &name, theme->inherits())
             if ((foundCursorTheme = isCursorTheme(name)))
                 break;
 
@@ -338,13 +338,13 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
 void CursorThemeModel::insertThemes()
 {
     // Scan each base dir for Xcursor themes and add them to the list.
-    foreach (const QString &baseDir, searchPaths()) {
+    Q_FOREACH (const QString &baseDir, searchPaths()) {
         QDir dir(baseDir);
         if (!dir.exists())
             continue;
 
         // Process each subdir in the directory
-        foreach (const QString &name, dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot)) {
+        Q_FOREACH (const QString &name, dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot)) {
             // Don't process the theme if a theme with the same name already exists
             // in the list. Xcursor will pick the first one it finds in that case,
             // and since we use the same search order, the one Xcursor picks should

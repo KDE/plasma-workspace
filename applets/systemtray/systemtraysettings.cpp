@@ -65,14 +65,14 @@ void SystemTraySettings::addEnabledPlugin(const QString &pluginId)
 {
     m_extraItems << pluginId;
     writeConfigValue(EXTRA_ITEMS_KEY, m_extraItems);
-    emit enabledPluginsChanged({pluginId}, {});
+    Q_EMIT enabledPluginsChanged({pluginId}, {});
 }
 
 void SystemTraySettings::removeEnabledPlugin(const QString &pluginId)
 {
     m_extraItems.removeAll(pluginId);
     writeConfigValue(EXTRA_ITEMS_KEY, m_extraItems);
-    emit enabledPluginsChanged({}, {pluginId});
+    Q_EMIT enabledPluginsChanged({}, {pluginId});
 }
 
 bool SystemTraySettings::isShowAllItems() const
@@ -120,7 +120,7 @@ void SystemTraySettings::loadConfig()
         notifyAboutChangedEnabledPlugins(extraItemsOld, m_extraItems);
     }
 
-    emit configurationChanged();
+    Q_EMIT configurationChanged();
 }
 
 void SystemTraySettings::writeConfigValue(const QString &key, const QVariant &value)
@@ -140,7 +140,7 @@ void SystemTraySettings::writeConfigValue(const QString &key, const QVariant &va
         updatingConfigValue = false;
     }
 
-    emit configurationChanged();
+    Q_EMIT configurationChanged();
 }
 
 void SystemTraySettings::notifyAboutChangedEnabledPlugins(const QStringList &enabledPluginsOld, const QStringList &enabledPluginsNew)
@@ -160,5 +160,5 @@ void SystemTraySettings::notifyAboutChangedEnabledPlugins(const QStringList &ena
         }
     }
 
-    emit enabledPluginsChanged(newlyEnabled, newlyDisabled);
+    Q_EMIT enabledPluginsChanged(newlyEnabled, newlyDisabled);
 }

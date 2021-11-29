@@ -443,9 +443,9 @@ void CFontList::fontList(int pid, const QList<KFI::Families> &families)
 
         for (int i = 0; it != end; ++it, ++i) {
             fontsAdded(*it);
-            emit listingPercent(i * 100 / count);
+            Q_EMIT listingPercent(i * 100 / count);
         }
-        emit listingPercent(100);
+        Q_EMIT listingPercent(100);
     }
 }
 
@@ -464,13 +464,13 @@ void CFontList::load()
 
     setSlowUpdates(false);
 
-    emit layoutAboutToBeChanged();
+    Q_EMIT layoutAboutToBeChanged();
     //     beginRemoveRows(QModelIndex(), 0, m_families.count());
     m_families.clear();
     m_familyHash.clear();
     //     endRemoveRows();
-    emit layoutChanged();
-    emit listingPercent(0);
+    Q_EMIT layoutChanged();
+    Q_EMIT listingPercent(0);
 
     CJobRunner::startDbusService();
     CJobRunner::dbus()->list(FontInst::SYS_MASK | FontInst::USR_MASK, getpid());
@@ -1259,7 +1259,7 @@ void CFontListSortFilterProxy::timeout()
         m_fcQuery->run(query);
     } else {
         invalidate();
-        emit refresh();
+        Q_EMIT refresh();
     }
 }
 
@@ -1267,7 +1267,7 @@ void CFontListSortFilterProxy::fcResults()
 {
     if (CFontFilter::CRIT_FONTCONFIG == m_filterCriteria) {
         invalidate();
-        emit refresh();
+        Q_EMIT refresh();
     }
 }
 
@@ -1323,7 +1323,7 @@ void CFontListView::getFonts(CJobRunner::ItemList &urls, QStringList &fontNames,
     QSet<CFontItem *> usedFonts;
     QModelIndex index;
 
-    foreach (index, selectedItems)
+    Q_FOREACH (index, selectedItems)
         if (index.isValid()) {
             QModelIndex realIndex(m_proxy->mapToSource(index));
 
@@ -1357,7 +1357,7 @@ QSet<QString> CFontListView::getFiles()
     QModelIndex index;
     QSet<QString> files;
 
-    foreach (index, items)
+    Q_FOREACH (index, items)
         if (index.isValid()) {
             QModelIndex realIndex(m_proxy->mapToSource(index));
 
@@ -1391,7 +1391,7 @@ void CFontListView::getPrintableFonts(QSet<Misc::TFont> &items, bool selected)
     QModelIndexList selectedItems(selected ? selectedIndexes() : allIndexes());
     QModelIndex index;
 
-    foreach (index, selectedItems) {
+    Q_FOREACH (index, selectedItems) {
         CFontItem *font = nullptr;
 
         if (index.isValid() && 0 == index.column()) {
@@ -1510,7 +1510,7 @@ void CFontListView::selectedStatus(bool &enabled, bool &disabled)
 
     enabled = disabled = false;
 
-    foreach (index, selected) {
+    Q_FOREACH (index, selected) {
         QModelIndex realIndex(m_proxy->mapToSource(index));
 
         if (realIndex.isValid()) {
@@ -1589,7 +1589,7 @@ void CFontListView::selectionChanged(const QItemSelection &selected, const QItem
     if (m_model->slowUpdates()) {
         return;
     }
-    emit itemsSelected(getSelectedItems());
+    Q_EMIT itemsSelected(getSelectedItems());
 }
 
 QModelIndexList CFontListView::getSelectedItems()
@@ -1602,7 +1602,7 @@ QModelIndexList CFontListView::getSelectedItems()
     QSet<CFontModelItem *> selectedFamilies;
     bool en(false), dis(false);
 
-    foreach (index, selectedItems)
+    Q_FOREACH (index, selectedItems)
         if (index.isValid()) {
             QModelIndex realIndex(m_proxy->mapToSource(index));
 
@@ -1639,14 +1639,14 @@ QModelIndexList CFontListView::getSelectedItems()
         }
 
     if (deselectList.count()) {
-        foreach (index, deselectList)
+        Q_FOREACH (index, deselectList)
             selectionModel()->select(index, QItemSelectionModel::Deselect);
     }
 
     QModelIndexList sel;
     QSet<void *> pointers;
     selectedItems = selectedIndexes();
-    foreach (index, selectedItems) {
+    Q_FOREACH (index, selectedItems) {
         QModelIndex idx(m_proxy->mapToSource(index));
 
         if (!pointers.contains(idx.internalPointer())) {
@@ -1693,7 +1693,7 @@ void CFontListView::view()
     QModelIndex index;
     QSet<CFontItem *> fonts;
 
-    foreach (index, selectedItems) {
+    Q_FOREACH (index, selectedItems) {
         QModelIndex realIndex(m_proxy->mapToSource(index));
 
         if (realIndex.isValid()) {
@@ -1827,7 +1827,7 @@ void CFontListView::dropEvent(QDropEvent *event)
         for (; it != end; ++it) {
             QMimeType mime = db.mimeTypeForUrl(*it);
 
-            foreach (const QString &fontMime, CFontList::fontMimeTypes) {
+            Q_FOREACH (const QString &fontMime, CFontList::fontMimeTypes) {
                 if (mime.inherits(fontMime)) {
                     kurls.insert(*it);
                     break;
@@ -1836,7 +1836,7 @@ void CFontListView::dropEvent(QDropEvent *event)
         }
 
         if (!kurls.isEmpty()) {
-            emit fontsDropped(kurls);
+            Q_EMIT fontsDropped(kurls);
         }
     }
 }
@@ -1851,7 +1851,7 @@ void CFontListView::contextMenuEvent(QContextMenuEvent *ev)
     QModelIndexList selectedItems(selectedIndexes());
     QModelIndex index;
 
-    foreach (index, selectedItems) {
+    Q_FOREACH (index, selectedItems) {
         QModelIndex realIndex(m_proxy->mapToSource(index));
 
         if (realIndex.isValid()) {

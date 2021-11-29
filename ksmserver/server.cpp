@@ -238,7 +238,7 @@ void KSMGetPropertiesProc(SmsConn smsConn, SmPointer managerData)
     KSMClient *client = (KSMClient *)managerData;
     SmProp **props = new SmProp *[client->properties.count()];
     int i = 0;
-    foreach (SmProp *prop, client->properties)
+    Q_FOREACH (SmProp *prop, client->properties)
         props[i++] = prop;
 
     SmsReturnProperties(smsConn, i, props);
@@ -751,7 +751,7 @@ void KSMServer::discardSession()
 {
     KConfigGroup config(KSharedConfig::openConfig(), sessionGroup);
     int count = config.readEntry("count", 0);
-    foreach (KSMClient *c, clients) {
+    Q_FOREACH (KSMClient *c, clients) {
         QStringList discardCommand = c->discardCommand();
         if (discardCommand.isEmpty())
             continue;
@@ -797,7 +797,7 @@ void KSMServer::storeSession()
     auto reply = m_kwinInterface->finishSaveSession(currentSession());
     reply.waitForFinished(); // boo!
 
-    foreach (KSMClient *c, clients) {
+    Q_FOREACH (KSMClient *c, clients) {
         int restartHint = c->restartStyleHint();
         if (restartHint == SmRestartNever)
             continue;
@@ -972,7 +972,7 @@ void KSMServer::tryRestoreNext()
         QString n = QString::number(lastAppStarted);
         QString clientId = config.readEntry(QLatin1String("clientId") + n, QString());
         bool alreadyStarted = false;
-        foreach (KSMClient *c, clients) {
+        Q_FOREACH (KSMClient *c, clients) {
             if (QString::fromLocal8Bit(c->clientId()) == clientId) {
                 alreadyStarted = true;
                 break;
@@ -1001,9 +1001,9 @@ void KSMServer::tryRestoreNext()
     lastIdStarted.clear();
 
     if (state == Restoring) {
-        emit sessionRestored();
+        Q_EMIT sessionRestored();
     } else { // subsession
-        emit subSessionOpened();
+        Q_EMIT subSessionOpened();
     }
     state = Idle;
 }

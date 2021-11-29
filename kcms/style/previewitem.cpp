@@ -70,7 +70,7 @@ void PreviewItem::setStyleName(const QString &styleName)
 
     m_styleName = styleName;
     reload();
-    emit styleNameChanged();
+    Q_EMIT styleNameChanged();
 }
 
 bool PreviewItem::isValid() const
@@ -106,7 +106,7 @@ void PreviewItem::reload()
     if (!m_style) {
         qWarning() << "Failed to load style" << m_styleName;
         if (oldValid != isValid()) {
-            emit validChanged();
+            Q_EMIT validChanged();
         }
         return;
     }
@@ -149,7 +149,7 @@ void PreviewItem::reload()
     setImplicitSize(sizeHint.width(), sizeHint.height());
 
     if (oldValid != isValid()) {
-        emit validChanged();
+        Q_EMIT validChanged();
     }
 }
 

@@ -88,7 +88,7 @@ void ActionsWidget::updateActionListView()
 {
     m_ui.kcfg_ActionList->clear();
 
-    foreach (ClipAction *action, m_actionList) {
+    Q_FOREACH (ClipAction *action, m_actionList) {
         if (!action) {
             qCDebug(KLIPPER_LOG) << "action is null!";
             continue;
@@ -118,7 +118,7 @@ void ActionsWidget::updateActionItem(QTreeWidgetItem *item, ClipAction *action)
     item->setText(0, action->actionRegexPattern());
     item->setText(1, action->description());
 
-    foreach (const ClipCommand &command, action->commands()) {
+    Q_FOREACH (const ClipCommand &command, action->commands()) {
         QStringList cmdProps;
         cmdProps << command.command << command.description;
         QTreeWidgetItem *child = new QTreeWidgetItem(item, cmdProps);
@@ -140,7 +140,7 @@ ActionList ActionsWidget::actionList() const
 {
     // return a copy of our action list
     ActionList list;
-    foreach (ClipAction *action, m_actionList) {
+    Q_FOREACH (ClipAction *action, m_actionList) {
         if (!action) {
             qCDebug(KLIPPER_LOG) << "action is null";
             continue;

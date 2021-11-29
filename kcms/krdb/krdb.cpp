@@ -587,7 +587,7 @@ void runRdb(uint flags)
         // copy all the groups in the color scheme in kdeglobals
         KSharedConfigPtr kde4ColorConfig = KSharedConfig::openConfig(colorSchemeSrcFile, KConfig::SimpleConfig);
 
-        foreach (const QString &grp, kde4ColorConfig->groupList()) {
+        Q_FOREACH (const QString &grp, kde4ColorConfig->groupList()) {
             KConfigGroup cg(kde4ColorConfig, grp);
             KConfigGroup cg2(&kde4config, grp);
             cg.copyTo(&cg2);

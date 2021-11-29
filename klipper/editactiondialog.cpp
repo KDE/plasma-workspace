@@ -145,7 +145,7 @@ bool ActionDetailModel::setData(const QModelIndex &index, const QVariant &value,
             break;
         }
         m_commands.replace(index.row(), cmd);
-        emit dataChanged(index, index);
+        Q_EMIT dataChanged(index, index);
         return true;
     }
     return false;
@@ -335,7 +335,7 @@ void EditActionDialog::saveAction()
 
     m_action->clearCommands();
 
-    foreach (const ClipCommand &cmd, m_model->commands()) {
+    Q_FOREACH (const ClipCommand &cmd, m_model->commands()) {
         m_action->addCommand(cmd);
     }
 }

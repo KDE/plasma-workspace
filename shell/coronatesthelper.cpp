@@ -21,7 +21,7 @@ CoronaTestHelper::CoronaTestHelper(Corona *parent)
 
 void CoronaTestHelper::processContainment(Plasma::Containment *containment)
 {
-    foreach (Plasma::Applet *applet, containment->applets()) {
+    Q_FOREACH (Plasma::Applet *applet, containment->applets()) {
         processApplet(applet);
     }
     connect(containment, &Plasma::Containment::appletAdded, this, &CoronaTestHelper::processApplet);
@@ -87,7 +87,7 @@ void CoronaTestHelper::testFinished()
 
 void CoronaTestHelper::initialize()
 {
-    foreach (Plasma::Containment *containment, m_corona->containments()) {
+    Q_FOREACH (Plasma::Containment *containment, m_corona->containments()) {
         processContainment(containment);
     }
     connect(m_corona, &Corona::containmentAdded, this, &CoronaTestHelper::processContainment);

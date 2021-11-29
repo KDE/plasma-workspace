@@ -126,7 +126,7 @@ void IconModule::load()
     ManagedConfigModule::load();
     m_model->load();
     // Model has been cleared so pretend the theme name changed to force view update
-    emit iconsSettings()->ThemeChanged();
+    Q_EMIT iconsSettings()->ThemeChanged();
 }
 
 void IconModule::save()
@@ -201,18 +201,18 @@ void IconModule::installThemeFromFile(const QUrl &url)
 
     m_tempInstallFile.reset(new QTemporaryFile());
     if (!m_tempInstallFile->open()) {
-        emit showErrorMessage(i18n("Unable to create a temporary file."));
+        Q_EMIT showErrorMessage(i18n("Unable to create a temporary file."));
         m_tempInstallFile.reset();
         return;
     }
 
     m_tempCopyJob = KIO::file_copy(url, QUrl::fromLocalFile(m_tempInstallFile->fileName()), -1, KIO::Overwrite);
     m_tempCopyJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    emit downloadingFileChanged();
+    Q_EMIT downloadingFileChanged();
 
     connect(m_tempCopyJob, &KIO::FileCopyJob::result, this, [this, url](KJob *job) {
         if (job->error() != KJob::NoError) {
-            emit showErrorMessage(i18n("Unable to download the icon theme archive: %1", job->errorText()));
+            Q_EMIT showErrorMessage(i18n("Unable to download the icon theme archive: %1", job->errorText()));
             return;
         }
 
@@ -226,16 +226,16 @@ void IconModule::installThemeFile(const QString &path)
 {
     const QStringList themesNames = findThemeDirs(path);
     if (themesNames.isEmpty()) {
-        emit showErrorMessage(i18n("The file is not a valid icon theme archive."));
+        Q_EMIT showErrorMessage(i18n("The file is not a valid icon theme archive."));
         return;
     }
 
     if (!installThemes(themesNames, path)) {
-        emit showErrorMessage(i18n("A problem occurred during the installation process; however, most of the themes in the archive have been installed"));
+        Q_EMIT showErrorMessage(i18n("A problem occurred during the installation process; however, most of the themes in the archive have been installed"));
         return;
     }
 
-    emit showSuccessMessage(i18n("Theme installed successfully."));
+    Q_EMIT showSuccessMessage(i18n("Theme installed successfully."));
 
     KIconLoader::global()->newIconLoader();
     m_model->load();
@@ -335,7 +335,7 @@ bool IconModule::installThemes(const QStringList &themes, const QString &archive
     bool everythingOk = true;
     const QString localThemesDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/icons/./"));
 
-    emit showProgress(i18n("Installing icon themes…"));
+    Q_EMIT showProgress(i18n("Installing icon themes…"));
 
     KTar archive(archiveName);
     archive.open(QIODevice::ReadOnly);
@@ -345,7 +345,7 @@ bool IconModule::installThemes(const QStringList &themes, const QString &archive
 
     KArchiveDirectory *currentTheme = nullptr;
     for (const QString &theme : themes) {
-        emit showProgress(i18n("Installing %1 theme…", theme));
+        Q_EMIT showProgress(i18n("Installing %1 theme…", theme));
 
         qApp->processEvents(QEventLoop::ExcludeUserInputEvents);
 
@@ -362,7 +362,7 @@ bool IconModule::installThemes(const QStringList &themes, const QString &archive
 
     archive.close();
 
-    emit hideProgress();
+    Q_EMIT hideProgress();
     return everythingOk;
 }
 

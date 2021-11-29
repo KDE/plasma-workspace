@@ -75,7 +75,7 @@ void ConfigGroup::setFile(const QString &filename)
     d->file = filename;
     d->config = nullptr;
     readConfigFile();
-    emit fileChanged();
+    Q_EMIT fileChanged();
 }
 
 KSharedConfigPtr ConfigGroup::config() const
@@ -112,8 +112,8 @@ void ConfigGroup::setGroup(const QString &groupname)
     }
     d->group = groupname;
     readConfigFile();
-    emit groupChanged();
-    emit keyListChanged();
+    Q_EMIT groupChanged();
+    Q_EMIT keyListChanged();
 }
 
 QStringList ConfigGroup::keyList() const

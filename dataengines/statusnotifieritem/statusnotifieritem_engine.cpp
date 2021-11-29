@@ -91,7 +91,7 @@ void StatusNotifierItemEngine::registerWatcher(const QString &service)
                 watcher->deleteLater();
                 QDBusReply<QDBusVariant> reply = *watcher;
                 QStringList registeredItems = reply.value().variant().toStringList();
-                foreach (const QString &service, registeredItems) {
+                Q_FOREACH (const QString &service, registeredItems) {
                     newItem(service);
                 }
             });

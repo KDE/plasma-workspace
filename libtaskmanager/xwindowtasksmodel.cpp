@@ -128,7 +128,7 @@ void XWindowTasksModel::Private::init()
     rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
     configWatcher = new KDirWatch(q);
 
-    foreach (const QString &location, QStandardPaths::standardLocations(QStandardPaths::ConfigLocation)) {
+    Q_FOREACH (const QString &location, QStandardPaths::standardLocations(QStandardPaths::ConfigLocation)) {
         configWatcher->addFile(location + QLatin1String("/taskmanagerrulesrc"));
     }
 
@@ -188,7 +188,7 @@ void XWindowTasksModel::Private::init()
     activeWindow = KWindowSystem::activeWindow();
 
     // Add existing windows.
-    foreach (const WId window, KWindowSystem::windows()) {
+    Q_FOREACH (const WId window, KWindowSystem::windows()) {
         addWindow(window);
     }
 }
@@ -398,7 +398,7 @@ void XWindowTasksModel::Private::dataChanged(WId window, const QVector<int> &rol
     }
 
     QModelIndex idx = q->index(i);
-    emit q->dataChanged(idx, idx, roles);
+    Q_EMIT q->dataChanged(idx, idx, roles);
 }
 
 KWindowInfo *XWindowTasksModel::Private::windowInfo(WId window)

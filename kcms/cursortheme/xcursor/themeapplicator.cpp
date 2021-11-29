@@ -89,7 +89,7 @@ bool applyTheme(const CursorTheme *theme, const int size)
               << "question_arrow"
               << "pirate";
 
-        foreach (const QString &name, names) {
+        Q_FOREACH (const QString &name, names) {
             XFixesChangeCursorByName(QX11Info::display(), theme->loadCursor(name, size), QFile::encodeName(name));
         }
     }

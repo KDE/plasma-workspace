@@ -102,7 +102,7 @@ public: // stuff used by public class
     bool m_valid = false;
     uint m_highestNotificationId = 1;
 
-private slots:
+private Q_SLOTS:
     void onBroadcastNotification(const QMap<QString, QVariant> &properties);
 
 private:

@@ -12,7 +12,7 @@ void SlideModel::reload(const QStringList &selected)
         beginRemoveRows(QModelIndex(), 0, m_packages.count() - 1);
         m_packages.clear();
         endRemoveRows();
-        emit countChanged();
+        Q_EMIT countChanged();
     }
     addDirs(selected);
 }
@@ -31,7 +31,7 @@ void SlideModel::backgroundsFound(const QStringList &paths, const QString &token
         return;
     }
     processPaths(paths);
-    emit done();
+    Q_EMIT done();
 }
 
 void SlideModel::removeDir(const QString &path)

@@ -20,7 +20,7 @@ class TestResolutions : public QObject
 {
     Q_OBJECT
 
-private slots:
+private Q_SLOTS:
     void testResolutions_data();
     void testResolutions();
 
@@ -35,7 +35,7 @@ void TestResolutions::testResolutions_data()
     m_images << QStringLiteral("1280x1024") << QStringLiteral("1350x1080") << QStringLiteral("1440x1080") << QStringLiteral("1600x1200")
              << QStringLiteral("1920x1080") << QStringLiteral("1920x1200") << QStringLiteral("3840x2400");
     qDebug() << "Available images:";
-    foreach (auto image, m_images) {
+    Q_FOREACH (auto image, m_images) {
         qDebug() << formatResolution(image);
     }
 

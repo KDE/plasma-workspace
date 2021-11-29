@@ -65,16 +65,16 @@ void CFontPreview::showFont()
         m_lastChar = CFcEngine::TChar();
         setMouseTracking(m_chars.count() > 0);
         update();
-        emit status(true);
-        emit atMax(m_engine->atMax());
-        emit atMin(m_engine->atMin());
+        Q_EMIT status(true);
+        Q_EMIT atMax(m_engine->atMax());
+        Q_EMIT atMin(m_engine->atMin());
     } else {
         m_lastChar = CFcEngine::TChar();
         setMouseTracking(false);
         update();
-        emit status(false);
-        emit atMax(true);
-        emit atMin(true);
+        Q_EMIT status(false);
+        Q_EMIT atMax(true);
+        Q_EMIT atMin(true);
     }
 }
 
@@ -82,14 +82,14 @@ void CFontPreview::zoomIn()
 {
     m_engine->zoomIn();
     showFont();
-    emit atMax(m_engine->atMax());
+    Q_EMIT atMax(m_engine->atMax());
 }
 
 void CFontPreview::zoomOut()
 {
     m_engine->zoomOut();
     showFont();
-    emit atMin(m_engine->atMin());
+    Q_EMIT atMin(m_engine->atMin());
 }
 
 void CFontPreview::setUnicodeRange(const QList<CFcEngine::TRange> &r)

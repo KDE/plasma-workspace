@@ -177,7 +177,7 @@ void PanelConfigView::syncLocation()
 
         PanelShadows::self()->setEnabledBorders(this, enabledBorders);
 
-        emit enabledBordersChanged();
+        Q_EMIT enabledBordersChanged();
     }
 }
 
@@ -269,7 +269,7 @@ bool PanelConfigView::event(QEvent *e)
 void PanelConfigView::setVisibilityMode(PanelView::VisibilityMode mode)
 {
     m_panelView->setVisibilityMode(mode);
-    emit visibilityModeChanged();
+    Q_EMIT visibilityModeChanged();
 }
 
 PanelView::VisibilityMode PanelConfigView::visibilityMode() const
@@ -280,7 +280,7 @@ PanelView::VisibilityMode PanelConfigView::visibilityMode() const
 void PanelConfigView::setOpacityMode(PanelView::OpacityMode mode)
 {
     m_panelView->setOpacityMode(mode);
-    emit opacityModeChanged();
+    Q_EMIT opacityModeChanged();
 }
 
 PanelView::OpacityMode PanelConfigView::opacityMode() const

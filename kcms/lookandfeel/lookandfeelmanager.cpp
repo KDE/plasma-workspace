@@ -170,7 +170,7 @@ void LookAndFeelManager::setResetDefaultLayout(bool reset)
         return;
     }
     m_resetDefaultLayout = reset;
-    emit resetDefaultLayoutChanged();
+    Q_EMIT resetDefaultLayoutChanged();
 }
 
 bool LookAndFeelManager::resetDefaultLayout() const

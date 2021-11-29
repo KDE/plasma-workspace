@@ -28,8 +28,8 @@ void FilterProxyModel::setSelectedScheme(const QString &scheme)
 
     m_selectedScheme = scheme;
 
-    emit selectedSchemeChanged();
-    emit selectedSchemeIndexChanged();
+    Q_EMIT selectedSchemeChanged();
+    Q_EMIT selectedSchemeIndexChanged();
 }
 
 int FilterProxyModel::selectedSchemeIndex() const
@@ -60,10 +60,10 @@ void FilterProxyModel::setQuery(const QString &query)
         m_query = query;
         invalidateFilter();
 
-        emit queryChanged();
+        Q_EMIT queryChanged();
 
         if (selectedSchemeIndex() != oldIndex) {
-            emit selectedSchemeIndexChanged();
+            Q_EMIT selectedSchemeIndexChanged();
         }
     }
 }
@@ -81,10 +81,10 @@ void FilterProxyModel::setFilter(KCMColors::SchemeFilter filter)
         m_filter = filter;
         invalidateFilter();
 
-        emit filterChanged();
+        Q_EMIT filterChanged();
 
         if (selectedSchemeIndex() != oldIndex) {
-            emit selectedSchemeIndexChanged();
+            Q_EMIT selectedSchemeIndexChanged();
         }
     }
 }

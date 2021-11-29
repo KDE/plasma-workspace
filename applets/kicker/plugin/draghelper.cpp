@@ -34,7 +34,7 @@ void DragHelper::setDragIconSize(int size)
     if (m_dragIconSize != size) {
         m_dragIconSize = size;
 
-        emit dragIconSizeChanged();
+        Q_EMIT dragIconSizeChanged();
     }
 }
 
@@ -87,7 +87,7 @@ void DragHelper::doDrag(QQuickItem *item, const QUrl &url, const QIcon &icon, co
 
     drag->exec();
 
-    emit dropped();
+    Q_EMIT dropped();
 
     // Ensure dragging is still true when onRelease is called.
     QTimer::singleShot(0, qApp, [this] {
@@ -100,5 +100,5 @@ void DragHelper::setDragging(bool dragging)
     if (m_dragging == dragging)
         return;
     m_dragging = dragging;
-    emit draggingChanged();
+    Q_EMIT draggingChanged();
 }

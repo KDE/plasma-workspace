@@ -98,7 +98,7 @@ void Notifications::Private::initSourceModels()
         notificationsModel = NotificationsModel::createNotificationsModel();
         connect(notificationsModel.data(), &NotificationsModel::lastReadChanged, q, [this] {
             updateCount();
-            emit q->lastReadChanged();
+            Q_EMIT q->lastReadChanged();
         });
         notificationsAndJobsModel->addSourceModel(notificationsModel.data());
     } else if (!showNotifications && notificationsModel) {
@@ -278,29 +278,29 @@ void Notifications::Private::updateCount()
 
     if (activeNotificationsCount != active) {
         activeNotificationsCount = active;
-        emit q->activeNotificationsCountChanged();
+        Q_EMIT q->activeNotificationsCountChanged();
     }
     if (expiredNotificationsCount != expired) {
         expiredNotificationsCount = expired;
-        emit q->expiredNotificationsCountChanged();
+        Q_EMIT q->expiredNotificationsCountChanged();
     }
     if (unreadNotificationsCount != unread) {
         unreadNotificationsCount = unread;
-        emit q->unreadNotificationsCountChanged();
+        Q_EMIT q->unreadNotificationsCountChanged();
     }
     if (activeJobsCount != jobs) {
         activeJobsCount = jobs;
-        emit q->activeJobsCountChanged();
+        Q_EMIT q->activeJobsCountChanged();
     }
 
     const int percentage = (jobs > 0 ? totalPercentage / jobs : 0);
     if (jobsPercentage != percentage) {
         jobsPercentage = percentage;
-        emit q->jobsPercentageChanged();
+        Q_EMIT q->jobsPercentageChanged();
     }
 
     // TODO don't emit in dataChanged
-    emit q->countChanged();
+    Q_EMIT q->countChanged();
 }
 
 bool Notifications::Private::isGroup(const QModelIndex &idx)
@@ -427,7 +427,7 @@ void Notifications::setGroupLimit(int limit)
     if (d->groupCollapsingModel) {
         d->groupCollapsingModel->setLimit(limit);
     }
-    emit groupLimitChanged();
+    Q_EMIT groupLimitChanged();
 }
 
 bool Notifications::expandUnread() const
@@ -445,7 +445,7 @@ void Notifications::setExpandUnread(bool expand)
     if (d->groupCollapsingModel) {
         d->groupCollapsingModel->setExpandUnread(expand);
     }
-    emit expandUnreadChanged();
+    Q_EMIT expandUnreadChanged();
 }
 
 bool Notifications::showExpired() const
@@ -521,7 +521,7 @@ void Notifications::setShowNotifications(bool show)
 
     d->showNotifications = show;
     d->initSourceModels();
-    emit showNotificationsChanged();
+    Q_EMIT showNotificationsChanged();
 }
 
 bool Notifications::showJobs() const
@@ -537,7 +537,7 @@ void Notifications::setShowJobs(bool show)
 
     d->showJobs = show;
     d->initSourceModels();
-    emit showJobsChanged();
+    Q_EMIT showJobsChanged();
 }
 
 Notifications::Urgencies Notifications::urgencies() const
@@ -580,7 +580,7 @@ void Notifications::setGroupMode(GroupMode groupMode)
     if (d->groupMode != groupMode) {
         d->groupMode = groupMode;
         d->initProxyModels();
-        emit groupModeChanged();
+        Q_EMIT groupModeChanged();
     }
 }
 

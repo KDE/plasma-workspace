@@ -46,7 +46,7 @@ void LimitedRowCountProxyModel::setLimit(int limit)
     if (m_limit != limit) {
         m_limit = limit;
         invalidateFilter();
-        emit limitChanged();
+        Q_EMIT limitChanged();
     }
 }
 

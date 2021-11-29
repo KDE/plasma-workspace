@@ -76,7 +76,7 @@ void AppMenuApplet::setModel(AppMenuModel *model)
 {
     if (m_model != model) {
         m_model = model;
-        emit modelChanged();
+        Q_EMIT modelChanged();
     }
 }
 
@@ -89,7 +89,7 @@ void AppMenuApplet::setView(int type)
 {
     if (m_viewType != type) {
         m_viewType = type;
-        emit viewChanged();
+        Q_EMIT viewChanged();
     }
 }
 
@@ -102,7 +102,7 @@ void AppMenuApplet::setCurrentIndex(int currentIndex)
 {
     if (m_currentIndex != currentIndex) {
         m_currentIndex = currentIndex;
-        emit currentIndexChanged();
+        Q_EMIT currentIndexChanged();
     }
 }
 
@@ -115,7 +115,7 @@ void AppMenuApplet::setButtonGrid(QQuickItem *buttonGrid)
 {
     if (m_buttonGrid != buttonGrid) {
         m_buttonGrid = buttonGrid;
-        emit buttonGridChanged();
+        Q_EMIT buttonGridChanged();
     }
 }
 
@@ -248,7 +248,7 @@ bool AppMenuApplet::eventFilter(QObject *watched, QEvent *event)
         // TODO right to left languages
         if (e->key() == Qt::Key_Left) {
             int desiredIndex = m_currentIndex - 1;
-            emit requestActivateIndex(desiredIndex);
+            Q_EMIT requestActivateIndex(desiredIndex);
             return true;
         } else if (e->key() == Qt::Key_Right) {
             if (menu->activeAction() && menu->activeAction()->menu()) {
@@ -256,7 +256,7 @@ bool AppMenuApplet::eventFilter(QObject *watched, QEvent *event)
             }
 
             int desiredIndex = m_currentIndex + 1;
-            emit requestActivateIndex(desiredIndex);
+            Q_EMIT requestActivateIndex(desiredIndex);
             return true;
         }
 
@@ -281,7 +281,7 @@ bool AppMenuApplet::eventFilter(QObject *watched, QEvent *event)
             return false;
         }
 
-        emit requestActivateIndex(buttonIndex);
+        Q_EMIT requestActivateIndex(buttonIndex);
     }
 
     return false;

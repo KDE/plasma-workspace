@@ -227,6 +227,6 @@ void RecentContactsModel::personDataChanged()
 
         QModelIndex idx = sourceModel()->index(row, 0);
 
-        emit dataChanged(idx, idx);
+        Q_EMIT dataChanged(idx, idx);
     }
 }

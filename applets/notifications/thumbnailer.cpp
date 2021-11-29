@@ -53,7 +53,7 @@ void Thumbnailer::setUrl(const QUrl &url)
 {
     if (m_url != url) {
         m_url = url;
-        emit urlChanged();
+        Q_EMIT urlChanged();
 
         generatePreview();
     }
@@ -68,7 +68,7 @@ void Thumbnailer::setSize(const QSize &size)
 {
     if (m_size != size) {
         m_size = size;
-        emit sizeChanged();
+        Q_EMIT sizeChanged();
 
         generatePreview();
     }
@@ -126,32 +126,32 @@ void Thumbnailer::generatePreview()
     connect(job, &KIO::PreviewJob::gotPreview, this, [this](const KFileItem &item, const QPixmap &preview) {
         Q_UNUSED(item);
         m_pixmap = preview;
-        emit pixmapChanged();
+        Q_EMIT pixmapChanged();
 
         if (!m_iconName.isEmpty()) {
             m_iconName.clear();
-            emit iconNameChanged();
+            Q_EMIT iconNameChanged();
         }
     });
 
     connect(job, &KIO::PreviewJob::failed, this, [this](const KFileItem &item) {
         m_pixmap = QPixmap();
-        emit pixmapChanged();
+        Q_EMIT pixmapChanged();
 
         const QString &iconName = item.determineMimeType().iconName();
         if (m_iconName != iconName) {
             m_iconName = iconName;
-            emit iconNameChanged();
+            Q_EMIT iconNameChanged();
         }
     });
 
     connect(job, &KJob::result, this, [this] {
         m_busy = false;
-        emit busyChanged();
+        Q_EMIT busyChanged();
     });
 
     m_busy = true;
-    emit busyChanged();
+    Q_EMIT busyChanged();
 
     job->start();
 }

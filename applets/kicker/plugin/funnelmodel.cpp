@@ -38,10 +38,10 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
 
         endResetModel();
 
-        emit countChanged();
+        Q_EMIT countChanged();
 
-        emit sourceModelChanged();
-        emit descriptionChanged();
+        Q_EMIT sourceModelChanged();
+        Q_EMIT descriptionChanged();
 
         return;
     }
@@ -74,13 +74,13 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
     }
 
     if (newCount > 0) {
-        emit dataChanged(index(0, 0), index(qMin(oldCount, newCount) - 1, 0));
+        Q_EMIT dataChanged(index(0, 0), index(qMin(oldCount, newCount) - 1, 0));
     }
 
     if (oldCount != newCount) {
-        emit countChanged();
+        Q_EMIT countChanged();
     }
 
-    emit sourceModelChanged();
-    emit descriptionChanged();
+    Q_EMIT sourceModelChanged();
+    Q_EMIT descriptionChanged();
 }

@@ -26,7 +26,7 @@ void NotificationFilterProxyModel::setUrgencies(Notifications::Urgencies urgenci
     if (m_urgencies != urgencies) {
         m_urgencies = urgencies;
         invalidateFilter();
-        emit urgenciesChanged();
+        Q_EMIT urgenciesChanged();
     }
 }
 
@@ -40,7 +40,7 @@ void NotificationFilterProxyModel::setShowExpired(bool show)
     if (m_showExpired != show) {
         m_showExpired = show;
         invalidateFilter();
-        emit showExpiredChanged();
+        Q_EMIT showExpiredChanged();
     }
 }
 
@@ -54,7 +54,7 @@ void NotificationFilterProxyModel::setShowDismissed(bool show)
     if (m_showDismissed != show) {
         m_showDismissed = show;
         invalidateFilter();
-        emit showDismissedChanged();
+        Q_EMIT showDismissedChanged();
     }
 }
 
@@ -68,7 +68,7 @@ void NotificationFilterProxyModel::setBlackListedDesktopEntries(const QStringLis
     if (m_blacklistedDesktopEntries != blacklist) {
         m_blacklistedDesktopEntries = blacklist;
         invalidateFilter();
-        emit blacklistedDesktopEntriesChanged();
+        Q_EMIT blacklistedDesktopEntriesChanged();
     }
 }
 
@@ -82,7 +82,7 @@ void NotificationFilterProxyModel::setBlacklistedNotifyRcNames(const QStringList
     if (m_blacklistedNotifyRcNames != blacklist) {
         m_blacklistedNotifyRcNames = blacklist;
         invalidateFilter();
-        emit blacklistedNotifyRcNamesChanged();
+        Q_EMIT blacklistedNotifyRcNamesChanged();
     }
 }
 
@@ -96,7 +96,7 @@ void NotificationFilterProxyModel::setWhiteListedDesktopEntries(const QStringLis
     if (m_whitelistedDesktopEntries != whitelist) {
         m_whitelistedDesktopEntries = whitelist;
         invalidateFilter();
-        emit whitelistedDesktopEntriesChanged();
+        Q_EMIT whitelistedDesktopEntriesChanged();
     }
 }
 
@@ -110,7 +110,7 @@ void NotificationFilterProxyModel::setWhitelistedNotifyRcNames(const QStringList
     if (m_whitelistedNotifyRcNames != whitelist) {
         m_whitelistedNotifyRcNames = whitelist;
         invalidateFilter();
-        emit whitelistedNotifyRcNamesChanged();
+        Q_EMIT whitelistedNotifyRcNamesChanged();
     }
 }
 

@@ -131,7 +131,7 @@ int ScreenPool::firstAvailableId() const
     int i = 0;
     // find the first integer not stored in m_connectorForId
     // m_connectorForId is the only map, so the ids are sorted
-    foreach (int existingId, m_connectorForId.keys()) {
+    Q_FOREACH (int existingId, m_connectorForId.keys()) {
         if (i != existingId) {
             return i;
         }

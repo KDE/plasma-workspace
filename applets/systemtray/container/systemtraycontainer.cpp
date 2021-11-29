@@ -55,7 +55,7 @@ void SystemTrayContainer::ensureSystrayExists()
 
     uint id = config().readEntry("SystrayContainmentId", 0);
     if (id > 0) {
-        foreach (Plasma::Containment *candidate, c->containments()) {
+        Q_FOREACH (Plasma::Containment *candidate, c->containments()) {
             if (candidate->id() == id) {
                 m_innerContainment = candidate;
                 break;
@@ -88,11 +88,11 @@ void SystemTrayContainer::ensureSystrayExists()
     }
 
     m_internalSystray = m_innerContainment->property("_plasma_graphicObject").value<QQuickItem *>();
-    emit internalSystrayChanged();
+    Q_EMIT internalSystrayChanged();
 
     actions()->addAction("configure", m_innerContainment->actions()->action("configure"));
     connect(m_innerContainment.data(), &Plasma::Containment::configureRequested, this, [this](Plasma::Applet *applet) {
-        emit containment()->configureRequested(applet);
+        Q_EMIT containment()->configureRequested(applet);
     });
 
     if (m_internalSystray) {

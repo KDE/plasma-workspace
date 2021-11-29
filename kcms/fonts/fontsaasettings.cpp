@@ -271,7 +271,7 @@ void FontsAASettings::addItemInternal(const QByteArray &propertyName, const QVar
     auto item = new KPropertySkeletonItem(m_fontAASettingsStore, propertyName, defaultValue);
     addItem(item, propertyName);
     item->setNotifyFunction([this, notifySignal] {
-        emit(this->*notifySignal)();
+        Q_EMIT(this->*notifySignal)();
     });
 }
 
@@ -340,7 +340,7 @@ void FontsAASettings::setDpi(int newDPI)
     } else {
         setForceFontDPI(newDPI);
     }
-    emit dpiChanged();
+    Q_EMIT dpiChanged();
 }
 
 KXftConfig::SubPixel::Type FontsAASettings::subPixel() const

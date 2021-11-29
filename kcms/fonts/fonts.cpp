@@ -123,7 +123,7 @@ void KFonts::save()
     auto antiAliasingItem = fontsAASettings()->findItem("antiAliasing");
     Q_ASSERT(dpiItem && dpiWaylandItem && antiAliasingItem);
     if (dpiItem->isSaveNeeded() || dpiWaylandItem->isSaveNeeded() || antiAliasingItem->isSaveNeeded()) {
-        emit aliasingChangeApplied();
+        Q_EMIT aliasingChangeApplied();
     }
 
     auto forceFontDPIChanged = dpiItem->isSaveNeeded();
@@ -178,7 +178,7 @@ void KFonts::adjustFont(const QFont &font, const QString &category)
             fontsSettings()->setFixed(selFont);
         }
     }
-    emit fontsHaveChanged();
+    Q_EMIT fontsHaveChanged();
 }
 
 void KFonts::adjustAllFonts()

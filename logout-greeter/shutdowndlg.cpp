@@ -263,10 +263,10 @@ void KSMShutdownDlg::slotSuspend(int spdMethod)
 
 void KSMShutdownDlg::accept()
 {
-    emit accepted();
+    Q_EMIT accepted();
 }
 
 void KSMShutdownDlg::reject()
 {
-    emit rejected();
+    Q_EMIT rejected();
 }

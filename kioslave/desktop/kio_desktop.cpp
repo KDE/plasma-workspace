@@ -88,7 +88,7 @@ void DesktopProtocol::checkLocalInstall()
             }
         }
 
-        foreach (const QString &link, links) {
+        Q_FOREACH (const QString &link, links) {
             const auto fullPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/DesktopLinks/%1").arg(link));
             KDesktopFile file(fullPath);
             if (!file.desktopGroup().readEntry("Hidden", false))

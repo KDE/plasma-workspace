@@ -387,7 +387,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
 
 void StatusNotifierItemSource::contextMenuReady()
 {
-    emit contextMenuReady(m_menuImporter->menu());
+    Q_EMIT contextMenuReady(m_menuImporter->menu());
 }
 
 QPixmap StatusNotifierItemSource::KDbusImageStructToPixmap(const KDbusImageStruct &image) const
@@ -498,7 +498,7 @@ void StatusNotifierItemSource::activate(int x, int y)
 void StatusNotifierItemSource::activateCallback(QDBusPendingCallWatcher *call)
 {
     QDBusPendingReply<void> reply = *call;
-    emit activateResult(!reply.isError());
+    Q_EMIT activateResult(!reply.isError());
     call->deleteLater();
 }
 

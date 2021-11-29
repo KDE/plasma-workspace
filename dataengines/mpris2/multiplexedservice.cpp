@@ -36,11 +36,11 @@ Plasma::ServiceJob *MultiplexedService::createJob(const QString &operation, QMap
 void MultiplexedService::updateEnabledOperations()
 {
     if (m_control) {
-        foreach (const QString &op, operationNames()) {
+        Q_FOREACH (const QString &op, operationNames()) {
             setOperationEnabled(op, m_control.data()->isOperationEnabled(op));
         }
     } else {
-        foreach (const QString &op, operationNames()) {
+        Q_FOREACH (const QString &op, operationNames()) {
             setOperationEnabled(op, false);
         }
     }

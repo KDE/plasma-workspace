@@ -71,12 +71,12 @@ void PlasmoidRegistry::onEnabledPluginsChanged(const QStringList &enabledPlugins
 {
     for (const QString &pluginId : enabledPlugins) {
         if (m_systrayApplets.contains(pluginId) && !m_dbusObserver->isDBusActivable(pluginId)) {
-            emit plasmoidEnabled(pluginId);
+            Q_EMIT plasmoidEnabled(pluginId);
         }
     }
     for (const QString &pluginId : disabledPlugins) {
         if (m_systrayApplets.contains(pluginId)) {
-            emit plasmoidDisabled(pluginId);
+            Q_EMIT plasmoidDisabled(pluginId);
         }
     }
 }
@@ -88,8 +88,8 @@ void PlasmoidRegistry::packageInstalled(const QString &pluginId)
     if (m_systrayApplets.contains(pluginId)) {
         if (m_settings->isEnabledPlugin(pluginId) && !m_dbusObserver->isDBusActivable(pluginId)) {
             // restart plasmoid
-            emit plasmoidStopped(pluginId);
-            emit plasmoidEnabled(pluginId);
+            Q_EMIT plasmoidStopped(pluginId);
+            Q_EMIT plasmoidEnabled(pluginId);
         }
         return;
     }
@@ -120,7 +120,7 @@ void PlasmoidRegistry::registerPlugin(const KPluginMetaData &pluginMetaData)
     m_systrayApplets[pluginId] = pluginMetaData;
     m_dbusObserver->registerPlugin(pluginMetaData);
 
-    emit pluginRegistered(pluginMetaData);
+    Q_EMIT pluginRegistered(pluginMetaData);
 
     // add plasmoid if is both not enabled explicitly and not already known
     if (pluginMetaData.isEnabledByDefault()) {
@@ -134,13 +134,13 @@ void PlasmoidRegistry::registerPlugin(const KPluginMetaData &pluginMetaData)
     }
 
     if (m_settings->isEnabledPlugin(pluginId) && !m_dbusObserver->isDBusActivable(pluginId)) {
-        emit plasmoidEnabled(pluginId);
+        Q_EMIT plasmoidEnabled(pluginId);
     }
 }
 
 void PlasmoidRegistry::unregisterPlugin(const QString &pluginId)
 {
-    emit pluginUnregistered(pluginId);
+    Q_EMIT pluginUnregistered(pluginId);
 
     m_dbusObserver->unregisterPlugin(pluginId);
     m_systrayApplets.remove(pluginId);

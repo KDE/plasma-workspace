@@ -55,7 +55,7 @@ void PlayerControl::updateEnabledOperations()
     setOperationEnabled(QStringLiteral("SetShuffle"), caps & PlayerContainer::CanControl);
     setOperationEnabled(QStringLiteral("GetPosition"), true);
 
-    emit enabledOperationsChanged();
+    Q_EMIT enabledOperationsChanged();
 }
 
 QDBusObjectPath PlayerControl::trackId() const

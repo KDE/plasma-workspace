@@ -47,9 +47,9 @@ void ForwardingModel::setSourceModel(QAbstractItemModel *sourceModel)
 
     endResetModel();
 
-    emit countChanged();
-    emit sourceModelChanged();
-    emit descriptionChanged();
+    Q_EMIT countChanged();
+    Q_EMIT sourceModelChanged();
+    Q_EMIT descriptionChanged();
 }
 
 bool ForwardingModel::canFetchMore(const QModelIndex &parent) const
@@ -189,8 +189,8 @@ void ForwardingModel::reset()
     beginResetModel();
     endResetModel();
 
-    emit countChanged();
-    emit separatorCountChanged();
+    Q_EMIT countChanged();
+    Q_EMIT separatorCountChanged();
 }
 
 void ForwardingModel::connectSignals()

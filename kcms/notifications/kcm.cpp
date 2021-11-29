@@ -145,7 +145,7 @@ void KCMNotifications::setToggleDoNotDisturbShortcut(const QKeySequence &shortcu
 
     m_toggleDoNotDisturbShortcut = shortcut;
     m_toggleDoNotDisturbShortcutDirty = true;
-    emit toggleDoNotDisturbShortcutChanged();
+    Q_EMIT toggleDoNotDisturbShortcutChanged();
 }
 
 QString KCMNotifications::initialDesktopEntry() const
@@ -157,7 +157,7 @@ void KCMNotifications::setInitialDesktopEntry(const QString &desktopEntry)
 {
     if (m_initialDesktopEntry != desktopEntry) {
         m_initialDesktopEntry = desktopEntry;
-        emit initialDesktopEntryChanged();
+        Q_EMIT initialDesktopEntryChanged();
     }
 }
 
@@ -170,7 +170,7 @@ void KCMNotifications::setInitialNotifyRcName(const QString &notifyRcName)
 {
     if (m_initialNotifyRcName != notifyRcName) {
         m_initialNotifyRcName = notifyRcName;
-        emit initialNotifyRcNameChanged();
+        Q_EMIT initialNotifyRcNameChanged();
     }
 }
 
@@ -183,7 +183,7 @@ void KCMNotifications::setInitialEventId(const QString &eventId)
 {
     if (m_initialEventId != eventId) {
         m_initialEventId = eventId;
-        emit initialEventIdChanged();
+        Q_EMIT initialEventIdChanged();
     }
 }
 
@@ -281,12 +281,12 @@ void KCMNotifications::load()
 
     if (m_toggleDoNotDisturbShortcut != toggleDoNotDisturbShortcut) {
         m_toggleDoNotDisturbShortcut = toggleDoNotDisturbShortcut;
-        emit toggleDoNotDisturbShortcutChanged();
+        Q_EMIT toggleDoNotDisturbShortcutChanged();
     }
 
     m_toggleDoNotDisturbShortcutDirty = false;
     if (firstLoad) {
-        emit firstLoadDone();
+        Q_EMIT firstLoadDone();
     }
 }
 
@@ -321,7 +321,7 @@ void KCMNotifications::updateModelIsDefaultStatus(const QModelIndex &index)
 {
     if (index.isValid()) {
         m_sourcesModel->setData(index, behaviorSettings(index)->isDefaults(), SourcesModel::IsDefaultRole);
-        emit isDefaultsBehaviorSettingsChanged();
+        Q_EMIT isDefaultsBehaviorSettingsChanged();
     }
 }
 

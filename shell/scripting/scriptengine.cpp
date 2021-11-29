@@ -247,8 +247,8 @@ bool ScriptEngine::evaluateScript(const QString &script, const QString &path)
                              result.toString(),
                              result.property("lineNumber").toInt(),
                              result.property("stack").toVariant().value<QStringList>().join(QLatin1String("\n  ")));
-        emit printError(error);
-        emit exception(result);
+        Q_EMIT printError(error);
+        Q_EMIT exception(result);
         m_errorString = error;
         return false;
     }
@@ -258,7 +258,7 @@ bool ScriptEngine::evaluateScript(const QString &script, const QString &path)
 
 void ScriptEngine::exception(const QJSValue &value)
 {
-    emit printError(value.toVariant().toString());
+    Q_EMIT printError(value.toVariant().toString());
 }
 
 QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
@@ -290,7 +290,7 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
     QStringList performed = cg.readEntry("performed", QStringList());
     const QString localXdgDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
 
-    foreach (const QString &script, scripts) {
+    Q_FOREACH (const QString &script, scripts) {
         if (performed.contains(script)) {
             continue;
         }
@@ -338,7 +338,7 @@ QList<Containment *> ScriptEngine::desktopsForActivity(const QString &id)
         return result;
     }
 
-    foreach (Plasma::Containment *c, m_corona->containments()) {
+    Q_FOREACH (Plasma::Containment *c, m_corona->containments()) {
         if (c->activity() == id && !isPanel(c)) {
             result << new Containment(c, this);
         }
@@ -352,7 +352,7 @@ QList<Containment *> ScriptEngine::desktopsForActivity(const QString &id)
         ShellCorona *sc = qobject_cast<ShellCorona *>(m_corona);
         StandaloneAppCorona *ac = qobject_cast<StandaloneAppCorona *>(m_corona);
         if (sc) {
-            foreach (int i, sc->screenIds()) {
+            Q_FOREACH (int i, sc->screenIds()) {
                 result << new Containment(sc->createContainmentForActivity(id, i), this);
             }
         } else if (ac) {
@@ -370,7 +370,7 @@ Plasma::Containment *ScriptEngine::createContainment(const QString &type, const 
 {
     bool exists = false;
     const QList<KPluginMetaData> list = Plasma::PluginLoader::listContainmentsMetaDataOfType(type);
-    foreach (const KPluginMetaData &pluginInfo, list) {
+    Q_FOREACH (const KPluginMetaData &pluginInfo, list) {
         if (pluginInfo.pluginId() == plugin) {
             exists = true;
             break;

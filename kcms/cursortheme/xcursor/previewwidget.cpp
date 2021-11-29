@@ -127,7 +127,7 @@ void PreviewWidget::setThemeModel(SortProxyModel *themeModel)
     }
 
     m_themeModel = themeModel;
-    emit themeModelChanged();
+    Q_EMIT themeModelChanged();
 }
 
 SortProxyModel *PreviewWidget::themeModel()
@@ -142,7 +142,7 @@ void PreviewWidget::setCurrentIndex(int idx)
     }
 
     m_currentIndex = idx;
-    emit currentIndexChanged();
+    Q_EMIT currentIndexChanged();
 
     if (!m_themeModel) {
         return;
@@ -163,7 +163,7 @@ void PreviewWidget::setCurrentSize(int size)
     }
 
     m_currentSize = size;
-    emit currentSizeChanged();
+    Q_EMIT currentSizeChanged();
 
     if (!m_themeModel) {
         return;
@@ -192,7 +192,7 @@ void PreviewWidget::updateImplicitSize()
     qreal totalWidth = 0;
     qreal maxHeight = 0;
 
-    foreach (const PreviewCursor *c, list) {
+    Q_FOREACH (const PreviewCursor *c, list) {
         totalWidth += c->width();
         maxHeight = qMax(c->height(), (int)maxHeight);
     }
@@ -211,7 +211,7 @@ void PreviewWidget::layoutItems()
         int nextX = spacing;
         int nextY = spacing;
 
-        foreach (PreviewCursor *c, list) {
+        Q_FOREACH (PreviewCursor *c, list) {
             c->setPosition(nextX, nextY);
             nextX += c->boundingSize() + spacing;
             if (nextX + c->boundingSize() > width()) {
@@ -246,7 +246,7 @@ void PreviewWidget::paint(QPainter *painter)
     if (needLayout)
         layoutItems();
 
-    foreach (const PreviewCursor *c, list) {
+    Q_FOREACH (const PreviewCursor *c, list) {
         if (c->pixmap().isNull())
             continue;
 

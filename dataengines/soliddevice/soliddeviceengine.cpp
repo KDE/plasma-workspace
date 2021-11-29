@@ -83,7 +83,7 @@ bool SolidDeviceEngine::sourceRequestEvent(const QString &name)
     } else {
         Solid::Predicate predicate = Solid::Predicate::fromString(name);
         if (predicate.isValid() && !m_predicatemap.contains(name)) {
-            foreach (const Solid::Device &device, Solid::Device::listFromQuery(predicate)) {
+            Q_FOREACH (const Solid::Device &device, Solid::Device::listFromQuery(predicate)) {
                 m_predicatemap[name] << device.udi();
             }
 
@@ -258,7 +258,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         // the following method return QList<int> so we need to convert it to QList<QVariant>
         const QList<int> writespeeds = opticaldrive->writeSpeeds();
         QList<QVariant> variantlist;
-        foreach (int num, writespeeds) {
+        Q_FOREACH (int num, writespeeds) {
             variantlist << num;
         }
         setData(name, I18N_NOOP("Write Speeds"), variantlist);
@@ -428,7 +428,7 @@ void SolidDeviceEngine::deviceAdded(const QString &udi)
 {
     Solid::Device device(udi);
 
-    foreach (const QString &query, m_predicatemap.keys()) {
+    Q_FOREACH (const QString &query, m_predicatemap.keys()) {
         Solid::Predicate predicate = Solid::Predicate::fromString(query);
         if (predicate.matches(device)) {
             m_predicatemap[query] << udi;
@@ -645,7 +645,7 @@ void SolidDeviceEngine::deviceRemoved(const QString &udi)
         m_encryptedContainerMap.remove(udi);
     }
 
-    foreach (const QString &query, m_predicatemap.keys()) {
+    Q_FOREACH (const QString &query, m_predicatemap.keys()) {
         m_predicatemap[query].removeAll(udi);
         setData(query, m_predicatemap[query]);
     }

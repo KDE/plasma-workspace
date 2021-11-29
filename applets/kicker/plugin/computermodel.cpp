@@ -161,7 +161,7 @@ void ComputerModel::setAppNameFormat(int format)
 
         m_systemAppsModel->refresh();
 
-        emit appNameFormatChanged();
+        Q_EMIT appNameFormatChanged();
     }
 }
 
@@ -175,7 +175,7 @@ void ComputerModel::setAppletInterface(QObject *appletInterface)
     if (m_appletInterface != appletInterface) {
         m_appletInterface = appletInterface;
 
-        emit appletInterfaceChanged();
+        Q_EMIT appletInterfaceChanged();
     }
 }
 

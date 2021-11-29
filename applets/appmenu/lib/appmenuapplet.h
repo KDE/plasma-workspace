@@ -54,7 +54,7 @@ Q_SIGNALS:
     void buttonGridChanged();
     void requestActivateIndex(int index);
 
-public slots:
+public Q_SLOTS:
     void trigger(QQuickItem *ctx, int idx);
 
 protected:

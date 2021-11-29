@@ -320,7 +320,7 @@ void CFontFileList::run()
         }
     }
 
-    emit finished();
+    Q_EMIT finished();
 }
 
 void CFontFileList::fileDuplicates(const QString &folder, const QSet<TFile> &files)
@@ -479,7 +479,7 @@ void CFontFileListView::openViewer()
     QTreeWidgetItem *item;
     QSet<QString> files;
 
-    foreach (item, items)
+    Q_FOREACH (item, items)
         if (item->parent()) { // Then it is a file, not font name :-)
             files.insert(item->text(0));
         }
@@ -506,7 +506,7 @@ void CFontFileListView::properties()
     KFileItemList files;
     QMimeDatabase db;
 
-    foreach (item, items)
+    Q_FOREACH (item, items)
         if (item->parent()) {
             files.append(
                 KFileItem(QUrl::fromLocalFile(item->text(0)), db.mimeTypeForFile(item->text(0)).name(), item->text(COL_LINK).isEmpty() ? S_IFREG : S_IFLNK));
@@ -523,7 +523,7 @@ void CFontFileListView::mark()
     QList<QTreeWidgetItem *> items(selectedItems());
     QTreeWidgetItem *item;
 
-    foreach (item, items)
+    Q_FOREACH (item, items)
         if (item->parent()) {
             markItem(item);
         }
@@ -535,7 +535,7 @@ void CFontFileListView::unmark()
     QList<QTreeWidgetItem *> items(selectedItems());
     QTreeWidgetItem *item;
 
-    foreach (item, items)
+    Q_FOREACH (item, items)
         if (item->parent()) {
             unmarkItem(item);
         }
@@ -547,7 +547,7 @@ void CFontFileListView::selectionChanged()
     QList<QTreeWidgetItem *> items(selectedItems());
     QTreeWidgetItem *item;
 
-    foreach (item, items)
+    Q_FOREACH (item, items)
         if (!item->parent() && item->isSelected()) {
             item->setSelected(false);
         }
@@ -579,7 +579,7 @@ void CFontFileListView::contextMenuEvent(QContextMenuEvent *ev)
         QList<QTreeWidgetItem *> items(selectedItems());
         QTreeWidgetItem *item;
 
-        foreach (item, items) {
+        Q_FOREACH (item, items) {
             if (item->parent() && item->isSelected()) {
                 if (isMarked(item)) {
                     haveMarked = true;
@@ -623,9 +623,9 @@ void CFontFileListView::checkFiles()
             }
         }
 
-        emit haveDeletions(true);
+        Q_EMIT haveDeletions(true);
     } else {
-        emit haveDeletions(false);
+        Q_EMIT haveDeletions(false);
     }
 }
 }

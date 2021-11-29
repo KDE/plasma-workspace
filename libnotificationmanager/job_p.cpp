@@ -146,7 +146,7 @@ void JobPrivate::updateHasDetails()
 
     if (m_hasDetails != hasDetails) {
         m_hasDetails = hasDetails;
-        emit static_cast<Job *>(parent())->hasDetailsChanged();
+        Q_EMIT static_cast<Job *>(parent())->hasDetailsChanged();
     }
 }
 
@@ -230,7 +230,7 @@ void JobPrivate::delayedShow(std::chrono::milliseconds delay, ShowConditions sho
 
 void JobPrivate::kill()
 {
-    emit cancelRequested();
+    Q_EMIT cancelRequested();
 
     // In case the application doesn't respond, remove the job
     if (!m_killTimer) {
@@ -266,7 +266,7 @@ void JobPrivate::finish()
 
     // When user canceled transfer, remove it without notice
     if (m_error == KIO::ERR_USER_CANCELED) {
-        emit closed();
+        Q_EMIT closed();
         return;
     }
 
@@ -333,7 +333,7 @@ void JobPrivate::setPercent(uint percent)
     const int percentage = static_cast<int>(percent);
     if (m_percentage != percentage) {
         m_percentage = percentage;
-        emit static_cast<Job *>(parent())->percentageChanged(percentage);
+        Q_EMIT static_cast<Job *>(parent())->percentageChanged(percentage);
     }
 }
 
@@ -361,7 +361,7 @@ bool JobPrivate::setDescriptionField(uint number, const QString &name, const QSt
         dirty |= updateField(value, m_descriptionValue2, &Job::descriptionValue2Changed);
     }
     if (dirty) {
-        emit static_cast<Job *>(parent())->descriptionUrlChanged();
+        Q_EMIT static_cast<Job *>(parent())->descriptionUrlChanged();
         updateHasDetails();
     }
 
@@ -423,7 +423,7 @@ void JobPrivate::update(const QVariantMap &properties)
         const QString infoMessage = it->toString();
         if (m_infoMessage != infoMessage) {
             m_infoMessage = it->toString();
-            emit infoMessageChanged();
+            Q_EMIT infoMessageChanged();
         }
     }
 
