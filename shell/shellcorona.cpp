@@ -728,12 +728,10 @@ void ShellCorona::primaryOutputNameChanged(const QString &oldOutputName, const Q
     if (!m_desktopViewforId.contains(newPrimaryId) && !m_redundantOutputs.contains(newPrimary)) {
         m_pendingPrimaryChange = true;
         return;
-        addOutput(newPrimary);
     }
     if (!m_desktopViewforId.contains(oldPrimaryId) && !m_redundantOutputs.contains(oldPrimary)) {
         m_pendingPrimaryChange = true;
         return;
-        addOutput(oldPrimary);
     }
     m_screenPool->setPrimaryConnector(newPrimary->name());
 
