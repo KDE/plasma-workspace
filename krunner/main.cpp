@@ -44,8 +44,8 @@ int main(int argc, char **argv)
     }
 #endif
 
-    // this works around a bug of Qt and the plasmashell protocol
-    // consider re-enabling when layer-shell support lands
+
+    // this is needed to fake window position so Plasma Dialog sets correct borders
     qputenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS", {});
     // this variable controls whether to reconnect or exit if the compositor dies, given plasmashell does a lot of
     // bespoke wayland code disable for now. Consider re-enabling when layer-shell support lands

@@ -25,9 +25,7 @@
 #include <KWindowSystem>
 #include <KX11Extras>
 
-#include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/registry.h>
-#include <KWayland/Client/surface.h>
+#include <LayerShellQt/Window>
 
 #include "appadaptor.h"
 
@@ -143,28 +141,11 @@ void View::loadConfig()
 
 bool View::event(QEvent *event)
 {
-    if (KWindowSystem::isPlatformWayland() && event->type() == QEvent::Expose && !dynamic_cast<QExposeEvent *>(event)->region().isNull()) {
-        auto surface = KWayland::Client::Surface::fromWindow(this);
-        auto shellSurface = KWayland::Client::PlasmaShellSurface::get(surface);
-        if (shellSurface && isVisible()) {
-            shellSurface->setPanelBehavior(KWayland::Client::PlasmaShellSurface::PanelBehavior::WindowsGoBelow);
-            shellSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::Panel);
-            shellSurface->setPanelTakesFocus(true);
-        }
+    // Bypass Dialog so we don't create a plasmashell surface
+    if (event->type() == QEvent::Expose || event->type() == QEvent::PlatformSurface) {
+        return QQuickWindow::event(event);
     }
-    const bool retval = Dialog::event(event);
-    // QXcbWindow overwrites the state in its show event. There are plans
-    // to fix this in 5.4, but till then we must explicitly overwrite it
-    // each time.
-    bool setState = event->type() == QEvent::Show;
-    if (event->type() == QEvent::PlatformSurface) {
-        setState = (static_cast<QPlatformSurfaceEvent *>(event)->surfaceEventType() == QPlatformSurfaceEvent::SurfaceCreated);
-    }
-    if (setState) {
-        KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
-    }
-
-    return retval;
+    return Dialog::event(event);
 }
 
 void View::resizeEvent(QResizeEvent *event)
@@ -177,7 +158,7 @@ void View::resizeEvent(QResizeEvent *event)
 void View::showEvent(QShowEvent *event)
 {
     KX11Extras::setOnAllDesktops(winId(), true);
-    Dialog::showEvent(event);
+    QQuickWindow::showEvent(event);
     positionOnScreen();
     requestActivate();
 }
@@ -219,21 +200,25 @@ void View::positionOnScreen()
             break;
         }
     }
+    setScreen(shownOnScreen);
+    const QRect r = shownOnScreen->availableGeometry();
 
-    // in wayland, QScreen::availableGeometry() returns QScreen::geometry()
-    // we could get a better value from plasmashell
-    // BUG: 386114
-    message = QDBusMessage::createMethodCall("org.kde.plasmashell", "/StrutManager", "org.kde.PlasmaShell.StrutManager", "availableScreenRect");
-    message.setArguments({shownOnScreen->name()});
-    QDBusPendingCall call = QDBusConnection::sessionBus().asyncCall(message);
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
-
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher, shownOnScreen]() {
-        watcher->deleteLater();
-        QDBusPendingReply<QRect> reply = *watcher;
-
-        const QRect r = reply.isValid() ? reply.value() : shownOnScreen->availableGeometry();
-
+    if (KWindowSystem::isPlatformWayland()) {
+        auto layerWindow = LayerShellQt::Window::get(this);
+        layerWindow->setAnchors(LayerShellQt::Window::AnchorTop);
+        layerWindow->setLayer(LayerShellQt::Window::LayerTop);
+        layerWindow->setScope(QStringLiteral("krunner"));
+        layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
+        if (m_floating) {
+            layerWindow->setMargins({0, r.height() / 3, 0, 0});
+        } else {
+            layerWindow->setMargins(QMargins());
+            // Workaround so Dialog gets the borders correct
+            auto geom = geometry();
+            geom.moveCenter({r.center().x(), 0});
+            setGeometry(geom);
+        }
+    } else {
         if (m_floating && !m_customPos.isNull()) {
             int x = qBound(r.left(), m_customPos.x(), r.right() - width());
             int y = qBound(r.top(), m_customPos.y(), r.bottom() - height());
@@ -249,23 +234,30 @@ void View::positionOnScreen()
         if (m_floating) {
             y += r.height() / 3;
         }
-
         x = qBound(r.left(), x, r.right() - width());
         y = qBound(r.top(), y, r.bottom() - height());
 
         setPosition(x, y);
-        setLocation(m_floating ? Plasma::Types::Floating : Plasma::Types::TopEdge);
-        PlasmaQuick::Dialog::setVisible(true);
 
         if (m_floating) {
             KX11Extras::setOnDesktop(winId(), KX11Extras::currentDesktop());
-            KWindowSystem::setType(winId(), NET::Normal);
         } else {
             KX11Extras::setOnAllDesktops(winId(), true);
         }
+        KWindowSystem::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+    }
 
+    if (m_floating) {
+        // Turn the sliding effect off
+        setLocation(Plasma::Types::Floating);
+    } else {
+        setLocation(Plasma::Types::TopEdge);
+    }
+
+    PlasmaQuick::Dialog::setVisible(true);
+    if (KWindowSystem::isPlatformX11()) {
         KX11Extras::forceActiveWindow(winId());
-    });
+    }
 }
 
 void View::toggleDisplay()

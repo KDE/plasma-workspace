@@ -24,6 +24,7 @@ target_link_libraries(krunner
     KF6::WaylandClient
     KF6::Runner
     PW::KWorkspace
+    LayerShellQt::Interface
 )
 target_compile_definitions(krunner PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 
