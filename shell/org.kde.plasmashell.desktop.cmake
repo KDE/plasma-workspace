@@ -20,6 +20,7 @@ Name[ga]=Spás Oibre Deisce Plasma
 Name[gl]=Espazo de traballo do escritorio Plasma
 Name[he]=תחנת עבודה של שולחן העבודה Plasma
 Name[hr]=Plasma radno okruženje
+Name[hsb]=Plasma-dźěłowy rum z dźěłowym powjerchom
 Name[hu]=Plazma asztali munkaterület
 Name[ia]=Spatio de labor de scriptorio de Plasma
 Name[id]=Ruangkerja Desktop Plasma
