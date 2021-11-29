@@ -81,6 +81,7 @@ Name[fi]=Suorita komento leikepöydän sisällöstä
 Name[fr]=Exécuter la commande en utilisant le contenu du presse-papier
 Name[gl]=Executar a orde segundo o contido do portapapeis
 Name[hi]=क्लिपबोर्ड सामग्री पर समादेश चलाएँ
+Name[hsb]=Wuwjedźe přikazy na wobsahu zapisnika
 Name[hu]=Parancs futtatása a vágólap tartalmával
 Name[ia]=Executa  commando sur contentos de area de transferentia
 Name[id]=Jalankan perintah pada konten-konten papan-klip
