@@ -117,7 +117,7 @@ SessionManagementScreen {
             Layout.preferredHeight: passwordBox.implicitHeight
             Layout.preferredWidth: text.length == 0 ? loginButton.Layout.preferredHeight : -1
 
-            icon.name: text.length == 0 ? "go-next" : ""
+            icon.name: text.length == 0 ? (root.LayoutMirroring.enabled ? "go-previous" : "go-next") : ""
 
             text: root.showUsernamePrompt || userList.currentItem.needsPassword ? "" : i18n("Log In")
             onClicked: startLogin();

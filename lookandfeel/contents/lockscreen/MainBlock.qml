@@ -93,7 +93,7 @@ SessionManagementScreen {
             Layout.preferredHeight: passwordBox.implicitHeight
             Layout.preferredWidth: loginButton.Layout.preferredHeight
 
-            icon.name: "go-next"
+            icon.name: LayoutMirroring.enabled ? "go-previous" : "go-next"
 
             onClicked: startLogin()
         }
