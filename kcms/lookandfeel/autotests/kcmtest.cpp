@@ -228,7 +228,7 @@ void KcmTest::testKCMSave()
     cgd = KConfigGroup(&configDefault, "General");
     // save() capitalizes the ColorScheme
     QCOMPARE(cg.readEntry("ColorScheme", QString()), QString());
-    QCOMPARE(cgd.readEntry("ColorScheme", QString()), QStringLiteral("TestValue"));
+    QCOMPARE(cgd.readEntry("ColorScheme", QString()), QStringLiteral("testValue"));
 
     cg = KConfigGroup(&config, "Icons");
     cgd = KConfigGroup(&configDefault, "Icons");
