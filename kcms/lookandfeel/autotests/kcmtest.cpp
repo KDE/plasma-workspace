@@ -228,7 +228,7 @@ void KcmTest::testKCMSave()
     cgd = KConfigGroup(&configDefault, "General");
     // save() capitalizes the ColorScheme
     QCOMPARE(cg.readEntry("ColorScheme", QString()), QString());
-    QCOMPARE(cgd.readEntry("ColorScheme", QString()), QStringLiteral("TestValue"));
+    QCOMPARE(cgd.readEntry("ColorScheme", QString()), QStringLiteral("testValue"));
 
     cg = KConfigGroup(&config, "Icons");
     cgd = KConfigGroup(&configDefault, "Icons");
@@ -255,7 +255,7 @@ void KcmTest::testKCMSave()
     cgd = KConfigGroup(&splashConfigDefault, "KSplash");
     QCOMPARE(cg.readEntry("Theme", QString()), QString());
     QCOMPARE(cg.readEntry("Engine", QString()), QString());
-    QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
+    QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("org.kde.test"));
     QCOMPARE(cgd.readEntry("Engine", QString()), QStringLiteral("KSplashQML"));
 
     KConfig lockerConfig(QStringLiteral("kscreenlockerrc"));
