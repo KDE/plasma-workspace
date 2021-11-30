@@ -12,6 +12,7 @@
 
 #include "debug.h"
 
+#include <KWindowSystem>
 #include <QDebug>
 
 using namespace NotificationManager;
@@ -57,18 +58,41 @@ ServerInfo *Server::currentOwner() const
 void Server::closeNotification(uint notificationId, CloseReason reason)
 {
     Q_EMIT notificationRemoved(notificationId, reason);
-
     Q_EMIT d->NotificationClosed(notificationId, static_cast<uint>(reason)); // tell on DBus
 }
 
-void Server::invokeAction(uint notificationId, const QString &actionName)
+void Server::invokeAction(uint notificationId, const QString &actionName, const QString &xdgActivationAppId, Notifications::InvokeBehavior behavior)
 {
-    Q_EMIT d->ActionInvoked(notificationId, actionName);
+    if (KWindowSystem::isPlatformWayland()) {
+        QWindow *window = nullptr;
+        const quint32 launchedSerial = KWindowSystem::lastInputSerial(window);
+        auto conn = QSharedPointer<QMetaObject::Connection>::create();
+        *conn = connect(KWindowSystem::self(),
+                        &KWindowSystem::xdgActivationTokenArrived,
+                        this,
+                        [this, actionName, notificationId, launchedSerial, conn, behavior](quint32 serial, const QString &token) {
+                            if (serial == launchedSerial) {
+                                disconnect(*conn);
+                                Q_EMIT d->ActivationToken(notificationId, token);
+                                Q_EMIT d->ActionInvoked(notificationId, actionName);
+
+                                if (behavior & Notifications::Close) {
+                                    Q_EMIT d->CloseNotification(notificationId);
+                                }
+                            }
+                        });
+        KWindowSystem::requestXdgActivationToken(window, launchedSerial, xdgActivationAppId);
+    } else {
+        Q_EMIT d->ActionInvoked(notificationId, actionName);
+        if (behavior & Notifications::Close) {
+            Q_EMIT d->CloseNotification(notificationId);
+        }
+    }
 }
 
-void Server::reply(const QString &dbusService, uint notificationId, const QString &text)
+void Server::reply(const QString &dbusService, uint notificationId, const QString &text, Notifications::InvokeBehavior behavior)
 {
-    d->sendReplyText(dbusService, notificationId, text);
+    d->sendReplyText(dbusService, notificationId, text, behavior);
 }
 
 uint Server::add(const Notification &notification)

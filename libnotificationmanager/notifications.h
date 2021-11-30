@@ -344,6 +344,14 @@ public:
     };
     Q_ENUM(GroupMode)
 
+    enum InvokeBehavior {
+        None = 0,
+        Close = 1,
+    };
+    Q_ENUM(InvokeBehavior)
+    Q_DECLARE_FLAGS(InvokeBehaviors, InvokeBehavior)
+    Q_FLAG(InvokeBehaviors)
+
     int limit() const;
     void setLimit(int limit);
 
@@ -440,7 +448,7 @@ public:
      * Invokes the action that should be triggered when clicking
      * the notification bubble itself.
      */
-    Q_INVOKABLE void invokeDefaultAction(const QModelIndex &idx);
+    Q_INVOKABLE void invokeDefaultAction(const QModelIndex &idx, InvokeBehavior behavior = None);
     /**
      * @brief Invoke a notification action
      *
@@ -448,7 +456,7 @@ public:
      * For invoking the default action, i.e. the one that is triggered
      * when clicking the notification bubble, use invokeDefaultAction
      */
-    Q_INVOKABLE void invokeAction(const QModelIndex &idx, const QString &actionId);
+    Q_INVOKABLE void invokeAction(const QModelIndex &idx, const QString &actionId, InvokeBehavior = None);
 
     /**
      * @brief Reply to a notification
@@ -456,7 +464,7 @@ public:
      * Replies to the given notification with the given text.
      * @since 5.18
      */
-    Q_INVOKABLE void reply(const QModelIndex &idx, const QString &text);
+    Q_INVOKABLE void reply(const QModelIndex &idx, const QString &text, InvokeBehavior behavior);
 
     /**
      * @brief Start automatic timeout of notifications

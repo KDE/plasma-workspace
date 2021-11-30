@@ -551,22 +551,16 @@ QtObject {
                     return;
                 }
 
-                popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0))
-                if (!model.resident) {
-                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
-                }
+                const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0), behavior)
             }
             onActionInvoked: {
-                popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName)
-                if (!model.resident) {
-                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
-                }
+                const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName, behavior)
             }
             onReplied: {
-                popupNotificationsModel.reply(popupNotificationsModel.index(index, 0), text);
-                if (!model.resident) {
-                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
-                }
+                const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                popupNotificationsModel.reply(popupNotificationsModel.index(index, 0), text, behavior);
             }
             onOpenUrl: {
                 Qt.openUrlExternally(url);

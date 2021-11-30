@@ -8,6 +8,7 @@
 
 #include <QDBusContext>
 #include <QObject>
+#include <QSet>
 #include <QStringList>
 
 #include "notification.h"
@@ -66,6 +67,7 @@ Q_SIGNALS:
     // DBus
     void NotificationClosed(uint id, uint reason);
     void ActionInvoked(uint id, const QString &actionKey);
+    void ActivationToken(uint id, const QString &xdgActivationToken);
     // non-standard
     // This is manually emitted as targeted signal in sendReplyText()
     void NotificationReplied(uint id, const QString &text);
@@ -87,7 +89,7 @@ public: // stuff used by public class
 
     bool init();
     uint add(const Notification &notification);
-    void sendReplyText(const QString &dbusService, uint notificationId, const QString &text);
+    void sendReplyText(const QString &dbusService, uint notificationId, const QString &text, Notifications::InvokeBehavior behavior);
 
     ServerInfo *currentOwner() const;
 
@@ -106,6 +108,7 @@ private Q_SLOTS:
     void onBroadcastNotification(const QMap<QString, QVariant> &properties);
 
 private:
+    friend class Server;
     void onServiceOwnershipLost(const QString &serviceName);
     void onInhibitionServiceUnregistered(const QString &serviceName);
     void onInhibitedChanged(); // Q_EMIT DBus change signal

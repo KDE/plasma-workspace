@@ -348,6 +348,7 @@ void Notification::Private::processHints(const QVariantMap &hints)
     originName = hints.value(QStringLiteral("x-kde-origin-name")).toString();
 
     eventId = hints.value(QStringLiteral("x-kde-eventId")).toString();
+    xdgTokenAppId = hints.value(QStringLiteral("x-kde-xdgTokenAppId")).toString();
 
     bool ok;
     const int urgency = hints.value(QStringLiteral("urgency")).toInt(&ok); // DBus type is actually "byte"

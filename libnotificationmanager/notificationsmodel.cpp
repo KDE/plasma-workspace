@@ -66,7 +66,7 @@ void NotificationsModel::close(uint notificationId)
     }
 }
 
-void NotificationsModel::invokeDefaultAction(uint notificationId)
+void NotificationsModel::invokeDefaultAction(uint notificationId, Notifications::InvokeBehavior behavior)
 {
     const int row = rowOfNotification(notificationId);
     if (row == -1) {
@@ -79,10 +79,13 @@ void NotificationsModel::invokeDefaultAction(uint notificationId)
         return;
     }
 
-    Server::self().invokeAction(notificationId, QStringLiteral("default")); // FIXME make a static Notification::defaultActionName() or something
+    Server::self().invokeAction(notificationId,
+                                QStringLiteral("default"), // FIXME make a static Notification::defaultActionName() or something
+                                notification.d->xdgTokenAppId,
+                                behavior);
 }
 
-void NotificationsModel::invokeAction(uint notificationId, const QString &actionName)
+void NotificationsModel::invokeAction(uint notificationId, const QString &actionName, Notifications::InvokeBehavior behavior)
 {
     const int row = rowOfNotification(notificationId);
     if (row == -1) {
@@ -95,10 +98,10 @@ void NotificationsModel::invokeAction(uint notificationId, const QString &action
         return;
     }
 
-    Server::self().invokeAction(notificationId, actionName);
+    Server::self().invokeAction(notificationId, actionName, notification.d->xdgTokenAppId, behavior);
 }
 
-void NotificationsModel::reply(uint notificationId, const QString &text)
+void NotificationsModel::reply(uint notificationId, const QString &text, Notifications::InvokeBehavior behavior)
 {
     const int row = rowOfNotification(notificationId);
     if (row == -1) {
@@ -111,7 +114,7 @@ void NotificationsModel::reply(uint notificationId, const QString &text)
         return;
     }
 
-    Server::self().reply(notification.dBusService(), notificationId, text);
+    Server::self().reply(notification.dBusService(), notificationId, text, behavior);
 }
 
 void NotificationsModel::configure(uint notificationId)
@@ -124,7 +127,10 @@ void NotificationsModel::configure(uint notificationId)
     const Notification &notification = notifications().at(row);
 
     if (notification.d->hasConfigureAction) {
-        Server::self().invokeAction(notificationId, QStringLiteral("settings")); // FIXME make a static Notification::configureActionName() or something
+        Server::self().invokeAction(notificationId,
+                                    QStringLiteral("settings"),
+                                    notification.d->xdgTokenAppId,
+                                    Notifications::None); // FIXME make a static Notification::configureActionName() or something
         return;
     }
 

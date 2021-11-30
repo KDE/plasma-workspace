@@ -84,6 +84,7 @@ public:
     QString replySubmitButtonIconName;
 
     QString category;
+    QString xdgTokenAppId;
 
     QList<QUrl> urls;
     QVariantMap hints = QVariantMap();

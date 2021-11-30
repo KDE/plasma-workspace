@@ -710,24 +710,24 @@ void Notifications::configure(const QModelIndex &idx)
     d->notificationsModel->configure(Private::notificationId(idx));
 }
 
-void Notifications::invokeDefaultAction(const QModelIndex &idx)
+void Notifications::invokeDefaultAction(const QModelIndex &idx, InvokeBehavior behavior)
 {
     if (d->notificationsModel) {
-        d->notificationsModel->invokeDefaultAction(Private::notificationId(idx));
+        d->notificationsModel->invokeDefaultAction(Private::notificationId(idx), behavior);
     }
 }
 
-void Notifications::invokeAction(const QModelIndex &idx, const QString &actionId)
+void Notifications::invokeAction(const QModelIndex &idx, const QString &actionId, InvokeBehavior behavior)
 {
     if (d->notificationsModel) {
-        d->notificationsModel->invokeAction(Private::notificationId(idx), actionId);
+        d->notificationsModel->invokeAction(Private::notificationId(idx), actionId, behavior);
     }
 }
 
-void Notifications::reply(const QModelIndex &idx, const QString &text)
+void Notifications::reply(const QModelIndex &idx, const QString &text, InvokeBehavior behavior)
 {
     if (d->notificationsModel) {
-        d->notificationsModel->reply(Private::notificationId(idx), text);
+        d->notificationsModel->reply(Private::notificationId(idx), text, behavior);
     }
 }
 
