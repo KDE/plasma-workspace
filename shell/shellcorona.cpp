@@ -715,7 +715,6 @@ void ShellCorona::primaryOutputNameChanged(const QString &oldOutputName, const Q
 
     QScreen *oldPrimary = m_primaryWatcher->screenForName(oldOutputName);
     QScreen *newPrimary = m_primaryWatcher->primaryScreen();
-    qWarning()<<"OLD"<<oldPrimary<<"NEW"<<newPrimary;
 
     if (!newPrimary || newPrimary == oldPrimary || newPrimary->geometry().isNull()) {
         return;

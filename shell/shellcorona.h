@@ -250,7 +250,7 @@ private:
 
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
     bool m_closingDown : 1;
-    bool m_pendingPrimaryChange : 1 = false;
+    bool m_pendingPrimaryChange = false;
     QString m_testModeLayout;
 
     StrutManager *m_strutManager;
