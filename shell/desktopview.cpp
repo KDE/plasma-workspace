@@ -68,6 +68,8 @@ void DesktopView::showEvent(QShowEvent *e)
 void DesktopView::setScreenToFollow(QScreen *screen)
 {
     if (screen == m_screenToFollow) {
+        // Call adaptToScreen anyways, as sometimes the QScreen* is recycled to represent another one and only the name changes, for which there isn't a signal
+        adaptToScreen();
         return;
     }
 

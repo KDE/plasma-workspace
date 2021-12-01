@@ -213,6 +213,7 @@ private:
     void updateStruts();
     void configurationChanged(const QString &path);
     bool isOutputRedundant(QScreen *screen) const;
+    bool noRealOutputsConnected() const;
     void reconsiderOutputs();
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
     DesktopView *desktopForScreen(QScreen *screen) const;
