@@ -27,6 +27,7 @@ ColumnLayout {
 
     property bool inGroup: false
     property bool inHistory: false
+    property ListView listViewParent: null
 
     property alias applicationIconSource: notificationHeading.applicationIconSource
     property alias applicationName: notificationHeading.applicationName
@@ -241,6 +242,7 @@ ColumnLayout {
 
                     SelectableLabel {
                         id: bodyLabel
+                        listViewParent: notificationItem.listViewParent
                         // FIXME how to assign this via State? target: bodyLabel.Layout doesn't work and just assigning the property doesn't either
                         Layout.alignment: notificationItem.inGroup ? Qt.AlignTop : Qt.AlignVCenter
                         Layout.fillWidth: true

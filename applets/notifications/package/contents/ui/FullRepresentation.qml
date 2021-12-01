@@ -430,6 +430,7 @@ PlasmaComponents3.Page {
 
                                         inGroup: model.isInGroup
                                         inHistory: true
+                                        listViewParent: list
 
                                         applicationName: model.applicationName
                                         applicationIconSource: model.applicationIconName
