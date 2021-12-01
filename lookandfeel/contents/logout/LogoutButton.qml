@@ -27,7 +27,7 @@ ActionButton {
     circleOpacity: 0.15 // Selected option's circle is instantly visible
     opacity: activeFocus || containsMouse ? 1 : 0.5
     Behavior on opacity {
-        OpacityAnimator {
+        PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
             duration: PlasmaCore.Units.longDuration
             easing.type: Easing.InOutQuad
         }
