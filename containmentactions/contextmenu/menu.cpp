@@ -66,7 +66,6 @@ void ContextMenu::restore(const KConfigGroup &config)
         actions.insert(QStringLiteral("configure shortcuts"), false);
         m_actionOrder << QStringLiteral("configure")
                       << QStringLiteral("_display_settings")
-                      << QStringLiteral("run associated application")
                       << QStringLiteral("configure shortcuts")
                       << QStringLiteral("_sep1")
                       << QStringLiteral("_context")
@@ -83,6 +82,7 @@ void ContextMenu::restore(const KConfigGroup &config)
                       << QStringLiteral("_wallpaper");
         disabled.insert(QStringLiteral("configure shortcuts"));
         disabled.insert(QStringLiteral("_run_command"));
+        disabled.insert(QStringLiteral("run associated application"));
     }
     // clang-format on
 
