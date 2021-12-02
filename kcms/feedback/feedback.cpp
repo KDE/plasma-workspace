@@ -10,6 +10,8 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
+
+#include <QFileInfo>
 #include <QVector>
 
 #include <KUserFeedback/FeedbackConfigUiController>
@@ -120,10 +122,15 @@ QJsonArray Feedback::audits() const
 {
     QJsonArray ret;
     for (auto it = s_programs.constBegin(); it != s_programs.constEnd(); ++it) {
-        ret += QJsonObject {
-            { "program", it.key() },
-            { "audits", QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + '/' + it->kuserfeedbackComponent + QStringLiteral("/kuserfeedback/audit")).toString() },
-        };
+        QString feedbackLocation =
+            QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + '/' + it->kuserfeedbackComponent + QStringLiteral("/kuserfeedback/audit");
+
+        if (QFileInfo::exists(feedbackLocation)) {
+            ret += QJsonObject{
+                {"program", it.key()},
+                {"audits", feedbackLocation},
+            };
+        }
     }
     return ret;
 }
