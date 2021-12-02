@@ -101,10 +101,11 @@ Comment[x-test]=xxRun Plasmoids as simple applicationsxx
 Comment[zh_CN]=将小部件当作简单应用程序运行
 Comment[zh_TW]=以簡單應用程式執行 Plasma 小元件
 
-Exec=plasmawindowed %u
+Exec=@CMAKE_INSTALL_PREFIX@/bin/plasmawindowed
 Terminal=false
-Hidden=true
+NoDisplay=true
 Icon=plasma
 Type=Application
 X-DBUS-StartupType=Unique
 InitialPreference=1
+X-KDE-Wayland-Interfaces=org_kde_plasma_window_management,org_kde_kwin_keystate,zkde_screencast_unstable_v1,org_kde_plasma_activation_feedback
