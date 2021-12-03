@@ -53,8 +53,8 @@ Kirigami.AbstractApplicationWindow {
      */
     property bool acceptable: true
     
-    width: column.implicitWidth
-    height: column.implicitHeight + footer.implicitHeight
+    width: visible ? column.implicitWidth : 0
+    height: visible ? column.implicitHeight + footer.implicitHeight : 0
     minimumHeight: column.Layout.minimumHeight + footer.implicitHeight
     minimumWidth: column.Layout.minimumWidth
     
