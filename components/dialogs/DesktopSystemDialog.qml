@@ -56,7 +56,7 @@ Kirigami.AbstractApplicationWindow {
     width: visible ? column.implicitWidth : 0
     height: visible ? column.implicitHeight + footer.implicitHeight : 0
     minimumHeight: column.Layout.minimumHeight + footer.implicitHeight
-    minimumWidth: column.Layout.minimumWidth
+    minimumWidth: Math.max(column.Layout.minimumWidth, footer.implicitWidth)
     
     flags: Qt.Dialog
 
