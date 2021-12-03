@@ -65,6 +65,8 @@ Item {
     readonly property bool canPlay: (canControl && mpris2Source.currentData.CanPlay) || false
     readonly property bool canPause: (canControl && mpris2Source.currentData.CanPause) || false
     readonly property bool isPlaying: root.state === "playing"
+    readonly property bool canRaise: (!root.noPlayer && mpris2Source.currentData.CanRaise) || false
+    readonly property bool canQuit: (!root.noPlayer && mpris2Source.currentData.CanQuit) || false
 
     // var instead of bool so we can use "undefined" for "shuffle not supported"
     readonly property var shuffle: !root.noPlayer && typeof mpris2Source.currentData.Shuffle === "boolean"
@@ -82,54 +84,47 @@ Item {
     Plasmoid.toolTipTextFormat: Text.PlainText
     Plasmoid.status: PlasmaCore.Types.PassiveStatus
 
-    Plasmoid.onContextualActionsAboutToShow: {
+    function populateContextualActions() {
         Plasmoid.clearActions()
 
-        if (root.noPlayer) {
-            return
-        }
+        Plasmoid.setAction("open", i18nc("Open player window or bring it to the front if already open", "Open"),  "go-up-symbolic")
+        Plasmoid.action("open").visible = Qt.binding(() => root.canRaise)
+        Plasmoid.action("open").priority = Plasmoid.LowPriorityAction
 
-        if (mpris2Source.currentData.CanRaise) {
-            var icon = mpris2Source.currentData["Desktop Icon Name"] || ""
-            Plasmoid.setAction("open", i18nc("Open player window or bring it to the front if already open", "Open"), icon)
-        }
+        Plasmoid.setAction("previous", i18nc("Play previous track", "Previous Track"),
+                           Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-forward" : "media-skip-backward");
+        Plasmoid.action("previous").enabled = Qt.binding(() => root.canGoPrevious)
+        Plasmoid.action("previous").visible = Qt.binding(() => root.canControl)
+        Plasmoid.action("previous").priority = Plasmoid.LowPriorityAction
 
-        if (canControl) {
-            Plasmoid.setAction("previous", i18nc("Play previous track", "Previous Track"),
-                               Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-forward" : "media-skip-backward");
-            Plasmoid.action("previous").enabled = Qt.binding(function() {
-                return root.canGoPrevious
-            })
+        Plasmoid.setAction("pause", i18nc("Pause playback", "Pause"), "media-playback-pause")
+        Plasmoid.action("pause").enabled = Qt.binding(() => root.state === "playing" && root.canPause)
+        Plasmoid.action("pause").visible = Qt.binding(() => root.canControl && root.state === "playing" && root.canPause)
+        Plasmoid.action("pause").priority = Plasmoid.LowPriorityAction
 
-            // if CanPause, toggle the menu entry between Play & Pause, otherwise always use Play
-            if (root.isPlaying && root.canPause) {
-                Plasmoid.setAction("pause", i18nc("Pause playback", "Pause"), "media-playback-pause")
-                Plasmoid.action("pause").enabled = Qt.binding(function() {
-                    return root.isPlaying && root.canPause;
-                });
-            } else {
-                Plasmoid.setAction("play", i18nc("Start playback", "Play"), "media-playback-start")
-                Plasmoid.action("play").enabled = Qt.binding(function() {
-                    return !root.isPlaying && root.canPlay;
-                });
-            }
+        Plasmoid.setAction("play", i18nc("Start playback", "Play"), "media-playback-start")
+        Plasmoid.action("play").enabled = Qt.binding(() => root.state !== "playing" && root.canPlay)
+        Plasmoid.action("play").visible = Qt.binding(() => root.canControl && root.state !== "playing")
+        Plasmoid.action("play").priority = Plasmoid.LowPriorityAction
 
-            Plasmoid.setAction("next", i18nc("Play next track", "Next Track"),
+        Plasmoid.setAction("next", i18nc("Play next track", "Next Track"),
                                Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-backward" : "media-skip-forward")
-            Plasmoid.action("next").enabled = Qt.binding(function() {
-                return root.canGoNext
-            })
+        Plasmoid.action("next").enabled = Qt.binding(() => root.canGoNext)
+        Plasmoid.action("next").visible = Qt.binding(() => root.canControl)
+        Plasmoid.action("next").priority = Plasmoid.LowPriorityAction
 
-            Plasmoid.setAction("stop", i18nc("Stop playback", "Stop"), "media-playback-stop")
-            Plasmoid.action("stop").enabled = Qt.binding(function() {
-                return root.isPlaying || root.state === "paused";
-            })
-        }
+        Plasmoid.setAction("stop", i18nc("Stop playback", "Stop"), "media-playback-stop")
+        Plasmoid.action("stop").enabled = Qt.binding(() => root.state === "playing" || root.state === "paused")
+        Plasmoid.action("stop").visible = Qt.binding(() => root.canControl)
+        Plasmoid.action("stop").priority = Plasmoid.LowPriorityAction
 
-        if (mpris2Source.currentData.CanQuit) {
-            Plasmoid.setActionSeparator("quitseparator");
-            Plasmoid.setAction("quit", i18nc("Quit player", "Quit"), "application-exit")
-        }
+        Plasmoid.setActionSeparator("quitseparator");
+        Plasmoid.action("quitseparator").visible = Qt.binding(() => root.canQuit)
+        Plasmoid.action("quitseparator").priority = Plasmoid.LowPriorityAction
+
+        Plasmoid.setAction("quit", i18nc("Quit player", "Quit"), "application-exit")
+        Plasmoid.action("quit").visible = Qt.binding(() => root.canQuit)
+        Plasmoid.action("quit").priority = Plasmoid.LowPriorityAction
     }
 
     // HACK Some players like Amarok take quite a while to load the next track
@@ -184,6 +179,7 @@ Item {
     Component.onCompleted: {
         mpris2Source.serviceForSource("@multiplex").enableGlobalShortcuts()
         updateMprisSourcesModel()
+        populateContextualActions()
     }
 
     function togglePlaying() {
