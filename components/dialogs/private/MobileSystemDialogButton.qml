@@ -15,7 +15,10 @@ AbstractButton {
     id: root
     
     property alias corners: background.corners
-    
+
+    property bool verticalSeparator: false
+    property bool horizontalSeparator: false
+
     background: Kirigami.ShadowedRectangle {
         id: background
         Kirigami.Theme.colorSet: Kirigami.Theme.Button
@@ -32,6 +35,19 @@ AbstractButton {
                 return Kirigami.Theme.backgroundColor
             }
         }
+
+        Kirigami.Separator {
+            anchors.left: parent.left
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            visible: root.verticalSeparator
+        }
+        Kirigami.Separator {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.top: parent.top
+            visible: root.horizontalSeparator
+        }
     }
     
     leftPadding: Kirigami.Units.largeSpacing
@@ -41,6 +57,7 @@ AbstractButton {
     
     contentItem: Item {
         implicitHeight: row.height + Kirigami.Units.smallSpacing
+        implicitWidth: row.implicitWidth
         RowLayout {
             id: row
             anchors.centerIn: parent

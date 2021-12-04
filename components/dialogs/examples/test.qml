@@ -19,73 +19,76 @@ Kirigami.AbstractApplicationWindow {
     width: 600
     height: 600
 
-    DesktopSystemDialog {
+    SystemDialog {
         id: simple
-        title: "Reset Data"
+        mainText: "Reset Data"
         subtitle: "This will reset all of your data."
         iconName: "documentinfo"
-        
-        dialogButtonBox.standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
-        dialogButtonBox.onAccepted: simple.close()
-        dialogButtonBox.onRejected: simple.close()
+
+        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
     }
-    
-    DesktopCSDSystemDialog {
-        id: simpleCSD
-        title: "Reset Data"
+
+    SystemDialog {
+        id: simpleList
+        mainText: "Reset Data"
         subtitle: "This will reset all of your data."
         iconName: "documentinfo"
-        
-        preferredWidth: Kirigami.Units.gridUnit * 17
-        actions: [
-            Kirigami.Action {
-                text: "Cancel"
-                icon.name: "dialog-cancel"
-                onTriggered: simpleCSD.close()
-            },
-            Kirigami.Action {
-                text: "OK"
-                iconName: "dialog-ok"
-                onTriggered: simpleCSD.close()
+
+        ListView {
+            Layout.fillWidth: true
+            implicitHeight: 300
+
+            model: ListModel {
+                ListElement {
+                    display: "banana"
+                }
+                ListElement {
+                    display: "banana1"
+                }
+                ListElement {
+                    display: "banana2"
+                }
+                ListElement {
+                    display: "banana3"
+                }
             }
-        ]
+            delegate: Kirigami.BasicListItem {
+                icon: "kate"
+                label: display
+                highlighted: false
+                checkable: true
+            }
+        }
+
+        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
     }
-    
-    DesktopSystemDialog {
+
+    SystemDialog {
         id: desktopPolkit
-        title: "Authentication Required"
+        mainText: "Authentication Required"
         subtitle: "Authentication is needed to run `/usr/bin/ls` as the super user."
         iconName: "im-user-online"
 
         Kirigami.PasswordField {}
 
+        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
         actions: [
             Kirigami.Action {
                 text: "Details"
                 iconName: "documentinfo"
                 onTriggered: desktopPolkit.close()
-            },
-            Kirigami.Action {
-                text: "Cancel"
-                iconName: "dialog-cancel"
-                onTriggered: desktopPolkit.close()
-            },
-            Kirigami.Action {
-                text: "OK"
-                icon.name: "dialog-ok"
-                onTriggered: desktopPolkit.close()
             }
         ]
     }
 
-    DesktopSystemDialog {
+    SystemDialog {
         id: xdgDialog
-        title: "Wallet access"
+        mainText: "Wallet access"
         subtitle: "Share your wallet with 'Somebody'."
         iconName: "kwallet"
         acceptable: false
 
-        dialogButtonBox.standardButtons: DialogButtonBox.Ok | DialogButtonBox.Ok
+        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
         Component.onCompleted: {
             dialogButtonBox.standardButton(DialogButtonBox.Ok).text = "Share"
         }
@@ -97,44 +100,107 @@ Kirigami.AbstractApplicationWindow {
             }
         ]
     }
-    
-    DesktopCSDSystemDialog {
-        id: desktopCSDPolkit
-        title: "Authentication Required"
-        subtitle: "Authentication is needed to run `/usr/bin/ls` as the super user."
-        iconName: "im-user-online"
-        preferredWidth: Kirigami.Units.gridUnit * 25
-        darkenBackground: false
-        
-        Kirigami.PasswordField {}
-        
-        actions: [
-            Kirigami.Action {
-                text: "Details"
-                iconName: "documentinfo"
-                onTriggered: desktopCSDPolkit.close()
-            },
-            Kirigami.Action {
-                text: "Cancel"
-                iconName: "dialog-cancel"
-                onTriggered: desktopCSDPolkit.close()
-            },
-            Kirigami.Action {
-                text: "OK"
-                icon.name: "dialog-ok"
-                onTriggered: desktopCSDPolkit.close()
-            }
-        ]
-    }
-    
-    MobileSystemDialog {
-        id: mobilePolkit
-        title: "Authentication Required"
-        subtitle: "Authentication is needed to run `/usr/bin/ls` as the super user."
-        preferredWidth: Kirigami.Units.gridUnit * 20
-        
-        padding: Kirigami.Units.largeSpacing
+
+    SystemDialog {
+        id: appchooser
+        title: "Open with..."
+        iconName: "applications-all"
         ColumnLayout {
+            Text {
+                text: "height: " + parent.height + " / " + xdgDialog.height
+            }
+
+            Label {
+                Layout.fillWidth: true
+                horizontalAlignment: Text.AlignHCenter
+                elide: Text.ElideRight
+                maximumLineCount: 3
+
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at viverra mi. Maecenas volutpat et nisi ac scelerisque. Mauris pulvinar blandit dapibus. Nulla facilisi. Donec congue imperdiet maximus. Aliquam gravida velit sed mattis convallis. Nam id nisi egestas nibh ultrices varius quis at sapien."
+                wrapMode: Text.WordWrap
+
+                onLinkActivated: {
+                    AppChooserData.openDiscover()
+                }
+            }
+
+            Frame {
+                id: viewBackground
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                Kirigami.Theme.inherit: false
+                Kirigami.Theme.colorSet: Kirigami.Theme.View
+                background: Rectangle {
+                    color: Kirigami.Theme.backgroundColor
+                    property color borderColor: Kirigami.Theme.textColor
+                    border.color: Qt.rgba(borderColor.r, borderColor.g, borderColor.b, 0.3)
+                }
+
+                ScrollView {
+                    anchors.fill: parent
+                    implicitHeight: grid.cellHeight * 3
+
+                    GridView {
+                        id: grid
+
+                        cellHeight: Kirigami.Units.iconSizes.huge + 50
+                        cellWidth: Kirigami.Units.iconSizes.huge + 80
+
+                        model: ListModel {
+                            ListElement {
+                                display: "banana"
+                            }
+                            ListElement {
+                                display: "banana1"
+                            }
+                            ListElement {
+                                display: "banana2"
+                            }
+                            ListElement {
+                                display: "banana3"
+                            }
+                        }
+                        delegate: Rectangle {
+                            color: "blue"
+                            height: grid.cellHeight
+                            width: grid.cellWidth
+
+                            Kirigami.Icon {
+                                source: "kalgebra"
+                            }
+                        }
+                    }
+                }
+            }
+
+            Button {
+                id: showAllAppsButton
+                Layout.alignment: Qt.AlignHCenter
+                icon.name: "view-more-symbolic"
+                text: "Show More"
+
+                onClicked: {
+                    visible = false
+                }
+            }
+
+            Kirigami.SearchField {
+                id: searchField
+                Layout.fillWidth: true
+                visible: !showAllAppsButton.visible
+                opacity: visible
+            }
+        }
+    }
+
+    SystemDialog {
+        id: mobilePolkit
+        mainText: "Authentication Required"
+        subtitle: "Authentication is needed to run `/usr/bin/ls` as the super user."
+
+        ColumnLayout {
+            width: Kirigami.Units.gridUnit * 20
+
             Kirigami.Avatar {
                 implicitHeight: Kirigami.Units.iconSizes.medium
                 implicitWidth: Kirigami.Units.iconSizes.medium
@@ -144,83 +210,57 @@ Kirigami.AbstractApplicationWindow {
                 Layout.fillWidth: true
             }
         }
-        
+
+        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
         actions: [
             Kirigami.Action {
                 text: "Details"
                 iconName: "documentinfo"
                 onTriggered: mobilePolkit.close()
-            },
-            Kirigami.Action {
-                text: "Cancel"
-                iconName: "dialog-cancel"
-                onTriggered: mobilePolkit.close()
-            },
-            Kirigami.Action {
-                text: "OK"
-                icon.name: "dialog-ok"
-                onTriggered: mobilePolkit.close()
             }
         ]
     }
-    
-    MobileSystemDialog {
+
+    SystemDialog {
         id: sim
-        title: "SIM Locked"
+        mainText: "SIM Locked"
         subtitle: "Please enter your SIM PIN in order to unlock it."
-        
-        preferredWidth: Kirigami.Units.gridUnit * 20
-        padding: Kirigami.Units.largeSpacing
-        
-        Kirigami.PasswordField { Layout.fillWidth: true }
-        
-        actions: [
-            Kirigami.Action {
-                text: "Cancel"
-                iconName: "dialog-cancel"
-                onTriggered: sim.close()
-            },
-            Kirigami.Action {
-                text: "OK"
-                icon.name: "dialog-ok"
-                onTriggered: sim.close()
-            }
-        ]
+
+        width: Kirigami.Units.gridUnit * 20
+        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
+
+        Kirigami.PasswordField {
+            Layout.fillWidth: true
+        }
     }
-    
-    MobileSystemDialog {
+
+    SystemDialog {
         id: device
-        title: "Device Request"
+        mainText: "Device Request"
         subtitle: "Allow <b>PureMaps</b> to access your location?"
-        
-        layout: MobileSystemDialog.Column
+
+        layout: Qt.Vertical
 
         actions: [
             Kirigami.Action {
                 text: "Allow all the time"
-                onTriggered: device.close()
+                onTriggered: device.accept()
             },
             Kirigami.Action {
                 text: "Allow only while the app is in use"
-                onTriggered: device.close()
+                onTriggered: device.accept()
             },
             Kirigami.Action {
                 text: "Deny"
-                onTriggered: device.close()
+                onTriggered: device.accept()
             }
         ]
     }
-    
-    MobileSystemDialog {
+
+    SystemDialog {
         id: wifi
-        title: "eduroam"
-        preferredWidth: Kirigami.Units.gridUnit * 18
-        maximumHeight: Kirigami.Units.gridUnit * 20
-        
-        leftPadding: Kirigami.Units.largeSpacing
-        rightPadding: Kirigami.Units.largeSpacing
-        topPadding: 0
-        bottomPadding: 0
+        mainText: "eduroam"
+
         Kirigami.FormLayout {
             ComboBox {
                 model: ["PEAP"]
@@ -252,115 +292,67 @@ Kirigami.AbstractApplicationWindow {
                 Layout.fillWidth: true
             }
         }
-    
-        actions: [
-            Kirigami.Action {
-                text: "Cancel"
-                iconName: "dialog-cancel"
-                onTriggered: wifi.close()
-            },
-            Kirigami.Action {
-                text: "Save"
-                icon.name: "dialog-ok"
-                onTriggered: wifi.close()
-            }
-        ]
+
+        standardButtons: DialogButtonBox.Ok | DialogButtonBox.Cancel
+        Component.onCompleted: {
+            dialogButtonBox.standardButton(DialogButtonBox.Ok).text = "Save"
+        }
     }
     
     ColumnLayout {
         anchors.fill: parent
-        CheckBox {
-            id: checkbox
-            text: "Fullscreen"
-        }
         Button {
             text: "Simple dialog (Desktop)"
             onClicked: {
-                if (checkbox.checked) {
-                    simple.showFullScreen()
-                } else {
-                    simple.show()
-                }
+                simple.present()
             }
         }
         Button {
-            text: "Simple dialog (Desktop CSD)"
+            text: "Simple List"
             onClicked: {
-                if (checkbox.checked) {
-                    simpleCSD.showFullScreen()
-                } else {
-                    simpleCSD.show()
-                }
+                simpleList.present()
             }
         }
         Button {
             text: "Polkit dialog (Desktop)"
             onClicked: {
-                if (checkbox.checked) {
-                    desktopPolkit.showFullScreen()
-                } else {
-                    desktopPolkit.show()
-                }
+                desktopPolkit.present()
             }
         }
         Button {
-            text: "Polkit dialog (Desktop CSD)"
+            text: "App Chooser(-ish)"
             onClicked: {
-                if (checkbox.checked) {
-                    desktopCSDPolkit.showFullScreen()
-                } else {
-                    desktopCSDPolkit.show()
-                }
+                appchooser.present()
             }
         }
         Button {
             text: "XDG dialog (Desktop)"
             onClicked: {
-                if (checkbox.checked) {
-                    xdgDialog.showFullScreen()
-                } else {
-                    xdgDialog.show()
-                }
+                xdgDialog.present()
             }
         }
         Button {
             text: "Polkit dialog (Mobile)"
             onClicked: {
-                if (checkbox.checked) {
-                    mobilePolkit.showFullScreen()
-                } else {
-                    mobilePolkit.show()
-                }
+                mobilePolkit.present()
             }
         }
         Button {
             text: "SIM PIN dialog (Mobile)"
             onClicked: {
-                if (checkbox.checked) {
-                    sim.showFullScreen()
-                } else {
-                    sim.show()
-                }
+                sim.present()
             }
         }
         Button {
             text: "Device request dialog (Mobile)"
             onClicked: {
-                if (checkbox.checked) {
-                    device.showFullScreen()
-                } else {
-                    device.show()
-                }
+                device.present()
             }
         }
         Button {
             text: "Wifi Dialog (Mobile)"
             onClicked: {
-                if (checkbox.checked) {
-                    wifi.showFullScreen()
-                } else {
-                    wifi.show()
-                }
+                wifi.present()
             }
         }
     }
