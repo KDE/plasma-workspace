@@ -95,7 +95,9 @@ void AbstractLayoutManager::positionItem(ItemContainer *item)
     }
 
     QRectF candidate = candidateGeometry(item);
-    item->setPosition(candidate.topLeft());
+    // Use setProperty to allow Behavior on to take effect
+    item->setProperty("x", candidate.topLeft().x());
+    item->setProperty("y", candidate.topLeft().y());
     item->setSize(candidate.size());
 }
 
