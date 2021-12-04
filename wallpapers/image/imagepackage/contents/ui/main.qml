@@ -48,10 +48,20 @@ QQC2.StackView {
             imageWallpaper.addUrl(configuredImage);
         }
     }
+
+    Connections {
+        target: wallpaper
+        function onSlideShowClosed() {
+            wallpaper.removeAction("open");
+            wallpaper.removeAction("next");
+        }
+    }
+
     Component.onCompleted: {
         wallpaper.loading = true; // delays ksplash until the wallpaper has been loaded
 
         if (wallpaper.pluginName === "org.kde.slideshow") {
+            // NOTE: Actions added here need to be removed in onSlideShowClosed()
             wallpaper.setAction("open", i18nd("plasma_wallpaper_org.kde.image", "Open Wallpaper Image"), "document-open");
             wallpaper.setAction("next", i18nd("plasma_wallpaper_org.kde.image", "Next Wallpaper Image"), "user-desktop");
         }
