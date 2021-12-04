@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=German Weather Service
+Comment=Weather forecast by German Weather Service
+X-KDE-ServiceTypes=Plasma/DataEngine
+X-KDE-ParentApp=weatherengine
+Type=Service
+Icon=noneyet
+X-KDE-Library=ion_dwd
+X-KDE-PluginInfo-Name=dwd
