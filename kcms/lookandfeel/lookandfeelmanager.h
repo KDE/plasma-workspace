@@ -101,7 +101,7 @@ private:
     bool m_applyDesktopSwitcher : 1 = true;
     bool m_applyWindowPlacement : 1 = true;
     bool m_applyShellPackage : 1 = true;
-    bool m_resetDefaultLayout : 1;
+    bool m_resetDefaultLayout : 1 = false;
     bool m_applyWindowDecoration : 1 = true;
 
     bool m_plasmashellChanged = false;
