@@ -43,6 +43,8 @@ Item {
         property int leftColumnWidth: 0
         width: PlasmaCore.Units.gridUnit * 11
 
+        enabled: false // makes PC3.Labels semi-transparent through implicit inheritance
+
         PlasmaComponents3.Label {
             id: brokenBatteryLabel
             width: parent ? parent.width : implicitWidth
@@ -132,7 +134,6 @@ Item {
                         sourceComponent: BatteryDetails {
                             inListView: false
                         }
-                        opacity: 0.5
                     }
                 }
             }
@@ -171,7 +172,7 @@ Item {
                         PlasmaComponents3.Label {
                             text: Logic.stringForBatteryState(model)
                             visible: model["Is Power Supply"]
-                            opacity: 0.6
+                            enabled: false
                         }
 
                         PlasmaComponents3.Label {
@@ -205,7 +206,6 @@ Item {
                 leftMargin: batteryIcon.width + PlasmaCore.Units.gridUnit
                 right: parent.right
             }
-            opacity: 0.5
             sourceComponent: BatteryDetails {
                 inListView: true
             }
