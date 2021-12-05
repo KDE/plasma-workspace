@@ -135,40 +135,48 @@ void User::loadData()
     bool userDataChanged = false;
     if (mUid != m_dbusIface->uid()) {
         mUid = m_dbusIface->uid();
+        mOriginalUid = mUid;
         userDataChanged = true;
         Q_EMIT uidChanged();
     }
     if (mName != m_dbusIface->userName()) {
         mName = m_dbusIface->userName();
+        mOriginalName = mName;
         userDataChanged = true;
         Q_EMIT nameChanged();
     }
     if (mFace != QUrl(m_dbusIface->iconFile())) {
         mFace = QUrl(m_dbusIface->iconFile());
+        mOriginalFace = mFace;
         mFaceValid = QFileInfo::exists(mFace.toString());
+        mOriginalFaceValid = mFaceValid;
         userDataChanged = true;
         Q_EMIT faceChanged();
         Q_EMIT faceValidChanged();
     }
     if (mRealName != m_dbusIface->realName()) {
         mRealName = m_dbusIface->realName();
+        mOriginalRealName = mRealName;
         userDataChanged = true;
         Q_EMIT realNameChanged();
     }
     if (mEmail != m_dbusIface->email()) {
         mEmail = m_dbusIface->email();
+        mOriginalEmail = mEmail;
         userDataChanged = true;
         Q_EMIT emailChanged();
     }
     const auto administrator = (m_dbusIface->accountType() == 1);
     if (mAdministrator != administrator) {
         mAdministrator = administrator;
+        mOriginalAdministrator = mAdministrator;
         userDataChanged = true;
         Q_EMIT administratorChanged();
     }
     const auto loggedIn = (mUid == getuid());
     if (mLoggedIn != loggedIn) {
         mLoggedIn = loggedIn;
+        mOriginalLoggedIn = mLoggedIn;
         userDataChanged = true;
     }
     if (userDataChanged) {
@@ -231,7 +239,19 @@ QDBusObjectPath User::path() const
 
 void User::apply()
 {
-    auto job = new UserApplyJob(m_dbusIface, mName, mEmail, mRealName, mFace.toString().replace("file://", ""), mAdministrator ? 1 : 0);
+    const auto opt = [](bool cond, auto v) {
+        if (cond) {
+            return std::optional<decltype(v)>(v);
+        }
+        return std::optional<decltype(v)>();
+    };
+    auto job =
+        new UserApplyJob(m_dbusIface,
+                         opt(mOriginalName != mName, mName),
+                         opt(mOriginalEmail != mEmail, mEmail),
+                         opt(mOriginalRealName != mRealName, mRealName),
+                         opt(mOriginalFace != mFace, mFace.toString().replace("file://", "")),
+                         opt(mOriginalAdministrator != mAdministrator, mAdministrator ? 1 : 0));
     connect(job, &UserApplyJob::result, this, [this, job] {
         switch (static_cast<UserApplyJob::Error>(job->error())) {
         case UserApplyJob::Error::PermissionDenied:
@@ -264,7 +284,12 @@ bool User::loggedIn() const
     return mLoggedIn;
 }
 
-UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIface, QString name, QString email, QString realname, QString icon, int type)
+UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIface,
+                           std::optional<QString> name,
+                           std::optional<QString> email,
+                           std::optional<QString> realname,
+                           std::optional<QString> icon,
+                           std::optional<int> type)
     : KJob()
     , m_name(name)
     , m_email(email)
@@ -293,23 +318,27 @@ void UserApplyJob::start()
     // This avoids settings any data when the user thinks they aborted the transaction, see https://bugs.kde.org/show_bug.cgi?id=425036
     // Subsequent calls do not trigger the auth dialog again
 
-    auto setAccount = asyncCall(m_dbusIface, "SetAccountType", {m_type});
-    setAccount.waitForFinished();
-    if (setAccount.isError()) {
-        setError(setAccount.error());
-        qCWarning(KCMUSERS) << setAccount.error().name() << setAccount.error().message();
-        emitResult();
-        return;
+    if (m_type.has_value()) {
+        auto setAccount = asyncCall(m_dbusIface, "SetAccountType", {*m_type});
+        setAccount.waitForFinished();
+        if (setAccount.isError()) {
+            setError(setAccount.error());
+            qCWarning(KCMUSERS) << setAccount.error().name() << setAccount.error().message();
+            emitResult();
+            return;
+        }
     }
 
-
-    const std::multimap<QString, QString> set = {
+    const std::multimap<std::optional<QString>, QString> set = {
         {m_name, "SetUserName"},
         {m_email, "SetEmail"},
         {m_realname, "SetRealName"},
     };
     for (auto const &x : set) {
-        auto resp = asyncCall(m_dbusIface, x.second, {x.first});
+        if (!x.first.has_value())
+            continue;
+
+        auto resp = asyncCall(m_dbusIface, x.second, {*x.first});
         resp.waitForFinished();
         if (resp.isError()) {
             setError(resp.error());
@@ -320,8 +349,8 @@ void UserApplyJob::start()
     }
 
     // Icon is special, since we want to resize it.
-    {
-        QImage icon(m_icon);
+    if (m_icon.has_value()) {
+        QImage icon(*m_icon);
         // 256dp square is plenty big for an avatar and will definitely be smaller than 1MB
         QImage scaled = icon.scaled(QSize(256, 256), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 

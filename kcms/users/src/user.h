@@ -13,6 +13,8 @@
 #include <QPointer>
 #include <QUrl>
 
+#include <optional>
+
 class OrgFreedesktopAccountsUserInterface;
 class QDBusError;
 
@@ -21,7 +23,12 @@ class UserApplyJob : public KJob
     Q_OBJECT
 
 public:
-    UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIface, QString name, QString email, QString realname, QString icon, int type);
+    UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIface,
+                 std::optional<QString> name,
+                 std::optional<QString> email,
+                 std::optional<QString> realname,
+                 std::optional<QString> icon,
+                 std::optional<int> type);
     void start() override;
 
     enum class Error {
@@ -35,12 +42,11 @@ public:
 private:
     void setError(const QDBusError &error);
 
-    QString m_name;
-    QString m_email;
-    QString m_realname;
-    QString m_icon;
-    int m_type;
-    int m_jobs;
+    std::optional<QString> m_name;
+    std::optional<QString> m_email;
+    std::optional<QString> m_realname;
+    std::optional<QString> m_icon;
+    std::optional<int> m_type;
     QPointer<OrgFreedesktopAccountsUserInterface> m_dbusIface;
 };
 
@@ -115,13 +121,21 @@ Q_SIGNALS:
 
 private:
     int mUid = 0;
+    int mOriginalUid = 0;
     QString mName = QString();
+    QString mOriginalName = QString();
     QString mRealName = QString();
+    QString mOriginalRealName = QString();
     QString mEmail = QString();
+    QString mOriginalEmail = QString();
     QUrl mFace = QUrl();
+    QUrl mOriginalFace = QUrl();
     bool mAdministrator = false;
+    bool mOriginalAdministrator = false;
     bool mFaceValid = false;
+    bool mOriginalFaceValid = false;
     bool mLoggedIn = false;
+    bool mOriginalLoggedIn = false;
     QDBusObjectPath mPath;
     QPointer<OrgFreedesktopAccountsUserInterface> m_dbusIface;
 };
