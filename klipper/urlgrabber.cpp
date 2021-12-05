@@ -245,7 +245,7 @@ void URLGrabber::execute(const ClipAction *action, int cmdIdx) const
     ClipCommand command = action->command(cmdIdx);
 
     if (command.isEnabled) {
-        QString text(m_myClipItem->text());
+        QString text(m_myClipItem->mimeData()->text());
         if (m_stripWhiteSpace) {
             text = text.trimmed();
         }
