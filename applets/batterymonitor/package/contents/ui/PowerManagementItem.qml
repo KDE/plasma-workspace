@@ -22,14 +22,12 @@ ColumnLayout {
     PlasmaComponents3.CheckBox {
         id: pmCheckBox
         Layout.fillWidth: true
-        Layout.leftMargin: PlasmaCore.Units.smallSpacing
         text: i18nc("Minimize the length of this string as much as possible", "Inhibit automatic sleep and screen locking")
         checked: false
     }
 
     ColumnLayout {
         Layout.fillWidth: true
-        Layout.leftMargin: PlasmaCore.Units.gridUnit + PlasmaCore.Units.smallSpacing // width of checkbox and spacer
         spacing: PlasmaCore.Units.smallSpacing
 
         InhibitionHint {

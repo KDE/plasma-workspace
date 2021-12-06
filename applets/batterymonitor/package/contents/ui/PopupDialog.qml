@@ -35,7 +35,11 @@ PlasmaComponents3.Page {
     header: PlasmaExtras.PlasmoidHeading {
         PowerManagementItem {
             id: pmSwitch
-            width: parent.width
+            anchors {
+                left: parent.left
+                leftMargin: PlasmaCore.Units.smallSpacing
+                right: parent.right
+            }
             pluggedIn: dialog.pluggedIn
             onDisabledChanged: powermanagementChanged(disabled)
             KeyNavigation.tab: batteryList
