@@ -114,13 +114,16 @@ void KCMLookandFeel::knsEntryChanged(KNSCore::EntryWrapper *wrapper)
     }
     const KNSCore::EntryInternal entry = wrapper->entry();
     auto removeItemFromModel = [&entry, this]() {
+        if (entry.uninstalledFiles().isEmpty()) {
+            return;
+        }
         const QString guessedPluginId = QFileInfo(entry.uninstalledFiles().constFirst()).fileName();
         const int index = pluginIndex(guessedPluginId);
         if (index != -1) {
             m_model->removeRows(index, 1);
         }
     };
-    if (entry.status() == KNS3::Entry::Deleted && !entry.uninstalledFiles().isEmpty()) {
+    if (entry.status() == KNS3::Entry::Deleted) {
         removeItemFromModel();
     } else if (entry.status() == KNS3::Entry::Installed && !entry.installedFiles().isEmpty()) {
         if (!entry.uninstalledFiles().isEmpty()) {
