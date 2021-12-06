@@ -325,11 +325,13 @@ ColumnLayout {
         id: actionContainer
         Layout.fillWidth: true
         Layout.preferredHeight: Math.max(actionFlow.implicitHeight, replyLoader.height)
-        visible: actionRepeater.count > 0
+        visible: actionRepeater.count > 0 && actionFlow.parent === this
 
         // Notification actions
         Flow { // it's a Flow so it can wrap if too long
             id: actionFlow
+            // For a cleaner look, if there is a thumbnail, puts the actions next to the thumbnail strip's menu button
+            parent: thumbnailStripLoader.item ? thumbnailStripLoader.item.actionContainer : actionContainer
             width: parent.width
             spacing: PlasmaCore.Units.smallSpacing
             layoutDirection: Qt.RightToLeft
