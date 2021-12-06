@@ -17,8 +17,6 @@ ColumnLayout {
     property alias disabled: pmCheckBox.checked
     property bool pluggedIn
 
-    spacing: 0
-
     PlasmaComponents3.CheckBox {
         id: pmCheckBox
         Layout.fillWidth: true
@@ -28,7 +26,6 @@ ColumnLayout {
 
     ColumnLayout {
         Layout.fillWidth: true
-        spacing: PlasmaCore.Units.smallSpacing
 
         InhibitionHint {
             Layout.fillWidth: true
