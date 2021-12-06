@@ -17,14 +17,31 @@ ColumnLayout {
     property alias disabled: pmCheckBox.checked
     property bool pluggedIn
 
+    // UI to manually inhibit sleep and screen locking
     PlasmaComponents3.CheckBox {
         id: pmCheckBox
         Layout.fillWidth: true
-        text: i18nc("Minimize the length of this string as much as possible", "Inhibit automatic sleep and screen locking")
+        text: i18nc("Minimize the length of this string as much as possible", "Manually block sleep and screen locking")
         checked: false
     }
 
+    // Separator line
+    PlasmaCore.SvgItem {
+        Layout.fillWidth: true
+
+        visible: inhibitionReasonsLayout.visibleChildren.length > 0
+
+        elementId: "horizontal-line"
+        svg: PlasmaCore.Svg {
+            imagePath: "widgets/line"
+        }
+
+    }
+
+    // list of automatic inhibitions
     ColumnLayout {
+        id: inhibitionReasonsLayout
+
         Layout.fillWidth: true
 
         InhibitionHint {
@@ -43,9 +60,9 @@ ColumnLayout {
             iconSource: visible ? inhibitions[0].Icon : ""
             text: visible ?
                     inhibitions[0].Reason ?
-                        i18n("%1 is inhibiting sleep and screen locking (%2)", inhibitions[0].Name, inhibitions[0].Reason)
+                        i18n("%1 is currently blocking sleep and screen locking (%2)", inhibitions[0].Name, inhibitions[0].Reason)
                     :
-                        i18n("%1 is inhibiting sleep and screen locking (unknown reason)", inhibitions[0].Name)
+                        i18n("%1 is currently blocking sleep and screen locking (unknown reason)", inhibitions[0].Name)
                 :
                     ""
         }
@@ -61,8 +78,8 @@ ColumnLayout {
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
             maximumLineCount: 3
-            text: i18np("%1 application is inhibiting sleep and screen locking:",
-                        "%1 applications are inhibiting sleep and screen locking:",
+            text: i18np("%1 application is currently blocking sleep and screen locking:",
+                        "%1 applications are currently blocking sleep and screen locking:",
                         inhibitions.length)
         }
 
