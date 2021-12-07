@@ -70,7 +70,7 @@ ColumnLayout {
     component BatteryDetails : GridLayout {
         id: detailsLayout
 
-        required property bool inListView
+        property bool inListView
         readonly property font font: inListView ? PlasmaCore.Theme.smallestFont : PlasmaCore.Theme.defaultFont
 
         columns: 2
@@ -135,7 +135,7 @@ ColumnLayout {
     PlasmaCore.ToolTipArea {
         Layout.fillWidth: true
         Layout.preferredHeight: infoRow.height
-        active: !detailsLoader.active
+        active: false
         z: 2
 
         mainItem: RowLayout {
@@ -169,11 +169,9 @@ ColumnLayout {
                     level: 3
                     text: batteryNameLabel.text
                 }
-                Loader {
+                BatteryDetails {
                     Layout.maximumWidth: PlasmaCore.Units.gridUnit * 11
-                    sourceComponent: BatteryDetails {
-                        inListView: false
-                    }
+                    inListView: false
                 }
             }
         }
@@ -238,15 +236,11 @@ ColumnLayout {
                     value: Number(root.battery.Percent)
                 }
 
-                Loader {
-                    id: detailsLoader
-
+                BatteryDetails {
                     Layout.fillWidth: true
                     Layout.topMargin: PlasmaCore.Units.smallSpacing
 
-                    sourceComponent: BatteryDetails {
-                        inListView: true
-                    }
+                    inListView: true
                 }
 
                 InhibitionHint {
