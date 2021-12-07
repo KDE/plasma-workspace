@@ -19,13 +19,29 @@ import "logic.js" as Logic
 ColumnLayout {
     id: root
 
+    // We'd love to use `required` properties, especially since the model provides role names for them;
+    // but unfortunately some of those roles have whitespaces in their name, which QML doesn't have any
+    // workaround for (raw identifiers like r#try in Rust would've helped here).
+    //
+    // type: {
+    //  Capacity:           int,
+    //  Energy:             real,
+    //  "Is Power Supply":  bool,
+    //  Percent:            int,
+    //  "Plugged In":       bool,
+    //  "Pretty Name":      string,
+    //  Product:            string,
+    //  State:              "Discharging"|"Charging"|"FullyCharged"|etc.,
+    //  Type:               string,
+    //  Vendor:             string,
+    // }
     property var battery
 
     // NOTE: According to the UPower spec this property is only valid for primary batteries, however
     // UPower seems to set the Present property false when a device is added but not probed yet
-    readonly property bool isPresent: model["Plugged in"]
+    readonly property bool isPresent: root.battery["Plugged in"]
 
-    readonly property bool isBroken: model.Capacity > 0 && model.Capacity < 50
+    readonly property bool isBroken: root.battery.Capacity > 0 && root.battery.Capacity < 50
 
     // Existing instance of a slider to use as a reference to calculate extra
     // margins for a progress bar, so that the row of labels on top of it
@@ -69,8 +85,8 @@ ColumnLayout {
             Layout.fillWidth: true
             Layout.columnSpan: 2
 
-            text: root.isBroken && typeof model.Capacity !== "undefined"
-                ? i18n("This battery's health is at only %1% and should be replaced. Please contact your hardware vendor for more details.", model.Capacity)
+            text: root.isBroken && typeof root.battery.Capacity !== "undefined"
+                ? i18n("This battery's health is at only %1% and should be replaced. Please contact your hardware vendor for more details.", root.battery.Capacity)
                 : ""
             font: detailsLayout.font
             visible: root.isBroken
@@ -174,10 +190,10 @@ ColumnLayout {
                 Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
                 Layout.preferredHeight: Layout.preferredWidth
 
-                batteryType: model.Type
-                percent: model.Percent
+                batteryType: root.battery.Type
+                percent: root.battery.Percent
                 hasBattery: root.isPresent
-                pluggedIn: model.State === "Charging" && model["Is Power Supply"]
+                pluggedIn: root.battery.State === "Charging" && root.battery["Is Power Supply"]
             }
 
             ColumnLayout {
@@ -192,12 +208,12 @@ ColumnLayout {
                         id: batteryNameLabel
                         Layout.fillWidth: true
                         elide: Text.ElideRight
-                        text: model["Pretty Name"]
+                        text: root.battery["Pretty Name"]
                     }
 
                     PlasmaComponents3.Label {
-                        text: Logic.stringForBatteryState(model)
-                        visible: model["Is Power Supply"]
+                        text: Logic.stringForBatteryState(root.battery)
+                        visible: root.battery["Is Power Supply"]
                         enabled: false
                     }
 
@@ -205,7 +221,7 @@ ColumnLayout {
                         id: batteryPercent
                         horizontalAlignment: Text.AlignRight
                         visible: root.isPresent
-                        text: i18nc("Placeholder is battery percentage", "%1%", model.Percent)
+                        text: i18nc("Placeholder is battery percentage", "%1%", root.battery.Percent)
                     }
                 }
 
@@ -219,7 +235,7 @@ ColumnLayout {
                     from: 0
                     to: 100
                     visible: root.isPresent
-                    value: Number(model.Percent)
+                    value: Number(root.battery.Percent)
                 }
 
                 Loader {
