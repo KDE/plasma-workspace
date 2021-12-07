@@ -125,23 +125,22 @@ Item {
             active: !detailsLoader.active
             z: 2
 
-            mainItem: Row {
+            mainItem: RowLayout {
                 id: batteryItemToolTip
 
-                Layout.minimumWidth: implicitWidth + PlasmaCore.Units.smallSpacing * 2
-                Layout.minimumHeight: implicitHeight + PlasmaCore.Units.gridUnit
-                Layout.maximumWidth: implicitWidth + PlasmaCore.Units.smallSpacing * 2
-                Layout.maximumHeight: implicitHeight + PlasmaCore.Units.gridUnit
-                width: implicitWidth + PlasmaCore.Units.smallSpacing * 2
-                height: implicitHeight + PlasmaCore.Units.gridUnit
+                Layout.minimumWidth: implicitWidth
+                Layout.minimumHeight: implicitHeight
+                Layout.maximumWidth: implicitWidth
+                Layout.maximumHeight: implicitHeight
 
-                spacing: PlasmaCore.Units.gridUnit
+                spacing: 0
 
                 BatteryIcon {
-                    x: PlasmaCore.Units.gridUnit
-                    y: PlasmaCore.Units.smallSpacing * 2
-                    width: PlasmaCore.Units.iconSizes.desktop // looks weird and small but that's what DefaultTooltip uses
-                    height: width
+                    Layout.margins: PlasmaCore.Units.smallSpacing * 2
+                    // looks weird and small but that's what DefaultTooltip uses
+                    Layout.preferredWidth: PlasmaCore.Units.iconSizes.desktop
+                    Layout.preferredHeight: Layout.preferredWidth
+
                     batteryType: batteryIcon.batteryType
                     percent: batteryIcon.percent
                     hasBattery: batteryIcon.hasBattery
@@ -149,16 +148,16 @@ Item {
                     visible: !batteryItem.isBroken
                 }
 
-                Column {
+                ColumnLayout {
                     id: mainColumn
-                    x: PlasmaCore.Units.smallSpacing * 2
-                    y: PlasmaCore.Units.smallSpacing * 2
+                    Layout.margins: PlasmaCore.Units.smallSpacing * 2
 
                     PlasmaExtras.Heading {
                         level: 3
                         text: batteryNameLabel.text
                     }
                     Loader {
+                        Layout.maximumWidth: PlasmaCore.Units.gridUnit * 11
                         sourceComponent: BatteryDetails {
                             inListView: false
                         }
