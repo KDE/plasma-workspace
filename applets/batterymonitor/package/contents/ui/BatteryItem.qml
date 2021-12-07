@@ -17,7 +17,7 @@ import org.kde.plasma.workspace.components 2.0
 import "logic.js" as Logic
 
 ColumnLayout {
-    id: batteryItem
+    id: root
 
     property var battery
 
@@ -69,21 +69,21 @@ ColumnLayout {
             Layout.fillWidth: true
             Layout.columnSpan: 2
 
-            text: batteryItem.isBroken && typeof model.Capacity !== "undefined"
+            text: root.isBroken && typeof model.Capacity !== "undefined"
                 ? i18n("This battery's health is at only %1% and should be replaced. Please contact your hardware vendor for more details.", model.Capacity)
                 : ""
             font: detailsLayout.font
-            visible: batteryItem.isBroken
+            visible: root.isBroken
             wrapMode: Text.WordWrap
         }
 
         property bool remainingTimeRowVisible: batterymonitor.remainingTime > 0
-            && batteryItem.battery["Is Power Supply"]
-            && ["Discharging", "Charging"].includes(batteryItem.battery["State"])
+            && root.battery["Is Power Supply"]
+            && ["Discharging", "Charging"].includes(root.battery["State"])
 
         LeftLabel {
             font: detailsLayout.font
-            text: batteryItem.battery["State"] === "Charging"
+            text: root.battery["State"] === "Charging"
                 ? i18n("Time To Full:")
                 : i18n("Remaining Time:")
             visible: remainingTimeRowVisible
@@ -95,9 +95,9 @@ ColumnLayout {
             visible: remainingTimeRowVisible
         }
 
-        property bool healthRowVisible: batteryItem.battery["Is Power Supply"]
-            && batteryItem.battery["Capacity"] !== ""
-            && typeof batteryItem.battery["Capacity"] === "number"
+        property bool healthRowVisible: root.battery["Is Power Supply"]
+            && root.battery["Capacity"] !== ""
+            && typeof root.battery["Capacity"] === "number"
 
         LeftLabel {
             font: detailsLayout.font
@@ -108,7 +108,7 @@ ColumnLayout {
         RightLabel {
             font: detailsLayout.font
             text: healthRowVisible
-                ? i18nc("Placeholder is battery health percentage", "%1%", batteryItem.battery["Capacity"])
+                ? i18nc("Placeholder is battery health percentage", "%1%", root.battery["Capacity"])
                 : ""
             visible: healthRowVisible
         }
@@ -142,7 +142,7 @@ ColumnLayout {
                 percent: batteryIcon.percent
                 hasBattery: batteryIcon.hasBattery
                 pluggedIn: batteryIcon.pluggedIn
-                visible: !batteryItem.isBroken
+                visible: !root.isBroken
             }
 
             ColumnLayout {
@@ -176,13 +176,13 @@ ColumnLayout {
 
                 batteryType: model.Type
                 percent: model.Percent
-                hasBattery: batteryItem.isPresent
+                hasBattery: root.isPresent
                 pluggedIn: model.State === "Charging" && model["Is Power Supply"]
             }
 
             ColumnLayout {
                 Layout.fillWidth: true
-                Layout.alignment: batteryItem.isPresent ? Qt.AlignTop : Qt.AlignVCenter
+                Layout.alignment: root.isPresent ? Qt.AlignTop : Qt.AlignVCenter
                 spacing: 0
 
                 RowLayout {
@@ -204,7 +204,7 @@ ColumnLayout {
                     PlasmaComponents3.Label {
                         id: batteryPercent
                         horizontalAlignment: Text.AlignRight
-                        visible: batteryItem.isPresent
+                        visible: root.isPresent
                         text: i18nc("Placeholder is battery percentage", "%1%", model.Percent)
                     }
                 }
@@ -213,12 +213,12 @@ ColumnLayout {
                     id: chargeBar
 
                     Layout.fillWidth: true
-                    Layout.topMargin: batteryItem.extraMargin
-                    Layout.bottomMargin: batteryItem.extraMargin
+                    Layout.topMargin: root.extraMargin
+                    Layout.bottomMargin: root.extraMargin
 
                     from: 0
                     to: 100
-                    visible: batteryItem.isPresent
+                    visible: root.isPresent
                     value: Number(model.Percent)
                 }
 
