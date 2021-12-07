@@ -172,9 +172,11 @@ Item {
 
                 BatteryIcon {
                     id: batteryIcon
+
                     Layout.alignment: Qt.AlignTop
-                    width: PlasmaCore.Units.iconSizes.medium
-                    height: width
+                    Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
+                    Layout.preferredHeight: Layout.preferredWidth
+
                     batteryType: model.Type
                     percent: model.Percent
                     hasBattery: batteryItem.isPresent
