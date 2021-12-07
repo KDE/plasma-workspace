@@ -176,9 +176,6 @@ Startup::Startup(QObject *parent)
         if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
             QProcess::startDetached(QStringLiteral("ksplashqml"), {});
         }
-        // FIXME 1: this code path is missing setupFontDpi() after X has started. Move to kcminit?
-        // FIXME 2: the systemd path has no concept of kslpash
-        // FIXME 3: the systemd code path is missing setupFontDpi
     }
 
     // Keep for KF5; remove in KF6 (KInit will be gone then)
