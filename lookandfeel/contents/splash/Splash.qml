@@ -28,6 +28,7 @@ Rectangle {
     Item {
         id: content
         anchors.fill: parent
+        opacity: 0
 
         Image {
             id: logo
