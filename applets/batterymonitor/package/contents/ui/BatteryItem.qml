@@ -16,9 +16,8 @@ import org.kde.plasma.workspace.components 2.0
 
 import "logic.js" as Logic
 
-Item {
+ColumnLayout {
     id: batteryItem
-    height: childrenRect.height
 
     property var battery
 
@@ -115,137 +114,134 @@ Item {
         }
     }
 
-    ColumnLayout {
-        width: parent.width
-        spacing: PlasmaCore.Units.smallSpacing
+    spacing: PlasmaCore.Units.smallSpacing
 
-        PlasmaCore.ToolTipArea {
-            Layout.fillWidth: true
-            Layout.preferredHeight: infoRow.height
-            active: !detailsLoader.active
-            z: 2
+    PlasmaCore.ToolTipArea {
+        Layout.fillWidth: true
+        Layout.preferredHeight: infoRow.height
+        active: !detailsLoader.active
+        z: 2
 
-            mainItem: RowLayout {
-                id: batteryItemToolTip
+        mainItem: RowLayout {
+            id: batteryItemToolTip
 
-                Layout.minimumWidth: implicitWidth
-                Layout.minimumHeight: implicitHeight
-                Layout.maximumWidth: implicitWidth
-                Layout.maximumHeight: implicitHeight
+            Layout.minimumWidth: implicitWidth
+            Layout.minimumHeight: implicitHeight
+            Layout.maximumWidth: implicitWidth
+            Layout.maximumHeight: implicitHeight
 
-                spacing: 0
+            spacing: 0
 
-                BatteryIcon {
-                    Layout.margins: PlasmaCore.Units.smallSpacing * 2
-                    // looks weird and small but that's what DefaultTooltip uses
-                    Layout.preferredWidth: PlasmaCore.Units.iconSizes.desktop
-                    Layout.preferredHeight: Layout.preferredWidth
+            BatteryIcon {
+                Layout.margins: PlasmaCore.Units.smallSpacing * 2
+                // looks weird and small but that's what DefaultTooltip uses
+                Layout.preferredWidth: PlasmaCore.Units.iconSizes.desktop
+                Layout.preferredHeight: Layout.preferredWidth
 
-                    batteryType: batteryIcon.batteryType
-                    percent: batteryIcon.percent
-                    hasBattery: batteryIcon.hasBattery
-                    pluggedIn: batteryIcon.pluggedIn
-                    visible: !batteryItem.isBroken
+                batteryType: batteryIcon.batteryType
+                percent: batteryIcon.percent
+                hasBattery: batteryIcon.hasBattery
+                pluggedIn: batteryIcon.pluggedIn
+                visible: !batteryItem.isBroken
+            }
+
+            ColumnLayout {
+                id: mainColumn
+                Layout.margins: PlasmaCore.Units.smallSpacing * 2
+
+                PlasmaExtras.Heading {
+                    level: 3
+                    text: batteryNameLabel.text
                 }
-
-                ColumnLayout {
-                    id: mainColumn
-                    Layout.margins: PlasmaCore.Units.smallSpacing * 2
-
-                    PlasmaExtras.Heading {
-                        level: 3
-                        text: batteryNameLabel.text
-                    }
-                    Loader {
-                        Layout.maximumWidth: PlasmaCore.Units.gridUnit * 11
-                        sourceComponent: BatteryDetails {
-                            inListView: false
-                        }
+                Loader {
+                    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 11
+                    sourceComponent: BatteryDetails {
+                        inListView: false
                     }
                 }
             }
+        }
 
-            RowLayout {
-                id: infoRow
-                width: parent.width
-                spacing: PlasmaCore.Units.gridUnit
+        RowLayout {
+            id: infoRow
+            width: parent.width
+            spacing: PlasmaCore.Units.gridUnit
 
-                BatteryIcon {
-                    id: batteryIcon
+            BatteryIcon {
+                id: batteryIcon
 
-                    Layout.alignment: Qt.AlignTop
-                    Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
-                    Layout.preferredHeight: Layout.preferredWidth
+                Layout.alignment: Qt.AlignTop
+                Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
+                Layout.preferredHeight: Layout.preferredWidth
 
-                    batteryType: model.Type
-                    percent: model.Percent
-                    hasBattery: batteryItem.isPresent
-                    pluggedIn: model.State === "Charging" && model["Is Power Supply"]
+                batteryType: model.Type
+                percent: model.Percent
+                hasBattery: batteryItem.isPresent
+                pluggedIn: model.State === "Charging" && model["Is Power Supply"]
+            }
+
+            ColumnLayout {
+                Layout.fillWidth: true
+                Layout.alignment: batteryItem.isPresent ? Qt.AlignTop : Qt.AlignVCenter
+                spacing: 0
+
+                RowLayout {
+                    spacing: PlasmaCore.Units.smallSpacing
+
+                    PlasmaComponents3.Label {
+                        id: batteryNameLabel
+                        Layout.fillWidth: true
+                        elide: Text.ElideRight
+                        text: model["Pretty Name"]
+                    }
+
+                    PlasmaComponents3.Label {
+                        text: Logic.stringForBatteryState(model)
+                        visible: model["Is Power Supply"]
+                        enabled: false
+                    }
+
+                    PlasmaComponents3.Label {
+                        id: batteryPercent
+                        horizontalAlignment: Text.AlignRight
+                        visible: batteryItem.isPresent
+                        text: i18nc("Placeholder is battery percentage", "%1%", model.Percent)
+                    }
                 }
 
-                ColumnLayout {
+                PlasmaComponents3.ProgressBar {
+                    id: chargeBar
+
                     Layout.fillWidth: true
-                    Layout.alignment: batteryItem.isPresent ? Qt.AlignTop : Qt.AlignVCenter
-                    spacing: 0
+                    Layout.topMargin: batteryItem.extraMargin
+                    Layout.bottomMargin: batteryItem.extraMargin
 
-                    RowLayout {
-                        spacing: PlasmaCore.Units.smallSpacing
+                    from: 0
+                    to: 100
+                    visible: batteryItem.isPresent
+                    value: Number(model.Percent)
+                }
 
-                        PlasmaComponents3.Label {
-                            id: batteryNameLabel
-                            Layout.fillWidth: true
-                            elide: Text.ElideRight
-                            text: model["Pretty Name"]
-                        }
+                Loader {
+                    id: detailsLoader
 
-                        PlasmaComponents3.Label {
-                            text: Logic.stringForBatteryState(model)
-                            visible: model["Is Power Supply"]
-                            enabled: false
-                        }
+                    Layout.fillWidth: true
+                    Layout.topMargin: PlasmaCore.Units.smallSpacing
 
-                        PlasmaComponents3.Label {
-                            id: batteryPercent
-                            horizontalAlignment: Text.AlignRight
-                            visible: batteryItem.isPresent
-                            text: i18nc("Placeholder is battery percentage", "%1%", model.Percent)
-                        }
+                    sourceComponent: BatteryDetails {
+                        inListView: true
                     }
+                }
 
-                    PlasmaComponents3.ProgressBar {
-                        id: chargeBar
+                InhibitionHint {
+                    Layout.fillWidth: true
+                    Layout.topMargin: PlasmaCore.Units.smallSpacing
 
-                        Layout.fillWidth: true
-                        Layout.topMargin: batteryItem.extraMargin
-                        Layout.bottomMargin: batteryItem.extraMargin
-
-                        from: 0
-                        to: 100
-                        visible: batteryItem.isPresent
-                        value: Number(model.Percent)
-                    }
-
-                    Loader {
-                        id: detailsLoader
-
-                        Layout.fillWidth: true
-                        Layout.topMargin: PlasmaCore.Units.smallSpacing
-
-                        sourceComponent: BatteryDetails {
-                            inListView: true
-                        }
-                    }
-
-                    InhibitionHint {
-                        Layout.fillWidth: true
-                        Layout.topMargin: PlasmaCore.Units.smallSpacing
-
-                        readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
-                        readonly property bool pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
-                        visible: pluggedIn && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100
-                        iconSource: "kt-speed-limits" // FIXME good icon
-                        text: i18n("Your battery is configured to only charge up to %1%.", chargeStopThreshold || 0)
-                    }
+                    readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
+                    readonly property bool pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
+                    visible: pluggedIn && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100
+                    iconSource: "kt-speed-limits" // FIXME good icon
+                    text: i18n("Your battery is configured to only charge up to %1%.", chargeStopThreshold || 0)
                 }
             }
         }
