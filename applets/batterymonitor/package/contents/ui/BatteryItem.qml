@@ -16,7 +16,7 @@ import org.kde.plasma.workspace.components 2.0
 
 import "logic.js" as Logic
 
-ColumnLayout {
+RowLayout {
     id: root
 
     // We'd love to use `required` properties, especially since the model provides role names for them;
@@ -130,84 +130,79 @@ ColumnLayout {
         }
     }
 
-    RowLayout {
-        id: infoRow
+    spacing: PlasmaCore.Units.gridUnit
 
+    BatteryIcon {
+        id: batteryIcon
+
+        Layout.alignment: Qt.AlignTop
+        Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
+        Layout.preferredHeight: Layout.preferredWidth
+
+        batteryType: root.battery.Type
+        percent: root.battery.Percent
+        hasBattery: root.isPresent
+        pluggedIn: root.battery.State === "Charging" && root.battery["Is Power Supply"]
+    }
+
+    ColumnLayout {
         Layout.fillWidth: true
-        spacing: PlasmaCore.Units.gridUnit
+        Layout.alignment: root.isPresent ? Qt.AlignTop : Qt.AlignVCenter
+        spacing: 0
 
-        BatteryIcon {
-            id: batteryIcon
+        RowLayout {
+            spacing: PlasmaCore.Units.smallSpacing
 
-            Layout.alignment: Qt.AlignTop
-            Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
-            Layout.preferredHeight: Layout.preferredWidth
+            PlasmaComponents3.Label {
+                id: batteryNameLabel
+                Layout.fillWidth: true
+                elide: Text.ElideRight
+                text: root.battery["Pretty Name"]
+            }
 
-            batteryType: root.battery.Type
-            percent: root.battery.Percent
-            hasBattery: root.isPresent
-            pluggedIn: root.battery.State === "Charging" && root.battery["Is Power Supply"]
+            PlasmaComponents3.Label {
+                text: Logic.stringForBatteryState(root.battery)
+                visible: root.battery["Is Power Supply"]
+                enabled: false
+            }
+
+            PlasmaComponents3.Label {
+                id: batteryPercent
+                horizontalAlignment: Text.AlignRight
+                visible: root.isPresent
+                text: i18nc("Placeholder is battery percentage", "%1%", root.battery.Percent)
+            }
         }
 
-        ColumnLayout {
+        PlasmaComponents3.ProgressBar {
+            id: chargeBar
+
             Layout.fillWidth: true
-            Layout.alignment: root.isPresent ? Qt.AlignTop : Qt.AlignVCenter
-            spacing: 0
+            Layout.topMargin: root.extraMargin
+            Layout.bottomMargin: root.extraMargin
 
-            RowLayout {
-                spacing: PlasmaCore.Units.smallSpacing
+            from: 0
+            to: 100
+            visible: root.isPresent
+            value: Number(root.battery.Percent)
+        }
 
-                PlasmaComponents3.Label {
-                    id: batteryNameLabel
-                    Layout.fillWidth: true
-                    elide: Text.ElideRight
-                    text: root.battery["Pretty Name"]
-                }
+        BatteryDetails {
+            Layout.fillWidth: true
+            Layout.topMargin: PlasmaCore.Units.smallSpacing
 
-                PlasmaComponents3.Label {
-                    text: Logic.stringForBatteryState(root.battery)
-                    visible: root.battery["Is Power Supply"]
-                    enabled: false
-                }
+            inListView: true
+        }
 
-                PlasmaComponents3.Label {
-                    id: batteryPercent
-                    horizontalAlignment: Text.AlignRight
-                    visible: root.isPresent
-                    text: i18nc("Placeholder is battery percentage", "%1%", root.battery.Percent)
-                }
-            }
+        InhibitionHint {
+            Layout.fillWidth: true
+            Layout.topMargin: PlasmaCore.Units.smallSpacing
 
-            PlasmaComponents3.ProgressBar {
-                id: chargeBar
-
-                Layout.fillWidth: true
-                Layout.topMargin: root.extraMargin
-                Layout.bottomMargin: root.extraMargin
-
-                from: 0
-                to: 100
-                visible: root.isPresent
-                value: Number(root.battery.Percent)
-            }
-
-            BatteryDetails {
-                Layout.fillWidth: true
-                Layout.topMargin: PlasmaCore.Units.smallSpacing
-
-                inListView: true
-            }
-
-            InhibitionHint {
-                Layout.fillWidth: true
-                Layout.topMargin: PlasmaCore.Units.smallSpacing
-
-                readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
-                readonly property bool pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
-                visible: pluggedIn && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100
-                iconSource: "kt-speed-limits" // FIXME good icon
-                text: i18n("Your battery is configured to only charge up to %1%.", chargeStopThreshold || 0)
-            }
+            readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
+            readonly property bool pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
+            visible: pluggedIn && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100
+            iconSource: "kt-speed-limits" // FIXME good icon
+            text: i18n("Your battery is configured to only charge up to %1%.", chargeStopThreshold || 0)
         }
     }
 }
