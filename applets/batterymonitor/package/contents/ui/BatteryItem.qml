@@ -50,86 +50,6 @@ RowLayout {
     property PlasmaComponents3.Slider matchHeightOfSlider: PlasmaComponents3.Slider {}
     readonly property real extraMargin: Math.max(0, Math.floor((matchHeightOfSlider.height - chargeBar.height) / 2))
 
-    // These two components belong to the BatteryDetails component, but as of
-    // time of writing Qt5/QML does not support nested inline components.
-    component LeftLabel : PlasmaComponents3.Label {
-        // fillWidth is true, so using internal alignment
-        horizontalAlignment: Text.AlignLeft
-        Layout.fillWidth: true
-        wrapMode: Text.WordWrap
-    }
-    component RightLabel : PlasmaComponents3.Label {
-        // fillWidth is false, so using external (grid-cell-internal) alignment
-        Layout.alignment: Qt.AlignRight
-        Layout.fillWidth: false
-    }
-
-    // This gridLayout basically emulates an at-most-two-rows table with a
-    // single wide fillWidth/columnSpan header. Not really worth it trying
-    // to refactor it into some more clever fancy model-delegate stuff.
-    component BatteryDetails : GridLayout {
-        id: detailsLayout
-
-        property bool inListView
-        readonly property font font: inListView ? PlasmaCore.Theme.smallestFont : PlasmaCore.Theme.defaultFont
-
-        columns: 2
-        columnSpacing: PlasmaCore.Units.smallSpacing
-        rowSpacing: 0
-
-        enabled: false // makes PC3.Labels semi-transparent through implicit inheritance
-
-        PlasmaComponents3.Label {
-            id: brokenBatteryLabel
-
-            Layout.fillWidth: true
-            Layout.columnSpan: 2
-
-            text: root.isBroken && typeof root.battery.Capacity !== "undefined"
-                ? i18n("This battery's health is at only %1% and should be replaced. Please contact your hardware vendor for more details.", root.battery.Capacity)
-                : ""
-            font: detailsLayout.font
-            visible: root.isBroken
-            wrapMode: Text.WordWrap
-        }
-
-        property bool remainingTimeRowVisible: batterymonitor.remainingTime > 0
-            && root.battery["Is Power Supply"]
-            && ["Discharging", "Charging"].includes(root.battery.State)
-
-        LeftLabel {
-            font: detailsLayout.font
-            text: root.battery.State === "Charging"
-                ? i18n("Time To Full:")
-                : i18n("Remaining Time:")
-            visible: remainingTimeRowVisible
-        }
-
-        RightLabel {
-            font: detailsLayout.font
-            text: KCoreAddons.Format.formatDuration(batterymonitor.remainingTime, KCoreAddons.FormatTypes.HideSeconds)
-            visible: remainingTimeRowVisible
-        }
-
-        property bool healthRowVisible: root.battery["Is Power Supply"]
-            && root.battery.Capacity !== ""
-            && typeof root.battery.Capacity === "number"
-
-        LeftLabel {
-            font: detailsLayout.font
-            text: i18n("Battery Health:")
-            visible: healthRowVisible
-        }
-
-        RightLabel {
-            font: detailsLayout.font
-            text: healthRowVisible
-                ? i18nc("Placeholder is battery health percentage", "%1%", root.battery.Capacity)
-                : ""
-            visible: healthRowVisible
-        }
-    }
-
     spacing: PlasmaCore.Units.gridUnit
 
     BatteryIcon {
@@ -187,11 +107,80 @@ RowLayout {
             value: Number(root.battery.Percent)
         }
 
-        BatteryDetails {
+        // This gridLayout basically emulates an at-most-two-rows table with a
+        // single wide fillWidth/columnSpan header. Not really worth it trying
+        // to refactor it into some more clever fancy model-delegate stuff.
+        GridLayout {
+            id: details
+
             Layout.fillWidth: true
             Layout.topMargin: PlasmaCore.Units.smallSpacing
 
-            inListView: true
+            columns: 2
+            columnSpacing: PlasmaCore.Units.smallSpacing
+            rowSpacing: 0
+
+            enabled: false // makes PC3.Labels semi-transparent through implicit inheritance
+
+            component LeftLabel : PlasmaComponents3.Label {
+                // fillWidth is true, so using internal alignment
+                horizontalAlignment: Text.AlignLeft
+                Layout.fillWidth: true
+                font: PlasmaCore.Theme.smallestFont
+                wrapMode: Text.WordWrap
+            }
+            component RightLabel : PlasmaComponents3.Label {
+                // fillWidth is false, so using external (grid-cell-internal) alignment
+                Layout.alignment: Qt.AlignRight
+                Layout.fillWidth: false
+                font: PlasmaCore.Theme.smallestFont
+            }
+
+            PlasmaComponents3.Label {
+                id: brokenBatteryLabel
+
+                Layout.fillWidth: true
+                Layout.columnSpan: 2
+
+                text: root.isBroken && typeof root.battery.Capacity !== "undefined"
+                    ? i18n("This battery's health is at only %1% and should be replaced. Please contact your hardware vendor for more details.", root.battery.Capacity)
+                    : ""
+                font: PlasmaCore.Theme.smallestFont
+                visible: root.isBroken
+                wrapMode: Text.WordWrap
+            }
+
+            readonly property bool remainingTimeRowVisible: batterymonitor.remainingTime > 0
+                && root.battery["Is Power Supply"]
+                && ["Discharging", "Charging"].includes(root.battery.State)
+
+            LeftLabel {
+                text: root.battery.State === "Charging"
+                    ? i18n("Time To Full:")
+                    : i18n("Remaining Time:")
+                visible: details.remainingTimeRowVisible
+            }
+
+            RightLabel {
+                text: KCoreAddons.Format.formatDuration(batterymonitor.remainingTime, KCoreAddons.FormatTypes.HideSeconds)
+                visible: details.remainingTimeRowVisible
+            }
+
+            readonly property bool healthRowVisible: root.battery["Is Power Supply"]
+                && root.battery.Capacity !== ""
+                && typeof root.battery.Capacity === "number"
+
+            LeftLabel {
+                text: i18n("Battery Health:")
+                visible: details.healthRowVisible
+            }
+
+            RightLabel {
+                text: details.healthRowVisible
+                    ? i18nc("Placeholder is battery health percentage", "%1%", root.battery.Capacity)
+                    : ""
+                visible: details.healthRowVisible
+            }
         }
 
         InhibitionHint {
