@@ -95,11 +95,11 @@ ColumnLayout {
 
         property bool remainingTimeRowVisible: batterymonitor.remainingTime > 0
             && root.battery["Is Power Supply"]
-            && ["Discharging", "Charging"].includes(root.battery["State"])
+            && ["Discharging", "Charging"].includes(root.battery.State)
 
         LeftLabel {
             font: detailsLayout.font
-            text: root.battery["State"] === "Charging"
+            text: root.battery.State === "Charging"
                 ? i18n("Time To Full:")
                 : i18n("Remaining Time:")
             visible: remainingTimeRowVisible
@@ -112,8 +112,8 @@ ColumnLayout {
         }
 
         property bool healthRowVisible: root.battery["Is Power Supply"]
-            && root.battery["Capacity"] !== ""
-            && typeof root.battery["Capacity"] === "number"
+            && root.battery.Capacity !== ""
+            && typeof root.battery.Capacity === "number"
 
         LeftLabel {
             font: detailsLayout.font
@@ -124,7 +124,7 @@ ColumnLayout {
         RightLabel {
             font: detailsLayout.font
             text: healthRowVisible
-                ? i18nc("Placeholder is battery health percentage", "%1%", root.battery["Capacity"])
+                ? i18nc("Placeholder is battery health percentage", "%1%", root.battery.Capacity)
                 : ""
             visible: healthRowVisible
         }
