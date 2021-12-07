@@ -115,13 +115,13 @@ Item {
         }
     }
 
-    Column {
+    ColumnLayout {
         width: parent.width
         spacing: PlasmaCore.Units.smallSpacing
 
         PlasmaCore.ToolTipArea {
-            width: parent.width
-            height: infoRow.height
+            Layout.fillWidth: true
+            Layout.preferredHeight: infoRow.height
             active: !detailsLoader.active
             z: 2
 
@@ -230,22 +230,19 @@ Item {
 
         Loader {
             id: detailsLoader
-            anchors {
-                left: parent.left
-                leftMargin: batteryIcon.width + PlasmaCore.Units.gridUnit
-                right: parent.right
-            }
+
+            Layout.fillWidth: true
+            Layout.leftMargin: batteryIcon.width + infoRow.spacing
+
             sourceComponent: BatteryDetails {
                 inListView: true
             }
         }
 
         InhibitionHint {
-            anchors {
-                left: parent.left
-                leftMargin: batteryIcon.width + PlasmaCore.Units.gridUnit
-                right: parent.right
-            }
+            Layout.fillWidth: true
+            Layout.leftMargin: batteryIcon.width + infoRow.spacing
+
             readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
             readonly property bool pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
             visible: pluggedIn && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100
