@@ -9,6 +9,7 @@
 #include <KRunner/RunnerManager>
 
 #include <KPluginMetaData>
+#include <QAction>
 #include <QObject>
 
 using namespace Plasma;
@@ -23,5 +24,6 @@ public:
 
 private:
     RunnerManager *m_manager;
+    QList<QAction *> m_actionList;
 };
 

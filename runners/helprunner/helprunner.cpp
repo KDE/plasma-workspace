@@ -5,7 +5,9 @@
 
 #include "helprunner.h"
 
+#include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
+#include <KPluginMetaData>
 
 HelpRunner::HelpRunner(QObject *parent, const KPluginMetaData &pluginMetaData, const QVariantList &args)
     : AbstractRunner(parent, pluginMetaData, args)
@@ -13,7 +15,9 @@ HelpRunner::HelpRunner(QObject *parent, const KPluginMetaData &pluginMetaData, c
     setTriggerWords({i18nc("this is a runner keyword", "help"), QStringLiteral("?")});
     m_manager = qobject_cast<RunnerManager *>(parent);
     Q_ASSERT(m_manager);
+    m_actionList = {new QAction(QIcon::fromTheme(QStringLiteral("configure")), i18n("Configure plugin"), this)};
 }
+
 void HelpRunner::match(RunnerContext &context)
 {
     const QString sanatizedQuery = context.query().remove(matchRegex());
@@ -60,7 +64,10 @@ void HelpRunner::match(RunnerContext &context)
             match.setIcon(runner->icon());
             match.setSubtext(runner->description());
             match.setType(QueryMatch::CompletionMatch);
-            match.setData(QVariant(QStringLiteral("?") + runner->name()));
+            match.setData(QVariant::fromValue(runner->metadata()));
+            if (!runner->metadata().value(QStringLiteral("X-KDE-ConfigModule")).isEmpty()) {
+                match.setActions(m_actionList);
+            }
             matches << match;
         }
     }
@@ -70,8 +77,18 @@ void HelpRunner::match(RunnerContext &context)
 void HelpRunner::run(const RunnerContext &context, const QueryMatch &match)
 {
     context.ignoreCurrentMatchForHistory();
-    if (match.type() == QueryMatch::CompletionMatch) {
-        const QString completedRunnerName = match.data().toString();
+    if (match.selectedAction()) {
+        KIO::CommandLauncherJob *job = nullptr;
+        const QStringList args{
+            QStringLiteral("kcm_plasmasearch"),
+            QStringLiteral("--args"),
+            match.data().value<KPluginMetaData>().name(),
+        };
+        job = new KIO::CommandLauncherJob(QStringLiteral("systemsettings5"), args);
+        job->start();
+    } else if (match.type() == QueryMatch::CompletionMatch) {
+        const KPluginMetaData data = match.data().value<KPluginMetaData>();
+        const QString completedRunnerName = QStringLiteral("?") + data.name();
         context.requestQueryStringUpdate(completedRunnerName, -1);
     } else {
         const QString query = match.data().toString();
