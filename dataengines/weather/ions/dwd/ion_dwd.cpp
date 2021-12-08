@@ -671,7 +671,7 @@ void DWDIon::updateWeather(const QString &source)
 
     data.insert(QStringLiteral("Total Weather Days"), weatherData.forecasts.size());
     data.insert(QStringLiteral("Total Warnings Issued"), weatherData.warnings.size());
-    data.insert(QStringLiteral("Credit"), i18n("Data from Deutscher Wetterdienst (DWD)"));
+    data.insert(QStringLiteral("Credit"), i18nc("credit line, don't change name!", "Source: Deutscher Wetterdienst"));
     data.insert(QStringLiteral("Credit Url"), QStringLiteral("https://www.dwd.de/"));
 
     setData(weatherSource, data);
