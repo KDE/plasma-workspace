@@ -260,7 +260,7 @@ bool PipeWireSourceStream::createStream(uint nodeid)
     pwNodeId = nodeid;
     pw_stream_add_listener(pwStream, &streamListener, &pwStreamEvents, this);
 
-    uint8_t buffer[1024];
+    uint8_t buffer[4096];
     spa_pod_builder podBuilder = SPA_POD_BUILDER_INIT(buffer, sizeof(buffer));
 
     const QVector<spa_video_format> formats =
