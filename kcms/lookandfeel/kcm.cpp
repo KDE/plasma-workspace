@@ -123,7 +123,9 @@ void KCMLookandFeel::knsEntryChanged(KNSCore::EntryWrapper *wrapper)
     if (entry.status() == KNS3::Entry::Deleted && !entry.uninstalledFiles().isEmpty()) {
         removeItemFromModel();
     } else if (entry.status() == KNS3::Entry::Installed && !entry.installedFiles().isEmpty()) {
-        removeItemFromModel(); // In case we updated it we don't want to have it in twice
+        if (!entry.uninstalledFiles().isEmpty()) {
+            removeItemFromModel(); // In case we updated it we don't want to have it in twice
+        }
         KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
         pkg.setPath(entry.installedFiles().constFirst());
         addKPackageToModel(pkg);
