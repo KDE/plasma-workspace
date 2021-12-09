@@ -54,8 +54,6 @@ if (X11_Xfixes_FOUND)
    target_link_libraries(kcm_cursortheme X11::Xfixes)
 endif ()
 
-kcoreaddons_desktop_to_json(kcm_cursortheme "kcm_cursortheme.desktop")
-
 ########### next target ###############
 
 set(plasma-apply-cursortheme_SRCS

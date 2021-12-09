@@ -69,7 +69,6 @@ target_link_libraries(kcm_lookandfeel_objects
 )
 
 kcoreaddons_add_plugin(kcm_lookandfeel SOURCES kcmmain.cpp INSTALL_NAMESPACE "kcms")
-kcoreaddons_desktop_to_json(kcm_lookandfeel "kcm_lookandfeel.desktop" SERVICE_TYPES kcmodule.desktop)
 target_link_libraries(kcm_lookandfeel kcm_lookandfeel_objects)
 
 #this desktop file is installed only for retrocompatibility with sycoca

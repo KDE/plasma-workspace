@@ -30,8 +30,6 @@ target_link_libraries(kcm_desktoptheme
   KF5::QuickAddons
 )
 
-kcoreaddons_desktop_to_json(kcm_desktoptheme "kcm_desktoptheme.desktop" SERVICE_TYPES kcmodule.desktop)
-
 set(plasma-apply-desktoptheme_SRCS
     plasma-apply-desktoptheme.cpp
     themesmodel.cpp

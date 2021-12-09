@@ -31,8 +31,6 @@ if(X11_FOUND)
     target_link_libraries(kcm_fonts Qt::X11Extras X11::X11 X11::Xft XCB::IMAGE)
 endif()
 
-kcoreaddons_desktop_to_json(kcm_fonts "kcm_fonts.desktop")
-
 ########### install files ###############
 install(FILES fontssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES kcm_fonts.desktop DESTINATION ${KDE_INSTALL_APPDIR})

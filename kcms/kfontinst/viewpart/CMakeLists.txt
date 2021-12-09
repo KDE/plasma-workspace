@@ -7,7 +7,6 @@ include_directories(
 set(kfontviewpart_PART_SRCS ${libkfontinstview_SRCS} ${libkfontinstdbusiface_SRCS} FontViewPart.cpp )
 
 add_library(kfontviewpart MODULE ${kfontviewpart_PART_SRCS})
-kcoreaddons_desktop_to_json(kfontviewpart kfontviewpart.desktop)
 
 target_link_libraries(kfontviewpart KF5::Archive KF5::Parts KF5::XmlGui kfontinstui kfontinst )
 

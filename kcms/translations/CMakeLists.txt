@@ -43,8 +43,6 @@ if(HAVE_PACKAGEKIT)
     target_link_libraries(kcm_translations PK::packagekitqt5)
 endif()
 
-kcoreaddons_desktop_to_json(kcm_translations "kcm_translations.desktop")
-
 ########### install files ###############
 install(FILES kcm_translations.desktop  DESTINATION  ${KDE_INSTALL_APPDIR})
 kpackage_install_package(package kcm_translations kcms)

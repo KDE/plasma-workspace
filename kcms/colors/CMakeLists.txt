@@ -40,9 +40,6 @@ if(X11_FOUND)
     target_link_libraries(kcm_colors X11::X11 Qt::X11Extras)
 endif()
 
-kcoreaddons_desktop_to_json(kcm_colors "kcm_colors.desktop")
-
-
 set(plasma-apply-colorscheme_SRCS
     plasma-apply-colorscheme.cpp
     colorsapplicator.cpp

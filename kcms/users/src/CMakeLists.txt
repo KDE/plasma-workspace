@@ -72,5 +72,3 @@ target_link_libraries(kcm_users
     Qt::DBus
     crypt
 )
-
-kcoreaddons_desktop_to_json(kcm_users "../kcm_users.desktop" SERVICE_TYPES kcmodule.desktop)

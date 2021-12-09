@@ -13,8 +13,6 @@ kconfig_add_kcfg_files(kcm_formats_PART_SRCS formatssettings.kcfgc GENERATE_MOC)
 
 add_library(kcm_formats MODULE ${kcm_formats_PART_SRCS})
 
-kcoreaddons_desktop_to_json(kcm_formats "kcm_formats.desktop")
-
 target_link_libraries(kcm_formats
     Qt5::Core
     KF5::ConfigCore
