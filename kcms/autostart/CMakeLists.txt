@@ -5,7 +5,7 @@ set(kcm_autostart_PART_SRCS
    autostartmodel.cpp
    autostart.cpp )
 
-kcoreaddons_add_plugin(kcm_autostart SOURCES ${kcm_autostart_PART_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_autostart SOURCES ${kcm_autostart_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemmsettings")
 
 target_link_libraries(kcm_autostart KF5::I18n KF5::KIOCore KF5::KIOWidgets KF5::QuickAddons PW::KWorkspace)
 

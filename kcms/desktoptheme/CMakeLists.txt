@@ -17,7 +17,7 @@ kcmutils_generate_module_data(
 
 kconfig_add_kcfg_files(kcm_desktoptheme_SRCS desktopthemesettings.kcfgc GENERATE_MOC)
 
-kcoreaddons_add_plugin(kcm_desktoptheme SOURCES ${kcm_desktoptheme_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_desktoptheme SOURCES ${kcm_desktoptheme_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemmsettings")
 
 target_link_libraries(kcm_desktoptheme
   KF5::CoreAddons

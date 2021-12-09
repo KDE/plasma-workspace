@@ -3,7 +3,7 @@ set(kcm_fontinst_PART_SRCS ${libkfontinstview_SRCS} ${libkfontinstjobrunner_SRCS
     FontFilter.cpp FontFilterProxyStyle.cpp FcQuery.cpp PreviewList.cpp)
 # qt_add_dbus_interface(kcm_fontinst_PART_SRCS ../dbus/org.kde.fontinst.xml FontinstIface)
 
-add_library(kcm_fontinst MODULE ${kcm_fontinst_PART_SRCS})
+kcoreaddons_add_plugin(kcm_fontinst SOURCES ${kcm_fontinst_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings_qwidgets")
 
 target_link_libraries(kcm_fontinst
     KF5::Archive

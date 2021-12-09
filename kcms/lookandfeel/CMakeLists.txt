@@ -68,7 +68,7 @@ target_link_libraries(kcm_lookandfeel_objects
     PW::KWorkspace
 )
 
-kcoreaddons_add_plugin(kcm_lookandfeel SOURCES kcmmain.cpp INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_lookandfeel SOURCES kcmmain.cpp INSTALL_NAMESPACE "plasma/kcms/systemmsettings")
 target_link_libraries(kcm_lookandfeel kcm_lookandfeel_objects)
 
 #this desktop file is installed only for retrocompatibility with sycoca

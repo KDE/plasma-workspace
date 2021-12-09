@@ -11,7 +11,7 @@ kcmutils_generate_module_data(
 )
 
 kconfig_add_kcfg_files(kcm_feedback_PART_SRCS feedbacksettings.kcfgc GENERATE_MOC)
-kcoreaddons_add_plugin(kcm_feedback SOURCES ${kcm_feedback_PART_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_feedback SOURCES ${kcm_feedback_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemmsettings")
 
 target_link_libraries(kcm_feedback
     KF5::I18n
