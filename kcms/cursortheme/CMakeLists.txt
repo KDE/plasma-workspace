@@ -96,7 +96,7 @@ install(TARGETS plasma-apply-cursortheme  DESTINATION ${KDE_INSTALL_BINDIR})
 
 install(FILES cursorthemesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES delete_cursor_old_default_size.upd delete_cursor_old_default_size.pl DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
-install( FILES kcm_cursortheme.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+install( FILES kcm_cursortheme.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
 install( FILES xcursor/xcursor.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 
 kpackage_install_package(package kcm_cursortheme kcms)

@@ -24,7 +24,7 @@ target_link_libraries(kcm_notifications
 
 kcoreaddons_desktop_to_json(kcm_notifications "kcm_notifications.desktop")
 
-install(FILES kcm_notifications.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_notifications.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 kpackage_install_package(package kcm_notifications kcms)
 

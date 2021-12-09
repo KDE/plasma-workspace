@@ -39,7 +39,7 @@ kcoreaddons_desktop_to_json(kcm_icons "kcm_icons.desktop")
 
 install(FILES iconssettingsbase.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES icons_remove_effects.upd DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
-install(FILES kcm_icons.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_icons.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/icons.knsrc ${CMAKE_BINARY_DIR}/icons.knsrc)
 install( FILES ${CMAKE_BINARY_DIR}/icons.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR} )

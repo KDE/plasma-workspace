@@ -46,6 +46,6 @@ endif()
 kcoreaddons_desktop_to_json(kcm_translations "kcm_translations.desktop")
 
 ########### install files ###############
-install(FILES kcm_translations.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_translations.desktop  DESTINATION  ${KDE_INSTALL_APPDIR})
 kpackage_install_package(package kcm_translations kcms)
 

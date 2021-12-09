@@ -11,5 +11,5 @@ target_link_libraries(kcm_autostart KF5::I18n KF5::KIOCore KF5::KIOWidgets KF5::
 
 kcoreaddons_desktop_to_json(kcm_autostart "kcm_autostart.desktop")
 
-install(FILES kcm_autostart.desktop RENAME autostart.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_autostart.desktop RENAME autostart.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 kpackage_install_package(package kcm_autostart kcms)

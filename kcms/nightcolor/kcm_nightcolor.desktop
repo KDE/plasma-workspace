@@ -1,16 +1,9 @@
 [Desktop Entry]
 Icon=preferences-desktop-display-nightcolor
 
-Type=Service
-X-KDE-ServiceTypes=KCModule
-
-X-DocPath=https://userbase.kde.org/TODOX
-
-X-KDE-Library=kcm_nightcolor
-X-KDE-ParentApp=kcontrol
-
-X-KDE-System-Settings-Parent-Category=display
-X-KDE-Weight=120
+Type=Application
+Exec=systemsettings kcm_nightcolor
+NoDisplay=true
 
 Name=Night Color
 Name[ar]=لون ليلي
@@ -87,34 +80,4 @@ Comment[vi]=Điều chỉnh nhiệt độ màu vào buổi tối để giảm c�
 Comment[x-test]=xxAdjust color temperature at night to reduce eye strainxx
 Comment[zh_CN]=在夜间调整色温以减少视觉疲劳
 
-X-KDE-Keywords=kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature
-X-KDE-Keywords[ar]=ك.وين,نافذة,مدير,ليلي,ألوان,إرهاق العين,الحمرة,البرتقالي,الأصفر,دافئ,تعتيم الشاشة,درجة الحرارة
-X-KDE-Keywords[az]=kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,pəncərə,menecer,gecə,rənglər,rəng sürüşməsi,gözlər,narıncı,sarı,xəbərdarlıq,ekranın tonu,hərarət
-X-KDE-Keywords[ca]=kwin,finestra,gestor,nit,colors,desplaçament cap al roig,ulls,mode nit,color,mode fosc,fosc,enfosquiment,dormir,tensió ocular,vermell,desplaçament,taronja,groc,càlid,tint de pantalla,temperatura
-X-KDE-Keywords[en_GB]=kwin,window,manager,night,colours,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature
-X-KDE-Keywords[es]=kwin,ventana,gestor,noche,colores,redshift,ojos,modo nocturno,color,modo oscuro,oscurecer,dormir,esfuerzo visual,fatiga visual,rojo,desplazamiento,naranja,amarillo,cálido,tono de la pantalla,temperatura
-X-KDE-Keywords[eu]=kwin,leihoa,kudeatzailea,gaua,koloreak,gorrirantz aldatzea,begiak,gaueko modua,koloreak,modu iluna,iluna,moteldu,lokartu,begietako nekea,gorria,aldatu,laranja,horia,epela,pantailaren tonua,tenperatura
-X-KDE-Keywords[fi]=kwin,ikkuna,hallinta,ikkunaohjelma,yö,värit,yöväri,punasiirtymä,silmät,yötila,väri,tumma tila,tumma,himmennys,silmän rasitus,punainen,siirtymä,oranssi,keltainen,lämmin,näytön sävy,lämpötila
-X-KDE-Keywords[fr]=kwin, gestionnaire de fenêtres, nuit, couleurs, décalage vers le rouge, yeux, mode nuit, couleur, mode sombre, sombre, réglage, sommeil, fatigue oculaire, rouge, décalage, orange, jaune, chaud, teinte d'écran, température
-X-KDE-Keywords[hi]=क्विन,विंडो,प्रबंधक,रात,रंग,रेडशिफ्ट,आंखें,रात मोड,रंग,डार्क मोड,गहरा,मंद,नींद,आंखों का तनाव,लाल,शिफ्ट,नारंगी,पीला,गर्म,स्क्रीन टिंट,तापमान
-X-KDE-Keywords[hu]=kwin,ablak,kezelő,éjszakai,színek,redshift,szemek,éjszakai mód,szín,sötét mód,sötét,elhalványítás,alvás,szemfáradás,vörös,eltolás,narancs,sárga,meleg,képernyőárnyalat,hőmérséklet
-X-KDE-Keywords[ia]=kwin,fenestra,gerente,nocte,colores,displaciarubie,oculos,modo de nocte,color,modo obscur,obscur,obscur dim,somno,deformation de oculo,rubie,displacia,orange,jalne,calide,tinta de schermo,temperatura
-X-KDE-Keywords[it]=kwin,finestra,gestore,notte,colori,redshift,occhi,modalità notturna,colore,modalità scura,scuro,sonno,affaticamento degli occhi,rosso,maiuscolo,arancione,giallo,caldo,tinta dello schermo,temperatura
-X-KDE-Keywords[ko]=kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,창,관리자,밤,야간,색,눈,안구,블루라이트,야간 모드,다크 모드,어둡게,조명,적색,빨간색,주황색,노란색,색온도,색 온도
-X-KDE-Keywords[nl]=kwin,venster,manager,nacht,kleuren,roodverschuiving,ogen,modus nacht,kleur,modus donker,gedimd,slaap,vermoeiing van het oog,rood,verschuiving,oranje,geel,warm,scherm,schermtint,temperatuur
-X-KDE-Keywords[nn]=kwin,vindauge,handsamar,natt,fargar,redshift,raudskift,blåfargar,auge,auga,augo,nattmodus,farge,fargar,mørkmodus,mørkt,dempa,raud,skifte,oransje,gult,varmt,skjermfarge,temperatur,fargetemperatur
-X-KDE-Keywords[pl]=kwin,okno,zarządzanie,noc,barwy,redshift,oczy,tryb nocny,barwa,tryb ciemny,ciemny,przyciemnienie,sen,wytężenie wzroku,czerwony,przesunięcie,pomarańczowy,żółty,ciepły,zabarwienie ekranu,temperatura
-X-KDE-Keywords[pt]=kwin,gestor,janelas,noite,cores,desvio do vermelho,olhos,modo nocturno,cor,modo escuro,escuro,escurecido,dormir,vista cansada,vermelho,desvio,laranja,amarelo,quente,pintura do ecrã,temperatura
-X-KDE-Keywords[pt_BR]=kwin,janela,gerenciador,cores noturnas,redshift,olhos,modo noturno,cor,modo escuro,escuro,escurecer,dormir,cansaço visual,vermelho,alterar,mudar,laranja,amarelo,quente,tonalidade da tela,temperatura
-X-KDE-Keywords[ru]=kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,окно,диспетчер,ночь,цвета,глаза,ночной режим,тёмный режим,затемнение,сон,напряжение глаз,оранжевый,жёлтый,цвет экрана,температура
-X-KDE-Keywords[sk]=kwin,okno,správca,noc,farby,červený posun,oči,nočný režim,farba,tmavý režim,tmavý,stmavený,spánok,namáhanie očí,červený,posun,oranžový,žltý,teplý,odtieň obrazovky,teplota
-X-KDE-Keywords[sl]=kwin,okno,upravljalnik,nočne barve,rdeči pomik,oči,nočni način,barve,temni način,temina,zabrisanje,spanje,napenjanje oči,pomik,oranžna,rumena,toplo,odtenek zaslona,temperatura
-X-KDE-Keywords[sv]=kwin,fönster,hanterare,natt,färger,rödskift,ögon,nattläge,färg,mörkt läge,mörk,ljussvag,viloläge,ögonbelastning,röd,skift,orange,gul,varm,skärmfärgton,temperatur
-X-KDE-Keywords[ta]=kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature, கேவின், சாளரம், இரவு, நிரம், வண்ணம், நிரங்கள், வண்ணங்கள், இரவு நிறமாற்றம், இருட்டு, இருள், தூக்கம், தூங்கு, கண், கண்கள், கண் சிரம‍ம், கண் எரிச்சல், சிவப்பு, நயமான, வெப்பம், வெப்பநிலை, ஆரஞ்சு, செம்மஞ்சள், மஞ்சள்
-X-KDE-Keywords[uk]=kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,квін,вікно,керування,менеджер,ніч,кольори,редшифт,редшіфт,очі,нічний режим,колір,темний режим,темний,тьмяний,притлумити,сон,втома очей,червоний,зсув,помаранчевий,жовтий,теплий,відтінок екрана,температура
-X-KDE-Keywords[vi]=kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,cửa sổ,trình quản lí,buổi tối,màu,mắt,chế độ buổi tối,chế độ tối,tối,làm tối,ngủ,căng thẳng cho mắt,mỏi mắt,đỏ,dịch,cam,vàng,ấm,phủ màn hình,nhiệt độ
-X-KDE-Keywords[x-test]=xxkwinxx,xxwindowxx,xxmanagerxx,xxnightxx,xxcolorsxx,xxredshiftxx,xxeyesxx,xxnight modexx,xxcolourxx,xxdark modexx,xxdarkxx,xxdimxx,xxsleepxx,xxeye strainxx,xxredxx,xxshiftxx,xxorangexx,xxyellowxx,xxwarmxx,xxscreen tintxx,xxtemperaturexx
-X-KDE-Keywords[zh_CN]=kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,窗口,管理器,窗口管理器,夜间,颜色,夜间颜色,红移,夜间模式,暗黑模式,黑暗模式,暗色模式,深色模式,调暗,睡眠,眼睛,护眼,疲劳,红色,颜色偏移,橙色,黄色,暖色,温暖,屏幕,着色,染色,色温
 Categories=Qt;KDE;X-KDE-settings-nightcolor
-
-X-KDE-FormFactors=tablet,handset,desktop

@@ -35,7 +35,7 @@ kcoreaddons_desktop_to_json(kcm_fonts "kcm_fonts.desktop")
 
 ########### install files ###############
 install(FILES fontssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(FILES kcm_fonts.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_fonts.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 kpackage_install_package(package kcm_fonts kcms)
 
 add_custom_command(TARGET kcm_fonts POST_BUILD

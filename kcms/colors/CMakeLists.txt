@@ -69,7 +69,7 @@ target_link_libraries(plasma-apply-colorscheme
 )
 
 install(FILES colorssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(FILES kcm_colors.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_colors.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(TARGETS plasma-apply-colorscheme DESTINATION ${KDE_INSTALL_BINDIR})
 install(FILES colorschemes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
