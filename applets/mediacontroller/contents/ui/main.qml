@@ -156,9 +156,9 @@ Item {
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
         source: {
             if (root.state === "playing") {
-                return "media-playback-playing";
-            } else if (root.state === "paused") {
                 return "media-playback-paused";
+            } else if (root.state === "paused") {
+                return "media-playback-playing";
             } else {
                 return "media-playback-stopped";
             }
@@ -313,7 +313,7 @@ Item {
 
             PropertyChanges {
                 target: plasmoid
-                icon: "media-playback-playing"
+                icon: "media-playback-pause"
                 toolTipMainText: track
                 toolTipSubText: artist ? i18nc("by Artist (player name)", "by %1 (%2)", artist, identity) : identity
             }
@@ -324,7 +324,7 @@ Item {
 
             PropertyChanges {
                 target: plasmoid
-                icon: "media-playback-paused"
+                icon: "media-playback-playing"
                 toolTipMainText: track
                 toolTipSubText: artist ? i18nc("by Artist (paused, player name)", "by %1 (paused, %2)", artist, identity) : i18nc("Paused (player name)", "Paused (%1)", identity)
             }
