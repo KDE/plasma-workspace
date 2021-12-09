@@ -19,6 +19,8 @@ enum class HistoryItemType {
 class HistoryModel : public QAbstractListModel
 {
     Q_OBJECT
+    Q_PROPERTY(bool count READ rowCount NOTIFY countChanged)
+
 public:
     enum RoleType {
         HistoryItemConstPtrRole = Qt::UserRole,
@@ -27,6 +29,7 @@ public:
         Base64UuidRole,
         TypeIntRole,
         FullTextRole,
+        PinnedSortRole
     };
     Q_ENUM(RoleType)
 
@@ -35,8 +38,14 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
+    bool removeRows(int row, int count, const QModelIndex &parent, bool removeAll);
     QHash<int, QByteArray> roleNames() const override;
     bool remove(const QByteArray &uuid);
+
+    bool pinned(const QByteArray &uuid);
+    void togglePin(const QByteArray &uuid);
+    QList<QByteArray> pinnedUuids() const;
+    int countUnpinned();
 
     int maxSize() const;
     void setMaxSize(int size);
@@ -44,7 +53,7 @@ public:
     bool displayImages() const;
     void setDisplayImages(bool show);
 
-    void clear();
+    void clear(bool clearAll = false);
     void moveToTop(const QByteArray &uuid);
     void moveTopToBack();
     void moveBackToTop();
@@ -52,15 +61,20 @@ public:
     QModelIndex indexOf(const QByteArray &uuid) const;
     QModelIndex indexOf(const HistoryItem *item) const;
 
-    void insert(QSharedPointer<HistoryItem> item);
+    void insert(QSharedPointer<HistoryItem> item, bool force = false);
+    void forceInsert(QSharedPointer<HistoryItem> item);
 
     QRecursiveMutex *mutex()
     {
         return &m_mutex;
     }
+signals:
+    void countChanged(int);
 
 private:
     void moveToTop(int row);
+    // keep the pinned time order of pinned items
+    QList<QByteArray> m_pinnedUuids;
     QList<QSharedPointer<HistoryItem>> m_items;
     int m_maxSize;
     bool m_displayImages;

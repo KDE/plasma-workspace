@@ -50,11 +50,15 @@ void ClipboardJob::start()
         setResult(false);
         return;
     }
+
     if (operation == QLatin1String("select")) {
         m_klipper->history()->slotMoveToTop(item->uuid());
         setResult(true);
     } else if (operation == QLatin1String("remove")) {
         m_klipper->history()->remove(item);
+        setResult(true);
+    } else if (operation == QLatin1String("togglePin")) {
+        m_klipper->history()->togglePin(item);
         setResult(true);
     } else if (operation == QLatin1String("edit")) {
         if (parameters().contains(QLatin1String("text"))) {

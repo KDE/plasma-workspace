@@ -27,6 +27,7 @@ PlasmaComponents2.ListItem {
 
     signal itemSelected(string uuid)
     signal remove(string uuid)
+    signal togglePin(string uuid)
     signal edit(string uuid)
     signal barcode(string text)
     signal action(string uuid)
@@ -91,7 +92,7 @@ PlasmaComponents2.ListItem {
         anchors {
             left: parent.left
             leftMargin: PlasmaCore.Units.gridUnit / 2 - listMargins.left
-            right: parent.right
+            right: pinnedIndicator.left
             verticalCenter: parent.verticalCenter
         }
 
@@ -101,11 +102,25 @@ PlasmaComponents2.ListItem {
         }
     }
 
+    Rectangle {
+        id: pinnedIndicator
+        height: 5
+        width: PinnedSortRole > -1 ? 5 : 0
+        radius: 180
+        anchors {
+            right: parent.right
+            bottom: parent.bottom
+        }
+        color: PlasmaCore.ColorScope.textColor
+        opacity: 0.3
+        visible: !menuItem.ListView.isCurrentItem
+    }
+
     Loader {
         id: toolButtonsLoader
 
         anchors {
-            right: label.right
+            right: parent.right
             verticalCenter: parent.verticalCenter
         }
         source: "DelegateToolButtons.qml"

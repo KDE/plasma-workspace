@@ -408,6 +408,19 @@ bool Klipper::loadHistory()
     history_stream >> version;
     delete[] version;
 
+
+    QString type;
+    history_stream.startTransaction();
+    history_stream >> type;
+    QList<QByteArray> pinnedUuids;
+
+    if (type == QStringLiteral("pinnedUuids")) {
+        history_stream.commitTransaction();
+        history_stream >> pinnedUuids;
+    } else {
+        history_stream.rollbackTransaction();
+    }
+
     // The list needs to be reversed, as it is saved
     // youngest-first to keep the most important clipboard
     // items at the top, but the history is created oldest
@@ -421,6 +434,12 @@ bool Klipper::loadHistory()
 
     for (auto it = reverseList.constBegin(); it != reverseList.constEnd(); ++it) {
         history()->forceInsert(*it);
+    }
+
+    for (auto it = pinnedUuids.constBegin(); it != pinnedUuids.constEnd(); ++it) {
+        // model->togglePin() does not request history to save to disk
+        // while history->togglePin() does
+        history()->model()->togglePin(*it);
     }
 
     if (!history()->empty()) {
@@ -458,9 +477,15 @@ void Klipper::saveHistory(bool empty)
     QDataStream history_stream(&data, QIODevice::WriteOnly);
     history_stream << KLIPPER_VERSION_STRING; // const char*
 
+
     if (!empty) {
         HistoryItemConstPtr item = history()->first();
         if (item) {
+            QList<QByteArray> pinnedUuids = history()->model()->pinnedUuids();
+            if (!pinnedUuids.isEmpty()) {
+                history_stream << QStringLiteral("pinnedUuids") << pinnedUuids;
+            }
+
             do {
                 history_stream << item.data();
                 item = HistoryItemConstPtr(history()->find(item->next_uuid()));
@@ -989,15 +1014,30 @@ void Klipper::showBarcode(const QSharedPointer<const HistoryItem> &item)
 void Klipper::slotAskClearHistory()
 {
     int clearHist = KMessageBox::warningContinueCancel(nullptr,
-                                                       i18n("Really delete entire clipboard history?"),
+                                                       i18n("Really delete clipboard history?"),
                                                        i18n("Delete clipboard history?"),
                                                        KStandardGuiItem::cont(),
                                                        KStandardGuiItem::cancel(),
                                                        QStringLiteral("klipperClearHistoryAskAgain"),
                                                        KMessageBox::Dangerous);
+
     if (clearHist == KMessageBox::Continue) {
-        history()->slotClear();
-        saveHistory();
+        if (m_history->model()->countUnpinned() > 0) {
+            history()->slotClear(false);
+            saveHistory();
+        } else {
+            int clearPinned = KMessageBox::warningContinueCancel(nullptr,
+                                                                i18n("Really delete pinned items?"),
+                                                                i18n("Delete clipboard history?"),
+                                                                KStandardGuiItem::cont(),
+                                                                KStandardGuiItem::cancel(),
+                                                                QStringLiteral(""),
+                                                                KMessageBox::Dangerous);
+            if (clearPinned == KMessageBox::Continue) {
+                history()->slotClear(true);
+                saveHistory();
+            }
+        }
     }
 }
 

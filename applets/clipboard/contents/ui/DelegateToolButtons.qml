@@ -8,6 +8,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 RowLayout {
@@ -55,6 +56,16 @@ RowLayout {
 
         PlasmaComponents3.ToolTip {
             text: i18n("Remove from history")
+        }
+        KeyNavigation.right: togglePinButton
+    }
+    PlasmaComponents3.ToolButton {
+        id: togglePinButton
+        icon.name: PinnedSortRole > -1 ? "window-unpin-symbolic" : "window-pin-symbolic"
+        onClicked: menuItem.togglePin(UuidRole)
+
+        PlasmaComponents3.ToolTip {
+            text: PinnedSortRole > -1 ? i18n("Unpin") : i18n("Pin")
         }
     }
 }

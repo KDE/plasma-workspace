@@ -17,6 +17,7 @@ import org.kde.kirigami 2.19 as Kirigami // for InputMethod.willShowOnActive
 
 Menu {
     id: clipboardMenu
+
     Keys.onPressed: {
         function forwardToFilter() {
             if (event.text !== "" && !filter.activeFocus) {
@@ -89,14 +90,13 @@ Menu {
     property var header: PlasmaExtras.PlasmoidHeading {
         RowLayout {
             anchors.fill: parent
-            enabled: clipboardMenu.model.count > 0 || filter.text.length > 0
+            enabled: clipboardSource.models.clipboard.count > 0
 
             PlasmaComponents3.TextField {
                 id: filter
                 placeholderText: i18n("Search…")
                 clearButtonShown: true
                 Layout.fillWidth: true
-
                 inputMethodHints: Qt.ImhNoPredictiveText
 
                 Keys.onUpPressed: clipboardMenu.arrowKeyPressed(event)
@@ -107,6 +107,16 @@ Menu {
                     function onClearSearchField() {
                         filter.clear()
                     }
+                }
+            }
+            PlasmaComponents3.ToolButton {
+                id: pinnedFilterButton
+                icon.name: "view-filter"
+                checkable: true
+                checked: false
+
+                PlasmaComponents3.ToolTip {
+                    text: i18n("See pinned items only")
                 }
             }
             PlasmaComponents3.ToolButton {
@@ -126,9 +136,17 @@ Menu {
     }
 
     model: PlasmaCore.SortFilterModel {
-        sourceModel: clipboardSource.models.clipboard
-        filterRole: "FullTextRole"
-        filterRegExp: filter.text
+        filterRole: "PinnedSortRole"
+        filterRegExp: pinnedFilterButton.checked ? "^[0-9]+$" : ".*"
+        sortRole: pinnedFilterButton.checked ? "PinnedSortRole" : ""
+        sortOrder: Qt.AscendingOrder
+        sortColumn: pinnedFilterButton.checked? 0 : -1
+        sourceModel: PlasmaCore.SortFilterModel {
+            sourceModel: clipboardSource.models.clipboard
+            filterRole: "FullTextRole"
+            filterRegExp: filter.text
+        }
+
     }
     supportsBarcodes: {
         try {
@@ -142,6 +160,7 @@ Menu {
     }
     onItemSelected: clipboardSource.service(uuid, "select")
     onRemove: clipboardSource.service(uuid, "remove")
+    onTogglePin: clipboardSource.service(uuid, "togglePin")
     onEdit: {
         stack.push(Qt.resolvedUrl("EditPage.qml"), {
             text: clipboardMenu.model.get(clipboardMenu.view.currentIndex).FullTextRole,

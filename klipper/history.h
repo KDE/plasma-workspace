@@ -43,6 +43,12 @@ public:
     void remove(const QSharedPointer<const HistoryItem> &item);
 
     /**
+     * Pin/Unpin history item in history
+     */
+    void togglePin(const QSharedPointer<const HistoryItem> &item);
+
+
+    /**
      * Traversal: Get first item
      */
     QSharedPointer<const HistoryItem> first() const;
@@ -114,7 +120,7 @@ public Q_SLOTS:
     /**
      * Clear history
      */
-    void slotClear();
+    void slotClear(bool clearAll = false);
 
 Q_SIGNALS:
     void changed();

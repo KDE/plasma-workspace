@@ -24,6 +24,7 @@ PlasmaComponents3.ScrollView {
 
     signal itemSelected(string uuid)
     signal remove(string uuid)
+    signal togglePin(string uuid)
     signal edit(string uuid)
     signal barcode(string text)
     signal action(string uuid)
@@ -58,6 +59,7 @@ PlasmaComponents3.ScrollView {
 
             onItemSelected: menu.itemSelected(uuid)
             onRemove: menu.remove(uuid)
+            onTogglePin: menu.togglePin(uuid)
             onEdit: menu.edit(uuid)
             onBarcode: menu.barcode(text)
             onAction: menu.action(uuid)
@@ -76,7 +78,7 @@ PlasmaComponents3.ScrollView {
             width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
 
             visible: menuListView.count === 0
-            text: model.filterRegExp.length  > 0 ? i18n("No matches") : i18n("Clipboard is empty")
+            text: clipboardSource.models.clipboard.count > 0 ? i18n("No matches") : i18n("Clipboard is empty")
         }
     }
 }

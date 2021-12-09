@@ -18,15 +18,12 @@ HistoryModel::HistoryModel(QObject *parent)
 
 HistoryModel::~HistoryModel()
 {
-    clear();
+    removeRows(0, m_items.count(), QModelIndex(), true);
 }
 
-void HistoryModel::clear()
+void HistoryModel::clear(bool clearAll)
 {
-    QMutexLocker lock(&m_mutex);
-    beginResetModel();
-    m_items.clear();
-    endResetModel();
+    removeRows(0, m_items.count(), QModelIndex(), clearAll);
 }
 
 void HistoryModel::setMaxSize(int size)
@@ -34,10 +31,19 @@ void HistoryModel::setMaxSize(int size)
     if (m_maxSize == size) {
         return;
     }
+
     QMutexLocker lock(&m_mutex);
     m_maxSize = size;
-    if (m_items.count() > m_maxSize) {
-        removeRows(m_maxSize, m_items.count() - m_maxSize);
+
+    if (countUnpinned() > m_maxSize) {
+        for (int index = m_items.count()-1; index >= 0; --index) {
+            if (!pinned(m_items.at(index)->uuid())) {
+                removeRow(index);
+                if (countUnpinned() <= m_maxSize) {
+                    break;
+                }
+            }
+        }
     }
 }
 
@@ -82,11 +88,18 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return int(type);
     case FullTextRole:
         return item->mimeData()->text();
+    case PinnedSortRole:
+        return m_pinnedUuids.indexOf(item->uuid());
     }
     return QVariant();
 }
 
 bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
+{
+    return removeRows(row, count, QModelIndex(), false);
+}
+
+bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent, bool removeAll)
 {
     if (parent.isValid()) {
         return false;
@@ -95,12 +108,31 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
         return false;
     }
     QMutexLocker lock(&m_mutex);
-    beginRemoveRows(QModelIndex(), row, row + count - 1);
-    for (int i = 0; i < count; ++i) {
-        m_items.removeAt(row);
+    int removed = 0;
+    int total = count;
+
+    while (count) {
+        auto index = row + count - 1;
+        auto item = m_items.at(index);
+        if (removeAll || !pinned(item->uuid())) {
+            beginRemoveRows(QModelIndex(), index, index);
+            if (pinned(item->uuid())) {
+                m_pinnedUuids.removeAt(m_pinnedUuids.indexOf(item->uuid()));
+            }
+            m_items.removeAt(index);
+            endRemoveRows();
+            ++removed;
+        }
+        --count;
     }
-    endRemoveRows();
-    return true;
+    if (removed) {
+        emit countChanged(rowCount());
+        for (int i = 0; i < m_pinnedUuids.count(); ++i) {
+            QModelIndex index = indexOf(m_pinnedUuids.at(i));
+            emit dataChanged(index, index);
+        }
+    }
+    return (removed == total);
 }
 
 bool HistoryModel::remove(const QByteArray &uuid)
@@ -109,7 +141,57 @@ bool HistoryModel::remove(const QByteArray &uuid)
     if (!index.isValid()) {
         return false;
     }
-    return removeRow(index.row(), QModelIndex());
+    return removeRows(index.row(), 1, QModelIndex(), true);
+}
+
+
+bool HistoryModel::pinned(const QByteArray &uuid)
+{
+    return m_pinnedUuids.contains(uuid);
+}
+
+QList<QByteArray> HistoryModel::pinnedUuids() const
+{
+    return m_pinnedUuids;
+}
+
+void HistoryModel::togglePin(const QByteArray &uuid)
+{
+    QModelIndex index = indexOf(uuid);
+    if (!index.isValid()) {
+        return;
+    }
+
+    QSharedPointer<HistoryItem> item = m_items.at(index.row());
+
+    if (!pinned(uuid)) {
+        m_pinnedUuids.append(item->uuid());
+        //
+    } else {
+        m_pinnedUuids.removeAt(m_pinnedUuids.indexOf(item->uuid()));
+    }
+
+    emit dataChanged(index, index);
+    for (int i = 0; i < m_pinnedUuids.count(); ++i) {
+        QModelIndex index = indexOf(m_pinnedUuids.at(i));
+        emit dataChanged(index, index);
+    }
+
+    // respect maxSize
+    if (!pinned(uuid)) {
+        if (countUnpinned() > m_maxSize) {
+            for (int index = m_items.count()-1; index >= 0; --index) {
+                if (!pinned(m_items.at(index)->uuid())) {
+                    removeRow(index);
+                    break;
+                }
+            }
+        }
+    }
+}
+
+int HistoryModel::countUnpinned() {
+    return m_items.count() - m_pinnedUuids.count();
 }
 
 QModelIndex HistoryModel::indexOf(const QByteArray &uuid) const
@@ -130,34 +212,47 @@ QModelIndex HistoryModel::indexOf(const HistoryItem *item) const
     return indexOf(item->uuid());
 }
 
-void HistoryModel::insert(QSharedPointer<HistoryItem> item)
+void HistoryModel::insert(QSharedPointer<HistoryItem> item, bool force)
 {
     if (item.isNull()) {
         return;
     }
-    const QModelIndex existingItem = indexOf(item.data());
-    if (existingItem.isValid()) {
-        // move to top
-        moveToTop(existingItem.row());
-        return;
-    }
 
-    QMutexLocker lock(&m_mutex);
-    if (m_items.count() == m_maxSize) {
-        // remove last item
+    // forceInsert does not want to check anything
+    if (!force) {
         if (m_maxSize == 0) {
             // special case - cannot insert any items
             return;
         }
-        beginRemoveRows(QModelIndex(), m_items.count() - 1, m_items.count() - 1);
-        m_items.removeLast();
-        endRemoveRows();
+
+        const QModelIndex existingItem = indexOf(item.data());
+        if (existingItem.isValid()) {
+            // move to top
+            moveToTop(existingItem.row());
+            return;
+        }
+
+        // respect maxSize
+        if (countUnpinned() == m_maxSize) {
+            for (int index = m_items.count()-1; index >= 0; --index) {
+                if (!pinned(m_items.at(index)->uuid())) {
+                    removeRow(index);
+                    break;
+                }
+            }
+        }
     }
 
     beginInsertRows(QModelIndex(), 0, 0);
     item->setModel(this);
     m_items.prepend(item);
     endInsertRows();
+    emit countChanged(rowCount());
+}
+
+void HistoryModel::forceInsert(QSharedPointer<HistoryItem> item)
+{
+    insert(item, true);
 }
 
 void HistoryModel::moveToTop(const QByteArray &uuid)
@@ -205,5 +300,6 @@ QHash<int, QByteArray> HistoryModel::roleNames() const
     hash.insert(Base64UuidRole, QByteArrayLiteral("UuidRole"));
     hash.insert(TypeIntRole, QByteArrayLiteral("TypeRole"));
     hash.insert(FullTextRole, QByteArrayLiteral("FullTextRole"));
+    hash.insert(PinnedSortRole, QByteArrayLiteral("PinnedSortRole"));
     return hash;
 }

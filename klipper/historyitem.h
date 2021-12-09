@@ -15,6 +15,7 @@ class QDataStream;
 class HistoryItem;
 typedef QSharedPointer<HistoryItem> HistoryItemPtr;
 typedef QSharedPointer<const HistoryItem> HistoryItemConstPtr;
+
 /**
  * An entry in the clipboard history.
  */
@@ -93,6 +94,7 @@ protected:
 
 private:
     QByteArray m_uuid;
+
 };
 
 inline const QPixmap &HistoryItem::image() const

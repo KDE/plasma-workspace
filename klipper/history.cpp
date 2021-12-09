@@ -99,21 +99,31 @@ void History::forceInsert(HistoryItemPtr item)
 {
     if (!item)
         return;
-    // TODO: do we need a force insert in HistoryModel
-    m_model->insert(item);
+
+    m_model->forceInsert(item);
 }
 
-void History::remove(const HistoryItemConstPtr &newItem)
+void History::remove(const HistoryItemConstPtr &item)
 {
-    if (!newItem)
+    if (!item)
         return;
 
-    m_model->remove(newItem->uuid());
+    m_model->remove(item->uuid());
 }
 
-void History::slotClear()
+
+void History::togglePin(const HistoryItemConstPtr &item)
 {
-    m_model->clear();
+    if (!item)
+        return;
+
+    m_model->togglePin(item->uuid());
+    Q_EMIT changed();
+}
+
+void History::slotClear(bool clearAll)
+{
+    m_model->clear(clearAll);
 }
 
 void History::slotMoveToTop(QAction *action)
