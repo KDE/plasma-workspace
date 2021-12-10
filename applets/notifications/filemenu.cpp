@@ -134,7 +134,7 @@ void FileMenu::open(int x, int y)
         QApplication::clipboard()->setMimeData(data);
     });
 
-    QAction *copyPathAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18nc("@action:incontextmenu", "Copy Location"));
+    QAction *copyPathAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy-path")), i18nc("@action:incontextmenu", "Copy Location"));
     connect(copyPathAction, &QAction::triggered, this, [fileItem] {
         QString path = fileItem.localPath();
         if (path.isEmpty()) {
