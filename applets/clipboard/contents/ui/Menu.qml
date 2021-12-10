@@ -58,7 +58,7 @@ PlasmaComponents3.ScrollView {
             Binding {
                 target: menuListView; when: containsMouse
                 property: "currentIndex"; value: index
-                restoreMode: Binding.RestoreBinding
+                restoreMode: Binding.RestoreValue
             }
         }
 
