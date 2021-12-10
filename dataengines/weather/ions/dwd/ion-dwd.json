@@ -1,0 +1,40 @@
+{
+    "KPlugin": {
+        "Description": "Weather forecast by German Weather Service",
+        "Description[az]": "Almaniya Hava Xidməti tərəfindən hava məlumatı",
+        "Description[ca]": "Previsió meteorològica del Servei meteorològic alemany",
+        "Description[es]": "Previsión meteorológica del servicio meteorológico alemán",
+        "Description[fr]": "Prévisions météorologiques par le service de météorologie d'Allemagne",
+        "Description[hu]": "Időjárás-előrejelzés a Német Meteorológiai Szolgálattól",
+        "Description[it]": "Previsioni meteo del servizio meteorologico tedesco",
+        "Description[ko]": "독일 기상 서비스의 일기 예보",
+        "Description[nl]": "Weersvoorspelling door Duitse weerdienst",
+        "Description[pt_BR]": "Previsão do tempo pelo Serviço Meteorológico Alemão",
+        "Description[sl]": "Vremenska napoved Nemške vremenske službe",
+        "Description[sv]": "Väderprognos av Tyska vädertjänsten",
+        "Description[uk]": "Прогноз погоди від Німецької служби погоди",
+        "Description[vi]": "Dự báo thời tiết của Dịch vụ Thời tiết Đức",
+        "Description[x-test]": "xxWeather forecast by German Weather Servicexx",
+        "Icon": "noneyet",
+        "Id": "dwd",
+        "Name": "German Weather Service",
+        "Name[az]": "Almaniya Hava Xidməti",
+        "Name[ca]": "Servei meteorològic alemany",
+        "Name[es]": "Servicio meteorológico alemán",
+        "Name[fr]": "service de météorologie d'Allemagne",
+        "Name[hu]": "Német Meteorológiai Szolgálat",
+        "Name[it]": "Servizio meteorologico tedesco",
+        "Name[ko]": "독일 기상 서비스",
+        "Name[nl]": "Duitse weerdienst",
+        "Name[pt_BR]": "Serviço Meteorológico Alemão",
+        "Name[sl]": "Nemška vremenska služba",
+        "Name[sv]": "Tyska vädertjänsten",
+        "Name[uk]": "Німецька служба погоди",
+        "Name[vi]": "Dịch vụ Thời tiết Đức",
+        "Name[x-test]": "xxGerman Weather Servicexx",
+        "ServiceTypes": [
+            "Plasma/DataEngine"
+        ]
+    },
+    "X-KDE-ParentApp": "weatherengine"
+}
