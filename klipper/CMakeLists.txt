@@ -83,7 +83,6 @@ target_link_libraries(plasma_engine_clipboard
 if (X11_FOUND)
   target_link_libraries(plasma_engine_clipboard XCB::XCB Qt::X11Extras)
 endif()
-install(FILES plasma-dataengine-clipboard.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(FILES org.kde.plasma.clipboard.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
 if(BUILD_TESTING)
    add_subdirectory(autotests)
