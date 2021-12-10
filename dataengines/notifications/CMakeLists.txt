@@ -25,6 +25,4 @@ target_link_libraries(plasma_engine_notifications
     PW::LibNotificationManager
 )
 
-kcoreaddons_desktop_to_json(plasma_engine_notifications plasma-dataengine-notifications.desktop)
-
 install(FILES notifications.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

@@ -26,7 +26,6 @@ set(krunner_calculatorrunner_SRCS
 
 if ( QALCULATE_FOUND )
     kcoreaddons_add_plugin(calculator SOURCES ${qalculate_engine_SRCS} ${krunner_calculatorrunner_SRCS} INSTALL_NAMESPACE "kf5/krunner")
-    kcoreaddons_desktop_to_json(calculator plasma-runner-calculator.desktop )
     target_link_libraries(calculator
                           ${QALCULATE_LIBRARIES}
                           ${CLN_LIBRARIES}
@@ -38,7 +37,6 @@ if ( QALCULATE_FOUND )
     )
 else ()
     kcoreaddons_add_plugin(calculator SOURCES ${krunner_calculatorrunner_SRCS} INSTALL_NAMESPACE "kf5/krunner")
-    kcoreaddons_desktop_to_json(calculator plasma-runner-calculator.desktop )
     target_link_libraries(calculator
                           KF5::Runner
                           KF5::I18n

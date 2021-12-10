@@ -7,5 +7,4 @@ target_link_libraries(plasma_packagestructure_wallpaperimages
    KF5::Package
 )
 
-kcoreaddons_desktop_to_json(plasma_packagestructure_wallpaperimages plasma-packagestructure-wallpaperimages.desktop)
 set_target_properties(plasma_packagestructure_wallpaperimages PROPERTIES OUTPUT_NAME wallpaper_images)

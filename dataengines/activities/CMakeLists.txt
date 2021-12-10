@@ -20,7 +20,6 @@ target_link_libraries(plasma_engine_activities
                       Qt::DBus
                       Qt::Widgets
                       )
-kcoreaddons_desktop_to_json(plasma_engine_activities plasma-dataengine-activities.desktop)
 
 install(TARGETS plasma_engine_activities
         DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)

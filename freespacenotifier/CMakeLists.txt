@@ -9,7 +9,6 @@ qt_add_dbus_interface(kded_freespacenotifier_SRCS ${KDED_DBUS_INTERFACE} kded_in
 kconfig_add_kcfg_files(kded_freespacenotifier_SRCS settings.kcfgc)
 
 kcoreaddons_add_plugin(freespacenotifier SOURCES ${kded_freespacenotifier_SRCS} INSTALL_NAMESPACE "kf5/kded")
-kcoreaddons_desktop_to_json(freespacenotifier freespacenotifier.desktop)
 
 target_link_libraries(freespacenotifier
     KF5::ConfigWidgets

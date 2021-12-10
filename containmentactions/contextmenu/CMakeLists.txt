@@ -12,7 +12,6 @@ qt_add_dbus_interface(contextmenu_SRCS ${krunner_xml} krunner_interface)
 qt_add_dbus_interface(contextmenu_SRCS ${SCREENSAVER_DBUS_INTERFACE} screensaver_interface)
 
 kcoreaddons_add_plugin(plasma_containmentactions_contextmenu SOURCES ${contextmenu_SRCS} INSTALL_NAMESPACE "plasma/containmentactions")
-kcoreaddons_desktop_to_json(plasma_containmentactions_contextmenu plasma-containmentactions-contextmenu.desktop)
 
 target_link_libraries(plasma_containmentactions_contextmenu
                       Qt::DBus

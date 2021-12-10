@@ -36,6 +36,4 @@ target_link_libraries(plasma_engine_mpris2
    KF5::XmlGui
 )
 
-kcoreaddons_desktop_to_json(plasma_engine_mpris2 plasma-dataengine-mpris2.desktop)
-
 install(FILES mpris2.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

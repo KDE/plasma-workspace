@@ -13,7 +13,5 @@ target_link_libraries (ion_noaa
     KF5::I18n
 )
 
-kcoreaddons_desktop_to_json(ion_noaa ion-noaa.desktop SERVICE_TYPES plasma-dataengine.desktop)
-
 install (TARGETS ion_noaa DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 

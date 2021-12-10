@@ -18,7 +18,6 @@ target_link_libraries(kcm_krunner_kill
     )
 
 kcoreaddons_add_plugin(krunner_kill SOURCES killrunner.cpp INSTALL_NAMESPACE "kf5/krunner")
-kcoreaddons_desktop_to_json(krunner_kill plasma-runner-kill.desktop)
 target_link_libraries(krunner_kill
                       KF5::I18n
                       KF5::Completion

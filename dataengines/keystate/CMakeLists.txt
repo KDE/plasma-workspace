@@ -15,6 +15,4 @@ target_link_libraries(plasma_engine_keystate
     KF5::I18n
 )
 
-kcoreaddons_desktop_to_json(plasma_engine_keystate plasma-dataengine-keystate.desktop)
-
 install(FILES modifierkeystate.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)

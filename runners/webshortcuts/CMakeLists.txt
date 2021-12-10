@@ -1,7 +1,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_webshortcuts\")
 
 kcoreaddons_add_plugin(krunner_webshortcuts SOURCES webshortcutrunner.cpp INSTALL_NAMESPACE "kf5/krunner")
-kcoreaddons_desktop_to_json(krunner_webshortcuts plasma-runner-webshortcuts.desktop)
 target_link_libraries(krunner_webshortcuts
   Qt::DBus
   KF5::Runner

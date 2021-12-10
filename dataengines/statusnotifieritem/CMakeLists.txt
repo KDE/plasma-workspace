@@ -37,7 +37,5 @@ target_link_libraries(plasma_engine_statusnotifieritem
     dbusmenuqt
 )
 
-kcoreaddons_desktop_to_json(plasma_engine_statusnotifieritem plasma-dataengine-statusnotifieritem.desktop)
-
 install(FILES statusnotifieritem.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
 

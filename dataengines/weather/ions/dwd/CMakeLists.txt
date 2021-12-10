@@ -13,7 +13,5 @@ target_link_libraries(ion_dwd
     KF5::I18n
 )
 
-kcoreaddons_desktop_to_json(ion_dwd ion-dwd.desktop SERVICE_TYPES plasma-dataengine.desktop)
-
 install(TARGETS ion_dwd DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
 

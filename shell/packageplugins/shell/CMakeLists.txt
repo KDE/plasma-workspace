@@ -7,5 +7,4 @@ target_link_libraries(plasma_packagestructure_plasmashell
    KF5::Package
 )
 
-kcoreaddons_desktop_to_json(plasma_packagestructure_plasmashell plasma-packagestructure-plasma-shell.desktop)
 set_target_properties(plasma_packagestructure_plasmashell PROPERTIES OUTPUT_NAME plasma_shell)
