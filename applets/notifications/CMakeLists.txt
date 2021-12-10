@@ -10,7 +10,6 @@ set(notificationapplet_SRCS
 )
 
 kcoreaddons_add_plugin(plasma_applet_notifications SOURCES ${notificationapplet_SRCS} INSTALL_NAMESPACE "plasma/applets")
-kcoreaddons_desktop_to_json(plasma_applet_notifications package/metadata.desktop)
 
 target_link_libraries(plasma_applet_notifications
                       Qt::Gui

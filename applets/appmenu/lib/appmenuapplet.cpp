@@ -287,6 +287,6 @@ bool AppMenuApplet::eventFilter(QObject *watched, QEvent *event)
     return false;
 }
 
-K_PLUGIN_CLASS_WITH_JSON(AppMenuApplet, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(AppMenuApplet, "../package/metadata.json")
 
 #include "appmenuapplet.moc"

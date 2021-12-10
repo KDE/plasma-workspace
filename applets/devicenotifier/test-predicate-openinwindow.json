@@ -1,0 +1,5 @@
+{
+    "KPlugin": {
+    },
+    "X-KDE-Solid-Predicate": "[ [ [ StorageVolume.ignored == false AND StorageVolume.usage == 'FileSystem' ] OR [ IS StorageAccess AND StorageDrive.driveType == 'Floppy' ] ] OR StorageAccess.ignored == false ]"
+}
