@@ -129,5 +129,6 @@
         "Name[x-test]": "xxDesktop Sessionsxx",
         "Name[zh_CN]": "桌面会话",
         "Name[zh_TW]": "桌面工作階段"
-    }
+    },
+    "X-Plasma-ShowDesciptionInOverview": true
 }

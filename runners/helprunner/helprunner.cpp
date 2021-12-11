@@ -48,7 +48,7 @@ void HelpRunner::match(RunnerContext &context)
             for (const RunnerSyntax &syntax : syntaxes) {
                 QueryMatch match(this);
                 QString matchText;
-                matchText.append(QLatin1String("<b>") + syntax.exampleQueries().join(QStringLiteral("\n")) + QLatin1String("</b>"));
+                matchText.append(QLatin1String("<b>") + syntax.exampleQueries().join(QStringLiteral("<br>")) + QLatin1String("</b>"));
                 matchText.append(QLatin1String("<br>"));
                 matchText.append(syntax.description());
                 match.setText(matchText);
@@ -60,9 +60,13 @@ void HelpRunner::match(RunnerContext &context)
             }
         } else {
             QueryMatch match(this);
-            match.setText(syntaxes.constFirst().exampleQueries().constFirst());
+            if (runner->metadata().value(QStringLiteral("X-Plasma-ShowDesciptionInOverview"), false)) {
+                match.setText(runner->description());
+            } else {
+                match.setText(syntaxes.constFirst().exampleQueries().constFirst());
+                match.setSubtext(runner->description());
+            }
             match.setIcon(runner->icon());
-            match.setSubtext(runner->description());
             match.setType(QueryMatch::CompletionMatch);
             match.setData(QVariant::fromValue(runner->metadata()));
             if (!runner->metadata().value(QStringLiteral("X-KDE-ConfigModule")).isEmpty()) {

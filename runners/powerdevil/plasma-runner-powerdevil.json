@@ -103,5 +103,6 @@
         "Name[x-test]": "xxPowerxx",
         "Name[zh_CN]": "电源",
         "Name[zh_TW]": "電源"
-    }
+    },
+    "X-Plasma-ShowDesciptionInOverview": true
 }
