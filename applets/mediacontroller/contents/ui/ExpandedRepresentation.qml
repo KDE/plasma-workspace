@@ -7,7 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.8
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -122,12 +122,17 @@ PlasmaExtras.Representation {
         anchors.fill: parent
         clip: true
 
-        ShaderEffect {
+        ShaderEffectSource {
             id: backgroundImage
-            property Image source: albumArt
+            live: false // Avoid flickering when albumArt is changed
+            sourceItem: albumArt
 
             anchors.centerIn: parent
-            visible: !!root.track && source.status === Image.Ready && !softwareRendering
+            visible: !softwareRendering
+            opacity: fallbackLoader.status === Loader.Ready ? 0 : 1
+            Behavior on opacity {
+                NumberAnimation { duration: footerItemAnimation.duration; easing.type: Easing.InOutQuad }
+            }
 
             layer.enabled: !softwareRendering
             layer.effect: HueSaturation {
@@ -147,14 +152,32 @@ PlasmaExtras.Representation {
                     transparentBorder: false
                 }
             }
-            // use State to avoid unnecessary reevaluation of width and height
+            // use State to avoid unnecessary re-evaluation of width and height and flickering
+            readonly property int scaleFactor: Math.round(Math.max(expandedRepresentation.width / sourceItem.width, expandedRepresentation.height / sourceItem.height))
             states: State {
                 name: "albumArtReady"
                 when: plasmoid.expanded && backgroundImage.visible && albumArt.paintedWidth > 0
                 PropertyChanges {
                     target: backgroundImage
-                    width: parent.width * Math.max(1, source.paintedWidth / source.paintedHeight)
-                    height: parent.width * Math.max(1, source.paintedHeight / source.paintedWidth)
+                    width: (albumArt.width + 2 * PlasmaCore.Units.largeSpacing) * backgroundImage.scaleFactor
+                    height: (albumArt.height + 2 * PlasmaCore.Units.largeSpacing) * backgroundImage.scaleFactor
+                }
+            }
+
+            Connections { // Update ShaderEffectSource on debut
+                id: debutConnections
+                target: plasmoid
+
+                function onExpandedChanged() {
+                    if (!plasmoid.expanded) {
+                        return;
+                    }
+                    // The user can resize the plasmoid on the desktop, so ShaderEffectSource
+                    // needs to be updated again after expanded status is changed.
+                    if (plasmoid.formFactor !== PlasmaCore.Types.Planar) {
+                        debutConnections.enabled = false;
+                    }
+                    Qt.callLater(backgroundImage.scheduleUpdate);
                 }
             }
         }
@@ -188,12 +211,19 @@ PlasmaExtras.Representation {
                     fillMode: Image.PreserveAspectFit
 
                     source: root.albumArt
+
+                    onStatusChanged: {
+                        if (status === Image.Ready) {
+                            Qt.callLater(backgroundImage.scheduleUpdate); // Use callLater to avoid paintedWidth <=0
+                        }
+                    }
                 }
 
                 Loader {
+                    id: fallbackLoader
                     // When albumArt is shown, the icon is unloaded to reduce memory usage.
                     readonly property string icon: (mpris2Source.currentData && mpris2Source.currentData["Desktop Icon Name"]) || "media-album-cover"
-                    active: !albumArt.visible
+                    active: !albumArt.visible && albumArt.status !== Image.Loading
                     anchors.fill: parent
 
                     sourceComponent: root.track ? fallbackIconItem : placeholderMessage
@@ -332,7 +362,7 @@ PlasmaExtras.Representation {
                 enabled: !root.noPlayer && root.track && expandedRepresentation.length > 0 ? true : false
                 opacity: enabled ? 1 : 0
                 Behavior on opacity {
-                    NumberAnimation { duration: PlasmaCore.Units.longDuration }
+                    NumberAnimation { id: footerItemAnimation; duration: PlasmaCore.Units.veryLongDuration; easing.type: Easing.InOutQuad }
                 }
 
                 Layout.alignment: Qt.AlignHCenter
