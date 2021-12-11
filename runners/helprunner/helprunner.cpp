@@ -48,8 +48,8 @@ void HelpRunner::match(RunnerContext &context)
             for (const RunnerSyntax &syntax : syntaxes) {
                 QueryMatch match(this);
                 QString matchText;
-                matchText.append(syntax.exampleQueries().join(QStringLiteral("\n")));
-                matchText.append(QLatin1String("\n"));
+                matchText.append(QLatin1String("<b>") + syntax.exampleQueries().join(QStringLiteral("\n")) + QLatin1String("</b>"));
+                matchText.append(QLatin1String("<br>"));
                 matchText.append(syntax.description());
                 match.setText(matchText);
                 match.setData(syntax.exampleQueries().constFirst());
