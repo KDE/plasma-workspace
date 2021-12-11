@@ -94,6 +94,7 @@ X-KDE-Keywords[pt_BR]=Gerenciado de inicialização,inicialização do sistema,i
 X-KDE-Keywords[sl]=Upravljalnik samodejnega zagona,zagon sistema,zagon Plasme,zagon cron;samodejno;zagon;hladni zagon;inicialno nalaganje;cron,nalaganje,seja;prijava
 X-KDE-Keywords[sv]=Hantering av autostart,systemstart,plasma start,cron,auto,start,ladda,session,inloggning
 X-KDE-Keywords[uk]=AAutostart Manager,system startup,plasma start,cron,auto,start,start up,boot,load,session,startup,launch,login,керування автозапуском,автозапуск,запуск,запуск системи,запуск плазми,завантаження,сеанс,запуск,вхід,логін,лоґін
+X-KDE-Keywords[vi]=trình quản lí khởi động tự động,khởi động hệ thống,khởi động plasma,cron,khởi động,tự động,tải,phiên,đăng nhập
 X-KDE-Keywords[x-test]=xxAutostart Managerxx,xxsystem startupxx,xxplasma startxx,xxcronxx,xxautoxx,xxstartxx,xxstart upxx,xxbootxx,xxloadxx,xxsessionxx,xxstartupxx,xxlaunchxx,xxloginxx
 X-DocPath=kcontrol/autostart/index.html
 X-KDE-Weight=30
