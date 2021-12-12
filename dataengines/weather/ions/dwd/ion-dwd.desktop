@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=German Weather Service
+Name[ar]=خدمة الأرصاد الجوية الألمانية
 Name[az]=Almaniya Hava Xidməti
 Name[ca]=Servei meteorològic alemany
 Name[es]=Servicio meteorológico alemán
@@ -14,7 +15,9 @@ Name[sv]=Tyska vädertjänsten
 Name[uk]=Німецька служба погоди
 Name[vi]=Dịch vụ Thời tiết Đức
 Name[x-test]=xxGerman Weather Servicexx
+Name[zh_CN]=德国天气服务
 Comment=Weather forecast by German Weather Service
+Comment[ar]=نشرة الطقس الجوية من الأرصاد الجوية الألمانية
 Comment[az]=Almaniya Hava Xidməti tərəfindən hava məlumatı
 Comment[ca]=Previsió meteorològica del Servei meteorològic alemany
 Comment[es]=Previsión meteorológica del servicio meteorológico alemán
@@ -29,6 +32,7 @@ Comment[sv]=Väderprognos av Tyska vädertjänsten
 Comment[uk]=Прогноз погоди від Німецької служби погоди
 Comment[vi]=Dự báo thời tiết của Dịch vụ Thời tiết Đức
 Comment[x-test]=xxWeather forecast by German Weather Servicexx
+Comment[zh_CN]=德国天气服务提供的天气预报
 X-KDE-ServiceTypes=Plasma/DataEngine
 X-KDE-ParentApp=weatherengine
 Type=Service
