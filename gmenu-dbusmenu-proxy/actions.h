@@ -34,7 +34,7 @@ Q_SIGNALS:
     void failedToLoad(); // expose error?
     void actionsChanged(const QStringList &dirtyActions);
 
-private slots:
+private Q_SLOTS:
     void onActionsChanged(const QStringList &removed, const StringBoolMap &enabledChanges, const QVariantMap &stateChanges, const GMenuActionMap &added);
 
 private:

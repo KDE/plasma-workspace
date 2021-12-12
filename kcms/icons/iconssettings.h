@@ -14,7 +14,7 @@ class IconsSettings : public IconsSettingsBase
 public:
     IconsSettings(QObject *parent = nullptr);
     ~IconsSettings() override;
-public slots:
+public Q_SLOTS:
     void updateIconTheme();
     void updateThemeDirty();
 

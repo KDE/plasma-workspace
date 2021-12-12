@@ -36,7 +36,7 @@ public:
     QVariantMap getItem(int id) const; // bool ok argument?
     QVariantMap getItem(int subscription, int sectionId, int id) const;
 
-public slots:
+public Q_SLOTS:
     void actionsChanged(const QStringList &dirtyActions, const QString &prefix);
 
 Q_SIGNALS:
@@ -49,7 +49,7 @@ Q_SIGNALS:
     void itemsChanged(const QVector<uint> &itemIds);
     void menusChanged(const QVector<uint> &menuIds);
 
-private slots:
+private Q_SLOTS:
     void onMenuChanged(const GMenuChangeList &changes);
 
 private:
