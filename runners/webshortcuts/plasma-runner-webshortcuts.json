@@ -16,5 +16,6 @@
             "Plasma/Runner"
         ],
         "Version": "1.0"
-    }
+    },
+    "X-KDE-ConfigModule" : "kcm_webshortcuts"
 }

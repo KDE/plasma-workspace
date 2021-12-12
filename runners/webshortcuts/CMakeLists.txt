@@ -6,5 +6,3 @@ target_link_libraries(krunner_webshortcuts
   KF5::Runner
   KF5::KIOWidgets
   KF5::I18n)
-
-install(FILES plasma-runner-webshortcuts_config.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
