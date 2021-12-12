@@ -105,7 +105,7 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
                     exploreDrive();
                     // TODO once we have "configure" action support in KNotification, wire it up instead of a button
                 } else if (actionId == 2) {
-                    emit configureRequested();
+                    Q_EMIT configureRequested();
                 }
             });
 

@@ -76,7 +76,7 @@ bool ThemesModel::setData(const QModelIndex &index, const QVariant &value, int r
 
         if (item.pendingDeletion != pendingDeletion) {
             item.pendingDeletion = pendingDeletion;
-            emit dataChanged(index, index, {PendingDeletionRole});
+            Q_EMIT dataChanged(index, index, {PendingDeletionRole});
 
             if (index.row() == selectedThemeIndex() && pendingDeletion) {
                 // move to the next non-pending theme
@@ -86,7 +86,7 @@ bool ThemesModel::setData(const QModelIndex &index, const QVariant &value, int r
                 }
             }
 
-            emit pendingDeletionsChanged();
+            Q_EMIT pendingDeletionsChanged();
             return true;
         }
     }
@@ -119,9 +119,9 @@ void ThemesModel::setSelectedTheme(const QString &pluginName)
 
     m_selectedTheme = pluginName;
 
-    emit selectedThemeChanged(pluginName);
+    Q_EMIT selectedThemeChanged(pluginName);
 
-    emit selectedThemeIndexChanged();
+    Q_EMIT selectedThemeIndexChanged();
 }
 
 int ThemesModel::pluginIndex(const QString &pluginName) const
@@ -213,7 +213,7 @@ void ThemesModel::load()
 
     // an item might have been added before the currently selected one
     if (oldCount != m_data.count()) {
-        emit selectedThemeIndexChanged();
+        Q_EMIT selectedThemeIndexChanged();
     }
 }
 

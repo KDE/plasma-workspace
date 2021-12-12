@@ -320,7 +320,7 @@ void CFontFilter::foundryChanged(const QString &foundry)
 
 void CFontFilter::textChanged(const QString &text)
 {
-    emit queryChanged(text);
+    Q_EMIT queryChanged(text);
 }
 
 void CFontFilter::addAction(ECriteria crit, bool on)
@@ -340,7 +340,7 @@ void CFontFilter::setCriteria(ECriteria crit)
 {
     m_currentCriteria = crit;
 
-    emit criteriaChanged(crit, ((qulonglong)1) << (int)m_currentWs, m_currentFileTypes);
+    Q_EMIT criteriaChanged(crit, ((qulonglong)1) << (int)m_currentWs, m_currentFileTypes);
 }
 
 }

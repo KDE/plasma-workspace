@@ -105,7 +105,7 @@ void NotificationGroupCollapsingProxyModel::setLimit(int limit)
         m_limit = limit;
         invalidateFilter();
         invalidateGroupRoles();
-        emit limitChanged();
+        Q_EMIT limitChanged();
     }
 }
 
@@ -120,7 +120,7 @@ void NotificationGroupCollapsingProxyModel::setLastRead(const QDateTime &lastRea
         m_lastRead = lastRead;
         invalidateFilter();
         invalidateGroupRoles();
-        emit lastReadChanged();
+        Q_EMIT lastReadChanged();
     }
 }
 
@@ -135,7 +135,7 @@ void NotificationGroupCollapsingProxyModel::setExpandUnread(bool expand)
         m_expandUnread = expand;
         invalidateFilter();
         invalidateGroupRoles();
-        emit expandUnreadChanged();
+        Q_EMIT expandUnreadChanged();
     }
 }
 
@@ -164,8 +164,8 @@ bool NotificationGroupCollapsingProxyModel::setGroupExpanded(const QModelIndex &
 
     const QVector<int> dirtyRoles = {Notifications::ExpandedGroupChildrenCountRole, Notifications::IsGroupExpandedRole};
 
-    emit dataChanged(idx, idx, dirtyRoles);
-    emit dataChanged(index(0, 0, idx), index(rowCount(idx) - 1, 0, idx), dirtyRoles);
+    Q_EMIT dataChanged(idx, idx, dirtyRoles);
+    Q_EMIT dataChanged(index(0, 0, idx), index(rowCount(idx) - 1, 0, idx), dirtyRoles);
 
     return true;
 }
@@ -174,11 +174,11 @@ void NotificationGroupCollapsingProxyModel::invalidateGroupRoles()
 {
     const QVector<int> dirtyRoles = {Notifications::ExpandedGroupChildrenCountRole, Notifications::IsGroupExpandedRole};
 
-    emit dataChanged(index(0, 0), index(rowCount() - 1, 0), dirtyRoles);
+    Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), dirtyRoles);
 
     for (int row = 0; row < rowCount(); ++row) {
         const QModelIndex groupIdx = index(row, 0);
-        emit dataChanged(index(0, 0, groupIdx), index(rowCount(groupIdx) - 1, 0, groupIdx), dirtyRoles);
+        Q_EMIT dataChanged(index(0, 0, groupIdx), index(rowCount(groupIdx) - 1, 0, groupIdx), dirtyRoles);
     }
 }
 

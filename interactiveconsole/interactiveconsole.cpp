@@ -218,7 +218,7 @@ void InteractiveConsole::modeSelectionChanged()
         m_mode = KWinConsole;
     }
 
-    emit modeChanged();
+    Q_EMIT modeChanged();
 }
 
 QString InteractiveConsole::mode() const
@@ -240,7 +240,7 @@ void InteractiveConsole::setScriptInterface(QObject *obj)
         m_scriptEngine = obj;
         connect(m_scriptEngine, SIGNAL(print(QString)), this, SLOT(print(QString)));
         connect(m_scriptEngine, SIGNAL(printError(QString)), this, SLOT(print(QString)));
-        emit scriptEngineChanged();
+        Q_EMIT scriptEngineChanged();
     }
 }
 
@@ -277,7 +277,7 @@ void InteractiveConsole::showEvent(QShowEvent *)
     }
 
     KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
-    emit visibleChanged(true);
+    Q_EMIT visibleChanged(true);
 }
 
 void InteractiveConsole::closeEvent(QCloseEvent *event)
@@ -287,7 +287,7 @@ void InteractiveConsole::closeEvent(QCloseEvent *event)
     m_closeWhenCompleted = true;
     saveScript(QUrl::fromLocalFile(path));
     QDialog::closeEvent(event);
-    emit visibleChanged(false);
+    Q_EMIT visibleChanged(false);
 }
 
 void InteractiveConsole::reject()

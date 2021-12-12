@@ -39,7 +39,7 @@ void ActionsTreeWidget::setActionsChanged(int isChanged)
     if (!m_modified) {
         m_actionsChanged = m_actionsChanged ? 1 : 0;
         m_modified = true;
-        emit changed();
+        Q_EMIT changed();
     }
 }
 

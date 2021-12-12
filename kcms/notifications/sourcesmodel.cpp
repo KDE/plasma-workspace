@@ -163,7 +163,7 @@ bool SourcesModel::setData(const QModelIndex &index, const QVariant &value, int 
     }
 
     if (dirty) {
-        emit dataChanged(index, index, {role});
+        Q_EMIT dataChanged(index, index, {role});
     }
 
     return dirty;

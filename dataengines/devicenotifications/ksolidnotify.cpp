@@ -48,7 +48,7 @@ KSolidNotify::KSolidNotify(QObject *parent)
 void KSolidNotify::onDeviceAdded(const QString &udi)
 {
     // Clear any stale message from a previous instance
-    emit clearNotification(udi);
+    Q_EMIT clearNotification(udi);
     Solid::Device device(udi);
     m_devices.insert(udi, device);
     connectSignals(&m_devices[udi]);
@@ -107,7 +107,7 @@ void KSolidNotify::queryBlockingApps(const QString &devicePath)
 {
     QProcess *p = new QProcess;
     connect(p, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::errorOccurred), [=](QProcess::ProcessError) {
-        emit blockingAppsReady({});
+        Q_EMIT blockingAppsReady({});
         p->deleteLater();
     });
     connect(p, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), [=](int, QProcess::ExitStatus) {
@@ -127,7 +127,7 @@ void KSolidNotify::queryBlockingApps(const QString &devicePath)
             }
         }
         blockApps.removeDuplicates();
-        emit blockingAppsReady(blockApps);
+        Q_EMIT blockingAppsReady(blockApps);
         p->deleteLater();
     });
     p->start(QStringLiteral("lsof"), {QStringLiteral("-t"), devicePath});
@@ -137,7 +137,7 @@ void KSolidNotify::queryBlockingApps(const QString &devicePath)
 void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, const QVariant &errorData, const QString &udi)
 {
     if ((error == Solid::ErrorType::NoError) && (type == SolidReplyType::Setup)) {
-        emit clearNotification(udi);
+        Q_EMIT clearNotification(udi);
         return;
     }
 
@@ -204,7 +204,7 @@ void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, con
                                          blockApps.count(),
                                          blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
                 }
-                emit notify(error, errorMessage, errorData.toString(), udi);
+                Q_EMIT notify(error, errorMessage, errorData.toString(), udi);
                 disconnect(*c);
                 delete c;
             });
@@ -233,6 +233,6 @@ void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, con
     }
 
     if (!errorMsg.isEmpty()) {
-        emit notify(error, errorMsg, errorData.toString(), udi);
+        Q_EMIT notify(error, errorMsg, errorData.toString(), udi);
     }
 }

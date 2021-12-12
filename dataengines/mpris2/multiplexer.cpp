@@ -96,7 +96,7 @@ void Multiplexer::evaluatePlayer(PlayerContainer *container)
         }
         replaceData(container->data());
         checkForUpdate();
-        emit activePlayerChanged(container);
+        Q_EMIT activePlayerChanged(container);
     }
 }
 
@@ -218,7 +218,7 @@ void Multiplexer::setBestActive()
         checkForUpdate();
     }
 
-    emit activePlayerChanged(container);
+    Q_EMIT activePlayerChanged(container);
 }
 
 void Multiplexer::replaceData(const Plasma::DataEngine::Data &data)

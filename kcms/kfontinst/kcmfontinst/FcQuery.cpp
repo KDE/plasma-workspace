@@ -87,7 +87,7 @@ void CFcQuery::procExited()
         m_font = FC::createName(family, weight, width, slant);
     }
 
-    emit finished();
+    Q_EMIT finished();
 }
 
 void CFcQuery::data()

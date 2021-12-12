@@ -122,7 +122,7 @@ void Applet::writeConfig(const QString &key, const QJSValue &value)
                 // allowing a write operation to be performed next time
                 applet()->configScheme()->read();
                 applet()->configScheme()->blockSignals(false);
-                emit applet()->configScheme()->configChanged();
+                Q_EMIT applet()->configScheme()->configChanged();
             }
         }
 

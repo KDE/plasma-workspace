@@ -85,7 +85,7 @@ void BackgroundListModel::removeBackground(const QString &path)
         beginRemoveRows(QModelIndex(), index, index);
         m_packages.removeAt(index);
         endRemoveRows();
-        emit countChanged();
+        Q_EMIT countChanged();
     }
 }
 
@@ -100,7 +100,7 @@ void BackgroundListModel::reload(const QStringList &selected)
         beginRemoveRows(QModelIndex(), 0, m_packages.count() - 1);
         m_packages.clear();
         endRemoveRows();
-        emit countChanged();
+        Q_EMIT countChanged();
         return;
     }
 
@@ -179,7 +179,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
         m_packages.append(newPackages);
     }
     endResetModel();
-    emit countChanged();
+    Q_EMIT countChanged();
     // qCDebug(IMAGEWALLPAPER) << t.elapsed();
 }
 
@@ -198,7 +198,7 @@ void BackgroundListModel::addBackground(const QString &path)
         qCDebug(IMAGEWALLPAPER) << "Background added " << path << package.isValid();
         m_packages.prepend(package);
         endInsertRows();
-        emit countChanged();
+        Q_EMIT countChanged();
     }
 }
 
@@ -279,7 +279,7 @@ void BackgroundListModel::sizeFound(const QString &path, const QSize &s)
     if (idx >= 0) {
         KPackage::Package package = m_packages.at(idx);
         m_sizeCache.insert(package.path(), s);
-        emit dataChanged(index(idx, 0), index(idx, 0));
+        Q_EMIT dataChanged(index(idx, 0), index(idx, 0));
     }
 }
 
@@ -389,7 +389,7 @@ bool BackgroundListModel::setData(const QModelIndex &index, const QVariant &valu
         const QUrl wallpaperUrl = QUrl::fromLocalFile(b.filePath("preferred"));
         m_pendingDeletion[wallpaperUrl.toLocalFile()] = value.toBool();
 
-        emit dataChanged(index, index);
+        Q_EMIT dataChanged(index, index);
         return true;
     }
 
@@ -418,7 +418,7 @@ void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &prev
     m_imageCache.insert(b.filePath("preferred"), new QPixmap(preview), cost);
 
     // qCDebug(IMAGEWALLPAPER) << "WP preview size:" << preview.size();
-    emit dataChanged(index, index);
+    Q_EMIT dataChanged(index, index);
 }
 
 void BackgroundListModel::previewFailed(const KFileItem &item)

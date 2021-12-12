@@ -809,7 +809,7 @@ void NOAAIon::forecast_slotJobFinished(KJob *job)
         forceImmediateUpdateOfAllVisualizations();
 
         // update the clients of our engine
-        emit forceUpdate(this, source);
+        Q_EMIT forceUpdate(this, source);
     }
 }
 

@@ -53,7 +53,7 @@ void MirroredScreensTracker::setScreensMirrored(bool mirrored)
 {
     if (m_screensMirrored != mirrored) {
         m_screensMirrored = mirrored;
-        emit screensMirroredChanged(mirrored);
+        Q_EMIT screensMirroredChanged(mirrored);
     }
 }
 

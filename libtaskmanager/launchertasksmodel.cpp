@@ -183,9 +183,9 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
             if (newActivities != activitiesForLauncher[launcher]) {
                 setActivitiesForLauncher(launcher, newActivities);
 
-                emit q->dataChanged(q->index(row, 0), q->index(row, 0));
+                Q_EMIT q->dataChanged(q->index(row, 0), q->index(row, 0));
 
-                emit q->launcherListChanged();
+                Q_EMIT q->launcherListChanged();
                 return true;
             }
 
@@ -200,7 +200,7 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
     launchersOrder.append(url);
     q->endInsertRows();
 
-    emit q->launcherListChanged();
+    Q_EMIT q->launcherListChanged();
 
     return true;
 }
@@ -265,11 +265,11 @@ bool LauncherTasksModel::Private::requestRemoveLauncherFromActivities(const QUrl
             } else if (update) {
                 setActivitiesForLauncher(url, newActivities);
 
-                emit q->dataChanged(q->index(row, 0), q->index(row, 0));
+                Q_EMIT q->dataChanged(q->index(row, 0), q->index(row, 0));
             }
 
             if (remove || update) {
-                emit q->launcherListChanged();
+                Q_EMIT q->launcherListChanged();
                 return true;
             }
         }
@@ -446,7 +446,7 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
 
         endResetModel();
 
-        emit launcherListChanged();
+        Q_EMIT launcherListChanged();
     }
 }
 

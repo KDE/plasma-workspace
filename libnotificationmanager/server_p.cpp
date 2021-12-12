@@ -126,7 +126,7 @@ bool ServerPrivate::init()
     }
 
     m_valid = true;
-    emit validChanged();
+    Q_EMIT validChanged();
 
     return true;
 }
@@ -226,9 +226,9 @@ uint ServerPrivate::Notify(const QString &app_name,
 
     if (wasReplaced) {
         notification.resetUpdated();
-        emit static_cast<Server *>(parent())->notificationReplaced(replaces_id, notification);
+        Q_EMIT static_cast<Server *>(parent())->notificationReplaced(replaces_id, notification);
     } else {
-        emit static_cast<Server *>(parent())->notificationAdded(notification);
+        Q_EMIT static_cast<Server *>(parent())->notificationAdded(notification);
     }
 
     // currently we dispatch all notification, this is ugly
@@ -340,9 +340,9 @@ uint ServerPrivate::add(const Notification &notification)
         ++m_highestNotificationId;
         notification.d->id = m_highestNotificationId;
 
-        emit static_cast<Server *>(parent())->notificationAdded(notification);
+        Q_EMIT static_cast<Server *>(parent())->notificationAdded(notification);
     } else {
-        emit static_cast<Server *>(parent())->notificationReplaced(notification.id(), notification);
+        Q_EMIT static_cast<Server *>(parent())->notificationReplaced(notification.id(), notification);
     }
 
     return notification.id();
@@ -404,9 +404,9 @@ uint ServerPrivate::Inhibit(const QString &desktop_entry, const QString &reason,
     m_inhibitionServices.insert(m_highestInhibitionCookie, dbusService);
 
     if (externalInhibited() != oldExternalInhibited) {
-        emit externalInhibitedChanged();
+        Q_EMIT externalInhibitedChanged();
     }
-    emit externalInhibitionsChanged();
+    Q_EMIT externalInhibitionsChanged();
 
     return m_highestInhibitionCookie;
 }
@@ -431,8 +431,8 @@ void ServerPrivate::onServiceOwnershipLost(const QString &serviceName)
 
     m_valid = false;
 
-    emit validChanged();
-    emit serviceOwnershipLost();
+    Q_EMIT validChanged();
+    Q_EMIT serviceOwnershipLost();
 }
 
 void ServerPrivate::onInhibitionServiceUnregistered(const QString &serviceName)
@@ -453,7 +453,7 @@ void ServerPrivate::onInhibitionServiceUnregistered(const QString &serviceName)
 
 void ServerPrivate::onInhibitedChanged()
 {
-    // emit DBus change signal...
+    // Q_EMIT DBus change signal...
     QDBusMessage signal =
         QDBusMessage::createSignal(notificationServicePath(), QStringLiteral("org.freedesktop.DBus.Properties"), QStringLiteral("PropertiesChanged"));
 
@@ -485,9 +485,9 @@ void ServerPrivate::UnInhibit(uint cookie)
     m_inhibitionServices.remove(cookie);
 
     if (m_externalInhibitions.isEmpty()) {
-        emit externalInhibitedChanged();
+        Q_EMIT externalInhibitedChanged();
     }
-    emit externalInhibitionsChanged();
+    Q_EMIT externalInhibitionsChanged();
 }
 
 QList<Inhibition> ServerPrivate::externalInhibitions() const
@@ -504,7 +504,7 @@ void ServerPrivate::setInhibited(bool inhibited)
 {
     if (m_inhibited != inhibited) {
         m_inhibited = inhibited;
-        emit inhibitedChanged();
+        Q_EMIT inhibitedChanged();
     }
 }
 
@@ -523,8 +523,8 @@ void ServerPrivate::clearExternalInhibitions()
     m_inhibitionServices.clear();
     m_externalInhibitions.clear();
 
-    emit externalInhibitedChanged();
-    emit externalInhibitionsChanged();
+    Q_EMIT externalInhibitedChanged();
+    Q_EMIT externalInhibitionsChanged();
 }
 
 void ServerPrivate::RegisterWatcher()

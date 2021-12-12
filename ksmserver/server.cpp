@@ -1001,9 +1001,9 @@ void KSMServer::tryRestoreNext()
     lastIdStarted.clear();
 
     if (state == Restoring) {
-        emit sessionRestored();
+        Q_EMIT sessionRestored();
     } else { // subsession
-        emit subSessionOpened();
+        Q_EMIT subSessionOpened();
     }
     state = Idle;
 }

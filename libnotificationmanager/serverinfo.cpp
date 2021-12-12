@@ -50,7 +50,7 @@ void ServerInfo::Private::setStatus(ServerInfo::Status status)
 {
     if (this->status != status) {
         this->status = status;
-        emit q->statusChanged(status);
+        Q_EMIT q->statusChanged(status);
     }
 }
 
@@ -58,19 +58,19 @@ void ServerInfo::Private::setServerInformation(const QString &vendor, const QStr
 {
     if (this->vendor != vendor) {
         this->vendor = vendor;
-        emit q->vendorChanged(vendor);
+        Q_EMIT q->vendorChanged(vendor);
     }
     if (this->name != name) {
         this->name = name;
-        emit q->nameChanged(name);
+        Q_EMIT q->nameChanged(name);
     }
     if (this->version != version) {
         this->version = version;
-        emit q->versionChanged(version);
+        Q_EMIT q->versionChanged(version);
     }
     if (this->specVersion != specVersion) {
         this->specVersion = specVersion;
-        emit q->specVersionChanged(specVersion);
+        Q_EMIT q->specVersionChanged(specVersion);
     }
 }
 

@@ -320,7 +320,7 @@ void CFontFileList::run()
         }
     }
 
-    emit finished();
+    Q_EMIT finished();
 }
 
 void CFontFileList::fileDuplicates(const QString &folder, const QSet<TFile> &files)
@@ -623,9 +623,9 @@ void CFontFileListView::checkFiles()
             }
         }
 
-        emit haveDeletions(true);
+        Q_EMIT haveDeletions(true);
     } else {
-        emit haveDeletions(false);
+        Q_EMIT haveDeletions(false);
     }
 }
 }

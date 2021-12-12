@@ -68,7 +68,7 @@ QtObject {
     // so we then remove it so we have a working "plasmoid" again
     onPlasmoidChanged: {
         if (!plasmoid) {
-            // this doesn't emit a change, only in ratePlasmoids() it will detect the change
+            // this doesn't Q_EMIT a change, only in ratePlasmoids() it will detect the change
             plasmoids.splice(0, 1); // remove first
             ratePlasmoids();
         }
@@ -180,7 +180,7 @@ QtObject {
     Component.onCompleted: checkInhibition()
 
     function adopt(plasmoid) {
-        // this doesn't emit a change, only in ratePlasmoids() it will detect the change
+        // this doesn't Q_EMIT a change, only in ratePlasmoids() it will detect the change
         globals.plasmoids.push(plasmoid);
         ratePlasmoids();
     }

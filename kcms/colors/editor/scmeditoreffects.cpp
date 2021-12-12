@@ -149,5 +149,5 @@ void SchemeEditorEffects::updateFromEffectsPage()
 
     preview->setPalette(m_config, m_palette);
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }

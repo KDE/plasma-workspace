@@ -183,7 +183,7 @@ void PanelView::setAlignment(Qt::Alignment alignment)
     m_alignment = alignment;
     // alignment is not resolution dependent, doesn't save to Defaults
     config().parent().writeEntry("alignment", (int)m_alignment);
-    emit alignmentChanged();
+    Q_EMIT alignmentChanged();
     positionPanel();
 }
 
@@ -212,9 +212,9 @@ void PanelView::setOffset(int offset)
     config().writeEntry("offset", m_offset);
     configDefaults().writeEntry("offset", m_offset);
     positionPanel();
-    emit offsetChanged();
+    Q_EMIT offsetChanged();
     m_corona->requestApplicationConfigSync();
-    emit m_corona->availableScreenRegionChanged();
+    Q_EMIT m_corona->availableScreenRegionChanged();
 }
 
 int PanelView::thickness() const
@@ -229,7 +229,7 @@ void PanelView::setThickness(int value)
     }
 
     m_thickness = value;
-    emit thicknessChanged();
+    Q_EMIT thicknessChanged();
 
     config().writeEntry("thickness", value);
     configDefaults().writeEntry("thickness", value);
@@ -271,7 +271,7 @@ void PanelView::setMaximumLength(int length)
     config().writeEntry("maxLength", length);
     configDefaults().writeEntry("maxLength", length);
     m_maxLength = length;
-    emit maximumLengthChanged();
+    Q_EMIT maximumLengthChanged();
     m_corona->requestApplicationConfigSync();
 
     resizePanel();
@@ -295,7 +295,7 @@ void PanelView::setMinimumLength(int length)
     config().writeEntry("minLength", length);
     configDefaults().writeEntry("minLength", length);
     m_minLength = length;
-    emit minimumLengthChanged();
+    Q_EMIT minimumLengthChanged();
     m_corona->requestApplicationConfigSync();
 
     resizePanel();
@@ -313,7 +313,7 @@ void PanelView::setDistance(int dist)
     }
 
     m_distance = dist;
-    emit distanceChanged();
+    Q_EMIT distanceChanged();
     positionPanel();
 }
 
@@ -330,7 +330,7 @@ void PanelView::setBackgroundHints(Plasma::Types::BackgroundHints hint)
 
     m_backgroundHints = hint;
 
-    emit backgroundHintsChanged();
+    Q_EMIT backgroundHintsChanged();
 }
 
 Plasma::FrameSvg::EnabledBorders PanelView::enabledBorders() const
@@ -360,7 +360,7 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
     visibilityModeToWayland();
     updateStruts();
 
-    emit visibilityModeChanged();
+    Q_EMIT visibilityModeChanged();
 
     restoreAutoHide();
 }
@@ -417,14 +417,14 @@ void PanelView::setOpacityMode(PanelView::OpacityMode mode)
             config().parent().writeEntry("panelOpacity", (int)mode);
             m_corona->requestApplicationConfigSync();
         }
-        emit opacityModeChanged();
+        Q_EMIT opacityModeChanged();
     }
 }
 
 void PanelView::updateAdaptiveOpacityEnabled()
 {
-    emit opacityModeChanged();
-    emit adaptiveOpacityEnabledChanged();
+    Q_EMIT opacityModeChanged();
+    Q_EMIT adaptiveOpacityEnabledChanged();
 }
 
 void PanelView::positionPanel()
@@ -627,10 +627,10 @@ void PanelView::restore()
     resizePanel();
     positionPanel();
 
-    emit maximumLengthChanged();
-    emit minimumLengthChanged();
-    emit offsetChanged();
-    emit alignmentChanged();
+    Q_EMIT maximumLengthChanged();
+    Q_EMIT minimumLengthChanged();
+    Q_EMIT offsetChanged();
+    Q_EMIT alignmentChanged();
 
     //::restore might have been called directly before the timer fires
     // at which point we don't still need the timer
@@ -784,7 +784,7 @@ void PanelView::resizeEvent(QResizeEvent *ev)
         m_shellSurface->setPosition(pos);
     }
     m_strutsTimer.start(STRUTSTIMERDELAY);
-    emit m_corona->availableScreenRegionChanged();
+    Q_EMIT m_corona->availableScreenRegionChanged();
 
     PlasmaQuick::ContainmentView::resizeEvent(ev);
 }
@@ -860,7 +860,7 @@ QScreen *PanelView::screenToFollow() const
 
 void PanelView::adaptToScreen()
 {
-    emit screenToFollowChanged(m_screenToFollow);
+    Q_EMIT screenToFollowChanged(m_screenToFollow);
     m_lastScreen = m_screenToFollow;
 
     if (!m_screenToFollow) {
@@ -1381,7 +1381,7 @@ void PanelView::updateEnabledBorders()
     if (m_enabledBorders != borders) {
         PanelShadows::self()->setEnabledBorders(this, borders);
         m_enabledBorders = borders;
-        emit enabledBordersChanged();
+        Q_EMIT enabledBordersChanged();
     }
 }
 

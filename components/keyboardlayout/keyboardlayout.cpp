@@ -39,7 +39,7 @@ KeyboardLayout::KeyboardLayout(QObject *parent)
 
     connect(mIface, &OrgKdeKeyboardLayoutsInterface::layoutChanged, this, [this](uint index) {
         mLayout = index;
-        emit layoutChanged();
+        Q_EMIT layoutChanged();
     });
 
     connect(mIface, &OrgKdeKeyboardLayoutsInterface::layoutListChanged, this, [this]() {
@@ -47,7 +47,7 @@ KeyboardLayout::KeyboardLayout(QObject *parent)
         requestDBusData<Layout>();
     });
 
-    emit mIface->OrgKdeKeyboardLayoutsInterface::layoutListChanged();
+    Q_EMIT mIface->OrgKdeKeyboardLayoutsInterface::layoutListChanged();
 }
 
 KeyboardLayout::~KeyboardLayout()
@@ -81,7 +81,7 @@ void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, T &out, 
             qCWarning(KEYBOARD_LAYOUT) << reply.error().message();
         }
         out = reply.value();
-        emit(this->*notify)();
+        Q_EMIT(this->*notify)();
 
         watcher->deleteLater();
     });

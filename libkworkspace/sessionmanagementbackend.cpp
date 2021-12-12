@@ -89,11 +89,11 @@ LogindSessionBackend::LogindSessionBackend()
 
         if (m_pendingJobs == 0) {
             m_state = SessionManagement::State::Ready;
-            emit stateChanged();
-            emit canShutdownChanged();
-            emit canRebootChanged();
-            emit canSuspendChanged();
-            emit canHibernateChanged();
+            Q_EMIT stateChanged();
+            Q_EMIT canShutdownChanged();
+            Q_EMIT canRebootChanged();
+            Q_EMIT canSuspendChanged();
+            Q_EMIT canHibernateChanged();
         }
     };
 
@@ -121,9 +121,9 @@ LogindSessionBackend::LogindSessionBackend()
 
     connect(m_login1, &OrgFreedesktopLogin1ManagerInterface::PrepareForSleep, this, [this](bool sleeping) {
         if (sleeping) {
-            emit aboutToSuspend();
+            Q_EMIT aboutToSuspend();
         } else {
-            emit resumingFromSuspend();
+            Q_EMIT resumingFromSuspend();
         }
     });
 }

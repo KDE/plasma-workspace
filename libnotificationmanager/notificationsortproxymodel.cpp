@@ -31,7 +31,7 @@ void NotificationSortProxyModel::setSortMode(Notifications::SortMode sortMode)
     if (m_sortMode != sortMode) {
         m_sortMode = sortMode;
         invalidate();
-        emit sortModeChanged();
+        Q_EMIT sortModeChanged();
     }
 }
 
@@ -45,7 +45,7 @@ void NotificationSortProxyModel::setSortOrder(Qt::SortOrder sortOrder)
     if (m_sortOrder != sortOrder) {
         m_sortOrder = sortOrder;
         invalidate();
-        emit sortOrderChanged();
+        Q_EMIT sortOrderChanged();
     }
 }
 

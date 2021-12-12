@@ -185,7 +185,7 @@ void DefaultItemFilterProxyModel::setSearchTerm(const QString &pattern)
 {
     m_searchPattern = pattern;
     invalidateFilter();
-    emit searchTermChanged(pattern);
+    Q_EMIT searchTermChanged(pattern);
 }
 
 QString DefaultItemFilterProxyModel::searchTerm() const
@@ -197,14 +197,14 @@ void DefaultItemFilterProxyModel::setFilter(const Filter &filter)
 {
     m_filter = filter;
     invalidateFilter();
-    emit filterChanged();
+    Q_EMIT filterChanged();
 }
 
 void DefaultItemFilterProxyModel::setFilterType(const QString type)
 {
     m_filter.first = type;
     invalidateFilter();
-    emit filterChanged();
+    Q_EMIT filterChanged();
 }
 
 QString DefaultItemFilterProxyModel::filterType() const
@@ -216,7 +216,7 @@ void DefaultItemFilterProxyModel::setFilterQuery(const QVariant query)
 {
     m_filter.second = query;
     invalidateFilter();
-    emit filterChanged();
+    Q_EMIT filterChanged();
 }
 
 QVariant DefaultItemFilterProxyModel::filterQuery() const

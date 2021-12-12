@@ -103,18 +103,18 @@ void KCMDesktopTheme::installThemeFromFile(const QUrl &url)
 
     m_tempInstallFile.reset(new QTemporaryFile());
     if (!m_tempInstallFile->open()) {
-        emit showErrorMessage(i18n("Unable to create a temporary file."));
+        Q_EMIT showErrorMessage(i18n("Unable to create a temporary file."));
         m_tempInstallFile.reset();
         return;
     }
 
     m_tempCopyJob = KIO::file_copy(url, QUrl::fromLocalFile(m_tempInstallFile->fileName()), -1, KIO::Overwrite);
     m_tempCopyJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    emit downloadingFileChanged();
+    Q_EMIT downloadingFileChanged();
 
     connect(m_tempCopyJob, &KIO::FileCopyJob::result, this, [this, url](KJob *job) {
         if (job->error() != KJob::NoError) {
-            emit showErrorMessage(i18n("Unable to download the theme: %1", job->errorText()));
+            Q_EMIT showErrorMessage(i18n("Unable to download the theme: %1", job->errorText()));
             return;
         }
 
@@ -139,7 +139,7 @@ void KCMDesktopTheme::installTheme(const QString &path)
             [this](int exitCode, QProcess::ExitStatus exitStatus) {
                 Q_UNUSED(exitStatus)
                 if (exitCode == 0) {
-                    emit showSuccessMessage(i18n("Theme installed successfully."));
+                    Q_EMIT showSuccessMessage(i18n("Theme installed successfully."));
                     load();
                 } else {
                     Q_EMIT showErrorMessage(i18n("Theme installation failed."));
@@ -240,7 +240,7 @@ void KCMDesktopTheme::processPendingDeletions()
                     if (exitCode == 0) {
                         m_model->removeRow(idx.row());
                     } else {
-                        emit showErrorMessage(i18n("Removing theme failed: %1", QString::fromLocal8Bit(process->readAllStandardOutput().trimmed())));
+                        Q_EMIT showErrorMessage(i18n("Removing theme failed: %1", QString::fromLocal8Bit(process->readAllStandardOutput().trimmed())));
                         m_model->setData(idx, false, ThemesModel::PendingDeletionRole);
                     }
                     process->deleteLater();

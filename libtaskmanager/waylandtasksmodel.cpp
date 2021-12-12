@@ -353,13 +353,13 @@ QString WaylandTasksModel::Private::groupMimeType()
 void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, int role)
 {
     QModelIndex idx = q->index(windows.indexOf(window));
-    emit q->dataChanged(idx, idx, QVector<int>{role});
+    Q_EMIT q->dataChanged(idx, idx, QVector<int>{role});
 }
 
 void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, const QVector<int> &roles)
 {
     QModelIndex idx = q->index(windows.indexOf(window));
-    emit q->dataChanged(idx, idx, roles);
+    Q_EMIT q->dataChanged(idx, idx, roles);
 }
 
 WaylandTasksModel::WaylandTasksModel(QObject *parent)

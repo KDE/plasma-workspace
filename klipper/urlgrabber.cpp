@@ -210,7 +210,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
         if (m_myPopupKillTimeout > 0)
             m_myPopupKillTimer->start(1000 * m_myPopupKillTimeout);
 
-        emit sigPopup(m_myMenu);
+        Q_EMIT sigPopup(m_myMenu);
     }
 }
 

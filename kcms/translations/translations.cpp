@@ -51,7 +51,7 @@ void Translations::load()
 void Translations::save()
 {
     m_everSaved = true;
-    emit everSavedChanged();
+    Q_EMIT everSavedChanged();
     KQuickAddons::ManagedConfigModule::save();
 }
 

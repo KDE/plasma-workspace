@@ -247,8 +247,8 @@ bool ScriptEngine::evaluateScript(const QString &script, const QString &path)
                              result.toString(),
                              result.property("lineNumber").toInt(),
                              result.property("stack").toVariant().value<QStringList>().join(QLatin1String("\n  ")));
-        emit printError(error);
-        emit exception(result);
+        Q_EMIT printError(error);
+        Q_EMIT exception(result);
         m_errorString = error;
         return false;
     }
@@ -258,7 +258,7 @@ bool ScriptEngine::evaluateScript(const QString &script, const QString &path)
 
 void ScriptEngine::exception(const QJSValue &value)
 {
-    emit printError(value.toVariant().toString());
+    Q_EMIT printError(value.toVariant().toString());
 }
 
 QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)

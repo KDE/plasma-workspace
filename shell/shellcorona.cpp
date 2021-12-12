@@ -1067,7 +1067,7 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
     m_desktopViewforId.erase(itDesktop);
     delete desktopView;
 
-    emit screenRemoved(idx);
+    Q_EMIT screenRemoved(idx);
 }
 
 PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
@@ -1204,9 +1204,9 @@ void ShellCorona::addOutput(QScreen *screen)
     connect(view, &DesktopView::geometryChanged, this, [=]() {
         const int id = m_screenPool->id(view->screen()->name());
         if (id >= 0) {
-            emit screenGeometryChanged(id);
-            emit availableScreenRegionChanged();
-            emit availableScreenRectChanged();
+            Q_EMIT screenGeometryChanged(id);
+            Q_EMIT availableScreenRegionChanged();
+            Q_EMIT availableScreenRectChanged();
         }
     });
 
@@ -1235,8 +1235,8 @@ void ShellCorona::addOutput(QScreen *screen)
         m_waitingPanelsTimer.start();
     }
 
-    emit availableScreenRectChanged();
-    emit screenAdded(m_screenPool->id(screen->name()));
+    Q_EMIT availableScreenRectChanged();
+    Q_EMIT screenAdded(m_screenPool->id(screen->name()));
 
     CHECK_SCREEN_INVARIANTS
 }
@@ -1326,7 +1326,7 @@ void ShellCorona::createWaitingPanels()
         connect(cont, &QObject::destroyed, this, &ShellCorona::panelContainmentDestroyed);
     }
     m_waitingPanels = stillWaitingPanels;
-    emit availableScreenRectChanged();
+    Q_EMIT availableScreenRectChanged();
 }
 
 void ShellCorona::panelContainmentDestroyed(QObject *cont)
@@ -1336,7 +1336,7 @@ void ShellCorona::panelContainmentDestroyed(QObject *cont)
     // don't make things relayout when the application is quitting
     // NOTE: qApp->closingDown() is still false here
     if (!m_closingDown) {
-        emit availableScreenRectChanged();
+        Q_EMIT availableScreenRectChanged();
     }
 }
 
@@ -1625,7 +1625,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     newContainment->restore(newCg);
     newContainment->updateConstraints(Plasma::Types::StartupCompletedConstraint);
     newContainment->flushPendingConstraintsEvents();
-    emit containmentAdded(newContainment);
+    Q_EMIT containmentAdded(newContainment);
 
     // Move the applets
     const auto applets = oldContainment->applets();
@@ -1651,7 +1651,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     // Save now as we now have a screen, so lastScreen will not be -1
     newContainment->save(newCg);
     requestConfigSync();
-    emit availableScreenRectChanged();
+    Q_EMIT availableScreenRectChanged();
 
     return newContainment;
 }
@@ -2062,7 +2062,7 @@ void ShellCorona::activateLauncherMenu()
         const auto provides = applet->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
         if (provides.contains(QLatin1String("org.kde.plasma.launchermenu"))) {
             if (!applet->globalShortcut().isEmpty()) {
-                emit applet->activated();
+                Q_EMIT applet->activated();
                 return true;
             }
         }

@@ -87,7 +87,7 @@ private:
     {
         if (target != newValue) {
             target = newValue;
-            emit((static_cast<Job *>(parent()))->*changeSignal)();
+            Q_EMIT((static_cast<Job *>(parent()))->*changeSignal)();
             return true;
         }
         return false;

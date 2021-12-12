@@ -148,7 +148,7 @@ void DBusServiceObserver::serviceRegistered(const QString &service)
         const auto &rx = it.value();
         if (rx.exactMatch(service)) {
             qCDebug(SYSTEM_TRAY) << "DBus service" << service << "matching" << m_dbusActivatableTasks[plugin] << "appeared. Loading" << plugin;
-            emit serviceStarted(plugin);
+            Q_EMIT serviceStarted(plugin);
             m_dbusServiceCounts[plugin]++;
         }
     }
@@ -168,7 +168,7 @@ void DBusServiceObserver::serviceUnregistered(const QString &service)
             Q_ASSERT(m_dbusServiceCounts[plugin] >= 0);
             if (m_dbusServiceCounts[plugin] == 0) {
                 qCDebug(SYSTEM_TRAY) << "DBus service" << service << "matching" << m_dbusActivatableTasks[plugin] << "disappeared. Unloading" << plugin;
-                emit serviceStopped(plugin);
+                Q_EMIT serviceStopped(plugin);
             }
         }
     }

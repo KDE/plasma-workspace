@@ -492,7 +492,7 @@ void KAStatsFavoritesModel::setEnabled(bool enable)
     if (m_enabled != enable) {
         m_enabled = enable;
 
-        emit enabledChanged();
+        Q_EMIT enabledChanged();
     }
 }
 

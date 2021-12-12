@@ -398,7 +398,7 @@ void XWindowTasksModel::Private::dataChanged(WId window, const QVector<int> &rol
     }
 
     QModelIndex idx = q->index(i);
-    emit q->dataChanged(idx, idx, roles);
+    Q_EMIT q->dataChanged(idx, idx, roles);
 }
 
 KWindowInfo *XWindowTasksModel::Private::windowInfo(WId window)

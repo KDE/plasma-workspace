@@ -93,7 +93,7 @@ void AppsModel::setAutoPopulate(bool populate)
     if (m_autoPopulate != populate) {
         m_autoPopulate = populate;
 
-        emit autoPopulateChanged();
+        Q_EMIT autoPopulateChanged();
     }
 }
 
@@ -107,7 +107,7 @@ void AppsModel::setDescription(const QString &text)
     if (m_description != text) {
         m_description = text;
 
-        emit descriptionChanged();
+        Q_EMIT descriptionChanged();
     }
 }
 
@@ -207,7 +207,7 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
 
                 refresh();
 
-                emit hiddenEntriesChanged();
+                Q_EMIT hiddenEntriesChanged();
             }
         }
 
@@ -237,7 +237,7 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
 
             refresh();
 
-            emit hiddenEntriesChanged();
+            Q_EMIT hiddenEntriesChanged();
         }
 
         return false;
@@ -271,7 +271,7 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
 
             refresh();
 
-            emit hiddenEntriesChanged();
+            Q_EMIT hiddenEntriesChanged();
         }
 
         return false;
@@ -317,7 +317,7 @@ void AppsModel::setPaginate(bool paginate)
 
         refresh();
 
-        emit paginateChanged();
+        Q_EMIT paginateChanged();
     }
 }
 
@@ -333,7 +333,7 @@ void AppsModel::setPageSize(int size)
 
         refresh();
 
-        emit pageSizeChanged();
+        Q_EMIT pageSizeChanged();
     }
 }
 
@@ -349,7 +349,7 @@ void AppsModel::setFlat(bool flat)
 
         refresh();
 
-        emit flatChanged();
+        Q_EMIT flatChanged();
     }
 }
 
@@ -365,7 +365,7 @@ void AppsModel::setSorted(bool sorted)
 
         refresh();
 
-        emit sortedChanged();
+        Q_EMIT sortedChanged();
     }
 }
 
@@ -381,7 +381,7 @@ void AppsModel::setShowSeparators(bool showSeparators)
 
         refresh();
 
-        emit showSeparatorsChanged();
+        Q_EMIT showSeparatorsChanged();
     }
 }
 
@@ -397,7 +397,7 @@ void AppsModel::setShowTopLevelItems(bool showTopLevelItems)
 
         refresh();
 
-        emit showTopLevelItemsChanged();
+        Q_EMIT showTopLevelItemsChanged();
     }
 }
 
@@ -413,7 +413,7 @@ void AppsModel::setAppNameFormat(int format)
 
         refresh();
 
-        emit appNameFormatChanged();
+        Q_EMIT appNameFormatChanged();
     }
 }
 
@@ -429,7 +429,7 @@ void AppsModel::setAppletInterface(QObject *appletInterface)
 
         refresh();
 
-        emit appletInterfaceChanged();
+        Q_EMIT appletInterfaceChanged();
     }
 }
 
@@ -462,8 +462,8 @@ void AppsModel::refresh()
         favoritesModel()->refresh();
     }
 
-    emit countChanged();
-    emit separatorCountChanged();
+    Q_EMIT countChanged();
+    Q_EMIT separatorCountChanged();
 }
 
 static bool containsSameStorageId(const QList<AbstractEntry *> &entryList, KService::Ptr service)
@@ -482,7 +482,7 @@ void AppsModel::refreshInternal()
     if (m_entryList.count()) {
         qDeleteAll(m_entryList);
         m_entryList.clear();
-        emit cleared();
+        Q_EMIT cleared();
     }
 
     m_hiddenEntries.clear();
@@ -699,7 +699,7 @@ void AppsModel::entryChanged(AbstractEntry *entry)
 
     if (i != -1) {
         QModelIndex idx = index(i, 0);
-        emit dataChanged(idx, idx);
+        Q_EMIT dataChanged(idx, idx);
     }
 }
 

@@ -226,7 +226,7 @@ void RunnerMatchesModel::setMatches(const QList<Plasma::QueryMatch> &matches)
     }
 
     if (emitDataChange) {
-        emit dataChanged(index(0, 0), index(ceiling - 1, 0));
+        Q_EMIT dataChanged(index(0, 0), index(ceiling - 1, 0));
     }
 
     if (newCount > oldCount) {
@@ -244,7 +244,7 @@ void RunnerMatchesModel::setMatches(const QList<Plasma::QueryMatch> &matches)
     }
 
     if (emitCountChange) {
-        emit countChanged();
+        Q_EMIT countChanged();
     }
 }
 

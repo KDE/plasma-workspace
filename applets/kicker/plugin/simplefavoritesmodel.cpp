@@ -99,7 +99,7 @@ void SimpleFavoritesModel::setEnabled(bool enable)
     if (m_enabled != enable) {
         m_enabled = enable;
 
-        emit enabledChanged();
+        Q_EMIT enabledChanged();
     }
 }
 
@@ -133,7 +133,7 @@ void SimpleFavoritesModel::setMaxFavorites(int max)
             refresh();
         }
 
-        emit maxFavoritesChanged();
+        Q_EMIT maxFavoritesChanged();
     }
 }
 
@@ -170,8 +170,8 @@ void SimpleFavoritesModel::addFavorite(const QString &id, int index)
 
     endInsertRows();
 
-    emit countChanged();
-    emit favoritesChanged();
+    Q_EMIT countChanged();
+    Q_EMIT favoritesChanged();
 }
 
 void SimpleFavoritesModel::removeFavorite(const QString &id)
@@ -193,8 +193,8 @@ void SimpleFavoritesModel::removeFavorite(const QString &id)
 
         endRemoveRows();
 
-        emit countChanged();
-        emit favoritesChanged();
+        Q_EMIT countChanged();
+        Q_EMIT favoritesChanged();
     }
 }
 
@@ -220,7 +220,7 @@ void SimpleFavoritesModel::moveRow(int from, int to)
 
         endMoveRows();
 
-        emit favoritesChanged();
+        Q_EMIT favoritesChanged();
     }
 }
 
@@ -238,7 +238,7 @@ void SimpleFavoritesModel::setDropPlaceholderIndex(int index)
 
         endRemoveRows();
 
-        emit countChanged();
+        Q_EMIT countChanged();
     } else if (index != -1 && m_dropPlaceholderIndex == -1) {
         beginInsertRows(QModelIndex(), index, index);
 
@@ -246,7 +246,7 @@ void SimpleFavoritesModel::setDropPlaceholderIndex(int index)
 
         endInsertRows();
 
-        emit countChanged();
+        Q_EMIT countChanged();
     } else if (m_dropPlaceholderIndex != index) {
         int modelTo = index + (index > m_dropPlaceholderIndex ? 1 : 0);
 
@@ -298,10 +298,10 @@ void SimpleFavoritesModel::refresh()
     endResetModel();
 
     if (oldCount != m_entryList.count()) {
-        emit countChanged();
+        Q_EMIT countChanged();
     }
 
-    emit favoritesChanged();
+    Q_EMIT favoritesChanged();
 }
 
 AbstractEntry *SimpleFavoritesModel::favoriteFromId(const QString &id)

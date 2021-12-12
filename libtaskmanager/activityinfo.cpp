@@ -70,7 +70,7 @@ ActivityInfo::ActivityInfo(QObject *parent)
                 Q_UNUSED(bottomRight)
 
                 if (roles.isEmpty() || roles.contains(Qt::DisplayRole)) {
-                    emit namesOfRunningActivitiesChanged();
+                    Q_EMIT namesOfRunningActivitiesChanged();
                 }
             });
 }

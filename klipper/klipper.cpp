@@ -880,7 +880,7 @@ void Klipper::editData(const QSharedPointer<const HistoryItem> &item)
     connect(buttons, &QDialogButtonBox::accepted, dlg.data(), &QDialog::accept);
     connect(buttons, &QDialogButtonBox::rejected, dlg.data(), &QDialog::reject);
     connect(dlg.data(), &QDialog::finished, dlg.data(), [this, dlg, item](int result) {
-        emit editFinished(item, result);
+        Q_EMIT editFinished(item, result);
         dlg->deleteLater();
     });
 
@@ -1006,7 +1006,7 @@ void Klipper::slotCycleNext()
     // do cycle and show popup only if we have something in clipboard
     if (m_history->first()) {
         m_history->cycleNext();
-        emit passivePopup(i18n("Clipboard history"), cycleText());
+        Q_EMIT passivePopup(i18n("Clipboard history"), cycleText());
     }
 }
 
@@ -1015,7 +1015,7 @@ void Klipper::slotCyclePrev()
     // do cycle and show popup only if we have something in clipboard
     if (m_history->first()) {
         m_history->cyclePrev();
-        emit passivePopup(i18n("Clipboard history"), cycleText());
+        Q_EMIT passivePopup(i18n("Clipboard history"), cycleText());
     }
 }
 

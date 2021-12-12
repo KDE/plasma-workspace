@@ -26,10 +26,10 @@ SessionsModel::SessionsModel(QObject *parent)
         if (active) {
             if (m_pendingVt) {
                 m_displayManager.switchVT(m_pendingVt);
-                emit switchedUser(m_pendingVt);
+                Q_EMIT switchedUser(m_pendingVt);
             } else if (m_pendingReserve) {
                 m_displayManager.startReserve();
-                emit startedNewSession();
+                Q_EMIT startedNewSession();
             }
 
             m_pendingVt = 0;
@@ -65,7 +65,7 @@ void SessionsModel::setIncludeUnusedSessions(bool includeUnusedSessions)
 
         reload();
 
-        emit includeUnusedSessionsChanged();
+        Q_EMIT includeUnusedSessionsChanged();
     }
 }
 
@@ -82,7 +82,7 @@ void SessionsModel::switchUser(int vt, bool shouldLock)
 
     if (!shouldLock) {
         m_displayManager.switchVT(vt);
-        emit switchedUser(vt);
+        Q_EMIT switchedUser(vt);
         return;
     }
 
@@ -90,12 +90,12 @@ void SessionsModel::switchUser(int vt, bool shouldLock)
         if (locked) {
             // already locked, switch right away
             m_displayManager.switchVT(vt);
-            emit switchedUser(vt);
+            Q_EMIT switchedUser(vt);
         } else {
             m_pendingReserve = false;
             m_pendingVt = vt;
 
-            emit aboutToLockScreen();
+            Q_EMIT aboutToLockScreen();
             m_screensaverInterface->Lock();
         }
     });
@@ -109,7 +109,7 @@ void SessionsModel::startNewSession(bool shouldLock)
 
     if (!shouldLock) {
         m_displayManager.startReserve();
-        emit startedNewSession();
+        Q_EMIT startedNewSession();
         return;
     }
 
@@ -117,12 +117,12 @@ void SessionsModel::startNewSession(bool shouldLock)
         if (locked) {
             // already locked, switch right away
             m_displayManager.startReserve();
-            emit startedNewSession();
+            Q_EMIT startedNewSession();
         } else {
             m_pendingReserve = true;
             m_pendingVt = 0;
 
-            emit aboutToLockScreen();
+            Q_EMIT aboutToLockScreen();
             m_screensaverInterface->Lock();
         }
     });
@@ -135,7 +135,7 @@ void SessionsModel::reload()
     const bool oldShouldLock = m_shouldLock;
     m_shouldLock = KAuthorized::authorizeAction(QStringLiteral("lock_screen")) && KScreenSaverSettings::autolock();
     if (m_shouldLock != oldShouldLock) {
-        emit shouldLockChanged();
+        Q_EMIT shouldLockChanged();
     }
 
     SessList sessions;
@@ -181,7 +181,7 @@ void SessionsModel::reload()
     endResetModel();
 
     if (oldCount != m_data.count()) {
-        emit countChanged();
+        Q_EMIT countChanged();
     }
 }
 
@@ -218,7 +218,7 @@ void SessionsModel::setShowNewSessionEntry(bool showNewSessionEntry)
         m_showNewSessionEntry = showNewSessionEntry;
         endRemoveRows();
     }
-    emit countChanged();
+    Q_EMIT countChanged();
 }
 
 QVariant SessionsModel::data(const QModelIndex &index, int role) const

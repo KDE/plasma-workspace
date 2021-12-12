@@ -54,7 +54,7 @@ JobsModelPrivate::JobsModelPrivate(QObject *parent)
                 continue;
             }
 
-            emit jobViewChanged(row, job, roles);
+            Q_EMIT jobViewChanged(row, job, roles);
 
             // This is updated here and not the percentageChanged signal so we also get some batching out of it
             if (roles.contains(Notifications::PercentageRole)) {
@@ -140,7 +140,7 @@ bool JobsModelPrivate::init()
                 }
 
                 m_valid = false;
-                emit serviceOwnershipLost();
+                Q_EMIT serviceOwnershipLost();
             }
         });
     }
@@ -188,7 +188,7 @@ QStringList JobsModelPrivate::jobUrls() const
 
 void JobsModelPrivate::emitJobUrlsChanged()
 {
-    emit jobUrlsChanged(jobUrls());
+    Q_EMIT jobUrlsChanged(jobUrls());
 }
 
 bool JobsModelPrivate::requiresJobTracker() const
@@ -383,7 +383,7 @@ void JobsModelPrivate::remove(Job *job)
     Job *jobToBeRemoved = nullptr;
 
     if (activeRow > -1) {
-        emit jobViewAboutToBeRemoved(activeRow);
+        Q_EMIT jobViewAboutToBeRemoved(activeRow);
         jobToBeRemoved = m_jobViews.takeAt(activeRow);
     } else if (pendingRow > -1) {
         jobToBeRemoved = m_pendingJobViews.takeAt(pendingRow);
@@ -398,7 +398,7 @@ void JobsModelPrivate::remove(Job *job)
 
     delete jobToBeRemoved;
     if (activeRow > -1) {
-        emit jobViewRemoved(activeRow);
+        Q_EMIT jobViewRemoved(activeRow);
     }
 
     updateApplicationPercentage(desktopEntry);

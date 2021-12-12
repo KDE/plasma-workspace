@@ -27,7 +27,7 @@ void WheelInterceptor::setDestination(QQuickItem *destination)
     if (m_destination != destination) {
         m_destination = destination;
 
-        emit destinationChanged();
+        Q_EMIT destinationChanged();
     }
 }
 
@@ -37,7 +37,7 @@ void WheelInterceptor::wheelEvent(QWheelEvent *event)
         QCoreApplication::sendEvent(m_destination, event);
     }
 
-    emit wheelMoved(event->angleDelta());
+    Q_EMIT wheelMoved(event->angleDelta());
 }
 
 QQuickItem *WheelInterceptor::findWheelArea(QQuickItem *parent) const

@@ -130,7 +130,7 @@ void AppletsLayout::setContainment(PlasmaQuick::AppletQuickItem *containmentItem
 
     connect(m_containmentItem, SIGNAL(appletRemoved(QObject *)), this, SLOT(appletRemoved(QObject *)));
 
-    emit containmentChanged();
+    Q_EMIT containmentChanged();
 }
 
 QString AppletsLayout::configKey() const
@@ -150,7 +150,7 @@ void AppletsLayout::setConfigKey(const QString &key)
     m_layoutChanges |= ConfigKeyChange;
     m_layoutChangeTimer->start();
 
-    emit configKeyChanged();
+    Q_EMIT configKeyChanged();
 }
 
 QString AppletsLayout::fallbackConfigKey() const
@@ -166,7 +166,7 @@ void AppletsLayout::setFallbackConfigKey(const QString &key)
 
     m_fallbackConfigKey = key;
 
-    emit fallbackConfigKeyChanged();
+    Q_EMIT fallbackConfigKeyChanged();
 }
 
 QJSValue AppletsLayout::acceptsAppletCallback() const
@@ -187,7 +187,7 @@ void AppletsLayout::setMinimumItemWidth(qreal width)
 
     m_minimumItemSize.setWidth(width);
 
-    emit minimumItemWidthChanged();
+    Q_EMIT minimumItemWidthChanged();
 }
 
 qreal AppletsLayout::minimumItemHeight() const
@@ -203,7 +203,7 @@ void AppletsLayout::setMinimumItemHeight(qreal height)
 
     m_minimumItemSize.setHeight(height);
 
-    emit minimumItemHeightChanged();
+    Q_EMIT minimumItemHeightChanged();
 }
 
 qreal AppletsLayout::defaultItemWidth() const
@@ -219,7 +219,7 @@ void AppletsLayout::setDefaultItemWidth(qreal width)
 
     m_defaultItemSize.setWidth(width);
 
-    emit defaultItemWidthChanged();
+    Q_EMIT defaultItemWidthChanged();
 }
 
 qreal AppletsLayout::defaultItemHeight() const
@@ -235,7 +235,7 @@ void AppletsLayout::setDefaultItemHeight(qreal height)
 
     m_defaultItemSize.setHeight(height);
 
-    emit defaultItemHeightChanged();
+    Q_EMIT defaultItemHeightChanged();
 }
 
 qreal AppletsLayout::cellWidth() const
@@ -251,7 +251,7 @@ void AppletsLayout::setCellWidth(qreal width)
 
     m_layoutManager->setCellSize(QSizeF(width, m_layoutManager->cellSize().height()));
 
-    emit cellWidthChanged();
+    Q_EMIT cellWidthChanged();
 }
 
 qreal AppletsLayout::cellHeight() const
@@ -267,7 +267,7 @@ void AppletsLayout::setCellHeight(qreal height)
 
     m_layoutManager->setCellSize(QSizeF(m_layoutManager->cellSize().width(), height));
 
-    emit cellHeightChanged();
+    Q_EMIT cellHeightChanged();
 }
 
 void AppletsLayout::setAcceptsAppletCallback(const QJSValue &callback)
@@ -298,7 +298,7 @@ void AppletsLayout::setAppletContainerComponent(QQmlComponent *component)
 
     m_appletContainerComponent = component;
 
-    emit appletContainerComponentChanged();
+    Q_EMIT appletContainerComponentChanged();
 }
 
 AppletsLayout::EditModeCondition AppletsLayout::editModeCondition() const
@@ -318,7 +318,7 @@ void AppletsLayout::setEditModeCondition(AppletsLayout::EditModeCondition condit
 
     m_editModeCondition = condition;
 
-    emit editModeConditionChanged();
+    Q_EMIT editModeConditionChanged();
 }
 
 bool AppletsLayout::editMode() const
@@ -334,7 +334,7 @@ void AppletsLayout::setEditMode(bool editMode)
 
     m_editMode = editMode;
 
-    emit editModeChanged();
+    Q_EMIT editModeChanged();
 }
 
 ItemContainer *AppletsLayout::placeHolder() const
@@ -353,7 +353,7 @@ void AppletsLayout::setPlaceHolder(ItemContainer *placeHolder)
     m_placeHolder->setZ(9999);
     m_placeHolder->setOpacity(false);
 
-    emit placeHolderChanged();
+    Q_EMIT placeHolderChanged();
 }
 
 QQuickItem *AppletsLayout::eventManagerToFilter() const
@@ -369,7 +369,7 @@ void AppletsLayout::setEventManagerToFilter(QQuickItem *item)
 
     m_eventManagerToFilter = item;
     setFiltersChildMouseEvents(m_eventManagerToFilter);
-    emit eventManagerToFilterChanged();
+    Q_EMIT eventManagerToFilterChanged();
 }
 
 void AppletsLayout::save()
@@ -648,7 +648,7 @@ void AppletsLayout::appletAdded(QObject *applet, int x, int y)
         args << engine->newQObject(applet) << QJSValue(x) << QJSValue(y);
 
         if (!m_acceptsAppletCallback.call(args).toBool()) {
-            emit appletRefused(applet, x, y);
+            Q_EMIT appletRefused(applet, x, y);
             return;
         }
     }

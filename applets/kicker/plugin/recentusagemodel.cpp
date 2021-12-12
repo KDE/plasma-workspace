@@ -138,7 +138,7 @@ void RecentUsageModel::setShownItems(IncludeUsage usage)
 
     m_usage = usage;
 
-    emit shownItemsChanged();
+    Q_EMIT shownItemsChanged();
     refresh();
 }
 
@@ -490,7 +490,7 @@ void RecentUsageModel::setOrdering(int ordering)
     m_ordering = (Ordering)ordering;
     refresh();
 
-    emit orderingChanged(ordering);
+    Q_EMIT orderingChanged(ordering);
 }
 
 int RecentUsageModel::ordering() const

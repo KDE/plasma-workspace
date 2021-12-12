@@ -185,7 +185,7 @@ void WidgetExplorer::setShowSpecialFilters(bool show)
     if (d->showSpecialFilters != show) {
         d->showSpecialFilters = show;
         d->initFilters();
-        emit showSpecialFiltersChanged();
+        Q_EMIT showSpecialFiltersChanged();
     }
 }
 
@@ -369,7 +369,7 @@ void WidgetExplorer::setApplication(const QString &app)
     d->initFilters();
 
     d->itemModel.setRunningApplets(d->runningApplets);
-    emit applicationChanged();
+    Q_EMIT applicationChanged();
 }
 
 QString WidgetExplorer::application()
@@ -389,7 +389,7 @@ void WidgetExplorer::setProvides(const QStringList &provides)
     }
 
     d->itemModel.setProvides(provides);
-    emit providesChanged();
+    Q_EMIT providesChanged();
 }
 
 void WidgetExplorer::setContainment(Plasma::Containment *containment)
@@ -407,7 +407,7 @@ void WidgetExplorer::setContainment(Plasma::Containment *containment)
         }
 
         d->initRunningApplets();
-        emit containmentChanged();
+        Q_EMIT containmentChanged();
     }
 }
 
@@ -446,7 +446,7 @@ void WidgetExplorer::addApplet(const QString &pluginName)
 void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 {
     if (type != Plasma::Types::Mutable) {
-        emit shouldClose();
+        Q_EMIT shouldClose();
     }
 }
 
@@ -457,7 +457,7 @@ void WidgetExplorer::downloadWidgets()
     }
     d->newStuffDialog->open();
 
-    emit shouldClose();
+    Q_EMIT shouldClose();
 }
 
 void WidgetExplorer::openWidgetFile()
@@ -474,7 +474,7 @@ void WidgetExplorer::openWidgetFile()
     assistant->raise();
     assistant->setFocus();
 
-    emit shouldClose();
+    Q_EMIT shouldClose();
 }
 
 void WidgetExplorer::uninstall(const QString &pluginName)

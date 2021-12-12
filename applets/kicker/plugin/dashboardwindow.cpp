@@ -50,7 +50,7 @@ void DashboardWindow::setMainItem(QQuickItem *item)
             m_mainItem->setParentItem(contentItem());
         }
 
-        emit mainItemChanged();
+        Q_EMIT mainItemChanged();
     }
 }
 
@@ -76,7 +76,7 @@ void DashboardWindow::setVisualParent(QQuickItem *item)
             connect(m_visualParentItem.data(), &QQuickItem::windowChanged, this, &DashboardWindow::visualParentWindowChanged);
         }
 
-        emit visualParentChanged();
+        Q_EMIT visualParentChanged();
     }
 }
 
@@ -90,7 +90,7 @@ void DashboardWindow::setBackgroundColor(const QColor &c)
     if (color() != c) {
         setColor(c);
 
-        emit backgroundColorChanged();
+        Q_EMIT backgroundColorChanged();
     }
 }
 
@@ -104,7 +104,7 @@ void DashboardWindow::setKeyEventProxy(QQuickItem *item)
     if (m_keyEventProxy != item) {
         m_keyEventProxy = item;
 
-        emit keyEventProxyChanged();
+        Q_EMIT keyEventProxyChanged();
     }
 }
 
@@ -154,7 +154,7 @@ bool DashboardWindow::event(QEvent *event)
 void DashboardWindow::keyPressEvent(QKeyEvent *e)
 {
     if (e->key() == Qt::Key_Escape) {
-        emit keyEscapePressed();
+        Q_EMIT keyEscapePressed();
 
         return;
         // clang-format off

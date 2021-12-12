@@ -108,7 +108,7 @@ private slots:
 private:
     void onServiceOwnershipLost(const QString &serviceName);
     void onInhibitionServiceUnregistered(const QString &serviceName);
-    void onInhibitedChanged(); // emit DBus change signal
+    void onInhibitedChanged(); // Q_EMIT DBus change signal
 
     bool m_dbusObjectValid = false;
 

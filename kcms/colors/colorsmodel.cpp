@@ -76,7 +76,7 @@ bool ColorsModel::setData(const QModelIndex &index, const QVariant &value, int r
 
         if (item.pendingDeletion != pendingDeletion) {
             item.pendingDeletion = pendingDeletion;
-            emit dataChanged(index, index, {PendingDeletionRole});
+            Q_EMIT dataChanged(index, index, {PendingDeletionRole});
 
             if (index.row() == selectedSchemeIndex() && pendingDeletion) {
                 // move to the next non-pending theme
@@ -86,7 +86,7 @@ bool ColorsModel::setData(const QModelIndex &index, const QVariant &value, int r
                 }
             }
 
-            emit pendingDeletionsChanged();
+            Q_EMIT pendingDeletionsChanged();
             return true;
         }
     }
@@ -120,8 +120,8 @@ void ColorsModel::setSelectedScheme(const QString &scheme)
 
     m_selectedScheme = scheme;
 
-    emit selectedSchemeChanged(scheme);
-    emit selectedSchemeIndexChanged();
+    Q_EMIT selectedSchemeChanged(scheme);
+    Q_EMIT selectedSchemeIndexChanged();
 }
 
 int ColorsModel::indexOfScheme(const QString &scheme) const
@@ -214,7 +214,7 @@ void ColorsModel::load()
 
     // an item might have been added before the currently selected one
     if (oldCount != m_data.count()) {
-        emit selectedSchemeIndexChanged();
+        Q_EMIT selectedSchemeIndexChanged();
     }
 }
 

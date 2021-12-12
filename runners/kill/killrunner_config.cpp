@@ -51,7 +51,7 @@ void KillRunnerConfig::load()
     m_ui->triggerWord->setText(grp.readEntry(CONFIG_TRIGGERWORD, i18n("kill")));
     m_ui->sorting->setCurrentIndex(m_ui->sorting->findData(grp.readEntry<int>(CONFIG_SORTING, NONE)));
 
-    emit changed(false);
+    Q_EMIT changed(false);
 }
 
 void KillRunnerConfig::save()
@@ -66,7 +66,7 @@ void KillRunnerConfig::save()
     grp.writeEntry(CONFIG_SORTING, m_ui->sorting->itemData(m_ui->sorting->currentIndex()));
     grp.sync();
 
-    emit changed(false);
+    Q_EMIT changed(false);
 }
 
 void KillRunnerConfig::defaults()

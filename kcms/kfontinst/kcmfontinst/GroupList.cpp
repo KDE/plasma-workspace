@@ -208,14 +208,14 @@ void CGroupList::update(const QModelIndex &unHighlight, const QModelIndex &highl
         if (grp) {
             grp->setHighlighted(false);
         }
-        emit dataChanged(unHighlight, unHighlight);
+        Q_EMIT dataChanged(unHighlight, unHighlight);
     }
     if (highlight.isValid()) {
         CGroupListItem *grp = static_cast<CGroupListItem *>(highlight.internalPointer());
         if (grp) {
             grp->setHighlighted(true);
         }
-        emit dataChanged(highlight, highlight);
+        Q_EMIT dataChanged(highlight, highlight);
     }
 }
 
@@ -229,7 +229,7 @@ void CGroupList::updateStatus(QSet<QString> &enabled, QSet<QString> &disabled, Q
         }
     }
 
-    emit layoutChanged();
+    Q_EMIT layoutChanged();
 }
 
 inline QColor midColour(const QColor &a, const QColor &b)
@@ -574,7 +574,7 @@ void CGroupList::removeFromGroup(const QModelIndex &group, const QSet<QString> &
             }
 
             if (update) {
-                emit refresh();
+                Q_EMIT refresh();
             }
         }
     }
@@ -621,7 +621,7 @@ void CGroupList::addToGroup(const QModelIndex &group, const QSet<QString> &famil
             }
 
             if (update) {
-                emit refresh();
+                Q_EMIT refresh();
             }
         }
     }
@@ -663,7 +663,7 @@ void CGroupList::sort(int, Qt::SortOrder order)
 
     std::sort(m_groups.begin(), m_groups.end(), Qt::AscendingOrder == order ? groupNameLessThan : groupNameGreaterThan);
 
-    emit layoutChanged();
+    Q_EMIT layoutChanged();
 }
 
 Qt::DropActions CGroupList::supportedDropActions() const
@@ -757,8 +757,8 @@ public:
         if (editor && event && QEvent::KeyPress == event->type() && isCloseEvent(static_cast<QKeyEvent *>(event)) && qobject_cast<QLineEdit *>(editor)) {
             QString text = static_cast<QLineEdit *>(editor)->text().trimmed();
             if (!text.isEmpty() && !static_cast<CGroupList *>(static_cast<CGroupListView *>(parent())->model())->exists(text, false)) {
-                emit commitData(static_cast<QWidget *>(editor));
-                emit closeEditor(static_cast<QWidget *>(editor));
+                Q_EMIT commitData(static_cast<QWidget *>(editor));
+                Q_EMIT closeEditor(static_cast<QWidget *>(editor));
                 return true;
             }
         }
@@ -842,7 +842,7 @@ void CGroupListView::selectionChanged(const QItemSelection &selected, const QIte
     if (0 == selectedItems.count() && 1 == deselectedItems.count()) {
         selectionModel()->select(deselectedItems.last(), QItemSelectionModel::Select);
     } else {
-        emit itemSelected(selectedItems.count() ? selectedItems.last() : QModelIndex());
+        Q_EMIT itemSelected(selectedItems.count() ? selectedItems.last() : QModelIndex());
     }
 }
 
@@ -857,7 +857,7 @@ void CGroupListView::rename()
 
 void CGroupListView::emitMoveFonts()
 {
-    emit moveFonts();
+    Q_EMIT moveFonts();
 }
 
 void CGroupListView::contextMenuEvent(QContextMenuEvent *ev)
@@ -892,13 +892,13 @@ void CGroupListView::dragMoveEvent(QDragMoveEvent *event)
                     bool ok(true);
 
                     if (dest->isCustom()) {
-                        emit info(i18n("Add to \"%1\".", dest->name()));
+                        Q_EMIT info(i18n("Add to \"%1\".", dest->name()));
                     } else if (CGroupListItem::CUSTOM == type && dest->isAll()) {
-                        emit info(i18n("Remove from current group."));
+                        Q_EMIT info(i18n("Remove from current group."));
                     } else if (!Misc::root() && dest->isPersonal() && CGroupListItem::SYSTEM == type) {
-                        emit info(i18n("Move to personal folder."));
+                        Q_EMIT info(i18n("Move to personal folder."));
                     } else if (!Misc::root() && dest->isSystem() && CGroupListItem::PERSONAL == type) {
-                        emit info(i18n("Move to system folder."));
+                        Q_EMIT info(i18n("Move to system folder."));
                     } else {
                         ok = false;
                     }
@@ -913,19 +913,19 @@ void CGroupListView::dragMoveEvent(QDragMoveEvent *event)
         }
         event->ignore();
         drawHighlighter(QModelIndex());
-        emit info(QString());
+        Q_EMIT info(QString());
     }
 }
 
 void CGroupListView::dragLeaveEvent(QDragLeaveEvent *)
 {
     drawHighlighter(QModelIndex());
-    emit info(QString());
+    Q_EMIT info(QString());
 }
 
 void CGroupListView::dropEvent(QDropEvent *event)
 {
-    emit info(QString());
+    Q_EMIT info(QString());
     drawHighlighter(QModelIndex());
     if (event->mimeData()->hasFormat(KFI_FONT_DRAG_MIME)) {
         event->acceptProposedAction();
@@ -944,14 +944,14 @@ void CGroupListView::dropEvent(QDropEvent *event)
                 QTimer::singleShot(0, this, &CGroupListView::emitMoveFonts);
             } else if ((static_cast<CGroupListItem *>(from.internalPointer()))->isCustom()
                        && !(static_cast<CGroupListItem *>(to.internalPointer()))->isCustom()) {
-                emit removeFamilies(from, families);
+                Q_EMIT removeFamilies(from, families);
             } else {
-                emit addFamilies(to, families);
+                Q_EMIT addFamilies(to, families);
             }
         }
 
         if (isUnclassified()) {
-            emit unclassifiedChanged();
+            Q_EMIT unclassifiedChanged();
         }
     }
 }

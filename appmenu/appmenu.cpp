@@ -174,7 +174,7 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
     // dbus call by user (for khotkey shortcut)
     if (x == -1 || y == -1) {
         // We do not know kwin button position, so tell kwin to show menu
-        emit showRequest(serviceName, menuObjectPath, actionId);
+        Q_EMIT showRequest(serviceName, menuObjectPath, actionId);
         return;
     }
 
@@ -206,7 +206,7 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
 
         QAction *actiontoActivate = importer->actionForId(actionId);
 
-        emit menuShown(serviceName, menuObjectPath);
+        Q_EMIT menuShown(serviceName, menuObjectPath);
 
         if (actiontoActivate) {
             m_menu.data()->setActiveAction(actiontoActivate);
@@ -217,14 +217,14 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
 void AppMenuModule::hideMenu()
 {
     if (m_menu) {
-        emit menuHidden(m_menu.data()->serviceName(), m_menu->menuObjectPath());
+        Q_EMIT menuHidden(m_menu.data()->serviceName(), m_menu->menuObjectPath());
     }
 }
 
 void AppMenuModule::itemActivationRequested(int actionId, uint timeStamp)
 {
     Q_UNUSED(timeStamp);
-    emit showRequest(message().service(), QDBusObjectPath(message().path()), actionId);
+    Q_EMIT showRequest(message().service(), QDBusObjectPath(message().path()), actionId);
 }
 
 // this method is not really used anymore but has to be kept for DBus compatibility

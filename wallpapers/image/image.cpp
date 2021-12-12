@@ -95,7 +95,7 @@ void Image::componentComplete()
     } else if (m_mode == SlideShow) {
         // show the last image shown the last time
         m_wallpaperPath = m_wallpaper;
-        emit wallpaperPathChanged();
+        Q_EMIT wallpaperPathChanged();
         startSlideshow();
     }
 }
@@ -165,7 +165,7 @@ void Image::setSlideshowMode(Image::SlideshowMode slideshowMode)
     if (m_mode == SlideShow) {
         startSlideshow();
     }
-    emit slideshowModeChanged();
+    Q_EMIT slideshowModeChanged();
 }
 
 bool Image::slideshowFoldersFirst() const
@@ -184,7 +184,7 @@ void Image::setSlideshowFoldersFirst(bool slideshowFoldersFirst)
     if (m_mode == SlideShow) {
         startSlideshow();
     }
-    emit slideshowFoldersFirstChanged();
+    Q_EMIT slideshowFoldersFirstChanged();
 }
 
 float distance(const QSize &size, const QSize &desired)
@@ -273,7 +273,7 @@ void Image::setTargetSize(const QSize &size)
     }
 
     if (sizeChanged) {
-        emit targetSizeChanged();
+        Q_EMIT targetSizeChanged();
     }
 }
 
@@ -355,7 +355,7 @@ void Image::setSlideTimer(int time)
         startSlideshow();
     }
 
-    emit slideTimerChanged();
+    Q_EMIT slideTimerChanged();
 }
 
 QStringList Image::usersWallpapers() const
@@ -371,7 +371,7 @@ void Image::setUsersWallpapers(const QStringList &usersWallpapers)
 
     m_usersWallpapers = usersWallpapers;
 
-    emit usersWallpapersChanged();
+    Q_EMIT usersWallpapersChanged();
 }
 
 QStringList Image::slidePaths() const
@@ -406,7 +406,7 @@ void Image::setSlidePaths(const QStringList &slidePaths)
     if (m_slideshowModel) {
         m_slideshowModel->reload(m_slidePaths);
     }
-    emit slidePathsChanged();
+    Q_EMIT slidePathsChanged();
 }
 
 void Image::showAddSlidePathsDialog()
@@ -429,7 +429,7 @@ void Image::addSlidePath(const QString &path)
         if (m_slideshowModel) {
             m_slideshowModel->addDirs({m_slidePaths});
         }
-        emit slidePathsChanged();
+        Q_EMIT slidePathsChanged();
         startSlideshow();
     }
 }
@@ -464,7 +464,7 @@ void Image::removeSlidePath(const QString &path)
             }
         }
 
-        emit slidePathsChanged();
+        Q_EMIT slidePathsChanged();
         startSlideshow();
     }
 }
@@ -738,7 +738,7 @@ void Image::wallpaperBrowseCompleted()
         for (const QString &image : selectedFiles) {
             addUsersWallpaper(image);
         }
-        emit customWallpaperPicked(m_dialog->selectedFiles().first());
+        Q_EMIT customWallpaperPicked(m_dialog->selectedFiles().first());
     }
 }
 
@@ -769,7 +769,7 @@ void Image::addUsersWallpaper(const QString &file)
         m_usersWallpapers.prepend(wallpaper);
         cfg.writeEntry("usersWallpapers", m_usersWallpapers);
         cfg.sync();
-        emit usersWallpapersChanged();
+        Q_EMIT usersWallpapersChanged();
     }
 }
 
@@ -865,7 +865,7 @@ void Image::removeWallpaper(QString name)
             m_model->reload(m_usersWallpapers);
             cfg.writeEntry("usersWallpapers", m_usersWallpapers);
             cfg.sync();
-            emit usersWallpapersChanged();
+            Q_EMIT usersWallpapersChanged();
             Q_EMIT settingsChanged(true);
         }
     }
@@ -897,11 +897,11 @@ void Image::toggleSlide(const QString &path, bool checked)
 {
     if (checked && m_uncheckedSlides.contains(path)) {
         m_uncheckedSlides.removeAll(path);
-        emit uncheckedSlidesChanged();
+        Q_EMIT uncheckedSlidesChanged();
         startSlideshow();
     } else if (!checked && !m_uncheckedSlides.contains(path)) {
         m_uncheckedSlides.append(path);
-        emit uncheckedSlidesChanged();
+        Q_EMIT uncheckedSlidesChanged();
         startSlideshow();
     }
 }
@@ -917,6 +917,6 @@ void Image::setUncheckedSlides(const QStringList &uncheckedSlides)
         return;
     }
     m_uncheckedSlides = uncheckedSlides;
-    emit uncheckedSlidesChanged();
+    Q_EMIT uncheckedSlidesChanged();
     startSlideshow();
 }

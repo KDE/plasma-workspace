@@ -28,7 +28,7 @@ void ClipboardMenu::setCurrentDate(const QDateTime &currentDate)
 {
     if (m_currentDate != currentDate) {
         m_currentDate = currentDate;
-        emit currentDateChanged();
+        Q_EMIT currentDateChanged();
     }
 }
 
@@ -41,7 +41,7 @@ void ClipboardMenu::setSecondsIncluded(const bool &secondsIncluded)
 {
     if (m_secondsIncluded != secondsIncluded) {
         m_secondsIncluded = secondsIncluded;
-        emit secondsIncludedChanged();
+        Q_EMIT secondsIncludedChanged();
     }
 }
 

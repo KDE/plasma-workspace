@@ -288,7 +288,7 @@ void PlasmaAppletItemModel::populateModel()
         appendRow(new PlasmaAppletItem(plugin));
     }
 
-    emit modelPopulated();
+    Q_EMIT modelPopulated();
 }
 
 void PlasmaAppletItemModel::setRunningApplets(const QHash<QString, int> &apps)
