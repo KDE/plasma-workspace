@@ -366,6 +366,6 @@ void SystemTray::stopApplet(const QString &pluginId)
     }
 }
 
-K_PLUGIN_CLASS_WITH_JSON(SystemTray, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(SystemTray, "package/metadata.json")
 
 #include "systemtray.moc"
