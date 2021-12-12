@@ -11,6 +11,7 @@ ecm_qt_declare_logging_category(systemtraycontainer_SRCS HEADER debug.h
                                             DEFAULT_SEVERITY Info)
 
 kcoreaddons_add_plugin(org.kde.plasma.systemtray SOURCES ${systemtraycontainer_SRCS} INSTALL_NAMESPACE "plasma/applets")
+kcoreaddons_desktop_to_json(org.kde.plasma.systemtray package/metadata.desktop)
 
 target_link_libraries(org.kde.plasma.systemtray
                       Qt::Gui

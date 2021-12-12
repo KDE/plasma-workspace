@@ -46,6 +46,7 @@ target_link_libraries(systemtraymodel_static
     dbusmenuqt)
 
 kcoreaddons_add_plugin(org.kde.plasma.private.systemtray SOURCES systemtray.cpp INSTALL_NAMESPACE "plasma/applets")
+kcoreaddons_desktop_to_json(org.kde.plasma.private.systemtray package/metadata.desktop)
 
 target_link_libraries(org.kde.plasma.private.systemtray systemtraymodel_static)
 

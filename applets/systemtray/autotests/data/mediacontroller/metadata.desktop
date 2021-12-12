@@ -1,0 +1,24 @@
+[Desktop Entry]
+Name=Media Player
+Name[pl]=Odtwarzacz multimedialny
+Comment=Media Player Controls
+Comment[pl]=Obsługa odtwarzacza multimedialnego
+Icon=applications-multimedia
+
+Type=Service
+X-KDE-ServiceTypes=Plasma/Applet
+X-KDE-PluginInfo-Author=Sebastian Kügler
+X-KDE-PluginInfo-Category=Multimedia
+X-KDE-PluginInfo-Email=sebas@kde.org
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-PluginInfo-License=GPL-2.0+
+X-KDE-PluginInfo-Name=org.kde.plasma.mediacontroller.test
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=https://www.kde.org/plasma-desktop
+X-Plasma-StandAloneApp=true
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
+X-Plasma-NotificationArea=true
+X-Plasma-NotificationAreaCategory=ApplicationStatus
+X-Plasma-Provides=org.kde.plasma.multimediacontrols
+X-Plasma-DBusActivationService=org.mpris.MediaPlayer2.*
