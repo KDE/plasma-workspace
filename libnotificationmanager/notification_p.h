@@ -67,6 +67,7 @@ public:
 
     QStringList actionNames;
     QStringList actionLabels;
+    bool useActionIcons = false;
     bool hasDefaultAction = false;
     QString defaultActionLabel;
 

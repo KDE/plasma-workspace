@@ -83,9 +83,9 @@ public:
 
     QString originName() const;
 
-    // should we group the two into a QPair or something?
     QStringList actionNames() const;
     QStringList actionLabels() const;
+    bool useActionIcons() const;
     bool hasDefaultAction() const;
     QString defaultActionLabel() const;
     void setActions(const QStringList &actions);

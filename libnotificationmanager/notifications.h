@@ -275,6 +275,7 @@ public:
                       ///< notification in a certain way, or group notifications of similar types.  @since 5.21
         ResidentRole, ///< Whether the notification should keep its actions even when they were invoked. @since 5.22
         TransientRole, ///< Whether the notification is transient and should not be kept in history. @since 5.22
+        UseActionIconsRole, ///< Whether the action names should be used as icon names and shown instead of action labels. @since 5.24
     };
     Q_ENUM(Roles)
 

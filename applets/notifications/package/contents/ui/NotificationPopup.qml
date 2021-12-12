@@ -52,6 +52,7 @@ PlasmaCore.Dialog {
     property var defaultActionFallbackWindowIdx
     property alias actionNames: notificationItem.actionNames
     property alias actionLabels: notificationItem.actionLabels
+    property alias useActionIcons: notificationItem.useActionIcons
 
     property alias hasReplyAction: notificationItem.hasReplyAction
     property alias replyActionLabel: notificationItem.replyActionLabel

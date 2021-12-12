@@ -57,6 +57,7 @@ ColumnLayout {
     property alias configureActionLabel: notificationHeading.configureActionLabel
     property var actionNames: []
     property var actionLabels: []
+    property bool useActionIcons
 
     property bool hasReplyAction
     property string replyActionLabel
@@ -348,7 +349,17 @@ ColumnLayout {
                     PlasmaComponents3.ToolButton {
                         flat: false
                         // why does it spit "cannot assign undefined to string" when a notification becomes expired?
-                        text: modelData.label || ""
+                        text: notificationItem.useActionIcons ? "" : Accessible.name
+                        icon.name: {
+                            if (notificationItem.useActionIcons) {
+                                if (modelData.actionName === "inline-reply") {
+                                    // TODO better icon
+                                    return "mail-reply-sender";
+                                }
+                                return modelData.actionName || "";
+                            }
+                        }
+                        Accessible.name: modelData.label || ""
 
                         onClicked: {
                             if (modelData.actionName === "inline-reply") {
@@ -357,6 +368,11 @@ ColumnLayout {
                             }
 
                             notificationItem.actionInvoked(modelData.actionName);
+                        }
+
+                        PlasmaComponents3.ToolTip {
+                            text:  parent.Accessible.name
+                            visible: notificationItem.useActionIcons ? parent.hovered : false
                         }
                     }
                 }

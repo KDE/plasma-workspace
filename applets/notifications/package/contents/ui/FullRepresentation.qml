@@ -484,6 +484,7 @@ PlasmaComponents3.Page {
                                             }
                                             return labels;
                                         }
+                                        useActionIcons: model.useActionIcons
 
                                         onCloseClicked: close()
 

@@ -368,6 +368,7 @@ void Notification::Private::processHints(const QVariantMap &hints)
 
     resident = hints.value(QStringLiteral("resident")).toBool();
     transient = hints.value(QStringLiteral("transient")).toBool();
+    useActionIcons = hints.value(QStringLiteral("action-icons")).toBool();
 
     userActionFeedback = hints.value(QStringLiteral("x-kde-user-action-feedback")).toBool();
     if (userActionFeedback) {
@@ -609,6 +610,11 @@ QStringList Notification::actionNames() const
 QStringList Notification::actionLabels() const
 {
     return d->actionLabels;
+}
+
+bool Notification::useActionIcons() const
+{
+    return d->useActionIcons;
 }
 
 bool Notification::hasDefaultAction() const

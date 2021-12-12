@@ -309,6 +309,8 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
         return notification.actionNames();
     case Notifications::ActionLabelsRole:
         return notification.actionLabels();
+    case Notifications::UseActionIconsRole:
+        return notification.useActionIcons();
     case Notifications::HasDefaultActionRole:
         return notification.hasDefaultAction();
     case Notifications::DefaultActionLabelRole:

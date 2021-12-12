@@ -490,6 +490,7 @@ QtObject {
             configureActionLabel: model.configureActionLabel || ""
             actionNames: model.actionNames
             actionLabels: model.actionLabels
+            useActionIcons: model.useActionIcons
 
             hasReplyAction: model.hasReplyAction || false
             replyActionLabel: model.replyActionLabel || ""

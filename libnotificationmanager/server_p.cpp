@@ -278,6 +278,7 @@ QStringList ServerPrivate::GetCapabilities() const
                        QStringLiteral("body-images"),
                        QStringLiteral("icon-static"),
                        QStringLiteral("actions"),
+                       QStringLiteral("action-icons"),
                        QStringLiteral("persistence"),
                        QStringLiteral("inline-reply"),
 
