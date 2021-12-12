@@ -31,7 +31,7 @@ ecm_qt_install_logging_categories(
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
-kcoreaddons_add_plugin(kcm_translations SOURCES ${kcm_translations_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemmsettings")
+kcoreaddons_add_plugin(kcm_translations SOURCES ${kcm_translations_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_translations
     KF5::I18n

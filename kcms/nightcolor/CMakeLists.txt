@@ -17,7 +17,7 @@ kcmutils_generate_module_data(
 
 kconfig_add_kcfg_files(kcm_nightcolor_SRCS nightcolorsettings.kcfgc GENERATE_MOC)
 
-kcoreaddons_add_plugin(kcm_nightcolor SOURCES ${kcm_nightcolor_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemmsettings")
+kcoreaddons_add_plugin(kcm_nightcolor SOURCES ${kcm_nightcolor_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_nightcolor
     KF5::QuickAddons

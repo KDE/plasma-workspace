@@ -20,7 +20,7 @@ kcmutils_generate_module_data(
 # needed for krdb
 kconfig_add_kcfg_files(kcm_colors_SRCS colorssettings.kcfgc GENERATE_MOC)
 
-kcoreaddons_add_plugin(kcm_colors SOURCES ${kcm_colors_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemmsettings")
+kcoreaddons_add_plugin(kcm_colors SOURCES ${kcm_colors_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 target_link_libraries(kcm_colors
     Qt::DBus
     KF5::KCMUtils
