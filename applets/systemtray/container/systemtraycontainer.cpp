@@ -140,6 +140,6 @@ QQuickItem *SystemTrayContainer::internalSystray()
     return m_internalSystray;
 }
 
-K_PLUGIN_CLASS_WITH_JSON(SystemTrayContainer, "../package/metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(SystemTrayContainer, "package/metadata.json")
 
 #include "systemtraycontainer.moc"
